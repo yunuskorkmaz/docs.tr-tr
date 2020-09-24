@@ -5,23 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: e18c23e9bbec97a64110aba6eb7241761ecece06
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cea9deb7fe019fea189a87fc08468d010929db9a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149563"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177455"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema ve Şema Koleksiyonları
-.NET Framework yönetilen sağlayıcıların her birinde **Bağlantı** sınıfları, şu anda bağlı olan veritabanı hakkında şema bilgilerini almak için kullanılan bir **GetSchema** yöntemi uygular ve <xref:System.Data.DataTable> **GetSchema** yönteminden döndürülen şema bilgileri bir . **GetSchema** yöntemi, şema koleksiyonunun geri dönmesini belirtmek ve döndürülen bilgi miktarını kısıtlamak için isteğe bağlı parametreler sağlayan aşırı yüklü bir yöntemdir.  
+
+.NET Framework yönetilen sağlayıcıların her birinde bulunan **bağlantı** sınıfları, şu anda bağlı olan veritabanıyla ilgili şema bilgilerini almak için kullanılan bir **GetSchema** yöntemi uygular ve **GetSchema** yönteminden döndürülen şema bilgileri bir biçiminde gelir <xref:System.Data.DataTable> . **GetSchema** yöntemi, döndürülecek şema koleksiyonunu belirtmek ve döndürülen bilgi miktarını kısıtlamak için isteğe bağlı parametreler sağlayan aşırı yüklenmiş bir yöntemdir.  
   
-## <a name="specifying-the-schema-collections"></a>Şema Koleksiyonlarının Belirtilmesi  
- **GetSchema** yönteminin ilk isteğe bağlı parametresi, dize olarak belirtilen toplama adıdır. İki tür şema koleksiyonu vardır: tüm sağlayıcılar için ortak olan ortak şema koleksiyonları ve her sağlayıcıya özgü belirli şema koleksiyonları.  
+## <a name="specifying-the-schema-collections"></a>Şema koleksiyonlarını belirtme  
+
+ **GetSchema** yönteminin ilk isteğe bağlı parametresi, bir dize olarak belirtilen koleksiyon adıdır. İki tür şema koleksiyonu vardır: tüm sağlayıcılar için ortak olan ortak şema koleksiyonları ve her sağlayıcıya özgü belirli şema koleksiyonları.  
   
- **GetSchema** yöntemini bağımsız değişken olmadan veya şema toplama adı "MetaDataCollections" ile çağırarak desteklenen şema koleksiyonlarının listesini belirlemek için bir .NET Framework yönetilen sağlayıcısını sorgulayabilirsiniz. Bu, desteklenen <xref:System.Data.DataTable> şema koleksiyonlarının bir listesini, her destekledikleri kısıtlamaların sayısını ve kullandıkları tanımlayıcı parçalarının sayısını döndürecektir.  
+ .NET Framework yönetilen bir sağlayıcıyı, **GetSchema** yöntemini bağımsız değişken olmadan veya "MetaDataCollections" şema koleksiyonu adıyla çağırarak, desteklenen şema koleksiyonlarının listesini belirleyecek şekilde sorgulayabilirsiniz. Bu, <xref:System.Data.DataTable> Desteklenen şema koleksiyonlarının listesi, her birinin desteklediği kısıtlamaların sayısı ve kullandıkları tanımlayıcı bölümlerinin sayısı ile birlikte döndürülür.  
   
-### <a name="retrieving-schema-collections-example"></a>Şema Koleksiyonları Nın Alınması Örneği  
- Aşağıdaki örnekler, **AdventureWorks** <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> örnek veritabanında yer alan tüm tablolar <xref:System.Data.SqlClient.SqlConnection> hakkında şema bilgilerini almak için SQL Server sınıfı için .NET Framework Data Provider yönteminin nasıl kullanılacağını göstermektedir:  
+### <a name="retrieving-schema-collections-example"></a>Şema koleksiyonları örneği alınıyor  
+
+ Aşağıdaki örneklerde, <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> <xref:System.Data.SqlClient.SqlConnection> **AdventureWorks** örnek veritabanında bulunan tüm tablolar hakkında şema bilgilerini almak için SQL Server sınıfının .NET Framework veri sağlayıcısı yönteminin nasıl kullanılacağı gösterilmektedir:  
   
 ```vb  
 Imports System.Data.SqlClient  

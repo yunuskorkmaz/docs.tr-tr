@@ -9,14 +9,15 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: b026dafbde796bbd8726de56b532ed6710ba2290
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f3e74b05ac0fd7c57963f2aad047ba3f2d63a10a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154315"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170187"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<runtime> için \<assemblyIdentity> Öğesi
+
 Derlemeyle ilgili tanımlama bilgilerini içerir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -25,7 +26,7 @@ Derlemeyle ilgili tanımlama bilgilerini içerir.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<assemblyIdentity>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
    <assemblyIdentity
@@ -35,6 +36,7 @@ culture="assembly culture"/>
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -56,6 +58,7 @@ culture="assembly culture"/>
 |`x86`|64 bit platformda yerel veya Windows üzerinde Windows (WOW) ortamındaki 32 bitlik bir x86 işlemcisi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -68,6 +71,7 @@ culture="assembly culture"/>
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Her **\<dependentAssembly>** öğenin bir **\<assemblyIdentity>** alt öğesi olmalıdır.  
   
  `processorArchitecture`Öznitelik varsa, `<assemblyIdentity>` öğe yalnızca karşılık gelen işlemci mimarisine sahip derleme için geçerlidir. `processorArchitecture`Özniteliği yoksa, `<assemblyIdentity>` öğesi herhangi bir işlemci mimarisine sahip bir derleme için uygulanabilir.  
@@ -102,6 +106,7 @@ culture="assembly culture"/>
  Bir yapılandırma dosyası özniteliği olmayan bir `<assemblyIdentity>` öğe içeriyorsa `processorArchitecture` ve platformla eşleşen bir öğe içermiyorsa, özniteliği olmayan öğesi `processorArchitecture` kullanılır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir derleme hakkında nasıl bilgi sağlayagösterdiğini gösterir.  
   
 ```xml  

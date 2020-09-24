@@ -2,14 +2,15 @@
 title: <endpoint> öğesi
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: befebc090900576b1e0f7ca679e1f5f5cd15af9a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855384"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183812"
 ---
 # <a name="endpoint-element"></a>\<endpoint> öğesi
+
 Hizmetleri açığa çıkarmak için kullanılan bir hizmet uç noktası için bağlama, anlaşma ve adres özelliklerini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Hizmetleri açığa çıkarmak için kullanılan bir hizmet uç noktası için b
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<service>**](service.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<endpoint>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <endpoint address="String"
@@ -37,6 +38,7 @@ Hizmetleri açığa çıkarmak için kullanılan bir hizmet uç noktası için b
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -52,7 +54,7 @@ Hizmetleri açığa çıkarmak için kullanılan bir hizmet uç noktası için b
 |Sözleşmesi|Bu uç noktanın hangi sözleşmeyi açığa çıkardığını belirten bir dize. Derlemenin anlaşma türünü uygulaması gerekir. Bir hizmet uygulamasının tek bir anlaşma türü uygularsa, bu özellik atlanabilir. Varsayılan değer boş bir dizedir.|  
 |endpointConfiguration|`kind`Bu standart uç noktanın ek yapılandırma bilgilerine başvuran özniteliği tarafından ayarlanan standart uç nokta adını belirten bir dize. Bölümünde aynı ad tanımlanmalıdır `<standardEndpoints>` .|  
 |isSystemEndpoint|Bir uç noktanın altyapı uç noktası olup olmadığını belirten bir Boolean değer.|  
-|denetlenmesi|Uygulanan standart bitiş noktası türünü belirten bir dize. Tür, `<extensions>` bölümüne veya Machine. config dosyasında kayıtlı olmalıdır. Hiçbir şey belirtilmemişse ortak bir hizmet uç noktası oluşturulur.|  
+|denetlenmesi|Uygulanan standart bitiş noktası türünü belirten bir dize. Tür, `<extensions>` bölümünde veya machine.config kayıtlı olmalıdır. Hiçbir şey belirtilmemişse ortak bir hizmet uç noktası oluşturulur.|  
 |listenUriMode|Taşımanın `ListenUri` hizmetin dinlemesi için belirtilen şekilde nasıl davrandığını belirtir. Geçerli değerler şunlardır<br /><br /> -Explicit<br />-Benzersiz<br /><br /> Varsayılan değer açıktır.|  
 |Öğesini|Hizmet uç noktasının dinlediği URI 'yi belirten bir dize. Varsayılan değer boş bir dizedir.|  
 |name|İsteğe bağlı öznitelik. Hizmet uç noktasının adını belirten bir dize. Varsayılan değer, bağlama adı ve anlaşma açıklaması adının bitiştirilmesi olur. Hizmetlerin birden fazla uç noktası olabilir, bu nedenle uç noktanın `name` özniteliği hizmetin adından farklıdır.|  
@@ -71,6 +73,7 @@ Hizmetleri açığa çıkarmak için kullanılan bir hizmet uç noktası için b
 |[\<service>](service.md)|Bir istemcinin bağlanabileceği uç noktaların listesini tanımlayan bir yapılandırma bölümü.|  
   
 ## <a name="example"></a>Örnek  
+
  Bu, hizmet uç noktası yapılandırmasına bir örnektir.  
   
 ```xml  
@@ -91,5 +94,5 @@ Hizmetleri açığa çıkarmak için kullanılan bir hizmet uç noktası için b
 - <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
-- [Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma](../../../wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

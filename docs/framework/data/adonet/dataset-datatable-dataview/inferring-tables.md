@@ -2,15 +2,16 @@
 title: Tabloların Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 52ffd3fe90eb491dd01acf8538276cc828fdb309
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4a3d7b239dbc405cf2acae967b5be401dc772e38
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784484"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177559"
 ---
 # <a name="inferring-tables"></a>Tabloların Çıkarımını Yapma
-Bir XML belgesinden bir <xref:System.Data.DataSet> şemayı kullanırken, ADO.net ilk olarak tabloları temsil eden XML öğelerini belirler. Aşağıdaki XML yapıları **veri kümesi** şemasının bir tablosu ile sonuçlanır:  
+
+Bir XML belgesinden bir şemayı kullanırken <xref:System.Data.DataSet> , ADO.net ilk olarak tabloları temsil eden XML öğelerini belirler. Aşağıdaki XML yapıları **veri kümesi** şemasının bir tablosu ile sonuçlanır:  
   
 - Öznitelikleri olan öğeler  
   
@@ -19,6 +20,7 @@ Bir XML belgesinden bir <xref:System.Data.DataSet> şemayı kullanırken, ADO.ne
 - Yinelenen öğeler  
   
 ## <a name="elements-with-attributes"></a>Öznitelikleri olan öğeler  
+
  Üzerlerinde belirtilen öznitelikleri olan öğeler, çıkartılan tablolarla sonuçlanır. Örneğin, aşağıdaki XML 'i göz önünde bulundurun:  
   
 ```xml  
@@ -30,9 +32,9 @@ Bir XML belgesinden bir <xref:System.Data.DataSet> şemayı kullanırken, ADO.ne
   
  Çıkarım işlemi, "Element1" adlı bir tablo oluşturur.  
   
- **Veri kümesi** DocumentElement  
+ **Veri kümesi:** DocumentElement  
   
- **Tablosundan** Element1  
+ **Tablo:** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -40,6 +42,7 @@ Bir XML belgesinden bir <xref:System.Data.DataSet> şemayı kullanırken, ADO.ne
 |value2|Text1|  
   
 ## <a name="elements-with-child-elements"></a>Alt öğeleri olan öğeler  
+
  Alt öğeleri olan öğeler, çıkarılan tablolara neden olabilir. Örneğin, aşağıdaki XML 'i göz önünde bulundurun:  
   
 ```xml  
@@ -52,9 +55,9 @@ Bir XML belgesinden bir <xref:System.Data.DataSet> şemayı kullanırken, ADO.ne
   
  Çıkarım işlemi, "Element1" adlı bir tablo oluşturur.  
   
- **Veri kümesi** DocumentElement  
+ **Veri kümesi:** DocumentElement  
   
- **Tablosundan** Element1  
+ **Tablo:** Element1  
   
 |ChildElement1|  
 |-------------------|  
@@ -71,9 +74,9 @@ Bir XML belgesinden bir <xref:System.Data.DataSet> şemayı kullanırken, ADO.ne
   
  Çıkarım işlemi, "DocumentElement" adlı bir tablo oluşturur.  
   
- **Veri kümesi** NewDataSet  
+ **Veri kümesi:** NewDataSet  
   
- **Tablosundan** DocumentElement  
+ **Tablo:** DocumentElement  
   
 |Element1|Element2|  
 |--------------|--------------|  
@@ -89,15 +92,16 @@ Bir XML belgesinden bir <xref:System.Data.DataSet> şemayı kullanırken, ADO.ne
   
  Çıkarım işlemi, "Element1" adlı bir tablo içeren "DocumentElement" adlı bir **veri kümesi** oluşturur.  
   
- **Veri kümesi** DocumentElement  
+ **Veri kümesi:** DocumentElement  
   
- **Tablosundan** Element1  
+ **Tablo:** Element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
 |value1|value2|  
   
 ## <a name="repeating-elements"></a>Yinelenen öğeler  
+
  Yinelenen öğeler, ortaya çıkarılan tek bir tabloyla sonuçlanır. Örneğin, aşağıdaki XML 'i göz önünde bulundurun:  
   
 ```xml  
@@ -109,9 +113,9 @@ Bir XML belgesinden bir <xref:System.Data.DataSet> şemayı kullanırken, ADO.ne
   
  Çıkarım işlemi, "Element1" adlı bir tablo oluşturur.  
   
- **Veri kümesi** DocumentElement  
+ **Veri kümesi:** DocumentElement  
   
- **Tablosundan** Element1  
+ **Tablo:** Element1  
   
 |Element1_Text|  
 |--------------------|  

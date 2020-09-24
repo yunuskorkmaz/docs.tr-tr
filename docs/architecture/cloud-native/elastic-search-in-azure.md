@@ -3,12 +3,12 @@ title: Bulutta yerel uygulamalarda elaun arama
 description: Bulutta yerel uygulamalara elastik arama özellikleri ekleme hakkında bilgi edinin.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 70d1925d6b8c7bbe515ee4f178513dc61212ebce
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: fa46f3387eecb3fccd63fdea10c11e92923ae862
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271808"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155386"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>Bulutta yerel bir uygulamada elaun arama
 
@@ -38,23 +38,23 @@ Bu bölümde, bulutta yerel sistemlerdeki verilere ayrıntılı bir bakış sunu
 
 ### <a name="references"></a>Başvurular
 
-- [Komut ve Sorgu Sorumluluklarının Ayrılığı (CQRS) deseninin](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- [Komut ve Sorgu Sorumluluklarının Ayrılığı (CQRS) deseninin](/azure/architecture/patterns/cqrs)
 
-- [Olay kaynağını belirleme kalıbı](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Olay kaynağını belirleme kalıbı](/azure/architecture/patterns/event-sourcing)
 
 - [Neden RDBMS bölümü dayanıklı değildir ve neden kullanılabilir?](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
-- [Gerçekleştirilmiş Görünüm](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+- [Gerçekleştirilmiş Görünüm](/azure/architecture/patterns/materialized-view)
 
 - [Açık kaynak veritabanları hakkında bilmeniz gerekenler](https://www.ibm.com/blogs/systems/all-you-really-need-to-know-about-open-source-databases/)
 
-- [Telafi Işlem kriteri](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [Telafi Işlem kriteri](/azure/architecture/patterns/compensating-transaction)
 
 - [Saga kalıbı](https://microservices.io/patterns/data/saga.html)
 
 - [Saga desenleri | Mikro hizmetleri kullanarak iş işlemlerini uygulama](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)
 
-- [Telafi Işlem kriteri](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [Telafi Işlem kriteri](/azure/architecture/patterns/compensating-transaction)
 
 - [9-Ball ' ın arkasında alma: Cosmos DB tutarlılık düzeyleri açıklanmaktadır](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)
 

@@ -2,14 +2,15 @@
 title: <transport> / <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: 1cb165fed9266307335482166116c4c1d62efe7e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 03e6236d1e89f16a460860f5dffff19b7bed8a0a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152963"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169836"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<transport> / \<msmqIntegrationBinding>
+
 Message Queuing tümleştirme taşıması için güvenlik ayarlarını tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Message Queuing tümleştirme taşıması için güvenlik ayarlarını tanımlar
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-msmqintegrationbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <security>
@@ -32,6 +33,7 @@ Message Queuing tümleştirme taşıması için güvenlik ayarlarını tanımlar
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -44,6 +46,7 @@ Message Queuing tümleştirme taşıması için güvenlik ayarlarını tanımlar
 |`msmqSecureHashAlgorithm`|-İmzaların bir parçası olarak Özet hesaplanırken kullanılacak algoritmayı belirtir. Geçerli değerler şunlardır:<br />-MD5<br />-SHA1<br />-SHA256<br />-SHA512 olur<br /><br /> Varsayılan değer SHA1 ' dır. Bu öznitelik türü <xref:System.ServiceModel.MsmqSecureHashAlgorithm> .<br>MD5 ve SHA1 ile ilgili çarpışma sorunları nedeniyle, Microsoft SHA256 veya daha iyi bir performans öneriyor.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -53,6 +56,7 @@ Message Queuing tümleştirme taşıması için güvenlik ayarlarını tanımlar
 |[\<security>](security-of-basichttpbinding.md)|MSMQ bağlamasının güvenlik ayarlarını tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu öğe Message Queuing tümleştirme aktarımının güvenlik ayarlarını kapsar. Bu ayarlar hem Message Queuing tümleştirme hem de sıraya alınmış aktarımlara yöneliktir. Kimlik doğrulama modu, şifreleme algoritması, güvenli karma algoritması ve koruma düzeyini ayarlamanıza olanak sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

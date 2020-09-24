@@ -2,12 +2,12 @@
 title: Cloud Native uygulamalar için IdentityServer
 description: Azure için Cloud Native .NET uygulamaları tasarlama | IdentityServer
 ms.date: 05/13/2020
-ms.openlocfilehash: 2128001f0d25b1edd795dd9676e0d76018c1fa3a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: bdf193aac348b54f2ebf5b537beef5d61a1d5a1e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144376"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163836"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>Bulutta yerel uygulamalar için IdentityServer
 
@@ -40,7 +40,7 @@ IdentityServer, bir ASP.NET Core uygulaması içinde çalışan ara yazılım sa
 - İptal (belirteç iptali)
 - Oturumu sonlandır (tüm uygulamalarda çoklu oturum açmayı Tetikle)
 
-## <a name="getting-started"></a>Başlarken
+## <a name="getting-started"></a>Kullanmaya başlama
 
 Identityserver4 açık kaynak ve ücretsiz olarak kullanılabilir. Bunu, NuGet paketlerini kullanarak uygulamalarınıza ekleyebilirsiniz. Ana paket, 4.000.000 defa indirilen [ıdentityserver4](https://www.nuget.org/packages/IdentityServer4/) . Temel paket, herhangi bir kullanıcı arabirimi kodu içermez ve yalnızca bellek yapılandırmasında desteklenir. Veritabanını bir veritabanıyla birlikte kullanmak için, IdentityServer için yapılandırma ve işletimsel verileri depolamak üzere Entity Framework Core kullanan [ıdentityserver4. EntityFramework](https://www.nuget.org/packages/IdentityServer4.EntityFramework) gibi bir veri sağlayıcısı da isteyebilirsiniz. Kullanıcı arabirimi için, oturum açma için destek eklemek ve IdentityServer ara yazılımını kullanarak oturumu kapatmak için [hızlı başlangıç Kullanıcı arabirimi deposundan](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) ASP.NET Core MVC Uygulamanıza dosya kopyalayabilirsiniz.
 
@@ -100,7 +100,7 @@ Birçok bulutta yerel uygulama, Ön uçtaki sunucu tarafı API 'Leri ve zengin i
 ## <a name="references"></a>Başvurular
 
 - [IdentityServer belgeleri](https://docs.identityserver.io/en/latest/)
-- [Uygulama türleri](https://docs.microsoft.com/azure/active-directory/develop/app-types)
+- [Uygulama türleri](/azure/active-directory/develop/app-types)
 - [JavaScript OıDC istemcisi](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: d1f45979dba5c3ab0dccc8d0a61a7abaa9913e11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cf3a81914d78e8f08c06602600ce5dcef4f4d35b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556869"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191651"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Zaman uyumsuz Işlemler (WCF Veri Hizmetleri)
+
 Web uygulamaları, istemci ve sunucu arasında iç ağların içinde çalışan uygulamalardan daha yüksek gecikme süresine sahip olmalıdır. Uygulamanızın performans ve Kullanıcı deneyimini iyileştirmek için, <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceQuery%601> Web üzerinden WCF veri Hizmetleri sunucularına erişirken ve sınıflarının zaman uyumsuz yöntemlerini kullanmanızı öneririz.  
   
  WCF Veri Hizmetleri sunucuları HTTP isteklerini zaman uyumsuz olarak işetse de, WCF Veri Hizmetleri istemci kitaplıklarının bazı yöntemleri zaman uyumludur ve yürütmeye devam etmeden önce tüm istek-yanıt alışverişi tamamlanana kadar bekler. WCF Veri Hizmetleri istemci kitaplıklarının zaman uyumsuz yöntemleri, bu Exchange 'in tamamlanmasını beklemez ve uygulamanızın bu sırada yanıt veren bir kullanıcı arabirimini korumasına izin verebilir.  
@@ -34,6 +35,7 @@ Web uygulamaları, istemci ve sunucu arasında iç ağların içinde çalışan 
 |İçindeki nesnelerde yapılan değişiklikler kaydediliyor <xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>Zaman uyumsuz Işlemler için iş parçacığı konuları  
+
  Çok iş parçacıklı bir uygulamada, zaman uyumsuz işlem için geri arama olarak kaydedilen temsilcinin, *başlangıç yöntemini çağırmak* için kullanılan aynı iş parçacığında çağrılması gerekmez, bu da ilk isteği oluşturur. Geri aramanın belirli bir iş parçacığında çağrılması gereken bir uygulamada, yanıtı işleyen *bitiş* yönteminin yürütülmesini, istenen iş parçacığına açıkça sıramalısınız. Örneğin, Windows Presentation Foundation (WPF) tabanlı uygulamalar ve Silverlight tabanlı uygulamalarda, yanıt, nesne üzerindeki yöntemi kullanılarak UI iş parçacığına geri sıralanmalıdır <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> <xref:System.Windows.Threading.Dispatcher> . Daha fazla bilgi için bkz. [veri hizmetini sorgulama (WCF veri Hizmetleri/Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

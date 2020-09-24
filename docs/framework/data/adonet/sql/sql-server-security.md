@@ -2,14 +2,15 @@
 title: SQL Server Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: c5fd9cc82a3b1e4ffa217d65c542376fe067db06
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5db14e681b5a9445c034be60993661a61a038e08
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791626"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177312"
 ---
 # <a name="sql-server-security"></a>SQL Server Güvenliği
+
 SQL Server, güvenli veritabanı uygulamaları oluşturmayı destekleyen birçok özelliğe sahiptir.  
   
  Veri hırsızlığı veya vandalroni gibi yaygın güvenlik konuları, kullandığınız SQL Server sürümünden bağımsız olarak uygulanır. Veri bütünlüğü Ayrıca bir güvenlik sorunu olarak ele alınmalıdır. Veriler korunmuşsa, geçici veri işlemeye izin verildiğinde ve veriler yanlışlıkla veya kötü amaçlı olarak yanlış değerlerle değiştirilmişse veya tamamen siliniyorsa, daha az olabilme olasılığı vardır. Bunlara ek olarak, gizli bilgilerin doğru depolanması gibi genellikle, ' ye uymak gereken yasal gereksinimler vardır. Belirli bir vergi dairesine uygulanan kanunlarına bağlı olarak, bazı kişisel veri türlerinin depolanması tamamen tamamen yapılır.  
@@ -23,6 +24,7 @@ SQL Server, güvenli veritabanı uygulamaları oluşturmayı destekleyen birçok
  Bu bölümdeki konular, SQL Server Books Online 'daki ilgili konuların ve daha ayrıntılı tedarik sağlayan diğer kaynakların bağlantılarıyla ilgili SQL Server, geliştiriciler için uygun olan güvenlik özelliklerini kısaca anlatmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [SQL Server Güvenliğine Genel Bakış](overview-of-sql-server-security.md)  
  SQL Server mimarisini ve güvenlik özelliklerini açıklar.  
   
@@ -33,7 +35,8 @@ SQL Server, güvenli veritabanı uygulamaları oluşturmayı destekleyen birçok
  SQL Server Express yönelik güvenlik konularını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
-[SQL Server veritabanı altyapısı ve Azure SQL veritabanı için Güvenlik Merkezi](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+
+[SQL Server Veritabanı Altyapısı ve Azure SQL Veritabanı için Güvenlik Merkezi](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
 SQL Server ve Azure SQL veritabanı için güvenlik konularını açıklar.
 
 [SQL Server yüklemesine yönelik güvenlik konuları](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  

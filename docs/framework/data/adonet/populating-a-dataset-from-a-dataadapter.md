@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: 3d4da840e1d51ec6f309915787caa8891db3eb59
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ac84af884238b166266d4206802878c1e21169fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286669"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177416"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter’dan bir DataSet Doldurma
+
 ADO.NET, <xref:System.Data.DataSet> veri kaynağından bağımsız tutarlı bir ilişkisel programlama modeli sağlayan verilerin bellekte yerleşik bir gösterimidir. , Tablolar `DataSet` arasındaki tabloları, kısıtlamaları ve ilişkileri içeren tüm veri kümesini temsil eder. , `DataSet` Veri kaynağından bağımsız olduğundan, bir `DataSet` uygulamaya yerel veri ve birden çok veri kaynağından veri içerebilir. Mevcut veri kaynaklarıyla etkileşim aracılığıyla denetlenir `DataAdapter` .  
   
  `SelectCommand`Öğesinin özelliği, `DataAdapter` `Command` veri kaynağından veri alan bir nesnedir. , `InsertCommand` `UpdateCommand` Ve özellikleri, `DeleteCommand` `DataAdapter` `Command` içindeki verilerde yapılan değişikliklere göre veri kaynağındaki verilerle ilgili güncelleştirmeleri yöneten nesnelerdir `DataSet` . Bu özellikler, [veri kaynaklarını DataAdapter Ile güncelleştirme konusunda](updating-data-sources-with-dataadapters.md)daha ayrıntılı olarak ele alınmıştır.  
@@ -23,7 +24,7 @@ ADO.NET, <xref:System.Data.DataSet> veri kaynağından bağımsız tutarlı bir 
 > [!NOTE]
 > `DataAdapter`Bir tablonun tümünü almak için kullanılması, özellikle tabloda çok sayıda satır olması durumunda zaman alır. Bunun nedeni, veritabanına erişmek, verileri bulmak ve işlemek ve sonra verilerin istemciye aktarılması zaman alır. Tüm tablosunun istemciye çekmeleri, sunucudaki tüm satırları da kilitler. Performansı artırmak için, `WHERE` yan tümcesini kullanarak istemciye döndürülen satır sayısını büyük ölçüde azaltabilirsiniz. Ayrıca, yalnızca deyimindeki gerekli sütunları açıkça listeleyerek istemciye döndürülen veri miktarını azaltabilirsiniz `SELECT` . Başka bir iyi geçici çözüm de satırları toplu olarak (örneğin, bir kerede birkaç yüz satır) almak ve yalnızca, geçerli toplu işlemle istemci tamamlandığında sonraki toplu işi almak içindir.  
   
- Yöntemi, içindeki `Fill` `DataReader` tabloları oluşturmak için kullanılan sütun adlarını ve türlerini `DataSet` ve içindeki tabloların satırlarının doldurulmasıyla ilgili verileri döndürmek için nesneyi örtük olarak kullanır `DataSet` . Tablolar ve sütunlar yalnızca henüz yoksa oluşturulur; Aksi halde `Fill` mevcut `DataSet` Şemayı kullanır. Sütun türleri, [ADO.net Içindeki veri türü eşlemelerinde](data-type-mappings-in-ado-net.md)bulunan tablolara göre .NET Framework türleri olarak oluşturulur. Birincil anahtarlar veri kaynağında yoksa oluşturulmaz `DataAdapter` **.**`MissingSchemaAction` , olarak ayarlanır `MissingSchemaAction` **.** `AddWithKey` .. `Fill`Bir tablonun birincil anahtarının mevcut olduğunu belirlerse, `DataSet` birincil anahtar sütun değerlerinin veri kaynağından döndürülen satırla eşleştiği satırlar için veri kaynağındaki verilerle veri üzerine yazar. Birincil anahtar bulunamazsa, veriler içindeki tablolara eklenir `DataSet` . `Fill`' i doldurduğunuzda mevcut olabilecek eşlemeleri kullanır `DataSet` (bkz. [DataAdapter DataTable ve DataColumn Mappings](dataadapter-datatable-and-datacolumn-mappings.md)).  
+ Yöntemi, içindeki `Fill` `DataReader` tabloları oluşturmak için kullanılan sütun adlarını ve türlerini `DataSet` ve içindeki tabloların satırlarının doldurulmasıyla ilgili verileri döndürmek için nesneyi örtük olarak kullanır `DataSet` . Tablolar ve sütunlar yalnızca henüz yoksa oluşturulur; Aksi halde `Fill` mevcut `DataSet` Şemayı kullanır. Sütun türleri, [ADO.net Içindeki veri türü eşlemelerinde](data-type-mappings-in-ado-net.md)bulunan tablolara göre .NET Framework türleri olarak oluşturulur. Birincil anahtarlar veri kaynağında yoksa oluşturulmaz `DataAdapter` **.**`MissingSchemaAction` , olarak ayarlanır `MissingSchemaAction` **.** `AddWithKey` .. `Fill`Bir tablonun birincil anahtarının mevcut olduğunu belirlerse, `DataSet` birincil anahtar sütun değerlerinin veri kaynağından döndürülen satırla eşleştiği satırlar için veri kaynağındaki verilerle veri üzerine yazar. Birincil anahtar bulunamazsa, veriler içindeki tablolara eklenir `DataSet` . `Fill` ' i doldurduğunuzda mevcut olabilecek eşlemeleri kullanır `DataSet` (bkz. [DataAdapter DataTable ve DataColumn Mappings](dataadapter-datatable-and-datacolumn-mappings.md)).  
   
 > [!NOTE]
 > , `SelectCommand` BIR Dış birleştirmenin sonuçlarını döndürürse, `DataAdapter` `PrimaryKey` sonuç için bir değer yapmaz `DataTable` . `PrimaryKey`Yinelenen satırların doğru bir şekilde çözümlendiğini doğrulamak için kendinizi tanımlamanız gerekir. Daha fazla bilgi için bkz. [birincil anahtarları tanımlama](./dataset-datatable-dataview/defining-primary-keys.md).  
@@ -57,12 +58,15 @@ adapter.Fill(customers, "Customers");
 > Bu örnekte gösterilen kod açık bir şekilde açılmaz ve kapatmaz `Connection` . `Fill`Yöntemi, `Connection` `DataAdapter` bağlantının zaten açık olmadığını bulursa kullandığı öğesini örtülü olarak açar. `Fill`Bağlantı açıldıysa, tamamlandığında da bağlantıyı kapatır `Fill` . Bu, veya gibi tek bir işlemle uğraşdığınızda kodunuzun basitleşmesini sağlayabilir `Fill` `Update` . Ancak, açık bağlantı gerektiren birden çok işlem gerçekleştiriyorsanız uygulamanızın performansını, `Open` `Connection` veri kaynağına karşı işlemleri gerçekleştirerek ve sonra metodunu çağırarak, kendi metodunu açıkça çağırarak geliştirebilirsiniz `Close` `Connection` . Kaynakları diğer istemci uygulamalar tarafından kullanılmak üzere serbest bırakmak için veri kaynağına yönelik bağlantıları daha kısa sürede açık tutmaya çalışın.  
   
 ## <a name="multiple-result-sets"></a>Birden Fazla Sonuç Kümesi  
+
  `DataAdapter`Birden çok sonuç kümesiyle karşılaşırsa, içinde birden çok tablo oluşturur `DataSet` . Tablolara, TABLE0 için "Table" ile başlayarak, tablo*N*' nin artımlı varsayılan adı verilir. Bir tablo adı yöntemine bir bağımsız değişken olarak geçirilirse `Fill` , tablolara TableName0 için "TableName" ile başlayarak TableName*N*artımlı varsayılan adı verilir.  
   
 ## <a name="populating-a-dataset-from-multiple-dataadapters"></a>Birden çok DataAdapter nesnesinden veri kümesini doldurma  
- Herhangi bir sayıda `DataAdapter` nesne, ile kullanılabilir `DataSet` . Her biri `DataAdapter` , bir veya daha fazla nesneyi doldurup `DataTable` güncelleştirmeleri ilgili veri kaynağına geri çözümlemek için kullanılabilir. `DataRelation`ve `Constraint` nesneler yerel olarak eklenebilir `DataSet` , bu da benzer veri kaynaklarından verileri ilişkilendirmenize olanak sağlar. Örneğin, bir `DataSet` Microsoft SQL Server veritabanından veri, OLE DB üzerinden sunulan BIR IBM DB2 veritabanı ve XML akışı yapan bir veri kaynağı içerebilir. Bir veya daha fazla `DataAdapter` nesne, her bir veri kaynağıyla iletişimi işleyebilir.  
+
+ Herhangi bir sayıda `DataAdapter` nesne, ile kullanılabilir `DataSet` . Her biri `DataAdapter` , bir veya daha fazla nesneyi doldurup `DataTable` güncelleştirmeleri ilgili veri kaynağına geri çözümlemek için kullanılabilir. `DataRelation` ve `Constraint` nesneler yerel olarak eklenebilir `DataSet` , bu da benzer veri kaynaklarından verileri ilişkilendirmenize olanak sağlar. Örneğin, bir `DataSet` Microsoft SQL Server veritabanından veri, OLE DB üzerinden sunulan BIR IBM DB2 veritabanı ve XML akışı yapan bir veri kaynağı içerebilir. Bir veya daha fazla `DataAdapter` nesne, her bir veri kaynağıyla iletişimi işleyebilir.  
   
 ### <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, Microsoft SQL Server veritabanından bir müşteri listesini `Northwind` ve `Northwind` Microsoft Access 2000 ' de depolanan veritabanından alınan siparişlerin listesini doldurur. Doldurulmuş tablolar bir ile ilgilidir `DataRelation` ve müşteriler listesi bu müşterinin siparişleriyle birlikte görüntülenir. Nesneler hakkında daha fazla bilgi için `DataRelation` bkz. [DataRelation 'ı ekleme](./dataset-datatable-dataview/adding-datarelations.md) ve DataRelation 'ı [gezinme](./dataset-datatable-dataview/navigating-datarelations.md).  
   
 ```vb  
@@ -119,11 +123,13 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ```  
   
 ## <a name="sql-server-decimal-type"></a>SQL Server ondalık türü  
+
  Varsayılan olarak, `DataSet` .NET Framework veri türlerini kullanarak verileri depolar. Çoğu uygulama için, veri kaynağı bilgilerinin kullanışlı bir gösterimini sağlar. Ancak, veri kaynağındaki veri türü SQL Server Decimal veya numeric veri türü olduğunda bu gösterim soruna neden olabilir. .NET Framework `decimal` veri türü en fazla 28 önemli basamağa izin veriyor, ancak SQL Server `decimal` veri türü 38 önemli basamağa izin veriyor. `SqlDataAdapter`Bir işlem sırasında, `Fill` bir SQL Server alanının duyarlığının `decimal` 28 karakterden daha büyük olduğunu belirlerse, geçerli satır öğesine eklenmez `DataTable` . Bunun yerine, `FillError` bir duyarlık kaybı olup olmadığını ve uygun şekilde yanıt verip vermeyeceğinizi belirlemenizi sağlayan olay oluşur. Olay hakkında daha fazla bilgi için `FillError` bkz. [DataAdapter olaylarını işleme](handling-dataadapter-events.md). SQL Server değerini almak için `decimal` , bir nesnesi de kullanabilir <xref:System.Data.SqlClient.SqlDataReader> ve <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> yöntemini çağırabilirsiniz.  
   
  ADO.NET 2,0, içinde için geliştirilmiş destek getirmiştir <xref:System.Data.SqlTypes> `DataSet` . Daha fazla bilgi için bkz. [SqlTypes ve DataSet](./sql/sqltypes-and-the-dataset.md).  
   
 ## <a name="ole-db-chapters"></a>OLE DB bölümler  
+
  Hiyerarşik satır kümeleri veya bölümler (OLE DB türü `DBTYPE_HCHAPTER` , ADO türü `adChapter` ), içeriğini dolduracak şekilde kullanılabilir `DataSet` . <xref:System.Data.OleDb.OleDbDataAdapter>Bir işlem sırasında bir bölümlenebilir sütun ile karşılaştığında, `Fill` `DataTable` bölümlenebilir sütun için bir oluşturulur ve bu tablo, bölümün sütunları ve satırlarıyla doldurulur. Bölümlendirilen sütun için oluşturulan tablo, hem üst tablo adı hem de "*Parenttablenamebölüteredcolumnname*" biçiminde bölümlendirilen sütun adı kullanılarak adlandırılır. İçinde, `DataSet` bölümlenebilir sütunun adıyla eşleşen bir tablo zaten varsa, geçerli tablo bölüm verileriyle doldurulur. Varolan bir tabloda, bölümde bulunan bir sütunla eşleşen bir sütun yoksa, yeni bir sütun eklenir.  
   
  İçindeki tablolar, `DataSet` bölümlenebilir sütunlardaki verilerle doldurulmadan önce hem üst hem de alt tabloya bir tamsayı sütunu ekleyerek hiyerarşik satır kümesinin üst ve alt tabloları arasında bir ilişki oluşturulur, üst sütunu otomatik artış olarak ayarlar ve `DataRelation` her iki tablodan de eklenen sütunları kullanarak oluşturma. Eklenen ilişki, "*Parenttablenamecolumntercolumnname*" biçiminde üst tablo ve bölüm sütun adları kullanılarak adlandırılır.  

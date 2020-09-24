@@ -2,14 +2,15 @@
 title: <security> / <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: 270ca844f586be256b6483653c868d1cc4396657
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f37c336b0e42993e1eef3f06e2f919705f425a2e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399776"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169966"
 ---
 # <a name="security-of-peertransport"></a>\<security> / \<peerTransport>
+
 Kullanılan kimlik doğrulaması türü ve ileti aktarımı için kullanılan güvenlik gibi bir eş kanalla ilişkili güvenlik ayarlarını içerir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Kullanılan kimlik doğrulaması türü ve ileti aktarımı için kullanılan g�
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<peerTransport>**](peertransport.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <security mode="None/Transport/Message/TransportWithMessageCredential">
@@ -29,6 +30,7 @@ Kullanılan kimlik doğrulaması türü ve ileti aktarımı için kullanılan g�
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -63,7 +65,7 @@ Kullanılan kimlik doğrulaması türü ve ileti aktarımı için kullanılan g�
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Aktarım Güvenliği](../../../wcf/feature-details/transport-security.md)
+- [Taşıma Güvenliği](../../../wcf/feature-details/transport-security.md)
 - [Taşımalar](../../../wcf/feature-details/transports.md)
 - [Taşıma Seçme](../../../wcf/feature-details/choosing-a-transport.md)
 - [Bağlamalar](../../../wcf/bindings.md)

@@ -3,14 +3,15 @@ title: LINQ to Entities Sorgularında Çağırma İşlevleri
 description: EntityFunctions ve SqlFunctions sınıflarının Entity Framework bir parçası olarak kurallı ve veritabanı işlevlerine nasıl erişim sağlayakullandığını görmek için bu makaleleri kullanın.
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: eb206e9b331da1ae442c1f310e78fec5c6b57e82
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8c771c93e0c3ed82f3ad550613dd855fd06b6f48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546054"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177494"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>LINQ to Entities Sorgularında Çağırma İşlevleri
+
 Bu bölümdeki konular, LINQ to Entities sorgularda işlevlerin nasıl çağrılacağını açıklamaktadır.  
   
  <xref:System.Data.Objects.EntityFunctions>Ve <xref:System.Data.Objects.SqlClient.SqlFunctions> sınıfları, Entity Framework bir parçası olarak kurallı ve veritabanı işlevlerine erişim sağlar. Daha fazla bilgi için bkz. [nasıl yapılır: kurallı Işlevleri çağırma](how-to-call-canonical-functions.md) ve [nasıl yapılır: veritabanı işlevlerini çağırma](how-to-call-database-functions.md).  
@@ -26,6 +27,7 @@ Bu bölümdeki konular, LINQ to Entities sorgularda işlevlerin nasıl çağrıl
  Daha fazla bilgi için bu bölümdeki konulara bakın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Nasıl yapılır: Kurallı İşlevler Çağırma](how-to-call-canonical-functions.md)  
   
  [Nasıl yapılır: Veritabanı İşlevleri Çağırma](how-to-call-database-functions.md)  

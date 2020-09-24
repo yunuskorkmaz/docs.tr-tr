@@ -3,12 +3,12 @@ title: Dağıtılmış veriler
 description: Tek parçalı ve bulutta yerel uygulamalardaki veri depolama alanını kontrast.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b7c8c43b16f2f70f9009c4fe4a8d19c52fa7ea2a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144402"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163940"
 ---
 # <a name="distributed-data"></a>Dağıtılmış veriler
 
@@ -22,7 +22,7 @@ Bu kitapta gördüğünüze göre, bulutta yerel bir yaklaşım, uygulamaları t
 
 Deneyimli geliştiriciler, Şekil 5-1 ' nin sol tarafında bulunan mimariyi kolayca tanıyacaktır. Bu *tek parçalı uygulamada*, iş hizmeti bileşenleri, tek bir ilişkisel veritabanından veri paylaşarak paylaşılan bir hizmet katmanında birlikte bir araya sahiptir.
 
-Birçok şekilde, tek bir veritabanı veri yönetimini basit tutar. Verileri birden çok tablo genelinde sorgulama basittir. Veri güncelleştirmesiyle birlikte yapılan değişiklikler veya hepsi geri alma. [ACID işlemleri](https://docs.microsoft.com/windows/desktop/cossdk/acid-properties) güçlü ve anında tutarlılığı garanti eder.
+Birçok şekilde, tek bir veritabanı veri yönetimini basit tutar. Verileri birden çok tablo genelinde sorgulama basittir. Veri güncelleştirmesiyle birlikte yapılan değişiklikler veya hepsi geri alma. [ACID işlemleri](/windows/desktop/cossdk/acid-properties) güçlü ve anında tutarlılığı garanti eder.
 
 Bulutta yerel olarak tasarlamak için farklı bir yaklaşım sunuyoruz. Şekil 5-1 ' nin sağ tarafında, iş işlevselliğinin küçük, bağımsız mikro hizmetlere nasıl ayırt edici olduğunu göz önünde ayırın. Her mikro hizmet belirli bir iş özelliğini ve kendi verilerini kapsar. Tek parçalı veritabanı, her biri bir mikro hizmetle hizalanan çok daha küçük veritabanları ile dağıtılmış bir veri modeline sahiptir. Duman temizlediğinde, *mikro hizmet başına bir veritabanı*sunan tasarımla karşılaştık.
 
@@ -68,7 +68,7 @@ Bölüm 4 ' te açıklanan bir seçenek, alışveriş sepetinden kataloğa ve fi
 Ayrıca, her hizmet için ayrı gelen ve giden kuyruklarla bir istek-yanıt modelini uygulayabiliriz. Ancak bu model karmaşıktır ve istek ve yanıt iletilerinin ilişkilendirilmesi için yeniden tesisat gerektirir.
 Arka uç mikro hizmet çağrılarını ayırdığından, çağıran hizmetin hala zaman uyumlu olarak çağrının tamamlanmasını beklemesi gerekir. Ağ tıkanıklığı, geçici hatalar veya aşırı yüklenmiş mikro hizmet, uzun süre çalışan ve hatta başarısız işlemlere neden olabilir.
 
-Bunun yerine, çapraz hizmet bağımlılıklarını kaldırmak için yaygın olarak kabul edilen bir model, Şekil 5-4 ' de gösterilen [gerçekleştirilmiş görünüm](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)düzeninizdir.
+Bunun yerine, çapraz hizmet bağımlılıklarını kaldırmak için yaygın olarak kabul edilen bir model, Şekil 5-4 ' de gösterilen [gerçekleştirilmiş görünüm](/azure/architecture/patterns/materialized-view)düzeninizdir.
 
 ![Gerçekleştirilmiş görünüm deseninin](./media/materialized-view-pattern.png)
 
@@ -92,7 +92,7 @@ Yukarıdaki şekilde, beş bağımsız mikro hizmet sipariş oluşturan dağıt�
 
 Bunun yerine, bu dağıtılmış işlemi *programlı olarak*oluşturmanız gerekir.
 
-Dağıtılmış işlem desteği eklemek için popüler bir düzende Saga deseninin olması önerilir. Yerel işlemler programlı bir şekilde gruplanarak ve her birini sırayla çağırarak uygulanır. Herhangi bir yerel işlem başarısız olursa, Saga işlemi iptal eder ve bir [dengeleyici](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)işlem kümesi çağırır. Telafi işlemleri, önceki yerel işlemler tarafından yapılan değişiklikleri geri alır ve veri tutarlılığını geri yükler. Şekil 5-6, Saga düzeniyle başarısız olan bir işlemi gösterir.
+Dağıtılmış işlem desteği eklemek için popüler bir düzende Saga deseninin olması önerilir. Yerel işlemler programlı bir şekilde gruplanarak ve her birini sırayla çağırarak uygulanır. Herhangi bir yerel işlem başarısız olursa, Saga işlemi iptal eder ve bir [dengeleyici](/azure/architecture/patterns/compensating-transaction)işlem kümesi çağırır. Telafi işlemleri, önceki yerel işlemler tarafından yapılan değişiklikleri geri alır ve veri tutarlılığını geri yükler. Şekil 5-6, Saga düzeniyle başarısız olan bir işlemi gösterir.
 
 ![Saga düzenine geri alma](./media/saga-rollback-operation.png)
 
@@ -108,7 +108,7 @@ Büyük ölçekli bulutta yerel uygulamalar genellikle yüksek hacimli veri gere
 
 ### <a name="cqrs"></a>CQRS
 
-[CQRS](https://docs.microsoft.com/azure/architecture/patterns/cqrs), performansı, ölçeklenebilirliği ve güvenliği en üst düzeye çıkarmaya yardımcı olabilecek mimari bir modeldir. Model, verileri yazan işlemlerden verileri okuyan işlemleri ayırır.
+[CQRS](/azure/architecture/patterns/cqrs), performansı, ölçeklenebilirliği ve güvenliği en üst düzeye çıkarmaya yardımcı olabilecek mimari bir modeldir. Model, verileri yazan işlemlerden verileri okuyan işlemleri ayırır.
 
 Normal senaryolarda, hem okuma hem *de* yazma işlemleri için aynı varlık modeli ve veri deposu nesnesi kullanılır.
 
@@ -124,11 +124,11 @@ Ancak, yüksek hacimli bir veri senaryosu, okuma ve yazma işlemleri için ayrı
 
 Bu ayrım, okuma ve yazma işlemlerini bağımsız olarak ölçeklendirmeye olanak sağlar. Okuma işlemleri sorgularda en iyi duruma getirilmiş şemayı kullanır, yazma işlemleri güncelleştirmeler için iyileştirilmiş bir şema kullanır. Okuma sorguları, yoğun verilere karşı, karmaşık iş mantığı ise yazma modeline uygulanabilirler. Ayrıca, yazma işlemlerinde, okumaların açığa çıkarmadan daha sıkı güvenlik sağlayabilirsiniz.
 
-CQRS 'nin uygulanması, bulutta yerel hizmetler için uygulama performansını iyileştirebilir. Ancak, daha karmaşık bir tasarıma neden olur. Bu ilkeyi, buluttan faydalanabilecek bulut Yerel uygulamanızın bölümlerine dikkatle ve stratejik bir şekilde uygulayın. CQRS hakkında daha fazla bilgi için bkz. Microsoft Book [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns).
+CQRS 'nin uygulanması, bulutta yerel hizmetler için uygulama performansını iyileştirebilir. Ancak, daha karmaşık bir tasarıma neden olur. Bu ilkeyi, buluttan faydalanabilecek bulut Yerel uygulamanızın bölümlerine dikkatle ve stratejik bir şekilde uygulayın. CQRS hakkında daha fazla bilgi için bkz. Microsoft Book [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](../microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md).
 
 ### <a name="event-sourcing"></a>Olay kaynağını belirleme
 
-Yüksek hacimli veri senaryolarını iyileştirmeye yönelik başka bir yaklaşım da [olay](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)kaynağını içerir.
+Yüksek hacimli veri senaryolarını iyileştirmeye yönelik başka bir yaklaşım da [olay](/azure/architecture/patterns/event-sourcing)kaynağını içerir.
 
 Bir sistem genellikle bir veri varlığının geçerli durumunu depolar. Kullanıcı telefon numarasını değiştirirse (örneğin, müşteri kaydı yeni sayıyla güncelleştirilir). Her zaman bir veri varlığının geçerli durumunu biliyoruz, ancak her güncelleştirme önceki durumun üzerine yazar.
 

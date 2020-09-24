@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 18bb03e17b19243ee1bc6e3f7ebd70afb4d4c60b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b0234337c85ace0797d75b72560ccb55635daae
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174452"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177273"
 ---
 # <a name="updating-data-in-a-data-source"></a>Bir Veri Kaynağındaki Verileri Güncelleştirme
-Verileri değiştiren SQL deyimleri (INSERT, UPDATE veya DELETE gibi) satır döndürmez. Benzer şekilde, depolanan birçok yordam bir eylem gerçekleştirir, ancak satırları döndürmez. Satırları döndürmeyan komutları yürütmek için, gerekli **parametreleri**içeren uygun SQL komutu ve **bağlantıile**bir **Komut** nesnesi oluşturun. **Komut** nesnesinin **ExecuteNonQuery** yöntemi ile komutu çalıştırın.  
+
+Verileri değiştiren SQL deyimleri (INSERT, UPDATE veya DELETE gibi) satır döndürmez. Benzer şekilde, birçok saklı yordam bir eylem yapar ancak satır döndürmez. Satırları döndürmeyen komutları yürütmek için, gerekli **Parametreler**dahil olmak üzere uygun SQL komutuyla ve bir **bağlantıyla**birlikte bir **komut** nesnesi oluşturun. **Komut nesnesinin** **ExecuteNonQuery** yöntemiyle komutunu yürütün.  
   
- **ExecuteNonQuery** yöntemi, yürütülen deyim veya depolanan yordamdan etkilenen satır sayısını temsil eden bir karşıcı döndürür. Birden çok deyim yürütülürse, döndürülen değer, yürütülen tüm deyimlerden etkilenen kayıtların toplamıdır.  
+ **ExecuteNonQuery** yöntemi, yürütülen deyimin veya saklı yordamın etkilediği satır sayısını temsil eden bir tamsayı döndürür. Birden çok deyim yürütülürse, döndürülen değer yürütülen tüm deyimlerden etkilenen kayıtların toplamıdır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod **örneği, ExecuteNonQuery**kullanarak bir veritabanına bir kayıt eklemek için bir INSERT deyimi yürütür.  
+
+ Aşağıdaki kod örneği, **ExecuteNonQuery**kullanarak bir veritabanına kayıt eklemek IÇIN bir INSERT ifadesini yürütür.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +44,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- Aşağıdaki kod örneği, [Performans Kataloğu İşlemleri'nde](performing-catalog-operations.md)örnek kodu tarafından oluşturulan depolanan yordamı yürütür. Depolanan yordam tarafından satır döndürülür, bu nedenle **ExecuteNonQuery** yöntemi kullanılır, ancak depolanan yordam bir giriş parametresi alır ve bir çıktı parametresi ve bir dönüş değeri döndürür.  
+ Aşağıdaki kod örneği, [Katalog Işlemlerini gerçekleştirirken](performing-catalog-operations.md)örnek kod tarafından oluşturulan saklı yordamı yürütür. Saklı yordam tarafından hiçbir satır döndürüldüğünden, **ExecuteNonQuery** yöntemi kullanılır, ancak saklı yordam bir giriş parametresi alır ve bir çıkış parametresi ve bir dönüş değeri döndürür.  
   
- Nesne <xref:System.Data.OleDb.OleDbCommand> **için, Önce** **Parametreler** koleksiyonuna ReturnValue parametresi eklenmelidir.  
+ Nesnesi için <xref:System.Data.OleDb.OleDbCommand> , önce **parametre** koleksiyonuna **returnValue** parametresi eklenmelidir.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

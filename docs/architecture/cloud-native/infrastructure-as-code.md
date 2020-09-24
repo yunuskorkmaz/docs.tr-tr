@@ -2,24 +2,24 @@
 title: Kod olarak altyapı
 description: Bulutta yerel uygulamalarla kod olarak altyapı (IAC)
 ms.date: 05/13/2020
-ms.openlocfilehash: cfc9e1f0b2733048d5921de5a0400998c282b1fa
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d130705e19e0d3d7a9e15c73f4758a22ee8ecd43
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613960"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163745"
 ---
 # <a name="infrastructure-as-code"></a>Kod olarak altyapı
 
 Bulut Yerel sistemleri, hızlı ve çeviklik sağlamak için mikro hizmetleri, kapsayıcıları ve modern sistem tasarımını imine dönüştürür. Tutarlı ve kalite kodu sağlamak için otomatik derleme ve sürüm aşamaları sağlar. Ancak bu yalnızca hikayenin bir parçasıdır. Bu sistemlerin üzerinde çalıştığı bulut ortamlarını nasıl sağlayacaksınız?
 
-Modern bulutla yerel uygulamalar, [altyapının kod olarak](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)kabul edilen yaygın olarak benimsenme yöntemini benimseyin `IaC` .  IAC ile platform sağlamayı otomatikleştirin. Aslında DevOps uygulamalarınıza test ve sürüm oluşturma gibi yazılım mühendisliği uygulamalarını uygularsınız. Altyapınız ve dağıtımlarınız otomatik, tutarlı ve yinelenebilir. Sürekli teslim, el ile yapılan dağıtımların geleneksel modelini otomatik olarak, kod olarak altyapı (IAC), uygulama ortamlarının nasıl yönetildiğini de gelişiyor.
+Modern bulutla yerel uygulamalar, [altyapının kod olarak](/azure/devops/learn/what-is-infrastructure-as-code)kabul edilen yaygın olarak benimsenme yöntemini benimseyin `IaC` .  IAC ile platform sağlamayı otomatikleştirin. Aslında DevOps uygulamalarınıza test ve sürüm oluşturma gibi yazılım mühendisliği uygulamalarını uygularsınız. Altyapınız ve dağıtımlarınız otomatik, tutarlı ve yinelenebilir. Sürekli teslim, el ile yapılan dağıtımların geleneksel modelini otomatik olarak, kod olarak altyapı (IAC), uygulama ortamlarının nasıl yönetildiğini de gelişiyor.
 
 Azure Resource Manager (ARM), Terkform ve Azure komut satırı arabirimi (CLı) gibi araçlar, ihtiyacınız olan bulut altyapısını bildirimli olarak betiğe olanak sağlar.
 
 ## <a name="azure-resource-manager-templates"></a>Azure Resource Manager şablonları
 
-ARM [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)için temsil eder. Bu, Azure 'da yerleşik olan ve API hizmeti olarak sunulan bir API sağlama altyapısıdır. ARM, Azure Kaynak grubu 'nda bulunan kaynakları tek ve eşgüdümlü bir işlem halinde dağıtmanıza, güncelleştirmenize, silmenizi ve yönetmenize olanak sağlar. Altyapıyı, ihtiyacınız olan kaynakları ve bunların yapılandırmalarını belirten bir JSON tabanlı şablonla birlikte sağlarsınız. ARM, dağıtımı otomatik olarak doğru sırada düzenler ve bağımlılıkları kolaylaştırır. Motor, üst sınırı sağlar. Aynı yapılandırmaya sahip istenen bir kaynak zaten varsa, sağlama yok sayılır.
+ARM [Azure Resource Manager](/azure/azure-resource-manager/management/overview)için temsil eder. Bu, Azure 'da yerleşik olan ve API hizmeti olarak sunulan bir API sağlama altyapısıdır. ARM, Azure Kaynak grubu 'nda bulunan kaynakları tek ve eşgüdümlü bir işlem halinde dağıtmanıza, güncelleştirmenize, silmenizi ve yönetmenize olanak sağlar. Altyapıyı, ihtiyacınız olan kaynakları ve bunların yapılandırmalarını belirten bir JSON tabanlı şablonla birlikte sağlarsınız. ARM, dağıtımı otomatik olarak doğru sırada düzenler ve bağımlılıkları kolaylaştırır. Motor, üst sınırı sağlar. Aynı yapılandırmaya sahip istenen bir kaynak zaten varsa, sağlama yok sayılır.
 
 Azure Resource Manager şablonlar, Azure 'da çeşitli kaynakları tanımlamaya yönelik JSON tabanlı bir dildir. Temel şema Şekil 10-14 gibi bir şey arar.
 
@@ -102,7 +102,7 @@ Bazen Terkform ve ARM şablonları, yeni oluşturulan bir veritabanına yönelik
 
 ## <a name="azure-cli-scripts-and-tasks"></a>Azure CLı betikleri ve görevleri
 
-Son olarak, bulut altyapınıza bildirimli olarak betik eklemek için [Azure CLI](https://docs.microsoft.com/cli/azure/) özelliğinden yararlanabilirsiniz. Azure CLı betikleri, neredeyse tüm Azure kaynakları sağlamak ve yapılandırmak için oluşturulabilir, bulunabilir ve paylaşılabilir. CLı, Gentle öğrenme eğrisi ile kullanımı basittir. Betikler PowerShell veya bash içinde yürütülür. Bunlar, özellikle de ARM şablonlarıyla karşılaştırıldığında hata ayıklama yapmak için de oldukça kolaydır.
+Son olarak, bulut altyapınıza bildirimli olarak betik eklemek için [Azure CLI](/cli/azure/) özelliğinden yararlanabilirsiniz. Azure CLı betikleri, neredeyse tüm Azure kaynakları sağlamak ve yapılandırmak için oluşturulabilir, bulunabilir ve paylaşılabilir. CLı, Gentle öğrenme eğrisi ile kullanımı basittir. Betikler PowerShell veya bash içinde yürütülür. Bunlar, özellikle de ARM şablonlarıyla karşılaştırıldığında hata ayıklama yapmak için de oldukça kolaydır.
 
 Azure CLı betikleri, altyapınızı bölmek ve yeniden dağıtmanız gerektiğinde iyi çalışır. Mevcut bir ortamı güncelleştirmek karmaşık olabilir. Birçok CLı komutu ıdempotent değildir. Diğer bir deyişle, kaynak zaten mevcut olsa bile, her çalıştırıldığında kaynağı yeniden oluşturur. Her zaman oluşturmadan önce her bir kaynağın varlığını denetleyen kodu eklemek mümkündür. Ancak, bunun yapılması, betiğinizin kaldırılması ve yönetilmesi zor hale gelebilir.
 
@@ -124,7 +124,7 @@ Bu betikler aynı zamanda Azure DevOps işlem hatları ile de katıştırılabil
 
 **Şekil 10-17** -Azure CLI betiği
 
-Makalesinde [kod olarak altyapı nedir](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code), Sam Guckenheimer yazar, "IAC 'Yı uygulayan ekipler, kararlı ortamları hızla ve ölçekte teslim edebilir. Takımlar ortamların el ile yapılandırılmasını önler ve ortamları kod aracılığıyla istenen durumunu temsil ederek tutarlılığı zorlar. IAC ile altyapı dağıtımları tekrarlanabilir ve yapılandırma DRIP veya eksik bağımlılıklara neden olan çalışma zamanı sorunlarını önler. DevOps ekipleri, uygulamaları ve destekleyici altyapıyı hızlı, güvenilir ve ölçeklenebilir bir şekilde sunmak için birleştirilmiş bir uygulama ve araç kümesiyle birlikte çalışabilir. "
+Makalesinde [kod olarak altyapı nedir](/azure/devops/learn/what-is-infrastructure-as-code), Sam Guckenheimer yazar, "IAC 'Yı uygulayan ekipler, kararlı ortamları hızla ve ölçekte teslim edebilir. Takımlar ortamların el ile yapılandırılmasını önler ve ortamları kod aracılığıyla istenen durumunu temsil ederek tutarlılığı zorlar. IAC ile altyapı dağıtımları tekrarlanabilir ve yapılandırma DRIP veya eksik bağımlılıklara neden olan çalışma zamanı sorunlarını önler. DevOps ekipleri, uygulamaları ve destekleyici altyapıyı hızlı, güvenilir ve ölçeklenebilir bir şekilde sunmak için birleştirilmiş bir uygulama ve araç kümesiyle birlikte çalışabilir. "
 
 >[!div class="step-by-step"]
 >[Önceki](feature-flags.md) 

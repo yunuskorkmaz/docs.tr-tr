@@ -3,12 +3,12 @@ title: Azure platformu dayanıklılığı
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Azure ile bulut altyapısı dayanıklılığı
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 752f1320d9dfa18e52b078763d221a787da15e8e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 88634bc60df15cc93b1769a85879795ae383757a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613986"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163771"
 ---
 # <a name="azure-platform-resiliency"></a>Azure platformu dayanıklılığı
 
@@ -39,7 +39,7 @@ Dayanıklılık, uygulamanızın hataya tepki vermesini ve hala işlevsel kalmas
 
 Sorunlar, etki kapsamında farklılık gösterir. Hatalı disk gibi bir donanım arızası, kümedeki tek bir düğümü etkileyebilir. Başarısız bir ağ anahtarı sunucu rafından tamamını etkileyebilir. Güç kaybı gibi yaygın olarak karşılaşılan sorunlar, tüm veri merkezini kesintiye uğratabilir. Nadiren, bir bölgenin tamamı kullanılamaz hale gelir.
 
-[Artıklık](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) , uygulama esnekliği sağlamanın bir yoludur. Gereken artıklık düzeyi, iş gereksinimlerinize bağlıdır ve sisteminizin maliyetini ve karmaşıklığını etkiler. Örneğin, çok bölgeli bir dağıtım, tek bölgeli bir dağıtıma göre yönetilmesi daha pahalıdır ve daha karmaşıktır. Yük devretme ve yeniden çalışma işlemlerini yönetmek için işlemsel yordamlara ihtiyacınız olacak. Ek maliyet ve karmaşıklık bazı iş senaryoları için değişebilir, ancak diğerleri için kullanılamaz.
+[Artıklık](/azure/architecture/guide/design-principles/redundancy) , uygulama esnekliği sağlamanın bir yoludur. Gereken artıklık düzeyi, iş gereksinimlerinize bağlıdır ve sisteminizin maliyetini ve karmaşıklığını etkiler. Örneğin, çok bölgeli bir dağıtım, tek bölgeli bir dağıtıma göre yönetilmesi daha pahalıdır ve daha karmaşıktır. Yük devretme ve yeniden çalışma işlemlerini yönetmek için işlemsel yordamlara ihtiyacınız olacak. Ek maliyet ve karmaşıklık bazı iş senaryoları için değişebilir, ancak diğerleri için kullanılamaz.
 
 Yedekliliği mimARDA uygulamak için uygulamanızdaki kritik yolları belirlemeniz ve sonra yoldaki her bir noktada artıklık olup olmadığını belirlemeniz gerekir mi? Bir alt sistem başarısız olursa, uygulama başka bir şeye devredilecek mi? Son olarak, Azure bulut platformunda yerleşik olarak bulunan ve artıklık gereksinimlerinizi karşılamak için kullanabileceğiniz özellikleri net bir şekilde kavramanız gerekir. Yedeklilik mimarisi için öneriler aşağıda verilmiştir:
 
@@ -49,13 +49,13 @@ Yedekliliği mimARDA uygulamak için uygulamanızdaki kritik yolları belirlemen
 
 - *Çok bölgeli dağıtımını planlayın.* Uygulamanızı tek bir bölgeye dağıtırsanız ve bu bölge kullanılamaz duruma gelirse, uygulamanız da kullanılamaz hale gelir. Bu, uygulamanızın hizmet düzeyi sözleşmeleri koşullarında kabul edilebilir olmayabilir. Bunun yerine, uygulamanızı ve hizmetlerini birden çok bölgeye dağıtmaya dikkat edin. Örneğin, bir Azure Kubernetes hizmeti (AKS) kümesi tek bir bölgeye dağıtılır. Sisteminizi bölgesel bir hatadan korumak için, uygulamanızı farklı bölgelerde birden çok AKS kümesine dağıtabilir ve [eşleştirilmiş bölgeler](https://buildazure.com/2017/01/06/azure-region-pairs-explained/) özelliğini kullanarak platform güncelleştirmelerini koordine edebilir ve kurtarma çalışmalarını önceliklendirin.
 
-- *[Coğrafi çoğaltmayı](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)etkinleştirin.* Azure SQL veritabanı ve Cosmos DB gibi hizmetler için coğrafi çoğaltma, verilerinizin birden çok bölgede ikincil çoğaltmalarını oluşturacaktır. Her iki hizmet de aynı bölgedeki verileri otomatik olarak çoğaltarak, coğrafi çoğaltma, bir ikincil bölgeye yük devretmek için bölgesel bir kesinti ile karşı koruma sağlar. Kapsayıcı görüntülerinin depolandığı coğrafi çoğaltma merkezleri için bir en iyi yöntem. AKS 'de bir hizmet dağıtmak için, görüntüyü depolamanız ve bir depodan çekmeniz gerekir. Azure Container Registry, AKS ile tümleşir ve kapsayıcı görüntülerini güvenli bir şekilde saklayabilir. Performansı ve kullanılabilirliği artırmak için, görüntülerinizi bir AKS kümeniz olan her bölgedeki bir kayıt defterine coğrafi olarak çoğaltmayı göz önünde bulundurun. Ardından, her bir AKS kümesi, Şekil 6-4 ' de gösterildiği gibi bölgesinde yerel kapsayıcı kayıt defterinden kapsayıcı görüntülerini çeker:
+- *[Coğrafi çoğaltmayı](/azure/sql-database/sql-database-active-geo-replication)etkinleştirin.* Azure SQL veritabanı ve Cosmos DB gibi hizmetler için coğrafi çoğaltma, verilerinizin birden çok bölgede ikincil çoğaltmalarını oluşturacaktır. Her iki hizmet de aynı bölgedeki verileri otomatik olarak çoğaltarak, coğrafi çoğaltma, bir ikincil bölgeye yük devretmek için bölgesel bir kesinti ile karşı koruma sağlar. Kapsayıcı görüntülerinin depolandığı coğrafi çoğaltma merkezleri için bir en iyi yöntem. AKS 'de bir hizmet dağıtmak için, görüntüyü depolamanız ve bir depodan çekmeniz gerekir. Azure Container Registry, AKS ile tümleşir ve kapsayıcı görüntülerini güvenli bir şekilde saklayabilir. Performansı ve kullanılabilirliği artırmak için, görüntülerinizi bir AKS kümeniz olan her bölgedeki bir kayıt defterine coğrafi olarak çoğaltmayı göz önünde bulundurun. Ardından, her bir AKS kümesi, Şekil 6-4 ' de gösterildiği gibi bölgesinde yerel kapsayıcı kayıt defterinden kapsayıcı görüntülerini çeker:
 
 ![Bölgeler arasında çoğaltılan kaynaklar](./media/replicated-resources.png)
 
 **Şekil 6-4**. Bölgeler arasında çoğaltılan kaynaklar
 
-- *Bir DNS trafiği yük dengeleyici uygulayın.* [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview) , DNS düzeyinde yük dengelemeye göre kritik uygulamalar için yüksek kullanılabilirlik sağlar. Coğrafi konum, küme yanıt süresi ve hatta uygulama uç noktası sistem durumu temelinde trafiği farklı bölgelere yönlendirebilir. Örneğin, Azure Traffic Manager müşterileri en yakın AKS kümesine ve uygulama örneğine yönlendirebilir. Farklı bölgelerde birden fazla AKS kümeniz varsa, trafiğin her kümede çalışan uygulamalara nasıl akacağını denetlemek için Traffic Manager kullanın. Şekil 6-5, bu senaryoyu gösterir.
+- *Bir DNS trafiği yük dengeleyici uygulayın.* [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) , DNS düzeyinde yük dengelemeye göre kritik uygulamalar için yüksek kullanılabilirlik sağlar. Coğrafi konum, küme yanıt süresi ve hatta uygulama uç noktası sistem durumu temelinde trafiği farklı bölgelere yönlendirebilir. Örneğin, Azure Traffic Manager müşterileri en yakın AKS kümesine ve uygulama örneğine yönlendirebilir. Farklı bölgelerde birden fazla AKS kümeniz varsa, trafiğin her kümede çalışan uygulamalara nasıl akacağını denetlemek için Traffic Manager kullanın. Şekil 6-5, bu senaryoyu gösterir.
 
 ![AKS ve Azure Traffic Manager](./media/aks-traffic-manager.png)
 
@@ -79,7 +79,7 @@ Bulut ölçeklendiriliyor. Sistem yükünü artırmak/azaltmak için sistem kayn
 
 - *Benzeşim kullanmaktan kaçının.* Bir düğümün, genellikle bir *yapışkan oturum*olarak adlandırılan yerel benzeşim gerektirmemesini sağlamak en iyi uygulamadır. Bir istek herhangi bir örneğe yönlendiribilmelidir. Durumu kalıcı hale getirmeniz gerekiyorsa, [Azure redsıs Cache](https://azure.microsoft.com/services/cache/)gibi dağıtılmış bir önbelleğe kaydedilmelidir.
 
-- *Platform otomatik ölçeklendirme özelliklerinin avantajlarından yararlanın.* Özel veya üçüncü taraf mekanizmalarının yerine, mümkün olduğunda yerleşik otomatik ölçeklendirme özellikleri kullanın. Mümkün olduğunda, kaynakların bir başlangıç gecikmesi olmadan kullanılabilir olduğundan emin olmak için zamanlanmış ölçekleme kurallarını kullanın, ancak kurallara uygun şekilde, isteğe bağlı olarak, talep halinde beklenmedik değişikliklerle ve bu kurallara otomatik ölçeklendirme ekleyin. Daha fazla bilgi için bkz. [Otomatik ölçeklendirme Kılavuzu](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling).
+- *Platform otomatik ölçeklendirme özelliklerinin avantajlarından yararlanın.* Özel veya üçüncü taraf mekanizmalarının yerine, mümkün olduğunda yerleşik otomatik ölçeklendirme özellikleri kullanın. Mümkün olduğunda, kaynakların bir başlangıç gecikmesi olmadan kullanılabilir olduğundan emin olmak için zamanlanmış ölçekleme kurallarını kullanın, ancak kurallara uygun şekilde, isteğe bağlı olarak, talep halinde beklenmedik değişikliklerle ve bu kurallara otomatik ölçeklendirme ekleyin. Daha fazla bilgi için bkz. [Otomatik ölçeklendirme Kılavuzu](/azure/architecture/best-practices/auto-scaling).
 
 - *Ölçeği daraltma.* Son bir uygulama, iş kaybı olmadan trafikte anında ani artışları hızlı bir şekilde karşılayabilmeniz için kararlılığı en iyi şekilde genişletmek olacaktır. Ve sonra, sistem kararlı tutmaya yönelik olarak ölçeği ölçeklendirin (gereksiz örnekleri kaldırır). Bunu yapmanın basit bir yolu, ölçeklendirme işlemleri arasında bekleme süresi, kaynak eklemek için beş dakika, örnekleri kaldırmak için en fazla 15 dakika olan seyrek erişimli süreyi ayarlamanıza yöneliktir.
 
@@ -93,7 +93,7 @@ Daha önceki bir bölümde programlı yeniden deneme işlemleri uygulamak için 
 
 - *Azure Service Bus.* Service Bus istemcisi bir geri alma aralığı, yeniden deneme sayısı ve bir işlemin ne zaman sürebileceği maksimum süreyi belirten bir [Retrypolicy sınıfı](xref:Microsoft.ServiceBus.RetryPolicy) kullanıma sunar <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A> . Varsayılan ilke, denemeler arasında 30 saniyelik geri alma süresi olan dokuz en fazla yeniden deneme girişimdir.
 
-- *Azure SQL veritabanı.* [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) kitaplığı kullanılırken yeniden deneme desteği sağlanır.
+- *Azure SQL Veritabanı* [Entity Framework Core](/ef/core/miscellaneous/connection-resiliency) kitaplığı kullanılırken yeniden deneme desteği sağlanır.
 
 - *Azure depolama.* Depolama istemci kitaplığı, yeniden deneme işlemlerini destekler. Stratejiler, Azure depolama tabloları, blob 'lar ve kuyruklar arasında farklılık gösterir. Ayrıca, coğrafi artıklık özelliği etkinken, alternatif yeniden denemeler birincil ve ikincil depolama hizmetleri konumları arasında geçiş yapar.
 
