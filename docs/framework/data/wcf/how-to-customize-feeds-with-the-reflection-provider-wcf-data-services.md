@@ -8,26 +8,29 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: 00c23dcf-9bb8-459a-a012-6c4d9bcad7e9
-ms.openlocfilehash: d3e2d587978a4c82784c8cfc8a7acc17cf601c3a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: fb22e87569a8e243813b3186232b6989abeb2a5e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569141"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161314"
 ---
 # <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>Nasıl yapılır: yansıma sağlayıcısı ile akışları özelleştirme (WCF Veri Hizmetleri)
+
 WCF Veri Hizmetleri, bir varlık özelliklerinin AtomPub protokolünde tanımlı kullanılmayan öğelerle eşlenilmesi için bir veri hizmeti yanıtında atom serileştirmesini özelleştirmenize olanak sağlar. Bu konu başlığı altında, yansıma sağlayıcısı kullanılarak tanımlanan bir veri modelinde varlık türleri için eşleme özniteliklerinin nasıl tanımlanacağı gösterilmektedir. Daha fazla bilgi için bkz. [akış özelleştirmesi](feed-customization-wcf-data-services.md).  
   
  Bu örneğe ilişkin veri modeli, [nasıl yapılır: yansıma sağlayıcısını kullanarak veri hizmeti oluşturma](create-a-data-service-using-rp-wcf-data-services.md) konusunda tanımlanmıştır  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `Order` türünün her iki özelliği de varolan atom öğelerine eşlenir. `Item` türünün `Product` özelliği, ayrı bir ad alanında özel bir akış özniteliğiyle eşlenir.  
+
+ Aşağıdaki örnekte, türünün her iki özelliği de `Order` var olan atom öğelerine eşlenir. `Product`Türün özelliği, `Item` ayrı bir ad alanında özel bir akış özniteliğiyle eşleştirilir.  
   
  [!code-csharp[Astoria Custom Feeds#CustomIQueryableFeeds](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customiqueryablefeeds)]
  [!code-vb[Astoria Custom Feeds#CustomIQueryableFeeds](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customiqueryablefeeds)]  
   
 ## <a name="example"></a>Örnek  
- Önceki örnekte URI `http://myservice/OrderItems.svc/Orders(0)?$expand=Items`için aşağıdaki sonuç döndürülür.  
+
+ Önceki örnekte URI için aşağıdaki sonuç döndürülür `http://myservice/OrderItems.svc/Orders(0)?$expand=Items` .  
   
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResultInline](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresultinline.xml#iqueryablefeedresultinline)]  
   

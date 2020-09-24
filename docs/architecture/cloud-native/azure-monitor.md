@@ -2,12 +2,12 @@
 title: Azure İzleyici
 description: Sisteminizin üzerinde görünürlük elde etmek için Azure Izleyici 'yi kullanma.
 ms.date: 07/05/2020
-ms.openlocfilehash: 342d54292736622f6546768e039ca244a69b020e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 65e17740dba49c3ac3f6e13462897b5342da6710
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540219"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160976"
 ---
 # <a name="azure-monitor"></a>Azure İzleyici
 
@@ -20,9 +20,9 @@ Başka bir bulut sağlayıcısı, Azure 'da bulunan bir bulut uygulaması izleme
 
 Herhangi bir izleme çözümünde ilk adım mümkün olduğunca çok veri toplamaktır. Daha fazla veri toplandıktan sonra Öngörüler daha derin. Aletsiz sistemler, geleneksel olarak güçleşir. Basit Ağ Yönetim Protokolü (SNMP), makine düzeyinde bilgi toplamak için kullanılan altın standart protokoldür, ancak bilgi ve yapılandırma için harika bir işlem gerektirdi. Neyse ki, en yaygın ölçümler Azure Izleyici tarafından otomatik olarak toplandığından, bu sabit çalışmanın çoğu ortadan kaldırılmıştır.
 
-Dağıtılan uygulamaya özgü olduklarından, uygulama düzeyi ölçümleri ve olayları otomatik olarak işaretleme yapılamaz. Bu ölçümleri toplamak için, bir müşterinin bir siparişi kaydolduğunda veya tamamladığı durumlarda olduğu gibi, bu bilgileri doğrudan raporlamak için [kullanılabilir SDK 'lar ve API 'ler](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics) vardır. Ayrıca, özel durumlar Application Insights aracılığıyla Azure Izleyici 'ye geri yakalanıp rapor edilebilir. SDK 'lar, Go, Python, JavaScript ve .NET dillerini de içeren bulut Yerel uygulamalarında bulunan her dilin çoğunu destekler.
+Dağıtılan uygulamaya özgü olduklarından, uygulama düzeyi ölçümleri ve olayları otomatik olarak işaretleme yapılamaz. Bu ölçümleri toplamak için, bir müşterinin bir siparişi kaydolduğunda veya tamamladığı durumlarda olduğu gibi, bu bilgileri doğrudan raporlamak için [kullanılabilir SDK 'lar ve API 'ler](/azure/azure-monitor/app/api-custom-events-metrics) vardır. Ayrıca, özel durumlar Application Insights aracılığıyla Azure Izleyici 'ye geri yakalanıp rapor edilebilir. SDK 'lar, Go, Python, JavaScript ve .NET dillerini de içeren bulut Yerel uygulamalarında bulunan her dilin çoğunu destekler.
 
-Uygulamanızın durumu hakkında bilgi toplamanın nihai hedefi, son kullanıcılarınızın iyi bir deneyim aldığından emin olmaktır. Kullanıcıların, [dışarıdaki Web testlerini](https://docs.microsoft.com/azure/azure-monitor/app/monitor-web-app-availability)yapmaktan sorun yaşadığını söylemek için daha iyi bir yol var mı? Bu testler, dünyanın dört bir yanındaki konumlardan veya aracılardan biri sitede oturum açıp Kullanıcı eylemlerinin benzetimini yaparak Web sitenizde ping hale kadar basit olabilir.
+Uygulamanızın durumu hakkında bilgi toplamanın nihai hedefi, son kullanıcılarınızın iyi bir deneyim aldığından emin olmaktır. Kullanıcıların, [dışarıdaki Web testlerini](/azure/azure-monitor/app/monitor-web-app-availability)yapmaktan sorun yaşadığını söylemek için daha iyi bir yol var mı? Bu testler, dünyanın dört bir yanındaki konumlardan veya aracılardan biri sitede oturum açıp Kullanıcı eylemlerinin benzetimini yaparak Web sitenizde ping hale kadar basit olabilir.
 
 ## <a name="reporting-data"></a>Raporlama verileri
 
@@ -45,11 +45,11 @@ StormEvents
 ![Sorgu sonuçları ](./media/application_insights_example.png)
  **şekil 7-13**Application Insights. Sorgu sonuçlarını Application Insights.
 
-[Kusto sorgularını denemek için bir oyun](https://dataexplorer.azure.com/clusters/help/databases/Samples) vardır. [Örnek sorguları](https://docs.microsoft.com/azure/kusto/query/samples) okuma da çalıştırılabilir.
+[Kusto sorgularını denemek için bir oyun](https://dataexplorer.azure.com/clusters/help/databases/Samples) vardır. [Örnek sorguları](/azure/kusto/query/samples) okuma da çalıştırılabilir.
 
 ## <a name="dashboards"></a>Panolar
 
-Azure Izleyici 'den bilgileri yüzeye almak için kullanılabilecek çeşitli farklı Pano teknolojileri vardır. Belki de en basit, Application Insights sorguları çalıştırmak ve [verileri bir grafiğe çizmeniz](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)olabilir.
+Azure Izleyici 'den bilgileri yüzeye almak için kullanılabilecek çeşitli farklı Pano teknolojileri vardır. Belki de en basit, Application Insights sorguları çalıştırmak ve [verileri bir grafiğe çizmeniz](/azure/azure-monitor/learn/tutorial-app-dashboards)olabilir.
 
 ![Ana Azure panosu ](./media/azure_dashboard.png)
  **Şekil 7-14**' de gömülü Application Insights grafiklerin bir örneği. Ana Azure panosuna katıştırılmış Application Insights grafik örneği.
@@ -62,7 +62,7 @@ Bu grafikler daha sonra Pano özelliğinin kullanımıyla Azure portal uygun şe
 
 ## <a name="alerts"></a>Uyarılar
 
-Bazen veri panoları yeterli değildir. Panoları izlemek için kimse uyanık yoksa, bir sorun giderilebilmesi veya hatta algılanmadan önce bu süre çok saat kadar sürebilir. Azure Izleyici, bu uçta bir üst düzey [Uyarı çözümü](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)de sağlar. Uyarılar aşağıdakiler dahil olmak üzere çok çeşitli koşullarla tetiklenebilir:
+Bazen veri panoları yeterli değildir. Panoları izlemek için kimse uyanık yoksa, bir sorun giderilebilmesi veya hatta algılanmadan önce bu süre çok saat kadar sürebilir. Azure Izleyici, bu uçta bir üst düzey [Uyarı çözümü](/azure/azure-monitor/platform/alerts-overview)de sağlar. Uyarılar aşağıdakiler dahil olmak üzere çok çeşitli koşullarla tetiklenebilir:
 
 - Ölçüm değerleri
 - Günlük arama sorguları
@@ -74,11 +74,11 @@ Tetiklendiğinde, uyarılar çok çeşitli görevler gerçekleştirebilir. Basit
 
 Uyarıların yaygın nedenleri tanımlandıkları için uyarılar, uyarıların genel nedenleri ve bunları çözmek için gereken adımlar hakkında ayrıntılarla iyileştirilen şekilde geliştirilebilir. Yüksek derecede çok büyük ölçekli bulut Yerel uygulama dağıtımları, hatalı düğümleri bir ölçek kümesinden kaldırma veya otomatik ölçeklendirme etkinliğini tetikleme gibi eylemleri gerçekleştiren kendi kendini onaran görevleri başlatabilir. Son olarak, sistem kendisini bir sonraki sabah işe ulaşana kadar bir süre önce veya en az bir şekilde ayarlayacağından, bir canlı site sorununu çözmek için, daha önce 2.
 
-Azure Izleyici, dağıtılan uygulamaların normal işletim parametrelerini anlamak için makine öğrenimini otomatik olarak kullanır. Bu, BT 'nin normal parametrelerinin dışında çalışan hizmetleri algılamasını sağlar. Örneğin, sitedeki tipik iş günü trafiği dakikada 10.000 istek olabilir. Daha sonra, belirli bir hafta boyunca istek sayısı, dakikada yüksek olağandışı 20.000 istek üzerine gelir. [Akıllı algılama](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) , norm karşı bu sapmayı fark eder ve bir uyarı tetikler. Aynı zamanda, trafik yükü beklendiğinde hatalı pozitif sonuçlar tetiklemeden kaçınmak için eğilim analizi yeterince akıllı olur.
+Azure Izleyici, dağıtılan uygulamaların normal işletim parametrelerini anlamak için makine öğrenimini otomatik olarak kullanır. Bu, BT 'nin normal parametrelerinin dışında çalışan hizmetleri algılamasını sağlar. Örneğin, sitedeki tipik iş günü trafiği dakikada 10.000 istek olabilir. Daha sonra, belirli bir hafta boyunca istek sayısı, dakikada yüksek olağandışı 20.000 istek üzerine gelir. [Akıllı algılama](/azure/azure-monitor/app/proactive-diagnostics) , norm karşı bu sapmayı fark eder ve bir uyarı tetikler. Aynı zamanda, trafik yükü beklendiğinde hatalı pozitif sonuçlar tetiklemeden kaçınmak için eğilim analizi yeterince akıllı olur.
 
 ## <a name="references"></a>Başvurular
 
-- [Azure İzleyici](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [Azure İzleyici](/azure/azure-monitor/overview)
 
 >[!div class="step-by-step"]
 >[Önceki](monitoring-azure-kubernetes.md) 

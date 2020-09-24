@@ -2,48 +2,51 @@
 title: Programlama Kılavuzu (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: dc13af06cf6c439d739d76904f206ebc50ba3187
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 720d9a90583a0dcf3453689a362f6043157a326c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634813"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161565"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Programlama Kılavuzu (LINQ to DataSet)
+
 Bu bölümde LINQ to DataSet programlamaya yönelik kavramsal bilgiler ve örnekler sağlanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [LINQ to DataSet Sorguları](queries-in-linq-to-dataset.md)  
  LINQ to DataSet sorgularının nasıl yazılacağı hakkında bilgi sağlar.  
   
  [DataSet’leri Sorgulama](querying-datasets-linq-to-dataset.md)  
- <xref:System.Data.DataSet> nesnelerinin nasıl sorgulanılacağını açıklar.  
+ Nesnelerin nasıl sorgulanılacağını açıklar <xref:System.Data.DataSet> .  
   
  [DataRow Karşılaştırma](comparing-datarows-linq-to-dataset.md)  
- Veri satırlarını karşılaştırmak için <xref:System.Data.DataRowComparer> nesnesinin nasıl kullanılacağını açıklar.  
+ <xref:System.Data.DataRowComparer>Veri satırlarını karşılaştırmak için nesnesinin nasıl kullanılacağını açıklar.  
   
  [Sorgudan DataTable Oluşturma](creating-a-datatable-from-a-query-linq-to-dataset.md)  
- <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemini kullanarak bir LINQ to DataSet sorgusundan <xref:System.Data.DataTable> oluşturma hakkında bilgi sağlar.  
+ Yöntemini kullanarak bir LINQ to DataSet sorgusundan oluşturma hakkında bilgi sağlar <xref:System.Data.DataTable> <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> .  
   
- [Nasıl yapılır: genel tür T 'Nin bir DataRow olmadığı CopyToDataTable\<T > uygulama](implement-copytodatatable-where-type-not-a-datarow.md)  
- Genel parametre T <xref:System.Data.DataRow>türünde olmayan bir özel `CopyToDataTable<T>` yönteminin nasıl uygulanacağını açıklar.  
+ [Nasıl yapılır: \<T> genel tür T 'nin bir DataRow olmadığı CopyToDataTable uygulama](implement-copytodatatable-where-type-not-a-datarow.md)  
+ `CopyToDataTable<T>`Genel parametre T türünde olmayan bir özel yöntemin nasıl uygulanacağını açıklar <xref:System.Data.DataRow> .  
   
  [Genel Alan ve SetField Yöntemleri](generic-field-and-setfield-methods-linq-to-dataset.md)  
- Genel <xref:System.Data.DataRowExtensions.Field%2A> ve <xref:System.Data.DataRowExtensions.SetField%2A> yöntemleriyle ilgili bilgiler sağlar.  
+ Genel ve yöntemler hakkında bilgi <xref:System.Data.DataRowExtensions.Field%2A> sağlar <xref:System.Data.DataRowExtensions.SetField%2A> .  
   
  [Veri Bağlama ve LINQ to DataSet](data-binding-and-linq-to-dataset.md)  
- <xref:System.Data.DataView> nesnesi kullanılarak veri bağlamayı açıklar.  
+ Nesnesini kullanarak veri bağlamayı açıklar <xref:System.Data.DataView> .  
   
  [LINQ to DataSet Sorgularında Hata Ayıklama](debugging-linq-to-dataset-queries.md)  
  Hata ayıklama ve sorgu sorunlarını giderme hakkında bilgi sağlar LINQ to DataSet.  
   
- [Security](security-linq-to-dataset.md)  
+ [Güvenlik](security-linq-to-dataset.md)  
  LINQ to DataSet güvenlik sorunlarını açıklar.  
   
  [LINQ to DataSet Örnekleri](linq-to-dataset-examples.md)  
  LINQ işleçlerini kullanan sorgu örnekleri sağlar.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  

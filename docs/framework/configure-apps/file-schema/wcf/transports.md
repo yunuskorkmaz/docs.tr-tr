@@ -2,14 +2,15 @@
 title: Taşımalar
 ms.date: 03/30/2017
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
-ms.openlocfilehash: c89e0b8ea124919956d07d51b52bf6e878eef166
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 54d320213dbf330ad19077b523a77ea86d29e1ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69941145"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162016"
 ---
 # <a name="transports"></a>Taşımalar
+
 Aktarım katmanı, kanal yığınının en düşük düzeyindedir. Windows Communication Foundation (WCF) ' de kullanılan ana aktarımlar HTTP, HTTPS, TCP ve adlandırılmış kanallardır. Bu bölüm, farklı türde aktarımlar yapılandırmanıza izin veren tüm yapılandırma öğelerini listeler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

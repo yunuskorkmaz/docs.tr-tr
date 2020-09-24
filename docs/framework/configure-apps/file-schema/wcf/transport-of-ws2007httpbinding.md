@@ -2,14 +2,15 @@
 title: <transport> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 0cd20c607b0c4ddd3ecfd806d38ba63b4a5c5a25
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 60e8758d653848176ca3f287e253bd7990e78470
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732768"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162055"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<transport> / \<ws2007HttpBinding>
+
 HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-ws2007httpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
@@ -29,9 +30,11 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
 ```  
   
 ## <a name="type"></a>Tür  
+
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -46,7 +49,7 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|Güvenlik devre dışı bırakıldı.|  
+|Hiçbiri|Güvenlik devre dışı bırakıldı.|  
 |Temel|Temel kimlik doğrulamasını kullanır.|  
 |Bilgisi|Özet kimlik doğrulaması kullanır.|  
 |NT|Windows etki alanı ile geri dönüş olarak NTLM kimlik doğrulamasını kullanır.|  
@@ -57,7 +60,7 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|Güvenlik devre dışı bırakıldı.|  
+|Hiçbiri|Güvenlik devre dışı bırakıldı.|  
 |Temel|Temel kimlik doğrulamasını kullanır.|  
 |Bilgisi|Özet kimlik doğrulaması kullanır.|  
 |NT|Windows etki alanı ile geri dönüş olarak NTLM kullanır.|  
@@ -65,7 +68,8 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
 |Sertifika|İstemcinin kimliğini doğrulamak için X. 509.440 sertifikalarını kullanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok  
+
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

@@ -2,14 +2,15 @@
 title: <transport> / <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: e8016eb9058f132722587368f1f8c7c03220af4a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b9efc732832a8862373b14f657796a59fb52c1a1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732793"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162120"
 ---
 # <a name="transport-of-webhttpbinding"></a>\<transport> / \<webHttpBinding>
+
 HTTP isteklerini alacak şekilde yapılandırılmış bir hizmet uç noktası için aktarım düzeyi güvenlik ayarlarını tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ HTTP isteklerini alacak şekilde yapılandırılmış bir hizmet uç noktası i�
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-webhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <webHttpBinding>
@@ -41,9 +42,11 @@ HTTP isteklerini alacak şekilde yapılandırılmış bir hizmet uç noktası i�
 ```  
   
 ## <a name="type"></a>Tür  
+
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -77,6 +80,7 @@ HTTP isteklerini alacak şekilde yapılandırılmış bir hizmet uç noktası i�
 |`Windows`|Tümleşik Windows kimlik doğrulamasını kullanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

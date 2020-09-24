@@ -6,12 +6,12 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 1cc82b14a940465c26377f9181a2e20b46b0783f
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 690e559617e4961c3cf3262a6d2d48a6bfac67cd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267868"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161301"
 ---
 # <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>Güvenlik: ASP.NET Web Forms ve üzerinde kimlik doğrulaması ve yetkilendirme Blazor
 
@@ -21,7 +21,7 @@ Bir ASP.NET Web Forms uygulamasından ' ye geçiş yapmak Blazor , uygulamanın 
 
 ASP.NET 2,0 ' den itibaren, ASP.NET Web Forms platformu üyelik dahil olmak üzere çeşitli özellikler için bir sağlayıcı modeli destekliyordu. Evrensel üyelik sağlayıcısı, isteğe bağlı rol sağlayıcısıyla birlikte ASP.NET Web Forms uygulamalarıyla çok yaygın olarak dağıtılır. Bugün çalışmaya devam eden kimlik doğrulama ve yetkilendirmeyi yönetmenin sağlam ve güvenli bir yolunu sunar. Bu evrensel sağlayıcıların en son sunumu, [Microsoft. Aspnet. Providers](https://www.nuget.org/packages/Microsoft.AspNet.Providers)bir NuGet paketi olarak sunulmaktadır.
 
-Evrensel sağlayıcılar,, ve gibi tabloları içeren bir SQL veritabanı şeması ile `aspnet_Applications` çalışır `aspnet_Membership` `aspnet_Roles` `aspnet_Users` . [aspnet_regsql.exe komutu](https://docs.microsoft.com/previous-versions/ms229862(v=vs.140))çalıştırılarak yapılandırıldığında, sağlayıcılar, temel alınan verilerle çalışmak için gerekli tüm sorguları ve komutları sağlayan tabloları ve saklı yordamları yükler. Veritabanı şeması ve bu saklı yordamlar, daha yeni ASP.NET Identity ve ASP.NET Core kimlik sistemleriyle uyumlu değildir, bu nedenle mevcut verilerin yeni sisteme geçirilmesi gerekir. Şekil 1 ' de, evrensel sağlayıcılar için yapılandırılmış örnek bir tablo şeması gösterilmektedir.
+Evrensel sağlayıcılar,, ve gibi tabloları içeren bir SQL veritabanı şeması ile `aspnet_Applications` çalışır `aspnet_Membership` `aspnet_Roles` `aspnet_Users` . [aspnet_regsql.exe komutu](/previous-versions/ms229862(v=vs.140))çalıştırılarak yapılandırıldığında, sağlayıcılar, temel alınan verilerle çalışmak için gerekli tüm sorguları ve komutları sağlayan tabloları ve saklı yordamları yükler. Veritabanı şeması ve bu saklı yordamlar, daha yeni ASP.NET Identity ve ASP.NET Core kimlik sistemleriyle uyumlu değildir, bu nedenle mevcut verilerin yeni sisteme geçirilmesi gerekir. Şekil 1 ' de, evrensel sağlayıcılar için yapılandırılmış örnek bir tablo şeması gösterilmektedir.
 
 ![Evrensel sağlayıcılar şeması](./media/security/membership-tables.png)
 
@@ -111,7 +111,7 @@ Genellikle, ASP.NET Web Forms uygulamalar dosya içinde güvenliği yapılandır
 
 ## <a name="aspnet-core-identity"></a>ASP.NET Core kimliği
 
-Kimlik doğrulama ve yetkilendirme ile hala çalışmaya devam etse de ASP.NET Core kimliği, evrensel sağlayıcılardan karşılaştırıldığında farklı bir soyutlama ve varsayımlar kümesi kullanır. Örneğin, yeni kimlik modeli üçüncü taraf kimlik doğrulamasını destekler, böylece kullanıcılar sosyal medya hesabı veya diğer güvenilir kimlik doğrulama sağlayıcısı kullanarak kimlik doğrulaması yapabilir. ASP.NET Core kimlik, oturum açma, oturum kapatma ve kayıt gibi yaygın olarak gereken sayfaların Kullanıcı arabirimini destekler. Veri erişimi için EF Core yararlanır ve veri modelini desteklemek için gereken gerekli şemayı oluşturmak üzere EF Core geçişleri kullanır. Bu [ASP.NET Core kimliğe giriş](https://docs.microsoft.com/aspnet/core/security/authentication/identity) , ASP.NET Core kimliği ile nelerin dahil olduğu ve onunla çalışmaya başlama hakkında iyi bir genel bakış sunar. Uygulamanızda ve veritabanında ASP.NET Core kimlik ayarlamadıysanız, başlamanıza yardımcı olur.
+Kimlik doğrulama ve yetkilendirme ile hala çalışmaya devam etse de ASP.NET Core kimliği, evrensel sağlayıcılardan karşılaştırıldığında farklı bir soyutlama ve varsayımlar kümesi kullanır. Örneğin, yeni kimlik modeli üçüncü taraf kimlik doğrulamasını destekler, böylece kullanıcılar sosyal medya hesabı veya diğer güvenilir kimlik doğrulama sağlayıcısı kullanarak kimlik doğrulaması yapabilir. ASP.NET Core kimlik, oturum açma, oturum kapatma ve kayıt gibi yaygın olarak gereken sayfaların Kullanıcı arabirimini destekler. Veri erişimi için EF Core yararlanır ve veri modelini desteklemek için gereken gerekli şemayı oluşturmak üzere EF Core geçişleri kullanır. Bu [ASP.NET Core kimliğe giriş](/aspnet/core/security/authentication/identity) , ASP.NET Core kimliği ile nelerin dahil olduğu ve onunla çalışmaya başlama hakkında iyi bir genel bakış sunar. Uygulamanızda ve veritabanında ASP.NET Core kimlik ayarlamadıysanız, başlamanıza yardımcı olur.
 
 ### <a name="roles-claims-and-policies"></a>Roller, talepler ve ilkeler
 
@@ -130,7 +130,7 @@ services.AddAuthorization(options =>
 });
 ```
 
-[Belgelerde özel ilkeler oluşturma hakkında daha fazla bilgi](https://docs.microsoft.com/aspnet/core/security/authorization/policies)edinebilirsiniz.
+[Belgelerde özel ilkeler oluşturma hakkında daha fazla bilgi](/aspnet/core/security/authorization/policies)edinebilirsiniz.
 
 İlkeleri veya rolleri kullanıp kullansanız, uygulamanızdaki belirli bir sayfanın Blazor Bu rolü veya ilkeyi, `[Authorize]` yönergeyle birlikte uygulanmış özniteliğiyle kullanmasını sağlayabilirsiniz `@attribute` .
 
@@ -146,7 +146,7 @@ Bir ilkenin karşılanmasını gerektirme:
 @attribute [Authorize(Policy ="CanadiansOnly")]
 ```
 
-Kodunuzun kodunuzda bir kullanıcının kimlik doğrulama durumuna, rolüne veya taleplerine erişmeniz gerekiyorsa, bunu gerçekleştirmenin iki temel yolu vardır. Birincisi, kimlik doğrulama durumunu basamaklı bir parametre olarak almadır. İkincisi, eklenen ' i kullanarak duruma erişdir `AuthenticationStateProvider` . Bu yaklaşımların her birinin ayrıntıları [ Blazor güvenlik belgelerinde](https://docs.microsoft.com/aspnet/core/blazor/security/)açıklanmıştır.
+Kodunuzun kodunuzda bir kullanıcının kimlik doğrulama durumuna, rolüne veya taleplerine erişmeniz gerekiyorsa, bunu gerçekleştirmenin iki temel yolu vardır. Birincisi, kimlik doğrulama durumunu basamaklı bir parametre olarak almadır. İkincisi, eklenen ' i kullanarak duruma erişdir `AuthenticationStateProvider` . Bu yaklaşımların her birinin ayrıntıları [ Blazor güvenlik belgelerinde](/aspnet/core/blazor/security/)açıklanmıştır.
 
 Aşağıdaki kod, nasıl `AuthenticationState` bir geçişli parametre olarak alınacağını gösterir:
 
@@ -252,7 +252,7 @@ Yeni şemayı mevcut bir veritabanına uygulamak için bir komut dosyası çalı
 dotnet ef migrations script -o auth.sql
 ```
 
-Bu işlem, çıkış dosyasında `auth.sql` istediğiniz herhangi bir veritabanına göre çalıştırılabilecek BIR SQL betiği oluşturur. Komutları çalıştırırken sorun yaşarsanız `dotnet ef` [sisteminizde EF Core araçlarının yüklü olduğundan emin olun](https://docs.microsoft.com/ef/core/miscellaneous/cli/dotnet).
+Bu işlem, çıkış dosyasında `auth.sql` istediğiniz herhangi bir veritabanına göre çalıştırılabilecek BIR SQL betiği oluşturur. Komutları çalıştırırken sorun yaşarsanız `dotnet ef` [sisteminizde EF Core araçlarının yüklü olduğundan emin olun](/ef/core/miscellaneous/cli/dotnet).
 
 Kaynak tablolarınızda ek sütunlarınız varsa, bu sütunlar için yeni şemada en iyi konumu belirlemeniz gerekir. Genellikle tabloda bulunan sütunların `aspnet_Membership` tabloya eşlenmesi gerekir `AspNetUsers` . Üzerindeki sütunlar `aspnet_Roles` ile eşlenmelidir `AspNetRoles` . Tablodaki ek sütunlar `aspnet_UsersInRoles` `AspNetUserRoles` tabloya eklenir.
 
@@ -260,9 +260,9 @@ Ayrıca, bazı ek sütunları ayrı tablolara yerleştirmeyi de göz önünde bu
 
 ### <a name="migrating-data-from-universal-providers-to-aspnet-core-identity"></a>Verileri evrensel sağlayıcılardan ASP.NET Core kimliğe geçirme
 
-Hedef tablo şemasını oluşturduktan sonra, bir sonraki adım, Kullanıcı ve rol kayıtlarınızı yeni şemaya geçirmadır. Hangi sütunların yeni sütunlara eşlenebileceği de dahil olmak üzere, şema farklarının kapsamlı bir listesi [burada](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)bulunabilir.
+Hedef tablo şemasını oluşturduktan sonra, bir sonraki adım, Kullanıcı ve rol kayıtlarınızı yeni şemaya geçirmadır. Hangi sütunların yeni sütunlara eşlenebileceği de dahil olmak üzere, şema farklarının kapsamlı bir listesi [burada](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)bulunabilir.
 
-Kullanıcılarınıza yeni kimlik tablolarına geçiş yapmak için [belgelerde açıklanan adımları izlemeniz](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)gerekir. Bu adımlar ve komut dosyası sağlandıktan sonra kullanıcılarınızın bir sonraki oturum açışlarında parolasını değiştirmesi gerekir.
+Kullanıcılarınıza yeni kimlik tablolarına geçiş yapmak için [belgelerde açıklanan adımları izlemeniz](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)gerekir. Bu adımlar ve komut dosyası sağlandıktan sonra kullanıcılarınızın bir sonraki oturum açışlarında parolasını değiştirmesi gerekir.
 
 Kullanıcı parolalarının geçirilmesi mümkündür ancak işlem çok daha karmaşıktır. Kullanıcıların, geçiş işleminin bir parçası olarak parolalarını güncelleştirmeleri gerekliliği ve bunları yeni, benzersiz parolalar kullanacak şekilde teşvik, uygulamanın genel güvenliğini artırmaları olasıdır.
 
@@ -341,7 +341,7 @@ Belirli bir role ait olan kullanıcılar hariç erişimi daha fazla reddetseyiyo
 
 `[Authorize]`Özniteliğin yalnızca `@page` yönlendirici üzerinden ulaşılan bileşenlerde çalışıp çalışmadığını unutmayın Blazor . Özniteliği, bunun yerine kullanılması gereken alt bileşenleriyle birlikte çalışmaz `AuthorizeView` .
 
-Belirli bir kullanıcıya bazı kodların görüntülenip görüntülenmeyeceğini belirlemek için sayfa biçimlendirmesinde mantığa sahipseniz, bunu `AuthorizeView` bileşeniyle değiştirebilirsiniz. [Authorizeview bileşeni](https://docs.microsoft.com/aspnet/core/blazor/security#authorizeview-component) , kullanıcının onu görme yetkisine sahip olup olmadığına bağlı olarak Kullanıcı arabirimini seçmeli olarak görüntüler. Ayrıca `context` , Kullanıcı bilgilerine erişmek için kullanılabilecek bir değişken gösterir.
+Belirli bir kullanıcıya bazı kodların görüntülenip görüntülenmeyeceğini belirlemek için sayfa biçimlendirmesinde mantığa sahipseniz, bunu `AuthorizeView` bileşeniyle değiştirebilirsiniz. [Authorizeview bileşeni](/aspnet/core/blazor/security#authorizeview-component) , kullanıcının onu görme yetkisine sahip olup olmadığına bağlı olarak Kullanıcı arabirimini seçmeli olarak görüntüler. Ayrıca `context` , Kullanıcı bilgilerine erişmek için kullanılabilecek bir değişken gösterir.
 
 ```razor
 <AuthorizeView>
@@ -416,10 +416,10 @@ Blazor , ASP.NET Core kimlik olan ASP.NET Core ile aynı güvenlik modelini kull
 
 ## <a name="references"></a>Başvurular
 
-- [ASP.NET Core kimliğe giriş](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
-- [ASP.NET üyelik kimlik doğrulamasından ASP.NET Core 2,0 kimliği 'ne geçiş](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)
-- [Kimlik doğrulaması ve kimliği ASP.NET Core geçir](https://docs.microsoft.com/aspnet/core/migration/identity)
-- [ASP.NET Core Blazor kimlik doğrulaması ve yetkilendirme](https://docs.microsoft.com/aspnet/core/blazor/security/)
+- [ASP.NET Core kimliğe giriş](/aspnet/core/security/authentication/identity)
+- [ASP.NET üyelik kimlik doğrulamasından ASP.NET Core 2,0 kimliği 'ne geçiş](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)
+- [Kimlik doğrulaması ve kimliği ASP.NET Core geçir](/aspnet/core/migration/identity)
+- [ASP.NET Core Blazor kimlik doğrulaması ve yetkilendirme](/aspnet/core/blazor/security/)
 
 >[!div class="step-by-step"]
 >[Önceki](config.md) 

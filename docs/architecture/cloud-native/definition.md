@@ -3,12 +3,12 @@ title: Bulutta Yerel'i tanımlama
 description: Bulutta yerel sistemler için yatak odası sağlayan temel sütunlar hakkında bilgi edinin
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f50c144d99fae0c4702965342fd76ec22e8bd8c8
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: dce8da57b90519880e322a26de403d8e7cb718c2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427040"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160911"
 ---
 # <a name="defining-cloud-native"></a>Cloud Native 'i tanımlama
 
@@ -95,7 +95,7 @@ Kitapta, [on Iki öğeli uygulamanın ötesinde](https://content.pivotal.io/blo
 | :-------- | :-------- | :-------- |
 | 13 | Önce API | Her şeyi bir hizmet yapın. Kodunuzun bir ön uç istemci, ağ geçidi veya başka bir hizmet tarafından tüketildiğini varsayalım. |
 | 14 | Telemetri | Bir iş istasyonunda, uygulamanız ve davranışı hakkında ayrıntılı görünürlük vardır. Bulutta yok. Tasarımınızın izleme, etki alanına özgü ve sağlık/sistem verileri koleksiyonunu içerdiğinden emin olun. |
-| 15 | Kimlik doğrulama/yetkilendirme  | Baştan itibaren kimlik uygulayın. Genel bulutlarda bulunan [RBAC (rol tabanlı erişim denetimi)](https://docs.microsoft.com/azure/role-based-access-control/overview) özelliklerini göz önünde bulundurun.  |
+| 15 | Kimlik doğrulama/yetkilendirme  | Baştan itibaren kimlik uygulayın. Genel bulutlarda bulunan [RBAC (rol tabanlı erişim denetimi)](/azure/role-based-access-control/overview) özelliklerini göz önünde bulundurun.  |
 
 Bu bölümde ve kitabın tamamında 12 ' nin birçoğuna başvuracağız.
 
@@ -280,17 +280,17 @@ Yedekleme Hizmetleri, ayrıntılı Bölüm 5, *bulutta yerel veri desenleri*ve B
 
 Gördüğünüz gibi, bulut Yerel sistemleri, hızlı ve çeviklik sağlamak için mikro hizmetleri, kapsayıcıları ve modern sistem tasarımını imine dönüştürür. Ancak bu yalnızca hikayenin bir parçasıdır. Bu sistemlerin üzerinde çalıştığı bulut ortamlarını nasıl sağlayacaksınız? Uygulama özelliklerini ve güncelleştirmelerini hızlı bir şekilde nasıl dağıtırsınız? Tam resmi nasıl yuvarlıyorsunuz?
 
-[Altyapı olarak, kod olarak](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)kabul edilen yaygın olarak kullanılan uygulama veya IAC girin.
+[Altyapı olarak, kod olarak](/azure/devops/learn/what-is-infrastructure-as-code)kabul edilen yaygın olarak kullanılan uygulama veya IAC girin.
 
 IAC ile platform sağlamayı ve uygulama dağıtımını otomatikleştirin. Aslında DevOps uygulamalarınıza test ve sürüm oluşturma gibi yazılım mühendisliği uygulamalarını uygularsınız. Altyapınız ve dağıtımlarınız otomatik, tutarlı ve yinelenebilir.
 
 ### <a name="automating-infrastructure"></a>Altyapıyı otomatikleştirme
 
-[Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), teraform ve [Azure CLI](https://docs.microsoft.com/cli/azure/)gibi araçlar, ihtiyacınız olan bulut altyapısını bildirimli olarak betiğe olanak sağlar. Kaynak adları, konumlar, kapasiteler ve gizlilikler parametreleştirilenir ve dinamik. Betik sürümlenmiş ve projenizin yapıtı olarak kaynak denetimine iade edildi. Sistem ortamlarında QA, hazırlık ve üretim gibi tutarlı ve yinelenebilir bir altyapı sağlamak için betiği çağırılır.
+[Azure Resource Manager](/azure/azure-resource-manager/management/overview), teraform ve [Azure CLI](/cli/azure/)gibi araçlar, ihtiyacınız olan bulut altyapısını bildirimli olarak betiğe olanak sağlar. Kaynak adları, konumlar, kapasiteler ve gizlilikler parametreleştirilenir ve dinamik. Betik sürümlenmiş ve projenizin yapıtı olarak kaynak denetimine iade edildi. Sistem ortamlarında QA, hazırlık ve üretim gibi tutarlı ve yinelenebilir bir altyapı sağlamak için betiği çağırılır.
 
 IAC, ıdempotent ' dir. Bu, yan etkileri olmadan aynı betiği çalıştırabilmeniz anlamına gelir. Ekibin bir değişiklik yapması gerekiyorsa betiği düzenleyip yeniden çalıştırır. Yalnızca güncelleştirilmiş kaynaklar etkilenir.
 
-Makalesinde [kod olarak altyapı nedir](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code), Sam Guckenheimer yazar, "IAC 'Yı uygulayan ekipler, kararlı ortamları hızla ve ölçekte teslim edebilir. Takımlar ortamların el ile yapılandırılmasını önler ve ortamları kod aracılığıyla istenen durumunu temsil ederek tutarlılığı zorlar. IAC ile altyapı dağıtımları tekrarlanabilir ve yapılandırma DRIP veya eksik bağımlılıklara neden olan çalışma zamanı sorunlarını önler. DevOps ekipleri, uygulamaları ve destekleyici altyapıyı hızlı, güvenilir ve ölçeklenebilir bir şekilde sunmak için birleştirilmiş bir uygulama ve araç kümesiyle birlikte çalışabilir. "
+Makalesinde [kod olarak altyapı nedir](/azure/devops/learn/what-is-infrastructure-as-code), Sam Guckenheimer yazar, "IAC 'Yı uygulayan ekipler, kararlı ortamları hızla ve ölçekte teslim edebilir. Takımlar ortamların el ile yapılandırılmasını önler ve ortamları kod aracılığıyla istenen durumunu temsil ederek tutarlılığı zorlar. IAC ile altyapı dağıtımları tekrarlanabilir ve yapılandırma DRIP veya eksik bağımlılıklara neden olan çalışma zamanı sorunlarını önler. DevOps ekipleri, uygulamaları ve destekleyici altyapıyı hızlı, güvenilir ve ölçeklenebilir bir şekilde sunmak için birleştirilmiş bir uygulama ve araç kümesiyle birlikte çalışabilir. "
 
 ### <a name="automating-deployments"></a>Dağıtımları otomatikleştirme
 

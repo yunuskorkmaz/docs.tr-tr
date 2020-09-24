@@ -2,12 +2,12 @@
 title: Merkezi yapılandırma
 description: Azure Uygulama yapılandırması ve AzureKey kasasını kullanarak bulutta yerel uygulamalar için yapılandırmayı merkezileştirme.
 ms.date: 05/13/2020
-ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0d40c5b2d70f30beb17489dfd55900f7c5fc1a75
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614233"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160885"
 ---
 # <a name="centralized-configuration"></a>Merkezi yapılandırma
 
@@ -19,7 +19,7 @@ Azure bulutu birçok harika seçenek sunar.
 
 ## <a name="azure-app-configuration"></a>Azure Uygulama Yapılandırması
 
-[Azure Uygulama yapılandırması](https://docs.microsoft.com/azure/azure-app-configuration/overview) , gizli olmayan yapılandırma ayarlarını güvenli, merkezi bir konumda depolayan, tam olarak yönetilen bir Azure hizmetidir. Depolanan değerler, birden fazla hizmet ve uygulama arasında paylaşılabilir.
+[Azure Uygulama yapılandırması](/azure/azure-app-configuration/overview) , gizli olmayan yapılandırma ayarlarını güvenli, merkezi bir konumda depolayan, tam olarak yönetilen bir Azure hizmetidir. Depolanan değerler, birden fazla hizmet ve uygulama arasında paylaşılabilir.
 
 Hizmetin kullanımı basittir ve çeşitli avantajlar sunar:
 
@@ -54,16 +54,16 @@ EShopOnContainers uygulaması, her mikro hizmetle yerel uygulama ayarları dosya
 ## <a name="references"></a>Başvurular
 
 - [EShopOnContainers mimarisi](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Azure API Management](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Azure SQL veritabanına genel bakış](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
+- [Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme](../microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)
+- [Azure API Management](/azure/api-management/api-management-key-concepts)
+- [Azure SQL veritabanına genel bakış](/azure/sql-database/sql-database-technical-overview)
 - [Redis için Azure Önbelleği](https://azure.microsoft.com/services/cache/)
-- [MongoDB için Azure Cosmos DB API'si](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure İzleyici’ye genel bakış](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [MongoDB için Azure Cosmos DB API’si](/azure/cosmos-db/mongodb-introduction)
+- [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Azure İzleyici'ye genel bakış](/azure/azure-monitor/overview)
 - [eShopOnContainers: AKS 'te Kubernetes kümesi oluşturma](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
 - [eShopOnContainers: Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
-- [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
+- [Azure Dev Spaces](/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]
 >[Önceki](deploy-eshoponcontainers-azure.md) 

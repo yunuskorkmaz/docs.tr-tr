@@ -2,12 +2,12 @@
 title: Bulutta yerel uygulamalarda kimlik doğrulama ve yetkilendirme
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Bulutta yerel uygulamalarda kimlik doğrulama ve yetkilendirme
 ms.date: 05/13/2020
-ms.openlocfilehash: e5254560ac82662e5e3ea6a25997516cd2b478b0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bbd2df110dd7a7dc7363e9c07d87f1fa12f4e464
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614311"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161145"
 ---
 # <a name="authentication-and-authorization-in-cloud-native-apps"></a>Bulutta yerel uygulamalarda kimlik doğrulaması ve yetkilendirme
 
@@ -21,8 +21,8 @@ Birçok kuruluş hala Active Directory Federasyon Hizmetleri (AD FS) (ADFS) gibi
 
 ## <a name="references"></a>Başvurular
 
-- [Kimlik doğrulaması temel bilgileri](https://docs.microsoft.com/azure/active-directory/develop/authentication-scenarios)
-- [Belirteçleri ve talepleri erişim](https://docs.microsoft.com/azure/active-directory/develop/access-tokens)
+- [Kimlik doğrulaması temel bilgileri](/azure/active-directory/develop/authentication-scenarios)
+- [Belirteçleri ve talepleri erişim](/azure/active-directory/develop/access-tokens)
 - [Şirket içi kimlik doğrulama hizmetlerinizin Ditch zaman alabilir](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]

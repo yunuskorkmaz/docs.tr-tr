@@ -3,12 +3,12 @@ title: Uygulama dayanıklılığı desenleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Uygulama dayanıklılığı desenleri
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: bb72e47704c833a2ce86f103a66b0414ce3a37ff
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e81d6e1d6b95cf0053de3ba557068ff458a59dc9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614336"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161158"
 ---
 # <a name="application-resiliency-patterns"></a>Uygulama dayanıklılığı desenleri
 
@@ -46,7 +46,7 @@ Sonra, yeniden deneme ve devre kesici desenlerinde genişletelim.
 
 Dağıtılmış bir bulutta yerel ortamda, hizmet ve bulut kaynaklarına yapılan çağrılar, genellikle kısa bir süre sonra kendilerini düzelttiğinden geçici (kısa süreli) hatalardan dolayı başarısız olabilir. Yeniden deneme stratejisi uygulamak, bulutta yerel bir hizmetin bu senaryoları azaltmasının sağlanmasına yardımcı olur.
 
-[Yeniden deneme](https://docs.microsoft.com/azure/architecture/patterns/retry) sürümü, bir hizmetin başarısız istek işlemini yeniden denemesini sağlar (yapılandırılabilir) ve bir bekleme süresini üstel olarak artırır. Şekil 6-2, bir yeniden deneme işlemini gösterir.
+[Yeniden deneme](/azure/architecture/patterns/retry) sürümü, bir hizmetin başarısız istek işlemini yeniden denemesini sağlar (yapılandırılabilir) ve bir bekleme süresini üstel olarak artırır. Şekil 6-2, bir yeniden deneme işlemini gösterir.
 
 ![Yeniden deneme deseninin eylemi](./media/retry-pattern.png)
 
@@ -70,7 +70,7 @@ Kötü, yanıt vermeyen bir hizmette sürekli yeniden deneme işlemleri gerçekl
 
 Bu durumlarda, işlemin hemen başarısız olması ve yalnızca başarılı olma olasılığı varsa hizmeti çağırmayı denemesi tercih edilir.
 
-[Devre kesici stili](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker) , bir uygulamanın başarısız olma olasılığı olan bir işlemi tekrar tekrar yürütmeye engel olabilir. Önceden tanımlı bir dizi başarısız çağrı yapıldıktan sonra, hizmete giden tüm trafiği engeller. Düzenli aralıklarla, hatanın çözümlenip çözümlenmediğini tespit etmek için bir deneme çağrısına izin verir. Şekil 6-3, devre kesici düzeninin eylemde olduğunu gösterir.
+[Devre kesici stili](/azure/architecture/patterns/circuit-breaker) , bir uygulamanın başarısız olma olasılığı olan bir işlemi tekrar tekrar yürütmeye engel olabilir. Önceden tanımlı bir dizi başarısız çağrı yapıldıktan sonra, hizmete giden tüm trafiği engeller. Düzenli aralıklarla, hatanın çözümlenip çözümlenmediğini tespit etmek için bir deneme çağrısına izin verir. Şekil 6-3, devre kesici düzeninin eylemde olduğunu gösterir.
 
 ![Devreye ayırıcı stili eylem içinde](./media/circuit-breaker-pattern.png)
 

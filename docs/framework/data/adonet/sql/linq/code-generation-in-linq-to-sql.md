@@ -2,14 +2,15 @@
 title: LINQ to SQL’de Kod Oluşturma
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 551322637e6e04b9be7d558c51e063fead7f84f4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f58448e0fc0c22795005b55a737b42374a750ec3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247969"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161535"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL’de Kod Oluşturma
+
 Nesne İlişkisel Tasarımcısı ya da SQLMetal komut satırı aracını kullanarak bir veritabanını temsil etmek için kod oluşturabilirsiniz. Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:  
   
 1. *DBML ayıklayıcısı* veritabanından şema bilgilerini ayıklar ve bu bilgileri XML biçimli bir dbml dosyasına yeniden birleştirir.  
@@ -18,21 +19,24 @@ Nesne İlişkisel Tasarımcısı ya da SQLMetal komut satırı aracını kullana
   
 3. Doğrulama hatası görünmüyorsa dosya kod oluşturucuya geçirilir.  
   
- Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Visual Studio kullanan geliştiriciler ayrıca kod oluşturmak için Nesne İlişkisel Tasarımcısı de kullanabilir. Bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Daha fazla bilgi için bkz. [SqlMetal.exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Visual Studio kullanan geliştiriciler ayrıca kod oluşturmak için Nesne İlişkisel Tasarımcısı de kullanabilir. Bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>DBML ayıklayıcısı  
- DBML ayıklayıcısı, veritabanı meta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verilerini girdi olarak alan ve bir Dbml dosyasını çıktı olarak üreten bir bileşendir.  
+
+ DBML ayıklayıcısı, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanı meta verilerini girdi olarak alan ve bır DBML dosyasını çıktı olarak üreten bir bileşendir.  
   
 ## <a name="code-generator"></a>Kod Oluşturucu  
- Kod Oluşturucu, DBML [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dosyalarını Visual Basic, C#veya XML eşleme dosyalarına çeviren bir bileşendir.  
+
+ Kod Oluşturucu, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML dosyalarını Visual Basic, C# veya XML eşleme dosyalarına çeviren bir bileşendir.  
   
 ## <a name="xml-schema-definition-file"></a>XML şema tanımı dosyası  
+
  DBML dosyası, XSD dosyası olarak aşağıdaki şema tanımına karşı geçerli olmalıdır.  
   
  Bu şema tanımı dosyasını, bir dış eşleme dosyasını doğrulamak için kullanılan şema tanımı dosyasından ayırt edin. Daha fazla bilgi için bkz. [dış eşleme](external-mapping.md)).  
   
 > [!NOTE]
-> Visual Studio kullanıcıları Ayrıca bu XSD dosyasını "DbmlSchema. xsd" olarak XML şemaları iletişim kutusunda bulur. Bir Dbml dosyasını doğrulamak için xsd dosyasını doğru şekilde kullanmak için bkz [. nasıl yapılır: DBML ve dış eşleme dosyalarını](how-to-validate-dbml-and-external-mapping-files.md)doğrulayın.  
+> Visual Studio kullanıcıları Ayrıca bu XSD dosyasını "DbmlSchema. xsd" olarak XML şemaları iletişim kutusunda bulur. Bir DBML dosyasını doğrulamak için XSD dosyasını doğru şekilde kullanmak için bkz. [nasıl yapılır: dbml ve dış eşleme dosyalarını doğrulama](how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -243,7 +247,8 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>Örnek DBML dosyası  
- Aşağıdaki kod, Northwind örnek veritabanından oluşturulan DBML dosyasından bir alıntıdır. Tüm dosyayı SQLMetal 'ı **/XML** seçeneğiyle kullanarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
+
+ Aşağıdaki kod, Northwind örnek veritabanından oluşturulan DBML dosyasından bir alıntıdır. Tüm dosyayı SQLMetal 'ı **/XML** seçeneğiyle kullanarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [SqlMetal.exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -273,6 +278,6 @@ elementFormDefault="qualified" >
 
 - [Arka Plan Bilgileri](background-information.md)
 - [Dış Eşleme](external-mapping.md)
-- [Nasıl yapılır: Nesne modelini dış dosya olarak oluşturma](how-to-generate-the-object-model-as-an-external-file.md)
+- [Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma](how-to-generate-the-object-model-as-an-external-file.md)
 - [Örnek Veritabanları İndirme](downloading-sample-databases.md)
 - [Başvuru](reference.md)

@@ -3,12 +3,12 @@ title: Cloud Native için aday uygulamalar
 description: Bulut Yerel yaklaşımdan hangi tür uygulamaların avantajına yarar olduğunu öğrenin
 author: robvet
 ms.date: 05/14/2020
-ms.openlocfilehash: b907a17b2351bc4ffe49fd6eb6f5963b209d00db
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8f00633a575dad12b0bc1d5adb83acac03db0659
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614246"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160950"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Cloud Native için aday uygulamalar
 
@@ -40,7 +40,7 @@ Ardından eski sistemler vardır. Yeni uygulamalar oluşturmak istiyoruz, ancak 
 
 Kritik olmayan tek parçalı uygulamalar hızlı bir kaldırma ve kaydırma ([bulut altyapıya](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)yönelik) geçiş işleminden büyük ölçüde avantaj sağlıyor. Burada, şirket içi iş yükü, hiçbir değişiklik yapılmadan bulut tabanlı bir VM 'de yeniden barındırılır. Bu yaklaşım [IaaS (hizmet olarak altyapı) modeli](https://azure.microsoft.com/overview/what-is-iaas/)kullanır. Azure, böyle bir taşımanın daha kolay olması için [Azure geçişi](https://azure.microsoft.com/services/azure-migrate/), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)ve [Azure veritabanı geçiş hizmeti](https://azure.microsoft.com/campaigns/database-migration/) gibi çeşitli araçlar içerir. Bu strateji bazı maliyet tasarrufu sağlayabilir, ancak bu gibi uygulamalar genellikle kilit açma ve bulut bilgi işlemin avantajlarından faydalanmayı sanallaştırmıştır.
 
-İş açısından kritik öneme sahip tek parçalı uygulamalar, gelişmiş bir kaldırma ve kaydırma (*buluta iyileştirilmiş*) geçişinden faydalanır. Bu yaklaşım, uygulamanın çekirdek mimarisini değiştirmeden anahtar bulut hizmetlerini etkinleştiren dağıtım iyileştirmelerini içerir. Örneğin [, uygulamayı](https://docs.microsoft.com/virtualization/windowscontainers/about/) kapsayıcınıza ve bu kitabın ilerleyen kısımlarında açıklanan [Azure Kubernetes Hizmetleri](https://azure.microsoft.com/services/kubernetes-service/)gibi bir kapsayıcı Orchestrator 'a dağıtırsınız. Bulutta, uygulama veritabanları, ileti kuyrukları, izleme ve dağıtılmış önbelleğe alma gibi diğer bulut hizmetlerini tüketebilir.
+İş açısından kritik öneme sahip tek parçalı uygulamalar, gelişmiş bir kaldırma ve kaydırma (*buluta iyileştirilmiş*) geçişinden faydalanır. Bu yaklaşım, uygulamanın çekirdek mimarisini değiştirmeden anahtar bulut hizmetlerini etkinleştiren dağıtım iyileştirmelerini içerir. Örneğin [, uygulamayı](/virtualization/windowscontainers/about/) kapsayıcınıza ve bu kitabın ilerleyen kısımlarında açıklanan [Azure Kubernetes Hizmetleri](https://azure.microsoft.com/services/kubernetes-service/)gibi bir kapsayıcı Orchestrator 'a dağıtırsınız. Bulutta, uygulama veritabanları, ileti kuyrukları, izleme ve dağıtılmış önbelleğe alma gibi diğer bulut hizmetlerini tüketebilir.
 
 Son olarak, Stratejik Kurumsal işlevleri gerçekleştiren tek parçalı uygulamalar, bu kitabın konusu olan bir *bulutta yerel* yaklaşımdan en iyi şekilde faydalanabilir. Bu yaklaşım, çeviklik ve hız sağlar. Ancak, kod yeniden oluşturma, yeniden mimari işleme ve kodu yeniden yazma maliyetlerine gelir.
 
@@ -74,13 +74,13 @@ Bu konuda daha ayrıntılı bilgi edinmek için artık Cloud Native 'e çok daha
 
 - [.NET mikro hizmetleri: Kapsayıcılı .NET uygulamaları için mimari](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [Azure bulutu ve Windows Kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
+- [Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
 - [Bir Davis 'e göre bulutta yerel desenler](https://www.manning.com/books/cloud-native-patterns)
 
 - [On Iki öğeli uygulamanın ötesinde](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
 
-- [Kod olarak altyapı nedir?](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
+- [Kod olarak altyapı nedir?](/azure/devops/learn/what-is-infrastructure-as-code)
 
 - [Uıber mühendisin mikro dağıtımı: her gün güvenle dağıtım](https://eng.uber.com/micro-deploy/)
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 5a70389c9c423300fad03123cfc4738dfe10e481
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 78079d9940ea5363215411acea6b9ca269ff3ae1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118526"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160547"
 ---
 # <a name="async-c-reference"></a>async (C# Başvurusu)
 
@@ -40,6 +40,7 @@ Zaman uyumsuz bir yöntem, ilk ifadesine ulaşana dek zaman uyumlu `await` olara
  Anahtar sözcüğü, `async` yalnızca bir metodu, bir lambda ifadesini veya anonim bir yöntemi değiştirdiğinde anahtar kelimedir. Tüm diğer bağlamlarda bu, tanımlayıcı olarak yorumlanır.
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek, zaman uyumsuz olay işleyicisi, `StartButton_Click` ve zaman uyumsuz bir yöntem arasındaki denetimin yapısını ve akışını gösterir `ExampleMethodAsync` . Zaman uyumsuz yöntemin sonucu bir Web sayfasının karakter sayısıdır. Kod, Visual Studio 'da oluşturduğunuz bir Windows Presentation Foundation (WPF) uygulamasına veya Windows Mağazası uygulamasına uygundur; uygulamayı ayarlamaya yönelik kod açıklamalarını inceleyin.
 
 Bu kodu, Visual Studio 'da bir Windows Presentation Foundation (WPF) uygulaması veya bir Windows Mağazası uygulaması olarak çalıştırabilirsiniz. Adlı bir düğme denetimine `StartButton` ve adlı TextBox denetimine ihtiyacınız vardır `ResultsTextBox` . Adları ve işleyiciyi şuna benzer olacak şekilde ayarlamayı unutmayın:
@@ -68,6 +69,7 @@ Kodu bir Windows Mağazası uygulaması olarak çalıştırmak için:
 > Görevler ve bir görevi beklerken yürütülen kod hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../../programming-guide/concepts/async/index.md). Benzer öğeleri kullanan tam bir konsol örneği için bkz. [işlem zaman uyumsuz görevleri tamamlandıklarında işleme (C#)](../../programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md).
 
 ## <a name="return-types"></a>Dönüş Türleri
+
 Zaman uyumsuz bir yöntem aşağıdaki dönüş türlerine sahip olabilir:
 
 - <xref:System.Threading.Tasks.Task>
@@ -89,5 +91,5 @@ Daha fazla bilgi ve örnek için bkz. [zaman uyumsuz dönüş türleri](../../pr
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [await](../operators/await.md)
-- [Async ve await ile asenkron programlama](../../programming-guide/concepts/async/index.md)
+- [Async ve await ile zaman uyumsuz programlama](../../programming-guide/concepts/async/index.md)
 - [Zaman uyumsuz görevleri tamamlandıkları anda işleme](../../programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)

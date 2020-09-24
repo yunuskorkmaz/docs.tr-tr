@@ -2,18 +2,18 @@
 title: Azure’da kapsayıcıları dağıtma
 description: Azure Container Registry, Azure Kubernetes hizmeti ve Azure Dev Spaces Azure 'da kapsayıcı dağıtma.
 ms.date: 04/13/2020
-ms.openlocfilehash: ba2854323ee0f1394a3cff0dd3756cb3c7c32d5b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d848a146a2bdb5d8d02543f57f19d6a39c9699e6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614155"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160781"
 ---
 # <a name="deploying-containers-in-azure"></a>Azure’da kapsayıcıları dağıtma
 
 Bu bölümde ve Bölüm 1 ' de kapsayıcılar tartışıyoruz. Kapsayıcıların taşınabilirlik dahil olmak üzere bulutta yerel uygulamalara birçok avantaj sunduğumuz görüldü. Azure bulutunda, aynı Kapsayıcılı Hizmetleri hazırlama ve üretim ortamları arasında dağıtabilirsiniz. Azure, bu Kapsayıcılı iş yüklerini barındırmak için çeşitli seçenekler sunar:
 
-- Azure Kubernetes Hizmetleri (AKS)
+- Azure Kubernetes Services (AKS)
 - Azure Container Instance (ACI)
 - Kapsayıcılar için Azure Web Apps
 
@@ -23,7 +23,7 @@ Bir mikro hizmeti kapsayıcıında ilk olarak bir derleme kapsayıcısına "Imag
 
 Oluşturulduktan sonra kapsayıcı görüntüleri kapsayıcı kayıt defterlerine depolanır. Kapsayıcı görüntülerini oluşturmanıza, depolamanıza ve yönetmenize olanak sağlar. Hem ortak hem de özel çok sayıda kayıt defterleri mevcuttur. Azure Container Registry (ACR), Azure bulutundaki tam olarak yönetilen bir kapsayıcı kayıt defteri hizmetidir. Azure ağ içindeki görüntülerinizi devam ettirir ve bunları Azure Container konaklarına dağıtma süresini azaltır. Ayrıca, diğer Azure kaynakları için kullandığınız güvenlik ve kimlik yordamlarını kullanarak bunları da güvenli hale getirebilirsiniz.
 
-[Azure Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)veya [PowerShell araçlarını](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)kullanarak bir Azure Container Registry oluşturursunuz. Azure 'da bir kayıt defteri oluşturmak basittir. Azure aboneliği, kaynak grubu ve benzersiz bir ad gerektirir. Şekil 3-11, üzerinde barındırılacak bir kayıt defteri oluşturmak için temel seçenekleri gösterir `registryname.azurecr.io` .
+[Azure Portal](/azure/container-registry/container-registry-get-started-portal), [Azure CLI](/azure/container-registry/container-registry-get-started-azure-cli)veya [PowerShell araçlarını](/azure/container-registry/container-registry-get-started-powershell)kullanarak bir Azure Container Registry oluşturursunuz. Azure 'da bir kayıt defteri oluşturmak basittir. Azure aboneliği, kaynak grubu ve benzersiz bir ad gerektirir. Şekil 3-11, üzerinde barındırılacak bir kayıt defteri oluşturmak için temel seçenekleri gösterir `registryname.azurecr.io` .
 
 ![Kapsayıcı kayıt defteri oluşturma](./media/create-container-registry.png)
 
@@ -57,7 +57,7 @@ En iyi uygulama olarak, geliştiricilerin resimleri bir kapsayıcı kayıt defte
 
 ## <a name="acr-tasks"></a>ACR Görevleri
 
-[ACR görevleri](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) , Azure Container Registry kullanılabilen bir özellikler kümesidir. Azure bulutunda kapsayıcı görüntüleri oluşturup yöneterek [iç döngü geliştirme döngünüzü](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) genişletir. `docker build` `docker push` Geliştirme makinenizde bir ve yerel olarak çağırmak yerine, bulutta ACR görevleri tarafından otomatik olarak işlenir.
+[ACR görevleri](/azure/container-registry/container-registry-tasks-overview) , Azure Container Registry kullanılabilen bir özellikler kümesidir. Azure bulutunda kapsayıcı görüntüleri oluşturup yöneterek [iç döngü geliştirme döngünüzü](../containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow.md) genişletir. `docker build` `docker push` Geliştirme makinenizde bir ve yerel olarak çağırmak yerine, bulutta ACR görevleri tarafından otomatik olarak işlenir.
 
 Aşağıdaki AZ CLı komutu her ikisi de bir kapsayıcı görüntüsü oluşturur ve ACR 'ye gönderir:
 
@@ -75,14 +75,14 @@ az acr build --image sample/hello-world:v1  --registry myContainerRegistry008 --
 
 Bu bölümde Azure Kubernetes hizmeti (AKS) ile tartışıyoruz. Kapsayıcının yerleşik bulut Yerel uygulamalarını yöneten kapsayıcı Orchestrator 'ın de olduğunu gördük.
 
-Bir görüntüyü bir kayıt defterine dağıttıktan sonra ACR gibi, AKS 'leri otomatik olarak çekmek ve dağıtmak için yapılandırabilirsiniz. Bir CI/CD işlem hattı varken, güncelleştirmeleri hızlı bir şekilde dağıtmaya yönelik riskleri en aza indirmek için bir [kanarya yayın](https://martinfowler.com/bliki/CanaryRelease.html) stratejisi yapılandırabilirsiniz. Uygulamanın yeni sürümü başlangıçta hiçbir trafik yönlendirilmeden üretimde yapılandırılır. Daha sonra, sistem yeni dağıtılan sürüme küçük bir Kullanıcı yüzdesi yönlendirir. Ekip yeni sürümde güvenli bir şekilde güvendiğinden, daha fazla örnek alabilir ve eskisini devre dışı bırakabilirsiniz. AKS bu dağıtım stilini kolayca destekler.
+Bir görüntüyü bir kayıt defterine dağıttıktan sonra ACR gibi, AKS 'leri otomatik olarak çekmek ve dağıtmak için yapılandırabilirsiniz. Bir CI/CD işlem hattı varken, güncelleştirmeleri hızlı bir şekilde dağıtmaya yönelik riskleri en aza indirmek için bir  [kanarya yayın](https://martinfowler.com/bliki/CanaryRelease.html) stratejisi yapılandırabilirsiniz. Uygulamanın yeni sürümü başlangıçta hiçbir trafik yönlendirilmeden üretimde yapılandırılır. Daha sonra, sistem yeni dağıtılan sürüme küçük bir Kullanıcı yüzdesi yönlendirir. Ekip yeni sürümde güvenli bir şekilde güvendiğinden, daha fazla örnek alabilir ve eskisini devre dışı bırakabilirsiniz. AKS bu dağıtım stilini kolayca destekler.
 
 Azure 'daki kaynakların çoğunda olduğu gibi portal, komut satırı veya Helm ya da Terkform gibi Otomasyon araçlarını kullanarak bir Azure Kubernetes hizmet kümesi oluşturabilirsiniz. Yeni bir kümeye başlamak için aşağıdaki bilgileri sağlamanız gerekir:
 
 - Azure aboneliği
 - Kaynak grubu
 - Kubernetes küme adı
-- Bölge
+- Region
 - Kubernetes sürümü
 - DNS adı ön eki
 - Düğüm boyutu
@@ -96,7 +96,7 @@ Bu bilgiler başlamak için yeterlidir. Azure portal oluşturma sürecinin bir p
 - İzleme
 - Etiketler
 
-Bu [hızlı başlangıçta Azure Portal kullanarak bir AKS kümesi dağıtma işlemi adım adım](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)açıklanmaktadır.
+Bu [hızlı başlangıçta Azure Portal kullanarak bir AKS kümesi dağıtma işlemi adım adım](/azure/aks/kubernetes-walkthrough-portal)açıklanmaktadır.
 
 ## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
@@ -116,7 +116,7 @@ Azure Dev Spaces ile çalışma işlemi aşağıdaki adımları içerir:
 3. Bir alt dev alanı yapılandırın (sisteminizin kendi sürümünüz için).
 4. Geliştirme alanına bağlanın.
 
-Bu adımların tümü, Azure CLı ve yeni `azds` komut satırı araçları kullanılarak gerçekleştirilebilir. Örneğin, belirli bir Kubernetes kümesi için yeni bir Azure dev alanı oluşturmak için, şöyle bir komut kullanacaksınız:
+Bu adımların tümü, Azure CLı ve yeni  `azds` komut satırı araçları kullanılarak gerçekleştirilebilir. Örneğin, belirli bir Kubernetes kümesi için yeni bir Azure dev alanı oluşturmak için, şöyle bir komut kullanacaksınız:
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster

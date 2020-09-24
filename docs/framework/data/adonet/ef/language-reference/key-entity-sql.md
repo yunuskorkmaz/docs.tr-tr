@@ -1,27 +1,29 @@
 ---
-title: ANAHTAR (Varlık SQL)
+title: ANAHTAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 894a9d41aa3a14ad66b537433aa315823a299f95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 07160467dcee60377e3ef448fdc66092da4e06e7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150175"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161977"
 ---
-# <a name="key-entity-sql"></a>ANAHTAR (Varlık SQL)
-Başvurunun veya varlık ifadesinin anahtarını ayıklar.  
+# <a name="key-entity-sql"></a>ANAHTAR (Entity SQL)
+
+Başvurunun veya bir varlık ifadesinin anahtarını ayıklar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```sql  
 KEY(createref_expression)  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varlık anahtarı, belirtilen varlık veya varlık başvurusu doğru sırada anahtar değerlerini içerir. Birden çok varlık kümesi aynı türü temel alabilecek olduğundan, her varlık kümesinde aynı anahtar görünebilir. Benzersiz bir başvuru almak `REF`için. KEY işlecinin dönüş türü, varlığın her anahtarı için aynı sırada bir alan içeren bir satır türüdür.  
+
+ Bir varlık anahtarı, belirtilen varlık veya varlık başvurusunun doğru sırasındaki anahtar değerlerini içerir. Birden çok varlık kümesi aynı türe dayanabileceğinden, her bir varlık kümesinde aynı anahtar görünebilir. Benzersiz bir başvuru almak için kullanın `REF` . ANAHTAR işlecinin dönüş türü, varlığın her anahtarı için aynı sırada bir alan içeren bir satır türüdür.  
   
- Aşağıdaki örnekte, anahtar işleci BadOrder varlığına bir başvuru geçirilir ve bu başvurunun anahtar kısmını döndürür. Bu durumda, `Id` özelliğe karşılık gelen tam bir alana sahip bir kayıt türü.  
+ Aşağıdaki örnekte, Key işleci, BadOrder varlığına bir başvuru geçirmiştir ve bu başvurunun anahtar bölümünü döndürür. Bu durumda, özelliğine karşılık gelen tam bir alan içeren bir kayıt türü `Id` .  
   
 ```sql  
 select Key( CreateRef(LOB.BadOrders, row(o.Id)) )
@@ -29,11 +31,12 @@ from LOB.Orders as o
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki Entity SQL sorgusu, tür başvurusu olan bir ifadenin anahtar bölümünü ayıklamak için KEY işleci kullanır. Sorgu AdventureWorks Satış Modeli dayanmaktadır. Bu sorguyı derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
+
+ Aşağıdaki Entity SQL sorgusu, tür başvurusuyla bir ifadenin anahtar bölümünü ayıklamak için anahtar işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [YapısalTürü Sonuçları Döndüren Bir Sorguyu Yürütme: Nasıl Yapılır'daki](../how-to-execute-a-query-that-returns-structuraltype-results.md)yordamı izleyin.  
+1. [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-structuraltype-results.md)bölümündeki yordamı izleyin.  
   
-2. Aşağıdaki sorguyu bağımsız değişken `ExecuteStructuralTypeQuery` olarak yönteme geçirin:  
+2. Aşağıdaki sorguyu yöntemine bir bağımsız değişken olarak geçirin `ExecuteStructuralTypeQuery` :  
   
  [!code-sql[DP EntityServices Concepts#KEY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#key)]  
   

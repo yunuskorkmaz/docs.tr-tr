@@ -5,21 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 2112600dfcef65b1c85445b03806ce8e9cab6a27
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 77ac29eeeaa30ef438b635364dc8e883a0e4c158
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782059"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161340"
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>Nasıl yapılır: Ne Kadar İlgili Verilerin Alındığını Denetleme
-Ana Hedefinizdeki ilgili verilerin aynı anda alınması gereken verileri belirtmek için yönteminikullanın.<xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Örneğin, müşterilerin siparişleriyle ilgili bilgilere ihtiyacınız olduğunu biliyorsanız, sipariş bilgilerinin Müşteri bilgileriyle aynı zamanda alındığından emin <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> olmak için kullanabilirsiniz. Bu yaklaşım, her iki bilgi kümesi için yalnızca bir seyahat veritabanına neden olur.  
+
+<xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>Ana Hedefinizdeki ilgili verilerin aynı anda alınması gereken verileri belirtmek için yöntemini kullanın. Örneğin, müşterilerin siparişleriyle ilgili bilgilere ihtiyacınız olduğunu biliyorsanız, <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> sipariş bilgilerinin Müşteri bilgileriyle aynı zamanda alındığından emin olmak için kullanabilirsiniz. Bu yaklaşım, her iki bilgi kümesi için yalnızca bir seyahat veritabanına neden olur.  
   
 > [!NOTE]
-> Bir mimariler, müşterileri hedefleyerek siparişleri alma gibi bir büyük projeksiyon olarak bir çapraz ürün alarak, sorgunuzun ana hedefle ilgili verileri alabilirsiniz. Ancak bu yaklaşım genellikle dezavantajlara sahiptir. Örneğin, sonuçlar yalnızca tahmindir ve tarafından [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]değiştirilebilecek ve kalıcı hale kullanılabilecek varlıklardır. Ve ihtiyacınız olmayan çok fazla veri alabilirsiniz.  
+> Bir mimariler, müşterileri hedefleyerek siparişleri alma gibi bir büyük projeksiyon olarak bir çapraz ürün alarak, sorgunuzun ana hedefle ilgili verileri alabilirsiniz. Ancak bu yaklaşım genellikle dezavantajlara sahiptir. Örneğin, sonuçlar yalnızca tahmindir ve tarafından değiştirilebilecek ve kalıcı hale kullanılabilecek varlıklardır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] . Ve ihtiyacınız olmayan çok fazla veri alabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, Londra 'da bulunan `Orders` `Customers` tüm kullanıcılar için, sorgu yürütüldüğünde alınır. Sonuç olarak, bir `Orders` `Customer` nesnedeki özelliğe art arda erişim yeni bir veritabanı sorgusu tetiklemez.  
+
+ Aşağıdaki örnekte, `Orders` `Customers` Londra 'da bulunan tüm kullanıcılar için, sorgu yürütüldüğünde alınır. Sonuç olarak, `Orders` bir nesnedeki özelliğe art arda erişim `Customer` Yeni bir veritabanı sorgusu tetiklemez.  
   
  [!code-csharp[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#2)]
  [!code-vb[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  

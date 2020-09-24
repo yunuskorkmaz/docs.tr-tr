@@ -2,14 +2,15 @@
 title: <transport> / <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 4ef08ad73a03dea21d27217364a7bacb46a3848e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8f752373c51992c51b747f5f4dc4a63910a387c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73735925"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162198"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport> / \<netTcpBinding>
+
 İle yapılandırılmış bir uç nokta için ileti düzeyi güvenlik gereksinimlerinin türünü tanımlar [\<netTcpBinding>](nettcpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "73735925"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-nettcpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netTcpBinding>
@@ -41,6 +42,7 @@ ms.locfileid: "73735925"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -56,7 +58,7 @@ ms.locfileid: "73735925"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|İstemci anonimdir. Bu, hizmet için bir sertifika gerektirir.|  
+|Hiçbiri|İstemci anonimdir. Bu, hizmet için bir sertifika gerektirir.|  
 |Windows|İstemcinin Windows kimlik doğrulamasını SP anlaşması (Kerberos anlaşması) kullanarak belirtir.|  
 |Sertifika|İstemcinin kimliği bir sertifika kullanılarak doğrulanır. Bu, SSL anlaşmasını kullanır ve hizmet için bir sertifika gerektirir.|  
   
@@ -64,12 +66,13 @@ ms.locfileid: "73735925"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|Koruma yok.|  
+|Hiçbiri|Koruma yok.|  
 |İşaret|İletiler imzalanır.|  
 |EncryptAndSign özelliğini|-İletiler şifrelenir ve imzalanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok  
+
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -78,6 +81,7 @@ ms.locfileid: "73735925"
 |[\<security>](security-of-nettcpbinding.md)|Öğesinin güvenlik yeteneklerini belirtir [\<netTcpBinding>](nettcpbinding.md) .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  SOAP iletisinin bütünlüğü ve gizliliği ve karşılıklı kimlik doğrulaması için aktarım güvenliği kullanın. Bu güvenlik modu bir bağlamada seçilirse, kanal yığını güvenli bir aktarım kullanılarak yapılandırılır ve SOAP iletileri Windows (Negotiate) veya TCP üzerinden SSL gibi aktarım güvenliği kullanılarak güvenli hale getirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

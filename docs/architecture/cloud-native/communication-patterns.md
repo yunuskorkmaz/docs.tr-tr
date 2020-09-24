@@ -3,12 +3,12 @@ title: Bulutta yerel iletişim desenleri
 description: Bulutta yerel uygulamalarda önemli hizmet iletişim sorunları hakkında bilgi edinin
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5ce789924e828865f7bdf717b081b9112203293a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614220"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160924"
 ---
 # <a name="cloud-native-communication-patterns"></a>Bulutta yerel iletişim desenleri
 
@@ -20,7 +20,7 @@ Tek parçalı bir uygulamada, iletişim basittir. Kod modülleri bir sunucuda ay
 
 Bulutta yerel sistemler, çok küçük ve bağımsız mikro hizmetlerden oluşan mikro hizmet tabanlı bir mimari uygular. Her mikro hizmet ayrı bir işlemde yürütülür ve genellikle bir *kümeye*dağıtılan bir kapsayıcı içinde çalışır.
 
-Bir küme, yüksek oranda kullanılabilir bir ortam oluşturmak için bir sanal makine havuzunu birlikte gruplandırır. Kapsayıcılı mikro hizmetleri dağıtmaktan ve yönetmekten sorumlu olan bir Orchestration aracıyla yönetilirler. Şekil 4-1, tam olarak yönetilen [Azure Kubernetes hizmetleriyle](https://docs.microsoft.com/azure/aks/intro-kubernetes)Azure bulutuna dağıtılan bir [Kubernetes](https://kubernetes.io) kümesini gösterir.
+Bir küme, yüksek oranda kullanılabilir bir ortam oluşturmak için bir sanal makine havuzunu birlikte gruplandırır. Kapsayıcılı mikro hizmetleri dağıtmaktan ve yönetmekten sorumlu olan bir Orchestration aracıyla yönetilirler. Şekil 4-1, tam olarak yönetilen [Azure Kubernetes hizmetleriyle](/azure/aks/intro-kubernetes)Azure bulutuna dağıtılan bir [Kubernetes](https://kubernetes.io) kümesini gösterir.
 
 ![Azure 'da bir Kubernetes kümesi](./media/kubernetes-cluster-in-azure.png)
 
