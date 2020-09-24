@@ -2,12 +2,12 @@
 title: Tek yapılı uygulamalar
 description: Tek parçalı uygulamalar kapsayıca yönelik temel kavramları anlayın.
 ms.date: 08/06/2020
-ms.openlocfilehash: f188a2ff576436d9378030e0a858ffb8110dad17
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915445"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163550"
 ---
 # <a name="monolithic-applications"></a>Tek yapılı uygulamalar
 
@@ -37,7 +37,7 @@ Altyapı açısından, her sunucu aynı ana bilgisayar içinde birçok uygulama 
 
 Son olarak, bir kullanılabilirlik perspektifinden, tek parçalı uygulamalar bir bütün olarak dağıtılmalıdır; diğer bir deyişle, *durdurmanız ve başlatmanız*gereken durumlarda, tüm işlevler ve tüm kullanıcılar dağıtım penceresi sırasında etkilenecektir. Bazı durumlarda, Azure ve kapsayıcıları kullanımı bu durumları en aza indirebilir ve Şekil 4-3 ' de görebileceğiniz gibi uygulamanızın kapalı kalma süresini azaltabilir.
 
-Her örnek için adanmış VM 'Ler kullanarak Azure 'da tek parçalı uygulamalar dağıtabilirsiniz. [Azure VM Ölçek kümelerini](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)kullanarak VM 'leri kolayca ölçeklendirebilirsiniz.
+Her örnek için adanmış VM 'Ler kullanarak Azure 'da tek parçalı uygulamalar dağıtabilirsiniz. [Azure VM Ölçek kümelerini](/azure/virtual-machine-scale-sets/)kullanarak VM 'leri kolayca ölçeklendirebilirsiniz.
 
 Ayrıca, [Azure Uygulama Hizmetleri](https://azure.microsoft.com/services/app-service/) 'ni kullanarak tek parçalı uygulamalar çalıştırabilir ve VM 'leri yönetmeye gerek kalmadan örnekleri kolayca ölçeklendirebilirsiniz. Azure Uygulama Hizmetleri, tek tek Docker Kapsayıcıları örnekleri çalıştırabilir ve dağıtımı basitleştirir.
 

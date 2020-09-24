@@ -2,14 +2,15 @@
 title: Entity SQL Dili
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 2600b7626ebc5196c702f2d1e3159fd9549227f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 721a4cd9d4e5618c083392bbe1ae203f285f8feb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553388"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148120"
 ---
 # <a name="entity-sql-language"></a>Entity SQL Dili
+
 Entity SQL, SQL 'e benzer bir depolama bağımsız sorgu dilidir. Entity SQL, varlık verilerini nesneler olarak ya da tablolu bir biçimde sorgulamanızı sağlar. Aşağıdaki durumlarda Entity SQL kullanmayı göz önünde bulundurmanız gerekir:  
   
 - Bir sorgu, çalışma zamanında dinamik olarak oluşturulmalıdır. Bu durumda, <xref:System.Data.Objects.ObjectQuery%601> çalışma zamanında Entity SQL bir sorgu dizesi oluşturmak yerine ' ın Sorgu Oluşturucu yöntemlerini kullanmayı da göz önünde bulundurmanız gerekir.  
@@ -21,6 +22,7 @@ Entity SQL, SQL 'e benzer bir depolama bağımsız sorgu dilidir. Entity SQL, va
 - SQL tabanlı sorgu dillerinde zaten bir uzman varsa Entity SQL en doğal olarak görünebilir.  
   
 ## <a name="using-entity-sql-with-the-entityclient-provider"></a>EntityClient sağlayıcı ile Entity SQL kullanma  
+
  EntityClient sağlayıcı ile Entity SQL kullanmak istiyorsanız, daha fazla bilgi için aşağıdaki konulara bakın:  
   
  [Entity Framework için EntityClient Sağlayıcısı](../entityclient-provider-for-the-entity-framework.md)  
@@ -46,6 +48,7 @@ Entity SQL, SQL 'e benzer bir depolama bağımsız sorgu dilidir. Entity SQL, va
  [Nasıl yapılır: Nasıl yapılır: Navigate İşleci ile İlişkilerde Gezinme](../how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="using-entity-sql-with-object-queries"></a>Nesne sorgularıyla Entity SQL kullanma  
+
  Nesne sorgularıyla Entity SQL kullanmak istiyorsanız, daha fazla bilgi için aşağıdaki konulara bakın:  
   
  [Nasıl yapılır: varlık türü nesneleri döndüren bir sorgu yürütme](/previous-versions/dotnet/netframework-4.0/bb738694(v=vs.100))  
@@ -75,6 +78,7 @@ Entity SQL, SQL 'e benzer bir depolama bağımsız sorgu dilidir. Entity SQL, va
  [Nasıl yapılır: sorgu sonuçları aracılığıyla sayfa oluşturma](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Entity SQL’e Genel Bakış](entity-sql-overview.md)  
   
  [Entity SQL Başvurusu](entity-sql-reference.md)  

@@ -2,14 +2,15 @@
 title: <udpTransportSettings>
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: bb2ec84caa79f33e1e469592d0eca63d8f461dac
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ed59a139ac21e7cfb4400d17f1fc6a0fa3096641
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854868"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183682"
 ---
 # \<udpTransportSettings>
+
 Bu yapılandırma öğesi için UDP taşıma ayarlarını gösterir [\<udpDiscoveryEndpoint>](udpdiscoveryendpoint.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Bu yapılandırma öğesi için UDP taşıma ayarlarını gösterir [\<udpDiscov
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<udpDiscoveryEndpoint>**](udpdiscoveryendpoint.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<updTransportSettings>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -41,6 +42,7 @@ Bu yapılandırma öğesi için UDP taşıma ayarlarını gösterir [\<udpDiscov
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -58,6 +60,7 @@ Bu yapılandırma öğesi için UDP taşıma ayarlarını gösterir [\<udpDiscov
 |timeToLive|Çok noktaya yayın paketinin geçebileceğine yönelik ağ segmenti atlamalarının sayısını belirten bir tamsayı.  Bu öznitelik, `IP_MULTICAST_TTL` ve yuva seçenekleriyle ilişkili işlevselliği gösterir `IP_TTL` .<br /><br /> Varsayılan değer 1’dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

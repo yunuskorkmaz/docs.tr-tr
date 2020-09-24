@@ -3,12 +3,12 @@ title: Bulutta yerel dayanıklılık
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native dayanıklılık
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f3aa89e3ae21b13a31f65013b59636b3f931553c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5c4fb261515c151fd666cc33cbb020447716c814
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613778"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163563"
 ---
 # <a name="cloud-native-resiliency"></a>Bulutta yerel dayanıklılık
 
@@ -26,7 +26,7 @@ Bu ortamda çalışırken, bir hizmet birçok farklı güçlüklere duyarlı olm
 
 - Beklenmeyen ağ gecikmesi-bir hizmet isteğinin alıcıya ve geri yolculuğu için geçen süre.
 
-- [Geçici hatalar](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) -kısa süreli ağ bağlantısı hataları.
+- [Geçici hatalar](/azure/architecture/best-practices/transient-faults) -kısa süreli ağ bağlantısı hataları.
 
 - Uzun süre çalışan bir zaman uyumlu işlem ile engelleme.
 

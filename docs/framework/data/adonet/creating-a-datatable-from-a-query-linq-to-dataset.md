@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0a7c8f005b90484ef2f9c7e48218bda40533696a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 064688f173e375481373e9a33d66c64666e1583f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287018"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148367"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Sorgudan DataTable oluşturma (LINQ to DataSet)
+
 Veri bağlama, nesnenin yaygın bir kullanımı <xref:System.Data.DataTable> . <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>Yöntemi bir sorgunun sonuçlarını alır ve verileri ' a kopyalar ve <xref:System.Data.DataTable> Bu da veri bağlama için kullanılabilir. Veri işlemleri gerçekleştirildiğinde, yeni <xref:System.Data.DataTable> kaynak geri birleştirilir <xref:System.Data.DataTable> .  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>Yöntemi bir sorgudan oluşturmak için aşağıdaki işlemi kullanır <xref:System.Data.DataTable> :  
@@ -38,6 +39,7 @@ Yöntemi çağırmak, <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
 ## <a name="creating-a-custom-copytodatatablet-method"></a>Özel bir CopyToDataTable \<T> yöntemi oluşturma  
+
  Mevcut <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemler yalnızca <xref:System.Collections.Generic.IEnumerable%601> genel parametrenin türü olan bir kaynak üzerinde çalışır `T` <xref:System.Data.DataRow> . Bu faydalı olsa da, tabloların, anonim türler döndüren sorgulardan veya tablo birleştirmelerini gerçekleştiren sorgulardan bir skalar türler dizisinden oluşturulmasını izin vermez. Skalar veya anonim türler dizisinden bir tablo yükleyen iki özel yöntemin nasıl uygulanacağı hakkında bir örnek için `CopyToDataTable` bkz. [nasıl yapılır: \<T> genel tür T bir DataRow değil, CopyToDataTable uygulama](implement-copytodatatable-where-type-not-a-datarow.md).  
   
  Bu bölümdeki örneklerde aşağıdaki özel türler kullanılır:  
@@ -46,30 +48,35 @@ Yöntemi çağırmak, <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 
  [!code-vb[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#itemclass)]  
   
 ### <a name="example"></a>Örnek  
+
  Bu örnek, `SalesOrderHeader` `SalesOrderDetail` Ağustos ayında çevrimiçi siparişleri almak ve sorgudan bir tablo oluştururken, ve tabloları üzerinde bir JOIN gerçekleştirir.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#join)]
  [!code-vb[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#join)]  
   
 ### <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, $9,99 'den büyük bir fiyat öğeleri için bir koleksiyonu sorgular ve sorgu sonuçlarından bir tablo oluşturur.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintotable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintotable)]  
   
 ### <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir koleksiyonu 9,99 ' den büyük bir fiyat öğeleri için sorgular ve sonuçları projeler için sorgular. Döndürülen anonim türler dizisi varolan bir tabloya yüklenir.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintoexistingtable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintoexistingtable)]  
   
 ### <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir koleksiyonu $9,99 ' den büyük bir fiyat öğeleri için sorgular ve sonuçları projeler için sorgular. Döndürülen anonim türler dizisi varolan bir tabloya yüklenir. `Book`Ve `Movies` türleri türünden türetildiğinden tablo şeması otomatik olarak genişletilir `Item` .  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsexpandschema)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsexpandschema)]  
   
 ### <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir koleksiyonu $9,99 ' den büyük olan öğeler için sorgular ve yeni bir tabloya yüklenen bir dizisini döndürür <xref:System.Double> .  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]

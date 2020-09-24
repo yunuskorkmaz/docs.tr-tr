@@ -2,14 +2,15 @@
 title: <transport> / <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: b975015a9c9a0af53117900c45d917ce1c1a53e9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 996b3655b0698595256c9a7197f705d46e6e9fcf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732818"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169823"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<transport> / \<netHttpBinding>
+
 HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-nethttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netHttpBinding>
@@ -41,6 +42,7 @@ HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -75,6 +77,7 @@ HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri
 |Sertifika|Bir sertifika kullanarak istemci kimlik doğrulaması gerçekleştirir. Bu seçenek yalnızca `Mode` üst `security` öğenin özniteliği Transport olarak ayarlandıysa ve yalnızca transportcredentialolarak ayarlandıysa işe yarar.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -84,6 +87,7 @@ HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri
 |[\<security>](security-of-nethttpbinding.md)|İçin güvenlik yeteneklerini tanımlar [\<netHttpBinding>](nethttpbinding.md) .|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, temel bağlama ile SSL Aktarım güvenliği kullanımını gösterir. Varsayılan olarak, temel bağlama HTTP iletişimini destekler.  
   
 ```xml  

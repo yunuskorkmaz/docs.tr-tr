@@ -2,12 +2,12 @@
 title: Docker uygulamalarında durum ve veriler
 description: Kapsayıcılı uygulamalarda durumu kaydetmek için kullanılabilir seçeneğini öğrenin.
 ms.date: 08/06/2020
-ms.openlocfilehash: dc9a1a3eccb77e9fd67e69fd3295f3db1edf5e66
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: d55519e9340ec06588c2dae3e7363d03f263ce39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915320"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163472"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker uygulamalarında durum ve veriler
 
@@ -27,7 +27,7 @@ Uzak depolama 'dan:
 
 - [Azure depolama](https://azure.microsoft.com/documentation/services/storage/) , kapsayıcılar için iyi bir uzun süreli kalıcı çözüm sağlayan coğrafi dağıtılabilir depolama sağlar.
 
-- [Azure SQL veritabanı](https://azure.microsoft.com/services/sql-database/)gibi uzak ilişkisel veritabanları, [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)gibi NoSQL veritabanları veya [redin](https://redis.io/)gibi önbellek hizmetleri.
+- [Azure SQL veritabanı](https://azure.microsoft.com/services/sql-database/)gibi uzak ilişkisel veritabanları, [Azure Cosmos DB](/azure/cosmos-db/introduction)gibi NoSQL veritabanları veya [redin](https://redis.io/)gibi önbellek hizmetleri.
 
 Docker kapsayıcısından:
 
