@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 43bdfebce291c3c1d6c90104c5fef440b295934b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0c5b4043b389c7dde39a477f90e82bbf654331f7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286487"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156257"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Birden Çok Etkin Sonuç Kümesini Etkinleştirme
+
 Birden çok etkin sonuç kümesi (MARS), tek bir bağlantıda birden çok toplu işi yürütmeye izin vermek için SQL Server ile birlikte çalışarak bir özelliktir. MARS, SQL Server ile kullanım için etkinleştirildiğinde, kullanılan her komut nesnesi bağlantıya bir oturum ekler.  
   
 > [!NOTE]
@@ -53,9 +54,11 @@ string connectionString = "Data Source=MSSQL1;" +
 ```  
   
 ## <a name="special-considerations-when-using-mars"></a>MARS kullanırken özel konular  
+
  Genel olarak, mevcut uygulamaların MARS özellikli bir bağlantı kullanması için değişiklik yapması gerekmez. Ancak, uygulamalarınızda MARS özelliklerini kullanmak istiyorsanız, aşağıdaki özel konuları anlamanız gerekir.  
   
 ### <a name="statement-interleaving"></a>İfade araya ekleme  
+
  MARS işlemleri sunucuda zaman uyumlu olarak yürütülür. SELECT ve BULK INSERT deyimlerinin deyim araya ekleme değerlerine izin verilir. Ancak, veri işleme dili (DML) ve veri tanımlama dili (DDL) deyimleri otomatik olarak yürütülür. Atomik bir toplu iş yürütülürken yürütülmeye çalışan tüm deyimler engellenir. Sunucudaki paralel yürütme bir MARS özelliği değildir.  
   
  Bir MARS bağlantısı altında iki toplu işlem gönderilirse, bunlardan biri DML ifadesini içeren bir SELECT ifadesini içeriyorsa, DML SELECT ifadesinin yürütülmesi içinde yürütmeye başlayabilir. Ancak, SELECT ifadesinin ilerleme yapabilmesi için DML bildiriminin tamamlanmasını çalıştırması gerekir. Her iki deyim de aynı işlem altında çalışıyorsa, SELECT deyimi başladıktan sonra bir DML deyimi tarafından yapılan tüm değişiklikler okuma işlemine görünmez.  
@@ -63,15 +66,19 @@ string connectionString = "Data Source=MSSQL1;" +
  SELECT ifadesinin içindeki bir WAITFOR deyimleri, beklerken, ilk satır üretilene kadar işlem yapmaz. Bu, bir WAITFOR bildirisi beklerken aynı bağlantı içinde başka hiçbir toplu iş yürütülemmeyeceğini gösterir.  
   
 ### <a name="mars-session-cache"></a>MARS oturum önbelleği  
+
  Bir bağlantı MARS etkinken açıldığında, ek yük ekleyen bir mantıksal oturum oluşturulur. Ek yükü en aza indirmek ve performansı artırmak için, **SQLCLIENT** Mars oturumunu bir bağlantı içinde önbelleğe alır. Önbellekte en fazla 10 MARS oturumu bulunur. Bu değer Kullanıcı tarafından ayarlanamaz. Oturum sınırına ulaşıldığında, yeni bir oturum oluşturulur; bir hata oluşturulmaz. İçinde bulunan önbellek ve oturumlar bağlantı başına olur; bağlantılar arasında paylaşılmaz. Bir oturum bırakıldığında, havuzun üst sınırına ulaşılmadığı takdirde havuza döndürülür. Önbellek havuzu doluysa, oturum kapalıdır. MARS oturumlarının süreleri dolmaz. Bunlar yalnızca bağlantı nesnesi atıldığı zaman temizlenir. MARS oturum önbelleği önceden yüklenmedi. Uygulama daha fazla oturum gerektirdiğinden yüklenir.  
   
 ### <a name="thread-safety"></a>İş Parçacığı Güvenliği  
+
  MARS işlemleri iş parçacığı açısından güvenli değildir.  
   
 ### <a name="connection-pooling"></a>Bağlantı Havuzu  
+
  MARS etkin bağlantıları, diğer tüm bağlantılar gibi havuza alınır. Bir uygulama iki bağlantı açarsa, MARS ve diğeri de MARS devre dışı bırakıldığında iki bağlantı ayrı havuzlardır. Daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>Toplu yürütme ortamı SQL Server  
+
  Bir bağlantı açıldığında, varsayılan bir ortam tanımlanmıştır. Bu ortam daha sonra bir mantıksal MARS oturumuna kopyalanır.  
   
  Toplu yürütme ortamı aşağıdaki bileşenleri içerir:  
@@ -89,6 +96,7 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS ile, varsayılan bir yürütme ortamı bir bağlantıyla ilişkilendirilir. Belirli bir bağlantı altında yürütmeye başlayan her yeni toplu işlem, varsayılan ortamın bir kopyasını alır. Belirli bir toplu iş altında kod yürütüldüğünde, ortamda yapılan tüm değişiklikler belirli bir toplu işe göre kapsamlandırılır. Yürütme tamamlandıktan sonra, yürütme ayarları varsayılan ortama kopyalanır. Tek bir toplu iş, aynı işlem kapsamında sırayla yürütülmesi için birkaç komut veren bir toplu işlem söz konusu olduğunda, semantik, önceki istemci veya sunucuları içeren bağlantılar tarafından açığa çıkarılan olanlarla aynıdır.  
   
 ### <a name="parallel-execution"></a>Paralel Yürütme  
+
  MARS, bir uygulamadaki birden çok bağlantı için tüm gereksinimleri kaldırmak üzere tasarlanmamıştır. Bir uygulamanın bir sunucuya karşı doğru paralel yürütülmesi gerekiyorsa, birden çok bağlantı kullanılmalıdır.  
   
  Örneğin aşağıdaki senaryoları düşünün. Bir sonuç kümesini işlemek için biri ve verileri güncelleştirmek için bir tane olmak üzere iki komut nesnesi oluşturulur; MARS aracılığıyla ortak bir bağlantı paylaşır. Bu senaryoda, `Transaction` .`Commit` İlk komut nesnesinde tüm sonuçlar okunana kadar güncelleştirmede başarısız olur ve aşağıdaki özel durum ortaya çıkarsa:  
@@ -110,6 +118,7 @@ string connectionString = "Data Source=MSSQL1;" +
 3. MARS kullanmayın; Bunun yerine, MARS 'tan önce yaptığınız gibi her bir komut nesnesi için ayrı bir bağlantı kullanın.  
   
 ### <a name="detecting-mars-support"></a>MARS desteğini algılama  
+
  Bir uygulama, değeri okuyarak MARS desteğini denetleyebilir `SqlConnection.ServerVersion` . Ana sayı SQL Server 2005 için 9 ve SQL Server 2008 için 10 olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

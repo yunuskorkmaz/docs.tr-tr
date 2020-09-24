@@ -3,14 +3,15 @@ title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 653dd9cfadbfd33f5371b77172199b946321bc8c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ce8be6eea5469b099a368a0b62e791faa7e3cbfc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251866"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156998"
 ---
 # \<serviceCertificate>
+
 Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan X. 509.440 sertifikasını yapılandırır.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan X. 509.440 
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<federationConfiguration>**](federationconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceCertificate>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel.services>  
@@ -30,10 +31,12 @@ Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan X. 509.440 
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok  
+
+ Hiçbiri  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -48,6 +51,7 @@ Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan X. 509.440 
 |[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(Wsfab) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) yapılandırma ayarlarını içerir.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML, öğesinin kullanımını gösterir \<serviceCertificate> . XML `CustomToken` örnekten alınır.  
   
 ```xml  

@@ -2,12 +2,12 @@
 title: Kapsayıcılardan ve düzenleyicilerden yararlanma
 description: Azure 'da Docker kapsayıcılarını ve Kubernetes düzenleyicilerinden yararlanın
 ms.date: 05/31/2020
-ms.openlocfilehash: f9e8672b742217388bd719262ffdfee63618fd14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4d1dfa17fe9b4a683ab71ef2c9f97373579197af
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540549"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155555"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Kapsayıcılardan ve düzenleyicilerden yararlanma
 
@@ -214,7 +214,7 @@ Uygulamanın çalışması için varsayılan davranış, Docker 'ı kullanmak ü
 
 **Şekil 3-7**. Visual Studio Docker çalıştırma seçenekleri
 
-[Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) , yerel geliştirmeye ek olarak, birden çok geliştiricinin Azure 'Da kendi Kubernetes yapılandırmalarına göre çalışması için kullanışlı bir yol sağlar. Şekil 3-7 ' de görebileceğiniz gibi, uygulamayı Azure Dev Spaces de çalıştırabilirsiniz.
+[Azure dev Spaces](/azure/dev-spaces/) , yerel geliştirmeye ek olarak, birden çok geliştiricinin Azure 'Da kendi Kubernetes yapılandırmalarına göre çalışması için kullanışlı bir yol sağlar. Şekil 3-7 ' de görebileceğiniz gibi, uygulamayı Azure Dev Spaces de çalıştırabilirsiniz.
 
 Ayrıca, dilediğiniz zaman mevcut bir ASP.NET Core uygulamasına Docker desteği ekleyebilirsiniz. Visual Studio Çözüm Gezgini, Şekil 3-8 ' de gösterildiği gibi projeye sağ **Add**tıklayın ve  >  **Docker desteği**ekleyin.
 

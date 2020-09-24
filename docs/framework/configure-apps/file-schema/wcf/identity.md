@@ -2,14 +2,15 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 15c9e38a141fc294c47863b1a932711444ac079a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bb9468b6005361a2a480f7c0ebfb2cbb9e9199c2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855144"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157388"
 ---
 # \<identity>
+
 Identity öğesi, bir istemci geliştiricisinin, hizmetin beklenen kimliği olan tasarım zamanında belirtmesini sağlar. İstemci ve hizmet arasındaki el sıkışma işleminde, Windows Communication Foundation (WCF) altyapısı, beklenen hizmetin kimliğinin bu öğenin değerleriyle eşleştiğinden emin olur ve bu nedenle kimlik doğrulaması yapılabilir. Daha fazla bilgi için bkz. [hizmet kimliği ve kimlik doğrulaması](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Identity öğesi, bir istemci geliştiricisinin, hizmetin beklenen kimliği olan
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpoint>**](endpoint-of-client.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<identity>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <identity>
@@ -36,9 +37,11 @@ Identity öğesi, bir istemci geliştiricisinin, hizmetin beklenen kimliği olan
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -58,7 +61,7 @@ Identity öğesi, bir istemci geliştiricisinin, hizmetin beklenen kimliği olan
 |-------------|-----------------|  
 |[\<custom>](custom.md)|NetPeerTcpBinding için özel bir eş çözümleyici belirtir.|  
 |[\<endpoint>](endpoint-element.md)|Hizmet uç noktalarını yapılandırır.|  
-|[\<endpoint>durumunu\<client>](endpoint-of-client.md)|Kanal uç noktalarını yapılandırır.|  
+|[\<endpoint> durumunu \<client>](endpoint-of-client.md)|Kanal uç noktalarını yapılandırır.|  
 |[\<issuer>](issuer.md)|Federasyon Hizmeti için güvenlik belirteci hizmetini (STS) belirtir.|  
 |[\<issuerMetadata>](issuermetadata.md)|Federasyon Hizmeti 'nin güvenlik belirteci hizmeti (STS) için meta veri uç noktasını belirtir.|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|Özel bağlamadaki verilen belirtecin parametrelerini tanımlar.|  
@@ -70,4 +73,4 @@ Identity öğesi, bir istemci geliştiricisinin, hizmetin beklenen kimliği olan
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - [Kimlik Doğrulama ile Hizmet Kimliği](../../../wcf/feature-details/service-identity-and-authentication.md)
-- [Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

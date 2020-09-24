@@ -2,22 +2,24 @@
 title: System.String Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 44d32ed1000ca49d9fc29ffcde4506b44fc975b6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792497"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155672"
 ---
 # <a name="systemstring-methods"></a>System.String Yöntemleri
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Aşağıdaki <xref:System.String> yöntemleri desteklemez.  
+
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Aşağıdaki <xref:System.String> yöntemleri desteklemez.  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>Genel olarak desteklenmeyen System. String yöntemleri  
- Genel <xref:System.String> olarak desteklenmeyen Yöntemler:  
+
+ <xref:System.String>Genel olarak desteklenmeyen Yöntemler:  
   
-- Kültüre duyarlı aşırı yüklemeler `CultureInfo`(bir  /  `StringComparison`  / alma yöntemi).`IFormatProvider`  
+- Kültüre duyarlı aşırı yüklemeler (bir alma yöntemi `CultureInfo`  /  `StringComparison`  /  `IFormatProvider` ).  
   
-- `char` Dizi alan veya üreten Yöntemler.  
+- Dizi alan veya üreten Yöntemler `char` .  
   
 ## <a name="unsupported-systemstring-static-methods"></a>Desteklenmeyen System. String statik yöntemleri  
   
@@ -49,11 +51,11 @@ ms.locfileid: "70792497"
   
 - Sorgular, sunucuda geçerli olabilecek SQL Server harmanlamaları yapmaz ve bu nedenle varsayılan olarak kültüre duyarlı, büyük/küçük harfe duyarsız karşılaştırmalar sağlar. Bu davranış, .NET Framework varsayılan, büyük/küçük harfe duyarlı anlamlarından farklıdır.  
   
-- 0 döndürdüğünde, `NULL` dize ya da bulunan konum 0 ' dır. `LastIndexOf`  
+- `LastIndexOf`0 döndürdüğünde, dize `NULL` ya da bulunan konum 0 ' dır.  
   
-- Bu türler otomatik olarak veritabanında doldurma işlemi yaptığından, birleştirme işleminden veya sabit uzunluklu dizelerde (`CHAR`, `NCHAR`) başka işlemlerden beklenmedik sonuçlar döndürülebilir.  
+- `CHAR` `NCHAR` Bu türler otomatik olarak veritabanında doldurma işlemi yaptığından, birleştirme işleminden veya sabit uzunluklu dizelerde (,) başka işlemlerden beklenmedik sonuçlar döndürülebilir.  
   
-- `Replace` `SqlExceptions` `TEXT` `NTEXT` , ,Vegibibirçokyöntem,veyasütunlarıveXMLiçingeçerlibirçeviriolmadığından,normalşekilde`ToLower`çevrilmişseoluşur. `ToUpper` Bu davranış, bu türler için kabul edilebilir olarak değerlendirilir. Ancak, tüm `VARCHAR`dize işlemleri `VARCHAR(max)`, `NVARCHAR`,, ve `NVARCHAR(max)`için ortak dil çalışma zamanı (CLR) semantiğine uymalıdır.  
+- ,, Ve gibi birçok yöntem `Replace` , `ToLower` `ToUpper` veya sütunları ve XML için geçerli bir çeviri olmadığından, `TEXT` `NTEXT` `SqlExceptions` normal şekilde çevrilmişse oluşur. Bu davranış, bu türler için kabul edilebilir olarak değerlendirilir. Ancak, tüm dize işlemleri,,, ve için ortak dil çalışma zamanı (CLR) semantiğine uymalıdır `VARCHAR` `NVARCHAR` `VARCHAR(max)` `NVARCHAR(max)` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

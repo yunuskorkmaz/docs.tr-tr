@@ -2,19 +2,21 @@
 title: SQL Server Compact ve LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: bdd1237a8eac1c278e7704f3fbf0ae8b1deeff42
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7963db9e05eca7a7a148228c6d2fbca0221ca870
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541369"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155685"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact ve LINQ to SQL
+
 SQL Server Compact, Visual Studio ile yüklenen varsayılan veritabanıdır. Daha fazla bilgi için bkz. [SQL Server Compact kullanma (Visual Studio)](/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110)).  
   
  Bu konuda kullanım, yapılandırma, özellik kümeleri ve destek kapsamındaki önemli farklılıklar özetlenmektedir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
 ## <a name="characteristics-of-sql-server-compact-in-relation-to-linq-to-sql"></a>LINQ to SQL göre SQL Server Compact özellikleri  
+
  Varsayılan olarak, tüm Visual Studio sürümleri için SQL Server Compact yüklenir ve bu nedenle geliştirme bilgisayarında ile kullanım için kullanılabilir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] . Ancak SQL Server Compact kullanan ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server bir uygulama için bundan farklı bir uygulama dağıtımı. SQL Server Compact, .NET Framework bir parçası değildir ve bu nedenle uygulamayla paketlenmesi veya Microsoft sitesinden ayrı olarak indirilmelidir.  
   
  Aşağıdaki özelliklere göz önünde edin:  
@@ -30,6 +32,7 @@ SQL Server Compact, Visual Studio ile yüklenen varsayılan veritabanıdır. Dah
 - Nesne İlişkisel Tasarımcısı SQL Server Compact desteklemez.  
   
 ## <a name="feature-set"></a>Özellik kümesi  
+
  SQL Server Compact özellik kümesi, uygulamaları etkileyebilecek aşağıdaki yollarla SQL Server Özellik kümesinden çok daha basittir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] :  
   
 - SQL Server Compact, saklı yordamları veya görünümleri desteklemez.  

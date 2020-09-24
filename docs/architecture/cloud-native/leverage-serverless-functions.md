@@ -2,12 +2,12 @@
 title: Sunucusuz işlevlerden yararlanma
 description: Bulutta yerel uygulamalarda sunucusuz ve Azure Işlevlerini kullanma
 ms.date: 05/13/2020
-ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8e5c60d29cd8d635f79f42c232b33f060949e2b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613869"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155373"
 ---
 # <a name="leveraging-serverless-functions"></a>Sunucusuz işlevlerden yararlanma
 
@@ -40,7 +40,7 @@ Mikro hizmetler genellikle isteklere, genellikle bir arabirimden yanıt vermek i
 
 Sunucusuz, bir tetikleyiciye yanıt olarak çağrılan tek başına kısa süreli işlevleri kullanıma sunar. Bu, arka plan görevlerinin işlenmesi için ideal hale getirir.
 
-Bir uygulamanın bir iş akışında bir adım olarak e-posta gönderebilmesi gerekebilir. Bildirimi, mikro hizmet isteğinin bir parçası olarak göndermek yerine, ileti ayrıntılarını bir kuyruğa yerleştirin. Bir Azure Işlevi iletiyi sıradan alabilir ve e-postayı zaman uyumsuz olarak gönderebilir. Bunun yapılması, mikro hizmetin performansını ve ölçeklenebilirliğini iyileştirebilir. E-postaların gönderilmesi ile ilgili performans sorunlarını önlemek için [kuyruk tabanlı yük dengeleme](https://docs.microsoft.com/azure/architecture/patterns/queue-based-load-leveling) uygulanabilir. Ayrıca, bu tek başına hizmet birçok farklı uygulama üzerinde yardımcı program olarak yeniden kullanılabilir.
+Bir uygulamanın bir iş akışında bir adım olarak e-posta gönderebilmesi gerekebilir. Bildirimi, mikro hizmet isteğinin bir parçası olarak göndermek yerine, ileti ayrıntılarını bir kuyruğa yerleştirin. Bir Azure Işlevi iletiyi sıradan alabilir ve e-postayı zaman uyumsuz olarak gönderebilir. Bunun yapılması, mikro hizmetin performansını ve ölçeklenebilirliğini iyileştirebilir. E-postaların gönderilmesi ile ilgili performans sorunlarını önlemek için [kuyruk tabanlı yük dengeleme](/azure/architecture/patterns/queue-based-load-leveling) uygulanabilir. Ayrıca, bu tek başına hizmet birçok farklı uygulama üzerinde yardımcı program olarak yeniden kullanılabilir.
 
 Kuyruklardan ve konulardan zaman uyumsuz mesajlaşma, sunucusuz işlevleri tetiklemek için kullanılan yaygın bir modeldir. Ancak Azure Işlevleri, Azure Blob depolamada yapılan değişiklikler gibi diğer olaylar tarafından tetiklenebilir. Görüntü yüklemelerini destekleyen bir hizmetin, görüntü boyutunu iyileştirmekten sorumlu bir Azure Işlevi olabilir. İşlev, Azure Blob depolama alanına eklenerek doğrudan tetiklenebilir ve mikro hizmet işlemlerinden karmaşıklığı ortadan kaldırılabilir.
 
@@ -55,9 +55,9 @@ Sunucusuz çözümler sağlama ve isteğe bağlı ölçekleme. Yeni bir örnek �
 ![Soğuk, sıcak başlangıç ](./media/cold-start-warm-start.png)
  **şekli 3-10**. Soğuk başlatma ve sıcak başlangıç.
 
-Soğuk tamamen başlamasını önlemek için bir [Tüketim planından adanmış plana](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)geçebilirsiniz. Premium plan yükseltmesine sahip bir veya daha fazla [önceden çarpımış örnek](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) de yapılandırabilirsiniz. Bu durumlarda, başka bir örnek eklemeniz gerektiğinde, zaten çalışır durumda ve gönderilmeye hazırız. Bu seçenekler, sunucusuz bilgi işlem ile ilişkili soğuk başlatma sorununu azaltmaya yardımcı olabilir.
+Soğuk tamamen başlamasını önlemek için bir [Tüketim planından adanmış plana](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)geçebilirsiniz. Premium plan yükseltmesine sahip bir veya daha fazla [önceden çarpımış örnek](/azure/azure-functions/functions-premium-plan#pre-warmed-instances) de yapılandırabilirsiniz. Bu durumlarda, başka bir örnek eklemeniz gerektiğinde, zaten çalışır durumda ve gönderilmeye hazırız. Bu seçenekler, sunucusuz bilgi işlem ile ilişkili soğuk başlatma sorununu azaltmaya yardımcı olabilir.
 
-Bulut sağlayıcıları, işlem yürütme süresi ve tüketilen bellek temelinde sunucusuz için faturalandırılır. Uzun süre çalışan işlemler veya yüksek bellek tüketim iş yükleri sunucusuz için her zaman en iyi adaydır. Sunucusuz işlevler hızla tamamlayabilirler küçük iş öbeklerini tercih edebilir. Çoğu sunucusuz platform, birkaç dakika içinde tek tek işlevlerin tamamlanmasını gerektirir. Azure Işlevleri varsayılan olarak 5 dakikalık bir zaman aşımı süresine sahiptir ve bu süre 10 dakikaya kadar yapılandırılabilir. Azure Işlevleri Premium planı, bu sorunu da hafifletmenize olanak sağlar. bu da, yapılandırılan zaman aşımı süresini, sınırsız daha yüksek bir sınıra sahip 30 dakikaya kadar azaltır. İşlem süresi takvim zamanı değil. [Azure dayanıklı işlevler çerçevesini](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=csharp) kullanan daha gelişmiş işlevler, yürütmeyi birkaç güne ait bir kurs üzerinden duraklatabilir. Faturalandırma gerçek yürütme zamanına göre yapılır-işlev ne zaman uyandırılır ve işlemeyi sürdürür.
+Bulut sağlayıcıları, işlem yürütme süresi ve tüketilen bellek temelinde sunucusuz için faturalandırılır. Uzun süre çalışan işlemler veya yüksek bellek tüketim iş yükleri sunucusuz için her zaman en iyi adaydır. Sunucusuz işlevler hızla tamamlayabilirler küçük iş öbeklerini tercih edebilir. Çoğu sunucusuz platform, birkaç dakika içinde tek tek işlevlerin tamamlanmasını gerektirir. Azure Işlevleri varsayılan olarak 5 dakikalık bir zaman aşımı süresine sahiptir ve bu süre 10 dakikaya kadar yapılandırılabilir. Azure Işlevleri Premium planı, bu sorunu da hafifletmenize olanak sağlar. bu da, yapılandırılan zaman aşımı süresini, sınırsız daha yüksek bir sınıra sahip 30 dakikaya kadar azaltır. İşlem süresi takvim zamanı değil. [Azure dayanıklı işlevler çerçevesini](/azure/azure-functions/durable/durable-functions-overview?tabs=csharp) kullanan daha gelişmiş işlevler, yürütmeyi birkaç güne ait bir kurs üzerinden duraklatabilir. Faturalandırma gerçek yürütme zamanına göre yapılır-işlev ne zaman uyandırılır ve işlemeyi sürdürür.
 
 Son olarak, uygulama görevleri için Azure Işlevleri 'nden yararlanmak karmaşıklık sağlar. Uygulamanızı modüler ve gevşek olarak bağlanmış bir tasarımla ilk kez mimarın. Daha sonra, avantajlar sunucusuz olup olmadığını ve ek karmaşıklığın nasıl olacağını belirleyebilirsiniz.
 

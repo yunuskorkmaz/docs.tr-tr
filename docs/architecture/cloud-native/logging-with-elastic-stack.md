@@ -2,12 +2,12 @@
 title: Elastik Yığın ile günlüğe kaydetme
 description: Elastik yığın, Logstash ve kibana kullanarak günlüğe kaydetme
 ms.date: 05/13/2020
-ms.openlocfilehash: 32d9d0dae175d8d45d48b56d17f133b4cc432363
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3f10b0d06c87b7bed6d3e302742b1dc52e2c9d3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811177"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155347"
 ---
 # <a name="logging-with-elastic-stack"></a>Elastik Yığın ile günlüğe kaydetme
 
@@ -105,7 +105,7 @@ Yığının son bileşeni kibana. Bu araç, bir Web panosunda etkileşimli görs
 
 ## <a name="installing-elastic-stack-on-azure"></a>Azure 'da elastik yığın yükleme
 
-Esnek yığın, çeşitli yollarla Azure 'a yüklenebilir. Her zaman olduğu gibi, [sanal makineler sağlamak ve doğrudan elastik yığın yüklemek](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)mümkündür. Bu seçenek, deneyimli bazı kullanıcılar tarafından, en yüksek özelleştirme derecesini sağladığından tercih edilir. Bir hizmet olarak altyapıya dağıtım, bu yolu alan bir hizmet olarak altyapı ile ilişkili tüm görevlerin sahipliğini alma ve düzeltme ekleriyle güncel tutmaya yönelik önemli yönetim yükü sunar.
+Esnek yığın, çeşitli yollarla Azure 'a yüklenebilir. Her zaman olduğu gibi, [sanal makineler sağlamak ve doğrudan elastik yığın yüklemek](/azure/virtual-machines/linux/tutorial-elasticsearch)mümkündür. Bu seçenek, deneyimli bazı kullanıcılar tarafından, en yüksek özelleştirme derecesini sağladığından tercih edilir. Bir hizmet olarak altyapıya dağıtım, bu yolu alan bir hizmet olarak altyapı ile ilişkili tüm görevlerin sahipliğini alma ve düzeltme ekleriyle güncel tutmaya yönelik önemli yönetim yükü sunar.
 
 Daha az ek yük olan bir seçenek, elastik yığının zaten yapılandırıldığı birçok Docker kapsayıcılarından birini kullanmaktır. Bu kapsayıcılar, var olan bir Kubernetes kümesine bırakılabilir ve uygulama kodu ile birlikte çalıştırılabilir. [Sebp/elk](https://elk-docker.readthedocs.io/) kapsayıcısı iyi belgelenmiş ve test edilmiş bir elastik yığın kapsayıcısıdır.
 
@@ -113,7 +113,7 @@ Diğer bir seçenek [de, son bildirilen bir hizmet olarak yeni tekliftir](https:
 
 ## <a name="references"></a>Başvurular
 
-- [Azure 'da elastik yığın yüklemesi](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
+- [Azure 'da elastik yığın yüklemesi](/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
 >[Önceki](observability-patterns.md) 

@@ -5,17 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 35b512ff6cbee1dd942f5b3476db660481808297
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: a9c019cdcf6e229199d980a2d1913df7c72a2169
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303093"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157401"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Arabirim üyelerini açıkça uygulama (C# Programlama Kılavuzu)
+
 Bu örnek, ve [interface](../../language-reference/keywords/interface.md) `IDimensions` `Box` arabirim üyelerini açıkça uygulayan bir arabirim, ve sınıfını bildirir `GetLength` `GetWidth` . Üyelere arabirim örneği üzerinden erişilir `dimensions` .  
   
 ## <a name="example"></a>Örnek  
+
  [!code-csharp[csProgGuideInheritance#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#8)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  

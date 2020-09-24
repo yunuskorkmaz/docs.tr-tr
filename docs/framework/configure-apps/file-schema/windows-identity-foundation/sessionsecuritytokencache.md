@@ -3,14 +3,15 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: 4169fe307e9ef7c391500a2292fcc247f435caa9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 347d1a1cba95bbd4992de95d6617e8828f4fc374
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555893"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156907"
 ---
 # \<sessionSecurityTokenCache>
+
 Bir hizmet veya güvenlik belirteci işleyici koleksiyonuyla oturum belirteçleri için bir önbellek kaydeder.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Bir hizmet veya güvenlik belirteci işleyici koleksiyonuyla oturum belirteçler
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -42,7 +44,8 @@ Bir hizmet veya güvenlik belirteci işleyici koleksiyonuyla oturum belirteçler
 |tür|Sınıfından türeten bir tür <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok  
+
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -51,6 +54,7 @@ Bir hizmet veya güvenlik belirteci işleyici koleksiyonuyla oturum belirteçler
 |[\<caches>](caches.md)|Bir hizmet veya güvenlik belirteci işleyici koleksiyonu tarafından kullanılan önbellekleri kaydeder.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML, oturum güvenlik belirteçlerini () tutmak için özel bir önbelleğin yapılandırmasını gösterir <xref:System.IdentityModel.Tokens.SessionSecurityToken> . Yapılandırma `ClaimsAwareWebFarm` örnekten alınır. Bu örnek hakkında daha fazla bilgi için bkz. [WIF kodu örnek dizini](/previous-versions/dotnet/framework/security/wif-code-sample-index).  
   
 ```xml  

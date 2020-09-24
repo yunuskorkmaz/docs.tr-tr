@@ -2,14 +2,15 @@
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 8432463ff62e4b5e54a491b574cc6a5285efe220
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c90024a0629f39d160967ca00434e48f682d8933
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397952"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157323"
 ---
 # \<issuedTokenParameters>
+
 Federasyon güvenlik senaryosunda verilen bir güvenlik belirteci için parametreleri belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Federasyon güvenlik senaryosunda verilen bir güvenlik belirteci için parametr
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuedTokenParameters>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <issuedTokenParameters defaultMessageSecurityVersion="System.ServiceModel.MessageSecurityVersion"
@@ -40,9 +41,11 @@ Federasyon güvenlik senaryosunda verilen bir güvenlik belirteci için parametr
 ```  
   
 ## <a name="type"></a>Tür  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  

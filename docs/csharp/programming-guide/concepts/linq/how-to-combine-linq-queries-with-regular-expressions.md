@@ -3,14 +3,15 @@ title: LINQ sorgularını normal ifadelerle birleştirme (C#)
 description: Bu örnek, C# dilinde Regex sınıfını kullanarak metin dizelerinde eşleştirmek için normal bir ifade oluşturur.
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: af63d096e3c2f19ed557180d82d606989a016120
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: e423261961c25c6aae62483d332ce053d7b6f963
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105341"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157505"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>LINQ sorgularını normal ifadelerle birleştirme (C#)
+
 Bu örnek, <xref:System.Text.RegularExpressions.Regex> metin dizelerinde daha karmaşık eşleştirme için bir normal ifade oluşturmak üzere sınıfının nasıl kullanılacağını gösterir. LINQ sorgusu, normal ifadeyle arama yapmak istediğiniz dosyaları tam olarak filtrelemenizi ve sonuçları şekillendirmenizi kolaylaştırır.  
   
 ## <a name="example"></a>Örnek  
@@ -97,6 +98,7 @@ class QueryWithRegEx
  <xref:System.Text.RegularExpressions.MatchCollection>Bir arama tarafından döndürülen nesneyi de sorgulayabileceğinizi unutmayın `RegEx` . Bu örnekte, sonuçlarda yalnızca her bir eşleşmenin değeri üretilir. Ancak, bu koleksiyonda tüm filtreleme, sıralama ve gruplama türlerini gerçekleştirmek için LINQ kullanmak da mümkündür. <xref:System.Text.RegularExpressions.MatchCollection>Genel olmayan bir <xref:System.Collections.IEnumerable> koleksiyon olduğundan, sorgudaki aralık değişkeninin türünü açıkça belirtmelisiniz.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
  `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

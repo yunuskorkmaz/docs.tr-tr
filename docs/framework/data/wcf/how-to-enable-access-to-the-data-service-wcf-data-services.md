@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-ms.openlocfilehash: 377b031c48ed831cfa5e270426283ed03a55f886
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62622a5788a735497a6869c114c572e947067449
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542313"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155425"
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Nasıl yapılır: veri hizmetine erişimi etkinleştirme (WCF Veri Hizmetleri)
+
 WCF Veri Hizmetleri, bir veri hizmeti tarafından açığa çıkarılan kaynaklara açıkça erişim vermeniz gerekir. Bu, yeni bir veri hizmeti oluşturduktan sonra tek tek kaynaklara varlık kümesi olarak açıkça erişim sağlamanız gerektiği anlamına gelir. Bu konuda, [hızlı](quickstart-wcf-data-services.md)başlangıcı tamamladığınızda oluşturulan Northwind veri hizmetindeki varlık kümelerinin beş bölümüne okuma ve yazma erişiminin nasıl etkinleştirileceği gösterilmektedir. <xref:System.Data.Services.EntitySetRights>Numaralandırması kullanılarak tanımlandığından <xref:System.FlagsAttribute> , tek bir varlık kümesi için birden çok izin belirtmek üzere BIR mantıksal or işleci kullanabilirsiniz.  
   
 > [!NOTE]

@@ -3,14 +3,15 @@ title: <samlSecurityTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 09202d12-88d3-49cc-953b-703bcc1690eb
 author: BrucePerlerMS
-ms.openlocfilehash: b27f337189a7d0b66ffd38e032b5eb864e5094a1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f93ec0007b537e306a570b166eaa4cd2fe7f81e2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152638"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157037"
 ---
 # \<samlSecurityTokenRequirement>
+
 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>Sınıf, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> sınıf veya bu sınıfların herhangi birinin türetilmiş bir sınıfı için yapılandırma sağlar. Sınıfı tarafından temsil edilir <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "79152638"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<samlSecurityTokenRequirement>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -43,6 +44,7 @@ ms.locfileid: "79152638"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -69,6 +71,7 @@ ms.locfileid: "79152638"
 |[\<add>](add.md)|Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<samlSecurityTokenRequirement>`Öğesi, <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> nesne modelindeki sınıfı tarafından temsil edilir ve, veya ' de özelliği yapılandırmak için kullanılır `SamlSecurityTokenRequirement` <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> .  
   
 ## <a name="example"></a>Örnek  

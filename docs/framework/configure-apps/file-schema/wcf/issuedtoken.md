@@ -2,14 +2,15 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 56439748926ada642018f48a5787634a50d0f180
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f3feb11fbe45cbb4b952c70feaa99f9c481dd2b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "72846868"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157375"
 ---
 # \<issuedToken>
+
 Bir hizmette istemcinin kimliğini doğrulamak için kullanılan özel bir belirteci belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan özel bir belir
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuedToken>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <issuedToken cacheIssuedTokens="Boolean"
@@ -33,6 +34,7 @@ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan özel bir belir
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -60,6 +62,7 @@ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan özel bir belir
 |[\<clientCredentials>](clientcredentials.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Verilen belirteç, bir Federasyon senaryosunda güvenli bir belirteç hizmeti (STS) ile kimlik doğrulaması yapılırken kullanılan özel bir kimlik bilgisi türüdür. Varsayılan olarak, belirteç bir SAML belirtecidir. Daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md), [Federasyon ve verilen belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md).  
   
  Bu bölüm, bir güvenlik belirteci hizmeti ile kullanılan bir belirteçleri yerel olarak veren veya davranışları yapılandırmak için kullanılan öğeleri içerir. Bir istemciyi yerel bir veren kullanacak şekilde yapılandırma yönergeleri için bkz. [nasıl yapılır: yerel veren yapılandırma](../../../wcf/feature-details/how-to-configure-a-local-issuer.md).  

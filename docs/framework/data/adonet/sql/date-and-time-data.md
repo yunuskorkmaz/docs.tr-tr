@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 43b3349b2a35385dcc49d0866e0695b08eac2d2e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6fe047fc672a2b42f886e81dcace91042a552932
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551497"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156322"
 ---
 # <a name="date-and-time-data"></a>Tarih ve Saat Verileri
+
 SQL Server 2008, tarih ve saat bilgilerini işlemeye yönelik yeni veri türlerini tanıtır. Yeni veri türleri tarih ve saat için ayrı türler, daha fazla Aralık, duyarlık ve saat dilimi tanıma ile genişletilmiş veri türleri içerir. .NET Framework sürüm 3,5 hizmet paketi (SP) 1 ' den başlayarak, SQL Server () için .NET Framework Veri Sağlayıcısı, <xref:System.Data.SqlClient> SQL Server 2008 veritabanı altyapısının tüm yeni özellikleri için tam destek sağlar. Bu yeni özellikleri SqlClient kullanmak için .NET Framework 3,5 SP1 (veya sonraki bir sürümü) yüklemelisiniz.  
   
  SQL Server 2008 ' den önceki SQL Server sürümlerinde yalnızca tarih ve saat değerleriyle çalışma için iki veri türü vardı: `datetime` ve `smalldatetime` . Bu veri türlerinin her ikisi de tarih değerini ve bir saat değerini içerir. Bu, yalnızca tarih veya yalnızca saat değerleriyle çalışmayı zorlaştırır. Ayrıca, bu veri türleri yalnızca 1753 içinde England 'da Gregoryen takvime giriş sonrasında oluşan tarihleri destekler. Diğer bir sınırlama, bu eski veri türlerinin zaman dilimi açısından farkında olmamasıdır ve bu sayede birden çok saat diliminden kaynaklanan verilerle çalışmayı zorlaştırır.  
@@ -25,9 +26,10 @@ SQL Server 2008, tarih ve saat bilgilerini işlemeye yönelik yeni veri türleri
 1. [Tarih ve saat verilerini kullanma](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 ' de tanıtılan tarih/saat veri türleri  
+
  Aşağıdaki tabloda yeni tarih ve saat veri türleri açıklanmaktadır.  
   
-|SQL Server veri türü|Description|  
+|SQL Server veri türü|Açıklama|  
 |--------------------------|-----------------|  
 |`date`|`date`Veri türü 1 Ocak 01 ile 31 aralık 9999 arasında bir aralığa sahiptir ve 1 gün doğruluk sağlar. Varsayılan değer 1 Ocak 1900 ' dir. Depolama boyutu 3 bayttır.|  
 |`time`|`time`Veri türü yalnızca saat değerlerini, 24 saatlik bir saate göre depolar. `time`Veri türü 00:00:00.0000000 ila 23:59:59.9999999 ile 100 nanosaniye arasında bir aralığa sahiptir. Varsayılan değer 00:00:00.0000000 (gece yarısı) olur. `time`Veri türü, Kullanıcı tanımlı kesirli ikinci duyarlığı destekler ve depolama boyutu, belirtilen duyarlığa göre 3 ile 6 bayt arasında değişir.|  
@@ -38,6 +40,7 @@ SQL Server 2008, tarih ve saat bilgilerini işlemeye yönelik yeni veri türleri
 > Anahtar sözcüğünü kullanma hakkında daha fazla bilgi için `Type System Version` bkz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> ..  
   
 ## <a name="date-format-and-date-order"></a>Tarih biçimi ve tarih sırası  
+
  SQL Server Tarih ve saat değerlerini nasıl ayrıştırdığı, yalnızca sistem sürümüne ve sunucu sürümüne değil, ayrıca sunucunun varsayılan diline ve biçim ayarlarına bağlıdır. Sorgu farklı bir dil ve tarih biçimi ayarı kullanan bir bağlantı tarafından yürütülürse, bir dilin tarih biçimleri için çalıştırılan bir tarih dizesi tanınmıyor olabilir.  
   
  Transact-SQL SET LANGUAGE deyimleri, tarih bölümlerinin sırasını belirleyen DATEFORMAT öğesini örtülü olarak ayarlar. Tarih değerlerini MDY, DMY, YıMD, YıDM, MYD veya DYM Order içindeki Tarih kısımlarını sıralamaya göre ayırt etmek için bir bağlantıda DATEFORMAT Transact-SQL ifadesini ayarla ' yı kullanabilirsiniz.  
@@ -50,6 +53,7 @@ SQL Server 2008, tarih ve saat bilgilerini işlemeye yönelik yeni veri türleri
  SQL Server Tarih ve saat verilerini yorumlama hakkında daha fazla bilgi için bkz. [Tarih ve saat verilerini kullanma](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
   
 ## <a name="datetime-data-types-and-parameters"></a>Tarih/saat veri türleri ve parametreleri  
+
  <xref:System.Data.SqlDbType>Yeni tarih ve saat veri türlerini desteklemek için aşağıdaki numaralandırmalar eklenmiştir.  
   
 - `SqlDbType.Date`  
@@ -85,6 +89,7 @@ Bir öğesinin veri türünü, <xref:System.Data.SqlClient.SqlParameter> önceki
 |girişin|System. DateTime|DateTime|DateTime|  
   
 ### <a name="sqlparameter-properties"></a>SqlParameter özellikleri  
+
  Aşağıdaki tabloda `SqlParameter` Tarih ve saat veri türleriyle ilgili özellikler açıklanmaktadır.  
   
 |Özellik|Açıklama|  
@@ -100,11 +105,13 @@ Bir öğesinin veri türünü, <xref:System.Data.SqlClient.SqlParameter> önceki
 > Sıfırdan küçük veya 24 saatten büyük veya buna eşit olan saat değerleri bir oluşturacak <xref:System.ArgumentException> .  
   
 ### <a name="creating-parameters"></a>Parametreleri oluşturma  
+
  <xref:System.Data.SqlClient.SqlParameter>Yapıcısını kullanarak veya metodunu çağırarak bir koleksiyona ekleyerek bir nesne oluşturabilirsiniz <xref:System.Data.SqlClient.SqlCommand> <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> `Add` <xref:System.Data.SqlClient.SqlParameterCollection> . `Add`Yöntemi, Oluşturucu bağımsız değişkenleri ya da varolan bir parametre nesnesi olarak alınır.  
   
  Bu konunun sonraki bölümlerinde tarih ve saat parametrelerinin nasıl belirtilme örnekleri verilmiştir. Parametrelerle çalışma hakkında daha fazla örnek için bkz. [parametreleri ve parametre veri türlerini](../configuring-parameters-and-parameter-data-types.md) ve [DataAdapter parametrelerini](../dataadapter-parameters.md)yapılandırma.  
   
 ### <a name="date-example"></a>Tarih örneği  
+
  Aşağıdaki kod parçası, bir parametrenin nasıl belirtileceğini göstermektedir `date` .  
   
 ```csharp  
@@ -122,6 +129,7 @@ parameter.Value = "2007/12/1"
 ```  
   
 ### <a name="time-example"></a>Zaman örneği  
+
  Aşağıdaki kod parçası, bir parametrenin nasıl belirtileceğini göstermektedir `time` .  
   
 ```csharp  
@@ -139,6 +147,7 @@ parameter.Value = DateTime.Parse("23:59:59").TimeOfDay;
 ```  
   
 ### <a name="datetime2-example"></a>Datetime2 örneği  
+
  Aşağıdaki kod parçası, `datetime2` hem tarih hem de saat parçalarıyla bir parametrenin nasıl belirtileceğini göstermektedir.  
   
 ```csharp  
@@ -156,6 +165,7 @@ parameter.Value = DateTime.Parse("1666-09-02 1:00:00");
 ```  
   
 ### <a name="datetimeoffset-example"></a>DateTimeOffSet örneği  
+
  Aşağıdaki kod parçası, bir `DateTimeOffSet` parametrenin Tarih, saat ve saat dilimi fark değeri olan 0 ' ı nasıl belirteceğinizi gösterir.  
   
 ```csharp  
@@ -173,6 +183,7 @@ parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");
 ```  
   
 ### <a name="addwithvalue"></a>AddWithValue  
+
  Ayrıca `AddWithValue` <xref:System.Data.SqlClient.SqlCommand> , aşağıdaki kod parçasında gösterildiği gibi, bir öğesinin yöntemini kullanarak parametreler sağlayabilirsiniz. Ancak, `AddWithValue` yöntemi <xref:System.Data.SqlClient.SqlParameter.DbType%2A> parametresi için veya belirtmenize izin vermez <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> .  
   
 ```csharp  
@@ -196,9 +207,10 @@ command.Parameters.AddWithValue( _
 |DateTimeOffset|SqlDbType. DateTimeOffset|  
   
 ## <a name="retrieving-date-and-time-data"></a>Tarih ve saat verilerini alma  
+
  Aşağıdaki tabloda SQL Server 2008 tarih ve saat değerlerini almak için kullanılan yöntemler açıklanmaktadır.  
   
-|SqlClient yöntemi|Description|  
+|SqlClient yöntemi|Açıklama|  
 |----------------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|Belirtilen sütun değerini bir yapı olarak alır <xref:System.DateTime> .|  
 |<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|Belirtilen sütun değerini bir yapı olarak alır <xref:System.DateTimeOffset> .|  
@@ -218,6 +230,7 @@ command.Parameters.AddWithValue( _
 > Yeni tarih ve saat, `SqlDbTypes` SQL Server içinde işlem sırasında yürütülen kod için desteklenmez. Bu türlerden biri sunucuya geçirilirse bir özel durum oluşur.  
   
 ## <a name="specifying-date-and-time-values-as-literals"></a>Tarih ve saat değerlerini değişmez değer olarak belirtme  
+
  Tarih ve saat veri türlerini SQL Server, daha sonra çalışma zamanında değerlendiren ve bunları iç tarih/saat yapılarına dönüştüren çeşitli farklı değişmez dize biçimlerini kullanarak belirtebilirsiniz. SQL Server, tek tırnak işareti (') içine alınmış tarih ve saat verilerini tanır. Aşağıdaki örneklerde bazı biçimler gösterilmektedir:  
   
 - Alfabetik tarih biçimleri, örneğin `'October 15, 2006'` .  
@@ -232,9 +245,10 @@ command.Parameters.AddWithValue( _
  Sıfırdan küçük veya 24 saatten büyük veya buna eşit olan saat değerleri bir oluşturacak <xref:System.ArgumentException> .  
   
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server Books Online 'daki kaynaklar  
+
  SQL Server Tarih ve saat değerleriyle çalışma hakkında daha fazla bilgi için SQL Server Books Online 'da aşağıdaki kaynaklara bakın.  
   
-|Konu|Description|  
+|Konu|Açıklama|  
 |-----------|-----------------|  
 |[Tarih ve saat veri türleri ve Işlevleri (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|Tüm Transact-SQL tarih ve saat veri türleri ve işlevlerine genel bir bakış sağlar.|  
 |[Tarih ve saat verilerini kullanma](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Tarih ve saat veri türleri ve işlevleri hakkında bilgi ve bunları kullanma örnekleri sağlar.|  

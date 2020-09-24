@@ -2,14 +2,15 @@
 title: Arka Plan Bilgileri
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: fc7c68fe2dba266e056feb459038a060a055e175
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 56ba323aee3b559fbb8afd506be4c23595df6d2d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542117"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156101"
 ---
 # <a name="background-information"></a>Arka Plan Bilgileri
+
 Bu bölümdeki konular, kullanmayla ilgili temel bilgilerin ötesine genişleyen kavramlar ve yordamlar ile ilgilidir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
  Kod ve uygulamaların ek örneklerini bulmak için aşağıdaki adımları izleyin [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] :  
@@ -21,6 +22,7 @@ Bu bölümdeki konular, kullanmayla ilgili temel bilgilerin ötesine genişleyen
 - Ayrıntılar teknolojisinin teknik incelemesini [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , Visual Basic ve C# kod örnekleri ile tamamlandığını inceleyin. Daha fazla bilgi için bkz. [LINQ to SQL: .NET dil Ile tümleşik sorgulama verileri](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [ADO.NET ve LINQ to SQL](ado-net-and-linq-to-sql.md)  
  ADO.NET ve arasındaki ilişkiyi açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
@@ -82,5 +84,6 @@ Bu bölümdeki konular, kullanmayla ilgili temel bilgilerin ötesine genişleyen
  Tasarım zamanında Kullanıcı tanımlı işlevlerin nasıl eşleneceğini ve uygulamanızdan nasıl çağrılacağını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Programlama Kılavuzu](programming-guide.md)  
  Uygulamasının çeşitli yönlerini açıklayan bölümlerin bağlantılarını içerir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .

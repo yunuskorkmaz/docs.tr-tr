@@ -2,21 +2,22 @@
 title: <standardEndpoints>
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-ms.openlocfilehash: 76a5303650c4e2b2887d29f511d3088c78b58fe2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5d0607b5c541fc5ae402a50a0f8c464355b6b246
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399509"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157206"
 ---
 # \<standardEndpoints>
+
 Bu yapılandırma bölümü, yeniden kullanılabilir önceden yapılandırılmış uç noktalar olan standart uç noktaların bir koleksiyonunu tanımlamanızı sağlar. Standart bir uç noktada bir veya daha fazla adres, bağlama ve anlaşma özniteliği sabit bir değere ayarlanmış olur. Örneğin, bulma uç noktasında sözleşmenin düzeltilmesi. Ayrıca, özel bağlamaları tanımlamaya benzer yeni özelliklerle hizmet uç noktasını genişletmek için standart uç noktaları kullanabilirsiniz.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<standardEndpoints>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -26,9 +27,11 @@ Bu yapılandırma bölümü, yeniden kullanılabilir önceden yapılandırılmı
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
