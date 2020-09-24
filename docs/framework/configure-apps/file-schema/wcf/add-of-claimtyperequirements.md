@@ -2,14 +2,15 @@
 title: <add> / <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 6ba935f7f6dae0e4d9e6581f53a50c684efcbed3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 00699a6fa5d0de7ac554db6ef8d0bbe511a85c0a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153093"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149224"
 ---
 # <a name="add-of-claimtyperequirements"></a>\<add> / \<claimTypeRequirements>
+
 Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir. Örneğin, hizmetler, belirli bir talep türü kümesine sahip olması gereken gelen kimlik bilgileri için gereksinimleri durum.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -22,7 +23,7 @@ Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı t
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<claimTypeRequirements>**](claimtyperequirements-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <claimTypeRequirements>
@@ -32,6 +33,7 @@ Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı t
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -42,6 +44,7 @@ Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı t
 |IsOptional|Bunun isteğe bağlı bir talep olup olmadığını belirten bir Boolean değer. Bu gerekli bir talep ise, bu özniteliği olarak ayarlayın `false` .<br /><br /> Hizmet bazı bilgileri istediğinde ancak bunu gerektirmiyorsa bu özniteliği kullanabilirsiniz. Örneğin, kullanıcının adını, soyadını ve adresini girmesini gerektiriyorsa, ancak telefon numarasının isteğe bağlı olduğuna karar verin.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -51,9 +54,11 @@ Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı t
 |[\<claimTypeRequirements>](claimtyperequirements-element.md)|Gerekli talep türlerinin koleksiyonunu belirtir.<br /><br /> Federasyon senaryosunda, hizmetler gelen kimlik bilgileri için gereksinimleri durum olarak alır. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu koleksiyondaki her öğe, bir Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Federasyon senaryosunda, hizmetler gelen kimlik bilgileri için gereksinimleri durum olarak alır. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu gereksinim bir güvenlik ilkesinde oluşturulur. İstemci Federasyon hizmetinden kimlik bilgilerini istediğinde (örneğin, CardSpace), Federasyon hizmetinin gereksinimleri karşılayan kimlik bilgilerini vermesi için gereksinimleri bir belirteç isteğine (RequestSecurityToken) koyar.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki yapılandırma, bir güvenlik bağlamaya iki talep türü gereksinimi ekler.  
   
 ```xml  

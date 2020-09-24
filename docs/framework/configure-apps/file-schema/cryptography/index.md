@@ -10,14 +10,15 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: c632a15552c8ba5743aac1309098b7d7ef949bbd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0215851f83a13ee48547144f08c5c693ec2d90bf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088001"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149536"
 ---
 # <a name="cryptography-settings-schema"></a>Şifreleme Ayarları Şeması
+
 Şifreleme ayarları şeması, kolay algoritma adlarının şifreleme algoritmaları uygulayan sınıflara nasıl eşlendiğini belirten öğeleri içerir.  
   
 [**\<configuration>**](../configuration-element.md)\

@@ -2,14 +2,15 @@
 title: <udpTransportSettings> / <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: b67bdf825948dffe18aabe91b0de236eb929bccc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9b2efe706777550f300f5b88710874342c51c5cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854854"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148861"
 ---
 # <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings> / \<udpAnnouncementEndpoint>
+
 Bu yapılandırma öğesi için UDP taşıma ayarlarını gösterir [\<udpAnnouncementEndpoint>](udpannouncementendpoint.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Bu yapılandırma öğesi için UDP taşıma ayarlarını gösterir [\<udpAnnoun
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<udpAnnouncementEndpoint>**](udpannouncementendpoint.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<updTransportSettings>**  
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -41,6 +42,7 @@ Bu yapılandırma öğesi için UDP taşıma ayarlarını gösterir [\<udpAnnoun
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -58,6 +60,7 @@ Bu yapılandırma öğesi için UDP taşıma ayarlarını gösterir [\<udpAnnoun
 |timeToLive|Çok noktaya yayın paketinin geçebileceğine yönelik ağ segmenti atlamalarının sayısını belirten bir tamsayı.  Bu öznitelik, `IP_MULTICAST_TTL` ve yuva seçenekleriyle ilişkili işlevselliği gösterir `IP_TTL` .<br /><br /> Varsayılan değer 1’dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

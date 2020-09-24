@@ -2,14 +2,15 @@
 title: Windows Forms Yapılandırma Bölümü
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-ms.openlocfilehash: 8a6f13da9bf05d87c45d86a09261d0c7245f5b00
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d518ec03602580f3c5d00ef2901ff7d7ac1d81b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546914"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148509"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Forms Yapılandırma Bölümü
+
 Windows Forms yapılandırma ayarları, Windows Forms uygulamanın çok Monitor desteği, yüksek DPı desteği ve diğer önceden tanımlanmış yapılandırma ayarları gibi özelleştirilmiş uygulama ayarları hakkında bilgi depolamasına ve almasına izin verir.
 
 Windows Forms uygulama yapılandırma ayarları bir uygulama yapılandırma dosyasının `System.Windows.Forms.ApplicationConfigurationSection` öğesinde saklanır.

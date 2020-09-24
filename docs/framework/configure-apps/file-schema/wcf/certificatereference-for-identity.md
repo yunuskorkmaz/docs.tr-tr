@@ -1,15 +1,16 @@
 ---
-title: <certificateReference>bekleniyor<identity>
+title: <certificateReference> bekleniyor <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 93a6290d780ff61756f7315cd0c32f0e199ca00f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f3daa2dcdf9b464b51cfb9c883cbb828bccb42df
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70849991"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149003"
 ---
-# <a name="certificatereference-for-identity"></a>\<certificateReference>bekleniyor\<identity>
+# <a name="certificatereference-for-identity"></a>\<certificateReference> bekleniyor \<identity>
+
 X. 509.440 sertifika doğrulamasının ayarlarını belirtir. Bu kimlikle bir uç noktaya bağlanan bir güvenli Windows Communication Foundation (WCF) istemcisi, sunucu tarafından sunulan taleplerin bu kimliği oluşturmak için kullanılan kimlik talebini içerdiğini doğrular.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ X. 509.440 sertifika doğrulamasının ayarlarını belirtir. Bu kimlikle bir u�
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<identity>**](identity.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificateReference>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <certificateReference findValue="String"
@@ -31,6 +32,7 @@ X. 509.440 sertifika doğrulamasının ayarlarını belirtir. Bu kimlikle bir u�
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -44,6 +46,7 @@ X. 509.440 sertifika doğrulamasının ayarlarını belirtir. Bu kimlikle bir u�
 |X509FindType|Yürütülecek X. 509.952 aramasının türünü belirtir. Özniteliğinde yer alan türün `findValue` belirtilen X509FindType gereksinimlerini karşılaması gerekir.<br /><br /> Geçerli değerler şunlardır:<br /><br /> -Findbyparmak Izi<br />-FindBySubjectName<br />- FindBySubjectDistinguishedName<br />-FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />- FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Varsayılan değer FindBySubjectDistinguishedName ' dir.<br /><br /> Bu öznitelik türü <xref:System.Security.Cryptography.X509Certificates.X509FindType> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

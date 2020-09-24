@@ -9,17 +9,19 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 41ee25397d519f189b462291d823586113c78b67
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f05c53eec326517052eb9a46e57e8b9c18ea698f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541545"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149692"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
+
 Konu C# yönetilen kodu ve yönetilmeyen kod arasında birlikte çalışabilirliği etkinleştirme yöntemlerini açıklar.  
   
 ## <a name="platform-invoke"></a>Platform çağırma  
+
  *Platform çağırma* , yönetilen kodun, MICROSOFT Windows API 'dakiler gibi dinamik bağlantı kitaplıkları (dll 'ler) içinde uygulanan yönetilmeyen işlevleri çağırmasına olanak sağlayan bir hizmettir. İçe aktarılmış bir işlevi bulur ve çağırır ve bağımsız değişkenlerini (tamsayılar, dizeler, diziler, yapılar vb.) gerektiğinde birlikte çalışma sınırında sıralar.  
   
 Daha fazla bilgi için bkz. [YÖNETILMEYEN DLL işlevlerini](../../../framework/interop/consuming-unmanaged-dll-functions.md) [kullanma ve bir wav dosyasını oynatmak için platform çağırma kullanma](./how-to-use-platform-invoke-to-play-a-wave-file.md).
@@ -28,9 +30,11 @@ Daha fazla bilgi için bkz. [YÖNETILMEYEN DLL işlevlerini](../../../framework/
 > [Ortak dil çalışma zamanı](../../../standard/clr.md) (CLR) sistem kaynaklarına erişimi yönetir. CLR dışındaki yönetilmeyen kodu çağırmak bu güvenlik mekanizmasını atlar ve bu nedenle bir güvenlik riski oluşturur. Örneğin, yönetilmeyen kod, CLR Güvenlik mekanizmalarını atlayarak doğrudan yönetilmeyen koddaki kaynakları çağırabilir. Daha fazla bilgi için bkz. [.net 'Teki güvenlik](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>C++ Birlikte Çalışma  
+
  C# veya başka bir .NET dilinde yazılmış kod tarafından tüketilebilmesi için yerel bir C++ sınıfını kaydırmak için de bilinen C++ birlikte çalışma (ıJW) seçeneğini kullanabilirsiniz. Bunu yapmak için, bir yerel DLL veya COM bileşeni kaydırmak üzere C++ kodu yazarsınız. Diğer .NET dillerinin aksine, Visual C++ yönetilen ve yönetilmeyen kodun aynı uygulamada ve hatta aynı dosyada yer almasını sağlayan birlikte çalışabilirlik desteğine sahiptir. Daha sonra, yönetilen bir derleme üretmek için **/clr** derleyici anahtarını kullanarak C++ kodunu derleyebilirsiniz. Son olarak, C# projenizde derlemeye bir başvuru ekler ve sarmalanmış nesneleri diğer yönetilen sınıfları kullandığınız gibi kullanırsınız.  
   
 ## <a name="exposing-com-components-to-c"></a>COM bileşenlerini C 'ye gösterme\#
+
  Bir C# projesinden bir COM bileşeni kullanabilirsiniz. Genel adımlar şu şekildedir:  
   
 1. Kullanmak için bir COM bileşeni bulun ve kaydedin. COM DLL kaydını kaydetmek veya kaydetmek için regsvr32.exe kullanın.  
@@ -46,6 +50,7 @@ Daha fazla bilgi için bkz. [YÖNETILMEYEN DLL işlevlerini](../../../framework/
  Daha fazla bilgi için bkz. [com bileşenlerini .NET Framework gösterme](../../../framework/interop/exposing-com-components.md).  
   
 ## <a name="exposing-c-to-com"></a>C# ' den COM ' a gösterme  
+
  COM istemcileri, doğru bir şekilde kullanıma sunulan C# türlerini kullanabilir. C# türlerini sergilemek için temel adımlar şunlardır:  
   
 1. C# projesine birlikte çalışma özniteliklerini ekleyin.  

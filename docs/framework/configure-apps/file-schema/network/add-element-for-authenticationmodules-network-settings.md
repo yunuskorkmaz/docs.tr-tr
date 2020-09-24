@@ -11,14 +11,15 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 1a6d0f79f076a69cec33ac14f0e0f33f7c3c6577
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f679a43ed1851e9681a2a57ca1639f8aa75aa8b3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504647"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149510"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>authenticationModules için \<add> Öğesi (Ağ Ayarları)
+
 Uygulamaya bir kimlik doğrulama modülü ekler.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -26,7 +27,7 @@ Uygulamaya bir kimlik doğrulama modülü ekler.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <add
@@ -35,6 +36,7 @@ Uygulamaya bir kimlik doğrulama modülü ekler.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -44,6 +46,7 @@ Uygulamaya bir kimlik doğrulama modülü ekler.
 |`type`|Tam nitelikli tür adı (özelliği ile gösterilir <xref:System.Type.FullName%2A> ) ve derleme adı (özelliği ile gösterilir <xref:System.Reflection.Assembly.FullName%2A> ), virgülle ayrılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -53,14 +56,17 @@ Uygulamaya bir kimlik doğrulama modülü ekler.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `add`Öğesi, kayıtlı kimlik doğrulama modülleri listesinin sonuna bir kimlik doğrulama modülü ekler. Kimlik doğrulama modülleri, listeye eklendikleri sırada çağırılır.  
   
  Özniteliğin değeri, `type` virgülle ayrılmış olarak geçerli bir tür adı ve karşılık gelen derleme adı olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnekte varsayılan kimlik doğrulama modülleri etkinleştirilir. Version ve PublicKeyToken değerlerini belirtilen modülle ilgili doğru değerlerle değiştirmelisiniz.  
   
 ```xml  
@@ -86,4 +92,4 @@ Uygulamaya bir kimlik doğrulama modülü ekler.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

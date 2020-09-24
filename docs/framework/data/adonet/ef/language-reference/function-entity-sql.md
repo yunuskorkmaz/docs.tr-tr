@@ -2,14 +2,15 @@
 title: Işlev (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: a3cc843c7f16f667508aeaea65879de6842478bc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e06b5bf8a2ca62630666ab3e8ba35f0425e3988
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544498"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148041"
 ---
 # <a name="function-entity-sql"></a>Işlev (Entity SQL)
+
 Bir Entity SQL sorgu komutunun kapsamındaki bir işlevi tanımlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -29,6 +30,7 @@ FUNCTION function-name
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `function-name`  
  İşlevin adı.  
   
@@ -51,6 +53,7 @@ FUNCTION function-name
  Bir veya daha fazla değerden adsız, yapısal olarak yazılmış kayıtlar döndüren bir ifade. Daha fazla bilgi için bkz. [satır](row-entity-sql.md).  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  İşlev imzaları farklı olduğu sürece, aynı ada sahip birden çok işlev satır içi olarak bildirilemez. Daha fazla bilgi için bkz. [Işlev aşırı yükleme çözünürlüğü](function-overload-resolution-entity-sql.md).  
   
  Satır içi bir işlev, bir Entity SQL komutunda, yalnızca bu komutta tanımlandıktan sonra çağrılabilir. Ancak, satır içi bir işlev başka bir satır içi işlevin içinde, çağrılan işlev tanımlanmadan önce veya sonra çağrılabilir. Aşağıdaki örnekte, B işlevi tanımlanmadan önce bir çağrı işlevi B işlevini işle:  
@@ -66,11 +69,13 @@ FUNCTION function-name
  İşlevler ayrıca modelin kendisinde de belirtilebilir. Modelde belirtilen işlevler, komutta satır içi olarak belirtilen işlevlerle aynı şekilde yürütülür. Daha fazla bilgi için bkz. [Kullanıcı tanımlı işlevler](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki Entity SQL komutu `Products` döndürülen ürünlerin filtreleneceği bir tamsayı değeri alan bir işlevi tanımlar.  
   
  [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki Entity SQL komutu, `StringReturnsCollection` döndürülen kişileri filtrelemek için bir dize koleksiyonu alan bir işlevi tanımlar.  
   
  [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  

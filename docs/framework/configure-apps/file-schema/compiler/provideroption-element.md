@@ -8,14 +8,15 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 7e006adb86886d22ec08dc61fa092bf677b4da96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9374fbaf7ceb61e5b72335417d32a08525477e0d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544745"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149640"
 ---
 # <a name="provideroption-element"></a>\<providerOption> Öğesi
+
 Bir dil sağlayıcısı için derleyici sürüm özniteliklerini belirtir.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ Bir dil sağlayıcısı için derleyici sürüm özniteliklerini belirtir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -44,6 +46,7 @@ Bir dil sağlayıcısı için derleyici sürüm özniteliklerini belirtir.
 |`value`|Gerekli öznitelik.<br /><br /> Seçenek için değeri belirtir; Örneğin, "v 3.5".|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -56,6 +59,7 @@ Bir dil sağlayıcısı için derleyici sürüm özniteliklerini belirtir.
 |[\<compiler> Dosyalarında](compiler-element.md)|Bir dil sağlayıcısı için derleyici yapılandırma özniteliklerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  .NET Framework sürüm 3,5 ' de, Kod Belge Nesne Modeli (CodeDOM) kod sağlayıcıları öğesini kullanarak sağlayıcıya özgü seçenekleri destekleyebilir `<providerOption>` .  
   
  .NET Framework 3,5, güncelleştirilmiş .NET Framework 2,0 derlemelerini içerir ve yeni türler içeren yeni sürüm 3,5 derlemeleri sağlar. Microsoft C# ve Visual Basic kod sağlayıcıları .NET Framework 2,0 Derlemeleriyle bulunur, ancak sürüm 3,5 derleyicileri destekleyecek şekilde güncelleştirilmiştir. Varsayılan olarak, güncelleştirilmiş kod sağlayıcıları sürüm 2,0 derleyicileri için kod üretir. `<providerOption>`Hedef derleyici sürümünü 3,5 olarak değiştirmek için öğesini kullanabilirsiniz. Bunu yapmak için, özniteliği için "CompilerVersion" `name` ve öznitelik için "v 3.5" belirtin `value` . Sürüm numarasından önce küçük bir "v" olması gerekir.  
@@ -65,6 +69,7 @@ Bir dil sağlayıcısı için derleyici sürüm özniteliklerini belirtir.
  CodeDOM kod sağlayıcısı uygulayıcıları, türünde bir parametre alan bir Oluşturucu sağlayarak özel seçenekleri işleyebilir `providerOptions` <xref:System.Collections.Generic.IDictionary%602> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, C# kod sağlayıcısının 3,5 sürümünün kullanılması gerektiğini belirtir.  
   
 ```xml  

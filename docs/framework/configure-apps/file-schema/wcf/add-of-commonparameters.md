@@ -2,14 +2,15 @@
 title: <add> / <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 8328b6d08c1b57ad7a899c8cb489e07037e5af09
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 11be233d846f9025f041a26174e5b3bd2abdab55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558167"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149198"
 ---
 # <a name="add-of-commonparameters"></a>\<add> / \<commonParameters>
+
 Birden çok hizmet arasında genel olarak kullanılan parametrelerin ad-değer çiftini belirtir. Genellikle bu parametre, dayanıklı hizmetler tarafından paylaşılabilen veritabanı bağlantı dizesini içerir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Birden çok hizmet arasında genel olarak kullanılan parametrelerin ad-değer �
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -42,6 +44,7 @@ Birden çok hizmet arasında genel olarak kullanılan parametrelerin ad-değer �
 |değer|Bir hizmet için belirtilen parametrenin değeri.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -51,6 +54,7 @@ Birden çok hizmet arasında genel olarak kullanılan parametrelerin ad-değer �
 |[\<commonParameters>](commonparameters.md)|Hizmetler tarafından kullanılan ortak parametrelerin bir koleksiyonu. Bu koleksiyon, genellikle dayanıklı hizmetler tarafından paylaşılabilen veritabanı bağlantı dizesini içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<commonParameters>`Öğesi, ' yi kullanırken, birden çok hizmet arasında genel olarak kullanılan tüm parametreleri tanımlar `ConnectionString` <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService> .  
   
  Ve gibi, kalıcılık depolarına iş toplu işleri uygulayan hizmetler için <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> , `EnableRetries` Aşağıdaki örnekte gösterildiği gibi, parametresini kullanarak işlemini yeniden denemesini sağlayabilirsiniz:  

@@ -5,21 +5,22 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 7aa3755be97a839cb576d53852b75cfe50e39276
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b3234bfa60cd1e3c88778951fc27301c615c84ba
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "72773941"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148964"
 ---
 # \<client>
+
 `client`Öğesi, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar.
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<client>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <system.serviceModel>
@@ -33,10 +34,12 @@ ms.locfileid: "72773941"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
 ### <a name="attributes"></a>Öznitelikler
- Yok
+
+ Hiçbiri
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -52,6 +55,7 @@ ms.locfileid: "72773941"
 |[\<system.serviceModel>](system-servicemodel.md)|Tüm Windows Communication Foundation (WCF) yapılandırma öğelerinin kök öğesi.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  `client`Bölümü, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar. İstemci bölümünde listelenen her bir uç nokta kendi bağlamasını, davranışını ve sözleşmesini tanımlar. Ve özniteliklerinin birleşimiyle benzersiz şekilde tanımlanır `name` `contract` . İstemci kodu, `name` istemcinin uyguladığı hizmet için bir uç noktaya bağlanmak üzere öğesini belirtir. `name`Özniteliği atlanırsa, uç noktası uyguladığı sözleşmenin varsayılan uç noktası olarak davranır.
 
  Ayrıca, bu bölüm meta verileri işlemeye yönelik ayarları da belirtir.

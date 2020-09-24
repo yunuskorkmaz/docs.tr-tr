@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9172c20a-9876-4b3b-9c97-1963c02b1993
-ms.openlocfilehash: dea5a2017479443cb747d31e253c1c83585ddd09
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 04f95cd7d3f6e52f644f23dd8a32c77d56a5ddda
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791491"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147520"
 ---
 # <a name="sqltypes-and-the-dataset"></a>SqlTypes ve DataSet
-ADO.NET 2,0, `DataSet` <xref:System.Data.SqlTypes> ad alanı aracılığıyla için geliştirilmiş tür desteği getirmiştir. İçindeki <xref:System.Data.SqlTypes> türler, bir SQL Server veritabanındaki veri türleriyle aynı semantiğe ve duyarlığa sahip veri türleri sağlamak üzere tasarlanmıştır. İçindeki <xref:System.Data.SqlTypes> her veri türü, aynı temel veri gösterimiyle SQL Server benzer bir veri türüne sahiptir.  
+
+ADO.NET 2,0, `DataSet` ad alanı aracılığıyla için geliştirilmiş tür desteği getirmiştir  <xref:System.Data.SqlTypes> . İçindeki türler, <xref:System.Data.SqlTypes> bir SQL Server veritabanındaki veri türleriyle aynı semantiğe ve duyarlığa sahip veri türleri sağlamak üzere tasarlanmıştır. İçindeki her veri türü <xref:System.Data.SqlTypes> , aynı temel veri gösterimiyle SQL Server benzer bir veri türüne sahiptir.  
   
- Doğrudan <xref:System.Data.SqlTypes> bir<xref:System.Data.DataSet> yapılandırmalarda kullanmak SQL Server veri türleriyle çalışırken çeşitli avantajlar sağlar. <xref:System.Data.SqlTypes>SQL Server yerel veri türleriyle aynı semantiğini destekler. Öğesinin tanımında <xref:System.Data.SqlTypes> <xref:System.Data.DataColumn> birini belirtmek, ondalık veya sayısal veri türlerini ortak dil çalışma zamanı (CLR) veri türlerinden birine dönüştürürken oluşabilecek duyarlık kaybını ortadan kaldırır.  
+ <xref:System.Data.SqlTypes>Doğrudan bir <xref:System.Data.DataSet> yapılandırmalarda kullanmak SQL Server veri türleriyle çalışırken çeşitli avantajlar sağlar. <xref:System.Data.SqlTypes> SQL Server yerel veri türleriyle aynı semantiğini destekler. Öğesinin tanımında birini belirtmek, <xref:System.Data.SqlTypes> <xref:System.Data.DataColumn> ondalık veya sayısal veri türlerini ortak dil çalışma zamanı (CLR) veri türlerinden birine dönüştürürken oluşabilecek duyarlık kaybını ortadan kaldırır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, clr türleri <xref:System.Data.DataTable> yerine kullanarak <xref:System.Data.DataColumn> <xref:System.Data.SqlTypes> veri türlerini açıkça tanımlayarak bir nesnesi oluşturur. Kod, <xref:System.Data.DataTable> SQL Server AdventureWorks veritabanındaki Sales. SalesOrderDetail tablosundan verileri ile doldurur. Konsol penceresinde gösterilen çıktı, her sütunun veri türünü ve SQL Server alınan değerleri gösterir.  
+
+ Aşağıdaki örnek, <xref:System.Data.DataTable> <xref:System.Data.DataColumn> clr türleri yerine kullanarak veri türlerini açıkça tanımlayarak bir nesnesi oluşturur <xref:System.Data.SqlTypes> . Kod, <xref:System.Data.DataTable> SQL Server AdventureWorks veritabanındaki Sales. SalesOrderDetail tablosundan verileri ile doldurur. Konsol penceresinde gösterilen çıktı, her sütunun veri türünü ve SQL Server alınan değerleri gösterir.  
   
  [!code-csharp[DataWorks SqlTypes.GetTypeAW#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTypes.GetTypeAW/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTypes.GetTypeAW#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.GetTypeAW/VB/source.vb#1)]  

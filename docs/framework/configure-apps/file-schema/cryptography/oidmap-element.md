@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: a28eaf68fe1e6ab3f26592eee5ae2d0f2e7a3256
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6c57810389acbd58e6d2e05277a6f26fa0aac8c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155173"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149523"
 ---
 # <a name="oidmap-element"></a>\<oidMap> Öğesi
+
 Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -23,7 +24,7 @@ Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidMap>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <oidMap>
@@ -31,9 +32,11 @@ Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -51,6 +54,7 @@ Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.
 |`mscorlib`|Öğesini içerir `cryptographySettings` .|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, **\<oidMap>** RIPEMD-160 karma algoritması için BIR OID 'nin bu karma algoritmanın bir uygulamasına eşlemesini içeren öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
@@ -76,7 +80,7 @@ Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yapılandırma dosyası şeması](../index.md)
-- [Şifreleme Ayarları Şeması](index.md)
+- [Şifreleme ayarları şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)
 - [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)
 - [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme](../../map-object-identifiers-to-cryptography-algorithms.md)

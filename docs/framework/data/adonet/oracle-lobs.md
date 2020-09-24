@@ -2,28 +2,30 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 62525fed85525e26b7c61208fe44b108de562fb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 072e3e3514c2dd32ddff0bac941da30788feae16
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149433"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147846"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
-Oracle için .NET Framework Data <xref:System.Data.OracleClient.OracleLob> Provider, Oracle **LOB** veri türleri ile çalışmak için kullanılan sınıfı içerir.  
+
+Oracle için .NET Framework Veri Sağlayıcısı, <xref:System.Data.OracleClient.OracleLob> Oracle **lob** veri türleriyle çalışmak için kullanılan sınıfını içerir.  
   
- **OracleLob** bu <xref:System.Data.OracleClient.OracleType> veri türlerinden biri olabilir:  
+ Bir **OracleLob** şu veri türlerinden biri olabilir <xref:System.Data.OracleClient.OracleType> :  
   
 |Veri türü|Açıklama|  
 |---------------|-----------------|  
-|**Blob**|Maksimum 4 gigabayt boyutuna sahip ikili veri içeren bir Oracle **BLOB** veri türü. Bu haritalar, **Bayt**türünden bir **diziyle** eşler.|  
-|**Clob**|Sunucuda ayarlanan varsayılan karaktere dayalı karakter verilerini içeren ve maksimum 4 gigabayt boyutuna sahip bir Oracle **CLOB** veri türü. String **bu**haritalar .|  
-|**Nclob**|En fazla 4 gigabayt boyutuna sahip sunucuda ayarlanan ulusal karaktere dayalı karakter verileri içeren oracle **NCLOB** veri türü. String **bu**haritalar .|  
+|**Blob**|En fazla 4 gigabayt büyüklüğünde ikili veri içeren bir Oracle **BLOB** veri türü. Bu, **byte**türünde bir **diziye** eşlenir.|  
+|**CLOB**|Sunucu üzerindeki varsayılan karakter kümesini temel alan, en fazla 4 gigabayt boyutunda karakter verisi içeren bir Oracle **CLOB** veri türü. Bu **dize**ile eşlenir.|  
+|**NClob**|Sunucu üzerinde en fazla 4 gigabayt olan Ulusal karakter kümesine dayalı karakter verisi içeren Oracle **NCLOB** veri türü. Bu **dize**ile eşlenir.|  
   
- **OracleLob,** verilerin işletim <xref:System.Data.OracleClient.OracleBFile> sistemindeki fiziksel bir dosya yerine sunucuda depolanmasından farklıdır. Ayrıca, her zaman salt okunur olan **OracleBFile'ın**aksine, okuma-yazma nesnesi de olabilir.  
+ Bir **OracleLob** , <xref:System.Data.OracleClient.OracleBFile> verilerin işletim sistemindeki fiziksel bir dosya yerine sunucuda depolanabileceği öğesinden farklıdır. Ayrıca, her zaman salt okunurdur olan **Oraclebdosya**'dan farklı olarak bir okuma-yazma nesnesi de olabilir.  
   
-## <a name="creating-retrieving-and-writing-to-a-lob"></a>Oluşturma, Alma ve BIR LOB yazma  
- Aşağıdaki C# örneği, Oracle tablosunda LOB'ları nasıl oluşturabileceğinizi ve **oraclelob** nesneleri biçiminde nasıl alınıp yazabileceğinizi gösterir. Örnek, nesneyi <xref:System.Data.OracleClient.OracleDataReader> ve **OracleLob** **Okuma** ve **Yazma** yöntemlerini kullanarak gösteriş gösterir. Örnek, Oracle **BLOB,** **CLOB**ve **NCLOB** veri türlerini kullanır.  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a>LOB oluşturma, alma ve yazma  
+
+ Aşağıdaki C# örneği, bir Oracle tablosunda lob oluşturma ve bunları **OracleLob** nesneleri biçiminde alma ve bunlara yazma işlemlerinin nasıl yapılacağını gösterir. Örnek, <xref:System.Data.OracleClient.OracleDataReader> nesne ve **OracleLob** **okuma** ve **yazma** yöntemlerinin kullanımını gösterir. Örnek, Oracle **BLOB**, **CLOB**ve **NCLOB** veri türlerini kullanır.  
   
 ```csharp  
 using System;  
@@ -215,8 +217,9 @@ public class LobExample
 }  
 ```  
   
-## <a name="creating-a-temporary-lob"></a>Geçici LOB Oluşturma  
- Aşağıdaki C# örneği geçici bir LOB'un nasıl oluşturulacağı gösteriş.  
+## <a name="creating-a-temporary-lob"></a>Geçici bir LOB oluşturma  
+
+ Aşağıdaki C# örneği, geçici bir LOB oluşturmayı gösterir.  
   
 ```csharp  
 OracleConnection conn = new OracleConnection(  

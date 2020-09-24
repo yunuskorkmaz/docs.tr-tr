@@ -8,27 +8,29 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: f3c1a1670139a8262dea449bfff99c7c1c19f088
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: eb29701912a45a484b1716195b449e8a97d1d4b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088943"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149302"
 ---
 # <a name="assert-element"></a>\<assert> Öğesi
+
 Yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntülenmeyeceğini belirtir <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> ; Ayrıca, iletilerin yazılacağı dosyanın adını da belirtir.  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<assert>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <assert assertuienabled="true|false" logfilename="file name"/>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -42,10 +44,11 @@ Yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntül
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`true`|İleti kutusunu görüntüler. Bu varsayılandır.|  
+|`true`|İleti kutusunu görüntüler. Bu varsayılan seçenektir.|  
 |`false`|İleti kutusunu görüntülemez.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -56,9 +59,11 @@ Yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntül
 |`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Öğesi içindeki her iki öznitelik de **\<assert>** isteğe bağlıdır. İletileri yazmak için bir dosya belirtmeden ileti kutularını devre dışı bırakabilir veya ileti kutularından etkin bırakarak mesaj yazılacak bir dosya belirtebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, **hata ayıklama. onayı** çağırdığınızda ileti kutularının nasıl devre dışı bırakılacağını gösterir ve iletileri öğesine yazın `c:\log.txt` .  
   
 ```xml  
@@ -72,4 +77,4 @@ Yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntül
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Diagnostics.Debug>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
+- [İzleme ve hata ayıklama ayarları şeması](index.md)
