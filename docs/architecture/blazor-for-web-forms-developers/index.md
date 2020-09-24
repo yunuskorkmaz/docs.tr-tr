@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 1c869cce6ab8a0ab7c4b83817fe1afc3d6a4a7fd
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 3ac9a02a2f5c93cbfd9377a9f6fff4b6c5f45e93
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267482"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158181"
 ---
 # <a name="no-locblazor-for-aspnet-web-forms-developers"></a>Blazor ASP.NET Web Forms geliştiricileri için
 
@@ -74,7 +74,7 @@ Bu kitabın ilk bölümünde ne olduğu ele alınmaktadır Blazor ve ASP.NET Web
 
 ## <a name="what-this-book-doesnt-cover"></a>Bu kitabın kapsamıyor
 
-Bu kitap Blazor , kapsamlı bir geçiş kılavuzu değil, için bir giriş niteliğindedir. Bir projeyi ASP.NET Web Forms ' den ' a geçirme yaklaşımına yönelik yönergeler de dahil olsa Blazor da, her Nuance ve ayrıntıyı ele geçirmeye çalışmaz. ASP.NET ' den ASP.NET Core geçişe yönelik daha genel rehberlik için ASP.NET Core belgelerindeki [geçiş kılavuzuna](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/) bakın.
+Bu kitap Blazor , kapsamlı bir geçiş kılavuzu değil, için bir giriş niteliğindedir. Bir projeyi ASP.NET Web Forms ' den ' a geçirme yaklaşımına yönelik yönergeler de dahil olsa Blazor da, her Nuance ve ayrıntıyı ele geçirmeye çalışmaz. ASP.NET ' den ASP.NET Core geçişe yönelik daha genel rehberlik için ASP.NET Core belgelerindeki [geçiş kılavuzuna](/aspnet/core/migration/proper-to-2x/) bakın.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 

@@ -2,14 +2,15 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 102e220ad01410568a18ce4ea6fac06ca8c15230
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5f35029806172c3abe639052798c0a018e8514f0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558738"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158610"
 ---
 # \<ws2007HttpBinding>
+
 <xref:System.ServiceModel.WSHttpBinding.Security%2A>,, <xref:System.ServiceModel.ReliableSession> Ve bağlama öğelerinin doğru sürümleri için destek sağlayan bir birlikte çalışabilen bağlama tanımlar <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -59,6 +60,7 @@ ms.locfileid: "90558738"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -96,6 +98,7 @@ ms.locfileid: "90558738"
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  , `WS2007HttpBinding` ' A benzer bir sistem tarafından sağlanmış bir bağlama ekler, ancak bu, bir `WSHttpBinding` kuruluştan, Reliableoturum, güvenlik ve TransactionFlow protokollerinin yapılandırılmış bilgi standartları (Oasa) standart sürümlerini kullanır. Bu bağlama kullanılırken nesne modelinde veya varsayılan ayarlarda değişiklik yapılması gerekmez.  
   
 ## <a name="example"></a>Örnek  

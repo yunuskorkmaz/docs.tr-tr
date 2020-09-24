@@ -3,12 +3,12 @@ title: Özellik bayrakları
 description: Azure uygulama yapılandırma özelliğinden yararlanarak bulutta yerel uygulamalarda Özellik bayraklarını uygulama
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee45c9f187b056887ea6dd3a08da508afca51987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540471"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158103"
 ---
 # <a name="feature-flags"></a>Özellik bayrakları
 
@@ -43,9 +43,9 @@ Bu yaklaşımın karar mantığını Özellik kodundan nasıl ayırdığına gö
 
 Bölüm 1 ' de, tartıştık `Twelve-Factor App` . Uygulama yürütülebilir kodundan yapılandırma ayarları dışında tutulması önerilen kılavuz. Gerektiğinde, ayarlar dış kaynaktan okunabilir. Özellik bayrağı yapılandırma değerleri, kod tabanlarından da bağımsız olmalıdır. Ayrı bir depoda ayırıcı bayrağı yapılandırması yaparak, uygulamayı değiştirmeden ve yeniden dağıtmaya gerek kalmadan bayrak durumunu değiştirebilirsiniz.
 
-[Azure Uygulama yapılandırması](https://docs.microsoft.com/azure/azure-app-configuration/overview) , özellik bayrakları için merkezi bir depo sağlar. Bununla birlikte, farklı türlerde özellik bayrakları tanımlarsınız ve durumlarını hızla ve güvenle işleyebilirsiniz. Özellik bayrağı işlevselliğini etkinleştirmek için uygulama yapılandırması istemci kitaplıklarını uygulamanıza eklersiniz. Çeşitli programlama dili çerçeveleri desteklenir.
+[Azure Uygulama yapılandırması](/azure/azure-app-configuration/overview) , özellik bayrakları için merkezi bir depo sağlar. Bununla birlikte, farklı türlerde özellik bayrakları tanımlarsınız ve durumlarını hızla ve güvenle işleyebilirsiniz. Özellik bayrağı işlevselliğini etkinleştirmek için uygulama yapılandırması istemci kitaplıklarını uygulamanıza eklersiniz. Çeşitli programlama dili çerçeveleri desteklenir.
 
-Özellik bayrakları, [ASP.NET Core hizmetinde](https://docs.microsoft.com/azure/azure-app-configuration/use-feature-flags-dotnet-core)kolayca uygulanabilir. .NET özellik yönetimi kitaplıklarını ve uygulama yapılandırma sağlayıcısını yüklemek, kodunuzun özelliklerine bildirimli olarak özellik bayrakları eklemenizi sağlar. Bunlar `FeatureGate` , kod tabanınızda If deyimlerini el ile yazmanız gerekmiyorsa öznitelikleri etkinleştirir.
+Özellik bayrakları, [ASP.NET Core hizmetinde](/azure/azure-app-configuration/use-feature-flags-dotnet-core)kolayca uygulanabilir. .NET özellik yönetimi kitaplıklarını ve uygulama yapılandırma sağlayıcısını yüklemek, kodunuzun özelliklerine bildirimli olarak özellik bayrakları eklemenizi sağlar. Bunlar `FeatureGate` , kod tabanınızda If deyimlerini el ile yazmanız gerekmiyorsa öznitelikleri etkinleştirir.
 
 Başlangıç sınıfınıza yapılandırıldıktan sonra, denetleyiciye, eyleme veya ara yazılım düzeyine Özellik bayrağı işlevi ekleyebilirsiniz. Şekil 10-12, denetleyici ve eylem uygulamasını gösterir:
 

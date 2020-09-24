@@ -3,33 +3,39 @@ title: Standart sorgu Işleçlerinin yürütme yöntemine göre sınıflandırı
 description: "LINQ to Objects Için C# ' de standart sorgu operatörü yürütme mananlar hakkında bilgi edinin: anında, ertelenmiş akış ve ertelenmiş akış olmayan."
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: dd496e232de2c7ed10a8aaa7cec84f8136495cce
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 23f4eafac39b46072629ee4b6e8ec4ae92f6ab80
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105500"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159260"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Standart sorgu Işleçlerinin yürütme yöntemine göre sınıflandırılması (C#)
+
 Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yöntemden biriyle yürütülür: ımımor ertelenmiş. Ertelenmiş yürütmeyi kullanan sorgu işleçleri Ayrıca iki kategoriye ayrılabilir: akış ve akış olmayan. Farklı sorgu işleçlerinin nasıl yürütüleceğini biliyorsanız, belirli bir sorgudan aldığınız sonuçları anlamanıza yardımcı olabilir. Bu, veri kaynağı değiştirilirken veya başka bir sorgunun üstünde bir sorgu oluşturuyorsanız özellikle doğrudur. Bu konu, standart sorgu işleçlerini yürütme tarzlarına göre sınıflandırır.  
   
 ## <a name="manners-of-execution"></a>Yürütme mananlar  
   
 ### <a name="immediate"></a>Hemen  
+
  Anında yürütme, veri kaynağının okunduğu ve işlemin sorgunun bildirildiği noktada gerçekleştirildiği anlamına gelir. Tek, Numaralandırılmamış bir sonuç döndüren tüm standart sorgu işleçleri hemen yürütülür.  
   
 ### <a name="deferred"></a>İlmiş  
+
  Ertelenmiş yürütme, işlemin sorgunun bildirildiği noktada gerçekleştirilmediği anlamına gelir. İşlem yalnızca sorgu değişkeni numaralandırıldıktan sonra, örneğin bir ifade kullanılarak yapılır `foreach` . Bu, sorguyu yürütmenin sonuçlarının sorgu tanımlandığında değil, sorgu yürütüldüğünde veri kaynağının içeriğine bağlı olduğunu gösterir. Sorgu değişkeni birden çok kez numaralandırıldıktan sonra sonuçlar her seferinde farklılık gösterebilir. Dönüş türü <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IOrderedEnumerable%601> ertelenmiş bir şekilde yürütülen tüm standart sorgu işleçleri neredeyse hepsi.  
   
  Ertelenmiş yürütmeyi kullanan sorgu işleçleri ayrıca akış veya akış olmayan olarak sınıflandırılabilirler.  
   
 #### <a name="streaming"></a>Akış  
+
  Akış işleçleri, öğeleri almadan önce tüm kaynak verileri okumak zorunda değildir. Yürütme sırasında, bir akış işleci her kaynak öğe okunışında işlemini gerçekleştirir ve uygunsa öğeyi verir. Bir akış işleci, bir sonuç öğesi üretilene kadar kaynak öğeleri okumaya devam eder. Bu, bir sonuç öğesi oluşturmak için birden fazla kaynak öğesinin okunabileceğini gösterir.  
   
 #### <a name="non-streaming"></a>Akış olmayan  
+
  Akış olmayan operatörler, bir sonuç öğesi elde etmeden önce tüm kaynak verileri okummalıdır. Sıralama veya gruplama gibi işlemler bu kategoriye girer. Yürütme sırasında akış olmayan sorgu işleçleri tüm kaynak verileri okur, veri yapısına koyar, işlemi gerçekleştirir ve sonuçta elde edilen öğeleri verir.  
   
 ## <a name="classification-table"></a>Sınıflandırma tablosu  
+
  Aşağıdaki tabloda, her standart sorgu operatörü yöntemi yürütme yöntemine göre sınıflandırılırdı.  
   
 > [!NOTE]

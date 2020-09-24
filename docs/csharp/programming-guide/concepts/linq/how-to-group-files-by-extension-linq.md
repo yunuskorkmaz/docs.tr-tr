@@ -3,17 +3,19 @@ title: Dosyaları uzantıya göre gruplama (LINQ) (C#)
 description: C# ' deki dosya veya klasör listelerinde gelişmiş gruplandırma ve sıralama işlemleri yapmak için LINQ 'i nasıl kullanacağınızı öğrenin. Örnek, konsolundaki sayfa çıkışının nasıl yapılacağını gösterir.
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 6113392170063cac1fd89017efaf0c7dad3ba34b
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: c17328980c20dd6ec32e8d0ce176081122443344
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105039"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159052"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Dosyaları uzantıya göre gruplama (LINQ) (C#)
+
 Bu örnek, LINQ 'ın dosya veya klasör listelerinde gelişmiş gruplandırma ve sıralama işlemleri gerçekleştirmek için nasıl kullanılabileceğini gösterir. Ayrıca, ve yöntemlerini kullanarak konsol penceresinde çıkışın nasıl yapılacağını gösterir <xref:System.Linq.Enumerable.Skip%2A> <xref:System.Linq.Enumerable.Take%2A> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki sorguda, belirtilen dizin ağacının içeriğini dosya adı uzantısı tarafından nasıl gruplandırmak gösterilmektedir.  
   
 ```csharp  
@@ -106,6 +108,7 @@ class GroupByExtension
  Bu programın çıktısı, yerel dosya sisteminin ayrıntılarına ve ' nin ne ayarlı olduğuna bağlı olarak uzun olabilir `startFolder` . Tüm sonuçların görüntülenmesini sağlamak için bu örnek, sonuçların nasıl ekleneceğini gösterir. Windows ve Web uygulamalarına aynı teknikler de uygulanabilir. Kod, bir gruptaki öğeler, iç içe geçmiş bir döngü gerekli olduğundan emin olun `foreach` . Ayrıca, listedeki geçerli konumu hesaplamak için bazı ek Logic de vardır ve kullanıcının sayfalamayı durdurmasına ve programdan çıkmasına olanak tanır. Bu durumda, disk belleği sorgusu özgün sorgudaki önbelleğe alınmış sonuçlara karşı çalıştırılır. Diğer bağlamlarda, örneğin LINQ to SQL, önbelleğe alma gerekli değildir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
  `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

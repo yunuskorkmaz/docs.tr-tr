@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 567cbd2cc07ee82e795daa067b9034b2b8dc1974
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 44966ed9ee3abb3d1babdf09dd44f087376ada55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243964"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158688"
 ---
 # \<system.serviceModel>
+
 Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) ServiceModel yapılandırma öğelerini içerir.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -56,14 +57,16 @@ Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) Service
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok  
+
+ Hiçbiri  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<behaviors>](behaviors.md)|Bu bölüm, ve adlı iki alt koleksiyonu tanımlar `endpointBehaviors` `serviceBehaviors` .  Her koleksiyon, sırasıyla bitiş noktaları ve hizmetler tarafından tüketilen davranış öğelerini tanımlar. Her davranış öğesi, benzersiz özniteliği tarafından tanımlanır `name` .|  
 |[\<bindings>](bindings.md)|Bu bölüm, standart ve özel bağlamaların bir koleksiyonunu içerir. Her giriş, benzersiz olarak tanımlanır `name` . Hizmetler, kullanarak bağlama yoluyla bağlamaları kullanır `name` .|  
@@ -81,11 +84,12 @@ Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) Service
 
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |\<configuration>|Bir .NET yapılandırma dosyasındaki tüm yapılandırma öğeleri için kök öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  WCF, diğer ürünlerin yapılandırma bölümlerine öğe eklemez.  
   
  WCF Hizmetleri, `services` yapılandırma dosyasının bölümünde tanımlanmıştır. Bir derleme, herhangi bir sayıda hizmeti içerebilir. Her hizmetin kendi `service` yapılandırma bölümü vardır. Bölümü ve içeriği, belirli bir hizmetin hizmet sözleşmesini, davranışını ve uç noktalarını tanımlar.  
@@ -99,6 +103,7 @@ Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) Service
  Bağlamalar, ve öznitelikleri birleşimi aracılığıyla uç noktalara bağlanır `name` `bindingConfiguration` . `binding`Özniteliği, bağlamanın hangi bölümünde tanımlandığını tanımlar. `bindingConfiguration`Özniteliği, bağlama bölümünde hangi yapılandırılan bağlamanın kullanıldığını tanımlar. Bağlama bölümü, yapılandırılmış çeşitli bağlamaları tanımlayabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Bu, WCF yapılandırma dosyasına bir örnektir.  
   
 ```xml  

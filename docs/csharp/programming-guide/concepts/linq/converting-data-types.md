@@ -3,14 +3,15 @@ title: Veri türlerini dönüştürme (C#)
 description: Dönüştürme yöntemleri giriş nesnelerinin türünü değiştirir. Bkz. C# ' de, sıralanabilir. Assıralanabilir ve Numaralandırılabilir. OfType gibi LINQ sorgularında dönüştürme işlemleri.
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 3291690f9aaee945ca7feb04ebbc676db2612894
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: f9e3b354fd6eeba6564067550ea3821e4946d92f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105485"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159143"
 ---
 # <a name="converting-data-types-c"></a>Veri türlerini dönüştürme (C#)
+
 Dönüştürme yöntemleri giriş nesnelerinin türünü değiştirir.
 
  LINQ sorgularındaki dönüştürme işlemleri çeşitli uygulamalarda yararlıdır. Aşağıda bazı örnekler verilmiştir:
@@ -22,6 +23,7 @@ Dönüştürme yöntemleri giriş nesnelerinin türünü değiştirir.
 - <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>,, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType> <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> Ve yöntemleri, <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> sorgu numaralandırılana kadar, sorgu yürütmeye zorlamak yerine hemen bu işlemi yapmak için kullanılabilir.
 
 ## <a name="methods"></a>Yöntemler
+
  Aşağıdaki tabloda, veri türü dönüştürmeleri gerçekleştiren standart sorgu işleci yöntemleri listelenmektedir.
 
  Bu tablodaki, adları "as" ile başlayan dönüştürme yöntemleri, kaynak koleksiyonun statik türünü değiştirir ancak onu numaralandırmaz. Adları "to" ile başlayan Yöntemler, kaynak koleksiyonu numaralandırır ve öğeleri karşılık gelen koleksiyon türüne koyar.
@@ -80,6 +82,6 @@ static void Cast()
 
 - <xref:System.Linq>
 - [Standart sorgu Işleçlerine genel bakış (C#)](./standard-query-operators-overview.md)
-- [from tümcesi](../../../language-reference/keywords/from-clause.md)
+- [from yan tümcesi](../../../language-reference/keywords/from-clause.md)
 - [LINQ sorgu Ifadeleri](../../../linq/index.md)
 - [LINQ ile ArrayList 'i sorgulama (C#)](./how-to-query-an-arraylist-with-linq.md)

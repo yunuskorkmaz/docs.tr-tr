@@ -3,14 +3,15 @@ title: Dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (C#)
 description: Bu örnek, bir dizedeki belirli bir sözcüğün tekrarlamalarını saymak Için C# dilinde bir LINQ sorgusu kullanır. Bir dizi sözcük oluşturmak için Split yöntemini kullanır.
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: e0ac7b338706c3f363fb21284e895bd1c7c48b6c
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: b354947c59747e49b5f3d099ebc3ea891fb4af90
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466124"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159078"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (C#)
+
 Bu örnek, bir dizedeki belirli bir sözcüğün tekrarlamalarını saymak için bir LINQ sorgusunun nasıl kullanılacağını gösterir. Count işlemini gerçekleştirmek için öncelikle <xref:System.String.Split%2A> yöntemin bir dizi sözcük oluşturmak için çağrıldığını unutmayın. Yöntemin performans maliyeti vardır <xref:System.String.Split%2A> . Dizedeki tek işlem kelimeleri saymaya ise <xref:System.Text.RegularExpressions.Regex.Matches%2A> bunun yerine veya yöntemlerini kullanmayı göz önünde bulundurmanız gerekir <xref:System.String.IndexOf%2A> . Ancak, performans kritik bir sorun değilse veya tümceyi zaten böldüğünüz takdirde, diğer sorgu türlerini kullanmak için tümceyi daha önce ayırdıysanız, LINQ 'ı kullanarak sözcükleri veya tümceleri de saymanız mantıklıdır.  
   
 ## <a name="example"></a>Örnek  
@@ -56,6 +57,7 @@ class CountWords
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
  `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

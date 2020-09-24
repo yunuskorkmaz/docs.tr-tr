@@ -4,12 +4,12 @@ description: Uygulamanız için başlangıç mantığını tanımlama hakkında 
 author: csharpfritz
 ms.author: jefritz
 ms.date: 02/25/2020
-ms.openlocfilehash: ea2ea458011d8351a834aa12db02e5d2bac2dc65
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267704"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158194"
 ---
 # <a name="app-startup"></a>Uygulama başlatma
 
@@ -79,7 +79,7 @@ public class Startup
 
 ASP.NET Core geri kalanı gibi, başlangıç sınıfı bağımlılık ekleme ilkeleri ile oluşturulur.  , `IConfiguration` Oluşturucuya sağlanır ve yapılandırma sırasında daha sonra erişmek üzere ortak bir özellikte oluşturulur.
 
-`ConfigureServices`ASP.NET Core tanıtılan Yöntem, Framework 'ün yerleşik bağımlılık ekleme kapsayıcısı için çeşitli ASP.NET Core Framework hizmetlerinin yapılandırılmasını sağlar.  Çeşitli `services.Add*` Yöntemler, kimlik doğrulaması, Razor sayfaları, MVC denetleyici yönlendirmesi, SignalR ve Blazor Server etkileşimleri gibi özellikleri çok sayıda diğerleri arasında etkinleştiren hizmetler ekler.  Bu yöntem, Web formlarında gerekli değildir, çünkü ASPX, ASCX, ASHX ve ASMX dosyalarını ayrıştırma ve işleme, web.config yapılandırma dosyasında ASP.NET başvuruda bulunarak tanımlanmıştı.  ASP.NET Core bağımlılık ekleme hakkında daha fazla bilgi [Çevrimiçi belgelerde](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)bulunabilir.
+`ConfigureServices`ASP.NET Core tanıtılan Yöntem, Framework 'ün yerleşik bağımlılık ekleme kapsayıcısı için çeşitli ASP.NET Core Framework hizmetlerinin yapılandırılmasını sağlar.  Çeşitli `services.Add*` Yöntemler, kimlik doğrulaması, Razor sayfaları, MVC denetleyici yönlendirmesi, SignalR ve Blazor Server etkileşimleri gibi özellikleri çok sayıda diğerleri arasında etkinleştiren hizmetler ekler.  Bu yöntem, Web formlarında gerekli değildir, çünkü ASPX, ASCX, ASHX ve ASMX dosyalarını ayrıştırma ve işleme, web.config yapılandırma dosyasında ASP.NET başvuruda bulunarak tanımlanmıştı.  ASP.NET Core bağımlılık ekleme hakkında daha fazla bilgi [Çevrimiçi belgelerde](/aspnet/core/fundamentals/dependency-injection)bulunabilir.
 
 `Configure`Yöntemi, ASP.NET Core IÇIN http işlem hattı kavramını tanıtır.  Bu yöntemde, uygulamamıza gönderilen her isteği işleyecek olan [ara yazılımı](middleware.md) yukarıdan aşağıya doğru bildiririz. Varsayılan yapılandırmada bu özelliklerin çoğu, Web Forms yapılandırma dosyaları genelinde dağınık ve artık başvuru kolaylığı için tek bir yerde.
 
@@ -103,7 +103,7 @@ Gryeniden bağlama, Gulp ve WebPack komut satırı araçları ve bunlarla ilişk
 </Target>
 ```
 
-CSS ve JavaScript dosyalarınızı yönetmek için her iki strateji hakkında daha fazla ayrıntı için, [ASP.NET Core belgelerinde bulunan statik varlıkları paket halinde ve daha az](https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification) bir şekilde bulabilirsiniz.
+CSS ve JavaScript dosyalarınızı yönetmek için her iki strateji hakkında daha fazla ayrıntı için, [ASP.NET Core belgelerinde bulunan statik varlıkları paket halinde ve daha az](/aspnet/core/client-side/bundling-and-minification) bir şekilde bulabilirsiniz.
 
 >[!div class="step-by-step"]
 >[Önceki](project-structure.md) 

@@ -3,14 +3,15 @@ title: Programlama kavramları (C#)
 description: Nesne odaklı programlama dahil olmak üzere C# dilinde programlama kavramlarını anlamak için bu bölümdeki kaynakları kullanın.
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 8b0b69abd3c23a968e34905cea93f99e044668ce
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 0e11fb3a184cb828be58cd43dde281366ed533d4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924922"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159338"
 ---
 # <a name="programming-concepts-c"></a>Programlama kavramları (C#)
+
 Bu bölümde, C# dilinde kavramların programlama açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
@@ -33,4 +34,4 @@ Bu bölümde, C# dilinde kavramların programlama açıklanmaktadır.
   
 |||  
 |---|---|  
-|[Performans İpuçları](../../../framework/performance/performance-tips.md) | Uygulamanızın performansını artırmanıza yardımcı olabilecek çeşitli temel kuralları açıklar.|
+|[Performans Ipuçları](../../../framework/performance/performance-tips.md) | Uygulamanızın performansını artırmanıza yardımcı olabilecek çeşitli temel kuralları açıklar.|

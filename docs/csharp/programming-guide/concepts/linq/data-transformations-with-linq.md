@@ -11,14 +11,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: af08938b6b8f169ded2180529c2b4aadebefef55
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2fb4166b9dbcecebf06b9dc3a780b02751dd4dc7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558816"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159156"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
+
 Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca, verileri dönüştürmek için güçlü bir araçtır. Bir LINQ sorgusu kullanarak, giriş olarak bir kaynak sırası kullanabilir ve yeni bir çıkış sırası oluşturmak için bunu birçok şekilde değiştirebilirsiniz. Sıralamayı sıralama ve gruplama yoluyla öğeleri değiştirmeden değiştirebilirsiniz. Ancak, LINQ sorgularının en güçlü özelliği de yeni türler oluşturma olanağıdır. Bu, [Select](../../../language-reference/keywords/select-clause.md) yan tümcesinde gerçekleştirilir. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
   
 - Birden çok giriş dizisini yeni bir türe sahip tek bir çıkış dizisinde birleştirin.  
@@ -32,6 +33,7 @@ Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca
  Bunlar yalnızca birkaç örnektir. Tabii ki, bu dönüşümler aynı sorgudaki çeşitli şekillerde birleştirilebilir. Ayrıca, bir sorgunun çıkış sırası yeni bir sorgu için giriş sırası olarak kullanılabilir.  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Birden Çok Girdiyi Bir Çıkış Sırasına Katma  
+
  Birden fazla giriş dizisinin öğelerini içeren bir çıkış sırası oluşturmak için bir LINQ sorgusu kullanabilirsiniz. Aşağıdaki örnek, iki bellek içi veri yapısının nasıl birleştirileceğini gösterir, ancak aynı ilkeler XML veya SQL veya veri kümesi kaynaklarından verileri birleştirmek için uygulanabilir. Aşağıdaki iki sınıf türünü varsayın:  
   
  [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
@@ -43,6 +45,7 @@ Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca
  Daha fazla bilgi için bkz. [JOIN yan tümcesi](../../../language-reference/keywords/join-clause.md) ve [Select yan tümcesi](../../../language-reference/keywords/select-clause.md).  
   
 ## <a name="selecting-a-subset-of-each-source-element"></a>Her Kaynak Öğesinin alt kümesini seçme  
+
  Kaynak dizideki her bir öğenin alt kümesini seçmek için iki temel yol vardır:  
   
 1. Kaynak öğenin yalnızca bir üyesini seçmek için, nokta işlemini kullanın. Aşağıdaki örnekte, bir `Customer` nesnesinin adlı bir dize de dahil olmak üzere birkaç ortak özellik içerdiğini varsayın `City` . Yürütüldüğünde, bu sorgu dizelerin çıkış dizisini üretir.  
@@ -62,6 +65,7 @@ Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca
  Daha fazla bilgi için bkz. [nesne ve koleksiyon başlatıcıları](../../classes-and-structs/object-and-collection-initializers.md) ve [anonim türler](../../classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Bellek İçi Nesneleri XML'e dönüştürme  
+
  LINQ sorguları, bellek içi veri yapıları, SQL veritabanları, ADO.NET veri kümeleri ve XML akışları veya belgeler arasında veri dönüştürmeyi kolaylaştırır. Aşağıdaki örnek, bellek içi veri yapısındaki nesneleri XML öğelerine dönüştürür.  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
@@ -91,6 +95,7 @@ Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca
  Daha fazla bilgi için bkz. [C# ' de xml ağaçları oluşturma (LINQ to XML)](../../../../standard/linq/create-xml-trees.md).  
   
 ## <a name="performing-operations-on-source-elements"></a>Kaynak Öğeler Üzerinde İşlemler Gerçekleştirme  
+
  Çıkış sırası, kaynak dizisinden herhangi bir öğe veya öğe özelliği içermeyebilir. Çıktı bunun yerine, kaynak öğeleri giriş bağımsız değişkenleri olarak kullanılarak hesaplanan bir değer dizisi olabilir.
 
  Aşağıdaki sorgu, dairelerin yarıçapı temsil eden bir sayı sırası alır, her yarıçap için alanı hesaplar ve Hesaplanan alanla biçimlendirilen dizeleri içeren bir çıkış sırası döndürür.

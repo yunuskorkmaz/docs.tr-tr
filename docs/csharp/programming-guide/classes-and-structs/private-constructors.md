@@ -6,15 +6,16 @@ helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: a6b86ccb870da0262bcbc516e176e00d17724f9f
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: c6048424128b462bfc56d9c7c3cf8f75cca9298d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864065"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159351"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Özel Oluşturucular (C# Programlama Kılavuzu)
-Özel Oluşturucu özel bir örnek oluşturucudur. Genellikle yalnızca statik üyeler içeren sınıflarda kullanılır. Bir sınıfta bir veya daha fazla özel Oluşturucu varsa ve ortak oluşturucu yoksa, diğer sınıflar (iç içe sınıflar hariç) bu sınıfın örneklerini oluşturamaz. Örnek:  
+
+Özel Oluşturucu özel bir örnek oluşturucudur. Genellikle yalnızca statik üyeler içeren sınıflarda kullanılır. Bir sınıfta bir veya daha fazla özel Oluşturucu varsa ve ortak oluşturucu yoksa, diğer sınıflar (iç içe sınıflar hariç) bu sınıfın örneklerini oluşturamaz. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
   
@@ -23,6 +24,7 @@ ms.locfileid: "86864065"
  Özel oluşturucular, sınıf gibi örnek alan veya yöntem olmadığında <xref:System.Math> veya bir sınıfın örneğini almak için bir yöntem çağrıldığında bir sınıfın örneklerinin oluşturulmasını engellemek için kullanılır. Sınıftaki tüm yöntemler statikse, tüm sınıfı statik hale getirmeyi düşünün. Daha fazla bilgi için bkz. [statik sınıflar ve statik sınıf üyeleri](./static-classes-and-static-class-members.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda özel Oluşturucu kullanan bir sınıf örneği verilmiştir.  
   
  [!code-csharp[csProgGuideObjects#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#12)]  

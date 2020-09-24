@@ -3,14 +3,15 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: ddbe8a862940272e4192a3f4c0abdc1f9e8b5d48
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0718f789ff4d99fb4e2651a9a704da4248cd5f49
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252080"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158441"
 ---
 # \<claimsAuthorizationManager>
+
 Gelen talepler için bir talep Yetkilendirme Yöneticisi kaydeder.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Gelen talepler için bir talep Yetkilendirme Yöneticisi kaydeder.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimsAuthorizationManager>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -31,6 +32,7 @@ Gelen talepler için bir talep Yetkilendirme Yöneticisi kaydeder.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -40,6 +42,7 @@ Gelen talepler için bir talep Yetkilendirme Yöneticisi kaydeder.
 |tür|Sınıfından türetilen özel bir tür <xref:System.Security.Claims.ClaimsAuthorizationManager> . Özniteliği belirtme hakkında daha fazla bilgi için `type` bkz. [özel tür başvuruları](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  `type`Öznitelik yoksa veya `type` öznitelik sınıfa başvuruyorsa, <xref:System.Security.Claims.ClaimsAuthenticationManager> `<claimsAuthorizationManager>` öğesi alt öğeleri almaz; ancak, öğesinden türetilmiş sınıflar <xref:System.Security.Claims.ClaimsAuthorizationManager> alt yapılandırma öğelerini tanımlayabilir.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -49,6 +52,7 @@ Gelen talepler için bir talep Yetkilendirme Yöneticisi kaydeder.
 |[\<identityConfiguration>](identityconfiguration.md)|Hizmet düzeyi kimlik ayarlarını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Sınıfı aracılığıyla sunulan varsayılan davranış <xref:System.Security.Claims.ClaimsAuthorizationManager> her zaman gelen talepleri yetkilendirir. Hiçbir `type` öznitelik belirtilmemişse veya `type` öznitelik <xref:System.Security.Claims.ClaimsAuthorizationManager> sınıfı belirtiyorsa, `<claimsAuthorizationManager>` öğesi alt öğeleri almaz. `type` <xref:System.Security.Claims.ClaimsAuthorizationManager> Özel davranışı uygulamak için sınıfından türetilmiş bir türü kaydetmek üzere özniteliğini belirtebilirsiniz. Türetilmiş sınıflar, `<claimsAuthorizationManager>` <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> Bu öğeleri işlemek için yöntemini geçersiz kılarak öğenin alt öğeleri aracılığıyla yapılandırmayı destekleyebilir. Alt öğeler için tanımlanan şema, sınıfının tasarımcısına kadar olur.  
   
 > [!IMPORTANT]
@@ -57,6 +61,7 @@ Gelen talepler için bir talep Yetkilendirme Yöneticisi kaydeder.
  Bu öğe özelliği ayarlar <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML, her biri kaynak Eylem çiftlerinden oluşan ilkeyi uygulayan, her birinin kaynak üzerinde eylemi gerçekleştirmek için sahip olması gereken taleplerin Boole birleşimlerini belirten bir talep Yetkilendirme Yöneticisi yapılandırmasını gösterir. Bu ilkeyi kullanan talep Yetkilendirme Yöneticisini uygulayan kod `ClaimsBasedAuthorization` örneğinde bulunabilir.  
   
 ```xml  

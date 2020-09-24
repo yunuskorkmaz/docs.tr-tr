@@ -2,14 +2,15 @@
 title: <security> / <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: b66b5228cab9dbc35502a13a2d0fe56ce4c6a18d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f984759fb52242bf8030a101b567c14627dd314
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738587"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158701"
 ---
 # <a name="security-of-wshttpbinding"></a>\<security> / \<wsHttpBinding>
+
 Öğesinin güvenlik yeteneklerini temsil eder [\<wsHttpBinding>](wshttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "73738587"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <security mode="Message/None/Transport/TransportWithMessageCredential">
@@ -37,6 +38,7 @@ ms.locfileid: "73738587"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -49,7 +51,7 @@ ms.locfileid: "73738587"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|Güvenlik devre dışı bırakıldı.|  
+|Hiçbiri|Güvenlik devre dışı bırakıldı.|  
 |Aktarım|Güvenlik, HTTPS kullanılarak sağlanır. Hizmetin SSL sertifikalarıyla yapılandırılması gerekir. İleti HTTPS kullanılarak tamamen güvenlidir ve hizmetin SSL sertifikası kullanılarak istemci tarafından doğrulanır. İstemci kimlik doğrulaması özniteliği aracılığıyla denetlenir `ClientCredentials` . [\<transport>](transport-of-wshttpbinding.md).|  
 |İleti|Güvenlik, SOAP iletisi güvenliği kullanılarak sağlanır. Varsayılan olarak, SOAP gövdesi şifrelenir ve Imzalanır. Bu mod, hizmet kimlik bilgilerinin, istemci bant dışı, kullanılacak algoritma paketinin ve güvenlik. Message özelliği aracılığıyla ileti gövdesine hangi koruma düzeyini uygulayamayacağı gibi çeşitli özellikler sunar. Oturum başına istemci kimlik doğrulaması gerçekleştirilir ve kimlik doğrulama sonuçları oturum süresince önbelleğe alınır.|  
 |TransportWithMessageCredential|Bu modda, HTTPS bütünlük, gizlilik ve sunucu kimlik doğrulaması sağlar ve SOAP iletisi güvenliği istemci kimlik doğrulaması sağlar. Varsayılan olarak, oturum başına istemci kimlik doğrulaması gerçekleştirilir ve kimlik doğrulama sonuçları oturum süresince önbelleğe alınır.|  
@@ -68,6 +70,7 @@ ms.locfileid: "73738587"
 |[\<wsHttpBinding>](wshttpbinding.md)|HTTP taşıma uygulamaları için güvenli bağlama.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  WSHttpBinding sınıfı, WS-* belirtimlerini uygulayan hizmetlerle birlikte çalışabilirlik için tasarlanmıştır. Bu bağlama için taşıma güvenliği HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

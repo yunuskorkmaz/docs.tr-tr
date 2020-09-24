@@ -2,12 +2,12 @@
 title: Bulutta Yerel Uygulama Paketleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native uygulama demeti
 ms.date: 05/13/2020
-ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7f1fcd448f3299a31043bf269717f7b777329c62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614350"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158129"
 ---
 # <a name="cloud-native-application-bundles"></a>Bulutta Yerel Uygulama Paketleri
 
@@ -81,9 +81,9 @@ DevOps alanında bu günlerde çok sayıda harika araç ve hatta daha fazla hari
 ## <a name="references"></a>Başvurular
 
 - [Azure DevOps](https://azure.microsoft.com/services/devops/)
-- [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)
+- [Azure Resource Manager](/azure/azure-resource-manager/management/overview)
 - [Terraform](https://www.terraform.io/)
-- [Azure CLI](https://docs.microsoft.com/cli/azure/)
+- [Azure CLI](/cli/azure/)
 
 >[!div class="step-by-step"]
 >[Önceki](infrastructure-as-code.md) 

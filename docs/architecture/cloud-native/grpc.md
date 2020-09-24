@@ -6,20 +6,20 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 4a0c88472d2b19efb2ff0f58395003b1b6409131
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 9ed6906bd388a1ddef7f97bbaac001b4274853f9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87914898"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158090"
 ---
 # <a name="grpc"></a>gRPC
 
-Şimdiye kadar bu kitapta, [REST tabanlı](https://docs.microsoft.com/azure/architecture/best-practices/api-design) iletişime odaklandık. REST 'in varlık kaynaklarına karşı CRUD tabanlı işlemleri tanımlayan esnek bir mimari stili olduğunu gördük. İstemciler, istek/yanıt iletişim modeliyle HTTP genelindeki kaynaklarla etkileşime geçin. DIĞER bir deyişle, daha yeni bir iletişim teknolojisi olan gRPC, buluta özgü topluluk genelinde inanılmaz itici güç elde etti.
+Şimdiye kadar bu kitapta, [REST tabanlı](/azure/architecture/best-practices/api-design) iletişime odaklandık. REST 'in varlık kaynaklarına karşı CRUD tabanlı işlemleri tanımlayan esnek bir mimari stili olduğunu gördük. İstemciler, istek/yanıt iletişim modeliyle HTTP genelindeki kaynaklarla etkileşime geçin. DIĞER bir deyişle, daha yeni bir iletişim teknolojisi olan gRPC, buluta özgü topluluk genelinde inanılmaz itici güç elde etti.
 
 ## <a name="what-is-grpc"></a>GRPC nedir?
 
-gRPC, yaş-eski [uzak yordam çağrısı (RPC) protokolünü gelişten](https://en.wikipedia.org/wiki/Remote_procedure_call) modern ve yüksek performanslı bir çerçevedir. Uygulama düzeyinde, gRPC istemciler ve arka uç hizmetleri arasında ileti gönderimi kolaylaştırır. Google 'dan kaynaklanan gRPC, bulutta yerel [Bilgi Işlem altyapısı (CNCF)](https://www.cncf.io/) ekosisteminin açık kaynak ve bir parçasıdır. CNCF gRPC 'yi bir [ınubating projesi](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc)olarak değerlendirir. Inubating, son kullanıcıların, üretim uygulamalarında teknolojiyi kullandığı ve projenin sağlıklı sayıda katkıda bulunanın olduğu anlamına gelir.
+gRPC, yaş-eski [uzak yordam çağrısı (RPC) protokolünü gelişten](https://en.wikipedia.org/wiki/Remote_procedure_call) modern ve yüksek performanslı bir çerçevedir. Uygulama düzeyinde, gRPC istemciler ve arka uç hizmetleri arasında ileti gönderimi kolaylaştırır. Google 'dan kaynaklanan gRPC, bulutta yerel  [Bilgi Işlem altyapısı (CNCF)](https://www.cncf.io/) ekosisteminin açık kaynak ve bir parçasıdır. CNCF gRPC 'yi bir [ınubating projesi](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc)olarak değerlendirir. Inubating, son kullanıcıların, üretim uygulamalarında teknolojiyi kullandığı ve projenin sağlıklı sayıda katkıda bulunanın olduğu anlamına gelir.
 
 Tipik bir gRPC istemci uygulaması, bir iş işlemi uygulayan yerel, işlem içi bir işlev sergilecektir. Bu yerel işlev, ' ın altında, uzak bir makinede başka bir işlevi çağırır. Yerel bir çağrı olarak görünen, uzak bir hizmete bir saydam işlem dışı çağrısı olur. RPC sıhhi tesisat, bilgisayarlar arasında noktadan noktaya ağ iletişimini, Serileştirmeyi ve yürütmeyi soyutlar.
 
@@ -37,7 +37,7 @@ gRPC, Aktarım Protokolü için HTTP/2 kullanır. HTTP 1,1 ile uyumlu olmakla bi
 - Zaman uyumsuz akış büyük veri kümelerine yönelik istekleri ve yanıtları etkinleştiren yerleşik akış.
 - Ağ kullanımını azaltan üstbilgi sıkıştırması.
 
-gRPC hafif ve yüksek performanslı. % 60-80 daha küçük iletilerle JSON serileştirmesine kadar daha hızlı olabilir. Microsoft [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) ayrıştırmasına göre, GRPC performansı, yüksek oranda Iyileştirilmiş [NetTcp bağlamalarının](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)hızını ve verimliliğini aşmaktadır. Microsoft Stack ' i tercih eden NetTCP 'nin aksine gRPC platformlar arası bir platformdur.
+gRPC hafif ve yüksek performanslı. % 60-80 daha küçük iletilerle JSON serileştirmesine kadar daha hızlı olabilir. Microsoft [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) ayrıştırmasına göre, GRPC performansı, yüksek oranda Iyileştirilmiş [NetTcp bağlamalarının](/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)hızını ve verimliliğini aşmaktadır. Microsoft Stack ' i tercih eden NetTCP 'nin aksine gRPC platformlar arası bir platformdur.
 
 ## <a name="protocol-buffers"></a>Protokol Arabellekleri
 
@@ -51,7 +51,7 @@ Prototiparabelleği derleyicisi olan proto dosyasını kullanarak, `protoc` hede
 
 Çalışma zamanında, her ileti standart bir Prototipme temsili olarak serileştirilir ve istemci ile uzak hizmet arasında değiş tokuş yapılır. JSON veya XML 'den farklı olarak, prototipli mesajlar derlenmiş ikili bayt olarak serileştirilir.
 
-Microsoft mimari sitesinden sunulan [WCF geliştiricileri Için GRPC](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/)Rehberi, GRPC ve protokol arabelleklerinin ayrıntılı kapsamını sağlar.
+Microsoft mimari sitesinden sunulan [WCF geliştiricileri Için GRPC](../grpc-for-wcf-developers/index.md)Rehberi, GRPC ve protokol arabelleklerinin ayrıntılı kapsamını sağlar.
 
 ## <a name="grpc-support-in-net"></a>.NET ' te gRPC desteği
 
@@ -99,7 +99,7 @@ Microsoft 'un [kapsayıcılarındaki](https://github.com/dotnet-architecture/eSh
 
 **Şekil 4-22**. Kapsayıcılarda eShop için arka uç mimarisi
 
-Önceki şekilde, birden çok API ağ geçidini açığa çıkararak eShop 'nin ön uç (BFF) [Için arka](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) ucunu nasıl atdığını aklınızda bir yere aklınızda Bu bölümün önceki kısımlarında BFF modelini tartıştık. Web-alışveriş API ağ geçidi ve arka uç alışverişi mikro hizmetleri arasında yer alan toplayıcı mikro hizmetine (gri) yakın bir ilgi ödeyin. Toplayıcı bir istemciden tek bir istek alır, bunu çeşitli mikro hizmetlere dağıtır, sonuçları toplar ve bunları istek istemcisine geri gönderir. Bu işlemler genellikle anında yanıt üretmek için zaman uyumlu iletişim gerektirir. EShop 'de, Şekil 4-23 ' de gösterildiği gibi, toplayıcıdan arka uç çağrıları gRPC kullanılarak gerçekleştirilir.
+Önceki şekilde, birden çok API ağ geçidini açığa çıkararak eShop 'nin ön uç (BFF) [Için arka](/azure/architecture/patterns/backends-for-frontends) ucunu nasıl atdığını aklınızda bir yere aklınızda Bu bölümün önceki kısımlarında BFF modelini tartıştık. Web-alışveriş API ağ geçidi ve arka uç alışverişi mikro hizmetleri arasında yer alan toplayıcı mikro hizmetine (gri) yakın bir ilgi ödeyin. Toplayıcı bir istemciden tek bir istek alır, bunu çeşitli mikro hizmetlere dağıtır, sonuçları toplar ve bunları istek istemcisine geri gönderir. Bu işlemler genellikle anında yanıt üretmek için zaman uyumlu iletişim gerektirir. EShop 'de, Şekil 4-23 ' de gösterildiği gibi, toplayıcıdan arka uç çağrıları gRPC kullanılarak gerçekleştirilir.
 
 ![Kapsayıcılar üzerinde eShop içinde gRPC](./media/grpc-implementation.png)
 
