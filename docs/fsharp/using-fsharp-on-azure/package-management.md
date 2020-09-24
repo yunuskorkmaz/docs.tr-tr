@@ -1,14 +1,15 @@
 ---
-title: Azure için ile F# paket yönetimi kullanma
-description: Azure bağımlılıklarını yönetmek F# için paket veya NuGet kullanma
+title: 'Azure için F # ile Paket Yönetimi kullanma'
+description: 'F # Azure bağımlılıklarını yönetmek için paket veya NuGet kullanma'
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 4aa32ace91f30d0e43b9c40067f5f0f456cc4069
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: 011a363b264079599e8b7d402fe9896045b1fe04
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214219"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100119"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# Azure Bağımlılıkları için Paket Yönetimi
 
@@ -16,7 +17,7 @@ Paket Yöneticisi kullandığınızda Azure geliştirme için paketleri almak ko
 
 ## <a name="using-paket"></a>Paket kullanımı
 
-Bağımlılık yöneticiniz olarak [paket](https://fsprojects.github.io/Paket/) kullanıyorsanız, Azure bağımlılıklarını eklemek için `paket.exe` aracını kullanabilirsiniz. Örneğin:
+Bağımlılık yöneticiniz olarak [paket](https://fsprojects.github.io/Paket/) kullanıyorsanız, `paket.exe` Azure bağımlılıklarını eklemek için aracını kullanabilirsiniz. Örneğin:
 
 ```console
 > paket add nuget WindowsAzure.Storage
@@ -28,7 +29,7 @@ Veya, platformlar arası .NET geliştirme için [mono](https://www.mono-project.
 > mono paket.exe add nuget WindowsAzure.Storage
 ```
 
-Bu, geçerli `WindowsAzure.Storage` dizindeki proje için paket bağımlılıkları kümesine eklenir, `paket.dependencies` dosyayı değiştirebilir ve paketi indirebilir. Daha önce bağımlılıkları ayarladıysanız veya başka bir geliştirici tarafından bağımlılıkların ayarlandığı bir proje ile çalışıyorsanız, bağımlılıkları yerel olarak aşağıdaki gibi çözümleyebilir ve yükleyebilirsiniz:
+Bu, `WindowsAzure.Storage` geçerli dizindeki proje için paket bağımlılıkları kümesine eklenir, `paket.dependencies` dosyayı değiştirebilir ve paketi indirebilir. Daha önce bağımlılıkları ayarladıysanız veya başka bir geliştirici tarafından bağımlılıkların ayarlandığı bir proje ile çalışıyorsanız, bağımlılıkları yerel olarak aşağıdaki gibi çözümleyebilir ve yükleyebilirsiniz:
 
 ```console
 > paket install
@@ -66,7 +67,7 @@ Ya da, mono geliştirme için:
 > mono nuget.exe install WindowsAzure.Storage -ExcludeVersion
 ```
 
-Bu, geçerli `WindowsAzure.Storage` dizindeki proje için paket bağımlılıkları kümesine ekler ve paketi indirir. Daha önce bağımlılıkları ayarladıysanız veya başka bir geliştirici tarafından bağımlılıkların ayarlandığı bir proje ile çalışıyorsanız, bağımlılıkları yerel olarak aşağıdaki gibi çözümleyebilir ve yükleyebilirsiniz:
+Bu, `WindowsAzure.Storage` geçerli dizindeki proje için paket bağımlılıkları kümesine ekler ve paketi indirir. Daha önce bağımlılıkları ayarladıysanız veya başka bir geliştirici tarafından bağımlılıkların ayarlandığı bir proje ile çalışıyorsanız, bağımlılıkları yerel olarak aşağıdaki gibi çözümleyebilir ve yükleyebilirsiniz:
 
 ```console
 > nuget restore
@@ -92,7 +93,7 @@ Ya da, mono geliştirme için:
 
 ## <a name="referencing-assemblies"></a>Başvurulan Derlemeler
 
-F# Komut betiğinizdeki paketleri kullanabilmeniz için, bir `#r` yönergesi kullanarak paketlere dahil olan derlemelere başvurmanız gerekir. Örneğin:
+Paketlerinizi F # betiğinizdeki kullanabilmeniz için, bir yönergesi kullanarak paketlere dahil olan derlemelere başvurmanız gerekir `#r` . Örneğin:
 
 ```fsharp
 > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
