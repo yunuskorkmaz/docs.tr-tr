@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 5d6656ab77f7ad0f7366a230d98b95cff5b2677b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 93f590e1c177adf541baca85a48fee5f9eb8d1d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854439"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203637"
 ---
 # <a name="initialization-expressions"></a>Başlatma İfadeleri
+
 Bir başlatma ifadesi yeni bir nesnesi başlatır. En yeni C# 3,0 ve Visual Basic 9,0 başlatma ifadeleri dahil olmak üzere çoğu başlatma ifadesi desteklenir. Aşağıdaki türler LINQ to Entities bir sorgu tarafından başlatılabilir ve döndürülebilir:  
   
 - Sıfır veya daha fazla yazılmış varlık nesnesi koleksiyonu veya kavramsal modelde tanımlanan karmaşık türlerin projeksiyonu.  

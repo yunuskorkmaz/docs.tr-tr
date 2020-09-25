@@ -2,14 +2,15 @@
 title: <httpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: b3558db6018d79f0fad27ff28657bfadb5637467
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 14d774ba7711c9ce60fb1db5a2b050c310550ec1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736770"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203897"
 ---
 # \<httpTransport>
+
 Özel bağlama için SOAP iletileri iletmek üzere bir HTTP aktarımı belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "73736770"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpTransport>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <httpTransport allowCookies="Boolean"
@@ -37,6 +38,7 @@ ms.locfileid: "73736770"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -57,6 +59,7 @@ ms.locfileid: "73736770"
 |useDefaultWebProxy|Kullanıcıya özel ayarlar yerine makine genelindeki proxy ayarlarının kullanılıp kullanılmayacağını belirten bir Boole değeri. Varsayılan değer: `true`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -66,6 +69,7 @@ ms.locfileid: "73736770"
 |[\<binding>](bindings.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `httpTransport`Öğesi, HTTP aktarım protokolünü uygulayan özel bir bağlama oluşturmak için başlangıç noktasıdır. HTTP, birlikte çalışabilirlik amacıyla kullanılan birincil aktarımdır. Bu taşıma, diğer WCF olmayan Web Hizmetleri yığınlarıyla birlikte çalışabilirliği sağlamak için Windows Communication Foundation (WCF) tarafından desteklenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

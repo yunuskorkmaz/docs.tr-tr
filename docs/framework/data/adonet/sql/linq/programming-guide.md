@@ -2,19 +2,21 @@
 title: Programlama Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 0746d14d7be0b67bc9966ae0c5a4af0a3226c1e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 50c4370e23faf8400eb23f1e8c0cc74cd4dce80e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546568"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203572"
 ---
 # <a name="programming-guide"></a>Programlama Kılavuzu
+
 Bu bölüm, nesne modelinizi oluşturma ve kullanma hakkında bilgi içerir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] . Visual Studio kullanıyorsanız, aynı görevlerin birçoğunu gerçekleştirmek için Nesne İlişkisel Tasarımcısı de kullanabilirsiniz.  
   
  Ayrıca, belirli sorunlar için Microsoft Docs arayabilir ve uzmanlarla ayrıntılı olarak daha karmaşık konular tartışabilirsiniz [LINQ forumuna](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)katılabilirsiniz. Son olarak, [LINQ to SQL: Ilişkisel veri teknik incelemesi için .NET dil tümleşik sorgusu](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , Visual Basic ve C# kod örnekleriyle birlikte tamamlanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Nesne Modeli Oluşturma](creating-the-object-model.md)  
  Bir nesne modelinin nasıl oluşturulacağını açıklar.  
   
@@ -34,6 +36,7 @@ Bu bölüm, nesne modelinizi oluşturma ve kullanma hakkında bilgi içerir [!IN
  , Daha gelişmiş kullanıcılar için eşzamanlılık çakışma çözümü, yeni veritabanları oluşturma ve daha fazlası gibi ek öğeler içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [LINQ to SQL](index.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Teknolojiyi açıklayan ve özellikleri gösteren konuların bağlantılarını sağlar.  
   

@@ -1,35 +1,39 @@
 ---
-title: ISNULL (Varlık SQL)
+title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: b3fc2484e80b637ed5841375985f7bae476bbbf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3360ad4ca7306a8cc1b7d6948204f825ff9a93c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150206"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203624"
 ---
-# <a name="isnull-entity-sql"></a>ISNULL (Varlık SQL)
+# <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
+
 Sorgu ifadesinin null olup olmadığını belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```sql  
 expression IS [ NOT ] NULL  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
+
  `expression`  
- Geçerli bir sorgu ifadesi. Koleksiyon olamaz, koleksiyon üyeleri veya koleksiyon türü özelliklerine sahip bir kayıt türü olamaz.  
+ Herhangi bir geçerli sorgu ifadesi. Koleksiyon, koleksiyon üyeleri veya koleksiyon türü özellikleri olan bir kayıt türü olamaz.  
   
  NOT  
- EDM'i etkisiz erdirdi. IS NULL boolean sonucu.  
+ EDM 'yi geçersiz kılar. Boolean sonucu NULL.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`null `expression` dönerse; aksi `false`takdirde, .  
+
+ `true` Eğer `expression` null döndürürse, tersi durumda `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dış `IS NULL` birleştirme öğesinin null olup olmadığını belirlemek için kullanın:  
+
+ `IS NULL`Dış birleştirmenin öğesinin null olup olmadığını anlamak için kullanın:  
   
 ```sql  
 select c
@@ -38,30 +42,31 @@ select c
       where o is not null and o.OrderQuantity = @x  
 ```  
   
- Bir `IS NULL` üyenin gerçek bir değeri olup olmadığını belirlemek için kullanın:  
+ `IS NULL`Üyenin gerçek bir değere sahip olup olmadığını anlamak için kullanın:  
   
 ```sql  
 select c from LOB.Customer as c where c.DOB is not null  
 ```  
   
- Aşağıdaki tablo, bazı `IS NULL` desenler üzerinde davranışgösterir. Sağlayıcı çağrılmadan önce tüm özel durumlar istemci tarafından atılır:  
+ Aşağıdaki tabloda `IS NULL` bazı desenlerin üzerinde davranış gösterilmektedir. Sağlayıcı çağrılmadan önce istemci tarafında tüm özel durumlar atılır:  
   
 |Desen|Davranış|  
 |-------------|--------------|  
-|null NULL|`true` döndürür.|  
-|TREAT (null AS EntityType) IS NULL|`true` döndürür.|  
-|TREAT (null AS ComplexType) IS NULL|Bir hata atar.|  
-|TREAT (null AS RowType) IS NULL|Bir hata atar.|  
-|EntityType IS NULL|İade `true` `false`veya .|  
-|ComplexType IS NULL|Bir hata atar.|  
-|Satır Tipi NULL|Bir hata atar.|  
+|NULL NULL|`true` döndürür.|  
+|DAVRAN (EntityType olarak null) NULL|`true` döndürür.|  
+|DAVRAN (ComplexType olarak null) NULL|Bir hata oluşturur.|  
+|DEĞERLENDIRIN (RowType olarak null) NULL|Bir hata oluşturur.|  
+|EntityType NULL|`true`Veya döndürür `false` .|  
+|ComplexType NULL|Bir hata oluşturur.|  
+|RowType NULL|Bir hata oluşturur.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, sorgu ifadesinin null olup olmadığını belirlemek için NULL işleci Değİl'i kullanır. Sorgu AdventureWorks Satış Modeli dayanmaktadır. Bu sorguyı derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
+
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir sorgu ifadesinin null olmadığını anlamak IÇIN null olmayan bir işleç kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [YapısalTürü Sonuçları Döndüren Bir Sorguyu Yürütme: Nasıl Yapılır'daki](../how-to-execute-a-query-that-returns-structuraltype-results.md)yordamı izleyin.  
+1. [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-structuraltype-results.md)bölümündeki yordamı izleyin.  
   
-2. Aşağıdaki sorguyu bağımsız değişken `ExecuteStructuralTypeQuery` olarak yönteme geçirin:  
+2. Aşağıdaki sorguyu yöntemine bir bağımsız değişken olarak geçirin `ExecuteStructuralTypeQuery` :  
   
  [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   

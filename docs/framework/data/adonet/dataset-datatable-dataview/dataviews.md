@@ -2,14 +2,15 @@
 title: DataViews
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: fe6adac35c157b454f5e33d3526196d4f408fd89
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c5692fcfd1863642bcdf87cbd495d793bce0cbe4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546874"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203715"
 ---
 # <a name="dataviews"></a>DataViews
+
 <xref:System.Data.DataView> <xref:System.Data.DataTable> , Genellikle veri bağlama uygulamalarında kullanılan bir özellik olan, içinde depolanan verilerin farklı görünümlerini oluşturmanızı sağlar. Bir **DataView**kullanarak verileri farklı sıralama siparişleriyle bir tabloda kullanıma sunabilirsiniz ve verileri satır durumuna göre veya bir filtre ifadesine göre filtreleyebilirsiniz.
 
  Bir **DataView** , temel alınan **DataTable**'daki verilerin dinamik bir görünümünü sağlar: içerik, sıralama ve üyelik, gerçekleşen değişiklikleri yansıtır. Bu davranış, belirli bir **Select** **DataTable** <xref:System.Data.DataRow> filtre ve/veya sıralama düzeni temelinde bir tablodan dizi döndüren DataTable 'ın Select yönteminden farklıdır: Bu içerik temeldeki tablodaki değişiklikleri yansıtır, ancak üyeliği ve sıralaması statik kalır. **DataView** 'ın dinamik özellikleri, veri bağlama uygulamaları için ideal hale getirir.
@@ -19,6 +20,7 @@ ms.locfileid: "90546874"
  Bir <xref:System.Data.DataView.DataViewManager%2A> **veri kümesindeki**tüm tablolar için görünüm ayarlarını yönetmek üzere bir kullanabilirsiniz. **DataViewManager** , her tablo için varsayılan görünüm ayarlarını yönetmenin kolay bir yolunu sağlar. Bir denetimi bir **veri kümesinin**birden fazla tablosuna bağlarken **DataViewManager** 'a bağlama ideal seçenektir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
+
  [DataView oluşturma](creating-a-dataview.md) **DataTable**Için bir **DataView** oluşturmayı açıklar.
 
  [Verileri sıralama ve filtreleme](sorting-and-filtering-data.md) Bir **DataView** özelliklerinin belirli filtre ölçütlerine uyan veri satırlarının alt kümelerini döndürme veya belirli bir sıralama düzeninde verileri döndürme için nasıl ayarlanacağını açıklar.
@@ -36,6 +38,7 @@ ms.locfileid: "90546874"
  [DataView yönetimi](managing-dataviews.md) Bir **veri kümesindeki**her tablo için **DataView** ayarlarını yönetmek üzere **DataViewManager** 'ın nasıl kullanılacağını açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
+
  [ASP.NET Web uygulamaları](/previous-versions/655cec97(v=vs.100)) ASP.NET uygulamaları, Web Forms ve Web hizmetleri oluşturmak için genel bakış ve ayrıntılı, adım adım yordamlar sağlar.
 
  [Windows uygulamaları](/previous-versions/ms184421(v=vs.100)) Windows Forms ve konsol uygulamalarıyla çalışma hakkında ayrıntılı bilgi sağlar.

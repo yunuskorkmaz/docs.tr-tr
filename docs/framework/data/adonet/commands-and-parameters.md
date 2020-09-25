@@ -3,19 +3,21 @@ title: Komutlar ve Parametreler
 description: Komutları çalıştırmak ve bir veri kaynağından sonuçları döndürmek için her bir .NET Framework veri sağlayıcısı için komut nesnelerini nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
-ms.openlocfilehash: c0baec4d6c3984cb50178c3aa7f9ed3878055bb6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fb7b86dc3c826805e0e1dcec4764be2e484ec40b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287148"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203832"
 ---
 # <a name="commands-and-parameters"></a>Komutlar ve Parametreler
+
 Bir veri kaynağına bağlantı kurulduktan sonra, komutları yürütebilir ve sonuçları bir nesne kullanarak veri kaynağından döndürebilirsiniz <xref:System.Data.Common.DbCommand> . Üzerinde çalıştığınız .NET Framework veri sağlayıcısı için komut oluşturucularından birini kullanarak bir komut oluşturabilirsiniz. Oluşturucular, veri kaynağı, nesne veya nesne üzerinde yürütülecek bir SQL deyimsi gibi isteğe bağlı bağımsız değişkenler alabilir <xref:System.Data.Common.DbConnection> <xref:System.Data.Common.DbTransaction> . Bu nesneleri komutun özellikleri olarak da yapılandırabilirsiniz. Ayrıca, bir nesnenin yöntemini kullanarak belirli bir bağlantı için bir komut oluşturabilirsiniz <xref:System.Data.Common.DbConnection.CreateCommand%2A> `DbConnection` . Komutu tarafından yürütülen SQL deyimleri özelliği kullanılarak yapılandırılabilir <xref:System.Data.Common.DbCommand.CommandText%2A> .  
   
  .NET Framework eklenen her .NET Framework veri sağlayıcısının bir `Command` nesnesi vardır. OLE DB için .NET Framework Veri Sağlayıcısı bir nesne içerir, Veri Sağlayıcısı .NET Framework SQL Server bir nesne içerir, ODBC için .NET Framework veri sağlayıcısı bir nesne içerir <xref:System.Data.OleDb.OleDbCommand> <xref:System.Data.SqlClient.SqlCommand> <xref:System.Data.Odbc.OdbcCommand> ve Oracle için .NET Framework veri sağlayıcısı bir <xref:System.Data.OracleClient.OracleCommand> nesnesi içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Komut Yürütme](executing-a-command.md)  
  ADO.NET `Command` nesnesini ve bir veri kaynağına karşı sorguları ve komutları yürütmek için nasıl kullanılacağını açıklar.  
   

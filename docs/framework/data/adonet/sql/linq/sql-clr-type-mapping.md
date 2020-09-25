@@ -2,14 +2,15 @@
 title: SQL-CLR Tür Eşlemesi
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 6d0a1bca5baade1bab6042bb7b7ab8e2d1353360
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 313fd81bd84a99e4a2d32925a7d3bb4776f8472b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555607"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203546"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR Tür Eşlemesi
+
 LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz programlama dilinde ifade edilen bir nesne modeliyle eşlenir. Uygulama çalıştığında, LINQ to SQL nesne modelindeki dil ile tümleşik sorguları SQL 'e çevirir ve yürütmek üzere veritabanına gönderir. Veritabanı sonuçları döndürdüğünde, LINQ to SQL sonuçları kendi programlama dilinizde birlikte çalışleyebileceğiniz nesnelere geri çevirir.  
   
  Nesne modeli ve veritabanı arasında veri çevirmek için, bir *tür eşlemesinin* tanımlanması gerekir. LINQ to SQL, her bir ortak dil çalışma zamanı (CLR) türünü belirli bir SQL Server türü ile eşleştirmek için bir tür eşlemesi kullanır. Öznitelik tabanlı eşleme ile nesne modeli içinde, tür eşlemelerini ve veritabanı yapısı ve tablo ilişkileri gibi diğer eşleme bilgilerini tanımlayabilirsiniz. Alternatif olarak, eşleme bilgilerini bir dış eşleme dosyası ile nesne modeli dışında belirtebilirsiniz. Daha fazla bilgi için bkz. [öznitelik tabanlı eşleme](attribute-based-mapping.md) ve [dış eşleme](external-mapping.md).  
@@ -35,13 +36,17 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
 - [Çeşitli eşleme](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>
+
 ## <a name="default-type-mapping"></a>Varsayılan tür eşleme  
+
  Nesne modeli veya dış eşleme dosyasını Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) veya SQLMetal komut satırı aracı ile otomatik olarak oluşturabilirsiniz. Bu araçların varsayılan tür eşlemeleri, SQL Server veritabanı içindeki sütunlara eşlemek için hangi CLR türlerinin seçili olduğunu tanımlar. Bu araçları kullanma hakkında daha fazla bilgi için bkz. [nesne modeli oluşturma](creating-the-object-model.md).  
   
  <xref:System.Data.Linq.DataContext.CreateDatabase%2A>Yöntemi, nesne modelindeki veya dış eşleme dosyasındaki eşleme bilgilerine göre SQL Server veritabanı oluşturmak için de kullanabilirsiniz. Yöntemi için varsayılan tür eşlemeleri, <xref:System.Data.Linq.DataContext.CreateDatabase%2A> nesne MODELINDEKI clr türleriyle eşlemek için hangi SQL Server sütun türlerinin oluşturulacağını tanımlar. Daha fazla bilgi için bkz. [nasıl yapılır: dinamik olarak veritabanı oluşturma](how-to-dynamically-create-a-database.md).  
   
 <a name="BehaviorMatrix"></a>
+
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Tür eşleme çalışma zamanı davranış matrisi  
+
  Aşağıdaki diyagramda, veriler veritabanından alındığında veya veritabanına kaydedildiğinde belirli tür eşleştirmelerin beklenen çalışma zamanı davranışı gösterilmektedir. Serileştirme hariç LINQ to SQL, bu matriste belirtilmemiş herhangi bir CLR veya SQL Server veri türü arasındaki eşlemeyi desteklemez. Serileştirme desteği hakkında daha fazla bilgi için bkz. [Ikili serileştirme](#BinarySerialization).  
 
 ![SQL CLR veri türüne SQL Server eşleme tablosu](./media/sql-clr-type-mapping.png)
@@ -50,10 +55,13 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
 > Bazı tür eşlemelerde veya veritabanına çevrilirken taşma veya veri kaybı özel durumları oluşabilir.  
   
 ### <a name="custom-type-mapping"></a>Özel tür eşleme  
+
  LINQ to SQL ile, O/R Tasarımcısı, SQLMetal ve yöntemi tarafından kullanılan varsayılan tür eşlemelerle sınırlı değildir <xref:System.Data.Linq.DataContext.CreateDatabase%2A> . Özel tür eşlemelerini, açıkça bir DBML dosyasında belirterek oluşturabilirsiniz. Ardından, nesne modeli kodu ve eşleme dosyası oluşturmak için bu DBML dosyasını kullanabilirsiniz. Daha fazla bilgi için bkz. [SQL-CLR özel tür eşlemeleri](sql-clr-custom-type-mappings.md).  
   
 <a name="BehaviorDiffs"></a>
+
 ## <a name="behavior-differences-between-clr-and-sql-execution"></a>CLR ve SQL yürütme arasındaki davranış farklılıkları  
+
  CLR ve SQL Server arasındaki duyarlık ve yürütme farklılıkları nedeniyle, hesaplamalarınızı gerçekleştirdiğiniz yere bağlı olarak farklı sonuçlar alabilir veya farklı davranışlar yaşayabilirsiniz. LINQ to SQL sorgularda gerçekleştirilen hesaplamalar aslında Transact-SQL ' e çevrilir ve sonra SQL Server veritabanında yürütülür. LINQ to SQL sorgularının dışında gerçekleştirilen hesaplamalar CLR bağlamı içinde yürütülür.  
   
  Örneğin, CLR ve SQL Server arasındaki davranıştaki bazı farklılıklar aşağıda verilmiştir:  
@@ -65,7 +73,9 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
 - SQL Server, CLR 'nin bazı eşlenmiş işlevleri için farklı değerler döndürebilir. Örneğin eşitlik işlevleri farklı olur çünkü SQL Server iki dizeyi yalnızca sondaki beyaz boşluğa farklıysa eşit olacak şekilde değerlendirir; Ancak CLR bunları eşit değil olarak kabul eder.  
   
 <a name="EnumMapping"></a>
+
 ## <a name="enum-mapping"></a>Sabit listesi eşleme  
+
  LINQ to SQL, CLR <xref:System.Enum?displayProperty=nameWithType> türünün SQL Server türlerine eşlemesini iki şekilde destekler:  
   
 - SQL sayısal türlerine eşleme ( `TINYINT` , `SMALLINT` ,, `INT` `BIGINT` )  
@@ -86,7 +96,9 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
  <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>Yöntemi BIR clr türünü eşlemek için sayısal türde BIR SQL sütunu oluşturur <xref:System.Enum?displayProperty=nameWithType> .  
   
 <a name="NumericMapping"></a>
+
 ## <a name="numeric-mapping"></a>Sayısal eşleme  
+
  LINQ to SQL, çok sayıda CLR ve SQL Server sayısal türü eşlemenizi sağlar. Aşağıdaki tabloda, veritabanınıza göre bir nesne modeli veya dış eşleme dosyası oluştururken O/R Tasarımcısı ve SQLMetal Select CLR türleri gösterilmektedir.  
   
 |SQL Server türü|O/R Tasarımcısı ve SQLMetal tarafından kullanılan varsayılan CLR türü eşleme|  
@@ -122,12 +134,15 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
  Seçebileceğiniz birçok farklı sayısal eşleşme vardır ancak bazıları taşma veya veritabanına çevrilirken taşma ya da veri kaybı özel durumlarına neden olabilir. Daha fazla bilgi için, [tür eşleme çalışma zamanı davranış matrisine](#BehaviorMatrix)bakın.  
   
 ### <a name="decimal-and-money-types"></a>Ondalık ve para türleri  
+
  SQL Server türünün varsayılan duyarlığı `DECIMAL` (ondalık noktanın sol ve sağ tarafında 18 ondalık basamak), <xref:System.Decimal?displayProperty=nameWithType> Varsayılan olarak EŞLEŞTIRILDIĞI CLR türünün duyarlığından çok daha küçüktür. Bu, verileri veritabanına kaydettiğinizde duyarlık kaybına neden olabilir. Ancak, SQL Server `DECIMAL` türü 29 ' dan fazla duyarlıkta yapılandırılmışsa yalnızca ters durum oluşabilir. SQL Server bir `DECIMAL` tür CLR 'den daha büyük bir duyarlıkla yapılandırıldığında <xref:System.Decimal?displayProperty=nameWithType> , verileri veritabanından alırken duyarlık kaybı oluşabilir.  
   
  `MONEY` `SMALLMONEY` Clr türü ile de eşlenmiş olan SQL Server ve türler, varsayılan olarak <xref:System.Decimal?displayProperty=nameWithType> daha küçük bir duyarlığa sahiptir ve bu, verileri veritabanına kaydederken taşma veya veri kaybı özel durumlarına neden olabilir.  
   
 <a name="TextMapping"></a>
+
 ## <a name="text-and-xml-mapping"></a>Metin ve XML eşleme  
+
  LINQ to SQL ile eşleyebileceğiniz çok sayıda metin tabanlı ve XML türü de vardır. Aşağıdaki tabloda, veritabanınıza göre bir nesne modeli veya dış eşleme dosyası oluştururken O/R Tasarımcısı ve SQLMetal Select CLR türleri gösterilmektedir.  
   
 |SQL Server türü|O/R Tasarımcısı ve SQLMetal tarafından kullanılan varsayılan CLR türü eşleme|  
@@ -152,6 +167,7 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
  Seçebileceğiniz birçok farklı metin tabanlı ve XML eşlemesi vardır, ancak bazıları veritabanına veya veritabanından çevrilirken taşma veya veri kaybı özel durumlarına neden olabilir. Daha fazla bilgi için, [tür eşleme çalışma zamanı davranış matrisine](#BehaviorMatrix)bakın.  
   
 ### <a name="xml-types"></a>XML türleri  
+
  SQL Server `XML` veri türü Microsoft SQL Server 2005 ' den başlayarak kullanılabilir. SQL Server `XML` veri türünü <xref:System.Xml.Linq.XElement> , veya ile eşleyebilirsiniz <xref:System.Xml.Linq.XDocument> <xref:System.String> . Sütun, okunamayan XML parçalarını depoluyorsa <xref:System.Xml.Linq.XElement> , <xref:System.String> çalışma zamanı hatalarından kaçınmak için sütunun ile eşlenmesi gerekir. Aşağıdakiler dahil olmak üzere eşlenmesi gereken XML parçaları <xref:System.String> :  
   
 - Bir dizi XML öğesi  
@@ -165,13 +181,16 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
  <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XDocument> [Tür eşleme çalışma zamanı davranışı matrisinde](#BehaviorMatrix)gösterildiği gibi SQL Server eşleyebilir, ancak <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> bu tür için yöntemin varsayılan SQL Server tür eşlemesi yoktur.  
   
 ### <a name="custom-types"></a>Özel türler  
+
  Bir sınıf `Parse()` ve uygularsa `ToString()` , nesneyi HERHANGI bir SQL metin türüyle (,,,, `CHAR` , `NCHAR` `VARCHAR` `NVARCHAR` `TEXT` `NTEXT` ,) eşleyebilirsiniz `XML` . Nesnesi, tarafından döndürülen değer tarafından `ToString()` eşlenen veritabanı sütununa gönderilerek veritabanında depolanır. Nesnesi, `Parse()` veritabanı tarafından döndürülen dizeyi çağırarak yeniden oluşturulur.  
   
 > [!NOTE]
 > LINQ to SQL, kullanılarak Serileştirmeyi desteklemez <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType> .  
   
 <a name="DateMapping"></a>
+
 ## <a name="date-and-time-mapping"></a>Tarih ve saat eşleme  
+
  LINQ to SQL, birçok SQL Server Tarih ve saat türünü eşleyebilirsiniz. Aşağıdaki tabloda, veritabanınıza göre bir nesne modeli veya dış eşleme dosyası oluştururken O/R Tasarımcısı ve SQLMetal Select CLR türleri gösterilmektedir.  
   
 |SQL Server türü|O/R Tasarımcısı ve SQLMetal tarafından kullanılan varsayılan CLR türü eşleme|  
@@ -197,17 +216,21 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
 > SQL Server türler, `DATETIME2` , `DATETIMEOFFSET` `DATE` ve `TIME` Microsoft SQL Server 2008 ' den başlayarak kullanılabilir. LINQ to SQL, .NET Framework sürüm 3,5 SP1 ile başlayarak bu yeni türlere eşlemeyi destekler.  
   
 ### <a name="systemdatetime"></a>System. DateTime  
+
  CLR türünün aralığı ve duyarlığı, <xref:System.DateTime?displayProperty=nameWithType> `DATETIME` Yöntem için varsayılan tür eşleme olan SQL Server türünün aralığından ve duyarlığından daha büyüktür <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> . Kullanım aralığı dışındaki tarihlerle ilgili özel durumların önlenmesine yardımcı olmak için, `DATETIME` `DATETIME2` Microsoft SQL Server 2008 ' den başlayarak kullanılabilir. `DATETIME2` CLR 'nin aralığıyla ve duyarlığına göre eşleşir <xref:System.DateTime?displayProperty=nameWithType> .  
   
  SQL Server tarihleri <xref:System.TimeZone> , clr 'de zengin olarak desteklenen bir özellik olan kavramı değildir. <xref:System.TimeZone> değerler, özgün bilgilerden bağımsız olarak, dönüştürme yapılmadan veritabanına olarak kaydedilir <xref:System.TimeZone> <xref:System.DateTimeKind> . <xref:System.DateTime>Değerler veritabanından alındığında, ' nin değeri ' a ' olan olarak yüklenir <xref:System.DateTime> <xref:System.DateTimeKind> <xref:System.DateTimeKind.Unspecified> . Desteklenen yöntemler hakkında daha fazla bilgi için <xref:System.DateTime?displayProperty=nameWithType> bkz. [System. DateTime yöntemleri](system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System. TimeSpan  
+
  Microsoft SQL Server 2008 ve .NET Framework 3,5 SP1, CLR <xref:System.TimeSpan?displayProperty=nameWithType> türünü SQL Server türüyle eşlemenizi sağlar `TIME` . Ancak, CLR 'nin <xref:System.TimeSpan?displayProperty=nameWithType> desteklediği Aralık ve SQL Server türünün desteklediği büyük bir fark vardır `TIME` . Değer 0 ' dan küçük veya 23:59 ' dan daha büyük bir değere eşleniyor: 59.9999999 saat, `TIME` taşma özel durumlarına neden olur. Daha fazla bilgi için bkz. [System. TimeSpan yöntemleri](system-timespan-methods.md).  
   
  Microsoft SQL Server 2000 ve SQL Server 2005 ' de, veritabanı alanlarını ile eşleyemezsiniz <xref:System.TimeSpan> . Ancak, <xref:System.TimeSpan> <xref:System.TimeSpan> değerler çıkarma işleminden döndürülebilecek <xref:System.DateTime> veya bir ifadenin bir sabit değer ya da bağlı değişken olarak tanıtıldığı için üzerinde işlemler desteklenir.  
   
 <a name="BinaryMapping"></a>
+
 ## <a name="binary-mapping"></a>İkili eşleme  
+
  CLR türüyle eşleyebileceğiniz pek çok SQL Server türü vardır <xref:System.Data.Linq.Binary?displayProperty=nameWithType> . Aşağıdaki tabloda, <xref:System.Data.Linq.Binary?displayProperty=nameWithType> veritabanı temelinde bir nesne modeli veya dış eşleme dosyası oluştururken O/R Tasarımcısı ve SQLMetal 'un BIR clr türü tanımlamasına neden olan SQL Server türleri gösterilmektedir.  
   
 |SQL Server türü|O/R Tasarımcısı ve SQLMetal tarafından kullanılan varsayılan CLR türü eşleme|  
@@ -230,16 +253,21 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
  Seçebileceğiniz birçok başka ikili eşleme vardır ancak bazıları taşma ya da veri kaybı özel durumları veritabanına veya veritabanından çevrilirken ortaya çıkabilir. Daha fazla bilgi için, [tür eşleme çalışma zamanı davranış matrisine](#BehaviorMatrix)bakın.  
   
 ### <a name="sql-server-filestream"></a>SQL Server FıLESTREAM  
+
  `FILESTREAM`Sütunları için özniteliği `VARBINARY(MAX)` Microsoft SQL Server 2008 ' den başlayarak kullanılabilir; .NET Framework SP1 3,5 sürümünden başlayarak LINQ to SQL ile eşleyebilirsiniz.  
   
  `VARBINARY(MAX)`Nesneleri özniteliğine sahip sütunları nesneleriyle eşlemenize rağmen `FILESTREAM` <xref:System.Data.Linq.Binary> , <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi özniteliğiyle otomatik olarak sütun oluşturamaz `FILESTREAM` . Hakkında daha fazla bilgi için `FILESTREAM` bkz. [FILESTREAM 'e genel bakış](/previous-versions/sql/sql-server-2008-r2/bb933993(v=sql.105)).  
   
 <a name="BinarySerialization"></a>
+
 ### <a name="binary-serialization"></a>İkili Serileştirme  
+
  Bir sınıf arabirimini uyguluyorsa <xref:System.Runtime.Serialization.ISerializable> , bir nesneyi herhangi BIR SQL ikili alanına ( `BINARY` , `VARBINARY` ,) seri hale getirebilirsiniz `IMAGE` . Nesne serileştirilir ve arabirimin nasıl uygulandığınıza göre seri durumdan çıkarılırlar <xref:System.Runtime.Serialization.ISerializable> . Daha fazla bilgi için bkz. [Ikili serileştirme](../../../../../standard/serialization/binary-serialization.md).
   
 <a name="MiscMapping"></a>
+
 ## <a name="miscellaneous-mapping"></a>Çeşitli eşleme  
+
  Aşağıdaki tabloda, henüz açıklanmayan bazı çeşitli türler için varsayılan tür eşlemeleri gösterilmektedir. Aşağıdaki tabloda, veritabanınıza göre bir nesne modeli veya dış eşleme dosyası oluştururken O/R Tasarımcısı ve SQLMetal Select CLR türleri gösterilmektedir.  
   
 |SQL Server türü|O/R Tasarımcısı ve SQLMetal tarafından kullanılan varsayılan CLR türü eşleme|  

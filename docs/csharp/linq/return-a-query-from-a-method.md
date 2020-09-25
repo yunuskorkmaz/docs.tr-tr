@@ -1,22 +1,24 @@
 ---
 title: Yöntemden sorgu döndürme
-description: Sorgu nasıl döndürülecek.
+description: Sorgu döndürme.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 1df533770f76301432b104d6f8398f1687750cce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 646e771d637aa242231e3fe216d4a856bb156649
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972520"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203338"
 ---
-# <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Bir yöntemden sorgu nasıl döndürülür (C# Programlama Kılavuzu)
-Bu örnek, bir yöntemden bir sorgunun iade değeri `out` olarak ve parametre olarak nasıl döndürüleceklerini gösterir.  
+# <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Bir yöntemden sorgu döndürme (C# Programlama Kılavuzu)
+
+Bu örnek, bir yöntemden dönüş değeri olarak ve bir parametre olarak bir sorgunun nasıl döndürülyapılacağını gösterir `out` .  
   
- Sorgu nesneleri birleştirilebilir, yani bir yöntemden sorgu döndürebilirsiniz. Sorguları temsil eden nesneler, ortaya çıkan koleksiyonu değil, gerektiğinde sonuçları üreten adımları depolar. Sorgu nesnelerini yöntemlerden döndürmenin avantajı, bunların daha fazla oluşturulabiliyor veya değiştirilebiliyor olmasıdır. Bu nedenle, `out` sorgu döndüren bir yöntemin herhangi bir dönüş değeri veya parametresi de bu türolmalıdır. Bir yöntem bir sorguyu somut <xref:System.Collections.Generic.List%601> veya <xref:System.Array> türe somutlaştırırsa, sorgunun kendisi yerine sorgu sonuçlarını döndürülür olarak kabul edilir. Yöntemden döndürülen bir sorgu değişkeni yine de oluşturulabilir veya değiştirilebilir.  
+ Sorgu nesneleri birleştirilebilir, bu da bir yöntemden sorgu döndürebilmeniz anlamına gelir. Sorguları temsil eden nesneler, sonuçta elde edilen koleksiyonu depolamaz, ancak gerektiğinde sonuçları oluşturmak için gerekli adımları uygulayın. Yöntemlerin sorgu nesnelerini döndürmesinin avantajı, daha fazla oluşturulabilir veya değiştirilebilir. Bu nedenle, `out` bir sorgu döndüren bir yöntemin dönüş değeri veya parametresi de bu türde olmalıdır. Bir yöntem bir sorguyu somut <xref:System.Collections.Generic.List%601> veya <xref:System.Array> türe alıyorsa, sorgunun kendisi yerine sorgu sonuçlarının döndürülmediği kabul edilir. Bir yöntemden döndürülen bir sorgu değişkeni hala oluşturulabilir veya değiştirilebilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, ilk yöntem bir sorguyu iade değeri olarak döndürür `out` ve ikinci yöntem bir sorguyu parametre olarak döndürür. Her iki durumda da sorgu sonuçları değil, döndürülen bir sorgu olduğunu unutmayın.  
+
+ Aşağıdaki örnekte, ilk yöntem bir sorgu dönüş değeri olarak döndürür ve ikinci yöntem parametre olarak bir sorgu döndürür `out` . Her iki durumda da, sorgu sonuçlarının değil, döndürülen bir sorgu olduğunu unutmayın.  
   
  [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 

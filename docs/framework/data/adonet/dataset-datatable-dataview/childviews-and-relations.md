@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: cf67304f564729172d1b7f3565d52abffeb90049
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74b2de7a9ee62ae42a932c94261cf425d6a94808
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151487"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203741"
 ---
 # <a name="childviews-and-relations"></a>ChildViews ve İlişkileri
-Bir <xref:System.Data.DataSet>tablodaki tablolar arasında bir ilişki <xref:System.Data.DataView> varsa, üst tablodaki satırlar <xref:System.Data.DataRowView.CreateChildView%2A> <xref:System.Data.DataRowView> için yöntemini kullanarak ilgili alt tablodan içeren satırlar oluşturabilirsiniz. Örneğin, aşağıdaki kod **Kategorileri** ve ilgili **Ürünleri** CategoryName ve **ProductName'ye** göre sıralanmış alfabetik sırada görüntüler. **ProductName**  
+
+İçindeki tablolar arasında bir ilişki varsa <xref:System.Data.DataSet> , <xref:System.Data.DataView> <xref:System.Data.DataRowView.CreateChildView%2A> üst tablodaki satırların yöntemini kullanarak ilgili alt tablodan içeren bir satır oluşturabilirsiniz <xref:System.Data.DataRowView> . Örneğin, aşağıdaki kod **kategorileri** ve Ilgili **ürünlerini** **CategoryName** ve **ProductName**öğesine göre sıralanmış alfabetik sırada görüntüler.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  

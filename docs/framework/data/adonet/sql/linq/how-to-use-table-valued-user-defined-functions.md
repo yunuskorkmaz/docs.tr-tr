@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: 44866367393e321d7dd2db965e2fad8a2e6b63e9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 68a2b54c8fd541595d36bf9c864257b1be1f7856
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286332"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203585"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>Nasıl yapılır: Tablo Değerli Kullanıcı Tanımlı İşlevler Kullanma
+
 Tablo değerli bir işlev, tek bir satır kümesi döndürür (birden çok sonuç şekli döndürebilen saklı yordamların aksine). Tablo değerli bir işlevin dönüş türü olduğundan `Table` , SQL 'de bir tabloyu kullanabileceğiniz bir tablo değerli işlevi kullanabilirsiniz. Tablo değerli işlevi tıpkı bir tablo gibi da kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki SQL işlevi açıkça bir döndüren bildirir `TABLE` . Bu nedenle, döndürülen satır kümesi yapısı örtük olarak tanımlanmıştır.  
   
 ```sql
@@ -29,12 +31,13 @@ RETURN
     WHERE UnitPrice > @cost  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]işlevi şu şekilde eşler:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] işlevi şu şekilde eşler:  
   
  [!code-csharp[DLinqUDFS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/northwind-tfunc.cs#1)]
  [!code-vb[DLinqUDFS#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#1)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki SQL kodu, işlevin döndürdüğü tabloya katılabileceğinizi gösterir ve başka herhangi bir tablo gibi kabul eder:  
   
 ```sql
