@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 94ec554ca2dc5ed4eb6792b9b42ae6f1b856f51e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e70576637d44e874532aa06da4fe94115ac8ed9c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148614"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194589"
 ---
-# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="a9512-102">Dosyadan Görüntü Ekleme</span><span class="sxs-lookup"><span data-stu-id="a9512-102">Inserting an Image from a File</span></span>
-<span data-ttu-id="a9512-103">Veri kaynağınızdaki alanın türüne bağlı olarak, ikili büyük bir nesneyi (BLOB) veritabanına ikili veya karakter verileri olarak yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a9512-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="a9512-104">BLOB, genellikle belge ve `text` `ntext` `image` resim içeren , ve veri türlerini ifade eden genel bir terimdir.</span><span class="sxs-lookup"><span data-stu-id="a9512-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
+# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="8458f-102">Dosyadan Görüntü Ekleme</span><span class="sxs-lookup"><span data-stu-id="8458f-102">Inserting an Image from a File</span></span>
+
+<span data-ttu-id="8458f-103">Veri kaynağınızdaki alanın türüne bağlı olarak, bir veritabanına ikili veya karakter verisi olarak bir ikili büyük nesne (BLOB) yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8458f-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="8458f-104">BLOB, `text` `ntext` `image` genellikle belge ve resim içeren,, ve veri türlerine başvuran genel bir terimdir.</span><span class="sxs-lookup"><span data-stu-id="8458f-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
   
- <span data-ttu-id="a9512-105">Veritabanınıza BLOB değeri yazmak için, uygun INSERT veya UPDATE deyimini verin ve BLOB değerini giriş parametresi olarak geçirin [(bkz.](../configuring-parameters-and-parameter-data-types.md)</span><span class="sxs-lookup"><span data-stu-id="a9512-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="a9512-106">BLOB'unuzun SQL Server `text` alanı gibi metin olarak depolanırsa, BLOB'yi dize parametresi olarak geçirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a9512-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="a9512-107">BLOB, SQL Server `image` alanı gibi ikili biçimde depolanırsa, ikili parametre `byte` olarak bir dizi tür geçirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a9512-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
+ <span data-ttu-id="8458f-105">Veritabanınıza bir BLOB değeri yazmak için, uygun INSERT veya UPDATE ifadesini verin ve BLOB değerini bir giriş parametresi olarak geçirin (bkz. [parametreleri ve parametre veri türlerini yapılandırma](../configuring-parameters-and-parameter-data-types.md)).</span><span class="sxs-lookup"><span data-stu-id="8458f-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="8458f-106">BLOBU bir SQL Server alanı gibi metin olarak depolanıyorsa, `text` blobu dize parametresi olarak geçirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8458f-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="8458f-107">BLOB, bir SQL Server alanı gibi ikili biçimde depolanıyorsa `image` , türü bir diziyi `byte` ikili parametre olarak geçirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8458f-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a9512-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="a9512-108">Example</span></span>  
- <span data-ttu-id="a9512-109">Aşağıdaki kod örneği, Northwind veritabanındaki Çalışanlar tablosuna çalışan bilgilerini ekler.</span><span class="sxs-lookup"><span data-stu-id="a9512-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="a9512-110">Çalışanın fotoğrafı bir dosyadan okunur ve resim alanı olan tablodaki Fotoğraf alanına eklenir.</span><span class="sxs-lookup"><span data-stu-id="a9512-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
+## <a name="example"></a><span data-ttu-id="8458f-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="8458f-108">Example</span></span>  
+
+ <span data-ttu-id="8458f-109">Aşağıdaki kod örneği, çalışan bilgilerini Northwind veritabanındaki Çalışanlar tablosuna ekler.</span><span class="sxs-lookup"><span data-stu-id="8458f-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="8458f-110">Çalışan fotoğrafı bir dosyadan okunmalıdır ve tablodaki fotoğraf alanına eklenir. Bu bir görüntü alanıdır.</span><span class="sxs-lookup"><span data-stu-id="8458f-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -130,10 +132,10 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a9512-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a9512-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8458f-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8458f-111">See also</span></span>
 
-- [<span data-ttu-id="a9512-112">Verileri Değiştirmek için Komutları Kullanma</span><span class="sxs-lookup"><span data-stu-id="a9512-112">Using Commands to Modify Data</span></span>](../using-commands-to-modify-data.md)
-- [<span data-ttu-id="a9512-113">İkili Verileri Alma</span><span class="sxs-lookup"><span data-stu-id="a9512-113">Retrieving Binary Data</span></span>](../retrieving-binary-data.md)
-- [<span data-ttu-id="a9512-114">SQL Server İkili ve Büyük Değerli Veriler</span><span class="sxs-lookup"><span data-stu-id="a9512-114">SQL Server Binary and Large-Value Data</span></span>](sql-server-binary-and-large-value-data.md)
-- [<span data-ttu-id="a9512-115">SQL Server Veri Türü Eşlemeleri</span><span class="sxs-lookup"><span data-stu-id="a9512-115">SQL Server Data Type Mappings</span></span>](../sql-server-data-type-mappings.md)
-- [<span data-ttu-id="a9512-116">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a9512-116">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="8458f-112">Verileri Değiştirmek için Komutları Kullanma</span><span class="sxs-lookup"><span data-stu-id="8458f-112">Using Commands to Modify Data</span></span>](../using-commands-to-modify-data.md)
+- [<span data-ttu-id="8458f-113">İkili Verileri Alma</span><span class="sxs-lookup"><span data-stu-id="8458f-113">Retrieving Binary Data</span></span>](../retrieving-binary-data.md)
+- [<span data-ttu-id="8458f-114">SQL Server İkili ve Büyük Değerli Veriler</span><span class="sxs-lookup"><span data-stu-id="8458f-114">SQL Server Binary and Large-Value Data</span></span>](sql-server-binary-and-large-value-data.md)
+- [<span data-ttu-id="8458f-115">SQL Server Veri Türü Eşlemeleri</span><span class="sxs-lookup"><span data-stu-id="8458f-115">SQL Server Data Type Mappings</span></span>](../sql-server-data-type-mappings.md)
+- [<span data-ttu-id="8458f-116">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8458f-116">ADO.NET Overview</span></span>](../ado-net-overview.md)
