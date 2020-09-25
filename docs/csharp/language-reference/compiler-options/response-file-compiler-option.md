@@ -8,14 +8,15 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 89a057cba6e0d23c15fc9b652e5bfbc89b6ecbaa
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 8f7e222e194fc4ba96159ecd792765f64b4d1c57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128653"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193769"
 ---
 # <a name="-c-compiler-options"></a>@ (C# Derleyici Seçenekleri)
+
 @ Seçeneği, derlemek için derleyici seçeneklerini ve kaynak kodu dosyalarını içeren bir dosya belirtmenizi sağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -25,10 +26,12 @@ ms.locfileid: "89128653"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `response_file`  
  Derlemek için derleyici seçeneklerini veya kaynak kodu dosyalarını listeleyen bir dosya.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Derleyici seçenekleri ve kaynak kodu dosyaları, derleyici tarafından, tıpkı komut satırında belirtildikleri gibi işlenecek şekilde işlenir.  
   
  Bir derlemede birden fazla yanıt dosyası belirtmek için, birden çok yanıt dosyası seçeneği belirtin. Örneğin:  
@@ -48,6 +51,7 @@ ms.locfileid: "89128653"
  Bu derleyici seçeneği Visual Studio geliştirme ortamında ayarlanamaz veya program aracılığıyla değiştirilemez.  
   
 ## <a name="example"></a>Örnek  
+
  Örnek yanıt dosyasından birkaç satır aşağıda verilmiştir:  
   
 ```console  

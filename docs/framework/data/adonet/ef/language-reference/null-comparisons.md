@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 697c933daeb3c68fb4ea89a957b639a79a9407f8
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 71b7c4d86debe8cf267b1b65e3d176cbc4704e6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249662"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185112"
 ---
 # <a name="null-comparisons"></a>Null Karşılaştırmalar
-Veri `null` kaynağındaki bir değer, değerin bilinmediğini gösterir. LINQ'dan Varlıklara sorgularda, belirli hesaplamaların veya karşılaştırmaların yalnızca geçerli veya geçersiz olmayan verilere sahip satırlarda gerçekleştirilmelerini sağlamak için null değerlerini denetleyebilirsiniz. Ancak CLR null semantik, veri kaynağının null semantiklerinden farklı olabilir. Çoğu veritabanları null karşılaştırmaları işlemek için üç değerli mantık bir sürümünü kullanır. Diğer bir şey, null değerine karşı `true` `false`bir karşılaştırma değerlendirmez veya , `unknown`o için değerlendirir . Genellikle bu ANSI nulls bir uygulamadır, ancak bu her zaman böyle değildir.  
+
+`null`Veri kaynağındaki bir değer, değerin bilinmediğini gösterir. LINQ to Entities sorgularda, belirli hesaplamalar veya karşılaştırmalar yalnızca geçerli veya null olmayan verileri olan satırlarda gerçekleştirilmeleri için null değerleri kontrol edebilirsiniz. Ancak CLR null semantiği, veri kaynağının null semantiklerinden farklı olabilir. Çoğu veritabanı, null karşılaştırmaları işlemek için üç değerli mantığın bir sürümünü kullanır. Diğer bir deyişle, null değere karşı bir karşılaştırma, olarak değerlendirmez `true` veya olarak `false` değerlendirilir `unknown` . Genellikle bu, ANSI null değerleri uygulamasıdır, ancak bu her zaman durum değildir.  
   
- SQL Server'da varsayılan olarak, null-equals-null karşılaştırması null değeri döndürür. Aşağıdaki örnekte, null olan `ShipDate` satırlar sonuç kümesinin dışında tutulur ve Transact-SQL deyimi 0 satır döndürüler.  
+ Varsayılan olarak SQL Server, null-eşittir-null karşılaştırması null değer döndürür. Aşağıdaki örnekte, `ShipDate` null olduğu satırlar sonuç kümesinden çıkarılır ve Transact-SQL ifadesinde 0 satır döndürülür.  
   
 ```sql  
 -- Find order details and orders with no ship date.  
@@ -25,26 +26,29 @@ JOIN Sales.SalesOrderDetail o ON o.SalesOrderID = h.SalesOrderID
 WHERE h.ShipDate IS Null  
 ```  
   
- Bu, null-equals-null karşılaştırmasının doğru döndüğü CLR null semantikinden çok farklıdır.  
+ Bu, null-Equals-null karşılaştırmasının true döndüğü CLR null semantiğinin çok farklıdır.  
   
- Aşağıdaki LINQ sorgusu CLR'de ifade edilir, ancak veri kaynağında yürütülür. CLR semantikinin veri kaynağında onurlandırılacağına dair bir garanti olmadığından, beklenen davranış belirsizdir.  
+ Aşağıdaki LINQ sorgusu CLR 'de ifade edilir, ancak veri kaynağında yürütülür. CLR semantiğinin veri kaynağında kabul edildiği garantisi olmadığından, beklenen davranışın belirsiz olması gerekir.  
   
  [!code-csharp[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#joinonnull)]
  [!code-vb[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#joinonnull)]  
   
-## <a name="key-selectors"></a>Anahtar Seçiciler  
- *Anahtar seçici,* standart sorgu işleçlerinde bir öğeden bir anahtar ayıklamak için kullanılan bir işlevdir. Anahtar seçici işlevinde, bir ifade bir sabitle karşılaştırılabilir. Bir ifade null constant ile karşılaştırıldığında veya iki null sabit karşılaştırıldığında CLR null semantik sergilenir. Veri kaynağında null değerleri olan iki sütun karşılaştırılırsa depo null semantik leri sergilenir. Anahtar seçiciler, <xref:System.Linq.Queryable.GroupBy%2A>standart sorgu işleçlerini gruplandırma ve sıralama gibi birçok sayıda bulunur ve sorgu sonuçlarını sipariş etmek veya gruplamak için anahtarları seçmek için kullanılır.  
+## <a name="key-selectors"></a>Anahtar seçicileri  
+
+ *Anahtar Seçici* , bir öğeden anahtar ayıklamak için standart sorgu işleçleri içinde kullanılan bir işlevdir. Anahtar Seçicisi işlevinde bir ifade bir sabit ile karşılaştırılabilir. Bir ifade null sabitle karşılaştırıldığı veya iki null sabit değer karşılaştırılmadığında CLR null semantiğinin anlamı vardır. Veri kaynağında null değeri olan iki sütun karşılaştırılabilince depo null semantiğinin anlamı vardır. Anahtar seçicileri, ve gibi gruplandırma ve sıralama standart sorgu işleçleri içinde bulunur <xref:System.Linq.Queryable.GroupBy%2A> ve sorgu sonuçlarının sırasını veya gruplandırılmasına göre anahtarlar seçmek için kullanılır.  
   
-## <a name="null-property-on-a-null-object"></a>Null Nesneüzerinde Null Özellik  
- Varlık Çerçevesi'nde, null nesnenin özellikleri null'dur. CLR'de null bir nesnenin özelliğine başvurmayı denediğinizde, bir <xref:System.NullReferenceException>. BIR LINQ sorgusu null nesnenin bir özelliği ni içeriyorsa, bu tutarsız davranışlara neden olabilir.  
+## <a name="null-property-on-a-null-object"></a>Null nesne üzerinde null özelliği  
+
+ Entity Framework, null bir nesnenin özellikleri null. CLR 'de null nesnenin bir özelliğine başvurmasına çalıştığınızda, bir alırsınız <xref:System.NullReferenceException> . Bir LINQ sorgusu bir null nesnenin özelliğini içeriyorsa, bu durum tutarsız davranışa neden olabilir.  
   
- Örneğin, aşağıdaki sorguda, döküm `NewProduct` komut ağacı katmanında yapılır ve bu `Introduced` da özelliğin null olmasına neden olabilir. Veritabanı, karşılaştırmanın <xref:System.DateTime> doğru olarak değerlendireceği null karşılaştırmaları tanımlamışsa, satır dahil edilir.  
+ Örneğin, aşağıdaki sorguda, öğesine dönüştürme `NewProduct` işlemi komut ağacı katmanında yapılır, bu da `Introduced` özelliğin NULL olmasını sağlayabilir. Veritabanı, <xref:System.DateTime> karşılaştırma değeri true olarak değerlendirilip null karşılaştırmaları tanımlıysa, satır dahil edilir.  
   
  [!code-csharp[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#castresultsisnull)]
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
-## <a name="passing-null-collections-to-aggregate-functions"></a>Null Koleksiyonlarının Toplu Fonksiyonlara Geçirilmesi  
- LINQ'dan Varlıklara, bir toplama işlevini `IQueryable` destekleyen bir koleksiyon geçtiğinde, veritabanında toplu işlemler gerçekleştirilir. Bellekte gerçekleştirilen bir sorgunun ve veritabanında gerçekleştirilen bir sorgunun sonuçlarında farklılıklar olabilir. Bellek içi sorguda, eşleşme yoksa sorgu sıfır döndürür. Veritabanında, aynı sorgu `null`döndürür. Bir `null` değer LINQ toplam işlevine aktarılırsa, bir özel durum atılır. Olası `null` değerleri kabul etmek için, sorgu sonuçlarını alan türlerin türlerini ve özelliklerini geçersiz değer türlerine döküm.  
+## <a name="passing-null-collections-to-aggregate-functions"></a>Toplama Işlevlerine null koleksiyonlar geçirme  
+
+ LINQ to Entities, bir toplama işlevine destekleyen bir koleksiyon geçirdiğinizde `IQueryable` , toplu işlemler veritabanında gerçekleştirilir. Bellek içinde gerçekleştirilmiş bir sorgunun sonuçlarında ve veritabanında gerçekleştirilen bir sorgu sonucunda farklılıklar olabilir. Bellek içi sorgu ile eşleşme yoksa sorgu sıfır döndürür. Veritabanında aynı sorgu döndürülür `null` . Bir `null` LINQ toplama işlevine bir değer geçirilirse, bir özel durum oluşturulur. Olası değerleri kabul etmek için `null` , sorgu sonuçlarını alan türlerin türlerini ve özelliklerini null yapılabilir değer türlerine atayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

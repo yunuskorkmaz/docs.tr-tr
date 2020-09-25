@@ -12,14 +12,15 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 1e2de095b460b684fb06faf46731283a1304906e
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 6f90ce6c1590784cefbd5f15ca8a36941aad77ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465695"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193783"
 ---
 # <a name="-resource-c-compiler-options"></a>-Resource (C# derleyici seçenekleri)
+
 Belirtilen kaynağı çıkış dosyasına katıştırır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -29,6 +30,7 @@ Belirtilen kaynağı çıkış dosyasına katıştırır.
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `filename`  
  Çıktı dosyasına eklemek istediğiniz .NET kaynak dosyası.  
   
@@ -39,6 +41,7 @@ Belirtilen kaynağı çıkış dosyasına katıştırır.
  Kaynağın erişilebilirliği: public veya Private. Varsayılan değer geneldir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Kaynağı bir derlemeye bağlamak ve kaynak dosyasını çıkış dosyasına eklemek için [-linkresource](./linkresource-compiler-option.md) kullanın.  
   
  Varsayılan olarak, kaynaklar C# derleyicisi kullanılarak oluşturulduğunda derlemede ortaktır. Kaynakları özel hale getirmek için `private` erişilebilirlik değiştiricisi olarak belirtin. Veya dışında başka bir erişilebilirliği `public` olamaz `private` .  
@@ -62,6 +65,7 @@ Belirtilen kaynağı çıkış dosyasına katıştırır.
  Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.FileProperties2.BuildAction%2A> ..  
   
 ## <a name="example"></a>Örnek  
+
  Derleme `in.cs` ve kaynak dosyası iliştirme `rf.resource` :  
   
 ```console  

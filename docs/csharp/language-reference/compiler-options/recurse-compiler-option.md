@@ -9,14 +9,15 @@ helpviewer_keywords:
 - recurse compiler option [C#]
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
-ms.openlocfilehash: 3edd7e23358bc0569dae6204d519209df1ade290
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9e84ff95f7f0addac1c2c2d79af0ab53572da27f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124831"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193809"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (C# derleyici seçenekleri)
+
 -Recurse seçeneği, belirtilen dizinin (dir) veya proje dizininin tüm alt dizinlerindeki kaynak kodu dosyalarını derlemenize olanak sağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -26,6 +27,7 @@ ms.locfileid: "89124831"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `dir` (isteğe bağlı)  
  Aramanın başlamasını istediğiniz dizin. Bu belirtilmemişse, arama proje dizininde başlar.  
   
@@ -33,6 +35,7 @@ ms.locfileid: "89124831"
  Aranacak dosya (lar). Joker karakterlere izin verilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  **-Recurse** seçeneği, kaynak kodu dosyalarını belirtilen dizinin ( `dir` ) veya proje dizininin tüm alt dizinlerinde derlemenize olanak tanır.  
   
  Proje dizinindeki tüm eşleşen dosyaları **-Recurse**kullanmadan derlemek için dosya adında joker karakterler kullanabilirsiniz.  
@@ -40,6 +43,7 @@ ms.locfileid: "89124831"
  Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   
 ## <a name="example"></a>Örnek  
+
  Geçerli dizindeki tüm C# dosyalarını derler:  
   
 ```console  

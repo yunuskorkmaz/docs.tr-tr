@@ -9,14 +9,15 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 953249c4d0168ed3d279d03a0b2fb63d8ff6d5f5
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 0f5b1e1bec8fd601bf111e1c2c64adf22d0a064e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128484"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193731"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target: Library (C# derleyici seçenekleri)
+
 **-Target: Library** seçeneği derleyicinin yürütülebilir dosya (exe) yerine bir dinamik bağlantı KITAPLıĞı (dll) oluşturmasına neden olur.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,6 +27,7 @@ ms.locfileid: "89128484"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  DLL,. dll uzantısıyla oluşturulacaktır.  
   
  Aksi belirtilmediği [takdirde, çıkış](./out-compiler-option.md) dosyası adı ilk giriş dosyasının adını alır.  
@@ -45,6 +47,7 @@ ms.locfileid: "89128484"
  Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.ProjectProperties3.OutputType%2A> ..  
   
 ## <a name="example"></a>Örnek  
+
  Derle `in.cs` , oluşturma `in.dll` :  
   
 ```console  

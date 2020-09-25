@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: ab906912bc4bfab40e459c92a823b915240b8d55
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 31a7ee5eacb2e7cd6b24c4a2276ce6e07fcc67e1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125091"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194030"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C# derleyici seçenekleri)
+
 **-Nowarn** seçeneği, derleyicinin bir veya daha fazla uyarı görüntülemesini engellemenize olanak tanır. Birden çok uyarı numarasını virgülle ayırın.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -26,10 +27,12 @@ ms.locfileid: "89125091"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `number1`, `number2`  
  Derleyicinin görüntülenmesini istediğiniz uyarı numaraları.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Uyarı tanımlayıcısının yalnızca sayısal bölümünü belirtmeniz gerekir. Örneğin, CS0028 bastırmak istiyorsanız, belirtebilirsiniz `-nowarn:28` .  
   
  Derleyici `-nowarn` önceki sürümlerde geçerli olan, ancak derleyicisinden kaldırılan uyarı numaralarını sessizce yok sayacaktır. Örneğin, CS0679 Visual Studio .NET 2002 derleyicisinde geçerliyse, ancak daha sonra kaldırılmıştır.  

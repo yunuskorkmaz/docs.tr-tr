@@ -10,14 +10,15 @@ helpviewer_keywords:
 - -noconfig compiler option [C#]
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
-ms.openlocfilehash: 677b96df8c6686e46c0db93eabe72dd483b947e4
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: d62f16a3926aaa78e79c25b1c9b8d84e4401795a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466072"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194082"
 ---
 # <a name="-noconfig-c-compiler-options"></a>-noconfig (C# derleyici seçenekleri)
+
 **-Noconfig** seçeneği, derleyicinin ' de bulunan ve csc.exe dosyasıyla aynı dizinden yüklenen csc. rsp dosyası ile derlenmeyeceğini söyler.  
   
 ## <a name="syntax"></a>Syntax  
@@ -27,6 +28,7 @@ ms.locfileid: "89466072"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Csc. rsp dosyası .NET Framework ile gönderilen tüm derlemelere başvurur. Visual Studio .NET geliştirme ortamının içerdiği gerçek başvurular proje türüne bağlıdır.  
   
  Csc. rsp dosyasını değiştirebilir ve csc.exe ( **-noconfig** seçeneği dışında) komut satırından her derlemede yer alan ek derleyici seçeneklerini belirtebilirsiniz.  

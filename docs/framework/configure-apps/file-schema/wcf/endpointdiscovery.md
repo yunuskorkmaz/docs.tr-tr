@@ -2,14 +2,15 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 98b1655f42b7b43604ed4ab9d66870ec204a9590
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 621c742e3bb06ce91fa5a6b8951351295f73df9e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398015"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185814"
 ---
 # \<endpointDiscovery>
+
 Bir uç nokta için, keşfedilebilirlik, kapsamları ve tüm özel uzantıları gibi çeşitli bulma ayarlarını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Bir uç nokta için, keşfedilebilirlik, kapsamları ve tüm özel uzantıları 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<endpointDiscovery>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <behaviors>
@@ -37,6 +38,7 @@ Bir uç nokta için, keşfedilebilirlik, kapsamları ve tüm özel uzantıları 
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -50,7 +52,7 @@ Bir uç nokta için, keşfedilebilirlik, kapsamları ve tüm özel uzantıları 
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<scopes>](scopes.md)|Uç nokta için kapsam URI 'Leri koleksiyonu. Birden fazla kapsam URI 'si tek bir uç noktayla ilişkilendirilebilir.|  
-|[\<extensions>](extensions.md)[/ \<endpointDiscovery> ]|Bir uç nokta için yayımlanacak özel meta verileri belirtmenizi sağlayan XML öğelerinin koleksiyonu.|  
+|[\<extensions>](extensions.md) [/ \<endpointDiscovery> ]|Bir uç nokta için yayımlanacak özel meta verileri belirtmenizi sağlayan XML öğelerinin koleksiyonu.|  
 |\<types>|Aranacak arabirimlerin bir koleksiyonu.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -61,11 +63,13 @@ Bir uç nokta için, keşfedilebilirlik, kapsamları ve tüm özel uzantıları 
 |||  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Uç noktanın davranış yapılandırmasına eklendiğinde ve `enabled` özniteliği olarak ayarlandığında `true` , bu yapılandırma öğesi bulunabilirliği sağlar. Ayrıca, [\<scopes>](scopes.md) sorgu sırasında hizmet uç noktalarını filtrelemek için kullanılabilen özel kapsam URI 'leri belirtmek için alt öğesini ve [\<extensions>](extensions.md) Standart bulunabilir meta VERILERI (EPR, ContractTypeName, BindingName, scope ve ListenURI) ile birlikte yayımlanması gereken özel meta verileri belirtmek için de kullanabilirsiniz.  
   
  Bu yapılandırma öğesi, [\<serviceDiscovery>](servicediscovery.md) keşfedilebilirlik için hizmet düzeyi denetimini sağlayan öğesine bağımlıdır. Bu, yapılandırmada yoksa, bu öğenin ayarlarının yoksayılacağı anlamına gelir [\<serviceDiscovery>](servicediscovery.md) .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki yapılandırma örneği, bir uç nokta için yayımlanacak filtre kapsamlarını ve uzantı meta verilerini belirtir.  
   
 ```xml  

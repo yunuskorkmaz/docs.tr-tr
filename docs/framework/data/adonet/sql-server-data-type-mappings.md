@@ -3,15 +3,16 @@ title: SQL Server Veri Türü Eşlemeleri
 description: SQL Server farklı tür sistemleri ile .NET Framework arasında eşleme hakkında bilgi edinin. Bu makalede, sistemlerin ADO.NET ' de nasıl etkileşimde bulunduğu özetlenmektedir.
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 83be217a69f912047360cd097db702e4a95a6512
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b6cb182d72a7f0a99df77b33f6bd6b8b77b33b3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286591"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175271"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server Veri Türü Eşlemeleri
-SQL Server ve .NET Framework farklı tür sistemlerine dayalıdır. Örneğin, .NET Framework <xref:System.Decimal> yapısı en fazla 28 ölçeğinde, ancak SQL Server Decimal ve numeric veri türlerinde maksimum 38 ölçeği vardır. Verileri okurken ve yazarken veri bütünlüğünü korumak için, <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlTypes> .NET Framework türleri döndüren erişimci yöntemlerinin yanı sıra nesneleri döndüren SQL Server, özel türü belirlenmiş erişimci yöntemlerini ortaya koyar. Her iki SQL Server türü ve .NET Framework türü de, <xref:System.Data.DbType> <xref:System.Data.SqlDbType> veri türlerini belirtirken kullanabileceğiniz ve sınıflardaki numaralandırmalar tarafından da temsil edilir <xref:System.Data.SqlClient.SqlParameter> .  
+
+SQL Server ve .NET Framework farklı tür sistemlerine dayalıdır. Örneğin, .NET Framework <xref:System.Decimal> yapısı en fazla 28 ölçeğinde, ancak SQL Server Decimal ve numeric veri türlerinde maksimum 38 ölçeği vardır. Verileri okurken ve yazarken veri bütünlüğünü korumak için,  <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlTypes> .NET Framework türleri döndüren erişimci yöntemlerinin yanı sıra nesneleri döndüren SQL Server, özel türü belirlenmiş erişimci yöntemlerini ortaya koyar. Her iki SQL Server türü ve .NET Framework türü de, <xref:System.Data.DbType> <xref:System.Data.SqlDbType> veri türlerini belirtirken kullanabileceğiniz ve sınıflardaki numaralandırmalar tarafından da temsil edilir <xref:System.Data.SqlClient.SqlParameter> .  
   
  Aşağıdaki tabloda, için gösterilen .NET Framework türü, <xref:System.Data.DbType> ve <xref:System.Data.SqlDbType> numaralandırmalar ve erişimci yöntemleri gösterilmektedir <xref:System.Data.SqlClient.SqlDataReader> .  
   
@@ -23,7 +24,7 @@ SQL Server ve .NET Framework farklı tür sistemlerine dayalıdır. Örneğin, .
 |char|Dize<br /><br /> Char []|<xref:System.Data.SqlDbType.Char>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiStringFixedLength>,<br /><br /> <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |Tarih <sup>1</sup><br /><br /> (SQL Server 2008 ve üzeri)|DateTime|<xref:System.Data.SqlDbType.Date><sup>1</sup>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.Date><sup>1</sup>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |datetime|DateTime|<xref:System.Data.SqlDbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
-|datetime2<br /><br /> (SQL Server 2008 ve üzeri)|DateTime|<xref:System.Data.SqlDbType.DateTime2>|Hiçbiri|<xref:System.Data.DbType.DateTime2>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
+|datetime2<br /><br /> (SQL Server 2008 ve üzeri)|DateTime|<xref:System.Data.SqlDbType.DateTime2>|Yok|<xref:System.Data.DbType.DateTime2>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |türünde<br /><br /> (SQL Server 2008 ve üzeri)|DateTimeOffset|<xref:System.Data.SqlDbType.DateTimeOffset>|yok|<xref:System.Data.DbType.DateTimeOffset>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|  
 |decimal|Ondalık|<xref:System.Data.SqlDbType.Decimal>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A>|<xref:System.Data.DbType.Decimal>|<xref:System.Data.SqlClient.SqlDataReader.GetDecimal%2A>|  
 |FıLESTREAM özniteliği (varbinary (max))|Byte []|<xref:System.Data.SqlDbType.VarBinary>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
@@ -53,7 +54,7 @@ SQL Server ve .NET Framework farklı tür sistemlerine dayalıdır. Örneğin, .
 <sup>1</sup> `DbType` öğesinin özelliğini `SqlParameter` olarak ayarlayamazsınız `SqlDbType.Date` .  
 <sup>2</sup> öğesinin temel alınan türünü biliyorsanız, belirli bir türü belirlenmiş erişimci kullanın `sql_variant` .  
   
-## <a name="sql-server-documentation"></a>SQL Server belgeleri
+## <a name="sql-server-documentation"></a>SQL Server belgeleri 
 
 SQL Server veri türleri hakkında daha fazla bilgi için bkz. [veri türleri (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
   

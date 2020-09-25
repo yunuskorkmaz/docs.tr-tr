@@ -13,14 +13,15 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 6fd268414c4e54e7b4865733480f8917389015d0
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1862794e4d823e38ce19780300a0b04f4e57dc44
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125039"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193991"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (C# derleyici seçenekleri)
+
 **-Optimize** seçeneği, çıkış dosyanızı daha küçük, daha hızlı ve daha verimli hale getirmek için derleyici tarafından gerçekleştirilen iyileştirmeleri sağlar veya devre dışı bırakır.  
   
 ## <a name="syntax"></a>Syntax  
@@ -30,6 +31,7 @@ ms.locfileid: "89125039"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  **-optimize** , ortak dil çalışma zamanına kodu çalışma zamanında iyileştirmek için de bildirir.  
   
  Varsayılan olarak, iyileştirmeler devre dışıdır. İyileştirmeleri etkinleştirmek için **-optimize +** belirtin.  
@@ -51,6 +53,7 @@ ms.locfileid: "89125039"
  Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A> ..  
   
 ## <a name="example"></a>Örnek  
+
  `t2.cs`Derleyici iyileştirmelerini derleyin ve etkinleştirin:  
   
 ```console  

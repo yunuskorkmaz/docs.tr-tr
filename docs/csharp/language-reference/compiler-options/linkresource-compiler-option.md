@@ -12,14 +12,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: cd1150f3fa0dd0eca4e9352ce3809e73a15126c7
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 4efa0cbf286b40ad971bad66a7acce15e553eb39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466111"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194108"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# derleyici seçenekleri)
+
 Çıkış dosyasında .NET kaynağına bir bağlantı oluşturur. Kaynak dosyası çıkış dosyasına eklenmez. Bu, çıkış dosyasına bir kaynak dosyası katıştırabilen [-Resource](./resource-compiler-option.md) seçeneğinden farklıdır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -29,6 +30,7 @@ ms.locfileid: "89466111"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `filename`  
  Derlemeden bağlamak istediğiniz .NET kaynak dosyası.  
   
@@ -39,6 +41,7 @@ ms.locfileid: "89466111"
  Kaynağın erişilebilirliği: public veya Private. Varsayılan değer geneldir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Varsayılan olarak, bağlı kaynaklar C# derleyicisi ile oluşturulduklarında derlemede ortaktır. Kaynakları özel hale getirmek için `private` erişilebilirlik değiştiricisi olarak belirtin. Veya dışında başka bir değiştirici `public` `private` kullanılamaz.  
   
  **-linkresource** ,- **target: Module**dışındaki [-target](./target-compiler-option.md) seçeneklerinden birini gerektiriyor.  
@@ -52,6 +55,7 @@ ms.locfileid: "89466111"
  Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   
 ## <a name="example"></a>Örnek  
+
  Derle `in.cs` ve kaynak dosyasına bağla `rf.resource` :  
   
 ```console  
@@ -59,6 +63,7 @@ csc -linkresource:rf.resource in.cs
 ```  
   
 ## <a name="example"></a>Örnek  
+
  `A.cs`DLL 'de derleyin, yerel BIR dll N.dll bağlayın ve çıktıyı genel derleme önbelleği 'ne (GAC) yerleştirin. Bu örnekte, A.dll ve N.dll her ikisi de GAC 'de yer alır.  
   
 ```console  
@@ -67,6 +72,7 @@ gacutil -i A.dll
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, bir önceki ile aynı şeyi, ancak derleme bağlayıcı seçeneklerini kullanarak yapar.  
   
 ```console  

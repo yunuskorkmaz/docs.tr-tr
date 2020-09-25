@@ -3,14 +3,15 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: 50fc7194823fb0c5c426fb54ffd50b17c3714ed9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 08cddd19f40f039f86e100cc7ee6a78633502eb2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251755"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185567"
 ---
 # \<trustedIssuers>
+
 Yapılandırma tabanlı veren adı kayıt defteri () tarafından kullanılan güvenilir veren sertifikalarının listesini yapılandırır <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ Yapılandırma tabanlı veren adı kayıt defteri () tarafından kullanılan gü
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<issuerNameRegistry>**](issuernameregistry.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<trustedIssuers>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -42,9 +43,11 @@ Yapılandırma tabanlı veren adı kayıt defteri () tarafından kullanılan gü
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -59,14 +62,16 @@ Yapılandırma tabanlı veren adı kayıt defteri () tarafından kullanılan gü
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry>](issuernameregistry.md)|Verenin adı kayıt defterini yapılandırır. **Önemli:**  `type`Öğesinin özniteliği, `<issuerNameRegistry>` <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `<trustedIssuers>` öğesinin geçerli olması için sınıfına başvurmalıdır.|  
+|[\<issuerNameRegistry>](issuernameregistry.md)|Verenin adı kayıt defterini yapılandırır. **Önemli:**  `type` Öğesinin özniteliği, `<issuerNameRegistry>` <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `<trustedIssuers>` öğesinin geçerli olması için sınıfına başvurmalıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Windows Identity Foundation (WıF) <xref:System.IdentityModel.Tokens.IssuerNameRegistry> , sınıfının kutudan, sınıfının tek bir uygulamasını sağlar <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> . Yapılandırma verenin adı kayıt defteri, yapılandırmadan yüklenen güvenilen verenler listesini tutar. Liste, verenin adını veren tarafından üretilen belirteçlerin imzasını doğrulamak için gereken X. 509.440 sertifikasıyla ilişkilendirir. Güvenilen veren sertifikalarının listesi öğesi altında belirtilir `<trustedIssuers>` . Listedeki her öğe, bu veren tarafından üretilen belirteçlerin imzasını doğrulamak için gereken X. 509.440 sertifikasıyla bir anımsatıcı veren adını ilişkilendirir. Güvenilen Sertifikalar, sertifika parmak izinin ASN. 1 kodlu formu kullanılarak belirtilir ve koleksiyon öğesi kullanılarak eklenir `<add>` . Ve öğelerini kullanarak listeden verenler (Sertifikalar) temizleyebilir veya kaldırabilirsiniz `<clear>` `<remove>` .  
   
  `type`Öğesinin özniteliği, `<issuerNameRegistry>` <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `<trustedIssuers>` öğesinin geçerli olması için sınıfına başvurmalıdır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML, yapılandırma tabanlı veren adı kayıt defterinin nasıl ekleneceğini gösterir.  
   
 ```xml  

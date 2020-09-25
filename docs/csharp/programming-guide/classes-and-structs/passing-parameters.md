@@ -9,14 +9,15 @@ helpviewer_keywords:
 - methods [C#], passing parameters
 - C# language, method parameters
 ms.assetid: a5c3003f-7441-4710-b8b1-c79de77e0b77
-ms.openlocfilehash: 875a42aacf3d7aa4124684aefafdcb07ff4c87d6
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 61ec6d31145df5a2aebe805fccdf7614a0ae74f6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864741"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186100"
 ---
 # <a name="passing-parameters-c-programming-guide"></a>Parametreleri Geçirme (C# Programlama Kılavuzu)
+
 C# ' de, bağımsız değişkenler değere veya başvuruya göre parametrelere geçirilebilir. Başvuruya göre geçirme işlevi üyeleri, Yöntemler, özellikler, Dizin oluşturucular, işleçler ve oluşturucuların parametrelerin değerini değiştirmesini ve bu değişikliğin çağrı ortamında kalıcı olmasını sağlar. Değeri değiştirme amacına sahip bir parametreyi başvuruya göre geçirmek için, `ref` veya `out` anahtar sözcüğünü kullanın. Kopyalama ve değeri değiştirmemesini sağlama amacını kullanarak başvuruya göre geçiş yapmak için `in` değiştiricisini kullanın. Basitlik için, `ref` Bu konudaki örneklerde yalnızca anahtar sözcüğü kullanılır. , Ve arasındaki fark hakkında daha fazla bilgi için `in` `ref` `out` bkz. [ın](../../language-reference/keywords/in-parameter-modifier.md), [ref](../../language-reference/keywords/ref.md)ve [Out](../../language-reference/keywords/out-parameter-modifier.md).  
   
  Aşağıdaki örnek, değer ve başvuru parametreleri arasındaki farkı gösterir.  

@@ -3,14 +3,15 @@ title: Standart sorgu Işleçlerine genel bakış (C#)
 description: LINQ standart sorgu işleçleri, C# ' de filtreleme, projeksiyon, toplama ve sıralama dahil olmak üzere sorgu özellikleri sağlar.
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 8a399f52881e10f8d94263843b5992101f96a5ea
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1ff98e47641dbe7a884b7d6c7758c1fe61b95091
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302327"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178781"
 ---
 # <a name="standard-query-operators-overview-c"></a>Standart sorgu Işleçlerine genel bakış (C#)
+
 *Standart sorgu IŞLEÇLERI* LINQ deseninin bulunduğu yöntemlerdir. Bu yöntemlerin çoğu diziler üzerinde çalışır, burada bir sıra, türü arabirimini veya arabirimi uygulayan bir nesnedir <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> . Standart sorgu işleçleri filtreleme, yansıtma, toplama, sıralama ve daha fazlasını içeren sorgu özellikleri sağlar.  
   
  LINQ standart sorgu işleçlerinin iki kümesi vardır: türü nesneler üzerinde çalışan diğeri <xref:System.Collections.Generic.IEnumerable%601> , türündeki nesneler üzerinde çalışır <xref:System.Linq.IQueryable%601> . Her kümeyi oluşturan Yöntemler <xref:System.Linq.Enumerable> sırasıyla ve sınıflarının statik üyeleridir <xref:System.Linq.Queryable> . Bunlar üzerinde çalıştıkları türün *Uzantı yöntemleri* olarak tanımlanmıştır. Uzantı yöntemleri, statik yöntem sözdizimi veya örnek yöntemi sözdizimi kullanılarak çağrılabilir.  
@@ -68,12 +69,15 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>Sorgu Ifadesi söz dizimi  
+
  Daha sık kullanılan standart sorgu işleçlerinden bazılarının, bir *sorgu* *ifadesinin*parçası olarak çağrılmasına olanak sağlayan adanmış C# ve Visual Basic Language anahtar sözcüğü vardır. Adanmış anahtar sözcüklere ve bunlara karşılık gelen sözdizimleri içeren standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [Standart sorgu işleçleri Için sorgu Ifadesi sözdizimi (C#)](./query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Standart sorgu Işleçlerini genişletme  
+
  Hedef etki alanınız veya teknolojiniz için uygun olan alana özgü Yöntemler oluşturarak standart sorgu işleçleri kümesini daha da getirebilirsiniz. Standart sorgu işleçlerini, uzaktan değerlendirme, sorgu çevirisi ve iyileştirme gibi ek hizmetler sağlayan kendi uygulamalarınız ile de değiştirebilirsiniz. <xref:System.Linq.Enumerable.AsEnumerable%2A>Bir örnek için bkz..  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  Aşağıdaki bağlantılar, işlevleri temel alan çeşitli standart sorgu işleçleri hakkında ek bilgiler sağlayan makalelere götürür.  
   
  [Verileri sıralama (C#)](./sorting-data.md)  
@@ -111,4 +115,4 @@ foreach (var obj in query)
 - [LINQ Sorgularına Giriş (C#)](./introduction-to-linq-queries.md)
 - [Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (C#)](./query-expression-syntax-for-standard-query-operators.md)
 - [Standart sorgu Işleçlerinin yürütme yöntemine göre sınıflandırılması (C#)](./classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Uzantı Metotları](../../classes-and-structs/extension-methods.md)
+- [Uzantı yöntemleri](../../classes-and-structs/extension-methods.md)

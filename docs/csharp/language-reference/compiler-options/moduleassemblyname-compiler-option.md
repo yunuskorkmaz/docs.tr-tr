@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: d669a1687abe496b921d5670b9149b0e933b2d95
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9131db17d767c76fe6a57f5d5353474153e0c269
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125260"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194095"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C# derleyici seçeneği)
+
 Genel olmayan türleri bir. netmodule 'nin erişebileceği bir derlemeyi belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -26,10 +27,12 @@ Genel olmayan türleri bir. netmodule 'nin erişebileceği bir derlemeyi belirti
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `assembly_name`  
  Genel olmayan türleri. netmodule 'nin erişebileceği derlemenin adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  **-moduleassemblyname** bir. netmodule oluştururken ve aşağıdaki koşulların doğru olduğu durumlarda kullanılmalıdır:  
   
 - . Netmodule, mevcut bir derlemede ortak olmayan türlere erişim gerektirir.  
@@ -47,6 +50,7 @@ Genel olmayan türleri bir. netmodule 'nin erişebileceği bir derlemeyi belirti
  Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, bir özel türü olan ve csman_an_assembly adlı bir derlemeye arkadaş derleme erişimi veren bir derleme oluşturur.  
   
 ```csharp  
@@ -67,6 +71,7 @@ class An_Internal_Class
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, moduleassemblyname_1.dll derlemede ortak olmayan bir türe erişen. netmodule 'yi oluşturur. Bu. netmodule csman_an_assembly adlı bir derlemede derlenip,. netmodule 'nin csman_an_assembly arkadaş derleme erişimi veren bir derlemede genel olmayan türlere erişmesine izin vererek **-moduleassemblyname**belirtemez.  
   
 ```csharp  
@@ -81,6 +86,7 @@ class B {
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Bu kod örneği, daha önce oluşturulmuş derleme ve. netmodule 'e başvurarak bütünleştirilmiş kod csman_an_assembly oluşturur.  
   
 ```csharp  

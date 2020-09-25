@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: ccdee1a86ab0c292721e69346cb7cedb03d4c28b
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: f60c1ea4f3f029ec3b81a4197a711523ec372df9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474507"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186165"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Anonim Türler (C# Programlama Kılavuzu)
 
@@ -48,6 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Anonim türler [nesnesinden](../../language-reference/builtin-types/reference-types.md)doğrudan türeten ve [nesne](../../language-reference/builtin-types/reference-types.md)dışında herhangi bir türe atanamaz olan [sınıf](../../language-reference/keywords/class.md) türleridir. Derleyici her adsız tür için bir ad sağlar, ancak uygulamanız buna erişemez. Ortak dil çalışma zamanının perspektifinden, anonim bir tür diğer herhangi bir başvuru türünden farklı değildir.  
   
  Bir derlemede iki veya daha fazla anonim nesne başlatıcıları aynı sırada olan ve aynı ada ve türe sahip bir özellikler sırası belirtse, derleyici nesneleri aynı türdeki örnekler olarak değerlendirir. Derleyici tarafından oluşturulan tür bilgilerini paylaşır.  

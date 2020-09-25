@@ -2,14 +2,15 @@
 title: <endpoint> / <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: f1ffbc1e8efac70523d7f631c8cf9ba9a1622bfc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 79d827691ec3898ad94af9835077c61ea35990ab
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855325"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185853"
 ---
 # <a name="endpoint-of-client"></a>\<endpoint> / \<client>
+
 İstemciler tarafından sunucudaki hizmet uç noktalarına bağlanmak için kullanılan kanal uç noktasının sözleşme, bağlama ve adres özelliklerini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ ms.locfileid: "70855325"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<client>**](client.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<endpoint>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <endpoint address="String"
@@ -32,6 +33,7 @@ ms.locfileid: "70855325"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -44,7 +46,7 @@ ms.locfileid: "70855325"
 |bindingConfiguration|İsteğe bağlı. Uç nokta örneği oluşturulurken kullanılacak bağlama yapılandırmasının adını içeren bir dize. Bağlama yapılandırması, bitiş noktasının tanımlandığı noktada kapsam içinde olmalıdır. Varsayılan değer boş bir dizedir.<br /><br /> Bu öznitelik, `binding` yapılandırma dosyasındaki belirli bir bağlama yapılandırmasına başvurmak için ile birlikte kullanılır. Özel bir bağlama kullanmaya çalışıyorsanız bu özniteliği ayarlayın. Aksi takdirde, bir özel durum oluşabilir.|  
 |Sözleşmesi|Gerekli dize özniteliği.<br /><br /> Bu uç noktanın hangi sözleşmeyi açığa çıkardığını belirten bir dize. Derlemenin anlaşma türünü uygulaması gerekir.|  
 |endpointConfiguration|`kind`Bu standart uç noktanın ek yapılandırma bilgilerine başvuran özniteliği tarafından ayarlanan standart uç nokta adını belirten bir dize. Bölümünde aynı ad tanımlanmalıdır `<standardEndpoints>` .|  
-|denetlenmesi|Uygulanan standart bitiş noktası türünü belirten bir dize. Tür, `<extensions>` bölümüne veya Machine. config dosyasında kayıtlı olmalıdır. Hiçbir şey belirtilmemişse, ortak bir kanal uç noktası oluşturulur.|  
+|denetlenmesi|Uygulanan standart bitiş noktası türünü belirten bir dize. Tür, `<extensions>` bölümünde veya machine.config kayıtlı olmalıdır. Hiçbir şey belirtilmemişse, ortak bir kanal uç noktası oluşturulur.|  
 |name|İsteğe bağlı dize özniteliği. Bu öznitelik, belirli bir sözleşme için bir uç noktayı benzersiz olarak tanımlar. Belirli bir sözleşme türü için birden çok istemci tanımlayabilirsiniz. Her tanım benzersiz bir yapılandırma adıyla farklılaştıralınmalıdır. Bu öznitelik atlanırsa, ilgili uç nokta belirtilen anlaşma türüyle ilişkili varsayılan uç nokta olarak kullanılır. Varsayılan değer boş bir dizedir.<br /><br /> `name`Bir bağlamanın ÖZNITELIĞI WSDL aracılığıyla tanım dışarı aktarma için kullanılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -61,6 +63,7 @@ ms.locfileid: "70855325"
 |[\<client>](client.md)|Bir istemcinin bağlanabileceği uç noktaların listesini tanımlayan bir yapılandırma bölümü.|  
   
 ## <a name="example"></a>Örnek  
+
  Bu bir kanal uç noktası yapılandırmasına bir örnektir.  
   
 ```xml  

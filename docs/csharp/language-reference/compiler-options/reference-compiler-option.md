@@ -14,14 +14,15 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7b84953f85545c0400c7136c258849f259e8b48a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: cd7346ae4094a84a398306394f771e040dd7b72f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124805"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193796"
 ---
 # <a name="-reference-c-compiler-options"></a>-Reference (C# derleyici seçenekleri)
+
 **-Reference** seçeneği, derleyicinin belirtilen dosyadaki [ortak](../keywords/public.md) tür bilgilerini geçerli projeye almasına ve böylece belirtilen derleme dosyalarından meta verilere başvurmasına olanak tanır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -32,6 +33,7 @@ ms.locfileid: "89124805"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `filename`  
  Bir derleme bildirimi içeren dosyanın adı. Birden fazla dosyayı içeri aktarmak için her dosya için ayrı bir **başvuru** seçeneği ekleyin.  
   
@@ -39,6 +41,7 @@ ms.locfileid: "89124805"
  Derlemedeki tüm ad alanlarını içerecek bir kök ad alanını temsil edecek geçerli bir C# tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Birden fazla dosyadan içeri aktarmak için her dosya için bir **-Reference** seçeneği ekleyin.  
   
  İçeri aktardığınız dosyaların bir bildirim içermesi gerekir; çıkış dosyası [-target: Module](./target-module-compiler-option.md)dışındaki [-target](./target-compiler-option.md) seçeneklerinden biriyle derlenmiş olmalıdır.  
@@ -65,6 +68,7 @@ ms.locfileid: "89124805"
 > Visual Studio 'da **Başvuru Ekle** iletişim kutusunu kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: başvuru Yöneticisi 'Ni kullanarak başvuru ekleme veya kaldırma](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Başvuru Ekle iletişim kutusunu kullanarak başvurular ekleme ve başvuruları ekleme arasındaki denk davranışı sağlamak için `-reference` , eklemekte olduğunuz derleme Için **birlikte çalışma türlerini katıştır** özelliğini **false** olarak ayarlayın. **Add Reference** Özellik için varsayılan değer **true** 'dur.  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, [extern diğer ad](../keywords/extern-alias.md) özelliğinin nasıl kullanılacağını gösterir.  
   
  Kaynak dosyayı derleyip `grid.dll` daha önce derlenen ve ' dan meta verileri içeri aktarın `grid20.dll` . İki DLL aynı bileşenin ayrı sürümlerini içerir ve kaynak dosyayı derlemek için diğer ad seçenekleriyle iki **başvuru** kullanırsınız. Seçenekler şöyle görünür:  

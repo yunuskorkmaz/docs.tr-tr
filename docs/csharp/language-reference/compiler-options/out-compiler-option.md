@@ -9,14 +9,15 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: d1b79879639e1cbdc3dc040977d9fcd0c3a73602
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 409760ee0b147065a2128c62c304fb5d70cfcf42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125026"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193887"
 ---
 # <a name="-out-c-compiler-options"></a>-Out (C# derleyici seçenekleri)
+
 **-Out** seçeneği, çıktı dosyasının adını belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -26,10 +27,12 @@ ms.locfileid: "89125026"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `filename`  
  Derleyici tarafından oluşturulan çıkış dosyasının adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Komut satırında, derlemeniz için birden çok çıkış dosyası belirtmek mümkündür. Derleyici, **-Out** seçeneğinden sonra bir veya daha fazla kaynak kodu dosyası bulmayı bekler. Ardından, tüm kaynak kodu dosyaları **, bu seçenek** tarafından belirtilen çıkış dosyasına derlenir.  
   
  Oluşturmak istediğiniz dosyanın tam adını ve uzantısını belirtin.  
@@ -59,6 +62,7 @@ ms.locfileid: "89125026"
      Bu derleyici seçeneğini program aracılığıyla ayarlamak için:, <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> Proje türünün (exe, kitaplık, vb.) ve derleme adının bir birleşimiyle belirlenen salt okunurdur. Bu özelliklerden birinin veya her ikisinin de değiştirilmesi, çıkış dosyası adını ayarlamak için gerekli olacaktır.  
   
 ## <a name="example"></a>Örnek  
+
  `t.cs`Çıkış dosyasını derleyin ve oluşturun `t.exe` , ayrıca `t2.cs` Modül çıkış dosyası oluşturup oluşturun `mymodule.netmodule` :  
   
 ```console  
