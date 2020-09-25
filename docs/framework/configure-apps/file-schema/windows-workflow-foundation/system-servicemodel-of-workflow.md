@@ -3,20 +3,21 @@ title: <System. serviceModel> iş akışı
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c18cc4886d3e7a19b750a005b27d00a841b9fc5d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151955"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194862"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel>iş akışı
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel> iş akışı
+
 Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<system.ServiceModel>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.ServiceModel>  
@@ -95,9 +96,11 @@ Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok  
   
 ### <a name="child-elements"></a>Alt Öğeler  

@@ -3,14 +3,15 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: 47d432a84d070476ddffd9b98a4ba46d8163bdc3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c21e5186b8afdf8c72cbfc605af94c95bc2bc0d5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152820"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201388"
 ---
 # \<certificateReference>
+
 Bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak için kullanılan ayarları belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak i
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCertificate>**](servicecertificate.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificateReference>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel.services>  
@@ -38,6 +39,7 @@ Bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak i
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -51,6 +53,7 @@ Bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak i
 |Ischaindahil|Doğrulamanın sertifika zinciri kullanılarak gerçekleştirilip gerçekleştirilmeyeceğini belirtir. Varsayılan değer "true" 'dur; doğrulama, sertifika zinciri kullanılarak gerçekleştirilir. İsteğe bağlı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -60,4 +63,5 @@ Bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak i
 |[\<serviceCertificate>](servicecertificate.md)|Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan sertifikayı yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<certificateReference>`Öğesi, bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak için kullanılan ayarları belirler. Öğesinin alt öğesi olarak belirtildiğinde `<serviceCertificate>` , belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan X. 509.440 sertifikasının konumunu ve doğrulama ayarlarını belirtir. `<certificateReference>`Öğesi sınıfı tarafından temsil edilir <xref:System.ServiceModel.Configuration.CertificateReferenceElement> .

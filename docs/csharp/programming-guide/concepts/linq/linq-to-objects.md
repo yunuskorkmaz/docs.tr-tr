@@ -3,12 +3,12 @@ title: LINQ to Objects (C#)
 description: <T>Bir ara LINQ sağlayıcısı veya API olmadan herhangi bir IEnumerable veya IEnumerable KOLEKSIYONUYLA LINQ sorguları kullanan C# ' de LINQ to Objects hakkında bilgi edinin.
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: f8e65f129dc002d9615b01e3a3a123514754b886
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 575708f14487670a4371d470dcdcf650b03c3175
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557012"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202532"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 
@@ -29,6 +29,7 @@ ms.locfileid: "90557012"
  Bu bölümün amacı, bazı Select örnekleri ile LINQ yaklaşımını göstermektir. Bu, kapsamlı olmak üzere tasarlanmamıştır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [LINQ ve dizeler (C#)](./linq-and-strings.md)  
  LINQ 'in dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için nasıl kullanılabileceğini açıklar. Ayrıca, bu ilkeleri gösteren makalelerin bağlantılarını içerir.  
   

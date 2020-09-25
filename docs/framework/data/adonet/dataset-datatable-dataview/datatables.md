@@ -3,14 +3,15 @@ title: DataTables
 description: Bir ADO.NET DataTable hakkında bilgi edinin. Bu, bir bellek içi ilişkisel verilerin bir tablosunu ' de yerel olarak temsil eder. Bulunduğu yerde NET tabanlı uygulama.
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: da6c9201951a6c7916067011c0a4f01ef9fdeffd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d501096b4abe94653acdc5249c120abff94534d1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286914"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202311"
 ---
 # <a name="datatables"></a>DataTables
+
 Bir <xref:System.Data.DataSet> tablo, ilişki ve kısıtlama koleksiyonundan oluşur. ADO.NET ' de <xref:System.Data.DataTable> nesneler, bir **veri kümesindeki**tabloları temsil etmek için kullanılır. **DataTable** , bellek içi ilişkisel verilerin bir tablosunu temsil eder; verileri yereldir. İçinde bulunduğu, ancak **DataAdapter** kullanarak Microsoft SQL Server bir veri kaynağından doldurulabilen, daha fazla bilgi için bkz. veri [kümesini DataAdapter 'tan doldurma](../populating-a-dataset-from-a-dataadapter.md).  
   
  **DataTable** sınıfı, .NET Framework sınıf kitaplığı içindeki **System. Data** ad alanının bir üyesidir. Bir **DataTable** 'ı bağımsız olarak veya bir **veri kümesinin**üyesi olarak oluşturabilir ve kullanabilirsiniz ve **datatable** nesneleri de dahil diğer .NET Framework nesneleriyle birlikte kullanılabilir <xref:System.Data.DataView> . **DataSet nesnesinin** **Tables** özelliği aracılığıyla bir **veri kümesindeki** tablo koleksiyonuna erişirsiniz.  
@@ -22,6 +23,7 @@ Bir <xref:System.Data.DataSet> tablo, ilişki ve kısıtlama koleksiyonundan olu
  Tablolarda bir veya daha fazla ilişkili sütun kullanarak tablolar arasında üst-alt ilişkileri oluşturabilirsiniz. Kullanarak **DataTable** nesneleri arasında bir ilişki oluşturursunuz <xref:System.Data.DataRelation> . Daha sonra, belirli bir satırın ilişkili alt veya üst satırlarını döndürmek için **DataRelation** nesneleri kullanılabilir. Daha fazla bilgi için bkz. [DataRelation 'ı ekleme](adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [DataTable Oluşturma](creating-a-datatable.md)  
  **DataTable** oluşturmayı ve bir **veri kümesine**eklemeyi açıklar.  
   
@@ -35,6 +37,7 @@ Bir <xref:System.Data.DataSet> tablo, ilişki ve kısıtlama koleksiyonundan olu
  Sütun değerleri değiştirildiğinde ve satırlar eklendiğinde veya silindiğinde olaylar da dahil olmak üzere, bir **DataTable**ile kullanılabilecek olaylar hakkında bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [ADO.NET](../index.md)  
  ADO.NET mimarisini ve bileşenlerini ve bunların mevcut veri kaynaklarına erişmek ve uygulama verilerini yönetmek için nasıl kullanılacağını açıklar.  
   

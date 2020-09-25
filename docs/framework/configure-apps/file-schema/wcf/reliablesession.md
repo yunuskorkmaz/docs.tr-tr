@@ -2,14 +2,15 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 95f6646041dc2dd7bae7691a0a9f748c844f50b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ec69d9194d98302a4744e290f23fbb150b2e87cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738753"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181319"
 ---
 # \<reliableSession>
+
 WS-güvenilir mesajlaşma için ayarı tanımlar. Bu öğe özel bir bağlamaya eklendiğinde, elde edilen kanal, tam olarak bir kez teslimat hakkı destekleyebilir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ WS-güvenilir mesajlaşma için ayarı tanımlar. Bu öğe özel bir bağlamaya 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<reliableSession>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <reliableSession acknowledgementInterval="TimeSpan"
@@ -33,6 +34,7 @@ WS-güvenilir mesajlaşma için ayarı tanımlar. Bu öğe özel bir bağlamaya 
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -49,6 +51,7 @@ WS-güvenilir mesajlaşma için ayarı tanımlar. Bu öğe özel bir bağlamaya 
 |Belirten ReliableMessagingVersion|<xref:System.ServiceModel.ReliableMessagingVersion>Kullanılacak WS-ReliableMessaging sürümünü belirten geçerli bir değer.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -58,6 +61,7 @@ WS-güvenilir mesajlaşma için ayarı tanımlar. Bu öğe özel bir bağlamaya 
 |[\<binding>](bindings.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Güvenilir Oturumlar, güvenilir mesajlaşma ve oturumlara yönelik özellikler sağlar. Güvenilir Mesajlaşma, hata durumunda iletişim kurmayı yeniden dener ve iletilerin belirli bir sırada gönderilmesini sağlar. Oturumlar, çağrılar arasındaki istemciler için durumu korur. Bu öğe Ayrıca isteğe bağlı olarak sıralı ileti teslimi sağlar. Bu uygulanan oturum, SOAP ve aktarım aracıları arası olabilir.  
   
  Her bağlama öğesi ileti gönderirken veya alırken bir işleme adımını temsil eder. Çalışma zamanında, bağlama öğeleri, ileti göndermek ve almak için gereken giden ve gelen kanal yığınları oluşturmak için gereken kanal fabrikalarını ve dinleyicileri oluşturur. , `reliableSession` Yığında, uç noktalar arasında güvenilir bir oturum kurabilen ve bu oturumun davranışını yapılandırasağlayan isteğe bağlı bir katman sağlar.  
@@ -65,6 +69,7 @@ WS-güvenilir mesajlaşma için ayarı tanımlar. Bu öğe özel bir bağlamaya 
  Daha fazla bilgi için bkz. [Güvenilir Oturumlar](../../../wcf/feature-details/reliable-sessions.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, özel bir bağlamanın çeşitli taşıma ve ileti kodlama öğeleriyle nasıl yapılandırılacağını gösterir, özellikle de istemci durumunu tutan ve sipariş içi teslim bildirimlerini belirten güvenilir oturumları etkinleştirir. Bu özellik, istemci ve hizmet için uygulama yapılandırma dosyalarında yapılandırılır. Örnek, hizmet yapılandırmasını gösterir.  
   
 ```xml  
@@ -125,7 +130,7 @@ WS-güvenilir mesajlaşma için ayarı tanımlar. Bu öğe özel bir bağlamaya 
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
-- [Güvenilir Oturumlar](../../../wcf/feature-details/reliable-sessions.md)
+- [Güvenilir oturumlar](../../../wcf/feature-details/reliable-sessions.md)
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)

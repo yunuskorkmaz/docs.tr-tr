@@ -1,41 +1,46 @@
 ---
-title: REF (Varlık SQL)
+title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 40a5afd7eb99dba7cae8fe14ed0a45213fda94a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 56ae576ac60d1716d86fbbb797882bf96e99813f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149953"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202246"
 ---
-# <a name="ref-entity-sql"></a>REF (Varlık SQL)
-Bir varlık örneğine başvuru verir.  
+# <a name="ref-entity-sql"></a>REF (Entity SQL)
+
+Bir varlık örneğine bir başvuru döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```sql  
 REF( expression )
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
+
  `expression`  
- Varlık türü örneği veren geçerli bir ifade.  
+ Bir varlık türünün örneğini veren geçerli bir ifade.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Belirtilen varlık örneğine bir başvuru.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varlık başvurusu varlık anahtarı ve varlık kümesi adından oluşur. Farklı varlık kümeleri aynı varlık türüne dayalı olabileceğinden, belirli bir varlık anahtarı birden çok varlık kümesinde görünebilir. Ancak, bir varlık başvurusu her zaman benzersizdir. Giriş ifadesi kalıcı bir varlığı temsil ediyorsa, bu varlığa yapılan bir başvuru döndürülür. Giriş ifadesi kalıcı bir varlık değilse, null başvurusu döndürülür.  
+
+ Bir varlık başvurusu, Varlık anahtarından ve bir varlık kümesi adından oluşur. Farklı varlık kümeleri aynı varlık türünü temel alan için, belirli bir varlık anahtarı birden fazla varlık kümesinde görünebilir. Ancak, bir varlık başvurusu her zaman benzersizdir. Giriş ifadesi kalıcı bir varlığı temsil ediyorsa, bu varlığa yönelik bir başvuru döndürülür. Giriş ifadesi kalıcı olmayan bir varlık değilse, null bir başvuru döndürülür.  
   
- Özellik çıkarma işleci (.) bir varlığın özelliğine erişmek için kullanılırsa, başvuru otomatik olarak başvurudan çıkarılatır.  
+ Özellik ayıklama işleci (.) bir varlığın bir özelliğine erişmek için kullanılırsa, başvuru otomatik olarak başvuru yapılır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki Entity SQL sorgusu, bir giriş varlık bağımsız değişkeni için başvuruyu döndürmek için REF işleci kullanır. Ürün varlığının bir özelliğine erişmek için bir özellik çıkarma işlemi (.) kullandığımız için aynı sorgu başvuruyu dereferences. Sorgu AdventureWorks Satış Modeli dayanmaktadır. Bu sorguyı derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
+
+ Aşağıdaki Entity SQL sorgusu, bir giriş varlığı bağımsız değişkeninin başvurusunu döndürmek için REF işlecini kullanır. Ürün varlığının bir özelliğine erişmek için bir özellik ayıklama işlemi (.) kullandığından aynı sorgu başvurunun başvurusunu kaldırır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [İlkel Tip Sonuçlarını Döndüren Bir Sorguyu Yürütme](../how-to-execute-a-query-that-returns-primitivetype-results.md): Nasıl Yapılır'daki yordamı izleyin.  
+1. [Nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-primitivetype-results.md)bölümündeki yordamı izleyin.  
   
-2. Aşağıdaki sorguyu bağımsız değişken `ExecutePrimitiveTypeQuery` olarak yönteme geçirin:  
+2. Aşağıdaki sorguyu yöntemine bir bağımsız değişken olarak geçirin `ExecutePrimitiveTypeQuery` :  
   
  [!code-sql[DP EntityServices Concepts#REF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#ref)]  
   
@@ -43,6 +48,6 @@ REF( expression )
 
 - [DEREF](deref-entity-sql.md)
 - [CREATEREF](createref-entity-sql.md)
-- [Anahtar](key-entity-sql.md)
+- [ANAHTAR](key-entity-sql.md)
 - [Entity SQL Başvurusu](entity-sql-reference.md)
 - [Tür Tanımları](type-definitions-entity-sql.md)

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: b62f5fbb6b964ed70f6bf7fc08b62a74a7c06c45
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a209cfe4142ad8ebdbce1d715a76ac27300f4e19
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554729"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202402"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Çapraz tablo sorguları (LINQ to DataSet)
+
 Tek bir tabloyu sorgulamaya ek olarak, LINQ to DataSet çapraz tablo sorguları da gerçekleştirebilirsiniz. Bu, bir *JOIN*kullanılarak yapılır. Bir JOIN, bir ürün veya kişi KIMLIĞI gibi başka bir veri kaynağında ortak bir özniteliği paylaşan nesneler ile tek bir veri kaynağındaki nesnelerin ilişkilendirmesidir. Nesne odaklı programlamada, nesneler arasındaki ilişkilerin, her nesne başka bir nesneye başvuran bir üyeye sahip olduğundan, kolayca gezinilmesi oldukça kolaydır. Öte yandan, dış veritabanı tablolarında, ilişkilerde gezinmek doğrudan değildir. Veritabanı tabloları yerleşik ilişkiler içermez. Bu gibi durumlarda, her kaynaktaki öğeleri eşleştirmek için JOIN işlemi kullanılabilir. Örneğin, ürün bilgilerini ve satış bilgilerini içeren iki tablo verildiğinde, satış bilgilerini ve ürünleri aynı satış siparişi için eşleştirmek üzere bir JOIN işlemi kullanabilirsiniz.  
   
  Dil ile tümleşik sorgu (LINQ) çerçevesi, ve olmak üzere iki JOIN işleci sağlar <xref:System.Linq.Enumerable.Join%2A> <xref:System.Linq.Enumerable.GroupJoin%2A> . Bu işleçler *eş birleştirme*gerçekleştirir: diğer bir deyişle, yalnızca anahtarları eşitse iki veri kaynağıyla eşleşen birleşimler. (Bunun aksine, Transact-SQL, işleç gibi dışında bir JOIN işleçlerini destekler `equals` `less than` .)  
@@ -24,6 +25,7 @@ Tek bir tabloyu sorgulamaya ek olarak, LINQ to DataSet çapraz tablo sorguları 
  Birleşimler hakkında daha fazla bilgi için bkz. [birleştirme işlemleri](/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120)).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `SalesOrderHeader` `SalesOrderDetail` Ağustos ayının ayına ait çevrimiçi siparişleri almak için AdventureWorks örnek veritabanından ve tablolarının geleneksel bir birleştirmesini gerçekleştirir.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#join)]

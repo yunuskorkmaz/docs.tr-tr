@@ -8,21 +8,22 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: fe6de09213c6f980e8eb205a318aae50033b2a84
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3c3513c05485550202f2fc5bcae1faabb0e75d47
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155238"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201817"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings> Öğesi
+
 Şifreleme ayarlarını içerir.  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<cryptographySettings>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
       <cryptographySettings>
@@ -30,9 +31,11 @@ ms.locfileid: "79155238"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -50,6 +53,7 @@ ms.locfileid: "79155238"
 |`mscorlib`|Öğesini içerir `cryptographySettings` .|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, **\<cryptographySettings>** öğesinin şifreleme adı eşlemelerini ve OID eşlemelerini içermesi için nasıl kullanılacağını gösterir. Bu örnek, çalışma zamanını <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> bir `MyHashClass` nesne döndüren ve `MyCryptoClass` sınıfı 1.3.36.2.1 nesne tanımlayıcısına eşlenecek şekilde yapılandırır.  
   
 ```xml  
@@ -79,5 +83,5 @@ ms.locfileid: "79155238"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yapılandırma dosyası şeması](../index.md)
-- [Şifreleme Ayarları Şeması](index.md)
+- [Şifreleme ayarları şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)

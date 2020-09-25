@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: 27b506a53aba3e7c58f850c7b3adb8a763c80b39
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 33d7c40faa0bf8b78ebc6f79c7db341bb44887ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557274"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202441"
 ---
 # \<wsHttpBinding>
+
 Çift yönlü olmayan hizmet sözleşmeleri için uygun olan güvenli, güvenilir, birlikte çalışabilen bir bağlama tanımlar. Bağlama aşağıdaki belirtimleri uygular: güvenilirlik için WS-güvenilir mesajlaşma ve ileti güvenliği ve kimlik doğrulaması için WS-Security. Aktarım HTTP ve ileti kodlama metin/XML kodlanıyor.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -61,6 +62,7 @@ ms.locfileid: "90557274"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -98,6 +100,7 @@ ms.locfileid: "90557274"
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  , `WSHttpBinding` Öğesine benzerdir `BasicHttpBinding` ancak daha fazla Web hizmeti özelliği sağlar. HTTP aktarımını kullanır ve, BasicHttpBinding gibi ileti güvenliği sağlar, ancak varsayılan olarak etkinleştirilmiş veya tek bir denetim ayarıyla kullanılabilen işlemler, güvenilir mesajlaşma ve WS-Addressing işlemleri de sağlar.  
   
 ## <a name="example"></a>Örnek  

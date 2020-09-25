@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 049f0636b1c2c2df33461714aea5a11810ef00ad
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359200"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177299"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 
 Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otomatikleştirilmesi gösterilmektedir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Bu öğretici, [Visual Studio kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
 
@@ -186,6 +186,12 @@ Yayın derlemesini test etmek için:
    > ![Build komutuyla StringLibrary bağlam menüsü](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. **Test Run**  >  Menü çubuğundan**tüm testleri** Çalıştır test ' i seçerek birim testlerini çalıştırın. Testler geçer.
+
+## <a name="debug-tests"></a>Hata ayıklama testleri
+
+IDE 'niz olarak Visual Studio kullanıyorsanız, [öğretici: Visual Studio kullanarak bir .NET Core konsol uygulamasında hata](debugging-with-visual-studio.md) ayıklamak için, birim testi projenizi kullanarak kodda hata ayıklama yapabilirsiniz. *Gösterimi* uygulama projesini başlatmak yerine **stringlibrarytests** projesine sağ tıklayın ve bağlam menüsünden **testlerin hatalarını ayıkla** ' yı seçin.
+
+Visual Studio, hata ayıklayıcı ekli olarak test projesi başlatır. Yürütme, test projesine veya temeldeki kitaplık koduna eklediğiniz herhangi bir kesme noktasında durur.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

@@ -3,14 +3,15 @@ title: Bir dizin ağacındaki en büyük dosya veya dosyalar için sorgu (LINQ) 
 description: Bu C# örneğinde, bayt cinsinden dosya boyutuyla ilgili beş LINQ sorgusu gösterilmektedir. Bunları, Info nesnesinin diğer bir özelliğinde sorgulamak için değiştirebilirsiniz.
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: c06c6017d6fd1efd6412729c5df63a2b819908a6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 049db9bf104af1593ba9807c307008e8e760da32
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104380"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176259"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Bir dizin ağacındaki en büyük dosya veya dosyalar için sorgu (LINQ) (C#)
+
 Bu örnekte, bayt cinsinden dosya boyutuyla ilgili beş sorgu gösterilmektedir:  
   
 - En büyük dosyanın bayt cinsinden boyutunu alma.  
@@ -24,6 +25,7 @@ Bu örnekte, bayt cinsinden dosya boyutuyla ilgili beş sorgu gösterilmektedir:
 - Dosyaları, belirli bir boyuttan daha az olan dosyaları yoksayarak, dosya boyutlarına göre gruplar halinde sıralama.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, dosya boyutlarına bağlı olarak dosyaların nasıl sorgulandığına ve gruplandıralınacağını gösteren beş ayrı sorgu içerir. Bu örnekleri, sorgunun diğer bir özelliğindeki sorgu temel alınarak kolayca değiştirebilirsiniz <xref:System.IO.FileInfo> .  
   
 ```csharp  
@@ -144,6 +146,7 @@ class QueryBySize
  Sorgu ayrı bir yönteme, dosya boyutunu bir dosyanın silindiği bir zaman diliminde başka bir iş parçacığında silinmiş olması durumunda oluşturulacak olası özel durumu tüketmek için bir kez çağırır <xref:System.IO.FileInfo> `GetFiles` . <xref:System.IO.FileInfo>Nesne zaten oluşturulsa da, bir nesne, özelliğin <xref:System.IO.FileInfo> <xref:System.IO.FileInfo.Length%2A> ilk kez en güncel boyutunu bayt olarak yenilemeyi deneyeceğinden, özel durum oluşabilir. Bu işlemi sorgu dışında bir try-catch bloğuna yerleştirerek, sorguların içindeki işlemleri, yan etkilere neden olabilecek şekilde önleme kuralını izliyoruz. Genel olarak, bir uygulamanın bilinmeyen bir durumda ayrılmadığından emin olmak için özel durumlar tüketirken harika bir dikkatli olunması gerekir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
 `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.

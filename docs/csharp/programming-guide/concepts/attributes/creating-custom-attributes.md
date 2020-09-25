@@ -3,14 +3,15 @@ title: Özel öznitelikler oluşturma (C#)
 description: Öznitelik sınıfından türetilen bir öznitelik sınıfını tanımlayarak C# ' de özel öznitelikler oluşturmayı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 7d6f98620388af8715652dcbcfe78366952b853d
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6946b707134b2bdbc245b8786f144517a5870440
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925091"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202611"
 ---
 # <a name="creating-custom-attributes-c"></a>Özel öznitelikler oluşturma (C#)
+
 Doğrudan veya dolaylı olarak sınıfından türetilmiş bir sınıf olan öznitelik sınıfını tanımlayarak kendi özel öznitelerinizi oluşturabilirsiniz <xref:System.Attribute> . Bu, meta verilerde hızlı ve kolay bir şekilde öznitelik tanımları tanımlamayı sağlar. Türleri, türünü yazan programcının adıyla etiketlemek istediğinizi varsayalım. Özel bir `Author` öznitelik sınıfı tanımlayabilirsiniz:  
   
 ```csharp  
@@ -42,7 +43,7 @@ class SampleClass
 }  
 ```  
   
- `AttributeUsage`, `AllowMultiple` özel bir özniteliği tek kullanımı veya çok kullanımı yapabileceğiniz adlandırılmış bir parametreye sahiptir. Aşağıdaki kod örneğinde, Multiuse özniteliği oluşturulur.  
+ `AttributeUsage` , `AllowMultiple` özel bir özniteliği tek kullanımı veya çok kullanımı yapabileceğiniz adlandırılmış bir parametreye sahiptir. Aşağıdaki kod örneğinde, Multiuse özniteliği oluşturulur.  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  

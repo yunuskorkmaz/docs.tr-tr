@@ -2,14 +2,15 @@
 title: <webHttp>
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
-ms.openlocfilehash: 00644d248e6fb85d7cf712620e6ac74405e6b0c3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 716d960e2d5f896976c22a60d419d9b165b36178
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399160"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202467"
 ---
 # \<webHttp>
+
 Bu öğe, <xref:System.ServiceModel.Description.WebHttpBehavior> yapılandırma yoluyla bir uç nokta üzerinde belirtir. Bu davranış, [\<webHttpBinding>](webhttpbinding.md) Standart bağlama birlikte kullanıldığında, bir Windows Communication Foundation (WCF) hizmeti Için Web programlama modeline izin vermez.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,13 +20,14 @@ Bu öğe, <xref:System.ServiceModel.Description.WebHttpBehavior> yapılandırma 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webHttp>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <webHttp />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -39,6 +41,7 @@ Bu öğe, <xref:System.ServiceModel.Description.WebHttpBehavior> yapılandırma 
 |Yardım etkin|Yardım sayfasının etkinleştirilip etkinleştirilmediğini belirleyen bir değer alır veya ayarlar.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

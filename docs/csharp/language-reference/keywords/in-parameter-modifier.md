@@ -5,12 +5,12 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 613be9248e6ce9b974bcab1b59abd30469e9e180
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: b9cd308a1eaf2ae8f4e3e89b1a4770933b3978cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118410"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91188414"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>parametre değiştiricide (C# Başvurusu)
 
@@ -121,6 +121,7 @@ Bağımsız değişkenin başvuruya göre geçirildiği tek yöntem çağrısı 
 - Bu bağımsız değişkenin genel bir tür olduğu bir genişletme yönteminin ilk bağımsız değişkeni (Bu tür bir struct gibi kısıtlanıyor olsa bile).
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

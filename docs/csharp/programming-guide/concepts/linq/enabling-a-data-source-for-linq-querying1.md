@@ -3,14 +3,15 @@ title: LINQ Sorgusu için Veri Kaynağı Etkinleştirme
 description: C# ' de LINQ 'ı genişletmeyi, istemcilerin bir veri kaynağını sorgulamasını kolaylaştıran LINQ düzeninde sorgulanmasını sağlamak Için nasıl genişlettireceğinizi öğrenin.
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: a3a03aa3c67ef80507de4607e21eee4d247d622d
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: d7d751c0584072e740b4e5292071e400a5020f82
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103940"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202623"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ Sorgusu için Veri Kaynağı Etkinleştirme
+
 LINQ deseninin herhangi bir veri kaynağının sorgulanmasını sağlamak için LINQ genişletmek için çeşitli yollar vardır. Veri kaynağı örneğin bir veri yapısı, Web hizmeti, dosya sistemi veya veritabanı olabilir. LINQ stili, sorgunun sözdizimi ve deseninin değişmediği için, istemcilerin LINQ sorgusunun etkinleştirildiği bir veri kaynağını sorgulamasını kolaylaştırır. LINQ 'in bu veri kaynaklarına nasıl genişletibileceği yollarda şunlar yer alır:  
   
 - <xref:System.Collections.Generic.IEnumerable%601>Bu türün sorgulanmasını LINQ to Objects etkinleştirmek için bir türde arabirimi uygulama.  
@@ -26,12 +27,15 @@ LINQ deseninin herhangi bir veri kaynağının sorgulanmasını sağlamak için 
 ## <a name="how-to-enable-linq-querying-of-your-data-source"></a>Veri Kaynağınızın LINQ Sorgulamasını Etkinleştirme  
   
 ### <a name="in-memory-data"></a>Bellek İçi Veriler  
+
  Bellek içi veriler için LINQ sorgulaması sağlamanın iki yolu vardır. Veri, uygulayan bir tür ise <xref:System.Collections.Generic.IEnumerable%601> , LINQ to Objects kullanarak verileri sorgulayabilirsiniz. Arabirimi uygulayarak, yazdığınız türden numaralandırmayı etkinleştirmek mantıklı değilse <xref:System.Collections.Generic.IEnumerable%601> , LINQ standart sorgu işleci yöntemlerini bu türde tanımlayabilir veya türü GENIŞLETEN LINQ standart sorgu işleci yöntemleri oluşturabilirsiniz. Standart sorgu işleçlerinin özel uygulamaları, sonuçları döndürmek için ertelenmiş yürütme kullanmalıdır.  
   
 ### <a name="remote-data"></a>Uzak Veriler  
+
  Uzak bir veri kaynağının LINQ sorgulama özelliğinin etkinleştirilmesi için en iyi seçenek, <xref:System.Linq.IQueryable%601> arabirimini uygulamaktır. Ancak, bu, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] bir veri kaynağı için gibi bir sağlayıcının genişlemesiyle farklılık gösterir. Visual Studio 2008 ' de, gibi var olan LINQ teknolojilerini genişletmek için herhangi bir sağlayıcı modeli ve [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] diğer veri kaynağı türlerine ulaşılabilir.
   
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ Sağlayıcıları  
+
  Uygulayan LINQ sağlayıcıları <xref:System.Linq.IQueryable%601> karmaşıklığın yaygın olarak farklılık gösterebilir. Bu bölümde, farklı karmaşıklık düzeyleri açıklanmaktadır.  
   
  Daha az karmaşık bir `IQueryable` sağlayıcı, Web hizmeti 'nin tek bir yöntemiyle arabirim alabilir. Bu türden bir sağlayıcı, işlediği sorgularda belirli bilgiler beklediği için çok özeldir. Muhtemelen tek bir sonuç türü ortaya çıkaran kapalı bir tür sistemi vardır. Sorgunun çoğu yürütme, örneğin <xref:System.Linq.Enumerable> Standart sorgu işleçleri uygulamaları kullanılarak yerel olarak gerçekleşir. Daha az karmaşık olan bir sağlayıcı, sorguyu temsil eden ifade ağacında yalnızca bir yöntem çağrısı ifadesi inceleyebilir ve kalan sorgu mantığının başka bir yerde işlenmesine izin verebilir.  

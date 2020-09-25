@@ -2,14 +2,15 @@
 title: <xmlElement>
 ms.date: 03/30/2017
 ms.assetid: 395205c2-d8c0-4a5e-90f3-7ce3c085fccd
-ms.openlocfilehash: 841331f233bb8c42c25c88ad8e9b4fb1a86faa76
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0ab7fbd64cc92e940617f5334eeb16fcb3a50c4a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398994"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181241"
 ---
 # \<xmlElement>
+
 Belirteç istenirken güvenlik belirteci hizmetine ileti gövdesinde gönderilen bir XML öğesi belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -22,7 +23,7 @@ Belirteç istenirken güvenlik belirteci hizmetine ileti gövdesinde gönderilen
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<tokenRequestParameters>**](tokenrequestparameters.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<xmlElement>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <tokenRequestParameters>
@@ -31,6 +32,7 @@ Belirteç istenirken güvenlik belirteci hizmetine ileti gövdesinde gönderilen
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -40,6 +42,7 @@ Belirteç istenirken güvenlik belirteci hizmetine ileti gövdesinde gönderilen
 |xmlElement|Belirteç istenirken güvenlik belirteci hizmetine ileti gövdesinde gönderilen bir XML öğesini belirten dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

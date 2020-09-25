@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: 4564cf59e3b6cfbdcd9dca06cd0f966d524834de
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2207c934f5864890d9b7a5e22c43a1d53e29aaa5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088544"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91187114"
 ---
 # <a name="oidentry-element"></a>\<oidEntry> Öğesi
+
 Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -24,13 +25,14 @@ Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oidMap>**](oidmap-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidEntry>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <oidEntry OID="object identifier number" name="friendly name" />  
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -41,6 +43,7 @@ Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.
 |**ada**|Gerekli öznitelik.<br /><br /> Etiketteki **Name** özniteliğinin değerini belirtir [\<nameEntry>](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -53,9 +56,11 @@ Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.
 |`oidMap`|Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  ASN. 1 nesne tanımlayıcıları bazı şifreleme biçimlerinde algoritmaları belirler. Tanımlamak istediğiniz algoritmaların nesne tanımlayıcılarını kolay adlarla eşleyin.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, **\<oidEntry>** RIPEMD-160 karma algoritmasının bir nesne tanımlayıcısını, bu karma algoritmanın bir uygulamasına eşlemek için öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
@@ -81,7 +86,7 @@ Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yapılandırma dosyası şeması](../index.md)
-- [Şifreleme Ayarları Şeması](index.md)
+- [Şifreleme ayarları şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)
 - [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)
 - [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme](../../map-object-identifiers-to-cryptography-algorithms.md)

@@ -2,14 +2,15 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 4ef5890d52c3f2af42322f023b9a2a23cb583035
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 72778ce0070d853f8b081a4889ead9524bafd0e8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855056"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181355"
 ---
 # \<policyImporter>
+
 Bağlamalarla ilgili özel ilke onaylarının içeri aktarılacağını denetleyen bir ilke İçeri Aktarıcı belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Bağlamalarla ilgili özel ilke onaylarının içeri aktarılacağını denetley
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<policyImporters>**](policyimporters.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<policyImporter>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <metadata>
@@ -30,6 +31,7 @@ Bağlamalarla ilgili özel ilke onaylarının içeri aktarılacağını denetley
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -39,6 +41,7 @@ Bağlamalarla ilgili özel ilke onaylarının içeri aktarılacağını denetley
 |`type`|Bu öğenin türü.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -48,6 +51,7 @@ Bağlamalarla ilgili özel ilke onaylarının içeri aktarılacağını denetley
 |[\<policyImporters>](policyimporters.md)|Bağlamalarla ilgili özel ilke onaylarının içeri aktarılacağını denetleyen tüm ilke içe aktarımlarını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  İlke İçeri Aktarıcı, bağlama özellikleriyle ilgili özel ilke onaylamalarını aramak ve onaylama için gereken özellikleri uygulayan özel bir bağlama öğesi eklemek için kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -2,14 +2,15 @@
 title: <persistenceProvider>
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: 7c4d9ae29ca1e543217d444e05a661b48e2cbb62
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dbf0ba565d4e3e2d65b4a81eb5d345fa90fb43c7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400071"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181433"
 ---
 # \<persistenceProvider>
+
 Kullanılacak kalıcılık sağlayıcısı uygulamasının türünü ve Kalıcılık işlemleri için kullanılacak zaman aşımını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Kullanılacak kalıcılık sağlayıcısı uygulamasının türünü ve Kalıcı
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<persistenceProvider>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <persistenceProvider persistenceOperationTimeout="TimeSpan"
@@ -27,6 +28,7 @@ Kullanılacak kalıcılık sağlayıcısı uygulamasının türünü ve Kalıcı
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -37,6 +39,7 @@ Kullanılacak kalıcılık sağlayıcısı uygulamasının türünü ve Kalıcı
 |tür|Kullanılacak kalıcılık sağlayıcısı fabrikası türünü belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -46,6 +49,7 @@ Kullanılacak kalıcılık sağlayıcısı uygulamasının türünü ve Kalıcı
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu öğe, bir WCF hizmetinin durumunu seri hale getirmek için kullanılacak Kalıcılık sağlayıcısını belirtir. `wsHttpContextBinding`Http üst bilgilerinde durum bilgilerini geçiren ile birlikte kullanılmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

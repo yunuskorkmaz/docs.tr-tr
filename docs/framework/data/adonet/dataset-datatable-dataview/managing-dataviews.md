@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 5e85fccddf6359791ea702667a36b44f611815dc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c07f521b94f23b479281b0314d6b89a095ee9624
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784496"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181251"
 ---
 # <a name="managing-dataviews"></a>DataView Yönetme
-<xref:System.Data.DataViewManager> Bir<xref:System.Data.DataView>içindeki tüm tablolar için görünüm ayarlarını yönetmek üzere bir kullanabilirsiniz. İlişkilerde gezinen bir kılavuz gibi birden çok tabloya bağlamak istediğiniz bir denetiminiz varsa, bir **DataViewManager** idealdir.  
+
+Bir <xref:System.Data.DataViewManager> içindeki tüm tablolar için görünüm ayarlarını yönetmek üzere bir kullanabilirsiniz <xref:System.Data.DataView> . İlişkilerde gezinen bir kılavuz gibi birden çok tabloya bağlamak istediğiniz bir denetiminiz varsa, bir **DataViewManager** idealdir.  
   
- **DataViewManager** , içindeki <xref:System.Data.DataViewSetting> <xref:System.Data.DataSet>tabloların görünüm ayarını ayarlamak için kullanılan nesnelerin bir koleksiyonunu içerir. , <xref:System.Data.DataViewSettingCollection> Bir **veri kümesindeki**her tablo için bir <xref:System.Data.DataViewSetting> nesne içerir. Başvurulan tablonun varsayılan **ApplyDefaultSort**, **Sort**, **RowFilter**ve **RowStateFilter** özelliklerini **DataViewSetting**kullanarak ayarlayabilirsiniz. Belirli bir tablo için, ada veya sıralı başvuruya göre veya ilgili tablo nesnesine bir başvuru geçirerek **DataViewSetting** 'a başvurabilirsiniz. **DataViewSettings** özelliğini kullanarak **DataViewManager** içindeki **DataViewSetting** nesneleri koleksiyonuna erişebilirsiniz.  
+ **DataViewManager** , <xref:System.Data.DataViewSetting> içindeki tabloların görünüm ayarını ayarlamak için kullanılan nesnelerin bir koleksiyonunu içerir <xref:System.Data.DataSet> . , <xref:System.Data.DataViewSettingCollection> <xref:System.Data.DataViewSetting> Bir **veri kümesindeki**her tablo için bir nesne içerir. Başvurulan tablonun varsayılan **ApplyDefaultSort**, **Sort**, **RowFilter**ve **RowStateFilter** özelliklerini **DataViewSetting**kullanarak ayarlayabilirsiniz. Belirli bir tablo için, ada veya sıralı başvuruya göre veya ilgili tablo nesnesine bir başvuru geçirerek **DataViewSetting** 'a başvurabilirsiniz. **DataViewSettings** özelliğini kullanarak **DataViewManager** içindeki **DataViewSetting** nesneleri koleksiyonuna erişebilirsiniz.  
   
- Aşağıdaki kod örneği bir **veri kümesini** SQL Server **Northwind** veritabanı tabloları **müşteriler**, **siparişler**ve **sipariş ayrıntıları**ile doldurur, tablolar arasındaki ilişkileri oluşturur, bir **DataViewManager** kullanır Varsayılan **DataView** ayarlarını ayarlayın ve bir **DataGrid** ' i **DataViewManager**öğesine bağlar. Örnek, **veri kümesindeki** tüm tablolar için varsayılan **DataView** ayarlarını tablosunun birincil anahtarına (**ApplyDefaultSort** = **true**) göre sıralar ve ardından **müşteriler** tablosunun sıralama düzenini değiştirir. **CompanyName**'e göre sıralayın.  
+ Aşağıdaki kod örneği bir **veri kümesini** SQL Server **Northwind** veritabanı tabloları **müşteriler**, **siparişler**ve **sipariş ayrıntıları**ile doldurur, tablolar arasındaki ilişkileri oluşturur, varsayılan **DataView** ayarlarını ayarlamak için bir **DataViewManager** kullanır ve bir **DataGrid** 'i **DataViewManager**öğesine bağlar. Örnek, **veri kümesindeki** tüm tablolar için varsayılan **DataView** ayarlarını tablosunun birincil anahtarına (**ApplyDefaultSort**  =  **true**) göre sıralar ve ardından, **Customers** tablosunun sıralama düzenini **CompanyName**olarak değiştirir.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  

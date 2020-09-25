@@ -2,14 +2,15 @@
 title: <workflowControlEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: 670c1573fe4378a18c19d0a58fe58241745725bd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 572ff7e119828897860944a430e5f51f5d1c3cad
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854789"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194849"
 ---
 # \<workflowControlEndpoint>
+
 Bu yapılandırma öğesi, iş akışı örneklerinin yürütülmesini denetlemek için standart bir uç nokta tanımlar (oluşturma, çalıştırma, askıya alma, sonlandırma, vb.).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Bu yapılandırma öğesi, iş akışı örneklerinin yürütülmesini denetleme
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<workflowControlEndpoint>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -30,6 +31,7 @@ Bu yapılandırma öğesi, iş akışı örneklerinin yürütülmesini denetleme
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -39,6 +41,7 @@ Bu yapılandırma öğesi, iş akışı örneklerinin yürütülmesini denetleme
 |name|Standart uç nokta yapılandırmasının adını belirten bir dize. Ad, `endpointConfiguration` bir standart uç noktayı yapılandırmaya bağlamak için hizmet uç noktasının özniteliğinde kullanılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

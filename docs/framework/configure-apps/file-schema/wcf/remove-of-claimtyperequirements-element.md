@@ -2,14 +2,15 @@
 title: <remove><claimTypeRequirements>öğesinin
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
-ms.openlocfilehash: 84f4208d3f4581cf7e8c4455bf3f5d78f7e13b9f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 773f37156969f64f02711e6a60764aeb7e50a840
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399993"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181329"
 ---
 # <a name="remove-of-claimtyperequirements-element"></a>\<remove>\<claimTypeRequirements>öğesinin
+
 Federal kimlik bilgilerinde kaldırılacak talep türlerini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -22,7 +23,7 @@ Federal kimlik bilgilerinde kaldırılacak talep türlerini belirtir.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<claimTypeRequirements>**](claimtyperequirements-for-message.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <claimTypeRequirements>
@@ -31,6 +32,7 @@ Federal kimlik bilgilerinde kaldırılacak talep türlerini belirtir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -40,6 +42,7 @@ Federal kimlik bilgilerinde kaldırılacak talep türlerini belirtir.
 |claimType|Kaldırılacak talebin türünü tanımlayan URI.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

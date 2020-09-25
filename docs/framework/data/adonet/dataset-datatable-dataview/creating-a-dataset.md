@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 57629d8f-393e-4677-8b83-29ffde27f5fc
-ms.openlocfilehash: d496167b7bce31491402414c43ae0bcdee423b89
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cbf652cc3742cb880fe060743dcc2615e6283ca7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786500"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202363"
 ---
 # <a name="creating-a-dataset"></a>DataSet Oluşturma
-Oluşturucuyu çağırarak bir <xref:System.Data.DataSet> örneğini oluşturabilirsiniz. <xref:System.Data.DataSet> İsteğe bağlı olarak bir ad bağımsız değişkeni belirtin. İçin <xref:System.Data.DataSet>bir ad belirtmezseniz, ad "NewDataSet" olarak ayarlanır.  
+
+Oluşturucuyu çağırarak bir örneğini oluşturabilirsiniz <xref:System.Data.DataSet> <xref:System.Data.DataSet> . İsteğe bağlı olarak bir ad bağımsız değişkeni belirtin. İçin bir ad belirtmezseniz, <xref:System.Data.DataSet> ad "NewDataSet" olarak ayarlanır.  
   
- Ayrıca, varolan <xref:System.Data.DataSet>bir temelinde yeni <xref:System.Data.DataSet> bir oluşturabilirsiniz. Yeni <xref:System.Data.DataSet> , var olan <xref:System.Data.DataSet>öğesinin tam bir kopyası olabilir. bunun bir kopyası, ilişkisel <xref:System.Data.DataSet> yapıyı veya şemayı kopyalayan ancak var <xref:System.Data.DataSet>olan veya öğesinin <xref:System.Data.DataSet>bir alt kümesindeki verilerin hiçbirini içermeyen bir kopyasıdır. yalnızca, <xref:System.Data.DataSet> <xref:System.Data.DataSet.GetChanges%2A> yöntemi kullanılarak var olan değiştirilen satırları içerir. Daha fazla bilgi için bkz. [DataSet Içeriğini kopyalama](copying-dataset-contents.md).  
+ Ayrıca, <xref:System.Data.DataSet> varolan bir temelinde yeni bir oluşturabilirsiniz <xref:System.Data.DataSet> . Yeni, <xref:System.Data.DataSet> var olan öğesinin tam bir kopyası olabilir <xref:System.Data.DataSet> <xref:System.Data.DataSet> . Bu, ilişkisel yapıyı veya şemayı kopyalayan, ancak var olan bir veri kümesini ya da bir alt kümesini içeren, ancak, <xref:System.Data.DataSet> <xref:System.Data.DataSet> yalnızca var olan bir ' ın <xref:System.Data.DataSet> <xref:System.Data.DataSet.GetChanges%2A> . Daha fazla bilgi için bkz. [DataSet Içeriğini kopyalama](copying-dataset-contents.md).  
   
- Aşağıdaki kod örneği, bir <xref:System.Data.DataSet>örneğinin nasıl oluşturulacağını göstermektedir.  
+ Aşağıdaki kod örneği, bir örneğinin nasıl oluşturulacağını göstermektedir <xref:System.Data.DataSet> .  
   
 ```vb  
 Dim customerOrders As DataSet = New DataSet("CustomerOrders")  
