@@ -2,14 +2,15 @@
 title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: e5a0e482cb391cf1440c9392bcd3a39a18955c6b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 26e0c707422518fbdaf289faa64bb73875f62a58
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551770"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178001"
 ---
 # \<webHttpBinding>
+
 SOAP iletileri yerine HTTP isteklerine yanıt veren Windows Communication Foundation (WCF) Web Hizmetleri için uç noktaları yapılandırmak için kullanılan bir bağlama öğesi tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -51,6 +52,7 @@ SOAP iletileri yerine HTTP isteklerine yanıt veren Windows Communication Founda
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -87,6 +89,7 @@ SOAP iletileri yerine HTTP isteklerine yanıt veren Windows Communication Founda
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  WCF Web programlama modeli, geliştiricilerin SOAP tabanlı mesajlaşma yerine "düz eski XML" (POX) stili mesajlaşma kullanan HTTP istekleri aracılığıyla WCF Web hizmetlerini kullanıma sunmasına olanak tanır. İstemcilerin HTTP isteklerini kullanarak bir hizmetle iletişim kurması için, kendisine bağlı olan ile birlikte bir hizmetin uç noktası yapılandırılması gerekir [\<webHttpBinding>](webhttpbinding.md) \<WebHttpBehavior> .  
   
  Dağıtım ve ASP için WCF 'de destek. AJAX tümleştirmesi, her ikisi de Web programlama modelinin üzerine kurulmuştur. Model hakkında daha fazla bilgi için bkz. [WCF Web http programlama modeli](../../../wcf/feature-details/wcf-web-http-programming-model.md).  

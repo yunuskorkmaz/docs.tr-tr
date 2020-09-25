@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: 3e32539900893297d2bac232138f9940a8ab100b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 114543e43306e4195f92ca625e894a532084be6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557651"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177780"
 ---
 # \<wsDualHttpBinding>
+
 Çift yönlü hizmet sözleşmeleri veya SOAP aracıları üzerinden iletişim için uygun olan güvenli, güvenilir ve birlikte çalışabilen bir bağlama tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -55,6 +56,7 @@ ms.locfileid: "90557651"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -92,6 +94,7 @@ ms.locfileid: "90557651"
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  , `WSDualHttpBinding` Web hizmeti protokolleri için aynı desteği, `WSHttpBinding` ancak çift yönlü sözleşmelerle birlikte kullanmak için sağlar. `WSDualHttpBinding` yalnızca SOAP güvenliğini destekler ve güvenilir mesajlaşma gerektirir. Bu bağlama, istemcinin hizmet için bir geri çağırma uç noktası sağlayan ortak bir URI 'ye sahip olmasını gerektirir. Bu, özniteliği tarafından sağlanır `clientBaseAddress` . İkili bağlama, istemcinin IP adresini hizmete gösterir. İstemci, yalnızca güvendiği hizmetlere bağlanmasını sağlamak için güvenliği kullanmalıdır.  
   
  Bu bağlama, bir veya daha fazla SOAP aracıları aracılığıyla güvenilir bir şekilde iletişim kurmak için kullanılabilir.  

@@ -2,14 +2,15 @@
 title: Veri Türü Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 065a9dcb5e03c784c5dec9ffbe6a3153aead9e3c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52e64714a17448cd94723bdc216d8ea069fc5eef
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554716"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177754"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET’te Veri Türü Eşlemeleri
+
 .NET Framework, çalışma zamanında türlerin nasıl bildirildiği, kullanıldığı ve yönetildiğini tanımlayan ortak tür sistemine dayalıdır. Her ikisi de temel türden türetilen değer türleri ve başvuru türlerinden oluşur <xref:System.Object> . Bir veri kaynağıyla çalışırken, açıkça belirtilmemişse veri türü veri sağlayıcısından algılanır. Örneğin, bir <xref:System.Data.DataSet> nesne belirli bir veri kaynağından bağımsızdır. İçindeki veriler bir `DataSet` veri kaynağından alınır ve değişiklikler bir kullanılarak veri kaynağına geri kaydedilir `DataAdapter` . Yani `DataAdapter` <xref:System.Data.DataTable> , bir `DataSet` veri kaynağından değerleri olan bir ile bir doldurduğunda, içindeki sütunların sonuç veri türleri, `DataTable` veri kaynağına bağlanmak için kullanılan .NET Framework veri sağlayıcısına özgü türler yerine .NET Framework türlerdir.  
   
  Benzer şekilde, bir `DataReader` veri kaynağından bir değer döndürdüğünde, sonuçta elde edilen değer .NET Framework türüne sahip yerel bir değişkende depolanır. Ve yöntemlerinin her ikisi için `Fill` `DataAdapter` `Get` `DataReader` , .NET Framework türü .NET Framework veri sağlayıcısından döndürülen değerden çıkarsanamıyor.  
@@ -20,6 +21,7 @@ ms.locfileid: "90554716"
 > .NET Framework veri sağlayıcısı veri türleri için null değerler tarafından temsil edilir `DBNull.Value` .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [SQL Server Veri Türü Eşlemeleri](sql-server-data-type-mappings.md)  
  İçin gösterilen veri türü eşlemelerini ve veri erişimcisi yöntemlerini listeler <xref:System.Data.SqlClient> .  
   

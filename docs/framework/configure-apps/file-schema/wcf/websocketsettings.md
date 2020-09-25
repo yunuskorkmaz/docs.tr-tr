@@ -2,14 +2,15 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6cfddfb9ebfc7c3447af977e14738baabebc8fe9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732560"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177858"
 ---
 # \<webSocketSettings>
+
 Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webSocketSettings>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netHttpBinding>
@@ -37,6 +38,7 @@ Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -61,6 +63,7 @@ Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.
 |Asla|Web yuvası protokolünü hiçbir şekilde kullanmayın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -70,6 +73,7 @@ Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.
 |\<netHttpBinding>|NetHttpBinding belirtir|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, öğesinin nasıl kullanılacağını gösterir \<webSocketSettings> .  
   
 ```xml  

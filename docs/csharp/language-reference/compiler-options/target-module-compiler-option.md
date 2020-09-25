@@ -9,14 +9,15 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 2074e170ab177c39fdf3954fa93ae4b666bf853d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: d8691e5e4477dbbe989344469b44382d5e0e7c8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466059"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193614"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target: Module (C# derleyici seçenekleri)
+
 Bu seçenek derleyicinin bir derleme bildirimi üretmesine neden olur.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,6 +27,7 @@ Bu seçenek derleyicinin bir derleme bildirimi üretmesine neden olur.
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Varsayılan olarak, bu seçenekle derleme tarafından oluşturulan çıkış dosyası. netmodule uzantısına sahip olacaktır.  
   
  Derleme bildirimine sahip olmayan bir dosya .NET çalışma zamanı tarafından yüklenemez. Ancak, bu tür bir dosya, [-addmodule](./addmodule-compiler-option.md)aracılığıyla bir derlemenin derleme bildirimine eklenebilir.  
@@ -37,6 +39,7 @@ Bu seçenek derleyicinin bir derleme bildirimi üretmesine neden olur.
  Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.ProjectProperties3.OutputType%2A> ..  
   
 ## <a name="example"></a>Örnek  
+
  Derle `in.cs` , oluşturma `in.netmodule` :  
   
 ```console  

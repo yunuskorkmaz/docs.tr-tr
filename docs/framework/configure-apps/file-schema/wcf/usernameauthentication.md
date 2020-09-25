@@ -2,14 +2,15 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: dc5c00a2204646863ae2570bb97b8d70e22a72d4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 30fd78d6c56e8b22e0e744a38f18ac076dc70162
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399183"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178040"
 ---
 # \<userNameAuthentication>
+
 Hizmetin kimlik bilgilerini Kullanıcı adı ve parolaya göre belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Hizmetin kimlik bilgilerini Kullanıcı adı ve parolaya göre belirtir.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCredentials>**](servicecredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<userNameAuthentication>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <userNameAuthentication cacheLogonTokenLifetime="TimeSpan"
@@ -33,6 +34,7 @@ Hizmetin kimlik bilgilerini Kullanıcı adı ve parolaya göre belirtir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -48,6 +50,7 @@ Hizmetin kimlik bilgilerini Kullanıcı adı ve parolaya göre belirtir.
 |`userNamePasswordValidationMode`|Kullanıcı adı parolasının doğrulanma şeklini belirtir. Geçerli değerler:<br /><br /> -Windows<br />-MembershipProvider<br />-Özel<br /><br /> Varsayılan olarak Windows. Bu öznitelik türü <xref:System.ServiceModel.Security.UserNamePasswordValidationMode> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -57,6 +60,7 @@ Hizmetin kimlik bilgilerini Kullanıcı adı ve parolaya göre belirtir.
 |[\<serviceCredentials>](servicecredentials.md)|Hizmetin kimliğini doğrulamak için kullanılacak kimlik bilgisini ve istemci kimlik bilgileri doğrulaması ile ilgili ayarları belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir hizmet tarafından kullanılan bağlamalardan hiçbiri Kullanıcı adı/parola tabanlı kimlik doğrulaması için yapılandırılmamışsa, bu öğenin öznitelikleri yok sayılır. Bunlar, `customUserNamePasswordValidatorType` , `includeWindowsGroups` `membershipProviderName` ve içerir `userNamePasswordValidationMode` .  
   
  Bir hizmet tarafından kullanılan bağlamalardan hiçbiri Kullanıcı adı/parola için Windows kimlik doğrulaması kullanmak üzere yapılandırılmamışsa, oturum açma belirteçlerini önbelleğe alma ile ilgili ayarlar yoksayılır. Bunlar, `cacheLogonTokenLifetime` ve içerir `cacheLogonTokens` `maxCacheLogonTokens` .  

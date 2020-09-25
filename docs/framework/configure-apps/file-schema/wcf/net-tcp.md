@@ -2,21 +2,22 @@
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 4a3a17655f5469fe84c0b684ebdac9848bbfba84
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 12709d58d9192825598b15a50baa10a54450226e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397688"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178079"
 ---
 # \<net.tcp>
+
 NET için yapılandırma ayarlarını belirtir. Birden çok işlemin aynı TCP bağlantı noktasını paylaşmasına izin veren TCP bağlantı noktası paylaşım hizmeti.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<net.tcp>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <configuration>
@@ -44,9 +45,11 @@ NET için yapılandırma ayarlarını belirtir. Birden çok işlemin aynı TCP b
 ```  
   
 ## <a name="type"></a>Tür  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -69,9 +72,10 @@ NET için yapılandırma ayarlarını belirtir. Birden çok işlemin aynı TCP b
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|SMSvcHost. exe dinleyici işleminin yapılandırma ayarlarını içerir.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|SMSvcHost.exe dinleyici işlemi için yapılandırma ayarlarını içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bağlantı noktası paylaşımı hakkında daha fazla bilgi için bkz. [net. TCP bağlantı noktası paylaşma](../../../wcf/feature-details/net-tcp-port-sharing.md). Bağlantı noktası paylaşım hizmetini nasıl yapılandıracağınızı anlamak için bkz. [net. TCP bağlantı noktası paylaşım hizmetini yapılandırma](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

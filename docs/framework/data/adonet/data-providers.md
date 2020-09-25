@@ -6,19 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2be58251c767c937e817edf1ba19309f0c62ac33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b61fede9144e554ee68f0b41adac36209adb7288
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554742"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177812"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework Veri Sağlayıcıları
+
 Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutları yürütmek ve sonuçları almak için kullanılır. Bu sonuçlar doğrudan işlenirler, <xref:System.Data.DataSet> gerektiğinde kullanıcıya sunulmak üzere, birden fazla kaynaktaki verilerle birlikte veya katmanlar arasında uzaktan bir şekilde yerleştirilir. .NET Framework veri sağlayıcıları hafif, veri kaynağı ve kod arasında en az bir katman oluşturarak, işlevselliği ödün vermeden performansı artırır.  
   
  Aşağıdaki tabloda .NET Framework dahil edilen veri sağlayıcıları listelenmektedir.  
   
-|.NET Framework veri sağlayıcısı|Description|  
+|.NET Framework veri sağlayıcısı|Açıklama|  
 |-------------------------------------------------------------------------------|-----------------|  
 |SQL Server için .NET Framework Veri Sağlayıcısı|Microsoft SQL Server için veri erişimi sağlar. <xref:System.Data.SqlClient>Ad alanını kullanır.|  
 |OLE DB için .NET Framework Veri Sağlayıcısı|OLE DB kullanılarak sunulan veri kaynakları için. <xref:System.Data.OleDb>Ad alanını kullanır.|  
@@ -28,9 +29,10 @@ Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutlar�
 |SQL Server Compact 4,0 için Veri Sağlayıcısı .NET Framework.|Microsoft SQL Server Compact 4,0 için veri erişimi sağlar. [System. Data. SqlServerCe](/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) ad alanını kullanır.|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework veri sağlayıcılarının temel nesneleri  
+
  Aşağıdaki tabloda .NET Framework veri sağlayıcısı oluşturan dört çekirdekli nesne özetlenmektedir.  
   
-|Nesne|Description|  
+|Nesne|Açıklama|  
 |------------|-----------------|  
 |`Connection`|Belirli bir veri kaynağına bağlantı kurar. Tüm nesneler için temel sınıf `Connection` <xref:System.Data.Common.DbConnection> sınıfındır.|  
 |`Command`|Bir veri kaynağına karşı bir komut yürütür. `Parameters`' Dan bir öğesinin kapsamında sunar ve çalıştırılabilir `Transaction` `Connection` . Tüm nesneler için temel sınıf `Command` <xref:System.Data.Common.DbCommand> sınıfındır.|  
@@ -39,7 +41,7 @@ Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutlar�
   
  Bu belgede daha önce açıklanan tabloda listelenen çekirdek sınıflarının yanı sıra, bir .NET Framework veri sağlayıcısı aşağıdaki tabloda listelenen sınıfları da içerir.  
   
-|Nesne|Description|  
+|Nesne|Açıklama|  
 |------------|-----------------|  
 |`Transaction`|İşlemler içindeki komutları veri kaynağında listeler. Tüm nesneler için temel sınıf `Transaction` <xref:System.Data.Common.DbTransaction> sınıfındır. ADO.NET ayrıca, ad alanındaki sınıfları kullanan işlemler için destek sağlar <xref:System.Transactions> .|  
 |`CommandBuilder`|`DataAdapter`Saklı bir yordamdan bir veya türetilmiş parametre bilgisinin otomatik olarak oluşturduğu ve `Parameters` bir nesnenin koleksiyonunu dolduran yardımcı nesne `Command` . Tüm nesneler için temel sınıf `CommandBuilder` <xref:System.Data.Common.DbCommandBuilder> sınıfındır.|  
@@ -50,6 +52,7 @@ Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutlar�
 |`ClientPermission`|.NET Framework veri sağlayıcısı kod erişimi güvenlik öznitelikleri için verilmiştir. Tüm nesneler için temel sınıf `ClientPermission` <xref:System.Data.Common.DBDataPermission> sınıfındır.|  
   
 ## <a name="net-framework-data-provider-for-sql-server-sqlclient"></a>SQL Server (SqlClient) için .NET Framework Veri Sağlayıcısı  
+
  SQL Server (SqlClient) için .NET Framework Veri Sağlayıcısı, SQL Server ile iletişim kurmak için kendi protokolünü kullanır. Hafif ve bir OLE DB ya da açık veritabanı bağlantısı (ODBC) katmanı eklemeden SQL Server doğrudan erişmek için iyileştirildi. Aşağıdaki çizim, Veri Sağlayıcısı için .NET Framework OLE DB ile SQL Server için .NET Framework Veri Sağlayıcısı karşıttır. OLE DB .NET Framework Veri Sağlayıcısı, bağlantı havuzu oluşturma ve işlem hizmetleri ve veri kaynağı için OLE DB sağlayıcı sağlayan OLE DB hizmeti bileşeni aracılığıyla bir OLE DB veri kaynağına iletişim kurar.  
   
 > [!NOTE]
@@ -73,6 +76,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>OLE DB için .NET Framework Veri Sağlayıcısı  
+
  OLE DB (OleDb) için .NET Framework Veri Sağlayıcısı, veri erişimini etkinleştirmek için COM birlikte çalışma aracılığıyla yerel OLE DB kullanır. OLE DB için .NET Framework Veri Sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için .NET Framework OLE DB Veri Sağlayıcısı, varsayılan olarak bir işlemde otomatik olarak aşağı listeler ve Windows Bileşen hizmetlerinden işlem ayrıntılarını edinir. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](transactions-and-concurrency.md).  
   
  Aşağıdaki tabloda, ADO.NET ile test edilmiş sağlayıcılar gösterilmektedir.  
@@ -101,6 +105,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>ODBC için .NET Framework Veri Sağlayıcısı  
+
  ODBC için .NET Framework Veri Sağlayıcısı (ODBC), veri erişimini etkinleştirmek için yerel ODBC Sürücü Yöneticisi 'Ni (DM) kullanır. ODBC veri sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için, varsayılan olarak, ODBC veri sağlayıcısı bir işlem içinde otomatik olarak listeler ve Windows Bileşen hizmetlerinden işlem ayrıntılarını edinir. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](transactions-and-concurrency.md).  
   
  Aşağıdaki tabloda, ADO.NET ile sınanan ODBC sürücüleri gösterilmektedir.  
@@ -127,6 +132,7 @@ using System.Data.Odbc;
 > ODBC için .NET Framework Veri Sağlayıcısı, MDAC 2,6 veya sonraki bir sürümü gerektirir ve MDAC 2,8 SP1 önerilir. MDAC 2,8 SP1 'i [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=5793)' nden indirebilirsiniz.
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Oracle için .NET Framework Veri Sağlayıcısı  
+
  Oracle (OracleClient) için .NET Framework Veri Sağlayıcısı Oracle istemci bağlantı yazılımı aracılığıyla Oracle veri kaynaklarına veri erişimi sağlar. Veri sağlayıcısı, Oracle istemci yazılımı sürümü 8.1.7 veya sonraki bir sürümü destekler. Veri sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](transactions-and-concurrency.md).  
   
  Oracle için .NET Framework Veri Sağlayıcısı, bir Oracle veri kaynağına bağlanabilmeniz için sistemde Oracle istemci yazılımı (sürüm 8.1.7 veya sonraki bir sürüm) gerektirir.  
@@ -146,6 +152,7 @@ using System.Data.OracleClient;
 ```  
   
 ## <a name="choosing-a-net-framework-data-provider"></a>.NET Framework Veri Sağlayıcısı seçme  
+
  Uygulamanızın tasarım ve veri kaynağına bağlı olarak, .NET Framework veri sağlayıcısı seçiminiz uygulamanızın performansını, yeteneğini ve bütünlüğünü iyileştirebilir. Aşağıdaki tabloda her bir .NET Framework veri sağlayıcısının avantajları ve sınırlamaları ele alınmaktadır.  
   
 |Sağlayıcı|Notlar|  
@@ -156,6 +163,7 @@ using System.Data.OracleClient;
 |Oracle için .NET Framework Veri Sağlayıcısı|Oracle veri kaynakları kullanan orta ve tek katmanlı uygulamalar için önerilir.|  
   
 ## <a name="entityclient-provider"></a>EntityClient sağlayıcı  
+
  EntityClient sağlayıcısı, Varlık Veri Modeli (EDM) tabanlı verilere erişmek için kullanılır. Diğer .NET Framework veri sağlayıcılarının aksine, bir veri kaynağıyla doğrudan etkileşime girmez. Bunun yerine, temel alınan veri sağlayıcısıyla iletişim kurmak için Entity SQL kullanır. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

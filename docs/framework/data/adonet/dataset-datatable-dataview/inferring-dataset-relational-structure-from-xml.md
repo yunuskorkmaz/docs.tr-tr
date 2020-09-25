@@ -2,34 +2,36 @@
 title: XML’den DataSet İlişkisel Yapısını Çıkarma
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 1c8325d7ed52fea7397a7b5aa8744bdfa90b2c6e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fca50491120346dea3e09c82324225f2114380fc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785324"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177585"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>XML’den DataSet İlişkisel Yapısını Çıkarma
-Öğesinin <xref:System.Data.DataSet> ilişkisel yapısı veya şeması tablo, sütun, kısıtlama ve ilişkilerinden oluşur. XML <xref:System.Data.DataSet> 'den yükleme yaparken, şema önceden tanımlanmış olabilir veya yüklenen XML 'den açık ya da çıkarım aracılığıyla oluşturulabilir. XML 'den bir <xref:System.Data.DataSet> öğesinin şemasını ve içeriğini yükleme hakkında daha fazla bilgi için, bkz. xml 'den [veri kümesi yükleme](loading-a-dataset-from-xml.md) ve [XML 'den veri kümesi şema bilgilerini yükleme](loading-dataset-schema-information-from-xml.md).  
+
+Öğesinin ilişkisel yapısı veya şeması <xref:System.Data.DataSet> tablo, sütun, kısıtlama ve ilişkilerinden oluşur. <xref:System.Data.DataSet>XML 'den yükleme yaparken, şema önceden tanımlanmış olabilir veya yüklenen XML 'den açık ya da çıkarım aracılığıyla oluşturulabilir. XML 'den bir öğesinin şemasını ve içeriğini yükleme hakkında daha fazla bilgi için <xref:System.Data.DataSet> , bkz. xml 'Den [veri kümesi yükleme](loading-a-dataset-from-xml.md) ve [XML 'Den veri kümesi şema bilgilerini yükleme](loading-dataset-schema-information-from-xml.md).  
   
- XML 'den bir <xref:System.Data.DataSet> şeması oluşturulduysa, tercih edilen yöntem, XML şeması tanım dili (xsd) kullanarak şemayı açıkça belirtmektir ( [xml şemasından (xsd) DataSet ilişkisel yapısını türetmede](deriving-dataset-relational-structure-from-xml-schema-xsd.md)açıklandığı gibi) veya XML verileri azaltılmış (XDR). XML 'de XML şeması veya xdr şeması kullanılabilir değilse, öğesinin <xref:System.Data.DataSet> şeması XML öğelerinin ve özniteliklerin yapısından çıkarsanamıyor.  
+ <xref:System.Data.DataSet>XML 'den bir şeması oluşturulduysa, tercih edilen yöntem, XML şeması tanım dili (xsd) kullanarak şemayı açıkça belirtmektir ( [XML ŞEMASıNDAN (xsd) veri kümesi Ilişkisel yapısını türetmede](deriving-dataset-relational-structure-from-xml-schema-xsd.md)açıklandığı gıbı) veya XML VERILERI azaltılmış (xdr). XML 'de XML şeması veya XDR şeması kullanılabilir değilse, öğesinin şeması <xref:System.Data.DataSet> XML öğelerinin ve özniteliklerin yapısından çıkarsanamıyor.  
   
- Bu bölümde, XML öğelerini ve <xref:System.Data.DataSet> özniteliklerini ve bunların yapısını ve ortaya çıkarılan <xref:System.Data.DataSet> şemayı gösteren şema çıkarımı kuralları açıklanmaktadır.  
+ Bu bölümde <xref:System.Data.DataSet> , XML öğelerini ve özniteliklerini ve bunların yapısını ve ortaya çıkarılan şemayı gösteren şema çıkarımı kuralları açıklanmaktadır <xref:System.Data.DataSet> .  
   
- Bir XML belgesinde bulunan özniteliklerin hepsi çıkarım işlemine dahil edilmelidir. Ad alanı nitelikli öznitelikler, XML belgesi için önemli olan ancak <xref:System.Data.DataSet> şema için önemli olan meta verileri içerebilir. Kullanarak <xref:System.Data.DataSet.InferXmlSchema%2A>, çıkarım işlemi sırasında yok sayılacak ad alanlarını belirtebilirsiniz. Daha fazla bilgi için bkz. [XML 'Den veri kümesi şema bilgilerini yükleme](loading-dataset-schema-information-from-xml.md).  
+ Bir XML belgesinde bulunan özniteliklerin hepsi çıkarım işlemine dahil edilmelidir. Ad alanı nitelikli öznitelikler, XML belgesi için önemli olan ancak şema için önemli olan meta verileri içerebilir <xref:System.Data.DataSet> . Kullanarak <xref:System.Data.DataSet.InferXmlSchema%2A> , çıkarım işlemi sırasında yok sayılacak ad alanlarını belirtebilirsiniz. Daha fazla bilgi için bkz. [XML 'Den veri kümesi şema bilgilerini yükleme](loading-dataset-schema-information-from-xml.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [DataSet Şema Çıkarımı İşleminin Özeti](summary-of-the-dataset-schema-inference-process.md)  
- XML 'nin şemasını <xref:System.Data.DataSet> göstermek için kurallara ilişkin üst düzey bir Özet sağlar.  
+ XML 'nin şemasını göstermek için kurallara ilişkin üst düzey bir Özet sağlar <xref:System.Data.DataSet> .  
   
  [Tabloların Çıkarımını Yapma](inferring-tables.md)  
- İçinde tablo olarak çıkartılan XML öğelerini açıklar <xref:System.Data.DataSet>.  
+ İçinde tablo olarak çıkartılan XML öğelerini açıklar <xref:System.Data.DataSet> .  
   
  [Sütunların Çıkarımını Yapma](inferring-columns.md)  
  Tablo sütunları olarak gösterilen XML öğelerini ve özniteliklerini açıklar.  
   
  [İlişkilerin Çıkarımını Yapma](inferring-relationships.md)  
- İç içe yerleştirilmiş <xref:System.Data.ForeignKeyConstraint> , çıkartılan tablolar için oluşturulan venesneleriniaçıklar.<xref:System.Data.DataRelation>  
+ <xref:System.Data.DataRelation> <xref:System.Data.ForeignKeyConstraint> İç içe yerleştirilmiş, çıkartılan tablolar için oluşturulan ve nesnelerini açıklar.  
   
  [Öğe Metni Çıkarımını Yapma](inferring-element-text.md)  
  XML öğelerinde metin için oluşturulan sütunları açıklar ve XML öğelerinde metin yok sayıldığında açıklar.  
@@ -38,11 +40,12 @@ ms.locfileid: "70785324"
  Şema çıkarımı kısıtlamalarını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)  
- <xref:System.Data.DataSet> Nesnesinin XML verileriyle nasıl etkileşime gireceğini açıklar.  
+ <xref:System.Data.DataSet>NESNESININ XML verileriyle nasıl etkileşime gireceğini açıklar.  
   
  [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- XML şeması tanım dili (xsd) şemasından oluşturulan bir <xref:System.Data.DataSet> öğesinin ilişkisel yapısını veya şemasını açıklar.  
+ <xref:System.Data.DataSet>XML şeması tanım dili (xsd) şemasından oluşturulan bir öğesinin ilişkisel yapısını veya şemasını açıklar.  
   
  [ADO.NET’e Genel Bakış](../ado-net-overview.md)  
  ADO.NET mimarisini ve bileşenlerini ve bunların mevcut veri kaynaklarına erişmek ve uygulama verilerini yönetmek için nasıl kullanılacağını açıklar.  

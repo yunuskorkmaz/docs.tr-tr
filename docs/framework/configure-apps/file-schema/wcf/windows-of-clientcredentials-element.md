@@ -2,14 +2,15 @@
 title: <windows><clientCredentials>öğesinin
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 61ca99213f0b83a5af5df0184a8c1de405366288
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 115e1822659c04ee37a7364f7b25616b52dc5efe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399125"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177832"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<windows>\<clientCredentials>öğesinin
+
 İstemciyi temsil etmek için kullanılacak bir Windows kimlik bilgisi ayarlarını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "70399125"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<windows>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <windows allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"
@@ -28,6 +29,7 @@ ms.locfileid: "70399125"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -38,6 +40,7 @@ ms.locfileid: "70399125"
 |`allowNtlm`|`true`Kerberos kullanılamıyorsa kimlik DOĞRULAMANıN NTLM 'ye indirgenmesini sağlamak için bu özelliği ayarlama.<br /><br /> NTLM kullanılıyorsa, bu özelliğin `false` bir özel durum oluşturması için Windows Communication Foundation (WCF) oluşmasına neden olacak şekilde ayarlanması. Bu özelliği olarak ayarlamanın `false` , NTLM kimlik bilgilerinin tel üzerinden gönderilmesini engelleyemeyeceğini unutmayın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

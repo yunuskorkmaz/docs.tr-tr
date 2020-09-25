@@ -3,14 +3,15 @@ title: DataAdapters ve DataReaders
 description: Bir veritabanından veri alan ve veri kaynağından veri alan ve bir veri kümesini dolduran ADO.NET DataReader hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 17463d65266baa53521bed9603c8abd96923277b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2584f8b382dd90f2f8b4554663dc545b9ccceb62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286979"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177611"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters ve DataReaders
+
 Bir veritabanından salt okunurdur ve salt ileri bir veri akışı almak için ADO.NET **DataReader** 'ı kullanabilirsiniz. Sonuçlar sorgu yürütüldüğü için döndürülür ve **DataReader**'ın **Read** yöntemini kullanarak isteene kadar istemcideki ağ arabelleğine depolanır. **DataReader** 'ın kullanılması, hem verileri kullanılabilir duruma getirerek hem de (varsayılan olarak), bellekteki bir seferde yalnızca bir satır depolayarak sistem yükünü azaltarak uygulama performansını artırabilir.  
   
  Bir <xref:System.Data.Common.DataAdapter> veri kaynağından veri almak ve içindeki tabloları doldurmak için kullanılır <xref:System.Data.DataSet> . `DataAdapter`Ayrıca veri kaynağına geri yapılan değişiklikleri de çözer `DataSet` . , `DataAdapter` `Connection` Bir veri kaynağına bağlanmak için .NET Framework veri sağlayıcısının nesnesini kullanır ve veri `Command` kaynağındaki değişiklikleri almak ve verileri çözümlemek için nesneleri kullanır.  
@@ -18,6 +19,7 @@ Bir veritabanından salt okunurdur ve salt ileri bir veri akışı almak için A
  .NET Framework eklenen her .NET Framework veri sağlayıcısının bir ve bir nesnesi vardır <xref:System.Data.Common.DbDataReader> <xref:System.Data.Common.DbDataAdapter> : OLE DB için .NET Framework veri sağlayıcısı bir ve nesnesi içeriyorsa, .NET Framework için veri sağlayıcısı SQL Server bir ve nesnesi Içerir ve <xref:System.Data.OleDb.OleDbDataReader> <xref:System.Data.OleDb.OleDbDataAdapter> <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlClient.SqlDataAdapter> <xref:System.Data.Odbc.OdbcDataReader> <xref:System.Data.Odbc.OdbcDataAdapter> Oracle için <xref:System.Data.OracleClient.OracleDataReader> <xref:System.Data.OracleClient.OracleDataAdapter> .NET Framework veri sağlayıcısı, ve bir nesnesi içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [DataReader Kullanarak Veri Alma](retrieving-data-using-a-datareader.md)  
  ADO.NET **DataReader** nesnesini ve bir veri kaynağından sonuçların akışını döndürmek için nasıl kullanılacağını açıklar.  
   

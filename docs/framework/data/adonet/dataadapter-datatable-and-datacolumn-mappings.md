@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 6380dd0512bd7834f50b87f90f445cb01b7a8b95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b979431836b55b23ac9ba6ec4535f33765dce555
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151565"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177741"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable ve DataColumn Eşlemeleri
-**DataAdapter,** **TableMappings** özelliğinde <xref:System.Data.Common.DataTableMapping> sıfır veya daha fazla nesne koleksiyonu içerir. **DataTableMapping,** bir sorgudan bir veri kaynağına karşı döndürülen <xref:System.Data.DataTable>veriler ile bir . **DataTableMapping** adı **DataTable** adının yerine **DataAdapter'ın** **Dolgu** yöntemine geçirilebilir. Aşağıdaki örnek, **Yazarlar** tablosu için **Yazarlar Eşleme** adlı bir **DataTableMapping** oluşturur.  
+
+Bir **DataAdapter** <xref:System.Data.Common.DataTableMapping> , **TableMappings** özelliğinde sıfır veya daha fazla nesne koleksiyonu içerir. Bir **DataTableMapping** , bir sorgudan veri kaynağına göre döndürülen veriler arasında bir ana eşleme sağlar ve bir <xref:System.Data.DataTable> . **DataTableMapping** adı DataTable 'ın **Fill** metoduna **DataTable** adının yerine **geçirilebilir.** Aşağıdaki örnek, **yazarlar** tablosu Için **authorsmapping** adlı bir **DataTableMapping** oluşturur.  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -23,11 +24,11 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors")
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");  
 ```  
   
- **DataTableMapping,** veritabanındakilerden farklı bir **DataTable'da** sütun adlarını kullanmanıza olanak tanır. **DataAdapter,** tablo güncelleştirildiğinde sütunları eşleştirmek için eşleci kullanır.  
+ Bir **DataTableMapping** , veritabanından farklı bir **DataTable** içindeki sütun adlarını kullanmanıza olanak sağlar. **DataAdapter** , tablo güncellendiği zaman sütunları eşleştirmek için eşlemeyi kullanır.  
   
- DataAdapter'ın **Dolgu** veya **Güncelleştirme** yöntemini ararken bir **TableName** veya **DataTableMapping** adı belirtmezseniz, **DataAdapter**"Tablo" adlı bir **DataTableMapping eşlemesi** arar. **DataAdapter** Bu **DataTableMapping** yoksa, **DataTable** **Tablo Adı** "Tablo"dur. "Tablo" adında bir **DataTableMapping** oluşturarak varsayılan bir **DataTableMapping** belirtebilirsiniz.  
+ **DataAdapter**'ın **Fill** veya **Update** metodunu çağırırken bir **TableName** veya bir **DataTableMapping** adı belirtmezseniz, **DataAdapter** , "Table" adlı bir **DataTableMapping** öğesine bakar. Bu **DataTableMapping** yoksa, **DataTable** 'ın **TableName** tablosu "Table" olur. "Tablo" adıyla bir **DataTableMapping** oluşturarak varsayılan bir **DataTableMapping** belirtebilirsiniz.  
   
- Aşağıdaki kod örneği bir **DataTableMapping** <xref:System.Data.Common> (ad alanından) oluşturur ve "Tablo" adını vererek belirtilen **DataAdapter** için varsayılan eşleme yapar. Örnek daha sonra sorgu sonucu **(Northwind** veritabanının **Müşteriler** tablosu) ilk tablodan **northwind Müşteriler** tablosunda daha kullanıcı dostu <xref:System.Data.DataSet>adlar kümesi için sütuneşler . Eşlenen olmayan sütunlar için, veri kaynağından sütunadı kullanılır.  
+ Aşağıdaki kod örneği bir **DataTableMapping** (ad alanından) oluşturur <xref:System.Data.Common> ve bunu "Table" olarak adlandırarak belirtilen **DataAdapter** için varsayılan eşlemeyi yapar. Örnek daha sonra sorgu sonucundaki ilk tablodaki sütunları ( **Northwind** veritabanının **Customers** tablosu) içindeki **Northwind Customers** tablosunda daha kolay bir Kullanıcı adı kümesine eşler <xref:System.Data.DataSet> . Eşlenmemiş sütunlarda, veri kaynağındaki sütunun adı kullanılır.  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -49,11 +50,11 @@ mapping.ColumnMappings.Add("PostalCode", "ZIPCode");
 adapter.Fill(custDS);  
 ```  
   
- Daha gelişmiş durumlarda, aynı **DataAdapter'ın** farklı tablolara farklı eşlemelerle yüklemeyi desteklemesini istediğinize karar verebilirsiniz. Bunu yapmak için ek **DataTableMapping** nesneleri eklemeniz yeterlidir.  
+ Daha gelişmiş durumlarda, aynı **DataAdapter** 'ın farklı eşlemelere sahip farklı tabloları yüklemeyi desteklemesini tercih edebilirsiniz. Bunu yapmak için, ek **DataTableMapping** nesneleri eklemeniz yeterlidir.  
   
- **Dolgu** yöntemi bir **DataSet** ve **DataTableMapping** adı örneği geçirildiğinde, bu ada sahip bir eşleme varsa kullanılır; aksi takdirde, bu ada sahip bir **DataTable** kullanılır.  
+ **Fill** yöntemine bir **veri kümesi** ve bir ölçü adı geçirildiğinde, bu ada **sahip bir eşleme** varsa kullanılır; Aksi takdirde, bu adı taşıyan bir **DataTable** kullanılır.  
   
- Aşağıdaki örnekler, **Müşterilerin** adı ve **BizTalkSchema**bir **DataTable** adı ile **DataTableMapping** oluşturun. Örnek daha sonra SELECT deyimi tarafından döndürülen satırları **BizTalkSchema** **DataTable**ile eşler.  
+ Aşağıdaki örneklerde, **Müşteri** adı ve **BizTalkSchema** **DataTable** adı ile bir **DataTableMapping** oluşturulur. Örnek daha sonra SELECT ifadesinin döndürdüğü satırları **BizTalkSchema** **DataTable**' a eşler.  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -78,13 +79,14 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
-> Bir sütun eşleme için bir kaynak sütun adı sağlanmaz veya tablo eşlemesi için bir kaynak tablo adı sağlanmazsa, varsayılan adlar otomatik olarak oluşturulur. Sütun eşleme için kaynak sütun sağlanmışsa, sütun eşleme **kaynağına SourceColumn1**ile başlayarak **Kaynak Sütun** *U, N'nin* artımlı varsayılan adı verilir. Tablo eşleme için kaynak tablo adı sağlanmışsa, tablo eşlemi **SourceTable** *N'nin*artımlı varsayılan adı verilir, **SourceTable1**ile başlayarak.  
+> Bir sütun eşlemesi için bir kaynak sütun adı sağlanmamışsa veya tablo eşlemesi için kaynak tablo adı sağlanmadığında, varsayılan adlar otomatik olarak oluşturulur. Bir sütun eşlemesi için kaynak sütun sağlanmazsa, sütun eşlemesine **SourceColumn1**ile başlayan bir **SourceColumn** *N* artımlı varsayılan adı verilir. Tablo eşlemesi için kaynak tablo adı sağlanmadığında tablo eşlemesine, **SourceTable1**ile başlayan bir **SourceTable** *N*artımlı varsayılan adı verilir.  
   
 > [!NOTE]
-> Bir sütun eşleme için **SourceColumn** *N'nin* adlandırma kuralından veya tablo eşlemesi için **SourceTable** *N'den* kaçınmanızı öneririz, çünkü sağladığınız **ad, ColumnMappingCollection'daki** varolan varsayılan sütun eşleme adı veya **DataTableMappingCollection'daki**tablo eşleme adı ile çakışabilir. Sağlanan ad zaten varsa, bir özel durum atılır.  
+> Sağladığınız ad, **DataTableMappingCollection**Içindeki **ColumnMappingCollection** veya tablo eşleme adında varolan bir varsayılan sütun eşleme adı ile çakışabileceğinden, bir sütun eşlemesi için **SourceColumn** *n* adlandırma kuralını veya tablo eşlemesi için **SourceTable** *n* 'yi kullanmaktan kaçınmanızı öneririz. Sağlanan ad zaten varsa, bir özel durum oluşturulur.  
   
-## <a name="handling-multiple-result-sets"></a>Birden Çok Sonuç Kümesini Işleme  
- **SelectCommand'ınız** birden çok tablo döndürürse, **Fill,** belirtilen tablo adı ile başlayan ve **TableName** *N*formunda devam eden **DataSet**tabloları için artımlı değerlere sahip tablo adlarını otomatik olarak oluşturur Tablo **Adı1**ile başlar. Otomatik olarak oluşturulan tablo adını **DataSet'teki**tablo için belirtilmiş olmasını istediğiniz bir ada eşleştirmek için tablo eşlemelerini kullanabilirsiniz. Örneğin, müşteriler **ve** **siparişler**olmak üzere iki tablo döndüren bir **SelectCommand** için aşağıdaki çağrıyı **Doldur'a**verir.  
+## <a name="handling-multiple-result-sets"></a>Birden çok sonuç kümesini işleme  
+
+ **SelectCommand** uygulamanız birden çok tablo döndürürse, **Fill** , belirtilen tablo adından başlayarak ve **TableName1**ile başlayarak **TableName** *N*biçiminde devam ederek, **veri kümesindeki**tablolar için artımlı değerler içeren tablo adlarını otomatik olarak oluşturur. Otomatik olarak üretilen tablo adını, **veri kümesindeki**tablo için belirtilen bir adla eşlemek için tablo eşlemelerini kullanabilirsiniz. Örneğin, iki tablo, **Müşteri** ve **sipariş**döndüren bir **SelectCommand** için, aşağıdaki çağrıyı **dolduracak**şekilde verin.  
   
 ```vb  
 adapter.Fill(customersDataSet, "Customers")  
@@ -94,7 +96,7 @@ adapter.Fill(customersDataSet, "Customers")
 adapter.Fill(customersDataSet, "Customers");  
 ```  
 
- **DataSet'te**iki tablo oluşturulur: **Müşteriler** ve **Müşteriler1.** İkinci tablonun Müşteriler yerine **Siparişler** olarak adlandırılmasını sağlamak için tablo eşlemelerini **kullanabilirsiniz1.** Bunu yapmak için, Aşağıdaki örnekte gösterildiği **gibi, Müşteriler1'in** kaynak tablosunu **DataSet** tablo **Siparişleri**ile eşlendirin.  
+ **Veri kümesinde**iki tablo oluşturulur: **Customers** ve **Customers1**. Tablo eşlemelerini, ikinci tablonun **Customers1**yerine **siparişler** olarak adlandırılmış olduğundan emin olmak için kullanabilirsiniz. Bunu yapmak için, **Customers1** kaynak tablosunu aşağıdaki örnekte gösterildiği gibi **veri kümesi** tablo **siparişleriyle**eşleyin.  
   
 ```vb  
 adapter.TableMappings.Add("Customers1", "Orders")  
