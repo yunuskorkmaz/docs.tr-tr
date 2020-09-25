@@ -2,27 +2,29 @@
 title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 95a1173dfbcc4cf49ded8c7b8a42d9764fee9aff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 37089649c66c964f8a912c5a227a5281f6c0dfb7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149407"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189155"
 ---
 # <a name="oracletypes"></a>OracleTypes
-Oracle için .NET Framework Veri Sağlayıcısı, Oracle veri türleri ile çalışmak için kullanabileceğiniz çeşitli yapılar içerir. Bunlar <xref:System.Data.OracleClient.OracleNumber> arasında <xref:System.Data.OracleClient.OracleString>.  
+
+Oracle için .NET Framework Veri Sağlayıcısı, Oracle veri türleriyle çalışmak için kullanabileceğiniz çeşitli yapılar içerir. Bunlar <xref:System.Data.OracleClient.OracleNumber> ve içerir <xref:System.Data.OracleClient.OracleString> .  
   
 > [!NOTE]
-> Bu yapıların tam listesi için <xref:System.Data.OracleClient>bkz.  
+> Bu yapıların tüm listesi için bkz <xref:System.Data.OracleClient> ..  
   
  Aşağıdaki C# örnekleri:  
   
-- Bir Oracle tablosu oluşturun ve verilerle yükleyin.  
+- Oracle tablosu oluşturun ve verilerle yükleyin.  
   
-- Verilere <xref:System.Data.OracleClient.OracleDataReader> erişmek için bir'i <xref:System.Data.OracleClient.OracleType> kullanın ve verileri görüntülemek için çeşitli yapılar kullanın.  
+- <xref:System.Data.OracleClient.OracleDataReader>Verilere erişmek için bir kullanın ve <xref:System.Data.OracleClient.OracleType> verileri göstermek için çeşitli yapılar kullanın.  
   
-## <a name="creating-an-oracle-table"></a>Oracle Tablosu Oluşturma  
- Bu örnek bir Oracle tablosu oluşturur ve verileri yükler. Bir sonraki örneği çalıştırmadan önce bu örneği çalıştırmanız gerekir.  
+## <a name="creating-an-oracle-table"></a>Oracle tablosu oluşturma  
+
+ Bu örnek bir Oracle tablosu oluşturur ve verileri verilerle yükler. Sonraki örneği çalıştırmadan önce bu örneği çalıştırmanız gerekir.  
   
 ```csharp  
 public void Setup(string connectionString)  
@@ -51,8 +53,9 @@ public void Setup(string connectionString)
 }  
 ```  
   
-## <a name="retrieving-data-from-the-oracle-table"></a>Oracle Tablosundan Veri Alma  
- Bu örnek, verilere erişmek için bir **OracleDataReader** kullanır ve verileri görüntülemek için birkaç **OracleType** yapısı kullanır.  
+## <a name="retrieving-data-from-the-oracle-table"></a>Oracle tablosundan veri alma  
+
+ Bu örnek, verilere erişmek için bir **OracleDataReader** kullanır ve verileri göstermek Için çeşitli **OracleType** yapılarını kullanır.  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  

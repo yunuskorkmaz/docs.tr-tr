@@ -2,14 +2,15 @@
 title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: 328caaefe0cc24da45b460cab0a672dc8a6ccce1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6425b21fe50865beb7bb2876ea478b415fbe3944
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855075"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181524"
 ---
 # \<persistableType>
+
 Tüm kalıcı türlerini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Tüm kalıcı türlerini belirtir.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<persistableTypes>**](persistabletypes.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<persistableType>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <comContracts>
@@ -34,9 +35,11 @@ Tüm kalıcı türlerini belirtir.
 ```  
   
 ## <a name="type"></a>Tür  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -47,6 +50,7 @@ Tüm kalıcı türlerini belirtir.
 |name|Kalıcı tablo türünün adını belirten bir dize içeren isteğe bağlı öznitelik.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

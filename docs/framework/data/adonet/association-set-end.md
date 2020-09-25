@@ -2,14 +2,15 @@
 title: association set end
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: f7ec1ca6fcdf299b9fcfc78f299ea4c6c5267cd3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bd104ffb46cbd02a886ce87822ddc37159961174
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738622"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198801"
 ---
 # <a name="association-set-end"></a>association set end
+
 *İlişki kümesi sonu* , [varlık türünü](entity-type.md) ve bir [ilişki kümesinin](association-set.md)sonunda [ayarlanan varlığı](entity-set.md) tanımlar. İlişki kümesi uçları bir ilişki kümesinin parçası olarak tanımlanır; bir ilişki kümesi, tam olarak iki ilişkilendirme kümesine sahip olmalıdır.  
   
  Bir ilişki kümesi bitiş tanımı aşağıdaki bilgileri içerir:  
@@ -19,11 +20,12 @@ ms.locfileid: "73738622"
 - İlişki kümesine dahil edilen varlık türü için ayarlanan varlık. Istenir  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki diyagramda iki ilişkiye sahip bir kavramsal model görülmektedir: `WrittenBy` ve `PublishedBy`.  
+
+ Aşağıdaki diyagramda iki ilişkiye sahip kavramsal bir model gösterilmektedir: `WrittenBy` ve `PublishedBy` .  
   
  ![Üç varlık türüne sahip örnek model](./media/association-set-end/example-model-three-entity-types.gif)  
   
- Aşağıdaki diyagramda, yukarıda gösterilen kavramsal modele bağlı olarak bir ilişki kümesi (`PublishedBy`) ve iki varlık kümesi (`Books` ve `Publishers`) gösterilmektedir. İlişki kümesi sona erer `Books` ve `Publishers` varlık kümeleridir. `Books` varlık kümesindeki bı, çalışma zamanında `Book` varlık türünün bir örneğini temsil eder. Benzer şekilde, PJ, `Publishers` varlık kümesindeki bir `Publisher` örneğini temsil eder. BiPj, `PublishedBy` ilişkilendirme kümesindeki `PublishedBy` ilişkisinin bir örneğini temsil eder.  
+ Aşağıdaki diyagramda, `PublishedBy` `Books` `Publishers` yukarıda gösterilen kavramsal modele bağlı olarak bir ilişki kümesi () ve iki varlık kümesi (ve) gösterilmektedir. İlişki kümesi sonlanır `Books` ve `Publishers` varlık kümeleridir. `Books`Varlık kümesindeki bı, `Book` çalışma zamanında varlık türünün bir örneğini temsil eder. Benzer şekilde, PJ `Publisher` varlık kümesindeki bir örneği temsil eder `Publishers` . BiPj `PublishedBy` , ilişki kümesindeki ilişkilendirmenin bir örneğini temsil eder `PublishedBy` .  
   
  ![Bir küme örneği gösteren ekran görüntüsü.](./media/association-set-end/sets-example-association.gif)  
   

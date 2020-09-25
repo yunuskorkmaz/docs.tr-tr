@@ -5,22 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: e5135aca49a63aafa3330832c54f2d28d31d60d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 42843ec40f4f7271526e341dc53bdbc2ef11db38
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151357"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198736"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView’dan DataTable Oluşturma
-Bir veri kaynağından veri aldıktan ve verileri <xref:System.Data.DataTable> doldurduktan sonra, döndürülen verileri yeniden almadan sıralamak, filtrelemek veya başka bir şekilde sınırlamak isteyebilirsiniz. Sınıf <xref:System.Data.DataView> bunu mümkün kılıyor. Buna <xref:System.Data.DataTable> ek olarak, yeni bir oluşturmanız <xref:System.Data.DataView>gerekiyorsa, <xref:System.Data.DataView.ToTable%2A> tüm satırları ve sütunları kopyalamak için yöntemi kullanabilirsiniz, <xref:System.Data.DataTable>ya da yeni bir veri alt kümesi . Yöntem, <xref:System.Data.DataView.ToTable%2A> aşağıdakilere aşırı yükleme sağlar:  
+
+Veri kaynağından veri aldıktan ve verilerle doldurduktan sonra <xref:System.Data.DataTable> , döndürülen verileri yeniden almadan sıralamak, filtrelemek veya başka bir şekilde sınırlamak isteyebilirsiniz. <xref:System.Data.DataView>Sınıfı bunu mümkün hale getirir. Ayrıca, öğesinden yeni bir oluşturmanız gerekiyorsa, <xref:System.Data.DataTable> <xref:System.Data.DataView> <xref:System.Data.DataView.ToTable%2A> tüm satır ve sütunları ya da verilerin bir alt kümesini yeni bir olarak kopyalamak için yöntemini kullanabilirsiniz <xref:System.Data.DataTable> . <xref:System.Data.DataView.ToTable%2A>Yöntemi için aşırı yükleme sağlar:  
   
-- <xref:System.Data.DataTable> 'deki sütunların bir alt kümesi olan içeren sütunlar <xref:System.Data.DataView>oluşturun.  
+- <xref:System.Data.DataTable>İçindeki sütunların bir alt kümesi olan sütunları içeren bir sütun oluşturun <xref:System.Data.DataView> .  
   
-- Transact-SQL'deki DISTINCT anahtar <xref:System.Data.DataView>kelimesine benzer şekilde yalnızca farklı satırlar içeren bir <xref:System.Data.DataTable> satır oluşturun.  
+- <xref:System.Data.DataTable> <xref:System.Data.DataView> Transact-SQL içindeki DISTINCT anahtar sözcüğüne, ancak öğesinden farklı satırlar içeren bir oluşturun.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki konsol uygulaması <xref:System.Data.DataTable> **örneği, AdventureWorks** örnek veritabanındaki **Kişi.İlgili kişi** tablosundan veri içeren bir örnek oluşturur. Ardından, örnek, <xref:System.Data.DataView> <xref:System.Data.DataTable>. <xref:System.Data.DataTable> Ve içeriğini görüntüledikten sonra <xref:System.Data.DataView>, örnek kullanılabilir <xref:System.Data.DataTable> sütunların <xref:System.Data.DataView> yalnızca <xref:System.Data.DataView.ToTable%2A> bir alt kümesi seçerek, yöntemi çağırarak yeni bir oluşturur. Son olarak, örnek yeni <xref:System.Data.DataTable>içeriğini görüntüler.  
+
+ Aşağıdaki konsol uygulaması örneği, <xref:System.Data.DataTable> **AdventureWorks** örnek veritabanındaki **Person. Contact** tablosundan veri içeren bir oluşturur. Daha sonra örnek, bir sıralanmış ve öğesine <xref:System.Data.DataView> göre filtrelenmiş olarak oluşturulur <xref:System.Data.DataTable> . Ve içeriğini görüntülendikten sonra örnek, <xref:System.Data.DataTable> <xref:System.Data.DataView> <xref:System.Data.DataTable> <xref:System.Data.DataView> yöntemi çağırarak, <xref:System.Data.DataView.ToTable%2A> yalnızca kullanılabilir sütunların yalnızca bir alt kümesini seçerek öğesinden yeni bir oluşturur. Son olarak, örnek yeni içeriğini görüntüler <xref:System.Data.DataTable> .  
   
 ```vb  
 Private Sub DemonstrateDataView()  

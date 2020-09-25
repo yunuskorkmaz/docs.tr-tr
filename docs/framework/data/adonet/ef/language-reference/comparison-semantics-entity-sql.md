@@ -1,25 +1,27 @@
 ---
-title: Karşılaştırma Semantik (Varlık SQL)
+title: Karşılaştırma semantiği (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 57d81d4b581df76a4382ad5e1d72fe8250b10d43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a36fcc4476c25d64fed670e857f339fb20043d8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150460"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197839"
 ---
-# <a name="comparison-semantics-entity-sql"></a>Karşılaştırma Semantik (Varlık SQL)
-Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçlerden herhangi birinin gerçekleştirimi, tür örneklerinin karşılaştırmasını içerir:  
+# <a name="comparison-semantics-entity-sql"></a>Karşılaştırma semantiği (Entity SQL)
+
+Aşağıdaki işleçlerden herhangi birini gerçekleştirmek, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tür örneklerinin karşılaştırmasını içerir:  
   
 ## <a name="explicit-comparison"></a>Açık karşılaştırma  
+
  Eşitlik işlemleri:  
   
 - =  
   
 - !=  
   
- Sipariş işlemleri:  
+ Sıralama işlemleri:  
   
 - <  
   
@@ -29,13 +31,14 @@ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçlerd
   
 - \>=  
   
- Nullability işlemleri:  
+ Null değer alabilirlik işlemleri:  
   
-- NULL MU  
+- NULL  
   
-- NULL Değİl  
+- NULL DEĞIL  
   
 ## <a name="explicit-distinction"></a>Açık ayrım  
+
  Eşitlik ayrımı:  
   
 - DISTINCT  
@@ -47,7 +50,8 @@ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçlerd
 - SİPARİŞ VEREN  
   
 ## <a name="implicit-distinction"></a>Örtük ayrım  
- İşlemleri ve yüklemleri (eşitlik) ayarlama:  
+
+ İşlemleri ve koşulları ayarlama (eşitlik):  
   
 - UNION  
   
@@ -59,24 +63,25 @@ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçlerd
   
 - OVERLAPS  
   
- Madde yüklemleri (eşitlik):  
+ Öğe doğrulamaları (eşitlik):  
   
 - IN  
   
-## <a name="supported-combinations"></a>Desteklenen Kombinasyonlar  
- Aşağıdaki tablo, her tür için karşılaştırma işleçlerinin desteklenen tüm birleşimlerini gösterir:  
+## <a name="supported-combinations"></a>Desteklenen birleşimler  
+
+ Aşağıdaki tabloda her tür türü için karşılaştırma işleçleri 'nin desteklenen tüm birleşimleri gösterilmektedir:  
   
-|**Tür**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **Farklı**|**Birliği**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **Ayarlamak**<br /><br /> **OVERLAPS**|**Inç**|**< <=**<br /><br /> **> >=**|**SİPARİŞ VEREN**|**NULL MU**<br /><br /> **NULL Değİl**|  
+|**Tür**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**BIRLEŞIM**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **KURMAK**<br /><br /> **OVERLAPS**|**'NDAKI**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**NULL**<br /><br /> **NULL DEĞIL**|  
 |-|-|-|-|-|-|-|-|  
-|Varlık türü|Hakem<sup>1</sup>|Tüm özellikler<sup>2</sup>|Tüm özellikler<sup>2</sup>|Tüm özellikler<sup>2</sup>|<sup>3'e</sup> at|<sup>3'e</sup> at|Hakem<sup>1</sup>|  
-|Karmaşık tür|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|  
-|Satır|Tüm özellikler<sup>4</sup>|Tüm özellikler<sup>4</sup>|Tüm özellikler<sup>4</sup>|<sup>3'e</sup> at|<sup>3'e</sup> at|Tüm özellikler<sup>4</sup>|<sup>3'e</sup> at|  
-|İlkel tip|Sağlayıcıya özel|Sağlayıcıya özel|Sağlayıcıya özel|Sağlayıcıya özel|Sağlayıcıya özel|Sağlayıcıya özel|Sağlayıcıya özel|  
-|Multiset|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|  
-|Referans|Evet<sup>5</sup>|Evet<sup>5</sup>|Evet<sup>5</sup>|Evet<sup>5</sup>|Throw|Throw|Evet<sup>5</sup>|  
-|Derneği<br /><br /> type|<sup>3'e</sup> at|Throw|Throw|Throw|<sup>3'e</sup> at|<sup>3'e</sup> at|<sup>3'e</sup> at|  
+|Varlık türü|Başvuru<sup>1</sup>|Tüm Özellikler<sup>2</sup>|Tüm Özellikler<sup>2</sup>|Tüm Özellikler<sup>2</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Başvuru<sup>1</sup>|  
+|Karmaşık tür|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
+|Satır|Tüm Özellikler<sup>4</sup>|Tüm Özellikler<sup>4</sup>|Tüm Özellikler<sup>4</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Tüm Özellikler<sup>4</sup>|Throw<sup>3</sup>|  
+|İlkel tür|Sağlayıcıya özgü|Sağlayıcıya özgü|Sağlayıcıya özgü|Sağlayıcıya özgü|Sağlayıcıya özgü|Sağlayıcıya özgü|Sağlayıcıya özgü|  
+|Değerlerden|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
+|Ref|Evet<sup>5</sup>|Evet<sup>5</sup>|Evet<sup>5</sup>|Evet<sup>5</sup>|Throw|Throw|Evet<sup>5</sup>|  
+|Kaldırma<br /><br /> tür|Throw<sup>3</sup>|Throw|Throw|Throw|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
   
- <sup>1.1.2</sup> Verilen varlık türü örneklerinin başvuruları, aşağıdaki örnekte gösterildiği gibi örtülü olarak karşılaştırılır:  
+ <sup>1</sup> Aşağıdaki örnekte gösterildiği gibi, belirtilen varlık türü örneklerinin başvuruları örtük olarak karşılaştırılır:  
   
 ```sql  
 SELECT p1, p2
@@ -85,7 +90,7 @@ FROM AdventureWorksEntities.Product AS p1
 WHERE p1 != p2 OR p1 IS NULL  
 ```  
   
- Varlık örneği açık bir başvuruyla karşılaştırılamaz. Bu denenirse, bir özel durum atılır. Örneğin, aşağıdaki sorgu bir özel durum atar:  
+ Bir varlık örneği açık bir başvuruyla karşılaştırılamaz. Bu denendiğinde, bir özel durum oluşturulur. Örneğin, aşağıdaki sorgu bir özel durum oluşturur:  
   
 ```sql  
 SELECT p1, p2
@@ -94,13 +99,13 @@ FROM AdventureWorksEntities.Product AS p1
 WHERE p1 != REF(p2)  
 ```  
   
- <sup>2.000</sup> Karmaşık türlerin özellikleri mağazaya gönderilmeden önce düzleşir, böylece karşılaştırılabilir hale gelir (tüm özellikleri karşılaştırılabilir olduğu sürece). Ayrıca <sup>bkz. 4.</sup>  
+ <sup>2</sup> Karmaşık türlerin özellikleri depoya gönderilmeden önce düzleştirilir, bu nedenle karşılaştırılabilir hale gelir (tüm özellikleri karşılaştırılabilir olduğu sürece). Ayrıca bkz <sup>. 4.</sup>  
   
- <sup>3.2.2</sup> Varlık Çerçevesi çalışma zamanı, desteklenmeyen servis talebialgılar ve sağlayıcı/mağazayla etkileşime girmeden anlamlı bir özel durum oluşturur.  
+ <sup>3</sup> Entity Framework çalışma zamanı, desteklenmeyen durumu algılar ve sağlayıcıyı/mağazayı bildirmeden anlamlı bir özel durum oluşturur.  
   
- <sup>4.2.2</sup> Tüm özellikleri karşılaştırmak için bir girişimde bulunulr. Metin, metin veya resim gibi karşılaştırılabilir olmayan bir türde bir özellik varsa, sunucu özel durumu atılabilir.  
+ <sup>4</sup> Tüm özellikleri karşılaştırmak için bir girişimde bulunuldu. Metin, n metin veya görüntü gibi karşılaştırılabilir olmayan bir türde bir özellik varsa sunucu özel durumu oluşabilir.  
   
- <sup>5.000</sup> Başvuruların tüm bireysel öğeleri karşılaştırılır (bu varlık kümesi adını ve varlık türünün tüm temel özelliklerini içerir).  
+ <sup>5</sup> Başvuruların tüm ayrı öğeleri karşılaştırılır (Bu, varlık kümesi adını ve varlık türünün tüm anahtar özelliklerini içerir).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

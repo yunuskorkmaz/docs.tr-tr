@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: 335137eeef02e590539c6d83e46cb39901a1e03f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 75c9bcf0e0b6180030825b4d1e7dd9e1f9686712
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286927"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198645"
 ---
 # <a name="creating-a-datatable"></a>DataTable Oluşturma
+
 Bir <xref:System.Data.DataTable> bellek içi ilişkisel veri tablosunu temsil eden bir tablosu, bağımsız olarak oluşturulup kullanılabilir veya diğer .NET Framework nesneleri tarafından, genellikle bir üyesi olarak kullanılabilir <xref:System.Data.DataSet> .  
   
  Uygun **DataTable** oluşturucusunu kullanarak bir **DataTable** nesnesi oluşturabilirsiniz. Bunu **DataTable** nesnesinin **Tables** koleksiyonuna eklemek Için **Add** metodunu kullanarak **veri kümesine** ekleyebilirsiniz.  

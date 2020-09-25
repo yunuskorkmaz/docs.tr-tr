@@ -2,14 +2,15 @@
 title: <add> / <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: e2597bc51e788c919bfe3ce3422ae2911cc6b33b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 39cb89340907743c727a425bb2f140ac34842e3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400693"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181680"
 ---
 # <a name="add-of-authorizationpolicies"></a>\<add> / \<authorizationPolicies>
+
 Talep dönüştürme için bir yetkilendirme ilkesi belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ Talep dönüştürme için bir yetkilendirme ilkesi belirtir.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<authorizationPolicies>**](authorizationpolicies.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <authorizationPolicies>
@@ -30,9 +31,11 @@ Talep dönüştürme için bir yetkilendirme ilkesi belirtir.
 ```  
   
 ## <a name="type"></a>Tür  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -42,6 +45,7 @@ Talep dönüştürme için bir yetkilendirme ilkesi belirtir.
 |`policyType`|Gerekli dize özniteliği.<br /><br /> Windows Communication Foundation (WCF) erişim denetimi modeli, bir yetkilendirme ilkelerinin kümesini tür olarak sağlamayı destekler. Bu öznitelik, bir giriş talepleri kümesinin başka bir talepler kümesine dönüştürülmesini sağlayan bir yetkilendirme ilkesi belirtir. Erişim denetimi, bu temel alınarak verilebilir veya reddedilebilir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -51,6 +55,7 @@ Talep dönüştürme için bir yetkilendirme ilkesi belirtir.
 |[\<authorizationPolicies>](authorizationpolicies.md)|Yetkilendirme ilkesi türleri koleksiyonunu belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Her yetkilendirme ilkesi `policyType` , bir dize olan tek bir gerekli özniteliği içerir. Özniteliği, bir giriş talepleri kümesinin başka bir talepler kümesine dönüştürülmesini sağlayan bir yetkilendirme ilkesi belirtir. Erişim denetimi, bu temel alınarak verilebilir veya reddedilebilir. Yetkilendirme ilkesinin nasıl çalıştığı hakkında daha fazla bilgi için bkz <xref:System.IdentityModel.Policy.IAuthorizationPolicy> . ve [Yetkilendirme İlkesi](../../../wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

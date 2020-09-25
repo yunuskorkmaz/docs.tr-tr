@@ -2,23 +2,25 @@
 title: Güvenliğe genel bakış
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4222dd36fe2f693bb16216e01d5e06a8176a7801
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ede9b24828da74c043bed103595073c4607c51f2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550696"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91188999"
 ---
 # <a name="security-overview"></a>Güvenliğe genel bakış
 
 Uygulamanın güvenliğini sağlamak, devam eden bir işlemdir. Bir geliştiricinin bir uygulamanın tüm saldırılardan güvenli olduğunu garanti edebildiği bir nokta olmaz. Bu, yeni teknolojilerin ne tür gelecekte yeni teknolojiler sunabileceğini tahmin etmek olanaksızdır. Bunun tersine, bir sistemde hiç kimse henüz keşfedilmiş (veya yayımlanmadığı) güvenlik kusuru yok veya var olmadığı anlamına gelmez. Projenin tasarım aşamasında güvenlik planlaması yapmanız ve güvenliğin uygulamanın kullanım ömrü boyunca nasıl bakımının planlanacağını planlamanız gerekir.
 
 ## <a name="design-for-security"></a>Güvenlik için tasarım
+
  Güvenli uygulamalar geliştirmenin en büyük sorunlarından biri, güvenlik genellikle bir proje kod tamamlandıktan sonra uygulamaya yönelik bir şeydir. Bir uygulamayı güvenli hale getirmeye yönelik olarak düşündüler verilmediği için, bilinemeyebilir 'teki bir uygulamaya güvenlik, güvenli olmayan uygulamalara yönelik olarak oluşturulmamalıdır.
 
  Son dakikalık güvenlik uygulamaları, yeni kısıtlamalar kapsamında yazılım kesildiği veya beklenmeyen işlevlere uyum sağlamak için yeniden yazılması gerektiği için daha fazla hataya yol açar. Düzeltilen kodun her satırı, yeni bir hata tanıtma olasılığını içerir. Bu nedenle, yeni özelliklerin geliştirilmesinde ilerlemeniz için geliştirme sürecinin başlarında güvenliği göz önünde bulundurmanız gerekir.
 
 ### <a name="threat-modeling"></a>Tehdit modelleme
+
  Kullanıma sunulan tüm olası saldırıları anlamadığınız takdirde bir sistemi saldırılara karşı koruyamazsınız. *Tehdit modelleme*olarak adlandırılan güvenlik tehditlerini değerlendirme işlemi, ADO.net uygulamanızda güvenlik ihlallerinin oluşma olasılığını ve kollerini belirlemede gereklidir.
 
  Tehdit modelleme üç üst düzey adımdan oluşur: duyuru görünümünü anlama, sistemin güvenliğini belirleme ve tehditleri belirleme.
@@ -32,6 +34,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 |Güvenlik Mühendisliği portalındaki [tehdit modelleme](https://www.microsoft.com/securityengineering/sdl/threatmodeling) sitesi|Bu sayfadaki kaynaklar, tehdit modelleme sürecini anlamanıza yardımcı olur ve kendi uygulamalarınızı güvenli hale getirmek için kullanabileceğiniz tehdit modellerini derleyebilirsiniz|
 
 ## <a name="the-principle-of-least-privilege"></a>En az ayrıcalık Ilkesi
+
  Uygulamanızı tasarladığınızda, yapılandırdığınızda ve dağıttığınızda, uygulamanızın saldırıya uğradığını varsaymalısınız. Bu saldırılar genellikle kodu çalıştıran kullanıcının izinleriyle yürütülen kötü amaçlı koddan gelir. Diğerleri, bir saldırgan tarafından yararlanılabilen iyi şekilde kod içerebilir. Güvenliği planlarken, her zaman en kötü durum senaryosunun gerçekleşeceğini kabul eder.
 
  Kullanabileceğiniz bir sayaç ölçüsü, en az ayrıcalıkla çalışırken kodunuzun etrafında çok sayıda duvarı kullanmayı denemenize olanak tanır. En az ayrıcalık ilkesi, verilen ayrıcalıkların, işin tamamlanması için gereken en kısa süre için gerekli olan en az kod miktarına verilmesi gerektiğini belirtir.

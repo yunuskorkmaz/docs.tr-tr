@@ -1,43 +1,46 @@
 ---
-title: 'Yöntem Tabanlı Sorgu Sözdizimi Örnekleri: Eleman Operatörleri (LINQ to DataSet)'
+title: 'Yöntem tabanlı sorgu söz dizimi örnekleri: öğe Işleçleri (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
-ms.openlocfilehash: e43208d6ae524a1370b936d42508e9c7a7d196e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 669c6a34d1179caf4ec40eb8db559bdfdc9fc7f5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149513"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189285"
 ---
-# <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Yöntem Tabanlı Sorgu Sözdizimi Örnekleri: Eleman Operatörleri (LINQ to DataSet)
-Bu konudaki örnekler, sorgu <xref:System.Linq.Enumerable.First%2A> ifadesi <xref:System.Linq.Enumerable.ElementAt%2A> sözdizimini <xref:System.Data.DataRow> <xref:System.Data.DataSet> kullanarak öğeleri almak için nasıl kullanılacağını ve yöntemleri gösterilmektedir.  
+# <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Yöntem tabanlı sorgu söz dizimi örnekleri: öğe Işleçleri (LINQ to DataSet)
+
+Bu konudaki örneklerde, <xref:System.Linq.Enumerable.First%2A> <xref:System.Linq.Enumerable.ElementAt%2A> <xref:System.Data.DataRow> <xref:System.Data.DataSet> sorgu ifadesi söz dizimini kullanarak bir öğesinden öğeleri almak için ve yöntemlerinin nasıl kullanılacağı gösterilmektedir.  
   
- Bu `FillDataSet` örneklerde kullanılan yöntem, [Veri Kümesine Veri Yükleme'de](loading-data-into-a-dataset.md)belirtilir.  
+ `FillDataSet`Bu örneklerde kullanılan yöntemi [verileri bir veri kümesine yüklerken](loading-data-into-a-dataset.md)belirtilmiştir.  
   
- Bu konudaki örnekler AdventureWorks örnek veritabanındaki İletişim, Adres, Ürün, SalesOrderHeader ve SalesOrderDetail tablolarını kullanır.  
+ Bu konudaki örneklerde, AdventureWorks örnek veritabanındaki Ilgili kişi, adres, ürün, SalesOrderHeader ve SalesOrderDetail tabloları kullanılmaktadır.  
   
- Bu konudaki örneklerde `using` / `Imports` aşağıdaki ifadeler kullanılır:  
+ Bu konudaki örnekler aşağıdaki `using` / `Imports` deyimleri kullanır:  
   
 [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
 [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]
 
- Daha fazla bilgi için [bkz: Visual Studio'da DataSet Project'e LINQ oluşturun.](how-to-create-a-linq-to-dataset-project-in-vs.md)  
+ Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'da LINQ to DataSet projesi oluşturma](how-to-create-a-linq-to-dataset-project-in-vs.md).  
   
-## <a name="elementat"></a>Elementat  
+## <a name="elementat"></a>ElementAt  
   
 ### <a name="example"></a>Örnek  
- Bu örnekte <xref:System.Linq.Enumerable.ElementAt%2A> beşinci adresi almak `PostalCode` için yöntem kullanır == "M4B 1V7".  
+
+ Bu örnek, <xref:System.Linq.Enumerable.ElementAt%2A> `PostalCode` = = "M4B 1V7" Where beşinci adresini almak için yöntemini kullanır.  
   
 [!code-csharp[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#elementat)]
 [!code-vb[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#elementat)]
   
-## <a name="first"></a>İlk  
+## <a name="first"></a>Birinci  
   
 ### <a name="example"></a>Örnek  
- Bu örnek, <xref:System.Linq.Enumerable.First%2A> ilk adı 'Brooke' olan ilk ilgili kişi dönmek için yöntemi kullanır.  
+
+ Bu örnek, <xref:System.Linq.Enumerable.First%2A> ilk adı ' Brooke ' olan ilk kişiyi döndürmek için yöntemini kullanır.  
   
 [!code-csharp[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#firstsimple)]
 [!code-vb[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#firstsimple)]
@@ -46,5 +49,5 @@ Bu konudaki örnekler, sorgu <xref:System.Linq.Enumerable.First%2A> ifadesi <xre
 
 - [DataSet’e Veri Yükleme](loading-data-into-a-dataset.md)
 - [LINQ to DataSet Örnekleri](linq-to-dataset-examples.md)
-- [Standart Sorgu Operatörlerine Genel Bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Standart Sorgu Operatörlerine Genel Bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standart sorgu Işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

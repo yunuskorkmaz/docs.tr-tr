@@ -2,14 +2,15 @@
 title: <peerAuthentication> Öğesi
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 093b0c4b6a7fbf54455ec523b52c1f3a9884cfa8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7e4f86c361dc3ade5dedf4017921516357bb9a58
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536021"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181589"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication> Öğesi
+
 Eşler arası istemciler için kimlik doğrulama seçeneklerini belirtir.  
   
  Eşler arası programlama hakkında daha fazla bilgi için bkz. eşler [arası ağ iletişimi](../../../wcf/feature-details/peer-to-peer-networking.md).  
@@ -33,6 +34,7 @@ Eşler arası istemciler için kimlik doğrulama seçeneklerini belirtir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -69,6 +71,7 @@ Eşler arası istemciler için kimlik doğrulama seçeneklerini belirtir.
 |Sabit Listesi|Şu değerlerden biri: `LocalMachine` veya `CurrentUser` . Varsayılan değer: `CurrentUser`. İstemci uygulaması bir sistem hesabı altında çalışıyorsa, sertifika genellikle altında olur `LocalMachine` . İstemci uygulaması bir kullanıcı hesabı altında çalışıyorsa, sertifika genellikle içinde olur `CurrentUser` .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -78,9 +81,11 @@ Eşler arası istemciler için kimlik doğrulama seçeneklerini belirtir.
 |[\<peer>](peer-of-clientcredentials-element.md)|İstemcinin kimliğini bir eş hizmette doğrulamak için kullanılan kimlik bilgisini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<authentication>`Öğesi sınıfına karşılık gelir <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> . Bu öğe, ağ içinde komşu-komşu kimlik doğrulaması sırasında çağrılan bir doğrulayıcısı belirtir. Yeni bir eş bir komşu bağlantı kurmaya çalıştığında, kendi kimlik bilgilerini yanıt veren eşe geçirir. Yanıtlayanın Doğrulayıcısı, uzak tarafın kimlik bilgilerini doğrulamak için çağrılır. Kafeste bir eş bağlantı oluşturulduğunda her iki eş de karşılıklı olarak doğrulanır, her iki uçta da doğrulayıcılar çağrılır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, sertifika doğrulama modunu olarak ayarlar `PeerOrChainTrust` .  
   
 ```xml  

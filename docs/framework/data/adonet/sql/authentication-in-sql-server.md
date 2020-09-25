@@ -3,14 +3,15 @@ title: SQL Server’da Kimlik Doğrulaması
 description: Windows kimlik doğrulama modu ve karma mod dahil olmak üzere ADO.NET için SQL Server kimlik doğrulaması hakkında bilgi edinin.
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: e9915598acfbdefb59069d6a9c6ef4b7c824e4c6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2c4f62391a0d9b5ada27f56eef4c3467d99b4c6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286552"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197540"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server’da Kimlik Doğrulaması
+
 SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik doğrulama modunu destekler.  
   
 - Windows kimlik doğrulaması varsayılandır ve genellikle tümleşik güvenlik olarak adlandırılır çünkü bu SQL Server güvenlik modeli Windows ile sıkı bir şekilde tümleşiktir. Belirli Windows Kullanıcı ve grup hesaplarının SQL Server oturum açması için güvenilir. Önceden yetkilendirilmiş olan Windows kullanıcılarının ek kimlik bilgileri sunmak zorunda değildir.  
@@ -30,6 +31,7 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
 > Oturum açmalar veritabanı kullanıcılarından farklıdır. Ayrı bir işlemde veritabanı kullanıcıları veya rolleri için oturum açma işlemlerini veya Windows gruplarını eşlemeniz gerekir. Daha sonra kullanıcılara veya rollere veritabanı nesnelerine erişim izni verirsiniz.  
   
 ## <a name="authentication-scenarios"></a>Kimlik doğrulama senaryoları  
+
  Windows kimlik doğrulaması, genellikle aşağıdaki durumlarda en iyi seçenektir:  
   
 - Bir etki alanı denetleyicisi vardır.  
@@ -50,6 +52,7 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
 > Windows kimlik doğrulamasının belirtilmesi SQL Server oturum açma işlemlerini devre dışı bırakmaz. Yüksek ayrıcalıklı SQL Server oturumlarını devre dışı bırakmak için ALTER LOGıN DISABLE Transact-SQL deyimini kullanın.  
   
 ## <a name="login-types"></a>Oturum açma türleri  
+
  SQL Server üç oturum açma türünü destekler:  
   
 - Yerel bir Windows Kullanıcı hesabı veya güvenilen etki alanı hesabı. SQL Server Windows Kullanıcı hesaplarının kimliğini doğrulamak için Windows 'a bağımlıdır.  
@@ -62,6 +65,7 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
 > SQL Server, sertifikalardan veya yalnızca kod imzalama için kullanılan asimetrik anahtarlardan oluşturulan oturum açma işlemleri sağlar. SQL Server bağlanmak için kullanılamaz.  
   
 ## <a name="mixed-mode-authentication"></a>Karma mod kimlik doğrulaması  
+
  Karma mod kimlik doğrulaması kullanmanız gerekiyorsa, SQL Server depolanan SQL Server oturum açma bilgileri oluşturmanız gerekir. Daha sonra çalışma zamanında SQL Server Kullanıcı adı ve parola sağlamalısınız.  
   
 > [!IMPORTANT]
@@ -73,9 +77,10 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
 > Bağlantı dizelerini Kullanıcı girişinden bitiştirme, bağlantı dizesi ekleme saldırısına karşı savunmasız bırakabilir. <xref:System.Data.SqlClient.SqlConnectionStringBuilder>Çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturmak için öğesini kullanın. Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
+
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
-|Kaynak|Description|  
+|Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Sorumlular](/sql/relational-databases/security/authentication-access/principals-database-engine)|SQL Server oturum açma işlemlerini ve diğer güvenlik sorumlularını açıklar.|  
   
