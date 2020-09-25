@@ -1,33 +1,33 @@
 ---
-title: Dayanıklı Azure fonksiyonları - Sunucusuz uygulamalar
-description: Dayanıklı Azure işlevleri, koddaki devlet eserini etkinleştirmek için Azure İşlevlerini çalışma süresini genişletir.
+title: Dayanıklı Azure işlevleri-sunucusuz uygulamalar
+description: Sürekli Azure işlevleri, koddaki durum bilgisi olan iş akışlarını etkinleştirmek için Azure Işlevleri çalışma zamanını genişletir.
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1498b5a19bc92b7db16f7422a35ac3afffb82b60
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522853"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171799"
 ---
 # <a name="durable-azure-functions"></a>Dayanıklı Azure işlevleri
 
-Azure İşlevleri ile sunucusuz uygulamalar oluştururken, işlemleriniz genellikle stateless bir şekilde çalışacak şekilde tasarlanacaktır. Bu tasarım seçiminin nedeni, platform ölçeklendikçe kodun hangi sunucularda çalıştığını bilmenin zorlaşmasıdır. Ayrıca, herhangi bir noktada kaç örneğin etkin olduğunu bilmek de zorlaşır. Ancak, bir işlemin geçerli durumunun bilinmesini gerektiren uygulama sınıfları vardır. Çevrimiçi bir mağazaya sipariş gönderme işlemini göz önünde bulundurun. Ödeme işlemi, işlemin durumunu bilmesi gereken birden çok işlemden oluşan bir iş akışı olabilir. Bu tür bilgiler, müşterinin hesabında herhangi bir kredi varsa ürün envanterini ve kredi kartının işlenmesinin sonuçlarını içerebilir. Bu işlemler kolayca kendi iç iş akışları ve hatta üçüncü taraf sistemlerden hizmetleri olabilir.
+Azure Işlevleri ile sunucusuz uygulamalar oluştururken, işlemleriniz genellikle durum bilgisiz bir şekilde çalışacak şekilde tasarlanacaktır. Bu tasarım seçeneğinin nedeni, platformun ölçeklendirilirken, kodun hangi sunuculara çalıştığını anlamak zor hale gelir. Ayrıca, belirli bir noktada kaç örnek etkin olduğunu anlamak zor olur. Ancak, bir işlemin geçerli durumunun bilinmesini gerektiren uygulama sınıfları vardır. Çevrimiçi mağazaya sipariş gönderme sürecini göz önünde bulundurun. Kullanıma alma işlemi, işlemin durumunu bilmemiz gereken birden çok işlemden oluşan bir iş akışı olabilir. Bu tür bilgiler, müşterinin hesabında krediler varsa ve aynı zamanda kredi kartını işleme sonuçları varsa ürün envanterini içerebilir. Bu işlemler kendi iç iş akışlarına veya hatta üçüncü taraf sistemlerden gelen hizmetlere kolayca sahip olabilir.
 
-Günümüzde iç ve dış sistemler arasında uygulama durumunun koordinasyonuna yardımcı olan çeşitli desenler mevcuttur. Merkezi sıraya sistemleri, dağıtılan anahtar değer depoları veya bu durumu yönetmek için paylaşılan veritabanlarına dayanan çözümlerle karşılaşmak yaygındır. Ancak, bunların tümü artık sağlanması ve yönetilmesi gereken ek kaynaklardır. Sunucusuz bir ortamda, kodunuz bu kaynaklarla el ile koordine etmeye çalışırken hantal hale gelebilir. Azure İşlevler, Dayanıklı Işlevler adı verilen durum lu işlevler oluşturmak için bir alternatif sunar.
+Günümüzde, iç ve dış sistemler arasında uygulama durumunun koordinasyonuna yardımcı olacak çeşitli desenler vardır. Bu durumu yönetmek için merkezi sıraya alma sistemleri, dağıtılmış anahtar-değer depoları veya paylaşılan veritabanları kullanan çözümler arasında gelmesi yaygındır. Ancak, bunlar artık sağlanması ve yönetilmesi gereken tüm ek kaynaklardır. Sunucusuz bir ortamda, kodunuz bu kaynaklarla el ile koordine edilmeye çalışırken çok daha fazla hale gelebilir. Azure Işlevleri Dayanıklı İşlevler olarak adlandırılan durum bilgisi olan işlevleri oluşturmaya yönelik bir alternatif sunar.
 
-Dayanıklı Işlevler, koddaki devlet li iş akışlarının tanımını sağlayan Azure İşlevleri çalışma zamanının bir uzantısıdır. İş akışlarını etkinliklere ayırarak, Dayanıklı Işlevler uzantısı durumu yönetebilir, ilerleme denetim leri oluşturabilir ve işlev çağrılarının sunucular arasında dağıtımını işleyebilir. Arka planda, yürütme geçmişini sürdürmek, etkinlik işlevlerini zamanlamak ve yanıtları almak için bir Azure Depolama hesabı kullanır. Sunucusuz kodunuz hiçbir zaman bu depolama hesabındaki kalıcı bilgilerle etkileşime girmemelidir ve genellikle geliştiricilerin etkileşimde olması gereken bir şey değildir.
+Dayanıklı İşlevler, koddaki durum bilgisi olan iş akışlarının tanımını sağlayan Azure Işlevleri çalışma zamanının uzantısıdır. İş akışlarını etkinliklere bölmek için Dayanıklı İşlevler uzantısı durumu yönetebilir, ilerleme kontrol noktaları oluşturabilir ve sunucular arasında işlev çağrılarının dağıtımını işleyebilir. Arka planda, yürütme geçmişini kalıcı hale getirmek, etkinlik işlevlerini zamanlamak ve yanıtları almak için bir Azure depolama hesabı kullanır. Sunucusuz kodunuz, bu depolama hesabındaki kalıcı bilgilerle asla etkileşmemelidir ve genellikle geliştiricilerin etkileşimde bulunmak için ihtiyaç duyduğu bir şey değildir.
 
-## <a name="triggering-a-stateful-workflow"></a>Durum lu bir iş akışını tetikleme
+## <a name="triggering-a-stateful-workflow"></a>Durum bilgisi olan bir iş akışını tetikleme
 
-Dayanıklı Işlevler'deki durumsal iş akışları iki içsel bileşene ayrılabilir; orkestrasyon ve aktivite tetikler. Tetikleyiciler ve bağlamalar, sunucusuz işlevlerinizin başlatıldığında, girdi alacağında ve sonuçları döndüreceğinizde bildirilmesini sağlamak için Azure İşlevleri tarafından kullanılan temel bileşenlerdir.
+Dayanıklı İşlevler durum bilgisi olan iş akışları, iki iç bileşene ayrılabilir; düzenleme ve etkinlik Tetikleyicileri. Tetikleyiciler ve bağlamalar, Azure Işlevleri tarafından, başlangıç, giriş alma ve sonuç döndürme sırasında sunucusuz işlevlerinizin bildirilmesini sağlamak için kullanılan temel bileşenlerdir.
 
-### <a name="working-with-the-orchestration-client"></a>Orkestrasyon istemcisi ile çalışma
+### <a name="working-with-the-orchestration-client"></a>Orchestration istemcisiyle çalışma
 
-Azure İşlevlerinde tetiklenen diğer işlem stilleriyle karşılaştırıldığında, orkestrasyonlar benzersizdir. Dayanıklı Fonksiyonlar, tamamlanması saatler, hatta günler süren işlevlerin yürütülmesini sağlar. Bu tür davranışlar, çalışan bir orkestrasyonun durumunu denetleme, önceden sonlandırma veya dış olaylarla ilgili bildirimler gönderebilme gereksinimiyle birlikte gelir.
+Düzenlemeler, Azure Işlevlerinde tetiklenen işlemlerin diğer stilleriyle karşılaştırıldığında benzersizdir. Dayanıklı İşlevler, saat veya hatta tamamlanması gereken işlevlerin yürütülmesini sağlar. Bu tür davranışlar, çalışan bir düzenleme durumunun denetlenmesi, preemptively sonlanması veya dış olayların bildirimlerini gönderebilme gereksinimiyle birlikte gelir.
 
-Bu gibi durumlarda, Dayanıklı İşlevler uzantısı, düzenlenmiş işlevlerle etkileşimkurmanızı sağlayan `DurableOrchestrationClient` sınıfı sağlar. Bağlamayı kullanarak orkestrasyon istemcisine `OrchestrationClientAttribute` erişebilirsiniz. Genellikle, bu özniteliği başka bir tetikleyici türüyle `HttpTrigger` eklersiniz, örneğin. `ServiceBusTrigger` Kaynak işlevi tetiklendikten sonra, orkestrasyon istemcisi bir orchestrator işlevini başlatmak için kullanılabilir.
+Bu tür durumlarda Dayanıklı İşlevler uzantısı, `DurableOrchestrationClient` genişletilmiş işlevlerle etkileşime girebilmeniz için sınıfını sağlar. Bağlamayı kullanarak Orchestration istemcisine erişebilirsiniz `OrchestrationClientAttribute` . Genellikle, bu özniteliği veya gibi başka bir tetikleyici türüyle dahil edersiniz `HttpTrigger` `ServiceBusTrigger` . Kaynak işlev tetiklendikten sonra, düzenleme istemcisi bir Orchestrator işlevi başlatmak için kullanılabilir.
 
 ```csharp
 [FunctionName("KickOff")]
@@ -43,15 +43,15 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-### <a name="the-orchestrator-function"></a>Orkestratör işlevi
+### <a name="the-orchestrator-function"></a>Orchestrator işlevi
 
-Azure İşlevlerinde OrchestrationTriggerAttribute ile bir işlevin açıklama ekedilmesi, bir orkestratör işlevi olarak işlev görür. Özel iş akışınızı oluşturan çeşitli etkinlikleri yönetmekten sorumludur.
+Azure Işlevleri 'nde, bir Orchestrator işlevi olarak işlev gören OrchestrationTriggerAttribute ile bir işleve açıklama ekleme. Durum bilgisi olan iş akışınızı oluşturan çeşitli etkinlikleri yönetmekten sorumludur.
 
-Orchestrator işlevleri OrchestrationTriggerAttribute dışındaki bağlamaları kullanamaz. Bu öznitelik yalnızca Dayanıklı Düzenleme Bağlamı'nın parametre türüyle kullanılabilir. İşlev imzasındaki girdilerin deserialization desteklenmediğinden başka giriş ler kullanılamaz. Düzenleme istemcisi tarafından sağlanan girişleri almak için\<\> GetInput T yöntemi kullanılmalıdır.
+Orchestrator işlevleri, OrchestrationTriggerAttribute dışındaki bağlamaları kullanamaz. Bu öznitelik, yalnızca DurableOrchestrationContext parametre türüyle kullanılabilir. İşlev imzasında girişlerin serisini kaldırma desteklenmediğinden başka giriş kullanılamaz. Orchestration istemcisi tarafından sağlanmış girdileri almak için Getınput \<T\> yöntemi kullanılmalıdır.
 
-Ayrıca, düzenleme işlevlerinin dönüş türleri geçersiz, Görev veya JSON serileştirilebilir değer olmalıdır.
+Ayrıca, düzenleme işlevlerinin dönüş türleri void, Task veya JSON serileştirilebilir değeri olmalıdır.
 
-> *Hata işleme kodu kısalık için dışarıda bırakıldı*
+> *Hata işleme kodu breçekimi için ayrılmıştır*
 
 ```csharp
 [FunctionName("PlaceOrder")]
@@ -69,19 +69,19 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Bir orkestrasyonun birden çok örneği aynı anda başlatılabilir ve çalıştırılabilir. Başlatma `StartNewAsync` yöntemini `DurableOrchestrationClient` çağırmak, orkestrasyonun yeni bir örneğini başlatıyor. Yöntem, orkestrasyon başlatıldığında tamamlayan bir `Task<string>` döndürür. Orkestrasyon `TimeoutException` 30 saniye içinde başlamadıysa, tür bir istisna atılır.
+Bir Orchestration 'un birden fazla örneği aynı anda başlatılabilir ve çalıştırılabilir. `StartNewAsync`Metodu üzerinde çağırmak, `DurableOrchestrationClient` Orchestration 'un yeni bir örneğini başlatır. Yöntemi `Task<string>` , düzenleme başladığında tamamlayan bir döndürür. `TimeoutException`Düzenleme 30 saniye içinde başlatılmamışsa, türünde bir özel durum oluşur.
 
-Tamamlanan `Task<string>` `StartNewAsync` orkestrasyon örneğinin benzersiz kimliğini içermelidir. Bu örnek kimliği, belirli bir düzenleme deki işlemleri çağırmak için kullanılabilir. Orkestrasyon durum için sorgulanabilir veya olay bildirimleri gönderilebilir.
+Tamamlandı, `Task<string>` `StartNewAsync` Orchestration ÖRNEĞININ benzersiz kimliğini içermelidir. Bu örnek KIMLIĞI, belirli bir düzenleme üzerindeki işlemleri çağırmak için kullanılabilir. Düzenleme durumu veya gönderilen olay bildirimleri için sorgulanabilir.
 
-### <a name="the-activity-functions"></a>Etkinlik fonksiyonları
+### <a name="the-activity-functions"></a>Etkinlik işlevleri
 
-Etkinlik işlevleri, iş akışını oluşturmak için bir orkestrasyon işlevi içinde bir araya gelen ayrık işlemlerdir. Burada gerçek işin çoğu yer alacak. Onlar iş mantığı, uzun çalışan süreçler ve daha büyük bir çözüm için bulmaca parçaları temsil.
+Etkinlik işlevleri, iş akışını oluşturmak için bir Orchestration işlevi içinde birlikte oluşturulan ayrık işlemlerdir. İşte en çok gerçek iş gerçekleşir. İş mantığını, uzun süre çalışan süreçlerini ve bulmaca parçalarını daha büyük bir çözüme göre temsil ederler.
 
-Bu `ActivityTriggerAttribute` tür `DurableActivityContext`bir işlev parametresi açıklama yapmak için kullanılır. Ek açıklamanın kullanılması, çalışma saatini işlevin bir etkinlik işlevi olarak kullanılmasının amaçlandığını bildirir. Etkinlik işlevlerine giriş değerleri `GetInput<T>` `DurableActivityContext` parametre yöntemi kullanılarak alınır.
+, `ActivityTriggerAttribute` Türünde bir işlev parametresine açıklama eklemek için kullanılır `DurableActivityContext` . Ek açıklamanın kullanılması, işlevin etkinlik işlevi olarak kullanılması amaçlanan çalışma zamanına bildirir. Etkinlik işlevlerine giriş değerleri, parametresinin yöntemi kullanılarak alınır `GetInput<T>` `DurableActivityContext` .
 
-Düzenleme işlevlerine benzer şekilde, etkinlik işlevlerinin dönüş türleri geçersiz, Görev veya JSON serileştirilebilir değer olmalıdır.
+Düzenleme işlevlerine benzer şekilde, etkinlik işlevlerinin dönüş türleri void, Task veya JSON serileştirilebilir bir değer olmalıdır.
 
-Etkinlik işlevleri içinde atılan işlenmemiş özel durumlar, çağrı orkestratör işlevine gönderilir `TaskFailedException`ve bir . Bu noktada, hata yakalanabilir ve orkestratörde günlüğe kaydedilebilir ve etkinlik yeniden denenebilir.
+Etkinlik işlevleri içinde oluşturulan işlenmemiş özel durumlar, çağıran Orchestrator işlevine gönderilir ve olarak sunulur `TaskFailedException` . Bu noktada, hata yakalanıp Orchestrator oturumu açabilir ve etkinlik yeniden denenebilir.
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]
@@ -94,12 +94,12 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 }
 ```
 
-## <a name="recommended-resources"></a>Önerilen kaynaklar
+## <a name="recommended-resources"></a>Önerilen Kaynaklar
 
-- [Dayanıklı İşlevler](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-- [Dayanıklı Fonksiyonlar için Bağlamalar](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-- [Dayanıklı İşlevler'deki örnekleri yönetme](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [Dayanıklı İşlevler](/azure/azure-functions/durable-functions-overview)
+- [Dayanıklı İşlevler bağlamaları](/azure/azure-functions/durable-functions-bindings)
+- [Dayanıklı İşlevler örnekleri yönetme](/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
->[Önceki](event-grid.md)
->[Sonraki](orchestration-patterns.md)
+>[Önceki](event-grid.md) 
+> [Sonraki](orchestration-patterns.md)

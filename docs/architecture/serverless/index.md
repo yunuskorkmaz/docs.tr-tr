@@ -4,12 +4,12 @@ description: Sunucusuz mimari Kılavuzu. Kurumsal uygulamalarınız için (hizme
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/22/2020
-ms.openlocfilehash: 16e658a99feda6537189a45b53da514e67766999
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 867765d29a7c50694a5de7b1de56346d86600a83
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135703"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171825"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Sunucusuz uygulamalar: Mimari, desenler ve Azure’ı uygulama
 
@@ -17,7 +17,7 @@ ms.locfileid: "82135703"
 
 **Sürüm v 3.0** -Azure işlevleri v3 olarak güncelleştirildi
 
-> INDIRME:<https://aka.ms/serverlessbookpdf>
+> INDIRME: <https://aka.ms/serverlessbookpdf>
 
 YAYIMLAYAN
 
@@ -29,15 +29,15 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif &copy; hakkı 2018-2020 Microsoft Corporation
+Telif hakkı &copy; 2018-2020 Microsoft Corporation
 
-Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
+All rights reserved. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
 Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. Bu kitapta ifade edilen görünümler, eklentiler ve bilgiler, URL ve diğer Internet Web sitesi başvuruları da dahil olmak üzere bildirimde bulunmaksızın değiştirilebilir.
 
 Burada tarif edilen bazı örnekler yalnızca açıklama için sağlanmıştır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya böyle bir bağlantı olduğu sonucuna varılmamalıdır.
 
-Microsoft ve "ticari markalar" <https://www.microsoft.com> Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve <https://www.microsoft.com> "ticari markalar" Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
 Mac ve macOS, Apple Inc. ' in ticari markalarıdır.
 
@@ -47,7 +47,7 @@ Yazar:
 
 > **[Jeremy Liksizlik](https://twitter.com/jeremylikness)**, üst düzey .NET veri Programı Yöneticisi, Microsoft Corp.
 
-Mcý
+Katkıda bulunan:
 
 > **[Cecil Phillip](https://twitter.com/cecilphillip)**, üst düzey bulut Danışmanı, Microsoft Corp.
 
@@ -74,7 +74,7 @@ Katılımcılar ve gözden geçirenler:
 
 Bu kılavuz, sunucusuz kullanan uygulamaların yerel olarak geliştirilmesine odaklanır. Kitap, avantajları vurgular ve sunucusuz uygulamalar geliştirmenin olası dezavantajlarını sunar ve sunucusuz mimarilerin bir anketini sağlar. Sunucusuz 'ın nasıl kullanılabileceği hakkında birçok örnek, çeşitli sunucusuz tasarım desenleriyle birlikte gösterilmektedir.
 
-Bu kılavuzda, Azure sunucusuz platformunun bileşenleri açıklanmakta ve özellikle de [Azure işlevleri](https://docs.microsoft.com/azure/azure-functions/functions-overview)kullanılarak sunucusuz uygulamaya odaklanılmıştır. Tetikleyiciler ve bağlamalar hakkında bilgi edineceksiniz ve dayanıklı işlevler kullanılarak duruma bağlı sunucusuz uygulamaların nasıl uygulanacağı hakkında bilgi edineceksiniz. Son olarak, iş örnekleri ve örnek olay incelemeleri, projelerinize yönelik doğru yaklaşım olup olmadığını tespit etmek için bağlam ve başvuru çerçevesinin sağlanmasına yardımcı olur.
+Bu kılavuzda, Azure sunucusuz platformunun bileşenleri açıklanmakta ve özellikle de [Azure işlevleri](/azure/azure-functions/functions-overview)kullanılarak sunucusuz uygulamaya odaklanılmıştır. Tetikleyiciler ve bağlamalar hakkında bilgi edineceksiniz ve dayanıklı işlevler kullanılarak duruma bağlı sunucusuz uygulamaların nasıl uygulanacağı hakkında bilgi edineceksiniz. Son olarak, iş örnekleri ve örnek olay incelemeleri, projelerinize yönelik doğru yaklaşım olup olmadığını tespit etmek için bağlam ve başvuru çerçevesinin sağlanmasına yardımcı olur.
 
 ## <a name="evolution-of-cloud-platforms"></a>Bulut platformlarının gelişi
 
@@ -92,7 +92,7 @@ Buluttan önce, geliştirme ve işlemler arasında ayrılabilir bir sınır vard
 
 Liste açık ve ek yük çok büyük. Birçok durumda, BT departmanları inanılmaz atık ile başa çıkmaya zorlandı. Çöp kutusu, daha fazla sunucu ayırmayı etkinleştirmek için olağanüstü durum kurtarma ve bekleme sunucularına yönelik yedekleme makineleri olarak aşırı ayrılmasından kaynaklanır. Neyse ki, sanallaştırma teknolojisinin ( [Hyper-V](/virtualization/hyper-v-on-windows/about/)gibi) sanal makineler (VM) ile kullanıma sunulması, hizmet olarak altyapı (IaaS) için bir artış vermiştir. Sanallaştırılmış altyapı, bir standart sunucu kümesini omurga olarak ayarlamaya izin verilir ve bu, "isteğe bağlı" benzersiz sunucular sağlayan esnek bir ortama önde gelen bir işlem sağlar. Daha önemli olan sanallaştırma, bulutu kullanarak "hizmet olarak" sanal makineleri sağlamaya yönelik aşamayı ayarladı. Şirketler, yedekli güç veya fiziksel makineler hakkında endişelenmeyi kolayca alabilirler. Bunun yerine, sanal ortama odaklanırlar.
 
-IaaS, hala çeşitli görevlerden sorumlu olduğundan ağır yük gerektirir. Bu görevler aşağıdakileri içerir:
+IaaS, hala çeşitli görevlerden sorumlu olduğundan ağır yük gerektirir. Bu görevler arasında şunlar yer alır:
 
 - Sunucuları düzeltme eki uygulama ve yedekleme.
 - Paketler yükleniyor.
@@ -116,12 +116,12 @@ Sunucusuz 'ın başka bir özelliği mikro faturalandırmaya sahiptir. Web uygul
 
 ## <a name="what-this-guide-doesnt-cover"></a>Bu kılavuzun kapsamıyor
 
-Bu kılavuz, mimari yaklaşımları ve tasarım düzenlerini önemli bir şekilde vurgular ve Azure Işlevleri, [Logic Apps](https://docs.microsoft.com/azure/logic-apps/logic-apps-what-are-logic-apps)veya diğer sunucusuz platformların uygulama ayrıntılarına yakından bakış. Bu kılavuz, örneğin, çıkış noktaları arası kaynak paylaşımı 'nı (CORS) yapılandırma, özel etki alanları uygulama veya SSL sertifikalarını karşıya yükleme gibi Azure Işlevlerinin Logic Apps veya özelliklerine sahip gelişmiş iş akışlarını kapsamaz. Bu ayrıntılar çevrimiçi [Azure işlevleri belgeleri](https://docs.microsoft.com/azure/azure-functions/functions-reference)aracılığıyla sağlanır.
+Bu kılavuz, mimari yaklaşımları ve tasarım düzenlerini önemli bir şekilde vurgular ve Azure Işlevleri, [Logic Apps](/azure/logic-apps/logic-apps-what-are-logic-apps)veya diğer sunucusuz platformların uygulama ayrıntılarına yakından bakış. Bu kılavuz, örneğin, çıkış noktaları arası kaynak paylaşımı 'nı (CORS) yapılandırma, özel etki alanları uygulama veya SSL sertifikalarını karşıya yükleme gibi Azure Işlevlerinin Logic Apps veya özelliklerine sahip gelişmiş iş akışlarını kapsamaz. Bu ayrıntılar çevrimiçi [Azure işlevleri belgeleri](/azure/azure-functions/functions-reference)aracılığıyla sağlanır.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- [Azure mimari Merkezi](https://docs.microsoft.com/azure/architecture/)
-- [Bulut uygulamalarına yönelik en iyi yöntemler](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+- [Azure mimari Merkezi](/azure/architecture/)
+- [Bulut uygulamalarına yönelik en iyi yöntemler](/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>Kılavuzu kimler kullanmalıdır?
 

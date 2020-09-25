@@ -4,12 +4,12 @@ description: Azure işlevleri, olay odaklı anında ölçeklendirme kodu sağlam
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 2dee60e3635be94a55ee26a7f04942bc59cb8dec
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 7625b2a0dafb90dc1bf2fb7fe680d53b20764c09
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135730"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171812"
 ---
 # <a name="azure-functions"></a>Azure İşlevleri
 
@@ -19,7 +19,7 @@ Azure işlevleri, sunucusuz bir işlem deneyimi sağlar. Bir işlev bir *tetikle
 
 Geçerli çalışma zamanı sürüm 3,0, platformlar arası .NET Core 3,1 uygulamalarını destekler. JavaScript, F # ve Java gibi ek diller de desteklenir. Portalda oluşturulan işlevler, zengin bir betik sözdizimi sağlar. Tek başına projeler olarak oluşturulan işlevler, tam platform desteği ve özellikleri ile dağıtılabilir.
 
-Daha fazla bilgi için bkz. [Azure işlevleri belgeleri](https://docs.microsoft.com/azure/azure-functions).
+Daha fazla bilgi için bkz. [Azure işlevleri belgeleri](/azure/azure-functions).
 
 ## <a name="programming-language-support"></a>Programlama dili desteği
 
@@ -35,15 +35,15 @@ Aşağıdaki dillerin tümü genel kullanılabilirlik (GA) içinde desteklenir.
 |**TypeScript**|Düğüm 10 & 12 (JavaScript aracılığıyla)|
 |**PowerShell**|PowerShell Core 6|
 
-Daha fazla bilgi için bkz. [Desteklenen diller](https://docs.microsoft.com/azure/azure-functions/supported-languages).
+Daha fazla bilgi için bkz. [desteklenen diller](/azure/azure-functions/supported-languages).
 
 ## <a name="app-service-plans"></a>App Service planları
 
 İşlevler bir *App Service planı*tarafından desteklenir. Plan, işlevler uygulaması tarafından kullanılan kaynakları tanımlar. Bir bölgeye planlar atayabilir, kullanılacak sanal makinelerin boyutunu ve sayısını belirleyebilir ve bir fiyatlandırma katmanı seçebilirsiniz. Doğru sunucusuz bir yaklaşım için işlev uygulamaları **Tüketim** planını kullanabilir. Tüketim planı, yük temelinde arka ucu otomatik olarak ölçeklendirecektir.
 
-İşlev uygulamaları için başka bir barındırma seçeneği de [Premium plandır](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan). Bu plan, soğuk başlangıçtan kaçınmak için "Always On" örneği sağlar, VNet bağlantısı gibi gelişmiş özellikleri destekler ve Premium donanımda çalışır.
+İşlev uygulamaları için başka bir barındırma seçeneği de [Premium plandır](/azure/azure-functions/functions-premium-plan). Bu plan, soğuk başlangıçtan kaçınmak için "Always On" örneği sağlar, VNet bağlantısı gibi gelişmiş özellikleri destekler ve Premium donanımda çalışır.
 
-Daha fazla bilgi için bkz. [App Service planları](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview).
+Daha fazla bilgi için bkz. [App Service planları](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview).
 
 ## <a name="create-your-first-function"></a>İlk uygulamanızı oluşturma
 
@@ -53,15 +53,15 @@ Daha fazla bilgi için bkz. [App Service planları](https://docs.microsoft.com/a
 - Azure CLı kullanarak gereken kaynakları oluşturun.
 - En sevdiğiniz IDE 'yi kullanarak işlevleri yerel olarak derleyin ve Azure 'da yayımlayın.
 
-Portalda betikleştirilmiş bir işlev oluşturma hakkında daha fazla bilgi için, [Azure Portal ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)bölümüne bakın.
+Portalda betikleştirilmiş bir işlev oluşturma hakkında daha fazla bilgi için, [Azure Portal ilk işlevinizi oluşturma](/azure/azure-functions/functions-create-first-azure-function)bölümüne bakın.
 
-Azure CLı 'dan derlemek için bkz. [Azure CLI kullanarak ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli).
+Azure CLı 'dan derlemek için bkz. [Azure CLI kullanarak ilk işlevinizi oluşturma](/azure/azure-functions/functions-create-first-azure-function-azure-cli).
 
-Visual Studio 'dan bir işlev oluşturmak için bkz. [Visual Studio kullanarak ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
+Visual Studio 'dan bir işlev oluşturmak için bkz. [Visual Studio kullanarak ilk işlevinizi oluşturma](/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
 ## <a name="understand-triggers-and-bindings"></a>Tetikleyicileri ve bağlamaları anlama
 
-İşlevler bir *tetikleyici* tarafından çağrılır ve tam olarak bir tane olabilir. İşlevi çağırmaya ek olarak, bazı Tetikleyiciler de bağlamalar olarak görev yapar. Ayrıca, tetikleyicisine ek olarak birden çok bağlama de tanımlayabilirsiniz. *Bağlamalar* , verileri kodunuza bağlamanın bildirim temelli bir yolunu sağlar. Bunlar (giriş) veya veri alabilir (çıktı). Tetikleyiciler ve bağlamalar işlevleri ile çalışmayı kolay hale getirir. Bağlamalar, veritabanı veya dosya sistemi bağlantılarını el ile oluşturma ek yükünü ortadan kaldırır. Bağlamalar için gereken tüm bilgiler, betikler için özel bir *Functions. JSON* dosyasında bulunur veya koddaki özniteliklerle birlikte bildirilmiştir.
+İşlevler bir *tetikleyici* tarafından çağrılır ve tam olarak bir tane olabilir. İşlevi çağırmaya ek olarak, bazı Tetikleyiciler de bağlamalar olarak görev yapar. Ayrıca, tetikleyicisine ek olarak birden çok bağlama de tanımlayabilirsiniz. *Bağlamalar* , verileri kodunuza bağlamanın bildirim temelli bir yolunu sağlar. Bunlar (giriş) veya veri alabilir (çıktı). Tetikleyiciler ve bağlamalar işlevleri ile çalışmayı kolay hale getirir. Bağlamalar, veritabanı veya dosya sistemi bağlantılarını el ile oluşturma ek yükünü ortadan kaldırır. Bağlamalar için gereken tüm bilgiler betikler için dosyadaki özel bir *functions.js* veya koddaki özniteliklerle bildirilmiştir.
 
 Bazı ortak Tetikleyiciler şunları içerir:
 
@@ -76,7 +76,7 @@ Bağlama örnekleri şunları içerir:
 - Tablo Depolama: işlev uygulamanızdan anahtar/değer depolama ile çalışma.
 - Kuyruk depolama: bir kuyruktan kolayca öğe alın veya yeni öğeleri kuyruğa yerleştirin.
 
-Aşağıdaki örnek *Functions. JSON* dosyası bir tetikleyiciyi ve bağlamayı tanımlar:
+Aşağıdaki örnek *functions.js* dosyası bir tetikleyiciyi ve bağlamayı tanımlar:
 
 ```json
 {
@@ -100,7 +100,7 @@ Aşağıdaki örnek *Functions. JSON* dosyası bir tetikleyiciyi ve bağlamayı 
 }
 ```
 
-Bu örnekte, işlev, `images` kapsayıcıda blob depolamaya yapılan bir değişiklik tarafından tetiklenir. Dosya ile ilgili bilgiler geçirilir, bu nedenle tetikleyici de bir bağlama işlevi görür. Adlı `images`bir kuyruğa bilgi koymak için başka bir bağlama var.
+Bu örnekte, işlev, kapsayıcıda blob depolamaya yapılan bir değişiklik tarafından tetiklenir `images` . Dosya ile ilgili bilgiler geçirilir, bu nedenle tetikleyici de bir bağlama işlevi görür. Adlı bir kuyruğa bilgi koymak için başka bir bağlama var `images` .
 
 İşlevin C# betiği aşağıdadır:
 
@@ -114,8 +114,8 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 Örnek, değiştirilen veya blob depolamaya yüklenen dosyanın adını alan ve daha sonra işlenmek üzere bir kuyruğa yerleştirtiren basit bir işlevdir.
 
-Tetikleyiciler ve bağlamaların tam listesi için bkz. [Azure işlevleri Tetikleyicileri ve bağlamaları kavramları](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
+Tetikleyiciler ve bağlamaların tam listesi için bkz. [Azure işlevleri Tetikleyicileri ve bağlamaları kavramları](/azure/azure-functions/functions-triggers-bindings).
 
 >[!div class="step-by-step"]
->[Önceki](azure-serverless-platform.md)
->[İleri](application-insights.md)
+>[Önceki](azure-serverless-platform.md) 
+> [Sonraki](application-insights.md)

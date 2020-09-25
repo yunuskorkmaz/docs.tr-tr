@@ -2,14 +2,14 @@
 title: Bulut için hazırlık dayanıklı Hizmetleri oluşturun. Buluttaki geçici hataları benimseme
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Bulut için hazırlık dayanıklı Hizmetleri oluşturun. Buluttaki geçici hataları benimseme
 ms.date: 04/30/2018
-ms.openlocfilehash: 899084ac00d9be0df47ef88c026f4e8c19722bb6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144258"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172163"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Bulut için hazır olan dayanıklı hizmetler derleme: Bulutta geçici hataları kavrama
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Bulut için hazır olan dayanıklı hizmetler derleme: Buluttaki geçici hataları benimseme
 
 Dayanıklılık, hatalardan kurtulmakta ve çalışmaya devam edebilmesidir. Dayanıklılık, hatalardan kaçınma, ancak hataların gerçekleşmesi ve sonra kapalı kalma süresini veya veri kaybını önleyen bir şekilde yanıt vermeyi kabul eder. Dayanıklılık amacı, bir hatadan sonra uygulamayı tam çalışır duruma döndürmektir.
 
@@ -33,7 +33,7 @@ HTTP Hizmetleri kullanan bir uygulamada benzer bir senaryo meydana gelebilir. K�
 
 Bu teknikleri, hem HTTP kaynaklarında hem de veritabanı kaynaklarında kullanabilirsiniz. Şekil 4-9 ' de, uygulama 3 katmanlı bir mimariye dayanır, bu nedenle hizmet düzeyinde (HTTP) ve veri katmanı düzeyinde (TCP) Bu tekniklerin olması gerekir. Veritabanına ek olarak yalnızca tek bir uygulama katmanını kullanan tek parçalı bir uygulamada (ek hizmet veya mikro hizmet olmadan), veritabanı bağlantı düzeyindeki geçici hataların işlenmesi yeterli olabilir. Bu senaryoda, veritabanı bağlantısının yalnızca belirli bir yapılandırması gerekir.
 
-Kullandığınız .NET sürümüne bağlı olarak veritabanına erişen dayanıklı iletişimler uygularken, bu, basit olabilir (örneğin, [Entity Framework 6 veya üzeri ile](/ef/ef6/fundamentals/connection-resiliency/retry-logic)). Veritabanı bağlantısını yapılandırmanın yalnızca bir önemi vardır. Ya da, [geçici hata Işleme uygulama bloğu](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (.net 'in önceki sürümleri için) gibi ek kitaplıklar kullanmanız veya kendi kitaplığınızı uygulamanız gerekebilir.
+Kullandığınız .NET sürümüne bağlı olarak veritabanına erişen dayanıklı iletişimler uygularken, bu, basit olabilir (örneğin, [Entity Framework 6 veya üzeri ile](/ef/ef6/fundamentals/connection-resiliency/retry-logic)). Veritabanı bağlantısını yapılandırmanın yalnızca bir önemi vardır. Ya da, [geçici hata Işleme uygulama bloğu](/previous-versions/msp-n-p/hh680934(v=pandp.50)) (.net 'in önceki sürümleri için) gibi ek kitaplıklar kullanmanız veya kendi kitaplığınızı uygulamanız gerekebilir.
 
 HTTP yeniden denemeleri ve devre kesicileri uygularken .NET önerisi, .NET Core desteği içeren .NET Framework 4,0, .NET Framework 4,5 ve .NET Standard 1,1 ' i hedefleyen [Polly](https://github.com/App-vNext/Polly) kitaplığı kullanmaktır.
 

@@ -1,93 +1,93 @@
 ---
-title: Sunucusuz tasarım örnekleri - Sunucusuz uygulamalar
-description: Zamanlama ve olay tabanlı işlemeden dosya tetikleyicilerine ve akış işlemine kadar sunucusuz mimariler tarafından desteklenen senaryoların çeşitliliğini anlayın.
+title: Sunucusuz tasarım örnekleri-sunucusuz uygulamalar
+description: Zamanlama ve olay tabanlı işlemden dosya tetikleyicilerine ve akış işlemine kadar sunucusuz mimarilerin desteklediği çeşitli senaryoları anlayın.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b4e8fda0c1423c881c0807602e11f7c49ff7cfe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aa9b7951fd8f11a65a64c22443de7041aba7d94
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73093551"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171760"
 ---
 # <a name="serverless-design-examples"></a>Sunucusuz tasarım örnekleri
 
-Sunucusuzlar için var olan birçok tasarım delemi vardır. Bu bölümde, sunucusuz kullanan bazı yaygın senaryolar yakalar. Tüm örneklerin ortak noktası, bir olay tetikleyicisi ve iş mantığının temel birleşimidir.
+Sunucusuz için mevcut birçok tasarım deseni vardır. Bu bölümde sunucusuz kullanan bazı yaygın senaryolar yakalar. Örneklerin hepsi ortak bir olay tetikleyicisi ve iş mantığının temel birleşimidir.
 
 ## <a name="scheduling"></a>Zamanlama
 
-Görevleri zamanlama ortak bir işlevdir. Aşağıdaki diyagram, uygun bütünlük denetimleri olmayan eski bir veritabanını gösterir. Veritabanı periyodik olarak temizlenmelidir. Sunucusuz işlev geçersiz verileri bulur ve temizler. Tetikleyici, kodu zamanlamada çalıştıran bir zamanlayıcıdır.
+Zamanlama görevleri yaygın bir işlevdir. Aşağıdaki diyagramda, uygun bütünlük denetimlerine sahip olmayan eski bir veritabanı gösterilmektedir. Veritabanı düzenli aralıklarla yeniden oluşturulmalıdır. Sunucusuz işlevi geçersiz verileri bulur ve temizler. Tetikleyici, kodu bir zamanlamaya göre çalıştıran bir zamanlayıcıya sahiptir.
 
 ![Sunucusuz zamanlama](./media/serverless-scheduling.png)
 
 ## <a name="command-and-query-responsibility-segregation-cqrs"></a>Komut ve Sorgu Sorumluluğu Ayrımı (CQRS)
 
-Komut ve Sorgu Sorumluluğu Ayrımı (CQRS), verileri ve verileri değiştiren işlemleri okumak (veya sorgulamak) için farklı arabirimler sağlayan bir desendir. Birkaç yaygın sorunları giderir. Geleneksel Oku Oku Silme (CRUD) tabanlı sistemlerde, aynı veri deposuna hem okuma hem de yazma hacminin yüksek hacminden çakışmalar ortaya çıkabilir. Kilitleme sık sık oluşabilir ve okumaları önemli ölçüde yavaşlatabilir. Genellikle, veriler birkaç etki alanı nesnelerinin birleşimi olarak sunulur ve okuma işlemleri farklı varlıklardan gelen verileri birleştirmelidir.
+Komut ve Sorgu Sorumluluklarının Ayrılığı (CQRS), verileri değiştiren verileri ve işlemleri okumak (veya sorgulamak) için farklı arabirimler sağlayan bir modeldir. Yaygın olarak karşılaşılan birkaç sorunu ele alınmaktadır. Geleneksel olarak okuma güncelleştirme silme (CRUD) tabanlı sistemlerde, çakışmalar aynı veri deposuna hem okuma hem de yazma işlemlerinin yüksek haciminden kaynaklanabilir. Kilitleme sık sık meydana gelebilir ve çok önemli ölçüde yavaş okumalar. Veriler genellikle çeşitli etki alanı nesnelerinin bir bileşimi olarak sunulur ve okuma işlemleri farklı varlıklardaki verileri birleştirmelidir.
 
-CQRS kullanarak, bir okuma, verileri tüketilen şekilde modelleyen özel bir "düzleştirilmiş" varlık içerebilir. Okuma, depolanan dan farklı işlenir. Örneğin, veritabanı bir kişi bir üstbilgi kaydı olarak bir alt adres kaydı ile depolar, ancak okuma hem üstbilgi ve adres özellikleri olan bir varlık içerebilir. Okuma modelini oluşturmak için sayısız yaklaşım vardır. Bu görünümlerden somutlaşmış olabilir. Güncelleştirme işlemleri, daha sonra iki farklı modele güncelleştirmeleri tetikleyen yalıtılmış olaylar olarak özetlenebilir. Okuma ve yazma için ayrı modeller vardır.
+Bir okuma, CQRS kullanarak verileri tüketilen şekilde modelleyen özel bir "düzleştirilmiş" varlık içerebilir. Okuma, depolandıkları şekilde farklı şekilde işlenir. Örneğin, veritabanı bir kişiyi alt adres kaydıyla bir başlık kaydı olarak depolayabilse de, okuma hem üstbilgi hem de adres özelliklerine sahip bir varlık içerebilir. Okuma modelini oluşturmaya yönelik sayısız yaklaşımları vardır. Görünümlerden gerçekleştirilmiş olabilir. Güncelleştirme işlemleri, daha sonra güncelleştirmeleri iki farklı modele tetikleyen yalıtılmış olaylar olarak kapsüllenebilir. Okuma ve yazma için ayrı modeller var.
 
 ![CQRS örneği](./media/cqrs-example.png)
 
-Sunucusuz, ayrılmış uç noktaları sağlayarak CQRS deseni barındırabilir. Sunucusuz bir işlev sorguları veya okumaları barındırır ve farklı bir sunucusuz işlev veya işlev kümesi güncelleştirme işlemlerini işler. Sunucusuz bir işlev, okuma modelini güncel tutmaktan da sorumlu olabilir ve veritabanının [değişiklik akışı](https://docs.microsoft.com/azure/cosmos-db/change-feed)tarafından tetiklenebilir. Ön uç geliştirme, gerekli uç noktalara bağlanmak için basitleştirilir. Olayların işlenmesi arka uçta işlenir. Farklı ekipler farklı işlemler üzerinde çalışabilir, çünkü bu model de büyük projeler için iyi ölçekler.
+Sunucusuz, ayrılmış uç noktaları sağlayarak CQRS düzenine uyum sağlayabilir. Bir sunucusuz işlev sorguları veya okumaları, farklı bir sunucusuz işlevi veya işlev kümesini ise güncelleştirme işlemlerini işler. Sunucusuz bir işlev, okuma modelinin güncel tutulması için de sorumlu olabilir ve veritabanının [değişiklik akışı](/azure/cosmos-db/change-feed)tarafından tetiklenebilir. Ön uç geliştirme, gerekli uç noktalara bağlanmak üzere basitleştirilmiştir. Olayların işlenmesi arka uçta işlenir. Farklı ekipler farklı işlemlerde çalışabileceğinden, bu model büyük projeler için de iyi ölçeklendiriyor.
 
 ## <a name="event-based-processing"></a>Olay tabanlı işleme
 
-İleti tabanlı sistemlerde, olaylar genellikle sıraya veya yayımcı/abone konuları üzerinde hareket edilecek şekilde toplanır. Bu olaylar, iş mantığının bir parçasını yürütmek için sunucusuz işlevleri tetikleyebilir. Olay tabanlı işlemenin bir örneği olay kaynaklı sistemlerdir. Bir görevi tamamlanmış olarak işaretlemek için bir "olay" yükseltilir. Olay tarafından tetiklenen sunucusuz bir işlev, uygun veritabanı belgesini güncelleştirir. İkinci bir sunucusuz işlev, sistem için okuma modelini güncelleştirmek için olayı kullanabilir. [Azure Olay Idamı,](https://docs.microsoft.com/azure/event-grid/overview) olayları abonesi olarak işlevleri olan tümleştirmenin bir yolunu sağlar.
+İleti tabanlı sistemlerde, olaylar genellikle daha sonra işlem yapmak için kuyruklarda veya yayımcı/abone konularında toplanır. Bu olaylar, bir iş mantığı parçasını yürütmek için sunucusuz işlevleri tetikleyebilir. Olay tabanlı işleme bir örnek olay kaynaklı sistemleridir. Bir görevi tamamlanmış olarak işaretlemek için bir "olay" tetiklenir. Olay tarafından tetiklenen sunucusuz bir işlev, uygun veritabanı belgesini günceller. İkinci sunucusuz bir işlev, sistem için okuma modelini güncelleştirmek üzere olayını kullanabilir. [Azure Event Grid](/azure/event-grid/overview) , olaylarla olayları abone olarak tümleştirmenin bir yolunu sağlar.
 
-> Olaylar bilgilendirme iletileridir. Daha fazla bilgi için olay [kaynak deseni](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)bakın.
+> Olaylar bilgilendirme iletileridir. Daha fazla bilgi için bkz. olay kaynağını belirleme [stili](/azure/architecture/patterns/event-sourcing).
 
-## <a name="file-triggers-and-transformations"></a>Dosya tetikleyicileri ve dönüşümleri
+## <a name="file-triggers-and-transformations"></a>Dosya Tetikleyicileri ve dönüştürmeleri
 
-Ayıklama, Dönüştürme ve Yükleme (ETL) ortak bir iş fonksiyonudur. Sunucusuz, kodun bir boru hattının parçası olarak tetiklenmelerine izin verdiği için ETL için harika bir çözümdür. Tek tek kod bileşenleri çeşitli yönlerini ele alabilir. Sunucusuz bir işlev dosyayı karşıdan yükleyebilir, diğeri dönüştürmeyi uygular ve diğeri verileri yükler. Kod bağımsız olarak sınanabilir ve dağıtılabilir, bu da gerektiğinde bakımı ve ölçeklendirmesini kolaylaştırır.
+Ayıklama, dönüştürme ve yükleme (ETL) ortak bir iş işlevidir. Sunucusuz, kodun bir işlem hattının parçası olarak tetiklenmesini sağladığından ETL için harika bir çözümdür. Bağımsız kod bileşenleri çeşitli açılardan ele alabilir. Bir sunucusuz işlev dosyayı indirebilir, başka bir dönüşüm uygular ve başka bir veri yükler. Kod bağımsız olarak test edilebilir ve dağıtılabilir, böylece gerektiğinde daha kolay bir şekilde korunur ve ölçeklendirebilirsiniz.
 
-![Sunucusuz dosya tetikleyicileri ve dönüşümleri](./media/serverless-file-triggers.png)
+![Sunucusuz dosya Tetikleyicileri ve dönüştürmeleri](./media/serverless-file-triggers.png)
 
-Diyagramda "cool depolama", [Azure Akış Analizi'nde](https://docs.microsoft.com/azure/stream-analytics)ayrıştırılan veriler sağlar. Veri akışında karşılaşılan tüm sorunlar, anormalliği gidermek için bir Azure İşi tetikler.
+Diyagramda, "seyrek erişimli depolama" [Azure Stream Analytics](/azure/stream-analytics)ayrıştırılabilen verileri sağlar. Veri akışında karşılaşılan sorunlar, anomali 'e yönelik bir Azure Işlevi tetikleyin.
 
-## <a name="asynchronous-background-processing-and-messaging"></a>Asynchronous arka plan işleme ve mesajlaşma
+## <a name="asynchronous-background-processing-and-messaging"></a>Zaman uyumsuz arka plan işleme ve mesajlaşma
 
-Eşkron mesajlaşma ve arka plan işleme, uygulamaların beklemeye gerek kalmadan işlemleri başlatmasına olanak sağlar. Eşzamanlı işlemenin bir örneği bir OCR uygulamasıdır. Görüntü gönderilir ve işlenmek üzere sıraya alınır. Metni ayıklamak için görüntüyü taramak zaman alabilir ve tamamlandıktan sonra bir bildirim gönderilir. Sunucusuz, bu senaryoda hem çağırmayı hem de sonucu işleyebilir.
+Zaman uyumsuz mesajlaşma ve arka plan işleme, uygulamaların beklemeye girmeden işlemleri başlatma izni verir. Zaman uyumsuz işleme bir örnek OCR uygulamasıdır. Bir görüntü gönderilir ve işlenmek üzere sıraya alınır. Metnin ayıklanmasına ilişkin görüntünün taranması zaman alabilir ve bir bildirim gönderilir. Sunucusuz, Bu senaryodaki çağrıyı ve sonucu işleyebilir.
 
 ## <a name="web-apps-and-apis"></a>Web uygulamaları ve API'leri
 
-Sunucusuzlar için popüler bir senaryo, kullanıcı arabirimi katmanının bir web uygulaması olduğu en yaygın uygulamalar olan N katmanlı uygulamalardır. Tek Sayfa Uygulamaları (SPA) popülaritesi son zamanlarda artmıştır. SPA uygulamaları tek bir sayfa yı işler, ardından tam sayfayı yeniden yüklemeden yeni ui'yi dinamik olarak işlemek için API çağrılarına ve döndürülen verilere güvenir. İstemci tarafı oluşturma, son kullanıcıya çok daha hızlı ve duyarlı bir uygulama sağlar.
+Sunucusuz için popüler bir senaryo, çoğu genellikle UI katmanının bir Web uygulaması olduğu N katmanlı uygulamalardır. Tek sayfa uygulamalarının (SPA) popülerliği yakın zamanda ortaya çıktı. SPA uygulamaları tek bir sayfa oluşturup API çağrılarını ve döndürülen verileri, tam sayfayı yeniden yüklemeden Yeni Kullanıcı arabirimini dinamik olarak işlemek için kullanır. İstemci tarafı işleme, son kullanıcıya çok daha hızlı ve daha hızlı bir uygulama sağlar.
 
-HTTP çağrıları tarafından tetiklenen sunucusuz uç noktaları API isteklerini işlemek için kullanılabilir. Örneğin, bir reklam hizmetleri şirketi, özel reklam istemek için kullanıcı profili bilgilerini içeren sunucusuz bir işlev arayabilir. Sunucusuz işlev özel reklamı döndürür ve web sayfası onu işler.
+HTTP çağrıları tarafından tetiklenen sunucusuz uç noktalar, API isteklerini işlemek için kullanılabilir. Örneğin, bir ad hizmetleri şirketi özel tanıtım istemek için Kullanıcı profili bilgileriyle sunucusuz bir işlev çağırabilir. Sunucusuz işlevi özel ad döndürür ve Web sayfası onu işler.
 
-![Sunucusuz web API](./media/serverless-web-api.png)
+![Sunucusuz Web API 'SI](./media/serverless-web-api.png)
 
 ## <a name="data-pipeline"></a>Veri işlem hattı
 
-Sunucusuz işlevler bir veri ardışık kolaylaştırmak için kullanılabilir. Bu örnekte, bir dosya, CSV dosyasındaki verileri tablodaki veri satırlarına çevirmek için bir işlev tetikler. Düzenlenen tablo, Power BI panosunun son kullanıcıya analiz sunmasını sağlar.
+Sunucusuz işlevler, bir veri işlem hattını kolaylaştırmak için kullanılabilir. Bu örnekte, bir dosya bir CSV dosyasındaki verileri bir tablodaki veri satırlarına dönüştürmek için bir işlevi tetikler. Düzenlenmiş tablo, Power BI panosunun son kullanıcıya analiz sunmasını sağlar.
 
-![Sunucusuz veri aktaremi](./media/serverless-data-pipeline.png)
+![Sunucusuz veri işlem hattı](./media/serverless-data-pipeline.png)
 
 ## <a name="stream-processing"></a>Akış işleme
 
-Aygıtlar ve sensörler genellikle gerçek zamanlı olarak işlenmesi gereken veri akışları oluşturur. [Olay Hub'larından](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) ve [IoT Hub'ından](https://docs.microsoft.com/azure/iot-hub) Servis Veri [Servisi'ne](https://docs.microsoft.com/azure/service-bus)ileti leri ve akışları yakalayabilen bir dizi teknoloji vardır. Aktarım dan bağımsız olarak, sunucusuz, iletileri ve veri akışlarını geldikleri gibi işlemek için ideal bir mekanizmadır. Sunucusuz, büyük hacimli verilerin talebini karşılamak için hızlı bir şekilde ölçeklenebilir. Sunucusuz kod, verileri ve çıktıları eylem ve analitik için yapılandırılmış bir biçimde ayrıştırmak için iş mantığı uygulayabilir.
+Cihazlar ve algılayıcılar genellikle gerçek zamanlı olarak işlenmesi gereken verilerin akışlarını oluşturur. [Event Hubs](/azure/event-hubs/event-hubs-what-is-event-hubs) ileti ve akışları yakalayabilir ve [Service Bus](/azure/service-bus) [IoT Hub](/azure/iot-hub) . Aktarımdan bağımsız olarak sunucusuz, içindeki iletileri ve veri akışlarını işlemek için ideal bir mekanizmadır. Sunucusuz, büyük hacime sahip verilerin taleplerini karşılamak için hızla ölçeklendirebilir. Sunucusuz kod, işlem ve analiz için yapılandırılmış bir biçimde verileri ve çıktıyı ayrıştırmaya yönelik iş mantığı uygulayabilir.
 
 ![Sunucusuz akış işleme](./media/serverless-stream-processing.png)
 
 ## <a name="api-gateway"></a>API ağ geçidi
 
-API ağ geçidi, istemciler için tek bir giriş noktası sağlar ve ardından istekleri arka uç hizmetlerine akıllıca yönlendirir. Büyük hizmet kümelerini yönetmek yararlıdır. Ayrıca, istemcileri birbirinden farklı ortamlara kolayca bağlayarak sürüm işlemlerini işleyebilir ve geliştirmeyi basitleştirebilir. Sunucusuz, api ağ geçidi üzerinden tek bir ön uç sunarken tek tek mikro hizmetlerin arka uç ölçekleme işleyebilir.
+Bir API ağ geçidi istemciler için tek bir giriş noktası sağlar ve istekleri arka uç hizmetlerine yönlendirir. Büyük hizmet kümelerini yönetmek faydalı olur. Ayrıca, istemcileri farklı ortamlara kolayca bağlayarak, sürüm oluşturma ve geliştirmeyi kolaylaştırma işlemlerini de işleyebilir. Sunucusuz, tek bir ön ucu bir API Gateway aracılığıyla sunarken tek bir mikro hizmetin arka uç ölçeklendirmesini işleyebilir.
 
 ![Sunucusuz API ağ geçidi](./media/serverless-api-gateway.png)
 
-## <a name="recommended-resources"></a>Önerilen kaynaklar
+## <a name="recommended-resources"></a>Önerilen Kaynaklar
 
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Azure Event Grid](/azure/event-grid/overview)
+- [Azure IoT Hub](/azure/iot-hub)
 - [Dağıtılmış veri yönetimi için sorunlar ve çözümler](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-- [Mikro hizmetlerin tasarlanması: mikrohizmet sınırlarının belirlenmesi](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-- [Etkinlik Hub'ları](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-- [Olay Kaynak deseni](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Mikro hizmetler tasarlama: mikro hizmet sınırlarını tanımlama](/azure/architecture/microservices/microservice-boundaries)
+- [Event Hubs](/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [Olay kaynağını belirleme kalıbı](/azure/architecture/patterns/event-sourcing)
 - [Devre Kesici desenini uygulama](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-- [Service Bus](https://docs.microsoft.com/azure/service-bus)
-- [Azure Cosmos DB'de değişiklik akışı desteğiyle çalışma](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [IoT Hub’ı](/azure/iot-hub)
+- [Service Bus](/azure/service-bus)
+- [Azure Cosmos DB değişiklik akışı desteğiyle çalışma](/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
->[Önceki](serverless-architecture-considerations.md)
->[Sonraki](azure-serverless-platform.md)
+>[Önceki](serverless-architecture-considerations.md) 
+> [Sonraki](azure-serverless-platform.md)

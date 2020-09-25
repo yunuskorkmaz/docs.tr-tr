@@ -2,12 +2,12 @@
 title: İzlenecek yollar ve teknik başlangıca genel bakış
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin | İzlenecek yollar ve teknik Başlarken Genel Bakış
 ms.date: 04/28/2018
-ms.openlocfilehash: 4db6d449d27dcd4316d61305c8c2a8c2aa0bc65b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516131"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172150"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlangıca genel bakış
 
@@ -190,7 +190,7 @@ Tam teknik izlenecek yol, GitHub deposu wiki ' de kullanılabilir:
 
 ### <a name="overview"></a>Genel Bakış
 
-[Azure Container Instances (ACI)](https://docs.microsoft.com/azure/container-instances/) , kapsayıcılar geliştirme/test/hazırlama ortamının tek tek örneklerini dağıtabileceğiniz en hızlı yoldur.
+[Azure Container Instances (ACI)](/azure/container-instances/) , kapsayıcılar geliştirme/test/hazırlama ortamının tek tek örneklerini dağıtabileceğiniz en hızlı yoldur.
 
 ### <a name="goals"></a>Hedefler
 

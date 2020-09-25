@@ -1,78 +1,78 @@
 ---
-title: Sunucusuz mimari - Sunucusuz uygulamalar
-description: Web uygulamaları, mobil cihazlar ve IoT gibi sunucusuz mimariler tarafından desteklenen çeşitli mimarilerin ve uygulamaların araştırılması.
+title: Sunucusuz mimari-sunucusuz uygulamalar
+description: Web uygulamaları, mobil ve IoT gibi sunucusuz mimariler tarafından desteklenen çeşitli mimarilerin ve uygulamaların araştırmasına yönelik araştırma.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 838dcd7b41df0d8297e1ae10f9c04a8d5b83b332
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7d80ce3957c2ad90a67ae6ba1fc2786af30fcc1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522401"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171721"
 ---
 # <a name="serverless-architecture"></a>Sunucusuz mimari
 
-[Sunucusuz](https://azure.com/serverless) mimarileri kullanmak için birçok yaklaşım vardır. Bu bölümde, sunucusuz tümleştiren ortak mimariörnekleri incelemektedir. Ayrıca, ek zorluklar oluşturabilecek veya sunucusuz uygulama yaparken ekstra dikkate alınması gereken endişeleri de kapsar. Son olarak, çeşitli sunucusuz kullanım örneklerini gösteren çeşitli tasarım örnekleri sağlanır.
+[Sunucusuz](https://azure.com/serverless) mimarilerin kullanılmasına yönelik birçok yaklaşım vardır. Bu bölümde sunucusuz 'i tümleştiren ortak mimarilerin örnekleri incelenmektedir. Ayrıca, daha fazla zorluk oluşturabilecek veya sunucusuz uygularken ek bir dikkat gerektiren sorunlar ele alınmaktadır. Son olarak, çeşitli sunucusuz kullanım durumlarını gösteren çeşitli tasarım örnekleri verilmiştir.
 
-Sunucusuz ana bilgisayarlar, sunucusuz örnekleri yönetmek için genellikle varolan kapsayıcı tabanlı veya PaaS katmanını kullanır. Örneğin, Azure İşlevler [Azure Uygulama Hizmeti'ni](https://docs.microsoft.com/azure/app-service/)temel alır. Uygulama Hizmeti, örnekleri ölçeklendirmek ve Azure İşlevler kodunu çalıştıran çalışma zamanını yönetmek için kullanılır. Windows tabanlı işlevler için ana bilgisayar PaaS olarak çalışır ve .NET çalışma süresini ölçekler. Linux tabanlı işlevler için ana bilgisayar kapsayıcılardan yararlanır.
+Sunucusuz konaklar genellikle sunucusuz örnekleri yönetmek için mevcut bir kapsayıcı tabanlı veya PaaS katmanını kullanır. Örneğin, Azure Işlevleri [Azure App Service](/azure/app-service/)tabanlıdır. App Service, örnekleri ölçeklendirmek ve Azure Işlevleri kodunu yürüten çalışma zamanını yönetmek için kullanılır. Windows tabanlı işlevlerde, ana bilgisayar PaaS olarak çalışır ve .NET çalışma zamanının ölçeğini ölçeklendirir. Linux tabanlı işlevlerde, ana bilgisayar kapsayıcılardan yararlanır.
 
-![Azure İşlevler mimarisi](./media/azure-functions-architecture.png)
+![Azure Işlevleri mimarisi](./media/azure-functions-architecture.png)
 
-Webİşler Core işlev için bir yürütme bağlamı sağlar. Dil Çalışma Zamanı komut dosyalarını çalıştırıyor, kitaplıkları yürütür ve hedef dilin çerçevesini barındırıyor. Örneğin, Node.js JavaScript işlevlerini çalıştırmak için kullanılır ve .NET Framework C# işlevlerini çalıştırmak için kullanılır. Bu bölümde dil ve platform seçenekleri hakkında daha fazla bilgi edineceksiniz.
+WebJobs Core, işlev için bir yürütme bağlamı sağlar. Dil çalışma zamanı betikleri çalıştırır, kitaplıkları yürütür ve hedef dilin çerçevesini barındırır. Örneğin, Node.js JavaScript işlevlerini çalıştırmak için kullanılır ve .NET Framework C# işlevlerini çalıştırmak için kullanılır. Bu bölümde daha sonra dil ve platform seçenekleri hakkında daha fazla bilgi edineceksiniz.
 
-Bazı projeler sunucusuz bir "all-in" yaklaşımı alarak yararlanabilir. Mikro hizmetlere büyük ölçüde dayanan uygulamalar, sunucusuz teknolojiyi kullanarak tüm mikro hizmetleri uygulayabilir. Bileşenler modüler ve bağımsız ölçeklenebilir olduğundan, uygulamaların çoğu n katmanlı bir tasarımı takip ederek ve anlamlı bileşenler için sunucusuz kullanarak karmadır. Bu senaryoları anlamlandırmaya yardımcı olmak için, bu bölüm sunucusuz kullanan bazı ortak mimari örnekleri arasında yürür.
+Bazı projeler, sunucusuz 'e "hepsini bir" yaklaşımı alma avantajına sahip olabilir. Mikro hizmetleri yoğun bir şekilde kullanan uygulamalar, sunucusuz teknoloji kullanan tüm mikro hizmetleri uygulayabilir. Uygulamaların çoğunluğu bir N katmanlı tasarımı izleyerek ve bileşenler modüler ve bağımsız olarak ölçeklendirilebilir olduğundan anlamlı bileşenler için sunucusuz kullanılarak karma hale getirir. Bu senaryolar hakkında fikir sahibi olmak için, bu bölümde sunucusuz kullanan bazı yaygın mimari örnekleri gösterilmektedir.
 
 ## <a name="full-serverless-back-end"></a>Tam sunucusuz arka uç
 
-Tam sunucusuz arka uç, özellikle yeni veya "yeşil alan" uygulamaları inşa ederken, çeşitli senaryo türleri için idealdir. API'lerin geniş bir yüzey alanına sahip bir uygulama, her API'nin sunucusuz bir işlev olarak uygulanmasından yararlanabilir. Mikro hizmetler mimarisine dayanan uygulamalar, tam sunucusuz arka uç olarak uygulanabilecek başka bir örnektir. Mikro hizmetler birbirleriyle çeşitli protokoller üzerinden iletişim kurarlar. Belirli senaryolar şunlardır:
+Tam sunucusuz arka ucu, özellikle yeni veya "yeşil alan" uygulamaları oluştururken çeşitli türlerde senaryolar için idealdir. API 'lerin büyük bir yüzey alanına sahip bir uygulama, her API 'YI sunucusuz bir işlev olarak uygulamalarından yararlanabilir. Mikro hizmet mimarisini temel alan uygulamalar, tam sunucusuz arka uç olarak uygulanabilecek başka bir örnektir. Mikro hizmetler birbirleriyle çeşitli protokoller üzerinden iletişim kurar. Belirli senaryolar şunlardır:
 
-- API tabanlı SaaS ürünleri (örnek: finansal ödemeler işlemci).
-- İleti odaklı uygulamalar (örnek: aygıt izleme çözümü).
-- Uygulamalar hizmetler arasındaki entegrasyona odaklanmıştır (örneğin: havayolu rezervasyon uygulaması).
-- Düzenli olarak çalışan işlemler (örnek: zamanlayıcı tabanlı veritabanı temizleme).
-- Uygulamalar veri dönüşümüne odaklanmıştır (örnek: dosya yükleme tarafından tetiklenen içe aktarma).
-- Dönüştürme ve Yükleme (ETL) işlemlerini ayıklayın.
+- API tabanlı SaaS ürünleri (örnek: finansal ödemeler işlemcisi).
+- İleti temelli uygulamalar (örnek: cihaz izleme çözümü).
+- Hizmetler arasındaki tümleştirmeye odaklanan uygulamalar (örnek: hava yolu kayıt uygulaması).
+- Düzenli aralıklarla çalışan süreçler (örnek: Zamanlayıcı tabanlı veritabanı temizleme).
+- Veri dönüşümüne odaklanan uygulamalar (örnek: içeri aktarma işlemi dosya yükleme tarafından tetiklendi).
+- Dönüştürme ve yükleme (ETL) süreçlerini ayıklayın.
 
-Bu belgede daha sonra kapsanan başka, daha özel kullanım örnekleri vardır.
+Bu belgede daha sonra ele alınan başka, daha belirgin kullanım durumları vardır.
 
-## <a name="monoliths-and-starving-the-beast"></a>Monolitler ve "canavarı açlıktan ölmek"
+## <a name="monoliths-and-starving-the-beast"></a>Tek tek altı ve "Beast 'yi kanıtlama"
 
-Yaygın bir sorun buluta mevcut bir monolitik uygulama geçiştir. En az riskli yaklaşım tamamen sanal makineler üzerine "asansör ve kaydırma" etmektir. Birçok mağaza kendi kod tabanını modernize etmek için bir fırsat olarak göç kullanmayı tercih. Göçe pratik bir yaklaşıma "canavarı aç bırakması" denir. Bu senaryoda, monolit ile başlamak için "olduğu gibi" geçirilir. Ardından, seçilen hizmetler modernize edilir. Bazı durumlarda, hizmetin imzası orijinalle aynıdır: yalnızca bir işlev olarak barındırılır. İstemciler, monolit bitiş noktası yerine yeni hizmeti kullanacak şekilde güncelleştirilir. Bu arada, veritabanı çoğaltma gibi adımlar, hareketler monolit tarafından hala işlenirken bile mikro hizmetlerin kendi depolama alanını barındırmasını sağlar. Sonunda, tüm istemciler yeni hizmetlere geçirilir. Monolit, tüm işlevler değiştirilene kadar "aç" (hizmetleri artık çağrılmamaktadır). Sunucusuz ve yakınlıkların birleşimi bu geçişin çoğunu kolaylaştırabilir.
+Yaygın bir sınama, mevcut bir tek parçalı uygulamayı buluta geçirmektir. En az riskli yaklaşım, tamamen sanal makinelere "yükseltme ve kaydırma" kullanmaktır. Birçok yükseltme, kendi kod tabanlarını modernleştirin için bir fırsat olarak geçişi kullanmayı tercih eder. Geçişe pratik bir yaklaşım, "Beast 'yi kanıtlama" olarak adlandırılır. Bu senaryoda, mimariden "olduğu gibi", ile başlamak için geçirilir. Ardından, seçilen hizmetler modernlanmış. Bazı durumlarda hizmetin imzası orijinaliyle aynıdır: yalnızca bir işlev olarak barındırılır. İstemciler, tek bir uç nokta yerine yeni hizmeti kullanacak şekilde güncelleştirilir. Geçici olarak, veritabanı çoğaltma gibi adımlar, mikro hizmetleri, işlemler hala tek bir işlem tarafından işlense bile kendi depolama alanını barındırmak üzere etkinleştirir. Sonuç olarak, tüm istemciler yeni hizmetlere geçirilir. Tek tek, tüm işlevler değiştirilene kadar "başlatılıyor" (hizmetleri artık çağrılmayacaktır). Sunucusuz ve proxy 'ler birleşimi, bu geçişin çoğunu kolaylaştırabilir.
 
-![Sunucusuz monolit geçişi](./media/serverless-monolith-migration.png)
+![Sunucusuz mimariden geçişi](./media/serverless-monolith-migration.png)
 
-Bu yaklaşım hakkında daha fazla bilgi edinmek için videoyu izleyin: [Sunucusuz Azure Fonksiyonları ile uygulamanızı buluta getirin.](https://channel9.msdn.com/Events/Connect/2017/E102)
+Bu yaklaşım hakkında daha fazla bilgi edinmek için videoyu izleyin: [sunucusuz Azure işlevleri ile Uygulamanızı buluta taşıyın](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>Web uygulamaları
 
-Web uygulamaları sunucusuz uygulamalar için harika adaylardır. Bugün web uygulamalarına iki yaygın yaklaşım vardır: sunucu odaklı ve istemci odaklı (Tek Sayfa uygulaması veya SPA gibi). Sunucu tarafından yönlendirilen web uygulamaları genellikle web Web Ara Birimi'ni işlemek için API çağrıları vermek için bir ara yazılım katmanı kullanır. SPA uygulamaları REST API aramalarını doğrudan tarayıcıdan yapar. Her iki senaryoda da, sunucusuz, gerekli iş mantığını sağlayarak ara yazılım veya REST API isteğini barındırabilir. Ortak bir mimari hafif statik web sunucusu ayağa kalkmaktır. Tek Sayfa Uygulaması (SPA) HTML, CSS, JavaScript ve diğer tarayıcı varlıklarına hizmet vermektedir. Web uygulaması daha sonra bir microservices arka uç bağlanır.
+Web Apps, sunucusuz uygulamalar için harika adaylardır. Günümüzde Web Apps 'e yönelik iki yaygın yaklaşım vardır: sunucu odaklı ve istemci odaklı (tek sayfalı uygulama veya SPA gibi). Sunucu tabanlı Web uygulamaları, genellikle Web Kullanıcı arabirimini işlemek için API çağrıları yayınlamak üzere bir ara yazılım katmanı kullanır. SPA uygulamaları doğrudan tarayıcıdan REST API çağrısı yapar. Her iki senaryoda da sunucusuz, gerekli iş mantığını sağlayarak ara yazılım veya REST API isteğine uyum sağlayabilir. Yaygın bir mimari, hafif bir statik Web sunucusu kurmak için kullanılır. Tek sayfalı uygulama (SPA), HTML, CSS, JavaScript ve diğer tarayıcı varlıklarını sunar. Web uygulaması daha sonra mikro hizmetler arka ucuna bağlanır.
 
 ## <a name="mobile-back-ends"></a>Mobil arka uçlar
 
-Sunucusuz uygulamaların olay odaklı paradigması, mobil arka uçlar olarak onları ideal hale getirir. Mobil aygıt olayları tetikler ve sunucusuz kod isteklerini karşılamak için yürütür. Sunucusuz bir modelden yararlanmak, geliştiricilerin tam bir uygulama güncelleştirmesi dağıtmak zorunda kalmadan iş mantığını geliştirmelerine olanak tanır. Sunucusuz yaklaşım, ekiplerin uç noktaları paylaşmasına ve paralel olarak çalışmasını da sağlar.
+Sunucusuz uygulamaların olay odaklı paradigması, bunları mobil arka uçlar olarak ideal hale getirir. Mobil cihaz olayları tetikler ve istekleri karşılamak için sunucusuz kod yürütülür. Sunucusuz bir modelden yararlanmak, geliştiricilerin tam bir uygulama güncelleştirmesi dağıtmak zorunda kalmadan iş mantığını geliştirmesini sağlar. Sunucusuz yaklaşım ayrıca ekiplerin uç noktaları paylaşmasını ve paralel olarak çalışmasını sağlar.
 
-Mobil geliştiriciler, sunucu tarafında uzman olmadan iş mantığı oluşturabilir. Geleneksel olarak, şirket içi hizmetlere bağlı mobil uygulamalar. Hizmet katmanının oluşturulması, sunucu platformunun ve programlama paradigmasının anlaşılmasını gerektiriyor. Geliştiriciler, sunucuları sağlamak ve uygun şekilde yapılandırmak için işlemlerle birlikte çalıştı. Bazen günler hatta haftalar dağıtım boru hattı oluşturmak için harcanır. Tüm bu sorunlar sunucusuz tarafından ele alınır.
+Mobil geliştiriciler sunucu tarafında uzman olmadan iş mantığı oluşturabilir. Geleneksel olarak, şirket içi hizmetlere bağlanan mobil uygulamalar. Sunucu platformunu ve programlama paradigmasını anlamak için gereken hizmet katmanını oluşturma. Geliştiriciler, sunucuları sağlamak ve bunları uygun şekilde yapılandırmak için işlemlerle çalıştık. Bazen bir dağıtım işlem hattı oluşturmak için günler veya hatta haftalar harcanmıştı. Bu güçlüklerin hepsi sunucusuz tarafından ele alınır.
 
-Sunucusuz, sunucu tarafındaki bağımlılıkları soyutlar ve geliştiricinin iş mantığına odaklanmasını sağlar. Örneğin, JavaScript çerçevesi kullanarak uygulama oluşturan bir mobil geliştirici, JavaScript ile de sunucusuz işlevler oluşturabilir. Sunucusuz ana bilgisayar, kodu, paket bağımlılıklarını ve daha fazlasını barındırmak için işletim sistemini, bir Düğüm.js örneğini yönetir. Geliştiriciye basit bir girdi kümesi ve çıktılar için standart bir şablon sağlanır. Daha sonra iş mantığını oluşturmaya ve sınaya odaklanabilirler. Bu nedenle, yeni platformlar öğrenmek veya "sunucu tarafı geliştiricisi" olmak zorunda kalmadan mobil uygulama için arka uç mantığını oluşturmak için mevcut becerileri kullanabilirler.
+Sunucu tarafı bağımlılıklarını sunucusuz soyutlar ve geliştiricinin iş mantığına odaklanmalarını sağlar. Örneğin, JavaScript çerçevesini kullanarak uygulamalar oluşturan bir mobil geliştirici, JavaScript ile sunucusuz işlevler de oluşturabilir. Sunucusuz ana bilgisayar işletim sistemini, kodu barındırmak için bir Node.js örneğini, paket bağımlılıklarını ve daha fazlasını yönetir. Geliştirici basit bir giriş kümesi ve çıktılar için standart bir şablon sağlamıştır. Daha sonra iş mantığını oluşturmaya ve test etmeye odaklanabilirler. Bu nedenle, yeni platformları öğrenmeniz veya "sunucu tarafı geliştiricisi" olması gerekmeden mobil uygulama için arka uç mantığı oluşturmak üzere mevcut becerileri kullanabiliyor.
 
 ![Sunucusuz mobil arka uç](./media/serverless-mobile-backend.png)
 
-Çoğu bulut sağlayıcısı, tüm mobil geliştirme yaşam döngüsünü basitleştiren mobil tabanlı sunucusuz ürünler sunar. Ürünler, verileri sürdürmek, DevOps endişelerini işlemek, bulut tabanlı yapılar ve test çerçeveleri sağlamak ve geliştiricinin tercih ettiği dili kullanarak iş süreçlerini komut dosyası na sahip olmak için veritabanlarının sağlanmasını otomatikleştirebilir. Mobil merkezli sunucusuz bir yaklaşım izleyerek işlemi kolaylaştırabilir. Serverless, mobil arka uç için sunucusağlama, yapılandırma ve bakım muazzam yükü kaldırır.
+Çoğu bulut sağlayıcısı, mobil geliştirme yaşam döngüsünün tamamını basitleştiren mobil tabanlı sunucusuz ürünler sunar. Ürünler, verileri kalıcı hale getirmek, DevOps sorunlarını işlemek, bulut tabanlı derlemeler ve test çerçeveleri sağlamak ve geliştiricinin tercih ettiği dili kullanarak iş süreçlerine komut dosyası vermek için veritabanlarının sağlanması işlemini otomatikleştirebilir. Mobil merkezli sunucusuz bir yaklaşımdan sonra işlem kolaylaştırılmasına devam edebilirsiniz. Sunucusuz, mobil arka uç için sunucuların sağlanması, yapılandırılması ve sürdürülmesi için inanılmaz yükü ortadan kaldırır.
 
 ## <a name="internet-of-things-iot"></a>Nesnelerin İnterneti (IoT)
 
-IoT, birbirine ağa sahip fiziksel nesneleri ifade eder. Bunlar bazen "bağlı aygıtlar" veya "akıllı aygıtlar" olarak adlandırılır. Arabalar ve otomatlar arasında her şey bağlanabilir ve envanterden sıcaklık ve nem gibi sensör verilerine kadar çeşitli bilgiler gönderebilir. İşletmede, IoT izleme ve otomasyon yoluyla iş süreci iyileştirmeleri sağlar. IoT verileri, büyük bir depodaki iklimi düzenlemek veya tedarik zinciri aracılığıyla envanteri izlemek için kullanılabilir. IoT kimyasal sızıntıları algılayabilir ve duman tespit edildiğinde itfaiyeyi arayabilir.
+IoT, birbirine bağlı fiziksel nesneleri ifade eder. Bunlar bazen "bağlı cihazlar" veya "akıllı cihazlar" olarak anırlar. Araba ve havalandırma makinelerinden her şey bağlı olabilir ve stoktan sıcaklık ve nem gibi algılayıcı verilerine kadar bilgi gönderebilir. , IoT, izleme ve otomasyon aracılığıyla iş süreci iyileştirmeleri sağlar. IoT verileri, büyük bir ambardaki kliizini düzenlemek ya da tedarik zinciri aracılığıyla envanteri izlemek için kullanılabilir. IoT, her ne kadar yasal sıvı duygusu ve duman algılandığında yangın departmanı çağırabilirler.
 
-Aygıtların ve bilgilerin hacmi genellikle iletileri yönlendirmek ve işlemek için olay odaklı bir mimari belirler. Serverless çeşitli nedenlerle ideal bir çözümdür:
+Cihazların ve bilgilerin yerleşik hacmi genellikle iletileri yönlendirmek ve işlemek için olay odaklı bir mimariyi belirler. Sunucusuz, çeşitli nedenlerle ideal bir çözümdür:
 
-- Aygıtların ve verilerin hacmi arttıkça ölçeklendirmesağlar.
-- Yeni aygıtları ve sensörleri desteklemek için yeni uç noktaları eklemeyi barındırır.
-- Bağımsız sürüm, geliştiricilerin tüm sistemi dağıtmak zorunda kalmadan belirli bir aygıtın iş mantığını güncelleştirebilmeleri için kolaylaştırır.
-- Esneklik ve daha az kapalı kalma süresi.
+- Cihazların ve verilerin hacmi arttıkça ölçeklendirmeyi izin vermez.
+- Yeni cihazları ve algılayıcıları desteklemek için yeni uç noktalar eklemeye uyum sağlar.
+- Geliştiricilerin sistemin tamamını dağıtmaya gerek kalmadan belirli bir cihaz için iş mantığını güncelleştirebilmesi için bağımsız sürüm oluşturmayı kolaylaştırır.
+- Dayanıklılık ve daha az kapalı kalma süresi.
 
-IoT'nin yaygınlığı, Azure [IoT Hub](https://docs.microsoft.com/azure/iot-hub)gibi özellikle IoT endişelerine odaklanan birçok sunucusuz ürünle sonuçlanmıştır. Sunucusuz, aygıt kaydı, ilke zorlama, izleme ve hatta kodun *kenardaki*aygıtlara dağıtılması gibi görevleri otomatikleştirir. Kenar, Internet'e bağlı olan ancak etkin olmayan sensörler ve aktüatörler gibi aygıtları ifade eder.
+IoT 'nin kullanılabilirliği, [Azure IoT Hub](/azure/iot-hub)gibi IoT kaygılarıyla ilgili olarak çok sayıda sunucusuz ürüne neden oldu. Sunucusuz, cihaz kaydı, ilke zorlama, izleme ve hatta kodun *kenarda*cihazlara dağıtılması gibi görevleri otomatikleştirir. Sınır, Internet 'e bağlı ancak etkin bir parçası değil, algılayıcı ve erişim gibi cihazlara başvurur.
 
 >[!div class="step-by-step"]
->[Önceki](architecture-approaches.md)
->[Sonraki](serverless-architecture-considerations.md)
+>[Önceki](architecture-approaches.md) 
+> [Sonraki](serverless-architecture-considerations.md)

@@ -1,36 +1,36 @@
 ---
 title: Bulutta CI/CD işlem hatları ve DevOps araçları ile uygulama yaşam döngüsünü modernleştirme
-description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | Buluttaki CI/CD boru hatları ve DevOps araçlarıyla uygulamanızın yaşam döngüsünü modernize edin
+description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Bulutta CI/CD işlem hatları ve DevOps araçları ile uygulamanızın yaşam döngüsünü modernleştirin
 ms.date: 04/30/2018
-ms.openlocfilehash: afb7bae7780a766329ca604d192b2d7353e32bf5
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 98ebd29b8ab81c8fff6da546942825133f06f4de
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739168"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172059"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Bulutta CI/CD işlem hatları ve DevOps araçları ile uygulama yaşam döngüsünü modernleştirme
 
-Günümüzün işletmeleri pazarda rekabetçi olmak için hızlı bir hızda yenilik yapmak gerekir. Yüksek kaliteli, modern uygulamalar sunmak, bu sürekli yenilik döngüsünü uygulamak için kritik öneme sahip DevOps araçları ve süreçleri gerektirir. Doğru DevOps araçlarıyla, geliştiriciler sürekli dağıtımı düzene sokabilir ve yenilikçi uygulamaları kullanıcıların eline daha hızlı bir şekilde aktarabilir.
+Günümüzde işletmelerin Market 'te rekabet etmek için hızlı bir hızla yenilik yapın gerekir. Yüksek kaliteli, modern uygulamalar sunma, bu sabit yenilik döngüsünü uygulamak için kritik olan DevOps araçları ve işlemleri gerektirir. Geliştiriciler doğru DevOps araçlarıyla sürekli dağıtımı kolaylaştırabilir ve yenilikçi uygulamaları kullanıcılara daha hızlı bir şekilde alabilir.
 
-Sürekli tümleştirme ve dağıtım uygulamaları iyi kurulmuş olsa da, kapsayıcıların başlatılması, özellikle çok kapsayıcılı uygulamalarla çalışırken yeni hususlar sunar.
+Sürekli tümleştirme ve dağıtım uygulamaları iyi şekilde kurulabilse de, kapsayıcıların tanıtımı özellikle çok Kapsayıcılı uygulamalarla çalışırken yeni hususlar sağlar.
 
-Azure DevOps Hizmetleri, resmi Azure DevOps Hizmetleri dağıtım görevleri aracılığıyla çoklu kapsayıcı uygulamalarının çeşitli ortamlara sürekli entegrasyonunu ve dağıtımını destekler:
+Azure DevOps Services, çok Kapsayıcılı uygulamaların, resmi Azure DevOps Services dağıtım görevleri aracılığıyla çeşitli ortamlara sürekli tümleştirmeyi ve dağıtılmasını destekler:
 
-- [Kapsayıcılar için Bir Azure Web Uygulamasına dağıtma](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-docker-webapp?tabs=dotnet-core)
+- [Azure Kapsayıcılar için Web App dağıtma](/azure/devops/pipelines/apps/cd/deploy-docker-webapp?tabs=dotnet-core)
 
-- [Azure Kubernetes Service’e dağıtma](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
+- [Azure Kubernetes Service’e dağıtma](/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
 
-Ancak Azure DevOps Hizmetleri komut dosyası tabanlı görevleri kullanarak [Docker Swarm](https://blog.jcorioland.io/archives/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services.html) veya DC/OS'ye de dağıtabilirsiniz.
+Ancak, komut dosyası tabanlı görevleri Azure DevOps Services kullanarak [Docker Sısınma](https://blog.jcorioland.io/archives/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services.html) veya DC/OS 'a da dağıtabilirsiniz.
 
-Dağıtım çevikliğini kolaylaştırmaya devam etmek için bu araçlar, geliştirme ve CI/CD çözümleri seçenekleriyle konteyner iş yükleri için mükemmel geliştirme-test-üretim dağıtım deneyimleri sağlar.
+Dağıtım çevikliğini kolaylaştırmaya devam etmek için bu araçlar, bir geliştirme ve CI/CD çözümleri seçimiyle kapsayıcı iş yükleri için mükemmel geliştirme ve test aşamasına dağıtım deneyimleri sağlar.
 
-Şekil 4-12, Azure Kapsayıcı Hizmeti'nde bir Kubernetes kümesine dağıtılan sürekli bir dağıtım ardışık hattını gösterir.
+Şekil 4-12 Azure Container Service bir Kubernetes kümesine dağıtan bir sürekli dağıtım işlem hattı gösterir.
 
-![Bir Kubernetes kümesine dağıtılatan Azure DevOps Hizmetlerinin ekran görüntüsü.](./media/life-cycle-ci-cd-pipelines-devops-tools/deploy-mvc-app-container-kubernetes.png)
+![Bir Kubernetes kümesine dağıtmanın Azure DevOps Services ekran görüntüsü.](./media/life-cycle-ci-cd-pipelines-devops-tools/deploy-mvc-app-container-kubernetes.png)
 
-**Şekil 4-12.** Azure DevOps Hizmetleri sürekli dağıtım boru hattı, bir Kubernetes kümesine dağıtım
+**Şekil 4-12.** Azure DevOps Services sürekli dağıtım işlem hattı, bir Kubernetes kümesine dağıtma
 
 >[!div class="step-by-step"]
->[Önceki](modernize-your-apps-with-monitoring-and-telemetry.md)
->[Sonraki](migrate-to-hybrid-cloud-scenarios.md)
+>[Önceki](modernize-your-apps-with-monitoring-and-telemetry.md) 
+> [Sonraki](migrate-to-hybrid-cloud-scenarios.md)

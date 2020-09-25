@@ -4,12 +4,12 @@ description: Azure Event Grid, güvenilir olay teslimi için sunucusuz bir çöz
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 408e1b9cd1b1e5316c7c6a17bb1b0c76a38f9e11
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 30937bafd8069eb4508dce18351964103421373a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135717"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171890"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -31,7 +31,7 @@ Event Grid birkaç farklı senaryoya yöneliktir. Bu bölümde en yaygın olanla
 
 ![İşlem otomasyonu](./media/ops-automation.png)
 
-Event Grid, altyapı sağlandığında [Azure Otomasyonu](https://docs.microsoft.com/azure/automation) bilgilendirerek Otomasyon ve ilke zorlamayı basitleştirmeye yardımcı olabilir.
+Event Grid, altyapı sağlandığında [Azure Otomasyonu](/azure/automation) bilgilendirerek Otomasyon ve ilke zorlamayı basitleştirmeye yardımcı olabilir.
 
 ### <a name="application-integration"></a>Uygulama tümleştirme
 
@@ -47,11 +47,11 @@ Event Grid, Azure Işlevlerini, Logic Apps veya kendi özel kodunuzu tetikleyebi
 
 ## <a name="event-grid-vs-other-azure-messaging-services"></a>Event Grid ve diğer Azure mesajlaşma hizmetleri karşılaştırması
 
-Azure, [Event Hubs](https://docs.microsoft.com/azure/event-hubs) ve [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)dahil olmak üzere birkaç mesajlaşma hizmeti sağlar. Her biri belirli bir kullanım durumları kümesini ele almak için tasarlanmıştır. Aşağıdaki diyagramda hizmetler arasındaki farklılıklara ilişkin üst düzey bir genel bakış sunulmaktadır.
+Azure, [Event Hubs](/azure/event-hubs) ve [Service Bus](/azure/service-bus-messaging)dahil olmak üzere birkaç mesajlaşma hizmeti sağlar. Her biri belirli bir kullanım durumları kümesini ele almak için tasarlanmıştır. Aşağıdaki diyagramda hizmetler arasındaki farklılıklara ilişkin üst düzey bir genel bakış sunulmaktadır.
 
 ![Azure mesajlaşma karşılaştırması](./media/azure-messaging-services.png)
 
-Daha ayrıntılı bir karşılaştırma için bkz. [mesajlaşma hizmetlerini karşılaştırma](https://docs.microsoft.com/azure/event-grid/compare-messaging-services).
+Daha ayrıntılı bir karşılaştırma için bkz. [mesajlaşma hizmetlerini karşılaştırma](/azure/event-grid/compare-messaging-services).
 
 ## <a name="performance-targets"></a>Performans hedefleri
 
@@ -84,7 +84,7 @@ Event Grid, özel olayları kaydırmak için standart bir şema kullanır. Şema
 }]
 ```
 
-İletiyle ilgili her şey, `data` Özellik haricinde standarttır. İletiyi inceleyebilir ve öğesini kullanarak `eventType` `dataVersion` yükün özel kısmını seri durumdan çıkarılamıyor.
+İletiyle ilgili her şey, özellik haricinde standarttır `data` . İletiyi inceleyebilir ve öğesini kullanarak `eventType` `dataVersion` yükün özel kısmını seri durumdan çıkarılamıyor.
 
 ## <a name="azure-resources"></a>Azure kaynakları
 
@@ -101,8 +101,8 @@ Event Grid kullanmanın önemli bir avantajı, Azure tarafından üretilen otoma
 | Blob depolama | Microsoft. Storage. Bloboluşturuldu | Bir blob oluşturulduğunda tetiklenir. |
 | | Microsoft. Storage. BlobDeleted | Blob silindiğinde tetiklenir. |
 | Event Hubs | Microsoft. EventHub. CaptureFileCreated | Bir yakalama dosyası oluşturulduğunda tetiklenir.
-| IoT Hub | Microsoft. Devices. DeviceCreated | Bir cihaz IoT Hub 'ına kaydedildiğinde yayımlandı. |
-| | Microsoft. Devices. DeviceDeleted | IoT Hub 'ından bir cihaz silindiğinde yayımlandı. |
+| IoT Hub | Microsoft.Devices.DeviceCreated | Bir cihaz IoT Hub 'ına kaydedildiğinde yayımlandı. |
+| | Microsoft.Devices.DeviceDeleted | IoT Hub 'ından bir cihaz silindiğinde yayımlandı. |
 | Kaynak grupları | Microsoft. resources. ResourceWriteSuccess | Kaynak oluşturma veya güncelleştirme işlemi başarılı olduğunda tetiklenir. |
 | | Microsoft. resources. ResourceWriteFailure | Kaynak oluşturma veya güncelleştirme işlemi başarısız olduğunda tetiklenir. |
 | | Microsoft. resources. ResourceWriteCancel | Kaynak oluşturma veya güncelleştirme işlemi iptal edildiğinde tetiklenir. |
@@ -110,35 +110,35 @@ Event Grid kullanmanın önemli bir avantajı, Azure tarafından üretilen otoma
 | | Microsoft. resources. ResourceDeleteFailure | Kaynak silme işlemi başarısız olduğunda tetiklenir. |
 | | Microsoft. resources. ResourceDeleteCancel | Bir kaynak silme işlemi iptal edildiğinde tetiklenir. Bu olay, bir şablon dağıtımı iptal edildiğinde oluşur. |
 
-Daha fazla bilgi için bkz. [Azure Event Grid olay şeması](https://docs.microsoft.com/azure/event-grid/event-schema).
+Daha fazla bilgi için bkz. [Azure Event Grid olay şeması](/azure/event-grid/event-schema).
 
 Şirket içinde çalışan bir tür uygulamadan Event Grid erişebilirsiniz.
 
 ## <a name="conclusion"></a>Sonuç
 
-Bu bölümde, Azure Işlevleri, Logic Apps ve Event Grid oluşan Azure sunucusuz platformu hakkında bilgi edindiniz. Bu kaynakları tamamen sunucusuz bir uygulama mimarisi oluşturmak veya diğer bulut kaynaklarıyla ve şirket içi sunucularla etkileşim kuran bir karma çözüm oluşturmak için kullanabilirsiniz. [Azure SQL](https://docs.microsoft.com/azure/sql-database) veya [cosmosdb](https://docs.microsoft.com/azure/cosmos-db/introduction)gibi sunucusuz bir veri platformu ile birlikte kullanıldığında tamamen yönetilen bulut Yerel uygulamaları oluşturabilirsiniz.
+Bu bölümde, Azure Işlevleri, Logic Apps ve Event Grid oluşan Azure sunucusuz platformu hakkında bilgi edindiniz. Bu kaynakları tamamen sunucusuz bir uygulama mimarisi oluşturmak veya diğer bulut kaynaklarıyla ve şirket içi sunucularla etkileşim kuran bir karma çözüm oluşturmak için kullanabilirsiniz. [Azure SQL](/azure/sql-database) veya [cosmosdb](/azure/cosmos-db/introduction)gibi sunucusuz bir veri platformu ile birlikte kullanıldığında tamamen yönetilen bulut Yerel uygulamaları oluşturabilirsiniz.
 
 ## <a name="recommended-resources"></a>Önerilen Kaynaklar
 
-- [App Service planları](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
-- [Uygulama Bilgileri](https://docs.microsoft.com/azure/application-insights)
-- [Application Insights Analizi](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
+- [App Service planları](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
+- [Uygulama Bilgileri](/azure/application-insights)
+- [Application Insights Analizi](/azure/application-insights/app-insights-analytics)
 - [Azure: sunucusuz Azure Işlevleri ile Uygulamanızı buluta taşıyın](https://channel9.msdn.com/events/Connect/2017/E102)
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure Event Grid olay şeması](https://docs.microsoft.com/azure/event-grid/event-schema)
-- [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
-- [Azure İşlevleri belgeleri](https://docs.microsoft.com/azure/azure-functions)
-- [Azure Işlevleri Tetikleyicileri ve bağlamaları kavramları](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
-- [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
-- [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-- [Azure Şirket İçi Veri Ağ Geçidi ile şirket içi veri kaynaklarına bağlanma](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
-- [Azure portalında ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
-- [Azure CLI kullanarak ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
-- [Visual Studio kullanarak ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
-- [İşlevlerin desteklediği diller](https://docs.microsoft.com/azure/azure-functions/supported-languages)
-- [Azure İşlevlerini İzleme](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+- [Azure Event Grid](/azure/event-grid/overview)
+- [Azure Event Grid olay şeması](/azure/event-grid/event-schema)
+- [Azure Event Hubs](/azure/event-hubs)
+- [Azure İşlevleri belgeleri](/azure/azure-functions)
+- [Azure İşlevleri tetikleyicileri ve bağlama kavramları](/azure/azure-functions/functions-triggers-bindings)
+- [Azure Logic Apps](/azure/logic-apps)
+- [Azure Service Bus](/azure/service-bus-messaging)
+- [Azure Table Storage](/azure/cosmos-db/table-storage-overview)
+- [Azure Şirket İçi Veri Ağ Geçidi ile şirket içi veri kaynaklarına bağlanma](/azure/analysis-services/analysis-services-gateway)
+- [Azure portalında ilk işlevinizi oluşturma](/azure/azure-functions/functions-create-first-azure-function)
+- [Azure CLI kullanarak ilk işlevinizi oluşturma](/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+- [Visual Studio kullanarak ilk işlevinizi oluşturma](/azure/azure-functions/functions-create-your-first-function-visual-studio)
+- [İşlevlerin desteklediği diller](/azure/azure-functions/supported-languages)
+- [Azure İşlevlerini İzleme](/azure/azure-functions/functions-monitoring)
 
 >[!div class="step-by-step"]
->[Önceki](logic-apps.md)
->[İleri](durable-azure-functions.md)
+>[Önceki](logic-apps.md) 
+> [Sonraki](durable-azure-functions.md)
