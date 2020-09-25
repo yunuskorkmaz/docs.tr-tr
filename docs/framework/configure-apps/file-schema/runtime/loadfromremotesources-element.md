@@ -5,14 +5,15 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: 48da852bd1e209aed5ed5e75d8e510027a96d6d7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 568c0c814dcc57be0f5be435bb7750c970ffec19
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558015"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192457"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources> öğesi
+
 .NET Framework 4 ve üzeri sürümlerde uzak kaynaklardan yüklenen derlemelerin tam güven verilip verilmeyeceğini belirtir.
   
 > [!NOTE]
@@ -30,6 +31,7 @@ ms.locfileid: "90558015"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -46,6 +48,7 @@ ms.locfileid: "90558015"
 |`true`|Uzak kaynaklardaki uygulamalara tam güven verme.|  
   
 ### <a name="child-elements"></a>Alt öğeleri  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst öğeler  

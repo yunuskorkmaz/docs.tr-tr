@@ -6,21 +6,22 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 94c21e0408b7616bf0c8a24267b72bfa7cc3aaa0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 14480682c5d221216df5da3844897855d1d92a0d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153990"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192431"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache> Öğesi (Önbellek Ayarları)
+
 Sınıfına dayalı bir önbelleği yapılandırmak için kullanılan bir öğesi tanımlar <xref:System.Runtime.Caching.MemoryCache> . <xref:System.Runtime.Caching.Configuration.MemoryCacheElement>Sınıfı, önbelleği yapılandırmak için kullanabileceğiniz bir [MemoryCache](memorycache-element-cache-settings.md) öğesi tanımlar. Sınıfın birden çok örneği <xref:System.Runtime.Caching.MemoryCache> tek bir uygulamada kullanılabilir. `memoryCache`Yapılandırma dosyasındaki her öğe, adlandırılmış bir örnek için ayarları içerebilir <xref:System.Runtime.Caching.MemoryCache> .  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<memoryCache>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <memoryCache>
@@ -31,9 +32,11 @@ Sınıfına dayalı bir önbelleği yapılandırmak için kullanılan bir öğes
 ```  
   
 ## <a name="type"></a>Tür  
- <xref:System.Runtime.Caching.MemoryCache>sınıfı.  
+
+ <xref:System.Runtime.Caching.MemoryCache> sınıfı.  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -59,6 +62,7 @@ Sınıfına dayalı bir önbelleği yapılandırmak için kullanılan bir öğes
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|.NET Framework yerleşik uygulamalarda çıktı önbelleği uygulamanıza olanak sağlayan türler içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  <xref:System.Runtime.Caching.MemoryCache>Sınıf, soyut sınıfın somut bir uygulamasıdır <xref:System.Runtime.Caching.ObjectCache> . Sınıf örnekleri, <xref:System.Runtime.Caching.MemoryCache> uygulama yapılandırma dosyalarından yapılandırma bilgileriyle sağlanabilir. [MemoryCache](memorycache-element-cache-settings.md) yapılandırma bölümü bir `namedCaches` yapılandırma koleksiyonu içerir.  
   
  Bellek tabanlı önbellek nesnesi başlatıldığında, önce `namedCaches` bellek önbelleği oluşturucusuna geçirilen parametresindeki adla eşleşen bir giriş bulmaya çalışır. Bir `namedCaches` giriş bulunursa, yoklama ve bellek yönetimi bilgileri yapılandırma dosyasından alınır.  
@@ -72,6 +76,7 @@ Sınıfına dayalı bir önbelleği yapılandırmak için kullanılan bir öğes
 - <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.Runtime.Caching.MemoryCache> `name` özniteliğini "default" olarak ayarlayarak nesnenin adının varsayılan önbellek nesnesi adına nasıl ayarlanacağını gösterir.  
   
  `cacheMemoryLimitMegabytes`Özniteliği ve `physicalMemoryLimitPercentage` özniteliği sıfır olarak ayarlanır. Bu özniteliklerin sıfıra ayarlanması, <xref:System.Runtime.Caching.MemoryCache> otomatik boyutlandırma buluşsal yöntemleri varsayılan olarak kullanıldığı anlamına gelir. Önbellek uygulamasının her iki dakikada bir, geçerli bellek yükünü mutlak ve yüzde tabanlı bellek sınırlarına göre karşılaştırması gerekir.  
@@ -94,5 +99,5 @@ Sınıfına dayalı bir önbelleği yapılandırmak için kullanılan bir öğes
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Caching.MemoryCache>
-- [\<system.runtime.caching>Öğesi (önbellek ayarları)](system-runtime-caching-element-cache-settings.md)
-- [\<namedCaches>Öğesi (önbellek ayarları)](namedcaches-element-cache-settings.md)
+- [\<system.runtime.caching> Öğesi (önbellek ayarları)](system-runtime-caching-element-cache-settings.md)
+- [\<namedCaches> Öğesi (önbellek ayarları)](namedcaches-element-cache-settings.md)

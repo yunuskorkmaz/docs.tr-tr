@@ -6,14 +6,15 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: e0640ca18d386141f3c03135019eb4fe959b5bf8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ad76c01bba859934be399d73262bd974309efe98
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153964"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192405"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches> Öğesi (Önbellek Ayarları)
+
 Adlandırılmış örnekler için yapılandırma ayarları koleksiyonunu belirtir <xref:System.Runtime.Caching.MemoryCache> . <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>Özelliği yapılandırma dosyasının bir veya daha fazla öğesinden yapılandırma ayarları koleksiyonuna başvurur `namedCaches` .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ Adlandırılmış örnekler için yapılandırma ayarları koleksiyonunu belirti
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<namedCaches>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <namedCaches>  
@@ -30,9 +31,11 @@ Adlandırılmış örnekler için yapılandırma ayarları koleksiyonunu belirti
 ```  
   
 ## <a name="type"></a>Tür  
+
  `None`  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -61,13 +64,15 @@ Adlandırılmış örnekler için yapılandırma ayarları koleksiyonunu belirti
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|.NET Framework yerleşik uygulamalarda çıktı önbelleği uygulamanıza olanak sağlayan türler içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Web. config dosyasının bellek önbelleği yapılandırması bölümü `add` `remove` `clear` koleksiyon için, ve özniteliklerini içerebilir `namedCaches` . Her `namedCaches` giriş, öznitelik tarafından benzersiz şekilde tanımlanır `name` .  
+
+ Web.config dosyanın bellek önbelleği yapılandırması bölümü `add` `remove` `clear` koleksiyon için, ve özniteliklerini içerebilir `namedCaches` . Her `namedCaches` giriş, öznitelik tarafından benzersiz şekilde tanımlanır `name` .  
   
  Uygulama yapılandırma dosyalarındaki bilgilere başvurarak bellek önbelleği girdilerinin örneklerini alabilirsiniz. Varsayılan olarak, yalnızca varsayılan önbellek örneğinin yapılandırma dosyasında bir girişi vardır. Varsayılan önbellek örneği özelliğinden döndürülen örneğidir <xref:System.Runtime.Caching.MemoryCache.Default%2A> .  
   
  Name özniteliğini "default" olarak ayarlarsanız, öğesi varsayılan bellek önbelleği örneğini kullanır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `name` özniteliğini "default" olarak ayarlayarak önbelleğin adının varsayılan önbellek girişi adına nasıl ayarlanacağını gösterir.  
   
  `cacheMemoryLimitMegabytes`Özniteliği ve `physicalMemoryPercentage` özniteliği sıfır olarak ayarlanır. Bu özniteliklerin sıfıra ayarlanması, sınıfının otomatik boyutlandırma buluşsal yöntemleri 'nin kullanıldığı anlamına gelir <xref:System.Runtime.Caching.MemoryCache> . Önbellek uygulamasının her iki dakikada bir mutlak ve yüzde tabanlı bellek sınırlarına göre geçerli bellek yükünü karşılaştırır.  
@@ -91,4 +96,4 @@ Adlandırılmış örnekler için yapılandırma ayarları koleksiyonunu belirti
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<memoryCache>Öğesi (önbellek ayarları)](memorycache-element-cache-settings.md)
+- [\<memoryCache> Öğesi (önbellek ayarları)](memorycache-element-cache-settings.md)

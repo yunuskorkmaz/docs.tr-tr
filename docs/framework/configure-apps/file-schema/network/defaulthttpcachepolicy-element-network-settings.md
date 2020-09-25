@@ -8,14 +8,15 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4120c57fbb65da1c124414cbe9cfba7ae64388f8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088414"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190325"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy> Öğesi (Ağ Ayarları)
+
 HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -23,7 +24,7 @@ HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe a
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<requestCaching>**](requestcaching-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultHttpCachePolicy>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <defaultHttpCachePolicy  
@@ -35,6 +36,7 @@ HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe a
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -47,6 +49,7 @@ HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe a
 |`policyLevel`|Önbelleğe alma ilkesinin otomatik olup olmadığını veya önbelleğin atlanıp atlanmayacağını belirtir. Varsayılan değer: `BypassCache`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -56,14 +59,17 @@ HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe a
 |[requestCaching](requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizmasını denetler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Özniteliği için olan değer `policyLevel` ya da olur `BypassCache` `Default` .  
   
  `maximumAge`, `maximumStale` , Ve `minimumFresh` öğelerinin değerleri *d*biçimindeki açık bir zaman aralığıdır.* SS*:*dd*:*SS* (gün, saat, dakika, saniye) veya sabitler `minValue` ya da `maxValue` uygun şekilde.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, en az altı saat, iki güne ait maksimum yaş süresi ve dört saatlik en fazla eski süreyi belirtmek için nasıl kullanılacağını gösterir.  
   
 ```xml  
@@ -85,4 +91,4 @@ HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe a
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

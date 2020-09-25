@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4f5639bf-bb7f-4982-bb1d-c7caa4348888
-ms.openlocfilehash: 7a055fc3e62821285fe2b6e1333d516c477d025b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ec1ff7cdbdc83bc409b191f0aefe2b50cbad9225
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549763"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192171"
 ---
 # <a name="how-to-execute-a-parameterized-stored-procedure-using-entitycommand"></a>Nasıl yapılır: EntityCommand Kullanarak Parametreli Saklı Yordam Yürütme
+
 Bu konu, sınıfını kullanarak parametreli saklı yordamın nasıl yürütüleceğini gösterir <xref:System.Data.EntityClient.EntityCommand> .  
   
 ### <a name="to-run-the-code-in-this-example"></a>Bu örnekteki kodu çalıştırmak için  
@@ -27,6 +28,7 @@ Bu konu, sınıfını kullanarak parametreli saklı yordamın nasıl yürütüle
 3. `GetStudentGrades`Saklı yordamı içeri aktarın ve `CourseGrade` varlık dönüş türü olarak belirtin. Saklı yordamı içeri aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir saklı yordamı Içeri aktarma](/previous-versions/dotnet/netframework-4.0/bb896231(v=vs.100)).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, `GetStudentGrades` `StudentId` gerekli bir parametre olan saklı yordamı yürütür. Sonuçlar daha sonra bir ile okunurdur <xref:System.Data.EntityClient.EntityDataReader> .  
   
  [!code-csharp[DP EntityServices Concepts#StoredProcWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#storedprocwithentitycommand)]

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 0eee325e01b41a15a19e4f40f479596f9d70f73b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b7144b0a7004ba32b21cbc98513df574a5a9e1d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153418"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195187"
 ---
 # <a name="listeners-element-for-source"></a>\<source> için \<listeners> Öğesi
+
 İçin koleksiyonuna dinleyici ekler veya kaldırır <xref:System.Diagnostics.TraceSource.Listeners%2A> <xref:System.Diagnostics.TraceSource> . Dinleyici, izleme çıkışını günlük, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -23,7 +24,7 @@ ms.locfileid: "79153418"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<source>**](source-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<listeners>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <listeners>
@@ -34,9 +35,11 @@ ms.locfileid: "79153418"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -59,9 +62,11 @@ ms.locfileid: "79153418"
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
- Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+
+ Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `<listeners>` bir konsol izleme dinleyicisini `mySource` kaynağa eklemek ve varsayılan izleme dinleyicisini kaldırmak için öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
@@ -90,5 +95,5 @@ ms.locfileid: "79153418"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Diagnostics.TraceListener>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
+- [İzleme ve hata ayıklama ayarları şeması](index.md)
 - [İz Dinleyicileri](../../../debug-trace-profile/trace-listeners.md)

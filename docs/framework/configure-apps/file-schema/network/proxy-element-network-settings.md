@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 8ae30b8c29dcf3aaa183ff295c7ee8592322797f
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 54b324dcd27d5827159bc2d773365e388a367d26
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141787"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190221"
 ---
 # <a name="proxy-element-network-settings"></a>\<proxy> Öğesi (Ağ Ayarları)
+
 Bir ara sunucu tanımlar.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ Bir ara sunucu tanımlar.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -50,6 +52,7 @@ Bir ara sunucu tanımlar.
 |`usesystemdefault`|Internet Explorer proxy ayarlarının kullanılıp kullanılmayacağını belirtir. Olarak ayarlanırsa `True` , sonraki öznitelikler Internet Explorer proxy ayarlarını geçersiz kılar. Varsayılan değer: `Unspecified`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -61,6 +64,7 @@ Bir ara sunucu tanımlar.
 ## <a name="text-value"></a>Metin Değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `proxy`Öğesi, bir uygulama için ara sunucu tanımlar. Yapılandırma dosyasında bu öğe eksikse .NET Framework, Internet Explorer 'daki proxy ayarlarını kullanacaktır.  
   
  `proxyaddress`Özniteliğin değeri iyi biçimlendirilmiş bir Tekdüzen Kaynak göstergesi (URI) olmalıdır.  
@@ -72,9 +76,11 @@ Bir ara sunucu tanımlar.
  `proxyaddress`Öznitelik geçersiz bir varsayılan proxy belirtiyorsa bir özel durum oluşur. <xref:System.Exception.InnerException%2A>Özel durum üzerindeki özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
+
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, Internet Explorer proxy 'sinin varsayılan değerlerini kullanır, proxy adresini belirtir ve yerel erişim için ara sunucuyu atlar.  
   
 ```xml  
@@ -94,4 +100,4 @@ Bir ara sunucu tanımlar.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

@@ -5,33 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: e42f48a188741c3ddff44f6444fa351192c8175f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b6f9b0308bcbf53a89ae0690ed44db0a364aef0c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793341"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191703"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Nasıl yapılır: Veritabanı Değerlerini Tutarak Çakışmaları Çözümleme
-Değişikliklerinizi yeniden göndermeye çalışmadan önce beklenen ve gerçek veritabanı değerleri arasındaki farkları mutabık kılmak için, veritabanında bulunan değerleri bekletmek için kullanabilirsiniz <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> . Nesne modelindeki geçerli değerlerin üzerine yazılır. Daha fazla bilgi için bkz [. iyimser eşzamanlılık: Genel](optimistic-concurrency-overview.md)bakış.  
+
+Değişikliklerinizi yeniden göndermeye çalışmadan önce beklenen ve gerçek veritabanı değerleri arasındaki farkları mutabık kılmak için, <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> veritabanında bulunan değerleri bekletmek için kullanabilirsiniz. Nesne modelindeki geçerli değerlerin üzerine yazılır. Daha fazla bilgi için bkz. [Iyimser eşzamanlılık: genel bakış](optimistic-concurrency-overview.md).  
   
 > [!NOTE]
 > Her durumda, istemcideki kayıt, veritabanındaki güncelleştirilmiş verileri alarak yenilenir. Bu eylem, sonraki güncelleştirme denemasının aynı eşzamanlılık denetimlerinde başarısız olmasına neden olur.  
   
 ## <a name="example"></a>Örnek  
- Bu senaryoda, Kullanıcı1 değişiklikleri <xref:System.Data.Linq.ChangeConflictException> göndermeye çalıştığında bir özel durum oluşturulur, çünkü kullanıcı2 bu arada yardımcı ve departman sütunlarını değiştirdi. Aşağıdaki tabloda durum gösterilmektedir.  
+
+ Bu senaryoda, <xref:System.Data.Linq.ChangeConflictException> kullanıcı1 değişiklikleri göndermeye çalıştığında bir özel durum oluşturulur, çünkü kullanıcı2 bu arada yardımcı ve departman sütunlarını değiştirdi. Aşağıdaki tabloda durum gösterilmektedir.  
   
-||Yöneticisi|Yardımc|Bölüm|  
+||Yönetici|Yardımc|Bölüm|  
 |------|-------------|---------------|----------------|  
-|Kullanıcı1 ve kullanıcı2 tarafından sorgulandığında özgün veritabanı durumu.|Alfrelar|Maria|Satış|  
-|Kullanıcı1 bu değişiklikleri göndermeye hazırlar.|Alfred||Pazarlama|  
+|Kullanıcı1 ve kullanıcı2 tarafından sorgulandığında özgün veritabanı durumu.|Alfrelar|Maria|Sales|  
+|Kullanıcı1 bu değişiklikleri göndermeye hazırlar.|Alfred||Marketing|  
 |Kullanıcı2 bu değişiklikleri zaten gönderdi.||Mary|Hizmet|  
   
  Kullanıcı1, daha yeni veritabanı değerlerini nesne modelindeki geçerli değerlerin üzerine yazarak bu çakışmayı çözmeye karar verir.  
   
- Kullanıcı1 kullanarak <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues>çakışmayı çözdüğünde, veritabanındaki sonuç tabloda aşağıdaki gibidir:  
+ Kullanıcı1 kullanarak çakışmayı çözdüğünde <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> , veritabanındaki sonuç tabloda aşağıdaki gibidir:  
   
-||Yöneticisi|Yardımc|Bölüm|  
+||Yönetici|Yardımc|Bölüm|  
 |------|-------------|---------------|----------------|  
 |Çakışma çözümünden sonra yeni durum.|Alfrelar<br /><br /> orijinale|Mary<br /><br /> (kullanıcı2 'ten)|Hizmet<br /><br /> (kullanıcı2 'ten)|  
   
@@ -42,4 +44,4 @@ Değişikliklerinizi yeniden göndermeye çalışmadan önce beklenen ve gerçek
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](how-to-manage-change-conflicts.md)
+- [Nasıl yapılır: Değişiklik Çakışmalarını Yönetme](how-to-manage-change-conflicts.md)

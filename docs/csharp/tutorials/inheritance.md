@@ -4,12 +4,12 @@ description: C# kitaplıkları ve uygulamalarında devralmayı kullanmayı öğr
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: b0d6a4a3db4d6606375cc3364ee7abc3029f1d9b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063516"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190468"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# ve .NET içinde devralma
 
@@ -214,9 +214,9 @@ Aşağıdaki örnek, sınıfının kaynak kodunu ve `Publication` `PublicationTy
 
 - İki yayınla ilgili özellikler
 
-  `Title`, <xref:System.String> oluşturucuyu çağırarak değeri sağlanan salt okunurdur `Publication` .
+  `Title` , <xref:System.String> oluşturucuyu çağırarak değeri sağlanan salt okunurdur `Publication` .
 
-  `Pages`, <xref:System.Int32> yayının kaç tane sayfa olduğunu gösteren bir okuma-yazma özelliğidir. Değer adlı bir özel alanda depolanır `totalPages` . Pozitif bir sayı olmalı veya bir değer oluşturulmalıdır <xref:System.ArgumentOutOfRangeException> .
+  `Pages` , <xref:System.Int32> yayının kaç tane sayfa olduğunu gösteren bir okuma-yazma özelliğidir. Değer adlı bir özel alanda depolanır `totalPages` . Pozitif bir sayı olmalı veya bir değer oluşturulmalıdır <xref:System.ArgumentOutOfRangeException> .
 
 - Yayımcının ilgili üyeleri
 
@@ -277,6 +277,7 @@ Artık bir nesnesi örneği oluşturabilir `Book` , hem benzersiz hem de devral�
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Soyut temel sınıfları ve bunların türetilmiş sınıflarını tasarlama
+
 <a name="abstract"></a>
 
 Önceki örnekte, türetilmiş sınıfların kod paylaşmasına izin veren bir dizi yöntem için uygulama sağlayan bir temel sınıf tanımladınız. Ancak çoğu durumda, temel sınıfın bir uygulama sağlaması beklenmez. Bunun yerine, temel sınıf *soyut yöntemleri*bildiren *soyut bir sınıftır* ; Her türetilmiş sınıfın uygulaması gereken üyeleri tanımlayan bir şablon görevi görür. Genellikle soyut bir temel sınıfta, her türetilmiş türün uygulanması o tür için benzersizdir. Sınıf, `Publication` yayınlar için ortak işlevsellik uygulamaları sağlasa da, bir nesnenin örneğini oluşturma konusunda hiçbir fikir olmadığından, bu sınıfı soyut anahtar sözcükle işaretlenir.

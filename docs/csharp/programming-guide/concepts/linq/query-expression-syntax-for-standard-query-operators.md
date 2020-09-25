@@ -3,17 +3,19 @@ title: Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (C#)
 description: Standart sorgu işleçleri için sorgu ifadesi söz dizimi hakkında bilgi edinin. Denk sorgu ifadesi yan tümcelerine sahip standart sorgu işleçleri listesini görüntüleyin.
 ms.date: 07/20/2015
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-ms.openlocfilehash: b43d2095ee7d059be6f834b576ca0e6ab0a87585
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: f85563de496eaf423ea7a43c6d7100bb93eae5b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299129"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195531"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (C#)
-Daha sık kullanılan standart sorgu işleçlerinden bazılarının, bir *sorgu ifadesinin*parçası olarak çağrılmasına olanak tanıyan özel C# Language anahtar sözcüğü sözdizimi vardır. Sorgu ifadesi, sorgu *yöntemi tabanlı* eşinden farklı bir sorgu ifade eden farklı, daha okunabilir bir formdur. Sorgu ifadesi yan tümceleri, derleme zamanında sorgu yöntemlerine yapılan çağrılara çevrilir.  
+
+Daha sık kullanılan standart sorgu işleçlerinden bazılarının, bir *sorgu ifadesinin*parçası olarak çağrılmasına olanak tanıyan özel C# Language anahtar sözcüğü sözdizimi vardır. Sorgu ifadesi, sorgu *yöntemi tabanlı*  eşinden farklı bir sorgu ifade eden farklı, daha okunabilir bir formdur. Sorgu ifadesi yan tümceleri, derleme zamanında sorgu yöntemlerine yapılan çağrılara çevrilir.  
   
 ## <a name="query-expression-syntax-table"></a>Sorgu Ifadesi söz dizimi tablosu  
+
  Aşağıdaki tabloda denk sorgu ifadesi yan tümceleri olan standart sorgu işleçleri listelenmektedir.  
   
 |Yöntem|C# sorgu Ifadesi sözdizimi|  

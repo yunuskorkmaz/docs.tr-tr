@@ -2,21 +2,22 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 2749bc6c66d491a8a160d98b508fb43aa027b806
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 775ec3a4d3dd8709c61fb46155b5085a3343d218
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398050"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192275"
 ---
 # \<diagnostics>
+
 `diagnostics`Öğesi, çalışma zamanı incelemesi ve denetimi için bir yönetici tarafından kullanılabilecek ayarları tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<diagnostics>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -41,6 +42,7 @@ ms.locfileid: "70398050"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -65,6 +67,7 @@ ms.locfileid: "70398050"
 |serviceModel|Tüm WCF yapılandırma öğelerinin kök öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `diagnostics`Bölümü bir derlemede bulunan tüm hizmetler için tanılama ayarlarını tanımlar. Derlemede yalnızca bir hizmet olmadığı takdirde, hizmet düzeyinde ayrı Tanılama ayarları tanımlamak mümkün değildir. Öznitelikler, bölümün gereksinimlerine göre ayarlanır.  
   
 ## <a name="example"></a>Örnek  

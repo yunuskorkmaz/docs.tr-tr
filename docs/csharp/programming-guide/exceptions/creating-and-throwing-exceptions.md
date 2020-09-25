@@ -8,14 +8,15 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 8ab10dbf686def8d169ef3239492e3b618e9d297
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 77a1e8eb4d442e66f8b9ed17a5881661a5990a35
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302054"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195499"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)
+
 Özel durumlar, programı çalıştırırken bir hata oluştuğunu göstermek için kullanılır. Bir hatayı tanımlayan özel durum nesneleri oluşturulur ve [throw](../../language-reference/keywords/throw.md) anahtar *sözcüğüyle oluşturulur.* Çalışma zamanı, en uyumlu özel durum işleyicisini arar.  
   
  Aşağıdaki koşullardan biri veya daha fazlası doğru olduğunda programcılar özel durumlar atmalıdır:  
@@ -45,6 +46,7 @@ ms.locfileid: "87302054"
  Ortak ve korumalı Yöntemler, kendilerine amaçlanan işlevleri tamamlanamadığında özel durumlar atmalıdır. Oluşturulan özel durum sınıfı, hata koşullarına uyan en belirgin özel durum olmalıdır. Bu özel durumlar, sınıf işlevselliğinin bir parçası olarak belgelenmelidir ve özgün sınıftaki türetilmiş sınıflar veya güncelleştirmeler geriye dönük uyumluluk için aynı davranışı korurlar.  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Özel durumlar oluştururken kaçınmak için gerekenler  
+
  Aşağıdaki liste, özel durumlar oluştururken kaçınmak için Yöntemler tanımlar:  
   
 - Özel durumlar, bir programın akışını sıradan yürütmenin parçası olarak değiştirmek için kullanılmamalıdır. Özel durumlar yalnızca hata koşullarını raporlamak ve işlemek için kullanılmalıdır.  
@@ -56,6 +58,7 @@ ms.locfileid: "87302054"
 - Hata ayıklama modunda, ancak serbest bırakma modunda oluşturulabilecek özel durumlar oluşturmayın. Geliştirme aşamasında çalışma zamanı hatalarını belirlemek için bunun yerine hata ayıklama onayı kullanın.  
   
 ## <a name="defining-exception-classes"></a>Özel durum sınıfları tanımlama  
+
  Programlar, ad alanında önceden tanımlanmış bir özel durum sınıfı oluşturabilir <xref:System> (daha önce belirtilen durumlar hariç) veya ' den türeterek kendi özel durum sınıflarını oluşturabilir <xref:System.Exception> . Türetilmiş sınıflar en az dört Oluşturucu tanımlamalıdır: tek parametresiz bir Oluşturucu, ileti özelliğini ayarlayan diğeri ve hem hem de <xref:System.Exception.Message%2A> <xref:System.Exception.InnerException%2A> özelliklerini ayarlayan. Dördüncü Oluşturucu özel durumu seri hale getirmek için kullanılır. Yeni özel durum sınıfları seri hale getirilebilir olmalıdır. Örneğin:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  

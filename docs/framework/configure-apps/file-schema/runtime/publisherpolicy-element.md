@@ -10,14 +10,15 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bd6ab1123ef3f84f7e8a06b25ce48aed37e4bef7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115841"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195265"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy> Öğesi
+
 Çalışma zamanının yayımcı ilkesi uygulanıp uygulanmadığını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,13 +27,14 @@ ms.locfileid: "73115841"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<publisherPolicy>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <publisherPolicy apply="yes|no"/>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -62,6 +64,7 @@ Yok.
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir bileşen satıcısı bir derlemenin yeni bir sürümünü yayımlarsa, satıcı bir yayımcı ilkesi içerebilir, bu nedenle eski sürümü kullanan uygulamalar artık yeni sürümü kullanır. Belirli bir derleme için yayımcı ilkesinin uygulanıp uygulanmayacağını belirtmek için öğesini öğesine koyun **\<publisherPolicy>** **\<dependentAssembly>** .  
   
  **Apply** özniteliği için varsayılan ayar **Evet**' tir. **Apply** özniteliğini **Hayır** olarak ayarlamak, bir derleme için önceki tüm **Evet** ayarlarını geçersiz kılar.  
@@ -69,6 +72,7 @@ Yok.
  Uygulamanın, [\<publisherPolicy apply="no"/>](publisherpolicy-element.md) uygulama yapılandırma dosyasındaki öğesini kullanarak yayımcı ilkesini açıkça yoksayması için izin gerekir. <xref:System.Security.Permissions.SecurityPermissionFlag>' De bayrak ayarlanarak izin verilir <xref:System.Security.Permissions.SecurityPermission> . Daha fazla bilgi için bkz. [derleme bağlama yeniden yönlendirme güvenlik izni](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, derleme için yayımcı ilkesini devre dışı bırakır `myAssembly` .  
   
 ```xml  

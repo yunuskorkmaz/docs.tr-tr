@@ -4,25 +4,26 @@ description: Dağıtılmış, veri paylaşımı uygulamaları oluşturmaya yöne
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 503977ab2bef6f03ab13fab168319d350aad9471
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286733"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194576"
 ---
 # <a name="adonet"></a>ADO.NET
 
 ADO.NET, .NET Framework programcıları için veri erişim hizmetlerini kullanıma sunan bir sınıf kümesidir. ADO.NET, dağıtılmış, veri paylaşımı uygulamaları oluşturmaya yönelik zengin bir bileşen kümesi sağlar. İlişkisel, XML ve uygulama verilerine erişim sağlayan .NET Framework integral bir parçasıdır. ADO.NET, ön uç veritabanı istemcilerinin oluşturulması ve uygulamalar, Araçlar, diller veya Internet tarayıcıları tarafından kullanılan orta katman iş nesnelerinin oluşturulması dahil olmak üzere çeşitli geliştirme gereksinimlerini destekler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [ADO.NET’teki Yenilikler](whats-new.md)  
  ADO.NET ' de yeni olan özellikleri tanıtır.  
   
  [ADO.NET’e Genel Bakış](ado-net-overview.md)  
  ADO.NET 'in tasarımına ve bileşenlerine bir giriş sağlar.  
   
- [Varlık Çerçevesi](/ef/ef6/index)  
+ [Entity Framework](/ef/ef6/index)  
  Entity Framework kullanarak uygulama oluşturmayı açıklar.  
   
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)  
@@ -34,7 +35,7 @@ ADO.NET, .NET Framework programcıları için veri erişim hizmetlerini kullanı
  [DataSets, DataTables ve DataViews](./dataset-datatable-dataview/index.md)  
  ' Nin nasıl oluşturulduğunu ve kullanılacağını açıklar, `DataSets` türü, `DataSets` `DataTables` ve `DataViews` .  
   
- [LINQ to DataSet](linq-to-dataset.md)  
+ [LINQ - DataSet](linq-to-dataset.md)  
  Programlama örnekleri de dahil olmak üzere LINQ to DataSet hakkında bilgi sağlar.  
   
  [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)  
@@ -47,6 +48,7 @@ ADO.NET, .NET Framework programcıları için veri erişim hizmetlerini kullanı
  Oracle için .NET Framework Veri Sağlayıcısı özgü özellikleri ve davranışları açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Dil ile tümleşik sorgu (LINQ)-C #](../../../csharp/programming-guide/concepts/linq/index.md)  
  C# kullanarak LINQ konularına ve örneklere bağlantılar sağlar.  
   

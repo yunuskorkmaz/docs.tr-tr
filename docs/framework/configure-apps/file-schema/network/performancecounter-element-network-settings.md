@@ -8,14 +8,15 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 58a2bf5118a3a2cd9c33301eca5dcc751c2351bf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4859f3a9e6de4f1bf8a56212bfe01f94d66f5650
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74283085"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190247"
 ---
 # <a name="performancecounter-element-network-settings"></a>\<performanceCounter> Öğesi (Ağ Ayarları)
+
 Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -23,7 +24,7 @@ Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<performanceCounters>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <performanceCounters  
@@ -32,6 +33,7 @@ Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -41,6 +43,7 @@ Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.
 |`enabled`|Ağ performans sayaçlarının etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer: `false`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -50,7 +53,8 @@ Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.
 |[ayarlar](settings-element-network-settings.md)|Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
  Ağ performans sayaçlarının kullanılacak yapılandırma dosyasında etkinleştirilmesi gerekir. Tüm ağ performans sayaçları, yapılandırma dosyasında tek bir ayarla etkin veya devre dışı bırakıldı. Bireysel ağ performans sayaçları etkinleştirilemez veya devre dışı bırakılamaz. Belirli ağ performans sayaçları hakkında daha fazla bilgi için bkz. [ağ performans sayaçları](../../../debug-trace-profile/performance-counters.md#networking-performance-counters).  
   
@@ -59,6 +63,7 @@ Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>Özelliği, geçerli yapılandırma dosyalarından **etkin** özniteliğin geçerli değerini almak için kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.Net> ağ performans sayaçlarını etkinleştirmek için ve ilgili ad alanlarının nasıl yapılandırılacağını gösterir.  
   
 ```xml  
@@ -77,5 +82,5 @@ Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)
 - [Ağ performans sayaçları](../../../debug-trace-profile/performance-counters.md#networking-performance-counters)

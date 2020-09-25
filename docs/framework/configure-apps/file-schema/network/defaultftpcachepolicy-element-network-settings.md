@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e081882aa8df89c0a1bf5d4c60f1395a3319c417
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088437"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190377"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy> Öğesi (Ağ Ayarları)
+
 FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -23,7 +24,7 @@ FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe al
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<requestCaching>**](requestcaching-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultFtpCachePolicy>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <defaultFtpCachePolicy  
@@ -32,6 +33,7 @@ FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe al
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -54,6 +56,7 @@ FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe al
 |`Revalidate`|Zaman damgası sunucudaki kaynağın zaman damgasıyla aynıysa, kaynağın önbelleğe alınmış kopyasını kullanarak bir isteği karşılar; Aksi takdirde, kaynak, çağırana sunulan ve önbellekte depolanan sunucudan indirilir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -65,6 +68,7 @@ FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe al
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, ' nin bir FTP önbelleğe alma ilkesinin nasıl ekleneceğini gösterir `NoCacheNoStore` .  
   
 ```xml  
@@ -84,4 +88,4 @@ FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe al
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)
