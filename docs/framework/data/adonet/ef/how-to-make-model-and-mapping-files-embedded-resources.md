@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: Model ve Eşleme Dosyalarını Gömülü Kaynak Yapma'
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: aaab2ccc96497cb718b868f7ac63995ad4ba35c8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8496dcad5422d1a45af52e58325efd360768da34
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546685"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198294"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Nasıl yapılır: Model ve Eşleme Dosyalarını Gömülü Kaynak Yapma
+
 Entity Framework, bir uygulamanın katıştırılmış kaynakları olarak model ve eşleme dosyalarını dağıtmanıza olanak sağlar. Katıştırılmış model ve eşleme dosyaları olan derlemenin, varlık bağlantısıyla aynı uygulama etki alanında yüklü olması gerekir. Daha fazla bilgi için bkz. [bağlantı dizeleri](connection-strings.md). Varsayılan olarak, Varlık Veri Modeli araçları modeli ve eşleme dosyalarını gömer. Model ve eşleme dosyalarını el ile tanımladığınızda, dosyaların bir Entity Framework uygulamayla birlikte gömülü kaynaklar olarak dağıtıldığından emin olmak için bu yordamı kullanın.  
   
 > [!NOTE]
@@ -34,6 +35,7 @@ Entity Framework, bir uygulamanın katıştırılmış kaynakları olarak model 
      Daha fazla bilgi için bkz. [bağlantı dizeleri](connection-strings.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki bağlantı dizesi, [AdventureWorks Sales modeli](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)için gömülü modele ve eşleme dosyalarına başvurur. Bu bağlantı dizesi projenin App.config dosyasında depolanır.  
 
 ## <a name="see-also"></a>Ayrıca bkz.

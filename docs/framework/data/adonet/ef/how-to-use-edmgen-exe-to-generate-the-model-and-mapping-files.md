@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 6b41ce971f14938c7bb04a174dbf6029c564c788
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8837afd05eec0eaf8ef3e909d46b280e8ae05da7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546582"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198190"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma
+
 Bu konu, okul veritabanına bağlı olarak aşağıdaki dosyaları oluşturmak için EDM Oluşturucu (EdmGen.exe) aracının nasıl kullanılacağını gösterir:  
   
 - Kavramsal bir model (. csdl dosyası).  

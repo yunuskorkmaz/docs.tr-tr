@@ -3,14 +3,15 @@ title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: d562bd4e3d46a1bdf41fc4065fee926850a49aa1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e1048cf3a9f56e4177f3ffe2dcd561a1babadacd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152177"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198775"
 ---
 # \<etwTracking>
+
 Bir hizmetin, kullanarak ETW izlemeyi kullanmasına izin veren bir hizmet davranışı <xref:System.Activities.Tracking.EtwTrackingParticipant> .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Bir hizmetin, kullanarak ETW izlemeyi kullanmasına izin veren bir hizmet davran
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors-of-workflow.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<etwTracking>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <behaviors>
@@ -33,6 +34,7 @@ Bir hizmetin, kullanarak ETW izlemeyi kullanmasına izin veren bir hizmet davran
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -42,21 +44,24 @@ Bir hizmetin, kullanarak ETW izlemeyi kullanmasına izin veren bir hizmet davran
 |ProfilAdı|Bu davranışla ilişkili izleme profili adını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<behavior>durumunu\<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Bir davranış öğesi belirtir.|  
+|[\<behavior> durumunu \<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yapılandırma öğesi, hizmetin davranış yapılandırmasına eklendiğinde bir iş akışı hizmeti üzerinde bir izleme katılımcısı yapılandırır.  
   
  İzleme katılımcıları iş akışından yayılan izleme verilerini almak ve farklı ortalamalarına depolamak için kullanılır. Benzer şekilde, izleme kayıtlarında yapılan tüm gönderi işlemleri izleme katılımcısının içinden de yapılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma örneği, Web. config dosyasında yapılandırılmış standart ETW izleme katılımcısını gösterir.  
+
+ Aşağıdaki yapılandırma örneği, Web.config dosyasında yapılandırılmış standart ETW izleme katılımcısını gösterir.  
   
  ETW Izleme katılımcısı tarafından ETW 'ye Izleme kayıtlarını yazmak için kullanılan sağlayıcı kimliği **\<diagnostics>** bölümünde tanımlanmıştır. İzleme katılımcısının, abone olduğu izleme kayıtlarını belirtmek için kendisiyle ilişkili bir profili vardır. Bu, öğesinin **ProfileName** özniteliği tarafından tanımlanır **\<add>** . Bunlar tanımlandıktan sonra, Izleme katılımcısı **\<etwTracking>** hizmet davranışına eklenir. Bu işlem, Izleme kayıtlarını almaya başlaması için seçilen Izleme katılımcılarını Iş akışı örneğinin uzantılarına ekler.  
   

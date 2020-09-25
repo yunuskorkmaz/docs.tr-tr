@@ -1,15 +1,16 @@
 ---
-title: <certificate>bekleniyor<identity>
+title: <certificate> bekleniyor <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 1cfd207afc72cc71359d9d262e30b0696ba63d2b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 24c39b5efaee7f8db12088d272efeb3783efab04
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850019"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198866"
 ---
-# <a name="certificate-for-identity"></a>\<certificate>bekleniyor\<identity>
+# <a name="certificate-for-identity"></a>\<certificate> bekleniyor \<identity>
+
 Bir sunucuyu bir istemciye doğrulamak için kullanılan X. 509.440 sertifikasını belirtir.  
   
 Öğe değerini ayarlama hakkında daha fazla bilgi için bkz. [hizmet kimliği ve kimlik doğrulaması](../../../wcf/feature-details/service-identity-and-authentication.md).  
@@ -21,13 +22,14 @@ Bir sunucuyu bir istemciye doğrulamak için kullanılan X. 509.440 sertifikası
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<identity>**](identity.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificate>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <certificate encodedValue = "String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -37,6 +39,7 @@ Bir sunucuyu bir istemciye doğrulamak için kullanılan X. 509.440 sertifikası
 |encodedValue|Sertifikanın Base64 kodlaması.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -46,6 +49,7 @@ Bir sunucuyu bir istemciye doğrulamak için kullanılan X. 509.440 sertifikası
 |[\<identity>](identity.md)|İstemci tarafından kimlik doğrulaması yapılacak hizmetin kimliğini belirtir.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, bir sunucunun bir istemciye doğrulanması için kullanılan sertifikanın kodlanmış gösterimini belirtir.  
   
 ```xml  

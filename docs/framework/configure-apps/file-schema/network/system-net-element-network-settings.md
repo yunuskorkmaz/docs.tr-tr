@@ -9,20 +9,21 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 80d54df40c6798e146013b4f2d867386ae35169c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504491"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201726"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net> Öğesi (Ağ Ayarları)
+
 .NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.  
   
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;**\<system.net>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.net>
@@ -30,9 +31,11 @@ ms.locfileid: "84504491"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -54,9 +57,11 @@ ms.locfileid: "84504491"
 |[yapılandırmada](../configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  [\<system.net>](system-net-element-network-settings.md)Öğesi <xref:System.Net> ve ilgili alt ad alanlarındaki sınıfların ayarlarını içerir. Ayarlar, Internet konaklarından bilgi almak için kimlik doğrulama modüllerini, bağlantı yönetimini, posta ayarlarını, proxy sunucusunu ve Internet istek modüllerini yapılandırır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnekte, sınıfları tarafından kullanılan tipik bir yapılandırma gösterilmektedir <xref:System.Net> .  
   
 ```xml  
@@ -95,4 +100,4 @@ ms.locfileid: "84504491"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

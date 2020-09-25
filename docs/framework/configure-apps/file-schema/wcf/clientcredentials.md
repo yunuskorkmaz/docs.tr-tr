@@ -2,14 +2,15 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: f295fe48e194611c80b78c0c23ab3e66ea1c0b64
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6094006df24ee824c419a783ab29d7604757577c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400505"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201466"
 ---
 # \<clientCredentials>
+
 Bir hizmette istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan kimlik bilgiler
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clientCredentials>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <clientCredentials type="String"
@@ -40,6 +41,7 @@ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan kimlik bilgiler
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -67,6 +69,7 @@ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan kimlik bilgiler
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  İstemci kimlik bilgileri, karşılıklı kimlik doğrulamanın gerekli olduğu durumlarda istemcinin kimliğini doğrulamak için kullanılır. Bu yapılandırma bölümü, istemcinin hizmet sertifikası ile iletileri güvenli hale getirmek zorunda olduğu senaryolara yönelik hizmet sertifikalarını belirtmek için de kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

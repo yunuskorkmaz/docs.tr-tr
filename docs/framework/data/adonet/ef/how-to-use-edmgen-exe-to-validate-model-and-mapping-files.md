@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyalarını Doğrulama'
 ms.date: 03/30/2017
 ms.assetid: 2641906a-971a-4d0b-8aee-13fabc02a1cc
-ms.openlocfilehash: a5e3124eb907b8077df7db4d71240f6e6b7bae63
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62a3bde9d2431b9e9e86e2a8d8896520f3456590
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544511"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198125"
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a>Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyalarını Doğrulama
+
 Bu konuda, bir [EDM Oluşturucu (EdmGen.exe)](edm-generator-edmgen-exe.md) aracının model ve eşleme dosyalarını doğrulamak için nasıl kullanılacağı gösterilmektedir. Daha fazla bilgi için bkz. [varlık veri modeli](../entity-data-model.md).  
   
 ### <a name="to-validate-the-school-model-using-edmgenexe"></a>EdmGen.exe kullanarak okul modelini doğrulamak için  

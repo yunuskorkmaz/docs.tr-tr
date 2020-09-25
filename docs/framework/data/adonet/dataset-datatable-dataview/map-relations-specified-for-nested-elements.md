@@ -2,17 +2,18 @@
 title: İç İçe Geçmiş Öğeler için Belirtilen İlişkileri Eşleme
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: cd652f51f01dcfa16a8b707f35c658043c20670d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f758e1ef2c3786a102dc6bb5f6dd217b20dc5b55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150902"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198554"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>İç İçe Geçmiş Öğeler için Belirtilen İlişkileri Eşleme
-Şema, şemadaki herhangi iki öğe arasındaki eşlemi açıkça belirtmek için **bir msdata:İlişki** ek açıklamasını içerebilir. msdata'da belirtilen iki **öğe:İlişki** şemada iç içe olabilir, ancak olması gerekmez. Eşleme işlemi, iki sütun arasındaki birincil anahtar/yabancı anahtar ilişkisini oluşturmak için **şemadaki msdata:İlişkiyi** kullanır.  
+
+Şemada, şemadaki iki öğe arasındaki eşlemeyi açıkça belirtmek için bir **msdata: ilişki** ek açıklaması bulunabilir. **Msdata: Relationship** içinde belirtilen iki öğe şemada iç içe bulunabilir, ancak olması gerekmez. Eşleme işlemi, iki sütun arasında birincil anahtar/yabancı anahtar ilişkisi oluşturmak için şemadaki **msdata: Relationship** kullanır.  
   
- Aşağıdaki **örnekte, OrderDetail** öğesinin **Siparişin**alt öğesi olduğu bir XML Şeması gösterilmektedir. **msdata:İlişki** bu üst-alt ilişkisini tanımlar ve elde edilen **Sipariş** tablosunun **OrderNumber** sütununun, elde edilen **OrderDetail** tablosunun **OrderNo** sütunuyla ilişkili olduğunu belirtir.  
+ Aşağıdaki örnek, **OrderDetail** öğesinin **Order**öğesinin bir alt öğesi olduğu bir XML şemasını gösterir. **Msdata: Relationship** bu üst-alt ilişkiyi tanımlar ve sonuçta elde edilen **sipariş** tablosunun **OrderNumber** sütununun, sonuçta elde edilen **OrderDetail** tablosunun **OrderNo** sütunuyla ilişkili olduğunu belirtir.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""
@@ -52,16 +53,16 @@ ms.locfileid: "79150902"
 </xs:schema>  
 ```  
   
- XML Şema haritalama işlemi aşağıdakileri <xref:System.Data.DataSet>oluşturur:  
+ XML Şeması eşleme işlemi içinde aşağıdakileri oluşturur <xref:System.Data.DataSet> :  
   
-- Sipariş **Order** ve **OrderDetail** tablosu.  
+- Bir **Order** ve **OrderDetail** tablosu.  
   
     ```text  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- **Sipariş** ve **OrderDetail** tabloları arasındaki ilişki. Düzen ve **OrderDetail** öğeleri şemada **Order** iç içe olduğundan, bu ilişkinin İç **Içe Geçen** özelliği **True** olarak ayarlanır.  
+- **Order** ve **OrderDetail** tabloları arasındaki ilişki. **Order** ve **OrderDetail** öğeleri şemada iç içe yerleştirilmiş olduğundan, bu ilişkinin **iç içe geçmiş** özelliği **true** olarak ayarlanır.  
   
     ```text  
     ParentTable: Order  

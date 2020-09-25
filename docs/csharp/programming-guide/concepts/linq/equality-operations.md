@@ -3,14 +3,15 @@ title: Eşitlik Işlemleri (C#)
 description: Öğeleri eşit olan ve aynı sayıda öğeye sahip olan iki sıranın bulunduğu C# ' ta LINQ içindeki eşitlik işleçleri hakkında bilgi edinin.
 ms.date: 07/20/2015
 ms.assetid: 9d9a5bf2-f211-4865-bd19-c59ffa004615
-ms.openlocfilehash: 605b161250ce63746ca1b1ff350dc2ebf1736e21
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: cb1800b033d41daa979cf45dab9d79ab1f480895
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105439"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202584"
 ---
 # <a name="equality-operations-c"></a>Eşitlik Işlemleri (C#)
+
 Karşılık gelen öğeleri eşit ve aynı sayıda öğeye sahip olan iki dizi eşit kabul edilir.  
   
 ## <a name="methods"></a>Yöntemler  

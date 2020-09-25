@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 019b36a328d4e9fb01b112ec79d8d8e0548142f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cbfe4b63dc27cf0a0b6aad87c4f011151bacd4e5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541883"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199022"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 
@@ -58,11 +58,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Statik sınıflar mühürlenmiş ve bu nedenle devralınamaz. Dışında herhangi bir sınıftan devralınabilir <xref:System.Object> . Statik sınıflar bir örnek oluşturucu içeremez. Ancak, bir statik Oluşturucu içerebilirler. Statik olmayan sınıflar Ayrıca, sınıf önemsiz olmayan başlatma gerektiren statik üyeler içeriyorsa statik bir Oluşturucu tanımlamalıdır. Daha fazla bilgi için bkz. [statik oluşturucular](./static-constructors.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda, sıcaklığın Fahrenhayt 'e ve Fahrenhayt 'e kadar olan iki yöntem içeren bir statik sınıfa örnek verilmiştir:  
   
  [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>Statik Üyeler  
+
  Statik olmayan bir sınıf statik yöntemler, alanlar, özellikler veya olaylar içerebilir. Statik üye, sınıfın bir örneği oluşturulmasa bile bir sınıf üzerinde çağrılabilir. Statik üyeye, örnek adı değil, her zaman sınıf adı tarafından erişilir. Statik üyenin yalnızca bir kopyası, sınıfının kaç örneğinin oluşturulduğuna bakılmaksızın vardır. Statik yöntemler ve özellikler, kendi kapsayıcı türündeki statik olmayan alanlara ve olaylara erişemez ve açıkça bir yöntem parametresine geçirilmediği takdirde herhangi bir nesnenin örnek değişkenine erişemez.  
   
  Statik olmayan bir sınıfı bazı statik üyelere bildirmek daha tipik bir deyişle, bir sınıfın tamamını statik olarak bildirmek daha normaldir. Statik alanların iki ortak kullanımı, örneği oluşturulmuş nesne sayısının sayısını tutmak veya tüm örnekler arasında paylaşılması gereken bir değeri depolamak için kullanılır.  

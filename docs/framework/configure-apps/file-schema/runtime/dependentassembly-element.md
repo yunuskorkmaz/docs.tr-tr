@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a924b1998651c923c64429029a118dd1e9ede69
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154211"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199009"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly> Öğesi
+
 Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. `dependentAssembly`Her derleme için bir öğe kullanın.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -24,7 +25,7 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. `dependentAsse
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dependentAssembly>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <dependentAssembly>
@@ -32,9 +33,11 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. `dependentAsse
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -55,6 +58,7 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. `dependentAsse
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, iki derleme için derleme bilgilerinin nasıl kapsüllagösterdiğini gösterir.  
   
 ```xml  

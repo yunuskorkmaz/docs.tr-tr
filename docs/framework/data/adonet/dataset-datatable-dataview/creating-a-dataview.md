@@ -5,21 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: 9d21b17068ff3ce5b0bd3990144383d7f9ded2f9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 539e9763c8aa4affdb6f3bd219a99dbca50cee01
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151344"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202350"
 ---
 # <a name="creating-a-dataview"></a>DataView Oluşturma
-Bir <xref:System.Data.DataView>. DataView oluşturucuyu kullanabilir veya **'nin** özelliğine <xref:System.Data.DataTable.DefaultView%2A> bir başvuru <xref:System.Data.DataTable>oluşturabilirsiniz. **DataView** oluşturucu boş olabilir veya filtre ölçütleri, sıralama ölçütleri ve satır durumu filtresiyle birlikte bir DataTable'ı tek bir bağımsız değişken olarak veya **DataTable'ı** alabilir. **DataTable** **DataView**ile kullanılabilir ek bağımsız değişkenler hakkında daha fazla bilgi için [bkz.](sorting-and-filtering-data.md)  
+
+Oluşturmak için iki yol vardır <xref:System.Data.DataView> . **DataView** oluşturucusunu kullanabilir veya özelliğine bir başvuru oluşturabilirsiniz <xref:System.Data.DataTable.DefaultView%2A> <xref:System.Data.DataTable> . **DataView** Oluşturucusu boş olabilir veya tek bir bağımsız değişken olarak bir **DataTable** ya da filtre ölçütü, sıralama ölçütü ve bir satır durumu **filtresiyle birlikte bir DataTable alabilir** . **DataView**ile kullanılabilecek ek bağımsız değişkenler hakkında daha fazla bilgi için bkz. [verileri sıralama ve filtreleme](sorting-and-filtering-data.md).  
   
- **DataView** için dizin hem **DataView** oluşturulduğunda ve **Sıralama,** Satır Filtresi veya **RowStateFilter**özelliklerinden herhangi biri değiştirildiğinde, **DataView'ı**oluştururken herhangi bir ilk sıralama siparişi veya filtreleme ölçütlerini oluşturucu bağımsız değişkenler olarak sağlayarak en iyi performansı elde edeyim. **RowStateFilter** Sıralama veya filtre ölçütleri belirtmeden **bir DataView** oluşturma ve ardından **Sıralama,** **Satır Filtresi**veya **RowStateFilter** özelliklerini ayarlamak daha sonra dizinin en az iki kez oluşturulmasına neden olur: **DataView** oluşturulduğunda ve sıralama veya filtre özelliklerinden herhangi biri değiştirildiğinde tekrar.  
+ **DataView dizini** her Ikisi de **DataView** oluşturulduğunda oluşturulduğundan ve **sıralama**, **RowFilter**veya **RowStateFilter** özelliklerinin herhangi biri değiştirildiğinde, **DataView**oluştururken Oluşturucu bağımsız değişken olarak herhangi bir ilk sıralama düzeni veya filtreleme ölçütü sağlayarak en iyi performansı elde edersiniz. Sort veya Filter ölçütlerini belirtmeden bir **DataView** oluşturma, sonra **sıralama**, **RowFilter**veya **RowStateFilter** özelliklerini ayarlama, dizinin en az iki kez oluşturulmasına neden olur: **DataView** oluşturulduğunda ve sıralama ya da filtre özelliklerinden herhangi biri değiştirildiğinde yeniden.  
   
- Herhangi bir bağımsız **değişken** kullanmayan bir Veri Görünümü oluşturursanız, **Tablo** özelliğini ayarlayana kadar **DataView'ı** kullanamadığınızı unutmayın.  
+ Herhangi bir bağımsız değişken kullanmayan oluşturucuyu kullanarak bir **DataView** oluşturursanız, **tablo** özelliği ayarlanana kadar **DataView** 'ı kullanabileceksiniz.  
   
- Aşağıdaki kod örneği, **DataView** oluşturucuyu kullanarak bir **DataView'ın** nasıl oluşturulabildiğini gösterir. **Bir RowFilter**, **Sıralama** sütunu ve **DataViewRowState** **DataTable**ile birlikte sağlanır.  
+ Aşağıdaki kod örneği, **DataView** oluşturucuyu kullanarak bir **DataView** oluşturmayı gösterir. **DataTable**Ile birlikte **RowFilter**, **Sort** sütunu ve **DataViewRowState** sağlanır.  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
@@ -35,7 +36,7 @@ DataView custDV = new DataView(custDS.Tables["Customers"],
     DataViewRowState.CurrentRows);  
 ```  
   
- Aşağıdaki kod örneği, tablonun **Varsayılan Görünümü** özelliğini kullanarak bir **DataTable'ın** varsayılan **DataTable Görünümü'ne** nasıl başvuru alınabildiğini gösterir.  
+ Aşağıdaki kod örneği, tablosunun **DefaultView** özelliğini kullanarak bir **DataTable** 'ın varsayılan **DataView** öğesine nasıl başvuru alınacağını göstermektedir.  
   
 ```vb  
 Dim custDV As DataView = custDS.Tables("Customers").DefaultView  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: ef212b31e9a7eda5adb037ff2b91f298ae6e948e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3f1d589a37eca0254ecd3da96cd5731087c5027a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546763"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198385"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Nasıl yapılır: PrimitiveType Sonuçları Döndüren Bir Sorgu Yürütme
+
 Bu konu, kullanarak bir kavramsal modele karşı bir komutun nasıl yürütüleceğini <xref:System.Data.EntityClient.EntityCommand> ve <xref:System.Data.Metadata.Edm.PrimitiveType> bir kullanarak sonuçların nasıl alınacağını gösterir <xref:System.Data.EntityClient.EntityDataReader> .  
   
 ### <a name="to-run-the-code-in-this-example"></a>Bu örnekteki kodu çalıştırmak için  
@@ -25,6 +26,7 @@ Bu konu, kullanarak bir kavramsal modele karşı bir komutun nasıl yürütülec
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, sonuç döndüren bir sorgu yürütür <xref:System.Data.Metadata.Edm.PrimitiveType> . Aşağıdaki sorguyu işleve bağımsız değişken olarak geçirirseniz `ExecutePrimitiveTypeQuery` , işlev, tümünün ortalama liste fiyatını görüntüler `Products` :  
   
  [!code-csharp[DP EntityServices Concepts 2#EDM_AVG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#edm_avg)]  

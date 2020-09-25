@@ -4,22 +4,24 @@ description: Veritabanına özgü protokolleri kapsülleyen SQL Server için .NE
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: eeb0ab69a68dfc2fc0faa1b4e833f80b307fffe5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a517bccd9b60d00f6c6c636c9164d63fb5966de3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286448"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197397"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server ve ADO.NET
+
 Bu bölümde, SQL Server () için .NET Framework Veri Sağlayıcısı özgü özellikler ve davranışlar açıklanmaktadır <xref:System.Data.SqlClient> .  
   
- <xref:System.Data.SqlClient>veritabanına özgü protokolleri kapsülleyen SQL Server sürümlerine erişim sağlar. Veri sağlayıcısının işlevselliği, OLE DB, ODBC ve Oracle için .NET Framework veri sağlayıcılarından benzer olacak şekilde tasarlanmıştır. <xref:System.Data.SqlClient>SQL Server doğrudan iletişim kurmak için tablo veri akışı (TDS) ayrıştırıcısı içerir.  
+ <xref:System.Data.SqlClient> veritabanına özgü protokolleri kapsülleyen SQL Server sürümlerine erişim sağlar. Veri sağlayıcısının işlevselliği, OLE DB, ODBC ve Oracle için .NET Framework veri sağlayıcılarından benzer olacak şekilde tasarlanmıştır. <xref:System.Data.SqlClient> SQL Server doğrudan iletişim kurmak için tablo veri akışı (TDS) ayrıştırıcısı içerir.  
   
 > [!NOTE]
 > SQL Server için .NET Framework Veri Sağlayıcısı kullanmak için, bir uygulamanın ad alanına başvurması gerekir <xref:System.Data.SqlClient> .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [SQL Server Güvenliği](sql-server-security.md)  
  SQL Server güvenlik özelliklerine ve SQL Server hedeflenen güvenli ADO.NET uygulamaları oluşturmaya yönelik uygulama senaryolarına genel bir bakış sağlar.  
   

@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 9b0534c2d11b723458b52e219ba1ce2de4b3c550
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52de0dc16ea2363c48ed48291883352b02f2015c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541532"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202155"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Veri Hizmetleri kaynakları
+
 WCF Veri Hizmetleri giriş konuları aşağıdaki konumlarda bulunabilir. Bu konuların birçoğu, daha ayrıntılı bilgiler içeren ilgili konuların bağlantılarını da içerir.  
   
  [Genel bakış](wcf-data-services-overview.md)  
@@ -27,6 +28,7 @@ WCF Veri Hizmetleri giriş konuları aşağıdaki konumlarda bulunabilir. Bu kon
  WCF Veri Hizmetleri ve OData belgelerinde kullanılan terimleri içerir.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
+
  Aşağıdaki dış kaynaklar, OData akışlarını kullanıma sunan ve kullanan WCF Veri Hizmetleri uygulamalar oluşturmak için ek bilgi ve destek sağlar.  
   
  [WCF Veri Hizmetleri Forumu](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)  

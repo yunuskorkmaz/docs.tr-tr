@@ -2,14 +2,15 @@
 title: <httpDigest> Öğesi
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 0ffaba218d31a77407c598f8b7fa0260daa4e39c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 523df7d5847ba7003e60f3882183b50cb18f6b51
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556908"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202493"
 ---
 # <a name="httpdigest-element"></a>\<httpDigest> Öğesi
+
 İstemcinin bir hizmette kimlik doğrulaması yapılırken kullanılan Özet türü kimlik bilgilerini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ ms.locfileid: "90556908"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -36,6 +38,7 @@ ms.locfileid: "90556908"
 |`impersonationLevel`|İstemcinin sunucuya iletişim kurduğu kimliğe bürünme tercihini ayarlar. İstemcinin seçtiği kimliğe bürünme modu, sunucuda zorlanmaz. Geçerli değerler şunlardır:<br /><br /> -Kimlik: sunucu istemcinin kimliğini ve ayrıcalıklarını alabilir, ancak istemcinin kimliğine bürünebilir.<br />-Kimliğe bürünme: sunucu, yerel sistemde istemcinin güvenlik bağlamını taklit edebilir.<br />-Temsili: sunucu, uzak sistemlerde istemcinin güvenlik bağlamını taklit edebilir.<br />-Anonim: sunucu, istemciyi taklit edemez veya tanımlamıyor.<br />-None: kimliğe bürünme düzeyi atanmadı.<br /><br /> Varsayılan değer kimliğidir. Bu öznitelik türü <xref:System.Security.Principal.TokenImpersonationLevel> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -45,6 +48,7 @@ ms.locfileid: "90556908"
 |[\<clientCredentials>](clientcredentials.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Özet, bir algoritma ve bir giriş kümesi kullanılarak belirlenen bir karmadır. Kimlik doğrulayıcı ve kimlik doğrulaması, bir algoritmaya karşı kabul ediyorum ve girdi olarak kullanılan verileri değiş tokuş ediyor. İstemci karmayı hesaplayabilir ve hizmete gönderebilir. Hizmet ayrıca karmayı hesaplar ve değerleri karşılaştırır. Bir eşleşme istemciyi doğrular.  
   
  Bu özelliğin Windows ve Internet Information Services (IIS) üzerinde Active Directory etkinleştirilmesi gerekir. Daha fazla bilgi için bkz. [ııs 6,0 'de Özet kimlik doğrulaması](/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  

@@ -2,25 +2,27 @@
 title: Toplu Kopyalama Örnek Kurulumu
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 80350d112da03c00e422432ce271ca5ea3ac58ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 562d36e0aee72fcc0619ec4ed7362622ba652337
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148848"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197488"
 ---
 # <a name="bulk-copy-example-setup"></a>Toplu Kopyalama Örnek Kurulumu
-Sınıf <xref:System.Data.SqlClient.SqlBulkCopy> yalnızca SQL Server tablolarına veri yazmak için kullanılabilir. Bu konuda gösterilen kod örnekleri SQL Server örnek veritabanı, **AdventureWorks**kullanın. Varolan tablolar kod örnekleri değiştirmemek için önce oluşturmanız gereken tablolara veri yazın.  
+
+<xref:System.Data.SqlClient.SqlBulkCopy>Sınıfı yalnızca SQL Server tablolarına veri yazmak için kullanılabilir. Bu konuda gösterilen kod örnekleri, **AdventureWorks**SQL Server örnek veritabanını kullanır. Mevcut tabloların değiştirilmesini önlemek için, önce oluşturmanız gereken tablolara veri yazar.  
   
- **BulkCopyDemoMatchingColumns** ve **BulkCopyDemoDifferentColumns** tablolar **adventureworks** **Production.Products** tablosuna dayanmaktadır. Bu tabloları kullanan kod örneklerinde, **Production.Products** tablosundan bu örnek tablolardan birine veriler eklenir. **BulkCopyDemoDifferentColumns** tablosu, örnekte kaynak verilerden hedef tabloya sütunların nasıl eşlenecek gösterildiğinde kullanılır; **BulkCopyDemoMatchingColumns** diğer örneklerin çoğu için kullanılır.  
+ **BulkCopyDemoMatchingColumns** ve **Bulkcopydemofarklıentcolumns** tabloları, hem **AdventureWorks** **Production. Products** tablosuna dayalıdır. Bu tabloları kullanan kod örneklerinde, veriler **üretim. Products** tablosundan bu örnek tablolardan birine eklenir. Örnek, kaynak verilerden hedef tabloya sütunların nasıl eşlendiğini gösteren **Bulkcopydemofarklıya sütunları** tablosu kullanılır; Diğer çoğu örnek için **BulkCopyDemoMatchingColumns** kullanılır.  
   
- Kod örneklerinden birkaçı, birden <xref:System.Data.SqlClient.SqlBulkCopy> çok tabloya yazmak için bir sınıfın nasıl kullanılacağını gösterir. Bu örnekler için, **BulkCopyDemoOrderHeader** ve **BulkCopyDemoOrderDetail** tabloları hedef tabloları olarak kullanılır. Bu tablolar **AdventureWorks** **Sales.SalesOrderHeader** ve **Sales.SalesOrderDetail** tabloları dayanmaktadır.  
+ Kod örneklerinin birkaçı, bir <xref:System.Data.SqlClient.SqlBulkCopy> sınıfın birden çok tabloya yazmak için nasıl kullanılacağını gösterir. Bu örnekler için, **BulkCopyDemoOrderHeader** ve **BulkCopyDemoOrderDetail** tabloları hedef tabloları olarak kullanılır. Bu tablolar, **AdventureWorks**içindeki **Sales. SalesOrderHeader** ve **Sales. SalesOrderDetail** tablolarını temel alır.  
   
 > [!NOTE]
-> **SqlBulkCopy** kod örnekleri yalnızca **SqlBulkCopy** kullanmak için sözdizimini göstermek için sağlanır. Kaynak ve hedef tablolar aynı SQL Server örneğinde bulunuyorsa, verileri kopyalamak için `INSERT … SELECT` Transact-SQL deyimi kullanmak daha kolay ve daha hızlıdır.  
+> **SqlBulkCopy** kod örnekleri yalnızca **SqlBulkCopy** kullanma sözdizimini göstermek için verilmiştir. Kaynak ve hedef tablolar aynı SQL Server örneğinde yer alıyorsa, verileri kopyalamak için Transact-SQL ifadesinin kullanılması daha kolay ve hızlıdır `INSERT … SELECT` .  
   
-## <a name="table-setup"></a>Tablo Kurulumu  
- Kod örneklerinin düzgün çalışması için gerekli tabloları oluşturmak için, aşağıdaki İşlem-SQL deyimlerini bir SQL Server veritabanında çalıştırmanız gerekir.  
+## <a name="table-setup"></a>Tablo kurulumu  
+
+ Kod örneklerinin düzgün çalışması için gereken tabloları oluşturmak için aşağıdaki Transact-SQL deyimlerini bir SQL Server veritabanında çalıştırmanız gerekir.  
   
 ```sql
 USE AdventureWorks  

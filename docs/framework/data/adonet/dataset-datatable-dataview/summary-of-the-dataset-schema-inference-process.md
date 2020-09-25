@@ -2,15 +2,16 @@
 title: DataSet Şema Çıkarımı İşleminin Özeti
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 35e9b67d2d0a47aa69eabdb4b7e94f95b0b9589f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8d517487b96aa7f204ea9f25d326500db7df413a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833975"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198515"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>DataSet Şema Çıkarımı İşleminin Özeti
-Çıkarım işlemi ilk olarak XML belgesinden, hangi öğelerin tablo olarak gösterileceğini belirler. Kalan XML 'den, çıkarım işlemi bu tabloların sütunlarını belirler. İç içe tablolar için, çıkarım işlemi iç içe geçmiş <xref:System.Data.DataRelation> ve <xref:System.Data.ForeignKeyConstraint> nesneleri oluşturur.  
+
+Çıkarım işlemi ilk olarak XML belgesinden, hangi öğelerin tablo olarak gösterileceğini belirler. Kalan XML 'den, çıkarım işlemi bu tabloların sütunlarını belirler. İç içe tablolar için, çıkarım işlemi iç içe <xref:System.Data.DataRelation> ve <xref:System.Data.ForeignKeyConstraint> nesneler oluşturur.  
   
  Aşağıda, çıkarım kurallarının kısa bir özeti verilmiştir:  
   
@@ -20,7 +21,7 @@ ms.locfileid: "71833975"
   
 - Yinelenen öğeler tek bir tablo olarak algılanır.  
   
-- Belge, veya kök, öğe hiç bir özniteliğe sahip değilse ve sütun olarak çıkarsanmayacak alt öğe yoksa, <xref:System.Data.DataSet>olarak algılanır. Aksi halde, belge öğesi tablo olarak algılanır.  
+- Belge, veya kök, öğe bir özniteliğe sahip değilse ve sütun olarak çıkarsanmayacak alt öğe yoksa, bir olarak algılanır <xref:System.Data.DataSet> . Aksi halde, belge öğesi tablo olarak algılanır.  
   
 - Öznitelikler sütun olarak algılanır.  
   
