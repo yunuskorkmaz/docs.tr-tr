@@ -25,14 +25,15 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e40744c9c73e02fe96864d6b1320eb3dde4d1144
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559297"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183461"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma
+
 Yapılandırma dosyaları aracılığıyla .NET Framework, geliştiricilerin ve yöneticilerin uygulamalar çalışma yöntemi üzerinden denetim ve esneklik sağlar. Yapılandırma dosyaları gerektikçe değiştirilebilen XML dosyalarıdır. Yönetici, bir uygulamanın hangi korumalı kaynaklara erişebileceğini, bir uygulamanın hangi derlemelerin hangi sürümlerini kullanacağı ve uzak uygulamaların ve nesnelerin nerede bulunduğu denetleyebilir. Geliştiriciler ayarları yapılandırma dosyalarına yerleştirebilir, bir ayar her değiştiğinde bir uygulamayı yeniden derleme gereksinimini ortadan kaldırır. Bu bölümde nelerin yapılandırılabilecekleri ve bir uygulamanın nasıl yapılandırılması yararlı olabilir.  
   
 > [!NOTE]
@@ -41,6 +42,7 @@ Yapılandırma dosyaları aracılığıyla .NET Framework, geliştiricilerin ve 
  Bu konu yapılandırma dosyalarının söz dizimini açıklar ve üç tür yapılandırma dosyası hakkında bilgi sağlar: makine, uygulama ve güvenlik.  
   
 ## <a name="configuration-file-format"></a>Yapılandırma Dosyası Biçimi  
+
  Yapılandırma dosyaları, yapılandırma bilgisini ayarlayan mantıksal veri yapıları olan öğeleri içerir. Bir yapılandırma dosyası içine, bir öğenin başlangıç ve bitişini işaretlemek için etiketleri kullanırsınız. Örneğin, `<runtime>` öğesi `<runtime>` *alt öğelerinden*oluşur `</runtime>` . Boş bir öğe veya olarak yazılır `<runtime/>` `<runtime></runtime>` .  
   
  Tüm XML dosyalarında olduğu gibi, yapılandırma dosyalarındaki söz dizimi büyük küçük harfe duyarlıdır.  
@@ -53,6 +55,7 @@ Yapılandırma dosyaları aracılığıyla .NET Framework, geliştiricilerin ve 
 ```  
   
 ## <a name="machine-configuration-files"></a>Makine Yapılandırma Dosyaları  
+
  Makine yapılandırma dosyası, Machine.config, tüm bilgisayara uygulanan ayarları içerir. Bu dosya%*Runtime Install Path*% \ config dizininde bulunur. Machine.config, makine genelinde derleme bağlama, yerleşik [Uzaktan iletişim kanalları](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))ve ASP.NET yapılandırma ayarlarını içerir.  
   
  Yapılandırma sistemi, bir geliştiricinin tanımlayabileceğini [ **\<appSettings>** öğe](./file-schema/appsettings/index.md) ve diğer yapılandırma bölümlerinin makine yapılandırma dosyasını ilk olarak arar. Ardından uygulama yapılandırma dosyasına bakar. Makine yapılandırma dosyasını yönetilebilir tutmak için, bu ayarları uygulama yapılandırma dosyasında tutmak en iyisidir. Ancak, ayarları makine yapılandırma dosyasına koymak sisteminizi daha sürdürülebilir yapabilir. Örneğin, eğer hem istemci hem de sunucu uygulamanızın kullandığı bir üçüncü parti bileşeniniz varsa, o bileşen için ayarları tek bir yere koymak daha kolaydır. Bu durumda, aynı ayarları iki farklı dosyada tutmak yerine makine yapılandırma dosyasında tutmak daha uygundur.  
@@ -63,6 +66,7 @@ Yapılandırma dosyaları aracılığıyla .NET Framework, geliştiricilerin ve 
  Ortak dil çalışma zamanının derleme bağlaması için makine yapılandırma dosyasını nasıl kullandığı hakkında daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../deployment/how-the-runtime-locates-assemblies.md).  
   
 ## <a name="application-configuration-files"></a>Uygulama Yapılandırma Dosyaları  
+
  Bir uygulama yapılandırma dosyası belirli bir uygulamaya özel ayarları içerir. Bu dosya ortak dil çalışma zamanının okuduğu yapılandırma ayarlarını (derleme bağlama ilkesi, uzaktan iletişim nesneleri vs.) ve uygulamanın okuyabileceği ayarları içerir.  
   
  Uygulama yapılandırma dosyasının adı ve konumu, uygulamanın konağına bağlıdır:  
@@ -88,6 +92,7 @@ Yapılandırma dosyaları aracılığıyla .NET Framework, geliştiricilerin ve 
      Bu etikette, `location` yapılandırma dosyasının BIR URL 'sidir. Bu, uygulama temel dizinini ayarlar. Yapılandırma dosyası uygulamayla aynı web sitesinde yer almalıdır.  
   
 ## <a name="security-configuration-files"></a>Güvenlik Yapılandırma Dosyaları  
+
  Güvenlik yapılandırma dosyaları bir ilke düzeyiyle ilişkili kod grubu hiyerarşisi ve izin kümeleri hakkında bilgi içerir. İlke değişikliklerinin güvenlik yapılandırma dosyalarını bozmadığından emin olmak için güvenlik ilkesini değiştirmek üzere [kod erişimi güvenlik ilkesi aracını (Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) kullanmanızı önemle öneririz.  
   
 > [!NOTE]
@@ -102,6 +107,7 @@ Yapılandırma dosyaları aracılığıyla .NET Framework, geliştiricilerin ve 
 - Kullanıcı ilkesi yapılandırma dosyası:%USERPROFILE%\Application data\Microsoft\CLR Security config\v*xx. xx*\Security.config  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Nasıl yapılır: DEVPATH Kullanarak Derlemelerin Konumunu Bulma](how-to-locate-assemblies-by-using-devpath.md)  
  Derlemeleri ararken DEVPATH ortam değişkenini kullanmak için çalışma zamanının nasıl yönlendirileceğini açıklar.  
   

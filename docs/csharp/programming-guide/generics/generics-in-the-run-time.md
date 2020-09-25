@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: 8e072e7aa53177929dda0be931beb85863b6a12e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1d2afd34d1a80841ba711897492cd4cd6412fa53
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299233"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184124"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Çalışma Zamanındaki Genel Türler (C# Programlama Kılavuzu)
+
 Genel bir tür veya yöntem Microsoft ara dil (MSIL) içinde derlendiğinde, türü parametre varmış gibi tanımlayan meta veriler içerir. Genel bir tür için MSIL, sağlanan tür parametresinin bir değer türü veya başvuru türü olup olmadığına göre farklılık gösterir.  
   
  Bir genel tür öncelikle parametre olarak bir değer türü ile oluşturulduğunda, çalışma zamanı, MSIL 'de uygun konumlarda bulunan sağlanan parametre veya parametrelerle birlikte özel genel bir tür oluşturur. Özel genel türler parametre olarak kullanılan her benzersiz değer türü için bir kez oluşturulur.  

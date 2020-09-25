@@ -1,76 +1,83 @@
 ---
-title: Veri Hizmeti Sürümü (WCF Veri Hizmetleri)
+title: Veri hizmeti sürümü oluşturma (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - versioning, WCF Data Services
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: f82ab4c98e724bbed658a6c77de9c5a5d5c3390f
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 8d7cc0f0033c75c05ac9c39cfbf1ce09dc032a4c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121534"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182876"
 ---
-# <a name="data-service-versioning-wcf-data-services"></a>Veri Hizmeti Sürümü (WCF Veri Hizmetleri)
-Açık Veri Protokolü (OData), istemcilerin veri modelini temel alan IU'ları kullanarak verilere kaynak olarak erişebilmeleri için veri hizmetleri oluşturmanıza olanak tanır. OData ayrıca hizmet işlemlerinin tanımını da destekler. İlk dağıtımdan sonra ve kullanım ömürleri boyunca birkaç kez bu veri hizmetlerinin iş gereksinimlerini değiştirmek, bilgi teknolojisi gereksinimleri veya diğer sorunları gidermek gibi çeşitli nedenlerle değiştirilmesi gerekebilir. Varolan bir veri hizmetinde değişiklik yaptığınızda, veri hizmetinizin yeni bir sürümünü tanımlayıp tanımlamayacağınızve varolan istemci uygulamaları üzerindeki etkisini en iyi nasıl en aza indirdiğinizi göz önünde bulundurmanız gerekir. Bu konu, bir veri hizmetinin ne zaman ve nasıl oluşturulacaklarına ilişkin rehberlik sağlar. Ayrıca, WCF Veri Hizmetleri'nin istemciler ve Veri Hizmetleri arasında OData protokolünün farklı sürümlerini destekleyen bir alışverişi nasıl işleyeceğini de açıklar.
+# <a name="data-service-versioning-wcf-data-services"></a>Veri hizmeti sürümü oluşturma (WCF Veri Hizmetleri)
 
-## <a name="versioning-a-wcf-data-service"></a>WCF Veri Hizmetini Sürümleme
- Bir veri hizmeti dağıtıldıktan ve veriler tüketildikten sonra, veri hizmetindeki değişiklikler varolan istemci uygulamalarıyla uyumluluk sorunlarına neden olma potansiyeline sahiptir. Ancak, değişiklikler genellikle hizmetin genel iş gereksinimleri tarafından gerekli olduğundan, istemci uygulamaları üzerinde en az etkiye sahip veri hizmetinizin yeni bir sürümünün ne zaman ve nasıl oluşturulacağını göz önünde bulundurmanız gerekir.
+Açık Veri Protokolü (OData), istemcilerin veri modeli tabanlı URI 'Leri kullanarak verilere kaynak olarak erişebilmeleri için veri Hizmetleri oluşturmanıza olanak sağlar. OData Ayrıca hizmet işlemlerinin tanımını da destekler. İlk dağıtımdan sonra ve ömrü boyunca birkaç kez, bu veri hizmetlerinin iş ihtiyaçlarını değiştirme, bilgi teknolojisi gereksinimleri veya diğer sorunları ele almak gibi çeşitli nedenlerle değiştirilmesi gerekebilir. Var olan bir veri hizmetinde değişiklik yaptığınızda, veri hizmetinizin yeni bir sürümünü tanımlayıp tanımlamadığınızı ve var olan istemci uygulamalarında etkisini en iyi duruma küçültmenizi göz önünde bulundurmanız gerekir. Bu konu, bir veri hizmetinin yeni bir sürümünün nasıl ve ne zaman oluşturulacağı hakkında rehberlik sağlar. Ayrıca, WCF Veri Hizmetleri OData protokolünün farklı sürümlerini destekleyen istemciler ve veri Hizmetleri arasında bir alışverişi nasıl işlediğini açıklar.
 
-### <a name="data-model-changes-that-recommend-a-new-data-service-version"></a>Yeni Veri Hizmeti Sürümü Öneren Veri Modeli Değişiklikleri
- Bir veri hizmetinin yeni bir sürümünüyayımlanıp yayımlanmayacağı düşünülürken, farklı değişiklik türlerinin istemci uygulamalarını nasıl etkileyebileceğini anlamak önemlidir. Veri hizmetinin yeni bir sürümünü oluşturmanızı gerektirebilecek bir veri hizmetinde yapılan değişiklikler aşağıdaki iki kategoriye ayrılabilir:
+## <a name="versioning-a-wcf-data-service"></a>WCF veri hizmeti sürümü oluşturma
 
-- Hizmet işlemlerigüncelleştirmeleri, varlık kümelerinin (özet akışlarının) erişilebilirliğindeki değişiklikleri, sürüm değişikliklerini ve hizmet davranışlarındaki diğer değişiklikleri içeren hizmet sözleşmesindeki değişiklikler.
+ Veri hizmeti dağıtıldıktan ve veriler tüketildikten sonra, veri hizmetindeki değişiklikler mevcut istemci uygulamalarıyla uyumluluk sorunlarına neden olabilir. Bununla birlikte, değişiklikler genellikle hizmetin genel iş ihtiyaçları için gerektiğinden, istemci uygulamalarında en az etki ile veri hizmetinizin yeni bir sürümünü oluşturmayı göz önünde bulundurmanız gerekir.
 
-- Veri modelinde, akış biçimlerinde veya özet akışı özelleştirmelerinde yapılan değişiklikleri içeren veri sözleşmesinde yapılan değişiklikler.
+### <a name="data-model-changes-that-recommend-a-new-data-service-version"></a>Yeni bir veri hizmeti sürümü için önerilen veri modeli değişiklikleri
 
- Veri hizmetinin yeni bir sürümünü yayımlamayı düşünmeniz gereken değişiklik türlerinin ayrıntılarını aşağıdaki tablo ayrıntıları:
+ Bir veri hizmetinin yeni bir sürümünü yayımladığınızı düşünürken, farklı değişiklik türlerinin istemci uygulamalarını nasıl etkileyebileceğini anlamak önemlidir. Bir veri hizmetinin yeni bir sürümünü oluşturmanızı gerektirebilecek bir veri hizmetindeki değişiklikler aşağıdaki iki kategoriye ayrılabilir:
 
-|Değişim Türü|Yeni bir sürüm gerektirir|Yeni sürüm gerekli değil|
+- Hizmet sözleşmesindeki değişiklikler; hizmet işlemlerine yönelik güncelleştirmeler, varlık kümelerinin erişilebilirliği (akışlar), sürüm değişiklikleri ve hizmet davranışlarındaki diğer değişiklikler dahil olmak üzere değişir.
+
+- Veri sözleşmesindeki değişiklikler (veri modeli, akış biçimleri veya akış özelleştirmelerinde değişiklikler dahil).
+
+ Aşağıdaki tabloda, veri hizmetinin yeni bir sürümünü yayımlamayı düşünmeniz gereken değişiklik türleri için ayrıntılar verilmiştir:
+
+|Değişiklik türü|Yeni bir sürüm gerektirir|Yeni sürüm gerekli değil|
 |--------------------|----------------------------|----------------------------|
-|Servis işlemleri|- Yeni parametre ekle<br />- İade türünü değiştir<br />- Hizmet işlemini kaldırma|- Varolan parametreyi silme<br />- Yeni hizmet işlemi ekleme|
-|Hizmet davranışları|- Sayım isteklerini devre dışı<br />- Projeksiyon desteğini devre dışı<br />- Gerekli veri hizmeti sürümünü artırma|- Sayım isteklerini etkinleştirme<br />- Projeksiyon desteğini etkinleştirme<br />- Gerekli veri hizmeti sürümünü azaltma|
-|Varlık belirleme izinleri|- Varlık kümesi izinlerini kısıtlama<br />- Yanıt kodunu değiştir (yeni ilk basamak değeri) <sup>1</sup>|- Relax varlık seti izinleri<br />- Yanıt kodunu değiştir (aynı ilk basamak değeri)|
-|Varlık özellikleri|- Varolan özelliği veya ilişkiyi kaldırma<br />- Nullable özellik ekleme<br />- Varolan özelliği değiştirme|- Nullable özellik<sup>ekle 2</sup>|
-|Varlık kümeleri|- Varlık kümesini kaldırma|- Türetilmiş tür ekleme<br />- Temel türünü değiştir<br />- Varlık kümesi ekle|
-|Besleme özelleştirme|- Varlık-özellik eşlemelerini değiştirme||
+|Hizmet işlemleri|-Yeni parametre Ekle<br />-Dönüş türünü değiştir<br />-Hizmet işlemini kaldır|-Var olan parametreyi sil<br />-Yeni hizmet işlemi Ekle|
+|Hizmet davranışları|-Count isteklerini devre dışı bırak<br />-Projeksiyon desteğini devre dışı bırak<br />-Gerekli veri hizmeti sürümünü artırın|-Count isteklerini etkinleştir<br />-Projeksiyon desteğini etkinleştir<br />-Gerekli veri hizmeti sürümünü azaltın|
+|Varlık kümesi izinleri|-Varlık kümesi izinlerini kısıtla<br />-Yanıt kodunu değiştir (yeni ilk basamak değeri) <sup>1</sup>|-Rahat varlık kümesi izinleri<br />-Değişiklik yanıt kodu (aynı ilk basamak değeri)|
+|Varlık özellikleri|-Var olan özelliği veya ilişkiyi kaldır<br />-Nullable özelliği Ekle<br />-Var olan özelliği Değiştir|-Nullable özelliği ekleyin<sup>2</sup>|
+|Varlık kümeleri|-Varlık kümesini kaldır|-Türetilmiş tür Ekle<br />-Temel türü Değiştir<br />-Varlık kümesi ekleme|
+|Akış özelleştirmesi|-Varlık özelliği eşlemesini Değiştir||
 
- <sup>1</sup> Bu, istemci uygulamasının belirli bir hata kodu almaya ne kadar güvendiğine bağlı olabilir.
+ <sup>1</sup> bu, ne kadar istemci uygulamanın belirli bir hata kodunu alma ile ilgili olduğuna bağlı olabilir.
 
- <sup>2</sup> <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> Özelliği, `true` istemcinin veri hizmeti tarafından gönderilen ve istemciüzerinde tanımlanmayan yeni özellikleri yoksaymasını sağlayacak şekilde ayarlayabilirsiniz. Ancak, ekler yapıldığında, POST isteğine istemci tarafından dahil olmayan özellikler varsayılan değerlerine ayarlanır. Güncelleştirmeler için, istemci tarafından bilinmeyen bir özellikteki varolan veriler varsayılan değerlerle birlikte üzerine yazılmış olabilir. Bu durumda, güncelleştirmeyi varsayılan olan bir MERGE isteği olarak göndermeniz gerekir. Daha fazla bilgi için [bkz.](managing-the-data-service-context-wcf-data-services.md)
+ <sup>2</sup> özelliği, istemcisini, istemci <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> `true` üzerinde tanımlanmayan veri hizmeti tarafından gönderilen yeni özellikleri yoksayacak şekilde ayarlayabilirsiniz. Ancak, ekleme yapıldığında, POST isteğindeki istemci tarafından dahil edilen özellikler varsayılan değerlerine ayarlanır. Güncelleştirmeler için, istemciye yönelik bilinmeyen bir özelliğindeki mevcut verilerin üzerine varsayılan değerler eklenebilir. Bu durumda, güncelleştirmeyi varsayılan olan bir BIRLEŞTIRME isteği olarak göndermeniz gerekir. Daha fazla bilgi için bkz. [veri hizmeti bağlamını yönetme](managing-the-data-service-context-wcf-data-services.md).
 
-### <a name="how-to-version-a-data-service"></a>Veri Hizmeti Sürümü Nasıl Kullanılır?
- Gerektiğinde, güncelleştirilmiş bir hizmet sözleşmesi veya veri modeli ile hizmetin yeni bir örneği oluşturularak yeni bir veri hizmeti sürümü tanımlanır. Bu yeni hizmet daha sonra önceki sürümden ayıran yeni bir URI uç noktası kullanılarak ortaya çıkar. Örneğin:
+### <a name="how-to-version-a-data-service"></a>Veri hizmeti sürümü
 
-- Eski sürüm:`http://services.odata.org/Northwind/v1/Northwind.svc/`
+ Gerektiğinde, yeni bir veri hizmeti sürümü, güncelleştirilmiş bir hizmet sözleşmesi veya veri modeliyle hizmetin yeni bir örneği oluşturularak tanımlanır. Bu yeni hizmet daha sonra yeni bir URI uç noktası kullanılarak sunulur ve bu, önceki sürümden farklılaştırır. Örneğin:
 
-- Yeni sürüm:`http://services.odata.org/Northwind/v2/Northwind.svc/`
+- Eski sürüm: `http://services.odata.org/Northwind/v1/Northwind.svc/`
 
- Bir veri hizmetini yükseltirken, istemcilerin yeni veri hizmeti meta verilerine göre de güncelleştirilmeleri ve yeni kök URI'yi kullanmaları gerekir. Mümkün olduğunda, yeni sürümü kullanmak üzere henüz yükseltilmemiş istemcileri desteklemek için veri hizmetinin önceki sürümünü korumanız gerekir. Bir veri hizmetinin eski sürümleri artık gerekolmadığında kaldırılabilir. Veri hizmeti bitiş noktası URI'yi harici bir yapılandırma dosyasında korumayı düşünmelisiniz.
+- Yeni sürüm: `http://services.odata.org/Northwind/v2/Northwind.svc/`
 
-## <a name="odata-protocol-versions"></a>OData Protokolü Sürümleri
- OData'nın yeni sürümleri yayımlandıkça, istemci uygulamaları veri hizmeti tarafından desteklenen OData protokolünün aynı sürümünü kullanmıyor olabilir. Eski bir istemci uygulaması, OData'nın daha yeni bir sürümünü destekleyen bir veri hizmetine erişebilir. İstemci uygulaması, Erişilen veri hizmetinden daha yeni bir OData sürümünü destekleyen WCF Veri Hizmetleri istemci kitaplığı'nın daha yeni bir sürümünü de kullanıyor olabilir.
+ Bir veri hizmetini yükseltirken, istemcilerin yeni veri hizmeti meta verilerine göre de güncelleştirilmeleri ve yeni kök URI 'yi kullanması gerekir. Mümkün olduğunda, yeni sürümü kullanmak üzere henüz yükseltilmemiş istemcileri desteklemek için veri hizmetinin önceki sürümünü korumanız gerekir. Daha eski bir veri hizmeti sürümü, artık gerekli olmadığında kaldırılabilir. Veri hizmeti uç noktası URI 'sini bir dış yapılandırma dosyasında tutmak düşünmelisiniz.
 
- WCF Veri Hizmetleri, bu tür sürüm senaryolarını işlemek için OData tarafından sağlanan destekten yararlanır. İstemci, veri hizmetinin kullandığından farklı bir OData sürümünü kullandığında istemci veri hizmeti sınıfları oluşturmak için veri modeli meta verileri oluşturma ve kullanma desteği de vardır. Daha fazla bilgi [için, OData: Genel Bakış](https://www.odata.org/documentation/odata-version-2-0/overview/) makalesindeki Protokol Sürümü bölümüne bakın.
+## <a name="odata-protocol-versions"></a>OData protokol sürümleri
 
-### <a name="version-negotiation"></a>Sürüm Görüşmesi
- Veri hizmeti, istemci tarafından istenen sürümden bağımsız olarak, hizmet tarafından kullanılacak OData protokolünün en yüksek sürümünü tanımlayacak şekilde yapılandırılabilir. Bunu, veri hizmeti tarafından <xref:System.Data.Services.Common.DataServiceProtocolVersion> <xref:System.Data.Services.DataServiceBehavior> kullanılan <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> özelliği için bir değer belirterek yapabilirsiniz. Daha fazla bilgi için [bkz.](configuring-the-data-service-wcf-data-services.md)
+ OData 'in yeni sürümleri yayınlanarak, istemci uygulamaları veri hizmeti tarafından desteklenen aynı OData protokolü sürümünü kullanmıyor olabilir. Daha eski bir istemci uygulaması, OData 'in daha yeni bir sürümünü destekleyen bir veri hizmetine erişebilir. Bir istemci uygulaması, WCF Veri Hizmetleri istemci kitaplığının daha yeni bir sürümünü kullanıyor olabilir. Bu, erişilmekte olan veri hizmetiyle daha yeni bir OData sürümü destekler.
 
- Bir uygulama bir veri hizmetine erişmek için WCF Veri Hizmetleri istemci kitaplıklarını kullandığında, kitaplıklar bu başlıkları Otomatik Olarak OData sürümüne ve uygulamanızda kullanılan özelliklere bağlı olarak otomatik olarak doğru değerlere ayarlar. Varsayılan olarak, WCF Veri Hizmetleri istenen işlemi destekleyen en düşük iletişim kuralı sürümünü kullanır.
+ WCF Veri Hizmetleri, bu sürüm oluşturma senaryolarını işlemek için OData tarafından sunulan destekten yararlanır. İstemci, veri hizmetinin kullandığı farklı bir OData sürümü kullandığında istemci veri hizmeti sınıfları oluşturmak için veri modeli meta verilerini oluşturma ve kullanma desteği de mevcuttur. Daha fazla bilgi için [OData: genel bakış](https://www.odata.org/documentation/odata-version-2-0/overview/) makalesindeki protokol sürümü oluşturma bölümüne bakın.
 
- Aşağıdaki tabloda, OData protokolünün belirli sürümleri için WCF Veri Hizmetleri desteği içeren .NET Framework ve Silverlight sürümleri ayrıntılı olarak açıklamaktadır.
+### <a name="version-negotiation"></a>Sürüm anlaşması
 
-|OData Protokolü Sürümü|Destek tanıtıldı...|
+ Veri hizmeti, istemci tarafından istenen sürümden bağımsız olarak, hizmet tarafından kullanılacak olan OData protokolünün en yüksek sürümünü tanımlayacak şekilde yapılandırılabilir. Bunu, <xref:System.Data.Services.Common.DataServiceProtocolVersion> <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> <xref:System.Data.Services.DataServiceBehavior> veri hizmeti tarafından kullanılan özelliği için bir değer belirterek yapabilirsiniz. Daha fazla bilgi için bkz. [veri hizmetini yapılandırma](configuring-the-data-service-wcf-data-services.md).
+
+ Bir uygulama bir veri hizmetine erişmek için WCF Veri Hizmetleri istemci kitaplıklarını kullandığında, bu üst bilgileri OData sürümüne ve uygulamanızda kullanılan özelliklere bağlı olarak doğru değerlere otomatik olarak ayarlar. Varsayılan olarak, WCF Veri Hizmetleri istenen işlemi destekleyen en düşük protokol sürümünü kullanır.
+
+ Aşağıdaki tabloda, OData protokolünün belirli sürümleri için WCF Veri Hizmetleri desteği içeren .NET Framework ve Silverlight sürümlerinin ayrıntıları verilmiştir.
+
+|OData protokol sürümü|Destek sunulan...|
 |-----------------------------------------------------------------------------------|----------------------------|
-|Sürüm 1|- .NET Framework 3.5 Servis Paketi 1 (SP1)<br />- Silverlight sürüm 3|
-|Sürüm 2|- .NET Çerçeve 4<br />- Silverlight sürüm 4|
+|Sürüm 1|-.NET Framework 3,5 hizmet paketi 1 (SP1)<br />-Silverlight sürüm 3|
+|Sürüm 2|-.NET Framework 4<br />-Silverlight sürüm 4|
 
 ### <a name="metadata-versions"></a>Meta veri sürümleri
- Varsayılan olarak, WCF Veri Hizmetleri bir veri modelini temsil etmek için CSDL'nin 1.1 sürümünü kullanır. Bu, yansıma sağlayıcısını veya özel veri servis sağlayıcısını temel alan veri modelleri için her zaman geçerlidir. Ancak, veri modeli Varlık Çerçevesi kullanılarak tanımlandığında, döndürülen CSDL sürümü Varlık Çerçevesi tarafından kullanılan sürümle aynıdır. CSDL sürümü [Schema öğesi (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl)ad alanı tarafından belirlenir.
 
- Döndürülen meta verilerin `DataServices` öğesi, `DataServiceVersion` yanıt iletisindeki `DataServiceVersion` üstbilgiyle aynı değere sahip bir öznitelik de içerir. Visual Studio'daki **Hizmet Başvurusu Ekle** iletişim kutusu gibi istemci uygulamaları, bu bilgileri, veri hizmetini barındıran WCF Veri Hizmetleri sürümüyle doğru çalışan istemci veri hizmeti sınıfları oluşturmak için kullanır. Daha fazla bilgi [için, OData: Genel Bakış](https://www.odata.org/documentation/odata-version-2-0/overview/) makalesindeki Protokol Sürümü bölümüne bakın.
+ WCF Veri Hizmetleri, varsayılan olarak, bir veri modelini temsil etmek için CSDL 1,1 sürümünü kullanır. Bu, bir yansıma sağlayıcısına veya özel bir veri hizmeti sağlayıcısına dayalı veri modelleri için her zaman durumdur. Ancak, veri modeli Entity Framework kullanılarak tanımlandığında, döndürülen CSDL sürümü Entity Framework tarafından kullanılan sürümle aynıdır. CSDL sürümü, [şema öğesinin (csdl)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl)ad alanı tarafından belirlenir.
+
+ `DataServices`Döndürülen meta verilerin öğesi `DataServiceVersion` , yanıt iletisindeki üst bilgiyle aynı değer olan bir özniteliği de içerir `DataServiceVersion` . Visual Studio 'daki **hizmet başvurusu Ekle** iletişim kutusu gibi istemci uygulamaları, bu bilgileri, veri hizmetini barındıran WCF veri Hizmetleri sürümü ile düzgün çalışan istemci veri hizmeti sınıfları oluşturmak için kullanır. Daha fazla bilgi için [OData: genel bakış](https://www.odata.org/documentation/odata-version-2-0/overview/) makalesindeki protokol sürümü oluşturma bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

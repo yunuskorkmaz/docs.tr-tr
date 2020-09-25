@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 40001422e665a7dda3fb938c8d57860909525404
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 7e1d78b581fcb3c4b2265f1d04cf2aba83faa28a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141997"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182889"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction Kullanarak Belirtik İşlem Uygulama
+
 <xref:System.Transactions.CommittableTransaction>Sınıfı, uygulamaların bir işlem kullanması için açık bir yol sağlar, bu da sınıfı örtülü olarak kullanmaktır <xref:System.Transactions.TransactionScope> . Birden çok işlev çağrısı veya birden çok iş parçacığı çağrısı genelinde aynı işlemi kullanmak isteyen uygulamalar için yararlıdır. Sınıfının aksine <xref:System.Transactions.TransactionScope> , uygulama yazıcısının <xref:System.Transactions.CommittableTransaction.Commit%2A> <xref:System.Transactions.Transaction.Rollback%2A> işlem yürütmek veya durdurmak için özel olarak ve yöntemlerini çağırması gerekir.  
   
 ## <a name="overview-of-the-committabletransaction-class"></a>CommittableTransaction sınıfına genel bakış  
+
  <xref:System.Transactions.CommittableTransaction> Sınıf türetilir <xref:System.Transactions.Transaction> sınıfı, bu nedenle tüm işlevselliğini ikincisi sağlama. Özellikle yararlıdır <xref:System.Transactions.Transaction.Rollback%2A> yöntemi <xref:System.Transactions.Transaction> geri almak için de kullanılabilir sınıf bir <xref:System.Transactions.CommittableTransaction> nesne.  
   
  <xref:System.Transactions.Transaction> Sınıf benzer <xref:System.Transactions.CommittableTransaction> sınıfının ancak teklif değil bir `Commit` yöntemi. Bu işlem, işlemin ne zaman planlanmakta olduğunu denetlerken, işlem nesnesini (veya bunların klonlarını) diğer yöntemlere (potansiyel olarak diğer iş parçacıklarında) geçirmenize olanak sağlar. Çağrılan kod, işlem üzerinde listeleme ve oy verebilir, ancak yalnızca <xref:System.Transactions.CommittableTransaction> nesnenin Oluşturucusu işlemi işleme olanağına sahiptir.  
@@ -28,6 +30,7 @@ ms.locfileid: "85141997"
 - Bir <xref:System.Transactions.CommittableTransaction> nesne olamaz yeniden kullanılabilecek. Bir <xref:System.Transactions.CommittableTransaction> nesne kaydedildikten veya geri alındıktan sonra, bir işlem içinde yeniden kullanılamaz. Diğer bir deyişle, geçerli ortam işlem bağlamı olarak ayarlanamaz.  
   
 ## <a name="creating-a-committabletransaction"></a>CommittableTransaction oluşturma  
+
  Aşağıdaki örnek, yeni bir oluşturur <xref:System.Transactions.CommittableTransaction> ve onu kaydeder.  
   
  [!code-csharp[Tx_CommittableTx#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/tx_committabletx/cs/committabletxwithsql.cs#1)]
@@ -40,6 +43,7 @@ ms.locfileid: "85141997"
  Bir <xref:System.Transactions.CommittableTransaction> işlev çağrıları ve dizileri arasında nesne kullanılabilir. Ancak, bu özel durumları işlemek ve özellikle çağırmak için uygulama geliştiricisi kadar kadar <xref:System.Transactions.Transaction.Rollback%28System.Exception%29> yöntemi hataları durumunda.  
   
 ## <a name="asynchronous-commit"></a>Zaman uyumsuz tamamlama  
+
  <xref:System.Transactions.CommittableTransaction>Sınıfı ayrıca bir işlemi zaman uyumsuz olarak yürütmek için bir mekanizma sağlar. Bir işlem işleme, birden çok veritabanı erişimi ve olası ağ gecikmesi olabileceği için önemli ölçüde zaman alabilir. Yüksek performanslı uygulamalarda kilitlenmeleri önlemek istediğinizde, işlem işini en kısa sürede tamamlamak için zaman uyumsuz yürütmeyi kullanabilir ve tamamlama işlemini bir arka plan görevi olarak çalıştırabilirsiniz. <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> Ve <xref:System.Transactions.CommittableTransaction.EndCommit%2A> yöntemlerinin <xref:System.Transactions.CommittableTransaction> sınıfı, bunu yapmak izin.  
   
  Çağırabilirsiniz <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> yürütme Soyguncu iş parçacığı havuzu için bir iş parçacığı gönderme. <xref:System.Transactions.CommittableTransaction.EndCommit%2A>İşlemin gerçekten kaydedilmiş olup olmadığını belirleme çağrısı yapabilirsiniz. İşlem herhangi bir nedenden dolayı işleme başarısız olursa, <xref:System.Transactions.CommittableTransaction.EndCommit%2A> bir işlem özel durumu oluşturur. İşlem henüz zamana göre yürütülmemişse <xref:System.Transactions.CommittableTransaction.EndCommit%2A> , işlem kaydedilene veya durduruluncaya kadar çağrı engellenir.  
@@ -89,4 +93,4 @@ void OnCommitted(IAsyncResult asyncResult)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İşlem Kapsamı Kullanarak Örtük İşlem Uygulama](implementing-an-implicit-transaction-using-transaction-scope.md)
-- [İşlem Işleme](index.md)
+- [İşlem Gerçekleştirme](index.md)

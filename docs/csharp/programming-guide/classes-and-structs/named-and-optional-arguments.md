@@ -14,14 +14,15 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 46b9dc23644e68aea2767f2b990fe7f243a4f357
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3961489f7fc801a0170f9d48293109206a83faaf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864988"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181966"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
+
 C# 4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. *Adlandırılmış bağımsız değişkenler* , bağımsız değişkenini parametrenin adıyla ilişkilendirerek parametre listesindeki konumuyla değil, belirli bir parametre için bir bağımsız değişken belirtmenizi sağlar. *Isteğe bağlı bağımsız değişkenler* bazı parametrelerin bağımsız değişkenlerini atlamanızı sağlar. Her iki yöntem de Yöntemler, Dizin oluşturucular, oluşturucular ve temsilcilerle birlikte kullanılabilir.  
   
  Adlandırılmış ve isteğe bağlı bağımsız değişkenler kullandığınızda, bağımsız değişkenler parametre listesinde değil, bağımsız değişken listesinde göründükleri sırada değerlendirilir.  
@@ -29,6 +30,7 @@ C# 4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. 
  Adlandırılmış ve isteğe bağlı parametreler birlikte kullanıldığında, isteğe bağlı parametrelerin bir listesinden yalnızca birkaç parametre için bağımsız değişkenler vermenizi sağlar. Bu yetenek, Microsoft Office Automation API 'Leri gibi COM arabirimlerine yönelik çağrıları büyük ölçüde kolaylaştırır.  
   
 ## <a name="named-arguments"></a>Adlandırılmış bağımsız değişkenler  
+
  Adlandırılmış bağımsız değişkenler, çağrılan yöntemlerin parametre listelerindeki parametrelerin sırasını aramak ya da sağlamak için sizi hatırlamanız ya da aramanız gereksiniminizden muaf değildir. Her bağımsız değişkenin parametresi parametre adı ile belirtilebilir. Örneğin, sipariş ayrıntılarını (örneğin, satıcı adı, sipariş numarası & ürün adı) yazdıran bir işlev, işlev tarafından tanımlanan sırada konuma göre bağımsız değişkenler gönderilerek standart şekilde çağrılabilir.
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
@@ -59,11 +61,13 @@ C# 4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. 
  ```
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, bu bölümdeki örnekleri bazı ek kişilerle birlikte uygular.  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/program.cs#1)]  
   
 ## <a name="optional-arguments"></a>İsteğe bağlı bağımsız değişkenler  
+
  Bir yöntem, Oluşturucu, Dizin Oluşturucu veya temsilci tanımı, parametrelerinin gerekli olduğunu veya isteğe bağlı olduğunu belirtebilir. Herhangi bir çağrı gerekli tüm parametrelerin bağımsız değişkenlerini sağlamalıdır, ancak isteğe bağlı parametrelerin bağımsız değişkenlerini atlayabilir.  
   
  Her isteğe bağlı parametre, tanımının bir parçası olarak varsayılan bir değer içerir. Bu parametre için bir bağımsız değişken gönderilmezse, varsayılan değer kullanılır. Varsayılan değer, aşağıdaki ifade türlerinden biri olmalıdır:  
@@ -91,14 +95,16 @@ C# 4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. 
  ![ExampleMethod yöntemi için IntelliSense hızlı bilgilerini gösteren ekran görüntüsü.](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
-> .NET sınıfını kullanarak isteğe bağlı parametreler de bildirebilirsiniz <xref:System.Runtime.InteropServices.OptionalAttribute> . `OptionalAttribute`parametreler varsayılan değer gerektirmez.  
+> .NET sınıfını kullanarak isteğe bağlı parametreler de bildirebilirsiniz <xref:System.Runtime.InteropServices.OptionalAttribute> . `OptionalAttribute` parametreler varsayılan değer gerektirmez.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnekte, için oluşturucusunun `ExampleClass` bir parametresi vardır, bu isteğe bağlıdır. Örnek yönteminde `ExampleMethod` bir gerekli parametre, `required` ve iki isteğe bağlı iki parametre vardır `optionalstr` `optionalint` . İçindeki kod, `Main` oluşturucunun ve yönteminin çağrılabileceği farklı yolları gösterir.  
   
  [!code-csharp[csProgGuideNamedAndOptional#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/optional.cs#2)]  
   
 ## <a name="com-interfaces"></a>COM arabirimleri  
+
  Adlandırılmış ve isteğe bağlı bağımsız değişkenler, dinamik nesneler ve diğer geliştirmeler desteğiyle birlikte, Office Otomasyonu API 'leri gibi COM API 'Leri ile birlikte çalışabilirliği büyük ölçüde geliştirir.  
   
  Örneğin, <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range> arabirimindeki yöntemin yedi parametresi vardır, hepsi isteğe bağlıdır. Bu parametreler aşağıdaki çizimde gösterilmiştir:  
@@ -116,6 +122,7 @@ C# 4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. 
  Daha fazla bilgi ve örnek için bkz. [Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](./how-to-use-named-and-optional-arguments-in-office-programming.md) ve [C# özelliklerini kullanarak Office birlikte çalışma nesnelerine erişme](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Aşırı Yükleme Çözümü  
+
  Adlandırılmış ve isteğe bağlı bağımsız değişkenlerin kullanılması, aşırı yükleme çözünürlüğünü aşağıdaki yollarla etkiler:  
   
 - Bir yöntem, Dizin Oluşturucu veya Oluşturucu, parametrelerinden her biri isteğe bağlı veya bir konuma göre, çağırma deyimindeki tek bir bağımsız değişkene ve bu bağımsız değişken parametre türüne dönüştürülebileceğinden yürütme için bir adaydır.  
@@ -125,6 +132,7 @@ C# 4 adlandırılmış ve isteğe bağlı bağımsız değişkenleri tanıtır. 
 - İki aday eşit derecede iyi bir şekilde yarar olursa, tercih, çağrıda bağımsız değişkenlerin atlandığı isteğe bağlı parametreleri olmayan bir adaya gider. Bu, daha az parametreye sahip adaylar için aşırı yükleme çözünürlüğünde genel bir tercihin sonucudur.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -3,14 +3,15 @@ title: SQL Server'da Sorgu Bildirimleri
 description: SQL Server veritabanında veri değiştirildiğinde uygulamalara bildirim almak için sorgu bildirimlerini nasıl kullanacağınızı öğrenin, örneğin, uygulama ekranları yenilemek için.
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 43b496db74f7e6fc9bc9f17d946bf34398b32312
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8001f75d7e278a965b6e8e00e4b9af7b770a8bb5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543991"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183097"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server'da Sorgu Bildirimleri
+
 Hizmet Aracısı altyapısına inşa edildiğinde sorgu bildirimleri, veriler değiştiğinde uygulamalara bildirim gönderilmesini sağlar. Bu özellik özellikle bir Web uygulaması gibi bir veritabanından bilgi önbelleği sağlayan ve kaynak veriler değiştirildiğinde bildirilmesi gereken uygulamalar için yararlıdır.  
   
  ADO.NET kullanarak sorgu bildirimleri uygulayabileceğiniz üç yol vardır:  
@@ -40,6 +41,7 @@ Hizmet Aracısı altyapısına inşa edildiğinde sorgu bildirimleri, veriler de
 - [Geliştirici Kılavuzu (Hizmet Aracısı)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Sorgu Bildirimlerini Etkinleştirme](enabling-query-notifications.md)  
  ' Nin etkinleştirilmesi ve kullanılması ile ilgili gereksinimler dahil olmak üzere sorgu bildirimlerinin nasıl kullanılacağını açıklar.  
   
@@ -53,6 +55,7 @@ Hizmet Aracısı altyapısına inşa edildiğinde sorgu bildirimleri, veriler de
  Bir <xref:System.Data.SqlClient.SqlCommand> nesneyi sorgu bildirimiyle çalışacak şekilde yapılandırmayı gösterir.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.Data.Sql.SqlNotificationRequest>  
  <xref:System.Data.Sql.SqlNotificationRequest>Sınıfını ve tüm üyelerini açıklar.  
   

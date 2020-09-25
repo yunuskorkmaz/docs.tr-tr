@@ -2,15 +2,16 @@
 title: SQL Server Ortak Dil Çalışma Zamanı Modülü Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 12ae15d72644e314aa694f8d169bc8f45fa284a2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d9fe0f03c88584607c6bc38fcbcff3f9424fd40c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452350"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183032"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server Ortak Dil Çalışma Zamanı Modülü Tümleştirmesi
-SQL Server 2005, Microsoft Windows için .NET Framework ortak dil çalışma zamanı (CLR) bileşeninin tümleştirilmesine tanıtılmıştır. Bu, Microsoft Visual Basic .NET ve Microsoft Visual C#dahil olmak üzere herhangi bir .NET Framework dilini kullanarak saklı yordamları, Tetikleyicileri, Kullanıcı tanımlı türleri, Kullanıcı tanımlı toplamları, Kullanıcı tanımlı toplamaları ve akış tablosu değerli işlevleri yazabileceğiniz anlamına gelir. <xref:Microsoft.SqlServer.Server> ad alanı, yönetilen kodun Microsoft SQL Server ortamıyla etkileşime girebilmesi için bir dizi yeni uygulama programlama arabirimi (API 'Ler) içerir.  
+
+SQL Server 2005, Microsoft Windows için .NET Framework ortak dil çalışma zamanı (CLR) bileşeninin tümleştirilmesine tanıtılmıştır. Bu, Microsoft Visual Basic .NET ve Microsoft Visual C# dahil olmak üzere herhangi bir .NET Framework dilini kullanarak saklı yordamları, Tetikleyicileri, Kullanıcı tanımlı türleri, Kullanıcı tanımlı özellikleri, Kullanıcı tanımlı toplamları ve akış tablosu değerli işlevleri yazabileceğiniz anlamına gelir. <xref:Microsoft.SqlServer.Server>Ad alanı, yönetilen kodun Microsoft SQL Server ortamıyla etkileşime girebilmesi için bir dizi yeni uygulama programlama arabirimi (API) içerir.  
   
  Bu bölümde, SQL Server ortak dil çalışma zamanı (CLR) tümleştirmesine özgü özellikler ve davranışlar ve ADO.NET için işleme özgü SQL Server uzantıları açıklanmaktadır.  
   
@@ -21,6 +22,7 @@ SQL Server 2005, Microsoft Windows için .NET Framework ortak dil çalışma zam
 1. [Ortak dil çalışma zamanı (CLR) tümleştirme programlama kavramları](/sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [SQL Server CLR Tümleştirmesine Giriş](introduction-to-sql-server-clr-integration.md)  
  CLR tümleştirmesi SQL Server için bir giriş sağlar. Ek konuların bağlantılarını sağlar.  
   

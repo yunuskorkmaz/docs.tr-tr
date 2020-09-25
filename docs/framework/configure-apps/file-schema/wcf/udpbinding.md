@@ -2,14 +2,15 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: b2ff39e1292cfaad1165e14e693acda2518477a6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 730a051e6823a89c05f8eb894b261e93c0511dcc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559050"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183645"
 ---
 # \<udpBinding>
+
 Bağlamayı yapılandırmak için kullanılan bir yapılandırma öğesi <xref:System.ServiceModel.UdpBinding> .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -45,6 +46,7 @@ Bağlamayı yapılandırmak için kullanılan bir yapılandırma öğesi <xref:S
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -79,9 +81,11 @@ Bağlamayı yapılandırmak için kullanılan bir yapılandırma öğesi <xref:S
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  UdpBinding, WCF hizmetlerinin UDP taşıması üzerinden iletişim kurmasına izin verir. İstemcinin bir hizmete ileti gönderdiği ve geri yanıt bekleyebileceği "yangın ve unut" ileti değişimlerini sağlar.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.ServiceModel.UdpBinding> <> öğesi kullanılarak nasıl yapılandırılacağını gösterir `udpBinding` .  
   
 ```xml  

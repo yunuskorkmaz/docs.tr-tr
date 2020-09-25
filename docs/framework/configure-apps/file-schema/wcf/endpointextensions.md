@@ -2,14 +2,15 @@
 title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: fe57cb84cfa70b1f6b92abf1dbac89ddad9d4dc8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d0587ae942d1b0c7eb72bee830ca3ced76e4270c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69925705"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190039"
 ---
 # \<endpointExtensions>
+
 Bu bölüm, bir makinedeki veya uygulama yapılandırma dosyasındaki uzantılar bölümünde yeni bir standart uç nokta kaydeder. Anahtar sözcüğünü kullanarak bu koleksiyona standart bir uç nokta ekleyebilir `add` ve `type` öğesi özniteliğini, `name` standart uç nokta adına özniteliğini ve öğesini de uç nokta türüne ayarlayarak ekleyebilirsiniz.  
   
  Aşağıdaki örnek, `add` `name` yapılandırma dosyasının bölümüne standart bir uç nokta eklemek için öğesini ve özniteliğini kullanır `<endpointExtensions>` .  

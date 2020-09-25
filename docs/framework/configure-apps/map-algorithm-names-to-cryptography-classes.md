@@ -8,14 +8,15 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 5a1d7acdd34182dd82f4dce66d136c4ef4de6e95
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: b67db612496e56a341dab2e5fc4b52c954ff02b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105347"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183396"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Algoritma Adlarını Şifreleme Sınıflarıyla Eşleştirme
+
 Bir geliştiricinin Windows SDK kullanarak bir şifreleme nesnesi oluştur, dört yolu vardır:  
   
 - **New** işlecini kullanarak bir nesne oluşturun.  
@@ -33,6 +34,7 @@ Bir geliştiricinin Windows SDK kullanarak bir şifreleme nesnesi oluştur, dör
  Hangi karma algoritmanın kullanıldığına bakılmaksızın geliştirici, <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> karma dönüşüm uygulayan bir nesne döndüren yöntemini çağırabilir.  
   
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Yapılandırma dosyalarında algoritma adlarını eşleme  
+
  Varsayılan olarak, çalışma zamanı <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> dört senaryo için bir nesne döndürür. Ancak, bir makine Yöneticisi son iki senaryodaki yöntemlerin döndürdüğü nesne türünü değiştirebilir. Bunu yapmak için, bir kolay algoritma adını makine yapılandırma dosyasında (Machine.config) kullanmak istediğiniz sınıfa eşlemeniz gerekir.  
   
  Aşağıdaki örnek, **System. Security. Cryptography. SHA1. Create**, **System. Security. CryptoConfig. CreateFromName ("SHA1")** ve **System. Security. Cryptography. HashAlgorithm. Create** için bir nesne döndürmesi amacıyla çalışma zamanının nasıl yapılandırılacağını gösterir `MySHA1HashClass` .  

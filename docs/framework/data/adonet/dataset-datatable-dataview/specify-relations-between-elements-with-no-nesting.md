@@ -2,17 +2,18 @@
 title: İç İçe Yerleştirme İçermeyen Öğeler Arasındaki İlişkileri Belirtme
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: bee427c6cdf76792773ea827c8772b276ff29c31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6684e992242d5c695f3c237f70de61b4dae1c48f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150824"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183409"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>İç İçe Yerleştirme İçermeyen Öğeler Arasındaki İlişkileri Belirtme
-Öğeler iç içe geçmediğinde, örtük ilişki oluşturulmaz. Ancak, **msdata:İlişki** ek açıklamasını kullanarak iç içe geçmemiş öğeler arasındaki ilişkileri açıkça belirtebilirsiniz.  
+
+Öğeler iç içe olmadığında dolaylı ilişkiler oluşturulmaz. Ancak, **msdata: Relationship** ek açıklaması kullanılarak iç içe olmayan öğeler arasındaki ilişkileri açıkça belirtebilirsiniz.  
   
- Aşağıdaki örnekte, **msdata:İlişki** ek açıklamanın İç içe geçmemiş **Sipariş** ve **OrderDetail** öğeleri arasında belirtildiği bir XML Şeması gösterilmektedir. **msdata:İlişki** ek gösterimi **Şema** öğesinin alt öğesi olarak belirtilir.  
+ Aşağıdaki örnek, iç içe olmayan **Order** ve **OrderDetail** öğeleri arasında **msdata: ılışkı** ek açıklaması belirtilen bir XML şemasını gösterir. **Msdata: ilişki** ek açıklaması, **şema** öğesinin alt öğesi olarak belirtilir.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""
@@ -53,7 +54,7 @@ ms.locfileid: "79150824"
 </xs:schema>  
 ```  
   
- XML Şema tanım dili (XSD) şema eşleme <xref:System.Data.DataSet> işlemi, Aşağıda gösterildiği **gibi, Sipariş** ve **OrderDetail** tabloları ve bu iki tablo arasında belirtilen bir ilişki oluşturur.  
+ XML şeması tanım dili (XSD) şema eşleme işlemi, bir <xref:System.Data.DataSet> **Order** ve **OrderDetail** tabloları ve aşağıda gösterildiği gibi bu iki tablo arasında belirtilen bir ilişki oluşturur.  
   
 ```text  
 RelationName: OrdOrderDetailRelation  

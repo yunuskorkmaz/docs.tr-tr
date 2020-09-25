@@ -3,14 +3,15 @@ title: Kaynak Yöneticisi uygulama
 description: .NET ' te bir Resource Manager uygulayın. Kaynak Yöneticisi işlemlerde kullanılan kaynakları yönetir. İşlem Yöneticisi, Resource Manager eylemlerini koordine eder.
 ms.date: 03/30/2017
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-ms.openlocfilehash: bf40c6eaee35a5a548c6de4a286e46c4d4a66aca
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: e6370f6b544255ebdc402f06b7977d4a3a587c32
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141855"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182902"
 ---
 # <a name="implementing-a-resource-manager"></a>Kaynak Yöneticisi uygulama
+
 Bir işlemde kullanılan her kaynak, eylemleri bir işlem yöneticisi tarafından koordine edilen bir kaynak yöneticisi tarafından yönetilir. Kaynak yöneticileri, uygulamayı kararlılık ve yalıtıma garantisi sağlamak için işlem yöneticisiyle birlikte çalışır. Microsoft SQL Server, kalıcı ileti sıraları, bellek içi karma tabloları kaynak yöneticilerinin tüm örnekleri mevcuttur.  
   
  Kalıcı veya geçici Veri Kaynağı Yöneticisi yönetir. Süreklilik (veya tersine volatility) kaynak yöneticisi kaynak yöneticisi hatası kurtarma destekleyip başvuruyor. Bir Kaynak Yöneticisi hata kurtarmayı destekliyorsa, Aşama 1 sırasında verileri dayanıklı depolamaya (hazırla) devam ettirir. Bu, Resource Manager kapalıysa, kurtarma sonrasında işlemi yeniden listeleme ve işlem yöneticisi 'nden alınan bildirimlere göre uygun eylemleri gerçekleştirmenize olanak sağlar. Genel olarak, geçici kaynak yöneticileri bellek içi veri yapısı (örneğin, bellek içi bir işlem Hashtable) gibi geçici kaynakları yönetir ve dayanıklı kaynak yöneticileri, daha kalıcı bir yedekleme deposuna sahip kaynakları (örneğin, yedekleme deposu disk olan bir veritabanı) yönetir.  
@@ -34,6 +35,7 @@ Bir işlemde kullanılan her kaynak, eylemleri bir işlem yöneticisi tarafında
  <xref:System.Transactions.Transaction> Sınıfı sağlar <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> bir Promotable tek aşaması liste'nı (PSPE) listeleme yöntemi. Bu, dayanıklı bir kaynak yöneticisinin (RM), daha sonra gerekirse MSDTC tarafından yönetilmek üzere ilerletilebilecek bir işlem barındırarak "sahip" olmasını sağlar. Bunun hakkında daha fazla bilgi için bkz. [tek aşamalı tamamlama ve promotable tek aşamalı bildirimi kullanarak iyileştirme](optimization-spc-and-promotable-spn.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  Genel olarak kaynak yöneticisi tarafından izlenen adımları aşağıdaki konulara özetlenmiştir.  
   
  [Bir İşlemde Kaynakları Katılımcı Olarak Kaydetme](enlisting-resources-as-participants-in-a-transaction.md)  

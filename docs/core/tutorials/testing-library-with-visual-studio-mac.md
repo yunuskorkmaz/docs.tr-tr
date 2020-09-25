@@ -2,18 +2,18 @@
 title: Mac için Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 description: .NET Core sınıf kitaplığı için bir birim test projesi oluşturun. .NET Core sınıf kitaplığının birim testleriyle düzgün çalıştığını doğrulayın.
 ms.date: 06/08/2020
-ms.openlocfilehash: d3c8a5e01d16047949e977f3af6a429970d996d0
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 3adcddc96abf77012f89a28c1cf60ea57ae506a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359226"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180536"
 ---
 # <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 
 Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otomatikleştirilmesi gösterilmektedir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Bu öğretici, [Mac için Visual Studio kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio-mac.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
 
@@ -165,7 +165,9 @@ Yayın derlemesini test etmek için:
 
 ## <a name="debug-tests"></a>Hata ayıklama testleri
 
-Öğreticide gösterilen aynı süreci kullanabilirsiniz: birim test projenizi kullanarak kodun hatalarını ayıklamak için [Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklayın](debugging-with-visual-studio-mac.md) . Gösterimi uygulama projesini başlatmak yerine **Stringlibrarytests** projesine <kbd>CTRL tuşunu basılı</kbd>ve bağlam menüsünde **proje hata ayıklamayı Başlat** ' ı seçin. Visual Studio, hata ayıklayıcı ekli olarak test projesi başlatır. Yürütme, test projesine veya temeldeki kitaplık koduna eklediğiniz herhangi bir kesme noktasında durur.
+IDE 'niz olarak Mac için Visual Studio kullanıyorsanız, öğreticide gösterilen aynı süreci kullanabilirsiniz: birim test projenizi kullanarak kodun hatalarını ayıklamak için [Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklayın](debugging-with-visual-studio-mac.md) . *Gösterimi* uygulama projesini başlatmak yerine **stringlibrarytests** projesine <kbd>CTRL tuşunu basılı</kbd>ve bağlam menüsünde **proje hata ayıklamayı Başlat** ' ı seçin.
+
+Visual Studio, hata ayıklayıcı ekli olarak test projesi başlatır. Yürütme, test projesine veya temeldeki kitaplık koduna eklediğiniz herhangi bir kesme noktasında durur.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

@@ -3,14 +3,15 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 7c2b6bdc62da63905d7ff33a9984808e7b7d114f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2f37019fa0787f5c5553dbd3debc173ec0a047ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544546"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189968"
 ---
 # \<add>
+
 Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,6 +36,7 @@ Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna e
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -59,6 +61,7 @@ Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna e
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|Uç nokta ile kaydedilmiş bir güvenlik belirteci işleyicileri koleksiyonunu belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<add>`Öğesi, belirteç işleyicisinin yapılandırmasını belirten tek bir alt öğe alabilir. Bu, öğesinin özniteliği aracılığıyla başvurulan işleyici sınıfının `type` `<add>` Bu özellik için destek sağlar. Bu özelliği sağlayan belirteç işleyici sınıfları bir nesne alan oluşturucuyu kullanıma sunmalıdır <xref:System.Xml.XmlElement> .  
 
 ```csharp  
@@ -78,6 +81,7 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
  Bir işleyicide belirtilen ayarlar, öğesinin altındaki belirteç işleyici koleksiyonunda belirtilen eşdeğer ayarları geçersiz kılar [\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md) ve öğesi altındaki hizmet düzeyinde belirtilmiştir [\<identityConfiguration>](identityconfiguration.md) .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML, `<add>` `<remove>` varsayılan oturum belirteci işleyicisini özel bir oturum belirteci işleyicisiyle değiştirmek için ve öğelerinin kullanımını gösterir. XML `ClaimsAwareWebFarm` örnekten alınır.  
   
 ```xml  

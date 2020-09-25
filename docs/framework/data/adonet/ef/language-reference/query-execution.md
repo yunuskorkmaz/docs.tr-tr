@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: e776df6d35b6cc8c24cd83e902bc4d050347343b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e5961330eab5f25508319f276df1e9b4572f49ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286798"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189311"
 ---
 # <a name="query-execution"></a>Sorgu Yürütme
+
 Bir LINQ sorgusu bir kullanıcı tarafından oluşturulduktan sonra, bir komut ağacına dönüştürülür. Komut ağacı, Entity Framework uyumlu bir sorgunun gösterimidir. Komut ağacı daha sonra veri kaynağında yürütülür. Sorgu yürütme sırasında, sonuç materialization 'de kullanılan ifadeler de dahil olmak üzere tüm sorgu ifadeleri (yani, sorgunun tüm bileşenleri) değerlendirilir.  
   
  Hangi noktada sorgu ifadelerinin yürütüldüğü de farklılık gösterebilir. LINQ sorguları her zaman sorgu değişkeni, sorgu değişkeni oluşturulduğunda değil, üzerine yinelendiğinde yürütülür. Bu, *ertelenmiş yürütme*olarak adlandırılır. Ayrıca sorgu sonuçlarını önbelleğe almak için yararlı olan bir sorguyu hemen yürütmeye zorlayabilirsiniz. Bu konu başlığında daha sonra açıklanmaktadır.  
@@ -24,6 +25,7 @@ Bir LINQ sorgusu bir kullanıcı tarafından oluşturulduktan sonra, bir komut a
 > Bir işlecin yürütme davranışını hızlı bir şekilde belirlemenize olanak sağlayan tablo biçimindeki sorgu işleçlerinin uygun bir özeti için, bkz. yürütme yöntemine [göre standart sorgu Işleçleri sınıflandırması (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
 ## <a name="deferred-query-execution"></a>Ertelenmiş sorgu yürütme  
+
  Bir dizi değer döndüren sorguda, sorgu değişkeni sorgu sonuçlarını hiçbir şekilde tutmayın ve yalnızca sorgu komutlarını depolar. Sorgunun yürütülmesi sorgu değişkeni bir veya döngüsünde yinelenene kadar ertelenir `foreach` `For Each` . Bu, *ertelenmiş yürütme*olarak bilinir; diğer bir deyişle sorgu yürütme, sorgu oluşturulduktan sonra bir süre oluşur. Bu, bir sorguyu istediğiniz sıklıkta yürütebilmeniz anlamına gelir. Bu, örneğin, diğer uygulamalar tarafından güncelleştirilmekte olan bir veritabanınız olduğunda faydalıdır. Uygulamanızda, en son bilgileri almak için bir sorgu oluşturabilir ve sorguyu sürekli olarak yürütebilir ve güncelleştirilmiş bilgileri her seferinde geri alabilirsiniz.  
   
  Ertelenmiş yürütme, birden çok sorgunun birleştirilmesi veya bir sorgunun genişletilmesini sağlar. Bir sorgu genişletildiğinde, yeni işlemleri içerecek şekilde değiştirilir ve nihai yürütme değişiklikleri yansıtır. Aşağıdaki örnekte, ilk sorgu tüm ürünleri döndürür. İkinci sorgu, `Where` "L" boyutundaki tüm ürünleri döndürmek için kullanarak birincisini genişletir:  
@@ -34,6 +36,7 @@ Bir LINQ sorgusu bir kullanıcı tarafından oluşturulduktan sonra, bir komut a
  Bir Sorgu yürütüldükten sonra, sonraki tüm sorgular bellek içi LINQ işleçlerini kullanır. `foreach`Or `For Each` ifadesini kullanarak veya LINQ dönüştürme işleçlerinden birini çağırarak sorgu değişkeninin üzerinde yineleme, hemen yürütmeye neden olur. Bu dönüştürme işleçleri şunları içerir: <xref:System.Linq.Enumerable.ToList%2A> , <xref:System.Linq.Enumerable.ToArray%2A> ,, <xref:System.Linq.Enumerable.ToLookup%2A> ve <xref:System.Linq.Enumerable.ToDictionary%2A> .  
   
 ## <a name="immediate-query-execution"></a>Anlık sorgu yürütme  
+
  Değer dizisi üreten sorguların ertelenmiş yürütmesinin aksine, tek bir değer döndüren sorgular hemen yürütülür. Tekil sorguların bazı örnekleri,, <xref:System.Linq.Enumerable.Average%2A> ve ' dir <xref:System.Linq.Enumerable.Count%2A> <xref:System.Linq.Enumerable.First%2A> <xref:System.Linq.Enumerable.Max%2A> . Bu hemen yürütülür çünkü sorgu tekil sonucu hesaplamak için bir dizi üretmelidir. Ayrıca, hemen yürütmeye zorlayabilirsiniz. Bu, bir sorgunun sonuçlarını önbelleğe almak istediğinizde yararlıdır. Tek bir değer üretmeyen bir sorgunun hemen yürütülmesini zorlamak için, yöntemini, <xref:System.Linq.Enumerable.ToList%2A> <xref:System.Linq.Enumerable.ToDictionary%2A> yöntemini veya <xref:System.Linq.Enumerable.ToArray%2A> bir sorgu ya da sorgu değişkeninde yöntemi çağırabilirsiniz. Aşağıdaki örnek, bir <xref:System.Linq.Enumerable.ToArray%2A> diziyi bir diziye anında değerlendirmek için yöntemini kullanır.  
   
  [!code-csharp[DP L2E Examples#ToArray](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#toarray)]
@@ -42,6 +45,7 @@ Bir LINQ sorgusu bir kullanıcı tarafından oluşturulduktan sonra, bir komut a
  Ayrıca, `foreach` veya `For Each` döngüsünü sorgu ifadesinden hemen sonra yerleştirerek, ancak çağırarak <xref:System.Linq.Enumerable.ToList%2A> veya <xref:System.Linq.Enumerable.ToArray%2A> tek bir koleksiyon nesnesindeki tüm verileri önbelleğe alarak yürütmeye zorlayabilirsiniz.  
   
 ## <a name="store-execution"></a>Mağaza yürütmesi  
+
  Genel olarak, LINQ to Entities ifadeler sunucuda değerlendirilir ve ifadenin davranışının ortak dil çalışma zamanı (CLR) semantiğinin izlenmesi beklenmemelidir, ancak veri kaynağı bu anlamlardır. Bununla birlikte, bu, örneğin, ifadenin istemcide yürütüldüğü durumlar gibi özel durumlar vardır. Bu, örneğin sunucu ve istemci farklı saat dilimlerinde olduğunda beklenmedik sonuçlara neden olabilir.  
   
  Sorgudaki bazı ifadeler istemcide çalıştırılabilir. Genel olarak, sunucuda çoğu sorgu yürütmenin gerçekleşmesi beklenir. Veri kaynağıyla eşlenen sorgu öğelerine karşı yürütülen yöntemlerin dışında, genellikle sorguda yerel olarak yürütülebilecek ifadeler vardır. Bir sorgu ifadesinin yerel yürütülmesi sorgu yürütme veya sonuç oluşturma içinde kullanılabilecek bir değer verir.  
@@ -51,6 +55,7 @@ Bir LINQ sorgusu bir kullanıcı tarafından oluşturulduktan sonra, bir komut a
  Bu bölümde, kodun istemcide yerel olarak yürütüldüğü senaryolar açıklanmaktadır. Yerel olarak yürütülen tür ifadeler hakkında daha fazla bilgi için bkz. [LINQ to Entities sorgulardaki ifadeler](expressions-in-linq-to-entities-queries.md).  
   
 ### <a name="literals-and-parameters"></a>Sabit değerler ve parametreler  
+
  Aşağıdaki örnekteki değişken gibi yerel değişkenler `orderID` istemcisinde değerlendirilir.  
   
  [!code-csharp[DP L2E Conceptual Examples#LiteralParameter1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#literalparameter1)]
@@ -62,6 +67,7 @@ Bir LINQ sorgusu bir kullanıcı tarafından oluşturulduktan sonra, bir komut a
  [!code-vb[DP L2E Conceptual Examples#MethodParameterExample](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodparameterexample)]  
   
 ### <a name="casting-literals-on-the-client"></a>Istemcide sabit değerler atama  
+
  ' Dan `null` BIR clr türüne atama, istemcide yürütülür:  
   
  [!code-csharp[DP L2E Conceptual Examples#NullCastToString](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#nullcasttostring)]
@@ -73,6 +79,7 @@ Bir LINQ sorgusu bir kullanıcı tarafından oluşturulduktan sonra, bir komut a
  [!code-vb[DP L2E Conceptual Examples#CastToNullable](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#casttonullable)]  
   
 ### <a name="constructors-for-literals"></a>Sabit değerler için oluşturucular  
+
  Kavramsal model türlerine eşlenebilir yeni CLR türleri istemcisinde yürütülür:  
   
  [!code-csharp[DP L2E Conceptual Examples#ConstructorForLiteral](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constructorforliteral)]
@@ -81,9 +88,11 @@ Bir LINQ sorgusu bir kullanıcı tarafından oluşturulduktan sonra, bir komut a
  Yeni diziler de istemcisinde yürütülür.  
   
 ## <a name="store-exceptions"></a>Özel durumları depola  
+
  Sorgu yürütme sırasında karşılaşılan tüm mağaza hataları istemciye geçirilir ve eşlenmez veya işlenmez.  
   
 ## <a name="store-configuration"></a>Mağaza yapılandırması  
+
  Sorgu mağazada yürütüldüğünde, mağaza yapılandırması tüm istemci davranışlarını geçersiz kılar ve depolama semantiği tüm işlemler ve ifadeler için ifade edilir. Bu durum, null karşılaştırmaları, GUID sıralaması, kesin olmayan veri türleri (kayan nokta türleri veya <xref:System.DateTime> ) ve dize işlemleri gibi alanlarda clr ve mağaza yürütmesi arasındaki davranışa farklılık açabilir. Sorgu sonuçları incelenirken bunu göz önünde bulundurmanız önemlidir.  
   
  Örneğin, CLR ve SQL Server arasındaki davranıştaki bazı farklılıklar aşağıda verilmiştir:  

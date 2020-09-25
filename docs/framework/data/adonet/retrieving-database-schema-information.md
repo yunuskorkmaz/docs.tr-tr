@@ -2,23 +2,25 @@
 title: Veritabanı Şema Bilgilerini Alma
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: 26b234e35a0d0849914d87b61f4e8c8a87599448
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c0aaadc82771d1c2a36d797bc157d88b8d3cacdc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782731"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177364"
 ---
 # <a name="retrieving-database-schema-information"></a>Veritabanı Şema Bilgilerini Alma
+
 Şema bulma işlemi ile bir veritabanından şema bilgileri alma işlemi gerçekleştirilir. Şema bulma, uygulamaların belirli bir veritabanının *meta verileri*olarak da bilinen veritabanı şeması hakkındaki bilgileri bulmasını ve döndürmesini ister. Tablolar, sütunlar ve saklı yordamlar gibi farklı veritabanı şeması öğeleri, şema koleksiyonları aracılığıyla sunulur. Her şema koleksiyonu, kullanılmakta olan sağlayıcıya özgü çeşitli şema bilgilerini içerir.  
   
- .NET Framework yönetilen sağlayıcıların her biri, **bağlantı** sınıfında **GetSchema** yöntemini uygular ve **GetSchema** yönteminden döndürülen şema bilgileri bir <xref:System.Data.DataTable>biçiminde gelir. **GetSchema** yöntemi, döndürülecek şema koleksiyonunu belirtmek ve döndürülen bilgi miktarını kısıtlamak için isteğe bağlı parametreler sağlayan aşırı yüklenmiş bir yöntemdir.  
+ .NET Framework yönetilen sağlayıcıların her biri, **bağlantı** sınıfında **GetSchema** yöntemini uygular ve **GetSchema** yönteminden döndürülen şema bilgileri bir biçiminde gelir <xref:System.Data.DataTable> . **GetSchema** yöntemi, döndürülecek şema koleksiyonunu belirtmek ve döndürülen bilgi miktarını kısıtlamak için isteğe bağlı parametreler sağlayan aşırı yüklenmiş bir yöntemdir.  
   
  OLE DB, ODBC, Oracle ve SqlClient .NET Framework veri sağlayıcıları, **DataReader**'ın sütun meta verilerini açıklayan bir DataTable döndüren **GetSchemaTable** yöntemi sağlar.  
   
- OLE DB için .NET Framework veri sağlayıcısı, <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A> <xref:System.Data.OleDb.OleDbConnection> nesne yöntemini kullanarak şema bilgilerini de kullanıma sunar. Bağımsız değişkenler olarak, **GetOleDbSchemaTable** , <xref:System.Data.OleDb.OleDbSchemaGuid> Döndürülecek şema bilgilerini ve döndürülen sütunlara yönelik bir dizi kısıtlamayı belirleyen bir kullanır. **GetOleDbSchemaTable** , istenen <xref:System.Data.DataTable> şema bilgileriyle doldurulmuş bir değer döndürüyor.  
+ OLE DB için .NET Framework Veri Sağlayıcısı, nesne yöntemini kullanarak şema bilgilerini de kullanıma sunar <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A> <xref:System.Data.OleDb.OleDbConnection> . Bağımsız değişkenler olarak, **GetOleDbSchemaTable** , <xref:System.Data.OleDb.OleDbSchemaGuid> Döndürülecek şema bilgilerini ve döndürülen sütunlara yönelik bir dizi kısıtlamayı belirleyen bir kullanır. **GetOleDbSchemaTable** <xref:System.Data.DataTable> , istenen şema bilgileriyle doldurulmuş bir değer döndürüyor.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [GetSchema ve Şema Koleksiyonları](getschema-and-schema-collections.md)  
  **GetSchema** yöntemini ve bir veritabanından şema bilgilerini almak ve kısıtlamak için nasıl kullanılabileceğini açıklar.  
   
@@ -41,35 +43,36 @@ ms.locfileid: "70782731"
  OLE DB sağlayıcıları için şema koleksiyonlarını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.Data.Common.DbConnection.GetSchema%2A>  
- <xref:System.Data.Common.DbConnection> Sınıfının **GetSchema** metodunu açıklar.  
+ Sınıfının **GetSchema** metodunu açıklar <xref:System.Data.Common.DbConnection> .  
   
  <xref:System.Data.Odbc.OdbcConnection.GetSchema%2A>  
- <xref:System.Data.Odbc.OdbcConnection> Sınıfının **GetSchema** metodunu açıklar.  
+ Sınıfının **GetSchema** metodunu açıklar <xref:System.Data.Odbc.OdbcConnection> .  
   
  <xref:System.Data.OleDb.OleDbConnection.GetSchema%2A>  
- <xref:System.Data.OleDb.OleDbConnection> Sınıfının **GetSchema** metodunu açıklar.  
+ Sınıfının **GetSchema** metodunu açıklar <xref:System.Data.OleDb.OleDbConnection> .  
   
  <xref:System.Data.OracleClient.OracleConnection.GetSchema%2A>  
- <xref:System.Data.OracleClient.OracleConnection> Sınıfının **GetSchema** metodunu açıklar.  
+ Sınıfının **GetSchema** metodunu açıklar <xref:System.Data.OracleClient.OracleConnection> .  
   
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>  
- <xref:System.Data.SqlClient.SqlConnection> Sınıfının **GetSchema** metodunu açıklar.  
+ Sınıfının **GetSchema** metodunu açıklar <xref:System.Data.SqlClient.SqlConnection> .  
   
  <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A>  
- <xref:System.Data.Common.DbDataReader> Sınıfının **GetSchemaTable** metodunu açıklar.  
+ Sınıfının **GetSchemaTable** metodunu açıklar <xref:System.Data.Common.DbDataReader> .  
   
  <xref:System.Data.Odbc.OdbcDataReader.GetSchemaTable%2A>  
- <xref:System.Data.Odbc.OdbcDataReader> Sınıfının **GetSchemaTable** metodunu açıklar.  
+ Sınıfının **GetSchemaTable** metodunu açıklar <xref:System.Data.Odbc.OdbcDataReader> .  
   
  <xref:System.Data.OleDb.OleDbDataReader.GetSchemaTable%2A>  
- <xref:System.Data.OleDb.OleDbDataReader> Sınıfının **GetSchemaTable** metodunu açıklar.  
+ Sınıfının **GetSchemaTable** metodunu açıklar <xref:System.Data.OleDb.OleDbDataReader> .  
   
  <xref:System.Data.OracleClient.OracleDataReader.GetSchemaTable%2A>  
- <xref:System.Data.OracleClient.OracleDataReader> Sınıfının **GetSchemaTable** metodunu açıklar.  
+ Sınıfının **GetSchemaTable** metodunu açıklar <xref:System.Data.OracleClient.OracleDataReader> .  
   
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>  
- <xref:System.Data.SqlClient.SqlDataReader> Sınıfının **GetSchemaTable** metodunu açıklar.  
+ Sınıfının **GetSchemaTable** metodunu açıklar <xref:System.Data.SqlClient.SqlDataReader> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

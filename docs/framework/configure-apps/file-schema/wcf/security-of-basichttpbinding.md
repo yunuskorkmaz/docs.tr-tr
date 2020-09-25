@@ -2,14 +2,15 @@
 title: <security> / <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: c8e4f2d000a155eecd2a6c7faaaf4af525b24ca3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6144e5448526d7f2a7c89693f70f71a7f26c4a22
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738710"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183669"
 ---
 # <a name="security-of-basichttpbinding"></a>\<security> / \<basicHttpBinding>
+
 Uygulamasının güvenlik yeteneklerini tanımlar [\<basicHttpBinding>](basichttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Uygulamasının güvenlik yeteneklerini tanımlar [\<basicHttpBinding>](basichtt
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <security mode="Message/None/Transport/TransportWithCredential">
@@ -32,6 +33,7 @@ Uygulamasının güvenlik yeteneklerini tanımlar [\<basicHttpBinding>](basichtt
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -64,6 +66,7 @@ Uygulamasının güvenlik yeteneklerini tanımlar [\<basicHttpBinding>](basichtt
 |bağlama|Öğesinin bağlama öğesi [\<basicHttpBinding>](basichttpbinding.md) .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Varsayılan olarak, SOAP iletisi güvenli değildir ve istemcinin kimliği doğrulanmaz. Bu öğe, öğesi için ek güvenlik ayarları yapılandırmanıza olanak sağlar `basicHttpBinding` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.

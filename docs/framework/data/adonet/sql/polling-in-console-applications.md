@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 35275206e0486c35f262116fa1deb06b9f285723
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174530"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183136"
 ---
 # <a name="polling-in-console-applications"></a>Konsol Uygulamalarında Yoklama
-ADO.NET'deki eşzamanlı işlemler, başka bir iş parçacığı üzerinde diğer görevleri gerçekleştirirken bir iş parçacığı üzerinde zaman alan veritabanı işlemleri başlatmanızı sağlar. Ancak çoğu senaryoda, veritabanı işlemi tamamlanana kadar uygulamanızın devam etmemesi gereken bir noktaya ulaşırsınız. Bu gibi durumlarda, işlemin tamamlanıp tamamlanmadığını belirlemek için eşzamanlı işlemi yoklamak yararlıdır.  
+
+ADO.NET ' deki zaman uyumsuz işlemler, başka bir iş parçacığında diğer görevleri gerçekleştirirken bir iş parçacığında zaman alan veritabanı işlemlerini başlatabilmeniz için izin verir. Bununla birlikte, Çoğu senaryoda uygulamanızın veritabanı işlemi tamamlanana kadar devam etmesi gereken bir noktaya sahip olursunuz. Bu gibi durumlarda, işlemin tamamlanıp tamamlanmadığını anlamak için zaman uyumsuz işlemi yoklamak yararlıdır.  
   
- İşlemin <xref:System.IAsyncResult.IsCompleted%2A> tamamlanıp tamamlanmadığını öğrenmek için özelliği kullanabilirsiniz.  
+ <xref:System.IAsyncResult.IsCompleted%2A>İşlemin tamamlanıp tamamlanmadığını öğrenmek için özelliğini kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki konsol **uygulaması, AdventureWorks** örnek veritabanındaki verileri güncelleyerek çalışmalarını eşit bir şekilde tamamlar. Uzun süren bir işlemi taklit etmek için, bu örnek komut metnine bir WAITFOR deyimi ekler. Normalde, komutlarınızı daha yavaş çalıştırmaya çalışmazsınız, ancak bu durumda bunu yapmak eşzamanlı davranışı göstermeyi kolaylaştırır.  
+
+ Aşağıdaki konsol uygulaması, **AdventureWorks** örnek veritabanı içindeki verileri güncelleştirir ve işi zaman uyumsuz olarak çalışır. Uzun süre çalışan bir işleme öykünmek için, bu örnek komut metnine bir WAITFOR bildirisi ekler. Normalde, komutlarınızın daha yavaş çalışmasını yapmayı deneirsiniz, ancak bu durumda bunun yapılması zaman uyumsuz davranışı göstermeye daha kolay hale gelir.  
   
 ```vb  
 Imports System  
@@ -192,5 +194,5 @@ class Class1
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Asynchronous İşlemleri](asynchronous-operations.md)
+- [Zaman Uyumsuz İşlemler](asynchronous-operations.md)
 - [ADO.NET’e Genel Bakış](../ado-net-overview.md)

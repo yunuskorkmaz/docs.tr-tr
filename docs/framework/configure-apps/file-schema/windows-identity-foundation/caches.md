@@ -3,14 +3,15 @@ title: <caches>
 ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
-ms.openlocfilehash: 80f435b52fd7657c5cd44538028d6080beffe0b5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 791c5be8aa48db2b17a42a216ad2bf5e7b5a4bc1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252157"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189883"
 ---
 # \<caches>
+
 Oturum belirteçleri ve belirteci yeniden yürütme algılaması için kullanılan önbellekleri kaydeder.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Oturum belirteçleri ve belirteci yeniden yürütme algılaması için kullanıl
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<caches>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -30,9 +31,11 @@ Oturum belirteçleri ve belirteci yeniden yürütme algılaması için kullanıl
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -50,11 +53,13 @@ Oturum belirteçleri ve belirteci yeniden yürütme algılaması için kullanıl
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Bir güvenlik belirteci işleyicileri koleksiyonu için yapılandırma sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Öğesi `<caches>` , öğesinin altındaki hizmet düzeyinde `<identityConfiguration>` veya öğesinin altındaki güvenlik belirteci işleyicisi koleksiyonu düzeyinde belirtilebilir `<securityTokenHandlerConfiguration>` . Belirteç işleyici koleksiyonundaki ayarlar, hizmette belirtilen ayarları geçersiz kılar.  
   
  `<caches>`Öğesi sınıfı tarafından temsil edilir <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> . Yapılandırılan önbellekler sınıfı tarafından temsil edilir <xref:System.IdentityModel.Configuration.IdentityModelCaches> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML, oturum güvenlik belirteçlerini () tutmak için özel bir önbelleğin yapılandırmasını gösterir <xref:System.IdentityModel.Tokens.SessionSecurityToken> . Yapılandırma `ClaimsAwareWebFarm` örnekten alınır.  
   
 ```xml  
