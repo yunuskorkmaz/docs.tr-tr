@@ -2,14 +2,15 @@
 title: entity container
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
-ms.openlocfilehash: 0c194d86e6276c948a545f830e569cbc68f86a14
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 95fb59c86f951e75f0988f45219fd07cbb003c01
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737873"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200829"
 ---
 # <a name="entity-container"></a>entity container
+
 Bir *varlık kapsayıcısı* , [varlık kümelerinin](entity-set.md), [ilişkilendirme kümelerinin](association-set.md)ve [işlev içeri aktarmalarının](model-declared-function.md)mantıksal gruplandırmasıdır.  
   
  Aşağıdaki bir kavramsal modelde tanımlanan bir varlık kapsayıcısının doğru olması gerekir:  
@@ -21,7 +22,8 @@ Bir *varlık kapsayıcısı* , [varlık kümelerinin](entity-set.md), [ilişkile
  Bir varlık kapsayıcısı, bir veya daha fazla ad alanında tanımlanan varlık türlerini veya ilişkilerini kullanan varlık kümelerini veya ilişki kümelerini tanımlayabilir. Daha fazla bilgi için bkz. [varlık veri modeli: ad alanları](entity-data-model-namespaces.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki diyagramda üç varlık türü olan kavramsal bir model gösterilmektedir: `Book`, `Publisher`ve `Author`.  Daha fazla bilgi için bkz. sonraki örnek.  
+
+ Aşağıdaki diyagramda üç varlık türü olan kavramsal model gösterilmektedir: `Book` , `Publisher` , ve `Author` .  Daha fazla bilgi için bkz. sonraki örnek.  
   
  ![Üç varlık türüne sahip örnek model](./media/entity-container/example-model-three-entity-types.gif)  
   
