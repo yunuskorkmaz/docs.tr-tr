@@ -5,25 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: 1c4e0b368a8eb154207382ae70b9767f5a5fe64d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ad14e4d3d6a1107f994d9536485257f9dc1851f5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785440"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166852"
 ---
 # <a name="creating-expression-columns"></a>İfade Sütunları Oluşturma
-Bir sütun için bir ifade tanımlayabilir, bu değerin aynı satırdaki diğer sütun değerlerinden veya tablodaki birden çok satırın sütun değerlerinden hesaplanan bir değer içermesini sağlayabilirsiniz. Değerlendirilecek ifadeyi tanımlamak için, hedef sütunun <xref:System.Data.DataColumn.Expression%2A> özelliğini kullanın ve ifadedeki diğer sütunlara başvurmak için <xref:System.Data.DataColumn.ColumnName%2A> özelliğini kullanın. İfade <xref:System.Data.DataColumn.DataType%2A> sütunu için, ifadenin döndürdüğü değer için uygun olmalıdır.  
+
+Bir sütun için bir ifade tanımlayabilir, bu değerin aynı satırdaki diğer sütun değerlerinden veya tablodaki birden çok satırın sütun değerlerinden hesaplanan bir değer içermesini sağlayabilirsiniz. Değerlendirilecek ifadeyi tanımlamak için, <xref:System.Data.DataColumn.Expression%2A> hedef sütunun özelliğini kullanın ve <xref:System.Data.DataColumn.ColumnName%2A> ifadedeki diğer sütunlara başvurmak için özelliğini kullanın. <xref:System.Data.DataColumn.DataType%2A>İfade sütunu için, ifadenin döndürdüğü değer için uygun olmalıdır.  
   
  Aşağıdaki tabloda, bir tablodaki ifade sütunlarının birkaç olası kullanımı listelenmektedir.  
   
 |İfade türü|Örnek|  
 |---------------------|-------------|  
-|Karşılaştırma|"Toplam > = 500"|  
+|Karşılaştırma|"Toplam >= 500"|  
 |Hesaplamada|"BirimFiyat * miktar"|  
 |Toplama|Toplam (fiyat)|  
   
- Var olan bir **DataColumn** nesnesi üzerinde <xref:System.Data.DataColumn> **Expression** özelliğini ayarlayabilir veya özelliği aşağıdaki örnekte gösterildiği gibi oluşturucuya geçirilen üçüncü bağımsız değişken olarak ekleyebilirsiniz.  
+ Var olan bir **DataColumn** nesnesi üzerinde **Expression** özelliğini ayarlayabilir veya özelliği <xref:System.Data.DataColumn> Aşağıdaki örnekte gösterildiği gibi oluşturucuya geçirilen üçüncü bağımsız değişken olarak ekleyebilirsiniz.  
   
 ```vb  
 workTable.Columns.Add("Total",Type.GetType("System.Double"))  

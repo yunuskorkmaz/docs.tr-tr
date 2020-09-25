@@ -7,17 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 3085c21db386ca215d48bbe8ade83cd26732242c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5b67d384e37a5e509ce8ebcc5ddeb16a4437ea2b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137974"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168536"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma uyarısı (C# Başvurusu)
+
 `#pragma warning` Belirli uyarıları etkinleştirebilir veya devre dışı bırakabilir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```csharp
 #pragma warning disable warning-list  
@@ -25,6 +26,7 @@ ms.locfileid: "89137974"
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `warning-list`  
  Uyarı numaralarının virgülle ayrılmış bir listesi. "CS" ön eki isteğe bağlıdır.  
   

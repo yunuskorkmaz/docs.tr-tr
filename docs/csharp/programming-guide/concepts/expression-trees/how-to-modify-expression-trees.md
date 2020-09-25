@@ -3,14 +3,15 @@ title: İfade ağaçlarını değiştirme (C#)
 description: Varolan bir ifade ağacının kopyasını oluşturarak ve gerekli değişiklikleri yaparak bir ifade ağacını değiştirme hakkında bilgi edinin.
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: 45aea18e253811d4e5c60f23f7f8496d4358f64c
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 01176f489794a0f4ca29d229d29507fdba0fd5a8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105601"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167697"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>İfade ağaçlarını değiştirme (C#)
+
 Bu konu başlığı altında, bir ifade ağacının nasıl değiştirileceği gösterilmektedir. İfade ağaçları sabittir ve bu, doğrudan değiştirilemediği anlamına gelir. Bir ifade ağacını değiştirmek için, var olan bir ifade ağacının bir kopyasını oluşturmanız ve kopyayı oluşturduğunuzda gerekli değişiklikleri yapmanız gerekir. <xref:System.Linq.Expressions.ExpressionVisitor>Sınıfını, var olan bir ifade ağacında çapraz geçiş yapmak ve bulduğu her düğümü kopyalamak için kullanabilirsiniz.  
   
 ### <a name="to-modify-an-expression-tree"></a>Bir ifade ağacını değiştirmek için  

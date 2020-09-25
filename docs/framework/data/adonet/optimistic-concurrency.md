@@ -5,73 +5,75 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: e8d24a3998ca97fdf45e647bc40c1f7d6018ec20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 681044a9d905f052516ba240e25ffff84928e58e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149459"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166644"
 ---
 # <a name="optimistic-concurrency"></a>İyimser Eşzamanlılık
-Çok kullanıcılı bir ortamda, veritabanındaki verileri güncelleştirmek için iki model vardır: iyimser eşzamanlılık ve kötümser eşzamanlılık. Nesne, <xref:System.Data.DataSet> verileri remoting ve verilerle etkileşim gibi uzun süren etkinlikler için iyimser eşzamanlılık kullanımını teşvik etmek üzere tasarlanmıştır.  
+
+Çok kullanıcılı bir ortamda, veritabanındaki verileri güncelleştirmek için iki model vardır: iyimser eşzamanlılık ve Kötümser eşzamanlılık. <xref:System.Data.DataSet>Nesnesi, verileri uzaktan kullanma ve verilerle etkileşim kurma gibi uzun süre çalışan etkinlikler için iyimser eşzamanlılık kullanımını teşvik etmek üzere tasarlanmıştır.  
   
- Kötümser eşzamanlılık, diğer kullanıcıların verileri geçerli kullanıcıyı etkileyecek şekilde değiştirmesini önlemek için veri kaynağındaki satırları kilitlemeyi içerir. Kötümser bir modelde, bir kullanıcı kilidin uygulanmasına neden olan bir eylem gerçekleştirdiğinde, diğer kullanıcılar kilit sahibi onu serbest bırakana kadar kilitle çakışacak eylemleri gerçekleştiremez. Bu model, öncelikle veriler için ağır çekişmelerin olduğu ortamlarda kullanılır, böylece eşzamanlılık çakışmaları meydana geldiğinde verileri kilitlerle koruma nın maliyeti hareketleri geri alma maliyetinden daha az olur.  
+ Kötümser eşzamanlılık, diğer kullanıcıların verileri geçerli kullanıcıyı etkileyecek şekilde değiştirmesini engellemek için veri kaynağındaki satırları kilitlemeyi içerir. Bir kötümser modelde, bir Kullanıcı bir kilidin uygulanmasına neden olan bir eylem gerçekleştirdiğinde, diğer kullanıcılar kilit sahibi tarafından serbest gelinceye kadar kilit ile çakışacak eylemler gerçekleştiremez. Bu model öncelikle veriler için ağır çekişme olduğu ortamlarda kullanılır. böylece, kilitleri olan verileri koruma maliyetinin eşzamanlılık çakışmalarının oluşması durumunda işlem geri alma maliyetinden daha az olması sağlanır.  
   
- Bu nedenle, kötümser bir eşzamanlılık modelinde, bir satırı güncelleyen bir kullanıcı kilit oluşturur. Kullanıcı güncelleştirmeyi bitirip kilidi yayımlayana kadar, başka hiç kimse bu satırı değiştiremez. Bu nedenle, kötümser eşzamanlılık en iyi kilit süreleri kısa olacak, kayıtların programlı işleme olarak uygulanır. Kötümser eşzamanlılık, kullanıcılar verilerle etkileşimde yken ve kayıtların nispeten büyük bir süre için kilitlenmelerine neden olduğunda ölçeklenebilir bir seçenek değildir.  
+ Bu nedenle, Kötümser eşzamanlılık modelinde bir satırı güncelleştiren bir Kullanıcı bir kilit oluşturur. Kullanıcı güncelleştirmeyi tamamlayana ve kilidi serbest bırakılana kadar, başka hiç kimse bu satırı değiştiremez. Bu nedenle, kayıt işlemleri için programlı işleme gibi kilit süreleri kısa olduğunda, Kötümser eşzamanlılık en iyi şekilde uygulanır. Kullanıcılar verilerle etkileşim kurarken ve kayıtların görece büyük süreler boyunca kilitlenmesine neden olan Kötümser eşzamanlılık, ölçeklenebilir bir seçenek değildir.  
   
 > [!NOTE]
-> Aynı işlemde birden çok satırı güncelleştirmeniz gerekiyorsa, işlem oluşturmak kötümser kilitleme kullanmaktan daha ölçeklenebilir bir seçenektir.  
+> Aynı işlemde birden çok satırı güncelleştirmeniz gerekiyorsa, bir işlem oluşturmak, kötümser kilitlemeyi kullanmaktan daha ölçeklenebilir bir seçenektir.  
   
- Bunun aksine, iyimser eşzamanlılık kullanan kullanıcılar okurken bir satırı kilitlemez. Bir kullanıcı bir satırı güncelleştirmek istediğinde, uygulamanın okunduğundan beri başka bir kullanıcının satırı değiştirip değiştirmediğini belirlemesi gerekir. İyimser eşzamanlılık genellikle veri için düşük çekişmeli ortamlarda kullanılır. İyimser eşzamanlılık, kayıtların kilitlenmesi gerekmedığından ve kayıtların kilitlemesi ek sunucu kaynakları gerektirdiğinden performansı artırır. Ayrıca, kayıt kilitlerini korumak için veritabanı sunucusuna kalıcı bir bağlantı gereklidir. İyimser bir eşzamanlılık modelinde durum böyle olmadığından, sunucuya bağlantılar daha kısa sürede daha fazla sayıda istemciye hizmet vermekte serbesttir.  
+ Buna karşılık, iyimser eşzamanlılık kullanan kullanıcılar, okurken bir satırı kilitlemez. Bir Kullanıcı bir satırı güncelleştirmek istediğinde, uygulamanın, okuduğundan bu yana başka bir kullanıcının satırı değiştirip değiştirilmediğini belirlemesi gerekir. İyimser eşzamanlılık genellikle veriler için düşük çekişme olan ortamlarda kullanılır. Kayıt kilitleme gerekli olmadığından ve kayıt kilitlemesi ek sunucu kaynakları gerektirdiğinden iyimser eşzamanlılık performansı geliştirir. Ayrıca, kayıt kilitlerini sürdürmek için veritabanı sunucusuna kalıcı bir bağlantı gerekir. Bu durum bir iyimser eşzamanlılık modelinde olduğu için sunucu bağlantıları, daha az sayıda istemciye daha az zaman sunmaya ücretsizdir.  
   
- İyimser bir eşzamanlılık modelinde, bir kullanıcı veritabanından bir değer aldıktan sonra, ilk kullanıcı onu değiştirmeye çalıştıönce değeri değiştirirse, bir ihlal meydana gelmiş olarak kabul edilir. Sunucunun eşzamanlılık ihlalini nasıl çözeceği en iyi şekilde ilk olarak aşağıdaki örnek açıklanır.  
+ Bir iyimser eşzamanlılık modelinde, bir kullanıcı veritabanından bir değer aldıktan sonra, ilk Kullanıcı onu değiştirmeye çalışmadan önce değeri değiştirdiğinde, bir ihlalin oluştuğu kabul edilir. Sunucu bir eşzamanlılık ihlalinin nasıl çözümlendiğine göre en iyi şekilde aşağıdaki örnek açıklanarak gösterilir.  
   
- Aşağıdaki tablolar iyimser eşzamanlılık bir örnek izleyin.  
+ Aşağıdaki tablolar, iyimser eşzamanlılık örneğini izler.  
   
- Saat 13:00'te User1 veritabanından aşağıdaki değerlerle bir satır okur:  
+ Kullanıcı1 1:00:00 ' da aşağıdaki değerlere sahip bir satırı veritabanından okur:  
   
- **CustID Soyadı Ad soyad**  
+ **CustId LastName adı**  
   
  101 Smith Bob  
   
-|Sütun adı|Orijinal değer|Geçerli değer|Veritabanındaki değer|  
+|Sütun adı|Özgün değer|Geçerli değer|Veritabanındaki değer|  
 |-----------------|--------------------|-------------------|-----------------------|  
-|CustID|101|101|101|  
+|CustId|101|101|101|  
 |LastName|Smith|Smith|Smith|  
 |FirstName|Bob|Bob|Bob|  
   
- Saat 13:01'de User2 aynı satırı okur.  
+ Kullanıcı2, 1:01:00 ' da aynı satırı okur.  
   
- Saat 13:03'te **User2, FirstName'i** "Bob"dan "Robert" olarak değiştirir ve veritabanını güncelleştirir.  
+ Kullanıcı2 1:03, "Bob" **iken "** Robert" olarak değiştirilir ve veritabanını günceller.  
   
-|Sütun adı|Orijinal değer|Geçerli değer|Veritabanındaki değer|  
+|Sütun adı|Özgün değer|Geçerli değer|Veritabanındaki değer|  
 |-----------------|--------------------|-------------------|-----------------------|  
-|CustID|101|101|101|  
+|CustId|101|101|101|  
 |LastName|Smith|Smith|Smith|  
 |FirstName|Bob|Robert|Bob|  
   
- Güncelleştirme sırasında veritabanındaki değerler User2'nin sahip olduğu özgün değerlerle eşleştirdiği için güncelleştirme başarılı oldu.  
+ Güncelleştirme sırasında veritabanındaki değerler, kullanıcı2 'nin özgün değerleriyle eşleştiği için güncelleştirme başarılı olur.  
   
- Saat 13:05'te User1, "Bob"un ilk adını "James" olarak değiştirir ve satırı güncelleştirmeye çalışır.  
+ Kullanıcı1 1:05, "Bob" adının adını "James" olarak değiştirir ve satırı güncelleştirmeye çalışır.  
   
-|Sütun adı|Orijinal değer|Geçerli değer|Veritabanındaki değer|  
+|Sütun adı|Özgün değer|Geçerli değer|Veritabanındaki değer|  
 |-----------------|--------------------|-------------------|-----------------------|  
-|CustID|101|101|101|  
+|CustId|101|101|101|  
 |LastName|Smith|Smith|Smith|  
 |FirstName|Bob|James|Robert|  
   
- Bu noktada, Kullanıcı1 iyimser bir eşzamanlılık ihlaliyle karşılaşır, çünkü veritabanındaki değer ("Robert") artık User1'in beklediği orijinal değerle ("Bob") eşleşemez. Eşzamanlılık ihlali yalnızca güncelleştirmenin başarısız olduğunu bilmenizi sağlar. Kullanıcı1 tarafından sağlanan değişikliklerle User2 tarafından sağlanan değişikliklerin üzerine yazımının veya Kullanıcı1 tarafından yapılan değişikliklerin iptal edilmesine karar verilmesi gerekiyor.  
+ Bu noktada, veritabanındaki değer ("Robert") artık Kullanıcı1 'in beklediği orijinal değerle ("emre") eşleşmediği için Kullanıcı1 bir iyimser eşzamanlılık ihlaline rastlandı. Eşzamanlılık ihlali, güncelleştirmenin başarısız olduğunu bilmenizi sağlar. Artık kararların, Kullanıcı1 tarafından sağlanan değişikliklerle ilgili olarak belirtilen değişikliklerin üzerine yazılıp yazılmayacağı veya Kullanıcı1 tarafından yapılan değişiklikleri iptal edilip edilmeyeceğini yazmanız gerekir.  
   
-## <a name="testing-for-optimistic-concurrency-violations"></a>İyimser Eşzamanlılık İhlalleri Için Test  
- İyimser bir eşzamanlılık ihlali için test etmek için çeşitli teknikler vardır. Bir tabloda bir zaman damgası sütun dahil içerir. Veritabanları genellikle kaydın en son güncelleştirildiğinde tarih ve saati tanımlamak için kullanılabilecek zaman damgası işlevselliği sağlar. Bu teknik kullanılarak, tablo tanımına bir zaman damgası sütunu eklenmiştir. Kayıt güncelleştirildiğinde, zaman damgası geçerli tarih ve saati yansıtacak şekilde güncelleştirilir. İyimser eşzamanlılık ihlalleri için yapılan bir testte, zaman damgası sütunu tablonun içeriğinin sorgusuyla birlikte döndürülür. Bir güncelleştirme denendiğinde, veritabanındaki zaman damgası değeri değiştirilen satırda bulunan özgün zaman damgası değeriyle karşılaştırılır. Eşleşirlerse, güncelleştirme gerçekleştirilir ve zaman damgası sütunu güncelleştirmeyi yansıtacak geçerli saatle güncelleştirilir. Eşleşmezlerse, iyimser bir eşzamanlılık ihlali meydana geldi.  
+## <a name="testing-for-optimistic-concurrency-violations"></a>Iyimser eşzamanlılık Ihlalleri için test etme  
+
+ İyimser eşzamanlılık ihlalinin test edilmesi için çeşitli teknikler vardır. Biri, tabloya bir zaman damgası sütunu dahil içerir. Veritabanları genellikle kaydın en son güncelleştirildiği tarih ve saati belirlemek için kullanılan zaman damgası işlevlerini sağlar. Bu tekniği kullanarak, tablo tanımına bir zaman damgası sütunu eklenir. Kayıt her güncelleştirildiğinde, zaman damgası geçerli tarih ve saati yansıtacak şekilde güncelleştirilir. İyimser eşzamanlılık ihlallerine yönelik bir testte, zaman damgası sütunu tablo içeriğinin herhangi bir sorgusuyla döndürülür. Bir güncelleştirme denendiğinde, veritabanındaki zaman damgası değeri, değiştirilen satırda yer alan özgün zaman damgası değeriyle karşılaştırılır. Eşleşiyorsa, güncelleştirme gerçekleştirilir ve zaman damgası sütunu, güncelleştirmenin yansıtılması için geçerli zaman ile güncelleştirilir. Eşleşmiyorsa, iyimser eşzamanlılık ihlali meydana geldi.  
   
- İyimser bir eşzamanlılık ihlalini test etmek için başka bir teknik, bir satırdaki tüm özgün sütun değerlerinin hala veritabanında bulunanlarla eşleşindiğini doğrulamaktır. Örneğin, aşağıdaki sorguyu göz önüne alın:  
+ İyimser eşzamanlılık ihlalinin test edilmesine yönelik başka bir teknik de, bir satırdaki tüm özgün sütun değerlerinin veritabanında bulunan olanlarla aynı olduğunu doğrulamadır. Örneğin, aşağıdaki sorguyu göz önüne alın:  
   
 ```sql
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- **Tablo1'deki**bir satırı güncellerken iyimser bir eşzamanlılık ihlalini test etmek için aşağıdaki UPDATE deyimini yayınlayayım:  
+ **Table1**içinde bir satırı güncelleştirirken iyimser eşzamanlılık ihlalini sınamak IÇIN aşağıdaki güncelleştirme ifadesini verirsiniz:  
   
 ```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -82,28 +84,30 @@ WHERE Col1 = @OldCol1Value AND
       Col3 = @OldCol3Value  
 ```  
   
- Özgün değerler veritabanındaki değerlerle eşleşince güncelleştirme gerçekleştirilir. Bir değer değiştirildiyse, WHERE yan tümcesi eşleşme bulmayacağı için güncelleştirme satırı değiştirmez.  
+ Özgün değerler veritabanındaki değerlerle eşleştiği sürece, güncelleştirme gerçekleştirilir. Bir değer değiştirildiyse güncelleştirme satırı değiştirmez çünkü WHERE yan tümcesi bir eşleşme bulamaz.  
   
- Sorgunuzda her zaman benzersiz bir birincil anahtar değeri döndürmeniz in tavsiye edilir. Aksi takdirde, önceki UPDATE deyimi birden fazla satırı güncelleyebilir ve bu da amacınız olmayabilir.  
+ Sorgunuzda her zaman benzersiz bir birincil anahtar değeri döndürülmesi önerildiğini unutmayın. Aksi halde, önceki UPDATE deyimleri birden fazla satırı güncelleştirebilir, bu, sizin amacınız olabilir.  
   
- Veri kaynağınızdaki bir sütun nulls'a izin veriyorsa, yerel tablonuzda ve veri kaynağınızda eşleşen bir null başvurusu denetlemek için WHERE yan tümcenizi genişletmeniz gerekebilir. Örneğin, aşağıdaki UPDATE deyimi, yerel satırdaki null bir başvurunun hala veri kaynağındaki null başvurusuyla eşleştiğini veya yerel satırdaki değerin veri kaynağındaki değerle eşleşmesini doğrular.  
+ Veri kaynağınızdaki bir sütun null değerlere izin veriyorsa, yerel tablonuzda ve veri kaynağında eşleşen bir null başvurusu denetlemek için WHERE yan tümcesini genişletmeniz gerekebilir. Örneğin, aşağıdaki UPDATE bildiriminde, yerel satırdaki null başvurusunun, veri kaynağında null başvurusuyla hala eşleştiğini veya yerel satırdaki değerin hala veri kaynağındaki değerle eşleştiğini doğrular.  
   
 ```sql
 UPDATE Table1 Set Col1 = @NewVal1  
   WHERE (@OldVal1 IS NULL AND Col1 IS NULL) OR Col1 = @OldVal1  
 ```  
   
- Ayrıca, iyimser bir eşzamanlılık modeli kullanırken daha az kısıtlayıcı ölçütuygulamayı da seçebilirsiniz. Örneğin, WHERE yan tümcesi'ndeki yalnızca birincil anahtar sütunlarını kullanmak, diğer sütunların son sorgudan beri güncelleştirilip güncelleştirilmediğine bakılmaksızın verilerin üzerine yazılmasına neden olur. Ayrıca, belirli alanlar son sorgulandıktan sonra güncelleştirilmedikçe verilerin üzerine yazılmasıyla sonuçlanan bir WHERE yan tümcesi yalnızca belirli sütunlara da uygulayabilirsiniz.  
+ İyimser eşzamanlılık modeli kullanırken daha az kısıtlayıcı ölçütler uygulamayı da tercih edebilirsiniz. Örneğin, WHERE yan tümcesindeki birincil anahtar sütunlarının kullanılması, diğer sütunların son sorgudan bu yana güncelleştirilip güncelleştirilmediğini ne olursa olsun verilerin üzerine yazılmasına neden olur. Yalnızca belirli sütunlara bir WHERE yan tümcesi uygulayabilirsiniz ve belirli alanlar son sorgulandıktan sonra güncellenmemişse verilerin üzerine yazılmasına neden olur.  
   
-### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated Olay  
- Nesnenin <xref:System.Data.Common.DataAdapter> **RowUpdated** olayı, iyimser eşzamanlılık ihlalleri uygulamanıza bildirim sağlamak için daha önce açıklanan tekniklerle birlikte kullanılabilir. **RowUpdate,** **Bir DataSet'ten** **Değiştirilen** satırı güncelleştirmeye yönelik her denemeden sonra oluşur. Bu, özel hata bilgileri ekleme, yeniden deneme mantığı ekleme ve benzeri özel hata bilgileri ekleme gibi özel işleme kodu eklemenize olanak tanır. Nesne, <xref:System.Data.Common.RowUpdatedEventArgs> tablodaki değiştirilmiş bir satır için belirli bir güncelleştirme komutundan etkilenen satır sayısını içeren **RecordsAffected** özelliğini döndürür. İyimser eşzamanlılık için güncelleştirme komutunu ayarlayarak, **RecordsAffected** özelliği, sonuç olarak, iyimser bir eşzamanlılık ihlali oluştuğunda, hiçbir kayıt güncelleştirildiğinden 0 değerini döndürecektir. Bu durumda, bir özel durum atılır. **RowUpdate** olayı, **updatestatus.SkipCurrentRow**gibi uygun bir **RowUpdateEventArgs.Status** değeri ayarlayarak bu oluşumu işlemek ve özel durum önlemek sağlar. **RowUpdated** olayı hakkında daha fazla bilgi için [DataAdapter Olaylarını işleme](handling-dataadapter-events.md)konusuna bakın.  
+### <a name="the-dataadapterrowupdated-event"></a>DataAdapter. RowUpdated olayı  
+
+ Nesnenin **RowUpdated** olayı, <xref:System.Data.Common.DataAdapter> daha önce açıklanan tekniklerle birlikte kullanılarak iyimser eşzamanlılık ihlallerinin uygulamanıza yönelik bildirim sağlar. **RowUpdated** , bir **veri kümesinden** **değiştirilen** bir satırı güncelleştirme denemesinden sonra oluşur. Bu, bir özel durum oluştuğunda işleme, özel hata bilgileri ekleme, yeniden deneme mantığı ekleme vb. gibi özel işleme kodu eklemenizi sağlar. <xref:System.Data.Common.RowUpdatedEventArgs>Nesnesi, bir tablodaki değiştirilmiş bir satır için belirli bir Update komutundan etkilenen satır sayısını içeren bir **recordsamısson** özelliği döndürür. Güncelleştirme komutunu iyimser eşzamanlılık için test edecek şekilde ayarlayarak, **Recordsaetkilenmeyen** özelliği, bir sonuç olarak bir iyimser eşzamanlılık ihlali meydana geldiğinde 0 değerini döndürür, çünkü hiçbir kayıt güncelleştirilmemiş. Bu durumda, bir özel durum oluşturulur. **RowUpdated** olayı, bu oluşumu idare etmenizi ve **UpdateStatus. SkipCurrentRow**gibi uygun bir **RowUpdatedEventArgs. Status** değeri ayarlayarak özel durumu önlemenize olanak sağlar. **RowUpdated** olayı hakkında daha fazla bilgi için bkz. [DataAdapter olaylarını işleme](handling-dataadapter-events.md).  
   
- İsteğe bağlı olarak, Update'i aramadan önce **DataAdapter.ContinueUpdateOnError'ı** **doğru**olarak ayarlayabilir ve **Güncelleştirme**tamamlandığında **Update** belirli bir satırın **RowError** özelliğinde depolanan hata bilgilerine yanıt verebilirsiniz. Daha fazla bilgi için [Satır Hata Bilgileri'ne](./dataset-datatable-dataview/row-error-information.md)bakın.  
+ İsteğe bağlı olarak, **Güncelleştir**' i çağırmadan önce **DataAdapter. devam updateıse** 'yi **true**olarak ayarlayabilir ve **güncelleştirme** tamamlandığında belirli bir satırın **RowError** özelliğinde depolanan hata bilgilerine yanıt verebilirsiniz. Daha fazla bilgi için bkz. [satır hata bilgileri](./dataset-datatable-dataview/row-error-information.md).  
   
-## <a name="optimistic-concurrency-example"></a>İyimser Eşzamanlılık Örneği  
- Aşağıda, bir **DataAdapter'ın** **UpdateCommand'ını** iyimser eşzamanlılık için test etmek üzere ayarlayan ve daha sonra iyimser eşzamanlılık ihlallerini sınamak için **RowUpdate** olayını kullanan basit bir örnek verilmiştir. İyimser bir eşzamanlılık ihlaliyle karşılaşıldığında, uygulama güncelleştirmenin iyimser bir eşzamanlılık ihlalini yansıtacak şekilde verildiği satırın **Satır Hatasını** ayarlar.  
+## <a name="optimistic-concurrency-example"></a>İyimser eşzamanlılık örneği  
+
+ Aşağıda, bir **DataAdapter** 'ın **UpdateCommand** öğesini iyimser eşzamanlılık için test etmek üzere ayarlayan ve ardından iyimser eşzamanlılık Ihlallerini test etmek için **RowUpdated** olayını kullanan basit bir örnek verilmiştir. İyimser eşzamanlılık ihlaliyle karşılaşıldığında, uygulama güncelleştirmenin verildiği satırın **RowError hatasını** bir iyimser eşzamanlılık ihlalini yansıtacak şekilde ayarlar.  
   
- UPDATE komutunun WHERE yan tümcesine geçirilen parametre değerlerinin ilgili sütunlarının **Özgün** değerlerine eşlendiğine dikkat edin.  
+ UPDATE komutunun WHERE yan tümcesine geçirilen parametre değerlerinin kendi sütunlarının **özgün** değerleriyle eşlendiğine unutmayın.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

@@ -1,44 +1,45 @@
 ---
-title: 'Nasıl yapılır: devralma hiyerarşilerini eşleme'
+title: 'Nasıl yapılır: Devralma Hiyerarşilerini Eşleme'
 ms.date: 03/30/2017
 ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 737cb8743d8fd9c93cd46ebf50fba3fe554a35f2
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: c0709fde96a5d2f39f04a08ccd24ddf90c782f30
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634670"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166423"
 ---
-# <a name="how-to-map-inheritance-hierarchies"></a>Nasıl yapılır: devralma hiyerarşilerini eşleme
+# <a name="how-to-map-inheritance-hierarchies"></a>Nasıl yapılır: Devralma Hiyerarşilerini Eşleme
+
 LINQ ' de devralma eşlemesini uygulamak için aşağıdaki adımlarda açıklandığı gibi devralma hiyerarşisinin kök sınıfında öznitelikleri ve öznitelik özelliklerini belirtmeniz gerekir. Visual Studio kullanan geliştiriciler, devralma hiyerarşilerini eşlemek için Nesne İlişkisel Tasarımcısı kullanabilir. Bkz. [nasıl yapılır: O/R tasarımcısını kullanarak devralmayı yapılandırma](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
   
 > [!NOTE]
-> Alt sınıflarda özel öznitelik veya özellik gerekmez. Özellikle bu alt sınıfların <xref:System.Data.Linq.Mapping.TableAttribute> özniteliğine sahip olmadığına not edin.  
+> Alt sınıflarda özel öznitelik veya özellik gerekmez. Özellikle bu alt sınıfların özniteliğe sahip olmadığına not edin <xref:System.Data.Linq.Mapping.TableAttribute> .  
   
 ### <a name="to-map-an-inheritance-hierarchy"></a>Devralma hiyerarşisini eşlemek için  
   
-1. Kök sınıfa <xref:System.Data.Linq.Mapping.TableAttribute> özniteliğini ekleyin.  
+1. <xref:System.Data.Linq.Mapping.TableAttribute>Özniteliği kök sınıfa ekleyin.  
   
-2. Ayrıca, kök sınıfa, hiyerarşi yapısındaki her bir sınıf için bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> özniteliği ekleyin.  
+2. Ayrıca, kök sınıfa, <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> hiyerarşi yapısındaki her bir sınıf için bir öznitelik ekleyin.  
   
-3. Her <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> özniteliği için bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> özelliği tanımlayın.  
+3. Her <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> öznitelik için bir özellik tanımlayın <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> .  
   
-     Bu özellik, bu veri satırının hangi sınıfa veya alt sınıfa ait olduğunu göstermek için <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> sütunundaki veritabanı tablosunda görünen bir değeri barındırır.  
+     Bu özellik, <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> Bu veri satırının hangi sınıfa veya alt sınıfa ait olduğunu göstermek için sütunundaki veritabanı tablosunda görünen bir değeri barındırır.  
   
-4. Her <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> özniteliği için bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> özelliği de ekleyin.  
+4. Her <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> öznitelik için de bir özellik ekleyin <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> .  
   
      Bu özellik, anahtar değerinin hangi sınıf veya alt sınıfa göre olduğunu belirten bir değer içerir.  
   
-5. <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> özniteliklerinden yalnızca birinde bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> özelliği ekleyin.  
+5. Özniteliklerden yalnızca birinde <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> özellik ekleyin.  
   
-     Bu özellik, veritabanı tablosundan ayrıştırıcı değeri devralma eşlemelerinde herhangi bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> değerle eşleşmediği zaman bir *geri dönüş* eşlemesi belirlemek için kullanılır.  
+     Bu özellik, veritabanı tablosundan ayrıştırıcı değeri devralma eşlemelerinde hiçbir değerle eşleşmediği zaman bir *geri dönüş* eşlemesi belirlemek için kullanılır <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> .  
   
-6. Bir <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği için <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> özelliği ekleyin.  
+6. <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>Öznitelik için bir özellik ekleyin <xref:System.Data.Linq.Mapping.ColumnAttribute> .  
   
-     Bu özellik, <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> değerini tutan sütun olduğunu belirtir.  
+     Bu özellik, bu değeri tutan sütun olduğunu belirtir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> .  
   
 ## <a name="example"></a>Örnek  
   

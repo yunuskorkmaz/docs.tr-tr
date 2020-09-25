@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: 5f8717115464ec3d9798228d7d50a8f08b2db300
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 6e14a2aac427c7adfd69f66eaf624816b75f6ea2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466098"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168939"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target: winexe (C# derleyici seçenekleri)
+
 **-Target: winexe** seçeneği derleyicinin YÜRÜTÜLEBILIR (exe), Windows programı oluşturmasına neden olur.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,6 +27,7 @@ ms.locfileid: "89466098"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Yürütülebilir dosya,. exe uzantısıyla oluşturulacaktır. Bir Windows programı, .NET kitaplığından veya Windows API 'Leriyle bir kullanıcı arabirimi sağlayan bir programdır.  
   
  Bir konsol uygulaması oluşturmak için [-target: exe](./target-exe-compiler-option.md) ' yi kullanın.  
@@ -47,6 +49,7 @@ ms.locfileid: "89466098"
  Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.ProjectProperties3.OutputType%2A> ..  
   
 ## <a name="example"></a>Örnek  
+
  `in.cs`Bir Windows programında derle:  
   
 ```console  

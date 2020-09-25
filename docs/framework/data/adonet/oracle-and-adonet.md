@@ -7,14 +7,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 736b8dc5179a15ec219c1dae06b9ee6b5d6c3ef3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286695"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166631"
 ---
 # <a name="oracle-and-adonet"></a>Oracle ve ADO.NET
+
 > [!NOTE]
 > İçindeki türler <xref:System.Data.OracleClient> kullanım dışıdır. Türler geçerli sürüm of.NET çerçevesinde desteklenmeye devam eder, ancak gelecekteki bir sürümde kaldırılacaktır. Microsoft, üçüncü taraf bir Oracle sağlayıcısı kullanmanızı önerir.  
   
@@ -39,7 +40,8 @@ csc /r:System.Data.OracleClient.dll
 ```  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sistem gereksinimleri](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
+
+ [Sistem Gereksinimleri](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  Oracle için .NET Framework Veri Sağlayıcısı kullanma gereksinimlerini açıklar ve bunu kullanırken bilinmesi gereken birçok sorunu açıklar.  
   
  [Oracle BFILE](oracle-bfiles.md)  
@@ -64,6 +66,7 @@ csc /r:System.Data.OracleClient.dll
  <xref:System.Data.OracleClient.OracleConnection>Bir işlemin etkin olduğunu belirlerse, nesnenin var olan bir dağıtılmış işlemde otomatik olarak nasıl listeleneceğini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)  
  ADO.NET kullanılırken güvenli kodlama uygulamalarını açıklar.  
   

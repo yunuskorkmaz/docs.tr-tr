@@ -5,50 +5,53 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: c89fb3e11ae8e0f8ea37727446cdf65db9499a1d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f612877f5e7da6442c242aa0d56d811c0aa7cf8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148380"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166462"
 ---
 # <a name="how-to-map-database-relationships"></a>Nasıl yapılır: Veritabanı İlişkilerini Eşleme
-Varlık sınıfınızda her zaman aynı olacak tüm veri ilişkilerini özellik başvuruları olarak kodlayabilirsiniz. Örneğin Northwind örnek veritabanında, müşteriler genellikle sipariş verdiğinden, modelde müşterilerle siparişleri arasında her zaman bir ilişki vardır.  
+
+Varlık sınıfınızda, her zaman aynı olacak herhangi bir veri ilişkisi olarak özellik başvuruları olarak kodlayabilirsiniz. Northwind örnek veritabanında, örneğin müşteriler genellikle sipariş yerleştirtiğinden, modelde müşteriler ve siparişleri arasında her zaman bir ilişki vardır.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]bu tür <xref:System.Data.Linq.Mapping.AssociationAttribute> ilişkileri temsil yardımcı olmak için bir öznitelik tanımlar. Bu öznitelik, veritabanında <xref:System.Data.Linq.EntitySet%601> <xref:System.Data.Linq.EntityRef%601> yabancı anahtar ilişkisi ne olacağını temsil etmek için ve türleri ile birlikte kullanılır. Daha fazla bilgi için, [Öznitelik Tabanlı Eşleme'nin](attribute-based-mapping.md)İlişki Özniteliği bölümüne bakın.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.AssociationAttribute>Bu tür ilişkileri temsil etmenize yardımcı olmak için bir özniteliği tanımlar. Bu öznitelik, <xref:System.Data.Linq.EntitySet%601> <xref:System.Data.Linq.EntityRef%601> bir veritabanında yabancı anahtar ilişkisi olduğunu göstermek için ve türleri ile birlikte kullanılır. Daha fazla bilgi için, [öznitelik tabanlı eşlemenin](attribute-based-mapping.md)ilişkilendirme özniteliği bölümüne bakın.  
   
 > [!NOTE]
-> İlişkilendirmeAttribute ve ColumnAttribute Depolama özellik değerleri büyük/küçük harf duyarlıdır. Örneğin, AssociationAttribute.Storage özelliği için öznitelikkullanılan değerlerin kodun başka bir yerinde kullanılan ilgili özellik adları için durum la eşleştirdiğinden emin olun. Bu, Visual Basic de dahil olmak üzere genellikle büyük/küçük harf duyarlı olmayan tüm .NET programlama dilleri için de geçerlidir. Depolama özelliği hakkında daha fazla <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>bilgi için bkz.  
+> AssociationAttribute ve ColumnAttribute Storage Özellik değerleri büyük/küçük harfe duyarlıdır. Örneğin, AssociationAttribute. Storage özelliğinin özniteliğinde kullanılan değerlerin, kodun başka bir yerinde kullanılan ilgili özellik adları için büyük/küçük harf ile eşleştiğinden emin olun. Bu, genellikle büyük/küçük harf duyarlı olmayan, hatta Visual Basic dahil olmak üzere tüm .NET programlama dilleri için geçerlidir. Depolama özelliği hakkında daha fazla bilgi için bkz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType> ..  
   
- Çoğu ilişki, bu konunun sonraki örneğinde olduğu gibi bire bir dir. Ayrıca bire bir ve çok-çok ilişkileri aşağıdaki gibi temsil edebilirsiniz:  
+ Çoğu ilişki, bu konunun ilerleyen kısımlarında olduğu gibi bire çok aynıdır. Ayrıca, bire bir ve çoktan çoğa ilişkilerini aşağıdaki şekilde de kullanabilirsiniz:  
   
-- Bire bir: Her iki tarafı da <xref:System.Data.Linq.EntitySet%601> dahil ederek bu tür bir ilişkiyi temsil eder.  
+- Bire bir: her iki tarafa de ekleyerek bu tür ilişkiyi temsil eder <xref:System.Data.Linq.EntitySet%601> .  
   
-     Örneğin, müşterinin `Customer` - `SecurityCode` güvenlik kodunun `Customer` tabloda bulunmaması ve yalnızca yetkili kişiler tarafından erişilebilmeleri için oluşturulmuş bir ilişkiyi düşünün.  
+     Örneğin, `Customer` - `SecurityCode` müşterinin güvenlik kodu tabloda bulunamamayacak `Customer` ve yalnızca yetkili kişiler tarafından erişilebilecek şekilde oluşturulan bir ilişki düşünün.  
   
-- Çok-çok: Çok-çok ilişkilerde, bağlantı tablosunun birincil anahtarı *(bağlantı* tablosu olarak da adlandırılır) genellikle diğer iki tablodaki yabancı anahtarların bir bileşiminden oluşur.  
+- Çoka çok: çoktan çoğa ilişkilerde, bağlantı tablosunun birincil anahtarı ( *birleşim* tablosu olarak da adlandırılır) genellikle diğer iki tablodaki yabancı anahtarların bir bileşimi tarafından oluşturulur.  
   
-     Örneğin, bağlantı `Employee` - `Project` tablosunu `EmployeeProject`kullanarak oluşan çok-çok ilişkisi düşünün. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]böyle bir ilişkinin üç sınıf kullanılarak `Employee`modellenmelerini gerektirir: , , `Project`ve `EmployeeProject`. Bu durumda, bir ve `Employee` a `Project` arasındaki ilişkiyi değiştirme birincil anahtarın `EmployeeProject`bir güncelleştirme gerektiren görünebilir. Ancak, bu durum en iyi varolan `EmployeeProject` bir silme ve `EmployeeProject`yeni bir oluşturma olarak modellenmiştir.  
+     Örneğin, `Employee` - `Project` bağlantı tablosu kullanılarak oluşturulmuş bir çoktan çoğa ilişki düşünün `EmployeeProject` . [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Bu tür bir ilişkinin üç sınıf kullanılarak modellenmesi gerekir: `Employee` , `Project` ve `EmployeeProject` . Bu durumda, ve arasındaki ilişkiyi değiştirmek, `Employee` `Project` birincil anahtarın güncelleştirilmesini gerektirecek şekilde görünür `EmployeeProject` . Ancak, bu durum, mevcut bir `EmployeeProject` ve yeni oluşturma için en iyi modellenir `EmployeeProject` .  
   
     > [!NOTE]
-    > İlişkisel veritabanlarındaki ilişkiler genellikle diğer tablolardaki birincil anahtarlara başvuran yabancı anahtar değerleri olarak modellenir. Aralarında gezinmek için, *ilişkisel* birleştirme işlemi kullanarak iki tabloyu açıkça ilişkilendirin.  
+    > İlişkisel veritabanlarındaki ilişkiler genellikle diğer tablolardaki birincil anahtarlara başvuran yabancı anahtar değerleri olarak modellenir. Bunlar arasında gezinmek için, ilişkisel bir *JOIN* işlemi kullanarak iki tabloyu açıkça ilişkilendirirsiniz.  
     >
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Diğer taraftan, nesneler, *nokta* gösterimi kullanarak yön ettiğiniz özellik başvurularını veya başvuru koleksiyonlarını kullanarak birbirlerine başvururlar.  
+    >  İçindeki nesneler [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , diğer yandan, özellik başvurularını veya *nokta* gösterimini kullanarak gittiğiniz başvuruların koleksiyonlarını kullanarak birbirlerine başvurur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki bire bir örnekte, `Customer` sınıfın müşteriler ve siparişleri arasındaki ilişkiyi bildiren bir özelliği vardır.  Özellik `Orders` türündedir. <xref:System.Data.Linq.EntitySet%601> Bu tür, bu ilişkinin bir-çok (birçok siparişiçin bir müşteri) olduğunu belirtir. Özellik, <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> bu ilişkilendirme nasıl gerçekleştirileceğini açıklamak için kullanılır, yani, bu ile karşılaştırıldığında ilgili sınıfta özelliğin adını belirterek. Bu örnekte, `CustomerID` bir veritabanı *birleştirme* bu sütun değerini karşılaştıracağı gibi özellik karşılaştırılır.  
+
+ Aşağıdaki bire çok örnekte, `Customer` sınıfının müşteriler ve siparişleri arasındaki ilişkiyi bildiren bir özelliği vardır.  `Orders`Özelliği türündedir <xref:System.Data.Linq.EntitySet%601> . Bu tür, bu ilişkinin bire çok (bir müşterinin birden çok siparişe) olduğunu belirtir. Özelliği, bu <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> ilişkinin nasıl yapıldığını, yani ilgili sınıfta bununla Karşılaştırılacak özelliği belirterek belirtmek için kullanılır. Bu örnekte, `CustomerID` bir veritabanı *birleştirmesi* bu sütun değerini karşılaştıracağından, özelliği karşılaştırılır.  
   
 > [!NOTE]
-> Visual Studio kullanıyorsanız, sınıflar arasında bir ilişki oluşturmak için Nesne İlişkisel Tasarımcısı'nı kullanabilirsiniz.  
+> Visual Studio kullanıyorsanız, sınıflar arasında bir ilişki oluşturmak için Nesne İlişkisel Tasarımcısı kullanabilirsiniz.  
   
  [!code-csharp[DlinqCustomize#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#3)]
  [!code-vb[DlinqCustomize#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#3)]  
   
 ## <a name="example"></a>Örnek  
- Durumu tersine de çevirebilirsiniz. Müşteriler ve `Customer` siparişler arasındaki ilişkilendirme tanımlamak için sınıfı kullanmak `Order` yerine, sınıfı kullanabilirsiniz. Sınıf, `Order` aşağıdaki <xref:System.Data.Linq.EntityRef%601> kod örneğinde olduğu gibi, müşteriyle olan ilişkiyi açıklamak için türü kullanır.  
+
+ Ayrıca, durumu tersine çevirebilirsiniz. `Customer`Sınıfı, müşteriler ve siparişler arasındaki ilişkiyi betimleyen şekilde kullanmak yerine `Order` sınıfını kullanabilirsiniz. `Order`Sınıfı, <xref:System.Data.Linq.EntityRef%601> Aşağıdaki kod örneğinde olduğu gibi, ilişkiyi müşteriye geri açıklama için kullanır.  
   
 > [!NOTE]
-> Sınıf <xref:System.Data.Linq.EntityRef%601> *ertelenmiş yüklemeyi*destekler. Daha fazla bilgi için [Ertelenmiş ve Hemen Yükleme](deferred-versus-immediate-loading.md) *bölümüne bakın.*  
+> <xref:System.Data.Linq.EntityRef%601>Sınıfı *ertelenmiş yüklemeyi*destekler. Daha fazla bilgi için *bkz* . [ertelenmiş ve hemen yükleme](deferred-versus-immediate-loading.md).  
   
  [!code-csharp[DLinqCustomize#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#5)]
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  

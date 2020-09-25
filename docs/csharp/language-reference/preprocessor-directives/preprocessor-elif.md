@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-ms.openlocfilehash: 3aa9082b392b352091b9fde74a85f9dd155ad7b1
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 383c143792a39bb3abcd255804360ad5e2f8ef74
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132293"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168705"
 ---
 # <a name="elif-c-reference"></a>#elif (C# Başvurusu)
+
 `#elif` bileşik bir koşullu yönerge oluşturmanıza olanak sağlar. `#elif`Yukarıdaki [#if](./preprocessor-if.md) ne de önceki, isteğe bağlı bir yönerge ifadesi olarak değerlendiriliyorsa ifade değerlendirilir `#elif` `true` . Bir `#elif` ifade olarak değerlendirilirse `true` , derleyici `#elif` ve sonraki koşullu yönerge arasındaki tüm kodu değerlendirir. Örneğin:  
   
 ```csharp
@@ -30,6 +31,7 @@ ms.locfileid: "89132293"
  `==`Birden çok sembolü değerlendirmek için İşleçleri (eşitlik), (eşitsizlik), ( `!=` `&&` ve) ve `||` (veya) kullanabilirsiniz. Simgeleri ve işleçleri parantez ile de gruplandırabilirsiniz.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `#elif` , ile eşdeğerdir:  
   
 ```csharp

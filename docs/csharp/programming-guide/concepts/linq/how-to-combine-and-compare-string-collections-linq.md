@@ -3,14 +3,15 @@ title: Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)
 description: Bu örnek, metin satırları içeren dosyaları birleştirir. C# ' de LINQ içindeki satır kümelerinde basit bir birleştirme, birleşim ve bir kesişim yapmayı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: bfbdb9a0a3d531b56578b242c91596d9e41b6cd6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 7bc2b2fbc6a6ce09305f870275f2f0ea5379d4fc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105363"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167606"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)
+
 Bu örnekte, metin satırları içeren dosyaların nasıl birleştiriyapılacağı ve sonuçların nasıl sıralanacağını gösterilmektedir. Özellikle, iki metin satırı kümesinde basit bir birleştirme, birleşim ve bir kesişimin nasıl gerçekleştirileceğini gösterir.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Projeyi ve metin dosyalarını ayarlamak için  
@@ -170,6 +171,7 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
  `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

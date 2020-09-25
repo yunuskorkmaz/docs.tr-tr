@@ -8,17 +8,19 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: f5641dc765b1a2d62adb76babe3f111730d4550b
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4d60b8c6c0f9d4ea66125374327f5e1ad2098694
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302691"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167450"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Dosya veya klasör oluşturma (C# Programlama Kılavuzu)
+
 Bilgisayarınızda program aracılığıyla bir klasör oluşturabilir, bir alt klasör oluşturabilir, alt klasörde bir dosya oluşturabilir ve verileri dosyaya yazabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
+
  [!code-csharp[csFilesandFolders#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#10)]  
   
  Klasör zaten varsa, <xref:System.IO.Directory.CreateDirectory%2A> hiçbir şey yapmaz ve hiçbir özel durum oluşturulmaz. Ancak, <xref:System.IO.File.Create%2A?displayProperty=nameWithType> varolan bir dosyayı yeni bir dosya ile değiştirir. Örnek, varolan bir `if` - `else` dosyanın değiştirilmesini engellemek için bir ifade kullanır.  
@@ -64,6 +66,7 @@ Bilgisayarınızda program aracılığıyla bir klasör oluşturabilir, bir alt 
 - Klasör adı yalnızca bir iki nokta üst üste, ":" ( <xref:System.IO.PathTooLongException> sınıf).  
   
 ## <a name="net-security"></a>.NET güvenliği  
+
  <xref:System.Security.SecurityException>Kısmi güven durumlarında sınıfın bir örneği oluşturulabilir.  
   
  Klasörü oluşturma izniniz yoksa, örnek sınıfının bir örneğini oluşturur <xref:System.UnauthorizedAccessException> .  

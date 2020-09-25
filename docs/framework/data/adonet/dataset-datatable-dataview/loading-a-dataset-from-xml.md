@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 77715913c24423c1dc95478977f4e3821e4c247b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0920acac2c82677cfce37703b7027dedce91a535
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545317"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166813"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML’den DataSet Yükleme
+
 Bir ADO.NET içeriği <xref:System.Data.DataSet> BIR XML akışından veya belgesinden oluşturulabilir. Ayrıca .NET Framework, XML 'den hangi bilgilerin yüklendiği ve şema ya da ilişkisel yapısının nasıl oluşturulduğuna ilişkin büyük bir esnekliğe sahip olursunuz <xref:System.Data.DataSet> .  
   
  <xref:System.Data.DataSet>XML 'deki verileri bir ile doldurmanız için nesnenin **ReadXml** yöntemini kullanın <xref:System.Data.DataSet> . **ReadXml** yöntemi bir dosyadan, akıştan veya bir **XmlReader**'dan yararlanır ve XML kaynağı Ile Isteğe bağlı bir **XmlReadMode** bağımsız değişkeni olarak bağımsız değişken alır. **XmlReader**hakkında daha fazla bilgi için bkz. [XML verilerini XmlTextReader ile okuma](/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). **ReadXml** YÖNTEMI, XML akışı veya belgesinin içeriğini okur ve <xref:System.Data.DataSet> ile verileri yükler. Ayrıca, <xref:System.Data.DataSet> belirtilen **XmlReadMode** öğesine ve ilişkisel bir şemanın zaten mevcut olup olmadığına bağlı olarak ilişkisel şeması da oluşturur.  
@@ -33,6 +34,7 @@ Bir ADO.NET içeriği <xref:System.Data.DataSet> BIR XML akışından veya belge
 > Bir XML belgesine yolunun bir parçası **olarak konumlandırılmış** bir XmlReader öğesine bir **XmlReader** geçirirseniz, **ReadXml** sonraki öğe düğümüne okur ve bunu yalnızca öğe düğümünün sonuna kadar okuyan kök öğe olarak değerlendirir. **XmlReadMode. Fragment**belirtirseniz bu uygulanmaz.  
   
 ## <a name="dtd-entities"></a>DTD varlıkları  
+
  XML 'niz bir belge türü tanımı (DTD) şemasında tanımlanan varlıklar içeriyorsa, bir <xref:System.Data.DataSet> dosya adı, akış veya doğrulama olmayan **XmlReader** öğesini **ReadXml**öğesine geçirerek yüklemeyi denerseniz bir özel durum oluşturulur. Bunun yerine, **EntityHandling** 'U **EntityHandling. ExpandEntities**olarak ayarlayıp bir **XmlValidatingReader**oluşturmanız ve **XmlValidatingReader** 'ı **ReadXml**'e geçirmeniz gerekir. **XmlValidatingReader** , tarafından okunmadan önce varlıkları genişletir <xref:System.Data.DataSet> .  
   
  Aşağıdaki kod örnekleri, bir XML akışından nasıl yükleneceğini göstermektedir <xref:System.Data.DataSet> . İlk örnekte, **ReadXml** yöntemine geçirilmiş bir dosya adı gösterilmektedir. İkinci örnek, kullanılarak yüklenen XML içeren bir dize gösterir <xref:System.IO.StringReader> .  
@@ -101,7 +103,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
-> İçin XSD şeması <xref:System.Data.DataSet> bir **targetNamespace**içeriyorsa, veriler okunmayabilir ve uygun bir **ReadXml** <xref:System.Data.DataSet> ad alanı olmayan öğeleri içeren XML ile yüklemek için ReadXml çağrılırken özel durumlarla karşılaşabilirsiniz. Bu durumda nitelenmemiş öğeleri okumak için, XSD şemanızda **elementFormDefault** eşittir "Qualified" olarak ayarlayın. Örnek:  
+> İçin XSD şeması <xref:System.Data.DataSet> bir **targetNamespace**içeriyorsa, veriler okunmayabilir ve uygun bir **ReadXml** <xref:System.Data.DataSet> ad alanı olmayan öğeleri içeren XML ile yüklemek için ReadXml çağrılırken özel durumlarla karşılaşabilirsiniz. Bu durumda nitelenmemiş öğeleri okumak için, XSD şemanızda **elementFormDefault** eşittir "Qualified" olarak ayarlayın. Örneğin:  
   
 ```xml  
 <xsd:schema id="customDataSet"
@@ -114,6 +116,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 ## <a name="merging-data-from-xml"></a>XML 'den veri birleştirme  
+
  <xref:System.Data.DataSet>Zaten veri içeriyorsa, XML 'deki yeni veriler, içinde zaten mevcut olan verilere eklenir <xref:System.Data.DataSet> . **ReadXml** , XML 'den <xref:System.Data.DataSet> eşleşen birincil anahtarlarla satır bilgileriyle birleştirme yapmaz. XML 'deki yeni bilgilerle mevcut satır bilgilerinin üzerine yazmak için, **ReadXml** kullanarak yeni bir ve yeni bir oluşturma <xref:System.Data.DataSet> yapın <xref:System.Data.DataSet.Merge%2A> <xref:System.Data.DataSet> <xref:System.Data.DataSet> . **DiffGram bir** **XmlReadMode** Ile **ReadXml** kullanarak bir DiffGram yüklemenin aynı benzersiz tanımlayıcıya sahip satırları birleştirdiğini unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

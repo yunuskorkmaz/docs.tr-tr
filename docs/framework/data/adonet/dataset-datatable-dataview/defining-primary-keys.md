@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: 159b23eb4ef5ca38ebce6e488080d315ec3be081
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94b033d58061e3d2e48a352d782eec7c4202fa43
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151188"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166839"
 ---
 # <a name="defining-primary-keys"></a>Birincil Anahtarlar Tanımlama
-Veritabanı tablosunda genellikle tablodaki her satırı benzersiz olarak tanımlayan bir sütun veya sütun grubu bulunur. Bu tanımlayıcı sütun veya sütun grubu birincil anahtar olarak adlandırılır.  
+
+Veritabanı tablosu genellikle tablodaki her satırı benzersiz bir şekilde tanımlayan bir sütun veya sütun grubuna sahiptir. Bu tanımlayıcı sütun veya sütun grubuna birincil anahtar denir.  
   
- Bir tek <xref:System.Data.DataColumn> bir <xref:System.Data.DataTable.PrimaryKey%2A> için olarak <xref:System.Data.DataTable>tanımladığınızda , tablo <xref:System.Data.DataColumn.AllowDBNull%2A> otomatik olarak **yanlış** ve <xref:System.Data.DataColumn.Unique%2A> özelliği **doğru**sütunun özelliği ni ayarlar. Birden çok sütunlu birincil anahtarlar için yalnızca **AllowDBNull** özelliği otomatik olarak **false**olarak ayarlanır.  
+ <xref:System.Data.DataColumn>Bir için tek bir olarak belirlediğinizde <xref:System.Data.DataTable.PrimaryKey%2A> <xref:System.Data.DataTable> , tablo otomatik olarak <xref:System.Data.DataColumn.AllowDBNull%2A> sütunun özelliğini **yanlış** , <xref:System.Data.DataColumn.Unique%2A> özelliği de **true**olarak ayarlar. Birden çok sütunlu birincil anahtarlar için, yalnızca **AllowDBNull** özelliği otomatik olarak **false**olarak ayarlanır.  
   
- Bir a'nın <xref:System.Data.DataTable> **PrimaryKey** özelliği, aşağıdaki örneklerde gösterildiği gibi, bir veya daha fazla **DataColumn** nesnesi dizisini değeri olarak alır. İlk örnek, tek bir sütunu birincil anahtar olarak tanımlar.  
+ Bir öğesinin **PrimaryKey** özelliği, <xref:System.Data.DataTable> Aşağıdaki örneklerde gösterildiği gibi bir veya daha fazla **DataColumn** nesnesinin bir dizisi olarak alır. İlk örnek, birincil anahtar olarak tek bir sütunu tanımlar.  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  
@@ -39,7 +40,7 @@ columns[0] = workTable.Columns["CustID"];
 workTable.PrimaryKey = columns;  
 ```  
   
- Aşağıdaki örnekte, birincil anahtar olarak iki sütun tanımlanır.  
+ Aşağıdaki örnek, iki sütunu birincil anahtar olarak tanımlar.  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustLName"), _  

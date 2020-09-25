@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: 76a54f9011371492bdc15f15c3e40d51082deed3
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5b62bbfe28bb5aa82605a88a83cf82eff9278807
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89138416"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168874"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (C# derleyici seçenekleri)
+
 **-Win32icon** seçeneği çıkış dosyasına bir. ico dosyası ekler ve bu, çıktı dosyasına dosya Gezgini 'nde istenen görünümü verir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -26,10 +27,12 @@ ms.locfileid: "89138416"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `filename`  
  Çıkış dosyanıza eklemek istediğiniz. ico dosyası.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  [Kaynak derleyicisi](/windows/desktop/menurc/resource-compiler)ile bir. ico dosyası oluşturulabilir. Visual C++ programı derlerken kaynak derleyicisi çağrılır; . ico dosyası. rc dosyasından oluşturulur.  
   
  Bir .NET Framework kaynak dosyası için bkz. [-linkresource](./linkresource-compiler-option.md) (başvuruya) veya [-Resource](./resource-compiler-option.md) (iliştirilecek). . Res dosyasını içeri aktarmak için bkz. [-win32res](./win32res-compiler-option.md) .  
@@ -45,6 +48,7 @@ ms.locfileid: "89138416"
  Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A> ..  
   
 ## <a name="example"></a>Örnek  
+
  `in.cs`Üretmek için bir. ico dosyası derleyin ve ekleyin `rf.ico` `in.exe` :  
   
 ```console  

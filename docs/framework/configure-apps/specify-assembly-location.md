@@ -7,14 +7,15 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 3b24ff99eee9027d507ef89ca855162f221f826a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6f9e41584ca36fcead06b73a485cb879c45705fa
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555126"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166891"
 ---
 # <a name="specifying-an-assemblys-location"></a>Derlemenin Konumunu Belirtme
+
 Bir derlemenin konumunu belirtmek için iki yol vardır:  
   
 - Öğesini kullanarak [\<codeBase>](./file-schema/runtime/codebase-element.md) .  
@@ -24,6 +25,7 @@ Bir derlemenin konumunu belirtmek için iki yol vardır:
  Derleme konumlarını belirtmek için [.NET Framework yapılandırma aracını (Mscorcfg. msc)](/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) veya derlemeler için ortak dil çalışma zamanı için konum belirlemek üzere de kullanabilirsiniz.  
   
 ## <a name="using-the-codebase-element"></a>Öğesini kullanma \<codeBase>  
+
  **\<codeBase>** Öğesini, derleme sürümünü de yeniden yönlendiren makine yapılandırması veya yayımcı ilkesi dosyaları içinde kullanabilirsiniz. Çalışma zamanı hangi derleme sürümünün kullanılacağını belirlediğinde, sürümü belirleyen dosyadan kod tabanı ayarını uygular. Hiçbir kod tabanı belirtilmemişse, çalışma zamanı derlemeyi normal şekilde araştırarak. Ayrıntılar için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../deployment/how-the-runtime-locates-assemblies.md).  
   
  Aşağıdaki örnek, bir derlemenin konumunun nasıl ekleneceğini gösterir.  
@@ -50,6 +52,7 @@ Bir derlemenin konumunu belirtmek için iki yol vardır:
 > Güçlü adlandırılmış olmayan bir derleme için bir kod temel ipucu belirtirseniz, ipucu uygulama tabanına veya uygulama temel dizininin bir alt dizinine işaret etmelidir.  
   
 ## <a name="using-the-probing-element"></a>Öğesini kullanma \<probing>  
+
  Çalışma zamanı, yoklama ile kod tabanı olmayan derlemeler bulur. Algılama hakkında daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../deployment/how-the-runtime-locates-assemblies.md).  
   
  [\<probing>](./file-schema/runtime/probing-element.md)Bir derlemeyi bulurken çalışma zamanının aranması gereken alt dizinleri belirtmek için uygulama yapılandırma dosyasındaki öğesini kullanabilirsiniz. Aşağıdaki örnek, çalışma zamanının arama gereken dizinlerin nasıl gösterileceğini gösterir.  

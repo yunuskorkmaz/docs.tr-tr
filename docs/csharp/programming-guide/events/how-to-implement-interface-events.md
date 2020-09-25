@@ -6,14 +6,15 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: bd86aed4f8d8ac6e291c11fe441f87ac97593b03
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 153a2efa254bf2f2c81cec4b28a53207cdc4efe5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302132"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167554"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Arabirim olaylarını uygulama (C# Programlama Kılavuzu)
+
 Bir [arabirim](../../language-reference/keywords/interface.md) , bir [olayı](../../language-reference/keywords/event.md)bildirebilir. Aşağıdaki örnek, bir sınıfında arabirim olaylarının nasıl uygulanacağını gösterir. Temel olarak kurallar, herhangi bir arabirim yöntemi veya özelliği uygularken olduğu gibidir.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Arabirim olaylarını bir sınıfta uygulamak için  
@@ -52,6 +53,7 @@ namespace ImplementInterfaceEvents
 ```  
   
 ## <a name="example"></a>Örnek  
+
 Aşağıdaki örnek, sınıfınızın iki veya daha fazla arabirimden devraldığı daha az yaygın olan durumun nasıl işleneceğini ve her arabirimin aynı ada sahip bir olaya sahip olduğunu gösterir. Bu durumda, en az bir olay için açık bir arabirim uygulamasını sağlamalısınız. Bir olay için açık arabirim uygulama yazdığınızda, `add` ve `remove` olay erişimcilerini de yazmanız gerekir. Bunlar normalde derleyici tarafından sağlanır, ancak bu durumda derleyici bunları sağlayamaz.  
   
 Kendi erişimclerinizi sunarak, iki olayın sınıfınıza aynı olay ile mi yoksa farklı olaylara göre mi temsil edileceğini belirtebilirsiniz. Örneğin, olayların arabirim belirtimlerine göre farklı zamanlarda oluşturulması gerekiyorsa, her bir olayı sınıfınıza ayrı bir uygulamayla ilişkilendirebilirsiniz. Aşağıdaki örnekte, aboneler `OnDraw` bir `IShape` veya bir veya bir öğesine şekil başvurusunu kaldırarak hangi olayın alacağını tespit eder `IDrawingObject` .  
@@ -61,7 +63,7 @@ Kendi erişimclerinizi sunarak, iki olayın sınıfınıza aynı olay ile mi yok
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Ekinlikler](./index.md)
+- [Olaylar](./index.md)
 - [Temsilciler](../delegates/index.md)
 - [Açık Arabirim Uygulaması](../interfaces/explicit-interface-implementation.md)
 - [Türetilmiş sınıflarda temel sınıf olayları oluşturma](./how-to-raise-base-class-events-in-derived-classes.md)
