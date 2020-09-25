@@ -1,16 +1,17 @@
 ---
-title: <serviceBehaviors>iş akışı
+title: <serviceBehaviors> iş akışı
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 51aba42d-0674-4726-a313-af6ed3aaa8f2
-ms.openlocfilehash: 28b25f05e4f241cc9a959e36b05866cd7791e247
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 08cf8a9c8782c3e654964ef343dacbd69b6ad19c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398663"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175830"
 ---
-# <a name="servicebehaviors-of-workflow"></a>\<serviceBehaviors>iş akışı
+# <a name="servicebehaviors-of-workflow"></a>\<serviceBehaviors> iş akışı
+
 Bu yapılandırma bölümü için belirli bir hizmet tanımlanan tüm davranışları temsil eder.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Bu yapılandırma bölümü için belirli bir hizmet tanımlanan tüm davranış
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors-of-workflow.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceBehaviors>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <behaviors>  
