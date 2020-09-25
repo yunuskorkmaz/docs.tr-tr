@@ -3,14 +3,15 @@ title: XML dosyasından nesne verilerini okuma (C#)
 description: Bu C# örneği, daha önce XmlSerializer sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerini okur.
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 525a93812279756b3802d43d85bb5e61d8f7415e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8d607424201cfad08df1c5ffbfb66a114b31886d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302795"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178768"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>XML dosyasından nesne verilerini okuma (C#)
+
 Bu örnek, daha önce sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerini okur <xref:System.Xml.Serialization.XmlSerializer> .  
   
 ## <a name="example"></a>Örnek  
@@ -44,6 +45,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
 "c:\temp\SerializationOverview.xml" dosya adını seri hale getirilen verileri içeren dosyanın adıyla değiştirin. Verileri seri hale getirme hakkında daha fazla bilgi için bkz. [BIR XML dosyasına nesne verileri yazma (C#)](./how-to-write-object-data-to-an-xml-file.md).
   
  Sınıfın parametresiz ortak bir oluşturucusu olmalıdır.  
@@ -51,6 +53,7 @@ public void ReadXML()
  Yalnızca ortak özellikler ve alanların serisi kaldırılır.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
+
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
 - Seri hale getirilen sınıfın ortak, parametresiz bir oluşturucusu yok.  
@@ -60,6 +63,7 @@ public void ReadXML()
 - Dosya yok ( <xref:System.IO.IOException> ).  
   
 ## <a name="net-security"></a>.NET güvenliği  
+
  Girişleri her zaman doğrulayın ve güvenilmeyen bir kaynaktaki verileri hiçbir zaman serisini kaldırma. Yeniden oluşturulan nesne, yerel bir bilgisayarda, serisi kaldırılan kodun izinleriyle çalışır. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 42b6ddf4c3d09bcf8ef0ada105cefedccc63b505
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 58cdcf046b2a5a292493c5704739b22aa4ec4f17
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504634"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178417"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist> Öğesi (Ağ Ayarları)
+
 Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -24,7 +25,7 @@ Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bypasslist>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <bypasslist>
@@ -32,9 +33,11 @@ Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -52,6 +55,7 @@ Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.
 |[defaultProxy](defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Atlama listesi, <xref:System.Net.WebRequest> proxy sunucu aracılığıyla değil, doğrudan erişim sağlayan URI 'leri tanımlayan normal ifadeler içerir.  
   
  Bu öğe için bir normal ifade belirtirken dikkatli olmanız gerekir. "[A-z] + \\ . contoso \\ . com" normal ifadesi, contoso.com etki alanındaki herhangi bir konakla eşleşir, ancak aynı zamanda contoso.com.cpandl.com etki alanındaki herhangi bir konakla eşleşir. Yalnızca contoso.com etki alanındaki bir konağı eşleştirmek için bir tutturucu ("$"): "[a-z] + \\ . contoso \\ . com $" kullanın.  
@@ -59,9 +63,11 @@ Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.
  Normal ifadeler hakkında daha fazla bilgi için bkz.. [Normal ifadeleri .NET Framework](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek atlama listesine iki adres ekler. İlki, contoso.com etki alanındaki tüm sunucular için proxy 'yi atlar; İkincisi, IP adresleri 192,168 ile başlayan tüm sunucular için proxy 'yi atlar.  
   
 ```xml  
@@ -80,4 +86,4 @@ Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

@@ -7,22 +7,25 @@ helpviewer_keywords:
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: 357aebe042bc5b6e761b3c1bad258021441de22c
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 556f4459f5d1f8b7a7419122b640c661e182a51c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302002"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178664"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Try/catch kullanarak özel durum işleme (C# Programlama Kılavuzu)
+
 [Try-catch](../../language-reference/keywords/try-catch.md) bloğunun amacı, çalışma kodu tarafından oluşturulan bir özel durumu yakalamak ve işleymelidir. Bazı özel durumlar bir `catch` blokta işlenebilir ve sorun yeniden oluşturulan özel durum olmadan çözüldü; ancak, genellikle yapabileceğiniz tek şey uygun özel durumun atılmasından emin olabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnekte, <xref:System.IndexOutOfRangeException> en uygun özel durum değildir: hata, <xref:System.ArgumentOutOfRangeException> `index` çağıran tarafından geçirilen bağımsız değişkenin nedeni olduğundan yöntem için daha anlamlı hale gelir.  
   
  [!code-csharp[csProgGuideExceptions#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#5)]  
   
 ## <a name="comments"></a>Yorumlar  
+
  Özel duruma neden olan kod `try` bloğa alınmıştır. Bir `catch` ifade, gerçekleşirse, işleme hemen sonra eklenir `IndexOutOfRangeException` . `catch`Bloğu öğesini işler `IndexOutOfRangeException` ve bunun yerine daha uygun `ArgumentOutOfRangeException` özel durumu oluşturur. Çağıranı mümkün olduğunca fazla bilgi sağlamak için, özgün özel durumu yeni özel durum olarak belirtmeyi göz önünde bulundurun <xref:System.Exception.InnerException%2A> . <xref:System.Exception.InnerException%2A>Özelliği [salt okunurdur](../../properties.md#read-only), bunu yeni özel durumun oluşturucusunda atamanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
