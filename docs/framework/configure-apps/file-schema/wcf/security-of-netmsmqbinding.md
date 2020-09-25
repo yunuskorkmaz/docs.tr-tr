@@ -2,14 +2,15 @@
 title: <security> / <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 7877fd59aff581eee5b62a1ca224dbf51c956069
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 32b066fdf4d8edbbd36fdff7b14bdec87ddc970d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738673"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170083"
 ---
 # <a name="security-of-netmsmqbinding"></a>\<security> / \<netMsmqBinding>
+
 MSMQ bağlamasının güvenlik ayarlarını tanımlar. Aktarım veya SOAP güvenliğinin etkinleştirilip etkinleştirilmeyeceğini ve bu durumda hangi kimlik doğrulama modunun ve koruma düzeylerinin kullanımda olduğunu belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ MSMQ bağlamasının güvenlik ayarlarını tanımlar. Aktarım veya SOAP güven
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <security mode="None/Transport/Message/Both">
@@ -33,6 +34,7 @@ MSMQ bağlamasının güvenlik ayarlarını tanımlar. Aktarım veya SOAP güven
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -52,7 +54,7 @@ MSMQ bağlamasının güvenlik ayarlarını tanımlar. Aktarım veya SOAP güven
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|bağlama|Öğesinin bağlama öğesi[\<netMsmqBinding>](netmsmqbinding.md)|  
+|bağlama|Öğesinin bağlama öğesi [\<netMsmqBinding>](netmsmqbinding.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

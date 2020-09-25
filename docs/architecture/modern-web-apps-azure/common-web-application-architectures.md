@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: dc907e57adba0dd81e5cf27c2798759cee12bed2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dd9cdf3cdda0605d9454fe096be01655e67a0d0a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539365"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169303"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -175,7 +175,7 @@ ASP.NET Core MVC uygulamasındaki kullanıcı arabirimi katmanı, uygulamanın g
 ##### <a name="ui-layer-types"></a>UI katman türleri
 
 - Denetleyiciler
-- Filtreler
+- FilTReleri
 - Görünümler
 - ViewModel 'lar
 - Başlangıç
@@ -205,7 +205,7 @@ Tek parçalı yaklaşım yaygındır ve birçok kuruluş bu mimari yaklaşımla 
 
 ![Şekil 5-14](./media/image5-14.png)
 
-Microsoft Azure tek parçalı uygulamalar dağıtmak, her örnek için adanmış VM 'Ler kullanılarak elde edilebilir. [Azure sanal makine ölçek kümelerini](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)kullanarak VM 'leri kolayca ölçeklendirebilirsiniz. [Azure Uygulama Hizmetleri](https://azure.microsoft.com/services/app-service/) tek parçalı uygulamalar çalıştırabilir ve VM 'leri yönetmek zorunda kalmadan örnekleri kolayca ölçeklendirebilir. Azure Uygulama Hizmetleri, tek tek Docker Kapsayıcıları örnekleri çalıştırabilir ve dağıtımı basitleştirir. Docker 'ı kullanarak tek bir VM 'yi Docker Konağı olarak dağıtabilir ve birden çok örnek çalıştırabilirsiniz. Şekil 5-14 ' de gösterildiği gibi Azure dengeleyicisi 'ni kullanarak ölçeklendirmeyi yönetebilirsiniz.
+Microsoft Azure tek parçalı uygulamalar dağıtmak, her örnek için adanmış VM 'Ler kullanılarak elde edilebilir. [Azure sanal makine ölçek kümelerini](/azure/virtual-machine-scale-sets/)kullanarak VM 'leri kolayca ölçeklendirebilirsiniz. [Azure Uygulama Hizmetleri](https://azure.microsoft.com/services/app-service/) tek parçalı uygulamalar çalıştırabilir ve VM 'leri yönetmek zorunda kalmadan örnekleri kolayca ölçeklendirebilir. Azure Uygulama Hizmetleri, tek tek Docker Kapsayıcıları örnekleri çalıştırabilir ve dağıtımı basitleştirir. Docker 'ı kullanarak tek bir VM 'yi Docker Konağı olarak dağıtabilir ve birden çok örnek çalıştırabilirsiniz. Şekil 5-14 ' de gösterildiği gibi Azure dengeleyicisi 'ni kullanarak ölçeklendirmeyi yönetebilirsiniz.
 
 Çeşitli konaklara dağıtım, geleneksel dağıtım teknikleri ile yönetilebilir. Docker konakları el ile gerçekleştirilen ve sürekli teslim (CD) işlem hatları gibi Otomasyon aracılığıyla **Docker Run** gibi komutlarla yönetilebilir.
 

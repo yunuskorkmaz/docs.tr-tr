@@ -7,23 +7,25 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 98054a4a21704293faa1194dac342bc48aef138d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: a71957eabea788fb06195df1ef026390947f013d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165646"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170473"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ ve Genel Türler (C#)
+
 LINQ sorguları, .NET Framework sürüm 2,0 ' de tanıtılan genel türleri temel alır. Sorgu yazmaya başlayabilmeniz için önce genel türler hakkında ayrıntılı bilgi sahibi olmanız gerekmez. Ancak, iki temel kavramı anlamak isteyebilirsiniz:  
   
 1. Gibi bir genel koleksiyon sınıfının bir örneğini oluşturduğunuzda <xref:System.Collections.Generic.List%601> , "T" öğesini listenin tutacaksınız nesne türüyle değiştirirsiniz. Örneğin, dizelerin bir listesi olarak ifade edilir `List<string>` ve `Customer` nesne listesi olarak ifade edilir `List<Customer>` . Genel liste kesin bir şekilde yazılır ve öğelerini olarak depolayan koleksiyonlar üzerinde birçok avantaj sağlar <xref:System.Object> . Bir `Customer` ' a eklemeye çalışırsanız `List<string>` , derleme zamanında bir hata alırsınız. Çalışma zamanı türü atama gerçekleştirmeniz zorunda olmadığınızdan genel koleksiyonları kullanmak kolaydır.  
   
-2. <xref:System.Collections.Generic.IEnumerable%601>, genel koleksiyon sınıflarının ifadesini kullanarak numaralandırılacağını sağlayan arabirimdir `foreach` . Genel koleksiyon sınıfları, <xref:System.Collections.Generic.IEnumerable%601> destek gibi genel olmayan koleksiyon sınıfları gibi desteklenir <xref:System.Collections.ArrayList> <xref:System.Collections.IEnumerable> .  
+2. <xref:System.Collections.Generic.IEnumerable%601> , genel koleksiyon sınıflarının ifadesini kullanarak numaralandırılacağını sağlayan arabirimdir `foreach` . Genel koleksiyon sınıfları, <xref:System.Collections.Generic.IEnumerable%601> destek gibi genel olmayan koleksiyon sınıfları gibi desteklenir <xref:System.Collections.ArrayList> <xref:System.Collections.IEnumerable> .  
   
  Genel türler hakkında daha fazla bilgi için bkz. [Genel türler](../../generics/index.md).  
   
 ## <a name="ienumerablet-variables-in-linq-queries"></a>LINQ sorgularında IEnumerable<T \> değişkenleri  
+
  LINQ sorgu değişkenleri, gibi <xref:System.Collections.Generic.IEnumerable%601> bir türetilmiş tür veya olarak yazılır <xref:System.Linq.IQueryable%601> . Olarak yazılmış bir sorgu değişkeni gördüğünüzde, `IEnumerable<Customer>` yalnızca sorgunun çalıştırıldığı zaman, sıfır veya daha fazla nesne dizisi üreten anlamına gelir `Customer` .  
   
  [!code-csharp[csLINQGettingStarted#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#34)]  
@@ -31,6 +33,7 @@ LINQ sorguları, .NET Framework sürüm 2,0 ' de tanıtılan genel türleri teme
  Daha fazla bilgi için bkz. [LINQ sorgu Işlemlerinde tür ilişkileri](./type-relationships-in-linq-query-operations.md).  
   
 ## <a name="letting-the-compiler-handle-generic-type-declarations"></a>Derleyicinin genel tür bildirimleri tanıtıcısına izin verme  
+
  Tercih ederseniz, [var](../../../language-reference/keywords/var.md) anahtar sözcüğünü kullanarak genel sözdiziminden kaçınabilirsiniz. `var`Anahtar sözcüğü, derleyiciye, yan tümcesinde belirtilen veri kaynağına bakarak bir sorgu değişkeninin türünü çıkarmasını söyler `from` . Aşağıdaki örnek, önceki örnekle aynı derlenmiş kodu üretir:  
   
  [!code-csharp[csLINQGettingStarted#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#35)]  

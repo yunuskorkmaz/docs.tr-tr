@@ -2,12 +2,12 @@
 title: Zaman uyumsuz ileti tabanlı iletişim
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Zaman uyumsuz ileti tabanlı iletişimler mikro hizmetler mimarisinde önemli bir kavramdır, çünkü mikro hizmetleri bir diğerinden bağımsız tutmanın en iyi yolu, Ayrıca, sonunda da eşzamanlı olarak eşitlenmektir.
 ms.date: 09/20/2018
-ms.openlocfilehash: 2bd79935cad3d62e488a57da6b40a0c87349960b
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 17b3fb3fe3f94d5387359061e3297ebfa6e5be7a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679181"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169251"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -59,7 +59,7 @@ Daha önce [Dağıtılmış veri yönetimi sorunları ve çözümleri](distribut
 
 Olay temelli zaman uyumsuz iletişimde, bir mikro hizmet olayları bir olay veri yoluna yayımlar ve çok sayıda mikro hizmet, bildirim almak ve bu hizmete işlem yapmak için abone olabilir. Uygulamanız, olay odaklı ileti tabanlı iletişimler için kullanılacak protokolü tespit eder. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) , güvenilir sıraya alınmış iletişimin sağlanmasına yardımcı olabilir.
 
-Bir olay veri yolu kullandığınızda, [Kbbitmq](https://www.rabbitmq.com/) gibi bir ileti ARACıSıDıR API kullanarak kod içeren bir soyutlama düzeyi (bir olay veri yolu arabirimi gibi) ve [konularla birlikte Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)gibi bir hizmet veri yolu kullanmak isteyebilirsiniz. Alternatif olarak, Event Bus ve Yayımla/abone ol sisteminizi ifade etmek için NServiceBus, Masstransıya ya da daha parlak gibi daha yüksek düzeyde bir Service Bus kullanmak isteyebilirsiniz.
+Bir olay veri yolu kullandığınızda, [Kbbitmq](https://www.rabbitmq.com/) gibi bir ileti ARACıSıDıR API kullanarak kod içeren bir soyutlama düzeyi (bir olay veri yolu arabirimi gibi) ve [konularla birlikte Azure Service Bus](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)gibi bir hizmet veri yolu kullanmak isteyebilirsiniz. Alternatif olarak, Event Bus ve Yayımla/abone ol sisteminizi ifade etmek için NServiceBus, Masstransıya ya da daha parlak gibi daha yüksek düzeyde bir Service Bus kullanmak isteyebilirsiniz.
 
 ## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Üretim sistemleri için mesajlaşma teknolojileri hakkında bir göz
 
@@ -75,7 +75,7 @@ Birden çok mikro hizmette olay odaklı bir mimari uygulamaya yönelik bir zorlu
 
 - [İşlem günlüğü madenciliği](https://www.scoop.it/t/sql-server-transaction-log-mining)kullanılıyor.
 
-- Tam [olay](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) kaynağını belirleme düzenini kullanma.
+- Tam [olay](/azure/architecture/patterns/event-sourcing) kaynağını belirleme düzenini kullanma.
 
 - [Giden kutusu deseninin](https://www.kamilgrzybek.com/design/the-outbox-pattern/)kullanımı: bir işlem veritabanı tablosu, olayı oluşturacak ve yayınlayacak bir olay Oluşturucu bileşeni için temel olacak bir ileti kuyruğu olarak.
 

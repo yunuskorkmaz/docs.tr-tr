@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 3ccd4546402dbc8e5d9245af6411ba2d831d4959
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9c3b307668968865b401aedc04c79f95d4f32513
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127249"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171344"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# derleyici seçenekleri)
+
 **-Warnaserror +** seçeneği tüm uyarıları hata olarak değerlendirir  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,6 +27,7 @@ ms.locfileid: "89127249"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Normalde uyarı olarak bildirilen tüm iletiler, bunun yerine hata olarak bildirilir ve derleme işlemi durdurulur (çıktı dosyası derlenmemiştir).  
   
  Varsayılan olarak, **-warnaserror-** , bir çıkış dosyasının oluşturulmasını engellemez uyarısı oluşmasına neden olur. - **warnaserror +** ile aynı olan **warnaserror**, uyarıların hata olarak işlenmesine neden olur.  
@@ -45,6 +47,7 @@ ms.locfileid: "89127249"
  Bu derleyici seçeneğini program aracılığıyla ayarlamak için, bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors> ..  
   
 ## <a name="example"></a>Örnek  
+
  Derle `in.cs` ve derleyicinin hiçbir uyarı görüntülememe:  
   
 ```console  

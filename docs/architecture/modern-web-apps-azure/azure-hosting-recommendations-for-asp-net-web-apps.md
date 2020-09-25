@@ -4,17 +4,17 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 19626aea07fb26222af575a709b54577ca12589b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164428"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169225"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core Web uygulamaları için Azure barındırma önerileri
 
 > "Her yerde iş kolu liderlerinin her ikisi de, buluttan uygulamaları (SaaS olarak da bilinir) almak ve bunları dergi abonelikleri gibi ödemeleri için BT departmanlarını atlar. Hizmete artık gerek duyulmuyorsa, köşede kullanılmayan bir ekipman olmadan aboneliği iptal edebilirler. "  
-> _\-Darıl Pköpmer, Gartner analist_
+> _\- Darıl Pköpmer, Gartner analist_
 
 Uygulamanızın ihtiyaçları ve mimarisi ne olursa olsun Microsoft Azure destekleyebilir. Barındırma gereksinimleriniz, statik bir Web sitesi veya onlarca hizmetlerden oluşan gelişmiş bir uygulama kadar basit olabilir. ASP.NET Core tek parçalı Web uygulamaları ve destekleyici hizmetler için önerilen birkaç tanınmış yapılandırma vardır. Bu makaledeki öneriler, tam uygulamalar, bireysel süreçler veya veriler arasında barındırılacak kaynak türüne göre gruplandırılır.
 
@@ -54,7 +54,7 @@ Bulut için iyileştirilmiş uygulamalara ek olarak, Azure App Service Web Apps 
 
 ![Temel Azure mimarisi](./media/image1-5.png)
 
-Tek bir kaynak grubundaki az sayıda kaynak, genellikle bu tür bir uygulamayı yönetmek için yeterlidir. Genellikle tek bir birim olarak dağıtılan ve birçok ayrı işlemlerden oluşan uygulamalar yerine, bu [temel mimari yaklaşım](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)için iyi adaylardır. Bu yaklaşım, mimari açıdan basit olsa da, barındırılan uygulamanın her türlü artışı karşılamak için her ikisini de (düğüm başına daha fazla kaynak) ve dışarı (daha fazla barındırılan düğüm) ölçeklendirmesine izin verir. Otomatik ölçeklendirme ile uygulama, düğümler arasında talep ve ortalama yük temelinde uygulamayı barındıran düğüm sayısını otomatik olarak ayarlanacak şekilde yapılandırılabilir.
+Tek bir kaynak grubundaki az sayıda kaynak, genellikle bu tür bir uygulamayı yönetmek için yeterlidir. Genellikle tek bir birim olarak dağıtılan ve birçok ayrı işlemlerden oluşan uygulamalar yerine, bu [temel mimari yaklaşım](/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)için iyi adaylardır. Bu yaklaşım, mimari açıdan basit olsa da, barındırılan uygulamanın her türlü artışı karşılamak için her ikisini de (düğüm başına daha fazla kaynak) ve dışarı (daha fazla barındırılan düğüm) ölçeklendirmesine izin verir. Otomatik ölçeklendirme ile uygulama, düğümler arasında talep ve ortalama yük temelinde uygulamayı barındıran düğüm sayısını otomatik olarak ayarlanacak şekilde yapılandırılabilir.
 
 ### <a name="app-service-web-apps-for-containers"></a>Kapsayıcılar için App Service Web Apps
 
@@ -74,7 +74,7 @@ Daha büyük uygulamaların bir bölümü kendi daha küçük, bağımsız *mikr
 
 ![Birkaç ortak tasarım deseni belirtilmiş mikro hizmetler örnek mimarisi.](./media/image1-10.png)
 
-[Mikro hizmet tabanlı sistemler oluştururken göz önünde bulundurmanız gereken tasarım desenleri hakkında daha fazla bilgi edinin.](https://docs.microsoft.com/azure/architecture/microservices/design/patterns)
+[Mikro hizmet tabanlı sistemler oluştururken göz önünde bulundurmanız gereken tasarım desenleri hakkında daha fazla bilgi edinin.](/azure/architecture/microservices/design/patterns)
 
 ### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
@@ -100,7 +100,7 @@ Azure Dev Spaces:
 - Ekibin gerektirdiği tümleştirme ortamlarının sayısını azaltın
 - Geliştirme/test ederken Dağıtılmış sistemde belirli hizmetleri sahte bir şekilde çıkarma gereksinimini ortadan kaldırma
 
-[Azure Dev Spaces hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/dev-spaces/about)
+[Azure Dev Spaces hakkında daha fazla bilgi edinin](/azure/dev-spaces/about)
 
 ### <a name="azure-virtual-machines"></a>Azure Sanal Makineler
 

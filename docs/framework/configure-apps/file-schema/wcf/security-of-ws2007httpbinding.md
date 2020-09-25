@@ -2,14 +2,15 @@
 title: <security> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: e88f55f3651d1ccd55631dce13a0349ac2772624
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 48b49bf69f791f90ed5b2eea8e6d412438cd9519
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736394"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169849"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<security> / \<ws2007HttpBinding>
+
 Öğesiyle kullanılan güvenlik ayarlarını temsil eder [\<ws2007HttpBinding>](ws2007httpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "73736394"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -39,6 +40,7 @@ ms.locfileid: "73736394"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -70,6 +72,7 @@ ms.locfileid: "73736394"
 |[\<ws2007HttpBinding>](ws2007httpbinding.md)|HTTP taşıma uygulamaları için güvenli bağlama.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu öğe, WS-* belirtimlerini uygulayan hizmetlerle birlikte çalışabilirlik için tasarlanmıştır. Bu bağlama için taşıma güvenliği HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

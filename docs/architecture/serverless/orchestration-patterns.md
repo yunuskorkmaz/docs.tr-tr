@@ -1,25 +1,25 @@
 ---
-title: Orkestrasyon desenleri - Sunucusuz uygulamalar
-description: Azure Dayanıklı fonksiyonlar pr
+title: Orchestration desenleri-sunucusuz uygulamalar
+description: Azure dayanıklı işlevler PR
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c5f6aaedbc13c47289e102bb59f7b066525b107
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522641"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171669"
 ---
-# <a name="orchestration-patterns"></a>Orkestrasyon desenleri
+# <a name="orchestration-patterns"></a>Düzenleme desenleri
 
-Dayanıklı Işlevler, sunucusuz bir ortamda ayrık, uzun süren etkinliklerden oluşan durumlu iş akışları oluşturmayı kolaylaştırır. Dayanıklı Fonksiyonlar iş akışlarınızın ilerlemesini izleyip yürütme geçmişini düzenli olarak kontrol edebildiği için, bazı ilginç desenler ilerler.
+Dayanıklı İşlevler, sunucusuz bir ortamda ayrık, uzun süredir çalışan etkinliklerden oluşan durum bilgisiz iş akışlarının oluşturulmasını kolaylaştırır. Dayanıklı İşlevler, İş akışlarınızın ilerlemesini izleyebildiğiniz ve yürütme geçmişini düzenli olarak kontrol ettiğinden, bazı ilginç desenleri uygulamak için kendisini katlayın.
 
 ## <a name="function-chaining"></a>İşlev zinciri oluşturma
 
-Tipik bir sıralı işlemde, etkinliklerin belirli bir sırada birbiri ardına yürütülmesi gerekir. İsteğe bağlı olarak, yaklaşan etkinlik önceki işlevden bazı çıktı gerektirebilir. Etkinliklerin sıralanmasına yapılan bu bağımlılık, bir yürütme işlevi zinciri oluşturur.
+Tipik sıralı bir işlemde, etkinliklerin belirli bir sırada diğeri tarafından yürütülmesi gerekir. İsteğe bağlı olarak, yaklaşan etkinlik önceki işlevden bazı çıktılar gerektirebilir. Etkinlik sıralamasına yönelik bu bağımlılık, bir yürütme işlev zinciri oluşturur.
 
-Bu iş akışı deseni uygulamak için Dayanıklı Fonksiyonlar kullanmanın yararı, denetim noktası yapma yeteneğinden gelir. Sunucu çökerse, ağ süreleri doluyorveya başka bir sorun oluşursa, Dayanıklı işlevler bilinen son durumdan devam edebilir ve başka bir sunucuda olsa bile iş akışınızı çalıştırmaya devam edebilir.
+Bu iş akışı deseninin uygulanması için Dayanıklı İşlevler kullanmanın avantajı, kendi denetim noktası oluşturma özelliğinden gelir. Sunucu kilitlenirse, ağ zaman aşımına uğrar veya başka bir sorun oluşursa, dayanıklı işlevler, son bilinen durumdan devam edebilir ve başka bir sunucuda olsa bile iş akışınızı çalıştırmaya devam edebilir.
 
 ```csharp
 [FunctionName("PlaceOrder")]
@@ -37,9 +37,9 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Önceki kod örneğinde, `CallActivityAsync` işlev veri merkezindeki sanal bir makinede belirli bir etkinliği çalıştırmakla yükümlüdür. Bekleme geri döndüğünde ve temel Görev tamamlandığında, yürütme geçmiş tablosuna kaydedilir. Orkestratör işlevindeki kod, Görev Paralel Kitaplığı'nın tanıdık yapılarından herhangi birini ve async/await anahtar kelimelerinden yararlanabilir.
+Yukarıdaki kod örneğinde, `CallActivityAsync` işlev veri merkezindeki bir sanal makinede belirli bir etkinliği çalıştırmaktan sorumludur. Await döndürüldüğünde ve temel alınan görev tamamlandığında, yürütme geçmiş tablosuna kaydedilir. Orchestrator işlevindeki kod, görev paralel kitaplığı ve zaman uyumsuz/await anahtar kelimeleriyle ilgili tanıdık yapıların herhangi birini kullanabilir.
 
-Aşağıdaki kod, yöntemin nasıl görünebileceğine `ProcessPayment` basitleştirilmiş bir örnektir:
+Aşağıdaki kod, yöntemin neye benzebildiklerine yönelik basitleştirilmiş bir örnektir `ProcessPayment` :
 
 ```csharp
 [FunctionName("ProcessPayment")]
@@ -56,11 +56,11 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 }
 ```
 
-## <a name="asynchronous-http-apis"></a>Asynchronous HTTP API'ler
+## <a name="asynchronous-http-apis"></a>Zaman uyumsuz HTTP API 'Leri
 
-Bazı durumlarda, iş akışlarının tamamlanması nispeten uzun bir süre süren etkinlikler içerebilir. Ortam dosyalarının yedeklerini blob depolama alanına başlatan bir işlem düşünün. Ortam dosyalarının boyutuna ve miktarına bağlı olarak, bu yedekleme işleminin tamamlanması saatler sürebilir.
+Bazı durumlarda, iş akışları görece uzun süre süren etkinlikleri içerebilir. Medya dosyalarının yedeklenmesini blob depolamaya vurur bir işlem düşünün. Medya dosyalarının boyutuna ve miktarına bağlı olarak, bu yedekleme işleminin tamamlanması saatler sürebilir.
 
-Bu senaryoda, `DurableOrchestrationClient`'çalışan bir iş akışının durumunu denetleme yeteneği yararlıdır. İş akışını `HttpTrigger` başlatmak için bir `CreateCheckStatusResponse` yöntem kullanılırken, `HttpResponseMessage`bir .. Bu yanıt, istemciye taşıma işleminin durumunu denetlemek için kullanılabilecek bir URI yükü sağlar.
+Bu senaryoda, `DurableOrchestrationClient` çalışan bir iş akışının durumunu denetleme özelliği yararlı olur. Bir `HttpTrigger` iş akışını başlatmak için bir kullanırken, `CreateCheckStatusResponse` yöntemi bir örneği döndürmek için kullanılabilir `HttpResponseMessage` . Bu yanıt, istemcide çalışan işlemin durumunu denetlemek için kullanılabilecek bir URI sağlar.
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -76,7 +76,7 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-Aşağıdaki örnek sonuç yanıt yükünün yapısını gösterir.
+Aşağıdaki örnek sonuç, yanıt yükünün yapısını gösterir.
 
 ```json
 {
@@ -87,7 +87,7 @@ Aşağıdaki örnek sonuç yanıt yükünün yapısını gösterir.
 }
 ```
 
-Tercih ettiğiniz HTTP istemcisini kullanarak, GET istekleri uri için statusQueryGetUri çalışan iş akışının durumunu incelemek için yapılabilir. Döndürülen durum yanıtı aşağıdaki koda benzemelidir.
+Tercih edilen HTTP istemcinizi kullanarak, çalışan iş akışının durumunu incelemek için statusQueryGetUri içindeki URI 'ye alma istekleri yapılabilir. Döndürülen durum yanıtı aşağıdaki koda benzemelidir.
 
 ```json
 {
@@ -101,13 +101,13 @@ Tercih ettiğiniz HTTP istemcisini kullanarak, GET istekleri uri için statusQue
 }
 ```
 
-İşlem devam ettikçe, durum yanıtı **başarısız** veya **tamamlanmış**olarak değişecektir. Başarılı bir şekilde tamamlandığında, yükteki **çıktı** özelliği döndürülen verileri içerir.
+İşlem devam ettiğinden, durum yanıtı **başarısız** ya da **tamamlandı**olarak değişir. Başarılı tamamlandığında, yükteki **output** özelliği döndürülen tüm verileri içerecektir.
 
 ## <a name="monitoring"></a>İzleme
 
-Basit yinelenen görevler için Azure `TimerTrigger` İşlevleri, CRON ifadesine dayalı olarak zamanlanabilecek leri sağlar. Zamanlayıcı basit, kısa ömürlü görevler için iyi çalışır, ancak daha esnek zamanlama nın gerekli olduğu senaryolar olabilir. Bu senaryo, izleme deseni ve Dayanıklı İşlevler yardımcı olabilir.
+Azure Işlevleri, basit yinelenen görevler için `TimerTrigger` BIR CRON ifadesine göre zamanlanabilen ' ı sağlar. Zamanlayıcı basit, kısa süreli görevler için iyi işler, ancak daha esnek zamanlamanın gerektiği senaryolar olabilir. Bu senaryo, izleme deseninin ve Dayanıklı İşlevler yardımcı olabilir.
 
-Dayanıklı Fonksiyonlar, esnek zamanlama aralıkları, ömür boyu yönetim ve tek bir orkestrasyon işlevinden birden çok monitör işleminin oluşturulmasına olanak tanır. Bu işlevsellik için bir kullanım örneği, belirli bir eşik karşılandıktan sonra tamamlanan hisse senedi fiyat değişiklikleri için izleyiciler oluşturmak olabilir.
+Dayanıklı İşlevler, esnek zamanlama aralıklarına, ömür yönetimine ve tek bir düzenleme işlevinden birden çok izleme işleminin oluşturulmasına olanak sağlar. Bu işlevsellik için bir kullanım örneği, belirli bir eşiğin karşılandıktan sonra tamamlanan stok fiyatı değişiklikleri için izleyicileri oluşturmak olabilir.
 
 ```csharp
 [FunctionName("CheckStockPrice")]
@@ -149,13 +149,13 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-`DurableOrchestrationContext`'nin `CreateTimer` yöntemi, hisse senedi fiyat değişikliklerini denetlemek için döngünün bir sonraki çağırması için zamanlamayı ayarlar. `DurableOrchestrationContext`ayrıca UTC geçerli DateTime değeri almak için bir `CurrentUtcDateTime` özelliği vardır. Test etmek için kolayca alay `DateTime.UtcNow` edildiği için bu özelliği kullanmak daha iyidir.
+`DurableOrchestrationContext``CreateTimer`yöntemi, stok fiyatı değişikliklerini denetlemek için döngünün bir sonraki çağrılma zamanlamasını ayarlar. `DurableOrchestrationContext` Ayrıca `CurrentUtcDateTime` UTC 'de geçerli tarih saat değerini almak için bir özelliğe sahiptir. Test etmek için kolayca bu özelliğin kullanılması daha iyidir `DateTime.UtcNow` .
 
-## <a name="recommended-resources"></a>Önerilen kaynaklar
+## <a name="recommended-resources"></a>Önerilen Kaynaklar
 
-- [Azure Dayanıklı İşlevler](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-- [.NET Çekirdek ve .NET Standardında Birim Testi](../../core/testing/index.md)
+- [Azure Dayanıklı İşlevler](/azure/azure-functions/durable-functions-overview)
+- [.NET Core ve .NET Standard birim testi](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
->[Önceki](durable-azure-functions.md)
->[Sonraki](serverless-business-scenarios.md)
+>[Önceki](durable-azure-functions.md) 
+> [Sonraki](serverless-business-scenarios.md)

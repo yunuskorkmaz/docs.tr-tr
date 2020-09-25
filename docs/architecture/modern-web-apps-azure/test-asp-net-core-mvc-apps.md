@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın MVC 
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 8497892b88c313cde0a604ad3967507300e5154a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ca86388b9f5dfe5e63ead1b5f84486ba2181af57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539249"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169082"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>MVC uygulamalarını test ASP.NET Core
 
@@ -149,7 +149,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Tümleştirme testi ASP.NET Core uygulamalar
 
-ASP.NET Core uygulamalarınızın çoğu tümleştirme testi, altyapı projenizde tanımlanmış test hizmetleri ve diğer uygulama türleri olmalıdır. Örneğin, EF Core altyapı projesinde bulunan veri erişim sınıflarınızda [beklediğinizi ve verileri başarıyla güncelleştirdiğini test](https://docs.microsoft.com/ef/core/miscellaneous/testing/) edebilirsiniz. ASP.NET Core MVC projenizin doğru şekilde davrandığının en iyi yolu, bir test ana bilgisayarında çalışan uygulamanıza karşı çalıştırılan işlevsel testlerdir.
+ASP.NET Core uygulamalarınızın çoğu tümleştirme testi, altyapı projenizde tanımlanmış test hizmetleri ve diğer uygulama türleri olmalıdır. Örneğin, EF Core altyapı projesinde bulunan veri erişim sınıflarınızda [beklediğinizi ve verileri başarıyla güncelleştirdiğini test](/ef/core/miscellaneous/testing/) edebilirsiniz. ASP.NET Core MVC projenizin doğru şekilde davrandığının en iyi yolu, bir test ana bilgisayarında çalışan uygulamanıza karşı çalıştırılan işlevsel testlerdir.
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Uygulamalar ASP.NET Core işlevsel test
 

@@ -2,12 +2,12 @@
 title: Azure ve .NET ile çalışmaya başlama
 description: Azure ve .NET hakkında bilmeniz gereken temel bilgileri öğrenin.
 ms.date: 06/20/2020
-ms.openlocfilehash: 9f1766176740ede5aa40dd894497f2aa719efe23
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e4a071e302247332cdc98c1aabf595cb4f8e2eff
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071111"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171578"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure ve .NET’e giriş
 
@@ -77,6 +77,7 @@ Visual Studio kullanıyorsanız, projelerinize belirli Azure hizmetleri için de
 * **REST API**: .net IÇIN Azure SDK, [Azure REST API](/rest/api/azure/)oluşturulmuş bir soyutlamadır. İsterseniz Azure REST API, .NET için Azure SDK 'sının yerine veya yanına kullanılabilir.
 
 ## <a name="diagnosing-problems-in-the-cloud"></a>Buluttaki sorunları tanılama
+
 Uygulamanızı Azure 'a dağıttıktan sonra, geliştirme aşamasında çalıştığı ancak Azure 'da olmayan durumlarda çalışmaya başlayabilir. Sorunları tanılarken başlamak için iki iyi yer vardır:
 
 * **Visual Studio 'Da uzaktan hata ayıklama**: çoğu Azure işlem hizmeti (Bu belgede ele alınan hizmetler dahil), Visual Studio ile uzaktan hata ayıklamayı ve günlükleri alma işlemini destekler. Visual Studio 'nun uygulamanızla ilgili yeteneklerini araştırmak için, Visual Studio 'nun Hızlı Başlatma araç çubuğuna (sağ üst köşede) ' Cloud Explorer ' yazarak bulut Gezgini araç penceresini açın ve sonra da uygulamanızı ağaçta bulun. Ayrıntılar için bkz. [Visual Studio kullanarak Azure App Service Web uygulamasında bir Web uygulamasında sorun giderme](/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug).

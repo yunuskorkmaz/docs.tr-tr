@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 826f9003852e47c093193bbbb717fd9e1f2e61c6
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 4668922de8f0efc775acf6e505d56143b7ead8e7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678946"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169069"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalarında verilerle çalışma
 
@@ -209,7 +209,7 @@ Bu örnekte, `ShipToAddress` özelliği türündedir `Address` . `Address` , ve 
 
 ### <a name="resilient-connections"></a>Dayanıklı bağlantılar
 
-SQL veritabanları gibi dış kaynaklar zaman zaman kullanılabilir olmayabilir. Geçici kullanım durumunda uygulamalar, bir özel durum oluşmasını önlemek için yeniden deneme mantığını kullanabilir. Bu teknik genellikle _bağlantı dayanıklılığı_olarak adlandırılır. En fazla yeniden deneme sayısına ulaşılana kadar, bir üstel bekleme süresi ile yeniden denemeye çalışırken, üstel geri alma tekniğinden [kendi yeniden denelerinizi](https://docs.microsoft.com/azure/architecture/patterns/retry) uygulayabilirsiniz. Bu teknik, bulut kaynaklarının kısa süreler boyunca zaman zaman kullanılamamasına yol açabilir ve bazı isteklerin başarısız olmasıyla sonuçlanır.
+SQL veritabanları gibi dış kaynaklar zaman zaman kullanılabilir olmayabilir. Geçici kullanım durumunda uygulamalar, bir özel durum oluşmasını önlemek için yeniden deneme mantığını kullanabilir. Bu teknik genellikle _bağlantı dayanıklılığı_olarak adlandırılır. En fazla yeniden deneme sayısına ulaşılana kadar, bir üstel bekleme süresi ile yeniden denemeye çalışırken, üstel geri alma tekniğinden [kendi yeniden denelerinizi](/azure/architecture/patterns/retry) uygulayabilirsiniz. Bu teknik, bulut kaynaklarının kısa süreler boyunca zaman zaman kullanılamamasına yol açabilir ve bazı isteklerin başarısız olmasıyla sonuçlanır.
 
 Azure SQL DB için Entity Framework Core, iç veritabanı bağlantı dayanıklılığı ve yeniden deneme mantığını zaten sağlıyor. Ancak dayanıklı EF Core bağlantılarına sahip olmak istiyorsanız her DbContext bağlantısı için Entity Framework yürütme stratejisini etkinleştirmeniz gerekir.
 
@@ -285,7 +285,7 @@ await strategy.ExecuteAsync(async () =>
 
 EF Core, kalıcılığı yönetmek için harika bir seçimdir ve çoğu bölüm uygulama geliştiricilerinden veritabanı ayrıntılarını kapsüller, tek seçim değildir. Diğer bir popüler açık kaynak alternatifi, mikro-ORM adlı [, yani olarak](https://github.com/StackExchange/Dapper)adlandırılır. Mikro-ORM, nesneleri veri yapılarına eşlemek için hafif ve daha az bir tam özellikli araçtır. Paber söz konusu olduğunda, tasarım hedefleri, verileri almak ve güncelleştirmek için kullandığı temeldeki sorguları tamamen kapsüllemek yerine performansa odaklanmaktadır. Geliştiriciden SQL soyut olmadığından, kaber "metal 'ya yakındır" ve geliştiricilerin belirli bir veri erişim işlemi için kullanmak istedikleri tam sorguları yazmasına izin verir.
 
-EF Core, bu iki önemli özelliğe sahiptir ve bu, bunu bir yandan da kendi performans yüklerine ekler. İlki LINQ ifadelerinden SQL 'e çevirmesidir. Bu çeviriler önbelleğe alınır, ancak bunu ilk kez gerçekleştirmede ek yük vardır. İkincisi, varlıklarda değişiklik izleme (etkin güncelleştirme deyimlerinin üretilebilmesi için). Bu davranış, AsNotTracking uzantısı kullanılarak belirli sorgular için kapatılabilir. EF Core Ayrıca genellikle çok verimli olan ve performans açısından kusursuz bir şekilde kabul edilebilir olan SQL sorguları üretir, ancak yürütülecek kesin sorgu üzerinde iyi denetime ihtiyacınız varsa, EF Core kullanarak özel SQL (veya saklı yordam yürütme) geçirebilirsiniz. Bu durumda, kaber hala EF Core, ancak biraz daha fazlasını gerçekleştirir. Julie Lerman, Mayıs 2016 MSDN makalesi [kaber, Entity Framework ve hibrit uygulamalarında](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps)bazı performans verileri sunmaktadır. Çeşitli veri erişim yöntemlerine yönelik ek performans kıyaslama verileri [, kaber sitesinde](https://github.com/StackExchange/Dapper)bulunabilir.
+EF Core, bu iki önemli özelliğe sahiptir ve bu, bunu bir yandan da kendi performans yüklerine ekler. İlki LINQ ifadelerinden SQL 'e çevirmesidir. Bu çeviriler önbelleğe alınır, ancak bunu ilk kez gerçekleştirmede ek yük vardır. İkincisi, varlıklarda değişiklik izleme (etkin güncelleştirme deyimlerinin üretilebilmesi için). Bu davranış, AsNotTracking uzantısı kullanılarak belirli sorgular için kapatılabilir. EF Core Ayrıca genellikle çok verimli olan ve performans açısından kusursuz bir şekilde kabul edilebilir olan SQL sorguları üretir, ancak yürütülecek kesin sorgu üzerinde iyi denetime ihtiyacınız varsa, EF Core kullanarak özel SQL (veya saklı yordam yürütme) geçirebilirsiniz. Bu durumda, kaber hala EF Core, ancak biraz daha fazlasını gerçekleştirir. Julie Lerman, Mayıs 2016 MSDN makalesi [kaber, Entity Framework ve hibrit uygulamalarında](/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps)bazı performans verileri sunmaktadır. Çeşitli veri erişim yöntemlerine yönelik ek performans kıyaslama verileri [, kaber sitesinde](https://github.com/StackExchange/Dapper)bulunabilir.
 
 Kaber için sözdiziminin EF Core nasıl değiştiğini görmek için, öğelerin bir listesini almak için aynı yöntemin bu iki sürümünü göz önünde bulundurun:
 

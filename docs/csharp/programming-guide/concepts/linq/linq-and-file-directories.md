@@ -3,12 +3,12 @@ title: LINQ ve dosya dizinleri (C#)
 description: Dosya sistemi işlemlerine yönelik bu C# LINQ kaynakları, dosyaların veya klasörlerin içeriğini değiştirmek için kullanılmaz.
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: ac00e29f90ee1c04ab9978b6ada3ae5f28991a1c
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: d8ef8ac8a8ff25f0bbac417c07e39f516eee27f2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165668"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170486"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ ve dosya dizinleri (C#)
 
@@ -40,6 +40,7 @@ Birçok dosya sistemi işlemi aslında sorgular ve bu nedenle LINQ yaklaşımın
  Bir ağaçtaki klasörlerin nasıl tekrarlanması, her dosyanın nasıl açılacağı ve dosyanın içeriğini sorgulama işlemlerinin nasıl yapılacağını gösterir.  
   
 ## <a name="comments"></a>Yorumlar  
+
  Dosya sisteminin içeriğini doğru bir şekilde temsil eden bir veri kaynağı oluşturma konusunda bazı karmaşıklıklar vardır ve özel durumları düzgün bir şekilde işler. Bu bölümdeki örneklerde, <xref:System.IO.FileInfo> belirtilen bir kök klasörü ve tüm alt klasörleri altındaki tüm dosyaları temsil eden nesnelerin anlık görüntü koleksiyonu oluşturulur. Her birinin gerçek durumu <xref:System.IO.FileInfo> bir sorgu yürütme ve sonlandırma arasındaki sürede değişebilir. Örneğin, <xref:System.IO.FileInfo> bir veri kaynağı olarak kullanmak üzere bir nesne listesi oluşturabilirsiniz. `Length`Bir sorgudaki özelliğe erişmeyi denerseniz, <xref:System.IO.FileInfo> nesne değerini güncelleştirmek için dosya sistemine erişmeye çalışacaktır `Length` . Dosya artık yoksa, <xref:System.IO.FileNotFoundException> dosya sistemini doğrudan sorguladığınız halde, sorgunuzda bir a alacaksınız. Bu bölümdeki bazı sorgular belirli durumlarda bu özel durumları tüketen ayrı bir yöntem kullanır. Diğer bir seçenek, kullanarak veri kaynağınızı dinamik olarak güncel tutkullanmaktır <xref:System.IO.FileSystemWatcher> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -2,14 +2,15 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 07fa410109a7bd2fa315132c4737301698bb3a93
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2ef674dc8601bc9afaf6b547265988bb8a99f943
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400106"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170174"
 ---
 # \<parameter>
+
 Tanımlanmış bir tür genel bir tür olduğunda genel parametreyi belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Tanımlanmış bir tür genel bir tür olduğunda genel parametreyi belirtir.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<knownType>**](knowntype.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<parameter>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <parameter index="Integer"
@@ -28,6 +29,7 @@ Tanımlanmış bir tür genel bir tür olduğunda genel parametreyi belirtir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -45,6 +47,7 @@ Tanımlanmış bir tür genel bir tür olduğunda genel parametreyi belirtir.
 |"1"|Genel türde ikinci parametre. Örneğin, bir <xref:System.Collections.Generic.Dictionary%602> iki parametreye sahiptir. Bilinen tür ikinci parametre tarafından döndürülürse, Dizin özniteliğini "1" olarak ayarlayın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -54,6 +57,7 @@ Tanımlanmış bir tür genel bir tür olduğunda genel parametreyi belirtir.
 |[\<knownType>](knowntype.md)|Tanımlı türün bir alanı veya özelliği tarafından döndürülebilecek bilinen bir türü belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bilinen türler hakkında daha fazla bilgi için bkz. [veri sözleşmesi bilinen türler](../../../wcf/feature-details/data-contract-known-types.md) ve <xref:System.Runtime.Serialization.DataContractSerializer> .  
   
  [\<dataContractSerializer>](datacontractserializer-element.md)Bu öğenin kullanımıyla ilgili bir örnek için bkz..  
@@ -63,6 +67,6 @@ Tanımlanmış bir tür genel bir tür olduğunda genel parametreyi belirtir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Veri Anlaşması Bilinen Türler](../../../wcf/feature-details/data-contract-known-types.md)
+- [Veri Sözleşmesi Bilinen Türler](../../../wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](datacontractserializer-element.md)
 - [\<add>](add-of-declaredtypes-element.md)

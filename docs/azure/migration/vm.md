@@ -3,12 +3,12 @@ title: Bir ASP.NET Web uygulamasını bir Azure VM 'ye geçirme
 description: Şirket içinden bir ASP.NET Web uygulamasını bir Azure sanal makinesine geçirmeyi öğrenin.
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 5ef340d020b72bebe46fe598fe68e7d02d0c0363
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174250"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171565"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Bir ASP.NET Web uygulamasını bir Azure sanal makinesine geçirme
 
@@ -33,7 +33,7 @@ Bu öğreticiler, bir sanal makine oluşturma (veya geçirme), Web uygulamanız�
 
 ## <a name="considerations"></a>Dikkat edilmesi gerekenler
 
-### <a name="benefits"></a>Avantajlar
+### <a name="benefits"></a>Yararları
 
 Sanal makineler, bir uygulamayı Şirket içinden buluta geçirmek için en kolay yolu sunar. Kendi veri merkezlerinizi koruma gereksinimini ortadan kaldırarak, uygulamanızın şirket içinde kullandığı ortamı çoğaltmanıza olanak sağlar. Sanal Makine Ölçek Kümeleri, sanal makinelerde çalışan uygulamalar için yüksek kullanılabilirlik ve ölçeklenebilirlik sağlar.
 
@@ -60,6 +60,7 @@ Azure sanal ağları şunları sağlar:
 Başlamak için bkz. [sanal ağ belgeleri](/azure/virtual-network/)
 
 ### <a name="active-directory"></a>Active Directory
+
 Birçok uygulama kimlik doğrulama ve kimlik yönetimi için Active Directory kullanır.
 
 - Azure AD Connect, şirket içi dizinlerinizi Azure Active Directory tümleştirmenizi sağlar. Başlamak için bkz. Şirket [içi dizinlerinizi Azure Active Directory tümleştirme](/azure/active-directory/connect/active-directory-aadconnect).
@@ -75,11 +76,13 @@ Uygulamanız şirket içi bir veritabanı kullanıyorsa, uygulamanız varsayıla
 ### <a name="high-availability-and-scalability"></a>Yüksek kullanılabilirlik ve ölçeklenebilirlik
 
 #### <a name="virtual-machine-scale-sets"></a>Sanal Makine Ölçek Kümeleri
+
 Uygulamanızın kullanılabilirliği ve ölçeklenebilirliğini artırmak için uygulamanızın yüksek oranda kullanılabilir olduğundan ve ölçekleyebilir olduğundan emin olmak istiyorsunuz, VM görüntünüzü bir Azure sanal makine ölçek kümesine geçirin. VM Ölçek Kümeleri, önceden yapılandırdığınız mevcut bir VM 'yi kullanma veya uygulamanızla bir görüntü oluşturmak için derleme işlem hattı ayarlama olanağı sağlar.
 
 Başlamak için bkz. [sanal makine ölçek kümelerinde uygulamanızı dağıtma](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app).
 
 #### <a name="centralized-logging"></a>Merkezi günlük kaydı
+
 Uygulamanızı birden çok örnek genelinde çalıştırırken günlüklerinizi [Azure depolama](/azure/storage/)gibi merkezi bir konumda depolamayı düşünün.
 
 ## <a name="next-steps"></a>Sonraki adımlar

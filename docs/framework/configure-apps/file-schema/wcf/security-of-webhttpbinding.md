@@ -2,14 +2,15 @@
 title: <security> / <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 77009dc950a608da9e0db3a7d09be67e1ed46137
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 60b863a0a2a846a60dde2e4b323a305b5096b1cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738630"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169901"
 ---
 # <a name="security-of-webhttpbinding"></a>\<security> / \<webHttpBinding>
+
 İle yapılandırılmış bir uç noktanın güvenlik gereksinimlerini belirtir [\<webHttpBinding>](webhttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "73738630"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.ServiceModel>
@@ -38,6 +39,7 @@ ms.locfileid: "73738630"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  

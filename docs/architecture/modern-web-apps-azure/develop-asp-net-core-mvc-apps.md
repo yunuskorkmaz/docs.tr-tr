@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 255a7f9b34752b3480ba5a8ffc5d506e6d7b05d3
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e746362657a25487e98ddac09fa4337b00dfe805
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515988"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169134"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -54,7 +54,7 @@ app.UseEndpoints(endpoints =>
 
 Bu örnekte, yönlendirme tablosuna "default" adlı bir yol eklenmiştir. _Denetleyici_, _eylem_ve _kimlik_yer tutucuları olan bir rota şablonu tanımlar. Denetleyici ve eylem yer tutucuları, varsayılan olarak belirtilmiştir (sırasıyla "Home" ve "Dizin") ve kimlik yer tutucusu isteğe bağlıdır (bir "?" öğesinin virtuale tarafından). Burada tanımlanan kural, bir isteğin ilk bölümünün denetleyicinin adına, eylemin ikinci bölümüne karşılık gelmesi ve gerekirse üçüncü bir parçanın bir kimlik parametresini temsil etmesi gerektiğini belirtir. Geleneksel yollar genellikle uygulama için, başlangıç sınıfındaki configure yönteminde olduğu gibi bir yerde tanımlanır.
 
-Öznitelik yolları, genel olarak belirtitense, denetleyicilere ve eylemlere doğrudan uygulanır. Bu, belirli bir yönteme baktığınızda çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığından emin olur. Öznitelik rotalarıyla, belirli bir eylem için kolayca birden çok yol belirtebilir ve ayrıca, denetleyiciler ve Eylemler arasındaki yolları birleştirebilirsiniz. Örnek:
+Öznitelik yolları, genel olarak belirtitense, denetleyicilere ve eylemlere doğrudan uygulanır. Bu, belirli bir yönteme baktığınızda çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığından emin olur. Öznitelik rotalarıyla, belirli bir eylem için kolayca birden çok yol belirtebilir ve ayrıca, denetleyiciler ve Eylemler arasındaki yolları birleştirebilirsiniz. Örneğin:
 
 ```csharp
 [Route("Home")]
@@ -241,7 +241,7 @@ Uygulamanın uygulama ayrıntılarından ayrılmasıyla ilgili başka bir yakla�
 
 ### <a name="feature-organization"></a>Özellik organizasyonu
 
-Varsayılan olarak, ASP.NET Core uygulamalar, klasör yapısını denetleyicileri ve görünümleri ve sık sık görünüm modellerini içerecek şekilde düzenler. Bu sunucu tarafı yapıları desteklemeye yönelik istemci tarafı kodu genellikle Wwwroot klasöründe ayrı olarak depolanır. Ancak, belirli bir özellik üzerinde çalışmak bu klasörler arasında atlama gerektirdiğinden, büyük uygulamalar bu kuruluşla ilgili sorunlarla karşılaşabilir. Bu, her bir klasördeki dosya ve alt klasörlerin sayısı arttıkça daha fazla ve çok daha zor bir işlem elde Çözüm Gezgini. Bu soruna yönelik bir çözüm, uygulama kodunu dosya türüne göre değil, _özelliğe_ göre düzenleyeceğiniz bir çözümdür. Bu kuruluş stiline genellikle özellik klasörleri veya [özellik dilimleri](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) adı verilir (Ayrıca bkz: [Dikey dilimler](https://deviq.com/vertical-slices/)).
+Varsayılan olarak, ASP.NET Core uygulamalar, klasör yapısını denetleyicileri ve görünümleri ve sık sık görünüm modellerini içerecek şekilde düzenler. Bu sunucu tarafı yapıları desteklemeye yönelik istemci tarafı kodu genellikle Wwwroot klasöründe ayrı olarak depolanır. Ancak, belirli bir özellik üzerinde çalışmak bu klasörler arasında atlama gerektirdiğinden, büyük uygulamalar bu kuruluşla ilgili sorunlarla karşılaşabilir. Bu, her bir klasördeki dosya ve alt klasörlerin sayısı arttıkça daha fazla ve çok daha zor bir işlem elde Çözüm Gezgini. Bu soruna yönelik bir çözüm, uygulama kodunu dosya türüne göre değil, _özelliğe_ göre düzenleyeceğiniz bir çözümdür. Bu kuruluş stiline genellikle özellik klasörleri veya [özellik dilimleri](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) adı verilir (Ayrıca bkz: [Dikey dilimler](https://deviq.com/vertical-slices/)).
 
 ASP.NET Core MVC bu amaca yönelik alanı destekler. Alanları kullanarak her bir alan klasöründeki ayrı denetleyici ve görünüm klasörü (Ayrıca ilişkili modeller) oluşturabilirsiniz. Şekil 7-1, alan kullanarak örnek bir klasör yapısını gösterir.
 
@@ -301,7 +301,7 @@ Bundan sonra, ConfigureServices 'daki uygulamanıza MVC desteği eklediğinizde 
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC, görünümleri bulmak için de bir kural kullanır. Görünümlerin Özellik klasörlerinizde bulunması için (yukarıdaki FeatureConvention tarafından sunulan özellik adı kullanılarak) özel bir kural ile geçersiz kılabilirsiniz. Bu yaklaşım hakkında daha fazla bilgi alabilir ve MSDN Magazine makalesinden çalışan bir örnek indirebilirsiniz [ASP.NET Core MVC Için özellik dilimleri](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
+ASP.NET Core MVC, görünümleri bulmak için de bir kural kullanır. Görünümlerin Özellik klasörlerinizde bulunması için (yukarıdaki FeatureConvention tarafından sunulan özellik adı kullanılarak) özel bir kural ile geçersiz kılabilirsiniz. Bu yaklaşım hakkında daha fazla bilgi alabilir ve MSDN Magazine makalesinden çalışan bir örnek indirebilirsiniz [ASP.NET Core MVC Için özellik dilimleri](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
 ### <a name="apis-and-no-locblazor-applications"></a>API 'Ler ve Blazor uygulamalar
 
@@ -313,7 +313,7 @@ Blazor WebAssembly EShopOnWeb 'e yönetici arabiriminin eklenmesi, birkaç yeni 
 
 Bunlardan biri, `BlazorShared` `ApplicationCore` hem hem de gereken herhangi bir türü paylaşmak için kullanılabilen ortak bir proje olduğunda `PublicApi` , neden tek bir proje eklemeli, neden olabilir. `BlazorAdmin` Yanıt, bu projenin tüm uygulamanın iş mantığını içermesi ve bu nedenle gerekenden çok daha büyük olması ve sunucuda güvenli tutulması gereken çok daha fazla olasılıktır. Tarafından başvurulan herhangi bir kitaplığın `BlazorAdmin` , uygulamayı yüklediklerinde kullanıcıların tarayıcılarına indirileceğini unutmayın Blazor .
 
-Arka [uçlar-for-frontends (BFF) modelini](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends)kullanıp kullanmadığını bağlı olarak, uygulama tarafından tüketilen API 'ler Blazor WebAssembly ile %100 türlerini paylaşamaz Blazor . Özellikle, birçok farklı istemci tarafından kullanılması amaçlanan ortak bir API, istemciye özgü paylaşılan bir projede paylaşmak yerine kendi istek ve sonuç türlerini tanımlayabilir. EShopOnWeb örneğinde, `PublicApi` Proje bir ortak API barındırılmakta olduğundan, tüm istek ve yanıt türleri projeden gelmemesi için varsayım yapılır `BlazorShared` .
+Arka [uçlar-for-frontends (BFF) modelini](/azure/architecture/patterns/backends-for-frontends)kullanıp kullanmadığını bağlı olarak, uygulama tarafından tüketilen API 'ler Blazor WebAssembly ile %100 türlerini paylaşamaz Blazor . Özellikle, birçok farklı istemci tarafından kullanılması amaçlanan ortak bir API, istemciye özgü paylaşılan bir projede paylaşmak yerine kendi istek ve sonuç türlerini tanımlayabilir. EShopOnWeb örneğinde, `PublicApi` Proje bir ortak API barındırılmakta olduğundan, tüm istek ve yanıt türleri projeden gelmemesi için varsayım yapılır `BlazorShared` .
 
 ### <a name="cross-cutting-concerns"></a>Geniş kapsamlı kritik konular
 
@@ -387,7 +387,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN Magazine makalesinden, [gerçek dünya ASP.NET Core MVC filtrelerinden](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)çalışan bir örneği indirmek için daha fazla bilgi edinebilirsiniz.
+Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN Magazine makalesinden, [gerçek dünya ASP.NET Core MVC filtrelerinden](/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)çalışan bir örneği indirmek için daha fazla bilgi edinebilirsiniz.
 
 > ### <a name="references--structuring-applications"></a>Başvurular – uygulamaları yapılandırma
 >

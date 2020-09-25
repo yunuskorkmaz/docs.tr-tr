@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 5e75a8aadf4631f0a6e50641db72ba7b83af41fe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 81f6b9603cc7f8b7863f787272ce6a1af920fa75
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286384"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169498"
 ---
 # <a name="how-to-display-generated-sql"></a>Nasıl yapılır: Oluşturulan SQL’i Görüntüleme
+
 Özelliğini kullanarak sorgular için oluşturulan SQL kodunu ve değişiklik işlemeyi görüntüleyebilirsiniz <xref:System.Data.Linq.DataContext.Log%2A> . Bu yaklaşım, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] işlevselliği anlamak ve belirli sorunların hatalarını ayıklamak için yararlı olabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.Data.Linq.DataContext.Log%2A> kod yürütülmeden önce konsol PENCERESINDE SQL kodunu göstermek için özelliğini kullanır.  Bu özelliği sorgu, INSERT, Update ve DELETE komutlarıyla birlikte kullanabilirsiniz.  
   
  Konsol penceresindeki satırlar, aşağıdaki Visual Basic veya C# kodunu çalıştırdığınızda gördüğünüz şeydir.  

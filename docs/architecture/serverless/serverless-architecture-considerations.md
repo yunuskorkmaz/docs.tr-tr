@@ -4,12 +4,12 @@ description: Durum yönetiminden ve kalıcı depolamadan, genişleme, günlüğe
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 3c07e1149e6af41a6b9a9317238e5c71015d2c4e
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: fbbb0c38cea58902124743fb99f9ab31b3d09be9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135678"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171656"
 ---
 # <a name="serverless-architecture-considerations"></a>Sunucusuz mimaride dikkat edilmesi gerekenler
 
@@ -23,7 +23,7 @@ Sunucusuz 'ın avantajlarından ödün vermeden, benimseme durumuna yönelik bir
 
 - Geçici bir veri deposu veya dağıtılmış önbellek kullanın, örneğin Redsıs
 - Durumu SQL veya CosmosDB gibi bir veritabanında depola
-- [Dayanıklı işlevler](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview) gibi bir iş akışı altyapısı aracılığıyla durumu işleme
+- [Dayanıklı işlevler](/azure/azure-functions/durable/durable-functions-overview) gibi bir iş akışı altyapısı aracılığıyla durumu işleme
 
 En alttaki satır, sunucusuz ile uygulamayı düşündüğünde işlem içinde herhangi bir durum yönetimine gerek duyduğuna dikkat etmeniz gerekir.
 
@@ -63,7 +63,7 @@ Kurallar, değişen parametrelere bağlı olarak genellikle ölçeği artırma (
 
 ## <a name="monitoring-tracing-and-logging"></a>İzleme, izleme ve günlüğe kaydetme
 
-DevOps 'ın genellikle daha fazla bir yönü dağıtıldıktan sonra uygulamaları izlerdir. Sunucusuz işlevleri izlemeye yönelik bir stratejinin olması önemlidir. En büyük zorluk genellikle bağıntılandır veya bir kullanıcı aynı etkileşimin bir parçası olarak birden çok işlevi çağırdığında, bu şekilde tanınması gerekir. Sunucusuz platformların çoğu, üçüncü taraf araçlara aktarılabilecek konsol günlüğüne izin verir. Telemetri toplamayı otomatik hale getirmek, bağıntı kimliklerini oluşturmak ve izlemek ve ayrıntılı Öngörüler sağlamak için belirli eylemleri izlemek için de seçenekler vardır. Azure, izleme ve analiz için Gelişmiş [Application Insights platformu](https://docs.microsoft.com/azure/azure-functions/functions-monitoring) sağlar.
+DevOps 'ın genellikle daha fazla bir yönü dağıtıldıktan sonra uygulamaları izlerdir. Sunucusuz işlevleri izlemeye yönelik bir stratejinin olması önemlidir. En büyük zorluk genellikle bağıntılandır veya bir kullanıcı aynı etkileşimin bir parçası olarak birden çok işlevi çağırdığında, bu şekilde tanınması gerekir. Sunucusuz platformların çoğu, üçüncü taraf araçlara aktarılabilecek konsol günlüğüne izin verir. Telemetri toplamayı otomatik hale getirmek, bağıntı kimliklerini oluşturmak ve izlemek ve ayrıntılı Öngörüler sağlamak için belirli eylemleri izlemek için de seçenekler vardır. Azure, izleme ve analiz için Gelişmiş [Application Insights platformu](/azure/azure-functions/functions-monitoring) sağlar.
 
 ## <a name="inter-service-dependencies"></a>Hizmetler arası bağımlılıklar
 
@@ -82,5 +82,5 @@ Daha fazla bilgi için bkz. [devre kesici modelini uygulama](../microservices/im
 Sunucusuz 'ın önemli bir avantajı, uygulamanın tamamını yeniden dağıtmaya gerek kalmadan belirli bir işlevi yükseltmeme özelliğidir. Yükseltmelerin başarılı olabilmesi için işlevlerin doğru kod sürümüne yönlendirilmesi için işlevleri sürümlenmiş olmalıdır. Yeni sürümleri dağıtmaya yönelik bir strateji da önemlidir. Yaygın bir yaklaşım, "yeşil/mavi dağıtımlar" kullanmaktır. Yeşil dağıtım, geçerli işlevdir. Yeni bir "mavi" sürümü üretime dağıtılır ve test edilir. Testler başarılı olduğunda, yeni sürümün canlı olması için yeşil ve mavi sürümler takas edilir. Herhangi bir sorunla karşılaşıldığında, geri dönebilir. Sürüm oluşturma ve yeşil/mavi dağıtımları desteklemek, sürüm değişikliklerini barındırmak ve dağıtımları işlemek için sunucusuz platformla çalışmak üzere işlevleri yazmanın bir birleşimini gerektirir.
 
 >[!div class="step-by-step"]
->[Önceki](serverless-architecture.md)
->[İleri](serverless-design-examples.md)
+>[Önceki](serverless-architecture.md) 
+> [Sonraki](serverless-design-examples.md)

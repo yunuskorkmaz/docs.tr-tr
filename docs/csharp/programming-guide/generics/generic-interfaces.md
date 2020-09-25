@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: b7225e295268a3e46e4e9bd446372ae87bbbbb10
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: ec86395a41baea75694572b59b2c76cbde24fedf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466150"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170395"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Genel Arabirimler (C# Programlama Kılavuzu)
+
 Genel koleksiyon sınıfları için ya da koleksiyondaki öğeleri temsil eden genel sınıflar için arabirim tanımlamak genellikle yararlıdır. Genel sınıfların tercihi, <xref:System.IComparable%601> <xref:System.IComparable> değer türlerinde kutulamayı ve kutudan çıkarma işlemlerini önlemek için yerine gibi genel arabirimleri kullanmaktır. .NET sınıf kitaplığı, ad alanındaki koleksiyon sınıflarıyla kullanılmak üzere çeşitli genel arabirimler tanımlar <xref:System.Collections.Generic> .  
   
  Bir arabirim bir tür parametresinde kısıtlama olarak belirtildiğinde, yalnızca arabirimini uygulayan türler kullanılabilir. Aşağıdaki kod örneğinde `SortedList<T>` sınıfından türetilen bir sınıf gösterilmektedir `GenericList<T>` . Daha fazla bilgi için bkz. [Genel türlere giriş](./index.md). `SortedList<T>` kısıtlamayı ekler `where T : IComparable<T>` . Bu, `BubbleSort` içindeki yönteminin `SortedList<T>` <xref:System.IComparable%601.CompareTo%2A> list öğelerinde genel yöntemini kullanmasına olanak sağlar. Bu örnekte, liste öğeleri, uygulayan basit bir sınıftır `Person` `IComparable<Person>` .  

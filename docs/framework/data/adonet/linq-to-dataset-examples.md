@@ -2,17 +2,19 @@
 title: LINQ to DataSet Örnekleri
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 68d4ed74713858a643c6db40b6982ba2775dbfa5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 48511dc7ae249e35b9bd76e0d6d3d9f1ef39dde0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783762"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169524"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet Örnekleri
-Bu bölümde, standart sorgu işleçlerini kullanan LINQ to DataSet programlama örnekleri sağlanmaktadır. Bu örneklerde `FillDataSet`kullanılanyöntemi kullanılarak doldurulur ve [veri kümesine veri yükleme](loading-data-into-a-dataset.md)sırasında belirtilir. <xref:System.Data.DataSet> Daha fazla bilgi için bkz. [Standart sorgu işleçlerineC#genel bakış ()](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [Standart sorgu işleçleri genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+
+Bu bölümde, standart sorgu işleçlerini kullanan LINQ to DataSet programlama örnekleri sağlanmaktadır. <xref:System.Data.DataSet>Bu örneklerde kullanılan yöntemi kullanılarak doldurulur ve `FillDataSet` [veri kümesine veri yükleme](loading-data-into-a-dataset.md)sırasında belirtilir. Daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Sorgu İfadesi Örnekleri](query-expression-examples-linq-to-dataset.md)  
  Aşağıdaki örnekleri içerir:  
   
@@ -20,7 +22,7 @@ Bu bölümde, standart sorgu işleçlerini kullanan LINQ to DataSet programlama 
   
 - [Kısıtlama](query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
-- [Bölümlendirme](query-expression-syntax-examples-partitioning.md)  
+- [Bölümleme](query-expression-syntax-examples-partitioning.md)  
   
 - [Sıralama](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
@@ -30,27 +32,27 @@ Bu bölümde, standart sorgu işleçlerini kullanan LINQ to DataSet programlama 
   
 - [Birleşim İşleçleri](query-expression-syntax-examples-join-operators.md)  
   
- [Metot Tabanlı Sorgu Örnekleri](method-based-query-examples-linq-to-dataset.md)  
+ [Yöntem Tabanlı Sorgu Örnekleri](method-based-query-examples-linq-to-dataset.md)  
  Aşağıdaki örnekleri içerir:  
   
 - [Projeksiyon](method-based-query-syntax-examples-projection.md)  
   
-- [Bölümlendirme](method-based-query-syntax-examples-partitioning-linq.md)  
+- [Bölümleme](method-based-query-syntax-examples-partitioning-linq.md)  
   
 - [Sıralama](method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
 - [Ayarlama İşleçleri](method-based-query-syntax-examples-set-operators.md)  
   
-- [Dönüştürme İşleçleri](method-based-query-syntax-examples-conversion-operators.md)  
+- [Dönüşüm İşleçleri](method-based-query-syntax-examples-conversion-operators.md)  
   
 - [Öğe İşleçleri](method-based-query-syntax-examples-element-operators.md)  
   
 - [Toplama İşleçleri](method-based-query-syntax-examples-aggregate-operators.md)  
   
-- [Birleştirme](method-based-query-syntax-examples-join-linq-to-dataset.md)  
+- [Join](method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
  [DataSet’e Özgü İşleç Örnekleri](dataset-specific-operator-examples-linq-to-dataset.md)  
- <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yönteminin<xref:System.Data.DataRowComparer> ve sınıfının nasıl kullanılacağını gösteren örnekleri içerir.  
+ Yönteminin ve sınıfının nasıl kullanılacağını gösteren örnekleri içerir <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> <xref:System.Data.DataRowComparer> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
