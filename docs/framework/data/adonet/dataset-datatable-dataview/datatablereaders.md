@@ -2,21 +2,23 @@
 title: DataTableReaders
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
-ms.openlocfilehash: 1559cde9cb786ccb2baf920347064b8b28d472c3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 911a45dad3d5d82ab5e5752b1c12f7d8a6ab1563
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785348"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202324"
 ---
 # <a name="datatablereaders"></a>DataTableReaders
-, <xref:System.Data.DataTableReader> Bir veya daha fazla salt <xref:System.Data.DataTable> okuma, <xref:System.Data.DataSet> yalnızca ileri bir sonuç kümesi biçiminde bir veya bir veya ' nin içeriğini gösterir.  
+
+, <xref:System.Data.DataTableReader> Bir veya <xref:System.Data.DataTable> <xref:System.Data.DataSet> daha fazla salt okuma, yalnızca ileri bir sonuç kümesi biçiminde bir veya bir veya ' nin içeriğini gösterir.  
   
- **DataTable**'Dan bir **DataTableReader** oluşturduğunuzda, sonuçta elde edilen **DataTableReader** nesnesi, oluşturulduğu **DataTable** ile aynı verilere sahip bir sonuç kümesi içerir, ancak şu şekilde işaretlenmiş satırlar hariç miyor. Sütunlar, özgün **DataTable**ile aynı sırada görünür.  
+ **DataTable**'Dan bir **DataTableReader** oluşturduğunuzda, sonuçta elde edilen **DataTableReader** nesnesi, silindiği **DataTable** ile aynı veriye sahip bir sonuç kümesi içerir. Sütunlar, özgün **DataTable**ile aynı sırada görünür.  
   
- **DataTableReader** , çağırarak <xref:System.Data.DataSet.CreateDataReader%2A>oluşturulduysa birden çok sonuç kümesi içerebilir. Sonuçlar, **veri kümesi** nesnesinin <xref:System.Data.DataSet.Tables%2A> koleksiyonundaki **DataTable** ile aynı sıralardır.  
+ **DataTableReader** , çağırarak oluşturulduysa birden çok sonuç kümesi içerebilir <xref:System.Data.DataSet.CreateDataReader%2A> . Sonuçlar, **veri kümesi** nesnesinin koleksiyonundaki **DataTable** ile aynı sıralardır <xref:System.Data.DataSet.Tables%2A> .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [DataReader Oluşturma](creating-a-datareader.md)  
  **DataTableReader** nesnesinin nasıl oluşturulduğunu açıklar.  
   

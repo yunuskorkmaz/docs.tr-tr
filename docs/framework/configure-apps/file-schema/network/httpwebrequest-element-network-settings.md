@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 59ab425dcef8ac5283035910a9d78a89a16be8b1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 86960a33d0924013e2bfbfa743eab372181033b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504595"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195434"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest> Öğesi (Ağ Ayarları)
+
 Web isteği parametrelerini özelleştirir.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -24,7 +25,7 @@ Web isteği parametrelerini özelleştirir.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpWebRequest>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <httpWebRequest  
@@ -36,6 +37,7 @@ Web isteği parametrelerini özelleştirir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -48,6 +50,7 @@ Web isteği parametrelerini özelleştirir.
 |`useUnsafeHeaderParsing`|Güvenli olmayan üstbilgi ayrıştırma özelliğinin etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer: `false`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -57,12 +60,15 @@ Web isteği parametrelerini özelleştirir.
 |[ayarlar](settings-element-network-settings.md)|Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  .NET Framework, varsayılan olarak, URI ayrıştırma için RFC 2616 ' i kesinlikle uygular. Bazı sunucu yanıtları yasaklanmış alanlardaki denetim karakterlerini içerebilir ve bu, metodun bir oluşturmasına neden olur <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> <xref:System.Net.WebException> . **Useunsafeheaderayrıştırma** **true**olarak ayarlanırsa, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> Bu durumda throw olmaz; ancak, uygulamanız bazı URI ayrıştırma saldırılarına karşı savunmasız olacaktır. En iyi çözüm, yanıtın denetim karakterleri içermediği şekilde sunucuyu değiştirmemelidir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, normal en büyük üstbilgi uzunluğundan daha büyük bir değer belirtmeyi gösterir.  
   
 ```xml  
@@ -80,4 +86,4 @@ Web isteği parametrelerini özelleştirir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

@@ -2,19 +2,21 @@
 title: Null yapılabilir yapılandırılmış türler (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: b155c672d8c0bef8b01fb26fb49908f094add25a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: fc2230401ef98c005ab52a845de37482c0dcf698
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319480"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202271"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Null yapılabilir yapılandırılmış türler (Entity SQL)
-Yapılandırılmış bir türün `null` örneği var olmayan bir örnek. Bu, tüm özelliklerde `null` değerlerine sahip olan mevcut bir örnekten farklıdır.  
+
+`null`Yapılandırılmış bir türün örneği mevcut olmayan bir örneğidir. Bu, tüm özelliklerde değer bulunan mevcut bir örnekten farklıdır `null` .  
   
- Bu konuda, hangi türlerin null yapılabilir olduğu ve hangi kod desenlerinin yapılandırılmış null yapılabilir türler `null` örnekleri ürettiği dahil null yapılabilir yapılandırılmış türler açıklanmaktadır.  
+ Bu konuda, hangi türlerin null yapılabilir olduğu ve hangi kod desenlerinin `null` yapılandırılmış null yapılabilir türleri örnekleri oluşturulduğu dahil null yapılabilir yapılandırılmış türler açıklanmaktadır.  
   
 ## <a name="kinds-of-nullable-structured-types"></a>Null yapılabilir yapılandırılmış türler türü  
+
  Üç tür atanabilir yapı türü vardır:  
   
 - Satır türleri.  
@@ -24,9 +26,10 @@ Yapılandırılmış bir türün `null` örneği var olmayan bir örnek. Bu, tü
 - Varlık türleri.  
   
 ## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>Yapılandırılmış türlerin null örneklerini üreten kod desenleri  
- Aşağıdaki senaryolar `null` örnekleri üretir:  
+
+ Aşağıdaki senaryolar örnekleri üretir `null` :  
   
-- @No__t-0 ' y i yapısal bir tür olarak şekillendirme:  
+- `null`Yapılandırılmış bir tür olarak şekillendirme:  
   
     ```sql  
     TREAT (NULL AS StructuredType)  
@@ -59,7 +62,7 @@ Yapılandırılmış bir türün `null` örneği var olmayan bir örnek. Bu, tü
     ON FalseCondition  
     ```  
   
-- @No__t-0 başvurusunun başvurusu:  
+- Başvurunun başvurusunu kaldırma `null` :  
   
     ```sql  
     DEREF(NullRef)  
@@ -71,7 +74,7 @@ Yapılandırılmış bir türün `null` örneği var olmayan bir örnek. Bu, tü
     ANYELEMENT(EmptyCollection)  
     ```  
   
-- Yapılandırılmış türlerin `null` örnekleri denetleniyor:  
+- `null`Yapılandırılmış türlerin örnekleri denetleniyor:  
   
     ```csharp  
     ...  

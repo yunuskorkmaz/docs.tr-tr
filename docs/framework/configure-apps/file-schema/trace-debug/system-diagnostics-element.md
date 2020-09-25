@@ -8,20 +8,21 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: 4f831592d7d178276b1625e1ef7d8512085342af
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aff324ac9952c95c78d7ca15572651dba23b79b7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153213"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195174"
 ---
 # <a name="systemdiagnostics-element"></a>\<system.diagnostics> Öğesi
+
 İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;**\<system.diagnostics>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.diagnostics>
@@ -29,9 +30,11 @@ ms.locfileid: "79153213"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -52,6 +55,7 @@ ms.locfileid: "79153213"
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir izleme anahtarı ve bir İzleme dinleyicisinin öğenin içine nasıl ekleneceğini gösterir **\<system.diagnostics>** . `General`İzleme anahtarı düzeyi olarak ayarlanır <xref:System.Diagnostics.TraceLevel> . İzleme dinleyicisi `myListener` adlı bir dosya oluşturur `MyListener.log` ve çıktıyı dosyaya yazar.  
   
 > [!NOTE]
@@ -76,4 +80,4 @@ ms.locfileid: "79153213"
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
+- [İzleme ve hata ayıklama ayarları şeması](index.md)

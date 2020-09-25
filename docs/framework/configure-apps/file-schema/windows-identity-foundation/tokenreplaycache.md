@@ -3,14 +3,15 @@ title: <tokenReplayCache>
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: 9f3a95fd0a39f199eaf13c7509aff22caa0e3b66
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e695bb56b59da40ce9e83f9f4f77d0d22d0b40f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251779"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202428"
 ---
 # \<tokenReplayCache>
+
 Belirteç yeniden yürütme önbelleğini bir hizmet veya güvenlik belirteci işleyici koleksiyonuyla kaydeder.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Belirteç yeniden yürütme önbelleğini bir hizmet veya güvenlik belirteci i�
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<caches>**](caches.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<tokenReplayCache>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -33,6 +34,7 @@ Belirteç yeniden yürütme önbelleğini bir hizmet veya güvenlik belirteci i�
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -42,6 +44,7 @@ Belirteç yeniden yürütme önbelleğini bir hizmet veya güvenlik belirteci i�
 |tür|Sınıfından türeten bir tür <xref:System.IdentityModel.Tokens.TokenReplayCache> . Özel belirtme hakkında daha fazla bilgi için `type` bkz. [özel tür başvuruları].
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -51,9 +54,11 @@ Belirteç yeniden yürütme önbelleğini bir hizmet veya güvenlik belirteci i�
 |[\<caches>](caches.md)|Bir hizmet veya güvenlik belirteci işleyici koleksiyonu tarafından kullanılan önbellekleri kaydeder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Belirteç yeniden yürütme önbelleği, yeniden yürütülmüş belirteçleri algılamak için kullanılır. Belirteç yeniden yürütme algılaması öğesi tarafından etkinleştirilir [\<tokenReplayDetection>](tokenreplaydetection.md) , bu da belirteçler için en uzun süre sonu süresini belirtir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML, yeniden yürütülmüş belirteçleri algılamak için özel bir önbelleğin yapılandırmasını gösterir.  
   
 ```xml  
