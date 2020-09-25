@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab74886edcc86c900c56017867a3b81c9cb7886e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552290"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176155"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> öğesi
 
@@ -29,6 +29,7 @@ ms.locfileid: "90552290"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
 ### <a name="attributes"></a>Öznitelikler
@@ -44,6 +45,7 @@ ms.locfileid: "90552290"
 |"ad = değer"|Önceden tanımlanmış bir anahtar adı ( `true` veya) değeriyle birlikte `false` . Birden çok anahtar adı/değer çifti noktalı virgülle (";") ayrılır. .NET Framework tarafından desteklenen önceden tanımlanmış anahtar adlarının bir listesi için, açıklamalar bölümüne bakın.|
 
 ### <a name="child-elements"></a>Alt Öğeler
+
  Yok.
 
 ### <a name="parent-elements"></a>Üst Öğeler
@@ -54,13 +56,14 @@ ms.locfileid: "90552290"
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  .NET Framework 4,6 ' den başlayarak, `<AppContextSwitchOverrides>` bir yapılandırma dosyasındaki öğesi, BIR API 'nin çağıranlarının, uygulamanın yeni işlevlerden faydalanıp yararlanamayacağını veya bir kitaplığın önceki sürümleriyle uyumluluğunu koruyabilmesine izin verir. Örneğin, bir API 'nin davranışı iki bir kitaplığın sürümü arasında değiştiyse, `<AppContextSwitchOverrides>` öğesi bu API 'nin çağıranlarının yeni işlevselliği destekleyen kitaplık sürümlerindeki yeni davranışı geri almasına izin verir. .NET Framework API 'Leri çağıran uygulamalar için, `<AppContextSwitchOverrides>` Bu işlevi içeren bir .NET Framework sürümünde çalışıyorsa, uygulamaları, uygulamalar .NET Framework daha önceki bir sürümünü hedefleyen çağıranlar için yeni işlevselliği kabul edebilir.
 
  `value` `<AppContextSwitchOverrides>` Öğesinin özniteliği bir veya daha fazla noktalı virgülle ayrılmış ad/değer çiftlerinden oluşan tek bir dizeden oluşur.  Her ad bir uyumluluk anahtarını tanımlar ve buna karşılık gelen değer, `true` `false` anahtarın ayarlanmış olup olmadığını belirten bir Boolean (veya) değeridir. Varsayılan olarak, anahtarı, `false` ve kitaplıkları yeni işlevleri sağlar. Yalnızca, anahtar ayarlanmışsa (yani, değeri ise) önceki işlevselliği sağlarlar `true` . Bu, kitaplıkların var olan bir API için yeni davranış sağlamasına izin verirken önceki davranışa bağlı olan çağıranların yeni işlevselliği devre dışı vermesini sağlar.
 
 .NET Framework aşağıdaki anahtarları destekler:
 
-|Anahtar adı|Description|Dağıtıla|
+|Anahtar adı|Açıklama|Dağıtıla|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Windows Presentation Foundation denetim düzeni için eski bir algoritmayı kullanıp kullanmadığını denetler. Daha fazla bilgi için bkz. [azaltma: WPF düzeni](../../../migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|PackageDigitalSignatureManager tarafından bir paketin parçalarını imzalamak için kullanılan varsayılan algoritmanın SHA1 veya SHA256 olup olmadığını denetler.<br>SHA1 ile ilgili çakışma sorunları nedeniyle Microsoft SHA256 önerir.|.NET Framework 4.7.1|

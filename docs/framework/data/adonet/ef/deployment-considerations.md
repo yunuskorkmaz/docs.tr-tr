@@ -2,14 +2,15 @@
 title: Dağıtım değerlendirmeleri (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: bdc7a6211681c78d81ba750844611b35e779abd2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 034fb48050fb0e6a9aabf6c183f8721f0a7115e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542698"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181134"
 ---
 # <a name="deployment-considerations-entity-framework"></a>Dağıtım değerlendirmeleri (Entity Framework)
+
 Bu konuda, veri erişimi için ADO.NET Entity Framework kullanan uygulamaları dağıtma hakkında bilgi sağlanır. Entity Framework hakkında daha fazla bilgi için bkz. [Başlarken.](getting-started.md)  
   
  Entity Framework, ile tümleşen bir araç kümesi sağlar ve Visual Studio 'da geliştirmeyi kolaylaştırır. Daha fazla bilgi için bkz. [ADO.NET varlık veri modeli araçları](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)). Bu konu, Entity Framework tabanlı bir uygulama dağıtmak için belirli teknolojilerin nasıl kullanılacağını tanımlamaz.  

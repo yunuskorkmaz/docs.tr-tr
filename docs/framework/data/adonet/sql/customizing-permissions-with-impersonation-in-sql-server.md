@@ -2,19 +2,21 @@
 title: SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 0d5e62019ae8806a7a182919fa06819a08d01301
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 84c5585912ba259fdcefaae186138c4466b16206
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040447"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180861"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme
+
 Birçok uygulama, temel tablolara erişimi kısıtlamak için sahiplik zincirlemeye bağlı olarak verilere erişmek için saklı yordamlar kullanır. Saklı yordamlar üzerinde yürütme izinleri verebilir, temel tablolarda izinleri iptal edebilir veya reddetmiş olursunuz. SQL Server, saklı yordam ve tablolar aynı sahibe sahip ise çağıranın izinlerini denetlemez. Ancak, nesnelerin farklı sahipleri varsa veya dinamik SQL söz konusu olduğunda sahiplik zincirleme çalışmaz.  
   
  Çağıran tarafından başvurulan veritabanı nesnelerinde izin olmadığında, bir saklı yordamda EXECUTE AS yan tümcesini kullanabilirsiniz. EXECUTE AS yan tümcesinin etkisi, yürütme bağlamının proxy kullanıcısına geçiş yapıdır. Tüm kodun yanı sıra iç içe geçmiş saklı yordamlara veya tetikleyicilere yapılan çağrılar, proxy kullanıcısının güvenlik bağlamı altında yürütülür. Yürütme bağlamı, yalnızca yordamın yürütülmesinden sonra veya bir GERI alma yöntemi verildiğinde özgün çağırana döndürülür.  
   
 ## <a name="context-switching-with-the-execute-as-statement"></a>EXECUTE AS Ifadesiyle bağlam değiştirme  
+
  Transact-SQL EXECUTE AS deyimleri, başka bir oturum veya veritabanı kullanıcısını taklit ederek bir deyimin Yürütme bağlamını değiştirmenize olanak sağlar. Bu, sorguları ve yordamları başka bir kullanıcı olarak test etmek için kullanışlı bir tekniktir.  
   
 ```sql  
@@ -22,9 +24,10 @@ EXECUTE AS LOGIN = 'loginName';
 EXECUTE AS USER = 'userName';  
 ```  
   
- Kimliğe bürünme izniniz olan oturum açma veya Kullanıcı üzerinde KIMLIĞE bürünme izinlerine sahip olmanız gerekir. Bu izin, tüm veritabanları için `sysadmin` ve sahip oldukları veritabanlarındaki rol üyelerini `db_owner` için kapsanır.  
+ Kimliğe bürünme izniniz olan oturum açma veya Kullanıcı üzerinde KIMLIĞE bürünme izinlerine sahip olmanız gerekir. Bu izin, `sysadmin` `db_owner` sahip oldukları veritabanlarında tüm veritabanları ve rol üyeleri için kapsanır.  
   
 ## <a name="granting-permissions-with-the-execute-as-clause"></a>EXECUTE AS yan tümcesiyle Izinleri verme  
+
  Bir saklı yordamın, tetikleyicinin veya Kullanıcı tanımlı işlevin (satır içi tablo değerli işlevler hariç) tanım üstbilgisinde EXECUTE AS yan tümcesini kullanabilirsiniz. Bu, yordamın EXECUTE AS yan tümcesinde belirtilen Kullanıcı adı veya anahtar sözcüğü bağlamında yürütülmesine neden olur. Veritabanında bir oturum açmayla eşlenmemiş bir ara sunucu oluşturabilir ve yalnızca yordam tarafından erişilen nesneler üzerinde gerekli izinleri verebilirsiniz. Yalnızca EXECUTE AS yan tümcesinde belirtilen ara sunucu kullanıcısının, modülün eriştiği tüm nesneler üzerinde izinleri olmalıdır.  
   
 > [!NOTE]
@@ -49,19 +52,21 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ```  
   
 > [!NOTE]
-> Çağıranın orijinal güvenlik bağlamı korunmadığı için denetim gerektiren uygulamalar kesilebilir. SESSION_USER, USER veya USER_NAME gibi geçerli kullanıcının kimliğini döndüren yerleşik işlevler, özgün çağıranı değil, EXECUTE AS yan tümcesiyle ilişkili kullanıcıyı döndürür.  
+> Çağıranın orijinal güvenlik bağlamı korunmadığı için denetim gerektiren uygulamalar kesilebilir. SESSION_USER, Kullanıcı veya USER_NAME gibi geçerli kullanıcının kimliğini döndüren yerleşik işlevler, özgün çağıranı değil, EXECUTE AS yan tümcesiyle ilişkili kullanıcıyı döndürür.  
   
 ### <a name="using-execute-as-with-revert"></a>KAPANıRKEN farklı ÇALıŞTıR kullanma  
+
  Özgün yürütme bağlamına dönmek için Transact-SQL DÖNDÜRÜLÜYOR ifadesini kullanabilirsiniz.  
   
- GERI dönüş tanımlama bilgisi = @variableNameolan isteğe bağlı yan tümce, @variableName değişkeni doğru değeri içeriyorsa, yürütme bağlamını çağırana geri değiştirmenize izin verir. Bu, yürütme bağlamını, bağlantı havuzunun kullanıldığı ortamlarda arayan tarafa geri yüklemenize olanak sağlar. @variableName değeri yalnızca EXECUTE AS deyimlerinin çağıranı tarafından bilindiğinden, çağıran, yürütme bağlamının uygulamayı çağıran Son Kullanıcı tarafından değiştirilemeyeceğini garanti edebilir. Bağlantı kapatıldığında, havuza döndürülür. ADO.NET içinde bağlantı havuzu oluşturma hakkında daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../sql-server-connection-pooling.md).  
+ GERI dönüş tanımlama bilgisi olmadan isteğe bağlı yan tümce, @variableName @variableName değişken doğru değeri içeriyorsa, yürütme bağlamını çağırana GERI anahtarla değiştirmenize izin verir. Bu, yürütme bağlamını, bağlantı havuzunun kullanıldığı ortamlarda arayan tarafa geri yüklemenize olanak sağlar. Değeri @variableName yalnızca execute as deyimlerinin çağıranı olarak bilindiğinden, çağıran, yürütme bağlamının uygulamayı çağıran Son Kullanıcı tarafından değiştirilemeyeceğini garanti edebilir. Bağlantı kapatıldığında, havuza döndürülür. ADO.NET içinde bağlantı havuzu oluşturma hakkında daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Yürütme bağlamını belirtme  
+
  Bir Kullanıcı belirtmenin yanı sıra, aşağıdaki anahtar kelimelerle de ÇALıŞTıR ' ı da kullanabilirsiniz.  
   
 - Yapana. ÇAĞıRAN olarak yürütme varsayılandır; başka bir seçenek belirtilmemişse, yordam çağıranın güvenlik bağlamında yürütülür.  
   
-- İnde. SAHIP olarak yürütülerek işlem, yordam sahibi bağlamında yürütülür. Yordam, `dbo` veya veritabanı sahibine ait bir şemada oluşturulduysa, yordam Kısıtlanmamış izinlerle yürütülür.  
+- İnde. SAHIP olarak yürütülerek işlem, yordam sahibi bağlamında yürütülür. Yordam veya veritabanı sahibine ait bir şemada oluşturulduysa `dbo` , yordam Kısıtlanmamış izinlerle yürütülür.  
   
 - Self. , Saklı yordamın oluşturanın güvenlik bağlamında kendi kendine yürütme olarak yürütülür. Bu, belirli bir kullanıcı olarak yürütülene eşdeğerdir; burada belirtilen kullanıcı, yordamı oluşturan veya değiştiren bir kişidir.  
   

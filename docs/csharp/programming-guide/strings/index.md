@@ -6,20 +6,23 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 8e833bdeefcce2f12c839738b43778df8e54fa5b
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: ba2bd6c90fa28624d52e7ef2e341b43da7ea19a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381612"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176220"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
+
 Dize, değeri Text olan türünde bir nesnedir <xref:System.String> . Dahili olarak, metin sıralı bir salt okunabilir nesne koleksiyonu olarak depolanır <xref:System.Char> . C# dizesinin sonunda null sonlandırma karakteri yoktur; Bu nedenle, bir C# dizesinde herhangi bir sayıda gömülü null karakter (' \ 0 ') bulunabilir. <xref:System.String.Length%2A>Bir dizenin özelliği, `Char` Unicode karakter sayısını değil, içerdiği nesne sayısını temsil eder. Bir dizedeki tek tek Unicode kod noktalarına erişmek için <xref:System.Globalization.StringInfo> nesnesini kullanın.  
   
 ## <a name="string-vs-systemstring"></a>String ve System. String karşılaştırması  
+
  C# ' de, `string` anahtar sözcüğü için bir diğer addır <xref:System.String> . Bu nedenle, `String` ve `string` eşdeğerdir ve tercih ettiğiniz adlandırma kuralını kullanabilirsiniz. `String`Sınıfı dizeleri güvenli bir şekilde oluşturmak, işlemek ve karşılaştırmak için birçok yöntem sağlar. Ayrıca, C# dili yaygın dize işlemlerini basitleştirmek için bazı işleçleri aşırı yükler. Anahtar sözcüğü hakkında daha fazla bilgi için bkz. [String](../../language-reference/builtin-types/reference-types.md). Türü ve yöntemleri hakkında daha fazla bilgi için bkz <xref:System.String> ..  
   
 ## <a name="declaring-and-initializing-strings"></a>Dizeleri bildirme ve başlatma  
+
  Aşağıdaki örnekte gösterildiği gibi çeşitli yollarla dizeler bildirebilir ve başlatabilirsiniz:  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
@@ -29,6 +32,7 @@ Dize, değeri Text olan türünde bir nesnedir <xref:System.String> . Dahili ola
  <xref:System.String.Empty>Dizesi sıfır uzunluklu olan yeni bir nesne oluşturmak için sabit değere sahip bir dize başlatın <xref:System.String> . Sıfır uzunluklu bir dizenin dize sabit temsili "" dir. Dizeleri <xref:System.String.Empty> [null](../../language-reference/keywords/null.md)yerine değeri ile başlatarak, oluşma olasılığını azaltabilirsiniz <xref:System.NullReferenceException> . <xref:System.String.IsNullOrEmpty%28System.String%29>Bir dizenin değerini erişmeyi denemeden önce doğrulamak için statik yöntemi kullanın.  
   
 ## <a name="immutability-of-string-objects"></a>Dize nesnelerinin kullanılabilirliği  
+
  Dize nesneleri *sabittir*: oluşturulduktan sonra değiştirilemez. <xref:System.String>Bir dizeyi değiştirmek için görünen tüm yöntemler ve C# işleçleri aslında sonuçları yeni bir dize nesnesi olarak döndürür. Aşağıdaki örnekte, içeriği `s1` ve `s2` tek bir dize oluşturacak şekilde bitiştirildiği zaman, iki özgün dize değiştirilmemiş olur. `+=`İşleci, Birleşik içerikleri içeren yeni bir dize oluşturur. Bu yeni nesne değişkenine atanır `s1` ve kendisine atanmış olan özgün nesne, `s1` başka hiçbir değişken buna başvuru içermediğinden çöp toplama için serbest bırakılır.  
   
  [!code-csharp[csProgGuideStrings#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#2)]  
@@ -40,6 +44,7 @@ Dize, değeri Text olan türünde bir nesnedir <xref:System.String> . Dahili ola
  Özgün dizedeki arama ve değiştirme işlemleri gibi değişikliklere dayalı yeni dizeler oluşturma hakkında daha fazla bilgi için bkz. [dize içeriğini değiştirme](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Normal ve tam dize sabit değerleri  
+
  Aşağıdaki örnekte gösterildiği gibi C# tarafından verilen kaçış karakterlerini katıştırmanız gerektiğinde normal dize değişmez değerlerini kullanın:  
   
  [!code-csharp[csProgGuideStrings#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#3)]  
@@ -63,9 +68,9 @@ Dize, değeri Text olan türünde bir nesnedir <xref:System.String> . Dahili ola
 |\r|Satır başı|0x000D|  
 |\t|Yatay sekme|0x0009|  
 |\v|Dikey sekme|0x000B|  
-|\u|Unicode kaçış sırası (UTF-16)|`\uHHHH`(Aralık: 0000-FFFF; örnek: `\u00E7` = "ç")|  
-|\U|Unicode kaçış sırası (UTF-32)|`\U00HHHHHH`(Range: 000000 yazın-10FFFF; örnek: `\U0001F47D` = "& # x1F47D;")|  
-|\x|Değişken uzunluğu dışında, "\u" şuna benzer Unicode kaçış sırası|`\xH[H][H][H]`(Aralık: 0-FFFF; örnek: `\x00E7` or `\x0E7` veya `\xE7` = "ç")|  
+|\u|Unicode kaçış sırası (UTF-16)|`\uHHHH` (Aralık: 0000-FFFF; örnek: `\u00E7` = "ç")|  
+|\U|Unicode kaçış sırası (UTF-32)|`\U00HHHHHH` (Range: 000000 yazın-10FFFF; örnek: `\U0001F47D` = "& # x1F47D;")|  
+|\x|Değişken uzunluğu dışında, "\u" şuna benzer Unicode kaçış sırası|`\xH[H][H][H]` (Aralık: 0-FFFF; örnek: `\x00E7` or `\x0E7` veya `\xE7` = "ç")|  
   
 > [!WARNING]
 > `\x`Kaçış sırasını kullanırken ve 4 onaltılık basamak belirtirken, kaçış sırasını hemen izleyen karakterler geçerli onaltılı basamaklar (yani 0-9, a-f ve a-f), kaçış sırasının bir parçası olarak yorumlanır. Örneğin, `\xA1` kod noktası U + 00A1 olan "&#161;" üretir. Bununla birlikte, sonraki karakter "A" veya "a" ise, kaçış sırası bunun yerine kabul edilir `\xA1A` ve kod noktası U + 0A1A olan "&#x0A1A;" üretir. Bu gibi durumlarda, tüm 4 onaltılık basamakları (ör. `\x00A1` ) belirtmek olası hatalı yorumlamayı engeller.  
@@ -74,9 +79,11 @@ Dize, değeri Text olan türünde bir nesnedir <xref:System.String> . Dahili ola
 > Derleme zamanında, tam dizeler aynı kaçış dizileri ile normal dizelere dönüştürülür. Bu nedenle, hata ayıklayıcı izleme penceresinde tam bir dizeyi görürseniz, kaynak kodunuzdaki tam sürümü değil, derleyici tarafından eklenen kaçış karakterlerini görürsünüz. Örneğin, tam dize `@"C:\files.txt"` izleme penceresinde "C: \\\files.txt" olarak görüntülenir.  
   
 ## <a name="format-strings"></a>Biçim Dizeleri  
+
  Biçim dizesi, içeriği çalışma zamanında dinamik olarak belirlenen bir dizedir. Biçim dizeleri, bir dize içindeki küme ayraçları içine *enterpolasyonlu ifadeler* veya yer tutucuları katıştırarak oluşturulur. Küme ayracı () içindeki her şey, `{...}` çalışma zamanında biçimli bir dize olarak bir değere ve çıkışa çözümlenir. Biçim dizeleri oluşturmak için iki yöntem vardır: dize ilişkilendirme ve bileşik biçimlendirme.
 
 ### <a name="string-interpolation"></a>Dize Ilişkilendirme
+
 C# 6,0 ve üzeri sürümlerde, [*enterpolasyonlu dizeler*](../../language-reference/tokens/interpolated.md) `$` özel karakter tarafından tanımlanır ve küme ayraçları içine enterpolasyonlu ifadeler ekler. Dize ilişkilendirmeden yeni bir genel bakış için bkz. [String enterpolasyon-C# etkileşimli öğreticisi](../../tutorials/exploration/interpolated-strings.yml) .
 
 Kodlarınızın okunabilirliğini ve bakımlılığını artırmak için dize ilişkilendirmeyi kullanın. Dize ilişkilendirme yöntemiyle aynı sonuçlara erişir `String.Format` , ancak kullanım kolaylığı ve satır içi açıklık geliştirir.
@@ -84,6 +91,7 @@ Kodlarınızın okunabilirliğini ve bakımlılığını artırmak için dize il
 [!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringInterpolation)]
 
 ### <a name="composite-formatting"></a>Bileşik Biçimlendirme
+
 <xref:System.String.Format%2A?displayProperty=nameWithType>Bir biçim dizesi oluşturmak için yer tutucuları, küme ayraçları içinde kullanır. Bu örnek, yukarıda kullanılan dize ilişkilendirme yöntemine benzer bir çıkışa neden olur.
   
 [!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringFormat)]
@@ -91,11 +99,13 @@ Kodlarınızın okunabilirliğini ve bakımlılığını artırmak için dize il
 .NET türlerini biçimlendirme hakkında daha fazla bilgi için bkz. [.net 'Teki biçimlendirme türleri](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Dizelerin  
+
  Alt dize, bir dizede yer alan herhangi bir karakter dizisidir. <xref:System.String.Substring%2A>Özgün dizenin bir bölümünden yeni bir dize oluşturmak için yöntemini kullanın. Yöntemini kullanarak bir alt dizenin bir veya daha fazla örneğini arayabilirsiniz <xref:System.String.IndexOf%2A> . <xref:System.String.Replace%2A>Belirtilen bir alt dizenin tüm oluşumlarını yeni bir dizeyle değiştirmek için yöntemini kullanın. Yöntemi gibi <xref:System.String.Substring%2A> , <xref:System.String.Replace%2A> aslında yeni bir dize döndürür ve özgün dizeyi değiştirmez. Daha fazla bilgi için bkz. [dizeleri arama](../../how-to/search-strings.md) ve [dize içeriğini değiştirme](../../how-to/modify-string-contents.md).
   
  [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#7)]  
   
 ## <a name="accessing-individual-characters"></a>Ayrı karakterlere erişme  
+
  Aşağıdaki örnekte olduğu gibi tek tek karakterlere salt okuma erişimi elde etmek için dizi gösterimini bir dizin değeriyle birlikte kullanabilirsiniz:  
   
  [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
@@ -105,6 +115,7 @@ Kodlarınızın okunabilirliğini ve bakımlılığını artırmak için dize il
  [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
 ## <a name="null-strings-and-empty-strings"></a>Null dizeler ve boş dizeler  
+
  Boş dize, <xref:System.String?displayProperty=nameWithType> sıfır karakter içeren bir nesne örneğidir. Boş dizeler, genellikle boş bir metin alanını göstermek için çeşitli programlama senaryolarında kullanılır. Nesneleri boş dizeler üzerinde çağırabilirsiniz, çünkü bunlar geçerli <xref:System.String?displayProperty=nameWithType> nesneler. Boş dizeler aşağıdaki şekilde başlatılır:  
   
 ```csharp  
@@ -116,6 +127,7 @@ string s = String.Empty;
  [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>Hızlı dize oluşturma için StringBuilder kullanma  
+
  .NET 'teki dize işlemleri yüksek oranda iyileştirilmiştir ve çoğu durumda performansı önemli ölçüde etkilemez. Ancak, çok sayıda yüzlerce veya binlerce kez yürütülen sıkı döngüler gibi bazı senaryolarda, dize işlemleri performansı etkileyebilir. Bu <xref:System.Text.StringBuilder> sınıf, programınız çok sayıda dize işlemeleri gerçekleştirdiğinde daha iyi performans sunan bir dize arabelleği oluşturur. <xref:System.Text.StringBuilder>Dize Ayrıca, yerleşik dize veri türünün desteklemediği bir şeyler olan tek tek karakterleri yeniden atayabilmenizi de sağlar. Bu kod, örneğin, yeni bir dize oluşturmadan bir dizenin içeriğini değiştirir:  
   
  [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
@@ -125,11 +137,12 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Dizeler, uzantı yöntemleri ve LINQ  
+
  <xref:System.String>Türü uyguladığından <xref:System.Collections.Generic.IEnumerable%601> , dizelerde sınıfında tanımlanan genişletme yöntemlerini kullanabilirsiniz <xref:System.Linq.Enumerable> . Görsel dağınıklığı önlemek için, bu yöntemler tür için IntelliSense 'den dışlanır <xref:System.String> , ancak yine de kullanılabilir. Ayrıca, dizeler üzerinde LINQ sorgu ifadeleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [LINQ ve dizeler](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
-|Konu|Description|  
+|Konu|Açıklama|  
 |-----------|-----------------|  
 |[Dize içeriklerini değiştirme](../../how-to/modify-string-contents.md)|Dizeleri dönüştürme ve dizelerin içeriğini değiştirme tekniklerini gösterir.|  
 |[Dizeleri karşılaştırma](../../how-to/compare-strings.md)|Dizelerin sıralı ve kültüre özgü karşılaştırmalarının nasıl gerçekleştirileceğini gösterir.|  
