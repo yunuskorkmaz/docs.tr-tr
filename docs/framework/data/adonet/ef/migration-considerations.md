@@ -2,19 +2,21 @@
 title: Geçiş konuları (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: b0274504fb2b83f7961d4444a8f8e601ba375a8d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d5151f0215cde1c5e35cc87c3cd667e16a23a1df
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554976"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175479"
 ---
 # <a name="migration-considerations-entity-framework"></a>Geçiş konuları (Entity Framework)
+
 ADO.NET Entity Framework, var olan bir uygulamaya çeşitli avantajlar sağlar. Bu avantajlardan en önemli olanlarından biri, uygulama tarafından kullanılan veri yapılarını veri kaynağındaki şemadan ayırmak için kavramsal bir model kullanma yeteneğidir. Bu, uygulamaya telafi değişikliği yapmadan depolama modelinde veya veri kaynağında ileride yapılacak değişiklikler yapmanızı sağlar. Entity Framework kullanmanın avantajları hakkında daha fazla bilgi için bkz. [Entity Framework genel bakış](overview.md) ve [varlık veri modeli](../entity-data-model.md).  
   
  Entity Framework avantajlarından yararlanmak için, mevcut bir uygulamayı Entity Framework geçirebilirsiniz. Bazı görevler, geçirilen tüm uygulamalarda ortaktır. Bu ortak görevler, sürüm 3,5 hizmet paketi 1 ' den (SP1) başlayarak .NET Framework kullanmak, model ve eşlemeyi tanımlamak ve Entity Framework yapılandırmak için uygulamayı yükseltmeyi içerir. Bir uygulamayı Entity Framework geçirdiğinizde, uygulanan ek hususlar vardır. Bu noktalar, geçirilmekte olan uygulamanın türüne ve uygulamanın belirli işlevlerine bağlıdır. Bu konuda, var olan bir uygulamayı yükselttiğinizde kullanılacak en iyi yaklaşımı seçmenize yardımcı olacak bilgiler sağlanmaktadır.  
   
 ## <a name="general-migration-considerations"></a>Genel geçiş konuları  
+
  Entity Framework herhangi bir uygulamayı geçirdiğinizde aşağıdaki noktalar geçerlidir:  
   
 - Uygulama tarafından kullanılan veri kaynağı için veri sağlayıcısı Entity Framework desteklediği sürece, sürüm 3,5 SP1 ile başlayan .NET Framework kullanan uygulamalar Entity Framework geçirilebilir.  
@@ -26,6 +28,7 @@ ADO.NET Entity Framework, var olan bir uygulamaya çeşitli avantajlar sağlar. 
 - Entity Framework veri kaynağına erişmek için ADO.NET veri sağlayıcılarını kullandığından Entity Framework tarafından kullanılan veri sağlayıcısı bağlantısı uygulamanızın diğer bölümleriyle paylaşılabilir. Örneğin, SqlClient sağlayıcısı, bir SQL Server veritabanına erişmek için Entity Framework tarafından kullanılır. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="common-migration-tasks"></a>Ortak geçiş görevleri  
+
  Mevcut bir uygulamayı Entity Framework geçirme yolu, hem uygulama türüne hem de mevcut veri erişim stratejisine bağlıdır. Ancak, mevcut bir uygulamayı Entity Framework geçirirken her zaman aşağıdaki görevleri gerçekleştirmeniz gerekir.  
   
 > [!NOTE]
@@ -53,9 +56,11 @@ ADO.NET Entity Framework, var olan bir uygulamaya çeşitli avantajlar sağlar. 
      Entity Framework derlemelerine yapılan başvurular ve model ve eşleme dosyaları Visual Studio projesine eklenmelidir. Bu eşleme dosyalarını, bağlantı dizesinde belirtilen konumda uygulamayla dağıtıldığından emin olmak için projeye ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: el ile Entity Framework projesi yapılandırma](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Mevcut nesneleri olan uygulamalara yönelik konular  
+
  .NET Framework 4 ' te başlayarak, Entity Framework, kalıcılık-Ignorant nesneleri olarak da adlandırılan "düz eski" CLR nesnelerini (POCO) destekler. Çoğu durumda, var olan nesneleriniz küçük değişiklikler yaparak Entity Framework ile çalışabilir. Daha fazla bilgi için bkz. [POCO varlıklarıyla çalışma](/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Ayrıca, bir uygulamayı Entity Framework geçirebilir ve Entity Framework araçları tarafından oluşturulan veri sınıflarını kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: varlık veri modeli Sihirbazı 'Nı kullanma](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>ADO.NET sağlayıcılarını kullanan uygulamalar için dikkat edilmesi gerekenler  
+
  SqlClient gibi ADO.NET sağlayıcıları, tablo verilerini döndürmek için bir veri kaynağını sorgulamanızı sağlar. Ayrıca, veriler bir ADO.NET veri kümesine yüklenebilir. Aşağıdaki listede, var olan bir ADO.NET sağlayıcısı kullanan bir uygulamayı yükseltme konuları açıklanmaktadır:  
   
 - Veri okuyucu kullanarak tablo verilerini görüntüleme.  
@@ -69,6 +74,7 @@ ADO.NET Entity Framework, var olan bir uygulamaya çeşitli avantajlar sağlar. 
   Entity Framework, uygulamanız için gereken veri kümesi işlevlerini sağlamıyorsa, LINQ to DataSet kullanarak LINQ sorgularının avantajlarından yararlanmaya devam edebilirsiniz. Daha fazla bilgi için bkz. [LINQ to DataSet](../linq-to-dataset.md).  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Denetimlere veri bağlayan uygulamalar için dikkat edilmesi gerekenler  
+
  .NET Framework veri kümesi veya ASP.NET veri kaynağı denetimi gibi verileri bir veri kaynağında kapsüllemenizi ve ardından Kullanıcı arabirimi öğelerini bu veri denetimlerine bağlamayı sağlar. Aşağıdaki listede, Entity Framework verilerine yönelik bağlama denetimlerine ilişkin konular açıklanmaktadır.  
   
 - Denetimlere veri bağlama.  
@@ -84,6 +90,7 @@ ADO.NET Entity Framework, var olan bir uygulamaya çeşitli avantajlar sağlar. 
   Entity Framework, ASP.NET Web uygulamalarında veri bağlamayı basitleştirmek için tasarlanan bir veri kaynağı denetimini içerir. Daha fazla bilgi için bkz. [EntityDataSource Web sunucusu denetimine genel bakış](/previous-versions/aspnet/cc488502(v=vs.100)).  
   
 ## <a name="other-considerations"></a>Diğer Konular  
+
  Aşağıda, belirli uygulama türlerini Entity Framework geçirdiğinizde uygulanabilecek noktalar verilmiştir.  
   
 - Veri hizmetlerini kullanıma sunan uygulamalar.  

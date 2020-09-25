@@ -6,14 +6,15 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: c49a9d1eaea9d4d8967b105d753f2a611d80e795
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 9d927e8517ddbdb1c5a9a8aa8ca3c321bf7e8d9c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301989"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178547"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Bir dizin ağacında yineleme yapma (C# Programlama Kılavuzu)
+
 "Bir dizin ağacını yineleme" ifadesi, belirtilen kök klasörü altındaki her bir dosyaya her bir dosyanın herhangi bir derinliğine erişmesi anlamına gelir. Her bir dosyayı açmak zorunda değilsiniz. Dosya veya alt dizinin adını yalnızca bir olarak alabilir `string` veya bir veya nesnesi biçiminde ek bilgiler alabilirsiniz <xref:System.IO.FileInfo?displayProperty=nameWithType> <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> .  
   
 > [!NOTE]
@@ -37,6 +38,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 > NTFS dosya sistemleri, *birleşme noktaları*, *Simgesel bağlantılar*ve *sabit bağlantılar*biçiminde *yeniden ayrıştırma noktaları* içerebilir. Ve gibi .NET yöntemleri <xref:System.IO.DirectoryInfo.GetFiles%2A> <xref:System.IO.DirectoryInfo.GetDirectories%2A> , yeniden ayrıştırma noktası altında herhangi bir alt dizin döndürmez. Bu davranış, iki yeniden ayrıştırma noktası birbirine başvururken sonsuz döngüye girme riskiyle karşı koruma sağlar. Genel olarak, dosyaları istem dışı olarak değiştirmeyin veya sildiğinizden emin olmak için yeniden ayrıştırma noktalarıyla uğraşdığınızda olağanüstü dikkatli olmanız gerekir. Yeniden ayrıştırma noktaları üzerinde tam denetime ihtiyacınız varsa, doğrudan ilgili Win32 dosya sistemi yöntemlerini çağırmak için platform çağırma veya yerel kod kullanın.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, özyineleme kullanarak bir dizin ağacına nasıl yol gösterir. Özyinelemeli yaklaşım zarif, ancak dizin ağacı büyük ve derin iç içe ise bir yığın taşması özel durumuna neden olur.  
   
  İşlenen özel durumlar ve her dosya veya klasör üzerinde gerçekleştirilen belirli eylemler yalnızca örnek olarak sağlanır. Bu kodu, özel gereksinimlerinizi karşılayacak şekilde değiştirmelisiniz. Daha fazla bilgi için koddaki açıklamalara bakın.  
@@ -44,6 +46,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, özyineleme kullanılmadan bir dizin ağacındaki dosyalar ve klasörler arasında nasıl yineleme yapılacağını gösterir. Bu teknik <xref:System.Collections.Generic.Stack%601> , son ilk çıkar (LIFO) yığını olan genel koleksiyon türünü kullanır.  
   
  İşlenen özel durumlar ve her dosya veya klasör üzerinde gerçekleştirilen belirli eylemler yalnızca örnek olarak sağlanır. Bu kodu, özel gereksinimlerinizi karşılayacak şekilde değiştirmelisiniz. Daha fazla bilgi için koddaki açıklamalara bakın.  
@@ -55,6 +58,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Bir dizin ağacının içeriğini bellekte veya diskte depolamanız gerekirse, en iyi seçenek <xref:System.IO.FileSystemInfo.FullName%2A> her bir dosya için yalnızca özelliğini (türü) saklamalıdır `string` . Daha sonra bu dizeyi <xref:System.IO.FileInfo> , gerektiğinde yeni bir veya nesne oluşturmak <xref:System.IO.DirectoryInfo> veya ek işlem gerektiren herhangi bir dosyayı açmak için kullanabilirsiniz.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
+
  Sağlam dosya yineleme kodu, dosya sisteminin birçok karmaşıklıklarını dikkate almalıdır. Windows dosya sistemi hakkında daha fazla bilgi için bkz. [NTFS 'ye genel bakış](/windows-server/storage/file-server/ntfs-overview).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

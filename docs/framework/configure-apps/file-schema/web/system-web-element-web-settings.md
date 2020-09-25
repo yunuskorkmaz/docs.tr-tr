@@ -8,20 +8,21 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b37b05bdf90630251cbfcf86751243a3a8b77663
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8b01ec217fc1b6b91ccf36c8667922b57f26852
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152847"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185593"
 ---
 # <a name="systemweb-element-web-settings"></a>\<system.web> Öğesi (Web Ayarları)
+
 ASP.NET barındırma katmanının işlem genelinde davranışı nasıl yönettiği hakkında bilgi içerir.  
   
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;**\<system.web>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.web>  
@@ -40,7 +41,7 @@ Yok.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<applicationPool>](applicationpool-element-web-settings.md)|ASPNET. config dosyasındaki IIS uygulama havuzlarının yapılandırma ayarlarını belirtir.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Bir aspnet.config dosyasındaki IIS uygulama havuzlarının yapılandırma ayarlarını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -54,7 +55,7 @@ Yok.
   
 ## <a name="example"></a>Örnek  
 
-Aşağıdaki örnek, ASP.NET bir IIS uygulama havuzunda barındırıldığında Aspnet. config dosyasında ASP.NET işlem genelindeki davranışın nasıl yapılandırılacağını gösterir. Örnekte IIS 'nin tümleşik modda çalıştığı ve uygulamanın .NET Framework 3,5 SP1 veya sonraki bir sürümü kullanıldığı varsayılır. Bu davranış, .NET Framework .NET Framework 3,5 SP1 'den önceki sürümlerinde oluşmaz. Örnekteki değerler varsayılan değerlerdir.  
+Aşağıdaki örnek, ASP.NET bir IIS uygulama havuzunda barındırıldığı zaman aspnet.config dosyasında ASP.NET işlem genelinde davranışın nasıl yapılandırılacağını gösterir. Örnekte IIS 'nin tümleşik modda çalıştığı ve uygulamanın .NET Framework 3,5 SP1 veya sonraki bir sürümü kullanıldığı varsayılır. Bu davranış, .NET Framework .NET Framework 3,5 SP1 'den önceki sürümlerinde oluşmaz. Örnekteki değerler varsayılan değerlerdir.  
   
 ```xml  
 <configuration>  
@@ -71,11 +72,11 @@ Aşağıdaki örnek, ASP.NET bir IIS uygulama havuzunda barındırıldığında 
   
 |||  
 |-|-|  
-|Ad alanı||  
+|Ad Alanı||  
 |Şema adı||  
 |Doğrulama dosyası||  
 |Boş olabilir||  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<applicationPool>Öğesi (Web ayarları)](applicationpool-element-web-settings.md)
+- [\<applicationPool> Öğesi (Web ayarları)](applicationpool-element-web-settings.md)

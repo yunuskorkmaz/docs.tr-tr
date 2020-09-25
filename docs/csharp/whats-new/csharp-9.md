@@ -2,21 +2,21 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: 13da712e9421bbfe593e5945b80bb3636ebe05f3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f309f5fb2e705d220b8b0b743ec2f68901ee8f53
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866434"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178404"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
 C# 9,0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
 
-- Kayıtlar
-- Yalnızca init ayarlayıcılar
-- Üst düzey deyimler
-- Desen eşleştirme geliştirmeleri
+- [Kayıtlar](#record-types)
+- [Yalnızca init ayarlayıcılar](#init-only-setters)
+- [Üst düzey deyimler](#top-level-statements)
+- [Desen eşleştirme geliştirmeleri](#pattern-matching-enhancements)
 - Yerel boyutlu tamsayılar
 - İşlev işaretçileri
 - Yaymayı localsinit bayrağını gösterme

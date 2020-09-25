@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: dbad888cd0537f63c09840ac1053f924db9ea9bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e36b470b1ec348085b13a58630b0ac6833e43946
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089056"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178313"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript> Öğesi (Ağ Ayarları)
+
 Web proxy 'lerini keşfetme için kullanılan betiğin özelliklerini yapılandırır.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -23,7 +24,7 @@ Web proxy 'lerini keşfetme için kullanılan betiğin özelliklerini yapıland�
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webProxyScript>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <webProxyScript  
@@ -32,6 +33,7 @@ Web proxy 'lerini keşfetme için kullanılan betiğin özelliklerini yapıland�
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -41,6 +43,7 @@ Web proxy 'lerini keşfetme için kullanılan betiğin özelliklerini yapıland�
 |`downloadTimeout`|Betiği saat, dakika ve saniye cinsinden indirmek için en uzun süreyi belirtir. Varsayılan değer bir dakikadır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -52,8 +55,9 @@ Web proxy 'lerini keşfetme için kullanılan betiğin özelliklerini yapıland�
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

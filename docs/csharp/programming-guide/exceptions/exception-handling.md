@@ -6,14 +6,15 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 8e55b44573c40f594e567fc5a4501689e66c7af4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8f7dc027396e327f08a591ced6bd6df176a17606
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302041"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178690"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Özel Durum İşleme (C# Programlama Kılavuzu)
+
 [TRY](../../language-reference/keywords/try-catch.md) bloğu, C# programcıları tarafından bir özel durumdan etkilenebilecek kodu bölümlemek için kullanılır. İlişkili [catch](../../language-reference/keywords/try-catch.md) blokları, ortaya çıkan özel durumları işlemek için kullanılır. [Finally](../../language-reference/keywords/try-finally.md) bloğu bloğunda bir özel durum oluşturulup oluşturulmayacağını (blokta `try` ayrılan kaynakları serbest bırakma gibi) ne olursa olsun, çalıştırılan kodu içerir `try` . Bir `try` blok, bir veya daha fazla ilişkili `catch` blok, ya da bir `finally` blok ya da her ikisini gerektirir.  
   
  Aşağıdaki örneklerde bir `try-catch` ifade, bir `try-finally` ifade ve bir `try-catch-finally` ifade gösterilmektedir.  
@@ -27,6 +28,7 @@ ms.locfileid: "87302041"
  `try`Or bloğu olmayan bir blok bir `catch` `finally` derleyici hatasına neden olur.  
   
 ## <a name="catch-blocks"></a>Catch blokları  
+
  Bir `catch` blok, yakalamak için özel durum türünü belirtebilir. Tür belirtimine *özel durum filtresi*denir. Özel durum türü öğesinden türetilmelidir <xref:System.Exception> . Genel olarak, <xref:System.Exception> blokta oluşturulan tüm özel durumları nasıl işleyebileceğinizi `try` veya bloizin sonuna bir [throw](../../language-reference/keywords/throw.md) bildirisi eklemiş olmanız durumunda özel durum filtresi olarak belirtmeyin `catch` .  
   
  `catch`Farklı özel durum filtrelerine sahip birden çok blok birbirine zincirlenebilir. `catch`Bloklar kodunuzda yukarıdan aşağıya değerlendirilir, ancak `catch` oluşturulan her özel durum için yalnızca bir blok yürütülür. `catch`Oluşturulan özel durumun tam türünü veya temel sınıfını belirten ilk blok yürütülür. Bir `catch` blok eşleşen bir özel durum filtresi belirtiyorsa, `catch` deyimde varsa, filtre olmayan bir blok seçilir. `catch`Blokları en belirli (yani, en türetilmiş) özel durum türleri ile konumlandırmak önemlidir.  
@@ -44,6 +46,7 @@ ms.locfileid: "87302041"
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
 ## <a name="finally-blocks"></a>Finally blokları  
+
  Bir `finally` blok, bir blokta gerçekleştirilen eylemleri temizlemenize olanak sağlar `try` . Varsa, blok `finally` ve eşleşen bloğundan sonra blok son yürütülür `try` `catch` . Bir `finally` blok her zaman bir özel durum oluşturulup oluşturulmayacağını veya `catch` özel durum türüyle eşleşen bir blok bulunup bulunamadığına bakılmaksızın çalışır.  
   
  `finally`Blok, çalışma zamanındaki çöp toplayıcısının nesneleri son haline getirilmeksizin dosya akışları, veritabanı bağlantıları ve grafik tanıtıcıları gibi kaynakları serbest bırakmak için kullanılabilir. Daha fazla bilgi için bkz. [using deyimleri](../../language-reference/keywords/using-statement.md) .  

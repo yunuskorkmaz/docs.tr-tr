@@ -3,14 +3,15 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 53f3943524c45a43ddb60553b8ff45f19df66b14
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 93661af6c907d8cce1a73536a8ebca7bd53c00d8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152469"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185515"
 ---
 # \<wsFederation>
+
 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(Wsfad) için yapılandırma sağlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ ms.locfileid: "79152469"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<federationConfiguration>**](federationconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsFederation>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml
 <system.identityModel.services>  
@@ -45,6 +46,7 @@ ms.locfileid: "79152469"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -63,12 +65,13 @@ ms.locfileid: "79152469"
 |istek|Belirteç verme isteği. WS-Federation oturum açma isteği Wreq parametresini ayarlar. İsteğe bağlı. Varsayılan değer, wreq parametresinin isteğe dahil edilmediğini belirten boş bir dizedir. İstekte wreq veya wreqptr parametresinin dahil edilmesi gerekmez, STS 'nin ne tür bir belirteç olduğunu bilmesini sağlar.|  
 |requestPtr|Belirteç verme isteğinin konumunu belirten bir URL. İstek wreqptr parametresini ayarlar. İsteğe bağlı. Varsayılan değer, wreqptr parametresinin isteğe dahil edilmediğini belirten boş bir dizedir. İstekte wreq veya wreqptr parametresinin dahil edilmesi gerekmez, STS 'nin ne tür bir belirteç olduğunu bilmesini sağlar.|  
 |requireHttps|Güvenlik belirteci hizmeti (STS) ile iletişimin HTTPS protokolünü kullanması gerekip gerekmediğini belirtir. İsteğe bağlı. Varsayılan değer "true", HTTPS kullanılmalıdır.|  
-|kaynak|Erişilen kaynağı, bağlı olan taraf (RP) ile güvenlik belirteci hizmeti 'ne (STS) tanıtan bir URI. İsteğe bağlı. WS-Federation oturum açma isteği wres parametresini ayarlar. İsteğe bağlı. Varsayılan değer, wres parametresinin isteğe dahil edilmediğini belirten boş bir dizedir. **Note:** wres, eski bir parametredir. `realm`Bunun yerine wtrealm parametresini kullanmak için özniteliği belirtin.|  
+|kaynak|Erişilen kaynağı, bağlı olan taraf (RP) ile güvenlik belirteci hizmeti 'ne (STS) tanıtan bir URI. İsteğe bağlı. WS-Federation oturum açma isteği wres parametresini ayarlar. İsteğe bağlı. Varsayılan değer, wres parametresinin isteğe dahil edilmediğini belirten boş bir dizedir. **Note:**  wres, eski bir parametredir. `realm`Bunun yerine wtrealm parametresini kullanmak için özniteliği belirtin.|  
 |SignInQueryString|WS-Federation oturum açma isteği URL 'sinde uygulama tanımlı sorgu parametrelerini belirtmek için bir genişletilebilirlik noktası sağlar. İsteğe bağlı. Varsayılan değer, isteğe ek parametre ekleneceğini belirten boş bir dizedir. Parametreler, aşağıdaki biçimi kullanarak bir sorgu dizesi parçası olarak belirtilir: ve bu `"param1=value1&param2=value2&param3=value3"` şekilde devam eder. **Note:**  Yapılandırma dosyasında, sorgu dizesindeki ' & "karakteri, varlık başvurusu kullanılarak belirtilmelidir `&` .|  
 |signOutQueryString|WS-Federation oturum açma isteği URL 'sinde uygulama tanımlı sorgu parametrelerini belirtmek için bir genişletilebilirlik noktası sağlar. İsteğe bağlı. Varsayılan değer, isteğe ek parametre ekleneceğini belirten boş bir dizedir. Parametreler, aşağıdaki biçimi kullanarak bir sorgu dizesi parçası olarak belirtilir: ve bu `"param1=value1&param2=value2&param3=value3"` şekilde devam eder. **Note:**  Yapılandırma dosyasında, sorgu dizesindeki ' & "karakteri, varlık başvurusu kullanılarak belirtilmelidir `&` .|  
 |signOutReply|WS-Federation protokolü aracılığıyla pasif kayıt sırasında istemcinin güvenlik belirteci hizmeti (STS) tarafından yeniden yönlendirilmesi gereken URL 'YI belirtir. WS-Federation oturum kapatma isteğindeki wreply parametresini ayarlar. İsteğe bağlı. Varsayılan değer, isteğe ek parametre ekleneceğini belirten boş bir dizedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -78,11 +81,13 @@ ms.locfileid: "79152469"
 |[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(Wsfab) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) yapılandırma ayarlarını içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<wsFederation>`Varsayılan WS-Federation parametre ayarlarını ve varsayılan olarak wsfae davranışını yapılandırmak için öğesini kullanabilirsiniz. WS-Federation parametre ayarları, `<wsFederation>` sınıf tarafından kullanıma sunulan eşdeğer özellikler kümesi öğesi altında tanımlanmıştır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> . Bu özellikler, WSFAE tarafından verilen her istek için aynı kalır. WS-Federation parametrelerini, istek işleme sırasında, WSFAD; tarafından sunulan olaylar için olay işleyicileri ekleyerek dinamik olarak değiştirebilirsiniz. Örneğin, <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> olay. Daha fazla bilgi için, sınıfının belgelerine bakın <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> .  
   
  `<wsFederation>`Öğesi sınıfı tarafından temsil edilir <xref:System.IdentityModel.Services.Configuration.WSFederationElement> . Yapılandırma nesnesinin kendisi sınıfı tarafından temsil edilir <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> . <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration>Özelliği aracılığıyla erişilen nesne üzerinde tek bir örnek ayarlanır <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> ve wsfad için yapılandırma sağlar.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML, `<wsFederation>` WSFAD için ayarları belirten bir öğe gösterir.  
   
 > [!WARNING]

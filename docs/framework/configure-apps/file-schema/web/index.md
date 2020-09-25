@@ -9,21 +9,22 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: 030841330ff37cddb0c9e3e466a55a4be098e784
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c3ac9b42aeff3f7b26f0b36480bc75ceda39e7e6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088786"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185606"
 ---
 # <a name="web-settings-schema"></a>Web Ayarları Şeması
-Web ayarları, ASP.NET barındırma katmanı tarafından yönetilen işlem genelinde davranışa uygulanan CPU ve yürütme düzeyi ASP.NET ayarlarını belirtir. Bu ayarlar, bir ASP.NET uygulamasının Web. config dosyasında belirtilen uygulama etki alanı türü ayarlarından farklıdır.  
+
+Web ayarları, ASP.NET barındırma katmanı tarafından yönetilen işlem genelinde davranışa uygulanan CPU ve yürütme düzeyi ASP.NET ayarlarını belirtir. Bu ayarlar, bir ASP.NET uygulamasının Web.config dosyasında belirtilen uygulama etki alanı türü ayarlarından farklıdır.  
   
-Web ayarları, .NET Framework sürümleri için yükleme klasörlerinde bulunan Aspnet. config dosyalarında bulunur. Örneğin, .NET Framework 2,0 için ASPNET. config dosyası aşağıdaki klasörsdır:  
+Web ayarları, .NET Framework sürümleri için yükleme klasörlerinde bulunan Aspnet.config dosyalarında bulunur. Örneğin, .NET Framework 2,0 Aspnet.config dosyası aşağıdaki klasörde yer verilmiştir:  
   
 `C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
   
-Web ayarları, Machine. config dosyası, kök Web. config veya uygulama düzeyi Web. config dosyaları gibi diğer yapılandırma dosyalarında kullanılmaz.  
+Web ayarları, machine.config dosyası, kök Web.config veya uygulama düzeyi Web.config dosyaları gibi başka herhangi bir yapılandırma dosyasında kullanılmaz.  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.web>**](system-web-element-web-settings.md)\

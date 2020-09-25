@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: b30b82922a69ea660f4c4abfd808e89fa9945183
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 58f496b4a07f7d5531df897dd54bb6176111f1c4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504517"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178326"
 ---
 # <a name="smtp-element-network-settings"></a>\<smtp> Öğesi (Ağ Ayarları)
+
 Teslim biçimini, teslim yöntemini ve e-posta gönderme adresini yapılandırır.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -24,7 +25,7 @@ Teslim biçimini, teslim yöntemini ve e-posta gönderme adresini yapılandırı
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<smtp>**
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <smtp  
@@ -37,6 +38,7 @@ Teslim biçimini, teslim yöntemini ve e-posta gönderme adresini yapılandırı
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -58,9 +60,10 @@ Teslim biçimini, teslim yöntemini ve e-posta gönderme adresini yapılandırı
   
 |**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|[\<mailSettings>Öğesi (ağ ayarları)](mailsettings-element-network-settings.md)|Posta gönderme seçeneklerini yapılandırır.|  
+|[\<mailSettings> Öğesi (ağ ayarları)](mailsettings-element-network-settings.md)|Posta gönderme seçeneklerini yapılandırır.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametrelerini belirtir.  
   
 ```xml  
@@ -85,4 +88,4 @@ Teslim biçimini, teslim yöntemini ve e-posta gönderme adresini yapılandırı
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

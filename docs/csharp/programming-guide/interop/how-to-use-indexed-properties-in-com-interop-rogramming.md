@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: abd785864bd79d455024cb4501c76a21b349aa91
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 5f239a0772f734391bd68ef6618ea8ece8e8c9cd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303016"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178495"
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>COM birlikte çalışma programlamada Dizin oluşturulmuş özellikleri kullanma (C# Programlama Kılavuzu)
+
 *Dizinli Özellikler* , C# programlamasında PARAMETRELERI olan com özelliklerinin hangi şekilde tüketildiğini geliştirir. Dizinli özellikler, Microsoft Office programlamayı geliştirmek için [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../classes-and-structs/named-and-optional-arguments.md), yeni bir tür ([dinamik](../../language-reference/builtin-types/reference-types.md)) ve [katıştırılmış tür bilgileri](../../../standard/assembly/embed-types-visual-studio.md)gibi Visual C# ' deki diğer özelliklerle birlikte çalışır.  
   
  C# ' nin önceki sürümlerinde yöntemlere yalnızca `get` yöntemin parametresi yoksa ve `set` yöntemi bir ve yalnızca bir değer parametresi yoksa özellikler olarak erişilebilir. Ancak, tüm COM özellikleri bu kısıtlamaları karşılamıyor. Örneğin, Excel özelliğinin, <xref:Microsoft.Office.Interop.Excel.Range.Range%2A> `get` Aralık adı için bir parametre gerektiren bir erişimcisi vardır. Geçmişte, `Range` özelliği doğrudan erişemediği için, `get_Range` Aşağıdaki örnekte gösterildiği gibi yöntemini kullanmanız gerekiyordu.  
@@ -39,6 +40,7 @@ ms.locfileid: "87303016"
  Kendinizinkini dizinli Özellikler oluşturamazsınız. Özelliği yalnızca var olan dizinli özelliklerin kullanımını destekler.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, bir örnek gösterir. Office API 'sine erişen bir projeyi ayarlama hakkında daha fazla bilgi için bkz. [C# özelliklerini kullanarak Office birlikte çalışma nesnelerine erişme](./how-to-access-office-onterop-objects.md).
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  
@@ -46,7 +48,7 @@ ms.locfileid: "87303016"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../classes-and-structs/named-and-optional-arguments.md)
-- [dinamik](../../language-reference/builtin-types/reference-types.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Tür dinamiği kullanma](../types/using-type-dynamic.md)
 - [Office programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Visual C# özelliklerini kullanarak Office birlikte çalışma nesnelerine erişim](./how-to-access-office-onterop-objects.md)

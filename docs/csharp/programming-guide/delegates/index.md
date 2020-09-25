@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: cf6b90a606d13e3196e3114e84971451a9a322c9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7365cb89ad617148fb26d5a01c07f13a7888bbf8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553577"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178703"
 ---
 # <a name="delegates-c-programming-guide"></a>Temsilciler (C# Programlama Kılavuzu)
+
 [Temsilci](../../language-reference/builtin-types/reference-types.md) , belirli bir parametre listesi ve dönüş türü olan yöntemlere yapılan başvuruları temsil eden bir türdür. Bir temsilci oluşturduğunuzda, örneğini uyumlu bir imza ve dönüş türü içeren herhangi bir yöntemle ilişkilendirebilirsiniz. Yöntemi, temsilci örneği aracılığıyla çağırabilirsiniz.  
   
  Temsilciler, yöntemleri bağımsız değişkenler olarak diğer yöntemlere geçirmek için kullanılır. Olay işleyicileri, temsilciler aracılığıyla çağrılan yöntemlerden başka bir şey değildir. Özel bir yöntem oluşturabilirsiniz ve bir pencere denetimi gibi bir sınıf, belirli bir olay olduğunda yönteminizi çağırabilir. Aşağıdaki örnek, bir temsilci bildirimini gösterir:  
@@ -28,6 +29,7 @@ ms.locfileid: "90553577"
  Bir yönteme bir parametre olarak başvurma yeteneği, temsilciyi geri çağırma yöntemleri için ideal hale getirir. Örneğin, iki nesneyi karşılaştıran bir yönteme yapılan bir başvuru, bir sıralama algoritmasına bir bağımsız değişken olarak geçirilebilir. Karşılaştırma kodu ayrı bir yordamda olduğundan, sıralama algoritması daha genel bir şekilde yazılabilir.  
   
 ## <a name="delegates-overview"></a>Temsilcilere Genel Bakış  
+
  Temsilciler aşağıdaki özelliklere sahiptir:  
   
 - Temsilciler C++ işlev işaretçilerine benzerdir, ancak temsilciler tam nesne yönelimli olarak ve üye işlevlerine C++ işaretçilerine benzemekle birlikte, temsilciler hem bir nesne örneğini hem de bir yöntemi kapsüller.
@@ -61,6 +63,7 @@ ms.locfileid: "90553577"
 Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Temsilciler](~/_csharplang/spec/delegates.md) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="featured-book-chapters"></a>Özel Kitap Bölümleri  
+
  C# 3,0 tanımlama kitabı, üçüncü sürüm 'de [Temsilciler, olaylar ve lambda ifadeleri](/previous-versions/visualstudio/visual-studio-2008/ff518994(v=orm.10)) [: c# 3,0 programcıları için 250 ' den fazla çözüm](/previous-versions/visualstudio/visual-studio-2008/ff518995(v=orm.10))  
   
  Öğreniminde [Temsilciler ve olaylar](/previous-versions/visualstudio/visual-studio-2008/ff652490(v=orm.10)) [c# 3,0: C# 3,0 temelleri ana](/previous-versions/visualstudio/visual-studio-2008/ff652493(v=orm.10))  
@@ -69,4 +72,4 @@ Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-refere
 
 - <xref:System.Delegate>
 - [C# Programlama Kılavuzu](../index.md)
-- [Ekinlikler](../events/index.md)
+- [Olaylar](../events/index.md)
