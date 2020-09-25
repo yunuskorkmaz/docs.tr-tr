@@ -1,22 +1,22 @@
 ---
 title: Microsoft. NET. SDK için MSBuild özellikleri
-description: MSBuild özellikleri ve .NET Core SDK anlayan öğeler için başvuru.
+description: MSBuild özellikleri ve .NET SDK tarafından anlaşılan öğeler için başvuru.
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: faa0dc0e94800a49b56af8810562ee0540f118d2
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656268"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247585"
 ---
-# <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK projeleri için MSBuild başvurusu
+# <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK projeleri için MSBuild başvurusu
 
-Bu sayfa, .NET Core projelerini yapılandırmak için kullanabileceğiniz MSBuild özelliklerine ve öğelerine yönelik bir başvurudur.
+Bu sayfa, MSBuild özelliklerine ve .NET projelerini yapılandırmak için kullanabileceğiniz öğelere yönelik bir başvurudur.
 
 > [!NOTE]
-> Bu sayfa devam eden bir çalışmadır ve .NET Core SDK için tüm yararlı MSBuild özelliklerini listelemez. Ortak MSBuild özelliklerinin bir listesi için bkz. [Ortak MSBuild özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).
+> Bu sayfa devam eden bir çalışmadır ve .NET SDK için tüm kullanışlı MSBuild özelliklerini listelemez. Ortak MSBuild özelliklerinin bir listesi için bkz. [Ortak MSBuild özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="framework-properties"></a>Çerçeve özellikleri
 
@@ -123,7 +123,7 @@ Aşağıdaki XML, `System.Security` derlemeyi kırpmaya dışlar.
 
 ### <a name="useapphost"></a>UseAppHost
 
-`UseAppHost`Özelliği, .NET Core SDK 2.1.400 sürümünde tanıtılmıştı. Dağıtım için yerel bir yürütülebilir dosyanın oluşturulup oluşturulmayacağını denetler. Kendi kendine kapsanan dağıtımlar için yerel bir yürütülebilir dosya gereklidir.
+`UseAppHost`Özelliği .NET SDK 'sının 2.1.400 sürümünde sunulmuştur. Dağıtım için yerel bir yürütülebilir dosyanın oluşturulup oluşturulmayacağını denetler. Kendi kendine kapsanan dağıtımlar için yerel bir yürütülebilir dosya gereklidir.
 
 .NET Core 3,0 ve sonraki sürümlerinde, çerçeveye bağlı bir yürütülebilir dosya varsayılan olarak oluşturulur. `UseAppHost` `false` Yürütülebilir dosyanın üretilmesini devre dışı bırakmak için özelliğini olarak ayarlayın.
 
@@ -133,7 +133,7 @@ Aşağıdaki XML, `System.Security` derlemeyi kırpmaya dışlar.
 </PropertyGroup>
 ```
 
-Dağıtım hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).
+Dağıtım hakkında daha fazla bilgi için bkz. [.NET uygulama dağıtımı](../deploying/index.md).
 
 ## <a name="compile-properties"></a>Derleme özellikleri
 
@@ -147,7 +147,7 @@ Dağıtım hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtım�
 > [!NOTE]
 > `LogicalName`,, `ManifestResourceName` Veya `DependentUpon` meta veriler bir öğe için belirtilmişse `EmbeddedResource` , bu kaynak dosyası için oluşturulan bildirim dosyası adı bu meta verileri temel alır.
 
-Varsayılan olarak, yeni bir .NET Core projesinde, bu özellik olarak ayarlanır `true` . `false`, Ve öğesi için, `LogicalName` `ManifestResourceName` Proje dosyasındaki öğe için, veya olarak ayarlanırsa,, `DependentUpon` `EmbeddedResource` kaynak bildirim dosyası adı projenin kök ad alanını ve *. resx* dosyasının göreli dosya yolunu temel alan olur. Daha fazla bilgi için bkz. [kaynak bildirim dosyalarının adlandırılması](../resources/manifest-file-names.md).
+Varsayılan olarak, yeni bir .NET projesinde, bu özellik olarak ayarlanır `true` . `false`, Ve öğesi için, `LogicalName` `ManifestResourceName` Proje dosyasındaki öğe için, veya olarak ayarlanırsa,, `DependentUpon` `EmbeddedResource` kaynak bildirim dosyası adı projenin kök ad alanını ve *. resx* dosyasının göreli dosya yolunu temel alan olur. Daha fazla bilgi için bkz. [kaynak bildirim dosyalarının adlandırılması](../resources/manifest-file-names.md).
 
 ```xml
 <PropertyGroup>
@@ -190,7 +190,7 @@ Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
 
 ### <a name="analysismode"></a>AnalysisMode
 
-.NET SDK, .NET 5,0 RC2 'den başlayarak ["CA" kod kalitesi kurallarıyla](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)birlikte gönderilir. Varsayılan olarak, yalnızca [bazı kurallar](../../fundamentals/productivity/code-analysis.md#enabled-rules) derleme uyarıları olarak etkinleştirilir. `AnalysisMode`Özelliği, varsayılan olarak etkinleştirilen kuralların kümesini özelleştirmenizi sağlar. Daha Agresif (geri çevirme) çözümleme moduna veya daha koruyucu (katılım) analiz moduna geçebilirsiniz. Örneğin, varsayılan olarak tüm kuralları derleme uyarıları olarak etkinleştirmek istiyorsanız, değerini olarak ayarlayın `AllEnabledByDefault` .
+.NET SDK, .NET 5,0 RC2 'den başlayarak ["CA" kod kalitesi kurallarıyla](../../fundamentals/code-analysis/rules/quality-rules-reference.md)birlikte gönderilir. Varsayılan olarak, yalnızca [bazı kurallar](../../fundamentals/code-analysis/overview.md#enabled-rules) derleme uyarıları olarak etkinleştirilir. `AnalysisMode`Özelliği, varsayılan olarak etkinleştirilen kuralların kümesini özelleştirmenizi sağlar. Daha Agresif (geri çevirme) çözümleme moduna veya daha koruyucu (katılım) analiz moduna geçebilirsiniz. Örneğin, varsayılan olarak tüm kuralları derleme uyarıları olarak etkinleştirmek istiyorsanız, değerini olarak ayarlayın `AllEnabledByDefault` .
 
 ```xml
 <PropertyGroup>
@@ -203,12 +203,12 @@ Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
 | Değer | Anlamı |
 |-|-|
 | `Default` | Belirli kuralların derleme uyarıları olarak etkinleştirildiği varsayılan mod, Visual Studio IDE önerisi olarak bazı kurallar etkinleştirilir ve geri kalanı devre dışı bırakılır. |
-| `AllEnabledByDefault` | Tüm kuralların, derleme uyarıları olarak varsayılan olarak etkinleştirildiği agresif veya kabul etme modu. Bağımsız kuralların devre dışı [bırakılacağını seçerek devre dışı bırakabilirsiniz](../../fundamentals/productivity/configure-code-analysis-rules.md) . |
-| `AllDisabledByDefault` | Klasik veya kabul etme modu, tüm kurallar varsayılan olarak devre dışıdır. Bunları etkinleştirmek için tek tek kuralların seçmeli olarak [tercih](../../fundamentals/productivity/configure-code-analysis-rules.md) edebilirsiniz. |
+| `AllEnabledByDefault` | Tüm kuralların, derleme uyarıları olarak varsayılan olarak etkinleştirildiği agresif veya kabul etme modu. Bağımsız kuralların devre dışı [bırakılacağını seçerek devre dışı bırakabilirsiniz](../../fundamentals/code-analysis/configuration-options.md) . |
+| `AllDisabledByDefault` | Klasik veya kabul etme modu, tüm kurallar varsayılan olarak devre dışıdır. Bunları etkinleştirmek için tek tek kuralların seçmeli olarak [tercih](../../fundamentals/code-analysis/configuration-options.md) edebilirsiniz. |
 
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-`CodeAnalysisTreatWarningsAsErrors`Özelliği, kod kalitesi analizi uyarılarının (CAxxxx) uyarı olarak değerlendirilip derlenmeyeceğini yapılandırmanıza olanak tanır. Projelerinizi oluştururken bayrağını kullanırsanız `-warnaserror` , [.net Code Quality Analysis](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) uyarıları da hata olarak kabul edilir. Kod kalitesi analiz uyarılarını hata olarak kabul etmek istemiyorsanız, `CodeAnalysisTreatWarningsAsErrors` MSBuild özelliğini `false` proje dosyanızda olarak ayarlayabilirsiniz.
+`CodeAnalysisTreatWarningsAsErrors`Özelliği, kod kalitesi analizi uyarılarının (CAxxxx) uyarı olarak değerlendirilip derlenmeyeceğini yapılandırmanıza olanak tanır. Projelerinizi oluştururken bayrağını kullanırsanız `-warnaserror` , [.net Code Quality Analysis](../../fundamentals/code-analysis/overview.md#code-quality-analysis) uyarıları da hata olarak kabul edilir. Kod kalitesi analiz uyarılarını hata olarak kabul etmek istemiyorsanız, `CodeAnalysisTreatWarningsAsErrors` MSBuild özelliğini `false` proje dosyanızda olarak ayarlayabilirsiniz.
 
 ```xml
 <PropertyGroup>
@@ -218,7 +218,7 @@ Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
 
 ### <a name="enablenetanalyzers"></a>Enablenetçözümleyiciler
 
-.Net [Code Quality Analysis](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) , .NET 5,0 veya üstünü hedefleyen projeler için varsayılan olarak etkinleştirilmiştir. Özelliğini olarak ayarlayarak .NET 'in önceki sürümlerini hedefleyen projeler için .NET kod analizini etkinleştirebilirsiniz `EnableNETAnalyzers` `true` . Herhangi bir projede kod analizini devre dışı bırakmak için bu özelliği olarak ayarlayın `false` .
+.Net [Code Quality Analysis](../../fundamentals/code-analysis/overview.md#code-quality-analysis) , .NET 5,0 veya üstünü hedefleyen projeler için varsayılan olarak etkinleştirilmiştir. Özelliğini olarak ayarlayarak .NET 'in önceki sürümlerini hedefleyen projeler için .NET kod analizini etkinleştirebilirsiniz `EnableNETAnalyzers` `true` . Herhangi bir projede kod analizini devre dışı bırakmak için bu özelliği olarak ayarlayın `false` .
 
 ```xml
 <PropertyGroup>
@@ -231,7 +231,7 @@ Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
 
 ### <a name="enforcecodestyleinbuild"></a>Enforcecodestyleınbuild
 
-[.NET kod stili Analizi](../../fundamentals/productivity/code-analysis.md#code-style-analysis) , varsayılan olarak tüm .NET projeleri için derleme üzerinde devre dışıdır. Özelliğini olarak ayarlayarak .NET projeleri için kod stili analizini etkinleştirebilirsiniz `EnforceCodeStyleInBuild` `true` .
+[.NET kod stili Analizi](../../fundamentals/code-analysis/overview.md#code-style-analysis) , varsayılan olarak tüm .NET projeleri için derleme üzerinde devre dışıdır. Özelliğini olarak ayarlayarak .NET projeleri için kod stili analizini etkinleştirebilirsiniz `EnforceCodeStyleInBuild` `true` .
 
 ```xml
 <PropertyGroup>
@@ -239,11 +239,11 @@ Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
 </PropertyGroup>
 ```
 
-Uyarı veya hata olarak [yapılandırılan](../../fundamentals/productivity/code-analysis.md#code-style-analysis) tüm kod stili kuralları, derleme ve rapor ihlalleri üzerinde yürütülür.
+Uyarı veya hata olarak [yapılandırılan](../../fundamentals/code-analysis/overview.md#code-style-analysis) tüm kod stili kuralları, derleme ve rapor ihlalleri üzerinde yürütülür.
 
 ## <a name="run-time-configuration-properties"></a>Çalışma zamanı yapılandırma özellikleri
 
-Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışma zamanı davranışları yapılandırabilirsiniz. Çalışma zamanı davranışını yapılandırmanın diğer yolları hakkında daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md).
+Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışma zamanı davranışları yapılandırabilirsiniz. Çalışma zamanı davranışını yapılandırmanın diğer yolları hakkında daha fazla bilgi için bkz. [çalışma zamanı yapılandırma ayarları](../run-time-config/index.md).
 
 - [ConcurrentGarbageCollection](#concurrentgarbagecollection)
 - [Invariantgenelleştirme](#invariantglobalization)

@@ -1,39 +1,41 @@
 ---
-title: .NET Core proje SDK 'sına genel bakış
+title: .NET proje SDK 'sına genel bakış
 titleSuffix: ''
-description: .NET Core proje SDK 'Ları hakkında bilgi edinin.
-ms.date: 02/02/2020
+description: .NET proje SDK 'Ları hakkında bilgi edinin.
+ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 873c06007307c5892c4828f987486b4dd98dc9ae
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 6b6651f674f09d5d0d18ddb873096037ad3b2ba5
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187916"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247584"
 ---
-# <a name="net-core-project-sdks"></a>.NET Core proje SDK 'Ları
+# <a name="net-project-sdks"></a>.NET projesi SDK 'Ları
 
-.NET Core projeleri bir yazılım geliştirme seti (SDK) ile ilişkilendirilir. Her *Proje SDK 'sı* , bir dizi MSBuild [hedefi](/visualstudio/msbuild/msbuild-targets) ve kodu derleme, paketleme ve yayımlama ile ilgili [görevlerden](/visualstudio/msbuild/msbuild-tasks) oluşur. Proje SDK 'Sına başvuran bir proje bazen bir *SDK stili proje*olarak adlandırılır.
+.NET Core ve .NET 5,0 ve üzeri projeler yazılım geliştirme seti (SDK) ile ilişkilendirilir. Her *Proje SDK 'sı* , bir dizi MSBuild [hedefi](/visualstudio/msbuild/msbuild-targets) ve kodu derleme, paketleme ve yayımlama ile ilgili [görevlerden](/visualstudio/msbuild/msbuild-tasks) oluşur. Proje SDK 'Sına başvuran bir proje bazen bir *SDK stili proje*olarak adlandırılır.
 
 ## <a name="available-sdks"></a>Kullanılabilir SDK 'lar
 
-.NET Core için aşağıdaki SDK 'lar mevcuttur:
+Aşağıdaki SDK 'lar kullanılabilir:
 
 | ID | Açıklama | Depo|
 | - | - | - |
-| `Microsoft.NET.Sdk` | .NET Core SDK | <https://github.com/dotnet/sdk> |
-| `Microsoft.NET.Sdk.Web` | .NET Core [Web SDK 'sı](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
-| `Microsoft.NET.Sdk.Razor` | .NET Core [Razor SDK 'sı](/aspnet/core/razor-pages/sdk) |
-| `Microsoft.NET.Sdk.Worker` | .NET Core Worker hizmeti SDK 'Sı |
-| `Microsoft.NET.Sdk.WindowsDesktop` | .NET Core WinForms ve WPF SDK |
+| `Microsoft.NET.Sdk` | .NET SDK | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | .NET [Web SDK 'sı](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Razor` | .NET [Razor SDK 'sı](/aspnet/core/razor-pages/sdk) |
+| `Microsoft.NET.Sdk.Worker` | .NET Worker hizmeti SDK 'Sı |
+| `Microsoft.NET.Sdk.WindowsDesktop` | WinForms ve WPF SDK 'Sı\* | <https://github.com/dotnet/winforms> ve <https://github.com/dotnet/wpf> |
 
-.NET Core SDK, .NET Core için temel SDK 'dir. Diğer SDK 'lar .NET Core SDK başvuruda bulunur ve diğer SDK 'lar ile ilişkili projeler için kullanılabilen tüm .NET Core SDK özellikleri vardır. Örneğin, Web SDK 'Sı, hem .NET Core SDK hem de Razor SDK 'sına bağlıdır.
+.NET SDK, .NET için temel SDK 'dir. Diğer SDK 'lar .NET SDK 'ya başvuru sağlar ve diğer SDK 'lar ile ilişkili projelere tüm .NET SDK özellikleri de mevcuttur. Örneğin, Web SDK 'sı, hem .NET SDK hem de Razor SDK 'ya bağlıdır.
 
 Ayrıca kendi SDK 'nizi, NuGet aracılığıyla dağıtılabilecek şekilde yazabilirsiniz.
 
+\* .NET 5,0 ' den başlayarak Windows Forms ve Windows Presentation Foundation (WPF) projeleri yerine .NET SDK () belirtmelidir `Microsoft.NET.Sdk` `Microsoft.NET.Sdk.WindowsDesktop` . Bu projeler için, `TargetFramework` ve için `net5.0-windows` ayarı `UseWPF` `UseWindowsForms` `true` Windows Masaüstü SDK 'sını otomatik olarak içeri aktarır. Projeniz .NET 5,0 veya üstünü hedefliyorsa ve `Microsoft.NET.Sdk.WindowsDesktop` SDK 'yı belirtirse, derleme uyarısı NETSDK1137 alırsınız.
+
 ## <a name="project-files"></a>Proje dosyaları
 
-.NET Core projeleri [MSBuild](/visualstudio/msbuild/msbuild) biçimine dayanır. C# projeleri için *. csproj* ve F # projelerinde *. fsproj* gibi uzantılara sahıp proje dosyaları, XML biçimindedir. MSBuild proje dosyasının kök öğesi [Proje](/visualstudio/msbuild/project-element-msbuild) öğesidir. `Project`Öğesi `Sdk` Hangi SDK (ve sürümü) kullanacağınızı belirten isteğe bağlı bir özniteliğe sahiptir. .NET Core araçlarını kullanmak ve kodunuzu derlemek için, `Sdk` özniteliğini [kullanılabilir SDK](#available-sdks) 'lar tablosundaki kimliklerden birine ayarlayın.
+.NET projeleri [MSBuild](/visualstudio/msbuild/msbuild) biçimine dayalıdır. C# projeleri için *. csproj* ve F # projelerinde *. fsproj* gibi uzantılara sahıp proje dosyaları, XML biçimindedir. MSBuild proje dosyasının kök öğesi [Proje](/visualstudio/msbuild/project-element-msbuild) öğesidir. `Project`Öğesi `Sdk` Hangi SDK (ve sürümü) kullanacağınızı belirten isteğe bağlı bir özniteliğe sahiptir. .NET araçlarını kullanmak ve kodunuzu derlemek için, `Sdk` özniteliğini [kullanılabilir SDK](#available-sdks) 'lar tablosundaki kimliklerden birine ayarlayın.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -58,7 +60,7 @@ SDK 'yı belirtmenin bir başka yolu da en üst düzey [SDK](/visualstudio/msbui
 </Project>
 ```
 
-Bu yollarla bir SDK 'ya başvurmak, .NET Core için proje dosyalarını büyük ölçüde basitleştirir. Proje değerlendirilirken MSBuild, `Sdk.props` Proje dosyasının üst kısmına ve alt kısmına örtük içeri aktarmalar ekler `Sdk.targets` .
+Bu yollarla bir SDK 'ya başvurmak, .NET için proje dosyalarını büyük ölçüde basitleştirir. Proje değerlendirilirken MSBuild, `Sdk.props` Proje dosyasının üst kısmına ve alt kısmına örtük içeri aktarmalar ekler `Sdk.targets` .
 
 ```xml
 <Project>
@@ -77,7 +79,7 @@ Bu yollarla bir SDK 'ya başvurmak, .NET Core için proje dosyalarını büyük 
 
 SDK ve hedefleri komutu kullanılarak eklendikten sonra, tam genişletilmiş projeyi MSBuild olarak görebilirsiniz `dotnet msbuild -preprocess` . Komutun [ön işlem](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) anahtarı [`dotnet msbuild`](../tools/dotnet-msbuild.md) hangi dosyaların içeri aktarılacağını, kaynaklarını ve derleme için gerçekten projeyi oluşturmadan yapıya katkılarını gösterir.
 
-Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odaklayın. Örnek:
+Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odaklayın. Örneğin:
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
@@ -85,7 +87,7 @@ Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özell
 
 Derleme öğeleri, katıştırılmış kaynaklar ve öğeler için varsayılan içerir ve `None` DıŞLARDıR SDK 'da tanımlanmıştır. SDK olmayan .NET Framework projelerinin aksine, varsayılanlar en yaygın kullanım durumlarını kapsadığından proje dosyanızda bu öğeleri belirtmeniz gerekmez. Bu, proje dosyasını daha küçük ve gerekirse, el ile anlamanız ve düzenlemeyi kolaylaştırır.
 
-Aşağıdaki tablo, hangi öğelerin ve hangi [genelleştirmeler](https://en.wikipedia.org/wiki/Glob_(programming)) dahil edileceğini ve .NET Core SDK hariç tutulduğunu gösterir:
+Aşağıdaki tabloda, .NET SDK 'sında hangi öğelerin ve hangi [genelleştirmeler](https://en.wikipedia.org/wiki/Glob_(programming)) dahil olduğu ve dışlandıkları gösterilmektedir:
 
 | Öğe           | Glob 'yi dahil et                              | Glob 'yi hariç tut                                                  | Glob 'yi kaldır              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
@@ -132,11 +134,11 @@ Hataları gidermek için aşağıdakilerden birini yapın:
 
 ## <a name="customize-the-build"></a>Derlemeyi özelleştirme
 
-[Bir derlemeyi özelleştirmek](/visualstudio/msbuild/customize-your-build)için çeşitli yollar vardır. Bir [MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) veya [DotNet](../tools/index.md) komutuna bir bağımsız değişken olarak geçirerek bir özelliği geçersiz kılmak isteyebilirsiniz. Ayrıca, özelliği proje dosyasına veya bir *Dizin. Build. props* dosyasına ekleyebilirsiniz. .NET Core projelerinin yararlı özelliklerinin bir listesi için bkz. [.NET Core SDK projeleri Için MSBuild başvurusu](msbuild-props.md).
+[Bir derlemeyi özelleştirmek](/visualstudio/msbuild/customize-your-build)için çeşitli yollar vardır. Bir [MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) veya [DotNet](../tools/index.md) komutuna bir bağımsız değişken olarak geçirerek bir özelliği geçersiz kılmak isteyebilirsiniz. Ayrıca, özelliği proje dosyasına veya bir *Dizin. Build. props* dosyasına ekleyebilirsiniz. .NET projelerinin yararlı özelliklerinin bir listesi için bkz. [.NET SDK projeleri Için MSBuild başvurusu](msbuild-props.md).
 
 ### <a name="custom-targets"></a>Özel hedefler
 
-.NET Core projeleri, paketi tüketen projeler tarafından kullanılmak üzere özel MSBuild hedeflerini ve özelliklerini paketleyebilir. Şunları yapmak istediğinizde bu tür bir genişletilebilirlik kullanın:
+.NET projeleri, paketi tüketen projeler tarafından kullanılmak üzere özel MSBuild hedeflerini ve özelliklerini paketleyebilir. Şunları yapmak istediğinizde bu tür bir genişletilebilirlik kullanın:
 
 - Yapı sürecini genişletin.
 - Oluşturulan dosyalar gibi yapı sürecinin yapılarına erişin.

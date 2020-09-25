@@ -1,7 +1,7 @@
 ---
 title: Lambda ifadeleri-C# başvurusu
 description: Lambda ifadeleri hakkında bilgi edinin. Gövdesi olarak bir ifadesi olan ifade lambdaları veya gövdesi olarak deyim bloğu olan deyim Lambdalar vardır.
-ms.date: 09/22/2020
+ms.date: 09/25/2020
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: afabca0b4ba4d5f7c6f4a7ba8aa97301456b0941
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871718"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247715"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambda ifadeleri (C# Başvurusu)
 
@@ -68,7 +68,7 @@ Deyimler, deyimlerinin ayraç içine alınması dışında bir ifade lambda öğ
 
 Bir lambda deyiminin gövdesi herhangi bir sayıda deyimden oluşabilir; ancak, uygulamada genellikle iki veya üçten fazla değildir.
 
-:::code interactive="try-dotnet" source="snippets/lambda-expressions/ExpressionAndStatementLambdas.cs" id="SnippetStatementLambda":::
+:::code language="csharp" interactive="try-dotnet-method" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetStatementLambda":::
 
 İfade ağaçları oluşturmak için deyim lambdaları kullanamazsınız.
 
@@ -76,25 +76,25 @@ Bir lambda deyiminin gövdesi herhangi bir sayıda deyimden oluşabilir; ancak, 
 
 Lambda ifadesinin giriş parametrelerini parantez içine alın. Boş ayraçlarla sıfır giriş parametrelerini belirtin:  
 
-[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetZeroParameters":::
 
 Lambda ifadesinde yalnızca bir giriş parametresi varsa, parantezler isteğe bağlıdır:
 
-[!code-csharp[one parameter](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#OneParameter)]
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetOneParameter":::
 
 İki veya daha fazla giriş parametresi virgülle ayrılır:
 
-[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetTwoParameters":::
 
 Bazen derleyici giriş parametrelerinin türlerini çıkarsamaz. Aşağıdaki örnekte gösterildiği gibi türleri açıkça belirtebilirsiniz:
 
-[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetExplicitlyTypedParameters":::
 
 Giriş parametresi türleri tamamen açık veya tümü örtük olmalıdır; Aksi halde, bir [CS0748](../../misc/cs0748.md) derleyici hatası oluşur.
 
 C# 9,0 ' den başlayarak, ifadede kullanılmayan bir lambda ifadesinin iki veya daha fazla giriş parametresini belirtmek için [atarsa](../../discards.md) ' ı kullanabilirsiniz:
 
-:::code language="csharp" source="snippets/lambda-expressions/ExpressionAndStatementLambdas.cs" id="SnippetDiscards":::
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetDiscards":::
 
 Lambda atma parametreleri, bir [olay işleyicisi sağlamak](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)için bir lambda ifadesi kullandığınızda yararlı olabilir.
 
@@ -231,11 +231,20 @@ Lambda ifadelerindeki değişken kapsam için aşağıdaki kurallar geçerlidir:
 
 - Bir lambda ifadesi, bu sıçrama deyiminin hedefi lambda ifade bloğunun dışındaysa bir [goto](../keywords/goto.md), [Break](../keywords/break.md)veya [Continue](../keywords/continue.md) deyimi içeremez. Ayrıca, hedef bloğun içindeyse lambda ifade bloğunun dışında bir sıçrama deyimine sahip olmak için bir hatadır.
 
+C# 9,0 ' den başlayarak `static` lambda ile yerel değişkenlerin veya örnek durumunun istenmeden yakalanmasını engellemek için bir lambda ifadesine değiştiricisini uygulayabilirsiniz:
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetStatic":::
+
+Statik lambda, kapsayan kapsamların yerel değişkenlerini veya örnek durumunu yakalayabilir, ancak statik üyelere ve sabit tanımlara başvurabilir.
+
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [anonim işlev ifadeleri](~/_csharplang/spec/expressions.md#anonymous-function-expressions) bölümüne bakın.
 
-Lambda atma parametreleri hakkında daha fazla bilgi için bkz. [özellik teklifi Note](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
+C# 9,0 ' de eklenen özellikler hakkında daha fazla bilgi için aşağıdaki özellik teklifi notlarına bakın:
+
+- [Lambda atma parametreleri](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
+- [Statik anonim işlevler](~/_csharplang/proposals/csharp-9.0/static-anonymous-functions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

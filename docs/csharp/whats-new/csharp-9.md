@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: f309f5fb2e705d220b8b0b743ec2f68901ee8f53
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178404"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247624"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -48,7 +48,6 @@ Kayıt tanımı `Person` iki ReadOnly özelliği içeren bir tür oluşturur: `F
 - Geçersiz kıl <xref:System.Object.GetHashCode>
 - Üyeleri Kopyala ve Kopyala
 - `PrintMembers` ve <xref:System.Object.ToString>
-- `Deconstruct` yöntemi
 
 Kayıtları devralmayı destekler. Öğesinden türetilmiş yeni bir kaydı `Person` aşağıdaki gibi bildirebilirsiniz:
 
@@ -64,7 +63,6 @@ Derleyici Yukarıdaki yöntemlerin farklı sürümlerini birleştirir. Yöntem i
 - Kayıtlar sizin için oluşturulmuş tutarlı bir dize gösterimine sahiptir.
 - Kayıtlar kopyalama oluşturmayı destekler. Doğru kopya oluşturma, devralma hiyerarşilerini ve geliştiriciler tarafından eklenen özellikleri içermelidir.
 - Kayıtlar değiştirilmek üzere kopyalanabilir. Bu kopyalama ve değiştirme işlemleri, bozucu olmayan mutasyon 'yi destekler.
-- Tüm kayıtlar oluşturmayı destekler.
 
 , Ve tanıdık aşırı yüklemelerin yanı sıra, `Equals` `operator ==` `operator !=` derleyici yeni bir özelliği birleştirir `EqualityContract` . Özelliği, `Type` kaydın türüyle eşleşen bir nesne döndürür. Temel tür ise, `object` özelliği olur `virtual` . Temel tür başka bir kayıt türü ise, özelliği bir olur `override` . Kayıt türü ise, `sealed` özelliği olur `sealed` . `GetHashCode` `GetHashCode` Sentezte, temel türde ve kayıt türünde belirtilen tüm özellikleri ve alanları kullanır. Bu birleştirilmiş Yöntemler, devralma hiyerarşisi boyunca değer tabanlı eşitlik uygular. Diğer bir deyişle `Student` , hiçbir şekilde `Person` aynı ada sahip bir ile eşit kabul edilmez. İki kaydın türleri aynı ve aynı zamanda eşit olan kayıt türleri arasında paylaşılan tüm özellikler eşleşmelidir.
 
@@ -226,7 +224,7 @@ Bir ifade kullanarak varsayılan Oluşturucu tarafından oluşturulan bir örnek
 
 Benzer bir özellik, [koşullu ifadelerin](../language-reference/operators/conditional-operator.md)hedef tür çözümlemesini geliştirir. Bu değişiklik ile, iki ifadenin bir öğesinden diğerine örtük dönüştürmesi gerekmez, ancak her ikisi de hedef tür için örtük Dönüştürmelere sahip olabilir. Büyük olasılıkla bu değişikliği fark edeceksiniz. Ne fark edeceksiniz, daha önce gerekli olan veya derlenmeyen bazı Koşullu ifadeler artık çalışır.
 
-C# 9,0 ' den başlayarak `static` lambda ifadelerine veya anonim yöntemlere değiştiricisini ekleyebilirsiniz. Statik lambda ifadeleri `static` Yerel işlevlere benzerdir: statik bir lambda veya anonim işlev yerel değişkenleri veya örnek durumunu yakalayabilir. `static`Değiştirici yanlışlıkla diğer değişkenleri yakalamaya engel olur.
+C# 9,0 ' den başlayarak `static` [lambda ifadelerine](../language-reference/operators/lambda-expressions.md) veya [anonim yöntemlere](../language-reference/operators/delegate-operator.md)değiştiricisini ekleyebilirsiniz. Statik lambda ifadeleri `static` Yerel işlevlere benzerdir: statik lambda veya anonim yöntem yerel değişkenleri veya örnek durumunu yakalayabilir. `static`Değiştirici yanlışlıkla diğer değişkenleri yakalamaya engel olur.
 
 Covaryant dönüş türleri, geçersiz kılınan işlevlerin dönüş türleri için esneklik sağlar. Geçersiz kılınan bir sanal işlev, temel sınıf yönteminde belirtilen dönüş türünden türetilmiş bir tür döndürebilir. Bu, kayıtlar için ve sanal kopya ya da fabrika yöntemlerini destekleyen diğer türler için yararlı olabilir.
 

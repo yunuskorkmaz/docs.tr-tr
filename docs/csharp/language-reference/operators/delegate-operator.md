@@ -1,16 +1,16 @@
 ---
 description: temsilci işleci-C# başvurusu
 title: temsilci işleci-C# başvurusu
-ms.date: 09/22/2020
+ms.date: 09/25/2020
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 6c087d9bdb2f526cf7d94c3a0f2c1a929b0343ef
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: db2bf673db12e4a10741a26112820726a4b8aaee
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874917"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247663"
 ---
 # <a name="delegate-operator-c-reference"></a>Delegate işleci (C# Başvurusu)
 
@@ -36,6 +36,12 @@ C# 9,0 ile başlayarak, yöntemi tarafından kullanılmayan anonim bir yöntemin
 :::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetDiscards" :::
 
 Geriye dönük uyumluluk için, yalnızca tek bir parametre adlandırılmışsa `_` , `_` anonim bir yöntemde bu parametrenin adı olarak değerlendirilir.
+
+C# 9,0 ' den itibaren, `static` anonim bir yöntemin bildiriminde değiştiricisini kullanabilirsiniz:
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetStatic" :::
+
+Statik anonim bir yöntem, kapsayan kapsamlardan yerel değişkenleri veya örnek durumunu yakalayabilir.
 
 `delegate`Bir [temsilci türü](../builtin-types/reference-types.md#the-delegate-type)bildirmek için anahtar sözcüğünü de kullanabilirsiniz.
 
