@@ -3,14 +3,15 @@ title: Her kelime veya alana göre metin verilerini sıralama veya filtreleme (L
 description: Metin verilerini herhangi bir sözcük veya alana göre sıralamayı veya filtreleyeceğinizi öğrenin. Yapılandırılmış metnin satırlarını satırdaki herhangi bir alana göre sıralamak için bir örneğe bakın.
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: f27ce44f4b0b05bc9094b7e108af8f65170bb58a
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 05858cc787d3916b204910df10d3291796cebc02
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301326"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203949"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Her kelime veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (C#)
+
 Aşağıdaki örnek, virgülle ayrılmış değerler gibi yapılandırılmış metnin çizgilerinin satırdaki herhangi bir alana göre nasıl sıralanacağını gösterir. Alan, çalışma zamanında dinamik olarak belirtilmiş olabilir. scores.csv içindeki alanların, bir öğrencinin KIMLIK numarasını temsil ettiğini ve ardından dört test puanı serisi olduğunu varsayalım.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Veri içeren bir dosya oluşturmak için  

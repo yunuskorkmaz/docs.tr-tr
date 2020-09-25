@@ -8,19 +8,21 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 391a8ccbb1fbe6626d1cd5a4b6fcfd9ace3506e6
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: ccbc6734d4e9bafe059dd45bfdf82af7c84438a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474494"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204040"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri (C# Programlama Kılavuzu)
+
 [Abstract](../../language-reference/keywords/abstract.md) anahtar sözcüğü, tamamlanmamış ve türetilmiş bir sınıfta uygulanması gereken sınıflar ve [sınıf](../../language-reference/keywords/class.md) üyeleri oluşturmanızı sağlar.  
   
  [Sealed](../../language-reference/keywords/sealed.md) anahtar sözcüğü, bir sınıfın devralınmasını veya daha önce [sanal](../../language-reference/keywords/virtual.md)olarak işaretlenmiş belirli sınıf üyelerini engellemenizi sağlar.  
   
 ## <a name="abstract-classes-and-class-members"></a>Soyut sınıflar ve sınıf üyeleri  
+
  Sınıflar, sınıf tanımından önce anahtar sözcüğü yerleştirilerek soyut olarak bildirilemez `abstract` . Örneğin:  
   
  [!code-csharp[csProgGuideInheritance#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#13)]  
@@ -38,6 +40,7 @@ ms.locfileid: "86474494"
  Bir `virtual` Yöntem bildirilirse `abstract` , soyut sınıftan devralan herhangi bir sınıfta hala sanal olur. Soyut bir yöntemi devralan sınıf, yöntemin orijinal uygulamasına erişemez — önceki örnekte, `DoWork` F sınıfı üzerinde, `DoWork` D sınıfı üzerinde çağrılamaz. Bu şekilde, soyut bir sınıf, türetilmiş sınıfları sanal yöntemler için yeni yöntem uygulamaları sağlamaya zorlayabilir.  
   
 ## <a name="sealed-classes-and-class-members"></a>Korumalı sınıflar ve sınıf üyeleri  
+
  Sınıflar, sınıf tanımından önce anahtar sözcüğü yerleştirilerek [Sealed](../../language-reference/keywords/sealed.md) olarak bildirilebilecek `sealed` . Örneğin:  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  

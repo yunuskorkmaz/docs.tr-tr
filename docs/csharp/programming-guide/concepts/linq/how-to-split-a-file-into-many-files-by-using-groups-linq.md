@@ -3,14 +3,15 @@ title: Grupları (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (C#)
 description: Grupları kullanarak bir dosyayı birçok dosyaya bölmeyi öğrenin. Bir kod örneğine bakın ve kullanılabilir ek kaynakları görüntüleyin.
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: b7be01be0f1539eb6ed4f4857af2625672319493
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301066"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203936"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Grupları (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (C#)
+
 Bu örnek, iki dosyanın içeriğini birleştirmenin bir yolunu gösterir ve ardından verileri yeni bir şekilde düzenleyen yeni bir dosya kümesi oluşturur.  
   
 ### <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için  
