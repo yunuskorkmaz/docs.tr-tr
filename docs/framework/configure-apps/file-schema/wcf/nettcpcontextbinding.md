@@ -2,14 +2,15 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 88b3da6c81d771db255f6c0a4e86984c9ba294fe
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bb6094b962c0f1199f0a16eb7d0821a95eba4c77
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546158"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195043"
 ---
 # \<netTcpContextBinding>
+
 <xref:System.ServiceModel.NetTcpBinding>Koruma düzeyinin imzalanmasını gerektiren için bağlamını belirtir. NetTcpContextBinding için Contextexchangedüzeneði, SOAPHeader.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -62,6 +63,7 @@ ms.locfileid: "90546158"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  

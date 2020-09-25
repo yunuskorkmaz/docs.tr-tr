@@ -5,21 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 2e7fb97e5c0cb42deff43c411f47e8d30e2257ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 065b509d8385ee37b2a86587f520b5fd3207ceff
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149394"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186958"
 ---
 # <a name="paging-through-a-query-result"></a>Sorgu Sonucunu Sayfalama
-Sorgu sonucunu gözden geçirmek, sorgu sonuçlarını daha küçük veri alt kümelerinde veya sayfalarda döndürme işlemidir. Bu, sonuçları küçük, kolay yönetilen parçalar halinde kullanıcıya görüntülemek için yaygın bir uygulamadır.  
+
+Sorgu sonucu ile sayfalama, bir sorgunun sonuçlarını, verilerin veya sayfaların küçük alt kümelerine döndürme işlemidir. Bu, sonuçları küçük ve kolay Yönetilecek öbeklerde bir kullanıcıya görüntülemek için yaygın bir uygulamadır.  
   
- **DataAdapter,** **Dolgu** yönteminin aşırı yükleri yoluyla yalnızca bir sayfa veriyi döndürmek için bir tesis sağlar. Ancak, **DataAdapter** hedefi <xref:System.Data.DataTable> doldursa veya <xref:System.Data.DataSet> yalnızca istenen kayıtlarla doldursa da, tüm sorguyu döndürecek kaynaklar hala kullanıldığından, bu büyük sorgu sonuçları arasında gezinmek için en iyi seçenek olmayabilir. Sorgunun tamamını döndürmek için kaynakları kullanmadan bir veri kaynağından veri sayfası döndürmek için, sorgunuz için yalnızca gerekli olansatırları azaltan ek ölçütler belirtin.  
+ **DataAdapter** , **Fill** yönteminin aşırı yüklemeleri aracılığıyla yalnızca bir veri sayfası döndürmek için bir özellik sağlar. Ancak, bu, büyük sorgu sonuçlarıyla sayfalama için en iyi seçim olmayabilir, çünkü **DataAdapter** hedefi ya da yalnızca istenen kayıtlarla doldurmakla birlikte, <xref:System.Data.DataTable> <xref:System.Data.DataSet> Tüm sorguyu döndürecek kaynaklar hala kullanılmaktadır. Tüm sorguyu döndürmek için kaynakları kullanmadan bir veri kaynağından veri sayfası döndürmek için, sorgunuz için yalnızca gerekli olanlarla döndürülen satırları azaltan ek ölçütler belirtin.  
   
- Bir veri sayfasını döndürmek için **Dolgu** yöntemini kullanmak için, veri sayfasındaki ilk kayıt için **bir başlangıç Kaydı** parametresi ve veri sayfasındaki kayıt sayısı için bir **maxRecords** parametresi belirtin.  
+ Bir veri sayfası döndürmek için **Fill** metodunu kullanmak için, veri sayfasındaki ilk kayıt Için bir **startRecord** parametresi ve veri sayfasındaki kayıt sayısı için de **MaxRecords** parametresi belirtin.  
   
- Aşağıdaki kod örneği, sayfa boyutunun beş kayıt olduğu bir sorgu sonucunun ilk sayfasını döndürmek için **Dolgu** yönteminin nasıl kullanılacağını gösterir.  
+ Aşağıdaki kod örneği, sayfa boyutunun beş kayıt olduğu bir sorgu sonucunun ilk sayfasını döndürmek için **Fill** yönteminin nasıl kullanılacağını gösterir.  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -46,7 +47,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- Önceki örnekte, **DataSet** yalnızca beş kayıtla doldurulur, ancak **Siparişler** tablosunun tamamı döndürülür. **DataSet'i** aynı beş kayıtla doldurmak, ancak yalnızca beş kayıt döndürmek için, aşağıdaki kod örneğinde olduğu gibi SQL ekstrenizdeki TOP ve WHERE yan tümcelerini kullanın.  
+ Önceki örnekte, **DataSet** yalnızca beş kayıtla doldurulmuştur, ancak tüm **Orders** tablosu döndürülür. **Veri kümesini** aynı beş kayıtla doldurmanız, ancak yalnızca beş kayıt döndürmek için, aşağıdaki kod örneğinde olduğu gibi SQL DEYIMINIZDE top ve WHERE yan tümcelerini kullanın.  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -71,7 +72,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
- Sorgu sonuçları arasında bu şekilde gezinirken, aşağıdaki kod örneğinde gösterildiği gibi, benzersiz kimliği komuta geçirmek için satırları sıralayan benzersiz tanımlayıcıyı korumanız gerektiğini unutmayın.  
+ Sorgu ile disk belleği bu şekilde sonuçlanırsa, aşağıdaki kod örneğinde gösterildiği gibi, bir sonraki kayıt sayfasını döndürmek için özel KIMLIĞI komuta geçirmek üzere satırları sipariş eden benzersiz tanımlayıcıyı korumanız gerektiğini unutmayın.  
   
 ```vb  
 Dim lastRecord As String = _  
@@ -83,7 +84,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- **StartRecord** ve **maxRecords** parametrelerini alan **Dolgu** yönteminin aşırı yükünü kullanarak kayıtların bir sonraki sayfasını döndürmek için, geçerli kayıt dizini sayfa boyutuna göre artım ve tabloyu doldurun. **DataSet'e**yalnızca bir sayfa kayıt eklense bile veritabanı sunucusunun tüm sorgu sonuçlarını döndürtettiğini unutmayın. Aşağıdaki kod örneğinde, tablo satırları bir sonraki veri sayfasıyla doldurulmadan önce temizlenir. Veritabanı sunucusuna yapılan gezileri azaltmak için yerel bir önbellekte belirli sayıda döndürülen satırı korumak isteyebilirsiniz.  
+ **StartRecord** ve **MaxRecords** parametrelerini alan **Fill** yönteminin aşırı yüklemesini kullanarak bir sonraki kayıt sayfasını döndürmek için, geçerli kayıt dizinini sayfa boyutuna göre artırın ve tabloyu girin. **Veri kümesine**yalnızca bir kayıt sayfası eklense bile, veritabanı sunucusunun tüm sorgu sonuçlarını döndürdüğünü unutmayın. Aşağıdaki kod örneğinde, tablo satırları sonraki veri sayfasıyla doldurulmadan önce temizlenir. Veritabanı sunucusuna yapılan gelişleri azaltmak için bir yerel önbellekte belirli sayıda döndürülen satırı korumak isteyebilirsiniz.  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -101,7 +102,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- Veritabanı sunucusunun sorgunun tamamını döndürmesine gerek kalmadan kayıtların bir sonraki sayfasını döndürmek için, kısıtlayıcı ölçütleri SELECT deyimine belirtin. Önceki örnek döndürülen son kaydı koruduğundan, aşağıdaki kod örneğinde gösterildiği gibi sorgu için bir başlangıç noktası belirtmek için WHERE yan tümcesinde kullanabilirsiniz.  
+ Veritabanı sunucusunun tüm sorguyu döndürmesi gerekmeden sonraki kayıt sayfasını döndürmek için, SELECT ifadesiyle sınırlayıcı kriterleri belirtin. Yukarıdaki örnek döndürülen son kaydı korunduğu için, aşağıdaki kod örneğinde gösterildiği gibi, sorgu için bir başlangıç noktası belirtmek üzere WHERE yan tümcesinde kullanabilirsiniz.  
   
 ```vb  
 orderSQL = "SELECT TOP " & pageSize & _  

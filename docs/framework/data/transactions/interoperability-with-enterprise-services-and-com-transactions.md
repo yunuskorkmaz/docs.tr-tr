@@ -3,14 +3,15 @@ title: Kurumsal Hizmetler ve COM+ İşlemleri ile Birlikte Çalışabilirlik
 description: System. Transactions ad alanını kullanarak .NET 'teki kurumsal hizmetler ve COM+ işlemleri ile birlikte çalışabilirliği anlayın.
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
-ms.openlocfilehash: ebd6166fbd99ef102cf10ba1bcef9e3eb8aaa5da
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 48cb006a4294b7c43de262eb2d19c6c4ea9d22fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141907"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186776"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Kurumsal Hizmetler ve COM+ İşlemleri ile Birlikte Çalışabilirlik
+
 <xref:System.Transactions>Ad alanı, bu ad alanı ve com+ aracılığıyla oluşturulan işlemler kullanılarak oluşturulan işlem nesneleri arasında birlikte çalışabilirliği destekler.  
   
  Kullanabilirsiniz <xref:System.Transactions.EnterpriseServicesInteropOption> , yeni bir oluşturduğunuzda numaralandırma <xref:System.Transactions.TransactionScope> COM + ile birlikte çalışabilirlik düzeyini belirtmek için örneği.  
@@ -18,15 +19,16 @@ ms.locfileid: "85141907"
  Varsayılan olarak, uygulama kodunuz statik özelliği denetlediğinde <xref:System.Transactions.Transaction.Current%2A> , <xref:System.Transactions> başka bir şekilde geçerli olan bir işlemi aramaya çalışır veya bunu belirleyen bir <xref:System.Transactions.TransactionScope> nesne <xref:System.Transactions.Transaction.Current%2A> **null**olduğunu belirler. Bunlardan birini bulamazsa, <xref:System.Transactions> bir işlem IÇIN com+ bağlamını sorgular. <xref:System.Transactions>Com+ bağlamından bir işlem bulabilse de, yerel olan işlemleri hala tercih eder <xref:System.Transactions> .  
   
 ## <a name="interoperability-levels"></a>Birlikte çalışabilirlik düzeyleri  
+
  <xref:System.Transactions.EnterpriseServicesInteropOption> Numaralandırma aşağıdaki birlikte çalışabilirlik düzeyleri tanımlar —<xref:System.Transactions.EnterpriseServicesInteropOption.None>, <xref:System.Transactions.EnterpriseServicesInteropOption.Full> ve <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>.  
   
  <xref:System.Transactions.TransactionScope>Sınıfı bir parametre olarak kabul eden oluşturucular sağlar <xref:System.Transactions.EnterpriseServicesInteropOption> .  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.None>Adından da anlaşılacağı gibi, <xref:System.EnterpriseServices> bağlamlar ve işlem kapsamları arasında birlikte çalışabilirlik olmadığını gösterir. Oluşturduktan sonra bir <xref:System.Transactions.TransactionScope> nesnesi ile <xref:System.Transactions.EnterpriseServicesInteropOption.None>, herhangi bir değişiklik <xref:System.Transactions.Transaction.Current%2A> COM + bağlamında yansıtılmaz. Benzer şekilde, COM+ bağlamındaki işlemde yapılan değişiklikler ' de yansıtılmaz <xref:System.Transactions.Transaction.Current%2A> . Bu, gerekli ek eşitleme olmadığından, için en hızlı işlem modudur <xref:System.Transactions> . <xref:System.Transactions.EnterpriseServicesInteropOption.None>, <xref:System.Transactions.TransactionScope> parametresi olarak kabul etmayan tüm oluşturucularla tarafından kullanılan varsayılan değerdir <xref:System.Transactions.EnterpriseServicesInteropOption> .  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.None>Adından da anlaşılacağı gibi, <xref:System.EnterpriseServices> bağlamlar ve işlem kapsamları arasında birlikte çalışabilirlik olmadığını gösterir. Oluşturduktan sonra bir <xref:System.Transactions.TransactionScope> nesnesi ile <xref:System.Transactions.EnterpriseServicesInteropOption.None>, herhangi bir değişiklik <xref:System.Transactions.Transaction.Current%2A> COM + bağlamında yansıtılmaz. Benzer şekilde, COM+ bağlamındaki işlemde yapılan değişiklikler ' de yansıtılmaz <xref:System.Transactions.Transaction.Current%2A> . Bu, gerekli ek eşitleme olmadığından, için en hızlı işlem modudur <xref:System.Transactions> . <xref:System.Transactions.EnterpriseServicesInteropOption.None> , <xref:System.Transactions.TransactionScope> parametresi olarak kabul etmayan tüm oluşturucularla tarafından kullanılan varsayılan değerdir <xref:System.Transactions.EnterpriseServicesInteropOption> .  
   
  <xref:System.EnterpriseServices>İşlemleri çevresel işlem ile birleştirmek istiyorsanız, veya kullanmanız gerekir <xref:System.Transactions.EnterpriseServicesInteropOption.Full> <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> . Bu değerleri her ikisi de Hizmetleri bileşenleri olmadan denilen bir özelliği kullanır ve bu nedenle, Windows XP Service Pack 2 veya Windows Server 2003 üzerinde bunları kullanırken çalışıyor olması gerekir.  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Full>ve için çevresel işlemlerin <xref:System.Transactions> <xref:System.EnterpriseServices> her zaman aynı olduğunu belirtir. Yeni bir <xref:System.EnterpriseServices> İşlemsel bağlam oluşturulmasına ve bu bağlamda geçerli olması için geçerli olan işlemin uygulanmasına neden olur <xref:System.Transactions.TransactionScope> . Bu nedenle, içindeki işlem <xref:System.Transactions.Transaction.Current%2A> içindeki işlemle tamamen eşitleme yapılır <xref:System.EnterpriseServices.ContextUtil.Transaction%2A> . Bu değer, yeni COM+ bağlamlarının oluşturulması gerekebilecek için bir performans cezası sunar.  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Full> ve için çevresel işlemlerin <xref:System.Transactions> <xref:System.EnterpriseServices> her zaman aynı olduğunu belirtir. Yeni bir <xref:System.EnterpriseServices> İşlemsel bağlam oluşturulmasına ve bu bağlamda geçerli olması için geçerli olan işlemin uygulanmasına neden olur <xref:System.Transactions.TransactionScope> . Bu nedenle, içindeki işlem <xref:System.Transactions.Transaction.Current%2A> içindeki işlemle tamamen eşitleme yapılır <xref:System.EnterpriseServices.ContextUtil.Transaction%2A> . Bu değer, yeni COM+ bağlamlarının oluşturulması gerekebilecek için bir performans cezası sunar.  
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>aşağıdaki gereksinimleri belirtir.  
   
@@ -38,7 +40,7 @@ ms.locfileid: "85141907"
   
  Özet bölümünde, yeni bir işlem kapsamı oluştururken aşağıdaki kurallar geçerlidir:  
   
-1. <xref:System.Transactions.Transaction.Current%2A>bir işlem olup olmadığını görmek için denetlenir. Bu onay sonuçlanır:  
+1. <xref:System.Transactions.Transaction.Current%2A> bir işlem olup olmadığını görmek için denetlenir. Bu onay sonuçlanır:  
   
     - Bir kapsam olup olmadığını denetleyin.  
   

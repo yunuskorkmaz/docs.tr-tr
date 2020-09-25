@@ -3,21 +3,22 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: bcd8e00b770517e3faff011b4acee08ebdc5a0df
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 39e96a161a2e75d5f00b73f6b08b1e4a0c109aee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152742"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201362"
 ---
 # \<federationConfiguration>
+
 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> <xref:System.IdentityModel.Services.SessionAuthenticationModule> WS-Federation protokolü aracılığıyla federal kimlik doğrulaması kullanırken (wsfab) ve (Sam) öğesini yapılandırır. <xref:System.Security.Claims.ClaimsAuthorizationManager> <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Talep tabanlı erişim denetimi sağlamak için veya sınıfını kullanırken öğesini yapılandırır.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<federationConfiguration>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel.services>  
@@ -27,6 +28,7 @@ ms.locfileid: "79152742"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -51,6 +53,7 @@ ms.locfileid: "79152742"
 |[\<system.identityModel.services>](system-identitymodel-services.md)|WS-Federation protokolünü kullanarak kimlik doğrulaması için yapılandırma bölümü.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  \<federationConfiguration>Öğesi iki farklı senaryoda ayarlar sağlar:  
   
 - Bir pasif Web uygulamasında WS-Federation kullanılırken, öğesi <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfak) ve (Sam) öğesini yapılandıran ayarları içerir <xref:System.IdentityModel.Services.SessionAuthenticationModule> . Ayrıca güvenlik belirteci işleyicilerini ve sertifikaları ve talep Yetkilendirme Yöneticisi ve talep kimlik doğrulama Yöneticisi gibi bileşenleri yapılandırmak için kullanılacak kimlik yapılandırmasına de başvurur.  
@@ -67,11 +70,12 @@ ms.locfileid: "79152742"
   
 4. Birden çok adlandırılmış `<federationConfiguration>` öğe varsa ve hiçbir adlandırılmamış `<federationConfiguration>` öğe yoksa, bir özel durum oluşturulur.  
   
- Genellikle yalnızca tek bir `<federationConfiguration>` bölüm tanımlanmıştır. Bu bölüm varsayılan Federasyon yapılandırması ' dır. Benzersiz olarak adlandırılmış birden çok `<federationConfiguration>` öğe belirtebilirsiniz; ancak, bu durumda, adlandırılmamış bir yapılandırma dışında bir Federasyon yapılandırması yüklemek istiyorsanız, için bir işleyici sağlamanız gerekir. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>olay ve <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> işleyici içindeki özelliği, <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> yapılandırma dosyasındaki uygun öğeden alınan değerlerle başlatılan bir nesne olarak ayarlayın `<federationConfiguration>` .  
+ Genellikle yalnızca tek bir `<federationConfiguration>` bölüm tanımlanmıştır. Bu bölüm varsayılan Federasyon yapılandırması ' dır. Benzersiz olarak adlandırılmış birden çok `<federationConfiguration>` öğe belirtebilirsiniz; ancak, bu durumda, adlandırılmamış bir yapılandırma dışında bir Federasyon yapılandırması yüklemek istiyorsanız, için bir işleyici sağlamanız gerekir. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> olay ve <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> işleyici içindeki özelliği, <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> yapılandırma dosyasındaki uygun öğeden alınan değerlerle başlatılan bir nesne olarak ayarlayın `<federationConfiguration>` .  
   
  `<federationConfiguration>`Öğesi sınıfı tarafından temsil edilir <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> . Yapılandırma nesnesinin kendisi sınıfı tarafından temsil edilir <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> . Özellikte tek bir <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> örnek ayarlanır <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> ve uygulama için Federal yapılandırma sağlar.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML, `<federationConfiguration>` WSFAB için ayarları belirten bir öğe gösterir ve varsayılan tanımlama bilgisi işleyicisinin (sınıfın bir örneği <xref:System.IdentityModel.Services.ChunkedCookieHandler> ) Sam tarafından kullanılacağını belirtir.  
   
 > [!WARNING]

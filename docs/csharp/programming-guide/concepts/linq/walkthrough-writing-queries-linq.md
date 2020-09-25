@@ -8,14 +8,15 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: cfd2917d330a9229338790c35911502be5cd9391
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bdf91f6f52a68309cfcd276b222083c8cb67a0cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559154"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176246"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>İzlenecek yol: C#'de Sorgu Yazma (LINQ)
+
 Bu izlenecek yol, LINQ sorgu ifadeleri yazmak için kullanılan C# dil özelliklerini gösterir.  
   
 ## <a name="create-a-c-project"></a>Bir C# Projesi Oluşturma  
@@ -40,6 +41,7 @@ Bu izlenecek yol, LINQ sorgu ifadeleri yazmak için kullanılan C# dil özellikl
 5. Projenizin System.Core.dll bir başvurusu olduğunu ve `using` ad alanı için bir yönergeyi olduğunu unutmayın <xref:System.Linq?displayProperty=nameWithType> .  
   
 ## <a name="create-an-in-memory-data-source"></a>Bellek İçi Veri Kaynağı Oluşturma  
+
  Sorgular için veri kaynağı basit bir `Student` nesne listesidir. Her `Student` kaydın adı, soyadı ve, sınıftaki test puanlarını temsil eden bir tamsayılar dizisi vardır. Bu kodu projenize kopyalayın. Aşağıdaki özelliklere göz önünde edin:  
   
 - `Student`Sınıfı otomatik uygulanan özelliklerden oluşur.  
@@ -173,6 +175,7 @@ Bu izlenecek yol, LINQ sorgu ifadeleri yazmak için kullanılan C# dil özellikl
      [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
+
  C# ' deki sorgularla çalışmanın temel yönleri hakkında bilgi sahibi olduktan sonra, ilgilendiğiniz LINQ sağlayıcısı türü için belge ve örnekleri okumaya hazırlanın:  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  

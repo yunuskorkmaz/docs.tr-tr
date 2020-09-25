@@ -10,14 +10,15 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: f4edce948033478aab59a2aff61abadc55a327ce
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8d792b967d967540469dca7c090e0f905ecb2e6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155030"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201765"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>webRequestModules için \<add> Öğesi (Ağ Ayarları)
+
 Uygulamaya özel bir Web isteği modülü ekler.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -25,7 +26,7 @@ Uygulamaya özel bir Web isteği modülü ekler.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<webRequestModules>**](webrequestmodules-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <add
@@ -35,6 +36,7 @@ Uygulamaya özel bir Web isteği modülü ekler.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -45,6 +47,7 @@ Uygulamaya özel bir Web isteği modülü ekler.
 |`type`|<xref:System.Type.FullName%2A>Bu Web istek modülünü uygulayan, tam tür adı (özelliği tarafından gösterilen) ve derleme adı (özelliği ile belirtilir <xref:System.Reflection.Assembly.FullName%2A> ), virgülle ayrılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -54,6 +57,7 @@ Uygulamaya özel bir Web isteği modülü ekler.
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `prefix`Özniteliği belirtilen Web istek modülünü kullanan URI önekini tanımlar. Web isteği modülleri, genellikle HTTP veya FTP gibi belirli bir protokolü işlemek için kaydedilir, ancak bir sunucudaki belirli bir sunucuya veya yola yönelik bir isteği işlemek için kayıt yapılabilir.  
   
  Yöntemine bir URI eşleştirme öneki geçirildiğinde Web istek modülü oluşturulur <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> .  
@@ -63,9 +67,11 @@ Uygulamaya özel bir Web isteği modülü ekler.
  Özniteliğin değeri, `type` virgülle ayrılmış olarak geçerli bir tür adı ve karşılık gelen derleme adı olmalıdır.
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, HTTP için özel bir Web isteği modülü kaydeder. Version ve PublicKeyToken değerlerini belirtilen modülle ilgili doğru değerlerle değiştirmelisiniz.  
   
 ```xml  
@@ -84,4 +90,4 @@ Uygulamaya özel bir Web isteği modülü ekler.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebRequest>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

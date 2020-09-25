@@ -2,14 +2,15 @@
 title: <add> / <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 29b067e6ec20992084f9ab3bab087222bdd56da2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 453593918de15613edb801cca8a16c9dbf71aa90
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400617"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176090"
 ---
 # <a name="add-of-knowncertificates"></a>\<add> / \<knownCertificates>
+
 Bilinen sertifika koleksiyonuna bir X. 509.440 sertifikası ekler.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -22,7 +23,7 @@ Bilinen sertifika koleksiyonuna bir X. 509.440 sertifikası ekler.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<knownCertificates>**](knowncertificates.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <knownCertificates>
@@ -34,6 +35,7 @@ Bilinen sertifika koleksiyonuna bir X. 509.440 sertifikası ekler.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -70,6 +72,7 @@ Bilinen sertifika koleksiyonuna bir X. 509.440 sertifikası ekler.
 |Sabit Listesi|Değerler şunlardır: AddressBook, AuthRoot, CertificateAuthority, Izin verilmeyen, My, root, Trustedkişilerim ve TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -79,6 +82,7 @@ Bilinen sertifika koleksiyonuna bir X. 509.440 sertifikası ekler.
 |[\<knownCertificates>](knowncertificates.md)|Güvenlik belirteçleri doğrulaması için bir güvenlik belirteci hizmeti (STS) tarafından sunulan X. 509.440 sertifikalarının bir koleksiyonunu temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Verilen belirteç senaryosunda üç aşama vardır. İlk aşamada, bir hizmete erişmeye çalışan bir istemciye *güvenli bir belirteç hizmeti*denir. Güvenli belirteç hizmeti daha sonra istemcinin kimliğini doğrular ve ardından istemciye, genellikle bir güvenlik onaylama işlemi Işaretleme dili (SAML) belirteci olarak bir belirteç verir. İstemci daha sonra belirtece sahip hizmete geri döner. Hizmet, hizmetin, belirtecin kimliğini doğrulamasına ve dolayısıyla istemcisinde istemciye izin veren verilerin belirtecini inceler. Belirtecin kimliğini doğrulamak için, güvenli belirteç hizmetinin kullandığı sertifika hizmet tarafından bilinmelidir.  
   
  [\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md)Öğesi, bu tür güvenli belirteç hizmeti sertifikalarının depolandığı depodur. Sertifika eklemek için öğesini kullanın [\<knownCertificates>](knowncertificates.md) . Aşağıdaki örnekte gösterildiği gibi her sertifika için bir [ \<add> öğe \<knownCertificates> öğesi](add-of-knowncertificates.md) ekleyin.  
@@ -99,6 +103,7 @@ Bilinen sertifika koleksiyonuna bir X. 509.440 sertifikası ekler.
  Bir istemcinin Federasyon Hizmeti tarafından doğrulanabilmesi ve bu yapılandırma öğesini kullanma hakkında daha fazla bilgi edinmek için, bkz. [nasıl yapılır: kimlik bilgilerini yapılandırma Federasyon Hizmeti](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md). Federasyon senaryoları hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, herhangi bir STS sertifikası için depoya sertifika ekler.  
   
 ```xml  

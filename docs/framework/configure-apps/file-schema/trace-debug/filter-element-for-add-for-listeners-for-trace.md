@@ -8,14 +8,15 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: b6c2c2bf7fe953a75f9d8129039ef33b4d8a3f56
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d856fc742bc2dca51095ce0866dcbfdaadadf64d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153472"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176116"
 ---
 # <a name="filter-element-for-add-for-listeners-for-trace"></a>\<filter>İçin için \<add> öğesi \<listeners>\<trace>
+
 İzleme için koleksiyondaki bir dinleyiciye bir filtre ekler `Listeners` .  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -25,7 +26,7 @@ ms.locfileid: "79153472"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-listeners-for-trace.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filter>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <filter
@@ -34,6 +35,7 @@ ms.locfileid: "79153472"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -44,6 +46,7 @@ ms.locfileid: "79153472"
 |`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Belirtilen filtre sınıfı için oluşturucuya geçirilen dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -57,11 +60,13 @@ ms.locfileid: "79153472"
 |`add`|Koleksiyona bir dinleyici ekler `Listeners` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<filter>`Öğesi, `<add>` yalnızca içinde tanımlanan bir dinleyicinin adını değil, dinleyicinin türünü belirten bir izleme dinleyicisi öğesi içinde bulunmalıdır [\<sharedListeners>](sharedlisteners-element.md) . Dinleyici bir içinde tanımlanmışsa [\<sharedListeners>](sharedlisteners-element.md) , bu dinleyicinin filtresi o öğede tanımlanmalıdır.  
   
- Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `<filter>` `console` `Listeners` izleme için koleksiyondaki dinleyiciye filtre eklemek için öğesinin nasıl kullanılacağını gösterir `Error` .  
   
 ```xml  
@@ -87,4 +92,4 @@ ms.locfileid: "79153472"
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceFilter>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
+- [İzleme ve hata ayıklama ayarları şeması](index.md)
