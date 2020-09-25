@@ -9,21 +9,22 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 85004d49ce7605b050709a3019592ec696a7bada
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 806a30a52219ef9185f84a650d6a8eef8fb0dc8c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141637"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190312"
 ---
-# <a name="defaultproxy-element-network-settings"></a><span data-ttu-id="a18ed-103">\<defaultProxy> Öğesi (Ağ Ayarları)</span><span class="sxs-lookup"><span data-stu-id="a18ed-103">\<defaultProxy> Element (Network Settings)</span></span>
-<span data-ttu-id="a18ed-104">Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="a18ed-104">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>  
+# <a name="defaultproxy-element-network-settings"></a><span data-ttu-id="a6701-103">\<defaultProxy> Öğesi (Ağ Ayarları)</span><span class="sxs-lookup"><span data-stu-id="a6701-103">\<defaultProxy> Element (Network Settings)</span></span>
+
+<span data-ttu-id="a6701-104">Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="a6701-104">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<defaultProxy>**  
   
-## <a name="syntax"></a><span data-ttu-id="a18ed-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="a18ed-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6701-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="a6701-105">Syntax</span></span>  
   
 ```xml  
 <defaultProxy  
@@ -35,40 +36,44 @@ ms.locfileid: "85141637"
 </defaultProxy>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a18ed-106">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="a18ed-106">Attributes and Elements</span></span>  
- <span data-ttu-id="a18ed-107">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a18ed-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a6701-106">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="a6701-106">Attributes and Elements</span></span>  
+
+ <span data-ttu-id="a6701-107">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a6701-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a18ed-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="a18ed-108">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a6701-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="a6701-108">Attributes</span></span>  
   
-|<span data-ttu-id="a18ed-109">**Dosyalarında**</span><span class="sxs-lookup"><span data-stu-id="a18ed-109">**Element**</span></span>|<span data-ttu-id="a18ed-110">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="a18ed-110">**Description**</span></span>|  
+|<span data-ttu-id="a6701-109">**Dosyalarında**</span><span class="sxs-lookup"><span data-stu-id="a6701-109">**Element**</span></span>|<span data-ttu-id="a6701-110">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="a6701-110">**Description**</span></span>|  
 |-----------------|---------------------|  
-|`enabled`|<span data-ttu-id="a18ed-111">Bir Web proxy 'sinin kullanılıp kullanılmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a18ed-111">Specifies whether a web proxy is used.</span></span> <span data-ttu-id="a18ed-112">Varsayılan değer: `True`.</span><span class="sxs-lookup"><span data-stu-id="a18ed-112">The default value is `True`.</span></span>|  
-|`useDefaultCredentials`|<span data-ttu-id="a18ed-113">Bu konak için varsayılan kimlik bilgilerinin Web proxy 'sine erişmek için kullanılıp kullanılmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a18ed-113">Specifies whether the default credentials for this host are used to access the web proxy.</span></span> <span data-ttu-id="a18ed-114">Varsayılan değer: `False`.</span><span class="sxs-lookup"><span data-stu-id="a18ed-114">The default value is `False`.</span></span>|  
+|`enabled`|<span data-ttu-id="a6701-111">Bir Web proxy 'sinin kullanılıp kullanılmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a6701-111">Specifies whether a web proxy is used.</span></span> <span data-ttu-id="a6701-112">Varsayılan değer: `True`.</span><span class="sxs-lookup"><span data-stu-id="a6701-112">The default value is `True`.</span></span>|  
+|`useDefaultCredentials`|<span data-ttu-id="a6701-113">Bu konak için varsayılan kimlik bilgilerinin Web proxy 'sine erişmek için kullanılıp kullanılmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a6701-113">Specifies whether the default credentials for this host are used to access the web proxy.</span></span> <span data-ttu-id="a6701-114">Varsayılan değer: `False`.</span><span class="sxs-lookup"><span data-stu-id="a6701-114">The default value is `False`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a18ed-115">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="a18ed-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a6701-115">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="a6701-115">Child Elements</span></span>  
   
-|<span data-ttu-id="a18ed-116">**Dosyalarında**</span><span class="sxs-lookup"><span data-stu-id="a18ed-116">**Element**</span></span>|<span data-ttu-id="a18ed-117">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="a18ed-117">**Description**</span></span>|  
+|<span data-ttu-id="a6701-116">**Dosyalarında**</span><span class="sxs-lookup"><span data-stu-id="a6701-116">**Element**</span></span>|<span data-ttu-id="a6701-117">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="a6701-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="a18ed-118">BypassList</span><span class="sxs-lookup"><span data-stu-id="a18ed-118">bypasslist</span></span>](bypasslist-element-network-settings.md)|<span data-ttu-id="a18ed-119">Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="a18ed-119">Provides a set of regular expressions that describe addresses that do not use the proxy.</span></span>|  
-|[<span data-ttu-id="a18ed-120">birimi</span><span class="sxs-lookup"><span data-stu-id="a18ed-120">module</span></span>](module-element-network-settings.md)|<span data-ttu-id="a18ed-121">Uygulamaya yeni bir proxy modülü ekler.</span><span class="sxs-lookup"><span data-stu-id="a18ed-121">Adds a new proxy module to the application.</span></span>|  
-|[<span data-ttu-id="a18ed-122">proxy</span><span class="sxs-lookup"><span data-stu-id="a18ed-122">proxy</span></span>](proxy-element-network-settings.md)|<span data-ttu-id="a18ed-123">Bir ara sunucu tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a18ed-123">Defines a proxy server.</span></span>|  
+|[<span data-ttu-id="a6701-118">BypassList</span><span class="sxs-lookup"><span data-stu-id="a6701-118">bypasslist</span></span>](bypasslist-element-network-settings.md)|<span data-ttu-id="a6701-119">Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="a6701-119">Provides a set of regular expressions that describe addresses that do not use the proxy.</span></span>|  
+|[<span data-ttu-id="a6701-120">birimi</span><span class="sxs-lookup"><span data-stu-id="a6701-120">module</span></span>](module-element-network-settings.md)|<span data-ttu-id="a6701-121">Uygulamaya yeni bir proxy modülü ekler.</span><span class="sxs-lookup"><span data-stu-id="a6701-121">Adds a new proxy module to the application.</span></span>|  
+|[<span data-ttu-id="a6701-122">proxy</span><span class="sxs-lookup"><span data-stu-id="a6701-122">proxy</span></span>](proxy-element-network-settings.md)|<span data-ttu-id="a6701-123">Bir ara sunucu tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a6701-123">Defines a proxy server.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="a18ed-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="a18ed-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a6701-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="a6701-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="a18ed-125">**Dosyalarında**</span><span class="sxs-lookup"><span data-stu-id="a18ed-125">**Element**</span></span>|<span data-ttu-id="a18ed-126">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="a18ed-126">**Description**</span></span>|  
+|<span data-ttu-id="a6701-125">**Dosyalarında**</span><span class="sxs-lookup"><span data-stu-id="a6701-125">**Element**</span></span>|<span data-ttu-id="a6701-126">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="a6701-126">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="a18ed-127">system.net</span><span class="sxs-lookup"><span data-stu-id="a18ed-127">system.net</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="a18ed-128">.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="a18ed-128">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="a6701-127">system.net</span><span class="sxs-lookup"><span data-stu-id="a6701-127">system.net</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="a6701-128">.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="a6701-128">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a18ed-129">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a18ed-129">Remarks</span></span>  
- <span data-ttu-id="a18ed-130">DefaultProxy öğesi boşsa, Internet Explorer 'daki proxy ayarları kullanılacaktır.</span><span class="sxs-lookup"><span data-stu-id="a18ed-130">If the defaultProxy element is empty, the proxy settings from Internet Explorer will be used.</span></span> <span data-ttu-id="a18ed-131">Bu davranış .NET Framework 1,1 sürümünden farklıdır.</span><span class="sxs-lookup"><span data-stu-id="a18ed-131">This behavior is different from version 1.1 of the .NET Framework.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a6701-129">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a6701-129">Remarks</span></span>  
+
+ <span data-ttu-id="a6701-130">DefaultProxy öğesi boşsa, Internet Explorer 'daki proxy ayarları kullanılacaktır.</span><span class="sxs-lookup"><span data-stu-id="a6701-130">If the defaultProxy element is empty, the proxy settings from Internet Explorer will be used.</span></span> <span data-ttu-id="a6701-131">Bu davranış .NET Framework 1,1 sürümünden farklıdır.</span><span class="sxs-lookup"><span data-stu-id="a6701-131">This behavior is different from version 1.1 of the .NET Framework.</span></span>  
   
- <span data-ttu-id="a18ed-132">[Modül](module-element-network-settings.md) öğesi ortak olmayan bir tür belirtiyorsa, tür sınıftan türetilmiyor <xref:System.Net.IWebProxy> , bu nesnenin parametresiz oluşturucusundan bir özel durum oluştu veya sistem tarafından belirtilen varsayılan proxy alınırken özel durum oluştu.</span><span class="sxs-lookup"><span data-stu-id="a18ed-132">An exception is thrown if the [module](module-element-network-settings.md) element specifies a non-public type, the type is not deriving from the <xref:System.Net.IWebProxy> class, an exception from the parameterless constructor of this object occurred, or an exception occurred while retrieving the system-specified default proxy.</span></span> <span data-ttu-id="a18ed-133"><xref:System.Exception.InnerException%2A>Özel durum üzerindeki özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir.</span><span class="sxs-lookup"><span data-stu-id="a18ed-133">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
+ <span data-ttu-id="a6701-132">[Modül](module-element-network-settings.md) öğesi ortak olmayan bir tür belirtiyorsa, tür sınıftan türetilmiyor <xref:System.Net.IWebProxy> , bu nesnenin parametresiz oluşturucusundan bir özel durum oluştu veya sistem tarafından belirtilen varsayılan proxy alınırken özel durum oluştu.</span><span class="sxs-lookup"><span data-stu-id="a6701-132">An exception is thrown if the [module](module-element-network-settings.md) element specifies a non-public type, the type is not deriving from the <xref:System.Net.IWebProxy> class, an exception from the parameterless constructor of this object occurred, or an exception occurred while retrieving the system-specified default proxy.</span></span> <span data-ttu-id="a6701-133"><xref:System.Exception.InnerException%2A>Özel durum üzerindeki özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir.</span><span class="sxs-lookup"><span data-stu-id="a6701-133">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="a18ed-134">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="a18ed-134">Configuration Files</span></span>  
- <span data-ttu-id="a18ed-135">Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a18ed-135">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="a6701-134">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="a6701-134">Configuration Files</span></span>  
+
+ <span data-ttu-id="a6701-135">Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a6701-135">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a18ed-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="a18ed-136">Example</span></span>  
- <span data-ttu-id="a18ed-137">Aşağıdaki örnek, Internet Explorer proxy 'sinden varsayılan değerleri kullanır, proxy adresini belirtir ve yerel erişim ve contoso.com için proxy 'yi atlar.</span><span class="sxs-lookup"><span data-stu-id="a18ed-137">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access and contoso.com.</span></span>  
+## <a name="example"></a><span data-ttu-id="a6701-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="a6701-136">Example</span></span>  
+
+ <span data-ttu-id="a6701-137">Aşağıdaki örnek, Internet Explorer proxy 'sinden varsayılan değerleri kullanır, proxy adresini belirtir ve yerel erişim ve contoso.com için proxy 'yi atlar.</span><span class="sxs-lookup"><span data-stu-id="a6701-137">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access and contoso.com.</span></span>  
   
 ```xml  
 <configuration>  
@@ -87,7 +92,7 @@ ms.locfileid: "85141637"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a18ed-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a18ed-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6701-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a6701-138">See also</span></span>
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="a18ed-139">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="a18ed-139">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="a6701-139">Ağ ayarları şeması</span><span class="sxs-lookup"><span data-stu-id="a6701-139">Network Settings Schema</span></span>](index.md)
