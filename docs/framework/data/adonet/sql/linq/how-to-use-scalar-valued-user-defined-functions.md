@@ -1,25 +1,27 @@
 ---
-title: 'Nasıl yapılır: skaler değerli Kullanıcı tanımlı Işlevler kullanma'
+title: 'Nasıl yapılır: Skaler Değerli Kullanıcı Tanımlı İşlevler Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: dfe82fd50eb3eedeaff9082a4288901f72197795
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: faf8d6e94c88575f6cb73003fa5bed87650d7d54
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003230"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196942"
 ---
-# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Nasıl yapılır: skaler değerli Kullanıcı tanımlı Işlevler kullanma
-@No__t-0 özniteliğini kullanarak, bir sınıfta tanımlanan bir istemci yöntemini Kullanıcı tanımlı bir işlev ile eşleyebilirsiniz. Yöntemin gövdesi, yöntem çağrısının amacını yakalayan bir ifade oluşturur ve bu ifadeyi çeviri ve yürütme için <xref:System.Data.Linq.DataContext> ' a geçirir.  
+# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Nasıl yapılır: Skaler Değerli Kullanıcı Tanımlı İşlevler Kullanma
+
+Özniteliğini kullanarak, bir sınıfta tanımlanan istemci yöntemini Kullanıcı tanımlı bir işlev ile eşleyebilirsiniz <xref:System.Data.Linq.Mapping.FunctionAttribute> . Yöntemin gövdesi, yöntem çağrısının amacını yakalayan bir ifade oluşturur ve bu ifadeyi <xref:System.Data.Linq.DataContext> çeviri ve yürütmeye geçirir.  
   
 > [!NOTE]
 > Doğrudan yürütme yalnızca işlev bir sorgu dışında çağrıldığında gerçekleşir. Daha fazla bilgi için bkz. [nasıl yapılır: Kullanıcı tanımlı Işlevleri Iç satır Içinde çağırma](how-to-call-user-defined-functions-inline.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki SQL kodu, skalar değerli Kullanıcı tanımlı bir işlevi `ReverseCustName()` ' dır.  
+
+ Aşağıdaki SQL kodu, skaler değerli Kullanıcı tanımlı bir işlev gösterir `ReverseCustName()` .  
   
 ```sql  
 CREATE FUNCTION ReverseCustName(@string varchar(100))  
@@ -39,4 +41,4 @@ END
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kullanıcı Tanımlı İşlevler](user-defined-functions.md)
+- [Kullanıcı tanımlı Işlevler](user-defined-functions.md)

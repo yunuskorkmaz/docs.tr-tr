@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 2c358b2dda400f6077ffb5ba1dfc8e6e1127fa52
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 2afab44eec0c7bcc9809b458be0348093cb6dd07
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126001"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196825"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C# derleyici seçenekleri)
+
 Hata ayıklama bilgilerinin daha sonra analiz edilmek üzere bir dosyaya yerleştirilmesi gerektiğini belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -26,10 +27,12 @@ Hata ayıklama bilgilerinin daha sonra analiz edilmek üzere bir dosyaya yerleş
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `file`  
  Hata raporunuzu içermesini istediğiniz dosyanın adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  **-Bugreport** seçeneği aşağıdaki bilgilerin yerleştirilmesi gerektiğini belirtir `file` :  
   
 - Derlemedeki tüm kaynak kodu dosyalarının bir kopyası.  
