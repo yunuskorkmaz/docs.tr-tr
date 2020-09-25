@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: ba28a81dd2ea0684ed863821afd3a8f31c0fb064
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bc2b1648ad404ba13920d9f276c299756554b5d4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140774"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204677"
 ---
 # \<msmqIntegrationBinding>
+
 MSMQ aracılığıyla iletileri yönlendirerek sıraya alma desteği sağlayan bir bağlamayı tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ MSMQ aracılığıyla iletileri yönlendirerek sıraya alma desteği sağlayan b
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<msmqIntegrationBinding>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <msmqIntegrationBinding>
@@ -49,6 +50,7 @@ MSMQ aracılığıyla iletileri yönlendirerek sıraya alma desteği sağlayan b
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -98,6 +100,7 @@ MSMQ aracılığıyla iletileri yönlendirerek sıraya alma desteği sağlayan b
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu bağlama öğesi, Windows Communication Foundation (WCF) uygulamalarının COM, MSMQ Native API 'Ler veya ad alanında tanımlanan türler kullanan mevcut MSMQ uygulamalarından ileti göndermesini ve iletileri almasını sağlamak için kullanılabilir <xref:System.Messaging?displayProperty=nameWithType> . bu yapılandırma öğesini, kuyruğa yönelik yolları belirtmek, kesintileri aktarmak, iletilerin silinme ve kimlik doğrulamasının yapılıp yapılmayacağını belirlemek için kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamaları Ile Exchange iletileri](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
 ## <a name="example"></a>Örnek  

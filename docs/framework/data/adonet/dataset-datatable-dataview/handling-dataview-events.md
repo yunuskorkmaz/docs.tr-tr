@@ -5,21 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: b625fad846c4c6cf008843bff1f6b0eabe0e1de4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2a67cb040c5d438d17ad91d41e97f24f3166262b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151110"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204547"
 ---
 # <a name="handling-dataview-events"></a>DataView Olaylarını İşleme
-Görünümün <xref:System.Data.DataView.ListChanged> güncelleştirilip <xref:System.Data.DataView> güncelleştirilemediğini belirlemek için olayın nedenini kullanabilirsiniz. Olayı yükselten güncelleştirmeler, temel tabloda bir satır eklemeyi, silmeyi veya değiştirmeyi içerir; bir sütunun temel tablo şemasına eklenmesi veya silmesi; ve bir ebeveyn veya alt ilişkide bir değişiklik. **ListChanged** olayı, yeni bir sıralama siparişi veya filtre uygulaması nedeniyle görüntülediğiniz satır listesinin önemli ölçüde değiştiğini de size haber vetir.  
+
+<xref:System.Data.DataView.ListChanged> <xref:System.Data.DataView> Bir görünümün güncelleştirilip güncelleştirilmediğini anlamak için olayını kullanabilirsiniz. Olayı oluşturan güncelleştirmeler temel tablodaki bir satırı ekleme, silme veya değiştirme içerir. temel tablonun şemasına sütun ekleme veya silme. ve bir üst veya alt ilişkide değişiklik. **ListChanged** olayı, görüntülemekte olduğunuz satırların listesi yeni bir sıralama düzeni ya da bir filtrenin uygulaması nedeniyle önemli ölçüde değiştiyse size bildirir.  
   
- **ListChanged** olayı ad alanının **ListChangedEventHandler** temsilcisini <xref:System.ComponentModel> uygular ve <xref:System.ComponentModel.ListChangedEventArgs> bir nesneyi girdi olarak alır. <xref:System.ComponentModel.ListChangedType> **ListChangedEventArgs** nesnesinin **ListChangedType** özelliğindeki numaralandırma değerini kullanarak ne tür bir değişiklik oluştuğunu belirleyebilirsiniz. Satır ekleme, silme veya taşıma yı içeren değişiklikler için, eklenen veya taşınan satırın yeni dizinine ve silinen satırın önceki dizinine **ListChangedEventArgs** nesnesinin **NewIndex** özelliği kullanılarak erişilebilir. Taşınan bir satır söz konusu olduğunda, taşınan satırın önceki dizinine **ListChangedEventArgs** nesnesinin **OldIndex** özelliği kullanılarak erişilebilir.  
+ **ListChanged** olayı, ad alanının **ListChangedEventHandler** temsilcisini uygular <xref:System.ComponentModel> ve bir nesne giriş olarak alır <xref:System.ComponentModel.ListChangedEventArgs> . <xref:System.ComponentModel.ListChangedType> **ListChangedEventArgs** nesnesinin **ListChangedType** özelliğindeki numaralandırma değerini kullanarak ne tür bir değişikliğin oluştuğunu belirleyebilirsiniz. Satır ekleme, silme veya taşımayı içeren değişiklikler için, eklenen veya taşınan satırın yeni dizinine ve silinen satırın önceki dizinine **ListChangedEventArgs** nesnesinin **newwındex** özelliği kullanılarak erişilebilir. Taşınan bir satır söz konusu olduğunda, taşınan satırın önceki dizinine **ListChangedEventArgs** nesnesinin **OldIndex** özelliği kullanılarak erişilebilir.  
   
- **DataViewManager,** bir tablo eklendiğini veya kaldırıldığını veya altta yatan **DataSet'in** **İlişkiler** koleksiyonunda bir değişiklik yapıldıysa sizi bilgilendirmek için bir **ListChanged** olayını da ortaya çıkarır.  
+ **DataViewManager** Ayrıca, bir tablo eklendiğinde veya kaldırılırsa ya da temel alınan **veri kümesinin** **ilişkiler** koleksiyonunda bir değişiklik yapılırsa bunu bilgilendirmek için **ListChanged** olayını ortaya koyar.  
   
- Aşağıdaki kod örneği, **ListChanged** olay işleyicisinin nasıl ekleyeceğini gösterir.  
+ Aşağıdaki kod örneği, **ListChanged** olay işleyicisinin nasıl ekleneceğini gösterir.  
   
 ```vb  
 AddHandler custView.ListChanged, _  

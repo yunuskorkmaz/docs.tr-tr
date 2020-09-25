@@ -6,15 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 6e5161cc325bf0379bb9241b99c473c539ad1081
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 96cc6444b6e4dc2806abffd456d0c2f7533f0009
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286604"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204378"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader kullanarak veri alma
-**DataReader**kullanarak verileri almak Için, **komut** nesnesinin bir örneğini oluşturun ve sonra bir veri kaynağından satırları almak için **Command. ExecuteReader** çağırarak bir **DataReader** oluşturun. **DataReader** , yordamsal mantığın bir veri kaynağından oluşan sonuçları sırayla verimli bir şekilde işlemesini sağlayan, arabelleğe alınmamış bir veri akışı sağlar. Veriler bellekte önbelleğe alınmadığı için büyük miktarlarda veri alırken **DataReader** iyi bir seçimdir.
+
+**DataReader**kullanarak verileri almak Için, **komut** nesnesinin bir örneğini oluşturun ve sonra bir veri kaynağından satırları almak için **Command.ExecuteReader** çağırarak bir **DataReader** oluşturun. **DataReader** , yordamsal mantığın bir veri kaynağından oluşan sonuçları sırayla verimli bir şekilde işlemesini sağlayan, arabelleğe alınmamış bir veri akışı sağlar. Veriler bellekte önbelleğe alınmadığı için büyük miktarlarda veri alırken **DataReader** iyi bir seçimdir.
 
 Aşağıdaki örnekte, geçerli bir **DataReader** `reader` DataReader temsil eden ve `command` geçerli bir komut nesnesini temsil eden bir DataReader kullanımı gösterilmektedir.  
 
@@ -34,6 +35,7 @@ Sorgu sonuçlarından bir satır almak için **DataReader. Read** metodunu kulla
  [!code-vb[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/VB/source.vb#1)]  
   
 ## <a name="closing-the-datareader"></a>DataReader kapatılıyor  
+
  **DataReader** nesnesini kullanmayı bitirdiğinizde her zaman **Close** yöntemini çağırın.  
   
  **Komutunuz** çıkış parametrelerini veya dönüş değerlerini Içeriyorsa, **DataReader** kapatılana kadar bu değerler kullanılamaz.  
@@ -44,18 +46,21 @@ Sorgu sonuçlarından bir satır almak için **DataReader. Read** metodunu kulla
 > Bir **bağlantıyı**, bir **DataReader**'ı veya sınıfınızın **Finalize** yönteminde herhangi bir yönetilen nesneyi **kapatma** veya **atma** işlemini çağırmayın. Sonlandırıcıda yalnızca, sınıfınızın doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınız hiçbir yönetilmeyen kaynağa sahip değilse, sınıf tanımınıza bir **Finalize** yöntemi eklemeyin. Daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
 ## <a name="retrieving-multiple-result-sets-using-nextresult"></a>NextResult kullanarak birden çok sonuç kümesi alma  
+
  **DataReader** birden çok sonuç kümesi döndürürse, sonuç kümelerini sırayla yinelemek Için **NextResult** yöntemini çağırın. Aşağıdaki örnek, <xref:System.Data.SqlClient.SqlDataReader> yöntemi kullanılarak ıkı SELECT deyimi sonuçlarının işlenme işlemini gösterir <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> .  
   
  [!code-csharp[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
 ## <a name="getting-schema-information-from-the-datareader"></a>DataReader 'tan şema bilgileri alma  
+
  Bir **DataReader** açıkken, **GetSchemaTable** yöntemini kullanarak geçerli sonuç kümesiyle ilgili şema bilgilerini alabilirsiniz. **GetSchemaTable** <xref:System.Data.DataTable> , geçerli sonuç kümesi için şema bilgilerini içeren satırlar ve sütunlar ile doldurulmuş bir nesne döndürür. **DataTable** , sonuç kümesinin her bir sütunu için bir satır içerir. Şema tablosunun her sütunu, sonuç kümesinin satırlarında döndürülen sütunların bir özelliğine eşlenir; burada **sütunadı** , özelliğin adıdır ve sütununun değeri özelliğin değeridir. Aşağıdaki örnek, **DataReader**için şema bilgilerini yazar.  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
   
 ## <a name="working-with-ole-db-chapters"></a>OLE DB bölümler ile çalışma  
+
  Hiyerarşik satır kümeleri veya bölümler (OLE DB türü **dbtype_hchapter**, ADO türü **adbölüm**) kullanılarak alınabilir <xref:System.Data.OleDb.OleDbDataReader> . Bölüm içeren bir sorgu **DataReader**olarak döndürüldüğünde, bölüm bu **DataReader** 'da bir sütun olarak döndürülür ve bir **DataReader** nesnesi olarak sunulur.  
   
  ADO.NET **veri kümesi** , tablolar arasında üst-alt ilişkilerini kullanarak hiyerarşik satır kümelerini temsil etmek için de kullanılabilir. Daha fazla bilgi için bkz. [veri kümeleri, DataTable ve DataView](./dataset-datatable-dataview/index.md).  
@@ -135,6 +140,7 @@ using (OleDbConnection connection = new OleDbConnection(
 ```  
   
 ## <a name="returning-results-with-oracle-ref-cursors"></a>Oracle REF IMLEÇLER ile sonuçları döndürme  
+
  Oracle için .NET Framework Veri Sağlayıcısı, Oracle REF IMLEÇLER 'in bir sorgu sonucu döndürecek şekilde kullanılmasını destekler. Oracle REF CURSOR bir olarak döndürülür <xref:System.Data.OracleClient.OracleDataReader> .  
   
  <xref:System.Data.OracleClient.OracleDataReader>Yöntemini kullanarak bir Oracle başvuru imlecini temsil eden bir nesnesi alabilirsiniz <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> . Ayrıca, <xref:System.Data.OracleClient.OracleCommand> bir veya daha fazla Oracle başvuru imleçlerini bir tane doldurdukları Için **SelectCommand** olarak döndüren bir de belirtebilirsiniz <xref:System.Data.OracleClient.OracleDataAdapter> <xref:System.Data.DataSet> .  

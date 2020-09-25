@@ -3,18 +3,18 @@ title: .NET Core SDK telemetri
 description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplandığı ve devre dışı bırakılacağı .NET Core SDK telemetri özelliklerini bulun.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: bad6de138b9c35bcd8c5556df82103f959508b52
+ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359239"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91206360"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK telemetri
 
 [.NET Core SDK](index.md) , .NET Core CLI çöktüğünde kullanım verilerini ve özel durum bilgilerini toplayan bir telemetri özelliği içerir. .NET Core CLI .NET Core SDK ile birlikte gelir ve .NET Core uygulamalarınızı oluşturmanızı, test etmeniz ve yayımlamanıza olanak tanıyan fiiller kümesidir. .NET ekibinin, araçların iyileştirilmesi için nasıl kullanıldığını anladığından emin olmanız önemlidir. Hatalar hakkında bilgi, takımın sorunları çözmesine ve hataları düzeltmesine yardımcı olur.
 
-Toplanan veriler anonimdir ve [Creative Commons Attribution Lisansı](https://creativecommons.org/licenses/by/4.0/)kapsamında toplu olarak yayımlanır.
+Toplanan veriler, [Creative Commons Attribution Lisansı](https://creativecommons.org/licenses/by/4.0/)kapsamında toplu olarak yayımlanır.
 
 ## <a name="scope"></a>Kapsam
 
@@ -41,7 +41,7 @@ Başarılı bir yükleme gerçekleştiğinde .NET Core SDK yükleyicisi tarafın
 ```console
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET Core tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
@@ -68,7 +68,7 @@ Telemetri özelliği aşağıdaki verileri toplar:
 | >= 2,0        | Komut bağımsız değişkenleri ve seçenekleri: birkaç bağımsız değişken ve seçenek toplanır (rastgele dizeler değil). [Toplanan seçeneklere](#collected-options)bakın. 2.1.300 sonrasında karma hale getirilir. |
 | >= 2,0         | SDK 'nın bir kapsayıcıda çalışıp çalışmadığını belirtir. |
 | >= 2,0         | `TargetFramework`2,1 ' den başlayarak karma hale getirilmiş hedef çerçeveler (olaydan). |
-| >= 2,0         | Karma medya Access Control (MAC) adresi: bir makine için bir şifreleme (SHA256) anonim ve benzersiz KIMLIĞI. |
+| >= 2,0         | Karma medya Access Control (MAC) adresi (SHA256). |
 | >= 2,0         | Karma hale getirilmiş geçerli çalışma dizini. |
 | >= 2,0         | Karma yükleyici exe dosya adına sahip başarı raporunu yükleme. |
 | >= 2.1.300     | Çekirdek sürümü. |

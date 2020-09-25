@@ -2,14 +2,15 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4070b9659b6d3936dec38fc6a30cf7cd673691f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7dca85e4095e581c262611f0120ffb85e2174fee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556173"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204586"
 ---
 # \<netMsmqBinding>
+
 Makineler arası iletişim için uygun bir sıraya alınmış bağlamayı tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -61,6 +62,7 @@ Makineler arası iletişim için uygun bir sıraya alınmış bağlamayı tanım
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -102,6 +104,7 @@ Makineler arası iletişim için uygun bir sıraya alınmış bağlamayı tanım
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `netMsmqBinding`Bağlama, bir taşıma olarak Microsoft Message Queuing (MSMQ) kullanarak sıraya alma desteği sağlar ve gevşek olarak bağlanmış uygulamalar, hata yalıtımı, yük dengeleme ve bağlantısı kesik işlemler için destek sağlar. Bu özelliklerle ilgili bir tartışma için bkz. [WCF 'de kuyruklar](../../../wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="example"></a>Örnek  

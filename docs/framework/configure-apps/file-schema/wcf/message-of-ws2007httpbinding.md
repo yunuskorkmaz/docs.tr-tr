@@ -2,14 +2,15 @@
 title: <message> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 3396f74f76d790759f4c32de2907607486701b1a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0979bd1c74061bb13a240bb46e1a37cd7ea1129c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738953"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204846"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<message> / \<ws2007HttpBinding>
+
 Öğenin ileti düzeyi güvenliği için ayarları tanımlar [\<ws2007HttpBinding>](ws2007httpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "73738953"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-ws2007httpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <ws2007HttpBinding>
@@ -37,9 +38,11 @@ ms.locfileid: "73738953"
 ```  
   
 ## <a name="type"></a>Tür  
+
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -83,6 +86,7 @@ ms.locfileid: "73738953"
 |`Windows`|SOAP değişimlerinin kimlik bilgisinin kimliği doğrulanmış bağlamı altında olmasını sağlar `Windows` . `negotiateServiceCredential`Özniteliği olarak ayarlandıysa `true` , bu ya bir SSPI anlaşması veya Kerberos (birlikte çalışabilen bir standart) gerçekleştirir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
-ms.openlocfilehash: 86ba3956797ff603dd944bfc8df1990df8f23001
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bb72948ab6cde3734df8746bb093264f7d304a8c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556440"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204508"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Nasıl yapılır: Bir EntityConnection Bağlantı Dizesi Oluşturma
+
 Bu konu, oluşturma hakkında bir örnek sağlar <xref:System.Data.EntityClient.EntityConnection> .  
   
 ### <a name="to-run-the-code-in-this-example"></a>Bu örnekteki kodu çalıştırmak için  
@@ -25,6 +26,7 @@ Bu konu, oluşturma hakkında bir örnek sağlar <xref:System.Data.EntityClient.
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType> temel sağlayıcı için öğesini başlatır, sonra <xref:System.Data.EntityClient.EntityConnectionStringBuilder?displayProperty=nameWithType> nesneyi başlatır ve bu nesneyi öğesinin oluşturucusuna geçirir <xref:System.Data.EntityClient.EntityConnection> .  
   
  [!code-csharp[DP EntityServices Concepts#BuildingConnectionStringWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#buildingconnectionstringwithentitycommand)]

@@ -2,14 +2,15 @@
 title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: 41f5b19f5067d9ac7faa2c7329dd07dd9d48e9b3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 64e250ae5ccb30da3f8857b94628b85b8c237a03
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74430880"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204716"
 ---
 # \<mexNamedPipeBinding>
+
 Adlandırılmış kanal üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan bir bağlamanın ayarlarını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Adlandırılmış kanal üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi 
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<mexNamedPipeBinding>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <mexNamedPipeBinding>
@@ -31,6 +32,7 @@ Adlandırılmış kanal üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi 
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -44,6 +46,7 @@ Adlandırılmış kanal üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi 
 |`sendTimeout`|<xref:System.TimeSpan>Bir gönderme işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero> . Varsayılan değer 00:01:00 ' dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -58,7 +61,7 @@ Adlandırılmış kanal üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi 
 - <xref:System.ServiceModel.Configuration.MexNamedPipeBindingElement>
 - [Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [Meta Veriler](../../../wcf/feature-details/metadata.md)
+- [Meta veriler](../../../wcf/feature-details/metadata.md)
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)

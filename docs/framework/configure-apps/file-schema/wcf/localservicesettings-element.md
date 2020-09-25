@@ -2,14 +2,15 @@
 title: <localServiceSettings> öğesi
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 4883fd563ecf989d67c369085df4fc43d0c5f078
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3043c07afd316d90cc5525a67bef144f33d9b136
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400310"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204937"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings> öğesi
+
 Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<localServiceSettings>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <security>
@@ -42,6 +43,7 @@ Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -64,6 +66,7 @@ Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.
 |`timestampValidityDuration`|<xref:System.TimeSpan>Zaman damgasının geçerli olduğu süreyi belirten pozitif bir değer. Varsayılan değer "00:15:00" dır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -74,6 +77,7 @@ Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Ayarlar, hizmetin güvenlik ilkesinin bir parçası olarak yayımlanmadığı ve istemcinin bağlamasını etkilemediği için yereldir.  
   
  Öğesinin aşağıdaki öznitelikleri, `localServiceSecuritySettings` hizmet reddi (DOS) güvenlik saldırısını azaltmaya yardımcı olabilir:  

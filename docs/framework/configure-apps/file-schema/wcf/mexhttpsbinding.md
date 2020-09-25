@@ -2,14 +2,15 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: 924d68dd828622b74c5e424a695f80874391b453
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8025f5ed42325963aa4b695890caa5031f6bb6a6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74430346"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204729"
 ---
 # \<mexHttpsBinding>
+
 HTTPS üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan bir bağlamanın ayarlarını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ HTTPS üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan 
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<mexHttpsBinding>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <mexHttpsBinding>
@@ -31,6 +32,7 @@ HTTPS üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan 
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -44,6 +46,7 @@ HTTPS üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan 
 |`sendTimeout`|<xref:System.TimeSpan>Bir gönderme işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero> . Varsayılan değer 00:01:00 ' dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -53,6 +56,7 @@ HTTPS üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan 
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu bağlama temelde, `WSHttpBinding` sertifikaları kullanarak aktarım düzeyi güvenliği destekleyen bir bağlamadır. Bu tür bir meta veri uç noktası yapılandırma ve kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: özel bir WS-Metadata Exchange bağlamayı yapılandırma](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [nasıl yapılır: meta verileri bir MEX olmayan bağlama üzerinden alma](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)ve örnek [özel güvenli meta veri uç noktası](../../../wcf/samples/custom-secure-metadata-endpoint.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
@@ -64,7 +68,7 @@ HTTPS üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan 
 - [Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
 - [Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
 - [Özel Güvenli Meta Veri Uç Noktaları](../../../wcf/samples/custom-secure-metadata-endpoint.md)
-- [Meta Veriler](../../../wcf/feature-details/metadata.md)
+- [Meta veriler](../../../wcf/feature-details/metadata.md)
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)

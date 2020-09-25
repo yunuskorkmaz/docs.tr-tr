@@ -2,14 +2,15 @@
 title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 2364eb9d82fd17bd0b80b01070a0f1d789be3d90
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f1ec6091d72c1d1c6d75c44dd1f98d6d4e10ea12
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556160"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204573"
 ---
 # \<netNamedPipeBinding>
+
 Makine içi çapraz süreç iletişimi için güvenli, güvenilir ve iyileştirilmiş olan bir bağlama tanımlar. Varsayılan olarak, güvenlik için WS-ReliableMessaging ile bir çalışma zamanı iletişim yığını, aktarım güvenliği için taşıma güvenliği, ileti teslimi için adlandırılmış kanallar ve ikili ileti kodlaması.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -47,6 +48,7 @@ Makine içi çapraz süreç iletişimi için güvenli, güvenilir ve iyileştiri
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -81,11 +83,13 @@ Makine içi çapraz süreç iletişimi için güvenli, güvenilir ve iyileştiri
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  , `NetNamedPipeBinding` Aktarım güvenliği, ileti teslimi için adlandırılmış kanallar ve ikili ileti kodlaması kullanan, varsayılan olarak bir çalışma zamanı iletişim yığını oluşturur. Bu bağlama, makineye yönelik iletişim için uygun bir Windows Communication Foundation (WCF) sistem tarafından sağlanmış seçenektir. Ayrıca işlemleri destekler.  
   
  İçin varsayılan yapılandırma, `NetNamedPipeBinding` tarafından sağlanmış olan yapılandırmaya benzerdir `NetTcpBinding` , ancak WCF uygulamasının yalnızca şirket içi kullanım için olduğu ve bu nedenle daha az sunulan özellik olduğu için daha basittir. En önemli fark, `securityMode` ayarın yalnızca `None` ve seçeneklerini sunmanızdır `Transport` . SOAP güvenlik desteği, eklenen bir seçenek değildir. Güvenlik davranışı, isteğe bağlı özniteliği kullanılarak yapılandırılabilir `securityMode` .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, aynı makinede çapraz işlem iletişimi sağlayan netNamedPipeBinding bağlamasını gösterir. Adlandırılmış kanallar makineler arasında çalışmaz.  
   
  Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, `binding` öğesinin özniteliğinde belirtilir `<endpoint>` . NetNamedPipeBinding bağlamasını yapılandırmak ve bazı ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir. Uç nokta, bağlama yapılandırmasına ada göre bir özniteliği ile başvurmalıdır `bindingConfiguration` . Bu örnekte, bağlama yapılandırması Binding1 olarak adlandırılmıştır.  

@@ -2,14 +2,15 @@
 title: <clientCertificate><clientCredentials>öğesinin
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: fb95ef3168378227e41e55c6fd5e5b772cb7ad0f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 74209c43dcafb1e27bb1d7943ee7832eaea0ef57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400513"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204950"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate>\<clientCredentials>öğesinin
+
 Bir hizmette istemcinin kimliğini doğrulamak için kullanılan bir X. 509.440 sertifikası tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan bir X. 509.440 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clientCertificate>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <clientCertificate findValue="String"
@@ -30,6 +31,7 @@ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan bir X. 509.440 
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -42,6 +44,7 @@ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan bir X. 509.440 
 |X509FindType|Yürütülecek X. 509.440 aramasının türünü tanımlar. Özniteliğinde yer alan türün `findValue` Bu özniteliğin gereksinimlerini karşılaması gerekir. Geçerli değerler şunlardır:<br /><br /> -Findbyparmak Izi<br />-FindBySubjectName<br />- FindBySubjectDistinguishedName<br />-FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />- FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Varsayılan değer FindBySubjectDistinguishedName ' dir. Bu öznitelik türü <xref:System.Security.Cryptography.X509Certificates.X509FindType> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -51,6 +54,7 @@ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan bir X. 509.440 
 |[\<clientCredentials>](clientcredentials.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yapılandırma öğesi, bu öğeyle istemcinin kimliğini doğrulamak için kullanılan sertifikayı belirtir. Daha fazla bilgi için bkz. [nasıl yapılır: Istemci kimlik bilgisi değerlerini belirtme](../../../wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

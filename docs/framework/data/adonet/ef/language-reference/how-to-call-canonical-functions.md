@@ -1,35 +1,38 @@
 ---
-title: 'Nasıl yapılır: Kurallı İşlevleri Çağırma'
+title: 'Nasıl yapılır: Kurallı İşlevler Çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
-ms.openlocfilehash: a1c550b35142cffceeaf08f7d9ff049c766307e0
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: acfbdbaf21fe1d454b68dfef5bf4f88d8020ea65
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397563"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204456"
 ---
-# <a name="how-to-call-canonical-functions"></a>Nasıl yapılır: Kurallı İşlevleri Çağırma
-Sınıfı <xref:System.Data.Objects.EntityFunctions> , LINQ to Entities sorgularda kullanılacak kurallı işlevleri kullanıma sunan yöntemler içerir. Kurallı işlevler hakkında daha fazla bilgi için bkz. [kurallı işlevler](canonical-functions.md).  
+# <a name="how-to-call-canonical-functions"></a>Nasıl yapılır: Kurallı İşlevler Çağırma
+
+<xref:System.Data.Objects.EntityFunctions>Sınıfı, LINQ to Entities sorgularda kullanılacak kurallı işlevleri kullanıma sunan yöntemler içerir. Kurallı işlevler hakkında daha fazla bilgi için bkz. [kurallı işlevler](canonical-functions.md).  
   
 > [!NOTE]
-> Sınıfındaki ve <xref:System.Data.Objects.EntityFunctions.AsNonUnicode%2A> yöntemlerinin Kurallı işlev eşdeğerleri yoktur. <xref:System.Data.Objects.EntityFunctions.AsUnicode%2A> <xref:System.Data.Objects.EntityFunctions>  
+> <xref:System.Data.Objects.EntityFunctions.AsUnicode%2A>Sınıfındaki ve <xref:System.Data.Objects.EntityFunctions.AsNonUnicode%2A> yöntemlerinin <xref:System.Data.Objects.EntityFunctions> Kurallı işlev eşdeğerleri yoktur.  
   
- Bir değer kümesi üzerinde hesaplama gerçekleştiren ve tek bir değer döndüren (Toplama kurallı işlevler olarak da bilinir) kurallı işlevler doğrudan çağrılabilir. Diğer kurallı işlevler, yalnızca bir LINQ to Entities sorgusunun parçası olarak çağrılabilir. Bir toplama işlevini doğrudan çağırmak için, işlevine bir <xref:System.Data.Objects.ObjectQuery%601> öğesine geçirmeniz gerekir. Daha fazla bilgi için aşağıdaki ikinci örneğe bakın.  
+ Bir değer kümesi üzerinde hesaplama gerçekleştiren ve tek bir değer döndüren (Toplama kurallı işlevler olarak da bilinir) kurallı işlevler doğrudan çağrılabilir. Diğer kurallı işlevler, yalnızca bir LINQ to Entities sorgusunun parçası olarak çağrılabilir. Bir toplama işlevini doğrudan çağırmak için, işlevine bir öğesine geçirmeniz gerekir <xref:System.Data.Objects.ObjectQuery%601> . Daha fazla bilgi için aşağıdaki ikinci örneğe bakın.  
   
  LINQ to Entities sorgularda ortak dil çalışma zamanı (CLR) yöntemlerini kullanarak, bazı kurallı işlevleri çağırabilirsiniz. Kurallı işlevlerle eşlenen CLR yöntemlerinin listesi için bkz. [CLR yöntemi Ile kurallı Işlev eşleme](clr-method-to-canonical-function-mapping.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, [AdventureWorks Sales modelini](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)kullanır. Örnek, ve <xref:System.Data.Objects.EntityFunctions.DiffDays%2A> `SellEndDate` arasındaki`SellStartDate` farkın 365 günden daha az olduğu tüm ürünleri döndürmek için yöntemini kullanan LINQ to Entities bir sorgu yürütür:  
+
+ Aşağıdaki örnek, [AdventureWorks Sales modelini](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)kullanır. Örnek, <xref:System.Data.Objects.EntityFunctions.DiffDays%2A> ve arasındaki farkın `SellEndDate` `SellStartDate` 365 günden daha az olduğu tüm ürünleri döndürmek için yöntemini kullanan LINQ to Entities bir sorgu yürütür:  
   
  [!code-csharp[DP L2E CanonicalAndStoreFunctions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e canonicalandstorefunctions/cs/program.cs#1)]
  [!code-vb[DP L2E CanonicalAndStoreFunctions#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e canonicalandstorefunctions/vb/module1.vb#1)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, [AdventureWorks Sales modelini](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)kullanır. Örnek, `SalesOrderHeader` alt toplamların standart <xref:System.Data.Objects.EntityFunctions.StandardDeviation%2A> sapmasını döndürmek için doğrudan toplama yöntemini çağırır. Öğesinin bir <xref:System.Data.Objects.ObjectQuery%601> LINQ to Entities sorgusunun parçası olmadan çağrılmasına izin veren işleve geçtiğini unutmayın.  
+
+ Aşağıdaki örnek, [AdventureWorks Sales modelini](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)kullanır. Örnek, <xref:System.Data.Objects.EntityFunctions.StandardDeviation%2A> alt toplamların standart sapmasını döndürmek için doğrudan toplama yöntemini çağırır `SalesOrderHeader` . Öğesinin bir <xref:System.Data.Objects.ObjectQuery%601> LINQ to Entities sorgusunun parçası olmadan çağrılmasına izin veren işleve geçtiğini unutmayın.  
   
  [!code-csharp[DP L2E CanonicalAndStoreFunctions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e canonicalandstorefunctions/cs/program.cs#2)]
  [!code-vb[DP L2E CanonicalAndStoreFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e canonicalandstorefunctions/vb/module1.vb#2)]  

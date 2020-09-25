@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 5fe221c5ec6c51afb199b2c66eab9d72cdfd750b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0f702788cf623651fd980b0443821b37acc7387c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556147"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204560"
 ---
 # \<netPeerTcpBinding>
+
 Eş kanala özgü TCP mesajlaşma için bir bağlama tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,6 +41,7 @@ Eş kanala özgü TCP mesajlaşma için bir bağlama tanımlar.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -71,9 +73,11 @@ Eş kanala özgü TCP mesajlaşma için bir bağlama tanımlar.
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu bağlama, TCP üzerinden eş aktarım kullanarak eşler arası veya çok taraflı uygulamalar oluşturmaya yönelik destek sağlar. Her eş düğüm, bu bağlama türüyle tanımlanmış birden çok eş kanalını barındırabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir eş kanal kullanarak çok taraflı iletişim sağlayan NetPeerTcpBinding bağlamasının kullanımını gösterir. Bu bağlamayı kullanmanın ayrıntılı bir senaryosu için bkz. [net peer TCP](/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90)).  
   
 ```xml  

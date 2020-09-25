@@ -2,14 +2,15 @@
 title: <msmqTransport>
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: fae7c9fbc82dafc0f6be58f5404397d751033b45
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6117a2d4323dce8c2772da46096164639b27032a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738857"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204664"
 ---
 # \<msmqTransport>
+
 Bir kanalın özel bir bağlamaya dahil edildiğinde MSMQ aktarımında iletileri aktarmasına neden olur.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Bir kanalın özel bir bağlamaya dahil edildiğinde MSMQ aktarımında iletiler
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<msmqTransport>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <msmqTransport customDeadLetterQueue="Uri"
@@ -46,6 +47,7 @@ Bir kanalın özel bir bağlamaya dahil edildiğinde MSMQ aktarımında iletiler
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -63,7 +65,7 @@ Bir kanalın özel bir bağlamaya dahil edildiğinde MSMQ aktarımında iletiler
 |Değerini|Üst bilgiler dahil olmak üzere bayt cinsinden en büyük ileti boyutunu belirten pozitif bir tamsayı. İletiyi gönderen ileti alıcı için çok büyük olduğunda bir SOAP hatası alır. Alıcı, iletiyi bırakır ve izleme günlüğünde olayın bir girişini oluşturur. Varsayılan değer 65536 ' dir.|  
 |Maxretrydöngüleri|İleti alma uygulamasına iletileri teslim girişiminde bulunan en fazla yeniden deneme döngüsü sayısını belirten bir tamsayı. Varsayılan değer: <xref:System.Int32.MaxValue>.<br /><br /> Tek bir yeniden deneme çevrimi, bir uygulamaya belirtilen sayıda ileti sunmaya çalışır. Yapılan deneme sayısı özniteliği tarafından ayarlanır `maxImmediateRetries` . Dağıtım denemeleri tükendikten sonra uygulama iletiyi tüketmezse ileti bir yeniden deneme kuyruğuna gönderilir. Sonraki yeniden deneme döngüleri, yeniden deneme sırasından uygulama kuyruğuna döndürülen iletiden oluşur ve bu, bir gecikmeden sonra bir gecikmeden sonra, uygulamaya teslim girişiminde yer verir `retryCycleDelay` . `maxRetryCycles`Özniteliği, uygulamanın iletiyi teslim etmeyi denemek için kullandığı yeniden deneme döngüsü sayısını belirtir.|  
 |queueTransferProtocol|Bu bağlamanın kullandığı sıraya alınmış iletişim kanalı aktarımını belirtir. Geçerli değerler şunlardır<br /><br /> -Native: yerel MSMQ protokolünü kullanın.<br />-SRMP: SOAP Güvenilir Mesajlaşma protokolünü (SRMP) kullanın.<br />-SrmpSecure: SOAP Güvenilir Mesajlaşma Protokolü güvenli (SRMPS) aktarımını kullanın.<br /><br /> Bu öznitelik türü <xref:System.ServiceModel.QueueTransferProtocol> .<br /><br /> SOAP Güvenilir Mesajlaşma protokolünü kullanırken MSMQ Active Directory adresleme 'yi desteklemediğinden, olarak ayarlandığında bu özniteliği SRMP veya srmps olarak ayarlayamazsınız `useActiveDirectory` `true` .|  
-|rejectAfterLastRetry|En fazla yeniden deneme sayısı denendikten sonra teslim başarısız olan bir ileti için hangi eylemin yapılacağını belirten bir Boole değeri.<br /><br /> `true`, gönderene negatif bir bildirim döndürüldüğünden ve ileti bırakıldığında, `false`iletinin zarar iletisi kuyruğuna gönderildiği anlamına gelir. Varsayılan değer: `false`.<br /><br /> Değer ise `false` , alıcı uygulama, zarar iletilerini işlemek için zarar iletisi kuyruğunu okuyabilir (yani tesliminin başarısız olduğu iletiler).<br /><br /> MSMQ 3,0, gönderene negatif bir bildirim döndürmeyi desteklemez, bu nedenle bu öznitelik MSMQ 3,0 ' de yok sayılır.|  
+|rejectAfterLastRetry|En fazla yeniden deneme sayısı denendikten sonra teslim başarısız olan bir ileti için hangi eylemin yapılacağını belirten bir Boole değeri.<br /><br /> `true` , gönderene negatif bir bildirim döndürüldüğünden ve ileti bırakıldığında, `false` iletinin zarar iletisi kuyruğuna gönderildiği anlamına gelir. Varsayılan değer: `false`.<br /><br /> Değer ise `false` , alıcı uygulama, zarar iletilerini işlemek için zarar iletisi kuyruğunu okuyabilir (yani tesliminin başarısız olduğu iletiler).<br /><br /> MSMQ 3,0, gönderene negatif bir bildirim döndürmeyi desteklemez, bu nedenle bu öznitelik MSMQ 3,0 ' de yok sayılır.|  
 |retryCycleDelay|<xref:System.TimeSpan>Anında teslim edilmemiş bir iletiyi teslim etmeye çalışırken deneme döngüleri arasındaki gecikme süresini belirten bir. Varsayılan değer 00:10:00 ' dir.<br /><br /> Tek bir yeniden deneme çevrimi, alıcı uygulamaya belirtilen sayıda ileti sunmaya çalışır. Yapılan deneme sayısı özniteliği tarafından belirtilir `maxImmediateRetries` . Uygulamanın belirtilen sayıda anında yeniden denemeden sonra iletiyi tüketmesi durumunda ileti bir yeniden deneme kuyruğuna gönderilir. Sonraki yeniden deneme döngüleri, yeniden deneme sırasından uygulama kuyruğuna döndürülen iletiden oluşur ve bu, bir gecikmeden sonra bir gecikmeden sonra, uygulamaya teslim girişiminde yer verir `retryCycleDelay` . Yeniden deneme döngüsü sayısı özniteliğe göre belirtilir `maxRetryCycles` .|  
 |timeToLive|<xref:System.TimeSpan>İletilerin, zaman aşımına geçmeden önce ne kadar geçerli olduğunu ve atılacak ileti kuyruğuna yerleştirileceğini belirten bir. Varsayılan değer 1,00:00:00, bu da 1 gün anlamına gelir.<br /><br /> Bu öznitelik, zaman duyarlı iletilerin, alıcı uygulamalar tarafından işlenmeden önce eski hale gelmemesini sağlamak üzere ayarlanır. Belirtilen zaman aralığı içinde alıcı uygulama tarafından tüketilmeyen bir kuyruktaki ileti, süresi dolmaya yönelik olarak kabul edilir. Süre dolmayan iletiler, atılacak ileti sırası adlı özel bir kuyruğa gönderilir. Etkin olmayan ileti sırasının konumu, `customDeadLetterQueue` özniteliğiyle veya uygun varsayılan değer ile belirlenir.|  
 |UseActiveDirectory|Sıra adreslerinin Active Directory kullanılarak dönüştürülmesi gerekip gerekmediğini belirten bir Boole değeri.<br /><br /> MSMQ kuyruğu adresleri, yol adlarından veya doğrudan biçim adlarından oluşabilir. Doğrudan biçim adıyla, MSMQ, DNS, NetBIOS veya IP kullanarak bilgisayar adını çözer. Bir yol adıyla, MSMQ Active Directory kullanarak bilgisayar adını çözer. Varsayılan olarak, Windows Communication Framework (WCF) sıraya alınan aktarım, bir ileti sırasının URI 'sini doğrudan biçim adına dönüştürür. Bu özniteliği ' a ayarlayarak `true` bir uygulama, sıraya alınan TAŞıMANıN DNS, NetBIOS veya IP yerine Active Directory kullanarak bilgisayar adını çözmesi gerektiğini belirtebilir.|  
@@ -83,6 +85,7 @@ Bir kanalın özel bir bağlamaya dahil edildiğinde MSMQ aktarımında iletiler
 |[\<binding>](bindings.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `msmqTransport`Öğesi, kullanıcının sıraya alınmış iletişim kanalının özelliklerini ayarlamanıza olanak sağlar. Kuyruğa alınan iletişim kanalı, taşıması için Message Queuing kullanır.  
   
  Bu bağlama öğesi, Message Queuing standart bağlama () tarafından kullanılan varsayılan bağlama öğesidir `netMsmqBinding` .  

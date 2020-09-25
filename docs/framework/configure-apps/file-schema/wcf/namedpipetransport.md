@@ -2,14 +2,15 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 00631ad88d771ed8f45638f28c84df05917fd3a0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4582066098feaf50b33b083de56bcb8c3e04df0f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736590"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204625"
 ---
 # \<namedPipeTransport>
+
 Bir kanalın özel bir bağlamaya dahil edildiğinde adlandırılmış kanalları kullanarak ileti aktarmasına neden olan bir taşıma tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Bir kanalın özel bir bağlamaya dahil edildiğinde adlandırılmış kanallar�
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<namedPipeTransport>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <namedPipeTransport channelInitializationTimeout="TimeSpan"
@@ -40,9 +41,11 @@ Bir kanalın özel bir bağlamaya dahil edildiğinde adlandırılmış kanallar�
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
 Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
 Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -60,7 +63,7 @@ Yok.
 |maxPendingConnections|Hizmette gönderimi bekleyen en fazla bağlantı sayısını alır veya ayarlar.|  
 |Değerini|Alınabilecek izin verilen en büyük ileti boyutunu bayt cinsinden alır ve ayarlar.|  
 |transferMode|İletilerin arabelleğe alınıp alınmayacağını veya bağlantı yönelimli aktarımla akışını gösteren bir değer alır veya ayarlar.|  
-|[\<connectionPoolSettings>durumunu\<namedPipeTransport>](connectionpoolsettings.md)|Adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.|  
+|[\<connectionPoolSettings> durumunu \<namedPipeTransport>](connectionpoolsettings.md)|Adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -69,6 +72,7 @@ Yok.
 |[\<binding>](bindings.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
 Bu aktarım, "net. pipe:/hostname/path" biçimindeki URI 'Leri kullanır. Diğer URI bileşenleri isteğe bağlıdır.  
   
 `namedPipeTransport`Öğesi, adlandırılmış kanallar aktarım protokolünü uygulayan özel bir bağlama oluşturmak için başlangıç noktasıdır. Bu aktarım, makine içi Windows Communication Foundation (WCF)-WCF iletişimi için kullanılır.  

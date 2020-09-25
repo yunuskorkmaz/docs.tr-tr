@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5a9eb3747a6b4da316bca3f1d450c1ea0f774ada
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: ad14c3367809c16268abedc99596089514986e3f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382054"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205119"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -64,7 +64,7 @@ Daha fazla bilgi için bkz. [atama ve tür dönüştürmeleri](./casting-and-typ
 
 ## <a name="built-in-types"></a>Yerleşik türler
 
-C#, tamsayıları, kayan nokta değerlerini, Boole ifadelerini, metin karakterlerini, ondalık değerleri ve diğer veri türlerini temsil etmek için standart bir yerleşik sayısal türler kümesi sağlar. Ayrıca yerleşik `string` ve `object` türler vardır. Bunlar, herhangi bir C# programında kullanabileceğiniz şekilde kullanılabilir. Yerleşik türlerin tam listesi için bkz. [Yerleşik türler](../../language-reference/builtin-types/built-in-types.md).
+C#, tamsayıları, kayan nokta değerlerini, Boole ifadelerini, metin karakterlerini, ondalık değerleri ve diğer veri türlerini temsil etmek için standart bir yerleşik türler kümesi sağlar. Ayrıca yerleşik `string` ve `object` türler vardır. Bunlar, herhangi bir C# programında kullanabileceğiniz şekilde kullanılabilir. Yerleşik türlerin tam listesi için bkz. [Yerleşik türler](../../language-reference/builtin-types/built-in-types.md).
 
 ## <a name="custom-types"></a>Özel türler
 

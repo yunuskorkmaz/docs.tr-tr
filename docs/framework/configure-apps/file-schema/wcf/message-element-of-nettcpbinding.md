@@ -1,15 +1,16 @@
 ---
-title: <message>öğesi<netTcpBinding>
+title: <message> öğesi <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 76c4a0a30b637bc168855b091029a959b858401e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ab767a5a1179de81bf9a8adc61799ede2d915ac1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73739010"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204911"
 ---
-# <a name="message-element-of-nettcpbinding"></a>\<message>öğesi\<netTcpBinding>
+# <a name="message-element-of-nettcpbinding"></a>\<message> öğesi \<netTcpBinding>
+
 İle yapılandırılmış bir uç nokta için ileti düzeyi güvenlik gereksinimlerinin türünü tanımlar [\<netTcpBinding>](nettcpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "73739010"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-nettcpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <message algorithmSuite="System.Servicemodel.Security.SecurityAlgorithmsuite"
@@ -28,13 +29,14 @@ ms.locfileid: "73739010"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`algorithmSuite`|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Algoritmalar ve anahtar boyutları sınıfına göre belirlenir <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> . Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> Olası değerler aşağıdaki tabloda gösterilmiştir. Varsayılan değer: `Basic256`.<br /><br /> Hizmet bağlaması `algorithmSuite` varsayılan değere eşit olmayan bir değer belirtiyorsa ve Svcutil. exe kullanarak yapılandırma dosyasını oluşturursanız, doğru şekilde oluşturulmaz ve bu özniteliği istenen değere ayarlamak için yapılandırma dosyasını el ile düzenlemeniz gerekir.|  
+|`algorithmSuite`|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Algoritmalar ve anahtar boyutları sınıfına göre belirlenir <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> . Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> Olası değerler aşağıdaki tabloda gösterilmiştir. Varsayılan değer: `Basic256`.<br /><br /> Hizmet bağlaması `algorithmSuite` varsayılan değere eşit olmayan bir değer belirtiyorsa ve Svcutil.exe kullanarak yapılandırma dosyasını oluşturursanız, doğru şekilde oluşturulmaz ve bu özniteliği istenen değere ayarlamak için yapılandırma dosyasını el ile düzenlemeniz gerekir.|  
 |`clientCredentialType`|Ileti tabanlı güvenlik kullanarak istemci kimlik doğrulaması gerçekleştirirken kullanılacak kimlik bilgisinin türünü belirtir. Olası değerler aşağıdaki tabloda gösterilmiştir. Varsayılan değer: `UserName`. Bu öznitelik türü <xref:System.ServiceModel.MessageCredentialType> .|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite özniteliği  
@@ -69,6 +71,7 @@ ms.locfileid: "73739010"
 |IssuedToken|Genellikle bir güvenlik belirteci hizmeti (STS) tarafından verilen özel bir belirteci belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -78,6 +81,7 @@ ms.locfileid: "73739010"
 |[\<security>](security-of-nettcpbinding.md)|İçin güvenlik yeteneklerini tanımlar <xref:System.ServiceModel.Configuration.NetTcpBindingElement> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  İleti, SOAP iletisinin bütünlüğü ve gizliliği için ve iletişim eşlerinin karşılıklı kimlik doğrulaması için ileti düzeyi güvenliği kullanır. Bu güvenlik modu bir bağlamada seçilirse, kanal yığını ileti güvenliği bağlama öğeleriyle yapılandırılır ve SOAP iletileri WS-Security * standartları ile uyumlu olarak korunur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -2,14 +2,15 @@
 title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: d13800ea5d8fe23909fd1af1ac790e28633650ef
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f6eca792f9bae6712a327fbcb5bdf47be9699062
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555477"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204599"
 ---
 # \<netHttpsBinding>
+
 Bir Windows Communication Foundation (WCF) hizmetinin HTTPS üzerinden iletişim kurabilen uç noktaları yapılandırmak ve göstermek için kullanabileceği bir bağlamayı temsil eder. Bir çift yönlü sözleşmeyle birlikte kullanıldığında, Web Yuvaları kullanılacaktır, aksi takdirde HTTPS kullanılır.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -54,9 +55,11 @@ Bir Windows Communication Foundation (WCF) hizmetinin HTTPS üzerinden iletişim
 ```  
   
 ## <a name="type"></a>Tür  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -95,11 +98,13 @@ Bir Windows Communication Foundation (WCF) hizmetinin HTTPS üzerinden iletişim
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  NetHttpsBinding, ileti göndermek için taşıma olarak HTTPS kullanır. Bir çift yönlü sözleşmeyle birlikte kullanıldığında, Web Yuvaları kullanılacaktır.  Bir istek-yanıt sözleşmesiyle birlikte kullanıldığında, NetHttpsBinding, ikili kodlayıcı ile bir BasicHttpsBinding gibi davranır.  
   
  Güvenlik varsayılan olarak kapalıdır, ancak [\<security>](security-of-basichttpbinding.md) alt öğenin mode özniteliği değerinden farklı bir değere ayarlanarak eklenebilir `None` . Varsayılan olarak bir "metin" ileti kodlaması ve UTF-8 metin kodlaması kullanır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.ServiceModel.NetHttpBinding> HTTPS iletişimi ve ilk ve ikinci nesil Web Hizmetleri ile en fazla birlikte çalışabilirlik sağlayan öğesinin kullanımını gösterir. Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, öğesinin özniteliği kullanılarak belirtilir `binding` `<endpoint>` . Temel bağlamayı yapılandırmak ve bazı ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir. Uç noktanın, `bindingConfiguration` `<endpoint>` hizmetin aşağıdaki yapılandırma kodunda gösterildiği gibi, öğesinin özniteliğini kullanarak bağlama yapılandırmasına adı ile başvurması gerekir.  
   
 ```xml  
@@ -137,6 +142,7 @@ Bir Windows Communication Foundation (WCF) hizmetinin HTTPS üzerinden iletişim
 ```  
   
 ## <a name="example"></a>Örnek  
+
  .NET Framework 4 ' den başlayarak bağlamalar ve davranışlar bir ada sahip olmak için gerekli değildir. Önceki örnekteki işlevsellik, bindingConfiguration bitiş noktası adresinden ve bağlamadan adından kaldırılarak gerçekleştirilebilir.  
   
 ```xml  

@@ -2,36 +2,39 @@
 title: Entity SQL ile Transact-SQL Arasındaki Farklar
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 96e2283074b6c69e51bb7fee4d4f257cdb58d615
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9433e7a7ffdc3a7e32900981dca95eefde32f290
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615637"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204443"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL Transact-SQL ' den farklı
 
 Bu makalede Entity SQL ve Transact-SQL arasındaki farklar açıklanmaktadır.  
   
 ## <a name="inheritance-and-relationships-support"></a>Devralma ve Ilişkiler desteği  
+
  Entity SQL doğrudan kavramsal varlık şemalarıyla çalışarak, devralma ve ilişkiler gibi kavramsal model özelliklerini destekler.  
   
  Devralmayla çalışırken, genellikle bir üst tür alt türünün örneklerini seçmek yararlıdır. Entity SQL [oftype](oftype-entity-sql.md) ( `oftype` C# dizilerinde olduğu gibi) OfType işleci bu yeteneği sağlar.  
   
 ## <a name="support-for-collections"></a>Koleksiyonlar için destek  
- Entity SQL, koleksiyonları birinci sınıf varlıklar olarak değerlendirir. Örnek:  
+
+ Entity SQL, koleksiyonları birinci sınıf varlıklar olarak değerlendirir. Örneğin:  
   
 - Koleksiyon ifadeleri `from` yan tümcesinde geçerlidir.  
   
-- `in`ve alt `exists` sorgular tüm koleksiyonlara izin verecek şekilde genelleştirilir.  
+- `in` ve alt `exists` sorgular tüm koleksiyonlara izin verecek şekilde genelleştirilir.  
   
-     Alt sorgu tek bir koleksiyon türüdür. `e1 in e2`ve `exists(e)` Bu işlemleri gerçekleştirmek için Entity SQL yapılarıdır.  
+     Alt sorgu tek bir koleksiyon türüdür. `e1 in e2` ve `exists(e)` Bu işlemleri gerçekleştirmek için Entity SQL yapılarıdır.  
   
 - ,, Ve gibi işlemleri `union` , `intersect` `except` artık koleksiyonlar üzerinde çalışır.  
   
 - Birleşimler koleksiyonlar üzerinde çalışır.  
   
 ## <a name="support-for-expressions"></a>Ifadeler için destek  
+
  Transact-SQL 'de alt sorgular (tablolar) ve ifadeler (satırlar ve sütunlar) vardır.  
   
  Koleksiyonları ve iç içe koleksiyonları desteklemek için Entity SQL her şeyi bir ifadeye getirir. Entity SQL Transact-SQL ' den daha birleştirilebilir — her ifade her yerde kullanılabilir. Sorgu ifadeleri her zaman öngörülen türlerin koleksiyonlarına neden olur ve koleksiyon ifadesine izin verildiğinde her yerde kullanılabilir. Entity SQL desteklenmeyen Transact-SQL ifadeleri hakkında daha fazla bilgi için bkz. [Desteklenmeyen ifadeler](unsupported-expressions-entity-sql.md).  
@@ -48,25 +51,29 @@ set(e1)
 ```  
   
 ## <a name="uniform-treatment-of-subqueries"></a>Alt sorguları Tekdüzen olarak Işleme  
+
  Tablo üzerinde vurgusu verildiğine göre Transact-SQL, alt sorgular için bağlama yorumu uygular. Örneğin, yan tümcesindeki bir alt sorgu `from` bir çoklu küme (tablo) olarak kabul edilir. Ancak yan tümcesinde kullanılan aynı alt sorgu `select` skaler bir alt sorgu olarak kabul edilir. Benzer şekilde, bir işlecin sol tarafında kullanılan bir alt sorgu `in` skaler bir alt sorgu olarak değerlendirilir ve sağ taraftaki bir çoklu küme alt sorgusu olması beklenir.  
   
  Entity SQL bu farklılıkları ortadan kaldırır. Bir ifade, kullanıldığı bağlama bağlı olmayan bir Tekdüzen yorumu içeriyor. Entity SQL tüm alt sorguları çoklu küme alt sorguları olacak şekilde değerlendirir. Alt sorgudan skaler bir değer isteniyorsa Entity SQL, `anyelement` bir koleksiyon üzerinde çalışan işleci (Bu durumda alt sorgu) sağlar ve koleksiyondan tek bir değer ayıklar.  
   
 ### <a name="avoiding-implicit-coercions-for-subqueries"></a>Alt sorgular için örtük zorlamalar önleme  
+
  Tek biçimli alt sorgular için ilgili bir yan etkisi, alt sorguları skaler değerlere örtülü olarak dönüştürmedir. Özellikle Transact-SQL ' de bir dizi çoklu küme (tek bir alan ile), veri türü alanın bulunduğu bir skalar değere örtülü olarak dönüştürülür.  
   
  Entity SQL, bu örtülü zorlaması desteklemez. Entity SQL `ANYELEMENT` , bir koleksiyondan tek bir değer ayıklamaya ve `select value` sorgu ifadesi sırasında satır sarmalayıcı oluşturmaktan kaçınmak için bir yan tümce sağlar.  
   
 ## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>Değer seçin: örtük satır sarmalayıcısı ' ı önleme  
+
  Bir Transact-SQL alt sorgusunda SELECT yan tümcesi, yan tümcesindeki öğelerin etrafında örtük olarak bir satır sarmalayıcı oluşturur. Bu, yapı veya nesne koleksiyonları oluşturduğumuz anlamına gelir. Transact-SQL `rowtype` , bir alan ile aynı veri türünde tek bir değer arasında örtük bir zorlama sağlar.  
   
  Entity SQL `select value` örtük satır oluşturmayı atlamak için yan tümce sağlar. Yan tümcesinde yalnızca bir öğe belirtilebilir `select value` . Böyle bir yan tümce kullanıldığında, yan tümcesindeki öğelerin çevresine hiçbir satır sarmalayıcı oluşturulmadı `select` ve örneğin, istenen şeklin bir koleksiyonu oluşturulabilir `select value a` .  
   
- Entity SQL Ayrıca satır oluşturucusunu rastgele satırlar oluşturmak için de sağlar. `select`projeksiyde bir veya daha fazla öğe alır ve alanlarla veri kaydına neden olur:  
+ Entity SQL Ayrıca satır oluşturucusunu rastgele satırlar oluşturmak için de sağlar. `select` projeksiyde bir veya daha fazla öğe alır ve alanlarla veri kaydına neden olur:  
   
  `select a, b, c`  
   
 ## <a name="left-correlation-and-aliasing"></a>Sol bağıntı ve diğer ad  
+
  Transact-SQL içinde, belirli bir kapsamdaki ifadeler (veya gibi tek bir yan `select` tümce `from` ), aynı kapsamda daha önce tanımlanan ifadelere başvuramaz. SQL 'in bazı diatıtılarını (Transact-SQL dahil), yan tümcesinde bunların sınırlı biçimlerini destekler `from` .  
   
  Entity SQL yan tümcelerinde sol bağıntıları genelleştirir `from` ve bunları bir şekilde değerlendirir. `from`Yan tümcesindeki ifadeler, ek sözdizimi gerekmeden aynı yan tümce içindeki önceki tanımlara (sol ve diğer tanımlar) başvurabilir.  
@@ -84,6 +91,7 @@ SELET k FROM T AS t GROUP BY (t.x + t.y) AS k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>Tabloların (koleksiyonlar) sütunlarına (Özellikler) başvurma  
+
  Entity SQL tüm sütun başvuruları tablo diğer adıyla nitelenmelidir. Aşağıdaki yapı ( `a` tablonun geçerli bir sütunu olduğunu varsayarak `T` ) Transact-SQL ' de geçerlidir ancak Entity SQL değildir.  
   
 ```sql  
@@ -103,6 +111,7 @@ SELET Tab.a FROM Tab
 ```  
   
 ## <a name="navigation-through-objects"></a>Nesneler aracılığıyla gezinme  
+
  Transact-SQL, bir tablonun (bir satırı) sütunlarına başvurmak için "." gösterimini kullanır. Entity SQL, bir nesnenin özellikleri aracılığıyla gezinmeyi desteklemek için bu gösterimi (programlama dillerinden ödünç alınan) genişletir.  
   
  Örneğin, `p` kişi türünde bir ifadesiyse, bu kişinin adresinin şehrine başvurmak için Entity SQL sözdizimi aşağıda verilmiştir.  
@@ -111,7 +120,8 @@ SELET Tab.a FROM Tab
 p.Address.City
 ```  
   
-## <a name="no-support-for-"></a>İçin destek yok\*  
+## <a name="no-support-for-"></a>İçin destek yok \*  
+
  Transact-SQL, \* tüm satır için bir diğer ad olarak nitelenmemiş sözdizimini ve \* \* Bu tablonun alanları için bir kısayol olarak nitelenmiş sözdizimini (t.) destekler. Ayrıca Transact-SQL, null değerler içeren özel bir Count ( \* ) toplamasına izin verir.  
   
  Entity SQL, * yapısını desteklemez. Formunun Transact-SQL sorguları `select * from T` ve `select T1.* from T1, T2...` sırasıyla Entity SQL olarak ifade edilebilir `select value t from T as t` `select value t1 from T1 as t1, T2 as t2...` . Ayrıca, bu yapılar devralma (değer substitutability), ancak `select *` varyantlar, belirtilen türün en üst düzey özellikleriyle sınırlandırılır.  
@@ -119,6 +129,7 @@ p.Address.City
  Entity SQL, `count(*)` toplamı desteklemez. Bunun yerine `count(0)` kullanın.  
   
 ## <a name="changes-to-group-by"></a>Gruplandırma ölçütü  
+
  Entity SQL anahtarların diğer adını destekler `group by` . `select`Yan tümce ve `having` yan tümcesindeki ifadeler, `group by` Bu diğer adlar aracılığıyla anahtarlara başvurmalıdır. Örneğin, bu Entity SQL söz dizimi:  
   
 ```sql  
@@ -136,21 +147,23 @@ GROUP BY b + c
 ```  
   
 ## <a name="collection-based-aggregates"></a>Koleksiyon tabanlı toplamalar  
+
  Entity SQL iki tür toplamaları destekler.  
   
- Koleksiyon tabanlı toplamalar koleksiyonlar üzerinde çalışır ve toplanmış sonucu üretir. Bunlar sorgunun herhangi bir yerinde görünebilir ve `group by` yan tümce gerektirmez. Örnek:  
+ Koleksiyon tabanlı toplamalar koleksiyonlar üzerinde çalışır ve toplanmış sonucu üretir. Bunlar sorgunun herhangi bir yerinde görünebilir ve `group by` yan tümce gerektirmez. Örneğin:  
   
 ```sql  
 SELECT t.a AS a, count({1,2,3}) AS b FROM T AS t
 ```  
   
- Entity SQL Ayrıca SQL stili toplamlarını da destekler. Örnek:  
+ Entity SQL Ayrıca SQL stili toplamlarını da destekler. Örneğin:  
   
 ```sql  
 SELECT a, sum(t.b) FROM T AS t GROUP BY t.a AS a
 ```  
   
 ## <a name="order-by-clause-usage"></a>ORDER BY yan tümcesi kullanımı  
+
 Transact-SQL `ORDER BY` yan tümcelerinin yalnızca en üstteki blokta belirtilmesini sağlar `SELECT .. FROM .. WHERE` . Entity SQL, iç içe geçmiş bir ifade kullanabilirsiniz `ORDER BY` ve sorgu içinde herhangi bir yere yerleştirilebilir, ancak iç içe bir sorgudaki sıralama korunmaz.  
   
 ```sql  
@@ -169,9 +182,11 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="identifiers"></a>Tanımlayıcılar  
+
  Transact-SQL ' de tanımlayıcı karşılaştırması, geçerli veritabanının harmanlanmasını temel alır. Entity SQL, tanımlayıcılar her zaman büyük/küçük harfe duyarlıdır ve aksan duyarlıdır (yani, Entity SQL aksanlı ve aksanlı karakterler arasında ayrım yapar; örneğin, ' a ', ' ấ ' değerine eşit değildir). Entity SQL, aynı olan ancak farklı kod sayfalarından farklı karakter olan harflerin sürümlerini ele alır. Daha fazla bilgi için bkz. [giriş karakter kümesi](input-character-set-entity-sql.md).  
   
 ## <a name="transact-sql-functionality-not-available-in-entity-sql"></a>Transact-SQL Işlevselliği Entity SQL kullanılamıyor  
+
  Aşağıdaki Transact-SQL işlevleri Entity SQL ' de kullanılamaz.  
   
  DML  
