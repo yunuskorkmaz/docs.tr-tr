@@ -2,14 +2,15 @@
 title: IŞLE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 566ac875aec17e4d0aa22ec1962053aeb6ae2a2e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bb41c0fed944ce4db11878b9213a62c6f851418e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558855"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201050"
 ---
 # <a name="treat-entity-sql"></a>IŞLE (Entity SQL)
+
 Belirli bir temel türdeki bir nesneyi belirtilen türetilmiş türün bir nesnesi olarak değerlendirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -19,6 +20,7 @@ TREAT ( expression as type)
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `expression`  
  Bir varlık döndüren geçerli bir sorgu ifadesi.  
   
@@ -32,9 +34,11 @@ TREAT ( expression as type)
 > Belirtilen ifade, belirtilen veri türünün bir alt türü olmalıdır veya veri türü ifadenin bir alt türü olmalıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Belirtilen veri türünde bir değer.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  IŞLE ilgili sınıflar arasında yukarı atama gerçekleştirmek için kullanılır. Örneğin, `Employee` ve p türünden türetürse `Person` `Person` , `TREAT(p AS NamespaceName.Employee)` genel bir örneği ' a aktarır `Person` `Employee` ; Yani, p 'yi kabul etmenizi sağlar `Employee` .  
   
  DEĞERLENDIR, aşağıdaki gibi bir sorgu yapabileceğiniz devralma senaryolarında kullanılır:  
@@ -62,6 +66,7 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (RowType AS RowType)`|Bir özel durum oluşturur.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir nesne türünü Onsitekurs türünde bir nesne koleksiyonuna dönüştürmek IÇIN değerlendir işlecini kullanır. Sorgu, [okul modelini](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  

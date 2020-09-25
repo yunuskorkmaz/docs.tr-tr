@@ -5,14 +5,15 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: c1345022b79df371ad9c89a39a0a8b625e26608c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cd920b58290050fcc30ea5d0a1ac113a333902fa
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154511"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195369"
 ---
 # <a name="add-element-for-namedcaches"></a>\<namedCaches> için \<add> Öğesi
+
 `namedCache` `namedCaches` Bir bellek önbelleği için koleksiyona bir giriş ekler.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ ms.locfileid: "79154511"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <namedCaches>  
@@ -31,9 +32,11 @@ ms.locfileid: "79154511"
 ```  
   
 ## <a name="type"></a>Tür  
+
  `None`  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -46,6 +49,7 @@ ms.locfileid: "79154511"
 |`PollingInterval`|Önbellek uygulamasının geçerli bellek yükünü, önbellek örneği için ayarlanan mutlak ve yüzde tabanlı bellek sınırlarına göre karşılaştıran zaman aralığını belirten bir değer. Bu değer "HH: MM: SS" biçiminde girilir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  `None`  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -55,9 +59,11 @@ ms.locfileid: "79154511"
 |[\<namedCaches>](namedcaches-element-cache-settings.md)|Adlandırılmış örnekler için yapılandırma ayarlarının bir koleksiyonunu içerir <xref:System.Runtime.Caching.MemoryCache> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `add`Öğesi, `namedCaches` bir bellek önbelleği için koleksiyona bir giriş ekler. [clear](clear-element-for-namedcaches.md) `add` Koleksiyonda başka bir adlandırılmış önbellek bulunmadığından emin olmak için öğesini kullanmadan önce Clear öğesini kullanabilirsiniz. Bu öğe Machine. config dosyasında ve Web. config dosyasında kullanılabilir.  
+
+ `add`Öğesi, `namedCaches` bir bellek önbelleği için koleksiyona bir giriş ekler. [clear](clear-element-for-namedcaches.md) `add` Koleksiyonda başka bir adlandırılmış önbellek bulunmadığından emin olmak için öğesini kullanmadan önce Clear öğesini kullanabilirsiniz. Bu öğe machine.config dosyasında ve Web.config dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `namedCache` `namedCaches` bir bellek önbelleğinin koleksiyonuna varsayılan giriş için ayarların nasıl tanımlanacağını gösterir.  
   
 ```xml  
@@ -79,4 +85,4 @@ ms.locfileid: "79154511"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<namedCaches>Öğesi (önbellek ayarları)](namedcaches-element-cache-settings.md)
+- [\<namedCaches> Öğesi (önbellek ayarları)](namedcaches-element-cache-settings.md)

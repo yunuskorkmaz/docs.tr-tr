@@ -3,14 +3,15 @@ title: <certificateValidator>
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-ms.openlocfilehash: 3f3d79d3567c1714a79423b7767ce3f454b9d52d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8476600769b6099bb885566de4c908c78a2dbbda
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152794"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201387"
 ---
 # \<certificateValidator>
+
 Sertifika doğrulaması için özel bir tür belirtir. Bu tür yalnızca `certificateValidationMode` [\<certificateValidation>](certificatevalidation.md) öğenin özniteliği "Custom" olarak ayarlandığında kullanılır.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Sertifika doğrulaması için özel bir tür belirtir. Bu tür yalnızca `certif
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<certificateValidation>**](certificatevalidation.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificateValidator>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -33,6 +34,7 @@ Sertifika doğrulaması için özel bir tür belirtir. Bu tür yalnızca `certif
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -42,6 +44,7 @@ Sertifika doğrulaması için özel bir tür belirtir. Bu tür yalnızca `certif
 |tür|Sınıfından türetilen özel bir tür belirtir <xref:System.IdentityModel.Selectors.X509CertificateValidator> . `certificateValidationMode` [\<certificateValidation>](certificatevalidation.md) Bu türü kullanmak için, öğesinin özniteliğini "Custom" olarak ayarlayın. Özniteliği belirtme hakkında daha fazla bilgi için `type` bkz. [özel tür başvuruları](../windows-workflow-foundation/index.md). İsteğe bağlı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

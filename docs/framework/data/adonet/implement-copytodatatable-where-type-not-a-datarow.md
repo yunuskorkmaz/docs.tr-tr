@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: a1427747d03f01e52f1ee7ad1fc11d47d310edbe
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 776ff6062282d12b622ec89cfa9990513da64a07
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590611"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194602"
 ---
 # <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Nasıl yapılır: T Genel Türünün DataRow Olmadığı\<T> CopyToDataTable İşlemini Uygulama
+
 <xref:System.Data.DataTable>Nesnesi genellikle veri bağlama için kullanılır. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>Yöntemi bir sorgunun sonuçlarını alır ve verileri ' a kopyalar ve <xref:System.Data.DataTable> Bu da veri bağlama için kullanılabilir. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>Ancak, yöntemleri yalnızca <xref:System.Collections.Generic.IEnumerable%601> genel parametresinin türü olan bir kaynak üzerinde çalışır `T` <xref:System.Data.DataRow> . Bu faydalı olsa da, tabloların bir skalar türler dizisinden, proje anonim türleri olan sorgulardan veya tablo katılımları gerçekleştiren sorgulardan oluşturulmasını izin vermez.  
   
  Bu konu `CopyToDataTable<T>` , dışında bir türün genel bir parametresini kabul eden iki özel uzantı yönteminin nasıl uygulanacağını açıklar `T` <xref:System.Data.DataRow> . Kaynağından bir kaynağı oluşturma mantığı, <xref:System.Data.DataTable> <xref:System.Collections.Generic.IEnumerable%601> `ObjectShredder<T>` daha sonra iki aşırı yüklenmiş uzantı yöntemine sarılan sınıfta bulunur `CopyToDataTable<T>` . `Shred`Sınıfının yöntemi, `ObjectShredder<T>` doldurulmuş <xref:System.Data.DataTable> ve üç giriş parametresini kabul eder: bir <xref:System.Collections.Generic.IEnumerable%601> kaynak, a <xref:System.Data.DataTable> ve bir <xref:System.Data.LoadOption> sabit listesi. Döndürülen ilk şeması, <xref:System.Data.DataTable> türün şemasına dayalıdır `T` . Var olan bir tablo giriş olarak sağlanmışsa, şemanın tür şemasıyla tutarlı olması gerekir `T` . Türün her bir ortak özelliği ve alanı `T` döndürülen tabloda bir öğesine dönüştürülür <xref:System.Data.DataColumn> . Kaynak sırası öğesinden türetilmiş bir tür içeriyorsa `T` , döndürülen tablo şeması herhangi bir ek ortak özellik veya alan için genişletilir.  

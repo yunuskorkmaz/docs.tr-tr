@@ -2,14 +2,15 @@
 title: <basicHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: d7d825e4fb17c3d864f0ac40daaee9d492c7f8e8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 038841c2710466e8cddd0909804b01af6f03b2c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557664"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201518"
 ---
 # \<basicHttpContextBinding>
+
 <xref:System.ServiceModel.BasicHttpBinding>Exchange mekanizması olarak http tanımlama bilgilerini etkinleştirerek alışverişi için bağlam sağlayan bir bağlama belirtme.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -54,6 +55,7 @@ ms.locfileid: "90557664"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -92,6 +94,7 @@ ms.locfileid: "90557664"
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu bağlama öğesi, bir için bağlamının parçası olarak bir koruma düzeyi ve bir Exchange mekanizması sağlar `BasicHttpBinding` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.

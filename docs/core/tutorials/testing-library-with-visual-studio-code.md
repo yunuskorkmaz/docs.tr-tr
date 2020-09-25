@@ -2,18 +2,18 @@
 title: Visual Studio Code kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 description: .NET Core sınıf kitaplığı için bir birim test projesi oluşturun. .NET Core sınıf kitaplığının birim testleriyle düzgün çalıştığını doğrulayın.
 ms.date: 06/08/2020
-ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359174"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180470"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 
 Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otomatikleştirilmesi gösterilmektedir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Bu öğretici, [Visual Studio Code kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio-code.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
 
@@ -21,7 +21,7 @@ Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otom
 
 Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sağlar. Bu öğreticide kullandığınız test çerçevesi MSTest. [MSTest](https://github.com/Microsoft/testfx-docs) , aralarından seçim yapabileceğiniz üç test çerçevelerinden biridir. Diğerleri [xUnit](https://xunit.net/) ve [NUnit](https://nunit.org/)' dir.
 
-1. Visual Studio Code’u başlatma.
+1. Visual Studio Code’u başlatın.
 
 1. `ClassLibraryProjects` [Visual Studio Code kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio-code.md)bölümünde oluşturduğunuz çözümü açın.
 
@@ -120,7 +120,7 @@ Test yöntemleri oluşturmak için:
    Test Run Successful.
    Total tests: 3
         Passed: 3
-   Total time: 5.1116 Seconds
+    Total time: 5.1116 Seconds
    ```
 
 ## <a name="handle-test-failures"></a>Test başarısızlıklarını işle
@@ -150,14 +150,14 @@ Test odaklı geliştirme (TDD) yapıyorsanız, önce testleri yazarsınız ve il
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-     at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper()
-       in C:\Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
+   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
    Test Run Failed.
    Total tests: 3
         Passed: 2
         Failed: 1
-   Total time: 1.7825 Seconds
+    Total time: 1.7825 Seconds
    ```
 
 1. Adım 1 ' de eklediğiniz "Error" dizesini kaldırın. Testi ve test geçişini yeniden çalıştırın.
@@ -173,6 +173,12 @@ Artık, kitaplığın hata ayıklama derlemesini çalıştırırken testlerin ba
    ```
 
    Testler geçer.
+
+## <a name="debug-tests"></a>Hata ayıklama testleri
+
+IDE 'niz olarak Visual Studio Code kullanıyorsanız, birim testi projenizi kullanarak kodun hatalarını ayıklamak için [Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama](debugging-with-visual-studio-code.md) sırasında gösterilen aynı süreci kullanabilirsiniz. *Gösterimi* uygulama projesini başlatmak yerine *stringlibrarytest/UnitTest1. cs*açın ve 7 ve 8 satırları arasında **Tüm Testleri Çalıştır** ' ı seçin. Bunu bulamıyorsanız, <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd> tuşlarına basarak komut paletini açın ve **yeniden yükle penceresini**girin.
+
+Visual Studio Code, test projesini hata ayıklayıcı ekli olarak başlatır. Yürütme, test projesine veya temeldeki kitaplık koduna eklediğiniz herhangi bir kesme noktasında durur.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

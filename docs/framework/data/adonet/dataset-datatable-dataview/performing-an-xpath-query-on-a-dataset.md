@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 5e9a00ab78a57c3c1686d7c87ed8b45d9b2649af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7897815874f2e9de2f4c24d3c141d464a296b31
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150837"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201245"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>DataSet Üzerinde XPath Sorgusu Gerçekleştirme
-Senkronize <xref:System.Data.DataSet> edilmiş <xref:System.Xml.XmlDataDocument> ve XML Yol Dili (XPath) sorgusu **gibi, XmlDataDocument'a** erişen ve belirli işlevleri doğrudan **DataSet'e** erişmekten daha rahat gerçekleştirebilen XML hizmetlerinden yararlanmanızı sağlar. Örneğin, **Bir DataSet'teki**diğer <xref:System.Data.DataTable> tablolarla ilişkileri yönlendirmek için bir ilişkinin **Seç** yöntemini kullanmak yerine, Bir ' şeklinde XML öğelerinin listesini almak **için, DataSet** <xref:System.Xml.XmlNodeList>ile senkronize edilmiş bir **XmlDataDocument'da** XPath sorgusu gerçekleştirebilirsiniz. **XmlNodeList**düğümleri <xref:System.Xml.XmlElement> , düğümolarak döküm, daha sonra **XmlDataDocument** **GetRowFromElement** yöntemine geçirilebilir , <xref:System.Data.DataRow> senkronize **DataSet**tablonun satırlarına eşleşen başvurular dönmek için .  
+
+Eşitlenen ve arasındaki ilişki, <xref:System.Data.DataSet> <xref:System.Xml.XmlDataDocument> **XmlDataDocument** 'e erişen XML Path Language (XPath) sorgusu gibi XML hizmetlerinden yararlanabilirsiniz ve belirli işlevleri doğrudan **veri kümesine** erişmekten daha kolay gerçekleştirebilir. Örneğin, bir **Select** <xref:System.Data.DataTable> **veri kümesindeki**diğer tablolarla ilişkilerde gezinmek için bir ' ın SELECT metodunu kullanmak yerine, bir veri **kümesiyle**eşitlenen bir **XmlDataDocument** üzerinde bir XPath sorgusu gerçekleştirebilirsiniz <xref:System.Xml.XmlNodeList> . **XmlNodeList**içindeki düğümler, düğüm olarak atama <xref:System.Xml.XmlElement> , daha sonra eşitlenmiş veri kümesindeki tablonun satırlarına eşleşen başvuruları döndürmek Için **XmlDataDocument**'in **GetRowFromElement** metoduna geçirilebilir <xref:System.Data.DataRow> . **DataSet**  
   
- Örneğin, aşağıdaki kod örneği bir "torun" XPath sorgusu gerçekleştirir. **DataSet** üç tabloyla doldurulur: **Müşteriler,** **Siparişler**ve **Sipariş Ayrıntıları.** Örnekte, önce **Müşteriler** ve **Siparişler** tabloları arasında ve **Siparişler** ve Sipariş **Ayrıntıları** tabloları arasında bir üst-alt ilişkisi oluşturulur. XPath sorgusu daha sonra, torun **Sipariş Ayrıntıları** düğümünde 43 değeriolan bir **ProductID** düğümüolan Bir **XmlNodeList** **of Customers** düğümlerini döndürmek için gerçekleştirilir. Özünde, örnek, **43'ün ProductID'sine** sahip ürünü hangi müşterilerin sipariş ettiğini belirlemek için XPath sorgusunu kullanır.  
+ Örneğin, aşağıdaki kod örneği bir "ılchild" XPath sorgusu gerçekleştirir. **Veri kümesi** üç tabloyla doldurulmuştur: **müşteriler**, **siparişler**ve **OrderDetails**. Örnekte, ilk olarak **müşteriler** ve **siparişler** tabloları arasında ve **siparişler** ve **OrderDetails** tabloları arasında bir üst-alt ilişkisi oluşturulur. Daha sonra bir XPath sorgusu, bir alt öğe **OrderDetails** düğümünün 43 değeriyle bir **ProductID** düğümü olduğu **müşteriler** düğümlerinin bir **XmlNodeList** 'i döndürmek için gerçekleştirilir. Temelde, örnek 43 **ProductID** 'sini içeren ürünü hangi müşterilerin sipariş etti belirleyen XPath sorgusunu kullanmaktır.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  

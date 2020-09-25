@@ -3,14 +3,15 @@ title: Bir CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (C#)
 description: Bu örnek, bir. csv dosyasının sütunlarında Sum, Average, min ve Max gibi C# ' de LINQ kullanarak toplam hesaplamaların nasıl gerçekleştirileceğini gösterir.
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 9137779f9767c8a9531489f7894ba3e69eb1faee
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a475de9c769a66fdded490a3f7eccdb74a434186
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105315"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195603"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Bir CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (C#)
+
 Bu örnek, bir. csv dosyasının sütunlarında Sum, Average, min ve Max gibi toplam hesaplamaların nasıl gerçekleştirileceğini gösterir. Burada gösterilen örnek ilkeler diğer yapılandırılmış metin türlerine uygulanabilir.  
   
 ## <a name="to-create-the-source-file"></a>Kaynak dosyayı oluşturmak için  
@@ -160,6 +161,7 @@ class SumColumns
  Sorgu, <xref:System.String.Split%2A> her metin satırını bir diziye dönüştürmek için yöntemini kullanarak işe yarar. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Dosyanız sekmeyle ayrılmış bir dosya ise, yöntemindeki bağımsız değişkeni olarak güncelleştirmeniz yeterlidir `Split` `\t` .  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
  `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

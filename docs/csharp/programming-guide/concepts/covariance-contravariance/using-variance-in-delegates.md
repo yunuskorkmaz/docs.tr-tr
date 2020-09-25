@@ -3,19 +3,21 @@ title: Temsilcilerde varyans kullanma (C#)
 description: Dahil edilen Kovaryans ve değişken varyans kodu örneklerini kullanarak Temsilcilerde varyansı nasıl kullanacağınızı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 62b0555ee29c5e7d2ba0954a8949d61596122cc7
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 6704c3bf09dd854335f1e2719ccc8462cb7cde26
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105679"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176324"
 ---
 # <a name="using-variance-in-delegates-c"></a>Temsilcilerde varyans kullanma (C#)
+
 Bir temsilciye bir yöntem atadığınızda, *Kovaryans* ve *değişken varyans* , bir temsilci türünü Yöntem imzasıyla eşleştirmek için esneklik sağlar. Kovaryans, bir metodun, temsilde tanımlı olandan daha fazla türetilmiş dönüş türüne sahip olmasını sağlar. Değişken Varyans, temsilci türünden daha az türetilmiş parametre türlerine sahip bir yönteme izin verir.  
   
 ## <a name="example-1-covariance"></a>Örnek 1: Kovaryans  
   
 ### <a name="description"></a>Açıklama  
+
  Bu örnek, temsilci imzasında dönüş türünden türetilmiş dönüş türleri olan yöntemlerle temsilcilerin nasıl kullanılabileceğini gösterir. Tarafından döndürülen veri türü `DogsHandler` `Dogs` , `Mammals` temsilde tanımlanan türden türetilen türüdür.  
   
 ### <a name="code"></a>Kod  

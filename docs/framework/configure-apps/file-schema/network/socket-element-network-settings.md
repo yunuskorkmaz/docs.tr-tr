@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 0e2b369eccfbc658a790ef61a961315a88361669
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b8df32745007b2a145d35b8cfcc4cbd2bd17eb33
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089082"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201739"
 ---
 # <a name="socket-element-network-settings"></a>\<socket> Öğesi (Ağ Ayarları)
+
 Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -23,7 +24,7 @@ Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığın
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<socket>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <socket  
@@ -34,6 +35,7 @@ Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığın
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -45,6 +47,7 @@ Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığın
 |`ipProtectionLevel`|<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>Yuva için kullanılacak varsayılanı belirtir. Varsayılan değer, Windows sürümüne bağlıdır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -54,6 +57,7 @@ Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığın
 |[ayarlar](settings-element-network-settings.md)|Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `alwaysUseCompletionPortsForAccept`Ve `alwaysUseCompletionPortsForConnect` öznitelikleri,. Namespace içindeki sınıflar tarafından tamamlama bağlantı noktalarının kullanımıyla ilgili varsayılan davranışı belirtmek için kullanılır <xref:System.Net.Sockets?displayProperty=nameWithType> . Tamamlanma bağlantı noktaları, yüksek performanslı sunucu uygulamaları için önerilir.  
   
  Ve öznitelikleri için varsayılan değer `alwaysUseCompletionPortsForAccept` `alwaysUseCompletionPortsForConnect` **false**'dur.  
@@ -84,9 +88,11 @@ Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığın
  <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>Özelliği, geçerli yapılandırma dosyalarından özniteliğin geçerli değerini almak için kullanılabilir `ipProtectionLevel` .  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, tamamlama bağlantı noktalarının kullanılması gerektiğini ve varsayılan değer <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> Kısıtlanmamış olması gerektiğini gösterir.  
   
 ```xml  
@@ -110,4 +116,4 @@ Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığın
 - <xref:System.Net.Sockets?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

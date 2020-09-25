@@ -1,15 +1,16 @@
 ---
-title: <trackingProfile>WCF
+title: <trackingProfile> WCF
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: c5df03d63653e658a23a36e8943c06f156d2ae00
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 97a494e492fcdd298dd14fd989f00d972e815f85
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854945"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201414"
 ---
-# <a name="trackingprofile-of-wcf"></a>\<trackingProfile>WCF
+# <a name="trackingprofile-of-wcf"></a>\<trackingProfile> WCF
+
 Bir izleme katılımcısı içindeki iş akışı izleme kayıtlarına abonelik oluşturmak için bir yapılandırma bölümünü temsil eder. Bir izleme profili, bir iş akışı örneğinin durumu çalışma zamanında değiştiğinde yayınlanan iş akışı olaylarına abone olmak için izleme katılımcısına izin veren izleme sorguları içerir. İzleme profili bölümü içinde tanımlanan sorgular, aboneliğin döndürdüğü olay türlerini tanımlar.  
   
 İş akışı izleme ve yapılandırma hakkında daha fazla bilgi için bkz. [Iş akışı izleme ve izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).  
@@ -20,7 +21,7 @@ Bir izleme katılımcısı içindeki iş akışı izleme kayıtlarına abonelik 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<profiles>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<trackingProfile>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -100,6 +101,7 @@ Bir izleme katılımcısı içindeki iş akışı izleme kayıtlarına abonelik 
 |[\<tracking>](../windows-workflow-foundation/tracking.md)|Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  İzleme profilleri, bir iş akışı örneğinin durumu çalışma zamanında değiştiğinde yayınlanan iş akışı olaylarına abone olmak için izleme katılımcısına izin veren izleme sorguları içerir. Çok kaba bir profili yazabilirsiniz izleme gereksinimlerinize bağlı olarak, bir iş akışı üzerinde üst düzey durum değişikliklerini küçük bir kümesi için abone olur. Buna karşılık, daha sonra ayrıntılı bir yürütme akışını yeniden oluşturmak için yeterince zengin olan çok özel bir profil oluşturabilirsiniz.  
   
  İzleme profilleri, belirli izleme kayıtları için iş akışı çalışma zamanını sorgulamanızı sağlayan kayıtları izlemek için bildirim temelli abonelikler olarak yapılandırılır. Farklı nesne sınıflarına abone olmanıza imkan tanıyan bir dizi sorgu türü vardır <xref:System.Activities.Tracking.TrackingRecord> . Sorguların tüm listesi için bkz [\<participants>](../windows-workflow-foundation/participants.md) . ve [izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).

@@ -2,14 +2,15 @@
 title: <authentication><clientCertificate>öğesinin
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 99084f6b7afbdd8586ee706cd6ec44b349d81ff2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 13296dbc2b3bc8836770197a1549586c841b4635
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398263"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201609"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<authentication>\<clientCertificate>öğesinin
+
 Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulaması davranışlarını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulam
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCertificate>**](clientcertificate-of-servicecredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<authentication>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <authentication customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"
@@ -33,6 +34,7 @@ Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulam
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -71,6 +73,7 @@ Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulam
 |Sabit Listesi|Şu değerlerden biri: `LocalMachine` veya `CurrentUser` . Varsayılan değer: `CurrentUser`. İstemci uygulaması bir sistem hesabı altında çalışıyorsa, sertifika genellikle altında olur `LocalMachine` . İstemci uygulaması bir kullanıcı hesabı altında çalışıyorsa, sertifika genellikle içinde olur `CurrentUser` .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -80,11 +83,13 @@ Bir hizmet tarafından kullanılan istemci sertifikaları için kimlik doğrulam
 |[\<clientCertificate>](clientcertificate-of-servicecredentials.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan bir X. 509.440 sertifikası tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<authentication>`Öğesi sınıfına karşılık gelir <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> . İstemcilerin nasıl doğrulandığını özelleştirmenizi sağlar. Özniteliğini,,, `certificateValidationMode` veya olarak `None` ayarlayabilirsiniz `ChainTrust` `PeerOrChainTrust` `PeerTrust` `Custom` . Varsayılan olarak, düzeyi olarak ayarlanır `ChainTrust` ; Bu, her bir sertifikanın, zincirinin en üstündeki bir *kök yetkilide* sonlanan sertifikaların hiyerarşisinde bulunması gerektiğini belirtir. En güvenli mod budur. Ayrıca, `PeerOrChainTrust` otomatik olarak verilen sertifikaların (eş güven) kabul edildiğini ve güvenilen bir zincirdeki sertifikaların kabul edildiğini belirten değerini olarak da ayarlayabilirsiniz. Bu değer, istemci ve Hizmetleri geliştirirken ve hata ayıkladığında kullanılır çünkü kendinden verilen sertifikaların güvenilir bir yetkilinizden satın alınması gerekir. Bir istemciyi dağıttığınızda, `ChainTrust` bunun yerine değeri kullanın.  
   
  Değerini olarak da ayarlayabilirsiniz `Custom` . `Custom`Değere ayarlandığında, `customCertificateValidatorType` bir derlemeyi ve sertifikayı doğrulamak için kullanılan türünü de ayarlamanız gerekir. Kendi özel Doğrulayıcısı oluşturmak için soyut sınıftan devralması gerekir <xref:System.IdentityModel.Selectors.X509CertificateValidator> . Daha fazla bilgi için bkz. [nasıl yapılır: özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, öğesinde bir X. 509.952 sertifikası ve özel bir doğrulama türü belirtir `<authentication>` .  
   
 ```xml  

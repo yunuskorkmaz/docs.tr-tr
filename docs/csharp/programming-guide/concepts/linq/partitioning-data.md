@@ -3,14 +3,15 @@ title: Verileri bölümleme (C#)
 description: LINQ içindeki verileri nasıl bölümleyeceğinizi öğrenin. Bölümleme işlemlerinin sonuçlarını gösteren bir çizim görüntüleyin.
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: 3c85eaec2dc01b683234a27714750354982be440
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 31beacd672addb3eb38ade8f2bf9cfae25f4d27a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302613"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176272"
 ---
 # <a name="partitioning-data-c"></a>Verileri bölümleme (C#)
+
 LINQ içinde bölümlendirme, bir giriş dizisini, öğeleri yeniden düzenleme ve sonra bölümlerden birini döndürmeden iki bölüme bölme işlemine başvurur.  
   
  Aşağıdaki çizimde, bir karakter dizisi üzerinde üç farklı bölümlendirme işlemi sonuçları gösterilmektedir. İlk işlem dizideki ilk üç öğeyi döndürür. İkinci işlem ilk üç öğeyi atlar ve kalan öğeleri döndürür. Üçüncü işlem dizideki ilk iki öğeyi atlar ve sonraki üç öğeyi döndürür.  

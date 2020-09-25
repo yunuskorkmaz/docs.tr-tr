@@ -2,14 +2,15 @@
 title: <authentication><serviceCertificate>öğesinin
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 29170f032469b4d55b50f57ca06ce403a5aeaf2c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c6f2578d85971740e5bd3d75151305a475187492
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398220"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201596"
 ---
 # <a name="authentication-of-servicecertificate-element"></a>\<authentication>\<serviceCertificate>öğesinin
+
 SSL/TLS anlaşması kullanılarak elde edilen hizmet sertifikalarının kimlik doğrulaması için istemci proxy tarafından kullanılan ayarları belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ SSL/TLS anlaşması kullanılarak elde edilen hizmet sertifikalarının kimlik d
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCertificate>**](servicecertificate-of-clientcredentials-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<authentication>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <authentication customCertificateValidatorType="String"
@@ -31,6 +32,7 @@ SSL/TLS anlaşması kullanılarak elde edilen hizmet sertifikalarının kimlik d
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -67,6 +69,7 @@ SSL/TLS anlaşması kullanılarak elde edilen hizmet sertifikalarının kimlik d
 |Sabit Listesi|Şu değerlerden biri: LocalMachine ya da CurrentUser. Varsayılan değer CurrentUser ' dır. İstemci uygulaması bir sistem hesabı altında çalışıyorsa, sertifika genellikle LocalMachine altında olur. İstemci uygulaması bir kullanıcı hesabı altında çalışıyorsa, sertifika genellikle CurrentUser içinde olur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -76,11 +79,13 @@ SSL/TLS anlaşması kullanılarak elde edilen hizmet sertifikalarının kimlik d
 |[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|İstemciye bir hizmetin kimlik doğrulaması yapılırken kullanılacak sertifikayı belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `certificateValidationMode`Bu yapılandırma öğesinin özniteliği, sertifikaların kimliğini doğrulamak için kullanılan güven düzeyini belirtir. Varsayılan olarak, düzeyi olarak ayarlanır `ChainTrust` ; Bu, her bir sertifikanın, zincirin en üstündeki güvenilen bir sertifika yetkilisi ile biten sertifikalar hiyerarşisinde bulunması gerektiğini belirtir. En güvenli mod budur. Ayrıca, `PeerOrChainTrust` otomatik olarak verilen sertifikaların (eş güven) kabul edildiğini ve güvenilen bir zincirdeki sertifikaların kabul edildiğini belirten değerini olarak da ayarlayabilirsiniz. Bu değer, istemci ve Hizmetleri geliştirirken ve hata ayıkladığında kullanılır çünkü kendinden verilen sertifikaların güvenilir bir yetkilinizden satın alınması gerekir. Bir istemciyi dağıttığınızda, `ChainTrust` bunun yerine değeri kullanın. Ayrıca, değerini veya olarak ayarlayabilirsiniz `Custom` `None` . Değerini kullanmak için `Custom` , `customCertificateValidator` bir derlemeyi ve sertifikayı doğrulamak için kullanılan türünü de özniteliğini ayarlamanız gerekir. Kendi özel Doğrulayıcısı oluşturmak için soyut X509CertificateValidator sınıfından devralması gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
  `revocationMode`Özniteliği, sertifikaların iptal için nasıl denetleneceğini belirtir. Varsayılan değer, `online` sertifikaların iptal için otomatik olarak denetleneceğini gösterir. Daha fazla bilgi için bkz. [sertifikalarla çalışma](../../../wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek iki görevi yapar. İlk olarak, etki alanı adı HTTP protokolünün üzerinde olan uç noktalarla iletişim kurarken istemcinin kullanması için bir hizmet sertifikası belirtir `www.contoso.com` . İkincisi, kimlik doğrulama sırasında kullanılan iptal modunu ve depolama konumunu belirtir.  
   
 ```xml  

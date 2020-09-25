@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: c93fadf51297d59ab499e25de283700364903049
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 89b96edcf1da20698cd203e78fa27e644fa69cc3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155252"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201830"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses> Öğesi
+
 Öğesinde kolay bir ada eşleme olan şifreleme sınıflarının bir listesini içerir [\<nameEntry>](nameentry-element.md) .  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -24,7 +25,7 @@ ms.locfileid: "79155252"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptoNameMapping>**](cryptonamemapping-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<cryptoClasses>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <cryptoClasses>
@@ -32,9 +33,11 @@ ms.locfileid: "79155252"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -53,6 +56,7 @@ ms.locfileid: "79155252"
 |`mscorlib`|Öğesini içerir `cryptographySettings` .|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, **\<cryptoClass>** bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için öğesinin nasıl kullanılacağını gösterir. Daha sonra "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemine geçirebilir ve <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanarak bir `MyCryptoRSAClass` nesne döndürebilirsiniz.  
   
 ```xml  
@@ -80,7 +84,7 @@ ms.locfileid: "79155252"
 
 - <xref:System.Security.Cryptography>
 - [Yapılandırma dosyası şeması](../index.md)
-- [Şifreleme Ayarları Şeması](index.md)
+- [Şifreleme ayarları şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)
 - [System. Security. Cryptography. CryptoConfig. CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)

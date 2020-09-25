@@ -2,14 +2,15 @@
 title: <add> / <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 280c516b17a133930bc4b6621a8c9bc7f4781085
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c1de0605bc8afc502a85d9b2917b975ee45a3d26
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850556"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201661"
 ---
 # <a name="add-of-filters"></a>\<add> / \<filters>
+
 Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<filters>**](filters.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <filters>
@@ -28,6 +29,7 @@ Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -37,6 +39,7 @@ Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.
 |filtre|Bir XPath 1,0 ifadesi tarafından tanımlanan bir XML belgesi üzerinde bir sorgu belirten bir dize. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -46,6 +49,7 @@ Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.
 |[\<filters>](filters.md)|Ne tür bir ileti günlüğe kaydedileceğini denetlemek için kullanılan XPath filtreleri koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Filtreler yalnızca tarafından belirtilen aktarım katmanında uygulanır `logMessagesAtTransportLevel` `true` . Hizmet düzeyi ve hatalı biçimlendirilmiş ileti günlüğe kaydetme, filtrelerle etkilenmez.  
   
  Koleksiyona bir filtre eklemek için `add` anahtar sözcüğünü kullanın. Bir veya daha fazla filtre tanımlandığında yalnızca filtrelerden en az biriyle eşleşen mesajlar günlüğe kaydedilir. Hiçbir filtre tanımlanmamışsa, tüm iletiler geçer.  
@@ -55,6 +59,7 @@ Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.
  Aşağıda, yalnızca bir SOAP üstbilgisi bölümüne sahip iletileri kaydeden bir filtrenin nasıl yapılandırılacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda, yalnızca bir SOAP üstbilgisi bölümüne sahip iletileri kaydeden bir filtrenin nasıl yapılandırılacağı gösterilmektedir.  
   
 ```xml  

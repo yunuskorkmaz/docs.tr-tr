@@ -1,21 +1,23 @@
 ---
-title: 'Nasıl yapılır: nesne modelini dış dosya olarak oluşturma'
+title: 'Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 915c02de55211efa24a4aa9f21ddc2c7e60fa41a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 2442caec5400759ae2bfeca35f99ebd2ff52d011
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002746"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180770"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Nasıl yapılır: nesne modelini dış dosya olarak oluşturma
-Öznitelik tabanlı eşlemeye alternatif olarak, SQLMetal komut satırı aracını kullanarak nesne modelinizi harici bir XML dosyası olarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Harici bir XML eşleme dosyası kullanarak kodunuzda dağınıklığı azaltabilirsiniz. Ayrıca, uygulamanızın ikili dosyalarını yeniden derlemeden dış dosyayı değiştirerek davranışı değiştirebilirsiniz. Daha fazla bilgi için bkz. [dış eşleme](external-mapping.md).  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma
+
+Öznitelik tabanlı eşlemeye alternatif olarak, SQLMetal komut satırı aracını kullanarak nesne modelinizi harici bir XML dosyası olarak oluşturabilirsiniz. Daha fazla bilgi için bkz. [SqlMetal.exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Harici bir XML eşleme dosyası kullanarak kodunuzda dağınıklığı azaltabilirsiniz. Ayrıca, uygulamanızın ikili dosyalarını yeniden derlemeden dış dosyayı değiştirerek davranışı değiştirebilirsiniz. Daha fazla bilgi için bkz. [dış eşleme](external-mapping.md).  
   
 > [!NOTE]
 > Nesne İlişkisel Tasarımcısı bir dış eşleme dosyası oluşturmayı desteklemez.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki komut, Northwind örnek veritabanından bir dış eşleme dosyası oluşturur.  
   
 ```console  
@@ -23,6 +25,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Bir dış eşleme dosyasından aşağıdaki alıntı, Northwind örnek veritabanındaki Customers tablosunun eşlemesini gösterir. Bu alıntı, **/Map** seçeneği Ile SqlMetal yürütülerek oluşturulmuştur.  
   
 ```xml  

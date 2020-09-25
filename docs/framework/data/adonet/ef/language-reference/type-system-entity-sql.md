@@ -1,52 +1,56 @@
 ---
-title: Tip Sistemi (Entity SQL)
+title: Tür sistemi (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: b8b721aff5b7886fdb897ecaa3dcc163ec94ae79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4c8ba7a9d9b58220455b50ff99960fa132c00c7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149837"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200998"
 ---
-# <a name="type-system-entity-sql"></a>Tip Sistemi (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir dizi türü destekler:  
+# <a name="type-system-entity-sql"></a>Tür sistemi (Entity SQL)
+
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir dizi türü destekler:  
   
-- Gibi ilkel (basit) `Int32` türleri ve`String.`  
+- Ve gibi temel (basit) türler `Int32``String.`  
   
-- Şemada tanımlanan nominal türleri, gibi <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType>, <xref:System.Data.Metadata.Edm.RelationshipType>ve .  
+- Şemasında tanımlanan,, ve gibi değerler nominal türler <xref:System.Data.Metadata.Edm.EntityType> <xref:System.Data.Metadata.Edm.ComplexType> <xref:System.Data.Metadata.Edm.RelationshipType> .  
   
-- Şemada açıkça tanımlanmayan anonim türler: <xref:System.Data.Metadata.Edm.CollectionType> <xref:System.Data.Metadata.Edm.RowType>, <xref:System.Data.Metadata.Edm.RefType>, ve .  
+- Şemada tanımlanmamış anonim türler açıkça: <xref:System.Data.Metadata.Edm.CollectionType> , <xref:System.Data.Metadata.Edm.RowType> , ve <xref:System.Data.Metadata.Edm.RefType> .  
   
- Bu bölümde, şemada açıkça tanımlanmayan ancak Entity SQL tarafından desteklenen anonim türleri açıklanmaktadır. İlkel ve nominal türler hakkında bilgi için [Kavramsal Model Türleri (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)bakın.  
+ Bu bölümde, şemada açıkça tanımlanmayan ancak Entity SQL tarafından desteklenen anonim türler açıklanmaktadır. İlkel ve nominal türler hakkında bilgi için bkz. [kavramsal model türleri (csdl)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl).  
   
 ## <a name="rows"></a>Satırlar  
- Bir satırın yapısı, satırın oluştuğu yazılan ve adlandırılmış üyelerin sıralarına bağlıdır. Satır türü hiçbir kimliği vardır ve devralınamaz. Üyeler sırasıyla eşdeğerse, aynı satır türündeki örnekler eşdeğerdir. Satırların yapısal eşdeğerliklerinin ötesinde hiçbir davranışı yoktur ve ortak dil çalışma zamanında eşdeğeri yoktur. Sorgular satır veya satır koleksiyonları içeren yapılarneden olabilir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Sorgular ve ana bilgisayar dili arasındaki API bağlama, sonucu oluşturan sorguda satırların nasıl gerçekleştirildiğini tanımlar. Satır örneğinin nasıl oluşturulabildiğini öğrenmek için [bkz.](constructing-types-entity-sql.md)  
+
+ Bir satırın yapısı, yazılan ve satırın içerdiği adlandırılmış üyelerin dizisine bağlıdır. Bir satır türünün kimliği yok ve öğesinden devralınamıyor. Aynı satır türünün örnekleri, Üyeler sırasıyla eşdeğer olduğunda eşdeğerdir. Satırlarda yapısal denklik değerinin ötesinde hiçbir davranış yoktur ve ortak dil çalışma zamanına denk değildir. Sorgular, satırları veya satır koleksiyonlarını içeren yapılara yol açabilir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Sorgular ve ana bilgisayar dili ARASıNDAKI API bağı, sonuçları üreten sorguda satırların nasıl yapıldığını tanımlar. Satır örneği oluşturma hakkında daha fazla bilgi için bkz. [tür](constructing-types-entity-sql.md)oluşturma.  
   
 ## <a name="collections"></a>Koleksiyonlar  
- Koleksiyon türleri diğer nesnelerin sıfır veya daha fazla örneğini temsil eder. Koleksiyonun nasıl oluşturulabildiğini öğrenmek için [bkz.](constructing-types-entity-sql.md)  
+
+ Koleksiyon türleri, diğer nesnelerin sıfır veya daha fazla örneğini temsil eder. Koleksiyon oluşturma hakkında daha fazla bilgi için bkz. [tür](constructing-types-entity-sql.md)oluşturma.  
   
 ## <a name="references"></a>Başvurular  
- Başvuru, belirli bir varlık kümesindeki belirli bir varlığa mantıksal işaretçidir.  
+
+ Başvuru, belirli bir varlık kümesindeki belirli bir varlığa yönelik mantıksal bir işaretçisidir.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]aşağıdaki işleçleri başvurular oluşturmak, yapısızlaştırılması ve gezinmek için destekler:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , başvuruları oluşturmak, oluşturmak ve bunlar arasında gezinmek için aşağıdaki işleçleri destekler:  
   
 - [REF](ref-entity-sql.md)  
   
 - [CREATEREF](createref-entity-sql.md)  
   
-- [Anahtar](key-entity-sql.md)  
+- [ANAHTAR](key-entity-sql.md)  
   
 - [DEREF](deref-entity-sql.md)  
   
- Üye erişim (nokta)`.`işleci(nokta) operatörlerini kullanarak referans ta gezinebilirsiniz. Aşağıdaki parçacık, r (reference) özelliğinde gezinerek Id özelliğini (Siparişin) ayıklar.  
+ Üye erişimi (nokta) işlecini () kullanarak bir başvuruya gidebilirsiniz `.` . Aşağıdaki kod parçacığı, r (Reference) özelliğinde gezinerek ID özelliğini (sıra) ayıklar.  
   
 ```sql  
 select o2.r.Id
 from (select ref(o) as r from LOB.Orders as o) as o2
 ```  
   
- Başvuru değeri null ise veya başvurunun hedefi yoksa, sonuç null'dur.  
+ Başvuru değeri null ise veya başvurunun hedefi yoksa sonuç null olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

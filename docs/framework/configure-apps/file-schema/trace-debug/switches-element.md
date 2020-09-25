@@ -9,21 +9,22 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: 15cc9680d7a20341eb5d1d1df302c1e034e70e02
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bdd6efdec1e118075495002509c7367c1162baba
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153236"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176103"
 ---
 # <a name="switches-element"></a>\<switches> Öğesi
+
 İzleme anahtarlarını ve izleme anahtarlarının ayarlandığı düzeyi içerir.  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<switches>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
       <switches>
@@ -31,9 +32,11 @@ ms.locfileid: "79153236"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -50,9 +53,11 @@ ms.locfileid: "79153236"
 |`System.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir izleme anahtarı düzeyini bir yapılandırma dosyasına yerleştirerek değiştirebilirsiniz. Anahtar bir ise <xref:System.Diagnostics.BooleanSwitch> , açıp kapatabilirsiniz. Anahtar bir ise <xref:System.Diagnostics.TraceSwitch> , uygulamanın çıkışları için izleme veya hata ayıklama iletilerinin türlerini belirtmek üzere buna farklı düzeyler atayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, **\<switch>** izleme anahtarını düzeye ayarlamak için öğesinin nasıl kullanılacağını gösterir `General` <xref:System.Diagnostics.TraceLevel> ve `Data` Boole izleme anahtarını etkinleştirir.  
   
 ```xml  
@@ -71,4 +76,4 @@ ms.locfileid: "79153236"
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
+- [İzleme ve hata ayıklama ayarları şeması](index.md)

@@ -2,14 +2,15 @@
 title: <add><scopedCertificates>öğesinin
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: b00a342108beca69a906fbf6212915768e98778f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 28777ecac130295a8ba82a8e4d67cc519d088d8a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398339"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195148"
 ---
 # <a name="add-of-scopedcertificates-element"></a>\<add>\<scopedCertificates>öğesinin
+
 Kapsamlı sertifikalar koleksiyonuna bir X. 509.440 sertifikası ekler.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -22,7 +23,7 @@ Kapsamlı sertifikalar koleksiyonuna bir X. 509.440 sertifikası ekler.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<scopedCertificates>**](scopedcertificates-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <add findValue="String"
@@ -33,6 +34,7 @@ Kapsamlı sertifikalar koleksiyonuna bir X. 509.440 sertifikası ekler.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -70,6 +72,7 @@ Kapsamlı sertifikalar koleksiyonuna bir X. 509.440 sertifikası ekler.
 |Sabit Listesi|Değerler şunlardır: AddressBook, AuthRoot, CertificateAuthority, Izin verilmeyen, My, root, Trustedkişilerim ve TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -79,6 +82,7 @@ Kapsamlı sertifikalar koleksiyonuna bir X. 509.440 sertifikası ekler.
 |[\<scopedCertificates>](scopedcertificates-element.md)|Kimlik doğrulama için belirli hizmetler (kapsamlı) tarafından sunulan X. 509.440 sertifikalarının bir koleksiyonunu temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu öğe, istemcinin iletişim kurduğu hizmetin URL 'sini temel alarak kullanmak üzere bir hizmet sertifikası yapılandırmasını sağlar. Bu özellikle, bir istemcinin birden çok hizmetle (bitiş hizmeti ve aracı güvenlik belirteci Hizmetleri) iletişim kuramadığı verilen belirteç senaryolarında kullanışlıdır. Sertifika tabanlı ileti güvenliği kullanan bağlamalar için, bu sertifika hizmete iletileri şifrelemek için kullanılır ve istemciye yanıtları imzalamak için hizmet tarafından kullanılması beklenir.  
   
  Bir bağlama hizmet için bir sertifika gerektiriyorsa ve hizmet URL 'SI için belirli bir sertifika ScopedCertificates içinde bulunmazsa, varsayılan sertifika kullanılır.  
@@ -86,6 +90,7 @@ Kapsamlı sertifikalar koleksiyonuna bir X. 509.440 sertifikası ekler.
  Daha fazla bilgi için bkz. [nasıl yapılır: federe Istemci oluşturma](../../../wcf/feature-details/how-to-create-a-federated-client.md)konusunun "kapsamlı sertifikalar" bölümü.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, koleksiyonu bir X. 509.440 sertifikası ekler.  
   
 ```xml  

@@ -2,14 +2,15 @@
 title: <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 9b3ed6b39f1743249925d5b6d9a47845c87983bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3b6cebd178ac5cd30fa034bd961d2d08075771d2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850213"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201544"
 ---
 # \<baseAddresses>
+
 `baseAddress`Şirket içinde barındırılan bir ortamdaki hizmet ana bilgisayarı için temel adres olan bir öğe koleksiyonunu temsil eder. Bir temel adres varsa, uç noktalar temel adrese göre adreslerle yapılandırılabilir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "70850213"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<host>**](host.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<baseAddresses>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <baseAddresses>
@@ -28,12 +29,15 @@ ms.locfileid: "70850213"
 ```  
   
 ## <a name="type"></a>Tür  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  

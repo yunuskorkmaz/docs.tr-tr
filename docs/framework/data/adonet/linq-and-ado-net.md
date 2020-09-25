@@ -4,12 +4,12 @@ description: Ayrı bir sorgu dili kullanmak zorunda kalmadan, ADO.NET içinde di
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: a663d36f1e07c53d20e22d051e38123bd8873f06
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 50e048a67d4a9bf62b2224664acb654b96da0cb7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286759"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194693"
 ---
 # <a name="linq-and-adonet"></a>LINQ ve ADO.NET
 
@@ -30,21 +30,24 @@ Günümüzde, birçok iş geliştiricisi iki (veya daha fazla) programlama dili 
  Aşağıdaki bölümlerde LINQ to DataSet, ve LINQ to Entities hakkında daha fazla bilgi sağlanmaktadır [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] .  
   
 ## <a name="linq-to-dataset"></a>LINQ - DataSet  
+
  , <xref:System.Data.DataSet> ADO.net 'in oluşturulduğu ve yaygın olarak kullanıldığı, bağlantısı kesilen programlama modelinin anahtar öğesidir. LINQ to DataSet, geliştiricilerin ' de <xref:System.Data.DataSet> diğer birçok veri kaynağı için kullanılabilen aynı sorgu formül mekanizmasını kullanarak daha zengin sorgu özellikleri oluşturmalarına olanak sağlar. Daha fazla bilgi için bkz. [LINQ to DataSet](linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
- [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], kavramsal bir modelle eşleme gerektirmeyen geliştiriciler için yararlı bir araçtır. Kullanarak [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] , LINQ programlama modelini doğrudan mevcut veritabanı şemasının üzerinde kullanabilirsiniz. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]geliştiricilerin verileri temsil eden .NET Framework sınıfları oluşturmasını sağlar. Kavramsal veri modeliyle eşleme yerine, bu oluşturulan sınıflar doğrudan veritabanı tabloları, görünümler, saklı yordamlar ve Kullanıcı tanımlı işlevlerle eşlenir.  
+
+ [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] , kavramsal bir modelle eşleme gerektirmeyen geliştiriciler için yararlı bir araçtır. Kullanarak [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] , LINQ programlama modelini doğrudan mevcut veritabanı şemasının üzerinde kullanabilirsiniz. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] geliştiricilerin verileri temsil eden .NET Framework sınıfları oluşturmasını sağlar. Kavramsal veri modeliyle eşleme yerine, bu oluşturulan sınıflar doğrudan veritabanı tabloları, görünümler, saklı yordamlar ve Kullanıcı tanımlı işlevlerle eşlenir.  
   
  Sayesinde [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] geliştiriciler, bellek içi koleksiyonlar ve <xref:System.Data.DataSet> XML gibi diğer veri kaynaklarına ek olarak aynı LINQ programlama modelini kullanarak doğrudan depolama şemasına kod yazabilir. Daha fazla bilgi için bkz. [LINQ to SQL](./sql/linq/index.md).  
   
 ## <a name="linq-to-entities"></a>LINQ - Varlıklar  
+
  Çoğu uygulama şu anda ilişkisel veritabanlarının üzerine yazılmıştır. Bu uygulamaların bir noktada, ilişkisel bir formda temsil edilen verilerle etkileşim kurması gerekir. Veritabanı şemaları, uygulama oluşturmak için her zaman ideal değildir ve uygulamanın kavramsal modelleri, veritabanlarının mantıksal modelleriyle aynı değildir. Varlık Veri Modeli, uygulamaların nesneler olarak verilerle etkileşime girebilmesi için belirli bir etki alanının verilerini modellemek üzere kullanılabilen kavramsal bir veri modelidir. Daha fazla bilgi için bkz. [ADO.NET Entity Framework](./ef/index.md).  
   
  Varlık Veri Modeli, ilişkisel veriler .NET ortamında nesneler olarak sunulur. Bu, nesne katmanını LINQ desteği için ideal bir hedef haline getirir ve geliştiricilerin iş mantığını oluşturmak için kullanılan dilden sorguları veritabanına göre formüllemesini sağlar. Bu yetenek LINQ to Entities olarak bilinir. Daha fazla bilgi için bkz. [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to DataSet](linq-to-dataset.md)
+- [LINQ - DataSet](linq-to-dataset.md)
 - [LINQ to SQL](./sql/linq/index.md)
 - [LINQ - Varlıklar](./ef/language-reference/linq-to-entities.md)
 - [Dil ile Tümleşik Sorgu (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)

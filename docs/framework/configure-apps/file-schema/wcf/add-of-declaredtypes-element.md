@@ -7,14 +7,15 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: a001e8743b2c24f68b1b23cbccf3e5ac162c4e71
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9af47848b03074ec88f38a5884089bc50239ee50
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400652"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201674"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<add>\<declaredTypes>öğesinin
+
 Seri durumdan çıkarma sırasında tarafından kullanılan bir tür ekler <xref:System.Runtime.Serialization.DataContractSerializer> . Her bir tanımlı tür, bir alan veya tanımlanmış türün özelliği olarak döndürülecek bilinen türleri içerir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -23,7 +24,7 @@ Seri durumdan çıkarma sırasında tarafından kullanılan bir tür ekler <xref
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<declaredTypes>**](declaredtypes.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <add type="String">
@@ -35,6 +36,7 @@ Seri durumdan çıkarma sırasında tarafından kullanılan bir tür ekler <xref
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -56,6 +58,7 @@ Seri durumdan çıkarma sırasında tarafından kullanılan bir tür ekler <xref
 |[\<declaredTypes>](declaredtypes.md)|Tarafından seri durumundan çıkarma sırasında bilinen türler gerektiren türleri içerir <xref:System.Runtime.Serialization.DataContractSerializer> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bilinen türler hakkında daha fazla bilgi için bkz. [veri sözleşmesi bilinen türler](../../../wcf/feature-details/data-contract-known-types.md) ve <xref:System.Runtime.Serialization.DataContractSerializer> .  
   
  [\<dataContractSerializer>](datacontractserializer-element.md)Bu öğenin kullanımıyla ilgili bir örnek için bkz..  
@@ -79,6 +82,6 @@ Seri durumdan çıkarma sırasında tarafından kullanılan bir tür ekler <xref
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Veri Anlaşması Bilinen Türler](../../../wcf/feature-details/data-contract-known-types.md)
+- [Veri Sözleşmesi Bilinen Türler](../../../wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](datacontractserializer-element.md)
-- [\<add>durumunu\<declaredTypes>](add-of-declaredtypes-element.md)
+- [\<add> durumunu \<declaredTypes>](add-of-declaredtypes-element.md)

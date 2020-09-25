@@ -5,49 +5,53 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: f55f6eccf3566a2391204e1ca4349ae5dff01954
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 032093244f51893cd3b0cf50ad81c79413aaa32e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148562"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194550"
 ---
 # <a name="large-udts"></a>Büyük UDT’ler
-Kullanıcı tanımlı türleri (UDT'ler), bir geliştiricinin ortak dil çalışma zamanı (CLR) nesnelerini bir SQL Server veritabanında depolayarak sunucunun skaler tür sistemini genişletmesine olanak sağlar. UDT'ler birden çok öğe içerebilir ve tek bir SQL Server sistem veri türünden oluşan geleneksel diğer ad veri türlerinin aksine davranışlar içerebilir.  
+
+Kullanıcı tanımlı türler (UDTs), bir geliştiricinin ortak dil çalışma zamanı (CLR) nesnelerini bir SQL Server veritabanında depolayarak sunucunun skalar tür sistemini genişletmesine izin verir. UDTs birden çok öğe içerebilir ve tek bir SQL Server sistem veri türünden oluşan geleneksel diğer ad veri türlerinden farklı olarak davranışları olabilir.  
   
 > [!NOTE]
-> Büyük UDT'ler için geliştirilmiş SqlClient desteğinden yararlanmak için .NET Framework 3.5 SP1 (veya sonraki) yüklemeniz gerekir.  
+> Büyük UDTs için gelişmiş SqlClient desteğinin avantajlarından yararlanabilmek için .NET Framework 3,5 SP1 (veya sonraki bir sürümü) yüklemelisiniz.  
   
- Daha önce, UDTs 8 kilobayt maksimum boyutu ile sınırlı idi. SQL Server 2008'de, bu kısıtlama , <xref:Microsoft.SqlServer.Server.Format.UserDefined>biçimi ne olan UDT'ler için kaldırıldı  
+ Daha önce, UDTs, 8 kilobayt olan en büyük boyutla sınırlandırılmıştır. SQL Server 2008 ' de, bu kısıtlama biçiminde olan UDTs 'ler için kaldırılmıştır <xref:Microsoft.SqlServer.Server.Format.UserDefined> .  
   
- Kullanıcı tanımlı türler için tam belgeler için, kullanmakta olduğunuz SQL Server sürümü için SQL Server Books Online sürümüne bakın.  
+ Kullanıcı tanımlı türlerin tam belgeleri için, kullandığınız SQL Server sürümü için SQL Server Books Online sürümüne bakın.  
   
  **SQL Server belgeleri**  
   
 1. [Kullanıcı Tanımlı CLR Türleri](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
-## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema kullanarak UDT Şema alma  
- Veritabanı şema bilgilerini bir <xref:System.Data.DataTable>. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> <xref:System.Data.SqlClient.SqlConnection> Daha fazla bilgi için [SQL Server Schema Collections'a](../sql-server-schema-collections.md)bakın.  
+## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema kullanarak UDT şemaları alma  
+
+ <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>Yöntemi, <xref:System.Data.SqlClient.SqlConnection> içindeki veritabanı şeması bilgilerini döndürür <xref:System.Data.DataTable> . Daha fazla bilgi için bkz. [SQL Server şema koleksiyonları](../sql-server-schema-collections.md).  
   
-### <a name="getschematable-column-values-for-udts"></a>UD'ler için GetSchemaTable Sütun Değerleri  
- Sütun <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> meta <xref:System.Data.SqlClient.SqlDataReader> verilerini <xref:System.Data.DataTable> açıklayan bir yöntem. Aşağıdaki tabloda, SQL Server 2005 ile SQL Server 2008 arasındaki büyük UDT'ler için sütun meta verilerindeki farklar açıklanmaktadır.  
+### <a name="getschematable-column-values-for-udts"></a>UDTs için GetSchemaTable sütun değerleri  
+
+ <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>Bir öğesinin yöntemi, <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.DataTable> sütun meta verilerini açıklayan bir döndürür. Aşağıdaki tabloda, SQL Server 2005 ve SQL Server 2008 arasındaki büyük UDTs için sütun meta verilerindeki farklar açıklanmaktadır.  
   
-|SqlDataReader sütunu|SQL Server 2005|SQL Server 2008 ve sonrası|  
+|SqlDataReader sütunu|SQL Server 2005|SQL Server 2008 ve üzeri|  
 |--------------------------|---------------------|-------------------------------|  
 |`ColumnSize`|Değişir|Değişir|  
 |`NumericPrecision`|255|255|  
 |`NumericScale`|255|255|  
 |`DataType`|`Byte[]`|UDT örneği|  
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT örneği|  
-|`ProviderType`|21`SqlDbType.VarBinary`( ) ( )|29`SqlDbType.Udt`( ) ( )|  
-|`NonVersionedProviderType`|29`SqlDbType.Udt`( ) ( )|29`SqlDbType.Udt`( ) ( )|  
-|`DataTypeName`|`SqlDbType.VarBinary`|*Database.SchemaName.TypeName*olarak belirtilen üç bölümadı.|  
+|`ProviderType`|21 ( `SqlDbType.VarBinary` )|29 ( `SqlDbType.Udt` )|  
+|`NonVersionedProviderType`|29 ( `SqlDbType.Udt` )|29 ( `SqlDbType.Udt` )|  
+|`DataTypeName`|`SqlDbType.VarBinary`|*Database. SchemaName. TypeName*olarak belirtilen üç bölüm adı.|  
 |`IsLong`|Değişir|Değişir|  
   
-## <a name="sqldatareader-considerations"></a>SqlDataReader Hususlar  
- Büyük <xref:System.Data.SqlClient.SqlDataReader> UDT değerlerinin alınmasını desteklemek için SQL Server 2008'den itibaren genişletildi. UdT değerlerinin ne kadar <xref:System.Data.SqlClient.SqlDataReader> büyük bir değer tarafından işlendiği, kullandığınız SQL Server `Type System Version` sürümüne ve bağlantı dizesinde belirtilene bağlıdır. Daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+## <a name="sqldatareader-considerations"></a>SqlDataReader konuları  
+
+ , <xref:System.Data.SqlClient.SqlDataReader> Büyük udt değerlerini almayı desteklemek için SQL Server 2008 ' den başlayarak genişletildi. Büyük UDT değerlerinin bir tarafından nasıl işlendiği <xref:System.Data.SqlClient.SqlDataReader> , kullandığınız SQL Server sürümüne ve ayrıca `Type System Version` bağlantı dizesinde belirtilen sürüme bağlıdır. Daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- SQL Server <xref:System.Data.SqlClient.SqlDataReader> 2005 olarak <xref:System.Data.SqlTypes.SqlBinary> ayarlandığında, `Type System Version` aşağıdaki yöntemler udt yerine bir döndürme yöntemi:  
+ Aşağıdaki yöntemleri <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlTypes.SqlBinary> , `Type System Version` SQL Server 2005 olarak ayarlandığında UDT yerine bir udt döndürür:  
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
@@ -59,25 +63,27 @@ Kullanıcı tanımlı türleri (UDT'ler), bir geliştiricinin ortak dil çalış
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
- Aşağıdaki yöntemler, SQL Server `Byte[]` 2005 olarak `Type System Version` ayarlandığında UDT yerine bir dizi döndürecektir:  
+ Aşağıdaki yöntemler `Byte[]` , `Type System Version` SQL Server 2005 olarak AYARLANDıĞıNDA bir udt yerine bir dizisi döndürür:  
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
- ADO.NET geçerli sürümü için dönüşüm yapılmadığını unutmayın.  
+ Geçerli ADO.NET sürümü için hiçbir dönüştürme yapılmadığını unutmayın.  
   
-## <a name="specifying-sqlparameters"></a>SqlParametrelerinin Belirtilmesi  
- Aşağıdaki <xref:System.Data.SqlClient.SqlParameter> özellikler büyük UDT'lerle çalışmak üzere genişletilmiştir.  
+## <a name="specifying-sqlparameters"></a>SqlParameters belirtme  
+
+ Aşağıdaki <xref:System.Data.SqlClient.SqlParameter> Özellikler, büyük UDTs ile çalışacak şekilde genişletildi.  
   
-|SqlParameter Özelliği|Açıklama|  
+|SqlParameter özelliği|Açıklama|  
 |---------------------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Parametrenin değerini temsil eden bir nesne alır veya ayarlar. Varsayılan olarak null'dur. Özellik , `Byte[]` `SqlBinary`veya yönetilen bir nesne olabilir.|  
-|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Parametrenin değerini temsil eden bir nesne alır veya ayarlar. Varsayılan olarak null'dur. Özellik , `Byte[]` `SqlBinary`veya yönetilen bir nesne olabilir.|  
-|<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Çözülecek parametre değerinin boyutunu alır veya ayarlar. Varsayılan değer 0’dır. Özellik, parametre değerinin boyutunu temsil eden bir karşıcı olabilir. Büyük UDT'ler için UDT'nin gerçek boyutu veya bilinmeyen için -1 olabilir.|  
+|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Parametresinin değerini temsil eden bir nesne alır veya ayarlar. Varsayılan olarak null'dur. Özelliği `SqlBinary` , `Byte[]` veya yönetilen bir nesne olabilir.|  
+|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Parametresinin değerini temsil eden bir nesne alır veya ayarlar. Varsayılan olarak null'dur. Özelliği `SqlBinary` , `Byte[]` veya yönetilen bir nesne olabilir.|  
+|<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Çözülecek parametre değerinin boyutunu alır veya ayarlar. Varsayılan değer 0’dır. Özelliği parametre değerinin boyutunu temsil eden bir tamsayı olabilir. Büyük UDTs 'ler için, UDT 'nin gerçek boyutu veya bilinmeyen için-1 olabilir.|  
   
-## <a name="retrieving-data-example"></a>Veri Alma Örneği  
- Aşağıdaki kod parçası, büyük UDT verilerinin nasıl alındığını gösterir. Değişken, `connectionString` bir SQL Server veritabanına geçerli `commandString` bir bağlantı varsayar ve değişken ilk listelenen birincil anahtar sütunu ile geçerli bir SELECT deyimi varsayar.  
+## <a name="retrieving-data-example"></a>Veri alma örneği  
+
+ Aşağıdaki kod parçası, büyük UDT verilerinin nasıl alınacağını gösterir. `connectionString`Değişken, SQL Server veritabanına geçerli bir bağlantı olduğunu varsayar ve `commandString` değişken önce listelenen birincil anahtar sütunu ile GEÇERLI bir SELECT ifadesini varsayar.  
   
 ```csharp  
 using (SqlConnection connection = new SqlConnection(

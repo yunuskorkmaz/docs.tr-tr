@@ -8,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 4517aab98235ec2172da355ad0e05d95ebee46c5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 79b49cbc9b122e6591d07643a341841b262edff4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554045"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201713"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> öğesi
 
@@ -55,7 +55,9 @@ Uygulamanın desteklediği ortak dil çalışma zamanı sürümünü ve isteğe 
 Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri ile sınamanızı öneririz.
 
 <a name="version"></a>
+
 ## <a name="runtime-version-values"></a>"çalışma zamanı sürümü" değerleri
+
 `runtime`Öznitelik, belirli bir uygulama için gerekli olan ortak dil çalışma zamanı (CLR) sürümünü belirtir. Tüm .NET Framework v4. x sürümlerinin clr 'yi belirttiğine unutmayın `v4.0` . Aşağıdaki tablo, özniteliğin *çalışma zamanı sürüm* değeri için geçerli değerleri listeler `version` .
 
 |.NET Framework sürümü|`version` özniteliği|
@@ -87,7 +89,7 @@ Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri
 |4.6|". NETFramework, sürüm = v 4.6 "|
 |4.6.1|". NETFramework, sürüm = v 4.6.1 "|
 |4.6.2|". NETFramework, sürüm = v 4.6.2 "|
-|4,7|". NETFramework, sürüm = v 4.7 "|
+|4.7|". NETFramework, sürüm = v 4.7 "|
 |4.7.1|". NETFramework, sürüm = v 4.7.1 "|
 |4.7.2|". NETFramework, sürüm = v 4.7.2 "|
 |4,8|". NETFramework, sürüm = v 4.8 "|

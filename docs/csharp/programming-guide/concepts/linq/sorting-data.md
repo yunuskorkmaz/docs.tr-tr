@@ -3,14 +3,15 @@ title: Verileri sıralama (C#)
 description: C# ' de LINQ içinde sıralama işlemleri gerçekleştiren sıralama işlemleri ve standart sorgu işleci yöntemleri hakkında bilgi edinin.
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 5feeb0e2229fc370fdcb9608817f41832bffd7cc
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 0665e5dec95fd2929d24d82568de66597df1c0bd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302340"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195512"
 ---
 # <a name="sorting-data-c"></a>Verileri sıralama (C#)
+
 Sıralama işlemi bir veya daha fazla özniteliğe göre bir sıranın öğelerini sıralar. İlk sıralama ölçütü öğeler üzerinde birincil bir sıralama gerçekleştirir. İkinci bir sıralama ölçütü belirterek, her birincil sıralama grubu içindeki öğeleri sıralayabilirsiniz.  
   
  Aşağıdaki çizimde, bir karakter dizisi üzerinde alfabetik bir sıralama işleminin sonuçları gösterilmektedir:
@@ -21,7 +22,7 @@ Sıralama işlemi bir veya daha fazla özniteliğe göre bir sıranın öğeleri
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem adı|Description|C# sorgu Ifadesi sözdizimi|Daha Fazla Bilgi|  
+|Yöntem adı|Açıklama|C# sorgu Ifadesi sözdizimi|Daha Fazla Bilgi|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OrderBy|Değerleri artan düzende sıralar.|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Değerleri azalan düzende sıralar.|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
@@ -34,6 +35,7 @@ Sıralama işlemi bir veya daha fazla özniteliğe göre bir sıranın öğeleri
 ### <a name="primary-sort-examples"></a>Birincil sıralama örnekleri  
   
 #### <a name="primary-ascending-sort"></a>Birincil artan sıralama  
+
  Aşağıdaki örnek, bir `orderby` dizideki dizeleri dize uzunluğuna göre artan sırada sıralamak için BIR LINQ sorgusunda yan tümcesinin nasıl kullanılacağını gösterir.  
   
 ```csharp  
@@ -57,6 +59,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="primary-descending-sort"></a>Birincil azalan sıralama  
+
  Sonraki örnekte, `orderby descending` BIR LINQ sorgusunda, dizeyi azalan sırada ilk harfine göre sıralamak için yan tümcesinin nasıl kullanılacağı gösterilmektedir.  
   
 ```csharp  
@@ -82,6 +85,7 @@ foreach (string str in query)
 ### <a name="secondary-sort-examples"></a>İkincil sıralama örnekleri  
   
 #### <a name="secondary-ascending-sort"></a>İkincil artan sıralama  
+
  Aşağıdaki örnek, bir `orderby` dizideki dizelerin birincil ve ikincil sıralamasını gerçekleştirmek için BIR LINQ sorgusunda yan tümcesinin nasıl kullanılacağını gösterir. Dizeler birincil olarak length ve secondarily ile dizenin ilk harfine göre, her ikisi de artan düzende sıralanır.  
   
 ```csharp  
@@ -105,6 +109,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="secondary-descending-sort"></a>İkincil azalan sıralama  
+
  Sonraki örnekte, `orderby descending` BIR LINQ sorgusunda yan tümcesinin nasıl kullanılacağı gösterilmektedir ve azalan düzende bir birincil sıralama, artan sırada ve ikincil bir sıralama işlemleri yapılır. Dizeler öncelikle dizenin ilk harfine göre uzunluğa ve secondarily göre sıralanır.  
   
 ```csharp  

@@ -2,12 +2,12 @@
 title: <idn> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f45922ecd5f7476362aab5348d91415d8e31c53f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698168"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195408"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn> Öğesi (Uri Ayarları)
 
@@ -17,7 +17,7 @@ Uluslararası etki alanı adı (ıDN) ayrıştırmanın bir etki alanı adına u
 &nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<idn>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml
 <idn
@@ -26,6 +26,7 @@ Uluslararası etki alanı adı (ıDN) ayrıştırmanın bir etki alanı adına u
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -50,13 +51,13 @@ Mevcut <xref:System.Uri> sınıf .NET Framework 3,5 ' de genişletildi. 3,0 SP1 
 
 IRI desteğini etkinleştirmek için aşağıdaki iki değişiklik gereklidir:
 
-1. Aşağıdaki satırı .NET Framework 2,0 dizinindeki Machine. config dosyasına ekleyin:
+1. Aşağıdaki satırı .NET Framework 2,0 dizinindeki machine.config dosyasına ekleyin:
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2. Uluslararası etki alanı adı (ıDN) ayrıştırmayı etki alanı adına uygulanıp uygulanmayacağını ve IRI ayrıştırma kurallarının uygulanıp uygulanmayacağını belirtin. Bu, Machine. config veya App. config dosyasında yapılabilir.
+2. Uluslararası etki alanı adı (ıDN) ayrıştırmayı etki alanı adına uygulanıp uygulanmayacağını ve IRI ayrıştırma kurallarının uygulanıp uygulanmayacağını belirtin. Bu, machine.config veya app.config dosyasında yapılabilir.
 
  Kullanılan DNS sunucularına bağlı olarak ıDN için üç olası değer vardır:
 
@@ -76,7 +77,7 @@ IRI desteğini etkinleştirmek için aşağıdaki iki değişiklik gereklidir:
 
 ### <a name="configuration-files"></a>Yapılandırma dosyaları
 
-Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.
+Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
@@ -95,4 +96,4 @@ Aşağıdaki örnek, <xref:System.Uri> IRI ayrıştırma ve IDN adlarını deste
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

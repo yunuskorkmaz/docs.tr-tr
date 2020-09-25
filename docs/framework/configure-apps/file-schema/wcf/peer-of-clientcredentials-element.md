@@ -2,14 +2,15 @@
 title: <peer><clientCredentials>öğesinin
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: a8144ca7bad5654bf8f77259ea1717442665fc81
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75d8543d7db5eee1345d54f934fc89c9593b85ac
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555464"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186997"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<peer>\<clientCredentials>öğesinin
+
 Eşler arası istemcilerin kimlik doğrulaması sırasında kullanılan kimlik bilgilerini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,9 +32,11 @@ Eşler arası istemcilerin kimlik doğrulaması sırasında kullanılan kimlik b
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -51,6 +54,7 @@ Eşler arası istemcilerin kimlik doğrulaması sırasında kullanılan kimlik b
 |[\<clientCredentials>](clientcredentials.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yapılandırma öğesi, bir eş düğümün ağ üzerindeki diğer düğümlere kimliğini doğrulamak için kullandığı kimlik bilgilerini ve bir eş düğümün diğer eş düğümlerinin kimliğini doğrulamak için kullandığı kimlik doğrulama ayarlarını belirtir. Daha fazla bilgi için bkz. [eş kanal Iletisi kimlik doğrulaması](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90)) ve [eş kanal uygulamalarının güvenliğini sağlama](../../../wcf/feature-details/securing-peer-channel-applications.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

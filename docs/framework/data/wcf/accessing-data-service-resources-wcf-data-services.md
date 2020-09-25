@@ -8,17 +8,19 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 6a44d61f29fad7fa7d5304deb8b1e329478bc5b4
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 02e45f4e67a80d3afb600f44ea9fa6a5e175310c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202016"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186685"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Veri hizmeti kaynaklarına erişme (WCF Veri Hizmetleri)
+
 WCF Veri Hizmetleri, verilerinizi URI 'Ler tarafından adreslenebilir kaynaklarla bir akış olarak göstermek için açık veri Protokolü 'Nü (OData) destekler. Bu kaynaklar [varlık veri modeli](../adonet/entity-data-model.md)varlık ilişkisi kurallarına göre temsil edilir. Bu modelde, varlıklar, bir uygulama etki alanında bulunan, müşteriler, siparişler, öğeler ve ürünler gibi veri türleri olan işletimsel birimleri temsil eder. Varlık verilerine, temsili durum aktarımı (REST) semantiği kullanılarak erişilir ve değiştirilir, özellikle Al, koy, POST ve DELETE için standart HTTP fiilleri.  
   
 ## <a name="addressing-resources"></a>Kaynakları adresleme  
+
  OData 'de, veri modeli tarafından sunulan tüm verileri bir URI kullanarak adresleyebilirsiniz. Örneğin, aşağıdaki URI, müşteri varlık türünün tüm örneklerinin girişlerini içeren Customers varlık kümesi olan bir akış döndürür:  
   
 <https://services.odata.org/Northwind/Northwind.svc/Customers>
@@ -50,6 +52,7 @@ WCF Veri Hizmetleri, verilerinizi URI 'Ler tarafından adreslenebilir kaynaklarl
  Daha fazla bilgi için bkz. [OData: URI kuralları](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
   
 ## <a name="system-query-options"></a>Sistem sorgu seçenekleri  
+
  OData; filtreleme, sıralama ve sayfalama gibi kaynaklarda geleneksel sorgu işlemleri gerçekleştirmek için kullanabileceğiniz bir sistem sorgu seçenekleri kümesi tanımlar. Örneğin, aşağıdaki URI, tüm `Order` varlıkların kümesini, ilgili `Order_Detail` varlıkların yanı bir şekilde sona ermez posta kodlarını döndürür `100` :  
   
 `https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity`
@@ -69,6 +72,7 @@ WCF Veri Hizmetleri, verilerinizi URI 'Ler tarafından adreslenebilir kaynaklarl
 |`$inlinecount`|Akışta döndürülen varlık sayısı sayısının akışa dahil edilmesini ister.|  
   
 ## <a name="addressing-relationships"></a>Adresleme Ilişkileri  
+
  OData, varlık kümelerinin ve varlık örneklerinin ele eklenmesine ek olarak, varlıklar arasındaki ilişkileri temsil eden ilişkilendirmeleri de sağlamanıza olanak sağlar. Bu işlevsellik, Northwind örnek veritabanındaki belirli bir siparişle ilişkili olan nakliyecinin gibi iki varlık örneği arasında bir ilişki oluşturabilmesinin veya değiştirebilmesi için gereklidir. OData `$link` , varlıklar arasındaki ilişkilendirmeleri özel olarak ele almak için bir işleci destekler. Örneğin, aşağıdaki URI, belirtilen sipariş için nakliyeci yeni bir nakliyeci değiştirmek üzere bir HTTP PUT isteği iletisinde belirtilmiştir.  
   
 `https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper`
@@ -76,6 +80,7 @@ WCF Veri Hizmetleri, verilerinizi URI 'Ler tarafından adreslenebilir kaynaklarl
  Daha fazla bilgi için bkz `3.2. Addressing Links between Entries` . [OData: URI kuralları](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
   
 ## <a name="consuming-the-returned-feed"></a>Döndürülen akışı kullanma  
+
  OData kaynağının URI 'SI, hizmet tarafından sunulan varlık verilerini adreslemenize olanak sağlar. Bir Web tarayıcısının adres alanına bir URI girdiğinizde, istenen kaynağın OData akış temsili döndürülür. Daha fazla bilgi için [WCF veri hizmetleri hızlı başlangıç](quickstart-wcf-data-services.md)bölümüne bakın. Bir veri hizmeti kaynağının beklenen verileri döndürdüğü test için bir Web tarayıcısı yararlı olsa da, veri oluşturma, güncelleştirme ve silmeye yönelik üretim verileri Hizmetleri, genellikle bir Web sayfasındaki uygulama kodu veya komut dosyası dilleri tarafından erişilir. Daha fazla bilgi için bkz. [Istemci uygulamasında veri hizmeti kullanma](using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

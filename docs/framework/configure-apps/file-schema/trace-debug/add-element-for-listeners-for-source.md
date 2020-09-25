@@ -8,14 +8,15 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: 883eef32172c5a7f900197995b4c57c3d5a84e19
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a5abaffbad986785b8879297883da9614f0a8103
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153691"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201700"
 ---
 # <a name="add-element-for-listeners-for-source"></a>\<add>İçin için öğesi \<listeners>\<source>
+
 `Listeners`İzleme kaynağı için koleksiyona bir dinleyici ekler.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -25,7 +26,7 @@ ms.locfileid: "79153691"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-source.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <add name="name"
@@ -34,6 +35,7 @@ ms.locfileid: "79153691"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -44,7 +46,7 @@ ms.locfileid: "79153691"
 |`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dize. <xref:System.Configuration.ConfigurationException>Sınıfın bir dize alan Oluşturucusu yoksa, oluşturulur.|  
 |`name`|İsteğe bağlı öznitelik.<br /><br /> Dinleyicinin adını belirtir.|  
 |`traceOutputOptions`|İsteğe bağlı öznitelik.<br /><br /> <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A>İzleme dinleyicisi için özellik değerini belirtir.|  
-|[özel öznitelikler]|İsteğe bağlı öznitelikler.<br /><br /> Bu dinleyicinin yöntemi tarafından tanımlanan dinleyiciye özgü özniteliklerin değerini belirtir <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> . <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>, sınıfına özgü olan ek bir özniteliğe örnektir <xref:System.Diagnostics.DelimitedListTraceListener> .|  
+|[özel öznitelikler]|İsteğe bağlı öznitelikler.<br /><br /> Bu dinleyicinin yöntemi tarafından tanımlanan dinleyiciye özgü özniteliklerin değerini belirtir <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> . <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> , sınıfına özgü olan ek bir özniteliğe örnektir <xref:System.Diagnostics.DelimitedListTraceListener> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -63,6 +65,7 @@ ms.locfileid: "79153691"
 |`listeners`|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  .NET Framework ile birlikte gelen dinleyici sınıfları <xref:System.Diagnostics.TraceListener> sınıfından türetilir.  
   
  `name`İzleme dinleyicisinin özniteliğini belirtmezseniz, <xref:System.Diagnostics.TraceListener.Name%2A> İzleme dinleyicisinin özelliği varsayılan olarak boş bir dize ("") olur. Uygulamanızda yalnızca bir dinleyici varsa, bunu bir ad belirtmeden ekleyebilir ve ad için boş bir dize belirterek kaldırabilirsiniz. Ancak, uygulamanız birden fazla dinleyici içeriyorsa, her bir izleme dinleyicisi için, koleksiyonda bireysel izleme dinleyicilerini tanımlamanızı ve yönetmenizi sağlayan benzersiz bir ad belirtmeniz gerekir <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> .  
@@ -87,9 +90,11 @@ ms.locfileid: "79153691"
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Yazdığı dosyanın adı <xref:System.Diagnostics.XmlWriterTraceListener> .|  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
- Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+
+ Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `<add>` `console` `textListener` `Listeners` izleme kaynağı için dinleyicileri ve koleksiyona eklemek üzere öğelerin nasıl kullanılacağını gösterir `TraceSourceApp` . `textListener`Dinleyici, izleme çıkışını myListener. log dosyasına yazar.  
   
 ```xml  
@@ -122,5 +127,5 @@ ms.locfileid: "79153691"
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
+- [İzleme ve hata ayıklama ayarları şeması](index.md)
 - [İz Dinleyicileri](../../../debug-trace-profile/trace-listeners.md)

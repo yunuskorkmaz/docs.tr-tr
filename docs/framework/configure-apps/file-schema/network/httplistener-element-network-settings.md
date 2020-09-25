@@ -2,14 +2,15 @@
 title: <httpListener> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 0054be3d2002e4ea5247f25d8094386ac7242422
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 78526559164939667eab8848bc5fd2af6749d474
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088385"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195447"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener> Öğesi (Ağ Ayarları)
+
 Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.HttpListener> .  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpListener>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <httpListener  
@@ -28,6 +29,7 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
 ## <a name="type"></a>Tür  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -37,6 +39,7 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
 |unescapeRequestUrl 'Si|Bir <xref:System.Net.HttpListener> Örneğin, dönüştürülmüş URI yerine ham unatsız URI kullanıp kullanmadığını gösteren bir Boolean değer.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -46,6 +49,7 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
 |[ayarlar](settings-element-network-settings.md)|Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  **UnescapeRequestUrl** özniteliği, <xref:System.Net.HttpListener> yüzde kodlamalı değerlerin dönüştürüldüğü ve diğer normalleştirme ADıMLARıNıN alındığı dönüştürülmüş URI yerine, ham kaçışsız URI kullanıp kullanmadığını belirtir.  
   
  Bir <xref:System.Net.HttpListener> örnek hizmet aracılığıyla bir istek aldığında `http.sys` , tarafından sağlanmış URI dizesinin bir örneğini oluşturur `http.sys` ve özelliği olarak gösterir <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> .  
@@ -85,7 +89,7 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
 |Kayıt Defteri Anahtarı|Varsayılan değer|Açıklama|  
 |------------------|-------------------|-----------------|  
 |EnableNonUTF8|1|Sıfır ise, `http.sys` yalnızca UTF-8 kodlu URL 'leri kabul eder.<br /><br /> Sıfır olmayan bir ise, `http.sys` isteklerde kodlanmış veya DBCS kodlu URL 'leri de kabul eder.|  
-|FavorUTF8|1|Sıfır olmayan, `http.sys` her zaman UTF-8 olarak BIR URL kodunu çözmeye çalışır; dönüştürme başarısız olursa ve EnableNonUTF8 sıfır değilse, http. sys bunu ANSI veya DBCS olarak çözmeye çalışır.<br /><br /> Sıfır (ve EnableNonUTF8 sıfır olmayan) ise `http.sys` ANSI veya DBCS olarak kod çözmeye çalışır; bu başarılı olmazsa UTF-8 dönüşümü çalışır.|  
+|FavorUTF8|1|Sıfır olmayan, `http.sys` her zaman UTF-8 olarak BIR URL kodunu çözmeye çalışır; dönüştürme başarısız olursa ve EnableNonUTF8 sıfır değilse, Http.sys ANSI veya DBCS olarak kod çözmeye çalışır.<br /><br /> Sıfır (ve EnableNonUTF8 sıfır olmayan) ise `http.sys` ANSI veya DBCS olarak kod çözmeye çalışır; bu başarılı olmazsa UTF-8 dönüşümü çalışır.|  
   
  <xref:System.Net.HttpListener>Bir istek aldığında, dönüştürülmüş URI 'yi `http.sys` özelliğe giriş olarak kullanır <xref:System.Net.HttpListenerRequest.Url%2A> .  
   
@@ -114,6 +118,7 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
  <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>Özelliği, ilgili yapılandırma dosyalarından **unescapeRequestUrl** özniteliğinin geçerli değerini almak için kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.Net.HttpListener> özelliğine giriş olarak dönüştürülmüş URI yerine ham URI 'yi kullanmak için bir istek aldığında sınıfının nasıl yapılandırılacağını gösterir `http.sys` <xref:System.Net.HttpListenerRequest.Url%2A> .  
   
 ```xml  
@@ -132,7 +137,7 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
   
 |||
 |-|-|  
-|Ad alanı|System.Net|  
+|Ad Alanı|System.Net|  
 |Şema adı||  
 |Doğrulama dosyası||  
 |Boş olabilir||  
@@ -142,4 +147,4 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
 - <xref:System.Net.Configuration.HttpListenerElement>
 - <xref:System.Net.HttpListener>
 - <xref:System.Net.HttpListenerRequest.Url%2A>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

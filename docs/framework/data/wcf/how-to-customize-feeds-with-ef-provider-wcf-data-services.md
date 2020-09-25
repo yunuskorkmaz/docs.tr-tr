@@ -5,14 +5,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 887dda9b31d86c4952436316e160f4de7a15b66b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 76cc8da052ee51157857418cd81088a523f95ea2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556960"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186601"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Nasıl yapılır: Entity Framework sağlayıcı ile akışları özelleştirme (WCF Veri Hizmetleri)
+
 WCF Veri Hizmetleri, bir varlık özelliklerinin AtomPub protokolünde tanımlı kullanılmayan öğelerle eşlenilmesi için bir veri hizmeti yanıtında atom serileştirmesini özelleştirmenize olanak sağlar. Bu konuda, Entity Framework sağlayıcısı kullanılarak bir. edmx dosyasında tanımlanan bir veri modelinde varlık türleri için eşleme özniteliklerinin nasıl tanımlanacağı gösterilmektedir. Daha fazla bilgi için bkz. [akış özelleştirmesi](feed-customization-wcf-data-services.md).  
   
  Bu konu başlığında, veri modelini içeren araç tarafından oluşturulan. edmx dosyasını el ile değiştirirsiniz. Veri modeli uzantıları Entity Desisgner tarafından desteklenmediğinden dosyayı el ile değiştirmeniz gerekir. Varlık Veri Modeli araçlarının üretmesindeki. edmx dosyası hakkında daha fazla bilgi için bkz. [. edmx dosyasına genel bakış (Entity Framework)](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)). Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.  
@@ -36,6 +37,7 @@ WCF Veri Hizmetleri, bir varlık özelliklerinin AtomPub protokolünde tanımlı
 6. Projeyi yeniden derleyin.  
   
 ## <a name="example"></a>Örnek  
+
  Önceki örnekte URI için aşağıdaki sonuç döndürülür `http://myservice/Northwind.svc/Customers('ALFKI')` .  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresult)]  

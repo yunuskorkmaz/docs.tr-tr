@@ -2,14 +2,15 @@
 title: <transport> / <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: c563339e4f854cc4e60f92dd5b8c0b39112dc000
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d575b7e282775e2e2c498ac94bb54a563b8d125e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736114"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201401"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<transport> / \<basicHttpBinding>
+
 HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri tanımlar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-basichttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <basicHttpBinding>
@@ -41,6 +42,7 @@ HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -75,6 +77,7 @@ HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri
 |Sertifika|Bir sertifika kullanarak istemci kimlik doğrulaması gerçekleştirir. Bu seçenek yalnızca `Mode` üst `security` öğenin özniteliği Transport olarak ayarlandıysa ve yalnızca transportcredentialolarak ayarlandıysa işe yarar.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -84,6 +87,7 @@ HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri
 |[\<security>](security-of-basichttpbinding.md)|İçin güvenlik yeteneklerini tanımlar [\<basicHttpBinding>](basichttpbinding.md) .|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, temel bağlama ile SSL Aktarım güvenliği kullanımını gösterir. Varsayılan olarak, temel bağlama HTTP iletişimini destekler.  
   
 ```xml  

@@ -2,17 +2,19 @@
 title: DataTable Verilerini Düzenleme
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 421680a4f39dd68c09dfe20e62f2eec86259b9f0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3f98832b4aa9361346d06830f2f004fa374222ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786159"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201336"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>DataTable Verilerini Düzenleme
-<xref:System.Data.DataTable> Bir<xref:System.Data.DataSet>içinde bir oluşturduktan sonra, veritabanında bir tablo kullanırken yaptığınız aynı etkinlikleri gerçekleştirebilirsiniz. Tablodaki verileri ekleyebilir, görüntüleyebilir, düzenleyebilir ve silebilirsiniz; hataları ve olayları izleyebilirsiniz; ve tablodaki verileri sorgulayabilirsiniz. **DataTable**'daki verileri değiştirirken, değişikliklerin doğru olup olmadığını da doğrulayabilirsiniz ve değişiklikleri programlı olarak kabul edip reddetmeyeceğinizi belirleyebilirsiniz.  
+
+Bir içinde bir oluşturduktan sonra <xref:System.Data.DataTable> <xref:System.Data.DataSet> , veritabanında bir tablo kullanırken yaptığınız aynı etkinlikleri gerçekleştirebilirsiniz. Tablodaki verileri ekleyebilir, görüntüleyebilir, düzenleyebilir ve silebilirsiniz; hataları ve olayları izleyebilirsiniz; ve tablodaki verileri sorgulayabilirsiniz. **DataTable**'daki verileri değiştirirken, değişikliklerin doğru olup olmadığını da doğrulayabilirsiniz ve değişiklikleri programlı olarak kabul edip reddetmeyeceğinizi belirleyebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [DataTable’a Veri Ekleme](adding-data-to-a-datatable.md)  
  Yeni satırlar oluşturmayı ve bunları bir tabloya eklemeyi açıklar.  
   
