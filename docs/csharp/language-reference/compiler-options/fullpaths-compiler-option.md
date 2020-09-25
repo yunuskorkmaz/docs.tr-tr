@@ -11,14 +11,15 @@ helpviewer_keywords:
 - full paths [C#]
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
-ms.openlocfilehash: 2f1200c78e8dc22d6e04e2ee6a42906433708c31
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1ea1c3ec5e0d981c36044351d02d459386a720fc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125702"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173223"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths (C# derleyici seçenekleri)
+
 **-Fullpaths** seçeneği derleyicinin derleme hatalarını ve uyarılarını listelerken dosyanın tam yolunu belirtmesini sağlar.  
   
 ## <a name="syntax"></a>Syntax  
@@ -28,6 +29,7 @@ ms.locfileid: "89125702"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Varsayılan olarak, derlemeden kaynaklanan hatalar ve uyarılar, bir hatanın bulunduğu dosyanın adını belirtir. **-Fullpaths** seçeneği derleyicinin dosyanın tam yolunu belirtmesini sağlar.  
   
  Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  

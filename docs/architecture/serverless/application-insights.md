@@ -1,34 +1,34 @@
 ---
-title: Uygulama Öngörüleri - Sunucusuz uygulamalar
-description: Application Insights, geliştiricilerin web uygulamaları, mobil uygulamalar, masaüstü uygulamaları ve mikro hizmetlerdeki sorunları algılamasını, triyajlamasını ve tanılamasını sağlayan sunucusuz bir tanılama platformudur.
+title: Application Insights-sunucusuz uygulamalar
+description: Application Insights, geliştiricilerin Web Apps, mobil uygulamalar, masaüstü uygulamaları ve mikro hizmetlerde sorunları algılamasını, önceliklendirme ve tanılamalarını sağlayan sunucusuz bir tanılama platformudur.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 42791b052ebb068c9b7109291e66b30b47e5821f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522739"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173327"
 ---
 # <a name="telemetry-with-application-insights"></a>Application Insights ile telemetri
 
-[Application Insights,](https://docs.microsoft.com/azure/application-insights) geliştiricilerin web uygulamaları, mobil uygulamalar, masaüstü uygulamaları ve mikro hizmetlerdeki sorunları algılamasını, triyajetmesini ve tanılamasını sağlayan sunucusuz bir tanılama platformudur. İşlev uygulamaları için Uygulama Öngörüleri'ni portaldaki bir anahtarı çevirerek açabilirsiniz. Application Insights, bir sunucuyu yapılandırmanız veya kendi veritabanınızı kurmanız gerekmeden tüm bu özellikleri sağlar. Application Insights'ın tüm özellikleri, uygulamalarınız ile otomatik olarak entegre olan bir hizmet olarak sağlanır.
+[Application Insights](/azure/application-insights) , geliştiricilerin Web Apps, mobil uygulamalar, masaüstü uygulamaları ve mikro hizmetlerde sorunları algılamasını, önceliklendirme ve tanılamalarını sağlayan sunucusuz bir tanılama platformudur. Yalnızca portalda bir anahtarı açarak işlev uygulamaları için Application Insights açabilirsiniz. Application Insights, bir sunucu yapılandırmanıza veya kendi veritabanınızı ayarlamanıza gerek kalmadan tüm bu özellikleri sağlar. Tüm Application Insights ' özellikleri, uygulamalarınızla otomatik olarak tümleştirilen bir hizmet olarak sağlanır.
 
-![Uygulama Öngörüleri logosu](./media/application-insights-logo.png)
+![Application Insights logosu](./media/application-insights-logo.png)
 
-Mevcut uygulamalara Uygulama Öngörüleri eklemek, uygulamanızın ayarlarına bir enstrümantasyon anahtarı eklemek kadar kolaydır. Uygulama Öngörüleri ile şunları yapabilirsiniz:
+Mevcut uygulamalara Application Insights eklemek, uygulamanızın ayarlarına bir izleme anahtarı eklemek kadar kolaydır. Application Insights ile şunları yapabilirsiniz:
 
-- İşlev çağırma sayısı, bir işlevi çalıştırmak için gereken süre ve özel durumlar gibi ölçümlere göre özel grafikler ve uyarılar oluşturun
-- Hataları ve sunucu özel durumlarını çözümleme
-- Operasyonla performansa sondaj yapmak ve üçüncü taraf bağımlılıklarını aramak için gereken süreyi ölçün
-- İşlev uygulamalarınızı barındıran tüm sunucularda CPU kullanımını, belleği ve oranları izleyin
-- İşlev uygulamalarınız için istek sayısı ve gecikme sayısı da dahil olmak üzere canlı bir ölçüm akışını görüntüleyin
-- İşlev verileriniz üzerinde arama yapmak, sorgulamak ve özel grafikler oluşturmak için [Analytics'i](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) kullanın
+- İşlev etkinleştirmeleri sayısı, bir işlev çalıştırmak için geçen süre ve özel durumlar gibi ölçümleri temel alarak özel grafikler ve uyarılar oluşturun
+- Sorunları ve sunucu özel durumlarını çözümleme
+- İşleme göre performans ile detaya gitme ve üçüncü taraf bağımlılıklarını çağırmak için geçen süreyi ölçme
+- İşlev uygulamalarınızı barındıran tüm sunuculardaki CPU kullanımını, belleği ve fiyatları izleyin
+- İşlev uygulamalarınız için istek sayısı ve gecikme süresi dahil olmak üzere ölçümlerin canlı bir akışını görüntüleyin
+- İşlev verileriniz üzerinde özel grafikler aramak, sorgulamak ve oluşturmak için [Analizi](/azure/application-insights/app-insights-analytics) kullanın
 
-![Ölçümler gezgini](./media/metrics-explorer.png)
+![Ölçüm gezgini](./media/metrics-explorer.png)
 
-Dahili telemetriye ek olarak, özel telemetri de oluşturmak mümkündür. Aşağıdaki kod snippet işlevi uygulaması için enstrümantasyon anahtarı kümesini kullanarak özel bir telemetri istemcisi oluşturur:
+Yerleşik telemetriye ek olarak, özel telemetri oluşturmak da mümkündür. Aşağıdaki kod parçacığı, işlev uygulaması için ayarlanan izleme anahtarını kullanarak özel bir telemetri istemcisi oluşturur:
 
 ```csharp
 public static TelemetryClient telemetry = new TelemetryClient()
@@ -37,7 +37,7 @@ public static TelemetryClient telemetry = new TelemetryClient()
 };
 ```
 
-Aşağıdaki kod, bir [Azure Tablo Depolama](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview) örneğine yeni bir satır eklemenin ne kadar süreceğini ölçer:
+Aşağıdaki kod, bir [Azure Tablo depolama](/azure/cosmos-db/table-storage-overview) örneğine yeni bir satır eklemek için geçen süreyi ölçer:
 
 ```csharp
 var operation = TableOperation.Insert(entry);
@@ -47,16 +47,16 @@ await table.ExecuteAsync(operation);
 telemetry.TrackDependency("AzureTableStorageInsert", "Insert", startTime, timer.Elapsed, true);
 ```
 
-Elde edilen performans grafiği gösterilir:
+Elde edilen performans grafiği görüntülenir:
 
 ![Özel telemetri](./media/custom-telemetry.png)
 
-Özel telemetri, yeni bir satır eklemek için ortalama süre 32,6 milisaniye olduğunu ortaya koymaktadır.
+Özel telemetri, yeni bir satır eklemek için geçen ortalama süreyi 32,6 milisaniyedir.
 
-Application Insights, sunucusuz uygulamalarınız hakkında ayrıntılı telemetri günlüğe kaydetmek için güçlü ve kullanışlı bir yol sağlar. Sağlanan izleme ve günlüğe kaydetme düzeyi üzerinde tam denetime sahipsiniz. Olaylar, bağımlılıklar ve sayfa görünümü gibi özel istatistikleri izleyebilirsiniz. Son olarak, güçlü analitik, önemli sorular soran ve grafikler ve gelişmiş öngörüler oluşturan sorgular yazmanızı sağlar.
+Application Insights, sunucusuz uygulamalarınız hakkında ayrıntılı telemetri günlüğe kaydetmek için güçlü ve uygun bir yol sağlar. Belirtilen izleme ve günlüğe kaydetme düzeyi üzerinde tam denetime sahip olursunuz. Olaylar, bağımlılıklar ve sayfa görünümü gibi özel istatistikleri izleyebilirsiniz. Son olarak, güçlü analizler önemli sorular sorduğu ve grafikler ve gelişmiş Öngörüler üreten sorgular yazmanızı sağlar.
 
-Daha fazla bilgi için [bkz.](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+Daha fazla bilgi için bkz. [Azure Işlevlerini izleme](/azure/azure-functions/functions-monitoring).
 
 >[!div class="step-by-step"]
->[Önceki](azure-functions.md)
->[Sonraki](logic-apps.md)
+>[Önceki](azure-functions.md) 
+> [Sonraki](logic-apps.md)

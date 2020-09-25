@@ -2,21 +2,22 @@
 title: Dizi İşleçleri
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 4feca030d3c398f4286fe9d126cae884afe7945b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a2394ed57335431fe0246f66219392af5cc0e6b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792673"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173451"
 ---
 # <a name="sequence-operators"></a>Dizi İşleçleri
+
 Genel olarak, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aşağıdaki kalitelerden birine veya daha fazlasına sahip dizi işleçlerini desteklemez:  
   
 - Dizin parametresiyle bir lambda alın.  
   
-- Gibi sıralı satırların <xref:System.Linq.Queryable.TakeWhile%2A>özelliklerine güvenin.  
+- Gibi sıralı satırların özelliklerine güvenin <xref:System.Linq.Queryable.TakeWhile%2A> .  
   
-- Gibi rastgele bir CLR uygulamasına <xref:System.Collections.Generic.IComparer%601>güvenin.  
+- Gibi rastgele bir CLR uygulamasına güvenin <xref:System.Collections.Generic.IComparer%601> .  
   
 |Desteklenmeyen örnekler|  
 |-----------------------------|  
@@ -43,7 +44,8 @@ Genel olarak, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>.NET farklılıkları  
- Tüm desteklenen dizi işleçleri, için `Average`dışında, ortak dil çalışma zamanında (CLR) beklendiği gibi çalışır. `Average`aynı türde bir değeri, ortalama olan türle, clr `Average` 'nin her zaman bir <xref:System.Double> veya <xref:System.Decimal>olarak döndürdüğü bir değer döndürür. Kaynak bağımsız değişkeni açıkça Double/Decimal olarak veya seçici Double/Decimal olarak ayarlanırsa, sonuçta elde edilen SQL de böyle bir dönüştürme olur ve sonuç beklendiği gibi olacaktır.  
+
+ Tüm desteklenen dizi işleçleri, için dışında, ortak dil çalışma zamanında (CLR) beklendiği gibi çalışır `Average` . `Average` aynı türde bir değeri, ortalama olan türle, CLR 'nin `Average` her zaman bir veya olarak döndürdüğü bir değer döndürür <xref:System.Double> <xref:System.Decimal> . Kaynak bağımsız değişkeni açıkça Double/Decimal olarak veya seçici Double/Decimal olarak ayarlanırsa, sonuçta elde edilen SQL de böyle bir dönüştürme olur ve sonuç beklendiği gibi olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

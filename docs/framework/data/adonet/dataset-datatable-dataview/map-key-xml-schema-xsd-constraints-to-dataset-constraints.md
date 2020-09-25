@@ -2,28 +2,29 @@
 title: Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: 5ebf333b065157fa9497cc1471a45698663638e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b55b232faa01bf36788276caaf8bc2e97dddf697
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150941"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172794"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
-Şemada, **anahtar** öğeyi kullanarak bir öğe veya öznitelik üzerinde önemli bir kısıtlama belirtebilirsiniz. Anahtar kısıtlamanın belirtildiği öğe veya öznitelik, herhangi bir şema örneğinde benzersiz değerlere sahip olmalıdır ve null değerleri olamaz.  
+
+Bir şemada, **anahtar** öğesini kullanarak bir öğe veya öznitelik üzerinde anahtar kısıtlaması belirtebilirsiniz. Anahtar kısıtlamasının belirtilen öğesi veya özniteliği herhangi bir şema örneğinde benzersiz değerlere sahip olmalı ve null değerlere sahip olamaz.  
   
- Anahtar kısıtlaması, anahtar kısıtlamasının tanımlandığı sütunun null değerlere sahip olamayacağı dışında, benzersiz kısıtlamaya benzer.  
+ Anahtar kısıtlaması, anahtar kısıtlamasının tanımlandığı sütunun null değerlere sahip olmadığı durumlar dışında, UNIQUE kısıtlamasına benzerdir.  
   
- Aşağıdaki **tabloda, anahtar** öğede belirtebileceğiniz **msdata** öznitelikleri özetlenebilir.  
+ Aşağıdaki tabloda, **anahtar** öğesinde belirtebileceğiniz **msdata** öznitelikleri özetlenmektedir.  
   
 |Öznitelik adı|Açıklama|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Bu öznitelik belirtilirse, değeri kısıtlama adı olarak kullanılır. Aksi takdirde, **ad** özniteliği kısıtlama adının değerini sağlar.|  
-|**msdata:PrimaryKey**|Varsa, **IsPrimaryKey** kısıtlama özelliği doğru olarak ayarlanır, böylece birincil anahtar yapma. **true** `PrimaryKey="true"` Birincil anahtarların null değerleri olamayacağından **AllowDBNull** sütun özelliği **false**olarak ayarlanır.|  
+|**msdata: ConstraintName**|Bu öznitelik belirtilmişse, değeri kısıtlama adı olarak kullanılır. Aksi takdirde, **Name** özniteliği kısıtlama adının değerini sağlar.|  
+|**msdata: PrimaryKey**|Varsa `PrimaryKey="true"` , **IsPrimaryKey** kısıtlama özelliği **true**olarak ayarlanır ve bu sayede birincil anahtar yapılır. **AllowDBNull** Column özelliği **false**olarak ayarlanır, çünkü birincil anahtarlar null değerlere sahip olamaz.|  
   
- Önemli bir kısıtlamanın belirtildiği şemayı dönüştürmede, eşleme işlemi, kısıtlamadaki her sütun için **yanlış** olarak ayarlanmış **AllowDBNull** sütun özelliğiyle tabloda benzersiz bir kısıtlama oluşturur. Benzersiz kısıtlamanın **IsPrimaryKey** özelliği, **anahtar** öğeüzerinde belirtilmedikçe `msdata:PrimaryKey="true"` de **false** olarak ayarlanır. Bu şema benzersiz bir kısıtlama ile aynıdır `PrimaryKey="true"`hangi .  
+ Anahtar kısıtlamasının belirtildiği şemayı dönüştürürken, eşleme işlemi kısıtlamadaki her bir sütun için **AllowDBNull** Column özelliği **false** olarak ayarlanmış tabloda benzersiz bir kısıtlama oluşturur. Anahtar öğesinde belirtmediğiniz müddetçe, UNIQUE kısıtlamasının **IsPrimaryKey** özelliği de **false** olarak ayarlanır `msdata:PrimaryKey="true"` **key** . Bu, şemadaki şema içindeki benzersiz bir kısıtlama ile aynıdır `PrimaryKey="true"` .  
   
- Aşağıdaki şema örneğinde, **anahtar** öğe **CustomerID** öğesindeki anahtar kısıtlamayı belirtir.  
+ Aşağıdaki şema örneğinde, **anahtar** öğesi **MüşteriNo** öğesinde anahtar kısıtlamasını belirtir.  
   
 ```xml  
 <xs:schema id="cod"  
@@ -54,13 +55,13 @@ ms.locfileid: "79150941"
 </xs:schema>
 ```  
   
- **Anahtar** öğe, **Müşteri** öğesinin **CustomerID** alt öğesinin değerlerinin benzersiz değerlere sahip olması ve null değerlere sahip olamayacağını belirtir. XML Şema tanım dili (XSD) şema sını çevirirken, eşleme işlemi aşağıdaki tabloyu oluşturur:  
+ **Anahtar** öğesi, **Customers** öğesinin **MüşteriNo** alt öğesi değerlerinin benzersiz değerlere sahip olması gerektiğini belirtir ve null değerlere sahip olamaz. XML şeması tanım dili (XSD) şemasını çevirirken, eşleme işlemi aşağıdaki tabloyu oluşturur:  
   
 ```text  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- XML Şema eşlemi, aşağıdaki <xref:System.Data.DataSet>gibi **CustomerID** sütununda bir **Benzersiz Kısıtlama** da oluşturur. (Basitlik için yalnızca ilgili özellikler gösterilir.)  
+ XML Şeması eşleme, aşağıda gösterildiği gibi **MüşteriNo** sütununda bir **UniqueConstraint kısıtlaması** de oluşturur <xref:System.Data.DataSet> . (Kolaylık sağlaması için yalnızca ilgili özellikler gösterilir.)  
   
 ```text  
       DataSetName: MyDataSet  
@@ -74,9 +75,9 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- `msdata:PrimaryKey="true"` Oluşturulan **DataSet'te,** şema **anahtar** öğede belirttiği için **UniqueConstraint'in** **IsPrimaryKey** özelliği **doğru** olarak ayarlanır.  
+ Oluşturulan **veri kümesinde** , şema anahtar öğesinde belirttiğinden **UniqueConstraint** 'in **IsPrimaryKey** özelliği **true** olarak ayarlanır `msdata:PrimaryKey="true"` . **key**  
   
- **DataSet'teki** **UniqueConstraint** özelliğinin **Değeri,** şemadaki **anahtar** öğede belirtilen **msdata:ConstraintName** özniteliğinin değeridir.  
+ **Veri kümesindeki** **uniquekısıtlamasının** **ConstraintName** özelliğinin değeri, şemadaki **anahtar** öğesinde belirtilen **msdata: ConstraintName** özniteliğinin değeridir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

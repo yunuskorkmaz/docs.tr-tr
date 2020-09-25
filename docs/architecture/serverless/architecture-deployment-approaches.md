@@ -1,25 +1,25 @@
 ---
-title: Mimari dağıtım yaklaşımları - Sunucusuz uygulamalar
-description: IaaS, PaaS, kapsayıcılar ve sunucusuzlar arasında karşılaştırma yla birlikte, kurumsal mimarilerin buluta farklı şekillerde dağıtılanın yolu kılavuzu.
+title: Mimari dağıtımı yaklaşımları-sunucusuz uygulamalar
+description: IaaS, PaaS, kapsayıcılar ve sunucusuz arasında karşılaştırma ile kurumsal mimarilerin buluta dağıtıldığı farklı yollarla ilgili kılavuz.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e91412600e8e4e5a0dca2a454f1cb0680c881b2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522732"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173347"
 ---
 # <a name="architecture-deployment-approaches"></a>Mimari dağıtım yaklaşımları
 
-Bir iş uygulaması tasarlamak için kullanılan mimari yaklaşımne bakılmaksızın, bu uygulamaların uygulanması veya dağıtımı değişebilir. İşletmeler, fiziksel donanımdan sunucusuz işlevlere kadar her konuda uygulamaları barındırır.
+Bir iş uygulaması tasarlamak için kullanılan mimari yaklaşımdan bağımsız olarak, bu uygulamaların uygulanması veya dağıtımı farklılık gösterebilir. İşletmeler, fiziksel donanımlardan sunucusuz işlevlere kadar her şeye yönelik uygulamalar barındırır.
 
-## <a name="n-tier-applications"></a>N-Tier uygulamaları
+## <a name="n-tier-applications"></a>N katmanlı uygulamalar
 
-[N-Tier mimari deseni](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) olgun bir mimaridir ve yalnızca çeşitli mantıksal katmanları ayrı fiziksel katmanlara ayıran uygulamaları ifade eder. N-Tier mimarisi, N-Layer mimarisinin fiziksel bir uygulamasıdır. Bu mimarinin en yaygın uygulaması şunları içerir:
+[N katmanlı mimari model](/azure/architecture/guide/architecture-styles/n-tier) , yetişkinlere yönelik bir mimaridir ve yalnızca çeşitli mantıksal katmanları ayrı fiziksel katmanlara ayıran uygulamalara başvurur. N katmanlı mimari, N katmanlı mimarinin fiziksel bir uygulamasıdır. Bu mimarinin en yaygın uygulanması şunları içerir:
 
-- Bir sunum katmanı, örneğin bir web uygulaması.
+- Bir sunu katmanı, örneğin bir Web uygulaması.
 - REST API gibi bir API veya veri erişim katmanı.
 - SQL veritabanı gibi bir veri katmanı.
 
@@ -28,143 +28,143 @@ Bir iş uygulaması tasarlamak için kullanılan mimari yaklaşımne bakılmaks�
 N katmanlı çözümler aşağıdaki özelliklere sahiptir:
 
 - Projeler genellikle katmanlarla hizalanır.
-- Sınama katmana göre farklı yaklaşılabilir.
-- Katmanlar soyutlama katmanları sağlar, örneğin sunu katmanı genellikle veri katmanının uygulama ayrıntılarından habersizdir.
-- Tipik olarak, katmanlar yalnızca bitişik katmanlarla etkileşime girer.
-- Sürümler genellikle projede yönetilir ve bu nedenle katman, düzey. Basit bir API değişikliği, tüm orta katmanın yeni bir sürümü gerektirebilir.
+- Test, katman tarafından farklı approached olabilir.
+- Katmanlar, Özet katmanları sağlar; örneğin, sunum katmanı genellikle veri katmanının uygulama ayrıntılarının üzerinde yok edilir.
+- Genellikle, Katmanlar yalnızca bitişik katmanlarla etkileşime geçin.
+- Yayınlar genellikle projede ve bu nedenle katman düzeyinde yönetilir. Basit bir API değişikliği, orta katmanın tamamının yeni bir sürümünü gerektirebilir.
 
-Bu yaklaşım, şunları dahil olmak üzere çeşitli avantajlar sağlar:
+Bu yaklaşım aşağıdakiler dahil olmak üzere çeşitli avantajlar sağlar:
 
-- Veritabanının yalıtımı (genellikle ön uç veritabanı arka ucuna doğrudan erişim yok).
-- API'nin yeniden kullanımı (örneğin, mobil, masaüstü ve web uygulaması istemcilerinin tümü aynı API'leri yeniden kullanabilir).
-- Katmanları birbirinden bağımsız ölçeklendirme yeteneği.
-- Yeniden düzenleme yalıtımı: bir katman diğer katmanları etkilemeden yeniden kullanılabilir.
+- Veritabanı yalıtımı (genellikle ön uç, veritabanı arka ucuna doğrudan erişim sahibi değildir).
+- API 'nin yeniden kullanılması (örneğin, mobil, masaüstü ve Web uygulaması istemcilerinin hepsi aynı API 'Leri yeniden kullanabilir).
+- Katmanları birbirinden bağımsız olarak ölçeklendirebilme olanağı.
+- Yeniden düzenleme yalıtımı: bir katman, diğer katmanları etkilemeden yeniden düzenlenmiş olabilir.
 
-## <a name="on-premises-and-infrastructure-as-a-service-iaas"></a>Hizmet Olarak Şirket İçi ve Altyapı (IaaS)
+## <a name="on-premises-and-infrastructure-as-a-service-iaas"></a>Şirket içi ve hizmet olarak altyapı (IaaS)
 
-Uygulamaları barındırmak için geleneksel yaklaşım donanım satın alma ve işletim sistemi de dahil olmak üzere tüm yazılım yüklemeleri, yönetme gerektirir. Başlangıçta bu pahalı veri merkezleri ve fiziksel donanım içeriyordu. Fiziksel donanımı çalıştırmanın getirdiği zorluklar şunlardır:
+Uygulamaları barındırmak için geleneksel yaklaşım, işletim sistemi dahil olmak üzere donanım satın alma ve yazılım yüklemelerinin tümünü yönetme gerektirir. Bu, başlangıçta pahalı veri merkezleri ve fiziksel donanımlar dahil değildir. İşletim fiziksel donanımıyla birlikte gelen sorunlar da dahil olmak üzere çok.
 
-- "Her ihtimale karşı" veya en yüksek talep senaryoları için fazlasatın alma ihtiyacı.
-- Donanıma fiziksel erişimi güvence altına alma.
-- Donanım hatası sorumluluğu (disk hatası gibi).
-- Soğutma.
-- Yönlendiricileri ve yük dengeleyicilerini yapılandırma.
+- "Yalnızca büyük/küçük harf" veya en yoğun talep senaryolarında aşırı satın alma ihtiyacı.
+- Donanıma fiziksel erişimin güvenliğini sağlama.
+- Donanım hatası sorumluluğu (örneğin, disk arızası).
+- Maya.
+- Yönlendiricileri ve yük dengeleyicileri yapılandırma.
 - Güç artıklığı.
-- Yazılım erişimini güvence altına alma.
+- Yazılım erişiminin güvenliğini sağlama.
 
 ![IaaS yaklaşımı](./media/iaas-approach.png)
 
-Donanımın "sanal makineler" aracılığıyla sanallaştırılması, Hizmet Olarak Altyapı'yı (IaaS) mümkün kılar. Ana bilgisayar makineleri, kendi bellekleri, CPU'ları ve depolama ları için ayırmaları olan örneklere kaynak sağlamak için etkin bir şekilde bölümlere ayrılmıştır. Ekip gerekli VM'leri sağlar ve ilişkili ağları ve depolamaya erişimi yapılandırır.
+Donanım sanallaştırma, "sanal makineler" aracılığıyla hizmet olarak altyapı (IaaS) etkinleştirilir. Konak makineler, kendilerine ait bellek, CPU ve depolama alanları için ayırmaları olan örneklere kaynak sağlamak üzere etkili bir şekilde bölümlenir. Takım, gerekli VM 'Leri sağlar ve ilişkili ağları ve depolama alanına erişimi yapılandırır.
 
-Daha fazla bilgi için [sanal makine N katmanlı başvuru mimarisine](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)bakın.
+Daha fazla bilgi için bkz. [sanal makine N katmanlı başvuru mimarisi](/azure/architecture/reference-architectures/virtual-machines-windows/n-tier).
 
-Sanallaştırma ve Hizmet Olarak Altyapı (IaaS) birçok endişeyi giderse de, yine de altyapı ekibinin elinde çok fazla sorumluluk bırakmaktadır. Takım işletim sistemi sürümlerini korur, güvenlik yamaları uygular ve hedef makinelere üçüncü taraf bağımlılıkları yükler. Uygulamalar genellikle üretim makinelerinde test ortamına göre farklı davranmaktadır. Sorunlar, farklı bağımlılık sürümleri ve/veya OS SKU düzeyleri nedeniyle ortaya çıkar. Birçok kuruluş bu hedeflere N-Tier uygulamaları dağıtsa da, birçok şirket Hizmet [Olarak Platform](#platform-as-a-service-paas)gibi daha bulut yerel bir modele dağıtım dan yararlanır. Mikro hizmetlere sahip mimariler, esneklik ve esneklik için ölçeklendirme gereksinimleri nedeniyle daha zorlu.
+Sanallaştırma ve hizmet olarak altyapı (IaaS) ile ilgili birçok sorun ele gelse de, altyapı ekibinin elleri için de çok fazla sorumluluk bırakır. Takım, işletim sistemi sürümlerini korur, güvenlik düzeltme eklerini uygular ve hedef makinelere üçüncü taraf bağımlılıklarını kurar. Uygulamalar, genellikle test ortamıyla karşılaştırılan üretim makinelerinde farklı şekilde davranır. Farklı bağımlılık sürümleri ve/veya işletim sistemi SKU düzeyleri nedeniyle sorunlar ortaya çıkar. Birçok kuruluş bu hedeflere N katmanlı uygulamalar dağıtmakla birlikte, çoğu şirket [hizmet olarak platform](#platform-as-a-service-paas)gibi daha fazla bulut Yerel modeline dağıtmaktan yararlanır. Mikro hizmetlerle mimariler, esneklik ve dayanıklılık açısından ölçeği genişletme gereksinimleri nedeniyle daha zordur.
 
-Daha fazla bilgi için [sanal makinelere](https://docs.microsoft.com/azure/virtual-machines/)bakın.
+Daha fazla bilgi için bkz. [sanal makineler](/azure/virtual-machines/).
 
 ## <a name="platform-as-a-service-paas"></a>Hizmet Olarak Platform (PaaS)
 
-Hizmet Olarak Platform (PaaS), geliştiricilerin doğrudan takabilecekleri yapılandırılmış çözümler sunar. PaaS yönetilen barındırma için başka bir terimdir. Temel işletim sistemini, güvenlik düzeltme eklerini ve çoğu durumda üçüncü taraf bağımlılıklarını yönetme gereksinimini ortadan kaldırır. Platformlara örnek olarak web uygulamaları, veritabanları ve mobil arka uçlar verilebilir.
+Hizmet olarak platform (PaaS), geliştiricilerin doğrudan girebileceği yapılandırılmış çözümler sunar. PaaS, yönetilen barındırma için başka bir terimdir. Temel işletim sistemi, güvenlik düzeltme ekleri ve birçok durumda, üçüncü taraf bağımlılıkları yönetme ihtiyacını ortadan kaldırır. Platform örnekleri arasında Web uygulamaları, veritabanları ve mobil arka uçlar sayılabilir.
 
-PaaS, IaaS'ın ortak zorluklarını ele alıyor. PaaS, geliştiricinin nasıl dağıtılanından çok koda veya veritabanı şemasına odaklanmasına olanak tanır. PaaS'ın faydaları şunlardır:
+PaaS, IaaS 'de ortak olan zorlukları ele alır. PaaS, geliştiricinin dağıtım şekli yerine koda veya veritabanı şemasına odaklanmasını sağlar. PaaS 'nin avantajları şunlardır:
 
-- Boşta makinelere yatırım yapmanın genel giderini ortadan kaldıran kullanım modelleri için ödeme yapın.
-- Doğrudan dağıtım ve geliştirilmiş DevOps, sürekli entegrasyon (CI) ve sürekli teslimat (CD) boru hatları.
-- Otomatik yükseltmeler, güncelleştirmeler ve güvenlik yamaları.
-- Push-button ölçekve ölçek (elastik ölçek).
+- Boştaki makinelere yatırım yükünü ortadan kaldıran kullanım modellerini ödeyin.
+- Doğrudan dağıtım ve geliştirilmiş DevOps, sürekli tümleştirme (CI) ve sürekli teslim (CD) işlem hatları.
+- Otomatik yükseltmeler, güncelleştirmeler ve güvenlik düzeltme ekleri.
+- Basma düğmesi ölçeği genişletme ve ölçeği artırma (elastik ölçek).
 
-PaaS ana dezavantajı geleneksel satıcı kilitleme olmuştur. Örneğin, bazı PaaS sağlayıcıları yalnızca ASP.NET, Düğüm.js'yi veya diğer belirli dilleri ve platformları destekler. Azure Uygulama Hizmeti gibi ürünler, birden çok platforma hitap etmek ve web uygulamalarını barındırmak için çeşitli dilleri ve çerçeveleri desteklemek üzere evrilmiştir.
+PaaS geleneksel 'nin ana dezavantajı, satıcı kilidi olmuştur. Örneğin, bazı PaaS sağlayıcıları yalnızca ASP.NET, Node.js veya diğer belirli dilleri ve platformları destekler. Azure App Service gibi ürünler, birden çok platformu ele almak ve Web uygulamalarını barındırmak için çeşitli dilleri ve çerçeveleri desteklemek için geliştirilmiştir.
 
-![Hizmet Mimarisi Olarak Platform](./media/paas-architecture.png)
+![Hizmet mimarisi olarak platform](./media/paas-architecture.png)
 
 ## <a name="software-as-a-service-saas"></a>Hizmet Olarak Yazılım (SaaS)
 
-Hizmet veya SaaS olarak yazılımlar merkezi olarak barındırılır ve yerel kurulum veya sağlama olmadan kullanılabilir. SaaS genellikle paas üstüne yazılım dağıtmak için bir platform olarak barındırılan. SaaS, mevcut yazılımları çalıştırmak ve onlarla bağlantı kurmak için hizmetler sağlar. SaaS genellikle endüstri ve dikey özgüdür. SaaS genellikle lisanslıdır ve genellikle bir istemci/sunucu modeli sağlar. Modern SaaS tekliflerinin çoğu müşteri için web tabanlı uygulamalar kullanır. Şirketler genellikle SaaS'ı lisans teklifleri için bir iş çözümü olarak görürler. Genellikle ölçeklenebilirlik ve bir uygulamanın bakımı için mimari dikkate olarak uygulanmaz. Gerçekten de, çoğu SaaS çözümleri IaaS, PaaS ve / veya sunucusuz arka uçları üzerine inşa edilmiştir.
+Hizmet olarak yazılım veya SaaS, yerel yükleme veya sağlama olmadan merkezi olarak barındırılır ve kullanılabilir. SaaS genellikle yazılım dağıtımı platformu olarak PaaS üzerinde barındırılır. SaaS, Hizmetleri çalıştırıp mevcut yazılımlarla bağlantı kurmak için hizmetler sağlar. SaaS genellikle sektör ve dikey özel. SaaS genellikle lisanslanır ve genellikle bir istemci/sunucu modeli sağlar. Çoğu modern SaaS teklifi, istemci için Web tabanlı uygulamalar kullanır. Şirketler genellikle SaaS 'yi lisans sunumlarına bir iş çözümü olarak kabul etmeyi düşünmelidir. Genellikle bir uygulamanın ölçeklenebilirlik ve bakım açısından bir mimari değerlendirmesi olarak uygulanmaz. Aslında, birçok SaaS çözümü IaaS, PaaS ve/veya sunucusuz arka uçlarından oluşturulmuştur.
 
-Örnek bir [uygulama](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)aracılığıyla SaaS hakkında daha fazla bilgi edinin.
+[Örnek bir uygulama](/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)aracılığıyla SaaS hakkında daha fazla bilgi edinin.
 
-## <a name="containers-and-functions-as-a-service-faas"></a>Hizmet Olarak Kapsayıcılar ve Fonksiyonlar (FaaS)
+## <a name="containers-and-functions-as-a-service-faas"></a>Kapsayıcılar ve hizmet olarak Işlevler (FaaS)
 
-Konteynerler IaaS havai olmadan PaaS benzeri faydalar sağlayan ilginç bir çözümdür. Kapsayıcı aslında benzersiz bir uygulama çalıştırmak için gerekli çıplak temel içeren bir çalışma zamanıdır. Ana bilgisayar işletim sisteminin çekirdek veya temel bölümü ve depolama gibi hizmetler bir ana bilgisayar arasında paylaşılır. Paylaşılan çekirdek, kapların hafif olmasını sağlar (bazıları tipik sanal makinelerin gigabayt boyutuna kıyasla sadece megabayt boyutudur). Ana bilgisayarlar zaten çalışıyorsa, konteynerler hızlı bir şekilde başlatılabilir ve bu da yüksek kullanılabilirliği kolaylaştırır. Konteynerleri hızlı bir şekilde döndürme yeteneği de ekstra esneklik katmanları sağlar. Docker konteynerlerin daha popüler uygulamalarından biridir.
+Kapsayıcılar, IaaS ek yükü olmadan PaaS benzeri avantajlar sağlayan ilginç bir çözümdür. Bir kapsayıcı temelde, benzersiz bir uygulamayı çalıştırmak için gereken çıplak uygulamaları içeren bir çalışma zamanı. Ana bilgisayar işletim sisteminin çekirdek veya çekirdek bölümü ve depolama gibi hizmetler bir konakta paylaşılır. Paylaşılan çekirdek, kapsayıcıların hafif olmasını sağlar (bazıları, tipik sanal makinelerin gigabayt boyutuyla karşılaştırıldığında boyut olarak boyutlardır). Zaten çalışan konaklar ile, kapsayıcılar hızla başlatılabilir ve yüksek oranda kullanılabilirliği kolaylaştırılabilirler. Kapsayıcıları hızlı bir şekilde çalıştırabilme özelliği, ek dayanıklılık katmanları da sağlar. Docker, kapsayıcıların daha popüler uygulamalarından biridir.
 
-Konteynerlerin faydaları şunlardır:
+Kapsayıcıların avantajları şunlardır:
 
 - Hafif ve taşınabilir
-- Bağımsız olarak, bağımlılıkları yüklemenize gerek kalmadan
-- Ana bilgisayardan bağımsız olarak tutarlı bir ortam sağlayın (dizüstü bilgisayarda bulut sunucusunda olduğu gibi çalışır)
-- Ölçeklendirme için hızlı bir şekilde sağlanabilir
+- Bu nedenle, bağımlılıkları yüklemeye gerek yoktur
+- Ana bilgisayardan bağımsız olarak tutarlı bir ortam sağlayın (bir bulut sunucusunda olduğu gibi bir dizüstü bilgisayarda tam olarak aynı çalışır)
+- Ölçek genişletme için hızlı bir şekilde sağlanabilir
 - Hatadan kurtarmak için hızlı bir şekilde yeniden başlatılabilir
 
-Bir konteyner bir konteyner ana bilgisayarüzerinde çalışır (bu da çıplak metal bir makine veya sanal bir makine üzerinde çalışabilir). Aynı kapsayıcıların birden çok kapsayıcısı veya örnekleri tek bir ana bilgisayarda çalışabilir. Gerçek arıza ve esneklik için, kapsayıcılar ana bilgisayarlar arasında ölçeklendirilmelidir.
+Bir kapsayıcı bir kapsayıcı ana bilgisayarında çalışır (Bu, sırasıyla bir çıplak makinede veya sanal makinede çalıştırılabilir). Birden çok kapsayıcı veya aynı kapsayıcıların örnekleri tek bir konakta çalışabilir. Doğru yük devretme ve dayanıklılık için kapsayıcılar ana bilgisayarlar arasında ölçeklendirilmesi gerekir.
 
-Docker konteynerleri hakkında daha fazla bilgi için [Docker nedir' e](../microservices/container-docker-introduction/docker-defined.md)bakın.
+Docker Kapsayıcıları hakkında daha fazla bilgi için bkz. [Docker nedir?](../microservices/container-docker-introduction/docker-defined.md).
 
-Kapsayıcıları ana bilgisayarlar arasında yönetmek genellikle Kubernetes gibi bir düzenleme aracı gerektirir. Configuring and managing orchestration solutions may add additional overhead and complexity to projects. Neyse ki, birçok bulut sağlayıcısı kapların yönetimini kolaylaştırmak için PaaS çözümleri aracılığıyla orkestrasyon hizmetleri sağlar.
+Her ana bilgisayar genelinde kapsayıcıları yönetmek için genellikle Kubernetes gibi bir düzenleme aracı gerekir. Orchestration çözümlerini yapılandırma ve yönetme, projelere ek yük ve karmaşıklık ekleyebilir. Neyse ki birçok bulut sağlayıcısı, kapsayıcıların yönetimini basitleştirmek için PaaS çözümleri aracılığıyla düzenleme hizmetleri sağlar.
 
-Aşağıdaki resim, Kubernetes yüklemesi örneğini göstermektedir. Yükleme adresindeki düğümler ölçeklendirilir ve başarısız olursa. Ana sunucu tarafından yönetilen Docker kapsayıcı örneklerini çalıştırıyorlar. *Kubelet,* Kubernetes'ten Docker'a komut lar gönderen müşteridir.
+Aşağıdaki görüntüde örnek bir Kubernetes yüklemesi gösterilmektedir. Yükleme adresindeki düğümlerin ölçeği genişleme ve yük devretme. Ana sunucu tarafından yönetilen Docker kapsayıcı örneklerini çalıştırırlar. *Kubelet* , komutları Kubernetes 'Den Docker 'a aktaran istemcidir.
 
 ![Kubernetes](./media/kubernetes-example.png)
 
-Orkestrasyon hakkında daha fazla bilgi için [Azure'daki Kubernetes'e](https://docs.microsoft.com/azure/aks/intro-kubernetes)bakın.
+Düzenleme hakkında daha fazla bilgi için bkz. [Azure 'Da Kubernetes](/azure/aks/intro-kubernetes).
 
-Hizmet Işlevi (FaaS), sunucusuzlara benzeyen özel bir kapsayıcı hizmetidir. FaaS belirli bir uygulama, [OpenFaaS](https://github.com/openfaas/faas)denilen , sunucusuz yetenekleri sağlamak için kapsayıcıların üstüne oturur. OpenFaaS, bir kod parçasını çalıştırmak için gereken tüm kapsayıcı bağımlılıklarını paketleyen şablonlar sağlar. Şablonları kullanmak, kodu işlevsel bir birim olarak dağıtma işlemini kolaylaştırır. OpenFaaS, mevcut altyapıyı kullanabildiği için kapsayıcıları ve orkestratörleri içeren mimarileri hedefler. Sunucusuz işlevsellik sağlamasına rağmen, özellikle Docker ve bir orkestratör kullanmanız gerekir.
+Hizmet olarak işlevler (FaaS) sunucusuz ile benzer özel bir kapsayıcı hizmetidir. [Openfaas](https://github.com/openfaas/faas)adlı belirli FAAS uygulamaları sunucusuz yetenekler sağlamak için kapsayıcıların en üstünde bulunur. OpenFaaS, bir kod parçasını çalıştırmak için gereken tüm kapsayıcı bağımlılıklarını paketleyip şablon sağlar. Şablon kullanımı, kodu işlevsel birim olarak dağıtma işlemini basitleştirir. Zaten kapsayıcı ve düzenleyicilerin bulunduğu OpenFaaS hedefleri, var olan altyapıyı kullanabilmesi için. Sunucusuz işlevsellik sunmakla birlikte, özellikle Docker ve Orchestrator kullanmanız gerekir.
 
 ## <a name="serverless"></a>Sunucusuz
 
-Sunucusuz mimari, kod ve barındırma ortamı arasında açık bir ayrım sağlar. Tetikleyici tarafından çağrılan bir *işlevde* kodu *trigger*uygularsınız. Bu işlev çıktıktan sonra, gerekli tüm kaynakları serbest bırakılabilir. Tetikleyici el ile, zamanlanmış bir işlem, bir HTTP isteği veya dosya yüklemesi olabilir. Tetikleyicinin sonucu kodun yürütülmesidir. Sunucusuz platformlar farklılık gösterse de, çoğu veritabanına yazma veya sıraya girme sonuçları gibi görevleri kolaylaştırmak için önceden tanımlanmış API'lere ve bağlamalara erişim sağlar.
+Sunucusuz bir mimari, kod ve barındırma ortamı arasında net bir ayrım sağlar. Kodu bir *tetikleyici*tarafından çağrılan bir *işlevde* uygulamalısınız. Bu işlev çıktıktan sonra, gereken tüm kaynaklar serbest bırakılmış olabilir. Tetikleyici el ile, süreli bir işlem, bir HTTP isteği veya karşıya dosya yükleme olabilir. Tetikleyicinin sonucu kodun yürütülmesinden kaynaklanır. Sunucusuz platformlar farklılık gösterebilse de, bir veritabanına yazma veya sonuçları sıraya alma gibi görevleri kolaylaştırmak için önceden tanımlanmış API 'lere ve bağlamalara erişim sağlar.
 
-Serverless, koda odaklanmak için ana bilgisayar ortamını soyutlamaya büyük ölçüde dayanan bir mimaridir. Daha *az sunucu*olarak düşünülebilir.
+Sunucusuz, büyük ölçüde ana bilgisayar ortamının koda odaklanmak için soyutlanması gereken bir mimaridir. Bu, *daha az sunucu*olarak düşünülebilir.
 
-Kapsayıcı çözümleri, geliştiricilere sunucusuz hazır görüntülere kod yayımlamaları için varolan yapı komut dosyaları sağlar. Diğer uygulamalar ölçeklenebilir bir mimari sağlamak için varolan PaaS çözümlerini kullanır.
+Kapsayıcı çözümleri, geliştiricilerin sunucusuz özellikli görüntülere kod yayımlaması için mevcut derleme betikleri sağlar. Diğer uygulamalar, ölçeklenebilir bir mimari sağlamak için mevcut PaaS çözümlerini kullanır.
 
-Soyutlama, DevOps ekibinin sunucuları veya belirli kapsayıcıları sağlaması veya yönetmesi gerekmediği anlamına gelir. Sunucusuz platform, ilgili Bir SDK ile oluşturulmuş komut dosyası veya paketyürütülebilir kod olarak kodu barındırır ve kodun ölçeklendirmesi için gerekli kaynakları ayırır.
+Soyutlama, DevOps ekibinin sunucu veya belirli kapsayıcılar sağlamak veya yönetmek zorunda olmadığı anlamına gelir. Sunucusuz platform, komut dosyası veya ilgili SDK ile oluşturulan paketlenmiş yürütülebilir dosyalar olarak kod barındırır ve kodun ölçeklendirilmesi için gerekli kaynakları ayırır.
 
-Aşağıdaki çizimdört sunucusuz bileşendiyagramları. BIR HTTP isteği, Ödeme API kodunun çalışmasına neden olur. Ödeme API'si bir veritabanına kod ekler ve ekleme, görevleri hesaplama ve siparişi yerine getirme gibi görevleri gerçekleştirmek için çalıştırmak için birkaç başka işlevi tetikler.
+Aşağıdaki çizim diyagramlarında dört sunucusuz bileşen. Bir HTTP isteği, kullanıma alma API kodunun çalışmasına neden olur. Kullanıma alma API 'SI bir veritabanına kod ekler ve ekleme, görevleri hesaplama ve siparişi yerine getirmek için çalıştırılacak diğer birkaç işlevi tetikler.
 
 ![Sunucusuz uygulama](./media/serverless-implementation.png)
 
-Sunucusuz avantajları şunlardır:
+Sunucusuz 'in avantajları şunlardır:
 
-- **Yüksek yoğunluklu.** Aynı sunucusuz kodun birçok örneği kapsayıcılarla veya sanal makinelerle karşılaştırıldığında aynı ana bilgisayarda çalıştırılabilir. Örnekler, birden çok ana bilgisayar arasında ölçeklendirilir ve esneklik sağlar.
-- **Mikro faturalama.** Çoğu sunucusuz sağlayıcı, belirli senaryolarda büyük maliyet tasarrufu sağlayarak sunucusuz yürütmeleri temel alarak faturalandırılır.
-- **Anlık ölçek.** Sunucusuz, iş yüklerini otomatik olarak ve hızlı bir şekilde eşleşecek şekilde ölçeklendirilebilir.
-- **Pazara daha hızlı zaman.** Geliştiriciler koda odaklanır ve doğrudan sunucusuz platforma dağıtılır. Bileşenler birbirinden bağımsız olarak serbest bırakılabilir.
+- **Yüksek yoğunluklu.** Aynı sunucusuz kodun birçok örneği, kapsayıcılara veya sanal makinelere kıyasla aynı konakta çalışabilir. Örnekler, birden çok ana bilgisayarda ölçek genişletme ve dayanıklılık arasında ölçeklenir.
+- **Mikro faturalama.** Çoğu sunucusuz sağlayıcı, belirli senaryolarda büyük maliyet tasarrufu sağlayan sunucusuz yürütmeler temelinde faturalandırılır.
+- **Anında ölçeklendirme.** Sunucusuz, iş yüklerine otomatik olarak ve hızla uyacak şekilde ölçeklendirebilir.
+- **Daha hızlı pazara sunma süresi.** Geliştiriciler koda odaklanarak sunucusuz platforma doğrudan dağıtılır. Bileşenler birbirinden bağımsız olarak serbest bırakıbilirler.
 
-Sunucusuz en sık bilgi işlem bağlamında tartışılır, ancak veriler için de geçerli olabilir. Örneğin, [Azure SQL](https://docs.microsoft.com/azure/sql-database) ve [Cosmos DB,](https://docs.microsoft.com/azure/cosmos-db) ana bilgisayar makinelerini veya kümeleri yapılandırmanızı gerektirmeyen bulut veritabanları sağlar. Bu kitap sunucusuz bilgi işlem üzerinde duruluyor.
+Sunucusuz genellikle işlem bağlamında tartışılır, ancak veriler için de uygulanabilir. Örneğin, [Azure SQL](/azure/sql-database) ve [Cosmos DB](/azure/cosmos-db) her ikisi de konak makinelerini veya kümelerini yapılandırmanızı gerektirmeyen bulut veritabanları sağlar. Bu kitap sunucusuz işlem üzerine odaklanır.
 
 ## <a name="summary"></a>Özet
 
-Mimari için karma bir yaklaşım da dahil olmak üzere geniş bir seçenek yelpazesi vardır. Serverless, uygulama özelliklerinin yaklaşımını, yönetimini ve maliyetini kontrol ve taşınabilirlik pahasına basitleştirir. Ancak, birçok sunucusuz platform, çözümde ince ayar yapmanıza yardımcı olmak için yapılandırmayı ortaya çıkarır. İyi programlama uygulamaları da daha taşınabilir kod ve daha az sunucusuz platform kilitleme yol açabilir. Aşağıdaki tabloda mimari yaklaşımları yan yana gösterilmiştir. Çalışma süresini yönetmek isteyip istemediğinize ve iş yüklerinizi ne kadar iyi küçük bileşenlere dönüştürebileceğinize bağlı olarak, ölçek gereksinimlerinize göre sunucusuz seçin. Bir sonraki bölümde sunucusuz ve diğer karar noktalarıyla olası zorluklar hakkında bilgi edineceksiniz.
+Bir karma yaklaşım da dahil olmak üzere mimaride kullanılabilecek geniş kapsamlı seçenekler vardır. Sunucusuz, denetim ve taşınabilirlik masrafına uygulama özelliklerinin yaklaşımını, yönetimini ve maliyetini basitleştirir. Ancak, çok sayıda sunucusuz platform çözümün ince ayar yapmanıza yardımcı olmak için yapılandırmayı kullanıma sunar. İyi programlama yöntemleri, daha taşınabilir koda ve daha az sunucusuz platform kilitlemeye de yol açabilir. Aşağıdaki tabloda yan yana mimari yaklaşımlar gösterilmektedir. Ölçek gereksinimlerinize göre sunucusuz ' ı seçin, çalışma zamanını yönetmek isteyip istemediğiniz ve iş yüklerinizi küçük bileşenlere ne kadar iyi bir şekilde bozabileceğinizi belirtin. Sonraki bölümde sunucusuz ve diğer karar noktalarıyla ilgili olası sorunlar hakkında bilgi edineceksiniz.
 
 |         |IaaS     |PaaS     |Kapsayıcı|Sunucusuz|
 |---------|---------|---------|---------|----------|
 |**Ölçeklendirme**|VM       |Örnek |Uygulama      |İşlev  |
-|**Özetleri**|Donanım|Platform|İşletim Sistemi Ana Bilgisayar|Çalışma Zamanı   |
+|**Soyutlar**|Donanım|Platform|İşletim sistemi Konağı|Çalışma Zamanı   |
 |**Birim** |VM       |Project  |Görüntü    |Kod      |
-|**Ömür boyu**|Ay|Günlerden Aylara|Günlere Dakikalar|Dakikaya Milisaniye|
-|**Sorumluluk**|Uygulamalar, bağımlılıklar, çalışma zamanı ve işletim sistemi|Uygulamalar ve bağımlılıklar|Uygulamalar, bağımlılıklar ve çalışma zamanı|İşlev
+|**Ömür**|Ay|Gün-ay|Dakika-gün|Milisaniye-dakika|
+|**Ğuna**|Uygulamalar, bağımlılıklar, çalışma zamanı ve işletim sistemi|Uygulamalar ve bağımlılıklar|Uygulamalar, bağımlılıklar ve çalışma zamanı|İşlev
 
-- **Ölçek,** uygulamayı ölçeklendirmek için kullanılan birimi ifade eder
-- **Özetler,** uygulama tarafından soyutlanan katmanı ifade eder
-- **Birim,** dağıtılan şeyin kapsamını ifade eder
-- **Yaşam boyu,** belirli bir örneğin tipik çalışma zamanını ifade eder
-- **Sorumluluk,** uygulamanın oluşturulması, dağıtılması ve sürdürülmesi için ek yükü ifade eder
+- **Ölçek** , uygulamayı ölçeklendirmek için kullanılan birimi ifade eder
+- **Soyutlar** , uygulama tarafından soyutlanan katmana başvurur
+- **Birim** , dağıtılmasının kapsamını ifade eder
+- **Yaşam süresi** belirli bir Örneğin tipik çalışma zamanına başvurur
+- **Sorumluluk** , uygulamanın derlenmesi, dağıtılması ve bakımını yapma yükünü ifade eder
 
-Bir sonraki bölümde sunucusuz mimari, kullanım örnekleri ve tasarım desenleri üzerinde durulacaktır.
+Sonraki bölüm sunucusuz mimariye, kullanım örneklerine ve tasarım düzenlerine odaklanacaktır.
 
-## <a name="recommended-resources"></a>Önerilen kaynaklar
+## <a name="recommended-resources"></a>Önerilen Kaynaklar
 
-- [Azure uygulama mimarisi kılavuzu](https://docs.microsoft.com/azure/architecture/guide/)
-- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-- [Azure SQL](https://docs.microsoft.com/azure/sql-database)
-- [N-Tier mimari deseni](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
-- [Azure’da Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-- [Mikro Hizmetler](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
-- [Sanal makine N katmanlı referans mimarisi](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
-- [Sanal makineler](https://docs.microsoft.com/azure/virtual-machines/)
+- [Azure Uygulama Mimarisi Kılavuzu](/azure/architecture/guide/)
+- [Azure Cosmos DB](/azure/cosmos-db)
+- [Azure SQL](/azure/sql-database)
+- [N katmanlı mimari model](/azure/architecture/guide/architecture-styles/n-tier)
+- [Azure’da Kubernetes](/azure/aks/intro-kubernetes)
+- [Mikro hizmetler](/azure/architecture/guide/architecture-styles/microservices)
+- [Sanal makine N katmanlı başvuru mimarisi](/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
+- [Sanal makineler](/azure/virtual-machines/)
 - [Docker nedir?](../microservices/container-docker-introduction/docker-defined.md)
-- [Wingtip Biletleri SaaS uygulaması](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
+- [Wingtip bilet SaaS uygulaması](/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
->[Önceki](architecture-approaches.md)
->[Sonraki](serverless-architecture.md)
+>[Önceki](architecture-approaches.md) 
+> [Sonraki](serverless-architecture.md)

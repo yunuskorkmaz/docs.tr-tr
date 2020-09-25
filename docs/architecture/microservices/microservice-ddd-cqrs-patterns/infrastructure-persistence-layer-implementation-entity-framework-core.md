@@ -2,12 +2,12 @@
 title: Entity Framework Core ile altyapı kalıcılık katmanını uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Entity Framework Core kullanarak altyapı kalıcılığı katmanının uygulama ayrıntılarını bulun.
 ms.date: 01/30/2020
-ms.openlocfilehash: f9d97319d378b6fd3eb681fd2873e5fbeead787f
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 878d4d64e92ca92fd2393d60d496f1c5671e7029
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86101005"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172358"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Altyapı kalıcılığı katmanını Entity Framework Core ile uygulama
 
@@ -43,7 +43,7 @@ DDD desenleri başına, varlık sınıfı içinde etki alanı davranışını ve
 
 EF Core 1,1 ' den itibaren bu DDD gereksinimlerini karşılayacak şekilde, varlıklarınızda ortak özellikler yerine düz alanlara sahip olabilirsiniz. Bir varlık alanının dışarıdan erişilebilir olmasını istemiyorsanız, bir özellik yerine yalnızca özniteliği veya alanı oluşturabilirsiniz. Özel özellik ayarlayıcıları da kullanabilirsiniz.
 
-Benzer bir şekilde, artık olarak yazılmış bir ortak özelliği kullanarak koleksiyonlara salt okuma erişimine sahip olabilirsiniz. Bu bir `IReadOnlyCollection<T>` özel alan üyesi tarafından (örneğin `List<T>` ,), KALıCıLıĞı için EF 'e bağlı olan varlıktaki bir özel alan üyesi tarafından desteklenir. ' Nin, `ICollection<T>` üst varlık sınıfını kullanan herhangi bir geliştiricinin özellik koleksiyonları aracılığıyla öğe eklemesine veya kaldırabileceği anlamına gelen, gerekli koleksiyon özelliklerinin Entity Framework önceki sürümleri. Bu olasılık, DDD 'daki önerilen desenlere karşı bir yaklaşımlar.
+Benzer bir şekilde, artık olarak yazılmış bir ortak özelliği kullanarak koleksiyonlara salt okuma erişimine sahip olabilirsiniz. Bu bir  `IReadOnlyCollection<T>` özel alan üyesi tarafından (örneğin `List<T>` ,), KALıCıLıĞı için EF 'e bağlı olan varlıktaki bir özel alan üyesi tarafından desteklenir. ' Nin, `ICollection<T>` üst varlık sınıfını kullanan herhangi bir geliştiricinin özellik koleksiyonları aracılığıyla öğe eklemesine veya kaldırabileceği anlamına gelen, gerekli koleksiyon özelliklerinin Entity Framework önceki sürümleri. Bu olasılık, DDD 'daki önerilen desenlere karşı bir yaklaşımlar.
 
 `IReadOnlyCollection<T>`Aşağıdaki kod örneğinde gösterildiği gibi, salt okunurdur bir nesne ortaya çıkarmak için özel bir koleksiyon kullanabilirsiniz:
 
@@ -190,7 +190,7 @@ DbContext 'i doğrudan kullanıyorsanız, birim testleri için öngörülebilir 
 
 `DbContext`Nesne (bir nesne olarak gösterilir `IUnitOfWork` ), aynı http istek kapsamı içinde birden çok depo arasında paylaşılmalıdır. Örneğin, yürütülmekte olan işlem birden çok toplama ile uğraşmak veya birden çok depo örneği kullandığınız için geçerlidir. `IUnitOfWork`Arabirimin, EF Core türü değil, etki alanı katmanının bir parçası olması da önemlidir.
 
-Bunu yapmak için `DbContext` nesnenin örneğinin hizmet ömrü servicelifetime. kapsamlıdır olarak ayarlanmalıdır. Bu, `DbContext` `services.AddDbContext` `Startup.cs` ASP.NET Core Web API projenizdeki dosyanın ConfigureServices yönteminden IOC kapsayıcıınızda bir ile kayıt yapılırken varsayılan yaşam süresidir. Aşağıdaki kod bunu göstermektedir.
+Bunu yapmak için `DbContext` nesnenin örneğinin hizmet ömrü servicelifetime. kapsamlıdır olarak ayarlanmalıdır. Bu, `DbContext` `services.AddDbContext` `Startup.cs` ASP.NET Core Web API projenizdeki dosyanın ConfigureServices yönteminden IOC kapsayıcıınızda bir ile kayıt yapılırken varsayılan yaşam süresidir. Aşağıdaki kodda bu gösterilir.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -367,7 +367,7 @@ Bunu tek alanlarla veya bir alan gibi koleksiyonlarla yapabilirsiniz `List<>` . 
 
 ### <a name="use-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>Altyapı düzeyinde gizlenen EF Core gölge özelliklerini kullanın
 
-EF Core 'daki gölge özellikler, varlık sınıfı modelinizde bulunmayan özelliklerdir. Bu özelliklerin değerleri ve durumları, yalnızca altyapı düzeyindeki [Changetracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) sınıfında saklanır.
+EF Core 'daki gölge özellikler, varlık sınıfı modelinizde bulunmayan özelliklerdir. Bu özelliklerin değerleri ve durumları, yalnızca altyapı düzeyindeki [Changetracker](/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) sınıfında saklanır.
 
 ## <a name="implement-the-query-specification-pattern"></a>Sorgu belirtim modelini uygulama
 

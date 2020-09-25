@@ -1,15 +1,16 @@
 ---
-title: <claimTypeRequirements>bekleniyor<message>
+title: <claimTypeRequirements> bekleniyor <message>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
-ms.openlocfilehash: db6717022bf3af0c4922818668595dd3937e9c71
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e70b036fddbc706c8c16de9a0834140f600aa5ef
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "61704413"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173802"
 ---
-# <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements>bekleniyor\<message>
+# <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements> bekleniyor \<message>
+
 Gerekli talep türlerinin koleksiyonunu belirtir.  
   
  Koleksiyon, hizmet tarafından, istemcinin hizmete erişmek için kullandığı, verilen belirteçte olması gereken gerekli ve isteğe bağlı talepler belirtmek için kullanılır. WSDL yayımlaması etkinse, bu hizmet gerekli talep türlerini meta verilerde kullanıma sunar, ancak WCF verilen belirtecin belirtilen talep türlerini içermesini gerektirmez. Gerekli talep türlerini zorlamak isteyen hizmetler, yetkilendirme ilkesi kullanmalıdır.  

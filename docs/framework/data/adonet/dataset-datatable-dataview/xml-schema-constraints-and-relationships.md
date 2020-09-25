@@ -2,22 +2,24 @@
 title: XML Şema Kısıtlamaları ve İlişkileri
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 2388d7c277ba1f01bea8d419e5aedf487b843ed7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5861386e42defa189aaa50a3af0bd95d7e9257fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150720"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173711"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML Şema Kısıtlamaları ve İlişkileri
-XML Şema tanım dili (XSD) şemasında, kısıtlamaları (benzersiz, anahtar ve keyref kısıtlamaları) ve ilişkileri **(msdata:İlişki** ek açıklamasını kullanarak) belirtebilirsiniz. Bu konu, bir XML Şeması'nda belirtilen kısıtlamaların ve ilişkilerin <xref:System.Data.DataSet>nasıl yorumlandığını açıklar.  
+
+Bir XML şeması tanım dili (XSD) şemasında, kısıtlamalar (benzersiz, anahtar ve keyref kısıtlamaları) ve ilişkileri ( **msdata: Relationship** ek açıklaması kullanılarak) belirtebilirsiniz. Bu konuda bir XML şemasında belirtilen kısıtlamaların ve ilişkilerin, oluşturmak için nasıl yorumlanacağı açıklanmaktadır <xref:System.Data.DataSet> .  
   
- Genel olarak, bir XML Şeması'nda, **DataSet'te**yalnızca ilişki oluşturmak istiyorsanız **msdata:İlişki** ek açıklamasını belirtirsiniz. Daha fazla bilgi için bkz: [XML Schema'dan (XSD) Veri Seti İlişkileri Oluşturma.](generating-dataset-relations-from-xml-schema-xsd.md) **DataSet'te**kısıtlamalar oluşturmak istiyorsanız kısıtlamaları (benzersiz, anahtar ve keyref) belirtirsiniz. Anahtar ve keyref kısıtlamalarının, bu konuda daha sonra açıklandığı gibi, ilişkiler oluşturmak için de kullanıldığını unutmayın.  
+ Genel olarak, bir XML şemasında, **veri kümesinde**yalnızca ilişkiler oluşturmak istiyorsanız **msdata: Relationship** ek açıklamasını belirtirsiniz. Daha fazla bilgi için bkz. [xml şemasından (xsd) veri kümesi Ilişkileri oluşturma](generating-dataset-relations-from-xml-schema-xsd.md). **Veri kümesinde**kısıtlamalar oluşturmak istiyorsanız kısıtlamalar (Unique, Key ve keyref) belirtirsiniz. Anahtar ve keyref kısıtlamalarının, bu konunun ilerleyen kısımlarında açıklandığı gibi ilişkiler oluşturmak için de kullanıldığını unutmayın.  
   
-## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Anahtar ve keyref Kısıtlamalarından İlişki Oluşturma  
- **Msdata:İlişki** ek açıklamalarını belirtmek yerine, Yalnızca kısıtlamaları değil, **DataSet'teki**ilişkiyi oluşturmak için XML Şema eşleme işlemi sırasında kullanılan anahtar ve keyref kısıtlamalarını belirtebilirsiniz. Ancak, `msdata:ConstraintOnly="true"` **keyref** öğesinde belirtirseniz, **DataSet** yalnızca kısıtlamaları içerir ve ilişkiyi içermez.  
+## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Anahtar ve keyref kısıtlamalarından bir Ilişki oluşturma  
+
+ **Msdata: ilişki** ek açıklamasını belirtmek yerıne, XML Şeması eşleme işlemi sırasında yalnızca kısıtlamaları değil, **veri kümesindeki**ilişkiyi değil, anahtar ve keyref kısıtlamalarını belirtebilirsiniz. Ancak, `msdata:ConstraintOnly="true"` **keyref** öğesinde belirtirseniz, **veri kümesi** yalnızca kısıtlamaları içerir ve ilişkiyi içermez.  
   
- Aşağıdaki örnekte, iç içe geçmemiş **Sipariş** ve **OrderDetail** öğelerini içeren bir XML Şeması gösterilmektedir. Şema da anahtar ve keyref kısıtlamaları belirtir.  
+ Aşağıdaki örnek, iç içe olmayan **Order** ve **OrderDetail** öğelerini içeren bir XML şemasını gösterir. Şema ayrıca Key ve keyref kısıtlamalarını da belirtir.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""
@@ -59,7 +61,7 @@ XML Şema tanım dili (XSD) şemasında, kısıtlamaları (benzersiz, anahtar ve
 </xs:schema>  
 ```  
   
- XML Şema eşleme işlemi sırasında oluşturulan **DataSet,** **Sipariş** ve **OrderDetail** tablolarını içerir. Buna ek olarak, **DataSet** ilişkileri ve kısıtlamaları içerir. Aşağıdaki örnek, bu ilişkileri ve kısıtlamaları gösterir. Şema msdata belirtmez **unutmayın:İlişki** ek açıklama; bunun yerine, anahtar ve keyref kısıtlamaları ilişki oluşturmak için kullanılır.  
+ XML Şeması eşleme işlemi sırasında oluşturulan **veri kümesi** **Order** ve **OrderDetail** tablolarını içerir. Ayrıca, **veri kümesi** ilişkiler ve kısıtlamalar içerir. Aşağıdaki örnek bu ilişkileri ve kısıtlamaları gösterir. Şemanın **msdata: ilişki** ek açıklamasını belirtmediğini unutmayın. Bunun yerine, anahtar ve keyref kısıtlamaları ilişkiyi oluşturmak için kullanılır.  
   
 ```text
 ....ConstraintName: OrderNumberKey  
@@ -85,7 +87,7 @@ XML Şema tanım dili (XSD) şemasında, kısıtlamaları (benzersiz, anahtar ve
 ..Nested: False  
 ```  
   
- Önceki şema örneğinde, **Sipariş** ve **Sipariş Ayrıntısı** öğeleri iç içe geçmez. Aşağıdaki şema örneğinde, bu öğeler iç içe dir. Ancak, **hiçbir msdata:İlişki** ek belirtilmedi; bu nedenle, örtük bir ilişki varsayılır. Daha fazla bilgi için [bkz.](map-implicit-relations-between-nested-schema-elements.md) Şema da anahtar ve keyref kısıtlamaları belirtir.  
+ Önceki şema örneğinde **Order** ve **OrderDetail** öğeleri iç içe değildir. Aşağıdaki şema örneğinde, bu öğeler iç içe. Ancak, **msdata yok: ilişki** ek açıklaması belirtilmedi; Bu nedenle, örtük bir ilişki varsayılır. Daha fazla bilgi için bkz. [Iç Içe geçmiş şema öğeleri arasında örtük Ilişkileri eşleme](map-implicit-relations-between-nested-schema-elements.md). Şema ayrıca Key ve keyref kısıtlamalarını da belirtir.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""
@@ -129,14 +131,14 @@ XML Şema tanım dili (XSD) şemasında, kısıtlamaları (benzersiz, anahtar ve
 </xs:schema>  
 ```  
   
- XML Şema eşleme işleminden kaynaklanan **DataSet** iki tablo içerir:  
+ XML Şeması eşleme işleminden kaynaklanan **veri kümesi** iki tablo içerir:  
   
 ```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
- **DataSet** ayrıca iki ilişkiyi (biri **msdata:ilişki** ek açıklamasını, diğeri de anahtar ve keyref kısıtlamalarına dayalı) ve çeşitli kısıtlamaları içerir. Aşağıdaki örnek, ilişkileri ve kısıtlamaları gösterir.  
+ **Veri kümesi** aynı zamanda iki ilişkiyi de içerir (bir diğeri **msdata: ilişki** ek açıklamasına ve diğeri anahtar ve keyref kısıtlamalarına bağlı olarak) ve çeşitli kısıtlamalara sahiptir. Aşağıdaki örnekte ilişkiler ve kısıtlamalar gösterilmektedir.  
   
 ```text
 ..RelationName: Order_OrderDetail  
@@ -184,7 +186,7 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ..RelatedColumns: OrderNumber  
 ```  
   
- İç içe geçmiş bir tabloya atıfta bulunan bir keyref **kısıtlaması msdata:IsNested="true"** ek açıklamasını içeriyorsa, **DataSet** keyref kısıtlamasını ve ilgili benzersiz/anahtar kısıtlamasını temel alan tek bir iç içe geçmiş ilişki oluşturur.  
+ İç içe geçmiş bir tabloya başvuran bir keyref kısıtlaması **msdata: IsNested = "true"** ek açıklamasını Içeriyorsa, **veri kümesi** , keyref kısıtlamasına ve ilgili benzersiz/anahtar kısıtlamasına dayalı tek bir iç içe ilişki oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

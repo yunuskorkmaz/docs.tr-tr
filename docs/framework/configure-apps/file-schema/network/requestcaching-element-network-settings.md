@@ -8,21 +8,22 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3eb32b7ae643efdb19892410b669c1e7ff80e0ad
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74802134"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174166"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching> Öğesi (Ağ Ayarları)
+
 Ağ istekleri için önbelleğe alma mekanizmasını denetler.  
   
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<requestCaching>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <requestCaching  
@@ -36,6 +37,7 @@ Ağ istekleri için önbelleğe alma mekanizmasını denetler.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -65,7 +67,7 @@ Ağ istekleri için önbelleğe alma mekanizmasını denetler.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|İsteğe bağlı öğe.<br /><br /> HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.|  
-|[\<defaultFtpCachePolicy>Öğesi (ağ ayarları)](defaultftpcachepolicy-element-network-settings.md)|İsteğe bağlı öğe.<br /><br /> FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.|  
+|[\<defaultFtpCachePolicy> Öğesi (ağ ayarları)](defaultftpcachepolicy-element-network-settings.md)|İsteğe bağlı öğe.<br /><br /> FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -74,6 +76,7 @@ Ağ istekleri için önbelleğe alma mekanizmasını denetler.
 |[system.net](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, tüm önbelleğe almanın nasıl devre dışı bırakılacağını gösterir.  
   
 ```xml  
@@ -89,4 +92,4 @@ Ağ istekleri için önbelleğe alma mekanizmasını denetler.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

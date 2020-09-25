@@ -2,15 +2,16 @@
 title: Çıkarım Sınırlamaları
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-ms.openlocfilehash: 10347abc5b01edb4ec6fbf97221d44f4bfb88f54
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d8191be137661200e1a6b84d68328c1202880ca
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784580"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172781"
 ---
 # <a name="inference-limitations"></a>Çıkarım Sınırlamaları
-XML 'deki bir <xref:System.Data.DataSet> şemayı işleme işlemi, her belgedeki XML öğelerine bağlı olarak farklı şemalar oluşmasına neden olabilir. Örneğin, aşağıdaki XML belgelerini göz önünde bulundurun.  
+
+XML 'deki bir şemayı işleme işlemi, <xref:System.Data.DataSet> her BELGEDEKI XML öğelerine bağlı olarak farklı şemalar oluşmasına neden olabilir. Örneğin, aşağıdaki XML belgelerini göz önünde bulundurun.  
   
  Document1  
   
@@ -31,9 +32,9 @@ XML 'deki bir <xref:System.Data.DataSet> şemayı işleme işlemi, her belgedeki
   
  "Document1" için, çıkarım işlemi "DocumentElement" adlı bir **veri kümesi** ve "Element1" de yinelenen bir öğe olduğu Için "Element1" adlı bir tablo oluşturur.  
   
- **Veri kümesi** DocumentElement  
+ **Veri kümesi:** DocumentElement  
   
- **Tablosundan** Element1  
+ **Tablo:** Element1  
   
 |Element1_Text|  
 |--------------------|  
@@ -42,9 +43,9 @@ XML 'deki bir <xref:System.Data.DataSet> şemayı işleme işlemi, her belgedeki
   
  Ancak, "document2" için çıkarım işlemi "NewDataSet" adlı bir **veri kümesi** ve "DocumentElement" adlı bir tablo oluşturur. "Element1", hiç özniteliği olmadığından ve alt öğeleri bulunmadığından sütun olarak algılanır.  
   
- **Veri kümesi** NewDataSet  
+ **Veri kümesi:** NewDataSet  
   
- **Tablosundan** DocumentElement  
+ **Tablo:** DocumentElement  
   
 |Element1|  
 |--------------|  

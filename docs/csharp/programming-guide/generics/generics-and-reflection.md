@@ -6,21 +6,22 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 6e4387fe7e78cd0e970531ae42f323efa8f181db
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 5439412231ab1bf9ed523d6786af67984ab2d0c3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299311"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172976"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genel Türler ve Yansıma (C# Programlama Kılavuzu)
+
 Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilerine erişime sahip olduğu için, genel türler hakkında genel türler hakkında bilgi edinmek için yansımayı genel olmayan türler ile aynı şekilde elde edebilirsiniz. Daha fazla bilgi için bkz. [çalışma zamanındaki genel türler](./generics-in-the-run-time.md).  
   
  .NET Framework 2,0 ' de, <xref:System.Type> Genel türler için çalışma zamanı bilgilerini etkinleştirmek üzere sınıfa birkaç yeni üye eklenmiştir. Bu yöntemlerin ve özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bu sınıfların belgelerine bakın. <xref:System.Reflection.Emit>Ad alanı Ayrıca, genel türleri destekleyen yeni üyeler içerir. Bkz. [nasıl yapılır: yansıma yayma Ile genel tür tanımlama](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
  Genel yansıma ' de kullanılan koşullara yönelik sabit koşulların bir listesi için, bkz <xref:System.Type.IsGenericType%2A> . Özellik açıklamaları.  
   
-|System. Type üye adı|Description|  
+|System. Type üye adı|Açıklama|  
 |-----------------------------|-----------------|  
 |<xref:System.Type.IsGenericType%2A>|Bir tür genel ise true döndürür.|  
 |<xref:System.Type.GetGenericArguments%2A>|`Type`Oluşturulmuş bir tür için sağlanan tür bağımsız değişkenlerini veya bir genel tür tanımının tür parametrelerini temsil eden nesne dizisini döndürür.|  
@@ -36,7 +37,7 @@ Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilerine 
   
  Ayrıca, sınıfının üyeleri, <xref:System.Reflection.MethodInfo> genel metotlar için çalışma zamanı bilgilerini etkinleştirir. <xref:System.Reflection.MethodBase.IsGenericMethod%2A>Genel yöntemleri yansıtmak için kullanılan koşullara yönelik sabit koşulların bir listesi için bkz. Özellik açıklamaları.  
   
-|System. Reflection. MemberInfo üye adı|Description|  
+|System. Reflection. MemberInfo üye adı|Açıklama|  
 |----------------------------------------------|-----------------|  
 |<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Bir yöntem genel ise, true döndürür.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Oluşturulmuş bir genel metodun tür bağımsız değişkenlerini veya bir genel yöntem tanımının tür parametrelerini temsil eden nesne türünde bir dizi döndürür.|  

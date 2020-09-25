@@ -2,12 +2,12 @@
 title: Basit bir veri temelli CRUD mikro hizmeti oluşturma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Bir mikro Hizmetler uygulaması bağlamında basit bir CRUD (veri odaklı) mikro hizmeti oluşturmayı anlayın.
 ms.date: 08/14/2020
-ms.openlocfilehash: 46654b9e6283d913910b62621d056e034c18870e
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 056ba37965cf831e0fb176eb585042c440530c6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679155"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172371"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Basit bir veri temelli CRUD mikro hizmeti oluşturma
 
@@ -27,7 +27,7 @@ Bu tür basit veri sürücüsü hizmetine bir örnek, eShopOnContainers örnek u
 
 **Şekil 6-5**. Basit veri odaklı/CRUD mikro hizmet tasarımı
 
-Önceki diyagramda, Katalog veritabanı da dahil olmak üzere, aynı Docker konağında bulunmayan veya bulunmayan mantıksal Katalog mikro hizmeti gösterilmektedir. Veritabanının aynı Docker ana bilgisayarında olması, geliştirme için uygun olabilir, ancak üretime yönelik değildir. Bu tür bir hizmet geliştirirken yalnızca [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) ve [Entity Framework Core](https://docs.microsoft.com/ef/core/index)gibi bir veri ERIŞIM API 'si veya ORM yeterlidir. Ayrıca, sonraki bölümde açıklandığı gibi, hizmetinizin neleri sunduğunu bir açıklama sağlamak için [swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) aracılığıyla [Swagger](https://swagger.io/) meta verileri otomatik olarak oluşturabilirsiniz.
+Önceki diyagramda, Katalog veritabanı da dahil olmak üzere, aynı Docker konağında bulunmayan veya bulunmayan mantıksal Katalog mikro hizmeti gösterilmektedir. Veritabanının aynı Docker ana bilgisayarında olması, geliştirme için uygun olabilir, ancak üretime yönelik değildir. Bu tür bir hizmet geliştirirken yalnızca [ASP.NET Core](/aspnet/core/) ve [Entity Framework Core](/ef/core/index)gibi bir veri ERIŞIM API 'si veya ORM yeterlidir. Ayrıca, sonraki bölümde açıklandığı gibi, hizmetinizin neleri sunduğunu bir açıklama sağlamak için [swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) aracılığıyla [Swagger](https://swagger.io/) meta verileri otomatik olarak oluşturabilirsiniz.
 
 Bulutta veya şirket içinde bir veritabanı sağlamaya gerek kalmadan tüm bağımlılıklarınızın çalışır durumda olmasını sağlayabileceğinizden, bir Docker kapsayıcısı içinde SQL Server gibi bir veritabanı sunucusunu çalıştırmanın geliştirme ortamları için harika olduğunu unutmayın. Bu, tümleştirme testlerini çalıştırırken oldukça kullanışlıdır. Ancak, üretim ortamlarında, genellikle bu yaklaşımla yüksek kullanılabilirlik olmadığı için bir kapsayıcıda veritabanı sunucusu çalıştırmak önerilmez. Azure 'da bir üretim ortamında, Azure SQL DB 'yi veya yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik sağlayabilen başka bir veritabanı teknolojisini kullanmanız önerilir. Örneğin, bir NoSQL yaklaşımı için CosmosDB ' yi seçebilirsiniz.
 
@@ -301,7 +301,7 @@ public class CatalogController : ControllerBase
     // Implementation ...
 ```
 
-Bu sürüm oluşturma mekanizması basittir ve isteği uygun uç noktaya yönlendirme sunucusuna bağlıdır. Ancak, daha gelişmiş bir sürüm oluşturma ve REST kullanırken en iyi yöntem için hiper medya kullanmanız ve [Hateoas (uygulama durumu altyapısı olarak köprü metni)](https://docs.microsoft.com/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)uygulamanız gerekir.
+Bu sürüm oluşturma mekanizması basittir ve isteği uygun uç noktaya yönlendirme sunucusuna bağlıdır. Ancak, daha gelişmiş bir sürüm oluşturma ve REST kullanırken en iyi yöntem için hiper medya kullanmanız ve [Hateoas (uygulama durumu altyapısı olarak köprü metni)](/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources)uygulamanız gerekir.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
@@ -336,7 +336,7 @@ API 'leriniz için Swagger meta verileri oluşturmaya yönelik başlıca nedenle
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/). API 'nizi, [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/)Ile oluşturulmuş [PowerApps mobil uygulamalarından](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/) otomatik olarak kullanabilir ve programlama becerileri gerektirmez.
 
-- [Azure App Service Logic Apps](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps). [API 'nizi otomatik olarak kullanabilir ve bir Azure App Service Logic App ile tümleştirebilirsiniz ve](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api)böylece programlama becerileri gerekli değildir.
+- [Azure App Service Logic Apps](/azure/app-service-logic/app-service-logic-what-are-logic-apps). [API 'nizi otomatik olarak kullanabilir ve bir Azure App Service Logic App ile tümleştirebilirsiniz ve](/azure/app-service-logic/app-service-logic-custom-hosted-api)böylece programlama becerileri gerekli değildir.
 
 **API belgelerini otomatik olarak oluşturma yeteneği**. Karmaşık mikro hizmet tabanlı uygulamalar gibi büyük ölçekli yeniden kullanılabilir API 'Ler oluşturduğunuzda, istek ve yanıt yüklerinizde kullanılan farklı veri modelleriyle birçok uç nokta işlemeniz gerekir. Doğru belgelere sahip olma ve Swagger ile yaptığınız gibi katı bir API Gezgini içeren, API 'nizin başarısı ve geliştiriciler tarafından benimseme için anahtar.
 

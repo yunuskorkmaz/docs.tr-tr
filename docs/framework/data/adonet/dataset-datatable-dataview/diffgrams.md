@@ -2,50 +2,52 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 2c521ef33c98234dac5f4b819a800cd524218462
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aff9c2347fab51d853e19bd9dc16666c4ed549b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151162"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172807"
 ---
 # <a name="diffgrams"></a>DiffGrams
-DiffGram, veri öğelerinin geçerli ve özgün sürümlerini tanımlayan bir XML biçimidir. İçeriklerini <xref:System.Data.DataSet> yüklemek ve kalıcı hale getirmek ve içeriğini ağ bağlantısı üzerinden aktamak üzere seri hale getirmek için DiffGram biçimini kullanır. A <xref:System.Data.DataSet> DiffGram olarak yazıldığında, DiffGram'ı, **hem Özgün** hem de **Geçerli** satır sürümlerindeki sütun değerleri, satır hata bilgileri ve satır sırası dahil olmak üzere, şema <xref:System.Data.DataSet>olmasa da içeriğini doğru bir şekilde yeniden oluşturmak için gerekli tüm bilgilerle doldurur.  
+
+DiffGram, veri öğelerinin geçerli ve orijinal sürümlerini tanımlayan bir XML biçimidir. , <xref:System.Data.DataSet> İçeriğini yüklemek ve sürdürmek ve bir ağ bağlantısı üzerinden aktarım için içeriğini serileştirmek Için DiffGram biçimini kullanır. Bir <xref:System.Data.DataSet> DiffGram olarak yazıldığında, <xref:System.Data.DataSet> hem **özgün** hem de **geçerli** satır sürümlerinin, satır hata bilgilerinin ve satır sırasının sütun değerleri de dahil olmak üzere, Içeriğini doğru şekilde yeniden oluşturmak için DiffGram değerini tüm gerekli bilgilerle doldurur.  
   
- Bir XML Web hizmetinden a <xref:System.Data.DataSet> gönderip alırken, DiffGram biçimi örtülü olarak kullanılır. Ayrıca, **ReadXml** yöntemini <xref:System.Data.DataSet> kullanarak XML'den bir XML'in içeriğini <xref:System.Data.DataSet> yüklerken veya **WriteXml** yöntemini kullanarak XML'deki bir içeriğiyazarken, içeriğin DiffGram olarak okunup yazılmasını belirtebilirsiniz. Daha fazla bilgi için bkz: [XML'den Veri Seti Yükleme](loading-a-dataset-from-xml.md) ve [DataSet İçeriklerini XML Verisi olarak yazma.](writing-dataset-contents-as-xml-data.md)  
+ XML Web hizmetinden bir gönderme ve alma <xref:System.Data.DataSet> işlemi yaparken, DiffGram biçimi örtülü olarak kullanılır. Ayrıca, <xref:System.Data.DataSet> **ReadXml** YÖNTEMINI kullanarak bir XML 'in Içeriğini yüklerken veya <xref:System.Data.DataSet> **WriteXml** metodunu kullanarak XML Içindeki içeriğini yazarken, içeriğin bir DiffGram olarak okunacağını veya yazıldığını belirtebilirsiniz. Daha fazla bilgi için bkz. [XML 'Den veri kümesi yükleme](loading-a-dataset-from-xml.md) ve [XML verileri olarak veri kümesi içerikleri yazma](writing-dataset-contents-as-xml-data.md).  
   
- DiffGram biçimi öncelikle .NET Framework tarafından bir <xref:System.Data.DataSet>, Microsoft SQL Server veritabanındaki tablolardaki verileri değiştirmek için DiffGrams'ı kullanarak bir serileştirme biçimi olarak kullanılır.  
+ DiffGram biçimi öncelikle .NET Framework tarafından, içeriği için bir serileştirme biçimi olarak kullanıldığında <xref:System.Data.DataSet> , bir Microsoft SQL Server veritabanındaki tablolardaki verileri değiştirmek için de DiffGram kullanabilirsiniz.  
   
- Diffgram, tüm tabloların içeriğini bir ** \<diffgram>** öğesine yazarak oluşturulur.  
+ Bir DiffGram, tüm tabloların içeriği bir öğeye yazılarak oluşturulur **\<diffgram>** .  
   
-### <a name="to-generate-a-diffgram"></a>Diffgram oluşturmak için  
+### <a name="to-generate-a-diffgram"></a>Bir DiffGram oluşturmak için  
   
-1. Kök tabloların bir listesini oluşturun (diğer bir süre, üst öğesi olmayan tablolar).  
+1. Kök tablolarının bir listesini (diğer bir deyişle, herhangi bir üst öğeye sahip olmayan tabloları) oluşturun.  
   
-2. Listedeki her tablo ve onun torunları için, ilk Diffgram bölümündeki tüm satırların geçerli sürümünü yazın.  
+2. Listedeki her tablo ve alt öğeleri için, ilk DiffGram bölümünde tüm satırların geçerli sürümünü yazın.  
   
-3. Her tablo <xref:System.Data.DataSet>için, Diffgram önceki bölümünde, varsa tüm ** \<** satırların özgün sürümünü yazın>.  
+3. İçindeki her tablo için, <xref:System.Data.DataSet> DiffGram bölümündeki tüm satırların orijinal sürümünü yazın **\<before>** .  
   
-4. Hataları olan satırlar için, ** \<Hata**>bölümüne hata içeriğini yazın.  
+4. Hataları olan satırlarda, **\<errors>** DiffGram bölümünün bölümüne hata içeriğini yazın.  
   
- Bir Diffgram, XML dosyasının başından sonuna kadar sırayla işlenir.  
+ Bir DiffGram, XML dosyasının başından sonuna sırayla işlenir.  
   
-### <a name="to-process-a-diffgram"></a>Bir Diffgram'ı işlemek için  
+### <a name="to-process-a-diffgram"></a>Bir DiffGram işlemek için  
   
-1. Satırların geçerli sürümünü içeren Diffgram'ın ilk bölümünü işleyebilir.  
+1. DiffGram öğesinin geçerli sürümünü içeren ilk bölümünü işleyin.  
   
-2. Değiştirilen ve silinen satırların özgün satır sürümünü içeren ikinci veya ** \<önceki>** bölümü işleme.  
+2. **\<before>** Değiştirilen ve silinen satırların orijinal satır sürümünü içeren ikinci veya bölümü işleyin.  
   
     > [!NOTE]
-    > Bir satır silinmiş olarak işaretlenirse, silme işlemi geçerli `Cascade` <xref:System.Data.DataSet>özelliğine bağlı olarak satırın torunlarını da silebilir.  
+    > Bir satır silinmiş olarak işaretlenmişse, silme işlemi, geçerli özelliğin özelliğine bağlı olarak satırın alt öğelerini de silebilir `Cascade` <xref:System.Data.DataSet> .  
   
-3. Bölümdeki ** \<hataları>.** Bu bölümdeki her öğe için belirtilen satır ve sütunun hata bilgilerini ayarlayın.  
+3. Bölümünü işleyin **\<errors>** . Bu bölümdeki her öğe için belirtilen satır ve sütun için hata bilgilerini ayarlayın.  
   
 > [!NOTE]
-> <xref:System.Data.XmlWriteMode> Diffgram'ı ayarlarsanız, hedefin <xref:System.Data.DataSet> ve orijinalin <xref:System.Data.DataSet> içeriği farklı olabilir.  
+> <xref:System.Data.XmlWriteMode>Öğesini DiffGram olarak ayarlarsanız, hedefin içeriği <xref:System.Data.DataSet> ve asıl <xref:System.Data.DataSet> farklı olabilir.  
   
-## <a name="diffgram-format"></a>DiffGram Biçimi  
- DiffGram biçimi üç bölüme ayrılmıştır: aşağıdaki örnekte gösterildiği gibi geçerli veriler, özgün (veya "önce") veriler ve hatalar bölümü.  
+## <a name="diffgram-format"></a>DiffGram biçimi  
+
+ DiffGram biçimi üç bölüme ayrılmıştır: Şu örnekte gösterildiği gibi geçerli veriler, özgün (veya "önceki") veriler ve hatalar bölümü.  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -68,36 +70,38 @@ DiffGram, veri öğelerinin geçerli ve özgün sürümlerini tanımlayan bir XM
  DiffGram biçimi aşağıdaki veri bloklarından oluşur:  
   
  **\<**  ***DataInstance***  **>**  
- Bu öğenin adı, ***DataInstance***, bu belgede açıklama amacıyla kullanılır. ***DataInstance*** öğesi bir <xref:System.Data.DataSet> satırı veya <xref:System.Data.DataTable>bir satırını temsil eder. *DataInstance*yerine, öğe <xref:System.Data.DataSet> or <xref:System.Data.DataTable>adını içerecek. DiffGram biçiminin bu bloğu, değiştirilip değiştirilmediğine bakılmaksızın geçerli verileri içerir. Değiştirilen bir öğe veya satır **diffgr:hasChanges** ek açıklama ile tanımlanır.  
+ Bu öğenin adı, ***DataInstance***, bu belgede açıklama amacıyla kullanılır. ***DataInstance*** öğesi bir veya bir <xref:System.Data.DataSet> satırını temsil eder <xref:System.Data.DataTable> . *DataInstance*yerine, öğesi veya adını içerir <xref:System.Data.DataSet> <xref:System.Data.DataTable> . DiffGram biçimindeki bu blok, değiştirilmiş olup olmadığı geçerli verileri içerir. Değiştirilen bir öğe veya satır, **diffgr: hasChanges** ek açıklaması ile tanımlanır.  
   
- **\<diffgr:>önce**  
- DiffGram biçiminin bu bloğu bir satırın özgün sürümünü içerir. Bu bloktaki **öğeler, diffgr:id** ek açıklamakullanılarak ***DataInstance*** bloğundaki öğelerle eşleşir.  
+ **\<diffgr:before>**  
+ DiffGram biçimindeki bu blok, bir satırın özgün sürümünü içerir. Bu bloktaki öğeler, **diffgr: ID** ek açıklaması kullanılarak ***DataInstance*** bloğundaki öğelerle eşleştirilir.  
   
- **\<diffgr:hatalar>**  
- DiffGram biçiminin bu ***bloğu, DataInstance*** bloğundaki belirli bir satırın hata bilgilerini içerir. Bu bloktaki **öğeler, diffgr:id** ek açıklamakullanılarak ***DataInstance*** bloğundaki öğelerle eşleşir.  
+ **\<diffgr:errors>**  
+ DiffGram biçimindeki bu blok, ***DataInstance*** bloğundaki belirli bir satır için hata bilgilerini içerir. Bu bloktaki öğeler, **diffgr: ID** ek açıklaması kullanılarak ***DataInstance*** bloğundaki öğelerle eşleştirilir.  
   
-## <a name="diffgram-annotations"></a>DiffGram Ek Açıklamaları  
- DiffGrams farklı satır sürümleri veya hata bilgilerini temsil eden farklı DiffGram blokları <xref:System.Data.DataSet>öğeleri ilişkilendirmek için çeşitli ek açıklamalar kullanın.  
+## <a name="diffgram-annotations"></a>DiffGram ek açıklamaları  
+
+ DiffGram, içindeki farklı satır sürümlerini veya hata bilgilerini temsil eden farklı DiffGram bloklarından öğeleri ilişkilendirmek için birkaç ek açıklama kullanır <xref:System.Data.DataSet> .  
   
- Aşağıdaki tabloda DiffGram ad alanı vazosunda tanımlanan DiffGram ek açıklamaları **açıklanır:şemalar-microsoft-com:xml-diffgram-v1.**  
-  
-|Ek Açıklama|Açıklama|  
-|----------------|-----------------|  
-|**Kimliği**|**\<** ve **>** ** \<diffgr:errors>** blokları ***DataInstance*** bloğundaki öğelerle **>önce diffgr:'deki öğeleri eşleştirmek için kullanılır. \<** **Diffgr:id** ek açıklamalı değerler *[TableName][RowIdentifier]* şeklindedir. Örneğin: `<Customers diffgr:id="Customers1">`.|  
-|**Parentıd**|**\<** ***DataInstance*** **>** bloğundan hangi öğenin geçerli öğenin ana öğesi olduğunu tanımlar. **Diffgr:parentId** ek açıklamalı değerler *[TableName][RowIdentifier]* şeklindedir. Örneğin: `<Orders diffgr:parentId="Customers1">`.|  
-|**Haschanges**|**\<** ***DataInstance*** **>** bloğundaki bir satırı değiştirilmiş olarak tanımlar. **hasChanges** ek açıklama aşağıdaki iki değerden biri olabilir:<br /><br /> **Eklenen**<br /> Bir **Ek satır** tanımlar.<br /><br /> **Değiştirilmiş**<br /> >engellemeden ** \<önce diffgr:'de** **Özgün** satır sürümü içeren **Değiştirilmiş** bir satır tanımlar. **Silinen** ** \<satırların diffgr:>** engellemeden önce **orijinal** satır sürümü olacağını, ancak ***DataInstance*** **>** bloğunda **\<** açıklamalı öğe olmayacağını unutmayın.|  
-|**hasHatalar**|**\<** ***DataInstance*** **>** bloğundaki bir satırı **Satır Hatası**ile tanımlar. Hata öğesi ** \<diffgr:hatalar>** bloğuna yerleştirilir.|  
-|**Hata**|** \<Diffgr:errors>** bloğundaki belirli bir öğe için **Satır Hatası** metnini içerir.|  
-  
- İçeriğini <xref:System.Data.DataSet> DiffGram olarak okurken veya yazarken ek ek açıklamalar içerir. Aşağıdaki tabloda, ad alanı vazosunda tanımlanan bu ek ek ek açıklamalar **açıklanmaktadır:şemalar-microsoft-com:xml-msdata**.  
+ Aşağıdaki tablo, DiffGram ad alanında tanımlanan DiffGram açıklamalarını açıklar **urn: schemas-microsoft-com: XML-DiffGram-v1**.  
   
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
-|**Satır Sırası**|Özgün verilerin satır sırasını korur ve belirli <xref:System.Data.DataTable>bir satırın dizinini tanımlar.|  
-|**Gizli**|Bir **sütunu, MappingType.Hidden**olarak ayarlanmış bir **Sütun Eşleme** özelliğine sahip olarak tanımlar. Öznitelik msdata biçiminde **yazılır:hidden** *[ColumnName]*="*değeri*". Örneğin: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Gizli sütunların yalnızca veri içeriyorsa DiffGram özniteliği olarak yazıldığını unutmayın. Aksi takdirde, bunlar yoksayılır.|  
+|**id**|**\<diffgr:before>** Ve **\<diffgr:errors>** blokdaki öğeleri bloktaki öğelere eşleştirmek için kullanılır **\<** ***DataInstance*** **>** . **Diffgr: ID** ek açıklamasına sahip değerler *[TableName] [RowIdentifier]* biçiminde. Örneğin: `<Customers diffgr:id="Customers1">`.|  
+|**parentID**|Bloğundan hangi öğenin **\<** ***DataInstance*** **>** geçerli öğenin üst öğesi olduğunu tanımlar. **Diffgr: parentID** ek açıklamasına sahip değerler *[TableName] [RowIdentifier]* biçiminde. Örneğin: `<Orders diffgr:parentId="Customers1">`.|  
+|**hasChanges**|Bloktaki bir satırı **\<** ***DataInstance*** **>** değiştirildiği şekilde tanımlar. **HasChanges** ek açıklaması aşağıdaki iki değerden birine sahip olabilir:<br /><br /> **takılmamış**<br /> **Eklenen** bir satırı tanımlar.<br /><br /> **değiştirdi**<br /> Blokta **orijinal** bir satır sürümü içeren **değiştirilmiş** bir satırı tanımlar **\<diffgr:before>** . **Silinen** satırların bloğunda **orijinal** bir satır sürümü olacağını unutmayın **\<diffgr:before>** , ancak blokta hiçbir açıklamalı öğe olmayacaktır **\<** ***DataInstance*** **>** .|  
+|**hasErrors**|Blok içindeki bir satırı **\<** ***DataInstance*** **>** **RowError**ile tanımlar. Hata öğesi **\<diffgr:errors>** bloğa yerleştirildi.|  
+|**Hata**|Bloktaki belirli bir öğe için **RowError** metnini içerir **\<diffgr:errors>** .|  
+  
+ , <xref:System.Data.DataSet> İçeriğini bir DiffGram olarak okurken veya yazarken ek açıklamalar içerir. Aşağıdaki tabloda, **urn: schemas-microsoft-com: XML-msdata**ad alanında tanımlanan bu ek açıklamalar açıklanmaktadır.  
+  
+|Ek Açıklama|Açıklama|  
+|----------------|-----------------|  
+|**RowOrder**|Orijinal verilerin satır sırasını korur ve belirli bir satırın dizinini tanımlar <xref:System.Data.DataTable> .|  
+|**Lene**|Bir sütunu, bir **ColumnMapping** özelliği **MappingType. Hidden**olarak ayarlanmış olacak şekilde tanımlar. Özniteliği **msdata: Hidden** *[ColumnName]*= "*Value*" biçiminde yazılır. Örneğin: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Gizli sütunların yalnızca veri içerdikleri bir DiffGram özniteliği olarak yazıldığını unutmayın. Aksi takdirde, bunlar yok sayılır.|  
   
 ## <a name="sample-diffgram"></a>Örnek DiffGram  
- DiffGram biçiminin bir örneği aşağıda gösterilmiştir. Bu örnek, değişiklikler ayrılmadan önce bir tablodaki bir satıra güncelleştirmenin sonucunu gösterir. "ALFKI" CustomerID ile satır değiştirildi, ancak güncelleştirilmedi. Sonuç olarak, **\<** ***DataInstance*** **>** bloğunda "Müşteriler1" **diffgr:id** ve **diffgr:id** ** \<diffgr:id** ile **özgün** bir satır diffgr:id ile **>** bloğu vardır. "ANATR" customerid ile satır **rowerror**içerir, bu yüzden açıklamalı `diffgr:hasErrors="true"` ve ** \<diffgr** ilgili bir öğe var:hatalar>blok.  
+
+ DiffGram biçimine bir örnek aşağıda gösterilmiştir. Bu örnek, değişiklikler kaydedilmeden önce tablodaki bir satırdaki bir güncelleştirmenin sonucunu gösterir. "ALFKI" CustomerID içeren satır değiştirilmiş, ancak güncelleştirilmedi. Sonuç olarak, bloğunda "Customers1" adlı bir **diffgr: ID** 'Si olan **geçerli** bir satır vardır **\<** ***DataInstance*** **>** ve bloğunda "Customers1" **diffgr: ID değerine** sahip **orijinal** bir satır vardır **\<diffgr:before>** . "ANATR" CustomerID içeren satır bir **RowError**içerir, bu nedenle ile açıklanmakta `diffgr:hasErrors="true"` ve bloğunda ilgili bir öğe vardır **\<diffgr:errors>** .  
   
 ```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  

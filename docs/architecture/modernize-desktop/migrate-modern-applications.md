@@ -2,12 +2,12 @@
 title: Modern masaüstü uygulamalarını geçirme
 description: Modern masaüstü uygulamalarına yönelik geçiş süreci hakkında bilmeniz gereken her şey.
 ms.date: 05/12/2020
-ms.openlocfilehash: a015b266dc5c36fcef38dad04b9f4f048ee5906a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f7862d6379eeeb737c386b5ffeaab938d258b046
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446919"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173334"
 ---
 # <a name="migrating-modern-desktop-applications"></a>Modern masaüstü uygulamalarını geçirme
 
@@ -23,13 +23,13 @@ Yapılandırma dosyaları, çalışma zamanında okunan özellik kümelerini dep
 
 ### <a name="configuration-on-net-framework"></a>.NET Framework yapılandırma
 
-Çalışan bir .NET Framework masaüstü uygulamanız varsa, ad alanından sınıfından erişilen bir *app. config* dosyasına sahip olursunuz <xref:System.Configuration.AppSettingsSection> `System.Configuration` .
+Çalışan bir .NET Framework masaüstü uygulamanız varsa, ad alanından sınıfından erişilen bir *app.config* dosyasına sahip olursunuz <xref:System.Configuration.AppSettingsSection> `System.Configuration` .
 
-.NET Framework altyapısı içinde, üst öğelerinden özellikleri devralan yapılandırma dosyalarının bir hiyerarşisi vardır. Herhangi bir alt yapılandırma dosyasında kullanılabilecek veya geçersiz kılınabilen birçok özelliği ve yapılandırma bölümünü tanımlayan bir *Machine. config* dosyası bulabilirsiniz.
+.NET Framework altyapısı içinde, üst öğelerinden özellikleri devralan yapılandırma dosyalarının bir hiyerarşisi vardır. Herhangi bir alt yapılandırma dosyasında kullanılabilecek veya geçersiz kılınabilen birçok özellik ve yapılandırma bölümünü tanımlayan bir *machine.config* dosyası bulabilirsiniz.
 
 ### <a name="configuration-on-net-core"></a>.NET Core üzerinde yapılandırma
 
-.NET Core dünyasında *Machine. config* dosyası yoktur. Eski tip ad alanını kullanmaya devam edebilse de <xref:System.Configuration> , <xref:Microsoft.Extensions.Configuration> iyi sayıda geliştirme sunan modern 'e geçmeyi düşünebilirsiniz.
+.NET Core dünyasında *machine.config* dosyası yoktur. Eski tip ad alanını kullanmaya devam edebilse de <xref:System.Configuration> , <xref:Microsoft.Extensions.Configuration> iyi sayıda geliştirme sunan modern 'e geçmeyi düşünebilirsiniz.
 
 Yapılandırma API 'SI yapılandırma sağlayıcısı kavramını destekler, bu da yapılandırmayı yüklemek için kullanılacak veri kaynağını tanımlar. Farklı türlerde yerleşik sağlayıcılar vardır, örneğin:
 
@@ -49,15 +49,15 @@ Yeni yapılandırma, çok düzeyli bir hiyerarşide gruplandırılabilen ad-değ
 
 ### <a name="migrating-configuration-files"></a>Yapılandırma dosyalarını geçirme
 
-Mevcut App. config XML dosyanızı kullanmaya devam edebilirsiniz. Bununla birlikte, yapılandırmanızı .NET Core 'da yapılan çeşitli geliştirmelerden yararlanmak için geçirebilirsiniz.
+Mevcut app.config XML dosyanızı kullanmaya devam edebilirsiniz. Bununla birlikte, yapılandırmanızı .NET Core 'da yapılan çeşitli geliştirmelerden yararlanmak için geçirebilirsiniz.
 
-Eski stil bir *app. config* dosyasından yeni bir yapılandırma dosyasına geçiş yapmak için, bir XML BIÇIMI ve JSON biçimi arasında seçim yapmanız gerekir.
+Eski stil *app.config* yeni bir yapılandırma dosyasına geçirmek için, bir XML BIÇIMI ve JSON biçimi arasında seçim yapmanız gerekir.
 
-XML seçerseniz, dönüştürme basittir. İçerik aynı olduğundan, *app. config* dosyasını XML uzantılı bir dosya olarak yeniden adlandırmanız yeterlidir. Daha sonra, sınıfını kullanmak için AppSettings 'e başvuran kodu değiştirin `ConfigurationBuilder` . Bu değişiklik kolay olmalıdır.
+XML seçerseniz, dönüştürme basittir. İçerik aynı olduğundan, *app.config* dosyasını XML uzantılı bir dosya olarak yeniden adlandırmanız yeterlidir. Daha sonra, sınıfını kullanmak için AppSettings 'e başvuran kodu değiştirin `ConfigurationBuilder` . Bu değişiklik kolay olmalıdır.
 
-Bir JSON biçimi kullanmak istiyorsanız ve el ile geçiş yapmak istemiyorsanız, .NET Core 'da bir *app. config* dosyasını bir JSON yapılandırma dosyasına dönüştürebilen [DotNet-config2json](https://www.nuget.org/packages/dotnet-config2json/) adlı bir araç mevcuttur.
+Bir JSON biçimi kullanmak istiyorsanız ve el ile geçiş yapmak istemiyorsanız, .NET Core 'da *app.config* BIR dosyayı JSON yapılandırma dosyasına dönüştürebilen [DotNet-config2json](https://www.nuget.org/packages/dotnet-config2json/) adlı bir araç mevcuttur.
 
-*Machine. config* dosyasında tanımlanan yapılandırma bölümlerini kullanırken bazı sorunlarla karşılaşabilirsiniz. Örneğin, aşağıdaki yapılandırmayı göz önünde bulundurun:
+Ayrıca, *machine.config* dosyasında tanımlı yapılandırma bölümlerini kullanırken bazı sorunlarla karşılaşabilirsiniz. Örneğin, aşağıdaki yapılandırmayı göz önünde bulundurun:
 
 ```xml
 <configuration>
@@ -82,9 +82,9 @@ Bu yapılandırmayı bir .NET Core 'a alırsanız, bir özel durum alırsınız:
 
 Tanınmayan yapılandırma bölümü System. Diagnostics
 
-Bu özel durum, bu bölüm ve bu bölümü işlemekten sorumlu olan *Machine. config* dosyasında tanımlanmasından sorumlu olduğu için oluşur.
+Bu özel durum, bu bölüm ve bu bölümün işlenmesinden sorumlu olan derleme *machine.config* dosyasında tanımlandığından, artık mevcut olmayan bir durumdur.
 
-Sorunu kolayca çözebilmeniz için, Bölüm tanımını eski *Machine. config* 'nizden yeni yapılandırma dosyanıza kopyalayabilirsiniz:
+Sorunu kolayca çözebilmeniz için, Bölüm tanımını eski *machine.config* yeni yapılandırma dosyanıza kopyalayabilirsiniz:
 
 ```xml
 <configSections>
@@ -108,7 +108,7 @@ Microsoft `System.Data.Odbc` kitaplığı .NET Standard 2,0 ile uyumlu olduğund
 
 ### <a name="ole-db"></a>OLE DB
 
-[OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))   , çeşitli veri kaynaklarına tek bir şekilde erişmenin harika bir yoludur. Ancak bu, yalnızca Windows teknolojisi olan ve .NET Core gibi platformlar arası bir teknolojinin en iyi şekilde uyum sağlayan COM 'a dayalıdır. Ayrıca, 2014 ve üzeri sürümlerde SQL Server de desteklenmez. Bu nedenlerden dolayı OLE DB .NET Core tarafından desteklenmez.
+[OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))   , çeşitli veri kaynaklarına tek bir şekilde erişmenin harika bir yoludur. Ancak bu, yalnızca Windows teknolojisi olan ve .NET Core gibi platformlar arası bir teknolojinin en iyi şekilde uyum sağlayan COM 'a dayalıdır. Ayrıca, 2014 ve üzeri sürümlerde SQL Server de desteklenmez. Bu nedenlerden dolayı OLE DB .NET Core tarafından desteklenmez.
 
 ### <a name="adonet"></a>ADO.NET
 

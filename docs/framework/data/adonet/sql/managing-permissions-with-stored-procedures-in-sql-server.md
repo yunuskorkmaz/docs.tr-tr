@@ -3,17 +3,19 @@ title: SQL Server'da Saklı Yordam İzinlerini Yönetme
 description: Saklı yordamları veya Kullanıcı tanımlı işlevleri kullanarak erişim uygulayarak verilerinize ve veritabanı nesneleriniz için erişimi nasıl kısıtlayacağınızı öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 890c1c6dd7003f3abd684d6c827b6a77a3a019c1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 44f6a0c3ca6b913c8998c4e5ddb60eab2b64e71b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286294"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172729"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server'da Saklı Yordam İzinlerini Yönetme
+
 Veritabanınızda birden çok savunma hattı oluşturmanın bir yöntemi, saklı yordamları veya Kullanıcı tanımlı işlevleri kullanarak tüm veri erişimini uygulamaktır. Tablolar gibi temeldeki nesneler için tüm izinleri iptal eder veya reddeder ve saklı yordamlarda yürütme izinleri verir. Bu, veri ve veritabanı nesneleriniz etrafında etkin bir güvenlik çevresi oluşturur.  
   
 ## <a name="stored-procedure-benefits"></a>Saklı yordam avantajları  
+
  Saklı yordamlar aşağıdaki avantajlara sahiptir:  
   
 - Veri mantığı ve iş kuralları, kullanıcıların veri ve nesnelere yalnızca geliştiricilerin ve veritabanı yöneticilerinin tarafından istenen şekilde erişebilmeleri için kapsüllenebilir.  
@@ -31,9 +33,11 @@ Veritabanınızda birden çok savunma hattı oluşturmanın bir yöntemi, saklı
 - Saklı yordamlar, birden çok işlemi tek bir yordam çağrısında birleştirerek ağ trafiğini azaltabilir.  
   
 ## <a name="stored-procedure-execution"></a>Saklı yordam yürütme  
+
  Saklı yordamlar, kullanıcıların veritabanına erişim sağlamak için sahiplik zincirinden yararlanır ve böylece kullanıcılar veritabanı nesnelerine erişim için açık izne sahip olmaları gerekmez. Bir sahiplik zinciri birbirlerine her ardışık olarak erişen nesneler aynı kullanıcıya ait olduğunda oluşur. Örneğin, saklı yordam diğer saklı yordamları çağırabilir veya saklı yordam birden fazla tabloya erişebilir. Yürütme zincirindeki tüm nesneler aynı sahibe sahip ise SQL Server, yalnızca arayan için yürütme iznini denetler, çağıranın diğer nesneler üzerindeki izinleri değildir. Bu nedenle, yalnızca saklı yordamlarda yürütme izinleri vermeniz gerekir; temel alınan tablolardaki tüm izinleri iptal edebilir veya reddedebilirsiniz.  
   
 ## <a name="best-practices"></a>En İyi Uygulamalar  
+
  Saklı yordamları yazmak, uygulamanızı yeterince güvenli hale getirmek için yeterli değildir. Ayrıca, aşağıdaki olası güvenlik boşluklarını de göz önünde bulundurmanız gerekir.  
   
 - Verilere erişebilmek istediğiniz veritabanı rollerinin saklı yordamları üzerinde yürütme izinleri verin.  
@@ -51,9 +55,10 @@ Veritabanınızda birden çok savunma hattı oluşturmanın bir yöntemi, saklı
 - Mutlak gerekmedikçe dinamik SQL kullanmaktan kaçının. Transact-SQL QUOTENAME () işlevini kullanarak bir dize değerini sınırlandırın ve giriş dizesindeki sınırlandırıcının herhangi bir oluşumunu kaçış.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
+
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
-|Kaynak|Description|  
+|Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Saklı yordamlar](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) ve [SQL ekleme](/sql/relational-databases/security/sql-injection)|Makaleler, saklı yordamların nasıl oluşturulduğunu ve SQL ekleme 'nin nasıl çalıştığını açıklamaktadır.|  
   

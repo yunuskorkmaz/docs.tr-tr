@@ -13,14 +13,15 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 366bad1029904b3571be0a76d827ff0213d776bb
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: b1d7fbbe98aaad16454fdd71c161f2a17a2f4f2e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125754"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173262"
 ---
 # <a name="-doc-c-compiler-options"></a>-Doc (C# derleyici seçenekleri)
+
 **-Doc** seçeneği, belge AÇıKLAMALARıNı bir XML dosyasına eklemenizi sağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -30,10 +31,12 @@ ms.locfileid: "89125754"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `file`  
  Derlemenin kaynak kodu dosyalarındaki yorumlarla doldurulan XML için çıkış dosyası.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Kaynak kodu dosyalarında, aşağıdakilerden önce gelen belge açıklamaları işlenebilir ve XML dosyasına eklenebilir:  
   
 - Bir [sınıf](../keywords/class.md), [temsilci](../builtin-types/reference-types.md#the-delegate-type)veya [arabirim](../keywords/interface.md) olarak Kullanıcı tanımlı türler  

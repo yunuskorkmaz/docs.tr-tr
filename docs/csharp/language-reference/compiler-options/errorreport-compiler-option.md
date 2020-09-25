@@ -9,14 +9,15 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 5b3143f4da81ac693626778263c277e3a484c45e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6238ac392ff99d18d9cc7ea07e23b08ff235c14f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125728"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173236"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# derleyici seçenekleri)
+
 Bu seçenek, C# iç derleyici hatasını Microsoft 'a bildirmenin kolay bir yolunu sağlar.
 
 > [!NOTE]
@@ -29,6 +30,7 @@ Bu seçenek, C# iç derleyici hatasını Microsoft 'a bildirmenin kolay bir yolu
 ```
 
 ## <a name="arguments"></a>Bağımsız değişkenler
+
  **yok**  
  İç derleyici hataları hakkında raporlar toplanmayacak veya Microsoft 'a gönderilmez.
 
@@ -39,6 +41,7 @@ Bu seçenek, C# iç derleyici hatasını Microsoft 'a bildirmenin kolay bir yolu
  **Gönder** , İç derleyici hatalarının raporlarını otomatik olarak Microsoft 'a gönderir. Bu seçeneği etkinleştirmek için öncelikle Microsoft veri toplama ilkesini kabul etmelisiniz. Bir bilgisayarda **-errorreport: Send** ' i ilk kez belirttiğinizde, bir derleyici Iletisi sizi Microsoft veri toplama ilkesini Içeren bir Web sitesine başvuracaktır.
 
 ## <a name="remarks"></a>Açıklamalar
+
  Derleyici bir kaynak kodu dosyasını işleyeişce bir iç derleyici hatası (ıCE) oluşur. Bir buz gerçekleştiğinde, derleyici bir çıkış dosyası ya da kodunuzu onarmak için kullanabileceğiniz yararlı bir tanılama üretmez.
 
  Önceki sürümlerde, bir buz aldığınızda sorunu bildirmek için Microsoft Ürün Destek Hizmetleri 'ne başvurmanız önerilir. **-Errorreport**kullanarak, Visual C# EKIBINE Ice bilgisi sağlayabilirsiniz. Hata raporlarınız, gelecekteki derleyici sürümlerinin artırılmasına yardımcı olabilir.

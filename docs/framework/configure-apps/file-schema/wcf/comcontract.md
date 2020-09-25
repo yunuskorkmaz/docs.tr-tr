@@ -2,14 +2,15 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 35596f32bf0e0de9081bc0d4c33fb370c7ab708b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850032"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173789"
 ---
 # \<comContract>
+
 Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<comContracts>**](comcontracts.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<comContract>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <comContracts>
@@ -45,6 +46,7 @@ Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -71,6 +73,7 @@ Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.
 |comContracts|Öğe koleksiyonunu içerir `comContract` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  COM+ tümleştirme hizmeti sözleşmeleri Şu anda `http://tempuri.org` ad alanıyla kısıtlıdır ve anlaşma adı DESTEKLEYICI com arabiriminden türetilir. Ancak, öğesini ve `comContracts` `comContract` yapılandırma dosyasındaki öğesini kullanarak alternatifleri belirtebilirsiniz. Örneğin, eklenecek ad alanı, sözleşme adı ve Kullanıcı tanımlı türleri, ayrıca bir hizmet sözleşmesinin diğer ayarlarını belirtmek için aşağıdaki yapılandırmayı kullanabilirsiniz.  
   
 ```xml  

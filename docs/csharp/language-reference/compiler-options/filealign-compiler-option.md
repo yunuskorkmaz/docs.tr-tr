@@ -17,14 +17,15 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: d4abe6c3825de211d737f402a745c8953adca4b8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 4b61217a3d6812ea3ab036f82d49bba05c20629e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125715"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173249"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C# derleyici seçenekleri)
+
 **-Filealign** seçeneği, çıkış dosyanızdaki bölümlerin boyutunu belirtmenizi sağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,10 +35,12 @@ ms.locfileid: "89125715"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `number`  
  Çıkış dosyasındaki bölümlerin boyutunu belirten bir değer. Geçerli değerler 512, 1024, 2048, 4096 ve 8192. Bu değerler baytlardır.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Her bölüm, **-filealign** değerinin katı olan bir sınıra göre hizalanacaktır. Sabit bir varsayılan yoktur. **-Filealign** belirtilmemişse, ortak dil çalışma zamanı derleme zamanında bir varsayılan değer seçer.  
   
  Bölüm boyutunu belirterek, çıkış dosyasının boyutunu etkilersiniz. Bölüm boyutunu değiştirmek, daha küçük cihazlarda çalıştırılacak programlar için yararlı olabilir.  

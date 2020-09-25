@@ -4,12 +4,12 @@ description: Bir ifade ağacının yapısını incelemek için kod yazmayı öğ
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004653"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173314"
 ---
 # <a name="interpreting-expressions"></a>İfade Yorumlama
 
@@ -22,6 +22,7 @@ Bu tasarım, bir ifade ağacındaki tüm düğümleri görece düz ileri özyine
 Düğüm türünün alt öğeleri varsa, yinelemeli olarak alt öğeleri ziyaret edin. Her alt düğümde, kök düğümde kullanılan işlemi yineleyin: türü belirleme ve türün alt öğeleri varsa, alt öğelerin her birini ziyaret edin.
 
 ## <a name="examining-an-expression-with-no-children"></a>Alt öğe Içermeyen bir Ifadeyi İnceleme
+
 Basit bir ifade ağacındaki her bir düğümü ziyaret ederek başlayalım.
 Sabit bir ifade oluşturan ve sonra özelliklerini incelediği kod aşağıda verilmiştir:
 

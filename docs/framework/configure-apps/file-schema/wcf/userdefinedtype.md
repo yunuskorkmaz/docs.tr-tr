@@ -2,14 +2,15 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7a76e5a90fe3218bc0302501b71daa9de0b098bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4bbd677aba27d93389f8d2f99aadd801c86b65f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854840"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172846"
 ---
 # \<userDefinedType>
+
 Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı bir tür (UDT) temsil eder.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı bir tür (UDT) temsil
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<userDefinedTypes>**](userdefinedtypes.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<userDefinedType>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <comContracts>
@@ -36,6 +37,7 @@ Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı bir tür (UDT) temsil
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -48,6 +50,7 @@ Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı bir tür (UDT) temsil
 |`TypeLibVersion`|Türü tanımlayan tür kitaplığı sürümünü tanımlayan bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -57,6 +60,7 @@ Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı bir tür (UDT) temsil
 |`userDefinedTypes`|`userDefinedType`Öğelerin koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  COM+ tümleştirme çalışma zamanı, tür kitaplığını inceleyerek hizmet oluşturur. Bir COM+ bileşeni bir DEĞIŞKEN geçiren Yöntemler içerdiğinde, sistem çalışma zamanına göre geçirilecek gerçek türleri belirleyemez. Bu nedenle, bir DEĞIŞKEN içinde Kullanıcı tanımlı tür (UDT) geçirmeye çalıştığınızda, serileştirme için bilinen bir tür olmadığından başarısız olur.  
   
  Bu sorunu aşmak için, her türlü uygun hizmet sözleşmesinde bilinen türler olarak dahil edilmesini sağlamak üzere UDTs 'yi yapılandırma dosyasına ekleyebilirsiniz. Bunu yapmak için, UDT 'yi ve sözleşmeyi (Sözleşmelerinin) benzersiz şekilde belirlemeniz gerekir. Bu, diğer bir deyişle, onu kullanan özgün COM arabirimidir.  

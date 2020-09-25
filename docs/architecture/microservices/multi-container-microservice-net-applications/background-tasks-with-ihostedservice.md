@@ -2,12 +2,12 @@
 title: Ihostedservice ve BackgroundService sınıfıyla mikro hizmetlerde arka plan görevleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler .NET Core 'da arka plan görevleri uygulamak için ıhostedservice ve BackgroundService kullanmak üzere yeni seçenekleri anlayın.
 ms.date: 08/14/2020
-ms.openlocfilehash: 4ab215f2196cd2e66b116465c3a582a9846c8066
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 279f9e0093deafab51e63d72dce233c8e9466a55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268003"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173360"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Ihostedservice ve BackgroundService sınıfıyla mikro hizmetlerde arka plan görevleri uygulama
 
@@ -68,7 +68,7 @@ Kullanmadan `IHostedService` , herhangi bir görevi çalıştırmak için her za
 
 ## <a name="the-ihostedservice-interface"></a>Ihostedservice arabirimi
 
-Bir kaydettiğinizde `IHostedService` , .NET Core `StartAsync()` `StopAsync()` `IHostedService` uygulama başlatma ve durdurma sırasında, sizin yazmanız için ve yöntemlerini çağıracaktır. Daha fazla ayrıntı için [ıhostedservice arabirimine](https://docs.microsoft.com/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-3.1&tabs=visual-studio#ihostedservice-interface) başvurun
+Bir kaydettiğinizde `IHostedService` , .NET Core `StartAsync()` `StopAsync()` `IHostedService` uygulama başlatma ve durdurma sırasında, sizin yazmanız için ve yöntemlerini çağıracaktır. Daha fazla ayrıntı için [ıhostedservice arabirimine](/aspnet/core/fundamentals/host/hosted-services?tabs=visual-studio&view=aspnetcore-3.1#ihostedservice-interface) başvurun
 
 Imagine kullanabileceğiniz gibi, birden çok ıhostedservice uygulaması oluşturabilir ve bu Hizmetleri `ConfigureService()` daha önce gösterildiği gibi, yöntemde de dı kapsayıcısına kaydedebilirsiniz. Bu barındırılan tüm hizmetler uygulama/mikro hizmetle birlikte başlatılır ve durdurulur.
 
