@@ -5,12 +5,12 @@ description: ASP.NET Core 'deki son değişiklikleri listeler.
 ms.date: 09/18/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 33d8d1f7a6179229b3218d0102550a64bfc35a87
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a4534367184127604ed53bf1fdafabbf8ff575d1
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078872"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406199"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core son değişiklikler
 
@@ -104,6 +104,7 @@ ASP.NET Core 3,0, 3,1 ve 5,0 ' deki aşağıdaki son değişiklikler bu sayfada 
 - [Maça 'Lar: SpaServices ve NodeServices konsol günlükçü geri dönüş varsayılan değişikliği](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [Maça 'Lar: gereksiz olarak işaretlenen SpaServices ve NodeServices](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [Statik dosyalar: CSV içerik türü, standartlara uyumlu olarak değiştirildi](#static-files-csv-content-type-changed-to-standards-compliant)
+- [System. Security. Cryptography API 'Leri Blazor WebAssembly üzerinde desteklenmez](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly)
 - [Hedef Framework: .NET Framework desteklenmiyor](#target-framework-net-framework-support-dropped)
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5,0
@@ -216,6 +217,10 @@ ASP.NET Core 3,0, 3,1 ve 5,0 ' deki aşağıdaki son değişiklikler bu sayfada 
 ***
 
 [!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
+
+[!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
 
 ***
 

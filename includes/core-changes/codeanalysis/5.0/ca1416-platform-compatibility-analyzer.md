@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 4a7616d2ffaabab5279342ebc1082c93a174a52d
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90721264"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406185"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: platform uyumluluğu
 
@@ -20,7 +20,7 @@ Kullandıkları API 'Leri hedefleyen projelerde, kural [CA1416](/visualstudio/co
 
 #### <a name="examples"></a>Örnekler
 
-- <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType>Yöntemi yalnızca Windows 'ta desteklenir (ile tasarlanmıştır `[SupportedOSPlatform("windows")]` ). Aşağıdaki kod, proje [hedefliyorsa](../../../../docs/standard/frameworks.md) `net5.0` (ancak yoksa) derleme zamanında bir CA1416 uyarısı oluşturur `net5.0-windows` . Uyarı oluşmasını önlemek için gerçekleştirebileceğiniz eylemler için bkz. [Önerilen eylem](#recommended-action).
+- <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType>Yöntemi yalnızca Windows 'ta desteklenir ve ile tasarlanmıştır `[SupportedOSPlatform("windows")]` . Aşağıdaki kod, proje [hedefliyorsa](../../../../docs/standard/frameworks.md) `net5.0` (ancak yoksa) derleme zamanında bir CA1416 uyarısı oluşturur `net5.0-windows` . Uyarı oluşmasını önlemek için gerçekleştirebileceğiniz eylemler için bkz. [Önerilen eylem](#recommended-action).
 
   ```csharp
   public void PlayCMajor()
@@ -29,7 +29,7 @@ Kullandıkları API 'Leri hedefleyen projelerde, kural [CA1416](/visualstudio/co
   }
   ```
 
-- <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType>Yöntem tarayıcıda desteklenmez (ile donatılmış `[UnsupportedOSPlatform("browser")]` ). Aşağıdaki kod, proje dosyasında Blazor WebAssembly SDK ( `<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">` ) veya `browser` desteklenen platform () olarak içeriyorsa derleme ZAMANıNDA bir CA1416 uyarısı oluşturur `<SupportedPlatform Include="browser" />` .
+- <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType>Yöntemi tarayıcıda desteklenmez ve ile donatılmış `[UnsupportedOSPlatform("browser")]` . Aşağıdaki kod, proje tarayıcı platformunu destekliyorsa derleme zamanında bir CA1416 uyarısı oluşturur.
 
   ```csharp
   public void CreateImage()
@@ -37,6 +37,17 @@ Kullandıkları API 'Leri hedefleyen projelerde, kural [CA1416](/visualstudio/co
       Image newImage = Image.FromFile("SampImag.jpg");
   }
   ```
+
+  > [!TIP]
+  >
+  > - Blazor WebAssembly projeleri ve Razor sınıf kitaplığı projeleri otomatik olarak tarayıcı desteği içerir.
+  > - Tarayıcınızı projeniz için desteklenen bir platform olarak el ile eklemek için, proje dosyanıza aşağıdaki girişi ekleyin:
+  >
+  >  ```xml
+  >  <ItemGroup>
+  >    <SupportedPlatform Include="browser" />
+  >  </ItemGroup>
+  >  ```
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -68,7 +79,7 @@ public void PlayCMajor()
 }
 ```
 
-Ayrıca, API 'nizi platforma özel olarak işaretleyebilirsiniz. Bu durumda, gereksinimleri denetleme yükü çağıranlarınızın üzerine düşer. Belirli yöntemleri veya türleri ya da tüm derlemeyi işaretleyebilirsiniz.
+Bir kitaplık yazıyorsanız, API 'nizi platforma özel olarak işaretleyebilirsiniz. Bu durumda, gereksinimlerin denetim yükü çağıranlarınızın üzerine düşer. Belirli yöntemleri veya türleri ya da tüm derlemeyi işaretleyebilirsiniz.
 
 ```csharp
 [SupportedOSPlatform("windows")]

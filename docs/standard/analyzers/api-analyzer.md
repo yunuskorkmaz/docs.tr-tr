@@ -4,12 +4,12 @@ description: .NET API Çözümleyicisi 'nin kullanım dışı API 'Leri ve platf
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da4b2add206daa431124a7d24efc2676cbcaa69
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598096"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406251"
 ---
 # <a name="net-api-analyzer"></a>.NET API Çözümleyicisi
 
@@ -85,6 +85,9 @@ Genel gizleme, projeler genelinde API kullanımının tutarlılığını sağlam
 
 ## <a name="discover-cross-platform-issues"></a>Platformlar arası sorunları bulma
 
+> [!NOTE]
+> .NET 5,0, bu özelliğin yerini alacak şekilde [platform uyumluluğu Çözümleyicisi](platform-compat-analyzer.md) 'ni tanıtır. Platform uyumluluğu Çözümleyicisi, .NET SDK 'ya dahildir (Bu uygulamayı ayrı olarak yüklemeniz gerekmez) ve varsayılan olarak açık olur.
+
 Kullanım dışı olan API 'Lerle benzer şekilde, çözümleyici platformlar arası olmayan tüm API 'Leri tanımlar. Örneğin, <xref:System.Console.WindowWidth?displayProperty=nameWithType> Windows 'da, Linux ve macOS 'ta değil, üzerinde çalışmaz. Tanılama KIMLIĞI **hata listesi** penceresinde gösterilir. Sağ tıklayıp **Hızlı Eylemler ve yeniden düzenlemeler '** i seçerek bu uyarının görüntülenmesini sağlayabilirsiniz. İki seçeneğe sahip olduğunuz kullanım dışı durumların aksine (kullanımdan kaldırılan üyeyi kullanmaya devam edin, uyarıları gizleyin veya hiç kullanmayın), burada kodunuzu yalnızca belirli platformlar için geliştiriyorsanız, kodunuzu çalıştırmayı planladığınız diğer tüm platformlar için tüm uyarıları gizleyebilirsiniz. Bunu yapmak için yalnızca proje dosyanızı düzenlemeniz ve `PlatformCompatIgnore` tüm platformları listeleyen özelliği yok sayılacak şekilde eklemeniz gerekir. Kabul edilen değerler şunlardır: `Linux` , `macOS` , ve `Windows` .
 
 ```xml
@@ -129,3 +132,4 @@ Kullanıcı, tanılama nasıl ele alınacağına karar verir: uyarılar, hatalar
 
 - [API Çözümleyicisi blog gönderisine giriş](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) .
 - YouTube 'da [API Çözümleyicisi](https://youtu.be/eeBEahYXGd0) tanıtım videosu.
+- [Platform compatability Çözümleyicisi](platform-compat-analyzer.md)
