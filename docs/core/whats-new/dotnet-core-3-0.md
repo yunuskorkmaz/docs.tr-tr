@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fae6ffc56c90ef8f5340d3d7fd34cda82e3b4ca4
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537502"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437967"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -27,7 +27,13 @@ Yayın hakkında daha fazla bilgi için bkz. [.NET Core 3,0 duyurusu](https://de
 
 ## <a name="language-improvements-c-80"></a>Dil geliştirmeleri C# 8,0
 
-C# 8,0, [null olabilen başvuru türleri](../../csharp/tutorials/nullable-reference-types.md) özelliği, [zaman uyumsuz akışlar](../../csharp/tutorials/generate-consume-asynchronous-stream.md)ve [daha fazla desen](../../csharp/tutorials/pattern-matching.md)içeren bu sürümün bir parçasıdır. C# 8,0 özellikleri hakkında daha fazla bilgi için bkz. [c# 8,0 ' deki](../../csharp/whats-new/csharp-8.md)yenilikler.
+C# 8,0, [null olabilen başvuru türleri](../../csharp/language-reference/builtin-types/nullable-reference-types.md) özelliği, zaman uyumsuz akışlar ve daha fazla desen içeren bu sürümün bir parçasıdır. C# 8,0 özellikleri hakkında daha fazla bilgi için bkz. [c# 8,0 ' deki](../../csharp/whats-new/csharp-8.md)yenilikler.
+
+C# 8,0 Dil özellikleriyle ilgili öğreticiler:
+
+- [Öğretici: tasarım amacınızı null olabilen ve null yapılamayan başvuru türleriyle daha net bir şekilde Ifade edin](../../csharp/tutorials/nullable-reference-types.md)
+- [Öğretici: C# 8,0 ve .NET Core 3,0 kullanarak zaman uyumsuz akışlar oluşturma ve kullanma](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [Öğretici: tür odaklı ve veri odaklı algoritmalar oluşturmak için model eşleştirmeyi kullanın](../../csharp/tutorials/pattern-matching.md)
 
 Aşağıda ayrıntılı olarak açıklanan aşağıdaki API özelliklerini desteklemek için dil geliştirmeleri eklenmiştir:
 
@@ -63,7 +69,7 @@ Visual Studio kullanıyorsanız, Visual Studio 2017 **.NET Standard 2,1** veya *
 
 ### <a name="macos-apphost-and-notarization"></a>macOS appHost ve notarlama
 
-*yalnızca macOS*
+*Yalnızca macOS*
 
 MacOS için .NET Core SDK 3,0 ' den başlayarak, varsayılan bir yürütülebilir dosya (appHost olarak bilinir) oluşturma ayarı varsayılan olarak devre dışıdır. Daha fazla bilgi için bkz. [MacOS Catalina Notarleştirme ve .NET Core indirmeleri ve projeleri üzerindeki etki](../install/macos-notarization-issues.md).
 
@@ -512,7 +518,7 @@ Daha fazla bilgi için bkz. [.net platforma bağımlı iç](https://github.com/d
 
 ### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Core sürümü API 'Leri
 
-.NET Core 3,0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örnek:
+.NET Core 3,0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örneğin:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");

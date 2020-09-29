@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f561550d57e98a515fa3bdf56eea1dc1759b4e69
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 4ffef401c07dbb27db7c0225acdc6817d95bfe11
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88025026"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451457"
 ---
 ## <a name="available-counters"></a>Kullanılabilen sayaçlar
 
@@ -18,9 +18,9 @@ Aşağıdaki sayaçlar .NET çalışma zamanının bir parçası olarak yayımla
 |--|--|
 | :::no-loc text="% Time in GC since last GC"::: (`time-in-gc`) | Son GC 'den bu yana GC 'deki sürenin yüzdesi |
 | :::no-loc text="Allocation Rate"::: (`alloc-rate`) | Bayt cinsinden ayırma oranı |
-| :::no-loc text="CPU Usage"::: (`cpu-usage`) | CPU kullanımının yüzdesi |
+| :::no-loc text="CPU Usage"::: (`cpu-usage`) | İşlemin CPU kullanımının yüzdesi |
 | :::no-loc text="Exception Count"::: (`exception-count`) | Oluşan özel durumların sayısı |
-| :::no-loc text="GC Heap Size"::: (`gc-heap-size`) | Temel alınarak ayrılan bayt sayısı<xref:System.GC.GetTotalMemory(System.Boolean)?displayProperty=nameWithType> |
+| :::no-loc text="GC Heap Size"::: (`gc-heap-size`) | Temel alınarak ayrılan bayt sayısı <xref:System.GC.GetTotalMemory(System.Boolean)?displayProperty=nameWithType> |
 | :::no-loc text="Gen 0 GC Count"::: (`gen-0-gc-count`) | Gen 0 için GC 'nin kaç kez gerçekleştiği |
 | :::no-loc text="Gen 0 Size"::: (`gen-0-size`) | Gen 0 GC için bayt sayısı |
 | :::no-loc text="Gen 1 GC Count"::: (`gen-1-gc-count`) | Gen 1 için GC 'nin kaç kez gerçekleştiği |
@@ -28,13 +28,17 @@ Aşağıdaki sayaçlar .NET çalışma zamanının bir parçası olarak yayımla
 | :::no-loc text="Gen 2 GC Count"::: (`gen-2-gc-count`) | Gen 2 için GC 'nin kaç kez gerçekleştiği |
 | :::no-loc text="Gen 2 Size"::: (`gen-2-size`) | Gen 2 GC için bayt sayısı |
 | :::no-loc text="LOH Size"::: (`loh-size`) | Gen 3 GC için bayt sayısı |
-| :::no-loc text="Monitor Lock Contention Count"::: (`monitor-lock-contention-count`) | Monitöre göre izleyicinin kilidini almaya çalışırken çekişmenin sayısı<xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType> |
+| :::no-loc text="POH Size"::: (`poh-size`) | Sabitlenmiş nesne yığını için bayt sayısı (.NET 5 ve sonraki sürümlerinde kullanılabilir) |
+| :::no-loc text="GC Fragmentation"::: (`gc-fragmentation`) | GC yığın parçalanması (.NET 5 ve sonraki sürümlerde kullanılabilir) |
+| :::no-loc text="Monitor Lock Contention Count"::: (`monitor-lock-contention-count`) | Monitöre göre izleyicinin kilidini almaya çalışırken çekişmenin sayısı <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType> |
 | :::no-loc text="Number of Active Timers"::: (`active-timer-count`) | <xref:System.Threading.Timer>Şu anda etkin olan örneklerin sayısı<xref:System.Threading.Timer.ActiveCount?displayProperty=nameWithType> |
 | :::no-loc text="Number of Assemblies Loaded"::: (`assembly-count`) | <xref:System.Reflection.Assembly>Bir zaman noktasındaki bir işleme yüklenen örnek sayısı |
-| :::no-loc text="ThreadPool Completed Work Item Count"::: (`threadpool-completed-items-count`) | Şu ana kadar işlenen iş öğelerinin sayısı<xref:System.Threading.ThreadPool> |
-| :::no-loc text="ThreadPool Queue Length"::: (`threadpool-queue-length`) | Şu anda içinde işlenmek üzere sıraya alınan iş öğelerinin sayısı<xref:System.Threading.ThreadPool> |
+| :::no-loc text="ThreadPool Completed Work Item Count"::: (`threadpool-completed-items-count`) | Şu ana kadar işlenen iş öğelerinin sayısı <xref:System.Threading.ThreadPool> |
+| :::no-loc text="ThreadPool Queue Length"::: (`threadpool-queue-length`) | Şu anda içinde işlenmek üzere sıraya alınan iş öğelerinin sayısı <xref:System.Threading.ThreadPool> |
 | :::no-loc text="ThreadPool Thread Count"::: (`threadpool-thread-count`) | Üzerinde şu anda mevcut olan iş parçacığı havuzu iş parçacıklarının sayısı <xref:System.Threading.ThreadPool><xref:System.Threading.ThreadPool.ThreadCount?displayProperty=nameWithType> |
-| :::no-loc text="Working Set"::: (`working-set`) | Zaman tabanında bir noktada işlem bağlamına eşlenen fiziksel bellek miktarı<xref:System.Environment.WorkingSet?displayProperty=nameWithType> |
+| :::no-loc text="Working Set"::: (`working-set`) | Zaman tabanında bir noktada işlem bağlamına eşlenen fiziksel bellek miktarı <xref:System.Environment.WorkingSet?displayProperty=nameWithType> |
+| :::no-loc text="IL Bytes Jitted"::: (`il-bytes-jitted`) | JıT olarak derlenen ve bayt cinsinden (.NET 5 ve sonraki sürümlerde kullanılabilir) Toplam ILS boyutu |
+| :::no-loc text="Method Jitted Count"::: (`method-jitted-count`) | JıT olarak derlenen yöntemlerin sayısı (.NET 5 ve sonraki sürümlerinde kullanılabilir) |
 
 ### <a name="microsoftaspnetcorehosting-counters"></a>"Microsoft. AspNetCore. Hosting" sayaçları
 

@@ -2,12 +2,12 @@
 title: "C 'de zaman uyumsuz programlama #"
 description: Async, await, Task ve Task kullanılarak zaman uyumsuz programlama için C# dil desteğine genel bakış<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: 853019c39880b1f4ef6536aed5841ecab53d7304
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 02290e374aa97cb5d5ec6410c917751066949b23
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414987"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438105"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Async ve await ile asenkron programlama
 
@@ -56,7 +56,7 @@ Yukarıdaki kodda kötü bir uygulama gösterilmektedir: zaman uyumsuz işlemler
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
 
 > [!IMPORTANT]
-> Geçen toplam süre kabaca ilk senkronizasyon sürümü ile aynıdır. Kod, zaman uyumsuz programlama için bazı temel özelliklerden yararlanmıştır.
+> Geçen toplam süre kabaca ilk zaman uyumlu sürümle aynıdır. Kod, zaman uyumsuz programlama için bazı temel özelliklerden yararlanmıştır.
 
 > [!TIP]
 > , Ve ' nin tüm ve sırasıyla,, ve ' ın bir bütün olarak, ve ' ı `FryEggsAsync` `FryBaconAsync` `ToastBreadAsync` döndürecek şekilde güncelleştirilmiştir `Task<Egg>` `Task<Bacon>` `Task<Toast>` . Yöntemler özgün sürümlerinden "Async" sonekini içerecek şekilde yeniden adlandırılır. Uygulamaları, bu makalenin ilerleyen bölümlerinde [son sürümün](#final-version) bir parçası olarak gösterilir.
@@ -123,7 +123,7 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-:::image type="content" source="media/asynchronous-breakfast.png" alt-text="zaman uyumsuz Breakfast":::
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="zaman uyumlu Breakfast":::
 
 Zaman uyumsuz hazırlanmış Breakfast yaklaşık 20 dakika sürdü, bunun nedeni bazı görevlerin eşzamanlı olarak çalıştırılabilmesidir.
 
@@ -184,7 +184,7 @@ while (breakfastTasks.Count > 0)
 Tüm bu değişiklikler yapıldıktan sonra, kodun son sürümü şöyle görünür: <a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
-:::image type="content" source="media/whenany-async-breakfast.png" alt-text="herhangi bir zaman uyumsuz Breakfast":::
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="zaman uyumlu Breakfast":::
 
 Zaman uyumsuz hazırlanmış Breakfast 'in son sürümü yaklaşık 15 dakika sürdü, bunun nedeni bazı görevlerin eşzamanlı olarak çalıştırılabilmesi ve kodun aynı anda birden çok görevi izleyebilmesi ve yalnızca gerektiğinde işlem yapması olabilir.
 

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a44c3692dc9ed9b3de37955191edfb279403f152
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 0cfd9d6da2c53b46c04773f429ab2e52f2b65c7f
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516027"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438092"
 ---
 # <a name="tour-of-net"></a>.NET Turu
 
@@ -33,7 +33,7 @@ Microsoft, üç .NET dilini etkin bir şekilde geliştirir ve destekler: C#, F #
 
 * F #, geleneksel nesne yönelimli ve kesinlik temelli programlamayı da destekleyen platformlar arası, işlevsel ilk programlama dilidir. F # hakkında daha fazla bilgi edinmek için [f # kılavuzuna](../fsharp/index.yml) göz atın.
 
-* Visual Basic .NET üzerinde çalışan çeşitli uygulamalar oluşturmak için kullanacağınızı öğrenmek için kolay bir dildir. .NET dilleri arasında Visual Basic sözdizimi, normal insan diline en yakın bir deyişle, çoğu zaman yazılım geliştirme konusunda yeni kişiler daha kolay hale gelir.
+* Visual Basic .NET üzerinde çalışan çeşitli uygulamalar oluşturmak için kullanacağınızı öğrenmek için kolay bir dildir. .NET dilleri arasında Visual Basic sözdizimi, normal insan diline en yakın bir deyişle, çoğu zaman yazılım geliştirme konusunda yeni kişiler daha kolay hale gelir. Visual Basic hakkında daha fazla bilgi edinmek için [Visual Basic kılavuzuna](../visual-basic/index.yml) göz atın.
 
 ## <a name="automatic-memory-management"></a>Otomatik bellek yönetimi
 

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 0445ac33473c7e2d1916705893b22ba21bb981ff
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e73b34390143a2ac9b839e1da79b7894232c4b4
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536852"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437882"
 ---
 # <a name="partial-type-c-reference"></a>Kısmi tür (C# Başvurusu)
 
-Kısmi tür tanımları bir sınıf, yapı veya arabirimin tanımının birden fazla dosyaya bölünmesine izin verir.
+Kısmi tür tanımları bir sınıf, yapı, arabirim veya kaydın tanımının birden çok dosyaya bölünmesine izin verir.
 
 *File1.cs*içinde:
 
