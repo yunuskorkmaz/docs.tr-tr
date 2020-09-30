@@ -56,7 +56,7 @@
       href: tutorials/upgrade-to-nullable-references.md
     - name: Asenkron akışlar oluşturma ve kullanma
       href: tutorials/generate-consume-asynchronous-stream.md
-    - name: Desen eşleştirme kullanarak veri yeteneklerini geliştirme
+    - name: Desen eşleştirme ile veri odaklı algoritmalar derleme
       href: tutorials/pattern-matching.md
     - name: Konsol Uygulaması
       href: tutorials/console-teleprompter.md
@@ -221,7 +221,7 @@
       href: programming-guide/interop/index.md
     - name: Kodunuzu belgeleme
       href: codedoc.md
-    - name: Sürüm Oluşturma
+    - name: Sürüm oluşturma
       href: versioning.md
 - name: Nasıl yapılır C# makaleleri
   items:
