@@ -2,12 +2,12 @@
 title: WCF Yapılandırma Şeması
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: ab64b41e6e79c934ac0145dd7eec0a943f5dc473
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 44d5e0acc6f5a9ca43949bce0c7964354ad18270
+ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165136"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91573663"
 ---
 # <a name="wcf-configuration-schema"></a>WCF Yapılandırma Şeması
 
@@ -19,12 +19,12 @@ Windows Communication Foundation (WCF) yapılandırma öğeleri, WCF hizmetini v
   
  [Yapılandırma ayarlarını kilitleme](/previous-versions/aspnet/55th21y4(v=vs.100))  
   
- Bu bölüm, her yapılandırma öğesinin olası tüm değerlerini ve diğer WCF yapılandırma öğeleriyle nasıl etkileşime gireceğini açıklar. Aşağıdaki haritada WCF yapılandırma şeması gösterilmektedir:  
-  
- ![WCF yapılandırma şemasını gösteren diyagram.](./media/index/windows-communication-foundation-configuration-schema.gif)  
+ Bu bölüm, her yapılandırma öğesinin olası tüm değerlerini ve diğer WCF yapılandırma öğeleriyle nasıl etkileşime gireceğini açıklar. Aşağıdaki haritada WCF yapılandırma şeması gösterilmektedir:
+
+:::image type="content" source="./media/index/windows-communication-foundation-configuration-schema.gif" alt-text="WCF yapılandırma şemasını gösteren diyagram." lightbox="./media/index/windows-communication-foundation-configuration-schema.gif":::
   
 > [!CAUTION]
-> Olası güvenlik tehditlerini engellemek için, uygulama yapılandırma dosyalarınızda (app.config) uygun Access Control listeleriyle (ACL) WCF yapılandırma bölümlerini korumanız gerekir.  Örneğin, yalnızca uygun kişilerin uygulama bağlamalarında güvenlik ayarlarına veya bir hizmetin yapılandırma dosyasının hizmet modeli bölümüne erişebildiğinizden veya değiştirebilmelidir.  
+> Olası güvenlik tehditlerini engellemek için, uygulama yapılandırma dosyalarınızda (app.config) uygun Access Control listeleriyle (ACL) WCF yapılandırma bölümlerini koruyun. Örneğin, yalnızca uygun kişilerin uygulama bağlamalarında güvenlik ayarlarını veya bir hizmetin yapılandırma dosyasının hizmet modeli bölümünü erişebileceği veya bu ayarları değiştire, emin olun.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
