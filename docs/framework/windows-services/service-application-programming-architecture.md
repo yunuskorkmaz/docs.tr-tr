@@ -15,22 +15,21 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-author: ghogen
-ms.openlocfilehash: c59ccc5a8b2f11fda9c4734487092c1aabb74908
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 386311228abb08600acc249e80702c724c137900
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925585"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609271"
 ---
 # <a name="service-application-programming-architecture"></a>Hizmet Uygulaması Programlama Mimarisi
 Windows hizmeti uygulamaları sınıfından devralan bir sınıfa dayalıdır <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> . Bu sınıftan yöntemleri geçersiz kılar ve hizmetinizin nasıl davranacağını belirlemek için işlevleri tanımlayın.  
   
  Hizmet oluşturmaya dahil olan ana sınıflar şunlardır:  
   
-- <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>— <xref:System.ServiceProcess.ServiceBase> Bir hizmet oluştururken sınıfından yöntemleri geçersiz kılar ve hizmetin bu devralınmış sınıfta nasıl işlevleyeceğini belirlemek için kodu tanımlarsınız.  
+- <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — <xref:System.ServiceProcess.ServiceBase> Bir hizmet oluştururken sınıfından yöntemleri geçersiz kılar ve hizmetin bu devralınmış sınıfta nasıl işlevleyeceğini belirlemek için kodu tanımlarsınız.  
   
-- <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType>ve <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — hizmetinizi yüklemek ve kaldırmak için bu sınıfları kullanırsınız.  
+- <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> ve <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> — hizmetinizi yüklemek ve kaldırmak için bu sınıfları kullanırsınız.  
   
  Ayrıca, adlı bir sınıf <xref:System.ServiceProcess.ServiceController> hizmetin kendisini denetlemek için kullanılabilir. Bu sınıf, bir hizmetin oluşturulmasına dahil değildir, ancak hizmeti başlatmak ve durdurmak, komutlara iletmek ve bir dizi numaralandırma döndürmek için kullanılabilir.  
   
@@ -50,7 +49,7 @@ Windows hizmeti uygulamaları sınıfından devralan bir sınıfa dayalıdır <x
 > [!NOTE]
 > Bu yöntemler, hizmetin ömrü boyunca üzerinden taşınan durumları temsil eder; hizmet bir durumdan diğerine geçiş yapar. Örneğin, bir hizmetin çağrılmadan önce bir komuta yanıt vermesini hiçbir şekilde olmayacaktır <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> <xref:System.ServiceProcess.ServiceBase.OnStart%2A> .  
   
- İlgilendiğiniz birkaç başka özellik ve yöntem vardır. Bunlara  
+ İlgilendiğiniz birkaç başka özellik ve yöntem vardır. Bu güncelleştirmeler şunlardır:  
   
 - <xref:System.ServiceProcess.ServiceBase.Run%2A> <xref:System.ServiceProcess.ServiceBase> Sınıfında yöntemi. Bu, hizmetin ana giriş noktasıdır. Windows hizmet şablonunu kullanarak bir hizmet oluşturduğunuzda, `Main` hizmet çalıştırmak için uygulamanızın yöntemine kod eklenir. Bu kod şöyle görünür:  
   

@@ -155,7 +155,7 @@ items:
         href: ../core/sdk.md
       - name: .NET Core CLI
         items:
-          - name: Genel Bakış
+          - name: Genel bakış
             href: ../core/tools/index.md
           - name: Başvuru
             items:
@@ -289,7 +289,7 @@ items:
         items:
           - name: Proje SDK’leri
             items:
-              - name: Genel Bakış
+              - name: Genel bakış
                 href: ../core/project-sdk/overview.md
               - name: Başvuru
                 items:
@@ -331,6 +331,8 @@ items:
             href: ../core/diagnostics/event-counters.md
           - name: Günlüğe kaydetme ve izleme
             href: ../core/diagnostics/logging-tracing.md
+          - name: Kapsayıcılarda tanılama toplama
+            href: ../core/diagnostics/diagnostics-in-containers.md
           - name: .NET Core CLI genel araçları
             items:
               - name: dotnet-counters
@@ -370,6 +372,10 @@ items:
                     href: code-analysis/code-quality-rule-options.md
                   - name: Önceden tanımlanmış yapılandırmalar
                     href: code-analysis/predefined-configurations.md
+              - name: Kod stili kuralları
+                items:
+                  - name: Kural seçenekleri
+                    href: code-analysis/code-style-rule-options.md
           - name: Kural başvurusu
             items:
               - name: Kod kalitesi kuralları
@@ -928,7 +934,24 @@ items:
                       - name: CA2249
                         href: code-analysis/quality-rules/ca2249.md
               - name: Kod stili kuralları
-                href: /visualstudio/ide/editorconfig-language-conventions
+                items:
+                  - name: Genel bakış
+                    href: code-analysis/style-rules/index.md
+                  - name: Dil kuralları
+                    items:
+                      - name: Genel bakış
+                        displayName: language rules
+                        href: code-analysis/style-rules/language-rules.md
+                  - name: Biçimlendirme kuralları
+                    items:
+                      - name: Genel bakış
+                        displayName: formatting rules
+                        href: code-analysis/style-rules/formatting-rules.md
+                  - name: Adlandırma kuralları
+                    items:
+                      - name: Genel Bakış
+                        displayName: naming rules
+                        href: code-analysis/style-rules/naming-rules.md
           - name: Platform uyumluluk çözümleyicisi
             href: ../standard/analyzers/platform-compat-analyzer.md
           - name: API çözümleyicisi

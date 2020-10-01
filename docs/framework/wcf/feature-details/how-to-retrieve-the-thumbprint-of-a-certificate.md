@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 87c696323af442021af267f0d8c523418e2234f7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 0622ff9b990dd9d8fe14c4a4c1d48cc8530d5a61
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246785"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609479"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma
 Kimlik doğrulaması için bir X. 509.440 sertifikası kullanan bir Windows Communication Foundation (WCF) uygulaması yazarken, genellikle sertifikada bulunan taleplerin belirtilmesi gerekir. Örneğin, yönteminde sabit listesini kullanırken bir parmak izi talebi sağlamalısınız <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . Talep değerini bulmak için iki adım gerekir. İlk olarak, sertifikalar için Microsoft Yönetim Konsolu (MMC) ek bileşenini açın. (Bkz. [nasıl yapılır: MMC ek bileşeni Ile sertifikaları görüntüleme](how-to-view-certificates-with-the-mmc-snap-in.md).) İkincisi, burada açıklandığı gibi uygun bir sertifika bulun ve parmak izini (veya diğer talep değerlerini) kopyalayın.  
@@ -43,6 +43,6 @@ Kimlik doğrulaması için bir X. 509.440 sertifikası kullanan bir Windows Comm
 
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>
-- [Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Nasıl yapılır: MMC Ek Bileşeni ile Sertifikaları Görüntüleme](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma](how-to-create-temporary-certificates-for-use-during-development.md)

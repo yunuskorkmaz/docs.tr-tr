@@ -2,12 +2,12 @@
 title: SqlClient Akış Desteği
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 9dc7ee573bd011bd18d6c4b8bbd2d147b1fe907f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a396e3e172c63b0b71b085d4694184c42cc42f3e
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791406"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609251"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient Akış Desteği
 
@@ -20,13 +20,13 @@ Akış desteği, büyük Blobları göndermek, almak ve işlemek için, özellik
 > [!WARNING]
 > Bir uygulama `Context Connection` bağlantı dizesi anahtar sözcüğünü de kullanıyorsa, zaman uyumsuz çağrılar desteklenmez.
 >
-> Akışı desteklemek için eklenen üyeler, sorgulardan verileri almak ve sorguları ve saklı yordamlara parametreleri geçirmek için kullanılır. Akış özelliği temel OLTP ve veri geçiş senaryolarına yöneliktir ve şirket içi ve kapalı şirket içi veri geçişleri. ortamları için geçerlidir.
+> Akışı desteklemek için eklenen üyeler, sorgulardan verileri almak ve sorguları ve saklı yordamlara parametreleri geçirmek için kullanılır. Akış özelliği temel OLTP ve veri geçiş senaryolarına yöneliktir ve şirket içi ve şirket dışı veri geçişleri ortamları için geçerlidir.
 
 ## <a name="streaming-support-from-sql-server"></a>SQL Server akış desteği
 
-SQL Server akış desteği,, <xref:System.Data.Common.DbDataReader> ve <xref:System.IO.TextReader> nesneleri almak <xref:System.IO.Stream> <xref:System.Xml.XmlReader>ve bunlara yanıt vermek <xref:System.Data.SqlClient.SqlDataReader> için sınıflarında ve içindeki yeni işlevleri sunar. Bu sınıflar, sorgulardan verileri almak için kullanılır. Sonuç olarak, SQL Server adresinden akış desteği OLTP senaryolarından ve şirket içi ve şirket dışı ortamlar için geçerlidir.
+SQL Server akış desteği,, ve <xref:System.Data.Common.DbDataReader> <xref:System.Data.SqlClient.SqlDataReader> <xref:System.IO.Stream> <xref:System.Xml.XmlReader> nesneleri almak ve bunlara yanıt vermek için sınıflarında ve içindeki yeni işlevleri sunar <xref:System.IO.TextReader> . Bu sınıflar, sorgulardan verileri almak için kullanılır. Sonuç olarak, SQL Server adresinden akış desteği OLTP senaryolarından ve şirket içi ve şirket dışı ortamlar için geçerlidir.
 
-SQL Server 'den akış desteğini etkinleştirmek için <xref:System.Data.SqlClient.SqlDataReader> aşağıdaki Üyeler eklenmiştir:
+<xref:System.Data.SqlClient.SqlDataReader>SQL Server 'den akış desteğini etkinleştirmek için aşağıdaki Üyeler eklenmiştir:
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +40,7 @@ SQL Server 'den akış desteğini etkinleştirmek için <xref:System.Data.SqlCli
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-SQL Server 'den akış desteğini etkinleştirmek için <xref:System.Data.Common.DbDataReader> aşağıdaki Üyeler eklenmiştir:
+<xref:System.Data.Common.DbDataReader>SQL Server 'den akış desteğini etkinleştirmek için aşağıdaki Üyeler eklenmiştir:
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -50,17 +50,17 @@ SQL Server 'den akış desteğini etkinleştirmek için <xref:System.Data.Common
 
 ## <a name="streaming-support-to-sql-server"></a>SQL Server için akış desteği
 
-SQL Server için akış desteği, <xref:System.Data.SqlClient.SqlParameter> , ve <xref:System.IO.TextReader> nesnelerini kabul etmek ve bunlara yanıt <xref:System.IO.Stream>vermek için <xref:System.Xml.XmlReader>sınıfında yeni işlevsellik sunmaktadır. <xref:System.Data.SqlClient.SqlParameter>, parametreleri sorgulara ve saklı yordamlara geçirmek için kullanılır.
+SQL Server için akış desteği,, <xref:System.Data.SqlClient.SqlParameter> ve nesnelerini kabul etmek ve bunlara yanıt vermek için sınıfında yeni işlevsellik sunmaktadır <xref:System.Xml.XmlReader> <xref:System.IO.Stream> <xref:System.IO.TextReader> . <xref:System.Data.SqlClient.SqlParameter> , parametreleri sorgulara ve saklı yordamlara geçirmek için kullanılır.
 
-Bir <xref:System.Data.SqlClient.SqlCommand> nesne veya çağrıyı <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> elden atma tüm akış işlemlerini iptal etmelidir. Bir uygulama gönderirse <xref:System.Threading.CancellationToken>iptali garanti edilmez.
+Bir <xref:System.Data.SqlClient.SqlCommand> nesne veya çağrıyı elden atma <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> tüm akış işlemlerini iptal etmelidir. Bir uygulama gönderirse <xref:System.Threading.CancellationToken> iptali garanti edilmez.
 
-Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türler <xref:System.Data.SqlClient.SqlParameter.Value%2A> öğesinin<xref:System.IO.Stream>bir kabul edileceği:
+Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türler öğesinin bir kabul edileceği <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.IO.Stream> :
 
 - **İkili**
 
 - **Ikili**
 
-Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türler <xref:System.Data.SqlClient.SqlParameter.Value%2A> öğesinin<xref:System.IO.TextReader>bir kabul edileceği:
+Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türler öğesinin bir kabul edileceği <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.IO.TextReader> :
 
 - **Char**
 
@@ -68,13 +68,13 @@ Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türler <xre
 
 - **NVarChar**
 
-- **Xml**
+- **'Sini**
 
-<xref:System.Data.SqlClient.SqlParameter.Value%2A> **XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türü öğesinin<xref:System.Xml.XmlReader>bir kabul edileceği.
+**XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türü öğesinin bir kabul edileceği <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.Xml.XmlReader> .
 
-<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>, <xref:System.Xml.XmlReader> <xref:System.IO.TextReader>ve türündekideğerlerikabuledebilir.<xref:System.IO.Stream>
+<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> , ve türündeki değerleri kabul <xref:System.Xml.XmlReader> edebilir <xref:System.IO.TextReader> <xref:System.IO.Stream> .
 
-, Ve nesnesi tarafından tanımlanan değere<xref:System.Data.SqlClient.SqlParameter.Size%2A>aktarılır. <xref:System.IO.Stream> <xref:System.IO.TextReader> <xref:System.Xml.XmlReader>
+<xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> Ve <xref:System.IO.Stream> nesnesi tarafından tanımlanan değere aktarılır <xref:System.Data.SqlClient.SqlParameter.Size%2A> .
 
 ## <a name="sample----streaming-from-sql-server"></a>Örnek--SQL Server akışı
 

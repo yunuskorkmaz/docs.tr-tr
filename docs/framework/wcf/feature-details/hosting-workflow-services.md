@@ -2,12 +2,12 @@
 title: İş Akışı Hizmetlerini Barındırma
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: 95d8d8b8ea15ef543471afb19462ccb424e8e39b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b89eb05513d6b3973de50cd6360711c4f967f68
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555815"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609466"
 ---
 # <a name="hosting-workflow-services"></a>İş Akışı Hizmetlerini Barındırma
 

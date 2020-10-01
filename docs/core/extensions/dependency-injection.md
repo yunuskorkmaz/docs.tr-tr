@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/23/2020
 ms.topic: overview
-ms.openlocfilehash: b986f414dcc0e81578e6cf57304f6e5c31578e88
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 2aaa24e54dad7b765781bf7c790890a57a77af14
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247914"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608354"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 'e bağımlılık ekleme
 
@@ -294,3 +294,4 @@ Kapsamlı hizmetler kendilerini oluşturan kapsayıcı tarafından atılmış. K
 - [Dı uygulaması geliştirme için NDC Konferansı desenleri](https://www.youtube.com/watch?v=x-C-CNBVTaY)
 - [Açık bağımlılıklar ilkesi](../../architecture/modern-web-apps-azure/architectural-principles.md#explicit-dependencies)
 - [Denetim kapsayıcıları ve bağımlılık ekleme deseninin Inversion 'ı (Marwler)](https://www.martinfowler.com/articles/injection.html)
+- [GitHub.com/DotNet/Extensions](https://github.com/dotnet/extensions/issues) deposu 'nda dı hataları oluşturulmalıdır

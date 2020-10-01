@@ -1,33 +1,44 @@
 ---
 description: var-C# başvurusu
 title: var-C# başvurusu
-ms.date: 07/20/2015
+ms.date: 10/02/2020
 f1_keywords:
 - var
 - var_CSharpKeyword
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: 303a880a54a79e50515060e0ea28e8d021fa1b76
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d04bea9bcf5be726d3e81a1a53abed31f59330a0
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89141718"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608718"
 ---
 # <a name="var-c-reference"></a>var (C# Başvurusu)
 
-Visual C# 3,0 ' den başlayarak, yöntem kapsamında belirtilen değişkenlerin örtük bir "tür" türü olabilir `var` . Örtük olarak yazılmış bir yerel değişken, türü kendi kendinize bildirdiyseniz olduğu gibi kesin şekilde yazılır, ancak derleyici türü belirler. Aşağıdaki iki bildirimi `i` işlevsel olarak eşdeğerdir:
+C# 3 ' ten başlayarak, yöntem kapsamında belirtilen değişkenlerin örtülü bir "tür" olması olabilir `var` . Örtük olarak yazılmış bir yerel değişken, türü kendi kendinize bildirdiyseniz olduğu gibi kesin şekilde yazılır, ancak derleyici türü belirler. Aşağıdaki iki bildirimi `i` işlevsel olarak eşdeğerdir:
 
 ```csharp
 var i = 10; // Implicitly typed.
 int i = 10; // Explicitly typed.
 ```
 
-Daha fazla bilgi için bkz. [LINQ sorgu Işlemlerinde](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md) [örtük olarak yazılan yerel değişkenler](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md) ve tür ilişkileri.
-
 > [!IMPORTANT]
-> `var`Null yapılabilir başvuru türleri etkinken kullanıldığında, ifade türü null yapılabilir olmasa bile her zaman null yapılabilir bir başvuru türü anlamına gelir.
+> `var` [Null yapılabilir başvuru türleri](../builtin-types/nullable-reference-types.md) etkinken kullanıldığında, ifade türü null yapılabilir olmasa bile her zaman null yapılabilir bir başvuru türü anlamına gelir.
+
+`var`Anahtar sözcüğünün yaygın kullanımı, Oluşturucu çağırma ifadeleridir. Kullanımı, `var` Aşağıdaki örnekte gösterildiği gibi değişken bildiriminde ve nesne örneklemede bir tür adı yinelemenize izin verir:
+
+```csharp
+var xs = new List<int>();
+```
+
+C# 9,0 ' den başlayarak, bir alternatif olarak, hedef türü belirtilmiş bir [ `new` ifade](../operators/new-operator.md) kullanabilirsiniz:
+
+```csharp
+List<int> xs = new();
+List<int>? ys = new();
+```
 
 ## <a name="example"></a>Örnek
 
@@ -38,5 +49,5 @@ Aşağıdaki örnek iki sorgu ifadesini gösterir. İlk ifadede öğesinin kulla
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [Örtülü Olarak Yazılan Yerel Değişkenler](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
+- [Örtük olarak yazılan yerel değişkenler](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
+- [LINQ sorgu işlemlerinde tür ilişkileri](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)

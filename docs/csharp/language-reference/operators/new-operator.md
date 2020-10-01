@@ -1,18 +1,18 @@
 ---
 description: New işleci-C# başvurusu
 title: New işleci-C# başvurusu
-ms.date: 06/25/2019
+ms.date: 10/02/2020
 f1_keywords:
 - new_CSharpKeyword
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 88ec929317d4e6c6651233c1a1aa0ce8a8cce611
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3125f3d2c694dcfc5682ee482f3f76072ac3726d
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118279"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609388"
 ---
 # <a name="new-operator-c-reference"></a>New işleci (C# Başvurusu)
 
@@ -29,6 +29,14 @@ Bir türün yeni bir örneğini oluşturmak için, genellikle işlecini kullanar
 [object or collection initializer](../../programming-guide/classes-and-structs/object-and-collection-initializers.md) `new` Aşağıdaki örnekte gösterildiği gibi, bir ifadede bir nesne oluşturmak ve başlatmak için işleciyle bir nesne veya koleksiyon başlatıcısı kullanabilirsiniz:
 
 [!code-csharp-interactive[constructor with initializer](snippets/shared/NewOperator.cs#ConstructorWithInitializer)]
+
+C# 9,0 ile başlayarak, Oluşturucu çağırma ifadeleri Target türünde. Diğer bir deyişle, bir ifadenin hedef türü biliniyorsa, aşağıdaki örnekte gösterildiği gibi, bir tür adını atlayabilirsiniz:
+
+:::code language="csharp" source="snippets/shared/NewOperator.cs" id="SnippetTargetTyped":::
+
+Yukarıdaki örnekte gösterildiği gibi, her zaman ayraçları hedef türü bir `new` ifadede kullanırsınız.
+
+Bir ifadenin hedef türü `new` bilinmiyorsa (örneğin, [`var`](../keywords/var.md) anahtar sözcüğünü kullandığınızda), bir tür adı belirtmeniz gerekir.
 
 ## <a name="array-creation"></a>Dizi oluşturma
 
@@ -61,6 +69,8 @@ Kullanıcı tanımlı bir tür işleci aşırı yükleyemez `new` .
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Yeni işleç](~/_csharplang/spec/expressions.md#the-new-operator) bölümüne bakın.
+
+Hedef türü belirtilmiş bir ifade hakkında daha fazla bilgi için `new` bkz. [özellik teklifi Note](~/_csharplang/proposals/csharp-9.0/target-typed-new.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

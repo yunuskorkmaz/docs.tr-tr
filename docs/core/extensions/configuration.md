@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/16/2020
 ms.topic: overview
-ms.openlocfilehash: f6b3bcd6633665d837360384f3610fe51b7fd8cd
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f5dc7c99b209b16dfb8595f9d50dcb1428bbde84
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874727"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91607998"
 ---
 # <a name="configuration-in-net"></a>.NET 'teki yapılandırma
 
@@ -68,3 +68,4 @@ Aşağıdaki tabloda .NET Core uygulamaları için kullanılabilen yapılandırm
 
 - [.NET 'teki yapılandırma sağlayıcıları](configuration-providers.md)
 - [Özel yapılandırma sağlayıcısı uygulama](custom-configuration-provider.md)
+- Yapılandırma hataları [GitHub.com/DotNet/Extensions](https://github.com/dotnet/extensions/issues) deposu 'nda oluşturulmalıdır

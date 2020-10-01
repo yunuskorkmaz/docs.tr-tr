@@ -3,12 +3,12 @@ title: C# etkileşimli öğreticilerine giriş
 description: Tarayıcınızda C# öğrenin ve kendi geliştirme ortamınızı kullanmaya başlayın
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 9a93e34f7b54d12b3f69589d7bb2181fc240403c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554573"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609186"
 ---
 # <a name="introduction-to-c"></a>C 'ye giriş\#
 
@@ -52,7 +52,13 @@ Bu öğreticide, yukarıda listelenen dersleri tamamladığınız varsayılmakta
 
 ## <a name="introduction-to-classes"></a>[Sınıflara giriş](introduction-to-classes.md)
 
-Bu son öğretici yalnızca kendi yerel geliştirme ortamınız ve .NET Core kullanılarak makinenizde çalıştırılabilir.
+Bu öğretici yalnızca kendi yerel geliştirme ortamınız ve .NET Core kullanılarak makinenizde çalıştırılabilir.
 Bir konsol uygulaması oluşturacaksınız ve C# dilinin parçası olan temel nesne yönelimli özellikleri görürsünüz.
 
 Bu öğreticide, çevrimiçi giriş öğreticilerini tamamladığınız ve [.NET Core SDK](https://dotnet.microsoft.com/download) ve [Visual Studio Code](https://code.visualstudio.com/)yüklediğiniz varsayılmaktadır.
+
+## <a name="object-oriented-programming"></a>[Nesne odaklı programlama](object-oriented-programming.md)
+
+Bu öğretici, nesne odaklı programlamada kullanılan kavramları öğretir. C# örnekleri kullanarak *soyutlama*, *kapsülleme*, *Devralma*ve çok *biçimlilik* kavramlarını öğreneceksiniz.
+
+Bu öğreticide, çevrimiçi giriş öğreticilerini tamamladığınız ve [.NET Core SDK](https://dotnet.microsoft.com/download) ve [Visual Studio Code](https://code.visualstudio.com/) ya da [Visual Studio 'yu](https://visualstudio.com) geliştirme makinenize yüklediğiniz varsayılmaktadır.

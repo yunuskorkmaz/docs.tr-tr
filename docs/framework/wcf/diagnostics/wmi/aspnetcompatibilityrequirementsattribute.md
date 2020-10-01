@@ -2,17 +2,17 @@
 title: AspNetCompatibilityRequirementsAttribute
 ms.date: 03/30/2017
 ms.assetid: 00908a39-a21b-4029-bbb9-33e5a6ed25a7
-ms.openlocfilehash: 8e4b2e0e32ccd3b671e81531833ccb3aa3788389
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b11aedc3069b80df40e36949e009dc902680889
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964274"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609453"
 ---
 # <a name="aspnetcompatibilityrequirementsattribute"></a>AspNetCompatibilityRequirementsAttribute
 AspNetCompatibilityRequirementsAttribute  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class AspNetCompatibilityRequirementsAttribute : Behavior  
@@ -22,23 +22,23 @@ class AspNetCompatibilityRequirementsAttribute : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- AspNetCompatibilityRequirementsAttribute sınıf herhangi bir yöntemi tanımlamaz.  
+ AspNetCompatibilityRequirementsAttribute sınıfı herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- AspNetCompatibilityRequirementsAttribute sınıfı şu özelliğe sahip.  
+ AspNetCompatibilityRequirementsAttribute sınıfı aşağıdaki özelliğe sahiptir.  
   
 ### <a name="requirementsmode"></a>RequirementsMode  
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Asp.Net uyumluluk modunun etkin olup olmadığını gösterir.  
+ ASP.NET uyumluluk modunun etkin olup olmadığını gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

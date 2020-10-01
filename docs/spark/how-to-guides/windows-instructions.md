@@ -4,12 +4,12 @@ description: Windows 'da Apache Spark için .NET uygulamanızı nasıl oluştura
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: d4755ff94ffc1f678bc078e382e353c203caba87
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: d355380e92235e799d366dca02eaf8450f563f33
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812256"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609284"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
 
@@ -91,7 +91,7 @@ Bir `dotnet` `java` `mvn` `spark-shell` sonraki bölüme geçmeden önce komut s
 > [!NOTE]
 > Bir ortam değişkeni güncelleştirilirse, komut satırının yeni bir örneği gerekli olabilir.
 
-## <a name="build"></a>Yapı
+## <a name="build"></a>Oluşturma
 
 Bu kılavuzun geri kalanı için, .NET Apache Spark deposunu makinenize Klonladığınız bir işlem olması gerekir. Kopyalanmış depo için herhangi bir konum seçebilirsiniz. Örneğin, * C:\github\dotnet-Spark \* .
 

@@ -9,13 +9,12 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-author: ghogen
-ms.openlocfilehash: 9693e3d387f38319519ab04211d8219fe1e5dda1
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: cd749d325bec6636243dec1905f79abb5e42f04e
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925715"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608406"
 ---
 # <a name="how-to-write-services-programmatically"></a>Nasıl yapılır: Hizmetleri Program Aracılığıyla Yazma
 Windows hizmeti proje şablonunu kullanmayı tercih ederseniz, devralma ve diğer altyapı öğelerini kendiniz ayarlayarak kendi hizmetlerinizi yazabilirsiniz. Programlı olarak bir hizmet oluşturduğunuzda, şablonun sizin için başka bir tanıtıcı tutacağından birkaç adım gerçekleştirmeniz gerekir:  
@@ -36,7 +35,7 @@ Windows hizmeti proje şablonunu kullanmayı tercih ederseniz, devralma ve diğe
   
     3. **System.ServiceProcess.dll** kaydırın ve **Seç**' e tıklayın.  
   
-    4. **Tamam** düğmesine tıklayın.  
+    4. **Tamam**'a tıklayın.  
   
 2. Bir sınıf ekleyin ve bunu öğesinden devralacak şekilde yapılandırın <xref:System.ServiceProcess.ServiceBase> :  
   

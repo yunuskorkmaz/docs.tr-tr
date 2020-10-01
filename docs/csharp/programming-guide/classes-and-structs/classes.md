@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 93fc0296eeb410ba7ca0e781bededbe79820506d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 68b41eef0b604b80a9659eddf45d6512eac44fd6
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178872"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91607739"
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 
@@ -103,7 +103,7 @@ Aşağıdaki örnek, bir [Otomatik uygulanan özellik](auto-implemented-properti
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Nesne Odaklı Programlama](../concepts/object-oriented-programming.md)
+- [Nesne Odaklı Programlama](../../tutorials/intro-to-csharp/object-oriented-programming.md)
 - [Çok biçimlilik](polymorphism.md)
 - [Tanımlayıcı adları](../inside-a-program/identifier-names.md)
 - [Üyeler](members.md)

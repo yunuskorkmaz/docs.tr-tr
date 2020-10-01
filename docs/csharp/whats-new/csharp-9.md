@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: e109deaa26b33a7780df11031c1f3e0477cd5431
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247624"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609199"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -204,11 +204,11 @@ Bu özellikler, bazı senaryolarda performansı iyileştirebilir. Bunlar yalnız
 
 ## <a name="fit-and-finish-features"></a>Sığdırma ve son özellikler
 
-Diğer özelliklerin çoğu, daha verimli bir şekilde kod yazmanıza yardımcı olur. C# 9,0 ' de, oluşturulan nesnenin türü zaten bilindiğinde yeni bir ifadede türü atlayabilirsiniz. En yaygın kullanım, alan bildirimlerinde bulunur:
+Diğer özelliklerin çoğu, daha verimli bir şekilde kod yazmanıza yardımcı olur. C# 9,0 ' de, oluşturulan nesnenin türü zaten biliniyorsa bir [ `new` ifadede](../language-reference/operators/new-operator.md) türü atlayabilirsiniz. En yaygın kullanım, alan bildirimlerinde bulunur:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="WeatherStationField":::
 
-Hedef türü, bir yönteme parametre olarak geçirilecek yeni bir nesne oluşturmanız gerektiğinde de kullanılabilir. `ForecastFor()`Aşağıdaki imzaya sahip bir yöntem düşünün:
+`new`Bir yönteme bağımsız değişken olarak geçirmek için yeni bir nesne oluşturmanız gerektiğinde, target türü de kullanılabilir. `ForecastFor()`Aşağıdaki imzaya sahip bir yöntem düşünün:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="ForecastSignature":::
 
@@ -220,7 +220,7 @@ Bu özellik için bir diğer iyi kullanım, yeni bir nesneyi başlatmak için ya
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
-Bir ifade kullanarak varsayılan Oluşturucu tarafından oluşturulan bir örnek döndürebilirsiniz `return new();` .
+Bir ifadesini kullanarak varsayılan Oluşturucu tarafından oluşturulan bir örnek döndürebilirsiniz `return new();` .
 
 Benzer bir özellik, [koşullu ifadelerin](../language-reference/operators/conditional-operator.md)hedef tür çözümlemesini geliştirir. Bu değişiklik ile, iki ifadenin bir öğesinden diğerine örtük dönüştürmesi gerekmez, ancak her ikisi de hedef tür için örtük Dönüştürmelere sahip olabilir. Büyük olasılıkla bu değişikliği fark edeceksiniz. Ne fark edeceksiniz, daha önce gerekli olan veya derlenmeyen bazı Koşullu ifadeler artık çalışır.
 

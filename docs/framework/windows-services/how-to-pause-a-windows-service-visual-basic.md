@@ -10,13 +10,12 @@ helpviewer_keywords:
 - Windows Service applications, pausing
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
-author: ghogen
-ms.openlocfilehash: 628cc2e896f7f8a289e52674b721c4aef605854c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 19919a8b0a289f0e88eb136d8c010a036e84cbec
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925572"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608510"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>Nasıl yapılır: Windows Hizmetini Duraklatma (Visual Basic)
 Bu örnek, <xref:System.ServiceProcess.ServiceController> bileşeni yerel BILGISAYARDAKI IIS Yöneticisi hizmetini duraklatmak için kullanır.  

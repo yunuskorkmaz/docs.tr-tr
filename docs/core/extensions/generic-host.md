@@ -4,12 +4,12 @@ author: IEvangelist
 description: Uygulama başlatma ve ömür yönetiminden sorumlu .NET genel ana bilgisayarı hakkında bilgi edinin.
 ms.author: dapine
 ms.date: 09/18/2020
-ms.openlocfilehash: c1b22b4490dc54d462482976d1c2e512f812c9a9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a1f82f6c6b5d250d6e81351aa02e50e23636280b
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875864"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608275"
 ---
 # <a name="net-generic-host"></a>.NET genel ana bilgisayar
 
@@ -142,3 +142,4 @@ Daha fazla bilgi için bkz. [.net 'Teki yapılandırma](configuration.md).
 
 - [.NET 'teki yapılandırma](configuration.md)
 - [ASP.NET Core Web ana bilgisayarı](/aspnet/core/fundamentals/host/web-host)
+- Genel ana bilgisayar hataları [GitHub.com/DotNet/Extensions](https://github.com/dotnet/extensions/issues) deposu 'nda oluşturulmalıdır
