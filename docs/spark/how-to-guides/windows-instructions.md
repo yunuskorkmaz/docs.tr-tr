@@ -17,7 +17,7 @@ Bu makalede, Windows 'da Apache Spark uygulamalarınızı .NET için nasıl olu�
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adımlarına atlayın.
 
