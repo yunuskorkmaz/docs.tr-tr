@@ -7,4 +7,4 @@ ms.lasthandoff: 07/01/2020
 ms.locfileid: "85617593"
 ---
 > [!NOTE]
-> <span data-ttu-id="3ef7d-101">Bu konu, şu anda önizleme aşamasında olan Apache Spark için .NET 'e başvurur.</span><span class="sxs-lookup"><span data-stu-id="3ef7d-101">This topic refers to .NET for Apache Spark, which is currently in preview.</span></span>
+> <span data-ttu-id="58dc1-101">Bu konu, şu anda önizleme aşamasında olan Apache Spark için .NET 'e başvurur.</span><span class="sxs-lookup"><span data-stu-id="58dc1-101">This topic refers to .NET for Apache Spark, which is currently in preview.</span></span>
