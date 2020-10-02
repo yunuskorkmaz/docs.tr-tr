@@ -3,12 +3,12 @@ title: Derleme yapılandırması ayarları
 description: JıT derleyicisinin .NET Core uygulamaları için nasıl çalıştığını yapılandıran çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: e5f9e1245b749864787fb808527d022665197edf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762012"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654848"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Derleme için çalışma zamanı yapılandırma seçenekleri
 
@@ -23,13 +23,13 @@ ms.locfileid: "83762012"
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| **runtimeconfig. JSON** | `System.Runtime.TieredCompilation` | `true`-etkin<br/>`false`-devre dışı |
-| **MSBuild özelliği** | `TieredCompilation` | `true`-etkin<br/>`false`-devre dışı |
-| **Ortam değişkeni** | `COMPlus_TieredCompilation` | `1`-etkin<br/>`0`-devre dışı |
+| ** Üzerinderuntimeconfig.js** | `System.Runtime.TieredCompilation` | `true` -etkin<br/>`false` -devre dışı |
+| **MSBuild özelliği** | `TieredCompilation` | `true` -etkin<br/>`false` -devre dışı |
+| **Ortam değişkeni** | `COMPlus_TieredCompilation` | `1` -etkin<br/>`0` -devre dışı |
 
 ### <a name="examples"></a>Örnekler
 
-*runtimeconfig. JSON* dosyası:
+*runtimeconfig.js* dosya:
 
 ```json
 {
@@ -63,13 +63,13 @@ Proje dosyası:
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| **runtimeconfig. JSON** | `System.Runtime.TieredCompilation.QuickJit` | `true`-etkin<br/>`false`-devre dışı |
-| **MSBuild özelliği** | `TieredCompilationQuickJit` | `true`-etkin<br/>`false`-devre dışı |
-| **Ortam değişkeni** | `COMPlus_TC_QuickJit` | `1`-etkin<br/>`0`-devre dışı |
+| ** Üzerinderuntimeconfig.js** | `System.Runtime.TieredCompilation.QuickJit` | `true` -etkin<br/>`false` -devre dışı |
+| **MSBuild özelliği** | `TieredCompilationQuickJit` | `true` -etkin<br/>`false` -devre dışı |
+| **Ortam değişkeni** | `COMPlus_TC_QuickJit` | `1` -etkin<br/>`0` -devre dışı |
 
 ### <a name="examples"></a>Örnekler
 
-*runtimeconfig. JSON* dosyası:
+*runtimeconfig.js* dosya:
 
 ```json
 {
@@ -102,13 +102,13 @@ Proje dosyası:
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| **runtimeconfig. JSON** | `System.Runtime.TieredCompilation.QuickJitForLoops` | `false`-devre dışı<br/>`true`-etkin |
-| **MSBuild özelliği** | `TieredCompilationQuickJitForLoops` | `false`-devre dışı<br/>`true`-etkin |
-| **Ortam değişkeni** | `COMPlus_TC_QuickJitForLoops` | `0`-devre dışı<br/>`1`-etkin |
+| ** Üzerinderuntimeconfig.js** | `System.Runtime.TieredCompilation.QuickJitForLoops` | `false` -devre dışı<br/>`true` -etkin |
+| **MSBuild özelliği** | `TieredCompilationQuickJitForLoops` | `false` -devre dışı<br/>`true` -etkin |
+| **Ortam değişkeni** | `COMPlus_TC_QuickJitForLoops` | `0` -devre dışı<br/>`1` -etkin |
 
 ### <a name="examples"></a>Örnekler
 
-*runtimeconfig. JSON* dosyası:
+*runtimeconfig.js* dosya:
 
 ```json
 {
@@ -135,9 +135,9 @@ Proje dosyası:
 ## <a name="readytorun"></a>ReadyToRun
 
 - .NET Core çalışma zamanının, kullanılabilir ReadyToRun verilerine sahip görüntüler için önceden derlenmiş kod kullanıp kullanmadığını yapılandırır. Bu seçeneği devre dışı bırakmak, çalışma zamanını JıT derleme çerçevesi koduna zorlar.
-- Daha fazla bilgi için bkz. [Readytorun](../whats-new/dotnet-core-3-0.md#readytorun-images).
+- Daha fazla bilgi için bkz. [çalıştırılmaya hazırlanma](../deploying/ready-to-run.md).
 - Bu ayarı atlarsanız, .NET kullanılabilir olduğunda ReadyToRun verilerini kullanır. Bu değeri değerine ayarlamaya eşdeğerdir `1` .
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| **Ortam değişkeni** | `COMPlus_ReadyToRun` | `1`-etkin<br/>`0`-devre dışı |
+| **Ortam değişkeni** | `COMPlus_ReadyToRun` | `1` -etkin<br/>`0` -devre dışı |

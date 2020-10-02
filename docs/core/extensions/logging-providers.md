@@ -4,12 +4,12 @@ description: Günlüğe kaydetme sağlayıcısı API 'sinin .NET uygulamalarınd
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: 936413be1514e6cea20e28a7d4431c572560d193
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 3bd10564f23744d4798d0a6a4b49a7a29be2bc19
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614759"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654685"
 ---
 # <a name="logging-providers-in-net"></a>.NET 'te günlüğe kaydetme sağlayıcıları
 
@@ -20,7 +20,7 @@ Varsayılan .NET Worker uygulama şablonları:
 - [Genel Konağı](generic-host.md)kullanın.
 - <xref:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder%2A>Aşağıdaki günlük sağlayıcılarını ekleyen çağırın:
   - [Konsol](#console)
-  - [H](#debug)
+  - [Hata ayıklama](#debug)
   - [EventSource](#event-source)
   - [EventLog](#windows-eventlog): yalnızca Windows
 
@@ -68,7 +68,7 @@ Yukarıdaki kod, dı kapsayıcısının bir örneğini oluşturmak için ilk kez
 Microsoft uzantıları, çalışma zamanı kitaplıklarının bir parçası olarak aşağıdaki günlük sağlayıcılarını içerir:
 
 - [Konsol](#console)
-- [H](#debug)
+- [Hata ayıklama](#debug)
 - [EventSource](#event-source)
 - [EventLog](#windows-eventlog)
 
@@ -79,7 +79,7 @@ Aşağıdaki günlük oluşturma sağlayıcıları Microsoft tarafından gönder
 
 ### <a name="console"></a>Konsol
 
-`Console`Sağlayıcı çıktıyı konsola kaydeder. Geliştirme sırasında günlükleri görüntüleme hakkında daha fazla bilgi için `Console` bkz. [DotNet Run ve Visual Studio 'Dan çıktıyı günlüğe kaydetme](logging.md#logging-output-from-dotnet-run-and-visual-studio).
+`Console`Sağlayıcı çıktıyı konsola kaydeder.
 
 ### <a name="debug"></a>Hata ayıklama
 

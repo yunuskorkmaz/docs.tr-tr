@@ -4,12 +4,12 @@ author: IEvangelist
 description: Microsoft. Extensions. Logging NuGet paketi tarafından sunulan günlüğe kaydetme çerçevesini nasıl kullanacağınızı öğrenin.
 ms.author: dapine
 ms.date: 09/30/2020
-ms.openlocfilehash: a742e192f8e080e2c76ebeb005168647e440d8ef
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 2e6d8710015d8e998a9710f2cdeb86d925236196
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614764"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654835"
 ---
 # <a name="logging-in-net"></a>.NET oturumu açma
 
@@ -180,7 +180,7 @@ Aşağıdaki tabloda <xref:Microsoft.Extensions.Logging.LogLevel> değerler, kol
 | LogLevel | Değer | Yöntem | Açıklama |
 |--|--|--|--|
 | [İzleme](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | En ayrıntılı iletileri içerir. Bu iletilerde hassas uygulama verileri bulunabilir. Bu iletiler varsayılan olarak devre dışıdır ve üretimde ***etkinleştirilmemelidir.*** |
-| [H](xref:Microsoft.Extensions.Logging.LogLevel) | 1 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug%2A> | Hata ayıklama ve geliştirme için. Yüksek hacimden dolayı üretimde dikkatli olarak kullanın. |
+| [Hata ayıklama](xref:Microsoft.Extensions.Logging.LogLevel) | 1 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug%2A> | Hata ayıklama ve geliştirme için. Yüksek hacimden dolayı üretimde dikkatli olarak kullanın. |
 | [Bilgi](xref:Microsoft.Extensions.Logging.LogLevel) | 2 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation%2A> | Uygulamanın genel akışını izler. Uzun süreli bir değere sahip olabilir. |
 | [Uyarı](xref:Microsoft.Extensions.Logging.LogLevel) | 3 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning%2A> | Olağandışı veya beklenmeyen olaylar için. Genellikle, uygulamanın başarısız olmasına neden olmayan hataları veya koşulları içerir. |
 | [Hata](xref:Microsoft.Extensions.Logging.LogLevel) | 4 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogError%2A> | İşlenemeyen hatalar ve özel durumlar için. Bu iletiler, uygulama genelinde bir hata değil, geçerli işlemde veya istekte bir hata olduğunu gösterir. |
@@ -222,7 +222,7 @@ public async Task<T> GetAsync<T>(string id)
 
 Yukarıdaki kodda, ilk `Log{LogLevel}` parametresi `AppLogEvents.Read` [günlük olay kimliğidir](#log-event-id). İkinci parametre, kalan Yöntem parametreleri tarafından belirtilen bağımsız değişken değerleri için yer tutucuları olan bir ileti şablonudur. Yöntem parametreleri bu makalenin ilerleyen kısımlarında bulunan [ileti şablonu](#log-message-template) bölümünde açıklanmaktadır.
 
-Uygun günlük düzeyini yapılandırın ve `Log{LogLevel}` belirli bir depolama ortamına ne kadar günlük çıkışının yazıldığını denetlemek için doğru yöntemleri çağırın. Örneğin:
+Uygun günlük düzeyini yapılandırın ve `Log{LogLevel}` belirli bir depolama ortamına ne kadar günlük çıkışının yazıldığını denetlemek için doğru yöntemleri çağırın. Örnek:
 
 - Üretimde:
   - Veya düzeylerinde günlüğe kaydetme, `Trace` `Information` yüksek hacimli ayrıntılı günlük iletileri oluşturur. Maliyetleri denetlemek ve veri depolama sınırlarını aşmamak için, `Trace` `Information` iletileri yüksek hacimli ve düşük maliyetli bir veri deposuna günlüğe kaydedin. `Trace`Belirli kategorileri ve sınırlamayı değerlendirin `Information` .
@@ -433,7 +433,7 @@ class Program
 
 ## <a name="non-host-console-app"></a>Konak olmayan konsol uygulaması
 
-[Genel ana bilgisayarı](generic-host.md) olmayan uygulamalar için günlük kaydı kodu, [sağlayıcıların Eklenme](#add-providers) ve [günlükçülerin oluşturulduğu](#create-logs)yönteme göre farklılık gösterir. Konak olmayan bir konsol uygulamasında, `Add{provider name}` oluşturma sırasında sağlayıcının uzantı yöntemini çağırın `LoggerFactory` :
+[Genel ana bilgisayarı](generic-host.md) olmayan uygulamalar için günlük kaydı kodu, [sağlayıcıların Eklenme](logging-providers.md#built-in-logging-providers) ve [günlükçülerin oluşturulduğu](#create-logs)yönteme göre farklılık gösterir. Konak olmayan bir konsol uygulamasında, `Add{provider name}` oluşturma sırasında sağlayıcının uzantı yöntemini çağırın `LoggerFactory` :
 
 ```csharp
 class Program

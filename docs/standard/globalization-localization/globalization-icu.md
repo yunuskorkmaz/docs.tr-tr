@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: b52afd80c10afb6723679b2a74f11c7a4f59091f
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 60533fbb215ffe8baba7e2d200faa1c4937294b9
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608380"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654887"
 ---
 # <a name="net-globalization-and-icu"></a>.NET Genelleştirme ve ıCU
 
@@ -107,7 +107,7 @@ Kendi içinde bulunan uygulamalar için, Kullanıcı tarafından özel bir eylem
 
 ICU 'yi bir NuGet paketi aracılığıyla kullanıyorsanız, bu, çerçeveye bağımlı uygulamalarda kullanılır. NuGet yerel varlıkları çözer ve bu dosyaları `deps.json` dosya ve uygulamanın çıkış dizinine dahil eder `runtimes` . .NET onu buradan yükler.
 
-IU 'nin yerel bir derlemeden kullanıldığı, çerçeveye bağımlı uygulamalar (kendi içinde olmayan) için ek adımlar gerçekleştirmeniz gerekir. .NET SDK 'Sı henüz "gevşek" yerel ikililerinin içine dahil edilecek bir özelliğe sahip değildir `deps.json` ( [Bu SDK sorununa](https://github.com/dotnet/sdk/issues/11373)bakın). Bunun yerine, uygulamanın proje dosyasına ek bilgiler ekleyerek bunu etkinleştirebilirsiniz. Örneğin:
+IU 'nin yerel bir derlemeden kullanıldığı, çerçeveye bağımlı uygulamalar (kendi içinde olmayan) için ek adımlar gerçekleştirmeniz gerekir. .NET SDK 'Sı henüz "gevşek" yerel ikililerinin içine dahil edilecek bir özelliğe sahip değildir `deps.json` ( [Bu SDK sorununa](https://github.com/dotnet/sdk/issues/11373)bakın). Bunun yerine, uygulamanın proje dosyasına ek bilgiler ekleyerek bunu etkinleştirebilirsiniz. Örnek:
 
 ```xml
 <ItemGroup>
@@ -166,7 +166,7 @@ Aşağıdaki API 'Ler desteklenmez:
 
 Aşağıdaki API 'Ler sınırlamalarla desteklenir:
 
-- <xref:System.String.Normalize(System.Text.NormalizationForm)?displayProperty=nameWithType> ve <xref:System.String.IsNormalized(System.Text.NormalizationForm)?displayProperty=nameWithType> nadiren kullanılan <xref:System.Text.NormalizationForm.FormKC?displayProperty=nameWithType> ve <xref:System.Text.NormalizationForm.FormKD?displayProperty=nameWithType> formları desteklemez.
+- <xref:System.String.Normalize(System.Text.NormalizationForm)?displayProperty=nameWithType> ve <xref:System.String.IsNormalized(System.Text.NormalizationForm)?displayProperty=nameWithType> nadiren kullanılan <xref:System.Text.NormalizationForm.FormKC> ve <xref:System.Text.NormalizationForm.FormKD> formları desteklemez.
 - <xref:System.Globalization.RegionInfo.CurrencyNativeName?displayProperty=nameWithType> ile aynı değeri döndürür <xref:System.Globalization.RegionInfo.CurrencyEnglishName?displayProperty=nameWithType> .
 
-Ayrıca, desteklenen yerel ayarların bir listesi [DotNet/ICU](https://github.com/dotnet/icu/blob/0f49268ddfd3331ca090f1c51d2baa2f75f6c6c0/icu-filters/optimal.json#L6-L54) deposunda bulunabilir.
+Ayrıca, desteklenen yerel ayarların bir listesi [DotNet/ICU](https://github.com/dotnet/icu/blob/0f49268ddfd3331ca090f1c51d2baa2f75f6c6c0/icu-filters/optimal.json#L6-L54)deposunda bulunabilir.

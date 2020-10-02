@@ -4,12 +4,12 @@ description: Bir görev listesine iptal isteği bildirmek için iptal belirteçl
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 30bef5d1a5082fbd3757377dbedb8f9b9d17e218
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 84cd1bb413d20b6c13be8415c13c72b57873b1cf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053099"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654711"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>Görev listesini iptal etme (C#)
 
@@ -23,7 +23,7 @@ Bu öğreticinin içindekiler:
 > - İptali destekleyen bir zaman uyumsuz uygulama yazma
 > - Sinyal iptali gösterme
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu öğretici için aşağıdakiler gereklidir:
 
@@ -159,14 +159,14 @@ Aşağıdaki `ProcessUrlAsync` yöntemi yönteminin altına ekleyin `SumPageSize
 static async Task<int> ProcessUrlAsync(string url, HttpClient client, CancellationToken token)
 {
     HttpResponseMessage response = await client.GetAsync(url, token);
-    byte[] content = await response.Content.ReadAsByteArrayAsync(token);
+    byte[] content = await response.Content.ReadAsByteArrayAsync();
     Console.WriteLine($"{url,-60} {content.Length,10:#,#}");
 
     return content.Length;
 }
 ```
 
-Verilen herhangi bir URL için yöntemi, `client` yanıtı bir olarak almak için sağlanan örneği kullanacaktır `byte[]` . <xref:System.Threading.CancellationToken>Örnek <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> ve <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> yöntemlerine geçirilir. , `token` İstenen iptal için kaydolmak için kullanılır. Uzunluk, URL ve uzunluk konsola yazıldıktan sonra döndürülür.
+Verilen herhangi bir URL için yöntemi, `client` yanıtı bir olarak almak için sağlanan örneği kullanacaktır `byte[]` . <xref:System.Threading.CancellationToken>Örnek <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> ve <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync?displayProperty=nameWithType> yöntemlerine geçirilir. , `token` İstenen iptal için kaydolmak için kullanılır. Uzunluk, URL ve uzunluk konsola yazıldıktan sonra döndürülür.
 
 ### <a name="example-application-output"></a>Örnek uygulama çıkışı
 

@@ -3,12 +3,12 @@ title: Bulutta Yerel'i tanımlama
 description: Bulutta yerel sistemler için yatak odası sağlayan temel sütunlar hakkında bilgi edinin
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: dce8da57b90519880e322a26de403d8e7cb718c2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1f0d842a2369ae04ffc1c634f9de60398a88e86f
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160911"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654698"
 ---
 # <a name="defining-cloud-native"></a>Cloud Native 'i tanımlama
 
@@ -26,7 +26,7 @@ Bulut Yerel Bilgi Işlem altyapısı resmi bir [tanım](https://github.com/cncf/
 
 Uygulamalar daha fazla ve daha fazla yoğun Kullanıcı tarafından daha fazla karmaşık hale gelmiştir. Kullanıcılar hızlı yanıt verme, yenilikçi özellikler ve sıfır kapalı kalma süresi bekler. Performans sorunları, yinelenen hatalar ve hızlı taşınmama artık kabul edilemez. Bunlar kolayca rakibe taşıyacağız.
 
-Cloud Native, *hız* ve *çeviklik*hakkında çok daha fazla. İş sistemleri, iş yeteneklerini stratejik dönüşümlerle etkinleştirmeye, iş hızını hızlandırmanıza ve büyümeye kadar gelişmesini sağlar. Hemen pazara yönelik fikirler almak zorunludur.
+Cloud Native, *hız* ve *çeviklik*. İş sistemleri, işletme yeteneklerini iş hızını ve büyümeyi hızlandıran stratejik dönüşümlerde olabilmelerini sağlar. Hemen pazara yönelik fikirler almak zorunludur.
 
 Bu teknikleri uygulayan bazı şirketler aşağıda verilmiştir. Elde ettikleri hız, çeviklik ve ölçeklenebilirlik hakkında düşünün.
 
@@ -86,7 +86,7 @@ Aşağıdaki tablo, on Iki öğeli yöntemi vurgular:
 | 8 | Eşzamanlılık | Hizmetler, en güçlü makinede bulunan tek bir büyük örneği ölçeklendirmenin aksine çok sayıda küçük özdeş işleme (kopya) arasında ölçeği genişleme. |
 | 9 | Disposability | Hizmet örnekleri, sistem doğru bir durumda kalacak şekilde ölçeklenebilirlik fırsatlarını ve düzgün kapanmaların artırılmasını sağlamak için atılabilir, favoring hızlı başlatmalar olmalıdır. Doğal olarak bu gereksinimi karşılayan Docker kapsayıcıları ve bir Orchestrator ile birlikte. |
 | 10 | Geliştirme ve üretim eşliği | Ortamları uygulama yaşam döngüsü genelinde mümkün olduğunca benzer şekilde tutun, maliyetli kısayollardan kaçının. Burada, kapsayıcıları benimseme, aynı yürütme ortamını yükselterek büyük ölçüde katkıda bulunabilir. |
-| 11 | Günlüğe kaydetme | Mikro hizmetler tarafından oluşturulan günlükleri olay akışları olarak değerlendirin. Bunları bir Olay Toplayıcısı ile işleyin ve verileri Azure Izleyici veya splunk gibi veri madenciliği/günlük yönetim araçlarına ve sonuçta uzun süreli arşivleme ' ye yayın. |
+| 11 | Günlüğe Kaydetme | Mikro hizmetler tarafından oluşturulan günlükleri olay akışları olarak değerlendirin. Bunları bir Olay Toplayıcısı ile işleyin ve verileri Azure Izleyici veya splunk gibi veri madenciliği/günlük yönetim araçlarına ve sonuçta uzun süreli arşivleme ' ye yayın. |
 | 12 | Yönetici süreçler | Yönetim/Yönetim görevlerini tek bir işlem olarak çalıştırın. Görevler, bir rapor için veri temizleme ve çekme analizlerini içerebilir. Bu görevleri yürüten araçlar, üretim ortamından, ancak uygulamadan ayrı olarak çağrılmalıdır. |
 
 Kitapta, [on Iki öğeli uygulamanın ötesinde](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), ilk 12 faktörün (2011 ' de yazılmıştır) her biri Için Kevin Hoffman ayrıntılarına bakın. Ayrıca, günümüzün modern bulut uygulaması tasarımını yansıtan üç ek etken ele alınmaktadır.

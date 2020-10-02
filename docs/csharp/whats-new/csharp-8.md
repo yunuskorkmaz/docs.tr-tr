@@ -2,12 +2,12 @@
 title: C# 8,0 ' deki yenilikler-C# Kılavuzu
 description: C# 8,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 04/07/2020
-ms.openlocfilehash: eee395c33585028cd81861045f05f7790d8db949
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 43b9c69c649b83d4cf78ef4c7d131ce900a49d11
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414896"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654874"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 sürümündeki yenilikler
 
@@ -322,7 +322,7 @@ Her iki durumda da derleyici çağrısını oluşturur `Dispose()` . Deyimdeki i
 
 ## <a name="static-local-functions"></a>Statik yerel işlevler
 
-`static`Yerel işlevin kapsayan kapsamdaki herhangi bir değişkeni yakalamamasına (başvuru) izin vermek için artık yerel işlevlere değiştiricisini ekleyebilirsiniz. Bunu yapmak `CS8421` , "statik bir yerel işlev için başvuru içeremez \<variable> ."
+`static`Yerel işlevin kapsayan kapsamdaki herhangi bir değişkeni yakalamamasına (başvuru) izin vermek için artık [Yerel işlevlere](../programming-guide/classes-and-structs/local-functions.md) değiştiricisini ekleyebilirsiniz. Bunu yapmak `CS8421` , "statik bir yerel işlev için başvuru içeremez \<variable> ."
 
 Aşağıdaki kodu göz önünde bulundurun. Yerel işlev, `LocalFunction` `y` kapsayan kapsamda (yöntemi) belirtilen değişkenine erişir `M` . Bu nedenle, `LocalFunction` `static` değiştiriciyle bildirilemez:
 

@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: fae6ffc56c90ef8f5340d3d7fd34cda82e3b4ca4
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 60b511adecf37855de91f45245fc55911ba281dc
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437967"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654777"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -211,6 +211,8 @@ ReadyToRun derleyicisi Şu anda çapraz hedefleme 'yi desteklememektedir. Belirl
 - Windows x64, Windows ARM32, ARM64 ve x86 görüntülerini derlemek için kullanılabilir.
 - Windows x86, Windows ARM32 görüntülerini derlemek için kullanılabilir.
 - Linux x64, Linux ARM32 ve ARM64 görüntülerini derlemek için kullanılabilir.
+
+Daha fazla bilgi için bkz. [çalıştırılmaya hazırlanma](../deploying/ready-to-run.md).
 
 ## <a name="runtimesdk"></a>Çalışma zamanı/SDK
 
@@ -518,7 +520,7 @@ Daha fazla bilgi için bkz. [.net platforma bağımlı iç](https://github.com/d
 
 ### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Core sürümü API 'Leri
 
-.NET Core 3,0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örneğin:
+.NET Core 3,0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örnek:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");

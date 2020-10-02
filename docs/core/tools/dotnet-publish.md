@@ -2,12 +2,12 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu bir dizine .NET Core projesi veya çözümü yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: 53dc6010352d92489017c3aa776bcb6a3601ec2d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537775"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654900"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -67,7 +67,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 - [ASP.NET Core uygulama dağıtımı için Visual Studio yayımlama profilleri (. pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - **`PROJECT|SOLUTION`**
 
@@ -145,7 +145,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 - **`-p:PublishReadyToRun=true`**
 
-  Uygulama derlemelerini ReadyToRun (R2R) biçimi olarak derler. R2R, bir süre öncesi (AOT) derleme biçimidir. Daha fazla bilgi için bkz. [Readytorun görüntüleri](../whats-new/dotnet-core-3-0.md#readytorun-images). .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  Uygulama derlemelerini ReadyToRun (R2R) biçimi olarak derler. R2R, bir süre öncesi (AOT) derleme biçimidir. Daha fazla bilgi için bkz. [Readytorun görüntüleri](../deploying/ready-to-run.md). .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
   Bu seçeneği, komut satırı yerine bir yayımlama profilinde belirtmenizi öneririz. Daha fazla bilgi için bkz. [MSBuild](#msbuild).
 

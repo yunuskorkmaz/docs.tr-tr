@@ -8,18 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: ccd575748c2286fa7348e2880acbfadd036d9ccd
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 239163fc2f91ccbfe8b1c111a358db87d36a8308
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247728"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654645"
 ---
 # <a name="static-c-reference"></a>static (C# Başvurusu)
 
 Bu sayfa `static` değiştirici anahtar sözcüğünü içerir. `static`Anahtar sözcüğü ayrıca yönergesinin bir parçasıdır [`using static`](using-static.md) .
 
 Belirli bir `static` nesne yerine türüne ait olan statik bir üye bildirmek için değiştiricisini kullanın. `static`Değiştirici, sınıfları bildirmek için kullanılabilir `static` . Sınıflar, arabirimler ve yapılar ' da `static` alanları, yöntemleri, özellikleri, işleçleri, olayları ve oluşturuculara değiştiricisini ekleyebilirsiniz. `static`Değiştirici, Dizin oluşturucular veya sonlandırıcılar ile kullanılamaz. Daha fazla bilgi için bkz. [statik sınıflar ve statik sınıf üyeleri](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+
+C# 8,0 ' den başlayarak, `static` değiştirici bir [Yerel işleve](../../programming-guide/classes-and-structs/local-functions.md)eklenebilir. Statik bir yerel işlev yerel değişkenler veya örnek durumu yakalayamaz.
 
 C# 9,0 ' den başlayarak `static` bir [lambda ifadesine](../operators/lambda-expressions.md) veya [anonim yönteme](../operators/delegate-operator.md)değiştirici ekleyebilirsiniz. Statik lambda veya anonim yöntem yerel değişkenleri veya örnek durumunu yakalayabilir.
 

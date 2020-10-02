@@ -4,12 +4,12 @@ description: Tek bir dosya uygulamasının ne olduğunu ve neden bu uygulama da�
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 8149f912c2d92c3eff8d248353e11c01bcfc24ba
-ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
+ms.openlocfilehash: b7693d6c119d00a798ef03ed1019f2f04c1828cf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91573676"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654658"
 ---
 # <a name="single-file-deployment-and-executable"></a>Tek dosya dağıtımı ve yürütülebilir dosya
 
@@ -37,11 +37,11 @@ Aşağıdaki tabloda, tek dosya kullanımı için ilgili çalışma zamanı kita
 
 Yaygın senaryoları düzeltmeye yönelik bazı önerileriniz var:
 
-* Yürütülebilir dosyanın yanındaki dosyalara erişmek için şunu kullanın <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType>
+* Yürütülebilir dosyanın yanındaki dosyalara erişmek için kullanın <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType> .
 
-* Yürütülebilir dosyanın dosya adını bulmak için ilk öğesini kullanın <xref:System.Environment.GetCommandLineArgs()?displayProperty=nameWithType>
+* Yürütülebilir dosyanın dosya adını bulmak için ilk öğesini kullanın <xref:System.Environment.GetCommandLineArgs?displayProperty=nameWithType> .
 
-* Gevşek dosyaları tamamen sevk etmeyi önlemek için, [ekli kaynakları](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps) kullanmayı düşünün
+* Gevşek dosyaları tamamen sevk etmeyi önlemek için, [gömülü kaynakları](../../framework/resources/creating-resource-files-for-desktop-apps.md)kullanmayı düşünün.
 
 ## <a name="other-considerations"></a>Diğer önemli noktalar
 

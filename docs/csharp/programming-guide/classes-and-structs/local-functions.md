@@ -1,15 +1,15 @@
 ---
 title: Yerel işlevler-C# Programlama Kılavuzu
 description: C# ' deki yerel işlevler, başka bir üyede iç içe yerleştirilmiş ve kendi kapsayıcı üyelerinden çağrılabilecek özel yöntemlerdir.
-ms.date: 06/14/2017
+ms.date: 10/02/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: c1c6c6becb3894b05cb9ed89f7f33dcf249b20eb
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: a91995757048c8c54253d7f4b923d5194f69bc7b
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656191"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654926"
 ---
 # <a name="local-functions-c-programming-guide"></a>Yerel işlevler (C# Programlama Kılavuzu)
 
@@ -36,17 +36,19 @@ Yerel işlevler, kodunuzun amacını açık hale getirir. Kodunuzu okuyan herkes
 Yerel bir işlev, kapsayan bir üye içinde iç içe geçmiş bir yöntem olarak tanımlanır. Tanımı aşağıdaki sözdizimine sahiptir:
 
 ```csharp
-<modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
+<modifiers> <return-type> <method-name> <parameter-list>
 ```
 
-Yerel işlevler, [zaman uyumsuz](../../language-reference/keywords/async.md) ve [güvenli olmayan](../../language-reference/keywords/unsafe.md) değiştiriciler kullanabilir.
+Aşağıdaki değiştiricileri yerel bir işlevle kullanabilirsiniz:
 
-Kendi Yöntem parametreleri de dahil olmak üzere, kapsayan üyede tanımlanan tüm yerel değişkenlerin yerel işlevde erişilebilir olduğunu unutmayın.
+- [`async`](../../language-reference/keywords/async.md)
+- [`unsafe`](../../language-reference/keywords/unsafe.md)
+- [`static`](../../language-reference/keywords/static.md) (C# 8,0 ve üzeri sürümlerde). Statik bir yerel işlev yerel değişkenler veya örnek durumu yakalayamaz.
+- [`extern`](../../language-reference/keywords/extern.md) (C# 9,0 ve üzeri sürümlerde). Dış yerel işlev olmalıdır `static` .
+
+Yöntem parametreleri de dahil olmak üzere, kapsayan üyede tanımlanan tüm yerel değişkenlere statik olmayan bir yerel işlevde erişilebilir.
 
 Bir yöntem tanımının aksine, yerel bir işlev tanımı üye erişim değiştiricisini içeremez. Tüm yerel işlevler özel olduğundan, anahtar sözcüğü gibi bir erişim değiştiricisi de dahil olmak üzere, `private` "özel ' değiştiricisi Bu öğe için geçerli değil."
-
-> [!NOTE]
-> C# 8,0 ' den önce yerel işlevler `static` değiştirici içeremez. `static`Anahtar sözcüğü, "static ' değiştiricisi Bu öğe için geçerli değil." ya da C# 8,0 veya üstünü kullanmanız gerektiğini belirten bir derleyici hatası oluşturur.
 
 Ayrıca, öznitelikler yerel işleve veya parametrelerine ve parametre türüne uygulanamaz.
 

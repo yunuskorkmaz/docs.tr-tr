@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: e109deaa26b33a7780df11031c1f3e0477cd5431
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609199"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654913"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -194,7 +194,7 @@ Bu desenlerden herhangi biri desenleri izin verilen herhangi bir bağlamda kulla
 
 Üç yeni özellik, yüksek performans gerektiren yerel birlikte çalışma ve alt düzey kitaplıklar desteğini geliştirir: yerel boyutlu tamsayılar, işlev işaretçileri ve `localsinit` bayrağı atlama.
 
-Yerel boyutlu tamsayılar `nint` ve `nuint` , tamsayı türleridir. Bunlar, temel alınan türler ve ile ifade edilir <xref:System.IntPtr?displayProperty=nameWithType> <xref:System.UIntPtr?displayProperty=nameWithType> . Derleyici, bu türler için ek dönüştürmeler ve işlemleri yerel olarak gösterir. Yerel boyutlandırılabilen `MaxValue` `MinValue` `nuint.MinValue` , ' a sahip olduğu için veya dışında sabitlere sahip değildir `MinValue` `0` . Hedef makinedeki bir tamsayının yerel boyutuna bağlı olduğundan, diğer değerler sabitler olarak ifade edilemez. `nint`[.. Aralığında için sabit değerler kullanabilirsiniz. `int.MinValue` `int.MaxValue`]. `nuint`[.. Aralığında için sabit değerler kullanabilirsiniz. `uint.MinValue` `uint.MaxValue`]. Derleyici ve türlerini kullanarak tüm birli ve ikili işleçler için sabit katlama gerçekleştirir <xref:System.Int32?displayProperty=nameWithType> <xref:System.UInt32?displayProperty=nameWithType> . Sonuç 32 bite sığmazsa, işlem çalışma zamanında yürütülür ve bir sabit kabul edilmez. Yerel boyutlu tamsayılar, tamsayı matematiğinin yaygın olarak kullanıldığı ve en yüksek performansa sahip olması gereken senaryolarda performansı artırabilir.
+Yerel boyutlu tamsayılar `nint` ve `nuint` , tamsayı türleridir. Bunlar, temel alınan türler ve ile ifade edilir <xref:System.IntPtr?displayProperty=nameWithType> <xref:System.UIntPtr?displayProperty=nameWithType> . Derleyici, bu türler için ek dönüştürmeler ve işlemleri yerel olarak gösterir. Yerel boyutlu tamsayılar veya özelliklerini tanımlar `MaxValue` `MinValue` . Bu değerler, Hedef makinedeki bir tamsayının yerel boyutuna bağlı olduğundan, derleme zamanı sabitleri olarak ifade edilemez. Çalışma zamanında bu değerler salt okunur. `nint`[.. Aralığında için sabit değerler kullanabilirsiniz. `int.MinValue` `int.MaxValue`]. `nuint`[.. Aralığında için sabit değerler kullanabilirsiniz. `uint.MinValue` `uint.MaxValue`]. Derleyici ve türlerini kullanarak tüm birli ve ikili işleçler için sabit katlama gerçekleştirir <xref:System.Int32?displayProperty=nameWithType> <xref:System.UInt32?displayProperty=nameWithType> . Sonuç 32 bite sığmazsa, işlem çalışma zamanında yürütülür ve bir sabit kabul edilmez. Yerel boyutlu tamsayılar, tamsayı matematiğinin yaygın olarak kullanıldığı ve en yüksek performansa sahip olması gereken senaryolarda performansı artırabilir.
 
 İşlev işaretçileri, Il işlem kodları ve ' a erişmek için kolay bir sözdizimi sağlar `ldftn` `calli` . Yeni sözdizimini kullanarak işlev işaretçileri bildirebilirsiniz `delegate*` . `delegate*`Tür bir işaretçi türüdür. Yöntemi, `delegate*` yöntemini kullanan `calli` bir temsilcinin aksine, türünü çağırır `callvirt` `Invoke()` . Sözdizimi, çağırma aynıdır. İşlev işaretçisi çağrısı, `managed` çağırma kuralını kullanır. `unmanaged` `delegate*` Çağırma kuralına istediğinizi bildirmek için sözdiziminden sonra anahtar sözcüğünü eklersiniz `unmanaged` . Diğer çağırma kuralları, bildirimde öznitelikler kullanılarak belirtilebilir `delegate*` .
 

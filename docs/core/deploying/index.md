@@ -2,12 +2,12 @@
 title: Uygulama yayımlama
 description: .NET Core uygulaması yayımlama yolları hakkında bilgi edinin. .NET Core, platforma özgü veya platformlar arası uygulamalar yayımlayabilir. Bir uygulamayı, kendi içinde veya Framework 'e bağımlı olarak yayımlayabilirsiniz. Her mod, bir kullanıcının uygulamanızı nasıl yürüttüğünde etkiler.
 ms.date: 04/01/2020
-ms.openlocfilehash: ece5e46162fd4a8de0b996ba239e89cceca4dbca
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720117"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654678"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core uygulama yayımlamaya genel bakış
 
@@ -149,6 +149,34 @@ Kendisini içeren bir uygulama yayımlayın. Windows 64 bit yürütülebilir dos
 
 ```dotnet
 dotnet publish -r win-x64
+```
+
+## <a name="publish-with-readytorun-images"></a>ReadyToRun görüntüleriyle yayımlama
+
+ReadyToRun görüntüleriyle yayımlama, uygulamanızın boyutunu artırma maliyetinde uygulamanızın başlama süresini iyileştirir. ReadyToRun ile yayımlamak için, daha fazla ayrıntı için bkz. [readytorun](ready-to-run.md) .
+
+### <a name="advantages"></a>Avantajlar
+
+- **Geliştirilmiş başlangıç zamanı**\
+Uygulama JıT 'i çalıştırmaya daha az zaman harcaacaktır.
+
+### <a name="disadvantages"></a>Dezavantajlar
+
+- **Daha büyük boyut**\
+Uygulama diskte daha büyük olacaktır.
+
+### <a name="examples"></a>Örnekler
+
+Kendisini içeren ve ReadyToRun uygulama yayımlayın. MacOS 64 bit yürütülebilir dosyası oluşturulur.
+
+```dotnet
+dotnet publish -c Release -r osx-x64 -p:PublishReadyToRun=true
+```
+
+Kendisini içeren ve ReadyToRun uygulama yayımlayın. Windows 64 bit yürütülebilir dosyası oluşturulur.
+
+```dotnet
+dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
