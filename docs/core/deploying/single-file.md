@@ -4,12 +4,12 @@ description: Tek bir dosya uygulamasının ne olduğunu ve neden bu uygulama da�
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: b7693d6c119d00a798ef03ed1019f2f04c1828cf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 0167e62ea46e1c23c3d4ef6ea505ee051ffaf264
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654658"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712645"
 ---
 # <a name="single-file-deployment-and-executable"></a>Tek dosya dağıtımı ve yürütülebilir dosya
 
@@ -42,6 +42,16 @@ Yaygın senaryoları düzeltmeye yönelik bazı önerileriniz var:
 * Yürütülebilir dosyanın dosya adını bulmak için ilk öğesini kullanın <xref:System.Environment.GetCommandLineArgs?displayProperty=nameWithType> .
 
 * Gevşek dosyaları tamamen sevk etmeyi önlemek için, [gömülü kaynakları](../../framework/resources/creating-resource-files-for-desktop-apps.md)kullanmayı düşünün.
+
+## <a name="attaching-a-debugger"></a>Hata ayıklayıcı iliştirme
+
+Linux 'ta, kendi içinde tek dosya işlemlerine veya hata ayıklama kilitlenme dökümlerine ekleyebileceğiniz tek hata ayıklayıcı [LLDB Ile sos](../diagnostics/dotnet-sos.md)olur.
+
+Windows ve Mac 'te, kilitlenme dökümlerinde hata ayıklamak için Visual Studio ve VS Code kullanılabilir. Çalışan bir bağımsız tek dosya yürütülebiliri eklemek için ek bir dosya gerekir: _mscordbi. { dll, so}_.
+
+Bu dosya olmadan, Visual Studio "işleme iliştirilemiyor" hatasını verebilir. Bir hata ayıklama bileşeni yüklü değil. " VS Code, "işleme iliştirilemedi: bilinmeyen hata: 0x80131c3c" hatasını verebilir.
+
+Bu hataları onarmak için, _mscordbi_ 'nin yürütülebilir dosyanın yanına kopyalanması gerekir. _mscordbi_ , `publish` Varsayılan olarak UYGULAMANıN çalışma zamanı kimliğine sahip alt dizinde oluşturulur. Bu nedenle, örneğin, parametreleri kullanarak Windows için CLI kullanarak kendi kendini içeren tek dosya yürütülebilir dosyası `dotnet` `-r win-x64` yayımlamasaydı, yürütülebilir dosya _bin/Debug/net 5.0/Win-x64/Publish_öğesine yerleştirilir. _Bin/Debug/net 5.0/Win-x64_içinde _mscordbi.dll_ bir kopyası var olabilir.
 
 ## <a name="other-considerations"></a>Diğer önemli noktalar
 

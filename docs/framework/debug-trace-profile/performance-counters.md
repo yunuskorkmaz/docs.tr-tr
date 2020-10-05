@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 1b5ca6484f45dcee33009d8b8c12a43fa41f63de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554455"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712624"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework performans sayaçları
 
@@ -21,7 +21,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 ## <a name="exception-performance-counters"></a>Özel durum performans sayaçları  
  Performans konsolu .NET CLR özel durumları kategorisi, bir uygulama tarafından oluşturulan özel durumlar hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
-|Performans sayacı|Description|  
+|Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
 |**Atılan Exceps sayısı**|Uygulama başladıktan sonra oluşturulan toplam özel durum sayısını görüntüler. Bu hem .NET özel durumlarını hem de .NET özel durumlarına dönüştürülmüş yönetilmeyen özel durumları içerir. Örneğin, yönetilmeyen koddan döndürülen bir HRESULT, Yönetilen koddaki özel duruma dönüştürülür.<br /><br /> Bu sayaç hem işlenmiş hem de işlenmemiş özel durumları içerir. Yeniden oluşturulan özel durumlar tekrar sayılır.|  
 |**Oluşturulan Exceps sayısı/sn**|Saniye başına oluşturulan özel durumların sayısını görüntüler. Bu hem .NET özel durumlarını hem de .NET özel durumlarına dönüştürülmüş yönetilmeyen özel durumları içerir. Örneğin, yönetilmeyen koddan döndürülen bir HRESULT, Yönetilen koddaki özel duruma dönüştürülür.<br /><br /> Bu sayaç hem işlenmiş hem de işlenmemiş özel durumları içerir. Bu, zaman içinde bir ortalama değildir; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir. Bu sayaç, büyük bir (>100s) özel durum sayısı oluşturulursa olası performans sorunlarının göstergesidir.|  
@@ -32,7 +32,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 ## <a name="interop-performance-counters"></a>Birlikte çalışabilirlik performans sayaçları  
  Performans konsolu .NET CLR birlikte çalışma kategorisi, bir uygulamanın COM bileşenleri, COM+ Hizmetleri ve dış tür kitaplıklarıyla etkileşimi hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
-|Performans sayacı|Description|  
+|Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
 |**CCWs sayısı**|Geçerli COM çağrılabilir sarmalayıcılarının (CCWs) sayısını görüntüler. Bir CCW, yönetilmeyen bir COM istemcisinden başvurulmakta olan yönetilen bir nesne için bir ara sunucu. Bu sayaç, yönetilmeyen COM kodu tarafından başvurulan yönetilen nesne sayısını gösterir.|  
 |**sıralama sayısı**|Bağımsız değişkenlerin ve dönüş değerlerinin yönetilen ve yönetilmeyen koddan kaç kez sıralandığına ve uygulamanın başlamasından bu yana tam tersi gösterir. Saplamalar satır içine alınır ise bu sayaç arttırılır. (Saplamalar, bağımsız değişkenleri ve dönüş değerlerini sıralama sorumludur). Hazırlama ek yükü küçükse, saplamalar genellikle satır içine alınır.|  
@@ -43,7 +43,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 ## <a name="jit-performance-counters"></a>JIT performans sayaçları  
  Performans konsolu .NET CLR JıT kategorisi, JıT derlenmiş kod hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
-|Performans sayacı|Description|  
+|Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
 |**anında derlenen IL bayt sayısı**|Uygulamanın başlatılmasından bu yana tam zamanında (JıT) derleyici tarafından derlenen Microsoft ara dili (MSIL) baytlarının toplam sayısını görüntüler. Bu sayaç, **derlenen toplam IL bayt sayacı sayısına** eşittir.|  
 |**anında derlenen Yöntem sayısı**|Uygulamanın başlatılmasından bu yana JıT ile derlenen yöntemlerin toplam sayısını görüntüler. Bu sayaç önceden JıT ile derlenen yöntemler içermez.|  
@@ -55,7 +55,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 ## <a name="loading-performance-counters"></a>Performans sayaçları yükleniyor  
  Performans konsolu .NET CLR Yükleme kategorisi, yüklenen derlemeler, sınıflar ve uygulama etki alanları hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
-|Performans sayacı|Description|  
+|Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
 |**Yükleme zamanı yüzdesi**|Daha sonraki kullanımlar için ayrılmıştır.|  
 |**Derleme arama uzunluğu**|Daha sonraki kullanımlar için ayrılmıştır.|  
@@ -77,7 +77,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 ## <a name="lock-and-thread-performance-counters"></a>Kilit ve iş parçacığı performans sayaçları  
  Performans konsolu .NET CLR LocksAndThreads kategorisi, bir uygulamanın kullandığı yönetilen kilitler ve iş parçacıkları hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
-|Performans sayacı|Description|  
+|Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
 |**geçerli mantıksal Iş parçacığı sayısı**|Uygulamadaki geçerli yönetilen iş parçacığı nesnelerinin sayısını görüntüler. Bu sayaç hem çalışan hem de durdurulan iş parçacıklarının sayısını tutar. Bu sayaç, zaman içinde bir ortalama değil; yalnızca son gözlemlenen değeri görüntüler.|  
 |**geçerli fiziksel Iş parçacığı sayısı**|Yönetilen iş parçacığı nesneleri için temel alınan iş parçacıkları olarak görev yapacak ortak dil çalışma zamanına ait ve oluşturulan yerel işletim sistemi iş parçacıklarının sayısını görüntüler. Bu sayacın değeri, iç işlemlerinde çalışma zamanı tarafından kullanılan iş parçacıklarını içermez; Bu, işletim sistemi işlemindeki iş parçacıklarının bir alt kümesidir.|  
@@ -93,7 +93,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 ## <a name="memory-performance-counters"></a>Bellek performans sayaçları  
  Performans konsolu .NET CLR bellek kategorisi, çöp toplayıcısı hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
-|Performans sayacı|Description|  
+|Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
 |**Tüm yığınlardaki bayt sayısı**|**Gen 1 yığın boyutu**, **Gen 2 yığın boyutu**ve **büyük nesne yığın boyutu** sayaçlarının toplamını görüntüler. Bu sayaç, çöp toplama yığınlarında bayt cinsinden ayrılan geçerli belleği gösterir.|  
 |**# GC tutamaçları**|Kullanımdaki çöp toplama tanıtıcılarının geçerli sayısını görüntüler. Çöp toplama tutamaçları, ortak dil çalışma zamanı ve yönetilen ortam dışındaki kaynaklara yönelik tanıtıcılardır.|  
@@ -123,15 +123,15 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 
 Performans konsolu .NET CLR ağ kategorisi, bir uygulamanın ağ üzerinden gönderdiği ve aldığı veriler hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
-|Performans sayacı|Description|  
+|Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
 |**Alınan bayt**|<xref:System.Net.Sockets.Socket>İşlemin başlatılmasından bu yana içindeki tüm nesneler tarafından alınan toplam bayt sayısı <xref:System.AppDomain> . Bu sayı, TCP/IP tarafından tanımlanmayan verileri ve protokol bilgilerini içerir.|  
 |**Gönderilen bayt**|<xref:System.Net.Sockets.Socket>İşlemin başlatılmasından bu yana içindeki tüm nesneler tarafından gönderilen toplam bayt sayısı <xref:System.AppDomain> . Bu sayı, TCP/IP tarafından tanımlanmayan verileri ve protokol bilgilerini içerir.|  
 |**Kurulan bağlantılar**|<xref:System.Net.Sockets.Socket>İşlem başladıktan sonra, içinde hiç bağlı olan akış yuvaları için toplam nesne sayısı <xref:System.AppDomain> .|  
 |**Alınan veri birimleri**|<xref:System.Net.Sockets.Socket>İşlemin başlatılmasından bu yana, içindeki tüm nesneler tarafından alınan toplam veri birimi paketlerinin birikimli sayısı <xref:System.AppDomain> .|  
 |**Gönderilen veri birimleri**|<xref:System.Net.Sockets.Socket>İşlemin başlatılmasından bu yana, içindeki tüm nesneler tarafından gönderilen toplam veri birimi paketlerinin birikimli sayısı <xref:System.AppDomain> .|  
-|**HttpWebRequest ortalama ömrü**|<xref:System.Net.HttpWebRequest>İşlem başladıktan sonra, içindeki son aralıkta sona eren geçen tüm nesneler için tamamlanması gereken ortalama süre <xref:System.AppDomain> .|  
-|**HttpWebRequest Ortalama sıra süresi**|<xref:System.Net.HttpWebRequest>İşlemin başlatılmasından bu yana, içindeki son aralıktaki kuyruğu alan tüm nesneler için Ortalama sırada geçen süre <xref:System.AppDomain> .|  
+|**HttpWebRequests ortalama ömrü**|<xref:System.Net.HttpWebRequest>İşlem başladıktan sonra, içindeki son aralıkta sona eren geçen tüm nesneler için tamamlanması gereken ortalama süre <xref:System.AppDomain> .|  
+|**HttpWebRequests Ortalama sıra süresi**|<xref:System.Net.HttpWebRequest>İşlemin başlatılmasından bu yana, içindeki son aralıktaki kuyruğu alan tüm nesneler için Ortalama sırada geçen süre <xref:System.AppDomain> .|  
 |**Oluşturulan Httpwebistek/sn**|<xref:System.Net.HttpWebRequest>İçinde saniye başına oluşturulan nesne sayısı <xref:System.AppDomain> .|  
 |**Sıraya alınan Httpwebistek/sn**|<xref:System.Net.HttpWebRequest>İçinde saniye başına sıraya eklenen nesne sayısı <xref:System.AppDomain> .|  
 |**Durdurulan Httpwebistek/sn**|<xref:System.Net.HttpWebRequest>Uygulamanın <xref:System.Net.HttpWebRequest.Abort%2A> içinde saniye başına yöntem olarak çağırdığı nesne sayısı <xref:System.AppDomain> .|  
@@ -169,11 +169,11 @@ Olaylar için ağ performans sayaçları şunları içerir:
   
  <xref:System.Net.HttpWebRequest>Nesnelerin tüm yaşam döngüsü veya yalnızca bir parçası aracılığıyla geçmesi için geçen süreyi ölçen iki Duration sayacı vardır:  
   
-- **HttpWebRequest ortalama ömrü**  
+- **HttpWebRequests ortalama ömrü**  
   
-- **HttpWebRequest Ortalama sıra süresi**  
+- **HttpWebRequests Ortalama sıra süresi**  
   
- **HttpWebRequest ortalama ömür süresi** sayacı için, çoğu nesnenin kullanım ömrü, <xref:System.Net.HttpWebRequest> yanıt akışının uygulama tarafından kapatılmadığı zamana kadar her zaman nesnenin oluşturulduğu zaman ile başlar. Yaygın olarak görülen iki durum vardır:  
+ **HttpWebRequests ortalama ömrü** sayacı için, çoğu nesnenin yaşam süresi <xref:System.Net.HttpWebRequest> her zaman, yanıt akışının uygulama tarafından kapatılmadığı zamana kadar nesnenin oluşturulduğu zaman ile başlar. Yaygın olarak görülen iki durum vardır:  
   
 - Uygulama hiçbir şekilde <xref:System.Net.HttpWebRequest.GetResponse%2A> veya yöntemini çağırmadıysa <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> , <xref:System.Net.HttpWebRequest> nesne ömrü yok sayılır.  
   
@@ -220,7 +220,7 @@ for (int i = 0; i < Array.Length; i++)
 ## <a name="security-performance-counters"></a>Güvenlik performans sayaçları  
  Performans konsolu .NET CLR güvenlik kategorisi, ortak dil çalışma zamanının bir uygulama için gerçekleştirdiği güvenlik denetimleri hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
-|Performans sayacı|Description|  
+|Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
 |**Bağlantı zamanı denetimleri sayısı**|Uygulama başladıktan sonra bağlantı zamanı kod erişimi güvenlik denetimlerinin toplam sayısını görüntüler. Bağlama zamanı kod erişimi güvenlik denetimleri, bir arayan belirli bir zamanda (JıT) derleme zamanında belirli bir izin talep ettiğinde gerçekleştirilir. Bir bağlantı zamanı denetimi, çağıran başına bir kez gerçekleştirilir. Bu sayı ciddi performans sorunlarının göstergesi değildir; yalnızca güvenlik sistemi etkinliğinin bir göstergesi vardır.|  
 |**RT denetimlerinde% Time**|Son örnekten bu yana çalışma zamanı kodu erişim güvenlik denetimlerini gerçekleştirirken harcanan geçen sürenin yüzdesini görüntüler. Bu sayaç, .NET Framework bir güvenlik denetiminin sonunda güncelleştirilir. Ortalama değer değildir; Bu, son gözlemlenen değeri temsil eder.|  
