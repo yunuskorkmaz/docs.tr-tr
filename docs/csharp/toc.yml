@@ -1,6 +1,6 @@
 - name: C# belgeleri
   href: index.yml
-- name: başlarken
+- name: Kullanmaya başlayın
   items:
     - name: Genel Bakış
       displayName: get started
@@ -36,6 +36,8 @@
               href: tutorials/intro-to-csharp/arrays-and-collections.md
             - name: Sınıflara giriş
               href: tutorials/intro-to-csharp/introduction-to-classes.md
+            - name: Nesne Odaklı programlama
+              href: tutorials/intro-to-csharp/object-oriented-programming.md
     - name: C# 6’yı keşfetme
       href: tutorials/exploration/csharp-6.yml
     - name: Dize ilişkilendirmeyi keşfetme - etkileşimli
@@ -221,7 +223,7 @@
       href: programming-guide/interop/index.md
     - name: Kodunuzu belgeleme
       href: codedoc.md
-    - name: Sürüm oluşturma
+    - name: Sürüm Oluşturma
       href: versioning.md
 - name: Nasıl yapılır C# makaleleri
   items:
@@ -491,8 +493,6 @@
               href: programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1.md
             - name: Visual Studio IDE ve LINQ için Araçlar Desteği
               href: programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md
-        - name: Nesne Odaklı Programlama
-          href: programming-guide/concepts/object-oriented-programming.md
         - name: Yansıma
           href: programming-guide/concepts/reflection.md
         - name: Serileştirme (C# )

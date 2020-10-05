@@ -155,7 +155,7 @@ items:
         href: ../core/sdk.md
       - name: .NET Core CLI
         items:
-          - name: Genel bakış
+          - name: Genel Bakış
             href: ../core/tools/index.md
           - name: Başvuru
             items:
@@ -289,7 +289,7 @@ items:
         items:
           - name: Proje SDK’leri
             items:
-              - name: Genel bakış
+              - name: Genel Bakış
                 href: ../core/project-sdk/overview.md
               - name: Başvuru
                 items:
@@ -366,6 +366,8 @@ items:
             items:
               - name: Genel seçenekler
                 href: code-analysis/configuration-options.md
+              - name: Yapılandırma dosyaları
+                href: code-analysis/configuration-files.md
               - name: Kod kalitesi kuralları
                 items:
                   - name: Kural seçenekleri
@@ -1318,9 +1320,17 @@ items:
       - name: Genel konak
         href: ../core/extensions/generic-host.md
       - name: Günlüğe Kaydetme
-        href: /aspnet/core/fundamentals/logging
+        items:
+          - name: Genel Bakış
+            href: ../core/extensions/logging.md
+          - name: Günlük sağlayıcıları
+            href: ../core/extensions/logging-providers.md
+          - name: Özel bir günlük sağlayıcısı uygulama
+            href: ../core/extensions/custom-logging-provider.md
+          - name: Yüksek performanslı günlük
+            href: ../core/extensions/high-performance-logging.md
       - name: Seçenekler deseni
-        href: /aspnet/core/fundamentals/configuration/options
+        href: ../core/extensions/options.md
   - name: Veri erişimi
     items:
       - name: LINQ
