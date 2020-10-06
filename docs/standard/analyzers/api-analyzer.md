@@ -4,12 +4,12 @@ description: .NET API Çözümleyicisi 'nin kullanım dışı API 'Leri ve platf
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: a689ae347efbc8c2dd933b2f6920ac6cc06cda7d
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406251"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756201"
 ---
 # <a name="net-api-analyzer"></a>.NET API Çözümleyicisi
 
@@ -20,7 +20,7 @@ API Çözümleyicisi, [Microsoft. DotNet. çözümleyiciler. Compatibility](http
 > [!NOTE]
 > .NET API Çözümleyicisi, hala yayın öncesi bir sürümdür.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Visual Studio 2017 ve üzeri sürümleri veya Mac için Visual Studio (tüm sürümler).
 
@@ -124,7 +124,7 @@ Tüm bu Tanılamalar yalnızca IDE 'de değil, aynı zamanda, CI sunucusunu içe
 
 ## <a name="configuration"></a>Yapılandırma
 
-Kullanıcı, tanılama nasıl ele alınacağına karar verir: uyarılar, hatalar, öneriler veya kapatılacak. Örneğin, bir mimari olarak uyumluluk sorunlarının hata olarak değerlendirilip bazı kullanım dışı API 'lere yapılan çağrılar uyarı üretirken, diğerleri yalnızca öneriler üretmeye karar verebilirsiniz. Bunu, tanılama KIMLIĞI ve proje tarafından ayrı ayrı yapılandırabilirsiniz. **Çözüm Gezgini**için, projenizin altındaki **Bağımlılıklar** düğümüne gidin. **Dependencies**  >  **Analyzers**  >  **Microsoft. DotNet. çözümleyiciler. uyumluluğu**çözümleyicilerinin düğümleri bağımlılıklarını genişletin. Tanılama KIMLIĞI ' ne sağ tıklayın, **kural kümesi önem derecesini ayarla** ' yı seçin ve istediğiniz seçeneği belirleyin.
+Kullanıcı, tanılama nasıl ele alınacağına karar verir: uyarılar, hatalar, öneriler veya kapatılacak. Örneğin, bir mimari olarak uyumluluk sorunlarının hata olarak değerlendirilip bazı kullanım dışı API 'lere yapılan çağrılar uyarı üretirken, diğerleri yalnızca öneriler üretmeye karar verebilirsiniz. Bunu, tanılama KIMLIĞI ve proje tarafından ayrı ayrı yapılandırabilirsiniz. **Çözüm Gezgini**için, projenizin altındaki **Bağımlılıklar** düğümüne gidin. **Dependencies**  >  **Analyzers**  >  **Microsoft. DotNet. çözümleyiciler. uyumluluğu**çözümleyicilerinin düğümleri bağımlılıklarını genişletin. Tanılama KIMLIĞI ' ne sağ tıklayın, **kural kümesi önem derecesi ayarla**' yı seçin ve ardından istediğiniz seçeneği belirleyin.
 
 ![Kural kümesi önem derecesine sahip tanılama ve açılır iletişim iletişimini gösteren Çözüm Gezgini ekran görüntüsü.](media/api-analyzer/disable-notifications.jpg)
 
@@ -132,4 +132,4 @@ Kullanıcı, tanılama nasıl ele alınacağına karar verir: uyarılar, hatalar
 
 - [API Çözümleyicisi blog gönderisine giriş](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) .
 - YouTube 'da [API Çözümleyicisi](https://youtu.be/eeBEahYXGd0) tanıtım videosu.
-- [Platform compatability Çözümleyicisi](platform-compat-analyzer.md)
+- [Platform uyumluluğu Çözümleyicisi](platform-compat-analyzer.md)

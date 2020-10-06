@@ -1,21 +1,20 @@
 ---
-title: <performanceCounter> Öğesi (Ağ Ayarları)
+title: <performanceCounters> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
 helpviewer_keywords:
-- performanceCounter element
-- <performanceCounter> element
+- performanceCounters element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 4859f3a9e6de4f1bf8a56212bfe01f94d66f5650
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 584bdafbbd60303401cbc6ad96b8654fe11c7077
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91190247"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756266"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter> Öğesi (Ağ Ayarları)
+# <a name="performancecounters-element-network-settings"></a>\<performanceCounters> Öğesi (Ağ Ayarları)
 
 Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.  
 
@@ -24,7 +23,7 @@ Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<performanceCounters>**
 
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
 <performanceCounters  

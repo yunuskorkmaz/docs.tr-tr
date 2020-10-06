@@ -13,12 +13,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 20c1d9786eaa184088500cf1b37d33afc421b5e7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d8fae870bb3a6fdda735a028dc1da20213a68a31
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142030"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756045"
 ---
 # <a name="switch-c-reference"></a>Switch (C# Başvurusu)
 
@@ -87,7 +87,7 @@ Eşleştirme ifadesiyle eşleşen bir Case etiketi ile Switch bölümündeki dey
 
 Her Case etiketi, Match ifadesiyle Karşılaştırılacak bir model belirtir ( `caseSwitch` Önceki örneklerde bulunan değişkeni). Eşleşiyorsa denetim, **ilk** eşleşen Case etiketini içeren Switch bölümüne aktarılır. Hiçbir Case etiket deseninin eşleşme ifadesiyle eşleşmesi halinde, denetim varsa Case etiketi ile bölüme aktarılır `default` . `default`Böyle bir durum yoksa, herhangi bir switch bölümünde hiçbir deyim yürütülmez ve denetim deyimin dışına aktarılır `switch` .
 
-`switch`Deyimle ve model eşleştirme hakkında daha fazla bilgi için bkz. [ `switch` deyimle eşleşen model](#pattern-matching with-the-switch-statement) bölümü.
+`switch`Deyimle ve model eşleştirme hakkında daha fazla bilgi için bkz. [ `switch` deyimle eşleşen model](#pattern-matching-with-the-switch-statement) bölümü.
 
 C# 6 yalnızca sabit bir stili desteklediğinden ve sabit değerlerin yinelenmesinde izin vermediğinden, Case etiketleri birbirini dışlayan değerleri tanımlar ve yalnızca bir desenler eşleştirme ifadesiyle eşleştirebilir. Sonuç olarak, `case` deyimlerin görünme sırası önemli değildir.
 
@@ -206,4 +206,4 @@ Daha fazla bilgi için [C# dil belirtiminde](/dotnet/csharp/language-reference/l
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# anahtar sözcükleri](index.md)
 - [if-else](if-else.md)
-- [Model eşleştirme](../../pattern-matching.md)
+- [Desen Eşleştirme](../../pattern-matching.md)

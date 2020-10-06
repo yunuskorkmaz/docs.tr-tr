@@ -1,16 +1,16 @@
 ---
-title: Platform uyumluluğu Çözümleyicisi
+title: Platform uyumluluk çözümleyicisi
 description: Platformlar arası uygulamalarda ve kitaplıklarda platform uyumluluk sorunlarını algılamaya yardımcı olabilecek bir Roslyn Çözümleyicisi.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 4e842e5bbe90dd5006d9b27d0365f908b6441997
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: fcd5ec755789ff7f2472d8077dd52f321bf9f167
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406605"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756188"
 ---
-# <a name="platform-compatibility-analyzer"></a>Platform uyumluluğu Çözümleyicisi
+# <a name="platform-compatibility-analyzer"></a>Platform uyumluluk çözümleyicisi
 
 Büyük olasılıkla "One .NET" gibi bir uygulama oluşturmak için kullanabileceğiniz tek bir birleştirilmiş platform olduğunu duydunuz. .NET 5,0 SDK ASP.NET Core, Entity Framework Core, WinForms, WPF, Xamarin ve ML.NET içerir ve zaman içinde daha fazla platform için destek ekler. .NET 5,0, .NET 'in farklı özellikleri hakkında neden olmanız gerektiği, ancak temel alınan işletim sistemini (OS) tamamen soyutlamayı denemeyen bir deneyim sunmak için çaba harcar. Platforma özgü API 'Leri, örneğin P/Invoke, WinRT veya iOS ve Android için Xamarin bağlamaları gibi bir arayabileceksiniz.
 
@@ -23,7 +23,7 @@ Yeni API 'Ler şunları içerir:
 > [!TIP]
 > Platform uyumluluk Çözümleyicisi, [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md)'nin [platformlar arası sorunları keşfetmesini](../../standard/analyzers/api-analyzer.md#discover-cross-platform-issues) yükseltir ve değiştirir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin biridir. .NET 5,0 ' den itibaren bu çözümleyiciler [.NET SDK 'ya dahildir](../../fundamentals/productivity/code-analysis.md). Platform uyumluluğu Çözümleyicisi, yalnızca `net5.0` veya sonraki bir sürümü hedefleyen projeler için varsayılan olarak etkindir. Ancak, diğer çerçeveleri hedefleyen projeler için [etkinleştirebilirsiniz](/visualstudio/code-quality/ca1416.md#configurability) .
 
@@ -70,7 +70,7 @@ Daha fazla bilgi için, [özniteliklerin nasıl çalıştığı ve bu nesnelerin
     ```
 
   - **Yalnızca desteklenmeyen liste**. Her işletim sistemi platformunun en düşük sürümü bir öznitelik ise `[UnsupportedOSPlatform]` , API yalnızca listelenen platformlar tarafından desteklenmeyen ve diğer tüm platformlar tarafından desteklenen kabul edilir. Listenin `[SupportedOSPlatform]` aynı platforma sahip özniteliği olabilir, ancak API 'nin Bu sürümden itibaren desteklendiğini belirten daha yüksek bir sürümü olabilir.
-  
+
     ```csharp
     // The API was unsupported on Windows until version 10.0.19041.0.
     // The API is considered supported everywhere else without constraints.
@@ -79,16 +79,16 @@ Daha fazla bilgi için, [özniteliklerin nasıl çalıştığı ve bu nesnelerin
     public void ApiSupportedFromWindows8UnsupportFromWindows10();
     ```
 
-  - **Tutarsız liste**. Bazı platformların en düşük sürümü `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` diğer platformlar için ise, çözümleyici için desteklenmeyen tutarsız olarak değerlendirilir.
+  - **Tutarsız liste**. Bazı platformların en düşük sürümü diğer platformlar için ise, bu, `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` çözümleyici için desteklenmeyen tutarsız olarak kabul edilir.
   - Ve özniteliklerinin en düşük sürümleri `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` eşitse, çözümleyici platformu **yalnızca desteklenen listenin**bir parçası olarak değerlendirir.
-- Platform öznitelikleri, türler, Üyeler (metotlar, alanlar, Özellikler ve olaylar) ve farklı platform adı ve/veya sürümü olan derlemeler için uygulanabilir.
+- Platform öznitelikleri, türler, Üyeler (metotlar, alanlar, Özellikler ve olaylar) ve farklı platform adları veya sürümleri olan derlemeler için uygulanabilir.
   - En üst düzeyde uygulanan öznitelikler `target` , tüm üyelerini ve türlerini etkiler.
-  - Alt düzey öznitelikleri yalnızca "alt ek açıklamalar, platformlar desteğini daraltabilirler, ancak bunları genişlezler" kuralına uyduklarında geçerlidir.
-    - Üst öğe **yalnızca listeyi destekledikleri** zaman, alt üye öznitelikleri, üst desteği genişleten şekilde yeni bir platform desteği ekleyemedi, yeni bir platform desteği yalnızca üst öğeye eklenebilir. Ancak `Supported` , desteği daraltalacağı için, daha sonraki sürümlerle aynı platform için özniteliği olabilir. Ayrıca, `Unsupported` üst desteği de daraltmak için aynı platforma sahip özniteliği de olabilir.
-    - Üst öğe **yalnızca desteklenmeyen** bir liste olduğunda, alt üye öznitelikleri üst desteğin daraltıleceği için yeni bir platform desteği ekleyebilir, ancak üst `Supported` desteği genişleten üst öğeyle aynı platform için özniteliği olamaz. Aynı platform için destek yalnızca özgün özniteliğin uygulandığı üst düzeye eklenebilir `Unsupported` .
-  - `[SupportedOSPlatform("platformVersion")]`Aynı ada sahip BIR API için birden çok kez uygulanırsa `platform` , çözümleyici tarafından yalnızca en düşük sürümle birlikte değerlendirilir.
-  - `[UnsupportedOSPlatform("platformVersion")]`Aynı ada sahip BIR API için ikiden fazla kez uygulanırsa `platform` , çözümleyici tarafından yalnızca en eski sürümler olan ikisi de kabul edilir.
-  
+  - Alt düzey öznitelikler yalnızca "alt ek açıklamalar, platformlar desteğini daraltabilir, ancak bunları genişlezler" kuralına uyduklarında geçerlidir.
+    - Üst öğe **yalnızca listeyi destekledikleri** zaman, alt üye öznitelikleri, ana desteği genişleten gibi yeni bir platform desteği ekleyemez. Yeni bir platform için destek yalnızca üst öğeye eklenebilir. Ancak alt öğe, `Supported` desteği daralan, daha sonraki sürümlerle aynı platform için özniteliğine sahip olabilir. Ayrıca, alt, `Unsupported` üst desteği de daralan aynı platformlu özniteliğe sahip olabilir.
+    - Üst öğe **yalnızca desteklenmeyen** bir liste olduğunda, alt üye öznitelikleri yeni bir platform için destek ekleyebilir ve bu, üst düzey desteği daraltır. Ancak `Supported` üst desteği genişlettiğinden, üst öğeyle aynı platform için özniteliği olamaz. Aynı platform için destek yalnızca özgün özniteliğin uygulandığı üst öğeye eklenebilir `Unsupported` .
+  - `[SupportedOSPlatform("platformVersion")]`Aynı ada sahip BIR API için birden çok kez uygulanırsa `platform` , çözümleyici yalnızca en düşük sürümle birlikte kabul edilir.
+  - `[UnsupportedOSPlatform("platformVersion")]`Aynı ada sahip BIR API için ikiden fazla kez uygulanırsa `platform` , çözümleyici yalnızca en eski sürümlerle ikisini de kabul eder.
+
   > [!NOTE]
   > Başlangıçta desteklenen ancak daha sonraki bir sürümde desteklenmeyen (kaldırılan) bir API, daha sonraki bir sürümde yeniden bağlantı almak zorunda değildir.
 
@@ -123,7 +123,7 @@ Daha fazla bilgi için, [özniteliklerin nasıl çalıştığı ve bu nesnelerin
       // warns: 'SupportedOnWindowsAndLinuxOnly' is supported on 'Linux'
       SupportedOnWindowsAndLinuxOnly();
 
-      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later  
+      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later
       // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is unsupported on 'windows' 10.0.19041.0 and later
       ApiSupportedFromWindows8UnsupportFromWindows10();
 
@@ -133,7 +133,7 @@ Daha fazla bilgi için, [özniteliklerin nasıl çalıştığı ve bu nesnelerin
   }
 
   // an API not supported on android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.
@@ -154,11 +154,11 @@ Daha fazla bilgi için, [özniteliklerin nasıl çalıştığı ve bu nesnelerin
   {
       DoesNotWorkOnAndroid(); // warns 'DoesNotWorkOnAndroid' is unsupported on 'android'
 
-      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFromVersion8' is supported on 'windows' 8.0 and later
       StartedWindowsSupportFromVersion8();
 
-      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is supported on 'windows' 8.0 and later
       // even there were 3 diagnostics found analyzer warn only for the first 2.
       StartedWindowsSupportFrom8UnsupportedFrom10();
@@ -177,7 +177,7 @@ Bu tanılamalarla başa çıkmak için önerilen yol, uygun bir platformda çal�
 
 - **Kodu silin**. Kodunuz Windows kullanıcıları tarafından kullanıldığında, genellikle istediğiniz gibi değildir. Platformlar arası bir alternatif olduğu durumlarda, platforma özgü API 'lerden daha iyi bir şekilde faydalanarak daha iyi bir hale getiriyorsunuz.
 
-- **Uyarıyı gizleyin**. Ayrıca, editor.config veya aracılığıyla da bir uyarı da gizleyebilirsiniz `#pragma warning disable ca1416` . Ancak, platforma özgü API 'Ler kullanılırken bu seçenek son çare olmalıdır.
+- **Uyarıyı gizleyin**. Ayrıca, bir EditorConfig girişi ya da ya da yalnızca uyarıyı gizleyebilirsiniz `#pragma warning disable ca1416` . Ancak, platforma özgü API 'Ler kullanılırken bu seçenek son çare olmalıdır.
 
 ### <a name="guard-platform-specific-apis-with-guard-methods"></a>Guard yöntemleriyle platforma özel API 'Leri koruma
 
@@ -231,7 +231,7 @@ Guard yönteminin platform adı, çağıran platforma bağımlı API platformu a
   }
   ```
 
-- Yeni API 'lerin kullanılabilir olmadığı Netstandard veya netcoreapp ' i hedefleyen bir kodu korumaya ihtiyacınız varsa, <xref:System.OperatingSystem> <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> Bu API kullanılabilir ve çözümleyici tarafından kullanılır. Ancak yeni API 'Ler eklendikçe en iyi duruma getirilmemiştir <xref:System.OperatingSystem> . Platformun yapıda desteklenmediği durumlarda <xref:System.Runtime.InteropServices.OSPlatform> , <xref:System.Runtime.InteropServices.OSPlatform.Create%2A?displayProperty=nameWithType> çözümleyici tarafından da kullanılan ("Platform") kullanabilirsiniz.
+- Hedeflenen veya yeni API 'lerin kullanılamadığı bir kodu korumaya ihtiyacınız varsa `netstandard` `netcoreapp` <xref:System.OperatingSystem> , <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> API kullanılabilir ve çözümleyici tarafından sunulacaktır. Ancak yeni API 'Ler eklendikçe en iyi duruma getirilmemiştir <xref:System.OperatingSystem> . Platform <xref:System.Runtime.InteropServices.OSPlatform> yapıda desteklenmiyorsa, <xref:System.Runtime.InteropServices.OSPlatform.Create(System.String)?displayProperty=nameWithType> çözümleyici 'nin de buna karşı platform adını çağırabilir ve geçirebilirsiniz.
 
   ```csharp
   public void CallingSupportedOnlyApis()
@@ -316,7 +316,7 @@ Platform adları çağıran platforma bağımlı API ile eşleşmelidir. Platfor
   }
 
   // an API not supported on Android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.

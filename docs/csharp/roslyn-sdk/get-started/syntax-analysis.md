@@ -1,20 +1,20 @@
 ---
-title: Sözdizimi analizine başlayın (Roslyn API'leri)
-description: Sözdizimi ağaçlarını gezmeye, sorgulamaya ve yürümeye giriş.
+title: Sözdizimi analizini kullanmaya başlama (Roslyn API 'Leri)
+description: Sözdizimi ağaçlarını geçme, sorgulama ve yürüyen bir giriş.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b9dd909a83877755dc1ebafd58aae892e460b93
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240525"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756162"
 ---
-# <a name="get-started-with-syntax-analysis"></a>Sözdizimi analizine başlayın
+# <a name="get-started-with-syntax-analysis"></a>Sözdizimi analizini kullanmaya başlayın
 
-Bu eğitimde, **Sözdizimi API'sini**keşfedeceksiniz. Sözdizimi API' si, C# veya Visual Basic programını açıklayan veri yapılarına erişim sağlar. Bu veri yapıları, herhangi bir boyuttaki herhangi bir programı tam olarak temsil edebilecekleri kadar ayrıntıya sahiptir. Bu yapılar, derleyen ve doğru çalışan tam programları açıklayabilir. Ayrıca, siz yazarken eksik programları editörde tanımlayabilirler.
+Bu öğreticide, **SÖZDIZIMI API**'sini keşfedeceğiz. Sözdizimi API 'SI, C# veya Visual Basic programını tanımlayan veri yapılarına erişim sağlar. Bu veri yapıları, her boyuttaki programı tam olarak temsil ettikleri yeterli ayrıntıya sahiptir. Bu yapılar, derleme ve doğru şekilde çalışan tüm programları tanımlayabilir. Ayrıca, bunları düzenleyicide yazarken tamamlanmamış programları da tanımlayabilir.
 
-Bu zengin ifadeyi etkinleştirmek için, Sözdizimi API'sini oluşturan veri yapıları ve API'ler mutlaka karmaşıktır. Tipik "Hello World" programı için veri yapısının nasıl göründüğüyle başlayalım:
+Bu zengin ifadeyi etkinleştirmek için, söz dizimi API 'sini oluşturan veri yapıları ve API 'Ler karmaşık olması gerekir. Veri yapısının tipik "Merhaba Dünya" programı için nasıl göründüğünü başlayalım:
 
 ```csharp
 using System;
@@ -33,88 +33,88 @@ namespace HelloWorld
 }
 ```
 
-Önceki programın metnine bakın. Tanıdık öğeleri tanıyorsun. Metnin tamamı tek bir kaynak dosyayı veya **derleme birimini**temsil eder. Bu kaynak dosyanın ilk üç satırı **yönergeleri kullanıyor.** Kalan kaynak bir **ad alanı bildiriminde**bulunur. Ad alanı bildirimi bir alt **sınıf bildirimi**içerir. Sınıf bildirimi bir **yöntem bildirimi**içerir.
+Önceki programın metnine bakın. Tanıdık öğeleri tanısınız. Tüm metin, tek bir kaynak dosyasını veya bir **derleme birimini**temsil eder. Bu kaynak dosyanın ilk üç satırı **yönergeleri kullanıyor**. Kalan kaynak, bir **ad alanı bildiriminde**bulunur. Ad alanı bildirimi bir alt **sınıf bildirimi**içerir. Sınıf bildirimi bir **Yöntem bildirimi**içerir.
 
-Sözdizimi API derleme birimini temsil eden kök içeren bir ağaç yapısı oluşturur. Ağaçtaki düğümler, kullanma yönergelerini, ad alanı bildirimini ve programın diğer tüm öğelerini temsil eder. Ağaç yapısı en düşük seviyelere kadar devam ediyor: dize "Merhaba Dünya!" bir **bağımsız değişkenin**soyundan gelen bir **dize gerçek belirtecidir.** Sözdizimi API'si programın yapısına erişim sağlar. Belirli kod uygulamaları için sorgu yapabilir, kodu anlamak için tüm ağacı gezdirebilir ve varolan ağacı değiştirerek yeni ağaçlar oluşturabilirsiniz.
+Sözdizimi API 'SI, derleme birimini temsil eden köke sahip bir ağaç yapısı oluşturur. Ağaçtaki düğümler using yönergelerini, ad alanı bildirimini ve programın diğer tüm öğelerini temsil eder. Ağaç yapısı en düşük düzeylere devam eder: "Merhaba Dünya!" dizesi , bir **bağımsız değişkenin**alt değeri olan **dize sabit değer belirtecidir** . Sözdizimi API 'SI programın yapısına erişim sağlar. Belirli kod uygulamalarını sorgulayabilir, kodu anlamak için ağacın tamamına kılavuzluk edebilir ve var olan ağacı değiştirerek yeni ağaçlar oluşturabilirsiniz.
 
-Bu kısa açıklama, Sözdizimi API'sini kullanarak erişilebilen bilgi türüne genel bir bakış sağlar. Sözdizimi API'si, C#'dan bildiğiniz tanıdık kod yapılarını açıklayan resmi bir API'den başka bir şey değildir. Tam özellikler, satır sonları, beyaz boşluk ve girintiyi de içeren kodun nasıl biçimlendirilip biçimlendirilenhakkında bilgi içerir. Bu bilgileri kullanarak, kodu insan programcılar veya derleyici tarafından yazılmış ve okunmuş olarak tam olarak temsil edebilirsiniz. Bu yapıyı kullanmak, kaynak kodla son derece anlamlı bir düzeyde etkileşim kurmanızı sağlar. Artık metin dizeleri değil, C# programının yapısını temsil eden verilerdir.
+Bu kısa açıklama, sözdizimi API 'SI kullanılarak erişilebilen bilgi türüne genel bir bakış sağlar. Sözdizimi API 'SI, C# ' den bildiğiniz tanıdık kod yapılarını açıklayan bir biçimsel API 'den daha fazla şey yapmaz. Tüm yetenekler, kodun satır sonları, boşluk ve girintileme dahil nasıl biçimlendirildiği hakkında bilgiler içerir. Bu bilgileri kullanarak, kodu insan programcıları veya derleyicisi tarafından yazılmış ve okunan şekilde tam olarak temsil edebilirsiniz. Bu yapının kullanılması, kaynak kodla daha anlamlı bir düzeyde etkileşim kurmanıza olanak sağlar. Artık metin dizeleri değildir, ancak bir C# programının yapısını temsil eden veriler.
 
-Başlamak için **.NET Derleyici Platformu SDK'yı**yüklemeniz gerekir:
+Başlamak için **.net Compiler Platform SDK 'sını**yüklemeniz gerekir:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-syntax-trees"></a>Sözdizimi ağaçlarını anlama
 
-C# kodunun yapısının herhangi bir analizi için Sözdizimi API'sini kullanırsınız. **Sözdizimi API** ayrışdırıcıları, sözdizimi ağaçlarını ve sözdizimi ağaçlarını çözümleme ve oluşturma yardımcı larını ortaya çıkarır. Belirli sözdizimi öğeleri için kodu arama veya bir programın kodunu okuma şeklidir.
+C# kodu yapısının herhangi bir analizi için sözdizimi API 'sini kullanırsınız. **Sözdizimi API 'si** , sözdizimi ağaçlarını çözümlemek ve oluşturmak için ayrıştırıcıları, sözdizimi ağaçlarını ve yardımcı programları sunar. Belirli sözdizimi öğeleri için kod arama veya bir programın kodunu okuma.
 
-Sözdizimi ağacı, C# ve Visual Basic derleyicileri tarafından C# ve Visual Basic programlarını anlamak için kullanılan bir veri yapısıdır. Sözdizimi ağaçları, bir proje inşa edildiğinde veya geliştirici F5'e ulaştığında çalışan aynı ayrıştırıcı tarafından üretilir. Sözdizimi ağaçları nın dili yle tam sadakati vardır; kod dosyasındaki her bilgi parçası ağaçta temsil edilir. Metne sözdizimi ağacı yazmak, ayrıştırılan tam özgün metni yeniden üretir. Sözdizimi ağaçları da **değişmez;** bir kez oluşturulan bir sözdizimi ağacı asla değiştirilemez. Ağaçların tüketicileri, verilerin hiçbir zaman değişmediğini bilerek, kilitler veya diğer eşzamanlılık önlemleri olmadan ağaçları birden fazla iplik üzerinde analiz edebilirler. Varolan bir ağacı değiştirmenin sonucu olan yeni ağaçlar oluşturmak için API'leri kullanabilirsiniz.
+Sözdizimi ağacı, c# ve Visual Basic programlarını anlamak için C# ve Visual Basic derleyicileri tarafından kullanılan bir veri yapısıdır. Sözdizimi ağaçları, bir proje oluşturulduğunda veya bir geliştirici isabetlerinin F5 'e göre çalışan aynı ayrıştırıcı tarafından oluşturulur. Sözdizimi ağaçları, dille tam uygunluğa sahiptir; bir kod dosyasındaki bilgilerin her bir biti ağaçta temsil edilir. Bir sözdizimi ağacının metne yazılması, ayrıştırılmış özgün metnin tam olarak yeniden üretilmesinden kaynaklanabilir. Sözdizimi ağaçları da **sabittir**; bir sözdizimi ağacı oluşturulduktan sonra hiçbir şekilde değiştirilemez. Ağaçların tüketicileri, verileri hiçbir şekilde değiştirmeksizin, kilitleri veya diğer eşzamanlılık ölçüleri olmadan birden çok iş parçacığında ağaçları analiz edebilir. API 'Leri, varolan bir ağacı değiştirmenin sonucu olan yeni ağaçlar oluşturmak için kullanabilirsiniz.
 
-Sözdizimi ağaçlarının dört ana yapı taşları şunlardır:
+Sözdizimi ağaçlarının dört birincil yapı taşları şunlardır:
 
-* Sınıf, <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> bir örneği tüm ayrışdıran ağacı temsil eder. <xref:Microsoft.CodeAnalysis.SyntaxTree>dile özgü türevleri olan soyut bir sınıftır. C# veya Visual Basic'teki <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>metni ayrıştırmak için (veya) sınıfının <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> ayrıştırma yöntemlerini kullanırsınız.
-* Bildirimler, deyimler, yan tümceler ve ifadeler gibi sözdizim yapılarını temsil eden <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> sınıf.
-* Tek <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType> bir anahtar kelimeyi, tanımlayıcıyı, işleçveya noktalama işaretlerini temsil eden yapı.
-* Ve son <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> olarak, belirteçler, ön işleme yönergeleri ve yorumlar arasındaki beyaz boşluk gibi sözdizimsel olarak önemsiz bilgi bitlerini temsil eden yapı.
+* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>Tüm ayrıştırma ağacını temsil eden bir örneği olan sınıfı. <xref:Microsoft.CodeAnalysis.SyntaxTree> dile özgü türetme sahip olan soyut bir sınıftır. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType> C# (veya Visual Basic) içinde metin ayrıştırmak için (veya) sınıfının Parse yöntemlerini kullanırsınız.
+* <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>Bildirim, deyimler, yan tümceler ve ifadeler gibi sözdizimsel yapıları temsil eden sınıf, örnekleri.
+* <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>Tek bir anahtar sözcük, tanımlayıcı, işleç veya noktalama temsil eden yapı.
+* Ve son <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> olarak, belirteçler, ön işleme yönergeleri ve açıklamalar arasındaki boşluk gibi sözdizimsel bilgi bitlerini temsil eden yapı.
 
-Trivia, belirteçleri ve düğümler hiyerarşik olarak Visual Basic veya C# kodunun bir parçasındaki her şeyi temsil eden bir ağaç oluşturmak üzere oluşturulur. Bu yapıyı **Sözdizimi Görselleştiricisi** penceresini kullanarak görebilirsiniz. Visual Studio'da**Diğer Windows** > **Sözdizimi Görselleştiricisini** **Görüntüle'yi** > seçin. Örneğin, **Sözdizimi Görselleştiricisi** kullanılarak incelenen önceki C# kaynak dosyası aşağıdaki şekilde görünür:
+Trivia, belirteçler ve düğümler, Visual Basic veya C# kodu parçasındaki her şeyi tamamen temsil eden bir ağaç oluşturmak için hiyerarşik olarak oluşturulur. **Syntax Visualizer** penceresini kullanarak bu yapıyı görebilirsiniz. Visual Studio 'da **View**  >  **diğer Windows**  >  **Syntax Visualizer**görüntüle ' yi seçin. Örneğin, **Syntax Visualizer** kullanılarak Incelenen önceki C# kaynak dosyası aşağıdaki şekilde görünür:
 
-**SözdizimiNode**: Mavi | **SözdizimiToken**: Yeşil | **SözdizimiTrivia** ![: Kırmızı C# Kodu Dosyası](media/walkthrough-csharp-syntax-figure1.png)
+**SyntaxNode**: mavi | **SyntaxToken**: yeşil | **SyntaxTrivia**: Red ![ C# kod dosyası](media/walkthrough-csharp-syntax-figure1.png)
 
-Bu ağaç yapısında gezinerek, bir kod dosyasında herhangi bir ifade, ifade, belirteç veya beyaz boşluk biti bulabilirsiniz.
+Bu ağaç yapısına giderek, bir kod dosyasında herhangi bir deyimi, ifadeyi, belirteci veya boşluk alanını bulabilirsiniz.
 
-Sözdizimi API'lerini kullanarak bir kod dosyasında herhangi bir şey bulabilirsiniz, ancak çoğu senaryo kod küçük parçacıkları inceleyerek veya belirli ifadeler veya parçalar için arama içerir. İzleyen iki örnek, kodun yapısına göz atmak veya tek bir deyim aramak için tipik kullanımları gösterir.
+Söz dizimi API 'Lerini kullanarak bir kod dosyasında herhangi bir şeyi bulabilirsiniz, ancak çoğu senaryo küçük kod parçacıklarını incelemeyi veya belirli deyimler ya da parçaları aramayı içerir. Aşağıdaki iki örnek, kodun yapısına gözatabilmek veya tek deyimler aramak için tipik kullanımları gösterir.
 
-## <a name="traversing-trees"></a>Ağaçların geçişi
+## <a name="traversing-trees"></a>Ağaçlara geçme
 
-Sözdizimi ağacındaki düğümleri iki şekilde inceleyebilirsiniz. Her düğümü incelemek için ağaçta geçiş yapabilir veya belirli öğeleri veya düğümleri sorgulayabilirsiniz.
+Bir sözdizimi ağacındaki düğümleri iki şekilde inceleyebilirsiniz. Her bir düğümü incelemek için ağacı çapraz geçiş yapabilir veya belirli öğeleri veya düğümleri sorgulayabilirsiniz.
 
-### <a name="manual-traversal"></a>Manuel geçiş
+### <a name="manual-traversal"></a>El ile çapraz geçiş
 
-Bu örneğin bitmiş kodunu [GitHub depomuzda](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)görebilirsiniz.
+Bu örnek için tamamlanmış kodu [GitHub depomuza](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)bakabilirsiniz.
 
 > [!NOTE]
-> Sözdizimi Ağacı türleri, programdaki farklı konumlarda geçerli olan farklı sözdizimi öğelerini açıklamak için kalıtım kullanır. Bu API'lerin kullanılması genellikle özellikleri veya koleksiyon üyelerini belirli türemiş türlere dökümü anlamına gelir. Aşağıdaki örneklerde, atama ve dökümler, açıkça yazılan değişkenler kullanılarak ayrı ifadelerdir. API'nin geri dönüş türlerini ve döndürülen nesnelerin çalışma zamanı türünü görmek için kodu okuyabilirsiniz. Uygulamada, örtülü olarak yazılan değişkenleri kullanmak ve incelenmekte olan nesnelerin türünü açıklamak için API adlarına güvenmek daha yaygındır.
+> Sözdizimi ağacı türleri, programdaki farklı konumlarda geçerli olan farklı sözdizimi öğelerini anlatmak için devralmayı kullanır. Bu API 'Lerin kullanılması genellikle özellikleri veya koleksiyon üyelerini belirli türetilmiş türlere atama anlamına gelir. Aşağıdaki örneklerde atama ve yayınlar, açıkça belirlenmiş değişkenler kullanılarak ayrı deyimlerdir. API 'nin dönüş türlerini ve döndürülen nesnelerin çalışma zamanı türünü görmek için kodu okuyabilirsiniz. Uygulamada, örtük olarak yazılan değişkenleri kullanmak daha yaygındır ve incelenen nesne türlerini belirtmek için API adlarını kullanır.
 
-Yeni bir C# **Tek Başına Kod Analizi Aracı** projesi oluşturun:
+Yeni bir C# **tek başına kod analizi araç** projesi oluşturun:
 
-* Visual Studio'da, Yeni Proje iletişim kutusunu görüntülemek için **Dosya** > **Yeni** > **Projesi'ni** seçin.
-* **Visual C#** > **Genişletilebilirlik** **altında, Tek Başına Kod Analiz Aracı'nı**seçin.
-* Projenizi "**SözdizimiTreeManualTraversal**" adını ver ve Tamam'ı tıklatın.
+* Visual Studio 'da **File**  >  **New**  >  Yeni proje iletişim kutusunu göstermek için dosya yeni**Proje** ' yi seçin.
+* **Visual C#**  >  **genişletilebilirliği**altında **tek başına Kod Analizi Aracı**' nı seçin.
+* Projenizi "**SyntaxTreeManualTraversal**" olarak adlandırın ve Tamam ' a tıklayın.
 
-Temel "Merhaba Dünya"yı analiz edeceksin. program daha önce gösterilmiştir.
-Merhaba Dünya programı için metni sınıfınızda `Program` sabit olarak ekleyin:
+Temel "Merhaba Dünya!" öğesini çözümleyeceğiz Program daha önce gösteriliyor.
+Merhaba Dünya programın metnini sınıfınıza bir sabit olarak ekleyin `Program` :
 
 [!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
-Ardından, `programText` sabitteki kod metni için **sözdizimi ağacı** oluşturmak için aşağıdaki kodu ekleyin.  Yönteminize `Main` aşağıdaki satırı ekleyin:
+Sonra, sabit içindeki kod metni için **sözdizimi ağacını** derlemek üzere aşağıdaki kodu ekleyin `programText` .  Aşağıdaki satırı `Main` yöntemine ekleyin:
 
 [!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
-Bu iki satır ağacı oluşturmak ve bu ağacın kök düğümünü almak. Artık ağaçtaki düğümleri inceleyebilirsiniz. Ağaçtaki kök `Main` düğümünün bazı özelliklerini görüntülemek için yönteminize bu satırları ekleyin:
+Bu iki satır ağacı oluşturur ve bu ağacın kök düğümünü alır. Artık ağaçtaki düğümleri inceleyebilirsiniz. `Main`Ağaçtaki kök düğümün bazı özelliklerini göstermek için bu satırları yönteminizin içine ekleyin:
 
 [!code-csharp[Examine the root node](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
 
-Kodunuzun bu ağaçtaki kök düğümü hakkında ne bulduğunu görmek için uygulamayı çalıştırın.
+Kodunuzun, bu ağaçtaki kök düğüm hakkında nasıl keşfedildiğini görmek için uygulamayı çalıştırın.
 
-Genellikle, kod hakkında bilgi edinmek için ağaç çapraz istiyorum. Bu örnekte, API'leri keşfetmek için bildiğiniz kodu çözümlüyorsunuz. `root` Düğümün ilk üyesini incelemek için aşağıdaki kodu ekleyin:
+Genellikle, kod hakkında bilgi edinmek için ağacı gezirsiniz. Bu örnekte, API 'Leri araştırmak için bildiğiniz kodu çözümlüyorsunuz. Düğümün ilk üyesini incelemek için aşağıdaki kodu ekleyin `root` :
 
 [!code-csharp[Find the first member](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
-Bu üye <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>bir . Beyanname kapsamındaki her şeyi `namespace HelloWorld` temsil eder. Ad alanı içinde hangi düğümlerin beyan edildiğine `HelloWorld` inanca göre aşağıdaki kodu ekleyin:
+Bu üye bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType> . Bildirimin kapsamındaki her şeyi temsil eder `namespace HelloWorld` . Ad alanı içinde hangi düğümlerin bildirildiği hakkında incelemek için aşağıdaki kodu ekleyin `HelloWorld` :
 
 [!code-csharp[Find the class declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
 Öğrendiklerinizi görmek için programı çalıştırın.
 
-Artık, sınıf bildirimini <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType>incelemek için bu tür yeni bir değişken bildirin. Bu sınıf yalnızca bir `Main` üye içerir: yöntem. `Main` Yöntemi bulmak için aşağıdaki kodu ekleyin ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType>bir .
+Bildirimin bir olduğunu bildiğinize göre <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType> , sınıf bildirimini incelemek için o türde yeni bir değişken bildirin. Bu sınıf yalnızca bir üye içeriyor: `Main` yöntemi. `Main`Yöntemini bulmak ve ' a dönüştürmek için aşağıdaki kodu ekleyin <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType> .
 
 [!code-csharp[Find the main declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
 
-Yöntem bildirimi düğümü, yöntem le ilgili tüm sözdizimsiz bilgileri içerir. Yöntemin `Main` dönüş türünü, bağımsız değişkenlerin sayısını ve türlerini ve yöntemin gövde metnini görüntüleyelim. Aşağıdaki kodu ekleyin:
+Yöntem bildirimi düğümü, yöntemiyle ilgili tüm sözdizimsel bilgileri içerir. Yöntemin dönüş türünü `Main` , bağımsız değişkenlerin sayısını ve türlerini ve yönteminin gövde metnini gösterelim. Şu kodu ekleyin:
 
 [!code-csharp[Examine the syntax of the main method](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
 
-Bu program hakkında keşfettiğiniz tüm bilgileri görmek için programı çalıştırın:
+Bu program hakkında bulduğunuz tüm bilgileri görmek için programı çalıştırın:
 
 ```text
 The tree is a CompilationUnit node.
@@ -140,59 +140,59 @@ The body text of the Main method follows:
 
 ### <a name="query-methods"></a>Sorgu yöntemleri
 
-Ağaçlarda geçişe ek olarak, sözdizimi ağacında <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>tanımlanan sorgu yöntemlerini kullanarak da keşfedebilirsiniz. Bu yöntemler, XPath'e aşina olan herkes için hemen bilinmelidir. Bir ağaçtaki şeyleri hızlı bir şekilde bulmak için LINQ ile bu yöntemleri kullanabilirsiniz. Gibi <xref:Microsoft.CodeAnalysis.SyntaxNode> sorgu yöntemleri <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>vardır <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A>ve .
+Geçiş ağaçlarına ek olarak, sözdizimi ağacını üzerinde tanımlanan sorgu yöntemlerini kullanarak da keşfedebilirsiniz <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> . Bu yöntemler XPath 'i bilen herkese hemen tanıdık gelmelidir. Bu yöntemleri, LINQ ile birlikte kullanarak bir ağaçtaki şeyleri hızlıca bulabilirsiniz. , <xref:Microsoft.CodeAnalysis.SyntaxNode> Ve gibi sorgu yöntemlerine sahiptir <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A> .
 
-Bu sorgu yöntemlerini, `Main` yönteme bağımsız değişkeni ağaçta gezinmeye alternatif olarak bulmak için kullanabilirsiniz. Yönteminizin `Main` altına aşağıdaki kodu ekleyin:
+Bu sorgu yöntemlerini, `Main` ağaca gidilme alternatifi olarak yönteme bağımsız değişkeni bulmak için kullanabilirsiniz. Aşağıdaki kodu yönteminizin en altına ekleyin `Main` :
 
 [!code-csharp[Query the tree for the arguments to Main](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
 
-İlk deyim, önceki örnekteki <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> yle aynı parametreyi bulmak için bir LINQ ifadesi ve yöntem kullanır.
+İlk deyim bir LINQ ifadesi ve <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> önceki örnekteki ile aynı parametreyi bulmak için yöntemini kullanır.
 
-Programı çalıştırdığınızda LINQ ifadesinin ağaçta el ile gezinmeyle aynı parametreyi bulduğunu görebilirsiniz.
+Programı çalıştırın ve LINQ ifadesinin ağaçta el ile gezinirken aynı parametreyi bulmuştur.
 
-Örnek, `WriteLine` sözdizimi ağaçlarının geçişi yle ilgili bilgileri görüntülemek için deyimleri kullanır. Ayrıca hata ayıklama altında bitmiş programı çalıştırarak çok daha fazla bilgi edinebilirsiniz. Merhaba dünya programı için oluşturulan sözdizimi ağacının bir parçası olan özellikleri ve yöntemleri daha inceleyebilirsiniz.
+Örnek `WriteLine` deyimleri, geçen sözdizimi ağaçları hakkında bilgi göstermek için kullanır. Ayrıca, hata ayıklayıcı altında tamamlanmış programı çalıştırarak çok daha fazla bilgi edinebilirsiniz. Hello World programı için oluşturulan sözdizimi ağacının bir parçası olan özelliklerin ve yöntemlerin daha fazlasını inceleyebilirsiniz.
 
-## <a name="syntax-walkers"></a>Sözdizimi yürüteçleri
+## <a name="syntax-walkers"></a>Sözdizimi walranlar
 
-Genellikle sözdizimi ağacında belirli bir türün tüm düğümlerini (örneğin, bir dosyadaki her özellik bildirimini) bulmak istersiniz. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker?displayProperty=nameWithType> Sınıfı genişleterek ve <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitPropertyDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)> yöntemi geçersiz kılarak, her özellik bildirimini bir sözdizimi ağacında yapısını önceden bilmeden işlersiniz. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>özyinelemeli bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor> düğüm ve her çocuğunu ziyaret eden özel bir türdür.
+Genellikle, belirli bir türün tüm düğümlerini bir sözdizimi ağacında (örneğin, bir dosyadaki her özellik bildirimi) bulmak istiyorsunuz. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker?displayProperty=nameWithType>Sınıfını genişleterek ve yöntemi geçersiz kılarak <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitPropertyDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)> , yapısını önceden bilmeden bir sözdizimi ağacında her özellik bildirimini işleyebilirsiniz. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> , <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor> bir düğümü ve alt öğelerinden her birini yinelemeli olarak ziyaret eden belirli bir türüdür.
 
-Bu örnek, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> sözdizimi ağacını inceleyen bir uygulama uygular. Ad alanı `using` almayan `System` yönergeleri toplar.
+Bu örnek, bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> sözdizimi ağacını inceleyen bir uygular. `using`Bir ad alanını içeri aktarmayan bulduğu yönergeleri toplar `System` .
 
-Yeni bir C# **Tek Başına Kod Analizi Aracı** projesi oluşturun; adı "**SyntaxWalker**."
+Yeni bir C# **tek başına kod analizi araç** projesi oluşturun; "**SyntaxWalker**" olarak adlandırın.
 
-Bu örneğin bitmiş kodunu [GitHub depomuzda](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)görebilirsiniz. GitHub'daki örnek, bu öğreticide açıklanan her iki projeyi de içerir.
+Bu örnek için tamamlanmış kodu [GitHub depomuza](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)bakabilirsiniz. GitHub 'daki örnek, bu öğreticide açıklanan her iki projeyi içerir.
 
-Önceki örnekte olduğu gibi, çözümleyeceğiniz programın metnini tutmak için bir dize sabiti tanımlayabilirsiniz:
+Önceki örnekte olduğu gibi, analiz edilecek programın metnini tutmak için bir dize sabiti tanımlayabilirsiniz:
 
 [!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
-Bu kaynak `using` metin dört farklı konuma dağılmış yönergeleri içerir: dosya düzeyi, üst düzey ad alanında ve iç içe geçen iki ad alanında. Bu örnek, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> sınıfı sorgu kodu için kullanmak için temel bir senaryoyu vurgular. Bildirimleri kullanarak bulmak için kök sözdizimi ağacında her düğümü ziyaret etmek hantal olacaktır. Bunun yerine, türetilmiş bir sınıf oluşturur sunuz ve yalnızca ağaçtaki geçerli düğüm bir yönerge olduğunda çağrılan yöntemi geçersiz kılarsınız. Ziyaretçiniz diğer düğüm türleri üzerinde herhangi bir çalışma yapmaz. Bu tek `using` yöntem, ifadelerin her birini inceler ve `System` ad alanında olmayan ad alanlarının bir koleksiyon oluşturur. Tüm <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> `using` ifadeleri inceleyen, sadece `using` ifadeleri inceleyen bir yapı oluşturursunuz.
+Bu kaynak metin, `using` dört farklı konuma dağılmış olan yönergeleri içerir: dosya düzeyi, en üst düzey ad alanı ve iç içe yerleştirilmiş iki ad alanı. Bu örnek, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> kodu sorgulamak için sınıfının kullanılmasına yönelik temel bir senaryoyu vurgular. Bildirimleri kullanarak bulmak için kök sözdizimi ağacındaki her düğümü ziyaret etmek daha fazla olabilir. Bunun yerine, türetilmiş bir sınıf oluşturur ve yalnızca ağaçtaki geçerli düğüm bir using yönergesi olduğunda çağrılan yöntemi geçersiz kılabilirsiniz. Ziyaretçinizin başka hiçbir düğüm türü üzerinde herhangi bir iş gerçekleştirmez. Bu tek yöntem deyimlerin her birini inceler `using` ve ad alanında olmayan ad alanlarını bir koleksiyon oluşturur `System` . <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>Tüm deyimlerini ve yalnızca deyimlerini incelediği bir oluşturursunuz `using` `using` .
 
-Artık program metnini tanımladığınıza göre, bir `SyntaxTree` oluşturmanız ve bu ağacın kökünü almanız gerekir:
+Program metnini tanımladığınıza göre, `SyntaxTree` Bu ağacın kökünü oluşturmanız ve bu ağacın kökünü almanız gerekir:
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
-Ardından, yeni bir sınıf oluşturun. Visual Studio'da **Project** > **Add New Item'i**seçin. Yeni **Öğe Ekle** iletişim kutusunda dosya adı olarak *UsingCollector.cs.*
+Sonra yeni bir sınıf oluşturun. Visual Studio 'da **Proje**  >  **Ekle yeni öğe**' yi seçin. **Yeni öğe Ekle** iletişim kutusunda dosya adı olarak *UsingCollector.cs* yazın.
 
-`UsingCollector` Sınıfta `using` ziyaretçi işlevselliğini uygularsınız. `UsingCollector` Sınıfı' ndan <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>türeterek başlayın.
+`using`Ziyaretçi işlevselliğini `UsingCollector` sınıfında uygulamalısınız. `UsingCollector`Sınıfın türemesini sağlayarak başlayın <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> .
 
 [!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 
-Topladığınız ad alanı düğümlerini tutmak için depolama alanına ihtiyacınız vardır.  Sınıfta herkese açık salt okunur `UsingCollector` bir özelliği bildirin; bulduğunuz düğümleri depolamak için bu değişkeni <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> kullanırsınız:
+Topladığınız ad alanı düğümlerini tutmak için depolama gerekir.  Sınıfında ortak bir salt okunurdur özelliği bildirin `UsingCollector` ; bulduğunuz düğümleri depolamak için bu değişkeni kullanırsınız <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> :
 
 [!code-csharp[Declare storage for the using syntax nodes](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
 
-Taban sınıf, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> sözdizimi ağacındaki her düğümü ziyaret etme mantığını uygular. Türemiş sınıf, ilgilendiğiniz belirli düğümler için çağrılan yöntemleri geçersiz kılar. Bu durumda, herhangi bir `using` direktifle ilgileniyorsunuz. Bu, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> yöntemi geçersiz kılmanız gerektiği anlamına gelir. Bu yöntemin tek bağımsız <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> değişkeni bir nesnedir. Bu ziyaretçileri kullanmak için önemli bir avantajdır: zaten belirli düğüm türüne döküm argümanlar ile geçersiz kılınan yöntemleri arayın. Sınıfın, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> içe <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name> aktarılan ad alanının adını depolayan bir özelliği vardır. Bu bir. <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> Geçersiz kılmaya <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> aşağıdaki kodu ekleyin:
+Temel sınıf, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> söz dizimi ağacındaki her bir düğümü ziyaret etmek için mantığı uygular. Türetilmiş sınıf, ilgilendiğiniz belirli düğümler için çağrılan yöntemleri geçersiz kılar. Bu durumda, herhangi bir yönergeyle ilgileniyorsunuz `using` . Yani, yöntemini geçersiz kılmanız gerekir <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> . Bu yöntemin bir bağımsız değişkeni bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> nesnedir. Bu, ziyaretçilerin kullanılması için önemli bir avantajdır: geçersiz kılınan yöntemleri, zaten belirli düğüm türüne saçmış bağımsız değişkenlerle çağırır. <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType>Sınıfı, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name> içeri aktarılmakta olan ad alanının adını depolayan bir özelliğe sahiptir. Bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> . Geçersiz kılmada aşağıdaki kodu ekleyin <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> :
 
 [!code-csharp[Examine using nodes for the System namespace](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
 
-Önceki örnekte olduğu gibi, bu yöntemin `WriteLine` anlaşılmasına yardımcı olmak için çeşitli ifadeler eklediniz. Ne zaman çağrıldığını ve her seferinde hangi bağımsız değişkenlerin aktarılabileceğini görebilirsiniz.
+Önceki örnekte olduğu gibi, `WriteLine` Bu yöntemin anlaşılmasına yardımcı olmak için çeşitli deyimler eklediniz. Ne zaman çağrdığını ve her seferinde hangi bağımsız değişkenlerin geçtiğini görebilirsiniz.
 
-Son olarak, oluşturmak için iki kod `UsingCollector` satırı eklemeniz ve tüm deyimleri `using` toplayarak kök düğümünü ziyaret etmesini zorunda kalmanız gerekir. Ardından, toplayıcınızın bulduğu `foreach` tüm `using` ifadeleri görüntülemek için bir döngü ekleyin:
+Son olarak, oluşturmak için iki satır kod eklemeniz `UsingCollector` ve tüm deyimlerini toplamak için kök düğümü ziyaret etmeniz gerekir `using` . Ardından, `foreach` toplayıcılarınızın bulduğu tüm deyimleri göstermek için bir döngü ekleyin `using` :
 
 [!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
 
-Programı derle ve çalıştır. Aşağıdaki çıktıyı görmeniz gerekir:
+Programı derleyin ve çalıştırın. Aşağıdaki çıkışı görmeniz gerekir:
 
 ```console
         VisitUsingDirective called with System.
@@ -220,4 +220,4 @@ Microsoft.CSharp
 Press any key to continue . . .
 ```
 
-Tebrikler! C# kaynak kodunda belirli c# deyimleri ve bildirimleri bulmak için **Sözdizimi API'sini** kullandınız.
+Tebrikler! C# kaynak kodunda belirli türdeki C# deyimlerini ve bildirimlerini bulmak için **SÖZDIZIMI API** 'sini kullandınız.

@@ -1,41 +1,61 @@
 ---
-title: .NET kullanmaya başlama
-description: .NET'e başlamak için çeşitli makaleleri hem dil hem de platform açısından listeler.
-author: cartermp
-ms.date: 01/21/2020
+title: .NET ile çalışmaya başlama Öğreticileri
+description: .NET uygulama geliştirmeyi veya .NET programlama dillerinden birini öğrenmek için bir öğretici seçin.
+author: tdykstra
+ms.date: 09/30/2020
 ms.technology: dotnet-standard
-ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: f1d5854d8bddea21bbb8a0a7fa032c9fbd15f3d5
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: da98bda4a6a2d637a8a899c9d7315d5cbfcb18fa
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438172"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755882"
 ---
-# <a name="get-started"></a>başlarken
+# <a name="tutorials-for-getting-started-with-net"></a>.NET ile çalışmaya başlama Öğreticileri
 
-.NET'e başlamanın birkaç yolu vardır. .NET büyük bir platform olduğundan, bu dokümantasyonda her biri farklı bir perspektiften .NET'e başlamanıza yardımcı olabilecek birden çok makale bulunmaktadır.
+Aşağıdaki adım adım öğreticiler, aksi belirtilmedikçe Windows, Linux veya macOS üzerinde çalışır.
 
-## <a name="get-started-using-net-languages"></a>.NET dillerini kullanmaya başlayın
+## <a name="tutorials-for-creating-apps"></a>Uygulama oluşturmaya yönelik öğreticiler
 
-C#, Visual Basic ve F#'da eğitimlere başlamak için bkz.
+* Konsol uygulaması oluşturma
+  * [Visual Studio Code kullanma](../core/tutorials/with-visual-studio-code.md)
+  * [Visual Studio 'yu](../core/tutorials/with-visual-studio.md) (Windows) kullanma
+  * [Mac için Visual Studio](../core/tutorials/with-visual-studio-mac.md) (MacOS) kullanma
+* Web uygulaması oluşturma
+  * [sunucu tarafı Web Kullanıcı arabirimi ile](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+  * [istemci tarafı Web Kullanıcı arabirimi ile](https://dotnet.microsoft.com/learn/aspnet/blazor-tutorial/intro)
+* [Web API’si oluşturma](/aspnet/core/tutorials/first-web-api)
+* [Uzak yordam çağrısı Web uygulaması oluşturma](/aspnet/core/tutorials/grpc/grpc-start)
+* [Gerçek zamanlı bir Web uygulaması oluşturma](/aspnet/core/tutorials/signalr)
+* [Bulutta sunucusuz bir işlev oluşturma](/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-csharp)
+* [Android ve iOS için mobil uygulama oluşturma](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro) (Windows)
+* Windows masaüstü uygulaması oluşturma
+  * [WPF](/visualstudio/get-started/csharp/tutorial-wpf)
+  * [Windows Forms](/visualstudio/ide/create-csharp-winform-visual-studio)
+  * [Evrensel Windows Platformu (UWP)](/visualstudio/get-started/csharp/tutorial-uwp)
+* [Unity kullanarak oyun oluşturma](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
+* [Windows hizmeti oluşturma](/aspnet/core/host-and-deploy/windows-service)
 
-* [C# kullanmaya başlama](../csharp/getting-started/index.md)
-* [C# eğitimleri](../csharp/tutorials/index.md)
-* [F# başlangıç eğitimleri](../fsharp/get-started/index.md)
-* [Visual Basic'e başlayın](../visual-basic/getting-started/index.md)
+## <a name="tutorials-for-creating-class-libraries"></a>Sınıf kitaplıkları oluşturmaya yönelik öğreticiler
 
-## <a name="get-started-using-net-core"></a>.NET Core'u kullanmaya başlayın
+* Sınıf kitaplığı oluşturma
+  * [Visual Studio Code kullanma](../core/tutorials/library-with-visual-studio-code.md)
+  * [Visual Studio 'yu](../core/tutorials/library-with-visual-studio.md) (Windows) kullanma
+  * [Mac için Visual Studio](../core/tutorials/library-with-visual-studio-mac.md) (MacOS) kullanma
 
-.NET Core'a özgü kılavuz için bkz:
+## <a name="resources-for-learning-net-languages"></a>.NET dillerini öğrenme kaynakları
 
-* [.NET Core ile başlayın](../core/get-started.md)
-* [.NET Çekirdek eğitimleri](../core/tutorials/index.md)
+* [C ile çalışmaya başlama #](../csharp/getting-started/index.md)
+* [F ile çalışmaya başlama #](../fsharp/get-started/index.md)
+* [Visual Basic kullanmaya başlama](../visual-basic/getting-started/index.md)
 
-## <a name="get-started-using-net-standard"></a>.NET Standard'ı kullanmaya başlayın
+## <a name="other-get-started-resources"></a>Diğer Başlarken kaynakları
 
-Giriş eğitimi için Visual [Studio'da bir .NET Standart kitaplık oluşturun'a](../core/tutorials/library-with-visual-studio.md)bakın.
+Aşağıdaki kaynaklar .NET uygulamaları geliştirmeye başlama, ancak adım adım öğreticiler uygulamalardır:
 
-## <a name="get-started-using-net-core-on-docker"></a>Docker'da .NET Core'u kullanmaya başlayın
+* [Nesnelerin İnterneti (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [Makine öğrenmesi](../machine-learning/index.yml)
 
-[.NET ve Docker'a giriş,](../core/docker/introduction.md) Windows Docker kapsayıcılarında .NET Core'u nasıl kullanabileceğinizi gösterir.
+## <a name="next-steps"></a>Sonraki adımlar
+
+.NET hakkında daha fazla bilgi edinmek için bkz. [.net 'e giriş](../core/introduction.md).
