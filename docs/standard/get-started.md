@@ -1,41 +1,61 @@
 ---
-title: .NET kullanmaya başlama
-description: .NET'e başlamak için çeşitli makaleleri hem dil hem de platform açısından listeler.
-author: cartermp
-ms.date: 01/21/2020
+title: .NET ile çalışmaya başlama Öğreticileri
+description: .NET uygulama geliştirmeyi veya .NET programlama dillerinden birini öğrenmek için bir öğretici seçin.
+author: tdykstra
+ms.date: 09/30/2020
 ms.technology: dotnet-standard
-ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: f1d5854d8bddea21bbb8a0a7fa032c9fbd15f3d5
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: da98bda4a6a2d637a8a899c9d7315d5cbfcb18fa
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438172"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755882"
 ---
-# <a name="get-started"></a><span data-ttu-id="2a895-103">başlarken</span><span class="sxs-lookup"><span data-stu-id="2a895-103">Get started</span></span>
+# <a name="tutorials-for-getting-started-with-net"></a><span data-ttu-id="8eb46-103">.NET ile çalışmaya başlama Öğreticileri</span><span class="sxs-lookup"><span data-stu-id="8eb46-103">Tutorials for getting started with .NET</span></span>
 
-<span data-ttu-id="2a895-104">.NET'e başlamanın birkaç yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="2a895-104">There are a number of ways to get started with .NET.</span></span> <span data-ttu-id="2a895-105">.NET büyük bir platform olduğundan, bu dokümantasyonda her biri farklı bir perspektiften .NET'e başlamanıza yardımcı olabilecek birden çok makale bulunmaktadır.</span><span class="sxs-lookup"><span data-stu-id="2a895-105">Because .NET is a massive platform, there are multiple articles in this documentation that can help you get started with .NET, each from a different perspective.</span></span>
+<span data-ttu-id="8eb46-104">Aşağıdaki adım adım öğreticiler, aksi belirtilmedikçe Windows, Linux veya macOS üzerinde çalışır.</span><span class="sxs-lookup"><span data-stu-id="8eb46-104">The following step-by-step tutorials run on Windows, Linux, or macOS, except as noted.</span></span>
 
-## <a name="get-started-using-net-languages"></a><span data-ttu-id="2a895-106">.NET dillerini kullanmaya başlayın</span><span class="sxs-lookup"><span data-stu-id="2a895-106">Get started using .NET languages</span></span>
+## <a name="tutorials-for-creating-apps"></a><span data-ttu-id="8eb46-105">Uygulama oluşturmaya yönelik öğreticiler</span><span class="sxs-lookup"><span data-stu-id="8eb46-105">Tutorials for creating apps</span></span>
 
-<span data-ttu-id="2a895-107">C#, Visual Basic ve F#'da eğitimlere başlamak için bkz.</span><span class="sxs-lookup"><span data-stu-id="2a895-107">For getting-started tutorials in C#, Visual Basic, and F#, see:</span></span>
+* <span data-ttu-id="8eb46-106">Konsol uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="8eb46-106">Create a console app</span></span>
+  * [<span data-ttu-id="8eb46-107">Visual Studio Code kullanma</span><span class="sxs-lookup"><span data-stu-id="8eb46-107">using Visual Studio Code</span></span>](../core/tutorials/with-visual-studio-code.md)
+  * <span data-ttu-id="8eb46-108">[Visual Studio 'yu](../core/tutorials/with-visual-studio.md) (Windows) kullanma</span><span class="sxs-lookup"><span data-stu-id="8eb46-108">[using Visual Studio](../core/tutorials/with-visual-studio.md) (Windows)</span></span>
+  * <span data-ttu-id="8eb46-109">[Mac için Visual Studio](../core/tutorials/with-visual-studio-mac.md) (MacOS) kullanma</span><span class="sxs-lookup"><span data-stu-id="8eb46-109">[using Visual Studio for Mac](../core/tutorials/with-visual-studio-mac.md) (macOS)</span></span>
+* <span data-ttu-id="8eb46-110">Web uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="8eb46-110">Create a web app</span></span>
+  * [<span data-ttu-id="8eb46-111">sunucu tarafı Web Kullanıcı arabirimi ile</span><span class="sxs-lookup"><span data-stu-id="8eb46-111">with server-side web UI</span></span>](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+  * [<span data-ttu-id="8eb46-112">istemci tarafı Web Kullanıcı arabirimi ile</span><span class="sxs-lookup"><span data-stu-id="8eb46-112">with client-side web UI</span></span>](https://dotnet.microsoft.com/learn/aspnet/blazor-tutorial/intro)
+* [<span data-ttu-id="8eb46-113">Web API’si oluşturma</span><span class="sxs-lookup"><span data-stu-id="8eb46-113">Create a web API</span></span>](/aspnet/core/tutorials/first-web-api)
+* [<span data-ttu-id="8eb46-114">Uzak yordam çağrısı Web uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="8eb46-114">Create a remote procedure call web app</span></span>](/aspnet/core/tutorials/grpc/grpc-start)
+* [<span data-ttu-id="8eb46-115">Gerçek zamanlı bir Web uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="8eb46-115">Create a real-time web app</span></span>](/aspnet/core/tutorials/signalr)
+* [<span data-ttu-id="8eb46-116">Bulutta sunucusuz bir işlev oluşturma</span><span class="sxs-lookup"><span data-stu-id="8eb46-116">Create a serverless function in the cloud</span></span>](/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-csharp)
+* <span data-ttu-id="8eb46-117">[Android ve iOS için mobil uygulama oluşturma](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro) (Windows)</span><span class="sxs-lookup"><span data-stu-id="8eb46-117">[Create a mobile app for Android and iOS](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro) (Windows)</span></span>
+* <span data-ttu-id="8eb46-118">Windows masaüstü uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="8eb46-118">Create a Windows desktop app</span></span>
+  * [<span data-ttu-id="8eb46-119">WPF</span><span class="sxs-lookup"><span data-stu-id="8eb46-119">WPF</span></span>](/visualstudio/get-started/csharp/tutorial-wpf)
+  * [<span data-ttu-id="8eb46-120">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8eb46-120">Windows Forms</span></span>](/visualstudio/ide/create-csharp-winform-visual-studio)
+  * [<span data-ttu-id="8eb46-121">Evrensel Windows Platformu (UWP)</span><span class="sxs-lookup"><span data-stu-id="8eb46-121">Universal Windows Platform (UWP)</span></span>](/visualstudio/get-started/csharp/tutorial-uwp)
+* [<span data-ttu-id="8eb46-122">Unity kullanarak oyun oluşturma</span><span class="sxs-lookup"><span data-stu-id="8eb46-122">Create a game using Unity</span></span>](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
+* [<span data-ttu-id="8eb46-123">Windows hizmeti oluşturma</span><span class="sxs-lookup"><span data-stu-id="8eb46-123">Create a Windows service</span></span>](/aspnet/core/host-and-deploy/windows-service)
 
-* [<span data-ttu-id="2a895-108">C# kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="2a895-108">Get started in C#</span></span>](../csharp/getting-started/index.md)
-* [<span data-ttu-id="2a895-109">C# eğitimleri</span><span class="sxs-lookup"><span data-stu-id="2a895-109">C# tutorials</span></span>](../csharp/tutorials/index.md)
-* [<span data-ttu-id="2a895-110">F# başlangıç eğitimleri</span><span class="sxs-lookup"><span data-stu-id="2a895-110">F# getting-started tutorials</span></span>](../fsharp/get-started/index.md)
-* [<span data-ttu-id="2a895-111">Visual Basic'e başlayın</span><span class="sxs-lookup"><span data-stu-id="2a895-111">Get started in Visual Basic</span></span>](../visual-basic/getting-started/index.md)
+## <a name="tutorials-for-creating-class-libraries"></a><span data-ttu-id="8eb46-124">Sınıf kitaplıkları oluşturmaya yönelik öğreticiler</span><span class="sxs-lookup"><span data-stu-id="8eb46-124">Tutorials for creating class libraries</span></span>
 
-## <a name="get-started-using-net-core"></a><span data-ttu-id="2a895-112">.NET Core'u kullanmaya başlayın</span><span class="sxs-lookup"><span data-stu-id="2a895-112">Get started using .NET Core</span></span>
+* <span data-ttu-id="8eb46-125">Sınıf kitaplığı oluşturma</span><span class="sxs-lookup"><span data-stu-id="8eb46-125">Create a class library</span></span>
+  * [<span data-ttu-id="8eb46-126">Visual Studio Code kullanma</span><span class="sxs-lookup"><span data-stu-id="8eb46-126">using Visual Studio Code</span></span>](../core/tutorials/library-with-visual-studio-code.md)
+  * <span data-ttu-id="8eb46-127">[Visual Studio 'yu](../core/tutorials/library-with-visual-studio.md) (Windows) kullanma</span><span class="sxs-lookup"><span data-stu-id="8eb46-127">[using Visual Studio](../core/tutorials/library-with-visual-studio.md) (Windows)</span></span>
+  * <span data-ttu-id="8eb46-128">[Mac için Visual Studio](../core/tutorials/library-with-visual-studio-mac.md) (MacOS) kullanma</span><span class="sxs-lookup"><span data-stu-id="8eb46-128">[using Visual Studio for Mac](../core/tutorials/library-with-visual-studio-mac.md) (macOS)</span></span>
 
-<span data-ttu-id="2a895-113">.NET Core'a özgü kılavuz için bkz:</span><span class="sxs-lookup"><span data-stu-id="2a895-113">For .NET Core-specific guidance, see:</span></span>
+## <a name="resources-for-learning-net-languages"></a><span data-ttu-id="8eb46-129">.NET dillerini öğrenme kaynakları</span><span class="sxs-lookup"><span data-stu-id="8eb46-129">Resources for learning .NET languages</span></span>
 
-* [<span data-ttu-id="2a895-114">.NET Core ile başlayın</span><span class="sxs-lookup"><span data-stu-id="2a895-114">Get started with .NET Core</span></span>](../core/get-started.md)
-* [<span data-ttu-id="2a895-115">.NET Çekirdek eğitimleri</span><span class="sxs-lookup"><span data-stu-id="2a895-115">.NET Core tutorials</span></span>](../core/tutorials/index.md)
+* [<span data-ttu-id="8eb46-130">C ile çalışmaya başlama #</span><span class="sxs-lookup"><span data-stu-id="8eb46-130">Get started with C#</span></span>](../csharp/getting-started/index.md)
+* [<span data-ttu-id="8eb46-131">F ile çalışmaya başlama #</span><span class="sxs-lookup"><span data-stu-id="8eb46-131">Get started with F#</span></span>](../fsharp/get-started/index.md)
+* [<span data-ttu-id="8eb46-132">Visual Basic kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="8eb46-132">Get started with Visual Basic</span></span>](../visual-basic/getting-started/index.md)
 
-## <a name="get-started-using-net-standard"></a><span data-ttu-id="2a895-116">.NET Standard'ı kullanmaya başlayın</span><span class="sxs-lookup"><span data-stu-id="2a895-116">Get started using .NET Standard</span></span>
+## <a name="other-get-started-resources"></a><span data-ttu-id="8eb46-133">Diğer Başlarken kaynakları</span><span class="sxs-lookup"><span data-stu-id="8eb46-133">Other get-started resources</span></span>
 
-<span data-ttu-id="2a895-117">Giriş eğitimi için Visual [Studio'da bir .NET Standart kitaplık oluşturun'a](../core/tutorials/library-with-visual-studio.md)bakın.</span><span class="sxs-lookup"><span data-stu-id="2a895-117">For an introductory tutorial, see [Build a .NET Standard library in Visual Studio](../core/tutorials/library-with-visual-studio.md).</span></span>
+<span data-ttu-id="8eb46-134">Aşağıdaki kaynaklar .NET uygulamaları geliştirmeye başlama, ancak adım adım öğreticiler uygulamalardır:</span><span class="sxs-lookup"><span data-stu-id="8eb46-134">The following resources are for getting started with developing .NET apps but aren't step-by-step tutorials:</span></span>
 
-## <a name="get-started-using-net-core-on-docker"></a><span data-ttu-id="2a895-118">Docker'da .NET Core'u kullanmaya başlayın</span><span class="sxs-lookup"><span data-stu-id="2a895-118">Get started using .NET Core on Docker</span></span>
+* [<span data-ttu-id="8eb46-135">Nesnelerin İnterneti (IoT)</span><span class="sxs-lookup"><span data-stu-id="8eb46-135">Internet of Things (IoT)</span></span>](https://dotnet.microsoft.com/apps/iot)
+* [<span data-ttu-id="8eb46-136">Makine öğrenmesi</span><span class="sxs-lookup"><span data-stu-id="8eb46-136">Machine learning</span></span>](../machine-learning/index.yml)
 
-<span data-ttu-id="2a895-119">[.NET ve Docker'a giriş,](../core/docker/introduction.md) Windows Docker kapsayıcılarında .NET Core'u nasıl kullanabileceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="2a895-119">[Introduction to .NET and Docker](../core/docker/introduction.md) shows how you can use .NET Core on Windows Docker containers.</span></span>
+## <a name="next-steps"></a><span data-ttu-id="8eb46-137">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="8eb46-137">Next steps</span></span>
+
+<span data-ttu-id="8eb46-138">.NET hakkında daha fazla bilgi edinmek için bkz. [.net 'e giriş](../core/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="8eb46-138">To learn more about .NET, see [Introduction to .NET](../core/introduction.md).</span></span>
