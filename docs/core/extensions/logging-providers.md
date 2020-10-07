@@ -4,12 +4,12 @@ description: Günlüğe kaydetme sağlayıcısı API 'sinin .NET uygulamalarınd
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: 96a5ece10068e39c991e67a36f22e725d6380af5
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 4d4658b7ca892d101af32f5cf8ac48a4beabfb92
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755889"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804756"
 ---
 # <a name="logging-providers-in-net"></a>.NET 'te günlüğe kaydetme sağlayıcıları
 
@@ -98,7 +98,7 @@ Linux 'ta, `Debug` sağlayıcı günlük konumu dağıtıma bağımlıdır ve a�
 
 [DotNet-Trace](../diagnostics/dotnet-trace.md) Aracı, çalışan bir Işlemin .NET Core izlemelerinin toplanmasını sağlayan platformlar arası CLI genel aracıdır. Araç, <xref:Microsoft.Extensions.Logging.EventSource> kullanarak sağlayıcı verilerini toplar <xref:Microsoft.Extensions.Logging.EventSource.LoggingEventSource> .
 
-Bkz. yükleme yönergeleri için [DotNet-Trace](../diagnostics/dotnet-trace.md) . Kullanarak bir tanılama öğreticisi için `dotnet-trace` bkz. [.NET Core 'DA yüksek CPU kullanımı hata ayıklama](/../diagnostics/debug-highcpu.md).
+Bkz. yükleme yönergeleri için [DotNet-Trace](../diagnostics/dotnet-trace.md) . Kullanarak bir tanılama öğreticisi için `dotnet-trace` bkz. [.NET Core 'DA yüksek CPU kullanımı hata ayıklama](../diagnostics/debug-highcpu.md).
 
 ### <a name="windows-eventlog"></a>Windows olay günlüğü
 

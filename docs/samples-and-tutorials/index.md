@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core ve .NET hakkında bilgi edinmenize yardımc
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 00718491df00e5747ba6e0043b70dc1019dd906b
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557196"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805017"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekleri ve öğreticiler
 
@@ -33,7 +33,7 @@ Bu öğreticide, Visual Studio Code ve .NET Core CLI kullanılarak .NET Core kon
 
 Bu örnek, .NET Core CLI kullanarak .NET için kitaplıkların nasıl yazılacağını ele alır. Bu araçlar, desteklenen herhangi bir işletim sisteminde çalışan etkili ve düşük düzeyli bir deneyim sağlar. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
-## <a name="aspnet-core"></a>ASP.NET Core
+## <a name="aspnet-core"></a>ASP.NET Çekirdeği
 
 [ASP.NET Core öğreticilerine](/aspnet/core/tutorials/)bakın. ASP.NET Core belgelerindeki birçok makale, bunlar için yazılan örneklere bağlantılar sağlar.
 
@@ -99,7 +99,7 @@ Bu öğreticide, .NET Core 'da eklenti mimarisini destekleyen basit bir uygulama
 
 **[Windows Docker kapsayıcılarında ASP.NET MVC uygulamalarını çalıştırma](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
-Bu öğreticide, mevcut bir ASP.NET MVC uygulamasının bir Windows Docker kapsayıcısında nasıl dağıtılacağı gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu öğreticide, mevcut bir ASP.NET MVC uygulamasının bir Windows Docker kapsayıcısında nasıl dağıtılacağı gösterilmektedir.
 
 ## <a name="view-and-download-samples"></a>Örnekleri görüntüle ve indir
 

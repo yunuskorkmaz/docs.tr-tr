@@ -4,12 +4,12 @@ description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine gir
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 70e6a7a906bc9a35918cf3e26c3e23bd0cfdafde
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: bd575b226a2ff61e938719b064ff5ede0cf66013
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755856"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805186"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: tasarım amacınızı null olabilen ve null yapılamayan başvuru türleriyle daha net bir şekilde Ifade edin
 
@@ -24,7 +24,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > - Derleyicinin bu tasarım kararlarını zorladığı kodu yazın.
 > - Kendi tasarımlarınızın Nullable başvuru özelliğini kullanın
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 C# 8,0 derleyicisi dahil olmak üzere makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8,0 derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)ile kullanılabilir.
 
@@ -223,4 +223,4 @@ Mevcut bir uygulamayı null yapılabilir başvuru türlerini kullanacak şekilde
 > [Bir uygulamayı null yapılabilir başvuru türlerini kullanacak şekilde yükseltme](upgrade-to-nullable-references.md)
 
 Entity Framework kullanırken null yapılabilir başvuru türü kullanmayı öğrenin:
-> [Entity Framework Core temelleri: null yapılabilir başvuru türleriyle çalışma](https://docs.microsoft.com/en-us/ef/core/miscellaneous/nullable-reference-types)
+> [Entity Framework Core temelleri: null yapılabilir başvuru türleriyle çalışma](/ef/core/miscellaneous/nullable-reference-types)

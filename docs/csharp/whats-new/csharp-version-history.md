@@ -3,12 +3,12 @@ title: C# ' nin geçmişi-c# Kılavuzu
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: b5c320e4c55803547fa44793a46e4a3da65bd0cb
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 349f2cfbe0fc93060eb6927ee8c3528c16b99aca
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063477"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805095"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
@@ -19,11 +19,11 @@ Bu makalede, C# dilinin her ana sürümünün geçmişi sağlanmaktadır. C# eki
 
 C# derleme araçları, varsayılan dil sürümü olan en son ana dil sürümünü göz önünde bulundurun. Bu bölümdeki diğer makalelerde ayrıntılı olarak açıklanan ana yayınlar arasında nokta yayınları olabilir. En son özellikleri bir nokta sürümünde kullanmak için, [Derleyici dil sürümünü yapılandırmanız](../language-reference/configure-language-version.md) ve sürümü seçmeniz gerekir. C# 7,0 sonrasında üç noktalı yayınlar vardır:
 
-- [C# 7,3](csharp-7-3.md):
+- C# 7,3:
   - C# 7,3, [Visual Studio 2017 sürüm 15,7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ve [.NET Core 2,1 SDK](../../core/whats-new/dotnet-core-2-1.md)ile başlayarak kullanılabilir.
-- [C# 7,2](csharp-7-2.md):
+- C# 7,2:
   - C# 7,2, [Visual Studio 2017 sürüm 15,5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ve [.NET Core 2,0 SDK](../../core/whats-new/dotnet-core-2-0.md)ile başlayarak kullanılabilir.
-- [C# 7,1](csharp-7-1.md):
+- C# 7,1:
   - C# 7,1, [Visual Studio 2017 sürüm 15,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ve [.NET Core 2,0 SDK](../../core/whats-new/dotnet-core-2-0.md)ile başlayarak kullanılabilir.
 
 ## <a name="c-version-10"></a>C# sürüm 1,0
@@ -36,10 +36,10 @@ C# sürüm 1,0, bugün ile karşılaştırıldığında özelliklerden çıkarı
 
 C# 1,0 'nin başlıca özellikleri dahildir:
 
-- [Sınıftır](../programming-guide/classes-and-structs/classes.md)
+- [Sınıflar](../programming-guide/classes-and-structs/classes.md)
 - [Yapılar](../language-reference/builtin-types/struct.md)
 - [Arabirimler](../programming-guide/interfaces/index.md)
-- [Olaylar](../events-overview.md)
+- [Olayları](../events-overview.md)
 - [Özellikler](../properties.md)
 - [Temsilciler](../delegates-overview.md)
 - [İşleçler ve ifadeler](../language-reference/operators/index.md)
@@ -70,7 +70,7 @@ Diğer C# 2,0 özellikleri varolan özelliklere özellikler eklemiştir:
 
 C# genel nesne yönelimli (OO) dil olarak başlatılmış olsa da, bir acede C# sürüm 2,0 değiştirilmiştir. Bunların altındaysa, önemli geliştirici sorun noktalarından sonra gitirler. Ve bunları önemli bir şekilde yaptıktan sonra.
 
-Genel türler ile türler ve Yöntemler, tür güvenliğini korurken rastgele bir tür üzerinde çalışabilir. Örneğin, bir uygulamasına sahip olma, <xref:System.Collections.Generic.List%601> `List<string>` `List<int>` Bu dizeler veya tamsayılar üzerinde yineleme yaparken tür kullanımı güvenli işlemleri gerçekleştirmenize izin verir. Genel türleri kullanmak, `ListInt` `ArrayList` her işlem için kaynağından veya kümeden türeten daha iyidir `Object` .
+Genel türler ile türler ve Yöntemler, tür güvenliğini korurken rastgele bir tür üzerinde çalışabilir. Örneğin, bir uygulamasına sahip olma, <xref:System.Collections.Generic.List%601> `List<string>` `List<int>` Bu dizeler veya tamsayılar üzerinde yineleme yaparken tür kullanımı güvenli işlemleri gerçekleştirmenize izin verir. Genel türleri kullanmak, `ListInt` `ArrayList`  her işlem için kaynağından veya kümeden türeten daha iyidir `Object` .
 
 C# sürüm 2,0 yineleyiciler tarafından getirildi. Yineleyiciler, succinctly koymak için bir `List` (veya diğer sıralanabilir türler) içindeki tüm öğeleri bir `foreach` döngüyle incelemenizi sağlar. Dilin birinci sınıf parçası olarak yineleyiciler olması, dilin okunabilirliğini ve kişilerin kod hakkında neden olma yeteneğini önemli ölçüde geliştirmiştir.
 
@@ -85,7 +85,7 @@ C# sürüm 3,0, Visual Studio 2008 ile birlikte 2007 geldi, ancak dil özellikle
 - [Sorgu ifadeleri](../linq/query-expression-basics.md)
 - [Lambda ifadeleri](../language-reference/operators/lambda-expressions.md)
 - [İfade ağaçları](../expression-trees.md)
-- [Uzantı yöntemleri](../programming-guide/classes-and-structs/extension-methods.md)
+- [Genişletme yöntemleri](../programming-guide/classes-and-structs/extension-methods.md)
 - [Örtük olarak yazılan yerel değişkenler](../language-reference/keywords/var.md)
 - [Kısmi Yöntemler](../language-reference/keywords/partial-method.md)
 - [Nesne ve koleksiyon başlatıcıları](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
@@ -157,7 +157,7 @@ Bunlar, kendi kendine geleneksel bir dil özelliği olmasa da, bu sürümle birl
 C# sürüm 7,0, Visual Studio 2017 ile yayınlanmıştır. Bu sürüm, C# 6,0 ' de, ancak hizmet olarak derleyici olmadan bazı evminte ve seyrek bulunan bilgiler içerir. Yeni özelliklerden bazıları şunlardır:
 
 - [Out değişkenleri](./csharp-7.md#out-variables)
-- [Tanımlama grupları ve ayrıştırma](./csharp-7.md#tuples)
+- [Tanımlama grupları ve ayrıştırma](./csharp-7.md#tuples-and-discards)
 - [Model eşleştirme](./csharp-7.md#pattern-matching)
 - [Yerel işlevler](./csharp-7.md#local-functions)
 - [Genişletilmiş ifade gövdeli Üyeler](./csharp-7.md#more-expression-bodied-members)
@@ -165,7 +165,7 @@ C# sürüm 7,0, Visual Studio 2017 ile yayınlanmıştır. Bu sürüm, C# 6,0 ' 
 
 Dahil edilen diğer özellikler:
 
-- [Atılanlar](./csharp-7.md#discards)
+- [Atılanlar](./csharp-7.md#tuples-and-discards)
 - [İkili sabit değerler ve basamak ayırıcıları](./csharp-7.md#numeric-literal-syntax-improvements)
 - [Throw ifadeleri](./csharp-7.md#throw-expressions)
 
@@ -179,30 +179,30 @@ C#, c# 7,1 ile *nokta sürümlerini* serbest bırakma işlemi başlattı. Bu sü
 
 Bu sürümdeki yeni dil özellikleri şunlardır:
 
-- [`async``Main`yöntemi](./csharp-7-1.md#async-main)
+- [`async``Main`yöntemi](./csharp-7.md#async-main)
   - Bir uygulama için giriş noktası değiştiriciye sahip olabilir `async` .
-- [`default`değişmez değer ifadeleri](./csharp-7-1.md#default-literal-expressions)
+- [`default` değişmez değer ifadeleri](./csharp-7.md#default-literal-expressions)
   - Hedef türü çıkarsanamıyor varsayılan değer ifadelerinde varsayılan değişmez ifadeleri kullanabilirsiniz.
-- [Gösterilen demet öğesi adları](./csharp-7-1.md#inferred-tuple-element-names)
+- [Gösterilen demet öğesi adları](./csharp-7.md#tuples-and-discards)
   - Kayıt düzeni öğelerinin adları, birçok durumda demet başlatmasıyla çıkarsanamıyor.
-- [Genel tür parametrelerinde model eşleştirme](./csharp-7-1.md#pattern-matching-on-generic-type-parameters)
+- [Genel tür parametrelerinde model eşleştirme](./csharp-7.md#pattern-matching)
   - Türü genel bir tür parametresi olan değişkenlerde model eşleşme ifadeleri kullanabilirsiniz.
 
-Son olarak, derleyici iki seçeneğe sahiptir `-refout` ve `-refonly` Bu, [Başvuru derleme üretimini](./csharp-7-1.md#reference-assembly-generation)denetler.
+Son olarak, derleyici iki seçeneğe sahiptir `-refout` ve `-refonly` Bu, [Başvuru derleme üretimini](./csharp-7.md#reference-assembly-generation)denetler.
 
 ## <a name="c-version-72"></a>C# sürüm 7,2
 
 C# 7,2 birkaç küçük dil özelliği ekledi:
 
-- [Güvenli verimli kod yazma teknikleri](./csharp-7-2.md#safe-efficient-code-enhancements)
+- [Güvenli verimli kod yazma teknikleri](./csharp-7.md#enabling-more-efficient-safe-code)
   - Başvuru semantiğinin kullanıldığı değer türleriyle çalışmayı sağlayan sözdizimi geliştirmelerinden oluşan bir bileşim.
-- [Girintili olmayan adlandırılmış bağımsız değişkenler](./csharp-7-2.md#non-trailing-named-arguments)
+- [Girintili olmayan adlandırılmış bağımsız değişkenler](./csharp-7.md#non-trailing-named-arguments)
   - Adlandırılmış bağımsız değişkenlerin ardından konumsal bağımsız değişkenler gelebilir.
-- [Sayısal sabit değerlerde önde gelen alt çizgiler](./csharp-7-2.md#leading-underscores-in-numeric-literals)
+- [Sayısal sabit değerlerde önde gelen alt çizgiler](./csharp-7.md#numeric-literal-syntax-improvements)
   - Sayısal değişmez değerler artık, yazdırılan rakamlardan önce önde gelen alt çizgileri olabilir.
-- [`private protected`erişim değiştiricisi](./csharp-7-2.md#private-protected-access-modifier)
+- [`private protected` erişim değiştiricisi](./csharp-7.md#private-protected-access-modifier)
   - `private protected`Erişim değiştiricisi aynı derlemede türetilmiş sınıflar için erişim imkanı sunar.
-- [Koşullu `ref` ifadeler](./csharp-7-2.md#conditional-ref-expressions)
+- [Koşullu `ref` ifadeler](./csharp-7.md#conditional-ref-expressions)
   - Koşullu ifadenin ( `?:` ) sonucu artık bir başvuru olabilir.
 
 ## <a name="c-version-73"></a>C# sürüm 7,3
@@ -211,24 +211,24 @@ C# 7,3 sürümünün iki ana teması vardır. Bir tema, güvenli kodun güvenli 
 
 Aşağıdaki yeni özellikler, güvenli kod için daha iyi performans temasını destekler:
 
-- [Sabitlemeden sabit alanlara erişebilirsiniz.](csharp-7-3.md#indexing-fixed-fields-does-not-require-pinning)
-- [`ref`Yerel değişkenleri yeniden atayabilirsiniz.](csharp-7-3.md#ref-local-variables-may-be-reassigned)
-- [Dizilerde başlatıcıları kullanabilirsiniz `stackalloc` .](csharp-7-3.md#stackalloc-arrays-support-initializers)
-- [`fixed`Deyimlerini, bir kalıbı destekleyen herhangi bir türle birlikte kullanabilirsiniz.](csharp-7-3.md#more-types-support-the-fixed-statement)
-- [Ek genel kısıtlamalar kullanabilirsiniz.](csharp-7-3.md#enhanced-generic-constraints)
+- [Sabitlemeden sabit alanlara erişebilirsiniz.](csharp-7.md#indexing-fixed-fields-does-not-require-pinning)
+- [`ref`Yerel değişkenleri yeniden atayabilirsiniz.](csharp-7.md#enabling-more-efficient-safe-code)
+- [Dizilerde başlatıcıları kullanabilirsiniz `stackalloc` .](csharp-7.md#stackalloc-arrays-support-initializers)
+- [`fixed`Deyimlerini, bir kalıbı destekleyen herhangi bir türle birlikte kullanabilirsiniz.](csharp-7.md#more-types-support-the-fixed-statement)
+- [Ek genel kısıtlamalar kullanabilirsiniz.](csharp-7.md#enhanced-generic-constraints)
 
 Mevcut özelliklerde aşağıdaki geliştirmeler yapılmıştır:
 
-- [`==` `!=` Kayıt düzeni türlerini test edebilirsiniz.](csharp-7-3.md#tuples-support--and-)
-- [İfade değişkenlerini daha fazla konumda kullanabilirsiniz.](csharp-7-3.md#extend-expression-variables-in-initializers)
-- [Otomatik uygulanan özelliklerin yedekleme alanına öznitelikler iliştirebilirsiniz.](csharp-7-3.md#attach-attributes-to-the-backing-fields-for-auto-implemented-properties)
-- [Bağımsız değişkenler farklı olduğunda yöntem çözümlemesi `in` geliştirildi.](csharp-7-3.md#in-method-overload-resolution-tiebreaker)
-- [Aşırı yükleme çözümlemesi artık daha az belirsiz durum içeriyor.](csharp-7-3.md#improved-overload-candidates)
+- `==` `!=` Kayıt düzeni türlerini test edebilirsiniz.
+- İfade değişkenlerini daha fazla konumda kullanabilirsiniz.
+- Otomatik uygulanan özelliklerin yedekleme alanına öznitelikler iliştirebilirsiniz.
+- Bağımsız değişkenler farklı olduğunda yöntem çözümlemesi `in` geliştirildi.
+- Aşırı yükleme çözümlemesi artık daha az belirsiz durum içeriyor.
 
 Yeni derleyici seçenekleri şunlardır:
 
-- [`-publicsign`Açık kaynak yazılım (OSS) derlemelerinin imzalanmasını etkinleştirmek için.](csharp-7-3.md#public-or-open-source-signing)
-- [`-pathmap`Kaynak dizinlere eşleme sağlamak için.](csharp-7-3.md#pathmap)
+- `-publicsign` Açık kaynak yazılım (OSS) derlemelerinin imzalanmasını etkinleştirmek için.
+- `-pathmap` Kaynak dizinlere eşleme sağlamak için.
 
 ## <a name="c-version-80"></a>C# sürüm 8,0
 

@@ -3,12 +3,12 @@ title: Zaman uyumsuz görevleri tamamlandıkları anda işleme
 description: Bu örnek, birden çok görevi başlatmak ve sonuçlarını tamamlandığında işlem sırasında işlemek yerine sonuçları işlemek Için C# ' de Task. WhenAny 'ın nasıl kullanılacağını gösterir.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 860e94a9c3973ce56e7321741a1136f752aa3d18
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557313"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805245"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>Zaman uyumsuz görevleri tamamlarlar işleme (C#)
 
@@ -77,7 +77,7 @@ Konsol uygulamasına ana giriş noktası `Main` yöntemidir. Mevcut yöntemi aş
 static Task Main() => SumPageSizesAsync();
 ```
 
-Updated `Main` yöntemi artık zaman uyumsuz bir [Main](../../../whats-new/csharp-7-1.md#async-main)olarak değerlendirilir ve bu, yürütülebilir bir giriş noktasına bir zaman uyumsuz giriş noktası sağlar. Bir çağrısı ifade edilir `SumPageSizesAsync` .
+Updated `Main` yöntemi artık zaman uyumsuz bir [Main](../../../whats-new/csharp-7.md#async-main)olarak değerlendirilir ve bu, yürütülebilir bir giriş noktasına bir zaman uyumsuz giriş noktası sağlar. Bir çağrısı ifade edilir `SumPageSizesAsync` .
 
 ## <a name="create-the-asynchronous-sum-page-sizes-method"></a>Zaman uyumsuz toplam sayfa boyutları yöntemini oluşturma
 

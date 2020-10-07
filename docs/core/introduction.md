@@ -4,12 +4,12 @@ description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kayna
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: c161daed58c94940734d057bb1b42f3b87caf97c
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 2b339db769c283ff21e6ad48d5b672794e43a76b
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756071"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804802"
 ---
 # <a name="introduction-to-net"></a>.NET 'e giriş
 
@@ -17,7 +17,7 @@ ms.locfileid: "91756071"
 
 * [Web Apps, Web API 'Leri ve mikro hizmetler](/aspnet/core/introduction-to-aspnet-core#recommended-learning-path)
 * [Bulutta sunucusuz işlevler](/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-csharp)
-* [Bulutta yerel uygulamalar](/dotnet/architecture/cloud-native/)
+* [Bulutta yerel uygulamalar](../architecture/cloud-native/index.md)
 * [Mobil uygulamalar](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro)
 * Masaüstü uygulamaları
   * [Windows WPF](/dotnet/desktop/wpf/)
@@ -101,7 +101,7 @@ Daha fazla bilgi için bkz. [destek ilkesi](https://dotnet.microsoft.com/platfor
 * [Genel türler](../standard/generics.md)
 * [Temsilciler](../standard/delegates-lambdas.md)
 * [Lambdalar](../standard/delegates-lambdas.md)
-* [Olaylar](../standard/events/index.md)
+* [Olayları](../standard/events/index.md)
 * [Özel durumlar](../standard/exceptions/index.md)
 * [Öznitelikler](../standard/attributes/index.md)
 * [Zaman uyumsuz kod](../standard/async.md)

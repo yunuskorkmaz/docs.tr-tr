@@ -3,12 +3,12 @@ title: C# 7,0 ' deki yenilikler-C# Kılavuzu
 description: C# dilinin sürüm 7,0 ' deki yeni özelliklere genel bakış alın.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 774bf9860d929d725f3a2bda4a52bc75ae3921fe
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 28f2d8f0b61d8f05e558834fc1a96fc020201a08
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755830"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805271"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C# 7,3 ile c# 7,0 yenilikleri
 
@@ -41,9 +41,9 @@ C# 7.0-7.3 Bu özellikleri ve temaları C# diline ekler:
   - Adlandırılmış bağımsız değişkenlerin ardından konumsal bağımsız değişkenler gelebilir.
 - [`private protected` erişim değiştiricisi](#private-protected-access-modifier)
   - `private protected`Erişim değiştiricisi aynı derlemede türetilmiş sınıflar için erişim imkanı sunar.
-- [Geliştirilmiş aşırı yükleme çözümlemesi](#improved-overload-resolution)
+- [Geliştirilmiş aşırı yükleme çözümlemesi](#improved-overload-candidates)
   - Aşırı yükleme çözümleme belirsizliğe çözüm için yeni kurallar.
-- [Güvenli verimli kod yazma teknikleri](#safe-efficient-code-enhancements)
+- [Güvenli verimli kod yazma teknikleri](#enabling-more-efficient-safe-code)
   - Başvuru semantiğinin kullanıldığı değer türleriyle çalışmayı sağlayan sözdizimi geliştirmelerinden oluşan bir bileşim.
 
 Son olarak, derleyici yeni seçeneklere sahiptir:
@@ -57,7 +57,7 @@ Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. He
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
-1. `dotnet try` öğesini çalıştırın.
+1. `dotnet try` komutunu çalıştırın.
 
 ## <a name="tuples-and-discards"></a>Tanımlama grupları ve atma
 

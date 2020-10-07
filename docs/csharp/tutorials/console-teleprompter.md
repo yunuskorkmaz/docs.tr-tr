@@ -4,12 +4,12 @@ description: Bu öğretici, .NET Core ve C# dilinde birçok özellik öğretir.
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dbe64fe0a01ddab9e7a3ad0a9118b3fe59fba8aa
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 4c32b08c3e7eeaedce687ea5bc572e6a7bee0d3e
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656989"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804900"
 ---
 # <a name="console-app"></a>Konsol uygulaması
 
@@ -187,7 +187,7 @@ ShowTeleprompter().Wait();
 Burada, ' de, `Main` kod zaman uyumlu olarak bekler. `await`Mümkün olduğunca zaman uyumlu bekleme yerine işlecini kullanmanız gerekir. Ancak, bir konsol uygulamasının `Main` yönteminde `await` işlecini kullanamazsınız. Bu, uygulamanın tüm görevler tamamlanmadan çıkılması ile sonuçlanır.
 
 > [!NOTE]
-> C# 7,1 veya sonraki bir sürümünü kullanıyorsanız, [ `async` `Main` yöntemiyle](../whats-new/csharp-7-1.md#async-main)konsol uygulamaları oluşturabilirsiniz.
+> C# 7,1 veya sonraki bir sürümünü kullanıyorsanız, [ `async` `Main` yöntemiyle](../whats-new/csharp-7.md#async-main)konsol uygulamaları oluşturabilirsiniz.
 
 Sonra, konsolundan okumak için ikinci zaman uyumsuz yöntemi yazmanız ve ' < ' (küçüktür), ' > ' (büyüktür) ve ' x ' veya ' x ' tuşlarından daha fazla bilgi almanız gerekir. Bu görev için eklediğiniz yöntem aşağıda verilmiştir:
 

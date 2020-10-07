@@ -2,12 +2,12 @@
 title: ML.NET ölçümleri
 description: Bir ML.NET modelinin performansını değerlendirmek için kullanılan ölçümleri anlayın
 ms.date: 12/17/2019
-ms.openlocfilehash: 4aca8dbdd9f137509ab9167ecc77f9ca6994e415
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 046e0a3feea2da702dfef5ca9ce4f498fce5fb26
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679514"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804828"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>Ölçümler ile ML.NET modelinizi değerlendirin
 
@@ -19,11 +19,11 @@ Değerlendirme ölçümleri, bir modelin gerçekleştirdiği makine öğrenimi g
 
 ## <a name="evaluation-metrics-for-binary-classification"></a>Ikili sınıflandırma için değerlendirme ölçümleri
 
-| Ölçümler   |      Description      |  Aramak |
+| Ölçümler   |      Açıklama      |  Aramak |
 |-----------|-----------------------|-----------|
 | **Veritabanınızın** |  [Doğruluk](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification) , test veri kümesiyle doğru tahmine göre orandır. Bu değer, toplam giriş örneği sayısına yönelik doğru tahmine yönelik orandır. Her sınıfa ait benzer sayıda örnek varsa iyi sonuç verir.| **1,00 ' ye yaklaşarak daha iyidir**. Ancak tam olarak 1,00 bir sorunu gösterir (yaygın olarak: etiket/hedef sızıntısı, üzerine sığdırma veya eğitim verileriyle test etme). Test verileri dengesiz olduğunda (örneklerin çoğunun sınıfların birine ait olduğu), veri kümesi küçük ya da 0,00 veya 1,00 ' de, doğruluk gerçekten bir sınıflandırıcının verimliliğini yakalamaz ve ek ölçümleri denetlemeniz gerekir. |
 | **AUC** |    *eğri altındaki* [aucroc](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) veya alanı, gerçek pozitif oranı ve yanlış pozitif oranı ile oluşturulan eğrinin altındaki alanı ölçer.  |   **1,00 ' ye yaklaşarak daha iyidir**. Modelin kabul edilebilir olması için 0,50 ' den büyük olmalıdır. AUC/0,50 veya daha azını içeren bir model, daha düşüktür. |
-| **AUCPR** | *bir duyarlık geri çağırma eğrisinin eğrisi altındaki* [Aucpr](https://www.coursera.org/lecture/ml-classification/precision-recall-curve-rENu8) veya alanı: sınıflar imletilmiş (yüksek oranda eğilmiş veri kümeleri) olduğunda, tahmin başarısı için kullanışlı ölçüm. |  **1,00 ' ye yaklaşarak daha iyidir**. 1,00 ' e yakın yüksek puanlar, sınıflandırıcının doğru sonuçları (yüksek duyarlık) döndürdüğünü ve tüm pozitif sonuçların (yüksek geri çağırma) büyük bir kısmını döndürdüğünü gösterir. |
+| **AUCPR** | *bir duyarlık geri çağırma eğrisinin eğrisi altındaki*Aucpr veya alanı: sınıflar imletilmiş (yüksek oranda eğilmiş veri kümeleri) olduğunda, tahmin başarısı için kullanışlı ölçüm. |  **1,00 ' ye yaklaşarak daha iyidir**. 1,00 ' e yakın yüksek puanlar, sınıflandırıcının doğru sonuçları (yüksek duyarlık) döndürdüğünü ve tüm pozitif sonuçların (yüksek geri çağırma) büyük bir kısmını döndürdüğünü gösterir. |
 | **F1-Score** | Aynı zamanda *dengeli f puanı veya F ölçü*olarak da bilinen [F1 puanı](https://en.wikipedia.org/wiki/F1_score) . Duyarlık ve geri çağırma 'nin harmonik ortalaması vardır. Duyarlılık ve geri çekme arasında bir denge aramak istediğinizde F1 puanı yararlı olur.| **1,00 ' ye yaklaşarak daha iyidir**.  F1 puanı, 1,00 ve en kötü puanı 0,00 ' de en iyi değere ulaştı. Sınıflandırıcınızı ne kadar kesin olarak söyler. |
 
 İkili sınıflandırma ölçümleri hakkında daha fazla bilgi için aşağıdaki makaleleri okuyun:
@@ -34,7 +34,7 @@ Değerlendirme ölçümleri, bir modelin gerçekleştirdiği makine öğrenimi g
 
 ## <a name="evaluation-metrics-for-multi-class-classification"></a>Çok sınıf sınıflandırması için değerlendirme ölçümleri
 
-| Ölçümler   |      Description      |  Aramak |
+| Ölçümler   |      Açıklama      |  Aramak |
 |-----------|-----------------------|-----------|
 | **Mikro doğruluk** |  [Mikro ortalama doğruluk](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MicroAccuracy) , ortalama ölçümü hesaplamak için tüm sınıfların katkılarını toplar. Doğru tahmin edilen örneklerin kesiri. Mikro ortalama, bir sınıf üyeliğini hesaba almaz. Temel olarak her örnek sınıf çifti, doğruluk ölçüsüne eşit olarak katkıda bulunur. | **1,00 ' ye yaklaşarak daha iyidir**. Çok sınıflı bir sınıflandırma görevinde, bir sınıf dengesizliği olabileceğinden şüphelenirseniz, mikro doğruluk, makro doğruluğu üzerinde tercih edilir (ör. diğer sınıflardan daha fazla bir sınıfa daha fazla örnek olabilir).|
 | **Makro doğruluğu** | [Makro-ortalama doğruluk](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MacroAccuracy) , sınıf düzeyindeki ortalama doğruluk sayısıdır. Her sınıfın doğruluğu hesaplanır ve makro doğruluğu bu accuracies ortalaması olur. Temel olarak her sınıf, doğruluk ölçüsüne eşit olarak katkıda bulunur. Minınlık sınıflarına daha büyük sınıflar olarak eşit ağırlık verilir. Makro-ortalama ölçümü her sınıfa aynı ağırlığı verir, bu sınıftan kaç örnek veri kümesi içeriyor olsun. |  **1,00 ' ye yaklaşarak daha iyidir**.  Ölçüyü her sınıf için bağımsız olarak hesaplar ve ortalama alır (Bu nedenle tüm sınıfları eşit olarak değerlendiriliyor) |

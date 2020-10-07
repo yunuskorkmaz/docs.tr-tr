@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: f2cb1004ef6316bc67189c4e00930f6086cf0dad
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 178d77c225144497982487afa00f4493e17d1744
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152929"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805219"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Denetimlere veri bağlama (WCF Veri Hizmetleri)
 
@@ -36,7 +36,7 @@ WCF Veri Hizmetleri ile, `ComboBox` ve denetimleri gibi denetimleri `ListView` s
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Windows Presentation Foundation öğelerine veri bağlama  
 
- Sınıfı sınıfından <xref:System.Data.Services.Client.DataServiceCollection%601> devraldığı için <xref:System.Collections.ObjectModel.ObservableCollection%601> , nesneleri bağlama için kullanırken yaptığınız gibi bir WINDOWS PRESENTATION FOUNDATION (WPF) uygulamasındaki bir öğeye veya denetime nesneleri bağlayabilirsiniz <xref:System.Collections.ObjectModel.ObservableCollection%601> . Daha fazla bilgi için bkz. [veri bağlama (Windows Presentation Foundation)](../../../desktop-wpf/data/data-binding-overview.md). Veri hizmeti verilerini WPF denetimlerine bağlamak için bir yol, `DataContext` öğesinin özelliğini <xref:System.Data.Services.Client.DataServiceCollection%601> sorgu sonucunu içeren sınıfın örneğine ayarlamaya yönelik bir yoldur. Bu durumda, <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> denetimin nesne kaynağını ayarlamak için özelliğini kullanın. <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>Bağlantılı nesnenin hangi özelliğinin görüntüleneceğini belirtmek için özelliğini kullanın. Bir öğeyi bir gezinti özelliği tarafından döndürülen ilgili bir nesneye bağlıyorsanız, yolu özelliği için tanımlanan bağlamaya ekleyin <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> . Bu yol, üst denetimin özelliği tarafından ayarlanan kök nesneye göredir <xref:System.Windows.FrameworkElement.DataContext%2A> . Aşağıdaki örnek, <xref:System.Windows.FrameworkElement.DataContext%2A> bir öğesinin özelliğini, <xref:System.Windows.Controls.StackPanel> üst denetimi bir müşteri nesnesine bağlamak için ayarlar <xref:System.Data.Services.Client.DataServiceCollection%601> :  
+ Sınıfı sınıfından <xref:System.Data.Services.Client.DataServiceCollection%601> devraldığı için <xref:System.Collections.ObjectModel.ObservableCollection%601> , nesneleri bağlama için kullanırken yaptığınız gibi bir WINDOWS PRESENTATION FOUNDATION (WPF) uygulamasındaki bir öğeye veya denetime nesneleri bağlayabilirsiniz <xref:System.Collections.ObjectModel.ObservableCollection%601> . Daha fazla bilgi için bkz. [veri bağlama (Windows Presentation Foundation)](/dotnet/desktop/wpf/data/data-binding-overview). Veri hizmeti verilerini WPF denetimlerine bağlamak için bir yol, `DataContext` öğesinin özelliğini <xref:System.Data.Services.Client.DataServiceCollection%601> sorgu sonucunu içeren sınıfın örneğine ayarlamaya yönelik bir yoldur. Bu durumda, <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> denetimin nesne kaynağını ayarlamak için özelliğini kullanın. <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>Bağlantılı nesnenin hangi özelliğinin görüntüleneceğini belirtmek için özelliğini kullanın. Bir öğeyi bir gezinti özelliği tarafından döndürülen ilgili bir nesneye bağlıyorsanız, yolu özelliği için tanımlanan bağlamaya ekleyin <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> . Bu yol, üst denetimin özelliği tarafından ayarlanan kök nesneye göredir <xref:System.Windows.FrameworkElement.DataContext%2A> . Aşağıdaki örnek, <xref:System.Windows.FrameworkElement.DataContext%2A> bir öğesinin özelliğini, <xref:System.Windows.Controls.StackPanel> üst denetimi bir müşteri nesnesine bağlamak için ayarlar <xref:System.Data.Services.Client.DataServiceCollection%601> :  
   
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]

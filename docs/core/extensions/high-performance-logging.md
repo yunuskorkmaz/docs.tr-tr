@@ -4,12 +4,12 @@ author: IEvangelist
 description: Yüksek performanslı günlük senaryolarında daha az sayıda nesne ayırması gerektiren önbelleğe alınabilir temsilciler oluşturmak için LoggerMessage kullanmayı öğrenin.
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: d722a3a5cb38f33b6833a5c280687ce6c1e46bf9
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 9111b9553c913cff2937b574250b65e633250f4f
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614758"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804763"
 ---
 # <a name="high-performance-logging-in-net"></a>.NET 'te yüksek performanslı günlüğe kaydetme
 
@@ -93,7 +93,7 @@ info: WorkerServiceOptions.Example.Worker[1]
 
 [DefineScope (String)](xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A) yöntemi, <xref:System.Func%601> [günlük kapsamını](logging.md#log-scopes)tanımlamak için bir temsilci oluşturur. <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> Aşırı Yüklemeler, adlandırılmış biçim dizesine (şablon) üç tür parametrenin geçirilmesine izin verir.
 
-Yönteminde olduğu gibi <xref:Microsoft.Extensions.Logging.LoggerMessage.Define%2A> , yöntemi için girilen dize, ilişkili <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> dize değil, bir şablondur. Yer tutucular, türlerin belirtilme sırasına göre doldurulur. Şablondaki yer tutucu adları, şablonlar genelinde açıklayıcı ve tutarlı olmalıdır. Bunlar, yapılandırılmış günlük verileri içinde özellik adı olarak görev yapar. Yer tutucu adları için [Pascal büyük harfleri](/dotnet/standard/design-guidelines/capitalization-conventions) öneririz. Örneğin,, `{Item}` `{DateTime}` .
+Yönteminde olduğu gibi <xref:Microsoft.Extensions.Logging.LoggerMessage.Define%2A> , yöntemi için girilen dize, ilişkili <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> dize değil, bir şablondur. Yer tutucular, türlerin belirtilme sırasına göre doldurulur. Şablondaki yer tutucu adları, şablonlar genelinde açıklayıcı ve tutarlı olmalıdır. Bunlar, yapılandırılmış günlük verileri içinde özellik adı olarak görev yapar. Yer tutucu adları için [Pascal büyük harfleri](../../standard/design-guidelines/capitalization-conventions.md) öneririz. Örneğin,, `{Item}` `{DateTime}` .
 
 Yöntemini kullanarak bir dizi günlük mesajı için uygulanacak [günlük kapsamını](logging.md#log-scopes) tanımlayın <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> .
 

@@ -4,12 +4,12 @@ description: Bir görev listesine iptal isteği bildirmek için iptal belirteçl
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 84cd1bb413d20b6c13be8415c13c72b57873b1cf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 79c9db53674182489c89d657786bf39e8bb44b21
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654711"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805258"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>Görev listesini iptal etme (C#)
 
@@ -115,7 +115,7 @@ static async Task Main()
 }
 ```
 
-Updated `Main` yöntemi artık zaman uyumsuz bir [Main](../../../whats-new/csharp-7-1.md#async-main)olarak değerlendirilir ve bu, yürütülebilir bir giriş noktasına bir zaman uyumsuz giriş noktası sağlar. Konsola birkaç eğitici ileti yazar ve ardından <xref:System.Threading.Tasks.Task> `cancelTask` Konsol anahtar vuruşlarını okuyan adlı bir örnek bildirir. <kbd>ENTER</kbd> tuşuna basıldığında bir çağrısı <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> yapılır. Bu işlem iptali işaret eder. Sonra, `sumPageSizesTask` değişkeni `SumPageSizesAsync` yönteminden atanır. Her iki görev daha sonra öğesine geçirilir <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> ve bu, iki görevden herhangi biri tamamlandığında devam edecektir.
+Updated `Main` yöntemi artık zaman uyumsuz bir [Main](../../../whats-new/csharp-7.md#async-main)olarak değerlendirilir ve bu, yürütülebilir bir giriş noktasına bir zaman uyumsuz giriş noktası sağlar. Konsola birkaç eğitici ileti yazar ve ardından <xref:System.Threading.Tasks.Task> `cancelTask` Konsol anahtar vuruşlarını okuyan adlı bir örnek bildirir. <kbd>ENTER</kbd> tuşuna basıldığında bir çağrısı <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> yapılır. Bu işlem iptali işaret eder. Sonra, `sumPageSizesTask` değişkeni `SumPageSizesAsync` yönteminden atanır. Her iki görev daha sonra öğesine geçirilir <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> ve bu, iki görevden herhangi biri tamamlandığında devam edecektir.
 
 ## <a name="create-the-asynchronous-sum-page-sizes-method"></a>Zaman uyumsuz toplam sayfa boyutları yöntemini oluşturma
 

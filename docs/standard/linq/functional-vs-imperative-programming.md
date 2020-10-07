@@ -3,12 +3,12 @@ title: Fonksiyonel programlama ve kesinlik temelli programlama-LINQ to XML
 description: Fonksiyonel programlama hakkında bilgi edinin ve bunun geleneksel olarak kesinlik (yordamsal) programlamadan farklı olduğunu öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: c7d16d61f9865cda7c625f91c2c822be1a327fd6
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: e99cffa9500c07c507962f41b17ab3f3b05c7781
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679370"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805291"
 ---
 # <a name="functional-programming-vs-imperative-programming-linq-to-xml"></a>Fonksiyonel programlama ile kesinlik temelli programlama (LINQ to XML)
 
@@ -57,5 +57,5 @@ Neyse ki, C# ve Visual Basic, hem zorunlu hem de işlevsel programlama yaklaşı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Saf işlevsel dönüşümlere giriş](introduction-pure-functional-transformations.md)
-- [XSLT Dönüşümleri](/../../standard/data/xml/xslt-transformations.md)
+- [XSLT Dönüşümleri](../data/xml/xslt-transformations.md)
 - [Saf işlevler halinde yeniden düzenleme](refactor-pure-functions.md)

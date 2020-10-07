@@ -3,12 +3,12 @@ title: Platform uyumluluk çözümleyicisi
 description: Platformlar arası uygulamalarda ve kitaplıklarda platform uyumluluk sorunlarını algılamaya yardımcı olabilecek bir Roslyn Çözümleyicisi.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: fcd5ec755789ff7f2472d8077dd52f321bf9f167
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756188"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805304"
 ---
 # <a name="platform-compatibility-analyzer"></a>Platform uyumluluk çözümleyicisi
 
@@ -23,9 +23,9 @@ Yeni API 'Ler şunları içerir:
 > [!TIP]
 > Platform uyumluluk Çözümleyicisi, [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md)'nin [platformlar arası sorunları keşfetmesini](../../standard/analyzers/api-analyzer.md#discover-cross-platform-issues) yükseltir ve değiştirir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin biridir. .NET 5,0 ' den itibaren bu çözümleyiciler [.NET SDK 'ya dahildir](../../fundamentals/productivity/code-analysis.md). Platform uyumluluğu Çözümleyicisi, yalnızca `net5.0` veya sonraki bir sürümü hedefleyen projeler için varsayılan olarak etkindir. Ancak, diğer çerçeveleri hedefleyen projeler için [etkinleştirebilirsiniz](/visualstudio/code-quality/ca1416.md#configurability) .
+Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin biridir. .NET 5,0 ' den itibaren bu çözümleyiciler [.NET SDK 'ya dahildir](../../fundamentals/code-analysis/overview.md). Platform uyumluluğu Çözümleyicisi, yalnızca `net5.0` veya sonraki bir sürümü hedefleyen projeler için varsayılan olarak etkindir. Ancak, diğer çerçeveleri hedefleyen projeler için [etkinleştirebilirsiniz](/visualstudio/code-quality/ca1416.md#configurability) .
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>Çözümleyici platform bağımlılığını nasıl belirler
 
@@ -381,5 +381,5 @@ Platform adları çağıran platforma bağımlı API ile eşleşmelidir. Platfor
 - [.NET 5 ' te hedef çerçeve adları](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
 - [Platforma özgü API 'Lere açıklama ekleme ve kullanımını algılama](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-checks/platform-checks.md)
 - [API 'Leri belirli platformlarda desteklenmeyen şekilde açıklama ekleme](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-exclusion/platform-exclusion.md)
-- [CA1416 platform uyumluluğu Çözümleyicisi](/visualstudio/code-quality/ca1416)
+- [CA1416 platform uyumluluğu Çözümleyicisi](../../fundamentals/code-analysis/quality-rules/ca1416.md)
 - [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md)

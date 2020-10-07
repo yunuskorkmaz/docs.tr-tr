@@ -2,12 +2,12 @@
 title: Windows Forms son değişiklikler
 description: .NET Core ve .NET 5 için Windows Forms 'deki son değişiklikleri listeler.
 ms.date: 09/08/2020
-ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 2311faab026bf1dfde348e231937eff73ec46172
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679012"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804873"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 'deki değişiklikler kesiliyor
 
@@ -17,6 +17,7 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
+| [DataGridView artık özelleştirilmiş hücre stilleri için yazı tiplerini sıfırlıyor](#datagridview-no-longer-resets-fonts-for-customized-cell-styles) | 5.0 |
 | [OutputType WPF ve WinForms uygulamaları için WinExe olarak ayarlandı](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
 | [DataGridView ile ilgili API 'Ler artık InvalidOperationException 'yi oluşturur](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
 | [WinForms ve WPF uygulamaları Microsoft. NET. SDK kullanır](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
@@ -39,6 +40,10 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [datagridview-doesnt-reset-custom-font-settings](../../../includes/core-changes/windowsforms/5.0/datagridview-doesnt-reset-custom-font-settings.md)]
+
+***
 
 [!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
 
