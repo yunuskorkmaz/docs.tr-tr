@@ -49,16 +49,12 @@ items:
             href: ../core/install/localized-intellisense.md
   - name: Genel bakış (1. hafta)
     items:
-      - name: .NET Turu
-        href: ../standard/tour.md
+      - name: .NET’e giriş
+        href: ../core/introduction.md
       - name: .NET mimari bileşenleri
         href: ../standard/components.md
       - name: .NET sınıf kitaplıkları
         href: ../standard/class-libraries.md
-      - name: NET Core’a giriş
-        href: ../core/introduction.md
-      - name: .NET Core’a genel bakış
-        href: ../core/about.md
       - name: .NET Standard’a genel bakış
         href: ../standard/net-standard.md
       - name: .NET sözlüğü
