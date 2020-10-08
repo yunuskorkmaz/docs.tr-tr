@@ -2,12 +2,12 @@
 title: AKS/Kubernetes kümelerine Linux kapsayıcıları olarak dağıtılan ASP.NET Core uygulamalar oluşturun
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
 ms.date: 08/06/2020
-ms.openlocfilehash: 4b04e5d56c73918c665ad6e2825205870aac9606
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
+ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916417"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91844569"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Bir AKS/Kubernetes Orchestrator 'a Linux kapsayıcıları olarak dağıtılan ASP.NET Core uygulamalar oluşturun
 
@@ -128,7 +128,7 @@ services:
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 ```
 
-Uygulamanızı çalıştırmak için Docker Compose yalnızca birkaç tdalgalı KS yapmanız gerekir`docker-compose.override.yml`
+Uygulamanızı çalıştırmak için Docker Compose yalnızca birkaç tdalgalı KS yapmanız gerekir `docker-compose.override.yml`
 
 ```yml
 services:
@@ -199,6 +199,9 @@ Görüntüleri [Azure Container Registry (ACR)](https://azure.microsoft.com/serv
 az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
 
+> [!NOTE]
+> Kapsayıcı kayıt defteri adı (ör. `exploredocker` ) Azure içinde benzersiz olmalı ve 5-50 alfasayısal karakter içermelidir. Daha ayrıntılı bilgi için bkz. [kapsayıcı kayıt defteri oluşturma](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)
+
 ### <a name="create-the-image-in-release-mode"></a>Görüntüyü yayın modunda oluşturma
 
 Şimdi, Şekil 4-46 ' de gösterildiği gibi, **yayın**moduna geçiş yaparak ve uygulamayı daha önce yaptığınız gibi çalıştırarak **yayın** modunda (üretim için hazır) görüntüyü oluşturacaksınız.
@@ -257,7 +260,7 @@ Aşağıdaki komutu kullanarak görüntüyü Azure ACR 'ye gönderin:
 docker push <login-server-name>/<image-name>:v1
 ```
 
-Bu komut, görüntüleri karşıya yüklerken bir işlem gerçekleştirir, ancak işlemde geri bildirim sağlar. Aşağıdaki görüntüde, bir görüntüden alınan çıktıyı ve sürmekte olan bir işlemi görebilirsiniz.
+Bu komut, görüntüleri karşıya yüklerken bir işlem gerçekleştirir, ancak işlemde geri bildirim sağlar. Aşağıdaki görüntüde, bir görüntüden alınan çıktıyı ve devam eden başka bir görüntüyü görebilirsiniz.
 
 ![Docker Push komutundan konsol çıktısı.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/uploading-docker-images-complete.png)
 
@@ -426,7 +429,7 @@ Bir tarayıcı penceresi `http://127.0.0.1:8001` Şuna benzer bir görünümle b
 Artık ASP.NET Core uygulamanız var, Linux kapsayıcılarında çalışıyor ve Azure 'da bir AKS kümesine dağıtıldı.
 
 > [!NOTE]
-> Kubernetes ile dağıtım hakkında daha fazla bilgi için bkz:<https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
+> Kubernetes ile dağıtım hakkında daha fazla bilgi için bkz: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
 
 > [!div class="step-by-step"]
 > [Önceki](set-up-windows-containers-with-powershell.md) 
