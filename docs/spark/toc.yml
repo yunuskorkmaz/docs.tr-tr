@@ -32,7 +32,7 @@
     - name: Uygulamanızda hata ayıklama
       href: how-to-guides/debug.md
     - name: Azure Synapse Analytics’e iş gönderme
-      href: 'https://docs.microsoft.com/azure/synapse-analytics/spark/spark-dotnet'
+      href: /azure/synapse-analytics/spark/spark-dotnet
     - name: İşleri HDInsight’a gönderme
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: İşleri Databricks’e gönderme
