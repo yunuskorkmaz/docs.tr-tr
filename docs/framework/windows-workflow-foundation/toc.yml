@@ -7,8 +7,11 @@
       href: whats-new.md
     - name: .NET 4.5 içinde Windows Workflow Foundation’daki Yenilikler
       href: whats-new-in-wf-in-dotnet.md
-    - name: Windows Workflow Foundation’da kullanım dışı türler
+    - name: Geçersiz türler ve araçlar
       href: deprecated-types.md
+      items:
+        - name: wfc.exe İş Akışı Derleyici Aracı
+          href: wfc-exe-workflow-compiler-tool.md
     - name: Windows Workflow Foundation Özellik Ayrıntıları
       href: feature-specifics.md
     - name: Windows Workflow’a Kavramsal Genel Bakış
