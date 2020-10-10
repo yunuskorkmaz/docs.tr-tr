@@ -4,14 +4,14 @@ description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kayna
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2b339db769c283ff21e6ad48d5b672794e43a76b
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 0539519c2e1dd429983226065e8508ac148e25a8
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804802"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877567"
 ---
-# <a name="introduction-to-net"></a>.NET 'e giriş
+# <a name="introduction-to-net"></a>.NET’e giriş
 
 .NET, şu gibi birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kaynaklı bir geliştirme platformudur:
 
@@ -72,7 +72,7 @@ Microsoft 'un .NET ikili dağıtımları, Azure 'da Microsoft tarafından koruna
 
 Tizen, Tizen platformlarında [.net destekler](https://developer.tizen.org/development/training/.net-application) .
 
-Daha fazla bilgi için bkz. [destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
+Daha fazla bilgi için bkz. [.NET Core ve .NET 5 Için yayınlar ve destek](releases-and-support.md).
 
 ## <a name="tools-and-productivity"></a>Araçlar ve üretkenlik
 
@@ -101,8 +101,8 @@ Daha fazla bilgi için bkz. [destek ilkesi](https://dotnet.microsoft.com/platfor
 * [Genel türler](../standard/generics.md)
 * [Temsilciler](../standard/delegates-lambdas.md)
 * [Lambdalar](../standard/delegates-lambdas.md)
-* [Olayları](../standard/events/index.md)
-* [Özel durumlar](../standard/exceptions/index.md)
+* [Olaylar](../standard/events/index.md)
+* [Özel Durumlar](../standard/exceptions/index.md)
 * [Öznitelikler](../standard/attributes/index.md)
 * [Zaman uyumsuz kod](../standard/async.md)
 * [Paralel programlama](../standard/parallel-programming/index.md)
@@ -201,7 +201,7 @@ Daha fazla bilgi için bkz. [NuGet belgeleri](/nuget/).
 
 Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
-* [.NET tarayıcı Içi öğretici](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)
+* [.NET In-Browser öğreticisi](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)
 * [Makinenizde Jupyıter ile .NET Not defterleri kullanma](https://github.com/dotnet/interactive/blob/main/docs/NotebooksLocalExperience.md)
 * [.NET etkileşimli belgeleri](https://github.com/dotnet/interactive/blob/main/docs/README.md)
 

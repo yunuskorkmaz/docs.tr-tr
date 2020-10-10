@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 58a4ce30e11ca023b50e5e53b1f1554a30d44390
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d2855738c723ba6d2437257793f18349b18629dc
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137090"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877593"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -74,7 +74,7 @@ Ayrıca, [genişletme yöntemleri](../../programming-guide/classes-and-structs/e
   
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
-Başvuru türlerini değere ve başvuruya göre geçirme hakkında daha fazla bilgi için bkz. [başvuru türü parametrelerini geçirme](../../programming-guide/classes-and-structs/passing-reference-type-parameters.md).
+Başvuru türlerini değere ve başvuruya göre geçirme hakkında daha fazla bilgi için bkz. [Reference-Type parametrelerini geçirme](../../programming-guide/classes-and-structs/passing-reference-type-parameters.md).
   
 ## <a name="reference-return-values"></a>Başvuru dönüş değerleri
 
@@ -100,7 +100,7 @@ Burada hem yöntem imzasını hem de Yöntem gövdesini gösteren daha kapsamlı
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
-Çağrılan yöntem, `ref readonly` değeri başvuruya göre döndürmek için dönüş değerini de bildirebilir ve çağıran kodun döndürülen değeri değiştiremeyeceğini zorunlu kılabilir. Çağırma yöntemi, değeri yerel bir [ref salt okunur](#ref-readonly-locals) değişkeninde depolayarak döndürülen değerli değeri kopyalamayı önleyebilir.
+Çağrılan yöntem, `ref readonly` değeri başvuruya göre döndürmek için dönüş değerini de bildirebilir ve çağıran kodun döndürülen değeri değiştiremeyeceğini zorunlu kılabilir. Çağırma yöntemi, değeri yerel bir [ref salt okunur](#ref-readonly-locals) değişkeninde depolayarak döndürülen değeri kopyalamayı önleyebilir.
 
 Bir örnek için, bkz. [bir başvuru dönüşleri ve ref Yereller örneği](#a-ref-returns-and-ref-locals-example).
 
@@ -151,7 +151,7 @@ Aşağıdaki örnek `Book` , ve iki alanı olan bir sınıfı tanımlar <xref:Sy
 - [Güvenli verimli kod yazma](../../write-safe-efficient-code.md)
 - [Ref dönüşler ve ref yerel ayarlar](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Koşullu başvuru ifadesi](../operators/conditional-operator.md#conditional-ref-expression)
-- [Parametreleri Geçirme](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Parametreleri geçirme](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Yöntem Parametreleri](method-parameters.md)
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)

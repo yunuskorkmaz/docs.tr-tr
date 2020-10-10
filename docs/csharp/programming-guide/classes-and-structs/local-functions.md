@@ -4,12 +4,12 @@ description: C# ' deki yerel işlevler, başka bir üyede iç içe yerleştirilm
 ms.date: 10/02/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: a91995757048c8c54253d7f4b923d5194f69bc7b
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: e7c49554da56d8682d37a236024922b3fa3ec600
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654926"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877541"
 ---
 # <a name="local-functions-c-programming-guide"></a>Yerel işlevler (C# Programlama Kılavuzu)
 
@@ -54,29 +54,29 @@ Ayrıca, öznitelikler yerel işleve veya parametrelerine ve parametre türüne 
 
 Aşağıdaki örnek adlı bir yerel işlevi tanımlar `AppendPathSeparator` `GetText` :
 
-[!code-csharp[LocalFunctionExample](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="Basic" :::
 
 ## <a name="local-functions-and-exceptions"></a>Yerel işlevler ve özel durumlar
 
 Yerel işlevlerin yararlı özelliklerinden biri, özel durumların hemen yüzeyine izin verebilir. Yöntem yineleyiciler için, özel durumlar yalnızca döndürülen dizi numaralandırıldıktan sonra, yineleyici alındığında değil, ortaya çıkacak. Zaman uyumsuz metotlar için, bir zaman uyumsuz yöntemde oluşturulan özel durumlar, döndürülen görev beklendiğinde gözlemlenir.
 
-Aşağıdaki örnek, `OddSequence` belirtilen bir Aralık arasındaki tek sayıları numaralandırır bir yöntemi tanımlar. Numaralandırıcı yöntemine 100 ' den büyük bir sayı geçirdiğinden `OddSequence` , yöntemi bir oluşturur <xref:System.ArgumentOutOfRangeException> . Örneğin çıkışının gösterdiği gibi, özel durum yalnızca sayıları tekrarladığı zaman, numaralandırıcıyı alırken değil, yüzeyleri.
+Aşağıdaki örnek, `OddSequence` belirtilen aralıktaki tek sayıları numaralandırır bir yöntemi tanımlar. Numaralandırıcı yöntemine 100 ' den büyük bir sayı geçirdiğinden `OddSequence` , yöntemi bir oluşturur <xref:System.ArgumentOutOfRangeException> . Örneğin çıkışının gösterdiği gibi, özel durum yalnızca sayıları tekrarladığı zaman, numaralandırıcıyı alırken değil, yüzeyleri.
 
-[!code-csharp[LocalFunctionIterator1](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)]
+:::code language="csharp" source="snippets/local-functions/IteratorWithoutLocal.cs" :::
 
-Bunun yerine, aşağıdaki örnekte gösterildiği gibi, bir yerel işlevden Yineleyici döndürerek, doğrulama gerçekleştirirken ve yineleyici almadan önce bir özel durum oluşturabilirsiniz.
+Yineleyici mantığını yerel bir işleve yerleştirirseniz, aşağıdaki örnekte gösterildiği gibi, Numaralandırıcı aldığınızda bağımsız değişken doğrulama özel durumları atılır.
 
-[!code-csharp[LocalFunctionIterator2](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
+:::code language="csharp" source="snippets/local-functions/IteratorWithLocal.cs" :::
 
-Yerel işlevler, zaman uyumsuz işlem dışındaki özel durumları işlemek için benzer bir şekilde kullanılabilir. Genellikle, zaman uyumsuz yöntemde oluşturulan özel durumlar, öğesinin iç özel durumlarını incelemenizi gerektirir <xref:System.AggregateException> . Yerel işlevler, kodunuzun hızlı bir şekilde başarısız olmasına olanak tanır ve özel durumun hem zaman uyumlu olarak hem de aynı şekilde gözlemlenip
+Yerel işlevleri, zaman uyumsuz işlemlerle benzer bir şekilde kullanabilirsiniz. Karşılık gelen görev beklendiğinde zaman uyumsuz yöntem yüzeyinde oluşturulan özel durumlar. Yerel işlevler, kodunuzun hızlı bir şekilde başarısız olmasına olanak tanır ve özel durumun hem zaman uyumlu olarak hem de aynı şekilde gözlemlenip
 
-Aşağıdaki örnek, belirtilen saniye sayısını duraklatmak için adlı zaman uyumsuz bir yöntem kullanır `GetMultipleAsync` ve bu sayıda saniyeden oluşan rastgele bir değer döndürür. En fazla gecikme 5 saniyedir; <xref:System.ArgumentOutOfRangeException> değer 5 ' ten büyükse bir sonuç elde edilir. Aşağıdaki örnekte gösterildiği gibi, yöntemine 6 değeri geçirildiğinde oluşturulan özel durum, `GetMultipleAsync` <xref:System.AggregateException> Yöntem yürütmeye başladıktan sonra bir öğesine kaydırılır `GetMultipleAsync` .
+Aşağıdaki örnek, belirtilen saniye sayısını duraklatmak için adlı zaman uyumsuz bir yöntem kullanır `GetMultipleAsync` ve bu sayıda saniyeden oluşan rastgele bir değer döndürür. En fazla gecikme 5 saniyedir; <xref:System.ArgumentOutOfRangeException> değer 5 ' ten büyükse bir sonuç elde edilir. Aşağıdaki örnekte gösterildiği gibi, yöntemine 6 değeri geçirildiğinde oluşturulan özel durum `GetMultipleAsync` yalnızca görev beklendiğinde gözlemlenir.
 
-[!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)]
+:::code language="csharp" source="snippets/local-functions/AsyncWithoutLocal.cs" :::
 
-Yöntem yineleyicisi ile yaptığımız gibi, zaman uyumsuz metodu çağırmadan önce doğrulamayı gerçekleştirmek için bu örnekteki kodu yeniden düzenleyebilirsiniz. Aşağıdaki örnekteki Çıktının gösterdiği gibi, ' <xref:System.ArgumentOutOfRangeException> a sarmalanmaz <xref:System.AggregateException> .
+Yöntem yineleyicisi ile benzer şekilde, önceki örneği yeniden düzenleyebilir ve zaman uyumsuz işlem kodunu yerel bir işlevde koyabilirsiniz. Aşağıdaki örnekteki Çıktının gösterdiği gibi, <xref:System.ArgumentOutOfRangeException> `GetMultiple` yöntemi çağrılır almaz.
 
-[!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)]
+:::code language="csharp" source="snippets/local-functions/AsyncWithLocal.cs" :::
 
 ## <a name="local-functions-vs-lambda-expressions"></a>Yerel işlevler ve lambda ifadeleri karşılaştırması
 
@@ -84,11 +84,11 @@ Yöntem yineleyicisi ile yaptığımız gibi, zaman uyumsuz metodu çağırmadan
 
 Bu, yerel işlev ve çarpınımı algoritmasının lambda ifadesi uygulamaları arasındaki farkları inceleyelim. Yerel bir işlev kullanan ilk sürüm:
 
-[!code-csharp[LocalFunctionFactorial](../../../../samples/snippets/csharp/new-in-7/MathUtilities.cs#37_LocalFunctionFactorial "Recursive factorial using local function")]
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="FactorialWithLocal" :::
 
 Bu uygulamayı lambda ifadeleri kullanan bir sürümle karşıtlık:
 
-[!code-csharp[26_LambdaFactorial](../../../../samples/snippets/csharp/new-in-7/MathUtilities.cs#38_LambdaFactorial "Recursive factorial using lambda expressions")]
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="FactorialWithLambda" :::
 
 Yerel işlevlerin adları vardır. Lambda ifadeleri, veya türündeki değişkenlere atanan anonim yöntemlerdir `Func` `Action` . Yerel bir işlev bildirdiğinizde, bağımsız değişken türleri ve dönüş türü, işlev bildiriminin bir parçasıdır. Lambda ifadesinin gövdesi bir parçası olmak yerine, bağımsız değişken türleri ve dönüş türü, lambda ifadesinin değişken türü bildiriminin bir parçasıdır. Bu iki fark kodun daha net bir şekilde oluşmasına neden olabilir.
 
@@ -115,16 +115,16 @@ Derleyici, `LocalFunction` çağrıldığında kesinlikle atayıp atamayacağın
 
 Bu zaman uyumsuz örneği göz önünde bulundurun:
 
-[!code-csharp[TaskLambdaExample](../../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#36_TaskLambdaExample "Task returning method with lambda expression")]
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="AsyncWithLambda" :::
 
 Bu lambda ifadesinin kapanışı `address` , `index` ve `name` değişkenlerini içerir. Yerel işlevler söz konusu olduğunda, kapanışı uygulayan nesne bir `struct` tür olabilir. Bu yapı türü yerel işleve başvuruya göre geçirilir. Uygulamadaki bu fark bir ayırmaya kaydedilir.
 
-Lambda ifadeleri için gereken örnek oluşturma, zaman açısından kritik kod yollarındaki bir performans faktörü olabilecek fazladan bellek ayırmaları anlamına gelir. Yerel işlevler bu ek yüke neden olmaz. Yukarıdaki örnekte, yerel işlevlerin sürümünde lambda ifadesi sürümünden daha az sayıda ayırma bulunur.
+Lambda ifadeleri için gereken örnek oluşturma, zaman açısından kritik kod yollarındaki bir performans faktörü olabilecek fazladan bellek ayırmaları anlamına gelir. Yerel işlevler bu ek yüke neden olmaz. Yukarıdaki örnekte, yerel işlevlerin sürümünde lambda ifadesi sürümünden daha az sayıda ayırma vardır.
 
 > [!NOTE]
 > Bu yöntemin yerel işlev eşdeğeri, kapanış için bir sınıf de kullanır. Yerel bir işlev için Kapanışın bir veya olarak uygulanıp uygulanmadığı bir `class` `struct` uygulama ayrıntısı. Yerel bir işlev bir kullanabilir, `struct` ancak bir lambda her zaman bir kullanır `class` .
 
-[!code-csharp[TaskLocalFunctionExample](../../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="AsyncWithLocal" :::
 
 Bu örnekte gösterilmeyen bir son avantaj, yerel işlevlerin yineleyiciler olarak uygulanabilmesinin yanı `yield return` sıra bir değer dizisi oluşturmak için söz dizimini kullanmaktır. `yield return`Lambda ifadelerinde ifadeye izin verilmez.
 

@@ -6,12 +6,12 @@ metadata:
   description: .NET uygulamaları tasarlama, derleme ve geçirmeye yönelik önerilen uygulamaları öğrenin.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: d0fc08eda01497aa07142ddfba3f98a4bf3fce2d
-  ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+  ms.openlocfilehash: 2ddd4c6d0c42f9e0ae4651aedb8fbdd59cd179f2
+  ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/24/2020
-  ms.locfileid: "91169186"
+  ms.lasthandoff: 10/09/2020
+  ms.locfileid: "91877528"
 landingContent:
 - title: ASP.NET Core uygulamaları geliştirme
   linkLists:
@@ -39,6 +39,10 @@ landingContent:
       url: https://dotnet.microsoft.com/learn/aspnet/microservice-tutorial/intro
     - text: Buluta özel ASP.NET Core mikro hizmeti oluşturma ve dağıtma
       url: /learn/modules/microservices-aspnet-core
+    - text: GitHub Actions ile buluta özel ASP.NET Core mikro hizmeti dağıtma
+      url: /learn/modules/microservices-devops-aspnet-core
+    - text: Buluta özel ASP.NET Core mikro hizmetinde dayanıklılık uygulama
+      url: /learn/modules/microservices-resiliency-aspnet-core
 - title: .NET uygulamalarını Azure 'a geçirme
   linkLists:
   - linkListType: concept

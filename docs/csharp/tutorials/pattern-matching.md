@@ -1,19 +1,19 @@
 ---
 title: 'Öğretici: desenler eşleştirme ile derleme algoritmaları'
 description: Bu gelişmiş öğreticide, ayrı olarak oluşturulan verileri ve algoritmaları kullanarak işlevsellik oluşturmak için model eşleştirme tekniklerini nasıl kullanabileceğiniz gösterilmektedir.
-ms.date: 03/13/2019
+ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperfq1
-ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 015bab574ca4255ffe355bd02bfb54b58e4ea7e0
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437985"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877671"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Öğretici: tür odaklı ve veri odaklı algoritmalar oluşturmak için model eşleştirmeyi kullanın.
 
-C# 7 temel desenler ile eşleşen özellikleri sunmuştur. Bu özellikler, C# 8 ' de yeni ifadelerle ve desenlerle genişletilir. Başka kitaplıklarda olabilecek türleri genişletmekle birlikte davranan işlevselliği yazabilirsiniz. Desenler için başka bir kullanım, uygulamanızın genişletilmekte olan türün temel bir özelliği olmayan bir işlev oluşturmasını gerektirir.
+C# 7 temel desenler ile eşleşen özellikleri sunmuştur. Bu özellikler, C# 8 ve C# 9 ' da yeni ifadelerle ve desenlerle genişletilir. Başka kitaplıklarda olabilecek türleri genişletmekle birlikte davranan işlevselliği yazabilirsiniz. Desenler için başka bir kullanım, uygulamanızın genişletilmekte olan türün temel bir özelliği olmayan bir işlev oluşturmasını gerektirir.
 
 Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
@@ -23,9 +23,9 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > - Türleri ve özellik değerlerini temel alan davranışı uygulamak için kalıp eşleştirme ifadelerini kullanın.
 > - Tüm algoritmalar oluşturmak için model eşleştirmeyi diğer tekniklerle birleştirin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-C# 8,0 derleyicisi dahil olmak üzere makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8 derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
+Makinenizde C# 9 derleyicisini içeren .NET 5 ' i çalıştıracak şekilde ayarlamanız gerekir. C# 8 derleyicisi, [Visual Studio 2019 sürüm 16,9 Preview 1](https://visualstudio.microsoft.com/vs/preview/) veya [.NET 5,0 SDK](https://dot.net/get-dotnet5)ile başlayarak kullanılabilir.
 
 Bu öğreticide, Visual Studio veya .NET Core CLI dahil olmak üzere C# ve .NET hakkında bilgi sahibi olduğunuz varsayılır.
 
@@ -127,7 +127,7 @@ namespace toll_calculator
             }
             try
             {
-                tollCalc.CalculateToll(null);
+                tollCalc.CalculateToll(null!);
             }
             catch (ArgumentNullException e)
             {
@@ -157,10 +157,10 @@ Bu kurallar, aynı anahtar ifadesinde **özellik düzeniyle** kullanılarak uygu
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1 }       => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
     // ...
 };
@@ -175,10 +175,10 @@ vehicle switch
 {
     // ...
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     // ...
 };
@@ -219,20 +219,20 @@ vehicle switch
 };
 ```
 
-Yukarıdaki kod, `when` anahtar ARM 'nin yan tümcesini gösterir. `when`Bir özellikte eşitlik dışındaki koşulları test etmek için yan tümcesini kullanın. İşiniz bittiğinde aşağıdakine benzer bir yönteme sahip olacaksınız:
+Yukarıdaki kod, `when` anahtar ARM 'nin yan tümcesini gösterir. `when`Bir özellikte eşitlik dışındaki koşulları test etmek için yan tümcesini kullanın. İşiniz bittiğinde, aşağıdaki kod gibi görünen bir yönteme sahip olacaksınız:
 
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1}        => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
     Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
@@ -288,9 +288,11 @@ public decimal CalculateToll(object vehicle) =>
 
 ## <a name="add-peak-pricing"></a>Tepe fiyatlandırması Ekle
 
-Son özellik için, ücretli yetkili zamana duyarlı tepe fiyatlandırması eklemek istemektedir. Sabah ve akşam aceleniz saatlerinde, Tolls iki katına çıkar. Bu kural yalnızca bir yönde trafiği etkiler: sabah şehrine gelen ve akşam aceleniz Hour 'daki çıkış. İş gününde diğer saatlerde, Tolls %50 oranında artar. Geç gece ve erken sabah, Tolls %25 oranında azaltılır. Hafta sonu sırasında, zamandan bağımsız olarak normal fiyat olur.
+Son özellik için, ücretli yetkili zamana duyarlı tepe fiyatlandırması eklemek istemektedir. Sabah ve akşam aceleniz saatlerinde, Tolls iki katına çıkar. Bu kural yalnızca bir yönde trafiği etkiler: sabah şehrine gelen ve akşam aceleniz Hour 'daki çıkış. İş gününde diğer saatlerde, Tolls %50 oranında artar. Geç gece ve erken sabah, Tolls %25 oranında azaltılır. Hafta sonu sırasında, zamandan bağımsız olarak normal fiyat olur. `if` `else` Bu ve deyimlerini aşağıdaki kodu kullanarak ifade etmek için bir seriler ve deyimler kullanabilirsiniz:
 
-Bu özellik için model eşleştirmeyi kullanacaksınız, ancak diğer tekniklerle tümleştirilecek. Tüm yön, hafta günü ve saat birleşimleri için hesap oluşturacak tek bir kalıp eşleştirme ifadesi oluşturabilirsiniz. Sonuç karmaşık bir ifade olacaktır. Okunması zor olabilir. Bu, doğruluğu garanti etmelerini zorlaştırır. Bunun yerine, öz 'in tüm bu durumları açıkladığı bir dizi değer oluşturmak için bu yöntemleri birleştirin. Ardından, ücretli bir çarpanı hesaplamak için model eşleştirmeyi kullanın. Kayıt düzeni üç farklı koşul içerir:
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#SnippetPremiumWithoutPattern)]
+
+Yukarıdaki kod doğru çalışır, ancak okunabilir değildir. Kod hakkında sebebini sağlamak için tüm giriş durumları ve iç içe geçmiş deyimlerini kullanarak zincirleyebilirsiniz `if` . Bunun yerine, bu özellik için model eşleştirmeyi kullanacaksınız, ancak diğer tekniklerle tümleştirirsiniz. Tüm yön, hafta günü ve saat birleşimleri için hesap oluşturacak tek bir kalıp eşleştirme ifadesi oluşturabilirsiniz. Sonuç karmaşık bir ifade olacaktır. Okunması zor olabilir. Bu, doğruluğu garanti etmelerini zorlaştırır. Bunun yerine, öz 'in tüm bu durumları açıkladığı bir dizi değer oluşturmak için bu yöntemleri birleştirin. Ardından, ücretli bir çarpanı hesaplamak için model eşleştirmeyi kullanın. Kayıt düzeni üç farklı koşul içerir:
 
 - Gün, bir hafta içi veya bir hafta sonu olabilir.
 - Ücretli sürenin toplanacağı zaman bandı.
@@ -335,7 +337,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
     };
 ```
 
-Bu yöntem işe yarar, ancak repetitious. Aşağıdaki kodda gösterildiği gibi basitleşebilir:
+Bu yöntem doğrudur, ancak repetitious. Aşağıdaki kodda gösterildiği gibi basitleşebilir:
 
 [!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
@@ -343,7 +345,7 @@ Sonra, zaman bloklara zaman kategorize etmek için benzer bir işlev ekleyin:
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-Önceki yöntem, model eşleştirme kullanmaz. Tanıdık sayıda deyimleri kullanarak daha anlaşılır `if` . `enum`Her zaman aralığını ayrı bir değere dönüştürmek için bir özel ekleyin.
+`enum`Her zaman aralığını ayrı bir değere dönüştürmek için bir özel ekleyin. Ardından, `GetTimeBand` yöntemi, C# 9,0 ' de eklenen *ilişkisel desenleri*ve *birleşme veya desenler*kullanır. İlişkisel model,,, veya kullanarak sayısal bir değeri test etmenizi sağlar `<` `>` `<=` `>=` . Bir `or` ifadenin bir veya daha fazla desenle eşleşmesi durumunda desen test eder. Ayrıca `and` , bir ifadenin iki ayrı desenle eşleştiğinden emin olmak için bir desen ve bir `not` ifadenin bir desenle eşleşmediğini test etmek için bir desen de kullanabilirsiniz.
 
 Bu yöntemleri oluşturduktan sonra, `switch` fiyatlandırma Premium 'u hesaplamak için **demet düzenine** sahip başka bir ifadeyi kullanabilirsiniz. `switch`Tüm 16 kollu bir ifade oluşturabilirsiniz:
 

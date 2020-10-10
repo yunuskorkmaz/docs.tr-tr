@@ -9,12 +9,12 @@ helpviewer_keywords:
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 ms.topic: conceptual
-ms.openlocfilehash: c6404df5d4f0be381bc0a9c1924fcf82cf078306
-ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
+ms.openlocfilehash: 55cb37cc2c9184eeb55ee0aab39e97f4a3f7b7d8
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88075481"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877645"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Ek sınıf kitaplıkları ve API'ler
 
@@ -24,25 +24,25 @@ Bu makalede, bant dışında yayınlanan, belirli bir platformu hedefleyen veya 
 
 Platformlar arası geliştirmeyi artırmak ve yeni işlevsellik sunmak için bazı .NET Framework Özellikler bant dışı (OOB) serbest bırakıldı.
 
-| Proje | Açıklama |  
-| ------- | ----------- |  
+| Proje | Açıklama |
+| ------- | ----------- |
 | <xref:System.Collections.Immutable> | , İş parçacığı açısından güvenli olan ve içeriklerinin hiçbir şekilde değişmeme garantisi sağlayan koleksiyonlar sağlar. |
 | <xref:System.Net.Http.WinHttpHandler> | <xref:System.Net.Http.HttpClient>Windows 'un WinHTTP arabirimine dayalı olarak bir ileti işleyicisi sağlar. |
 | <xref:System.Numerics> | SıMD donanım tabanlı hızlandırmasının avantajlarından yararlanan bir vektör türleri kitaplığı sağlar.|
-| <xref:System.Threading.Tasks.Dataflow> | TPL veri akışı kitaplığı, eşzamanlılık özellikli uygulamaların sağlamlığını artırmaya yardımcı olmak için veri akışı bileşenleri sağlar. |  
+| <xref:System.Threading.Tasks.Dataflow> | TPL veri akışı kitaplığı, eşzamanlılık özellikli uygulamaların sağlamlığını artırmaya yardımcı olmak için veri akışı bileşenleri sağlar. |
 
 ## <a name="platform-specific-libraries"></a>Platforma özgü kitaplıklar
 
 Bazı kitaplıklar belirli platformları hedeflemelidir. Örneğin, <xref:System.Text.CodePagesEncodingProvider> sınıfı kod sayfası kodlamalarını .NET Framework kullanılarak GELIŞTIRILEN UWP uygulamaları için kullanılabilir hale getirir.
-  
-| Proje | Açıklama |  
-| ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider>Kod sayfası kodlamalarını Evrensel Windows platformu hedefleyen uygulamalar için kullanılabilir hale getirmek için sınıfını genişletir. |  
-  
-## <a name="private-apis"></a>Özel API 'Ler  
 
-Bu API 'Ler ürün altyapısını destekler ve doğrudan kodunuzdan kullanılmak üzere tasarlanmamıştır veya desteklenmez.  
-  
+| Proje | Açıklama |
+| ------- | ----------- |
+| <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider>Kod sayfası kodlamalarını Evrensel Windows platformu hedefleyen uygulamalar için kullanılabilir hale getirmek için sınıfını genişletir. |
+
+## <a name="private-apis"></a>Özel API 'Ler
+
+Bu API 'Ler ürün altyapısını destekler ve doğrudan kodunuzdan kullanılmak üzere tasarlanmamıştır veya desteklenmez.
+
 * [Microsoft. SqlServer. Server. Smorderproperty. Item özelliği](microsoft.sqlserver.server.smiorderproperty.item.md)
 * [System. Exception. PrepForRemoting yöntemi](system.exception.prepforremoting.md)
 * [System. Data. SqlTypes. SqlChars. Stream özelliği](system.data.sqltypes.sqlchars.stream.md)
@@ -82,12 +82,15 @@ Bu API 'Ler ürün altyapısını destekler ve doğrudan kodunuzdan kullanılmak
 * [System .net. ServicePoint. d \_ connectiongrouplist alanı](m_connectiongrouplist.md)
 * [System .net. ServicePointManager. CloseConnectionGroups yöntemi](system.net.servicepointmanager.closeconnectiongroups.md)
 * [System .net. ServicePointManager. s \_ servicepointtable alanı](s_servicepointtable.md)
-* [System .net. TlsStream. m_Worker alanı](system.net.tlsstream.m_worker.md)
+* [System.Net.TlsStream.m_Worker alanı](system.net.tlsstream.m_worker.md)
 * [System .net. UnsafeNclNativeMethods sınıfı](system.net.unsafenclnativemethods.md)
 * [System .net. WebHeaderCollection. Addınternal yöntemi](system.net.webheadercollection.addinternal.md)
 * [System. ServiceModel. Channels. Message. BodyToString yöntemi](system.servicemodel.channels.message.bodytostring.md)
 * [System. ServiceModel. Channels. Message. WriteStartHeaders yöntemi](system.servicemodel.channels.message.writestartheaders.md)
 * [System. Web. Compilation. Controlbuilderyakalayıcısı sınıfı](controlbuilderinterceptor-class.md)
+* [System. Windows. Controls. Gridviewwheaderrowpresenter. FindHeaderByColumn yöntemi](system.windows.controls.gridviewheaderrowpresenter.findheaderbycolumn.md)
+* [System. Windows. Controls. GridViewHeaderRowPresenter. MakeParentItemsControlGotFocus yöntemi](system.windows.controls.gridviewheaderrowpresenter.makeparentitemscontrolgotfocus.md)
+* [System. Windows. Controls. Gridviewwheaderrowpresenter. PrepareHeaderDrag yöntemi](system.windows.controls.gridviewheaderrowpresenter.prepareheaderdrag.md)
 * [System. Windows. Diagnostics. VisualDiagnostics. s \_ ıdebuggercheckdisabledfortestamaçlar alanı](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System. Windows. Forms. Design. DataMemberFieldEditor sınıfı](datamemberfieldeditor-class.md)
 * [System. Windows. Forms. Design. Datamemberlistedıtor sınıfı](datamemberlisteditor-class.md)
@@ -103,7 +106,7 @@ Bu API 'Ler ürün altyapısını destekler ve doğrudan kodunuzdan kullanılmak
 * [Stdole. IPictureDisp. Handle özelliği](stdole.ipicturedisp.handle.md)
 * [Stdole. StdFont arabirimi](stdole.stdfont.md)
 * [Stdole. StdPicture arabirimi](stdole.stdpicture.md)
-  
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [.NET Framework ve bant dışı yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md)

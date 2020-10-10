@@ -2,12 +2,12 @@
 title: Kapsayıcılardan ve düzenleyicilerden yararlanma
 description: Azure 'da Docker kapsayıcılarını ve Kubernetes düzenleyicilerinden yararlanın
 ms.date: 05/31/2020
-ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755915"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877580"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Kapsayıcılardan ve düzenleyicilerden yararlanma
 
@@ -25,7 +25,7 @@ Basitlik avantajlarına sahip olsalar da tek parçalı mimarilerin bir dizi zorl
 
 ### <a name="deployment"></a>Dağıtım
 
-Tek parçalı uygulamalar, yalnızca küçük bir değişiklik yapılmış olsa bile tüm uygulamanın tam dağıtımını gerektirir. Tam dağıtımlar pahalı ve hataya açık olabilir. Ayrıca, uygulamanın yeniden başlatılması gerekir ve bu, kullanım dışı olarak geçici olarak etkiler.
+Ayrıca, dağıtım sırasında sıfır kesinti süresi tekniklerin uygulanmadığında kullanılabilirliği geçici olarak etkileyebilecek uygulamanın yeniden başlatılmasını gerektirir.
 
 ### <a name="scaling"></a>Ölçeklendirme
 
@@ -139,7 +139,7 @@ Yüksek çalışma süresi ve ölçeklenebilirlik gereksinimleri olan bireysel u
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>Kapsayıcıları ve düzenlemeleri kullanmaktan ne zaman kaçınmalısınız?
 
-Uygulamanızı on Iki öğeli uygulama ilkelerine göre derlemenize izin verirseniz kapsayıcılardan ve düzenleyicilerinin önlenmemesini göz önünde bulundurmanız gerekir. Bu durumlarda, VM tabanlı bir barındırma platformunu veya büyük olasılıkla bazı karma sistemleri göz önünde bulundurun. Bununla birlikte, belirli işlevsellik parçalarını her zaman ayrı kapsayıcılara veya hatta sunucusuz işlevlere ayırabilirsiniz.
+Uygulamanızı Twelve-Factor uygulama ilkelerine göre derlemenize, kapsayıcılardan ve düzenleyicilerinin önlenmemesini düşünmelisiniz. Bu durumlarda, VM tabanlı bir barındırma platformunu veya büyük olasılıkla bazı karma sistemleri göz önünde bulundurun. Bununla birlikte, belirli işlevsellik parçalarını her zaman ayrı kapsayıcılara veya hatta sunucusuz işlevlere ayırabilirsiniz.
 
 ## <a name="development-resources"></a>Geliştirme kaynakları
 
