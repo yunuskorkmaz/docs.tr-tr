@@ -1,21 +1,21 @@
 ---
 title: Amazon EMR Spark için bir .NET Apache Spark uygulaması dağıtma
 description: Apache Spark uygulamasının bir .NET uygulamasını Amazon EMR Spark 'a dağıtmayı öğrenin.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6cf26044693c5d923d11e1bbc72232e7009fe73
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 0232896254e93525f2a6f0be05417107cf7f5432
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618265"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955479"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Amazon EMR Spark için bir .NET Apache Spark uygulaması dağıtma
 
 Bu öğreticide, Amazon EMR Spark 'a Apache Spark uygulamasına yönelik bir .NET dağıtımı öğretilir.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -23,8 +23,6 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Spark .NET uygulamanızı yayımlama
 > * Uygulamanızı Amazon EMR Spark 'a dağıtın
 > * Uygulamanızı çalıştırma
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -104,9 +102,9 @@ Bu uygulamayı Amazon EMR Spark: Spark-gönderme ve Amazon EMR adımlarında ça
 
 [Spark-gönder](https://spark.apache.org/docs/latest/submitting-applications.html) komutunu kullanarak, Amazon emr spark 'a Apache Spark işleri için .net gönderebilirsiniz.
 
-1. `ssh`Kümedeki düğümlerden birine.
+1. `ssh` Kümedeki düğümlerden birine.
 
-2. `spark-submit` öğesini çalıştırın.
+2. `spark-submit` komutunu çalıştırın.
 
    ```bash
    spark-submit \

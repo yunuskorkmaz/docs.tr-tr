@@ -1,23 +1,21 @@
 ---
 title: Apache Spark için .NET 'teki yayın değişkenlerini kullanın
 description: .NET ' te yayın değişkenlerini Apache Spark uygulamalar için nasıl kullanacağınızı öğrenin.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d86b160855cc4d3f3a6502f5606d4766b7c06aa0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3cf2215f59ce28878f44138386c01597ec852905
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617862"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955029"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>Apache Spark için .NET 'teki yayın değişkenlerini kullanın
 
 Bu makalede, Apache Spark için .NET ' te yayın değişkenlerini nasıl kullanacağınızı öğreneceksiniz. [Apache Spark yayın değişkenleri](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) , Salt okunabilir olması amaçlanan yürüticileri genelinde değişken paylaşma mekanizmalarda bulunur. Yayın değişkenleri, bir kopyasını görevler ile göndermek yerine, her makinede önbelleğe alınmış bir değişkeni tutmanıza olanak sağlar. Her düğüme, büyük bir giriş veri kümesinin bir kopyasını verimli bir şekilde sağlamak için yayın değişkenlerini kullanabilirsiniz.
 
 Veriler yalnızca bir kez gönderildiğinden, her görevle birlikte yürüticilere gönderilen yerel değişkenlere kıyasla yayın değişkenlerinin performans avantajları vardır. Yayın değişkenlerini ve bunların neden kullanıldığının daha ayrıntılı bir şekilde anlaşılmasını sağlamak için [resmi yayın değişkeni belgelerine](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) bakın.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="create-broadcast-variables"></a>Yayın değişkenleri oluşturma
 
@@ -41,7 +39,7 @@ Yayın değişkeni, yöntemi çağırarak tüm yürüticilerinden silinebilir `D
 bv.Destroy();
 ```
 
-`Destroy()`Yayın değişkeniyle ilgili tüm verileri ve meta verileri siler ve dikkatli kullanılmalıdır. Bir yayın değişkeni yok edildiğinde, tekrar kullanılamaz.
+`Destroy()` Yayın değişkeniyle ilgili tüm verileri ve meta verileri siler ve dikkatli kullanılmalıdır. Bir yayın değişkeni yok edildiğinde, tekrar kullanılamaz.
 
 ## <a name="limit-broadcast-variable-scope-in-udfs"></a>UDF 'ler içindeki yayın değişken kapsamını sınırla
 

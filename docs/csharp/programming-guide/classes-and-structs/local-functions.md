@@ -1,15 +1,15 @@
 ---
 title: Yerel işlevler-C# Programlama Kılavuzu
 description: C# ' deki yerel işlevler, başka bir üyede iç içe yerleştirilmiş ve kendi kapsayıcı üyelerinden çağrılabilecek özel yöntemlerdir.
-ms.date: 10/02/2020
+ms.date: 10/09/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: e7c49554da56d8682d37a236024922b3fa3ec600
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: a2d389c8b1c687dc4885004fcdc33e0ed7ada977
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877541"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955687"
 ---
 # <a name="local-functions-c-programming-guide"></a>Yerel işlevler (C# Programlama Kılavuzu)
 
@@ -50,11 +50,15 @@ Yöntem parametreleri de dahil olmak üzere, kapsayan üyede tanımlanan tüm ye
 
 Bir yöntem tanımının aksine, yerel bir işlev tanımı üye erişim değiştiricisini içeremez. Tüm yerel işlevler özel olduğundan, anahtar sözcüğü gibi bir erişim değiştiricisi de dahil olmak üzere, `private` "özel ' değiştiricisi Bu öğe için geçerli değil."
 
-Ayrıca, öznitelikler yerel işleve veya parametrelerine ve parametre türüne uygulanamaz.
-
 Aşağıdaki örnek adlı bir yerel işlevi tanımlar `AppendPathSeparator` `GetText` :
 
 :::code language="csharp" source="snippets/local-functions/Program.cs" id="Basic" :::
+
+C# 9,0 ' den başlayarak, aşağıdaki örnekte gösterildiği gibi, bir yerel işleve, parametreleri ve tür parametrelerine öznitelikler uygulayabilirsiniz:
+
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="WithAttributes" :::
+
+Önceki örnek, null olabilen bir bağlamda statik çözümlemede derleyiciye yardım etmek için [özel bir öznitelik](../../language-reference/attributes/nullable-analysis.md) kullanır.
 
 ## <a name="local-functions-and-exceptions"></a>Yerel işlevler ve özel durumlar
 

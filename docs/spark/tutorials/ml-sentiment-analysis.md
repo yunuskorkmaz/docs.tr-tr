@@ -3,20 +3,20 @@ title: Apache Spark ve ML.NET öğreticisi için .NET ile yaklaşım Analizi
 description: Bu öğreticide, yaklaşım analizi için Apache Spark .NET ile ML.NET kullanmayı öğreneceksiniz.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 69deb30419b98536fa309547d94f59bb266e413c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 16b4d34e4c581da2cd0ba798d87e53ccfc49f0e9
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617592"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954899"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>Öğretici: Apache Spark ve ML.NET için .NET ile yaklaşım Analizi
 
 Bu öğretici, Apache Spark için ML.NET ve .NET kullanarak çevrimiçi incelemelere ilişkin yaklaşım analizinin nasıl yapılacağını öğretir. [Ml.net](http://dot.net/ml) , ücretsiz, platformlar arası, açık kaynaklı bir makine öğrenimi çerçevesidir. Makine öğrenimi algoritmalarının eğitimini ve tahminini ölçeklendirmek için Apache Spark .NET ile ML.NET kullanabilirsiniz.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -24,8 +24,6 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Apache Spark konsol uygulaması için bir .NET oluşturun.
 > * Kullanıcı tanımlı bir işlevi yazın ve uygulayın.
 > * Apache Spark konsol uygulaması için bir .NET çalıştırın.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Ön koşullar
 

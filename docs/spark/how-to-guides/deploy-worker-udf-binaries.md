@@ -1,26 +1,26 @@
 ---
 title: Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtma
 description: Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtmayı öğrenin.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 001798bfda628ce979570bcd89e7c5553347b275
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617723"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954964"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtma
 
 Bu nasıl yapılır, Apache Spark çalışan ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtımı hakkında genel yönergeler sağlar. Ayarlanacak ortam değişkenlerinin yanı sıra uygulamaları ile başlatmak için yaygın olarak kullanılan bazı parametreleri öğrenirsiniz `spark-submit` .
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
 ## <a name="configurations"></a>Yapılandırmalar
+
 Yapılandırmalarda, Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtmak üzere genel ortam değişkenlerini ve parametre ayarlarını gösterir.
 
 ### <a name="environment-variables"></a>Ortam değişkenleri
+
 Çalışanları dağıttığınızda ve UDF 'Leri yazarken, ayarlamanız gerekebilecek yaygın olarak kullanılan birkaç ortam değişkeni vardır:
 
 | Ortam değişkeni         | Açıklama
@@ -36,8 +36,8 @@ Spark uygulaması [paketlenmiş](https://spark.apache.org/docs/latest/submitting
 | :---------------------| :----------
 | --sınıfı               | Uygulamanız için giriş noktası.</br>_Örneğin, org. Apache. spark. deploy. DotNet. DotnetRunner_
 | --Master              | Kümenin <a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">ana URL 'si</a> .</br>_ör. yarn_
-| --Deploy-Mode         | Sürücünüzü çalışan düğümlerinde ( <code>cluster</code> ) veya yerel olarak dış istemci olarak () dağıtıp dağıtmaktır <code>client</code> .</br>Varsayılanını<code>client</code>
-| --conf                | Biçimde rastgele Spark yapılandırma özelliği <code>key=value</code> .</br>_ör. spark. yarn. appMasterEnv. DOTNET_WORKER_DIR = .\worker\Microsoft.Spark.Worker_
+| --Deploy-Mode         | Sürücünüzü çalışan düğümlerinde ( <code>cluster</code> ) veya yerel olarak dış istemci olarak () dağıtıp dağıtmaktır <code>client</code> .</br>Varsayılanını <code>client</code>
+| --conf                | Biçimde rastgele Spark yapılandırma özelliği <code>key=value</code> .</br>_ör. spark.yarn.appMasterEnv.DOTNET_WORKER_DIR = .\worker\Microsoft.Spark.Worker_
 | --dosyalar               | Her bir yürütücü çalışma dizinine yerleştirilecek dosyaların virgülle ayrılmış listesi.<br/><ul><li>Bu seçeneğin yalnızca Yarn modu için geçerli olduğunu lütfen unutmayın.</li><li>Hadoop için # benzer bir dosya adı belirtmeyi destekler.</br></ul>_ör. <code>myLocalSparkApp.dll#appSeen.dll</code> Uygulamanızın <code>appSeen.dll</code> YARN 'de çalışırken başvurmak için adı kullanması gerekir <code>myLocalSparkApp.dll</code> ._</li>
 | --Arşivler          | Her bir yürütücünün çalışma dizininde Ayıklanacak arşivlerin virgülle ayrılmış listesi.</br><ul><li>Bu seçeneğin yalnızca Yarn modu için geçerli olduğunu lütfen unutmayın.</li><li>Hadoop için # benzer bir dosya adı belirtmeyi destekler.</br></ul>_ör. <code>hdfs://&lt;path to your worker file&gt;/Microsoft.Spark.Worker.zip#worker</code> Bu, ZIP dosyasını kopyalayıp klasörüne çıkaracaktır <code>worker</code> ._</li>
 | Uygulama-jar       | Uygulamanız ve tüm bağımlılıklar dahil olmak üzere bir paketlenmiş jar yolu.</br>_Örneğin, &lt; jar HDFS://yolu &gt; /Microsoft-parlak- &lt; Version &gt; . jar_
@@ -50,7 +50,7 @@ Spark uygulaması [paketlenmiş](https://spark.apache.org/docs/latest/submitting
 ### <a name="when-i-run-a-spark-app-with-udfs-i-get-a-filenotfoundexception-error-what-should-i-do"></a>Bir Spark uygulamasını UDF 'ler ile çalıştırdığımda bir ' FileNotFoundException ' hatası alıyorum. Ne yapmalıyım?
 > **Hata:** [hata] [TaskRunner] [0] processstream () özel durumla başarısız oldu: System. IO. FileNotFoundException: bütünleştirilmiş kod ' MySparkApp, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null ' dosya bulunamadı: ' mySparkApp.dll '
 
-**Cevap:** `DOTNET_ASSEMBLY_SEARCH_PATHS`Ortam değişkeninin doğru şekilde ayarlandığından emin olun. Bunu içeren yol olmalıdır `mySparkApp.dll` .
+**Cevap:** `DOTNET_ASSEMBLY_SEARCH_PATHS` Ortam değişkeninin doğru şekilde ayarlandığından emin olun. Bunu içeren yol olmalıdır `mySparkApp.dll` .
 
 ### <a name="after-i-upgraded-my-net-for-apache-spark-version-and-reset-the-dotnet_worker_dir-environment-variable-why-do-i-still-get-the-following-ioexception-error"></a>.NET My Apache Spark sürümü için yükselttikten ve ortam değişkenini sıfırladıktan sonra `DOTNET_WORKER_DIR` Neden yine de şu `IOException` hatayı alıyorum?
 > **Hata:** 0,0 (TıD 24, localhost, yürütücü sürücüsü) 11,0 aşamasında görevi kayboldu: Java. IO. IOException: program "Microsoft.Spark.Worker.exe" çalıştırılamıyor: CreateProcess hatası = 2, sistem belirtilen dosyayı bulamıyor.

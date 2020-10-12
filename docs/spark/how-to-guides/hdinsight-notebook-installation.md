@@ -1,15 +1,15 @@
 ---
 title: Azure HDInsight Spark kümelerinde Jupyıter not defterlerine Apache Spark .NET 'i yükler
 description: Azure HDInsight 'ın Jupyıter not defterlerine Apache Spark için .NET yüklemeyi öğrenin.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8110b87991e2f0253257faf19f383dec6cbd3853
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5689c9ccdd13209fec33674ad8fc80dcc369660
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557209"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955055"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark kümelerinde Jupyıter not defterlerine Apache Spark .NET 'i yükler
 
@@ -22,9 +22,7 @@ Jupi Not defterleri deneyimi aracılığıyla Apache Spark için .NET etkinleşt
 > [!NOTE]
 > Bu özellik *deneysel* ve HDInsight Spark ekibi tarafından desteklenmiyor.
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Henüz bir tane yoksa [Azure HDInsight Spark](/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) kümesi oluşturun.
 

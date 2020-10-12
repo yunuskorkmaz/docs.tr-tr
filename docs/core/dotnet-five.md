@@ -1,20 +1,20 @@
 ---
-title: .NET Core 'un .NET 5 sürümüne evrimi
+title: .NET 5 ' teki yenilikler
 description: .NET Core 'un bir sonraki gelişiminde bir çoklu platform ve açık kaynaklı bir geliştirme platformu olan .NET 5 hakkında bilgi edinin.
 ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 9318b1afbe22c97f056bd38732306c6a6b60ad00
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 9d4fc514c9de7a668f909286f10d6fe28ada7f90
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598120"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955206"
 ---
-# <a name="the-evolution-of-net-core-to-net-5"></a>.NET Core 'un .NET 5 sürümüne evrimi
+# <a name="whats-new-in-net-5"></a>.NET 5 ' teki yenilikler
 
-Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te yer alan ayrıntılar ayrıntılı olarak verilmiştir. Sürüm numarası, .NET Framework 4. x ile karışıklık oluşmasını önlemek için 5,0. Ve "çekirdek", .NET ' in ana uygulama olduğu için adından bırakılır. ASP.NET Core, ASP.NET MVC 5 ile karıştırmamak için "Core" adını korur. Ayrıca, Entity Framework Core "çekirdek" adını Entity Framework 5 ve 6 ile karıştırmamak için korur. .NET 5, .NET Core veya .NET Framework daha fazla sayıda uygulamayı ve daha fazlasını destekler.
+.NET Core, .NET Core 'un gelişmidir. Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te yer alan ayrıntılar ayrıntılı olarak verilmiştir. Sürüm numarası, .NET Framework 4. x ile karışıklık oluşmasını önlemek için 5,0. Ve "çekirdek", .NET ' in ana uygulama olduğu için adından bırakılır. ASP.NET Core, ASP.NET MVC 5 ile karıştırmamak için "Core" adını korur. Ayrıca, Entity Framework Core "çekirdek" adını Entity Framework 5 ve 6 ile karıştırmamak için korur. .NET 5, .NET Core veya .NET Framework daha fazla sayıda uygulamayı ve daha fazlasını destekler.
 
 .NET Core 'un bir bütün olarak .NET ekosistemini etkileyici yollarla geliştirmiştir. GitHub 'da açık kaynaklı bir proje olarak, topluluk katkılarını kutluyor ve zaman içinde gelişerek daha fazla iyileştiriliyor.
 
@@ -46,13 +46,13 @@ Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te y
 
 ### <a name="what-net-5-is-not"></a>.NET 5 ne değildir?
 
-.NET 5 .NET Framework için bir değiştirme değildir. Aşağıdaki teknolojilerin .NET Framework .NET 5 ' e bağlantı noktası yoktur, ancak .NET 5 ' te desteklenen alternatifler bulunmaktadır:
+.NET 5 .NET Framework için tamamen değişiklik değildir. Aşağıdaki teknolojilerin .NET Framework .NET 5 ' e bağlantı noktası yoktur, ancak desteklenen alternatifler vardır:
 
-| Teknoloji                             | Öneri                                              |
-|----------------------------------------|-------------------------------------------------------------|
-| Web Forms                              | [ASP.NET Core Blazor](/aspnet/core/blazor)                  |
-| Windows Communication Foundation (WCF) | [gRPC](/aspnet/core/grpc)                                   |
-| Windows Workflow (WF)                  | [Açık kaynaklı CoreWF](https://github.com/UiPath-Open/corewf) |
+| Teknoloji                             | Önerilen alternatif                                                                         |
+|----------------------------------------|-------------------------------------------------------------------------------------------------|
+| Web Forms                              | ASP.NET Core [Blazor](/aspnet/core/blazor) veya [Razor Pages](/aspnet/core/tutorials/razor-pages) |
+| Windows Communication Foundation (WCF) | [gRPC](/aspnet/core/grpc)                                                                       |
+| Windows Workflow (WF)                  | [Açık kaynaklı CoreWF](https://github.com/UiPath-Open/corewf)                                     |
 
 ## <a name="net-standard"></a>.NET Standard
 

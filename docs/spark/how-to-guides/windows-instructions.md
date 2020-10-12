@@ -1,23 +1,21 @@
 ---
 title: Windows 'da Apache Spark uygulaması için .NET oluşturma
 description: Windows 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: d355380e92235e799d366dca02eaf8450f563f33
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: db073e6b82e63b3f0b98c9fe66a5b4d9be1356ba
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609284"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955531"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
 
 Bu makalede, Windows 'da Apache Spark uygulamalarınızı .NET için nasıl oluşturabileceğiniz öğretilir.
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adımlarına atlayın.
 
@@ -91,7 +89,7 @@ Bir `dotnet` `java` `mvn` `spark-shell` sonraki bölüme geçmeden önce komut s
 > [!NOTE]
 > Bir ortam değişkeni güncelleştirilirse, komut satırının yeni bir örneği gerekli olabilir.
 
-## <a name="build"></a>Oluşturma
+## <a name="build"></a>Yapı
 
 Bu kılavuzun geri kalanı için, .NET Apache Spark deposunu makinenize Klonladığınız bir işlem olması gerekir. Kopyalanmış depo için herhangi bir konum seçebilirsiniz. Örneğin, * C:\github\dotnet-Spark \* .
 

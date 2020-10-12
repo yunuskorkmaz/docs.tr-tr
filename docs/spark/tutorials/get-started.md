@@ -1,31 +1,29 @@
 ---
 title: Apache Spark için .NET ile çalışmaya başlama
 description: Windows, macOS ve Ubuntu 'da .NET Core kullanarak Apache Spark uygulaması için .NET çalıştırmayı öğrenin.
-ms.date: 09/17/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 7afb35c9d02db1d1ee2bf04d565f79588b00695e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d4f44d095fffdfa05b82516cfe79700f9e239110
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866042"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955414"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile çalışmaya başlama
 
 Bu öğreticide, Windows, macOS ve Ubuntu 'da .NET Core kullanarak Apache Spark uygulaması için .NET nasıl çalıştırabileceğiniz öğretilir.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
 > * Apache Spark için ortamınızı .NET için hazırlama
 > * İlk .NET Apache Spark uygulamanızı yazma
 > * Apache Spark için .NET uygulamanızı derleyin ve çalıştırın
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prepare-your-environment"></a>Ortamınızı hazırlama
 

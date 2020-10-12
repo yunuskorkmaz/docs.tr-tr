@@ -1,21 +1,19 @@
 ---
 title: Apache Spark için .NET 'te Kullanıcı tanımlı işlevler (UDF) oluşturun
 description: .NET ' te Apache Spark uygulamalar için Kullanıcı tanımlı işlevler (UDF) uygulamayı öğrenin.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 97afda8ed17d3719c534d72ad3ad026745a70922
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 769bcf0a912d27e191dad82138648d1aefb3c3b6
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620930"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955042"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>Apache Spark için .NET 'te Kullanıcı tanımlı işlevler (UDF) oluşturun
 
 Bu makalede, .NET 'te Apache Spark için Kullanıcı tanımlı işlevlerin (UDF) nasıl kullanılacağını öğrenirsiniz. [Udf 'ler)](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/expressions/UserDefinedFunction.html) , sistemin yerleşik işlevlerini genişletmek için özel işlevleri kullanmanıza imkan tanıyan bir Spark özelliğidir. UDF 'ler, bir tablodaki tek bir satırdaki değerleri, UDF 'de tanımlanan mantığa göre her satırda tek bir karşılık gelen bir çıktı değeri oluşturacak şekilde dönüştürür.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="define-udfs"></a>UDF 'Leri tanımlama
 

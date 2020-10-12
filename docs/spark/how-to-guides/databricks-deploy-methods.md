@@ -1,21 +1,19 @@
 ---
 title: Databricks 'e Apache Spark iş için .NET gönderme
 description: Spark-gönder ve ayarla jar kullanarak Databricks 'e yönelik bir .NET Apache Spark işi göndermeyi öğrenin.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 88dc321a08f805ef8c3bf8d4d01d32dd890548d2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fd04f78c47b34ca07042a4e60e2214f5f1ecac55
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557183"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955003"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Databricks 'e Apache Spark iş için .NET gönderme
 
 .NET Apache Spark işlerini Databricks kümelerinde çalıştırabilirsiniz, ancak kullanıma hazır değildir. Apache Spark iş için .NET uygulamanızı Databricks 'e dağıtmanın iki yolu vardır: `spark-submit` ve jar 'Yi ayarlayın.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="deploy-using-spark-submit"></a>Spark-gönder kullanarak dağıtma
 

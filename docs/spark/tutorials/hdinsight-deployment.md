@@ -1,21 +1,21 @@
 ---
 title: Azure HDInsight 'a bir .NET Apache Spark uygulaması dağıtma
 description: HDInsight için bir .NET Apache Spark uygulamasının nasıl dağıtılacağını öğrenin.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9a4ca80463de41a50d103c696b2108d0cef023fc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8ef1429d265c87347bb8771dc01b319fcb9e84d0
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548383"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955381"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Öğretici: Azure HDInsight 'a Apache Spark uygulaması için .NET dağıtma
 
 Bu öğreticide, Azure HDInsight kümesi aracılığıyla Apache Spark için .NET uygulamanızı buluta nasıl dağıtacağınız öğretilir. HDInsight 'ta Spark kümeleri Azure depolama ve Azure Data Lake Storage uyumlu olduğundan, HDInsight, Azure 'da Spark kümesi oluşturmayı ve yapılandırmayı kolaylaştırır.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -25,14 +25,12 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * HDInsight betik eylemi oluşturun ve çalıştırın.
 > * HDInsight kümesinde Apache Spark uygulaması için bir .NET çalıştırın.
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Başlamadan önce, aşağıdaki görevleri yapın:
 
 * Azure aboneliğiniz yoksa [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/) oluşturun.
-* [Azure Portal](https://portal.azure.com/) oturum açın.
+* [Azure portalında](https://portal.azure.com/) oturum açın.
 * [Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)veya [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) bilgisayarınıza Azure Depolama Gezgini ' yi yükler.
 * [Apache Spark için .net ' i doldurun-10 dakikalık öğreticide kullanmaya başlayın](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) .
 

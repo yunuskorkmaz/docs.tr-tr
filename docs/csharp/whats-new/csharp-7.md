@@ -3,12 +3,12 @@ title: C# 7,0 ' deki yenilikler-C# Kılavuzu
 description: C# dilinin sürüm 7,0 ' deki yeni özelliklere genel bakış alın.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 28f2d8f0b61d8f05e558834fc1a96fc020201a08
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 84f5961d573b99438320a75d7f89bc7fd94f6266
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805271"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955219"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C# 7,3 ile c# 7,0 yenilikleri
 
@@ -211,7 +211,7 @@ Programlama kılavuzundaki [zaman uyumsuz ana](../programming-guide/main-and-com
 
 ## <a name="local-functions"></a>Yerel işlevler
 
-Sınıfların pek çok tasarımı yalnızca bir konumdan çağrılan yöntemleri içerir. Bu ek özel yöntemler her bir yöntemi küçük ve odaklanmış olarak tutar. *Yerel işlevler* , başka bir yöntem bağlamı içinde yöntemler sağlar. Yerel işlevler, sınıfının okuyucularının, yerel yöntemin yalnızca bildirildiği bağlamdan çağrıldığını görmesini kolaylaştırır.
+Sınıfların pek çok tasarımı yalnızca bir konumdan çağrılan yöntemleri içerir. Bu ek özel yöntemler her bir yöntemi küçük ve odaklanmış olarak tutar. *Yerel işlevler* , yöntemleri başka bir yöntem bağlamı içinde bildirmenize olanak tanır. Yerel işlevler, sınıfının okuyucularının, yerel yöntemin yalnızca bildirildiği bağlamdan çağrıldığını görmesini kolaylaştırır.
 
 Yerel işlevler için iki yaygın kullanım durumu vardır: genel Yineleyici yöntemleri ve genel zaman uyumsuz yöntemler. Her iki yöntem türü, programcılar tarafından daha sonra oluşabilecek hataları raporlayan kodu oluşturur. Yineleyici metotlarda, tüm özel durumlar yalnızca döndürülen sırayı belirten kod çağrılırken izlenir. Zaman uyumsuz metotlarda, tüm özel durumlar yalnızca döndürülen geri beklendiğinde gözlemlenir `Task` . Aşağıdaki örnek, yerel bir işlev kullanarak Yineleyici uygulamasından parametre doğrulamayı ayırmayı gösterir:
 

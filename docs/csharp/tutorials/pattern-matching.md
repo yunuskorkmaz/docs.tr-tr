@@ -4,12 +4,12 @@ description: Bu gelişmiş öğreticide, ayrı olarak oluşturulan verileri ve a
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperfq1
-ms.openlocfilehash: 015bab574ca4255ffe355bd02bfb54b58e4ea7e0
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: ee8b3a90a06fabd4e9d73d7682efecda6cbfd23e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877671"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955635"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Öğretici: tür odaklı ve veri odaklı algoritmalar oluşturmak için model eşleştirmeyi kullanın.
 
@@ -25,7 +25,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-Makinenizde C# 9 derleyicisini içeren .NET 5 ' i çalıştıracak şekilde ayarlamanız gerekir. C# 8 derleyicisi, [Visual Studio 2019 sürüm 16,9 Preview 1](https://visualstudio.microsoft.com/vs/preview/) veya [.NET 5,0 SDK](https://dot.net/get-dotnet5)ile başlayarak kullanılabilir.
+Makinenizde C# 9 derleyicisini içeren .NET 5 ' i çalıştıracak şekilde ayarlamanız gerekir. C# 9 derleyicisi, [Visual Studio 2019 sürüm 16,9 Preview 1](https://visualstudio.microsoft.com/vs/preview/) veya [.NET 5,0 SDK](https://dot.net/get-dotnet5)ile başlayarak kullanılabilir.
 
 Bu öğreticide, Visual Studio veya .NET Core CLI dahil olmak üzere C# ve .NET hakkında bilgi sahibi olduğunuz varsayılır.
 
@@ -300,7 +300,7 @@ Yukarıdaki kod doğru çalışır, ancak okunabilir değildir. Kod hakkında se
 
 Aşağıdaki tabloda, giriş değerleri ve en yüksek fiyatlandırma çarpanı birleşimleri gösterilmektedir:
 
-| Gün        | Süre         | Yön | Premium |
+| Gün        | Saat         | Yön | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Weekday    | sabah aceleniz | gelen   | x 2,00  |
 | Weekday    | sabah aceleniz | giden  | x 1,00  |

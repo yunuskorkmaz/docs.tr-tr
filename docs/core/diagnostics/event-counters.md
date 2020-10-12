@@ -2,12 +2,12 @@
 title: .NET Core 'da EventCounters
 description: Bu makalede, olaylarınızın ne olduğunu, nasıl uygulanacağını ve bunları nasıl kullanacağınızı öğreneceksiniz.
 ms.date: 08/07/2020
-ms.openlocfilehash: fc2f945e3de732a81b9ce3fd82eff10e455cae87
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: be273776b888f13893fc694a111093cca1fa8a5e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062970"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955323"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 'da EventCounters
 
@@ -103,7 +103,7 @@ var workingSetCounter = new PollingCounter(
 };
 ```
 
-, <xref:System.Diagnostics.Tracing.PollingCounter> Bir ölçüm zaman içinde yakalandığından, uygulamanın işlem (çalışma kümesi) ile eşlenen geçerli fiziksel bellek miktarını raporlar. Bir değeri yoklamak için geri çağırma, yalnızca API çağrısı olan, belirtilen lambda ifadesidir <xref:System.Environment.WorkingSet?displayProperty=fullName> . <xref:System.Diagnostics.Tracing.DiagnosticCounter.DisplayName>ve, <xref:System.Diagnostics.Tracing.DiagnosticCounter.DisplayUnits> sayacın Tüketici tarafında değeri daha net bir şekilde görüntüleme konusunda yardımcı olmak üzere ayarlanabilir, isteğe bağlı özelliklerdir. Örneğin, [DotNet sayaçları](dotnet-counters.md) , sayaç adlarının daha kolay görünen bir sürümünü göstermek için bu özellikleri kullanır.
+, <xref:System.Diagnostics.Tracing.PollingCounter> Bir ölçüm zaman içinde yakalandığından, uygulamanın işlem (çalışma kümesi) ile eşlenen geçerli fiziksel bellek miktarını raporlar. Bir değeri yoklamak için geri çağırma, yalnızca API çağrısı olan, belirtilen lambda ifadesidir <xref:System.Environment.WorkingSet?displayProperty=fullName> . <xref:System.Diagnostics.Tracing.DiagnosticCounter.DisplayName> ve, <xref:System.Diagnostics.Tracing.DiagnosticCounter.DisplayUnits> sayacın Tüketici tarafında değeri daha net bir şekilde görüntüleme konusunda yardımcı olmak üzere ayarlanabilir, isteğe bağlı özelliklerdir. Örneğin, [DotNet sayaçları](dotnet-counters.md) , sayaç adlarının daha kolay görünen bir sürümünü göstermek için bu özellikleri kullanır.
 
 > [!IMPORTANT]
 > `DisplayName`Özellikler yerelleştirilmemiş.
@@ -144,6 +144,16 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 
 ```csharp
 public void AddRequest() => Interlocked.Increment(ref _requestCount);
+```
+
+(32 bit mimarilerde), `long` -alan kullanımını engellemek için `_requestCount` <xref:System.Threading.Interlocked.Read%2A?displayProperty=nameWithType> .
+
+```csharp
+_requestRateCounter = new IncrementingPollingCounter("request-rate", this, () => Interlocked.Read(ref _requestCount))
+{
+    DisplayName = "Request Rate",
+    DisplayRateTimeScale = TimeSpan.FromSeconds(1)
+};
 ```
 
 ## <a name="consume-eventcounters"></a>EventCounters kullanma

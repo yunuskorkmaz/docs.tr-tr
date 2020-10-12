@@ -1,21 +1,19 @@
 ---
 title: Ubuntu üzerinde Apache Spark uygulaması için .NET oluşturma
 description: Ubuntu 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b5e06619611ac06c453df0314bcecb30e1b673a2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: dfe105bb1549560ebdd2526a8441c4e2c5d141bf
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812204"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955068"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Ubuntu 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
 
 Bu makalede, Ubuntu üzerinde Apache Spark uygulamalarınızı .NET için nasıl oluşturabileceğiniz öğretilir.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Ön koşullar
 
@@ -49,7 +47,7 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
 
 3. **[Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi)**'yi yükler.
 
-   * Aşağıdaki komutu çalıştırın:
+   * Şu komutu çalıştırın:
 
       ```bash
       mkdir -p ~/bin/maven

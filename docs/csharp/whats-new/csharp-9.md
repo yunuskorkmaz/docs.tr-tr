@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654913"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955173"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -232,7 +232,7 @@ Buna ek olarak, [ `foreach` döngü](../language-reference/keywords/foreach-in.m
 
 Sonra, Lambda ifadelerinde parametre olarak atar ' i kullanabilirsiniz. Bu kolaylık, bağımsız değişkeni adlandırmayı önlemenize olanak sağlar ve derleyici bunu kullanmaktan kaçınabilir. `_`Herhangi bir bağımsız değişken için öğesini kullanırsınız. Daha fazla bilgi için [lambda ifadeleri](../language-reference/operators/lambda-expressions.md) makalesinin [lambda ifadesinin giriş parametreleri](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) bölümüne bakın.
 
-Son olarak, artık yerel işlevlere öznitelikler uygulayabilirsiniz. Örneğin, yerel işlevlere null yapılabilir öznitelik ek açıklamaları uygulayabilirsiniz.
+Son olarak, artık [Yerel işlevlere](../programming-guide/classes-and-structs/local-functions.md)öznitelikler uygulayabilirsiniz. Örneğin, yerel işlevlere [null yapılabilir öznitelik ek açıklamaları](../language-reference/attributes/nullable-analysis.md) uygulayabilirsiniz.
 
 ## <a name="support-for-code-generators"></a>Kod oluşturucuları için destek
 

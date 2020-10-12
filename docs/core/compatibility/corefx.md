@@ -2,12 +2,12 @@
 title: Temel sınıf kitaplığı bölünmesi değişiklikleri
 description: Çekirdek .NET kitaplıklarında son değişiklikleri listeler.
 ms.date: 07/27/2020
-ms.openlocfilehash: b86ceab784fd295acf500986f7e64731eb8ed0a3
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: d4deef295479b1f32bd72a69369a11c7375835f4
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756123"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955570"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Çekirdek .NET kitaplıklarının parçalara bölünmesi
 
@@ -17,6 +17,7 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
+| [Tek dosya yayımlama biçimi için derlemeden ilgili API davranışı değişiklikleri](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
 | [Etkinlik içindeki etiketlerin sırası. Etiketler tersine çevrilir](#order-of-tags-in-activitytags-is-reversed) | 5.0 |
 | [RC1 'de parametre adları değişti](#parameter-names-changed-in-rc1) | 5.0 |
 | [OSPlatform öznitelikleri yeniden adlandırıldı veya kaldırıldı](#osplatform-attributes-renamed-or-removed) | 5.0 |
@@ -56,6 +57,10 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | [Process. StartInfo, başlatmadığınız işlemler için InvalidOperationException 'yi oluşturur](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
+
+***
 
 [!INCLUDE [reverse-order-of-tags-in-activity-property](../../../includes/core-changes/corefx/5.0/reverse-order-of-tags-in-activity-property.md)]
 

@@ -4,12 +4,12 @@ description: Apache Spark örneği için yerel .NET 'ten Azure Event hub 'a nas�
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 3956a8152feb743f205f29334f0d42b3165cb27b
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 4de4836ba2b63429e29ae819afac09c7a3998480
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877952"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954977"
 ---
 # <a name="connect-net-for-apache-spark-to-azure-event-hubs"></a>Apache Spark için .NET Event Hubs Azure 'a bağlama
 
@@ -17,15 +17,15 @@ Bu makalede, Apache Kafka akışlarını okumak ve yazmak için .net Event Hubs 
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-1. Bir olay hub 'ı ile bir Event Hubs ad alanı hazırlayın, bunun nasıl yapılacağını gösteren adım adım kılavuz için [Bu belgeye](https://docs.microsoft.com/azure/event-hubs/event-hubs-create) bakın. Olay Hub 'ı ad alanını oluştururken standart fiyatlandırma katmanını seçtiğinizden emin olun.
+Bir olay hub 'ı ile bir Event Hubs ad alanı hazırlayın. Adım adım kılavuz için [hızlı başlangıç: Azure Portal kullanarak bir olay hub 'ı oluşturma](/azure/event-hubs/event-hubs-create)bölümüne bakın. Olay Hub 'ı ad alanını oluştururken standart fiyatlandırma katmanını seçtiğinizden emin olun.
 
 ## <a name="what-is-azure-event-hubs"></a>Azure Event Hubs nedir?
 
-[Azure Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) , büyük bir veri akışı platformu ve olay alma hizmetidir. Tam olarak yönetilen bir hizmet olarak platform (PaaS), kendi kümelerinizi yönetmek, yapılandırmak veya çalıştırmak zorunda kalmadan PaaS Kafka deneyimi sunmak üzere [Apache Kafka](https://kafka.apache.org/) ile kolayca tümleştirilebilir.
+[Azure Event Hubs](/azure/event-hubs/event-hubs-about) , büyük veri akışı platformu ve olay alma hizmetidir. Kendi kümelerinizi yönetmek, yapılandırmak veya çalıştırmak zorunda kalmadan PaaS Kafka deneyimi sağlamak üzere [Apache Kafka](https://kafka.apache.org/) ile kolayca tümleştirilebilen, tam olarak yönetilen bir hizmet olarak platform (PaaS).
 
 ## <a name="connect-your-application-to-azure-event-hubs"></a>Uygulamanızı Azure 'a bağlama Event Hubs
 
-1. Daha sonra kullanmak üzere Event Hubs bağlantı dizesini ve tam etki alanı adını (FQDN) alın. Yönergeler için bkz. [Event Hubs bağlantı dizesi alma](https://docs.microsoft.com/azure/event-hubs/event-hubs-get-connection-string).
+1. Daha sonra kullanmak üzere Event Hubs bağlantı dizesini ve tam etki alanı adını (FQDN) alın. Yönergeler için bkz. [Event Hubs bağlantı dizesi alma](/azure/event-hubs/event-hubs-get-connection-string).
 2. Kafka için Event Hubs okumaya başlamak üzere kodunuzda ad uzayındaki ayrıntılarla aşağıdaki konfigürasyonları ayarlayın:
     1. Uygulamanızda **BOOTSTRAP_SERVERS** ve **EH_SASL** güncelleştirin, örneğin:
 
@@ -84,7 +84,7 @@ df.WriteStream()
 
 ## <a name="run-your-application"></a>Uygulamanızı çalıştırma
 
-.NET Apache Spark uygulamanızı çalıştırmak için, ' `spark-sql-kafka-0-10` `libraryDependency` ın SBT projelerinde ' de kullanarak, Spark projenizde derleme tanımının bir parçası olarak modülü tanımlamanız gerekir `build.sbt` . `spark-submit`(Veya) gibi Spark ortamları için `spark-shell` , şöyle bir `--packages` komut satırı seçeneğini kullanmanız gerekir:
+.NET Apache Spark uygulamanızı çalıştırmak için, ' `spark-sql-kafka-0-10` `libraryDependency` de `build.sbt` SBT projeleri için ' de kullanarak, derleme tanımının bir parçası olarak modülü tanımlayın. `spark-submit`(Veya) gibi Spark ortamları için `spark-shell` , şöyle bir `--packages` komut satırı seçeneğini kullanın:
 
 ```bash
 spark-shell --packages org.apache.spark:spark-sql-kafka-0-10_2.12:2.4.5

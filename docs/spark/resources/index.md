@@ -1,17 +1,15 @@
 ---
 title: Apache Spark kaynakları için .NET
 description: .NET uygulamalarınıza yönelik özel veri bilimi çözümlerinin oluşturulması ve tümleştirilmesine yardımcı olmak için Apache Spark kaynakları için bu .NET ' i araştırın.
-ms.date: 06/25/2020
-ms.openlocfilehash: 399a90b89fd619bf7faf740b9f61b625a8f28469
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.date: 10/09/2020
+ms.openlocfilehash: bc7f36b13eaf28b9e6808a8490f92f38531a883b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618278"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955505"
 ---
 # <a name="net-for-apache-spark-resources"></a>Apache Spark kaynakları için .NET
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 Apache Spark kaynaklar [için aşağıdaki .net](../index.yml) , .net uygulamalarınızda Apache Spark erişmek için yararlı olabilir:
 

@@ -2,18 +2,18 @@
 title: 'C# ayrılmış öznitelikleri: Nullable statik analiz'
 ms.date: 04/14/2020
 description: Bu öznitelikler, null yapılabilir ve null yapılamayan başvuru türleri için daha iyi statik analiz sağlamak üzere derleyici tarafından yorumlanır.
-ms.openlocfilehash: d2405162ece3df209111de65fdef54f70cc86d45
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 6678cd21de23d4ed391eff089e33939b5adff0fa
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656320"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955609"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Ayrılmış öznitelikler derleyicinin null durum statik analizine katkıda bulunur
 
 Null yapılabilir bir bağlamda, derleyici, tüm başvuru türü değişkenlerinin null durumunu tespit etmek üzere kodun statik analizini yapar:
 
-- *null değil*: statik analiz, değişkenin null olmayan bir değere atandığını belirledi.
+- *null değil*: statik analiz bir değişkene null olmayan bir değer atandığını belirler.
 - *null olabilir*: statik analiz, bir değişkene null olmayan bir değer atandığını belirleyemez.
 
 API 'lerinizin semantiği hakkında bilgi sağlayan bir dizi öznitelik uygulayabilirsiniz. Bu bilgiler derleyicinin statik analiz gerçekleştirmesini ve bir değişkenin ne zaman null kalmadığını belirlemesine yardımcı olur. Bu makalede, bu özniteliklerin her biri ve nasıl kullanılacağı hakkında kısa bir açıklama sunulmaktadır. Tüm örneklerde C# 8,0 veya üzeri varsayılır ve kod null yapılabilir bir bağlamda yer almıyor.
