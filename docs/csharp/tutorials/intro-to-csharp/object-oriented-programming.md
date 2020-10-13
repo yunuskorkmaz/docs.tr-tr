@@ -1,15 +1,15 @@
 ---
-title: Nesne odaklı programlama (C#)
+title: Object-Oriented programlama (C#)
 description: C#; soyutlama, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
 ms.date: 09/30/2020
-ms.openlocfilehash: 8a8dc8dc6d40c539b988ea203654d994e88c357a
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6e0155621be544b01453b8c107debb3a9b6c38f9
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614798"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997660"
 ---
-# <a name="object-oriented-programming-c"></a>Nesne odaklı programlama (C#)
+# <a name="object-oriented-programming-c"></a>Object-Oriented programlama (C#)
 
 C#, nesne yönelimli bir dildir. Nesne odaklı programlamada kullanılan temel tekniklerin dördü şunlardır:
 
@@ -162,7 +162,7 @@ Aşağıdaki kodla değiştirin:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/BankAccount.cs" ID="RefactoredMakeWithdrawal":::
 
-Eklenen yöntem, yalnızca türetilmiş sınıflardan çağrılabilecek anlamına gelir. Bu bildirim, diğer istemcilerin yöntemi aramasını engeller. Ayrıca `virtual` , türetilmiş sınıfların davranışı değiştirebilmesini sağlayacak. Dönüş türü bir `Transaction?` . `?`Ek açıklama, yöntemin dönebileceğini belirtir `null` . `LineOfCreditAccount`Çekme sınırı aşıldığında bir ücret ücreti almak için ' de aşağıdaki uygulamayı ekleyin:
+Eklenen yöntem, `protected` yalnızca türetilmiş sınıflardan çağrılabilecek anlamına gelir. Bu bildirim, diğer istemcilerin yöntemi aramasını engeller. Ayrıca `virtual` , türetilmiş sınıfların davranışı değiştirebilmesini sağlayacak. Dönüş türü bir `Transaction?` . `?`Ek açıklama, yöntemin dönebileceğini belirtir `null` . `LineOfCreditAccount`Çekme sınırı aşıldığında bir ücret ücreti almak için ' de aşağıdaki uygulamayı ekleyin:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/LineOfCreditAccount.cs" ID="AddOverdraftFee":::
 
@@ -174,7 +174,7 @@ Programı çalıştırın ve sonuçları denetleyin.
 
 ## <a name="summary"></a>Özet
 
-Bu öğreticide, nesne odaklı programlamada kullanılan birçok teknik gösterilmektedir:
+Bu öğretici Object-Oriented programlamada kullanılan birçok tekniği göstermiştir:
 
 - Her sınıfta çok sayıda ayrıntı sakladığınızda *soyutlama* kullandınız `private` .
 - Farklı hesap türlerinin her biri için sınıflar tanımladığınızda *kapsülleme* kullandınız. Bu sınıflar, bu hesap türünün davranışını açıklandı.

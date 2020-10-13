@@ -25,24 +25,46 @@
       href: tutorials/ml-sentiment-analysis.md
 - name: Nasıl yapılır kılavuzları
   items:
+    - name: Verilere bağlanma
+      items:
+        - name: Azure Storage
+          href: how-to-guides/connect-to-azure-storage.md
+        - name: Event Hubs
+          href: how-to-guides/connect-to-event-hub.md
+        - name: Mongo DB
+          href: how-to-guides/connect-to-mongo-db.md
+        - name: SQL Server
+          href: how-to-guides/connect-to-sql-server.md
+    - name: Uygulama derleme
+      items:
+        - name: Ubuntu
+          href: how-to-guides/ubuntu-instructions.md
+        - name: Windows
+          href: how-to-guides/windows-instructions.md
+    - name: Uzak işleri gönderme
+      items:
+        - name: Azure Synapse Analytics’e iş gönderme
+          href: /azure/synapse-analytics/spark/spark-dotnet
+        - name: İşleri Databricks’e gönderme
+          href: how-to-guides/databricks-deploy-methods.md
+        - name: İşleri HDInsight’a gönderme
+          href: how-to-guides/hdinsight-deploy-methods.md
+    - name: Kullanıcı Tanımlı İşlevler (UFD)
+      items:
+        - name: UDF kılavuzu
+          href: how-to-guides/udf-guide.md
+        - name: .NET’teki Java UDF’leri
+          href: how-to-guides/java-udf-from-dotnet.md
+        - name: Etkileşimli .NET’teki UDF’ler
+          href: how-to-guides/dotnet-interactive-udf-issue.md
+        - name: Çalışan ve UDF ikililerini dağıtma
+          href: how-to-guides/deploy-worker-udf-binaries.md
+    - name: Jupyter not defterlerini kullanma
+      href: how-to-guides/dotnet-spark-jupyter-notebooks.md
     - name: Yayın kılavuzu
       href: how-to-guides/broadcast-guide.md
-    - name: UDF kılavuzu
-      href: how-to-guides/udf-guide.md
     - name: Uygulamanızda hata ayıklama
       href: how-to-guides/debug.md
-    - name: Azure Synapse Analytics’e iş gönderme
-      href: /azure/synapse-analytics/spark/spark-dotnet
-    - name: İşleri HDInsight’a gönderme
-      href: how-to-guides/hdinsight-deploy-methods.md
-    - name: İşleri Databricks’e gönderme
-      href: how-to-guides/databricks-deploy-methods.md
-    - name: Çalışan ve UDF ikililerini dağıtma
-      href: how-to-guides/deploy-worker-udf-binaries.md
-    - name: Ubuntu’da uygulama oluşturma
-      href: how-to-guides/ubuntu-instructions.md
-    - name: Windows’da uygulama oluşturma
-      href: how-to-guides/windows-instructions.md
     - name: Azure HDInsight’ta etkileşimli not defterlerini yükleme
       href: how-to-guides/hdinsight-notebook-installation.md
 - name: Başvuru
@@ -53,7 +75,7 @@
   items:
     - name: Kaynaklara genel bakış
       href: resources/index.md
-    - name: GitHub
+    - name: Apache Spark için .NET GitHub
       href: 'https://github.com/dotnet/spark'
     - name: Stack Overflow
       href: 'https://stackoverflow.com/questions/tagged/.net-spark'

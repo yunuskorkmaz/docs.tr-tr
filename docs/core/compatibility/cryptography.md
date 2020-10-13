@@ -2,12 +2,12 @@
 title: Şifreleme son değişiklikleri
 description: .NET Core ile ilgili şifrelemeye ilişkin önemli değişiklikleri listeler.
 ms.date: 04/22/2020
-ms.openlocfilehash: 667d983fc6f2592c2169f97d328cd7947c8bcc81
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: c9405625cc4075c05468dc9b8502bf8c76587bad
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406159"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997756"
 ---
 # <a name="cryptography-breaking-changes"></a>Şifreleme son değişiklikleri
 
@@ -15,6 +15,7 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
+| [Linux 'ta .NET için varsayılan TLS şifre paketleri](#default-tls-cipher-suites-for-net-on-linux) | 5.0 |
 | [System. Security. Cryptography API 'Leri Blazor WebAssembly üzerinde desteklenmez](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly) | 5.0 |
 | [System. Security. Cryptography. OID yalnızca işlev olarak init](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
 | [Linux 'ta artık desteklenmeyen GÜVENILEN SERTIFIKA sözdizimini Başlat](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
@@ -25,6 +26,10 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | [SignedCms. ComputeSignature Boolean parametresi dikkate alındı](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [default-cipher-suites-for-tls-on-linux](../../../includes/core-changes/cryptography/5.0/default-cipher-suites-for-tls-on-linux.md)]
+
+***
 
 [!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
 
