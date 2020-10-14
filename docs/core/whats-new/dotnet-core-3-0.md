@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 8ba64a6e3bee4a5d27a07ab4ad4ef3a3f0749778
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: b0b1f4492d68ff2f2218b7c977f57cad3f582bb0
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804638"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050286"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -395,7 +395,7 @@ GPıO paketleri, *GIO*, *SPI*, *I2C*ve *PWM* cihazları için API 'ler içerir. 
 Kullanılabilir olduğunda, .NET Core 3,0 bir Linux sisteminde **OpenSSL 1.1.1**, **OpenSSL 1.1.0**veya **OpenSSL 1.0.2** kullanır. **OpenSSL 1.1.1** kullanılabilir olduğunda, her ikisi <xref:System.Net.Security.SslStream?displayProperty=nameWithType> de <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> tür **TLS 1,3** kullanır (istemci ve sunucunun **TLS 1,3**' i desteklediği varsayıldığında).
 
 > [!IMPORTANT]
-> Windows ve macOS henüz **TLS 1,3**' i desteklemez. .NET Core 3,0, destek kullanılabilir hale geldiğinde bu işletim sistemlerinde **TLS 1,3** ' i destekleyecektir.
+> Windows ve macOS henüz **TLS 1,3**' i desteklemez.
 
 Aşağıdaki C# 8,0 örneği, ' a bağlanan Ubuntu 18,10 üzerinde .NET Core 3,0 ' i göstermektedir <https://www.cloudflare.com> :
 
@@ -510,13 +510,13 @@ Yeni <xref:System.Math?displayProperty=nameWithType> API 'ler şunlardır:
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 `copySign`IEEE işlemine karşılık gelir, `x` , ancak işaretini döndürür `y` .
 
-### <a name="net-platform-dependent-intrinsics"></a>.NET platforma bağımlı Iç bilgiler
+### <a name="net-platform-dependent-intrinsics"></a>.NET Platform-Dependent Iç bilgileri
 
 **SIMD** veya **bit işleme yönergesi** kümeleri gıbı belirli performans yönelimli CPU yönergelerine erişime izin veren API 'ler eklenmiştir. Bu yönergeler, verileri paralel şekilde işleme gibi belirli senaryolarda önemli performans geliştirmeleri elde etmenize yardımcı olabilir.
 
 Uygun durumlarda, .NET kitaplıkları performansı artırmak için bu yönergeleri kullanmaya başlamıştır.
 
-Daha fazla bilgi için bkz. [.net platforma bağımlı iç](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)bilgiler.
+Daha fazla bilgi için bkz. [.net Platform-Dependent iç](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)bilgileri.
 
 ### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Core sürümü API 'Leri
 

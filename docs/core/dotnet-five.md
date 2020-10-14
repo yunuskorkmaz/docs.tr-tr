@@ -1,18 +1,18 @@
 ---
-title: .NET 5 ' teki yenilikler
+title: .NET 5’teki yenilikler
 description: .NET Core 'un bir sonraki gelişiminde bir çoklu platform ve açık kaynaklı bir geliştirme platformu olan .NET 5 hakkında bilgi edinin.
-ms.date: 09/02/2020
+ms.date: 10/13/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 9d4fc514c9de7a668f909286f10d6fe28ada7f90
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: cc86784e3fcac7e8a3b6f54c32f66763ae416d99
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955206"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050370"
 ---
-# <a name="whats-new-in-net-5"></a>.NET 5 ' teki yenilikler
+# <a name="whats-new-in-net-5"></a>.NET 5’teki yenilikler
 
 .NET Core, .NET Core 'un gelişmidir. Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te yer alan ayrıntılar ayrıntılı olarak verilmiştir. Sürüm numarası, .NET Framework 4. x ile karışıklık oluşmasını önlemek için 5,0. Ve "çekirdek", .NET ' in ana uygulama olduğu için adından bırakılır. ASP.NET Core, ASP.NET MVC 5 ile karıştırmamak için "Core" adını korur. Ayrıca, Entity Framework Core "çekirdek" adını Entity Framework 5 ve 6 ile karıştırmamak için korur. .NET 5, .NET Core veya .NET Framework daha fazla sayıda uygulamayı ve daha fazlasını destekler.
 
@@ -38,7 +38,7 @@ ms.locfileid: "91955206"
   - [System.Text.RegularExpressions](https://devblogs.microsoft.com/dotnet/regex-performance-improvements-in-net-5)
   - [Zaman uyumsuz ValueTask havuzu](https://devblogs.microsoft.com/dotnet/async-valuetask-pooling-in-net-5)
   - [Birçok daha fazla alan](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)
-- Kapsayıcı boyutu iyileştirmeleri
+- [Kapsayıcı boyutu iyileştirmeleri](https://github.com/dotnet/dotnet-docker/issues/1814#issuecomment-625294750)
 - [Uygulama kırpması](https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5)
 - [C# derleyici geliştirmeleri](https://devblogs.microsoft.com/dotnet/automatically-find-latent-bugs-in-your-code-with-net-5)
 - Döküm hata ayıklaması için araç desteği

@@ -2,12 +2,12 @@
 title: Ağ bozan değişiklikler
 description: .NET Core 'da ağ üzerindeki son değişiklikleri listeler.
 ms.date: 05/05/2020
-ms.openlocfilehash: fa5807c882c3bc6f66e8a27361ccc14254e90b3e
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: fdbd3f3bdcae5048b4f01e4d827f8a0e876c5c15
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465526"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050537"
 ---
 # <a name="networking-breaking-changes"></a>Ağ bozan değişiklikler
 
@@ -15,6 +15,8 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Tanıtılan sürüm |
 | - | - |
+| [NegotiateStream ve SslStream ardışık başlama işlemlerine izin ver](#negotiatestream-and-sslstream-allow-successive-begin-operations) | 5.0 |
+| [Socket. LocalEndPoint, SendToAsync çağrıldıktan sonra güncellenir](#socketlocalendpoint-is-updated-after-calling-sendtoasync) | 5.0 |
 | [.NET çalışma zamanından WinHttpHandler kaldırıldı](#winhttphandler-removed-from-net-runtime) | 5.0 |
 | [Multicastop. Group null bir değer kabul etmez](#multicastoptiongroup-doesnt-accept-a-null-value) | 5.0 |
 | [Tanımlama bilgisi yol işleme artık RFC 6265 ' e uyar](#cookie-path-handling-now-conforms-to-rfc-6265) | 5.0 |
@@ -22,6 +24,14 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | [WebClient. Iptallasync her zaman hemen iptal etmez](#webclientcancelasync-doesnt-always-cancel-immediately) | 2.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [negotiatestream-sslstream-dont-fail-on-successive-begin-calls](../../../includes/core-changes/networking/5.0/negotiatestream-sslstream-dont-fail-on-successive-begin-calls.md)]
+
+***
+
+[!INCLUDE [localendpoint-updated-on-sendtoasync](../../../includes/core-changes/networking/5.0/localendpoint-updated-on-sendtoasync.md)]
+
+***
 
 [!INCLUDE [winhttphandler-removed-from-runtime](../../../includes/core-changes/networking/5.0/winhttphandler-removed-from-runtime.md)]
 

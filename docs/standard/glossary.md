@@ -1,14 +1,14 @@
 ---
 title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
-ms.date: 01/22/2019
+ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89415023"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050350"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -22,6 +22,18 @@ Sonraki süre derleyicisi.
 
 Bkz. [Corert](#corert) ve [.NET Native](#net-native).
 
+## <a name="app-model"></a>uygulama modeli
+
+[İş yüküne](#workload)özgü bir API. İşte bazı örnekler:
+
+* ASP.NET
+* ASP.NET Web API
+* Entity Framework (EF)
+* Windows Presentation Foundation (WPF)
+* Windows Communication Foundation (WCF)
+* Windows Workflow Foundation (WF)
+* Windows Forms (WinForms)
+
 ## <a name="aspnet"></a>ASP.NET
 
 .NET Framework ile birlikte gelen özgün ASP.NET uygulamasıdır.
@@ -30,7 +42,7 @@ Bazen ASP.NET, ASP.NET Core dahil olmak üzere hem ASP.NET uygulamalarına başv
 
 Bkz. [ASP.net belgeleri](/aspnet/#pivot=aspnet).
 
-## <a name="aspnet-core"></a>ASP.NET Çekirdeği
+## <a name="aspnet-core"></a>ASP.NET Core
 
 ASP.NET 'in platformlar arası, yüksek performanslı, açık kaynaklı bir uygulamasıdır.
 
@@ -292,9 +304,15 @@ Evrensel Windows Platformu.
 
 Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulamaları ve yazılım oluşturmak için kullanılan bir .NET uygulaması. Bilgisayar, tabletler, telefonlar ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı cihaz türlerini içerecek şekilde tasarlanmıştır. UWP, merkezi bir App Store, bir yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API 'si gibi birçok hizmeti sağlar. Uygulamalar C++, C#, Visual Basic ve JavaScript 'te yazılabilir. C# ve Visual Basic kullanılırken .NET API 'Leri .NET 5 (ve .NET Core) ve sonraki sürümler tarafından sağlanır.
 
+## <a name="workload"></a>iş yükü
+
+Birisinin oluşturmakta olduğu bir uygulama türü. [Uygulama modelinden](#app-model)daha genel. Örneğin, bu dahil olmak üzere her .NET belgeleri sayfasının en üstünde, **Web**, **Mobil**, **bulut**, **Masaüstü**ve **Machine Learning \& verilerine**yönelik belgelere geçiş yapmanızı sağlayan **iş yükleri**için açılan bir liste vardır.
+
+Bazı bağlamlarda, *iş yükü* belirli bir uygulama türünü desteklemek üzere yüklemeyi seçebileceğiniz bir Visual Studio özellikleri koleksiyonuna başvurur. Bir örnek için bkz. [iş yükü seçme](../core/install/windows.md#select-a-workload).
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET temelleri](../fundamentals/index.yml)
+- [.NET temel konuları](../fundamentals/index.yml)
 - [.NET Framework Kılavuzu](../framework/index.yml)
 - [ASP.NET genel bakış](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core genel bakış](/aspnet/index#pivot=core)

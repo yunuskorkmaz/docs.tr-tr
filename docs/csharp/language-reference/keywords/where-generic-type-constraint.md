@@ -5,14 +5,16 @@ ms.date: 04/15/2020
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
+- classconstraint_CSharpKeyword
+- structconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 78f784135c6bf01ea9724fcf92be234e6b86ff07
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 75885e21173d31ff0a4ba34fbbd3558f934ae5b7
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89141913"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050324"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (genel tür kısıtlaması) (C# Başvurusu)
 
@@ -48,7 +50,7 @@ C# 8,0 ve sonraki sürümlerde null yapılabilir bir bağlamda kısıtlama, `cla
 
 [!code-csharp[using the unmanaged constraint](snippets/GenericWhereConstraints.cs#4)]
 
-`where`Yan tümce bir Oluşturucu kısıtlaması de içerebilir `new()` . Bu kısıtlama işleci kullanarak bir tür parametresinin örneğini oluşturmayı mümkün kılar `new` . [New () kısıtlaması](new-constraint.md) , derleyicinin sağlanan herhangi bir tür bağımsız değişkeninin erişilebilir parametresiz bir oluşturucuya sahip olması gerektiğini bilmesini sağlar. Örneğin:
+`where`Yan tümce bir Oluşturucu kısıtlaması de içerebilir `new()` . Bu kısıtlama işleci kullanarak bir tür parametresinin örneğini oluşturmayı mümkün kılar `new` . [New () kısıtlaması](new-constraint.md) , derleyicinin sağlanan herhangi bir tür bağımsız değişkeninin erişilebilir parametresiz bir oluşturucuya sahip olması gerektiğini bilmesini sağlar. Örnek:
 
 [!code-csharp[using the new constraint](snippets/GenericWhereConstraints.cs#5)]
 
