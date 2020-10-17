@@ -155,6 +155,12 @@ items:
             href: ../core/sdk.md
           - name: Hata iletileri
             items:
+              - name: NETSDK1005 ve NETSDK1047
+                href: ../core/tools/sdk-errors/netsdk1005.md
+              - name: NETSDK1059
+                href: ../core/tools/sdk-errors/netsdk1059.md
+              - name: NETSDK1073
+                href: ../core/tools/sdk-errors/netsdk1073.md
               - name: NETSDK1145
                 href: ../core/tools/sdk-errors/netsdk1145.md
       - name: .NET Core CLI
@@ -1497,44 +1503,42 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
       - name: Anonim ile demet türleri arasında seçim yapma
         href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
-  - name: Microsoft Uzantıları
+  - name: Bağımlılık ekleme
     items:
-      - name: Yapılandırma
-        items:
-          - name: Genel Bakış
-            href: ../core/extensions/configuration.md
-            displayName: 'configuration,config,configuration sources,config sources'
-          - name: Yapılandırma sağlayıcıları
-            href: ../core/extensions/configuration-providers.md
-            displayName: 'configuration providers,config providers'
-          - name: Özel yapılandırma sağlayıcısı uygulama
-            href: ../core/extensions/custom-configuration-provider.md
-            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
-      - name: Bağımlılık ekleme
-        items:
-          - name: Genel Bakış
-            href: ../core/extensions/dependency-injection.md
-            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
-          - name: Bağımlılık eklemeyi kullanma
-            href: ../core/extensions/dependency-injection-usage.md
-            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
-          - name: Bağımlılık ekleme yönergeleri
-            href: ../core/extensions/dependency-injection-guidelines.md
-            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
-      - name: Genel konak
-        href: ../core/extensions/generic-host.md
-      - name: Günlüğe Kaydetme
-        items:
-          - name: Genel Bakış
-            href: ../core/extensions/logging.md
-          - name: Günlük sağlayıcıları
-            href: ../core/extensions/logging-providers.md
-          - name: Özel bir günlük sağlayıcısı uygulama
-            href: ../core/extensions/custom-logging-provider.md
-          - name: Yüksek performanslı günlük
-            href: ../core/extensions/high-performance-logging.md
+      - name: Genel Bakış
+        href: ../core/extensions/dependency-injection.md
+        displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
+      - name: Bağımlılık eklemeyi kullanma
+        href: ../core/extensions/dependency-injection-usage.md
+        displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
+      - name: Bağımlılık ekleme yönergeleri
+        href: ../core/extensions/dependency-injection-guidelines.md
+        displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
+  - name: Yapılandırma
+    items:
+      - name: Genel Bakış
+        href: ../core/extensions/configuration.md
+        displayName: 'configuration,config,configuration sources,config sources'
+      - name: Yapılandırma sağlayıcıları
+        href: ../core/extensions/configuration-providers.md
+        displayName: 'configuration providers,config providers'
+      - name: Özel yapılandırma sağlayıcısı uygulama
+        href: ../core/extensions/custom-configuration-provider.md
+        displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
       - name: Seçenekler deseni
         href: ../core/extensions/options.md
+  - name: Günlüğe Kaydetme
+    items:
+      - name: Genel Bakış
+        href: ../core/extensions/logging.md
+      - name: Günlük sağlayıcıları
+        href: ../core/extensions/logging-providers.md
+      - name: Özel bir günlük sağlayıcısı uygulama
+        href: ../core/extensions/custom-logging-provider.md
+      - name: Yüksek performanslı günlük
+        href: ../core/extensions/high-performance-logging.md
+  - name: HostBuilder (genel konak)
+    href: ../core/extensions/generic-host.md
   - name: Veri erişimi
     items:
       - name: LINQ
@@ -1543,6 +1547,77 @@ items:
         href: ../standard/data/xml/
       - name: Microsoft.Data.Sqlite
         href: ../standard/data/sqlite/
+  - name: Dosya ve akış G/Ç
+    items:
+      - name: Genel Bakış
+        href: ../standard/io/index.md
+      - name: Windows sistemlerinde dosya yolu biçimleri
+        href: ../standard/io/file-path-formats.md
+      - name: Ortak G/Ç görevleri
+        href: ../standard/io/common-i-o-tasks.md
+        items:
+          - name: 'Nasıl yapılır: Dizinleri Kopyalama'
+            href: ../standard/io/how-to-copy-directories.md
+          - name: 'Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma'
+            href: ../standard/io/how-to-enumerate-directories-and-files.md
+          - name: 'Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma'
+            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+          - name: 'Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme'
+            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+          - name: 'Nasıl yapılır: Bir Dosyaya Metin Yazma'
+            href: ../standard/io/how-to-write-text-to-a-file.md
+          - name: 'Nasıl yapılır: Dosyadan Metin Okuma'
+            href: ../standard/io/how-to-read-text-from-a-file.md
+          - name: 'Nasıl yapılır: Dizeden Karakterleri Okuma'
+            href: ../standard/io/how-to-read-characters-from-a-string.md
+          - name: 'Nasıl yapılır: Bir Dizeye Karakter Yazma'
+            href: ../standard/io/how-to-write-characters-to-a-string.md
+          - name: 'Nasıl yapılır: Erişim Denetimi Listesi Girdileri Ekleme veya Kaldırma'
+            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+          - name: 'Nasıl yapılır: Dosya Sıkıştırma ve Çıkarma'
+            href: ../standard/io/how-to-compress-and-extract-files.md
+          - name: Akışlar Oluşturma
+            href: ../standard/io/composing-streams.md
+          - name: 'Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme'
+            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+      - name: Zaman uyumsuz dosya G/Ç
+        href: ../standard/io/asynchronous-file-i-o.md
+      - name: G/Ç hatalarını işleme
+        href: ../standard/io/handling-io-errors.md
+      - name: Yalıtılmış depolama
+        href: ../standard/io/isolated-storage.md
+        items:
+          - name: Yalıtım Türleri
+            href: ../standard/io/types-of-isolation.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma'
+            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma'
+            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme'
+            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme'
+            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma'
+            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma'
+            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma'
+            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme'
+            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+      - name: Kanallar
+        href: ../standard/io/pipe-operations.md
+        items:
+          - name: 'Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma'
+            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+          - name: 'Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma'
+            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+      - name: İşlem hatları
+        href: ../standard/io/pipelines.md
+      - name: Arabellekler ile çalışma
+        href: ../standard/io/buffers.md
+      - name: Bellek eşlemeli dosyalar
+        href: ../standard/io/memory-mapped-files.md
   - name: 'Paralel işleme, eşzamanlılık ve zaman uyumsuzluk'
     items:
       - name: Genel Bakış
@@ -1792,77 +1867,6 @@ items:
                 href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
               - name: XML Şema Tanımlama aracı (Xsd.exe)
                 href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
-  - name: Dosya ve akış G/Ç
-    items:
-      - name: Genel Bakış
-        href: ../standard/io/index.md
-      - name: Windows sistemlerinde dosya yolu biçimleri
-        href: ../standard/io/file-path-formats.md
-      - name: Ortak G/Ç görevleri
-        href: ../standard/io/common-i-o-tasks.md
-        items:
-          - name: 'Nasıl yapılır: Dizinleri Kopyalama'
-            href: ../standard/io/how-to-copy-directories.md
-          - name: 'Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma'
-            href: ../standard/io/how-to-enumerate-directories-and-files.md
-          - name: 'Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma'
-            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
-          - name: 'Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme'
-            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
-          - name: 'Nasıl yapılır: Bir Dosyaya Metin Yazma'
-            href: ../standard/io/how-to-write-text-to-a-file.md
-          - name: 'Nasıl yapılır: Dosyadan Metin Okuma'
-            href: ../standard/io/how-to-read-text-from-a-file.md
-          - name: 'Nasıl yapılır: Dizeden Karakterleri Okuma'
-            href: ../standard/io/how-to-read-characters-from-a-string.md
-          - name: 'Nasıl yapılır: Bir Dizeye Karakter Yazma'
-            href: ../standard/io/how-to-write-characters-to-a-string.md
-          - name: 'Nasıl yapılır: Erişim Denetimi Listesi Girdileri Ekleme veya Kaldırma'
-            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
-          - name: 'Nasıl yapılır: Dosya Sıkıştırma ve Çıkarma'
-            href: ../standard/io/how-to-compress-and-extract-files.md
-          - name: Akışlar Oluşturma
-            href: ../standard/io/composing-streams.md
-          - name: 'Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme'
-            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
-      - name: Zaman uyumsuz dosya G/Ç
-        href: ../standard/io/asynchronous-file-i-o.md
-      - name: G/Ç hatalarını işleme
-        href: ../standard/io/handling-io-errors.md
-      - name: Yalıtılmış depolama
-        href: ../standard/io/isolated-storage.md
-        items:
-          - name: Yalıtım Türleri
-            href: ../standard/io/types-of-isolation.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma'
-            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma'
-            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme'
-            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme'
-            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma'
-            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma'
-            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma'
-            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme'
-            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
-      - name: Kanallar
-        href: ../standard/io/pipe-operations.md
-        items:
-          - name: 'Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma'
-            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
-          - name: 'Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma'
-            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
-      - name: İşlem hatları
-        href: ../standard/io/pipelines.md
-      - name: Arabellekler ile çalışma
-        href: ../standard/io/buffers.md
-      - name: Bellek eşlemeli dosyalar
-        href: ../standard/io/memory-mapped-files.md
   - name: Birim testi
     displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
     items:
@@ -2158,5 +2162,5 @@ items:
             href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
           - name: C++/CLI projelerini taşıma
             href: ../core/porting/cpp-cli.md
-      - name: Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
+      - name: Sunucu uygulamaları için .NET 5 ve .NET Framework arasında seçim yapma
         href: ../standard/choosing-core-framework-server.md
