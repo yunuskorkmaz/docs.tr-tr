@@ -7,36 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: f2d3bcdaccfd993da1eebf81ae961f35eb22b294
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 610d2dc427d882c412b87eb67f021a8a86025f25
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873677"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159936"
 ---
-# <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Bu bağlamda boş değerler atanabilen tür çıkarma desteklenmiyor
+# <a name="bc36629-nullable-type-inference-is-not-supported-in-this-context"></a>BC36629: Nullable tür çıkarımı bu bağlamda desteklenmiyor
 
-Değer türleri ve yapıları null yapılabilir olarak bildirilemez.  
-  
-```vb  
-Dim a? As Integer  
-Dim b As Integer?  
-```  
-  
- Ancak, null yapılabilir bildirimini tür çıkarımı ile birlikte kullanamazsınız. Aşağıdaki örnekler bu hataya neden olur.  
-  
-```vb  
-' Not valid.  
-' Dim c? = 10  
-' Dim d? = a  
-```  
-  
- **Hata kimliği:** BC36629  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-- `As`Değişkeni null yapılabilir bir değer türü olarak bildirmek için bir yan tümce kullanın.  
-  
+Değer türleri ve yapıları null yapılabilir olarak bildirilemez.
+
+```vb
+Dim a? As Integer
+Dim b As Integer?
+```
+
+ Ancak, null yapılabilir bildirimini tür çıkarımı ile birlikte kullanamazsınız. Aşağıdaki örnekler bu hataya neden olur.
+
+```vb
+' Not valid.
+' Dim c? = 10
+' Dim d? = a
+```
+
+ **Hata kimliği:** BC36629
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+- `As`Değişkeni null yapılabilir bir değer türü olarak bildirmek için bir yan tümce kullanın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Null yapılabilir değer türleri](../../programming-guide/language-features/data-types/nullable-value-types.md)

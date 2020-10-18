@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanının nasıl çalıştığını denetlem
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 03cf188fc74e8a70798c0bcc4a6940730abfc07c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 380bfb3aa5e5715fe95e0d7772700bac9ab4a5be
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180471"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160990"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>.NET çalışma zamanını yerel kodunuzda denetlemek için özel bir .NET Core ana bilgisayarı yazma
 
@@ -27,7 +27,7 @@ Ayrıca, bir basit .NET Core uygulamasının konak ile test edebilmesi için, [.
 
 ## <a name="hosting-apis"></a>Barındırma API 'Leri
 
-.NET Core barındırmak için kullanılabilecek üç farklı API vardır. Bu makale (ve ilişkili [örnekleri](https://github.com/dotnet/samples/tree/master/core/hosting)) tüm seçenekleri içerir.
+.NET Core barındırmak için kullanılabilecek iki farklı API vardır. Bu makale (ve ilişkili [örnekleri](https://github.com/dotnet/samples/tree/master/core/hosting)), bu 2 seçenekleri içerir.
 
 * .NET Core 3,0 ve üzeri sürümlerde .NET Core çalışma zamanının barındırılması için tercih edilen yöntem, `nethost` ve `hostfxr` kitaplıklarının API 'larıdır. Bu giriş noktaları, başlatma için çalışma zamanını bulma ve ayarlama karmaşıklığını ve hem yönetilen bir uygulamanın başlatılmasına hem de statik yönetilen bir yönteme çağrılmasını sağlar.
 * .NET Core 3,0 ' den önceki .NET Core çalışma zamanını barındırmak için tercih edilen yöntem API 'dir [`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/hosts/inc/coreclrhost.h) . Bu API, çalışma zamanının kolayca başlatılmasına ve durdurulmasına ve yönetilen kodun çağrılmasını (yönetilen bir exe başlatarak veya statik yönetilen yöntemleri çağırarak) işlevleri kullanıma sunar.
@@ -40,11 +40,11 @@ Aşağıdaki öğreticilerde özetlenen adımları gösteren [örnek ana bilgisa
 
 ## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>Ve kullanarak konak oluşturma `nethost.h``hostfxr.h`
 
-Aşağıdaki adımlarda, `nethost` ve `hostfxr` kitaplıklarının .NET Core çalışma zamanını yerel bir uygulamada başlatmak ve yönetilen bir statik yönteme çağırmak için nasıl kullanılacağı açıklanır. [Örnek](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr) , `nethost` .NET SDK ile yüklenen üstbilgiyi ve kitaplığı, [`coreclr_delegates.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/coreclr_delegates.h) [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) [DotNet/Core-Setup](https://github.com/dotnet/core-setup) deposundan ve dosyalarının kopyalarını kullanır.
+Aşağıdaki adımlarda, `nethost` ve `hostfxr` kitaplıklarının .NET Core çalışma zamanını yerel bir uygulamada başlatmak ve yönetilen bir statik yönteme çağırmak için nasıl kullanılacağı açıklanır. [Örnek](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr) , `nethost` .NET SDK ile yüklenen başlık ve kitaplığı, [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/coreclr_delegates.h) [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/hostfxr.h) [DotNet/Runtime](https://github.com/dotnet/runtime) deposundan ve dosyalarının kopyalarını kullanır.
 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>1. adım- `hostfxr` içe aktarılmış barındırma Işlevlerini yükleme ve edinme
 
-`nethost`Kitaplık, `get_hostfxr_path` kitaplığı bulmaya yönelik işlevi sağlar `hostfxr` . `hostfxr`Kitaplık, .NET Core çalışma zamanını barındırmak için işlevler sunar. İşlevlerin tam listesi [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) ve [yerel barındırma tasarımı belgesinde](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md)bulunabilir. Örnek ve bu öğretici şunları kullanır:
+`nethost`Kitaplık, `get_hostfxr_path` kitaplığı bulmaya yönelik işlevi sağlar `hostfxr` . `hostfxr`Kitaplık, .NET Core çalışma zamanını barındırmak için işlevler sunar. İşlevlerin tam listesi [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/hostfxr.h) ve [yerel barındırma tasarımı belgesinde](https://github.com/dotnet/runtime/blob/master/docs/design/features/native-hosting.md)bulunabilir. Örnek ve bu öğretici şunları kullanır:
 
 * `hostfxr_initialize_for_runtime_config`: Bir konak bağlamını başlatır ve belirtilen çalışma zamanı yapılandırmasını kullanarak .NET Core çalışma zamanının başlatılmasına hazırlar.
 * `hostfxr_get_runtime_delegate`: Çalışma zamanı işlevselliği için bir temsilci alır.

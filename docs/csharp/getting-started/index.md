@@ -1,57 +1,53 @@
 ---
-title: Kullanmaya başlayın-C# Kılavuzu
-description: Tanıtım C# kavramlarını hızlıca öğrenmenizi ve .NET Core uygulamaları yazmanızı sağlayan kısa, basit öğreticiler bulun.
-helpviewer_keywords:
-- Visual C#, getting started
-- getting started, Visual C#
-ms.date: 04/05/2019
-ms.openlocfilehash: 769098134799800d45a31c22f4390734545ff6ff
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+title: Kullanmaya başlayın-C# diline ve .NET 'e giriş "
+description: C# ve .NET hakkında temel bilgileri öğrenin. C# diline ve .NET ekosistemine genel bakış alın.
+ms.date: 10/13/2020
+ms.openlocfilehash: 94d49be28fbdba8f58ca16e959a10643d6467c63
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465253"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160964"
 ---
-# <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
+# <a name="introduction-to-the-c-language-and-net"></a>C# diline ve .NET’e giriş
 
-Bu bölümde, C# ve .NET Core kullanarak hızlı bir şekilde uygulama oluşturmanıza olanak sağlayan kısa ve basit öğreticiler sunulmaktadır. Visual Studio ve Visual Studio Code için Başlarken konuları vardır. Bu makalelerde bazı programlama deneyimleri varsayılmaktadır. Programlama için yeni bir deneyimize C# etkileşimli öğreticilerine [giriş](../tutorials/intro-to-csharp/index.md) ' i deneyin.
+C#, şık ve tür açısından güvenli nesne yönelimli bir dildir. C#, geliştiricilerin .NET ekosisteminde çalışan çok sayıda güvenli ve güçlü uygulamalar oluşturmalarına olanak sağlar.
 
-Aşağıdaki konular kullanılabilir:
+## <a name="c-language"></a>C# dili
 
-- [C# diline ve .NET 'e giriş](introduction-to-the-csharp-language-and-the-net-framework.md)
+C# sözdizimi büyük ölçüde ifade edilir, ancak kolayca öğrenilmesi ve kolay bir işlemdir. C# ' nin küme ayracı sözdizimi, C, C++, Java veya JavaScript 'e alışkın olan herkese anında tanınacaktır. Bu dillerden herhangi birini bilen geliştiriciler genellikle C# ' de kısa bir süre Içinde üretken bir şekilde çalışabilir. C# null yapılabilir türler, temsilciler, lambda ifadeleri, model eşleştirme ve güvenli doğrudan bellek erişimi gibi güçlü özellikler sağlar. C#, Artırılmış tür güvenliği ve performans sağlayan genel yöntemleri ve türleri destekler. C#, istemci kodu için özel davranışlar tanımlamak üzere koleksiyon sınıflarının uygulayıcıları 'nı etkinleştiren yineleyiciler sağlar. Language-Integrated Query (LINQ) ifadeleri, türü kesin belirlenmiş sorguyu birinci sınıf dil yapısına yapar.
 
-     C# diline ve .NET 'e genel bakış sunar.
+C#, nesne yönelimli bir dil olarak kapsülleme, devralma ve çok biçimlilik kavramlarını destekler. Bir sınıf doğrudan bir üst sınıftan devralınabilir, ancak herhangi bir sayıda arabirim uygulayabilir. Bir üst sınıftaki sanal yöntemleri geçersiz kılan yöntemler, yanlışlıkla yeniden `override` tanımı önlemek için anahtar sözcüğünü gerektirir. C# ' de, bir struct basit bir sınıf gibidir; Bu, arabirimleri uygulayasağlayan ancak devralmayı desteklemeyen, yığın olarak ayrılmış bir türdür. C# Ayrıca, amacı Aslında veri değerlerini depolayan sınıf türleri olan kayıtlar da sağlar.
 
-- [Visual Studio 'da .NET Core ile C# Merhaba Dünya uygulaması oluşturma](../../core/tutorials/with-visual-studio.md)
+C#, aşağıdakiler de dahil olmak üzere çeşitli yenilikçi dil yapıları aracılığıyla yazılım bileşenleri geliştirmeyi kolaylaştırır:
 
-   Visual Studio, uygulamalarınızı Windows veya Mac için tümleşik bir geliştirme ortamından kodlamanıza, derlemenize, çalıştırmanıza, hata ayıklamanıza, profilinize ve yayımlamanıza olanak sağlar.
+- Tür kullanımı uyumlu olay bildirimlerini etkinleştiren *Temsilciler*adlı Kapsüllenmiş yöntem imzaları.
+- Özel üye değişkenleri için erişimci işlevi sunan özellikler.
+- Çalışma zamanında türler hakkında bildirime dayalı meta veriler sağlayan öznitelikler.
+- Satır içi XML belge açıklamaları.
+- Farklı türlerde veri kaynakları genelinde yerleşik sorgu özellikleri sağlayan Language-Integrated sorgu (LINQ).
+- Veri türlerini ve değerlerini inceleyerek denetim akışına izin veren kalıp eşleme.
 
-   Bu konu, basit bir Merhaba Dünya uygulaması oluşturup çalıştırmanıza ve sonra biraz daha etkileşimli Merhaba Dünya uygulaması çalıştıracak şekilde değiştirmenize olanak sağlar. Uygulamanızı oluşturmayı ve çalıştırmayı tamamladıktan sonra, nasıl [hata ayıklaması](../../core/tutorials/debugging-with-visual-studio.md) yapacağınızı ve .NET Core tarafından desteklenen herhangi bir platformda çalıştırılabilmesi için nasıl [yayımlayacağınızı](../../core/tutorials/publishing-with-visual-studio.md) öğrenebilirsiniz.
+"Interop" adlı bir işlem aracılığıyla yerel bileşenlerle etkileşime geçebilirsiniz. Birlikte çalışma, C# programlarının yerel bir C++ uygulamasının gerçekleştirebildiği neredeyse her şeyi yapmasına olanak sağlar. C#, doğrudan bellek erişiminin kritik olduğu durumlar için işaretçileri ve "güvenli olmayan" kod kavramını destekler.
 
-- [Visual Studio 'da C# ve .NET Standard bir sınıf kitaplığı oluşturma](../../core/tutorials/library-with-visual-studio.md)
+C# derleme işlemi, C ve C++ ile karşılaştırıldığında Java 'dan daha esnektir. Ayrı bir üst bilgi dosyası yoktur ve yöntemlerin ve türlerin belirli bir sırada bildirildiği hiçbir gereksinimi yoktur. C# kaynak dosyası herhangi bir sayıda sınıf, yapı, arabirim ve olay tanımlayabilir.
 
-   Bir sınıf kitaplığı, başka bir uygulamadan çağrılabilen türleri ve tür üyelerini tanımlamanıza olanak sağlar. Bu konu, bir dizenin büyük harfli bir karakterle başlayıp başlamadığını belirleyen tek bir yöntemle bir sınıf kitaplığı oluşturmanıza olanak sağlar. Kitaplığı oluşturmayı tamamladıktan sonra, beklendiği gibi çalıştığından emin olmak için bir [birim testi](../../core/tutorials/testing-library-with-visual-studio.md) geliştirebilir ve bunu [kullanmak istediğiniz uygulamalar](/nuget/quickstart/install-and-use-a-package-in-visual-studio)için kullanılabilir hale getirebilirsiniz.
+Ek C# kaynakları aşağıda verilmiştir:
 
-- [C# ve Visual Studio Code kullanmaya başlama](../../core/tutorials/with-visual-studio-code.md)
+- Dile yönelik iyi bir genel giriş için bkz. [C# turu](../tour-of-csharp/index.md).
+- C# dilinin belirli yönleri hakkında ayrıntılı bilgi için bkz. [C# başvurusu](../language-reference/index.md).
+- LINQ hakkında daha fazla bilgi için bkz. [LINQ (dil Ile tümleşik sorgu)](../programming-guide/concepts/linq/index.md).
 
-   Visual Studio Code, Modern Web ve bulut uygulamaları oluşturmak ve bu uygulamalarda hata ayıklamak için iyileştirilmiş, ücretsiz bir kod düzenleyicisidir. IntelliSense 'i destekler ve Linux, macOS ve Windows için kullanılabilir.
+## <a name="net-platform-architecture"></a>.NET platformu mimarisi
 
-   Bu konuda, Visual Studio Code ve .NET Core ile basit bir Merhaba Dünya uygulamasının nasıl oluşturulacağı ve çalıştırılacağı gösterilmektedir.
+C# programları, ortak dil çalışma zamanı (CLR) ve birleştirilmiş bir sınıf kitaplıkları kümesi olarak adlandırılan bir sanal yürütme sistemi olan .NET üzerinde çalışır. CLR, uluslararası bir standart olan ortak dil altyapısının (CLı) Microsoft tarafından gerçekleştirilen ticari bir uygulama. CLı, dillerin ve kitaplıkların sorunsuz şekilde çalıştığı yürütme ve geliştirme ortamları oluşturmanın temelini oluşturur.
 
-## <a name="related-sections"></a>İlgili bölümler
+C# dilinde yazılan kaynak kodu, CLı belirtimine uyan bir [Ara dilde (IL)](../../standard/managed-code.md) derlenir. Il kodu ve bit eşlemler ve dizeler gibi kaynaklar, genellikle bir. dll uzantısıyla birlikte bir derlemede depolanır. Bütünleştirilmiş kod, derlemenin türleri, sürümü ve kültürü hakkında bilgi sağlayan bir bildirim içerir.
 
-- [C# Programlama Kılavuzu](../programming-guide/index.md)
+C# programı yürütüldüğünde, derleme CLR 'ye yüklenir. CLR, Il kodunu yerel makine yönergelerine dönüştürmek için tam zamanında (JıT) derleme gerçekleştirir. CLR, otomatik atık toplama, özel durum işleme ve kaynak yönetimiyle ilgili diğer hizmetleri sağlar. CLR tarafından yürütülen kod bazen "yönetilen kod" olarak adlandırılır ve bu, belirli bir sistemi hedefleyen yerel makine diline derlenen "yönetilmeyen kodun" aksine.
 
-    C# programlama kavramları hakkında bilgi sağlar ve c# ' de çeşitli görevlerin nasıl gerçekleştirileceğini açıklar.
+Dil birlikte çalışabilirliği, .NET 'in önemli bir özelliğidir. C# derleyicisi tarafından üretilen IL kodu ortak tür belirtimine (CTS) uygundur. C# ' den üretilen IL kodu, F #, Visual Basic, C++ veya 20 ' den fazla diğer CTS uyumlu dilin .NET sürümlerinden oluşturulan kodla etkileşime geçebilir. Tek bir derlemede, farklı .NET dillerinde yazılmış birden çok modül bulunabilir ve türler aynı dilde yazılmış gibi birbirlerine başvurabilir.
 
-- [C# başvurusu](../language-reference/index.md)
+.NET çalışma zamanı hizmetlerine ek olarak kapsamlı kitaplıklar da içerir. Bu kitaplıklar birçok farklı iş yükünü destekler. Bunlar, dosya girişi ve çıktısından dize işlemeye kadar her şey için, Web uygulaması çerçevelerinden Windows Forms denetimlerine kadar çok çeşitli yararlı işlevler sunan ad alanları halinde düzenlenir. Tipik C# uygulaması, ortak "sıhhi tesisat" işlerini ele almak için .NET sınıf kitaplığını kapsamlı olarak kullanır.
 
-    C# anahtar sözcükleri, işleçler, Önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve uyarıları hakkında ayrıntılı başvuru bilgileri sağlar.
-
-- [İzlenecek Yollar](../walkthroughs.md)
-
-    C# kullanan programlama yollarına ve her izlenecek yola ilişkin kısa bir açıklamaya bağlantılar sağlar.
-
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Visual Studio ile C# geliştirme](/visualstudio/get-started/csharp/)
+.NET hakkında daha fazla bilgi için bkz. [.net 'e genel bakış](../../core/introduction.md).

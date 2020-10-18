@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: a60afe0907e974dfb345d20d18762cb5f84127d9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6db8626701267f2051b289b267e7b2d9da51c283
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875026"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162225"
 ---
-# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>'\<variablename>' değişkenine bir değer atanmadan kullanıldı
+# <a name="bc42104-variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>BC42104: ' \<variablename> ' değişkeni bir değer atanmadan kullanıldı
 
-' \<variablename> ' Değişkeni bir değer atanmadan önce kullanıldı. Çalışma zamanında null başvurusu özel durumu oluşabilir.  
-  
- Bir uygulamanın, herhangi bir değer atanmadan önce bir değişkeni okuyan kodu aracılığıyla olası en az bir yolu vardır.  
-  
- Bir değişkene hiç bir değer atanmamışsa, veri türü için varsayılan değeri barındırır. Başvuru veri türü için bu varsayılan değer [Nothing](../nothing.md)' dir. Bir değere sahip bir başvuru değişkenini okumak `Nothing` bazı koşullarda bir oluşturulmasına neden olabilir <xref:System.NullReferenceException> .  
-  
- Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
-  
- **Hata kimliği:** BC42104  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-- Denetim akışı mantığınızı denetleyin ve denetimin kendisini okuyan hiçbir ifadeye geçmeden önce değişkenin geçerli bir değere sahip olduğundan emin olun.  
-  
-- Değişkenin her zaman geçerli bir değere sahip olduğundan emin olmanın bir yolu, bildiriminin bir parçası olarak bunu başlatmaktır. [Dim ifadesinde](../statements/dim-statement.md)"başlatma" konusuna bakın.  
-  
+' \<variablename> ' Değişkeni bir değer atanmadan önce kullanıldı. Çalışma zamanında null başvurusu özel durumu oluşabilir.
+
+ Bir uygulamanın, herhangi bir değer atanmadan önce bir değişkeni okuyan kodu aracılığıyla olası en az bir yolu vardır.
+
+ Bir değişkene hiç bir değer atanmamışsa, veri türü için varsayılan değeri barındırır. Başvuru veri türü için bu varsayılan değer [Nothing](../nothing.md)' dir. Bir değere sahip bir başvuru değişkenini okumak `Nothing` bazı koşullarda bir oluşturulmasına neden olabilir <xref:System.NullReferenceException> .
+
+ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).
+
+ **Hata kimliği:** BC42104
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+- Denetim akışı mantığınızı denetleyin ve denetimin kendisini okuyan hiçbir ifadeye geçmeden önce değişkenin geçerli bir değere sahip olduğundan emin olun.
+
+- Değişkenin her zaman geçerli bir değere sahip olduğundan emin olmanın bir yolu, bildiriminin bir parçası olarak bunu başlatmaktır. [Dim ifadesinde](../statements/dim-statement.md)"başlatma" konusuna bakın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dim Deyimi](../statements/dim-statement.md)

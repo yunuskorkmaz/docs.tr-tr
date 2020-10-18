@@ -3,12 +3,12 @@ title: C# etkileşimli öğreticilerine giriş
 description: Tarayıcınızda C# öğrenin ve kendi geliştirme ortamınızı kullanmaya başlayın
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6037862c52fd59ba540e1f65297d787f0a964762
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609186"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162160"
 ---
 # <a name="introduction-to-c"></a>C 'ye giriş\#
 
@@ -62,3 +62,7 @@ Bu öğreticide, çevrimiçi giriş öğreticilerini tamamladığınız ve [.NET
 Bu öğretici, nesne odaklı programlamada kullanılan kavramları öğretir. C# örnekleri kullanarak *soyutlama*, *kapsülleme*, *Devralma*ve çok *biçimlilik* kavramlarını öğreneceksiniz.
 
 Bu öğreticide, çevrimiçi giriş öğreticilerini tamamladığınız ve [.NET Core SDK](https://dotnet.microsoft.com/download) ve [Visual Studio Code](https://code.visualstudio.com/) ya da [Visual Studio 'yu](https://visualstudio.com) geliştirme makinenize yüklediğiniz varsayılmaktadır.
+
+## <a name="101-linq-samples"></a>[101 LINQ örnekleri](https://github.com/dotnet/try-samples/tree/master/101-linq-samples)
+
+Bu örnek [DotNet-TRY](https://github.com/dotnet/try/blob/main/README.md#setup) küresel aracını gerektirir. Aracı yükledikten ve [TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyaladıktan sonra, etkileşimli olarak çalıştırabileceğiniz bir dizi 101 örneği aracılığıyla dil Ile tümleşik sorgu (LINQ) hakkında bilgi edinebilirsiniz. Veri dizilerini sorgulamak, araştırmak ve dönüştürmek için kullanabileceğiniz farklı yolları keşfedebilirsiniz.

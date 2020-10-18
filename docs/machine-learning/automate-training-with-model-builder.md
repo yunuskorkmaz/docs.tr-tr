@@ -3,12 +3,12 @@ title: Model Oluşturucu nedir ve nasıl çalışır?
 description: Makine öğrenimi modelini otomatik olarak eğiteiçin ML.NET model Oluşturucu 'Yu kullanma
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 80f5f5d064c4e0c4097dacc6022d4624c1516ab9
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679683"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161146"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
@@ -54,9 +54,15 @@ Regresyon, sayıları tahmin etmek için kullanılır.
 
 #### <a name="image-classification"></a>Resimleri sınıflandırma
 
-Görüntü sınıflandırması, farklı kategorilerin görüntülerini belirlemek için kullanılabilir. Örneğin, farklı türlerde terur veya hayvanlar veya üretim kusurları vardır.
+Görüntü sınıflandırması, farklı kategorilerin görüntülerini belirlemek için kullanılır. Örneğin, farklı türlerde terur veya hayvanlar veya üretim kusurları vardır.
 
 Bir görüntü kümesine sahipseniz ve görüntüleri farklı kategorilerde sınıflandırmak istiyorsanız resim sınıflandırması senaryosunu kullanabilirsiniz.
+
+#### <a name="object-detection"></a>Nesne algılama
+
+Nesne algılama, görüntülerin içindeki varlıkları bulmak ve kategorilere ayırmak için kullanılır.  Örneğin, bir görüntüdeki otomobilleri ve kişileri bulma ve tanımlama.
+
+Görüntüler farklı türlerde birden çok nesne içerdiğinde nesne algılamayı kullanabilirsiniz.
 
 #### <a name="recommendation"></a>Öneri
 
@@ -66,13 +72,15 @@ Kullanıcı kümesi ve satın alma, Filmler, kitaplar veya TV programları gibi 
 
 ## <a name="environment"></a>Ortam
 
-Makine öğrenimi modelinizi makinenizde yerel olarak veya Azure 'da bulutta eğitebilirsiniz.
+Senaryonuza bağlı olarak, makinenizde veya Azure 'daki bulutta makine öğrenimi modelinizi yerel olarak eğitebilirsiniz.
 
 Yerel olarak eğitedığınızda, bilgisayar kaynaklarınızın (CPU, bellek ve disk) kısıtlamaları dahilinde çalışırsınız. Bulutta eğiyorsanız, özellikle büyük veri kümelerinde, senaryolarınızın taleplerini karşılamak için kaynaklarınızı ölçeklendirebilirsiniz.
 
-Yerel Eğitim tüm senaryolar için desteklenir.
+Yerel CPU eğitimi, nesne algılama haricinde tüm senaryolarda desteklenir.
 
-Azure eğitimi, görüntü sınıflandırması için desteklenir.
+Yerel GPU eğitimi, görüntü sınıflandırması için desteklenir.
+
+Azure eğitimi, görüntü sınıflandırması ve nesne algılama için desteklenir.
 
 ## <a name="data"></a>Veriler
 
@@ -107,7 +115,7 @@ Etiket, bu kare çekimi, yatak odası ve banyo değerleri ve posta kodu satırı
 
 Henüz kendi verileriniz yoksa, bu veri kümelerinden birini deneyin:
 
-|Senaryo|Örnek|Veriler|Etiketle|Özellikler|
+|Senaryo|Örnek|Veriler|Etiket|Özellikler|
 |-|-|-|-|-|
 |Sınıflandırma|Satış anormalilerini tahmin edin|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Ay|
 ||Web sitesi açıklamalarının yaklaşımını tahmin etme|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|

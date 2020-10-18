@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 4500a177c7a4729fe5131af1b007fd38e77afe07
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 090ec6f3bbf56350fda2ab15c974b0bc6b15e3d3
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397343"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162524"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Erişen örnek bir arabirim türü olduğundan geç bağlanan tekrar yükleme çözümü '\<procedurename>' öğesine uygulanamaz
+# <a name="bc30933-latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>BC30933: \<procedurename> erişen örnek bir arabirim türü olduğundan, geç bağlanan aşırı yükleme çözümlemesi ' ' öğesine uygulanamaz
 
 Derleyici aşırı yüklenmiş bir özellik veya yordama yönelik bir başvuruyu çözümlemeye çalışıyor, ancak bir bağımsız değişken türünde olduğu `Object` ve başvuran nesnenin bir arabirimin veri türü olduğu için başvuru başarısız olur. `Object`Bağımsız değişkeni, derleyicinin başvuruyu geç bağlantılı olarak çözmeye zorlar.
 

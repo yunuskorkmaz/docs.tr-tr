@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-ms.openlocfilehash: 2934a5666c55e1ca57b91ab86585261e6d71a2d3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 663b22421d1a0e401cfb3c135c99bd097163a78b
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873728"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160372"
 ---
-# <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>'\<methodname>' içinde aynı imzaya sahip birden fazla tanım var
+# <a name="bc30269-methodname-has-multiple-definitions-with-identical-signatures"></a>BC30269: ' \<methodname> ', aynı imzalara sahip birden fazla tanıma sahip
 
-Bir `Function` veya `Sub` yordam bildirimi, önceki bir bildirim olarak aynı yordam adı ve bağımsız değişken listesini kullanır. Olası bir neden, özgün yordamı aşırı yükleme girişimdir. Aşırı yüklenmiş yordamların farklı bağımsız değişken listeleri olmalıdır.  
-  
- **Hata kimliği:** BC30269  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-- Yordam adını veya bağımsız değişken listesini değiştirin veya yinelenen bildirimi kaldırın.  
-  
+Bir `Function` veya `Sub` yordam bildirimi, önceki bir bildirim olarak aynı yordam adı ve bağımsız değişken listesini kullanır. Olası bir neden, özgün yordamı aşırı yükleme girişimdir. Aşırı yüklenmiş yordamların farklı bağımsız değişken listeleri olmalıdır.
+
+ **Hata kimliği:** BC30269
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+- Yordam adını veya bağımsız değişken listesini değiştirin veya yinelenen bildirimi kaldırın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bildirilmiş Öğelere Başvurular](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

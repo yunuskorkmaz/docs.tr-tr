@@ -13,16 +13,16 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: b440bce7ad73cfd526b1589e7f19b4cc06be238c
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 1097d156aad06b7a17141e4d6786e5411cbaa571
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679618"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160847"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 
-Dilden bağımsız .NET Framework. Yani, geliştirici olarak C#, C++/CLı, Eiffel, F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell gibi .NET Framework hedef olan birçok dilden birinde geliştirme yapabilirsiniz. .NET Framework için geliştirilen sınıf kitaplıklarının türlerine ve üyelerine, başlangıçta yazıldığı dili ve özgün dilin kurallarından herhangi birini izlemeniz gerekmeden erişebilirsiniz. Bileşen geliştiricisiyseniz, kendi dilinden bağımsız olarak herhangi bir .NET Framework uygulaması tarafından erişilebilir.
+.NET dilden bağımsız. Yani, geliştirici olarak C#, C++/CLı, Eiffel, F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell gibi birçok dilden birinde geliştirme yapabilirsiniz. .NET için geliştirilmiş sınıf kitaplıklarının türlerine ve üyelerine, ilk olarak yazıldığı dili ve özgün dilin kurallarından herhangi birini izlemeye gerek kalmadan erişebilirsiniz. Bileşen geliştiricisiyseniz, kendi dilinden bağımsız olarak, bileşeninize herhangi bir .NET uygulaması tarafından erişilebilir.
 
 > [!NOTE]
 > Bu makalenin ilk bölümü, dilden bağımsız bileşenler (yani, herhangi bir dilde yazılmış uygulamalar tarafından tüketilen bileşenler) oluşturmayı tartışır. Ayrıca, birden çok dilde yazılmış kaynak kodundan tek bir bileşen veya uygulama oluşturabilirsiniz; Bu makalenin ikinci bölümünde [Diller arası birlikte çalışabilirlik](#CrossLang) bölümüne bakın.
@@ -45,7 +45,7 @@ Bu makalede:
 
   - [Arabirimler](#Interfaces)
 
-  - [Numaralandırmalar](#enums)
+  - [Listelemeler](#enums)
 
   - [Genel olarak tür üyeleri](#members)
 
@@ -113,9 +113,9 @@ CLS uyumluluğu kuralları aşağıdaki tabloda listelenmiştir. Kuralların met
 |Öznitelikler|[Öznitelikler](#attributes)|CLS, herkese açık bir şekilde görünür gerekli değiştiricilere izin vermez (bkz. `modreq` Bölüm II), ancak isteğe bağlı değiştiricilere izin veriyor ( `modopt` , bkz. Bölüm II).|35|
 |Oluşturucular|[Oluşturucular](#ctors)|Bir nesne Oluşturucusu, devralınan örnek verilerine herhangi bir erişim gerçekleşmeden önce temel sınıfının bazı örnek oluşturucusunu çağırmalıdır. (Bu, oluşturucuların olmaması gereken değer türleri için de geçerlidir.)|21|
 |Oluşturucular|[Oluşturucular](#ctors)|Bir nesne Oluşturucusu, bir nesne oluşturmanın parçası hariç çağrılmamalıdır ve bir nesne iki kez başlatılamaz.|22|
-|Listelemeler|[Numaralandırmalar](#enums)|Bir numaralandırmanın temel alınan türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" ve bu alan işaretlenir `RTSpecialName` .|7|
-|Listelemeler|[Numaralandırmalar](#enums)|<xref:System.FlagsAttribute?displayProperty=nameWithType>(Bkz. PARTITION IV Library) özel özniteliğinin varlığı veya yokluğu ile belirtilen iki farklı tür numaralandırmalar vardır. Biri adlandırılmış tamsayı değerlerini temsil eder; diğeri adlandırılmamış bir değer oluşturmak için birleştirilebilen adlandırılmış bit bayraklarını temsil eder. Öğesinin değeri `enum` belirtilen değerlerle sınırlı değil.|8|
-|Listelemeler|[Numaralandırmalar](#enums)|Sabit listesinin değişmez statik alanları, sabit listesinin kendi türüne sahip olacaktır.|9|
+|Listelemeler|[Listelemeler](#enums)|Bir numaralandırmanın temel alınan türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" ve bu alan işaretlenir `RTSpecialName` .|7|
+|Listelemeler|[Listelemeler](#enums)|<xref:System.FlagsAttribute?displayProperty=nameWithType>(Bkz. PARTITION IV Library) özel özniteliğinin varlığı veya yokluğu ile belirtilen iki farklı tür numaralandırmalar vardır. Biri adlandırılmış tamsayı değerlerini temsil eder; diğeri adlandırılmamış bir değer oluşturmak için birleştirilebilen adlandırılmış bit bayraklarını temsil eder. Öğesinin değeri `enum` belirtilen değerlerle sınırlı değil.|8|
+|Listelemeler|[Listelemeler](#enums)|Sabit listesinin değişmez statik alanları, sabit listesinin kendi türüne sahip olacaktır.|9|
 |Ekinlikler|[Ekinlikler](#events)|Bir olayı uygulayan yöntemler `SpecialName` meta verilerde işaretlenir.|29|
 |Ekinlikler|[Ekinlikler](#events)|Bir olayın ve erişimcilerinin erişilebilirliği aynı olacaktır.|30|
 |Ekinlikler|[Ekinlikler](#events)|`add` `remove` Bir olay için ve yöntemlerinin her ikisi de mevcut ya da yok olacaktır.|31|
@@ -157,7 +157,7 @@ CLS uyumluluğu kuralları aşağıdaki tabloda listelenmiştir. Kuralların met
 
 ### <a name="types-and-type-member-signatures"></a>Türler ve tür üye imzaları
 
-<xref:System.Object?displayProperty=nameWithType>Tür CLS uyumludur ve .NET Framework türü sistemindeki tüm nesne türlerinin temel türüdür. .NET Framework devralma örtük olarak (örneğin, <xref:System.String> sınıf dolaylı olarak <xref:System.Object> sınıfından devralır) veya açık (örneğin, sınıfı açıkça sınıfından devralınan sınıfından açıkça devralan sınıfından açıkça devralır <xref:System.Globalization.CultureNotFoundException> <xref:System.ArgumentException> <xref:System.SystemException> <xref:System.Exception> ). Türetilmiş bir türün CLS uyumlu olması için, taban türünün de CLS uyumlu olması gerekir.
+<xref:System.Object?displayProperty=nameWithType>Tür CLS uyumludur ve .net tür sistemindeki tüm nesne türlerinin temel türüdür. .NET ' te devralma örtük olarak (örneğin, sınıf sınıfından <xref:System.String> dolaylı olarak devralır <xref:System.Object> ) veya açık (örneğin, sınıfı açıkça sınıfından devralınan sınıfından açıkça devralan sınıfından açıkça devralır <xref:System.Globalization.CultureNotFoundException> <xref:System.ArgumentException> <xref:System.SystemException> <xref:System.Exception> ). Türetilmiş bir türün CLS uyumlu olması için, taban türünün de CLS uyumlu olması gerekir.
 
 Aşağıdaki örnek, temel türü CLS uyumlu olmayan türetilmiş bir türü gösterir. `Counter`İşaretsiz 32 bitlik bir tamsayıyı sayaç olarak kullanan bir temel sınıf tanımlar. Sınıfı işaretsiz bir tamsayı sarmalayarak sayaç işlevselliği sağladığından, sınıf CLS uyumlu değil olarak işaretlenir. Sonuç olarak, türetilmiş bir sınıf `NonZeroCounter` de CLS uyumlu değildir.
 
@@ -170,7 +170,7 @@ Bir yöntemin dönüş türü veya özellik türü de dahil olmak üzere üye im
 
 - Genel parametrelerde kısıtlama olarak kullanılan tüm türler CLS uyumlu olmalıdır.
 
-.NET Framework [ortak tür sistemi](base-types/common-type-system.md) , doğrudan ortak dil çalışma zamanı tarafından desteklenen ve bir derlemenin meta verilerinde özel olarak kodlanmış bir dizi yerleşik tür içerir. Bu iç türlerin, aşağıdaki tabloda listelenen türler CLS uyumludur.
+.NET [ortak tür sistemi](base-types/common-type-system.md) , doğrudan ortak dil çalışma zamanı tarafından desteklenen ve bir derlemenin meta verilerinde özel olarak kodlanmış bir dizi yerleşik tür içerir. Bu iç türlerin, aşağıdaki tabloda listelenen türler CLS uyumludur.
 
 |CLS uyumlu tür|Description|
 |-------------------------|-----------------|
@@ -191,19 +191,19 @@ Aşağıdaki tabloda listelenen iç türler CLS uyumlu değildir.
 |Uyumlu olmayan tür|Description|CLS uyumlu alternatif|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|8 bit işaretli tamsayı veri türü|<xref:System.Int16>|
-|<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Yok|
+|<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Hiçbiri|
 |<xref:System.UInt16>|16 bit işaretsiz tamsayı|<xref:System.Int32>|
 |<xref:System.UInt32>|32-bit işaretsiz tamsayı|<xref:System.Int64>|
 |<xref:System.UInt64>|64-bit işaretsiz tamsayı|<xref:System.Int64> (taşma olabilir), <xref:System.Numerics.BigInteger> veya <xref:System.Double>|
 |<xref:System.UIntPtr>|İşaretsiz işaretçi veya tanıtıcı|<xref:System.IntPtr>|
 
-.NET Framework sınıf kitaplığı veya başka bir sınıf kitaplığı CLS uyumlu olmayan diğer türleri içerebilir; Örneğin:
+.NET sınıf kitaplığı veya başka bir sınıf kitaplığı, CLS uyumlu olmayan diğer türleri içerebilir; Örneğin:
 
 - Paketlenmiş değer türleri. Aşağıdaki C# örneği, adında ortak bir özelliği olan bir sınıf oluşturur `int*` `Value` . Bir `int*` paketlenmiş değer türü olduğundan, derleyici onu CLS uyumlu değil olarak işaretler.
 
   [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]
 
-- Bir nesneye başvuru ve bir tür başvurusu içeren özel yapılar olan yazılı başvurular. Yazılan başvurular, .NET Framework sınıfı tarafından temsil edilir <xref:System.TypedReference> .
+- Bir nesneye başvuru ve bir tür başvurusu içeren özel yapılar olan yazılı başvurular. Yazılan başvurular, .NET ile sınıfı tarafından temsil edilir <xref:System.TypedReference> .
 
 Bir tür CLS uyumlu değilse, <xref:System.CLSCompliantAttribute> özniteliğini değerine uygulamanız gerekir `isCompliant` `false` . Daha fazla bilgi için [CLSCompliantAttribute özniteliği](#CLSAttribute) bölümüne bakın.
 
@@ -487,7 +487,7 @@ Bu hatayı düzeltmek için, `ErrorClass` sınıfın öğesinden devralması ger
 
 ### <a name="attributes"></a>Öznitelikler
 
-Özel öznitelikler, özel öznitelikleri depolamak ve derlemeler, türler, Üyeler ve Yöntem parametreleri gibi programlama nesneleri hakkındaki meta verileri almak için genişletilebilir bir mekanizma sağlar. Özel öznitelikler <xref:System.Attribute?displayProperty=nameWithType> öğesinden türetilmiş bir türden veya ondan türemelidir <xref:System.Attribute?displayProperty=nameWithType> .
+.NET derlemelerde özel öznitelikler özel öznitelikleri depolamak ve derlemeler, türler, Üyeler ve Yöntem parametreleri gibi programlama nesneleri hakkındaki meta verileri almak için genişletilebilir bir mekanizma sağlar. Özel öznitelikler <xref:System.Attribute?displayProperty=nameWithType> öğesinden türetilmiş bir türden veya ondan türemelidir <xref:System.Attribute?displayProperty=nameWithType> .
 
 Aşağıdaki örnek bu kuralı ihlal ediyor. Sınıfından `NumericAttribute` türetilmeyen bir sınıfı tanımlar <xref:System.Attribute?displayProperty=nameWithType> . Derleyici hatası, sınıf tanımlandığında değil, yalnızca CLS uyumlu olmayan öznitelik uygulandığında oluşur.
 
@@ -533,7 +533,7 @@ Derleme zamanında derleyici, CLS uyumlu olarak kabul edilen uyumlu olmayan öğ
 
 Bileşen geliştiricileri, <xref:System.CLSCompliantAttribute> özniteliğini iki şekilde kullanabilir:
 
-- CLS uyumlu olan ve CLS uyumlu olmayan parçalar içeren bir bileşen tarafından açığa çıkarılan ortak arabirimin parçalarını tanımlamak için. Özniteliği belirli program öğelerini CLS uyumlu olarak işaretlemek için kullanıldığında, bu öğelerin .NET Framework hedef olan tüm diller ve araçlardan erişilebilir olmasını güvence altına alır.
+- CLS uyumlu olan ve CLS uyumlu olmayan parçalar içeren bir bileşen tarafından açığa çıkarılan ortak arabirimin parçalarını tanımlamak için. Özniteliği, belirli program öğelerini CLS uyumlu olarak işaretlemek için kullanıldığında, bu öğelerin .NET ' i hedefleyen tüm diller ve araçlardan erişilebilir olmasını güvence altına alır.
 
 - Bileşen kitaplığının ortak arabiriminin yalnızca CLS uyumlu program öğelerini kullanıma sunduğundan emin olmak için. Öğeler CLS uyumlu değilse, derleyiciler genellikle bir uyarı vermez.
 
@@ -571,7 +571,7 @@ Bir kitaplık yerine bir uygulama geliştiriyorsanız (yani, diğer uygulama gel
 
 ## <a name="cross-language-interoperability"></a>Diller Arası Birlikte Çalışabilirlik
 
-Dil bağımsızlığının birkaç olası anlamı vardır. Bu makalede, [Dil bağımsızlığı ve dilden bağımsız bileşenlerde](language-independence-and-language-independent-components.md)ele alınan bir anlamı, başka bir dilde yazılmış bir uygulamadan tek bir dilde yazılmış türleri sorunsuzca kullanmayı içerir. Bu makalenin konusu olan ikinci anlamı ise, birden çok dilde yazılmış kodu tek bir .NET Framework derlemesi olarak birleştirmeyi içerir.
+Dil bağımsızlığının birkaç olası anlamı vardır. Bu makalede, [Dil bağımsızlığı ve Language-Independent bileşenlerinde](language-independence-and-language-independent-components.md)ele alınan bir anlamı, başka bir dilde yazılmış bir uygulamadan tek bir dilde yazılmış türleri sorunsuzca kullanmayı içerir. Bu makalenin odaklanmasıyla ilgili ikinci anlamı, birden çok dilde yazılmış kodun tek bir .NET derlemesinde birleştirilmesiyle ilgilidir.
 
 Aşağıdaki örnekte, iki sınıf içeren Utilities.dll adlı bir sınıf kitaplığı oluşturarak ve platformlar arası birlikte çalışabilirlik gösterilmektedir `NumericLib` `StringLib` . `NumericLib`Sınıfı C# dilinde yazılır ve `StringLib` sınıf Visual Basic yazılır. Aşağıda `ToTitleCase` sınıfında tek bir üye, `StringLib`, içeren StringUtil.vb için kaynak kodu verilmiştir.
 

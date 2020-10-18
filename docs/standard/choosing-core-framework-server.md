@@ -1,14 +1,14 @@
 ---
-title: Sunucu uygulamaları için .NET 5 ve .NET Framework arasında seçim yapın
+title: Sunucu uygulamaları için .NET 5 ve .NET Framework arasında seçim yapma
 description: Bir sunucu uygulaması oluştururken hangi .NET uygulamasının kullanılması gerektiğine karar vermenize yardımcı olacak bir kılavuz.
 author: cartermp
 ms.date: 10/06/2020
-ms.openlocfilehash: 989a0f83968473523c3d77bed155d6841b240edc
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: d9dce0343f9d37e976472b818e896a5b0a661e76
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050500"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160457"
 ---
 # <a name="net-5-vs-net-framework-for-server-apps"></a>.NET 5 vs. Server uygulamaları için .NET Framework
 
@@ -92,6 +92,8 @@ Bazı .NET Framework teknolojileri .NET 5 sürümünde kullanılamaz. Aşağıda
 - İş akışı ile ilgili hizmetler: Windows Workflow Foundation (WF), Workflow Services (tek bir hizmette WCF + WF) ve WCF Veri Hizmetleri (eskiden "ADO.NET Data Services" olarak bilinirdi) yalnızca .NET Framework kullanılabilir.
 
 - Dil desteği: Visual Basic ve F # Şu anda .NET 5 ' te destekleniyor, ancak tüm proje türleri için desteklenmiyor. Desteklenen proje şablonlarının listesi için bkz. [DotNet New Için şablon seçenekleri](../core/tools/dotnet-new.md#arguments).
+
+Daha fazla bilgi için bkz. [.NET 5 ' te kullanılamayan .NET Framework teknolojileri](../core/porting/net-framework-tech-unavailable.md).
 
 ### <a name="platform-doesnt-support-net-5"></a>Platform .NET 5 ' i desteklemiyor
 

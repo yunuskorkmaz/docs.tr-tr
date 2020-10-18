@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: d6b155de0bb62f667ca76ec9454dec1466976a9b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 63990b7d37388057ff2cdb430d29878a1c7b39ba
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400415"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162368"
 ---
-# <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Aralık değişkeni adı ancak bağımsız değişken içermeyen bir basit veya tam addan gösterilebilir
+# <a name="bc36599-range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>BC36599: Range değişken adı yalnızca bağımsız değişken içermeyen basit veya tam bir addan çıkarsanamıyor
 
 Bir veya daha fazla bağımsız değişken alan bir programlama öğesi bir LINQ sorgusuna dahildir. Derleyici, bu programlama öğesinden bir Aralık değişkeni çıkarsanamıyor.
 

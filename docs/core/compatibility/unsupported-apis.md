@@ -1,25 +1,25 @@
 ---
-title: .NET Core 'da desteklenmeyen API 'Ler
+title: .NET Core ve .NET 5 + üzerinde desteklenmeyen API 'Ler
 titleSuffix: ''
-description: .NET Core üzerinde her zaman bir özel durum oluşturan .NET Framework hangi API 'Leri öğrenin.
-ms.date: 12/23/2019
-ms.openlocfilehash: 94f334d7e4b7daf407f489ba274172ced9eefa81
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+description: .NET API 'Lerin hangi .NET Core ve .NET 5,0 ve sonraki sürümlerinde her zaman bir istisna sağladığını öğrenin.
+ms.date: 10/13/2020
+ms.openlocfilehash: 0164ebff51de82d548a02f9fde754c1052a9c2b5
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414441"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159345"
 ---
-# <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core üzerinde her zaman özel durum oluşturan API 'Ler
+# <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>.NET Core ve .NET 5 + ' da her zaman özel durum oluşturan API 'Ler
 
-Aşağıdaki API 'Ler her zaman bir <xref:System.PlatformNotSupportedException> Platform alt kümesi üzerinde .NET Core üzerinde oluşturulur.
+Aşağıdaki API 'Ler her zaman bir <xref:System.PlatformNotSupportedException> Platform alt kümesi üzerinde .net 5,0 ve sonraki sürümlerinde (.NET Core 'un tüm sürümleri dahil) her zaman oluşturulur.
 
-Bu makale, etkilenen API üyelerini ad alanına göre düzenler.
+Bu makale, etkilenen API 'Leri ad alanına göre düzenler.
 
 > [!NOTE]
 >
-> - Bu makale, devam eden bir çalışmadır. .NET Core üzerinde özel durum oluşturan API 'lerin tamamen bir listesi değildir.
-> - Bu makale, .NET Core üzerinde throw ikili serileştirme için açık arabirim uygulamaları içermez. Daha fazla bilgi için bkz. [.NET Core 'Da ikili serileştirme](../../standard/serialization/binary-serialization.md#net-core).
+> - Bu makale, devam eden bir çalışmadır. .NET 5 + ' da özel durum oluşturan API 'lerin tamamen bir listesi değildir.
+> - Bu makalede, .NET 5 + ' de oluşturan ikili serileştirme için açık arabirim uygulamaları dahil değildir. Daha fazla bilgi için bkz. [.NET Core 'Da ikili serileştirme](../../standard/serialization/binary-serialization.md#net-core).
 
 ## <a name="system"></a>Sistem
 
