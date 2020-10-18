@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30766
 ms.assetid: 13918600-6087-40d7-8134-32aa9d3bfda4
-ms.openlocfilehash: 5e0f6dd2da404ed988af15fadadd8ecd4a491189
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1c57e1aaea2eb52133d37b782f8fa0ddd96943a9
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874060"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163408"
 ---
-# <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>' \<functionname> ' bildirilmemiş (akıllı cihaz/Visual Basic derleyici hatası)
+# <a name="bc30766-functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>BC30766: ' \<functionname> ' bildirilmemiş (akıllı cihaz/Visual Basic derleyici hatası)
 
-<`functionname`> bildirilmemiş. Dosya g/ç işlevselliği normalde `Microsoft.VisualBasic` ad alanında kullanılabilir, ancak .NET Compact Framework hedeflenen sürümü bunu desteklemez.  
-  
- **Hata kimliği:** BC30766  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-- Ad alanında tanımlanan işlevlerle dosya işlemleri gerçekleştirin `System.IO` .  
-  
+<`functionname`> bildirilmemiş. Dosya g/ç işlevselliği normalde `Microsoft.VisualBasic` ad alanında kullanılabilir, ancak .NET Compact Framework hedeflenen sürümü bunu desteklemez.
+
+ **Hata kimliği:** BC30766
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+- Ad alanında tanımlanan işlevlerle dosya işlemleri gerçekleştirin `System.IO` .
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO>

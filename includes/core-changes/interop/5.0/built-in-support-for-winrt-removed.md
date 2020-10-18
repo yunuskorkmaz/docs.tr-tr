@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d21b2e092d460fdfc367d0f490228ed44ad5c6cc
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 47c676122df4f0990949a7bfbcd7af8c6144d870
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365667"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160559"
 ---
 ### <a name="built-in-support-for-winrt-is-removed-from-net"></a>WinRT için yerleşik destek .NET 'ten kaldırılmıştır
 
@@ -29,9 +29,13 @@ Bu son değişiklik aşağıdaki nedenlerden dolayı yapılmıştır:
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-- [Microsoft. Windows. SDK. Contracts paketine](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts) başvuruları kaldırın ve [Microsoft.Windows.SDK.net paketine](https://www.nuget.org/packages/microsoft.windows.sdk.net)yönelik başvurularla değiştirin.
+- [Microsoft. Windows. SDK. Contracts paketine](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts)başvuruları kaldırın.  Bunun yerine, projenin özelliği aracılığıyla erişmek istediğiniz Windows API 'lerinin sürümünü belirtin `TargetFramework` .  Örnek:
 
-- .NET 5,0 ve sonraki sürümlerde WinRT API 'Leri ve türlerini oluşturmak veya özelleştirmek için [C#/wınrt](/windows/uwp/csharp-winrt/) araç zincirini kullanın.
+  ```xml
+  <TargetFramework>net5.0-windows10.0.19041</TargetFramework>
+  ```
+
+- .NET 5,0 ve üzeri sürümler için WinRT API 'Leri ve türleri oluşturmak veya özelleştirmek üzere [C#/wınrt](/windows/uwp/csharp-winrt/) araç zincirini kullanın.
 
 #### <a name="category"></a>Kategori
 

@@ -1,12 +1,20 @@
 - name: C# belgeleri
   href: index.yml
-- name: Kullanmaya başlayın
+- name: başlarken
   items:
-    - name: Genel Bakış
+    - name: C# diline ve .NET’e giriş
       displayName: get started
       href: getting-started/index.md
-    - name: C# diline ve .NET’e giriş
-      href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
+    - name: C# Turu
+      items:
+        - name: Giriş
+          href: tour-of-csharp/index.md
+        - name: Türler
+          href: tour-of-csharp/types.md
+        - name: Program yapı taşları
+          href: tour-of-csharp/program-building-blocks.md
+        - name: Ana dil alanları
+          href: tour-of-csharp/features.md
 - name: Öğreticiler
   items:
     - name: Genel Bakış
@@ -70,16 +78,6 @@
       href: tutorials/working-with-linq.md
     - name: Öznitelikleri Kullanma
       href: tutorials/attributes.md
-- name: C# Turu
-  items:
-    - name: Giriş
-      href: tour-of-csharp/index.md
-    - name: Türler
-      href: tour-of-csharp/types.md
-    - name: Program yapı taşları
-      href: tour-of-csharp/program-building-blocks.md
-    - name: Ana dil alanları
-      href: tour-of-csharp/features.md
 - name: C# yenilikleri
   items:
     - name: C# 9.0
@@ -217,7 +215,7 @@
       href: programming-guide/interop/index.md
     - name: Kodunuzu belgeleme
       href: codedoc.md
-    - name: Sürüm oluşturma
+    - name: Sürüm Oluşturma
       href: versioning.md
 - name: Nasıl yapılır C# makaleleri
   items:

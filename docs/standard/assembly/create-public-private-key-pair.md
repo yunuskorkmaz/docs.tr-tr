@@ -5,7 +5,7 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - key pairs for strong-named assemblies
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - cryptographic key pairs
 - snk files (key pair files)
 - public-private key pairs
@@ -16,25 +16,25 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 675871170e7fd4171f0fe09b04d1dbb8906beda4
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c42e98a7e27ded9a21445fae35ade843e834076a
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378560"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163499"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Nasıl yapılır: genel-özel anahtar çifti oluşturma
 
-Bir derlemeyi güçlü bir adla imzalamak için ortak/özel anahtar çiftiniz olmalıdır. Bu ortak ve özel şifreleme anahtarı çifti derleme sırasında, tanımlayıcı adlı bir derleme oluşturmak için kullanılır. [Tanımlayıcı ad Aracı (sn. exe)](../../framework/tools/sn-exe-strong-name-tool.md)kullanarak bir anahtar çifti oluşturabilirsiniz. Anahtar çifti dosyaları genellikle *. snk* uzantısına sahiptir.
+Bir derlemeyi güçlü bir adla imzalamak için ortak/özel anahtar çiftiniz olmalıdır. Bu ortak ve özel şifreleme anahtarı çifti derleme sırasında, tanımlayıcı adlı bir derleme oluşturmak için kullanılır. [Tanımlayıcı ad aracını (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md)kullanarak bir anahtar çifti oluşturabilirsiniz. Anahtar çifti dosyaları genellikle *. snk* uzantısına sahiptir.
 
 > [!NOTE]
-> Visual Studio 'da C# ve Visual Basic proje özellik sayfaları, var olan anahtar dosyaları seçmenize veya *sn. exe*' yi kullanmadan yeni anahtar dosyaları oluşturmanıza olanak sağlayan bir **imzalama** sekmesi içerir. Visual C++, var olan bir anahtar dosyasının konumunu, **Özellik sayfaları** penceresinin **yapılandırma özellikleri** bölümünün **bağlayıcı** bölümünde bulunan **Gelişmiş** Özellik sayfasında belirtebilirsiniz. <xref:System.Reflection.AssemblyKeyFileAttribute>Anahtar dosya çiftlerini tanımlamak için özniteliğinin kullanımı, Visual Studio 2005 ' den itibaren artık kullanılmıyor olarak yapılmıştır.
+> Visual Studio 'da C# ve Visual Basic proje özellik sayfaları, var olan anahtar dosyaları seçmenize veya *Sn.exe*kullanmadan yeni anahtar dosyaları oluşturmanıza olanak sağlayan bir **imzalama** sekmesi içerir. Visual C++, var olan bir anahtar dosyasının konumunu, **Özellik sayfaları** penceresinin **yapılandırma özellikleri** bölümünün **bağlayıcı** bölümünde bulunan **Gelişmiş** Özellik sayfasında belirtebilirsiniz. <xref:System.Reflection.AssemblyKeyFileAttribute>Anahtar dosya çiftlerini tanımlamak için özniteliğinin kullanımı, Visual Studio 2005 ' den itibaren artık kullanılmıyor olarak yapılmıştır.
 
 ## <a name="create-a-key-pair"></a>Anahtar çifti oluşturma
 
 Bir anahtar çifti oluşturmak için, komut isteminde aşağıdaki komutu yazın:
 
-**sn – k** \< *dosya adı*>
+**sn – k**\<*file name*>
 
 Bu komutta *dosya adı* , anahtar çiftini içeren çıkış dosyasının adıdır.
 
@@ -58,7 +58,7 @@ sn -p keypair.snk public.snk
 
 Anahtar çiftini oluşturduktan sonra, tanımlayıcı ad imzalama araçlarının bulabileceği dosyayı yerleştirmeniz gerekir.
 
-Bir derlemeyi tanımlayıcı bir adla imzalarken, [derleme Bağlayıcısı (al. exe)](../../framework/tools/al-exe-assembly-linker.md) , geçerli dizine ve çıkış dizinine göre anahtar dosyasını arar. Komut satırı derleyicileri kullanırken, anahtarı kod modüllerinizi içeren geçerli dizine kopyalamanız yeterlidir.
+Bir derlemeyi tanımlayıcı bir adla imzalarken, [derleme Bağlayıcısı (Al.exe)](../../framework/tools/al-exe-assembly-linker.md) geçerli dizine ve çıkış dizinine göre anahtar dosyasını arar. Komut satırı derleyicileri kullanırken, anahtarı kod modüllerinizi içeren geçerli dizine kopyalamanız yeterlidir.
 
 Visual Studio 'nun proje özelliklerinde **imzalama** sekmesi olmayan önceki bir sürümünü kullanıyorsanız, önerilen anahtar dosyası konumu aşağıdaki şekilde belirtilen dosya özniteliğine sahip proje dizinidir:
 

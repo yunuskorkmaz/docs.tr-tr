@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: b857a9ae7875a156179602cbe77558333d07b7b9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 290971a3173c59f08fbd279b6fffe3bcb618cb72
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874508"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160613"
 ---
-# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>'\<propertyname1>' varsayılan özelliği, '\<propertyname2>' içindeki '\<classname>' varsayılan özelliğiyle çakıştığından, 'Shadows' olarak bildirilmemelidir
+# <a name="bc40007-default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>BC40007: ' ' varsayılan özelliği, \<propertyname1> ' ' içindeki ' ' varsayılan özelliğiyle çakışıyor \<propertyname2> ve bu \<classname> nedenle ' Shadows ' olarak bildirilmelidir
 
-Bir özellik, temel sınıfta tanımlanan bir özellik ile aynı adla bildirilmiştir. Bu durumda, bu sınıftaki özelliğin temel sınıf özelliğini gölgelemelidir.  
-  
- Bu ileti bir uyarıdır. `Shadows` Varsayılan olarak varsayılır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
-  
- **Hata kimliği:** BC40007  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-- `Shadows`Bildirime anahtar sözcüğü ekleyin veya belirtilen özelliğin adını değiştirin.  
-  
+Bir özellik, temel sınıfta tanımlanan bir özellik ile aynı adla bildirilmiştir. Bu durumda, bu sınıftaki özelliğin temel sınıf özelliğini gölgelemelidir.
+
+ Bu ileti bir uyarıdır. `Shadows` Varsayılan olarak varsayılır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).
+
+ **Hata kimliği:** BC40007
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+- `Shadows`Bildirime anahtar sözcüğü ekleyin veya belirtilen özelliğin adını değiştirin.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Shadows](../modifiers/shadows.md)

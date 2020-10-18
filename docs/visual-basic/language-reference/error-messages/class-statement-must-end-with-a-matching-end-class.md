@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: d67f0e71dbdbf97420ec5b5ba4b6f06acfba1bd9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6889e97aad913f6911ce438892752542de0d10f0
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874619"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163200"
 ---
-# <a name="class-statement-must-end-with-a-matching-end-class"></a>'Class' deyimi eşleşen bir 'End Class' ile bitmelidir
+# <a name="bc30481-class-statement-must-end-with-a-matching-end-class"></a>BC30481: ' class ' ifadesinin eşleşen bir ' End Class ' ile bitmesi gerekir
 
-`Class` bir bloğu başlatmak için kullanılır `Class` ; Bu nedenle, bloğu sonlandıran eşleşen bir deyimle birlikte yalnızca bloğun başlangıcında görünebilirler `End Class` . Bir yedekli `Class` deyiminiz var veya kendi bloğundan sonlandırılamıyor `Class` `End Class` .  
-  
- **Hata kimliği:** BC30481  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-- Gereksiz deyimin yerini bulun ve kaldırın `Class` .  
-  
-- `Class`Bloğu eşleştirme ile sonuçlandırma `End Class` .  
-  
+`Class` bir bloğu başlatmak için kullanılır `Class` ; Bu nedenle, bloğu sonlandıran eşleşen bir deyimle birlikte yalnızca bloğun başlangıcında görünebilirler `End Class` . Bir yedekli `Class` deyiminiz var veya kendi bloğundan sonlandırılamıyor `Class` `End Class` .
+
+ **Hata kimliği:** BC30481
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+- Gereksiz deyimin yerini bulun ve kaldırın `Class` .
+
+- `Class`Bloğu eşleştirme ile sonuçlandırma `End Class` .
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [End \<keyword> ekstresi](../statements/end-keyword-statement.md)

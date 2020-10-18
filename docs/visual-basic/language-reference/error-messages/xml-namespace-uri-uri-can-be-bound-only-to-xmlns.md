@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: 4793c7282043edb46b3d2f77a0f0a955c43ab34c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1aec6ac0a354bfe7e0378a2e46a70a7161bf6d36
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870195"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163252"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>XML ad alanı URI `http://www.w3.org/XML/1998/namespace` ; yalnızca ' xmlns ' öğesine bağlanabilir
+# <a name="bc31183-xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>BC31183: XML ad alanı URI `http://www.w3.org/XML/1998/namespace` ; yalnızca ' xmlns ' öğesine bağlanabilir
 
-URI, `http://www.w3.org/XML/1998/namespace` BIR XML ad alanı bildiriminde kullanılır. Bu URI ayrılmış bir ad alanıdır ve bir XML ad alanı bildirimine dahil edilemez.  
-  
- **Hata kimliği:** BC31183  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-XML ad alanı bildirimini kaldırın veya URI `http://www.w3.org/XML/1998/namespace` 'yi geçerli bir ad alanı URI 'si ile değiştirin.  
-  
+URI, `http://www.w3.org/XML/1998/namespace` BIR XML ad alanı bildiriminde kullanılır. Bu URI ayrılmış bir ad alanıdır ve bir XML ad alanı bildirimine dahil edilemez.
+
+ **Hata kimliği:** BC31183
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+XML ad alanı bildirimini kaldırın veya URI `http://www.w3.org/XML/1998/namespace` 'yi geçerli bir ad alanı URI 'si ile değiştirin.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Imports Deyimi (XML Ad Alanı)](../statements/imports-statement-xml-namespace.md)

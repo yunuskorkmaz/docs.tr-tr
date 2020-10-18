@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 2c5a65443dc16a600e25fcf6dfd11c4597b3a086
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: cbe77bab3e4f8bf2094c70c1c16d95ee897c729e
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873948"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163018"
 ---
-# <a name="initializer-expected"></a>Başlatıcı bekleniyor
+# <a name="bc30996-initializer-expected"></a>BC30996: Başlatıcı bekleniyor
 
-Aşağıdaki örnekte gösterildiği gibi, başlatma listesinin boş olduğu bir nesne Başlatıcısı kullanarak bir sınıfın örneğini bildirmeye çalıştınız.  
-  
- `' Not valid.`  
-  
- `' Dim aStudent As New Student With {}`  
-  
- Aşağıdaki örnekte gösterildiği gibi, en az bir alan veya özellik Başlatıcı listesinde başlatılmalıdır.  
-  
- `Dim aStudent As New Student With {.year = "Senior"}`  
-  
- **Hata kimliği:** BC30996  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-1. Başlatıcıdaki en az bir alanı veya özelliği başlatın ya da bir nesne Başlatıcısı kullanmayın.  
-  
+Aşağıdaki örnekte gösterildiği gibi, başlatma listesinin boş olduğu bir nesne Başlatıcısı kullanarak bir sınıfın örneğini bildirmeye çalıştınız.
+
+ `' Not valid.`
+
+ `' Dim aStudent As New Student With {}`
+
+ Aşağıdaki örnekte gösterildiği gibi, en az bir alan veya özellik Başlatıcı listesinde başlatılmalıdır.
+
+ `Dim aStudent As New Student With {.year = "Senior"}`
+
+ **Hata kimliği:** BC30996
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+- Başlatıcıdaki en az bir alanı veya özelliği başlatın ya da bir nesne Başlatıcısı kullanmayın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nesne Başlatıcıları: Adlandırılmış ve Anonim Türler](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

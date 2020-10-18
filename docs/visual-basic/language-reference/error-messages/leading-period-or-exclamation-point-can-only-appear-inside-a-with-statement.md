@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30157
 ms.assetid: 70daaee1-14f9-45b7-9f30-53794310b95e
-ms.openlocfilehash: c39339a49c4aad4ba643facc2372333e7379ffa7
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 4ff273d5930fe58a5bccf0f4f4c10e971d777d01
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873847"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162511"
 ---
-# <a name="leading--or--can-only-appear-inside-a-with-statement"></a>Baştaki '.' veya '!' yalnızca 'With' deyimi içinde bulunabilir
+# <a name="bc30157-leading--or--can-only-appear-inside-a-with-statement"></a>BC30157: baştaki '. ' veya '! ' yalnızca ' with ' ifadesinin içinde bulunabilir
 
-Bir blok içinde olmayan bir nokta (.) veya ünlem işareti (!) `With` sol tarafta bir ifade olmadan meydana gelir. Üye erişimi ( `.` ) ve sözlük üye erişimi ( `!` ), üyeyi içeren öğeyi belirten bir ifade gerektirir. Bu, erişimcinin hemen solunda veya `With` üye erişimini içeren bir bloğun hedefi olarak görünmelidir.  
-  
- **Hata kimliği:** BC30157  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-1. `With`Bloğun doğru biçimlendirildiğinden emin olun.  
-  
-2. `With`Blok yoksa, üyeyi içeren tanımlanmış bir öğe için değerlendirilen erişimcinin soluna bir ifade ekleyin.  
-  
+Bir blok içinde olmayan bir nokta (.) veya ünlem işareti (!) `With` sol tarafta bir ifade olmadan meydana gelir. Üye erişimi ( `.` ) ve sözlük üye erişimi ( `!` ), üyeyi içeren öğeyi belirten bir ifade gerektirir. Bu, erişimcinin hemen solunda veya `With` üye erişimini içeren bir bloğun hedefi olarak görünmelidir.
+
+ **Hata kimliği:** BC30157
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+1. `With`Bloğun doğru biçimlendirildiğinden emin olun.
+
+2. `With`Blok yoksa, üyeyi içeren tanımlanmış bir öğe için değerlendirilen erişimcinin soluna bir ifade ekleyin.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Koddaki Özel Karakterler](../../programming-guide/program-structure/special-characters-in-code.md)

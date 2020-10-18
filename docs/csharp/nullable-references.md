@@ -3,12 +3,12 @@ title: Boş değer atanabilir başvuru türleri
 description: Bu makalede, C# 8,0 ' ye eklenen null yapılabilir başvuru türlerine ilişkin bir genel bakış sunulmaktadır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 6d068760805a21e41712a4f70735bef41ce2052f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9c253d02c287d7a113536ac148b352486d450cc2
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446678"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160886"
 ---
 # <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
@@ -124,6 +124,84 @@ Derleyici, null olabilen bir uyarı bağlamında **null** olabilecek bir değiş
 ## <a name="attributes-describe-apis"></a>Öznitelikler API 'Leri tanımlıyor
 
 API 'lere, bağımsız değişkenlerin veya dönüş değerlerinin null olması veya ne zaman null olamaz hakkında daha fazla bilgi sağlayan öznitelikler eklersiniz. Bu öznitelikler hakkında daha fazla bilgiyi [null yapılabilir öznitelikleri](language-reference/attributes/nullable-analysis.md)kapsayan dil başvurusunda bulabilirsiniz. Bu öznitelikler geçerli ve gelecek sürümler üzerinden .NET kitaplıklarına ekleniyor. En yaygın kullanılan API 'Ler ilk olarak güncelleştiriliyor.
+
+## <a name="known-pitfalls"></a>Bilinen Süde
+
+Başvuru türleri içeren diziler ve yapılar, null yapılabilir başvuru türleri özelliği olarak bilinir.
+
+### <a name="structs"></a>Yapılar
+
+Null yapılamayan başvuru türleri içeren bir struct, `default` herhangi bir uyarı olmadan bu için atamaya izin verir. Aşağıdaki örneği inceleyin:
+
+```csharp
+using System;
+
+#nullable enable
+
+public struct Student
+{
+    public string FirstName;
+    public string? MiddleName;
+    public string LastName;
+}
+
+public static class Program
+{
+    public static void PrintStudent(Student student)
+    {
+        Console.WriteLine($"First name: {student.FirstName.ToUpper()}");
+        Console.WriteLine($"Middle name: {student.MiddleName.ToUpper()}");
+        Console.WriteLine($"Last name: {student.LastName.ToUpper()}");
+    }
+
+    public static void Main() => PrintStudent(default);
+}
+```
+
+Yukarıdaki örnekte, null `PrintStudent(default)` olamayan başvuru türleri sırasında hiçbir uyarı yoktur `FirstName` ve `LastName` null olur.
+
+Diğer bir daha yaygın durum, genel yapılar ile ilgilenirken olur. Aşağıdaki örneği inceleyin:
+
+```csharp
+#nullable enable
+
+public struct Foo<T>
+{
+    public T Bar { get; set; }
+}
+
+public static class Program
+{
+    public static void Main()
+    {
+        string s = default(Foo<string>).Bar;
+    }
+}
+```
+
+Önceki örnekte, özelliği `Bar` `null` çalışma zamanında olacak ve herhangi bir uyarı olmadan null yapılamayan dizeye atanır.
+
+### <a name="arrays"></a>Diziler
+
+Diziler aynı zamanda null yapılabilir başvuru türlerinde bilinen bir Süde bulunur. Uyarı üretmeyen aşağıdaki örneği göz önünde bulundurun:
+
+```csharp
+using System;
+
+#nullable enable
+
+public static class Program
+{
+    public static void Main()
+    {
+        string[] values = new string[10];
+        string s = values[0];
+        Console.WriteLine(s.ToUpper());
+    }
+}
+```
+
+Önceki örnekte, dizinin bildirimi null yapılamayan dizeler olduğunu gösterirken, öğeleri tamamen null olarak başlatılır. Sonra, değişkenine `s` null değer atanır (dizinin ilk öğesi). Son olarak, değişken başvurusu `s` bir çalışma zamanı özel durumuna neden olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

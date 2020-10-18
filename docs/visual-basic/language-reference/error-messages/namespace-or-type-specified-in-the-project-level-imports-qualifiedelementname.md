@@ -7,37 +7,37 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: e0be18509d0d4b1b4f5eadfadce7a0785e9309f0
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 54ee046cda998be8bd70e531918d6ab2a67d0494
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871502"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160125"
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Proje düzeyi Imports '\<qualifiedelementname>' içinde belirtilen ad alanı veya tür ortak üye içermiyor veya bulunamıyor
+# <a name="bc40057-namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>BC40057: proje düzeyi Imports ' ' içinde belirtilen ad alanı veya tür \<qualifiedelementname> ortak üye içermiyor veya bulunamıyor
 
-Proje düzeyi Imports ' ' içinde belirtilen ad alanı veya tür \<qualifiedelementname> ortak üye içermiyor veya bulunamıyor. Ad alanının veya türün tanımlandığından ve en az bir ortak üye içerdiğinden emin olun. Diğer ad adının başka diğer adlar içermediğinden emin olun.  
-  
- Projenin içeri aktarma özelliği, bulunamayan veya hiçbir üye tanımlamayan bir kapsayan öğe belirtiyor `Public` .  
-  
- *Kapsayan bir öğe* bir Namespace, Class, Structure, Module, Interface veya Enumeration olabilir. Kapsayan öğe, değişkenler, yordamlar veya içerilen diğer öğeler gibi Üyeler içerir.  
-  
- İçeri aktarma amacı, kodunuzun ad alanına veya tür üyelerine, bunları nitelemek zorunda kalmadan erişmesine izin versağlamaktır. Projenizin ad alanına veya türe bir başvuru eklemesi de gerekebilir. Daha fazla bilgi için, bkz. "Içerilen öğeleri Içeri aktarma", [belirtilen öğelerin başvuruları](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
-  
- Derleyici belirtilen içeren öğeyi bulamazsa, onu kullanan başvuruları çözemez. Öğe bulunursa ancak öğe hiçbir üye sunmadığında `Public` , hiçbir başvuru başarılı olmaz. Her iki durumda da, öğesini içeri aktarmak anlamlı değildir.  
-  
- İçeri aktarılacak öğeleri belirtmek için **Proje tasarımcısını** kullanın. **Başvurular** sayfasının **içeri aktarılan ad alanları** bölümünü kullanın. **Proje tasarımcısına** , **Çözüm Gezgini**içindeki **projem** simgesine çift tıklayarak ulaşabilirsiniz.  
-  
- **Hata kimliği:** BC40057  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-1. **Proje tasarımcısını** açın ve **başvuru** sayfasına geçin.  
-  
-2. **Içeri aktarılan ad alanları** bölümünde, içeren öğenin projenizden erişilebilir olduğunu doğrulayın.  
-  
-3. Kapsayan öğenin en az bir üye gösterdiğinden emin olun `Public` .  
-  
+Proje düzeyi Imports ' ' içinde belirtilen ad alanı veya tür \<qualifiedelementname> ortak üye içermiyor veya bulunamıyor. Ad alanının veya türün tanımlandığından ve en az bir ortak üye içerdiğinden emin olun. Diğer ad adının başka diğer adlar içermediğinden emin olun.
+
+ Projenin içeri aktarma özelliği, bulunamayan veya hiçbir üye tanımlamayan bir kapsayan öğe belirtiyor `Public` .
+
+ *Kapsayan bir öğe* bir Namespace, Class, Structure, Module, Interface veya Enumeration olabilir. Kapsayan öğe, değişkenler, yordamlar veya içerilen diğer öğeler gibi Üyeler içerir.
+
+ İçeri aktarma amacı, kodunuzun ad alanına veya tür üyelerine, bunları nitelemek zorunda kalmadan erişmesine izin versağlamaktır. Projenizin ad alanına veya türe bir başvuru eklemesi de gerekebilir. Daha fazla bilgi için, bkz. "Içerilen öğeleri Içeri aktarma", [belirtilen öğelerin başvuruları](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+
+ Derleyici belirtilen içeren öğeyi bulamazsa, onu kullanan başvuruları çözemez. Öğe bulunursa ancak öğe hiçbir üye sunmadığında `Public` , hiçbir başvuru başarılı olmaz. Her iki durumda da, öğesini içeri aktarmak anlamlı değildir.
+
+ İçeri aktarılacak öğeleri belirtmek için **Proje tasarımcısını** kullanın. **Başvurular** sayfasının **içeri aktarılan ad alanları** bölümünü kullanın. **Proje tasarımcısına** , **Çözüm Gezgini**içindeki **projem** simgesine çift tıklayarak ulaşabilirsiniz.
+
+ **Hata kimliği:** BC40057
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+1. **Proje tasarımcısını** açın ve **başvuru** sayfasına geçin.
+
+2. **Içeri aktarılan ad alanları** bölümünde, içeren öğenin projenizden erişilebilir olduğunu doğrulayın.
+
+3. Kapsayan öğenin en az bir üye gösterdiğinden emin olun `Public` .
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)

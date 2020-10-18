@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
-ms.openlocfilehash: 3db6a4b15444d8cfab264d41fb8395ec8679dead
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 134e849c8cafe489f939e60acca4e82e3b0cbe6e
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871239"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162407"
 ---
-# <a name="overflow-visual-basic-error"></a>Taşma (Visual Basic Hatası)
+# <a name="bc30036-overflow-visual-basic-error"></a>BC30036: overflow (Visual Basic hatası)
 
-Sabit değer, atandığı veri türü sınırlarının dışında bir değeri temsil eder.  
-  
- **Hata kimliği:** BC30036  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-- Hedef veri türü için değer aralığına başvurun ve sabit değeri bu aralığa uyacak şekilde yeniden yazın.  
-  
+Sabit değer, atandığı veri türü sınırlarının dışında bir değeri temsil eder.
+
+ **Hata kimliği:** BC30036
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+- Hedef veri türü için değer aralığına başvurun ve sabit değeri bu aralığa uyacak şekilde yeniden yazın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri türleri](../data-types/index.md)

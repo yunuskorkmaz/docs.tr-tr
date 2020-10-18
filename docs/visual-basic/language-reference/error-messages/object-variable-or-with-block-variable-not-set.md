@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 0264a4235a056c93edb703ec2ef70e7124e0df4e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5eff7622ce2a35cf2846c5141cede98ea033d708
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873630"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159891"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Nesne değişkeni veya With bloğu değişkeni ayarlanmamış
 
-Geçersiz bir nesne değişkenine başvuruluyor.   Bu hata, birkaç nedenden dolayı oluşabilir:
+Geçersiz bir nesne değişkenine başvuruluyor. Bu hata, birkaç nedenden dolayı oluşabilir:
 
 - Bir değişken, bir tür belirtilmeden bildirildi. Bir değişken bir tür belirtilmeden bildirilirse, varsayılan olarak yazın `Object` .
 

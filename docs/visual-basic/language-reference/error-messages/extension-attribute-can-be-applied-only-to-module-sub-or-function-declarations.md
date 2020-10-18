@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: 9b8f49c498699a8f7d1c4b329e82258501aa0c47
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bd4d14721b93800831dbce897535b4f5956fe9c7
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363104"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160756"
 ---
-# <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>'Extension' özniteliği yalnızca 'Module', 'Sub' veya 'Function' bildirimlerine uygulanabilir
+# <a name="bc36550-extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>BC36550: ' Extension ' özniteliği yalnızca ' Module ', ' Sub ' veya ' function ' bildirimlerine uygulanabilir
 
 Visual Basic bir veri türünü genişletmenin tek yolu standart bir modül içinde bir genişletme yöntemi tanımlamaktır. Genişletme yöntemi bir `Sub` yordam veya `Function` yordam olabilir. Tüm genişletme yöntemleri, ad alanından uzantı özniteliğiyle işaretlenmelidir `<Extension()>` <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> . İsteğe bağlı olarak, bir genişletme yöntemi içeren bir modül aynı şekilde işaretlenebilir. Uzantı özniteliğinin başka bir kullanımı geçerli değil.
 
@@ -47,5 +47,5 @@ End Namespace
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özniteliklere genel bakış](../../programming-guide/concepts/attributes/index.md)
-- [Uzantı yöntemleri](../../programming-guide/language-features/procedures/extension-methods.md)
+- [Uzantı Metotları](../../programming-guide/language-features/procedures/extension-methods.md)
 - [Module Deyimi](../statements/module-statement.md)
