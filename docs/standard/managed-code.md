@@ -4,18 +4,18 @@ description: Yönetilen kodun, yürütmesi, ortak dil çalışma zamanı (CLR) o
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 2d89fd48e4c05dc7ec7c27846a3580ee36b1886f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 950dd5c32663b0716247c2a31a2f729fcf85f97b
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290090"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163109"
 ---
 # <a name="what-is-managed-code"></a>“Yönetilen kod” nedir?
 
-.NET Framework ile çalışırken, genellikle "yönetilen kod" terimiyle karşılaşırsınız. Bu belgede, bu terimin ne anlama geldiğini ve bunun etrafında ek bilgiler açıklanmaktadır.
+.NET ile çalışırken, genellikle "yönetilen kod" terimiyle karşılaşırsınız. Bu belgede, bu terimin ne anlama geldiğini ve bunun etrafında ek bilgiler açıklanmaktadır.
 
-Çok basit bir şekilde koymak için, yönetilen kod yalnızca bir çalışma zamanı tarafından yönetilen kod olur. Bu durumda, söz konusu çalışma zamanına uygulamadan bağımsız olarak **ortak dil çalışma zamanı** veya clr adı verilir ([mono](https://www.mono-project.com/) veya .NET Framework veya .NET Core). CLR, yönetilen kodu alma, makine kodunda derleme ve daha sonra yürütme aşamasında olduğundan ücretsizdir. Bunun üzerine, çalışma zamanı otomatik bellek yönetimi, güvenlik sınırları, tür güvenliği vb. gibi çeşitli önemli hizmetler sağlar.
+Çok basit bir şekilde koymak için, yönetilen kod yalnızca bir çalışma zamanı tarafından yönetilen kod olur. Bu durumda, söz konusu çalışma zamanına uygulamadan bağımsız olarak **ortak dil çalışma zamanı** veya clr adı verilir (örneğin, [mono](https://www.mono-project.com/), .NET Framework veya .NET Core/. NET 5 +). CLR, yönetilen kodu alma, makine kodunda derleme ve daha sonra yürütme aşamasında olduğundan ücretsizdir. Bunun üzerine, çalışma zamanı otomatik bellek yönetimi, güvenlik sınırları, tür güvenliği vb. gibi çeşitli önemli hizmetler sağlar.
 
 Bunu, "yönetilmeyen kod" olarak da adlandırılan bir C/C++ programını çalıştırdığınız şekilde kontrast. Yönetilmeyen dünyada, programcı çok sayıda her şeyin üzerinden ücretlendirilir. Gerçek program temelde, işletim sisteminin (OS) belleğe yüklediği ve başladığı bir ikili dosya olur. Bellek yönetiminden güvenlik 'e kadar olan diğer her şey programcı 'nin bir yükünden oluşur.
 
@@ -37,6 +37,6 @@ Buna benzer şekilde C#, yürütmenin CLR tarafından yönetilmediği bir kod pa
 
 ## <a name="more-resources"></a>Diğer kaynaklar
 
-* [.NET Framework'e Genel Bakış](../framework/get-started/overview.md)
+* [.NET Framework’e Genel Bakış](../framework/get-started/overview.md)
 * [Güvenli Olmayan Kod ve İşaretçiler](../csharp/programming-guide/unsafe-code-pointers/index.md)
 * [Native ile birlikte çalışma](./native-interop/index.md)
