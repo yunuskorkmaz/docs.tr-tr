@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
-ms.openlocfilehash: 3db6a4b15444d8cfab264d41fb8395ec8679dead
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 134e849c8cafe489f939e60acca4e82e3b0cbe6e
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871239"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162407"
 ---
-# <a name="overflow-visual-basic-error"></a><span data-ttu-id="e29ce-102">Taşma (Visual Basic Hatası)</span><span class="sxs-lookup"><span data-stu-id="e29ce-102">Overflow (Visual Basic Error)</span></span>
+# <a name="bc30036-overflow-visual-basic-error"></a><span data-ttu-id="c320c-102">BC30036: overflow (Visual Basic hatası)</span><span class="sxs-lookup"><span data-stu-id="c320c-102">BC30036: Overflow (Visual Basic Error)</span></span>
 
-<span data-ttu-id="e29ce-103">Sabit değer, atandığı veri türü sınırlarının dışında bir değeri temsil eder.</span><span class="sxs-lookup"><span data-stu-id="e29ce-103">A literal represents a value outside the limits of the data type to which it is being assigned.</span></span>  
-  
- <span data-ttu-id="e29ce-104">**Hata kimliği:** BC30036</span><span class="sxs-lookup"><span data-stu-id="e29ce-104">**Error ID:** BC30036</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="e29ce-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="e29ce-105">To correct this error</span></span>  
-  
-- <span data-ttu-id="e29ce-106">Hedef veri türü için değer aralığına başvurun ve sabit değeri bu aralığa uyacak şekilde yeniden yazın.</span><span class="sxs-lookup"><span data-stu-id="e29ce-106">Consult the value range for the target data type and rewrite the literal to conform to that range.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e29ce-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e29ce-107">See also</span></span>
+<span data-ttu-id="c320c-103">Sabit değer, atandığı veri türü sınırlarının dışında bir değeri temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c320c-103">A literal represents a value outside the limits of the data type to which it is being assigned.</span></span>
 
-- [<span data-ttu-id="e29ce-108">Veri türleri</span><span class="sxs-lookup"><span data-stu-id="e29ce-108">Data Types</span></span>](../data-types/index.md)
+ <span data-ttu-id="c320c-104">**Hata kimliği:** BC30036</span><span class="sxs-lookup"><span data-stu-id="c320c-104">**Error ID:** BC30036</span></span>
+
+## <a name="to-correct-this-error"></a><span data-ttu-id="c320c-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="c320c-105">To correct this error</span></span>
+
+- <span data-ttu-id="c320c-106">Hedef veri türü için değer aralığına başvurun ve sabit değeri bu aralığa uyacak şekilde yeniden yazın.</span><span class="sxs-lookup"><span data-stu-id="c320c-106">Consult the value range for the target data type and rewrite the literal to conform to that range.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="c320c-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c320c-107">See also</span></span>
+
+- [<span data-ttu-id="c320c-108">Veri türleri</span><span class="sxs-lookup"><span data-stu-id="c320c-108">Data Types</span></span>](../data-types/index.md)

@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
-ms.openlocfilehash: 8c80429db618e1bcadce1a58a6514d625f0b3cf1
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 107936aa969690d0cc9fd4a2605cfceea31eeca8
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870227"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161419"
 ---
-# <a name="value-of-type-type1-cannot-be-converted-to-type2"></a><span data-ttu-id="f83a2-102">'type1' türünün değeri 'type2' olarak dönüştürülemez</span><span class="sxs-lookup"><span data-stu-id="f83a2-102">Value of type 'type1' cannot be converted to 'type2'</span></span>
+# <a name="bc31194-value-of-type-type1-cannot-be-converted-to-type2"></a><span data-ttu-id="8e8d9-102">BC31194: ' type1 ' türündeki değer ' type2 ' olarak dönüştürülemez</span><span class="sxs-lookup"><span data-stu-id="8e8d9-102">BC31194: Value of type 'type1' cannot be converted to 'type2'</span></span>
 
-<span data-ttu-id="f83a2-103">' Type1 ' türünün değeri ' type2 ' olarak dönüştürülemez.</span><span class="sxs-lookup"><span data-stu-id="f83a2-103">Value of type 'type1' cannot be converted to 'type2'.</span></span> <span data-ttu-id="f83a2-104">' ' Öğesinin ilk öğesinin dize değerini almak için ' Value ' özelliğini kullanabilirsiniz \<parentElement> .</span><span class="sxs-lookup"><span data-stu-id="f83a2-104">You can use the 'Value' property to get the string value of the first element of '\<parentElement>'.</span></span>  
-  
- <span data-ttu-id="f83a2-105">Bir XML sabit değerini örtük olarak belirli bir türe atama girişiminde bulunuldu.</span><span class="sxs-lookup"><span data-stu-id="f83a2-105">An attempt has been made to implicitly cast an XML literal to a specific type.</span></span> <span data-ttu-id="f83a2-106">XML sabit değeri örtük olarak belirtilen türe atanamaz.</span><span class="sxs-lookup"><span data-stu-id="f83a2-106">The XML literal cannot be implicitly cast to the specified type.</span></span>  
-  
- <span data-ttu-id="f83a2-107">**Hata kimliği:** BC31194</span><span class="sxs-lookup"><span data-stu-id="f83a2-107">**Error ID:** BC31194</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="f83a2-108">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="f83a2-108">To correct this error</span></span>  
-  
-- <span data-ttu-id="f83a2-109">`Value`Değeri olarak başvurmak IÇIN XML sabit değerinin özelliğini kullanın `String` .</span><span class="sxs-lookup"><span data-stu-id="f83a2-109">Use the `Value` property of the XML literal to reference its value as a `String`.</span></span> <span data-ttu-id="f83a2-110">`CType` <xref:System.Convert> Değeri belirtilen tür olarak atamak için işlevi, başka bir tür dönüştürme işlevini veya sınıfını kullanın.</span><span class="sxs-lookup"><span data-stu-id="f83a2-110">Use the `CType` function, another type conversion function, or the <xref:System.Convert> class to cast the value as the specified type.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f83a2-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f83a2-111">See also</span></span>
+<span data-ttu-id="8e8d9-103">' Type1 ' türünün değeri ' type2 ' olarak dönüştürülemez.</span><span class="sxs-lookup"><span data-stu-id="8e8d9-103">Value of type 'type1' cannot be converted to 'type2'.</span></span> <span data-ttu-id="8e8d9-104">' ' Öğesinin ilk öğesinin dize değerini almak için ' Value ' özelliğini kullanabilirsiniz \<parentElement> .</span><span class="sxs-lookup"><span data-stu-id="8e8d9-104">You can use the 'Value' property to get the string value of the first element of '\<parentElement>'.</span></span>
+
+ <span data-ttu-id="8e8d9-105">Bir XML sabit değerini örtük olarak belirli bir türe atama girişiminde bulunuldu.</span><span class="sxs-lookup"><span data-stu-id="8e8d9-105">An attempt has been made to implicitly cast an XML literal to a specific type.</span></span> <span data-ttu-id="8e8d9-106">XML sabit değeri örtük olarak belirtilen türe atanamaz.</span><span class="sxs-lookup"><span data-stu-id="8e8d9-106">The XML literal cannot be implicitly cast to the specified type.</span></span>
+
+ <span data-ttu-id="8e8d9-107">**Hata kimliği:** BC31194</span><span class="sxs-lookup"><span data-stu-id="8e8d9-107">**Error ID:** BC31194</span></span>
+
+## <a name="to-correct-this-error"></a><span data-ttu-id="8e8d9-108">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="8e8d9-108">To correct this error</span></span>
+
+- <span data-ttu-id="8e8d9-109">`Value`Değeri olarak başvurmak IÇIN XML sabit değerinin özelliğini kullanın `String` .</span><span class="sxs-lookup"><span data-stu-id="8e8d9-109">Use the `Value` property of the XML literal to reference its value as a `String`.</span></span> <span data-ttu-id="8e8d9-110">`CType` <xref:System.Convert> Değeri belirtilen tür olarak atamak için işlevi, başka bir tür dönüştürme işlevini veya sınıfını kullanın.</span><span class="sxs-lookup"><span data-stu-id="8e8d9-110">Use the `CType` function, another type conversion function, or the <xref:System.Convert> class to cast the value as the specified type.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="8e8d9-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8e8d9-111">See also</span></span>
 
 - <xref:System.Convert>
-- [<span data-ttu-id="f83a2-112">Tür Dönüştürme İşlevleri</span><span class="sxs-lookup"><span data-stu-id="f83a2-112">Type Conversion Functions</span></span>](../functions/type-conversion-functions.md)
-- [<span data-ttu-id="f83a2-113">XML Değişmez Değerleri</span><span class="sxs-lookup"><span data-stu-id="f83a2-113">XML Literals</span></span>](../xml-literals/index.md)
-- [<span data-ttu-id="f83a2-114">XML</span><span class="sxs-lookup"><span data-stu-id="f83a2-114">XML</span></span>](../../programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="8e8d9-112">Tür Dönüştürme İşlevleri</span><span class="sxs-lookup"><span data-stu-id="8e8d9-112">Type Conversion Functions</span></span>](../functions/type-conversion-functions.md)
+- [<span data-ttu-id="8e8d9-113">XML Değişmez Değerleri</span><span class="sxs-lookup"><span data-stu-id="8e8d9-113">XML Literals</span></span>](../xml-literals/index.md)
+- [<span data-ttu-id="8e8d9-114">XML</span><span class="sxs-lookup"><span data-stu-id="8e8d9-114">XML</span></span>](../../programming-guide/language-features/xml/index.md)
