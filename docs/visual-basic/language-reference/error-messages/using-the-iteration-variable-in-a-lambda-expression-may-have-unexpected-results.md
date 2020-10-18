@@ -7,83 +7,83 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: e7975dc767ae652359c904271d6610be34e4cb80
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d0deea94084565ea91debe2b6db30def4cd9e00e
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870246"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161497"
 ---
-# <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a><span data-ttu-id="647ff-102">Lambda ifadesinde yineleme değişkeni kullanılması beklenmeyen sonuçlara neden olabilir</span><span class="sxs-lookup"><span data-stu-id="647ff-102">Using the iteration variable in a lambda expression may have unexpected results</span></span>
+# <a name="bc42324-using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a><span data-ttu-id="0eff8-102">BC42324: bir lambda ifadesinde yineleme değişkeni kullanılması beklenmeyen sonuçlara neden olabilir</span><span class="sxs-lookup"><span data-stu-id="0eff8-102">BC42324: Using the iteration variable in a lambda expression may have unexpected results</span></span>
 
-<span data-ttu-id="647ff-103">Lambda ifadesinde yineleme değişkeni kullanılması beklenmeyen sonuçlara neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="647ff-103">Using the iteration variable in a lambda expression may have unexpected results.</span></span> <span data-ttu-id="647ff-104">Bunun yerine, döngü içinde bir yerel değişken oluşturun ve bunu yineleme değişkeninin değerine atayın.</span><span class="sxs-lookup"><span data-stu-id="647ff-104">Instead, create a local variable within the loop and assign it the value of the iteration variable.</span></span>  
-  
- <span data-ttu-id="647ff-105">Bu uyarı, döngü içinde belirtilen bir lambda ifadesinde bir döngü yineleme değişkeni kullandığınızda görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="647ff-105">This warning appears when you use a loop iteration variable in a lambda expression that is declared inside the loop.</span></span> <span data-ttu-id="647ff-106">Örneğin, aşağıdaki örnek uyarının görünmesine neden olur.</span><span class="sxs-lookup"><span data-stu-id="647ff-106">For example, the following example causes the warning to appear.</span></span>  
-  
-```vb  
-For i As Integer = 1 To 10  
-    ' The warning is given for the use of i.  
-    Dim exampleFunc As Func(Of Integer) = Function() i  
-Next  
-```  
-  
- <span data-ttu-id="647ff-107">Aşağıdaki örnek, gerçekleşebilecek beklenmeyen sonuçları gösterir.</span><span class="sxs-lookup"><span data-stu-id="647ff-107">The following example shows the unexpected results that might occur.</span></span>  
-  
-```vb  
-Module Module1  
-    Sub Main()  
-        Dim array1 As Func(Of Integer)() = New Func(Of Integer)(4) {}  
-  
-        For i As Integer = 0 To 4  
-            array1(i) = Function() i  
-        Next  
-  
-        For Each funcElement In array1  
-            System.Console.WriteLine(funcElement())  
-        Next  
-  
-    End Sub  
-End Module  
-```  
-  
- <span data-ttu-id="647ff-108">`For`Döngü, her biri döngü yineleme değişkeninin değerini döndüren bir lambda ifadeleri dizisi oluşturur `i` .</span><span class="sxs-lookup"><span data-stu-id="647ff-108">The `For` loop creates an array of lambda expressions, each of which returns the value of the loop iteration variable `i`.</span></span> <span data-ttu-id="647ff-109">Lambda ifadeleri `For Each` döngüde değerlendirildiğinde, döngüde art arda gelen değerleri 0, 1, 2, 3 ve 4 ' ü görmeyi bekleyebilir `i` `For` .</span><span class="sxs-lookup"><span data-stu-id="647ff-109">When the lambda expressions are evaluated in the `For Each` loop, you might expect to see 0, 1, 2, 3, and 4 displayed, the successive values of `i` in the `For` loop.</span></span> <span data-ttu-id="647ff-110">Bunun yerine, en son `i` beş kez görüntülenmiş değeri görürsünüz:</span><span class="sxs-lookup"><span data-stu-id="647ff-110">Instead, you see the final value of `i` displayed five times:</span></span>  
-  
- `5`  
-  
- `5`  
-  
- `5`  
-  
- `5`  
-  
- `5`  
-  
- <span data-ttu-id="647ff-111">Bu ileti, varsayılan olarak bir uyarıdır.</span><span class="sxs-lookup"><span data-stu-id="647ff-111">By default, this message is a warning.</span></span> <span data-ttu-id="647ff-112">Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="647ff-112">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
-  
- <span data-ttu-id="647ff-113">**Hata kimliği:** BC42324</span><span class="sxs-lookup"><span data-stu-id="647ff-113">**Error ID:** BC42324</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="647ff-114">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="647ff-114">To correct this error</span></span>  
-  
-- <span data-ttu-id="647ff-115">Yineleme değişkeninin değerini yerel bir değişkene atayın ve yerel değişkeni lambda ifadesinde kullanın.</span><span class="sxs-lookup"><span data-stu-id="647ff-115">Assign the value of the iteration variable to a local variable, and use the local variable in the lambda expression.</span></span>  
-  
-```vb  
-Module Module1  
-    Sub Main()  
-        Dim array1 As Func(Of Integer)() = New Func(Of Integer)(4) {}  
-  
-        For i As Integer = 0 To 4  
-            Dim j = i  
-            array1(i) = Function() j  
-        Next  
-  
-        For Each funcElement In array1  
-            System.Console.WriteLine(funcElement())  
-        Next  
-  
-    End Sub  
-End Module  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="647ff-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="647ff-116">See also</span></span>
+<span data-ttu-id="0eff8-103">Lambda ifadesinde yineleme değişkeni kullanılması beklenmeyen sonuçlara neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="0eff8-103">Using the iteration variable in a lambda expression may have unexpected results.</span></span> <span data-ttu-id="0eff8-104">Bunun yerine, döngü içinde bir yerel değişken oluşturun ve bunu yineleme değişkeninin değerine atayın.</span><span class="sxs-lookup"><span data-stu-id="0eff8-104">Instead, create a local variable within the loop and assign it the value of the iteration variable.</span></span>
 
-- [<span data-ttu-id="647ff-117">Lambda Ifadeleri</span><span class="sxs-lookup"><span data-stu-id="647ff-117">Lambda Expressions</span></span>](../../programming-guide/language-features/procedures/lambda-expressions.md)
+ <span data-ttu-id="0eff8-105">Bu uyarı, döngü içinde belirtilen bir lambda ifadesinde bir döngü yineleme değişkeni kullandığınızda görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="0eff8-105">This warning appears when you use a loop iteration variable in a lambda expression that is declared inside the loop.</span></span> <span data-ttu-id="0eff8-106">Örneğin, aşağıdaki örnek uyarının görünmesine neden olur.</span><span class="sxs-lookup"><span data-stu-id="0eff8-106">For example, the following example causes the warning to appear.</span></span>
+
+```vb
+For i As Integer = 1 To 10
+    ' The warning is given for the use of i.
+    Dim exampleFunc As Func(Of Integer) = Function() i
+Next
+```
+
+ <span data-ttu-id="0eff8-107">Aşağıdaki örnek, gerçekleşebilecek beklenmeyen sonuçları gösterir.</span><span class="sxs-lookup"><span data-stu-id="0eff8-107">The following example shows the unexpected results that might occur.</span></span>
+
+```vb
+Module Module1
+    Sub Main()
+        Dim array1 As Func(Of Integer)() = New Func(Of Integer)(4) {}
+
+        For i As Integer = 0 To 4
+            array1(i) = Function() i
+        Next
+
+        For Each funcElement In array1
+            System.Console.WriteLine(funcElement())
+        Next
+
+    End Sub
+End Module
+```
+
+ <span data-ttu-id="0eff8-108">`For`Döngü, her biri döngü yineleme değişkeninin değerini döndüren bir lambda ifadeleri dizisi oluşturur `i` .</span><span class="sxs-lookup"><span data-stu-id="0eff8-108">The `For` loop creates an array of lambda expressions, each of which returns the value of the loop iteration variable `i`.</span></span> <span data-ttu-id="0eff8-109">Lambda ifadeleri `For Each` döngüde değerlendirildiğinde, döngüde art arda gelen değerleri 0, 1, 2, 3 ve 4 ' ü görmeyi bekleyebilir `i` `For` .</span><span class="sxs-lookup"><span data-stu-id="0eff8-109">When the lambda expressions are evaluated in the `For Each` loop, you might expect to see 0, 1, 2, 3, and 4 displayed, the successive values of `i` in the `For` loop.</span></span> <span data-ttu-id="0eff8-110">Bunun yerine, en son `i` beş kez görüntülenmiş değeri görürsünüz:</span><span class="sxs-lookup"><span data-stu-id="0eff8-110">Instead, you see the final value of `i` displayed five times:</span></span>
+
+ `5`
+
+ `5`
+
+ `5`
+
+ `5`
+
+ `5`
+
+ <span data-ttu-id="0eff8-111">Bu ileti, varsayılan olarak bir uyarıdır.</span><span class="sxs-lookup"><span data-stu-id="0eff8-111">By default, this message is a warning.</span></span> <span data-ttu-id="0eff8-112">Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="0eff8-112">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>
+
+ <span data-ttu-id="0eff8-113">**Hata kimliği:** BC42324</span><span class="sxs-lookup"><span data-stu-id="0eff8-113">**Error ID:** BC42324</span></span>
+
+## <a name="to-correct-this-error"></a><span data-ttu-id="0eff8-114">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="0eff8-114">To correct this error</span></span>
+
+- <span data-ttu-id="0eff8-115">Yineleme değişkeninin değerini yerel bir değişkene atayın ve yerel değişkeni lambda ifadesinde kullanın.</span><span class="sxs-lookup"><span data-stu-id="0eff8-115">Assign the value of the iteration variable to a local variable, and use the local variable in the lambda expression.</span></span>
+
+```vb
+Module Module1
+    Sub Main()
+        Dim array1 As Func(Of Integer)() = New Func(Of Integer)(4) {}
+
+        For i As Integer = 0 To 4
+            Dim j = i
+            array1(i) = Function() j
+        Next
+
+        For Each funcElement In array1
+            System.Console.WriteLine(funcElement())
+        Next
+
+    End Sub
+End Module
+```
+
+## <a name="see-also"></a><span data-ttu-id="0eff8-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0eff8-116">See also</span></span>
+
+- [<span data-ttu-id="0eff8-117">Lambda Ifadeleri</span><span class="sxs-lookup"><span data-stu-id="0eff8-117">Lambda Expressions</span></span>](../../programming-guide/language-features/procedures/lambda-expressions.md)

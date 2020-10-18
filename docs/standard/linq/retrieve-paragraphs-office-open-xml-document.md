@@ -6,30 +6,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 35e48defb2fa010a4403d50373f6e491fad6c293
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 846816a38d32b16ec1252b67dd4eed2d8512f815
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553888"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160444"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-linq-to-xml"></a><span data-ttu-id="1a89d-103">Office Open XML belgesinden paragrafları alma (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1a89d-103">How to retrieve paragraphs from an Office Open XML document (LINQ to XML)</span></span>
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-linq-to-xml"></a><span data-ttu-id="c48bc-103">Office Open XML belgesinden paragrafları alma (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c48bc-103">How to retrieve paragraphs from an Office Open XML document (LINQ to XML)</span></span>
 
-<span data-ttu-id="1a89d-104">Bu makalede, bir Office Open XML belgesi açan ve belgedeki tüm paragrafların bir koleksiyonunu alan bir örnek sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="1a89d-104">This article provides an example that opens an Office Open XML document and retrieves a collection of all of the paragraphs in the document.</span></span>
+<span data-ttu-id="c48bc-104">Bu makalede, bir Office Open XML belgesi açan ve belgedeki tüm paragrafların bir koleksiyonunu alan bir örnek sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c48bc-104">This article provides an example that opens an Office Open XML document and retrieves a collection of all of the paragraphs in the document.</span></span>
 
-<span data-ttu-id="1a89d-105">Office Open XML hakkında daha fazla bilgi için bkz. [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [Eric beyaz blogu](http://www.ericwhite.com/).</span><span class="sxs-lookup"><span data-stu-id="1a89d-105">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [Eric White's Blog](http://www.ericwhite.com/).</span></span>
+<span data-ttu-id="c48bc-105">Office Open XML hakkında daha fazla bilgi için bkz. [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [Eric beyaz blogu](https://www.ericwhite.com/).</span><span class="sxs-lookup"><span data-stu-id="c48bc-105">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [Eric White's Blog](https://www.ericwhite.com/).</span></span>
 
-## <a name="example-retrieve-the-paragraphs-from-an-office-open-xml-document"></a><span data-ttu-id="1a89d-106">Örnek: bir Office Open XML belgesinden paragrafları alma</span><span class="sxs-lookup"><span data-stu-id="1a89d-106">Example: Retrieve the paragraphs from an Office Open XML document</span></span>
+## <a name="example-retrieve-the-paragraphs-from-an-office-open-xml-document"></a><span data-ttu-id="c48bc-106">Örnek: bir Office Open XML belgesinden paragrafları alma</span><span class="sxs-lookup"><span data-stu-id="c48bc-106">Example: Retrieve the paragraphs from an Office Open XML document</span></span>
 
-<span data-ttu-id="1a89d-107">Örnek, bir Office Open XML paketi açar ve belgeyi ve stil parçalarını bulmak için paket içindeki ilişkileri kullanır.</span><span class="sxs-lookup"><span data-stu-id="1a89d-107">The example opens an Office Open XML package, and uses the relationships within the package to find the document and the style parts.</span></span> <span data-ttu-id="1a89d-108">Daha sonra belge ve proje bilgilerini paragraf bilgilerine sahip bir koleksiyon olarak sorgular.</span><span class="sxs-lookup"><span data-stu-id="1a89d-108">It then queries the document and projects a collection that has the paragraph information.</span></span> <span data-ttu-id="1a89d-109">Koleksiyonun her nesnesi bir paragrafı temsil eder ve paragraf <xref:System.Xml.Linq.XElement> düğümünü, stil adını ve metni içerir.</span><span class="sxs-lookup"><span data-stu-id="1a89d-109">Each object of the collection represents a paragraph, and contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name, and the text.</span></span>
+<span data-ttu-id="c48bc-107">Örnek, bir Office Open XML paketi açar ve belgeyi ve stil parçalarını bulmak için paket içindeki ilişkileri kullanır.</span><span class="sxs-lookup"><span data-stu-id="c48bc-107">The example opens an Office Open XML package, and uses the relationships within the package to find the document and the style parts.</span></span> <span data-ttu-id="c48bc-108">Daha sonra belge ve proje bilgilerini paragraf bilgilerine sahip bir koleksiyon olarak sorgular.</span><span class="sxs-lookup"><span data-stu-id="c48bc-108">It then queries the document and projects a collection that has the paragraph information.</span></span> <span data-ttu-id="c48bc-109">Koleksiyonun her nesnesi bir paragrafı temsil eder ve paragraf <xref:System.Xml.Linq.XElement> düğümünü, stil adını ve metni içerir.</span><span class="sxs-lookup"><span data-stu-id="c48bc-109">Each object of the collection represents a paragraph, and contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name, and the text.</span></span>
 
-<span data-ttu-id="1a89d-110">Örnek, [kaynak Office Open XML belgesi oluşturma](create-source-office-open-xml-document.md)bölümünde açıklanan OFFICE Open XML belgesi üzerinde çalışır.</span><span class="sxs-lookup"><span data-stu-id="1a89d-110">The example operates on the Office Open XML document described in [Create the source Office Open XML document](create-source-office-open-xml-document.md).</span></span>
+<span data-ttu-id="c48bc-110">Örnek, [kaynak Office Open XML belgesi oluşturma](create-source-office-open-xml-document.md)bölümünde açıklanan OFFICE Open XML belgesi üzerinde çalışır.</span><span class="sxs-lookup"><span data-stu-id="c48bc-110">The example operates on the Office Open XML document described in [Create the source Office Open XML document](create-source-office-open-xml-document.md).</span></span>
 
-<span data-ttu-id="1a89d-111">Şunları kullanır:</span><span class="sxs-lookup"><span data-stu-id="1a89d-111">It makes use of the following:</span></span>
+<span data-ttu-id="c48bc-111">Şunları kullanır:</span><span class="sxs-lookup"><span data-stu-id="c48bc-111">It makes use of the following:</span></span>
 
-- <span data-ttu-id="1a89d-112">`StringConcatenate`Örneğin bir parçası olarak tanımlanan genişletme yöntemi.</span><span class="sxs-lookup"><span data-stu-id="1a89d-112">The `StringConcatenate` extension method, defined as part of the example.</span></span>
-- <span data-ttu-id="1a89d-113">WindowsBase derlemesinde bulunan sınıflar.</span><span class="sxs-lookup"><span data-stu-id="1a89d-113">Classes found in the WindowsBase assembly.</span></span>
-- <span data-ttu-id="1a89d-114"><xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türler.</span><span class="sxs-lookup"><span data-stu-id="1a89d-114">Types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
+- <span data-ttu-id="c48bc-112">`StringConcatenate`Örneğin bir parçası olarak tanımlanan genişletme yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c48bc-112">The `StringConcatenate` extension method, defined as part of the example.</span></span>
+- <span data-ttu-id="c48bc-113">WindowsBase derlemesinde bulunan sınıflar.</span><span class="sxs-lookup"><span data-stu-id="c48bc-113">Classes found in the WindowsBase assembly.</span></span>
+- <span data-ttu-id="c48bc-114"><xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türler.</span><span class="sxs-lookup"><span data-stu-id="c48bc-114">Types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
 
 ```csharp
 public static class LocalExtensions
@@ -300,7 +300,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="1a89d-115">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="1a89d-115">This example produces the following output:</span></span>
+<span data-ttu-id="c48bc-115">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="c48bc-115">This example produces the following output:</span></span>
 
 ```output
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<
