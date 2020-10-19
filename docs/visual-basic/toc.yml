@@ -153,9 +153,9 @@
         - name: Genel Türler
           href: programming-guide/language-features/data-types/generic-types.md
           items:
-            - name: 'Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama'
+            - name: Farklı Türlerde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama
               href: programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
-            - name: 'Nasıl yapılır: Genel Bir Sınıf Kullanma'
+            - name: Genel Bir Sınıf Kullanma
               href: programming-guide/language-features/data-types/how-to-use-a-generic-class.md
         - name: Genel Yordamlar
           href: programming-guide/language-features/data-types/generic-procedures.md
@@ -875,14 +875,18 @@
         - name: XML İşleme Talimatı Değişmez Değeri
           href: language-reference/xml-literals/xml-processing-instruction-literal.md
     - name: Hata İletileri
-      href: language-reference/error-messages/index.md
       items:
+        - name: Genel Bakış
+          displayName: 'error messages, compiler errors'
+          href: language-reference/error-messages/index.md
+        - name: BC30663
+          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
+        - name: BC32500
+          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
         - name: '''#ElseIf'' öncesinde eşleşen bir ''#If'' veya ''#ElseIf'' olmalıdır'
           href: language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
         - name: '''#Region'' ve ''#End Region'' deyimleri yöntem gövdeleri/çok satırlı lambdalar içinde geçerli değildir'
           href: language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
-        - name: '''<attribute>'' GUID''sinin biçimi doğru olmadığından <number>'' uygulanamaz'
-          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
         - name: 'Uyguladığı ''<classname>'' arabirimi CLS uyumlu olmadığından, ''<interfacename>'' CLS uyumlu değil'
           href: language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md
         - name: '''<elementname>'' eski (Visual Basic Uyarısı)'
@@ -949,8 +953,6 @@
           href: language-reference/error-messages/bc31043.md
         - name: '''Declare'' deyimlerinde ''As Any'' desteklenmiyor'
           href: language-reference/error-messages/bc30828.md
-        - name: '''<attributename>'' özniteliği bir defadan fazla uygulanamaz'
-          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
         - name: Otomasyon hatası
           href: language-reference/error-messages/automation-error.md
         - name: 'Hatalı sağlama toplaması değeri, onaltılık olmayan basamaklar veya tek sayıda onaltılık basamak sayısı'
@@ -1409,7 +1411,7 @@
               href: reference/command-line-compiler/win32manifest.md
             - name: '-win32resource'
               href: reference/command-line-compiler/win32resource.md
-        - name: Kategorilere Göre Listelenen Derleyici Seçenekleri
+        - name: Kategoriye Göre Derleme Seçenekleri
           href: reference/command-line-compiler/compiler-options-listed-by-category.md
     - name: .NET Framework Başvuru Bilgisi
       href: reference/net-framework-reference-information.md
