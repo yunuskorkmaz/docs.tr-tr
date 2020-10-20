@@ -3,12 +3,12 @@ title: 'Öğretici: ilk çözümleyicinizi ve kod düzeltmesini yazma'
 description: Bu öğretici, .NET derleyici SDK 'sını (Roslyn API 'Ler) kullanarak bir çözümleyici ve kod düzeltmesini oluşturmak için adım adım yönergeler sağlar.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 33c00e90d768021e36a7987be0ddd7daec4cfcec
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381599"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224037"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Öğretici: ilk çözümleyicinizi ve kod düzeltmesini yazma
 
@@ -18,27 +18,7 @@ Bu öğreticide, bir **çözümleyici** oluşturmayı ve Roslyn API 'lerini kull
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-> [!NOTE]
-> Visual Studio **Analyzer with Code düzeltmesini (.NET Standard)** şablonunda, içinde bilinen bir hata var ve visual Studio 2019 sürüm 16,7 ' de düzeltilmelidir. Aşağıdaki değişiklikler yapılmadığı takdirde şablondaki projeler derlenmeyecektir:
->
-> 1. **Araç**  >  **seçenekleri**  >  **NuGet Paket Yöneticisi**  >  **paket kaynakları** ' nı seçin
->    - Yeni bir kaynak eklemek için artı düğmesini seçin:
->    - **Kaynağı** olarak ayarlayın `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json` ve **Güncelle** 'yi seçin
-> 1. **Çözüm Gezgini**, **Makeconst. vsix** projesine sağ tıklayın ve **Proje dosyasını Düzenle** ' yi seçin.
->    - `<AssemblyName>`Soneki eklemek için düğümü güncelleştirin `.Visx` :
->      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
->    - `<ProjectReference>`Değeri değiştirmek için 41 satırındaki düğümü güncelleştirin `TargetFramework` :
->      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
-> 1. *MakeConstUnitTests.cs* dosyasını *makeconst. test* projesinde güncelleştirin:
->    - 9. satırı aşağıdaki gibi değiştirin:
->      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
->    - Aşağıdaki yönteme göre satırı 24 ' ü değiştirin:
->      - `await Verify.VerifyAnalyzerAsync(test);`
->    - 62 satırını aşağıdaki yönteme değiştirin:
->      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
-
-- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-- [Visual Studio 2019](https://www.visualstudio.com/downloads)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads) sürüm 16,7 veya üzeri
 
 **.Net Compiler Platform SDK 'sını** Visual Studio yükleyicisi aracılığıyla yüklemeniz gerekir:
 
@@ -87,7 +67,7 @@ Az önce başlattığınız ikinci Visual Studio örneğinde, yeni bir C# konsol
 
 Şablon Ayrıca, küçük harf karakter içeren herhangi bir tür adını tüm büyük harflere değiştiren bir kod düzeltmesini de sağlar. Önerilen değişiklikleri görmek için uyarıyla birlikte görüntülenecek ampule tıklayabilirsiniz. Önerilen değişiklikler kabul edildiğinde, tür adı ve çözümdeki bu türe yapılan tüm başvurular güncelleştirilir. İlk çözümleyici 'yi eylemde gördüğünüze göre, ikinci Visual Studio örneğini kapatın ve çözümleyici projenize geri dönün.
 
-Visual Studio 'nun ikinci bir kopyasını başlatmanız ve çözümleyicinizdeki her değişikliği test etmek için yeni kod oluşturmanız gerekmez. Şablon sizin için bir birim testi projesi de oluşturur. Bu proje iki test içerir. `TestMethod1`Bir tanılamayı tetiklemeden kodu çözümleyen testin tipik biçimini gösterir. `TestMethod2`Bir tanılamayı tetikleyen testin biçimini gösterir ve ardından önerilen bir kod düzeltmesini uygular. Çözümleyicinizi ve kod düzeltmesini oluştururken, çalışmanızı doğrulamak üzere farklı kod yapıları için testler yazacaksınız. Çözümleyiciler için birim testleri, Visual Studio ile etkileşimli olarak test edilmesine kıyasla çok daha hızlıdır.
+Visual Studio 'nun ikinci bir kopyasını başlatmanız ve çözümleyicinizdeki her değişikliği test etmek için yeni kod oluşturmanız gerekmez. Şablon sizin için bir birim testi projesi de oluşturur. Bu proje iki test içerir. `TestMethod1` Bir tanılamayı tetiklemeden kodu çözümleyen testin tipik biçimini gösterir. `TestMethod2` Bir tanılamayı tetikleyen testin biçimini gösterir ve ardından önerilen bir kod düzeltmesini uygular. Çözümleyicinizi ve kod düzeltmesini oluştururken, çalışmanızı doğrulamak üzere farklı kod yapıları için testler yazacaksınız. Çözümleyiciler için birim testleri, Visual Studio ile etkileşimli olarak test edilmesine kıyasla çok daha hızlıdır.
 
 > [!TIP]
 > Çözümleyici birim testleri, hangi kod yapılarının çözümleyicinizi tetikleyemediğini bildiğiniz ve bu harika bir araçtır. Visual Studio 'nun başka bir kopyasına çözümleyicinizi yüklemek, henüz düşünmemiş olan yapıları keşfetmeye ve bulmaya yönelik harika bir araçtır.
@@ -280,7 +260,7 @@ Kod düzeltmeizin denemeye hazırlanıyor.  Visual Studio 'nun ikinci bir örne�
 
 Çözümleyici ve kod düzeltmesizin const hale getirilebilir tek bir bildirimin basit bir durumunda çalışır. Bu uygulamanın hata yaptığı çok sayıda olası bildirim deyimi vardır. Şablon tarafından yazılan birim testi kitaplığıyla çalışarak bu durumları ele alacağız. Visual Studio 'nun ikinci bir kopyasını art arda açmadan çok daha hızlıdır.
 
-Birim testi projesinde **MakeConstUnitTests.cs** dosyasını açın. Şablon, bir çözümleyici ve kod düzelme birimi testi için iki ortak deseni izleyen iki test oluşturmuştur. `TestMethod1`çözümleyicinin ne zaman bir tanılama bildirmemesini sağlayan bir testin modelini gösterir. `TestMethod2`Bir tanılamayı raporlamak ve kod düzeltmesini çalıştırmak için bir model gösterir.
+Birim testi projesinde **MakeConstUnitTests.cs** dosyasını açın. Şablon, bir çözümleyici ve kod düzelme birimi testi için iki ortak deseni izleyen iki test oluşturmuştur. `TestMethod1` çözümleyicinin ne zaman bir tanılama bildirmemesini sağlayan bir testin modelini gösterir. `TestMethod2` Bir tanılamayı raporlamak ve kod düzeltmesini çalıştırmak için bir model gösterir.
 
 Çözümleyicinizi neredeyse her test için kod, bu iki desenden birini izler. İlk adımda, bu testlerin veri odaklı testler olarak yeniden kullanılabilir. Daha sonra, farklı test girişlerini temsil etmek için yeni dize sabitleri ekleyerek yeni testlerin oluşturulması kolay olur.
 

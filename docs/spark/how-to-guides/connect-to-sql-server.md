@@ -1,15 +1,17 @@
 ---
 title: Apache Spark için .NET 'e SQL Server bağlama
 description: Apache Spark uygulamasına yönelik .NET SQL Server örneğine nasıl bağlanacağınızı öğrenin.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 773e743a67c066438cb86d983ebfa34f73692c2d
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: b20710000d8717b5df238aa9a782371fbe586037
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877951"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224028"
 ---
 # <a name="connect-net-for-apache-spark-to-sql-server"></a>Apache Spark için .NET 'e SQL Server bağlama
 

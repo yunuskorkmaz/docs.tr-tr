@@ -4,12 +4,12 @@ description: .NET uygulamaları ve kitaplıkları için hedef çerçeveler hakk�
 ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 22689f6c1f161a67978dc0f41c6bc9a6b5acfad7
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 85bc05f07cfcc5f59a8a27790ee3d78a497cecdc
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065259"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223463"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK stilindeki projelerde hedef çerçeveler
 
@@ -25,11 +25,11 @@ Paket tabanlı hedef çerçeveler için (örneğin, .NET Standard ve .NET Core),
 
 ## <a name="latest-versions"></a>En son sürümler
 
-Aşağıdaki tablo, en yaygın hedef çerçeveleri, nasıl başvurulduğunu ve [.NET Standard](net-standard.md) hangi sürümünün uygulandığını tanımlar. Bu hedef Framework sürümleri, en son kararlı sürümleridir. Yayın öncesi sürümler gösterilmez. Hedef çerçeve bilinen adı (tfd), bir .NET uygulaması veya kitaplığının hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimidir.
+Aşağıdaki tabloda en yaygın hedef çerçeveler ve bunların nasıl başvurdukları ve hangi [.NET Standard](net-standard.md) sürümü uygulandığı tanımlanmaktadır. Bu hedef Framework sürümleri, en son kararlı sürümleridir. Yayın öncesi sürümler gösterilmez. Hedef çerçeve bilinen adı (tfd), bir .NET uygulaması veya kitaplığının hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimidir.
 
 | Hedef çerçeve      | En son <br/> kararlı sürüm | Hedef çerçeve bilinen adı (tfd) | Uygulanan <br/> .NET Standard sürümü |
 | :-: | :-: | :-: | :-: |
-| .NET Standard         | 2.1                         | Netstandard 2.1                 | Yok                                     |
+| .NET Standard         | 2.1                         | Netstandard 2.1                 | YOK                                     |
 | .NET Core             | 3,1                         | netcoreapp 3.1                  | 2.1                                     |
 | .NET Framework        | 4,8                         | net48                          | 2.0                                     |
 
@@ -116,7 +116,7 @@ public class MyClass
     {
 #if NET40
         Console.WriteLine("Target framework: .NET Framework 4.0");
-#elif NET45  
+#elif NET45
         Console.WriteLine("Target framework: .NET Framework 4.5");
 #else
         Console.WriteLine("Target framework: .NET Standard 1.4");

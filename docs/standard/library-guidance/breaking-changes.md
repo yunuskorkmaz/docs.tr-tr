@@ -1,43 +1,43 @@
 ---
-title: Son dakika değişiklikleri ve .NET kitaplıkları
-description: .NET kitaplıklarını oluştururken sonlandırma değişikliklerinde gezinmek için en iyi uygulama önerileri.
+title: Son değişiklikler ve .NET kitaplıkları
+description: .NET kitaplıkları oluştururken önemli değişikliklere gidilme için en iyi yöntem önerileri.
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400423"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223337"
 ---
 # <a name="breaking-changes"></a>Yeni değişiklikler
 
-Bir .NET kitaplığının mevcut kullanıcılar için kararlılık ve gelecek için yenilik arasında bir denge bulması önemlidir. Kitaplık yazarları mükemmel olana kadar kodu yeniden düzenleme ve yeniden düşünmeye yönelir, ancak mevcut kullanıcılarınızı kırmanın özellikle düşük seviyeli kitaplıklar için olumsuz bir etkisi vardır.
+Bir .NET kitaplığı, gelecekte mevcut kullanıcılar ve yeniliklere yönelik kararlılık arasında bir denge bulmalıdır. Kitaplık yazarları, kusursuz olana kadar yeniden düzenleme ve yeniden düşünme kodu içerir, ancak özellikle alt düzey kitaplıklar için mevcut kullanıcılarınızın olumsuz bir etkisi vardır.
 
-## <a name="project-types-and-breaking-changes"></a>Proje türleri ve kesme değişiklikleri
+## <a name="project-types-and-breaking-changes"></a>Proje türleri ve son değişiklikler
 
-Bir kitaplığın .NET topluluğu tarafından nasıl kullanıldığı, değişiklikleri son kullanıcı geliştiricileri üzerindeki kesme etkisini değiştirir.
+Bir kitaplığın .NET topluluğu tarafından nasıl kullanıldığı, Son Kullanıcı geliştiricileri üzerindeki değişikliklerin etkilerini değiştirir.
 
-- Bir serializer, HTML ayrıştırıcı, veritabanı nesne-ilişkisel mapper veya web çerçevesi gibi **düşük ve orta düzey kitaplıklar** değişiklikleri kırma en etkilenir.
+- Seri hale getirici, HTML ayrıştırıcısı, veritabanı nesnesi-ilişkisel Eşleyici veya Web çerçevesi gibi **düşük ve orta düzey kitaplıklar** , en son değişikliklerden etkilenir.
 
-  Yapı bloğu paketleri, uygulamaları oluşturmak için son kullanıcı geliştiricileri ve NuGet bağımlılıkları olarak diğer kitaplıklar tarafından kullanılır. Örneğin, bir uygulama oluşturuyorsunuz ve bir web hizmetini aramak için açık kaynak kodlu bir istemci kullanıyorsunuz. İstemcinin kullandığı bir bağımlılık için son dakika güncelleştirmesi düzeltebileceğiniz bir şey değildir. Değiştirilmesi gereken açık kaynak istemcisi ve üzerinde hiçbir kontrole sahip. Kitaplıkların uyumlu sürümlerini bulmanız veya istemci kitaplığına bir düzeltme göndermeniz ve yeni bir sürüm beklemeniz gerekir. En kötü durum, üçüncü bir kitaplığın karşılıklı uyumsuz sürümlerine bağlı iki kitaplık kullanmak istiyorsanız.
+  Yapı blok paketleri, Son Kullanıcı geliştiricileri tarafından uygulamaları ve diğer kitaplıkları NuGet bağımlılıkları olarak oluşturmak için kullanılır. Örneğin, bir uygulama oluşturuyor ve bir Web hizmetini çağırmak için açık kaynaklı istemci kullanıyorsunuz. İstemcinin kullandığı bir bağımlılığı ortadan kaldırma, çözebilmeniz için bir şey değildir. Değiştirilmesi gereken ve üzerinde denetiminiz olmadığı açık kaynaklı istemcdir. Kitaplıkların uyumlu sürümlerini bulmanız veya istemci kitaplığına bir çözüm göndermeniz ve yeni bir sürüm beklemeniz gerekir. En kötü durum durumu, üçüncü bir kitaplığın karşılıklı uyumsuz sürümlerine bağlı iki kitaplık kullanmak istemeniz durumunda olur.
 
-- Bir tür ui denetimi gibi **üst düzey kitaplıklar,** değişiklikleri kırmaya karşı daha az duyarlıdır.
+- UI denetimleri paketi gibi **üst düzey kitaplıklar** , değişikliklere karşı daha az hassastır.
 
-  Üst düzey kitaplıklar doğrudan bir son kullanıcı uygulamasında başvurulur. Son kesme değişiklikleri oluşursa, geliştirici en son sürüme güncelleştirmeyi seçebilir veya uygulamalarını kesme değişikliğiyle çalışacak şekilde değiştirebilir.
+  Üst düzey kitaplıklara doğrudan bir son kullanıcı uygulamasında başvurulur. Önemli değişiklikler gerçekleşirse, geliştirici en son sürüme güncelleştirmeyi seçebilir veya uygulamasını, son değişiklikle çalışacak şekilde değiştirebilir.
 
-✔️ KITAPlığınızın nasıl kullanılacağını düşünün. Çığır açan değişikliklerin onu kullanan uygulamalar ve kitaplıklar üzerinde ne gibi bir etkisi olacak?
+✔️, kitaplığınızın nasıl kullanılacağını düşünün. Hangi etkilerden oluşan uygulamalar ve kitaplıklarda yapılan değişiklikler ne etkiler?
 
-✔️ düşük düzeyli bir .NET kitaplığı geliştirirken çığır açan değişiklikleri en aza indirin.
+düşük düzey bir .NET kitaplığı geliştirilirken, önemli değişiklikleri en aza indirir ✔️.
 
-✔️ yeni bir NuGet paketi olarak bir kitaplığın büyük bir yeniden yazmayı düşünün.
+✔️ Yeni bir NuGet paketi olarak bir kitaplığın büyük bir yeniden yazmayı yayımlamayı düşünün.
 
-## <a name="types-of-breaking-changes"></a>Kesme değişiklik türleri
+## <a name="types-of-breaking-changes"></a>Son değişiklik türleri
 
-Kesme değişiklikleri farklı kategorilere ayrılır ve eşit derecede etkili değildir.
+Son değişiklikler farklı kategorilere ayrılır ve eşit ölçüde etkilenmez.
 
-### <a name="source-breaking-change"></a>Kaynak kırma değişikliği
+### <a name="source-breaking-change"></a>Kaynak bölünmesi değişikliği
 
-Kaynak kesme değişikliği program yürütülmesini etkilemez, ancak uygulama bir sonraki kez yeniden derleninde derleme hatalarına neden olur. Örneğin, yeni bir aşırı yükleme yöntem çağrılarında daha önce kesin olmayan bir belirsizlik oluşturabilir veya yeniden adlandırılmış parametre adlandırılmış parametreleri kullanan arayanlara son verecektir.
+Kaynak bölünmesi değişikliği program yürütmeyi etkilemez, ancak uygulamanın bir sonraki yeniden derlenmesi sırasında derleme hatalarına neden olur. Örneğin, yeni bir aşırı yükleme daha önce kesin olmayan yöntem çağrılarında belirsizlik oluşturabilir ya da yeniden adlandırılmış bir parametre adlandırılmış parametreleri kullanan çağıranları keser.
 
 ```csharp
 public class Task
@@ -46,35 +46,35 @@ public class Task
 }
 ```
 
-Kaynak kırma değişikliği yalnızca geliştiriciler uygulamalarını yeniden derlediğinde zararlı olduğundan, en az kesintiye uğrayan değişikliktir. Geliştiriciler kendi bozuk kaynak kodlarını kolayca düzeltebilir.
+Kaynak bölünmesi değişikliği yalnızca geliştiriciler uygulamalarını yeniden derleyeceğinden zararlı olduğundan, en az kesintiye uğratan değişiklik olur. Geliştiriciler kendi bozuk kaynak kodlarını kolayca çözebilir.
 
-### <a name="behavior-breaking-change"></a>Davranış kesme değişikliği
+### <a name="behavior-breaking-change"></a>Davranış bölünmesi değişikliği
 
-Davranış değişiklikleri en yaygın kesme türüdür: davranıştaki hemen hemen her değişiklik birini kırabilir. Kitaplığınızda yöntem imzaları, atılan özel durumlar veya giriş veya çıktı veri biçimleri gibi değişiklikler, tüm bunlar kitaplık tüketicilerinizi olumsuz etkileyebilir. Kullanıcılar daha önce kırılan davranışa güveniyorsa, hata düzeltmesi bile bir kesme değişikliği olarak nitelendirilebilir.
+Davranış değişiklikleri en yaygın Son değişiklik türüdür: neredeyse her türlü davranış değişikliği birini bozabilir. Kitaplığınızda yöntem imzaları, özel durumlar veya giriş ya da çıkış veri biçimleri gibi değişiklikler, kitaplık tüketicilerinizi olumsuz yönde etkileyebilir. Bir hata düzeltilme bile, kullanıcılar daha önce kopuk davranışa güvendiğinde, bir son değişiklik olarak nitelendirilebilir.
 
-Özellikler ekleme ve kötü davranışları geliştirmek iyi bir şeydir, ancak bakım olmadan mevcut kullanıcıların yükseltmesini çok zorlaştırabilir. Geliştiricilerin davranış kırma değişiklikleriyle başa çıkmasına yardımcı olmak için bir yaklaşım, bunları ayarların arkasına gizlemektir. Ayarlar, geliştiricilerin kitaplığınızın en son sürümüne güncellenerken aynı zamanda değişiklikleri bölmeyi seçmeyi veya devre dışı bırakmayı seçmelerini sağlar. Bu strateji, geliştiricilerin tüketen kodlarının zaman içinde uyum sağlamasına izin verirken güncel kalmalarını sağlar.
+Özellikleri eklemek ve hatalı davranışları iyileştirmek iyi bir şeydir, ancak bunu yapmadan, mevcut kullanıcıların yükseltilmesi çok zor hale gelir. Geliştiricilerin davranış önemli değişiklikleri ile uğraşmasına yardımcı olmak için bir yaklaşım, ayarların arkasındaki ayarları gizleyeyöneliktir. Ayarlar, geliştiricilerin kitaplığın en son sürümüne güncelleştirilmesini sağlar, ancak aynı zamanda değişiklikleri ortadan kaldırma veya devre dışı bırakmak üzere tercih ediyor. Bu strateji, geliştiricilerin zaman içinde kendi kod uyarlanmasına izin verirken güncel kalmasını sağlar.
 
-Örneğin, ASP.NET Core MVC, 'de etkinleştirilen ve devre dışı bırakılan `MvcOptions`özellikleri değiştiren bir uyumluluk [sürümü](/aspnet/core/mvc/compatibility-version) kavramına sahiptir.
+Örneğin, ASP.NET Core MVC, üzerinde etkin ve devre dışı bırakılan özellikleri değiştiren bir [Uyumluluk sürümü](/aspnet/core/mvc/compatibility-version) kavramıdır `MvcOptions` .
 
-✔️, varolan kullanıcıları etkiliyorsa, yeni özellikleri varsayılan olarak kapalı bırakmayı düşünün ve geliştiricilerin bir ayarı olan özelliği seçmesine izin verin.
+✔️, mevcut kullanıcıları etkiliyorsa ve geliştiricilerin özelliği bir ayarla birlikte kabul etmelerine izin vermek için yeni özellikleri varsayılan olarak devre dışı bırakmayı düşünün.
 
-### <a name="binary-breaking-change"></a>İkili kırılma değişimi
+### <a name="binary-breaking-change"></a>İkili Son değişiklik
 
-Kitaplığınızın genel API'sini değiştirdiğinizde ikili bir kesme değişikliği gerçekleşir, bu nedenle kitaplığınızın eski sürümlerine karşı derlenen derlemeler artık API'yi arayamaz. Örneğin, yeni bir parametre ekleyerek bir yöntemin imzasını değiştirmek, kitaplığın eski sürümüne <xref:System.MissingMethodException>karşı derlenen derlemelerin bir .
+Kitaplığınızın genel API 'sini değiştirdiğiniz zaman ikili bir değişiklik gerçekleşir, bu nedenle kitaplığınızın eski sürümlerine göre derlenen derlemeler artık API 'yi çağıramayacak. Örneğin, yeni bir parametre ekleyerek bir yöntemin imzasını değiştirmek, kitaplığın daha eski bir sürümüne karşı derlenen derlemelerin bir oluşturmasına neden olur <xref:System.MissingMethodException> .
 
-İkili kesme değişikliği de **tüm derlemeyi**bozabilir. Bir derlemeyi `AssemblyName` yeniden adlandırma, derlemenin güçlü adlandırma anahtarını ekleme, kaldırma veya değiştirme gibi derlemenin kimliğini değiştirir. Bir derlemenin kimliğinde yapılan değişiklik, onu kullanan derlenmiş tüm kodları bozar.
+İkili bir son değişiklik, **tüm bir derlemeyi**de kesebilir. Bütünleştirilmiş kodun ile yeniden adlandırılması derlemenin `AssemblyName` kimliğini değiştirecek, bu da derlemenin tanımlayıcı adlandırma anahtarını ekler, kaldırır veya değiştirir. Bir derlemenin kimliğinin değişikliği, kendisini kullanan tüm derlenmiş kodları keser.
 
-❌Montaj adını DEĞIŞTIRMEYİn.
+❌ Bütünleştirilmiş kod adını değiştirmeyin.
 
-❌Güçlü adlandırma anahtarını eklemeYIN, kaldırmayın veya değiştirmeyin.
+❌ Tanımlayıcı adlandırma anahtarını eklemeyin, kaldırmayın veya değiştirmeyin.
 
-✔️ arabirimler yerine soyut temel sınıfları kullanmayı düşünün.
+✔️, arabirimler yerine soyut temel sınıflar kullanmayı göz önünde bulundurun.
 
-> Arabirara bir şey eklemek, onu uygulayan varolan türlerin başarısız olmasına neden olur. Soyut bir taban sınıf varsayılan sanal uygulama eklemenize olanak sağlar.
+> Bir arabirime herhangi bir şey eklemek, onu uygulayan varolan türlerin başarısız olmasına neden olur. Soyut temel sınıf, varsayılan bir sanal uygulama eklemenize olanak tanır.
 
-✔️ kaldırmayı <xref:System.ObsoleteAttribute> düşündüğünüz türleri ve üyeleri yerleştirmeyi düşünün. Öznitelik artık eski API kullanmak için kodu güncelleştirmek için yönergeler olmalıdır.
+✔️ <xref:System.ObsoleteAttribute> kaldırmak istediğiniz türleri ve üyeleri yerleştirmeyi göz önünde bulundurun. Öznitelik, artık kullanılmayan API 'yi kullanmayacak şekilde kodu güncelleştirme yönergelerine sahip olmalıdır.
 
-> Türleri ve yöntemleri <xref:System.ObsoleteAttribute> çağıran kod, özniteliğe verilen iletiyle birlikte bir yapı uyarısı oluşturur. Uyarılar, eski API yüzey süresini kullanan kişilere, eski API kaldırıldığında çoğu kişinin artık bu alanı kullanmaması için geçiş yapmak için verir.
+> İle türleri ve yöntemleri çağıran kod, <xref:System.ObsoleteAttribute> özniteliğe sağlanan iletiyle bir derleme uyarısı oluşturur. Uyarılar, kullanımdan kalkmış API 'nin kaldırılması için eski API yüzey süresini kullanan kişilere, çoğu zaman artık bunu kullanmayabilmesini sağlar.
 
 ```csharp
 public class Document
@@ -92,15 +92,15 @@ public class Document
 }
 ```
 
-✔️ düşük ve orta <xref:System.ObsoleteAttribute> düzey kütüphanelerde süresiz olarak türleri ve yöntemleri tutmayı düşünün.
+✔️, <xref:System.ObsoleteAttribute> sınırsız ve orta düzeyde kitaplıklarda türleri ve yöntemleri süresiz olarak TUTMAYı göz önünde bulundurun.
 
-> API'leri kaldırmak ikili bir kırılma değişikliğidir. Eski türleri ve yöntemleri korumak düşük maliyetli ve kitaplığınıza çok fazla teknik borç eklemez göz önünde bulundurularak. Türleri ve yöntemleri kaldırmamak, yukarıda belirtilen en kötü durum senaryolarını önlemeye yardımcı olabilir.
+> API 'Lerin kaldırılması ikili bir son değişiklik olur. Eski türlerin ve yöntemlerin saklanması düşük maliyetlidir ve kitaplığınıza çok sayıda teknik borç eklemez. Türlerin ve yöntemlerin kaldırılmaması, yukarıda belirtilen en kötü durum senaryolarından kaçınmaya yardımcı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# geliştiricileri için sürüm ve güncelleştirme konuları](../../csharp/whats-new/version-update-considerations.md)
-- [.NET'teki API bozan değişiklikler için kesin bir kılavuz](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [.NET kırma değişiklik kuralları](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
+- [.NET 'teki API-kırılmaya yönelik kesin bir kılavuz](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
+- [.NET Son değişiklik kuralları](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Önceki](versioning.md)

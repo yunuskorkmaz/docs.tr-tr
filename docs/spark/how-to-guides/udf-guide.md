@@ -1,15 +1,17 @@
 ---
 title: Apache Spark için .NET 'te Kullanıcı tanımlı işlevler (UDF) oluşturun
 description: .NET ' te Apache Spark uygulamalar için Kullanıcı tanımlı işlevler (UDF) uygulamayı öğrenin.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 769bcf0a912d27e191dad82138648d1aefb3c3b6
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 50e631b0c561ebdf081d4c1b7d16bf25abb322e5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955042"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224189"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>Apache Spark için .NET 'te Kullanıcı tanımlı işlevler (UDF) oluşturun
 
@@ -184,6 +186,12 @@ public class C
 
 * UDF 'ler içindeki null değerler özel durumlar oluşturabilir. Bu, geliştiricilerin bunları işleme sorumluluğundadır.
 * UDF 'ler Spark 'ın yerleşik işlevleri tarafından sunulan iyileştirmelerinden yararlanır, bu nedenle mümkün olduğunda yerleşik işlevler kullanılması önerilir.
+
+## <a name="faqs"></a>SSS
+
+**Neden hata alıyorum veya `System.NotImplementedException: The method or operation is not implemented.` `System.InvalidCastException: Unable to cast object of type 'System.Collections.Hashtable' to type 'System.Collections.Generic.IDictionary` bir UDF `ArrayType` 'yi,,, `MapType` `ArrayList` veya `HashTable` as bağımsız değişkeni ya da dönüş türü ile çağırmaya çalışırken mi?**  
+Ve için `ArrayType` desteği `MapType` , [v 1.0](https://github.com/dotnet/spark/releases/tag/v1.0.0)'a kadar sağlanmaz. bu nedenle, bu hatayı bundan önce Apache Spark sürümü için bir .net KULLANıYORSANıZ ve bu türleri UDF 'e bağımsız değişken olarak veya dönüş türü olarak geçirmeye çalışırken alırsınız.
+`ArrayList` ve `HashTable` türleri, genel olmayan koleksiyonlar olduğundan ve bu nedenle öğe türü tanımları Spark 'a sağlanamadığı için, UDF 'nin dönüş türleri olarak desteklenmez.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

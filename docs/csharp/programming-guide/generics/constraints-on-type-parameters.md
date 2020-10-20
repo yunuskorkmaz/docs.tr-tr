@@ -7,18 +7,18 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 91807fa05ce49b8507ee6913ff2620452fcbfab5
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 71c853b38e56c56d0077d7eb20e36cd83d3cd23c
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301950"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224312"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür Parametrelerindeki Kısıtlamalar (C# Programlama Kılavuzu)
 
-Kısıtlamalar, derleyicisini bir tür bağımsız değişkeni olması gereken yetenekler hakkında bilgilendirir. Herhangi bir kısıtlama olmadan tür bağımsız değişkeni herhangi bir tür olabilir. Derleyici yalnızca <xref:System.Object?displayProperty=nameWithType> , tüm .net türleri için en son temel sınıf olan üyelerini kabul edebilir. Daha fazla bilgi için bkz. [kısıtlamaların neden kullanılması](#why-use-constraints). İstemci kodu bir kısıtlamayı karşılamayan bir tür kullanıyorsa, derleyici bir hata verir. Kısıtlamalar, `where` bağlamsal anahtar sözcüğü kullanılarak belirtilir. Aşağıdaki tabloda yedi tür kısıtlama listelenmektedir:
+Kısıtlamalar, derleyicisini bir tür bağımsız değişkeni olması gereken yetenekler hakkında bilgilendirir. Herhangi bir kısıtlama olmadan tür bağımsız değişkeni herhangi bir tür olabilir. Derleyici yalnızca <xref:System.Object?displayProperty=nameWithType> , tüm .net türleri için en son temel sınıf olan üyelerini kabul edebilir. Daha fazla bilgi için bkz. [kısıtlamaların neden kullanılması](#why-use-constraints). İstemci kodu bir kısıtlamayı karşılamayan bir tür kullanıyorsa, derleyici bir hata verir. Kısıtlamalar, `where` bağlamsal anahtar sözcüğü kullanılarak belirtilir. Aşağıdaki tabloda çeşitli türlerdeki kısıtlamalar listelenmektedir:
 
-|Kısıtlaması|Description|
+|Kısıtlaması|Açıklama|
 |----------------|-----------------|
 |`where T : struct`|Tür bağımsız değişkeni null yapılamayan bir değer türü olmalıdır. Nullable değer türleri hakkında daha fazla bilgi için bkz. [Nullable değer türleri](../../language-reference/builtin-types/nullable-value-types.md). Tüm değer türlerinde erişilebilir parametresiz bir Oluşturucu olduğundan, kısıtlama `struct` `new()` kısıtlamayı gösterir ve `new()` kısıtlamayla birleştirilemez. Kısıtlamayı `struct` `unmanaged` kısıtlamasıyla birleştiremezsiniz.|
 |`where T : class`|Tür bağımsız değişkeni bir başvuru türü olmalıdır. Bu kısıtlama, her sınıf, arabirim, temsilci veya dizi türü için de geçerlidir. C# 8,0 veya sonraki bir sürümde null yapılabilir bir bağlamda, `T` null atanamaz bir başvuru türü olmalıdır. |
@@ -29,7 +29,7 @@ Kısıtlamalar, derleyicisini bir tür bağımsız değişkeni olması gereken y
 |`where T :` *\<base class name>*|Tür bağımsız değişkeni belirtilen temel sınıftan olmalıdır veya türetilmelidir. C# 8,0 ve üzeri bir null yapılabilir bağlamda, `T` belirtilen temel sınıftan türetilmiş null atanamaz bir başvuru türü olmalıdır. |
 |`where T :` *\<base class name>?*|Tür bağımsız değişkeni belirtilen temel sınıftan olmalıdır veya türetilmelidir. C# 8,0 ve üzeri bir null yapılabilir bağlamda, `T` belirtilen temel sınıftan türetilmiş null yapılabilen veya null yapılamayan bir tür olabilir. |
 |`where T :` *\<interface name>*|Tür bağımsız değişkeni belirtilen arabirimi içermelidir veya uygulamalıdır. Birden çok arabirim kısıtlaması belirlenebilir. Kısıtlama arabirimi de genel olabilir. C# 8,0 ve üzeri bir null yapılabilir bağlamda, `T` belirtilen arabirimi uygulayan null yapılamayan bir tür olmalıdır.|
-|`where T :` *\<interface name>?*|Tür bağımsız değişkeni belirtilen arabirimi içermelidir veya uygulamalıdır. Birden çok arabirim kısıtlaması belirlenebilir. Kısıtlama arabirimi de genel olabilir. C# 8,0 ' de null yapılabilir bir bağlamda, `T` null yapılabilir bir başvuru türü, null olamayan bir başvuru türü veya değer türü olabilir. `T`null yapılabilen bir değer türü olmayabilir.|
+|`where T :` *\<interface name>?*|Tür bağımsız değişkeni belirtilen arabirimi içermelidir veya uygulamalıdır. Birden çok arabirim kısıtlaması belirlenebilir. Kısıtlama arabirimi de genel olabilir. C# 8,0 ' de null yapılabilir bir bağlamda, `T` null yapılabilir bir başvuru türü, null olamayan bir başvuru türü veya değer türü olabilir. `T` null yapılabilen bir değer türü olmayabilir.|
 |`where T : U`|İçin sağlanan tür bağımsız değişkeni, `T` için sağlanan bağımsız değişkenden türetilmiş veya türetilmiş olmalıdır `U` . Null yapılabilir bir bağlamda, `U` null atanamaz bir başvuru türü ise, `T` null olamayan bir başvuru türü olmalıdır. `U`Null yapılabilir bir başvuru türü ise, `T` null yapılabilir veya null atanamaz olabilir. |
 
 ## <a name="why-use-constraints"></a>Neden kısıtlama kullanılmalıdır
@@ -114,7 +114,7 @@ C# 7,3 ' den başlayarak, <xref:System.Enum?displayProperty=nameWithType> türü
 
 [!code-csharp[using the enum constraint](snippets/GenericWhereConstraints.cs#18)]
 
-`Enum.GetValues`ve `Enum.GetName` performans etkilerine sahip olan yansıma kullanın. `EnumNamedValues`Yansıma gerektiren çağrıları yinelemek yerine önbelleğe alınmış ve yeniden kullanılan bir koleksiyon oluşturmak için öğesini çağırabilirsiniz.
+`Enum.GetValues` ve `Enum.GetName` performans etkilerine sahip olan yansıma kullanın. `EnumNamedValues`Yansıma gerektiren çağrıları yinelemek yerine önbelleğe alınmış ve yeniden kullanılan bir koleksiyon oluşturmak için öğesini çağırabilirsiniz.
 
 Aşağıdaki örnekte gösterildiği gibi, bir sabit listesi oluşturmak ve değerlerini ve adlarını bir sözlüğü oluşturmak için kullanabilirsiniz:
 

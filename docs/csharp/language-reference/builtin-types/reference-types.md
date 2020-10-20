@@ -1,6 +1,6 @@
 ---
-title: Yerleşik başvuru türleri - C# başvurusu
-description: Bunları bildirmek için kullanabileceğiniz C# anahtar kelimeleri olan başvuru türleri hakkında bilgi edinin.
+title: Yerleşik başvuru türleri-C# başvurusu
+description: Tanımlamak için kullanabileceğiniz C# anahtar kelimeleri olan başvuru türleri hakkında bilgi edinin.
 ms.date: 06/25/2019
 f1_keywords:
 - object_CSharpKeyword
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399646"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223511"
 ---
-# <a name="built-in-reference-types-c-reference"></a>Yerleşik başvuru türleri (C# başvurusu)
+# <a name="built-in-reference-types-c-reference"></a>Yerleşik başvuru türleri (C# Başvurusu)
 
-C# bir dizi yerleşik başvuru türüne sahiptir. .NET kitaplığında bir türle eş anlamlı anahtar sözcükleri veya işleçleri vardır.
+C# ' de birçok yerleşik başvuru türü vardır. .NET kitaplığındaki bir tür için eş anlamlı anahtar sözcükler veya operatörler vardır.
 
 ## <a name="the-object-type"></a>Nesne türü
 
-Türü `object` .NET'te <xref:System.Object?displayProperty=nameWithType> bir diğer addır. C#'ın birleşik tip sisteminde, önceden tanımlanmış ve kullanıcı tarafından tanımlanan tüm türler, referans <xref:System.Object?displayProperty=nameWithType>türleri ve değer türleri, doğrudan veya dolaylı olarak . Herhangi bir türdeki değerleri türün `object`değişkenlerine atayabilirsiniz. Herhangi `object` bir değişken, gerçek değeri `null`kullanılarak varsayılan değerine atanabilir. Değer türünden bir değişken nesneye dönüştürüldüğünde *kutulu*olduğu söylenir. Tür `object` değişkeni bir değer türüne dönüştürüldüğünde, *kutusunun açılmış*olduğu söylenir. Daha fazla bilgi [için, Kutulama ve Unboxing](../../programming-guide/types/boxing-and-unboxing.md)bakın.
+`object`Türü .net 'teki için bir diğer addır <xref:System.Object?displayProperty=nameWithType> . C# Birleşik tür sisteminde, tüm türler, önceden tanımlanmış ve Kullanıcı tanımlı, başvuru türleri ve değer türleri, doğrudan veya dolaylı olarak öğesinden devralınır <xref:System.Object?displayProperty=nameWithType> . Tür değişkenlerine her türden değer atayabilirsiniz `object` . Herhangi bir `object` değişken varsayılan değeri değişmez değer kullanılarak atanabilir `null` . Değer türünde bir değişken nesnesine dönüştürüldüğünde, *kutulanmış*olarak kabul edilir. Türünde bir değişken `object` bir değer türüne dönüştürüldüğünde, *kutulanmamış*olarak kabul edilir. Daha fazla bilgi için bkz. [kutulama ve kutudan](../../programming-guide/types/boxing-and-unboxing.md)çıkarma.
 
 ## <a name="the-string-type"></a>Dize türü
 
-Tür, `string` sıfır veya daha fazla Unicode karakter dizisini temsil eder. `string`.NET'te <xref:System.String?displayProperty=nameWithType> bir takma addır.
+`string`Tür, sıfır veya daha fazla Unicode karakter dizisini temsil eder. `string` , .NET içindeki için bir diğer addır <xref:System.String?displayProperty=nameWithType> .
 
-Bir `string` başvuru türü olmasına rağmen, [eşitlik işleçleri `==` ve `!=` ](../operators/equality-operators.md#string-equality) başvurular değil `string` nesnelerin değerlerini karşılaştırmak için tanımlanır. Bu dize eşitliği için sınama daha sezgisel hale getirir. Örnek:
+`string`, Bir başvuru türü olsa da, [eşitlik işleçleri `==` ve `!=` ](../operators/equality-operators.md#string-equality) `string` nesneler, başvuruları değil, nesne değerlerini karşılaştırmak için tanımlanmıştır. Bu, dize eşitlik sınamasını daha sezgisel hale getirir. Örnek:
 
 ```csharp-interactive
 string a = "hello";
@@ -50,31 +50,31 @@ Console.WriteLine(a == b);
 Console.WriteLine(object.ReferenceEquals(a, b));
 ```
 
-Bu, dizelerin içeriği eşdeğer olduğundan "True" ve sonra `a` "False" gösterir, ancak aynı dize örneğine `b` başvurmaz.
+Bu, dizelerin içeriği eşdeğer olduğundan, ancak `a` `b` aynı dize örneğine başvurmadığından "true" ve ardından "false" değerlerini görüntüler.
 
-[+ işleç](../operators/addition-operator.md#string-concatenation) dizeleri birleştirir:
+[+ İşleci](../operators/addition-operator.md#string-concatenation) dizeleri art arda ekler:
 
 ```csharp
 string a = "good " + "morning";
 ```
 
-Bu, "günaydın" içeren bir dize nesnesi oluşturur.
+Bu, "iyi sabah" içeren bir dize nesnesi oluşturur.
 
-Dizeleri *değişmez*-bir dize nesnesinin içeriği nesne oluşturulduktan sonra değiştirilemez, ancak sözdizimi bunu yapabilirmişsiniz gibi görünmesini sağlar. Örneğin, bu kodu yazarken, derleyici aslında yeni karakter dizisini tutmak için yeni bir dize nesnesi oluşturur ve bu yeni nesne `b`. ("h" dizesini `b` içerdiğinde) ayrılan bellek daha sonra çöp toplama için uygundur.
+Dizeler *sabittir*--dize nesnesinin içeriği nesne oluşturulduktan sonra değiştirilemez, ancak söz konusu sözdizimi bunu yapabilse gibi görünür. Örneğin, bu kodu yazdığınızda, derleyici aslında yeni karakter dizisini tutmak için yeni bir dize nesnesi oluşturur ve yeni nesne ' ye atanır `b` . İçin ayrılan bellek `b` ("h" dizesini içeriyorsa), daha sonra çöp toplama için uygun olur.
 
 ```csharp
 string b = "h";
 b += "ello";
 ```
 
-`[]` [İşleç,](../operators/member-access-operators.md#indexer-operator-) bir dizedeki tek tek karakterlere yalnızca erişim için kullanılabilir. Geçerli dizin `0` değerleri dize uzunluğundan daha az olarak başlar ve olmalıdır:
+`[]` [İşleci](../operators/member-access-operators.md#indexer-operator-) , bir dizenin tek tek karakterleri için salt okunur erişim için kullanılabilir. Geçerli dizin değerleri başlangıç `0` ve dize uzunluğundan küçük olmalıdır:
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-Benzer şekilde, `[]` işleç de bir dize her karakter üzerinde yineleme için kullanılabilir:
+Benzer şekilde, `[]` işleci bir dizedeki her bir karakter üzerinde yineleme için de kullanılabilir:
 
 ```csharp-interactive
 string str = "test";
@@ -86,13 +86,13 @@ for (int i = 0; i < str.Length; i++)
 // Output: t e s t
 ```
 
-String literals türü `string` ndedir ve alıntı ve `@`-alıntı olmak üzere iki şekilde yazılabilir. Alıntı dize literals çift tırnak işaretleri ("):
+Dize sabit değerleri türündedir ve tırnak içine alınmış `string` ve tırnak içine alınmış iki biçimde yazılabilir `@` . Tırnak işaretli dize sabit değerleri çift tırnak işareti (") içine alınır:
 
 ```csharp
 "good morning"  // a string literal
 ```
 
-String literals herhangi bir karakter literal içerebilir. Kaçış sekansları dahildir. Aşağıdaki örnekte, `\\` ters eğik `\u0066` çizgi, f `\n` harfi ve yeni satır için kaçış sırası kullanılır.
+Dize sabit değerleri, herhangi bir karakter sabit değeri içerebilir. Kaçış dizileri dahil edilir. Aşağıdaki örnek, `\\` `\u0066` f harfi ve yeni satır için ters eğik çizgi için kaçış sırası kullanır `\n` .
 
 ```csharp-interactive
 string a = "\\\u0066\n F";
@@ -103,21 +103,21 @@ Console.WriteLine(a);
 ```
 
 > [!NOTE]
-> Kaçış kodu `\udddd` (dört basamaklı bir sayı nın olduğu yer) `dddd` `dddd`Unicode karakteri U+ temsil eder. Sekiz basamaklı Unicode kaçış kodları `\Udddddddd`da tanınır: .
+> Kaçış kodu `\udddd` ( `dddd` dört basamaklı bir sayı), U + Unicode karakterini temsil eder `dddd` . Sekiz basamaklı Unicode kaçış kodları da tanınmış: `\Udddddddd` .
 
-[Verbatim string literals](../tokens/verbatim.md) ile `@` başlar ve aynı zamanda çift tırnak işaretleri eklenir. Örnek:
+Tam [dize değişmez değerleri](../tokens/verbatim.md) ile başlar `@` ve ayrıca çift tırnak işaretleri içine alınır. Örnek:
 
 ```csharp
 @"good morning"  // a string literal
 ```
 
-Kelimenin tam anlamıyla dizeleri avantajı kaçış dizileri *işlenmez,* bu da kolay yazmayı kolaylaştırır, örneğin, tam nitelikli Windows dosya adı:
+Tam dizelerin avantajı, kaçış dizilerinin *işlenmediği* , örneğin tam nitelikli bir Windows dosya adını yazmayı kolaylaştırır.
 
 ```csharp
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"
 ```
 
-Bir @-quoted dize çift tırnak işareti eklemek için, iki katına:
+Bir dizeye çift tırnak işareti eklemek için @-quoted , Double:
 
 ```csharp
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.
@@ -125,61 +125,61 @@ Bir @-quoted dize çift tırnak işareti eklemek için, iki katına:
 
 ## <a name="the-delegate-type"></a>Temsilci türü
 
-Temsilci türü bildirimi yöntem imzasına benzer. Bir iade değeri ve herhangi bir türde parametrelerin herhangi bir sayı vardır:
+Bir temsilci türünün bildirimi, yöntem imzasına benzerdir. Dönüş değerine ve herhangi bir türde parametreye sahiptir:
 
 ```csharp
 public delegate void MessageDelegate(string message);
 public delegate int AnotherDelegate(MyType m, long num);
 ```
 
-.NET'te `System.Action` `System.Func` ve türleri birçok ortak temsilci için genel tanımlar sağlar. Büyük olasılıkla yeni özel temsilci türleri tanımlamanız gerekmez. Bunun yerine, sağlanan genel türlerin anlık oluşturmalarını oluşturabilirsiniz.
+.NET ' te `System.Action` ve `System.Func` türler birçok ortak temsilci için genel tanımlar sağlar. Muhtemelen yeni özel temsilci türleri tanımlamanız gerekmez. Bunun yerine, belirtilen genel türlerin örneklemesini oluşturabilirsiniz.
 
-A, `delegate` adlandırılmış veya anonim bir yöntemi kapsüllemek için kullanılabilecek bir başvuru türüdür. Temsilciler C++'daki işlev işaretçilerine benzer; ancak, temsilciler tür güvenli ve güvenlidir. Temsilcilerin başvuruları [için, bkz.](../../programming-guide/delegates/index.md) [Generic Delegates](../../programming-guide/generics/generic-delegates.md) Temsilciler, [Etkinliklerin](../../programming-guide/events/index.md)temelini oluşturur. Bir temsilci, adlandırılmış veya anonim bir yöntemle ilişkilendirilerek anında kullanılabilir.
+`delegate`, Adlandırılmış veya anonim bir yöntemi kapsüllemek için kullanılabilecek bir başvuru türüdür. Temsilciler C++ ' da işlev işaretçilerine benzerdir; Ancak, temsilciler tür açısından güvenli ve güvenlidir. Temsilcilerin uygulamaları için bkz. [Temsilciler](../../programming-guide/delegates/index.md) ve [Genel Temsilciler](../../programming-guide/generics/generic-delegates.md). Temsilciler, [olayların](../../programming-guide/events/index.md)temelini oluşturur. Bir temsilci, adlandırılmış ya da anonim bir yöntemle ilişkilendirerek oluşturulabilir.
 
-Temsilci, uyumlu bir dönüş türü ne de giriş parametrelerine sahip bir yöntem veya lambda ifadesi ile anında alınmalıdır. Yöntem imzasında izin verilen varyans derecesi hakkında daha fazla bilgi [için, Temsilciler'deki Varyans'a](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)bakın. Anonim yöntemlerle kullanılmak üzere, temsilci ve onunla ilişkili kod birlikte bildirilir.
+Temsilci, uyumlu bir dönüş türü ve giriş parametrelerine sahip bir yöntem veya lambda ifadesiyle oluşturulmalıdır. Yöntem imzasında izin verilen varyans derecesi hakkında daha fazla bilgi için bkz. [temsilcilerin varyansı](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md). Anonim yöntemlerle kullanılmak üzere, ile ilişkilendirilecek temsilci ve kod birlikte bildirilmiştir.
 
 ## <a name="the-dynamic-type"></a>Dinamik tür
 
-Tür, `dynamic` değişkenin kullanımının ve üyelerine yapılan başvuruların derleme zamanı türü denetimi olduğunu gösterir. Bunun yerine, bu işlemler çalışma zamanında çözülür. Bu `dynamic` tür, Office Automation API'leri gibi COM API'lerine, IronPython kitaplıkları gibi dinamik API'lere ve HTML Belge Nesnesi Modeli'ne (DOM) erişimi kolaylaştırır.
+`dynamic`Tür, değişkenin ve bunların üyelerine derleme zamanı tür denetimi atlama ' nin nasıl kullanılacağını belirtir. Bunun yerine, bu işlemler çalışma zamanında çözümlenir. `dynamic`Bu tür, Office Otomasyonu API 'leri, IronPython kitaplıkları gibi dinamik API 'ler ve HTML belge nesne modeli (DOM) gıbı com API 'lerine erişimi basitleştirir.
 
-Tür `dynamic` çoğu durumda `object` türü gibi olur. Özellikle, herhangi bir null olmayan ifade `dynamic` türüne dönüştürülebilir. Tür, `dynamic` tür `object` `dynamic` ifadeleri içeren çözülmemiş veya derleyici tarafından denetlenen tür lerden farklıdır. Derleyici, işlemle ilgili bilgileri bir araya getirir ve bu bilgiler daha sonra çalışma zamanında işlemi değerlendirmek için kullanılır. İşlemin bir parçası olarak, `dynamic` tür değişkenleri tür `object`değişkenleri halinde derlenir. Bu nedenle, tür `dynamic` yalnızca derleme zamanda değil, çalışma zamanında var.
+Tür `dynamic` birçok durumda tür gibi davranır `object` . Özellikle, null olmayan herhangi bir ifade `dynamic` türüne dönüştürülebilir. Türü, türü `dynamic` `object` ifadeler içeren işlemlerdeki öğesinden farklıdır `dynamic` veya derleyici tarafından denetlenen tür. Derleyici, işlem hakkındaki bilgileri birlikte paketler ve bu bilgiler daha sonra çalışma zamanında işlemi değerlendirmek için kullanılır. İşlemin bir parçası olarak, türündeki değişkenler `dynamic` tür değişkenlerine derlenir `object` . Bu nedenle, tür `dynamic` yalnızca derleme zamanında bulunur, çalışma zamanında değil.
 
-Aşağıdaki örnek, bir tür `dynamic` değişkeni ile `object`tür değişkeni ile tezat oluşturuyor. Her değişkenin türünü derleme zamanında doğrulamak için fare `dyn` `obj` işaretçisini `WriteLine` ifadelerin üzerine veya ifadelerine yerleştirin. Aşağıdaki kodu IntelliSense'in kullanılabildiği bir düzenleyiciye kopyalayın. IntelliSense **dynamic** için `dyn` dinamik ve `obj` **nesne** gösterir.
+Aşağıdaki örnek, türünde bir değişkenini türünde bir `dynamic` değişkene karşıttır `object` . Derleme zamanında her değişkenin türünü doğrulamak için, fare işaretçisini `dyn` `obj` `WriteLine` deyimlere veya ifadelerine yerleştirin. Aşağıdaki kodu IntelliSense 'in kullanılabildiği bir düzenleyiciye kopyalayın. IntelliSense, **dynamic** için dinamik `dyn` ve **nesnesini** gösterir `obj` .
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
-<xref:System.Console.WriteLine%2A> İfadeler çalışma zamanı türlerini `dyn` `obj`görüntüler ve. Bu noktada, her ikisi de aynı tür, tamsayı var. Aşağıdaki çıktı üretilir:
+<xref:System.Console.WriteLine%2A>Deyimleri ve çalışma zamanı türlerini görüntüler `dyn` `obj` . Bu noktada, her ikisi de aynı tür, tamsayı olmalıdır. Aşağıdaki çıktı üretilir:
 
 ```console
 System.Int32
 System.Int32
 ```
 
-Derleme zamanı ile `dyn` `obj` arasındaki farkı görmek için, önceki örnekteki bildirimler `WriteLine` ve deyimler arasındaki aşağıdaki iki satırı ekleyin.
+Ve derleme zamanı arasındaki farkı görmek için `dyn` `obj` , önceki örnekteki bildirimler ve deyimler arasına aşağıdaki iki satırı ekleyin `WriteLine` .
 
 ```csharp
 dyn = dyn + 3;
 obj = obj + 3;
 ```
 
- Bir tamsede ve ifadedeki `obj + 3`bir nesnenin ekleme denemesi için derleyici hatası bildirilir. Ancak, hiçbir hata `dyn + 3`için bildirilir . `dyn` Türü `dyn` . `dynamic`
+ Bir tamsayı ve ifadedeki bir nesne ekleme denemesi için bir derleyici hatası bildirilir `obj + 3` . Ancak, için bir hata raporlanmayacaktır `dyn + 3` . Türü olduğundan, içeren ifade `dyn` derleme sırasında denetlenmez `dyn` `dynamic` .
 
-Aşağıdaki örnek, `dynamic` çeşitli bildirimlerde kullanır. Yöntem `Main` ayrıca derleme zamanı türü denetimi ile çalışma zamanı türü denetimiyle tezat oluşturuyor.
+Aşağıdaki örnek, `dynamic` çeşitli bildirimlerde kullanır. `Main`Yöntemi ayrıca derleme zamanı tür denetimini çalışma zamanı tür denetlemesi ile karşıtlıkları.
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
 ### <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
-- [C# Anahtar Kelimeler](../keywords/index.md)
+- [C# başvurusu](../index.md)
+- [C# anahtar sözcükleri](../keywords/index.md)
 - [Olaylar](../../programming-guide/events/index.md)
 - [Tür dinamiği kullanma](../../programming-guide/types/using-type-dynamic.md)
-- [Dizeleri Kullanmak için En İyi Uygulamalar](../../../standard/base-types/best-practices-strings.md)
-- [Temel Dize İşlemleri](../../../standard/base-types/basic-string-operations.md)
+- [Dizeleri kullanmak için en iyi uygulamalar](../../../standard/base-types/best-practices-strings.md)
+- [Temel dize Işlemleri](../../../standard/base-types/basic-string-operations.md)
 - [Yeni Dizeler Oluşturma](../../../standard/base-types/creating-new.md)
 - [Tür testi ve atama işleçleri](../operators/type-testing-and-cast.md)
-- [Desen eşleştirme ve as ve operatörler kullanarak güvenli bir şekilde döküm nasıl](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
-- [Walkthrough: dinamik nesneler oluşturma ve kullanma](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Model eşleştirmeyi ve as ve işleç işleçlerini kullanarak güvenli bir şekilde atama](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [İzlenecek yol: dinamik nesneler oluşturma ve kullanma](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.String?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>

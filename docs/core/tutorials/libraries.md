@@ -4,12 +4,12 @@ description: .NET Core CLI kullanarak .NET Core kitaplıkları oluşturmayı ö�
 author: cartermp
 ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: 7aadaf7bf7819d52a57c3a137beff46d924d8cb0
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e98ce9e08c8d92bb4c89348e21cece60de811848
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396210"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223698"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI ile Kitaplıklar geliştirin
 
@@ -33,7 +33,7 @@ Ayrıca, eski .NET Framework hedeflerini desteklemek istiyorsanız, [.net indirm
 | 4.0                    | Windows 7 ve .NET Framework 4 için Windows SDK         |
 | 2,0, 3,0 ve 3,5      | .NET Framework 3,5 SP1 çalışma zamanı (veya Windows 8 + sürüm) |
 
-## <a name="how-to-target-the-net-standard"></a>.NET Standard nasıl hedeflenecek
+## <a name="how-to-target-net-standard"></a>Nasıl hedeflenecek .NET Standard
 
 .NET Standard hakkında bilginiz yoksa daha fazla bilgi edinmek için [.NET Standard](../../standard/net-standard.md) başvurun.
 

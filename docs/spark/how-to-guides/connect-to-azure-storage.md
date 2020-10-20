@@ -1,15 +1,17 @@
 ---
 title: Yerel makinenizden uzak depolama 'ya bağlanma
 description: Yerel makinenizden Apache Spark için .NET kullanarak Azure Storage hesaplarına bağlanın.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 09e92b0cae848f9c98b691a11842f131f613396b
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: dc0c3b44279756596f3d456616821e690710ae04
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877953"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224019"
 ---
 # <a name="connect-to-azure-data-lake-storage-gen-2-or-wasb-account"></a>Azure Data Lake Storage Gen 2 veya 1 GB hesabına bağlanma
 

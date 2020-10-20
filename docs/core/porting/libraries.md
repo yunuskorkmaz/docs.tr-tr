@@ -3,12 +3,12 @@ title: .NET Core 'a bağlantı noktası kitaplıkları
 description: .NET Framework kitaplığı projelerinin nasıl .NET Core 'a bağlantı sağladığını öğrenin.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: ac9da2f850bf1e4e36367ad2154849a0c7efd535
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: dcacf4d59964e0ef2009b4e9694d7f562e3a1547
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164284"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223570"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core 'a bağlantı noktası .NET Framework kitaplıkları
 

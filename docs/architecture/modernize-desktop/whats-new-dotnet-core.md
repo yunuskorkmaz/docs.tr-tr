@@ -2,12 +2,12 @@
 title: Masaüstü için .NET Core’da ne gibi yenilikler var?
 description: .NET Core, .NET Core ve .NET Framework arasındaki farklar ve eklenen yeni özellikler hakkında bilgi edinin.
 ms.date: 05/12/2020
-ms.openlocfilehash: b4fc0cb2841fe13b000223aefc5eaf63bd911994
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 796facaf8cd4f0d23fbcd04b90cb78fb28ebc465
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144265"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223643"
 ---
 # <a name="whats-new-with-net-core-for-desktop"></a>Masaüstü için .NET Core’da ne gibi yenilikler var?
 
@@ -83,7 +83,7 @@ Yepyeni masaüstü uygulamalarınız için doğrudan .NET Core üzerinde başlam
 
 ## <a name="net-standard-vs-pcl"></a>.NET Standard vs. PCL
 
-[.NET Standard](../../standard/net-standard.md) , tüm .NET uygulamalarında kullanılabilmesi amaçlanan .NET API 'lerinin resmi bir belirtimidir. .NET Standard arkasındaki mosyon, .NET ekosisteminde daha büyük bir birlik oluşturur. .NET Standard, kodunuzun derlenmesi için tek bir sözleşme kümesi oluşturan .NET API 'lerinin bir belirtimidir. Bu sözleşmeler her bir .NET uygulamasında uygulanır ve bu sayede farklı .NET uygulamalarında taşınabilirliği etkinleştirir.
+[.NET Standard](../../standard/net-standard.md) , tüm .NET uygulamalarında kullanılabilmesi amaçlanan .NET API 'lerinin resmi bir belirtimidir. .NET Standard arkasındaki mosyon, .NET ekosisteminde daha büyük bir uyumluluk oluşturur. .NET Standard, kodunuzun derlenmesi için tek bir sözleşme kümesi oluşturan .NET API 'lerinin bir belirtimidir. Bu sözleşmeler her bir .NET uygulamasında uygulanır ve bu sayede farklı .NET uygulamalarında taşınabilirliği etkinleştirir.
 
 .NET Standard aşağıdaki temel senaryolara izin vermez:
 

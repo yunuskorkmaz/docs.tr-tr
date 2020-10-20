@@ -1,40 +1,40 @@
 ---
 title: ​.NET Core 2.0’deki yenilikler
-description: .NET Core'da bulunan yeni özellikler hakkında bilgi edinin.
+description: .NET Core 'da bulunan yeni özellikler hakkında bilgi edinin.
 ms.date: 08/13/2017
-ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdca38d1584107727fe8e20b80ab2337f4cb05f1
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398834"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223713"
 ---
 # <a name="whats-new-in-net-core-20"></a>​.NET Core 2.0’deki yenilikler
 
-.NET Core 2.0 aşağıdaki alanlarda ki geliştirmeleri ve yeni özellikleri içerir:
+.NET Core 2,0, aşağıdaki alanlarda geliştirmeler ve yeni özellikler içerir:
 
 - [Araçlar](#tooling)
 - [Dil desteği](#language-support)
 - [Platform geliştirmeleri](#platform-improvements)
 - [API değişiklikleri](#api-changes-and-library-support)
-- [Visual Studio ile tümleştirme](#visual-studio-integration)
-- [Dokümantasyon geliştirmeleri](#documentation-improvements)
+- [Visual Studio tümleştirmesi](#visual-studio-integration)
+- [Belge geliştirmeleri](#documentation-improvements)
 
 ## <a name="tooling"></a>Araçlar
 
-### <a name="dotnet-restore-runs-implicitly"></a>dotnet geri yükleme örtülü çalışır
+### <a name="dotnet-restore-runs-implicitly"></a>dotnet restore örtük olarak çalıştırılır
 
-.NET Core'un önceki sürümlerinde, [dotnet](../tools/dotnet-restore.md) yeni komutuyla yeni bir proje oluşturduktan hemen sonra ve projenize yeni bir bağımlılık eklediğinizde bağımlılıkları indirmek için [dotnet](../tools/dotnet-new.md) geri yükleme komutunu çalıştırmanız gerekiyordu.
+.NET Core 'un önceki sürümlerinde, [DotNet New](../tools/dotnet-new.md) komutuyla yeni bir proje oluşturduktan sonra ve projenize yeni bir bağımlılık eklediğiniz her seferinde bağımlılıkları indirmek için [DotNet restore](../tools/dotnet-restore.md) komutunu çalıştırmanız gerekiyordu.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-`--no-restore` Ayrıca, `new`, , `run` `build` `publish` `pack`, , , ve `test` komutları anahtarı `dotnet restore` geçirerek otomatik çağırma devre dışı leyebilirsiniz.
+Ayrıca `dotnet restore` `--no-restore` , anahtarı,,,, `new` `run` `build` `publish` `pack` ve `test` komutlarına geçirerek otomatik çağrısını devre dışı bırakabilirsiniz.
 
-### <a name="retargeting-to-net-core-20"></a>.NET Core 2.0'a yeniden hedefleme
+### <a name="retargeting-to-net-core-20"></a>.NET Core 2,0 için yeniden hedefleme
 
-.NET Core 2.0 SDK kuruluysa, .NET Core 1.x'i hedefleyen projeler .NET Core 2.0'a yeniden hedeflenebilir.
+.NET Core 2,0 SDK 'Sı yüklüyse, .NET Core 1. x 'i hedefleyen projeler .NET Core 2,0 ' e yeniden hedeflenebilir.
 
-.NET Core 2.0'ı yeniden hedeflemek için, öğenin `<TargetFramework>` (veya proje `<TargetFrameworks>` dosyanızda birden fazla hedefiniz varsa öğeyi) 1,x'ten 2.0'a değiştirerek proje dosyanızı düzenleme:
+.NET Core 2,0 ' ye yeniden hedeflemesini sağlamak için, `<TargetFramework>` `<TargetFrameworks>` 1. x ile 2,0 arasında (veya proje dosyanızda birden fazla hedef varsa, öğe) değerini değiştirerek proje dosyanızı düzenleyin:
 
 ```xml
 <PropertyGroup>
@@ -42,7 +42,7 @@ ms.locfileid: "79398834"
  </PropertyGroup>
 ```
 
-.NET Standart kitaplıklarını aynı şekilde .NET Standart 2.0'a da yeniden hedefleyebilirsiniz:
+Ayrıca, .NET Standard kitaplıklarını aynı şekilde .NET Standard 2,0 olarak yeniden hedefleyebilirsiniz:
 
 ```xml
 <PropertyGroup>
@@ -50,115 +50,115 @@ ms.locfileid: "79398834"
  </PropertyGroup>
 ```
 
-Projenizi .NET Core 2.0'a geçirme hakkında daha fazla bilgi ASP.NET [ASP.NET](/aspnet/core/migration/1x-to-2x/index)için bkz.
+Projenizi .NET Core 2,0 ' e geçirme hakkında daha fazla bilgi için, bkz [. asp.NET Core 1. x ' den ASP.NET Core 2,0 ' ye](/aspnet/core/migration/1x-to-2x/index)geçme.
 
 ## <a name="language-support"></a>Dil desteği
 
-C# ve F#'ı desteklemenin yanı sıra .NET Core 2.0 Visual Basic'i de destekler.
+C# ve F # ' ı desteklemeye ek olarak, .NET Core 2,0 de Visual Basic destekler.
 
 ### <a name="visual-basic"></a>Visual Basic
 
-.NET Core, sürüm 2.0 ile Visual Basic 2017'yi destekliyor. Aşağıdaki proje türlerini oluşturmak için Visual Basic'i kullanabilirsiniz:
+Sürüm 2,0 ile, .NET Core artık Visual Basic 2017 ' yi desteklemektedir. Visual Basic, aşağıdaki proje türlerini oluşturmak için kullanabilirsiniz:
 
 - .NET Core konsol uygulamaları
-- .NET Çekirdek sınıf kitaplıkları
-- .NET Standart sınıf kitaplıkları
-- .NET Çekirdek ünite test projeleri
+- .NET Core sınıf kitaplıkları
+- .NET Standard sınıf kitaplıkları
+- .NET Core birim testi projeleri
 - .NET Core xUnit test projeleri
 
-Örneğin, Visual Basic "Hello World" uygulaması oluşturmak için komut satırından aşağıdaki adımları yapın:
+Örneğin, bir Visual Basic "Merhaba Dünya" uygulaması oluşturmak için komut satırından aşağıdaki adımları uygulayın:
 
-1. Konsol penceresi açın, projeniz için bir dizin oluşturun ve geçerli dizini yapın.
+1. Bir konsol penceresi açın, projeniz için bir dizin oluşturun ve geçerli dizin yapın.
 
-1. Komutu `dotnet new console -lang vb`girin.
+1. Komutunu girin `dotnet new console -lang vb` .
 
-   Komut, *Program.vb*adlı `.vbproj` Visual Basic kaynak kodu dosyasıyla birlikte dosya uzantısı olan bir proje dosyası oluşturur. Bu dosya "Merhaba Dünya!" dizesini yazmak için kaynak kodu içerir. konsol penceresine.
+   Bu komut `.vbproj` , *program. vb*adlı Visual Basic kaynak kodu dosyası ile birlikte bir dosya uzantısına sahip bir proje dosyası oluşturur. Bu dosya, "Merhaba Dünya!" dizesinin yazılacağı kaynak kodunu içerir Konsol penceresine.
 
-1. Komutu `dotnet run`girin. [.NET Core CLI,](../tools/index.md) "Hello World!" mesajını görüntüleyen uygulamayı otomatik olarak derler ve yürütür. konsol penceresinde.
+1. Komutunu girin `dotnet run` . [.NET Core CLI](../tools/index.md) , uygulamayı otomatik olarak derler ve yürütür ve "Merhaba Dünya!" iletisini görüntüler. Konsol penceresinde.
 
-### <a name="support-for-c-71"></a>C# 7.1 desteği
+### <a name="support-for-c-71"></a>C# 7,1 için destek
 
-.NET Core 2.0, c# 7.1'i destekler ve bu özellikler şunlardır:
+.NET Core 2,0, aşağıdakiler dahil olmak üzere çeşitli yeni özellikler ekleyen C# 7,1 'yi destekler:
 
-- Yöntem, `Main` uygulama giriş noktası, [async](../../csharp/language-reference/keywords/async.md) anahtar sözcüğü ile işaretlenebilir.
-- Çıkarılan tuple adları.
+- `Main`Uygulama giriş noktası yöntemi, [Async](../../csharp/language-reference/keywords/async.md) anahtar sözcüğüyle işaretlenebilir.
+- Çıkarsanan demet adları.
 - Varsayılan ifadeler.
 
 <!-- For more information see [link to C# what's new](url). -->
 
 ## <a name="platform-improvements"></a>Platform geliştirmeleri
 
-.NET Core 2.0, .NET Core'un yüklenmesini ve desteklenen işletim sistemlerinde kullanılmasını kolaylaştıran bir dizi özellik içerir.
+.NET Core 2,0, .NET Core 'u yüklemeyi ve desteklenen işletim sistemlerinde kullanmayı kolaylaştıran birçok özellik içerir.
 
-### <a name="net-core-for-linux-is-a-single-implementation"></a>Linux için .NET Core tek bir uygulamadır
+### <a name="net-core-for-linux-is-a-single-implementation"></a>Linux için .NET Core tek bir uygulama
 
-.NET Core 2.0, birden fazla Linux dağıtımı nda çalışan tek bir Linux uygulaması sunar. .NET Core 1.x, dağıtıma özel bir Linux uygulamasını indirmenizi zorunlu kattı.
+.NET Core 2,0, birden çok Linux dağıtımı üzerinde çalışabilen tek bir Linux uygulamasını sunmaktadır. .NET Core 1. x, dağıtıma özgü bir Linux uygulamasını indirmeniz gerekir.
 
-Linux'u tek bir işletim sistemi olarak hedefleyen uygulamalar da geliştirebilirsiniz. .NET Core 1.x, her Linux dağıtımına ayrı ayrı hedeflemeniz gerekir.
+Ayrıca, Linux 'u tek bir işletim sistemi olarak hedefleyen uygulamalar da geliştirebilirsiniz. .NET Core 1. x, her bir Linux dağıtımını ayrı olarak hedeflediğiniz için gereklidir.
 
 ### <a name="support-for-the-apple-cryptographic-libraries"></a>Apple şifreleme kitaplıkları için destek
 
-MacOS'ta .NET Core 1.x, OpenSSL araç setinin şifreleme kitaplığını gerekli kattı. .NET Core 2.0, Apple şifreleme kitaplıklarını kullanır ve OpenSSL gerektirmez, bu nedenle artık yüklemeniz gerekmez.
+MacOS üzerinde .NET Core 1. x, OpenSSL araç setinin şifreleme kitaplığını gerektirdi. .NET Core 2,0, Apple şifreleme kitaplıklarını kullanır ve OpenSSL gerektirmez, bu nedenle artık yüklemeniz gerekmez.
 
 ## <a name="api-changes-and-library-support"></a>API değişiklikleri ve kitaplık desteği
 
-### <a name="support-for-net-standard-20"></a>.NET Standard 2.0 desteği
+### <a name="support-for-net-standard-20"></a>.NET Standard 2,0 desteği
 
-.NET Standardı, standardın bu sürümüne uygun .NET uygulamalarında bulunması gereken sürümlenmiş bir API kümesi tanımlar. .NET Standardı kitaplık geliştiricileri hedeflenebilmektedir. Her .NET uygulamasında .NET Standardının bir sürümünü hedefleyen bir kitaplığın kullanabileceği işlevselliği garanti etmeyi amaçlar. .NET Core 1.x .NET Standart sürüm 1.6 destekler; .NET Core 2.0 en son sürümü destekler, .NET Standart 2.0. Daha fazla bilgi için [.NET Standard](../../standard/net-standard.md)' a bakın.
+.NET Standard, standart sürümüne uygun .NET uygulamalarında kullanılabilmesi gereken sürümlenmiş bir API kümesini tanımlar. .NET Standard, kitaplık geliştiricileri 'ne yöneliktir. Her bir .NET uygulamasında bir .NET Standard sürümünü hedefleyen bir kitaplık için kullanılabilen işlevselliği garanti etmek için amaçlar. .NET Core 1. x .NET Standard sürüm 1,6 ' ü destekler; .NET Core 2,0, .NET Standard 2,0 en son sürümü destekler. Daha fazla bilgi için bkz. [.NET Standard](../../standard/net-standard.md).
 
-.NET Standart 2.0, .NET Standart 1.6'da bulunandan 20.000'den fazla API içerir. Bu genişletilmiş yüzey alanının çoğu,.NET Framework ve Xamarin'de ortak olan API'lerin .NET Standardına dahil edilmesinden kaynaklanır.
+.NET Standard 2,0, .NET Standard 1,6 ' de kullanılabilir olandan daha fazla 20.000 API 'ye sahiptir. Bu genişletilmiş yüzey alanının büyük bölümü, .NET Framework ve Xamarin için ortak olan API 'Leri .NET Standard ' ye ekleme sonucu oluşur.
 
-.NET Standart 2.0 sınıf kitaplıkları, .NET Standart 2.0'da bulunan API'leri aramaları koşuluyla .NET Framework sınıf kitaplıklarına da başvuruyapabilir. .NET Framework kitaplıklarının yeniden derlemesi gerekmez.
+.NET Standard 2,0 sınıf kitaplıkları ayrıca .NET Standard 2,0 ' de bulunan API 'Leri çağırmak kaydıyla .NET Framework sınıf kitaplıklarına başvurabilir. .NET Framework kitaplıklarının yeniden derlenmesi gerekli değildir.
 
-Son sürümünden bu yana .NET Standardına eklenen API'lerin listesi için .NET Standart 1.6'ya [bakın.NET Standart 2.0 vs. 1.6.](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)
+Son sürümü bu yana .NET Standard eklenen API 'lerin bir listesi için, .NET Standard 1,6, bkz. [.NET Standard 2,0 vs. 1,6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 ### <a name="expanded-surface-area"></a>Genişletilmiş yüzey alanı
 
-.NET Core 2.0'da bulunan toplam API sayısı .NET Core 1.1 ile karşılaştırıldığında iki kattan fazla artmıştır.
+.NET Core 2,0 ' de mevcut olan API 'lerin toplam sayısı, .NET Core 1,1 ile karşılaştırıldığında iki katına çıkar.
 
-Ve [.NET](../porting/windows-compat-pack.md) Framework'den windows uyumluluk paketi taşıma ile de çok daha basit hale gelmiştir.
+[Windows Uyumluluk paketi](../porting/windows-compat-pack.md) .NET Framework 'den taşıma işlemi de çok daha kolay hale geldi.
 
 ### <a name="support-for-net-framework-libraries"></a>.NET Framework kitaplıkları için destek
 
-.NET Core kodu, mevcut NuGet paketleri de dahil olmak üzere varolan .NET Framework kitaplıkları referans olabilir. Kitaplıkların .NET Standardı'nda bulunan API'leri kullanması gerektiğini unutmayın.
+.NET Core Code var olan NuGet paketleri de dahil olmak üzere mevcut .NET Framework kitaplıklarına başvurabilir. Kitaplıkların .NET Standard bulunan API 'Leri kullanması gerektiğini unutmayın.
 
-## <a name="visual-studio-integration"></a>Visual Studio ile tümleştirme
+## <a name="visual-studio-integration"></a>Visual Studio tümleştirmesi
 
-Visual Studio 2017 sürüm 15.3 ve bazı durumlarda Mac için Visual Studio .NET Core geliştiricileri için önemli geliştirmeler sunar.
+Visual Studio 2017 sürüm 15,3 ve bazı durumlarda Mac için Visual Studio .NET Core geliştiricileri için çeşitli önemli geliştirmeler sunar.
 
-### <a name="retargeting-net-core-apps-and-net-standard-libraries"></a>.NET Core uygulamalarını ve .NET Standart kitaplıklarını yeniden hedefleme
+### <a name="retargeting-net-core-apps-and-net-standard-libraries"></a>.NET Core uygulamalarını ve .NET Standard kitaplıklarını yeniden hedefleme
 
-.NET Core 2.0 SDK yüklüyse, .NET Core 1.x projelerini .NET Core 2.0 ve .NET Standard 1.x kitaplıklarını .NET Standard 2.0'a yeniden hedefleyebilirsiniz.
+.NET Core 2,0 SDK 'Sı yüklüyse, .NET Core 1. x projelerini .NET Core 2,0 ve .NET Standard 1. x kitaplıklarını .NET Standard 2,0 olarak yeniden hedefleyebilirsiniz.
 
-Visual Studio'da projenizi yeniden hedeflemek için, projenin özellikleri iletişim kutusunun **Uygulama** sekmesini açar ve **Hedef çerçeve** değerini **.NET Core 2.0** veya **.NET Standard 2.0**olarak değiştirirsiniz. Ayrıca, projeye sağ tıklayarak ve **Düzenleme \*.csproj dosya** seçeneğini seçerek değiştirebilirsiniz. Daha fazla bilgi için, bu konunun daha önceki [Araçlama](#tooling) bölümüne bakın.
+Projenizi Visual Studio 'da yeniden hedeflemek için projenin Özellikler iletişim kutusunun **uygulama** sekmesini açın ve **hedef Framework** değerini **.net Core 2,0** veya **2,0 .NET Standard**olarak değiştirirsiniz. Ayrıca, projeye sağ tıklayıp ** \* . csproj dosyasını Düzenle** seçeneğini belirleyerek de değiştirebilirsiniz. Daha fazla bilgi için bu konunun önceki kısımlarında yer alan [Araçlar bölümüne bakın](#tooling) .
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core için Live Unit Testing
 
-Kodunuzu her değiştirdiğinizde, Canlı Birim Testi etkilenen birim testlerini arka planda otomatik olarak çalıştırArak sonuçları ve kod kapsamını Visual Studio ortamında canlı olarak görüntüler. .NET Core 2.0 artık Canlı Birim Testini destekliyor. Daha önce, Canlı Birim Testi yalnızca .NET Framework uygulamaları için mevcuttu.
+Kodunuzu her değiştirdiğinizde Live Unit Testing otomatik olarak etkilenen birim testlerini arka planda çalıştırır ve Visual Studio ortamında sonuçları ve kod kapsamını canlı olarak görüntüler. .NET Core 2,0 artık Live Unit Testing desteklemektedir. Daha önce Live Unit Testing yalnızca .NET Framework uygulamalar için kullanılabilir.
 
-Daha fazla bilgi için [Visual Studio ile Canlı Birim Testi](/visualstudio/test/live-unit-testing) ve Canlı Birim Test [SSS'ye](/visualstudio/test/live-unit-testing-faq)bakın.
+Daha fazla bilgi için bkz. [Visual Studio ile Live Unit Testing](/visualstudio/test/live-unit-testing) ve [Live Unit Testing SSS](/visualstudio/test/live-unit-testing-faq).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Birden çok hedef çerçeve için daha iyi destek
 
-Birden çok hedef çerçevesi için bir proje oluşturuyorsanız, artık üst düzey menüden hedef platformu seçebilirsiniz. Aşağıdaki şekilde, SCD1 adlı bir proje 64-bit macOS X`osx.10.11-x64`10.11 ( ) ve 64-bit`win10-x64`Windows 10/Windows Server 2016 ( hedefliyor. Bu durumda hata ayıklama oluşturma yı çalıştırmak için proje düğmesini seçmeden önce hedef çerçeveyi seçebilirsiniz.
+Birden çok hedef çerçeve için bir proje oluşturuyorsanız, artık üst düzey menüden hedef platformu seçebilirsiniz. Aşağıdaki şekilde, SCD1 adlı bir proje 64-bit macOS X 10,11 ( `osx.10.11-x64` ) ve 64-bit Windows 10/Windows Server 2016 ( `win10-x64` ) hedefliyor. Bu durumda bir hata ayıklama yapısı çalıştırmak için proje düğmesini seçmeden önce hedef Framework 'ü seçebilirsiniz.
 
-![Proje inşa ederken hedef çerçeve seçimini gösteren ekran görüntüsü.](./media/dotnet-core-2-0/target-framework-selection.png)
+![Proje oluşturulurken hedef çerçeve seçimini gösteren ekran görüntüsü.](./media/dotnet-core-2-0/target-framework-selection.png)
 
-### <a name="side-by-side-support-for-net-core-sdks"></a>.NET Core SDK'lar için yan yana destek
+### <a name="side-by-side-support-for-net-core-sdks"></a>.NET Core SDK 'Ları için yan yana destek
 
-Artık .NET Core SDK'yı Visual Studio'dan bağımsız olarak yükleyebilirsiniz. Bu, Visual Studio'nun tek bir sürümünün .NET Core'un farklı sürümlerini hedefleyen projeler oluşturmasını mümkün kılar. Daha önce, Visual Studio ve .NET Core SDK sıkıca birleştirilmiş; SDK'nın belirli bir versiyonu Visual Studio'nun belirli bir sürümüne eşlik etti.
+Artık .NET Core SDK Visual Studio 'dan bağımsız olarak yükleyebilirsiniz. Bu, Visual Studio 'nun tek bir sürümünün .NET Core 'un farklı sürümlerini hedefleyen projeler oluşturmasına olanak tanır. Daha önce, Visual Studio ve .NET Core SDK sıkı bir şekilde bağlanmış. Visual Studio 'nun belirli bir sürümüne eşlik eden belirli bir SDK sürümü.
 
-## <a name="documentation-improvements"></a>Dokümantasyon geliştirmeleri
+## <a name="documentation-improvements"></a>Belge geliştirmeleri
 
-### <a name="net-application-architecture"></a>.NET Uygulama Mimarisi
+### <a name="net-application-architecture"></a>.NET uygulama mimarisi
 
-[.NET Application Architecture,](https://dotnet.microsoft.com/learn/dotnet/architecture-guides) oluşturmak için .NET'i kullanırken rehberlik, en iyi uygulamalar ve örnek uygulamalar sağlayan bir dizi e-kitap'a erişmenizi sağlar:
+[.NET uygulama mimarisi](https://dotnet.microsoft.com/learn/dotnet/architecture-guides) , oluşturmak için .net kullanırken rehberlik, en iyi uygulamalar ve örnek uygulamalar sağlayan bir dizi e-kitap için erişmenizi sağlar:
 
-- [Mikrohizmetler ve Docker konteynerleri](../../architecture/microservices/index.md)
+- [Mikro hizmetler ve Docker Kapsayıcıları](../../architecture/microservices/index.md)
 - [ASP.NET ile Web uygulamaları](../../architecture/modern-web-apps-azure/index.md)
 - [Xamarin ile mobil uygulamalar](/xamarin/xamarin-forms/enterprise-application-patterns/index)
-- [Azure ile Bulut'a dağıtılan uygulamalar](/azure/architecture/reference-architectures/index)
+- [Azure ile buluta dağıtılan uygulamalar](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ASP.NET Core 2.0'daki yenilikler](/aspnet/core/aspnetcore-2.0)
+- [ASP.NET Core 2,0 ' deki yenilikler](/aspnet/core/aspnetcore-2.0)

@@ -4,12 +4,12 @@ description: Bir ifade ağacının yapısını incelemek için kod yazmayı öğ
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 39baf32c9c53d57227d52b9370f8165ff92d708d
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173314"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223680"
 ---
 # <a name="interpreting-expressions"></a>İfade Yorumlama
 
@@ -516,7 +516,7 @@ Birincisi, ziyaretçiler yalnızca tamsayı olan sabitleri işler. Sabit değerl
 
 Son örnek bile olası düğüm türlerinin bir alt kümesini tanır.
 Yine de, başarısız olmasına neden olacak çok sayıda ifade akışı yapabilirsiniz.
-Tam bir uygulama, .NET Standard adı altında bulunur <xref:System.Linq.Expressions.ExpressionVisitor> ve tüm olası düğüm türlerini işleyebilir.
+Tam bir uygulama, ad altında .NET Standard eklenmiştir <xref:System.Linq.Expressions.ExpressionVisitor> ve tüm olası düğüm türlerini işleyebilir.
 
 Son olarak, bu makalede kullandığım kitaplık tanıtım ve öğrenme için oluşturulmuştur. En iyi duruma getirilmemiştir. Bu yapıyı, yapıları ve düğümleri ziyaret etmek ve ne olduğunu çözümlemek için kullanılan teknikleri vurgulamak için yazdım. Bir üretim uygulamasının performanstan daha fazla dikkat edin.
 

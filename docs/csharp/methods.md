@@ -4,12 +4,12 @@ description: Yöntemlere, yöntem parametrelerine ve yöntem dönüş değerleri
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d5ca96ab3a07b85fa525dd06c975f8e3221c82e8
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874711"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223664"
 ---
 # <a name="methods-in-c"></a>İçindeki Yöntemler (C#)
 
@@ -198,7 +198,7 @@ public (string, string, string, int) GetPersonalInfo(string id)
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine($"{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 Adlar, kayıt düzeni türü tanımındaki demet öğelerine de atanabilir. Aşağıdaki örnek, `GetPersonalInfo` adlandırılmış öğeleri kullanan yönteminin alternatif bir sürümünü göstermektedir:
@@ -215,7 +215,7 @@ public (string FName, string MName, string LName, int Age) GetPersonalInfo(strin
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine($"{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 Bir yöntem bir diziyi bağımsız değişken olarak geçirse ve tek tek öğelerin değerini değiştirirse, yöntemin diziyi döndürmesi gerekli değildir, ancak bunun için uygun stil veya işlevsel akış için bunu seçebilirsiniz.  Bunun nedeni C# ' nin tüm başvuru türlerini değere göre geçirme ve dizi başvurusunun değeri dizi işaretçisidir. Aşağıdaki örnekte, yönteminde yapılan dizi içeriklerinde yapılan değişiklikler, `values` `DoubleValues` dizi başvurusu olan herhangi bir kod tarafından Observable ' tır.

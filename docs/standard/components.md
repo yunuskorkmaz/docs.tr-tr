@@ -4,12 +4,12 @@ description: .NET Standard, .NET uygulamaları, .NET çalışma zamanları ve ar
 author: cartermp
 ms.date: 10/05/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 0cdd2485e81626ffc9d17380427c29fee0f82083
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 316063dbcfba5c92b4a9c6a17051e0a7fc178a3a
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050259"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224396"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 

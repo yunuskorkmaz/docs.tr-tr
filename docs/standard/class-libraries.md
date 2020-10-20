@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: e2fd0237556f877af64708674f00e9efddf95869
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 35e408ed3552550f19879409128784b2513e56c8
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209649"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224262"
 ---
 # <a name="net-class-libraries"></a>.NET sınıf kitaplıkları
 

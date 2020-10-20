@@ -16,17 +16,20 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: b5c32afb26c7b4bf7f8585c43ac11e57ebb5d015
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554872"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224352"
 ---
 # <a name="code-access-security"></a>Kod Erişimi Güvenliği
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
-  
+
+> [!NOTE]
+> Kod erişimi güvenliği kullanım dışı olduğundan, .NET ekosistemi içindeki çoğu modern kod, kısmi güven ortamında çalışacak şekilde tasarlanmamıştır. Kitaplık geliştiricisi, CAS korumalı alanı içinde uyumluluğu sağlamak için açık adımlar gerçekleştirmediği müddetçe, CAS kullanan uygulamalar, modern kitaplıkların bu ortamlar içinde düzgün çalışmasını beklememelidir.  
+
  Günümüzün yüksek oranda bağlı bilgisayar sistemleri, büyük olasılıkla bilinmeyen kaynaklardan kaynaklanan koda sıklıkla açıktır. Kod, belgelerde bulunan veya Internet üzerinden indirilen e-postaya bağlanabilir. Ne yazık ki, birçok bilgisayar kullanıcısı virüsler ve solucanlar de dahil olmak üzere kötü amaçlı mobil kodun etkilerini Ağızdan yaşadı ve bu da verileri ve maliyet zamanını ve paradan zarar verebilir veya yok edebilir.  
   
  En yaygın güvenlik mekanizmaları, kullanıcılara kendi kimlik bilgilerine (genellikle bir parola) göre haklar verir ve kullanıcının erişmesine izin verilen kaynakları (genellikle dizinler ve dosyalar) kısıtlar. Ancak, bu yaklaşım çeşitli sorunları ele alamıyor: kullanıcılar çok sayıda kaynaktan kod edinerek, bazıları güvenilir olmayabilir; kod, kötü amaçlı kod tarafından yararlanılmasını sağlayan hatalar veya güvenlik açıkları içerebilir; ve kod bazen Kullanıcı tarafından bunu bilmez. Sonuç olarak, bilgisayar sistemleri zarar görmüş olabilir ve güvenilir kullanıcılar kötü amaçlı veya hata doldurulmuş yazılımlar çalıştırmazsa, özel veriler sızmış olabilir. Çoğu işletim sistemi güvenlik mekanizması, bir Web sayfasındaki betikler hariç olmak üzere her kod parçasının çalışması için güvenilir olmasını gerektirir. Bu nedenle, sistemler arasında güven ilişkisi olmasa bile, bir bilgisayar sisteminden kaynaklanan kodun başka bir sistem üzerinde koruma ile yürütülmesine izin veren, yaygın olarak uygulanabilir bir güvenlik mekanizması olması gerekir.  
@@ -69,5 +72,5 @@ ms.locfileid: "90554872"
 |[Güvenliği Saydam Kod, 2. Düzey](security-transparent-code-level-2.md)|.NET Framework 4 ' teki güvenlik saydamlığı modelini açıklar.|  
 |[Kısmen Güvenilen Koddan Kitaplıkları Kullanma](using-libraries-from-partially-trusted-code.md)|Yönetilmeyen kod ile kullanım için kitaplıkların nasıl etkinleştirileceğini ve yönetilmeyen koddan kitaplıkların nasıl kullanılacağını açıklar.|  
 |[Temel Güvenlik Kavramları](../../standard/security/key-security-concepts.md)|.NET Framework güvenlik sisteminde kullanılan önemli koşulların ve kavramların çoğuna genel bir bakış sağlar.|  
-|[Rol Tabanlı Güvenlik](../../standard/security/role-based-security.md)|Rollere göre güvenliğin nasıl ekleneceğini açıklar.|  
+|[Rol tabanlı güvenlik](../../standard/security/role-based-security.md)|Rollere göre güvenliğin nasıl ekleneceğini açıklar.|  
 |[Şifreleme Hizmetleri](../../standard/security/cryptographic-services.md)|Uygulamalarınızın nasıl şifreleneceğini açıklar.|

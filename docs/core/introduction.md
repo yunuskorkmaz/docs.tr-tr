@@ -4,12 +4,12 @@ description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kayna
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0539519c2e1dd429983226065e8508ac148e25a8
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877567"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223591"
 ---
 # <a name="introduction-to-net"></a>.NET’e giriş
 
@@ -102,13 +102,13 @@ Daha fazla bilgi için bkz. [.NET Core ve .NET 5 Için yayınlar ve destek](rele
 * [Temsilciler](../standard/delegates-lambdas.md)
 * [Lambdalar](../standard/delegates-lambdas.md)
 * [Olaylar](../standard/events/index.md)
-* [Özel Durumlar](../standard/exceptions/index.md)
+* [Özel durumlar](../standard/exceptions/index.md)
 * [Öznitelikler](../standard/attributes/index.md)
 * [Zaman uyumsuz kod](../standard/async.md)
 * [Paralel programlama](../standard/parallel-programming/index.md)
 * [Kod çözümleyicileri](../fundamentals/code-analysis/overview.md)
 
-### <a name="ides"></a>IDE 'leri
+### <a name="ides"></a>IDE
 
 .NET için tümleşik geliştirme ortamları şunları içerir:
 
@@ -344,7 +344,7 @@ Aynı sözcük farklı bağlamlarda farklı şekillerde kullanıldığından, .N
   | hedef çerçeve | Bir .NET uygulamasının veya kitaplığının dayandığı API 'lerin koleksiyonu. Örnekler: .NET Core 3,1, .NET Standard 2,0 |
   | Hedef çerçeve bilinen adı (tfd)  | TFD, .NET uygulaması veya kitaplığının hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimidir. Örnek: `net462` .NET Framework 4.6.2 için. |
   | çerçeveye bağımlı uygulama | Yalnızca [.net indirme sayfasından](https://dotnet.microsoft.com/download/dotnet-core)çalışma zamanını yüklediğiniz bir makinede çalışabilen bir uygulama. Bu kullanımdaki "Framework", .NET indirme sayfasından indirdiğinizde "çalışma zamanı" ile aynıdır. |
-  
+
 * **SDK**
 
   |Bağlam  | "SDK" anlamı |

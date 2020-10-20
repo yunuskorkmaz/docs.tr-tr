@@ -4,12 +4,12 @@ description: .NET Core ve .NET Standard projeleri için Code Quality ve esnekli�
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: ffeaa1e11512cab64695c120f844594b8c5014a8
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 18f17839361d0cb60a52fbf4415665855f1d53be
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281114"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223486"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core ve .NET Standard ile birim testi en iyi uygulamaları
 
@@ -114,6 +114,8 @@ Bu durumda, bir özelliği sahte (buna karşı) olarak denetlemekte, yukarıdaki
 Her şeyi ve saplamalar hakkında hatırlayabilmeniz gereken ana şey, her bir saplamaya benzer ancak sahte nesne ile ilgili olarak sizin için onay almanız gerekir.
 
 ## <a name="best-practices"></a>En iyi uygulamalar
+
+Birim testlerini yazarken altyapıya bağımlılıklar tanıtmamanızda deneyin. Bunlar testleri yavaş ve Brittle yapar ve tümleştirme testleri için ayrılmış olmalıdır. [Açık bağımlılıklar ilkesini](https://deviq.com/explicit-dependencies-principle) Izleyerek ve [bağımlılık ekleme](../extensions/dependency-injection.md)'yi kullanarak uygulamanızdaki bu bağımlılıklardan kaçınabilirsiniz. Ayrıca, birim testlerinizi tümleştirme testlerinizden ayrı bir projede tutabilirsiniz. Bu, birim testi projenizin altyapı paketlerine yönelik başvuruları veya bağımlılıkları olmamasını sağlar.
 
 ### <a name="naming-your-tests"></a>Testlerinizi adlandırma
 

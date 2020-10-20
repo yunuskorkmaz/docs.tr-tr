@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
 ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050350"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224411"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -98,7 +98,7 @@ Belirli bir teknoloji için uygulama derlemek ve çalıştırmak için kullanıl
 
 ".NET ekosistemi" terimi, üçüncü taraf uygulama ve kitaplıkları dahil olmak üzere ".NET Stack" gibi benzer terimlerden farklıdır. Tümcede bir örnek aşağıda verilmiştir:
 
-- " [.NET Standard](#net-standard) arkasındaki mosyon, .net ekosisteminde daha fazla esneklik sağlamak."
+- " [.NET Standard](#net-standard) arkasındaki mosyon, .net ekosisteminde daha büyük bir esneklik kurmaya çalışıyor."
 
 ## <a name="framework"></a>çerçeve
 

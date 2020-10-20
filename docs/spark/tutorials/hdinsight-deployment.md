@@ -4,12 +4,12 @@ description: HDInsight için bir .NET Apache Spark uygulamasının nasıl dağı
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8ef1429d265c87347bb8771dc01b319fcb9e84d0
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c745231f76142c11002ac6663906c8c44c69cdae
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955381"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223356"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Öğretici: Azure HDInsight 'a Apache Spark uygulaması için .NET dağıtma
 
@@ -100,11 +100,11 @@ Daha sonra, [Apache Spark için .net](https://dotnet.microsoft.com/learn/data/sp
    foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
-2. Bunları HDInsight kümenize kolayca yükleyebilmeniz için, yayımlanmış uygulama dosyalarınızı Zip halinde aşağıdaki görevleri yapın.
+2. Bunları HDInsight kümenize kolayca yükleyebilmeniz için, yayımlanmış uygulama dosyalarınızı Zip halinde aşağıdaki görevleri yapın. Yayımlama klasörünün içeriği, örneğin, 1. Adım sonucu oluşturulan *publish.zip* . Tüm derlemelerin ZIP dosyasının ilk katmanında olması ve ara klasör katmanı olmaması gerekir. Bu, *publish.zip*ayıkladığınızda tüm derlemelerin geçerli çalışma dizininize ayıklandığı anlamına gelir.
 
    **Windows 'da:**
 
-   *MySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64*dizinine gidin. Ardından, **Yayımla** klasörüne sağ tıklayıp **> sıkıştırılmış (daraltılmış) klasöre gönder**' i seçin. Yeni klasörü **publish.zip**olarak adlandırın.
+   Dosyayı yayımlanan tüm ikili dosyalarla bin dizinine ayıklamak için 7-zip veya WinZip gibi bir ayıklama programı kullanın.
 
    **Linux 'ta aşağıdaki komutu çalıştırın:**
 
@@ -151,7 +151,7 @@ Kümeniz çalışır olduktan sonra dosyalarınızı Azure 'a yükledikten sonra
    |Özellik  |Açıklama  |
    |---------|---------|
    | Betik türü |Özel|
-   | Name | Çalışanı yükler|
+   | Ad | Çalışanı yükler|
    | Bash betiği URI 'SI |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> Bu URI 'yi onaylamak için Azure Depolama Gezgini 'de install-worker.sh öğesine sağ tıklayın ve Özellikler ' i seçin. |
    | Düğüm türleri| Indan|
    | Parametreler | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin

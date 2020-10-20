@@ -5,12 +5,12 @@ ms.date: 10/05/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: a4a59fea3ab1a6bc93a12e3f0aa13dea726d8121
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: a4736e46eb7c25b64278bed8f2c2457002936b81
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050409"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224158"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -82,7 +82,7 @@ NuGet paketleri bir [veya daha fazla](frameworks.md)çerçeveyi hedeflemelidir. 
 
 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/)Metapackage, .NET Standard tanımlayan tüm NuGet paketleri kümesine başvurur.  Hedefetmenin en yaygın yolu, `netstandard` Bu metapackage 'e başvurarak yapılır. Bu, .NET Standard tanımlayan ~ 40 .NET kitaplıklarına ve ilişkili API 'lere erişim sağlar. Ek API 'lere erişim sağlamak için, hedef olan ek paketlere başvurabilirsiniz `netstandard` .
 
-### <a name="versioning"></a>Sürüm Oluşturma
+### <a name="versioning"></a>Sürüm oluşturma
 
 Belirtim tekil değildir, ancak önceden sürümlü bir API kümesidir. Standart 'ın ilk sürümü bir temel API kümesi oluşturur. Sonraki sürümler, API 'Ler ekler ve önceki sürümler tarafından tanımlanan API 'Leri alırlar. Standart olmayan API 'Leri kaldırmak için bir sağlama yoktur.
 
