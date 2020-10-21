@@ -165,7 +165,7 @@ items:
                 href: ../core/tools/sdk-errors/netsdk1145.md
       - name: .NET Core CLI
         items:
-          - name: Genel Bakış
+          - name: Genel bakış
             href: ../core/tools/index.md
           - name: Başvuru
             items:
@@ -301,7 +301,7 @@ items:
         items:
           - name: Proje SDK’leri
             items:
-              - name: Genel Bakış
+              - name: Genel bakış
                 href: ../core/project-sdk/overview.md
               - name: Başvuru
                 items:
@@ -319,7 +319,7 @@ items:
             href: ../core/tools/dependencies.md
       - name: .NET Core ek araçlar
         items:
-          - name: Genel Bakış
+          - name: Genel bakış
             href: ../core/additional-tools/index.md
           - name: .NET Core Kaldırma Aracı
             href: ../core/additional-tools/uninstall-tool.md
@@ -1867,8 +1867,8 @@ items:
                 href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
               - name: XML Şema Tanımlama aracı (Xsd.exe)
                 href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
-  - name: Birim testi
-    displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
+  - name: Sınama
+    displayName: 'xUnit,NUnit,MSTest,unit test,test,integration test,load test,smoke test, web test'
     items:
       - name: Genel Bakış
         href: ../core/testing/index.md
