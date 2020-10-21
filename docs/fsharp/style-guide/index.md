@@ -1,48 +1,48 @@
 ---
 title: F# stil kılavuzu
-description: İyi F# kodunun beş ilkesini öğrenin.
+description: 'İyi F # kodu için beş ilke öğrenin.'
 ms.date: 12/10/2018
 ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400269"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223656"
 ---
 # <a name="f-style-guide"></a>F# stil kılavuzu
 
-Aşağıdaki makaleler, Dilin özellikleri ve bunların nasıl kullanılması gerektiği için F# kodunu ve topikal kılavuzu biçimlendirme yönergelerini açıklar.
+Aşağıdaki makalelerde, dilin özellikleri ve bunların nasıl kullanılması gerektiği hakkında F # kodu ve tasarlamayla ilgilenen Kılavuzu biçimlendirme yönergeleri açıklanır.
 
-Bu kılavuz, farklı programcılar grubuyla büyük kod tabanlarında F# kullanımına göre formüle edilmiştir. Bu kılavuz genellikle F# kullanımının başarılı bir şekilde kullanılmasına yol açar ve programların gereksinimleri zaman içinde değiştiğinde hayal kırıklıklarını en aza indirir.
+Bu kılavuz, farklı bir programcılar grubuyla büyük kod tabanlarında F # kullanımı temel alınarak formüle eklenmiştir. Bu kılavuz genellikle, F # ' ın başarılı bir şekilde kullanılmasına ve programlar için gereksinimler zaman içinde değiştiğinde yamaları en aza indirir.
 
-## <a name="five-principles-of-good-f-code"></a>İyi F# kodunun beş prensibi
+## <a name="five-principles-of-good-f-code"></a>Beş adet iyi F # kodu ilkeleri
 
-F# kodunu her yazdığınızda, özellikle zaman içinde değişecek sistemlerde aşağıdaki ilkeleri aklınızda bulundurun. Daha sonraki makalelerde rehberlik her parçası bu beş noktadan kaynaklanmaktadır.
+Aşağıdaki ilkeleri, özellikle zaman içinde değişen sistemlerde F # Code yazdığınızda her seferinde aklınızda bulundurun. Daha fazla makalelerdeki her bir kılavuzluk, bu beş noktadan itibaren yardımcı olur.
 
-1. **İyi F# kodu kısa, anlamlı ve uyumludur**
+1. **İyi F # kodu kısa, ifade ve birleştirilebilir**
 
-    F# eylemleri daha az kod satırında ifade etmenize ve genel işlevselliği yeniden kullanmanıza olanak tanıyan birçok özelliğe sahiptir. F# çekirdek kitaplığı, ortak veri koleksiyonlarıyla çalışmak için birçok yararlı tür ve işlev de içerir. Kendi işlevlerinizin ve F# çekirdek kitaplığındakilerin (veya diğer kitaplıkların) bileşimi, rutin deyimsel F# programlamasının bir parçasıdır. Genel bir kural olarak, bir sorunun çözümünün daha az kod satırında ifade edebilirseniz, diğer geliştiriciler (veya gelecekteki benliğiniz) minnettar olacaktır. Ayrıca, FSharp.Core gibi bir kitaplığı, F# üzerinde çalıştığı [geniş .NET kitaplıklarını](../../../api/index.md) veya önemsiz bir görevi yapmanız gerektiğinde [NuGet'de](https://www.nuget.org/) üçüncü taraf paketi kullanmanız önerilir.
+    F #, eylemleri daha az kod satırı halinde ifade etmeniz ve genel işlevselliği yeniden kullanmak için birçok özelliğe sahiptir. F # Çekirdek Kitaplığı ayrıca ortak veri koleksiyonlarıyla çalışmak için birçok yararlı tür ve işlev içerir. Kendi işlevlerinizin ve F # Çekirdek Kitaplığı 'nda (veya diğer kitaplıklarda) oluşturulması, yordam F # programlamanın bir parçasıdır. Genel bir kural olarak, bir çözümü daha az kod satırı içindeki bir soruna ifade edebilirsiniz, diğer geliştiriciler (veya gelecekteki self) de teşekkürler. Ayrıca, önemsiz olmayan bir görev yapmanız gerektiğinde, FSharp. Core, F # ' ın üzerinde çalıştığı büyük [.NET kitaplıkları](../../../api/index.md) veya [NuGet](https://www.nuget.org/) üzerinde bir üçüncü taraf paketi gibi bir kitaplık kullanmanız önerilir.
 
-2. **İyi F# kodu birlikte çalışabilir**
+2. **İyi F # kodu birlikte çalışabilir**
 
-    İşlemler, farklı dillerde kod tüketmek de dahil olmak üzere birden çok form alabilir. Diğer arayanların birlikte çalıştığı kodunuzun sınırları, arayanlar da F#'da olsa bile, doğru yapmak için kritik parçalardır. F# yazarken, c# gibi başka bir dilden bunu yapmak da dahil olmak üzere, her zaman diğer kodun yazdığınız koda nasıl çağrıyapacağını düşünmelisiniz. [F# Bileşeni Tasarım Yönergeleri](component-design-guidelines.md) birlikte çalışabilirliği ayrıntılı olarak açıklar.
+    Birlikte çalışabilirlik, farklı dillerdeki kodu tüketme dahil olmak üzere birden çok form alabilir. Diğer çağıranların ile birlikte çalışan kodunuzun sınırları, arayanlar de F # içinde olsa bile, doğru bir şekilde daha fazla bilgi almak için önemli parçalardır. F # yazarken, diğer kodun yazdığınız koda nasıl çağrılacağını (örneğin, C# gibi başka bir dilde mi yapadıklarından) her zaman düşünmelisiniz. [F # bileşeni tasarım yönergeleri](component-design-guidelines.md) birlikte çalışabilirliği ayrıntılı olarak anlatmaktadır.
 
-3. **İyi F# kodu nesne yönlendirmesini değil, nesne programlamayı kullanır**
+3. **İyi F # kodu nesne yönlendirmesini değil, nesne programlamayı kullanır**
 
-    F# [sınıflar,](../language-reference/classes.md) [arabirimler,](../language-reference/interfaces.md) [erişim değiştiriciler,](../language-reference/access-control.md) [soyut sınıflar](../language-reference/abstract-classes.md)ve benzeri dahil olmak üzere .NET nesneleri ile programlama için tam destek vardır. Bağlam bilgisine sahip olması gereken işlevler gibi daha karmaşık işlevsel kodlar için nesneler bağlamsal bilgileri işlevlerin yapamadığı şekillerde kolayca saklayabilir. [İsteğe bağlı parametreler](../language-reference/members/methods.md#optional-arguments) ve [aşırı yüklemenin](../language-reference/members/methods.md#overloaded-methods) dikkatli kullanımı gibi özellikler, arayanlar için bu işlevselliğin tüketimini kolaylaştırabilir.
+    F #, [sınıflar](../language-reference/classes.md), [arabirimler](../language-reference/interfaces.md), [erişim değiştiricileri](../language-reference/access-control.md), [soyut sınıflar](../language-reference/abstract-classes.md)vb. dahil olmak üzere .NET içindeki nesnelerle programlama için tam desteğe sahiptir. Bağlam bilgisi olması gereken işlevler gibi daha karmaşık işlev kodu için nesneler, bağlama bilgilerini işlevlerin çalışmayacaklarını kolayca kapsülleyebilirsiniz. [İsteğe bağlı parametreler](../language-reference/members/methods.md#optional-arguments) ve dikkatli kullanım gibi [Özellikler, bu](../language-reference/members/methods.md#overloaded-methods) işlevselliği arayanlar için daha kolay hale getirir.
 
-4. **İyi F# kodu mutasyonu ortaya çıkarmadan iyi bir performans sergiliyor**
+4. **İyi F # kodu, mutasyon olmadan iyi çalışır**
 
-    Yüksek performanslı kod yazmak için mutasyon uyguluyorsun. Ne de olsa bilgisayarlar böyle çalışır. Bu tür kod genellikle hata eğilimli ve doğru almak zordur. Mutasyonu arayanlara maruz bırakmaktan kaçının. Bunun yerine, performans kritik olduğunda [mutasyon tabanlı bir uygulamayı gizleyen işlevsel bir arabirim oluşturun.](conventions.md#performance)
+    Yüksek performanslı kod yazmanın gizli anahtarı yoktur, mutasyon kullanmanız gerekir. Bunlar, tüm bilgisayarlar için çalışır. Bu kod genellikle hataya açıktır ve hemen hemen zor olur. Çağıranlar için mutasyon 'yi açığa çıkarmaktan kaçının. Bunun yerine, performans önemli olduğunda [bir mutasyon tabanlı uygulamayı gizleyen işlevsel bir arabirim oluşturun](conventions.md#performance) .
 
-5. **İyi F# kodu araç olabilir**
+5. **İyi F # kodu iyidir**
 
-    Araçlar büyük codebases çalışmak için paha biçilmez ve F # dil aracı ile daha etkili bir şekilde kullanılabilir şekilde F # kodu yazabilirsiniz. Bir örnek, ara değerlerin hata ayıklama yla denetlenebilmeleri için, anlamsız bir programlama stiliyle aşırıya kaldığınızdan emin olmaktır. Başka bir örnek, düzenleyicilerdeki araç ipuçlarının çağrı sitesinde bu yorumları görüntüleyebildiği yapıları açıklayan [XML dokümantasyon açıklamaları](../language-reference/xml-documentation.md) kullanmaktır. Her zaman kodunuzu nasıl okunacağını, gezineceğini, debugged ve kendi araçları ile diğer programcılar tarafından manipüle düşünüyorum.
+    Araçlar, büyük kod tabanlarında çalışmaya önem taşır ve f # kodu yazmak için F # dil araçları ile daha etkili bir şekilde kullanılabilir. Tek bir örnek, bir noktadan bağımsız programlama stiliyle bu işlemi gerçekleştirmemenizi ve bu sayede ara değerlerin bir hata ayıklayıcıyla incelenebilmesini sağlamak için bir örnektir. Diğer bir örnek yapıları açıklayan ve düzenleyicilerde araç ipuçları bu açıklamaları çağrı sitesinde görüntüleyebilen [XML belge açıklamalarını](../language-reference/xml-documentation.md) kullanmaktır. Kodunuzun, araçları ile diğer programcılar tarafından nasıl okunacağını, gezindiği, hata ayıklayacağını ve nasıl değiştirileceğini her zaman düşünün.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[F# kod biçimlendirme yönergeleri,](formatting.md) okunabilmek için kodun nasıl biçimlendirilene kadar biçimlendirilene ilişkin kılavuz sağlar.
+[F # kod biçimlendirme yönergeleri](formatting.md) , kodun okunması kolay olacak şekilde nasıl biçimlendirilebileceğine ilişkin yönergeler sağlar.
 
-[F# kodlama kuralları,](conventions.md) daha büyük F# kod tabanlarının uzun süreli bakımına yardımcı olacak F# programlama deyimleri için kılavuz sağlar.
+[F # kodlama kuralları](conventions.md) , büyük f # codeesaslarını uzun süreli bakımın sağlanmasına yardımcı olacak f # programlama deyimidir OMS için rehberlik sağlar.
 
-[F# bileşeni tasarım yönergeleri,](component-design-guidelines.md) kitaplıklar gibi F# bileşenlerinin yazilmesi için kılavuz sağlar.
+[F # bileşeni tasarım yönergeleri](component-design-guidelines.md) , kitaplıklar gibi f # bileşenleri yazmak için rehberlik sağlar.
