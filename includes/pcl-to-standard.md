@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd5bcc6bd96834d4803e00bd84eff4441abfe9f8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: eb0a5c8ac733f0db4e8356dca80f898bc7a72cfb
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641447"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471974"
 ---
 > [!IMPORTANT]
-> <span data-ttu-id="bc7ae-101">Taşınabilir sınıf kitaplığı projeleri yalnızca belirli bir alt .NET uygulamalarının hedeflemek için biz kesinlikle yeni uygulama geliştirme kullanımları önerilmemektedir.</span><span class="sxs-lookup"><span data-stu-id="bc7ae-101">Because Portable Class Library projects target only a very specific subset of .NET implementations, we strongly discourage their use in new application development.</span></span> <span data-ttu-id="bc7ae-102">Önerilen değişiklik .NET Standard özel sürümünü destekleyen tüm .NET uygulamaları hedefleyen .NET standart bir kitaplıktır.</span><span class="sxs-lookup"><span data-stu-id="bc7ae-102">The recommended replacement is a .NET Standard library, which targets all .NET implementations that support a specific version of the .NET Standard.</span></span> <span data-ttu-id="bc7ae-103">Daha fazla bilgi için [.NET Standard](~/docs/standard/net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="bc7ae-103">For more information, see [.NET Standard](~/docs/standard/net-standard.md).</span></span>
+> <span data-ttu-id="4763a-101">Yalnızca belirli bir .NET uygulaması alt kümesini hedeflerse, taşınabilir sınıf kitaplıklarının yeni uygulama geliştirmede kullanımını kesinlikle önermiyoruz.</span><span class="sxs-lookup"><span data-stu-id="4763a-101">We strongly discourage the use of portable class libraries in new application development, because they target only a very specific subset of .NET implementations.</span></span> <span data-ttu-id="4763a-102">.NET Framework ve diğer .NET uygulamaları arasında kod paylaşmak için yeniden kullanılabilir bir kitaplık oluşturuyorsanız, önerilen değişiklik .NET Standard bir 2,0 kitaplığıdır.</span><span class="sxs-lookup"><span data-stu-id="4763a-102">If you're building a reusable library to share code between .NET Framework and other .NET implementations, the recommended replacement is a .NET Standard 2.0 library.</span></span> <span data-ttu-id="4763a-103">Aksi takdirde, .NET 5 veya üstünü kullanın.</span><span class="sxs-lookup"><span data-stu-id="4763a-103">Otherwise, use .NET 5 or later.</span></span> <span data-ttu-id="4763a-104">Daha fazla bilgi için bkz. [.NET Standard](~/docs/standard/net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="4763a-104">For more information, see [.NET Standard](~/docs/standard/net-standard.md).</span></span>
