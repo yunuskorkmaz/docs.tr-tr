@@ -1,38 +1,39 @@
 ---
-title: .NET Framework'e Genel Bakış
-description: Windows Uygulamaları ve Web Hizmetleri oluşturmayı ve çalıştırmayı destekleyen bir teknoloji olan .NET hakkında genel bakış konusunu okuyun.
-ms.date: 03/30/2017
+title: .NET Framework’e Genel Bakış
+description: Windows Uygulamaları ve Web Hizmetleri oluşturmayı ve çalıştırmayı destekleyen bir teknoloji olan .NET Framework hakkında genel bakışı okuyun.
+ms.date: 10/21/2020
 helpviewer_keywords:
 - application development [.NET Framework]
 - common language runtime
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 3577a3ad13d9ef6935a1bed8a29e3d594857928e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75b2e94b93eabdbf8a6a40f38c1b12a8caddd98a
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557768"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471750"
 ---
 # <a name="overview-of-net-framework"></a>.NET Framework’e Genel Bakış
 
 .NET Framework, Windows Uygulamaları ve Web Hizmetleri oluşturmayı ve çalıştırmayı destekleyen bir teknolojidir. .NET Framework, aşağıdaki hedefleri yerine getirmek için tasarlanmıştır:
 
-- Nesne kodunun yerel olarak depolandığını ve yürütüldüğünü, yerel olarak yürütüldüğünü, ancak Web 'e dağıtıldığını veya uzaktan yürütüldüğünü, tutarlı bir nesne odaklı programlama ortamı sağlamak için.
+- Nesne kodunun yerel olarak depolandığını ve yürütüldüğünü, yerel olarak yürütüldüğünü ancak Web 'e dağıtıldığını veya uzaktan yürütüldüğünü, tutarlı, nesne odaklı bir programlama ortamı sağlayın.
 
-- Yazılım dağıtımını ve sürüm çakışmalarını en aza indiren bir kod yürütme ortamı sağlamak için.
+- Aşağıdakileri içeren bir kod yürütme ortamı sağlayın:
 
-- Bilinmeyen veya yarı güvenilir üçüncü taraflarca oluşturulan kod dahil olmak üzere kodun güvenli yürütülmesini sağlayan kod yürütme ortamı sağlamak için.
+  - Yazılım dağıtımını ve sürüm oluşturma çakışmalarını en aza indirir.
 
-- Betikleştirilmiş veya yorumlanan ortamların performans sorunlarını ortadan kaldıran kod yürütme ortamı sağlamak için.
+  - Bilinmeyen veya yarı güvenilir üçüncü taraflarca oluşturulan kod dahil olmak üzere kodun güvenli yürütülmesini yükseltir.
 
-- Geliştirici deneyimini, Windows tabanlı uygulamalar ve Web tabanlı uygulamalar gibi yaygın olarak değişen türde uygulamalar arasında tutarlı hale getirmek için.
+  - Betikleştirilmiş veya yorumlanan ortamların performans sorunlarını ortadan kaldırır.
 
-- .NET Framework dayalı kodun diğer kodla tümleştirilebildiğinden emin olmak için endüstri standartları üzerinde tüm iletişimi oluşturmak için.
+- Geliştirici deneyimini, Windows tabanlı uygulamalar ve Web tabanlı uygulamalar gibi yaygın olarak değişen türdeki uygulamalar arasında tutarlı hale getirin.
 
-> [!NOTE]
-> Hem kullanıcılar hem de geliştiriciler için .NET Framework genel bir giriş için bkz. [kullanmaya başlayın](index.md).
+- .NET Framework dayalı kodun diğer kodla tümleştirilebildiğinden emin olmak için endüstri standartları üzerinde tüm iletişimi derleyin.
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 .NET Framework, ortak dil çalışma zamanı (CLR) ve .NET Framework sınıf kitaplığından oluşur. Ortak dil çalışma zamanı .NET Framework temelidir. Çalışma zamanını, yürütme zamanında kodu yöneten bir aracı olarak düşünün; bellek yönetimi, iş parçacığı yönetimi ve uzaktan iletişim gibi Çekirdek Hizmetleri, ayrıca katı tür güvenliği ve güvenlik ve sağlamlık düzeyini destekleyen diğer kod doğruluğu biçimlerini de zorunlu olarak sağlar. Aslında kod yönetimi kavramı, çalışma zamanının temel bir ilkesidir. Çalışma zamanını hedefleyen kod, yönetilen kod olarak bilinir, ancak çalışma zamanını hedeflemeyen kod, yönetilmeyen kod olarak bilinir. Sınıf kitaplığı, Web Forms ve XML Web Hizmetleri gibi, ASP.NET tarafından sunulan en son yenilikleri temel alan uygulamalar için geleneksel komut satırı veya grafik kullanıcı arabirimi (GUI) uygulamalarından farklı uygulamalar geliştirmek üzere kullandığınız, kapsamlı, nesne yönelimli bir tür koleksiyonudur.
 

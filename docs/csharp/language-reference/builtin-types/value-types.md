@@ -9,24 +9,24 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 7826e71fee235d32655ccfbc9060c3bbb48d76c5
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134776"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471657"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# Başvurusu)
 
 *Değer türleri* ve [başvuru türleri](../keywords/reference-types.md) , C# türlerinin iki ana kategorileridir. Değer türünde bir değişken türün bir örneğini içerir. Bu, bir tür örneğine başvuru içeren bir başvuru türü değişkeninden farklıdır. Varsayılan olarak, [atama](../operators/assignment-operator.md), bir yönteme bir bağımsız değişken geçirme ve bir yöntem sonucu döndürme, değişken değerleri kopyalanır. Değer türü değişkenler söz konusu olduğunda, karşılık gelen tür örnekleri kopyalanır. Aşağıdaki örnekte bu davranış gösterilmektedir:
 
-[!code-csharp[copy of values](snippets/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](snippets/shared/ValueTypes.cs#ValueTypeCopied)]
 
 Yukarıdaki örnekte gösterildiği gibi, bir değer türü değişkeni üzerindeki işlemler, değişkende depolanan yalnızca değer türü örneğini etkiler.
 
 Değer türü bir başvuru türünün veri üyesini içeriyorsa, bir değer türü örneği kopyalandığında yalnızca başvuru türü örneğine başvuru kopyalanır. Hem Copy hem de orijinal değer türü örneğinin aynı başvuru türü örneğine erişimi vardır. Aşağıdaki örnekte bu davranış gösterilmektedir:
 
-[!code-csharp[shallow copy](snippets/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](snippets/shared/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
 > Kodunuzu daha az hataya açık ve daha sağlam hale getirmek için, değişmez değer türlerini tanımlayın ve kullanın. Bu makale yalnızca gösterim amacıyla kesilebilir değer türlerini kullanır.

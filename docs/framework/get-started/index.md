@@ -1,24 +1,23 @@
 ---
 title: .NET Framework kullanmaya başlayın
-description: Uygulamaları yöneten bir çalışma zamanı yürütme ortamı olan .NET ' i kullanmaya başlayın. Ortak dil çalışma zamanı (CLR) ve kapsamlı bir sınıf kitaplığı içerir.
-ms.date: 04/02/2019
+description: Uygulamaları yöneten bir çalışma zamanı yürütme ortamı olan .NET Framework kullanmaya başlayın. Ortak dil çalışma zamanı (CLR) ve kapsamlı bir sınıf kitaplığı içerir.
+ms.date: 10/21/2020
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 85ba856fd695f264f75a6dab2dca3aded4e5cdc1
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 02480641af5ad2c973f7dbbbc233d3d89ff4617e
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414974"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471683"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework kullanmaya başlayın
 
 .NET Framework, .NET Framework hedef uygulamaları yöneten bir çalışma zamanı yürütme ortamıdır. Bu, bellek yönetimi ve diğer sistem hizmetleri sağlayan ortak dil çalışma zamanından ve programcıların uygulama geliştirmenin tüm önemli alanlarında güçlü, güvenilir koddan yararlanmasını sağlayan kapsamlı bir sınıf kitaplığı içerir.
 
-> [!NOTE]
-> .NET Framework yalnızca Windows sistemlerinde kullanılabilir. Windows, MacOS ve Linux 'ta uygulama geliştirmek ve çalıştırmak için [.NET Core](../../core/introduction.md) ' u kullanabilirsiniz.
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 ## <a name="what-is-net-framework"></a>.NET Framework nedir?
 
@@ -41,7 +40,7 @@ ms.locfileid: "89414974"
 - Çoklu sürüm desteği. [.NET Standard](../../standard/net-standard.md)hedefleyerek, geliştiriciler standart bu sürümü tarafından desteklenen birden çok .NET Framework platformda çalışan sınıf kitaplıkları oluşturur. Örneğin, .NET Standard 2,0 ' i hedefleyen kitaplıklar .NET Framework 4.6.1, .NET Core 2,0 ve UWP 10.0.16299 ' i hedefleyen uygulamalar tarafından kullanılabilir.
 
 <a name="ForUsers"></a>
-## <a name="the-net-framework-for-users"></a>Kullanıcılar için .NET Framework
+## <a name="net-framework-for-users"></a>Kullanıcılar için .NET Framework
 
 .NET Framework uygulamalar geliştirmezseniz ancak bunları kullanıyorsanız, .NET Framework veya işlemi ile ilgili belirli bilgilere sahip olmanız gerekmez. Çoğu bölüm için Framework kullanıcılara tamamen saydamdır.
 
@@ -76,7 +75,7 @@ Geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework destekl
 | Başlık | Açıklama |
 | ----- |------------ |
 | [Genel Bakış](overview.md) | .NET Framework hedefleyen uygulamalar oluşturan geliştiriciler için ayrıntılı bilgiler sağlar. |
-| [Yükleme kılavuzu](../install/index.md) | .NET Framework yükleme hakkında bilgi sağlar. |  
+| [Yükleme kılavuzu](../install/index.md) | .NET Framework yükleme hakkında bilgi sağlar. |
 | [.NET Framework ve bant dışı yayınlar](the-net-framework-and-out-of-band-releases.md) | Bant dışı yayınları .NET Framework ve bunları uygulamanızda nasıl kullanacağınızı açıklar. |
 | [Sistem Gereksinimleri](system-requirements.md) | .NET Framework çalıştırmak için donanım ve yazılım gereksinimlerini listeler. |
 | [.NET Core ve Açık Kaynak](net-core-and-open-source.md) | .NET Framework ve açık kaynaklı .NET Core projelerine nasıl erişebileceğiniz ile ilgili olarak .NET Core açıklanır. |

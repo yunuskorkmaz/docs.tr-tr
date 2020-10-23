@@ -5,18 +5,20 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 74a1e244fa47cf7c6ea36454013b46b6e44f62c9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f807a9d9a7ccebf2ae71d47e01fbfba7338b1799
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557677"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92472003"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework sürümleri ve bağımlılıklar
 
 .NET Framework her sürümü ortak dil çalışma zamanını (CLR), temel sınıf kitaplıklarını ve diğer yönetilen kitaplıkları içerir. Bu makalede sürüme göre .NET Framework temel özellikleri açıklanmakta, temeldeki CLR sürümleri ve ilişkili geliştirme ortamları hakkında bilgi sağlanır ve Windows işletim sistemi (OS) tarafından yüklenen sürümler tanımlanmaktadır.
 
 .NET Framework her yeni sürümü yeni özellikler ekler, ancak önceki sürümlerden özellikleri korur.
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 CLR kendi sürüm numarası ile tanımlanır. .NET Framework sürüm numarası her sürümde artırılır, ancak CLR sürümü her zaman artmaz. Örneğin, .NET Framework 4, 4,5 ve sonraki sürümlerde CLR 4, .NET Framework 2,0, 3,0 ve 3,5 dahil CLR 2,0 sayılabilir. (CLR'nin sürüm 3'ü yoktur.)
 
@@ -32,7 +34,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 - Onay işareti simgesi ✔️, varsayılan olarak .NET Framework yüklü olan işletim sistemi sürümlerini gösterir.
 - Artı işareti simgesi ➕, .NET Framework yüklendiği ancak yüklenemeyen işletim sistemi sürümlerini gösterir.
-- Yıldız işareti, **\*** .NET Framework (önceden yüklenmiş veya değil) [Denetim Masası 'Nda](../install/dotnet-35-windows-10.md) veya Windows Server için Sunucu Yöneticisi aracılığıyla etkinleştirilmesi gereken işletim sistemi sürümlerini gösterir.
+- Yıldız * *\** _, .NET Framework (önceden yüklenmiş veya değil), [Denetim Masası 'Nda](../install/dotnet-35-windows-10.md) veya Windows Server için Sunucu Yöneticisi aracılığıyla etkinleştirilmesi gereken işletim sistemi sürümlerini gösterir.
 
 | | |
 | - | - |
@@ -49,7 +51,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 |||
 |-|-|
-|**CLR sürümü**|4|
+|_*Clr sürümü**|4|
 |**Windows sürümleri**|✔️ 10 Mayıs 2019 güncelleştirmesi<br/>➕ 10 Ekim 2018 Güncelleştirmesi (sürüm 1809)<br/>➕ 10 Nisan 2018 Güncelleştirmesi (sürüm 1803)<br/>➕ 10 Fall Creators Update (sürüm 1709)<br/>➕ 10 Creators Update (sürüm 1703)<br/>➕ 10 yıldönümü Güncelleştirmesi (sürüm 1607)<br/>➕ 8,1<br/>➕ 7|
 |**Windows Server sürümleri**|➕ Windows Server 2019<br/>➕ Windows Server, sürüm 1809<br/>➕ Windows Server, sürüm 1803<br/>➕ 2016<br/>➕ 2012 R2<br/>➕ 2012<br/>➕ 2008 R2 SP1|
 |**Yüklü .NET sürümünü belirleme**|`Release`DWORD kullan:<br/>-528040 (Windows 10 Mayıs 2019 güncelleştirme)<br/>-528049 (diğer tüm işletim sistemi sürümleri)<br/>(Bkz. [yönergeler](how-to-determine-which-versions-are-installed.md))|

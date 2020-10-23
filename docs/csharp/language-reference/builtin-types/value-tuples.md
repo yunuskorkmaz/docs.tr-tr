@@ -4,22 +4,22 @@ description: 'C# tanımlama bilgileri hakkında bilgi edinin: gevşek ilgili ver
 ms.date: 07/09/2020
 helpviewer_keywords:
 - value tuples [C#]
-ms.openlocfilehash: 3d79ab19117847e2364b154db33a1521416bb3f4
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: d996c7afecba1b58bfd8337fa444fd71790dd482
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174993"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471778"
 ---
 # <a name="tuple-types-c-reference"></a>Demet türleri (C# Başvurusu)
 
 C# 7,0 ve üzeri sürümlerde, *Tanımlama grupları* özelliği basit bir veri yapısındaki birden çok veri öğesini gruplamak için kısa bir sözdizimi sağlar. Aşağıdaki örnek, bir tanımlama grubu değişkeni bildirme, bunu başlatma ve veri üyelerine erişme işlemlerinin nasıl yapılacağını gösterir:
 
-[!code-csharp-interactive[tuple intro](snippets/ValueTuples.cs#Introduction)]
+[!code-csharp-interactive[tuple intro](snippets/shared/ValueTuples.cs#Introduction)]
 
 Yukarıdaki örnekte gösterildiği gibi, bir demet türü tanımlamak için, tüm veri üyelerinin ve isteğe bağlı olarak [alan adlarının](#tuple-field-names)türlerini belirtirsiniz. Tanımlama grubu türünde Yöntemler tanımlayamazsınız, ancak aşağıdaki örnekte gösterildiği gibi .NET tarafından sunulan yöntemleri kullanabilirsiniz:
 
-[!code-csharp-interactive[tuple methods](snippets/ValueTuples.cs#MethodOnTuples)]
+[!code-csharp-interactive[tuple methods](snippets/shared/ValueTuples.cs#MethodOnTuples)]
 
 C# 7,3 ' den başlayarak demet türleri [eşitlik işleçlerini](../operators/equality-operators.md) `==` ve ' ı destekler `!=` . Daha fazla bilgi için [demet eşitlik](#tuple-equality) bölümüne bakın.
 
@@ -30,13 +30,13 @@ Demet türleri [değer türleridir](value-types.md); demet öğeleri ortak alanl
 
 Tanımlama gruplarını rastgele çok sayıda öğe ile tanımlayabilirsiniz:
 
-[!code-csharp-interactive[large tuple](snippets/ValueTuples.cs#LargeTuple)]
+[!code-csharp-interactive[large tuple](snippets/shared/ValueTuples.cs#LargeTuple)]
 
 ## <a name="use-cases-of-tuples"></a>Tanımlama gruplarının kullanım durumları
 
 Tanımlama gruplarının en yaygın kullanım çalışmalarından biri yöntem dönüş türü olarak kullanılır. Diğer bir deyişle, [ `out` Yöntem parametreleri](../keywords/out-parameter-modifier.md)tanımlamak yerine, aşağıdaki örnekte gösterildiği gibi, yöntemi, kayıt kümesi dönüş türü olarak gruplandırabilirsiniz.
 
-[!code-csharp-interactive[multiple method outputs](snippets/ValueTuples.cs#MultipleReturns)]
+[!code-csharp-interactive[multiple method outputs](snippets/shared/ValueTuples.cs#MultipleReturns)]
 
 Yukarıdaki örnekte gösterildiği gibi, döndürülen demet örneğiyle doğrudan [çalışabilir veya ayrı](#tuple-assignment-and-deconstruction) değişkenlerde oluşturabilirsiniz.
 
@@ -48,11 +48,11 @@ Genellikle, gevşek ilgili veri öğelerini gruplamak için tanımlama grupları
 
 Aşağıdaki örnekte gösterildiği gibi demet başlatma ifadesinde veya bir demet türü tanımında kayıt kümesi alanlarının adlarını açıkça belirtebilirsiniz:
 
-[!code-csharp-interactive[explicit field names](snippets/ValueTuples.cs#ExplicitFieldNames)]
+[!code-csharp-interactive[explicit field names](snippets/shared/ValueTuples.cs#ExplicitFieldNames)]
 
 C# 7,1 ile başlayarak, bir alan adı belirtmezseniz, aşağıdaki örnekte gösterildiği gibi, bir demet başlatma ifadesinde karşılık gelen değişkenin adından çıkarsanolabilir:
 
-[!code-csharp-interactive[inferred field names](snippets/ValueTuples.cs#InferFieldNames)]
+[!code-csharp-interactive[inferred field names](snippets/shared/ValueTuples.cs#InferFieldNames)]
 
 Bu, demet projeksiyon başlatıcıları olarak bilinir. Bir değişkenin adı, aşağıdaki durumlarda bir demet alan adı üzerine yansıtılmıyor:
 
@@ -63,7 +63,7 @@ Bu durumlarda, bir alanın adını açıkça belirtirsiniz ya da bir alana varsa
 
 Demet alanlarının varsayılan adları `Item1` ,, vb. ' dir `Item2` `Item3` . Aşağıdaki örnekte gösterildiği gibi, bir alan adı açıkça veya çıkarsansa bile, bir alanın varsayılan adını her zaman kullanabilirsiniz:
 
-[!code-csharp-interactive[default field names](snippets/ValueTuples.cs#DefaultFieldNames)]
+[!code-csharp-interactive[default field names](snippets/shared/ValueTuples.cs#DefaultFieldNames)]
 
 [Demet atama](#tuple-assignment-and-deconstruction) ve [tanımlama grubu eşitlik karşılaştırmaları](#tuple-equality) , alan adlarını hesaba almaz.
 
@@ -78,21 +78,21 @@ C#, aşağıdaki koşulların her ikisini de karşılayan demet türleri arasın
 
 Demet öğesi değerleri demet öğelerinin sırasına göre atanır. Aşağıdaki örnekte gösterildiği gibi, demet alanlarının adları yoksayılır ve atanmaz:
 
-[!code-csharp-interactive[tuple assignment](snippets/ValueTuples.cs#Assignment)]
+[!code-csharp-interactive[tuple assignment](snippets/shared/ValueTuples.cs#Assignment)]
 
 Ayrıca, `=` farklı değişkenlerde bir demet örneğini bırakmak *deconstruct* için atama işlecini de kullanabilirsiniz. Bunu aşağıdaki yöntemlerle yapabilirsiniz:
 
 - Her değişkenin türünü parantez içinde açıkça bildirin:
 
-  [!code-csharp-interactive[specify types of variables](snippets/ValueTuples.cs#DeconstructExplicit)]
+  [!code-csharp-interactive[specify types of variables](snippets/shared/ValueTuples.cs#DeconstructExplicit)]
 
 - `var`Örtük olarak yazılmış değişkenleri bildirmek ve derleyicinin türlerini saymasına izin vermek için parantez dışında anahtar sözcüğünü kullanın:
 
-  [!code-csharp-interactive[implicitly typed variables](snippets/ValueTuples.cs#DeconstructVar)]
+  [!code-csharp-interactive[implicitly typed variables](snippets/shared/ValueTuples.cs#DeconstructVar)]
 
 - Mevcut değişkenleri kullan:
 
-  [!code-csharp-interactive[existing variables](snippets/ValueTuples.cs#DeconstructExisting)]
+  [!code-csharp-interactive[existing variables](snippets/shared/ValueTuples.cs#DeconstructExisting)]
 
 Başlıkların ve diğer türlerin çıkarılması hakkında daha fazla bilgi için bkz. [tanımlama gruplarını ve diğer türleri kaldırma](../../deconstruct.md).
 
@@ -100,7 +100,7 @@ Başlıkların ve diğer türlerin çıkarılması hakkında daha fazla bilgi i�
 
 C# 7,3 ' den başlayarak demet türleri `==` ve işleçlerini destekler `!=` . Bu işleçler, sol işlenenin üyelerini, demet öğelerinin sırası takip eden sağ işlenenin ilgili üyeleriyle karşılaştırın.
 
-[!code-csharp-interactive[tuple equality](snippets/ValueTuples.cs#TupleEquality)]
+[!code-csharp-interactive[tuple equality](snippets/shared/ValueTuples.cs#TupleEquality)]
 
 Yukarıdaki örnekte gösterildiği gibi, `==` ve işlemleri de `!=` Hesap tanımlama grubu alan adlarını almaz.
 
@@ -111,20 +111,20 @@ Yukarıdaki örnekte gösterildiği gibi, `==` ve işlemleri de `!=` Hesap tanı
 
 `==`Ve `!=` işleçleri, tanımlama gruplarını kısa devre bir şekilde karşılaştırın. Diğer bir deyişle, bir işlem eşit olmayan bir öğe çifti karşıladığında veya tanımlama gruplarının uçlarına ulaştığında duraklar. Ancak, herhangi bir karşılaştırmaya başlamadan önce, aşağıdaki örnekte gösterildiği gibi *Tüm* demet öğeleri değerlendirilir:
 
-[!code-csharp-interactive[tuple element evaluation](snippets/ValueTuples.cs#TupleEvaluationForEquality)]
+[!code-csharp-interactive[tuple element evaluation](snippets/shared/ValueTuples.cs#TupleEvaluationForEquality)]
 
 ## <a name="tuples-as-out-parameters"></a>Out parametreleri olarak tanımlama grubu
 
 Genellikle, [ `out` parametreleri](../keywords/out-parameter-modifier.md) olan bir yöntemi, bir tanımlama grubu döndüren bir yönteme yeniden düzenlemelisiniz. Ancak, bir `out` parametrenin demet türünde olabilecek durumlar vardır. Aşağıdaki örnek, tanımlama grupları ile parametre olarak nasıl çalışalınacağını gösterir `out` :
 
-[!code-csharp-interactive[tuple as out parameter](snippets/ValueTuples.cs#TupleAsOutParameter)]
+[!code-csharp-interactive[tuple as out parameter](snippets/shared/ValueTuples.cs#TupleAsOutParameter)]
 
-## <a name="tuples-vs-systemtuple"></a>Ve başlıkları`System.Tuple`
+## <a name="tuples-vs-systemtuple"></a>Ve başlıkları `System.Tuple`
 
 Türlerine göre desteklenen C# tanımlama grupları <xref:System.ValueTuple?displayProperty=nameWithType> , türlerle temsil edilen tanımlama tiplerinden farklıdır <xref:System.Tuple?displayProperty=nameWithType> . Ana farklılıklar aşağıdaki gibidir:
 
-- `ValueTuple`türler [değer türlerdir](value-types.md). `Tuple`türler [başvuru türleridir](../keywords/reference-types.md).
-- `ValueTuple`türler değişebilir. `Tuple`türler sabittir.
+- `ValueTuple` türler [değer türlerdir](value-types.md). `Tuple` türler [başvuru türleridir](../keywords/reference-types.md).
+- `ValueTuple` türler değişebilir. `Tuple` türler sabittir.
 - Türlerin veri üyeleri `ValueTuple` alanlardır. Türlerin veri üyeleri `Tuple` özelliklerdir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi

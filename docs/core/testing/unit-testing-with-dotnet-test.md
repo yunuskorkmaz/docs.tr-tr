@@ -3,13 +3,13 @@ title: DotNet test ve xUnit kullanarak .NET Core 'da birim testi C# kodu
 description: C# ve .NET Core 'da birim testi kavramlarını, DotNet test ve xUnit kullanarak örnek çözüm oluşturma adlı etkileşimli bir deneyim aracılığıyla öğrenin.
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: feff4cabbd10064ef4acca12d4f960f2a40a2b12
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.date: 10/21/2020
+ms.openlocfilehash: e1972858be00e8a884efbd66b618ddb9ab77e9ba
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656390"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471543"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>DotNet test ve xUnit kullanarak .NET Core 'Da birim testi C#
 
@@ -142,17 +142,11 @@ namespace Prime.UnitTests.Services
 {
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
-        public PrimeService_IsPrimeShould()
-        {
-            _primeService = new PrimeService();
-        }
-
         [Fact]
         public void IsPrime_InputIs1_ReturnFalse()
         {
-            var result = _primeService.IsPrime(1);
+            var primeService = new PrimeService();
+            bool result = primeService.IsPrime(1);
 
             Assert.False(result, "1 should not be prime");
         }
@@ -175,14 +169,15 @@ public bool IsPrime(int candidate)
 }
 ```
 
-`dotnet test` öğesini çalıştırın. Test geçirilir.
+Şu komutu çalıştırın: `dotnet test`. Test geçirilir.
 
 ### <a name="add-more-tests"></a>Daha fazla test ekleyin
 
 0 ve-1 için asal sayı testleri ekleyin. Önceki testi kopyalayabilir ve aşağıdaki kodu 0 ve-1 kullanacak şekilde değiştirebilirsiniz:
 
 ```csharp
-var result = _primeService.IsPrime(1);
+var primeService = new PrimeService();
+bool result = primeService.IsPrime(1);
 
 Assert.False(result, "1 should not be prime");
 ```
@@ -198,7 +193,8 @@ Yeni test oluşturmak yerine, tek bir teorisi oluşturmak için önceki xUnit ö
 [Fact]
 public void IsPrime_InputIs1_ReturnFalse()
 {
-    var result = _primeService.IsPrime(1);
+    var primeService = new PrimeService();
+    bool result = primeService.IsPrime(1);
 
     Assert.False(result, "1 should not be prime");
 }

@@ -2,12 +2,12 @@
 title: Object-Oriented programlama (C#)
 description: C#; soyutlama, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
 ms.date: 09/30/2020
-ms.openlocfilehash: 6e0155621be544b01453b8c107debb3a9b6c38f9
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: 353edf8fc68f495f3d875fa678aaaf91f1fd6406
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997660"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471601"
 ---
 # <a name="object-oriented-programming-c"></a>Object-Oriented programlama (C#)
 
@@ -140,7 +140,7 @@ Oluşturucunun, parametrenin bir `LineOfCreditAccount` `creditLimit` anlamı ile
 
 Eklenecek son özellik, `LineOfCreditAccount` bir ücreti, işlemin yerine geçen kredi sınırının üzerinde hareket etmesini sağlar.
 
-Bir yöntem, gerekli davranışı uyguladığınız sanal bir işlevi tanımlamaktır. `Bank Account`Sınıfı `MakeWithdrawal` iki yönteme şunların. Yeni yöntem, çekme al değeri en düşük değerin altına alırsa belirtilen eylemi gerçekleştirir. Mevcut `MakeWithdrawal` Yöntem aşağıdaki koda sahiptir:
+Bir yöntem, gerekli davranışı uyguladığınız sanal bir işlevi tanımlamaktır. `BankAccount`Sınıfı `MakeWithdrawal` iki yönteme şunların. Yeni yöntem, çekme al değeri en düşük değerin altına alırsa belirtilen eylemi gerçekleştirir. Mevcut `MakeWithdrawal` Yöntem aşağıdaki koda sahiptir:
 
 ```csharp
 public void MakeWithdrawal(decimal amount, DateTime date, string note)

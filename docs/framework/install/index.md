@@ -1,17 +1,19 @@
 ---
-title: .NET Framework kurulum kılavuzu
-description: .NET Framework'u Windows'a nasıl yükleyin.
-ms.date: 08/03/2017
-ms.openlocfilehash: b14be7a429138069545ede835025dff33b4f3919
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: .NET Framework Yükleme Kılavuzu
+description: .NET Framework Windows 'a yüklemeyi öğrenin.
+ms.date: 10/21/2020
+ms.openlocfilehash: 9a12c3a39d1089b28ff7b657967d4a72128596f3
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716358"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471936"
 ---
 # <a name="installation-guide"></a>Yükleme kılavuzu
 
-.NET Framework'u çeşitli Windows sürümlerine yükleyebilirsiniz.
+.NET Framework, çeşitli Windows sürümlerine yükleyebilirsiniz.
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 ## <a name="supported-windows-versions"></a>Desteklenen Windows sürümleri
 
@@ -27,7 +29,7 @@ ms.locfileid: "75716358"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework'ü indirin](https://dotnet.microsoft.com/download)
+- [.NET Framework indir](https://dotnet.microsoft.com/download)
 - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)
-- [Geliştiriciler için .NET Framework'u yükleyin](guide-for-developers.md)
-- [Geliştiriciler için .NET Framework'u dağıtma](../deployment/deployment-guide-for-developers.md)
+- [Geliştiriciler için .NET Framework yükler](guide-for-developers.md)
+- [Geliştiriciler için .NET Framework dağıtma](../deployment/deployment-guide-for-developers.md)

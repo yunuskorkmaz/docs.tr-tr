@@ -9,18 +9,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 7f3940ce487b9e382150234f317cf1dba34bb060
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5f446dae6a84706e1398a65ffb5a52270cfd92cf
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132735"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471819"
 ---
 # <a name="structure-types-c-reference"></a>Yapı türleri (C# Başvurusu)
 
 *Yapı türü* (veya *Yapı türü*), verileri ve ilgili işlevleri kapsüllemek için bir [değer türüdür](value-types.md) . `struct`Yapı türünü tanımlamak için anahtar sözcüğünü kullanırsınız:
 
-[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
 Yapı türlerinde *değer semantiği*vardır. Diğer bir deyişle, yapı türünün bir değişkeni türünün bir örneğini içerir. Varsayılan olarak, değişken değerleri atamaya kopyalanır, bir yönteme bağımsız değişken geçirme ve bir yöntem sonucu döndürüyor. Yapı türü değişkeni söz konusu olduğunda, türün bir örneği kopyalanır. Daha fazla bilgi için bkz. [değer türleri](value-types.md).
 
@@ -32,7 +32,7 @@ Yapı türlerinde değer semantiklerine sahip olduğundan, *değişmez* yapı t�
 
 C# 7,2 ' den başlayarak, `readonly` bir yapı türünün sabit olduğunu bildirmek için değiştiricisini kullanın:
 
-[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 Bir yapının tüm veri üyeleri `readonly` aşağıdaki şekilde salt okunabilir olmalıdır:
 
@@ -54,15 +54,15 @@ Genellikle, `readonly` değiştiricisini aşağıdaki örnek üye türlerine uyg
 
 - Yöntem
 
-  [!code-csharp[readonly method](snippets/StructType.cs#ReadonlyMethod)]
+  [!code-csharp[readonly method](snippets/shared/StructType.cs#ReadonlyMethod)]
 
   Ayrıca, `readonly` içinde belirtilen yöntemleri geçersiz kılan yöntemlere değiştiricisini uygulayabilirsiniz <xref:System.Object?displayProperty=nameWithType> :
 
-  [!code-csharp[readonly override](snippets/StructType.cs#ReadonlyOverride)]
+  [!code-csharp[readonly override](snippets/shared/StructType.cs#ReadonlyOverride)]
 
 - Özellikler ve Dizin oluşturucular:
 
-  [!code-csharp[readonly property get](snippets/StructType.cs#ReadonlyProperty)]
+  [!code-csharp[readonly property get](snippets/shared/StructType.cs#ReadonlyProperty)]
 
   `readonly`Değiştirici ' i bir özelliğin veya dizin oluşturucunun her ikisine de uygulamanız gerekiyorsa, bunu özelliğin veya dizin oluşturucunun bildiriminde uygulayın.
 
@@ -95,7 +95,7 @@ Genellikle, işleçle uygun bir oluşturucuyu çağırarak bir yapı türü örn
 
 Bir yapı türünün tüm örnek alanlarına erişilebiliyorsa, işleci olmadan da örneğini oluşturabilirsiniz `new` . Bu durumda, örneğin ilk kullanmadan önce tüm örnek alanlarını başlatmalısınız. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir:
 
-[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/shared/StructType.cs#WithoutNew)]
 
 [Yerleşik değer türleri](value-types.md#built-in-value-types)söz konusu olduğunda, türü bir değer belirtmek için karşılık gelen değişmez değerleri kullanın.
 
@@ -118,11 +118,11 @@ C# 7,2 ' den başlayarak, `ref` bir yapı türünün bildiriminde değiştiricis
 
 Genellikle, `ref` Yapı türlerinin veri üyelerini de içeren bir türe ihtiyacınız olduğunda bir struct türü tanımlarsınız `ref` :
 
-[!code-csharp[ref struct](snippets/StructType.cs#RefStruct)]
+[!code-csharp[ref struct](snippets/shared/StructType.cs#RefStruct)]
 
 Bir yapıyı olarak bildirmek için, `ref` [`readonly`](#readonly-struct) `readonly` `ref` tür bildiriminde ve değiştiricilerini birleştirin (değiştiricinin `readonly` değiştiricisinden önce gelmesi gerekir `ref` ):
 
-[!code-csharp[readonly ref struct](snippets/StructType.cs#ReadonlyRef)]
+[!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 .NET ' te, bir `ref` struct örnekleri ve ' dir <xref:System.Span%601?displayProperty=nameWithType> <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> .
 

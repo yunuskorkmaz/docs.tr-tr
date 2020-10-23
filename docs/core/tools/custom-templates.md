@@ -3,12 +3,12 @@ title: DotNet New için özel şablonlar
 description: Herhangi bir .NET projesi veya dosya türü için özel şablonlar hakkında bilgi edinin.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 62d98adab0122936957301ee737c366541b0cfe6
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874719"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471556"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>DotNet New için özel şablonlar
 
@@ -25,7 +25,7 @@ Bir yönergeyi izlemek ve şablon oluşturmak için, [DotNet yeni öğretici iç
 
 ### <a name="net-default-templates"></a>.NET varsayılan şablonları
 
-[.NET Core SDK](https://dotnet.microsoft.com/download)yüklediğinizde, konsol uygulamaları, sınıf kitaplıkları, birim testi projeleri, ASP.NET Core uygulamalar ( [angular](https://angular.io/) ve [tepki](https://facebook.github.io/react/) verme projeleri dahil) ve yapılandırma dosyaları dahil olmak üzere proje ve dosya oluşturmaya yönelik bir düzine yerleşik şablon üzerinden karşılaşırsınız. Yerleşik şablonları listelemek için `dotnet new` komutunu `-l|--list` seçeneğiyle çalıştırın:
+[.NET Core SDK](https://dotnet.microsoft.com/download)yüklediğinizde, konsol uygulamaları, sınıf kitaplıkları, birim testi projeleri, ASP.NET Core uygulamalar ( [angular](https://angular.io/) ve [tepki](https://reactjs.org/) verme projeleri dahil) ve yapılandırma dosyaları dahil olmak üzere proje ve dosya oluşturmaya yönelik bir düzine yerleşik şablon üzerinden karşılaşırsınız. Yerleşik şablonları listelemek için `dotnet new` komutunu `-l|--list` seçeneğiyle çalıştırın:
 
 ```dotnetcli
 dotnet new --list
