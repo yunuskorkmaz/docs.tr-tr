@@ -2,12 +2,12 @@
 title: Temel sınıf kitaplığı bölünmesi değişiklikleri
 description: Çekirdek .NET kitaplıklarında son değişiklikleri listeler.
 ms.date: 07/27/2020
-ms.openlocfilehash: 35192ae078c6025b9b399d6638ea8b4f426aceda
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 900fd4e0e071f19aa286dec84632006870822f26
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92332945"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434908"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Çekirdek .NET kitaplıklarının parçalara bölünmesi
 
@@ -17,6 +17,9 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
+| [Genel bütünleştirilmiş kod önbelleği API 'Leri artık kullanılmıyor](#global-assembly-cache-apis-are-obsolete) | 5.0 |
+| [Uzaktan iletişim API 'Leri artık kullanılmıyor](#remoting-apis-are-obsolete) | 5.0 |
+| [Çoğu kod erişimi güvenlik API 'Leri artık kullanılmıyor](#most-code-access-security-apis-are-obsolete) | 5.0 |
 | [Varsayılan olmayan tanılama kimlikleri ile API kullanımdan kaldırılmaları](#api-obsoletions-with-non-default-diagnostic-ids) | 5.0 |
 | [FrameworkDescription 'un değeri .NET Core yerine .NET](#frameworkdescriptions-value-is-net-instead-of-net-core) | 5.0 |
 | [Tek dosya yayımlama biçimi için derlemeden ilgili API davranışı değişiklikleri](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
@@ -60,13 +63,25 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 ## <a name="net-50"></a>.NET 5,0
 
-[!INCLUDE [obsolete-apis-with-custom-diagnostics](../../../includes/core-changes/corefx/5.0/obsolete-apis-with-custom-diagnostics.md)]
+[!INCLUDE [remoting-apis-obsolete](../../../includes/core-changes/corefx/5.0/remoting-apis-obsolete.md)]
 
 ***
 
-[!INCLUDE [frameworkdescription-returns-net-not-net-core](../../../includes/core-changes/corefx/5.0/frameworkdescription-returns-net-not-net-core.md)]
+[!INCLUDE [globalassemblycache-property-obsolete](../../../includes/core-changes/corefx/5.0/global-assembly-cache-apis-obsolete.md)]
 
 **_
+
+[!INCLUDE [code-access-security-apis-obsolete](../../../includes/core-changes/corefx/5.0/code-access-security-apis-obsolete.md)]
+
+_*_
+
+[!INCLUDE [obsolete-apis-with-custom-diagnostics](../../../includes/core-changes/corefx/5.0/obsolete-apis-with-custom-diagnostics.md)]
+
+_*_
+
+[!INCLUDE [frameworkdescription-returns-net-not-net-core](../../../includes/core-changes/corefx/5.0/frameworkdescription-returns-net-not-net-core.md)]
+
+_*_
 
 [!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
 

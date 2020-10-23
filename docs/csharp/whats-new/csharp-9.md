@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 57fd5f8775f95b2588e4a7120e35d6d531be4f01
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955173"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434827"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -34,7 +34,7 @@ C# 9,0, **.NET 5**' te desteklenir. Daha fazla bilgi için bkz. [C# dil sürüm�
 
 ## <a name="record-types"></a>Kayıt türleri
 
-C# 9,0, eşitlik için değer semantiğini sağlamak üzere birleştirilmiş Yöntemler sağlayan bir başvuru türü olan ***kayıt türlerini***tanıtır. Kayıtlar varsayılan olarak sabittir.
+C# 9,0, eşitlik için değer semantiğini sağlamak üzere birleştirilmiş Yöntemler sağlayan bir başvuru türü olan **_kayıt türlerini_* tanıtır. Kayıtlar varsayılan olarak sabittir.
 
 Kayıt türleri, .NET 'te değişmez başvuru türleri oluşturmayı kolaylaştırır. Geçmişte, .NET türleri büyük ölçüde başvuru türleri olarak sınıflandırılır (sınıflar ve anonim türler dahil) ve değer türleri (yapılar ve tanımlama birimleri dahil). Değişmez değer türleri önerilirken, değişebilir değer türleri genellikle hata sunmaz. Değer tür değişkenleri değerleri tutar, böylece değer türleri yöntemlere geçirildiğinde orijinal verilerin bir kopyasına değişiklikler yapılır.
 
@@ -86,7 +86,7 @@ Derleyici, yazdırılan çıktıyı destekleyen iki yöntemi birleştirir: bir <
 "Student { LastName = Wagner, FirstName = Bill, Level = 11 }"
 ```
 
-Şu ana kadar gösterilen örnekler, özellikleri bildirmek için Geleneksel söz dizimini kullanır. ***Konumsal kayıtlar***adlı daha kısa bir form vardır.  Daha önce konumsal kayıtlar olarak tanımlanan üç kayıt türü şunlardır:
+Şu ana kadar gösterilen örnekler, özellikleri bildirmek için Geleneksel söz dizimini kullanır. _*_Konumsal kayıtlar_*_ adlı daha kısa bir form vardır.  Daha önce konumsal kayıtlar olarak tanımlanan üç kayıt türü şunlardır:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="PositionalRecords":::
 
@@ -98,7 +98,7 @@ Derleyici `Deconstruct` konumsal kayıtlar için bir yöntem oluşturur. `Decons
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-Son olarak, ***-deyimlerle***destek kaydeder. ***WITH ifadesi*** , derleyiciye bir kaydın kopyasını oluşturmasını söyler *, ancak belirtilen* özelliklerle değiştirilmiştir:
+Son olarak, _*_-deyimlerle_*_ destek kaydeder. _*_WITH ifadesi_*_ derleyiciye bir kaydın kopyasını oluşturmasını söyler, ancak _with * belirtilen özellikler değiştirilmiştir:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
@@ -106,7 +106,7 @@ Yukarıdaki satır, `Person` `LastName` özelliğin bir kopyası olduğu `person
 
 ## <a name="init-only-setters"></a>Yalnızca init ayarlayıcılar
 
-***Init Only Setter*** bir nesnenin üyelerini başlatmak için tutarlı sözdizimi sağlar. Özellik başlatıcıları, hangi değerin hangi özelliğin ayarlanmasını temizlesin. Downsıde, bu özelliklerin ayarlanabilir olması gerekir. C# 9,0 ' den başlayarak, `init` `set` Özellikler ve Dizin oluşturucular için erişimciler yerine erişimciler oluşturabilirsiniz. Çağıranlar, oluşturma ifadelerinde bu değerleri ayarlamak için özellik başlatıcısı sözdizimini kullanabilir, ancak oluşturma işlemi tamamlandıktan sonra bu özellikler salt okunur yapılır. Init Only ayarlayıcıları, durumu değiştirecek bir pencere sağlar. Bu pencere, oluşturma aşaması sona erdiğinde kapanır. Özellik başlatıcıları ve WITH ifadeleri dahil olmak üzere, oluşturma aşaması, tüm başlatma sonrasında etkili bir şekilde sona erer.
+***Init Only Setter**_ bir nesnenin üyelerini başlatmak için tutarlı bir sözdizimi sağlar. Özellik başlatıcıları, hangi değerin hangi özelliğin ayarlanmasını temizlesin. Downsıde, bu özelliklerin ayarlanabilir olması gerekir. C# 9,0 ' den başlayarak, `init` `set` Özellikler ve Dizin oluşturucular için erişimciler yerine erişimciler oluşturabilirsiniz. Çağıranlar, oluşturma ifadelerinde bu değerleri ayarlamak için özellik başlatıcısı sözdizimini kullanabilir, ancak oluşturma işlemi tamamlandıktan sonra bu özellikler salt okunur yapılır. Init Only ayarlayıcıları, durumu değiştirecek bir pencere sağlar. Bu pencere, oluşturma aşaması sona erdiğinde kapanır. Özellik başlatıcıları ve WITH ifadeleri dahil olmak üzere, oluşturma aşaması, tüm başlatma sonrasında etkili bir şekilde sona erer.
 
 Konumsal kayıtlar için yukarıdaki örnek, WITH ifadesi kullanarak bir özelliği ayarlamak için bir init ayarlayıcı kullanmayı gösterir. Yazdığınız herhangi bir tür için yalnızca init ayarlayıcıları bildirebilirsiniz. Örneğin, aşağıdaki yapı bir hava durumu izleme yapısını tanımlar:
 
@@ -127,7 +127,7 @@ Yalnızca Init ayarlayıcıları, türetilmiş sınıflardan temel sınıf özel
 
 ## <a name="top-level-statements"></a>Üst düzey deyimler
 
-***Üst düzey deyimler*** pek çok uygulamadan gereksiz seremonony 'yi kaldırır. "Merhaba Dünya!" kurallı öğesini düşünün programda
+_*_Üst düzey deyimler_*_ pek çok uygulamadan gereksiz seremonony 'yi kaldırır. "Merhaba Dünya!" kurallı öğesini düşünün programda
 
 ```csharp
 using System;
@@ -164,12 +164,12 @@ En önemlisi, üst düzey deyimler uygulamanızın kapsamını veya karmaşıkl�
 
 C# 9, yeni bir model eşleşme geliştirmeleri içerir:
 
-- ***Tür desenleri*** bir değişkenle eşleşiyor tür
-- ***Parantez Içine alınmış desenler*** , desen birleşimlerinin önceliğini uygular veya vurgular
-- ***Ayırt edici `and` desenler*** , her iki desen de eşleşmesini gerektirir
-- Ayırt edici *** `or` desenler*** eşleşmesi gereken her iki model
-- ***Değillenmiş `not` desenler*** bir düzenin eşleşmemesi gerekir
-- ***İlişkisel desenler*** , girişin küçüktür, büyüktür, küçüktür veya eşittir veya belirtilen bir sabitten büyük veya eşit olması gerekir.
+- _*_Tür desenleri_*_ bir değişkenle eşleşiyor tür
+- _*_Parantez Içine alınmış desenler_*_ , desen birleşimlerinin önceliğini uygular veya vurgular
+- _*_Ayırt edici `and` desenler_*_ , her iki desen de eşleşmesini gerektirir
+- Ayırt edici _*_ `or` desenler_*_ eşleşmesi gereken her iki model
+- _*_Değillenmiş `not` desenler_*_ bir düzenin eşleşmemesi gerekir
+- _*_İlişkisel desenler_*_ , girişin küçüktür, büyüktür, küçüktür veya eşittir veya belirtilen bir sabitten büyük veya eşit olması gerekir.
 
 Bu desenler, desenlerin sözdizimini zenginleştirin. Aşağıdaki örnekleri göz önünde bulundurun:
 
@@ -196,7 +196,7 @@ Bu desenlerden herhangi biri desenleri izin verilen herhangi bir bağlamda kulla
 
 Yerel boyutlu tamsayılar `nint` ve `nuint` , tamsayı türleridir. Bunlar, temel alınan türler ve ile ifade edilir <xref:System.IntPtr?displayProperty=nameWithType> <xref:System.UIntPtr?displayProperty=nameWithType> . Derleyici, bu türler için ek dönüştürmeler ve işlemleri yerel olarak gösterir. Yerel boyutlu tamsayılar veya özelliklerini tanımlar `MaxValue` `MinValue` . Bu değerler, Hedef makinedeki bir tamsayının yerel boyutuna bağlı olduğundan, derleme zamanı sabitleri olarak ifade edilemez. Çalışma zamanında bu değerler salt okunur. `nint`[.. Aralığında için sabit değerler kullanabilirsiniz. `int.MinValue` `int.MaxValue`]. `nuint`[.. Aralığında için sabit değerler kullanabilirsiniz. `uint.MinValue` `uint.MaxValue`]. Derleyici ve türlerini kullanarak tüm birli ve ikili işleçler için sabit katlama gerçekleştirir <xref:System.Int32?displayProperty=nameWithType> <xref:System.UInt32?displayProperty=nameWithType> . Sonuç 32 bite sığmazsa, işlem çalışma zamanında yürütülür ve bir sabit kabul edilmez. Yerel boyutlu tamsayılar, tamsayı matematiğinin yaygın olarak kullanıldığı ve en yüksek performansa sahip olması gereken senaryolarda performansı artırabilir.
 
-İşlev işaretçileri, Il işlem kodları ve ' a erişmek için kolay bir sözdizimi sağlar `ldftn` `calli` . Yeni sözdizimini kullanarak işlev işaretçileri bildirebilirsiniz `delegate*` . `delegate*`Tür bir işaretçi türüdür. Yöntemi, `delegate*` yöntemini kullanan `calli` bir temsilcinin aksine, türünü çağırır `callvirt` `Invoke()` . Sözdizimi, çağırma aynıdır. İşlev işaretçisi çağrısı, `managed` çağırma kuralını kullanır. `unmanaged` `delegate*` Çağırma kuralına istediğinizi bildirmek için sözdiziminden sonra anahtar sözcüğünü eklersiniz `unmanaged` . Diğer çağırma kuralları, bildirimde öznitelikler kullanılarak belirtilebilir `delegate*` .
+İşlev işaretçileri, Il işlem kodları ve ' a erişmek için kolay bir sözdizimi sağlar `ldftn` `calli` . Yeni sözdizimini kullanarak işlev işaretçileri bildirebilirsiniz `delegate_` . `delegate*`Tür bir işaretçi türüdür. Yöntemi, `delegate*` yöntemini kullanan `calli` bir temsilcinin aksine, türünü çağırır `callvirt` `Invoke()` . Sözdizimi, çağırma aynıdır. İşlev işaretçisi çağrısı, `managed` çağırma kuralını kullanır. `unmanaged` `delegate*` Çağırma kuralına istediğinizi bildirmek için sözdiziminden sonra anahtar sözcüğünü eklersiniz `unmanaged` . Diğer çağırma kuralları, bildirimde öznitelikler kullanılarak belirtilebilir `delegate*` .
 
 Son olarak, <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute?displayProperty=nameWithType> derleyicinin bayrağı yaymamasını sağlamak için öğesini ekleyebilirsiniz `localsinit` . Bu bayrak, CLR 'ye tüm yerel değişkenleri sıfıra başlatmasını söyler. `localsinit`Bayrak, 1,0 sonrasındaki C# için varsayılan davranıştır. Ancak, ek sıfır başlatma bazı senaryolarda ölçülebilir performans etkisine sahip olabilir. Özellikle, kullandığınızda `stackalloc` . Bu gibi durumlarda, ekleyebilirsiniz <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute> . Tek bir yönteme veya özelliğe veya bir `class` ,, `struct` `interface` veya hatta bir modüle ekleyebilirsiniz. Bu öznitelik yöntemleri etkilemez `abstract` ; uygulama için oluşturulan kodu etkiler.
 
@@ -226,7 +226,7 @@ Benzer bir özellik, [koşullu ifadelerin](../language-reference/operators/condi
 
 C# 9,0 ' den başlayarak `static` [lambda ifadelerine](../language-reference/operators/lambda-expressions.md) veya [anonim yöntemlere](../language-reference/operators/delegate-operator.md)değiştiricisini ekleyebilirsiniz. Statik lambda ifadeleri `static` Yerel işlevlere benzerdir: statik lambda veya anonim yöntem yerel değişkenleri veya örnek durumunu yakalayabilir. `static`Değiştirici yanlışlıkla diğer değişkenleri yakalamaya engel olur.
 
-Covaryant dönüş türleri, geçersiz kılınan işlevlerin dönüş türleri için esneklik sağlar. Geçersiz kılınan bir sanal işlev, temel sınıf yönteminde belirtilen dönüş türünden türetilmiş bir tür döndürebilir. Bu, kayıtlar için ve sanal kopya ya da fabrika yöntemlerini destekleyen diğer türler için yararlı olabilir.
+Covaryant dönüş türleri, [geçersiz kılma](../language-reference/keywords/override.md) yöntemlerinin dönüş türleri için esneklik sağlar. Geçersiz kılma yöntemi, geçersiz kılınan temel yöntemin dönüş türünden türetilmiş bir tür döndürebilir. Bu, kayıtlar ve sanal kopya ya da fabrika yöntemlerini destekleyen diğer türler için yararlı olabilir.
 
 Buna ek olarak, [ `foreach` döngü](../language-reference/keywords/foreach-in.md) , başka bir şekilde onu karşılayan bir genişletme yöntemi tanır ve kullanır `GetEnumerator` `foreach` . Bu değişiklik, `foreach` zaman uyumsuz model ve model tabanlı ayrıştırma gibi diğer model tabanlı kurulumlarını ile tutarlıdır. Uygulamada, bu değişiklik `foreach` herhangi bir türe destek ekleyebileceğiniz anlamına gelir. Bir nesne Numaralandırırken tasarımınızda anlamlı hale geldiğinde kullanımını sınırlamanız gerekir.
 
@@ -240,9 +240,9 @@ Son olarak, artık [Yerel işlevlere](../programming-guide/classes-and-structs/l
 
 Bir kod Oluşturucu, Roslyn analiz API 'Lerini kullanarak öznitelikleri veya diğer kod öğelerini okur. Bu bilgilerden, derlemeye yeni kod ekler. Kaynak oluşturucuları yalnızca kod ekleyebilir; Bu kişiler, derlemede var olan herhangi bir kodu değiştirmesine izin verilmez.
 
-Kod üreticileri için eklenen iki özellik, ***kısmi Yöntem sözdizimi***ve ***Modül başlatıcıları***için uzantılardır. Birincisi, kısmi metotlarda yapılan değişiklikler. C# 9,0 öncesi, kısmi Yöntemler, bir `private` erişim değiştiricisi `void` belirtmemelidir, geri dönemeyebilir ve parametrelere sahip olamaz `out` . Bu kısıtlamalar, hiçbir yöntem uygulama sağlanmazsa, derleyicinin kısmi yönteme yapılan tüm çağrıları kaldırmasının anlamına gelir. C# 9,0 bu kısıtlamaları ortadan kaldırır, ancak kısmi Yöntem bildirimlerinin bir uygulamaya sahip olmasını gerektirir. Kod oluşturucuları, bu uygulamayı sağlayabilir. Yeni bir değişiklik yapmaktan kaçınmak için, derleyici eski kuralları takip etmek üzere bir erişim değiştiricisi olmadan herhangi bir kısmi yöntemi dikkate alır. Kısmi Yöntem `private` erişim değiştiricisini içeriyorsa, yeni kurallar bu kısmi yöntemi yönetir.
+Kod üreticileri için eklenen iki özellik, ***kısmi Yöntem sözdizimi**_ ve _*_Modül başlatıcıları_*_ için uzantılardır. Birincisi, kısmi metotlarda yapılan değişiklikler. C# 9,0 öncesi, kısmi Yöntemler, bir `private` erişim değiştiricisi `void` belirtmemelidir, geri dönemeyebilir ve parametrelere sahip olamaz `out` . Bu kısıtlamalar, hiçbir yöntem uygulama sağlanmazsa, derleyicinin kısmi yönteme yapılan tüm çağrıları kaldırmasının anlamına gelir. C# 9,0 bu kısıtlamaları ortadan kaldırır, ancak kısmi Yöntem bildirimlerinin bir uygulamaya sahip olmasını gerektirir. Kod oluşturucuları, bu uygulamayı sağlayabilir. Yeni bir değişiklik yapmaktan kaçınmak için, derleyici eski kuralları takip etmek üzere bir erişim değiştiricisi olmadan herhangi bir kısmi yöntemi dikkate alır. Kısmi Yöntem `private` erişim değiştiricisini içeriyorsa, yeni kurallar bu kısmi yöntemi yönetir.
 
-Kod üreticileri için ikinci yeni özellik ***Modül başlatıcılarına***yöneliktir. Modül başlatıcıları, <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> kendisine eklenmiş özniteliği olan yöntemlerdir. Bu yöntemler, derleme yüklendiğinde çalışma zamanı tarafından çağırılır. Modül başlatıcısı yöntemi:
+Kod üreticileri için ikinci yeni özellik _ *_Modül başlatıcıları_* *. Modül başlatıcıları, <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> kendisine eklenmiş özniteliği olan yöntemlerdir. Bu yöntemler, derleme yüklendiğinde çalışma zamanı tarafından çağırılır. Modül başlatıcısı yöntemi:
 
 - Statik olmalıdır
 - Parametresiz olmalıdır

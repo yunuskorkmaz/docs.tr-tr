@@ -3,12 +3,12 @@ title: İlişkisel veriler ile NoSQL verilerinin karşılaştırması
 description: Bulutta yerel uygulamalarda ilişkisel ve NoSQL verileri hakkında bilgi edinin
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: 6e7725c2d67452218d1c6bda89c2fec6aa4a2b96
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 11db5cdca06b9c2c8ce12598456c4b147ac379ba
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163641"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434867"
 ---
 # <a name="relational-vs-nosql-data"></a>İlişkisel veriler ile NoSQL verilerinin karşılaştırması
 
@@ -26,11 +26,11 @@ NoSQL veritabanları, her biri belirli kullanım örneklerine uygun olan veriler
 
 **Şekil 5-9**: NoSQL veritabanları için veri modelleri
 
-| Modelleme | Özellikler |
+| Model | Özellikler |
 | :-------- | :-------- |
 | Belge Deposu | Veriler ve meta veriler, veritabanının içindeki JSON tabanlı belgelerde hiyerarşik olarak depolanır. |
 | Anahtar değer deposu | NoSQL veritabanlarının en basit yolu, verileri anahtar-değer çiftleri koleksiyonu olarak temsil eder. |
-| Geniş sütunlu depo | İlgili veriler tek bir sütunda iç içe anahtar/değer çiftleri kümesi olarak depolanır. |
+| Wide-Column deposu | İlgili veriler tek bir sütunda iç içe anahtar/değer çiftleri kümesi olarak depolanır. |
 | Graf Deposu | Veriler bir grafik yapısında düğüm, kenar ve veri özellikleri olarak depolanır. |
 
 ## <a name="the-cap-theorem"></a>Üst sınır
@@ -65,7 +65,7 @@ Bu tür bir sonuç, ACID işlemlerinin desteklenmediği dağıtılmış veri sis
 
 Yüksek kullanılabilirlik ve büyük ölçeklenebilirlik genellikle iş açısından güçlü tutarlılığa göre daha önemlidir. Geliştiriciler, son tutarlılığı daha fazla ayraç içine almak için Sagaz, CQRS ve zaman uyumsuz mesajlaşma gibi teknikleri ve desenleri uygulayabilir.
 
-> Günümüzde, bu, üst sınır kısıtlamaları conidering olduğunda gerçekleştirilmelidir. NewSQL adlı yeni bir veritabanı türü, ilişkisel veritabanı altyapısını hem yatay ölçeklenebilirliği hem de NoSQL sistemlerinin ölçeklenebilir performansını destekleyecek şekilde genişleten bir ortaya çıktı.
+> Günümüzde, üst sınır kısıtlamaları göz önünde bulundurularak gerçekleştirilmelidir. NewSQL adlı yeni bir veritabanı türü, ilişkisel veritabanı altyapısını hem yatay ölçeklenebilirliği hem de NoSQL sistemlerinin ölçeklenebilir performansını destekleyecek şekilde genişleten bir ortaya çıktı.
 
 ## <a name="considerations-for-relational-vs-nosql-systems"></a>İlişkisel ve NoSQL sistemlerine yönelik konular
 
@@ -131,7 +131,7 @@ Ancak Microsoft, *tam olarak yönetilen* DBaaS Hizmetleri olarak çeşitli popü
 
 ### <a name="azure-database-for-mysql"></a>MySQL için Azure Veritabanı
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL)   , [ampul yazılım yığınında](https://en.wikipedia.org/wiki/LAMP_(software_bundle))oluşturulmuş uygulamalar için açık kaynaklı bir ilişkisel veritabanıdır. *Okuma ağır* iş yükleri için yaygın olarak seçilen, Facebook, Twitter ve YouTube dahil olmak üzere çok büyük kuruluşlar tarafından kullanılır. Community sürümü ücretsiz olarak kullanılabilir, ancak Enterprise sürümü bir lisans satın alma işlemi gerektirir. Başlangıçta 1995 ' de oluşturulan ürün, Sun Microsystems tarafından 2008 ' de satın alındı. Oracle 2010 ' de Sun ve MySQL aldı.
+[MySQL](https://en.wikipedia.org/wiki/MySQL) , [lamba yazılım yığınında](https://en.wikipedia.org/wiki/LAMP_(software_bundle))oluşturulan uygulamalara yönelik açık kaynaklı bir ilişkisel veritabanıdır. *Okuma ağır* iş yükleri için yaygın olarak seçilen, Facebook, Twitter ve YouTube dahil olmak üzere çok büyük kuruluşlar tarafından kullanılır. Community sürümü ücretsiz olarak kullanılabilir, ancak Enterprise sürümü bir lisans satın alma işlemi gerektirir. Başlangıçta 1995 ' de oluşturulan ürün, Sun Microsystems tarafından 2008 ' de satın alındı. Oracle 2010 ' de Sun ve MySQL aldı.
 
 [MySQL Için Azure veritabanı](https://azure.microsoft.com/services/mysql/) , açık kaynak MySQL sunucu altyapısını temel alan, yönetilen bir ilişkisel veritabanı hizmetidir. MySQL Community sürümünü kullanır. Azure MySQL sunucusu, hizmetin yönetim noktasıdır. Bu, şirket içi dağıtımlar için kullanılan aynı MySQL Server altyapısıdır. Motor, sunucu başına tek bir veritabanı veya kaynakları paylaşan sunucu başına birden çok veritabanı oluşturabilir. Yeni beceriler öğrenmek veya sanal makineleri yönetmek zorunda kalmadan aynı açık kaynaklı araçları kullanarak verileri yönetmeye devam edebilirsiniz.
 
@@ -189,7 +189,7 @@ Cosmos DB çok girişli [API 'ler](/azure/cosmos-db/distribute-data-globally)say
 
 Tek parçalı uygulamalar buluta özgü bir mimariye yeniden geliştirmede, geliştirme ekiplerinin bazen açık kaynaklı, NoSQL veri depolarını geçirilmesi gerekir. Cosmos DB, bu NoSQL Veri depolarındaki yatırımınızı *çok modelli* veri platformuyla korumanıza yardımcı olabilir. Aşağıdaki tabloda, desteklenen NoSQL [Uyumluluk API 'leri](https://www.wikiwand.com/en/Cosmos_DB)gösterilmektedir.
 
-| Sağlayıcı | Açıklama  |
+| Sağlayıcı | Description  |
 | :-------- | :-------- |
 | SQL API | JSON belgelerini ve SQL tabanlı sorguları destekleyen özel API |
 | Mongo DB API | Mongo DB API 'Lerini ve JSON belgelerini destekler|
@@ -228,7 +228,7 @@ Azure Cosmos DB Şekil 5-13 ' de gösterilen beş iyi tanımlanmış [tutarlıl�
 
  Bu seçenekler tutarlılık, kullanılabilirlik ve verilerinizin performansı için kesin seçenekler ve ayrıntılı bir denge yapmanızı sağlar. Düzeyler aşağıdaki tabloda sunulmuştur.
 
-| Tutarlılık Düzeyi | Açıklama  |
+| Tutarlılık Düzeyi | Description  |
 | :-------- | :-------- |
 | Nihai | Okuma için sıralama garantisi yok. Çoğaltmalar sonunda yakınsama olur. |
 | Sabit ön ek | Okumalar hala nihai, ancak veriler yazıldığı sıralamada döndürülür. |
@@ -258,7 +258,7 @@ Dahili olarak, Cosmos DB kapsayıcının ölçeklenebilirlik ve performans ihtiy
 
 ## <a name="newsql-databases"></a>NewSQL veritabanları
 
-*Newsql*   , bir ilişkisel veritabanının ACID garantisi ile NoSQL 'in dağıtılmış ölçeklenebilirliğini birleştiren, gelişmekte olan bir veritabanı teknolojisidir. NewSQL veritabanları, tam işlem desteği ve ACID uyumluluğu sayesinde, yüksek hacimlerde verileri, dağıtılmış ortamlar arasında işlemesi gereken iş sistemleri için önemlidir. NoSQL veritabanı çok büyük ölçeklenebilirlik sağlayabilme olanağı sağlarken, veri tutarlılığını garanti etmez. Tutarsız verilerden oluşan aralıklı sorunlar, geliştirme ekibine bir yük getirebilir. Geliştiricilerin, tutarsız verilerden kaynaklanan sorunları yönetmesi için mikro hizmet koduna karşı korumalar oluşturulması gerekir.
+*Newsql* , bir ilişkisel veritabanının ACID garantisi Ile NoSQL 'in dağıtılmış ölçeklenebilirliğini birleştiren, gelişmekte olan bir veritabanı teknolojisidir. NewSQL veritabanları, tam işlem desteği ve ACID uyumluluğu sayesinde, yüksek hacimlerde verileri, dağıtılmış ortamlar arasında işlemesi gereken iş sistemleri için önemlidir. NoSQL veritabanı çok büyük ölçeklenebilirlik sağlayabilme olanağı sağlarken, veri tutarlılığını garanti etmez. Tutarsız verilerden oluşan aralıklı sorunlar, geliştirme ekibine bir yük getirebilir. Geliştiricilerin, tutarsız verilerden kaynaklanan sorunları yönetmesi için mikro hizmet koduna karşı korumalar oluşturulması gerekir.
 
 Cloud Native Computing Foundation (CNCF), çeşitli NewSQL veritabanı projelerini sunar.
 
@@ -279,7 +279,7 @@ Kubernetes, bir istemcinin tek bir DNS girdisinden özdeş bir NewSQL veritaban�
 
 Bu senaryoda, tüm veritabanı örnekleri eşittir. Birincil veya ikincil ilişki yok. CockroachDB içinde *konsensus çoğaltması* gibi teknikler, herhangi bir veritabanı düğümünün herhangi bir isteği işlemesini sağlar. Yük dengeli bir istek alan düğümde yerel olarak gereken veriler varsa, hemen yanıt verir. Aksi takdirde, düğüm bir ağ geçidi haline gelir ve doğru yanıtı almak için isteği uygun düğümlere iletir. İstemcinin perspektifinden, her veritabanı düğümü aynıdır: tek makineli bir sistemin tutarlılık garantisi olan tek bir *mantıksal* veritabanı olarak görünürler ve bu da arka planda çalışan onlarca veya hatta yüzlerce düğüm olmasına rağmen.
 
-NewSQL veritabanlarının arkasındaki mekanizması ayrıntılı bir bakış için bkz. [Dash: Kubernetes-Native veritabanları makalesinin dört özelliği](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) .
+NewSQL veritabanlarının arkasındaki mekanizması ayrıntılı bir şekilde görmek için [Kubernetes-Native veritabanlarının Dash: dört özelliği](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) makalesine bakın.
 
 ## <a name="data-migration-to-the-cloud"></a>Buluta veri geçişi
 
