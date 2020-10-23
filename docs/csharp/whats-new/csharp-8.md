@@ -2,12 +2,12 @@
 title: C# 8,0 ' deki yenilikler-C# Kılavuzu
 description: C# 8,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 04/07/2020
-ms.openlocfilehash: 43b9c69c649b83d4cf78ef4c7d131ce900a49d11
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 1d6d33a36092ba685247f894375888da278b7e6e
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654874"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434800"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 sürümündeki yenilikler
 
@@ -39,7 +39,7 @@ Bu makalenin geri kalanında bu özellikler kısaca açıklanmaktadır. Ayrınt�
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp8* alt dizinine ayarlayın.
-1. `dotnet try` öğesini çalıştırın.
+1. Şu komutu çalıştırın: `dotnet try`.
 
 ## <a name="readonly-members"></a>Salt okunur Üyeler
 
@@ -271,7 +271,6 @@ Bu [Gelişmiş öğreticide, model eşleştirme](../tutorials/pattern-matching.m
 static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
-    // Notice how we declare skippedLines after the using statement.
     int skippedLines = 0;
     foreach (string line in lines)
     {
@@ -295,11 +294,9 @@ Yukarıdaki örnekte, yöntemi için kapanış ayracı ne zaman ulaşıldığın
 ```csharp
 static int WriteLinesToFile(IEnumerable<string> lines)
 {
-    // We must declare the variable outside of the using block
-    // so that it is in scope to be returned.
-    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
+        int skippedLines = 0;
         foreach (string line in lines)
         {
             if (!line.Contains("Second"))

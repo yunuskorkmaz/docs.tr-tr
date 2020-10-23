@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2c8a5c1ec87918a91600a3557c679a42cae74896
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: d9526055041f036958699aa935aa6cfef494b520
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556351"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434952"
 ---
 ### <a name="principalpermissionattribute-is-obsolete-as-error"></a>PrincipalPermissionAttribute hata olarak kullanımdan kalktı
 
@@ -12,7 +12,7 @@ ms.locfileid: "87556351"
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Framework ve .NET Core 'da, özniteliğiyle yöntemlere not ekleyebilirsiniz <xref:System.Security.Permissions.PrincipalPermissionAttribute> . Örnek:
+.NET Framework ve .NET Core 'da, özniteliğiyle yöntemlere not ekleyebilirsiniz <xref:System.Security.Permissions.PrincipalPermissionAttribute> . Örneğin:
 
 ```csharp
 [PrincipalPermission(SecurityAction.Demand, Role = "Administrators")]
@@ -34,7 +34,7 @@ public void MyMethod()
 
 5,0 Preview 7
 
-#### <a name="recommended-action"></a>Önerilen eylem
+#### <a name=""></a><a id="permission-action">Önerilen eylem</a>
 
 Kullanımdan çıkarma hatasıyla karşılaşırsanız, işlem yapmanız gerekir.
 

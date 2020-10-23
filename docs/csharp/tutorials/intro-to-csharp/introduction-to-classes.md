@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler-C# öğreticisine giriş
 description: İlk C# programınızı oluşturun ve nesne yönelimli kavramları keşfedebilirsiniz
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 90abe3836292029ce7ebf26ae9be3253c4eface1
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 0955b0ac33b346b9880c8af70bd73cb458120f35
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756063"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434891"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Sınıflar ve nesneler ile nesne odaklı programlamayı keşfet
 
@@ -35,7 +35,7 @@ namespace classes
 
 Bu öğreticide, bir banka hesabını temsil eden yeni türler oluşturacaksınız. Genellikle geliştiriciler her bir sınıfı farklı bir metin dosyasında tanımlar. Bu, bir program boyutunun büyüdükçe daha kolay yönetilmesini sağlar. *Classes* dizininde *BankAccount.cs* adlı yeni bir dosya oluşturun.
 
-Bu dosya, bir ***Banka hesabının***tanımını içerir. Nesne odaklı programlama, ***sınıf***biçiminde türler oluşturarak kodu düzenler. Bu sınıflar, belirli bir varlığı temsil eden kodu içerir. `BankAccount`Sınıfı bir banka hesabını temsil eder. Kod, Yöntemler ve özellikler aracılığıyla belirli işlemleri uygular. Bu öğreticide, banka hesabı bu davranışı destekler:
+Bu dosya, ***Banka hesabı**_ tanımını içerir. Nesne odaklı programlama, _*_sınıf_*_ biçiminde türler oluşturarak kodu düzenler. Bu sınıflar, belirli bir varlığı temsil eden kodu içerir. `BankAccount`Sınıfı bir banka hesabını temsil eder. Kod, Yöntemler ve özellikler aracılığıyla belirli işlemleri uygular. Bu öğreticide, banka hesabı bu davranışı destekler:
 
 1. Bu, banka hesabını benzersiz bir şekilde tanımlayan 10 basamaklı bir sayı içerir.
 1. Sahiplerinin adını veya adlarını depolayan bir dizesi vardır.
@@ -47,7 +47,7 @@ Bu dosya, bir ***Banka hesabının***tanımını içerir. Nesne odaklı programl
 
 ## <a name="define-the-bank-account-type"></a>Banka hesap türünü tanımlayın
 
-Bu davranışı tanımlayan bir sınıfın temellerini oluşturarak başlayabilirsiniz. **Dosya: New** komutunu kullanarak yeni bir dosya oluşturun. *BankAccount.cs*olarak adlandırın. Aşağıdaki kodu *BankAccount.cs* dosyanıza ekleyin:
+Bu davranışı tanımlayan bir sınıfın temellerini oluşturarak başlayabilirsiniz. _*File: New** komutunu kullanarak yeni bir dosya oluşturun. *BankAccount.cs*olarak adlandırın. Aşağıdaki kodu *BankAccount.cs* dosyanıza ekleyin:
 
 ```csharp
 using System;
@@ -73,13 +73,13 @@ namespace classes
 
 Başlamadan önce, derleydiklerinize göz atalım.  `namespace`Bildirimi, kodunuzu mantıksal olarak düzenlemek için bir yol sağlar. Bu öğretici nispeten küçüktür, bu nedenle tüm kodu bir ad alanına yerleştirebilirsiniz.
 
-`public class BankAccount` oluşturmakta olduğunuz sınıfı veya türü tanımlar. `{`Sınıf bildirimini izleyen ve içindeki her şey, `}` sınıfının durumunu ve davranışını tanımlar. Sınıfının beş ***üyesi*** vardır `BankAccount` . İlk üçü ***özelliklerdir***. Özellikler veri öğeleridir ve doğrulamayı veya diğer kuralları zorlayan koda sahip olabilir. Son ikisi ***metodlardır***. Yöntemler, tek bir işlevi gerçekleştiren kod bloklarıdır. Her üyenin adını okumak, siz veya başka bir geliştirici tarafından sınıfın ne yaptığını anlamak için yeterli bilgi sağlamalıdır.
+`public class BankAccount` oluşturmakta olduğunuz sınıfı veya türü tanımlar. `{`Sınıf bildirimini izleyen ve içindeki her şey, `}` sınıfının durumunu ve davranışını tanımlar. Sınıfın beş ***üyesi**_ `BankAccount` . İlk üçü _*_özelliklerdir_*_. Özellikler veri öğeleridir ve doğrulamayı veya diğer kuralları zorlayan koda sahip olabilir. Son ikisi _*_metodlardır_*_. Yöntemler, tek bir işlevi gerçekleştiren kod bloklarıdır. Her üyenin adını okumak, siz veya başka bir geliştirici tarafından sınıfın ne yaptığını anlamak için yeterli bilgi sağlamalıdır.
 
 ## <a name="open-a-new-account"></a>Yeni bir hesap açın
 
 Uygulanacak ilk özellik bir banka hesabı açmak. Bir müşteri bir hesabı açtığında, bir başlangıç bakiyesi ve bu hesabın sahibi veya sahipleri hakkında bilgi sağlamalıdır.
 
-Türünde yeni bir nesne oluşturmak, `BankAccount` Bu değerleri atayan bir ***Oluşturucu*** tanımlamayı gösterir. ***Oluşturucu*** , sınıfıyla aynı ada sahip olan bir üyedir. Bu sınıf türündeki nesneleri başlatmak için kullanılır. Türe aşağıdaki oluşturucuyu ekleyin `BankAccount` . Aşağıdaki kodu bildiriminin üzerine yerleştirin `MakeDeposit` :
+Türünde yeni bir nesne oluşturmak, `BankAccount` Bu değerleri atayan bir _*_Oluşturucu_*_ tanımlamayı gösterir. _*_Oluşturucu_*_ , sınıfıyla aynı ada sahip olan bir üyedir. Bu sınıf türündeki nesneleri başlatmak için kullanılır. Türe aşağıdaki oluşturucuyu ekleyin `BankAccount` . Aşağıdaki kodu bildiriminin üzerine yerleştirin `MakeDeposit` :
 
 ```csharp
 public BankAccount(string name, decimal initialBalance)
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Oluşturucular, kullanarak bir nesne oluşturduğunuzda çağrılır [`new`](../../language-reference/operators/new-operator.md) . `Console.WriteLine("Hello World!");` *Program.cs* içindeki satırı aşağıdaki kodla değiştirin ( `<name>` adınızla değiştirin):
+Oluşturucular, kullanarak bir nesne oluşturduğunuzda çağrılır [`new`](../../language-reference/operators/new-operator.md) . `Console.WriteLine("Hello World!");`_Program. cs * içindeki çizgiyi aşağıdaki kodla değiştirin ( `<name>` adınızla değiştirin):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -133,19 +133,19 @@ Bir işlemi temsil etmek için yeni bir tür oluşturarak başlayalım. Bu, herh
 using System.Collections.Generic;
 ```
 
-Şimdi, raporun nasıl bildirileceğini değiştirelim `Balance` .  Bu, tüm işlemlerin değerlerini toplayarak bulunabilir. `Balance` `BankAccount` Sınıfında bildirimini aşağıdaki şekilde değiştirin:
+Şimdi, öğesini doğru şekilde hesaplaalım `Balance` . Geçerli Bakiye, tüm işlemlerin değerlerini toplayarak bulunabilir. Kod şu anda olduğundan, yalnızca hesabın başlangıç bakiyesini alabilir; bu sayede özelliği güncelleştirmeniz gerekir `Balance` . `public decimal Balance { get; }` *BankAccount.cs* içindeki satırı aşağıdaki kodla değiştirin:
 
 :::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="BalanceComputation":::
 
-Bu örnekte, ***özelliklerin***önemli bir yönü gösterilmektedir. Artık, başka bir programcı değer istediğinde bakiyeyi hesaplıyor. Hesaplama tüm işlemleri numaralandırır ve toplamı geçerli Bakiye olarak verir.
+Bu örnekte, ***Properties**_ ' in önemli bir yönü gösterilmektedir. Artık, başka bir programcı değer istediğinde bakiyeyi hesaplıyor. Hesaplama tüm işlemleri numaralandırır ve toplamı geçerli Bakiye olarak verir.
 
 Sonra, `MakeDeposit` ve yöntemlerini uygulayın `MakeWithdrawal` . Bu yöntemler, son iki kuralı zorunlu tutar: ilk Bakiyenin pozitif olması ve tüm çekme allarının negatif bir bakiye oluşturmamalıdır.
 
-Bu, ***özel durum***kavramını tanıtır. Bir yöntemin işini başarıyla tamamlayamadığını belirten standart yol, bir özel durum oluşturmak şeklindedir. Özel durum türü ve onunla ilişkili ileti hatayı anlatmaktadır. Burada, `MakeDeposit` depozito miktarı negatifse Yöntem bir özel durum oluşturur. `MakeWithdrawal`Çekme miktarı negatifse veya çekme sonuçları negatif bir bakiyeye uygulanırsa Yöntem bir özel durum oluşturur. Listenin bildiriminden sonra aşağıdaki kodu ekleyin `allTransactions` :
+Bu, _*_özel durum_*_ kavramını tanıtır. Bir yöntemin işini başarıyla tamamlayamadığını belirten standart yol, bir özel durum oluşturmak şeklindedir. Özel durum türü ve onunla ilişkili ileti hatayı anlatmaktadır. Burada, `MakeDeposit` depozito miktarı negatifse Yöntem bir özel durum oluşturur. `MakeWithdrawal`Çekme miktarı negatifse veya çekme sonuçları negatif bir bakiyeye uygulanırsa Yöntem bir özel durum oluşturur. Listenin bildiriminden sonra aşağıdaki kodu ekleyin `allTransactions` :
 
 :::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="DepositAndWithdrawal":::
 
-[`throw`](../../language-reference/keywords/throw.md)İfade bir özel durum **oluşturur** . Geçerli bloğun yürütülmesi sonlanır ve çağrı yığınında bulunan ilk eşleşen bloğa yapılan aktarımları denetler `catch` . `catch`Daha sonra bu kodu test etmek için bir blok ekleyeceksiniz.
+[`throw`](../../language-reference/keywords/throw.md)_ İfade * bir özel durum*oluşturur*. Geçerli bloğun yürütülmesi sonlanır ve çağrı yığınında bulunan ilk eşleşen bloğa yapılan aktarımları denetler `catch` . `catch`Daha sonra bu kodu test etmek için bir blok ekleyeceksiniz.
 
 Oluşturucunun, bakiyeyi doğrudan güncelleştirmek yerine bir ilk işlem eklemesi için bir değişiklik alması gerekir. Yöntemi zaten yazmış olduğundan `MakeDeposit` , bunu oluşturucudan çağırın. Tamamlanmış Oluşturucu şöyle görünmelidir:
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0dfe04ba1313480f15a8e7a7e26da613799180b2
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: a93856aac97af5c392a2e4698d2da42413cfc3c8
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92332893"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434980"
 ---
 ### <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>ASP.NET Core uygulamalar, tırnak işaretli sayıların serisini kaldırmada izin veriyor
 
@@ -20,7 +20,7 @@ ms.locfileid: "92332893"
 >
 > - Varsayılan, tek başına veya için davranış değişikliği yoktur <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.JsonSerializerOptions> .
 > - Bu, teknik olarak önemli bir değişiklik değildir, çünkü bir senaryoyu daha kısıtlayıcı hale getirir (yani, bir özel durum oluşturmak yerine bir JSON dizesinden zorlama bir sayı içinde başarılı olur). Ancak, bu pek çok ASP.NET Core uygulamayı etkileyen önemli bir davranış değişikliği olduğundan, burada belgelenmiştir.
-> - <xref:System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync%2A>Ve <xref:System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsync%2A> genişletme yöntemleri, <xref:System.Text.Json.JsonSerializerDefaults.Web> serileştirme seçenekleri kümesini de kullanır.
+> - <xref:System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync%2A?displayProperty=nameWithType>Ve <xref:System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsync%2A?displayProperty=nameWithType> genişletme yöntemleri, <xref:System.Text.Json.JsonSerializerDefaults.Web> serileştirme seçenekleri kümesini de kullanır.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
