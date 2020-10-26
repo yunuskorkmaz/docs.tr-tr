@@ -1,7 +1,7 @@
 ---
-description: "C 'de yapı türü hakkında bilgi edinin #"
 title: Yapı türleri-C# başvurusu
-ms.date: 04/21/2020
+description: "C 'de yapı türü hakkında bilgi edinin #"
+ms.date: 10/23/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 5f446dae6a84706e1398a65ffb5a52270cfd92cf
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471819"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526605"
 ---
 # <a name="structure-types-c-reference"></a>Yapı türleri (C# Başvurusu)
 
@@ -37,7 +37,7 @@ C# 7,2 ' den başlayarak, `readonly` bir yapı türünün sabit olduğunu bildir
 Bir yapının tüm veri üyeleri `readonly` aşağıdaki şekilde salt okunabilir olmalıdır:
 
 - Herhangi bir alan bildirimi [ `readonly` değiştiriciye](../keywords/readonly.md) sahip olmalıdır
-- Otomatik olarak uygulanan özellikler dahil olmak üzere herhangi bir özellik salt okunabilir olmalıdır
+- Otomatik olarak uygulanan özellikler dahil olmak üzere herhangi bir özellik salt okunabilir olmalıdır. C# 9,0 ve üzeri sürümlerde bir özelliğin [ `init` erişimcisi](../../whats-new/csharp-9.md#init-only-setters)olabilir.
 
 Bu, yapının hiçbir üyesinin `readonly` yapının durumunu değiştirdiğine garanti eder. C# 8,0 ve üzeri sürümlerde, oluşturucular hariç diğer örnek üyelerinin örtülü olarak olduğu anlamına gelir [`readonly`](#readonly-instance-members) .
 
@@ -68,6 +68,10 @@ Genellikle, `readonly` değiştiricisini aşağıdaki örnek üye türlerine uyg
 
   > [!NOTE]
   > Derleyici, `get` [auto-implemented property](../../programming-guide/classes-and-structs/auto-implemented-properties.md) `readonly` `readonly` bir özellik bildiriminde değiştiricinin varlığından bağımsız olarak otomatik uygulanan bir özelliğin erişimcisini bildirir.
+
+  C# 9,0 ve üzeri sürümlerde, `readonly` değiştiriciyi bir özelliğe veya dizin oluşturucusuna uygulayabilirsiniz `init` :
+
+  :::code language="csharp" source="snippets/shared/StructType.cs" id="ReadonlyWithInit":::
 
 `readonly`Bir yapı türünün statik üyelerine değiştiricisini uygulayamazsınız.
 

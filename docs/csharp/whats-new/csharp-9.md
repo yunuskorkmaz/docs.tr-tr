@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: 57fd5f8775f95b2588e4a7120e35d6d531be4f01
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: c256c03831ac759bc45467f38e85fd3a2884dda4
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434827"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526588"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -108,7 +108,7 @@ Yukarıdaki satır, `Person` `LastName` özelliğin bir kopyası olduğu `person
 
 ***Init Only Setter**_ bir nesnenin üyelerini başlatmak için tutarlı bir sözdizimi sağlar. Özellik başlatıcıları, hangi değerin hangi özelliğin ayarlanmasını temizlesin. Downsıde, bu özelliklerin ayarlanabilir olması gerekir. C# 9,0 ' den başlayarak, `init` `set` Özellikler ve Dizin oluşturucular için erişimciler yerine erişimciler oluşturabilirsiniz. Çağıranlar, oluşturma ifadelerinde bu değerleri ayarlamak için özellik başlatıcısı sözdizimini kullanabilir, ancak oluşturma işlemi tamamlandıktan sonra bu özellikler salt okunur yapılır. Init Only ayarlayıcıları, durumu değiştirecek bir pencere sağlar. Bu pencere, oluşturma aşaması sona erdiğinde kapanır. Özellik başlatıcıları ve WITH ifadeleri dahil olmak üzere, oluşturma aşaması, tüm başlatma sonrasında etkili bir şekilde sona erer.
 
-Konumsal kayıtlar için yukarıdaki örnek, WITH ifadesi kullanarak bir özelliği ayarlamak için bir init ayarlayıcı kullanmayı gösterir. Yazdığınız herhangi bir tür için yalnızca init ayarlayıcıları bildirebilirsiniz. Örneğin, aşağıdaki yapı bir hava durumu izleme yapısını tanımlar:
+`init`Yalnızca yazdığınız herhangi bir tür için ayarlayıcıları bildirebilirsiniz. Örneğin, aşağıdaki yapı bir hava durumu izleme yapısını tanımlar:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/WeatherObservation.cs" ID="DeclareWeatherObservation":::
 
