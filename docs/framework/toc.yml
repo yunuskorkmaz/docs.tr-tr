@@ -725,24 +725,20 @@ items:
         href: misc/using-libraries-from-partially-trusted-code.md
       - name: Onay Yöntemini Kullanma
         href: misc/using-the-assert-method.md
-  - name: Konsol uygulaması oluşturma
-    href: ../standard/building-console-apps.md
-  - name: Web Forms uygulamasında olayları kullanma
-    href: ../standard/events/how-to-consume-events-in-a-web-forms-application.md
-  - name: .NET Framework kod çözümleyicisi
-    href: ../standard/analyzers/framework-analyzer.md
+  - name: Kod analizi
+    href: code-analyzers.md
   - name: Birden çok platform için geliştirme
     items:
       - name: Genel Bakış
-        href: ../standard/cross-platform/index.md
+        href: cross-platform/index.md
         displayName: cross platform
       - name: Taşınabilir Sınıf Kitaplığı
-        href: ../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md
+        href: cross-platform/portable-class-library.md
       - name: MVVM ile Taşınabilir Sınıf Kitaplığı kullanma
-        href: ../standard/cross-platform/using-portable-class-library-with-model-view-view-model.md
+        href: cross-platform/using-portable-class-library-with-model-view-view-model.md
       - name: Birden çok platformu hedefleyen kitaplıklar için uygulama kaynakları
-        href: ../standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
+        href: cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
       - name: Microsoft Store uygulamaları ve Windows Çalışma Zamanı için .NET Framework desteği
-        href: ../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md
+        href: cross-platform/support-for-windows-store-apps-and-windows-runtime.md
       - name: URI’yi Windows Çalışma Zamanı’na geçirme
-        href: ../standard/cross-platform/passing-a-uri-to-the-windows-runtime.md
+        href: cross-platform/passing-a-uri-to-the-windows-runtime.md
