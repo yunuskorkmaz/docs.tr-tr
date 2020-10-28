@@ -1,19 +1,20 @@
 ---
-title: .NET Framework Türlerini Dizelere Dönüştürme
+title: .NET türlerini dizelere dönüştürme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
-ms.openlocfilehash: d232fb0e3ea4cf3189294d6e6f43ae9270417407
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ca35af17a402dc901c02edf94099af1377e1160f
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287824"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687632"
 ---
-# <a name="converting-net-framework-types-to-strings"></a>.NET Framework Türlerini Dizelere Dönüştürme
-Bir .NET Framework türünü dizeye dönüştürmek istiyorsanız, **ToString** yöntemini kullanın. **ToString** yöntemi geçirilen türün dize gösterimini döndürür. Aşağıdaki tabloda, XML şeması (XSD) belirtimlerine eşlenen bir biçimde dize döndüren .NET Framework türleri listelenmektedir.  
+# <a name="convert-net-types-to-strings"></a>.NET türlerini dizelere Dönüştür
+
+Bir .NET türünü dizeye dönüştürmek istiyorsanız, **ToString** yöntemini kullanın. **ToString** yöntemi geçirilen türün dize gösterimini döndürür. Aşağıdaki tabloda, XML şeması (XSD) belirtimlerine eşlenen bir biçimde dize döndüren .NET türleri listelenmektedir.  
   
-|.NET Framework türü|Döndürülen dize türü|  
+|.NET türü|Döndürülen dize türü|  
 |-------------------------|--------------------------|  
 |Boole|"true", "false"|  
 |Single. PositiveInfinity|'SI|  
@@ -26,4 +27,4 @@ Bir .NET Framework türünü dizeye dönüştürmek istiyorsanız, **ToString** 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML Veri Türlerini Dönüştürme](conversion-of-xml-data-types.md)
-- [.NET Framework Veri Türleri için Dizeleri Dönüştürme](converting-strings-to-dotnet-data-types.md)
+- [Dizeleri .NET veri türlerine dönüştürme](converting-strings-to-dotnet-data-types.md)

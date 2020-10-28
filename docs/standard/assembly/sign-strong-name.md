@@ -5,19 +5,19 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
 - signing assemblies
-- assemblies [.NET Framework], signing
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], signing
+- assemblies [.NET], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d4888a12ac0494ca34eac3553a5374c3517fee38
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5192f7f372b9ef7927930c3599aebc6fca9f1f0f
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378616"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687652"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: bir derlemeyi güçlü bir adla Imzalama
 
@@ -28,7 +28,7 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
   
 - Visual Studio 'da bir projenin **Özellikler** Iletişim kutusunda **imzalama** sekmesini kullanarak. Bu, bir derlemeyi katı bir adla imzalamanın en kolay ve en kullanışlı yoludur.  
   
-- Bir .NET Framework kodu modülünü ( *. netmodule* dosyası) anahtar dosyasıyla bağlamak Için [derleme Bağlayıcısı (al. exe)](../../framework/tools/al-exe-assembly-linker.md) kullanarak.  
+- Bir .NET Framework kodu modülünü ( *. netmodule* dosyası) anahtar dosyasıyla bağlamak Için [derleme Bağlayıcısı (Al.exe)](../../framework/tools/al-exe-assembly-linker.md) kullanarak.  
   
 - Katı ad bilgilerini kodunuza eklemek için derleme özniteliklerini kullanarak. <xref:System.Reflection.AssemblyKeyFileAttribute> <xref:System.Reflection.AssemblyKeyNameAttribute> Kullanılacak anahtar dosyasının bulunduğu yere bağlı olarak ya da özniteliğini kullanabilirsiniz.  
   
@@ -38,13 +38,13 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
   
 ## <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Visual Studio 'Yu kullanarak tanımlayıcı ad ile derleme oluşturma ve imzalama  
   
-1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.  
+1. **Çözüm Gezgini** ' de, proje için kısayol menüsünü açın ve ardından **Özellikler** ' i seçin.  
   
 2. **İmzalama** sekmesini seçin.  
   
 3. **Derlemeyi imzala** kutusunu seçin.  
   
-4. **Tanımlayıcı ad seçin anahtar dosyası** kutusunda, **Araştır**' ı seçin ve ardından anahtar dosyasına gidin. Yeni bir anahtar dosyası oluşturmak için **Yeni** ' yi seçin ve **tanımlayıcı ad anahtarı oluştur** iletişim kutusuna adını girin.  
+4. **Tanımlayıcı ad seçin anahtar dosyası** kutusunda, **Araştır** ' ı seçin ve ardından anahtar dosyasına gidin. Yeni bir anahtar dosyası oluşturmak için **Yeni** ' yi seçin ve **tanımlayıcı ad anahtarı oluştur** iletişim kutusuna adını girin.  
   
 > [!NOTE]
 > [Bir derlemeyi imzalamayı geciktirmek](delay-sign.md)için bir ortak anahtar dosyası seçin.  
@@ -53,9 +53,9 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
   
 [Visual Studio için geliştirici komut istemi](../../framework/tools/developer-command-prompt-for-vs.md), aşağıdaki komutu girin:  
 
-**Al** **/Out:** \< *AssemblyName* >  * \< ModuleName>* **/keyfile:** \< *keyfilename*>  
+**Al** **/Out:** \<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
 
-Konumlar:  
+Burada:  
 
 - *AssemblyName* , derleme bağlayıcının Yayladığı, kesin imzalı derlemenin (bir *. dll* veya *. exe* dosyası) adıdır.  
   
@@ -63,7 +63,7 @@ Konumlar:
   
 - *Keyfilename* , anahtar çiftini içeren kapsayıcının veya dosyanın adıdır. Derleme Bağlayıcı, geçerli dizinle ilişkili bir göreli yolu yorumlar.  
 
-Aşağıdaki örnek, *sgKey. snk*anahtar dosyasını kullanarak *MyAssembly. dll* derlemesini tanımlayıcı bir adla imzalar.  
+Aşağıdaki örnek, bir derleme *MyAssembly.dll* *sgKey. snk* anahtar dosyasını kullanarak tanımlayıcı bir adla imzalar.  
 
 ```console
 al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk  
@@ -80,7 +80,7 @@ Bu araç hakkında daha fazla bilgi için bkz. [derleme Bağlayıcısı](../../f
    > [!NOTE]
    > C# ve Visual Basic derleyicileri, <xref:System.Reflection.AssemblyKeyFileAttribute> kaynak kodundaki veya özniteliğiyle karşılaştığında derleyici uyarılarını (SıRASıYLA CS1699 ve BC41008) yayınlarlar <xref:System.Reflection.AssemblyKeyNameAttribute> . Uyarıları gözardı edebilirsiniz.  
 
-Aşağıdaki örnek <xref:System.Reflection.AssemblyKeyFileAttribute> özniteliğini, derlemenin derlendiği dizinde bulunan *keyfile. snk*adlı anahtar dosyasıyla birlikte kullanır.  
+Aşağıdaki örnek <xref:System.Reflection.AssemblyKeyFileAttribute> özniteliğini, derlemenin derlendiği dizinde bulunan *keyfile. snk* adlı anahtar dosyasıyla birlikte kullanır.  
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("keyfile.snk")];
@@ -102,7 +102,7 @@ Kaynak kodu dosyanızı veya dosyalarınızı C# ve Visual Basic ya da C++ ' dak
 
 Gecikmeli imzalama hakkında daha fazla bilgi için bkz. [bir derlemeyi gecikmeli](delay-sign.md)imzalama.  
 
-Aşağıdaki örnek, C# derleyicisini kullanır ve *Bu derlemeyi,* *sgKey. snk*anahtar dosyasını kullanarak tanımlayıcı bir adla birlikte kullanın.  
+Aşağıdaki örnek, C# derleyicisini kullanır ve *sgKey. snk* anahtar dosyasını kullanarak derleme *UtilityLibrary.dll* tanımlayıcı bir adla imzalar.  
 
 ```cmd
 csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
@@ -112,7 +112,7 @@ csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk
 
 - [Tanımlayıcı adlı derlemeler oluşturma ve kullanma](create-use-strong-named.md)
 - [Nasıl yapılır: genel-özel anahtar çifti oluşturma](create-public-private-key-pair.md)
-- [Al. exe (bütünleştirilmiş kod bağlayıcı)](../../framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (bütünleştirilmiş kod bağlayıcı)](../../framework/tools/al-exe-assembly-linker.md)
 - [Derlemeyi gecikmeli imzalama](delay-sign.md)
 - [Derleme ve bildirim imzalamayı yönetme](/visualstudio/ide/managing-assembly-and-manifest-signing)
 - [İmzalama sayfası, proje Tasarımcısı](/visualstudio/ide/reference/signing-page-project-designer)

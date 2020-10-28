@@ -3,19 +3,19 @@ title: DisposeAsync metodu uygulama
 description: Zaman uyumsuz kaynak Temizleme işlemini gerçekleştirmek için DisposeAsync ve Dispomevsimsynccore yöntemlerini nasıl uygulayacağınızı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/16/2020
+ms.date: 10/26/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 5aa82c507c22a4795f39267ac8f435599fb9cd92
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720289"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687715"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync metodu uygulama
 
@@ -102,9 +102,34 @@ Ayrıca, bir [using bildiriminin](../../csharp/whats-new/csharp-8.md#using-decla
 
 ## <a name="stacked-usings"></a>Yığılmış kullanımlar
 
-Uygulayan birden çok nesne oluşturup kullandığınız durumlarda <xref:System.IAsyncDisposable> , `using` errant koşullarında yığınlama deyimlerinin çağrıları engelleyebileceği olasıdır <xref:System.IAsyncDisposable.DisposeAsync> . Olası bir sorunu önlemeye yardımcı olmak için yığınlama zorunluluğunu ortadan kaldırmak ve bunun yerine bu örnek düzeni izlemeniz gerekir:
+Uygulayan birden çok nesne oluşturup kullandığınız durumlarda <xref:System.IAsyncDisposable> , `await using` ile yığınlama deyimlerinin, <xref:System.Threading.Tasks.ValueTask.ConfigureAwait%2A> errant koşullarında çağrıları engelleyebileceği olasıdır <xref:System.IAsyncDisposable.DisposeAsync> . <xref:System.IAsyncDisposable.DisposeAsync>Her zaman çağrıldığından emin olmak için yığınlama ' ı kullanmaktan kaçının. Aşağıdaki üç kod örneği, yerine kullanılacak kabul edilebilir desenleri gösterir.
 
-:::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+### <a name="acceptable-pattern-one"></a>Kabul edilebilir tek desenler
+
+:::code language="csharp" id="one" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+Yukarıdaki örnekte, her zaman uyumsuz temizleme işlemi bloğunun altında açıkça kapsamlandırılır `await using` . Dış kapsam, bu, kapsayan, kapsayan, ve ' `objOne` `objTwo` nin ilk olarak nasıl `objTwo` bırakıldığı, ve ardından tarafından tanımlanır `objOne` . Her iki `IAsyncDisposable` örnek de <xref:System.IAsyncDisposable.DisposeAsync> bekletildi ve bu nedenle zaman uyumsuz temizleme işlemini gerçekleştiriyor. Çağrılar yığılır, iç içe değildir.
+
+### <a name="acceptable-pattern-two"></a>Kabul edilebilir iki model
+
+:::code language="csharp" id="two" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+Yukarıdaki örnekte, her zaman uyumsuz temizleme işlemi bloğunun altında açıkça kapsamlandırılır `await using` . Her bloğun sonunda, karşılık gelen `IAsyncDisposable` örnek <xref:System.IAsyncDisposable.DisposeAsync> yöntemi bekletildi ve bu nedenle zaman uyumsuz temizleme işlemini gerçekleştiriyor. Çağrılar sıralı değildir, yığın değildir. Bu senaryoda `objOne` önce atıldığından, daha sonra `objTwo` atılmış olur.
+
+### <a name="acceptable-pattern-three"></a>Kabul edilebilir üç desenli
+
+:::code language="csharp" id="three" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+Önceki örnekte, her zaman uyumsuz temizleme işlemi, kapsayan Yöntem gövdesi ile dolaylı olarak kapsamlıdır. Kapsayan bloğun sonunda, `IAsyncDisposable` örnekler zaman uyumsuz temizleme işlemlerini gerçekleştirir. Bu, daha önce çıkarılan, bildirildiği sırada çalışır `objTwo` `objOne` .
+
+### <a name="unacceptable-pattern"></a>Kabul edilemeyen desenler
+
+Oluşturucudan bir özel durum oluşturulursa `AnotherAsyncDisposable` , `objOne` düzgün şekilde atılamaz:
+
+:::code language="csharp" id="dontdothis" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+> [!TIP]
+> Beklenmeyen davranışa yol açacağından bu kalıbı kullanmaktan kaçının.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

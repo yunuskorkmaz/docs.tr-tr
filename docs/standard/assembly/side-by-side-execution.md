@@ -3,15 +3,15 @@ title: Derlemeler ve yan yana yürütme
 description: Aynı bilgisayarda bir uygulamanın veya bileşenin birden çok sürümünü depolamanıza ve çalıştırabilme özelliği olan yan yana yürütme hakkında bilgi edinin.
 ms.date: 08/20/2019
 helpviewer_keywords:
-- side-by-side execution [.NET Framework]
-- assemblies [.NET Framework], side-by-side execution
+- side-by-side execution [.NET]
+- assemblies [.NET], side-by-side execution
 ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
-ms.openlocfilehash: 74b5710c7e8ad60873fb83a3699ce3992ead6e07
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 7bedd5a384ceace014412eb894adad5c92c00b05
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378637"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687979"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Derlemeler ve yan yana yürütme
 

@@ -1,26 +1,27 @@
 ---
-title: .NET Framework Veri Türleri için Dizeleri Dönüştürme
+title: Dizeleri .NET veri türlerine dönüştürme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: fda5441c58d14b91a9eca16fff9149c8795f95b9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 28c84b04bde045643158d8d2b9fed44b74334e77
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289232"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92688006"
 ---
-# <a name="converting-strings-to-net-framework-data-types"></a>.NET Framework Veri Türleri için Dizeleri Dönüştürme
-Bir dizeyi .NET Framework veri türüne dönüştürmek istiyorsanız, uygulama gereksinimlerine uyan **XmlConvert** yöntemini kullanın. **XmlConvert** sınıfında bulunan tüm dönüştürme yöntemlerinin listesi için bkz <xref:System.Xml.XmlConvert> ..  
+# <a name="convert-strings-to-net-data-types"></a>Dizeleri .NET veri türlerine Dönüştür
+
+Bir dizeyi .NET veri türüne dönüştürmek istiyorsanız, uygulama gereksinimlerine uyan **XmlConvert** yöntemini kullanın. **XmlConvert** sınıfında bulunan tüm dönüştürme yöntemlerinin listesi için bkz <xref:System.Xml.XmlConvert> ..  
   
- **ToString** yönteminden döndürülen dize, geçirilen verilerin dize bir sürümüdür. Ayrıca, **XmlConvert** sınıfını kullanarak dönüştüren birkaç .NET Framework türü vardır ancak **System. Convert** sınıfındaki yöntemleri kullanmaz. **XmlConvert** sınıfı, XML ŞEMASı (xsd) veri türü belirtimini Izler ve **XmlConvert** 'in eşleyebileceğiniz bir veri türüne sahiptir.  
+ **ToString** yönteminden döndürülen dize, geçirilen verilerin dize bir sürümüdür. Buna ek olarak, **XmlConvert** sınıfını kullanarak dönüştüren birkaç .NET türü vardır ancak **System. Convert** sınıfındaki yöntemleri kullanmaz. **XmlConvert** sınıfı, XML ŞEMASı (xsd) veri türü belirtimini Izler ve **XmlConvert** 'in eşleyebileceğiniz bir veri türüne sahiptir.  
   
- Aşağıdaki tabloda .NET Framework veri türleri ve XML şeması (XSD) veri türü eşlemesi kullanılarak döndürülen dize türleri listelenmektedir. Bu .NET Framework türleri **System. Convert**kullanılarak işlenemiyor.  
+ Aşağıdaki tabloda, .NET veri türleri ve XML şeması (XSD) veri türü eşlemesi kullanılarak döndürülen dize türleri listelenmektedir. Bu .NET türleri **System. Convert** kullanılarak işlenemiyor.  
   
-|.NET Framework türü|Döndürülen dize|  
+|.NET türü|Döndürülen dize|  
 |-------------------------|---------------------|  
 |Boole|"true", "false"|  
 |Single. PositiveInfinity|'SI|  
@@ -31,7 +32,7 @@ Bir dizeyi .NET Framework veri türüne dönüştürmek istiyorsanız, uygulama 
 |Timespan|Biçim, `P2Y10M15DT10H30M20S` 2 yıl, 10 ay, 15 gün, 10 saat, 30 dakika ve 20 saniye olmak üzere Pnazmntnhnmns 'dir|  
   
 > [!NOTE]
-> Tabloda listelenen .NET Framework türlerinden herhangi birini **ToString** yöntemini kullanarak bir dizeye dönüştürürseniz, döndürülen dize temel tür değildir, ancak XML ŞEMASı (xsd) dize türüdür.  
+> Tabloda listelenen herhangi bir .NET türünü **ToString** yöntemini kullanarak bir dizeye dönüştürürseniz, döndürülen dize temel tür değildir, ancak XML ŞEMASı (xsd) dize türüdür.  
   
  **DateTime** ve **TimeSpan** değer türü, bir **Tarih** saat içinde anlık bir zaman aralığını temsil ettiğinden, bir **TimeSpan** değeri bir zaman aralığı temsil ettiğinden farklılık gösterir. **DateTime** ve **TIMESPAN** biçimleri, XML şeması (xsd) veri türleri belirtiminde belirtilir. Örneğin:  
   
@@ -69,12 +70,12 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- Ancak, bir dizeyi **Boolean**, **Single**veya **Double**'A dönüştürüyorsanız döndürülen .NET Framework türü, **System. Convert** sınıfı kullanılırken döndürülen türle aynı değildir.  
+ Ancak, bir dizeyi **Boolean** , **Single** veya **Double** 'A dönüştürüyorsanız, döndürülen .NET türü **System. Convert** sınıfı kullanılırken döndürülen türle aynı değildir.  
   
 ## <a name="string-to-boolean"></a>Boole olarak dize  
  Aşağıdaki tabloda, **ToBoolean** yöntemi kullanılarak bir dize **Boole** değerine dönüştürülürken, verilen giriş dizeleri için hangi türün oluşturulduğu gösterilmektedir.  
   
-|Geçerli dize giriş parametresi|.NET Framework çıkış türü|  
+|Geçerli dize giriş parametresi|.NET çıkış türü|  
 |----------------------------------|--------------------------------|  
 |değeri|Boolean. true|  
 |"1"|Boolean. true|  
@@ -90,7 +91,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
 <Boolean>1</Boolean>
 ```  
   
- Her ikisi de aşağıdaki kod tarafından Anlaşılabiliyorsa, **bValue** ise **System. Boolean. true**:  
+ Her ikisi de aşağıdaki kod tarafından Anlaşılabiliyorsa, **bValue** ise **System. Boolean. true** :  
   
 ```vb  
 Dim bvalue As Boolean = _  
@@ -106,7 +107,7 @@ Console.WriteLine(bvalue);
 ## <a name="string-to-single"></a>Dizeden tek  
  Aşağıdaki tabloda, bir dizeyi **ToSingle** yöntemi kullanılarak **tek tek** dönüştürme sırasında verilen giriş dizeleri için oluşturulan tür gösterilmektedir.  
   
-|Geçerli dize giriş parametresi|.NET Framework çıkış türü|  
+|Geçerli dize giriş parametresi|.NET çıkış türü|  
 |----------------------------------|--------------------------------|  
 |'SI|Single. PositiveInfinity|  
 |"-INF"|Tek. NegativeInfinity|  
@@ -114,7 +115,7 @@ Console.WriteLine(bvalue);
 ## <a name="string-to-double"></a>Double için dize  
  Aşağıdaki tabloda, **ToDouble** yöntemi kullanılarak bir dizeyi **tek tek** dönüştürmek için verilen giriş dizeleri için hangi türün oluşturulduğu gösterilmektedir.  
   
-|Geçerli dize giriş parametresi|.NET Framework çıkış türü|  
+|Geçerli dize giriş parametresi|.NET çıkış türü|  
 |----------------------------------|--------------------------------|  
 |'SI|Double. PositiveInfinity|  
 |"-INF"|Double. NegativeInfinity|  
@@ -134,4 +135,4 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML Veri Türlerini Dönüştürme](conversion-of-xml-data-types.md)
-- [.NET Framework Türlerini Dizelere Dönüştürme](converting-dotnet-types-to-strings.md)
+- [.NET türlerini dizelere dönüştürme](converting-dotnet-types-to-strings.md)

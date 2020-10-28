@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 6bbadd05187946cfdc601f9c026d685609251193
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471949"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687569"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework yenilikleri
 
@@ -71,7 +71,7 @@ Bir uygulamanın yardımcı teknoloji kullanıcıları için uygun bir deneyim s
 
 #### <a name="base-classes"></a>Temel sınıflar
 
-**Şifrelemeye göre daha az FIPS etkisi**. .NET Framework önceki sürümlerinde, <xref:System.Security.Cryptography.SHA256Managed> <xref:System.Security.Cryptography.CryptographicException> Sistem şifreleme KITAPLıKLARı "FIPS modunda" yapılandırıldığında bir oluşturma gibi yönetilen şifreleme sağlayıcısı sınıfları. Bu özel durumlar, Sistem şifreleme kitaplıklarının aksine, şifreleme sağlayıcısı sınıflarının yönetilen sürümlerinin FIPS (Federal bilgi Işleme standartları) 140-2 sertifikası olmadığı için oluşturulur. Bazı geliştiricilerin geliştirme makineleri FIPS modunda olduğundan, özel durumlar genellikle üretim sistemlerinde oluşturulur.
+**Şifrelemeye göre daha az FIPS etkisi** . .NET Framework önceki sürümlerinde, <xref:System.Security.Cryptography.SHA256Managed> <xref:System.Security.Cryptography.CryptographicException> Sistem şifreleme KITAPLıKLARı "FIPS modunda" yapılandırıldığında bir oluşturma gibi yönetilen şifreleme sağlayıcısı sınıfları. Bu özel durumlar, Sistem şifreleme kitaplıklarının aksine, şifreleme sağlayıcısı sınıflarının yönetilen sürümlerinin FIPS (Federal bilgi Işleme standartları) 140-2 sertifikası olmadığı için oluşturulur. Bazı geliştiricilerin geliştirme makineleri FIPS modunda olduğundan, özel durumlar genellikle üretim sistemlerinde oluşturulur.
 
 Varsayılan olarak, .NET Framework 4,8 ' i hedefleyen uygulamalarda aşağıdaki yönetilen şifreleme sınıfları artık bu durumda bir oluşturmaz <xref:System.Security.Cryptography.CryptographicException> :
 
@@ -190,11 +190,11 @@ Mixed-Mode yüksek DPı ölçeklendirme desteğini etkinleştirmek için aşağ�
 
 .NET Framework 4,8 ' deki çalışma zamanı aşağıdaki değişiklikleri ve geliştirmeleri içerir:
 
-**JIT derleyicisi geliştirmeleri**. .NET Framework 4,8 ' deki tam zamanında (JıT) derleyici .NET Core 2,1 ' de JıT derleyicisine dayanır. .NET Core 2,1 JıT derleyicisi üzerinde yapılan en iyileştirmelerin ve tüm hata düzeltmelerinin çoğu, .NET Framework 4,8 JıT derleyicisine dahildir.
+**JIT derleyicisi geliştirmeleri** . .NET Framework 4,8 ' deki tam zamanında (JıT) derleyici .NET Core 2,1 ' de JıT derleyicisine dayanır. .NET Core 2,1 JıT derleyicisi üzerinde yapılan en iyileştirmelerin ve tüm hata düzeltmelerinin çoğu, .NET Framework 4,8 JıT derleyicisine dahildir.
 
-**Ngen geliştirmeleri**. Çalışma zamanı, [Yerel Görüntü Oluşturucu](../tools/ngen-exe-native-image-generator.md) (NGen) görüntüleri için bellek yönetimini iyileştirmiştir, bu sayede Ngen görüntülerinden eşlenen verilerin bellekte yerleşik olmaması sağlanır. Bu, yürütülecek belleği değiştirerek bu yüzey alanını rastgele kodu yürütmeye çalışacak saldırılara karşı azaltır.
+**Ngen geliştirmeleri** . Çalışma zamanı, [Yerel Görüntü Oluşturucu](../tools/ngen-exe-native-image-generator.md) (NGen) görüntüleri için bellek yönetimini iyileştirmiştir, bu sayede Ngen görüntülerinden eşlenen verilerin bellekte yerleşik olmaması sağlanır. Bu, yürütülecek belleği değiştirerek bu yüzey alanını rastgele kodu yürütmeye çalışacak saldırılara karşı azaltır.
 
-**Tüm derlemeler Için kötü amaçlı yazılımdan koruma taraması**. Önceki .NET Framework sürümlerinde, çalışma zamanı Windows Defender ya da üçüncü taraf kötü amaçlı yazılımdan koruma yazılımı kullanarak diskten yüklenen tüm derlemeleri tarar. Ancak, yöntemi gibi diğer kaynaklardan yüklenen derlemeler <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> taranmaz ve olası algılanabilecek kötü amaçlı yazılımları içerebilir. Windows 10 ' da çalışan .NET Framework 4,8 ' den itibaren, çalışma zamanı [kötü amaçlı yazılımdan koruma taraması arabirimini (AMSı)](/windows/desktop/AMSI/antimalware-scan-interface-portal)uygulayan kötü amaçlı yazılımdan koruma çözümleri tarafından bir taramayı tetikler
+**Tüm derlemeler Için kötü amaçlı yazılımdan koruma taraması** . Önceki .NET Framework sürümlerinde, çalışma zamanı Windows Defender ya da üçüncü taraf kötü amaçlı yazılımdan koruma yazılımı kullanarak diskten yüklenen tüm derlemeleri tarar. Ancak, yöntemi gibi diğer kaynaklardan yüklenen derlemeler <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> taranmaz ve olası algılanabilecek kötü amaçlı yazılımları içerebilir. Windows 10 ' da çalışan .NET Framework 4,8 ' den itibaren, çalışma zamanı [kötü amaçlı yazılımdan koruma taraması arabirimini (AMSı)](/windows/desktop/AMSI/antimalware-scan-interface-portal)uygulayan kötü amaçlı yazılımdan koruma çözümleri tarafından bir taramayı tetikler
 
 <a name="v472"></a>
 
@@ -353,7 +353,7 @@ Windows API 'Leri kullanarak açma desteği, .NET Framework 4.7.2 ' i hedefleyen
 
 **Ek koleksiyon API 'Leri**
 
-.NET Framework 4.7.2, ve türlerine bir dizi yeni API ekler <xref:System.Collections.Generic.SortedSet%601> <xref:System.Collections.Generic.HashSet%601> . Bu modüller şunlardır:
+.NET Framework 4.7.2, ve türlerine bir dizi yeni API ekler <xref:System.Collections.Generic.SortedSet%601> <xref:System.Collections.Generic.HashSet%601> . Bunlar:
 
 - `TryGetValue` diğer koleksiyon türlerinde kullanılan try modelini bu iki türe genişleten Yöntemler. Yöntemler şunlardır:
 
@@ -696,7 +696,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir işlem hattındaki istekler
 
 GitHub 'da [4,7 .NET Framework şifreleme geliştirmesi örneği](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e) görebilirsiniz.
 
-_*DataContractJsonSerializer tarafından denetim karakterleri Için daha iyi destek**
+_ *DataContractJsonSerializer tarafından denetim karakterleri Için daha iyi destek**
 
 .NET Framework 4,7 ' de, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sınıf ECMAScript 6 standardı ile uyum içindeki denetim karakterlerini seri hale getirir. Bu davranış, .NET Framework 4,7 ' i hedefleyen uygulamalar için varsayılan olarak etkindir ve .NET Framework 4,7 altında çalışan ve .NET Framework önceki bir sürümünü hedefleyen uygulamalar için bir kabul etme özelliğidir. Daha fazla bilgi için [uygulama uyumluluğu](../migration-guide/application-compatibility.md) bölümüne bakın.
 
@@ -706,7 +706,7 @@ _*DataContractJsonSerializer tarafından denetim karakterleri Için daha iyi des
 
 .NET Framework 4,7, ağla ilgili aşağıdaki özelliği ekler:
 
-**TLS protokolleri Için varsayılan işletim sistemi desteği**_
+**TLS protokolleri Için varsayılan işletim sistemi desteği** _
 
 <xref:System.Net.Security.SslStream?displayProperty=nameWithType>Ve http, FTP ve SMTP gibi yukarı yığın bileşenleri tarafından kullanılan TLS yığını, geliştiricilerin işletim sistemi tarafından desteklenen varsayılan TLS protokollerini kullanmasına izin verir. Geliştiricilerin artık bir TLS sürümüne sabit kod olmaması gerekir.
 
@@ -716,15 +716,15 @@ _*DataContractJsonSerializer tarafından denetim karakterleri Için daha iyi des
 
 .NET Framework 4,7 ' de, ASP.NET aşağıdaki yeni özellikleri içerir:
 
-_*Nesne önbelleği genişletilebilirliği**
+_ *Nesne önbelleği genişletilebilirliği**
 
 ASP.NET, .NET Framework 4,7 ' den başlayarak, geliştiricilerin bellek içi nesne önbelleğe alma ve bellek izleme için varsayılan ASP.NET uygulamalarını değiştirmesine izin veren yeni bir API kümesi ekler. ASP.NET uygulamasının yeterli olmaması halinde geliştiriciler artık aşağıdaki üç bileşenden birini değiştirebilir:
 
-- **Nesne önbelleği deposu**. Yeni önbellek sağlayıcıları yapılandırma bölümünü kullanarak, geliştiriciler yeni **ICacheStoreProvider** arabirimini kullanarak bir ASP.NET uygulaması için nesne önbelleğinin yeni uygulamalarını yükleyebilir.
+- **Nesne önbelleği deposu** . Yeni önbellek sağlayıcıları yapılandırma bölümünü kullanarak, geliştiriciler yeni **ICacheStoreProvider** arabirimini kullanarak bir ASP.NET uygulaması için nesne önbelleğinin yeni uygulamalarını yükleyebilir.
 
-- **Bellek izleme**. ASP.NET ' deki varsayılan bellek İzleyicisi, uygulamaları, işlem için yapılandırılmış özel bayt sınırına yakın bir şekilde çalıştığında veya makinenin toplam kullanılabilir fiziksel RAM üzerinde azaldığını bildirir. Bu limitlerin yakınında, bildirimler tetiklenir. Bazı uygulamalar için bildirimler, yararlı yeniden eylemlere izin vermek üzere yapılandırılan sınırlara çok yakın şekilde harekete geçirilir. Geliştiriciler artık özelliğini kullanarak varsayılan değerini değiştirmek için kendi bellek izleyicilerini yazabilir <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> .
+- **Bellek izleme** . ASP.NET ' deki varsayılan bellek İzleyicisi, uygulamaları, işlem için yapılandırılmış özel bayt sınırına yakın bir şekilde çalıştığında veya makinenin toplam kullanılabilir fiziksel RAM üzerinde azaldığını bildirir. Bu limitlerin yakınında, bildirimler tetiklenir. Bazı uygulamalar için bildirimler, yararlı yeniden eylemlere izin vermek üzere yapılandırılan sınırlara çok yakın şekilde harekete geçirilir. Geliştiriciler artık özelliğini kullanarak varsayılan değerini değiştirmek için kendi bellek izleyicilerini yazabilir <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> .
 
-- **Bellek sınırı yeniden eylemleri**. Varsayılan olarak, ASP.NET, nesne önbelleğini kırpmaya çalışır ve <xref:System.GC.Collect%2A?displayProperty=nameWithType> özel bayt işlem sınırı yakınında düzenli olarak çağrı gerçekleştirir. Bazı uygulamalarda, çağrı sıklığı <xref:System.GC.Collect%2A?displayProperty=nameWithType> veya kırpılan önbellek miktarı verimsiz olur. Geliştiriciler artık **ıgözlemci** uygulamalarını uygulamanın bellek izleyicisine abone olarak varsayılan davranışı değiştirebilir veya tamamlayabilir.
+- **Bellek sınırı yeniden eylemleri** . Varsayılan olarak, ASP.NET, nesne önbelleğini kırpmaya çalışır ve <xref:System.GC.Collect%2A?displayProperty=nameWithType> özel bayt işlem sınırı yakınında düzenli olarak çağrı gerçekleştirir. Bazı uygulamalarda, çağrı sıklığı <xref:System.GC.Collect%2A?displayProperty=nameWithType> veya kırpılan önbellek miktarı verimsiz olur. Geliştiriciler artık **ıgözlemci** uygulamalarını uygulamanın bellek izleyicisine abone olarak varsayılan davranışı değiştirebilir veya tamamlayabilir.
 
 <a name="wcf47"></a>
 
@@ -744,10 +744,10 @@ WCF, .NET Framework 4,7 ' den itibaren varsayılan ileti güvenlik protokolü ol
 
 **WCF uygulamalarının ve WCF serileştirmenin güvenilirliği geliştirildi**
 
-WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bu modüller şunlardır:
+WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bunlar:
 
-- **SocketConnection. BeginRead** ve **SocketConnection. Read**çağrılarına zaman uyumsuz ve zaman uyumlu kod karıştırma için daha iyi destek.
-- **Sharedconnectionlistener** ve **DuplexChannelBinder**ile bağlantı iptal edildiğinde iyileştirilmiş güvenilirlik.
+- **SocketConnection. BeginRead** ve **SocketConnection. Read** çağrılarına zaman uyumsuz ve zaman uyumlu kod karıştırma için daha iyi destek.
+- **Sharedconnectionlistener** ve **DuplexChannelBinder** ile bağlantı iptal edildiğinde iyileştirilmiş güvenilirlik.
 - Yöntemi çağırırken serileştirme işlemlerinin güvenilirliği geliştirildi <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=nameWithType> .
 - **Channeleşitleyici. removewaiter** yöntemi çağırarak bir garson kaldırılırken güvenilirlik artırıldı.
 
@@ -819,7 +819,7 @@ Veri ek açıklama Doğrulayıcıları bir sınıf özelliğine bir veya daha fa
 
 2. Kaynak dosyası App_LocalResources klasöründe depolanır.
 
-3. Yerelleştirilmiş kaynaklar dosyasının adı `DataAnnotation.Localization.{` *name* `}.resx` , *adı* *languageCode* `-` *Country/RegionCode* veya *languageCode*biçiminde bir kültür adı olduğunda, form adına sahiptir.
+3. Yerelleştirilmiş kaynaklar dosyasının adı `DataAnnotation.Localization.{` *name* `}.resx` , *adı* *languageCode* `-` *Country/RegionCode* veya *languageCode* biçiminde bir kültür adı olduğunda, form adına sahiptir.
 
 4. Kaynağın anahtar adı özniteliğe atanan dizedir <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> ve değeri yerelleştirilmiş hata iletisidir.
 
@@ -1585,9 +1585,9 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
     Bir kitaplık tarafından kullanıma sunulan resmi bir sözleşme olduklarından, anahtarlar için tutarlı bir biçim kullanmak faydalıdır. Aşağıda iki belirgin biçim verilmiştir.
 
-    - *Anahtar*. *ad alanı*. *SwitchName*
+    - *Anahtar* . *ad alanı* . *SwitchName*
 
-    - *Anahtar*. *kitaplığı*. *SwitchName*
+    - *Anahtar* . *kitaplığı* . *SwitchName*
 
   - **Görev tabanlı zaman uyumsuz düzende yapılan değişiklikler (TAP)**
 
@@ -1710,7 +1710,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
   <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
   ```
 
-  Varsayılan değer: `false`.
+  `false` varsayılan değerdir.
 
 - **Ağ**
 
@@ -1843,7 +1843,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 ## <a name="whats-new-in-net-framework-451"></a>.NET Framework 4.5.1 yenilikleri
 
-**Nisan 2014 güncelleştirmeleri**:
+**Nisan 2014 güncelleştirmeleri** :
 
 - [Visual Studio 2013 güncelleştirme 2](https://go.microsoft.com/fwlink/p/?LinkId=393658) , bu senaryoları desteklemek Için taşınabilir sınıf kitaplığı şablonlarına yönelik güncelleştirmeleri içerir:
 
@@ -1855,7 +1855,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - Bir Windows Mağazası veya Windows Phone depolama sınıfı kitaplığını taşınabilir bir sınıf kitaplığı gibi yeniden hedefleyebilirsiniz.
 
-  Bu değişiklikler hakkında daha fazla bilgi için bkz. [taşınabilir sınıf kitaplığı](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+  Bu değişiklikler hakkında daha fazla bilgi için bkz. [taşınabilir sınıf kitaplığı](../cross-platform/portable-class-library.md).
 
 - .NET Framework içerik kümesi artık, Windows uygulamaları oluşturmaya ve dağıtmaya yönelik bir ön derleme teknolojisi olan .NET Native belgelerini içerir. .NET Native uygulamalarınızı, daha iyi performans için, ara dil (IL) yerine yerel koda doğrudan derler. Ayrıntılar için bkz. [.NET Native uygulamalar derleme](../net-native/index.md).
 
@@ -2081,7 +2081,7 @@ Daha fazla bilgi için bkz. [Windows Communication Foundation](../wcf/whats-new.
 
 - Aşağıdakiler gibi gelişmiş İş Akışı Tasarımcısı Özellikler:
 
-  - Visual Studio 'da **hızlı bul** ve **dosyalardaki bul**dahil olmak üzere gelişmiş iş akışı arama özellikleri.
+  - Visual Studio 'da **hızlı bul** ve **dosyalardaki bul** dahil olmak üzere gelişmiş iş akışı arama özellikleri.
 
   - Bir kapsayıcı etkinliğine ikinci bir alt etkinlik eklendiğinde ve her iki etkinliği de sıralı etkinliğe dahil etmek için otomatik olarak bir dizi etkinliği oluşturma özelliği.
 
@@ -2125,13 +2125,12 @@ Windows 8. x Mağazası uygulamaları belirli form faktörleri için tasarlanmı
 
 ### <a name="portable-class-libraries"></a>Taşınabilir sınıf kitaplıkları <a name="portable"></a>
 
-Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitaplığı projesi, birden çok .NET Framework platformda çalışan yönetilen derlemeler yazmanızı ve oluşturmanızı sağlar. Taşınabilir bir sınıf kitaplığı projesi kullanarak, hedeflenecek platformları (Windows Phone ve Windows 8. x Mağazası uygulamaları için .NET) seçersiniz. Projenizdeki kullanılabilir türler ve Üyeler, bu platformlar genelinde ortak türler ve üyelerle otomatik olarak kısıtlıdır. Daha fazla bilgi için bkz. [taşınabilir sınıf kitaplığı](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitaplığı projesi, birden çok .NET Framework platformda çalışan yönetilen derlemeler yazmanızı ve oluşturmanızı sağlar. Taşınabilir bir sınıf kitaplığı projesi kullanarak, hedeflenecek platformları (Windows Phone ve Windows 8. x Mağazası uygulamaları için .NET) seçersiniz. Projenizdeki kullanılabilir türler ve Üyeler, bu platformlar genelinde ortak türler ve üyelerle otomatik olarak kısıtlıdır. Daha fazla bilgi için bkz. [taşınabilir sınıf kitaplığı](../cross-platform/portable-class-library.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Framework ve Bant Dışı Yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework erişilebilirlik yenilikleri](whats-new-in-accessibility.md)
-- [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
 - [Visual Studio 2019 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio 'da C++ yenilikleri](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

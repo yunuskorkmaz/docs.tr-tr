@@ -1,5 +1,5 @@
 ---
-title: .NET Framework'te Tür Dönüştürme
+title: .NET içinde Tür Dönüştürme
 description: .NET ' te tür dönüştürmesi hakkında bilgi edinmek için, eski türün değerine denk gelen yeni bir tür değeri oluşturur, ancak özgün kimliğini saklayamayabilir.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -23,19 +23,20 @@ helpviewer_keywords:
 - Convert class
 - implicit conversions
 - Implicit operator
-- data types [.NET Framework], converting
+- data types [.NET], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 11345081610459dbf053d846aa04369301010732
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4f7e4400aa15532b04fd4e39219775af34068685
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769229"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687537"
 ---
-# <a name="type-conversion-in-the-net-framework"></a>.NET Framework'te Tür Dönüştürme
+# <a name="type-conversion-in-net"></a>.NET içinde tür dönüştürme
+
 Her değerin, değere ayrılan alan miktarı, sahip olduğu olası değer aralığı ve kullanılabilir olduğu Üyeler gibi öznitelikleri tanımlayan ilişkili bir türü vardır. Birçok değer, tek bir türden fazlası olarak ifade edilebilir. Örneğin, 4 değeri bir tamsayı olarak veya bir kayan nokta değeri olarak ifade edilebilir. Tür dönüştürme, eski bir türün değerine eşit olan, yeni türde bir değer oluşturur, fakat özgün nesnenin kimliğini (veya tam değerini) koruması gerekmez.  
   
- .NET Framework, aşağıdaki dönüştürmeleri otomatik olarak destekler:  
+.NET otomatik olarak aşağıdaki dönüştürmeleri destekler:  
   
 - Türetilmiş bir sınıftan temel sınıfa dönüştürme. Bu, örneğin, herhangi bir sınıf veya yapının bir örneğinin örneğe dönüştürülebileceği anlamına gelir <xref:System.Object> .  Bu dönüştürme bir atama veya dönüştürme işleci gerektirmez.  
   
@@ -45,20 +46,21 @@ Her değerin, değere ayrılan alan miktarı, sahip olduğu olası değer aralı
   
 - Arabirim nesnesinden bu arabirimi uygulayan özgün türe dönüştürme.  C# dilinde, bu dönüştürme bir atama işleci gerektirir. Visual Basic, açık ise işleci gerektirir `CType` `Option Strict` .  
   
- Bu otomatik Dönüştürmelere ek olarak .NET Framework, özel tür dönüştürmeyi destekleyen çeşitli özellikler sağlar. Bunlar aşağıdakileri içerir:  
+Bu otomatik Dönüştürmelere ek olarak, .NET özel tür dönüştürmeyi destekleyen çeşitli özellikler sağlar. Buna aşağıdakiler dahildir:  
   
 - `Implicit`Türler arasında kullanılabilir genişletme dönüştürmelerini tanımlayan işleç. Daha fazla bilgi için [örtük operatör ile örtük dönüştürme](#implicit-conversion-with-the-implicit-operator) bölümüne bakın.  
   
 - `Explicit`Türler arasında kullanılabilir daraltma dönüştürmelerini tanımlayan işleç. Daha fazla bilgi için [Açık operatör Ile açık dönüştürme](#explicit-conversion-with-the-explicit-operator) bölümüne bakın.  
   
-- <xref:System.IConvertible>Temel .NET Framework veri türlerinin her birine dönüşümler tanımlayan arabirim. Daha fazla bilgi için, bkz. [ıverli arabirim](#the-iconvertible-interface) bölümü.  
+- <xref:System.IConvertible>Temel .NET veri türlerinin her birine dönüştürmeleri tanımlayan arabirim. Daha fazla bilgi için, bkz. [ıverli arabirim](#the-iconvertible-interface) bölümü.  
   
 - <xref:System.Convert>Arabirimindeki yöntemleri uygulayan bir yöntemler kümesi sağlayan sınıfı <xref:System.IConvertible> . Daha fazla bilgi için [Convert Class](#the-convert-class) bölümüne bakın.  
   
 - <xref:System.ComponentModel.TypeConverter>Belirtilen bir türün başka bir türe dönüştürülmesini desteklemek için genişletilebilen bir temel sınıf olan sınıf. Daha fazla bilgi için [TypeConverter sınıfı](#the-typeconverter-class) bölümüne bakın.  
 
-## <a name="implicit-conversion-with-the-implicit-operator"></a>Örtülü İşleçle Örtülü Dönüştürme  
- Genişletme dönüştürmeleri, varolan bir türün değerinden, hedef türe göre daha kısıtlayıcı bir aralığı veya daha kısıtlayıcı bir üye listesi olan yeni bir değer oluşturmayı gerektirir. Genişletme dönüştürmeleri, (kesinlik kaybıyla sonuçlanabilir olsalar da) veri kaybıyla sonuçlanmaz. Veriler kaybedilemeyeceğinden, derleyiciler, açık bir dönüştürme yöntemi veya bir yayın işleci kullanılmadan, dönüştürmeyi örtülü olarak veya saydam olarak işleyebilir.  
+## <a name="implicit-conversion-with-the-implicit-operator"></a>Örtülü işleç ile örtük dönüştürme
+
+Genişletme dönüştürmeleri, varolan bir türün değerinden, hedef türe göre daha kısıtlayıcı bir aralığı veya daha kısıtlayıcı bir üye listesi olan yeni bir değer oluşturmayı gerektirir. Genişletme dönüştürmeleri, (kesinlik kaybıyla sonuçlanabilir olsalar da) veri kaybıyla sonuçlanmaz. Veriler kaybedilemeyeceğinden, derleyiciler, açık bir dönüştürme yöntemi veya bir yayın işleci kullanılmadan, dönüştürmeyi örtülü olarak veya saydam olarak işleyebilir.  
   
 > [!NOTE]
 > Örtülü bir dönüştürme uygulayan kod bir dönüştürme yöntemi çağırabilir veya bir yayımlama işleci kullanabilir olsa da, örtülü dönüştürmeleri destekleyen derleyiciler tarafından kullanılmaları gerekmez.  
@@ -78,8 +80,9 @@ Her değerin, değere ayrılan alan miktarı, sahip olduğu olası değer aralı
  [!code-csharp[Conceptual.Conversion#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/implicit1.cs#3)]
  [!code-vb[Conceptual.Conversion#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/implicit1.vb#3)]  
 
-## <a name="explicit-conversion-with-the-explicit-operator"></a>Açık İşleçli Açık Dönüştürme  
- Dönüştürmeleri daraltma, hedef türden daha geniş bir aralığa veya daha büyük bir üye listesine sahip olan varolan bir türün değerinden yeni bir değer oluşturulmasını gerektirir. Bir daraltma dönüşümü veri kaybıyla sonuçlanabildiğinden, derleyiciler genellikle dönüştürmenin bir dönüştürme yöntemine veya bir yayımlama işlecine yapılan bir çağrı yoluyla açık hale getirilmesini gerektirir. Yani, dönüştürmenin, geliştirici kodunda açıkça işlenmesi gerekir.  
+## <a name="explicit-conversion-with-the-explicit-operator"></a>Açık işleçle açık dönüştürme
+
+Dönüştürmeleri daraltma, hedef türden daha geniş bir aralığa veya daha büyük bir üye listesine sahip olan varolan bir türün değerinden yeni bir değer oluşturulmasını gerektirir. Bir daraltma dönüşümü veri kaybıyla sonuçlanabildiğinden, derleyiciler genellikle dönüştürmenin bir dönüştürme yöntemine veya bir yayımlama işlecine yapılan bir çağrı yoluyla açık hale getirilmesini gerektirir. Yani, dönüştürmenin, geliştirici kodunda açıkça işlenmesi gerekir.  
   
 > [!NOTE]
 > Daraltma dönüştürmeleri için bir dönüştürme yöntemi veya atama işleci gerektirmesinin ana amacı, geliştiricinin veri kaybı olasılığını veya bir <xref:System.OverflowException> şekilde kod içinde işlenebilmesini sağlayacak şekilde haberdar hale getirme yöntemidir. Ancak, bazı derleyiciler bu gereksinimi ılımlı hale getirebilir. Örneğin, Visual Basic, `Option Strict` kapalıysa (varsayılan ayarı), Visual Basic derleyici, daraltma dönüşümlerini örtülü olarak gerçekleştirmeye çalışır.  
@@ -88,16 +91,16 @@ Her değerin, değere ayrılan alan miktarı, sahip olduğu olası değer aralı
   
 |Tür|Int32 aralığıyla karşılaştırma|  
 |----------|------------------------------------|  
-|<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType>büyüktür ve küçüktür <xref:System.Int32.MaxValue?displayProperty=nameWithType> (değerinden daha <xref:System.Int64.MinValue?displayProperty=nameWithType> büyük bir negatif aralığa sahiptir) <xref:System.Int32.MinValue?displayProperty=nameWithType> .|  
-|<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType>Şundan büyüktür <xref:System.Int32.MaxValue?displayProperty=nameWithType> .|  
-|<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType>Şundan büyüktür <xref:System.Int32.MaxValue?displayProperty=nameWithType> .|  
+|<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType> büyüktür ve küçüktür <xref:System.Int32.MaxValue?displayProperty=nameWithType> (değerinden daha <xref:System.Int64.MinValue?displayProperty=nameWithType> büyük bir negatif aralığa sahiptir) <xref:System.Int32.MinValue?displayProperty=nameWithType> .|  
+|<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> Şundan büyüktür <xref:System.Int32.MaxValue?displayProperty=nameWithType> .|  
+|<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> Şundan büyüktür <xref:System.Int32.MaxValue?displayProperty=nameWithType> .|  
   
- Bu tür daraltma dönüşümlerini işlemek için .NET Framework, türlerin bir işleç tanımlamasına olanak tanır `Explicit` . Tek tek dil derleyicileri, bu işleci kendi söz dizimini kullanarak uygulayabilir ya da <xref:System.Convert> Dönüştürmeyi gerçekleştirmek için sınıfının bir üyesi çağrılabilir. (Sınıf hakkında daha fazla bilgi için <xref:System.Convert> Bu konunun ilerleyen kısımlarında bulunan [Convert sınıfı](#the-convert-class) bölümüne bakın.) Aşağıdaki örnek, bu potansiyel olarak Aralık dışı tamsayı değerlerinin değerlere açıkça dönüştürülmesini işlemek için dil özelliklerinin kullanımını gösterir <xref:System.Int32> .  
+ Bu tür daraltma dönüştürmelerini işlemek için, .NET türlerin bir işleç tanımlamasına izin verir `Explicit` . Tek tek dil derleyicileri, bu işleci kendi söz dizimini kullanarak uygulayabilir ya da <xref:System.Convert> Dönüştürmeyi gerçekleştirmek için sınıfının bir üyesi çağrılabilir. (Sınıf hakkında daha fazla bilgi için <xref:System.Convert> Bu konunun ilerleyen kısımlarında bulunan [Convert sınıfı](#the-convert-class) bölümüne bakın.) Aşağıdaki örnek, bu potansiyel olarak Aralık dışı tamsayı değerlerinin değerlere açıkça dönüştürülmesini işlemek için dil özelliklerinin kullanımını gösterir <xref:System.Int32> .  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
   
- Açık dönüştürmeler farklı dillerde farklı sonuçlar üretebilir ve bu sonuçlar karşılık gelen yöntemin döndürdüğü değerden farklı olabilir <xref:System.Convert> . Örneğin, <xref:System.Double> 12,63251 değeri bir öğesine dönüştürülürse <xref:System.Int32> , hem Visual Basic yöntemi hem de `CInt` .NET Framework <xref:System.Convert.ToInt32%28System.Double%29?displayProperty=nameWithType> yöntemi <xref:System.Double> 13 değerini döndürmek için ' i yuvarlar, ancak C# `(int)` işleci, <xref:System.Double> 12 değerini döndürmek için öğesini keser. Benzer şekilde, C# `(int)` Işleci Boolean-tamsayı dönüştürmeyi desteklemez, ancak Visual Basic `CInt` yöntemi değerini `true` -1 ' e dönüştürür. Diğer taraftan, <xref:System.Convert.ToInt32%28System.Boolean%29?displayProperty=nameWithType> yöntemi değerini `true` 1 olarak dönüştürür.  
+ Açık dönüştürmeler farklı dillerde farklı sonuçlar üretebilir ve bu sonuçlar karşılık gelen yöntemin döndürdüğü değerden farklı olabilir <xref:System.Convert> . Örneğin, <xref:System.Double> 12,63251 değeri bir öğesine dönüştürülürse <xref:System.Int32> , hem Visual Basic `CInt` yöntemi hem de .net <xref:System.Convert.ToInt32%28System.Double%29?displayProperty=nameWithType> yöntemi <xref:System.Double> 13 değerini döndürmek için öğesini yuvarlar, ancak C# `(int)` işleci, <xref:System.Double> 12 değerini döndürmek için öğesini keser. Benzer şekilde, C# `(int)` Işleci Boolean-tamsayı dönüştürmeyi desteklemez, ancak Visual Basic `CInt` yöntemi değerini `true` -1 ' e dönüştürür. Diğer taraftan, <xref:System.Convert.ToInt32%28System.Boolean%29?displayProperty=nameWithType> yöntemi değerini `true` 1 olarak dönüştürür.  
   
  Derleyicilerin çoğu, açık dönüştürmelerin denetlenen veya denetlenmeyen bir şekilde yapılmasına olanak tanır. Denetlenen bir dönüştürme gerçekleştirildiğinde, <xref:System.OverflowException> dönüştürülecek türün değeri hedef türü aralığının dışında olduğunda bir atılır. Aynı koşullarda denetlenmeyen bir dönüştürme yapıldığında, dönüştürme bir özel durum oluşturmayabilir, fakat davranış tam olarak tanımsız hale gelir ve sonuç olarak hatalı bir değer oluşabilir.  
   
@@ -118,8 +121,9 @@ Her değerin, değere ayrılan alan miktarı, sahip olduğu olası değer aralı
  [!code-csharp[Conceptual.Conversion#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#6)]
  [!code-vb[Conceptual.Conversion#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#6)]  
 
-## <a name="the-iconvertible-interface"></a>IConvertible Arabirimi  
- Herhangi bir türün ortak dil çalışma zamanı temel türüne dönüştürülmesini desteklemek için .NET Framework <xref:System.IConvertible> arabirimi sağlar. Uygulama türünün aşağıdakileri sağlaması gerekir:  
+## <a name="the-iconvertible-interface"></a>Iverli arabirimi
+
+Herhangi bir türün ortak dil çalışma zamanı temel türüne dönüştürülmesini desteklemek için, .NET <xref:System.IConvertible> arabirimi sağlar. Uygulama türünün aşağıdakileri sağlaması gerekir:  
   
 - Uygulama türünün değerini döndüren bir yöntem <xref:System.TypeCode> .  
   
@@ -127,7 +131,7 @@ Her değerin, değere ayrılan alan miktarı, sahip olduğu olası değer aralı
   
 - Uygulama türünün bir örneğini başka bir belirtilen türe dönüştürmek için genelleştirilmiş bir dönüştürme yöntemi. Desteklenmeyen dönüştürmeler bir oluşturması gerekir <xref:System.InvalidCastException> .  
   
- Her ortak dil çalışma zamanı temel türü (yani,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, <xref:System.Boolean> <xref:System.Byte> <xref:System.Char> <xref:System.DateTime> <xref:System.Decimal> <xref:System.Double> <xref:System.Int16> <xref:System.Int32> <xref:System.Int64> <xref:System.SByte> <xref:System.Single> <xref:System.String> <xref:System.UInt16> <xref:System.UInt32> ve <xref:System.UInt64> ), <xref:System.DBNull> ve <xref:System.Enum> türleri <xref:System.IConvertible> Ancak bunlar açık arabirim uygulamalarıdır; <xref:System.IConvertible>Aşağıdaki örnekte gösterildiği gibi, dönüştürme yöntemi yalnızca bir arabirim değişkeni üzerinden çağrılabilir. Bu örnek, bir <xref:System.Int32> değeri eşdeğer değerine dönüştürür <xref:System.Char> .  
+ Her ortak dil çalışma zamanı temel türü (yani,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, <xref:System.Boolean> <xref:System.Byte> <xref:System.Char> <xref:System.DateTime> <xref:System.Decimal> <xref:System.Double> <xref:System.Int16> <xref:System.Int32> <xref:System.Int64> <xref:System.SByte> <xref:System.Single> <xref:System.String> <xref:System.UInt16> <xref:System.UInt32> ve <xref:System.UInt64> ), <xref:System.DBNull> ve <xref:System.Enum> türleri <xref:System.IConvertible> Ancak bunlar açık arabirim uygulamalarıdır; <xref:System.IConvertible> Aşağıdaki örnekte gösterildiği gibi, dönüştürme yöntemi yalnızca bir arabirim değişkeni üzerinden çağrılabilir. Bu örnek, bir <xref:System.Int32> değeri eşdeğer değerine dönüştürür <xref:System.Char> .  
   
  [!code-csharp[Conceptual.Conversion#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible1.cs#7)]
  [!code-vb[Conceptual.Conversion#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible1.vb#7)]  
@@ -135,20 +139,22 @@ Her değerin, değere ayrılan alan miktarı, sahip olduğu olası değer aralı
  Dönüştürme yöntemini, uygulama türünde değil, kendi arabiriminde çağırma gereksinimi, açık arabirim uygulamalarını görece pahalılaştırır. Bunun yerine, <xref:System.Convert> ortak dil çalışma zamanı temel türleri arasında dönüştürme yapmak için sınıfının uygun üyesini çağırmanız önerilir. Daha fazla bilgi için [Convert sınıfının](#the-convert-class)sonraki bölümüne bakın.  
   
 > [!NOTE]
-> <xref:System.IConvertible>Arabirime ve <xref:System.Convert> .NET Framework tarafından sunulan sınıfa ek olarak, tek tek diller dönüştürmeleri gerçekleştirmek için de yollar verebilir. Örneğin, C# atama işleçlerini kullanır; Visual Basic, ve gibi derleyici tarafından uygulanan dönüştürme işlevlerini `CType` kullanır `CInt` `DirectCast` .  
+> <xref:System.IConvertible> <xref:System.Convert> .NET tarafından sunulan arabirime ve sınıfa ek olarak, tek tek diller dönüştürmeleri gerçekleştirmek için de yollar verebilir. Örneğin, C# atama işleçlerini kullanır; Visual Basic, ve gibi derleyici tarafından uygulanan dönüştürme işlevlerini `CType` kullanır `CInt` `DirectCast` .  
   
- Çoğu bölüm için <xref:System.IConvertible> arabirim, .NET Framework temel türler arasında dönüştürmeyi destekleyecek şekilde tasarlanmıştır. Ancak, arabirim, o türün diğer özel türlere dönüştürülmesini desteklemek için özel bir tür tarafından da uygulanabilir. Daha fazla bilgi için, bu konunun ilerleyen bölümlerindeki [ChangeType yöntemiyle özel dönüştürmeler](#custom-conversions-with-the-changetype-method) bölümüne bakın.
+ Çoğu bölüm için, <xref:System.IConvertible> arabirim .net 'teki temel türler arasında dönüştürmeyi destekleyecek şekilde tasarlanmıştır. Ancak, arabirim, o türün diğer özel türlere dönüştürülmesini desteklemek için özel bir tür tarafından da uygulanabilir. Daha fazla bilgi için, bu konunun ilerleyen bölümlerindeki [ChangeType yöntemiyle özel dönüştürmeler](#custom-conversions-with-the-changetype-method) bölümüne bakın.
 
-## <a name="the-convert-class"></a>Dönüştürme Sınıfı
- Her temel türün <xref:System.IConvertible> arabirim uygulamasının tür dönüştürmesi gerçekleştirmek için çağrılabilir olmasına karşın, sınıfının yöntemlerini çağırmak, <xref:System.Convert?displayProperty=nameWithType> bir temel türden diğerine dönüştürmek için önerilen dilden bağımsız bir yoldur. Ayrıca, <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> yöntemi belirtilen özel bir türden başka bir türe dönüştürmek için de kullanılabilir.  
+## <a name="the-convert-class"></a>Convert sınıfı
+
+Her temel türün <xref:System.IConvertible> arabirim uygulamasının tür dönüştürmesi gerçekleştirmek için çağrılabilir olmasına karşın, sınıfının yöntemlerini çağırmak, <xref:System.Convert?displayProperty=nameWithType> bir temel türden diğerine dönüştürmek için önerilen dilden bağımsız bir yoldur. Ayrıca, <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> yöntemi belirtilen özel bir türden başka bir türe dönüştürmek için de kullanılabilir.  
   
-### <a name="conversions-between-base-types"></a>Temel Türler Arasında Dönüştürme  
- <xref:System.Convert>Sınıfı, temel türler arasında dönüştürmeler gerçekleştirmek için dilden bağımsız bir yol sağlar ve ortak dil çalışma zamanını hedefleyen tüm dillerde kullanılabilir. Her iki genişletme ve daraltma dönüştürmesi için bir yöntem kümesi sağlar ve <xref:System.InvalidCastException> Desteklenmeyen dönüşümler (örneğin bir <xref:System.DateTime> değeri bir tamsayı değerine dönüştürme) oluşturur. Daraltma dönüştürmeleri işaretlenmiş bir bağlamda gerçekleştirilir ve <xref:System.OverflowException> dönüştürme başarısız olursa bir oluşturulur.  
+### <a name="conversions-between-base-types"></a>Taban türleri arasındaki dönüşümler
+
+<xref:System.Convert>Sınıfı, temel türler arasında dönüştürmeler gerçekleştirmek için dilden bağımsız bir yol sağlar ve ortak dil çalışma zamanını hedefleyen tüm dillerde kullanılabilir. Her iki genişletme ve daraltma dönüştürmesi için bir yöntem kümesi sağlar ve <xref:System.InvalidCastException> Desteklenmeyen dönüşümler (örneğin bir <xref:System.DateTime> değeri bir tamsayı değerine dönüştürme) oluşturur. Daraltma dönüştürmeleri işaretlenmiş bir bağlamda gerçekleştirilir ve <xref:System.OverflowException> dönüştürme başarısız olursa bir oluşturulur.  
   
 > [!IMPORTANT]
 > <xref:System.Convert>Sınıfı her temel türe ve bu türden dönüştürülecek Yöntemler içerdiğinden, her temel türün açık arabirim uygulamasını çağırma gereksinimini ortadan kaldırır <xref:System.IConvertible> .  
   
- Aşağıdaki örnek, <xref:System.Convert?displayProperty=nameWithType> .NET Framework temel türleri arasında birkaç genişletme ve daraltma dönüştürmesi gerçekleştirmek için sınıfının kullanımını gösterir.  
+ Aşağıdaki örnek, <xref:System.Convert?displayProperty=nameWithType> .net temel türleri arasında birkaç genişletme ve daraltma dönüştürmesi gerçekleştirmek için sınıfının kullanımını gösterir.  
   
  [!code-csharp[Conceptual.Conversion#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#8)]
  [!code-vb[Conceptual.Conversion#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#8)]  
@@ -160,8 +166,9 @@ Her değerin, değere ayrılan alan miktarı, sahip olduğu olası değer aralı
   
  Sınıfı tarafından desteklenen genişleyen ve daraltma dönüştürmelerini listeleyen bir tablo için <xref:System.Convert> bkz. [tür dönüştürme tabloları](conversion-tables.md).  
 
-### <a name="custom-conversions-with-the-changetype-method"></a>ChangeType Yöntemiyle Özel Dönüştürmeler  
- Temel türlerin her birine Dönüştürmelere ek olarak, <xref:System.Convert> sınıfı özel bir türü bir veya daha fazla önceden tanımlanmış türe dönüştürmek için kullanılabilir. Bu dönüştürme yöntemi tarafından gerçekleştirilir ve bu, sırayla <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> parametresinin yöntemine bir çağrı sarar <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> `value` . Bu, parametresi tarafından temsil edilen nesnenin `value` arabirimin bir uygulamasını sağlaması gerektiği anlamına gelir <xref:System.IConvertible> .  
+### <a name="custom-conversions-with-the-changetype-method"></a>ChangeType yöntemiyle özel dönüştürmeler
+
+Temel türlerin her birine Dönüştürmelere ek olarak, <xref:System.Convert> sınıfı özel bir türü bir veya daha fazla önceden tanımlanmış türe dönüştürmek için kullanılabilir. Bu dönüştürme yöntemi tarafından gerçekleştirilir ve bu, sırayla <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> parametresinin yöntemine bir çağrı sarar <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> `value` . Bu, parametresi tarafından temsil edilen nesnenin `value` arabirimin bir uygulamasını sağlaması gerektiği anlamına gelir <xref:System.IConvertible> .  
   
 > [!NOTE]
 > <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType>Ve <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> yöntemleri <xref:System.Type> dönüştürülecek hedef türü belirtmek için bir nesnesi kullandığından `value` , türü derleme zamanında bilinmeyen bir nesneye dinamik dönüştürme gerçekleştirmek için kullanılabilirler. Ancak uygulamasının <xref:System.IConvertible> uygulamanın `value` bu dönüştürmeyi hala desteklemesi gerektiğini unutmayın.  
@@ -176,8 +183,9 @@ Her değerin, değere ayrılan alan miktarı, sahip olduğu olası değer aralı
  [!code-csharp[Conceptual.Conversion#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible2.cs#11)]
  [!code-vb[Conceptual.Conversion#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible2.vb#11)]  
 
-## <a name="the-typeconverter-class"></a>TypeConverter Sınıfı  
- .NET Framework Ayrıca, <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> sınıfı genişleterek ve tür dönüştürücüsünü bir öznitelik aracılığıyla türle ilişkilendirerek özel bir tür için tür dönüştürücüsü tanımlamanızı da sağlar <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType> . Aşağıdaki tabloda, bu yaklaşım arasındaki farklar vurgulanmıştır ve <xref:System.IConvertible> özel bir tür için arabirim uygulama.  
+## <a name="the-typeconverter-class"></a>TypeConverter sınıfı
+
+.NET ayrıca, <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType> sınıfı genişleterek ve tür dönüştürücüsünü bir öznitelik aracılığıyla türle ilişkilendirerek özel bir tür için tür dönüştürücüsü tanımlamanızı sağlar <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType> . Aşağıdaki tabloda, bu yaklaşım arasındaki farklar vurgulanmıştır ve <xref:System.IConvertible> özel bir tür için arabirim uygulama.  
   
 > [!NOTE]
 > Tasarım zamanı desteği, yalnızca kendisi için tanımlanmış bir tür dönüştürücüsü varsa, özel bir tür için sağlanabilir.  
