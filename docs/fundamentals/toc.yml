@@ -1524,6 +1524,8 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
       - name: Anonim ile demet türleri arasında seçim yapma
         href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+      - name: Konsol uygulaması kavramları
+        href: ../standard/building-console-apps.md
   - name: Bağımlılık ekleme
     items:
       - name: Genel Bakış
