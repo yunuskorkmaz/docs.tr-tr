@@ -3,12 +3,12 @@ title: .NET Framework’ten .NET Core’a taşıma
 description: Bir .NET Framework projesi .NET Core 'a taşıma konusunda yararlı bulabileceğiniz yardım alabileceğiniz işlem ve bulma araçlarını anlayın.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 74fe4519e41a07bc78a4dc346f8d1b52b5c7d092
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c206e56e095d1ca068fa2aa6f60e891895f7f999
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502775"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888580"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework .NET Core 'a taşıma ile genel bakış
 
@@ -49,13 +49,13 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
 1. `packages.config` [Visual Studio 'daki Dönüştürme aracıyla](/nuget/consume-packages/migrate-packages-config-to-package-reference)tüm bağımlılıklarınızı [packagereference](/nuget/consume-packages/package-references-in-project-files) biçimine dönüştürün.
 
-   Bu adım, bağımlılıklarınızı eski biçimden dönüştürmeyi içerir `packages.config` . `packages.config`, .NET Core üzerinde çalışmaz, bu nedenle paket bağımlılıklarınız varsa bu dönüştürme gereklidir. Ayrıca, yalnızca bir projede doğrudan kullandığınız bağımlılıklara gerek duyar, bu da daha sonra yönetmeniz gereken bağımlılıkların sayısını azaltarak daha sonra daha kolay bir hale getirir.
+   Bu adım, bağımlılıklarınızı eski biçimden dönüştürmeyi içerir `packages.config` . `packages.config` , .NET Core üzerinde çalışmaz, bu nedenle paket bağımlılıklarınız varsa bu dönüştürme gereklidir. Ayrıca, yalnızca bir projede doğrudan kullandığınız bağımlılıklara gerek duyar, bu da daha sonra yönetmeniz gereken bağımlılıkların sayısını azaltarak daha sonra daha kolay bir hale getirir.
 
 1. Proje dosyanızı yeni SDK stili dosya yapısına dönüştürün. .NET Core için yeni projeler oluşturabilir ve kaynak dosyaları üzerine kopyalayabilir ya da mevcut proje dosyanızı bir araçla dönüştürmeyi deneyebilirsiniz.
 
    .NET Core .NET Framework göre Basitleştirilmiş (ve farklı) bir [Proje dosyası biçimi](../tools/csproj.md) kullanır. Devam etmek için proje dosyalarınızı bu biçime dönüştürmeniz gerekir. Bu proje stili, bu noktada yine de hedeflemek istediğiniz .NET Framework de hedeflemesini sağlar.
 
-   En küçük çözüm veya tek bir işlemde, [DotNet TRY-Convert](https://github.com/dotnet/try-convert) aracı Ile .NET Core proje dosyası biçimine bir işlem üzerinden bağlantı kurmayı deneyebilirsiniz. `dotnet try-convert`Tüm projeleriniz için çalışma garantisi verilmez ve bağımlı olduğunuz davranışta hafif değişikliklere neden olabilir. Otomatikleştirilmiş olabilecek temel şeyleri otomatikleştiren bir _Başlangıç noktası_ olarak kullanın. SDK stil projeleri tarafından kullanılan hedeflerde eski stil projesi dosyalarıyla karşılaştırılan birçok fark olduğundan, projenin geçirilmesi için garantili bir çözüm değildir.
+   En küçük çözüm veya tek bir işlemde, [DotNet TRY-Convert](https://github.com/dotnet/try-convert) aracı Ile .NET Core proje dosyası biçimine bir işlem üzerinden bağlantı kurmayı deneyebilirsiniz. `dotnet try-convert` Tüm projeleriniz için çalışma garantisi verilmez ve bağımlı olduğunuz davranışta hafif değişikliklere neden olabilir. Otomatikleştirilmiş olabilecek temel şeyleri otomatikleştiren bir _Başlangıç noktası_ olarak kullanın. SDK stil projeleri tarafından kullanılan hedeflerde eski stil projesi dosyalarıyla karşılaştırılan birçok fark olduğundan, projenin geçirilmesi için garantili bir çözüm değildir.
 
 1. .NET Framework 4.7.2 veya üstünü hedeflemek için, bağlantı noktası yapmak istediğiniz tüm projeleri yeniden hedefleyin.
 
@@ -113,5 +113,10 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
 > [!div class="nextstepaction"]
 > [Bağımlılıkları çözümle](third-party-deps.md) 
->  [Paket NuGet paketi](../deploying/creating-nuget-packages.md) 
->  [ASP.NET Core geçişe ASP.net](/aspnet/core/migration/proper-to-2x)
+>  [NuGet paketini paketleyin](../deploying/creating-nuget-packages.md)
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [ASP.NET Core geçişe ASP.NET](/aspnet/core/migration/proper-to-2x)
+- [WPF uygulamalarını .NET Core 'a geçirme](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)
+- [Windows Forms uygulamalarını .NET Core 'a geçirme](winforms.md)

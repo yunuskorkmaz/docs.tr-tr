@@ -9,17 +9,17 @@ dev_langs:
 helpviewer_keywords:
 - format specifiers, custom time interval
 - format strings
-- formatting [.NET Framework], time interval
+- formatting [.NET], time interval
 - custom time interval format strings
-- formatting [.NET Framework], time
+- formatting [.NET], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: 54079975b9b73844f598a7c7a7fea1a64bd6450c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: b760e7ab7f39d4e4682d5d4c3a6421b9843e1d59
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768566"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888691"
 ---
 # <a name="custom-timespan-format-strings"></a>Özel TimeSpan biçim dizeleri
 
@@ -40,25 +40,25 @@ Değerlerin dize temsilleri, <xref:System.TimeSpan> yönteminin aşırı yükler
 [!code-csharp[Conceptual.TimeSpan.Custom#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.custom/cs/customparseexample1.cs#2)]
 [!code-vb[Conceptual.TimeSpan.Custom#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/customparseexample1.vb#2)]
 
-<a name="table"></a>Aşağıdaki tabloda özel tarih ve saat biçimi belirticileri açıklanmaktadır.
+<a name="table"></a> Aşağıdaki tabloda özel tarih ve saat biçimi belirticileri açıklanmaktadır.
 
 | Biçim belirteci | Açıklama | Örnek |
 |----------------------|-----------------|-------------|
-|"d", "% d"|Zaman aralığındaki tüm gün sayısı.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d`--> "6"<br /><br /> `d\.hh\:mm`--> "6.14:32"|
-|"gg"-"dddddddd"|Zaman aralığındaki tüm gün sayısı, gerektiği şekilde önde sıfır ile doldurulmuştur.<br /><br /> Daha fazla bilgi: ["gg"-"dddddddd" özel biçim belirticileri](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd`--> "006"<br /><br /> `dd\.hh\:mm`--> "06.14:32"|
-|"h", "% h"|Zaman aralığındaki, günlerin bir parçası olarak sayılmayan tüm saatlerin sayısı. Tek basamaklı saatlerin önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["h" Özel Biçim belirleyicisi](#hSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h`--> "14"<br /><br /> `hh\:mm`--> "14:32"|
-|"hh"|Zaman aralığındaki, günlerin bir parçası olarak sayılmayan tüm saatlerin sayısı. Tek basamaklı saatlerin önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["hh" Özel Biçim belirleyicisi](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh`--> "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh`--> 08|
-|"a", "% d"|Zaman aralığındaki saatlerin veya günlerin bir parçası olarak dahil olmayan tam dakika sayısı. Tek basamaklı dakikalar önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#mSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m`--> "8"<br /><br /> `h\:m`--> "14:8"|
-|"mm"|Zaman aralığındaki saatlerin veya günlerin bir parçası olarak dahil olmayan tam dakika sayısı. Tek basamaklı dakikalar önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["mm" Özel Biçim belirleyicisi](#mmSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm`--> "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss`--> 6.08:05:17|
-|"s", "% s"|Zaman aralığındaki saat, gün veya dakika parçası olarak dahil olmayan tüm saniye sayısı. Tek basamaklı saniyeler önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["s" Özel Biçim belirleyicisi](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s`--> 12<br /><br /> `s\.fff`--> 12,965|
-|"ss"|Zaman aralığındaki saat, gün veya dakika parçası olarak dahil olmayan tüm saniye sayısı.  Tek basamaklı saniyeler önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["ss" Özel Biçim belirleyicisi](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss`--> 06<br /><br /> `ss\.fff`--> 06,965|
-|"f", "% f"|Bir zaman aralığında saniyenin onda biri.<br /><br /> Daha fazla bilgi: ["f" Özel Biçim belirleyicisi](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f`--> 8<br /><br /> `ss\.f`--> 06,8|
-|"ff"|Bir zaman aralığında saniyenin yüzde biri.<br /><br /> Daha fazla bilgi: ["FF" Özel Biçim belirleyicisi](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff`--> 89<br /><br /> `ss\.ff`--> 06,89|
-|"fff"|Bir zaman aralığındaki milisaniyedir.<br /><br /> Daha fazla bilgi: ["fff" Özel Biçim belirleyicisi](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff`--> 895<br /><br /> `ss\.fff`--> 06,895|
-|"ffff"|İkinci bir zaman aralığında on-binde.<br /><br /> Daha fazla bilgi: ["ffff" Özel Biçim belirleyicisi](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff`--> 8954<br /><br /> `ss\.ffff`--> 06,8954|
-|"fffff"|Bir zaman aralığı içinde saniyenin yüz binde.<br /><br /> Daha fazla bilgi: ["fffff" Özel Biçim belirleyicisi](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff`--> 89543<br /><br /> `ss\.fffff`--> 06,89543|
-|"ffffff"|Saniyenin bir zaman aralığı içinde milionaltı.<br /><br /> Daha fazla bilgi: ["FFFFFF" Özel Biçim belirleyicisi](#f6Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff`--> 895432<br /><br /> `ss\.ffffff`--> 06,895432|
-|"fffffff"|Bir saniye (veya kesirli Ticks) bir zaman aralığında On milimetre onda.<br /><br /> Daha fazla bilgi: ["fffffff" Özel Biçim belirleyicisi](#f7Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff`--> 8954321<br /><br /> `ss\.fffffff`--> 06,8954321|
+|"d", "% d"|Zaman aralığındaki tüm gün sayısı.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
+|"gg"-"dddddddd"|Zaman aralığındaki tüm gün sayısı, gerektiği şekilde önde sıfır ile doldurulmuştur.<br /><br /> Daha fazla bilgi: ["gg"-"dddddddd" özel biçim belirticileri](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
+|"h", "% h"|Zaman aralığındaki, günlerin bir parçası olarak sayılmayan tüm saatlerin sayısı. Tek basamaklı saatlerin önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["h" Özel Biçim belirleyicisi](#hSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h` --> "14"<br /><br /> `hh\:mm` --> "14:32"|
+|"hh"|Zaman aralığındaki, günlerin bir parçası olarak sayılmayan tüm saatlerin sayısı. Tek basamaklı saatlerin önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["hh" Özel Biçim belirleyicisi](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh` --> "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh` --> 08|
+|"a", "% d"|Zaman aralığındaki saatlerin veya günlerin bir parçası olarak dahil olmayan tam dakika sayısı. Tek basamaklı dakikalar önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#mSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m` --> "8"<br /><br /> `h\:m` --> "14:8"|
+|"mm"|Zaman aralığındaki saatlerin veya günlerin bir parçası olarak dahil olmayan tam dakika sayısı. Tek basamaklı dakikalar önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["mm" Özel Biçim belirleyicisi](#mmSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm` --> "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss` --> 6.08:05:17|
+|"s", "% s"|Zaman aralığındaki saat, gün veya dakika parçası olarak dahil olmayan tüm saniye sayısı. Tek basamaklı saniyeler önünde sıfır yok.<br /><br /> Daha fazla bilgi: ["s" Özel Biçim belirleyicisi](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12,965|
+|"ss"|Zaman aralığındaki saat, gün veya dakika parçası olarak dahil olmayan tüm saniye sayısı.  Tek basamaklı saniyeler önünde sıfır vardır.<br /><br /> Daha fazla bilgi: ["ss" Özel Biçim belirleyicisi](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06,965|
+|"f", "% f"|Bir zaman aralığında saniyenin onda biri.<br /><br /> Daha fazla bilgi: ["f" Özel Biçim belirleyicisi](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06,8|
+|"ff"|Bir zaman aralığında saniyenin yüzde biri.<br /><br /> Daha fazla bilgi: ["FF" Özel Biçim belirleyicisi](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06,89|
+|"fff"|Bir zaman aralığındaki milisaniyedir.<br /><br /> Daha fazla bilgi: ["fff" Özel Biçim belirleyicisi](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06,895|
+|"ffff"|İkinci bir zaman aralığında on-binde.<br /><br /> Daha fazla bilgi: ["ffff" Özel Biçim belirleyicisi](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --> 8954<br /><br /> `ss\.ffff` --> 06,8954|
+|"fffff"|Bir zaman aralığı içinde saniyenin yüz binde.<br /><br /> Daha fazla bilgi: ["fffff" Özel Biçim belirleyicisi](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06,89543|
+|"ffffff"|Saniyenin bir zaman aralığı içinde milionaltı.<br /><br /> Daha fazla bilgi: ["FFFFFF" Özel Biçim belirleyicisi](#f6Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff` --> 895432<br /><br /> `ss\.ffffff` --> 06,895432|
+|"fffffff"|Bir saniye (veya kesirli Ticks) bir zaman aralığında On milimetre onda.<br /><br /> Daha fazla bilgi: ["fffffff" Özel Biçim belirleyicisi](#f7Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff` --> 8954321<br /><br /> `ss\.fffffff` --> 06,8954321|
 |"F", "% F"|Bir zaman aralığında saniyenin onda biri. Basamak sıfırsa hiçbir şey görüntülenmez.<br /><br /> Daha fazla bilgi: ["F" Özel Biçim belirleyicisi](#F_Specifier).|`TimeSpan.Parse("00:00:06.32")`:<br /><br /> `%F`: 3<br /><br /> `TimeSpan.Parse("0:0:3.091")`:<br /><br /> `ss\.F`03.|
 |"FF"|Bir zaman aralığında saniyenin yüzde biri. Tüm kesirli sondaki sıfırlar veya iki sıfır basamak dahil değildir.<br /><br /> Daha fazla bilgi: ["FF" Özel Biçim belirleyicisi](#FF_Specifier).|`TimeSpan.Parse("00:00:06.329")`:<br /><br /> `FF`: 32<br /><br /> `TimeSpan.Parse("0:0:3.101")`:<br /><br /> `ss\.FF`: 03,1|
 |"FFF"|Bir zaman aralığındaki milisaniyedir. Tüm kesirli sondaki sıfırlar dahil edilmez.<br /><br /> Daha fazla bilgi:|`TimeSpan.Parse("00:00:06.3291")`:<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`:<br /><br /> `ss\.FFF`: 03,1|
@@ -66,11 +66,11 @@ Değerlerin dize temsilleri, <xref:System.TimeSpan> yönteminin aşırı yükler
 |"FFFFF"|Bir zaman aralığı içinde saniyenin yüz binde. Tüm kesirli sondaki sıfırlar dahil edilmez.<br /><br /> Daha fazla bilgi: ["FFFFF" Özel Biçim belirleyicisi](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03,1|
 |"FFFFFF"|Saniyenin bir zaman aralığı içinde milionaltı. Tüm kesirli sondaki sıfırlar gösterilmez.<br /><br /> Daha fazla bilgi: ["FFFFFF" Özel Biçim belirleyicisi](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03,1|
 |"FFFFFFF"|Bir zaman aralığında on milyonlarca bir saniye. Tüm kesirli sondaki sıfırlar veya yedi sıfır gösterilmez.<br /><br /> Daha fazla bilgi: ["fffffff" Özel Biçim belirleyicisi](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03,19|
-|'*String*'|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss`--> "14:32:17"|
-|&#92;|"\" çıkış karakteri.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss`--> "14:32:17"|
-|Başka bir karakter|Atlamayan herhangi bir karakter, Özel Biçim belirleyicisi olarak yorumlanır.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss`--> "14:32:17"|
+|' *String* '|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|&#92;|"\" çıkış karakteri.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|Başka bir karakter|Atlamayan herhangi bir karakter, Özel Biçim belirleyicisi olarak yorumlanır.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
-## <a name="the-d-custom-format-specifier"></a><a name="dSpecifier"></a>"D" Özel Biçim belirleyicisi
+## <a name="the-d-custom-format-specifier"></a><a name="dSpecifier"></a> "D" Özel Biçim belirleyicisi
 
 "D" özel biçim Belirleyicisi, <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> zaman aralığındaki tam gün sayısını temsil eden özelliğinin değerini çıkarır. <xref:System.TimeSpan>Değer birden fazla basamağa sahip olsa bile, bir değer içindeki tüm gün sayısını verir. <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>Özelliğin değeri sıfırsa, belirtici "0" verir.
 
@@ -86,7 +86,7 @@ Aşağıdaki örnek, "d" Özel Biçim belirticisinin kullanımını gösterir.
 
 [Tabloya dön](#table)
 
-## <a name="the-dd-dddddddd-custom-format-specifiers"></a><a name="ddSpecifier"></a>"Gg"-"dddddddd" özel biçim belirticileri
+## <a name="the-dd-dddddddd-custom-format-specifiers"></a><a name="ddSpecifier"></a> "Gg"-"dddddddd" özel biçim belirticileri
 
 "Gg", "ddd", "gggg", "ddddd", "dddddd", "ddddddd" ve "dddddddd" özel biçim belirticileri, <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> zaman aralığındaki tam gün sayısını temsil eden özelliğin değerini çıktı.
 
@@ -99,7 +99,7 @@ Aşağıdaki örnek, iki değerin dize gösterimini göstermek için bu biçim b
 
 [Tabloya dön](#table)
 
-## <a name="the-h-custom-format-specifier"></a><a name="hSpecifier"></a>"H" Özel Biçim belirleyicisi
+## <a name="the-h-custom-format-specifier"></a><a name="hSpecifier"></a> "H" Özel Biçim belirleyicisi
 
 "H" özel biçim Belirleyicisi, <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> kendi gün bileşeninin bir parçası olarak sayılmayan zaman aralığındaki tüm saatlerin sayısını temsil eden özelliğinin değerini çıkarır. Özelliğin değeri 0 ' dan 9 ' a kadar ise, tek basamaklı bir dize değeri döndürür <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> ve özelliğin değeri 10 ile 23 arasında bir değer döndürürse iki basamaklı bir dize değeri döndürür <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> .
 
@@ -120,7 +120,7 @@ Aşağıdaki örnek, "h" Özel Biçim belirticisinin kullanımını gösterir.
 
 [Tabloya dön](#table)
 
-## <a name="the-hh-custom-format-specifier"></a><a name="hhSpecifier"></a>"Hh" Özel Biçim belirleyicisi
+## <a name="the-hh-custom-format-specifier"></a><a name="hhSpecifier"></a> "Hh" Özel Biçim belirleyicisi
 
 "Hh" özel biçim Belirleyicisi, <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> kendi gün bileşeninin bir parçası olarak sayılmayan zaman aralığındaki tüm saatlerin sayısını temsil eden özelliğinin değerini çıkarır. 0 ile 9 arasında değerler için, çıkış dizesi önünde sıfır değeri içerir.
 
@@ -136,7 +136,7 @@ Aşağıdaki örnek, "hh" Özel Biçim belirticisinin kullanımını gösterir.
 
 [Tabloya dön](#table)
 
-## <a name="the-m-custom-format-specifier"></a><a name="mSpecifier"></a>"D" Özel Biçim belirleyicisi
+## <a name="the-m-custom-format-specifier"></a><a name="mSpecifier"></a> "D" Özel Biçim belirleyicisi
 
 "M" özel biçim belirticisi özelliğin değerini çıkarır <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> ve bu, kendi gün bileşeninin bir parçası olarak sayılmayan zaman aralığındaki tüm dakikaların sayısını temsil eder. Özelliğin değeri 0 ' dan 9 ' a kadar ise, tek basamaklı bir dize değeri döndürür <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> ve <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> özelliğin değeri 10 ila 59 ise iki basamaklı bir dize değeri döndürür.
 
@@ -157,7 +157,7 @@ Aşağıdaki örnek, "d" Özel Biçim belirticisinin kullanımını gösterir.
 
 [Tabloya dön](#table)
 
-## <a name="the-mm-custom-format-specifier"></a><a name="mmSpecifier"></a>"Mm" Özel Biçim belirleyicisi
+## <a name="the-mm-custom-format-specifier"></a><a name="mmSpecifier"></a> "Mm" Özel Biçim belirleyicisi
 
 "Mm" özel biçim Belirleyicisi, <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> saat veya gün bileşeninin bir parçası olarak dahil olmayan zaman aralığındaki tüm dakikaların sayısını temsil eden özelliğin değerini çıkarır. 0 ile 9 arasında değerler için, çıkış dizesi önünde sıfır değeri içerir.
 
@@ -173,7 +173,7 @@ Aşağıdaki örnek, "mm" Özel Biçim belirticisinin kullanımını gösterir.
 
 [Tabloya dön](#table)
 
-## <a name="the-s-custom-format-specifier"></a><a name="sSpecifier"></a>"S" Özel Biçim belirleyicisi
+## <a name="the-s-custom-format-specifier"></a><a name="sSpecifier"></a> "S" Özel Biçim belirleyicisi
 
 "S" özel biçim Belirleyicisi, <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> saat, gün veya dakika bileşeninin bir parçası olarak dahil olmayan zaman aralığındaki tüm saniye sayısını temsil eden özelliğinin değerini verir. Özelliğin değeri 0 ' dan 9 ' a kadar ise, tek basamaklı bir dize değeri döndürür <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> ve <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> özelliğin değeri 10 ila 59 ise iki basamaklı bir dize değeri döndürür.
 
@@ -194,7 +194,7 @@ Aşağıdaki örnek, "s" Özel Biçim belirticisinin kullanımını gösterir.
 
 [Tabloya dön](#table)
 
-## <a name="the-ss-custom-format-specifier"></a><a name="ssSpecifier"></a>"Ss" Özel Biçim belirleyicisi
+## <a name="the-ss-custom-format-specifier"></a><a name="ssSpecifier"></a> "Ss" Özel Biçim belirleyicisi
 
 "Ss" özel biçim Belirleyicisi, <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> saat, gün veya dakika bileşeninin bir parçası olarak dahil olmayan zaman aralığındaki tüm saniye sayısını temsil eden özelliğinin değerini verir. 0 ile 9 arasında değerler için, çıkış dizesi önünde sıfır değeri içerir.
 
@@ -210,7 +210,7 @@ Aşağıdaki örnek, "ss" Özel Biçim belirticisinin kullanımını gösterir.
 
 [Tabloya dön](#table)
 
-## <a name="the-f-custom-format-specifier"></a><a name="fSpecifier"></a>"F" Özel Biçim belirleyicisi
+## <a name="the-f-custom-format-specifier"></a><a name="fSpecifier"></a> "F" Özel Biçim belirleyicisi
 
 "F" özel biçim belirticisi bir saniyenin onda birini bir zaman aralığında verir. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Veya yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , giriş dizesinin tam olarak bir kesirli basamak içermesi gerekir.
 
@@ -223,7 +223,7 @@ Aşağıdaki örnek "f" özel biçim belirticisini bir değer içinde saniyenin 
 
 [Tabloya dön](#table)
 
-## <a name="the-ff-custom-format-specifier"></a><a name="ffSpecifier"></a>"FF" Özel Biçim belirleyicisi
+## <a name="the-ff-custom-format-specifier"></a><a name="ffSpecifier"></a> "FF" Özel Biçim belirleyicisi
 
 "FF" özel biçim belirticisi saniye cinsinden bir zaman aralığına çıkış verir. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Veya yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , giriş dizesinin tam olarak iki kesirli basamak içermesi gerekir.
 
@@ -234,7 +234,7 @@ Aşağıdaki örnek, bir değerindeki saniyenin yüzde bir değerini göstermek 
 
 [Tabloya dön](#table)
 
-## <a name="the-fff-custom-format-specifier"></a><a name="f3Specifier"></a>"Fff" Özel Biçim belirleyicisi
+## <a name="the-fff-custom-format-specifier"></a><a name="f3Specifier"></a> "Fff" Özel Biçim belirleyicisi
 
 "Fff" özel biçim Belirleyicisi (üç "f" karakteri ile), bir zaman aralığındaki milisaniyeyi verir. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Veya yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , giriş dizesinin tam olarak üç kesirli basamak içermesi gerekir.
 
@@ -245,7 +245,7 @@ Aşağıdaki örnek, bir değerindeki milisaniyeyi göstermek için "fff" özel 
 
 [Tabloya dön](#table)
 
-## <a name="the-ffff-custom-format-specifier"></a><a name="f4Specifier"></a>"Ffff" Özel Biçim belirleyicisi
+## <a name="the-ffff-custom-format-specifier"></a><a name="f4Specifier"></a> "Ffff" Özel Biçim belirleyicisi
 
 "Ffff" özel biçim belirticisi (dört "f" karakterle birlikte), bir zaman aralığında saniyenin on-binde sayısını verir. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Veya yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , giriş dizesinin tam olarak dört kesirli basamak içermesi gerekir.
 
@@ -256,7 +256,7 @@ Aşağıdaki örnek, bir değerindeki on-binde ' i göstermek için "ffff" özel
 
 [Tabloya dön](#table)
 
-## <a name="the-fffff-custom-format-specifier"></a><a name="f5Specifier"></a>"Fffff" Özel Biçim belirleyicisi
+## <a name="the-fffff-custom-format-specifier"></a><a name="f5Specifier"></a> "Fffff" Özel Biçim belirleyicisi
 
 "Fffff" özel biçim Belirleyicisi (beş "f" karakterle birlikte), bir zaman aralığındaki yüz-binde ' i gösterir. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Veya yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , giriş dizesinin tam olarak beş kesirli basamak içermesi gerekir.
 
@@ -267,7 +267,7 @@ Aşağıdaki örnek "fffff" özel biçim belirticisini kullanarak bir saniyenin 
 
 [Tabloya dön](#table)
 
-## <a name="the-ffffff-custom-format-specifier"></a><a name="f6Specifier"></a>"FFFFFF" Özel Biçim belirleyicisi
+## <a name="the-ffffff-custom-format-specifier"></a><a name="f6Specifier"></a> "FFFFFF" Özel Biçim belirleyicisi
 
 "FFFFFF" özel biçim Belirleyicisi (altı "f" karakteriyle birlikte), bir zaman aralığında saniyenin her birinin milionda çıkışını çıkarır. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Veya yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , giriş dizesinin tam olarak altı kesirli basamak içermesi gerekir.
 
@@ -278,7 +278,7 @@ Aşağıdaki örnek "FFFFFF" özel biçim belirticisini bir değerde bir saniyen
 
 [Tabloya dön](#table)
 
-## <a name="the-fffffff-custom-format-specifier"></a><a name="f7Specifier"></a>"Fffffff" Özel Biçim belirleyicisi
+## <a name="the-fffffff-custom-format-specifier"></a><a name="f7Specifier"></a> "Fffffff" Özel Biçim belirleyicisi
 
 "Fffffff" özel biçim belirticisi (yedi "f" karakteriyle birlikte), saniyenin on milyonda biri (veya kesir sayısı) bir zaman aralığında çıktı. Veya yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , giriş dizesinin tam olarak yedi kesirli basamak içermesi gerekir.
 
@@ -289,7 +289,7 @@ Aşağıdaki örnek, "fffffff" özel biçim belirticisini kullanarak bir değer 
 
 [Tabloya dön](#table)
 
-## <a name="the-f-custom-format-specifier"></a><a name="F_Specifier"></a>"F" Özel Biçim belirleyicisi
+## <a name="the-f-custom-format-specifier"></a><a name="F_Specifier"></a> "F" Özel Biçim belirleyicisi
 
 "F" özel biçim belirticisi bir saniyenin onda birini bir zaman aralığında verir. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Saniyenin ondaki zaman aralığı değeri sıfırsa, sonuç dizesine dahil değildir. Veya yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , ikinci bir basamağın onunun varlığı isteğe bağlıdır.
 
@@ -302,7 +302,7 @@ Aşağıdaki örnek "F" özel biçim belirticisini bir değer içinde saniyenin 
 
 [Tabloya dön](#table)
 
-## <a name="the-ff-custom-format-specifier"></a><a name="FF_Specifier"></a>"FF" Özel Biçim belirleyicisi
+## <a name="the-ff-custom-format-specifier"></a><a name="FF_Specifier"></a> "FF" Özel Biçim belirleyicisi
 
 "FF" özel biçim belirticisi saniye cinsinden bir zaman aralığına çıkış verir. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Sondaki kesirli sıfırları varsa, sonuç dizesine dahil edilmez. Veya yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , ikinci bir basamağın onun ve yüzde birinin varlığı isteğe bağlıdır.
 
@@ -313,7 +313,7 @@ Aşağıdaki örnek, bir değerindeki saniyenin yüzde bir değerini göstermek 
 
 [Tabloya dön](#table)
 
-## <a name="the-fff-custom-format-specifier"></a><a name="F3_Specifier"></a>"FFF" Özel Biçim belirleyicisi
+## <a name="the-fff-custom-format-specifier"></a><a name="F3_Specifier"></a> "FFF" Özel Biçim belirleyicisi
 
 "FFF" özel biçim Belirleyicisi (üç "F" karakteri ile), bir zaman aralığındaki milisaniyeyi verir. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Sondaki kesirli sıfırları varsa, sonuç dizesine dahil edilmez. Ya da yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , ikinci bir basamağın onda, yüzde ve binde varlığı isteğe bağlıdır.
 
@@ -324,7 +324,7 @@ Aşağıdaki örnek "FFF" özel biçim belirticisini kullanarak bir değerin bin
 
 [Tabloya dön](#table)
 
-## <a name="the-ffff-custom-format-specifier"></a><a name="F4_Specifier"></a>"FFFF" Özel Biçim belirleyicisi
+## <a name="the-ffff-custom-format-specifier"></a><a name="F4_Specifier"></a> "FFFF" Özel Biçim belirleyicisi
 
 "FFFF" özel biçim belirticisi (dört "F" karakterle birlikte), bir zaman aralığında saniyenin on-binde sayısını verir. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Sondaki kesirli sıfırları varsa, sonuç dizesine dahil edilmez. Ya da yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , ikinci bir basamağın onda, yüzde, binde ve on-binde bulunması isteğe bağlıdır.
 
@@ -335,7 +335,7 @@ Aşağıdaki örnek, bir değerindeki on-binde ' i göstermek için "FFFF" özel
 
 [Tabloya dön](#table)
 
-## <a name="the-fffff-custom-format-specifier"></a><a name="F5_Specifier"></a>"FFFFF" Özel Biçim belirleyicisi
+## <a name="the-fffff-custom-format-specifier"></a><a name="F5_Specifier"></a> "FFFFF" Özel Biçim belirleyicisi
 
 "FFFFF" özel biçim Belirleyicisi (beş "F" karakterle birlikte), bir zaman aralığındaki yüz-binde ' i gösterir. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Sondaki kesirli sıfırları varsa, sonuç dizesine dahil edilmez. Ya da yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , ikinci bir basamağın onda, yüzde, binde, on-binde ve yüz-binde varlığı isteğe bağlıdır.
 
@@ -346,7 +346,7 @@ Aşağıdaki örnek "FFFFF" özel biçim belirticisini kullanarak bir saniyenin 
 
 [Tabloya dön](#table)
 
-## <a name="the-ffffff-custom-format-specifier"></a><a name="F6_Specifier"></a>"FFFFFF" Özel Biçim belirleyicisi
+## <a name="the-ffffff-custom-format-specifier"></a><a name="F6_Specifier"></a> "FFFFFF" Özel Biçim belirleyicisi
 
 "FFFFFF" özel biçim Belirleyicisi (altı "F" karakteriyle birlikte), bir zaman aralığında saniyenin her birinin milionda çıkışını çıkarır. Biçimlendirme işleminde, kalan kesirli basamaklar kesilir. Sondaki kesirli sıfırları varsa, sonuç dizesine dahil edilmez. Ya da yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , ikinci bir basamağın onda, yüzde, binde, on-binde, yüz-binde ve milionon 'un varlığı isteğe bağlıdır.
 
@@ -357,7 +357,7 @@ Aşağıdaki örnek "FFFFFF" özel biçim belirticisini bir değerde bir saniyen
 
 [Tabloya dön](#table)
 
-## <a name="the-fffffff-custom-format-specifier"></a><a name="F7_Specifier"></a>"FFFFFFF" Özel Biçim belirleyicisi
+## <a name="the-fffffff-custom-format-specifier"></a><a name="F7_Specifier"></a> "FFFFFFF" Özel Biçim belirleyicisi
 
 "FFFFFFF" özel biçim belirticisi (yedi "F" karakteriyle birlikte), saniyenin on milyonda biri (veya kesir sayısı) bir zaman aralığında çıktı. Sondaki kesirli sıfırları varsa, sonuç dizesine dahil edilmez. Veya yöntemini çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> , giriş dizesindeki yedi kesirli basamak varlığı isteğe bağlıdır.
 

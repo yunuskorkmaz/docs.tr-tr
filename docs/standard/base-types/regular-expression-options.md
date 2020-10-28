@@ -9,22 +9,22 @@ dev_langs:
 helpviewer_keywords:
 - regular expressions, options
 - constructs, options
-- .NET Framework regular expressions, options
+- .NET regular expressions, options
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 268e05c2212539b030ccc3c7195f618bb3afa707
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 5687d1e5a11e69cc9ecf2bd34067329cc52955d2
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662881"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889003"
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 
 Varsayılan olarak, bir giriş dizesinin normal ifade deseninin herhangi bir sabit karakter ile karşılaştırılması büyük/küçük harfe duyarlıdır, bir normal ifade deseninin boşluk değeri değişmez boşluk karakterleri olarak yorumlanır ve normal bir ifadede yakalama grupları örtük olarak ve açıkça adlandırılmaktadır. Normal ifade seçeneklerini belirterek, varsayılan normal ifade davranışının bu ve diğer birçok yönlerini değiştirebilirsiniz. Aşağıdaki tabloda listelenen bu seçenekler, normal ifade deseninin bir parçası olarak satır içi olarak dahil edilebilir veya bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıf oluşturucusuna veya statik model eşleştirme yöntemine bir <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri olarak sağlanabilir.
 
-|RegexOptions üyesi|Satır içi karakter|Efekt|
+|RegexOptions üyesi|Satır içi karakter|Etki|
 |-------------------------|----------------------|------------|
 |<xref:System.Text.RegularExpressions.RegexOptions.None>|Kullanılamaz|Varsayılan davranışı kullanın. Daha fazla bilgi için bkz. [varsayılan seçenekler](#default-options).|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Büyük küçük harf duyarlı eşleme kullanın. Daha fazla bilgi için bkz. [büyük/küçük harfe duyarsız eşleşme](#case-insensitive-matching).|
@@ -134,7 +134,7 @@ Aşağıdaki bölümlerde, .NET içindeki normal ifade tarafından desteklenen s
 
 Seçeneği, <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> normal ifade altyapısının varsayılan davranışını temsil ettiğinden, yöntem çağrısında nadiren açıkça belirtilir. Yerine parametresi olmayan bir Oluşturucu veya statik bir model eşleştirme yöntemi `options` çağırılır.
 
-## <a name="case-insensitive-matching"></a>Büyük/küçük harfe duyarsız eşleşme
+## <a name="case-insensitive-matching"></a>Case-Insensitive eşleşen
 
 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>Seçeneği veya `i` satır içi seçeneği, büyük/küçük harfe duyarsız eşleşme sağlar. Varsayılan olarak, geçerli kültürün büyük/küçük harf kuralları kullanılır.
 
@@ -161,7 +161,7 @@ Aşağıdaki örnek Bowler adlarını ve puanlarını ayıklar ve bunları <xref
 
 Normal ifade deseninin, `^(\w+)\s(\d+)\r*$` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-|Desen|Description|
+|Desen|Açıklama|
 |-------------|-----------------|
 |`^`|Satırın başlangıcında başlayın.|
 |`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu ilk yakalama grubudur.|
@@ -208,7 +208,7 @@ Aşağıdaki örnek, `\b\(?((\w+),?\s?)+[\.!?]\)?` <xref:System.Text.RegularExpr
 
 Normal ifade deseninin, `\b\(?((?>\w+),?\s?)+[\.!?]\)?` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-|Desen|Description|
+|Desen|Açıklama|
 |-------------|-----------------|
 |`\b`|Bir sözcük sınırında başlayın.|
 |`\(?`|Açma parantezinin ("(") sıfır veya bir tekrarından birini eşleştirin.|
@@ -265,9 +265,9 @@ Ancak, aşağıdaki durumlarda, seçeneğini kullansanız bile normal bir ifaded
 
 - Köşeli ayraç içinde `{` *n* `}` , `{` *n* `,}` ve `{` *n* `,` *e* `}` gibi bir nicelik süresi içinde boşluk bulunamaz. Örneğin, normal ifade deseninin bir boşluk `\d{1, 3}` karakteri içerdiği için, bir veya daha fazla basamaklı bir sayı dizisi ile üç basamağa eşleşmesi başarısız olur.
 
-- Dil öğesi tanıtan bir karakter dizisi içinde boşluk kullanılamaz. Örnek:
+- Dil öğesi tanıtan bir karakter dizisi içinde boşluk kullanılamaz. Örneğin:
 
-  - Language öğesi alt `(?:` *ifadesi* `)` yakalama olmayan bir grubu temsil eder ve `(?:` öğenin bölümünde gömülü boşluk bulunamaz. `(? :` *subexpression* `)` <xref:System.ArgumentException> Normal ifade altyapısı, stili ayrıştıramadığından ve alt ifadesi alt `( ?:` *subexpression* `)` *ifade*ile eşleşmediğinden, bu, bir çalışma zamanı oluşturur.
+  - Language öğesi alt `(?:` *ifadesi* `)` yakalama olmayan bir grubu temsil eder ve `(?:` öğenin bölümünde gömülü boşluk bulunamaz. `(? :` *subexpression* `)` <xref:System.ArgumentException> Normal ifade altyapısı, stili ayrıştıramadığından ve alt ifadesi alt `( ?:` *subexpression* `)` *ifade* ile eşleşmediğinden, bu, bir çalışma zamanı oluşturur.
 
   - `\p{` *name* `}` Bir Unicode kategorisini veya adlandırılmış bloğu temsil eden dil öğesi adı, öğenin bölümüne gömülü boşluklar içeremez `\p{` . Bir boşluk eklerseniz, öğe bir <xref:System.ArgumentException> çalışma zamanı atar.
 
@@ -306,7 +306,7 @@ Ayrıca, ileriye doğru onaylama (alt `(?=` *ifade* `)` dili öğesi) ve geriye 
 
 Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-|Desen|Description|
+|Desen|Açıklama|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|Eşleşmenin başlangıcında bir veya iki ondalık basamak gelmeli ve ardından bir boşluk gelmelidir.|
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|
@@ -339,7 +339,7 @@ ECMAScript ve kurallı normal ifadelerin davranışı üç alanda farklılık g�
 
   Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-  |Desen|Description|
+  |Desen|Açıklama|
   |-------------|-----------------|
   |(+)|"A" harfini bir veya daha fazla kez eşleştirin. Bu ikinci yakalama grubudur.|
   |(\ 1)|İlk yakalama grubu tarafından yakalanan alt dizeyle eşleştirin. Bu, üçüncü yakalama grubudur.|
@@ -350,9 +350,9 @@ ECMAScript ve kurallı normal ifadelerin davranışı üç alanda farklılık g�
 
   |Normal ifade|Kurallı davranış|ECMAScript davranışı|
   |------------------------|------------------------|-------------------------|
-  |`\0`ardından 0 ile 2 sekizlik basamak|Sekizlik olarak yorumlayın. Örneğin, `\044` her zaman sekizlik bir değer olarak yorumlanır ve "$" anlamına gelir.|Aynı davranış.|
-  |`\`ardından 1 ile 9 arasında bir basamak, ardından ek ondalık basamak yok,|Bir geri başvuru olarak yorumlayın. Örneğin, `\9` bir dokuzuncu yakalama grubu mevcut olmasa bile her zaman geri başvuru 9 anlamına gelir. Yakalama grubu yoksa, normal ifade ayrıştırıcısı bir oluşturur <xref:System.ArgumentException> .|Tek bir ondalık basamak yakalama grubu varsa, bu basamağa geri başvuru. Aksi takdirde, değeri değişmez değer olarak yorumlayın.|
-  |`\`ardından, 1 ile 9 arasında bir rakam ve ardından ek ondalık basamaklar|Basamakları ondalık değer olarak yorumlayın. Bu yakalama grubu varsa, ifadeyi bir geri başvuru olarak yorumlayın.<br /><br /> Aksi takdirde, önde gelen sekizlik basamakları sekizlik 377 ' e kadar yorumlayın; diğer bir deyişle, yalnızca değerin düşük 8 bitini göz önünde bulundurun. Kalan basamakları değişmez değer olarak yorumlayın. Örneğin ifadesinde, `\3000` grup 300 yakalama varsa, geri başvuru 300 olarak yorumlayın; grup 300 yakalama yoksa, sekizlik 300 olarak, ardından 0 olarak yorumlayın.|Bir yakalamaya başvurabilen ondalık bir değere mümkün olduğunca çok basamak dönüştürerek bir geri başvuru olarak yorumlayın. Herhangi bir basamak dönüştürülemiyorsa, sekizlik basamağı 377 ' e kadar olan önde gelen sekizlik basamakları kullanarak sekizlik olarak yorumlayın; kalan basamakları değişmez değer olarak yorumlayın.|
+  |`\0` ardından 0 ile 2 sekizlik basamak|Sekizlik olarak yorumlayın. Örneğin, `\044` her zaman sekizlik bir değer olarak yorumlanır ve "$" anlamına gelir.|Aynı davranış.|
+  |`\` ardından 1 ile 9 arasında bir basamak, ardından ek ondalık basamak yok,|Bir geri başvuru olarak yorumlayın. Örneğin, `\9` bir dokuzuncu yakalama grubu mevcut olmasa bile her zaman geri başvuru 9 anlamına gelir. Yakalama grubu yoksa, normal ifade ayrıştırıcısı bir oluşturur <xref:System.ArgumentException> .|Tek bir ondalık basamak yakalama grubu varsa, bu basamağa geri başvuru. Aksi takdirde, değeri değişmez değer olarak yorumlayın.|
+  |`\` ardından, 1 ile 9 arasında bir rakam ve ardından ek ondalık basamaklar|Basamakları ondalık değer olarak yorumlayın. Bu yakalama grubu varsa, ifadeyi bir geri başvuru olarak yorumlayın.<br /><br /> Aksi takdirde, önde gelen sekizlik basamakları sekizlik 377 ' e kadar yorumlayın; diğer bir deyişle, yalnızca değerin düşük 8 bitini göz önünde bulundurun. Kalan basamakları değişmez değer olarak yorumlayın. Örneğin ifadesinde, `\3000` grup 300 yakalama varsa, geri başvuru 300 olarak yorumlayın; grup 300 yakalama yoksa, sekizlik 300 olarak, ardından 0 olarak yorumlayın.|Bir yakalamaya başvurabilen ondalık bir değere mümkün olduğunca çok basamak dönüştürerek bir geri başvuru olarak yorumlayın. Herhangi bir basamak dönüştürülemiyorsa, sekizlik basamağı 377 ' e kadar olan önde gelen sekizlik basamakları kullanarak sekizlik olarak yorumlayın; kalan basamakları değişmez değer olarak yorumlayın.|
 
 ## <a name="comparison-using-the-invariant-culture"></a>Sabit kültür kullanılarak karşılaştırma
 

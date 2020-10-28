@@ -3,15 +3,15 @@ title: Genel Koleksiyonları Ne Zaman Kullanılacağı
 ms.date: 04/30/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- collections [.NET Framework], generic
-- generic collections [.NET Framework]
+- collections [.NET], generic
+- generic collections [.NET]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: c59a125a8df95e3c4fe6e1839956d800bd6ee910
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e528c712aaddfdc4182940c36e52b968a071daa7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290389"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888540"
 ---
 # <a name="when-to-use-generic-collections"></a>Genel koleksiyonların kullanılma zamanı
 
@@ -21,13 +21,13 @@ Genel koleksiyonları kullanmak, bir temel koleksiyon türünden türemenize ve 
 
 Aşağıdaki genel türler var olan koleksiyon türlerine karşılık gelir:
 
-- <xref:System.Collections.Generic.List%601>, öğesine karşılık gelen genel sınıftır <xref:System.Collections.ArrayList> .
+- <xref:System.Collections.Generic.List%601> , öğesine karşılık gelen genel sınıftır <xref:System.Collections.ArrayList> .
 
-- <xref:System.Collections.Generic.Dictionary%602>ve, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> öğesine karşılık gelen genel sınıflardır <xref:System.Collections.Hashtable> .
+- <xref:System.Collections.Generic.Dictionary%602> ve, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> öğesine karşılık gelen genel sınıflardır <xref:System.Collections.Hashtable> .
 
-- <xref:System.Collections.ObjectModel.Collection%601>, öğesine karşılık gelen genel sınıftır <xref:System.Collections.CollectionBase> . <xref:System.Collections.ObjectModel.Collection%601>temel sınıf olarak kullanılabilir, ancak aksine soyut değildir, bu da <xref:System.Collections.CollectionBase> kullanımını çok daha kolay hale getirir.
+- <xref:System.Collections.ObjectModel.Collection%601> , öğesine karşılık gelen genel sınıftır <xref:System.Collections.CollectionBase> . <xref:System.Collections.ObjectModel.Collection%601> temel sınıf olarak kullanılabilir, ancak aksine soyut değildir, bu da <xref:System.Collections.CollectionBase> kullanımını çok daha kolay hale getirir.
 
-- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, öğesine karşılık gelen genel sınıftır <xref:System.Collections.ReadOnlyCollectionBase> . <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>soyut değildir ve var olan bir <xref:System.Collections.Generic.List%601> salt okunurdur koleksiyon olarak ortaya çıkarmak kolaylaşır.
+- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> , öğesine karşılık gelen genel sınıftır <xref:System.Collections.ReadOnlyCollectionBase> . <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> soyut değildir ve var olan bir <xref:System.Collections.Generic.List%601> salt okunurdur koleksiyon olarak ortaya çıkarmak kolaylaşır.
 
 - ,,,, <xref:System.Collections.Generic.Queue%601> <xref:System.Collections.Concurrent.ConcurrentQueue%601> <xref:System.Collections.Immutable.ImmutableQueue%601> <xref:System.Collections.Immutable.ImmutableArray%601> <xref:System.Collections.Generic.SortedList%602> Ve <xref:System.Collections.Immutable.ImmutableSortedSet%601> genel sınıflar, aynı ada sahip ilgili olmayan genel sınıflara karşılık gelir.
 
@@ -35,15 +35,15 @@ Aşağıdaki genel türler var olan koleksiyon türlerine karşılık gelir:
 
 Birkaç genel koleksiyon türü genel olmayan karşılıkiçermez. Bunlar aşağıdakileri içerir:
 
-- <xref:System.Collections.Generic.LinkedList%601>, O (1) ekleme ve kaldırma işlemleri sağlayan genel amaçlı bağlantılı bir listesidir.
+- <xref:System.Collections.Generic.LinkedList%601> , O (1) ekleme ve kaldırma işlemleri sağlayan genel amaçlı bağlantılı bir listesidir.
 
 - <xref:System.Collections.Generic.SortedDictionary%602>`n`, için yararlı bir alternatif sağlayan O (günlük) ekleme ve alma işlemleri içeren sıralanmış bir sözlüktür <xref:System.Collections.Generic.SortedList%602> .
 
-- <xref:System.Collections.ObjectModel.KeyedCollection%602>, kendi anahtarlarını içeren nesneleri depolamanın bir yolunu sağlayan bir liste ve sözlük arasında karma bir yoldur.
+- <xref:System.Collections.ObjectModel.KeyedCollection%602> , kendi anahtarlarını içeren nesneleri depolamanın bir yolunu sağlayan bir liste ve sözlük arasında karma bir yoldur.
 
-- <xref:System.Collections.Concurrent.BlockingCollection%601>sınırlayıcı ve engelleme işlevleriyle bir koleksiyon sınıfı uygular.
+- <xref:System.Collections.Concurrent.BlockingCollection%601> sınırlayıcı ve engelleme işlevleriyle bir koleksiyon sınıfı uygular.
 
-- <xref:System.Collections.Concurrent.ConcurrentBag%601>Sıralanmamış öğelerin hızlı bir şekilde eklenmesini ve kaldırılmasını sağlar.
+- <xref:System.Collections.Concurrent.ConcurrentBag%601> Sıralanmamış öğelerin hızlı bir şekilde eklenmesini ve kaldırılmasını sağlar.
 
 ### <a name="immutable-builders"></a>Sabit oluşturucular
 

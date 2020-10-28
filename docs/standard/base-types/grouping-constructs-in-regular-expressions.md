@@ -10,16 +10,16 @@ helpviewer_keywords:
 - lookbehinds
 - regular expressions, grouping constructs
 - lookaheads
-- .NET Framework regular expressions, grouping constructs
+- .NET regular expressions, grouping constructs
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: d737e5758ee7a940aeea3ded9a7937d687393116
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: de424b4a022a5e2d2f8a9c12b4147383082f019b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662634"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888514"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve bir giriş dizesinin alt dizelerini yakalar. Aşağıdakileri yapmak için gruplandırma yapılarını kullanabilirsiniz:  
@@ -62,7 +62,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Yakalanan gruplara dört şekilde erişebilirsiniz:  
   
-- Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, söz dizimi numarası kullanılarak aynı normal ifadede başvurulur `\` *number*, burada *sayı* yakalanan alt ifadenin sıra numarasıdır.  
+- Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, söz dizimi numarası kullanılarak aynı normal ifadede başvurulur `\` *number* , burada *sayı* yakalanan alt ifadenin sıra numarasıdır.  
   
 - Normal ifade içinde adlandırılmış yeniden başvuru yapısını kullanarak. Eşleşen alt ifadeye, sözdizimi adı kullanılarak aynı normal ifadede başvurulur `\k<` *name* `>` ; burada *ad* bir yakalama grubunun adı veya `\k<` *sayı* `>` , burada *sayı* bir yakalama grubunun sıra numarasıdır. Yakalama grubu, sıra numarasıyla aynı olan varsayılan bir ada sahiptir. Daha fazla bilgi için bu konunun ilerleyen kısımlarında bulunan [eşleşen alt ifadeler](#named_matched_subexpression) bölümüne bakın.  
   
@@ -81,7 +81,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Aşağıdaki tabloda, normal ifade deseninin nasıl yorumlanacağı gösterilmektedir.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu ilk yakalama grubudur.|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
@@ -107,7 +107,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
 - Normal ifade içinde adlandırılmış yeniden başvuru yapısını kullanarak. Eşleşen alt ifadeye, sözdizimi adı kullanılarak aynı normal ifadede başvurulur `\k<` *name* `>` ; burada *ad* , yakalanan alt ifadenin adıdır.  
   
-- Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, söz dizimi numarası kullanılarak aynı normal ifadede başvurulur `\` *number*, burada *sayı* yakalanan alt ifadenin sıra numarasıdır. Adlandırılmış eşleşen alt ifadeler, eşleşen alt ifadelerden sonra soldan sağa doğru numaralandırılır.  
+- Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, söz dizimi numarası kullanılarak aynı normal ifadede başvurulur `\` *number* , burada *sayı* yakalanan alt ifadenin sıra numarasıdır. Adlandırılmış eşleşen alt ifadeler, eşleşen alt ifadelerden sonra soldan sağa doğru numaralandırılır.  
   
 - `${` *name* `}` Bir veya yöntem çağrısında ad değiştirme sırasını kullanarak <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , *adı* yakalanan alt ifadenin adıdır.  
   
@@ -119,7 +119,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Basit bir normal ifade modelinde, numaralandırılmış (adlandırılmamış) ve adlandırılmış grupların programlı olarak veya normal ifade dili sözdizimi kullanılarak nasıl başvurulabileceği gösterilmektedir. Normal ifade, `((?<One>abc)\d+)?(?<Two>xyz)(.*)` aşağıdaki yakalama gruplarını numaraya göre ve adına göre oluşturur. İlk yakalama grubu (sayı 0) her zaman tüm modele başvurur.  
   
-|Sayı|Name|Desen|  
+|Sayı|Ad|Desen|  
 |------------|----------|-------------|  
 |0|0 (varsayılan ad)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (varsayılan ad)|`((?<One>abc)\d+)`|  
@@ -138,7 +138,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Aşağıdaki tabloda, normal ifadenin nasıl yorumlanacağı gösterilmektedir.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`(?<duplicateWord>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunu adlandırın `duplicateWord` .|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
@@ -155,7 +155,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Aşağıdaki tabloda, normal ifadenin nasıl yorumlanacağı gösterilmektedir.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\D+`|Ondalık olmayan bir veya daha fazla karakter eşleştirin.|  
 |`(?<digit>\d+)`|Bir veya daha fazla ondalık basamak karakteri eşleştirin. Eşleşmeyi `digit` adlandırılmış gruba atayın.|  
@@ -172,7 +172,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
 `(?'name1-name2' subexpression)`
   
- Burada *name1* geçerli grup (isteğe bağlı) ise, *AD2* daha önce tanımlanmış bir gruptur ve alt *ifade* geçerli bir normal ifade örünyordu. Dengeleme grubu tanımı, *AD2* tanımını siler ve *name1*içinde *AD2* ve *name1* arasındaki aralığı depolar. Hiçbir *AD2* grubu tanımlanmamışsa, eşleşme geri izler. N} öğesinin son tanımını silmek, *AD2* *'ın önceki tanımını ortaya* çıkardığı için, bu yapı, boşluk olarak grup *AD2* için yakalama yığınını, parantez gibi iç içe yapıları izlemek için bir sayaç olarak kullanmanıza olanak sağlar.  
+ Burada *name1* geçerli grup (isteğe bağlı) ise, *AD2* daha önce tanımlanmış bir gruptur ve alt *ifade* geçerli bir normal ifade örünyordu. Dengeleme grubu tanımı, *AD2* tanımını siler ve *name1* içinde *AD2* ve *name1* arasındaki aralığı depolar. Hiçbir *AD2* grubu tanımlanmamışsa, eşleşme geri izler. N} öğesinin son tanımını silmek, *AD2* *'ın önceki tanımını ortaya* çıkardığı için, bu yapı, boşluk olarak grup *AD2* için yakalama yığınını, parantez gibi iç içe yapıları izlemek için bir sayaç olarak kullanmanıza olanak sağlar.  
   
  Dengeleme grubu tanımı bir yığın olarak *AD2* kullanır. İç içe yerleştirilmiş her yapının başlangıç karakteri gruba ve <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> koleksiyonuna yerleştirilir. Kapanış karakteri eşleştiğinde, karşılık gelen açma karakteri gruptan kaldırılır ve <xref:System.Text.RegularExpressions.Group.Captures%2A> koleksiyon bir ile azaltılır. Tüm iç içe yapıların açılış ve kapanış karakterleri eşleştirdikten sonra, *AD2* boş olur.  
   
@@ -190,7 +190,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Normal ifade aşağıdaki gibi yorumlanır:  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Dizenin başlangıcında başlayın.|  
 |`[^<>]*`|Sol veya sağ açılı parantez olmayan sıfır veya daha fazla karakterle eşleştirin.|  
@@ -253,7 +253,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Normal ifade, `(?:\b(?:\w+)\W*)+\.` bir noktayla sonlandırılan bir cümle ile eşleşir. Normal ifade tek sözcüklerde değil, cümlelere odaklandığı ve gruplandırma yapıları özel olarak nicelik belirteçleri olarak kullanılır. Normal ifade deseni aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`(?:\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Eşleşen metni yakalanan bir gruba atamayın.|  
@@ -276,7 +276,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Örneğin, aşağıdaki örnekteki normal ifade, `\b(?ix: d \w+)\s` büyük/küçük harfe duyarsız eşleştirmeyi etkinleştirmek ve "d" harfiyle başlayan tüm sözcükleri tanımlamak için bir gruplandırma yapısında satır içi seçenekler kullanır. Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`(?ix: d \w+)`|Büyük/küçük harf duyarsız eşleştirme ve bu düzende boşluk yok sayılıyor, "d" ile ve bir veya daha fazla sözcük karakteri ile eşleşir.|  
@@ -291,7 +291,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  `(?=`alt *ifade*`)`  
   
- Burada alt *ifade* herhangi bir normal ifade deseninin olduğu yerdir. Bir eşleşmenin başarılı olması için, eşleşen alt dizenin eşleşme sonucuna dahil edilmemesine rağmen giriş dizesinin alt *ifade*içindeki normal ifade düzeniyle eşleşmesi gerekir. Sıfır genişlikli pozitif ileri yönlü onaylama işlemi geri izlememez.  
+ Burada alt *ifade* herhangi bir normal ifade deseninin olduğu yerdir. Bir eşleşmenin başarılı olması için, eşleşen alt dizenin eşleşme sonucuna dahil edilmemesine rağmen giriş dizesinin alt *ifade* içindeki normal ifade düzeniyle eşleşmesi gerekir. Sıfır genişlikli pozitif ileri yönlü onaylama işlemi geri izlememez.  
   
  Genellikle, normal ifade deseninin sonunda sıfır genişlikli pozitif ileri yönlü onaylama işlemi bulunur. Bir eşleşmenin gerçekleşmesi için bir dizenin sonunda bulunması gereken ancak eşleştirmeye dahil olmaması gereken bir alt dize tanımlar. Aşırı geri izlemeyi önlemek için de kullanışlıdır. Belirli bir yakalanan grubun, yakalanan grup için tanımlanan bir düzenin alt kümesiyle eşleşen metinle başladığından emin olmak için sıfır genişlikli pozitif ileriye yönelik bir onaylama işlemi kullanabilirsiniz. Örneğin, bir yakalama grubu ardışık sözcük karakterleriyle eşleşiyorsa, ilk karakterin alfabetik bir büyük harf karakter olmasını gerektirmek için sıfır genişlikli pozitif ileri yönlü bir onaylama işlemi kullanabilirsiniz.  
   
@@ -302,7 +302,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Normal ifade `\b\w+(?=\sis\b)` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
@@ -314,7 +314,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  `(?!`alt *ifade*`)`  
   
- Burada alt *ifade* herhangi bir normal ifade deseninin olduğu yerdir. Eşleşmenin başarılı olması için, eşleşen dize eşleşme sonucuna dahil olmasa da giriş dizesinin alt *ifade*içindeki normal ifade düzeniyle eşleşmesi gerekir.  
+ Burada alt *ifade* herhangi bir normal ifade deseninin olduğu yerdir. Eşleşmenin başarılı olması için, eşleşen dize eşleşme sonucuna dahil olmasa da giriş dizesinin alt *ifade* içindeki normal ifade düzeniyle eşleşmesi gerekir.  
   
  Sıfır genişlikli negatif ileri yönlü onaylama genellikle normal bir ifadenin başında veya sonunda kullanılır. Normal bir ifadenin başlangıcında, normal ifadenin başlangıcı eşleşmesi gereken benzer ancak daha fazla genel bir model tanımladığı zaman eşleştirileceği belirli bir model tanımlayabilir. Bu durumda, genellikle geri izlemeyi sınırlandırmak için kullanılır. Normal bir ifadenin sonunda, bir eşleşmenin sonunda gerçekleşmeyecek bir alt ifade tanımlayabilir.  
   
@@ -325,7 +325,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Normal ifade `\b(?!un)\w+\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`(?!un)`|Sonraki iki karakterin "un" olup olmadığını belirleme. Aksi takdirde eşleşme mümkündür.|  
@@ -339,7 +339,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Normal ifade `\b\w+\b(?!\p{P})` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
@@ -363,7 +363,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Normal ifade deseninin `(?<=\b20)\d{2}\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\d{2}`|İki ondalık basamağı eşleştirin.|  
 |`(?<=\b20)`|İki ondalık basamak bundan önce bir sözcük sınırında "20" ondalık haneleri içeriyorsa eşleştirmeye devam edin.|  
@@ -388,7 +388,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Normal ifade deseninin `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\w+`|Bir veya daha fazla sözcük karakteri ve ardından bir boşluk karakteri eşleştirin.|  
@@ -417,7 +417,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Geri dönüş olmayan normal ifadesi `(?>(\w)\1+).\b` Aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`(\w)`|Tek bir sözcük karakteriyle eşleştirin ve ilk yakalama grubuna atayın.|  
 |`\1+`|İlk yakalanan alt dizenin değerini bir veya daha fazla kez eşleştirin.|  
@@ -444,7 +444,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Normal ifade deseninin `(\b(\w+)\W+)+` tek tek kelimeleri bir dizeden ayıklar. Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Birlikte, bu karakterler bir kelime oluşturur. Bu ikinci yakalama grubudur.|  

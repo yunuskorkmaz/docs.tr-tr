@@ -8,21 +8,21 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
+- numeric format strings [.NET]
+- formatting [.NET], numbers
 - format strings
 - custom numeric format strings
-- numbers [.NET Framework], formatting
+- numbers [.NET], formatting
 - format specifiers, numeric
-- formatting numbers [.NET Framework]
+- formatting numbers [.NET]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 7cf61746e483fe5aa2ee5e3421219240e8700172
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6e99191ecfb59e73656b98b8fb5185114194ab09
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541585"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888704"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
@@ -31,7 +31,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
 Özel sayısal biçim dizeleri, `ToString` tüm sayısal türdeki metodun bazı aşırı yüklemeleri tarafından desteklenir. Örneğin, <xref:System.Int32.ToString%28System.String%29> türünün ve yöntemlerine bir sayısal biçim dizesi sağlayabilirsiniz <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> <xref:System.Int32> . Özel sayısal biçim dizeleri, [composite formatting feature](composite-formatting.md) `Write` ve sınıflarının bazı ve `WriteLine` yöntemleri <xref:System.Console> <xref:System.IO.StreamWriter> , yöntemi ve <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yöntemi tarafından kullanılan .net Composite biçimlendirme özelliği tarafından da desteklenir. [Dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) özelliği de özel sayısal biçim dizelerini destekler.
 
 > [!TIP]
-> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
+> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını** indirebilirsiniz. Kaynak kodu [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
 
 <a name="table"></a> Aşağıdaki tabloda özel sayısal biçim belirticileri açıklanmakta ve her biçim belirticisi tarafından üretilen örnek çıktı görüntülenir. Özel sayısal biçim dizeleri kullanma hakkında ek bilgi için [Notlar](#NotesCustomFormatting) bölümüne ve kullanımlarının kapsamlı bir gösterimi için [örnek](#example) bölümüne bakın.
 
@@ -45,7 +45,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
 |"‰"|Her mille yer tutucu|Sayıyı 1000 ile çarpar ve sonuç dizesine yerelleştirilmiş bir binde simgesi ekler.<br /><br /> Daha fazla bilgi: ["‰" özel Belirleyicisi](#SpecifierPerMille).|0,03697 ("#0.00‰", en-US)-> 36,97‰<br /><br /> 0,03697 ("#0 00‰", ru-RU)-> 36, 97‰|
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Üstel simgeleme|Eğer ardından en az bir 0 (sıfır) geliyorsa, sonucu üstel gösterim kullanarak biçimlendirir. "E" veya "e" harfi üs sembolünün sonuç dizesinde büyük veya küçük harf olduğunu belirtir. "E" veya "e" karakterini izleyen sıfır sayısı üsteki en az basamak sayısını belirler. Artı işareti (+) üsten önce her zaman bir işaret karakterinin bulunacağını belirtir. Eksi işareti (-), işaret karakterinin yalnızca negatif üslerin önünde bulunacağını belirtir.<br /><br /> Daha fazla bilgi: ["e" ve "e" özel belirticileri](#SpecifierExponent).|987654 ("#0.0e0")-> 98.8 E4<br /><br /> 1503,92311 ("0,0 # #e + 00")-> 1.504 e + 03<br /><br /> 1.8901385 e-16 ("0.0 e + 00")-> 1.9 e-16|
 |"\\"|Atlatma karakteri|Sonraki karakterin özel biçim tanımlayıcısı yerine bir sabit karakter olarak yorumlanmasını sağlar.<br /><br /> Daha fazla bilgi: [" \\ " kaçış karakteri](#SpecifierEscape).|987654 (" \\ # # #00 \\ #")-> #987654 #|
-|'*String*'<br /><br /> "*String*"|Değişmez dize sınırlayıcısı|İçinde bulunan karakterlerin sonuç dizesine değiştirilmeden kopyalanacağını belirtir.<br/><br/>Daha fazla bilgi: [karakter sabit değerleri](#character-literals).|68 ("#" derece ' ")-> 68 derece<br /><br /> 68 ("#" derece ' ")-> 68 derece|
+|' *String* '<br /><br /> " *String* "|Değişmez dize sınırlayıcısı|İçinde bulunan karakterlerin sonuç dizesine değiştirilmeden kopyalanacağını belirtir.<br/><br/>Daha fazla bilgi: [karakter sabit değerleri](#character-literals).|68 ("#" derece ' ")-> 68 derece<br /><br /> 68 ("#" derece ' ")-> 68 derece|
 |;|Bölüm ayırıcı|Pozitif, negatif ve sıfır değerine sahip sayılar için ayrı biçim dizeleri tanımlar.<br /><br /> Daha fazla bilgi: [";" Bölüm ayırıcısı](#SectionSeparator).|12,345 ("#0 0 #;(#0.0 #);-\ 0-")-> 12,35<br /><br /> 0 ("#0 0 #;(#0.0 #);-\ 0-")->-0-<br /><br /> -12,345 ("#0 0 #;(#0.0 #);-\ 0-")-> (12,35)<br /><br /> 12,345 ("#0 0 #;(#0.0 #)")-> 12,35<br /><br /> 0 ("#0 0 #;(#0.0 #)")-> 0,0<br /><br /> -12,345 ("#0 0 #;(#0.0 #)")-> (12,35)|
 |Diğer|Diğer karakterler|Karakter, değişmeyen sonuç dizesine kopyalanır.<br/><br/>Daha fazla bilgi: [karakter sabit değerleri](#character-literals).|68 ("# °")-> 68 °|
 
@@ -206,7 +206,7 @@ Aşağıdaki örnek, biçimlendirme işleminin "#", "0" ve " \\ " karakterlerini
 
 Noktalı virgül (;), sayının değerinin pozitif, negatif veya sıfır olma durumuna göre farklı biçimlendirme işlemi uygulayan bir koşullu biçim tanımlayıcısıdır. Bu davranışı oluşturmak için, bir özel biçim dizesi noktalı virgüllerle ayrılan en çok üç bölüm içerebilir. Bu bölümler aşağıdaki tabloda açıklanır.
 
-|Bölüm sayısı|Description|
+|Bölüm sayısı|Açıklama|
 |------------------------|-----------------|
 |Bir bölüm|Biçim dizesi tüm değerlere uygulanır.|
 |İki bölüm|İlk bölüm pozitif değerlere ve sıfırlara, ikinci bölüm de negatif değerlere uygulanır.<br /><br /> Eğer biçimlendirilen değer negatif ise, ama ikinci bölümdeki biçimlendirmeden sonra yuvarlama ile sıfır olursa, sonuçtaki sıfır ilk bölüme göre biçimlendirilir.|
@@ -258,7 +258,7 @@ Aşağıdaki örnek, özel bir sayısal biçim dizesinde ayrılmış karakterler
 
 ## <a name="notes"></a>Notlar
 
-### <a name="floating-point-infinities-and-nan"></a>Kayan nokta sonsuz ve NaN
+### <a name="floating-point-infinities-and-nan"></a>Sonsuz ve NaN Floating-Point
 
 Biçim dizesi ne olursa olsun, bir <xref:System.Single> veya <xref:System.Double> kayan nokta türünün değeri pozitif sonsuzluk, negatif sonsuzluk veya sayı değil (NaN), biçimlendirilen dize <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> geçerli geçerli <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A> <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> nesne tarafından belirtilen ilgili, veya özelliğin değeridir <xref:System.Globalization.NumberFormatInfo> .
 

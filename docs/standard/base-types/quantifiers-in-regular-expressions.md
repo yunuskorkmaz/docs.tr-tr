@@ -11,16 +11,16 @@ helpviewer_keywords:
 - metacharacters, quantifiers
 - minimal matching quantifiers
 - quantifiers in regular expressions
-- .NET Framework regular expressions, quantifiers
+- .NET regular expressions, quantifiers
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 3ffdd481ac001b4e1bd229c6f5fa0bf285b508b2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 361286b992180e1d7fdf18d88022780cc3aa53fc
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063815"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889432"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Niceleyiciler
 Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane karakter, Grup veya karakter sınıfının olması gerektiğini belirtir.  Aşağıdaki tabloda .NET tarafından desteklenen nicelik belirteçleri listelenmektedir.  
@@ -46,7 +46,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
 > Normal ifade düzeninde *, +,?, {, ve} karakter ile karşılaşılırsa, normal ifade altyapısı onları nicelik belirteçleri veya bir [karakter sınıfına](character-classes-in-regular-expressions.md)dahil olmadıkları sürece belirleyici yapıların bir parçası olarak yorumlar. Bunları bir karakter sınıfı dışında değişmez karakterler olarak yorumlamak için, üzerlerine ters eğik çizgi koyarak kaçış yapmanız gerekir. Örneğin, `\*` bir normal ifade deseninin dizesi, sabit bir yıldız işareti (" \* ") karakteri olarak yorumlanır.  
   
 ### <a name="match-zero-or-more-times-"></a>Sıfır veya daha fazla kez eşleştir: *  
- `*`Nicelik belirteci önceki öğeyle sıfır veya daha fazla kez eşleşir. `{0,}`Nicelik belirleyici eşdeğerdir. `*`, geç eşdeğerini olan doyumsuz nicelik belirleyicgidir `*?` .  
+ `*`Nicelik belirteci önceki öğeyle sıfır veya daha fazla kez eşleşir. `{0,}`Nicelik belirleyici eşdeğerdir. `*` , geç eşdeğerini olan doyumsuz nicelik belirleyicgidir `*?` .  
   
  Aşağıdaki örnekte bu normal ifade gösterilmektedir. Giriş dizesindeki dokuz basamaklı gruplar, (,, `95` `929` `9219` , ve) ile beş arasında eşleşir `9919` .  
   
@@ -63,7 +63,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
 |`\b`|Bir sözcük sınırında bit.|  
   
 ### <a name="match-one-or-more-times-"></a>Bir veya daha fazla kez eşleştir: +  
- `+`Nicelik belirteci önceki öğeyle bir veya daha fazla kez eşleşir. Eşdeğerdir `{1,}` . `+`, geç eşdeğerini olan doyumsuz nicelik belirleyicgidir `+?` .  
+ `+`Nicelik belirteci önceki öğeyle bir veya daha fazla kez eşleşir. Eşdeğerdir `{1,}` . `+` , geç eşdeğerini olan doyumsuz nicelik belirleyicgidir `+?` .  
   
  Örneğin, normal ifade, `\ban+\w*?\b` harfle başlayan tüm kelimeleri ve `a` sonra bir veya daha fazla harf örneğini eşleştirmeyi dener `n` . Aşağıdaki örnekte bu normal ifade gösterilmektedir. Normal ifade,,, `an` ve ile `annual` eşleşir `announcement` `antique` ve doğru şekilde eşleşemez `autumn` `all` .  
   
@@ -80,7 +80,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
 |`\b`|Bir sözcük sınırında bit.|  
   
 ### <a name="match-zero-or-one-time-"></a>Sıfır veya bir kez eşleştir:?  
- `?`Nicelik belirteci, önceki öğeyle sıfır veya bir kez eşleşir. Eşdeğerdir `{0,1}` . `?`, geç eşdeğerini olan doyumsuz nicelik belirleyicgidir `??` .  
+ `?`Nicelik belirteci, önceki öğeyle sıfır veya bir kez eşleşir. Eşdeğerdir `{0,1}` . `?` , geç eşdeğerini olan doyumsuz nicelik belirleyicgidir `??` .  
   
  Örneğin, normal ifade, `\ban?\b` harfle başlayan tüm kelimeleri ve `a` ardından sıfır veya mektubun bir örneğini eşleştirmeyi dener `n` . Diğer bir deyişle, kelimeleri ve sözcüklerini eşleştirmeyi dener `a` `an` . Aşağıdaki örnekte bu normal ifade gösterilmektedir.  
   
@@ -131,7 +131,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
 |`\D+`|En az bir ondalık olmayan basamakla eşleştirin.|  
   
 ### <a name="match-between-n-and-m-times-nm"></a>N ve y zamanları arasında eşleştir: {n, d}  
- `{` *N*. `,` *m* `}` nicelik belirteci, önceki öğeyle en az *n* kez eşleşir, ancak *n* ve *d* tamsayılardır. *m* `{`*n* `,` *k* `}` , geç eşdeğeri `{` *n* `,` *d*olan doyumsuz nicelik belirleyicgidir `}?` .  
+ `{` *N* . `,` *m* `}` nicelik belirteci, önceki öğeyle en az *n* kez eşleşir, ancak *n* ve *d* tamsayılardır. *m* `{`*n* `,` *k* `}` , geç eşdeğeri `{` *n* `,` *d* olan doyumsuz nicelik belirleyicgidir `}?` .  
   
  Aşağıdaki örnekte, normal ifade `(00\s){2,4}` iki sıfır basamağının iki ve dört tekrarı ile izleyen bir boşluk ile eşleştirmeye çalışır. Giriş dizesinin son bölümünün, en fazla dört kez bu kalıbı içerdiğini unutmayın. Ancak, bu alt dizenin yalnızca başlangıç kısmı (alana kadar ve sıfır ikilisi) normal ifade düzeniyle eşleşir.  
   
@@ -206,7 +206,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
  `{` *n* `}?` Bir çizim için önceki bölümde yer aldığı n nicelik için örneğe bakın. Bu örnekteki normal ifade, `{` *n* `,}` en az üç karakteri ve ardından bir nokta gelen bir dizeyi eşleştirmek için n nicelik belirteci kullanır.  
   
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>N ve k kez Eşleştir (geç eşleşme): {n, d}?  
- `{` *N*. `,` *m* `}?` nicelik belirteci önceki öğeyle `n` ve `m` zamanlardır; burada *n* ve *b* , mümkün olduğunca az sayıda tamdır. Bu, doyumsuz nicelik sayısının yavaş karşılığı `{` *n* `,` *m* `}` .  
+ `{` *N* . `,` *m* `}?` nicelik belirteci önceki öğeyle `n` ve `m` zamanlardır; burada *n* ve *b* , mümkün olduğunca az sayıda tamdır. Bu, doyumsuz nicelik sayısının yavaş karşılığı `{` *n* `,` *m* `}` .  
   
  Aşağıdaki örnekte, normal ifade `\b[A-Z](\w*?\s*?){1,10}[.!?]` bir ve on sözcükten oluşan cümleler ile eşleşir. 18 sözcük içeren bir cümle hariç giriş dizesindeki tüm cümlelere eşleşir.  
   

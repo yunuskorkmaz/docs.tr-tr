@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SortedList class, grouping data in collections
 - grouping data in collections, SortedList collection type
 - SortedList collection type
-- collections [.NET Framework], SortedList collection type
+- collections [.NET], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: 2d9d3744859eea1a09923980b3b4c57eca6bba97
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 339d247f3b7e775de740c6c1ce786b078441c699
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287945"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889328"
 ---
 # <a name="sorted-collection-types"></a>Sıralanmış Koleksiyon Türleri
 
@@ -33,7 +33,7 @@ ms.locfileid: "84287945"
 
 Aşağıdaki tabloda, iki sıralanmış liste sınıfı ve sınıfı arasındaki farklılıklar listelenmiştir <xref:System.Collections.Generic.SortedDictionary%602> .
 
-| <xref:System.Collections.SortedList>Genel olmayan sınıf ve <xref:System.Collections.Generic.SortedList%602> Genel sınıf | <xref:System.Collections.Generic.SortedDictionary%602>Genel sınıf |
+| <xref:System.Collections.SortedList> Genel olmayan sınıf ve <xref:System.Collections.Generic.SortedList%602> Genel sınıf | <xref:System.Collections.Generic.SortedDictionary%602> Genel sınıf |
 |--|--|
 | Anahtar ve değer döndüren özellikler dizine alınır ve bu özellik, etkin dizinli almaya izin verir. | Dizinli alma yok. |
 | Alım O (günlük `n` ). | Alım O (günlük `n` ). |

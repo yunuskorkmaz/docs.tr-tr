@@ -10,16 +10,16 @@ helpviewer_keywords:
 - parsing strings, date and time strings
 - date and time strings
 - ParseExact method
-- enumerations [.NET Framework], parsing strings
+- enumerations [.NET], parsing strings
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9fba80e4dbe1e4950ed24e7489ac48ea1b6ff20b
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: f6ac4672a81db7047069f726f7eb1b920a82b3db
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662907"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889042"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>.NET 'teki tarih ve saat dizelerini ayrıştırma
 
@@ -82,7 +82,7 @@ Aşağıdaki örnekte, <xref:System.DateTime.ParseExact%2A?displayProperty=nameW
 [!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
-Ve yöntemlerinin her bir aşırı yüklemesi <xref:System.DateTime.Parse%2A> <xref:System.DateTime.ParseExact%2A> de <xref:System.IFormatProvider> dizenin biçimlendirmesi hakkında kültüre özgü bilgiler sağlayan bir parametreye sahiptir. Bu <xref:System.IFormatProvider> nesne, bir <xref:System.Globalization.CultureInfo> Standart kültürü veya <xref:System.Globalization.DateTimeFormatInfo> özelliği tarafından döndürülen bir nesneyi temsil eden bir nesnedir <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> .  <xref:System.DateTime.ParseExact%2A>Ayrıca, bir veya daha fazla özel tarih ve saat biçimini tanımlayan ek bir dize veya dize dizisi bağımsız değişkeni kullanır.
+Ve yöntemlerinin her bir aşırı yüklemesi <xref:System.DateTime.Parse%2A> <xref:System.DateTime.ParseExact%2A> de <xref:System.IFormatProvider> dizenin biçimlendirmesi hakkında kültüre özgü bilgiler sağlayan bir parametreye sahiptir. Bu <xref:System.IFormatProvider> nesne, bir <xref:System.Globalization.CultureInfo> Standart kültürü veya <xref:System.Globalization.DateTimeFormatInfo> özelliği tarafından döndürülen bir nesneyi temsil eden bir nesnedir <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> .  <xref:System.DateTime.ParseExact%2A> Ayrıca, bir veya daha fazla özel tarih ve saat biçimini tanımlayan ek bir dize veya dize dizisi bağımsız değişkeni kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

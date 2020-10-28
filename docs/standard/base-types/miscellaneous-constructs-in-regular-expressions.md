@@ -7,15 +7,15 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - constructs, miscellaneous
-- .NET Framework regular expressions, miscellaneous constructs
+- .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: 8ca888074aa757a1bfba786a7bec5928b75b1da2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7800dee67513f885339fad67c7a999cc06cca36
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290415"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889276"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Normal İfadelerdeki Çeşitli Yapılar
 .NET 'teki normal ifadeler üç çeşitli dil yapılarını içerir. Bir normal ifade deseninin ortasında belirli eşleştirme seçeneklerini etkinleştirmenizi veya devre dışı bırakmanızı sağlar. Kalan iki, açıklamaları normal bir ifadeye eklemenizi sağlar.  
@@ -27,7 +27,7 @@ ms.locfileid: "84290415"
   
  Soru işaretinden sonra etkinleştirmek istediğiniz seçenekleri ve eksi işaretinden sonra devre dışı bırakmak istediğiniz seçenekleri listeleyin. Aşağıdaki tabloda her bir seçenek açıklanmaktadır. Her seçenek hakkında daha fazla bilgi için bkz. [normal Ifade seçenekleri](regular-expression-options.md).  
   
-|Seçenek|Description|  
+|Seçenek|Açıklama|  
 |------------|-----------------|  
 |`i`|Büyük/küçük harfe duyarsız eşleşme.|  
 |`m`|Çok satırlı mod.|  
@@ -47,7 +47,7 @@ ms.locfileid: "84290415"
   
  Örnek iki normal ifade tanımlar. Birincisi, `\b(D\w+)\s(d\w+)\b` büyük bir "d" ve küçük harf "d" ile başlayan iki ardışık sözcükten eşleşir. İkinci normal ifade, `\b(D\w+)(?ixn) \s (d\w+) \b` Aşağıdaki tabloda açıklandığı gibi, bu kalıbı değiştirmek için satır içi seçenekleri kullanır. Sonuçların karşılaştırması yapının etkisini onaylar `(?ixn)` .  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`(D\w+)`|Büyük bir "D" ve ardından bir veya daha fazla sözcük karakteri Eşleştir. Bu ilk yakalama grubudur.|  
@@ -61,7 +61,7 @@ ms.locfileid: "84290415"
   
  Aşağıdaki örnek, önceki bölümdeki örnekteki ilk normal ifade deseninin yinelenir. Karşılaştırmayı, büyük/küçük harfe duyarlı olup olmadığını belirtmek için normal ifadeye iki satır içi açıklama ekler. Normal ifade deseninin `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` aşağıdaki şekilde tanımlanması gerekir.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`(?# case-sensitive comparison)`|Bir yorum. Desenler ile eşleşen davranışı etkilemez.|  
@@ -82,7 +82,7 @@ ms.locfileid: "84290415"
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\{`|Bir açma ayracı eşleştirin.|  
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  

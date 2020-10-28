@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
+- threading [.NET], asynchronous features
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: c235a838504889a105ef98df47f7373a145503da
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b9c3edeb468445e6f7a58ead194559bed5636579
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289453"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888860"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme
 
-Olay tabanlı zaman uyumsuz model, bir sınıfın zaman uyumsuz davranışını açığa çıkarmak için bir model sağlar. Bu düzenin tanıtılmasıyla .NET Framework, zaman uyumsuz davranışı ortaya çıkarmak için iki desen tanımlar: arabirime dayalı zaman uyumsuz desen <xref:System.IAsyncResult?displayProperty=nameWithType> ve olay tabanlı Düzen. Bu konu başlığı altında, her iki deseni de uygulamanız için uygun olduğunda açıklanır.
+Olay tabanlı zaman uyumsuz model, bir sınıfın zaman uyumsuz davranışını açığa çıkarmak için bir model sağlar. Bu düzenin kullanıma sunulmasıyla birlikte, .NET zaman uyumsuz davranışı göstermek için iki desen tanımlar: <xref:System.IAsyncResult?displayProperty=nameWithType> arabirime ve olay tabanlı deseni temel alan zaman uyumsuz düzen. Bu makalede her iki deseni de uygulamanız için uygun olduğu zaman açıklanır.
 
 Arabirim ile zaman uyumsuz programlama hakkında daha fazla bilgi için <xref:System.IAsyncResult> bkz. [zaman uyumsuz programlama MODELI (APM)](asynchronous-programming-model-apm.md).
 
@@ -62,11 +62,11 @@ Olay tabanlı zaman uyumsuz düzende daha önce bahsedilen senaryolar altında b
 
 Olay tabanlı düzenin, ve deseninin yanı sıra, bu üç senaryo da ele alınmaz <xref:System.IAsyncResult> :
 
-- Engelleme, bir tane üzerinde bekle<xref:System.IAsyncResult>
+- Engelleme, bir tane üzerinde bekle <xref:System.IAsyncResult>
 
 - Birçok nesne için engelleme bekleme <xref:System.IAsyncResult>
 
-- Tamamlanma için yoklama<xref:System.IAsyncResult>
+- Tamamlanma için yoklama <xref:System.IAsyncResult>
 
 Bu senaryolara olay tabanlı bir model kullanarak adresleyerek, ancak bunu yapmak, deseninin kullanılmasıyla daha kısaberdir <xref:System.IAsyncResult> .
 

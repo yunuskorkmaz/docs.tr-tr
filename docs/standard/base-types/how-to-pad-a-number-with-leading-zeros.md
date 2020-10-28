@@ -7,17 +7,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
-- number formatting [.NET Framework]
-- numbers [.NET Framework], format strings
+- numeric format strings [.NET]
+- formatting [.NET], numbers
+- number formatting [.NET]
+- numbers [.NET], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: 6ef0ddb37f1bc73254aa639d7c018ec6a01abd9b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7c3ee376fde34663ee0599c0b1ae654871a71206
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447192"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888462"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma
 
@@ -29,9 +29,9 @@ ms.locfileid: "84447192"
 
 1. Tamsayıyı ondalık değer veya onaltılık bir değer olarak göstermek isteyip istemediğinizi belirleme.
 
-    - Tamsayıyı bir ondalık değer olarak göstermek için `ToString(String)` metodunu çağırın ve "D*n*" dizesini parametresinin değeri olarak geçirin `format` ; burada *n* , dizenin minimum uzunluğunu temsil eder.
+    - Tamsayıyı bir ondalık değer olarak göstermek için `ToString(String)` metodunu çağırın ve "D *n* " dizesini parametresinin değeri olarak geçirin `format` ; burada *n* , dizenin minimum uzunluğunu temsil eder.
 
-    - Tamsayıyı onaltılık bir değer olarak göstermek için `ToString(String)` metodunu çağırın ve "X*n*" dizesini biçim parametresinin değeri olarak geçirin; burada *n* , dizenin minimum uzunluğunu temsil eder.
+    - Tamsayıyı onaltılık bir değer olarak göstermek için `ToString(String)` metodunu çağırın ve "X *n* " dizesini biçim parametresinin değeri olarak geçirin; burada *n* , dizenin minimum uzunluğunu temsil eder.
 
 Ayrıca, biçim dizesini hem [C#](../../csharp/language-reference/tokens/interpolated.md) hem de [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)enterpolasyonlu bir dizedeki de kullanabilirsiniz ya da <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> [Bileşik biçimlendirme](composite-formatting.md)kullanan veya gibi bir yöntemi çağırabilirsiniz.
 
@@ -54,7 +54,7 @@ Aşağıdaki örnek, biçimlendirilen sayının toplam uzunluğu en az sekiz kar
 
 1. Sayısal olmayan dizenin uzunluğuna göre biçimlendirilen dizeye eklemek istediğiniz öndeki sıfırlar sayısını ekleyin. Baştaki sıfırların sayısını eklemek, doldurulmuş dizenin toplam uzunluğunu tanımlar.
 
-1. Tamsayı değerinin `ToString(String)` metodunu çağırın ve "D*n*" dizesini ondalık dizeler Için ve "X*n*" dizesini, onaltılık dizeler için geçirin; burada *n* , doldurulmuş dizenin toplam uzunluğunu temsil eder. Bileşik biçimlendirmeyi destekleyen bir yöntemde "D*n*" veya "X*n*" biçim dizesini de kullanabilirsiniz.
+1. Tamsayı değerinin `ToString(String)` metodunu çağırın ve "D *n* " dizesini ondalık dizeler Için ve "X *n* " dizesini, onaltılık dizeler için geçirin; burada *n* , doldurulmuş dizenin toplam uzunluğunu temsil eder. Bileşik biçimlendirmeyi destekleyen bir yöntemde "D *n* " veya "X *n* " biçim dizesini de kullanabilirsiniz.
 
 Aşağıdaki örnek, beş önde sıfır ile bir tamsayı değeri alt Pad.
 
@@ -104,5 +104,5 @@ Aşağıdaki örnek, <xref:System.Double> beş öndeki sıfırlar ile iki değer
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özel sayısal biçim dizeleri](custom-numeric-format-strings.md)
-- [Standart sayısal biçim dizeleri](standard-numeric-format-strings.md)
+- [Standart Sayısal Biçim Dizeleri](standard-numeric-format-strings.md)
 - [Bileşik biçimlendirme](composite-formatting.md)

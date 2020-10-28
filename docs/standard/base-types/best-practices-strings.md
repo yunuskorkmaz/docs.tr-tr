@@ -7,23 +7,23 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- strings [.NET Framework],searching
+- strings [.NET],searching
 - best practices,string comparison and sorting
-- strings [.NET Framework],best practices
-- strings [.NET Framework],basic string operations
+- strings [.NET],best practices
+- strings [.NET],basic string operations
 - sorting strings
-- strings [.NET Framework],sorting
-- string comparison [.NET Framework],best practices
+- strings [.NET],sorting
+- string comparison [.NET],best practices
 - string sorting
 - comparing strings
-- strings [.NET Framework],comparing
+- strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ed85d04ffbee0493745c4a5ef63313571b44628b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289374"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889107"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET 'teki dizeleri kullanmak için en iyi uygulamalar
 
@@ -56,7 +56,7 @@ Dizeleri kullanırken aşağıdaki uygulamalardan kaçının:
 
 .NET 'teki dize düzenleme yöntemlerinin çoğu aşırı yüklenmiştir. Genellikle bir veya daha fazla aşırı yükleme varsayılan ayarları kabul ederken diğerleri varsayılanları kabul etmez ve bunun yerine dizelerin tam olarak nasıl karşılaştırılacağını veya değiştirileceğini tanımlar. Varsayılan değerleri kullanmayan yöntemlerin çoğu, dize karşılaştırma kurallarını kültür ve büyük/küçük harfe göre açıkça belirten bir numaralandırma olan <xref:System.StringComparison> türü bir parametre içerir. Aşağıdaki tablo, <xref:System.StringComparison> numaralandırma üyelerini açıklar.
 
-|StringComparison üyesi|Description|
+|StringComparison üyesi|Açıklama|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Geçerli kültürü kullanarak büyük/küçük harfe duyarlı bir karşılaştırma gerçekleştirir.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Geçerli kültürü kullanarak büyük/küçük harfe duyarsız bir karşılaştırma gerçekleştirir.|
@@ -199,7 +199,7 @@ Buna karşılık, sabit kültürün karşılaştırma için kullanışlı olan �
 
 Aşağıdaki tabloda anlam dizesi bağlamından bir numaralandırma üyesine yönelik eşleme özetlenmektedir <xref:System.StringComparison> :
 
-|Veriler|Davranış|İlgili System.StringComparison<br /><br /> value|
+|Veriler|Davranış|İlgili System.StringComparison<br /><br /> değer|
 |----------|--------------|-----------------------------------------------------|
 |Büyük/küçük harfe duyarlı dahili tanımlayıcılar.<br /><br /> XML ve HTTP gibi standartlardaki büyük/küçük harfe duyarlı tanımlayıcılar.<br /><br /> Güvenlikle ilgili büyük/küçük harfe duyarlı ayarlar.|Baytların tam olarak eşleştiği dilsel olmayan bir tanımlayıcı.|<xref:System.StringComparison.Ordinal>|
 |Büyük/küçük harfe duyarsız iç tanımlayıcılar.<br /><br /> XML ve HTTP gibi standartlardaki büyük/küçük harfe duyarsız tanımlayıcılar.<br /><br /> Dosya yolları.<br /><br /> Kayıt defteri anahtarları ve değerleri.<br /><br /> Ortam değişkenleri.<br /><br /> Kaynak tanımlayıcıları (örneğin, işleyici adları).<br /><br /> Güvenlikle ilgili büyük/küçük harfe duyarsız ayarlar.|Büyük/küçük harfin alakasız olduğu dilsel olmayan bir tanımlayıcı; özellikle çoğu Windows sistem hizmetinde depolanan veriler.|<xref:System.StringComparison.OrdinalIgnoreCase>|

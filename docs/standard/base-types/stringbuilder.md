@@ -9,20 +9,20 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - Remove method
-- strings [.NET Framework], capacities
+- strings [.NET], capacities
 - StringBuilder object
 - Replace method
 - AppendFormat method
 - Append method
 - Insert method
-- strings [.NET Framework], StringBuilder object
+- strings [.NET], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 1005da650c624b2b8f6616c163082ff95d7dc007
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803219"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888964"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET 'teki StringBuilder sınıfını kullanma
 <xref:System.String>Nesne sabittir. Sınıfındaki yöntemlerden birini her kullandığınızda <xref:System.String?displayProperty=nameWithType> , bellekte yeni bir boş alan alanı gerektiren yeni bir dize nesnesi oluşturursunuz. Bir dizeye yinelenen değişiklikler gerçekleştirmeniz gereken durumlarda, yeni bir nesne oluşturmayla ilişkili ek yük <xref:System.String> maliyetli olabilir. <xref:System.Text.StringBuilder?displayProperty=nameWithType>Sınıfı, yeni bir nesne oluşturmadan bir dizeyi değiştirmek istediğinizde kullanılabilir. Örneğin, <xref:System.Text.StringBuilder> sınıfını kullanmak bir döngüde birçok dizeyi birlikte birleştirirken performansı artırabilir.  
@@ -54,23 +54,23 @@ ms.locfileid: "84803219"
  [!code-csharp[Conceptual.StringBuilder#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#3)]
  [!code-vb[Conceptual.StringBuilder#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#3)]  
   
- <xref:System.Text.StringBuilder.EnsureCapacity%2A>Yöntemi, geçerli **StringBuilder**'ın kapasitesini denetlemek için kullanılabilir. Kapasite geçilen değerden büyükse, hiçbir değişiklik yapılmaz; Ancak, kapasite geçilen değerden küçükse, geçerli kapasite geçen değerle eşleşecek şekilde değiştirilir.  
+ <xref:System.Text.StringBuilder.EnsureCapacity%2A>Yöntemi, geçerli **StringBuilder** 'ın kapasitesini denetlemek için kullanılabilir. Kapasite geçilen değerden büyükse, hiçbir değişiklik yapılmaz; Ancak, kapasite geçilen değerden küçükse, geçerli kapasite geçen değerle eşleşecek şekilde değiştirilir.  
   
  <xref:System.Text.StringBuilder.Length%2A>Özelliği de görüntülenebilir veya ayarlanabilir. **Length** özelliğini **Kapasite** özelliğinden daha büyük bir değere ayarlarsanız, **Kapasite** özelliği otomatik olarak **length** özelliği ile aynı değere değiştirilir. **Length** özelliğinin, geçerli **StringBuilder** içindeki dizenin uzunluğundan daha küçük bir değere ayarlanması dizeyi kısaltır.  
   
 ## <a name="modifying-the-stringbuilder-string"></a>StringBuilder dizesini değiştirme  
- Aşağıdaki tabloda, bir **StringBuilder**'ın içeriğini değiştirmek için kullanabileceğiniz yöntemler listelenmiştir.  
+ Aşağıdaki tabloda, bir **StringBuilder** 'ın içeriğini değiştirmek için kullanabileceğiniz yöntemler listelenmiştir.  
   
-|Yöntem adı|Kullanım|  
+|Yöntem adı|Kullanın|  
 |-----------------|---------|  
-|<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|Bilgileri geçerli **StringBuilder**'ın sonuna ekler.|  
+|<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|Bilgileri geçerli **StringBuilder** 'ın sonuna ekler.|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Bir dizede geçirilen biçim belirticisini biçimli metinle değiştirir.|  
-|<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Geçerli **StringBuilder**'ın belirtilen dizinine bir dize veya nesne ekler.|  
-|<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Geçerli **StringBuilder**'dan belirtilen sayıda karakteri kaldırır.|  
+|<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Geçerli **StringBuilder** 'ın belirtilen dizinine bir dize veya nesne ekler.|  
+|<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Geçerli **StringBuilder** 'dan belirtilen sayıda karakteri kaldırır.|  
 |<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Geçerli **StringBuilder** 'daki belirtilen bir karakter veya dizenin tüm oluşumlarını, belirtilen başka bir karakter veya dizeyle değiştirir.|  
   
-### <a name="append"></a>Ekle  
- **Append** yöntemi, geçerli **StringBuilder**tarafından temsil edilen bir dizenin sonuna bir nesnenin metin veya dize gösterimini eklemek için kullanılabilir. Aşağıdaki örnek, bir **StringBuilder** 'ı "Merhaba Dünya" olarak başlatır ve sonra nesnenin sonuna bir metin ekler. Boşluk gerektiğinde otomatik olarak ayrılır.  
+### <a name="append"></a>Ekleme  
+ **Append** yöntemi, geçerli **StringBuilder** tarafından temsil edilen bir dizenin sonuna bir nesnenin metin veya dize gösterimini eklemek için kullanılabilir. Aşağıdaki örnek, bir **StringBuilder** 'ı "Merhaba Dünya" olarak başlatır ve sonra nesnenin sonuna bir metin ekler. Boşluk gerektiğinde otomatik olarak ayrılır.  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
  [!code-csharp[Conceptual.StringBuilder#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#4)]

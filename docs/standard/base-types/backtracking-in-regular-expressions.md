@@ -7,22 +7,22 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework regular expressions, backtracking
+- .NET regular expressions, backtracking
 - alternative matching patterns
 - optional matching patterns
 - searching with regular expressions, backtracking
 - pattern-matching with regular expressions, backtracking
 - backtracking
-- regular expressions [.NET Framework], backtracking
-- strings [.NET Framework], regular expressions
+- regular expressions [.NET], backtracking
+- strings [.NET], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: d9fb976c73891646df60b5329beb09493acbae8a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b8bd8308b91c2c358f4a462967424f55fa316504
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277810"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889146"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](quantifiers-in-regular-expressions.md) veya [değişim yapılarını](alternation-constructs-in-regular-expressions.md)içermesi durumunda geri izleme oluşur ve normal ifade altyapısı, bir eşleşme aramasına devam etmek için önceki kaydedilmiş bir duruma geri döner. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
@@ -40,7 +40,7 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](quantifiers-i
   
  Bu normal ifade nicelik belirleyiciyi içerse de `{2}` , doğrusal bir şekilde değerlendirilir. Normal ifade altyapısı, `{2}` isteğe bağlı bir belirleyici olmadığı için geri izleme yapmaz;, önceki alt ifadenin eşleşmesi gereken değişken sayısını değil, tam bir sayı belirtir. Sonuç olarak, normal ifade altyapısı, aşağıdaki tabloda gösterildiği gibi, normal ifade desenini giriş dizesiyle eşleştirmeye çalışır.  
   
-|Çalışma|Desendeki konum|Dizedeki konum|Sonuç|  
+|İşlem|Desendeki konum|Dizedeki konum|Sonuç|  
 |---------------|-------------------------|------------------------|------------|  
 |1|e|"needing a reed" (dizin 0)|Eşleşme yok.|  
 |2|e|"eeding a reed" (dizin 1)|Olası eşleşme.|  
@@ -100,7 +100,7 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](quantifiers-i
   
 - Daha önce kaydedilen eşleşme 3 ' e döndürür. Ek bir yakalanan gruba atamak için iki ek "a" karakteri olduğunu belirler. Ancak, dize sonu sınaması başarısız olur. Ardından, eşleştirme 3'e geri döner ve yakalanan iki ek gruptaki iki ek "a" karakterini eşleştirmeyi dener. Dize sonu sınaması hala başarısız olur. Bu başarısız eşleştirmeler 12 karşılaştırma gerektirir. Şimdiye kadar, toplam 25 karşılaştırma gerçekleştirildi.  
   
- Giriş dizesinin normal ifadeyle karşılaştırılması, normal ifade altyapısı tüm olası eşleştirme birleşimlerini deneyinceye kadar bu şekilde devam eder ve ardından eşleştirme olmadığı sonucuna ulaşır. İç içe nicelik belirteçleri nedeniyle, bu karşılaştırma bir O (2<sup>n</sup>) veya üstel bir işlemdir; burada *n* , giriş dizesindeki karakter sayısıdır. Bu, en kötü durumda, 30 karakterlik bir giriş dizesinin yaklaşık 1.073.741.824 karşılaştırma gerektirdiği ve 40 karakterlik bir giriş dizesinin yaklaşık 1,099,511,627,776 karşılaştırma gerektirdiği anlamına gelir. Bu uzunluklarda veya daha uzun dizeler kullanırsanız, normal ifade deseniyle eşleşmeyen giriş işlediklerinde, normal ifade yöntemlerinin tamamlanması çok uzun zaman alabilir.
+ Giriş dizesinin normal ifadeyle karşılaştırılması, normal ifade altyapısı tüm olası eşleştirme birleşimlerini deneyinceye kadar bu şekilde devam eder ve ardından eşleştirme olmadığı sonucuna ulaşır. İç içe nicelik belirteçleri nedeniyle, bu karşılaştırma bir O (2 <sup>n</sup>) veya üstel bir işlemdir; burada *n* , giriş dizesindeki karakter sayısıdır. Bu, en kötü durumda, 30 karakterlik bir giriş dizesinin yaklaşık 1.073.741.824 karşılaştırma gerektirdiği ve 40 karakterlik bir giriş dizesinin yaklaşık 1,099,511,627,776 karşılaştırma gerektirdiği anlamına gelir. Bu uzunluklarda veya daha uzun dizeler kullanırsanız, normal ifade deseniyle eşleşmeyen giriş işlediklerinde, normal ifade yöntemlerinin tamamlanması çok uzun zaman alabilir.
 
 ## <a name="controlling-backtracking"></a>Geri İzlemeyi Denetleme  
  Geri izleme, güçlü ve esnek normal ifadeler oluşturmanıza olanak tanır. Ancak, önceki bölümde gösterildiği gibi, bu yararlar kabuk edilemeyecek kadar düşük performansla eşleştirilebilir. Aşırı geri izlemeyi engellemek için, bir nesneyi örneklediğinizde <xref:System.Text.RegularExpressions.Regex> veya statik bir normal ifade eşleştirme yöntemini çağırdığınızda bir zaman aşımı aralığı tanımlamanız gerekir. Bu konu, sonraki bölümde açıklanmaktadır. Ayrıca, .NET, geri izlemeyi sınırlayan veya gizleyen ve çok az performans cezası olan karmaşık normal ifadeleri destekleyen üç normal ifade dili öğesini destekler: [atomik gruplar](#atomic-groups), [geriye](#lookbehind-assertions)yönelik onaylar ve [İleri onaylama onayları](#lookahead-assertions). Her dil öğesi hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](grouping-constructs-in-regular-expressions.md).  
@@ -127,9 +127,9 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](quantifiers-i
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
 
 ### <a name="lookbehind-assertions"></a>Geriye Yönelik Onaylar  
- .NET, `(?<=` *subexpression* `)` `(?<!` *subexpression* `)` Giriş dizesindeki önceki karakterle veya karakterlerle eşleşen iki dil öğesi, alt ifade ve alt ifade içerir. Her iki dil öğesi de sıfır genişlikli onaylardır; diğer bir deyişle, geçerli karakterden hemen önce gelen karakter veya karakterlerin, gelişmiş veya geri izleme olmadan alt *ifade*ile eşleştirilemeyeceğini tespit ederler.  
+ .NET, `(?<=` *subexpression* `)` `(?<!` *subexpression* `)` Giriş dizesindeki önceki karakterle veya karakterlerle eşleşen iki dil öğesi, alt ifade ve alt ifade içerir. Her iki dil öğesi de sıfır genişlikli onaylardır; diğer bir deyişle, geçerli karakterden hemen önce gelen karakter veya karakterlerin, gelişmiş veya geri izleme olmadan alt *ifade* ile eşleştirilemeyeceğini tespit ederler.  
   
- `(?<=`alt *ifade* `)` , pozitif bir geriye yönelik onaylama onaydır; diğer bir deyişle, geçerli konumdan önceki karakter veya karakterlerin alt *ifade*ile eşleşmesi gerekir. `(?<!`alt *ifade* `)` , ters bir geriye yönelik onaylama onaydır; diğer bir deyişle, geçerli konumdan önceki karakter veya karakterler alt *ifade*ile eşleşmemelidir. Hem pozitif hem de negatif geriye yönelik Onaylamalar, alt *ifade* önceki alt ifadenin bir alt kümesi olduğunda faydalıdır.  
+ `(?<=`alt *ifade* `)` , pozitif bir geriye yönelik onaylama onaydır; diğer bir deyişle, geçerli konumdan önceki karakter veya karakterlerin alt *ifade* ile eşleşmesi gerekir. `(?<!`alt *ifade* `)` , ters bir geriye yönelik onaylama onaydır; diğer bir deyişle, geçerli konumdan önceki karakter veya karakterler alt *ifade* ile eşleşmemelidir. Hem pozitif hem de negatif geriye yönelik Onaylamalar, alt *ifade* önceki alt ifadenin bir alt kümesi olduğunda faydalıdır.  
   
  Aşağıdaki örnek, bir e-posta adresindeki Kullanıcı adını doğrulayan iki denk normal ifade deseni kullanır. Birinci desen, aşırı geri izleme nedeniyle yetersiz performansa maruz kalır. İkinci desen, iç içe bir miktar niceleyiciyi pozitif bir geriye yönelik onayla değiştirerek birinci normal ifadeyi değiştirir. Örneğin çıktısı, yönteminin yürütme süresini gösterir <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
@@ -138,7 +138,7 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](quantifiers-i
   
  İlk normal ifade deseninin, `^[0-9A-Z]([-.\w]*[0-9A-Z])*@` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Eşleştirmeyi dizenin başlangıcında başlatın.|  
 |`[0-9A-Z]`|Alfasayısal bir karakterle eşleştirin Yöntemi seçeneğiyle çağrıldığı için bu karşılaştırma büyük/küçük harfe duyarlıdır <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
@@ -149,7 +149,7 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](quantifiers-i
   
  İkinci normal ifade deseninin, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@` pozitif bir geriye yönelik onaylama işlemi kullanır. Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Eşleştirmeyi dizenin başlangıcında başlatın.|  
 |`[0-9A-Z]`|Alfasayısal bir karakterle eşleştirin Yöntemi seçeneğiyle çağrıldığı için bu karşılaştırma büyük/küçük harfe duyarlıdır <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
@@ -158,9 +158,9 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](quantifiers-i
 |`@`|("") İşaretiyle Eşleştir \@ .|  
 
 ### <a name="lookahead-assertions"></a>İleriye Yönelik Onaylar  
- .NET, `(?=` *subexpression* `)` `(?!` *subexpression* `)` Giriş dizesindeki sonraki karakterle veya karakterlerle eşleşen iki dil öğesi, alt ifade ve alt ifade içerir. Her iki dil öğesi de sıfır genişlikli onaylardır; Yani, geçerli karakteri hemen izleyen karakter veya karakterlerin, gelişmiş veya geri izleme olmadan alt *ifade*ile eşleştirilemeyeceğini tespit ederler.  
+ .NET, `(?=` *subexpression* `)` `(?!` *subexpression* `)` Giriş dizesindeki sonraki karakterle veya karakterlerle eşleşen iki dil öğesi, alt ifade ve alt ifade içerir. Her iki dil öğesi de sıfır genişlikli onaylardır; Yani, geçerli karakteri hemen izleyen karakter veya karakterlerin, gelişmiş veya geri izleme olmadan alt *ifade* ile eşleştirilemeyeceğini tespit ederler.  
   
- `(?=`alt *ifade* `)` pozitif bir ileriye yönelik onaydır; diğer bir deyişle, geçerli konumdan sonraki karakter veya karakterlerin alt *ifade*ile eşleşmesi gerekir. `(?!`alt *ifade* `)` negatif bir ileri onaylama onaydır; diğer bir deyişle, geçerli konumdan sonraki karakter veya karakterler alt *ifade*ile eşleşmemelidir. Hem pozitif hem de negatif ileriye yönelik Onaylamalar, alt *ifade* sonraki alt ifadenin bir alt kümesi olduğunda faydalıdır.  
+ `(?=`alt *ifade* `)` pozitif bir ileriye yönelik onaydır; diğer bir deyişle, geçerli konumdan sonraki karakter veya karakterlerin alt *ifade* ile eşleşmesi gerekir. `(?!`alt *ifade* `)` negatif bir ileri onaylama onaydır; diğer bir deyişle, geçerli konumdan sonraki karakter veya karakterler alt *ifade* ile eşleşmemelidir. Hem pozitif hem de negatif ileriye yönelik Onaylamalar, alt *ifade* sonraki alt ifadenin bir alt kümesi olduğunda faydalıdır.  
   
  Aşağıdaki örnekte, tam olarak belirtilen bir tür adını doğrulayan iki denk normal ifade deseni kullanılmaktadır. Birinci desen, aşırı geri izleme nedeniyle yetersiz performansa maruz kalır. İkincisi, iç içe bir miktar niceleyiciyi pozitif bir ileriye yönelik onayla değiştirerek birinci normal ifadeyi değiştirir. Örneğin çıktısı, yönteminin yürütme süresini gösterir <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
@@ -169,7 +169,7 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](quantifiers-i
   
  İlk normal ifade deseninin, `^(([A-Z]\w*)+\.)*[A-Z]\w*$` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Eşleştirmeyi dizenin başlangıcında başlatın.|  
 |`([A-Z]\w*)+\.`|Ardından bir nokta gelen sıfır veya daha fazla sözcük karakterinin bir veya birden çok kez ardından geldiği bir alfabetik karakterle (A-Z) eşleştirin. Yöntemi seçeneğiyle çağrıldığı için bu karşılaştırma büyük/küçük harfe duyarlıdır <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
@@ -179,7 +179,7 @@ Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](quantifiers-i
   
  İkinci normal ifade deseninin `^((?=[A-Z])\w+\.)*[A-Z]\w*$` pozitif bir ileri yönlü onaylama işlemi kullanır. Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Eşleştirmeyi dizenin başlangıcında başlatın.|  
 |`(?=[A-Z])`|İleriye yönelik olarak birinci karaktere bakın ve alfabetik (A-Z) ise eşleştirmeyi devam ettirin. Yöntemi seçeneğiyle çağrıldığı için bu karşılaştırma büyük/küçük harfe duyarlıdır <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  

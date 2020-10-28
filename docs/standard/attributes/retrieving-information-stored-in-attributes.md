@@ -10,20 +10,20 @@ dev_langs:
 helpviewer_keywords:
 - retrieving attributes
 - multiple attribute instances
-- attributes [.NET Framework], retrieving
+- attributes [.NET], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: cf147a0ae6833039247c4c0878996973cc3db545
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 710f3e3d1051bad4a61e59e330204d622b9fd683
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661867"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889211"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Özniteliklerde Depolanan Bilgileri Alma
 Özel bir özniteliğin alınması basit bir işlemdir. İlk olarak, almak istediğiniz özniteliğin bir örneğini bildirin. Ardından, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> Yeni özniteliğini almak istediğiniz özniteliğin değerine başlatmak için yöntemini kullanın. Yeni özniteliği başlatıldıktan sonra, değerlerini almak için özelliklerini kullanmanız yeterlidir.  
   
 > [!IMPORTANT]
-> Bu konu, yürütme bağlamına yüklenen kodun özniteliklerinin nasıl alınacağını açıklar. Yalnızca yansıma bağlamına yüklenen kodun özniteliklerini almak için <xref:System.Reflection.CustomAttributeData> sınıfını, [nasıl yapılır: derlemeleri yalnızca yansıma bağlamına yükleme](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)bölümünde gösterildiği gibi kullanmanız gerekir.  
+> Bu konu, yürütme bağlamına yüklenen kodun özniteliklerinin nasıl alınacağını açıklar. Yalnızca yansıma bağlamına yüklenen kodun özniteliklerini almak için, <xref:System.Reflection.CustomAttributeData> sınıfını, [Reflection-Only bağlama](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)içinde açıklandığı gibi kullanın.  
   
  Bu bölümde özniteliklerin alınması için aşağıdaki yollar açıklanmaktadır:  
   
@@ -71,7 +71,7 @@ The attribute was not found.
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>Farklı kapsamlara uygulanan bir özniteliğin birden fazla örneğini alma  
- <xref:System.Attribute.GetCustomAttributes%2A>Ve <xref:System.Attribute.GetCustomAttribute%2A> yöntemleri bir sınıfın tamamını aramaz ve bu sınıftaki bir özniteliğin tüm örneklerini döndürmez. Bunun yerine, tek seferde yalnızca bir belirtilen yöntemi veya üyeyi arar. Her üyeye uygulanmış aynı özniteliğe sahip bir sınıfınız varsa ve bu üyelere uygulanan tüm özniteliklerin değerlerini almak istiyorsanız, her yöntemi veya üyeyi **GetCustomAttributes** ve **GetCustomAttribute**için tek tek sağlamalısınız.  
+ <xref:System.Attribute.GetCustomAttributes%2A>Ve <xref:System.Attribute.GetCustomAttribute%2A> yöntemleri bir sınıfın tamamını aramaz ve bu sınıftaki bir özniteliğin tüm örneklerini döndürmez. Bunun yerine, tek seferde yalnızca bir belirtilen yöntemi veya üyeyi arar. Her üyeye uygulanmış aynı özniteliğe sahip bir sınıfınız varsa ve bu üyelere uygulanan tüm özniteliklerin değerlerini almak istiyorsanız, her yöntemi veya üyeyi **GetCustomAttributes** ve **GetCustomAttribute** için tek tek sağlamalısınız.  
   
  Aşağıdaki kod örneği, bir sınıfı parametre olarak alır ve sınıf `DeveloperAttribute` düzeyinde ve bu sınıfın her bir yöntemi üzerinde (daha önceden tanımlanmış) için arama yapar.  
   

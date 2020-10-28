@@ -11,18 +11,19 @@ helpviewer_keywords:
 - Join method
 - Format method
 - Concat method
-- strings [.NET Framework], creating
+- strings [.NET], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: b44d0f8e1717ead72e28f0be644644961d1482b6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7dedaf61f56f19343299c841bb4cee70fb9c767a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596454"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889445"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET ' te yeni dizeler oluşturma
-.NET Framework, dizelerin basit atama kullanılarak oluşturulmasına izin verir ve ayrıca bir dizi farklı parametre kullanarak dize oluşturmayı desteklemek için bir sınıf oluşturucusunu aşırı yükler. .NET Framework Ayrıca <xref:System.String?displayProperty=nameWithType> birkaç dizeyi, dize dizilerini veya nesneleri birleştirerek yeni dize nesneleri oluşturan sınıfta çeşitli yöntemler sağlar.  
+
+.NET, dizelerin basit atama kullanılarak oluşturulmasına izin verir ve ayrıca bir dizi farklı parametre kullanarak dize oluşturmayı desteklemek için bir sınıf oluşturucusunu aşırı yükler. .NET ayrıca <xref:System.String?displayProperty=nameWithType> birkaç dizeyi, dize dizilerini veya nesneleri birleştirerek yeni dize nesneleri oluşturan sınıfta çeşitli yöntemler sunar.  
   
 ## <a name="creating-strings-using-assignment"></a>Atama kullanarak dizeler oluşturma  
  Yeni bir nesne oluşturmanın en kolay yolu, <xref:System.String> bir nesneye dize sabit değeri atamanız yeterlidir <xref:System.String> .  
@@ -33,7 +34,7 @@ ms.locfileid: "84596454"
 ## <a name="methods-that-return-strings"></a>Dizeleri döndüren yöntemler  
  Aşağıdaki tabloda yeni dize nesneleri döndüren çeşitli yararlı yöntemler listelenmiştir.  
   
-|Yöntem adı|Kullanım|  
+|Yöntem adı|Kullanın|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|Bir giriş nesneleri kümesinden biçimli bir dize oluşturur.|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|İki veya daha fazla dizeden dizeler oluşturur.|  
@@ -52,7 +53,7 @@ ms.locfileid: "84596454"
  Bu örnekte, geçerli <xref:System.DateTime.Now%2A?displayProperty=nameWithType> Tarih ve saati geçerli iş parçacığıyla ilişkili kültür tarafından belirtilen şekilde görüntüler.  
   
 ### <a name="concat"></a>Concat  
- **String. Concat** yöntemi, iki veya daha fazla var olan nesneden kolayca yeni bir dize nesnesi oluşturmak için kullanılabilir. Dizeleri birleştirmek için dile bağımsız bir yol sağlar. Bu yöntem, **System. Object**sınıfından türetilen tüm sınıfları kabul eder. Aşağıdaki örnek, iki var olan dize nesnesinden ve ayırma karakterinden oluşan bir dize oluşturur.  
+ **String. Concat** yöntemi, iki veya daha fazla var olan nesneden kolayca yeni bir dize nesnesi oluşturmak için kullanılabilir. Dizeleri birleştirmek için dile bağımsız bir yol sağlar. Bu yöntem, **System. Object** sınıfından türetilen tüm sınıfları kabul eder. Aşağıdaki örnek, iki var olan dize nesnesinden ve ayırma karakterinden oluşan bir dize oluşturur.  
   
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  

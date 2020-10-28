@@ -10,19 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - multiple attribute instances
 - AttributeTargets enumeration
-- attributes [.NET Framework], custom
+- attributes [.NET], custom
 - AllowMultiple property
 - custom attributes
 - AttributeUsageAttribute class, custom attributes
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 670f34083834b35d26e6018372948022eec17d47
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550932"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889198"
 ---
 # <a name="writing-custom-attributes"></a>Özel Öznitelikler Yazma
 Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturmanız gerekmez. Nesne odaklı programlama hakkında bilgi sahibiyseniz ve sınıfların nasıl tasarlanacağını biliyorsanız, daha fazla bilgiye sahip olmanız gerekir. Özel öznitelikler temelde doğrudan veya dolaylı olarak türetilmiş geleneksel sınıflardır <xref:System.Attribute?displayProperty=nameWithType> . Geleneksel sınıflar gibi özel öznitelikler ise verileri depolayan ve alan yöntemler içerir.  
@@ -104,7 +104,7 @@ Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturma
   
 - Öznitelik sınıfları ortak sınıf olarak bildirilmelidir.  
   
-- Kural gereği, öznitelik sınıfının adı Word **özniteliğiyle**biter. Gerekli olmasa da, bu kural okunabilirlik için önerilir. Özniteliği uygulandığında, Word özniteliğinin eklenmesi isteğe bağlıdır.  
+- Kural gereği, öznitelik sınıfının adı Word **özniteliğiyle** biter. Gerekli olmasa da, bu kural okunabilirlik için önerilir. Özniteliği uygulandığında, Word özniteliğinin eklenmesi isteğe bağlıdır.  
   
 - Tüm öznitelik sınıflarının doğrudan veya dolaylı olarak devralması gerekir <xref:System.Attribute?displayProperty=nameWithType> .  
   

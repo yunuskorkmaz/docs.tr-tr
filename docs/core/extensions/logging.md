@@ -4,12 +4,12 @@ author: IEvangelist
 description: Microsoft. Extensions. Logging NuGet paketi tarafından sunulan günlüğe kaydetme çerçevesini nasıl kullanacağınızı öğrenin.
 ms.author: dapine
 ms.date: 09/30/2020
-ms.openlocfilehash: 2e6d8710015d8e998a9710f2cdeb86d925236196
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: d409d78698e4e85eaf9f2894ee1ed00cea0c0583
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654835"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888560"
 ---
 # <a name="logging-in-net"></a>.NET oturumu açma
 
@@ -30,11 +30,11 @@ Aşağıdaki örnek:
 
 ## <a name="configure-logging"></a>Günlüğe kaydetmeyi yapılandırma
 
-Günlüğe kaydetme yapılandırması genellikle `Logging` *appSettings*'in bölümü tarafından sağlanır. `{Environment}` *. JSON* dosyaları. Aşağıdaki *appsettings.Development.js* dosyadaki .net Worker hizmet şablonları tarafından oluşturulmuştur:
+Günlüğe kaydetme yapılandırması genellikle `Logging` *appSettings* 'in bölümü tarafından sağlanır. `{Environment}` *. JSON* dosyaları. Aşağıdaki *appsettings.Development.js* dosyadaki .net Worker hizmet şablonları tarafından oluşturulmuştur:
 
 :::code language="json" source="snippets/configuration/worker-service/appsettings.Development.json":::
 
-Önceki JSON 'da:
+Yukarıdaki JSON kodunda:
 
 - `"Default"`, `"Microsoft"` Ve `"Microsoft.Hosting.Lifetime"` kategorileri belirtilir.
 - `"Microsoft"`Kategori, ile başlayan tüm kategoriler için geçerlidir `"Microsoft"` .
@@ -64,7 +64,7 @@ En düşük günlük düzeyi şu şekilde belirtilebilir:
 - Belirli Kategoriler: Örneğin, `Logging:LogLevel:Microsoft:Warning`
 - Tüm sağlayıcılar ve tüm Kategoriler: `Logging:LogLevel:Default:Warning`
 
-Minimum düzeyin altındaki tüm Günlükler şu ***değildir***:
+Minimum düzeyin altındaki tüm Günlükler * **değil** _:
 
 - Sağlayıcıya geçirildi.
 - Günlüğe kaydedilir veya gösterilir.
@@ -73,7 +73,7 @@ Tüm günlükleri gizlemek için [LogLevel. None](xref:Microsoft.Extensions.Logg
 
 Bir sağlayıcı, [günlük kapsamlarını](#log-scopes)destekliyorsa, etkinleştirilip etkinleştirilmeyeceğini `IncludeScopes` belirtir. Daha fazla bilgi için bkz. [günlük kapsamları](#log-scopes)
 
-Aşağıdaki *appsettings.js* dosyadaki tüm yerleşik sağlayıcıların ayarlarını içerir:
+* File üzerinde aşağıdaki _appsettings.jsyerleşik sağlayıcıların tümü için ayarları içerir:
 
 :::code language="json" source="snippets/configuration/worker-service/appsettings.Production.json":::
 
@@ -179,7 +179,7 @@ Aşağıdaki tabloda <xref:Microsoft.Extensions.Logging.LogLevel> değerler, kol
 
 | LogLevel | Değer | Yöntem | Açıklama |
 |--|--|--|--|
-| [İzleme](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | En ayrıntılı iletileri içerir. Bu iletilerde hassas uygulama verileri bulunabilir. Bu iletiler varsayılan olarak devre dışıdır ve üretimde ***etkinleştirilmemelidir.*** |
+| [İzleme](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | En ayrıntılı iletileri içerir. Bu iletilerde hassas uygulama verileri bulunabilir. Bu iletiler varsayılan olarak devre dışıdır ve üretimde * **Not** _ etkinleştirilmelidir. |
 | [Hata ayıklama](xref:Microsoft.Extensions.Logging.LogLevel) | 1 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug%2A> | Hata ayıklama ve geliştirme için. Yüksek hacimden dolayı üretimde dikkatli olarak kullanın. |
 | [Bilgi](xref:Microsoft.Extensions.Logging.LogLevel) | 2 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation%2A> | Uygulamanın genel akışını izler. Uzun süreli bir değere sahip olabilir. |
 | [Uyarı](xref:Microsoft.Extensions.Logging.LogLevel) | 3 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning%2A> | Olağandışı veya beklenmeyen olaylar için. Genellikle, uygulamanın başarısız olmasına neden olmayan hataları veya koşulları içerir. |
@@ -222,7 +222,7 @@ public async Task<T> GetAsync<T>(string id)
 
 Yukarıdaki kodda, ilk `Log{LogLevel}` parametresi `AppLogEvents.Read` [günlük olay kimliğidir](#log-event-id). İkinci parametre, kalan Yöntem parametreleri tarafından belirtilen bağımsız değişken değerleri için yer tutucuları olan bir ileti şablonudur. Yöntem parametreleri bu makalenin ilerleyen kısımlarında bulunan [ileti şablonu](#log-message-template) bölümünde açıklanmaktadır.
 
-Uygun günlük düzeyini yapılandırın ve `Log{LogLevel}` belirli bir depolama ortamına ne kadar günlük çıkışının yazıldığını denetlemek için doğru yöntemleri çağırın. Örnek:
+Uygun günlük düzeyini yapılandırın ve `Log{LogLevel}` belirli bir depolama ortamına ne kadar günlük çıkışının yazıldığını denetlemek için doğru yöntemleri çağırın. Örneğin:
 
 - Üretimde:
   - Veya düzeylerinde günlüğe kaydetme, `Trace` `Information` yüksek hacimli ayrıntılı günlük iletileri oluşturur. Maliyetleri denetlemek ve veri depolama sınırlarını aşmamak için, `Trace` `Information` iletileri yüksek hacimli ve düşük maliyetli bir veri deposuna günlüğe kaydedin. `Trace`Belirli kategorileri ve sınırlamayı değerlendirin `Information` .
@@ -239,7 +239,7 @@ Aşağıdaki JSON kümeleri `Logging:Console:LogLevel:Microsoft:Information` :
 
 ## <a name="log-event-id"></a>Günlüğe olay KIMLIĞI
 
-Her günlük bir *olay tanımlayıcı*belirtebilir, <xref:Microsoft.Extensions.Logging.EventId> `Id` ve isteğe bağlı ReadOnly özellikleri olan bir yapıdır `Name` . Örnek kaynak kodu, `AppLogEvents` olay kimliklerini tanımlamak için sınıfını kullanır:
+Her günlük bir _event tanımlayıcı * belirtebilir, <xref:Microsoft.Extensions.Logging.EventId> `Id` ve isteğe bağlı bir `Name` salt okunur özellikleri olan bir yapıdır. Örnek kaynak kodu, `AppLogEvents` olay kimliklerini tanımlamak için sınıfını kullanır:
 
 ```csharp
 internal static class AppLogEvents
@@ -530,5 +530,6 @@ class Program
 
 - [.NET 'te günlüğe kaydetme sağlayıcıları](logging-providers.md)
 - [.NET ' te özel bir günlüğe kaydetme sağlayıcısı uygulama](custom-logging-provider.md)
+- [Konsol günlüğü biçimlendirmesi](console-log-formatter.md)
 - [.NET 'te yüksek performanslı günlüğe kaydetme](high-performance-logging.md)
 - [GitHub.com/DotNet/Extensions](https://github.com/dotnet/extensions/issues) deposu 'nda günlüğe kaydetme hataları oluşturulmalıdır

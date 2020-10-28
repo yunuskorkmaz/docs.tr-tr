@@ -5,18 +5,23 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: f2298cb0be6d555a7636903dc251f022a6a62a43
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+no-loc:
+- Transient
+- Scoped
+- Singleton
+- Example
+ms.openlocfilehash: 589e15736c07b465fda308b04c91384a2502755c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247910"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888587"
 ---
 # <a name="tutorial-use-dependency-injection-in-net"></a>Öğretici: .NET 'te bağımlılık ekleme kullanma
 
-Bu öğreticide [, .net 'te bağımlılık ekleme (dı)](dependency-injection.md)'nin nasıl kullanılacağı gösterilmektedir. *Microsoft uzantıları*ile,, hizmetlerin bir içinde eklendiği ve yapılandırıldığı birinci sınıf bir vatandaşlık <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> . <xref:Microsoft.Extensions.Hosting.IHost>Arabirim, <xref:System.IServiceProvider> Tüm kayıtlı hizmetlerin kapsayıcısı olarak davranan örneği kullanıma sunar.
+Bu öğreticide [, .net 'te bağımlılık ekleme (dı)](dependency-injection.md)'nin nasıl kullanılacağı gösterilmektedir. *Microsoft uzantıları* ile,, hizmetlerin bir içinde eklendiği ve yapılandırıldığı birinci sınıf bir vatandaşlık <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> . <xref:Microsoft.Extensions.Hosting.IHost>Arabirim, <xref:System.IServiceProvider> Tüm kayıtlı hizmetlerin kapsayıcısı olarak davranan örneği kullanıma sunar.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -27,13 +32,12 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki bir sürümü.
-- Tümleşik bir geliştirme ortamı (IDE), [Visual Studio, Visual Studio Code veya Mac için Visual Studio](https://visualstudio.microsoft.com) tüm geçerli seçimlerdir.
+- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya üzeri.
 - Yeni .NET uygulamaları oluşturma ve NuGet paketleri yükleme hakkında benzerlik.
 
 ## <a name="create-a-new-console-application"></a>Yeni bir konsol uygulaması oluşturma
 
-[DotNet New](../tools/dotnet-new.md) komutunu ya da IDE yeni proje sihirbazını kullanarak **Consoledi. example**adlı yeni bir .NET konsol uygulaması oluşturun. Projeye [Microsoft. Extensions. Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) NuGet paketini ekleyin.
+[DotNet New](../tools/dotnet-new.md) komutunu ya da IDE yeni proje sihirbazını kullanarak **Example consoledi** adlı yeni bir .NET konsol uygulaması oluşturun. Projeye [Microsoft. Extensions. Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) NuGet paketini ekleyin.
 
 ## <a name="add-interfaces"></a>Arabirim Ekle
 
@@ -45,19 +49,19 @@ Aşağıdaki arayüzleri proje kök dizinine ekleyin:
 
 `IOperation`Arabirim tek bir özelliği tanımlar `OperationId` .
 
-*ITransientOperation.cs*
+*I Transient Operation.cs*
 
-:::code language="csharp" source="snippets/configuration/console-di/ITransientOperation.cs":::
+::: Code Language = "CSharp" Source = "parçacıklar/Configuration/Console-dı/ı Transient Operation.cs":::
 
-*IScopedOperation.cs*
+*I Scoped Operation.cs*
 
-:::code language="csharp" source="snippets/configuration/console-di/IScopedOperation.cs":::
+::: Code Language = "CSharp" Source = "parçacıklar/Configuration/Console-dı/ı Scoped Operation.cs":::
 
-*ISingletonOperation.cs*
+*I Singleton Operation.cs*
 
-:::code language="csharp" source="snippets/configuration/console-di/ISingletonOperation.cs":::
+::: Code Language = "CSharp" Source = "parçacıklar/Configuration/Console-dı/ı Singleton Operation.cs":::
 
-Tüm alt arabirimlerin `IOperation` amaçlanan hizmet ömrünü adlandırın. Örneğin, "geçici" veya "tek".
+Tüm alt arabirimlerin `IOperation` amaçlanan hizmet ömrünü adlandırın. Örneğin, " Transient " veya " Singleton ".
 
 ## <a name="add-default-implementation"></a>Varsayılan uygulama ekle
 
@@ -67,11 +71,11 @@ Tüm alt arabirimlerin `IOperation` amaçlanan hizmet ömrünü adlandırın. Ö
 
 :::code language="csharp" source="snippets/configuration/console-di/DefaultOperation.cs":::
 
-, `DefaultOperation` Tüm adlandırılmış/işaret arabirimlerini uygular ve `OperationId` Yeni bir genel benzersiz TANıMLAYıCıNıN (GUID) son dört karakterine özelliği başlatır.
+, `DefaultOperation` Tüm adlandırılmış işaret arabirimlerini uygular ve `OperationId` Yeni bir genel benzersiz TANıMLAYıCıNıN (GUID) son dört karakterine özelliği başlatır.
 
 ## <a name="add-service-that-requires-di"></a>DI gerektiren hizmet ekleyin
 
-Konsol uygulamanıza hizmet olarak davranan aşağıdaki işlem günlükçüsü nesnesini ekleyin:
+Konsol uygulamasına bir hizmet olarak davranan aşağıdaki işlem günlükçüsü nesnesini ekleyin:
 
 *OperationLogger.cs*
 
@@ -81,7 +85,7 @@ Konsol uygulamanıza hizmet olarak davranan aşağıdaki işlem günlükçüsü 
 
 ## <a name="register-services-for-di"></a>Dı için Hizmetleri Kaydet
 
-Son olarak, *program.cs* dosyasını aşağıda eşleşecek şekilde güncelleştirin:
+Aşağıdaki kodla *program.cs* güncelleştirin:
 
 :::code language="csharp" source="snippets/configuration/console-di/Program.cs" range="1-18,35-60" highlight="22-26":::
 
@@ -94,7 +98,7 @@ Uygulama:
 
 ## <a name="conclusion"></a>Sonuç
 
-Uygulama, aşağıdaki örneğe benzer bir çıktı üretir:
+Uygulama, aşağıdaki örneğe benzer bir çıktı görüntüler:
 
 ```console
 Scope 1-Call 1 .GetRequiredService<OperationLogger>(): ITransientOperation [ 80f4...Always different        ]
@@ -116,11 +120,11 @@ Scope 2-Call 2 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 158
 
 Uygulama çıktısından aşağıdakileri görebilirsiniz:
 
-- Geçici işlemler her zaman farklıdır, yani hizmetin her alımı ile yeni bir örnek oluşturulur.
-- Kapsamlı işlemler yalnızca yeni bir kapsamla değiştirilir, ancak bir kapsam içinde aynı örneğidir.
-- Tek işlemler her zaman aynıdır, yani yeni bir örnek yalnızca bir kez oluşturulur.
+- Transient işlemler her zaman farklıdır, hizmetin her alımı ile yeni bir örnek oluşturulur.
+- Scoped işlemler yalnızca yeni bir kapsamla değiştirilir, ancak bir kapsam içinde aynı örneğidir.
+- Singleton işlemler her zaman aynıdır, yeni bir örnek yalnızca bir kez oluşturulur.
 
-## <a name="next-steps"></a>Sonraki adımlar
+## <a name="see-also"></a>Ayrıca bkz.
 
-> [!div class="nextstepaction"]
-> [Bağımlılık ekleme yönergeleri](dependency-injection-guidelines.md)
+* [Bağımlılık ekleme yönergeleri](dependency-injection-guidelines.md)
+* [ASP.NET Core bağımlılık ekleme](/aspnet/core/fundamentals/dependency-injection)

@@ -8,24 +8,24 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- strings [.NET Framework], padding
+- strings [.NET], padding
 - white space
 - PadRight method
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: 5bf7023a3429e932a44ad0a0bd3409012f77cbf9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f90a95f0ceb5ad7cc32d451897544fffe56afb6d
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594536"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889055"
 ---
 # <a name="padding-strings-in-net"></a>.NET 'teki dizeleri doldurma
 
 <xref:System.String>Belirtilen toplam uzunluğa baştaki veya sondaki karakterlerle doldurulan bir özgün dizeden oluşan yeni bir dize oluşturmak için aşağıdaki yöntemlerden birini kullanın. Doldurma karakteri bir boşluk veya belirtilen karakter olabilir. Elde edilen dize, sağa hizalı veya sola hizalı olarak görünür. Özgün dizenin uzunluğu, istenen toplam uzunluğa zaten eşitse veya daha büyükse, doldurma yöntemleri özgün dizeyi değiştirilmemiş şekilde döndürür; daha fazla bilgi için, ve yöntemlerinin iki aşırı yüklemesinin bölümlerini **döndürür** <xref:System.String.PadLeft%2A?displayProperty=nameWithType> <xref:System.String.PadRight%2A?displayProperty=nameWithType> .
   
-|Yöntem adı|Kullanım|  
+|Yöntem adı|Kullanın|  
 |-----------------|---------|  
 |<xref:System.String.PadLeft%2A?displayProperty=nameWithType>|Baştaki karakterlerle belirtilen toplam uzunluğa sahip bir dizeyi defterler.|  
 |<xref:System.String.PadRight%2A?displayProperty=nameWithType>|Sondaki karakterlerle bir dizeyi belirtilen toplam uzunluğa göre defterler.|  

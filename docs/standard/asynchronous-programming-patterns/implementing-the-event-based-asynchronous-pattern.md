@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
-- components [.NET Framework], asynchronous
+- threading [.NET], asynchronous features
+- components [.NET], asynchronous
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 466a0dd8a827cd869894106a0901bdab89601e25
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ca4b1b3ff1fb7180250de7436db9a4d642e8118c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559102"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888795"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 
@@ -75,7 +75,7 @@ Zaman uyumsuz bir karşılığı sağlamak istediğiniz her zaman uyumlu yöntem
 
 - Birden çok çağırmaları kabul eder.
 
-İsteğe bağlı olarak, _MethodName_**Async**ile özdeş, ancak başka bir nesne değerli parametresi adlı bir _MethodName_**zaman uyumsuz** aşırı yüklemesi tanımlayın `userState` . Yönteminizin birden çok eş zamanlı çağırma yönetimini yönetmeye hazırlandıysanız bunu yapın. Bu durumda `userState` değer, yöntemin etkinleştirmeleri ayırt edilebilmesi için tüm olay işleyicilerine geri gönderilir. Bunu, daha sonra alımı için Kullanıcı durumunu depolamak üzere bir yerde yapmayı da tercih edebilirsiniz.
+İsteğe bağlı olarak, _MethodName_**Async** ile özdeş, ancak başka bir nesne değerli parametresi adlı bir _MethodName_**zaman uyumsuz** aşırı yüklemesi tanımlayın `userState` . Yönteminizin birden çok eş zamanlı çağırma yönetimini yönetmeye hazırlandıysanız bunu yapın. Bu durumda `userState` değer, yöntemin etkinleştirmeleri ayırt edilebilmesi için tüm olay işleyicilerine geri gönderilir. Bunu, daha sonra alımı için Kullanıcı durumunu depolamak üzere bir yerde yapmayı da tercih edebilirsiniz.
 
 Her ayrı _MethodName_**zaman uyumsuz** Yöntem imzası için:
 
@@ -155,7 +155,7 @@ Bu yöntemler genellikle hemen döndürülür ve işlem gerçekten iptal edebili
 
 ## <a name="optionally-support-the-isbusy-property"></a>İsteğe bağlı olarak IsBusy özelliğini destekler
 
-Sınıfınız birden çok eş zamanlı çağırma desteklemiyorsa, bir özellik kullanıma sunulmasını düşünün `IsBusy` . Bu, bir _MethodName_zaman**uyumsuz** yönteminin _MethodName_**zaman** uyumsuz yönteminden bir özel durum yakalanmadan çalışıp çalışmadığını belirlemesine olanak sağlar.
+Sınıfınız birden çok eş zamanlı çağırma desteklemiyorsa, bir özellik kullanıma sunulmasını düşünün `IsBusy` . Bu, bir _MethodName_ zaman **uyumsuz** yönteminin _MethodName_**zaman** uyumsuz yönteminden bir özel durum yakalanmadan çalışıp çalışmadığını belirlemesine olanak sağlar.
 
 `IsBusy` [Olay tabanlı zaman uyumsuz model uygulamak Için en iyi uygulamalar](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)bölümünde açıklanan semantiğe göre ABIDE.
 
@@ -213,13 +213,13 @@ Sınıfınız, her biri farklı türde veriler döndüren birden çok zaman uyum
 
 ## <a name="handling-out-and-ref-parameters-in-methods"></a>Metotlarda çıkış ve başvuru parametrelerini işleme
 
-Ve ' nin kullanımı, genel olarak, .NET Framework önerilse de `out` `ref` , mevcut olduklarında izlenecek kurallar aşağıda verilmiştir:
+Ve ' nin kullanımı, genellikle .NET 'te önerilse de `out` `ref` , mevcut olduklarında izlenecek kurallar aşağıda verilmiştir:
 
-Zaman uyumlu bir yöntem *MethodName*:
+Zaman uyumlu bir yöntem *MethodName* :
 
-- `out`*MethodName* parametresi _MethodName_**Async**öğesinin bir parçası olmamalıdır. Bunun yerine _, MethodName parametresinin bir parçası_olmaları *gerekir (daha* uygun bir ad olmadıkça) parametre eşdeğeri olarak aynı**ada sahip.**
+- `out`*MethodName* parametresi _MethodName_**Async** öğesinin bir parçası olmamalıdır. Bunun yerine _, MethodName parametresinin bir parçası_ olmaları *gerekir (daha* uygun bir ad olmadıkça) parametre eşdeğeri olarak aynı **ada sahip.**
 
-- `ref`*MethodName* parametresi, _MethodName_**zaman uyumsuz**değerinin bir parçası olarak ve *MethodName (daha* uygun bir ad olmadıkça) parametresi ile aynı ada sahip _MethodName_**CompletedEventArgs** öğesinin bir parçası olarak görünmelidir.
+- `ref`*MethodName* parametresi, _MethodName_**zaman uyumsuz** değerinin bir parçası olarak ve *MethodName (daha* uygun bir ad olmadıkça) parametresi ile aynı ada sahip _MethodName_**CompletedEventArgs** öğesinin bir parçası olarak görünmelidir.
 
 Örneğin, verilen:
 

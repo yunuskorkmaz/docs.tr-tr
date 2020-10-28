@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/23/2020
 ms.topic: overview
-ms.openlocfilehash: 2aaa24e54dad7b765781bf7c790890a57a77af14
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: d2dbe06597c99158eaa39812d4d5a95288450adc
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608354"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888567"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 'e bağımlılık ekleme
 
@@ -95,7 +95,7 @@ static IHostBuilder CreateHostBuilder(string[] args) =>
 
 `LoggingMessageWriter`<xref:Microsoft.Extensions.Logging.ILogger%601>, oluşturucuda istediği öğesine bağlıdır. `ILogger<TCategoryName>`[Framework tarafından sağlanmış bir hizmettir](#framework-provided-services).
 
-Bağımlılık ekleme işlemini zincirleme bir biçimde kullanmak olağan dışı değildir. Her istenen bağımlılık, kendi bağımlılıklarını ister. Kapsayıcı grafikteki bağımlılıkları çözer ve tamamen çözümlenen hizmeti döndürür. Çözümlenmesi gereken, genellikle *bağımlılık ağacı*, *bağımlılık grafiği*veya *nesne grafiği*olarak adlandırılan toplu bağımlılıklar kümesi.
+Bağımlılık ekleme işlemini zincirleme bir biçimde kullanmak olağan dışı değildir. Her istenen bağımlılık, kendi bağımlılıklarını ister. Kapsayıcı grafikteki bağımlılıkları çözer ve tamamen çözümlenen hizmeti döndürür. Çözümlenmesi gereken, genellikle *bağımlılık ağacı* , *bağımlılık grafiği* veya *nesne grafiği* olarak adlandırılan toplu bağımlılıklar kümesi.
 
 Kapsayıcı, `ILogger<TCategoryName>` [(genel) açık türlerden](/dotnet/csharp/language-reference/language-specification/types#open-and-closed-types)yararlanarak çözümlenir, her [(genel) oluşturulan türü](/dotnet/csharp/language-reference/language-specification/types#constructed-types)kaydetme ihtiyacını ortadan kaldırır.
 
@@ -173,7 +173,7 @@ Web uygulamaları için kapsamlı bir yaşam süresi, hizmetlerin istemci isteğ
 Entity Framework Core kullanılırken, <xref:Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext%2A> genişletme yöntemi, `DbContext` Varsayılan olarak kapsamlı yaşam süresine sahip türleri kaydeder.
 
 > [!NOTE]
-> Kapsamlı bir hizmeti tek bir ***sunucudan çözümleyin.*** Bu, sonraki istekleri işlerken hizmetin yanlış duruma gelmesine neden olabilir. Şunları yapabilirsiniz:
+> Tek bir kapsamdaki hizmeti bir tekil hizmetten çözümleyin ve örneğin geçici bir hizmet aracılığıyla dolaylı olarak değil, bunun gibi bir **şekilde değil.** Bu, sonraki istekleri işlerken hizmetin yanlış duruma gelmesine neden olabilir. Şunları yapabilirsiniz:
 >
 > - Tek bir hizmeti kapsamlı veya geçici bir hizmetten çözümleyin.
 > - Kapsamlı bir hizmeti başka bir kapsamlı veya geçici hizmetten çözün.
@@ -194,7 +194,7 @@ Bağımlılık ekleme kapsayıcısından gelen hizmet uygulamasının sonraki t�
 İstekleri işleyen uygulamalarda, uygulama kapatılırken bırakıldığında tek hizmetler silinir <xref:Microsoft.Extensions.DependencyInjection.ServiceProvider> . Uygulama kapatılıncaya kadar bellek yayımlanmadığı için, tek bir hizmetle bellek kullanımını göz önünde bulundurun.
 
 > [!WARNING]
-> Kapsamlı bir hizmeti tek bir ***sunucudan çözümleyin.*** Bu, sonraki istekleri işlerken hizmetin yanlış duruma gelmesine neden olabilir. Tek bir hizmeti kapsamlı veya geçici bir hizmetten çözümlemek çok iyidir.
+> Kapsamlı bir hizmeti tek bir _*_sunucudan çözümleyin._*_ Bu, sonraki istekleri işlerken hizmetin yanlış duruma gelmesine neden olabilir. Tek bir hizmeti kapsamlı veya geçici bir hizmetten çözümlemek çok iyidir.
 
 ## <a name="service-registration-methods"></a>Hizmet kayıt yöntemleri
 
@@ -202,11 +202,11 @@ Framework, belirli senaryolarda yararlı olan hizmet kayıt uzantısı yöntemle
 
 | Yöntem | Automatic<br>object<br>elden | Birden çok<br>uygulamalar | Geçiş bağımsız değişkenleri |
 |--|:-:|:-:|:-:|
-| `Add{LIFETIME}<{SERVICE}, {IMPLEMENTATION}>()`<br><br>Örnek:<br><br>`services.AddSingleton<IMyDep, MyDep>();` | Yes | Yes | Hayır |
-| `Add{LIFETIME}<{SERVICE}>(sp => new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton<IMyDep>(sp => new MyDep());`<br>`services.AddSingleton<IMyDep>(sp => new MyDep(99));` | Yes | Yes | Yes |
-| `Add{LIFETIME}<{IMPLEMENTATION}>()`<br><br>Örnek:<br><br>`services.AddSingleton<MyDep>();` | Yes | Hayır | Hayır |
-| `AddSingleton<{SERVICE}>(new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton<IMyDep>(new MyDep());`<br>`services.AddSingleton<IMyDep>(new MyDep(99));` | Hayır | Yes | Yes |
-| `AddSingleton(new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton(new MyDep());`<br>`services.AddSingleton(new MyDep(99));` | Hayır | Hayır | Yes |
+| `Add{LIFETIME}<{SERVICE}, {IMPLEMENTATION}>()`<br><br>Örnek:<br><br>`services.AddSingleton<IMyDep, MyDep>();` | Evet | Evet | Hayır |
+| `Add{LIFETIME}<{SERVICE}>(sp => new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton<IMyDep>(sp => new MyDep());`<br>`services.AddSingleton<IMyDep>(sp => new MyDep(99));` | Evet | Evet | Evet |
+| `Add{LIFETIME}<{IMPLEMENTATION}>()`<br><br>Örnek:<br><br>`services.AddSingleton<MyDep>();` | Evet | Hayır | Hayır |
+| `AddSingleton<{SERVICE}>(new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton<IMyDep>(new MyDep());`<br>`services.AddSingleton<IMyDep>(new MyDep(99));` | Hayır | Evet | Evet |
+| `AddSingleton(new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton(new MyDep());`<br>`services.AddSingleton(new MyDep(99));` | Hayır | Hayır | Evet |
 
 Tür çıkarma hakkında daha fazla bilgi için [Hizmetler 'In aktiften çıkarılması](dependency-injection-guidelines.md#disposal-of-services) bölümüne bakın.
 
@@ -228,7 +228,7 @@ Daha fazla bilgi için bkz.
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton%2A>
 
-[TryAddEnumerable (ServiceDescriptor)](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A) yöntemleri, yalnızca *aynı türde*bir uygulama olmadığında hizmeti kaydeder. Aracılığıyla birden çok hizmet çözümlenir `IEnumerable<{SERVICE}>` . Hizmetleri kaydederken, aynı türden biri zaten eklenmediyse bir örnek ekleyin. Kitaplık yazarları `TryAddEnumerable` , kapsayıcıda bir uygulamanın birden çok kopyasını kaydetmemek için kullanır.
+[TryAddEnumerable (ServiceDescriptor)](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A) yöntemleri, yalnızca aynı türde * _OF bir uygulama yoksa, hizmeti kaydeder. Aracılığıyla birden çok hizmet çözümlenir `IEnumerable<{SERVICE}>` . Hizmetleri kaydederken, aynı türden biri zaten eklenmediyse bir örnek ekleyin. Kitaplık yazarları `TryAddEnumerable` , kapsayıcıda bir uygulamanın birden çok kopyasını kaydetmemek için kullanır.
 
 Aşağıdaki örnekte, `TryAddEnumerable` `MessageWriter` için bir uygulama olarak kaydeden ilk çağrı `IMessageWriter1` . İçin ikinci çağrı kaydettirir `MessageWriter` `IMessageWriter2` . `IMessageWriter1`Zaten kayıtlı bir uygulamasına sahip olduğundan, üçüncü çağrının etkisi yoktur `MessageWriter` :
 
@@ -291,6 +291,7 @@ Kapsamlı hizmetler kendilerini oluşturan kapsayıcı tarafından atılmış. K
 
 - [.NET ' te bağımlılık ekleme 'yi kullanma](dependency-injection-usage.md)
 - [Bağımlılık ekleme yönergeleri](dependency-injection-guidelines.md)
+- [ASP.NET Core bağımlılık ekleme](/aspnet/core/fundamentals/dependency-injection)
 - [Dı uygulaması geliştirme için NDC Konferansı desenleri](https://www.youtube.com/watch?v=x-C-CNBVTaY)
 - [Açık bağımlılıklar ilkesi](../../architecture/modern-web-apps-azure/architectural-principles.md#explicit-dependencies)
 - [Denetim kapsayıcıları ve bağımlılık ekleme deseninin Inversion 'ı (Marwler)](https://www.martinfowler.com/articles/injection.html)

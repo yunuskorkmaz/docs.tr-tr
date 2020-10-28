@@ -10,14 +10,14 @@ helpviewer_keywords:
 - character classes
 - regular expressions, character classes
 - characters, matching syntax
-- .NET Framework regular expressions, character classes
+- .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 619a32d98d697b3b1d461921bfe581acb720be68
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292104"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888730"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal ifadelerde karakter sınıfları
 
@@ -48,7 +48,7 @@ Bir karakter sınıfı, bir eşleşmenin başarılı olması için giriş dizesi
  .NET, bir karakter sınıfının başka bir karakter sınıfından dışlanması sonucu olarak bir karakter kümesi tanımlamanızı sağlayan karakter sınıfı çıkarma ifadelerini destekler. Daha fazla bilgi için bkz. [karakter sınıfı çıkarma](#CharacterClassSubtraction).  
   
 > [!NOTE]
-> Bir Unicode kategorisiyle eşleşmesi için sözcük karakterleriyle veya [ {} \p](#CategoryOrBlock) ile eşleşecek [\w](#WordCharacter) gibi karakter sınıfları, <xref:System.Globalization.CharUnicodeInfo> karakter kategorileri hakkında bilgi sağlamak için sınıfına bağımlıdır.  .NET Framework 4.6.2 başlayarak, karakter kategorileri [Unicode standardı, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)' i temel alır. .NET Framework 4.6.1 aracılığıyla .NET Framework 4 ' te, [Unicode standardı, sürüm 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/)tabanlıdır.  
+> Bir Unicode kategorisiyle eşleşmesi için sözcük karakterleriyle veya [ {} \p](#CategoryOrBlock) ile eşleşecek [\w](#WordCharacter) gibi karakter sınıfları, <xref:System.Globalization.CharUnicodeInfo> karakter kategorileri hakkında bilgi sağlamak için sınıfına bağımlıdır. .NET Framework 4.6.2 ve sonraki sürümlerinde, karakter kategorileri [Unicode standardı, sürüm 8.0.0 ' i](https://www.unicode.org/versions/Unicode8.0.0/)temel alır.
   
 <a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>Pozitif karakter grubu: []  
@@ -71,7 +71,7 @@ Bir karakter sınıfı, bir eşleşmenin başarılı olması için giriş dizesi
 
 Pozitif karakter sınıflarını içeren bazı sık kullanılan normal ifade desenleri aşağıdaki tabloda listelenmiştir.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`[aeiou]`|Tüm sesli harflerle eşleş.|  
 |`[\p{P}\d]`|Tüm noktalama işaretleriyle ve ondalık basamak işaretleriyle eşleş.|  
@@ -84,7 +84,7 @@ Pozitif karakter sınıflarını içeren bazı sık kullanılan normal ifade des
   
  Normal ifade `gr[ae]y\s\S+?[\s|\p{P}]` aşağıdaki gibi tanımlanır:  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`gr`|"gr" sabit karakterleriyle eşleş.|  
 |`[ae]`|Bir "a" veya "e" ile eşleş.|  
@@ -99,7 +99,7 @@ Pozitif karakter sınıflarını içeren bazı sık kullanılan normal ifade des
   
  Normal ifade `\b[A-Z]\w*\b` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`[A-Z]`|A'dan Z'ye herhangi bir büyük harf karakterle eşleş.|  
@@ -134,7 +134,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
  Negatif karakter gruplarını içeren bazı sık kullanılan normal ifade desenleri aşağıdaki tabloda listelenmiştir.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`[^aeiou]`|Sesli harfler dışındaki tüm karakterlerle eşleş.|  
 |`[^\p{P}\d]`|Noktalama işaretleri ve ondalık basamak karakterleri dışındaki tüm karakterlerle eşleş.|  
@@ -146,7 +146,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
  Normal ifade `\bth[^o]\w+\b` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`th`|"th" sabit karakterleriyle eşleş.|  
@@ -193,7 +193,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
  Normal ifade `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`\p{IsGreek}+`|Bir veya daha fazla Yunan karakterle eşleş.|  
@@ -224,9 +224,9 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
 <a name="WordCharacter"></a>
 ## <a name="word-character-w"></a>Sözcük karakteri: \w  
- `\w`herhangi bir kelime karakteriyle eşleşir. Bir sözcük karakteri, aşağıdaki tabloda listelenen Unicode kategorilerinin herhangi birinin üyesidir.  
+ `\w` herhangi bir kelime karakteriyle eşleşir. Bir sözcük karakteri, aşağıdaki tabloda listelenen Unicode kategorilerinin herhangi birinin üyesidir.  
   
-|Kategori|Description|  
+|Kategori|Açıklama|  
 |--------------|-----------------|  
 |Ll|Harf, Küçük Harf|  
 |Lu|Harf, Büyük Harf|  
@@ -244,7 +244,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
  Aşağıdaki örnek, `\w` bir sözcükteki yinelenen karakterleri eşleştirmek için Language öğesini kullanır. Örnek, `(\w)\1` aşağıdaki gibi yorumlanabilen bir normal ifade deseninin tanımlar.  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |(\w)|Bir sözcük karakteriyle eşleş. Bu ilk yakalama grubudur.|  
 |\ 1|İlk yakalamanın değeriyle eşleş.|  
@@ -254,13 +254,13 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
 <a name="NonWordCharacter"></a>
 ## <a name="non-word-character-w"></a>Sözcük olmayan karakter: \w  
- `\W`sözcük olmayan herhangi bir karakterle eşleşir. \W dil öğesi aşağıdaki karakter sınıfıyla eşdeğerdir:  
+ `\W` sözcük olmayan herhangi bir karakterle eşleşir. \W dil öğesi aşağıdaki karakter sınıfıyla eşdeğerdir:  
   
 `[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`  
   
  Diğer bir deyişle, aşağıdaki tabloda listelenen Unicode kategorilerindekiler dışında herhangi bir karakterle eşleşir.  
   
-|Kategori|Description|  
+|Kategori|Açıklama|  
 |--------------|-----------------|  
 |Ll|Harf, Küçük Harf|  
 |Lu|Harf, Büyük Harf|  
@@ -278,7 +278,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
  Aşağıdaki örnek, `\W` karakter sınıfını göstermektedir.  Bir `\b(\w+)(\W){1,2}` sözcüğe ve ardından boşluk veya noktalama gibi bir veya iki sözcük olmayan karakterle eşleşen bir normal ifade deseninin tanımlar. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |\b|Bir sözcük sınırında eşleşmeye başla.|  
 |(\w+)|Bir veya daha fazla sözcük karakteri eşleştir. Bu ilk yakalama grubudur.|  
@@ -291,9 +291,9 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
 <a name="WhitespaceCharacter"></a>
 ## <a name="whitespace-character-s"></a>Boşluk karakteri: \s  
- `\s`herhangi bir boşluk karakteriyle eşleşir. Aşağıdaki tabloda listelenen kaçış dizileri ve Unicode kategorileriyle eşdeğerdir.  
+ `\s` herhangi bir boşluk karakteriyle eşleşir. Aşağıdaki tabloda listelenen kaçış dizileri ve Unicode kategorileriyle eşdeğerdir.  
   
-|Kategori|Description|  
+|Kategori|Açıklama|  
 |--------------|-----------------|  
 |`\f`|Sonraki sayfaya geçme karakteri, \u000C.|  
 |`\n`|Yeni satır karakteri, \u000A.|  
@@ -307,7 +307,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
  Aşağıdaki örnek, `\s` karakter sınıfını göstermektedir. `\b\w+(e)?s(\s|$)`"S" veya "es" ile biten bir sözcükle, ardından bir boşluk karakteri veya giriş dizesinin sonu ile eşleşen bir normal ifade deseninin tanımlar. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |\b|Bir sözcük sınırında eşleşmeye başla.|  
 |\w+|Bir veya daha fazla sözcük karakteri eşleştir.|  
@@ -320,13 +320,13 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
 <a name="NonWhitespaceCharacter"></a>
 ## <a name="non-whitespace-character-s"></a>Boşluk olmayan karakter: \s  
- `\S`boşluk olmayan herhangi bir karakterle eşleşir. Bu, `[^\f\n\r\t\v\x85\p{Z}]` normal ifade deseninin veya eşdeğer olan normal ifade deseninin ters, boşluk karakterleriyle eşleşen, ile eşdeğerdir `\s` . Daha fazla bilgi için bkz. boşluk [karakteri: \s](#WhitespaceCharacter).  
+ `\S` boşluk olmayan herhangi bir karakterle eşleşir. Bu, `[^\f\n\r\t\v\x85\p{Z}]` normal ifade deseninin veya eşdeğer olan normal ifade deseninin ters, boşluk karakterleriyle eşleşen, ile eşdeğerdir `\s` . Daha fazla bilgi için bkz. boşluk [karakteri: \s](#WhitespaceCharacter).  
   
- ECMAScript uyumlu davranış belirtilmişse, `\S` değerine eşdeğerdir `[^ \f\n\r\t\v]` . ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
+ ECMAScript uyumlu davranış belirtilmişse, `\S` değerine eşdeğerdir  `[^ \f\n\r\t\v]` . ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
   
  Aşağıdaki örnek, `\S` Language öğesini göstermektedir. Normal ifade deseninin boşluk `\b(\S+)\s?` karakterleri ile ayrılmış dizeler eşleşir. Eşleşmenin nesnesindeki ikinci öğe <xref:System.Text.RegularExpressions.GroupCollection> eşleşen dizeyi içeriyor. Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanabilir.  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`(\S+)`|Bir veya daha fazla boşluk olmayan karakterle eşleş. Bu ilk yakalama grubudur.|  
@@ -337,13 +337,13 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
 <a name="DigitCharacter"></a>
 ## <a name="decimal-digit-character-d"></a>Ondalık basamak karakteri: \d  
- `\d`herhangi bir ondalık basamakla eşleşir. `\p{Nd}`Standart ondalık basamakları 0-9, diğer karakter kümelerinin ondalık basamakları de dahil olmak üzere, normal ifade deseninin eşdeğeridir.  
+ `\d` herhangi bir ondalık basamakla eşleşir. `\p{Nd}`Standart ondalık basamakları 0-9, diğer karakter kümelerinin ondalık basamakları de dahil olmak üzere, normal ifade deseninin eşdeğeridir.  
   
- ECMAScript uyumlu davranış belirtilmişse, `\d` değerine eşdeğerdir `[0-9]` . ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
+ ECMAScript uyumlu davranış belirtilmişse, `\d` değerine eşdeğerdir  `[0-9]` . ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
   
  Aşağıdaki örnek, `\d` Language öğesini göstermektedir. Bir giriş dizesinin Amerika Birleşik Devletleri ve Kanada'da geçerli bir telefon numarası olup olmadığını test eder. Normal ifade deseninin, `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |`^`|Giriş dizesinin başında eşleşmeye başla.|  
 |`\(?`|Sıfır veya bir sabit "(" karakteriyle eşleş.|  
@@ -359,13 +359,13 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
 <a name="NonDigitCharacter"></a>
 ## <a name="non-digit-character-d"></a>Basamak olmayan karakter: \d  
- `\D`rakam olmayan herhangi bir karakterle eşleşir. `\P{Nd}`Normal ifade deseninin eşdeğeridir.  
+ `\D` rakam olmayan herhangi bir karakterle eşleşir. `\P{Nd}`Normal ifade deseninin eşdeğeridir.  
   
- ECMAScript uyumlu davranış belirtilmişse, `\D` değerine eşdeğerdir `[^0-9]` . ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
+ ECMAScript uyumlu davranış belirtilmişse, `\D` değerine eşdeğerdir  `[^0-9]` . ECMAScript normal ifadeleri hakkında daha fazla bilgi için [normal Ifade seçeneklerinde](regular-expression-options.md)"ECMAScript eşleştirme davranışı" bölümüne bakın.  
   
  Aşağıdaki örnek, \D dil öğesini gösterir. Parça numarası gibi bir dizenin doğru ondalık ve ondalık olmayan karakter birleşimini içerip içermediğini test eder. Normal ifade deseninin, `^\D\d{1,5}\D*$` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |`^`|Giriş dizesinin başında eşleşmeye başla.|  
 |`\D`|Basamak olmayan bir karakterle eşleş.|  
@@ -380,7 +380,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
 ## <a name="supported-unicode-general-categories"></a>Desteklenen Unicode genel kategorileri  
  Unicode aşağıdaki tabloda listelenen genel kategorileri tanımlar. Daha fazla bilgi için, [Unicode karakter veritabanında](https://www.unicode.org/reports/tr44/)"UCD dosya biçimi" ve "genel kategori değerleri" alt konuları bölümüne bakın.  
   
-|Kategori|Description|  
+|Kategori|Açıklama|  
 |--------------|-----------------|  
 |`Lu`|Harf, Büyük Harf|  
 |`Ll`|Harf, Küçük Harf|  
@@ -558,7 +558,7 @@ Burada *Firstcharacter* aralığı Başlatan karakter ve *lastcharacter* aralı�
   
  Aşağıdaki örnek, `^[0-9-[2468]]+$` bir giriş dizesindeki sıfır ve tek basamakla eşleşen normal bir ifade tanımlar.  Normal ifade aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |^|Giriş dizesinin başında eşleşmeyi başlat.|  
 |`[0-9-[2468]]+`|0 ile 9 arasında; 2, 4, 6 ve 8 dışındaki herhangi bir karakter bir veya daha fazla bulunduğunda eşleş. Başka bir deyişle, sıfır veya bir tek basamakla eşleş.|  

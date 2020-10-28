@@ -4,25 +4,26 @@ description: Zaman uyumsuz işlemlerle çalışırken görev tabanlı zaman uyum
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- .NET Framework, and TAP
-- asynchronous design patterns, .NET Framework
-- TAP, .NET Framework support for
-- Task-based Asynchronous Pattern, .NET Framework support for
-- .NET Framework, asynchronous design patterns
+- .NET and TAP
+- asynchronous design patterns, .NET
+- TAP, .NET support for
+- Task-based Asynchronous Pattern, .NET support for
+- .NET, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: 68b1f723b3dcc4fd16073a653a778aa480cfa32e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4a2715ab6572c33a1564986c5cfda112d5fa11db
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621762"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888873"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 
-Zaman uyumsuz işlemlerle çalışmak için görev tabanlı zaman uyumsuz model (TAP) kullandığınızda geri çağırmaları kullanarak, engellemeden beklemeyi elde edebilirsiniz.  Görevler için, bu gibi yöntemler aracılığıyla elde edilir <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> . Dil tabanlı zaman uyumsuz destek, zaman uyumsuz işlemlerin normal Denetim akışında beklemesine izin vererek geri çağırmaları gizler ve derleyicinin ürettiği kod aynı API düzeyi desteğini sağlar.
+Zaman uyumsuz işlemlerle çalışmak için görev tabanlı zaman uyumsuz model (TAP) kullandığınızda geri çağırmaları kullanarak, engellemeden beklemeyi elde edebilirsiniz. Görevler için, bu gibi yöntemler aracılığıyla elde edilir <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> . Dil tabanlı zaman uyumsuz destek, zaman uyumsuz işlemlerin normal Denetim akışında beklemesine izin vererek geri çağırmaları gizler ve derleyicinin ürettiği kod aynı API düzeyi desteğini sağlar.
 
 ## <a name="suspending-execution-with-await"></a>Await ile yürütmeyi askıya alma
- .NET Framework 4,5 ' den başlayarak, zaman uyumsuz olarak await ve nesneler için C# ' de [await](../../csharp/language-reference/operators/await.md) anahtar sözcüğünü ve Visual Basic [await işlecini](../../visual-basic/language-reference/operators/await-operator.md) kullanabilirsiniz <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> . Bir <xref:System.Threading.Tasks.Task> ' ı beklerken, `await` ifade türündedir `void` . Bir <xref:System.Threading.Tasks.Task%601> ' ı beklerken, `await` ifade türündedir `TResult` . Bir `await` ifade, zaman uyumsuz bir metodun gövdesinde gerçekleşmelidir. .NET Framework 4,5 ' de C# ve Visual Basic dil desteği hakkında daha fazla bilgi için bkz. C# ve Visual Basic dil belirtimleri.
+
+' Deki [await](../../csharp/language-reference/operators/await.md) anahtar sözcüğünü ve zaman uyumsuz olarak await ve nesneleri Visual Basic ' de [await işlecini](../../visual-basic/language-reference/operators/await-operator.md) kullanabilirsiniz <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> . Bir <xref:System.Threading.Tasks.Task> ' ı beklerken, `await` ifade türündedir `void` . Bir <xref:System.Threading.Tasks.Task%601> ' ı beklerken, `await` ifade türündedir `TResult` . Bir `await` ifade, zaman uyumsuz bir metodun gövdesinde gerçekleşmelidir. (Bu dil özellikleri .NET Framework 4,5 ' de tanıtılmıştı.)
 
  Kapakların altında, await işlevi bir devamlılık kullanarak göreve bir geri çağırma işlemini kurar.  Bu geri çağırma, askıya alma noktasındaki zaman uyumsuz yöntemi sürdürür. Zaman uyumsuz yöntem devam ettirildiğinde, abeklelen işlem başarıyla tamamlanırsa ve bir ise <xref:System.Threading.Tasks.Task%601> , `TResult` döndürülür.  Durum, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> durumunda sonlandıysa <xref:System.Threading.Tasks.TaskStatus.Canceled> , bir <xref:System.OperationCanceledException> özel durum oluşturulur.  Durum, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> durumunda sonlandıysa <xref:System.Threading.Tasks.TaskStatus.Faulted> , hataya neden olan özel durum atılır. Bir `Task` , birden çok özel durumun sonucu olarak hata verebilir, ancak bu özel durumların yalnızca biri yayılır. Ancak, <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> özelliği <xref:System.AggregateException> tüm hataları içeren bir özel durum döndürür.
 
@@ -63,7 +64,8 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>Zaman uyumsuz bir Işlem iptal ediliyor
- .NET Framework 4 ' ten başlayarak, iptali destekleyen yöntemler ' e dokunarak iptal belirtecini kabul eden en az bir aşırı yükleme sağlayın ( <xref:System.Threading.CancellationToken> nesne).
+
+.NET Framework 4 ' ten başlayarak, iptali destekleyen yöntemler ' e dokunarak iptal belirtecini kabul eden en az bir aşırı yükleme sağlayın ( <xref:System.Threading.CancellationToken> nesne).
 
  İptal belirteci bir iptal belirteci kaynağı (nesne) ile oluşturulur <xref:System.Threading.CancellationTokenSource> .  Kaynağın özelliği, <xref:System.Threading.CancellationTokenSource.Token%2A> kaynağın yöntemi çağrıldığında işaret edilecek iptal belirtecini döndürür <xref:System.Threading.CancellationTokenSource.Cancel%2A> .  Örneğin, tek bir Web sayfasını indirmek isterseniz ve işlemi iptal etmek istiyorsanız, bir <xref:System.Threading.CancellationTokenSource> nesnesi oluşturur, BELIRTECINI tap yöntemine geçitirsiniz ve ardından <xref:System.Threading.CancellationTokenSource.Cancel%2A> işlemi iptal etmeye hazırsanız kaynağın metodunu çağırın:
 
@@ -535,7 +537,7 @@ public async void btnDownload_Click(object sender, RoutedEventArgs e)
 ```
 
 ## <a name="building-task-based-combinators"></a>Görev tabanlı kombinatör oluşturma
- Bir görev, zaman uyumsuz bir işlemi tamamen temsil edebildiğinden ve işlemle birleştirmek için zaman uyumlu ve zaman uyumsuz yetenekler sağladığından, sonuçlarını almakla ve bu şekilde devam ediyorsa, daha büyük desenler oluşturmak için görevler oluşturan yararlı kombinatör kitaplıkları oluşturabilirsiniz.  Önceki bölümde anlatıldığı gibi .NET Framework çeşitli yerleşik kombinatör içerir, ancak kendi kodunuzu da oluşturabilirsiniz. Aşağıdaki bölümlerde olası Combinator yöntemlerine ve türlerine birkaç örnek verilmiştir.
+ Bir görev, zaman uyumsuz bir işlemi tamamen temsil edebildiğinden ve işlemle birleştirmek için zaman uyumlu ve zaman uyumsuz yetenekler sağladığından, sonuçlarını almakla ve bu şekilde devam ediyorsa, daha büyük desenler oluşturmak için görevler oluşturan yararlı kombinatör kitaplıkları oluşturabilirsiniz. Önceki bölümde anlatıldığı gibi, .NET birçok yerleşik kombinatör içerir, ancak kendiniz de oluşturabilirsiniz. Aşağıdaki bölümlerde olası Combinator yöntemlerine ve türlerine birkaç örnek verilmiştir.
 
 ### <a name="retryonfault"></a>RetryOnFault
  Birçok durumda, önceki bir deneme başarısız olursa bir işlemi yeniden denemek isteyebilirsiniz.  Zaman uyumlu kod için, `RetryOnFault` bunu gerçekleştirmek için aşağıdaki örnekte gibi bir yardımcı yöntem oluşturabilirsiniz:
@@ -832,7 +834,7 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> <xref:System.Threading.Tasks.Dataflow>Ad alanı, **NuGet**aracılığıyla .NET Framework 4,5 ' de kullanılabilir. Ad alanını içeren derlemeyi yüklemek için <xref:System.Threading.Tasks.Dataflow> projenizi Visual Studio 'da açın, proje menüsünden **NuGet Paketlerini Yönet** ' i seçin ve Microsoft. tpl. Dataflow paketini çevrimiçi olarak arayın.
+> <xref:System.Threading.Tasks.Dataflow>Ad alanı, bir NuGet paketi olarak kullanılabilir. Ad alanını içeren derlemeyi yüklemek için <xref:System.Threading.Tasks.Dataflow> projenizi Visual Studio 'da açın, proje menüsünden **NuGet Paketlerini Yönet** ' i seçin ve paketi çevrimiçi olarak arayın `System.Threading.Tasks.Dataflow` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

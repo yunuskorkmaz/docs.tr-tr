@@ -13,23 +13,23 @@ helpviewer_keywords:
 - CompareTo method
 - IndexOf method
 - Compare method
-- strings [.NET Framework], comparing
+- strings [.NET], comparing
 - CompareOrdinal method
 - EndsWith method
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 5ed73d18341c3b9c6e61e12fdf322b9a67affd4a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 658f8b2cf7d7b2431654df1caebdac8118b3674b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602199"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889497"
 ---
 # <a name="comparing-strings-in-net"></a>.NET 'teki dizeleri karşılaştırma
 .NET, dizelerin değerlerini karşılaştırmak için çeşitli yöntemler sağlar. Aşağıdaki tabloda değer karşılaştırma yöntemleri listelenmekte ve açıklanmaktadır.  
   
-|Yöntem adı|Kullanım|  
+|Yöntem adı|Kullanın|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|İki dizenin değerlerini karşılaştırır. Bir tamsayı değeri döndürür.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Yerel kültürle ilgili olmadan iki dizeyi karşılaştırır. Bir tamsayı değeri döndürür.|  
@@ -60,7 +60,7 @@ ms.locfileid: "84602199"
   
  Bu örnek `-1` konsola görüntülenir.  
   
- Yukarıdaki örnek, varsayılan olarak kültüre duyarlıdır. Kültüre duyarsız bir dize karşılaştırması gerçekleştirmek için, <xref:System.String.Compare%2A?displayProperty=nameWithType> bir *kültür* parametresi sağlayarak kullanılacak kültürü belirtmenize izin veren yönteminin bir aşırı yüklemesini kullanın. <xref:System.String.Compare%2A?displayProperty=nameWithType>Kültüre duyarsız bir karşılaştırma gerçekleştirmek için yönteminin nasıl kullanılacağını gösteren bir örnek için bkz. [kültüre duyarsız dize karşılaştırmaları gerçekleştirme](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Yukarıdaki örnek, varsayılan olarak kültüre duyarlıdır. Kültüre duyarsız bir dize karşılaştırması gerçekleştirmek için, <xref:System.String.Compare%2A?displayProperty=nameWithType> bir *kültür* parametresi sağlayarak kullanılacak kültürü belirtmenize izin veren yönteminin bir aşırı yüklemesini kullanın. <xref:System.String.Compare%2A?displayProperty=nameWithType>Kültüre duyarsız bir karşılaştırma gerçekleştirmek için yönteminin nasıl kullanılacağını gösteren bir örnek için bkz. [Culture-Insensitive dize karşılaştırmaları gerçekleştirme](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>Yöntemi, yerel kültürü düşünmeksizin iki dize nesnesini karşılaştırır. Bu yöntemin dönüş değerleri, önceki tabloda **Compare** yöntemi tarafından döndürülen değerlerle aynıdır.  
@@ -90,7 +90,7 @@ ms.locfileid: "84602199"
   
  Bu örnek `-1` konsola görüntülenir.  
   
- Metodun tüm aşırı yüklemeleri <xref:System.String.CompareTo%2A?displayProperty=nameWithType> Varsayılan olarak kültüre duyarlı ve büyük/küçük harfe duyarlı karşılaştırmalar gerçekleştirir. Kültüre duyarsız bir karşılaştırma gerçekleştirmenize olanak tanıyan bu yöntemin hiçbir aşırı yüklemesi sağlanmaz. Kod netliği için, **String.Compare** <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> kültür duyarlı işlemler veya <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> kültüre duyarsız Işlemler için belirtmek yerine String. Compare yöntemini kullanmanızı öneririz. Her iki kültüre duyarlı ve kültüre duyarsız karşılaştırmalar gerçekleştirmek için **String. Compare** metodunu nasıl kullanacağınızı gösteren örnekler için bkz. [kültüre duyarsız dize karşılaştırmaları gerçekleştirme](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Metodun tüm aşırı yüklemeleri <xref:System.String.CompareTo%2A?displayProperty=nameWithType> Varsayılan olarak kültüre duyarlı ve büyük/küçük harfe duyarlı karşılaştırmalar gerçekleştirir. Kültüre duyarsız bir karşılaştırma gerçekleştirmenize olanak tanıyan bu yöntemin hiçbir aşırı yüklemesi sağlanmaz. Kod netliği için, **String.Compare** <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> kültür duyarlı işlemler veya <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> kültüre duyarsız Işlemler için belirtmek yerine String. Compare yöntemini kullanmanızı öneririz. Her iki kültüre duyarlı ve kültüre duyarsız karşılaştırmalar gerçekleştirmek için **String. Compare** metodunu nasıl kullanacağınızı gösteren örnekler için bkz. [Culture-Insensitive dize karşılaştırmaları gerçekleştirme](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>Eşittir  
  **String. Equals** yöntemi, iki dizenin aynı olup olmadığını kolayca belirleyebilir. Bu büyük/küçük harfe duyarlı Yöntem, **doğru** veya **yanlış** Boole değeri döndürür. Sonraki örnekte gösterildiği gibi mevcut bir sınıftan kullanılabilir. Aşağıdaki örnek, bir dize nesnesinin "Merhaba Dünya" ifadesini içerip içermediğini anlamak için **Equals** yöntemini kullanır.  

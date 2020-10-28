@@ -9,19 +9,19 @@ dev_langs:
 helpviewer_keywords:
 - type system
 - common type system
-- assemblies [.NET Framework], types
+- assemblies [.NET], types
 - reference types
 - value types
 - cross-language interoperability
-- namespaces [.NET Framework], types
+- namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: 4e3fc4cb03a0b8fd63b41bd912374c29eef3a29a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ad42a77f9c6280211902fc4ffbf25871c537baa5
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555165"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889510"
 ---
 # <a name="common-type-system"></a>Ortak tür sistemi
 
@@ -49,7 +49,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
 - [Yapılar](#structures)  
   
-- [Numaralandırmalar](#enumerations)  
+- [Listelemeler](#enumerations)  
   
 - [Arabirimler](#interfaces)  
   
@@ -61,7 +61,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
  Aşağıdaki tabloda bir sınıfın sahip olabileceği bazı özellikler açıklanmaktadır. Çalışma zamanını destekleyen her dil, bir sınıf veya sınıf üyesinin bu özelliklerden birini veya daha fazlasını olduğunu göstermek için bir yol sağlar. Ancak, .NET ' i hedefleyen bireysel programlama dilleri, bu özelliklerin tümünü kullanabilir hale gelebilir.  
   
-|Özellik|Description|  
+|Özellik|Açıklama|  
 |--------------------|-----------------|  
 |sealed|Başka bir sınıfın bu türden türetilemeyeceğini belirtir.|  
 |uygulamalar|Sınıfın, arabirim üyesi uygulamalar sunarak bir veya daha fazla arabirim kullandığını gösterir.|  
@@ -178,7 +178,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
 ### <a name="type-accessibility"></a>Tür erişilebilirliği  
  Tüm türlerin, diğer türlerden erişilebilirliğini yöneten bir değiştiricisi vardır. Aşağıdaki tabloda, çalışma zamanı tarafından desteklenen tür erişilebilirlik türleri açıklanmaktadır.  
   
-|Erişilebilirlik|Description|  
+|Erişilebilirlik|Açıklama|  
 |-------------------|-----------------|  
 |public|Türe tüm derlemeler tarafından erişilebilir.|  
 |derleme|Türe yalnızca kendi derlemesi içinden erişilebilir.|  
@@ -225,7 +225,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
 - [Oluşturucular](#constructors)  
   
-- [Ekinlikler](#events)  
+- [Olaylar](#events)  
   
 - [İç içe geçmiş türler](#nested-types)  
 
@@ -265,7 +265,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
  Bir yapının kaynak kodu oluşturucuları tanımlıyorsa, bunlar parametreli olmalıdır; bir yapı parametresiz bir Oluşturucu tanımlayabilir ve derleyiciler yapılar veya diğer değer türleri için parametresiz oluşturucular oluşturmaz. Tüm değer türlerinde örtük olarak parametresiz bir Oluşturucu vardır. Bu Oluşturucu ortak dil çalışma zamanı tarafından uygulanır ve yapının tüm alanlarını varsayılan değerlerine başlatır.  
 
-### <a name="events"></a>Ekinlikler
+### <a name="events"></a>Olaylar
 
  Bir olay, yanıtlamış olabilecek bir olayı tanımlar ve ' a abone olunmakta olan, etkinliği kaldırmak ve olayı yükseltmek için Yöntemler tanımlar. Olaylar genellikle diğer durum değişikliği türlerini bilgilendirmek için kullanılır. Daha fazla bilgi için bkz. [Olaylar](../events/index.md).  
 
@@ -279,7 +279,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
 
  Ortak tür sistemi, tür üyelerinin çeşitli özelliklere sahip olmasına olanak sağlar; Ancak, dillerin tüm bu özellikleri desteklemesi gerekmez. Aşağıdaki tabloda üye özellikleri açıklanmaktadır.  
   
-|Özellik|Uygulanabilir|Description|  
+|Özellik|Uygulanabilir|Açıklama|  
 |--------------------|------------------|-----------------|  
 |abstract|Yöntemler, Özellikler ve olaylar|Tür, yöntemin uygulamasını sağlamaz. Soyut yöntemleri devraldığı veya uygulayan türler, yöntemi için bir uygulama sağlamalıdır. Tek özel durum, türetilmiş türün bir soyut tür olduğu durumdur. Tüm soyut yöntemler sanal.|  
 |Özel, Aile, derleme, Aile ve derleme, Aile veya derleme ya da ortak|Tümü|Üyenin erişilebilirliğini tanımlar:<br /><br /> private<br /> Yalnızca üyeyle aynı tür içinden veya iç içe yerleştirilmiş bir tür içinde erişilebilir.<br /><br /> aile<br /> Üyeyle aynı tür içinden ve ondan kalıtımla alan türetilmiş türlerden erişilebilir.<br /><br /> derleme<br /> Yalnızca türün tanımlandığı derlemede erişilebilir.<br /><br /> Aile ve derleme<br /> Yalnızca aile ve derleme erişimi için uygun olan türlerden erişilebilir.<br /><br /> Aile veya derleme<br /> Yalnızca aile veya derleme erişimi için uygun olan türlerden erişilebilir.<br /><br /> public<br /> Herhangi bir türden erişilebilir.|  
@@ -306,6 +306,6 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET API tarayıcısı](../../../api/index.md)
+- [.NET API Browser](../../../api/index.md)
 - [Ortak Dil Çalışma Zamanı](../clr.md)
 - [.NET 'te tür dönüştürme](type-conversion.md)

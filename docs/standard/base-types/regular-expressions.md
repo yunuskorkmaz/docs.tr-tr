@@ -13,20 +13,20 @@ helpviewer_keywords:
 - pattern-matching with regular expressions
 - searching with regular expressions
 - parsing text with regular expressions
-- regular expressions [.NET Framework], about regular expressions
-- regular expressions [.NET Framework]
-- .NET Framework regular expressions, about
-- characters [.NET Framework], regular expressions
+- regular expressions [.NET], about regular expressions
+- regular expressions [.NET]
+- .NET regular expressions, about
+- characters [.NET], regular expressions
 - parsing text with regular expressions, overview
-- .NET Framework regular expressions
-- strings [.NET Framework], regular expressions
+- .NET regular expressions
+- strings [.NET], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: f57199c2ddf6569020554e74b6e70801844da641
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 6704ab4a99789e2e0bb4c4336f8c73aa8a89671d
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85802903"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888990"
 ---
 # <a name="net-regular-expressions"></a>.NET normal ifadeleri
 
@@ -92,7 +92,7 @@ Normal ifade dili hakkında daha fazla bilgi için bkz. [normal Ifade dili-hızl
  Normal ifade deseninin `\b(\w+?)\s\1\b` Şu şekilde yorumlanması için:  
   
 > [!div class="mx-tdCol2BreakAll"]
-> |Desen|Yorum|  
+> |Desen|Yorumlama|  
 > |-|-|
 > |`\b`|Bir sözcük sınırında başla.|  
 > |`(\w+?)`|Bir veya daha fazla sözcük karakterini ve mümkün olduğunca az karakter eşleştirin. Birlikte, olarak başvurulabilen bir grup oluşturur `\1` .|  
@@ -114,7 +114,7 @@ Normal ifade dili hakkında daha fazla bilgi için bkz. [normal Ifade dili-hızl
  Geçerli kültürü Ingilizce-Birleşik Devletler (en-US) olan bir bilgisayarda, örnek dinamik ifadeyi dinamik olarak oluşturur `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)` . Bu normal ifade deseni aşağıdaki şekilde yorumlanabilir:  
 
 > [!div class="mx-tdCol2BreakAll"]
-> |Desen|Yorum|  
+> |Desen|Yorumlama|  
 > |-|-|  
 > |`\$`|Giriş dizesinde dolar simgesinin () tek bir oluşumunu arayın `$` . Normal ifade deseni dizesi, dolar simgesinin bir normal ifade yer işareti yerine sabit değer olarak yorumlanmasını sağlamak için bir ters eğik çizgi içerir. ( `$` Tek başına simge, normal ifade altyapısının bir dizenin sonunda eşleşme başlatmaya başlaması gerektiğini gösterir.) Geçerli kültürün para birimi simgesinin bir normal ifade simgesi olarak yanlış yorumlanmadığından emin olmak için örnek, <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> karakteri kaçış yöntemini çağırır.|  
 > |`\s*`|Bir boşluk karakterin sıfır veya daha fazla oluşumunu arayın.|  

@@ -6,18 +6,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework, and TAP
-- asynchronous design patterns, .NET Framework
-- TAP, .NET Framework support for
-- Task-based Asynchronous Pattern, .NET Framework support for
-- .NET Framework, asynchronous design patterns
+- asynchronous design patterns, .NET
+- TAP, .NET support for
+- Task-based Asynchronous Pattern, .NET support for
+- .NET, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 1f2f44b6b92f66f95816778c6dc8e893f1291abe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8bac9d265211d2f266db634d4bcebb87c2debd9a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289375"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888782"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
 Görev tabanlı zaman uyumsuz model ' i (dokunarak) üç şekilde uygulayabilirsiniz: C# ve Visual Basic derleyicileri, Visual Studio 'da, el ile veya derleyicinin ve el ile yapılan yöntemlerin bir birleşimi aracılığıyla. Aşağıdaki bölümlerde her bir yöntem ayrıntılı olarak ele alınmaktadır. İşlem-bağlantılı ve g/ç ile bağlantılı zaman uyumsuz işlemleri uygulamak için dokunma düzenine de yararlanabilirsiniz. [Iş yükleri](#workloads) bölümü her bir işlem türünü ele alır.
@@ -49,9 +48,9 @@ Uygulama üzerinde daha iyi denetim için dokunma deseninin el ile uygulanmasın
 
 Aşağıdaki yollarla, işlem ile bağlantılı görevler oluşturabilirsiniz:
 
-- .NET Framework 4 ' te, <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> zaman uyumsuz olarak yürütülecek bir temsilciyi (genellikle bir <xref:System.Action%601> veya a) kabul eden yöntemini kullanın <xref:System.Func%601> . Bir <xref:System.Action%601> temsilci sağlarsanız, yöntemi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Bu temsilcinin zaman uyumsuz yürütmesini temsil eden bir nesne döndürür. Bir <xref:System.Func%601> temsilci sağlarsanız, yöntemi bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesnesi döndürür. Yöntemin aşırı yüklemeleri, <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> bir iptal belirtecini ( <xref:System.Threading.CancellationToken> ), görev oluşturma seçeneklerini ( <xref:System.Threading.Tasks.TaskCreationOptions> ) ve bir görev zamanlayıcısını () kabul eder <xref:System.Threading.Tasks.TaskScheduler> . Bu, hepsi görevin zamanlanması ve yürütülmesi üzerinde ayrıntılı denetim sağlar. Geçerli görev zamanlayıcısını hedefleyen bir fabrika örneği, sınıfının statik özelliği () olarak kullanılabilir <xref:System.Threading.Tasks.Task.Factory%2A> <xref:System.Threading.Tasks.Task> . Örneğin: `Task.Factory.StartNew(…)` .
+- .NET Framework 4,5 ve sonraki sürümlerinde (.NET Core ve .NET 5 + dahil), <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> için bir kısayol olarak statik yöntemi kullanın <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> . <xref:System.Threading.Tasks.Task.Run%2A>İş parçacığı havuzunu hedefleyen bir işlem ile bağlantılı görevi kolayca başlatmak için kullanabilirsiniz. Bu, işlem ile sınırlı bir görevi başlatmak için tercih edilen mekanizmadır. `StartNew`Yalnızca görev üzerinde daha ayrıntılı denetim istediğinizde, doğrudan kullanın.
 
-- .NET Framework 4,5 ve sonraki sürümlerde (.NET Core ve .NET Standard dahil), <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> için bir kısayol olarak statik yöntemi kullanın <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> . <xref:System.Threading.Tasks.Task.Run%2A>İş parçacığı havuzunu hedefleyen bir işlem ile bağlantılı görevi kolayca başlatmak için kullanabilirsiniz. .NET Framework 4,5 ve sonraki sürümlerde, bu, işlem ile sınırlı bir görevi başlatmak için tercih edilen mekanizmadır. `StartNew`Yalnızca görev üzerinde daha ayrıntılı denetim istediğinizde, doğrudan kullanın.
+- .NET Framework 4 ' te, <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> zaman uyumsuz olarak yürütülecek bir temsilciyi (genellikle bir <xref:System.Action%601> veya a) kabul eden yöntemini kullanın <xref:System.Func%601> . Bir <xref:System.Action%601> temsilci sağlarsanız, yöntemi <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Bu temsilcinin zaman uyumsuz yürütmesini temsil eden bir nesne döndürür. Bir <xref:System.Func%601> temsilci sağlarsanız, yöntemi bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesnesi döndürür. Yöntemin aşırı yüklemeleri, <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> bir iptal belirtecini ( <xref:System.Threading.CancellationToken> ), görev oluşturma seçeneklerini ( <xref:System.Threading.Tasks.TaskCreationOptions> ) ve bir görev zamanlayıcısını () kabul eder <xref:System.Threading.Tasks.TaskScheduler> . Bu, hepsi görevin zamanlanması ve yürütülmesi üzerinde ayrıntılı denetim sağlar. Geçerli görev zamanlayıcısını hedefleyen bir fabrika örneği, sınıfının statik özelliği () olarak kullanılabilir <xref:System.Threading.Tasks.Task.Factory%2A> <xref:System.Threading.Tasks.Task> . Örneğin: `Task.Factory.StartNew(…)` .
 
 - `Task` `Start` Görevi ayrı olarak oluşturmak ve çizelgelemek istiyorsanız tür veya yöntem oluşturucularını kullanın. Ortak yöntemler yalnızca önceden başlatılmış görevleri döndürmelidir.
 
@@ -82,7 +81,7 @@ Belirli bir süre sonra tamamlanacak bir görev oluşturmak istediğinizi varsay
 [!code-csharp[Conceptual.TAP_Patterns#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#4)]
 [!code-vb[Conceptual.TAP_Patterns#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#4)]
 
-.NET Framework 4,5 ile başlayarak, <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> yöntemi bu amaçla sağlanır ve örneğin zaman uyumsuz bir yoklama döngüsü uygulamak için başka bir zaman uyumsuz yöntemin içinde kullanabilirsiniz:
+<xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType>Yöntemi bu amaçla sağlanır ve bunu başka bir zaman uyumsuz yöntemin içinde kullanabilirsiniz; Örneğin, zaman uyumsuz bir yoklama döngüsü uygulamak için:
 
 [!code-csharp[Conceptual.TAP_Patterns#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#5)]
 [!code-vb[Conceptual.TAP_Patterns#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#5)]

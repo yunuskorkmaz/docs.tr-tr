@@ -12,18 +12,18 @@ helpviewer_keywords:
 - standard time interval format strings
 - standard format strings, time intervals
 - format specifiers, time intervals
-- time intervals [.NET Framework], formatting
-- time [.NET Framework], formatting
-- formatting [.NET Framework], time
+- time intervals [.NET], formatting
+- time [.NET], formatting
+- formatting [.NET], time
 - standard TimeSpan format strings
-- formatting [.NET Framework], time intervals
+- formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 31e4158d42d794e830d9acfe666729846c43a1ee
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 99529d480ca32cb8be1e2013ca4551534e10026b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768124"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888951"
 ---
 # <a name="standard-timespan-format-strings"></a>Standart TimeSpan biçim dizeleri
 
@@ -41,32 +41,32 @@ Standart <xref:System.TimeSpan> Biçim dizesi, <xref:System.TimeSpan> biçimlend
   
 Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmektedir.  
   
-|Biçim belirteci|Name|Açıklama|Örnekler|  
+|Biçim belirteci|Ad|Açıklama|Örnekler|  
 |----------------------|----------|-----------------|--------------|  
-|,|Sabit (Sabit) biçim|Bu tanımlayıcı kültüre duyarlı değildir. Formu alır `[-][d'.']hh':'mm':'ss['.'fffffff]` .<br /><br /> ("T" ve "T" biçim dizeleri aynı sonuçları üretir.)<br /><br /> Daha fazla bilgi: [sabit ("c") Biçim belirleyicisi](#the-constant-c-format-specifier).|`TimeSpan.Zero`-> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)`-> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)`-> 3.17:25:30.5000000|  
-|"g"|Genel kısa biçim|Bu belirtici yalnızca gerekli olanları verir. Kültüre duyarlıdır ve formu alır `[-][d':']h':'mm':'ss[.FFFFFFF]` .<br /><br /> Daha fazla bilgi: [genel kısa ("g") Biçim belirleyicisi](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50599 (fr-FR)|  
-|"G"|Genel uzun biçim|Bu belirtici her zaman gün ve yedi kesirli basamak verir. Kültüre duyarlıdır ve formu alır `[-]d':'hh':'mm':'ss.fffffff` .<br /><br /> Daha fazla bilgi: [genel uzun ("G") Biçim belirleyicisi](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)`-> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)`-> 0:18:30:00, 0000000 (fr-FR)|  
+|,|Sabit (Sabit) biçim|Bu tanımlayıcı kültüre duyarlı değildir. Formu alır `[-][d'.']hh':'mm':'ss['.'fffffff]` .<br /><br /> ("T" ve "T" biçim dizeleri aynı sonuçları üretir.)<br /><br /> Daha fazla bilgi: [sabit ("c") Biçim belirleyicisi](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|Genel kısa biçim|Bu belirtici yalnızca gerekli olanları verir. Kültüre duyarlıdır ve formu alır `[-][d':']h':'mm':'ss[.FFFFFFF]` .<br /><br /> Daha fazla bilgi: [genel kısa ("g") Biçim belirleyicisi](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3: 16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3: 16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3: 16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3: 16:50599 (fr-FR)|  
+|"G"|Genel uzun biçim|Bu belirtici her zaman gün ve yedi kesirli basamak verir. Kültüre duyarlıdır ve formu alır `[-]d':'hh':'mm':'ss.fffffff` .<br /><br /> Daha fazla bilgi: [genel uzun ("G") Biçim belirleyicisi](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00, 0000000 (fr-FR)|  
 
 ## <a name="the-constant-c-format-specifier"></a>Sabit ("c") Biçim belirleyicisi  
  "C" biçim belirticisi aşağıdaki biçimde bir değerin dize gösterimini döndürür <xref:System.TimeSpan> :  
   
- [-] [*d*.] *SS*:*dd*:*SS*[.* fffffff*]  
+ [-] [ *d* .] *SS* : *dd* : *SS* [. *fffffff* ]  
   
  Köşeli ayraçlar ([ve]) içindeki öğeler isteğe bağlıdır. Nokta (.) ve iki nokta (:) değişmez simgeler. Aşağıdaki tabloda kalan öğeler açıklanmaktadır.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |*-*|Negatif bir zaman aralığını belirten isteğe bağlı bir eksi işareti.|  
-|*TID*|Önünde sıfır olmayan, isteğe bağlı gün sayısı.|  
-|*ss*|"00" ile "23" arasında değişen saat sayısı.|  
-|*d*|"00" ile "59" arasında değişen dakika sayısı.|  
+|*d*|Önünde sıfır olmayan, isteğe bağlı gün sayısı.|  
+|*hh*|"00" ile "23" arasında değişen saat sayısı.|  
+|*mm*|"00" ile "59" arasında değişen dakika sayısı.|  
 |*ss*|"0" ile "59" arasında değişen saniye sayısı.|  
 |*fffffff*|Saniyenin isteğe bağlı kesirli kısmı.  Değeri "0000001" (bir Tick veya saniyenin 1 10-milimetre Onth) arasında "9999999" (9.999.999 10-milionon saniyenin veya bir saniyeden daha az bir değer) arasında değişebilir.|  
   
- "G" ve "G" biçim Belirticilerinin aksine, "c" Biçim belirleyicisi kültüre duyarlı değildir. Bu, sabit bir değerin dize gösterimini üretir <xref:System.TimeSpan> ve .NET Framework 4 ' den önce .NET Framework önceki tüm sürümleri için ortaktır. "c" varsayılan <xref:System.TimeSpan> biçim dizesidir; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> yöntemi "c" biçim dizesini kullanarak bir zaman aralığı değeri biçimlendirir.  
+ "G" ve "G" biçim Belirticilerinin aksine, "c" Biçim belirleyicisi kültüre duyarlı değildir. Bu, sabit bir değerin dize gösterimini üretir <xref:System.TimeSpan> ve .NET Framework 4 ' ten önceki sürümlerde ortaktır. "c" varsayılan <xref:System.TimeSpan> biçim dizesidir; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> yöntemi "c" biçim dizesini kullanarak bir zaman aralığı değeri biçimlendirir.  
   
 > [!NOTE]
-> <xref:System.TimeSpan>Ayrıca "c" standart biçim dizesiyle aynı davranış ile özdeş olan "t" ve "T" standart biçim dizelerini de destekler.  
+> <xref:System.TimeSpan> Ayrıca "c" standart biçim dizesiyle aynı davranış ile özdeş olan "t" ve "T" standart biçim dizelerini de destekler.  
   
  Aşağıdaki örnek iki <xref:System.TimeSpan> nesneyi örneklemektedir, aritmetik işlemler gerçekleştirmek için bunları kullanır ve sonucu görüntüler. Her durumda, <xref:System.TimeSpan> "c" biçim belirticisini kullanarak değeri göstermek için bileşik biçimlendirme kullanır.  
   
@@ -76,16 +76,16 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
 ## <a name="the-general-short-g-format-specifier"></a>Genel kısa ("g") Biçim belirleyicisi  
  "G" <xref:System.TimeSpan> biçim belirticisi, <xref:System.TimeSpan> yalnızca gerekli öğeleri ekleyerek bir küçük biçimdeki değerin dize gösterimini döndürür. Aşağıdaki biçimdedir:  
   
- [-] [*d*:] *h*:*mm*:*SS*[.* FFFFFFF*]  
+ [-] [ *d* :] *h* : *mm* : *SS* [. *FFFFFFF* ]  
   
  Köşeli ayraçlar ([ve]) içindeki öğeler isteğe bağlıdır. İki nokta (:) sabit bir simgedir. Aşağıdaki tabloda kalan öğeler açıklanmaktadır.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |*-*|Negatif bir zaman aralığını belirten isteğe bağlı bir eksi işareti.|  
-|*TID*|Önünde sıfır olmayan, isteğe bağlı gün sayısı.|  
-|*olsun*|"0" ile "23" arasında, önünde sıfır olmadan değişen saat sayısı.|  
-|*d*|"00" ile "59" arasında değişen dakika sayısı..|  
+|*d*|Önünde sıfır olmayan, isteğe bağlı gün sayısı.|  
+|*h*|"0" ile "23" arasında, önünde sıfır olmadan değişen saat sayısı.|  
+|*mm*|"00" ile "59" arasında değişen dakika sayısı..|  
 |*ss*|"00" ile "59" arasında değişen saniye sayısı..|  
 |*.*|Kesirli saniye ayırıcısı. <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>Kullanıcı geçersiz kılmaları olmadan belirtilen kültürün özelliğine eşdeğerdir.|  
 |*FFFFFFF*|Kesirli saniyeler. Olabildiğince az basamak görüntülenir.|  
@@ -100,16 +100,16 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
 ## <a name="the-general-long-g-format-specifier"></a>Genel uzun ("G") Biçim belirleyicisi  
  "G" <xref:System.TimeSpan> biçim belirticisi, bir değerin dize gösterimini, <xref:System.TimeSpan> her zaman hem gün hem de kesirli saniyeleri içeren uzun bir biçimde döndürür. "G" standart biçim belirticisinden elde edilen dize aşağıdaki biçimdedir:  
   
- [-] *d*:*SS*:*dd*:*SS*. *fffffff*  
+ [-] *d* : *SS* : *dd* : *SS* . *fffffff*  
   
  Köşeli ayraçlar ([ve]) içindeki öğeler isteğe bağlıdır. İki nokta (:) sabit bir simgedir. Aşağıdaki tabloda kalan öğeler açıklanmaktadır.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |*-*|Negatif bir zaman aralığını belirten isteğe bağlı bir eksi işareti.|  
-|*TID*|Önünde sıfır olmayan gün sayısı.|  
-|*ss*|"00" ile "23" arasında değişen saat sayısı.|  
-|*d*|"00" ile "59" arasında değişen dakika sayısı.|  
+|*d*|Önünde sıfır olmayan gün sayısı.|  
+|*hh*|"00" ile "23" arasında değişen saat sayısı.|  
+|*mm*|"00" ile "59" arasında değişen dakika sayısı.|  
 |*ss*|"00" ile "59" arasında değişen saniye sayısı.|  
 |*.*|Kesirli saniye ayırıcısı. <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>Kullanıcı geçersiz kılmaları olmadan belirtilen kültürün özelliğine eşdeğerdir.|  
 |*fffffff*|Kesirli saniyeler.|  

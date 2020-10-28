@@ -7,24 +7,24 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - regular expressions, behavior
-- .NET Framework regular expressions, behavior
+- .NET regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 802c84bf93b3821459ab652e69a12fcc50280b9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a93e0e7bac782d9a4ce47c1586796b063563d2b6
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290558"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888678"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal ifade davranışının ayrıntıları
 
-.NET Framework normal ifade altyapısı, Perl, Python, Emacs ve Tcl tarafından kullanılan gibi geleneksel bir belirleyici olmayan sonlu bir Automaton (NFA) altyapısını içeren bir geri izleme normal ifade eşleştirici. Bu, onu daha hızlı bir şekilde ayırır, ancak awk, egrep veya Lex içinde bulunanlar gibi daha sınırlı, saf normal ifade belirleyici bir otomasyon (DFA) altyapılarından ayırt edilmesini sağlar. Bu Ayrıca, bunu standartlaştırılmış, ancak daha yavaş, POSIX NFAs olarak da ayırır. Aşağıdaki bölümde, normal ifade altyapısının üç türü açıklanmakta ve .NET Framework normal ifadelerin geleneksel bir NFA altyapısı kullanılarak nasıl uygulandığı açıklanmaktadır.
+.NET normal ifade altyapısı, Perl, Python, Emacs ve Tcl tarafından kullanılan gibi geleneksel bir belirleyici olmayan sonlu bir Automaton (NFA) altyapısını içeren bir geri izleme normal ifade eşleştirici. Bu, onu daha hızlı bir şekilde ayırır, ancak awk, egrep veya Lex içinde bulunanlar gibi daha sınırlı, saf normal ifade belirleyici bir otomasyon (DFA) altyapılarından ayırt edilmesini sağlar. Bu Ayrıca, bunu standartlaştırılmış, ancak daha yavaş, POSIX NFAs olarak da ayırır. Aşağıdaki bölümde, normal ifade altyapısının üç türü açıklanmakta ve .NET 'teki normal ifadelerin neden geleneksel bir NFA altyapısı kullanılarak uygulandığına ilişkin bilgiler verilmektedir.
 
 ## <a name="benefits-of-the-nfa-engine"></a>NFA altyapısının avantajları
 
  DFA motorları, düzen eşleştirmeyi gerçekleştirirken, işlem sırası giriş dizesi tarafından çalıştırılır. Motor, giriş dizesinin başlangıcında başlar ve sonraki karakterin normal ifade düzeniyle eşleşip eşleşmediğini tespit etmek için ardışık olarak devam eder. Mümkün olan en uzun dizeyi eşleştirmeye garanti edebilirler. Aynı karakteri iki kez test etmeyeceğinden, DFA motorları geri izlemeyi desteklemez. Ancak, bir DFA altyapısı yalnızca sonlu durum içerdiğinden, geri başvuruları olan bir Düzenle eşleşmez ve açık bir genişletme oluşturmadığından, alt ifadeleri yakalamaz.
 
- DFA altyapılarından farklı olarak, Geleneksel NFA motorları düzen eşleştirmeyi gerçekleştirirken, işlem sırası normal ifade düzeniyle çalıştırılır. Belirli bir dil öğesini işlerken, altyapı doyumsuz eşleştirmeyi kullanır; diğer bir deyişle, giriş dizesinin büyük olasılıkla mümkün olduğunca fazla eşleşir. Ancak, bir alt ifadeyi başarıyla eşleştirdikten sonra da durumunu kaydeder. Bir eşleşme yine başarısız olursa, altyapı daha fazla eşleşme deneyebilmesi için kaydedilmiş bir duruma dönebilir. Bu işlem, normal ifadede daha sonraki dil öğelerinin *geri izleme*olarak bilinmesinin ardından, başarılı bir alt ifadenin eşleşmesi için eşleşir. NFA motorları, belirli bir sırada normal bir ifadenin tüm olası genişletmeleri test etmek için geri izlemeyi kullanır ve ilk eşleşmeyi kabul eder. Geleneksel bir NFA altyapısı başarılı bir eşleşme için normal ifadenin belirli bir genişletmesinin oluşturulduğundan, alt ifade eşleşmelerini ve eşleşen geri başvuruları yakalayabilir. Bununla birlikte, geleneksel bir NFA geri izlemeleriyle, farklı yollar üzerinde duruma alınırsa aynı durumu birden çok kez ziyaret edebilir. Sonuç olarak, en kötü durumda büyük olasılıkla çok daha yavaş çalışabilir. Geleneksel bir NFA motoru bulduğu ilk eşleşmeyi kabul ettiğinden, diğer (muhtemelen uzun) bulunamadan eşleşme de olabilir.
+ DFA altyapılarından farklı olarak, Geleneksel NFA motorları düzen eşleştirmeyi gerçekleştirirken, işlem sırası normal ifade düzeniyle çalıştırılır. Belirli bir dil öğesini işlerken, altyapı doyumsuz eşleştirmeyi kullanır; diğer bir deyişle, giriş dizesinin büyük olasılıkla mümkün olduğunca fazla eşleşir. Ancak, bir alt ifadeyi başarıyla eşleştirdikten sonra da durumunu kaydeder. Bir eşleşme yine başarısız olursa, altyapı daha fazla eşleşme deneyebilmesi için kaydedilmiş bir duruma dönebilir. Bu işlem, normal ifadede daha sonraki dil öğelerinin *geri izleme* olarak bilinmesinin ardından, başarılı bir alt ifadenin eşleşmesi için eşleşir. NFA motorları, belirli bir sırada normal bir ifadenin tüm olası genişletmeleri test etmek için geri izlemeyi kullanır ve ilk eşleşmeyi kabul eder. Geleneksel bir NFA altyapısı başarılı bir eşleşme için normal ifadenin belirli bir genişletmesinin oluşturulduğundan, alt ifade eşleşmelerini ve eşleşen geri başvuruları yakalayabilir. Bununla birlikte, geleneksel bir NFA geri izlemeleriyle, farklı yollar üzerinde duruma alınırsa aynı durumu birden çok kez ziyaret edebilir. Sonuç olarak, en kötü durumda büyük olasılıkla çok daha yavaş çalışabilir. Geleneksel bir NFA motoru bulduğu ilk eşleşmeyi kabul ettiğinden, diğer (muhtemelen uzun) bulunamadan eşleşme de olabilir.
 
  POSIX NSK motorları Geleneksel NFA altyapılarına benzer, ancak mümkün olan en uzun eşleşmeyi buldıklarından emin olacakları sürece geri izlemeye devam ederler. Sonuç olarak, bir POSIX NFA motoru geleneksel bir NFA altyapısından daha yavaştır ve bir POSIX NFA altyapısı kullandığınızda, geri izleme aramasının sırasını değiştirerek daha kısa bir eşleşmeyi daha uzun bir süre boyunca tercih edilemez.
 
@@ -33,11 +33,11 @@ ms.locfileid: "84290558"
 > [!NOTE]
 > Aşırı geri izleme ve bir normal ifadeyi geçici olarak çözmek için kullanmanın bir performans cezası hakkında daha fazla bilgi için bkz. [geri izleme](backtracking-in-regular-expressions.md).
 
-## <a name="net-framework-engine-capabilities"></a>.NET Framework motoru özellikleri
+## <a name="net-engine-capabilities"></a>.NET altyapısı özellikleri
 
- Geleneksel bir NFA altyapısının avantajlarından yararlanmak için, .NET Framework normal ifade altyapısı, programcıların geri izleme altyapısını ele geçirmesine olanak sağlayan bir yapı kümesi içerir. Bu yapılar, eşleşmeleri daha hızlı bulmak veya diğerleri üzerinde belirli genişleimler sağlamak için kullanılabilir.
+ Geleneksel bir NFA altyapısının avantajlarından yararlanmak için, .NET normal ifade altyapısı, programcıların geri izleme altyapısını ele geçirmesine olanak sağlayan bir dizi yapı içerir. Bu yapılar, eşleşmeleri daha hızlı bulmak veya diğerleri üzerinde belirli genişleimler sağlamak için kullanılabilir.
 
- .NET Framework normal ifade altyapısının diğer özellikleri şunlardır:
+ .NET normal ifade altyapısının diğer özellikleri şunlardır:
 
 - Yavaş nicelik belirteçleri: `??` , `*?` , `+?` , `{` *n* `,` *e* `}?` . Bu yapılar geri izleme altyapısından önce en az sayıda tekrarın aramasını söyler. Buna karşılık, sıradan doyumsuz nicelik belirteçleri öncelikle en fazla tekrarlık sayısını eşleştirmeye çalışır. Aşağıdaki örnek, iki arasındaki farkı gösterir. Normal ifade, bir sayıyla biten bir cümle ile eşleşir ve yakalama grubu bu sayıyı çıkarmaya yöneliktir. Normal ifade, `.+(\d+)\.` `.+` normal ifade altyapısının yalnızca sayının en son basamağını yakalamasına neden olan doyumsuz nicelik sayısını içerir. Buna karşılık, normal ifade, `.+?(\d+)\.` `.+?` normal ifade altyapısının tüm sayıyı yakalamasına neden olan yavaş nicelik sayısını içerir.
 
@@ -46,10 +46,10 @@ ms.locfileid: "84290558"
 
      Bu normal ifadenin doyumsuz ve geç sürümleri, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır:
 
-    |Desen|Description|
+    |Desen|Açıklama|
     |-------------|-----------------|
-    |`.+`(Greedy nicelik belirteci)|Herhangi bir karakterin en az bir oluşumunu eşleştirin. Bu, normal ifade altyapısının tüm dizeyi eşleştirmesine ve ardından düzenin geri kalanını eşleştirmek için gerektiğinde geri izlemesine neden olur.|
-    |`.+?`(yavaş nicelik belirteci)|Herhangi bir karakterin en az bir oluşumunu eşleştirin, ancak mümkün olduğunca az eşleşir.|
+    |`.+` (Greedy nicelik belirteci)|Herhangi bir karakterin en az bir oluşumunu eşleştirin. Bu, normal ifade altyapısının tüm dizeyi eşleştirmesine ve ardından düzenin geri kalanını eşleştirmek için gerektiğinde geri izlemesine neden olur.|
+    |`.+?` (yavaş nicelik belirteci)|Herhangi bir karakterin en az bir oluşumunu eşleştirin, ancak mümkün olduğunca az eşleşir.|
     |`(\d+)`|En az bir sayısal karakteri eşleştirin ve ilk yakalama grubuna atayın.|
     |`\.`|Bir noktayla eşleştirin.|
 
@@ -62,7 +62,7 @@ ms.locfileid: "84290558"
 
      Normal ifade `\b[A-Z]+\b(?=\P{P})` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-    |Desen|Description|
+    |Desen|Açıklama|
     |-------------|-----------------|
     |`\b`|Bir sözcük sınırında eşleşmeye başla.|
     |`[A-Z]+`|Herhangi bir alfabetik karakterle bir veya daha fazla kez eşleştirin. <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>Yöntemi seçeneğiyle çağrıldığı için <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> karşılaştırma büyük/küçük harfe duyarlıdır.|
@@ -78,7 +78,7 @@ ms.locfileid: "84290558"
 
      Normal ifade deseninin, `\b(?!non)\w+\b` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-    |Desen|Description|
+    |Desen|Açıklama|
     |-------------|-----------------|
     |`\b`|Bir sözcük sınırında eşleşmeye başla.|
     |`(?!non)`|Geçerli dizenin "olmayan" ile başlamadığından emin olmak için öne bakın. Varsa, eşleşme başarısız olur.|
@@ -94,7 +94,7 @@ ms.locfileid: "84290558"
 
      Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-    |Desen|Description|
+    |Desen|Açıklama|
     |-------------|-----------------|
     |`^`|Bir satırın başlangıcında eşleşmeyi başlatın.|
     |`(?<Pvt>\<PRIVATE\>\s)?`|Dizenin sıfır veya bir oluşumunu, `<PRIVATE>` ardından bir boşluk karakteri ile eşleştirin. Eşleşmeyi adlı bir yakalama grubuyla atayın `Pvt` .|
@@ -132,7 +132,7 @@ ms.locfileid: "84290558"
 
      Normal ifade ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-    |Desen|Description|
+    |Desen|Açıklama|
     |-------------|-----------------|
     |`^`|Dizenin başlangıcında eşleşmeyi başlatın.|
     |`[A-Z0-9]`|Herhangi bir sayısal veya alfasayısal karakter eşleştirin. (Karşılaştırma büyük/küçük harfe duyarlıdır.)|
@@ -148,8 +148,8 @@ ms.locfileid: "84290558"
 |-----------|-----------------|
 |[Geri Dönüş](backtracking-in-regular-expressions.md)|Normal ifade izleme dallarının alternatif eşleşmelerin nasıl bulunacağını gösteren bilgiler sağlar.|
 |[Derleme ve yeniden kullanma](compilation-and-reuse-in-regular-expressions.md)|Performansı artırmak için normal ifadeleri derleme ve yeniden kullanma hakkında bilgi sağlar.|
-|[İş Parçacığı Güvenliği](thread-safety-in-regular-expressions.md)|Normal ifade iş parçacığı güvenliği hakkında bilgi sağlar ve normal ifade nesnelerine erişimi ne zaman eşitlemeniz gerektiğini açıklar.|
-|[.NET Framework Normal İfadeleri](regular-expressions.md)|Normal ifadelerin programlama diline ilişkin bir genel bakış sağlar.|
+|[İş parçacığı güvenliği](thread-safety-in-regular-expressions.md)|Normal ifade iş parçacığı güvenliği hakkında bilgi sağlar ve normal ifade nesnelerine erişimi ne zaman eşitlemeniz gerektiğini açıklar.|
+|[.NET normal Ifadeleri](regular-expressions.md)|Normal ifadelerin programlama diline ilişkin bir genel bakış sağlar.|
 |[Normal İfade Nesnesi Modeli](the-regular-expression-object-model.md)|Normal ifade sınıflarının nasıl kullanılacağını gösteren bilgi ve kod örnekleri sağlar.|
 |[Normal İfade Dili - Hızlı Başvuru](regular-expression-language-quick-reference.md)|Normal ifadeleri tanımlamak için kullanabileceğiniz karakter, işleç ve yapılar kümesi hakkında bilgi sağlar.|
 

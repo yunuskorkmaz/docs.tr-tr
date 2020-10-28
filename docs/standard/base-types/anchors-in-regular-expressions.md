@@ -13,20 +13,20 @@ helpviewer_keywords:
 - anchors, in regular expressions
 - metacharacters, atomic zero-width assertions
 - metacharacters, anchors
-- .NET Framework regular expressions, anchors
-- .NET Framework regular expressions, atomic zero-width assertions
+- .NET regular expressions, anchors
+- .NET regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: e86bae8a687e89acba9a0b713630b43809f081d1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a6330eebbc69b9a3877a99a4373810d5a124c570
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290635"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889172"
 ---
 # <a name="anchors-in-regular-expressions"></a>Normal İfadelerdeki Tutturucular
 Tutturucular veya atomik sıfır Genişlik onayları, bir eşleşmenin gerçekleşmesi gereken dizede bir konum belirtin. Arama ifadenizde bir yer işareti kullandığınızda, normal ifade motoru dize veya harcama karakterleri boyunca ilerlemez; sadece belirtilen konumda bir eşleşme arar. Örneğin `^` , eşleşmenin bir satır veya dize başında başlaması gerektiğini belirtir. Bu nedenle `^http:` normal ifadesi, sadece bir satırın başında gerçekleştiğinde "http:" ile eşleşir. Aşağıdaki tabloda, .NET 'teki normal ifadeler tarafından desteklenen bağlantılar listelenmektedir.  
   
-|Yer işareti|Description|  
+|Yer işareti|Açıklama|  
 |------------|-----------------|  
 |`^`|Varsayılan olarak, eşleşme dizenin başlangıcında gerçekleşmelidir; çok satırlı modda, satırın başlangıcında gerçekleşmelidir. Daha fazla bilgi için bkz. [dize veya satır başlangıcı](#start-of-string-or-line-).|  
 |`$`|Varsayılan olarak, eşleşme dizenin sonunda veya dizenin sonundan önce gerçekleşmelidir `\n` ; çok satırlı modda, satırın sonunda veya satırın sonunda yer almalıdır olması gerekir `\n` . Daha fazla bilgi için bkz. [dize veya satır sonu](#end-of-string-or-line-).|  
@@ -51,7 +51,7 @@ Tutturucular veya atomik sıfır Genişlik onayları, bir eşleşmenin gerçekle
   
  Normal ifade deseninin, `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Giriş dizesinin başında eşleşmeye başlayın (eğer yöntem <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> seçeneği ile çağrılırsa satırın başında).|  
 |`((\w+(\s?)){2,}`|Bir ya da daha fazla sözcük karakterini, sıfıra veya en az iki kez bir boşluk ile eşleştirin. Bu ilk yakalama grubudur. Bu ifade Ayrıca ikinci ve üçüncü bir yakalama grubunu tanımlar: ikincisi yakalanan sözcükten oluşur ve üçüncü, yakalanan boşluk bilgisinden oluşur.|  
@@ -109,7 +109,7 @@ Tutturucular veya atomik sıfır Genişlik onayları, bir eşleşmenin gerçekle
   
  Normal ifade `\G(\w+\s?\w*),?` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\G`|Son eşleşmenin sona erdiği yerden başlayın.|  
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
@@ -128,7 +128,7 @@ Tutturucular veya atomik sıfır Genişlik onayları, bir eşleşmenin gerçekle
   
  Normal ifade deseni aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`are`|"Olan" alt dizesini eşleştirin.|  
@@ -145,7 +145,7 @@ Tutturucular veya atomik sıfır Genişlik onayları, bir eşleşmenin gerçekle
   
  Normal ifade deseni aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\B`|Eşlemeyi bir sözcük sınırında başlatmayın.|  
 |`qu`|"qu" alt dizesini eşleştirin.|  

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - regular expressions, examples
 - user input, examples
 - Regex.IsMatch method
-- regular expressions [.NET Framework], examples
+- regular expressions [.NET], examples
 - examples [Visual Basic], strings
 - IsValidEmail
 - validation, email strings
 - input, checking
-- strings [.NET Framework], examples [Visual Basic]
-- email [.NET Framework], validating
+- strings [.NET], examples [Visual Basic]
+- email [.NET], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 90e79af649727330c2afa1ccb8c64ffe34733f92
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 07b8e31e4a0203b87492eb01ab686a1c56f5565d
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022954"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889081"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
 
@@ -48,7 +48,7 @@ Bir e-postanın yapısının doğru olduğunu doğrulamak için _kusursuz_ bir n
 
 E-posta adresinin geçerli olduğunu doğrulamak için yöntemi, `IsValidEmail` <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> `(@)(.+)$` etki alanı adını e-posta adresinden ayırmak üzere normal ifade düzeniyle yöntemi çağırır. Üçüncü parametre, <xref:System.Text.RegularExpressions.MatchEvaluator> eşleşen metni işleyen ve değiştiren yöntemi temsil eden bir temsilcisidir. Normal ifade deseninin aşağıdaki şekilde yorumlanması.
 
-| Desen | Description                                                                         |
+| Desen | Açıklama                                                                         |
 |---------|-------------------------------------------------------------------------------------|
 | `(@)`   | @ Karakteriyle eşleştirin. Bu bölüm ilk yakalama grubudur.                           |
 | `(.+)`  | Herhangi bir karakterin bir veya daha fazla tekrarı ile eşleştirin. Bu bölüm, ikinci yakalama grubudur. |
@@ -69,7 +69,7 @@ Yöntemi yalnızca e-posta `IsValidEmail` biçiminin bir e-posta adresi için ge
 
 Bu örnekte, normal ifade deseninin `^[^@\s]+@[^@\s]+\.[^@\s]+$` Aşağıdaki tabloda gösterildiği gibi yorumlanır. Normal ifade, bayrağı kullanılarak derlenir <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .
 
-| Desen   | Description                                                                              |
+| Desen   | Açıklama                                                                              |
 |-----------|------------------------------------------------------------------------------------------|
 | `^`       | Dizenin başlangıcında eşleşmeyi başlatın.                                              |
 | `[^@\s]+` | @ Character veya boşluk dışında herhangi bir karakterin bir veya daha fazla tekrarı ile eşleştirin. |
@@ -84,5 +84,5 @@ Bu örnekte, normal ifade deseninin `^[^@\s]+@[^@\s]+\.[^@\s]+$` Aşağıdaki ta
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework Normal İfadeleri](regular-expressions.md)
+- [.NET normal Ifadeleri](regular-expressions.md)
 - [Tek bir e-posta adresi doğrulaması ne kadar sürer?](https://softwareengineering.stackexchange.com/questions/78353/how-far-should-one-take-e-mail-address-validation#78363)

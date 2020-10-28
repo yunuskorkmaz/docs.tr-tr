@@ -8,25 +8,25 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - parameter specifiers
-- strings [.NET Framework], alignment
+- strings [.NET], alignment
 - format specifiers, composite formatting
-- strings [.NET Framework], composite
+- strings [.NET], composite
 - composite formatting
-- objects [.NET Framework], formatting multiple objects
+- objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 36197b382c449a2570e1d5530f307c4e66b0d983
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e15452016aa61cf44950e8b9e7fca58f23471ae7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447270"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889471"
 ---
 # <a name="composite-formatting"></a>Bileşik biçimlendirme
 
 .NET Composite biçimlendirme özelliği, giriş olarak bir nesne listesi ve bileşik biçim dizesi alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
   
 > [!IMPORTANT]
-> Kullandığınız dil ve dil sürümü bunları destekliyorsa, bileşik biçim dizeleri kullanmak yerine, *enterpolasyonlu dizeler* kullanabilirsiniz. Enterpolasyonlu dize, *enterpolasyonlu ifadeler*içeren bir dizedir. Her bir enterpolasyonlu ifade, ifadenin değeri ile çözümlenir ve dize atandığında sonuç dizesine dahil edilir. Daha fazla bilgi için bkz. [dize ilişkilendirme (C# Başvurusu)](../../csharp/language-reference/tokens/interpolated.md) ve [enterpolasyonlu dizeler (Visual Basic Başvurusu)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+> Kullandığınız dil ve dil sürümü bunları destekliyorsa, bileşik biçim dizeleri kullanmak yerine, *enterpolasyonlu dizeler* kullanabilirsiniz. Enterpolasyonlu dize, *enterpolasyonlu ifadeler* içeren bir dizedir. Her bir enterpolasyonlu ifade, ifadenin değeri ile çözümlenir ve dize atandığında sonuç dizesine dahil edilir. Daha fazla bilgi için bkz. [dize ilişkilendirme (C# Başvurusu)](../../csharp/language-reference/tokens/interpolated.md) ve [enterpolasyonlu dizeler (Visual Basic Başvurusu)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
 
 Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından desteklenir:  
   
@@ -56,7 +56,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
 ## <a name="format-item-syntax"></a>Biçim Öğesi Sözdizimi  
  Her biçim öğesi aşağıdaki biçimi alır ve aşağıdaki bileşenlerden oluşur:  
   
- `{`*Dizin*[ `,` *Hizalama*] [ `:` *FormatString*]`}`  
+ `{`*Dizin* [ `,` *Hizalama* ] [ `:` *FormatString* ]`}`  
   
  Eşleşen ayraçlar ("{" ve "}") gereklidir.  
   
@@ -84,13 +84,13 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
 ### <a name="format-string-component"></a>Biçim Dizesi Bileşeni  
  İsteğe bağlı *FormatString* bileşeni, biçimlendirilen nesne türüne uygun bir biçim dizesidir. Karşılık gelen nesne bir sayısal değer ise standart veya özel sayısal biçim dizesi, karşılık gelen nesne bir nesne ise standart veya özel tarih ve saat biçimi dizesi <xref:System.DateTime> ya da karşılık gelen nesne bir numaralandırma değeri ise bir [numaralandırma biçim dizesi](enumeration-format-strings.md) belirtin. *FormatString* belirtilmemişse, bir sayısal, tarih ve saat veya numaralandırma türü için genel ("G") Biçim belirleyicisi kullanılır. *FormatString* belirtilmişse, iki nokta üst üste gereklidir.  
   
- Aşağıdaki tablo, .NET Framework içinde bulunan, önceden tanımlanmış bir biçimlendirme dizesi kümesini destekleyen türleri ve kategorileri listeler, ve desteklenen biçimlendirme dizelerini listeleyen konulara bağlantılar sağlar. Dize biçimlendirmenin, tüm varolan türler için yeni biçimlendirme dizeleri tanımlanabilmesini mümkün kılmanın yanı sıra uygulamada tanımlanmış bir tür tarafından desteklenen bir biçimlendirme dizesi kümesinin tanımlanabilmesine olanak veren genişletilebilir bir mekanizma olduğuna dikkat edin. Daha fazla bilgi için bkz <xref:System.IFormattable> . ve <xref:System.ICustomFormatter> arabirimi konuları.  
+ Aşağıdaki tabloda, .NET sınıf kitaplığı 'nda önceden tanımlanmış bir biçim dizeleri kümesini destekleyen türler veya tür kategorileri listelenmiştir ve desteklenen biçim dizelerini listeleyen konuların bağlantılarını sağlar. Dize biçimlendirmenin, tüm varolan türler için yeni biçimlendirme dizeleri tanımlanabilmesini mümkün kılmanın yanı sıra uygulamada tanımlanmış bir tür tarafından desteklenen bir biçimlendirme dizesi kümesinin tanımlanabilmesine olanak veren genişletilebilir bir mekanizma olduğuna dikkat edin. Daha fazla bilgi için bkz <xref:System.IFormattable> . ve <xref:System.ICustomFormatter> arabirimi konuları.  
   
 |Tür veya tür kategorisi|Bkz.|  
 |---------------------------|---------|  
 |Tarih ve saat türleri ( <xref:System.DateTime> , <xref:System.DateTimeOffset> )|[Standart Tarih ve saat biçim dizeleri](standard-date-and-time-format-strings.md)<br /><br /> [Özel tarih ve saat biçim dizeleri](custom-date-and-time-format-strings.md)|  
 |Sabit listesi türleri (türetilen tüm türler <xref:System.Enum?displayProperty=nameWithType> )|[Sabit listesi biçim dizeleri](enumeration-format-strings.md)|  
-|Sayısal türler ( <xref:System.Numerics.BigInteger> , <xref:System.Byte> , <xref:System.Decimal> , <xref:System.Double> , <xref:System.Int16> , <xref:System.Int32> , <xref:System.Int64> , <xref:System.SByte> , <xref:System.Single> , <xref:System.UInt16> , <xref:System.UInt32> , <xref:System.UInt64> )|[Standart sayısal biçim dizeleri](standard-numeric-format-strings.md)<br /><br /> [Özel sayısal biçim dizeleri](custom-numeric-format-strings.md)|  
+|Sayısal türler ( <xref:System.Numerics.BigInteger> , <xref:System.Byte> , <xref:System.Decimal> , <xref:System.Double> , <xref:System.Int16> , <xref:System.Int32> , <xref:System.Int64> , <xref:System.SByte> , <xref:System.Single> , <xref:System.UInt16> , <xref:System.UInt32> , <xref:System.UInt64> )|[Standart Sayısal Biçim Dizeleri](standard-numeric-format-strings.md)<br /><br /> [Özel sayısal biçim dizeleri](custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Standart TimeSpan Biçim dizeleri](standard-timespan-format-strings.md)<br /><br /> [Özel TimeSpan Biçim dizeleri](custom-timespan-format-strings.md)|  
   
@@ -143,7 +143,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
   
  Geçerli günün Mayıs değerindeki bir Perşembe olduğu varsayılırsa, yukarıdaki örnekteki her iki dizenin de değeri `Thursday May` ABD İngilizcesi kültür ' dadır.  
   
- <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>ile aynı işlevselliği sunar <xref:System.String.Format%2A?displayProperty=nameWithType> . İki yöntem arasındaki tek fark, sonucu <xref:System.String.Format%2A?displayProperty=nameWithType> bir dize olarak döndürirken <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> sonucu nesneyle ilişkili çıkış akışına yazar <xref:System.Console> . Aşağıdaki örnek, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> değerini `MyInt` bir para birimi değerine biçimlendirmek için yöntemini kullanır.  
+ <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ile aynı işlevselliği sunar <xref:System.String.Format%2A?displayProperty=nameWithType> . İki yöntem arasındaki tek fark, sonucu <xref:System.String.Format%2A?displayProperty=nameWithType> bir dize olarak döndürirken <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> sonucu nesneyle ilişkili çıkış akışına yazar <xref:System.Console> . Aşağıdaki örnek, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> değerini `MyInt` bir para birimi değerine biçimlendirmek için yöntemini kullanır.  
   
  [!code-csharp[Formatting.Composite#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#4)]
  [!code-vb[Formatting.Composite#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#4)]  
@@ -165,7 +165,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
 - [Dize ilişkilendirme (C#)](../../csharp/language-reference/tokens/interpolated.md)
 - [Dize ilişkilendirme (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 - [Biçimlendirme Türleri](formatting-types.md)
-- [Standart sayısal biçim dizeleri](standard-numeric-format-strings.md)
+- [Standart Sayısal Biçim Dizeleri](standard-numeric-format-strings.md)
 - [Özel sayısal biçim dizeleri](custom-numeric-format-strings.md)
 - [Standart Tarih ve saat biçim dizeleri](standard-date-and-time-format-strings.md)
 - [Özel tarih ve saat biçim dizeleri](custom-date-and-time-format-strings.md)
