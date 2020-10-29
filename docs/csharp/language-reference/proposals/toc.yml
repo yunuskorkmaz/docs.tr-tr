@@ -116,3 +116,5 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/function-pointers.md
         - name: localsinit bayrağını yaymayı durdurma
           href: ../../../../_csharplang/proposals/csharp-9.0/skip-localsinit.md
+        - name: Kısıtlanmamış tür parametresi ek açıklamaları
+          href: ../../../../_csharplang/proposals/csharp-9.0/unconstrained-type-parameter-annotations.md

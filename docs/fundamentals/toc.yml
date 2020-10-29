@@ -1560,6 +1560,8 @@ items:
         href: ../core/extensions/custom-logging-provider.md
       - name: Yüksek performanslı günlük
         href: ../core/extensions/high-performance-logging.md
+      - name: Konsol günlük biçimlendirme
+        href: ../core/extensions/console-log-formatter.md
   - name: HostBuilder (genel konak)
     href: ../core/extensions/generic-host.md
   - name: Veri erişimi
