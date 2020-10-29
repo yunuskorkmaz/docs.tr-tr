@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: 05d934b80e60a8630db5b70e16a07c014598487a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c66eae48df54b330843b4967f957264f2bddee1d
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599769"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925317"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Veri ve Görev Paralelliğinde Olası Tuzaklar
 Birçok durumda, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> normal sıralı döngüler üzerinde önemli performans iyileştirmeleri sağlayabilir. Ancak, döngüyü paralelleştirme işi, ardışık kodda yaygın olmayan veya hiç karşılaşılmayan sorunlara yol açabilecek karmaşıklığa neden olabilir. Bu konuda, paralel döngüler yazarken kaçınılacak bazı yöntemler listelenmiştir.  
@@ -23,9 +23,9 @@ Birçok durumda, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=na
  Bazı durumlarda, paralel bir döngü sıralı eşinden daha yavaş çalışabilir. Thumb 'in temel kuralı, birkaç yineleme ve Hızlı Kullanıcı temsilcileri olan paralel döngülerin çok daha hızlı bir şekilde hızlandırlanmasının düşüktür. Ancak, birçok etken performansa dahil edildiğinden, gerçek sonuçları her zaman ölçmenizi öneririz.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Paylaşılan bellek konumlarına yazmayı önleyin  
- Ardışık kodda, statik değişkenlerle veya sınıf alanlarından okumak veya yazmak yaygın olmayan bir durumdur. Ancak, birden çok iş parçacığı bu tür değişkenlere eşzamanlı olarak eriştiği zaman, yarış koşullarında büyük bir olasılık vardır. Erişimi değişkene eşitlemek için kilitleri da kullanabilirsiniz, ancak eşitleme maliyeti performansı zarar verebilir. Bu nedenle, en az bir paralel döngüde mümkün olduğunca, paylaşılan duruma erişimi önlemenize veya en azından sınırlamanızı öneririz. Bunu yapmanın en iyi yolu, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> döngü yürütme sırasında iş parçacığı yerel durumunu depolamak için bir değişken kullanan ve öğesinin aşırı yüklerini kullanmaktır. Daha fazla bilgi için bkz. [nasıl yapılır: Iş parçacığı yerel değişkenleriyle paralel. for döngüsü yazma](how-to-write-a-parallel-for-loop-with-thread-local-variables.md) ve [nasıl yapılır: Bölüm Yerel Değişkenleriyle bir Parallel. foreach döngüsü yazma](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Ardışık kodda, statik değişkenlerle veya sınıf alanlarından okumak veya yazmak yaygın olmayan bir durumdur. Ancak, birden çok iş parçacığı bu tür değişkenlere eşzamanlı olarak eriştiği zaman, yarış koşullarında büyük bir olasılık vardır. Erişimi değişkene eşitlemek için kilitleri da kullanabilirsiniz, ancak eşitleme maliyeti performansı zarar verebilir. Bu nedenle, en az bir paralel döngüde mümkün olduğunca, paylaşılan duruma erişimi önlemenize veya en azından sınırlamanızı öneririz. Bunu yapmanın en iyi yolu, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> döngü yürütme sırasında iş parçacığı yerel durumunu depolamak için bir değişken kullanan ve öğesinin aşırı yüklerini kullanmaktır. Daha fazla bilgi için bkz. [nasıl yapılır: Thread-Local değişkenleriyle paralel. for döngüsü yazma](how-to-write-a-parallel-for-loop-with-thread-local-variables.md) ve [nasıl yapılır: Partition-Local değişkenlerle bir Parallel. foreach döngüsü yazma](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
-## <a name="avoid-over-parallelization"></a>Fazla paralelleştirme kullanmaktan kaçının  
+## <a name="avoid-over-parallelization"></a>Over-Parallelization önleyin  
  Paralel döngüleri kullanarak, kaynak koleksiyonun bölümlenmesi ve çalışan iş parçacıklarını eşitlemek için ek ücret maliyetlerine tabi olursunuz. Paralelleştirme avantajları, bilgisayardaki işlemci sayısıyla daha fazla sınırlandırılır. Yalnızca bir işlemcide birden çok işlem ile sınırlı iş parçacığı çalıştırılarak kazanılabilir. Bu nedenle, paralel hale getirmek bir döngüye atmamaya dikkat etmeniz gerekir.  
   
  Fazla paralelleştirme gerçekleşebileceği en yaygın senaryo iç içe döngüdedir. Çoğu durumda, aşağıdaki koşullardan biri veya daha fazlası geçerli değilse yalnızca dış döngüyü paralel hale getirmek en iyi seçenektir:  
@@ -44,14 +44,14 @@ Birçok durumda, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=na
  [!code-csharp[TPL_Pitfalls#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#04)]
  [!code-vb[TPL_Pitfalls#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#04)]  
   
-## <a name="limit-calls-to-thread-safe-methods"></a>Iş parçacığı güvenli yöntemleriyle yapılan çağrıları sınırlayın  
- .NET Framework çoğu statik yöntem iş parçacığı açısından güvenlidir ve aynı anda birden çok iş parçacığından çağrılabilir. Ancak, bu durumlarda bile ilgili eşitleme, sorgudaki önemli yavaşlama oluşmasına neden olabilir.  
+## <a name="limit-calls-to-thread-safe-methods"></a>Thread-Safe yöntemlerine yapılan çağrıları sınırlayın  
+ .NET 'teki çoğu statik yöntem iş parçacığı açısından güvenlidir ve aynı anda birden çok iş parçacığından çağrılabilir. Ancak, bu durumlarda bile ilgili eşitleme, sorgudaki önemli yavaşlama oluşmasına neden olabilir.  
   
 > [!NOTE]
 > Sorgularınıza bazı çağrılar ekleyerek bunu kendiniz test edebilirsiniz <xref:System.Console.WriteLine%2A> . Bu yöntem, Gösterim amacıyla belge örneklerinde kullanılmasına karşın, gerekli olmadığı takdirde bunu paralel Döngülerde kullanmayın.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Iş parçacığı benzeşim sorunlarından haberdar olun  
- Tek iş parçacıklı Apartment (STA) bileşenleri, Windows Forms ve Windows Presentation Foundation (WPF) için COM birlikte çalışabilirlik gibi bazı teknolojiler, kodun belirli bir iş parçacığında çalıştırılmasını gerektiren iş parçacığı benzeşim kısıtlamalarını sağlar. Örneğin, hem Windows Forms hem de WPF 'de, bir denetime yalnızca oluşturulduğu iş parçacığında erişilebilir. Bu, örneğin, iş parçacığı Zamanlayıcı 'yı yalnızca kullanıcı arabirimi iş parçacığında çalışacak şekilde yapılandırmadığınız takdirde bir liste denetimini paralel bir döngüden güncelleştiremeyeceğiniz anlamına gelir. Daha fazla bilgi için bkz. [bir eşitleme bağlamı belirtme](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  
+ Single-Threaded apartmanı (STA) bileşenleri, Windows Forms ve Windows Presentation Foundation (WPF) için COM birlikte çalışabilirlik gibi bazı teknolojiler, kodun belirli bir iş parçacığında çalıştırılmasını gerektiren iş parçacığı benzeşim kısıtlamalarını sağlar. Örneğin, hem Windows Forms hem de WPF 'de, bir denetime yalnızca oluşturulduğu iş parçacığında erişilebilir. Bu, örneğin, iş parçacığı Zamanlayıcı 'yı yalnızca kullanıcı arabirimi iş parçacığında çalışacak şekilde yapılandırmadığınız takdirde bir liste denetimini paralel bir döngüden güncelleştiremeyeceğiniz anlamına gelir. Daha fazla bilgi için bkz. [bir eşitleme bağlamı belirtme](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Parallel. Invoke tarafından çağrılan Temsilcilerde beklerken dikkatli olun  
  Bazı durumlarda, görev paralel kitaplığı bir görevi satır içine alacak ve bu, yürütülmekte olan iş parçacığında görev üzerinde çalıştığı anlamına gelir. (Daha fazla bilgi için bkz. [Task zamanlayıcılar](xref:System.Threading.Tasks.TaskScheduler).) Bu performans iyileştirmesi belirli durumlarda kilitlenmeye neden olabilir. Örneğin, iki görev aynı temsilci kodunu çalıştırabilir, bu da bir olay meydana geldiğinde bildirir ve ardından diğer görevin sinyal gelmesini bekler. İkinci görev ilk olarak aynı iş parçacığında satır içine alınır ve ilki bekleme durumuna geçtiğinde ikinci görev hiçbir şekilde olayını işaret edemeyecektir. Böyle bir oluşumu önlemek için, bekleme işleminde bir zaman aşımı belirtebilir veya bir görevin diğerini engelleyemez emin olmak için açık iş parçacığı oluşturucuları kullanabilirsiniz.  

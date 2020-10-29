@@ -6,26 +6,26 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-ms.openlocfilehash: 02087cf58720388c64d8aba5424db0b54828219a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: edb3d38b0815c6703720292a45e302c62c81650b
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661971"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925343"
 ---
 # <a name="parallel-programming-in-net"></a>.NET içinde Paralel Programlama
 
 Birçok kişisel bilgisayar ve iş istasyonunda birden çok iş parçacığının aynı anda yürütülmesini sağlayan birden çok CPU çekirdeği vardır. Donanımdan yararlanmak için kodunuzu birden çok işlemciye dağıtmak üzere paralel hale getirmek yapabilirsiniz.
 
-Geçmişte, paralel hale getirme için iş parçacıklarının ve kilitlerin düşük düzeyde kullanımı gerekiyordu. Visual Studio ve .NET Framework, bir çalışma zamanı, sınıf kitaplığı türleri ve tanılama araçları sağlayarak paralel programlama desteğini geliştirir. .NET Framework 4 ile tanıtılan bu özellikler paralel geliştirmeyi basitleştirir. Doğrudan iş parçacıklarıyla veya iş parçacığı havuzuyla çalışmak zorunda kalmadan doğal bir deyim içinde etkili, hassas ve ölçeklenebilir paralel kod yazabilirsiniz.
+Geçmişte, paralel hale getirme için iş parçacıklarının ve kilitlerin düşük düzeyde kullanımı gerekiyordu. Visual Studio ve .NET, bir çalışma zamanı, sınıf kitaplığı türleri ve tanılama araçları sağlayarak paralel programlama desteğini geliştirir. .NET Framework 4 ' te tanıtılan bu özellikler paralel geliştirmeyi basitleştirir. Doğrudan iş parçacıklarıyla veya iş parçacığı havuzuyla çalışmak zorunda kalmadan doğal bir deyim içinde etkili, hassas ve ölçeklenebilir paralel kod yazabilirsiniz.
 
-Aşağıdaki çizimde .NET Framework paralel programlama mimarisine üst düzey bir genel bakış sunulmaktadır:
+Aşağıdaki çizimde, .NET 'teki paralel programlama mimarisine yüksek düzeyde bir genel bakış sunulmaktadır.
 
 ![.NET paralel programlama mimarisi](./media/tpl-architecture.png)
 
 ## <a name="related-topics"></a>İlgili Konular
 
-|Teknoloji|Description|
+|Teknoloji|Açıklama|
 |----------------|-----------------|
 |[Görev Paralel Kitaplığı (TPL)](task-parallel-library-tpl.md)|, <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> `For` Ve `ForEach` döngülerinin paralel sürümlerini ve ayrıca, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> zaman uyumsuz işlemleri hızlı bir şekilde ifade etmek için tercih edilen yolu temsil eden sınıfı için belgeler sağlar.|
 |[Paralel LINQ (PLINQ)](introduction-to-plinq.md)|LINQ to Objects'in birçok senaryoda performansı önemli ölçüde artıran paralel bir uygulaması.|

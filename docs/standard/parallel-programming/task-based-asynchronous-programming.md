@@ -9,16 +9,16 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 968da880fc7e0e811f5e8712ccb43726426a019e
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720169"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925252"
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 
-Görev paralel kitaplığı (TPL), zaman uyumsuz bir işlemi temsil eden bir *görev*kavramını temel alır. Bazı yollarla, bir görev bir iş parçacığına veya <xref:System.Threading.ThreadPool> iş öğesine benzer, ancak daha yüksek bir soyutlama düzeyinde olur. *Görev Paralelliği* terimi aynı anda çalışan bir veya daha fazla bağımsız görevi ifade eder. Görevler iki adet birincil avantaj sağlar:
+Görev paralel kitaplığı (TPL), zaman uyumsuz bir işlemi temsil eden bir *görev* kavramını temel alır. Bazı yollarla, bir görev bir iş parçacığına veya <xref:System.Threading.ThreadPool> iş öğesine benzer, ancak daha yüksek bir soyutlama düzeyinde olur. *Görev Paralelliği* terimi aynı anda çalışan bir veya daha fazla bağımsız görevi ifade eder. Görevler iki adet birincil avantaj sağlar:
 
 - Sistem kaynaklarının daha verimli ve daha ölçeklenebilir kullanımı.
 
@@ -28,7 +28,7 @@ Görev paralel kitaplığı (TPL), zaman uyumsuz bir işlemi temsil eden bir *g�
 
      Görevler ve bunların etrafına yerleşik çatı, bekleme, iptal, devamlılık, sağlam özel durum işleme, ayrıntılı durum, özel zamanlama ve daha fazlasını destekleyen zengin bir API kümesi sağlar.
 
-Bu iki nedenle de TPL, .NET Framework'te çoklu iş parçalı, zaman uyumsuz ve paralel kod yazma için tercih edilen API'dir.
+Bu nedenlerden her ikisi için de TPL, .NET 'te çok iş parçacıklı, zaman uyumsuz ve paralel kod yazmak için tercih edilen API 'dir.
 
 ## <a name="creating-and-running-tasks-implicitly"></a>Görevleri örtülü olarak oluşturma ve çalıştırma
 
@@ -94,39 +94,27 @@ Her görev, kendisini bir uygulama etki alanında benzersiz bir şekilde tanıml
 
 ## <a name="task-creation-options"></a>Görev oluşturma seçenekleri
 
-Görevleri oluşturan çoğu API, bir parametreyi kabul eden aşırı yüklemeler sağlar <xref:System.Threading.Tasks.TaskCreationOptions> . Bu seçeneklerden birini belirleyerek görev zamanlayıcıya iş parçacığı havuzundaki görevi nasıl zamanlayacağını söyleyebilirsiniz. Aşağıdaki tabloda, çeşitli görev oluşturma seçenekleri listelenmektedir.
+Görevleri oluşturan çoğu API, bir parametreyi kabul eden aşırı yüklemeler sağlar <xref:System.Threading.Tasks.TaskCreationOptions> . Bu seçeneklerden birini veya daha fazlasını belirterek, Görev Zamanlayıcısına iş parçacığı havuzunda görevi nasıl zamanlayacağınızı söylemiş olursunuz. Seçenekler bit düzeyinde **or** işlemi kullanılarak birleştirilebilir.
 
-|<xref:System.Threading.Tasks.TaskCreationOptions> parametre değeri|Açıklama|
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-|<xref:System.Threading.Tasks.TaskCreationOptions.None>|Hiç seçenek belirtilmemişse varsayılan değerdir. Zamanlayıcı, görevi zamanlamak için varsayılan buluşsal yöntemlerini kullanır.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Daha önce oluşturulmuş görevlerin daha önce çalıştırılabilmesi ve daha sonra oluşturulmuş görevlerin daha sonra çalıştırılabilmesi için görevin zamanlanması gerektiğini belirtir.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>|Görevin uzun süren bir işlemi temsil ettiğini belirtir.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>|Varsa, geçerli görevin eklenen bir alt görev olarak oluşturulması gerektiğini belirtir. Daha fazla bilgi için bkz. [ekli ve ayrılmış alt görevler](attached-and-detached-child-tasks.md).|
-|<xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach>|Bir iç görev `AttachedToParent` seçeneği belirtiyorsa, bu görevin iliştirilmiş bir alt görev olmayacaktır.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|Belirli bir görev içinde veya gibi yöntemleri çağırarak oluşturulan görevlere yönelik görev zamanlayıcının, <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> Bu görevin çalıştığı Zamanlayıcı yerine varsayılan Zamanlayıcı olduğunu belirtir.|
-
-Seçenekler bit düzeyinde **or** işlemi kullanılarak birleştirilebilir. Aşağıdaki örnek, ve seçeneğine sahip bir görevi gösterir <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness> .
+Aşağıdaki örnek, ve seçeneklerine sahip bir görevi gösterir <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness> .
 
 [!code-csharp[TPL_TaskIntro#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#03)]
 [!code-vb[TPL_TaskIntro#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#03)]
 
 ## <a name="tasks-threads-and-culture"></a>Görevler, iş parçacıkları ve kültür
 
-Her iş parçacığında, <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> sırasıyla ve özellikleri tarafından tanımlanan ilişkili bir kültür ve UI kültürü vardır <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> . Bir iş parçacığının kültürü, bu gibi işlemlerde biçimlendirme, ayrıştırma, sıralama ve dize karşılaştırması gibi kullanılır. Bir iş parçacığının UI kültürü, kaynak aramasında kullanılır. Normalde, ve özelliklerini kullanarak bir uygulama etki alanındaki tüm iş parçacıkları için varsayılan bir kültür belirtmediğiniz müddetçe <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> , bir iş parçacığının varsayılan kültürü ve Kullanıcı arabirimi kültürü sistem kültürü tarafından tanımlanır. Bir iş parçacığının kültürünü açık olarak ayarlayıp yeni bir iş parçacığı başlattığınızda, yeni iş parçacığı çağıran iş parçacığının kültürünü almaz; Bunun yerine, kültürü varsayılan sistem kültürüdür. .NET Framework 4,6 ' den önceki .NET Framework sürümlerini hedefleyen uygulamalar için görev tabanlı programlama modeli bu uygulamaya uymuyor.
+Her iş parçacığında, <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> sırasıyla ve özellikleri tarafından tanımlanan ilişkili bir kültür ve UI kültürü vardır <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> . Bir iş parçacığının kültürü, bu gibi işlemlerde biçimlendirme, ayrıştırma, sıralama ve dize karşılaştırması gibi kullanılır. Bir iş parçacığının UI kültürü, kaynak aramasında kullanılır.
 
-> [!IMPORTANT]
-> Çağıran iş parçacığının bir görevin bir parçası olarak bir görev bağlamının bir parçası olarak, .NET Framework 4,6 *altında çalışan* uygulamalar değil .NET Framework 4,6 ' i *hedefleyen* uygulamalar için geçerli olduğunu unutmayın. **Yeni proje** iletişim kutusunun en üstündeki veya Visual Studio dışında açılan listeden bu sürümü seçerek, projenizi Visual Studio 'da oluştururken .NET Framework belirli bir sürümünü hedefleyebilirsiniz <xref:System.Runtime.Versioning.TargetFrameworkAttribute> . .NET Framework 4,6 ' den önceki .NET Framework sürümlerini hedef alan veya .NET Framework belirli bir sürümünü Hedeflemeyin, bir görevin kültürü, çalıştığı iş parçacığının kültürü tarafından belirlenmeye devam eder.
+Ve özelliklerini kullanarak bir uygulama etki alanındaki tüm iş parçacıkları için varsayılan bir kültür belirtmediğiniz müddetçe <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> , bir iş parçacığının varsayılan kültürü ve UI kültürü sistem kültürü tarafından tanımlanır. Bir iş parçacığının kültürünü açık olarak ayarlayıp yeni bir iş parçacığı başlattığınızda, yeni iş parçacığı çağıran iş parçacığının kültürünü almaz; Bunun yerine, kültürü varsayılan sistem kültürüdür. Ancak, görev tabanlı programlamada görevler farklı bir iş parçacığında zaman uyumsuz olarak çalıştırılsa bile çağıran iş parçacığının kültürünü kullanır.
 
-.NET Framework 4,6 ' i hedefleyen uygulamalarla başlayarak, çağıran iş parçacığının kültürü, görev bir iş parçacığı havuzu iş parçacığında zaman uyumsuz olarak çalıştırılsa bile her bir görev tarafından devralınır.
+Aşağıdaki örnek basit bir çizim sağlar. Uygulamanın geçerli kültürünü Fransızca (Fransa) olarak değiştirir (veya Fransızca (Fransa) zaten geçerli kültürden Ingilizce (Birleşik Devletler)). Daha sonra `formatDelegate` Yeni kültürde para birimi değeri olarak biçimlendirilen bazı sayılar döndüren adlı bir temsilciyi çağırır. Temsilcinin bir görev tarafından zaman uyumlu veya zaman uyumsuz olarak çağrılması durumunda, görev çağıran iş parçacığının kültürünü kullanır.
 
-Aşağıdaki örnek basit bir çizim sağlar. <xref:System.Runtime.Versioning.TargetFrameworkAttribute>.NET Framework 4,6 ' i hedeflemek için özniteliğini kullanır ve uygulamanın geçerli kültürünü Fransızca (Fransa) ya da Fransızca (Fransa) zaten geçerli kültür, İngilizce (Birleşik Devletler) olarak değiştirir. Daha sonra `formatDelegate` Yeni kültürde para birimi değeri olarak biçimlendirilen bazı sayılar döndüren adlı bir temsilciyi çağırır. Temsilci bir görev olarak zaman uyumlu veya zaman uyumsuz olarak, çağıran iş parçacığının kültürü zaman uyumsuz görev tarafından devralındığından beklenen sonucu döndürür.
+:::code language="csharp" source="snippets/cs/asyncculture1.cs" id="1":::
 
-[!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
-[!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
+:::code language="vbnet" source="snippets/vb/asyncculture1.vb" id="1":::
 
-Visual Studio kullanıyorsanız, bu <xref:System.Runtime.Versioning.TargetFrameworkAttribute> özniteliği atlayabilirsiniz ve **Yeni proje** iletişim kutusunda projeyi oluştururken hedef olarak .NET Framework 4,6 ' u seçebilirsiniz.
-
-Uygulamaların .NET Framework .NET Framework 4,6 ' den önce hedef sürümlerini yansıtan çıktı için, <xref:System.Runtime.Versioning.TargetFrameworkAttribute> kaynak koddan özniteliğini kaldırın. Çıktı, çağıran iş parçacığının kültürüne değil, varsayılan sistem kültürünün biçimlendirme kurallarını yansıtır.
+> [!NOTE]
+> .NET Framework 4,6 ' den önceki .NET Framework sürümlerinde, bir görevin kültürü, *çağıran iş parçacığının* kültürüne değil, *çalıştığı* iş parçacığının kültürüne göre belirlenir. Zaman uyumsuz görevler için bu, görev tarafından kullanılan kültürün çağıran iş parçacığının kültürüyle farklı olabileceği anlamına gelir.
 
 Zaman uyumsuz görevler ve kültür hakkında daha fazla bilgi için, konusunun "Kültür ve zaman uyumsuz görev tabanlı işlemler" bölümüne bakın <xref:System.Globalization.CultureInfo> .
 
@@ -150,7 +138,7 @@ Daha fazla bilgi için bkz. [devamlılık görevlerini kullanarak görevleri zin
 
 ## <a name="creating-detached-child-tasks"></a>Ayrılmış alt görevler oluşturma
 
-Bir görevde çalışan Kullanıcı kodu yeni bir görev oluşturduğunda ve bu seçeneği belirtmediği zaman <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> , yeni görev üst görevle herhangi bir özel şekilde eşitlenmez. Eşitlenmemiş bu görev türü, *ayrılmış iç içe görev* veya *ayrılmış alt görev*olarak adlandırılır. Aşağıdaki örnek, bağlantısı kesik bir tane alt görev oluşturan bir üst görevi gösterir.
+Bir görevde çalışan Kullanıcı kodu yeni bir görev oluşturduğunda ve bu seçeneği belirtmediği zaman <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> , yeni görev üst görevle herhangi bir özel şekilde eşitlenmez. Eşitlenmemiş bu görev türü, *ayrılmış iç içe görev* veya *ayrılmış alt görev* olarak adlandırılır. Aşağıdaki örnek, bağlantısı kesik bir tane alt görev oluşturan bir üst görevi gösterir.
 
 [!code-csharp[TPL_TaskIntro#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#07)]
 [!code-vb[TPL_TaskIntro#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#07)]

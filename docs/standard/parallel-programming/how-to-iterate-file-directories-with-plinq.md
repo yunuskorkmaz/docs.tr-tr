@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: abf31ea69af6a85140efb783959a9a586ef6a59e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5033cc24fce5fc17a950e4797de1ef4071e2b98a
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278005"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925382"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Nasıl yapılır: PLINQ ile Dosya Dizinlerini Yineleme
 
@@ -35,7 +35,7 @@ Bu makalede, dosya dizinlerinde paralel hale getirmek işlemleri için iki yol g
   
  Kullanırken <xref:System.IO.Directory.GetFiles%2A> , ağaçtaki tüm dizinlerde yeterli izinlere sahip olduğunuzdan emin olun. Aksi takdirde, bir özel durum oluşturulur ve sonuç döndürülmez. <xref:System.IO.Directory.EnumerateDirectories%2A>BIR PLıNQ sorgusunda kullanırken, yineleme devam etmenizi sağlamak için g/ç özel durumlarını düzgün bir şekilde işlemek sorunlu olur. Kodunuzun g/ç veya yetkisiz erişim özel durumlarını işlemesi gerekiyorsa, [nasıl yapılır: paralel sınıfla dosya dizinlerini yineleme](how-to-iterate-file-directories-with-the-parallel-class.md)bölümünde açıklanan yaklaşımı göz önünde bulundurmanız gerekir.  
   
- G/ç gecikme süresi bir sorun ise (örneğin, ağ üzerinden dosya g/ç 'si), [TPL ve geleneksel .NET Framework zaman uyumsuz programlama](tpl-and-traditional-async-programming.md) ve bu [blog postasında](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/)açıklanan zaman uyumsuz g/ç tekniklerinden birini kullanmayı göz önünde bulundurun.  
+ G/ç gecikme süresi bir sorun ise (örneğin, ağ üzerinden dosya g/ç 'si), [TPL ve geleneksel .NET zaman uyumsuz programlamada](tpl-and-traditional-async-programming.md) ve bu [blog postasında](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/)açıklanan zaman uyumsuz g/ç tekniklerinden birini kullanmayı göz önünde bulundurun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

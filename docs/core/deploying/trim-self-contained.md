@@ -4,12 +4,12 @@ description: Kendi boyutlarını azaltmak için kendi içindeki uygulamaları na
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
-ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
+ms.openlocfilehash: bf38ffe4d47986ae78c6cf2b2e5ecb292411ba6c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90770461"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925291"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
 
@@ -36,6 +36,39 @@ Kod, yansıma aracılığıyla bir derlemeye dolaylı olarak başvurduğunda, de
 <ItemGroup>
     <TrimmerRootAssembly Include="System.Security" />
 </ItemGroup>
+```
+
+### <a name="support-for-ssl-certificates"></a>SSL sertifikaları için destek
+
+Uygulamanız, ASP.NET Core bir uygulamada olduğu gibi SSL sertifikaları yüklerse, kırpılırken, SSL sertifikalarını yüklemeye yardımcı olacak olan derlemeleri kırpmaya engel olmanızı sağlamak isteyeceksiniz.
+
+Proje dosyanızı, ASP.NET Core 3,1 için aşağıdakileri içerecek şekilde güncelleştirebiliriz:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>...</PropertyGroup>
+  <!--Include the following for .aspnetcore 3.1-->
+  <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net" />
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
+```
+
+.NET 5,0 kullanıyorsanız, proje dosyasını aşağıdakileri içerecek şekilde güncelleştirebiliriz:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+ <PropertyGroup>...</PropertyGroup>
+ <!--Include the following for .net 5.0-->
+ <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
 ```
 
 ## <a name="trim-your-app---cli"></a>Uygulamanızı kırpın-CLı
@@ -77,19 +110,19 @@ Visual Studio, uygulamanızın nasıl yayımlandığını denetleyen yeniden kul
 
     Zaten bir yayımlama profiliniz yoksa, bir tane oluşturmak için yönergeleri izleyin ve hedef türü **klasörünü** seçin.
 
-01. **Düzenle**' yi seçin.
+01. **Düzenle** ' yi seçin.
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Visual Studio Profili Düzenle düğmesi ile Yayımla.":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Yayımla seçeneğini vurgulayan sağ tıklama menüsüyle Çözüm Gezgini.":::
 
 01. **Profil ayarları** iletişim kutusunda, aşağıdaki seçenekleri ayarlayın:
 
-    - **Dağıtım modunu** **kendi kendine dahil**olarak ayarlayın.
+    - **Dağıtım modunu** **kendi kendine dahil** olarak ayarlayın.
     - **Hedef çalışma zamanını** , yayımlamak istediğiniz platforma ayarlayın.
     - **Kullanılmayan derlemeleri Kırp (önizlemede)** seçeneğini belirleyin.
 
     Ayarları kaydetmek ve **Yayımla** iletişim kutusuna dönmek için **Kaydet** ' i seçin.
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="Dağıtım modu, hedef çalışma zamanı ve kullanılmayan derlemeleri Kırp seçeneklerinin vurgulandığı profil ayarları iletişim kutusu.":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="Yayımla seçeneğini vurgulayan sağ tıklama menüsüyle Çözüm Gezgini.":::
 
 01. Uygulamanızı yayımlamak için **Yayımla** ' yı seçin.
 

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: b14191d798baf458bd860c00913683f53d0a1fd8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fa67e3b94bc7b2f9afac749e50204138e9a041f0
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555659"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925265"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme
 Çoğu durumda, dosya yinelemesi kolayca paralelleştirilmiş bir işlemdir. [Nasıl yapılır: dosya dizinlerini PLINQ Ile yineleme](how-to-iterate-file-directories-with-plinq.md) , bu görevi birçok senaryo için yapmanın en kolay yolunu gösterir. Ancak, kodunuzun dosya sistemine erişirken ortaya çıkabilecek çok sayıda özel durum türüyle uğraşmak gerektiğinde karmaşıklıklar ortaya çıkabilir. Aşağıdaki örnek, soruna yönelik bir yaklaşımı gösterir. Belirtilen bir dizin altındaki tüm dosya ve klasörleri çapraz bir şekilde geçirmek için yığın tabanlı yineleme kullanır ve kodunuzun çeşitli özel durumları yakalayıp işlemesini sağlar. Kuşkusuz, özel durumları işlemenin yolu size ait olur.  
@@ -24,7 +24,7 @@ ms.locfileid: "90555659"
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]
  [!code-vb[TPL_Parallel#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/fileiteration08.vb#08)]  
   
- Bu örnekte, g/ç dosyası eşzamanlı olarak gerçekleştirilir. Büyük dosyalarla veya yavaş ağ bağlantılarıyla ilgilenirken, dosyalara zaman uyumsuz olarak erişmek tercih edilebilir. Zaman uyumsuz g/ç tekniklerini paralel yineleme ile birleştirebilirsiniz. Daha fazla bilgi için bkz. [TPL ve geleneksel .NET Framework zaman uyumsuz programlama](tpl-and-traditional-async-programming.md).  
+ Bu örnekte, g/ç dosyası eşzamanlı olarak gerçekleştirilir. Büyük dosyalarla veya yavaş ağ bağlantılarıyla ilgilenirken, dosyalara zaman uyumsuz olarak erişmek tercih edilebilir. Zaman uyumsuz g/ç tekniklerini paralel yineleme ile birleştirebilirsiniz. Daha fazla bilgi için bkz. [TPL ve geleneksel .NET zaman uyumsuz programlama](tpl-and-traditional-async-programming.md).  
   
  Örnek, `fileCount` işlenen toplam dosya sayısının sayısını korumak için yerel değişkenini kullanır. Birden çok görev tarafından aynı anda erişilebilir olabileceğinden, yöntemi çağırarak bu değişkene erişim eşitlenir <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> .  
   

@@ -10,15 +10,16 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-ms.openlocfilehash: 1d9b7b35341961c27107f007e0eafa51ef49e232
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: dba2f2ad9733f8881276bdb2705a6c8457351f9c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768670"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925304"
 ---
 # <a name="task-cancellation"></a>Görev iptali
-<xref:System.Threading.Tasks.Task?displayProperty=nameWithType>Ve <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> sınıfları, .NET Framework iptal belirteçleri kullanılarak iptali destekler. Daha fazla bilgi için bkz. [yönetilen Iş parçacıklarında iptal](../threading/cancellation-in-managed-threads.md). Görev sınıflarında iptal etme, iptal edilebilir bir işlemi temsil eden kullanıcı temsilcisiyle iptal etmeyi isteyen kod arasında yapılan bir işbirliğini içerir.  Başarılı bir iptal etme yöntemi çağıran istekte bulunan kodu <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> ve kullanıcı temsilcisinin işlemi zamanında sonlandırmasını içerir. Aşağıdaki seçeneklerden birini kullanarak işlemi sonlandırabilirsiniz:  
+
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType>Ve sınıfları, iptal <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> belirteçleri kullanılarak iptali destekler. Daha fazla bilgi için bkz. [yönetilen Iş parçacıklarında iptal](../threading/cancellation-in-managed-threads.md). Görev sınıflarında, iptal, iptal edilebilen bir işlemi ve iptali istenen kodu temsil eden kullanıcı temsilcisi arasındaki ortak işlemi içerir. Başarılı bir iptal etme yöntemi çağıran istekte bulunan kodu <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> ve kullanıcı temsilcisinin işlemi zamanında sonlandırmasını içerir. Aşağıdaki seçeneklerden birini kullanarak işlemi sonlandırabilirsiniz:  
   
 - Yalnızca temsilciden döndürerek. Birçok senaryoda bu yeterlidir; Ancak, bu şekilde iptal edilen bir görev örneği duruma göre <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> değil, duruma geçer <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .  
   
@@ -41,5 +42,5 @@ ms.locfileid: "84768670"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen İş Parçacıklarında İptal](../threading/cancellation-in-managed-threads.md)
+- [Yönetilen Iş parçacıklarında iptal](../threading/cancellation-in-managed-threads.md)
 - [Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme](how-to-cancel-a-task-and-its-children.md)
