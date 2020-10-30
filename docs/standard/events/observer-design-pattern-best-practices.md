@@ -3,18 +3,19 @@ title: Gözlemci Tasarım Deseni En İyi Yöntemleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- observer design pattern [.NET Framework], best practices
-- best practices [.NET Framework], observer design pattern
+- observer design pattern [.NET], best practices
+- best practices [.NET], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: b4f8e568dcb6790dac1dc8fc5c969d6fa1367c4e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8e75343e1ca1c7f69306ee45148f2dc0eec3585f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288465"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064086"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Gözlemci Tasarım Deseni En İyi Yöntemleri
-.NET Framework, gözlemci tasarım deseninin bir dizi arabirim olarak uygulanması gerekir. <xref:System.IObservable%601?displayProperty=nameWithType>Arabirim, <xref:System.IDisposable> gözlemcilerin 'ın bildirimlerden aboneliklerini kaldırma olanağı sağlayan bir uygulama sağlamaktan de sorumlu olan veri sağlayıcısını temsil eder. <xref:System.IObserver%601?displayProperty=nameWithType>Arabirim, gözlemciyi temsil eder. Bu konuda, bu arabirimleri kullanarak gözlemci tasarım modelini uygularken geliştiricilerin izlenmesi gereken en iyi uygulamalar açıklanmaktadır.  
+
+.NET sürümünde, gözlemci tasarım alanı bir arabirim kümesi olarak uygulanır. <xref:System.IObservable%601?displayProperty=nameWithType>Arabirim, <xref:System.IDisposable> gözlemcilerin 'ın bildirimlerden aboneliklerini kaldırma olanağı sağlayan bir uygulama sağlamaktan de sorumlu olan veri sağlayıcısını temsil eder. <xref:System.IObserver%601?displayProperty=nameWithType>Arabirim, gözlemciyi temsil eder. Bu konuda, bu arabirimleri kullanarak gözlemci tasarım modelini uygularken geliştiricilerin izlenmesi gereken en iyi uygulamalar açıklanmaktadır.  
   
 ## <a name="threading"></a>İş Parçacığı Oluşturma  
  Genellikle, bir sağlayıcı, <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> bazı koleksiyon nesneleri tarafından temsil edilen bir abone listesine belirli bir gözlemci ekleyerek yöntemini uygular ve <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> abone listesinden belirli bir gözlemci kaldırarak yöntemi uygular. Bir gözlemci, bu yöntemleri dilediğiniz zaman çağırabilir. Ayrıca, sağlayıcı/gözlemci, geri çağırma yönteminden sonra aboneliği kaldırmaktan sorumlu kişiyi belirtmediğinden <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> , sağlayıcı ve gözlemci aynı üyeyi listeden kaldırmayı deneyebilir. Bu olasılığa göre, ve yöntemlerinin her ikisi de <xref:System.IObservable%601.Subscribe%2A> <xref:System.IDisposable.Dispose%2A> iş parçacığı açısından güvenli olmalıdır. Genellikle, bu, [eş zamanlı bir koleksiyonun](../parallel-programming/data-structures-for-parallel-programming.md) veya kilidin kullanılmasını içerir. İş parçacığı açısından güvenli olmayan uygulamalar, açık bir şekilde belgelemelidir.  

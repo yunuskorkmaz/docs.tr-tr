@@ -3,18 +3,18 @@ title: Tarihler, saatler ve saat dilimleri
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- time zone objects [.NET Framework]
-- date and time data [.NET Framework]
-- time zones [.NET Framework]
-- times [.NET Framework], time zones
-- time [.NET Framework], time zones
+- time zone objects [.NET]
+- date and time data [.NET]
+- time zones [.NET]
+- times [.NET], time zones
+- time [.NET], time zones
 ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
-ms.openlocfilehash: 86602cd6e662b1b1057832247babc558ef67b79f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1200f7edc3ac40a67ecfa2f554c5c721877e755a
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276939"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063683"
 ---
 # <a name="dates-times-and-time-zones"></a>Tarihler, saatler ve saat dilimleri
 
@@ -46,7 +46,7 @@ Belgelerinin bu bölümü, Saat dilimleriyle çalışmanız ve Tarih ve saatleri
 
 [Nasıl yapılır: önceden TANıMLANMıŞ UTC ve yerel saat dilimi nesnelerine erişme](access-utc-and-local.md) Eşgüdümlü Evrensel Saat ve yerel saat dilimine nasıl erişebileceğinizi açıklar.
 
-[Nasıl yapılır: TimeZoneInfo nesnesinin örneğini oluşturma](instantiate-time-zone-info.md) <xref:System.TimeZoneInfo>Yerel sistem kayıt defterinden bir nesnenin örneğini oluşturmayı açıklar.
+[Nasıl yapılır: TimeZoneInfo nesnesinin örneğini oluşturma](instantiate-time-zone-info.md) <xref:System.TimeZoneInfo> Yerel sistem kayıt defterinden bir nesnenin örneğini oluşturmayı açıklar.
 
 [DateTimeOffset nesnesini örnekleme](instantiating-a-datetimeoffset-object.md) Bir <xref:System.DateTimeOffset> nesnenin örneklendiği ve bir <xref:System.DateTime> değerin bir değere dönüştürülebileceği yollar açıklanmaktadır <xref:System.DateTimeOffset> .
 
@@ -54,7 +54,7 @@ Belgelerinin bu bölümü, Saat dilimleriyle çalışmanız ve Tarih ve saatleri
 
 [Nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma](create-time-zones-with-adjustment-rules.md) Gün ışığından yararlanma saatine bir veya daha fazla geçişi destekleyen bir özel saat dilimi oluşturmayı açıklar.
 
-[Saat dilimlerini kaydetme ve geri yükleme](saving-and-restoring-time-zones.md) <xref:System.TimeZoneInfo>Saat dilimi verilerinin serileştirilmesi ve serisini kaldırma desteğini açıklar ve bu özelliklerin kullanılabileceği bazı senaryoları gösterir.
+[Saat dilimlerini kaydetme ve geri yükleme](saving-and-restoring-time-zones.md) <xref:System.TimeZoneInfo> Saat dilimi verilerinin serileştirilmesi ve serisini kaldırma desteğini açıklar ve bu özelliklerin kullanılabileceği bazı senaryoları gösterir.
 
 [Nasıl yapılır: bir katıştırılmış kaynağa saat dilimlerini kaydetme](save-time-zones-to-an-embedded-resource.md) Özel saat dilimini oluşturmayı ve bu bilgilerin bir kaynak dosyasına nasıl kaydedileceğini açıklar.
 

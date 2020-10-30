@@ -6,19 +6,19 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], about globalization
+- globalization [.NET], about globalization
 - global applications, globalization
-- international applications [.NET Framework], globalization
+- international applications [.NET], globalization
 - world-ready applications, globalization
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66ed197f102583553112083e3a21f89e33cd3e3f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291922"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064177"
 ---
 # <a name="globalization"></a>Genelleştirme
 
@@ -102,7 +102,7 @@ Genellikle, Kullanıcı arabiriminde görüntülenecek olan sıralı dizeler kü
 
 Kültüre duyarlı dize karşılaştırması, <xref:System.Globalization.CompareInfo> her bir kültürün özelliği tarafından döndürülen nesnesi tarafından tanımlanır <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> . Yöntem aşırı yüklerini kullanan kültüre duyarlı dize karşılaştırmaları <xref:System.String.Compare%2A?displayProperty=nameWithType> de <xref:System.Globalization.CompareInfo> nesnesini kullanır.
 
-.NET, dize verilerinde kültüre duyarlı sıralamalar gerçekleştirmek için tabloları kullanır. Sıralama ağırlıkları ve dize normalleştirmesi üzerinde veri içeren bu tabloların içeriği, belirli bir .NET sürümü tarafından uygulanan Unicode standardı sürümüne göre belirlenir. Aşağıdaki tabloda, .NET Framework ve .NET Core 'un belirtilen sürümleri tarafından uygulanan Unicode sürümleri listelenmiştir. Desteklenen Unicode sürümleri listesinin yalnızca karakter karşılaştırma ve sıralama için geçerli olduğunu unutmayın; Kategoriye göre Unicode karakterlerin sınıflandırmasına uygulanmaz. Daha fazla bilgi için, makalesindeki "dizeler ve Unicode standart" bölümüne bakın <xref:System.String> .
+.NET, dize verilerinde kültüre duyarlı sıralamalar gerçekleştirmek için tabloları kullanır. Sıralama ağırlıkları ve dize normalleştirmesi üzerinde veri içeren bu tabloların içeriği, belirli bir .NET sürümü tarafından uygulanan Unicode standardı sürümüne göre belirlenir. Aşağıdaki tabloda, belirtilen .NET sürümleri tarafından uygulanan Unicode sürümleri listelenmiştir. Desteklenen Unicode sürümlerinin bu listesi yalnızca karakter karşılaştırma ve sıralama için geçerlidir; Kategoriye göre Unicode karakterlerin sınıflandırmasına uygulanmaz. Daha fazla bilgi için, makalesindeki "dizeler ve Unicode standart" bölümüne bakın <xref:System.String> .
 
 |.NET Framework sürümü|İşletim sistemi|Unicode sürümü|
 |----------------------------|----------------------|---------------------|
@@ -112,9 +112,9 @@ Kültüre duyarlı dize karşılaştırması, <xref:System.Globalization.Compare
 |.NET Framework 4|Tüm işletim sistemleri|Unicode 5,0|
 |Windows 7 ' de .NET Framework 4,5 ve üzeri|Unicode 5,0|
 |Windows 8 ve sonraki işletim sistemlerinde .NET Framework 4,5 ve üzeri|Unicode 6.3.0|
-|.NET Core (tüm sürümler)|, Temel alınan işletim sistemi tarafından desteklenen Unicode standart sürümüne bağlıdır.|
+|.NET Core ve .NET 5 +|, Temel alınan işletim sistemi tarafından desteklenen Unicode standart sürümüne bağlıdır.|
 
-.NET Framework 4,5 ve tüm .NET Core sürümlerinde, dize karşılaştırma ve sıralama işletim sistemine bağlıdır. Windows 7 ' de çalışan .NET Framework 4,5 ve üzeri, verileri Unicode 5,0 uygulayan kendi tablolarından alır. Windows 8 ve üzeri sürümlerde çalışan .NET Framework 4,5 ve üzeri, Unicode 6,3 uygulayan işletim sistemi tablolarından veri alır. .NET Core 'da, desteklenen Unicode sürümü temeldeki işletim sistemine bağlıdır. Kültüre duyarlı sıralanmış verileri seri hale <xref:System.Globalization.SortVersion> getirilebiliyorsanız, .net ve işletim sisteminin sıralama düzeni ile tutarlı olması için seri hale getirilmiş verilerinizin ne zaman sıralanması gerektiğini öğrenmek için sınıfını kullanabilirsiniz. Bir örnek için, bkz <xref:System.Globalization.SortVersion> . sınıf konusu.
+.NET Framework 4,5 ve tüm .NET Core ve .NET 5 + sürümlerinde, dize karşılaştırma ve sıralama işletim sistemine bağlıdır. Windows 7 ' de çalışan .NET Framework 4,5 ve üzeri, Unicode 5,0 uygulayan kendi tablolarından veri alır. Windows 8 ve üzeri sürümlerde çalışan .NET Framework 4,5 ve üzeri, Unicode 6,3 uygulayan işletim sistemi tablolarından veri alır. .NET Core ve .NET 5 + ' da desteklenen Unicode sürümü temeldeki işletim sistemine bağlıdır. Kültüre duyarlı sıralanmış verileri seri hale <xref:System.Globalization.SortVersion> getirilebiliyorsanız, .net ve işletim sisteminin sıralama düzeni ile tutarlı olması için seri hale getirilmiş verilerinizin ne zaman sıralanması gerektiğini öğrenmek için sınıfını kullanabilirsiniz. Bir örnek için, bkz <xref:System.Globalization.SortVersion> . sınıf konusu.
 
 Uygulamanız, kültüre özgü kapsamlı dize verisi sıralamayı gerçekleştiriyorsa, <xref:System.Globalization.SortKey> dizeleri karşılaştırmak için sınıfıyla çalışabilirsiniz. Sıralama anahtarı, belirli bir dizenin alfabetik, büyük/küçük harf ve aksan kalınlıkları dahil olmak üzere kültüre özgü sıralama ağırlıklarını yansıtır. Sıralama anahtarlarını kullanan karşılaştırmalar ikili olduğundan, örtük veya açık bir şekilde nesne kullanan karşılaştırmalardan daha hızlıdır <xref:System.Globalization.CompareInfo> . Dizeyi yöntemine geçirerek belirli bir dize için kültüre özgü bir sıralama anahtarı oluşturursunuz <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType> .
 

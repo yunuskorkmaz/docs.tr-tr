@@ -1,7 +1,7 @@
 ---
 title: Eşitlik işleçleri-C# başvurusu
 description: C# eşitlik karşılaştırma işleçleri ve C# tür eşitliği hakkında bilgi edinin.
-ms.date: 06/26/2019
+ms.date: 10/30/2020
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 33215e2440b14fb888a6f0df5c220c891ebed0e2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 39461157c33fea0effb5c8808ded1c9981900e17
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063100"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063221"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# Başvurusu)
 
@@ -47,11 +47,19 @@ C# 7,3 ile başlayarak, `==` ve `!=` Işleçleri c# [Tanımlama grupları](../bu
 
 ### <a name="reference-types-equality"></a>Başvuru türleri eşitliği
 
-Varsayılan olarak, iki başvuru türü işlenen aynı nesneye başvurduklarında eşittir:
+Varsayılan olarak, kayıt olmayan iki başvuru türü işleneni aynı nesneye başvurduklarında eşittir:
 
 [!code-csharp[reference type equality](snippets/shared/EqualityOperators.cs#ReferenceTypesEquality)]
 
 Örnekte gösterildiği gibi, Kullanıcı tanımlı başvuru türleri `==` Varsayılan olarak işleci destekler. Ancak, bir başvuru türü işleci aşırı yükleyebilir `==` . Bir başvuru türü işleci aşırı yükle, `==` <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> Bu türden iki başvurunun aynı nesneye başvurmasını denetlemek için yöntemini kullanın.
+
+### <a name="record-types-equality"></a>Kayıt türleri eşitliği
+
+C# 9,0 ve üzeri sürümlerde bulunan [kayıt türleri](../../whats-new/csharp-9.md#record-types) , `==` `!=` Varsayılan olarak değer eşitlik semantiğini sağlayan ve işleçlerini destekler. Diğer bir deyişle, iki kayıt işleneni her ikisi de `null` ya da tüm alanların karşılık gelen değerleri eşitse ve otomatik uygulanan özellikler eşitse eşittir.
+
+:::code language="csharp" source="snippets/shared/EqualityOperators.cs" id="RecordTypesEquality":::
+
+Yukarıdaki örnekte gösterildiği gibi, kayıt olmayan başvuru türü Üyeler söz konusu olduğunda başvuru değerleri karşılaştırılır, başvurulan örneklerle değil.
 
 ### <a name="string-equality"></a>Dize eşitlik
 
@@ -85,9 +93,17 @@ Aşağıdaki örnek işlecinin kullanımını gösterir `!=` :
 
 Kullanıcı tanımlı bir tür ve işleçlerini [aşırı](operator-overloading.md) yükleyebilir `==` `!=` . Bir tür iki işleçten birini aşırı yüklediğinden, diğerini de aşırı yüklemesi gerekir.
 
+Kayıt türü, ve işleçlerini açıkça aşırı `==` yükleyemez `!=` . `==` `!=` Kayıt türü için ve işleçlerinin davranışını değiştirmeniz gerekiyorsa `T` , <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> yöntemi aşağıdaki imzayla uygulayın:
+
+```csharp
+public virtual bool Equals(T? other);
+```
+
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [ilişkisel ve tür-test işleçleri](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) bölümüne bakın.
+
+Kayıt türlerinin eşitliği hakkında daha fazla bilgi için, [kayıtlar Özellik teklifi notunun](~/_csharplang/proposals/csharp-9.0/records.md) [eşitlik Üyeler](~/_csharplang/proposals/csharp-9.0/records.md#equality-members) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

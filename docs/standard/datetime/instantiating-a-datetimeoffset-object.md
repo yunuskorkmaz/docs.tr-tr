@@ -8,16 +8,16 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - instantiating time zone objects
-- time zone objects [.NET Framework], instantiation
+- time zone objects [.NET], instantiation
 - DateTimeOffset structure, converting to DateTime
 - DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-ms.openlocfilehash: c2b71a2a98353a4ec9ed249acf18939dd4740e99
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4158a3d3bbd7ada87dd0c773cf9a0f5e001ad918
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768904"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063631"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>Bir DateTimeOffset nesnesinin örneğini oluşturma
 
@@ -39,7 +39,7 @@ Bunu destekleyen diller için, bir değeri örneketmenin en yaygın yöntemlerin
 
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#1)]
 
-<xref:System.DateTimeOffset>değerler, değişmez değerleri destekleyen diller kullanılırken tarih ve saat değişmez değerleri kullanılarak da başlatılabilir <xref:System.DateTime> . Örneğin, aşağıdaki Visual Basic kodu bir <xref:System.DateTimeOffset> nesnesi oluşturur.
+<xref:System.DateTimeOffset> değerler, değişmez değerleri destekleyen diller kullanılırken tarih ve saat değişmez değerleri kullanılarak da başlatılabilir <xref:System.DateTime> . Örneğin, aşağıdaki Visual Basic kodu bir <xref:System.DateTimeOffset> nesnesi oluşturur.
 
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#2)]
 

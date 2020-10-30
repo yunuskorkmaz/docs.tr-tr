@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: kullanıcıların belirsiz zamanları çözmesine Izin ver'
+title: 'Nasıl yapılır: Kullanıcıların belirsiz saatleri çözmelerine izin verme'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- time zones [.NET Framework], ambiguous time
-- ambiguous time [.NET Framework]
+- time zones [.NET], ambiguous time
+- ambiguous time [.NET]
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
-ms.openlocfilehash: ac723738d80a2f686a5fcaf279cec791b3c58619
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9eb1f576fd10b22383d77b90f63009fef41582d6
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281589"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063592"
 ---
-# <a name="how-to-let-users-resolve-ambiguous-times"></a>Nasıl yapılır: kullanıcıların belirsiz zamanları çözmesine Izin ver
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>Nasıl yapılır: Kullanıcıların belirsiz saatleri çözmelerine izin verme
 
 Belirsiz bir zaman, birden fazla Eşgüdümlü Evrensel Saat (UTC) ile eşleşen bir süredir. Saat diliminin gün ışığından yararlanma saatinden standart saate geçiş sırasında olduğu gibi saat içinde saat olarak ayarlandığında meydana gelir. Belirsiz bir süre işlenirken aşağıdakilerden birini yapabilirsiniz:
 

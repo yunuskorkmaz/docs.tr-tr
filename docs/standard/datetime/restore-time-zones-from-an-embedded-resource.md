@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl yapılır: katıştırılmış bir kaynaktan saat dilimlerini geri yükleme'
+title: 'Nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], deserializing
-- time zones [.NET Framework], restoring
+- time zones [.NET], deserializing
+- time zones [.NET], restoring
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
-ms.openlocfilehash: b1cece13c88b3a49c9c4c90045a07dd009d4282d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1dd3dff2441ac5e21f3ebf97d58919a7c65d42c5
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281329"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063436"
 ---
-# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Nasıl yapılır: katıştırılmış bir kaynaktan saat dilimlerini geri yükleme
+# <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme
 
 Bu konuda, bir kaynak dosyasına kaydedilmiş saat dilimlerinin nasıl geri yükleneceği açıklanmaktadır. Saat dilimlerini kaydetme hakkında bilgi ve yönergeler için bkz. [nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](save-time-zones-to-an-embedded-resource.md).
 
@@ -26,7 +26,7 @@ Bu konuda, bir kaynak dosyasına kaydedilmiş saat dilimlerinin nasıl geri yük
 
 2. <xref:System.Resources.ResourceManager>Katıştırılmış kaynak dosyanın tam adını ve kaynak dosyasını içeren derlemeye bir başvuru geçirerek bir nesne oluşturun.
 
-   Gömülü kaynak dosyasının tam adını belirleyemeziz, derlemenin bildirimini incelemek için [ıldadsm. exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanın. Bir `.mresource` giriş, kaynağı tanımlar. Örnekte, kaynağın tam adı `SerializeTimeZoneData.SerializedTimeZones` .
+   Gömülü kaynak dosyasının tam adını belirleyemeziz, derlemenin bildirimini incelemek için [Ildasm.exe (Il ayırıcı)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanın. Bir `.mresource` giriş, kaynağı tanımlar. Örnekte, kaynağın tam adı `SerializeTimeZoneData.SerializedTimeZones` .
 
    Kaynak dosyası saat dilimi örnek oluşturma kodunu içeren bütünleştirilmiş koda katıştırılmışsa, `static` ( `Shared` Visual Basic) metodunu çağırarak buna bir başvuru alabilirsiniz <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> .
 
@@ -49,7 +49,7 @@ Bu kod <xref:System.TimeZoneInfo> , uygulamanın gerektirdiği bir nesnenin mevc
 
 Bu örnek şunları gerektirir:
 
-- System. Windows. Forms. dll ve System. Core. dll ' ye bir başvuru projeye eklenir.
+- System.Windows.Forms.dll ve System.Core.dll bir başvuru projeye eklenir.
 
 - Aşağıdaki ad alanları içeri aktarılmalıdır:
 
@@ -60,4 +60,4 @@ Bu örnek şunları gerektirir:
 
 - [Tarihler, saatler ve saat dilimleri](index.md)
 - [Saat dilimine genel bakış](time-zone-overview.md)
-- [Nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](save-time-zones-to-an-embedded-resource.md)
+- [Nasıl yapılır: Saat dilimlerini eklenmiş kaynağa kaydetme](save-time-zones-to-an-embedded-resource.md)

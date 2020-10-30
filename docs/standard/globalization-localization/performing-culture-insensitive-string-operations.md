@@ -11,17 +11,18 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 79ff899e2964ae2c1e90b7178616c612dddf6d86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0f7e8dde395feb548e6808547a223a3fa8855561
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287512"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063917"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Kültüre duyarsız dize işlemlerini gerçekleştirme
-Kültüre duyarlı dize işlemleri gerçekleştiren çoğu .NET Framework yöntemi varsayılan olarak, bir parametre geçirerek kullanılacak kültürü açıkça belirtmenize imkan tanıyan yöntem aşırı yüklemeleri sağlar <xref:System.Globalization.CultureInfo> . Bu aşırı yüklemeler, büyük/küçük harf eşlemeleri ve sıralama kurallarında kültürel değişimlerini ortadan kaldırmanıza ve kültüre duyarsız sonuçların sağlanmasına imkan sağlar  
+
+Kültüre duyarlı dize işlemleri gerçekleştiren çoğu .NET yöntemi, varsayılan olarak bir parametre geçirerek kullanılacak kültürü açıkça belirtmenize imkan tanıyan yöntem aşırı yüklemeleri sağlar <xref:System.Globalization.CultureInfo> . Bu aşırı yüklemeler, büyük/küçük harf eşlemeleri ve sıralama kurallarında kültürel değişimlerini ortadan kaldırmanıza ve kültüre duyarsız sonuçların sağlanmasına imkan sağlar  
   
- Bu bölümde, varsayılan olarak kültüre duyarlı .NET Framework yöntemlerini kullanarak kültüre duyarsız dize işlemlerinin nasıl gerçekleştirileceği gösterilmektedir.  
+ Bu bölüm, varsayılan olarak kültüre duyarlı olan .NET yöntemlerini kullanarak kültüre duyarsız dize işlemlerinin nasıl gerçekleştirileceğini göstermek için aşağıdaki makaleleri sağlar.  
   
 ## <a name="in-this-section"></a>Bu bölümde  
  [Kültüre Duyarsız Dize Karşılaştırmalarını Gerçekleştirme](performing-culture-insensitive-string-comparisons.md)  

@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], enumerating
-- enumerating time zones [.NET Framework]
+- time zones [.NET], enumerating
+- enumerating time zones [.NET]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 8f1cc9d58bc0f169d458854eac6568caaa4481c7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a51e9d0c51968d57e0d79dd80d8619ab11cdbf93
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286138"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063774"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Nasıl yapılır: Bir bilgisayarda mevcut saat dilimlerini numaralandırma
 
@@ -63,12 +63,12 @@ Bu örnek şunları gerektirir:
 
 - Aşağıdaki ad alanları içeri aktarılmalıdır:
 
-  <xref:System>(C# kodunda)
+  <xref:System> (C# kodunda)
 
   <xref:System.Collections.ObjectModel>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tarihler, saatler ve saat dilimleri](index.md)
-- [Nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](save-time-zones-to-an-embedded-resource.md)
-- [Nasıl yapılır: katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](restore-time-zones-from-an-embedded-resource.md)
+- [Nasıl yapılır: Saat dilimlerini eklenmiş kaynağa kaydetme](save-time-zones-to-an-embedded-resource.md)
+- [Nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](restore-time-zones-from-an-embedded-resource.md)

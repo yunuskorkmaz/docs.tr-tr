@@ -7,21 +7,21 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - world-ready applications, localizability
-- application development [.NET Framework], localization
-- localizability [.NET Framework]
-- international applications [.NET Framework], localizability
-- globalization [.NET Framework], localizability
+- application development [.NET], localization
+- localizability [.NET]
+- international applications [.NET], localizability
+- globalization [.NET], localizability
 - culture, localizability
-- localization [.NET Framework], localizability
+- localization [.NET], localizability
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: ef23cff2416792f13fda04dbe9beb34cbacfd7ea
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6aa0588ea4baa00be476a05c335cf2abaa22aab4
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288283"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064164"
 ---
 # <a name="localizability-review"></a>Yerelleştirilebilirlik incelemesi
 
@@ -45,7 +45,7 @@ Uygulamanızı aklına göre tasarlanıp geliştirip geliştirdiyseniz ve [Genel
 
 .NET, kültüre göre farklılık gösteren çeşitli alanlarda programlama desteği sağlamaz. Çoğu durumda, aşağıdaki gibi özellik alanlarının işlenmesi için özel kod yazmanız gerekir:
 
-- Adresleri
+- Adresler
 
 - Telefon numaraları
 
@@ -80,6 +80,6 @@ Uygulamanızı geliştirirken Genelleştirme önerilerini izlediyseniz, kültür
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genelleştirme ve yerelleştirme](index.md)
-- [Yerelleştirme](localization.md)
+- [Localization (Yerelleştirme)](localization.md)
 - [Genelleştirme](globalization.md)
 - [Masaüstü uygulamalarındaki kaynaklar](../../framework/resources/index.md)

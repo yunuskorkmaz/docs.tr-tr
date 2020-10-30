@@ -11,18 +11,18 @@ helpviewer_keywords:
 - IObservable<T> interface
 - IObserver<T> interface
 - IObservable(Of T) interface
-- observer design pattern [.NET Framework]
+- observer design pattern [.NET]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e1f8dad2c19d3e11281cda5ef749730c5c6334d7
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559167"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064073"
 ---
 # <a name="observer-design-pattern"></a>Gözlemci Tasarım Deseni
 
-Gözlemci tasarım deseninin bir abone ile kaydolmalarını ve bir sağlayıcıdan gelen bildirimleri almasını sağlar. Gönderim tabanlı bildirim gerektiren tüm senaryolar için uygundur. Bu model, bir *sağlayıcıyı* ( *Konu* veya *observable*olarak da bilinir) ve sıfır, bir veya daha fazla *gözlemcilerin*tanımlar. Gözlemcilerin sağlayıcıya kaydoldu ve önceden tanımlanmış bir koşul, olay veya durum değişikliği gerçekleştiğinde sağlayıcı, yöntemlerinden birini çağırarak tüm gözlemcilerin 'ı otomatik olarak bilgilendirir. Bu yöntem çağrısında sağlayıcı, güncel durum bilgilerini observers 'a de verebilir. .NET Framework, gözlemci tasarım deseninin genel ve arabirimler uygulanarak uygulanması gerekir <xref:System.IObservable%601?displayProperty=nameWithType> <xref:System.IObserver%601?displayProperty=nameWithType> . Genel tür parametresi, bildirim bilgilerini sağlayan türü temsil eder.
+Gözlemci tasarım deseninin bir abone ile kaydolmalarını ve bir sağlayıcıdan gelen bildirimleri almasını sağlar. Gönderim tabanlı bildirim gerektiren tüm senaryolar için uygundur. Bu model, bir *sağlayıcıyı* ( *Konu* veya *observable* olarak da bilinir) ve sıfır, bir veya daha fazla *gözlemcilerin* tanımlar. Gözlemcilerin sağlayıcıya kaydoldu ve önceden tanımlanmış bir koşul, olay veya durum değişikliği gerçekleştiğinde sağlayıcı, yöntemlerinden birini çağırarak tüm gözlemcilerin 'ı otomatik olarak bilgilendirir. Bu yöntem çağrısında sağlayıcı, güncel durum bilgilerini observers 'a de verebilir. .NET ' te, gözlemci tasarım deseninin genel ve arabirimler uygulanarak uygulanması gerekir <xref:System.IObservable%601?displayProperty=nameWithType> <xref:System.IObserver%601?displayProperty=nameWithType> . Genel tür parametresi, bildirim bilgilerini sağlayan türü temsil eder.
 
 ## <a name="applying-the-pattern"></a>Desenler uygulanıyor
 

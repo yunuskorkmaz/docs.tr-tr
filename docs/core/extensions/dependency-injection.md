@@ -3,14 +3,14 @@ title: .NET 'e bağımlılık ekleme
 description: .NET 'in bağımlılık ekleme ve nasıl kullanılacağı hakkında bilgi edinin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/23/2020
+ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: d2dbe06597c99158eaa39812d4d5a95288450adc
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 2199f51ab13bedd50af747ce33ceee7b6eaefd8f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888567"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063149"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 'e bağımlılık ekleme
 
@@ -202,24 +202,49 @@ Framework, belirli senaryolarda yararlı olan hizmet kayıt uzantısı yöntemle
 
 | Yöntem | Automatic<br>object<br>elden | Birden çok<br>uygulamalar | Geçiş bağımsız değişkenleri |
 |--|:-:|:-:|:-:|
-| `Add{LIFETIME}<{SERVICE}, {IMPLEMENTATION}>()`<br><br>Örnek:<br><br>`services.AddSingleton<IMyDep, MyDep>();` | Evet | Evet | Hayır |
-| `Add{LIFETIME}<{SERVICE}>(sp => new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton<IMyDep>(sp => new MyDep());`<br>`services.AddSingleton<IMyDep>(sp => new MyDep(99));` | Evet | Evet | Evet |
-| `Add{LIFETIME}<{IMPLEMENTATION}>()`<br><br>Örnek:<br><br>`services.AddSingleton<MyDep>();` | Evet | Hayır | Hayır |
-| `AddSingleton<{SERVICE}>(new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton<IMyDep>(new MyDep());`<br>`services.AddSingleton<IMyDep>(new MyDep(99));` | Hayır | Evet | Evet |
-| `AddSingleton(new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton(new MyDep());`<br>`services.AddSingleton(new MyDep(99));` | Hayır | Hayır | Evet |
+| `Add{LIFETIME}<{SERVICE}, {IMPLEMENTATION}>()`<br><br>Örnek:<br><br>`services.AddSingleton<IMyDep, MyDep>();` | Yes | Yes | Hayır |
+| `Add{LIFETIME}<{SERVICE}>(sp => new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton<IMyDep>(sp => new MyDep());`<br>`services.AddSingleton<IMyDep>(sp => new MyDep(99));` | Yes | Yes | Yes |
+| `Add{LIFETIME}<{IMPLEMENTATION}>()`<br><br>Örnek:<br><br>`services.AddSingleton<MyDep>();` | Yes | Hayır | Hayır |
+| `AddSingleton<{SERVICE}>(new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton<IMyDep>(new MyDep());`<br>`services.AddSingleton<IMyDep>(new MyDep(99));` | Hayır | Yes | Yes |
+| `AddSingleton(new {IMPLEMENTATION})`<br><br>Örnekler:<br><br>`services.AddSingleton(new MyDep());`<br>`services.AddSingleton(new MyDep(99));` | Hayır | Hayır | Yes |
 
 Tür çıkarma hakkında daha fazla bilgi için [Hizmetler 'In aktiften çıkarılması](dependency-injection-guidelines.md#disposal-of-services) bölümüne bakın.
 
+Hizmeti yalnızca bir uygulama türüyle kaydetmek, bu hizmeti aynı uygulama ve hizmet türüyle kaydetmeye eşdeğerdir. Bu, bir hizmetin birden çok uygulamasının açık bir hizmet türü kullanmayan yöntemler kullanılarak kaydedilamamasının nedenleridir. Bu yöntemler bir hizmetin birden çok _instances * kaydını yapabilir, ancak hepsi aynı *uygulama* türüne sahip olur.
+
+Yukarıdaki hizmet kayıt yöntemlerinden herhangi biri aynı hizmet türünün birden çok hizmet örneğini kaydetmek için kullanılabilir. Aşağıdaki örnekte, `AddSingleton` hizmet türü olarak ile iki kez çağırılır `IMessageWriter` . İçin ikinci çağrı, `AddSingleton` olarak çözümlendikten önceki bir öncekini geçersiz kılar `IMessageWriter` ve aracılığıyla birden çok hizmet çözümlendiğinde bir öncekini ekler `IEnumerable<IMessageWriter>` . Hizmetler, ile çözümlendiklerinde kaydedildikleri sırada görüntülenir `IEnumerable<{SERVICE}>` .
+
+:::code language="csharp" source="snippets/configuration/console-di-ienumerable/Program.cs" highlight="19-24":::
+
+Önceki örnek kaynak kodu, öğesinin iki uygulamalarını kaydeder `IMessageWriter` .
+
+:::code language="csharp" source="snippets/configuration/console-di-ienumerable/ExampleService.cs" highlight="9-18":::
+
+`ExampleService`İki Oluşturucu parametresini tanımlar; tek bir `IMessageWriter` ve bir `IEnumerable<IMessageWriter>` . Tek `IMessageWriter` şey kayıtlı olan en son uygudır, ancak `IEnumerable<IMessageWriter>` Tüm kayıtlı uygulamaları temsil eder.
+
 Framework Ayrıca, `TryAdd{LIFETIME}` yalnızca kayıtlı bir uygulama olmadığında hizmeti kaydeden genişletme yöntemleri de sağlar.
 
-Aşağıdaki örnekte, `AddSingleton` `MessageWriter` için bir uygulama olarak Yazmaçları çağrısı `IMessageWriter` . `TryAddSingleton` `IMessageWriter` Zaten kayıtlı bir uygulamaya sahip olduğundan, çağrısının bir etkisi yoktur:
+Aşağıdaki örnekte, `AddSingleton` `ConsoleMessageWriter` için bir uygulama olarak Yazmaçları çağrısı `IMessageWriter` . `TryAddSingleton` `IMessageWriter` Zaten kayıtlı bir uygulamaya sahip olduğundan, çağrısının bir etkisi yoktur:
 
 ```csharp
-services.AddSingleton<IMessageWriter, MessageWriter>();
-services.TryAddSingleton<IMessageWriter, DifferentMessageWriter>();
+services.AddSingleton<IMessageWriter, ConsoleMessageWriter>();
+services.TryAddSingleton<IMessageWriter, LoggingMessageWriter>();
 ```
 
-`TryAddSingleton`Zaten eklendiği için hiçbir etkisi yoktur ve "TRY" başarısız olur.
+`TryAddSingleton`Zaten eklendiği için hiçbir etkisi yoktur ve "TRY" başarısız olur. Aşağıdaki işlemi yapılır `ExampleService` :
+
+```csharp
+public class ExampleService
+{
+    public ExampleService(
+        IMessageWriter messageWriter,
+        IEnumerable<IMessageWriter> messageWriters)
+    {
+        Trace.Assert(messageWriter is ConsoleMessageWriter);
+        Trace.Assert(messageWriters.Single() is ConsoleMessageWriter);
+    }
+}
+```
 
 Daha fazla bilgi için bkz.
 
@@ -228,7 +253,7 @@ Daha fazla bilgi için bkz.
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton%2A>
 
-[TryAddEnumerable (ServiceDescriptor)](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A) yöntemleri, yalnızca aynı türde * _OF bir uygulama yoksa, hizmeti kaydeder. Aracılığıyla birden çok hizmet çözümlenir `IEnumerable<{SERVICE}>` . Hizmetleri kaydederken, aynı türden biri zaten eklenmediyse bir örnek ekleyin. Kitaplık yazarları `TryAddEnumerable` , kapsayıcıda bir uygulamanın birden çok kopyasını kaydetmemek için kullanır.
+[TryAddEnumerable (ServiceDescriptor)](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A) yöntemleri, yalnızca *aynı türde* bir uygulama olmadığında hizmeti kaydeder. Aracılığıyla birden çok hizmet çözümlenir `IEnumerable<{SERVICE}>` . Hizmetleri kaydederken, aynı türden biri zaten eklenmediyse bir örnek ekleyin. Kitaplık yazarları `TryAddEnumerable` , kapsayıcıda bir uygulamanın birden çok kopyasını kaydetmemek için kullanır.
 
 Aşağıdaki örnekte, `TryAddEnumerable` `MessageWriter` için bir uygulama olarak kaydeden ilk çağrı `IMessageWriter1` . İçin ikinci çağrı kaydettirir `MessageWriter` `IMessageWriter2` . `IMessageWriter1`Zaten kayıtlı bir uygulamasına sahip olduğundan, üçüncü çağrının etkisi yoktur `MessageWriter` :
 

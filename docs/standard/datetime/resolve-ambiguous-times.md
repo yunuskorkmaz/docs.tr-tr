@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], ambiguous time
-- ambiguous time [.NET Framework]
+- time zones [.NET], ambiguous time
+- ambiguous time [.NET]
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
-ms.openlocfilehash: ad69c0984a9d8c01ebd2198486cd0f6492a6116e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 467153ad1217e529f52bf90262c4264de069ff00
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281511"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063527"
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>Nasıl yapılır: Belirsiz saatleri çözme
 
@@ -56,4 +56,4 @@ Bu örnek şunları gerektirir:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tarihler, saatler ve saat dilimleri](index.md)
-- [Nasıl yapılır: kullanıcıların belirsiz zamanları çözmesine Izin ver](let-users-resolve-ambiguous-times.md)
+- [Nasıl yapılır: Kullanıcıların belirsiz saatleri çözmelerine izin verme](let-users-resolve-ambiguous-times.md)

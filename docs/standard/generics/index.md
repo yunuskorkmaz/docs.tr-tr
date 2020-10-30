@@ -9,30 +9,30 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - generic methods, type inference
-- generics [.NET Framework], collections
-- generic interfaces [.NET Framework]
+- generics [.NET], collections
+- generic interfaces [.NET]
 - constructed generic types
 - nested generic types
 - generic type definitions
-- generic classes [.NET Framework]
-- generics [.NET Framework], interfaces
-- generics [.NET Framework], about
-- generics [.NET Framework]
-- generic collections [.NET Framework]
-- generic delegates [.NET Framework]
+- generic classes [.NET]
+- generics [.NET], interfaces
+- generics [.NET], about
+- generics [.NET]
+- generic collections [.NET]
+- generic delegates [.NET]
 - generic type arguments
-- generics [.NET Framework], delegates
-- generics [.NET Framework], features
-- constraints [.NET Framework]
+- generics [.NET], delegates
+- generics [.NET], features
+- constraints [.NET]
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 91bb96c04c8a5d410f0a88c7e8eedf622fe66c94
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599821"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063162"
 ---
 # <a name="generics-in-net"></a>.NET içindeki Genel Türler
 
@@ -56,15 +56,15 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
   
 - *Genel tür tanımı* , şablon olarak işlev gören veya kullanabileceği türlerin yer tutucuları içeren bir sınıf, yapı veya arabirim bildirimidir. Örneğin, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> sınıfı iki tür içerebilir: anahtarlar ve değerler. Genel tür tanımı yalnızca bir şablon olduğundan, bir sınıf, yapı veya genel tür tanımı olan arabirimin örneklerini oluşturamazsınız.  
   
-- Genel tür *parametreleri*veya *tür parametreleri*, genel tür veya yöntem tanımında yer tutuculardır. <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>Genel tür iki tür parametresine sahiptir `TKey` ve `TValue` bunların anahtar ve değer türlerini temsil eder.  
+- Genel tür *parametreleri* veya *tür parametreleri* , genel tür veya yöntem tanımında yer tutuculardır. <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>Genel tür iki tür parametresine sahiptir `TKey` ve `TValue` bunların anahtar ve değer türlerini temsil eder.  
   
-- *Oluşturulmuş bir genel*tür veya *oluşturulmuş tür*, genel tür tanımının genel tür parametreleri için türleri belirtmenin sonucudur.  
+- *Oluşturulmuş bir genel* tür veya *oluşturulmuş tür* , genel tür tanımının genel tür parametreleri için türleri belirtmenin sonucudur.  
   
 - *Genel tür bağımsız değişkeni* , genel tür parametresi için değiştirilen herhangi bir türdür.  
   
 - Genel terim genel *türü* hem oluşturulmuş türleri hem de genel tür tanımlarını içerir.  
   
-- Genel tür parametrelerinin *Kovaryans* ve *değişken varyansı* , tür bağımsız değişkenleri hedef oluşturulmuş bir türden daha fazla türetilmiş (Kovaryans) veya daha az türetilmiş (değişken varyans) olan oluşturulmuş genel türleri kullanmanıza olanak sağlar. Kovaryans ve değişken Varyans, toplu olarak *fark*olarak adlandırılır. Daha fazla bilgi için bkz. [Kovaryans ve değişken varyans](covariance-and-contravariance.md).  
+- Genel tür parametrelerinin *Kovaryans* ve *değişken varyansı* , tür bağımsız değişkenleri hedef oluşturulmuş bir türden daha fazla türetilmiş (Kovaryans) veya daha az türetilmiş (değişken varyans) olan oluşturulmuş genel türleri kullanmanıza olanak sağlar. Kovaryans ve değişken Varyans, toplu olarak *fark* olarak adlandırılır. Daha fazla bilgi için bkz. [Kovaryans ve değişken varyans](covariance-and-contravariance.md).  
   
 - *Kısıtlamalar* , genel tür parametrelerine yerleştirilmiş sınırlardır. Örneğin, <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> tür örneklerinin sıralanabilmesi için, bir tür parametresini genel arabirimi uygulayan türlerle sınırlayabilirsiniz. Ayrıca tür parametrelerini, parametresiz oluşturucusu olan veya başvuru türleri veya değer türleri olan belirli bir temel sınıfı olan türlerle kısıtlayabilirsiniz. Genel tür kullanıcıları, kısıtlamaları karşılamayan tür bağımsız değişkenlerini yerine geçemez.  
   
@@ -99,7 +99,7 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
   
  Genel türlerde bazı sınırlamalar aşağıda verilmiştir:  
   
-- Genel türler, gibi çoğu temel sınıftan türetilebilir <xref:System.MarshalByRefObject> (ve kısıtlama, genel tür parametrelerinin, gibi temel sınıflardan türemesini gerektirmek için kullanılabilir <xref:System.MarshalByRefObject> ). Ancak .NET Framework, bağlama dayalı genel türleri desteklemez. Genel bir tür öğesinden türetilebilir <xref:System.ContextBoundObject> , ancak bu türün bir örneğini oluşturmaya çalışmak bir öğesine neden olur <xref:System.TypeLoadException> .  
+- Genel türler, gibi çoğu temel sınıftan türetilebilir <xref:System.MarshalByRefObject> (ve kısıtlama, genel tür parametrelerinin, gibi temel sınıflardan türemesini gerektirmek için kullanılabilir <xref:System.MarshalByRefObject> ). Ancak, .NET, içeriğe dayalı genel türleri desteklemez. Genel bir tür öğesinden türetilebilir <xref:System.ContextBoundObject> , ancak bu türün bir örneğini oluşturmaya çalışmak bir öğesine neden olur <xref:System.TypeLoadException> .  
   
 - Numaralandırmalar genel tür parametrelerine sahip olamaz. Numaralandırma yalnızca genel arada (örneğin, Visual Basic, C# veya C++ kullanılarak tanımlanan genel bir tür içinde iç içe yerleştirilmiş olduğundan) olabilir. Daha fazla bilgi için bkz. [ortak tür sisteminde](../base-types/common-type-system.md)"numaralandırmalar".  
   
@@ -108,7 +108,7 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
 - Visual Basic, C# ve C++ ' da, tüm kapsayan türlerin tür parametrelerine atanmış türler yoksa genel bir tür içine alınmış iç içe geçmiş bir tür başlatılamaz. Bu, yansıma içinde, bu diller kullanılarak tanımlanan bir iç içe türün, kapsayan tüm türlerin tür parametrelerini içerir. Bu, kapsayan türlerin tür parametrelerinin iç içe geçmiş bir türün üye tanımlarında kullanılmasına izin verir. Daha fazla bilgi için içindeki "Iç Içe türler" başlığına bakın <xref:System.Type.MakeGenericType%2A> .  
   
     > [!NOTE]
-    > Dinamik bir derlemede kod göndererek veya [Ilasm. exe (Il Assembler)](../../framework/tools/ilasm-exe-il-assembler.md) kullanılarak tanımlanan iç içe bir tür, kapsayan türlerin tür parametrelerini içermesi gerekmez; Ancak, bunları içermiyorsa, tür parametreleri iç içe yerleştirilmiş sınıftaki kapsam içinde değildir.  
+    > Dinamik bir derlemede kod yayarak veya [Ilasm.exe (Il Assembler)](../../framework/tools/ilasm-exe-il-assembler.md) kullanılarak tanımlanan iç içe bir tür, kapsayan türlerin tür parametrelerini içermesi gerekmez; Ancak, bunları içermiyorsa, tür parametreleri iç içe yerleştirilmiş sınıftaki kapsam içinde değildir.  
   
      Daha fazla bilgi için içindeki "Iç Içe türler" başlığına bakın <xref:System.Type.MakeGenericType%2A> .  
 
@@ -136,7 +136,7 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
 |-----------|-----------------|  
 |[.NET 'teki genel Koleksiyonlar](collections.md)|.NET 'teki genel koleksiyon sınıflarını ve diğer genel türleri açıklar.|  
 |[Dizileri ve listeleri Işlemek için genel Temsilciler](delegates-for-manipulating-arrays-and-lists.md)|Bir dizi veya koleksiyonun öğelerinde yapılacak dönüşümler, arama koşulları ve eylemler için genel temsilcileri açıklar.|  
-|[Genel Arabirimler](interfaces.md)|Genel türlerin aileleri arasında ortak işlevsellik sağlayan genel arabirimleri açıklar.|  
+|[Genel arabirimler](interfaces.md)|Genel türlerin aileleri arasında ortak işlevsellik sağlayan genel arabirimleri açıklar.|  
 |[Kovaryans ve değişken sapması](covariance-and-contravariance.md)|Genel tür parametrelerindeki Kovaryans ve değişken varyansı açıklar.|  
 |[Yaygın olarak kullanılan koleksiyon türleri](../collections/commonly-used-collection-types.md)|.NET 'teki genel türler dahil olmak üzere koleksiyon türlerinin özellikleri ve kullanım senaryoları hakkında özet bilgiler sağlar.|  
 |[Genel Koleksiyonlar ne zaman kullanılır?](../collections/when-to-use-generic-collections.md)|Genel koleksiyon türlerinin ne zaman kullanılacağını belirlemek için genel kuralları açıklar.|  

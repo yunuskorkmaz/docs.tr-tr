@@ -7,18 +7,18 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- times [.NET Framework], converting
-- time zones [.NET Framework], conversions
+- times [.NET], converting
+- time zones [.NET], conversions
 - UTC times, converting
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: 156c3d8b360d62ba72f9a4447646fafe170ea658
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3539b3c2b71be331bdea3161b7e8ba6da407cbab
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547336"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063839"
 ---
 # <a name="converting-times-between-time-zones"></a>Saatleri saat dilimleri arasında dönüştürme
 

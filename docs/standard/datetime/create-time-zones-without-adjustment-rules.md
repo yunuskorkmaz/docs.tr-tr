@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: ayarlama kuralları olmadan saat dilimleri oluşturma'
+title: 'Nasıl yapılır: Ayarlama kuralları olmadan saat dilimleri oluşturma'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], adjustment rule
-- time zones [.NET Framework], creating
-- adjustment rule [.NET Framework]
+- time zones [.NET], adjustment rule
+- time zones [.NET], creating
+- adjustment rule [.NET]
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
-ms.openlocfilehash: 1d8aae1284e9ee9871c6f201c6a00e0b547f95fa
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e3bce4d915a8d979f043b5c4a49b20ce3e0596c9
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278044"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063800"
 ---
-# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Nasıl yapılır: ayarlama kuralları olmadan saat dilimleri oluşturma
+# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Nasıl yapılır: Ayarlama kuralları olmadan saat dilimleri oluşturma
 
 Bir uygulama için gerekli kesin saat dilimi bilgileri, bazı nedenlerle belirli bir sistemde mevcut olmayabilir:
 

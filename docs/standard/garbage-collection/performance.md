@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: dee5a4b54806bdadc18d759c5df7016da060fd75
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662855"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93062977"
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
 
@@ -24,7 +24,7 @@ Aşağıdaki bölümlerde, bellek kullanımı ve çöp toplama sorunlarını ara
 
 ### <a name="memory-performance-counters"></a>Bellek Performans Sayaçları
 
-Performans verilerini toplamak için performans sayaçlarını kullanabilirsiniz. Yönergeler için bkz. [çalışma zamanı profili oluşturma](../../framework/debug-trace-profile/runtime-profiling.md). Performans sayaçlarının .NET CLR bellek kategorisi, [.NET Framework performans sayaçları](../../framework/debug-trace-profile/performance-counters.md)bölümünde açıklandığı gibi, çöp toplayıcı hakkında bilgi sağlar.
+Performans verilerini toplamak için performans sayaçlarını kullanabilirsiniz. Yönergeler için bkz. [çalışma zamanı profili oluşturma](../../framework/debug-trace-profile/runtime-profiling.md). .Net ['Teki performans sayaçları](../../framework/debug-trace-profile/performance-counters.md)bölümünde açıklandığı gibi, performans SAYAÇLARıNıN .NET CLR bellek kategorisi, çöp toplayıcı hakkında bilgi sağlar.
 
 ### <a name="debugging-with-sos"></a>SOS ile hata ayıklama
 
@@ -34,7 +34,7 @@ WinDbg 'yi yüklemek için, [Windows Için hata ayıklama araçları 'Nı karş�
 
 ### <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları
 
-Windows için olay izleme (ETW), .NET Framework tarafından sağlanan ve profil oluşturma ile hata ayıklama desteğini tamamlayan bir izleme sistemidir. .NET Framework 4 ' ten başlayarak, [atık toplama ETW olayları](../../framework/performance/garbage-collection-etw-events.md) , yönetilen yığının istatistiksel bir görünüm noktasından çözümlenmesi için yararlı bilgiler yakalar. Örneğin, çöp toplama olayı gerçekleşmek üzereyken oluşturulan `GCStart_V1` olayı, aşağıdaki bilgileri sağlar:
+Windows için olay izleme (ETW), .NET tarafından sunulan profil oluşturma ve hata ayıklama desteğini tamamlayan bir izleme sistemidir. .NET Framework 4 ' ten başlayarak, [atık toplama ETW olayları](../../framework/performance/garbage-collection-etw-events.md) , yönetilen yığının istatistiksel bir görünüm noktasından çözümlenmesi için yararlı bilgiler yakalar. Örneğin, çöp toplama olayı gerçekleşmek üzereyken oluşturulan `GCStart_V1` olayı, aşağıdaki bilgileri sağlar:
 
 - Hangi nesne neslinin toplandığı.
 
@@ -52,7 +52,7 @@ Profil oluşturucular kapsamlı bilgi sağlayabilir. Ancak karmaşık profil olu
 
 ### <a name="application-domain-resource-monitoring"></a>Uygulama Etki Alanı Kaynak İzleme
 
-.NET Framework 4 ' te başlayarak, uygulama etki alanı kaynak izleme (ARM), ana bilgisayarların uygulama etki alanı tarafından CPU ve bellek kullanımını izlemesini sağlar. Daha fazla bilgi için bkz. [uygulama etki alanı kaynak izleme](app-domain-resource-monitoring.md).
+Uygulama etki alanı kaynak izleme (ARM), .NET Framework 4 ' den başlayarak uygulama etki alanına göre CPU ve bellek kullanımını izlemeye olanak sağlar. Daha fazla bilgi için bkz. [uygulama etki alanı kaynak izleme](app-domain-resource-monitoring.md).
 
 ## <a name="troubleshooting-performance-issues"></a>Performans Sorunlarını Giderme
 
@@ -182,7 +182,7 @@ Bir sunucunun bir nesil 2 koleksiyonuna sahip olup olmadığını ve başka bir 
 
 Çöp toplama sırasında CPU kullanımı yüksek olacaktır. Eğer bir çöp toplama işlemi sırasında önemli miktarda işlem süresi harcanırsa, toplama işlemi çok sık gerçekleşiyordur veya çok uzun sürüyordur. Yönetilen yığındaki nesnelerin arttırılmış ayırma oranı, çöp toplamanın daha sık gerçekleşmesine neden olur. Ayırma oranının azaltılması çöp toplamaların sıklığını azaltır.
 
-`Allocated Bytes/second` performans sayacını kullanarak ayırma oranlarını izleyebilirsiniz. Daha fazla bilgi için [.NET Framework performans sayaçları](../../framework/debug-trace-profile/performance-counters.md)bölümüne bakın.
+`Allocated Bytes/second` performans sayacını kullanarak ayırma oranlarını izleyebilirsiniz. Daha fazla bilgi için bkz. [.net 'Teki performans sayaçları](../../framework/debug-trace-profile/performance-counters.md).
 
 Bir koleksiyonun süresi, öncelikle ayırma sonrası varlığını sürdüren nesnelerin sayısında bir etmendir. Toplanacak çok nesne kaldıysa çöp toplayıcının büyük miktarda belleği gözden geçirmesi gerekir. Dışarıda kalanların sıkıştırılması, zaman alan bir işlemdir. Bir toplama sırasında kaç nesnenin işlendiğini belirlemek için belirli bir nesle yönelik bir çöp toplamanın sonundaki hata ayıklayıcıda bir kesme noktası ayarlayın.
 
@@ -230,7 +230,7 @@ Aşağıdaki yordam, yönetilen yığını ölçmek için nasıl bir kesme nokta
 
   Bu komut, derleme 2 nesneleri atık toplama için geri alındıktan sonra, **restart** yürütüldüğünde kesmeyi zorlar.
 
-  Sunucu çöp toplama işleminde, yalnızca bir iş parçacığı **yeniden**çağırır. bu nedenle kesme noktası yalnızca 2. nesil atık toplama sırasında gerçekleşir.
+  Sunucu çöp toplama işleminde, yalnızca bir iş parçacığı **yeniden** çağırır. bu nedenle kesme noktası yalnızca 2. nesil atık toplama sırasında gerçekleşir.
 
 ## <a name="performance-check-procedures"></a>Performans Denetim Prosedürleri
 
@@ -272,9 +272,9 @@ Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için 
 
 - Şu iki bellek performans sayacını inceleyin:
 
-  - **GC 'de% Time**. Son çöp toplama döngüsünden sonra gerçekleşen bir çöp toplamaya harcanan süresinin yüzdesini gösterir. Bu sayacı kullanarak çöp toplayıcısının yönetilen yığın alanı açmak için ne kadar süre harcadığını belirleyebilirsiniz. Eğer çöp toplamaya harcanan süre göreceli olarak düşükse, bu, yönetilen yığın dışında bir kaynak problemi olduğunu gösteriyor olabilir. Bu sayaç, süreçte eş zamanlı veya arka plan çöp toplama işlemleri varsa düzgün olmayabilir.
+  - **GC 'de% Time** . Son çöp toplama döngüsünden sonra gerçekleşen bir çöp toplamaya harcanan süresinin yüzdesini gösterir. Bu sayacı kullanarak çöp toplayıcısının yönetilen yığın alanı açmak için ne kadar süre harcadığını belirleyebilirsiniz. Eğer çöp toplamaya harcanan süre göreceli olarak düşükse, bu, yönetilen yığın dışında bir kaynak problemi olduğunu gösteriyor olabilir. Bu sayaç, süreçte eş zamanlı veya arka plan çöp toplama işlemleri varsa düzgün olmayabilir.
 
-  - **Toplam kaydedilmiş bayt**sayısı. Çöp toplayıcısı tarafından o an yürütülen sanal bellek miktarını gösterir. Bu sayacı kullanarak çöp toplayıcı tarafından uygulamanızın kullandığı belleğin aşırı bir kısmının kullanılıp kullanılmadığını belirleyebilirsiniz.
+  - **Toplam kaydedilmiş bayt** sayısı. Çöp toplayıcısı tarafından o an yürütülen sanal bellek miktarını gösterir. Bu sayacı kullanarak çöp toplayıcı tarafından uygulamanızın kullandığı belleğin aşırı bir kısmının kullanılıp kullanılmadığını belirleyebilirsiniz.
 
   Çoğu bellek performans sayacı her çöp toplamanın sonunda güncelleştirilir. Bu nedenle, hakkında bilgi almak istediğiniz geçerli koşulları yansıtmayabilir.
 
@@ -282,7 +282,7 @@ Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için 
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Yetersiz bellek özel durumunun yönetilip yönetilmediğini belirlemek için
 
-1. SOS hata ayıklayıcı uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında, yazdırma özel durumu (**PE**) komutunu yazın:
+1. SOS hata ayıklayıcı uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında, yazdırma özel durumu ( **PE** ) komutunu yazın:
 
     **! PE**
 
@@ -354,7 +354,7 @@ Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için 
 
 2. **Performans** sekmesinde, taahhüt edilen değere bakın. (Windows 7 ' de **sistem grubundaki** **işlemeye (KB)** bakın.)
 
-    **Toplam** **sınıra**yakınsa fiziksel belleği azalmış olursunuz.
+    **Toplam** **sınıra** yakınsa fiziksel belleği azalmış olursunuz.
 
 <a name="ManagedHeapCommit"></a>
 
@@ -424,7 +424,7 @@ Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için 
 
   Yönetilen yığın büyükse, **dumpheap** işleminin tamamlanması biraz zaman alabilir.
 
-  Analize çıktının son satırlarından başlayabilirsiniz çünkü en çok alan kullanan nesneler burada listelenmektedir. Örnek:
+  Analize çıktının son satırlarından başlayabilirsiniz çünkü en çok alan kullanan nesneler burada listelenmektedir. Örneğin:
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo

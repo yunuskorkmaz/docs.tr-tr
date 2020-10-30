@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - String.CompareTo method
 - String.Compare method
-- string comparison [.NET Framework], culture-insensitive
-- strings [.NET Framework], comparing
+- string comparison [.NET], culture-insensitive
+- strings [.NET], comparing
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-ms.openlocfilehash: 91996bc721db55b24521be97e4d9accd53ef7924
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1d8dc3f1bf686550eb94d7fb3003d4c21741739e
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288621"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064151"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Kültüre Duyarsız Dize Karşılaştırmalarını Gerçekleştirme
 Varsayılan olarak, <xref:System.String.Compare%2A?displayProperty=nameWithType> Yöntem kültüre duyarlı ve büyük/küçük harfe duyarlı karşılaştırmalar gerçekleştirir. Bu yöntemde Ayrıca kullanılacak kültürü belirtmenize imkan tanıyan bir parametre sağlayan çeşitli aşırı yüklemeler `culture` ve `comparisonType` kullanılacak karşılaştırma kurallarını belirtmenizi sağlayan bir parametre bulunur. Varsayılan tekrar yükleme yerine bu yöntemleri çağırmak, belirli bir yöntem çağrısında kullanılan kurallarla ilgili tüm belirsizlikleri kaldırır ve belirli bir karşılaştırmanın kültüre duyarlı veya kültüre duyarsız olduğunu netleştirir.  
@@ -30,7 +30,7 @@ Varsayılan olarak, <xref:System.String.Compare%2A?displayProperty=nameWithType>
   
  Yöntemi tarafından desteklenen kültüre duyarsız dize karşılaştırmaları, <xref:System.String.Compare%2A?displayProperty=nameWithType> Dil (Sabit kültürün sıralama kurallarına göre) veya dil olmayan (dizedeki karakterlerin sıra değerine göre). Kültüre duyarsız dize karşılaştırmalarının çoğu dilsel değildir. Bu karşılaştırmalar için, <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> parametresi olarak veya numaralandırma değerini belirtin `comparisonType` . Örneğin, bir güvenlik kararı (bir kullanıcı adı ve parola karşılaştırması gibi) bir dize karşılaştırmasının sonucuna dayalıysa, sonucun belirli bir kültürün veya dilin kurallarından etkilenmemesi için, işlemin kültüre duyarsız olması ve dilsel olmaması gerekir.  
   
- Birden çok kültürden alınan dilsel olarak gerekli dizeleri tutarlı bir şekilde işlemek isterseniz, kültüre duyarsız dile dize karşılaştırması kullanın. Örneğin, uygulamanız bir liste kutusunda birden çok karakter kümesi kullanan sözcükler görüntülerse, geçerli kültüre bakılmaksızın, sözcükleri aynı sırada görüntülemek istersiniz. Kültüre duyarsız dilsel karşılaştırmalar için, .NET Framework İngilizce dil kurallarına dayalı sabit bir kültür tanımlar. Kültüre duyarsız bir dil karşılaştırması gerçekleştirmek için <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> parametresi olarak belirtin `comparisonType` .  
+ Birden çok kültürden alınan dilsel olarak gerekli dizeleri tutarlı bir şekilde işlemek isterseniz, kültüre duyarsız dile dize karşılaştırması kullanın. Örneğin, uygulamanız bir liste kutusunda birden çok karakter kümesi kullanan sözcükler görüntülerse, geçerli kültüre bakılmaksızın, sözcükleri aynı sırada görüntülemek istersiniz. Kültüre duyarsız dil karşılaştırmaları için, .NET, Ingilizce dil kurallarını temel alan bir sabit kültür tanımlar. Kültüre duyarsız bir dil karşılaştırması gerçekleştirmek için <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> parametresi olarak belirtin `comparisonType` .  
   
  Aşağıdaki örnek, iki kültüre duyarsız, dilsel olmayan dize karşılaştırması gerçekleştirir. Birincisi büyük/küçük harfe duyarlıdır, ancak ikinci değildir.  
   

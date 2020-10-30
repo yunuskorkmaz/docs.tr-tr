@@ -11,12 +11,12 @@ helpviewer_keywords:
 - generic collections [.NET]
 - generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-ms.openlocfilehash: 5767bac0bb1e3ae9e586e9a10d8452d421519447
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 956db9ace4ae00062accdd6e80c7911aaac7523f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287577"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064255"
 ---
 # <a name="generic-collections-in-net"></a>.NET’te genel koleksiyonlar
 
@@ -24,9 +24,9 @@ ms.locfileid: "84287577"
   
 ## <a name="systemcollectionsgeneric"></a>System.Collections.Generic
 
- Genel koleksiyon türlerinin birçoğu genel olmayan türlerin doğrudan analoglarından. <xref:System.Collections.Generic.Dictionary%602>, genel bir sürümüdür <xref:System.Collections.Hashtable> ; <xref:System.Collections.Generic.KeyValuePair%602> yerine numaralandırma için genel yapıyı kullanır <xref:System.Collections.DictionaryEntry> .  
+ Genel koleksiyon türlerinin birçoğu genel olmayan türlerin doğrudan analoglarından. <xref:System.Collections.Generic.Dictionary%602> , genel bir sürümüdür <xref:System.Collections.Hashtable> ; <xref:System.Collections.Generic.KeyValuePair%602> yerine numaralandırma için genel yapıyı kullanır <xref:System.Collections.DictionaryEntry> .  
   
- <xref:System.Collections.Generic.List%601>, öğesinin genel bir sürümüdür <xref:System.Collections.ArrayList> . Genel <xref:System.Collections.Generic.Queue%601> ve <xref:System.Collections.Generic.Stack%601> olmayan sürümlere karşılık gelen sınıflar vardır.  
+ <xref:System.Collections.Generic.List%601> , öğesinin genel bir sürümüdür <xref:System.Collections.ArrayList> . Genel <xref:System.Collections.Generic.Queue%601> ve <xref:System.Collections.Generic.Stack%601> olmayan sürümlere karşılık gelen sınıflar vardır.  
   
  Genel ve genel olmayan sürümleri vardır <xref:System.Collections.Generic.SortedList%602> . Her iki sürüm de bir sözlüğün ve listenin hybrilar. <xref:System.Collections.Generic.SortedDictionary%602>Genel sınıf saf bir sözlüktür ve genel olmayan bir karşılığı yoktur.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "84287577"
   
  <xref:System.ArraySegment%601>Genel yapı, herhangi bir türdeki tek boyutlu, sıfır tabanlı dizi içindeki bir öğe aralığını sınırlandırmak için bir yol sağlar. Genel tür parametresi, dizinin öğelerinin türüdür.  
   
- <xref:System.EventHandler%601>Genel temsilci, olaylarınız .NET Framework tarafından kullanılan olay işleme modelini takip eden olayları işlemek için bir temsilci türü bildirme gereksinimini ortadan kaldırır. Örneğin, `MyEventArgs` <xref:System.EventArgs> olayınıza ilişkin verileri tutmak için, öğesinden türetilmiş bir sınıf oluşturduğunuzu varsayalım. Olayı daha sonra aşağıdaki gibi bildirebilirsiniz:  
+ <xref:System.EventHandler%601>Genel temsilci, olaylarınız .NET tarafından kullanılan olay işleme modelini takip eden olayları işlemek için bir temsilci türü bildirme gereksinimini ortadan kaldırır. Örneğin, `MyEventArgs` <xref:System.EventArgs> olayınıza ilişkin verileri tutmak için, öğesinden türetilmiş bir sınıf oluşturduğunuzu varsayalım. Olayı daha sonra aşağıdaki gibi bildirebilirsiniz:  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]
@@ -57,4 +57,4 @@ ms.locfileid: "84287577"
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
 - [Genel Türler](index.md)
 - [Dizileri ve listeleri Işlemek için genel Temsilciler](delegates-for-manipulating-arrays-and-lists.md)
-- [Genel Arabirimler](interfaces.md)
+- [Genel arabirimler](interfaces.md)

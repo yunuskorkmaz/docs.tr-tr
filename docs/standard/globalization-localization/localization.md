@@ -1,27 +1,27 @@
 ---
-title: Yerelleştirme
+title: Localization (Yerelleştirme)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - culture, localization
-- application development [.NET Framework], localization
-- globalization [.NET Framework], localization
+- application development [.NET], localization
+- globalization [.NET], localization
 - code blocks
-- international applications [.NET Framework], localization
+- international applications [.NET], localization
 - global applications, localization
 - world-ready applications, localization
 - user interface blocks
-- localization [.NET Framework], about localization
+- localization [.NET], about localization
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
-ms.openlocfilehash: 68e877088c5c3d17b368561b563b4cb17d004e75
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e92184f48b2d2255138da5b2a6e7e2977a95e2e3
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278031"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93062964"
 ---
-# <a name="localization"></a>Yerelleştirme
+# <a name="localization"></a>Localization (Yerelleştirme)
 
 Yerelleştirme, uygulamanın destekleyeceği her kültür için bir uygulamanın kaynaklarını yerelleştirilmiş sürümlere çevirme işlemidir. Genelleştirilmiş uygulamasının yerelleştirme için hazırlanmaya devam ettiğini doğrulamak için yerelleştirme adımına yalnızca [Yerelleştirilebilirlik gözden geçirmesi](localizability-review.md) adımını tamamladıktan sonra ilerlemeniz gerekir.
 
@@ -29,7 +29,7 @@ Yerelleştirme için hazırlanma bir uygulama iki kavramsal blok halinde ayrılm
 
 Uygulamanızın yerelleştirilmiş her sürümü için, hedef kültür için uygun dile çevrilmiş yerelleştirilmiş kullanıcı arabirimi bloğunu içeren yeni bir uydu derlemesi ekleyin. Tüm kültürlerin kod bloğu aynı kalmalıdır. Kod bloğu ile Kullanıcı arabirimi bloğunun yerelleştirilmiş bir sürümünün birleşimi, uygulamanızın yerelleştirilmiş bir sürümünü oluşturur.
 
-Windows yazılım geliştirme seti (SDK), hedef kültürler için Windows Forms hızlı bir şekilde yerelleştirebilmenizi sağlayan Windows Forms Kaynak Düzenleyicisi 'Ni (Winres. exe) sağlar. Bu aracı kullanma hakkında daha fazla bilgi için bkz. [Winres. exe (Windows Forms Kaynak Düzenleyicisi)](../../framework/tools/winres-exe-windows-forms-resource-editor.md).
+Windows yazılım geliştirme seti (SDK), hedef kültürler için Windows Forms hızlı bir şekilde yerelleştirebilmenizi sağlayan Windows Forms Kaynak Düzenleyicisi (Winres.exe) sağlar. Bu aracı kullanma hakkında daha fazla bilgi için bkz. [Winres.exe (Windows Forms Kaynak Düzenleyicisi)](../../framework/tools/winres-exe-windows-forms-resource-editor.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

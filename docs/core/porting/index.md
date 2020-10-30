@@ -3,12 +3,12 @@ title: .NET Framework’ten .NET Core’a taşıma
 description: Bir .NET Framework projesi .NET Core 'a taşıma konusunda yararlı bulabileceğiniz yardım alabileceğiniz işlem ve bulma araçlarını anlayın.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c206e56e095d1ca068fa2aa6f60e891895f7f999
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 00d6bb513a6bd8ee511b69c07272f605c39e5619
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888580"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063247"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework .NET Core 'a taşıma ile genel bakış
 
@@ -65,7 +65,7 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
 1. Derlemelerinizi çözümlemek ve .NET Core 'a taşınabilir olup olmadığını görmek için [.net taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md) 'ni kullanın.
 
-   .NET taşınabilirlik Çözümleyicisi Aracı, derlenmiş derlemelerinizi analiz eder ve bir rapor oluşturur. Bu rapor, üst düzey bir taşınabilirlik özetini ve kullanmakta olduğunuz her API 'nin, NET Core 'da kullanılamayan bir dökümünü gösterir. Aracı kullanırken, yalnızca dönüştürdüğünüz tek projeyi, gerekli olabilecek API değişikliklerine odaklanmak üzere gönder. API 'lerin çoğunun .NET Core 'da eşdeğer kullanılabilirliği vardır ve bu, ' ye geçmek isteyeceksiniz.
+   .NET taşınabilirlik Çözümleyicisi Aracı, derlenmiş derlemelerinizi analiz eder ve bir rapor oluşturur. Bu rapor, .NET Core 'da kullanılamayan bir üst düzey taşınabilirlik özetini ve kullanmakta olduğunuz her API 'nin dökümünü gösterir. Aracı kullanırken, yalnızca dönüştürdüğünüz tek projeyi, gerekli olabilecek API değişikliklerine odaklanmak üzere gönder. API 'lerin çoğunun .NET Core 'da eşdeğer kullanılabilirliği vardır ve bu, ' ye geçmek isteyeceksiniz.
 
    Çözümleyici tarafından oluşturulan raporları okurken önemli bilgiler, kullanılmakta olan gerçek API 'lardır ve hedef platform için desteğin yüzdesi değildir. Birçok API .NET Standard/çekirdek içinde eşdeğer seçeneklere sahiptir ve bu nedenle kitaplığınızın veya uygulamanızın API için gereken senaryoları anlamak, taşınabilirliğin belirlenmesini sağlamaya yardımcı olur.
 

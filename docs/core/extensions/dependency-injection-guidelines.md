@@ -3,14 +3,14 @@ title: Bağımlılık ekleme yönergeleri
 description: .NET uygulama geliştirmesi için çeşitli bağımlılık ekleme kılavuzlarını ve en iyi uygulamaları öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/23/2020
+ms.date: 10/29/2020
 ms.topic: guide
-ms.openlocfilehash: a8d52642b9217c7340db69494624d8ab85ea6c92
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 092fdc70bd5d6bae82c4c1da96db4d5ac08df452
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247911"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063169"
 ---
 # <a name="dependency-injection-guidelines"></a>Bağımlılık ekleme yönergeleri
 
@@ -34,11 +34,17 @@ Aşağıdaki örnekte, hizmetler hizmet kapsayıcısı tarafından oluşturulur 
 
 :::code language="csharp" source="snippets/configuration/console-di-disposable/TransientDisposable.cs":::
 
+Önceki atılabilir, geçici bir yaşam süresine sahip olmak için tasarlanmıştır.
+
 :::code language="csharp" source="snippets/configuration/console-di-disposable/ScopedDisposable.cs":::
+
+Önceki atılabilir, kapsamlı bir yaşam süresine sahip olmak için tasarlanmıştır.
 
 :::code language="csharp" source="snippets/configuration/console-di-disposable/SingletonDisposable.cs":::
 
-:::code language="csharp" source="snippets/configuration/console-di-disposable/Program.cs" range="1-21,41-60":::
+Önceki atılabilir tek bir yaşam süresine sahip olmak için tasarlanmıştır.
+
+:::code language="csharp" source="snippets/configuration/console-di-disposable/Program.cs" range="1-21,41-60" highlight="":::
 
 Hata ayıklama konsolu, çalıştırıldıktan sonra aşağıdaki örnek çıktıyı gösterir:
 
@@ -116,7 +122,7 @@ Uygulamanın <xref:System.IDisposable> birden çok hizmet arasında paylaşılan
 - Bir <xref:System.IDisposable> bağımlılık alma yoluyla, alıcının kendisini uygulaması gerekmez <xref:System.IDisposable> . <xref:System.IDisposable>Bağımlılığın alıcısı <xref:System.IDisposable.Dispose%2A> Bu bağımlılıkta çağrımamalıdır.
 - Hizmetlerin ömrünü denetlemek için kapsamları kullanın. Kapsamlar hiyerarşik değildir ve kapsamlar arasında özel bir bağlantı yoktur.
 
-Kaynak temizleme hakkında daha fazla bilgi için bkz. [Dispose yöntemi uygulama](../../standard/garbage-collection/implementing-dispose.md)
+Kaynak temizleme hakkında daha fazla bilgi için bkz. [ `Dispose` yöntemi uygulama](../../standard/garbage-collection/implementing-dispose.md)veya [ `DisposeAsync` Yöntem uygulama](../../standard/garbage-collection/implementing-disposeasync.md). Ayrıca, kaynak Temizleme ile bağlantılı olarak [kapsayıcı senaryosu tarafından yakalanan atılabilir geçici Hizmetleri](#disposable-transient-services-captured-by-container) de göz önünde bulundurun.
 
 ## <a name="default-service-container-replacement"></a>Varsayılan hizmet kapsayıcısı değiştirme
 
@@ -150,17 +156,71 @@ Tek bir hizmetin fabrika yöntemi (örneğin, AddSingleton için ikinci bağıms
 - `async/await` ve `Task` tabanlı hizmet çözümlemesi desteklenmez. C# zaman uyumsuz oluşturucuları desteklemediğinden, hizmeti zaman uyumlu olarak çözümledikten sonra zaman uyumsuz yöntemler kullanın.
 - Veri ve yapılandırmayı doğrudan hizmet kapsayıcısında saklamaktan kaçının. Örneğin, bir kullanıcının alışveriş sepeti genellikle hizmet kapsayıcısına eklenmemelidir. Yapılandırma, Seçenekler modelini kullanmalıdır. Benzer şekilde, yalnızca başka bir nesneye erişime izin vermek için mevcut olan "veri sahibi" nesnelerinden kaçının. DI aracılığıyla gerçek öğe istemek daha iyidir.
 - Hizmetlere statik erişimi önleyin. Örneğin, başka bir yerde kullanmak üzere [IApplicationBuilder. ApplicationServices](xref:Microsoft.AspNetCore.Builder.IApplicationBuilder.ApplicationServices) statik bir alan veya özellik olarak yakalanmaktan kaçının.
-- Dı fabrikalarını hızlı ve zaman uyumlu tutun.
-- *Hizmet bulucu deseninin*kullanmaktan kaçının. Örneğin, <xref:System.IServiceProvider.GetService%2A> yerine bir hizmet örneği elde etmek için Invoke kullanmayın.
+- [Dı fabrikalarını](#async-di-factories-can-cause-deadlocks) hızlı ve zaman uyumlu tutun.
+- [*Hizmet bulucu deseninin*](#scoped-service-as-singleton)kullanmaktan kaçının. Örneğin, <xref:System.IServiceProvider.GetService%2A> yerine bir hizmet örneği elde etmek için Invoke kullanmayın.
 - Önlemek için başka bir hizmet bulucu çeşitlemesi, çalışma zamanında bağımlılıkları çözümleyen bir ekleme. Bu uygulamalardan her ikisi de [Denetim stratejilerini geçersiz kılar](/dotnet/standard/modern-web-apps-azure-architecture/architectural-principles#dependency-inversion) .
 - İçindeki çağrılardan <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider%2A> kaçının `ConfigureServices` . Çağırma `BuildServiceProvider` genellikle geliştirici içindeki bir hizmeti çözmek istediğinde oluşur `ConfigureServices` .
-- Atılabilir geçici hizmetler, aktiften çıkarma için kapsayıcı tarafından yakalanır. Bu, üst düzey kapsayıcıdan çözümlenirse bir bellek sızıntısını açabilir.
+- [Atılabilir geçici hizmetler](#disposable-transient-services-captured-by-container) , aktiften çıkarma için kapsayıcı tarafından yakalanır. Bu, üst düzey kapsayıcıdan çözümlenirse bir bellek sızıntısını açabilir.
 - Uygulamanın kapsamlı hizmetleri yakalayan tekton içermediğinden emin olmak için kapsam doğrulamayı etkinleştirin. Daha fazla bilgi için bkz. [kapsam doğrulaması](dependency-injection.md#scope-validation).
 
 Tüm öneri kümeleri gibi, bir öneriyi yok saymayı yok saymış durumlarla karşılaşabilirsiniz. Özel durumlar nadiren, genellikle Framework içindeki özel durumlardır.
 
 Dı, statik/genel nesne erişim desenlerinin bir *alternatifidir* . Statik nesne erişimi ile karıştırırsanız, dı 'nin avantajlarını fark edemeyebilirsiniz.
 
+## <a name="example-anti-patterns"></a>Örnek Desenler
+
+Bu makaledeki yönergelere ek olarak, *kaçınması **gereken*** birkaç kenar düzeyi vardır. Bu koruma alışkanlarından bazıları, çalışma zamanlarının kendisini geliştirmekten dersleri.
+
+> [!WARNING]
+> Bunlar örnek desenler, *kodu kopyalamayın,* bu *desenleri kullanmayın ve* tüm maliyetlerde bu modellerden kaçının.
+
+### <a name="disposable-transient-services-captured-by-container"></a>Atılabilir kapsayıcı tarafından yakalanan geçici hizmetler
+
+Uygulayan *geçici* Hizmetleri kaydettiğinizde <xref:System.IDisposable> , varsayılan olarak dı kapsayıcısı bu başvurulara sahip olur ve uygulama durduruluncaya kadar bu referanslara göre değil <xref:System.IDisposable.Dispose> . Bu, düzey kapsayıcısından çözümlenirse bir bellek sızıntısını açabilir.
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="18-30":::
+
+Önceki anti-düzeninde, 1.000 `ExampleDisposable` nesnelerinin örneği oluşturulur ve kökü atanır. Bunlar, `serviceProvider` örnek atılana kadar uygulanmaz.
+
+Bellek sızıntılarını hata ayıklama hakkında daha fazla bilgi için bkz. [.net 'te Bellek sızıntısını hata ayıklama](../diagnostics/debug-memory-leak.md).
+
+### <a name="async-di-factories-can-cause-deadlocks"></a>Zaman uyumsuz dı fabrikası kilitlenmeleri neden olabilir
+
+"Dı fabrikaları" terimi çağrılırken var olan aşırı yükleme yöntemlerine başvurur `Add{LIFETIME}` . Hizmetin kaydedildiği konumu kabul eden aşırı yüklemeler vardır `Func<IServiceProvider, T>` `T` ve parametresi adlandırılır `implementationFactory` . `implementationFactory`Bir lambda ifadesi, yerel işlev veya yöntem olarak belirtilebilir. Fabrika zaman uyumsuzdur ve kullanıyorsanız <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> , bu da kilitlenmeye neden olur.
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="32-45" highlight="4-8":::
+
+Önceki kodda, `implementationFactory` gövde döndürülen bir yöntemde çağırdığı bir lambda ifadesi verilir <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> `Task<Bar>` . Bu, ***kilitlenmeye neden olur*** . `GetBarAsync`Yöntemi, ile zaman uyumsuz bir iş işlemini taklit eder <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> ve ardından çağırır <xref:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService%60%601(System.IServiceProvider)> .
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="47-53":::
+
+Zaman uyumsuz yönergeler hakkında daha fazla bilgi için bkz. [zaman uyumsuz programlama: önemli bilgi ve öneriler](../../csharp/async.md#important-info-and-advice). Hata ayıklama kilitlenmeleri hakkında daha fazla bilgi için bkz. [.net 'te kilitlenmeye hata ayıklama](../diagnostics/debug-deadlock.md).
+
+Bu bir anti-model çalıştırırken ve kilitlenme gerçekleştiğinde, Visual Studio 'nun paralel yığınları penceresinde bekleyen iki iş parçacığını görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [Paralel Yığınlar penceresinde iş parçacıklarını ve görevleri görüntüleme](/visualstudio/debugger/using-the-parallel-stacks-window).
+
+### <a name="captive-dependency"></a>Captive bağımlılığı
+
+["Captive Dependency"](https://blog.ploeh.dk/2014/06/02/captive-dependency) terimi, [Seeman 'ı işaret](https://blog.ploeh.dk/about)ederek ortaklaşa bulunur ve daha uzun süreli bir hizmetin daha kısa süreli bir hizmet başlığı taşıdığı hizmet yaşam sürelerinin yanlış yapılandırılması anlamına gelir.
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="55-65":::
+
+Yukarıdaki kodda, `Foo` tek bir olarak kaydedilir ve `Bar` yüzeyde bir kapsam geçerlidir. Ancak uygulamasını göz önünde bulundurun `Foo` .
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Foo.cs" highlight="5":::
+
+`Foo`Nesnesi, bir nesnesi gerektirir ve bu bir tekil olduğundan `Bar` `Foo` ve `Bar` kapsamı belirlenmiş olduğundan, bu bir yanlış yapılandırma. Olduğu gibi, `Foo` yalnızca bir kez örneklenebilir ve `Bar` kendi yaşam süresi boyunca, amaçlanan kapsamlı yaşam süresinden daha uzun sürer `Bar` . ' A geçirerek kapsamları doğrulamayı düşünmelisiniz `validateScopes: true` <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean)> . Kapsamları doğruladığınızda, <xref:System.InvalidOperationException> "tek tek ' foo ' öğesinden" kapsamlı hizmet ' çubuğu ' kullanılmasına benzer bir ileti içeren bir ileti alırsınız.
+
+Daha fazla bilgi için bkz. [kapsam doğrulaması](dependency-injection.md#scope-validation).
+
+### <a name="scoped-service-as-singleton"></a>Tek tek olarak kapsamlı hizmet
+
+Kapsamı belirlenmiş hizmetler kullanılırken, kapsam veya mevcut bir kapsamda bir kapsam oluşturuyorsanız, hizmet tek olur.
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="68-82" highlight="13-14":::
+
+Yukarıdaki kodda, `Bar` doğru olan bir içinde alınır <xref:Microsoft.Extensions.DependencyInjection.IServiceScope> . Kenar yumuşatma, `Bar` kapsam dışından alındır ve değişken, `avoid` hangi örnek almanın yanlış olduğunu göstermek için adlandırılır.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET 'e bağımlılık ekleme](dependency-injection.md)
+- [Öğretici: .NET 'te bağımlılık ekleme kullanma](dependency-injection-usage.md)
