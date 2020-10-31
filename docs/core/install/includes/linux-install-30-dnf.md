@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f9ea0ee6402187365cec5cdced1617ee2ae66bed
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 68b55eb40d86ac3c92853acbb17ad622704b1336
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84603071"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93135750"
 ---
 
 ### <a name="install-the-sdk"></a>SDK Yükleme
@@ -23,7 +23,7 @@ sudo dnf install dotnet-sdk-3.0
 sudo dnf install aspnetcore-runtime-3.0
 ```
 
-ASP.NET Core çalışma zamanına alternatif olarak, ASP.NET Core desteği içermeyen .NET Core çalışma zamanı 'nı yükleyebilirsiniz: `aspnetcore-runtime-3.0` Yukarıdaki komutu ile değiştirin `dotnet-runtime-3.0` .
+ASP.NET Core çalışma zamanına alternatif olarak, ASP.NET Core desteği içermeyen .NET Core çalışma zamanını yükleyebilirsiniz: `aspnetcore-runtime-3.0` ile önceki komutta değiştirin `dotnet-runtime-3.0` .
 
 ```bash
 sudo dnf install dotnet-runtime-3.0
