@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b6f2af7af77398d5e902aae995590b5dde4cf76a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 56f5d27eb9be2f8eb3e335c5ec161dba1bcfdb1e
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602910"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93136088"
 ---
 
 ### <a name="install-the-sdk"></a>SDK Yükleme
@@ -19,7 +19,7 @@ sudo apt-get update; \
 ```
 
 > [!IMPORTANT]
-> **DotNet-SDK-3,1**' i bulamıyor gibi bir hata iletisi alırsanız, bkz. [apt sorun giderme](#apt-troubleshooting) bölümü.
+> **DotNet-SDK-3,1** ' i bulamıyor gibi bir hata iletisi alırsanız, bkz. [apt sorun giderme](#apt-troubleshooting) bölümü.
 
 ### <a name="install-the-runtime"></a>Çalışma zamanını yükler
 
@@ -33,9 +33,9 @@ sudo apt-get update; \
 ```
 
 > [!IMPORTANT]
-> Bir hata iletisi alırsanız, **aspnetcore-Runtime-3,1 paketini bulamazsanız**, bkz. [apt sorun giderme](#apt-troubleshooting) bölümü.
+> Bir hata iletisi alırsanız, **aspnetcore-Runtime-3,1 paketini bulamazsanız** , bkz. [apt sorun giderme](#apt-troubleshooting) bölümü.
 
-ASP.NET Core çalışma zamanına alternatif olarak, ASP.NET Core desteği içermeyen .NET Core çalışma zamanı 'nı yükleyebilirsiniz: `aspnetcore-runtime-3.1` Yukarıdaki komutu ile değiştirin `dotnet-runtime-3.1` .
+ASP.NET Core çalışma zamanına alternatif olarak, ASP.NET Core desteği içermeyen .NET Core çalışma zamanını yükleyebilirsiniz: `aspnetcore-runtime-3.1` ile önceki komutta değiştirin `dotnet-runtime-3.1` .
 
 ```bash
 sudo apt-get install -y dotnet-runtime-3.1
