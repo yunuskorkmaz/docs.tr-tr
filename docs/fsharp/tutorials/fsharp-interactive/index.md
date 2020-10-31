@@ -4,12 +4,12 @@ description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # b
 ms.date: 08/20/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: ae8d68140ddec8e18ee23e9a43b548907e1ab5c4
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: b1020d8ab8f2282c792fb5d00656b6d43c2c6610
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720328"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064125"
 ---
 # <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
 
@@ -19,9 +19,9 @@ Konsolundan F# Etkileşimli çalıştırmak için, öğesini çalıştırın `do
 
 Kullanılabilen komut satırı seçenekleri hakkında daha fazla bilgi için bkz. [F# etkileşimli seçenekleri](../../language-reference/fsharp-interactive-options.md).
 
-Visual Studio aracılığıyla F# Etkileşimli çalıştırmak için **F# Etkileşimli**etiketli uygun araç çubuğu düğmesine tıklayabilir veya **Ctrl + Alt + F**tuşlarına basın. Bunu yapmak, F# Etkileşimli oturum çalıştıran bir araç penceresi olan etkileşimli pencereyi açar. Ayrıca etkileşimli pencerede çalıştırmak istediğiniz kod ve **Alt + Enter**tuş birleşimine basabilirsiniz. F# Etkileşimli, **F# Etkileşimli**etiketli bir araç penceresinde başlatılır. Bu tuş birleşimini kullandığınızda, düzenleyici penceresinin odağa sahip olduğundan emin olun.
+Visual Studio aracılığıyla F# Etkileşimli çalıştırmak için **F# Etkileşimli** etiketli uygun araç çubuğu düğmesine tıklayabilir veya **Ctrl + Alt + F** tuşlarına basın. Bunu yapmak, F# Etkileşimli oturum çalıştıran bir araç penceresi olan etkileşimli pencereyi açar. Ayrıca etkileşimli pencerede çalıştırmak istediğiniz kod ve **Alt + Enter** tuş birleşimine basabilirsiniz. F# Etkileşimli, **F# Etkileşimli** etiketli bir araç penceresinde başlatılır. Bu tuş birleşimini kullandığınızda, düzenleyici penceresinin odağa sahip olduğundan emin olun.
 
-Konsolunu veya Visual Studio 'Yu kullanıp kullanmayacağınızı bir komut istemi belirir ve yorumlayıcı, girişinizi bekler. Kodu, kod dosyasında olduğu gibi girebilirsiniz. Kodu derlemek ve yürütmek için, bir satırı veya birkaç giriş satırını sonlandırmak üzere iki noktalı virgül (**;;**) girin.
+Konsolunu veya Visual Studio 'Yu kullanıp kullanmayacağınızı bir komut istemi belirir ve yorumlayıcı, girişinizi bekler. Kodu, kod dosyasında olduğu gibi girebilirsiniz. Kodu derlemek ve yürütmek için, bir satırı veya birkaç giriş satırını sonlandırmak üzere iki noktalı virgül ( **;;** ) girin.
 
 F# Etkileşimli kodu derlemeye çalışır ve başarılı olursa, kodu yürütür ve derlenen türlerin ve değerlerin imzasını yazdırır. Hata oluşursa yorumlayıcı hata iletilerini yazdırır.
 
@@ -29,13 +29,13 @@ Aynı oturumda girilen kod, daha önce girilmiş olan her türlü yapıya erişe
 
 Visual Studio 'da çalıştırıldığında F# Etkileşimli projenizden bağımsız olarak çalışır. bu nedenle, örneğin, işlev için kodu etkileşimli pencereye kopyalamadıkça, projenizde tanımlanan yapıları F# Etkileşimli kullanamazsınız.
 
-Bazı kitaplıklara başvuruda bulunan bir proje açıksa, bu F# Etkileşimli **Çözüm Gezgini**aracılığıyla bunlara başvurabilirsiniz. F# Etkileşimli bir kitaplığa başvurmak için, **Başvurular** düğümünü genişletin, kitaplığın kısayol menüsünü açın ve **F# Etkileşimli gönder**' i seçin.
+Bazı kitaplıklara başvuruda bulunan bir proje açıksa, bu F# Etkileşimli **Çözüm Gezgini** aracılığıyla bunlara başvurabilirsiniz. F# Etkileşimli bir kitaplığa başvurmak için, **Başvurular** düğümünü genişletin, kitaplığın kısayol menüsünü açın ve **F# Etkileşimli gönder** ' i seçin.
 
-Ayarları ayarlayarak F# Etkileşimli komut satırı bağımsız değişkenlerini (Seçenekler) kontrol edebilirsiniz. **Araçlar** menüsünde **Seçenekler...**' i seçin ve ardından **F # araçları**' nı genişletin. Değiştirebileceğiniz iki ayar F# Etkileşimli seçenekleridir ve **64 bit F# Etkileşimli** ayarıdır ve bu, yalnızca 64 bit makinede F# Etkileşimli çalıştırıyorsanız geçerlidir. Bu ayar, 32 bit veya 64 bit işlem olarak çalıştırılıp çalıştırılmadığını belirleyen fsi.exe veya fsianycpu.exe adanmış 64 bitlik sürümünü çalıştırmak isteyip istemediğinizi belirler.
+Ayarları ayarlayarak F# Etkileşimli komut satırı bağımsız değişkenlerini (Seçenekler) kontrol edebilirsiniz. **Araçlar** menüsünde **Seçenekler...** ' i seçin ve ardından **F # araçları** ' nı genişletin. Değiştirebileceğiniz iki ayar F# Etkileşimli seçenekleridir ve **64 bit F# Etkileşimli** ayarıdır ve bu, yalnızca 64 bit makinede F# Etkileşimli çalıştırıyorsanız geçerlidir. Bu ayar, 32 bit veya 64 bit işlem olarak çalıştırılıp çalıştırılmadığını belirleyen fsi.exe veya fsianycpu.exe adanmış 64 bitlik sürümünü çalıştırmak isteyip istemediğinizi belirler.
 
 ## <a name="scripting-with-f"></a>F ile betik oluşturma\#
 
-Betikler **. FSX** veya **. fsscript**dosya uzantısını kullanır. Kaynak kodu derlemek ve daha sonra derlenen derlemeyi çalıştırmak yerine **DotNet fsi** 'yi çalıştırabilir ve f # Kaynak Kodu betiğinin dosya adını belirtebilir ve f # Interactive kodu okur ve gerçek zamanlı olarak yürütür.
+Betikler **. FSX** veya **. fsscript** dosya uzantısını kullanır. Kaynak kodu derlemek ve daha sonra derlenen derlemeyi çalıştırmak yerine **DotNet fsi** 'yi çalıştırabilir ve f # Kaynak Kodu betiğinin dosya adını belirtebilir ve f # Interactive kodu okur ve gerçek zamanlı olarak yürütür.
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Etkileşimli, komut dosyası ve derlenmiş ortamlar arasındaki farklar
 
@@ -43,7 +43,7 @@ Etkileşimli olarak çalıştırdığınız veya bir betiği çalıştıran F# E
 
 Derleyici yürütürken kullanılamayan F# Etkileşimli betikler çalıştırırken bazı yönergeler kullanılabilir... Aşağıdaki tabloda F# Etkileşimli kullanırken kullanılabilir olan yönergeler özetlenmektedir.
 
-|Deki|Description|
+|Deki|Açıklama|
 |---------|-----------|
 |**#help**|Kullanılabilir yönergeler hakkındaki bilgileri görüntüler.|
 |**#I**|Bir derleme arama yolunu tırnak işaretleri halinde belirtir.|
@@ -54,9 +54,9 @@ Derleyici yürütürken kullanılamayan F# Etkileşimli betikler çalıştırır
 
 F# Etkileşimli dosya veya yolları belirttiğinizde, bir dize sabit değeri beklenmektedir. Bu nedenle, dosyalar ve yollar tırnak işaretleri içinde olmalı ve normal kaçış karakterleri de geçerlidir. Ayrıca, bir yolu içeren dizeyi tam bir dize olarak yorumlamasını F# Etkileşimli neden olması için @ karakterini kullanabilirsiniz. Bu, F# Etkileşimli kaçış karakterlerini yoksaymasına neden olur.
 
-Derlenmiş ve etkileşimli mod arasındaki farklardan biri, komut satırı bağımsız değişkenlerine erişme yöntemidir. Derlenmiş modda **System. Environment. Getcommandbir GS**kullanın. Betikler ' de, **fsi. Commandbir g**kullanın.
+Derlenmiş ve etkileşimli mod arasındaki farklardan biri, komut satırı bağımsız değişkenlerine erişme yöntemidir. Derlenmiş modda **System. Environment. Getcommandbir GS** kullanın. Betikler ' de, **fsi. Commandbir g** kullanın.
 
-Aşağıdaki kod, bir betikteki komut satırı bağımsız değişkenlerini okuyan bir işlevin nasıl oluşturulduğunu ve ayrıca bir betikten başka bir derlemeye nasıl başvurulacağını gösterir. İlk kod dosyası **MyAssembly. FS**, başvurulmakta olan derlemenin kodudur. Bu dosyayı komut satırı ile derleyin: **FSC-a MyAssembly. FS** ve sonra ikinci dosyayı komut satırı ile komut dosyası olarak yürütün: **fsi--exec FILE1. FSX** test
+Aşağıdaki kod, bir betikteki komut satırı bağımsız değişkenlerini okuyan bir işlevin nasıl oluşturulduğunu ve ayrıca bir betikten başka bir derlemeye nasıl başvurulacağını gösterir. İlk kod dosyası **MyAssembly. FS** , başvurulmakta olan derlemenin kodudur. Bu dosyayı komut satırı ile derleyin: **FSC-a MyAssembly. FS** ve sonra ikinci dosyayı komut satırı ile komut dosyası olarak yürütün: **fsi--exec FILE1. FSX** test
 
 ```fsharp
 // MyAssembly.fs
@@ -92,7 +92,7 @@ test
 `#r`Aşağıdaki sözdizimi aracılığıyla bir NuGet paketine başvurmak için F# Etkileşimli içindeki BIR DLL 'ye başvurmak üzere sözdizimi de kullanılabilir:
 
 ```fsharp
-#r "nuget: <package name>
+#r "nuget: <package name>"
 ```
 
 Örneğin, pakete başvurmak için `FSharp.Data` aşağıdaki `#r` başvuruyu kullanın:
