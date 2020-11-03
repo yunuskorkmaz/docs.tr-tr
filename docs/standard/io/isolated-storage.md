@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4289b809d9a401de92c74063a42216f3051543f6
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3699edda6cce24adb8e932d6e8b8a0a5bb977142
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188568"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282032"
 ---
 # <a name="isolated-storage"></a>Yalıtılmış depolama
 
@@ -37,7 +37,7 @@ Masaüstü uygulamaları için yalıtılmış depolama, kodu kaydedilen verilerl
 
 ## <a name="data-compartments-and-stores"></a>Veri Bölmeleri ve Depoları
 
-Bir uygulama bir dosya içinde veri depoladığında, depolama konumunun başka bir uygulama tarafından öğrenilme ve bu nedenle bozulma olasılığını en aza indirmek için dosya adı ve depolama konumu dikkatle seçilmelidir. Bu sorunları yönetecek standart bir sistem olmadığında, depolama çakışmalarını en aza indiren geçici teknikler karmaşık olabilir ve sonuçları güvenilir olmayabilir.
+Bir uygulama verileri bir dosyada depoladığında, depolama konumunun başka bir uygulama tarafından bilinme olasılığını en aza indirmek için dosya adı ve depolama konumunun dikkatle seçilmesi gerekir ve bu nedenle, bozulmalara karşı savunmasız olur. Bu sorunları yönetmek için standart bir sistem olmadan, depolama çakışmalarını en aza indirecek improvising teknikler karmaşık olabilir ve sonuçlar güvenilir bir şekilde yapılabilir.
 
 Yalıtılmış depolama ile veri her zaman kullanıcıya ve derlemeye göre yalıtılır. Derlemenin başlangıç noktası veya tanımlayıcı adı gibi kimlik bilgileri derlemenin kimliğini belirler. Veri ayrıca benzer kimlik bilgileri kullanarak uygulama etki alanına göre de yalıtılabilir.
 
@@ -97,7 +97,7 @@ __Bu bölüm aşağıdaki çerçeveler için geçerlidir:__
 
 .NET Framework ve .NET Core, bir Kullanıcı, uygulama veya bileşen için verileri kalıcı hale getirme mekanizması olarak yalıtılmış depolamayı sunmaktadır. Bu, öncelikli olarak kullanımdan kaldırılan kod erişimi güvenlik senaryolarında tasarlanan eski bir bileşendir.
 
-Çeşitli yalıtılmış depolama API 'Leri ve araçları, güven sınırları genelinde verileri okumak için kullanılabilir. Örneğin, makine genelindeki bir kapsamdaki verileri okumak, makinedeki diğer, muhtemelen daha az güvenilir Kullanıcı hesaplarından veri toplayabilir. Makine genelinde yalıtılmış depolama kapsamlarından okunan bileşenler veya uygulamalar, bu verileri okumayla sonuçlarının farkında olmalıdır.
+Çeşitli yalıtılmış depolama API 'Leri ve araçları, güven sınırları genelinde verileri okumak için kullanılabilir. Örneğin, makine genelindeki bir kapsamdaki verileri okumak, makinedeki diğer, muhtemelen daha az güvenilir Kullanıcı hesaplarından veri toplayabilir. Makine genelinde yalıtılmış depolama kapsamlarından okuyan bileşenler veya uygulamalar, bu verileri okumayla ilgili sonuçları göz önünde bulundurulmalıdır.
 
 ### <a name="security-sensitive-apis-that-can-read-from-the-machine-wide-scope"></a>Makine genelindeki kapsamdan okuyalebilecek güvenliğe duyarlı API 'Ler
 
@@ -138,20 +138,21 @@ Daha önce belirtildiği gibi, bu API 'lerden gelen güvenlik etkisi, bir güven
 
 Mallory, emre 'ye saldırmak isterse, makineye özel depolama konumuna veri yazabilir ve ardından Bob 'u makine genelindeki depodan okumayı dener. Bob, bu mağazadan okuyan bir uygulama çalıştırdığında, bu uygulama burada bulunan ve emre 'nin Kullanıcı hesabı bağlamında bulunan veriler üzerinde çalışır. Bu belgenin geri kalanı çeşitli saldırı vektörlerini ve uygulamaların bu saldırılara karşı riskini en aza indirmek için neler yapabileceğini yapabilecekleri adımları sağlar.
 
-__Note:__ Bu tür bir saldırının gerçekleşmesi için Mallory şunları gerektirir:
-
-* Makinedeki bir kullanıcı hesabı.
-* Dosya sistemindeki bilinen bir konuma bir dosyayı yerleştirme özelliği.
-* Emre 'nin bir noktada bu verileri okumaya çalışan bir uygulama çalıştırması hakkında bilgi.
-
-Bunlar, ev bilgisayarları veya tek çalışan kurumsal iş istasyonları gibi standart tek kullanıcılı masaüstü ortamları için uygulanan tehdit vektörleri değildir.
+> [!NOTE]
+> Bu tür bir saldırının gerçekleşmesi için Mallory şunları gerektirir:
+>
+> * Makinedeki bir kullanıcı hesabı.
+> * Dosya sistemindeki bilinen bir konuma bir dosyayı yerleştirme özelliği.
+> * Emre 'nin bir noktada, bu verileri okumaya çalışan bir uygulama çalıştırdığı bilgi.
+>
+> Bunlar, ev bilgisayarları veya tek çalışan kurumsal iş istasyonları gibi standart tek kullanıcılı masaüstü ortamları için uygulanan tehdit vektörleri değildir.
 
 #### <a name="elevation-of-privilege"></a>Ayrıcalık yükseltme
 
 Can 'ın uygulaması malın dosyasını okuduğunda __ayrıcalık yükseltme__ saldırısı oluşur ve bu yükün içeriğine göre otomatik olarak bir işlem gerçekleştirmeye çalışır. Bir başlangıç komut dosyasının içeriğini makineye özel depodan okuyan ve bu içeriği ' ye ileten bir uygulamayı düşünün `Process.Start` . Mallory, Bob 'un uygulamayı başlattığında makine genelindeki depo içine kötü amaçlı bir betik yerleştirebilir:
 
 * Uygulaması _, Bob 'un Kullanıcı profili bağlamı altında_ Mallory 'nin kötü amaçlı betiğini ayrıştırır ve başlatır.
-* Mallory, yerel makinedeki Bob 'un hesabına erişim sağlar.
+* Mallory, Bob 'un yerel makinedeki hesabına erişimini sağlar.
 
 #### <a name="denial-of-service"></a>Hizmet reddi
 
@@ -176,7 +177,7 @@ __Önemli:__ Ortamınızda birden çok güvenilmeyen Kullanıcı varsa, API 'YI 
 
 Çoklu Kullanıcı ortamında çalışıyorsanız, _makine_ kapsamını hedefleyen yalıtılmış depolama özelliklerinin kullanımını yeniden deneyin. Bir uygulamanın makine genelinde bir konumdan veri okuması gerekiyorsa, verileri yalnızca yönetici hesapları tarafından yazılabilir bir konumdan okumayı tercih edin. `%PROGRAMFILES%`Dizin ve `HKLM` kayıt defteri kovanı, yalnızca yöneticiler tarafından yazılabilir ve herkes tarafından okunabilen konumların örnekleridir. Bu konumlardan okunan veriler, güvenilir olarak değerlendirilir.
 
-Bir uygulamanın bir çoklu kullanıcı ortamında _makine_ kapsamını kullanması gerekiyorsa, makine genelindeki depodan okurken herhangi bir dosyanın içeriğini doğrulayın. Uygulama, nesne grafiklerinin bu dosyalardan serisini kaldırmada, `XmlSerializer` veya gibi tehlikeli serileştiriciler yerine daha güvenli serileştiriciler kullanmayı `BinaryFormatter` düşünün `NetDataContractSerializer` . Daha derin iç içe nesne grafiklerde veya dosya içeriğine göre kaynak ayırmayı gerçekleştiren nesne grafiklerde dikkatli olun.
+Bir uygulamanın bir çoklu kullanıcı ortamında _makine_ kapsamını kullanması gerekiyorsa, makine genelindeki depodan okurken herhangi bir dosyanın içeriğini doğrulayın. Uygulama, nesne grafiklerinin bu dosyalardan serisini kaldırmada, `XmlSerializer` veya gibi tehlikeli serileştiriciler yerine daha güvenli serileştiriciler kullanmayı `BinaryFormatter` düşünün `NetDataContractSerializer` . Derin iç içe nesne grafiklerde veya dosya içeriğine göre kaynak ayırmayı gerçekleştiren nesne grafiklerde dikkatli olun.
 
 <a name="isolated_storage_locations"></a>
 
@@ -221,7 +222,7 @@ Yalıtılmış depolama, aşağıdaki dört senaryo da dahil olmak üzere pek ç
 
 - Dolaşım. Uygulamalar gezici kullanıcı profilleriyle de yalıtılmış depolama kullanabilir. Bu, bir kullanıcının yalıtılmış depolarının profil ile birlikte gezinmesini sağlar.
 
-Yalıtılmış depolamayı aşağıdaki durumlarda kullanmamalısınız:
+Yalıtılmış depolamayı aşağıdaki durumlarda kullanmayın:
 
 - Şifrelenmemiş anahtarlar veya şifreler gibi yüksek değerli veriler için, çünkü yalıtılmış depolama yüksek derecede güvenilen koddan, yönetilmeyen koddan veya bilgisayarın güvenilen kullanıcılarından korunmaz.
 

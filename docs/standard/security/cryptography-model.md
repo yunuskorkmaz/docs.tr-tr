@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 0b3e07238bf0932572c222f7b947cfa7ae0221a9
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: a157a9a76f87a2a56c616b76c933e6d8d6415b03
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557001"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281590"
 ---
 # <a name="net-cryptography-model"></a>.NET şifreleme modeli
 
@@ -25,7 +25,7 @@ ms.locfileid: "87557001"
 
 .NET şifreleme sistemi, türetilmiş sınıf devralma için genişletilebilir bir model uygular. Hiyerarşi aşağıdaki gibidir:
 
-- , Veya gibi algoritma türü sınıfı <xref:System.Security.Cryptography.SymmetricAlgorithm> <xref:System.Security.Cryptography.AsymmetricAlgorithm> <xref:System.Security.Cryptography.HashAlgorithm> . Bu düzey soyuttur.
+- , Veya gibi algoritma türü sınıfı <xref:System.Security.Cryptography.SymmetricAlgorithm>  <xref:System.Security.Cryptography.AsymmetricAlgorithm> <xref:System.Security.Cryptography.HashAlgorithm> . Bu düzey soyuttur.
 
 - Algoritma türü sınıfından devralan algoritma sınıfı; Örneğin,, <xref:System.Security.Cryptography.Aes> <xref:System.Security.Cryptography.RSA> veya <xref:System.Security.Cryptography.ECDiffieHellman> . Bu düzey soyuttur.
 
@@ -41,9 +41,9 @@ Algoritma için kullanılabilen farklı uygulamalara örnek olarak, simetrik alg
 
 Windows üzerinde .NET Framework:
 
-* `*CryptoServiceProvider`gibi algoritma sınıfları, <xref:System.Security.Cryptography.AesCryptoServiceProvider> bir algoritmanın Windows şifreleme API 'si (CAPI) uygulamasındaki sarmalayıcılardır.
-* `*Cng`gibi algoritma sınıfları, <xref:System.Security.Cryptography.ECDiffieHellmanCng> Windows şifreleme yeni nesil (CNG) uygulamasının etrafında sarmalayıcılar.
-* `*Managed`gibi sınıflar, <xref:System.Security.Cryptography.AesManaged> tamamen yönetilen kodda yazılmıştır. `*Managed`uygulamalar Federal bilgi Işleme standartları (FIPS) tarafından sertifikalandırılması ve sarmalayıcı sınıflarından daha yavaş olabilir `*CryptoServiceProvider` `*Cng` .
+* `*CryptoServiceProvider` gibi algoritma sınıfları, <xref:System.Security.Cryptography.AesCryptoServiceProvider> bir algoritmanın Windows şifreleme API 'si (CAPI) uygulamasındaki sarmalayıcılardır.
+* `*Cng` gibi algoritma sınıfları, <xref:System.Security.Cryptography.ECDiffieHellmanCng> Windows şifreleme yeni nesil (CNG) uygulamasının etrafında sarmalayıcılardır.
+* `*Managed` gibi sınıflar, <xref:System.Security.Cryptography.AesManaged> tamamen yönetilen kodda yazılmıştır. `*Managed` uygulamalar Federal bilgi Işleme standartları (FIPS) tarafından sertifikalandırılması ve sarmalayıcı sınıflarından daha yavaş olabilir `*CryptoServiceProvider` `*Cng` .
 
 .NET Core ve .NET 5 ve sonraki sürümlerinde, tüm uygulama sınıfları ( `*CryptoServiceProvider` , `*Managed` ve `*Cng` ) IŞLETIM sistemi (OS) algoritmaları için sarmalayıcılardır. İşletim sistemi algoritmaları FIPS sertifikalı ise, .NET FIPS sertifikalı algoritmalar kullanır. Daha fazla bilgi için bkz. [platformlar arası şifreleme](cross-platform-cryptography.md).
 

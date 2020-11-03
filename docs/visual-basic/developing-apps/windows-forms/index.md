@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 9d061aeccb914cce80e02bb7df44dae2edf25412
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef02662a5492f117b252e464e92ec46e7484ef66
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557025"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282166"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 
@@ -28,11 +28,11 @@ Visual Studio ile Windows Forms ve Windows hizmet uygulamaları oluşturabilirsi
 
 ## <a name="building-rich-interactive-user-interfaces"></a>Zengin, etkileşimli kullanıcı arabirimleri oluşturma
 
-Windows Forms, dosya sistemine okuma ve yazma gibi yaygın uygulama görevlerini etkinleştiren bir dizi yönetilen kitaplık olan .NET Framework akıllı istemci bileşenidir. Visual Studio gibi bir geliştirme ortamı kullanarak, bilgi görüntüleyen, kullanıcılardan giriş isteyen ve uzak bilgisayarlarla ağ üzerinden iletişim kuran Windows Forms uygulamalar oluşturabilirsiniz.
+Windows Forms, .NET Framework ve .NET Core 'un (.NET Core 3,0 ' den beri) akıllı istemci bileşenidir. Dosya sistemine okuma ve yazma gibi yaygın uygulama görevlerini etkinleştiren bir yönetilen kitaplıklar kümesidir. Visual Studio gibi bir geliştirme ortamı kullanarak, bilgi görüntüleyen, kullanıcılardan giriş isteyen ve uzak bilgisayarlarla ağ üzerinden iletişim kuran Windows Forms uygulamalar oluşturabilirsiniz.
 
 Windows Forms, form, kullanıcıya bilgi görüntüleyen görsel bir yüzeydir. Genellikle form üzerinde denetimler yerleştirerek ve fare tıklamaları veya tuşa basma gibi kullanıcı eylemlerine yanıtlar geliştirirken Windows Forms uygulamalar oluşturabilirsiniz. *Denetim* , verileri görüntüleyen veya veri girişini kabul eden ayrı bir kullanıcı ARABIRIMI (UI) öğesidir.
 
-### <a name="events"></a>Ekinlikler
+### <a name="events"></a>Olaylar
 
 Bir Kullanıcı formunuza veya denetimlerinden birine bir şey yaparken bir olay oluşturur. Uygulamanız kodu kullanarak bu olaylara tepki verir ve olayları gerçekleştiğinde işler. Daha fazla bilgi için bkz. [Windows Forms olay Işleyicileri oluşturma](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms).
 
@@ -63,7 +63,7 @@ Birçok uygulamanın, verileri bir veritabanından, XML dosyasından, XML Web hi
 
 Ağ üzerinden veri kaynaklarına bağlanmak, Windows Forms akıllı istemcileri olan basit bir görevdir. <xref:System.Windows.Forms.BindingSource>Visual Studio 2005 ve .NET Framework 2,0 ' de Windows Forms yeni olan bileşen, bir veri kaynağına bağlantıyı temsil eder ve verileri denetimlere bağlama, önceki ve sonraki kayıtlara gitme, kayıtları düzenlemeyle ve değişiklikleri özgün kaynağa geri kaydetme yöntemlerini gösterir. <xref:System.Windows.Forms.BindingNavigator>Denetim, <xref:System.Windows.Forms.BindingSource> kullanıcıların kayıtlar arasında gezindiği bileşen üzerinde basit bir arabirim sağlar.
 
-### <a name="data-bound-controls"></a>Veri bağlantılı denetimler
+### <a name="data-bound-controls"></a>Data-Bound denetimleri
 
 Projenizdeki veritabanları, Web Hizmetleri ve nesneler gibi veri kaynaklarını görüntüleyen Veri Kaynakları penceresini kullanarak veriye dayalı denetimler oluşturabilirsiniz. Öğeleri bu pencereden projenizdeki formlara sürükleyerek veriye göre bağlantılı denetimler oluşturabilirsiniz. Ayrıca, nesneleri veri kaynakları penceresinden var olan denetimlere sürükleyerek verileri verilere bağlayabilirsiniz.
 
@@ -97,7 +97,7 @@ ClickOnce 'a tam giriş için bkz. [ClickOnce Security and Deployment](/visualst
 
 ## <a name="other-controls-and-features"></a>Diğer denetimler ve Özellikler
 
-Windows Forms ' de, iletişim kutuları oluşturma, yazdırma, yardım ve belge ekleme ve uygulamanızı birden çok dile yerelleştirme gibi genel görevleri hızlı ve kolay bir şekilde uygulamayı sağlayan birçok farklı özelliği vardır. Ayrıca, Windows Forms, müşterilerinize daha güvenli uygulamalar yayınlemenize olanak tanıyan .NET Framework güçlü güvenlik sistemine bağlıdır.
+Windows Forms ' de, iletişim kutuları oluşturma, yazdırma, belge ekleme ve uygulamanızı birden çok dile yerelleştirme gibi yaygın görevleri hızlı ve kolay bir şekilde uygulamayı sağlayan birçok farklı özelliği vardır. Ayrıca, Windows Forms müşterilerinize daha güvenli uygulamalar yayınlemenize olanak tanıyan, .NET güçlü güvenlik sistemine bağımlıdır.
 
 Bu özellikleri kullanma hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın:
 

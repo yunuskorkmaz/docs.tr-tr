@@ -25,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 651231dcc41926307e3a46b67c80ba3df1fb25e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549986"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281727"
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 
@@ -63,7 +63,7 @@ Bu hedeflere ulaşmak için şifreleme düzeni oluşturmak üzere şifreleme tem
 |Şifreleme imzalama|Bu tarafa özgü bir dijital imza oluşturarak verilerin belirli bir taraftan kaynaklandığını doğrulamaya yardımcı olur. Bu işlem karma işlevleri de kullanır.|
 |Şifreleme karmaları|Herhangi bir uzunluktaki verileri sabit uzunluklu bir bayt dizisine eşler. Karmalar istatistiksel olarak benzersizdir; farklı bir iki baytlık dizi aynı değere karma olmayacak.|
 
-## <a name="secret-key-encryption"></a>Gizli anahtar şifreleme
+## <a name="secret-key-encryption"></a>Secret-Key şifreleme
 
 Gizli anahtar şifreleme algoritmaları, verileri şifrelemek ve şifrelerini çözmek için tek bir gizli anahtar kullanır. Anahtara sahip olan herhangi bir taraf verilerinizin şifresini çözmek ya da kendi verilerini şifrelemek veya kendi verilerini şifrelemek için bu anahtarı kullanabilir.
 
@@ -71,7 +71,7 @@ Gizli anahtar şifreleme algoritmaları, verileri şifrelemek ve şifrelerini ç
 
 Tek seferde bir veri bloğunu şifrelemek için bir blok şifresi olarak adlandırılan bir gizli anahtar algoritması türü kullanılır. Veri şifreleme standardı (DES), TripleDES ve Gelişmiş Şifreleme Standardı (AES) gibi şifrelemeleri blok olarak, *n* baytlık bir giriş bloğunu şifreli baytların çıkış bloğuna dönüştürür. Bir bayt dizisini şifrelemek veya şifresini çözmek istiyorsanız blok olarak blok yapmanız gerekir. *N* , des ve TripleDES için 8 bayt; 16 bayt [varsayılan], 24 bayt veya AES için 32 bayt) olduğundan, *n* 'den büyük veri değerlerinin tek seferde tek bir blok şifrelenebilmesi gerekir. *N* ' den küçük veri değerleri işlenmek üzere *n* olarak genişletilmelidir.
 
-Bir basit blok şifresi formu elektronik codebook (ECB) modu olarak adlandırılır. ECB modu, ilk düz metin bloğunu başlatmak için bir başlatma vektörü kullanmadığı için güvenli olarak kabul edilmez. Belirli bir gizli anahtar *k*anahtarı için, bir başlatma vektörü kullanmayan basit bir blok şifresi, aynı düz metin giriş bloğunu şifreli olmayan aynı çıkış bloğuna şifreler. Bu nedenle, giriş düz metin akışındaki yinelenen bloklarınız varsa, çıktı şifreli metin akışındaki yinelenen bloklara sahip olursunuz. Bu yinelenen çıktı, yetkisiz kullanıcıların, kullanıma açık olabilecek algoritmaları ve olası saldırı modlarını kullanan zayıf şifrelemeye karşı uyarır. Bu nedenle ECB şifre modu Analize ve son olarak anahtar bulmaya açıktır.
+Bir basit blok şifresi formu elektronik codebook (ECB) modu olarak adlandırılır. ECB modu, ilk düz metin bloğunu başlatmak için bir başlatma vektörü kullanmadığı için güvenli olarak kabul edilmez. Belirli bir gizli anahtar *k* anahtarı için, bir başlatma vektörü kullanmayan basit bir blok şifresi, aynı düz metin giriş bloğunu şifreli olmayan aynı çıkış bloğuna şifreler. Bu nedenle, giriş düz metin akışındaki yinelenen bloklarınız varsa, çıktı şifreli metin akışındaki yinelenen bloklara sahip olursunuz. Bu yinelenen çıktı, yetkisiz kullanıcıların, kullanıma açık olabilecek algoritmaları ve olası saldırı modlarını kullanan zayıf şifrelemeye karşı uyarır. Bu nedenle ECB şifre modu Analize ve son olarak anahtar bulmaya açıktır.
 
 Temel sınıf kitaplığında verilen blok şifre sınıfları, şifreleme bloğu zinciri (CBC) adlı varsayılan bir zincirleme modu kullanır, ancak isterseniz bu varsayılan değeri değiştirebilirsiniz.
 
@@ -89,7 +89,7 @@ Gamze ve Bob 'un güvenli olmayan bir kanal üzerinden iletişim kurmak isteyen 
 
 - <xref:System.Security.Cryptography.HMACSHA256>, <xref:System.Security.Cryptography.HMACSHA384> ve <xref:System.Security.Cryptography.HMACSHA512> . (Bu teknik açıdan gizli anahtar algoritmalarda, gizli anahtar ile Birleşik bir şifreleme karması işlevi kullanılarak hesaplanan ileti kimlik doğrulama kodları temsil etmektedir. Bu makalenin ilerleyen kısımlarında bulunan [karma değerleri](#hash-values)bölümüne bakın.)
 
-## <a name="public-key-encryption"></a>Ortak anahtar şifrelemesi
+## <a name="public-key-encryption"></a>Public-Key şifreleme
 
 Ortak anahtar şifrelemesi, yetkisiz kullanıcılardan ve herkese açık hale getirilen bir ortak anahtardan gizli tutulması gereken özel bir anahtar kullanır. Ortak anahtar ve özel anahtar, matematiksel olarak bağlanır; ortak anahtarla şifrelenen verilerin şifresi yalnızca özel anahtarla çözülebilecek ve özel anahtarla imzalanmış veriler yalnızca ortak anahtarla doğrulanabilir. Ortak anahtar herkes tarafından kullanılabilir hale getirilebilir; Bu, özel anahtarın adına gönderilecek verileri şifrelemek için kullanılır. Verileri şifrelemek için bir anahtar gerekli olduğundan ve verilerin şifresini çözmek için başka bir anahtar gerektiğinden, ortak anahtar şifreleme algoritmaları Asimetrik algoritmalar olarak da bilinir. Temel bir şifreleme kuralı, anahtar yeniden kullanımını yasaklar ve her iki anahtar da her iletişim oturumu için benzersiz olmalıdır. Ancak, pratikte asimetrik anahtarlar genellikle uzun ömürlü.
 
@@ -178,13 +178,13 @@ Karma algoritmalar rastgele uzunluktaki ikili değerleri, karma değerler olarak
 
 ## <a name="random-number-generation"></a>Rastgele sayı oluşturma
 
-Rastgele sayı oluşturma çok sayıda şifreleme işlemine integral. Örneğin, şifreleme anahtarlarının mümkün olduğunca rastgele olması gerekir, böylece bunları yeniden oluşturmak uygulanabilir hale gelir. Şifreleme rastgele sayı oluşturucuları, bir günden daha iyi bir olasılık ile tahmin edilmesi açısından uygun olmayan çıktıyı üretmelidir. Bu nedenle, bir sonraki çıkış bitini tahmin etmek için herhangi bir yöntem rastgele tahmin gerçekleştirmemelidir. .NET Framework sınıflar, şifreleme anahtarları oluşturmak için rastgele sayı oluşturucuları kullanır.
+Rastgele sayı oluşturma çok sayıda şifreleme işlemine integral. Örneğin, şifreleme anahtarlarının mümkün olduğunca rastgele olması gerekir, böylece bunları yeniden oluşturmak uygulanabilir hale gelir. Şifreleme rastgele sayı oluşturucuları, bir günden daha iyi bir olasılık ile tahmin edilmesi açısından uygun olmayan çıktıyı üretmelidir. Bu nedenle, bir sonraki çıkış bitini tahmin etmek için herhangi bir yöntem rastgele tahmin gerçekleştirmemelidir. .NET 'teki sınıflar, şifreleme anahtarları oluşturmak için rastgele sayı oluşturucuları kullanır.
 
 <xref:System.Security.Cryptography.RandomNumberGenerator>Sınıfı, rastgele sayı Oluşturucu algoritmasının bir uygulamasıdır.
 
 ## <a name="clickonce-manifests"></a>ClickOnce bildirimleri
 
-.NET Framework 3,5 ' de, aşağıdaki şifreleme sınıfları [ClickOnce teknolojisi](/visualstudio/deployment/clickonce-security-and-deployment)kullanılarak dağıtılan uygulamalar için bildirim imzaları hakkında bilgi edinmenizi ve doğrulamanıza olanak sağlar:
+Aşağıdaki şifreleme sınıfları [ClickOnce teknolojisi](/visualstudio/deployment/clickonce-security-and-deployment)kullanılarak dağıtılan uygulamalar için bildirim imzaları hakkında bilgi edinmenizi ve doğrulamanıza olanak sağlar:
 
 - <xref:System.Security.Cryptography.ManifestSignatureInformation>Sınıfı, yöntem aşırı yüklerini kullandığınızda bir bildirim imzası hakkında bilgi edinir <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> .
 
@@ -192,7 +192,7 @@ Rastgele sayı oluşturma çok sayıda şifreleme işlemine integral. Örneğin,
 
 - <xref:System.Security.Cryptography.ManifestSignatureInformationCollection>Sınıfı, doğrulanmış imzaların nesnelerinin salt okunurdur bir koleksiyonunu sağlar <xref:System.Security.Cryptography.ManifestSignatureInformation> .
 
- Ayrıca, aşağıdaki sınıflar belirli imza bilgilerini sağlar:
+Ayrıca, aşağıdaki sınıflar belirli imza bilgilerini sağlar:
 
 - <xref:System.Security.Cryptography.StrongNameSignatureInformation> bir bildirimin tanımlayıcı ad imzası bilgilerini tutar.
 
@@ -204,11 +204,11 @@ Rastgele sayı oluşturma çok sayıda şifreleme işlemine integral. Örneğin,
 
 ## <a name="cryptography-next-generation-cng-classes"></a>Yeni nesil şifreleme (CNG) sınıfları
 
-.NET Framework 3,5 ve sonraki sürümlerde, yeni nesil şifreleme (CNG) sınıfları, yerel CNG işlevlerinin etrafında yönetilen bir sarmalayıcı sağlar. (CNG, CryptoAPI 'nin yerini alır.) Bu sınıfların adlarının bir parçası olarak "CNG" vardır. CNG sarmalayıcı sınıflarına merkezi olarak <xref:System.Security.Cryptography.CngKey> , CNG anahtarlarının depolanmasını ve kullanımını soyutlayan anahtar kapsayıcı sınıfıdır. Bu sınıf, bir anahtar çiftini veya ortak anahtarı güvenli bir şekilde depolamanıza ve basit bir dize adı kullanarak buna başvurmanıza olanak sağlar. Eliptik Eğri tabanlı <xref:System.Security.Cryptography.ECDsaCng> imza sınıfı ve <xref:System.Security.Cryptography.ECDiffieHellmanCng> şifreleme sınıfı <xref:System.Security.Cryptography.CngKey> nesneleri kullanabilir.
+Yeni nesil şifreleme (CNG) sınıfları, yerel CNG işlevlerinin etrafında yönetilen bir sarmalayıcı sağlar. (CNG, CryptoAPI 'nin yerini alır.) Bu sınıfların adlarının bir parçası olarak "CNG" vardır. CNG sarmalayıcı sınıflarına merkezi olarak <xref:System.Security.Cryptography.CngKey> , CNG anahtarlarının depolanmasını ve kullanımını soyutlayan anahtar kapsayıcı sınıfıdır. Bu sınıf, bir anahtar çiftini veya ortak anahtarı güvenli bir şekilde depolamanıza ve basit bir dize adı kullanarak buna başvurmanıza olanak sağlar. Eliptik Eğri tabanlı <xref:System.Security.Cryptography.ECDsaCng> imza sınıfı ve <xref:System.Security.Cryptography.ECDiffieHellmanCng> şifreleme sınıfı <xref:System.Security.Cryptography.CngKey> nesneleri kullanabilir.
 
 <xref:System.Security.Cryptography.CngKey>Sınıfı, anahtarları açma, oluşturma, silme ve dışarı aktarma dahil olmak üzere çeşitli ek işlemler için kullanılır. Ayrıca, yerel işlevleri doğrudan çağırırken kullanılacak temel anahtar tanıtıcısına erişim sağlar.
 
-.NET Framework 3,5 ayrıca aşağıdakiler gibi çeşitli destek CNG sınıfları içerir:
+.NET ayrıca aşağıdakiler gibi çeşitli destek CNG sınıfları içerir:
 
 - <xref:System.Security.Cryptography.CngProvider> anahtar depolama sağlayıcısını korur.
 

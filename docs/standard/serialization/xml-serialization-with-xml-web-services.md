@@ -12,20 +12,21 @@ helpviewer_keywords:
 - asmx files
 - serialization, SOAP
 - XML serialization, attributes
-- attributes [.NET Framework], XML serialization
+- attributes [.NET], XML serialization
 - .asmx files
 - encoded XML serialization
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: 8464122d4849271ba76edd6b3400ed09d7429821
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5c986162de19c2cb27edf19ff8e9e80798f36117
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542013"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282370"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web Hizmetleri ile XML Serileştirme
+
 XML serileştirme, sınıf tarafından gerçekleştirilen XML Web Hizmetleri mimarisinde kullanılan temel taşıma mekanizmasıdır <xref:System.Xml.Serialization.XmlSerializer> . Bir XML Web hizmeti tarafından oluşturulan XML 'yi denetlemek için, XML serileştirme ve XML Web hizmeti (. asmx) oluşturmak için kullanılan bir dosyanın sınıflarına, dönüş değerlerine, parametrelere ve alanlara [KODLANMıŞ SOAP serileştirmesini](attributes-that-control-encoded-soap-serialization.md) denetleyen öznitelikleri, her iki [özniteliğe](attributes-that-control-xml-serialization.md) de uygulayabilirsiniz. XML Web hizmeti oluşturma hakkında daha fazla bilgi için bkz. [ASP.net using XML Web Services](/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
   
 ## <a name="literal-and-encoded-styles"></a>Değişmez değer ve kodlanmış stilleri  

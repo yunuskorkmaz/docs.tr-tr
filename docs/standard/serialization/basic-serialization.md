@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2b75ba6875b2a4430b6776c27dead72476884fff
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83378421"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282084"
 ---
 # <a name="basic-serialization"></a>Temel serileştirme
 
@@ -59,7 +59,7 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Yukarıda kullanılan, çok verimlidir ve bir kompakt bayt akışı üretir. Onunla, .NET Framework üzerine serisi kaldırılacak nesneleri serileştirmek için ideal bir aracı kolaylaştıracak bu Biçimlendiricinin serileştirilmiş tüm nesneleri ayrıca seri durumdan çıkarılabiliyorsa. Bir nesne seri durumdan kaldırıldığında oluşturucuların çağrılmadığını unutmayın. Bu kısıtlama, performans nedenleriyle seri durumdan çıkarma üzerine yerleştirilir. Ancak bu, çalışma zamanının nesne yazıcı ile yaptığı bazı olağan sözleşmeleri ihlal ediyor ve geliştiriciler bir nesneyi seri hale getirilebilir olarak işaretlerken sonuçları anladıklarından emin olmalıdır.  
+<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Yukarıda kullanılan, çok verimlidir ve bir kompakt bayt akışı üretir. Bu biçimlendirici ile seri hale getirilen tüm nesneler, .NET üzerinde seri durumdan çıkarılacak nesneleri serileştirmek için ideal bir araç haline getirir. Bir nesne seri durumdan kaldırıldığında oluşturucuların çağrılmadığını unutmayın. Bu kısıtlama, performans nedenleriyle seri durumdan çıkarma üzerine yerleştirilir. Ancak bu, çalışma zamanının nesne yazıcı ile yaptığı bazı olağan sözleşmeleri ihlal ediyor ve geliştiriciler bir nesneyi seri hale getirilebilir olarak işaretlerken sonuçları anladıklarından emin olmalıdır.  
   
 Taşınabilirlik bir gereksinimle, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> bunun yerine kullanın. Yukarıdaki koddaki **BinaryFormatter** **'ı SoapFormatter** Ile değiştirin ve **seri hale getirme** ve **seri durumdan çıkarma** 'yı çağırın. Bu biçimlendirici yukarıda kullanılan örnek için aşağıdaki çıktıyı üretir.  
   

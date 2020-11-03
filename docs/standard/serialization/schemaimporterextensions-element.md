@@ -1,23 +1,24 @@
 ---
 title: <schemaImporterExtensions> Öğesi
-description: <schemaImporterExtensions>Öğesi, xsd türlerinin .NET Framework türlerine eşlenmesi Için XmlSchemaImporter tarafından kullanılan türleri içerir.
+description: <schemaImporterExtensions>Öğesi, xsd türlerini .net türlerine eşlemek Için XmlSchemaImporter tarafından kullanılan türleri içerir.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: c46c5cb6e01463723f0f2ce3873fb4a6ec0b4e60
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 35626618a8dd7c63a7008d10bc3568484836a488
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84278408"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282270"
 ---
-# <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions> Öğesi
-Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter> için .NET Framework türleri için XSD türü eşleme. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../framework/configure-apps/file-schema/index.md).  
+# <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions> öğesi
+
+<xref:System.Xml.Serialization.XmlSchemaImporter>XSD türlerinin .net türlerine eşlenmesi için tarafından kullanılan türleri içerir. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../framework/configure-apps/file-schema/index.md).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <schemaImporterExtensions>  
@@ -29,16 +30,16 @@ Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchema
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<add>İçin öğesi\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)|Eşlemeleri oluşturmak için tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaImporter> .|  
+|[\<add> İçin öğesi \<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)|Eşlemeleri oluşturmak için tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaImporter> .|  
   
 ## <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.xml.serialization>Dosyalarında](system-xml-serialization-element.md)|XML serileştirmesini denetlemek için en üst düzey öğe.|  
+|[\<system.xml.serialization> Dosyalarında](system-xml-serialization-element.md)|XML serileştirmesini denetlemek için en üst düzey öğe.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, <xref:System.Xml.Serialization.XmlSchemaImporter> .NET Framework TÜRLERINE xsd türleri eşlerken tarafından kullanılan türlerin nasıl ekleneceğini göstermektedir.  
+ Aşağıdaki kod örneği, <xref:System.Xml.Serialization.XmlSchemaImporter> xsd türlerini .net türlerine eşlerken tarafından kullanılan türlerin nasıl ekleneceğini göstermektedir.  
   
 ```xml  
 <system.xml.serialization>  
@@ -56,6 +57,6 @@ Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchema
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [Yapılandırma dosyası şeması](../../framework/configure-apps/file-schema/index.md)
-- [\<dateTimeSerialization>Dosyalarında](datetimeserialization-element.md)
-- [\<add>İçin öğesi\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
-- [\<system.xml.serialization>Dosyalarında](system-xml-serialization-element.md)
+- [\<dateTimeSerialization> Dosyalarında](datetimeserialization-element.md)
+- [\<add> İçin öğesi \<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
+- [\<system.xml.serialization> Dosyalarında](system-xml-serialization-element.md)

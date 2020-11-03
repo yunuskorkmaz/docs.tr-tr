@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: a2684ab72c1fb109d711e333e01836d3399caf86
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 90ae911c8942fef7a9e8238921990b0a52a47ca0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289648"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281762"
 ---
 # <a name="datetimeserialization-element"></a>\<dateTimeSerialization> Öğesi
 Serileştirme modu belirler <xref:System.DateTime> nesneleri.  
@@ -20,7 +20,7 @@ Serileştirme modu belirler <xref:System.DateTime> nesneleri.
  \<configuration>  
 \<dateTimeSerialization>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <dateTimeSerialization  
@@ -35,7 +35,7 @@ Serileştirme modu belirler <xref:System.DateTime> nesneleri.
   
 |Öznitelikler|Açıklama|  
 |----------------|-----------------|  
-|`mode`|İsteğe bağlı. Serileştirme modunu belirtir. Birine ayarlayın <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> değerleri. Varsayılan **gidiş dönüş**'dir.|  
+|`mode`|İsteğe bağlı. Serileştirme modunu belirtir. Birine ayarlayın <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> değerleri. Varsayılan **gidiş dönüş** 'dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,9 +47,10 @@ Serileştirme modu belirler <xref:System.DateTime> nesneleri.
 |dizileştirme mekanizmasını System.xml.Serialization|XML serileştirmesini denetlemek için en üst düzey öğe.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework sürüm 1,0, 1,1, 2,0 ve sonraki sürümlerinde, bu özellik **Yerel**olarak ayarlandığında <xref:System.DateTime> nesneler her zaman yerel saat olarak biçimlendirilir. Diğer bir deyişle, yerel saat dilimi bilgilerini her zaman serileştirilmiş verilerle birlikte gelir. .NET Framework eski sürümleriyle uyumluluğu sağlamak için bu özelliği **Yerel** olarak ayarlayın.  
+
+Bu özellik **Yerel** olarak ayarlandığında, <xref:System.DateTime> nesneler her zaman yerel saat olarak biçimlendirilir. Diğer bir deyişle, yerel saat dilimi bilgilerini her zaman serileştirilmiş verilerle birlikte gelir.
   
- Sürüm 2,0 ' de ve bu özelliğe sahip .NET Framework sonraki sürümlerinde, yukarı **dönüş**olarak ayarlanan <xref:System.DateTime> nesneler, yerel, UTC veya belirtilmeyen bir saat diliminde olup olmadıklarını belirleyecek şekilde incelenir. <xref:System.DateTime> Nesneleri sonra bu bilgileri korunur bir şekilde serileştirilmiş. Bu varsayılan davranış ve eski sürümleri framework ile iletişim kuran değil tüm yeni uygulamalar için önerilen davranışı.  
+Bu özellik **gidiş dönüş** olarak ayarlandığında, <xref:System.DateTime> nesneler yerel, UTC veya belirtilmemiş bir saat diliminde olup olmadığını belirleyecek şekilde incelenir. <xref:System.DateTime> Nesneleri sonra bu bilgileri korunur bir şekilde serileştirilmiş. Bu varsayılan davranış ve eski sürümleri framework ile iletişim kuran değil tüm yeni uygulamalar için önerilen davranışı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -57,6 +58,6 @@ Serileştirme modu belirler <xref:System.DateTime> nesneleri.
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [Yapılandırma dosyası şeması](../../framework/configure-apps/file-schema/index.md)
-- [\<schemaImporterExtensions>Dosyalarında](schemaimporterextensions-element.md)
-- [\<add>İçin öğesi\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
-- [\<system.xml.serialization>Dosyalarında](system-xml-serialization-element.md)
+- [\<schemaImporterExtensions> Dosyalarında](schemaimporterextensions-element.md)
+- [\<add> İçin öğesi \<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
+- [\<system.xml.serialization> Dosyalarında](system-xml-serialization-element.md)

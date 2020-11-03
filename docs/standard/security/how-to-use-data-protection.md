@@ -17,12 +17,12 @@ helpviewer_keywords:
 - decryption
 - data [.NET], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: 263a07ddf357734e819fffdd41cdff60657adf15
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: d3fe7ef3ddbc6e75a248101829b11a8abcb3c15a
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557066"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282055"
 ---
 # <a name="how-to-use-data-protection"></a>Nasıl yapılır: Veri Korumayı Kullanma
 
@@ -35,7 +35,7 @@ ms.locfileid: "87557066"
   
 Bir <xref:System.Security.Cryptography.ProtectedData> bayt dizisinin kopyasını şifrelemek için sınıfını kullanın. Bu işlevsellik .NET Framework, .NET Core ve .NET 5 ' te kullanılabilir.  Geçerli Kullanıcı hesabı tarafından şifrelenen verilerin yalnızca aynı kullanıcı hesabı tarafından çözülemediğini belirtebilir veya geçerli kullanıcı hesabı tarafından şifrelenen verilerin, bilgisayardaki herhangi bir hesap tarafından çözülebilecek olduğunu belirtebilirsiniz.  <xref:System.Security.Cryptography.DataProtectionScope>Seçeneklerin ayrıntılı açıklaması için bkz. sabit listesi <xref:System.Security.Cryptography.ProtectedData> .  
   
-### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Veri koruma kullanarak bir dosya veya akışa veri şifrelemek için  
+## <a name="encrypt-data-to-a-file-or-stream-using-data-protection"></a>Veri koruma kullanarak verileri bir dosya veya akışa şifreleme  
   
 1. Rastgele entropi oluşturun.  
   

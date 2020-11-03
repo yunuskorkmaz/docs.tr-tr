@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: c256c03831ac759bc45467f38e85fd3a2884dda4
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: c65f7220c44e86fac7e8beba28277bf43af95088
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526588"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282339"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -30,11 +30,11 @@ C# 9,0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
 - Modül başlatıcılar
 - Kısmi yöntemlere yönelik yeni özellikler
 
-C# 9,0, **.NET 5**' te desteklenir. Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../language-reference/configure-language-version.md).
+C# 9,0, **.NET 5** ' te desteklenir. Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../language-reference/configure-language-version.md).
 
 ## <a name="record-types"></a>Kayıt türleri
 
-C# 9,0, eşitlik için değer semantiğini sağlamak üzere birleştirilmiş Yöntemler sağlayan bir başvuru türü olan **_kayıt türlerini_* tanıtır. Kayıtlar varsayılan olarak sabittir.
+C# 9,0, eşitlik için değer semantiğini sağlamak üzere birleştirilmiş Yöntemler sağlayan bir başvuru türü olan * *_kayıt türlerini_* tanıtır. Kayıtlar varsayılan olarak sabittir.
 
 Kayıt türleri, .NET 'te değişmez başvuru türleri oluşturmayı kolaylaştırır. Geçmişte, .NET türleri büyük ölçüde başvuru türleri olarak sınıflandırılır (sınıflar ve anonim türler dahil) ve değer türleri (yapılar ve tanımlama birimleri dahil). Değişmez değer türleri önerilirken, değişebilir değer türleri genellikle hata sunmaz. Değer tür değişkenleri değerleri tutar, böylece değer türleri yöntemlere geçirildiğinde orijinal verilerin bir kopyasına değişiklikler yapılır.
 
@@ -106,7 +106,7 @@ Yukarıdaki satır, `Person` `LastName` özelliğin bir kopyası olduğu `person
 
 ## <a name="init-only-setters"></a>Yalnızca init ayarlayıcılar
 
-***Init Only Setter**_ bir nesnenin üyelerini başlatmak için tutarlı bir sözdizimi sağlar. Özellik başlatıcıları, hangi değerin hangi özelliğin ayarlanmasını temizlesin. Downsıde, bu özelliklerin ayarlanabilir olması gerekir. C# 9,0 ' den başlayarak, `init` `set` Özellikler ve Dizin oluşturucular için erişimciler yerine erişimciler oluşturabilirsiniz. Çağıranlar, oluşturma ifadelerinde bu değerleri ayarlamak için özellik başlatıcısı sözdizimini kullanabilir, ancak oluşturma işlemi tamamlandıktan sonra bu özellikler salt okunur yapılır. Init Only ayarlayıcıları, durumu değiştirecek bir pencere sağlar. Bu pencere, oluşturma aşaması sona erdiğinde kapanır. Özellik başlatıcıları ve WITH ifadeleri dahil olmak üzere, oluşturma aşaması, tüm başlatma sonrasında etkili bir şekilde sona erer.
+***Init Only Setter** _ bir nesnenin üyelerini başlatmak için tutarlı bir sözdizimi sağlar. Özellik başlatıcıları, hangi değerin hangi özelliğin ayarlanmasını temizlesin. Downsıde, bu özelliklerin ayarlanabilir olması gerekir. C# 9,0 ' den başlayarak, `init` `set` Özellikler ve Dizin oluşturucular için erişimciler yerine erişimciler oluşturabilirsiniz. Çağıranlar, oluşturma ifadelerinde bu değerleri ayarlamak için özellik başlatıcısı sözdizimini kullanabilir, ancak oluşturma işlemi tamamlandıktan sonra bu özellikler salt okunur yapılır. Init Only ayarlayıcıları, durumu değiştirecek bir pencere sağlar. Bu pencere, oluşturma aşaması sona erdiğinde kapanır. Özellik başlatıcıları ve WITH ifadeleri dahil olmak üzere, oluşturma aşaması, tüm başlatma sonrasında etkili bir şekilde sona erer.
 
 `init`Yalnızca yazdığınız herhangi bir tür için ayarlayıcıları bildirebilirsiniz. Örneğin, aşağıdaki yapı bir hava durumu izleme yapısını tanımlar:
 
@@ -167,7 +167,7 @@ C# 9, yeni bir model eşleşme geliştirmeleri içerir:
 - _*_Tür desenleri_*_ bir değişkenle eşleşiyor tür
 - _*_Parantez Içine alınmış desenler_*_ , desen birleşimlerinin önceliğini uygular veya vurgular
 - _*_Ayırt edici `and` desenler_*_ , her iki desen de eşleşmesini gerektirir
-- Ayırt edici _*_ `or` desenler_*_ eşleşmesi gereken her iki model
+- Ayırt edici _*_`or` desenler_*_ eşleşmesi gereken her iki model
 - _*_Değillenmiş `not` desenler_*_ bir düzenin eşleşmemesi gerekir
 - _*_İlişkisel desenler_*_ , girişin küçüktür, büyüktür, küçüktür veya eşittir veya belirtilen bir sabitten büyük veya eşit olması gerekir.
 
@@ -238,11 +238,11 @@ Son olarak, artık [Yerel işlevlere](../programming-guide/classes-and-structs/l
 
 İki son özellik C# kod üreteçleri destekler. C# kod oluşturucuları, bir Roslyn çözümleyicisine veya kod düzeltmesine benzer şekilde yazabileceğiniz bir bileşendir. Fark, kod oluşturucuların kodu çözümlemelerine ve derleme sürecinin bir parçası olarak yeni kaynak kodu dosyaları yazmanızdır. Tipik bir kod üreticisi öznitelikleri veya diğer kuralları arar.
 
-Bir kod Oluşturucu, Roslyn analiz API 'Lerini kullanarak öznitelikleri veya diğer kod öğelerini okur. Bu bilgilerden, derlemeye yeni kod ekler. Kaynak oluşturucuları yalnızca kod ekleyebilir; Bu kişiler, derlemede var olan herhangi bir kodu değiştirmesine izin verilmez.
+Kod Oluşturucu, Roslyn Analysis API 'Lerini kullanarak öznitelikleri veya diğer kod öğelerini okur. Bu bilgilerden, derlemeye yeni kod ekler. Kaynak oluşturucuları yalnızca kod ekleyebilir; Bu kişiler, derlemede var olan herhangi bir kodu değiştirmesine izin verilmez.
 
-Kod üreticileri için eklenen iki özellik, ***kısmi Yöntem sözdizimi**_ ve _*_Modül başlatıcıları_*_ için uzantılardır. Birincisi, kısmi metotlarda yapılan değişiklikler. C# 9,0 öncesi, kısmi Yöntemler, bir `private` erişim değiştiricisi `void` belirtmemelidir, geri dönemeyebilir ve parametrelere sahip olamaz `out` . Bu kısıtlamalar, hiçbir yöntem uygulama sağlanmazsa, derleyicinin kısmi yönteme yapılan tüm çağrıları kaldırmasının anlamına gelir. C# 9,0 bu kısıtlamaları ortadan kaldırır, ancak kısmi Yöntem bildirimlerinin bir uygulamaya sahip olmasını gerektirir. Kod oluşturucuları, bu uygulamayı sağlayabilir. Yeni bir değişiklik yapmaktan kaçınmak için, derleyici eski kuralları takip etmek üzere bir erişim değiştiricisi olmadan herhangi bir kısmi yöntemi dikkate alır. Kısmi Yöntem `private` erişim değiştiricisini içeriyorsa, yeni kurallar bu kısmi yöntemi yönetir.
+Kod üreticileri için eklenen iki özellik, * **kısmi Yöntem sözdizimi** _ ve _*_Modül başlatıcıları_*_ için uzantılardır. Birincisi, kısmi metotlarda yapılan değişiklikler. C# 9,0 öncesi, kısmi Yöntemler, bir `private` erişim değiştiricisi `void` belirtmemelidir, geri dönemeyebilir ve parametrelere sahip olamaz `out` . Bu kısıtlamalar, hiçbir yöntem uygulama sağlanmazsa, derleyicinin kısmi yönteme yapılan tüm çağrıları kaldırmasının anlamına gelir. C# 9,0 bu kısıtlamaları ortadan kaldırır, ancak kısmi Yöntem bildirimlerinin bir uygulamaya sahip olmasını gerektirir. Kod oluşturucuları, bu uygulamayı sağlayabilir. Yeni bir değişiklik yapmaktan kaçınmak için, derleyici eski kuralları takip etmek üzere bir erişim değiştiricisi olmadan herhangi bir kısmi yöntemi dikkate alır. Kısmi Yöntem `private` erişim değiştiricisini içeriyorsa, yeni kurallar bu kısmi yöntemi yönetir.
 
-Kod üreticileri için ikinci yeni özellik _ *_Modül başlatıcıları_* *. Modül başlatıcıları, <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> kendisine eklenmiş özniteliği olan yöntemlerdir. Bu yöntemler, derleme yüklendiğinde çalışma zamanı tarafından çağırılır. Modül başlatıcısı yöntemi:
+Kod üreticileri için ikinci yeni özellik _ * _Modül başlatıcıları_ * *. Modül başlatıcıları, <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> kendisine eklenmiş özniteliği olan yöntemlerdir. Bu yöntemler, derleme yüklendiğinde çalışma zamanı tarafından çağırılır. Modül başlatıcısı yöntemi:
 
 - Statik olmalıdır
 - Parametresiz olmalıdır

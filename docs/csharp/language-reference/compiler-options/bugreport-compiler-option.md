@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 2afab44eec0c7bcc9809b458be0348093cb6dd07
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1fb2efc9b12680e95767746c7e4e1ddacbdd2594
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91196825"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281512"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C# derleyici seçenekleri)
 
@@ -41,7 +41,7 @@ Hata ayıklama bilgilerinin daha sonra analiz edilmek üzere bir dosyaya yerleş
   
 - Derleyici, çalışma zamanı ve işletim sistemi ile ilgili sürüm bilgileri.  
   
-- Başvurulan derlemeler ve modüller, .NET Framework ve SDK ile birlikte gelen derlemeler hariç, onaltılık basamaklar olarak kaydedilir.  
+- Başvurulan derlemeler ve modüller, .NET ve .NET SDK ile gönderilen derlemeler hariç, onaltılık basamaklar olarak kaydedilir.  
   
 - Varsa derleyici çıkışı.  
   
@@ -49,7 +49,7 @@ Hata ayıklama bilgilerinin daha sonra analiz edilmek üzere bir dosyaya yerleş
   
 - Sorunun düzeltilmesi hakkında bir açıklama ve sizden istenir.  
   
- Bu seçenek **-errorreport: Prompt** veya **-errorreport: Send**ile kullanılırsa, dosyadaki bilgiler Microsoft Corporation 'a gönderilir.  
+ Bu seçenek **-errorreport: Prompt** veya **-errorreport: Send** ile kullanılırsa, dosyadaki bilgiler Microsoft Corporation 'a gönderilir.  
   
  Tüm kaynak kodu dosyalarının bir kopyası içine yerleştirilecek `file` , olası en kısa programda şüpheli kod hatasını yeniden oluşturmak isteyebilirsiniz.  
   

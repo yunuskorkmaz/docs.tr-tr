@@ -1,6 +1,6 @@
 ---
 title: Sürüm dayanıklı serileştirme
-description: 2,0 .NET Framework, seri hale getirilebilir türlerin daha kolay bir şekilde değiştirileceğini sağlayan özellikler kümesi olan sürüm dayanıklı serileştirme 'i tanıtır.
+description: Seri hale getirilebilir türler üzerinde değişiklik yapmayı kolaylaştıran bir dizi özellik olan sürüm dayanıklı serileştirme hakkında bilgi edinin.
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83762597"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282417"
 ---
 # <a name="version-tolerant-serialization"></a>Sürüm dayanıklı serileştirme
 
-Sonraki uygulamaya bir sürümünden yeniden kullanılabilir olacaktır serializable türler oluşturmak sürüm 1.0 ve 1.1 .NET Framework'ün, sorunlu. Bir tür ek alanlar eklenerek değiştirilmişse, aşağıdaki sorunlar meydana gelir:
+.NET Framework en eski sürümlerinde, bir uygulamanın bir sürümünden bir sonrakine yeniden kullanılabilir olan serileştirilebilir türler oluşturma işlemi sorunlu olur. Bir tür ek alanlar eklenerek değiştirilmişse, aşağıdaki sorunlar meydana gelir:
 
 - Bir uygulamanın eski sürümleri yeni sürümleri eski türünü seri durumdan çıkarılacak sorulduğunda özel durumlar oluşturan.
 - Bir uygulamanın daha yeni sürümleri, bir eksik veri türüyle eski sürümleri işlenirken özel durumlar oluşturan.
 
-Sürüm dayanıklı serileştirme (VTS), .NET Framework 2,0 ' de sunulan ve zaman içinde seri hale getirilebilir türlerin değiştirilmesini sağlayan bir özellik kümesidir. Özellikle, VTS özellikleri, <xref:System.SerializableAttribute> Genel türler dahil olmak üzere özniteliğin uygulandığı sınıflar için etkinleştirilir. VTS türü diğer sürümleriyle uyumluluk bozup olmadan bu sınıflar için yeni alanlar eklemek olanaklı kılar. Çalışan bir örnek uygulama için bkz. [Sürüm dayanıklı serileştirme teknolojisi örneği](basic-serialization-technology-sample.md).
+Sürüm dayanıklı serileştirme (VTS), seri hale getirilebilir türlerin değiştirilmesini kolaylaştırmak için zaman içinde daha kolay hale getiren bir özellikler kümesidir. Özellikle, VTS özellikleri, <xref:System.SerializableAttribute> Genel türler dahil olmak üzere özniteliğin uygulandığı sınıflar için etkinleştirilir. VTS türü diğer sürümleriyle uyumluluk bozup olmadan bu sınıflar için yeni alanlar eklemek olanaklı kılar. Çalışan bir örnek uygulama için bkz. [Sürüm dayanıklı serileştirme teknolojisi örneği](basic-serialization-technology-sample.md).
 
 Kullanırken VTS özelliklerin etkinleştirilip <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Ayrıca, ' yi kullanırken, fazlalık veri toleransı hariç tüm özellikler de etkinleştirilir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> . Serileştirme için bu sınıfları kullanma hakkında daha fazla bilgi için bkz. [Ikili serileştirme](binary-serialization.md).
 
@@ -129,7 +129,7 @@ Serileştirme geri çağırmaları serileştirme/seri kaldırma işlemine dört 
 |<xref:System.Runtime.Serialization.OnSerializingAttribute>|Serileştirme önce.|Serileştirme için hazırlayın. Örneğin, isteğe bağlı veri yapıları oluşturun.|
 |<xref:System.Runtime.Serialization.OnSerializedAttribute>|Serileştirme sonra.|Serileştirme olayları kaydeder.|
 
- \*Bu geri çağırma, bir tane varsa, seri durumdan çıkarma oluşturucusundan önce çağrılır.
+ \* Bu geri çağırma, bir tane varsa, seri durumdan çıkarma oluşturucusundan önce çağrılır.
 
 #### <a name="using-callbacks"></a>Geri çağırmaları kullanma
 
@@ -188,9 +188,7 @@ End Class
 
 ## <a name="the-versionadded-property"></a>VersionAdded özelliği
 
-**OptionalFieldAttribute** , **VersionAdded** özelliğine sahiptir. .NET Framework sürüm 2,0 ' de, bu kullanılmaz. Ancak, türün gelecekteki serileştirme altyapılarıyla uyumlu olmasını sağlamak için bu özelliğin doğru ayarlanması önemlidir.
-
-Özelliği belirli bir alanı eklenmiş olan bir tür hangi sürümünü gösterir. Tam olarak bir (2 konumunda başlayarak) tarafından arttırılarak türü, aşağıdaki örnekte gösterildiği gibi değiştirilir her zaman:
+**OptionalFieldAttribute** , **VersionAdded** özelliğine sahiptir. Özelliği belirli bir alanı eklenmiş olan bir tür hangi sürümünü gösterir. Tam olarak bir (2 konumunda başlayarak) tarafından arttırılarak türü, aşağıdaki örnekte gösterildiği gibi değiştirilir her zaman:
 
 ```csharp
 // Version 1.0
@@ -263,7 +261,7 @@ End Class
 
 ## <a name="serializationbinder"></a>SerializationBinder
 
-Bazı kullanıcıların, sunucu ve istemci üzerinde farklı bir sınıf sürümü gerektiğinden, seri hale getirilecek ve seri durumdan çıkarılacak sınıfı kontrol etmeniz gerekebilir. <xref:System.Runtime.Serialization.SerializationBinder>serileştirme ve seri durumundan çıkarma sırasında kullanılan gerçek türleri denetlemek için kullanılan soyut bir sınıftır. Bu sınıf kullanmak için öğesinden bir sınıf türetin <xref:System.Runtime.Serialization.SerializationBinder> ve geçersiz kılın <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> ve <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> yöntemleri. Daha fazla bilgi için bkz. [Serializationciltçi Ile serileştirme ve serisini kaldırma](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).
+Bazı kullanıcıların, sunucu ve istemci üzerinde farklı bir sınıf sürümü gerektiğinden, seri hale getirilecek ve seri durumdan çıkarılacak sınıfı kontrol etmeniz gerekebilir. <xref:System.Runtime.Serialization.SerializationBinder> serileştirme ve seri durumundan çıkarma sırasında kullanılan gerçek türleri denetlemek için kullanılan soyut bir sınıftır. Bu sınıf kullanmak için öğesinden bir sınıf türetin <xref:System.Runtime.Serialization.SerializationBinder> ve geçersiz kılın <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> ve <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> yöntemleri. Daha fazla bilgi için bkz. [Serializationciltçi Ile serileştirme ve serisini kaldırma](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).
 
 ## <a name="best-practices"></a>En iyi uygulamalar
 

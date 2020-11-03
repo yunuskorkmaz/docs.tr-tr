@@ -18,23 +18,25 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 1532c4eeb09e7110d0f369ec47f342256889e576
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8e8d8d38ab8170a9bf9fae098e267be1a38f27d0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289661"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281795"
 ---
 # <a name="custom-serialization"></a>Özel serileştirme
+
 Özel serileştirme, bir türün serileştirme ve serisini kaldırma işlemidir. Serileştirme ' i denetleyerek, bir türün sürümleri arasında serileştirme ve seri durumdan çıkarma özelliği olan serileştirme uyumluluğunu sağlamak mümkündür. Örneğin, bir tür ilk sürümü olabilir yalnızca iki alan. Sonraki sürümünde bir tür, pek çok daha fazla alan eklenir. Henüz bir uygulamanın ikinci sürümü seri hale getirmek ve her iki türü seri durumdan olması gerekir. Aşağıdaki bölümlerde serileştirme denetiminin nasıl yapılacağı açıklanır.
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
-> .NET Framework 4,0 ' den önceki sürümlerde, kısmen güvenilen bir derlemede özel kullanıcı verilerinin serileştirilmesi, GetObjectData kullanılarak gerçekleştirildi. Sürüm 4,0 ' den başlayarak, bu yöntem <xref:System.Security.SecurityCriticalAttribute> kısmen güvenilen derlemelerde yürütmeyi önleyen özniteliğiyle işaretlenir. Bu durum çalışmak için uygulayan <xref:System.Runtime.Serialization.ISafeSerializationData> arabirimi.  
+> .NET Framework 4,0 ' den önceki sürümlerde, kısmen güvenilen bir derlemede özel kullanıcı verilerinin serileştirilmesi kullanılarak oluşturulmuştur `GetObjectData` . Sürüm 4,0 ' den başlayarak, bu yöntem <xref:System.Security.SecurityCriticalAttribute> kısmen güvenilen derlemelerde yürütmeyi önleyen özniteliğiyle işaretlenir. Bu durum çalışmak için uygulayan <xref:System.Runtime.Serialization.ISafeSerializationData> arabirimi.  
   
-## <a name="running-custom-methods-during-and-after-serialization"></a>Serileştirme sırasında ve sonrasında özel yöntemler çalıştırma  
- En iyi yöntem ve en kolay yolu (.NET Framework sürüm 2,0 ' de kullanıma sunulmuştur), serileştirme sırasında ve sonrasında verileri düzeltmek için kullanılan yöntemlere aşağıdaki öznitelikleri uygular:  
+## <a name="running-custom-methods-during-and-after-serialization"></a>Serileştirme sırasında ve sonrasında özel yöntemler çalıştırma
+
+Serileştirme sırasında ve sonrasında özel yöntemler çalıştırmanın önerilen yolu, serileştirme sırasında ve sonrasında verileri düzeltmek için kullanılan yöntemlere aşağıdaki öznitelikleri uygular:  
   
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
@@ -184,4 +186,4 @@ End Class
 
 - [İkili serileştirme](binary-serialization.md)
 - [XML ve SOAP serileştirme](xml-and-soap-serialization.md)
-- [Güvenlik ve Serileştirme](../../framework/misc/security-and-serialization.md)
+- [Güvenlik ve serileştirme](../../framework/misc/security-and-serialization.md)

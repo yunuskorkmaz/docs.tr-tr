@@ -2,12 +2,12 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 04/29/2020
-ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537749"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281616"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -38,7 +38,7 @@ dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
 dotnet test -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet test`Komut, belirli bir çözümde birim testlerini yürütmek için kullanılır. `dotnet test`Komut çözümü oluşturur ve çözümdeki her test projesi için bir test ana bilgisayarı uygulaması çalıştırır. Test ana bilgisayarı, test çerçevesini (örneğin, MSTest, NUnit veya xUnit) kullanarak belirtilen projedeki testleri yürütür ve her testin başarısını veya başarısızlığını bildirir. Tüm testler başarılı olursa, Test Çalıştırıcısı çıkış kodu olarak 0 döndürür; Aksi takdirde, herhangi bir test başarısız olursa, 1 döndürür.
 
@@ -77,7 +77,13 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 - **`--blame-crash`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
-  Testleri sorumluyu modunda çalıştırır ve test ana bilgisayarı beklenmedik bir şekilde çıktığında kilitlenme dökümünü toplar. Bu seçenek yalnızca Windows 'ta desteklenir. *procdump.exe* ve *procdump64.exe* IÇEREN bir dizin, yol veya PROCDUMP_PATH ortam değişkeninde olmalıdır. [Araçları indirin](/sysinternals/downloads/procdump). Şunu gösterir `--blame` .
+  Testleri sorumluyu modunda çalıştırır ve test ana bilgisayarı beklenmedik bir şekilde çıktığında kilitlenme dökümünü toplar. Bu seçenek, kullanılan .NET sürümüne, hata türüne ve işletim sistemine bağlıdır.
+  
+  Yönetilen koddaki özel durumlar için, .NET 5,0 ve sonraki sürümlerinde otomatik olarak bir döküm alınacaktır. Testhost veya .NET 5,0 ' de çalıştırılan ve kilitlenen herhangi bir alt işlem için bir döküm oluşturur. Yerel koddaki kilitlenmeler, döküm oluşturmaz. Bu seçenek Windows, macOS ve Linux 'ta kullanılabilir.
+  
+  Yerel koddaki kilitlenme dökümleri veya .NET Core 3,1 veya önceki sürümleri kullanıldığında, yalnızca Windows üzerinde ProcDump kullanılarak toplanabilir. *procdump.exe* ve *procdump64.exe* IÇEREN bir dizin, yol veya PROCDUMP_PATH ortam değişkeninde olmalıdır. [Araçları indirin](/sysinternals/downloads/procdump). Şunu gösterir `--blame` .
+  
+  .NET 5,0 veya üzeri sürümlerde çalışan bir yerel uygulamadan kilitlenme dökümü toplamak için, ortam değişkeni olarak ayarlanarak ProcDump kullanımı zorunlu olabilir `VSTEST_DUMP_FORCEPROCDUMP` `1` .
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
@@ -97,14 +103,14 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 - **`--blame-hang-timeout <TIMESPAN>`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
-  Test ana zaman aşımı, bir askıda kalma dökümü tetiklenir ve test ana bilgisayarı işlemi sonlandırılır. Zaman aşımı değeri aşağıdaki biçimlerden birinde belirtilir:
+  Test başına zaman aşımı, bir askıda kalma dökümü tetiklendikten sonra test ana bilgisayarı işlemi ve tüm alt işlemleri dökülür ve sonlandırılmalıdır. Zaman aşımı değeri aşağıdaki biçimlerden birinde belirtilir:
   
-  - 1.5 s
-  - 90 milyon
-  - 5400s
-  - 5400000ms
+  - 1.5 h, 1,5 saat, 1,5 saat
+  - 90 milyon, 90min, 90 dakika, 90 dakika
+  - 5400s, 5400sn, 5400second, 5400saniye
+  - 5400000ms, 5400000mil, 5400000milisaniyelik, 5400000milliseconds
 
-  Hiçbir birim kullanılmazsa (örneğin, 5400000), değerin milisaniye cinsinden olduğu varsayılır. Veri odaklı testlerle birlikte kullanıldığında, zaman aşımı davranışı kullanılan test bağdaştırıcısına bağlıdır. XUnit ve NUnit için zaman aşımı her test çalışmasının ardından yenilenir. MSTest için zaman aşımı tüm test çalışmaları için kullanılır. Bu seçenek netcoreapp 2.1 ve üzeri sürümlerde ve netcoreapp 3.1 ve üzeri Linux 'ta desteklenir. macOS desteklenmez.
+  Hiçbir birim kullanılmazsa (örneğin, 5400000), değerin milisaniye cinsinden olduğu varsayılır. Veri odaklı testlerle birlikte kullanıldığında, zaman aşımı davranışı kullanılan test bağdaştırıcısına bağlıdır. XUnit ve NUnit için zaman aşımı her test çalışmasının ardından yenilenir. MSTest için zaman aşımı tüm test çalışmaları için kullanılır. Bu seçenek netcoreapp 2.1 ve üzeri sürümlerde, netcoreapp 3.1 ve üzeri ile Linux 'ta ve net 5.0 veya üzeri ile macOS 'ta desteklenir. Ve anlamına gelir `--blame` `--blame-hang` .
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -124,7 +130,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  `dotnet`Test ikilileri için veya .NET Framework test ana bilgisayarının kullanımını zorlar. Bu seçenek yalnızca kullanılacak ana bilgisayar türünü belirler. Kullanılacak gerçek Framework sürümü, Test projesindeki *runtimeconfig.js* tarafından belirlenir. Belirtilmediğinde, [TargetFramework derleme özniteliği](/dotnet/api/system.runtime.versioning.targetframeworkattribute) konak türünü belirlemekte kullanılır. Bu öznitelik *. dll*' den çıkarılır .NET Framework ana bilgisayar kullanılır.
+  `dotnet`Test ikilileri için veya .NET Framework test ana bilgisayarının kullanımını zorlar. Bu seçenek yalnızca kullanılacak ana bilgisayar türünü belirler. Kullanılacak gerçek Framework sürümü, Test projesindeki *runtimeconfig.js* tarafından belirlenir. Belirtilmediğinde, [TargetFramework derleme özniteliği](/dotnet/api/system.runtime.versioning.targetframeworkattribute) konak türünü belirlemekte kullanılır. Bu öznitelik *. dll* ' den çıkarılır .NET Framework ana bilgisayar kullanılır.
 
 - **`--filter <EXPRESSION>`**
 
@@ -249,7 +255,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 , `<operator>` Özelliği ve değeri arasındaki ilişkiyi açıklar:
 
-| Operatör | İşlev        |
+| İşleç | İşlev        |
 | :------: | --------------- |
 | `=`      | Tam eşleşme     |
 | `!=`     | Tam eşleşme yok |
@@ -262,9 +268,9 @@ Bir ifadesi `<operator>` , otomatik olarak on özelliği olarak kabul `contains`
 
 İfadeler koşullu işleçlerle birleştirilebilecek:
 
-| Operatör            | İşlev |
+| İşleç            | İşlev |
 | ------------------- | -------- |
-| <code>&#124;</code> | VEYA       |
+| <code>&#124;</code> | VEYA       |
 | `&`                 | AND      |
 
 Koşullu işleçler kullandığınızda (örneğin,) ifadeleri parantez içine alabilirsiniz `(Name~TestMethod1) | (Name~TestMethod2)` .

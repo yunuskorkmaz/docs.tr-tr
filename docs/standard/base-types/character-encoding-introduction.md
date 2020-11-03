@@ -10,18 +10,18 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: d1f9878c7e7c07944a943c0b05e557ceaa5d1b2f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 572fcd289eea720873d94e7fc71f3b4a030d1d70
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812126"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282315"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde karakter kodlaması
 
 Bu makalede char , .NET tarafından kullanılan kodlama sistemlerine yönelik bir giriş sunulmaktadır. Makalesinde,,, <xref:System.String> <xref:System.Char> <xref:System.Text.Rune> ve <xref:System.Globalization.StringInfo> türlerinin Unicode, UTF-16 ve UTF-8 ile nasıl çalıştığı açıklanmaktadır.
 
-* char Acter* terimi, *bir okuyucunun tek bir görüntüleme öğesi olarak beyin bir*genel anlamda burada kullanılır. Ortak örnekler, "a", "@" simgesi ve Emoji "" harftir 🐂 . Bazı durumlarda char , [grafem kümelerindeki](#grapheme-clusters) bölümünde açıklandığı gibi, bir acter aslında birden çok bağımsız görüntüleme öğelerinden oluşur.
+*char Acter* terimi, *bir okuyucunun tek bir görüntüleme öğesi olarak beyin bir* genel anlamda burada kullanılır. Ortak örnekler, "a", "@" simgesi ve Emoji "" harftir 🐂 . Bazı durumlarda char , [grafem kümelerindeki](#grapheme-clusters) bölümünde açıklandığı gibi, bir acter aslında birden çok bağımsız görüntüleme öğelerinden oluşur.
 
 ## <a name="the-no-locstring-and-no-locchar-types"></a>stringVe char türleri
 
@@ -46,7 +46,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-Her char bir acter tek bir değer ile temsil edilir `char` . Bu kalıp, dünyanın çoğu dili için geçerli bir değer içerir. Örneğin, char *nǐ hǎo* ve " *Hello*" gibi sesli iki Çince acters çıkışı aşağıda verilmiştir:
+Her char bir acter tek bir değer ile temsil edilir `char` . Bu kalıp, dünyanın çoğu dili için geçerli bir değer içerir. Örneğin, char *nǐ hǎo* ve " *Hello* " gibi sesli iki Çince acters çıkışı aşağıda verilmiştir:
 
 ```csharp
 PrintChars("你好");
@@ -97,7 +97,7 @@ s[1] = '�' ('\udc02')
 
 Bu örnekler `string.Length` , örneklerinin sayısını gösteren değerinin, `char` görüntülenen acters sayısını belirtmesinin gerekli olmadığını gösterir char . Tek bir `char` örnek bir acter temsil etmesi gereken değildir char .
 
-`char`Tek bir acter ile eşlenen çiftler char *vekil çiftleri*olarak adlandırılır. Nasıl çalıştığını anlamak için Unicode ve UTF-16 kodlamasını anlamanız gerekir.
+`char`Tek bir acter ile eşlenen çiftler char *vekil çiftleri* olarak adlandırılır. Nasıl çalıştığını anlamak için Unicode ve UTF-16 kodlamasını anlamanız gerekir.
 
 ## <a name="unicode-code-points"></a>Unicode kod noktaları
 
@@ -109,8 +109,8 @@ Aşağıda göründükleri Unicode TS bağlantıları ile kod noktası atamalar�
 
 |Ondalık|Onaltılık       |Örnek|Açıklama|
 |------:|----------|-------|-----------|
-|10     | `U+000A` |YOK| [SATıR BESLEME](https://www.unicode.org/charts/PDF/U0000.pdf) |
-|65     | `U+0061` | a | [LATIN KÜÇÜK HARF A](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|10     | `U+000A` |Yok| [SATıR BESLEME](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|97     | `U+0061` | a | [LATIN KÜÇÜK HARF A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [LATIN BÜYÜK HARF Y WITH MACRON](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68.675 | `U+10C43`| 𐱃 | [ESKI TÜRKIC LETTER ORKHON](https://www.unicode.org/charts/PDF/U10C00.pdf) |
 |127.801| `U+1F339`| 🌹 | [GÜL emoji](https://www.unicode.org/charts/PDF/U1F300.pdf) |
@@ -128,7 +128,7 @@ Aşağıdaki diyagramda, BMP ve ek kod noktaları arasındaki ilişki gösterilm
 
 ## <a name="utf-16-code-units"></a>UTF-16 kod birimleri
 
-16 bit Unicode dönüştürme biçimi ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)), char Unicode kod noktalarını temsil etmek için 16 bit *kod birimi* kullanan bir acter kodlama sistemidir. .NET, içindeki metni kodlamak için UTF-16 kullanır `string` . `char`Örnek, 16 bit kod birimini temsil eder.
+16 bit Unicode dönüştürme biçimi ( [UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)), char Unicode kod noktalarını temsil etmek için 16 bit *kod birimi* kullanan bir acter kodlama sistemidir. .NET, içindeki metni kodlamak için UTF-16 kullanır `string` . `char`Örnek, 16 bit kod birimini temsil eder.
 
 Tek bir 16 bit kod birimi, temel çok dilli düzlemin 16 bit aralığında herhangi bir kod noktasını temsil edebilir. Ancak, tamamlayıcı aralıktaki bir kod noktası için iki `char` örnek gereklidir.
 
@@ -266,7 +266,7 @@ Bir a 'nın grafem kümelerini numaralandırmak için `string` <xref:System.Glob
 
 ### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>Örnek: Count char , Rune , ve metin öğesi örnekleri
 
-.NET API 'lerinde, bir grafem kümesine *metin öğesi*denir. Aşağıdaki yöntem `char` ,, `Rune` ve içindeki metin öğesi örnekleri arasındaki farkları göstermektedir `string` :
+.NET API 'lerinde, bir grafem kümesine *metin öğesi* denir. Aşağıdaki yöntem `char` ,, `Rune` ve içindeki metin öğesi örnekleri arasındaki farkları göstermektedir `string` :
 
 ::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-tanıtımı/CSharp/CountTextElements. cs" ID = "SnippetCountMethod":::
 

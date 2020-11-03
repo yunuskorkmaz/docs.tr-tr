@@ -2,12 +2,12 @@
 title: DotNet komutu
 description: DotNet komutu (.NET Core CLI için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 02/13/2020
-ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537671"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281629"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -48,7 +48,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 `--roll-forward` , .NET Core 3. x sürümünden bu yana kullanılabilir. `--roll-forward-on-no-candidate-fx`.NET Core 2. x için kullanın.
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet`Komutun iki işlevi vardır:
 
@@ -262,7 +262,7 @@ dotnet myapp.dll
 
   Varsayılan konumda yüklü değilse, .NET Core çalışma zamanlarının konumunu belirtir. Windows üzerinde varsayılan konum `C:\Program Files\dotnet` . Linux ve macOS 'ta varsayılan konum `/usr/share/dotnet` . Bu ortam değişkeni yalnızca oluşturulan yürütülebilir dosyalar (apphosts) aracılığıyla uygulamalar çalıştırılırken kullanılır. `DOTNET_ROOT(x86)` , 64 bit IŞLETIM sisteminde 32 bitlik bir yürütülebilir dosya çalıştırılırken kullanılır.
 
-- `DOTNET_PACKAGES`
+- `NUGET_PACKAGES`
 
   Genel paketler klasörü. Ayarlanmamışsa, varsayılan olarak `~/.nuget/packages` UNIX veya `%userprofile%\.nuget\packages` Windows üzerinde olur.
 

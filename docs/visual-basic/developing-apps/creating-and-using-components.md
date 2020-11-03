@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: e4d4fa092363a5e76658f2770c0d655bb225f3f3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 106b8791ee5cb3db95759ccca2fddd799661ef3c
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544589"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282062"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic'te Bileşenler Oluşturma ve Kullanma
 
-*Bileşen* , <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> arabirimini uygulayan veya uygulayan bir sınıftan doğrudan veya dolaylı olarak türetilen bir sınıftır <xref:System.ComponentModel.IComponent> . .NET Framework bileşen yeniden kullanılabilir olan, diğer nesnelerle etkileşime girebilen ve dış kaynaklar ve tasarım zamanı desteği üzerinde denetim sağlayan bir nesnedir.  
+*Bileşen* , <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> arabirimini uygulayan veya uygulayan bir sınıftan doğrudan veya dolaylı olarak türetilen bir sınıftır <xref:System.ComponentModel.IComponent> . .NET bileşeni, yeniden kullanılabilen, diğer nesnelerle etkileşime girebilen bir nesnedir ve dış kaynaklar ve tasarım zamanı desteği üzerinde denetim sağlar.  
   
- Bileşenlerin önemli bir özelliği, bir bileşen olan bir sınıfın Visual Studio tümleşik geliştirme ortamında kullanılabileceği anlamına gelir. Araç kutusuna bir bileşen eklenebilir, sürüklenip bir forma bırakılabilir ve tasarım yüzeyinde değiştirilebilir. Bileşenler için temel tasarım zamanı desteğinin .NET Framework yerleşik olduğuna dikkat edin; bir bileşen geliştiricisi, temel tasarım zamanı işlevlerinin avantajlarından yararlanmak için ek bir iş yapmak zorunda değildir.  
+ Bileşenlerin önemli bir özelliği, bir bileşen olan bir sınıfın Visual Studio tümleşik geliştirme ortamında kullanılabileceği anlamına gelir. Araç kutusuna bir bileşen eklenebilir, sürüklenip bir forma bırakılabilir ve tasarım yüzeyinde değiştirilebilir. Bileşenler için temel tasarım zamanı desteği .NET içinde yerleşiktir. Bir bileşen geliştiricisi, temel tasarım zamanı işlevlerinin avantajlarından yararlanmak için ek bir iş yapmak zorunda değildir.  
   
  Bir *Denetim* , bir bileşene benzer, her ikisi de göstergeler olur. Ancak, bir denetim bir kullanıcı arabirimi sağlar, ancak bir bileşen desteklemez. Bir denetim, taban denetim sınıflarından birinden türetilmelidir: <xref:System.Windows.Forms.Control> veya <xref:System.Web.UI.Control> .  
   
@@ -68,4 +68,4 @@ ms.locfileid: "90544589"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Windows Forms 'de tasarım zamanı desteğine erişme](/dotnet/desktop/winforms/controls/developing-windows-forms-controls-at-design-time)
+- [Nasıl yapılır: Windows Forms Design-Time desteğe erişme](/dotnet/desktop/winforms/controls/developing-windows-forms-controls-at-design-time)

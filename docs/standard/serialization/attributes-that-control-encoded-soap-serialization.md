@@ -1,26 +1,26 @@
 ---
 title: Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler
-description: Bu makalede, SOAP belirtimine uyması için gereken System. xml. Serialization ad alanında bulunan özel bir öznitelik kümesi listelenir.
+description: Bu makalede, System.Xml bulunan özel bir öznitelik kümesi listelenir. SOAP belirtimine uyması için serileştirme ad alanı gerekiyor.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SOAP, XML serialization
 - XML serialization, SOAP
 - XML serialization, attributes
-- attributes [.NET Framework], XML serialization
+- attributes [.NET], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: d9a4631189d348c02ab36054257a54c9c4673018
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 69a9d1c8734a393b576cf87e7e05ef92c10120c8
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289674"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282037"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler
 
 [Basit nesne erişim Protokolü (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) adlı World WIDE Web KONSORSIYUMU (W3C) BELGESI, SOAP parametrelerinin nasıl kodlandığını açıklayan isteğe bağlı bir bölüm (5. bölüm) içerir. Belirtimin 5. bölümüne uymak için, ad alanında bulunan özel bir öznitelik kümesi kullanmanız gerekir <xref:System.Xml.Serialization> . Bu öznitelikleri sınıflar ve sınıfların üyelerine uygun şekilde uygulayın ve ardından <xref:System.Xml.Serialization.XmlSerializer> sınıfı veya sınıfların örneklerini seri hale getirmek için kullanın.
 
-Aşağıdaki tabloda öznitelikleri, nerede uygulanabileceğini ve ne yaptığını gösterir. XML serileştirmesini denetlemek için bu öznitelikleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir NESNEYI SOAP kodlu XML akışı olarak serileştirme](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) ve [nasıl yapılır: kodlanmış SOAP XML serileştirmesini geçersiz kılma](how-to-override-encoded-soap-xml-serialization.md).
+Aşağıdaki tabloda öznitelikleri, nerede uygulanabileceğini ve ne yaptığını gösterir. XML serileştirmesini denetlemek için bu öznitelikleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir nesneyi SOAP-Encoded XML akışı olarak serileştirme](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) ve [nasıl yapılır: kodlanmış SOAP XML serileştirmesini geçersiz kılma](how-to-override-encoded-soap-xml-serialization.md).
 
 Öznitelikler hakkında daha fazla bilgi için bkz. [öznitelikler](../attributes/index.md).
 

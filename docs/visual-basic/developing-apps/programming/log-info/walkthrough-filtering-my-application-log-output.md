@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: aa63e7d23641ad71b135f15236e29399a535784f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e77a56b2be33555bc02157c8e643ac655b083bc3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398259"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282209"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>İzlenecek Yol: My.Application.Log Çıktısını Filtreleme (Visual Basic)
 
@@ -33,7 +33,7 @@ Yazan her ileti `My.Application.Log` , bir ilişkili önem düzeyine sahiptir ve
 
 4. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-5. **Button1**'e basın.
+5. **Button1** 'e basın.
 
      Uygulama, uygulamanın hata ayıklama çıktısına ve günlük dosyasına aşağıdaki bilgileri yazar.
 
@@ -60,10 +60,10 @@ Bu tablo, belirli bir ayar için, günlüğe kaydedilecek bir ileti yazmak için
 |---|---|
 |`Critical`|`Critical`|
 |`Error`|`Critical` veya `Error`|
-|`Warning`|`Critical`, `Error` , veya`Warning`|
-|`Information`|`Critical`, `Error` , `Warning` veya`Information`|
-|`Verbose`|`Critical`,,, `Error` `Warning` `Information` veya`Verbose`|
-|`ActivityTracing`|`Start`,,, `Stop` `Suspend` `Resume` veya`Transfer`|
+|`Warning`|`Critical`, `Error` , veya `Warning`|
+|`Information`|`Critical`, `Error` , `Warning` veya `Information`|
+|`Verbose`|`Critical`,,, `Error` `Warning` `Information` veya `Verbose`|
+|`ActivityTracing`|`Start`,,, `Stop` `Suspend` `Resume` veya `Transfer`|
 |`All`|Tüm iletilere izin verilir.|
 |`Off`|Tüm iletiler engellenir.|
 
@@ -74,17 +74,17 @@ Bu tabloda, önceki örnekte gösterilen günlük çıktısı açıklanmaktadır
 
 #### <a name="to-log-only-activity-tracing-events"></a>Yalnızca etkinlik izleme olaylarını günlüğe kaydetmek için
 
-1. **Çözüm Gezgini** App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
+1. **Çözüm Gezgini** app.config sağ tıklayın ve **Aç** ' ı seçin.
 
      -veya-
 
-     App. config dosyası yoksa:
+     app.config dosya yoksa:
 
-    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+    1. **Proje** menüsünde **Yeni öğe Ekle** ' yi seçin.
 
-    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası** ' nı seçin.
 
-    3. **Ekle**'ye tıklayın.
+    3. **Ekle** 'ye tıklayın.
 
 2. `<switches>`Üst düzey bölümde bulunan bölümünde olan bölümünü bulun `<system.diagnostics>` `<configuration>` .
 
@@ -94,7 +94,7 @@ Bu tabloda, önceki örnekte gösterilen günlük çıktısı açıklanmaktadır
 
 4. `value`Özniteliğin değerini "ActivityTracing" olarak değiştirin.
 
-5. App. config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
+5. app.config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -125,7 +125,7 @@ Bu tabloda, önceki örnekte gösterilen günlük çıktısı açıklanmaktadır
 
 6. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-7. **Button1**'e basın.
+7. **Button1** 'e basın.
 
      Uygulama aşağıdaki bilgileri uygulamanın hata ayıklama çıktısına ve günlük dosyasına yazar:
 
@@ -138,7 +138,7 @@ Bu tabloda, önceki örnekte gösterilen günlük çıktısı açıklanmaktadır
 9. `value`Özniteliğin değerini "Information" olarak değiştirin.
 
     > [!NOTE]
-    > `DefaultSwitch`Yalnızca anahtar ayarı denetimleri `My.Application.Log` . .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıflarının nasıl davranacağını değiştirmez.
+    > `DefaultSwitch`Yalnızca anahtar ayarı denetimleri `My.Application.Log` . .NET <xref:System.Diagnostics.Trace?displayProperty=nameWithType> ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıfların nasıl davranacağını değiştirmez.
 
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My. Application. log dinleyicileri Için bireysel filtreleme
 
@@ -150,19 +150,19 @@ Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapıl
 
 #### <a name="to-log-only-activity-tracing-events"></a>Yalnızca etkinlik izleme olaylarını günlüğe kaydetmek için
 
-1. **Çözüm Gezgini** App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
+1. **Çözüm Gezgini** app.config sağ tıklayın ve **Aç** ' ı seçin.
 
      \-veya
 
-     App. config dosyası yoksa:
+     app.config dosya yoksa:
 
-    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+    1. **Proje** menüsünde **Yeni öğe Ekle** ' yi seçin.
 
-    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası** ' nı seçin.
 
-    3. **Ekle**'ye tıklayın.
+    3. **Ekle** 'ye tıklayın.
 
-2. **Çözüm Gezgini**' de App. config öğesine sağ tıklayın. **Aç**' ı seçin.
+2. **Çözüm Gezgini** app.config sağ tıklayın. **Aç** ' ı seçin.
 
 3. Bölümünün `<listeners>` `<source>` altında bulunan `name` "DefaultSource" özniteliğine sahip bölümünde bölümünü bulun `<sources>` . `<sources>`Bölümü, `<system.diagnostics>` bölümünün üst düzey bölümünde yer aldığı bölümdür `<configuration>` .
 
@@ -192,7 +192,7 @@ Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapıl
 
      <xref:System.Diagnostics.EventTypeFilter>Filtre, <xref:System.Diagnostics.SourceLevels> sabit listesi değerlerinden birini özniteliği olarak alır `initializeData` .
 
-7. App. config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
+7. app.config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -235,7 +235,7 @@ Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapıl
 
 8. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-9. **Button1**'e basın.
+9. **Button1** 'e basın.
 
      Uygulama, uygulamanın günlük dosyasına aşağıdaki bilgileri yazar:
 

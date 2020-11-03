@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 2ede74dd8a48735a7ded450d1da6d9cda8fc5ae6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bfb504862232345db07bdc92993069fc87afdbeb
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554501"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282097"
 ---
 # <a name="binary-serialization"></a>İkili serileştirme
 
@@ -25,7 +25,7 @@ Serileştirme depolama ortamına bir nesne durumunu depolama işlemi olarak tan�
 Bir serileştirme mekanizmasını nesne yönelimli bir ortamda uygularken, kullanım kolaylığı ve esneklik arasında bir dizi denge yapmanız gerekir. Süreç üzerinde yeterli denetim verildiğinden işlem, büyük bir ölçüde otomatik olabilir. Örneğin, burada basit ikili serileştirme yeterli değil veya bir sınıf hangi alanları seri hale gerek karar vermek için belirli bir neden olabilir durumlarda gerçekleşebilir. Aşağıdaki bölümlerde .NET ile sunulan güçlü serileştirme mekanizması incelenecektir ve bu işlemi gereksinimlerinizi karşılayacak şekilde özelleştirmenize imkan tanıyan bazı önemli özellikler vurgulanacak.
 
 > [!NOTE]
-> Nesnenin serileştirildiği ve farklı .NET Framework sürümleri kullanılarak seri durumdan UTF-8 veya UTF-7 kodlanmış nesne durumunu korunur değil.
+> Bir UTF-8 veya UTF-7 kodlu nesnenin durumu, nesne serileştirildiğinde ve farklı .NET sürümleri kullanılarak seri durumdan çıkarılmışsa korunmaz.
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
@@ -351,7 +351,7 @@ Ortak dil çalışma zamanı ile içerdiği XML serileştirme mekanizması açı
 Serileştirme gerçekleştiren kod yazarken izlemek için güvenli kodlama yönergeleri açıklar.
 
 - [.NET uzaktan Iletişim](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
-Uzak iletişimler için .NET Framework başlayarak çeşitli yöntemleri açıklar.
+Uzaktan iletişimler için .NET Framework çeşitli yöntemleri açıklar.
 
 - [ASP.NET ve XML Web hizmeti Istemcileri kullanılarak oluşturulan XML Web Hizmetleri](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 ASP.NET kullanılarak oluşturulan XML Web hizmetlerinin programlamasını açıklayan ve açıklayan makaleler.

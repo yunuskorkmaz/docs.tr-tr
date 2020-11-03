@@ -3,18 +3,18 @@ title: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 description: XML serileştirici Oluşturucusu, bir derlemedeki türler için bir XML serileştirme derlemesi oluşturur ve bu da XmlSerializer 'ın başlangıç performansını geliştirir.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 80295a9a54b6f9b1970fb65dacdee43b2e938070
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288946"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282355"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 
 XML seri hale getirici Oluşturucusu, belirtilen derlemedeki türler için bir XML serileştirme derlemesi oluşturuyor. Serileştirme derlemesi, <xref:System.Xml.Serialization.XmlSerializer> belirtilen türlerin nesnelerini seri hale getirse veya seri hale getirtiğinde bir öğesinin başlangıç performansını geliştirir.
   
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 Aracı komut satırından çalıştırın.
   
@@ -23,20 +23,20 @@ sgen [options]
 ```
   
 > [!TIP]
-> .NET Framework araçlarının düzgün çalışması için,, `Path` `Include` ve `Lib` ortam değişkenlerinizi doğru şekilde ayarlamanız gerekir. \V2.0\Bin dizininde bulunan SDKVars. bat dosyasını çalıştırarak bu ortam değişkenlerini ayarlayın \<SDK> . Her komut kabuğu'nu SDKVars.bat yürütülmelidir.
+> .NET Framework araçlarının düzgün çalışması için,, `Path` `Include` ve `Lib` ortam değişkenlerinizi doğru şekilde ayarlamanız gerekir. Bu ortam değişkenlerini, \Bin dizininde bulunan SDKVars.bat çalıştırarak ayarlayın \<SDK> \\ \<version> . Her komut kabuğu'nu SDKVars.bat yürütülmelidir.
   
 ## <a name="parameters"></a>Parametreler  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/a \[ erleme \] :**_dosya adı_|*Dosya adı*tarafından belirtilen derlemede veya yürütülebilir dosyada bulunan tüm türler için serileştirme kodu oluşturur. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
+|**/a \[ erleme \] :**_dosya adı_|*Dosya adı* tarafından belirtilen derlemede veya yürütülebilir dosyada bulunan tüm türler için serileştirme kodu oluşturur. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
 |**/c \[ ompiler \] :**_Seçenekler_|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  
 |**/d \[ ebug\]**|Bir hata ayıklayıcısı ile kullanılan bir görüntü oluşturur.|  
-|**/f \[ Orce\]**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan değer **false**'dur.|  
+|**/f \[ Orce\]**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan değer **false** 'dur.|  
 |**/Help veya/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/k \[ UT\]**|Serileştirme derlemeye derlenen sonra oluşturulan kaynak dosyaların ve diğer geçici dosyaları silmeyi göstermez. Bu araç belirli bir tür için serileştirme kod oluşturmak olup olmadığını belirlemek için kullanılabilir.|  
 |**/n \[ ologo\]**|Microsoft başlangıç başlığı görüntülenmesini engeller.|  
-|**/o \[ UT \] :**_yol_|Oluşturulan derleme kaydedileceği dizini belirtir. **Note:**  Oluşturulan derlemenin adı, giriş derlemesinin adından oluşur ve "Xmlserileştiriciler. dll".|  
+|**/o \[ UT \] :**_yol_|Oluşturulan derleme kaydedileceği dizini belirtir. **Note:**  Oluşturulan derlemenin adı, giriş derlemesinin adından ve "xmlSerializers.dll" oluşur.|  
 |**/p \[ roxytypes\]**|XML Web hizmeti proxy türleri için yalnızca serileştirme kod oluşturur.|  
 |**/r \[ eference \] :**_AssemblyFiles_|XML serileştirme gerektiren türleri tarafından başvurulan bir derleme belirtir. Virgülle ayrılmış birden çok derleme dosyaları kabul eder.|  
 |**/s \[ ilent\]**|Başarı iletilerinin görüntülenmesini bastırır.|  
@@ -45,7 +45,7 @@ sgen [options]
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- XML seri hale getirici oluşturucunun kullanılmadığında bir <xref:System.Xml.Serialization.XmlSerializer> seri hale getirme kodu ve bir seri hale getirme derlemesi her türü için bir uygulama her çalıştırıldığında oluşturur. XML serileştirme başlatmasının performansını artırmak için SGen. exe aracını kullanarak bu derlemeleri önceden oluşturun. Bu derlemeleri uygulama ile sonra dağıtılabilir.  
+ XML seri hale getirici oluşturucunun kullanılmadığında bir <xref:System.Xml.Serialization.XmlSerializer> seri hale getirme kodu ve bir seri hale getirme derlemesi her türü için bir uygulama her çalıştırıldığında oluşturur. XML serileştirme başlatmasının performansını artırmak için, bu derlemeleri önceden oluşturmak üzere Sgen.exe aracını kullanın. Bu derlemeleri uygulama ile sonra dağıtılabilir.  
   
  XML seri hale getirici oluşturucunun ayrıca seri hale getirme işlemi türü ilk kez yüklendiğinde isabet bir performans tabi olmayan çünkü sunucularla iletişim kurmak için XML Web hizmeti proxy kullanan istemciler performansını geliştirebilir.  
   

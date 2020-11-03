@@ -3,21 +3,21 @@ title: XML şema tanımı Aracı (XSD.exe'nin)
 description: XML serileştirici Oluşturucusu, belirtilen derlemedeki türler için bir XML serileştirme derlemesi oluşturur ve bu da XmlSerializer 'ın başlangıç performansını geliştirir.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288985"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281759"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML şema tanımı Aracı (XSD.exe'nin)
 
 XML şema tanımı (XSD.exe'nin) aracı XDR, XML ve XSD dosyalarından veya bir çalışma zamanı derleme sınıflarda XML Şeması veya ortak dil çalışma zamanı sınıflar oluşturur.
 
-XML şema tanımı Aracı (xsd. exe) genellikle şu yolda bulunabilir: \
+XML şema tanımı Aracı (Xsd.exe) genellikle aşağıdaki yolda bulunabilir: \
 _C: \\ Program Files (x86) \\ Microsoft SDK 'ları \\ Windows \\ {Version} \\ bin \\ Netfx {Version} araçları\\_
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 Aracı komut satırından çalıştırın.
 
@@ -32,13 +32,13 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> .NET Framework araçlarının düzgün çalışması için,, `Path` `Include` ve `Lib` ortam değişkenlerinizi doğru şekilde ayarlamanız gerekir. \V2.0\Bin dizininde bulunan SDKVars. bat dosyasını çalıştırarak bu ortam değişkenlerini ayarlayın \<SDK> . Her komut kabuğu'nu SDKVars.bat yürütülmelidir.
+> .NET Framework araçlarının düzgün çalışması için,, `Path` `Include` ve `Lib` ortam değişkenlerinizi doğru şekilde ayarlamanız gerekir. Bu ortam değişkenlerini, \Bin dizininde bulunan SDKVars.bat çalıştırarak ayarlayın \<SDK> \\ \<version> . Her komut kabuğu'nu SDKVars.bat yürütülmelidir.
 
 ## <a name="argument"></a>Bağımsız Değişken
 
 |Bağımsız Değişken|Açıklama|
 |--------------|-----------------|
-|*dosya. Extension*|Dönüştürülecek giriş dosyasını belirtir. Uzantıyı aşağıdakilerden biri olarak belirtmeniz gerekir:. xdr,. xml,. xsd,. dll veya. exe.<br /><br /> XDR şema dosyası (.xdr uzantısı) belirtirseniz, xsd.exe'nin bir XSD şemasına XDR şeması dönüştürür. Çıkış dosyası XDR şeması, ancak .xsd uzantısı ile aynı ada sahip.<br /><br /> Bir XML dosyası (.xml uzantısı) belirtirseniz, xsd.exe'nin veri dosyasındaki bir şema öğesinin ve bir XSD şeması üretir. Çıkış dosyası XML dosyası olarak, ancak .xsd uzantısı ile aynı ada sahip.<br /><br /> Bir XML şema dosyası (.xsd uzantısı) belirtirseniz, xsd.exe'nin için XML Şeması karşılık gelen çalışma zamanı nesneler için kaynak kodu oluşturur.<br /><br /> Bir çalışma zamanı derleme dosyası (.exe veya .dll uzantısı) belirtirseniz, xsd.exe'nin şemaları bir veya daha fazla türleri için bu derlemede oluşturur. Kullanabilirsiniz `/type` şemaları oluşturulacak türlerini belirtmek için seçeneği. Çıkış şemaları schema0.xsd, schema1.xsd vb. adlandırılır. Yalnızca verilen türler özel özniteliği kullanarak bir ad alanı belirtse xsd. exe birden çok şema oluşturur `XMLRoot` .|
+|*dosya. Extension*|Dönüştürülecek giriş dosyasını belirtir. Uzantıyı aşağıdakilerden biri olarak belirtmeniz gerekir:. xdr,. xml,. xsd,. dll veya. exe.<br /><br /> XDR şema dosyası (.xdr uzantısı) belirtirseniz, xsd.exe'nin bir XSD şemasına XDR şeması dönüştürür. Çıkış dosyası XDR şeması, ancak .xsd uzantısı ile aynı ada sahip.<br /><br /> Bir XML dosyası (.xml uzantısı) belirtirseniz, xsd.exe'nin veri dosyasındaki bir şema öğesinin ve bir XSD şeması üretir. Çıkış dosyası XML dosyası olarak, ancak .xsd uzantısı ile aynı ada sahip.<br /><br /> Bir XML şema dosyası (.xsd uzantısı) belirtirseniz, xsd.exe'nin için XML Şeması karşılık gelen çalışma zamanı nesneler için kaynak kodu oluşturur.<br /><br /> Bir çalışma zamanı derleme dosyası (.exe veya .dll uzantısı) belirtirseniz, xsd.exe'nin şemaları bir veya daha fazla türleri için bu derlemede oluşturur. Kullanabilirsiniz `/type` şemaları oluşturulacak türlerini belirtmek için seçeneği. Çıkış şemaları schema0.xsd, schema1.xsd vb. adlandırılır. Xsd.exe, yalnızca verilen türler özel özniteliği kullanarak bir ad alanı belirtse birden çok şema üretir `XMLRoot` .|
 
 ## <a name="general-options"></a>Genel seçenekleri
 
@@ -47,7 +47,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |**/h \[ ELP\]**|Araç için komut sözdizimini ve seçenekleri görüntüler.|
 |**/o \[ utputdir \] :**_Dizin_|Çıktı dosyaları dizinini belirtir. Bu bağımsız değişken yalnızca bir kez görünebilir. Geçerli dizin varsayılandır.|
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|
-|**/p \[ arameters \] :**_File. xml_|Çeşitli işlem modları için seçenekler belirtilen .xml dosyasından okuyun. Kısa biçim `/p:` . Daha fazla bilgi için, [açıklamalar](#remarks) bölümüne bakın.|
+|**/p \[ arameters \] :** _file.xml_|Çeşitli işlem modları için seçenekler belirtilen .xml dosyasından okuyun. Kısa biçim `/p:` . Daha fazla bilgi için, [açıklamalar](#remarks) bölümüne bakın.|
 
 ## <a name="xsd-file-options"></a>XSD dosyası seçenekleri
  .Xsd dosyaları için aşağıdaki seçeneklerden birini belirtmelisiniz.
@@ -76,7 +76,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|**/t \[ türü \] :**_TypeName_|Şema için oluşturulacak tür adını belirtir. Birden çok tür bağımsız değişkeni belirtebilirsiniz. *TypeName* bir ad alanı belirtmezse, xsd. exe, belirtilen türe sahip derlemedeki tüm türlerle eşleşir. *TypeName* bir ad alanı belirtiyorsa, yalnızca bu tür eşleştirilir. *TypeName* bir yıldız karakteriyle () sonlanıyorsa, \* araç, önceki dizeyle başlayan tüm türlerle eşleşir \* . Unutursanız, `/type` seçeneği XSD.exe'nin derlemesinde tüm türler için şemalar oluşturur.|
+|**/t \[ türü \] :**_TypeName_|Şema için oluşturulacak tür adını belirtir. Birden çok tür bağımsız değişkeni belirtebilirsiniz. *TypeName* bir ad alanı belirtmezse, Xsd.exe derlemedeki tüm türlerle belirtilen türle eşleşir. *TypeName* bir ad alanı belirtiyorsa, yalnızca bu tür eşleştirilir. *TypeName* bir yıldız karakteriyle () sonlanıyorsa, \* araç, önceki dizeyle başlayan tüm türlerle eşleşir \* . Unutursanız, `/type` seçeneği XSD.exe'nin derlemesinde tüm türler için şemalar oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -105,7 +105,7 @@ Aşağıdaki tablo operasyonları XSD.exe'nin gerçekleştireceğini gösterir.
 </xsd>
 ```
 
-Önceki XML, GenerateSchemas. xml adlı bir dosyada yer alıyorsa, `/parameters` komut istemine aşağıdakileri yazıp **ENTER**tuşuna basarak anahtarı kullanın:
+Önceki XML, GenerateSchemas.xml adlı bir dosyada yer alıyorsa, `/parameters` komut istemine aşağıdakileri yazıp **ENTER** tuşuna basarak anahtarı kullanın:
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -122,7 +122,7 @@ Diğer yandan, derlemede bulunan tek bir tür için bir şema oluşturuyorsanız
 </xsd>
 ```
 
-Ancak, önceki kodu kullanmak için da komut isteminde derlemenin adı sağlamanız gerekir. Komut istemine aşağıdaki komutu girin (XML dosyası, GenerateSchemaFromType. xml olarak adlandırılır):
+Ancak, önceki kodu kullanmak için da komut isteminde derlemenin adı sağlamanız gerekir. Komut istemine aşağıdaki komutu girin (XML dosyasının adı GenerateSchemaFromType.xml):
 
 ```console
 xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe

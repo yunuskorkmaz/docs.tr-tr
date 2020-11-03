@@ -11,18 +11,18 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 11de13a6674411bbad52678b59879ed26366e0f1
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 2f287eb7a3a1ace8d8440f860b55429bb3c93691
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811060"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282428"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
 Bu makalede, ' den ' e nasıl geçiş yapılacağı gösterilmektedir [Newtonsoft.Json](https://www.newtonsoft.com/json) <xref:System.Text.Json> .
 
-`System.Text.Json`Ad alanı, JavaScript nesne gösterimi (JSON) öğesinden serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar. `System.Text.Json`Kitaplık, [.net Core 3,0](https://aka.ms/netcore3download) paylaşılan çerçevesine dahildir. Diğer hedef çerçeveler için [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet paketini yükler. Paket şunları destekler:
+`System.Text.Json`Ad alanı, JavaScript nesne gösterimi (JSON) öğesinden serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar. `System.Text.Json`Kitaplık, .NET Core 3,0 ve üzeri sürümler için paylaşılan çerçeveye dahildir. Önceki Framework sürümleri için [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet paketini yüklersiniz. Paket şunları destekler:
 
 * .NET Standard 2,0 ve sonraki sürümler
 * .NET Framework 4.7.2 ve sonraki sürümler
@@ -73,13 +73,13 @@ Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmekt
 | `JsonConvert.PopulateObject` yöntemi                   | ⚠️[Desteklenmez, geçici çözüm](#populate-existing-objects) |
 | `ObjectCreationHandling` Genel ayar               | ⚠️[Desteklenmez, geçici çözüm](#reuse-rather-than-replace-properties) |
 | Ayarlayıcısız koleksiyonlara Ekle                    | ⚠️[Desteklenmez, geçici çözüm](#add-to-collections-without-setters) |
-| `PreserveReferencesHandling` Genel ayar           | ❌[Desteklenmiyor](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling` Genel ayar                | ❌[Desteklenmiyor](#preserve-object-references-and-handle-loops) |
-| Öznitelikler için destek `System.Runtime.Serialization` | ❌[Desteklenmiyor](#systemruntimeserialization-attributes) |
-| `MissingMemberHandling` Genel ayar                | ❌[Desteklenmiyor](#missingmemberhandling) |
-| Tırnak işaretleri olmadan özellik adlarına izin ver                   | ❌[Desteklenmiyor](#json-strings-property-names-and-string-values) |
-| Dize değerlerinin çevresinde tek tırnak işaretlerine izin ver              | ❌[Desteklenmiyor](#json-strings-property-names-and-string-values) |
-| Dize özellikleri için dize olmayan JSON değerlerine izin ver    | ❌[Desteklenmiyor](#non-string-values-for-string-properties) |
+| `PreserveReferencesHandling` Genel ayar           | ❌ [Desteklenmez](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling` Genel ayar                | ❌ [Desteklenmez](#preserve-object-references-and-handle-loops) |
+| Öznitelikler için destek `System.Runtime.Serialization` | ❌ [Desteklenmez](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling` Genel ayar                | ❌ [Desteklenmez](#missingmemberhandling) |
+| Tırnak işaretleri olmadan özellik adlarına izin ver                   | ❌ [Desteklenmez](#json-strings-property-names-and-string-values) |
+| Dize değerlerinin çevresinde tek tırnak işaretlerine izin ver              | ❌ [Desteklenmez](#json-strings-property-names-and-string-values) |
+| Dize özellikleri için dize olmayan JSON değerlerine izin ver    | ❌ [Desteklenmez](#non-string-values-for-string-properties) |
 
 Bu, özelliklerin kapsamlı bir listesi değildir `Newtonsoft.Json` . Listede, [GitHub sorunları](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) veya [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) gönderileri için istenen birçok senaryo bulunur. Burada listelenen senaryolardan biri için şu anda örnek kodu olmayan bir geçici çözüm uygularsanız ve çözümünüzü paylaşmak istiyorsanız, bu sayfanın altındaki **geri bildirim** bölümünde **Bu sayfayı** seçin. Bu, bu belgenin GitHub deposunda bir sorun oluşturur ve bu sayfadaki **geri bildirim** bölümünde de listeler.
 
@@ -492,7 +492,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Yukarıdaki kod, bir özellik içeren bir için bekliyor `JsonElement` `fileName` . JSON dosyasını açar ve bir oluşturur `JsonDocument` . Yöntemi, çağıranın tüm belge ile çalışmak istediğini varsayar, bu yüzden öğesinin öğesini döndürür `Clone` `RootElement` .
 
-Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örnek:
+Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örneğin:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -530,7 +530,7 @@ Aşağıdaki bölümlerde, kullanımı için önerilen programlama düzenleri a�
 
 ### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JsonReader bir başvuru yapısı
 
-`Utf8JsonReader`Tür bir *başvuru yapısı*olduğundan, [belirli sınırlamalar](../../csharp/language-reference/builtin-types/struct.md#ref-struct)vardır. Örneğin, bir sınıf veya yapı üzerinde bir başvuru yapısı dışında bir alan olarak depolanamaz. Yüksek performans elde etmek için, bu tür bir `ref struct` başvuru yapısı olan giriş [ \<byte> readonlyspan](xref:System.ReadOnlySpan%601)' i önbelleğe alma gerektirdiğinden bir olmalıdır. Ayrıca, bu tür durum taşıdığı için değişebilir olur. Bu nedenle, bunu değere göre değil **ref 'e geçirin** . Değere göre geçirmek bir yapı kopyasının oluşmasına neden olur ve durum değişiklikleri arayan tarafından görülemez. Bu, öğesinden bu yana farklılık gösterir `Newtonsoft.Json` `Newtonsoft.Json` `JsonTextReader` . Başvuru yapıları kullanma hakkında daha fazla bilgi için bkz. [Write Safe ve verimli C# kodu](../../csharp/write-safe-efficient-code.md).
+`Utf8JsonReader`Tür bir *başvuru yapısı* olduğundan, [belirli sınırlamalar](../../csharp/language-reference/builtin-types/struct.md#ref-struct)vardır. Örneğin, bir sınıf veya yapı üzerinde bir başvuru yapısı dışında bir alan olarak depolanamaz. Yüksek performans elde etmek için, bu tür bir `ref struct` başvuru yapısı olan giriş [ \<byte> readonlyspan](xref:System.ReadOnlySpan%601)' i önbelleğe alma gerektirdiğinden bir olmalıdır. Ayrıca, bu tür durum taşıdığı için değişebilir olur. Bu nedenle, bunu değere göre değil **ref 'e geçirin** . Değere göre geçirmek bir yapı kopyasının oluşmasına neden olur ve durum değişiklikleri arayan tarafından görülemez. Bu, öğesinden bu yana farklılık gösterir `Newtonsoft.Json` `Newtonsoft.Json` `JsonTextReader` . Başvuru yapıları kullanma hakkında daha fazla bilgi için bkz. [Write Safe ve verimli C# kodu](../../csharp/write-safe-efficient-code.md).
 
 ### <a name="read-utf-8-text"></a>UTF-8 metnini oku
 
