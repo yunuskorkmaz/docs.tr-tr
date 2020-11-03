@@ -2,18 +2,18 @@
 title: Güçlü adlandırma ve .NET kitaplıkları
 description: Güçlü adlandırma .NET kitaplıkları için en iyi yöntem önerileri.
 ms.date: 10/16/2018
-ms.openlocfilehash: b72d4a8c320ac857fbcd6abe44f467805f72b5b3
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 6f9533d768331964a8e640243536b12ddde158e5
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654566"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189218"
 ---
 # <a name="strong-naming"></a>Kesin adlandırma
 
 Tanımlayıcı adlandırma, [tanımlayıcı adlı bir derleme](../assembly/strong-named.md)üreten bir derlemeyi anahtarla imzalamayı ifade eder. Bir derleme tanımlayıcı olarak adlandırılmışsa, ad ve derleme sürüm numarasına göre benzersiz bir kimlik oluşturur ve derleme çakışmalarını önlemeye yardımcı olabilir.
 
-Güçlü adlandırma için downsıde, derleme tanımlayıcı olarak adlandırılmış olduktan sonra Windows 'daki .NET Framework derlemelerin sıkı şekilde yüklenmesini sağlar. Tanımlayıcı adlı bütünleştirilmiş kod başvurusu, yüklü derlemenin sürümüyle tam olarak eşleşmelidir ve geliştiricilerin derlemeyi kullanırken [bağlama yeniden yönlendirmelerini yapılandırmasına](../../framework/configure-apps/redirect-assembly-versions.md) zorlanır:
+Güçlü adlandırma için downsıde, derleme tanımlayıcı olarak adlandırılmış olduktan sonra Windows üzerinde .NET Framework derlemelerin sıkı şekilde yüklenmesini sağlar. Tanımlayıcı adlı bütünleştirilmiş kod başvurusu, yüklü derlemenin sürümüyle tam olarak eşleşmelidir ve geliştiricilerin derlemeyi kullanırken [bağlama yeniden yönlendirmelerini yapılandırmasına](../../framework/configure-apps/redirect-assembly-versions.md) zorlanır:
 
 ```xml
 <configuration>
@@ -28,7 +28,7 @@ Güçlü adlandırma için downsıde, derleme tanımlayıcı olarak adlandırıl
 </configuration>
 ```
 
-.NET geliştiricileri tanımlayıcı adlandırmayla ilgili olarak şikayet edildiğinde, bu durum genellikle ne kadar şikayetçi, katı derleme yüklemesi. Neyse ki, bu sorun .NET Framework yalıtılmıştır. .NET Core, Xamarin, UWP ve diğer birçok .NET uygulaması katı bütünleştirilmiş kod yükleme içermez ve tanımlayıcı adlandırmanın ana alttarafını kaldırır.
+.NET geliştiricileri tanımlayıcı adlandırmayla ilgili olarak şikayet edildiğinde, bu durum genellikle ne kadar şikayetçi, katı derleme yüklemesi. Neyse ki, bu sorun .NET Framework yalıtılmıştır. .NET 5 +, .NET Core, Xamarin, UWP ve diğer birçok .NET uygulaması, kesin adlandırma 'nın ana Alttarafı olan katı derleme yüklemesi içermez.
 
 Güçlü adlandırmanın önemli bir yönü, bunun viral olması olabilir: tanımlayıcı bir adlandırılmış derleme yalnızca diğer tanımlayıcı adlandırılmış derlemelere başvurabilir. Kitaplığınız tanımlayıcı olarak adlandırılmazsa, bir uygulama veya kitaplığı oluşturan geliştiricilerin onu kullanarak tanımlayıcı adlandırma yapması gerekir.
 
@@ -64,7 +64,7 @@ Açık kaynaklı .NET kitaplıklarınızı tanımlayıcı olarak adlandırın. D
 
 > Bir derlemenin tanımlayıcı adlandırma anahtarını değiştirmek derlemenin kimliğini değiştirir ve onu kullanan derlenmiş kodu keser. Daha fazla bilgi için bkz. [ikili son değişiklikler](./breaking-changes.md#binary-breaking-change).
 
-❌ Kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini yayımlamayın. Örneğin `Contoso.Api` ve `Contoso.Api.StrongNamed`.
+❌ Kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini yayımlamayın. Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
 
 > İki paket yayımlandığında geliştirici ekonomik sisteminize çatalın. Ayrıca, her iki pakete bağlı olarak bir uygulama sonlanıyorsa, geliştirici tür adı çakışmaları ile karşılaşabilir. .NET, farklı derlemelerdeki farklı türlerdir.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 099670f8451e9e2cf78b372d3a4d393882a30407
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223800"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188698"
 ---
 # <a name="the-managed-thread-pool"></a>Yönetilen iş parçacığı havuzu
 
@@ -40,7 +40,7 @@ Daha fazla bilgi için bkz. [yönetilen Iş parçacıklarında özel durumlar](e
   
 ### <a name="maximum-number-of-thread-pool-threads"></a>En fazla iş parçacığı havuzu iş parçacığı sayısı
 
-İş parçacığı havuzunda sıraya alınabilen işlem sayısı yalnızca kullanılabilir bellekle sınırlıdır. Ancak, iş parçacığı havuzu işlemde etkin olabilecek iş parçacıklarının sayısını aynı anda sınırlandırır. Tüm iş parçacığı havuzu iş parçacıkları meşgulse, bunları yürütmek için iş parçacıkları kullanılabilir hale gelene kadar ek iş öğeleri sıraya alınır. .NET Framework 4 ' ten başlayarak, bir işlem için iş parçacığı havuzunun varsayılan boyutu, sanal adres alanının boyutu gibi çeşitli faktörlere bağlıdır. Bir işlem, <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> iş parçacığı sayısını tespit etmek için yöntemini çağırabilir.  
+İş parçacığı havuzunda sıraya alınabilen işlem sayısı yalnızca kullanılabilir bellekle sınırlıdır. Ancak, iş parçacığı havuzu işlemde etkin olabilecek iş parçacıklarının sayısını aynı anda sınırlandırır. Tüm iş parçacığı havuzu iş parçacıkları meşgulse, bunları yürütmek için iş parçacıkları kullanılabilir hale gelene kadar ek iş öğeleri sıraya alınır. Bir işlem için iş parçacığı havuzunun varsayılan boyutu, sanal adres alanının boyutu gibi çeşitli faktörlere bağlıdır. Bir işlem, <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> iş parçacığı sayısını tespit etmek için yöntemini çağırabilir.  
   
 Ve yöntemlerini kullanarak en fazla iş parçacığı sayısını kontrol edebilirsiniz <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType> .  
 
@@ -54,14 +54,14 @@ Ve yöntemlerini kullanarak en fazla iş parçacığı sayısını kontrol edebi
 > [!NOTE]
 > İstek düşükse, iş parçacığı havuzu iş parçacıklarının gerçek sayısı en düşük değerlerin altına düşmelidir.  
   
-En az bir ulaşıldığında, iş parçacığı havuzu ek iş parçacıkları oluşturabilir veya bazı görevler tamamlanana kadar bekleyebilir. .NET Framework 4 ' ten başlayarak, iş parçacığı havuzu iş parçacıklarını oluşturup yok eder ve bu işlem, zaman birimi başına tamamlanan görev sayısı olarak tanımlanır. Çok az sayıda iş parçacığı kullanılabilir kaynakları en iyi şekilde kullanmayabilir, ancak çok fazla iş parçacığı kaynak çekişmesini artırabilir.  
+En az bir ulaşıldığında, iş parçacığı havuzu ek iş parçacıkları oluşturabilir veya bazı görevler tamamlanana kadar bekleyebilir. İş parçacığı havuzu, zaman birimi başına tamamlanan görev sayısı olarak tanımlanan aktarım hızını iyileştirmek için çalışan iş parçacıklarını oluşturur ve yok eder. Çok az sayıda iş parçacığı kullanılabilir kaynakları en iyi şekilde kullanmayabilir, ancak çok fazla iş parçacığı kaynak çekişmesini artırabilir.  
   
 > [!CAUTION]
 > <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType>En az boş iş parçacığı sayısını artırmak için yöntemini kullanabilirsiniz. Ancak, bu değerleri gereksiz şekilde artırmak performans sorunlarına neden olabilir. Aynı anda çok fazla görev başladıysanız, bunların hepsi yavaş görünüyor olabilir. Çoğu durumda, iş parçacığı havuzu iş parçacığı ayırmak için kendi algoritmasından daha iyi işlem yapar.  
 
 ## <a name="using-the-thread-pool"></a>İş parçacığı havuzunu kullanma
 
-.NET Framework 4 ' ten başlayarak, iş parçacığı havuzunu kullanmanın en kolay yolu, [görev paralel kitaplığı (TPL)](../parallel-programming/task-parallel-library-tpl.md)kullanmaktır. Varsayılan olarak, TPL türlerini <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> görevleri çalıştırmak için iş parçacığı havuzu iş parçacıklarını kullanır.
+İş parçacığı havuzunu kullanmanın en kolay yolu, [görev paralel kitaplığı (TPL)](../parallel-programming/task-parallel-library-tpl.md)kullanmaktır. Varsayılan olarak, TPL türlerini <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> görevleri çalıştırmak için iş parçacığı havuzu iş parçacıklarını kullanır.
 
 İş parçacığı havuzunu <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> yönetilen koddan (veya [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) yönetilmeyen koddan) arayarak ve <xref:System.Threading.WaitCallback?displayProperty=nameWithType> görevi gerçekleştiren yöntemi temsil eden bir temsilci geçirerek de kullanabilirsiniz.
 

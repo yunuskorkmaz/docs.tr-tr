@@ -8,27 +8,28 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - writing text to files
-- I/O [.NET Framework], writing text to files
+- I/O [.NET], writing text to files
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-ms.openlocfilehash: 52d3d07f4ffdbdc6510425a65fc173d36e674d06
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: df057856385c8e9c63140e45512a97e492130396
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447218"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189244"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Nasıl yapılır: bir dosyaya metin yazma
+
 Bu konu başlığı altında, bir .NET uygulaması için bir dosyaya metin yazmanın farklı yolları gösterilmektedir.
 
 Aşağıdaki sınıflar ve yöntemler genellikle bir dosyaya metin yazmak için kullanılır:  
   
-- <xref:System.IO.StreamWriter>bir dosyaya zaman uyumlu ( <xref:System.IO.StreamWriter.Write%2A> ve <xref:System.IO.TextWriter.WriteLine%2A> ) veya zaman uyumsuz ( <xref:System.IO.StreamWriter.WriteAsync%2A> ve) yazma yöntemleri içerir <xref:System.IO.StreamWriter.WriteLineAsync%2A> .  
+- <xref:System.IO.StreamWriter> bir dosyaya zaman uyumlu ( <xref:System.IO.StreamWriter.Write%2A> ve <xref:System.IO.TextWriter.WriteLine%2A> ) veya zaman uyumsuz ( <xref:System.IO.StreamWriter.WriteAsync%2A> ve) yazma yöntemleri içerir <xref:System.IO.StreamWriter.WriteLineAsync%2A> .  
   
-- <xref:System.IO.File>, ve gibi bir dosyaya metin yazmak için statik yöntemler sağlar; örneğin, <xref:System.IO.File.WriteAllLines%2A> <xref:System.IO.File.WriteAllText%2A> ve gibi bir dosyaya metin ekler <xref:System.IO.File.AppendAllLines%2A> <xref:System.IO.File.AppendAllText%2A> <xref:System.IO.File.AppendText%2A> .  
+- <xref:System.IO.File> , ve gibi bir dosyaya metin yazmak için statik yöntemler sağlar; örneğin, <xref:System.IO.File.WriteAllLines%2A> <xref:System.IO.File.WriteAllText%2A> ve gibi bir dosyaya metin ekler <xref:System.IO.File.AppendAllLines%2A> <xref:System.IO.File.AppendAllText%2A> <xref:System.IO.File.AppendText%2A> .  
   
-- <xref:System.IO.Path>dosya veya dizin yolu bilgilerine sahip dizeler içindir. Bu yöntem, ve <xref:System.IO.Path.Combine%2A> .NET Core 2,1 ve sonraki sürümlerinde, <xref:System.IO.Path.Join%2A> <xref:System.IO.Path.TryJoin%2A> dizelerin bir dosya ya da dizin yolu oluşturmak için bitiştirilmesi sağlayan ve yöntemleri içerir.
+- <xref:System.IO.Path> dosya veya dizin yolu bilgilerine sahip dizeler içindir. Bu yöntem, ve <xref:System.IO.Path.Combine%2A> .NET Core 2,1 ve sonraki sürümlerinde, <xref:System.IO.Path.Join%2A> <xref:System.IO.Path.TryJoin%2A> dizelerin bir dosya ya da dizin yolu oluşturmak için bitiştirilmesi sağlayan ve yöntemleri içerir.
 
 > [!NOTE]
 > Aşağıdaki örneklerde yalnızca gereken minimum kod miktarı gösterilmektedir. Gerçek dünya uygulaması genellikle daha sağlam hata denetimi ve özel durum işleme sağlar.  

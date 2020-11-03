@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-ms.openlocfilehash: c42ea0b5ba4cb01304ceae4ba2d2fc91b629a9b3
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: cc27ba47c88d424a80eb47aaa310bdfd6d18433a
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420532"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187924"
 ---
 # <a name="com-callable-wrapper"></a>COM Aranabilir Sarmalayıcısı
 
@@ -42,7 +42,7 @@ Sarmaladığı .NET istemcisinin aksine, CCW başvurusu geleneksel COM olarak sa
 
 CCW tüm genel, COM görünebilir arabirimleri, veri türlerini ve dönüş değerlerini com istemcilerine COM 'un arabirim tabanlı etkileşim zorlaması ile tutarlı bir şekilde sunar. Bir COM istemcisi için, bir .NET nesnesi üzerinde Yöntemler çağırma bir COM nesnesi üzerinde Yöntemler çağırma ile aynıdır.
 
-Bu sorunsuz yaklaşımı oluşturmak için CCW, **IUnknown** ve **ıDISPATCH**gibi geleneksel com arabirimleri oluşturur. Aşağıdaki çizimde gösterildiği gibi CCW, sarmaladığı .NET nesnesinde tek bir başvuru tutar. Hem COM istemcisi hem de .NET nesnesi, CCW için proxy ve saplama oluşturma aracılığıyla birbirleriyle etkileşime geçer.
+Bu sorunsuz yaklaşımı oluşturmak için CCW, **IUnknown** ve **ıDISPATCH** gibi geleneksel com arabirimleri oluşturur. Aşağıdaki çizimde gösterildiği gibi CCW, sarmaladığı .NET nesnesinde tek bir başvuru tutar. Hem COM istemcisi hem de .NET nesnesi, CCW için proxy ve saplama oluşturma aracılığıyla birbirleriyle etkileşime geçer.
 
 ![CCW 'in COM arabirimlerini nasıl kullandığını gösteren diyagram.](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
@@ -54,17 +54,17 @@ Bu sorunsuz yaklaşımı oluşturmak için CCW, **IUnknown** ve **ıDISPATCH**gi
 |**IErrorInfo**|Hatanın metinsel bir açıklamasını, kaynağını, bir yardım dosyasını, yardım bağlamını ve hatayı tanımlayan arabirimin GUID 'sini (her zaman .NET sınıfları için **GUID_NULL** ) sağlar.|
 |**IProvideClassInfo**|COM istemcilerinin yönetilen bir sınıf tarafından uygulanan **ITypeInfo** arabirimine erişim sağlamasına olanak sağlar. `COR_E_NOTSUPPORTED`Com 'dan içeri aktarılmayan türler için .NET Core ' u döndürür. |
 |**Iupporterrorınfo**|Bir COM istemcisinin, yönetilen nesnenin **IErrorInfo** arabirimini destekleyip desteklemediğini belirlemesine olanak sağlar. Bu durumda, istemcinin en son özel durum nesnesine bir işaretçi almasını sağlar. Tüm yönetilen türler **IErrorInfo** arabirimini destekler.|
-|**ITypeInfo** (yalnızca .NET Framework)|Tlbexp. exe tarafından üretilen tür bilgileriyle tam olarak aynı olan bir sınıf için tür bilgilerini sağlar.|
+|**ITypeInfo** (yalnızca .NET Framework)|Tlbexp.exe tarafından üretilen tür bilgileriyle tam olarak aynı olan bir sınıf için tür bilgisi sağlar.|
 |**IUnknown**|, COM istemcisinin CCW ömrünü yönettiği ve tür zorlaması sağladığı **IUnknown** arabiriminin standart uygulamasını sağlar.|
 
  Yönetilen bir sınıf, aşağıdaki tabloda açıklanan COM arabirimlerini de sağlayabilir.
 
 |Arabirim|Açıklama|
 |---------------|-----------------|
-|( \_ *ClassName*) sınıf arabirimi|Çalışma zamanı tarafından sunulan ve açıkça tanımlanmamış, tüm genel arabirimleri, yöntemleri, özellikleri ve yönetilen bir nesne üzerinde açık olarak açık olan alanları sunan arabirim.|
+|( \_ *ClassName* ) sınıf arabirimi|Çalışma zamanı tarafından sunulan ve açıkça tanımlanmamış, tüm genel arabirimleri, yöntemleri, özellikleri ve yönetilen bir nesne üzerinde açık olarak açık olan alanları sunan arabirim.|
 |**Inewctionpoint** ve **IConnectionPointContainer**|Temsilci tabanlı Olaylar (Olay aboneleri kaydetmek için bir arabirim) olan nesneler için arabirim.|
-|**IDispatchEx** (yalnızca .NET Framework)|Sınıf **IBir**uygularsa çalışma zamanı tarafından sağlanan arabirim. **IDispatchEx** **arabirimi IDispatch arabiriminin bir** uzantısıdır. Bu, **IDispatch**'in aksine numaralandırma, ekleme, silme ve büyük/küçük harf duyarlı üyelerin çağrılmasını mümkün değildir.|
-|**IEnumVariant**|Sınıf **IEnumerable**uygularsa koleksiyondaki nesneleri numaralandırır koleksiyon türü sınıfları için arabirim.|
+|**IDispatchEx** (yalnızca .NET Framework)|Sınıf **IBir** uygularsa çalışma zamanı tarafından sağlanan arabirim. **IDispatchEx** **arabirimi IDispatch arabiriminin bir** uzantısıdır. Bu, **IDispatch** 'in aksine numaralandırma, ekleme, silme ve büyük/küçük harf duyarlı üyelerin çağrılmasını mümkün değildir.|
+|**IEnumVariant**|Sınıf **IEnumerable** uygularsa koleksiyondaki nesneleri numaralandırır koleksiyon türü sınıfları için arabirim.|
 
 ## <a name="introducing-the-class-interface"></a>Sınıf arabirimine giriş
 
@@ -97,7 +97,7 @@ public class Mammal
 }
 ```
 
-COM istemcisi adlı bir sınıf arabirimine bir işaretçi alabilir `_Mammal` . .NET Framework, arabirim tanımını içeren bir tür kitaplığı oluşturmak için [tür kitaplığı verme programı (Tlbexp. exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) aracını kullanabilirsiniz `_Mammal` . Tür kitaplığı verme programı .NET Core 'da desteklenmez. `Mammal`Sınıf bir veya daha fazla arabirim uyguladıysanız, arabirimler coclass altında görünür.
+COM istemcisi adlı bir sınıf arabirimine bir işaretçi alabilir `_Mammal` . .NET Framework, arabirim tanımını içeren bir tür kitaplığı oluşturmak için [tür kitaplığı verme programı (Tlbexp.exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) aracını kullanabilirsiniz `_Mammal` . Tür kitaplığı verme programı .NET Core 'da desteklenmez. `Mammal`Sınıf bir veya daha fazla arabirim uyguladıysanız, arabirimler coclass altında görünür.
 
 ```console
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
@@ -175,13 +175,13 @@ public class LoanApp
 }
 ```
 
-Çalışma zamanında bir arabirim üyesinin DISPID 'sini almak için, COM istemcileri **IDispatch. GetIDsOfNames**' i çağırabilir. Arabirimdeki bir yöntemi çağırmak için, döndürülen DISPID 'yi **IDispatch. Invoke**öğesine bir bağımsız değişken olarak geçirin.
+Çalışma zamanında bir arabirim üyesinin DISPID 'sini almak için, COM istemcileri **IDispatch. GetIDsOfNames** ' i çağırabilir. Arabirimdeki bir yöntemi çağırmak için, döndürülen DISPID 'yi **IDispatch. Invoke** öğesine bir bağımsız değişken olarak geçirin.
 
 ### <a name="restrict-using-the-dual-interface-option-for-the-class-interface"></a>Sınıf arabirimi için Dual Interface seçeneğini kullanarak kısıtlayın.
 
 Çift arabirimler, COM istemcilerine göre arabirim üyelerine erken ve geç bağlamayı etkinleştirir. Tasarım zamanında ve test sırasında, sınıf arabirimini çift olarak ayarlamayı yararlı bulabilirsiniz. Hiçbir değişiklik olmayacak yönetilen bir sınıf (ve temel sınıfları) için, bu seçenek de kabul edilebilir. Diğer tüm durumlarda, sınıf arabirimini çift olarak ayarlamaktan kaçının.
 
-Otomatik olarak oluşturulan bir çift arabirim ender durumlarda uygun olabilir; Ancak, daha sık, sürümle ilgili karmaşıklık oluşturur. Örneğin, türetilmiş bir sınıfın sınıf arabirimini kullanan COM istemcileri, temel sınıftaki değişikliklerle kolayca kesilebilir. Üçüncü bir taraf temel sınıfı sağlıyorsa, sınıf arabiriminin düzeni denetimiden oluşur. Ayrıca, yalnızca bir dağıtım arabiriminden farklı olarak, bir çift arabirim (**ClassInterfaceType. oto Dual**), içe aktarılmış tür kitaplığındaki sınıf arabiriminin bir açıklamasını sağlar. Bu tür bir açıklama, geç bağlantılı istemcileri derleme zamanında dispID 'leri önbelleğe almak üzere önerir.
+Otomatik olarak oluşturulan bir çift arabirim ender durumlarda uygun olabilir; Ancak, daha sık, sürümle ilgili karmaşıklık oluşturur. Örneğin, türetilmiş bir sınıfın sınıf arabirimini kullanan COM istemcileri, temel sınıftaki değişikliklerle kolayca kesilebilir. Üçüncü bir taraf temel sınıfı sağlıyorsa, sınıf arabiriminin düzeni denetimiden oluşur. Ayrıca, yalnızca bir dağıtım arabiriminden farklı olarak, bir çift arabirim ( **ClassInterfaceType. oto Dual** ), içe aktarılmış tür kitaplığındaki sınıf arabiriminin bir açıklamasını sağlar. Bu tür bir açıklama, geç bağlantılı istemcileri derleme zamanında dispID 'leri önbelleğe almak üzere önerir.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Tüm COM olay bildirimlerinin geç bağlandığına emin olun.
 

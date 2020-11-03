@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 4d528c54816961caa251ce054abf2c6cf07e9d01
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 63ee85f3d8bab865ce34566ec381d23676b27991
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769112"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188594"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu iş parçacıklı verileri eşitleme
 
@@ -25,7 +25,7 @@ Birden çok iş parçacığı tek bir nesnenin özelliklerine ve yöntemlerine �
   
 - El ile eşitleme. .NET sınıf kitaplığı tarafından sunulan eşitleme nesnelerini kullanabilirsiniz. Sınıf hakkındaki tartışmayı içeren, bkz. [eşitleme temel elemanlarına genel bakış](overview-of-synchronization-primitives.md) <xref:System.Threading.Monitor> .  
   
-- Eşitlenmiş bağlamlar. .NET Framework ve Xamarin uygulamalarında, <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> nesneleri için basit ve otomatik eşitlemeyi etkinleştirmek için kullanabilirsiniz <xref:System.ContextBoundObject> .  
+- Eşitlenmiş bağlamlar. Yalnızca .NET Framework ve Xamarin uygulamaları için, <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> nesneleri için basit ve otomatik eşitlemeyi etkinleştirmek üzere öğesini kullanabilirsiniz <xref:System.ContextBoundObject> .  
   
 - Ad alanındaki koleksiyon sınıfları <xref:System.Collections.Concurrent?displayProperty=nameWithType> . Bu sınıflar yerleşik eşitlenmiş ekleme ve kaldırma işlemleri sağlar. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../collections/thread-safe/index.md).  
   
@@ -35,7 +35,7 @@ Birden çok iş parçacığı tek bir nesnenin özelliklerine ve yöntemlerine �
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Eşitleme yok|Hayır|Hayır|Hayır|Hayır|Hayır|Hayır|  
 |Eşitlenmiş bağlam|Hayır|Hayır|Hayır|Yes|Yes|Hayır|  
-|Eşitlenmiş kod bölgeleri|Hayır|Hayır|Yalnızca işaretlenmişse|Hayır|Yalnızca işaretlenmişse|Yalnızca işaretlenmişse|  
+|Eşitlenmiş kod bölgeleri|Hayır|Hayır|Yalnızca işaretlenmişse|No|Yalnızca işaretlenmişse|Yalnızca işaretlenmişse|  
 |El ile eşitleme|El ile|El ile|El ile|El ile|El ile|El ile|  
   
 ## <a name="no-synchronization"></a>Eşitleme yok  
@@ -54,7 +54,7 @@ Birden çok iş parçacığı tek bir nesnenin özelliklerine ve yöntemlerine �
   
  Ayrıca, yöntemi ile aynı etkiye sahip olan ile bir yöntemi <xref:System.Runtime.CompilerServices.MethodImplAttribute> <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType> <xref:System.Threading.Monitor> süsleyip, yöntemin tamamının tamamını kilitlemek için derleyici anahtar sözcükleriyle birini kullanabilirsiniz.  
   
- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>, eşitlenen bir kod bölgesine erişimi bekleyen bir iş parçacığını bölmek için kullanılabilir. **Thread. Interrupt** Ayrıca, gibi işlemlerden oluşan iş parçacıklarını bölmek için de kullanılır <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> .  
+ <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> , eşitlenen bir kod bölgesine erişimi bekleyen bir iş parçacığını bölmek için kullanılabilir. **Thread. Interrupt** Ayrıca, gibi işlemlerden oluşan iş parçacıklarını bölmek için de kullanılır <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> .  
   
 > [!IMPORTANT]
 > Yöntemleri korumak için (örneğin, C# ' ta, Visual Basic veya C++ ' da) türü kilitlemeyin `typeof(MyType)` `GetType(MyType)` `MyType::typeid` `static` ( `Shared` Visual Basic içindeki Yöntemler). Bunun yerine özel bir statik nesne kullanın. Benzer şekilde, `this` `Me` örnek yöntemleri kilitlemek için C# ' de (Visual Basic) kullanmayın. Bunun yerine özel bir nesne kullanın. Bir sınıf veya örnek, kendi dışında bir kodla kilitlenebilir, bu da kilitlenmelere veya performans sorunlarına yol açabilir.  

@@ -4,24 +4,24 @@ description: .NET ' te iş parçacıklarını ve iş parçacığını kullanma h
 ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], about threading
+- threading [.NET], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: c092994818c9105a555acaf63ceba4b8e99bcada
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 127ea9e28d9ce303270512bf86bf4eecf2f86437
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663037"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188711"
 ---
 # <a name="using-threads-and-threading"></a>İş parçacıkları ve iş parçacığı oluşturmayı kullanma
 
-.NET ile aynı anda birden çok işlem gerçekleştiren uygulamalar yazabilirsiniz. Diğer işlemleri tutan potansiyel işlemler, çok iş *parçacıklı* veya *ücretsiz iş parçacığı*olarak bilinen bir işlem olan ayrı iş parçacıklarında çalıştırılabilir.  
+.NET ile aynı anda birden çok işlem gerçekleştiren uygulamalar yazabilirsiniz. Diğer işlemleri tutan potansiyel işlemler, çok iş *parçacıklı* veya *ücretsiz iş parçacığı* olarak bilinen bir işlem olan ayrı iş parçacıklarında çalıştırılabilir.  
   
 İş parçacığı kullanan uygulamalar, kullanıcı girdisine daha fazla yanıt verir, çünkü kullanıcı arabirimi ayrı iş parçacıklarında yürütülen işlemci yoğun görevler olarak etkin kalır. Çoklu iş parçacığı, ölçeklenebilir uygulamalar oluşturduğunuzda da yararlıdır, çünkü iş yükü arttıkça iş parçacığı ekleyebilirsiniz.
 
 > [!NOTE]
-> Uygulamanın iş parçacıklarının davranışı üzerinde daha fazla denetime ihtiyacınız varsa, iş parçacıklarını kendiniz yönetebilirsiniz. Ancak, .NET Framework 4 ' ten itibaren, çok iş parçacıklı programlama, <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları, [paralel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), ad alanındaki yeni eşzamanlı koleksiyon sınıfları <xref:System.Collections.Concurrent?displayProperty=nameWithType> ve iş parçacıkları yerine görev kavramını temel alan yeni bir programlama modeli ile büyük ölçüde basitleştirilmiştir. Daha fazla bilgi için bkz. [paralel programlama](../parallel-programming/index.md) ve [görev paralel kitaplığı (TPL)](../parallel-programming/task-parallel-library-tpl.md).
+> Uygulamanın iş parçacıklarının davranışı üzerinde daha fazla denetime ihtiyacınız varsa, iş parçacıklarını kendiniz yönetebilirsiniz. Ancak, çok iş parçacıklı programlama, <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları, [paralel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), ad alanındaki eşzamanlı koleksiyon sınıfları <xref:System.Collections.Concurrent?displayProperty=nameWithType> ve iş parçacıkları yerine görev kavramını temel alan bir programlama modeli ile büyük ölçüde basitleştirilmiştir. Daha fazla bilgi için bkz. [paralel programlama](../parallel-programming/index.md) ve [görev paralel kitaplığı (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="how-to-create-and-start-a-new-thread"></a>Nasıl yapılır: yeni bir iş parçacığı oluşturma ve başlatma
 
@@ -33,7 +33,7 @@ Bir iş parçacığının yürütülmesini sonlandırmak için öğesini kullan�
 
 Bazen iş parçacığı işbirliği yapmak mümkün değildir, çünkü birlikte çalışma iptali için tasarlanmamış üçüncü taraf kodu çalıştırır. Bu durumda, yürütmesini zorla sonlandırmak isteyebilirsiniz. Bir iş parçacığının yürütülmesini zorla sonlandırmak için .NET Framework ' de <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemini kullanabilirsiniz. Bu yöntem <xref:System.Threading.ThreadAbortException> , üzerinde çağrıldığında bir iş parçacığı oluşturur. Daha fazla bilgi için bkz. [iş parçacıklarını yok](destroying-threads.md)etme. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>Yöntem .NET Core 'da desteklenmez. .NET Core 'da üçüncü taraf kod yürütmeyi zorla sonlandırmak isterseniz, ayrı bir işlemde çalıştırın ve kullanın <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> .
 
-<xref:System.Threading.CancellationToken?displayProperty=nameWithType>.NET Framework 4 ' den önce kullanılamaz. Eski .NET Framework sürümlerindeki bir iş parçacığını durdurmak için, iş parçacığı eşitleme tekniklerini kullanarak el ile yapılan iptali el ile uygulamalısınız. Örneğin, geçici Boole alanını oluşturabilir `shouldStop` ve bunu durdurulacak iş parçacığı tarafından yürütülen kodu istemek için kullanabilirsiniz. Daha fazla bilgi için bkz. C# başvurusu ve içindeki [volatile](../../csharp/language-reference/keywords/volatile.md) <xref:System.Threading.Volatile?displayProperty=nameWithType> .
+<xref:System.Threading.CancellationToken?displayProperty=nameWithType>.NET Framework 4 ' den önce kullanılamaz. Daha eski .NET Framework sürümlerindeki bir iş parçacığını durdurmak için, iş parçacığı eşitleme tekniklerini kullanarak el ile birlikte iptalleri el ile uygulayın. Örneğin, geçici Boole alanını oluşturabilir `shouldStop` ve bunu durdurulacak iş parçacığı tarafından yürütülen kodu istemek için kullanabilirsiniz. Daha fazla bilgi için bkz. C# başvurusu ve içindeki [volatile](../../csharp/language-reference/keywords/volatile.md) <xref:System.Threading.Volatile?displayProperty=nameWithType> .
 
 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>Çağıran iş parçacığını durdurulan iş parçacığının sonlandırmasını beklemek için yöntemini kullanın.
 

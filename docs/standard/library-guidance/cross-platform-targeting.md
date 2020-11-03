@@ -2,12 +2,12 @@
 title: .NET kitaplıkları için platformlar arası hedefleme
 description: Platformlar arası .NET kitaplıkları oluşturmaya yönelik en iyi yöntem önerileri.
 ms.date: 08/12/2019
-ms.openlocfilehash: 6309e300861ab286dcaba3256267b3459e6e0d10
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 038a03904c4cfe49758562b5748fef06ae1afa4b
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223349"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189257"
 ---
 # <a name="cross-platform-targeting"></a>Platformlar arası hedefleme
 
@@ -33,7 +33,7 @@ Modern .NET birden çok işletim sistemini ve cihazı destekler. .NET açık kay
 
 ❌ Bir hedef dahil kullanmaktan kaçının `netstandard1.x` .
 
-> .NET Standard 1. x, büyük bir paket bağımlılığı grafiği oluşturan ve geliştiricilerin derlerken çok sayıda paket indirmelerine neden olan ayrıntılı bir NuGet paketleri kümesi olarak dağıtılır. .NET Framework 4.6.1, UWP ve Xamarin gibi modern .NET platformları, tüm destek .NET Standard 2,0. Yalnızca daha eski bir platformu hedeflemek istiyorsanız .NET Standard 1. x hedefini hedefleyin.
+> .NET Standard 1. x, büyük bir paket bağımlılığı grafiği oluşturan ve geliştiricilerin derlerken çok sayıda paket indirmelerine neden olan ayrıntılı bir NuGet paketleri kümesi olarak dağıtılır. Modern .NET uygulamaları 2,0 .NET Standard destekler. Yalnızca daha eski bir platformu hedeflemek istiyorsanız .NET Standard 1. x hedefini hedefleyin.
 
 `netstandard2.0`hedefe ihtiyacınız varsa ✔️ bir hedef içerir `netstandard1.x` .
 
@@ -115,7 +115,7 @@ public static class GpsLocation
 
 ## <a name="older-targets"></a>Daha eski hedefler
 
-.NET, artık yaygın olarak kullanılmayan platformların yanı sıra, .NET Framework, destek ve uzun süreli olan sürümlerinin hedeflenmesini destekler. Kitaplığınızın mümkün olduğunca çok sayıda hedef üzerinde çalışmasını sağlamak için bir değer olsa da, eksik API 'Leri geçici olarak çözmek için önemli ölçüde ek yük eklenebilir. Belirli çerçevelerin daha fazla hedeflenmesini ve bunların erişim ve sınırlamalarını göz önünde bulundurduğumuz düşünülmektedir.
+.NET, artık yaygın olarak kullanılmayan platformların yanı sıra desteklenen .NET Framework sürümlerinin hedeflenmesini destekler. Kitaplığınızın mümkün olduğunca çok sayıda hedef üzerinde çalışmasını sağlamak için bir değer olsa da, eksik API 'Leri geçici olarak çözmek için önemli ölçüde ek yük eklenebilir. Belirli çerçevelerin daha fazla hedeflenmesini ve bunların erişim ve sınırlamalarını göz önünde bulundurduğumuz düşünülmektedir.
 
 ❌ Taşınabilir sınıf kitaplığı (PCL) hedefi eklemeyin. Örneğin, `portable-net45+win8+wpa81+wp8`.
 

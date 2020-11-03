@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4ad7779b9810954d110af576dd834daf61888d59
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4289b809d9a401de92c74063a42216f3051543f6
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555926"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188568"
 ---
 # <a name="isolated-storage"></a>Yalıtılmış depolama
 
@@ -59,7 +59,7 @@ Yalıtılmış depolama kullanımı kısmen güvenilir uygulamaların bilgisayar
 
 Yöneticiler uygun olan güven düzeyine göre bir uygulamanın veya kullanıcının ne kadar yalıtılmış depolama alanına sahip olacağını sınırlayabilir. Ek olarak, yöneticiler bir kullanıcının kalıcı verilerini tamamen kaldırabilir. Yalıtılmış depolama oluşturmak veya erişim sağlamak için, koda uygun <xref:System.Security.Permissions.IsolatedStorageFilePermission> izin verilmelidir.
 
-Yalıtılmış depolamaya erişmek için, kod tüm gerekli yerel platform işletim sistemi haklarına sahip olmalıdır. Hangi kullanıcıların dosya sistemini kullanmaya hakkı olduğunu kontrol eden erişim denetim listeleri (ACL) sağlanmalıdır. .NET Framework uygulamaları, platforma özel kimliğe bürünme işlemi gerçekleştirmedikleri sürece yalıtılmış depolamaya erişmek için işletim sistemi haklarına sahiptir. Bu durumda, uygulama kimliğine bürünülen kullanıcının yalıtılmış depolamaya erişmek için gerekli uygun işletim sistemi haklarına sahip olduğundan emin olmakta sorumludur. Bu erişim, internetten çalıştırılan veya indirilen kodun belirli bir kullanıcı ile ilgili depolama alanında okuma ve yazma işlemleri yapabilmesi için kullanışlı bir yol sağlar.
+Yalıtılmış depolamaya erişmek için, kod tüm gerekli yerel platform işletim sistemi haklarına sahip olmalıdır. Hangi kullanıcıların dosya sistemini kullanmaya hakkı olduğunu kontrol eden erişim denetim listeleri (ACL) sağlanmalıdır. .NET uygulamaları, yalıtılmış depolamaya (platforma özgü) bir kimliğe bürünme gerçekleştirmedikleri müddetçe erişim için zaten işletim sistemi haklarına sahiptir. Bu durumda, uygulama kimliğine bürünülen kullanıcının yalıtılmış depolamaya erişmek için gerekli uygun işletim sistemi haklarına sahip olduğundan emin olmakta sorumludur. Bu erişim, internetten çalıştırılan veya indirilen kodun belirli bir kullanıcı ile ilgili depolama alanında okuma ve yazma işlemleri yapabilmesi için kullanışlı bir yol sağlar.
 
 Yalıtılmış depolamaya erişimi denetlemek için ortak dil çalışma zamanı <xref:System.Security.Permissions.IsolatedStorageFilePermission> nesneleri kullanır. Her nesne aşağıdaki değerleri belirten özelliklere sahiptir:
 
@@ -134,7 +134,7 @@ Daha önce belirtildiği gibi, bu API 'lerden gelen güvenlik etkisi, bir güven
 
 Önceki yollar, kullanımdaki Windows sürümüne bağlı olarak farklılık gösterebilir.
 
-Şimdi, iki kayıtlı _Kullanıcı ve_ _emre_olan çok kullanıcılı bir sistem düşünün. Mallory 'nin Kullanıcı profili dizinine erişme özelliği vardır `C:\Users\Mallory\` ve paylaşılan makineye özel depolama konumuna erişebilir `C:\ProgramData\IsolatedStorage\` . Emre 'nin Kullanıcı profili dizinine erişemez `C:\Users\Bob\` .
+Şimdi, iki kayıtlı _Kullanıcı ve_ _emre_ olan çok kullanıcılı bir sistem düşünün. Mallory 'nin Kullanıcı profili dizinine erişme özelliği vardır `C:\Users\Mallory\` ve paylaşılan makineye özel depolama konumuna erişebilir `C:\ProgramData\IsolatedStorage\` . Emre 'nin Kullanıcı profili dizinine erişemez `C:\Users\Bob\` .
 
 Mallory, emre 'ye saldırmak isterse, makineye özel depolama konumuna veri yazabilir ve ardından Bob 'u makine genelindeki depodan okumayı dener. Bob, bu mağazadan okuyan bir uygulama çalıştırdığında, bu uygulama burada bulunan ve emre 'nin Kullanıcı hesabı bağlamında bulunan veriler üzerinde çalışır. Bu belgenin geri kalanı çeşitli saldırı vektörlerini ve uygulamaların bu saldırılara karşı riskini en aza indirmek için neler yapabileceğini yapabilecekleri adımları sağlar.
 
@@ -150,7 +150,7 @@ Bunlar, ev bilgisayarları veya tek çalışan kurumsal iş istasyonları gibi s
 
 Can 'ın uygulaması malın dosyasını okuduğunda __ayrıcalık yükseltme__ saldırısı oluşur ve bu yükün içeriğine göre otomatik olarak bir işlem gerçekleştirmeye çalışır. Bir başlangıç komut dosyasının içeriğini makineye özel depodan okuyan ve bu içeriği ' ye ileten bir uygulamayı düşünün `Process.Start` . Mallory, Bob 'un uygulamayı başlattığında makine genelindeki depo içine kötü amaçlı bir betik yerleştirebilir:
 
-* Uygulaması _, Bob 'un Kullanıcı profili bağlamı altında_Mallory 'nin kötü amaçlı betiğini ayrıştırır ve başlatır.
+* Uygulaması _, Bob 'un Kullanıcı profili bağlamı altında_ Mallory 'nin kötü amaçlı betiğini ayrıştırır ve başlatır.
 * Mallory, yerel makinedeki Bob 'un hesabına erişim sağlar.
 
 #### <a name="denial-of-service"></a>Hizmet reddi
@@ -195,7 +195,7 @@ Bazen yalıtılmış depolamaya yapılan bir değişikliği işletim sisteminin 
 
 ## <a name="creating-enumerating-and-deleting-isolated-storage"></a>Ayrık Depolama Birimi Oluşturma, Numaralandırma ve Silme
 
-.NET Framework, <xref:System.IO.IsolatedStorage> yalıtılmış depolamayı içeren görevleri gerçekleştirmenize yardımcı olmak için ad alanında üç sınıf sağlar:
+.NET, <xref:System.IO.IsolatedStorage> yalıtılmış depolamayı içeren görevleri gerçekleştirmenize yardımcı olmak için ad alanında üç sınıf sağlar:
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, öğesinden türetilir <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> ve depolanan derleme ve uygulama dosyalarının temel yönetimini sağlar. Sınıfının bir örneği <xref:System.IO.IsolatedStorage.IsolatedStorageFile> dosya sisteminde bulunan tek bir depoyu temsil eder.
 

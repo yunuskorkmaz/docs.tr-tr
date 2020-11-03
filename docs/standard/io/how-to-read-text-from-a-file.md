@@ -11,20 +11,21 @@ helpviewer_keywords:
 - reading text files
 - reading data, text files
 - data streams, reading text from files
-- I/O [.NET Framework], reading text from files
+- I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: fafd1cda13b46e56183489aa15d3c4df9051ae06
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e90887c2cc4a54355c51facf91c9cc3da7e4320
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553941"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189335"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Nasıl yapılır: dosyadan metin okuma
+
 Aşağıdaki örnek, masaüstü uygulamaları için .NET kullanılarak bir metin dosyasındaki metnin nasıl zaman uyumlu ve zaman uyumsuz olarak okunacağını gösterir. Her iki örnekte, sınıfının örneğini oluşturduğunuzda <xref:System.IO.StreamReader> , dosyanın göreli veya mutlak yolunu sağlarsınız.
   
 > [!NOTE]
-> Bu kod örnekleri, Evrensel Windows (UWP) uygulamaları için geliştirilmez, çünkü Windows Çalışma Zamanı dosyalara okuma ve yazma için farklı akış türleri sağlar. UWP uygulamasında bir dosyadaki metnin nasıl okunacağını gösteren bir örnek için bkz. [hızlı başlangıç: dosya okuma ve yazma](/previous-versions/windows/apps/hh758325(v=win.10)). .NET Framework akışlar ve Windows Çalışma Zamanı akışları arasında nasıl dönüştürme yapılacağını gösteren örnekler için bkz. [nasıl yapılır: .NET Framework akışlar ve Windows çalışma zamanı akışları arasında dönüştürme](how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+> Bu kod örnekleri, Evrensel Windows (UWP) uygulamalarına uygulanmaz çünkü Windows Çalışma Zamanı dosyalara okuma ve yazma için farklı akış türleri sağlar. UWP uygulamasında bir dosyadaki metnin nasıl okunacağını gösteren bir örnek için bkz. [hızlı başlangıç: dosya okuma ve yazma](/previous-versions/windows/apps/hh758325(v=win.10)). .NET Framework akışlar ve Windows Çalışma Zamanı akışları arasında nasıl dönüştürme yapılacağını gösteren örnekler için bkz. [nasıl yapılır: .NET Framework akışlar ve Windows çalışma zamanı akışları arasında dönüştürme](how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example-synchronous-read-in-a-console-app"></a>Örnek: konsol uygulamasında zaman uyumlu okuma  
 Aşağıdaki örnek, bir konsol uygulaması içinde zaman uyumlu okuma işlemini gösterir. Bu örnek, bir akış okuyucusu kullanarak metin dosyasını açar, içeriği bir dizeye kopyalar ve dizeyi konsola verir.  

@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 037ae0dff80c96d08d8778146b5683454b1f80b1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7833dd16cec8d6ef1cbdb51702ea72f50231c52d
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543698"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187963"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Nasıl yapılır: .NET Framework ve Windows Çalışma Zamanı akışları arasında dönüştürme (yalnızca Windows)
 
-UWP uygulamaları için .NET Framework, tam .NET Framework bir alt kümesidir. UWP uygulamalarına yönelik güvenlik ve diğer gereksinimler nedeniyle, dosyaları açmak ve okumak için .NET Framework API 'lerin tam kümesini kullanamazsınız. Daha fazla bilgi için bkz. [UWP uygulamalarına yönelik .NET genel bakış](/previous-versions/windows/apps/br230302(v=vs.140)). Ancak, diğer akış işleme işlemlerini için .NET Framework API'ları kullanmak isteyebilirsiniz. Bu akışları işlemek için, veya gibi bir .NET Framework Stream türü arasında dönüştürme yapabilirsiniz <xref:System.IO.MemoryStream> ve, <xref:System.IO.FileStream> veya gibi bir Windows çalışma zamanı akışı <xref:Windows.Storage.Streams.IInputStream> <xref:Windows.Storage.Streams.IOutputStream> <xref:Windows.Storage.Streams.IRandomAccessStream> .
+UWP uygulamaları için .NET Framework, tam .NET Framework bir alt kümesidir. UWP uygulamalarına yönelik güvenlik ve diğer gereksinimler nedeniyle, dosyaları açmak ve okumak için .NET Framework API 'lerin tam kümesini kullanamazsınız. Daha fazla bilgi için bkz. [UWP uygulamalarına yönelik .NET genel bakış](/previous-versions/windows/apps/br230302(v=vs.140)). Ancak, diğer akış işleme işlemlerini için .NET Framework API'ları kullanmak isteyebilirsiniz. Bu akışları işlemek için, veya gibi bir .NET Framework Stream türü arasında dönüştürme yapabilirsiniz, veya gibi bir <xref:System.IO.MemoryStream> <xref:System.IO.FileStream> Windows çalışma zamanı akışı <xref:Windows.Storage.Streams.IInputStream> <xref:Windows.Storage.Streams.IOutputStream> <xref:Windows.Storage.Streams.IRandomAccessStream> .
 
 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType>Sınıfı, bu dönüştürmeleri kolaylaştıran yöntemler içerir. Ancak, .NET Framework ve Windows Çalışma Zamanı akışları arasındaki temel farklılıklar, aşağıdaki bölümlerde açıklandığı gibi, bu yöntemlerin kullanılmasıyla ilgili sonuçları etkiler:
 

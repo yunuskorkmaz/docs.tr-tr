@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 1c573712f458d3e22cd59112b9e79e85391270c1
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 020e6903069da2c5d8761c86e890c4e9575a3fae
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854899"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188763"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
 
@@ -30,7 +30,7 @@ Ayrıca, ve kullanılırken özel destek de uygulanabilir <xref:System.Text.Json
 
 <xref:System.Text.Json.JsonSerializer>,, <xref:System.Text.Json.Utf8JsonReader> <xref:System.Text.Json.Utf8JsonWriter> Ve türleri, <xref:System.Text.Json.JsonElement> <xref:System.DateTime> <xref:System.DateTimeOffset> ISO 8601-1:2019 biçiminin genişletilmiş profiline göre ayrıştırılır ve yazılır ve metin gösterimleridir; Örneğin, 2019-07-26T16:59:57-05:00.
 
-<xref:System.DateTime>ve <xref:System.DateTimeOffset> veriler ile seri hale getirilebilir <xref:System.Text.Json.JsonSerializer> :
+<xref:System.DateTime> ve <xref:System.DateTimeOffset> veriler ile seri hale getirilebilir <xref:System.Text.Json.JsonSerializer> :
 
 [!code-csharp[example-serializing-with-jsonserializer](~/samples/snippets/standard/datetime/json/csharp/serializing-with-jsonserializer/Program.cs)]
 
@@ -55,7 +55,7 @@ Alt düzey <xref:System.Text.Json.Utf8JsonWriter> yazmaları <xref:System.DateTi
 
 [!code-csharp[example-writing-with-utf8jsonwriter](~/samples/snippets/standard/datetime/json/csharp/writing-with-utf8jsonwriter/Program.cs)]
 
-<xref:System.Text.Json.Utf8JsonReader>ayrıştırır <xref:System.DateTime> ve <xref:System.DateTimeOffset> veriler:
+<xref:System.Text.Json.Utf8JsonReader> ayrıştırır <xref:System.DateTime> ve <xref:System.DateTimeOffset> veriler:
 
 [!code-csharp[example-reading-with-utf8jsonreader-valid](~/samples/snippets/standard/datetime/json/csharp/reading-with-utf8jsonreader-valid/Program.cs)]
 
@@ -65,7 +65,7 @@ Uyumlu olmayan biçimleri okumaya çalışmak <xref:System.Text.Json.Utf8JsonRea
 
 ## <a name="custom-support-for-xrefsystemdatetime-and-xrefsystemdatetimeoffset"></a>Ve için özel destek <xref:System.DateTime><xref:System.DateTimeOffset>
 
-### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>Kullanırken<xref:System.Text.Json.JsonSerializer>
+### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>Kullanırken <xref:System.Text.Json.JsonSerializer>
 
 Seri hale getiricinin özel ayrıştırma veya biçimlendirme gerçekleştirmesini istiyorsanız [özel dönüştürücüler](xref:System.Text.Json.Serialization.JsonConverter%601)uygulayabilirsiniz.
 İşte birkaç örnek:
@@ -103,7 +103,7 @@ Bu örnekte, kullanarak bir metin temsilini ayrıştırmaya başarısız oldukta
 
 [!code-csharp[example-showing-datetime-parse-as-fallback](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example3/Program.cs)]
 
-### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a>İle yazarken<xref:System.Text.Json.Utf8JsonWriter>
+### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a>İle yazarken <xref:System.Text.Json.Utf8JsonWriter>
 
 <xref:System.DateTime>İle özel veya metin temsili yazmak isterseniz, <xref:System.DateTimeOffset> <xref:System.Text.Json.Utf8JsonWriter> özel gösteriminizi bir,, veya olarak biçimlendirebilir, <xref:System.String> `ReadOnlySpan<Byte>` `ReadOnlySpan<Char>` <xref:System.Text.Json.JsonEncodedText> sonra bunu karşılık gelen <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A?displayProperty=nameWithType> veya yöntemine geçirebilirsiniz <xref:System.Text.Json.Utf8JsonWriter.WriteString%2A?displayProperty=nameWithType> .
 
@@ -111,7 +111,7 @@ Aşağıdaki örnek, ile nasıl özel bir <xref:System.DateTime> biçimin oluşt
 
 [!code-csharp[example-custom-writing-with-utf8jsonwriter](~/samples/snippets/standard/datetime/json/csharp/custom-writing-with-utf8jsonwriter/Program.cs)]
 
-### <a name="when-reading-with-xrefsystemtextjsonutf8jsonreader"></a>İle okurken<xref:System.Text.Json.Utf8JsonReader>
+### <a name="when-reading-with-xrefsystemtextjsonutf8jsonreader"></a>İle okurken <xref:System.Text.Json.Utf8JsonReader>
 
 <xref:System.DateTime>İle özel veya <xref:System.DateTimeOffset> metin gösterimini okumak istiyorsanız <xref:System.Text.Json.Utf8JsonReader> , geçerli JSON belirtecinin değerini bir using olarak alabilir <xref:System.String> <xref:System.Text.Json.Utf8JsonReader.GetString> ve ardından özel mantık kullanarak değeri ayrıştırın.
 
@@ -125,7 +125,7 @@ Aşağıdaki örnek, kullanarak bir özel <xref:System.DateTimeOffset> metin gö
 
 ' De uygulanan genişletilmiş ISO 8601-1:2019 profili, <xref:System.Text.Json> Tarih ve saat temsilleri için aşağıdaki bileşenleri tanımlar. Bu bileşenler, ayrıştırma ve biçimlendirme <xref:System.DateTime> ve temsiller için desteklenen çeşitli ayrıntı düzeyi düzeylerini tanımlamak için kullanılır <xref:System.DateTimeOffset> .
 
-| Bileşen       | Biçim                      | Açıklama                                                                     |
+| Bileşen       | Biçimlendir                      | Açıklama                                                                     |
 |-----------------|-----------------------------|---------------------------------------------------------------------------------|
 | Yıl            | "yyyy"                      | 0001-9999                                                                       |
 | Ay           | "AA"                        | 01-12                                                                           |
@@ -164,7 +164,13 @@ Aşağıdaki ayrıntı düzeyi, ayrıştırma için tanımlanmıştır:
     3. "yyyy'-'MM'-'dd'T'HH ': ' mm ': ' ss (' + '/'-') HH ': ' mm"
     4. "yyyy'-'MM'-'dd'T'HH ': ' mm ': ' ss '. ' FFFFFFF (' + '/'-') HH ': ' mm "
 
-Saniyeler için ondalık kesirler varsa, en az bir rakam olmalıdır; `2019-07-26T00:00:00.`izin verilmiyor.
+    Bu ayrıntı düzeyi, tarih ve saat bilgilerini karşılıklı olarak değiştiren ISO 8601 ' nin yaygın olarak benimsenen bir profili olan [RFC 3339](https://tools.ietf.org/html/rfc3339#section-5.6)ile uyumludur. Ancak, System.Text.Jsuygulamadaki bazı kısıtlamalar vardır.
+
+    - RFC 3339, en fazla kesirli saniyelik basamak belirtmez, ancak kesirli ikinci bir bölüm varsa en az bir basamağın süreyi izlemesi gerektiğini belirtir. System.Text.Jsüzerindeki uygulama 16 basamağa kadar (diğer programlama dilleri ve çerçeveleri ile birlikte çalışabilirliği desteklemek için), ancak yalnızca ilk yedi öğesini ayrıştırır. <xref:System.Text.Json.JsonException>Okurken `DateTime` ve örneklerindeki 16 ' dan fazla kesir ikinci basamak varsa, bir oluşturulur `DateTimeOffset` .
+    - RFC 3339, "T" ve "Z" karakterlerinin sırasıyla "t" veya "z" olmasına izin verir, ancak uygulamaların desteği yalnızca büyük/küçük varyantlar ile sınırlı olmasına izin verir. Üzerinde System.Text.Jsuygulama için "T" ve "Z" olması gerekir. <xref:System.Text.Json.JsonException>Giriş yükleri, ve örnekleri okurken "t" veya "z" içeriyorsa bir oluşturulur `DateTime` `DateTimeOffset` .
+    - RFC 3339, tarih ve saat bölümlerinin "T" ile ayrıldıklarını belirtir, ancak bunun yerine uygulamaların bunları boşlukla ("") ayırmasını sağlar. System.Text.Js, tarih ve saat bölümlerinin "T" ile ayrılması gerekir. <xref:System.Text.Json.JsonException>Giriş yükleri, ve örnekleri okurken bir boşluk ("") içeriyorsa bir oluşturulur `DateTime` `DateTimeOffset` .
+
+Saniyeler için ondalık kesirler varsa, en az bir rakam olmalıdır; `2019-07-26T00:00:00.` izin verilmiyor.
 16 ' ya kadar kesirli basamağa izin verildiğinde, yalnızca ilk yedi ayrıştırılır. Bundan sonraki bir şey sıfır olarak kabul edilir.
 Örneğin, olduğu `2019-07-26T00:00:00.1234567890` gibi ayrıştırılacaktır `2019-07-26T00:00:00.1234567` .
 Bu, <xref:System.DateTime> Bu çözünürlükle sınırlı olan uygulamayla uyumlu kalmasıdır.
@@ -200,6 +206,8 @@ Biçimlendirme için aşağıdaki ayrıntı düzeyi düzeyleri tanımlanmıştı
     4. "yyyy'-'MM'-'dd'T'HH ': ' mm ': ' ss '. ' FFFFFFF (' + '/'-') HH ': ' mm "
 
         Bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> kesirli saniye ve yerel bir uzaklığa göre biçimlendirmek için kullanılır.
+
+    Bu ayrıntı düzeyi, [RFC 3339](https://tools.ietf.org/html/rfc3339#section-5.6)ile uyumludur.
 
 Bir veya örneğin [gidiş dönüş biçimi](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) temsili <xref:System.DateTime> <xref:System.DateTimeOffset> Kesirli saniyeler içinde sondaki sıfırları içeriyorsa <xref:System.Text.Json.JsonSerializer> ve sonra <xref:System.Text.Json.Utf8JsonWriter> sondaki sıfırları olmadan örneğin bir gösterimini biçimlendirir.
 Örneğin, <xref:System.DateTime> [gidiş dönüş biçimi](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) temsili olan bir örnek, `2019-04-24T14:50:17.1010000Z` ve olarak biçimlendirilir `2019-04-24T14:50:17.101Z` <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.Utf8JsonWriter> .

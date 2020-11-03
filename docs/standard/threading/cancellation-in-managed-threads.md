@@ -9,17 +9,18 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 9af4a64e50eff65023d5ed5bda868af2f8323a96
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 09c39202f1564ac544fdf30a07952990b309b661
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662842"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188477"
 ---
 # <a name="cancellation-in-managed-threads"></a>Yönetilen İş Parçacıklarında İptal
-.NET Framework 4 ' te başlayarak, .NET Framework zaman uyumsuz veya uzun süre çalışan zaman uyumlu işlemler için bir birleştirilmiş model kullanır. Bu model, iptal belirteci adlı hafif bir nesneyi temel alır. Bir veya daha fazla iptal edilebilen işlemi çağıran nesne (örneğin, yeni iş parçacıkları veya görevler oluşturarak) belirteci her bir işleme geçirir. Tek tek işlemler, belirtecin kopyalarını diğer işlemlere geçirebilir. Daha sonra, belirteci oluşturan nesne, işlemin ne yaptığını durdurmasını istemek için bunu kullanabilir. Yalnızca istenen nesne iptal isteğini verebilir ve her dinleyici, isteği yaşıyorsanız ve uygun ve zamanında yanıt verecek şekilde sorumludur.  
+
+.NET Framework 4 ' te başlayarak, .NET, zaman uyumsuz veya uzun süreli zaman uyumlu işlemler için birlikte çalışan bir işleme için birleştirilmiş bir model kullanır. Bu model, iptal belirteci adlı hafif bir nesneyi temel alır. Bir veya daha fazla iptal edilebilen işlemi çağıran nesne (örneğin, yeni iş parçacıkları veya görevler oluşturarak) belirteci her bir işleme geçirir. Tek tek işlemler, belirtecin kopyalarını diğer işlemlere geçirebilir. Daha sonra, belirteci oluşturan nesne, işlemin ne yaptığını durdurmasını istemek için bunu kullanabilir. Yalnızca istenen nesne iptal isteğini verebilir ve her dinleyici, isteği yaşıyorsanız ve uygun ve zamanında yanıt verecek şekilde sorumludur.  
   
- Birlikte çalışırken iptal modelinin uygulanması için genel bir örüntü şunlardır:  
+Birlikte çalışırken iptal modelinin uygulanması için genel bir örüntü şunlardır:  
   
 - <xref:System.Threading.CancellationTokenSource>Ayrı ayrı iptal belirteçlerine yönelik iptali bildirimini yöneten ve gönderen bir nesne örneği oluşturur.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "84662842"
   
  ![CancellationTokenSource ve iptal belirteçleri](media/vs-cancellationtoken.png "VS_CancellationToken")  
   
- Yeni iptal modeli, iptal kullanan uygulamalar ve kitaplıklar oluşturmayı kolaylaştırır ve aşağıdaki özellikleri destekler:  
+ Birlikte çalışırken iptal modeli, iptal kullanan uygulamalar ve kitaplıklar oluşturmayı kolaylaştırır ve aşağıdaki özellikleri destekler:  
   
 - İptal etme birlikte çalışır ve dinleyicide zorlanmaz. Dinleyici, bir iptal isteğine yanıt olarak düzgün bir şekilde nasıl sonlandırıldığını belirler.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "84662842"
   
 - İstekte bulunan nesne, yalnızca bir yöntem çağrısı kullanarak, iptal isteğini belirtecin tüm kopyalarına yayınlar.  
   
-- Bir dinleyici, tek bir *bağlı belirtece*katılarak birden fazla belirteci aynı anda dinleyebilir.  
+- Bir dinleyici, tek bir *bağlı belirtece* katılarak birden fazla belirteci aynı anda dinleyebilir.  
   
 - Kullanıcı kodu kitaplık kodundan gelen iptal isteklerini fark edebilir ve yanıtlayabilir ve kitaplık kodu kullanıcı kodundan gelen iptal isteklerini görebilir ve bunlara yanıt verebilir.  
   
@@ -53,25 +54,25 @@ ms.locfileid: "84662842"
 ## <a name="cancellation-types"></a>İptal türleri  
  İptal çerçevesi, aşağıdaki tabloda listelenen ilgili türler kümesi olarak uygulanır.  
   
-|Tür adı|Description|  
+|Tür adı|Açıklama|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|İptal belirteci oluşturan ve ayrıca söz konusu belirtecin tüm kopyalarının iptal isteğini veren nesne.|  
 |<xref:System.Threading.CancellationToken>|Hafif değer türü, genellikle yöntem parametresi olarak bir veya daha fazla dinleyicilerine geçirildi. Dinleyiciler, `IsCancellationRequested` belirteç özelliğinin değerini yoklama, geri çağırma veya bekleme tanıtıcısıyla izler.|  
 |<xref:System.OperationCanceledException>|Bu özel durumun oluşturucusunun aşırı yüklemeleri <xref:System.Threading.CancellationToken> parametre olarak bir parametresini kabul eder. Bu özel durum, İptalin kaynağını doğrulamak ve diğer kullanıcılara bir iptal isteğine yanıt verdiğini bildirmek için isteğe bağlı olarak bu özel durumu oluşturabilir.|  
   
- Yeni iptal modeli, .NET Framework çeşitli türlerde tümleştirilir. En önemli olanlar <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> , ve ' <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> dir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> . Tüm yeni kitaplık ve uygulama kodu için bu yeni iptal modelini kullanmanızı öneririz.  
+ İptal modeli, .NET ile çeşitli türlerde tümleştirilir. En önemli olanlar <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> , ve ' <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> dir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> . Tüm yeni kitaplık ve uygulama kodu için bu ortak iptal modelini kullanmanızı öneririz.  
   
 ## <a name="code-example"></a>Kod Örneği  
  Aşağıdaki örnekte, istenen nesne bir <xref:System.Threading.CancellationTokenSource> nesne oluşturur ve sonra <xref:System.Threading.CancellationTokenSource.Token%2A> özelliğini iptal edilebilen işleme geçirir. İsteği alan işlem, <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> belirteç özelliğinin değerini yoklayarak izler. Değer ne olursa `true` olsun, dinleyici uygun şekilde sonlandırılır. Bu örnekte, yöntemi birçok durumda gerekli olan tek çıkar.  
   
 > [!NOTE]
-> Örnek, <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> yeni iptal çerçevesinin eski API 'lerle uyumlu olduğunu göstermek için yöntemini kullanır. Yeni ve tercih edilen türü kullanan bir örnek için <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> bkz. [nasıl yapılır: bir görevi ve alt öğelerini iptal etme](../parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+> Örnek, <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> birlikte çalışmayan iptal çerçevesinin eski API 'lerle uyumlu olduğunu göstermek için yöntemini kullanır. Tercih edilen türü kullanan bir örnek için <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> bkz. [nasıl yapılır: bir görevi ve alt öğelerini iptal etme](../parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
   
 ## <a name="operation-cancellation-versus-object-cancellation"></a>İşlem Iptali ve nesne Iptaline karşı  
- Yeni iptal çerçevesinde, iptal, nesneleri değil, işlemler anlamına gelir. İptal isteği, gerekli temizleme gerçekleştirildikten sonra işlemin en kısa sürede durması gerektiği anlamına gelir. Bir iptal belirtecinin "iptal edilebilen işlem" öğesine başvurması gerekir, ancak bu işlem programınızda uygulanabilir. <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>Belirtecinin özelliği olarak ayarlandıktan sonra `true` , ' a sıfırlanamaz `false` . Bu nedenle, iptal belirteçleri iptal edildikten sonra yeniden kullanılamaz.  
+ Birlikte çalışma iptal çerçevesinde, iptal etme işlemleri nesneleri değil, işlemler anlamına gelir. İptal isteği, gerekli temizleme gerçekleştirildikten sonra işlemin en kısa sürede durması gerektiği anlamına gelir. Bir iptal belirtecinin "iptal edilebilen işlem" öğesine başvurması gerekir, ancak bu işlem programınızda uygulanabilir. <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>Belirtecinin özelliği olarak ayarlandıktan sonra `true` , ' a sıfırlanamaz `false` . Bu nedenle, iptal belirteçleri iptal edildikten sonra yeniden kullanılamaz.  
   
  Bir nesne iptali mekanizmasına ihtiyacınız varsa, <xref:System.Threading.CancellationToken.Register%2A?displayProperty=nameWithType> Aşağıdaki örnekte gösterildiği gibi yöntemini çağırarak işlem iptali mekanizmasına temel alabilirsiniz.  
   
@@ -121,7 +122,7 @@ ms.locfileid: "84662842"
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- .NET Framework 4 ' ü hedefleyen yeni kodda, <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> her ikisi de yöntemlerinde yeni iptal çerçevesini destekler `Wait` . <xref:System.Threading.CancellationToken>Yöntemine geçirebilirsiniz ve iptal istendiğinde olay uyandırır ve bir oluşturur <xref:System.OperationCanceledException> .  
+<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> ve <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> her ikisi de kendi yöntemlerinde iptal çerçevesini destekler `Wait` . <xref:System.Threading.CancellationToken>Yöntemine geçirebilirsiniz ve iptal istendiğinde olay uyandırır ve bir oluşturur <xref:System.OperationCanceledException> .  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  
@@ -141,11 +142,11 @@ ms.locfileid: "84662842"
   
 - Kitaplık kodu iptal edilebilen işlemler sağlıyorsa, kullanıcı kodunun iptali istemesi için bir dış iptal belirtecini kabul eden ortak yöntemler de sağlamalıdır.  
   
-- Kitaplık kodu kullanıcı koduna çağırırsa, kitaplık kodu bir Operationolaydexception (externalToken) ile *birlikte işlem iptali*olarak yorumlanmalıdır ve hata özel durumu olarak değildir.  
+- Kitaplık kodu kullanıcı koduna çağırırsa, kitaplık kodu bir Operationolaydexception (externalToken) ile *birlikte işlem iptali* olarak yorumlanmalıdır ve hata özel durumu olarak değildir.  
   
 - Kullanıcı temsilcileri, kitaplık kodundaki iptal isteklerini zamanında yanıtlamayı denemelidir.  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>ve <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> Bu yönergeleri izleyen sınıfların örnekleridir. Daha fazla bilgi için bkz. [Görev iptali](../parallel-programming/task-cancellation.md) ve [nasıl yapılır: PLINQ Sorgusunu İptal etme](../parallel-programming/how-to-cancel-a-plinq-query.md).  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ve <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> Bu yönergeleri izleyen sınıfların örnekleridir. Daha fazla bilgi için bkz. [Görev iptali](../parallel-programming/task-cancellation.md) ve [nasıl yapılır: PLINQ Sorgusunu İptal etme](../parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,8 +9,8 @@ dev_langs:
 helpviewer_keywords:
 - storing data using isolated storage, accessing isolated storage
 - storing data using isolated storage, isolation types
-- authentication [.NET Framework], isolated storage
-- assemblies [.NET Framework], identity
+- authentication [.NET], isolated storage
+- assemblies [.NET], identity
 - isolated storage, accessing
 - data storage using isolated storage, isolation types
 - data storage using isolated storage, accessing isolated storage
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 244bd9c25040b39c9349d28f57981f29d7a32d0a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a1d64f0dfe8a457ae551792a852bd816941f2777
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542040"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189038"
 ---
-# <a name="types-of-isolation"></a>Yalıtım Türleri
+# <a name="types-of-isolation"></a>Yalıtım türleri
+
 Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kısıtlanır. Bu tür yalıtımın uygulanması için ortak dil çalışma zamanı, işletim sisteminin tanıdığı aynı kullanıcı kimliği kavramını kullanır. Bu, mağaza açıldığında kodun çalıştırıldığı işlemle ilişkili kimliktir. Bu kimlik kimliği doğrulanmış bir kullanıcı kimliğidir, ancak kimliğe bürünme geçerli kullanıcının kimliğinin dinamik olarak değişmesine neden olabilir.  
   
  Yalıtılmış depolamaya erişim, uygulamanın etki alanı ve derlemesi ile ilişkili kimliğe veya tek başına derlemeye göre de kısıtlanır. Çalışma zamanı bu kimlikleri aşağıdaki yollarla edinir:  

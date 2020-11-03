@@ -10,21 +10,22 @@ dev_langs:
 helpviewer_keywords:
 - streams, reading and writing data
 - BinaryReader class, examples
-- I/O [.NET Framework], reading data
-- I/O [.NET Framework], writing data
+- I/O [.NET], reading data
+- I/O [.NET], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 9a6b2985b7f532476c0f4c0f998d710f95e55d3a
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 236d50260efa66f21db6d0abba6cc5c258a74d8d
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769164"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188737"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Nasıl yapılır: yeni oluşturulan bir veri dosyasını okuma ve yazma
+
 <xref:System.IO.BinaryWriter?displayProperty=nameWithType>Ve <xref:System.IO.BinaryReader?displayProperty=nameWithType> sınıfları, karakter dizeleri dışında veri yazmak ve okumak için kullanılır. Aşağıdaki örnek, boş bir dosya akışının nasıl oluşturulacağını, verilerin nasıl yazılacağını ve verilerin nasıl okunacağını gösterir.
 
-Örnek, geçerli dizinde *test. Data* adlı bir veri dosyası oluşturur, ilişkili <xref:System.IO.BinaryWriter> ve nesneleri oluşturur ve dosya <xref:System.IO.BinaryReader> <xref:System.IO.BinaryWriter> işaretçisini dosyanın sonunda bırakmak için 0 ' dan 10 ' a kadar olan tamsayıları *Test.data*yazmak için nesnesini kullanır. <xref:System.IO.BinaryReader>Ardından nesne, dosya işaretçisini kaynağa geri ayarlar ve belirtilen içeriği okur.  
+Örnek, geçerli dizinde *test. Data* adlı bir veri dosyası oluşturur, ilişkili <xref:System.IO.BinaryWriter> ve nesneleri oluşturur ve dosya <xref:System.IO.BinaryReader> <xref:System.IO.BinaryWriter> işaretçisini dosyanın sonunda bırakmak için 0 ' dan 10 ' a kadar olan tamsayıları *Test.data* yazmak için nesnesini kullanır. <xref:System.IO.BinaryReader>Ardından nesne, dosya işaretçisini kaynağa geri ayarlar ve belirtilen içeriği okur.  
   
 > [!NOTE]
 > Eğer *test. Data* geçerli dizinde zaten mevcutsa, bir <xref:System.IO.IOException> özel durum oluşturulur. <xref:System.IO.FileMode.Create?displayProperty=nameWithType> <xref:System.IO.FileMode.CreateNew?displayProperty=nameWithType> Özel durum oluşturmadan her zaman yeni bir dosya oluşturmak yerine dosya modu seçeneğini kullanın.  

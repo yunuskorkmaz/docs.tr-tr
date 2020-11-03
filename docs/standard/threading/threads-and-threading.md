@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: b332db80069e18d3b52cd03eef4995eaad3fda7b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7af6e1e73016e67c097b4fdbfb5f5d2d84e00d3
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583407"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188139"
 ---
 # <a name="threads-and-threading"></a>İş parçacıkları ve iş parçacığı
 
@@ -24,7 +24,7 @@ ms.locfileid: "84583407"
 *İşlem* yürütülen bir programdır. Bir işletim sistemi, yürütülmekte olan uygulamaları ayırmak için süreçler kullanır. *İş parçacığı* , bir işletim sisteminin işlemci süresini ayırdığı temel birimdir. Her iş parçacığı bir [zamanlama önceliğine](scheduling-threads.md) sahiptir ve sistemin iş parçacığı yürütme duraklatıldığında iş parçacığı bağlamını kaydetmek için kullandığı bir yapı kümesi tutar. İş parçacığı bağlamı, iş parçacığının CPU kayıtları ve yığın kümesi de dahil olmak üzere yürütmeyi sorunsuz bir şekilde sürdürmeniz için gereken tüm bilgileri içerir. Bir işlem bağlamında birden çok iş parçacığı çalıştırılabilir. Bir işlemin tüm iş parçacıkları sanal adres alanını paylaşır. Bir iş parçacığı, şu anda başka bir iş parçacığı tarafından yürütülen parçalar dahil olmak üzere program kodunun herhangi bir bölümünü yürütebilir.
 
 > [!NOTE]
-> .NET Framework, *uygulama etki alanlarının*kullanımıyla bir işlem içindeki uygulamaları yalıtmak için bir yol sağlar. (Uygulama etki alanları .NET Core 'da kullanılamaz.) Daha fazla bilgi için [uygulama etki alanları](../../framework/app-domains/application-domains.md) makalesinin [uygulama etki alanları ve iş parçacıkları](../../framework/app-domains/application-domains.md#application-domains-and-threads) bölümüne bakın.
+> .NET Framework, *uygulama etki alanlarının* kullanımıyla bir işlem içindeki uygulamaları yalıtmak için bir yol sağlar. (Uygulama etki alanları .NET Core 'da kullanılamaz.) Daha fazla bilgi için [uygulama etki alanları](../../framework/app-domains/application-domains.md) makalesinin [uygulama etki alanları ve iş parçacıkları](../../framework/app-domains/application-domains.md#application-domains-and-threads) bölümüne bakın.
 
 Varsayılan olarak, bir .NET programı, genellikle *birincil* iş parçacığı olarak adlandırılan tek bir iş parçacığıyla başlatılır. Ancak, birincil iş parçacığıyla kodu paralel veya eşzamanlı olarak yürütmek için ek iş parçacıkları oluşturabilir. Bu iş parçacıkları genellikle *çalışan* iş parçacıkları olarak adlandırılır.
 

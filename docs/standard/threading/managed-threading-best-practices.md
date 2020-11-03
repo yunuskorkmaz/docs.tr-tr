@@ -7,27 +7,28 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- threading [.NET Framework], design guidelines
-- threading [.NET Framework], best practices
+- threading [.NET], design guidelines
+- threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 8d5c37bf2ed80e9b6ea071fcd2080c43be8f6247
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 88e1f34388cd58fef59bc4005bcaf630c59a661e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546373"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189010"
 ---
 # <a name="managed-threading-best-practices"></a>Yönetilen iş parçacığı en iyi uygulamaları
+
 Çoklu iş parçacığı dikkatli bir programlama gerektirir. Çoğu görev için, iş parçacığı havuzu iş parçacıklarının yürütülmesi için istekleri sıraya alarak karmaşıklığı azaltabilirsiniz. Bu konu, birden çok iş parçacığının çalışmasını koordine etme ya da engelleyen iş parçacıklarını işleme gibi daha zor durumları ele almaktadır.  
   
 > [!NOTE]
-> .NET Framework 4 ' te başlayarak, paralel kitaplığı ve PLıNQ görevi, çok iş parçacıklı programlamaya ait karmaşıklığın ve risklerden bazılarını azaltan API 'Ler sağlar. Daha fazla bilgi için bkz. [.net 'Te paralel programlama](../parallel-programming/index.md).  
+> .NET Framework 4 ' den başlayarak, paralel kitaplığı ve PLıNQ görevi, çok iş parçacıklı programlamaya ait karmaşıklığın ve risklerden bazılarını azaltan API 'Ler sağlar. Daha fazla bilgi için bkz. [.net 'Te paralel programlama](../parallel-programming/index.md).  
   
 ## <a name="deadlocks-and-race-conditions"></a>Kilitlenmeler ve yarış koşulları  
  Çoklu iş parçacığı işleme ve yanıt verme sorunlarını çözer, ancak bunu yaparken yeni sorunlar ortaya koymaktadır: Kilitlenmeler ve yarış koşulları.  
   
-### <a name="deadlocks"></a>Çık  
+### <a name="deadlocks"></a>Kilitlenmeler  
  İki iş parçacığının her biri zaten kilitlediği bir kaynağı kilitlemeyi denediğinde bir kilitlenme oluşur. Ne iş parçacığı başka bir işlem yapabilir.  
   
  Yönetilen iş parçacığı sınıflarının birçok yöntemi, kilitlenmeleri tespit etmenize yardımcı olmak için zaman aşımı sağlar. Örneğin, aşağıdaki kod adlı bir nesne üzerinde bir kilit edinmeye çalışır `lockObject` . Kilit 300 milisaniye içinde alınamıyorsa, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> döndürür `false` .  
@@ -61,7 +62,7 @@ else {
 ### <a name="race-conditions"></a>Yarış durumları  
  Yarış durumu, bir programın sonucu, ilk olarak iki veya daha fazla iş parçacığının belirli bir kod bloğuna eriştiği durumlarda oluşan hatadır. Programı birçok kez çalıştırmak farklı sonuçlar üretir ve belirli bir çalıştırmanın sonucu tahmin edilemez.  
   
- Yarış koşulunun basit bir örneği bir alanı artırdığında. Bir sınıfın bir örneği oluşturulduğunda (Visual Basic**paylaşılan** ), **static** `objCt++;` (C#) veya `objCt += 1` (Visual Basic) gibi bir kod kullanarak, sınıfın bir örneği oluşturulduğu her seferinde artan bir özel statik alana sahip olduğunu varsayalım. Bu işlem, değeri `objCt` bir kayda yüklemeyi, değeri arttırmanızı ve içinde depolamayı gerektirir `objCt` .  
+ Yarış koşulunun basit bir örneği bir alanı artırdığında. Bir sınıfın bir örneği oluşturulduğunda (Visual Basic **paylaşılan** ), **static** `objCt++;` (C#) veya `objCt += 1` (Visual Basic) gibi bir kod kullanarak, sınıfın bir örneği oluşturulduğu her seferinde artan bir özel statik alana sahip olduğunu varsayalım. Bu işlem, değeri `objCt` bir kayda yüklemeyi, değeri arttırmanızı ve içinde depolamayı gerektirir `objCt` .  
   
  Çok iş parçacıklı bir uygulamada, değeri yüklemiş ve arttırılan bir iş parçacığı, üç adımı da gerçekleştiren başka bir iş parçacığı tarafından önlenebilir. ilk iş parçacığı yürütmeyi sürdürür ve değerini depoladığında `objCt` değeri, değerin geçici olarak değiştiğini dikkate almadan geçersiz kılar.  
   
@@ -95,7 +96,7 @@ Birden çok işlemci olup olmadığı veya sistemde yalnızca bir işlemcinin ku
   
 - Örneğin, C# veya Visual Basic gibi örneklerde kilitleme yaparken dikkatli olun `lock(this)` `SyncLock(Me)` . Uygulamanızdaki diğer kod, türü dışında, nesne üzerinde bir kilit alırsa, kilitlenmeler meydana gelebilir.  
   
-- İş parçacığı izleyicisinde olduğunda bir özel durum olsa bile, bir izleyici girmiş olan bir iş parçacığının her zaman bu izleyiciden ayrılmasından emin olun. C# [Lock](../../csharp/language-reference/keywords/lock-statement.md) ve Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) deyimleri, bir **finally** bloğu kullanarak bu davranışı otomatik olarak sağlar <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> . **Çıkış** çağrısı yapıldığından emin değilseniz, tasarımınızı **mutex**kullanacak şekilde değiştirmeyi düşünün. Şu anda sahibi olan iş parçacığı sonlandırıldığında bir mutex otomatik olarak serbest bırakılır.  
+- İş parçacığı izleyicisinde olduğunda bir özel durum olsa bile, bir izleyici girmiş olan bir iş parçacığının her zaman bu izleyiciden ayrılmasından emin olun. C# [Lock](../../csharp/language-reference/keywords/lock-statement.md) ve Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) deyimleri, bir **finally** bloğu kullanarak bu davranışı otomatik olarak sağlar <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> . **Çıkış** çağrısı yapıldığından emin değilseniz, tasarımınızı **mutex** kullanacak şekilde değiştirmeyi düşünün. Şu anda sahibi olan iş parçacığı sonlandırıldığında bir mutex otomatik olarak serbest bırakılır.  
   
 - Farklı kaynaklar gerektiren görevler için birden çok iş parçacığı kullanın ve tek bir kaynağa birden çok iş parçacığı atamaktan kaçının. Örneğin, iş parçacığı g/ç işlemleri sırasında engelleyecağından ve bu nedenle diğer iş parçacıklarının yürütülmesine izin vereceğinden, g/ç 'nin sağladığı her türlü görev kendi iş parçacığına sahip olur. Kullanıcı girişi, adanmış bir iş parçacığından faydalanan başka bir kaynaktır. Tek işlemcili bir bilgisayarda, Kullanıcı girişiyle ve g/ç içeren görevlerle yoğun bir hesaplama birlikte bulunur, ancak birden fazla hesaplama yoğun görev, birbirleriyle devam eden bir görevdir.  
   
@@ -125,7 +126,7 @@ Birden çok işlemci olup olmadığı veya sistemde yalnızca bir işlemcinin ku
     ```  
   
     > [!NOTE]
-    > .NET Framework 2,0 ve sonrasında, <xref:System.Threading.Interlocked.Add%2A> 1 ' den büyük atomik artışlarla yöntemi kullanın.  
+    > 1 ' <xref:System.Threading.Interlocked.Add%2A> den büyük atomik artışlarla ilgili yöntemi kullanın.  
   
      İkinci örnekte, bir başvuru türü değişkeni yalnızca bir null başvurusu ( `Nothing` Visual Basic) ise güncelleştirilir.  
   
@@ -160,7 +161,7 @@ Birden çok işlemci olup olmadığı veya sistemde yalnızca bir işlemcinin ku
     ```  
   
     > [!NOTE]
-    > .NET Framework 2,0 ' den başlayarak, <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> yöntem aşırı yüklemesi başvuru türleri için tür açısından güvenli bir alternatif sağlar.
+    > <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>Yöntem aşırı yüklemesi, başvuru türleri için tür açısından güvenli bir alternatif sağlar.
   
 ## <a name="recommendations-for-class-libraries"></a>Sınıf kitaplıkları için öneriler  
  Çoklu iş parçacığı için sınıf kitaplıkları tasarlarken aşağıdaki yönergeleri göz önünde bulundurun:  
@@ -169,7 +170,7 @@ Birden çok işlemci olup olmadığı veya sistemde yalnızca bir işlemcinin ku
   
 - Statik verileri ( `Shared` Visual Basic) iş parçacığında varsayılan olarak güvenli hale getirin.  
   
-- Örnek veri parçacığını varsayılan olarak güvenli hale getirme. İş parçacığı açısından güvenli kod oluşturmak için kilitlerin eklenmesi performansı düşürür, kilit çekişmesini artırır ve kilitlenmeleri oluşma olasılığını oluşturur. Ortak uygulama modellerinde, aynı anda yalnızca bir iş parçacığı Kullanıcı kodunu yürütür ve bu da iş parçacığı güvenliği gereksinimini en aza indirir. Bu nedenle, .NET Framework sınıf kitaplıkları varsayılan olarak iş parçacığı güvenli değildir.  
+- Örnek veri parçacığını varsayılan olarak güvenli hale getirme. İş parçacığı açısından güvenli kod oluşturmak için kilitlerin eklenmesi performansı düşürür, kilit çekişmesini artırır ve kilitlenmeleri oluşma olasılığını oluşturur. Ortak uygulama modellerinde, aynı anda yalnızca bir iş parçacığı Kullanıcı kodunu yürütür ve bu da iş parçacığı güvenliği gereksinimini en aza indirir. Bu nedenle, .NET sınıf kitaplıkları varsayılan olarak iş parçacığı güvenli değildir.  
   
 - Statik durumu değiştirecek statik yöntemler sağlamaktan kaçının. Ortak sunucu senaryolarında, statik durum istekler arasında paylaşılır, bu da birden çok iş parçacığının aynı anda bu kodu yürütebileceği anlamına gelir. Bu, hataları iş parçacığı olma olasılığını açar. İstekler arasında paylaşılmayan örneklere veri kapsülleyen bir tasarım kalıbı kullanmayı düşünün. Ayrıca, statik veriler eşitlenirse, durumu alter static Yöntemler arasındaki çağrılar kilitlenmeleri veya yedekli eşitlemeye neden olabilir ve bu da performansı olumsuz etkileyebilir.  
   

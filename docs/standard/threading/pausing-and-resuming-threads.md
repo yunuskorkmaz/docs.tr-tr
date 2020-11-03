@@ -8,15 +8,15 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - interrupting threads
-- threading [.NET Framework], pausing
+- threading [.NET], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: f7f414ec716bac5f1e840c5e8a0946024e059fb6
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 07fe374acb3d2a3de3a1b51861feb5f8551ecc2e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769125"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188971"
 ---
 # <a name="pausing-and-interrupting-threads"></a>İş parçacıklarını duraklatma ve kesintiye uğratma
 
@@ -28,7 +28,7 @@ ms.locfileid: "84769125"
 
  Yöntemi çağırmak, <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> geçerli iş parçacığının, yönteme geçirdiğiniz süre veya zaman aralığı için hemen blok almasına neden olur ve zaman diliminin geri kalanını başka bir iş parçacığına verir. Bu Aralık sona erdiğinde, Uyuyan iş parçacığı yürütmeyi sürdürür.  
   
- Bir iş parçacığı <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> başka bir iş parçacığında çağrılamaz.  <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>, her zaman geçerli iş parçacığının uykuya geçmesine neden olan statik bir yöntemdir.  
+ Bir iş parçacığı <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> başka bir iş parçacığında çağrılamaz.  <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> , her zaman geçerli iş parçacığının uykuya geçmesine neden olan statik bir yöntemdir.  
   
  <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>Bir değeriyle çağırmak <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType> , Uyuyan iş parçacığında yöntemi çağıran başka bir iş parçacığı tarafından kesintiye gelinceye kadar <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> veya yöntemine bir çağrı tarafından sonlandırılana kadar bir iş parçacığının uykuya geçmesini sağlar <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> .  Aşağıdaki örnekte, Uyuyan bir iş parçacığını kesintiye uğratma yöntemleri gösterilmektedir.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "84769125"
   
  Bir bekleme yönetilen bekleme ise, <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> her ikisi de iş parçacığını hemen uyandırır. Bir bekleme, yönetilmeyen bir bekleme ise (örneğin, Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) işlevi için bir platform çağırma çağrısı), <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ya da yönetilen koda çağrı yapana kadar iş parçacığı denetimini ele geçirebilir. Yönetilen kodda, davranış aşağıdaki gibidir:  
   
-- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>bir iş parçacığını, içinde olabilecek herhangi bir bekleme durumundan uyandırır ve hedef iş parçacığında bir oluşturulmasına neden olur <xref:System.Threading.ThreadInterruptedException> .  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> bir iş parçacığını, içinde olabilecek herhangi bir bekleme durumundan uyandırır ve hedef iş parçacığında bir oluşturulmasına neden olur <xref:System.Threading.ThreadInterruptedException> .  
   
-- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>bir iş parçacığını herhangi bir bekleme durumundan uyandığında, iş parçacığında bir işlem oluşmasına neden olur <xref:System.Threading.ThreadAbortException> . Ayrıntılar için bkz. [Iş parçacıklarını yok](destroying-threads.md)etme.  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> bir iş parçacığını herhangi bir bekleme durumundan uyandığında, iş parçacığında bir işlem oluşmasına neden olur <xref:System.Threading.ThreadAbortException> . Ayrıntılar için bkz. [Iş parçacıklarını yok](destroying-threads.md)etme.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

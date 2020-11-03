@@ -5,25 +5,25 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
-- threading [.NET Framework], multiple threads
-- threading [.NET Framework], about threading
+- threading [.NET], multiple threads
+- threading [.NET], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: d4a4ceabf29bd0f6f537e59ba477f9da686b1ef5
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ca3073cca9887265b4bacb4f8dfeb01203f82621
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769099"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189140"
 ---
 # <a name="managed-threading-basics"></a>Yönetilen iş parçacığı temelleri
 
-Bu bölümün ilk beş konusu, yönetilen iş parçacığı kullanmanın ne zaman kullanılacağını ve bazı temel özellikleri açıklamanıza yardımcı olmak üzere tasarlanmıştır. Ek özellikler sağlayan sınıflar hakkında daha fazla bilgi için bkz. [Iş parçacığı nesneleri ve özellikleri](threading-objects-and-features.md) ve [eşitleme temel bilgilerine genel bakış](overview-of-synchronization-primitives.md).  
+Bu bölümün ilk beş makalesi, yönetilen iş parçacığı oluşturmayı ve bazı temel özellikleri açıklamak için ne zaman kullanacağınızı belirlemenize yardımcı olmak üzere tasarlanmıştır. Ek özellikler sağlayan sınıflar hakkında daha fazla bilgi için bkz. [Iş parçacığı nesneleri ve özellikleri](threading-objects-and-features.md) ve [eşitleme temel bilgilerine genel bakış](overview-of-synchronization-primitives.md).  
   
- Bu bölümdeki konuların geri kalanı, Windows işletim sistemi ile yönetilen iş parçacığı etkileşimi de dahil olmak üzere gelişmiş konuları kapsar.  
+ Bu bölümdeki diğer makaleler, Windows işletim sistemi ile yönetilen iş parçacığı etkileşimi de dahil olmak üzere gelişmiş konuları kapsar.  
   
 > [!NOTE]
-> .NET Framework 4 ' te, görev paralel kitaplığı ve PLıNQ, çok iş parçacıklı programlarda görev ve veri paralelliği için API 'Ler sağlar. Daha fazla bilgi için bkz. [paralel programlama](../parallel-programming/index.md).  
+> .NET Framework 4 ' den başlayarak, görev paralel kitaplığı ve PLıNQ, çok iş parçacıklı programlarda görev ve veri paralelliği için API 'Ler sağlar. Daha fazla bilgi için bkz. [paralel programlama](../parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>Bu bölümde
 
@@ -31,18 +31,18 @@ Bu bölümün ilk beş konusu, yönetilen iş parçacığı kullanmanın ne zama
  Birden çok iş parçacığının avantajlarını ve dezavantajını açıklar ve iş parçacıkları oluşturabileceğiniz veya iş parçacığı havuzu iş parçacıklarını kullanabileceğiniz senaryoları özetler.  
   
  [Yönetilen İş Parçacıklarında Özel Durumlar](exceptions-in-managed-threads.md)  
- Farklı .NET Framework sürümleri için iş parçacıklarında işlenmeyen özel durumların davranışını, özellikle de uygulamanın sonlandırmasına neden oldukları durumları açıklar.  
+ .NET 'in farklı sürümleri için iş parçacıklarında işlenmeyen özel durumların davranışını, özellikle de uygulamanın sonlandırılması ile sonuçlandığı durumlarda açıklar.  
   
  [Çoklu İş Parçacığı Kullanımı için Veri Eşitleme](synchronizing-data-for-multithreading.md)  
  Birden çok iş parçacığı ile kullanılacak sınıflardaki verileri eşitlemeye yönelik stratejileri açıklar.  
   
- [Ön Plan ve Arka Plan İş Parçacıkları](foreground-and-background-threads.md)  
+ [Ön Plan ve Arka Plan İş Parçacıklarını Seçme](foreground-and-background-threads.md)  
  Ön plan ve arka plan iş parçacıkları arasındaki farklılıkları açıklar.  
   
- [Windows'ta Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma](managed-and-unmanaged-threading-in-windows.md)  
+ [Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma](managed-and-unmanaged-threading-in-windows.md)  
  Yönetilen ve yönetilmeyen iş parçacığı arasındaki ilişkiyi açıklar, Windows iş parçacığı oluşturma API 'Lerinin yönetilen eşdeğerlerini listeler ve COM apartmanlarının ve yönetilen iş parçacıklarının etkileşimini tartışır.  
   
- [İş Parçacığı Yerel Deposu: İş Parçacığı Göreli Statik Alanları ve Veri Yuvaları](thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [İş Parçacığında Yerel Depolama: İş Parçacığı Göreli Statik Alanları ve Veri Yuvaları](thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  İş parçacığı göreli depolama mekanizmalarını açıklar.  
   
 ## <a name="reference"></a>Başvuru
@@ -62,4 +62,4 @@ Bu bölümün ilk beş konusu, yönetilen iş parçacığı kullanmanın ne zama
  Çoklu iş parçacığı ve stratejilerle ilgili yaygın sorunları açıklar.  
   
  [Paralel programlama](../parallel-programming/index.md)  
- Zaman uyumsuz ve çok iş parçacıklı .NET Framework uygulamaları oluşturma işini büyük ölçüde kolaylaştıran paralel kitaplığı ve PLıNQ görevini açıklar.
+ Zaman uyumsuz ve çok iş parçacıklı .NET uygulamaları oluşturma işini büyük ölçüde kolaylaştıran paralel kitaplığı ve PLıNQ görevini açıklar.

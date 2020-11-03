@@ -3,18 +3,18 @@ title: Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma
 ms.date: 10/24/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], unmanaged
-- threading [.NET Framework], managed
+- threading [.NET], unmanaged
+- threading [.NET], managed
 - threading [.NET], managed
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7b2eca1275aba5139bd19662674cd76d95e92fd0
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924389"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189166"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 'da yönetilen ve yönetilmeyen iş parçacığı
 
@@ -52,7 +52,7 @@ Yönetilen bir iş parçacığı, [tek iş parçacıklı](/windows/desktop/com/s
  Grup durumu, iş parçacığı başlatılmadan önce ayarlanmamışsa, iş parçacığı, çok iş parçacıklı apartman (MTA) olarak başlatılır. Sonlandırıcı iş parçacığı ve tarafından denetlenen tüm iş parçacıkları <xref:System.Threading.ThreadPool> MTA.  
   
 > [!IMPORTANT]
-> Uygulama başlangıç kodu için, grup durumunu denetlemek için tek yol, <xref:System.MTAThreadAttribute> veya öğesini <xref:System.STAThreadAttribute> giriş noktası yordamına uygulamaktır. .NET Framework 1,0 ve 1,1 ' de, <xref:System.Threading.Thread.ApartmentState%2A> özellik ilk kod satırı olarak ayarlanabilir. .NET Framework 2,0 ' de buna izin verilmez.  
+> Uygulama başlangıç kodu için, grup durumunu denetlemek için tek yol, <xref:System.MTAThreadAttribute> veya öğesini <xref:System.STAThreadAttribute> giriş noktası yordamına uygulamaktır.
   
  COM 'a sunulan yönetilen nesneler, serbest iş parçacıklı Sıralayıcı 'nın toplanmamış gibi davranır. Diğer bir deyişle, ücretsiz iş parçacıklı bir şekilde herhangi bir COM grubundan çağrılabilir. Bu serbest iş parçacıklı davranışı sergilemeyen tek yönetilen nesneler, veya ' den türetilen nesnelerdir <xref:System.EnterpriseServices.ServicedComponent> <xref:System.Runtime.InteropServices.StandardOleMarshalObject> .  
   

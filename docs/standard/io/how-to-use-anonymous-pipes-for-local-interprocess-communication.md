@@ -8,20 +8,21 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- anonymous pipes [.NET Framework]
-- parent-child communication [.NET Framework]
-- pipes [.NET Framework]
-- one-way communication [.NET Framework]
-- local computer communication [.NET Framework], pipes
+- anonymous pipes [.NET]
+- parent-child communication [.NET]
+- pipes [.NET]
+- one-way communication [.NET]
+- local computer communication [.NET], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: 090a25aea4f280fc2ad00cf7777a501c475dfc66
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c9d223d975dc7ab251717a66de0bc845845dc9d7
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594809"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189361"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma
+
 Anonim kanallar, yerel bir bilgisayarda işlemler arası iletişim sağlar. Adlandırılmış kanallardan daha az işlevsellik sağlarlar, ancak daha az yük gerektirirler. Yerel bir bilgisayarda işlemler arası iletişimi kolaylaştırmak için anonim kanalları kullanabilirsiniz. Bir ağ üzerinden iletişim için anonim kanalları kullanamazsınız.  
   
  Anonim kanalları uygulamak için, <xref:System.IO.Pipes.AnonymousPipeServerStream> ve <xref:System.IO.Pipes.AnonymousPipeClientStream> sınıflarını kullanın.  

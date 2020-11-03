@@ -10,18 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - reading characters from strings
 - data streams, reading characters from string
-- I/O [.NET Framework], reading characters from strings
+- I/O [.NET], reading characters from strings
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: fa03d13036e9e245b8ca3f8c3218ae80a2762a12
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c613f8170655601b72b87de4a20c295b1054bd1a
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553954"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189348"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Nasıl yapılır: dizeden karakterleri okuma
+
 Aşağıdaki kod örnekleri, bir dizeden zaman uyumlu veya zaman uyumsuz karakterlerin nasıl okunacağını gösterir.  
   
 ## <a name="example-read-characters-synchronously"></a>Örnek: karakterleri zaman uyumlu olarak okuyun

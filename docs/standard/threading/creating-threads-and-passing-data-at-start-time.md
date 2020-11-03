@@ -8,16 +8,16 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- threading [.NET Framework], creating
-- threading [.NET Framework], passing data to threads
-- threading [.NET Framework], retrieving data from threads
+- threading [.NET], creating
+- threading [.NET], passing data to threads
+- threading [.NET], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-ms.openlocfilehash: 811028d3c853441ff3a61d3628a44e5c65ba7059
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: a1e8f8f6e017d29f352d79ea08c09b2d97041bba
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661920"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188386"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Başlatma zamanında iş parçacığı oluşturma ve veri geçirme
 
@@ -40,9 +40,9 @@ Bir işletim sistemi işlemi oluşturulduğunda, işletim sistemi, özgün uygul
   
 ## <a name="passing-data-to-threads"></a>İş parçacıklarına veri geçirme
 
- .NET Framework sürüm 2,0 ' de temsilci, <xref:System.Threading.ParameterizedThreadStart> yöntem aşırı yüklemesini çağırdığınızda bir iş parçacığına veri içeren bir nesneyi geçirmek için kolay bir yol sağlar <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> . <xref:System.Threading.ParameterizedThreadStart>Kod örneği için bkz..  
+<xref:System.Threading.ParameterizedThreadStart>Temsilci, çağırdığınızda bir iş parçacığına veri içeren bir nesneyi geçirmek için kolay bir yol sağlar <xref:System.Threading.Thread.Start(System.Object)?displayProperty=nameWithType> . <xref:System.Threading.ParameterizedThreadStart>Kod örneği için bkz..
   
- <xref:System.Threading.ParameterizedThreadStart> <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> Yöntem aşırı yüklemesi herhangi bir nesneyi kabul ettiğinden, temsilcinin kullanılması, verileri geçirmek için tür açısından güvenli bir yoldur. Diğer bir seçenek de iş parçacığı yordamını ve verileri bir yardımcı sınıfında kapsüllemek ve <xref:System.Threading.ThreadStart> iş parçacığı yordamını yürütmek için temsilciyi kullanmaktır. Aşağıdaki örnek bu tekniği göstermektedir:
+ <xref:System.Threading.ParameterizedThreadStart>Yöntem herhangi bir nesneyi kabul ettiğinden, temsilcinin kullanılması, veri geçişinin tür açısından güvenli bir yoludur <xref:System.Threading.Thread.Start(System.Object)?displayProperty=nameWithType> . Diğer bir seçenek de iş parçacığı yordamını ve verileri bir yardımcı sınıfında kapsüllemek ve <xref:System.Threading.ThreadStart> iş parçacığı yordamını yürütmek için temsilciyi kullanmaktır. Aşağıdaki örnek bu tekniği göstermektedir:
 
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]

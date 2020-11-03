@@ -2,12 +2,12 @@
 title: Bağımlılıklar ve .NET kitaplıkları
 description: .NET kitaplıklarında NuGet bağımlılıklarını yönetmeye yönelik en iyi yöntem önerileri.
 ms.date: 10/02/2018
-ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d189a3364b501272e29de72b6018844877bf2128
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291376"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189309"
 ---
 # <a name="dependencies"></a>Bağımlılıklar
 
@@ -23,9 +23,9 @@ Derleme zamanında, NuGet, bağımlılıkların bağımlılıkları da dahil olm
 
 Çoğu elmas bağımlılığı kolayca çözülür; Ancak, belirli koşullarda sorunlar oluşturabilirler:
 
-1. **Çakışan NuGet paket başvuruları** , paketin geri yükleme sırasında bir sürümün çözümlenmesini engelliyor.
-2. **Sürümler arasındaki son değişiklikler** çalışma zamanında hatalara ve özel durumlara neden olur.
-3. **Paket derlemesi tanımlayıcı adlı**, derleme sürümü değişti ve uygulama .NET Framework çalışıyor. Derleme bağlama yeniden yönlendirmeleri gereklidir.
+- **Çakışan NuGet paket başvuruları** , paketin geri yükleme sırasında bir sürümün çözümlenmesini engelliyor.
+- **Sürümler arasındaki son değişiklikler** çalışma zamanında hatalara ve özel durumlara neden olur.
+- **Paket derlemesinin tanımlayıcı adlı** , derleme sürümü değiştiği ve uygulama .NET Framework üzerinde çalışıyor. Derleme bağlama yeniden yönlendirmeleri gereklidir.
 
 Hangi paketlerin sizin de birlikte kullanılacağını Bileme olanaksızdır. Bir elmas bağımlılığını düşürmenin olasılığını azaltmanın iyi bir yolu, bağlı olduğunuz paket sayısını en aza indirmektir.
 
@@ -56,11 +56,11 @@ NuGet 'in en düşük geçerli sürüm kuralı nedeniyle, en son sürümü almay
 
 ![Elmas bağımlılığı çakışması](./media/dependencies/diamond-dependency-conflict.png "Elmas bağımlılığı çakışması")
 
-❌En düşük sürüm olmadan NuGet paketi başvuruları yoktur.
+❌ En düşük sürüm olmadan NuGet paketi başvuruları yoktur.
 
-❌Tam bir sürümü talep eden NuGet paket başvurularından KAÇıNıN.
+❌ Tam bir sürümü talep eden NuGet paket başvurularından KAÇıNıN.
 
-❌Sürüm üst sınırı olan NuGet paket başvurularından KAÇıNıN.
+❌ Sürüm üst sınırı olan NuGet paket başvurularından KAÇıNıN.
 
 ## <a name="nuget-shared-source-packages"></a>NuGet paylaşılan kaynak paketleri
 
@@ -86,11 +86,11 @@ Paylaşılan kaynak paketlerinde bazı sınırlamalar vardır. Yalnızca tarafı
 
 > Bu ayar NuGet 'e paketin yalnızca geliştirme zamanında kullanılacağını ve genel bağımlılık olarak sunulmayacağını söyler.
 
-❌Ortak API 'niz içinde paylaşılan kaynak paketi türleri yok.
+❌ Ortak API 'niz içinde paylaşılan kaynak paketi türleri yok.
 
 > Paylaşılan kaynak türleri, başvurulan derlemeye derlenir ve derleme sınırları arasında değiştirilemez. Örneğin, `IRepository` bir projedeki paylaşılan kaynak türü, başka bir projede aynı paylaşılan kaynaktan ayrı bir tür `IRepository` . Paylaşılan kaynak paketlerindeki türlerin görünürlüğe sahip olması gerekir `internal` .
 
-❌Paylaşılan kaynak paketlerini NuGet.org 'e yayımlamayın.
+❌ Paylaşılan kaynak paketlerini NuGet.org 'e yayımlamayın.
 
 > Paylaşılan kaynak paketleri kaynak kodu içerir ve yalnızca aynı dil türüne sahip projeler tarafından kullanılabilir. Örneğin, bir C# paylaşılan kaynak paketi bir F # uygulaması tarafından kullanılamaz.
 >

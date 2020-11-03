@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd7112b3052f246a01e4a36d6d425b37cb6174dd
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599808"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188048"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET 'te g/ç hatalarını işleme
 
@@ -46,7 +46,7 @@ Ancak, işletim sisteminin belirli hata kodlarını döndürdüğü kesin koşul
 
 Bu, işletim sistemine güvendiğimiz için, aynı özel durum koşulları (örneğimizde dizin bulunamadı hatası gibi), tüm g/ç özel durum sınıfından birini oluşturan g/ç yöntemine neden olabilir. Diğer bir deyişle, g/ç API 'Leri çağrılırken kodunuzun bu özel durumların çoğunu veya tümünü, aşağıdaki tabloda gösterildiği gibi işleyecek şekilde hazırlanmalıdır.
 
-| Özel durum türü | .NET Core | .NET Framework |
+| Özel durum türü | .NET Core/. NET 5 + | .NET Framework |
 |---|---|---|
 | <xref:System.IO.IOException> | Yes | Yes |
 | <xref:System.IO.FileNotFoundException> | Yes | Yes |
@@ -55,8 +55,8 @@ Bu, işletim sistemine güvendiğimiz için, aynı özel durum koşulları (örn
 | <xref:System.IO.PathTooLongException> | Yes | Yes |
 | <xref:System.OperationCanceledException> | Yes | Yes |
 | <xref:System.UnauthorizedAccessException> | Yes | Yes |
-| <xref:System.ArgumentException> | .NET Core 2,0 ve öncesi| Evet |
-| <xref:System.NotSupportedException> | Hayır | Evet |
+| <xref:System.ArgumentException> | .NET Core 2,0 ve öncesi| Yes |
+| <xref:System.NotSupportedException> | Hayır | Yes |
 | <xref:System.Security.SecurityException> | Hayır | Yalnızca sınırlı güven |
 
 ## <a name="handling-ioexception"></a>IOException işleniyor

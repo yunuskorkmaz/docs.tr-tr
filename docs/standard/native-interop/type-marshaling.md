@@ -2,18 +2,18 @@
 title: Tür sıralama-.NET
 description: .NET 'in türlerinizi yerel bir gösterimde nasıl sıraladığında öğrenin.
 ms.date: 01/18/2019
-ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706272"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188399"
 ---
 # <a name="type-marshaling"></a>Tür hazırlama
 
 **Sıralama** , yönetilen ve yerel kod arasında çapraz geçiş olmaları gerektiğinde türleri dönüştürme işlemidir.
 
-Yönetilen ve yönetilmeyen koddaki türler farklı olduğundan sıralama gereklidir. Yönetilen kodda, örneğin, `String`yönetilmeyen Uluslararası dizeler Unicode ("geniş"), Unicode olmayan, null ile SONLANDıRıLMıŞ, ASCII vb. olabilir. Varsayılan olarak, P/Invoke alt sistemi, bu makalede açıklanan varsayılan davranışa göre doğru şeyi gerçekleştirmeye çalışır. Ancak, ek denetime ihtiyacınız olan bu durumlar için, yönetilmeyen tarafta beklenen türü ne olduğunu belirtmek üzere [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) özniteliğini kullanabilirsiniz. Örneğin, dizenin null ile sonlandırılmış bir ANSI dizesi olarak gönderilmesini istiyorsanız bunu şöyle yapabilirsiniz:
+Yönetilen ve yönetilmeyen koddaki türler farklı olduğundan sıralama gereklidir. Yönetilen kodda, örneğin, `String` yönetilmeyen Uluslararası dizeler Unicode ("geniş"), Unicode olmayan, null ile sonlandırılmış, ASCII vb. olabilir. Varsayılan olarak, P/Invoke alt sistemi, bu makalede açıklanan varsayılan davranışa göre doğru şeyi gerçekleştirmeye çalışır. Ancak, ek denetime ihtiyacınız olan bu durumlar için, yönetilmeyen tarafta beklenen türü ne olduğunu belirtmek üzere [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) özniteliğini kullanabilirsiniz. Örneğin, dizenin null ile sonlandırılmış bir ANSI dizesi olarak gönderilmesini istiyorsanız bunu şöyle yapabilirsiniz:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -36,13 +36,13 @@ Bu ilk tabloda, hem P/Invoke hem de alan sıralaması için, sıralama için ayn
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | Ya `char` da `char16_t` P/Invoke `CharSet` ya da yapısına bağlı olarak. [Karakter kümesi belgelerine](charset.md)bakın. |
-| `string`  | Ya `char*` da `char16_t*` P/Invoke `CharSet` ya da yapısına bağlı olarak. [Karakter kümesi belgelerine](charset.md)bakın. |
+| `char`    | Ya `char` da `char16_t` `CharSet` P/Invoke ya da yapısına bağlı olarak. [Karakter kümesi belgelerine](charset.md)bakın. |
+| `string`  | Ya `char*` da `char16_t*` `CharSet` P/Invoke ya da yapısına bağlı olarak. [Karakter kümesi belgelerine](charset.md)bakın. |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | .NET Işaretçi türleri (örn. `void*`)  | `void*` |
-| Türetilmiş tür`System.Runtime.InteropServices.SafeHandle` | `void*` |
-| Türetilmiş tür`System.Runtime.InteropServices.CriticalHandle` | `void*`          |
+| Türetilmiş tür `System.Runtime.InteropServices.SafeHandle` | `void*` |
+| Türetilmiş tür `System.Runtime.InteropServices.CriticalHandle` | `void*`          |
 | `bool`    | Win32 `BOOL` türü       |
 | `decimal` | COM `DECIMAL` yapısı |
 | .NET temsilcisi | Yerel işlev işaretçisi |
@@ -53,26 +53,26 @@ Bir parametre veya yapı olarak sıralama yapıyorsanız, birkaç sıralama kate
 
 | .NET türü | Yerel tür (parametre) | Yerel tür (alan) |
 |-----------|-------------------------|---------------------|
-| .NET dizisi | Dizi öğelerinin yerel gösterimlerine ait bir dizi başlangıcına yönelik bir işaretçi. | `[MarshalAs]` Özniteliği olmadan izin verilmiyor|
-| `Sequential` Veya içeren `LayoutKind` bir sınıf`Explicit` | Sınıfın yerel gösterimine yönelik bir işaretçi | Sınıfın yerel temsili |
+| .NET dizisi | Dizi öğelerinin yerel gösterimlerine ait bir dizi başlangıcına yönelik bir işaretçi. | Özniteliği olmadan izin verilmiyor `[MarshalAs]`|
+| Veya içeren bir sınıf `LayoutKind` `Sequential``Explicit` | Sınıfın yerel gösterimine yönelik bir işaretçi | Sınıfın yerel temsili |
 
 Aşağıdaki tablo, yalnızca Windows 'un varsayılan sıralama kurallarını içerir. Windows dışı platformlarda bu türleri sıralayamaz.
 
 | .NET türü | Yerel tür (parametre) | Yerel tür (alan) |
 |-----------|-------------------------|---------------------|
 | `object`  | `VARIANT`               | `IUnknown*`         |
-| `System.Array` | COM arabirimi | `[MarshalAs]` Özniteliği olmadan izin verilmiyor |
+| `System.Array` | COM arabirimi | Özniteliği olmadan izin verilmiyor `[MarshalAs]` |
 | `System.ArgIterator` | `va_list` | İzin verilmiyor |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | İzin verilmiyor |
 | `System.Collections.IEnumerable` | `IDispatch*` | İzin verilmiyor |
-| `System.DateTimeOffset` | `int64_t`1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme || `int64_t`1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme |
+| `System.DateTimeOffset` | `int64_t` 1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme || `int64_t` 1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme |
 
 Bazı türler, alan olarak değil yalnızca parametre olarak sıralanabilir. Bu türler aşağıdaki tabloda listelenmiştir:
 
 | .NET türü | Yerel tür (yalnızca parametre) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | Ya `char*` da `char16_t*` P/Invoke `CharSet` öğesine bağlı olarak.  [Karakter kümesi belgelerine](charset.md)bakın. |
-| `System.ArgIterator` | `va_list`(yalnızca Windows x86/x64/arm64 üzerinde) |
+| `System.Text.StringBuilder` | Ya `char*` da `char16_t*` `CharSet` P/Invoke öğesine bağlı olarak.  [Karakter kümesi belgelerine](charset.md)bakın. |
+| `System.ArgIterator` | `va_list` (yalnızca Windows x86/x64/arm64 üzerinde) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
@@ -87,10 +87,10 @@ Bu varsayılanlar tam olarak istediğiniz şekilde yapamazsa, parametrelerin nas
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
 | `string`  | `BSTR`                         |
-| Temsilci türleri | `_Delegate*`.NET Framework. .NET Core 'da izin verilmiyor. |
+| Temsilci türleri | `_Delegate*` .NET Framework. .NET Core ve .NET 5 + ' da izin verilmez. |
 | `System.Drawing.Color` | `OLECOLOR`        |
 | .NET dizisi | `SAFEARRAY`                   |
-| `string[]` | `SAFEARRAY`/ `BSTR`s        |
+| `string[]` | `SAFEARRAY` / `BSTR` s        |
 
 ## <a name="marshaling-classes-and-structs"></a>Sınıfları ve yapıları hazırlama
 
@@ -119,7 +119,7 @@ public static void Main(string[] args) {
 }
 ```
 
-Önceki kod, `GetSystemTime()` işlevine çağırmanın basit bir örneğini gösterir. İlginç bit 4. satırda. Özniteliği, sınıfın alanlarının diğer (yönetilmeyen) taraftaki yapıya sırayla eşlenmesi gerektiğini belirtir. Bu, alanların adlandırılmasının önemli olmadığı, yönetilmeyen yapısına karşılık gelmesi gerektiğinden, aşağıdaki örnekte gösterildiği gibi, yalnızca kendi sırası önemli değildir.
+Önceki kod, işlevine çağırmanın basit bir örneğini gösterir `GetSystemTime()` . İlginç bit 4. satırda. Özniteliği, sınıfın alanlarının diğer (yönetilmeyen) taraftaki yapıya sırayla eşlenmesi gerektiğini belirtir. Bu, alanların adlandırılmasının önemli olmadığı, yönetilmeyen yapısına karşılık gelmesi gerektiğinden, aşağıdaki örnekte gösterildiği gibi, yalnızca kendi sırası önemli değildir.
 
 ```c
 typedef struct _SYSTEMTIME {

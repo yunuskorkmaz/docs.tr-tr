@@ -5,24 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 8b54aea1409f2b4c0a3d39d215922ba62c2a3563
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: b9b033f779b083be8bcec195caf8e55607f14d31
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656976"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188321"
 ---
 # <a name="security-considerations-for-data"></a>Veriler için Güvenlik Konuları
 
-Windows Communication Foundation (WCF) içindeki verilerle ilgilenirken, bir dizi tehdit kategorisini göz önünde bulundurmanız gerekir. Aşağıdaki tabloda, veri işlemeyle ilgili en önemli tehdit sınıfları listelenmektedir. WCF, bu tehditleri hafifletmek için araçlar sağlar.
+Windows Communication Foundation (WCF) içindeki verilerle ilgilenirken, bir dizi tehdit kategorisini göz önünde bulundurmanız gerekir. Aşağıdaki listede, veri işlemeyle ilgili en önemli tehdit sınıfları gösterilmektedir. WCF, bu tehditleri hafifletmek için araçlar sağlar.
 
-Hizmet reddi güvenilir olmayan verileri alırken, veriler, alıcı tarafın bellek, iş parçacıkları, kullanılabilir bağlantılar veya işlemci döngüleri gibi uzun hesaplamalar oluşmasına neden olacak şekilde orantısız bir miktar kaynağa erişmesini sağlayabilir. Bir sunucuya yönelik bir hizmet reddi saldırısı, çökmesine ve diğer, meşru istemcilerden gelen iletileri işleyememesine neden olabilir.
+* Hizmet reddi
 
-Kötü amaçlı kod yürütme gelen güvenilmeyen veriler, alıcı tarafın kendisine ait olmadığı kodu çalıştırmasına neden olur.
+  Güvenilmeyen veriler alınırken, veriler, alıcı tarafın bellek, iş parçacıkları, kullanılabilir bağlantılar veya işlemci döngüleri gibi uzun hesaplamalar oluşmasına neden olacak şekilde orantısız miktarına erişmesini sağlayabilir. Bir sunucuya yönelik bir hizmet reddi saldırısı, çökmesine ve diğer, meşru istemcilerden gelen iletileri işleyememesine neden olabilir.
 
-Bilgilerin açıklanması uzak saldırgan, alıcı tarafın taleplerine göre daha fazla bilgi açığa çıkarmasına benzer şekilde isteklerine yanıt vermesini zorlamasına olanak sağlar.
+* Kötü amaçlı kod yürütme
 
-## <a name="user-provided-code-and-code-access-security"></a>Kullanıcı tarafından sağlanmış kod ve kod erişim güvenliği
+  Gelen güvenilmeyen veriler, alıcı tarafın, planlamadıkları kodu çalıştırmasına neden olur.
+
+* Bilgilerin açığa çıkması
+
+  Uzak saldırgan, alma işlemini amaçlarından daha fazla bilgi açığa çıkarmaya benzer şekilde, isteklerine yanıt vermeye zorlar.
+
+## <a name="user-provided-code-and-code-access-security"></a>User-Provided kodu ve kod erişim güvenliği
 
 Kullanıcı tarafından temin edilen Windows Communication Foundation (WCF) altyapı çalıştırma kodu içindeki çeşitli konumlar. Örneğin, <xref:System.Runtime.Serialization.DataContractSerializer> serileştirme altyapısı Kullanıcı tarafından belirtilen özellik `set` erişimcileri ve `get` erişimcileri çağırabilir. WCF kanal altyapısı, sınıfının Kullanıcı tarafından sağlanmış türetilmiş sınıflarına da çağrı gösterebilir <xref:System.ServiceModel.Channels.Message> .
 
@@ -88,7 +94,7 @@ WCF bu `MaxBufferSize` değeri, arabelleği olabilecek çeşitli bileşenlere ge
 
 MTOM ileti Kodlayıcısı da bir ayara sahiptir `MaxBufferSize` . Standart bağlamaları kullanırken, bu otomatik olarak aktarım düzeyi `MaxBufferSize` değerine ayarlanır. Ancak, özel bir bağlama oluşturmak için MTOM ileti Kodlayıcısı bağlama öğesi kullanılırken, `MaxBufferSize` akış kullanıldığında özelliği güvenli bir değere ayarlamanız önemlidir.
 
-## <a name="xml-based-streaming-attacks"></a>XML tabanlı akış saldırıları
+## <a name="xml-based-streaming-attacks"></a>XML-Based akış saldırıları
 
 `MaxBufferSize` Hala, WCF 'nin akış beklenirken arabelleğe alma işlemine zorlanamadığından emin olmak için yeterli değildir. Örneğin, WCF XML okuyucuları her zaman yeni bir öğeyi okumaya Başlarken tüm XML öğesi başlangıç etiketini arabelleğe alın. Bu işlem, ad alanlarının ve özniteliklerin düzgün şekilde işlenmesini sağlayacak şekilde yapılır. `MaxReceivedMessageSize`Büyük olacak şekilde yapılandırıldıysa (örneğin, doğrudan diske büyük dosya akışı senaryosunu etkinleştirmek için), tüm ileti gövdesinin büyük BIR XML öğesi başlangıç etiketi olduğu durumlarda kötü amaçlı bir ileti oluşturulabilir. Bir ile sonuçları okumaya çalışır <xref:System.OutOfMemoryException> . Bu, bu konunun ilerleyen kısımlarında "XML güvenli kullanımı" bölümünde ele alınan XML okuyucu kotaları kullanılarak tamamen azaltılan, XML tabanlı birçok hizmet reddi saldırısından biridir. Akış sırasında, bu kotaların tümünü ayarlamak özellikle önemlidir.
 
@@ -155,7 +161,7 @@ Bu kota, XML öğelerinin en fazla iç içe geçme derinliğini sınırlandırı
 
 #### <a name="maxnametablecharcount"></a>MaxNameTableCharCount
 
-Bu kota, okuyucunun *NameTable*boyutunu sınırlandırır. NameTable, bir XML belgesi işlenirken karşılaşılan belirli dizeleri (ad alanları ve ön ekler gibi) içerir. Bu dizelerin bellekte ara belleğe alındığından, akış beklendiğinde aşırı arabelleğe almayı engellemek için bu kotayı ayarlayın.
+Bu kota, okuyucunun *NameTable* boyutunu sınırlandırır. NameTable, bir XML belgesi işlenirken karşılaşılan belirli dizeleri (ad alanları ve ön ekler gibi) içerir. Bu dizelerin bellekte ara belleğe alındığından, akış beklendiğinde aşırı arabelleğe almayı engellemek için bu kotayı ayarlayın.
 
 #### <a name="maxstringcontentlength"></a>MaxStringContentLength
 
@@ -169,7 +175,7 @@ Bu kota, bayt dizileri dahil olmak üzere XML okuyucunun döndürdüğü temel e
 
 İkili XML kodlaması WCF, bir *Sözlük dizeleri* özelliği içerir. Büyük bir dize yalnızca birkaç bayt kullanılarak kodlanmayabilir. Bu, önemli ölçüde performans artışı sağlar, ancak hafiflemesinin azaltılması gereken yeni hizmet reddi tehditleri sunar.
 
-İki tür sözlük vardır: *statik* ve *dinamik*. Statik sözlük, ikili kodlamada kısa bir kod kullanılarak gösterilebilen uzun dizelerin yerleşik bir listesidir. Bu dizeler listesi okuyucu oluşturulduğunda ve değiştirilemediği zaman sabittir. Statik sözlükte WCF 'nin varsayılan olarak kullandığı dizelerin hiçbiri, önemli bir hizmet reddi tehdidi oluşturma konusunda yeterince büyük değildir, ancak yine de sözlük genişletme saldırısında kullanılabilir. Kendi statik sözlüğünüzü sağladığınız Gelişmiş senaryolarda, büyük sözlük dizeleri oluştururken dikkatli olun.
+İki tür sözlük vardır: *statik* ve *dinamik* . Statik sözlük, ikili kodlamada kısa bir kod kullanılarak gösterilebilen uzun dizelerin yerleşik bir listesidir. Bu dizeler listesi okuyucu oluşturulduğunda ve değiştirilemediği zaman sabittir. Statik sözlükte WCF 'nin varsayılan olarak kullandığı dizelerin hiçbiri, önemli bir hizmet reddi tehdidi oluşturma konusunda yeterince büyük değildir, ancak yine de sözlük genişletme saldırısında kullanılabilir. Kendi statik sözlüğünüzü sağladığınız Gelişmiş senaryolarda, büyük sözlük dizeleri oluştururken dikkatli olun.
 
 Dinamik sözlükler özelliği, iletilerin kendi dizelerini tanımlamasına ve bunları kısa kodlarla ilişkilendirilmesine izin verir. Bu dizeden koda eşlemeler tüm iletişim oturumu sırasında bellekte tutulur, örneğin sonraki iletiler dizelerin yeniden gönderilmesini gerektirmez ve önceden tanımlanmış kodlardan yararlanabilir. Bu dizeler rastgele uzunlukta olabilir ve bu nedenle statik sözlükten daha ciddi bir tehdit oluşturabilir.
 
@@ -292,7 +298,7 @@ Genel olarak, örneğinize kısmen güvenilen kod erişimine izin verirseniz `Ne
 
 İle ilgili başka bir güvenlik, `NetDataContractSerializer` kötü amaçlı kod yürütme tehdidi değil, hizmet reddine neden olur. Kullanırken `NetDataContractSerializer` , her zaman <xref:System.Runtime.Serialization.NetDataContractSerializer.MaxItemsInObjectGraph%2A> kotayı güvenli bir değer olarak ayarlayın. Boyutu yalnızca bu kotayla sınırlı olan bir nesne dizisini ayıran küçük bir kötü amaçlı ileti oluşturmak kolaydır.
 
-### <a name="xmlserializer-specific-threats"></a>XmlSerializer 'a özgü tehditler
+### <a name="xmlserializer-specific-threats"></a>XmlSerializer-Specific tehditler
 
 <xref:System.Xml.Serialization.XmlSerializer>Güvenlik modeli, ile benzerdir <xref:System.Runtime.Serialization.DataContractSerializer> . Ancak, birkaç tehdit için benzersizdir <xref:System.Xml.Serialization.XmlSerializer> .
 

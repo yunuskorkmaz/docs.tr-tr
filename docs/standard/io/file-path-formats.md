@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: e24772ee9c9d22786c9cfece43017f8526434601
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679605"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188061"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerinde dosya yolu biçimleri
 
@@ -31,7 +31,7 @@ Standart bir DOS yolu üç bileşenden oluşabilir:
 
 Üç bileşen varsa, yol mutlak olur. Birim veya sürücü harfi belirtilmemişse ve dizin adı [dizin ayırıcı karakteriyle](<xref:System.IO.Path.DirectorySeparatorChar>)başlıyorsa, yol geçerli sürücünün kökünden görelidir. Aksi takdirde, yol geçerli dizine göre değişir. Aşağıdaki tabloda bazı olası dizin ve dosya yolları gösterilmektedir.
 
-|Yol  |Description  |
+|Yol  |Açıklama  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Sürücü kökünden mutlak bir dosya yolu `C:` . |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Geçerli sürücünün kökünden mutlak bir yol. |
@@ -63,7 +63,7 @@ Ağ kaynaklarına erişmek için kullanılan evrensel adlandırma kuralı (UNC) 
 
 Aşağıda, UNC yollarının bazı örnekleri verilmiştir:
 
-|Yol  |Description  |
+|Yol  |Açıklama  |
 | -- | -- |
 | `\\system07\C$\` | `C:`Üzerindeki sürücünün kök dizini `system07` . |
 | `\\Server2\Share\Test\Foo.txt` | `Foo.txt`Birimin test dizinindeki dosya `\\Server2\Share` .|
@@ -90,13 +90,13 @@ DOS cihaz yolu aşağıdaki bileşenlerden oluşur:
 - `\\.\` `\\?\` Yolu bir DOS cihaz yolu olarak tanımlayan cihaz yolu Belirleyicisi (veya).
 
    > [!NOTE]
-   > , `\\?\` .NET Core 'un tüm sürümlerinde ve sürümü 4.6.2 ile başlayarak .NET Framework desteklenir.
+   > , `\\?\` .NET Core ve .NET 5 + ' nin tüm sürümlerinde ve sürüm 4.6.2 ile başlayarak .NET Framework desteklenir.
 
 - "Gerçek" cihaz nesnesine (bir sürücü adı veya birim GUID 'SI olması durumunda {b75e2c83-0000-0000-0000-602f00000000} birimi) sembolik bir bağlantı.
 
    Cihaz yolu belirticisinden sonra DOS cihaz yolunun ilk segmenti birimi veya sürücüyü tanımlar. (Örneğin, `\\?\C:\` ve `\\.\BootPartition\` .)
 
-   Bilinen UNCs 'Ler için belirli bir bağlantı vardır, ancak bu alınmaz `UNC` . Örnek:
+   Bilinen UNCs 'Ler için belirli bir bağlantı vardır, ancak bu alınmaz `UNC` . Örneğin:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
@@ -194,10 +194,10 @@ Neden normalleştirmeyi atlamak istiyorsunuz? Üç önemli neden vardır:
 
 1. Zaten normalleştirdiyseniz normalleştirmeyi atlayarak performansı artırmak için.
 
-1. Yalnızca .NET Framework, `MAX_PATH` 259 karakterden daha büyük yollara izin vermek için yol uzunluğu denetimini atlamak için. Çoğu API, bazı özel durumlarla birlikte buna izin verir.
+1. Yalnızca .NET Framework, `MAX_PATH` 259 karakterden büyük yollara izin vermek için yol uzunluğu denetimini atlamak için. Çoğu API, bazı özel durumlarla birlikte buna izin verir.
 
 > [!NOTE]
-> .NET Core, uzun yolları örtülü olarak işler ve bir `MAX_PATH` denetim gerçekleştirmez. `MAX_PATH`Onay yalnızca .NET Framework için geçerlidir.
+> .NET Core ve .NET 5 + uzun yolları örtülü olarak işler ve bir denetim gerçekleştirmez `MAX_PATH` . `MAX_PATH`Onay yalnızca .NET Framework için geçerlidir.
 
 Normalleştirme atlama ve en yüksek yol denetimleri, iki cihaz yolu sözdizimleri arasındaki tek farktır; Aksi halde özdeş. "Normal" uygulamalar için zor olan yolları kolayca oluşturabildiklerinden, normalleştirmeyi atlama konusunda dikkatli olun.
 

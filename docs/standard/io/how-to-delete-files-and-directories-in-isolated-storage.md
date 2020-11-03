@@ -8,8 +8,8 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - data storage using isolated storage, deleting files and directories
-- directories [.NET Framework], isolated storage
-- files [.NET Framework], isolated storage
+- directories [.NET], isolated storage
+- files [.NET], isolated storage
 - isolated storage, deleting files and directories
 - data stores, deleting files and directories
 - stores, creating files and directories
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting files and directories
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
-ms.openlocfilehash: dc84fefbde1177993b17e9ec687a1ef759b74735
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7797f319ca3b143bac6a4e68eaf820e966f1560e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291909"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187950"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme
 Yalıtılmış bir depolama dosyası içindeki dizinleri ve dosyaları silebilirsiniz. Bir mağaza içinde, dosya ve Dizin adları işletim sistemine bağımlıdır ve sanal dosya sisteminin köküne göreli olarak belirtilir. Windows işletim sistemlerinde büyük/küçük harfe duyarlı değildir.  

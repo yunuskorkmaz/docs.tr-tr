@@ -10,17 +10,18 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 74d821aff8308618f7c0efeb1b453db8214b877e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e6f9a760d7673eecf161b1d84d890cc14d09235e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555952"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189023"
 ---
-# <a name="memory-mapped-files"></a>Bellek Eşlemeli Dosyalar
-Bellek eşlemeli bir dosya, sanal bellekteki bir dosyanın içeriğini içerir. Bir dosya ve bellek alanı arasındaki bu eşleme, birden çok işlem dahil olmak üzere bir uygulamanın, dosyayı okuyup doğrudan belleğe yazarak değiştirmesini sağlar. .NET Framework 4 ' te başlayarak, yerel Windows işlevlerinin bellek eşlemeli dosyaları [yönetme](/previous-versions/ms810613(v=msdn.10))bölümünde açıklandığı gibi, aynı şekilde bellek eşlemeli dosyalara erişmek için yönetilen kodu kullanabilirsiniz.  
+# <a name="memory-mapped-files"></a>Bellek eşlemeli dosyalar
+
+Bellek eşlemeli bir dosya, sanal bellekteki bir dosyanın içeriğini içerir. Bir dosya ve bellek alanı arasındaki bu eşleme, birden çok işlem dahil olmak üzere bir uygulamanın, dosyayı okuyup doğrudan belleğe yazarak değiştirmesini sağlar. , [Memory-Mapped dosyaları yönetme](/previous-versions/ms810613(v=msdn.10))bölümünde açıklandığı gibi, yerel Windows işlevlerinin bellek eşlemeli dosyalara erişim gibi, bellek eşlemeli dosyalara erişmek için yönetilen kodu kullanabilirsiniz.  
   
- İki tür bellekle eşlenmiş dosya vardır:  
+İki tür bellekle eşlenmiş dosya vardır:  
   
 - Kalıcı bellekle eşlenen dosyalar  
   
@@ -47,7 +48,7 @@ Bellek eşlemeli bir dosya, sanal bellekteki bir dosyanın içeriğini içerir. 
   
  ![Bir bellek&#45;eşlenmiş dosyanın görünümlerini gösteren ekran görüntüsü.](./media/memory-mapped-files/memory-map-persist-file.png)  
   
-## <a name="programming-with-memory-mapped-files"></a>Bellek eşlemeli dosyalarla programlama  
+## <a name="programming-with-memory-mapped-files"></a>Memory-Mapped dosyaları ile programlama  
  Aşağıdaki tabloda, bellek eşlemeli dosya nesnelerini ve bunların üyelerini kullanmaya yönelik bir kılavuz verilmiştir.  
   
 |Görev|Kullanılacak yöntemler veya Özellikler|  
@@ -77,7 +78,7 @@ Bellek eşlemeli bir dosya, sanal bellekteki bir dosyanın içeriğini içerir. 
   
 ## <a name="examples"></a>Örnekler  
   
-### <a name="persisted-memory-mapped-files"></a>Kalıcı bellekle eşlenen dosyalar  
+### <a name="persisted-memory-mapped-files"></a>Kalıcı Memory-Mapped dosyaları  
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A>Yöntemler diskte var olan bir dosyadan bellek eşlemeli bir dosya oluşturur.  
   
  Aşağıdaki örnek, son derece büyük bir dosyanın bir bölümünün bellek eşlemeli bir görünümünü oluşturur ve bir kısmını yönetir.  
@@ -92,7 +93,7 @@ Bellek eşlemeli bir dosya, sanal bellekteki bir dosyanın içeriğini içerir. 
  [!code-csharp[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/cs/program.cs#1)]
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
-### <a name="non-persisted-memory-mapped-files"></a>Kalıcı olmayan bellekle eşlenen dosyalar  
+### <a name="non-persisted-memory-mapped-files"></a>Kalıcı olmayan Memory-Mapped dosyaları  
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A>Ve <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> yöntemleri, diskte var olan bir dosyayla eşlenmemiş bir bellek eşlemeli dosya oluşturur.  
   
  Aşağıdaki örnek, bellek eşlemeli bir dosyaya Boole değerleri yazan üç ayrı işlem (konsol uygulaması) içerir. Aşağıdaki eylem sırası oluşur:  
