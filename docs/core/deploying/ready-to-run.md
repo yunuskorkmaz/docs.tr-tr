@@ -4,12 +4,12 @@ description: .NET 5 ve .NET Core 3,0 ve üzeri ile uygulamanızı yayımlamalar�
 author: davidwr
 ms.author: davidwr
 ms.date: 09/21/2020
-ms.openlocfilehash: b4052a0c0f4ed9f6cfd273abe5ef45d018bd0ae0
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: cd8eaebd05d79b11e90e255e702a52220fffda76
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654965"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342637"
 ---
 # <a name="readytorun-compilation"></a>ReadyToRun derlemesi
 
@@ -45,7 +45,7 @@ Uygulamanızı ReadyToRun olarak yayımlamanın iki yolu vardır:
 
 ## <a name="impact-of-using-the-readytorun-feature"></a>ReadyToRun özelliğini kullanmanın etkileri
 
-Güncel derleme, uygulama performansı üzerinde karmaşık performans etkilerine sahiptir ve tahmin edilmesi zor olabilir. Genel olarak, bir derlemenin boyutu iki ila üç kat daha büyük olacak şekilde artar. Dosyanın fiziksel boyutundaki bu artış, derlemeyi diskten yükleme performansını azaltabilir ve işlemin çalışma kümesini artırabilir. Ancak, dönüş sırasında çalışma zamanında derlenen yöntemlerin sayısı genellikle önemli ölçüde azaltılır. Sonuç olarak, büyük miktarlarda kod kullanan uygulamaların, ReadyToRun 'ı etkinleştirmesinin büyük performans avantajları elde edilmesine neden olur. .NET çalışma zamanı kitaplıkları zaten ReadyToRun ile önceden derlenmiş olduğundan, az miktarda koda sahip uygulamalar, ReadyToRun 'ı etkinleştirmenin önemli bir geliştirmesini yaşmaz.
+Güncel derleme, uygulama performansı üzerinde karmaşık performans etkilerine sahiptir ve tahmin edilmesi zor olabilir. Genel olarak, bir derlemenin boyutu iki ila üç kat daha büyük olacak şekilde artar. Dosyanın fiziksel boyutundaki bu artış, derlemeyi diskten yükleme performansını azaltabilir ve işlemin çalışma kümesini artırabilir. Ancak, dönüş sırasında çalışma zamanında derlenen yöntemlerin sayısı genellikle önemli ölçüde azaltılır. Sonuç olarak, büyük miktarlarda koda sahip uygulamaların, ReadyToRun 'ı etkinleştirmesinin büyük performans avantajları vardır. .NET çalışma zamanı kitaplıkları zaten ReadyToRun ile önceden derlenmiş olduğundan, az miktarda koda sahip uygulamalar, ReadyToRun 'ı etkinleştirmenin önemli bir geliştirmesini yaşmaz.
 
 Burada açıklanan başlangıç geliştirmesi yalnızca uygulama başlatma için değil, aynı zamanda uygulamadaki herhangi bir kodun ilk kullanımı için de geçerlidir. Örneğin, ReadyToRun, bir ASP.NET uygulamasında Web API 'sinin ilk kullanımı için yanıt gecikmesini azaltmak üzere kullanılabilir.
 

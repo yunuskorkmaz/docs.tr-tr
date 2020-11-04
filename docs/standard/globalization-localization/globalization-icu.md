@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: 87d0103e90d46ae83b23c9cc05e9efcaa51c831f
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 7b367fe694c9dd153372fadfe29461ea8b6a0415
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063995"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342598"
 ---
 # <a name="net-globalization-and-icu"></a>.NET Genelleştirme ve ıCU
 
@@ -44,23 +44,23 @@ NLS yerine ıCU kullanılması, Genelleştirme ile ilgili bazı işlemlerle davr
 
 - Proje dosyasında:
 
-```xml
-<ItemGroup>
-  <RuntimeHostConfigurationOption Include="System.Globalization.UseNls" Value="true" />
-</ItemGroup>
-```
+  ```xml
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Globalization.UseNls" Value="true" />
+  </ItemGroup>
+  ```
 
 - `runtimeconfig.json` dosyasında:
 
-```json
-{
-  "runtimeOptions": {
-     "configProperties": {
-       "System.Globalization.UseNls": true
-      }
+  ```json
+  {
+    "runtimeOptions": {
+       "configProperties": {
+         "System.Globalization.UseNls": true
+        }
+    }
   }
-}
-```
+  ```
 
 - Ortam değişkenini `DOTNET_SYSTEM_GLOBALIZATION_USENLS` değeri veya değerine ayarlayarak `true` `1` .
 
@@ -77,29 +77,29 @@ Uygulamalar, aşağıdaki yollarla bir App-Local ıCU uygulama modunu kabul edeb
 
 - Proje dosyasında:
 
-```xml
-<ItemGroup>
-  <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="<suffix>:<version> or <version>" />
-</ItemGroup>
-```
+  ```xml
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="<suffix>:<version> or <version>" />
+  </ItemGroup>
+  ```
 
 - `runtimeconfig.json` dosyasında:
 
-```json
-{
-  "runtimeOptions": {
-     "configProperties": {
-       "System.Globalization.AppLocalIcu": "<suffix>:<version> or <version>"
-      }
+  ```json
+  {
+    "runtimeOptions": {
+       "configProperties": {
+         "System.Globalization.AppLocalIcu": "<suffix>:<version> or <version>"
+       }
+    }
   }
-}
-```
+  ```
 
 - Ortam değişkenini `DOTNET_SYSTEM_GLOBALIZATION_APPLOCALICU` değeri veya değerine ayarlayarak `<suffix>:<version>` `<version>` .
 
-`<suffix>`: Genel ıCU paketleme kurallarından sonra, 36 karakterden daha az karakter uzunluğunda isteğe bağlı son ek. Özel bir ıU oluştururken, LIB adlarını ve dışarıya aktarılmış sembol adlarını bir sonek içerecek şekilde (örneğin, sonek) oluşturacak şekilde özelleştirebilirsiniz `libicuucmyapp` `myapp` .
+  `<suffix>`: Genel ıCU paketleme kurallarından sonra, 36 karakterden daha az karakter uzunluğunda isteğe bağlı son ek. Özel bir ıU oluştururken, LIB adlarını ve dışarıya aktarılmış sembol adlarını bir sonek içerecek şekilde (örneğin, sonek) oluşturacak şekilde özelleştirebilirsiniz `libicuucmyapp` `myapp` .
 
-`<version>`: Geçerli bir ıCU sürümü (örneğin, 67,1). Bu sürüm, ikili dosyaları yüklemek ve içe aktarılmış sembolleri almak için kullanılır.
+  `<version>`: Geçerli bir ıCU sürümü (örneğin, 67,1). Bu sürüm, ikili dosyaları yüklemek ve içe aktarılmış sembolleri almak için kullanılır.
 
 Uygulama yerel anahtarı ayarlandığında ıCU 'yi yüklemek için, .NET <xref:System.Runtime.InteropServices.NativeLibrary.TryLoad%2A?displayProperty=nameWithType> birden çok yolu yoklaan yöntemini kullanır. Yöntemi ilk olarak, `NATIVE_DLL_SEARCH_DIRECTORIES` uygulamanın dosyasını temel alan DotNet ana bilgisayar tarafından oluşturulan özellikte kitaplığı bulmayı dener `deps.json` . Daha fazla bilgi için bkz. [Varsayılan yoklama](../../core/dependency-loading/default-probing.md).
 
@@ -139,19 +139,19 @@ Yükleyici için, gibi bazı yönergeler vardır. Bu, `@loader_path` yükleyiciy
 
   Aşağıdaki komutları çalıştırın:
 
-```bash
-install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicuuc.67.1.dylib
-install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicui18n.67.1.dylib
-install_name_tool -change "libicuuc.67.dylib" "@loader_path/libicuuc.67.dylib" /path/to/libicui18n.67.1.dylib
-```
+  ```bash
+  install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicuuc.67.1.dylib
+  install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicui18n.67.1.dylib
+  install_name_tool -change "libicuuc.67.dylib" "@loader_path/libicuuc.67.dylib" /path/to/libicui18n.67.1.dylib
+  ```
 
 - İle yüklenen adları oluşturmak için ıCU Patch `@loader_path`
 
   Oto conf () çalıştırmadan önce `./runConfigureICU` [Bu satırları şu](https://github.com/unicode-org/icu/blob/ef91cc3673d69a5e00407cda94f39fcda3131451/icu4c/source/config/mh-darwin#L32-L37) şekilde değiştirin:
 
-```
-LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-current_version -Wl,$(SO_TARGET_VERSION) -install_name @loader_path/$(notdir $(MIDDLE_SO_TARGET))
-```
+  ```
+  LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-current_version -Wl,$(SO_TARGET_VERSION) -install_name @loader_path/$(notdir $(MIDDLE_SO_TARGET))
+  ```
 
 ## <a name="icu-on-webassembly"></a>WebAssembly üzerinde ıCU
 

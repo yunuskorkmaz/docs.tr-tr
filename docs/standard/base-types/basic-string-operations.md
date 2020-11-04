@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
-ms.openlocfilehash: 6ec244ab6935f4a92b0f59fa6c1cb8bc45638ce4
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 4ab087435880c6a5357bc161899cd585982622f4
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889120"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342611"
 ---
 # <a name="basic-string-operations-in-net"></a>.NET 'te temel dize işlemleri
 
@@ -24,7 +24,7 @@ Uygulamalar genellikle kullanıcı girişine göre iletiler oluşturarak kullan�
 ## <a name="related-sections"></a>İlgili bölümler
 
 [.NET 'te tür dönüştürme](type-conversion.md)\
-Bir türün başka bir türe nasıl dönüştürüleceğini açıklar.  
+Bir türün başka bir türe nasıl dönüştürüleceğini açıklar.
 
 [Biçimlendirme türleri](formatting-types.md)\
 Biçim belirticilerini kullanarak dizelerin nasıl biçimlendirileceğini açıklar.

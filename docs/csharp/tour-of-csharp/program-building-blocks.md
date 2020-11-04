@@ -2,33 +2,33 @@
 title: C# programlarının yapı taşları "
 description: C# üyeleri, ifadeler ve deyimler hakkında bilgi edinin. Türler yazdığınız üyeleri içerir. Bu Üyeler deyimlerden ve ifadelerden oluşturulur.
 ms.date: 08/06/2020
-ms.openlocfilehash: 3bdc6a4da6ae76148c7d1d5cb8ccb65d91fda61a
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: e4350f2c2b6005fb59dd868f0f7f628bd07b0053
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358823"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342702"
 ---
 # <a name="program-building-blocks"></a>Program yapı taşları
 
-Önceki makalede açıklanan türler, bu derleme blokları kullanılarak oluşturulmuştur: [***Üyeler***](../programming-guide/classes-and-structs/members.md), [ ***ifadeler***ve ***deyimler***](../programming-guide/statements-expressions-operators/index.md).
+Önceki makalede açıklanan türler, bu derleme blokları kullanılarak oluşturulmuştur: [ * **Üyeler** _](../programming-guide/classes-and-structs/members.md), [ _*_ifadeler_*_ ve _*_deyimler_*_](../programming-guide/statements-expressions-operators/index.md).
 
 ## <a name="members"></a>Üyeler
 
-A üyeleri `class` ***statik Üyeler*** veya ***örnek üyeleridir***. Statik Üyeler sınıflara aittir ve örnek üyeleri nesnelere aittir (sınıf örnekleri).
+A üyeleri `class` _*_statik Üyeler_*_ veya _*_örnek üyeleridir_*_. Statik Üyeler sınıflara aittir ve örnek üyeleri nesnelere aittir (sınıf örnekleri).
 
 Aşağıdaki liste, bir sınıfın içerebileceği üye türlerine genel bir bakış sağlar.
 
-- **Sabitler**: sınıfla ilişkili sabit değerler
-- **Alanlar**: sınıfıyla ilişkili değişkenler
-- **Yöntemler**: sınıfı tarafından gerçekleştirilebilecek eylemler
-- **Özellikler**: sınıfının adlandırılmış özelliklerini okuma ve yazma ile ilişkili eylemler
-- **Dizin oluşturucular**: bir dizi gibi sınıfın dizin oluşturma örnekleri ile ilişkili eylemler
-- **Olaylar**: sınıfı tarafından oluşturulabilecek bildirimler
-- **İşleçler**: sınıf tarafından desteklenen dönüşümler ve ifade işleçleri
-- **Oluşturucular**: sınıf veya sınıf örneklerinin başlatılması için gereken eylemler
-- **Sonlandırıcılar**: sınıf örneklerinin kalıcı olarak atılmadan önce gerçekleştirilen eylemler
-- **Türler**: sınıf tarafından belirtilen iç içe türler
+- _ * Sabitler * *: sınıfla ilişkili sabit değerler
+- **Alanlar** : sınıfıyla ilişkili değişkenler
+- **Yöntemler** : sınıfı tarafından gerçekleştirilebilecek eylemler
+- **Özellikler** : sınıfının adlandırılmış özelliklerini okuma ve yazma ile ilişkili eylemler
+- **Dizin oluşturucular** : bir dizi gibi sınıfın dizin oluşturma örnekleri ile ilişkili eylemler
+- **Olaylar** : sınıfı tarafından oluşturulabilecek bildirimler
+- **İşleçler** : sınıf tarafından desteklenen dönüşümler ve ifade işleçleri
+- **Oluşturucular** : sınıf veya sınıf örneklerinin başlatılması için gereken eylemler
+- **Sonlandırıcılar** : sınıf örneklerinin kalıcı olarak atılmadan önce gerçekleştirilen eylemler
+- **Türler** : sınıf tarafından belirtilen iç içe türler
 
 ## <a name="accessibility"></a>Erişilebilirlik
 
@@ -49,7 +49,7 @@ Statik değiştiriciyle belirtilen bir alan statik bir alan tanımlar. Statik al
 
 Statik değiştirici olmadan belirtilen bir alan bir örnek alanını tanımlar. Bir sınıfın her örneği, bu sınıfın tüm örnek alanlarının ayrı bir kopyasını içerir.
 
-Aşağıdaki örnekte, sınıfının her örneği `Color` ,, ve örnek alanlarının ayrı bir kopyasına sahiptir `r` `g` `b` , ancak,,, `Black` `White` `Red` `Green` ve `Blue` statik alanlarının yalnızca bir kopyası vardır:
+Aşağıdaki örnekte, sınıfının her örneği `Color` ,, ve örnek alanlarının ayrı bir kopyasına sahiptir `R` `G` `B` , ancak,,, `Black` `White` `Red` `Green` ve `Blue` statik alanlarının yalnızca bir kopyası vardır:
 
 :::code language="csharp" source="./snippets/shared/ClassesObjects.cs" ID="ColorClassDefinition":::
 
@@ -59,7 +59,7 @@ Aşağıdaki örnekte, sınıfının her örneği `Color` ,, ve örnek alanları
 
 Bir *Yöntem* , bir nesne veya sınıf tarafından gerçekleştirilebilecek bir hesaplama veya eylem uygulayan bir üyesidir. *Statik yöntemlere* sınıfı aracılığıyla erişilir. *Örnek yöntemlerine* , sınıfının örnekleri aracılığıyla erişilir.
 
-Metotlarda, metoda geçirilen değerleri veya değişken başvurularını temsil eden bir *parametre*listesi bulunabilir. Yöntemler, hesaplanan ve yöntemi tarafından döndürülen değerin türünü belirten bir *dönüş türüne*sahiptir. Bir yöntemin dönüş türü `void` bir değer döndürmezse.
+Metotlarda, metoda geçirilen değerleri veya değişken başvurularını temsil eden bir *parametre* listesi bulunabilir. Yöntemler, hesaplanan ve yöntemi tarafından döndürülen değerin türünü belirten bir *dönüş türüne* sahiptir. Bir yöntemin dönüş türü `void` bir değer döndürmezse.
 
 Türler gibi yöntemler de bir tür parametreleri kümesine sahip olabilir, bu da yöntem çağrıldığında tür bağımsız değişkenlerinin belirtilmesi gerekir. Türlerin aksine, tür bağımsız değişkenleri genellikle yöntem çağrısının bağımsız değişkenlerinden çıkarsanamıyor ve açıkça verilmemelidir.
 
@@ -68,7 +68,7 @@ Yöntemin *imzası* , yöntemin bildirildiği sınıfta benzersiz olmalıdır. B
 Bir yöntem gövdesi tek bir ifadesiyse, aşağıdaki örnekte gösterildiği gibi, yöntem bir Compact ifadesi biçimi kullanılarak tanımlanabilir:
 
 ```csharp
-public override ToString() => "This is an object";
+public override string ToString() => "This is an object";
 ```
 
 ### <a name="parameters"></a>Parametreler
@@ -103,7 +103,7 @@ Bir parametre dizisi kullanan bir yöntem içinde, parametre dizisi tam olarak b
 
 Yöntemin gövdesi, yöntemi çağrıldığında yürütülecek deyimleri belirtir.
 
-Yöntem gövdesi, yöntemi çağrısına özgü değişkenleri bildirebilir. Bu tür değişkenlere *yerel değişkenler*denir. Yerel bir değişken bildirimi bir tür adı, değişken adı ve muhtemelen bir başlangıç değeri belirtir. Aşağıdaki örnek, başlangıç değeri sıfır olan yerel bir değişken `i` ve ilk değeri olmayan bir yerel değişken bildirir `j` .
+Yöntem gövdesi, yöntemi çağrısına özgü değişkenleri bildirebilir. Bu tür değişkenlere *yerel değişkenler* denir. Yerel bir değişken bildirimi bir tür adı, değişken adı ve muhtemelen bir başlangıç değeri belirtir. Aşağıdaki örnek, başlangıç değeri sıfır olan yerel bir değişken `i` ve ilk değeri olmayan bir yerel değişken bildirir `j` .
 
 :::code language="csharp" source="./snippets/shared/ClassesObjects.cs" ID="SquaresClass":::
 
@@ -133,7 +133,7 @@ Aşağıdaki örnek sınıfının kullanımını gösterir `Entity` .
 
 ### <a name="virtual-override-and-abstract-methods"></a>Sanal, geçersiz kılma ve soyut yöntemler
 
-Bir örnek yöntemi bildirimi bir değiştirici içerdiğinde `virtual` , yöntemi bir *sanal yöntem*olarak kabul edilir. Bir sanal değiştirici yoksa, yöntem *sanal olmayan bir yöntem*olarak kabul edilir.
+Bir örnek yöntemi bildirimi bir değiştirici içerdiğinde `virtual` , yöntemi bir *sanal yöntem* olarak kabul edilir. Bir sanal değiştirici yoksa, yöntem *sanal olmayan bir yöntem* olarak kabul edilir.
 
 Bir sanal yöntem çağrıldığında, çağrının gerçekleştiği örneğin *çalışma zamanı türü* , çağrılacak gerçek Yöntem uygulamasını belirler. Sanal olmayan bir yöntem çağrısında, örneğin *derleme zamanı türü* belirleme faktörü olur.
 
@@ -189,7 +189,7 @@ Diğer üyelerin aksine, örnek oluşturucular devralınmaz. Bir sınıf, sını
 
 *Özellikler* , alanlar için doğal bir uzantıdır. Her ikisi de ilişkili türlerin bulunduğu isimlerdir ve alanlara ve özelliklere erişim için sözdizimi aynıdır. Ancak, alanların aksine, Özellikler depolama konumlarını göstermiyor. Bunun yerine, özellikler, değerleri okunmak veya yazıldığında yürütülen deyimleri belirten *erişimcileri* vardır.
 
-Bir özellik, bildirim bir get erişimcisi ile sona erene veya sınırlayıcılar arasında yazılmış bir set erişimcisi ya da bir `{` noktalı virgülle bitmesi dışında, bir alan gibi tanımlanır `}` . Hem get erişimcisine hem de bir set erişimcisine sahip olan bir özellik *okuma-yazma özelliğidir*, yalnızca bir get erişimcisine sahip olan bir özellik *salt okunurdur*ve yalnızca bir set erişimcisi olan bir özellik yalnızca bir salt *yazılır özelliktir*.
+Bir özellik, bildirim bir get erişimcisi ile sona erene veya sınırlayıcılar arasında yazılmış bir set erişimcisi ya da bir `{` noktalı virgülle bitmesi dışında, bir alan gibi tanımlanır `}` . Hem get erişimcisine hem de bir set erişimcisine sahip olan bir özellik *okuma-yazma özelliğidir* , yalnızca bir get erişimcisine sahip olan bir özellik *salt okunurdur* ve yalnızca bir set erişimcisi olan bir özellik yalnızca bir salt *yazılır özelliktir*.
 
 Get erişimcisi, özellik türünün dönüş değeri olan parametresiz bir yönteme karşılık gelir. Bir set erişimcisi, value adlı tek parametreli ve dönüş türü olmayan bir yönteme karşılık gelir. Get erişimcisi özelliğin değerini hesaplar. Set erişimcisi, özelliği için yeni bir değer sağlar. Özellik bir atamanın hedefi ya da veya işleneni, `++` `--` set erişimcisi çağrılır. Özelliğin başvurduğu diğer durumlarda, get erişimcisi çağrılır.
 
@@ -211,7 +211,7 @@ Bir özelliğin erişimcisi sanal olabilir. Bir özellik bildirimi `virtual` ,, 
 
 Dizin oluşturucular aşırı yüklenebilir. Bir sınıf, parametrelerinin sayısı veya türleri farklı olduğu sürece birden çok Dizin Oluşturucu bildirebilir.
 
-### <a name="events"></a>Ekinlikler
+### <a name="events"></a>Olaylar
 
 Bir *olay* , bir sınıf veya nesnenin bildirimler sağlamasını sağlayan bir üyedir. Bildirimin bir `event` anahtar sözcük içermesi ve türün bir temsilci türü olması dışında bir olay, bir alan gibi bildirilmiştir.
 
@@ -219,7 +219,7 @@ Olay üyesini bildiren bir sınıf içinde, olay bir temsilci türünün alanı 
 
 `MyList<T>`Sınıfı, adlı tek bir olay üyesini bildirir `Changed` ve bu, listeye yeni bir öğe eklendiğini gösterir. Değiştirilen olay `OnChanged` sanal yöntemi tarafından tetiklenir ve bu, önce olayın `null` (hiçbir işleyicinin mevcut olmadığı anlamına gelir) olup olmadığını denetler. Bir olayı oluşturma kavramı, olay tarafından temsil edilen temsilciyi çağırmaya tam olarak eşdeğerdir. Olayları yükseltmek için özel dil yapıları yoktur.
 
-İstemciler *olay işleyicileri*aracılığıyla olaylara tepki verir. Olay işleyicileri işleci kullanılarak eklenir `+=` ve işleci kullanılarak kaldırılır `-=` . Aşağıdaki örnek, olayına bir olay işleyicisi ekler `Changed` `MyList<string>` .
+İstemciler *olay işleyicileri* aracılığıyla olaylara tepki verir. Olay işleyicileri işleci kullanılarak eklenir `+=` ve işleci kullanılarak kaldırılır `-=` . Aşağıdaki örnek, olayına bir olay işleyicisi ekler `Changed` `MyList<string>` .
 
 :::code language="csharp" source="./snippets/shared/ClassesObjects.cs" ID="RespondToEvents":::
 
@@ -245,14 +245,14 @@ Bu `Console.WriteLine` `True` iki liste aynı sırada aynı değerleri taşıyan
 
 ## <a name="expressions"></a>İfadeler
 
-*İfadeler* , *işlenenler* ve *işleçlerden*oluşturulur. Bir ifadenin işleçleri, işlenenlerin hangi işlemleri uygulanacağını gösterir. İşleç örnekleri,, `+` , `-` `*` ve içerir `/` `new` . İşlenenlerin örnekleri, sabit değerleri, alanları, yerel değişkenleri ve ifadeleri içerir.
+*İfadeler* , *işlenenler* ve *işleçlerden* oluşturulur. Bir ifadenin işleçleri, işlenenlerin hangi işlemleri uygulanacağını gösterir. İşleç örnekleri,, `+` , `-` `*` ve içerir `/` `new` . İşlenenlerin örnekleri, sabit değerleri, alanları, yerel değişkenleri ve ifadeleri içerir.
 
-Bir ifade birden çok işleç içerdiğinde işleçlerin *önceliği*, her bir işlecin değerlendirilme sırasını denetler. Örneğin, `x + y * z` `x + (y * z)` `*` işleç işleçten daha yüksek önceliğe sahip olduğu için ifade değerlendirilir `+` .
+Bir ifade birden çok işleç içerdiğinde işleçlerin *önceliği* , her bir işlecin değerlendirilme sırasını denetler. Örneğin, `x + y * z` `x + (y * z)` `*` işleç işleçten daha yüksek önceliğe sahip olduğu için ifade değerlendirilir `+` .
 
 Aynı önceliğe sahip iki işleç arasında bir işlenen gerçekleştiğinde, işleçlerin *ilişkilendirilebilirliği* , işlemlerin gerçekleştirileceği sırayı denetler:
 
-* Atama ve null birleşim işleçleri hariç olmak üzere tüm ikili işleçler *sola ilişkilendirilebilir*, yani işlemler soldan sağa yapılır. Örneğin, `x + y + z` olarak değerlendirilir `(x + y) + z` .
-* Atama işleçleri, null birleşim `??` ve `??=` İşleçler ve koşullu operatör `?:` *doğru ilişkilendirilebilir*, yani işlemler sağdan sola yapılır. Örneğin, `x = y = z` olarak değerlendirilir `x = (y = z)` .
+* Atama ve null birleşim işleçleri hariç olmak üzere tüm ikili işleçler *sola ilişkilendirilebilir* , yani işlemler soldan sağa yapılır. Örneğin, `x + y + z` olarak değerlendirilir `(x + y) + z` .
+* Atama işleçleri, null birleşim `??` ve `??=` İşleçler ve koşullu operatör `?:` *doğru ilişkilendirilebilir* , yani işlemler sağdan sola yapılır. Örneğin, `x = y = z` olarak değerlendirilir `x = (y = z)` .
 
 Öncelik ve ilişkilendirilebilirlik, parantezler kullanılarak denetlenebilir. Örneğin, ilk olarak ile `x + y * z` çarpar `y` `z` ve sonra sonucunu ekler `x` , ancak ilk olarak `(x + y) * z` sonucu ekler `x` ve `y` sonra sonucunu ile çarpar `z` .
 
@@ -264,7 +264,7 @@ C# [Aritmetik](../language-reference/operators/arithmetic-operators.md), [mantı
 
 ## <a name="statements"></a>Deyimler
 
-Bir programın eylemleri *deyimler*kullanılarak ifade edilir. C#, gömülü deyimler açısından tanımlanmış bir dizi farklı sayıda ifadeyi destekler.
+Bir programın eylemleri *deyimler* kullanılarak ifade edilir. C#, gömülü deyimler açısından tanımlanmış bir dizi farklı sayıda ifadeyi destekler.
 
 - Bir *blok* , tek bir ifadeye izin verilen bağlamlarda birden çok deyimin yazılmasına izin verir. Bir blok, sınırlayıcılar ve arasında yazılmış deyimler listesinden oluşur `{` `}` .
 - *Bildirim deyimleri* yerel değişkenleri ve sabitleri bildirmek için kullanılır.

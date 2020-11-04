@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: 7c5d8fa462775c6f3a9981693129997dda6c2286
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ee0921c4d3c931e2f677ec0bb8458992afc57d57
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324147"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342650"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-in-c"></a>C 'de dize. Split kullanarak dizeleri ayrıştırma\#
 
@@ -34,7 +34,7 @@ Bu davranış, tablo verilerini temsil eden, virgülle ayrılmış değerler (CS
 
 <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType>Döndürülen dizide boş dizeleri hariç tutmak için isteğe bağlı bir parametre geçirebilirsiniz. Döndürülen koleksiyonun daha karmaşık işlenmesi için, [LINQ](../programming-guide/concepts/linq/index.md) kullanarak sonuç sırasını değiştirebilirsiniz.
 
-<xref:System.String.Split%2A?displayProperty=nameWithType>birden çok ayırıcı karakter kullanabilir.
+<xref:System.String.Split%2A?displayProperty=nameWithType> birden çok ayırıcı karakter kullanabilir.
 Aşağıdaki örnek, bir dizide geçirilen karakter ayrımı olarak boşluk, virgül, nokta, iki nokta üst üste ve sekmeleri kullanır <xref:System.String.Split%2A> .
 Kodun alt kısmındaki döngü döndürülen dizideki her bir sözcüğü görüntüler.
 
@@ -44,12 +44,13 @@ Herhangi bir ayırıcıdaki ardışık örnekler, çıkış dizisinde boş dize 
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs" id="Snippet4":::
 
-<xref:System.String.Split%2A?displayProperty=nameWithType>bir dizi dizeyi alabilir (tek karakterler yerine hedef dizeyi ayrıştırmak için ayırıcı olarak davranan karakter dizileri).
+<xref:System.String.Split%2A?displayProperty=nameWithType> bir dizi dizeyi alabilir (tek karakterler yerine hedef dizeyi ayrıştırmak için ayırıcı olarak davranan karakter dizileri).
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs" id="Snippet5":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Dizeden öğeleri Ayıkla](../../standard/base-types/parse-strings.md)
 - [C# programlama kılavuzu](../programming-guide/index.md)
 - [Dizeler](../programming-guide/strings/index.md)
 - [.NET normal ifadeleri](../../standard/base-types/regular-expressions.md)
