@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: 7b367fe694c9dd153372fadfe29461ea8b6a0415
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342598"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400885"
 ---
 # <a name="net-globalization-and-icu"></a>.NET Genelleştirme ve ıCU
 
@@ -33,12 +33,12 @@ Geçmişte, .NET Genelleştirme API 'Leri farklı platformlarda farklı temel ki
 
 ## <a name="icu-on-windows"></a>Windows üzerinde ıCU
 
-Windows 10 Mayıs 2019 güncelleştirmesi ve sonraki sürümleri, işletim sisteminin bir parçası olarak [icu.dll](/windows/win32/intl/international-components-for-unicode--icu-) içerir ve .NET 5,0 ve sonraki sürümler varsayılan olarak ICU kullanır. Windows üzerinde çalışırken, .NET 5,0 ve sonraki sürümler yüklemeye çalışır `icu.dll` ve varsa Genelleştirme uygulamasında bu uygulamayı kullanır.  Bu kitaplık bulunamazsa veya yüklenemezse (örneğin, Windows 'un eski sürümlerinde çalışırken), .NET 5,0 ve üzeri sürümler NLS tabanlı uygulamaya geri döner.
+Windows 10 Mayıs 2019 güncelleştirmesi ve sonraki sürümleri, işletim sisteminin bir parçası olarak [icu.dll](/windows/win32/intl/international-components-for-unicode--icu-) içerir ve .NET 5,0 ve sonraki sürümler varsayılan olarak ICU kullanır. Windows üzerinde çalışırken, .NET 5,0 ve sonraki sürümler yüklemeye çalışır `icu.dll` ve varsa Genelleştirme uygulamasında bu uygulamayı kullanın. ICU kitaplığı bulunamazsa veya yüklenemezse (örneğin, Windows 'un eski sürümlerinde çalışırken), .NET 5,0 ve üzeri sürümler NLS tabanlı uygulamaya geri döner.
 
 > [!NOTE]
 > ICU kullanırken bile,, `CurrentCulture` `CurrentUICulture` ve `CurrentRegion` üyeleri Kullanıcı ayarlarını kabul etmek için Windows Işletim sistemi API 'lerini kullanmaya devam eder.
 
-### <a name="using-nls-instead-of-icu"></a>ICU yerine NLS kullanma
+### <a name="use-nls-instead-of-icu"></a>ICU yerine NLS kullanma
 
 NLS yerine ıCU kullanılması, Genelleştirme ile ilgili bazı işlemlerle davranış farklılıkları oluşmasına neden olabilir. Bir geliştirici, NLS 'yi kullanmaya geri dönmek için ıCU uygulamasını devre dışı bırakabilirsiniz. Uygulamalar, aşağıdaki yollarla NLS modunu etkinleştirebilir:
 
@@ -71,7 +71,7 @@ Daha fazla bilgi için bkz. [çalışma zamanı yapılandırma ayarları](../../
 
 ## <a name="app-local-icu"></a>Uygulama-yerel ıCU
 
-Her bir ıCU sürümü BT hata düzeltmelerinin yanı sıra dünyanın dillerini açıklayan güncelleştirilmiş ortak yerel ayar veri deposu (CLDR) verilerini de getirebilir. ICU sürümleri arasında geçiş yapmak, Genelleştirme ile ilgili işlemlere geldiğinde uygulama davranışını güvenle etkileyebilir.  Uygulama geliştiricilerinin tüm dağıtımlarda tutarlılığın sağlanmasına yardımcı olmak için, .NET 5,0 ve sonraki sürümleri, hem Windows hem de UNIX üzerinde uygulamaların kendi ıU kopyalarını taşıması ve kullanması için olanak sağlar.
+Her bir ıCU sürümü BT hata düzeltmelerinin yanı sıra dünyanın dillerini açıklayan güncelleştirilmiş ortak yerel ayar veri deposu (CLDR) verilerini de getirebilir. ICU sürümleri arasında geçiş yapmak, Genelleştirme ile ilgili işlemlere geldiğinde uygulama davranışını güvenle etkileyebilir. Uygulama geliştiricilerinin tüm dağıtımlarda tutarlılığın sağlanmasına yardımcı olmak için, .NET 5,0 ve sonraki sürümleri, hem Windows hem de UNIX üzerinde uygulamaların kendi ıU kopyalarını taşıması ve kullanması için olanak sağlar.
 
 Uygulamalar, aşağıdaki yollarla bir App-Local ıCU uygulama modunu kabul edebilir:
 
@@ -97,7 +97,7 @@ Uygulamalar, aşağıdaki yollarla bir App-Local ıCU uygulama modunu kabul edeb
 
 - Ortam değişkenini `DOTNET_SYSTEM_GLOBALIZATION_APPLOCALICU` değeri veya değerine ayarlayarak `<suffix>:<version>` `<version>` .
 
-  `<suffix>`: Genel ıCU paketleme kurallarından sonra, 36 karakterden daha az karakter uzunluğunda isteğe bağlı son ek. Özel bir ıU oluştururken, LIB adlarını ve dışarıya aktarılmış sembol adlarını bir sonek içerecek şekilde (örneğin, sonek) oluşturacak şekilde özelleştirebilirsiniz `libicuucmyapp` `myapp` .
+  `<suffix>`: Genel ıCU paketleme kurallarından sonra, en çok 36 karakterden kısa isteğe bağlı sonek. Özel bir ıU oluştururken, LIB adlarını ve dışarıya aktarılmış sembol adlarını bir sonek içerecek şekilde (örneğin, sonek) oluşturacak şekilde özelleştirebilirsiniz `libicuucmyapp` `myapp` .
 
   `<version>`: Geçerli bir ıCU sürümü (örneğin, 67,1). Bu sürüm, ikili dosyaları yüklemek ve içe aktarılmış sembolleri almak için kullanılır.
 
@@ -107,7 +107,7 @@ Kendi içinde bulunan uygulamalar için, Kullanıcı tarafından özel bir eylem
 
 ICU 'yi bir NuGet paketi aracılığıyla kullanıyorsanız, bu, çerçeveye bağımlı uygulamalarda kullanılır. NuGet yerel varlıkları çözer ve bu dosyaları `deps.json` dosya ve uygulamanın çıkış dizinine dahil eder `runtimes` . .NET onu buradan yükler.
 
-IU 'nin yerel bir derlemeden kullanıldığı, çerçeveye bağımlı uygulamalar (kendi içinde olmayan) için ek adımlar gerçekleştirmeniz gerekir. .NET SDK 'Sı henüz "gevşek" yerel ikililerinin içine dahil edilecek bir özelliğe sahip değildir `deps.json` ( [Bu SDK sorununa](https://github.com/dotnet/sdk/issues/11373)bakın). Bunun yerine, uygulamanın proje dosyasına ek bilgiler ekleyerek bunu etkinleştirebilirsiniz. Örneğin:
+IU 'nin yerel bir derlemeden kullanıldığı, çerçeveye bağımlı uygulamalar (kendi içinde olmayan) için ek adımlar gerçekleştirmeniz gerekir. .NET SDK 'Sı henüz "gevşek" yerel ikililerinin içine dahil edilecek bir özelliğe sahip değildir `deps.json` ( [Bu SDK sorununa](https://github.com/dotnet/sdk/issues/11373)bakın). Bunun yerine, uygulamanın proje dosyasına ek bilgiler ekleyerek bunu etkinleştirebilirsiniz. Örnek:
 
 ```xml
 <ItemGroup>
@@ -120,7 +120,7 @@ Bu, desteklenen çalışma zamanları için tüm ıCU ikilileri için yapılmal�
 
 ### <a name="macos-behavior"></a>macOS davranışı
 
-`macOS` , dosyasında Linux yükleyicinden farklı yükleme komutlarından bağımlı dinamik kitaplıkları çözümlemek için farklı bir davranışa sahiptir `match-o` . Linux yükleyicisinde .NET, `libicudata` `libicuuc` `libicui18n` ICU bağımlılık grafiğini karşılamak için, ve (Bu sırada) deneyebilir. Ancak, macOS üzerinde bu çalışmaz. MacOS üzerinde ıCU oluştururken, varsayılan olarak, ' de bu yükleme komutlarıyla bir dinamik kitaplık alacaksınız `libicuuc` . Örneğin:
+`macOS` , dosyasında Linux yükleyicinden farklı yükleme komutlarından bağımlı dinamik kitaplıkları çözümlemek için farklı bir davranışa sahiptir `match-o` . Linux yükleyicisinde .NET, `libicudata` `libicuuc` `libicui18n` ICU bağımlılık grafiğini karşılamak için, ve (Bu sırada) deneyebilir. Ancak, macOS üzerinde bu çalışmaz. MacOS üzerinde ıCU oluştururken, varsayılan olarak, ' de bu yükleme komutlarıyla bir dinamik kitaplık alacaksınız `libicuuc` . Aşağıdaki kod parçacığında bir örnek gösterilmektedir.
 
 ```sh
 ~/ % otool -L /Users/santifdezm/repos/icu-build/icu/install/lib/libicuuc.67.1.dylib

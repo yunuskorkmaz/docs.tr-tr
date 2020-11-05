@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: bc2be4d408385936598d94d34f9b452d950516d3
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 05df7b5348fecebb7504ebb4e2623f688b6549e1
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553542"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400839"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml"></a>Atomlanmış XName ve XNamespace nesneleri (LINQ to XML)
 
-<xref:System.Xml.Linq.XName> ve <xref:System.Xml.Linq.XNamespace> nesneleri *atomlanmış*olur; diğer bir deyişle, aynı nitelikli adı içeriyorsa, aynı nesneye başvurur. Bu, sorgular için performans avantajları sağlar: iki atomılı adı eşitlik için karşılaştırdığınızda, temel alınan ara dilin yalnızca iki başvuruyu aynı nesneye işaret edip etmediğini belirlemesi gerekir. Temel alınan kodun dize karşılaştırmaları yapması gerekmez, bu da daha uzun sürer.
+<xref:System.Xml.Linq.XName> ve <xref:System.Xml.Linq.XNamespace> nesneleri *atomlanmış* olur; diğer bir deyişle, aynı nitelikli adı içeriyorsa, aynı nesneye başvurur. Bu, sorgular için performans avantajları sağlar: iki atomılı adı eşitlik için karşılaştırdığınızda, temel alınan ara dilin yalnızca iki başvuruyu aynı nesneye işaret edip etmediğini belirlemesi gerekir. Temel alınan kodun dize karşılaştırmaları yapması gerekmez, bu da daha uzun sürer.
 
 ## <a name="atomization-semantics"></a>Atomleştirme semantiği
 
@@ -30,7 +30,7 @@ Atomlanmış nesneleri etkinleştirmek için bir sınıf için, sınıf için Ol
 Aşağıdaki kod bazı nesneler oluşturur <xref:System.Xml.Linq.XElement> ve aynı adların aynı örneği paylaşılacağını gösterir.
 
 ```csharp
-XElement r1 = new XElement("Root", "data1");
+var r1 = new XElement("Root", "data1");
 XElement r2 = XElement.Parse("<Root>data2</Root>");
 
 if ((object)r1.Name == (object)r2.Name)
@@ -77,7 +77,7 @@ Daha önce belirtildiği gibi, atomlanmış nesnelerin avantajı bir parametre o
 Aşağıdaki örnek, bir <xref:System.Xml.Linq.XName> <xref:System.Xml.Linq.XContainer.Descendants%2A> ' ı yöntem çağrısına geçirir ve daha sonra atomleştirme düzeniyle daha iyi performansa sahiptir.
 
 ```csharp
-XElement root = new XElement("Root",
+var root = new XElement("Root",
     new XElement("C1", 1),
     new XElement("Z1",
         new XElement("C1", 2),
@@ -96,9 +96,9 @@ foreach (var z in query)
 ```vb
 Dim root As New XElement("Root", New XElement("C1", 1), New XElement("Z1", New XElement("C1", 2), New XElement("C1", 1)))
 
-Dim query = From e In root.Descendants("C1") Where CInt(e) = 1e
+Dim query = From e In root.Descendants("C1") Where CInt(e) = 1
 
-For Each z As var In query
+For Each z In query
     Console.WriteLine(z)
 Next
 ```

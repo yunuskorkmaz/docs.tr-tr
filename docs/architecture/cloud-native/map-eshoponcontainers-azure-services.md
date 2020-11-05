@@ -2,12 +2,12 @@
 title: eShopOnContainers'ı Azure Hizmetlerine eşleme
 description: EShopOnContainers 'ı Azure Kubernetes hizmeti, API Gateway ve Azure Service Bus gibi Azure hizmetleriyle eşleme.
 ms.date: 05/13/2020
-ms.openlocfilehash: e938bf9a8f93f9e375a22ffb94395b9e85b0fe63
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c4627a4b6d9d8b62737984b507e638019544ab67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155272"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400454"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers'ı Azure Hizmetlerine eşleme
 
@@ -24,7 +24,7 @@ Bu mimarinin sunucu tarafı bileşenleri, Azure hizmetlerine kolayca eşlenir.
 
 Azure Kubernetes Service (AKS) ile ASP.NET Core MVC uygulamalarından bağımsız olarak Katalog ve sıralama mikro hizmetleri olan uygulama kapsayıcısı barındırılan Hizmetleri, barındırılabilecek ve yönetilebilir. Uygulama Docker ve Kubernetes 'te yerel olarak çalışabilir ve aynı kapsayıcılar, AKS içinde barındırılan hazırlama ve üretim ortamlarına dağıtılabilir. Sonraki bölümde görüyoruz, bu işlem otomatikleştirilebilir.
 
-AKS, bağımsız kapsayıcı kümeleri için yönetim hizmetleri sağlar. Uygulama, yukarıdaki mimari diyagramında gösterilen her mikro hizmet için ayrı AKS kümeleri dağıtır. Bu yaklaşım, her bir hizmetin, kaynak taleplerine göre bağımsız olarak ölçeklendirilmesine olanak tanır. Her mikro hizmet de bağımsız olarak dağıtılabilir ve ideal olarak bu tür dağıtımlar sıfır sistem kapalı kalma süresine neden olur.
+AKS, bağımsız kapsayıcı kümeleri için yönetim hizmetleri sağlar. Uygulama, yukarıdaki mimari diyagramında gösterildiği gibi AKS kümesindeki her bir mikro hizmet için ayrı kapsayıcılar dağıtır. Bu yaklaşım, her bir hizmetin, kaynak taleplerine göre bağımsız olarak ölçeklendirilmesine olanak tanır. Her mikro hizmet de bağımsız olarak dağıtılabilir ve ideal olarak bu tür dağıtımlar sıfır sistem kapalı kalma süresine neden olur.
 
 ## <a name="api-gateway"></a>API Ağ Geçidi
 

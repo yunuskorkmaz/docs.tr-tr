@@ -2,12 +2,12 @@
 title: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma
 description: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturmayı öğrenin.
 ms.date: 06/02/2020
-ms.openlocfilehash: ca933bc9322109ba7d1f808fcc44696a9766a6d4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537606"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400532"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma
 
@@ -16,10 +16,10 @@ Bu öğreticide Mac için Visual Studio kullanarak bir .NET Core konsol uygulama
 > [!NOTE]
 > Geri bildiriminiz çok değerli. Mac için Visual Studio üzerinde geliştirme ekibine geri bildirimde bulunmak için kullanabileceğiniz iki yol vardır:
 >
-> * Mac için Visual Studio, **Help**  >  menüden**sorun bildir** veya hoş geldiniz ekranından **sorun** bildir ' i seçerek bir hata raporu dosyalayarak bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html) portalında izleyebilirsiniz.
-> * Öneride bulunmak için, **Help**  >  menüden**bir öneri sağlayın** veya hoş geldiniz ekranından bir öneri **Provide a Suggestion** sağlayın. Bu işlem sizi [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)götürür.
+> * Mac için Visual Studio, **Help**  >  menüden **sorun bildir** veya hoş geldiniz ekranından **sorun** bildir ' i seçerek bir hata raporu dosyalayarak bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://aka.ms/feedback/report?space=41) portalında izleyebilirsiniz.
+> * Öneride bulunmak için, **Help**  >  menüden **bir öneri sağlayın** veya hoş geldiniz ekranından bir öneri **Provide a Suggestion** sağlayın. Bu işlem sizi [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://aka.ms/feedback/suggest?space=41)götürür.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * [Sürüm 8,6 veya üzeri Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). .NET Core ' u yüklemek için seçeneği belirleyin. .NET Core geliştirmesi için Xamarin 'in yüklenmesi isteğe bağlıdır. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
@@ -37,15 +37,15 @@ Bu öğreticide Mac için Visual Studio kullanarak bir .NET Core konsol uygulama
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Mac için Visual Studio başlangıç ekranında yeni düğme":::
 
-1. **Yeni proje** Iletişim kutusunda **Web ve konsol** düğümü altında **uygulama** ' yı seçin. **Konsol uygulaması** şablonunu seçin ve **İleri**' yi seçin.
+1. **Yeni proje** Iletişim kutusunda **Web ve konsol** düğümü altında **uygulama** ' yı seçin. **Konsol uygulaması** şablonunu seçin ve **İleri** ' yi seçin.
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="Yeni proje şablonları listesi":::
 
-1. **Yeni konsol uygulamanızı yapılandırma** Iletişim kutusunun **hedef çerçeve** açılır penceresinde, **.NET Core 3,1**' ı seçin ve **İleri**' yi seçin.
+1. **Yeni konsol uygulamanızı yapılandırma** Iletişim kutusunun **hedef çerçeve** açılır penceresinde, **.NET Core 3,1** ' ı seçin ve **İleri** ' yi seçin.
 
    :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="Hedef Framework 'Ü seçin":::
 
-1. **Proje adı**Için "HelloWorld" yazın ve **Oluştur**' u seçin.
+1. **Proje adı** Için "HelloWorld" yazın ve **Oluştur** ' u seçin.
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-options.png" alt-text="Yeni konsol uygulamanızı yapılandırma iletişim kutusu":::
 
@@ -82,7 +82,7 @@ namespace HelloWorld
 
 Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uygulamayı geliştirin.
 
-1. *Program.cs*' de, `Main` aşağıdaki kodla birlikte çağıran satırı olan yönteminin içeriğini değiştirin `Console.WriteLine` :
+1. *Program.cs* ' de, `Main` aşağıdaki kodla birlikte çağıran satırı olan yönteminin içeriğini değiştirin `Console.WriteLine` :
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
