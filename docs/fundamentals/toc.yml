@@ -1442,6 +1442,8 @@ items:
                 href: ../standard/base-types/comparing.md
               - name: Büyük/küçük harf durumunu değiştirme
                 href: ../standard/base-types/changing-case.md
+              - name: Dizeden öğeleri ayıklama
+                href: ../standard/base-types/parse-strings.md
               - name: StringBuilder sınıfını kullanma
                 href: ../standard/base-types/stringbuilder.md
               - name: 'Nasıl yapılır: Temel dize işlemeleri gerçekleştirme'
