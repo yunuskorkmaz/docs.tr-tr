@@ -4,12 +4,12 @@ description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # b
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 770ac24feababcfc840ae26196ba8b6180d378a0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: ba9111efccceca03fda43ff11c3f111610541595
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282019"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342689"
 ---
 # <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
 
@@ -86,11 +86,12 @@ dotnet fsi Script.fsx
 [1; 9; 25; 49; 81]
 ```
 
-F # Scripting, [Visual Studio](../../get-started/get-started-visual-studio.md), [Visual Studio Code](../../get-started/get-started-vscode.md)ve [Mac için Visual Studio](../../get-started/get-started-visual-studio-for-mac.md)yerel olarak desteklenir.
+F # Scripting, [Visual Studio](../../get-started/get-started-visual-studio.md), [Visual Studio Code](../../get-started/get-started-vscode.md)ve [Mac için Visual Studio](../../get-started/get-started-with-visual-studio-for-mac.md)yerel olarak desteklenir.
 
 ## <a name="referencing-packages-in-f-interactive"></a>F# Etkileşimli gelen paketlere başvurma
 
-> [!NOTE] Paket yönetimi bir F # 5 özelliğidir ve şu anda en son .NET 5 SDK kullanılarak kullanılabilir.
+> [!NOTE]
+> Paket yönetimi bir F # 5 özelliğidir ve şu anda en son .NET 5 SDK kullanılarak kullanılabilir.
 
 F# Etkileşimli, `#r "nuget:"` söz dizimi ve isteğe bağlı bir sürümle NuGet paketlerine başvurmayı destekler:
 
