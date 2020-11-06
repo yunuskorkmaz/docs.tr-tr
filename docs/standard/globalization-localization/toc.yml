@@ -12,16 +12,15 @@
     - name: Kültüre duyarsız dize işlemleri
       href: culture-insensitive-string-operations.md
       items:
-        - name: Kültüre duyarsız dize işlemlerini gerçekleştirme
+        - name: Genel Bakış
           href: performing-culture-insensitive-string-operations.md
-          items:
-            - name: Dize karşılaştırmaları
-              href: performing-culture-insensitive-string-comparisons.md
-            - name: Durum değişiklikleri
-              href: performing-culture-insensitive-case-changes.md
-            - name: Koleksiyonlardaki dize işlemleri
-              href: performing-culture-insensitive-string-operations-in-collections.md
-            - name: Dizilerdeki dize işlemleri
-              href: performing-culture-insensitive-string-operations-in-arrays.md
+        - name: Dize karşılaştırmaları
+          href: performing-culture-insensitive-string-comparisons.md
+        - name: Durum değişiklikleri
+          href: performing-culture-insensitive-case-changes.md
+        - name: Koleksiyonlardaki dize işlemleri
+          href: performing-culture-insensitive-string-operations-in-collections.md
+        - name: Dizilerdeki dize işlemleri
+          href: performing-culture-insensitive-string-operations-in-arrays.md
     - name: Dünya çapında kullanılmaya hazır uygulamalar geliştirmek için en iyi yöntemler
       href: best-practices-for-developing-world-ready-apps.md
