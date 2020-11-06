@@ -1,21 +1,23 @@
 ---
 title: JSON serileştirme-.NET için özel dönüştürücüler yazma
+description: Ad alanında belirtilen JSON serileştirme sınıfları için özel dönüştürücüler oluşturmayı öğrenin System.Text.Json .
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: e0b769d7bb6b336d226cd48de1932524c4d7e74d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ba6b61232ccf7ed493fe5809e5c0b8ba21091d3d
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811073"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329813"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
@@ -28,10 +30,20 @@ Bu makalede, ad alanında belirtilen JSON serileştirme sınıfları için özel
 
 Ayrıca, `System.Text.Json` geçerli sürüme dahil olmayan işlevlerle özelleştirmek veya genişletmek için özel dönüştürücüler yazabilirsiniz. Bu makalenin ilerleyen bölümlerinde aşağıdaki senaryolar ele alınmıştır:
 
+::: zone pivot="dotnet-5-0"
+
+* [Çıkartılan türlerin nesne özelliklerine serisini kaldırma](#deserialize-inferred-types-to-object-properties).
+* [Polimorfik serisini destekler](#support-polymorphic-deserialization).
+* [Yığın \<T> için gidiş dönüş desteği](#support-round-trip-for-stackt).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
 * [Çıkartılan türlerin nesne özelliklerine serisini kaldırma](#deserialize-inferred-types-to-object-properties).
 * [Dize olmayan anahtarla destek sözlüğü](#support-dictionary-with-non-string-key).
 * [Polimorfik serisini destekler](#support-polymorphic-deserialization).
 * [Yığın \<T> için gidiş dönüş desteği](#support-round-trip-for-stackt).
+::: zone-end
 
 ## <a name="custom-converter-patterns"></a>Özel dönüştürücü desenleri
 
@@ -177,10 +189,20 @@ Yalnızca uygulanabilir özel dönüştürücü kayıtlı değilse, yerleşik bi
 
 Aşağıdaki bölümlerde, yerleşik işlevlerin sağlamadığı bazı yaygın senaryolar ele alan dönüştürücü örnekleri sağlanmaktadır.
 
-* [Çıkartılan türlerin nesne özelliklerine serisini kaldırma](#deserialize-inferred-types-to-object-properties)
-* [Dize olmayan anahtarla destek sözlüğü](#support-dictionary-with-non-string-key)
-* [Polimorfik serisini destekler](#support-polymorphic-deserialization)
+::: zone pivot="dotnet-5-0"
+
+* [Çıkartılan türlerin nesne özelliklerine serisini kaldırma](#deserialize-inferred-types-to-object-properties).
+* [Polimorfik serisini destekler](#support-polymorphic-deserialization).
 * [Yığın \<T> için gidiş dönüş desteği](#support-round-trip-for-stackt).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* [Çıkartılan türlerin nesne özelliklerine serisini kaldırma](#deserialize-inferred-types-to-object-properties).
+* [Dize olmayan anahtarla destek sözlüğü](#support-dictionary-with-non-string-key).
+* [Polimorfik serisini destekler](#support-polymorphic-deserialization).
+* [Yığın \<T> için gidiş dönüş desteği](#support-round-trip-for-stackt).
+::: zone-end
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Çıkartılan türlerin nesne özelliklerine serisini kaldırma
 
@@ -221,6 +243,8 @@ Seri durumdan çıkarılacak aşağıdaki JSON örneği,, ve olarak seri durumda
 
 Ad alanındaki [birim testleri klasörü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) , `System.Text.Json.Serialization` özellikleri seri durumdan çıkarmayı işleyen özel dönüştürücülerin daha fazla örneklerine sahiptir `object` .
 
+::: zone pivot="dotnet-core-3-1"
+
 ### <a name="support-dictionary-with-non-string-key"></a>Dize olmayan anahtarla destek sözlüğü
 
 Sözlük koleksiyonları için yerleşik destek `Dictionary<string, TValue>` . Diğer bir deyişle, anahtar bir dize olmalıdır. Anahtar olarak bir tamsayı veya başka tür içeren bir sözlüğü desteklemek için özel bir dönüştürücü gerekir.
@@ -252,6 +276,7 @@ Seri hale getirme işleminden alınan JSON çıktısı aşağıdaki örneğe ben
 ```
 
 Ad alanındaki [birim testleri klasörü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) , `System.Text.Json.Serialization` dize dışı anahtar sözlüklerini işleyen özel dönüştürücülere daha fazla örnek içerir.
+::: zone-end
 
 ### <a name="support-polymorphic-deserialization"></a>Polimorfik serisini destekler
 
@@ -307,6 +332,29 @@ Aşağıdaki kod, nesnelerinden ve nesnelerden gidiş dönüşü sağlayan özel
 Aşağıdaki kod dönüştürücüyü kaydeder:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
+
+## <a name="handle-null-values"></a>Null değerleri işleme
+
+Varsayılan olarak, seri hale getirici null değerlerini aşağıdaki şekilde işler:
+
+* Başvuru türleri ve `Nullable<T>` türleri için:
+
+  * `null`Serileştirme sırasında özel Dönüştürücülerine geçmez.
+  * `JsonTokenType.Null`Seri durumdan çıkarma sırasında özel Dönüştürücülerine geçmez.
+  * `null`Seri durumdan çıkarma üzerine bir örnek döndürür.
+  * `null`Serileştirme üzerinde doğrudan yazıcıya yazar.
+
+* Null yapılamayan değer türleri için:
+
+  * `JsonTokenType.Null`Seri durumdan çıkarma sırasında özel Dönüştürücülerine geçer. (Özel dönüştürücü yoksa, `JsonException` tür için iç dönüştürücü tarafından bir özel durum oluşturulur.)
+
+Bu null işleme davranışı öncelikle, dönüştürücünün ek bir çağrısını atlayarak performansı iyileştirir. Ayrıca, `null` her `Read` ve `Write` yöntemi geçersiz kılmanın başlangıcında olup olmadığını kontrol etmek için null yapılabilir türler için dönüştürücüler zorlamaktan kaçınır.
+
+::: zone pivot="dotnet-5-0"
+Bir özel dönüştürücünün `null` bir başvuru veya değer türü için işlemesini sağlamak için, <xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType> `true` Aşağıdaki örnekte gösterildiği gibi, döndürecek şekilde geçersiz kılın:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="19":::
+::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>Diğer özel dönüştürücü örnekleri
 

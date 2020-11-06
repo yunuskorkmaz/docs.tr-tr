@@ -1,36 +1,36 @@
 ---
 title: Sürümünden Newtonsoft.Json .net 'e System.Text.Json geçiş
+description: "' Den ' ye geçiş yapmayı öğrenin Newtonsoft.Json System.Text.Json . Örnek kod içerir."
 author: tdykstra
 ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 01/10/2020
+ms.date: 11/05/2020
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2f287eb7a3a1ace8d8440f860b55429bb3c93691
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: cd40b6f6daac267342f54631075e4640f9a77d94
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282428"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329774"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
 Bu makalede, ' den ' e nasıl geçiş yapılacağı gösterilmektedir [Newtonsoft.Json](https://www.newtonsoft.com/json) <xref:System.Text.Json> .
 
-`System.Text.Json`Ad alanı, JavaScript nesne gösterimi (JSON) öğesinden serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar. `System.Text.Json`Kitaplık, .NET Core 3,0 ve üzeri sürümler için paylaşılan çerçeveye dahildir. Önceki Framework sürümleri için [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet paketini yüklersiniz. Paket şunları destekler:
+`System.Text.Json`Ad alanı, JavaScript nesne gösterimi (JSON) öğesinden serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar. `System.Text.Json`Kitaplık [.net Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1) ve üzeri sürümler için çalışma zamanına dahildir. Diğer hedef çerçeveler için [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet paketini yükler. Paket şunları destekler:
 
 * .NET Standard 2,0 ve sonraki sürümler
 * .NET Framework 4.7.2 ve sonraki sürümler
 * .NET Core 2,0, 2,1 ve 2,2
 
 `System.Text.Json` Öncelikle performans, güvenlik ve standartlar uyumluluğuna odaklanır. Varsayılan davranışta bazı önemli farklılıklar vardır ve ile özellik eşliği yoktur `Newtonsoft.Json` . Bazı senaryolarda `System.Text.Json` yerleşik işlevselliği yoktur, ancak önerilen geçici çözümler vardır. Diğer senaryolar için geçici çözümler pratik bir şekilde yapılır. Uygulamanız eksik bir özelliğe bağımlıysa, senaryonuza yönelik desteğin eklenip eklenemediğine ulaşmak için [bir sorun](https://github.com/dotnet/runtime/issues/new) yerleştirmeyi düşünün.
-
-<!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md). [Restore this when the roadmap is updated.]-->
 
 Bu makalenin çoğu, API 'yi kullanma ile <xref:System.Text.Json.JsonSerializer> ilgilidir, ancak aynı zamanda <xref:System.Text.Json.JsonDocument> (belge nesne MODELI veya DOM), <xref:System.Text.Json.Utf8JsonReader> ve türlerini temsil eder <xref:System.Text.Json.Utf8JsonWriter> .
 
@@ -42,34 +42,76 @@ Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmekt
 * Desteklenmez, geçici çözüm mümkündür. Geçici çözümler, işlevlerle tamamen eşlik sağlamayan [özel dönüştürücülerdir](system-text-json-converters-how-to.md) `Newtonsoft.Json` . Bunlardan bazılarının örnek kodu örnek olarak verilmiştir. Bu özelliklerden yararlandıysanız `Newtonsoft.Json` geçiş, .NET nesne modellerinizde veya diğer kod değişikliklerinde değişiklik yapılmasını gerektirir.
 * Desteklenmez, geçici çözüm pratik veya mümkün değildir. Bu özelliklerden yararlandıysanız `Newtonsoft.Json` geçiş önemli değişiklikler yapılmadan mümkün olmayacaktır.
 
+::: zone pivot="dotnet-5-0"
 | Newtonsoft.Json özelliği                               | System.Text.Json değerinin |
 |-------------------------------------------------------|-----------------------------|
 | Varsayılan olarak büyük/küçük harfe duyarsız seri hale           | ✔️ [Propertynamecaseduyarsız genel ayarı](#case-insensitive-deserialization) |
 | Camel-Case Özellik adları                             | ✔️ [Propertynamingpolicy genel ayarı](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
 | En az karakter kaçış                            | ✔️ [katı karakter kaçış, yapılandırılabilir](#minimal-character-escaping) |
-| `NullValueHandling.Ignore` Genel ayar             | ✔️ [ıgnorenullvalues genel seçeneği](system-text-json-how-to.md#exclude-all-null-value-properties) |
+| `NullValueHandling.Ignore` Genel ayar             | ✔️ [DefaultIgnoreCondition genel seçeneği](system-text-json-how-to.md#ignore-all-null-value-properties) |[Özelliği koşullu olarak Yoksay](#conditionally-ignore-a-property)
+| Açıklamalara izin ver                                        | ✔️ [ReadCommentHandling genel ayarı](#comments) |
+| Sondaki virgüllerin kullanılmasına izin ver                                 | ✔️ [Allowtrailingvirgüller genel ayarı](#trailing-commas) |
+| Özel dönüştürücü kaydı                         | ✔️ [öncelik sırası farklı](#converter-registration-precedence) |
+| Varsayılan olarak en fazla derinlik yok                           | ✔️ [varsayılan en yüksek derinlik 64, yapılandırılabilir](#maximum-depth) |
+| `PreserveReferencesHandling` Genel ayar           | ✔️ [Referencehandling genel ayarı](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling` Genel ayar                | ✔️ [Referencehandling genel ayarı](#preserve-object-references-and-handle-loops) |
+| Tırnak işaretleri içindeki sayıları seri hale getirme veya serisini kaldırma            | ✔️ [numberhandling genel ayarı, [JsonNumberHandling] özniteliği](#allow-or-write-numbers-in-quotes) |
+| Sabit sınıflar ve yapılar için seri durumdan çıkarma          | ✔️ [Jsonconstructor, C# 9 kayıtları](#deserialize-to-immutable-classes-and-structs) |
+| Alanlar için destek                                    | ✔️ [ıncludefields genel ayarı, [Jsonınclude] özniteliği](#public-and-non-public-fields) |
+| `DefaultValueHandling` Genel ayar                 | ✔️ [DefaultIgnoreCondition genel ayarı](#conditionally-ignore-a-property) |
+| `NullValueHandling` ayar açık `[JsonProperty]`       | ✔️ [Jsonıgnore özniteliği](#conditionally-ignore-a-property)  |
+| `DefaultValueHandling` ayar açık `[JsonProperty]`    | ✔️ [Jsonıgnore özniteliği](#conditionally-ignore-a-property)  |
+| `Dictionary`Dize olmayan anahtarla seri durumdan çıkarma          | ✔️ [destekleniyor](#dictionary-with-non-string-key) |
+| Ortak olmayan özellik ayarlayıcıları ve alıcılar için destek   | ✔️ [Jsonınclude özniteliği](#non-public-property-setters-and-getters) |
+| `[JsonConstructor]` özniteliği                         | ✔️ [[Jsonconstructor] özniteliği](#specify-constructor-to-use-when-deserializing) |
+| Geniş kapsamlı türler için destek                    | ⚠️[Bazı türler için özel dönüştürücüler gerekir](#types-without-built-in-support) |
+| Polimorfik serileştirme                             | ⚠️[Desteklenmez, geçici çözüm, örnek](#polymorphic-serialization) |
+| Polimorfik seri kaldırma                           | ⚠️[Desteklenmez, geçici çözüm, örnek](#polymorphic-deserialization) |
+| Çıkarılan türden özellikleri seri durumdan çıkar `object`      | ⚠️[Desteklenmez, geçici çözüm, örnek](#deserialization-of-object-properties) |
+| JSON `null` sabit değerinin null yapılamayan değer türlerine serisini kaldırma | ⚠️[Desteklenmez, geçici çözüm, örnek](#deserialize-null-to-non-nullable-type) |
+| `Required`özniteliği üzerinde ayarlama `[JsonProperty]`        | ⚠️[Desteklenmez, geçici çözüm, örnek](#required-properties) |
+| `DefaultContractResolver` özellikleri yoksaymak için       | ⚠️[Desteklenmez, geçici çözüm, örnek](#conditionally-ignore-a-property) |
+| `DateTimeZoneHandling`, `DateFormatString` Ayarlar   | ⚠️[Desteklenmez, geçici çözüm, örnek](#specify-date-format) |
+| Geri Çağırmalar                                             | ⚠️[Desteklenmez, geçici çözüm, örnek](#callbacks) |
+| `JsonConvert.PopulateObject` yöntemi                   | ⚠️[Desteklenmez, geçici çözüm](#populate-existing-objects) |
+| `ObjectCreationHandling` Genel ayar               | ⚠️[Desteklenmez, geçici çözüm](#reuse-rather-than-replace-properties) |
+| Ayarlayıcısız koleksiyonlara Ekle                    | ⚠️[Desteklenmez, geçici çözüm](#add-to-collections-without-setters) |
+| Öznitelikler için destek `System.Runtime.Serialization` | ❌ [Desteklenmez](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling` Genel ayar                | ❌ [Desteklenmez](#missingmemberhandling) |
+| Tırnak işaretleri olmadan özellik adlarına izin ver                   | ❌ [Desteklenmez](#json-strings-property-names-and-string-values) |
+| Dize değerlerinin çevresinde tek tırnak işaretlerine izin ver              | ❌ [Desteklenmez](#json-strings-property-names-and-string-values) |
+| Dize özellikleri için dize olmayan JSON değerlerine izin ver    | ❌ [Desteklenmez](#non-string-values-for-string-properties) |
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+| Newtonsoft.Json özelliği                               | System.Text.Json değerinin |
+|-------------------------------------------------------|-----------------------------|
+| Varsayılan olarak büyük/küçük harfe duyarsız seri hale           | ✔️ [Propertynamecaseduyarsız genel ayarı](#case-insensitive-deserialization) |
+| Camel-Case Özellik adları                             | ✔️ [Propertynamingpolicy genel ayarı](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
+| En az karakter kaçış                            | ✔️ [katı karakter kaçış, yapılandırılabilir](#minimal-character-escaping) |
+| `NullValueHandling.Ignore` Genel ayar             | ✔️ [ıgnorenullvalues genel seçeneği](system-text-json-how-to.md#ignore-all-null-value-properties) |
 | Açıklamalara izin ver                                        | ✔️ [ReadCommentHandling genel ayarı](#comments) |
 | Sondaki virgüllerin kullanılmasına izin ver                                 | ✔️ [Allowtrailingvirgüller genel ayarı](#trailing-commas) |
 | Özel dönüştürücü kaydı                         | ✔️ [öncelik sırası farklı](#converter-registration-precedence) |
 | Varsayılan olarak en fazla derinlik yok                           | ✔️ [varsayılan en yüksek derinlik 64, yapılandırılabilir](#maximum-depth) |
 | Geniş kapsamlı türler için destek                    | ⚠️[Bazı türler için özel dönüştürücüler gerekir](#types-without-built-in-support) |
-| Dizeleri sayı olarak seri durumdan çıkarma                        | ⚠️[Desteklenmez, geçici çözüm, örnek](#quoted-numbers) |
+| Dizeleri sayı olarak seri durumdan çıkarma                        | ⚠️[Desteklenmez, geçici çözüm, örnek](#allow-or-write-numbers-in-quotes) |
 | `Dictionary`Dize olmayan anahtarla seri durumdan çıkarma          | ⚠️[Desteklenmez, geçici çözüm, örnek](#dictionary-with-non-string-key) |
 | Polimorfik serileştirme                             | ⚠️[Desteklenmez, geçici çözüm, örnek](#polymorphic-serialization) |
 | Polimorfik seri kaldırma                           | ⚠️[Desteklenmez, geçici çözüm, örnek](#polymorphic-deserialization) |
 | Çıkarılan türden özellikleri seri durumdan çıkar `object`      | ⚠️[Desteklenmez, geçici çözüm, örnek](#deserialization-of-object-properties) |
 | JSON `null` sabit değerinin null yapılamayan değer türlerine serisini kaldırma | ⚠️[Desteklenmez, geçici çözüm, örnek](#deserialize-null-to-non-nullable-type) |
 | Sabit sınıflar ve yapılar için seri durumdan çıkarma          | ⚠️[Desteklenmez, geçici çözüm, örnek](#deserialize-to-immutable-classes-and-structs) |
-| `[JsonConstructor]` özniteliği                         | ⚠️[Desteklenmez, geçici çözüm, örnek](#specify-constructor-to-use) |
+| `[JsonConstructor]` özniteliği                         | ⚠️[Desteklenmez, geçici çözüm, örnek](#specify-constructor-to-use-when-deserializing) |
 | `Required`özniteliği üzerinde ayarlama `[JsonProperty]`        | ⚠️[Desteklenmez, geçici çözüm, örnek](#required-properties) |
 | `NullValueHandling`özniteliği üzerinde ayarlama `[JsonProperty]` | ⚠️[Desteklenmez, geçici çözüm, örnek](#conditionally-ignore-a-property)  |
 | `DefaultValueHandling`özniteliği üzerinde ayarlama `[JsonProperty]` | ⚠️[Desteklenmez, geçici çözüm, örnek](#conditionally-ignore-a-property)  |
 | `DefaultValueHandling` Genel ayar                 | ⚠️[Desteklenmez, geçici çözüm, örnek](#conditionally-ignore-a-property) |
-| `DefaultContractResolver` özellikleri dışlamak için       | ⚠️[Desteklenmez, geçici çözüm, örnek](#conditionally-ignore-a-property) |
+| `DefaultContractResolver` özellikleri yoksaymak için       | ⚠️[Desteklenmez, geçici çözüm, örnek](#conditionally-ignore-a-property) |
 | `DateTimeZoneHandling`, `DateFormatString` Ayarlar   | ⚠️[Desteklenmez, geçici çözüm, örnek](#specify-date-format) |
 | Geri Çağırmalar                                             | ⚠️[Desteklenmez, geçici çözüm, örnek](#callbacks) |
 | Ortak ve genel olmayan alanlar için destek              | ⚠️[Desteklenmez, geçici çözüm](#public-and-non-public-fields) |
-| İç ve özel özellik ayarlayıcıları ve alıcılar için destek | ⚠️[Desteklenmez, geçici çözüm](#internal-and-private-property-setters-and-getters) |
+| Ortak olmayan özellik ayarlayıcıları ve alıcılar için destek   | ⚠️[Desteklenmez, geçici çözüm](#non-public-property-setters-and-getters) |
 | `JsonConvert.PopulateObject` yöntemi                   | ⚠️[Desteklenmez, geçici çözüm](#populate-existing-objects) |
 | `ObjectCreationHandling` Genel ayar               | ⚠️[Desteklenmez, geçici çözüm](#reuse-rather-than-replace-properties) |
 | Ayarlayıcısız koleksiyonlara Ekle                    | ⚠️[Desteklenmez, geçici çözüm](#add-to-collections-without-setters) |
@@ -80,6 +122,7 @@ Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmekt
 | Tırnak işaretleri olmadan özellik adlarına izin ver                   | ❌ [Desteklenmez](#json-strings-property-names-and-string-values) |
 | Dize değerlerinin çevresinde tek tırnak işaretlerine izin ver              | ❌ [Desteklenmez](#json-strings-property-names-and-string-values) |
 | Dize özellikleri için dize olmayan JSON değerlerine izin ver    | ❌ [Desteklenmez](#non-string-values-for-string-properties) |
+::: zone-end
 
 Bu, özelliklerin kapsamlı bir listesi değildir `Newtonsoft.Json` . Listede, [GitHub sorunları](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) veya [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) gönderileri için istenen birçok senaryo bulunur. Burada listelenen senaryolardan biri için şu anda örnek kodu olmayan bir geçici çözüm uygularsanız ve çözümünüzü paylaşmak istiyorsanız, bu sayfanın altındaki **geri bildirim** bölümünde **Bu sayfayı** seçin. Bu, bu belgenin GitHub deposunda bir sorun oluşturur ve bu sayfadaki **geri bildirim** bölümünde de listeler.
 
@@ -91,7 +134,11 @@ Bu, özelliklerin kapsamlı bir listesi değildir `Newtonsoft.Json` . Listede, [
 
 Seri durumdan çıkarma sırasında, `Newtonsoft.Json` Varsayılan olarak büyük/küçük harfe duyarsız Özellik adı eşleştirmeyi yapar. <xref:System.Text.Json>Varsayılan değer büyük/küçük harfe duyarlıdır ve tam bir eşleşme yaptığından daha iyi performans sağlar. Büyük/küçük harfe duyarsız eşleşme yapma hakkında daha fazla bilgi için bkz. [büyük/küçük harfe duyarsız Özellik eşleştirme](system-text-json-how-to.md#case-insensitive-property-matching).
 
-`System.Text.Json`ASP.NET Core kullanarak dolaylı olarak kullanıyorsanız, gibi davranışları almak için herhangi bir şey yapmanız gerekmez `Newtonsoft.Json` . ASP.NET Core, kullandığı [Camel özellik adlarına](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) ve büyük/küçük harfe duyarsız eşleştirmeye yönelik ayarları belirtir `System.Text.Json` . Varsayılan değerler [Jsonoptions sınıfında](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L22-L28)ayarlanır.
+`System.Text.Json`ASP.NET Core kullanarak dolaylı olarak kullanıyorsanız, gibi davranışları almak için herhangi bir şey yapmanız gerekmez `Newtonsoft.Json` . ASP.NET Core, kullandığı [Camel özellik adlarına](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) ve büyük/küçük harfe duyarsız eşleştirmeye yönelik ayarları belirtir `System.Text.Json` .
+
+::: zone pivot="dotnet-5-0"
+ASP.NET Core Ayrıca, [alıntılanmış sayıların](#allow-or-write-numbers-in-quotes) varsayılan olarak serisini kaldırmada de etkinleştirilir.
+::: zone-end
 
 ### <a name="minimal-character-escaping"></a>En az karakter kaçış
 
@@ -178,9 +225,156 @@ public class ExampleClass
 The JSON value could not be converted to System.String.
 ```
 
-## <a name="scenarios-using-jsonserializer-that-require-workarounds"></a>Geçici çözüm gerektiren JsonSerializer kullanan senaryolar
+## <a name="scenarios-using-jsonserializer"></a>JsonSerializer kullanan senaryolar
 
-Aşağıdaki senaryolar yerleşik işlevsellik tarafından desteklenmez, ancak geçici çözümler mümkündür. Geçici çözümler, işlevlerle tamamen eşlik sağlamayan [özel dönüştürücülerdir](system-text-json-converters-how-to.md) `Newtonsoft.Json` . Bunlardan bazılarının örnek kodu örnek olarak verilmiştir. Bu özelliklerden yararlandıysanız `Newtonsoft.Json` geçiş, .NET nesne modellerinizde veya diğer kod değişikliklerinde değişiklik yapılmasını gerektirir.
+Aşağıdaki senaryolardan bazıları yerleşik işlevsellik tarafından desteklenmez, ancak geçici çözümler olasıdır. Geçici çözümler, işlevlerle tamamen eşlik sağlamayan [özel dönüştürücülerdir](system-text-json-converters-how-to.md) `Newtonsoft.Json` . Bunlardan bazılarının örnek kodu örnek olarak verilmiştir. Bu özelliklerden yararlandıysanız `Newtonsoft.Json` geçiş, .NET nesne modellerinizde veya diğer kod değişikliklerinde değişiklik yapılmasını gerektirir.
+
+Aşağıdaki senaryolardan bazıları için geçici çözümler pratik veya mümkün değildir. Bu özelliklerden yararlandıysanız `Newtonsoft.Json` geçiş önemli değişiklikler yapılmadan mümkün olmayacaktır.
+
+### <a name="allow-or-write-numbers-in-quotes"></a>Tırnak işaretleri halinde izin ver veya yaz
+
+::: zone pivot="dotnet-5-0"
+`Newtonsoft.Json` JSON dizeleri (tırnak içine alınmış) tarafından temsil edilen sayıları seri hale getirme veya seri durumdan çıkarma. Örneğin, yerine şunları kabul edebilir: `{"DegreesCelsius":"23"}` `{"DegreesCelsius":23}` . İçindeki bu davranışı etkinleştirmek için <xref:System.Text.Json> , <xref:System.Text.Json.JsonSerializerOptions.NumberHandling%2A?displayProperty=nameWithType> veya olarak <xref:System.Text.Json.Serialization.JsonNumberHandling.WriteAsString> ayarlayın <xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString> veya [[jsonnumberhandling]](xref:System.Text.Json.Serialization.JsonNumberHandlingAttribute) özniteliğini kullanın.
+
+`System.Text.Json`ASP.NET Core kullanarak dolaylı olarak kullanıyorsanız, gibi davranışları almak için herhangi bir şey yapmanız gerekmez `Newtonsoft.Json` . ASP.NET Core [Web varsayılanlarını](system-text-json-how-to.md#web-defaults-for-jsonserializeroptions) kullandığında `System.Text.Json` , Web Varsayılanları tırnak içine alınmış sayılara izin verir.
+
+Daha fazla bilgi için bkz. [tekliflere Izin verme veya yazma numaraları](system-text-json-how-to.md#allow-or-write-numbers-in-quotes).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+`Newtonsoft.Json` JSON dizeleri (tırnak içine alınmış) tarafından temsil edilen sayıları seri hale getirme veya seri durumdan çıkarma. Örneğin, yerine şunları kabul edebilir: `{"DegreesCelsius":"23"}` `{"DegreesCelsius":23}` . .NET Core 3,1 ' de bu davranışı etkinleştirmek için <xref:System.Text.Json> , aşağıdaki örnekte olduğu gibi özel bir dönüştürücü uygulayın. Dönüştürücü şu şekilde tanımlanan özellikleri işler `long` :
+
+* Onları JSON dizeleri olarak serileştirir.
+* Seri durumdan çıkarılırken, tırnak içindeki JSON numaralarını ve sayıları kabul eder.
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/LongToStringConverter.cs)]
+
+Tek tek özelliklerde [bir özniteliği kullanarak](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) `long` veya [çeviriciyi koleksiyona ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) bu özel dönüştürücüyü kaydettirin <xref:System.Text.Json.JsonSerializerOptions.Converters> .
+::: zone-end
+
+### <a name="specify-constructor-to-use-when-deserializing"></a>Seri durumdan çıkarılırken kullanılacak oluşturucuyu belirtin
+
+`Newtonsoft.Json` `[JsonConstructor]` Özniteliği bir poco 'ya seri durumdan çıkarılırken hangi oluşturucunun çağrılacağını belirtmenizi sağlar.
+
+::: zone pivot="dotnet-5-0"
+`System.Text.Json` Ayrıca bir [[Jsonconstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute) özniteliğine sahiptir. Daha fazla bilgi için bkz. [Sabit türler ve kayıtlar](system-text-json-how-to.md#immutable-types-and-records).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+<xref:System.Text.Json> .NET Core 3,1 'de yalnızca parametresiz oluşturucular desteklenir. Geçici bir çözüm olarak, özel bir dönüştürücüde hangi oluşturucuyu ihtiyacınız olduğunu çağırabilirsiniz. [Sabit sınıflar ve yapılar Için seri durumdan çıkarma](#deserialize-to-immutable-classes-and-structs)örneğine bakın.
+::: zone-end
+
+### <a name="conditionally-ignore-a-property"></a>Özelliği koşullu olarak Yoksay
+
+`Newtonsoft.Json` serileştirme veya seri durumdan çıkarma için bir özelliği koşullu olarak yoksaymanın birkaç yolu vardır:
+
+* `DefaultContractResolver` Rastgele ölçütlere göre dahil edilecek veya yoksayılacak özellikleri seçmenizi sağlar.
+* `NullValueHandling`Ve `DefaultValueHandling` ayarları, `JsonSerializerSettings` tüm null değer veya varsayılan değer özelliklerinin yoksayılmasını belirtmenize izin verir.
+* `NullValueHandling` `DefaultValueHandling` Öznitelikteki ve ayarları, `[JsonProperty]` null veya varsayılan değer olarak ayarlandığında yoksayılacak tek tek özellikleri belirtmenize izin verir.
+
+::: zone pivot="dotnet-5-0"
+
+<xref:System.Text.Json> serileştirilirken özellikleri veya alanları yoksaymak için aşağıdaki yolları sağlar:
+
+* Bir özellikte [[Jsonıgnore]](system-text-json-how-to.md#ignore-individual-properties) özniteliği, serileştirme SıRASıNDA özelliğin JSON 'dan atlanmasına neden olur.
+* [Ignorereadonlyproperties](system-text-json-how-to.md#ignore-all-read-only-properties) genel seçeneği, tüm salt okuma özelliklerini yoksaymanıza imkan tanır.
+* [Alanlar dahil](system-text-json-how-to.md#include-fields)ediyorsanız, <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields%2A?displayProperty=nameWithType> genel seçeneği tüm salt okuma alanlarını yoksaymanıza izin verir.
+* `DefaultIgnoreCondition`Genel seçeneği, [varsayılan değerlere sahip tüm değer türü özelliklerini yoksaymanıza](system-text-json-how-to.md#ignore-all-default-value-properties)veya [null değere sahip tüm başvuru türü özelliklerini yoksaymanıza](system-text-json-how-to.md#ignore-all-null-value-properties)olanak sağlar.
+
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+<xref:System.Text.Json> .NET Core 3,1, serileştirme sırasında özellikleri yoksaymak için aşağıdaki yolları sağlar:
+
+* Bir özellikte [[Jsonıgnore]](system-text-json-how-to.md#ignore-individual-properties) özniteliği, serileştirme SıRASıNDA özelliğin JSON 'dan atlanmasına neden olur.
+* [Ignorenullvalues](system-text-json-how-to.md#ignore-all-null-value-properties) genel seçeneği, tüm null değer özelliklerini yoksaymanıza imkan tanır.
+* [Ignorereadonlyproperties](system-text-json-how-to.md#ignore-all-read-only-properties) genel seçeneği, tüm salt okuma özelliklerini yoksaymanıza imkan tanır.
+::: zone-end
+
+Bu seçenekler **şunları yapmanızı sağlar** :
+
+::: zone pivot="dotnet-5-0"
+
+* Çalışma zamanında değerlendirilen rastgele ölçütlere göre seçili özellikleri yoksayın.
+
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* Türü için varsayılan değere sahip tüm özellikleri yoksayın.
+* Türü için varsayılan değere sahip seçili özellikleri yoksayın.
+* Değerleri null ise seçili özellikleri yoksayın.
+* Çalışma zamanında değerlendirilen rastgele ölçütlere göre seçili özellikleri yoksayın.
+
+::: zone-end
+
+Bu işlevsellik için özel bir dönüştürücü yazabilirsiniz. İşte bu yaklaşımı gösteren örnek bir POCO ve özel dönüştürücü.
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
+
+Dönüştürücü, `Summary` değeri null, boş bir dize veya "N/A" ise, özelliğin Serileştirmeden atlanmasına neden olur.
+
+Bu özel dönüştürücüyü [sınıfında bir özniteliği kullanarak](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) veya [dönüştürücüyü koleksiyona ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) kaydedin <xref:System.Text.Json.JsonSerializerOptions.Converters> .
+
+Bu yaklaşım aşağıdaki durumlarda ek mantık gerektirir:
+
+* POCO, karmaşık özellikler içerir.
+* Gibi öznitelikleri `[JsonIgnore]` veya özel kodlayıcılar gibi seçenekleri işlemeniz gerekir.
+
+### <a name="public-and-non-public-fields"></a>Ortak ve genel olmayan alanlar
+
+`Newtonsoft.Json` alanları seri hale getirmek ve seri durumdan çıkarmak için özellikleri.
+
+::: zone pivot="dotnet-5-0"
+İçinde <xref:System.Text.Json> , <xref:System.Text.Json.JsonSerializerOptions.IncludeFields?displayProperty=nameWithType> serileştirme veya seri durumdan çıkarma sırasında ortak alanları dahil etmek için genel ayarını veya [[jsonınclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) özniteliğini kullanın. Bir örnek için bkz. [içerme alanları](system-text-json-how-to.md#include-fields).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+<xref:System.Text.Json> .NET Core 3,1 ' de yalnızca ortak özelliklerle birlikte kullanılabilir. Özel dönüştürücüler, bu işlevselliği sağlayabilir.
+::: zone-end
+
+### <a name="preserve-object-references-and-handle-loops"></a>Nesne başvurularını koruma ve döngüleri işleme
+
+Varsayılan olarak, `Newtonsoft.Json` değere göre serileştirir. Örneğin, bir nesne aynı nesneye bir başvuru içeren iki özellik içeriyorsa `Person` , bu `Person` nesnenin ÖZELLIKLERININ değerleri JSON içinde yinelenir.
+
+`Newtonsoft.Json` , `PreserveReferencesHandling` `JsonSerializerSettings` başvuruya göre serileştirmenize olanak sağlayan üzerinde bir ayarı vardır:
+
+* İlk nesne için oluşturulan JSON 'a bir tanımlayıcı meta verileri eklenir `Person` .
+* İkinci nesne için oluşturulan JSON, `Person` özellik değerleri yerine bu tanımlayıcıya bir başvuru içerir.
+
+`Newtonsoft.Json` Ayrıca, `ReferenceLoopHandling` bir özel durum oluşturmak yerine döngüsel başvuruları yoksaymanıza imkan tanıyan bir ayara sahiptir.
+
+::: zone pivot="dotnet-5-0"
+Başvuruları korumak ve ' de döngüsel başvuruları işlemek için <xref:System.Text.Json> , <xref:System.Text.Json.JsonSerializerOptions.ReferenceHandler%2A?displayProperty=nameWithType> olarak ayarlayın <xref:System.Text.Json.Serialization.ReferenceHandler.Preserve%2A> . `ReferenceHandler.Preserve`Ayarı, ile eşdeğerdir `PreserveReferencesHandling`  =  `PreserveReferencesHandling.All` `Newtonsoft.Json` .
+
+Newtonsoft.Json [ReferenceResolver](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonSerializer_ReferenceResolver.htm)gibi, <xref:System.Text.Json.Serialization.ReferenceResolver?displayProperty=fullName> sınıfı serileştirme ve seri durumundan çıkarma için başvuruları koruma davranışını tanımlar. Özel davranışı belirtmek için türetilmiş bir sınıf oluşturun. Bir örnek için bkz. [GuidReferenceResolver](https://github.com/dotnet/docs/blob/9d5e88edbd7f12be463775ffebbf07ac8415fe18/docs/standard/serialization/snippets/system-text-json-how-to-5-0/csharp/GuidReferenceResolverExample.cs).
+
+Bazı ilgili `Newtonsoft.Json` özellikler desteklenmez:
+
+* [JsonPropertyAttribute. IsReference](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonPropertyAttribute_IsReference.htm)
+* [JsonPropertyAttribute. ReferenceLoopHandling](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonPropertyAttribute_ReferenceLoopHandling.htm)
+
+Daha fazla bilgi için bkz. [başvuruları koruma ve döngüsel başvuruları işleme](system-text-json-how-to.md#preserve-references-and-handle-circular-references)
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+<xref:System.Text.Json> .NET Core 3,1 yalnızca değere göre serileştirme destekler ve döngüsel başvurular için bir özel durum oluşturur.
+::: zone-end
+
+### <a name="dictionary-with-non-string-key"></a>Dize olmayan anahtarla sözlük
+
+::: zone pivot="dotnet-5-0"
+Hem hem de `Newtonsoft.Json` `System.Text.Json` türündeki koleksiyonları destekler `Dictionary<TKey, TValue>` .
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+`Newtonsoft.Json` türündeki koleksiyonları destekler `Dictionary<TKey, TValue>` . .NET Core 3,1 ' deki sözlük koleksiyonları için yerleşik destek <xref:System.Text.Json> ile sınırlıdır `Dictionary<string, TValue>` . Diğer bir deyişle, anahtar bir dize olmalıdır.
+
+.NET Core 3,1 ' deki anahtar olarak tamsayı veya diğer tür içeren bir sözlüğü desteklemek için, [özel dönüştürücüler yazma](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key)bölümünde örnek gibi bir dönüştürücü oluşturun.
+::: zone-end
 
 ### <a name="types-without-built-in-support"></a>Yerleşik destek olmadan türler
 
@@ -197,23 +391,6 @@ Aşağıdaki senaryolar yerleşik işlevsellik tarafından desteklenmez, ancak g
 * <xref:System.ValueTuple> ve ilişkili genel türleri
 
 Özel dönüştürücüler, yerleşik desteği olmayan türler için uygulanabilir.
-
-### <a name="quoted-numbers"></a>Tırnak işaretli sayılar
-
-`Newtonsoft.Json` JSON dizeleri (tırnak içine alınmış) tarafından temsil edilen sayıları seri hale getirme veya seri durumdan çıkarma. Örneğin, yerine şunları kabul edebilir: `{"DegreesCelsius":"23"}` `{"DegreesCelsius":23}` . İçindeki bu davranışı etkinleştirmek için <xref:System.Text.Json> , aşağıdaki örneğe benzer bir özel dönüştürücü uygulayın. Dönüştürücü şu şekilde tanımlanan özellikleri işler `long` :
-
-* Onları JSON dizeleri olarak serileştirir.
-* Seri durumdan çıkarılırken, tırnak içindeki JSON numaralarını ve sayıları kabul eder.
-
-[!code-csharp[](snippets/system-text-json-how-to/csharp/LongToStringConverter.cs)]
-
-Tek tek özelliklerde [bir özniteliği kullanarak](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) `long` veya [çeviriciyi koleksiyona ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) bu özel dönüştürücüyü kaydettirin <xref:System.Text.Json.JsonSerializerOptions.Converters> .
-
-### <a name="dictionary-with-non-string-key"></a>Dize olmayan anahtarla sözlük
-
-`Newtonsoft.Json` türündeki koleksiyonları destekler `Dictionary<TKey, TValue>` . ' Deki sözlük koleksiyonları için yerleşik destek <xref:System.Text.Json> ile sınırlıdır `Dictionary<string, TValue>` . Diğer bir deyişle, anahtar bir dize olmalıdır.
-
-Anahtar olarak bir tamsayı veya diğer tür ile bir sözlüğü desteklemek için, [özel dönüştürücüler yazma](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key)bölümünde örnek gibi bir dönüştürücü oluşturun.
 
 ### <a name="polymorphic-serialization"></a>Polimorfik serileştirme
 
@@ -253,7 +430,7 @@ Ancak, `System.Text.Json` `null` ile aynı şekilde davranır `Newtonsoft.Json` 
 * `NullValueHandling` , olarak ayarlanır `Ignore` ve
 * Seri durumdan çıkarma sırasında JSON null yapılamayan bir değer türü için null değer içerir.
 
-Aynı senaryoda <xref:System.Text.Json> bir özel durum oluşturur. (Karşılık gelen null işleme ayarı <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> .)
+Aynı senaryoda <xref:System.Text.Json> bir özel durum oluşturur. (' De karşılık gelen null işleme ayarı `System.Text.Json` <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>  =  `true` .)
 
 Hedef türün sahibiyseniz, en iyi geçici çözüm, özelliğin boş değer atanabilir olması (örneğin, `int` olarak değiştirin `int?` ).
 
@@ -281,7 +458,14 @@ Seri durumdan çıktıktan sonra, `Date` özelliği 1/1/0001 ( `default(DateTime
 
 ### <a name="deserialize-to-immutable-classes-and-structs"></a>Sabit sınıflar ve yapılar için seri durumdan çıkarma
 
-`Newtonsoft.Json` parametreleri olan oluşturucuları kullanabilmesi için, sabit sınıflar ve yapılar için seri hale getirebilirsiniz. <xref:System.Text.Json> yalnızca ortak parametresiz oluşturucuları destekler. Geçici bir çözüm olarak, özel bir dönüştürücüde parametreleri olan bir Oluşturucu çağırabilirsiniz.
+`Newtonsoft.Json` parametreleri olan oluşturucuları kullanabilmesi için, sabit sınıflar ve yapılar için seri hale getirebilirsiniz.
+
+::: zone pivot="dotnet-5-0"
+İçinde <xref:System.Text.Json> , parametreli bir oluşturucunun kullanımını belirtmek için [[jsonconstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute) özniteliğini kullanın. C# 9 ' daki kayıtlar da sabittir ve seri durumundan çıkarma hedefi olarak desteklenir. Daha fazla bilgi için bkz. [Sabit türler ve kayıtlar](system-text-json-how-to.md#immutable-types-and-records).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+<xref:System.Text.Json> .NET Core 3,1 ' de yalnızca ortak parametresiz oluşturucular desteklenir. Geçici bir çözüm olarak, özel bir dönüştürücüde parametreleri olan bir Oluşturucu çağırabilirsiniz.
 
 İşte birden çok Oluşturucu parametresi olan değişmez bir struct:
 
@@ -294,10 +478,7 @@ Seri durumdan çıktıktan sonra, `Date` özelliği 1/1/0001 ( `default(DateTime
 [Dönüştürücüyü koleksiyona ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) bu özel dönüştürücüyü kaydedin <xref:System.Text.Json.JsonSerializerOptions.Converters> .
 
 Açık genel özellikleri işleyen benzer dönüştürücünün bir örneği için bkz. [anahtar-değer çiftleri için yerleşik dönüştürücü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/JsonValueConverterKeyValuePair.cs).
-
-### <a name="specify-constructor-to-use"></a>Kullanılacak oluşturucuyu belirtin
-
-`Newtonsoft.Json` `[JsonConstructor]` Özniteliği bir poco 'ya seri durumdan çıkarılırken hangi oluşturucunun çağrılacağını belirtmenizi sağlar. <xref:System.Text.Json> yalnızca parametresiz oluşturucuları destekler. Geçici bir çözüm olarak, özel bir dönüştürücüde hangi oluşturucuyu ihtiyacınız olduğunu çağırabilirsiniz. [Sabit sınıflar ve yapılar Için seri durumdan çıkarma](#deserialize-to-immutable-classes-and-structs)örneğine bakın.
+::: zone-end
 
 ### <a name="required-properties"></a>Gerekli özellikler
 
@@ -346,42 +527,6 @@ Gerekli özellikler Dönüştürücüsü, [[Jsonıgnore]](xref:System.Text.Json.
 * Null atanamaz bir tür için bir özellik JSON içinde bulunur, ancak değer, türü için sıfır gibi varsayılan değerdir `int` .
 * JSON 'da null olabilen bir değer türü özelliği var, ancak değer null.
 
-### <a name="conditionally-ignore-a-property"></a>Özelliği koşullu olarak Yoksay
-
-`Newtonsoft.Json` serileştirme veya seri durumdan çıkarma için bir özelliği koşullu olarak yoksaymanın birkaç yolu vardır:
-
-* `DefaultContractResolver` Rastgele ölçütlere göre dahil edilecek veya hariç tutulacak özellikleri seçmenizi sağlar.
-* `NullValueHandling`Ve `DefaultValueHandling` ayarları, `JsonSerializerSettings` tüm null değer veya varsayılan değer özelliklerinin yoksayılmasını belirtmenize izin verir.
-* `NullValueHandling` `DefaultValueHandling` Öznitelikteki ve ayarları, `[JsonProperty]` null veya varsayılan değer olarak ayarlandığında yoksayılacak tek tek özellikleri belirtmenize izin verir.
-
-<xref:System.Text.Json> serileştirilirken özellikleri atlamak için aşağıdaki yolları sağlar:
-
-* Bir özellikte [[Jsonıgnore]](system-text-json-how-to.md#exclude-individual-properties) özniteliği, serileştirme SıRASıNDA özelliğin JSON 'dan atlanmasına neden olur.
-* [Ignorenullvalues](system-text-json-how-to.md#exclude-all-null-value-properties) genel seçeneği, tüm null değerli özellikleri dışlamanızı sağlar.
-* [Ignorereadonlyproperties](system-text-json-how-to.md#exclude-all-read-only-properties) genel seçeneği, tüm salt okunurdur özellikleri dışlamanızı sağlar.
-
-Bu seçenekler **şunları yapmanızı sağlar** :
-
-* Türü için varsayılan değere sahip tüm özellikleri yoksayın.
-* Türü için varsayılan değere sahip seçili özellikleri yoksayın.
-* Değerleri null ise seçili özellikleri yoksayın.
-* Çalışma zamanında değerlendirilen rastgele ölçütlere göre seçili özellikleri yoksayın.
-
-Bu işlevsellik için özel bir dönüştürücü yazabilirsiniz. İşte bu yaklaşımı gösteren örnek bir POCO ve özel dönüştürücü.
-
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
-
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
-
-Dönüştürücü, `Summary` değeri null, boş bir dize veya "N/A" ise, özelliğin Serileştirmeden atlanmasına neden olur.
-
-Bu özel dönüştürücüyü [sınıfında bir özniteliği kullanarak](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) veya [dönüştürücüyü koleksiyona ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) kaydedin <xref:System.Text.Json.JsonSerializerOptions.Converters> .
-
-Bu yaklaşım aşağıdaki durumlarda ek mantık gerektirir:
-
-* POCO, karmaşık özellikler içerir.
-* Gibi öznitelikleri `[JsonIgnore]` veya özel kodlayıcılar gibi seçenekleri işlemeniz gerekir.
-
 ### <a name="specify-date-format"></a>Tarih biçimini belirtin
 
 `Newtonsoft.Json` , `DateTime` ve `DateTimeOffset` türlerinin özelliklerinin serileştirilme ve seri durumdan çıkarılme biçimini denetlemek için çeşitli yollar sağlar:
@@ -413,13 +558,17 @@ Bu yaklaşım aşağıdaki durumlarda ek mantık gerektirir:
 
 Yinelemeli olarak çağıran özel dönüştürücüler hakkında daha fazla bilgi `Serialize` için `Deserialize` , bu makalenin önceki kısımlarında yer alan [gerekli özellikler](#required-properties) bölümüne bakın.
 
-### <a name="public-and-non-public-fields"></a>Ortak ve genel olmayan alanlar
+### <a name="non-public-property-setters-and-getters"></a>Genel olmayan özellik ayarlayıcıları ve alıcılar
 
-`Newtonsoft.Json` alanları seri hale getirmek ve seri durumdan çıkarmak için özellikleri. <xref:System.Text.Json> yalnızca ortak özelliklerle birlikte kullanılabilir. Özel dönüştürücüler, bu işlevselliği sağlayabilir.
+`Newtonsoft.Json` özniteliği aracılığıyla özel ve iç özellik ayarlayıcıları ve alıcıları öğeleri kullanılabilir `JsonProperty` .
 
-### <a name="internal-and-private-property-setters-and-getters"></a>İç ve özel özellik ayarlayıcıları ve alıcılar
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json> , [[Jsonınclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) özniteliği aracılığıyla özel ve iç özellik ayarlayıcıları ve geticileri destekler. Örnek kod için bkz. [genel olmayan özellik erişimcileri](system-text-json-how-to.md#non-public-property-accessors).
+::: zone-end
 
-`Newtonsoft.Json` özniteliği aracılığıyla özel ve iç özellik ayarlayıcıları ve alıcıları öğeleri kullanılabilir `JsonProperty` . <xref:System.Text.Json> yalnızca genel ayarlayıcıları destekler. Özel dönüştürücüler, bu işlevselliği sağlayabilir.
+::: zone pivot="dotnet-core-3-1"
+<xref:System.Text.Json> .NET Core 3,1 ' de yalnızca genel ayarlayıcıları desteklenir. Özel dönüştürücüler, bu işlevselliği sağlayabilir.
+::: zone-end
 
 ### <a name="populate-existing-objects"></a>Mevcut nesneleri doldur
 
@@ -432,23 +581,6 @@ Yinelemeli olarak çağıran özel dönüştürücüler hakkında daha fazla bil
 ### <a name="add-to-collections-without-setters"></a>Ayarlayıcısız koleksiyonlara Ekle
 
 Seri durumundan çıkarma sırasında, `Newtonsoft.Json` özelliğin ayarlayıcısı olmasa bile nesneleri bir koleksiyona ekler. <xref:System.Text.Json> ayarlayıcıları olmayan özellikleri yoksayar. Özel dönüştürücüler, bu işlevselliği sağlayabilir.
-
-## <a name="scenarios-that-jsonserializer-currently-doesnt-support"></a>JsonSerializer 'ın Şu anda desteklemediği senaryolar
-
-Aşağıdaki senaryolar için geçici çözümler pratik veya mümkün değildir. Bu özelliklerden yararlandıysanız `Newtonsoft.Json` geçiş önemli değişiklikler yapılmadan mümkün olmayacaktır.
-
-### <a name="preserve-object-references-and-handle-loops"></a>Nesne başvurularını koruma ve döngüleri işleme
-
-Varsayılan olarak, `Newtonsoft.Json` değere göre serileştirir. Örneğin, bir nesne aynı nesneye bir başvuru içeren iki özellik içeriyorsa `Person` , bu `Person` nesnenin ÖZELLIKLERININ değerleri JSON içinde yinelenir.
-
-`Newtonsoft.Json` , `PreserveReferencesHandling` `JsonSerializerSettings` başvuruya göre serileştirmenize olanak sağlayan üzerinde bir ayarı vardır:
-
-* İlk nesne için oluşturulan JSON 'a bir tanımlayıcı meta verileri eklenir `Person` .
-* İkinci nesne için oluşturulan JSON, `Person` özellik değerleri yerine bu tanımlayıcıya bir başvuru içerir.
-
-`Newtonsoft.Json` Ayrıca, `ReferenceLoopHandling` bir özel durum oluşturmak yerine döngüsel başvuruları yoksaymanıza imkan tanıyan bir ayara sahiptir.
-
-<xref:System.Text.Json> yalnızca değere göre serileştirme destekler ve döngüsel başvurular için bir özel durum oluşturur.
 
 ### <a name="systemruntimeserialization-attributes"></a>System. Runtime. Serialization öznitelikleri
 
@@ -492,7 +624,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Yukarıdaki kod, bir özellik içeren bir için bekliyor `JsonElement` `fileName` . JSON dosyasını açar ve bir oluşturur `JsonDocument` . Yöntemi, çağıranın tüm belge ile çalışmak istediğini varsayar, bu yüzden öğesinin öğesini döndürür `Clone` `RootElement` .
 
-Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örneğin:
+Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örnek:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)

@@ -1,7 +1,7 @@
 ---
 title: Standart tarih ve saat biçim dizeleri
-description: Bu makalede, .NET 'teki bir tarih ve saat değerinin metin temsilini tanımlamak için standart tarih ve saat biçimi dizesi kullanmayı öğrenin.
-ms.date: 03/30/2017
+description: .NET 'teki bir tarih ve saat değerinin metin temsilini tanımlamak için standart tarih ve saat biçimi dizesi kullanmayı öğrenin.
+ms.date: 11/05/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,32 +14,32 @@ helpviewer_keywords:
 - custom date and time format strings
 - formatting [.NET], time
 - date and time strings
-ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 36aaef2676383263b2009fd283f1671ef970f20e
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.custom: contperfq2
+ms.openlocfilehash: dc294322317560344a6e3cdba1dbe2cce4f6a3fd
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888639"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329761"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart tarih ve saat biçim dizeleri
 
-Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Boşluk da dahil olmak üzere birden fazla karakter içeren herhangi bir tarih ve saat biçim dizesi, özel bir tarih ve saat biçimi dizesi olarak yorumlanır; daha fazla bilgi için bkz. [özel tarih ve saat biçim dizeleri](custom-date-and-time-format-strings.md). Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:
+Standart Tarih ve saat biçimi dizesi, bir veya değerinin metin temsilini tanımlamak için Biçim belirleyicisi olarak tek bir karakter kullanır <xref:System.DateTime> <xref:System.DateTimeOffset> . Boşluk da dahil olmak üzere birden fazla karakter içeren herhangi bir tarih ve saat biçim dizesi, [özel bir tarih ve saat biçim dizesi](custom-date-and-time-format-strings.md)olarak yorumlanır. Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:
 
 - Bir biçimlendirme işleminin sonucunda ortaya çıkan dizeyi tanımlamak için.
 
 - Bir tarih ve saat değerinin <xref:System.DateTime> ayrıştırma işlemi tarafından bir veya değere dönüştürülebileceği metin temsilini tanımlamak için <xref:System.DateTimeOffset> .
 
 > [!TIP]
-> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını** indirebilirsiniz. Kaynak kodu [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
-
-Standart Tarih ve saat biçim dizeleri, ve değerleriyle birlikte kullanılabilir <xref:System.DateTime> <xref:System.DateTimeOffset> .
+> Biçim dizelerini sayısal veya tarih ve saat değerlerine uygulamanızı ve sonuç dizeyi görüntülemenizi sağlayan bir .NET Windows Forms uygulaması olan **biçimlendirme yardımcı programını** indirebilirsiniz. Kaynak kodu [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
-<a name="table"></a> Aşağıdaki tabloda standart tarih ve saat biçimi belirticileri açıklanmaktadır. Aksi belirtilmedikçe, belirli bir standart tarih ve saat biçim belirticisi, bir veya değeriyle kullanılıp kullanılmadığına bakılmaksızın özdeş bir dize temsili üretir <xref:System.DateTime> <xref:System.DateTimeOffset> . Standart Tarih ve saat biçimi dizelerini kullanma hakkında ek bilgi için [Notlar](#Notes) bölümüne bakın.
+## <a name="table-of-format-specifiers"></a>Biçim belirticileri tablosu
 
-|Biçim belirteci|Açıklama|Örnekler|
+<a name="table"></a> Aşağıdaki tabloda standart tarih ve saat biçimi belirticileri açıklanmaktadır. Aksi belirtilmedikçe, belirli bir standart tarih ve saat biçim belirticisi, bir veya değeriyle kullanılıp kullanılmadığına bakılmaksızın özdeş bir dize temsili üretir <xref:System.DateTime> <xref:System.DateTimeOffset> . Standart Tarih ve saat biçimi dizelerini kullanma hakkında daha fazla bilgi için bkz. [Denetim Masası ayarları](#control-panel-settings) ve [DateTimeFormatInfo özellikleri](#datetimeformatinfo-properties) .
+
+|Biçim belirteci|Description|Örnekler|
 |----------------------|-----------------|--------------|
 |"d"|Kısa Tarih Modeli<br /><br /> Daha fazla bilgi:[kısa tarih ("d") Biçim belirleyicisi](#ShortDate).|2009-06-15T13:45:30-> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30-> 2009/06/15 (ja-JP)|
 |"D"|Uzun tarih deseni.<br /><br /> Daha fazla bilgi:[uzun tarih ("D") Biçim belirleyicisi](#LongDate).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30-> Montag, 15. Juni 2009 (de-DE)|
@@ -48,7 +48,7 @@ Standart Tarih ve saat biçim dizeleri, ve değerleriyle birlikte kullanılabili
 |"g"|Genel tarih veya saat deseni (süre).<br /><br /> Daha fazla bilgi: [Genel Tarih kısa saat ("g") Biçim belirleyicisi](#GeneralDateShortTime).|2009-06-15T13:45:30-> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 13:45 (ES-ES)<br /><br /> 2009-06-15T13:45:30-> 2009/6/15 13:45 (zh-CN)|
 |"G"|Genel tarih veya saat deseni (uzun süre).<br /><br /> Daha fazla bilgi: [Genel Tarih uzun saat ("G") Biçim belirleyicisi](#GeneralDateLongTime).|2009-06-15T13:45:30-> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 13:45:30 (ES-ES)<br /><br /> 2009-06-15T13:45:30-> 2009/6/15 13:45:30 (zh-CN)|
 |"M", "m"|Ay/gün deseni.<br /><br /> Daha fazla bilgi: [ay ("ı", "d") Biçim belirleyicisi](#MonthDay).|2009-06-15T13:45:30-> 15 Haziran (en-US)<br /><br /> 2009-06-15T13:45:30-> 15. junı (da-DK)<br /><br /> 2009-06-15T13:45:30-> 15 Junı (kimlik KIMLIĞI)|
-|"O", "o"|Gidiş tarihi/saati desen.<br /><br /> Daha fazla bilgi: [gidiş dönüş ("o", "o") Biçim belirleyicisi](#Roundtrip).|<xref:System.DateTime> deðerler<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. Local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. UTC)--> 2009-06-15T13:45:30.0000000 Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. Unspecified)--> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> deðerler<br /><br /> 2009-06-15T13:45:30-07:00--> 2009-06-15T13:45:30.0000000-07:00|
+|"O", "o"|gidiş dönüş Tarih/saat biçimi.<br /><br /> Daha fazla bilgi: [gidiş dönüş ("o", "o") Biçim belirleyicisi](#Roundtrip).|<xref:System.DateTime> deðerler<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. Local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. UTC)--> 2009-06-15T13:45:30.0000000 Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. Unspecified)--> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> deðerler<br /><br /> 2009-06-15T13:45:30-07:00--> 2009-06-15T13:45:30.0000000-07:00|
 |"R", "r"|Desen: RFC1123<br /><br /> Daha fazla bilgi: [RFC1123 ("r", "r") Biçim belirleyicisi](#RFC1123).|2009-06-15T13:45:30-> Mon, 15 Haz 2009 20:45:30 GMT|
 |"s"|Sıralanabilir tarih veya saat deseni.<br /><br /> Daha fazla bilgi: [sıralanabilir ("s") Biçim belirleyicisi](#Sortable).|2009-06-15T13:45:30 (DateTimeKind. Local)-> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. UTC)-> 2009-06-15T13:45:30|
 |"t"|Kısa bir süre deseni.<br /><br /> Daha fazla bilgi: [kısa saat ("t") Biçim belirleyicisi](#ShortTime).|2009-06-15T13:45:30-> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> 13:45 (HR-HR)<br /><br /> 2009-06-15T13:45:30-> 01:45 م (ar-EG)|
@@ -58,7 +58,7 @@ Standart Tarih ve saat biçim dizeleri, ve değerleriyle birlikte kullanılabili
 |"Y", "y"|Yıl ay deseni.<br /><br /> Daha fazla bilgi: [yıl ay ("Y") Biçim belirleyicisi](#YearMonth).|2009-06-15T13:45:30-> Haziran 2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> junı 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30-> Junı 2009 (kimlik KIMLIĞI)|
 |Başka bir tek karakter|Bilinmeyen tanımlayıcı.|Çalışma zamanı oluşturur <xref:System.FormatException> .|
 
-## <a name="how-standard-format-strings-work"></a>Standart Biçim Dizeleri Nasıl Çalışır
+## <a name="how-standard-format-strings-work"></a>Standart biçim dizeleri nasıl çalışır?
 
 Bir biçimlendirme işleminde, standart biçim dizesi aslında bir özel biçim dizesi için diğer addır. Bir özel biçim dizesine başvururken diğer ad kullanmanın yararı, diğer ad değişmez iken özel biçim dizesinin kendisinin değişebilmesidir. Bu, tarih ve saat değerleri genellikle kültüre göre değiştiği için önemlidir. Örneğin, "d" standart biçim dizesi bir tarih ve saat değerinin kısa tarih deseni kullanılarak görüntüleneceğini belirtir. Sabit kültür için bu desen "MM/dd/yyyy" şeklindedir. fr-FR kültürü için "dd/MM/yyyy" şeklindedir. ja-JP kültürü için "yyyy/MM/dd" şeklindedir.
 
@@ -98,9 +98,16 @@ Standart biçim dizeleri, <xref:System.DateTime.ParseExact%2A?displayProperty=na
 
 Aşağıdaki bölümlerde, ve değerleri için standart biçim belirticileri <xref:System.DateTime> açıklanır <xref:System.DateTimeOffset> .
 
+## <a name="date-formats"></a>Tarih biçimleri
+
+Bu grup aşağıdaki biçimleri içerir:
+
+- [Kısa tarih ("d") Biçim belirleyicisi](#the-short-date-d-format-specifier)
+- [Uzun Tarih ("D") Biçim belirleyicisi](#the-long-date-d-format-specifier)
+
 <a name="ShortDate"></a>
 
-## <a name="the-short-date-d-format-specifier"></a>Kısa Tarih ("d") Biçim Tanımlayıcısı
+### <a name="the-short-date-d-format-specifier"></a>Kısa tarih ("d") Biçim belirleyicisi
 
 "D" standart biçim Belirleyicisi, belirli bir kültürün özelliği tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> . Örneğin, sabit kültürün özelliği tarafından döndürülen özel biçim dizesi <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A> "aa/gg/yyyy" şeklindedir.
 
@@ -120,7 +127,7 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "d" biçim
 
 <a name="LongDate"></a>
 
-## <a name="the-long-date-d-format-specifier"></a>Uzun Tarih ("D") Biçim Tanımlayıcısı
+### <a name="the-long-date-d-format-specifier"></a>Uzun Tarih ("D") Biçim belirleyicisi
 
 "D" standart biçim belirticisi geçerli özellik tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> . Örneğin, sabit kültür için özel biçim dizesi "dddd, dd MMMM yyyy" değeridir.
 
@@ -139,9 +146,23 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "D" biçim
 
 [Tabloya dön](#table)
 
+## <a name="date-and-time-formats"></a>Tarih ve saat biçimleri
+
+Bu grup aşağıdaki biçimleri içerir:
+
+- [Tam Tarih kısa saat ("f") Biçim belirleyicisi](#the-full-date-short-time-f-format-specifier)
+- [Tam tarih uzun saat ("F") Biçim belirleyicisi](#the-full-date-long-time-f-format-specifier)
+- [Genel Tarih kısa saat ("g") Biçim belirleyicisi](#the-general-date-short-time-g-format-specifier)
+- [Genel Tarih uzun saat ("G") Biçim belirleyicisi](#the-general-date-long-time-g-format-specifier)
+- [Gidiş dönüş ("O", "o") Biçim belirleyicisi](#the-round-trip-o-o-format-specifier)
+- [RFC1123 ("R", "r") Biçim belirleyicisi](#the-rfc1123-r-r-format-specifier)
+- [Sıralanabilir ("s") Biçim belirleyicisi](#the-sortable-s-format-specifier)
+- [Evrensel sıralanabilir ("u") Biçim belirleyicisi](#the-universal-sortable-u-format-specifier)
+- [Evrensel tam ("U") Biçim belirleyicisi](#the-universal-full-u-format-specifier)
+
 <a name="FullDateShortTime"></a>
 
-## <a name="the-full-date-short-time-f-format-specifier"></a>Tam Tarih Kısa Saat ("f") Biçim Tanımlayıcısı
+### <a name="the-full-date-short-time-f-format-specifier"></a>Tam Tarih kısa saat ("f") Biçim belirleyicisi
 
 "f" standart biçim tanımlayıcısı uzun tarih ("D") ve kısa saat ("t") desenlerinin bir boşlukla ayrılarak birleştirilmiş şeklini temsil eder.
 
@@ -166,7 +187,7 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "f" biçim
 
 <a name="FullDateLongTime"></a>
 
-## <a name="the-full-date-long-time-f-format-specifier"></a>Tam Tarih Uzun Saat ("F") Biçim Tanımlayıcısı
+### <a name="the-full-date-long-time-f-format-specifier"></a>Tam tarih uzun saat ("F") Biçim belirleyicisi
 
 "F" standart biçim Belirleyicisi, geçerli özellik tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> . Örneğin, sabit kültür için özel biçim dizesi "dddd, dd MMMM yyyy HH:mm:ss" değeridir.
 
@@ -190,7 +211,7 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "F" biçim
 
 <a name="GeneralDateShortTime"></a>
 
-## <a name="the-general-date-short-time-g-format-specifier"></a>Genel Tarih Kısa Saat ("g") Biçim Tanımlayıcısı
+### <a name="the-general-date-short-time-g-format-specifier"></a>Genel Tarih kısa saat ("g") Biçim belirleyicisi
 
 "g" standart biçim tanımlayıcısı kısa tarih ("d") ve kısa saat ("t") desenlerinin bir boşlukla ayrılarak birleştirilmiş şeklini temsil eder.
 
@@ -214,7 +235,7 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "g" biçim
 
 <a name="GeneralDateLongTime"></a>
 
-## <a name="the-general-date-long-time-g-format-specifier"></a>Genel Tarih Uzun Saat ("G") Biçim Tanımlayıcısı
+### <a name="the-general-date-long-time-g-format-specifier"></a>Genel Tarih uzun saat ("G") Biçim belirleyicisi
 
 "G" standart biçim tanımlayıcısı kısa tarih ("d") ve uzun saat ("T") desenlerinin bir boşlukla ayrılarak birleştirilmiş şeklini temsil eder.
 
@@ -236,29 +257,9 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "G" biçim
 
 [Tabloya dön](#table)
 
-<a name="MonthDay"></a>
-
-## <a name="the-month-m-m-format-specifier"></a>Ay ("M", "m") Biçim Tanımlayıcısı
-
-"D" veya "d" standart biçim belirticisi geçerli özellik tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> . Örneğin, sabit kültür için özel biçim dizesi "MMMM dd" değeridir.
-
-Aşağıdaki tablo <xref:System.Globalization.DateTimeFormatInfo> döndürülen dizenin biçimlendirilmesini denetleyen nesne özelliklerini listeler.
-
-|Özellik|Açıklama|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Sonuç dizesinin genel biçimini tanımlar.|
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Sonuç dizesinde görünebilen yerelleştirilmiş ay adlarını tanımlar.|
-
-Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "m" biçim tanımlayıcısını kullanır.
-
-[!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
-[!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]
-
-[Tabloya dön](#table)
-
 <a name="Roundtrip"></a>
 
-## <a name="the-round-trip-o-o-format-specifier"></a>Gidiş Dönüş ("O", "o") Biçim Tanımlayıcısı
+### <a name="the-round-trip-o-o-format-specifier"></a>Gidiş dönüş ("O", "o") Biçim belirleyicisi
 
 "O" veya "o" standart biçim Belirleyicisi, saat dilimi bilgilerini koruyan ve ISO 8601 ile uyumlu bir sonuç dizesi veren bir model kullanarak özel bir tarih ve saat biçim dizesini temsil eder. <xref:System.DateTime>Değerler için, bu Biçim belirleyicisi metin içindeki özelliği ile birlikte tarih ve saat değerlerini korumak için tasarlanmıştır <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> . <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> Parametresi öğesine ayarlanmışsa, veya yöntemi kullanılarak biçimlendirilen dize geri ayrıştırılabilir `styles` <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> .
 
@@ -290,7 +291,7 @@ Aşağıdaki örnek, biçimli bir dize oluşturmak için "o" biçim belirticisin
 
 <a name="RFC1123"></a>
 
-## <a name="the-rfc1123-r-r-format-specifier"></a>RFC1123 ("R", "r") Biçim Tanımlayıcısı
+### <a name="the-rfc1123-r-r-format-specifier"></a>RFC1123 ("R", "r") Biçim belirleyicisi
 
 "R" veya "r" standart biçim Belirleyicisi, özelliği tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A?displayProperty=nameWithType> . Desen tanımlı bir standardı yansıtır ve özellik salt okunurdur. Bu nedenle, kullanılan kültür veya sağlanan biçim sağlayıcısından bağımsız olarak her zaman aynıdır. Özel biçim dizesi "ddd, dd MMM yyyy HH':'mm':'ss 'GMT'" değeridir. Bu standart biçim tanımlayıcısı kullanıldığında biçimlendirme ve ayrıştırma işlemi her zaman sabit kültürü kullanır.
 
@@ -313,7 +314,7 @@ Aşağıdaki örnek <xref:System.DateTime> <xref:System.DateTimeOffset> ABD Pasi
 
 <a name="Sortable"></a>
 
-## <a name="the-sortable-s-format-specifier"></a>Sıralanabilir ("s") Biçim Tanımlayıcısı
+### <a name="the-sortable-s-format-specifier"></a>Sıralanabilir ("s") Biçim belirleyicisi
 
 "S" standart biçim Belirleyicisi, özelliği tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A?displayProperty=nameWithType> . Desen tanımlı bir standardı (ISO 8601) yansıtır ve özellik salt okunurdur. Bu nedenle, kullanılan kültür veya sağlanan biçim sağlayıcısından bağımsız olarak her zaman aynıdır. Özel biçim dizesi "yyyy'-'MM'-'dd'T'HH':'mm':'ss" değeridir.
 
@@ -328,53 +329,9 @@ Aşağıdaki örnek <xref:System.DateTime> <xref:System.DateTimeOffset> ABD Pasi
 
 [Tabloya dön](#table)
 
-<a name="ShortTime"></a>
-
-## <a name="the-short-time-t-format-specifier"></a>Kısa Saat ("t") Biçim Tanımlayıcısı
-
-"T" standart biçim Belirleyicisi, geçerli özellik tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> . Örneğin, sabit kültür için özel biçim dizesi "HH:mm" değeridir.
-
-Sonuç dizesi, belirli bir nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.DateTimeFormatInfo> . Aşağıdaki tabloda <xref:System.Globalization.DateTimeFormatInfo> döndürülen dizenin biçimlendirilmesini denetleyelebilecek nesne özellikleri listelenmektedir. Bazı kültürlerin özelliği tarafından döndürülen özel biçim belirticisi <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> tüm özellikleri kullanmayabilir.
-
-|Özellik|Açıklama|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Sonuç dizesinin saat bileşeninin biçimini tanımlar.|
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Bir saatin saat, dakika ve saniye bileşenlerini ayıran dizeyi tanımlar.|
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|12 saatlik bir saatte gece yarısı ile öğleden önce arasındaki saatleri belirten dizeyi tanımlar.|
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|12 saatlik bir saatte öğleden önce ile gece yarısı arasındaki saatleri belirten dizeyi tanımlar.|
-
-Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "t" biçim tanımlayıcısını kullanır.
-
-[!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
-[!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]
-
-[Tabloya dön](#table)
-
-<a name="LongTime"></a>
-
-## <a name="the-long-time-t-format-specifier"></a>Uzun Saat ("T") Biçim Tanımlayıcısı
-
-"T" standart biçim Belirleyicisi, belirli bir kültürün özelliği tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> . Örneğin, sabit kültür için özel biçim dizesi "HH:mm:ss" değeridir.
-
-Aşağıdaki tabloda <xref:System.Globalization.DateTimeFormatInfo> döndürülen dizenin biçimlendirilmesini denetleyelebilecek nesne özellikleri listelenmektedir. Bazı kültürlerin özelliği tarafından döndürülen özel biçim belirticisi <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> tüm özellikleri kullanmayabilir.
-
-|Özellik|Açıklama|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Sonuç dizesinin saat bileşeninin biçimini tanımlar.|
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Bir saatin saat, dakika ve saniye bileşenlerini ayıran dizeyi tanımlar.|
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|12 saatlik bir saatte gece yarısı ile öğleden önce arasındaki saatleri belirten dizeyi tanımlar.|
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|12 saatlik bir saatte öğleden önce ile gece yarısı arasındaki saatleri belirten dizeyi tanımlar.|
-
-Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "T" biçim tanımlayıcısını kullanır.
-
-[!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
-[!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]
-
-[Tabloya dön](#table)
-
 <a name="UniversalSortable"></a>
 
-## <a name="the-universal-sortable-u-format-specifier"></a>Evrensel Sıralanabilir ("u") Biçim Tanımlayıcısı
+### <a name="the-universal-sortable-u-format-specifier"></a>Evrensel sıralanabilir ("u") Biçim belirleyicisi
 
 "U" standart biçim Belirleyicisi, özelliği tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A?displayProperty=nameWithType> . Desen tanımlı bir standardı yansıtır ve özellik salt okunurdur. Bu nedenle, kullanılan kültür veya sağlanan biçim sağlayıcısından bağımsız olarak her zaman aynıdır. Özel biçim dizesi "yyyy'-'MM'-'dd HH':'mm':'ss'Z'" değeridir. Bu standart biçim tanımlayıcısı kullanıldığında biçimlendirme ve ayrıştırma işlemi her zaman sabit kültürü kullanır.
 
@@ -389,7 +346,7 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "u" biçim
 
 <a name="UniversalFull"></a>
 
-## <a name="the-universal-full-u-format-specifier"></a>Evrensel Tam ("U") Biçim Tanımlayıcısı
+### <a name="the-universal-full-u-format-specifier"></a>Evrensel tam ("U") Biçim belirleyicisi
 
 "U" standart biçim Belirleyicisi, belirtilen bir kültürün özelliği tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> . Desen "F" deseni ile aynıdır. Ancak, <xref:System.DateTime> değer biçimlendirilmeden önce UTC 'ye otomatik olarak dönüştürülür.
 
@@ -413,9 +370,87 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "U" biçim
 
 [Tabloya dön](#table)
 
+## <a name="time-formats"></a>Zaman biçimleri
+
+Bu grup aşağıdaki biçimleri içerir:
+
+- [Kısa saat ("t") Biçim belirleyicisi](#the-short-time-t-format-specifier)
+- [Uzun saat ("T") Biçim belirleyicisi](#the-long-time-t-format-specifier)
+
+<a name="ShortTime"></a>
+
+### <a name="the-short-time-t-format-specifier"></a>Kısa saat ("t") Biçim belirleyicisi
+
+"T" standart biçim Belirleyicisi, geçerli özellik tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> . Örneğin, sabit kültür için özel biçim dizesi "HH:mm" değeridir.
+
+Sonuç dizesi, belirli bir nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.DateTimeFormatInfo> . Aşağıdaki tabloda <xref:System.Globalization.DateTimeFormatInfo> döndürülen dizenin biçimlendirilmesini denetleyelebilecek nesne özellikleri listelenmektedir. Bazı kültürlerin özelliği tarafından döndürülen özel biçim belirticisi <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> tüm özellikleri kullanmayabilir.
+
+|Özellik|Açıklama|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Sonuç dizesinin saat bileşeninin biçimini tanımlar.|
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Bir saatin saat, dakika ve saniye bileşenlerini ayıran dizeyi tanımlar.|
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|12 saatlik bir saatte gece yarısı ile öğleden önce arasındaki saatleri belirten dizeyi tanımlar.|
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|12 saatlik bir saatte öğleden önce ile gece yarısı arasındaki saatleri belirten dizeyi tanımlar.|
+
+Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "t" biçim tanımlayıcısını kullanır.
+
+[!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+[!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]
+
+[Tabloya dön](#table)
+
+<a name="LongTime"></a>
+
+### <a name="the-long-time-t-format-specifier"></a>Uzun saat ("T") Biçim belirleyicisi
+
+"T" standart biçim Belirleyicisi, belirli bir kültürün özelliği tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> . Örneğin, sabit kültür için özel biçim dizesi "HH:mm:ss" değeridir.
+
+Aşağıdaki tabloda <xref:System.Globalization.DateTimeFormatInfo> döndürülen dizenin biçimlendirilmesini denetleyelebilecek nesne özellikleri listelenmektedir. Bazı kültürlerin özelliği tarafından döndürülen özel biçim belirticisi <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> tüm özellikleri kullanmayabilir.
+
+|Özellik|Açıklama|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Sonuç dizesinin saat bileşeninin biçimini tanımlar.|
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Bir saatin saat, dakika ve saniye bileşenlerini ayıran dizeyi tanımlar.|
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|12 saatlik bir saatte gece yarısı ile öğleden önce arasındaki saatleri belirten dizeyi tanımlar.|
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|12 saatlik bir saatte öğleden önce ile gece yarısı arasındaki saatleri belirten dizeyi tanımlar.|
+
+Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "T" biçim tanımlayıcısını kullanır.
+
+[!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+[!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]
+
+[Tabloya dön](#table)
+
+## <a name="partial-date-formats"></a>Kısmi tarih biçimleri
+
+Bu grup aşağıdaki biçimleri içerir:
+
+- [Ay ("ı", "d") Biçim belirleyicisi](#the-month-m-m-format-specifier)
+- [Yıl ay ("Y", "y") Biçim belirleyicisi](#the-year-month-y-y-format-specifier)
+
+<a name="MonthDay"></a>
+
+### <a name="the-month-m-m-format-specifier"></a>Ay ("ı", "d") Biçim belirleyicisi
+
+"D" veya "d" standart biçim belirticisi geçerli özellik tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> . Örneğin, sabit kültür için özel biçim dizesi "MMMM dd" değeridir.
+
+Aşağıdaki tablo <xref:System.Globalization.DateTimeFormatInfo> döndürülen dizenin biçimlendirilmesini denetleyen nesne özelliklerini listeler.
+
+|Özellik|Açıklama|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Sonuç dizesinin genel biçimini tanımlar.|
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Sonuç dizesinde görünebilen yerelleştirilmiş ay adlarını tanımlar.|
+
+Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "m" biçim tanımlayıcısını kullanır.
+
+[!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+[!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]
+
+[Tabloya dön](#table)
+
 <a name="YearMonth"></a>
 
-## <a name="the-year-month-y-y-format-specifier"></a>Yıl Ay ("Y", "y") Biçim Tanımlayıcısı
+### <a name="the-year-month-y-y-format-specifier"></a>Yıl ay ("Y", "y") Biçim belirleyicisi
 
 "Y" veya "y" standart biçim Belirleyicisi, <xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A?displayProperty=nameWithType> belirtilen bir kültürün özelliği tarafından tanımlanan özel bir tarih ve saat biçim dizesini temsil eder. Örneğin, sabit kültür için özel biçim dizesi "yyyy MMMM" değeridir.
 
@@ -435,15 +470,13 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "y" biçim
 
 <a name="Notes"></a>
 
-## <a name="notes"></a>Notlar
+## <a name="control-panel-settings"></a>Denetim Masası Ayarları
 
-### <a name="control-panel-settings"></a>Denetim Masası Ayarları
-
-Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesindeki ayarlar, bir biçimlendirme işlemi tarafından üretilen sonuç dizesini etkiler. Bu ayarlar <xref:System.Globalization.DateTimeFormatInfo> , biçimlendirmeyi yönetmek için kullanılan değerleri sağlayan geçerli iş parçacığı kültürüyle ilişkili nesneyi başlatmak için kullanılır. Farklı ayarları kullanan bilgisayarlar farklı sonuç dizeleri üretir.
+Windows 'da, Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesindeki ayarlar, bir biçimlendirme işlemi tarafından üretilen sonuç dizesini etkiler. Bu ayarlar <xref:System.Globalization.DateTimeFormatInfo> , biçimlendirmeyi yönetmek için kullanılan değerleri sağlayan geçerli iş parçacığı kültürüyle ilişkili nesneyi başlatmak için kullanılır. Farklı ayarları kullanan bilgisayarlar farklı sonuç dizeleri üretir.
 
 Ayrıca, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> <xref:System.Globalization.CultureInfo> geçerli sistem kültürüyle aynı kültürü temsil eden yeni bir nesne oluşturmak için oluşturucuyu kullanırsanız, Denetim Masası 'ndaki **bölge ve dil seçenekleri** öğesi tarafından belirlenen tüm özelleştirmeler yeni <xref:System.Globalization.CultureInfo> nesneye uygulanır. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29>Oluşturucuyu, <xref:System.Globalization.CultureInfo> sistemin özelleştirmelerini yansıtmayan bir nesne oluşturmak için kullanabilirsiniz.
 
-### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo Özellikleri
+## <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo özellikleri
 
 Biçimlendirme, geçerli <xref:System.Globalization.DateTimeFormatInfo> iş parçacığı kültürü tarafından örtük olarak veya <xref:System.IFormatProvider> Biçimlendirmeyi çağıran yöntemin parametresi tarafından açıkça sunulan geçerli nesnenin özelliklerinden etkilenir. Parametresi için <xref:System.IFormatProvider> , uygulamanız bir kültürü temsil eden bir <xref:System.Globalization.CultureInfo> nesne veya <xref:System.Globalization.DateTimeFormatInfo> belirli bir kültürün tarih ve saat biçimlendirme kurallarını temsil eden bir nesnesi belirtmelidir. Standart Tarih ve saat biçimi belirticileri çoğu, geçerli nesnenin özellikleri tarafından tanımlanan biçimlendirme desenleri için diğer adlardır <xref:System.Globalization.DateTimeFormatInfo> . Uygulamanız, ilgili özelliğin tarih ve saat biçimi düzenlerini değiştirerek bazı standart tarih ve saat biçimi belirticileri tarafından üretilen sonucu değiştirebilir <xref:System.Globalization.DateTimeFormatInfo> .
 

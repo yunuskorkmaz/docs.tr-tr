@@ -4,12 +4,12 @@ description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kayna
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223591"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329800"
 ---
 # <a name="introduction-to-net"></a>.NET’e giriş
 
@@ -23,7 +23,7 @@ ms.locfileid: "92223591"
   * [Windows WPF](/dotnet/desktop/wpf/)
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [Evrensel Windows Platformu (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
-* [Oynayabilir](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
+* [Oynayabilir](https://dotnet.microsoft.com/apps/games)
 * [Nesnelerin İnterneti (IoT)](https://dotnet.microsoft.com/apps/iot)
 * [Makine öğrenmesi](../machine-learning/index.yml)
 * [Konsol uygulamaları](tutorials/with-visual-studio-code.md)
@@ -101,7 +101,7 @@ Daha fazla bilgi için bkz. [.NET Core ve .NET 5 Için yayınlar ve destek](rele
 * [Genel türler](../standard/generics.md)
 * [Temsilciler](../standard/delegates-lambdas.md)
 * [Lambdalar](../standard/delegates-lambdas.md)
-* [Olaylar](../standard/events/index.md)
+* [Ekinlikler](../standard/events/index.md)
 * [Özel durumlar](../standard/exceptions/index.md)
 * [Öznitelikler](../standard/attributes/index.md)
 * [Zaman uyumsuz kod](../standard/async.md)
@@ -132,7 +132,7 @@ Daha fazla bilgi için bkz. [.NET Core ve .NET 5 Için yayınlar ve destek](rele
 
 [.NET SDK](sdk.md) , .NET uygulamaları geliştirmeye ve çalıştırmaya yönelik kitaplıkların ve araçların bir kümesidir.
 
-.NET 'i [indirdiğinizde](https://dotnet.microsoft.com/download/dotnet-core/), SDK 'yı veya .NET çalışma zamanı veya ASP.NET Core çalışma zamanı gibi bir *çalışma zamanını*seçebilirsiniz. .NET uygulamalarını çalıştırmaya hazırlamak istediğiniz bir makineye çalışma zamanı yükler. Geliştirme için kullanmak istediğiniz bir makineye SDK 'Yı yükler. SDK 'Yı indirdiğinizde, çalışma zamanlarını otomatik olarak alırsınız.
+.NET 'i [indirdiğinizde](https://dotnet.microsoft.com/download/dotnet-core/), SDK 'yı veya .NET çalışma zamanı veya ASP.NET Core çalışma zamanı gibi bir *çalışma zamanını* seçebilirsiniz. .NET uygulamalarını çalıştırmaya hazırlamak istediğiniz bir makineye çalışma zamanı yükler. Geliştirme için kullanmak istediğiniz bir makineye SDK 'Yı yükler. SDK 'Yı indirdiğinizde, çalışma zamanlarını otomatik olarak alırsınız.
 
 SDK indirmesi aşağıdaki bileşenleri içerir:
 
@@ -153,7 +153,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 ### <a name="project-system-and-msbuild"></a>Proje sistemi ve MSBuild
 
-Bir .NET uygulaması, [MSBuild](/visualstudio/msbuild/msbuild)kullanılarak kaynak koddan oluşturulur. Proje dosyası (*. csproj*, *. fsproj*veya *. vbproj*), Kodu derleyip yayımlamadan sorumlu [hedefleri](/visualstudio/msbuild/msbuild-targets) ve ilişkili [görevleri](/visualstudio/msbuild/msbuild-tasks) belirtir. Standart hedef ve görev koleksiyonlarına başvuran SDK tanımlayıcıları vardır. Bu tanımlayıcıların kullanımı, proje dosyalarını küçük ve ile birlikte çalışmaya devam etmenize yardımcı olur. Örneğin, bir konsol uygulaması için bir proje dosyası aşağıda verilmiştir:
+Bir .NET uygulaması, [MSBuild](/visualstudio/msbuild/msbuild)kullanılarak kaynak koddan oluşturulur. Proje dosyası ( *. csproj* , *. fsproj* veya *. vbproj* ), Kodu derleyip yayımlamadan sorumlu [hedefleri](/visualstudio/msbuild/msbuild-targets) ve ilişkili [görevleri](/visualstudio/msbuild/msbuild-tasks) belirtir. Standart hedef ve görev koleksiyonlarına başvuran SDK tanımlayıcıları vardır. Bu tanımlayıcıların kullanımı, proje dosyalarını küçük ve ile birlikte çalışmaya devam etmenize yardımcı olur. Örneğin, bir konsol uygulaması için bir proje dosyası aşağıda verilmiştir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -221,7 +221,7 @@ C# gibi daha üst düzey .NET dilleri, ara dil (IL) olarak adlandırılan donan�
 
 Uygulamanın yürütülmesi sırasında JıT derlemesi gerçekleşdiğinden, derleme süresi çalışma zamanının bir parçasıdır. Bu nedenle, JıT derleyicileri, kodu en iyi duruma getirmeye harcanan süreyi, sonuçta elde edilen kodun üretediği tasarruflarla dengelemeye yönelik Ancak, bir JıT derleyicisi gerçek donanımı bilir ve geliştiricilerin farklı platformlar için farklı uygulamalar sunmalarını ücretsiz olarak kullanabilir.
 
-.NET JıT derleyicisi *katmanlı derleme*yapabilir, bu da çalışma zamanında bireysel yöntemleri yeniden derleyebileceği anlamına gelir. Bu özellik, sık kullanılan metotlar için kodun yüksek düzeyde ayarlanmış bir sürümünü üretirken hızlı bir şekilde derlenmenize olanak tanır.
+.NET JıT derleyicisi *katmanlı derleme* yapabilir, bu da çalışma zamanında bireysel yöntemleri yeniden derleyebileceği anlamına gelir. Bu özellik, sık kullanılan metotlar için kodun yüksek düzeyde ayarlanmış bir sürümünü üretirken hızlı bir şekilde derlenmenize olanak tanır.
 
 Daha fazla bilgi için bkz. [yönetilen yürütme işlemi](../standard/managed-execution-process.md) ve [katmanlı derleme](whats-new/dotnet-core-3-0.md#tiered-compilation).
 
@@ -236,13 +236,13 @@ Daha fazla bilgi için bkz. [yönetilen yürütme işlemi](../standard/managed-e
 
 *Çöp toplayıcı* (GC), uygulamalar için bellek ayırmayı ve serbest bırakma işlemini yönetir. Kodunuz yeni bir nesne oluşturduğunda, CLR [yönetilen yığından](../standard/garbage-collection/fundamentals.md#the-managed-heap)nesne için bellek ayırır. Yönetilen yığında kullanılabilir adres alanı bulunduğu sürece, çalışma zamanı yeni nesneler için bellek ayırmaya devam eder. Yeterli boş adres alanı kaldığı zaman, GC tarafından artık uygulama tarafından kullanılmayan yönetilen yığındaki nesneleri denetler. Daha sonra bu belleği geri kazanır.
 
-GC, *bellek güvenliğini*sağlamaya YARDıMCı olan CLR hizmetlerinden biridir. Bir program, yalnızca ayrılmış belleğe eriştiğinde bellek güvende olur. Örneğin, çalışma zamanı, bir uygulamanın ayrılmamış belleğe bir dizi sınırlarının ötesinde erişmesini sağlar.
+GC, *bellek güvenliğini* sağlamaya YARDıMCı olan CLR hizmetlerinden biridir. Bir program, yalnızca ayrılmış belleğe eriştiğinde bellek güvende olur. Örneğin, çalışma zamanı, bir uygulamanın ayrılmamış belleğe bir dizi sınırlarının ötesinde erişmesini sağlar.
 
 Daha fazla bilgi için bkz. [Otomatik bellek yönetimi](../standard/automatic-memory-management.md) ve [çöp toplama temelleri](../standard/garbage-collection/fundamentals.md).
 
 ### <a name="working-with-unmanaged-resources"></a>Yönetilmeyen kaynaklarla çalışma
 
-Bazen kodun *yönetilmeyen kaynaklara*başvurması gerekir. Yönetilmeyen kaynaklar, .NET çalışma zamanı tarafından otomatik olarak tutulmayan kaynaklardır. Örneğin, bir dosya tanıtıcısı yönetilmeyen bir kaynaktır. Bir <xref:System.IO.FileStream> nesne yönetilen bir nesnedir, ancak yönetilmeyen bir dosya tanıtıcısına başvurur. Kullanarak işiniz bittiğinde <xref:System.IO.FileStream> dosya tanıtıcısını açıkça serbest bırakmanız gerekir.
+Bazen kodun *yönetilmeyen kaynaklara* başvurması gerekir. Yönetilmeyen kaynaklar, .NET çalışma zamanı tarafından otomatik olarak tutulmayan kaynaklardır. Örneğin, bir dosya tanıtıcısı yönetilmeyen bir kaynaktır. Bir <xref:System.IO.FileStream> nesne yönetilen bir nesnedir, ancak yönetilmeyen bir dosya tanıtıcısına başvurur. Kullanarak işiniz bittiğinde <xref:System.IO.FileStream> dosya tanıtıcısını açıkça serbest bırakmanız gerekir.
 
 .NET ' te, yönetilmeyen kaynaklara başvuran nesneler arabirimini uygular <xref:System.IDisposable> . Nesnesini kullanarak işiniz bittiğinde, <xref:System.IDisposable.Dispose> yönetilmeyen kaynakları serbest bırakmaktan sorumlu olan nesnenin yöntemini çağıracağız. .NET dilleri, `using` yöntemin çağırılmasını sağlayan kullanışlı bir ifade ([C#](../csharp/language-reference/keywords/using.md), [F #](../fsharp/language-reference/resource-management-the-use-keyword.md), [vb](../visual-basic/language-reference/statements/using-statement.md)) sağlar `Dispose` .
 
@@ -254,7 +254,7 @@ Daha fazla bilgi için bkz. [yönetilmeyen kaynakları temizleme](../standard/ga
 
 * Bir uygulamayı *kendi içinde* yayımlamak, .net [çalışma zamanı](#sdk-and-runtimes) ve [kitaplıklarını](#runtime-libraries)ve uygulamayı ve onun bağımlılıklarını içeren bir yürütülebilir dosya oluşturur. Uygulamanın kullanıcıları bu uygulamayı .NET çalışma zamanı yüklü olmayan bir makinede çalıştırabilir. Kendi içinde bulunan uygulamalar platforma özgüdür ve isteğe bağlı olarak bir [AOT derlemesi](#aot-compiler)formu kullanılarak yayımlanabilir.
 
-* Bir uygulamayı *Framework 'e bağımlı* olarak yayımlamak, yalnızca uygulamanın kendisini ve onun bağımlılıklarını içeren bir yürütülebilir dosya ve ikili dosyalar (*. dll* dosyaları) oluşturur. Uygulamanın kullanıcılarının .NET [çalışma zamanını](#sdk-and-runtimes)ayrı olarak yüklemesi gerekir. Yürütülebilir dosya platforma özgüdür, ancak Framework 'e bağımlı uygulamaların *. dll* dosyaları platformlar arası bir platformdur.
+* Bir uygulamayı *Framework 'e bağımlı* olarak yayımlamak, yalnızca uygulamanın kendisini ve onun bağımlılıklarını içeren bir yürütülebilir dosya ve ikili dosyalar ( *. dll* dosyaları) oluşturur. Uygulamanın kullanıcılarının .NET [çalışma zamanını](#sdk-and-runtimes)ayrı olarak yüklemesi gerekir. Yürütülebilir dosya platforma özgüdür, ancak Framework 'e bağımlı uygulamaların *. dll* dosyaları platformlar arası bir platformdur.
 
   Çalışma zamanının farklı sürümlerini hedefleyen çerçeveye bağımlı uygulamalar çalıştırmak için çalışma zamanının birden çok sürümünü yan yana yükleyebilirsiniz. Daha fazla bilgi için bkz. [hedef çerçeveler](../standard/frameworks.md).
 
@@ -336,7 +336,7 @@ Aynı sözcük farklı bağlamlarda farklı şekillerde kullanıldığından, .N
   | [.Net indirme sayfasında .NET çalışma zamanı](https://dotnet.microsoft.com/download/dotnet-core) | Birlikte, [çerçeveye bağımlı](#deployment-models) uygulamaları çalıştırmaya yönelik destek sağlayan [clr](#clr) ve [çalışma zamanı kitaplıkları](#runtime-libraries). Bu sayfada, ASP.NET Core Server uygulamaları ve Windows Masaüstü uygulamaları için çalışma zamanı seçenekleri de sunulur. |
   | [Çalışma zamanı tanımlayıcısı (RID)](rid-catalog.md) | .NET uygulamasının üzerinde çalıştığı işletim sistemi platformu ve CPU mimarisi. Örneğin: Windows x64, Linux x64. |
 
-* **çerçeve**
+* **çerçevenin**
 
   |Bağlam  | "Framework" anlamı |
   |---------|---------------------|

@@ -3,12 +3,12 @@ title: .NET Core ve .NET 5 + üzerinde desteklenmeyen API 'Ler
 titleSuffix: ''
 description: .NET API 'Lerin hangi .NET Core ve .NET 5,0 ve sonraki sürümlerinde her zaman bir istisna sağladığını öğrenin.
 ms.date: 10/13/2020
-ms.openlocfilehash: 0164ebff51de82d548a02f9fde754c1052a9c2b5
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 51d73557a48910d9cb1c4d3cdced34dfe4d849d8
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159345"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329787"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>.NET Core ve .NET 5 + ' da her zaman özel durum oluşturan API 'Ler
 
@@ -58,7 +58,7 @@ Bu makale, etkilenen API 'Leri ad alanına göre düzenler.
 | - | - |
 | <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType> (tüm Üyeler) | Tümü |
 
-## <a name="systemconsole"></a>System. Console
+## <a name="systemconsole"></a>System.Console
 
 | Üye | Oluşturan platformlar |
 | - | - |
@@ -223,7 +223,7 @@ Bu makale, etkilenen API 'Leri ad alanına göre düzenler.
 
 | Üye | Oluşturan platformlar |
 | - | - |
-| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor> | Tümü |
+| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Tümü |
 | <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo)> | Tümü |
 | <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |

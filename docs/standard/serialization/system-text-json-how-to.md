@@ -1,21 +1,22 @@
 ---
 title: C#-.NET kullanarak JSON serileştirmek ve serisini kaldırma
 description: System.Text.Json.Net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı öğrenin. Örnek kod içerir.
-ms.date: 10/09/2020
+ms.date: 11/05/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 0fda248b7d2e5a7cfa748447d0265565cb160b7e
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: 2c1358b2b63a92cb50b853043adbfaae23ccd897
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997774"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329878"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -38,7 +39,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 ```
 
-<xref:System.Runtime.Serialization>Ad alanındaki öznitelikler Şu anda sürümünde desteklenmemektedir `System.Text.Json` .
+<xref:System.Runtime.Serialization>Ad alanındaki öznitelikler ' de desteklenmez `System.Text.Json` .
 
 ## <a name="how-to-write-net-objects-to-json-serialize"></a>.NET nesnelerini JSON 'a yazma (serileştirme)
 
@@ -115,15 +116,44 @@ UTF-8 ' e seri hale getirmek için <xref:System.Text.Json.JsonSerializer.Seriali
 UTF-8 ' i seri hale getirmek, dize tabanlı yöntemler kullanmaktan daha hızlı% 5-10 daha hızlıdır. Aradaki fark, baytların (UTF-8 olarak) dizelere dönüştürülmesi gerekmez (UTF-16).
 
 ## <a name="serialization-behavior"></a>Serileştirme davranışı
+::: zone pivot="dotnet-5-0"
 
-* Varsayılan olarak, tüm ortak özellikler serileştirilir. [Dışlanacak özellikleri belirtebilirsiniz](#exclude-properties-from-serialization).
+* Varsayılan olarak, tüm ortak özellikler serileştirilir. [Yoksayılacak özellikleri belirtebilirsiniz](#ignore-properties).
+* [Varsayılan KODLAYıCı](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default) ASCII olmayan KARAKTERLERI, ASCII ARALıĞı içindeki HTML duyarlı KARAKTERLERI ve [RFC 8259 JSON](https://tools.ietf.org/html/rfc8259#section-7)belirtimine göre kaçılması gereken karakterleri çıkar.
+* Varsayılan olarak JSON, Mini olarak belirlenir. JSON 'ı [düzgün](#serialize-to-formatted-json)bir şekilde yazdırabilirsiniz.
+* Varsayılan olarak, JSON adlarının büyük küçük harfleri .NET adlarıyla eşleşir. [JSON adının büyük küçük harflerini özelleştirebilirsiniz](#customize-json-names-and-values).
+* Varsayılan olarak, döngüsel başvurular algılanır ve özel durumlar oluşur. [Başvuruları koruyabilir ve döngüsel başvuruları işleyebilirsiniz](#preserve-references-and-handle-circular-references).
+* Varsayılan olarak, [alanlar](../../csharp/programming-guide/classes-and-structs/fields.md) yok sayılır. [Alanları dahil](#include-fields)edebilirsiniz.
+
+System.Text.JsonASP.NET Core uygulamasında dolaylı olarak kullandığınızda, bazı varsayılan davranışlar farklıdır. Daha fazla bilgi için bkz. [JsonSerializerOptions Için Web Varsayılanları](#web-defaults-for-jsonserializeroptions).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* Varsayılan olarak, tüm ortak özellikler serileştirilir. [Yoksayılacak özellikleri belirtebilirsiniz](#ignore-properties).
 * [Varsayılan KODLAYıCı](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default) ASCII olmayan KARAKTERLERI, ASCII ARALıĞı içindeki HTML duyarlı KARAKTERLERI ve [RFC 8259 JSON](https://tools.ietf.org/html/rfc8259#section-7)belirtimine göre kaçılması gereken karakterleri çıkar.
 * Varsayılan olarak JSON, Mini olarak belirlenir. JSON 'ı [düzgün](#serialize-to-formatted-json)bir şekilde yazdırabilirsiniz.
 * Varsayılan olarak, JSON adlarının büyük küçük harfleri .NET adlarıyla eşleşir. [JSON adının büyük küçük harflerini özelleştirebilirsiniz](#customize-json-names-and-values).
 * Döngüsel başvurular algılandı ve özel durumlar oluşturuldu.
-* Şu anda, [alanlar](../../csharp/programming-guide/classes-and-structs/fields.md) hariç tutulur.
+* [Alanlar](../../csharp/programming-guide/classes-and-structs/fields.md) yok sayılır.
+::: zone-end
 
 Desteklenen türler şunlardır:
+::: zone pivot="dotnet-5-0"
+
+* Sayısal türler, dizeler ve Boole gibi JavaScript temel elemanlarına eşleyen .NET temel türleri.
+* Kullanıcı tanımlı [düz eskı clr nesneleri (POCOs)](https://en.wikipedia.org/wiki/Plain_old_CLR_object).
+* Tek boyutlu ve pürüzlü Diziler ( `T[][]` ).
+* Aşağıdaki ad alanlarından gelen koleksiyonlar ve sözlükler.
+  * <xref:System.Collections>
+  * <xref:System.Collections.Generic>
+  * <xref:System.Collections.Immutable>
+  * <xref:System.Collections.Concurrent>
+  * <xref:System.Collections.Specialized>
+  * <xref:System.Collections.ObjectModel>
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
 
 * Sayısal türler, dizeler ve Boole gibi JavaScript temel elemanlarına eşleyen .NET temel türleri.
 * Kullanıcı tanımlı [düz eskı clr nesneleri (POCOs)](https://en.wikipedia.org/wiki/Plain_old_CLR_object).
@@ -133,6 +163,10 @@ Desteklenen türler şunlardır:
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
+  * <xref:System.Collections.Concurrent>
+  * <xref:System.Collections.Specialized>
+  * <xref:System.Collections.ObjectModel>
+::: zone-end
 
 Ek türleri işlemek veya yerleşik dönüştürücüler tarafından desteklenmeyen işlevler sağlamak için [özel dönüştürücüler uygulayabilirsiniz](system-text-json-converters-how-to.md) .
 
@@ -164,16 +198,33 @@ UTF-8 ' den seri durumdan çıkarmak için, <xref:System.Text.Json.JsonSerialize
 
 JSON serisi kaldırılırken aşağıdaki davranışlar geçerlidir:
 
+::: zone pivot="dotnet-5-0"
+
 * Özellik adı eşleştirme, varsayılan olarak büyük/küçük harfe duyarlıdır. [Büyük/küçük harf duyarlı belirtebilirsiniz](#case-insensitive-property-matching).
 * JSON salt okunurdur özelliği için bir değer içeriyorsa, değer yok sayılır ve hiçbir özel durum oluşturulmaz.
-* Seri durumdan çıkarma için oluşturucular:
-  - .NET Core 3,0 ve 3,1 ' de, genel, iç veya özel olabilen parametresiz bir Oluşturucu, seri durumdan çıkarma için kullanılır.
-  - .NET 5,0 ve üzeri sürümlerde, ortak olmayan oluşturucular serileştirici tarafından yok sayılır. Ancak, parametresiz bir Oluşturucu kullanılamazsa parametreli oluşturucular kullanılabilir.
+* Ortak olmayan oluşturucular seri hale getirici tarafından yok sayılır.
+* Sabit nesneler veya salt okunurdur özellikleri seri durumundan çıkarma desteklenir. Bkz. [değişmez türler ve kayıtlar](#immutable-types-and-records).
+* Varsayılan olarak, numaralandırmalar sayı olarak desteklenir. [Enum adlarını dizeler olarak seri hale](#enums-as-strings)getirebilirsiniz.
+* Varsayılan olarak, alanlar yok sayılır. [Alanları dahil](#include-fields)edebilirsiniz.
+* Varsayılan olarak, JSON 'daki açıklama veya sondaki virgüller özel durum oluşturur. [Yorumlara ve sondaki virgüllerin bulunmasına izin](#allow-comments-and-trailing-commas)verebilirsiniz.
+* [Varsayılan en yüksek derinlik](xref:System.Text.Json.JsonReaderOptions.MaxDepth) 64 ' dir.
+
+System.Text.JsonASP.NET Core uygulamasında dolaylı olarak kullandığınızda, bazı varsayılan davranışlar farklıdır. Daha fazla bilgi için bkz. [JsonSerializerOptions Için Web Varsayılanları](#web-defaults-for-jsonserializeroptions).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* Özellik adı eşleştirme, varsayılan olarak büyük/küçük harfe duyarlıdır. [Büyük/küçük harf duyarlı belirtebilirsiniz](#case-insensitive-property-matching). ASP.NET Core uygulamalar [Varsayılan olarak büyük/küçük harf duyarlı belirtir](#web-defaults-for-jsonserializeroptions).
+* JSON salt okunurdur özelliği için bir değer içeriyorsa, değer yok sayılır ve hiçbir özel durum oluşturulmaz.
+* Seri durumdan çıkarma için genel, iç veya özel olabilen parametresiz bir Oluşturucu kullanılır.
 * Sabit nesneler veya salt okunurdur özellikleri seri durumundan çıkarma desteklenmez.
 * Varsayılan olarak, numaralandırmalar sayı olarak desteklenir. [Enum adlarını dizeler olarak seri hale](#enums-as-strings)getirebilirsiniz.
 * Alanlar desteklenmiyor.
 * Varsayılan olarak, JSON 'daki açıklama veya sondaki virgüller özel durum oluşturur. [Yorumlara ve sondaki virgüllerin bulunmasına izin](#allow-comments-and-trailing-commas)verebilirsiniz.
 * [Varsayılan en yüksek derinlik](xref:System.Text.Json.JsonReaderOptions.MaxDepth) 64 ' dir.
+
+System.Text.JsonASP.NET Core uygulamasında dolaylı olarak kullandığınızda, bazı varsayılan davranışlar farklıdır. Daha fazla bilgi için bkz. [JsonSerializerOptions Için Web Varsayılanları](#web-defaults-for-jsonserializeroptions).
+::: zone-end
 
 Yerleşik dönüştürücüler tarafından desteklenmeyen işlevselliği sağlamak için [özel dönüştürücüler uygulayabilirsiniz](system-text-json-converters-how-to.md) .
 
@@ -194,6 +245,20 @@ Aşağıda, seri hale getirilebilir ve düzgün şekilde yazdırılan JSON çık
   "Summary": "Hot"
 }
 ```
+
+## <a name="include-fields"></a>Dahil etme alanları
+
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json.JsonSerializerOptions.IncludeFields?displayProperty=nameWithType>Aşağıdaki örnekte gösterildiği gibi, seri hale getirilirken veya seri durumdan çıkarılırken alanları dahil etmek için genel ayarını veya [[jsonınclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) özniteliğini kullanın:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/Fields.cs" highlight="15,17,19,31":::
+
+Salt okuma alanlarını yok saymak için <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields%2A?displayProperty=nameWithType> genel ayarını kullanın.
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+Alanlar System.Text.Json .NET Core 3,1 ' de desteklenmez. [Özel dönüştürücüler](system-text-json-converters-how-to.md) , bu işlevselliği sağlayabilir.
+::: zone-end
 
 ## <a name="customize-json-names-and-values"></a>JSON adlarını ve değerlerini özelleştirme
 
@@ -339,15 +404,26 @@ Aşağıdaki örnekte gösterildiği gibi, sabit listesi dize adları da seri du
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripEnumAsString.cs?name=SnippetDeserialize)]
 
-## <a name="exclude-properties-from-serialization"></a>Özellikleri serileştirme dışında tut
+## <a name="ignore-properties"></a>Özellikleri yoksay
 
-Varsayılan olarak, tüm ortak özellikler serileştirilir. Bir kısmının JSON çıktısında görünmesini istemiyorsanız, birkaç seçeneğiniz vardır. Bu bölümde nasıl hariç tutulacak açıklanmaktadır:
+Varsayılan olarak, tüm ortak özellikler serileştirilir. Bir kısmının JSON çıktısında görünmesini istemiyorsanız, birkaç seçeneğiniz vardır. Bu bölümde nasıl yoksayılacağını açıklanmaktadır:
 
-* [Bireysel Özellikler](#exclude-individual-properties)
-* [Tüm salt okunurdur özellikleri](#exclude-all-read-only-properties)
-* [Tüm null değerli özellikler](#exclude-all-null-value-properties)
+::: zone pivot="dotnet-5-0"
 
-### <a name="exclude-individual-properties"></a>Bireysel özellikleri Dışla
+* [Bireysel Özellikler](#ignore-individual-properties)
+* [Tüm salt okunurdur özellikleri](#ignore-all-read-only-properties)
+* [Tüm null değerli özellikler](#ignore-all-null-value-properties)
+* [Tüm varsayılan değer özellikleri](#ignore-all-default-value-properties)
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* [Bireysel Özellikler](#ignore-individual-properties)
+* [Tüm salt okunurdur özellikleri](#ignore-all-read-only-properties)
+* [Tüm null değerli özellikler](#ignore-all-null-value-properties)
+::: zone-end
+
+### <a name="ignore-individual-properties"></a>Tek tek özellikleri yoksay
 
 Ayrı özellikleri yoksaymak için [[Jsonıgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) özniteliğini kullanın.
 
@@ -362,9 +438,22 @@ Seri hale getirmek ve JSON çıktısı için örnek bir tür aşağıda verilmi�
 }
 ```
 
-### <a name="exclude-all-read-only-properties"></a>Tüm salt okuma özelliklerini Dışla
+::: zone pivot="dotnet-5-0"
+[[Jsonıgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) özniteliğinin özelliğini ayarlayarak koşullu dışlama belirtebilirsiniz `Condition` . <xref:System.Text.Json.Serialization.JsonIgnoreCondition>Sabit listesi aşağıdaki seçenekleri sağlar:
 
-Bir özellik, genel bir alıcı içeriyorsa ancak genel bir ayarlayıcı içermiyorsa salt okunurdur. Tüm salt okunurdur özelliklerini hariç tutmak için, <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> `true` Aşağıdaki örnekte gösterildiği gibi öğesini olarak ayarlayın:
+* `Always` -Özellik her zaman yok sayılır. Hayır `Condition` belirtilmişse, bu seçenek kabul edilir.
+* `Never` -Özelliği `DefaultIgnoreCondition` ,, `IgnoreReadOnlyProperties` ve genel ayarlarından bağımsız olarak her zaman serileştirilmiş ve seri durumdan çıkarılmış olur `IgnoreReadOnlyFields` .
+* `WhenWritingDefault` -Bir başvuru türü veya değer türü ise, bu özellik serileştirme üzerinde yok sayılır `null` `default` .
+* `WhenWritingNull` -Bir başvuru türü ise, bu özellik serileştirme üzerinde yok sayılır `null` .
+
+Aşağıdaki örnek, [[Jsonıgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) özniteliğinin özelliğinin kullanımını gösterir `Condition` :
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/JsonIgnoreAttributeExample.cs" highlight="10,13,16":::
+::: zone-end
+
+### <a name="ignore-all-read-only-properties"></a>Tüm salt okunurdur özellikleri yoksay
+
+Bir özellik, genel bir alıcı içeriyorsa ancak genel bir ayarlayıcı içermiyorsa salt okunurdur. Serileştirilirken tüm salt okunurdur özellikleri yok saymak için <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> `true` Aşağıdaki örnekte gösterildiği gibi öğesini olarak ayarlayın:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeExcludeReadOnlyProperties.cs?name=SnippetSerialize)]
 
@@ -382,9 +471,21 @@ Seri hale getirmek ve JSON çıktısı için örnek bir tür aşağıda verilmi�
 
 Bu seçenek yalnızca serileştirme için geçerlidir. Seri durumdan çıkarma sırasında salt okuma özellikleri varsayılan olarak yoksayılır.
 
-### <a name="exclude-all-null-value-properties"></a>Tüm null değer özelliklerini Dışla
+::: zone pivot="dotnet-5-0"
+Bu seçenek yalnızca özellikler için geçerlidir. [Alanları serileştirilirken](#include-fields)salt okunurdur alanları yok saymak için <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields%2A?displayProperty=nameWithType> genel ayarını kullanın.
+::: zone-end
 
-Tüm null değer özelliklerini dışlamak için, <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> `true` Aşağıdaki örnekte gösterildiği gibi özelliğini olarak ayarlayın:
+### <a name="ignore-all-null-value-properties"></a>Tüm null değer özelliklerini yoksay
+
+::: zone pivot="dotnet-5-0"
+Tüm null değer özelliklerini yok saymak için, <xref:System.Text.Json.JsonSerializerOptions.DefaultIgnoreCondition> <xref:System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull> Aşağıdaki örnekte gösterildiği gibi özelliğini olarak ayarlayın:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/IgnoreNullOnSerialize.cs" highlight="28":::
+
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+Serileştirilirken tüm null değer özelliklerini yok saymak için, <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> `true` Aşağıdaki örnekte gösterildiği gibi özelliğini olarak ayarlayın:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeExcludeNullValueProperties.cs?name=SnippetSerialize)]
 
@@ -403,7 +504,21 @@ Seri hale getirmek ve JSON çıktısı için örnek bir nesne aşağıda verilmi
 }
 ```
 
-Bu ayar serileştirme ve seri durumdan çıkarma için geçerlidir. Seri durumdan çıkarma üzerindeki etkisi hakkında daha fazla bilgi için bkz. [serisi kaldırılırken null değeri yoksay](#ignore-null-when-deserializing).
+::: zone-end
+
+### <a name="ignore-all-default-value-properties"></a>Tüm varsayılan değer özelliklerini yoksay
+
+::: zone pivot="dotnet-5-0"
+Değer türü özelliklerindeki varsayılan değerlerin serileştirmesini engellemek için, <xref:System.Text.Json.JsonSerializerOptions.DefaultIgnoreCondition> <xref:System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault> Aşağıdaki örnekte gösterildiği gibi özelliğini olarak ayarlayın:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/IgnoreValueDefaultOnSerialize.cs" highlight="28":::
+::: zone-end
+
+`WhenWritingDefault`Ayar aynı zamanda null değer başvuru türü özelliklerinin serileştirmesini de önler.
+
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3,1 ' deki değer türü varsayılanlarına sahip özelliklerin serileştirmesini önleyen yerleşik bir yol yoktur System.Text.Json .
+::: zone-end
 
 ## <a name="customize-character-encoding"></a>Karakter kodlamasını özelleştirme
 
@@ -467,7 +582,7 @@ Yukarıdaki kod tarafından üretilen JSON örneği aşağıda verilmiştir:
 > Varsayılan kodlayıcıyla karşılaştırıldığında kodlayıcı, `UnsafeRelaxedJsonEscaping` karakterlerin kaçışsız geçmesine izin verme konusunda daha fazla izne sahiptir:
 >
 > * ,, Ve gibi HTML 'ye duyarlı karakterleri atmaz `<` `>` `&` `'` .
-> * Bu, XSS veya bilgi açıklama saldırılarına karşı ek derinlemesine savunma korumaları sunmaz, örneğin, *karakter*kümesinde istemci ve sunucu disagreeing neden olabilir.
+> * Bu, XSS veya bilgi açıklama saldırılarına karşı ek derinlemesine savunma korumaları sunmaz, örneğin, *karakter* kümesinde istemci ve sunucu disagreeing neden olabilir.
 >
 > Güvenli olmayan kodlayıcıyı yalnızca istemcinin, elde edilen yükü UTF-8 ile kodlanmış JSON olarak yorumladığı bilindiğinde kullanın. Örneğin, sunucu yanıt üst bilgisini gönderiyorsa onu kullanabilirsiniz `Content-Type: application/json; charset=utf-8` . Ham `UnsafeRelaxedJsonEscaping` çıkışın BIR HTML sayfasına veya bir öğeye yayılmasın `<script>` .
 
@@ -578,7 +693,7 @@ Aşağıdaki örnek, önceki koddan elde edilen JSON 'u göstermektedir:
 }
 ```
 
-Polimorfik **serileştirme**hakkında daha fazla bilgi için ve **serisini kaldırma**hakkında bilgi için, bkz. ' [den Newtonsoft.Json System.Text.Json ' ye geçiş ](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
+Polimorfik **serileştirme** hakkında daha fazla bilgi için ve **serisini kaldırma** hakkında bilgi için, bkz. ' [den Newtonsoft.Json System.Text.Json ' ye geçiş](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
 
 ## <a name="allow-comments-and-trailing-commas"></a>Yorumlara ve sondaki virgülleri izin ver
 
@@ -640,7 +755,7 @@ Ve seri durumdan çıkarılacak JSON şu şekilde yapılır:
 }
 ```
 
-Gösterilen türde gösterilen JSON serisini kaldırırsanız, `DatesAvailable` ve `SummaryWords` özellikleri nonereye gidebileceği ve kaybediliyor. Bu özellikler gibi ek verileri yakalamak için, [Jsonextensiondata](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) özniteliğini veya türünde bir özelliğe uygulayın `Dictionary<string,object>` `Dictionary<string,JsonElement>` :
+Gösterilen türde gösterilen JSON serisini kaldırırsanız, `DatesAvailable` ve `SummaryWords` özellikleri nonereye gidebileceği ve kaybediliyor. Bu özellikler gibi ek verileri yakalamak için, [[Jsonextensiondata]](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) özniteliğini türü bir özelliğe uygulayın `Dictionary<string,object>` `Dictionary<string,JsonElement>` :
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithExtensionData)]
 
@@ -653,7 +768,7 @@ Daha önce Bu örnek türünde gösterilen JSON serisini kaldırdığınızda, e
 | Özet | Sık Erişimli ||
 | ExtensionData | temperatureCelsius: 25 |Büyük/küçük harf eşleşmediğinden, bu JSON özelliği çok fazla olur ve sözlükte anahtar-değer çifti olur.|
 || DatesAvailable:<br>  8/1/2019 12:00:00-07:00<br>8/2/2019 12:00:00-07:00 |JSON 'dan fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir.|
-| |SummaryWords:<br>Seyrek Erişimli<br>Rüzgarlı<br>İnsankimliği |JSON 'dan fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir.|
+| |SummaryWords:<br>Seyrek Erişim<br>Rüzgarlı<br>İnsankimliği |JSON 'dan fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir.|
 
 Hedef nesne serileştirildiğinde, uzantı veri anahtarı değer çiftleri, gelen JSON 'da olduğu gibi JSON özellikleri olur:
 
@@ -677,33 +792,138 @@ Hedef nesne serileştirildiğinde, uzantı veri anahtarı değer çiftleri, gele
 
 `ExtensionData`Özellik ADıNıN JSON içinde görünmediğine dikkat edin. Bu davranış, JSON 'nin seri durumdan çıkarılmazsız ek verileri kaybetmeden bir gidiş dönüş yapmasını sağlar.
 
-## <a name="ignore-null-when-deserializing"></a>Seri durumdan çıkarılırken null değeri yoksay
+## <a name="preserve-references-and-handle-circular-references"></a>Başvuruları koru ve döngüsel başvuruları işle
 
-Varsayılan olarak, JSON 'daki bir özellik null ise, hedef nesnedeki karşılık gelen özellik null olarak ayarlanır. Bazı senaryolarda, target özelliği varsayılan bir değere sahip olabilir ve varsayılan değeri geçersiz kılmak için null değer istemezsiniz.
+::: zone pivot="dotnet-5-0"
 
-Örneğin, aşağıdaki kodun hedef nesneniz temsil ettiğini varsayalım:
+Başvuruları korumak ve döngüsel başvuruları işlemek için olarak ayarlayın <xref:System.Text.Json.JsonSerializerOptions.ReferenceHandler%2A> <xref:System.Text.Json.Serialization.ReferenceHandler.Preserve%2A> . Bu ayar aşağıdaki davranışa neden olur:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
+* Seri hale getirme:
 
-Ve aşağıdaki JSON öğesinin seri durumdan çıkarıldığını varsayalım:
+  Karmaşık türler yazarken serileştirici Ayrıca meta veri özellikleri ( `$id` , `$values` ve `$ref` ) yazar.
 
-```json
-{
-  "Date": "2019-08-01T00:00:00-07:00",
-  "TemperatureCelsius": 25,
-  "Summary": null
-}
-```
+* Seri durumdan çıkarma tarihi:
 
-Seri durumdan çıktıktan sonra, `Summary` nesnesinin özelliği `WeatherForecastWithDefault` null olur.
+  Meta veriler beklenir (zorunlu olmasa da) ve seri hale getirici bunu anlamaya çalışır.
 
-Bu davranışı değiştirmek için, <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> `true` Aşağıdaki örnekte gösterildiği gibi öğesini olarak ayarlayın:
+Aşağıdaki kod, ayarın kullanımını gösterir `Preserve` .
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DeserializeIgnoreNull.cs?name=SnippetDeserialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/PreserveReferences.cs" highlight="34":::
 
-Bu seçenekle `Summary` nesnenin özelliği, `WeatherForecastWithDefault` serisini kaldırma işleminden sonra varsayılan "Özet yok" değeridir.
+Bu özellik değer türlerini veya sabit türleri korumak için kullanılamaz. Seri durumdan çıkarma sırasında, tüm yük okunduktan sonra sabit bir tür örneği oluşturulur. Bu nedenle, JSON yükünün içinde bir başvuru görünürse aynı örneğin serisini kaldırma imkansızdır.
 
-JSON içindeki null değerler yalnızca geçerli olmaları durumunda yok sayılır. Nullable değer türleri için null değerler özel durumlara neden olur.
+Değer türleri, değişmez türler ve diziler için hiçbir başvuru meta verisi serileştirilmez. Seri durumdan çıkarma sırasında, veya bulunursa bir özel durum oluşturulur `$ref` `$id` . Ancak, `$id` `$values` kullanılarak seri hale getirilen yüklerin serisini kaldırma olanağı sağlamak için değer türleri (koleksiyonlar durumunda ve ' de) yoksayar Newtonsoft.Json .  Newtonsoft.Json Bu tür türler için meta verileri serileştirmez.
+
+Nesnelerin eşit olup olmadığını anlamak için, System.Text.Json <xref:System.Collections.Generic.ReferenceEqualityComparer.Instance%2A?displayProperty=nameWithType> <xref:System.Object.ReferenceEquals(System.Object,System.Object)?displayProperty=nameWithType> değer eşitlik yerine başvuru eşitlik () kullanır ( <xref:System.Object.Equals(System.Object)?displayProperty=nameWithType> iki nesne örneği karşılaştırılırken).
+
+Başvuruların serileştirilme ve seri durumdan çıkarıldığı hakkında daha fazla bilgi için bkz <xref:System.Text.Json.Serialization.ReferenceHandler.Preserve%2A?displayProperty=nameWithType> ..
+
+<xref:System.Text.Json.Serialization.ReferenceResolver>Sınıfı serileştirme ve seri durumundan çıkarma için başvuruları koruma davranışını tanımlar. Özel davranışı belirtmek için türetilmiş bir sınıf oluşturun. Bir örnek için bkz. [GuidReferenceResolver](https://github.com/dotnet/docs/blob/9d5e88edbd7f12be463775ffebbf07ac8415fe18/docs/standard/serialization/snippets/system-text-json-how-to-5-0/csharp/GuidReferenceResolverExample.cs).
+
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+System.Text.Json .NET Core 3,1 yalnızca değere göre serileştirme destekler ve döngüsel başvurular için bir özel durum oluşturur.
+::: zone-end
+
+## <a name="allow-or-write-numbers-in-quotes"></a>Tırnak işaretleri halinde izin ver veya yaz
+
+::: zone pivot="dotnet-5-0"
+
+Bazı serileştiriciler sayıları JSON dizeleri (tırnak işaretleriyle çevrelenmiş) olarak kodlayabilir. Örneğin: `{"DegreesCelsius":"23"}` yerine `{"DegreesCelsius":23}` . Tırnak işaretleri içindeki sayıları seri hale getirmek veya giriş nesnesi grafiğinin tamamına tırnak içinde kabul etmek için <xref:System.Text.Json.JsonSerializerOptions.NumberHandling%2A?displayProperty=nameWithType> Aşağıdaki örnekte gösterildiği gibi ayarlayın:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/QuotedNumbers.cs" highlight="27-28":::
+
+System.Text.JsonASP.NET Core aracılığıyla dolaylı olarak kullandığınızda, ASP.NET Core [Web varsayılan seçeneklerini](xref:System.Text.Json.JsonSerializerDefaults.Web)belirttiğinden, serisi kaldırılırken tırnak işaretli sayılara izin verilir.
+
+Belirli özellikler, alanlar veya türler için tırnak işaretli sayılara izin vermek veya yazmak için [[Jsonnumberhandling]](xref:System.Text.Json.Serialization.JsonNumberHandlingAttribute) özniteliğini kullanın.
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+System.Text.Json .NET Core 3,1, tırnak işaretleriyle çevrelenen sayıları serileştirmek veya seri durumdan çıkarmayı desteklemez. Daha fazla bilgi için bkz. [tekliflere Izin verme veya yazma numaraları](system-text-json-migrate-from-newtonsoft-how-to.md#allow-or-write-numbers-in-quotes).
+::: zone-end
+
+## <a name="immutable-types-and-records"></a>Sabit türler ve kayıtlar
+
+::: zone pivot="dotnet-5-0"
+System.Text.Json , sabit bir sınıfın veya yapının serisini kaldırma olanağı sağlayan parametreli bir Oluşturucu kullanabilir. Bir sınıf için, tek Oluşturucu parametreli bir ise, bu Oluşturucu kullanılacaktır. Bir yapı veya birden çok Oluşturucu içeren bir sınıf için, [[Jsonconstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute.%23ctor%2A) özniteliğini uygulayarak kullanılacak olanı belirtin. Özniteliği kullanılmazsa, varsa Ortak parametresiz bir Oluşturucu her zaman kullanılır. Özniteliği yalnızca ortak oluşturucularla birlikte kullanılabilir. Aşağıdaki örnek `[JsonConstructor]` özniteliğini kullanır:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/ImmutableTypes.cs" highlight="13":::
+
+C# 9 ' da kayıtlar aşağıdaki örnekte gösterildiği gibi desteklenir:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/Records.cs":::
+
+Tüm özellik ayarlayıcıları ortak olmadığından, sabit olan türler için, [genel olmayan özellik erişimcileri](#non-public-property-accessors)hakkında aşağıdaki bölüme bakın.
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+`JsonConstructorAttribute` ve C# 9 kayıt desteği .NET Core 3,1 ' de kullanılamaz.
+::: zone-end
+
+## <a name="non-public-property-accessors"></a>Ortak olmayan özellik erişimcileri
+
+::: zone pivot="dotnet-5-0"
+Ortak olmayan bir özellik erişimcisinin kullanımını etkinleştirmek için, aşağıdaki örnekte gösterildiği gibi [[Jsonınclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) özniteliğini kullanın:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/NonPublicAccessors.cs" highlight="12,15":::
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+Ortak olmayan özellik erişimcileri .NET Core 3,1 ' de desteklenmez. Daha fazla bilgi için, bkz. [ Newtonsoft.Json makaleden geçiş](system-text-json-migrate-from-newtonsoft-how-to.md#non-public-property-setters-and-getters).
+::: zone-end
+
+## <a name="copy-jsonserializeroptions"></a>JsonSerializerOptions 'ı Kopyala
+
+::: zone pivot="dotnet-5-0"
+[JsonSerializerOptions Oluşturucusu] (XREF:) var System.Text.Json . JsonSerializerOptions .% 23ctor ( System.Text.Json . JsonSerializerOptions)), aşağıdaki örnekte gösterildiği gibi, var olan örnekle aynı seçeneklere sahip yeni bir örnek oluşturmanıza olanak sağlar:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CopyOptions.cs" highlight="29":::
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+`JsonSerializerOptions`Mevcut bir örneği alan bir Oluşturucu .NET Core 3,1 ' de kullanılamaz.
+::: zone-end
+
+## <a name="web-defaults-for-jsonserializeroptions"></a>JsonSerializerOptions için Web Varsayılanları
+
+::: zone pivot="dotnet-5-0"
+Web uygulamaları için farklı varsayılan değerlere sahip olan seçenekler şunlardır:
+
+* <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive%2A> = `true`
+* <xref:System.Text.Json.JsonNamingPolicy> = <xref:System.Text.Json.JsonNamingPolicy.CamelCase>
+* <xref:System.Text.Json.JsonSerializerOptions.NumberHandling%2A> = <xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString>
+
+[JsonSerializerOptions Oluşturucusu] (XREF:) var System.Text.Json . JsonSerializerOptions .% 23ctor ( System.Text.Json . JsonSerializerDefaults)? View = net-5,0&Preserve-View = true), aşağıdaki örnekte gösterildiği gibi, ASP.NET Core Web Apps için kullandığı varsayılan seçeneklerle yeni bir örnek oluşturmanıza olanak sağlar:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/OptionsDefaults.cs" highlight="24":::
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+Web uygulamaları için farklı varsayılan değerlere sahip olan seçenekler şunlardır:
+
+* <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive%2A> = `true`
+* <xref:System.Text.Json.JsonNamingPolicy> = <xref:System.Text.Json.JsonNamingPolicy.CamelCase>
+
+`JsonSerializerOptions`Varsayılan kümesini belirten bir Oluşturucu .NET Core 3,1 ' de kullanılamaz.
+::: zone-end
+
+## <a name="httpclient-and-httpcontent-extension-methods"></a>HttpClient ve HttpContent genişletme yöntemleri
+
+::: zone pivot="dotnet-5-0"
+
+JSON yüklerini ağdan serileştirmek ve serisini kaldırma yaygın işlemlerdir. [HttpClient](xref:System.Net.Http.Json.HttpClientJsonExtensions) ve [HttpContent](xref:System.Net.Http.Json.HttpContentJsonExtensions) üzerindeki genişletme yöntemleri, bu işlemleri tek bir kod satırında yapmanızı sağlar. Bu uzantı yöntemleri, [JsonSerializerOptions için Web varsayılanlarını](#web-defaults-for-jsonserializeroptions)kullanır.
+
+Aşağıdaki örnek, ve kullanımını göstermektedir <xref:System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync%2A?displayProperty=nameWithType> <xref:System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync%2A?displayProperty=nameWithType> :
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/HttpClientExtensionMethods.cs" highlight="23,30":::
+
+Ayrıca, HttpContent için uzantı yöntemleri de vardır System.Text.Json . [HttpContent](xref:System.Net.Http.Json.HttpContentJsonExtensions)
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+Ve ' de uzantı yöntemleri `HttpClient` `HttpContent` System.Text.Json .NET Core 3,1 ' de kullanılamaz.
+::: zone-end
 
 ## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a>Utf8JsonReader, Utf8JsonWriter ve JsonDocument
 
@@ -802,7 +1022,7 @@ Büyük bir dosyayı (örneğin, boyutu bir gigabayt veya daha fazla) okurken, d
 
 Aşağıdaki kod bir akıştan nasıl okunacağını gösterir. Örnek bir gösterir <xref:System.IO.MemoryStream> . Benzer kod, <xref:System.IO.FileStream> `FileStream` Başlangıç AŞAMASıNDA bir UTF-8 bom içerdiğinde, ile birlikte çalışır. Bu durumda, kalan baytları öğesine geçirmeden önce bu üç baytı arabellekten çıkarmanız gerekir `Utf8JsonReader` . Aksi halde, BOM JSON 'ın geçerli bir parçası olarak kabul edilmediğinden okuyucu bir özel durum oluşturur.
 
-Örnek kod, bir 4KB arabelleğiyle başlar ve boyutun, bir bütün JSON belirtecine sığamayacak kadar büyük olmadığını bulduğu her seferinde arabellek boyutunu iki katına çıkarır. Bu, okuyucunun JSON yükünde ilerlemesinin ilerlemesini sağlamak için gereklidir. Kod parçacığında belirtilen JSON örneği, yalnızca çok küçük bir başlangıç arabelleği boyutu ayarlarsanız (örneğin, 10 bayt) bir arabellek boyutunu tetikler. Başlangıçtaki arabellek boyutunu 10 olarak ayarlarsanız, `Console.WriteLine` deyimler arabellek boyutunun arttığı nedeni ve etkisini gösterir. 4 KB ilk arabellek boyutunda, tüm örnek JSON her biri tarafından gösterilir `Console.WriteLine` ve arabellek boyutunun hiçbir zaman artırılması gerekmez.
+Örnek kod, bir 4KB arabelleği ile başlar ve boyutun, bir bütün JSON belirtecine sığamayacak kadar büyük olmadığını bulduğu her bulduğunda, bu, okuyucunun JSON yükünde ilerlemesinin ilerlemesini sağlamak için gerekli olan her seferinde arabellek boyutunu iki katına çıkarır. Kod parçacığında belirtilen JSON örneği, yalnızca çok küçük bir başlangıç arabelleği boyutu ayarlarsanız (örneğin, 10 bayt) bir arabellek boyutunu tetikler. Başlangıçtaki arabellek boyutunu 10 olarak ayarlarsanız, `Console.WriteLine` deyimler arabellek boyutunun arttığı nedeni ve etkisini gösterir. 4 KB ilk arabellek boyutunda, tüm örnek JSON her biri tarafından gösterilir `Console.WriteLine` ve arabellek boyutunun hiçbir zaman artırılması gerekmez.
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/Utf8ReaderPartialRead.cs)]
 
