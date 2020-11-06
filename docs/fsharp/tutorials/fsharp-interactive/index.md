@@ -4,12 +4,12 @@ description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # b
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: ba9111efccceca03fda43ff11c3f111610541595
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342689"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400872"
 ---
 # <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
 
@@ -17,7 +17,7 @@ F# Etkileşimli (DotNet fsi), konsolda F # kodunu etkileşimli olarak çalışt�
 
 Konsolundan F# Etkileşimli çalıştırmak için, öğesini çalıştırın `dotnet fsi` . `dotnet fsi`Herhangi bir .NET SDK 'sında bulabilirsiniz.
 
-Kullanılabilen komut satırı seçenekleri hakkında daha fazla bilgi için bkz. [F# etkileşimli seçenekleri](../../language-reference/fsharp-interactive-options.md).
+Kullanılabilir komut satırı seçenekleri hakkında daha fazla bilgi için bkz. [F# etkileşimli seçenekleri](../../language-reference/fsharp-interactive-options.md).
 
 ## <a name="executing-code-directly-in-f-interactive"></a>Kodu doğrudan F# Etkileşimli yürütme
 
@@ -62,7 +62,7 @@ val it : unit = ()
 >
 ```
 
-Kodun biçimlendirmesi korunur ve girdiyi sonlandıran bir Double semiclon ( `;;` ) vardır. F# Etkileşimli daha sonra kodu değerlendirdi ve sonuçları yazdırılmıştır!
+Kodun biçimlendirmesi korunur ve girişi sonlandıran çift noktalı virgül ( `;;` ) vardır. F# Etkileşimli daha sonra kodu değerlendirdi ve sonuçları yazdırılmıştır!
 
 ## <a name="scripting-with-f"></a>F ile betik oluşturma\#
 
@@ -204,7 +204,7 @@ from
 fsi
 ```
 
-`System.Environment.GetCommandLineArgs()`Aynı bağımsız değişkenlere erişmek için de kullanabileceğinizi unutmayın.
+`System.Environment.GetCommandLineArgs()`Aynı bağımsız değişkenlere erişmek için de kullanabilirsiniz.
 
 ## <a name="f-interactive-directive-reference"></a>F# Etkileşimli yönerge başvurusu
 
@@ -224,7 +224,7 @@ F# Etkileşimli dosya veya yolları belirttiğinizde, bir dize sabit değeri bek
 
 ## <a name="interactive-and-compiled-preprocessor-directives"></a>Etkileşimli ve derlenmiş Önişlemci yönergeleri
 
-Etkileşimli olarak çalıştırdığınız veya bir betiği çalıştırdığınıza bakılmaksızın F# Etkileşimli kod derlerken **etkileşimli** sembol tanımlanmıştır. Derleyicide kod derlerken, **derlenen** sembol tanımlanmıştır. Bu nedenle, kodun derlenmiş ve etkileşimli modlarda farklı olması gerekiyorsa, bu ön işlemci yönergelerini koşullu derleme için kullanabilirsiniz. Örneğin:
+Etkileşimli olarak çalıştırdığınız veya bir betiği çalıştırdığınıza bakılmaksızın F# Etkileşimli kod derlerken **etkileşimli** sembol tanımlanmıştır. Derleyicide kod derlerken, **derlenen** sembol tanımlanmıştır. Bu nedenle, kodun derlenmiş ve etkileşimli modlarda farklı olması gerekiyorsa, bu ön işlemci yönergelerini koşullu derleme için kullanabilirsiniz. Örnek:
 
 ```fsharp
 #if INTERACTIVE
