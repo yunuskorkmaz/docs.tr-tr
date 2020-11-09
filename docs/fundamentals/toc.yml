@@ -1167,6 +1167,8 @@ items:
                         href: code-analysis/style-rules/ide0081.md
                       - name: IDE0100
                         href: code-analysis/style-rules/ide0100.md
+                      - name: IDE0110
+                        href: code-analysis/style-rules/ide0110.md
                   - name: Çeşitli kurallar
                     items:
                       - name: IDE0076
@@ -1419,14 +1421,20 @@ items:
                 href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
               - name: Tarihleri Gregoryen olmayan takvimlerde görüntüleme
                 href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
-      - name: Dizeleri işleme
+      - name: Dizeler
         items:
           - name: .NET içinde karakter kodlaması
             href: ../standard/base-types/character-encoding-introduction.md
           - name: Karakter kodlaması sınıflarını kullanma
             href: ../standard/base-types/character-encoding.md
-          - name: Dizeleri kullanmak için en iyi deneyimler
-            href: ../standard/base-types/best-practices-strings.md
+          - name: En iyi uygulamalar
+            items:
+              - name: Dizeleri karşılaştırma
+                href: ../standard/base-types/best-practices-strings.md
+              - name: Biçimlendirilmiş veri görüntüleme ve kalıcı yapma
+                href: ../standard/base-types/best-practices-display-data.md
+          - name: .NET 5 + (Windows) içindeki davranış değişiklikleri
+            href: ../standard/base-types/string-comparison-net-5-plus.md
           - name: Temel dize işlemleri
             items:
               - name: Genel Bakış
@@ -1438,12 +1446,12 @@ items:
                 href: ../standard/base-types/trimming.md
               - name: Dizeleri doldurma
                 href: ../standard/base-types/padding.md
-              - name: Dizeleri karşılaştırma
+              - name: Karşılaştırma metotları
                 href: ../standard/base-types/comparing.md
               - name: Büyük/küçük harf durumunu değiştirme
                 href: ../standard/base-types/changing-case.md
-              - name: Dizeden öğeleri ayıklama
-                href: ../standard/base-types/parse-strings.md
+              - name: Bir dizenin parçalarını ayırma
+                href: ../standard/base-types/divide-up-strings.md
               - name: StringBuilder sınıfını kullanma
                 href: ../standard/base-types/stringbuilder.md
               - name: 'Nasıl yapılır: Temel dize işlemeleri gerçekleştirme'
@@ -1503,16 +1511,16 @@ items:
                     href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
                   - name: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
                     href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
-      - name: Dizeleri ayrıştırma
-        items:
-          - name: Genel Bakış
-            href: ../standard/base-types/parsing-strings.md
-          - name: Sayısal dizeleri ayrıştırma
-            href: ../standard/base-types/parsing-numeric.md
-          - name: Tarih ve saat dizelerini ayrıştırma
-            href: ../standard/base-types/parsing-datetime.md
-          - name: Diğer dizeleri ayrıştırma
-            href: ../standard/base-types/parsing-other.md
+          - name: Dizeleri ayrıştırma (dönüştürme)
+            items:
+              - name: Genel Bakış
+                href: ../standard/base-types/parsing-strings.md
+              - name: Sayısal dizeleri ayrıştırma
+                href: ../standard/base-types/parsing-numeric.md
+              - name: Tarih ve saat dizelerini ayrıştırma
+                href: ../standard/base-types/parsing-datetime.md
+              - name: Diğer dizeleri ayrıştırma
+                href: ../standard/base-types/parsing-other.md
       - name: Öznitelikler
         items:
           - name: Genel Bakış
