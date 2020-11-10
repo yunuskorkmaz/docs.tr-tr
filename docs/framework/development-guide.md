@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 73b930efa893fd2b481c4c130754154a0d10d5b4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef3fe36ce0c53821fb79fd7689ec6f7176af3e2f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547890"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440861"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework geliştirme Kılavuzu
 
@@ -52,7 +52,7 @@ Bu bölümde .NET Framework uygulamalarınızı oluşturma, yapılandırma, hata
  [Hata ayıklama, Izleme ve profil oluşturma](./debug-trace-profile/index.md)  
  .NET Framework uygulamalarının ve uygulama ortamının nasıl test edileceğini, iyileştirileceği ve profilin nasıl yapılacağını açıklar. Bu bölüm, Yöneticiler ve geliştiriciler için bilgiler içerir.  
   
- [Çoklu Platformlar için Geliştirme](../standard/cross-platform/index.md)  
+ [Çoklu Platformlar için Geliştirme](./cross-platform/index.md)  
  Birden çok platformda paylaşılabilen derlemeler oluşturmak için .NET Framework nasıl kullanabileceğiniz hakkında bilgi sağlar ve telefon, masaüstü ve Web gibi birden çok cihaz oluşturabilirsiniz.  
   
  [Dağıtım](./deployment/index.md)  
@@ -62,10 +62,12 @@ Bu bölümde .NET Framework uygulamalarınızı oluşturma, yapılandırma, hata
  Önbelleğe alma, yavaş başlatma, güvenilirlik ve ETW olayları hakkında bilgi sağlar.  
 
 ## <a name="reference"></a>Başvuru  
+
  [.NET Framework sınıf kitaplığı](../../api/index.md?view=netframework-4.7)  
  .NET Framework ad alanlarında bulunan her bir sınıf için sözdizimi, kod örnekleri ve kullanım bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Başlarken](./get-started/index.md)  
  .NET Framework'e kapsamlı bir genel bakış ve ek kaynaklara bağlantılar sağlar.  
   

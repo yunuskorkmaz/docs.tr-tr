@@ -4,12 +4,12 @@ description: Tüm C# programlarında çekirdek türleri (Numerics, dizeler ve ne
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 18a73e62bf45cdc4a4eaa0985c3fe036ac3b55a8
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ddc6b51e48758d203fa570a664fe06d0a5b52c5
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465266"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439722"
 ---
 # <a name="types-variables-and-values"></a>Türler, değişkenler ve değerler
 
@@ -23,13 +23,15 @@ Bir tür içinde depolanan bilgiler şunları içerebilir:
   
 - İçerdiği Üyeler (Yöntemler, alanlar, olaylar vb.).  
   
-- Devraldığı temel tür.  
-  
+- Devraldığı temel tür.
+
+- Uyguladığı Arabirim (ler).
+
 - Değişkenlere yönelik belleğin çalışma zamanında ayrılabileceği konum.  
   
 - İzin verilen işlem türleri.  
   
-Derleyici, kodunuzda gerçekleştirilen tüm işlemlerin *tür açısından güvenli*olduğundan emin olmak için tür bilgilerini kullanır. Örneğin, [int](language-reference/builtin-types/integral-numeric-types.md)türünde bir değişken bildirirseniz, derleyici değişkeni toplama ve çıkarma işlemlerinde kullanmanıza izin verir. [Bool](language-reference/builtin-types/bool.md)türünde bir değişkende aynı işlemleri gerçekleştirmeye çalışırsanız, derleyici aşağıdaki örnekte gösterildiği gibi bir hata oluşturur:  
+Derleyici, kodunuzda gerçekleştirilen tüm işlemlerin *tür açısından güvenli* olduğundan emin olmak için tür bilgilerini kullanır. Örneğin, [int](language-reference/builtin-types/integral-numeric-types.md)türünde bir değişken bildirirseniz, derleyici değişkeni toplama ve çıkarma işlemlerinde kullanmanıza izin verir. [Bool](language-reference/builtin-types/bool.md)türünde bir değişkende aynı işlemleri gerçekleştirmeye çalışırsanız, derleyici aşağıdaki örnekte gösterildiği gibi bir hata oluşturur:  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
@@ -62,7 +64,7 @@ Kendi özel türlerinizi oluşturmak için [struct](language-reference/builtin-t
   
 ## <a name="generic-types"></a>Genel türler
 
-Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler*olarak adlandırılır. Örneğin, <xref:System.Collections.Generic.List%601> kuralına göre bir tür parametresine sahip *T*adı verilir. Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:  
+Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür* ) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler* olarak adlandırılır. Örneğin, <xref:System.Collections.Generic.List%601> kuralına göre bir tür parametresine sahip *T* adı verilir. Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
@@ -80,12 +82,12 @@ Bir yöntemden birden fazla değer döndürmek, yaygın bir yöntemdir. Tek bir 
 
 .NET 'teki tür sistemi hakkında iki temel noktayı anlamak önemlidir:  
   
-- Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. (C# anahtar sözcüğü:) gibi yerleşik sayısal türler de dahil olmak üzere tüm türler, <xref:System.Int32> `int` sonunda <xref:System.Object> (c# anahtar sözcüğü:) tek bir temel türden türetilir `object` . Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../standard/common-type-system.md) (Cts) denir. C# ' de devralma hakkında daha fazla bilgi için bkz. [Devralma](programming-guide/classes-and-structs/inheritance.md).  
+- Devralma ilkesini destekler. Türler, *temel türler* olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. (C# anahtar sözcüğü:) gibi yerleşik sayısal türler de dahil olmak üzere tüm türler, <xref:System.Int32> `int` sonunda <xref:System.Object> (c# anahtar sözcüğü:) tek bir temel türden türetilir `object` . Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../standard/common-type-system.md) (Cts) denir. C# ' de devralma hakkında daha fazla bilgi için bkz. [Devralma](programming-guide/classes-and-structs/inheritance.md).  
   
-- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. `struct`Veya anahtar sözcüğünü kullanarak tanımladığınız türler `enum` değer türlerdir. Değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](language-reference/builtin-types/value-types.md). [Sınıf](language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri hakkında daha fazla bilgi için bkz. [sınıflar](programming-guide/classes-and-structs/classes.md). Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
+- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü* olarak tanımlanır. Bu, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. `struct`Veya anahtar sözcüğünü kullanarak tanımladığınız türler `enum` değer türlerdir. Değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](language-reference/builtin-types/value-types.md). [Sınıf](language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri hakkında daha fazla bilgi için bkz. [sınıflar](programming-guide/classes-and-structs/classes.md). Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yapı türleri](language-reference/builtin-types/struct.md)
 - [Numaralandırma türleri](language-reference/builtin-types/enum.md)
-- [Sınıftır](programming-guide/classes-and-structs/classes.md)
+- [Sınıflar](programming-guide/classes-and-structs/classes.md)

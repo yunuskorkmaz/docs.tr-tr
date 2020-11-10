@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 68b41eef0b604b80a9659eddf45d6512eac44fd6
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 8fa8d33ce9ece20a18c5c1542bc44cf569e9fa2e
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607739"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440412"
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 
@@ -27,7 +27,7 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-Nesne oluşturulduğunda, söz konusu nesne için yönetilen yığında yeterli bellek ayrılır ve değişken yalnızca belirtilen nesnenin konumuna bir başvuru içerir. Yönetilen yığında bulunan türler, her ikisi de ayrıldıklarında ve *çöp toplama*olarak bilinen clr 'nin otomatik bellek yönetimi işlevselliği tarafından geri kazanıyorsa ek yük gerektirir. Ancak çöp toplama da yüksek oranda iyileştirilmiştir ve çoğu senaryoda bir performans sorunu oluşturmaz. Çöp toplama hakkında daha fazla bilgi için bkz. [Otomatik bellek yönetimi ve çöp toplama](../../../standard/garbage-collection/fundamentals.md).  
+Nesne oluşturulduğunda, söz konusu nesne için yönetilen yığında yeterli bellek ayrılır ve değişken yalnızca belirtilen nesnenin konumuna bir başvuru içerir. Yönetilen yığında bulunan türler, her ikisi de ayrıldıklarında ve *çöp toplama* olarak bilinen clr 'nin otomatik bellek yönetimi işlevselliği tarafından geri kazanıyorsa ek yük gerektirir. Ancak çöp toplama da yüksek oranda iyileştirilmiştir ve çoğu senaryoda bir performans sorunu oluşturmaz. Çöp toplama hakkında daha fazla bilgi için bkz. [Otomatik bellek yönetimi ve çöp toplama](../../../standard/garbage-collection/fundamentals.md).  
   
 ## <a name="declaring-classes"></a>Sınıfları Bildirme
 
@@ -41,7 +41,7 @@ Nesne oluşturulduğunda, söz konusu nesne için yönetilen yığında yeterli 
  }
 ```
 
- `class`Anahtar sözcüğü öncesinde erişim düzeyidir. Bu durumda [genel](../../language-reference/keywords/public.md) kullanıldığından, herkes bu sınıfın örneklerini oluşturabilir. Sınıfın adı `class` anahtar sözcüğünü izler. Sınıfın adı geçerli bir C# [tanımlayıcı adı](../inside-a-program/identifier-names.md)olmalıdır. Tanımın geri kalanı, davranışın ve verilerin tanımlandığı sınıf gövdesidir. Bir sınıftaki alanlar, özellikler, Yöntemler ve olaylar topluca *sınıf üyeleri*olarak adlandırılır.  
+ `class`Anahtar sözcüğü öncesinde erişim düzeyidir. Bu durumda [genel](../../language-reference/keywords/public.md) kullanıldığından, herkes bu sınıfın örneklerini oluşturabilir. Sınıfın adı `class` anahtar sözcüğünü izler. Sınıfın adı geçerli bir C# [tanımlayıcı adı](../inside-a-program/identifier-names.md)olmalıdır. Tanımın geri kalanı, davranışın ve verilerin tanımlandığı sınıf gövdesidir. Bir sınıftaki alanlar, özellikler, Yöntemler ve olaylar topluca *sınıf üyeleri* olarak adlandırılır.  
   
 ## <a name="creating-objects"></a>Nesneler oluşturma
 
@@ -59,7 +59,7 @@ Bazen birbirinin yerine kullanıldıkları halde bir sınıf ve bir nesne farkl�
  Customer object2;
 ```
 
- Bir nesneye başvurmayan bu gibi nesne başvuruları oluşturmanızı önermeyiz, çünkü bu başvuru, bu tür bir başvuruya erişim denemesi çalışma zamanında başarısız olur. Ancak, bu tür bir başvuru, yeni bir nesne oluşturarak ya da bunun gibi var olan bir nesneye atanarak bir nesneye başvurmak için kullanılabilir:  
+ Bir nesneye başvurmayan bu gibi nesne başvuruları oluşturmanızı önermeyiz, çünkü bu başvuru, bu tür bir başvuruya erişim denemesi çalışma zamanında başarısız olur. Bununla birlikte, bu tür bir başvuru, yeni bir nesne oluşturarak ya da bunun gibi var olan bir nesne atanarak bir nesneye başvurmak için kullanılabilir:  
 
  ```csharp
  Customer object3 = new Customer();
@@ -70,9 +70,9 @@ Bazen birbirinin yerine kullanıldıkları halde bir sınıf ve bir nesne farkl�
   
 ## <a name="class-inheritance"></a>Sınıf devralma  
 
-Sınıflar, nesne odaklı programlamanın temel bir özelliği olan *devralmayı*tamamen destekler. Bir sınıf oluşturduğunuzda, [korumalı](../../language-reference/keywords/sealed.md)olarak tanımlanmayan diğer bir arabirim veya sınıftan kalıtımla alabilir ve diğer sınıflar sınıfınızdan devralınabilir ve sınıf sanal yöntemlerini geçersiz kılabilir.
+Sınıflar, nesne odaklı programlamanın temel bir özelliği olan *devralmayı* tamamen destekler. Bir sınıf oluşturduğunuzda, [korumalı](../../language-reference/keywords/sealed.md)olarak tanımlanmayan başka bir sınıftan kalıtımla alabilir ve diğer sınıflar sınıfınızdan devralınabilir ve sınıf sanal yöntemlerini geçersiz kılabilir. Ayrıca, bir veya daha fazla arabirim de uygulayabilirsiniz.
 
-Devralma bir *türetme*kullanılarak gerçekleştirilir. Bu, bir sınıfın veri ve davranış devraldığı *temel sınıf* kullanılarak bildirildiği anlamına gelir. Bir temel sınıf, bir iki nokta üst üste eklenerek ve türetilmiş sınıf adından sonra temel sınıfın adı aşağıdaki gibi olarak belirtilir:  
+Devralma bir *türetme* kullanılarak gerçekleştirilir. Bu, bir sınıfın veri ve davranış devraldığı *temel sınıf* kullanılarak bildirildiği anlamına gelir. Bir temel sınıf, bir iki nokta üst üste eklenerek ve türetilmiş sınıf adından sonra temel sınıfın adı aşağıdaki gibi olarak belirtilir:  
 
  ```csharp
  public class Manager : Employee
@@ -84,7 +84,7 @@ Devralma bir *türetme*kullanılarak gerçekleştirilir. Bu, bir sınıfın veri
 
 Bir sınıf bir temel sınıf bildiriyorsa, oluşturucular hariç, taban sınıfın tüm üyelerini devralır. Daha fazla bilgi için bkz. [Devralma](inheritance.md).
   
-C++ ' dan farklı olarak, C# ' deki bir sınıf yalnızca bir temel sınıftan doğrudan devralınabilir. Ancak, bir temel sınıfın kendisi başka bir sınıftan devraldığı için, bir sınıf dolaylı olarak birden fazla temel sınıfı devralınabilir. Ayrıca, bir sınıf doğrudan birden fazla arabirim uygulayabilir. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).  
+C++ ' dan farklı olarak, C# ' deki bir sınıf yalnızca bir temel sınıftan doğrudan devralınabilir. Ancak, bir temel sınıfın kendisi başka bir sınıftan devraldığı için, bir sınıf dolaylı olarak birden fazla temel sınıfı devralınabilir. Ayrıca, bir sınıf doğrudan bir veya daha fazla arabirim uygulayabilir. Daha fazla bilgi için bkz. [arabirimler](../interfaces/index.md).  
   
 Bir sınıf, [soyut](../../language-reference/keywords/abstract.md)olarak bildirilemez. Soyut bir sınıf imza tanımına sahip ancak uygulamaya sahip olmayan soyut yöntemler içerir. Soyut sınıfların örneği oluşturulamıyor. Yalnızca soyut yöntemleri uygulayan türetilmiş sınıflar aracılığıyla kullanılabilir. Buna karşılık, [korumalı](../../language-reference/keywords/sealed.md) bir sınıf diğer sınıfların bundan türemesine izin vermez. Daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](abstract-and-sealed-classes-and-class-members.md).  
   
@@ -103,7 +103,7 @@ Aşağıdaki örnek, bir [Otomatik uygulanan özellik](auto-implemented-properti
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Nesne Odaklı Programlama](../../tutorials/intro-to-csharp/object-oriented-programming.md)
+- [Nesne odaklı programlama](../../tutorials/intro-to-csharp/object-oriented-programming.md)
 - [Çok biçimlilik](polymorphism.md)
 - [Tanımlayıcı adları](../inside-a-program/identifier-names.md)
 - [Üyeler](members.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 8922f057cb59258e2dd002cec4015af518dc255f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04b4b529a5a1adaa40e804988dee506942c863c4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553362"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440086"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil Oluşturucular ve Microsoft Store Uygulamaları
 
@@ -25,7 +25,7 @@ Bu konuda, bir Windows Mağazası uygulamasında çalışan yönetilen kodu çö
 
 ## <a name="introduction"></a>Giriş
 
-Bunu, giriş paragrafından daha fazla yaptıysanız, CLR profil oluşturma API 'sini öğreniyorsunuz demektir. Yönetilen masaüstü uygulamalarında iyi bir şekilde çalışacak bir tanılama aracı zaten yazmış oldunuz. Artık, aracınızdaki yönetilen bir Windows Mağazası uygulamasıyla çalışması için ne yapılacağını merak ediyorsunuz. Belki de bu işi yapmayı denediniz ve bu uygulamayı basit bir görev olmadığını keşfetti. Aslında, tüm araç geliştiricileri için belirgin olmayan bazı önemli noktalar vardır. Örnek:
+Bunu, giriş paragrafından daha fazla yaptıysanız, CLR profil oluşturma API 'sini öğreniyorsunuz demektir. Yönetilen masaüstü uygulamalarında iyi bir şekilde çalışacak bir tanılama aracı zaten yazmış oldunuz. Artık, aracınızdaki yönetilen bir Windows Mağazası uygulamasıyla çalışması için ne yapılacağını merak ediyorsunuz. Belki de bu işi yapmayı denediniz ve bu uygulamayı basit bir görev olmadığını keşfetti. Aslında, tüm araç geliştiricileri için belirgin olmayan bazı önemli noktalar vardır. Örneğin:
 
 - Windows Mağazası uygulamaları, önemli ölçüde azaltılan izinlerle çalışır.
 
@@ -273,7 +273,7 @@ Belirli bir API olmadan kesinlikle yapamayacağına ve Windows Mağazası uygula
 
 Windows Mağazası uygulama izinlerinin Masaüstü uygulamalarından farklı olduğu tüm yolları listelemek için bu konunun kapsamı dışındadır. Ancak, profil oluşturucu DLL 'niz (bir masaüstü uygulamasına kıyasla bir Windows Mağazası uygulamasına yüklendiğinde) her türlü kaynağa erişmeye çalıştığında, kesinlikle davranış farklı olur. Dosya sistemi en yaygın örnektir. Diskte belirli bir Windows Mağazası uygulamasının erişmesine izin verilen birkaç yer vardır (bkz. [dosya erişimi ve izinleri (Windows çalışma zamanı uygulamalar](/previous-versions/windows/apps/hh967755(v=win.10))) ve PROFIL Oluşturucu dll 'niz aynı kısıtlamalar altında olacaktır. Kodunuzu iyice test edin.
 
-### <a name="inter-process-communication"></a>İşlem arası iletişim
+### <a name="inter-process-communication"></a>İşlemler arası iletişim
 
 Bu kağıdın başındaki diyagramda gösterildiği gibi, kendi özel işlem iletişim (IPC) kanalınızla birlikte profil oluşturucu DLL 'nizin (Windows Mağazası uygulaması işlem alanına yüklenir) profil oluşturucu Kullanıcı arabiriminize (ayrı bir masaüstü uygulaması işlem alanında çalışan) iletişim kurması gerekir. Profiler kullanıcı ARABIRIMI davranışını değiştirmek için, profil oluşturucu DLL 'sine sinyal gönderir ve profil oluşturucu DLL, çözümlenmiş Windows Mağazası uygulamasından verileri, işleme sonrası ve profil oluşturucu kullanıcısına görüntüleme için Profil Oluşturucu kullanıcı ARABIRIMINE geri gönderir.
 
@@ -302,7 +302,7 @@ Bu arada, profil oluşturucu DLL 'niz temel olarak aynı şeyi yapabilir, ancak 
 
 Profil Oluşturucu UI ve profil oluşturucu DLL arasında basit sinyal semantiğini istiyorsanız, Windows Mağazası uygulamalarının içindeki olayları ve masaüstü uygulamalarını kullanabilirsiniz.
 
-Profil oluşturucu DLL 'nizden, istediğiniz adla adlandırılmış bir olay oluşturmak için [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) işlevini çağırmanız yeterlidir. Örnek:
+Profil oluşturucu DLL 'nizden, istediğiniz adla adlandırılmış bir olay oluşturmak için [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) işlevini çağırmanız yeterlidir. Örneğin:
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -356,7 +356,7 @@ Profil oluşturucu DLL 'niz, [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerin
 
 ### <a name="reading-metadata-from-winmds"></a>Wınmds 'den meta veriler okunuyor
 
-Normal modüller gibi WinMD dosyaları, [meta veri API 'leri](../metadata/index.md)aracılığıyla okunabilecek meta veriler içerir. Ancak, CLR dosyalarını okurken, yönetilen kodda programlayan ve WinMD dosyasını kullanan geliştiricilerin daha doğal bir programlama deneyimine sahip olması için CLR dosyalarını okurken Windows Çalışma Zamanı türleri .NET Framework türlerine eşler. Bu eşlemelerin bazı örnekleri için bkz. [Windows Mağazası uygulamaları için .NET Framework desteği ve Windows çalışma zamanı](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
+Normal modüller gibi WinMD dosyaları, [meta veri API 'leri](../metadata/index.md)aracılığıyla okunabilecek meta veriler içerir. Ancak, CLR dosyalarını okurken, yönetilen kodda programlayan ve WinMD dosyasını kullanan geliştiricilerin daha doğal bir programlama deneyimine sahip olması için CLR dosyalarını okurken Windows Çalışma Zamanı türleri .NET Framework türlerine eşler. Bu eşlemelerin bazı örnekleri için bkz. [Windows Mağazası uygulamaları için .NET Framework desteği ve Windows çalışma zamanı](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
 
 Bu nedenle, Profil oluşturucunuz, meta veri API 'Lerini kullandığında hangi görünümde alınır: ham Windows Çalışma Zamanı görünümü veya eşlenmiş .NET Framework görünümü?  Yanıt: size ait.
 
@@ -388,7 +388,7 @@ Bu nedenle, profil oluşturucu DLL 'nizin [ForceGC yöntemini](icorprofilerinfo-
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-.NET Framework 4,5 ' den başlayarak, profil oluşturucunun *bağımlı tanıtıcılarla*ilgili daha fazla bilgi veren yenı bir GC geri çağırması olan [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)vardır. Bu tutamaçlar, GC yaşam süresi yönetimi amacıyla bir kaynak nesnesinden bir hedef nesneye bir başvuru ekler. Bağımlı tutamaçlar hiçbir şey değildir ve yönetilen kodda çalışan geliştiriciler, <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> Windows 8 ve .NET Framework 4,5 ' den önceki bir sınıfı kullanarak kendi bağımlı tutamaçlarını oluşturamayacak.
+.NET Framework 4,5 ' den başlayarak, profil oluşturucunun *bağımlı tanıtıcılarla* ilgili daha fazla bilgi veren yenı bir GC geri çağırması olan [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)vardır. Bu tutamaçlar, GC yaşam süresi yönetimi amacıyla bir kaynak nesnesinden bir hedef nesneye bir başvuru ekler. Bağımlı tutamaçlar hiçbir şey değildir ve yönetilen kodda çalışan geliştiriciler, <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> Windows 8 ve .NET Framework 4,5 ' den önceki bir sınıfı kullanarak kendi bağımlı tutamaçlarını oluşturamayacak.
 
 Ancak, yönetilen XAML Windows Mağazası uygulamaları artık bağımlı tanıtıcıların yoğun bir şekilde kullanılmasını kolaylaştırır. Özellikle, CLR, yönetilen nesneler ve yönetilmeyen Windows Çalışma Zamanı nesneleri arasındaki başvuru döngülerini yönetmeye yardımcı olmak için bunları kullanır. Bu, artık bellek profil oluşturucular ' nin, yığın grafiğindeki diğer kenarlarla birlikte görselleştirilmesi için bu bağımlı tutamaçların bilgilendirilmesi için her zamankinden daha önemli olduğu anlamına gelir. Profiler DLL 'niz, yığın grafiğinin tamamen görünümünü oluşturmak için [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md)ve [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) öğelerini birlikte kullanmalıdır.
 
@@ -406,7 +406,7 @@ Windows Mağazası uygulamaları içinde çalışan yönetilen kodu çözümleme
 
 **CLR 'nin Windows Çalışma Zamanı etkileşimi**
 
-- [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
 **Windows Mağazası uygulamaları**
 

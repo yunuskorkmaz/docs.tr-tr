@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cryptography [.NET], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 8a8b5988a13ab571284b08c7aaece3542467aa71
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 75bb0fa52b8002efe0027f026de8c0910735e55e
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556975"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440978"
 ---
 # <a name="encrypting-data"></a>Veri Şifreleme
 
@@ -25,7 +25,7 @@ Simetrik şifreleme ve asimetrik şifreleme farklı süreçler kullanılarak ger
   
 ## <a name="symmetric-encryption"></a>Simetrik şifreleme  
 
-Yönetilen simetrik şifreleme sınıfları, <xref:System.Security.Cryptography.CryptoStream> akışa okunan verileri şifreleyen, adlı özel bir akış sınıfıyla kullanılır. **CryptoStream** sınıfı, yönetilen bir Stream sınıfı, arabirimini uygulayan bir sınıf <xref:System.Security.Cryptography.ICryptoTransform> (şifreleme algoritması uygulayan bir sınıftan oluşturulan) ve <xref:System.Security.Cryptography.CryptoStreamMode> **CryptoStream**için izin verilen erişim türünü açıklayan bir sabit değer ile başlatılır. **CryptoStream** sınıfı,, <xref:System.IO.Stream> ve dahil olmak üzere sınıfından türetilen herhangi bir sınıf kullanılarak başlatılabilir <xref:System.IO.FileStream> <xref:System.IO.MemoryStream> <xref:System.Net.Sockets.NetworkStream> . Bu sınıfları kullanarak, çeşitli Stream nesnelerinde simetrik şifreleme yapabilirsiniz.  
+Yönetilen simetrik şifreleme sınıfları, <xref:System.Security.Cryptography.CryptoStream> akışa okunan verileri şifreleyen, adlı özel bir akış sınıfıyla kullanılır. **CryptoStream** sınıfı, yönetilen bir Stream sınıfı, arabirimini uygulayan bir sınıf <xref:System.Security.Cryptography.ICryptoTransform> (şifreleme algoritması uygulayan bir sınıftan oluşturulan) ve <xref:System.Security.Cryptography.CryptoStreamMode> **CryptoStream** için izin verilen erişim türünü açıklayan bir sabit değer ile başlatılır. **CryptoStream** sınıfı,, <xref:System.IO.Stream> ve dahil olmak üzere sınıfından türetilen herhangi bir sınıf kullanılarak başlatılabilir <xref:System.IO.FileStream> <xref:System.IO.MemoryStream> <xref:System.Net.Sockets.NetworkStream> . Bu sınıfları kullanarak, çeşitli Stream nesnelerinde simetrik şifreleme yapabilirsiniz.  
   
 Aşağıdaki örnek, algoritma için varsayılan uygulama sınıfının yeni bir örneğinin nasıl oluşturulacağını göstermektedir <xref:System.Security.Cryptography.Aes> . Örnek, bir **CryptoStream** sınıfında şifrelemeyi gerçekleştirmek için kullanılır. Bu örnekte, **CryptoStream** , `myStream` herhangi bir tür yönetilen akış olabilecek adlı bir Stream nesnesi ile başlatılır. **AES** sınıfından **CreateEncryptor** yöntemi, şifreleme IÇIN kullanılan anahtarı ve IV ' i geçti. Bu durumda, varsayılan anahtar ve IV tarafından oluşturulan IV `aes` kullanılır.
   
@@ -41,23 +41,23 @@ CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateEncryptor(key, i
   
 Bu kod yürütüldükten sonra, **CryptoStream** nesnesine yazılan tüm veriler AES algoritması kullanılarak şifrelenir.  
   
-Aşağıdaki örnek, bir akış oluşturma, akışı şifreleme, akışa yazma ve akışı kapatma sürecinin tamamını gösterir. Bu örnek, **CryptoStream** sınıfı ve **AES** sınıfı kullanılarak şifrelenen bir dosya akışı oluşturur. Şifrelenmiş akışa bir ileti yazılır <xref:System.IO.StreamWriter> .
+Aşağıdaki örnek, bir akış oluşturma, akışı şifreleme, akışa yazma ve akışı kapatma sürecinin tamamını gösterir. Bu örnek, **CryptoStream** sınıfı ve **AES** sınıfı kullanılarak şifrelenen bir dosya akışı oluşturur. Oluşturulan IV, ' nin başlangıcına yazılır <xref:System.IO.FileStream> , bu nedenle okunabilir ve şifre çözme için kullanılabilir. Daha sonra, sınıfı ile şifreli akışa bir ileti yazılır <xref:System.IO.StreamWriter> . Aynı anahtar, verileri şifrelemek ve şifrelerini çözmek için birden çok kez kullanılabilir ancak her seferinde yeni bir rastgele IV oluşturmanız önerilir. Bu şekilde, düz metin aynı olsa bile şifrelenmiş veriler her zaman farklıdır.
   
 :::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs":::
 :::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb":::
 
-Kod, AES Simetrik algoritmasını kullanarak akışı şifreler ve "Merhaba Dünya!" yaztır akışa. Kod başarılı olursa, *TestData.txt* adlı şifreli bir dosya oluşturur ve konsola aşağıdaki metni görüntüler:  
+Kod, AES Simetrik algoritmasını kullanarak akışı şifreler ve IV yazıp "Merhaba Dünya!" şifrelendiğini akışa. Kod başarılı olursa, *TestData.txt* adlı şifreli bir dosya oluşturur ve konsola aşağıdaki metni görüntüler:
   
 ```console  
-The text was encrypted.  
+The text was encrypted.
 ```  
 
-[Verileri şifrelerini çözmek](decrypting-data.md)için simetrik şifre çözme örneğini kullanarak dosyanın şifresini çözebilirsiniz. Bu örnek ve bu örnekte aynı anahtar ve IV belirtilmelidir.
+[Verileri şifrelerini çözmek](decrypting-data.md)için simetrik şifre çözme örneğini kullanarak dosyanın şifresini çözebilirsiniz. Bu örnek ve bu örnek aynı anahtarı belirtir.
 
-Ancak, bir özel durum ortaya çıktığında, kod konsola aşağıdaki metni görüntüler:  
+Ancak, bir özel durum ortaya çıktığında, kod konsola aşağıdaki metni görüntüler:
   
 ```console  
-The encryption failed.  
+The encryption failed.
 ```
 
 ## <a name="asymmetric-encryption"></a>Asimetrik şifreleme

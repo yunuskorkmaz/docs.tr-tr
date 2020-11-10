@@ -2,12 +2,12 @@
 title: .NET 5 + ' da kullanımdan kalkmış Özellikler
 description: .NET 5,0 ve sonraki sürümlerde eski olarak işaretlenen ve SYSLIB Derleyici uyarıları üreten API 'Ler hakkında bilgi edinin.
 ms.date: 10/20/2020
-ms.openlocfilehash: 13f5fb10cfe693ed621b3f45fc22e024875890c8
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333354"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440770"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5 ' teki kullanımdan kalkmış Özellikler
 
@@ -23,7 +23,7 @@ Kullanılmayan bir API kullanımı nedeniyle derleme uyarıları veya hatalarıy
 
 Aşağıdaki tabloda, `SYSLIBxxxx` .NET 5 + ' de kullanımdan çıkarılan bir dizin verilmiştir.
 
-| Tanılama KIMLIĞI | Description |
+| Tanılama KIMLIĞI | Açıklama |
 | - | - |
 | [SYSLIB0001](syslib0001.md) | UTF-7 kodlaması güvenli değil ve kullanılmamalıdır. Bunun yerine UTF-8 kullanmayı düşünün. |
 | [SYSLIB0002](syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> çalışma zamanı tarafından kabul edilmez ve kullanılmamalıdır. |
@@ -61,9 +61,14 @@ Proje dosyası:
    <TargetFramework>net5.0</TargetFramework>
    <!-- NoWarn below suppresses SYSLIB0001 project-wide -->
    <NoWarn>$(NoWarn);SYSLIB0001</NoWarn>
+   <!-- To suppress multiple warnings, you can use multiple NoWarn elements -->
+   <NoWarn>$(NoWarn);SYSLIB0002</NoWarn>
+   <NoWarn>$(NoWarn);SYSLIB0003</NoWarn>
+   <!-- Alternatively, you can suppress multiple warnings by using a semicolon-delimited list -->
+   <NoWarn>$(NoWarn);SYSLIB0001;SYSLIB0002;SYSLIB0003</NoWarn>
   </PropertyGroup>
 </Project>
 ```
 
 > [!NOTE]
-> Bu şekilde bir uyarının gizlenmesi yalnızca belirli bir kullanımdan kaldırma uyarısını devre dışı bırakır. Diğer kullanımdan çıkarma uyarıları dahil diğer uyarıları devre dışı bırakır.
+> Uyarıları bu şekilde gizleme yalnızca belirttiğiniz kullanımdan kaldırma uyarılarını devre dışı bırakır. Farklı tanılama kimliklerine sahip kullanımdan çıkarma uyarıları dahil diğer uyarıları devre dışı bırakır.

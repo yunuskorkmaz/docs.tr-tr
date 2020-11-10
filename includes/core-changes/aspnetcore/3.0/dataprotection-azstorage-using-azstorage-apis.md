@@ -1,53 +1,56 @@
 ---
-ms.openlocfilehash: db70596552ffd699156e1b7a55cb1e944596f077
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6e4c3d5c5fd020562e48515554136e0f8b6785c
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75902064"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440430"
 ---
-### <a name="data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis"></a>Veri Koruması: DataProtection.AzureStorage yeni Azure Depolama API'leri kullanır
+### <a name="data-protection-dataprotectionblobs-uses-new-azure-storage-apis"></a>Veri koruma: DataProtection. blob 'lar yeni Azure depolama API 'Lerini kullanır
 
-<xref:Microsoft.AspNetCore.DataProtection.AzureStorage?displayProperty=fullName>Azure Depolama [kitaplıklarına](https://github.com/Azure/azure-storage-net)bağlıdır. Bu kitaplıklar derlemelerinin, paketlerinin ve ad alanlarının adını değiştirdi. Core 3.0ASP.NETdan `Microsoft.AspNetCore.DataProtection.AzureStorage` başlayarak `Microsoft.Azure.Storage.`yeni önceden belirlenmiş API'leri ve paketleri kullanır.
+`Azure.Extensions.AspNetCore.DataProtection.Blobs`[Azure depolama kitaplıklarına](https://github.com/Azure/azure-storage-net)bağlıdır. Bu kitaplıklar derlemeleri, paketleri ve ad alanlarını yeniden adlandırdı. ASP.NET Core 3,0 ' den başlayarak, `Azure.Extensions.AspNetCore.DataProtection.Blobs` Yeni `Azure.Storage.` önekli API 'leri ve paketleri kullanır.
 
-Azure Depolama API'leri ile <https://github.com/Azure/azure-storage-net>ilgili sorularınız için . Bu konuda tartışma için [dotnet/aspnetcore#8472'ye](https://github.com/dotnet/aspnetcore/issues/8472)bakın.
+Azure depolama API 'Leri hakkında sorularınız için kullanın <https://github.com/Azure/azure-storage-net> . Bu sorunla ilgili tartışmak için bkz. [DotNet/aspnetcore # 19570](https://github.com/dotnet/aspnetcore/issues/19570).
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Paket, NuGet `WindowsAzure.Storage` paketine atıfta bulunarak başvuruda bulunarak, bu pakete atıfta bulunmaktadır.
+Paket, `WindowsAzure.Storage` NuGet paketine başvurdu.
+Paket, `Microsoft.Azure.Storage.Blob` NuGet paketine başvurur.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Paket NuGet `Microsoft.Azure.Storage.Blob` paketine başvurur.
+Paket, `Azure.Storage.Blob` NuGet paketine başvurur.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Bu değişiklik, önerilen Azure Depolama paketlerine geçiş yapılmasına olanak tanır. `Microsoft.AspNetCore.DataProtection.AzureStorage`
+Bu değişiklik `Azure.Extensions.AspNetCore.DataProtection.Blobs` , önerilen Azure depolama paketlerine geçişe olanak tanır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Core 3.0'ASP.NET eski Azure Depolama API'lerini kullanmaya devam ederseniz, [WindowsAzure.Storage](https://www.nuget.org/packages/WindowsAzure.Storage/) paketine doğrudan bağımlılık ekleyin. Bu paket, yeni `Microsoft.Azure.Storage` API'lerin yanına yüklenebilir.
+Hala ASP.NET Core 3,0 ile eski Azure depolama API 'Lerini kullanmanız gerekiyorsa, [windowsazure. Storage](https://www.nuget.org/packages/WindowsAzure.Storage/) veya [Microsoft. Azure. Storage](https://www.nuget.org/packages/Microsoft.Azure.Storage.Blob/)paketine doğrudan bir bağımlılık ekleyin. Bu paket yeni API 'ler ile birlikte yüklenebilir `Azure.Storage` .
 
-Çoğu durumda, yükseltme yalnızca yeni `using` ad alanlarını kullanmak için deyimleri değiştirmeyi içerir:
+Çoğu durumda, yükseltme yalnızca `using` Yeni ad alanlarını kullanmak için deyimlerinin değiştirilmesini içerir:
 
 ```diff
 - using Microsoft.WindowsAzure.Storage;
 - using Microsoft.WindowsAzure.Storage.Blob;
-+ using Microsoft.Azure.Storage;
-+ using Microsoft.Azure.Storage.Blob;
+- using Microsoft.Azure.Storage;
+- using Microsoft.Azure.Storage.Blob;
++ using Azure.Storage;
++ using Azure.Storage.Blobs;
 ```
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-None
+Hiçbiri
 
 <!-- 
 

@@ -2,12 +2,12 @@
 title: Günlüğe kaydetme ve izleme-.NET Core
 description: .NET Core günlüğe kaydetme ve izlemeye giriş.
 ms.date: 10/12/2020
-ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997693"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439930"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core günlüğe kaydetme ve izleme
 
@@ -15,13 +15,13 @@ Günlüğe kaydetme ve izleme aynı teknik için gerçekten iki isimdir. Basit t
 
 ## <a name="reasons-to-use-logging-and-tracing"></a>Günlüğe kaydetme ve izlemeyi kullanma nedenleri
 
-Bu basit teknik, her ne kadar güçlü bir işlemdir. Bir hata ayıklayıcının başarısız olduğu durumlarda kullanılabilir:
+Bu basit teknik şaşırtıcı bir biçimde güçlüdür. Bir hata ayıklayıcının başarısız olduğu durumlarda kullanılabilir:
 
-- Uzun süreler boyunca oluşan sorunlar, geleneksel hata ayıklayıcı ile hata ayıklama zor olabilir. Günlükler, uzun sürelerle ilgili ayrıntılı son mortem incelemesi için izin verir. Buna karşılık, hata ayıklayıcılar gerçek zamanlı Analize göre kısıtlanmıştır.
-- Çok iş parçacıklı uygulamalar ve dağıtılmış uygulamalar genellikle hata ayıklama için zordur.  Hata ayıklayıcı eklemek, davranışları değiştirme eğilimindedir. Ayrıntılı Günlükler, karmaşık sistemleri anlamak için gerektiği şekilde analiz edilebilir.
-- Dağıtılmış uygulamalardaki sorunlar birçok bileşen arasındaki karmaşık bir etkileşime neden olabilir ve bir hata ayıklayıcıyı sistemin her bölümüne bağlamak mantıklı olmayabilir.
-- Birçok hizmet durdurulmuş olmamalıdır. Hata ayıklayıcı iliştirmek genellikle zaman aşımı hatalarıyla neden olur.
-- Sorunlar her zaman öngörülemeyen değildir. Günlüğe kaydetme ve izleme düşük yük için tasarlanmıştır, böylece bir sorun oluşması durumunda programlar her zaman kaydedebilir.
+- Uzun süre boyunca tekrar eden sorunları geleneksel bir hata ayıklayıcısıyla çözmek zor olabilir. Günlükler, uzun sürelere yayılan ayrıntılı son durum incelemeleri yapmanıza olanak verir. Buna karşın, hata ayıklayıcılar gerçek zamanlı analizle sınırlıdır.
+- Çok iş parçacıklı ve dağıtılmış uygulamalarda hata ayıklamak genellikle zordur.  Hata ayıklayıcıyı kullanıma açmak, davranışları değiştirebilir. Ayrıntılı günlükler, karmaşık sistemleri anlamak için gerekli şekilde analiz edilebilir.
+- Dağıtılmış uygulamalardaki sorunlar, pek çok bileşen arasındaki karmaşık etkileşimden kaynaklanabilir ve sistemin her parçasına bir hata ayıklayıcısı eklemek mantıklı olmayabilir.
+- Çok sayıda hizmetin durdurulmaması gerekir. Hata ayıklayıcıyı kullanıma açmak genellikle zaman aşımı sorunlarına neden olur.
+- Sorunlar her zaman öngörülemez. Günlüğe kaydetme ve izleme, sorun olması durumunda programların her zaman kayıt yapabilmesi için düşük ek yüke uygun şekilde tasarlanmıştır.
 
 ## <a name="net-core-apis"></a>.NET Core API 'Leri
 
@@ -29,21 +29,21 @@ Bu basit teknik, her ne kadar güçlü bir işlemdir. Bir hata ayıklayıcının
 
 <xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType> Ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıflarının her biri, günlüğe kaydetme için uygun olan benzer yazdırma stili API 'leri sağlar.
 
-Hangi yazdırma stili API 'sinin kullanılması tercih edilir. Temel farklılıklar şunlardır:
+Kullanılacak yazdırma stili API’si tercihi size bağlıdır. En önemli farklar şunlardır:
 
 - <xref:System.Console?displayProperty=nameWithType>
-  - Her zaman etkin ve her zaman konsola yazar.
-  - Müşterinizin yayında görmeniz gerekebilecek bilgiler için faydalıdır.
-  - En basit yaklaşım olduğundan, genellikle geçici geçici hata ayıklama için kullanılır. Bu hata ayıklama kodu genellikle kaynak denetimine hiçbir zaman iade edilmedi.
+  - Her zaman etkindir ve konsola yazar.
+  - Müşterilerinizin yayında görmeleri gerekebilecek bilgiler için yararlıdır.
+  - En basit yaklaşım bu olduğundan, genellikle geçici hata ayıklama için kullanılır. Bu hata ayıklama kodu kaynak denetiminde neredeyse asla kullanılmaz.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - Yalnızca tanımlı olduğunda etkindir `TRACE` .
+  - Yalnızca `TRACE` tanımlandığında etkindir.
   - <xref:System.Diagnostics.Trace.Listeners>Varsayılan olarak, ekli öğesine yazar <xref:System.Diagnostics.DefaultTraceListener> .
-  - Çoğu derlemelerde etkinleştirilecek günlükleri oluştururken bu API 'YI kullanın.
+  - Çoğu derlemede etkinleştirilecek olan günlükler oluştururken bu API’yi kullanın.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - Yalnızca tanımlı olduğunda etkindir `DEBUG` .
-  - Ekli bir hata ayıklayıcıya yazar.
+  - Yalnızca `DEBUG` tanımlandığında etkindir.
+  - Kullanıma açılan bir hata ayıklayıcıya yazar.
   - `*nix`Ayarlandıysa, stderr 'e yazma işlemleri `COMPlus_DebugWriteToStdErr` yapılır.
-  - Yalnızca hata ayıklama yapılarında etkinleştirilecek günlükleri oluştururken bu API 'YI kullanın.
+  - Yalnızca hata ayıklama derlemelerinde etkinleştirilecek günlükler oluştururken bu API’yi kullanın.
 
 ### <a name="logging-events"></a>Olayları günlüğe kaydetme
 
@@ -53,11 +53,12 @@ Aşağıdaki API 'Ler daha fazla olay yönelimlidir. Basit dizeleri günlüğe k
   - EventSource birincil kök .NET Core izleme API 'sidir.
   - Tüm .NET Standard sürümlerde kullanılabilir.
   - Yalnızca seri hale getirilebilir nesnelerin izlenmesini sağlar.
-  - Ekli [olay dinleyicilerine](xref:System.Diagnostics.Tracing.EventListener)yazar.
-  - .NET Core için dinleyicileri sağlar:
+  - , EventSource öğesini kullanmak için yapılandırılmış herhangi bir [EventListener](xref:System.Diagnostics.Tracing.EventListener) örneği aracılığıyla işlem içi tüketilebilir.
+  - Şu yollarla işlem dışı tüketilebilir:
     - Tüm platformlarda .NET Core EventPipe
     - [Windows için olay Izleme (ETW)](/windows/win32/etw/event-tracing-portal)
     - [Linux için LTTng izleme çerçevesi](https://lttng.org/)
+      - İzlenecek yol: [PerfCollect kullanarak bir LTTng Izlemesi toplayın](trace-perfcollect-lttng.md).
 
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - .NET Core 'a ve .NET Framework için bir [NuGet paketi](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) olarak eklenmiştir.

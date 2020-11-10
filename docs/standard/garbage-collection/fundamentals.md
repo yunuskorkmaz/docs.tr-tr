@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 322e079a1be556efb536b24e216e480c1950bd8c
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: b70eb44c3d92e03ab4b33f81b87d48c70797cec5
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917021"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441017"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 
@@ -70,7 +70,7 @@ Yönetilen yığından bellek ayırmak, yönetilmeyen bellek ayrımından daha h
 
 ### <a name="memory-release"></a>Bellek sürümü
 
-Atık toplayıcısının optimizasyon altyapısı, yapılan ayrımlara göre bir toplama işlemini gerçekleştirmek için en iyi zamanı belirler. Atık toplayıcı bir toplama gerçekleştirdiğinde, uygulama tarafından artık kullanılmayan nesnelere ayrılan belleği serbest bırakır. Uygulamanın *köklerini*inceleyerek hangi nesnelerin artık kullanılmadığını belirler. Bir uygulamanın kökleri statik alanlar, yerel değişkenler ve bir iş parçacığının yığınındaki parametreleri ve CPU kayıtları içerir. Her kök yönetilen yığındaki bir nesneye başvurur veya null olarak ayarlanır. Çöp toplayıcı, tam zamanında (JıT) derleyicisinin ve çalışma zamanının korumasını sağlayan etkin kökler listesine erişebilir. Bu listeyi kullanarak, çöp toplayıcı köklerden erişilebilen tüm nesneleri içeren bir grafik oluşturur.
+Atık toplayıcısının optimizasyon altyapısı, yapılan ayrımlara göre bir toplama işlemini gerçekleştirmek için en iyi zamanı belirler. Atık toplayıcı bir toplama gerçekleştirdiğinde, uygulama tarafından artık kullanılmayan nesnelere ayrılan belleği serbest bırakır. Uygulamanın *köklerini* inceleyerek hangi nesnelerin artık kullanılmadığını belirler. Bir uygulamanın kökleri statik alanlar, bir iş parçacığının yığınında yerel değişkenler, CPU kayıtları, GC tutamaçları ve sonlandırma kuyruğu içerir. Her kök yönetilen yığındaki bir nesneye başvurur veya null olarak ayarlanır. Çöp toplayıcı, çalışma zamanının geri kalanını bu köklere sorabilir. Bu listeyi kullanarak, çöp toplayıcı köklerden erişilebilen tüm nesneleri içeren bir grafik oluşturur.
 
 Grafta bulunmayan nesnelere uygulamanın köklerinden ulaşılamaz. Çöp toplayıcı erişilemeyen nesneleri atık olarak değerlendirir ve bunlar için ayrılan belleği serbest bırakır. Bir toplama sırasında, atık toplayıcı yönetilen yığını inceleyerek erişilemeyen nesneler tarafından kullanılan adres alanı bloklarını arar. Erişilemeyen nesneleri keşfettikçe, bir bellek kopyalama işleviyle bellekteki erişilebilir nesneleri sıkıştırır ve bu sayede, erişilemeyen nesnelere ayrılan adres alanlarını serbest bırakır. Erişilebilir nesneler için bellek sıkıştırıldıktan sonra atık toplayıcı gerekli işaretçi düzeltmelerini yaparak uygulamanın köklerinin nesnelerin yeni konumlarına işaret etmesini sağlar. Ayrıca yönetilen yığının işaretçisini erişilebilen son nesnenin sonuna konumlandırır.
 
@@ -122,7 +122,7 @@ GC algoritması çeşitli noktalara dayanır:
 
 - **Nesil 0**. Bu, kardeşinizin nesli ve kısa süreli nesneler içerir. Kısa süreli bir nesne örneği, geçici bir değişkendir. Çöp toplama bu nesde en sık oluşur.
 
-  Yeni ayrılmış nesneler yeni nesil nesneler oluşturur ve örtülü olarak 0. nesil koleksiyonlardır. Ancak, büyük nesnelerse, bazen *2. nesil*olarak adlandırılan büyük nesne yığınına (LOH) gider. Nesil 3, 2. kuşak kapsamında mantıksal olarak toplanan fiziksel bir oluşturma.
+  Yeni ayrılmış nesneler yeni nesil nesneler oluşturur ve örtülü olarak 0. nesil koleksiyonlardır. Ancak, büyük nesnelerse, bazen *2. nesil* olarak adlandırılan büyük nesne yığınına (LOH) gider. Nesil 3, 2. kuşak kapsamında mantıksal olarak toplanan fiziksel bir oluşturma.
 
   Çoğu nesne, 1. nesil atık toplama için geri kazanılır ve bir sonraki nesle kalmaz.
   
@@ -138,7 +138,7 @@ GC algoritması çeşitli noktalara dayanır:
 
   Kuşak 2 ' deki nesneler, gelecekteki bir koleksiyonda ulaşılamaz olarak belirlenene kadar 2. nesil bir koleksiyon üzerinde kalır.
   
-  Büyük nesne yığınındaki nesneler (bazen *nesil 3*olarak adlandırılır) 2. nesil ile de toplanır.
+  Büyük nesne yığınındaki nesneler (bazen *nesil 3* olarak adlandırılır) 2. nesil ile de toplanır.
 
 Atık koleksiyonlar belirli nesiller üzerinde koşullar garanti olarak oluşur. Oluşturma toplanması, bu kuşak ve tüm küçük nesiller içindeki nesnelerin toplanması anlamına gelir. 2. nesil atık toplama, tüm oluşumlardaki nesneleri geri kazanır (yani, yönetilen yığındaki tüm nesneler) olduğu için tam çöp toplama olarak da bilinir.
 
@@ -154,7 +154,7 @@ Atık toplamada geri kazanımayan nesneler, acil sanal öğeler olarak bilinir v
 
 ### <a name="ephemeral-generations-and-segments"></a>Kısa ömürlü Nesler ve segmentler
 
-Nesil 0 ve 1 ' deki nesneler kısa süreli olduğundan, bu nesiller, kısa *ömürlü nesiller*olarak bilinir.
+Nesil 0 ve 1 ' deki nesneler kısa süreli olduğundan, bu nesiller, kısa *ömürlü nesiller* olarak bilinir.
 
 Kısa ömürlü nesiller, kısa ömürlü segment olarak bilinen bellek segmentinde ayrılır. Çöp toplayıcı tarafından alınan her yeni segment, yeni kısa ömürlü segment olur ve 0. nesil atık toplamayı izleyen nesneleri içerir. Eski kısa ömürlü segment, yeni nesil 2 segmentine dönüşür.
 

@@ -3,12 +3,12 @@ title: SYSLIB0002 hatası
 description: Derleme zamanı hatası SYSLIB0002 üreten kullanımdan çıkarılması hakkında bilgi edinin.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 00fd42975c9286221b75c87caef8d2109b9b7100
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 53eb51d5e525c463e5698710bdb6fa0c0907e43c
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333357"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440783"
 ---
 # <a name="syslib0002-principalpermissionattribute-is-obsolete"></a>SYSLIB0002: PrincipalPermissionAttribute artık kullanılmıyor
 
@@ -59,6 +59,8 @@ Kullanımdan çıkarma uyarılarının aksine, hatayı bastırılamaz.
       // Code that should run only when user is an administrator.
   }
   ```
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

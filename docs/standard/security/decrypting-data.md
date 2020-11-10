@@ -12,12 +12,12 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: 2ba4c3ba43d688aeb66c67ec3f94f4a503d47892
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 7e8fe5a8b7ed7c217a31a8ee91a5d111257fed45
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556988"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440991"
 ---
 # <a name="decrypting-data"></a>Verilerin Şifresini Çözme
 
@@ -27,7 +27,7 @@ ms.locfileid: "87556988"
 
 Simetrik algoritmalarla şifrelenen verilerin şifresinin çözülmesi, simetrik algoritmalarla verileri şifrelemek için kullanılan işleme benzerdir. <xref:System.Security.Cryptography.CryptoStream>Sınıfı, yönetilen herhangi bir Stream nesnesinden okunan verilerin şifresini çözmek için .NET tarafından sunulan simetrik şifreleme sınıflarıyla birlikte kullanılır.
 
-Aşağıdaki örnek, algoritma için varsayılan uygulama sınıfının yeni bir örneğinin nasıl oluşturulacağını göstermektedir <xref:System.Security.Cryptography.Aes> . Örnek, bir nesnesinde şifre çözme gerçekleştirmek için kullanılır <xref:System.Security.Cryptography.CryptoStream> . Bu örnek ilk olarak **AES** uygulama sınıfının yeni bir örneğini oluşturur. Sonra bir **CryptoStream** nesnesi oluşturur ve onu adlı yönetilen akışın değerine başlatır `myStream` . Daha sonra, **AES** sınıfından **CreateDecryptor** yöntemi, şifreleme için kullanılan aynı anahtar ve IV ' den geçirilir ve daha sonra **CryptoStream** oluşturucusuna geçirilir.
+Aşağıdaki örnek, algoritma için varsayılan uygulama sınıfının yeni bir örneğinin nasıl oluşturulacağını göstermektedir <xref:System.Security.Cryptography.Aes> . Örnek, bir nesnesinde şifre çözme gerçekleştirmek için kullanılır <xref:System.Security.Cryptography.CryptoStream> . Bu örnek ilk olarak uygulama sınıfının yeni bir örneğini oluşturur <xref:System.Security.Cryptography.Aes> . Yönetilen bir akış değişkeninden başlatma vektörü (IV) değerini okur `myStream` . Sonra bir nesnesi oluşturur <xref:System.Security.Cryptography.CryptoStream> ve örneğin değerini başlatır `myStream` . <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor%2A?displayProperty=nameWithType>Örnekten yöntemi, <xref:System.Security.Cryptography.Aes> IV değerini ve şifreleme için kullanılan anahtarı geçti.
 
 ```vb
 Dim aes As Aes = Aes.Create()
@@ -39,98 +39,12 @@ Aes aes = Aes.Create();
 CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
 ```
 
-Aşağıdaki örnek, bir akış oluşturma, akışın şifresini çözme, akıştan okuma ve akışları kapatma sürecinin tamamını gösterir. *TestData.txt*adlı bir dosyayı okuyan bir dosya akışı nesnesi oluşturulur. Daha sonra **CryptoStream** sınıfı ve **AES** sınıfı kullanılarak dosya akışının şifresi çözülür. Bu örnek, [verileri şifrelemek](encrypting-data.md)için simetrik şifreleme örneğinde kullanılan anahtar ve IV değerlerini belirtir. Bu değerleri şifrelemek ve aktarmak için gereken kodu göstermez.
+Aşağıdaki örnek, bir akış oluşturma, akışın şifresini çözme, akıştan okuma ve akışları kapatma sürecinin tamamını gösterir. *TestData.txt* adlı bir dosyayı okuyan bir dosya akışı nesnesi oluşturulur. Daha sonra **CryptoStream** sınıfı ve **AES** sınıfı kullanılarak dosya akışının şifresi çözülür. Bu örnek, [verileri şifrelemek](encrypting-data.md)için simetrik şifreleme örneğinde kullanılan anahtar değerini belirtir. Bu değerleri şifrelemek ve aktarmak için gereken kodu göstermez.
 
-```vb
-Imports System
-Imports System.IO
-Imports System.Security.Cryptography
+:::code language="csharp" source="snippets/decrypting-data/csharp/aes-decrypt.cs":::
+:::code language="vb" source="snippets/decrypting-data/vb/aes-decrypt.vb":::
 
-Module Module1
-    Sub Main()
-            'The key and IV must be the same values that were used
-            'to encrypt the stream.
-            Dim key As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}
-            Dim iv As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}
-        Try
-            'Create a file stream.
-            Dim myStream As FileStream = new FileStream("TestData.txt", FileMode.Open)
-
-            'Create a new instance of the default Aes implementation class
-            'and decrypt the stream.
-            Dim aes As Aes = Aes.Create()
-
-            'Create an instance of the CryptoStream class, pass it the file stream, and decrypt
-            'it with the Rijndael class using the key and IV.
-            Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
-
-            'Read the stream.
-            Dim sReader As New StreamReader(cryptStream)
-
-            'Display the message.
-            Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd())
-
-            'Close the streams.
-            sReader.Close()
-            myStream.Close()
-            'Catch any exceptions.
-        Catch
-            Console.WriteLine("The decryption Failed.")
-            Throw
-        End Try
-    End Sub
-End Module
-```
-
-```csharp
-using System;
-using System.IO;
-using System.Security.Cryptography;
-
-class Class1
-{
-    static void Main(string[] args)
-    {
-        //The key and IV must be the same values that were used
-        //to encrypt the stream.
-        byte[] key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
-        byte[] iv = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
-        try
-        {
-            //Create a file stream.
-            FileStream myStream = new FileStream("TestData.txt", FileMode.Open);
-
-            //Create a new instance of the default Aes implementation class
-            Aes aes = Aes.Create();
-
-            //Create a CryptoStream, pass it the file stream, and decrypt
-            //it with the Aes class using the key and IV.
-            CryptoStream cryptStream = new CryptoStream(
-               myStream,
-               aes.CreateDecryptor(key, iv),
-               CryptoStreamMode.Read);
-
-            //Read the stream.
-            StreamReader sReader = new StreamReader(cryptStream);
-
-            //Display the message.
-            Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd());
-
-            //Close the streams.
-            sReader.Close();
-            myStream.Close();
-        }
-        //Catch any exceptions.
-        catch
-        {
-            Console.WriteLine("The decryption failed.");
-            throw;
-        }
-    }
-}
-```
-
-Yukarıdaki örnek, [verileri şifrelemek](encrypting-data.md)için simetrik şifreleme örneğinde kullanılan anahtar, IV ve algoritmayı kullanır. Bu örnek tarafından oluşturulan *TestData.txt* dosyanın şifresini çözer ve konsolundaki özgün metni görüntüler.
+Yukarıdaki örnekte, [verileri şifrelemek](encrypting-data.md)için simetrik şifreleme örneğinde kullanılan anahtar ve algoritma kullanılmaktadır. Bu örnek tarafından oluşturulan *TestData.txt* dosyanın şifresini çözer ve konsolundaki özgün metni görüntüler.
 
 ## <a name="asymmetric-decryption"></a>Asimetrik şifre çözme
 

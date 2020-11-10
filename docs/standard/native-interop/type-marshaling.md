@@ -2,12 +2,12 @@
 title: Tür sıralama-.NET
 description: .NET 'in türlerinizi yerel bir gösterimde nasıl sıraladığında öğrenin.
 ms.date: 01/18/2019
-ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7fc3dfe950ecd3ed0ff5e4eb0e101c1596a831e1
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188399"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441004"
 ---
 # <a name="type-marshaling"></a>Tür hazırlama
 
@@ -65,7 +65,7 @@ Aşağıdaki tablo, yalnızca Windows 'un varsayılan sıralama kurallarını i�
 | `System.ArgIterator` | `va_list` | İzin verilmiyor |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | İzin verilmiyor |
 | `System.Collections.IEnumerable` | `IDispatch*` | İzin verilmiyor |
-| `System.DateTimeOffset` | `int64_t` 1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme || `int64_t` 1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme |
+| `System.DateTimeOffset` | `int64_t` 1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme | `int64_t` 1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme |
 
 Bazı türler, alan olarak değil yalnızca parametre olarak sıralanabilir. Bu türler aşağıdaki tabloda listelenmiştir:
 

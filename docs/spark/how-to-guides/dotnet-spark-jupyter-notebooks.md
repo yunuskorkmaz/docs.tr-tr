@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: 38263c5ce4d1686777f33f5a9742d530eafa9d89
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: eb285465fcacc3e7d4ee60765c30497dcefbc737
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955721"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441069"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>Jupyıter not defterlerinde Apache Spark için .NET kullanın
 
@@ -24,9 +24,9 @@ Bu makalede, .net etkileşimli ile Jupyter Notebook ve Visual Studio Code (VS Co
 
 .NET Core küresel aracı olan .net, .net [etkileşimli](https://github.com/dotnet/interactive)bağlamında, Jupyter Notebook gibi etkileşimli bilgi işlem ortamlarında .NET kodu (C#/f #) yazmak için bir çekirdek sağlar.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET Core 3,1 SDK](https://docs.microsoft.com/dotnet/core/install/)
+- [.NET Core 3,1 SDK](../../core/install/index.yml)
 - [Apache Spark](https://spark.apache.org/downloads.html)
 - [Apache Spark .NET Worker](https://github.com/dotnet/spark/releases)
 
@@ -44,7 +44,7 @@ Jupi Not defterleri ile çalışmak için iki şey olması gerekir.
         > Varsayılan olarak, paketin en son sürümü indirilir. **İndirdiğinizden emin olun Apache Spark .NET çalışanınız ile aynı.**
 
     1. **Bilgi** bölmesinde, paketin en son sürümünü indirmek Için **paketi indir** ' i seçin. Paketin adı  *Microsoft. Spark ile benzerdir. [ Paket-sürümü]. nupkg*.
-    1. İndirilen paketi sıkıştırmayı açın. Sıkıştırılmış olmayan dizin, *jar dosyaları dışındaki*adlı bir alt dizin içermelidir. Daha sonraki bir zamanda kullanıldığından yola göz atın.
+    1. İndirilen paketi sıkıştırmayı açın. Sıkıştırılmış olmayan dizin, *jar dosyaları dışındaki* adlı bir alt dizin içermelidir. Daha sonraki bir zamanda kullanıldığından yola göz atın.
 
 ## <a name="start-net-for-apache-spark"></a>Apache Spark için .NET 'i başlatın
 
@@ -111,7 +111,7 @@ Jupyıter ile etkileşim kurmak için farklı arabirimler kullanabilirsiniz. Tar
 >- [.NET etkileşimli not defterleri uzantısı](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode)
 
 1. VS Code’u açın.
-1. Komut paleti **görünümünü > komut paleti**' ni açın.
+1. Komut paleti **görünümünü > komut paleti** ' ni açın.
 
     Komut paleti göründüğünde, yeni bir .NET etkileşimli not defteri oluşturmak için aşağıdaki komutu girin:
 

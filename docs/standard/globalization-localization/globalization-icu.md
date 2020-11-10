@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: ca579e837b801de237859963ede0e5a9a4bfbcbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400885"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439475"
 ---
 # <a name="net-globalization-and-icu"></a>.NET Genelleştirme ve ıCU
 
@@ -37,6 +37,29 @@ Windows 10 Mayıs 2019 güncelleştirmesi ve sonraki sürümleri, işletim siste
 
 > [!NOTE]
 > ICU kullanırken bile,, `CurrentCulture` `CurrentUICulture` ve `CurrentRegion` üyeleri Kullanıcı ayarlarını kabul etmek için Windows Işletim sistemi API 'lerini kullanmaya devam eder.
+
+### <a name="behavioral-differences"></a>Davranış farkları
+
+Uygulamanızı .NET 5 hedefleyecek şekilde yükseltirseniz, Genelleştirme tesislerini kullandığınızı fark etmeseniz bile uygulamanızdaki değişiklikleri görebilirsiniz. Bu bölüm, görebileceğiniz davranış değişikliklerinden birini listeler, ancak diğerleri de vardır.
+
+##### <a name="stringindexof"></a>String. IndexOf
+
+<xref:System.String.IndexOf(System.String)?displayProperty=nameWithType>Bir dizedeki yeni satır karakterinin dizinini bulmak için çağıran aşağıdaki kodu göz önünde bulundurun.
+
+```csharp
+string s = "Hello\r\nworld!";
+int idx = s.IndexOf("\n");
+Console.WriteLine(idx);
+```
+
+- Önceki .NET sürümlerinde, kod parçacığı yazdırılır `6` .
+- .NET 5,0 ve sonraki sürümlerde Windows 10 ' da 2019 güncelleştirme ve sonraki sürümlerinde, kod parçacığı yazdırılır `-1` .
+
+Kültüre duyarlı arama yerine bir sıralı arama gerçekleştirerek bu kodu onarmak için, <xref:System.String.IndexOf(System.String,System.StringComparison)> aşırı yüklemeyi çağırın ve <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> bağımsız değişken olarak geçirin.
+
+Kod çözümleme kurallarını [CA1307: açıklık ve CA1309 Için StringComparison belirtin](../../../docs/fundamentals/code-analysis/quality-rules/ca1307.md) : kodunuzda bu çağrı sitelerini bulmak Için [sıralı StringComparison](../../../docs/fundamentals/code-analysis/quality-rules/ca1309.md) ' i kullanın.
+
+Daha fazla bilgi için bkz. [.NET 5 + üzerindeki dizeleri karşılaştırırken davranış değişiklikleri](../base-types/string-comparison-net-5-plus.md).
 
 ### <a name="use-nls-instead-of-icu"></a>ICU yerine NLS kullanma
 
@@ -107,7 +130,7 @@ Kendi içinde bulunan uygulamalar için, Kullanıcı tarafından özel bir eylem
 
 ICU 'yi bir NuGet paketi aracılığıyla kullanıyorsanız, bu, çerçeveye bağımlı uygulamalarda kullanılır. NuGet yerel varlıkları çözer ve bu dosyaları `deps.json` dosya ve uygulamanın çıkış dizinine dahil eder `runtimes` . .NET onu buradan yükler.
 
-IU 'nin yerel bir derlemeden kullanıldığı, çerçeveye bağımlı uygulamalar (kendi içinde olmayan) için ek adımlar gerçekleştirmeniz gerekir. .NET SDK 'Sı henüz "gevşek" yerel ikililerinin içine dahil edilecek bir özelliğe sahip değildir `deps.json` ( [Bu SDK sorununa](https://github.com/dotnet/sdk/issues/11373)bakın). Bunun yerine, uygulamanın proje dosyasına ek bilgiler ekleyerek bunu etkinleştirebilirsiniz. Örnek:
+IU 'nin yerel bir derlemeden kullanıldığı, çerçeveye bağımlı uygulamalar (kendi içinde olmayan) için ek adımlar gerçekleştirmeniz gerekir. .NET SDK 'Sı henüz "gevşek" yerel ikililerinin içine dahil edilecek bir özelliğe sahip değildir `deps.json` ( [Bu SDK sorununa](https://github.com/dotnet/sdk/issues/11373)bakın). Bunun yerine, uygulamanın proje dosyasına ek bilgiler ekleyerek bunu etkinleştirebilirsiniz. Örneğin:
 
 ```xml
 <ItemGroup>

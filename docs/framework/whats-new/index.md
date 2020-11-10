@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: da0e92f394507a37b0b6c163b41a575abc1c1a2b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687569"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441115"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework yenilikleri
 
@@ -71,7 +71,7 @@ Bir uygulamanın yardımcı teknoloji kullanıcıları için uygun bir deneyim s
 
 #### <a name="base-classes"></a>Temel sınıflar
 
-**Şifrelemeye göre daha az FIPS etkisi** . .NET Framework önceki sürümlerinde, <xref:System.Security.Cryptography.SHA256Managed> <xref:System.Security.Cryptography.CryptographicException> Sistem şifreleme KITAPLıKLARı "FIPS modunda" yapılandırıldığında bir oluşturma gibi yönetilen şifreleme sağlayıcısı sınıfları. Bu özel durumlar, Sistem şifreleme kitaplıklarının aksine, şifreleme sağlayıcısı sınıflarının yönetilen sürümlerinin FIPS (Federal bilgi Işleme standartları) 140-2 sertifikası olmadığı için oluşturulur. Bazı geliştiricilerin geliştirme makineleri FIPS modunda olduğundan, özel durumlar genellikle üretim sistemlerinde oluşturulur.
+**Şifrelemeye göre daha az FIPS etkisi**. .NET Framework önceki sürümlerinde, <xref:System.Security.Cryptography.SHA256Managed> <xref:System.Security.Cryptography.CryptographicException> Sistem şifreleme KITAPLıKLARı "FIPS modunda" yapılandırıldığında bir oluşturma gibi yönetilen şifreleme sağlayıcısı sınıfları. Bu özel durumlar, Sistem şifreleme kitaplıklarının aksine, şifreleme sağlayıcısı sınıflarının yönetilen sürümlerinin FIPS (Federal bilgi Işleme standartları) 140-2 sertifikası olmadığı için oluşturulur. Bazı geliştiricilerin geliştirme makineleri FIPS modunda olduğundan, özel durumlar genellikle üretim sistemlerinde oluşturulur.
 
 Varsayılan olarak, .NET Framework 4,8 ' i hedefleyen uygulamalarda aşağıdaki yönetilen şifreleme sınıfları artık bu durumda bir oluşturmaz <xref:System.Security.Cryptography.CryptographicException> :
 
@@ -190,11 +190,11 @@ Mixed-Mode yüksek DPı ölçeklendirme desteğini etkinleştirmek için aşağ�
 
 .NET Framework 4,8 ' deki çalışma zamanı aşağıdaki değişiklikleri ve geliştirmeleri içerir:
 
-**JIT derleyicisi geliştirmeleri** . .NET Framework 4,8 ' deki tam zamanında (JıT) derleyici .NET Core 2,1 ' de JıT derleyicisine dayanır. .NET Core 2,1 JıT derleyicisi üzerinde yapılan en iyileştirmelerin ve tüm hata düzeltmelerinin çoğu, .NET Framework 4,8 JıT derleyicisine dahildir.
+**JIT derleyicisi geliştirmeleri**. .NET Framework 4,8 ' deki tam zamanında (JıT) derleyici .NET Core 2,1 ' de JıT derleyicisine dayanır. .NET Core 2,1 JıT derleyicisi üzerinde yapılan en iyileştirmelerin ve tüm hata düzeltmelerinin çoğu, .NET Framework 4,8 JıT derleyicisine dahildir.
 
-**Ngen geliştirmeleri** . Çalışma zamanı, [Yerel Görüntü Oluşturucu](../tools/ngen-exe-native-image-generator.md) (NGen) görüntüleri için bellek yönetimini iyileştirmiştir, bu sayede Ngen görüntülerinden eşlenen verilerin bellekte yerleşik olmaması sağlanır. Bu, yürütülecek belleği değiştirerek bu yüzey alanını rastgele kodu yürütmeye çalışacak saldırılara karşı azaltır.
+**Ngen geliştirmeleri**. Çalışma zamanı, [Yerel Görüntü Oluşturucu](../tools/ngen-exe-native-image-generator.md) (NGen) görüntüleri için bellek yönetimini iyileştirmiştir, bu sayede Ngen görüntülerinden eşlenen verilerin bellekte yerleşik olmaması sağlanır. Bu, yürütülecek belleği değiştirerek bu yüzey alanını rastgele kodu yürütmeye çalışacak saldırılara karşı azaltır.
 
-**Tüm derlemeler Için kötü amaçlı yazılımdan koruma taraması** . Önceki .NET Framework sürümlerinde, çalışma zamanı Windows Defender ya da üçüncü taraf kötü amaçlı yazılımdan koruma yazılımı kullanarak diskten yüklenen tüm derlemeleri tarar. Ancak, yöntemi gibi diğer kaynaklardan yüklenen derlemeler <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> taranmaz ve olası algılanabilecek kötü amaçlı yazılımları içerebilir. Windows 10 ' da çalışan .NET Framework 4,8 ' den itibaren, çalışma zamanı [kötü amaçlı yazılımdan koruma taraması arabirimini (AMSı)](/windows/desktop/AMSI/antimalware-scan-interface-portal)uygulayan kötü amaçlı yazılımdan koruma çözümleri tarafından bir taramayı tetikler
+**Tüm derlemeler Için kötü amaçlı yazılımdan koruma taraması**. Önceki .NET Framework sürümlerinde, çalışma zamanı Windows Defender ya da üçüncü taraf kötü amaçlı yazılımdan koruma yazılımı kullanarak diskten yüklenen tüm derlemeleri tarar. Ancak, yöntemi gibi diğer kaynaklardan yüklenen derlemeler <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> taranmaz ve olası algılanabilecek kötü amaçlı yazılımları içerebilir. Windows 10 ' da çalışan .NET Framework 4,8 ' den itibaren, çalışma zamanı [kötü amaçlı yazılımdan koruma taraması arabirimini (AMSı)](/windows/desktop/AMSI/antimalware-scan-interface-portal)uygulayan kötü amaçlı yazılımdan koruma çözümleri tarafından bir taramayı tetikler
 
 <a name="v472"></a>
 
@@ -720,11 +720,11 @@ _ *Nesne önbelleği genişletilebilirliği**
 
 ASP.NET, .NET Framework 4,7 ' den başlayarak, geliştiricilerin bellek içi nesne önbelleğe alma ve bellek izleme için varsayılan ASP.NET uygulamalarını değiştirmesine izin veren yeni bir API kümesi ekler. ASP.NET uygulamasının yeterli olmaması halinde geliştiriciler artık aşağıdaki üç bileşenden birini değiştirebilir:
 
-- **Nesne önbelleği deposu** . Yeni önbellek sağlayıcıları yapılandırma bölümünü kullanarak, geliştiriciler yeni **ICacheStoreProvider** arabirimini kullanarak bir ASP.NET uygulaması için nesne önbelleğinin yeni uygulamalarını yükleyebilir.
+- **Nesne önbelleği deposu**. Yeni önbellek sağlayıcıları yapılandırma bölümünü kullanarak, geliştiriciler yeni **ICacheStoreProvider** arabirimini kullanarak bir ASP.NET uygulaması için nesne önbelleğinin yeni uygulamalarını yükleyebilir.
 
-- **Bellek izleme** . ASP.NET ' deki varsayılan bellek İzleyicisi, uygulamaları, işlem için yapılandırılmış özel bayt sınırına yakın bir şekilde çalıştığında veya makinenin toplam kullanılabilir fiziksel RAM üzerinde azaldığını bildirir. Bu limitlerin yakınında, bildirimler tetiklenir. Bazı uygulamalar için bildirimler, yararlı yeniden eylemlere izin vermek üzere yapılandırılan sınırlara çok yakın şekilde harekete geçirilir. Geliştiriciler artık özelliğini kullanarak varsayılan değerini değiştirmek için kendi bellek izleyicilerini yazabilir <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> .
+- **Bellek izleme**. ASP.NET ' deki varsayılan bellek İzleyicisi, uygulamaları, işlem için yapılandırılmış özel bayt sınırına yakın bir şekilde çalıştığında veya makinenin toplam kullanılabilir fiziksel RAM üzerinde azaldığını bildirir. Bu limitlerin yakınında, bildirimler tetiklenir. Bazı uygulamalar için bildirimler, yararlı yeniden eylemlere izin vermek üzere yapılandırılan sınırlara çok yakın şekilde harekete geçirilir. Geliştiriciler artık özelliğini kullanarak varsayılan değerini değiştirmek için kendi bellek izleyicilerini yazabilir <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> .
 
-- **Bellek sınırı yeniden eylemleri** . Varsayılan olarak, ASP.NET, nesne önbelleğini kırpmaya çalışır ve <xref:System.GC.Collect%2A?displayProperty=nameWithType> özel bayt işlem sınırı yakınında düzenli olarak çağrı gerçekleştirir. Bazı uygulamalarda, çağrı sıklığı <xref:System.GC.Collect%2A?displayProperty=nameWithType> veya kırpılan önbellek miktarı verimsiz olur. Geliştiriciler artık **ıgözlemci** uygulamalarını uygulamanın bellek izleyicisine abone olarak varsayılan davranışı değiştirebilir veya tamamlayabilir.
+- **Bellek sınırı yeniden eylemleri**. Varsayılan olarak, ASP.NET, nesne önbelleğini kırpmaya çalışır ve <xref:System.GC.Collect%2A?displayProperty=nameWithType> özel bayt işlem sınırı yakınında düzenli olarak çağrı gerçekleştirir. Bazı uygulamalarda, çağrı sıklığı <xref:System.GC.Collect%2A?displayProperty=nameWithType> veya kırpılan önbellek miktarı verimsiz olur. Geliştiriciler artık **ıgözlemci** uygulamalarını uygulamanın bellek izleyicisine abone olarak varsayılan davranışı değiştirebilir veya tamamlayabilir.
 
 <a name="wcf47"></a>
 
@@ -1585,9 +1585,9 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
     Bir kitaplık tarafından kullanıma sunulan resmi bir sözleşme olduklarından, anahtarlar için tutarlı bir biçim kullanmak faydalıdır. Aşağıda iki belirgin biçim verilmiştir.
 
-    - *Anahtar* . *ad alanı* . *SwitchName*
+    - *Anahtar*. *ad alanı*. *SwitchName*
 
-    - *Anahtar* . *kitaplığı* . *SwitchName*
+    - *Anahtar*. *kitaplığı*. *SwitchName*
 
   - **Görev tabanlı zaman uyumsuz düzende yapılan değişiklikler (TAP)**
 
@@ -1758,7 +1758,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 - **Açık kaynaklı .NET Framework paketleri**
 
-  Sabit koleksiyonlar, [SIMD API 'leri](https://www.nuget.org/packages/Microsoft.Bcl.Simd)ve ad alanında bulunan gibi ağ API 'leri gibi .NET Core paketleri <xref:System.Net.Http> artık [GitHub](https://github.com/)'da açık kaynak paketleri olarak kullanılabilir. Koda erişmek için [GitHub 'da .net](https://github.com/dotnet/runtime)bölümüne bakın. Daha fazla bilgi ve bu paketlere katkıda bulunma hakkında daha fazla bilgi için bkz. GitHub 'da [.NET Core ve açık kaynak](../get-started/net-core-and-open-source.md), [.net giriş sayfası](https://github.com/dotnet/home).
+  Sabit koleksiyonlar, [SIMD API 'leri](https://www.nuget.org/packages/Microsoft.Bcl.Simd)ve ad alanında bulunan gibi ağ API 'leri gibi .NET Core paketleri <xref:System.Net.Http> artık [GitHub](https://github.com/)'da açık kaynak paketleri olarak kullanılabilir. Koda erişmek için [GitHub 'da .net](https://github.com/dotnet/runtime)bölümüne bakın. Daha fazla bilgi ve bu paketlere nasıl katkıda bulunabileceğiniz hakkında daha fazla bilgi için bkz. [GitHub 'da .net, .NET ana sayfasına](https://github.com/dotnet/home) [giriş](../../core/introduction.md).
 
 <a name="v452"></a>
 

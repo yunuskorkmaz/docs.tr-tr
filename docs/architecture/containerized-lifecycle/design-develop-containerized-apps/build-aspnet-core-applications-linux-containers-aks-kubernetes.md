@@ -2,12 +2,12 @@
 title: AKS/Kubernetes kümelerine Linux kapsayıcıları olarak dağıtılan ASP.NET Core uygulamalar oluşturun
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
 ms.date: 08/06/2020
-ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 831d2372131e20788d0f48190eb8c600aa02485c
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844569"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440835"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Bir AKS/Kubernetes Orchestrator 'a Linux kapsayıcıları olarak dağıtılan ASP.NET Core uygulamalar oluşturun
 
@@ -33,7 +33,7 @@ Bu örnek, Visual Studio şablonlarına dayalı birkaç basit proje kullanır, b
 
 **Şekil 4-35**. Visual Studio 2019 ' de ASP.NET Core Web uygulaması oluşturma.
 
-Visual Studio 'da örnek proje oluşturmak için **Dosya**  >  **Yeni**  >  **Proje**' yi seçin, **Web** projesi türünü ve ardından **ASP.NET Core Web uygulaması** şablonunu seçin. Ayrıca, gerekirse şablon için arama yapabilirsiniz.
+Visual Studio 'da örnek proje oluşturmak için **Dosya**  >  **Yeni**  >  **Proje** ' yi seçin, **Web** projesi türünü ve ardından **ASP.NET Core Web uygulaması** şablonunu seçin. Ayrıca, gerekirse şablon için arama yapabilirsiniz.
 
 Ardından, sonraki görüntüde gösterildiği gibi uygulama adını ve konumunu girin.
 
@@ -51,13 +51,13 @@ Artık Docker desteğinin, Proje oluşturulduktan sonra yapılabileceğini göst
 
 .NET Core 'un önceki bir sürümüne sahipseniz, 3,1 sürümünü indirip yükleyebilirsiniz <https://dotnet.microsoft.com/download> .
 
-Projenizi dilediğiniz zaman "Dockerize" gösterebilmeniz için artık Docker desteği ekleyeceğiz. Bu nedenle Çözüm Gezgini içindeki proje düğümüne sağ tıklayın ve **Add**  >  bağlam menüsünde**Docker desteği** Ekle ' yi seçin.
+Projenizi dilediğiniz zaman "Dockerize" gösterebilmeniz için artık Docker desteği ekleyeceğiz. Bu nedenle Çözüm Gezgini içindeki proje düğümüne sağ tıklayın ve **Add**  >  bağlam menüsünde **Docker desteği** Ekle ' yi seçin.
 
 ![Mevcut bir projeye Docker desteği eklemek için bağlam menü seçeneği: > Docker desteği eklemek > (projede) öğesine sağ tıklayın.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/add-docker-support-to-project.png)
 
 **Şekil 4-38**. Mevcut bir projeye Docker desteği ekleme
 
-Docker desteği ekleme işleminin tamamlanabilmesi için Windows veya Linux ' u seçebilirsiniz. Bu durumda, **Linux**' u seçin.
+Docker desteği ekleme işleminin tamamlanabilmesi için Windows veya Linux ' u seçebilirsiniz. Bu durumda, **Linux** ' u seçin.
 
 ![Dockerfile için hedef işletim sistemini seçmek üzere seçenek iletişim kutusu.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-linux-docker-support.png)
 
@@ -193,24 +193,24 @@ Görüntüleri [Azure Container Registry (ACR)](https://azure.microsoft.com/serv
 
 ### <a name="create-an-acr-instance"></a>ACR örneği oluşturma
 
-**Az CLI**konumundan şu komutu çalıştırın:
+**Az CLI** konumundan şu komutu çalıştırın:
 
 ```powershell
 az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
 
 > [!NOTE]
-> Kapsayıcı kayıt defteri adı (ör. `exploredocker` ) Azure içinde benzersiz olmalı ve 5-50 alfasayısal karakter içermelidir. Daha ayrıntılı bilgi için bkz. [kapsayıcı kayıt defteri oluşturma](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)
+> Kapsayıcı kayıt defteri adı (ör. `exploredocker` ) Azure içinde benzersiz olmalı ve 5-50 alfasayısal karakter içermelidir. Daha ayrıntılı bilgi için bkz. [kapsayıcı kayıt defteri oluşturma](/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)
 
 ### <a name="create-the-image-in-release-mode"></a>Görüntüyü yayın modunda oluşturma
 
-Şimdi, Şekil 4-46 ' de gösterildiği gibi, **yayın**moduna geçiş yaparak ve uygulamayı daha önce yaptığınız gibi çalıştırarak **yayın** modunda (üretim için hazır) görüntüyü oluşturacaksınız.
+Şimdi, Şekil 4-46 ' de gösterildiği gibi, **yayın** moduna geçiş yaparak ve uygulamayı daha önce yaptığınız gibi çalıştırarak **yayın** modunda (üretim için hazır) görüntüyü oluşturacaksınız.
 
 ![Yayın modunda derleme ' deki araç çubuğu seçeneği.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-release-mode.png)
 
 **Şekil 4-46**. Yayın modunu seçme
 
-`docker images`Komutu çalıştırırsanız, bir tane `debug` (**geliştirme**) ve diğeri `release` (**en son**) modu için oluşturulan görüntüleri görürsünüz.
+`docker images`Komutu çalıştırırsanız, bir tane `debug` ( **geliştirme** ) ve diğeri `release` ( **en son** ) modu için oluşturulan görüntüleri görürsünüz.
 
 ### <a name="create-a-new-tag-for-the-image"></a>Görüntü için yeni bir etiket oluşturun
 
@@ -371,7 +371,7 @@ spec:
 > [!TIP]
 > Bu kılavuzda [**Azure Kubernetes Service 'e (aks) dağıtım**](deploy-azure-kubernetes-service.md) bölümünde bu örnek için aks kümesini nasıl oluşturacağınız hakkında bilgi alabilirsiniz.
 
-Artık, **kubectl**kullanarak dağıtıma hazırsınız, ancak ilk olarak aks kümesindeki kimlik bilgilerini şu komutla almalısınız:
+Artık, **kubectl** kullanarak dağıtıma hazırsınız, ancak ilk olarak aks kümesindeki kimlik bilgilerini şu komutla almalısınız:
 
 ```console
 az aks get-credentials --resource-group explore-docker-aks-rg --name explore-docker-aks

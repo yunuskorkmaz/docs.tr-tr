@@ -1,52 +1,50 @@
 ---
 title: .NET 5’teki yenilikler
 description: .NET Core 'un bir sonraki gelişiminde bir çoklu platform ve açık kaynaklı bir geliştirme platformu olan .NET 5 hakkında bilgi edinin.
-ms.date: 10/13/2020
+ms.date: 11/06/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: cc86784e3fcac7e8a3b6f54c32f66763ae416d99
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 43d7a2baa75f3d71de8bbbf1d0bff7d1beb3d7cd
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050370"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440536"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5’teki yenilikler
 
-.NET Core, .NET Core 'un gelişmidir. Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te yer alan ayrıntılar ayrıntılı olarak verilmiştir. Sürüm numarası, .NET Framework 4. x ile karışıklık oluşmasını önlemek için 5,0. Ve "çekirdek", .NET ' in ana uygulama olduğu için adından bırakılır. ASP.NET Core, ASP.NET MVC 5 ile karıştırmamak için "Core" adını korur. Ayrıca, Entity Framework Core "çekirdek" adını Entity Framework 5 ve 6 ile karıştırmamak için korur. .NET 5, .NET Core veya .NET Framework daha fazla sayıda uygulamayı ve daha fazlasını destekler.
+.NET 5,0, .NET Core 'un sonraki önemli sürümüdür 3,1. Aşağıdaki iki nedenden dolayı .NET Core 4,0 yerine bu yeni sürüm .NET 5,0 ' i adlandırdık:
 
-.NET Core 'un bir bütün olarak .NET ekosistemini etkileyici yollarla geliştirmiştir. GitHub 'da açık kaynaklı bir proje olarak, topluluk katkılarını kutluyor ve zaman içinde gelişerek daha fazla iyileştiriliyor.
+- .NET Framework 4. x ile karışıklık oluşmasını önlemek için 4. x sürüm numaralarını atladık.
+- Bu, .NET 'in ana uygulamasının ileriye dönük olarak olduğunu vurgulamak için adından "Core" olarak bırakıyoruz. .NET 5,0, .NET Core veya .NET Framework 'dan daha fazla sayıda uygulamayı ve daha fazla platformu destekler.
 
-.NET Core 'un birkaç birincil özelliği vardır:
+ASP.NET Core 5,0, .NET 5,0 tabanlıdır ancak "Core" adını ASP.NET MVC 5 ile karıştırmamak için korur. Benzer şekilde, Entity Framework Core 5,0 Entity Framework 5 ve 6 ' a karışmasını önlemek için "Core" adını korur.
 
-> [!div class="checklist"]
->
-> - Platformlar arası
-> - Açık kaynak
-> - Yan yana yükleme
-> - Küçük proje dosyaları (SDK stili)
-> - Esnek dağıtım
+.NET 5,0, .NET Core 3,1 ile karşılaştırıldığında aşağıdaki geliştirmeleri ve yeni özellikleri içerir:
 
-.NET 5 bu özellikleri genişleterek artımlı iyileştirmeler yapar:
-
-- Tek dosya uygulamaları
+- [C# güncelleştirmeleri](#c-updates)
+- [F # güncelleştirme](#f-updates)
+- [Visual Basic güncelleştirmeleri](#visual-basic-updates)
+- [ Yeni özelliklerdeSystem.Text.Js](#systemtextjson-new-features)
+- [Tek dosya uygulamaları](deploying/single-file.md)
+- [Uygulama kırpması](https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5)
 - Windows ARM64 ve ARM64 iç bilgileri
+- Döküm hata ayıklaması için araç desteği
+- Çalışma zamanı kitaplıkları %80, [null yapılabilir başvuru türleri](../csharp/nullable-references.md) için açıklama eklenmiş
 - Performans iyileştirmeleri:
   - [Çöp toplama (GC)](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/#gc)
   - [System.Text.Json](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/#json)
   - [System.Text.RegularExpressions](https://devblogs.microsoft.com/dotnet/regex-performance-improvements-in-net-5)
   - [Zaman uyumsuz ValueTask havuzu](https://devblogs.microsoft.com/dotnet/async-valuetask-pooling-in-net-5)
+  - [Kapsayıcı boyutu iyileştirmeleri](https://github.com/dotnet/dotnet-docker/issues/1814#issuecomment-625294750)
   - [Birçok daha fazla alan](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)
-- [Kapsayıcı boyutu iyileştirmeleri](https://github.com/dotnet/dotnet-docker/issues/1814#issuecomment-625294750)
-- [Uygulama kırpması](https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5)
-- [C# derleyici geliştirmeleri](https://devblogs.microsoft.com/dotnet/automatically-find-latent-bugs-in-your-code-with-net-5)
-- Döküm hata ayıklaması için araç desteği
-- Platform [null yapılabilir başvuru türleri](../csharp/nullable-references.md) için %80 açıklanmalıdır
 
-### <a name="what-net-5-is-not"></a>.NET 5 ne değildir?
+## <a name="net-50-doesnt-replace-net-framework"></a>.NET 5,0 .NET Framework değiştirmez
 
-.NET 5 .NET Framework için tamamen değişiklik değildir. Aşağıdaki teknolojilerin .NET Framework .NET 5 ' e bağlantı noktası yoktur, ancak desteklenen alternatifler vardır:
+.NET 5,0, .NET ' ün ve .NET Framework 4. x ' in ana uygulamasının hala desteklenmesidir.
+
+Aşağıdaki teknolojilerin .NET Framework .NET 5,0 ' e bağlantı noktası yoktur, ancak .NET 5,0 ' de alternatifler vardır:
 
 | Teknoloji                             | Önerilen alternatif                                                                         |
 |----------------------------------------|-------------------------------------------------------------------------------------------------|
@@ -54,17 +52,13 @@ ms.locfileid: "92050370"
 | Windows Communication Foundation (WCF) | [gRPC](/aspnet/core/grpc)                                                                       |
 | Windows Workflow (WF)                  | [Açık kaynaklı CoreWF](https://github.com/UiPath-Open/corewf)                                     |
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-50-doesnt-replace-net-standard"></a>.NET 5,0 .NET Standard değiştirmez
 
 Yeni uygulama geliştirme, `net5.0` sınıf kitaplıkları da dahil olmak üzere tüm proje türleri için hedef çerçeve bilinen adını (tfd) belirtebilir. .NET 5 iş yükleri arasında kod paylaşımı, tüm ihtiyacınız olan tfd ' de basitleştirilmiştir `net5.0` .
 
-`net5.0`Tfd, ve adlarını birleştirir ve `netcoreapp` değiştirir `netstandard` . Bu TFM genellikle, .NET Standard gibi, platformlar arası çalışan teknolojileri dahil eder. Ancak, .NET Framework, .NET Core ve .NET 5 iş yükleri arasında kod paylaşmayı planlıyorsanız, `netstandard2.0` TFI olarak belirterek bunu yapabilirsiniz. Daha fazla bilgi için bkz. [hedef çerçeveleri belirtme](../standard/frameworks.md#how-to-specify-a-target-framework).
+.NET 5,0 uygulamaları ve kitaplıkları için, `net5.0` hedef Framework bilinen adı (TFM), `netcoreapp` ve tfms 'yi birleştirir ve değiştirir `netstandard` . Ancak, .NET Framework, .NET Core ve .NET 5 iş yükleri arasında kod paylaşmayı planlıyorsanız, `netstandard2.0` TFI olarak belirterek bunu yapabilirsiniz. Daha fazla bilgi için bkz. [.NET Standard](../standard/net-standard.md).
 
-## <a name="language-updates"></a>Dil güncelleştirmeleri
-
-.NET 5 ile .NET programlama dilleri iyileştirilmesine devam etmektedir.
-
-### <a name="c-updates"></a>C# güncelleştirmeleri
+## <a name="c-updates"></a>C# güncelleştirmeleri
 
 .NET 5 uygulamaları yazan geliştiricilerin en son C# sürümüne ve özelliklerine erişimi olur. .NET 5, dile birçok yeni özellik getiren C# 9 ile eşleştirilmiş. Aşağıda bazı önemli noktalar verilmiştir:
 
@@ -80,17 +74,17 @@ Yeni uygulama geliştirme, `net5.0` sınıf kitaplıkları da dahil olmak üzere
 
 Kullanılabilir C# 9 özellikleri hakkında daha fazla bilgi için bkz. [C# 9 ' daki](../csharp/whats-new/csharp-9.md)yenilikler.
 
-#### <a name="source-generators"></a>Kaynak oluşturucuları
+### <a name="source-generators"></a>Kaynak oluşturucuları
 
 Kaynak oluşturucuları, vurgulanan yeni C# özelliklerinin yanı sıra geliştirici projelerine kendi şeklini yapıyor. Kaynak oluşturucuları, derleme sırasında çalışan kodun, programınızı İnceleme ve kodunuzun geri kalanı ile birlikte derlenen ek dosyalar üretmesine olanak tanır.
 
 Kaynak oluşturucuları hakkında daha fazla bilgi için bkz. [C# kaynak](https://devblogs.microsoft.com/dotnet/introducing-c-source-generators) oluşturucuları ve [c# kaynak Oluşturucu örnekleri](https://devblogs.microsoft.com/dotnet/new-c-source-generator-samples)tanıtımı.
 
-### <a name="f-updates"></a>F # güncelleştirme
+## <a name="f-updates"></a>F # güncelleştirme
 
 F # .NET fonksiyonel programlama dilidir ve .NET 5 ile geliştiricilerin F # 5 ' e erişimi vardır. F # 5 ' in birkaç yeni özelliği aşağıda verilmiştir:
 
-#### <a name="interpolated-strings"></a>Ara değerli dizeler
+### <a name="interpolated-strings"></a>Ara değerli dizeler
 
 C# ' de enterpolasyonlu dizeye benzer ve hatta JavaScript, F # temel dize ilişkilendirmeyi destekler.
 
@@ -110,7 +104,7 @@ let message = $"%s{name} is %d{age} years old."
 
 Bu, [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-printfmodule.html#sprintf) türü güvenli girişlere göre bir dizeyi biçimlendiren işleve benzerdir. <!-- For more information, see [What's new in F# 5](fsharp/whats-new/fsharp-50.md). -->
 
-### <a name="visual-basic-updates"></a>Visual Basic güncelleştirmeleri
+## <a name="visual-basic-updates"></a>Visual Basic güncelleştirmeleri
 
 .NET 5 ' teki Visual Basic için yeni dil özellikleri yoktur. Bununla birlikte, .NET 5 ile Visual Basic desteği şu şekilde genişletilir:
 
@@ -130,6 +124,23 @@ Bu, [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-
 | xUnit test projesi                     | `xunit`                |
 
 .NET CLı 'dan proje şablonları hakkında daha fazla bilgi için bkz [`dotnet new`](tools/dotnet-new.md) ..
+
+## <a name="systemtextjson-new-features"></a>Yeni özelliklerde System.Text.Js
+
+Ve [ üzerindeSystem.Text.Js](../standard/serialization/system-text-json-overview.md)için yeni özellikler mevcuttur:
+
+- [Başvuruları koru ve döngüsel başvuruları işle](../standard/serialization/system-text-json-how-to.md#preserve-references-and-handle-circular-references)
+- [HttpClient ve HttpContent genişletme yöntemleri](../standard/serialization/system-text-json-how-to.md#httpclient-and-httpcontent-extension-methods)
+- [Tırnak işaretleri halinde izin ver veya yaz](../standard/serialization/system-text-json-how-to.md#allow-or-write-numbers-in-quotes)
+- [Sabit türleri ve C# 9 kayıtlarını destekleme](../standard/serialization/system-text-json-how-to.md#immutable-types-and-records)
+- [Ortak olmayan özellik erişimcileri desteği](../standard/serialization/system-text-json-how-to.md#non-public-property-accessors)
+- [Destek alanları](../standard/serialization/system-text-json-how-to.md#include-fields)
+- [Özelliği koşullu olarak Yoksay](../standard/serialization/system-text-json-how-to.md#ignore-properties)
+- [Dize olmayan anahtar sözlüklerini destekleme](../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md#dictionary-with-non-string-key)
+- [Ortak olmayan özellik erişimcileri desteği](../standard/serialization/system-text-json-how-to.md#non-public-property-accessors)
+- [Özel dönüştürücülerin null işlemesine izin ver](../standard/serialization/system-text-json-converters-how-to.md#handle-null-values)
+- [JsonSerializerOptions 'ı Kopyala](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
+- [Web varsayılanları ile JsonSerializerOptions oluşturma](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)
 
 ## <a name="net-maui"></a>.NET MAUı
 

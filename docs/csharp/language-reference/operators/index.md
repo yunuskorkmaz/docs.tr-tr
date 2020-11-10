@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 854d7c1278319869104e1758ba91eb3594741126
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9e7ca2087938317f7369043e21fd455dbad7f07b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063191"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439670"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>C# işleçleri ve ifadeleri (C# Başvurusu)
 
@@ -80,7 +80,8 @@ Aşağıdaki tabloda, en düşük önceliğe göre C# işleçleri listelenmişti
 | [x. y](member-access-operators.md#member-access-expression-), [f (x)](member-access-operators.md#invocation-expression-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [`x?.y`](member-access-operators.md#null-conditional-operators--and-) , [`x?[y]`](member-access-operators.md#null-conditional-operators--and-) , [x + +](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [x!](null-forgiving.md), [New](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [Checked](../keywords/checked.md), [denetimsiz](../keywords/unchecked.md), [Default](default.md), [NameOf](nameof.md), [Delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Birincil |
 | [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \! x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(T) x](type-testing-and-cast.md#cast-expression), [await](await.md), [&x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true ve false](true-false-operators.md) | Birli |
 | [x.. Iz](member-access-operators.md#range-operator-) | Aralık |
-| [değiştirebilirsiniz](switch-expression.md) | `switch`ifadesini |
+| [switch](switch-expression.md) | `switch` ifadesini |
+| [kullanılarak](with-expression.md) | `with` ifadesini |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x/y](arithmetic-operators.md#division-operator-), [x% y](arithmetic-operators.md#remainder-operator-) | Çarpımsal|
 | [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | Toplamsal |
 | [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |
@@ -93,7 +94,7 @@ Aşağıdaki tabloda, en düşük önceliğe göre C# işleçleri listelenmişti
 | [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | Koşullu VEYA |
 | [x?? Iz](null-coalescing-operator.md) | Null birleşim işleci |
 | [,? t: f](conditional-operator.md) | Koşullu işleç |
-| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), [x/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), [x &= y](boolean-logical-operators.md#compound-assignment), x [&#124;=](boolean-logical-operators.md#compound-assignment)y, x [^ =](boolean-logical-operators.md#compound-assignment)y, x [ <<=](bitwise-and-shift-operators.md#compound-assignment)y, x [ >>= y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md),[=>](lambda-operator.md) | Atama ve lambda bildirimi |
+| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), [x/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), [x &= y](boolean-logical-operators.md#compound-assignment), x [&#124;=](boolean-logical-operators.md#compound-assignment)y, x [^ =](boolean-logical-operators.md#compound-assignment)y, x [ <<=](bitwise-and-shift-operators.md#compound-assignment)y, x [ >>= y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md), [=>](lambda-operator.md) | Atama ve lambda bildirimi |
 
 ## <a name="operator-associativity"></a>Operatör ilişkilendirilebilirliği
 

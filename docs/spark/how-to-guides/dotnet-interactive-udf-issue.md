@@ -6,18 +6,18 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224128"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441082"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>Apache Spark etkileşimli ortamlar için .NET 'te UDF 'Leri yazın ve çağırın
 
 Bu makalede, bir .NET Apache Spark etkileşimli ortamda Kullanıcı tanımlı işlevlerin (UDF) nasıl kullanılacağını öğreneceksiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 1. [.Net etkileşimli](https://github.com/dotnet/interactive) 'i yükler
 2. [Jupyıter Laboratuvarı](https://jupyter.org/) 'nı yükler
@@ -49,7 +49,7 @@ Kırmızı ok tarafından işaretlenen blokların her biri, bir hücredir veya k
 
 Yukarıdaki vurgulanan hata, UDF derlemelerinin bir veri çerçevesinde çağrılabilmesi için önce derlenmesi ve çalışanlara sevk edilmemesinden kaynaklanır.
 
-Bunlar, Apache Spark etkileşimli deneyimle ( [Azure SYNAPSE Not defterleri](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)gibi), .net 'Te UDF 'leri uygularken göz önünde bulundurmanız gereken birkaç önemli şey vardır.
+Bunlar, Apache Spark etkileşimli deneyimle ( [Azure SYNAPSE Not defterleri](/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)gibi), .net 'Te UDF 'leri uygularken göz önünde bulundurmanız gereken birkaç önemli şey vardır.
 
 ## <a name="faqs"></a>SSS
 

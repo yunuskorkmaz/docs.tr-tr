@@ -2,18 +2,18 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu bir dizine .NET Core projesi veya çözümü yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: e35a0671cb964e7d9b68ed5bbe261045038229aa
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654900"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440575"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet publish` -Uygulamayı ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
 
@@ -32,7 +32,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet publish` uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
 
@@ -45,7 +45,7 @@ dotnet publish -h|--help
 
 ### <a name="implicit-restore"></a>Örtük geri yükleme
 
-[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note](../../../includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -53,13 +53,13 @@ dotnet publish -h|--help
 
 `dotnet publish`Komut, `-p` özellikleri ayarlama ve bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Örneğin, şu biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>` .
 
-Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örnek:
+Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örneğin:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile
 ```
 
-Önceki örnekte, * \<project_folder> /Properties/publishprofiles* klasöründe bulunan *folderprofile. pubxml* dosyası kullanılmaktadır. Özelliği ayarlarken bir yol ve dosya uzantısı belirtirseniz `PublishProfile` , bunlar yoksayılır. MSBuild varsayılan olarak *Properties/PublishProfiles* klasörüne bakar ve *pubxml* dosya uzantısını varsayar. Uzantısı dahil yolunu ve dosya adını belirtmek için özelliği `PublishProfileFullPath` yerine özelliği ayarlayın `PublishProfile` .
+Önceki örnekte, *\<project_folder> /Properties/publishprofiles* klasöründe bulunan *folderprofile. pubxml* dosyası kullanılmaktadır. Özelliği ayarlarken bir yol ve dosya uzantısı belirtirseniz `PublishProfile` , bunlar yoksayılır. MSBuild varsayılan olarak *Properties/PublishProfiles* klasörüne bakar ve *pubxml* dosya uzantısını varsayar. Uzantısı dahil yolunu ve dosya adını belirtmek için özelliği `PublishProfileFullPath` yerine özelliği ayarlayın `PublishProfile` .
 
 Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
@@ -67,7 +67,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 - [ASP.NET Core uygulama dağıtımı için Visual Studio yayımlama profilleri (. pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
 
-## <a name="arguments"></a>Bağımsız değişkenler
+## <a name="arguments"></a>Arguments
 
 - **`PROJECT|SOLUTION`**
 
@@ -75,7 +75,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
   
   * `PROJECT` bir [C#](csproj.md), f # veya Visual Basic proje dosyasının yolu ve dosya adı ya da C#, f # veya Visual Basic proje dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır.
 
-  * `SOLUTION` , bir çözüm dosyasının (*. sln* uzantısının) yolu ve dosya adı veya çözüm dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır. .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  * `SOLUTION` , bir çözüm dosyasının ( *. sln* uzantısının) yolu ve dosya adı veya çözüm dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 ## <a name="options"></a>Seçenekler
 
@@ -125,7 +125,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
   
   Belirtilmemişse, çerçeveye bağlı bir yürütülebilir dosya ve platformlar arası ikili dosyalar için *[project_file_folder]/bin/[Configuration]/[Framework]/Publish/* varsayılan değeri. Bu, kendi içinde bulunan yürütülebilir dosya için *[project_file_folder]/bin/[yapılandırma]/[Framework]/[Runtime]/Publish/* varsayılan değerini alır.
 
-  Bir Web projesinde, çıkış klasörü proje klasöründe ise, birbirini izleyen `dotnet publish` Komutlar iç içe geçmiş çıkış klasörlerine neden olur. Örneğin, proje klasörü *projem ise*ve yayımlama çıkış klasörü *myprojem/Publish*ise ve `dotnet publish` iki kez çalıştırırsanız ikinci çalıştırma, *MyProject/Publish/Publish*içindeki *. config* ve *. JSON* dosyaları gibi içerik dosyalarını koyar. Yayımlama klasörlerinin iç içe geçirilmesi önlemek için, proje **klasörünün altında olmayan** bir yayımlama klasörü belirtin veya Yayımla klasörünü projeden dışlayın. *Publishoutput*adlı bir yayımlama klasörünü dışlamak için, `PropertyGroup` *. csproj* dosyasındaki bir öğeye aşağıdaki öğeyi ekleyin:
+  Bir Web projesinde, çıkış klasörü proje klasöründe ise, birbirini izleyen `dotnet publish` Komutlar iç içe geçmiş çıkış klasörlerine neden olur. Örneğin, proje klasörü *projem ise* ve yayımlama çıkış klasörü *myprojem/Publish* ise ve `dotnet publish` iki kez çalıştırırsanız ikinci çalıştırma, *MyProject/Publish/Publish* içindeki *. config* ve *. JSON* dosyaları gibi içerik dosyalarını koyar. Yayımlama klasörlerinin iç içe geçirilmesi önlemek için, proje **klasörünün altında olmayan** bir yayımlama klasörü belirtin veya Yayımla klasörünü projeden dışlayın. *Publishoutput* adlı bir yayımlama klasörünü dışlamak için, `PropertyGroup` *. csproj* dosyasındaki bir öğeye aşağıdaki öğeyi ekleyin:
 
   ```xml
   <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
@@ -179,7 +179,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer `minimal` .
+  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer `minimal` olarak belirlenmiştir.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 

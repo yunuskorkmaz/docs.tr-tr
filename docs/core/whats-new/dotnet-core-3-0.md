@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: b0b1f4492d68ff2f2218b7c977f57cad3f582bb0
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 2488499c1b0e8d12eb3be04b9bb885649b4da974
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050286"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439735"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -42,7 +42,7 @@ Aşağıda ayrıntılı olarak açıklanan aşağıdaki API özelliklerini deste
 
 ## <a name="net-standard-21"></a>.NET Standard 2,1
 
-.NET Core 3,0 **.NET Standard 2,1**uygular. Ancak, varsayılan `dotnet new classlib` şablon hala **.NET Standard 2,0**' i hedefleyen bir proje oluşturur. **.NET Standard 2,1**' i hedeflemek için proje dosyanızı düzenleyin ve özelliği şu `TargetFramework` şekilde değiştirin `netstandard2.1` :
+.NET Core 3,0 **.NET Standard 2,1** uygular. Ancak, varsayılan `dotnet new classlib` şablon hala **.NET Standard 2,0** ' i hedefleyen bir proje oluşturur. **.NET Standard 2,1** ' i hedeflemek için proje dosyanızı düzenleyin ve özelliği şu `TargetFramework` şekilde değiştirin `netstandard2.1` :
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -54,7 +54,7 @@ Aşağıda ayrıntılı olarak açıklanan aşağıdaki API özelliklerini deste
 </Project>
 ```
 
-Visual Studio kullanıyorsanız, Visual Studio 2017 **.NET Standard 2,1** veya **.NET Core 3,0**' i desteklemediğinden [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)gerekir.
+Visual Studio kullanıyorsanız, Visual Studio 2017 **.NET Standard 2,1** veya **.NET Core 3,0** ' i desteklemediğinden [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)gerekir.
 
 ## <a name="compiledeploy"></a>Derle/dağıt
 
@@ -62,7 +62,7 @@ Visual Studio kullanıyorsanız, Visual Studio 2017 **.NET Standard 2,1** veya *
 
 .NET Core artık [çerçeveye bağlı yürütülebilir dosyaları](../deploying/index.md#publish-framework-dependent) varsayılan olarak oluşturur. Bu davranış, .NET Core 'un küresel olarak yüklenen bir sürümünü kullanan uygulamalar için yenidir. Daha önce yalnızca [kendi kendine kapsanan dağıtımlar](../deploying/index.md#publish-self-contained) yürütülebilir bir dosya üretecektir.
 
-`dotnet build`Veya sırasında `dotnet publish` , kullanmakta olduğunuz SDK ortamı ve platformuyla eşleşen bir çalıştırılabilir ( **appHost**olarak bilinir) oluşturulur. Bu yürütülebilir dosyalarla aynı şeyleri, diğer yerel yürütülebilir dosyaları gibi bekleyebilir, örneğin:
+`dotnet build`Veya sırasında `dotnet publish` , kullanmakta olduğunuz SDK ortamı ve platformuyla eşleşen bir çalıştırılabilir ( **appHost** olarak bilinir) oluşturulur. Bu yürütülebilir dosyalarla aynı şeyleri, diğer yerel yürütülebilir dosyaları gibi bekleyebilir, örneğin:
 
 - Yürütülebilir dosyaya çift tıklayabilirsiniz.
 - Uygulamayı `myapp.exe` Windows ve `./myapp` Linux ve MacOS gibi bir komut isteminden doğrudan başlatabilirsiniz.
@@ -288,7 +288,7 @@ Büyük sayfalar (Linux 'ta çok büyük sayfalar olarak da bilinir), işletim s
 
 ### <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
-Windows için MSI Yükleyicisi, .NET Core 3,0 ile başlayarak değiştirilmiştir. SDK yükleyicileri artık SDK özelliği bant sürümlerini yerinde yükseltecektir. Özellik bantları, sürüm numarasının *Patch* bölümündeki *yüzlerce* grupta tanımlanmıştır. Örneğin, **3,0._ 101_ ** ve **3,0._ 201_ ** , 3,0 sırasında iki farklı özellik bantlarındaki sürümleridir **._ 101_ ** ve **3,0._ 199_ ** aynı özellik bandında. .NET Core SDK **3,0 olduğunda._ 101_ ** .NET Core SDK yüklendi, **3,0._ 100_ ** , varsa makineden kaldırılacak. .NET Core SDK **3,0._ 200_ ** , .NET Core SDK 3,0 ' de aynı makineye yüklendi **._ 101_ ** kaldırılmaz.
+Windows için MSI Yükleyicisi, .NET Core 3,0 ile başlayarak değiştirilmiştir. SDK yükleyicileri artık SDK özelliği bant sürümlerini yerinde yükseltecektir. Özellik bantları, sürüm numarasının *Patch* bölümündeki *yüzlerce* grupta tanımlanmıştır. Örneğin, **3,0. _101_** ve **3,0. _201_** , 3,0 sırasında iki farklı özellik bantlarındaki sürümleridir **. _101_** ve **3,0. _199_** aynı özellik bandında. .NET Core SDK **3,0 olduğunda. _101_** .NET Core SDK yüklendi, **3,0. _100_** , varsa makineden kaldırılacak. .NET Core SDK **3,0. _200_** , .NET Core SDK 3,0 ' de aynı makineye yüklendi **. _101_** kaldırılmaz.
 
 Sürüm oluşturma hakkında daha fazla bilgi için bkz. [.NET Core 'un sürümü oluşturma konusuna genel bakış](../versions/index.md).
 
@@ -307,7 +307,7 @@ dotnet new winforms
 
 Visual Studio 2019, .NET Core 3,0 Windows Forms ve WPF için **Yeni proje** şablonları ekler.
 
-Mevcut bir .NET Framework uygulamasının bağlantı noktası hakkında daha fazla bilgi için bkz. [bağlantı noktası WPF projeleri](/dotnet/desktop/wpf/migration/convert-project-from-net-framework) ve [bağlantı noktası Windows Forms projeleri](../porting/winforms.md).
+Mevcut bir .NET Framework uygulamasının bağlantı noktası hakkında daha fazla bilgi için bkz. [bağlantı noktası WPF projeleri](/dotnet/desktop/wpf/migration/convert-project-from-net-framework) ve [bağlantı noktası Windows Forms projeleri](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true).
 
 #### <a name="winforms-high-dpi"></a>WinForms yüksek DPı
 
@@ -333,7 +333,7 @@ COM bileşeni oluşturma ve kullanma hakkında bir örnek için bkz. [com tanıt
 
 ### <a name="windows-native-interop"></a>Windows yerel birlikte çalışma
 
-Windows, düz C API 'Leri, COM ve WinRT biçiminde zengin bir yerel API sunar. .NET Core **P/Invoke**'ı destekleirken, .net Core 3,0, **com API 'Leri oluşturma** ve **WinRT API 'leri etkinleştirme**özelliğini ekler. Kod örneği için bkz. [Excel tanıtımı](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
+Windows, düz C API 'Leri, COM ve WinRT biçiminde zengin bir yerel API sunar. .NET Core **P/Invoke** 'ı destekleirken, .net Core 3,0, **com API 'Leri oluşturma** ve **WinRT API 'leri etkinleştirme** özelliğini ekler. Kod örneği için bkz. [Excel tanıtımı](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
 
 ### <a name="msix-deployment"></a>MSIX dağıtımı
 
@@ -372,7 +372,7 @@ NuGet 'e GıO programlama için kullanabileceğiniz iki paket yayımlanmıştır
 - [System. Device. GIO](https://www.nuget.org/packages/System.Device.Gpio)
 - [IoT. Device. Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-GPıO paketleri, *GIO*, *SPI*, *I2C*ve *PWM* cihazları için API 'ler içerir. IoT bağlamaları paketi cihaz bağlamalarını içerir. Daha fazla bilgi için bkz. [cihaz GitHub deposu](https://github.com/dotnet/iot/blob/master/src/devices/).
+GPıO paketleri, *GIO* , *SPI* , *I2C* ve *PWM* cihazları için API 'ler içerir. IoT bağlamaları paketi cihaz bağlamalarını içerir. Daha fazla bilgi için bkz. [cihaz GitHub deposu](https://github.com/dotnet/iot/blob/master/src/devices/).
 
 ### <a name="arm64-linux-support"></a>ARM64 Linux desteği
 
@@ -392,10 +392,10 @@ GPıO paketleri, *GIO*, *SPI*, *I2C*ve *PWM* cihazları için API 'ler içerir. 
 - İstemci ve sunucu arasında gereken azaltılan gidiş dönüşlerle bağlantı süreleri geliştirildi.
 - Kullanılmayan ve güvenli olmayan şifreleme algoritmalarının kaldırılması nedeniyle güvenlik geliştirildi.
 
-Kullanılabilir olduğunda, .NET Core 3,0 bir Linux sisteminde **OpenSSL 1.1.1**, **OpenSSL 1.1.0**veya **OpenSSL 1.0.2** kullanır. **OpenSSL 1.1.1** kullanılabilir olduğunda, her ikisi <xref:System.Net.Security.SslStream?displayProperty=nameWithType> de <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> tür **TLS 1,3** kullanır (istemci ve sunucunun **TLS 1,3**' i desteklediği varsayıldığında).
+Kullanılabilir olduğunda, .NET Core 3,0 bir Linux sisteminde **OpenSSL 1.1.1** , **OpenSSL 1.1.0** veya **OpenSSL 1.0.2** kullanır. **OpenSSL 1.1.1** kullanılabilir olduğunda, her ikisi <xref:System.Net.Security.SslStream?displayProperty=nameWithType> de <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> tür **TLS 1,3** kullanır (istemci ve sunucunun **TLS 1,3** ' i desteklediği varsayıldığında).
 
 > [!IMPORTANT]
-> Windows ve macOS henüz **TLS 1,3**' i desteklemez.
+> Windows ve macOS henüz **TLS 1,3** ' i desteklemez.
 
 Aşağıdaki C# 8,0 örneği, ' a bağlanan Ubuntu 18,10 üzerinde .NET Core 3,0 ' i göstermektedir <https://www.cloudflare.com> :
 
@@ -413,7 +413,7 @@ Aşağıdaki kod, `AesGcm` rastgele verileri şifrelemek ve şifrelerini çözme
 
 .NET Core 3,0, asimetrik ortak ve özel anahtarların standart biçimlerden içeri ve dışarı aktarılmasını destekler. X. 509.440 sertifikası kullanmanız gerekmez.
 
-*RSA*, *dsa*, *ECDSA*ve *ecdıfıfiehellman*gibi tüm anahtar türleri aşağıdaki biçimleri destekler:
+*RSA* , *dsa* , *ECDSA* ve *ecdıfıfiehellman* gibi tüm anahtar türleri aşağıdaki biçimleri destekler:
 
 - **Ortak Anahtar**
   - X. 509.440 Subjectpublickeyınfo
@@ -520,7 +520,7 @@ Daha fazla bilgi için bkz. [.net Platform-Dependent iç](https://github.com/dot
 
 ### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Core sürümü API 'Leri
 
-.NET Core 3,0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örnek:
+.NET Core 3,0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örneğin:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");

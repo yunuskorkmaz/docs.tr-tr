@@ -1,129 +1,129 @@
 ---
-title: Yerelleştirilmiş IntelliSense dosyalarını yükleme
-description: Visual Studio'daki .NET Core projeleri için yerelleştirilmiş IntelliSense dosyalarını kullanmak üzere geliştirme makinenizi nasıl ayarlayabilirsiniz öğrenin.
-ms.date: 01/23/2020
-ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: Yerelleştirilmiş IntelliSense dosyalarını yükler
+description: Geliştirme makinenizi, Visual Studio 'daki .NET 5 + projeleri (.NET Core dahil) için yerelleştirilmiş IntelliSense dosyalarını kullanacak şekilde ayarlamayı öğrenin.
+ms.date: 11/06/2020
+ms.openlocfilehash: 121439199f0de6d29a18ea55031976680fc1f833
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157719"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439826"
 ---
-# <a name="how-to-install-localized-intellisense-files-for-net-core"></a>.NET Core için yerelleştirilmiş IntelliSense dosyaları nasıl yüklenir?
+# <a name="how-to-install-localized-intellisense-files-for-net"></a>.NET için yerelleştirilmiş IntelliSense dosyalarını nasıl yükleyeceğiniz
 
-[IntelliSense,](/visualstudio/ide/using-intellisense) Visual Studio gibi farklı tümleşik geliştirme ortamlarında (IME' ler) kullanılabilen bir kod tamamlama yardımıdır. Varsayılan olarak, .NET Core projeleri geliştirirken, SDK yalnızca IntelliSense dosyalarının İngilizce sürümünü içerir. Bu makalede açıklanmaktadır:
+[IntelliSense](/visualstudio/ide/using-intellisense) , Visual Studio gibi farklı tümleşik geliştirme ortamlarında (ides) kullanılabilen bir kod tamamlama yardımıdır. Varsayılan olarak, .NET projesi geliştirirken, SDK yalnızca IntelliSense dosyalarının Ingilizce sürümünü içerir. Bu makalede şunları açıklanmaktadır:
 
-- Bu dosyaların yerelleştirilmiş sürümünü yükleme.
-- Farklı bir dil kullanmak için Visual Studio yüklemesi nasıl değiştirilir.
+- Bu dosyaların yerelleştirilmiş sürümünü nasıl yükleyeceksiniz.
+- Visual Studio yüklemesini farklı bir dil kullanacak şekilde değiştirme.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya daha sonraki bir sürüm.
-- [Visual Studio 2019 sürüm 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya daha sonraki bir sürüm.
+- [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)gibi sonraki bir sürüm.
+- [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonraki bir sürümü.
 
-## <a name="download-and-install-the-localized-intellisense-files"></a>Yerelleştirilmiş IntelliSense dosyalarını indirin ve kurun
+## <a name="download-and-install-the-localized-intellisense-files"></a>Yerelleştirilmiş IntelliSense dosyalarını indirme ve yükleme
 
 > [!IMPORTANT]
-> Bu yordam, IntelliSense dosyalarını .NET Core yükleme klasörüne kopyalamak için yönetici iznine sahip olmayı gerektirir.
+> Bu yordam, IntelliSense dosyalarını .NET yükleme klasörüne kopyalamak için yönetici iznine sahip olmanızı gerektirir.
 
-1. [IntelliSense dosyalarını indir](https://dotnet.microsoft.com/download/dotnet-core/intellisense) sayfasına gidin.
+1. [IntelliSense dosyalarını indirme](https://dotnet.microsoft.com/download/intellisense) sayfasına gidin.
 
 1. Kullanmak istediğiniz dil ve sürüm için IntelliSense dosyasını indirin.
 
-1. Zip dosyasının içeriğini ayıklayın.
+1. ZIP dosyasının içeriğini ayıklayın.
 
-1. .NET Core Intellisense klasörüne gidin.
+1. .NET IntelliSense klasörüne gidin.
 
-   1. .NET Core yükleme klasörüne gidin. Varsayılan olarak, *%ProgramFiles%\dotnet\packs*altındadır.
-   1. IntelliSense'i yüklemek istediğiniz SDK'yı seçin ve ilişkili yola gidin. Aşağıdaki seçenekleriniz vardır:
+   1. .NET yükleme klasörüne gidin. Varsayılan olarak, *%ProgramFiles%\dotnet\packs* altındadır.
+   1. IntelliSense 'i yüklemek istediğiniz SDK 'yı seçin ve ilişkili yola gidin. Aşağıdaki seçenekler mevcuttur:
 
-      | SDK türü        | Yol                               |
-      | --------------- | ---------------------------------- |
-      | .NET Core       | *Microsoft.NETCore.App.Ref*        |
-      | Windows Masaüstü | *Microsoft.WindowsDesktop.App.Ref* |
-      | .NET Standard   | *NETStandard.Library.Ref*          |
+      | SDK türü              | Yol                               |
+      |-----------------------|------------------------------------|
+      | .NET 5 + ve .NET Core | *Microsoft. NETCore. app. ref*        |
+      | Windows Masaüstü       | *Microsoft. WindowsDesktop. app. ref* |
+      | .NET Standard         | *NETStandard. Library. ref*          |
 
-   1. Yerelleştirilmiş IntelliSense'i yüklemek istediğiniz sürüme gidin. Örneğin, *3.1.0*.
+   1. Yerelleştirilmiş IntelliSense 'i yüklemek istediğiniz sürüme gidin. Örneğin, *3.1.0*.
    1. *Ref* klasörünü açın.
-   1. Takma addklasörü açın. Örneğin, *netcoreapp3.1*.
+   1. Bilinen ad klasörünü açın. Örneğin, *net 5.0*.
 
-   Yani, gitmek istiyorum tam yol C benzer *görünecektir:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1*.
+   Bu nedenle, gittiğiniz yolun tam yolu *C:\Program Files\dotnet\packs\Microsoft.NETCore.app.Ref\5.0.0\ref\net5.0* şuna benzer.
 
-1. Az önce açtığınız takma addklasörün içinde bir alt klasör oluşturun. Klasörün adı hangi dili kullanmak istediğinizi gösterir. Aşağıdaki tabloda farklı seçenekler belirtin:
+1. Yeni açtığınız bilinen ad klasörünün içinde bir alt klasör oluşturun. Klasörün adı, hangi dili kullanmak istediğinizi belirtir. Aşağıdaki tabloda farklı seçenekler verilmiştir:
 
    | Dil              | Klasör adı |
    | --------------------- | ----------- |
    | Brezilya Portekizcesi  | *pt-br*     |
-   | Çince (basitleştirilmiş)  | *zh-hans*   |
-   | Çince (geleneksel) | *zh-hant*   |
-   | Fransızca                | *Fr*        |
-   | Almanca                | *de*        |
-   | İtalyanca               | *bu*        |
-   | Japonca              | *Ja*        |
-   | Korece                | *ko*        |
-   | Rusça               | *Ru*        |
-   | İspanyolca               | *Es*        |
+   | Çince (Basitleştirilmiş)  | *zh-Hans*   |
+   | Çince (Geleneksel) | *zh-Hant*   |
+   | Fransızca                | *kesir*        |
+   | Almanca                | *seçimini*        |
+   | İtalyanca               | *içerdiği*        |
+   | Japonca              | *Sofya*        |
+   | Korece                | *dili*        |
+   | Rusça               | *ru*        |
+   | İspanyolca               | *es*        |
 
-1. Adım 3'te ayıkladığınız *.xml* dosyalarını bu yeni klasöre kopyalayın. *.xml* dosyaları SDK klasörlerine göre ayrılmıştır, bu nedenle bunları adım 4'te seçtiğiniz eşleşen SDK'ya kopyalayın.
+1. Adım 3 ' te ayıkladığınız *. xml* dosyalarını bu yeni klasöre kopyalayın. *. Xml* dosyaları SDK klasörleri tarafından bölünür, bu nedenle bunları 4. adımda SEÇTIĞINIZ eşleşen SDK 'ya kopyalayın.
 
-## <a name="modify-visual-studio-language"></a>Visual Studio dilini değiştirin
+## <a name="modify-visual-studio-language"></a>Visual Studio dilini değiştir
 
-Visual Studio'nun IntelliSense için farklı bir dil kullanması için uygun dil paketini yükleyin. Bu, [yükleme sırasında](/visualstudio/install/install-visual-studio#step-6---install-language-packs-optional) veya daha sonra Visual Studio yüklemesini değiştirerek yapılabilir. Visual Studio'yu seçtiğiniz dile göre yapılandırmışsanız, IntelliSense yüklemeniz hazırdır.
+Visual Studio 'nun IntelliSense için farklı bir dil kullanabilmesi için, uygun dil paketini de yüklemelisiniz. Bu, [yükleme sırasında](/visualstudio/install/install-visual-studio#step-6---install-language-packs-optional) veya daha sonra Visual Studio yüklemesi değiştirilerek yapılabilir. Seçtiğiniz dilde Visual Studio zaten yapılandırılmışsa, IntelliSense yüklemeniz hazırlayın.
 
-### <a name="install-the-language-pack"></a>Dil paketini yükleme
+### <a name="install-the-language-pack"></a>Dil paketini yükler
 
-Kurulum sırasında istediğiniz dil paketini yüklemediyseniz, dil paketini yüklemek için Visual Studio'yu aşağıdaki gibi güncelleştirin:
+İstenen dil paketini kurulum sırasında yüklemediyseniz, dil paketini yüklemek için Visual Studio 'Yu aşağıdaki şekilde güncelleştirin:
 
 > [!IMPORTANT]
-> Visual Studio'yı yüklemek, güncellemek veya değiştirmek için yönetici izni olan bir hesapla oturum açmanız gerekir. Daha fazla bilgi için [Kullanıcı izinlerine ve Visual Studio'ya](/visualstudio/ide/user-permissions-and-visual-studio)bakın.
+> Visual Studio 'Yu yüklemek, güncelleştirmek veya değiştirmek için yönetici iznine sahip bir hesapla oturum açmalısınız. Daha fazla bilgi için bkz. [Kullanıcı izinleri ve Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
 
-1. Bilgisayarınızda Visual Studio Yükleyicisini bulun.
+1. Bilgisayarınızda Visual Studio Yükleyicisi bulun.
 
-   Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat'ı**seçin ve ardından Visual **Studio Installer**olarak listelenen **V**harfine gidin.
+   Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat** ' ı seçin ve ardından **Visual Studio yükleyicisi** olarak listelendiği **V** harfine gidin.
 
-   ![Windows'tan Visual Studio Yükleyicisini Açın](./media/localized-intellisense/vs-installer-windows-start.png)
+   ![Visual Studio Yükleyicisi Windows 'tan açın](./media/localized-intellisense/vs-installer-windows-start.png)
 
    > [!NOTE]
-   > Visual Studio Yükleyicisini aşağıdaki konumda da bulabilirsiniz:
+   > Aşağıdaki konumda Visual Studio Yükleyicisi de bulabilirsiniz:
    >
    > `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-   Devam etmeden önce yükleyiciyi güncelleştirmeniz gerekebilir. Öyleyse, istemleri izleyin.
+   Devam etmeden önce yükleyiciyi güncelleştirmeniz gerekebilir. Bu durumda, istemleri izleyin.
 
-1. Yükleyicide, dil paketini eklemek istediğiniz Visual Studio sürümünü arayın ve ardından **Değiştir'i**seçin.
+1. Yükleyicide, dil paketini eklemek istediğiniz Visual Studio sürümünü bulun ve ardından **Değiştir** ' i seçin.
 
-   ![Visual Studio'yı güncelleştirin veya değiştirin](./media/localized-intellisense/vs-installer-modify.png)
+   ![Visual Studio 'Yu güncelleştirme veya değiştirme](./media/localized-intellisense/vs-installer-modify.png)
 
    > [!IMPORTANT]
-   > **Değiştir** düğmesi görmüyorsanız ancak bunun yerine bir **Güncelleme** düğmesi görüyorsanız, yüklemenizi değiştirebilmeniz için Visual Studio'nuzu güncellemeniz gerekir.
+   > Bir **değiştirme** düğmesi görmüyorsanız ancak bunun yerine bir **güncelleştirme** görüyorsanız, yüklemenizi değiştirebilmeniz için Visual Studio 'yu güncelleştirmeniz gerekir.
    > Güncelleştirme tamamlandıktan sonra **Değiştir** düğmesi görünmelidir.
 
-1. Dil **paketleri** sekmesinde, yüklemek veya kaldırmak istediğiniz dilleri seçin veya seçin.
+1. **Dil paketleri** sekmesinde, yüklemek veya kaldırmak istediğiniz dilleri seçin veya seçimini kaldırın.
 
    ![Visual Studio dil paketleri sekmesi](./media/localized-intellisense/vs-modify-language-packs.png)
 
-1. **Değiştir'i**seçin. Güncelleştirme başlar.
+1. **Değiştir** 'i seçin. Güncelleştirme başlar.
 
-### <a name="modify-language-settings-in-visual-studio"></a>Visual Studio'da dil ayarlarını değiştirme
+### <a name="modify-language-settings-in-visual-studio"></a>Visual Studio 'da dil ayarlarını değiştirme
 
-İstediğiniz dil paketlerini yükledikten sonra Visual Studio ayarlarınızı farklı bir dil kullanacak şekilde değiştirin:
+İstenen dil paketlerini yükledikten sonra, Visual Studio ayarlarınızı farklı bir dil kullanacak şekilde değiştirin:
 
 1. Visual Studio'yu açın.
 
-1. Başlangıç penceresinde, **kodsuz Devam**et'i seçin.
+1. Başlangıç penceresinde, **kod olmadan devam et** ' i seçin.
 
-1. Menü çubuğunda **Araçlar** > **Seçenekleri'ni**seçin. Seçenekler iletişim kutusu açılır.
+1. Menü çubuğunda **Araçlar**  >  **Seçenekler** ' i seçin. Seçenekler iletişim kutusu açılır.
 
-1. **Çevre** düğümü altında, **Uluslararası Ayarlar'ı**seçin.
+1. **Ortam** düğümü altında **Uluslararası ayarlar** ' ı seçin.
 
-1. **Dil** açılır tarihinde istediğiniz dili seçin. **Tamam'ı**seçin.
+1. **Dil** açılan çubuğunda istediğiniz dili seçin. **Tamam ' ı** seçin.
 
-1. Bir iletişim kutusu, değişikliklerin etkili olması için Visual Studio'yu yeniden başlatmanız gerektiğini bildirir. **Tamam'ı**seçin.
+1. Değişikliklerin etkili olması için Visual Studio 'Yu yeniden başlatmanız gerektiğini bildiren bir iletişim kutusu size bildirir. **Tamam ' ı** seçin.
 
-1. Visual Studio'yu yeniden başlatın.
+1. Visual Studio’yu yeniden başlatın.
 
-Bundan sonra, IntelliSense'iniz, yeni yüklediğiniz IntelliSense dosyalarının sürümünü hedefleyen bir .NET Core projesini açtığınızda beklendiği gibi çalışmalıdır.
+Bundan sonra, yeni yüklediğiniz IntelliSense dosyalarının sürümünü hedefleyen bir .NET projesi açtığınızda IntelliSense, beklendiği gibi çalışmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IntelliSense in Visual Studio](/visualstudio/ide/using-intellisense)
+- [Visual Studio 'da IntelliSense](/visualstudio/ide/using-intellisense)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ad14c3367809c16268abedc99596089514986e3f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aba59f6626661145c10d23d4a2c167b8337ec559
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91205119"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440386"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -35,11 +35,13 @@ Bir tür içinde depolanan bilgiler şunları içerebilir:
 
 - Devraldığı temel tür.
 
+- Uyguladığı Arabirim (ler).
+
 - Değişkenlere yönelik belleğin çalışma zamanında ayrılabileceği konum.
 
 - İzin verilen işlem türleri.
 
-Derleyici, kodunuzda gerçekleştirilen tüm işlemlerin *tür açısından güvenli*olduğundan emin olmak için tür bilgilerini kullanır. Örneğin, [int](../../language-reference/builtin-types/integral-numeric-types.md)türünde bir değişken bildirirseniz, derleyici değişkeni toplama ve çıkarma işlemlerinde kullanmanıza izin verir. [Bool](../../language-reference/builtin-types/bool.md)türünde bir değişkende aynı işlemleri gerçekleştirmeye çalışırsanız, derleyici aşağıdaki örnekte gösterildiği gibi bir hata oluşturur:
+Derleyici, kodunuzda gerçekleştirilen tüm işlemlerin *tür açısından güvenli* olduğundan emin olmak için tür bilgilerini kullanır. Örneğin, [int](../../language-reference/builtin-types/integral-numeric-types.md)türünde bir değişken bildirirseniz, derleyici değişkeni toplama ve çıkarma işlemlerinde kullanmanıza izin verir. [Bool](../../language-reference/builtin-types/bool.md)türünde bir değişkende aynı işlemleri gerçekleştirmeye çalışırsanız, derleyici aşağıdaki örnekte gösterildiği gibi bir hata oluşturur:
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
@@ -74,9 +76,9 @@ Kendi özel türlerinizi oluşturmak için [struct](../../language-reference/bui
 
 .NET 'teki tür sistemi hakkında iki temel noktayı anlamak önemlidir:
 
-- Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. (C# anahtar sözcüğü: int) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, <xref:System.Int32?displayProperty=nameWithType> sonuçta [int](../../language-reference/builtin-types/integral-numeric-types.md) <xref:System.Object?displayProperty=nameWithType> (c# anahtar sözcüğü: [nesnesi](../../language-reference/builtin-types/reference-types.md)) tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (Cts) denir. C# ' de devralma hakkında daha fazla bilgi için bkz. [Devralma](../classes-and-structs/inheritance.md).
+- Devralma ilkesini destekler. Türler, *temel türler* olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. (C# anahtar sözcüğü: int) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, <xref:System.Int32?displayProperty=nameWithType> sonuçta [int](../../language-reference/builtin-types/integral-numeric-types.md) <xref:System.Object?displayProperty=nameWithType> (c# anahtar sözcüğü: [nesnesi](../../language-reference/builtin-types/reference-types.md)) tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (Cts) denir. C# ' de devralma hakkında daha fazla bilgi için bkz. [Devralma](../classes-and-structs/inheritance.md).
 
-- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](../../language-reference/builtin-types/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler `structs` . [Sınıf](../../language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
+- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü* olarak tanımlanır. Bu, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](../../language-reference/builtin-types/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler `structs` . [Sınıf](../../language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
 
 Aşağıdaki çizimde, CTS 'deki değer türleri ve başvuru türleri arasındaki ilişki gösterilmektedir.
 
@@ -108,7 +110,7 @@ int i = 5;
 char c = 'Z';
 ```
 
-Değer türleri *Sealed*' dir; bu, örneğin, öğesinden bir tür türetmeyeceğiniz <xref:System.Int32?displayProperty=nameWithType> ve bir yapının yalnızca devralabileceği şekilde, Kullanıcı tanımlı herhangi bir sınıftan veya yapıdan devralacak bir yapı tanımlayabilmeniz anlamına gelir <xref:System.ValueType?displayProperty=nameWithType> . Ancak, bir struct bir veya daha fazla arabirim uygulayabilir. Yapı türünü, uygulayan herhangi bir arabirim türüne çevirebilirsiniz; Bu, bir *kutulama* işleminin yapıyı yönetilen yığında bir başvuru türü nesnesinin içine sarmasına neden olur. Paketleme işlemleri, bir değer türünü bir <xref:System.Object?displayProperty=nameWithType> veya herhangi bir arabirim türünü giriş parametresi olarak alan bir yönteme geçirdiğinizde oluşur. Daha fazla bilgi için bkz. [kutulama ve kutudan](./boxing-and-unboxing.md)çıkarma.
+Değer türleri *Sealed* ' dir; bu, örneğin, öğesinden bir tür türetmeyeceğiniz <xref:System.Int32?displayProperty=nameWithType> ve bir yapının yalnızca devralabileceği şekilde, Kullanıcı tanımlı herhangi bir sınıftan veya yapıdan devralacak bir yapı tanımlayabilmeniz anlamına gelir <xref:System.ValueType?displayProperty=nameWithType> . Ancak, bir struct bir veya daha fazla arabirim uygulayabilir. Yapı türünü, uygulayan herhangi bir arabirim türüne çevirebilirsiniz; Bu, bir *kutulama* işleminin yapıyı yönetilen yığında bir başvuru türü nesnesinin içine sarmasına neden olur. Paketleme işlemleri, bir değer türünü bir <xref:System.Object?displayProperty=nameWithType> veya herhangi bir arabirim türünü giriş parametresi olarak alan bir yönteme geçirdiğinizde oluşur. Daha fazla bilgi için bkz. [kutulama ve kutudan](./boxing-and-unboxing.md)çıkarma.
 
 Kendi özel değer türlerinizi oluşturmak için [struct](../../language-reference/builtin-types/struct.md) anahtar sözcüğünü kullanırsınız. Genellikle, bir yapı aşağıdaki örnekte gösterildiği gibi küçük bir ilgili değişkenler kümesi için kapsayıcı olarak kullanılır:
 
@@ -139,7 +141,7 @@ Bir arabirim, kendisini uygulayan bir sınıf nesnesiyle birlikte başlatılmal�
 IMyInterface iface = new MyClass();
 ```
 
-Nesne oluşturulduğunda, bellek yönetilen yığında ayrılır ve değişken yalnızca nesnenin konumuna bir başvuru içerir. Yönetilen yığında bulunan türler, her ikisi de ayrıldıklarında ve *çöp toplama*olarak bilinen clr 'nin otomatik bellek yönetimi işlevselliği tarafından geri kazanıyorsa ek yük gerektirir. Ancak çöp toplama da yüksek oranda iyileştirilmiştir ve çoğu senaryoda bir performans sorunu oluşturmaz. Çöp toplama hakkında daha fazla bilgi için bkz. [Otomatik bellek yönetimi](../../../standard/automatic-memory-management.md).
+Nesne oluşturulduğunda, bellek yönetilen yığında ayrılır ve değişken yalnızca nesnenin konumuna bir başvuru içerir. Yönetilen yığında bulunan türler, her ikisi de ayrıldıklarında ve *çöp toplama* olarak bilinen clr 'nin otomatik bellek yönetimi işlevselliği tarafından geri kazanıyorsa ek yük gerektirir. Ancak çöp toplama da yüksek oranda iyileştirilmiştir ve çoğu senaryoda bir performans sorunu oluşturmaz. Çöp toplama hakkında daha fazla bilgi için bkz. [Otomatik bellek yönetimi](../../../standard/automatic-memory-management.md).
 
 Tüm diziler, öğeleri değer türleri olsa bile başvuru türlerdir. Diziler sınıfından dolaylı olarak türetilir <xref:System.Array?displayProperty=nameWithType> , ancak aşağıdaki örnekte gösterildiği gibi bunları C# tarafından verilen Basitleştirilmiş sözdizimi ile bildirir ve kullanabilirsiniz:
 
@@ -157,7 +159,7 @@ Değişmez değerler yazıldığı ve tüm türler sonunda ' den türettiğinden
 
 ## <a name="generic-types"></a>Genel türler
 
-Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler*olarak adlandırılır. Örneğin, .NET türü, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> kuralına göre bir tür parametresine sahiptir. *T* Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:
+Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür* ) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler* olarak adlandırılır. Örneğin, .NET türü, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> kuralına göre bir tür parametresine sahiptir. *T* Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:
 
 ```csharp
 List<string> stringList = new List<string>();
@@ -190,7 +192,7 @@ Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
 - [Başvuru türleri](../../language-reference/keywords/reference-types.md)
 
-- [Sınıflar ve yapılar](../classes-and-structs/index.md)
+- [Sınıflar ve Yapılar](../classes-and-structs/index.md)
 
 - [Anonim Türler](../classes-and-structs/anonymous-types.md)
 

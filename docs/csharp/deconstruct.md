@@ -4,12 +4,12 @@ description: Tanımlama gruplarını ve diğer türleri oluşturmayı öğrenin.
 ms.technology: csharp-fundamentals
 ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 8defd75a7cdff3490d2b0a6097ec2a898576e113
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 96168b729ae3ec11d7a38444b8c100bdbff4efbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174172"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439709"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Demetleri ve diğer türleri ayrıştırma
 
@@ -57,7 +57,7 @@ Bir oluşturma 'nın sol tarafındaki mevcut değişkenlere bildirimleri ve atam
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Kayıt düzeni öğeleri atma ile kaldırılıyor
 
-Genellikle bir kayıt düzeni oluştururken yalnızca bazı öğelerin değerleriyle ilgileniyorsunuz. C# 7,0 ' den başlayarak,, değerlerini yok saymayı seçtiğiniz salt yazılır değişkenler olan, C# ' nin *atma*desteğinden faydalanabilirsiniz. Atma, bir atamada bir alt çizgi karakteriyle (" \_ ") belirtilir. İstediğiniz sayıda değeri atabilirsiniz; tümü, tek atma tarafından temsil edilir `_` .
+Genellikle bir kayıt düzeni oluştururken yalnızca bazı öğelerin değerleriyle ilgileniyorsunuz. C# 7,0 ' den başlayarak,, değerlerini yok saymayı seçtiğiniz salt yazılır değişkenler olan, C# ' nin *atma* desteğinden faydalanabilirsiniz. Atma, bir atamada bir alt çizgi karakteriyle (" \_ ") belirtilir. İstediğiniz sayıda değeri atabilirsiniz; tümü, tek atma tarafından temsil edilir `_` .
 
 Aşağıdaki örnek, atma ile başlıkların kullanımını gösterir. Bu `QueryCityDataForYears` Yöntem, şehir adı, alanı, bir yıl, bu yıl için şehir popülasyonu, ikinci bir yıl ve bu ikinci yıl için şehir popülasyonu içeren 6 tanımlama grubu döndürür. Örnek, bu iki yıl arasındaki popülasyondaki değişikliği gösterir. Kayıt kümesinden kullanılabilen veriler, şehir alanıyla ilgilentik ve tasarım zamanında şehir adını ve iki tarihi biliyoruz. Sonuç olarak, yalnızca kayıt düzeninde depolanan iki popülasyon değeri ile ilgileniyoruz ve kalan değerlerini atma olarak işleyebilir.  
 
@@ -76,7 +76,7 @@ Daha sonra `Person` `p` , aşağıdaki gibi bir atamayla adlı sınıfının bir
 Aşağıdaki örnek, `Deconstruct` bir nesnesinin özelliklerinin çeşitli birleşimlerini döndürmek için yöntemini aşırı yükler `Person` . Tek tek aşırı yükleme dönüşü:
 
 - Ad ve soyadı.
-- Birinci, son ve orta ad.
+- Birinci, orta ve soyadı.
 - Ad, soyadı, şehir adı ve durum adı.
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]

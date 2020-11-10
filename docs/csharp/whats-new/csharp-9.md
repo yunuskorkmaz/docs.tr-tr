@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: c65f7220c44e86fac7e8beba28277bf43af95088
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: e1c297cd0ff75d6a6fb4a9d38c9a241e216f500b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282339"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440874"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -66,7 +66,7 @@ Derleyici Yukarıdaki yöntemlerin farklı sürümlerini birleştirir. Yöntem i
 
 , Ve tanıdık aşırı yüklemelerin yanı sıra, `Equals` `operator ==` `operator !=` derleyici yeni bir özelliği birleştirir `EqualityContract` . Özelliği, `Type` kaydın türüyle eşleşen bir nesne döndürür. Temel tür ise, `object` özelliği olur `virtual` . Temel tür başka bir kayıt türü ise, özelliği bir olur `override` . Kayıt türü ise, `sealed` özelliği olur `sealed` . `GetHashCode` `GetHashCode` Sentezte, temel türde ve kayıt türünde belirtilen tüm özellikleri ve alanları kullanır. Bu birleştirilmiş Yöntemler, devralma hiyerarşisi boyunca değer tabanlı eşitlik uygular. Diğer bir deyişle `Student` , hiçbir şekilde `Person` aynı ada sahip bir ile eşit kabul edilmez. İki kaydın türleri aynı ve aynı zamanda eşit olan kayıt türleri arasında paylaşılan tüm özellikler eşleşmelidir.
 
-Kayıtlar Ayrıca, kopya oluşturmak için birleştirilmiş bir oluşturucuya ve bir "Clone" yöntemine sahiptir. Sentezlenmiş oluşturucunun, kayıt türünde bir bağımsız değişkeni vardır. Kaydın tüm özellikleri için aynı değerlere sahip yeni bir kayıt oluşturur. Bu Oluşturucu, kayıt mühürlense, aksi takdirde korunmuşsa özel olur. Sentezlenmiş "kopya" yöntemi, kayıt hiyerarşileri için kopyalama oluşturmayı destekler. Gerçek ad derleyici tarafından oluşturulduğundan "kopya" terimi tırnak içine alınmış. Kayıt türünde adlı bir yöntem oluşturamazsınız `Clone` . Sentezlenmiş "kopya" yöntemi, sanal dağıtım kullanılarak Kopyalanmakta olan kaydın türünü döndürür. Derleyici, "Kopyala" yöntemi için, içindeki erişim değiştiricilerine bağlı olarak farklı değiştiriciler ekler `record` :
+Kayıtlar Ayrıca, kopya oluşturmak için birleştirilmiş bir oluşturucuya ve bir "Clone" yöntemine sahiptir. Sentezlenmiş oluşturucunun, kayıt türünde tek bir parametresi vardır. Kaydın tüm özellikleri için aynı değerlere sahip yeni bir kayıt oluşturur. Bu Oluşturucu, kayıt mühürlense, aksi takdirde korunmuşsa özel olur. Sentezlenmiş "kopya" yöntemi, kayıt hiyerarşileri için kopyalama oluşturmayı destekler. Gerçek ad derleyici tarafından oluşturulduğundan "kopya" terimi tırnak içine alınmış. Kayıt türünde adlı bir yöntem oluşturamazsınız `Clone` . Sentezlenmiş "kopya" yöntemi, sanal dağıtım kullanılarak Kopyalanmakta olan kaydın türünü döndürür. Derleyici, "Kopyala" yöntemi için, içindeki erişim değiştiricilerine bağlı olarak farklı değiştiriciler ekler `record` :
 
 - Kayıt türü ise `abstract` , "Clone" yöntemi de vardır `abstract` . Temel tür değilse `object` , yöntemi de olur `override` .
 - `abstract`Temel tür şu olduğunda olmayan kayıt türleri için `object` :
@@ -98,11 +98,13 @@ Derleyici `Deconstruct` konumsal kayıtlar için bir yöntem oluşturur. `Decons
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-Son olarak, _*_-deyimlerle_*_ destek kaydeder. _*_WITH ifadesi_*_ derleyiciye bir kaydın kopyasını oluşturmasını söyler, ancak _with * belirtilen özellikler değiştirilmiştir:
+Son olarak, destek [ `with` ifadelerini](../language-reference/operators/with-expression.md)kaydeder. A _*_ `with` expression_ *_ derleyiciye bir kaydın kopyasını oluşturmasını söyler, ancak* belirtilen özellikleri _with.
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-Yukarıdaki satır, `Person` `LastName` özelliğin bir kopyası olduğu `person` ve `FirstName` "Paul" olduğu yeni bir kayıt oluşturur. Bir WITH ifadesi içinde istediğiniz sayıda özelliği ayarlayabilirsiniz.  "Clone" yöntemi dışındaki birleştirilmiş üyelerin herhangi biri sizin tarafınızdan yazılabilir. Bir kayıt türünün herhangi bir sentezlenmiş yöntemin imzasıyla eşleşen bir yöntemi varsa, derleyici bu yöntemi birleştirmez. Önceki `Dog` kayıt örneği örnek olarak bir el kodlu <xref:System.String.ToString> yöntem içerir.
+Yukarıdaki satır `Person` `LastName` , özelliğin kopyası olduğu yeni bir kayıt oluşturur `person` `FirstName` `"Paul"` . Bir ifadede dilediğiniz sayıda özelliği ayarlayabilirsiniz `with` .
+
+"Clone" yöntemi dışındaki birleştirilmiş üyelerin herhangi biri sizin tarafınızdan yazılabilir. Bir kayıt türünün herhangi bir sentezlenmiş yöntemin imzasıyla eşleşen bir yöntemi varsa, derleyici bu yöntemi birleştirmez. Önceki `Dog` kayıt örneği örnek olarak bir el kodlu <xref:System.String.ToString> yöntem içerir.
 
 ## <a name="init-only-setters"></a>Yalnızca init ayarlayıcılar
 
@@ -242,7 +244,7 @@ Kod Oluşturucu, Roslyn Analysis API 'Lerini kullanarak öznitelikleri veya diğ
 
 Kod üreticileri için eklenen iki özellik, * **kısmi Yöntem sözdizimi** _ ve _*_Modül başlatıcıları_*_ için uzantılardır. Birincisi, kısmi metotlarda yapılan değişiklikler. C# 9,0 öncesi, kısmi Yöntemler, bir `private` erişim değiştiricisi `void` belirtmemelidir, geri dönemeyebilir ve parametrelere sahip olamaz `out` . Bu kısıtlamalar, hiçbir yöntem uygulama sağlanmazsa, derleyicinin kısmi yönteme yapılan tüm çağrıları kaldırmasının anlamına gelir. C# 9,0 bu kısıtlamaları ortadan kaldırır, ancak kısmi Yöntem bildirimlerinin bir uygulamaya sahip olmasını gerektirir. Kod oluşturucuları, bu uygulamayı sağlayabilir. Yeni bir değişiklik yapmaktan kaçınmak için, derleyici eski kuralları takip etmek üzere bir erişim değiştiricisi olmadan herhangi bir kısmi yöntemi dikkate alır. Kısmi Yöntem `private` erişim değiştiricisini içeriyorsa, yeni kurallar bu kısmi yöntemi yönetir.
 
-Kod üreticileri için ikinci yeni özellik _ * _Modül başlatıcıları_ * *. Modül başlatıcıları, <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> kendisine eklenmiş özniteliği olan yöntemlerdir. Bu yöntemler, derleme yüklendiğinde çalışma zamanı tarafından çağırılır. Modül başlatıcısı yöntemi:
+Kod üreticileri için ikinci yeni özellik _ * _Modül başlatıcıları_ * *. Modül başlatıcıları, <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> kendisine eklenmiş özniteliği olan yöntemlerdir. Bu yöntemler, tüm modülün içindeki başka bir alan erişimi veya yöntem çağrısından önce çalışma zamanı tarafından çağırılır. Modül başlatıcısı yöntemi:
 
 - Statik olmalıdır
 - Parametresiz olmalıdır

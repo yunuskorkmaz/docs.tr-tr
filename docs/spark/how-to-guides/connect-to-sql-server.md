@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b20710000d8717b5df238aa9a782371fbe586037
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1fecd796aeefd6c5681c4c2ea623e89f3a5a3c1d
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224028"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439540"
 ---
 # <a name="connect-net-for-apache-spark-to-sql-server"></a>Apache Spark için .NET 'e SQL Server bağlama
 
@@ -29,7 +29,7 @@ Bu makalede, [.net Apache Spark uygulamasına yönelik](https://github.com/dotne
 
     ![SQL Server TCP/IP etkinleştir](./media/connect-external-sources/SqlServerTCPIP.png)
 
-    Ayrıca, **protokol**altındaki Yukarıdaki **Tümünü Dinle** sekmesinde bulunan değeri de aklınızda bulabilirsiniz.
+    Ayrıca, **protokol** altındaki Yukarıdaki **Tümünü Dinle** sekmesinde bulunan değeri de aklınızda bulabilirsiniz.
 
 5. TCP/IP bağlantı noktasını tüm gerekli IP adresleri için 1433 olarak ayarlandıysa, ' a `Listen All` ayarlanır `No` . Aksi takdirde, TCP bağlantı noktasını IPAll içinde ayarlayın.
 
@@ -37,17 +37,17 @@ Bu makalede, [.net Apache Spark uygulamasına yönelik](https://github.com/dotne
 
 ## <a name="connect-to-sql-server-from-your-application"></a>Uygulamanızdan SQL Server bağlama
 
-1. Uygulamanız aracılığıyla veritabanı bağlantısı sağlamak için SQL Server için Microsoft JDBC sürücüsü ( [Bu resmi web sitesinden](https://docs.microsoft.com/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)indir) kullanın.
+1. Uygulamanız aracılığıyla veritabanı bağlantısı sağlamak için SQL Server için Microsoft JDBC sürücüsü ( [Bu resmi web sitesinden](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15)indir) kullanın.
 2. Uygulamanızdan SQL Server örneğine ve veritabanına bağlanmak için aşağıdaki konfigürasyonları ayarlayın:
-    1. **connection_url**: SQL Server örneğine/veritabanına bağlanmak IÇIN kullanılan URL 'dir ve aşağıdaki biçimdedir:
+    1. **connection_url** : SQL Server örneğine/veritabanına bağlanmak IÇIN kullanılan URL 'dir ve aşağıdaki biçimdedir:
 
         ```
         jdbc:sqlserver://<SQL_server_IP_address>:1433;instanceName=<instance_name>;databaseName=<database_name>;
         ```
 
-    2. **dbtable**: erişilmekte olan tablonun adı.
-    3. **Kullanıcı**: SQL Server 'ı yapılandırma adım 1 ' de oturum açma Kullanıcı Kurulumu.
-    4. **parola**: SQL Server 'ı yapılandırmanın 1. adımında ayarlanmış kullanıcının parolası.
+    2. **dbtable** : erişilmekte olan tablonun adı.
+    3. **Kullanıcı** : SQL Server 'ı yapılandırma adım 1 ' de oturum açma Kullanıcı Kurulumu.
+    4. **parola** : SQL Server 'ı yapılandırmanın 1. adımında ayarlanmış kullanıcının parolası.
 3. Aşağıda gösterildiği gibi bir tablodaki verileri okumak için uygulama kodunuzda yukarıdaki yapılandırmayı kullanın:
 
     ```csharp
