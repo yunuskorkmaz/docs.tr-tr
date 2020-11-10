@@ -1297,6 +1297,8 @@ items:
             href: ../standard/base-types/type-conversion.md
           - name: Tür dönüştürme tabloları
             href: ../standard/base-types/conversion-tables.md
+          - name: Anonim ile demet türleri arasında seçim yapma
+            href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
           - name: Framework kitaplıkları
             href: ../standard/framework-libraries.md
           - name: Sınıf kitaplığına genel bakış
@@ -1387,6 +1389,19 @@ items:
         href: ../standard/numerics.md
       - name: 'Tarihler, saatler ve saat dilimleri'
         href: ../standard/datetime/
+      - name: Öznitelikler
+        items:
+          - name: Genel Bakış
+            href: ../standard/attributes/index.md
+            displayName: attributes
+          - name: Öznitelikleri uygulama
+            href: ../standard/attributes/applying-attributes.md
+          - name: Özel öznitelikleri yazma
+            href: ../standard/attributes/writing-custom-attributes.md
+          - name: Özniteliklerde depolanan bilgileri alma
+            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
+  - name: Çalışma zamanı kitaplıkları
+    items:
       - name: 'Sayıları, tarihleri ve diğer türleri biçimlendirme'
         items:
           - name: Genel Bakış
@@ -1511,69 +1526,223 @@ items:
                     href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
                   - name: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
                     href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
-          - name: Dizeleri ayrıştırma (dönüştürme)
-            items:
-              - name: Genel Bakış
-                href: ../standard/base-types/parsing-strings.md
-              - name: Sayısal dizeleri ayrıştırma
-                href: ../standard/base-types/parsing-numeric.md
-              - name: Tarih ve saat dizelerini ayrıştırma
-                href: ../standard/base-types/parsing-datetime.md
-              - name: Diğer dizeleri ayrıştırma
-                href: ../standard/base-types/parsing-other.md
-      - name: Öznitelikler
+      - name: Dizeleri ayrıştırma (dönüştürme)
         items:
           - name: Genel Bakış
-            href: ../standard/attributes/index.md
-            displayName: attributes
-          - name: Öznitelikleri uygulama
-            href: ../standard/attributes/applying-attributes.md
-          - name: Özel öznitelikleri yazma
-            href: ../standard/attributes/writing-custom-attributes.md
-          - name: Özniteliklerde depolanan bilgileri alma
-            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
-      - name: Anonim ile demet türleri arasında seçim yapma
-        href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
-      - name: Konsol uygulaması kavramları
+            href: ../standard/base-types/parsing-strings.md
+          - name: Sayısal dizeleri ayrıştırma
+            href: ../standard/base-types/parsing-numeric.md
+          - name: Tarih ve saat dizelerini ayrıştırma
+            href: ../standard/base-types/parsing-datetime.md
+          - name: Diğer dizeleri ayrıştırma
+            href: ../standard/base-types/parsing-other.md
+      - name: Bağımlılık ekleme
+        items:
+          - name: Genel Bakış
+            href: ../core/extensions/dependency-injection.md
+            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
+          - name: Bağımlılık eklemeyi kullanma
+            href: ../core/extensions/dependency-injection-usage.md
+            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
+          - name: Bağımlılık ekleme yönergeleri
+            href: ../core/extensions/dependency-injection-guidelines.md
+            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
+      - name: Yapılandırma
+        items:
+          - name: Genel Bakış
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: Yapılandırma sağlayıcıları
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: Özel yapılandırma sağlayıcısı uygulama
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
+          - name: Seçenekler deseni
+            href: ../core/extensions/options.md
+      - name: Günlüğe Kaydetme
+        items:
+          - name: Genel Bakış
+            href: ../core/extensions/logging.md
+          - name: Günlük sağlayıcıları
+            href: ../core/extensions/logging-providers.md
+          - name: Özel bir günlük sağlayıcısı uygulama
+            href: ../core/extensions/custom-logging-provider.md
+          - name: Yüksek performanslı günlük
+            href: ../core/extensions/high-performance-logging.md
+          - name: Konsol günlük biçimlendirme
+            href: ../core/extensions/console-log-formatter.md
+      - name: HostBuilder (genel konak)
+        href: ../core/extensions/generic-host.md
+      - name: Serileştirme
+        items:
+          - name: Genel Bakış
+            href: ../standard/serialization/index.md
+          - name: JSON seri hale getirme
+            items:
+              - name: Genel Bakış
+                href: ../standard/serialization/system-text-json-overview.md
+                displayName: json serialization
+              - name: JSON’u seri hale getirme ve seri halden çıkarma
+                href: ../standard/serialization/system-text-json-how-to.md
+              - name: Özel dönüştürücü yazma
+                href: ../standard/serialization/system-text-json-converters-how-to.md
+              - name: Newtonsoft.Json’dan geçiş yapma
+                href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+          - name: İkili serileştirme
+            items:
+              - name: Genel Bakış
+                href: ../standard/serialization/binary-serialization.md
+                displayName: binary serialization
+              - name: BinaryFormatter güvenlik kılavuzu
+                href: ../standard/serialization/binaryformatter-security-guide.md
+              - name: Serileştirme kavramları
+                href: ../standard/serialization/serialization-concepts.md
+              - name: Temel serileştirme
+                href: ../standard/serialization/basic-serialization.md
+              - name: Seçmeli serileştirme
+                href: ../standard/serialization/selective-serialization.md
+              - name: Özel serileştirme
+                href: ../standard/serialization/custom-serialization.md
+              - name: Serileştirme işlemi adımları
+                href: ../standard/serialization/steps-in-the-serialization-process.md
+              - name: Sürüm toleranslı serileştirme
+                href: ../standard/serialization/version-tolerant-serialization.md
+              - name: Serileştirme yönergeleri
+                href: ../standard/serialization/serialization-guidelines.md
+              - name: 'Nasıl yapılır: Öbek halinde serileştirilmiş veriler'
+                href: ../standard/serialization/how-to-chunk-serialized-data.md
+              - name: 'Nasıl yapılır: .NET Standard nesnesinin serileştirilebilir olup olmadığını belirleme'
+                href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
+              - name: Örnek
+                href: ../standard/serialization/basic-serialization-technology-sample.md
+          - name: XML ve SOAP serileştirmesi
+            items:
+              - name: Genel Bakış
+                href: ../standard/serialization/xml-and-soap-serialization.md
+              - name: Ayrıntılı XML serileştirmesi
+                href: ../standard/serialization/introducing-xml-serialization.md
+              - name: Örnekler
+                href: ../standard/serialization/examples-of-xml-serialization.md
+              - name: XML Şema Tanımlama aracı
+                href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
+              - name: Öznitelikleri kullanarak XML serileştirmesini denetleme
+                href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
+              - name: XML serileştirmesini denetleyen öznitelikler
+                href: ../standard/serialization/attributes-that-control-xml-serialization.md
+              - name: XML Web Hizmetleri ile XML serileştirmesi
+                href: ../standard/serialization/xml-serialization-with-xml-web-services.md
+              - name: Kodlanmış SOAP serileştirmesini denetleyen öznitelikler
+                href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
+              - name: Nasıl yapılır belgeleri
+                items:
+                  - name: Nesne serileştirme
+                    href: ../standard/serialization/how-to-serialize-an-object.md
+                  - name: Nesneyi seri durumdan çıkarma
+                    href: ../standard/serialization/how-to-deserialize-an-object.md
+                  - name: Sınıflar ve XML şeması belgeleri oluşturmak için XML Şema Tanımlama aracını kullanma
+                    href: ../standard/serialization/xml-schema-def-tool-gen.md
+                  - name: Türetilen sınıfların serileştirmesini denetleme
+                    href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
+                  - name: XML akışı için alternatif öğe adı belirtme
+                    href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+                  - name: XML öğesini ve XML öznitelik adlarını niteleme
+                    href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
+                  - name: SOAP kodlu XML akışı olarak nesneyi serileştirme
+                    href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+                  - name: Kodlanmış SOAP XML serileştirmesini geçersiz kılma
+                    href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
+              - name: XML serileştirme öğeleri
+                items:
+                  - name: dizileştirme mekanizmasını System.xml.Serialization
+                    href: ../standard/serialization/system-xml-serialization-element.md
+                  - name: dateTimeSerialization
+                    href: ../standard/serialization/datetimeserialization-element.md
+                  - name: schemaImporterExtensions
+                    href: ../standard/serialization/schemaimporterextensions-element.md
+                  - name: schemaImporterExtensions için add öğesi
+                    href: ../standard/serialization/add-element-for-schemaimporterextensions.md
+                  - name: xmlSerializer
+                    href: ../standard/serialization/xmlserializer-element.md
+              - name: Araçlar
+                items:
+                  - name: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
+                    href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
+                  - name: XML Şema Tanımlama aracı (Xsd.exe)
+                    href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
+      - name: Dosya ve akış G/Ç
+        items:
+          - name: Genel Bakış
+            href: ../standard/io/index.md
+          - name: Windows sistemlerinde dosya yolu biçimleri
+            href: ../standard/io/file-path-formats.md
+          - name: Ortak G/Ç görevleri
+            href: ../standard/io/common-i-o-tasks.md
+            items:
+              - name: 'Nasıl yapılır: Dizinleri Kopyalama'
+                href: ../standard/io/how-to-copy-directories.md
+              - name: 'Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma'
+                href: ../standard/io/how-to-enumerate-directories-and-files.md
+              - name: 'Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma'
+                href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+              - name: 'Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme'
+                href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+              - name: 'Nasıl yapılır: Bir Dosyaya Metin Yazma'
+                href: ../standard/io/how-to-write-text-to-a-file.md
+              - name: 'Nasıl yapılır: Dosyadan Metin Okuma'
+                href: ../standard/io/how-to-read-text-from-a-file.md
+              - name: 'Nasıl yapılır: Dizeden Karakterleri Okuma'
+                href: ../standard/io/how-to-read-characters-from-a-string.md
+              - name: 'Nasıl yapılır: Bir Dizeye Karakter Yazma'
+                href: ../standard/io/how-to-write-characters-to-a-string.md
+              - name: 'Nasıl yapılır: Erişim Denetimi Listesi Girdileri Ekleme veya Kaldırma'
+                href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+              - name: 'Nasıl yapılır: Dosya Sıkıştırma ve Çıkarma'
+                href: ../standard/io/how-to-compress-and-extract-files.md
+              - name: Akışlar Oluşturma
+                href: ../standard/io/composing-streams.md
+              - name: 'Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme'
+                href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+          - name: Zaman uyumsuz dosya G/Ç
+            href: ../standard/io/asynchronous-file-i-o.md
+          - name: G/Ç hatalarını işleme
+            href: ../standard/io/handling-io-errors.md
+          - name: Yalıtılmış depolama
+            href: ../standard/io/isolated-storage.md
+            items:
+              - name: Yalıtım Türleri
+                href: ../standard/io/types-of-isolation.md
+              - name: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma'
+                href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+              - name: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma'
+                href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+              - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme'
+                href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+              - name: 'Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme'
+                href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+              - name: 'Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma'
+                href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+              - name: 'Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma'
+                href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+              - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma'
+                href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+              - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme'
+                href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+          - name: Kanallar
+            href: ../standard/io/pipe-operations.md
+            items:
+              - name: 'Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma'
+                href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+              - name: 'Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma'
+                href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+          - name: İşlem hatları
+            href: ../standard/io/pipelines.md
+          - name: Arabellekler ile çalışma
+            href: ../standard/io/buffers.md
+          - name: Bellek eşlemeli dosyalar
+            href: ../standard/io/memory-mapped-files.md
+      - name: System.Console sınıfı
         href: ../standard/building-console-apps.md
-  - name: Bağımlılık ekleme
-    items:
-      - name: Genel Bakış
-        href: ../core/extensions/dependency-injection.md
-        displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
-      - name: Bağımlılık eklemeyi kullanma
-        href: ../core/extensions/dependency-injection-usage.md
-        displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
-      - name: Bağımlılık ekleme yönergeleri
-        href: ../core/extensions/dependency-injection-guidelines.md
-        displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
-  - name: Yapılandırma
-    items:
-      - name: Genel Bakış
-        href: ../core/extensions/configuration.md
-        displayName: 'configuration,config,configuration sources,config sources'
-      - name: Yapılandırma sağlayıcıları
-        href: ../core/extensions/configuration-providers.md
-        displayName: 'configuration providers,config providers'
-      - name: Özel yapılandırma sağlayıcısı uygulama
-        href: ../core/extensions/custom-configuration-provider.md
-        displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
-      - name: Seçenekler deseni
-        href: ../core/extensions/options.md
-  - name: Günlüğe Kaydetme
-    items:
-      - name: Genel Bakış
-        href: ../core/extensions/logging.md
-      - name: Günlük sağlayıcıları
-        href: ../core/extensions/logging-providers.md
-      - name: Özel bir günlük sağlayıcısı uygulama
-        href: ../core/extensions/custom-logging-provider.md
-      - name: Yüksek performanslı günlük
-        href: ../core/extensions/high-performance-logging.md
-      - name: Konsol günlük biçimlendirme
-        href: ../core/extensions/console-log-formatter.md
-  - name: HostBuilder (genel konak)
-    href: ../core/extensions/generic-host.md
   - name: Veri erişimi
     items:
       - name: LINQ
@@ -1582,77 +1751,8 @@ items:
         href: ../standard/data/xml/
       - name: Microsoft.Data.Sqlite
         href: ../standard/data/sqlite/
-  - name: Dosya ve akış G/Ç
-    items:
-      - name: Genel Bakış
-        href: ../standard/io/index.md
-      - name: Windows sistemlerinde dosya yolu biçimleri
-        href: ../standard/io/file-path-formats.md
-      - name: Ortak G/Ç görevleri
-        href: ../standard/io/common-i-o-tasks.md
-        items:
-          - name: 'Nasıl yapılır: Dizinleri Kopyalama'
-            href: ../standard/io/how-to-copy-directories.md
-          - name: 'Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma'
-            href: ../standard/io/how-to-enumerate-directories-and-files.md
-          - name: 'Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma'
-            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
-          - name: 'Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme'
-            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
-          - name: 'Nasıl yapılır: Bir Dosyaya Metin Yazma'
-            href: ../standard/io/how-to-write-text-to-a-file.md
-          - name: 'Nasıl yapılır: Dosyadan Metin Okuma'
-            href: ../standard/io/how-to-read-text-from-a-file.md
-          - name: 'Nasıl yapılır: Dizeden Karakterleri Okuma'
-            href: ../standard/io/how-to-read-characters-from-a-string.md
-          - name: 'Nasıl yapılır: Bir Dizeye Karakter Yazma'
-            href: ../standard/io/how-to-write-characters-to-a-string.md
-          - name: 'Nasıl yapılır: Erişim Denetimi Listesi Girdileri Ekleme veya Kaldırma'
-            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
-          - name: 'Nasıl yapılır: Dosya Sıkıştırma ve Çıkarma'
-            href: ../standard/io/how-to-compress-and-extract-files.md
-          - name: Akışlar Oluşturma
-            href: ../standard/io/composing-streams.md
-          - name: 'Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme'
-            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
-      - name: Zaman uyumsuz dosya G/Ç
-        href: ../standard/io/asynchronous-file-i-o.md
-      - name: G/Ç hatalarını işleme
-        href: ../standard/io/handling-io-errors.md
-      - name: Yalıtılmış depolama
-        href: ../standard/io/isolated-storage.md
-        items:
-          - name: Yalıtım Türleri
-            href: ../standard/io/types-of-isolation.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma'
-            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma'
-            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme'
-            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme'
-            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma'
-            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma'
-            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma'
-            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
-          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme'
-            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
-      - name: Kanallar
-        href: ../standard/io/pipe-operations.md
-        items:
-          - name: 'Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma'
-            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
-          - name: 'Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma'
-            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
-      - name: İşlem hatları
-        href: ../standard/io/pipelines.md
-      - name: Arabellekler ile çalışma
-        href: ../standard/io/buffers.md
-      - name: Bellek eşlemeli dosyalar
-        href: ../standard/io/memory-mapped-files.md
+      - name: Entity Framework Core
+        href: /ef/core/
   - name: 'Paralel işleme, eşzamanlılık ve zaman uyumsuzluk'
     items:
       - name: Genel Bakış
@@ -1805,102 +1905,6 @@ items:
             href: ../standard/parallel-programming/for-further-reading-parallel-programming.md
       - name: İş Parçacığı Oluşturma
         href: ../standard/threading/
-  - name: Serileştirme
-    items:
-      - name: Genel Bakış
-        href: ../standard/serialization/index.md
-      - name: JSON seri hale getirme
-        items:
-          - name: Genel Bakış
-            href: ../standard/serialization/system-text-json-overview.md
-            displayName: json serialization
-          - name: JSON’u seri hale getirme ve seri halden çıkarma
-            href: ../standard/serialization/system-text-json-how-to.md
-          - name: Özel dönüştürücü yazma
-            href: ../standard/serialization/system-text-json-converters-how-to.md
-          - name: Newtonsoft.Json’dan geçiş yapma
-            href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
-      - name: İkili serileştirme
-        items:
-          - name: Genel Bakış
-            href: ../standard/serialization/binary-serialization.md
-            displayName: binary serialization
-          - name: BinaryFormatter güvenlik kılavuzu
-            href: ../standard/serialization/binaryformatter-security-guide.md
-          - name: Serileştirme kavramları
-            href: ../standard/serialization/serialization-concepts.md
-          - name: Temel serileştirme
-            href: ../standard/serialization/basic-serialization.md
-          - name: Seçmeli serileştirme
-            href: ../standard/serialization/selective-serialization.md
-          - name: Özel serileştirme
-            href: ../standard/serialization/custom-serialization.md
-          - name: Serileştirme işlemi adımları
-            href: ../standard/serialization/steps-in-the-serialization-process.md
-          - name: Sürüm toleranslı serileştirme
-            href: ../standard/serialization/version-tolerant-serialization.md
-          - name: Serileştirme yönergeleri
-            href: ../standard/serialization/serialization-guidelines.md
-          - name: 'Nasıl yapılır: Öbek halinde serileştirilmiş veriler'
-            href: ../standard/serialization/how-to-chunk-serialized-data.md
-          - name: 'Nasıl yapılır: .NET Standard nesnesinin serileştirilebilir olup olmadığını belirleme'
-            href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
-          - name: Örnek
-            href: ../standard/serialization/basic-serialization-technology-sample.md
-      - name: XML ve SOAP serileştirmesi
-        items:
-          - name: Genel Bakış
-            href: ../standard/serialization/xml-and-soap-serialization.md
-          - name: Ayrıntılı XML serileştirmesi
-            href: ../standard/serialization/introducing-xml-serialization.md
-          - name: Örnekler
-            href: ../standard/serialization/examples-of-xml-serialization.md
-          - name: XML Şema Tanımlama aracı
-            href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
-          - name: Öznitelikleri kullanarak XML serileştirmesini denetleme
-            href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
-          - name: XML serileştirmesini denetleyen öznitelikler
-            href: ../standard/serialization/attributes-that-control-xml-serialization.md
-          - name: XML Web Hizmetleri ile XML serileştirmesi
-            href: ../standard/serialization/xml-serialization-with-xml-web-services.md
-          - name: Kodlanmış SOAP serileştirmesini denetleyen öznitelikler
-            href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
-          - name: Nasıl yapılır belgeleri
-            items:
-              - name: Nesne serileştirme
-                href: ../standard/serialization/how-to-serialize-an-object.md
-              - name: Nesneyi seri durumdan çıkarma
-                href: ../standard/serialization/how-to-deserialize-an-object.md
-              - name: Sınıflar ve XML şeması belgeleri oluşturmak için XML Şema Tanımlama aracını kullanma
-                href: ../standard/serialization/xml-schema-def-tool-gen.md
-              - name: Türetilen sınıfların serileştirmesini denetleme
-                href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
-              - name: XML akışı için alternatif öğe adı belirtme
-                href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
-              - name: XML öğesini ve XML öznitelik adlarını niteleme
-                href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
-              - name: SOAP kodlu XML akışı olarak nesneyi serileştirme
-                href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
-              - name: Kodlanmış SOAP XML serileştirmesini geçersiz kılma
-                href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
-          - name: XML serileştirme öğeleri
-            items:
-              - name: dizileştirme mekanizmasını System.xml.Serialization
-                href: ../standard/serialization/system-xml-serialization-element.md
-              - name: dateTimeSerialization
-                href: ../standard/serialization/datetimeserialization-element.md
-              - name: schemaImporterExtensions
-                href: ../standard/serialization/schemaimporterextensions-element.md
-              - name: schemaImporterExtensions için add öğesi
-                href: ../standard/serialization/add-element-for-schemaimporterextensions.md
-              - name: xmlSerializer
-                href: ../standard/serialization/xmlserializer-element.md
-          - name: Araçlar
-            items:
-              - name: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
-                href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
-              - name: XML Şema Tanımlama aracı (Xsd.exe)
-                href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
   - name: Sınama
     displayName: 'xUnit,NUnit,MSTest,unit test,test,integration test,load test,smoke test, web test'
     items:

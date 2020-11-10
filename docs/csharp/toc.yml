@@ -48,6 +48,8 @@
               href: tutorials/intro-to-csharp/object-oriented-programming.md
     - name: Üst düzey deyimleri keşfetme
       href: tutorials/exploration/top-level-statements.md
+    - name: Nesnelerdeki desenleri keşfet
+      href: tutorials/exploration/patterns-objects.md
     - name: C# 6’yı keşfetme
       href: tutorials/exploration/csharp-6.yml
     - name: Dize ilişkilendirmeyi keşfetme - etkileşimli
@@ -224,7 +226,7 @@
     - name: Makale dizini
       displayName: how to's
       href: how-to/index.md
-    - name: '`String.Split` kullanarak dizeleri ayrıştırma'
+    - name: Dizeleri alt dizelere bölme
       href: how-to/parse-strings-using-split.md
     - name: Dizeleri birleştirme
       href: how-to/concatenate-multiple-strings.md
@@ -234,7 +236,7 @@
       href: how-to/modify-string-contents.md
     - name: Dizeleri karşılaştırma
       href: how-to/compare-strings.md
-    - name: 'Desen eşleştirme, is ve as işleçleri kullanarak güvenli bir şekilde tür dönüştürme'
+    - name: Desen eşleştirme ve is/as işleçlerini kullanarak güvenli tür değiştirme
       href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
 - name: .NET Compiler Platform SDK’sı (Roslyn API’leri)
   items:
