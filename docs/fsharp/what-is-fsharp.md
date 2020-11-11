@@ -1,26 +1,25 @@
 ---
 title: F# nedir?
-description: F# Programlama dilinin ne olduğu ve F# programlamanın nasıl olduğu hakkında bilgi edinin. Zengin veri türleri, işlevleri ve nasıl birbirine sığması hakkında bilgi edinin.
+description: 'F # programlama dilinin ne olduğu ve F # programlamanın nasıl olduğu hakkında bilgi edinin. Zengin veri türleri, işlevleri ve nasıl birbirine sığması hakkında bilgi edinin.'
 ms.date: 08/03/2018
-ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 37dc2f472d65a046e4bf67e672e2a96f4d4afded
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332728"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439668"
 ---
-# <a name="what-is-f"></a>F\# nedir?
+# <a name="what-is-f"></a>F nedir?\#
 
-F#, doğru ve sürdürülebilir kod yazmayı kolaylaştıran işlevsel bir programlama dilidir.
+F #, doğru ve sürdürülebilir kod yazmayı kolaylaştıran işlevsel bir programlama dilidir.
 
-F#programlama öncelikle, türü çıkarılan ve otomatik olarak Genelleştirilmiş türleri ve işlevleri tanımlamayı içerir. Bu, odağın sorun etki alanında kalmasına ve programlama ayrıntıları yerine verilerinin işlenmesine olanak tanır.
+F # programlama öncelikle tür tarafından çıkarılan ve genelleştirilmiş, otomatik olarak oluşturulan türleri ve işlevleri tanımlamayı içerir. Bu, odağın sorun etki alanında kalmasına ve programlama ayrıntıları yerine verilerinin işlenmesine olanak tanır.
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
 
 // Defines a function that takes a name and produces a greeting.
-let getGreeting name =
-    sprintf "Hello, %s! Isn't F# great?" name
+let getGreeting name = $"Hello, {name}! Isn't F# great?"
 
 [<EntryPoint>]
 let main args =
@@ -35,7 +34,7 @@ let main args =
     0
 ```
 
-F#Aşağıdakiler dahil olmak üzere çeşitli özelliklere sahiptir:
+F #, aşağıdakiler dahil olmak üzere çeşitli özelliklere sahiptir:
 
 * Hafif sözdizimi
 * Varsayılan olarak sabit
@@ -45,7 +44,7 @@ F#Aşağıdakiler dahil olmak üzere çeşitli özelliklere sahiptir:
 * Desen eşleştirme
 * Zaman uyumsuz programlama
 
-Tam özellikler kümesi, [ F# dil başvurusunda](./language-reference/index.md)belgelenmiştir.
+Tüm özellikler kümesi [F # dil başvurusunda](./language-reference/index.md)belgelenmiştir.
 
 ## <a name="rich-data-types"></a>Zengin veri türleri
 
@@ -72,11 +71,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#kayıtlar ve ayrılmış birleşimler, varsayılan olarak boş, değişmez ve karşılaştırılabilir değildir. Bu, kullanımı çok kolay hale getirir.
+F # kayıtları ve ayrılmış birleşimler, varsayılan olarak boş, değişmez ve karşılaştırılabilir değildir. Bu, kullanımı çok kolay hale getirir.
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>İşlevler ve model eşleştirme ile uygulanan doğruluk
 
-F#işlevler, kolayca bildirmek ve güçlü bir uygulamadır. [Desenler eşleştirilirken](./language-reference/pattern-matching.md), doğruluk derleyici tarafından zorlanan davranışı tanımlamanızı sağlar.
+F # işlevlerinin kolayca bildirilmesini ve güçlü bir yöntem olduğunu. [Desenler eşleştirilirken](./language-reference/pattern-matching.md), doğruluk derleyici tarafından zorlanan davranışı tanımlamanızı sağlar.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +92,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#işlevler ayrıca birinci sınıftır, yani Parametreler olarak geçirilebilir ve diğer işlevlerden geri döndürülebilecek anlamına gelir.
+F # işlevleri de birinci sınıftır, yani parametre olarak geçirilebilir ve diğer işlevlerden geri döndürülebilecek anlamına gelir.
 
 ## <a name="functions-to-define-operations-on-objects"></a>Nesneler üzerinde işlem tanımlamak için işlevler
 
-F#, veri ve işlevsellik Blend gerektiğinde yararlı veri türleri olan nesneler için tam desteğe sahiptir. F#işlevleri nesneleri işlemek için kullanılır.
+F #, veri ve işlevsellik Blend gerektiğinde yararlı veri türleri olan nesneler için tam desteğe sahiptir. F # işlevleri nesneleri işlemek için kullanılır.
 
 ```fsharp
 type Set<'T when 'T: comparison>(elements: seq<'T>) =
@@ -118,8 +117,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-İçinde F#nesne odaklı kod yazmak yerine, genellikle nesneleri işlemek için işlevleri farklı bir veri türü olarak karşılayan kodu yazarsınız. [Genel arabirimler](./language-reference/interfaces.md), [nesne ifadeleri](./language-reference/object-expressions.md)ve [üyenin](./language-reference/members/index.md) akıllıca kullanımı gibi özellikler daha büyük F# programlarda ortaktır.
+Nesne odaklı kod yazmak yerine, F # ' da genellikle nesneleri işlemek için işlevlere başka bir veri türü olarak niteleyen kodu yazarsınız. [Genel arabirimler](./language-reference/interfaces.md), [nesne ifadeleri](./language-reference/object-expressions.md)ve [üyenin](./language-reference/members/index.md) akıllıca kullanımı gibi özellikler daha büyük F # programlarında ortaktır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Daha büyük bir F# özellikler kümesi hakkında daha fazla bilgi edinmek için [ F# tura](tour.md)göz atın.
+Daha büyük bir F # özellikleri kümesi hakkında daha fazla bilgi edinmek için [f # turuna](tour.md)göz atın.
