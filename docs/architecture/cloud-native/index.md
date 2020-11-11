@@ -2,18 +2,21 @@
 title: Azure için Cloud Native .NET uygulamaları tasarlama
 description: Kapsayıcılardan, mikro hizmetlerden ve sunucusuz özelliklerden yararlanarak bulutta yerel uygulamalar oluşturmaya yönelik bir kılavuz.
 author: ardalis
-ms.date: 05/13/2020
-ms.openlocfilehash: 172097b4915deb2d6f0b06441d7c4ca389bbca25
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.date: 11/10/2020
+ms.openlocfilehash: 673bfef27c3767f68b1c30d4383cee010ba377f0
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051512"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506655"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure için Cloud Native .NET uygulamaları tasarlama
 
 ![kapak resmi](./media/cover.png)
 
-**SÜRÜM v. 1.0**
+**SÜRÜM v 1.0**
+
+Kitap güncelleştirmeleri ve topluluk katkılarına yönelik [changelog](https://aka.ms/cn-ebook-changelog) 'u inceleyin.
 
 YAYIMLAYAN
 
@@ -27,7 +30,7 @@ Redmond, Washington 98052-6399
 
 Telif hakkı &copy; 2020 Microsoft Corporation
 
-Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
+All rights reserved. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
 Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. URL ve diğer Internet Web sitesi başvuruları dahil olmak üzere bu kitapta ifade edilen görünümler, eklentiler ve bilgiler bildirimde bulunmadan değiştirilebilir.
 
@@ -43,23 +46,23 @@ Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
 
 Düzenliyor
 
-> **Ramiz Vettor**, sorumlu bulut sistemi MIMARı/IP mimarı- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft
+> **Ramiz Vettor** , sorumlu bulut sistemi MIMARı/IP mimarı- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft
 >
-> **Steve "ardalış" Smith**, yazılım mimarı ve Trainer- [Ardalis.com](https://ardalis.com)
+> **Steve "ardalış" Smith** , yazılım mimarı ve Trainer- [Ardalis.com](https://ardalis.com)
 
 Katılımcılar ve gözden geçirenler:
 
-> **Cesar de La Torre**, sorumlu Program Yöneticisi, .NET ekibi, Microsoft
+> **Cesar de La Torre** , sorumlu Program Yöneticisi, .NET ekibi, Microsoft
 >
-> **Hayvan anıl**, üst düzey Program Yöneticisi, .NET ekibi, Microsoft
+> **Hayvan anıl** , üst düzey Program Yöneticisi, .NET ekibi, Microsoft
 >
-> **Jeremy Liksizlik**, üst düzey Program Yöneticisi, .NET ekibi, Microsoft
+> **Jeremy Liksizlik** , üst düzey Program Yöneticisi, .NET ekibi, Microsoft
 >
-> **Cecil Phillip**, üst düzey bulut Danışmanı, Microsoft
+> **Cecil Phillip** , üst düzey bulut Danışmanı, Microsoft
 
 Edit
 
-> **Maira Wenzel**, program Yöneticisi, .NET ekibi, Microsoft
+> **Maira Wenzel** , program Yöneticisi, .NET ekibi, Microsoft
 
 ## <a name="version"></a>Sürüm
 

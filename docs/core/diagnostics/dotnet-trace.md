@@ -2,12 +2,12 @@
 title: DotNet-izleme aracı-.NET Core
 description: DotNet-Trace komut satırı aracını yükleme ve kullanma.
 ms.date: 11/21/2019
-ms.openlocfilehash: 25178a0e59ce9edb69d15ee761c1b9e56aa5eb3a
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517314"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507234"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>DotNet-izleme performansı Analizi yardımcı programı
 
@@ -66,6 +66,7 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
     [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
     [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
     [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
+    [-- <command>] (for target applications running .NET 5.0 or later)
 ```
 
 ### <a name="options"></a>Seçenekler
@@ -109,8 +110,15 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   Bu sağlayıcı listesi şu biçimdedir:
 
   - `Provider[,Provider]`
-  - `Provider`Şu biçimdedir: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]` .
-  - `KeyValueArgs`Şu biçimdedir: `[key1=value1][;key2=value2]` .
+  - `Provider` Şu biçimdedir: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]` .
+  - `KeyValueArgs` Şu biçimdedir: `[key1=value1][;key2=value2]` .
+
+- **`-- <command>` (yalnızca .NET 5,0 çalıştıran hedef uygulamalar için)**
+
+  Koleksiyon yapılandırma parametrelerinden sonra, Kullanıcı, `--` en az bir 5,0 çalışma zamanına sahip bir .NET uygulamasını başlatmak için ardından bir komut ekleyebilir. Bu, işlemin başında gerçekleşen, başlangıç performansı sorunu veya derleme yükleyicisi ve bağlayıcı hataları gibi sorunları tanılarken yararlı olabilir.
+
+  > [!NOTE]
+  > Bu seçeneğin kullanılması, araca geri iletişim kuran ilk .NET 5,0 işlemini izler, bu da komutunuz birden çok .NET uygulaması başlattığında yalnızca ilk uygulamayı toplayacaktır. Bu nedenle, bu seçeneği kendi içinde bulunan uygulamalarda veya seçeneğini kullanarak kullanmanız önerilir `dotnet exec <app.dll>` .
 
 ## <a name="dotnet-trace-convert"></a>DotNet-Trace Dönüştür
 
@@ -126,7 +134,7 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 
 - **`<input-filename>`**
 
-  Dönüştürülecek giriş izleme dosyası. *Trace. NetTrace*için varsayılanlar.
+  Dönüştürülecek giriş izleme dosyası. *Trace. NetTrace* için varsayılanlar.
 
 ### <a name="options"></a>Seçenekler
 
@@ -168,7 +176,7 @@ Kullanarak izlemeleri toplamak için `dotnet-trace` :
   - Linux 'ta, örneğin, `ps` komutu.
   - [DotNet-izleme PS 'si](#dotnet-trace-ps)
 
-- Aşağıdaki komutu çalıştırın:
+- Şu komutu çalıştırın:
 
   ```console
   dotnet-trace collect --process-id <PID>
@@ -184,20 +192,56 @@ Kullanarak izlemeleri toplamak için `dotnet-trace` :
   Recording trace 721.025 (KB)
   ```
 
-- Anahtara basarak toplamayı durdurun `<Enter>` . `dotnet-trace`olayları *izleme. NetTrace* dosyasına kaydetme işlemi tamamlanır.
+- Anahtara basarak toplamayı durdurun `<Enter>` . `dotnet-trace` olayları *izleme. NetTrace* dosyasına kaydetme işlemi tamamlanır.
+
+## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>Bir alt uygulama başlatın ve DotNet-Trace kullanarak başlangıçtan bir izleme toplayın
+
+NOTE: Bu yalnızca .NET 5,0 veya sonraki sürümleri çalıştıran uygulamalar için geçerlidir.
+
+Bazen bir işlemin başlangıcında bir izleme toplamak yararlı olabilir. .NET 5,0 veya üzeri sürümlerini çalıştıran uygulamalar için bu, DotNet-Trace kullanılarak yapılabilir.
+
+Bu, `hello.exe` ile `arg1` ve `arg2` komut satırı bağımsız değişkenleri olarak başlatılır ve çalışma zamanı başlangıcında bir izleme toplar:
+
+```console
+dotnet-trace collect -- hello.exe arg1 arg2
+```
+
+Yukarıdaki komut aşağıdakine benzer bir çıktı oluşturur:
+
+```console
+No profile or providers specified, defaulting to trace profile 'cpu-sampling'
+
+Provider Name                           Keywords            Level               Enabled By
+Microsoft-DotNETCore-SampleProfiler     0x0000F00000000000  Informational(4)    --profile
+Microsoft-Windows-DotNETRuntime         0x00000014C14FCCBD  Informational(4)    --profile
+
+Process        : E:\temp\gcperfsim\bin\Debug\net5.0\gcperfsim.exe
+Output File    : E:\temp\gcperfsim\trace.nettrace
+
+
+[00:00:00:05]   Recording trace 122.244  (KB)
+Press <Enter> or <Ctrl+C> to exit...
+```
+
+Veya tuşuna basarak izlemenin toplanmasını durdurabilirsiniz `<Enter>` `<Ctrl + C>` . Bunun için de çıkış yapılır `hello.exe` .
+
+> [!NOTE]
+> `hello.exe`DotNet-Trace aracılığıyla başlatmak, giriş/çıkışının yeniden yönlendirilmesini sağlar ve stdin/stdout ile etkileşime giremeyeceksiniz.
+> CTRL + C veya SIGTERM aracılığıyla araçtan çıkmak, hem aracı hem de alt işlemi güvenle sonlandıracaktır.
+> Alt işlem, araçtan önce çıktığında, araç da sonlandırılır ve izlemenin güvenle görüntülenebilir olması gerekir.
 
 ## <a name="view-the-trace-captured-from-dotnet-trace"></a>DotNet 'den yakalanan izlemeyi görüntüleyin-Trace
 
 Windows 'da *. NetTrace* dosyaları analiz Için [PerfView](https://github.com/microsoft/perfview) üzerinde görüntülenebilir: diğer platformlarda toplanan izlemeler Için, izleme dosyası PerfView 'Da görüntülenmek üzere bir Windows makinesine taşınabilir.
 
-Linux 'ta izleme, ' nin çıkış biçimi değiştirilerek görüntülenebilir `dotnet-trace` `speedscope` . Çıkış dosyası biçimi, seçeneği kullanılarak değiştirilebilir, `-f|--format` `-f speedscope` `dotnet-trace` bir `speedscope` dosya oluşturur. `nettrace`(Varsayılan seçenek) ve arasında seçim yapabilirsiniz `speedscope` . `Speedscope`dosyalar ' de açılabilir <https://www.speedscope.app> .
+Linux 'ta izleme, ' nin çıkış biçimi değiştirilerek görüntülenebilir `dotnet-trace` `speedscope` . Çıkış dosyası biçimi, seçeneği kullanılarak değiştirilebilir, `-f|--format` `-f speedscope` `dotnet-trace` bir `speedscope` dosya oluşturur. `nettrace`(Varsayılan seçenek) ve arasında seçim yapabilirsiniz `speedscope` . `Speedscope` dosyalar ' de açılabilir <https://www.speedscope.app> .
 
 > [!NOTE]
 > .NET Core çalışma zamanı, biçimde izleme oluşturur `nettrace` . İzlemeler, izleme tamamlandıktan sonra speedscope (belirtilmişse) olarak dönüştürülür. Bazı dönüştürmeler veri kaybına neden olabileceğinden, özgün `nettrace` Dosya Dönüştürülen dosyanın yanında korunur.
 
 ## <a name="use-dotnet-trace-to-collect-counter-values-over-time"></a>Zaman içinde sayaç değerlerini toplamak için DotNet-Trace kullanın
 
-`dotnet-trace`erişebilirsiniz
+`dotnet-trace` erişebilirsiniz
 
 * `EventCounter`Performans duyarlı ortamlarda temel sistem durumu izleme için kullanın. Örneğin, üretimde.
 * İzlemeleri toplayın, böylece gerçek zamanlı olarak görüntülenmesi gerekmez.

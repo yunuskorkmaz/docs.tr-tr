@@ -1,19 +1,21 @@
 ---
 title: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
 description: Docker ve Microsoft platformu ve araçları ile Kapsayıcılı uygulamalar geliştirmeye ve dağıtmaya yönelik geliştirme ve dağıtım sürecine ileri düzey bir genel bakış alın.
-ms.date: 07/30/2020
-ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/10/2020
+ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160703"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506668"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
 
 ![Kitap kapağı](./media/devops-book-cover-large-we.png)
 
 **Sürüm v 3.1** -ASP.NET Core 3,1 ' ye güncelleştirildi
+
+Kitap güncelleştirmeleri ve topluluk katkılarına yönelik [changelog](https://aka.ms/DockerLifecycleEbookChangelog) 'u inceleyin.
 
 Bu kılavuz, Microsoft platformu ve araçları kullanılarak Docker ile Kapsayıcılı ASP.NET Core uygulamalar geliştirmeye ve dağıtmaya yönelik genel bir genel bakıştır. Kılavuz, CI/CD işlem hatlarının yanı sıra Azure Container Registry (ACR) ve Azure Kubernetes Hizmetleri AKS ' i dağıtmak için Azure DevOps 'a yönelik yüksek düzeyde bir giriş içerir.
 
@@ -27,7 +29,7 @@ Düşük düzey, geliştirmeyle ilgili ayrıntılar için [.net mikro hizmetleri
 
 Yazar:
 
-> **Cesar de La Torre**, SR. PM, .net ürün ekibi, Microsoft Corp.
+> **Cesar de La Torre** , SR. PM, .net ürün ekibi, Microsoft Corp.
 
 Alım Düzenleyicisi:
 
@@ -35,7 +37,7 @@ Alım Düzenleyicisi:
 
 Geliştirme Düzenleyicisi:
 
-> **Bob Russatı**, Microsoft 'Ta çözüm uzmanı
+> **Bob Russatı** , Microsoft 'Ta çözüm uzmanı
 >
 > [**Sekizlik yayımlama, Inc.**](http://www.octalpub.com/)
 
@@ -47,15 +49,15 @@ Düzenleme üretimi:
 
 Copyeditor:
 
-> **Bob Russatı**, Microsoft 'Ta çözüm uzmanı
+> **Bob Russatı** , Microsoft 'Ta çözüm uzmanı
 
 Katılımcılar ve gözden geçirenler:
 
-> **Hayvan anıl**, SR. Program Yöneticisi, .NET ekibi, Microsoft
+> **Hayvan anıl** , SR. Program Yöneticisi, .NET ekibi, Microsoft
 >
-> **MIGUEL Veloso**, düz kavramlarda yazılım geliştirme mühendisi
+> **MIGUEL Veloso** , düz kavramlarda yazılım geliştirme mühendisi
 >
-> **Sumit Ghosh**, sorumlu danışman Neudesic
+> **Sumit Ghosh** , sorumlu danışman Neudesic
 
 ## <a name="copyright"></a>Telif Hakkı
 

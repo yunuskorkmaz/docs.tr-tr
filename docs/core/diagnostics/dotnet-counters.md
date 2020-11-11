@@ -2,12 +2,12 @@
 title: DotNet-sayaçlar-.NET Core
 description: DotNet-Counter komut satırı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 02/26/2020
-ms.openlocfilehash: 6a4fd92540dbc16173dfa3a10ff9dfaa1f31f7d0
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7ff29ad91ad271afd35e3d38a4d748bc79ad6c03
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062905"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507260"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -29,7 +29,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-counters`, geçici sistem durumu izleme ve ilk düzey performans araştırması için bir performans izleme aracıdır. API aracılığıyla yayınlanan performans sayacı değerlerini gözlemleyebilirsiniz <xref:System.Diagnostics.Tracing.EventCounter> . Örneğin, veya kullanarak daha ciddi performans araştırmasına gerek olmadan önce kuşkulu bir şey olup olmadığını görmek için, CPU kullanımı veya .NET Core uygulamanızda oluşturulan özel durumların oranı gibi şeyleri hızlıca izleyebilirsiniz `PerfView` `dotnet-trace` .
+`dotnet-counters` , geçici sistem durumu izleme ve ilk düzey performans araştırması için bir performans izleme aracıdır. API aracılığıyla yayınlanan performans sayacı değerlerini gözlemleyebilirsiniz <xref:System.Diagnostics.Tracing.EventCounter> . Örneğin, veya kullanarak daha ciddi performans araştırmasına gerek olmadan önce kuşkulu bir şey olup olmadığını görmek için, CPU kullanımı veya .NET Core uygulamanızda oluşturulan özel durumların oranı gibi şeyleri hızlıca izleyebilirsiniz `PerfView` `dotnet-trace` .
 
 ## <a name="options"></a>Seçenekler
 
@@ -57,7 +57,7 @@ Seçili sayaç değerlerini düzenli olarak toplayın ve işleme sonrası için 
 ### <a name="synopsis"></a>Özeti
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>Seçenekler
@@ -70,9 +70,9 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   Görüntülenecek sayaçların güncelleştirilmesi arasındaki gecikme süresi (saniye)
 
-- **`counter_list <COUNTERS>`**
+- **`--counters <COUNTERS>`**
 
-  Sayaçların boşlukla ayrılmış bir listesi. Sayaçlar belirtilebilir `provider_name[:counter_name]` . `provider_name`Nitelendirme olmadan kullanılırsa `counter_name` , tüm sayaçlar gösterilir. Sağlayıcı ve sayaç adlarını saptamak için [DotNet-Counters listesi](#dotnet-counters-list) komutunu kullanın.
+  Sayaçların virgülle ayrılmış bir listesi. Sayaçlar belirtilebilir `provider_name[:counter_name]` . , `provider_name` Uygun sayaçların bir listesi olmadan kullanılırsa, sağlayıcıdan gelen tüm sayaçlar gösterilir. Sağlayıcı ve sayaç adlarını saptamak için [DotNet-Counters listesi](#dotnet-counters-list) komutunu kullanın.
 
 - **`--format <csv|json>`**
 
@@ -81,6 +81,13 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 - **`-o|--output <output>`**
 
   Çıktı dosyasının adı.
+
+- **`-- <command>` (yalnızca .NET 5,0 veya üzeri sürümleri çalıştıran hedef uygulamalar için)**
+
+  Koleksiyon yapılandırma parametrelerinden sonra, Kullanıcı, `--` en az bir 5,0 çalışma zamanına sahip bir .NET uygulamasını başlatmak için ardından bir komut ekleyebilir. `dotnet-counters` , belirtilen komutla bir işlem başlatır ve istenen ölçümleri toplar. Bu, genellikle uygulamanın başlangıç yolu için ölçümleri toplamak ve ana giriş noktasından önce veya kısa bir süre sonra ortaya çıkan sorunları tanılamak veya izlemek için kullanılabilir.
+
+> [!NOTE]
+> Bu seçeneğin kullanılması, araca geri iletişim kuran ilk .NET 5,0 işlemini izler, bu da komutunuz birden çok .NET uygulaması başlattığında yalnızca ilk uygulamayı toplayacaktır. Bu nedenle, bu seçeneği kendi içinde bulunan uygulamalarda veya seçeneğini kullanarak kullanmanız önerilir `dotnet exec <app.dll>` .
 
 ### <a name="examples"></a>Örnekler
 
@@ -91,6 +98,14 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   counter_list is unspecified. Monitoring all counters by default.
   Starting a counter session. Press Q to quit.
+  ```
+
+- `dotnet mvc.dll`Bir alt işlem olarak başlatın ve çalışma zamanı sayaçlarını toplamaya başlayın ve başlatma işleminden ASP.NET Core barındırma sayaçlarını başlatın ve bunu BIR JSON çıkışı olarak kaydedin:
+
+  ```console
+  > dotnet-counters collect --format json --counters System.Runtime,Microsoft.AspNetCore.Hosting -- dotnet mvc.dll
+  Starting a counter session. Press Q to quit.
+  File saved to counter.json
   ```
 
 ## <a name="dotnet-counters-list"></a>DotNet-sayaçlar listesi
@@ -147,7 +162,7 @@ Seçili sayaçların değerlerini düzenli aralıklarla yenilemeyi görüntüler
 ### <a name="synopsis"></a>Özeti
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>Seçenekler
@@ -160,35 +175,61 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   Görüntülenecek sayaçların güncelleştirilmesi arasındaki gecikme süresi (saniye)
 
-- **`counter_list <COUNTERS>`**
+- **`--counters <COUNTERS>`**
 
-  Sayaçların boşlukla ayrılmış bir listesi. Sayaçlar belirtilebilir `provider_name[:counter_name]` . `provider_name`Nitelendirme olmadan kullanılırsa `counter_name` , tüm sayaçlar gösterilir. Sağlayıcı ve sayaç adlarını saptamak için [DotNet-Counters listesi](#dotnet-counters-list) komutunu kullanın.
+  Sayaçların virgülle ayrılmış bir listesi. Sayaçlar belirtilebilir `provider_name[:counter_name]` . , `provider_name` Uygun sayaçların bir listesi olmadan kullanılırsa, sağlayıcıdan gelen tüm sayaçlar gösterilir. Sağlayıcı ve sayaç adlarını saptamak için [DotNet-Counters listesi](#dotnet-counters-list) komutunu kullanın.
+
+ **`-- <command>` (yalnızca .NET 5,0 veya üzeri sürümleri çalıştıran hedef uygulamalar için)**
+
+  Koleksiyon yapılandırma parametrelerinden sonra, Kullanıcı, `--` en az bir 5,0 çalışma zamanına sahip bir .NET uygulamasını başlatmak için ardından bir komut ekleyebilir. `dotnet-counters` , belirtilen komutla bir işlem başlatır ve istenen ölçümleri izler. Bu, genellikle uygulamanın başlangıç yolu için ölçümleri toplamak ve ana giriş noktasından önce veya kısa bir süre sonra ortaya çıkan sorunları tanılamak veya izlemek için kullanılabilir.
+
+  > [!NOTE]
+  > Bu seçeneğin kullanılması, araca geri iletişim kuran ilk .NET 5,0 işlemini izler, bu da komutunuz birden çok .NET uygulaması başlattığında yalnızca ilk uygulamayı toplayacaktır. Bu nedenle, bu seçeneği kendi içinde bulunan uygulamalarda veya seçeneğini kullanarak kullanmanız önerilir `dotnet exec <app.dll>` .
 
 ### <a name="examples"></a>Örnekler
 
 - Tüm sayaçları `System.Runtime` 3 saniyelik yenileme aralığından izleyin:
 
   ```console
-  > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
-
+  > dotnet-counters monitor --process-id 1902  --refresh-interval 3 --counters System.Runtime
   Press p to pause, r to resume, q to quit.
-    System.Runtime:
-      CPU Usage (%)                                 24
-      Working Set (MB)                            1982
-      GC Heap Size (MB)                            811
-      Gen 0 GC / second                             20
-      Gen 1 GC / second                              4
-      Gen 2 GC / second                              1
-      Number of Exceptions / sec                     4
+      Status: Running
+
+  [System.Runtime]
+      % Time in GC since last GC (%)                                 0
+      Allocation Rate (B / 1 sec)                                5,376
+      CPU Usage (%)                                                  0
+      Exception Count (Count / 1 sec)                                0
+      GC Fragmentation (%)                                          48.467
+      GC Heap Size (MB)                                              0
+      Gen 0 GC Count (Count / 1 sec)                                 1
+      Gen 0 Size (B)                                                24
+      Gen 1 GC Count (Count / 1 sec)                                 1
+      Gen 1 Size (B)                                                24
+      Gen 2 GC Count (Count / 1 sec)                                 1
+      Gen 2 Size (B)                                           272,000
+      IL Bytes Jitted (B)                                       19,449
+      LOH Size (B)                                              19,640
+      Monitor Lock Contention Count (Count / 1 sec)                  0
+      Number of Active Timers                                        0
+      Number of Assemblies Loaded                                    7
+      Number of Methods Jitted                                     166
+      POH (Pinned Object Heap) Size (B)                             24
+      ThreadPool Completed Work Item Count (Count / 1 sec)           0
+      ThreadPool Queue Length                                        0
+      ThreadPool Thread Count                                        2
+      Working Set (MB)                                              19
   ```
 
 - Yalnızca CPU kullanımı ve GC yığın boyutunu izle `System.Runtime` :
 
   ```console
-  > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
+  > dotnet-counters monitor --process-id 1902 --counters System.Runtime[cpu-usage,gc-heap-size]
 
   Press p to pause, r to resume, q to quit.
-    System.Runtime:
+    Status: Running
+
+  [System.Runtime]
       CPU Usage (%)                                 24
       GC Heap Size (MB)                            811
   ```
@@ -196,12 +237,43 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 - `EventCounter`Kullanıcı tanımlı değerleri izleme `EventSource` . Daha fazla bilgi için bkz. [öğretici: .NET Core 'Da EventCounters kullanarak performansı ölçme](event-counter-perf.md).
 
   ```console
-  > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal
+  > dotnet-counters monitor --process-id 1902 --counters Samples-EventCounterDemos-Minimal
 
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+
+- `my-aspnet-server.exe`Başlangıçtan yüklenen derlemelerin sayısını başlatın ve izleyin (yalnızca .net 5,0 veya üzeri):
+
+  NOTE: Bu yalnızca .NET 5,0 veya sonraki sürümleri çalıştıran uygulamalar için geçerlidir.
+
+  ```console
+  > dotnet-counters monitor --counters System.Runtime[assembly-count] -- my-aspnet-server.exe
+
+  Press p to pause, r to resume, q to quit.
+    Status: Running
+
+  [System.Runtime]
+      Number of Assemblies Loaded                   24
+  ```
   
+- `my-aspnet-server.exe` `arg1` Ve `arg2` komut satırı bağımsız değişkenleri ile başlatın ve çalışma kümesi ve GC yığın boyutunu başlangıçtan (yalnızca .NET 5,0 veya üzeri) izleyin:
+
+  NOTE: Bu yalnızca .NET 5,0 veya sonraki sürümleri çalıştıran uygulamalar için geçerlidir.
+
+  ```console
+  > dotnet-counters monitor --counters System.Runtime[working-set,gc-heap-size] -- my-aspnet-server.exe arg1 arg2
+  ```
+
+  ```console
+  Press p to pause, r to resume, q to quit.
+    Status: Running
+
+  [System.Runtime]
+      GC Heap Size (MB)                                 39
+      Working Set (MB)                                  59
+  ```
+
 ## <a name="dotnet-counters-ps"></a>DotNet-sayaçlar PS 'si
 
 İzlenebilecek DotNet işlemlerinin bir listesini görüntüleyin.

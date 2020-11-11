@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 81ddf0ccdc0ff3269a68fcb6c7c43ad9b39c8128
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 75122cf3c752dbbb3bb01c396a6edfda21462f9a
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602973"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506822"
 ---
 
-.NET uygulamaları geliştirmek istiyorsanız SDK 'Yı (çalışma zamanını da içerir) yükleyebilirsiniz. Ya da yalnızca uygulamaları çalıştırmanız gerekiyorsa, çalışma zamanını yüklemeniz yeterlidir. Çalışma zamanını yüklüyorsanız, **ASP.NET Core çalışma zamanını** hem .NET Core hem de ASP.NET Core çalışma zamanları içerdiğinden yüklemenizi öneririz.
+.NET uygulamaları geliştirmek istiyorsanız SDK 'Yı (çalışma zamanını da içerir) yükleyebilirsiniz. Ya da yalnızca uygulamaları çalıştırmanız gerekiyorsa, çalışma zamanını yüklemeniz yeterlidir. Çalışma zamanını yüklüyorsanız, **ASP.NET Core çalışma zamanını** hem .net hem de ASP.NET Core çalışma zamanları içerdiğinden yüklemenizi öneririz.
 
-SDK 'Yı veya çalışma zamanını zaten yüklediyseniz, `dotnet --list-sdks` `dotnet --list-runtimes` hangi sürümlerin yüklü olduğunu görmek için ve komutlarını kullanın. Daha fazla bilgi için bkz. [.NET Core 'un zaten yüklü olduğunu denetleme](../how-to-detect-installed-versions.md).
+SDK 'Yı veya çalışma zamanını zaten yüklediyseniz, `dotnet --list-sdks` `dotnet --list-runtimes` hangi sürümlerin yüklü olduğunu görmek için ve komutlarını kullanın. Daha fazla bilgi için bkz. [.net 'in zaten yüklü olduğunu denetleme](../how-to-detect-installed-versions.md).

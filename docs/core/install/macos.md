@@ -1,17 +1,17 @@
 ---
-title: MacOS 'ta .NET Core 'u yükler
-description: .NET Core 'u hangi macOS sürümlerinin yükleyebileceğinizi öğrenin.
+title: MacOS 'ta .NET 'i yükler
+description: .NET yükleyebileceğiniz macOS sürümleri hakkında bilgi edinin.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/25/2020
-ms.openlocfilehash: f946759a57bf2eedd296ecbd55fd3a5a7560638d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: c5b98767388937ba1e06b0e856a9a923d4a18b3c
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538372"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506785"
 ---
-# <a name="install-net-core-on-macos"></a>MacOS 'ta .NET Core 'u yükler
+# <a name="install-net-on-macos"></a>MacOS 'ta .NET 'i yükler
 
 > [!div class="op_single_selector"]
 >
@@ -19,30 +19,30 @@ ms.locfileid: "90538372"
 > - [macOS’ta yükleme](macos.md)
 > - [Linux'ta yükleme](linux.md)
 
-Bu makalede, macOS 'ta .NET Core 'u yüklemeyi öğreneceksiniz. .NET Core çalışma zamanı ve SDK 'dan oluşur. Çalışma zamanı .NET Core uygulamasını çalıştırmak için kullanılır ve uygulama ile birlikte bulunmayabilir veya bulunmayabilir. SDK, .NET Core Uygulamaları ve kitaplıkları oluşturmak için kullanılır. .NET Core çalışma zamanı her zaman SDK ile birlikte yüklenir.
+Bu makalede, macOS 'ta .NET yüklemeyi öğreneceksiniz. .NET çalışma zamanı ve SDK 'dan oluşur. Çalışma zamanı, .NET uygulamasını çalıştırmak için kullanılır ve uygulama ile birlikte bulunmayabilir veya bulunmayabilir. SDK, .NET uygulamaları ve kitaplıkları oluşturmak için kullanılır. .NET çalışma zamanı her zaman SDK ile birlikte yüklenir.
 
-.NET Core 'un en son sürümü 3,1 ' dir.
+En son .NET sürümü 5,0 ' dir.
 
 > [!div class="button"]
 > [.NET Core indirin](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Desteklenen yayınlar
 
-Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve üzerinde desteklendikleri macOS sürümlerinin bir listesi verilmiştir. Bu sürümler, [.NET Core 'un sürümü destek sonuna ulaştığında](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)desteklenmeye devam eder.
+Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve desteklenen macOS sürümlerinin bir listesi verilmiştir. Bu sürümler, [.NET sürümünün destek sonuna ulaşmasını](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)ve bu sürümlerin desteklenmemesini destekler.
 
 - ✔️, .NET Core sürümünün hala desteklendiğini gösterir.
 - Bir ❌ , .NET Core sürümünün desteklenmediğini belirtir.
 
-| İşletim Sistemi          | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview |
+| İşletim Sistemi          | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
 |---------------------------|---------------|---------------|----------------|
-| macOS 10,15 "Catalina"    | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 Preview ([sürüm notları][release-notes-50]) |
-| macOS 10,14 "Mojave"      | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 Preview ([sürüm notları][release-notes-50]) |
-| macOS 10,13 "High Sierra" | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 Preview ([sürüm notları][release-notes-50]) |
-| macOS 10,12 "Sierra"      | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ❌ 3,1 ([sürüm notları][release-notes-31]) | ❌ 5,0 Önizleme ([sürüm notları][release-notes-50]) |
+| macOS 10,15 "Catalina"    | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 ([sürüm notları][release-notes-50]) |
+| macOS 10,14 "Mojave"      | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 ([sürüm notları][release-notes-50]) |
+| macOS 10,13 "High Sierra" | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 ([sürüm notları][release-notes-50]) |
+| macOS 10,12 "Sierra"      | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ❌ 3,1 ([sürüm notları][release-notes-31]) | ❌ 5,0 ([sürüm notları][release-notes-50]) |
 
 ## <a name="unsupported-releases"></a>Desteklenmeyen yayınlar
 
-Aşağıdaki .NET Core sürümleri ❌ artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
+Aşağıdaki .NET sürümleri ❌ artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
 - 3,0 ([sürüm notları][release-notes-30])
 - 2,2 ([sürüm notları][release-notes-22])
@@ -50,53 +50,51 @@ Aşağıdaki .NET Core sürümleri ❌ artık desteklenmemektedir. Bunlara yöne
 
 ## <a name="runtime-information"></a>Çalışma zamanı bilgileri
 
-Çalışma zamanı .NET Core ile oluşturulan uygulamaları çalıştırmak için kullanılır. Uygulama yazarı bir uygulama yayımladığında, çalışma zamanını uygulamayla birlikte dahil edebilirler. Çalışma zamanını içermiyorsa, bu kullanıcı çalışma zamanını yüklemek için kullanıcıya ait olur.
+Çalışma zamanı .NET ile oluşturulan uygulamaları çalıştırmak için kullanılır. Uygulama yazarı bir uygulama yayımladığında, çalışma zamanını uygulamayla birlikte dahil edebilirler. Çalışma zamanını içermiyorsa, bu kullanıcı çalışma zamanını yüklemek için kullanıcıya ait olur.
 
 MacOS 'ta yükleyebileceğiniz üç farklı çalışma zamanı vardır:
 
 *ASP.NET Core çalışma zamanı*\
-ASP.NET Core uygulamalar çalıştırır. .NET Core çalışma zamanını içerir.
+ASP.NET Core uygulamalar çalıştırır. .NET çalışma zamanı içerir.
 
-*.NET Core çalışma zamanı*\
-Bu çalışma zamanı, en basit çalışma zamanı ve başka bir çalışma zamanı içermez. .NET Core uygulamalarıyla en iyi uyumluluk için *ASP.NET Core çalışma zamanı* yüklemenizi kesinlikle öneririz.
+*.NET çalışma zamanı*\
+Bu çalışma zamanı, en basit çalışma zamanı ve başka bir çalışma zamanı içermez. .NET uygulamalarıyla en iyi uyumluluk için *ASP.NET Core çalışma zamanı* yüklemenizi kesinlikle öneririz.
 
 > [!div class="button"]
-> [.NET Core çalışma zamanını indirin](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET çalışma zamanını indirin](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>SDK bilgileri
 
-SDK, .NET Core Uygulamaları ve kitaplıkları derlemek ve yayımlamak için kullanılır. SDK 'Yı [yüklemek her iki](#runtime-information)çalışma zamanını içerir: ASP.NET Core ve .NET Core.
-
-> [!div class="button"]
-> [.NET Core SDK indir](https://dotnet.microsoft.com/download/dotnet-core)
+SDK, .NET uygulamaları ve kitaplıkları derlemek ve yayımlamak için kullanılır. SDK 'nın [yüklenmesi her iki](#runtime-information)çalışma zamanını da içerir: ASP.NET Core ve .net.
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
-.NET Core aşağıdaki macOS sürümleriyle desteklenir:
+.NET aşağıdaki macOS sürümleriyle desteklenir:
 
 > [!NOTE]
 > Bir `+` sembol en düşük sürümü temsil eder.
 
-| .NET Core sürümü | macOS                 | Mimariler |     |
+| .NET Core sürümü | macOS                 | Mimariler | Daha fazla bilgi    |
 | ----------------- | --------------------- | --------------| --- |
+| 5.0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) |
 | 3,1               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
-| 3.0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
+| 3,0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
 | 2.2               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
-MacOS Catalina (sürüm 10,15) ile başlayarak, geliştirici KIMLIĞIYLE dağıtılan 1 Haziran 2019 ' den sonra oluşturulan tüm yazılımlar, dikkat edilmiş olmalıdır. Bu gereksinim .NET Core çalışma zamanı, .NET Core SDK ve .NET Core ile oluşturulan yazılımlar için geçerlidir.
+MacOS Catalina (sürüm 10,15) ile başlayarak, geliştirici KIMLIĞIYLE dağıtılan 1 Haziran 2019 ' den sonra oluşturulan tüm yazılımlar, dikkat edilmiş olmalıdır. Bu gereksinim .NET çalışma zamanı, .NET SDK ve .NET ile oluşturulan yazılımlar için geçerlidir.
 
-.NET Core (çalışma zamanı ve SDK) yükleyicileri 3,1, 3,0 ve 2,1 sürümleri, 18 Şubat 2020 tarihinden itibaren giderilmiş. Önceki yayınlanmış sürümler yok. Desteklenmeyen bir uygulama çalıştırırsanız aşağıdaki görüntüye benzer bir hata görürsünüz:
+.NET 5,0 ve .NET Core 3,1, 3,0 ve 2,1 için çalışma zamanı ve SDK yükleyicileri, 18 Şubat 2020 ' den itibaren giderilmiş. Önceki yayınlanmış sürümler yok. Desteklenmeyen bir uygulama çalıştırırsanız aşağıdaki görüntüye benzer bir hata görürsünüz:
 
 ![macOS Catalina notarleştirme uyarısı](media/dependencies/macos-notarized-pkg-warning.png)
 
-Zorunlu kılınma 'nın .NET Core 'u (ve .NET Core uygulamalarınızı) nasıl etkilediği hakkında daha fazla bilgi için bkz. [macOS Catalina Ile çalışma](macos-notarization-issues.md).
+Zorlanan uygulamanın .NET 'i (ve .NET uygulamalarınızı) nasıl etkilediği hakkında daha fazla bilgi için bkz. [macOS Catalina Ile çalışma](macos-notarization-issues.md).
 
 ## <a name="libgdiplus"></a>libgdiplus
 
-*System. Drawing. Common* derlemesini kullanan .NET Core Uygulamaları, libgdiplus 'in yüklenmesini gerektirir.
+*System. Drawing. Common* derlemesini kullanan .NET uygulamaları, libgdiplus 'in yüklenmesini gerektirir.
 
-Libgdiplus almanın kolay bir yolu, macOS için [homebrew ("Brew")](https://brew.sh/) paket yöneticisini kullanmaktır. *Brew*yükledikten sonra, bir Terminal (komut) isteminde aşağıdaki komutları yürüterek libgdiplus yükleme yapın:
+Libgdiplus almanın kolay bir yolu, macOS için [homebrew ("Brew")](https://brew.sh/) paket yöneticisini kullanmaktır. *Brew* yükledikten sonra, bir Terminal (komut) isteminde aşağıdaki komutları yürüterek libgdiplus yükleme yapın:
 
 ```console
 brew update
@@ -105,51 +103,51 @@ brew install mono-libgdiplus
 
 ## <a name="install-with-an-installer"></a>Bir yükleyici ile yükleme
 
-macOS, .NET Core 3,1 SDK 'sını yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
+macOS, .NET 5,0 SDK 'Yı yüklemek için kullanılabilecek tek başına yükleyicilere sahiptir:
 
-- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [x64 (64-bit) CPU 'Lar](https://dotnet.microsoft.com/download/dotnet-core/5.0)
 
 ## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
 
 <!-- Note, this content is taken from includes/linux-install-manual.md but changed for macOS. Any fixes should be applied there too, though content may be different -->
 
-.NET Core için macOS yükleyicilerine alternatif olarak SDK ve çalışma zamanını indirip el ile yükleyebilirsiniz. El ile yüklemeyi, genellikle sürekli tümleştirme testinin bir parçası olarak gerçekleştirilir. Bir geliştirici veya Kullanıcı için genellikle bir [Yükleyici](https://dotnet.microsoft.com/download/dotnet-core)kullanmak daha iyidir.
+.NET için macOS yükleyicilerine alternatif olarak SDK ve çalışma zamanını indirip el ile yükleyebilirsiniz. El ile yüklemeyi, genellikle sürekli tümleştirme testinin bir parçası olarak gerçekleştirilir. Bir geliştirici veya Kullanıcı için genellikle bir [Yükleyici](https://dotnet.microsoft.com/download/dotnet-core)kullanmak daha iyidir.
 
-.NET Core SDK yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez. İlk olarak, aşağıdaki sitelerden birinden SDK veya çalışma zamanı için **ikili** bir sürüm indirin:
+.NET SDK 'yı yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez. İlk olarak, aşağıdaki sitelerden birinden SDK veya çalışma zamanı için **ikili** bir sürüm indirin:
 
-- ✔️ [.net 5,0 Preview İndirmeleri](https://dotnet.microsoft.com/download/dotnet/5.0)
+- ✔️ [.net 5,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/5.0)
 - ✔️ [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - ✔️ [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 - [Tüm .NET Core İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core)
 
-Ardından, indirilen dosyayı ayıklayın ve `export` .NET Core tarafından kullanılan değişkenleri ayarlamak için komutunu kullanın ve ardından .NET Core 'un yolunda olduğundan emin olun.
+Ardından, indirilen dosyayı ayıklayın ve `export` .NET tarafından kullanılan değişkenleri ayarlamak için komutunu kullanın ve ardından .net 'ın yol içinde olduğundan emin olun.
 
-Çalışma zamanını ayıklamak ve .NET Core CLI komutlarının terminalde kullanılabilir hale getirmek için önce bir .NET Core ikili sürümü indirin. Ardından, bir Terminal açın ve dosyanın kaydedildiği dizinden aşağıdaki komutları çalıştırın. Arşiv dosyası adı, indirdiklerinize bağlı olarak farklı olabilir.
+Çalışma zamanını ayıklamak ve .NET CLı komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET ikili sürümü indirin. Ardından, bir Terminal açın ve dosyanın kaydedildiği dizinden aşağıdaki komutları çalıştırın. Arşiv dosyası adı, indirdiklerinize bağlı olarak farklı olabilir.
 
-**Çalışma zamanını ayıklamak için aşağıdaki komutu kullanın**:
+**Çalışma zamanını ayıklamak için aşağıdaki komutu kullanın** :
 
 ```bash
-mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-3.1.5-osx-x64.tar.gz -C "$HOME/dotnet"
+mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-5.0.0-osx-x64.tar.gz -C "$HOME/dotnet"
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```
 
-**SDK 'yı ayıklamak için aşağıdaki komutu kullanın**:
+**SDK 'yı ayıklamak için aşağıdaki komutu kullanın** :
 
 ```bash
-mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-3.1.301-osx-x64.tar.gz -C "$HOME/dotnet"
+mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-5.0.100-osx-x64.tar.gz -C "$HOME/dotnet"
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> Yukarıdaki `export` Komutlar yalnızca .NET Core CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
+> Yukarıdaki `export` Komutlar yalnızca .net CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
 >
 > Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
 >
-> - **Bash kabuğu**: *~/. bash_profile*, *~/,bashrc*
-> - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
-> - **Z kabuğu**: *~/,zshrc* veya *. zprofile*
+> - **Bash kabuğu** : *~/.bash_profile* , *~/,bashrc*
+> - **Korn kabuğu** : *~/,KSHRC* veya *. Profile*
+> - **Z kabuğu** : *~/,zshrc* veya *. zprofile*
 >
 > Kabuğunuz için uygun kaynak dosyayı düzenleyin ve `:$HOME/dotnet` var olan deyimin sonuna ekleyin `PATH` . Hiçbir `PATH` ifade dahil yoksa, ile yeni bir satır ekleyin `export PATH=$PATH:$HOME/dotnet` .
 >
@@ -159,40 +157,46 @@ Bu yaklaşım ayrı konumlara farklı sürümler yüklemenize ve hangi uygulamay
 
 ## <a name="install-with-visual-studio-for-mac"></a>Mac için Visual Studio ile yüklensin
 
-**.NET Core** iş yükü seçiliyken Mac için Visual Studio .NET Core SDK yüklenir. MacOS 'ta .NET Core geliştirme ile çalışmaya başlamak için bkz. [Mac Için Visual Studio 2019 'Yi yüklemek](/visualstudio/mac/installation). En son sürüm olan .NET Core 3,1 için Mac için Visual Studio 8,4 ' i kullanmanız gerekir.
+**.Net** iş yükü seçiliyken Mac için Visual Studio .NET SDK 'sını yüklüyor. MacOS 'ta .NET geliştirme ile çalışmaya başlamak için bkz. [Mac Için Visual Studio 2019 'Yi yüklemek](/visualstudio/mac/installation).
 
-[![.NET Core iş yükü özelliği ile Mac için macOS Visual Studio 2019](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
+| .NET SDK sürümü      | Visual Studio sürüm                      |
+| --------------------- | ------------------------------------------ |
+| 5.0                   | Mac için Visual Studio 2019 sürüm 8,8 veya üzeri. |
+| 3,1                   | Mac için Visual Studio 2019 sürüm 8,4 veya üzeri. |
+| 2.1                   | Mac için Visual Studio 2019 sürüm 8,0 veya üzeri. |
+
+[![.NET iş yükü özelliği ile Mac için macOS Visual Studio 2019](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 
 ## <a name="install-alongside-visual-studio-code"></a>Visual Studio Code birlikte yüklemeyi
 
 Visual Studio Code, masaüstünüzde çalışan güçlü ve hafif bir kaynak kod düzenleyicisidir. Visual Studio Code Windows, macOS ve Linux için kullanılabilir.
 
-Visual Studio Code, Visual Studio gibi otomatikleştirilmiş bir .NET Core yükleyicisi ile birlikte gelmediğinden, .NET Core desteği eklemek basittir.
+Visual Studio Code, Visual Studio gibi otomatikleştirilmiş bir .NET yükleyicisi ile birlikte gelmediğinden, .NET desteği ekleme basittir.
 
 01. [Visual Studio Code indirin ve yükleyin](https://code.visualstudio.com/Download).
-01. [.NET Core SDK indirin ve yükleyin](https://dotnet.microsoft.com/download/dotnet-core).
+01. [.NET SDK 'Sını indirip yükleyin](https://dotnet.microsoft.com/download/dotnet-core).
 01. [Visual Studio Code marketi 'Nden C# uzantısını yükler](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 ## <a name="install-with-bash-automation"></a>Bash otomasyonu ile Install
 
 [DotNet yükleme betikleri](../tools/dotnet-install-script.md) , çalışma zamanının Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Anahtarı belirterek belirli bir sürümü seçebilirsiniz `current` . `runtime`Çalışma zamanı yüklemek için anahtarı ekleyin. Aksi halde, komut dosyası [SDK 'yı](./windows.md)yüklüyor.
+Komut dosyası, .NET 5,0 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Anahtarı belirterek belirli bir sürümü seçebilirsiniz `current` . `runtime`Çalışma zamanı yüklemek için anahtarı ekleyin. Aksi halde, komut dosyası [SDK 'yı](./windows.md)yüklüyor.
 
 ```bash
-./dotnet-install.sh --channel 3.1 --runtime aspnetcore
+./dotnet-install.sh --channel 5.0 --runtime aspnetcore
 ```
 
 > [!NOTE]
-> Yukarıdaki komut, ASP.NET Core çalışma zamanını maksimum uyumluluk için yüklerse. ASP.NET Core çalışma zamanı, standart .NET Core çalışma zamanını da içerir.
+> Önceki komut, ASP.NET Core çalışma zamanını maksimum uyumluluk için yüklerse. ASP.NET Core çalışma zamanı standart .NET çalışma zamanını da içerir.
 
 ## <a name="docker"></a>Docker
 
 Kapsayıcılar, uygulamanızı ana bilgisayar sisteminin geri kalanından yalıtmak için basit bir yol sağlar. Aynı makinedeki kapsayıcılar yalnızca çekirdeği paylaşır ve uygulamanıza verilen kaynakları kullanır.
 
-.NET Core, Docker kapsayıcısında çalıştırılabilir. Resmi .NET Core Docker görüntüleri Microsoft Container Registry (MCR) ' de yayımlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet-core/)bulunabilir. Her depo, .NET (SDK veya çalışma zamanı) ve kullanabileceğiniz farklı .NET birleşimlerinin görüntülerini içerir.
+.NET, bir Docker kapsayıcısında çalıştırılabilir. Resmi .NET Docker görüntüleri Microsoft Container Registry (MCR) ' de yayımlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet/)bulunabilir. Her depo, .NET (SDK veya çalışma zamanı) ve kullanabileceğiniz farklı .NET birleşimlerinin görüntülerini içerir.
 
-Microsoft, belirli senaryolar için uyarlanmış görüntüler sağlar. Örneğin, [ASP.NET Core deposu](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) üretimde ASP.NET Core uygulamaları çalıştırmak için oluşturulmuş görüntüler sağlar.
+Microsoft, belirli senaryolar için uyarlanmış görüntüler sağlar. Örneğin, [ASP.NET Core deposu](https://hub.docker.com/_/microsoft-dotnet-aspnet) üretimde ASP.NET Core uygulamaları çalıştırmak için oluşturulmuş görüntüler sağlar.
 
 Bir Docker kapsayıcısında .NET Core kullanma hakkında daha fazla bilgi için bkz. [.net ve Docker](../docker/introduction.md) ve [örneklere](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)giriş.
 

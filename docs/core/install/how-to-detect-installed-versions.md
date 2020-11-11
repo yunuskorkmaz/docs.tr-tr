@@ -1,21 +1,21 @@
 ---
-title: Windows, Linux ve macOS-.NET Core 'da yüklü .NET Core sürümlerini denetleyin
-description: Bilgisayarınızda hangi .NET Core sürümlerinin yüklü olduğunu nasıl listeleyeceğinizi öğrenin. Buna .NET Core çalışma zamanı ve SDK dahildir.
+title: Windows, Linux ve macOS-.NET üzerinde yüklü .NET sürümlerini denetleyin
+description: Bilgisayarınızda hangi .NET sürümlerinin yüklü olduğunu nasıl listeleyeceğinizi öğrenin. Buna .NET çalışma zamanı ve SDK dahildir.
 author: adegeo
 ms.author: adegeo
-ms.date: 12/04/2019
+ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: b8825dee595c601e8adef0a52e651ac4a4f04831
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: d924e5bc58052cd760f367e906666d68ab79b764
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416048"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507224"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core 'un zaten yüklü olduğunu denetleme
+# <a name="how-to-check-that-net-is-already-installed"></a>.NET 'in zaten yüklü olduğunu denetleme
 
-Bu makalede, hangi .NET Core çalışma zamanı ve SDK sürümlerinin bilgisayarınızda yüklü olduğunu nasıl denetleriz öğretilir. Visual Studio veya Mac için Visual Studio gibi tümleşik bir geliştirme ortamınız varsa .NET Core zaten yüklü olabilir.
+Bu makalede, hangi .NET çalışma zamanının ve SDK sürümlerinin bilgisayarınızda yüklü olduğunu nasıl denetleriz öğretilir. Visual Studio veya Mac için Visual Studio gibi tümleşik bir geliştirme ortamınız varsa .NET zaten yüklü olabilir.
 
 SDK yükleme, ilgili çalışma zamanını yüklenir.
 
@@ -23,7 +23,7 @@ Bu makaledeki herhangi bir komut başarısız olursa, çalışma zamanı veya SD
 
 ## <a name="check-sdk-versions"></a>SDK sürümlerini denetle
 
-Hangi .NET Core SDK sürümlerinin bir terminalle yüklü olduğunu görebilirsiniz. Bir Terminal açın ve aşağıdaki komutu çalıştırın.
+Şu anda bir terminalle hangi .NET SDK sürümünün yüklü olduğunu görebilirsiniz. Bir Terminal açın ve aşağıdaki komutu çalıştırın.
 
 ```dotnetcli
 dotnet --list-sdks
@@ -39,9 +39,8 @@ Aşağıdakine benzer bir çıktı alırsınız.
 2.1.504 [C:\program files\dotnet\sdk]
 2.1.600 [C:\program files\dotnet\sdk]
 2.1.602 [C:\program files\dotnet\sdk]
-2.2.101 [C:\program files\dotnet\sdk]
-3.0.100 [C:\program files\dotnet\sdk]
 3.1.100 [C:\program files\dotnet\sdk]
+5.0.100 [C:\program files\dotnet\sdk]
 ```
 
 ::: zone-end
@@ -54,9 +53,8 @@ Aşağıdakine benzer bir çıktı alırsınız.
 2.1.504 [/home/user/dotnet/sdk]
 2.1.600 [/home/user/dotnet/sdk]
 2.1.602 [/home/user/dotnet/sdk]
-2.2.101 [/home/user/dotnet/sdk]
-3.0.100 [/home/user/dotnet/sdk]
 3.1.100 [/home/user/dotnet/sdk]
+5.0.100 [/home/user/dotnet/sdk]
 ```
 
 ::: zone-end
@@ -69,16 +67,15 @@ Aşağıdakine benzer bir çıktı alırsınız.
 2.1.504 [/usr/local/share/dotnet/sdk]
 2.1.600 [/usr/local/share/dotnet/sdk]
 2.1.602 [/usr/local/share/dotnet/sdk]
-2.2.101 [/usr/local/share/dotnet/sdk]
-3.0.100 [/usr/local/share/dotnet/sdk]
 3.1.100 [/usr/local/share/dotnet/sdk]
+5.0.100 [/usr/local/share/dotnet/sdk]
 ```
 
 ::: zone-end
 
 ## <a name="check-runtime-versions"></a>Çalışma zamanı sürümlerini denetle
 
-Aşağıdaki komutla .NET Core çalışma zamanının hangi sürümlerinin yüklü olduğunu görebilirsiniz.
+Aşağıdaki komutla .NET çalışma zamanının hangi sürümlerinin yüklü olduğunu görebilirsiniz.
 
 ```dotnetcli
 dotnet --list-runtimes
@@ -91,25 +88,17 @@ Aşağıdakine benzer bir çıktı alırsınız.
 ```console
 Microsoft.AspNetCore.All 2.1.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.3 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.App 2.1.6 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.13 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 3.0.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
+Microsoft.AspNetCore.App 5.0.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.App]
 Microsoft.NETCore.App 2.1.7 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.13 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.0 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.3 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.7 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
-Microsoft.NETCore.App 3.0.0 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
+Microsoft.NETCore.App 5.0.0 [c:\program files\dotnet\shared\Microsoft.NETCore.App]
 Microsoft.WindowsDesktop.App 3.0.0 [c:\program files\dotnet\shared\Microsoft.WindowsDesktop.App]
 Microsoft.WindowsDesktop.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.WindowsDesktop.App]
+Microsoft.WindowsDesktop.App 5.0.0 [c:\program files\dotnet\shared\Microsoft.WindowsDesktop.App]
 ```
 
 ::: zone-end
@@ -119,23 +108,14 @@ Microsoft.WindowsDesktop.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.Win
 ```bash
 Microsoft.AspNetCore.All 2.1.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.3 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.App 2.1.6 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.13 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 3.0.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 3.1.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
+Microsoft.AspNetCore.App 5.0.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.NETCore.App 2.1.7 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.13 [/home/user/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.3 [/home/user/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.7 [/home/user/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 3.0.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
+Microsoft.NETCore.App 5.0.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 ```
 
 ::: zone-end
@@ -145,32 +125,23 @@ Microsoft.NETCore.App 3.1.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 ```bash
 Microsoft.AspNetCore.All 2.1.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.3 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.All 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
-Microsoft.AspNetCore.App 2.1.6 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 2.1.13 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-Microsoft.AspNetCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.AspNetCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+Microsoft.AspNetCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.NETCore.App 2.1.7 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.13 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.3 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+Microsoft.NETCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
 ::: zone-end
 
 ## <a name="check-for-install-folders"></a>Klasör yüklemeyi denetle
 
-.NET Core 'un yüklü olması ancak `PATH` işletim sisteminizin veya Kullanıcı profilinizin değişkenine eklenmemiş olması olasıdır. Önceki bölümlerden komutlarının çalıştırılması çalışmayabilir. Alternatif olarak, .NET Core yüklemesi klasörlerinin mevcut olup olmadığını kontrol edebilirsiniz.
+.NET yüklü olsa da, `PATH` işletim sisteminiz veya Kullanıcı profiliniz için değişkene eklenmemiş olabilir. Önceki bölümlerden komutlarının çalıştırılması çalışmayabilir. Alternatif olarak, .NET yüklemesi klasörlerinin mevcut olup olmadığını kontrol edebilirsiniz.
 
-.NET Core 'u bir yükleyiciden veya betikten yüklediğinizde, bu bir standart klasöre yüklenir. .NET Core yüklemek için kullandığınız yükleyicinin veya betiğin çoğu zaman, farklı bir klasöre yükleme seçeneği sunar. Farklı bir klasöre yüklemeyi tercih ederseniz klasör yolunun başlangıcını ayarlayın.
+Bir yükleyiciden veya betikten .NET yüklediğinizde, bu bir standart klasöre yüklenir. .NET yüklemek için kullandığınız yükleyicinin veya betiğin çoğu zaman, farklı bir klasöre yükleme seçeneği sunar. Farklı bir klasöre yüklemeyi tercih ederseniz klasör yolunun başlangıcını ayarlayın.
 
 ::: zone pivot="os-windows"
 
@@ -217,4 +188,6 @@ Komutuyla hem SDK sürümlerini hem de çalışma zamanı sürümlerini görebil
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [.NET Core çalışma zamanı ve SDK 'Sını yükler](windows.md).
+- [Windows için .NET çalışma zamanını ve SDK 'Yı yükler](windows.md).
+- [MacOS için .NET çalışma zamanını ve SDK 'Yı yükler](linux.md).
+- [Linux için .NET çalışma zamanını ve SDK 'Sını yükler](macos.md).

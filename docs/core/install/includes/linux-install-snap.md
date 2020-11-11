@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5e77b7bd73c09e061a94a29703cf5286814d1ebb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ab2fc0645f76870dead99b5f45eef763643fb27
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602917"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506907"
 ---
 
 [.NET Core, Snap Store 'da bulunabilir.](https://snapcraft.io/dotnet-sdk)
@@ -15,18 +15,18 @@ Yalnızca .NET Core 'un desteklenen sürümleri yaslama aracılığıyla kullan�
 
 ### <a name="install-the-sdk"></a>SDK Yükleme
 
-.NET Core SDK için Yaslama paketleri aynı tanımlayıcı altında yayımlanır: `dotnet-sdk` . Belirli bir SDK sürümü kanal belirtilerek yüklenebilir. SDK, birlikte yanıt verme çalışma zamanını içerir. Aşağıdaki tabloda kanallar listelenmektedir:
+.NET SDK için Yaslama paketleri aynı tanımlayıcı altında yayımlanır: `dotnet-sdk` . Belirli bir SDK sürümü kanal belirtilerek yüklenebilir. SDK, birlikte yanıt verme çalışma zamanını içerir. Aşağıdaki tabloda kanallar listelenmektedir:
 
-| .NET Core sürümü | Yaslama paketi             |
-|-------------------|--------------------------|
-| 3,1 (LTS)         | `3.1` veya `latest/stable` |
-| 2,1 (LTS)         | `2.1`                    |
-| .NET 5,0 Preview  | `5.0/beta`               |
+| .NET sürümü | Yaslama paketi             |
+|--------------|--------------------------|
+| 5.0          | `5.0` veya `latest/stable` |
+| 3,1 (LTS)    | `3.1` veya `lts/stable`    |
+| 2,1 (LTS)    | `2.1`                    |
 
-`snap install`.NET Core SDK bir snap paketi yüklemek için komutunu kullanın. `--channel`Hangi sürümün yükleneceğini belirtmek için parametresini kullanın. Bu parametre atlanırsa, `latest/stable` kullanılır. Bu örnekte, `3.1` belirtilir:
+`snap install`.NET SDK Snap paketini yüklemek için komutunu kullanın. `--channel`Hangi sürümün yükleneceğini belirtmek için parametresini kullanın. Bu parametre atlanırsa, `latest/stable` kullanılır. Bu örnekte, `5.0` belirtilir:
 
 ```bash
-sudo snap install dotnet-sdk --classic --channel=3.1
+sudo snap install dotnet-sdk --classic --channel=5.0
 ```
 
 Sonra, `dotnet` `snap alias` komutunu komutuyla sisteme kaydedin:
@@ -35,32 +35,33 @@ Sonra, `dotnet` `snap alias` komutunu komutuyla sisteme kaydedin:
 sudo snap alias dotnet-sdk.dotnet dotnet
 ```
 
-Bu komut şöyle biçimlendirilir: `sudo snap alias {package}.{command} {alias}` . İstediğiniz `{alias}` adı seçebilirsiniz. Örneğin, komutunu Snap tarafından yüklenen belirli sürümden sonra yazabilirsiniz `sudo snap alias dotnet-sdk.dotnet dotnet31` . Komutunu kullandığınızda `dotnet31` , .net 'in bu belirli sürümünü çağıracaksınız. Ancak bu, bir komutun kullanılabilir olmasını bekledikleri için çoğu öğretici ve örneklerle uyumsuzdur `dotnet` .
+Bu komut şöyle biçimlendirilir: `sudo snap alias {package}.{command} {alias}` . İstediğiniz `{alias}` adı seçebilirsiniz. Örneğin, komutunu Snap tarafından yüklenen belirli sürümden sonra yazabilirsiniz `sudo snap alias dotnet-sdk.dotnet dotnet50` . Komutunu kullandığınızda `dotnet50` , .net 'in bu belirli sürümünü çağıracaksınız. Ancak bu, bir komutun kullanılabilir olmasını bekledikleri için çoğu öğretici ve örneklerle uyumsuzdur `dotnet` .
 
 ### <a name="install-the-runtime"></a>Çalışma zamanını yükler
 
 .NET Core çalışma zamanı için yapışma paketleri her biri kendi paket tanımlayıcılarıyla yayımlanır. Aşağıdaki tabloda paket tanımlayıcıları listelenmektedir:
 
-| .NET Core sürümü | Yaslama paketi        |
+| .NET sürümü      | Yaslama paketi        |
 |-------------------|---------------------|
+| 5.0               | `dotnet-runtime-50` |
 | 3,1 (LTS)         | `dotnet-runtime-31` |
-| 3.0               | `dotnet-runtime-30` |
+| 3,0               | `dotnet-runtime-30` |
 | 2.2               | `dotnet-runtime-22` |
 | 2,1 (LTS)         | `dotnet-runtime-21` |
 
-`snap install`.NET Core çalışma zamanı ek paketi yüklemek için komutunu kullanın. Bu örnekte, .NET Core 3,1 yüklüdür:
+`snap install`.NET çalışma zamanı Snap paketini yüklemek için komutunu kullanın. Bu örnekte, .NET 5,0 yüklüdür:
 
 ```bash
-sudo snap install dotnet-runtime-31 --classic
+sudo snap install dotnet-runtime-50 --classic
 ```
 
 Sonra, `dotnet` `snap alias` komutunu komutuyla sisteme kaydedin:
 
 ```bash
-sudo snap alias dotnet-runtime-31.dotnet dotnet
+sudo snap alias dotnet-runtime-50.dotnet dotnet
 ```
 
-Bu komut şöyle biçimlendirilir: `sudo snap alias {package}.{command} {alias}` . İstediğiniz `{alias}` adı seçebilirsiniz. Örneğin, komutunu Snap tarafından yüklenen belirli sürümden sonra yazabilirsiniz `sudo snap alias dotnet-runtime-31.dotnet dotnet31` . Komutunu kullandığınızda `dotnet31` , .net 'in bu belirli sürümünü çağıracaksınız. Ancak bu, bir komutun kullanılabilir olmasını bekledikleri için çoğu öğretici ve örneklerle uyumsuzdur `dotnet` .
+Bu komut şöyle biçimlendirilir: `sudo snap alias {package}.{command} {alias}` . İstediğiniz `{alias}` adı seçebilirsiniz. Örneğin, komutunu Snap tarafından yüklenen belirli sürümden sonra yazabilirsiniz `sudo snap alias dotnet-runtime-50.dotnet dotnet50` . Komutunu kullandığınızda `dotnet50` , .net 'in bu belirli sürümünü çağıracaksınız. Ancak bu, bir komutun kullanılabilir olmasını bekledikleri için çoğu öğretici ve örneklerle uyumsuzdur `dotnet` .
 
 ### <a name="ssl-certificate-errors"></a>SSL sertifikası hataları
 

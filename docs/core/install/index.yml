@@ -1,17 +1,17 @@
 ### YamlMime:Landing
-title: Windows, Linux ve macOS 'a .NET Core 'u yükler
-summary: Windows, Linux ve macOS sürümlerine .NET yükleme hakkında bilgi edinin. .NET Core uygulamaları geliştirmek, dağıtmak ve çalıştırmak için gereken bağımlılıkları bulun.
+title: Windows, Linux ve macOS 'a .NET 'i yükler
+summary: Windows, Linux ve macOS sürümlerine .NET yükleme hakkında bilgi edinin. .NET uygulamaları geliştirmek, dağıtmak ve çalıştırmak için gereken bağımlılıkları bulun.
 metadata:
-  title: Windows, Linux ve macOS 'a .NET Core 'u yükler
-  description: Windows, Linux ve macOS sürümlerine .NET Core 'u indirme ve yükleme hakkında bilgi edinin. .NET Core uygulamaları geliştirmek, dağıtmak ve çalıştırmak için gereken bağımlılıkları bulun.
+  title: Windows, Linux ve macOS 'a .NET 'i yükler
+  description: Windows, Linux ve macOS sürümlerine .NET indirme ve yükleme hakkında bilgi edinin. .NET uygulamaları geliştirmek, dağıtmak ve çalıştırmak için gereken bağımlılıkları bulun.
   ms.topic: landing-page
   ms.date: 06/29/2020
-  ms.openlocfilehash: dbc159bc4ff2d10bf55bd0c0b4d4e07a8fc04a4a
-  ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+  ms.openlocfilehash: 53c4485b986abf58bdff45d78342c110b15d7824
+  ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/01/2020
-  ms.locfileid: "85804502"
+  ms.lasthandoff: 11/11/2020
+  ms.locfileid: "94507208"
 landingContent:
 - title: Windows
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
       url: windows.md#install-with-visual-studio
     - text: Visual Studio Code birlikte yüklemeyi
       url: windows.md#install-alongside-visual-studio-code
-- title: Mac OS
+- title: macOS
   linkLists:
   - linkListType: overview
     links:

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 96f3ef0160144322f77413995c842b745bb5bb1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c05af045d2d9666b20f36e36c68cc853f906eae
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920729"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506875"
 ---
 
-.NET Core paketini yüklerken, .'a `signature verification failed for file 'repomd.xml' from repository 'packages-microsoft-com-prod'`benzer bir hata görebilirsiniz. Genel olarak konuşursak, bu hata .NET Core'un paket akışının yeni paket sürümleriyle yükseltildiği ve daha sonra tekrar denemeniz gerektiği anlamına gelir. Yükseltme sırasında paket akışı 2 saatten fazla kullanılamaz. Bu hatayı sürekli olarak 2 saatten fazla alırsanız, <https://github.com/dotnet/core/issues>lütfen 'de bir sorun dosyalayın.
+.NET paketini yüklerken buna benzer bir hata görebilirsiniz `signature verification failed for file 'repomd.xml' from repository 'packages-microsoft-com-prod'` . Genellikle bu hata, .NET için paket beslemenin daha yeni paket sürümleriyle yükseltildiğini ve daha sonra yeniden denemeniz gerektiğini gösterir. Yükseltme sırasında, paket akışı 2 saatten uzun bir bir şekilde kullanılamıyor olmalıdır. Bu hatayı 2 saatten uzun bir zamanda alıyorsanız, lütfen bir sorun bildirin <https://github.com/dotnet/core/issues> .

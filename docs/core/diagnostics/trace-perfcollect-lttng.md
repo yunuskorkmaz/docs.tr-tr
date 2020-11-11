@@ -3,14 +3,14 @@ title: PerfCollect ile .NET uygulamalarını izleme.
 description: .NET ' te PerfCollect ile izleme toplama konusunda size kılavuzluk eden bir öğretici.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 7bf058869f0b9f76204d775b12febe7c58b78877
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 376c957833924a9991e574557671ea3c8503d7c2
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445809"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507247"
 ---
-# <a name="tracing-net-applications-with-perfcollect"></a>PerfCollect ile .NET uygulamalarını izleme
+# <a name="trace-net-applications-with-perfcollect"></a>PerfCollect ile .NET uygulamalarını izleme
 
 **Bu makale şu şekilde geçerlidir: ✔️** .net Core 2,1 SDK ve sonraki sürümleri
 
@@ -18,17 +18,17 @@ Linux üzerinde performans sorunlarıyla karşılaşıldığında, bir izleme to
 
 `perfcollect`, çalışma zamanının veya herhangi bir [EventSource](xref:System.Diagnostics.Tracing.EventListener)'dan yazılmış olayları toplamak Için [Linux izleme Tookit-Next oluşturma (lttng)](https://lttng.org) kullanan bir bash betiğidir ve hedef işlemin CPU örneklerini toplamak için [perf](https://perf.wiki.kernel.org/) kullanır.
 
-## <a name="preparing-your-machine"></a>Makineniz hazırlanıyor
+## <a name="prepare-your-machine"></a>Makinenizi hazırlama
 
 Makinenizi ile bir performans izlemesi toplayacak şekilde hazırlamak için aşağıdaki adımları izleyin `perfcollect` .
 
 > [!NOTE]
-> Bir kapsayıcı ortamındaysanız, kapsayıcının özelliği olması gerekir `SYS_ADMIN` . PerfCollect kullanarak kapsayıcı içindeki uygulamaları izleme hakkında daha fazla bilgi için bkz. [kapsayıcılar içinde tanılama toplama](./diagnostics-in-containers.md) belgeleri.
+> Bir kapsayıcı ortamındaysanız, kapsayıcının özelliği olması gerekir `SYS_ADMIN` . PerfCollect kullanarak kapsayıcılardaki uygulamaları izleme hakkında daha fazla bilgi için bkz. [kapsayıcılarda tanılamayı toplama](./diagnostics-in-containers.md).
 
 1. İndirin `perfcollect` .
 
     > ```bash
-    > curl -OL http://aka.ms/perfcollect
+    > curl -OL https://aka.ms/perfcollect
     > ```
 
 2. Betiği çalıştırılabilir yapın.
@@ -45,15 +45,15 @@ Makinenizi ile bir performans izlemesi toplayacak şekilde hazırlamak için aş
 
     Bu işlem makinenize aşağıdaki önkoşulları yükler:
 
-    1. `perf`: Linux performans olayları alt sistem ve yardımcı Kullanıcı modu koleksiyonu/görüntüleyici uygulaması. `perf` , Linux çekirdek kaynağının bir parçasıdır, ancak genellikle varsayılan olarak yüklenmez.
+    1. `perf`: Linux performans olayları alt sistemi ve yardımcı Kullanıcı modu koleksiyonu/görüntüleyici uygulaması. `perf` , Linux çekirdek kaynağının bir parçasıdır, ancak genellikle varsayılan olarak yüklenmez.
 
     2. `LTTng`: Çalışma zamanında, CoreCLR tarafından yayılan olay verilerini yakalamak için kullanılır. Bu veriler daha sonra GC, JıT ve iş parçacığı havuzu gibi çeşitli çalışma zamanı bileşenlerinin davranışını çözümlemek için kullanılır.
 
-.NET Core 'un son sürümleri ve Linux performans aracı, çerçeve kodu için yöntem adlarının otomatik olarak çözümlenmesini destekler. .NET Core sürüm 3,1 veya daha az bir sürümle çalışıyorsanız, ek bir adım gereklidir. Ayrıntılar için bkz. [çerçeve sembollerini çözme](#resolving-framework-symbols) .
+.NET Core 'un son sürümleri ve Linux performans aracı, çerçeve kodu için yöntem adlarının otomatik olarak çözümlenmesini destekler. .NET Core sürüm 3,1 veya daha az bir sürümle çalışıyorsanız, ek bir adım gereklidir. Ayrıntılar için bkz. [çerçeve sembollerini çözme](#resolve-framework-symbols) .
 
-Yerel çalışma zamanı dll 'Lerinin (örneğin, libcoreclr.so) yöntem adlarını çözümlemek için, `perfcollect` verileri dönüştürürken, ancak yalnızca bu ikililerin sembolleri varsa, simgeler için sembolleri çözer. Ayrıntılar için bkz. [yerel çalışma zamanı Için semboller alma](#getting-symbols-for-the-native-runtime) bölümü.
+Yerel çalışma zamanı dll 'Lerinin (örneğin, libcoreclr.so) yöntem adlarını çözümlemek için, `perfcollect` verileri dönüştürürken, ancak yalnızca bu ikililerin sembolleri varsa, simgeler için sembolleri çözer. Ayrıntılar için bkz. [yerel çalışma zamanı Için semboller alma](#get-symbols-for-the-native-runtime) bölümü.
 
-## <a name="collecting-a-trace"></a>Izleme toplama
+## <a name="collect-a-trace"></a>İzleme topla
 
 1. , [ **Trace]** olarak adlandırılan ve uygulamayı çalıştırmak Için [ **Uygulama]** olarak adlandırılan iki kabuizin vardır.
 
@@ -106,11 +106,11 @@ Yerel çalışma zamanı dll 'Lerinin (örneğin, libcoreclr.so) yöntem adları
 
     Sıkıştırılmış izleme dosyası artık geçerli çalışma dizininde depolanıyor.
 
-## <a name="viewing-a-trace"></a>Izleme görüntüleme
+## <a name="view-a-trace"></a>İzleme görüntüleme
 
-Toplanan izlemeyi görüntülemek için bazı seçenekler vardır. İzlemeler, Windows üzerinde [PerfView](http://aka.ms/perfview>) kullanılarak en iyi şekilde görüntülenebilir, ancak kendi veya kullanan Linux üzerinde doğrudan görüntülenebilirler `PerfCollect` `TraceCompass` .
+Toplanan izlemeyi görüntülemek için çeşitli seçenekler vardır. İzlemeler, Windows üzerinde [PerfView](https://aka.ms/perfview) kullanılarak en iyi şekilde görüntülenebilir, ancak kendi veya kullanan Linux üzerinde doğrudan görüntülenebilirler `PerfCollect` `TraceCompass` .
 
-### <a name="using-perfcollect-to-view-the-trace-file"></a>İzleme dosyasını görüntülemek için PerfCollect kullanma
+### <a name="use-perfcollect-to-view-the-trace-file"></a>İzleme dosyasını görüntülemek için PerfCollect kullanın
 
 Topladığımız izlemeyi görüntülemek için PerfCollect kendisini kullanabilirsiniz. Bunu yapmak için aşağıdaki komutu kullanın:
 
@@ -133,13 +133,13 @@ Bu işlem `babeltrace` , olay yükünü yazdırmak için görüntüleyiciyi kull
 # [01:02:18.189250227] (+0.020165171) ubuntu-xenial DotNETRuntime:ExceptionCatchStart: { cpu_id = 0 }, { EntryEIP = 139873639728404, MethodID = 139873626968120, MethodName = "void [helloworld] helloworld.Program::Main(string[])", ClrInstanceID = 0 }
 ```
 
-### <a name="using-perfview-to-open-the-trace-file"></a>İzleme dosyasını açmak için PerfView kullanma
+### <a name="use-perfview-to-open-the-trace-file"></a>İzleme dosyasını açmak için PerfView kullanın
 
 Hem CPU örneğinin hem de olaylarının toplam görünümünü görmek için, `PerfView` bir Windows makinesinde kullanabilirsiniz.
 
 1. trace.zip dosyasını Linux 'tan bir Windows makinesine kopyalayın.
 
-2. PerfView öğesini öğesinden indirin <http://aka.ms/perfview> .
+2. PerfView öğesini öğesinden indirin <https://aka.ms/perfview> .
 
 3. PerfView.exe Çalıştır
 
@@ -159,7 +159,7 @@ PerfView, izleme dosyasında bulunan verilere göre desteklenen görünümlerin 
 
 PerfView içindeki görünümleri yorumlama hakkında daha fazla bilgi için bkz. görünümdeki yardım bağlantıları veya PerfView 'daki ana pencereden **Yardım->kullanıcıları Kılavuzu** ' nu seçin.
 
-### <a name="using-tracecompass-to-open-the-trace-file"></a>İzleme dosyasını açmak için Tracepusula kullanma
+### <a name="use-tracecompass-to-open-the-trace-file"></a>İzleme dosyasını açmak için Tracepusula kullanma
 
 [Çakışan Küreler Tracepusula](https://www.eclipse.org/tracecompass/) , izlemeleri görüntülemek için kullanabileceğiniz başka bir seçenektir. `TraceCompass` , Linux makinelerinde da çalışarak, izinizi bir Windows makinesine taşımanıza gerek kalmaz. `TraceCompass`İzleme Dosyanızı açmak için kullanmak üzere dosyayı sıkıştırmayı açmanız gerekir.
 
@@ -173,15 +173,15 @@ unzip myTrace.trace.zip
 
 Daha fazla ayrıntı için lütfen [ `TraceCompass` belgelere](https://www.eclipse.org/tracecompass/)bakın.
 
-## <a name="resolving-framework-symbols"></a>Çerçeve sembollerini çözme
+## <a name="resolve-framework-symbols"></a>Çerçeve sembollerini çözümle
 
 Çerçeve simgelerinin, izlemenin toplandığı sırada el ile oluşturulması gerekir. Uygulama kodu tam zamanında derlenirken çerçeve önceden derlendiği için uygulama düzeyi sembollerine göre farklılık vardır. Yerel koda önceden derlenmiş çerçeve kodu için, `crossgen` yerel koddan yöntemlerin adına eşlemenin nasıl oluşturulacağını bilen bir çağrı yapmanız gerekir.
 
-`perfcollect` , sizin için ayrıntıların çoğunu işleyebilir, ancak kullanılabilir olması gerekir `crossgen` . Varsayılan olarak .NET dağıtımı ile birlikte yüklenmez. Orada yoksa sizi `crossgen` `perfcollect` uyarır ve sizi bu yönergelere başvurur. Kullanmakta olduğunuz çalışma zamanına ilişkin çapraz genel sürümü tam olarak getirmek için ihtiyaç duyduğunuz şeyleri düzeltir. Çapraz genel aracı 'nı .NET çalışma zamanı dll 'Leriyle aynı dizine yerleştirirseniz (örn. libcoreclr.so), `perfcollect` bunu bulabilir ve izleme dosyasına çerçeve sembolleri ekleyebilirsiniz.
+`perfcollect` , sizin için ayrıntıların çoğunu işleyebilir, ancak kullanılabilir olması gerekir `crossgen` . Varsayılan olarak .NET dağıtımı ile birlikte yüklenmez. Orada yoksa sizi `crossgen` `perfcollect` uyarır ve sizi bu yönergelere başvurur. Kullanmakta olduğunuz çalışma zamanına ilişkin çapraz genel sürümü tam olarak getirmek için ihtiyaç duyduğunuz şeyleri düzeltir. Çapraz genel aracı 'nı .NET çalışma zamanı dll 'Leriyle aynı dizine yerleştirirseniz (örneğin, libcoreclr.so), `perfcollect` bunu bulabilir ve izleme dosyasına çerçeve sembolleri ekleyebilirsiniz.
 
 Normalde, bir .NET uygulaması oluşturduğunuzda, Rest için çalışma zamanının paylaşılan bir kopyasını kullanarak yazdığınız kod için DLL 'yi oluşturur.   Ancak, bir uygulamanın ' kendine ait ' bir sürümü olarak adlandırılan ' i de oluşturabilirsiniz ve bu, tüm çalışma zamanı dll 'Leri içerir. `crossgen` , kendi kendine içerilen uygulamalar oluşturmak için kullanılan NuGet paketinin bir parçasıdır. bu nedenle, doğru sürümünü almanın bir yolu, `crossgen` uygulamanızın kendine dahil edilen bir paketini oluşturmaktır.
 
-Örneğin:
+Örnek:
 
    >```bash
    > mkdir helloWorld
@@ -192,7 +192,7 @@ Normalde, bir .NET uygulaması oluşturduğunuzda, Rest için çalışma zamanı
 
 Bu, yeni bir Merhaba Dünya uygulaması oluşturur ve bunu kendi kendine içerilen bir uygulama olarak oluşturur.
 
-Kendi içinde kapsanan uygulamayı oluşturmanın yan etkisi olarak, DotNet Aracı, Runtime. Linux-x64. Microsoft. netcore. app adlı bir NuGet paketini indirir ve ~/.nuget/packages/runtime.linux-x64.microsoft.netcore.app/VERSION dizinine yerleştirirken, sürüm .NET Core çalışma zamanının sürüm numarasıdır (ör. 2.1.0). Bu, öğesinin altında bir araçlar dizinidir ve ihtiyacınız olan çapraz genel araç vardır. .NET Core 3,0 ile başlayarak, paket konumu ~/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/VERSION.
+Kendi içinde kapsanan uygulamayı oluşturmanın yan etkisi olarak, DotNet Aracı, Runtime. Linux-x64. Microsoft. netcore. app adlı bir NuGet paketini indirir ve ~/.nuget/packages/runtime.linux-x64.microsoft.netcore.app/VERSION dizinine yerleştirirken, sürüm .NET Core çalışma zamanının sürüm numarasıdır (örneğin, 2.1.0). Bu, öğesinin altında bir araçlar dizinidir ve ihtiyacınız olan çapraz genel araç vardır. .NET Core 3,0 ile başlayarak, paket konumu ~/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/VERSION.
 
 `crossgen`Aracın, uygulamanız tarafından gerçekten kullanılan çalışma zamanının yanına alınması gerekir. Genellikle uygulamanız .NET Core 'un/usr/share/dotnet/shared/Microsoft.NETCore.App/VERSION adresinde yüklü olan paylaşılan sürümünü kullanır; burada sürüm .NET çalışma zamanının sürüm numarasıdır. Bu paylaşılan bir konumdur, bu nedenle değiştirmek için süper kullanıcı olmanız gerekir. SÜRÜM 2.1.0 ise güncelleştirme komutları `crossgen` şöyle olacaktır:
 
@@ -218,11 +218,11 @@ export COMPlus_ZapDisable=1
 
 Bu değişiklik ile tüm .NET kodu için sembolleri almanız gerekir.
 
-## <a name="getting-symbols-for-the-native-runtime"></a>Yerel çalışma zamanı için semboller alma
+## <a name="get-symbols-for-the-native-runtime"></a>Yerel çalışma zamanı için sembolleri al
 
-Çoğu zaman kendi kodunuzla ilgileniyorsunuz. Bu, `perfcollect` Varsayılan olarak çözümlenir. Bazı durumlarda, .NET DLL 'lerinde (son bölümün yaklaşık olduğu) neler olduğunu görmek çok yararlı olur, ancak bazen yerel çalışma zamanı dll 'lerinde (genellikle libcoreclr.so) neler olursa olsun.  `perfcollect` , yalnızca bu yerel dll sembolleri varsa (ve bunların kendisi için oldukları kitaplığın yanında ise) sembolleri dönüştürür.
+Çoğu zaman kendi kodunuzla ilgileniyorsunuz. Bu, `perfcollect` Varsayılan olarak çözümlenir. Bazen, .NET DLL 'leri içinde neler olduğunu (son bölümün yaklaşık olarak) görmek yararlıdır, ancak bazen yerel çalışma zamanı dll 'lerinde (genellikle libcoreclr.so) neler olursa olsun.  `perfcollect` , yalnızca bu yerel dll sembolleri varsa (ve bunların kendisi için oldukları kitaplığın yanında ise) sembolleri dönüştürür.
 
-Bunu belirleyen [DotNet-symbol](https://github.com/dotnet/symstore/blob/master/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) adlı bir genel komut vardır. Yerel çalışma zamanı sembolleri almak için DotNet-symbol kullanmak için:
+Bunu yapan [DotNet-symbol](https://github.com/dotnet/symstore/blob/master/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) adlı bir genel komut vardır. Yerel çalışma zamanı sembolleri almak için DotNet-symbol kullanmak için:
 
 1. `dotnet-symbol` yükleme:
 
@@ -230,14 +230,14 @@ Bunu belirleyen [DotNet-symbol](https://github.com/dotnet/symstore/blob/master/s
     dotnet tool install -g dotnet-symbol
     ```
 
-2. Sembolleri indirin. .NET Core çalışma zamanının yüklü sürümü 2.1.0 ise bunu yapmak için komut
+2. Sembolleri indirin. .NET Core çalışma zamanının yüklü sürümü 2.1.0 ise, bunu yapmak için komut şu şekilde olur:
 
     ```bash
     mkdir mySymbols
     dotnet symbol --symbols --output mySymbols  /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.0/lib*.so
     ```
 
-3. Sembolleri doğru yere kopyalayın
+3. Sembolleri doğru yere kopyalayın.
 
     ```bash
     sudo cp mySymbols/* /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.0
@@ -247,6 +247,6 @@ Bunu belirleyen [DotNet-symbol](https://github.com/dotnet/symstore/blob/master/s
 
 Bundan sonra, çalıştırdığınızda yerel dll 'ler için simgesel adlar almalısınız `perfcollect` .
 
-## <a name="collecting-in-a-docker-container"></a>Bir Docker kapsayıcısında toplama
+## <a name="collect-in-a-docker-container"></a>Bir Docker kapsayıcısında toplayın
 
-Kapsayıcı ortamlarında kullanma hakkında daha fazla bilgi için `perfcollect` bkz. [kapsayıcılar Içinde tanılama toplama](./diagnostics-in-containers.md) belgeleri.
+Kapsayıcı ortamlarında kullanma hakkında daha fazla bilgi için `perfcollect` bkz. [kapsayıcılarda tanılamayı toplama](./diagnostics-in-containers.md).

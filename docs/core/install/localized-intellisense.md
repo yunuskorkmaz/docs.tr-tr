@@ -2,12 +2,12 @@
 title: Yerelleştirilmiş IntelliSense dosyalarını yükler
 description: Geliştirme makinenizi, Visual Studio 'daki .NET 5 + projeleri (.NET Core dahil) için yerelleştirilmiş IntelliSense dosyalarını kullanacak şekilde ayarlamayı öğrenin.
 ms.date: 11/06/2020
-ms.openlocfilehash: 121439199f0de6d29a18ea55031976680fc1f833
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 45eeae12ca79179cacb3d48fca28118de70e0a4f
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439826"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506772"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net"></a>.NET için yerelleştirilmiş IntelliSense dosyalarını nasıl yükleyeceğiniz
 
@@ -16,7 +16,7 @@ ms.locfileid: "94439826"
 - Bu dosyaların yerelleştirilmiş sürümünü nasıl yükleyeceksiniz.
 - Visual Studio yüklemesini farklı bir dil kullanacak şekilde değiştirme.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)gibi sonraki bir sürüm.
 - [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonraki bir sürümü.
@@ -43,7 +43,7 @@ ms.locfileid: "94439826"
       | Windows Masaüstü       | *Microsoft. WindowsDesktop. app. ref* |
       | .NET Standard         | *NETStandard. Library. ref*          |
 
-   1. Yerelleştirilmiş IntelliSense 'i yüklemek istediğiniz sürüme gidin. Örneğin, *3.1.0*.
+   1. Yerelleştirilmiş IntelliSense 'i yüklemek istediğiniz sürüme gidin. Örneğin, *5.0.0*.
    1. *Ref* klasörünü açın.
    1. Bilinen ad klasörünü açın. Örneğin, *net 5.0*.
 

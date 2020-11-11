@@ -1,19 +1,19 @@
 ---
-title: OpenSUSE-.NET Core 'a .NET Core 'u yükler
-description: OpenSUSE üzerinde .NET Core SDK ve .NET Core çalışma zamanı yüklemesinin çeşitli yollarını gösterir.
+title: OpenSUSE-.NET üzerine .NET 'i yükler
+description: OpenSUSE üzerinde .NET SDK ve .NET çalışma zamanı yüklemek için çeşitli yollar gösterir.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: ccdb23ca1838d2c15c9a95b45c8505efe7a6df0e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 17012f3689e5834fd1629946767e931cb22a2c1b
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539236"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506908"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>OpenSUSE 'e .NET Core SDK veya .NET Core çalışma zamanı yüklemesi
+# <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>OpenSUSE 'e .NET SDK veya .NET çalışma zamanı yüklemesi
 
-.NET Core, openSUSE 'de desteklenir. Bu makalede, openSUSE üzerinde .NET Core 'un nasıl yükleneceği açıklanır.
+.NET, openSUSE 'de desteklenir. Bu makalede, openSUSE 'ta .NET 'in nasıl yükleneceği açıklanır.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,21 +21,21 @@ ms.locfileid: "90539236"
 
 ## <a name="supported-distributions"></a>Desteklenen dağıtımlar
 
-Aşağıdaki tabloda, openSUSE 15 üzerinde şu anda desteklenen .NET Core sürümlerinin bir listesi verilmiştir. Bu sürümler, [.NET Core 'un sürümü destek sonuna](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya openSUSE 'un sürümü artık desteklenene kadar desteklenmeye devam eder.
+Aşağıdaki tabloda, openSUSE 15 üzerinde şu anda desteklenen .NET sürümlerinin bir listesi verilmiştir. Bu sürümler, [.NET sürümü destek sonu](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya openSUSE sürümü artık desteklenene kadar desteklenmeye devam eder.
 
-- ✔️, openSUSE veya .NET Core sürümünün hala desteklendiğini gösterir.
-- Bir ❌ , openSUSE veya .NET Core sürümünün bu openSUSE sürümünde desteklenmediğini belirtir.
-- Hem openSUSE hem de .NET Core sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
+- ✔️, openSUSE veya .NET sürümünün hala desteklendiğini gösterir.
+- Bir ❌ , openSUSE veya .NET sürümünün bu openSUSE sürümünde desteklenmediğini belirtir.
+- Hem openSUSE hem de .NET sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| openSUSE                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview (yalnızca el ile yüklenir) |
+| openSUSE                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
 |----------------------------|---------------|---------------|----------------|
-| ✔️ [15](#opensuse-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
+| ✔️ [15](#opensuse-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 
-Aşağıdaki .NET Core sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
+Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3.0
+- 3,0
 - 2.2
-- 2.0
+- 2,0
 
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 
@@ -53,11 +53,11 @@ sudo mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
-[!INCLUDE [linux-zyp-install-31](includes/linux-install-31-zyp.md)]
+[!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
 ## <a name="troubleshoot-the-package-manager"></a>Paket yöneticisinin sorunlarını giderme
 
-Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.
+Bu bölüm, .NET yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.
 
 ### <a name="unable-to-find-package"></a>Paket bulunamadı
 
@@ -73,17 +73,17 @@ Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken kar�
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
-Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yüklenir. Ancak, .NET Core 'u el ile yüklüyorsanız veya kendi kendine içerilen bir uygulama yayımlarsanız, bu kitaplıkların yüklü olduğundan emin olmanız gerekir:
+Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yüklenir. Ancak, .NET 'i el ile veya bağımsız bir uygulama yayımladığınızda, bu kitaplıkların yüklü olduğundan emin olmanız gerekir:
 
 - krb5
 - libıu
 - libopenssl1_0_0
 
-Hedef çalışma zamanı ortamının OpenSSL sürümü 1,1 veya daha yeniyse, **COMPAT-openssl10**yüklemeniz gerekir.
+Hedef çalışma zamanı ortamının OpenSSL sürümü 1,1 veya daha yeniyse, **COMPAT-openssl10** yüklemeniz gerekir.
 
 Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
-*System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız olacaktır:
+*System. Drawing. Common* derlemesini kullanan .NET uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız olacaktır:
 
 - [libgdiplus (sürüm 6.0.1 veya üzeri)](https://www.mono-project.com/docs/gui/libgdiplus/)
 
@@ -100,4 +100,4 @@ Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux u
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Öğretici: Visual Studio Code kullanarak .NET Core SDK bir konsol uygulaması oluşturma](../tutorials/with-visual-studio-code.md)
+- [Öğretici: Visual Studio Code kullanarak .NET SDK ile bir konsol uygulaması oluşturma](../tutorials/with-visual-studio-code.md)

@@ -1,19 +1,19 @@
 ---
-title: Ubuntu-.NET Core 'a .NET Core 'u yükler
-description: Ubuntu üzerinde .NET Core SDK ve .NET Core çalışma zamanı yüklemenin çeşitli yollarını gösterir.
+title: Ubuntu-.NET üzerine .NET 'i yükler
+description: Ubuntu 'da .NET SDK ve .NET çalışma zamanı yüklemenin çeşitli yollarını gösterir.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 5c07de20110a1aecf2ec5cb9de88f204625e548d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 419bcf3ccd011cadba8f8c64e195d7dbdbf7e241
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538471"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507025"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Ubuntu üzerinde .NET Core SDK veya .NET Core çalışma zamanı yüklemesi
+# <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Ubuntu 'da .NET SDK veya .NET çalışma zamanı 'nı yükler
 
-.NET Core, Ubuntu 'da desteklenir. Bu makalede, Ubuntu 'da .NET Core 'un nasıl yükleneceği açıklanır. Ubuntu sürümü destek dışı kaldığında, .NET Core artık bu sürümde desteklenmez. Ancak, bu yönergeler desteklenmese de, bu sürümler üzerinde çalışan .NET Core 'u almanıza yardımcı olabilir.
+.NET, Ubuntu 'da desteklenir. Bu makalede, Ubuntu 'da .NET yüklemesi açıklanmaktadır. Ubuntu sürümü destek dışı kaldığında, .NET artık bu sürümde desteklenmemektedir. Ancak, bu yönergeler desteklenmese de bu sürümler üzerinde çalışan .NET almanıza yardımcı olabilir.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,33 +21,40 @@ ms.locfileid: "90538471"
 
 ## <a name="supported-distributions"></a>Desteklenen dağıtımlar
 
-Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve üzerinde desteklendikleri Ubuntu sürümlerinin bir listesi verilmiştir. [.NET Core 'un sürümü destek sonuna](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya [Ubuntu](https://wiki.ubuntu.com/Releases)sürümüne ulaştığı sürece bu sürümler desteklenmeye devam eder.
+Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve üzerinde desteklendikleri Ubuntu sürümlerinin bir listesi verilmiştir. Bu sürümler, [.NET sürümü destek sonuna](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya [Ubuntu sürümüne ulaşıncaya kadar yaşam süresi bitene](https://wiki.ubuntu.com/Releases)kadar desteklenmeye devam eder.
 
-- ✔️, Ubuntu veya .NET Core sürümünün hala desteklendiğini gösterir.
-- Bir ❌ , Ubuntu veya .NET Core sürümünün bu Ubuntu sürümünde desteklenmediğini belirtir.
-- Ubuntu ve .NET Core sürümlerinin her ikisi de ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
+- ✔️, Ubuntu veya .NET sürümünün hala desteklendiğini gösterir.
+- Bir ❌ , Ubuntu veya .NET sürümünün bu Ubuntu sürümünde desteklenmediğini belirtir.
+- Ubuntu ve .NET sürümünün her ikisi de ✔️ sahip olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| Ubuntu                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview (yalnızca el ile yüklenir) |
+| Ubuntu                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [20,04 (LTS)](#2004-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
-| ❌[19,10](#1910-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
-| ❌[19,04](#1904-)       | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 Önizleme |
-| ❌[18,10](#1810-)       | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
-| ✔️ [18,04 (LTS)](#1804-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
-| ❌[17,10](#1710-)       | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
-| ❌[17,04](#1704-)       | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
-| ❌[16,10](#1610-)       | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
-| ✔️ [16,04 (LTS)](#1604-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
+| ✔️ [20,10](#2010-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ✔️ [20,04 (LTS)](#2004-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ❌[19,10](#1910-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ❌[19,04](#1904-)       | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
+| ❌[18,10](#1810-)       | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 |
+| ✔️ [18,04 (LTS)](#1804-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ❌[17,10](#1710-)       | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 |
+| ❌[17,04](#1704-)       | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 |
+| ❌[16,10](#1610-)       | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 |
+| ✔️ [16,04 (LTS)](#1604-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 
-Aşağıdaki .NET Core sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
+Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3.0
+- 3,0
 - 2.2
-- 2.0
+- 2,0
 
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="2010-"></a>20,10 ✔️
+
+Ubuntu 20,10 için .NET 5 ve .NET Core 3,1 paket akışlarında Şu anda bir sorun var. Sorun hakkında daha fazla bilgi için bkz. [GitHub sorunu DotNet/Core # 5549](https://github.com/dotnet/core/issues/5549). Sorun çözüldüğünde bu makale güncelleştirilecektir.
+
+.NET 5 veya .NET Core 3,1 ' i Ubuntu 20,10 ' ye yüklemek için, [20,04](#2004-)için yönergeleri izleyin.
 
 ## <a name="2004-"></a>20,04 ✔️
 
@@ -58,7 +65,7 @@ wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="1910-"></a>19,10 ❌
 
@@ -108,7 +115,7 @@ wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="1710-"></a>17,10 ❌
 
@@ -158,11 +165,11 @@ wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="apt-update-sdk-or-runtime"></a>APT güncelleştirme SDK 'Sı veya çalışma zamanı
 
-.NET Core için yeni bir yama yayını varsa, aşağıdaki komutlarla APT aracılığıyla yükseltmeniz yeterlidir:
+.NET için yeni bir yama yayını varsa, aşağıdaki komutlarla APT aracılığıyla yükseltmeniz yeterlidir:
 
 ```bash
 sudo apt-get update
@@ -171,7 +178,7 @@ sudo apt-get upgrade
 
 ## <a name="apt-troubleshooting"></a>APT sorunlarını giderme
 
-Bu bölümde, .NET Core 'u yüklemek için APT kullanırken karşılaşabileceğiniz yaygın hatalar hakkında bilgi verilmektedir.
+Bu bölümde, .NET yüklemek için APT kullanırken alabileceğiniz yaygın hatalar hakkında bilgi verilmektedir.
 
 ### <a name="unable-to-find-package"></a>Paket bulunamadı
 
@@ -205,7 +212,7 @@ sudo apt-get update; \
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
-Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yüklenir. Ancak, .NET Core 'u el ile yüklüyorsanız veya kendi kendine içerilen bir uygulama yayımlarsanız, bu kitaplıkların yüklü olduğundan emin olmanız gerekir:
+Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yüklenir. Ancak, .NET 'i el ile veya bağımsız bir uygulama yayımladığınızda, bu kitaplıkların yüklü olduğundan emin olmanız gerekir:
 
 - libc6
 - libgcc1
@@ -219,7 +226,7 @@ Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yükleni
 - libstdc + + 6
 - zlib1g
 
-*System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız vardır:
+*System. Drawing. Common* derlemesini kullanan .NET uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız vardır:
 
 - libgdiplus (sürüm 6.0.1 veya üzeri)
 
@@ -236,4 +243,4 @@ Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yükleni
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Öğretici: Visual Studio Code kullanarak .NET Core SDK bir konsol uygulaması oluşturma](../tutorials/with-visual-studio-code.md)
+- [Öğretici: Visual Studio Code kullanarak .NET SDK ile bir konsol uygulaması oluşturma](../tutorials/with-visual-studio-code.md)

@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 2edb06106283c26573863f230e5e9956728cdfa3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 53cac9ca49502c88f5d3cf63bf113365e7b85d18
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93135985"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507070"
 ---
 
 ### <a name="install-the-sdk"></a>SDK Yükleme
 
-.NET Core SDK .NET Core ile uygulama geliştirmenize olanak tanır. .NET Core SDK yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez. .NET Core SDK yüklemek için aşağıdaki komutları çalıştırın:
+.NET Core SDK .NET Core ile uygulama geliştirmenize olanak sağlar. .NET Core SDK yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez. .NET Core SDK yüklemek için aşağıdaki komutları çalıştırın:
 
 ```bash
 sudo dnf install dotnet-sdk-3.1
