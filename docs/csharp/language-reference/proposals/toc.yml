@@ -14,6 +14,8 @@
           href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
         - name: Basamak ayıraçları
           href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+        - name: Asenkron görev türleri
+          href: ../../../../_csharplang/proposals/csharp-7.0/task-types.md
     - name: C# 7.1 belirtim teklifleri
       items:
         - name: Zaman uyumsuz ana yöntem

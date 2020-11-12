@@ -1,0 +1,26 @@
+- name: .NET IoT Kitaplıkları ile ilgili belgeler
+  href: index.yml
+- name: Genel Bakış
+  href: intro.md
+- name: Hızlı Başlangıç (Sense HAT)
+  href: quickstarts/sensehat.md
+- name: Öğreticiler
+  expanded: true
+  items:
+    - name: LED yanıp sönmesi
+      href: tutorials/blink-led.md
+    - name: Sensörden ortam koşullarını okuma
+      href: tutorials/temp-sensor.md
+    - name: LCD üzerinde metin görüntüleme
+      href: tutorials/lcd-display.md
+    - name: Analogdan dijitale dönüştürücüdeki değerleri okuma
+      href: tutorials/adc.md
+- name: Nasıl yapılır kılavuzları
+  expanded: true
+  items:
+    - name: Dağıtım
+      href: deployment.md
+    - name: Hata Ayıklama
+      href: debugging.md
+- name: API Başvurusu
+  href: /dotnet/api?view=iot-dotnet-1.1

@@ -1270,6 +1270,9 @@
           displayName: 'switch, pattern matching, patterns'
         - name: true ve false işleçleri
           href: language-reference/operators/true-false-operators.md
+        - name: with ifadesi
+          href: language-reference/operators/with-expression.md
+          displayName: 'records, copy'
         - name: İşleç aşırı yüklemesi
           href: language-reference/operators/operator-overloading.md
     - name: Özel karakterler
