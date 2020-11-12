@@ -578,3 +578,6 @@ items:
               - name: .NET geliştiricileri için Azure
                 tocHref: /dotnet/azure/
                 topicHref: /dotnet/azure/index
+          - name: .NET IoT Kitaplıkları
+            tocHref: /dotnet/iot/
+            topicHref: /dotnet/iot/index
