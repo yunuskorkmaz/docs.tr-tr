@@ -1,21 +1,21 @@
 ---
 title: DotNet List paket komutu
 description: "' DotNet List Package ' komutu bir proje veya çözümün paket başvurularını listelemek için uygun bir seçenek sağlar."
-ms.date: 02/14/2020
-ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.date: 11/11/2020
+ms.openlocfilehash: ecb83e5485c9fb49a454a35091e1a7b753b1f291
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164760"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556894"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,2 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet list package`-Bir proje veya çözüm için paket başvurularını listeler.
+`dotnet list package` -Bir proje veya çözüm için paket başvurularını listeler.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -24,12 +24,12 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
     [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
-    [--outdated] [--source <SOURCE>]
+    [--outdated] [--source <SOURCE>] [-v|--verbosity <LEVEL>]
 
 dotnet list package -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet list package`Komut belirli bir proje veya çözüm için tüm NuGet paket başvurularını listelemek için uygun bir seçenek sağlar. Bu komutun işlemesi için gereken varlıkların olması için öncelikle projeyi derlemeniz gerekir. Aşağıdaki örnek, `dotnet list package` [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) projesi için komutunun çıkışını gösterir:
 
@@ -118,6 +118,10 @@ Project 'HelloPlugin' has the following package references
 - **`-s|--source <SOURCE>`**
 
   Yeni paketler aranırken kullanılacak NuGet kaynakları. `--outdated`Veya seçeneğini gerektirir `--deprecated` .
+
+- **`-v|--verbosity <LEVEL>`**
+
+  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer: `minimal`.
 
 ## <a name="examples"></a>Örnekler
 

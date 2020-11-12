@@ -1,17 +1,17 @@
 ---
-title: Dayanıklı Azure işlevleri-sunucusuz uygulamalar
-description: Sürekli Azure işlevleri, koddaki durum bilgisi olan iş akışlarını etkinleştirmek için Azure Işlevleri çalışma zamanını genişletir.
+title: Dayanıklı Azure Işlevleri-sunucusuz uygulamalar
+description: Sürekli Azure Işlevleri, koddaki durum bilgisi olan iş akışlarını etkinleştirmek için Azure Işlevleri çalışma zamanını genişletir.
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 1498b5a19bc92b7db16f7422a35ac3afffb82b60
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3ee628b5c2239cd13395fda7714b38b06efa058
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171799"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557161"
 ---
-# <a name="durable-azure-functions"></a>Dayanıklı Azure işlevleri
+# <a name="durable-azure-functions"></a>Dayanıklı Azure Işlevleri
 
 Azure Işlevleri ile sunucusuz uygulamalar oluştururken, işlemleriniz genellikle durum bilgisiz bir şekilde çalışacak şekilde tasarlanacaktır. Bu tasarım seçeneğinin nedeni, platformun ölçeklendirilirken, kodun hangi sunuculara çalıştığını anlamak zor hale gelir. Ayrıca, belirli bir noktada kaç örnek etkin olduğunu anlamak zor olur. Ancak, bir işlemin geçerli durumunun bilinmesini gerektiren uygulama sınıfları vardır. Çevrimiçi mağazaya sipariş gönderme sürecini göz önünde bulundurun. Kullanıma alma işlemi, işlemin durumunu bilmemiz gereken birden çok işlemden oluşan bir iş akışı olabilir. Bu tür bilgiler, müşterinin hesabında krediler varsa ve aynı zamanda kredi kartını işleme sonuçları varsa ürün envanterini içerebilir. Bu işlemler kendi iç iş akışlarına veya hatta üçüncü taraf sistemlerden gelen hizmetlere kolayca sahip olabilir.
 

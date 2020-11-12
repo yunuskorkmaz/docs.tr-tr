@@ -1,18 +1,18 @@
 ---
 title: WITH ifadesi-C# başvurusu
 description: C# kayıtlarını bozucu olmayan bir şekilde gerçekleştiren bir ifade hakkında bilgi edinin
-ms.date: 11/10/2020
+ms.date: 11/12/2020
 f1_keywords:
 - with_CSharpKeyword
 helpviewer_keywords:
 - with expression [C#]
 - with operator [C#]
-ms.openlocfilehash: 7948df3c6260e297cdb2fa380f1790a55e0abb58
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 8412dfe8663703d3b201fe98b5f4752da1b344cf
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445820"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556718"
 ---
 # <a name="with-expression-c-reference"></a>With ifadesi (C# Başvurusu)
 
@@ -21,6 +21,10 @@ C# 9,0 ve üzeri sürümlerde kullanılabilen bir `with` ifade, belirtilen özel
 :::code language="csharp" source="snippets/with-expression/BasicExample.cs" :::
 
 Yukarıdaki örnekte gösterildiği gibi, hangi üyelerin değiştirileceğini ve bunların yeni değerlerini belirtmek için [nesne Başlatıcısı](../../programming-guide/classes-and-structs/object-and-collection-initializers.md) sözdizimini kullanırsınız. Bir `with` ifadede, sol taraftaki bir işlenen bir kayıt türünde olmalıdır.
+
+`with`Aşağıdaki örnekte gösterildiği gibi bir ifadenin sonucu, ifadenin işleneni ile aynı çalışma zamanı türüne sahiptir:
+
+:::code language="csharp" source="snippets/with-expression/InheritanceExample.cs" :::
 
 Bir başvuru türü üyesi olması durumunda, bir kayıt kopyalanırken yalnızca bir örneğe başvuru kopyalanır. Hem kopya hem de özgün kaydın aynı başvuru türü örneğine erişimi vardır. Aşağıdaki örnekte bu davranış gösterilmektedir:
 

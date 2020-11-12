@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247715"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556848"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambda ifadeleri (C# Başvurusu)
 
@@ -50,13 +50,13 @@ Sınıfında yöntemi çağırmak için yöntem tabanlı sözdizimi kullandığ�
   
 ## <a name="expression-lambdas"></a>İfade lambdaları
 
-İşlecinin sağ tarafında bir ifade olan bir lambda ifadesine bir `=>` *ifade lambda*adı verilir. Bir lambda ifadesi, ifadenin sonucunu verir ve aşağıdaki temel biçimi alır:
+İşlecinin sağ tarafında bir ifade olan bir lambda ifadesine bir `=>` *ifade lambda* adı verilir. Bir lambda ifadesi, ifadenin sonucunu verir ve aşağıdaki temel biçimi alır:
 
 ```csharp
 (input-parameters) => expression
 ```
 
-Lambda ifadesinin gövdesi bir yöntem çağrısından oluşabilir. Ancak, SQL Server gibi .NET ortak dil çalışma zamanının bağlamı dışında değerlendirilen [ifade ağaçları](../../programming-guide/concepts/expression-trees/index.md) oluşturuyorsanız, Lambda ifadelerinde Yöntem çağrılarını kullanmamalısınız. Yöntemler .NET ortak dil çalışma zamanı bağlamının dışında anlamlı olmayacaktır.
+Lambda ifadesinin gövdesi bir yöntem çağrısından oluşabilir. Ancak, SQL Server gibi .NET ortak dil çalışma zamanı (CLR) bağlamı dışında değerlendirilen [ifade ağaçları](../../programming-guide/concepts/expression-trees/index.md) oluşturuyorsanız, Lambda ifadelerinde Yöntem çağrılarını kullanmamalısınız. Yöntemlerin .NET ortak dil çalışma zamanı (CLR) bağlamı dışında hiçbir anlamı olmayacaktır.
 
 ## <a name="statement-lambdas"></a>İfade lambdaları
 
@@ -215,7 +215,7 @@ Ortak tür sisteminin hiçbir "lambda ifadesi" kavramı olmadığından, lambda 
 
 ## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>Lambda ifadelerinde dış değişkenlerin ve değişken kapsamının yakalanması
 
-Lambdalar, *dış değişkenlere*başvurabilir. Bunlar, lambda ifadesini tanımlayan yöntemde veya lambda ifadesini içeren türde kapsamda kapsam içinde olan değişkenlerdir. Bu şekilde tutulan değişkenler, aksi halde kapsam dışına çıkacak ve çöp olarak toplanacak olsalar dahi kullanılmak üzere lambda ifadesinde saklanır. Bir lambda ifadesinde tüketilebilmesi için öncelikle mutlaka bir harici değişken tayin edilmelidir. Aşağıdaki örnek bu kuralları gösterir:
+Lambdalar, *dış değişkenlere* başvurabilir. Bunlar, lambda ifadesini tanımlayan yöntemde veya lambda ifadesini içeren türde kapsamda kapsam içinde olan değişkenlerdir. Bu şekilde tutulan değişkenler, aksi halde kapsam dışına çıkacak ve çöp olarak toplanacak olsalar dahi kullanılmak üzere lambda ifadesinde saklanır. Bir lambda ifadesinde tüketilebilmesi için öncelikle mutlaka bir harici değişken tayin edilmelidir. Aşağıdaki örnek bu kuralları gösterir:
 
 [!code-csharp[variable scope](snippets/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 

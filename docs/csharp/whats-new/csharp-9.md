@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: e1c297cd0ff75d6a6fb4a9d38c9a241e216f500b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440874"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557226"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -31,6 +31,8 @@ C# 9,0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
 - Kısmi yöntemlere yönelik yeni özellikler
 
 C# 9,0, **.NET 5** ' te desteklenir. Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../language-reference/configure-language-version.md).
+
+[.Net İndirmeleri sayfasından](https://dotnet.microsoft.com/download)en son .NET SDK 'sını indirebilirsiniz.
 
 ## <a name="record-types"></a>Kayıt türleri
 
@@ -158,7 +160,7 @@ System.Console.WriteLine("Hello World!");
 
 Uygulamanızdaki yalnızca bir dosya en üst düzey deyimleri kullanabilir. Derleyici birden çok kaynak dosyasında en üst düzey deyimler bulursa, bu bir hatadır. En üst düzey deyimleri, genellikle bir yöntemi olan, belirtilen bir program giriş noktası yöntemiyle birleştirirseniz de bir hatadır `Main` . Bir anlamda, bir dosyanın normalde bir sınıf yönteminde olacak deyimleri içerdiğini düşünebilirsiniz `Main` `Program` .  
 
-Bu özellik için en yaygın kullanımdan biri eğitim malzemeleri oluşturuyor. Başlangıç C# geliştiricileri kurallı "Merhaba Dünya!" yazabilir kodda bir veya iki satırda. Ek sertifika gerekmez. Bununla birlikte, deneyimli geliştiriciler bu özellik için birçok kullanım de bulacaktır. En üst düzey deyimler, Jupneter Not defterlerinin sağladığı deneme için bir komut dosyası benzeri deneyim sağlar. En üst düzey deyimler, küçük konsol programları ve yardımcı programlar için harika. Azure işlevleri, en üst düzey deyimler için ideal bir kullanım durumdur.
+Bu özellik için en yaygın kullanımdan biri eğitim malzemeleri oluşturuyor. Başlangıç C# geliştiricileri kurallı "Merhaba Dünya!" yazabilir kodda bir veya iki satırda. Ek sertifika gerekmez. Bununla birlikte, deneyimli geliştiriciler bu özellik için birçok kullanım de bulacaktır. En üst düzey deyimler, Jupneter Not defterlerinin sağladığı deneme için bir komut dosyası benzeri deneyim sağlar. En üst düzey deyimler, küçük konsol programları ve yardımcı programlar için harika. Azure Işlevleri, en üst düzey deyimler için ideal bir kullanım durumdur.
 
 En önemlisi, üst düzey deyimler uygulamanızın kapsamını veya karmaşıklığını sınırlamaz. Bu deyimler, herhangi bir .NET sınıfına erişebilir veya kullanabilir. Ayrıca, komut satırı bağımsız değişkenlerinin veya dönüş değerlerinin kullanımını sınırlamaz. Üst düzey deyimler, args adlı dizeler dizisine erişebilir. En üst düzey deyimler bir tamsayı değeri döndürirse, bu değer sentezlenmiş bir yöntemden tamsayı dönüş kodu olur `Main` . En üst düzey deyimler zaman uyumsuz ifadeler içerebilir. Bu durumda, birleştirilmiş giriş noktası bir `Task` veya döndürür `Task<int>` .
 

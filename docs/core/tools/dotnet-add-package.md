@@ -1,13 +1,13 @@
 ---
 title: DotNet paket Ekle komutu
 description: "' DotNet Add Package ' komutu, bir projeye NuGet paket başvurusu eklemek için uygun bir seçenek sağlar."
-ms.date: 02/14/2020
-ms.openlocfilehash: 1bdda241c1301b926ba2fd322f969407038b7b62
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/11/2020
+ms.openlocfilehash: 10373b3b69c669323674b192d54cd277a5828f24
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538074"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556881"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -23,7 +23,7 @@ ms.locfileid: "90538074"
 dotnet add [<PROJECT>] package <PACKAGE_NAME>
     [-f|--framework <FRAMEWORK>] [--interactive]
     [-n|--no-restore] [--package-directory <PACKAGE_DIRECTORY>]
-    [-s|--source <SOURCE>] [-v|--version <VERSION>]
+    [--prerelease] [-s|--source <SOURCE>] [-v|--version <VERSION>]
 
 dotnet add package -h|--help
 ```
@@ -88,6 +88,10 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
   Paketlerin geri yükleneceği dizin. Varsayılan paket geri yükleme konumu `%userprofile%\.nuget\packages` Windows ve `~/.nuget/packages` MacOS ve Linux üzerinde bulunur. Daha fazla bilgi için bkz. [NuGet 'de Genel paketleri, önbelleği ve temp klasörlerini yönetme](/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
+
+- **`--prerelease`**
+
+  Ön sürüm paketlerinin yüklenmesine izin verir.
 
 - **`-s|--source <SOURCE>`**
 

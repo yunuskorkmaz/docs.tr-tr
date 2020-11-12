@@ -1,21 +1,21 @@
 ---
-title: " .NET Core araçları"
-description: .NET Core araçları 'nı yüklemek, kullanmak, güncelleştirmek ve kaldırmak. Küresel araçlar, araç yolu araçları ve yerel araçları içerir.
+title: .NET araçları
+description: .NET araçları 'nı yüklemek, kullanmak, güncelleştirmek ve kaldırmak. Küresel araçlar, araç yolu araçları ve yerel araçları içerir.
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 08277ed791036201d1dfa30c21799db1c21a924e
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598129"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556907"
 ---
-# <a name="how-to-manage-net-core-tools"></a>.NET Core araçlarını yönetme
+# <a name="how-to-manage-net-tools"></a>.NET araçlarını yönetme
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-.NET Core Aracı, konsol uygulaması içeren özel bir NuGet paketidir. Aşağıdaki yollarla makinenize bir araç yüklenebilir:
+.NET aracı, konsol uygulaması içeren özel bir NuGet paketidir. Aşağıdaki yollarla makinenize bir araç yüklenebilir:
 
 * Genel bir araç olarak.
 
@@ -29,24 +29,25 @@ ms.locfileid: "89598129"
 
   Araç ikilileri bir varsayılan dizine yüklenir. Aracı, yükleme dizininden veya alt dizinlerinden herhangi birine çağırabilirsiniz. Farklı dizinler aynı aracın farklı sürümlerini kullanabilir.
   
-  .NET CLı, bir dizine yerel olarak hangi araçların yüklendiğini izlemek için bildirim dosyalarını kullanır. Bildirim dosyası, bir kaynak kod deposunun kök dizininde kaydedildiğinde, bir katkıda bulunan depoyu kopyalayabilir ve bildirim dosyalarında listelenen tüm araçları yükleyen tek bir .NET Core CLI komutu çağırabilirler.
+  .NET CLı, bir dizine yerel olarak hangi araçların yüklendiğini izlemek için bildirim dosyalarını kullanır. Bildirim dosyası bir kaynak kod deposunun kök dizininde kaydedildiğinde, katılımcı depoyu kopyalayabilir ve bildirim dosyalarında listelenen tüm araçları yükleyen tek bir .NET CLı komutu çağırabilirler.
 
 > [!IMPORTANT]
-> .NET Core araçları tam güvende çalışır. Yazara güvenmediğiniz müddetçe .NET Core aracını yüklemeyin.
+> .NET araçları tam güvende çalışır. Yazara güvenmediğiniz müddetçe .NET aracını yüklemeyin.
 
 ## <a name="find-a-tool"></a>Araç bulun
 
-Şimdilik, .NET Core bir araç arama özelliğine sahip değildir. Araç bulmak için bazı yollar şunlardır:
+Araç bulmak için bazı yollar şunlardır:
 
+* NuGet.org 'e yayınlanan bir araç bulmak için [DotNet aracı arama](dotnet-tool-search.md) komutunu kullanın.
 * ".NET aracı" paket türü filtresini kullanarak [NuGet](https://www.nuget.org) Web sitesinde arama yapın. Daha fazla bilgi için bkz. [paketleri bulma ve seçme](/nuget/consume-packages/finding-and-choosing-packages).
 * [Natemcmaster/DotNet-Tools](https://github.com/natemcmaster/dotnet-tools) GitHub deposundaki araçların listesine bakın.
 * .NET araçları aramak için [araç al](https://www.toolget.net/) 'ı kullanın.
 * [DotNet/aspnetcore GitHub deposunun Araçlar dizininde](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)ASP.NET Core ekibi tarafından oluşturulan araçların kaynak koduna bakın.
-* [.NET Core DotNet tanılama araçları](../diagnostics/index.md#net-core-diagnostic-global-tools)' nın tanılama araçları hakkında bilgi edinin.
+* [.Net tanılama araçları](../diagnostics/index.md#net-core-diagnostic-global-tools)'nda tanılama araçları hakkında bilgi edinin.
 
 ## <a name="check-the-author-and-statistics"></a>Yazarı ve istatistikleri denetleme
 
-.NET Core araçları tam güvende çalıştırıldıklarından ve küresel araçlar PATH ortam değişkenine eklendiğinden, bunlar çok güçlü olabilir. Güvenmediğiniz kişilerden araç indirmeyin.
+.NET araçları tam güvende çalıştırıldıklarından ve genel araçlar PATH ortam değişkenine eklendiğinden, bunlar çok güçlü olabilir. Güvenmediğiniz kişilerden araç indirmeyin.
 
 Araç NuGet üzerinde barındırılıyorsa, aracı arayarak yazarı ve istatistikleri kontrol edebilirsiniz.
 
@@ -92,7 +93,7 @@ Linux veya macOS 'ta:
 dotnet tool install dotnetsay --tool-path ~/bin
 ```
 
-.NET Core SDK, bu konumu otomatik olarak PATH ortam değişkenine eklemez. [Bir araç yolu aracını çağırmak](#invoke-a-tool-path-tool)için aşağıdaki yöntemlerden birini kullanarak komutun kullanılabilir olduğundan emin olmanız gerekir:
+.NET SDK bu konumu otomatik olarak PATH ortam değişkenine eklemez. [Bir araç yolu aracını çağırmak](#invoke-a-tool-path-tool)için aşağıdaki yöntemlerden birini kullanarak komutun kullanılabilir olduğundan emin olmanız gerekir:
 
 * Yükleme dizinini PATH ortam değişkenine ekleyin.
 * Aracı çağırdığınızda aracın tam yolunu belirtin.
@@ -273,10 +274,10 @@ Araç kullanım yönergelerini almak için aşağıdaki komutlardan birini girin
 dotnet <command> --help
 ```
 
-Bir araç yüklenemediğinde veya çalışmazsa, bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
+Bir araç yüklenemediğinde veya çalışmazsa, bkz. [.NET araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: .NET Core CLI kullanarak bir .NET Core aracı oluşturma](global-tools-how-to-create.md)
-- [Öğretici: .NET Core CLI kullanarak .NET Core küresel aracı 'nı yükleyip kullanın](global-tools-how-to-use.md)
-- [Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın](local-tools-how-to-use.md)
+- [Öğretici: .NET CLı kullanarak .NET aracı oluşturma](global-tools-how-to-create.md)
+- [Öğretici: .NET CLı kullanarak .NET genel aracını yükleyip kullanma](global-tools-how-to-use.md)
+- [Öğretici: .NET CLı kullanarak .NET yerel aracını yükleyip kullanma](local-tools-how-to-use.md)

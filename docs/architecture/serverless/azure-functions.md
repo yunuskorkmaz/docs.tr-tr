@@ -4,16 +4,16 @@ description: Azure işlevleri, olay odaklı anında ölçeklendirme kodu sağlam
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 7625b2a0dafb90dc1bf2fb7fe680d53b20764c09
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 08e1aaecdee753dc25cca0d6356caaafae1ad510
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171812"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557122"
 ---
 # <a name="azure-functions"></a>Azure İşlevleri
 
-Azure işlevleri, sunucusuz bir işlem deneyimi sağlar. Bir işlev bir *tetikleyici* tarafından çağrılır (bir HTTP uç noktasına veya bir zamanlayıcıya erişim gibi) ve bir kod bloğu veya iş mantığı yürütür. İşlevler ayrıca depolama ve kuyruklar gibi kaynaklara bağlanan özelleştirilmiş *bağlamaları* destekler.
+Azure Işlevleri, sunucusuz bir işlem deneyimi sağlar. Bir işlev bir *tetikleyici* tarafından çağrılır (bir HTTP uç noktasına veya bir zamanlayıcıya erişim gibi) ve bir kod bloğu veya iş mantığı yürütür. İşlevler ayrıca depolama ve kuyruklar gibi kaynaklara bağlanan özelleştirilmiş *bağlamaları* destekler.
 
 ![Azure işlevleri logosu](./media/azure-functions-logo.png)
 
@@ -35,11 +35,11 @@ Aşağıdaki dillerin tümü genel kullanılabilirlik (GA) içinde desteklenir.
 |**TypeScript**|Düğüm 10 & 12 (JavaScript aracılığıyla)|
 |**PowerShell**|PowerShell Core 6|
 
-Daha fazla bilgi için bkz. [desteklenen diller](/azure/azure-functions/supported-languages).
+Daha fazla bilgi için bkz. [Desteklenen diller](/azure/azure-functions/supported-languages).
 
 ## <a name="app-service-plans"></a>App Service planları
 
-İşlevler bir *App Service planı*tarafından desteklenir. Plan, işlevler uygulaması tarafından kullanılan kaynakları tanımlar. Bir bölgeye planlar atayabilir, kullanılacak sanal makinelerin boyutunu ve sayısını belirleyebilir ve bir fiyatlandırma katmanı seçebilirsiniz. Doğru sunucusuz bir yaklaşım için işlev uygulamaları **Tüketim** planını kullanabilir. Tüketim planı, yük temelinde arka ucu otomatik olarak ölçeklendirecektir.
+İşlevler bir *App Service planı* tarafından desteklenir. Plan, işlevler uygulaması tarafından kullanılan kaynakları tanımlar. Bir bölgeye planlar atayabilir, kullanılacak sanal makinelerin boyutunu ve sayısını belirleyebilir ve bir fiyatlandırma katmanı seçebilirsiniz. Doğru sunucusuz bir yaklaşım için işlev uygulamaları **Tüketim** planını kullanabilir. Tüketim planı, yük temelinde arka ucu otomatik olarak ölçeklendirecektir.
 
 İşlev uygulamaları için başka bir barındırma seçeneği de [Premium plandır](/azure/azure-functions/functions-premium-plan). Bu plan, soğuk başlangıçtan kaçınmak için "Always On" örneği sağlar, VNet bağlantısı gibi gelişmiş özellikleri destekler ve Premium donanımda çalışır.
 

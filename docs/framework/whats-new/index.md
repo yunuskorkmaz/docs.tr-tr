@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: da0e92f394507a37b0b6c163b41a575abc1c1a2b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: c99f7c0778b1160c926d5ed62a6a2d295f5c50c5
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441115"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557252"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework yenilikleri
 
@@ -844,7 +844,7 @@ End Class
 
 Ardından, anahtar hata iletisi dizesi olan ve değeri yerelleştirilmiş hata iletisi olan DataAnnotation. yerelleştirme. fr. resx olan bir kaynak dosyası oluşturabilirsiniz. Dosyanın klasörde bulunması gerekir `App.LocalResources` . Örneğin, aşağıdaki anahtar ve değeri yerelleştirilmiş Fransızca (fr) dil hata iletisinde verilmiştir:
 
-| Ad                                 | Değer                                     |
+| Name                                 | Değer                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Derecelendirme 1 ile 10 arasında olmalıdır. | La Note DoIt être, diğer 1 et 10. |
 
@@ -958,7 +958,7 @@ End Function
 
 .NET Framework 4.6.2 ' de bunu ele almak için temel sınıfa aşağıdaki üç yöntem eklenmiştir  <xref:System.Security.Cryptography.ECDiffieHellman> ve bu KDF yordamlarını ve bunların girişlerini daha net bir şekilde temsil eder:
 
-|Ecdıfıfiehellman yöntemi|Açıklama|
+|Ecdıfıfiehellman yöntemi|Description|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Formülü kullanarak önemli malzemeleri türetiliyor<br /><br /> Karma (secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> Karma (secretPrepend Orelo *x* Orelo secretAppend)<br /><br /> Burada *x* , EC Diffie-Hellman algoritmasının hesaplanan sonucudur.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Formülü kullanarak önemli malzemeleri türetiliyor<br /><br /> HMAC (hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC (hmacKey, secretPrepend Orelo *x* Orellsecretappend)<br /><br /> Burada *x* , EC Diffie-Hellman algoritmasının hesaplanan sonucudur.|
@@ -2134,3 +2134,4 @@ Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitapl
 - [Visual Studio 2019 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio 'da C++ yenilikleri](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+- [.NET SDK'yı indirin](https://dotnet.microsoft.com/download)

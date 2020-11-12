@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: e9ab745a60cd9eb646bee57a9a6838c30add77c5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: ada336ee5fce317315bb5f3974e0366f7bca3985
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495849"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557109"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic yenilikler
 
@@ -23,6 +23,8 @@ Bu konu, dilin en son sürümlerindeki yeni ve geliştirilmiş özelliklerin ayr
 
 Visual Basic 16,0/Visual Studio 2019 sürüm 16,0 \
 Yeni özellikler için bkz. [Visual Basic 16,0](#visual-basic-160).
+
+[.Net İndirmeleri sayfasından](https://dotnet.microsoft.com/download)en son .NET SDK 'sını indirebilirsiniz.
 
 ## <a name="previous-versions"></a>Önceki sürümler
 
@@ -158,7 +160,7 @@ Visual Basic komut satırı derleyicisi artık başvuru derlemelerinin çıkış
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[**Tanımlama grupları**](../programming-guide/language-features/data-types/tuples.md)
+[**Demetler**](../programming-guide/language-features/data-types/tuples.md)
 
 Tanımlama grupları, en yaygın olarak tek bir yöntem çağrısından birden çok değer döndürmek için kullanılan hafif bir veri yapısıdır. Genellikle, bir yöntemden birden çok değer döndürmek için aşağıdakilerden birini yapmanız gerekir:
 
