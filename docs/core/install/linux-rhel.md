@@ -4,12 +4,12 @@ description: RHEL üzerinde .NET SDK ve .NET çalışma zamanı yüklemek için 
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: a742497bba3459a4d8772f5c9e3d915b5b18e62e
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: cb03f84cf84557d467f0a067b8d5629a843ec7e3
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506933"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594579"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>RHEL üzerinde .NET SDK veya .NET çalışma zamanı 'nı yükler
 
@@ -29,10 +29,10 @@ Aşağıdaki tabloda, hem RHEL 7 hem de RHEL 8 üzerinde şu anda desteklenen .N
 - A ❌ , RHEL veya .NET sürümünün bu RHEL sürümünde desteklenmediğini belirtir.
 - Hem RHEL hem de .NET sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| RHEL                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| RHEL                     | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [8](#rhel-8-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ✔️ [7](#rhel-7-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ✔️ [8](#rhel-8-)        | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ✔️ [7](#rhel-7--net-50) | ✔️ 2,1        | ✔️ [3,1](#rhel-7--net-core-31)        | ✔️ [5,0](#rhel-7--net-50) |
 
 Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
@@ -46,11 +46,30 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
-.NET, RHEL 8 için AppStream depolarına dahildir.
+> [!TIP]
+> .NET 5,0 henüz AppStream depolarında kullanılamaz, ancak .NET Core 3,1 ' dir. .NET Core 3,1 yüklemek için, veya gibi `dnf install` uygun Paketle komutunu kullanın `aspnetcore-runtime-3.1` `dotnet-sdk-3.1` . Aşağıdaki yönergeler .NET 5,0 içindir.
+
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
+```
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
-## <a name="rhel-7-"></a>RHEL 7 ✔️
+## <a name="rhel-7--net-50"></a>RHEL 7 ✔️ .NET 5,0
+
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-yum.md)]
+
+## <a name="rhel-7--net-core-31"></a>RHEL 7 ✔️ .NET Core 3,1
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -62,37 +81,37 @@ sudo yum install scl-utils
 
 ### <a name="install-the-sdk"></a>SDK Yükleme
 
-.NET SDK, .NET ile uygulama geliştirmenize olanak tanır. .NET SDK 'yı yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez. .NET SDK 'yı yüklemek için aşağıdaki komutları çalıştırın:
+.NET Core SDK .NET Core ile uygulama geliştirmenize olanak tanır. .NET Core SDK yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez. .NET Core SDK yüklemek için aşağıdaki komutları çalıştırın:
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet50 -y
-scl enable rh-dotnet50 bash
+yum install rh-dotnet31 -y
+scl enable rh-dotnet31 bash
 ```
 
-Red hat, `rh-dotnet50` diğer programları etkileyebileceğinden, kalıcı olarak etkinleştirilmesini önermez. Örneğin, `rh-dotnet50` `libcurl` temel RHEL sürümünden farklı bir sürümünü içerir. Bu, farklı bir sürümü beklemediği programlarda sorunlara yol açabilir `libcurl` . `rh-dotnet`Kalıcı olarak etkinleştirmek istiyorsanız, _~/,bashrc_ dosyanıza şu satırı ekleyin.
+Red hat, `rh-dotnet31` diğer programları etkileyebileceğinden, kalıcı olarak etkinleştirilmesini önermez. Örneğin, `rh-dotnet31` `libcurl` temel RHEL sürümünden farklı bir sürümünü içerir. Bu, farklı bir sürümü beklemediği programlarda sorunlara yol açabilir `libcurl` . `rh-dotnet`Kalıcı olarak etkinleştirmek istiyorsanız, _~/,bashrc_ dosyanıza şu satırı ekleyin.
 
 ```bash
-source scl_source enable rh-dotnet50
+source scl_source enable rh-dotnet31
 ```
 
 ### <a name="install-the-runtime"></a>Çalışma zamanını yükler
 
-ASP.NET Core çalışma zamanı, .NET ile yapılan ve çalışma zamanı sağlamayan uygulamaları çalıştırmanızı sağlar. Aşağıdaki komutlar, .NET için en uyumlu çalışma zamanı olan ASP.NET Core çalışma zamanını yükler. Terminalinizde aşağıdaki komutları çalıştırın:
+.NET Core çalışma zamanı, .NET Core ile oluşturulmuş uygulamaları çalışma zamanını içermeyen uygulamalar çalıştırmanıza olanak tanır. Aşağıdaki komutlar, .NET Core için en uyumlu çalışma zamanı olan ASP.NET Core çalışma zamanını yükler. Terminalinizde aşağıdaki komutları çalıştırın.
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet50-aspnetcore-runtime-5.0 -y
-scl enable rh-dotnet50-aspnetcore-runtime-5.0 bash
+yum install rh-dotnet31-aspnetcore-runtime-3.1 -y
+scl enable rh-dotnet31-aspnetcore-runtime-3.1 bash
 ```
 
-Red hat `rh-dotnet50-aspnetcore-runtime-5.0` , diğer programları etkileyebilecek şekilde kalıcı olarak etkinleştirilmesini önermez. Örneğin, `rh-dotnet50-aspnetcore-runtime-5.0` `libcurl` temel RHEL sürümünden farklı bir sürümünü içerir. Bu, farklı bir sürümü beklemediği programlarda sorunlara yol açabilir `libcurl` . `rh-dotnet50-aspnetcore-runtime-5.0`Kalıcı olarak etkinleştirmek istiyorsanız, _~/,bashrc_ dosyanıza şu satırı ekleyin.
+Red hat, `rh-dotnet31-aspnetcore-runtime-3.1` diğer programları etkileyebileceğinden, kalıcı olarak etkinleştirilmesini önermez. Örneğin, `rh-dotnet31-aspnetcore-runtime-3.1` `libcurl` temel RHEL sürümünden farklı bir sürümünü içerir. Bu, farklı bir sürümü beklemediği programlarda sorunlara yol açabilir `libcurl` . `rh-dotnet31-aspnetcore-runtime-3.1`Kalıcı olarak etkinleştirmek istiyorsanız, _~/,bashrc_ dosyanıza şu satırı ekleyin.
 
 ```bash
-source scl_source enable rh-dotnet50-aspnetcore-runtime-5.0
+source scl_source enable rh-dotnet31-aspnetcore-runtime-3.1
 ```
 
-ASP.NET Core çalışma zamanına alternatif olarak, ASP.NET Core desteği içermeyen .NET çalışma zamanını yükleyebilirsiniz: `rh-dotnet50-aspnetcore-runtime-5.0` ile önceki komutlarda değiştirin `rh-dotnet50-dotnet-runtime-5.0` .
+ASP.NET Core çalışma zamanına alternatif olarak, ASP.NET Core desteği içermeyen .NET Core çalışma zamanı 'nı yükleyebilirsiniz: Yukarıdaki komutlarda ' yi ile değiştirin `rh-dotnet31-aspnetcore-runtime-3.1` `rh-dotnet31-dotnet-runtime-3.1` .
 
 ## <a name="snap"></a>Bileşenlerinden
 

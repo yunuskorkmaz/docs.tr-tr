@@ -4,12 +4,12 @@ description: .NET SDK ve .NET çalışma zamanının CentOS 'a yüklenmesi için
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: d0f5d38de0f505d62f2a35c5d1c3f7161c91a96b
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: b2ed62d024c6f0d78a4ec64693f1dafeabd8f47b
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507102"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594638"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>CentOS 'a .NET SDK veya .NET çalışma zamanı yüklemesi
 
@@ -46,7 +46,14 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-.NET 5,0, CentOS 8 için varsayılan paket depolarında kullanılabilir.
+> [!TIP]
+> .NET 5,0 henüz varsayılan paket depolarında kullanılamaz, ancak .NET Core 3,1 ' dir. .NET Core 3,1 yüklemek için, veya gibi `dnf install` uygun Paketle komutunu kullanın `aspnetcore-runtime-3.1` `dotnet-sdk-3.1` . Aşağıdaki yönergeler .NET 5,0 içindir.
+
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
+```
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 

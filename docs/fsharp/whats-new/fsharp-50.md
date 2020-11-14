@@ -2,16 +2,18 @@
 title: 'F # 5,0-F # kılavuzundaki yenilikler'
 description: "F # 5,0 ' de bulunan yeni özelliklere genel bakış alın."
 ms.date: 11/06/2020
-ms.openlocfilehash: 0c4c9f42c63a1dc8c90213c43edbadd4061c132d
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445834"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557148"
 ---
 # <a name="whats-new-in-f-50"></a>F # 5,0 ' deki yenilikler
 
 F # 5,0, F # diline ve F# Etkileşimli çeşitli iyileştirmeler ekler. **.NET 5** ile kullanıma sunuldu.
+
+[.Net İndirmeleri sayfasından](https://dotnet.microsoft.com/download)en son .NET SDK 'sını indirebilirsiniz.
 
 ## <a name="get-started"></a>başlarken
 
@@ -149,7 +151,6 @@ nameof op_Addition // "op_Addition"
 Bir tür parametresinin adının alınması biraz farklı bir sözdizimi gerektirir:
 
 ```fsharp
-
 type C<'TType> =
     member _.TypeName = nameof<'TType>
 ```
@@ -228,16 +229,16 @@ F # 5,0, yerleşik 3B ve 4D dizi türlerinde sabit bir dizinle Dilimleme desteğ
 Bunu göstermek için aşağıdaki 3B diziyi göz önünde bulundurun:
 
 *z = 0*
-|x\y|0|1|
-|---|-|-|
-|**0**|0|1|
-|**1**|2|3|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
 
 *z = 1*
-|x\y|0|1|
-|---|-|-|
-|**0**|4|5|
-|**1**|6|7|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
 
 Dilimi diziden ayıklamak istediğinizde ne olacak `[| 4; 5 |]` ? Bu artık çok basittir!
 
@@ -258,6 +259,23 @@ for z in 0..dim-1 do
 // Now let's get the [4;5] slice!
 m.[*, 0, 1]
 ```
+
+## <a name="f-quotations-improvements"></a>F # tırnak geliştirmeleri
+
+F # [kod teklifleri](../language-reference/code-quotations.md) artık tür kısıtlaması bilgilerini tutma özelliğine sahiptir. Aşağıdaki örneği inceleyin:
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+İşlev tarafından oluşturulan kısıtlama `inline` , kod kullanımı içinde tutulur. `negate`İşlevin alıntı yapılabilir formu artık değerlendirilebilirler.
 
 ## <a name="applicative-computation-expressions"></a>Uygulama hesaplama Ifadeleri
 

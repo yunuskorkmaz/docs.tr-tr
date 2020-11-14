@@ -2,12 +2,12 @@
 title: 'İçeri Aktarma Bildirimleri: open Anahtar Sözcüğü'
 description: 'F # içeri aktarma bildirimleri hakkında bilgi edinin ve öğelerin tam nitelikli bir ad kullanmadan başvurdukları bir modül veya ad alanı belirtmeleri hakkında bilgi edinin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 6420df071f86159c44606c2710331d5f587023cc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: ab208c53809e120bc216c8f8b4d04a322d67cf2f
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557613"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557187"
 ---
 # <a name="import-declarations-the-open-keyword"></a>İçeri aktarma bildirimleri: `open` anahtar sözcüğü
 
@@ -17,6 +17,7 @@ ms.locfileid: "88557613"
 
 ```fsharp
 open module-or-namespace-name
+open type type-name
 ```
 
 ## <a name="remarks"></a>Açıklamalar
@@ -43,11 +44,36 @@ printfn "%A" empty
 
 Bu nedenle, ya da gibi özdeş adlara sahip üyeler içeren veya gibi modülleri veya ad alanlarını açtığınızda dikkatli olun `List` `Seq` ; bunun yerine nitelikli adları kullanmayı göz önünde bulundurun. Kodun içeri aktarma bildirimlerinin sırasına bağlı olduğu herhangi bir durumu kullanmaktan kaçının.
 
+## <a name="open-type-declarations"></a>Açık tür bildirimleri
+
+F # `open` şöyle bir türde destekler:
+
+```fsharp
+open type System.Math
+PI
+```
+
+Bu, türdeki tüm erişilebilir statik alanları ve üyeleri kullanıma sunar.
+
+`open`Statik üyeleri açığa çıkarmak için F # tanımlı [kaydı](records.md) ve [ayrılmış birleşim](discriminated-unions.md) türlerini de kullanabilirsiniz. Ayırt edici birleşimler söz konusu olduğunda, birleşim durumlarını da kullanıma sunabilirsiniz. Bu işlem, açmak istemediğiniz bir modülün içinde bildirildiği bir türdeki birleşim çalışmalarına erişmek için yararlı olabilir, örneğin:
+
+```fsharp
+module M =
+    type DU = A | B | C
+
+    let someOtherFunction x = x + 1
+
+// Open only the type inside the module
+open type M.DU
+
+printfn "%A" A
+```
+
 ## <a name="namespaces-that-are-open-by-default"></a>Varsayılan olarak açık olan ad alanları
 
 Bazı ad alanları, F # kodunda açık bir içeri aktarma bildirimine gerek kalmadan örtük olarak açıldıkları sıklıkla kullanılır. Aşağıdaki tabloda varsayılan olarak açık olan ad alanları gösterilmektedir.
 
-|Ad Alanı|Açıklama|
+|Ad Alanı|Description|
 |---------|-----------|
 |`FSharp.Core`|Ve gibi yerleşik türler için temel F # tür tanımlarını içerir `int` `float` .|
 |`FSharp.Core.Operators`|Ve gibi temel aritmetik işlemleri içerir `+` `*` .|

@@ -4,12 +4,12 @@ description: Linux 'ta .NET yükleme desteği olan Linux dağıtımları hakkın
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 898def653811007438184b187fc71ab013a44210
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 6354ef6f0f9af2126312683893d6705b3b4c70f4
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506733"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594527"
 ---
 # <a name="install-net-on-linux"></a>Linux 'ta .NET 'i yükler
 
@@ -133,7 +133,7 @@ Aşağıdaki tabloda, hem RHEL 7 hem de RHEL 8 üzerinde şu anda desteklenen .N
 | RHEL                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [8](linux-rhel.md#rhel-8-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ✔️ [7](linux-rhel.md#rhel-7-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ✔️ [7](linux-rhel.md#rhel-7--net-50) | ✔️ 2,1        | ✔️ [3,1](linux-rhel.md#rhel-7--net-core-31)        | ✔️ [5,0](linux-rhel.md#rhel-7--net-50) |
 
 Daha fazla bilgi için bkz. [RHEL 'de .net 'ı yükler](linux-rhel.md).
 

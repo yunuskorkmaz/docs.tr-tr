@@ -2,12 +2,12 @@
 title: Arabirimler
 description: 'F # arabirimlerinin, diğer sınıfların uygulayan ilgili üye kümelerini nasıl belirttireceğinizi öğrenin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 36272b52fcff83e8e8a54ccc4e6ecd1252a91819
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0cef2932045dae401f5aa069107815543457ca4a
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558133"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557057"
 ---
 # <a name="interfaces"></a>Arabirimler
 
@@ -100,6 +100,67 @@ Nesne ifadeleri, arabirim uygulamak için kısa bir yol sağlar. Adlandırılmı
 Arabirimler, bir veya daha fazla taban arabiriminden devralınabilir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
+
+## <a name="implementing-interfaces-with-default-implementations"></a>Varsayılan uygulamalarla arabirimleri uygulama
+
+C#, varsayılan uygulamalarla arabirim tanımlamayı destekler, örneğin:
+
+```csharp
+using System;
+
+namespace CSharp
+{
+    public interface MyDim
+    {
+        public int Z => 0;
+    }
+}
+```
+
+Bunlar F # ' dan doğrudan tüketilebilir:
+
+```fsharp
+open CSharp
+
+// You can implement the interface via a class
+type MyType() =
+    member _.M() = ()
+
+    interface MyDim
+
+let md = MyType() :> MyDim
+printfn $"DIM from C#: %d{md.Z}"
+
+// You can also implement it via an object expression
+let md' = { new MyDim }
+printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
+```
+
+`override`Herhangi bir sanal üyeyi geçersiz kılmak gibi, ile varsayılan bir uygulamayı geçersiz kılabilirsiniz.
+
+Varsayılan bir uygulamasına sahip olmayan bir arabirimdeki tüm üyelerin açıkça uygulanması gerekir.
+
+## <a name="implementing-the-same-interface-at-different-generic-instantiations"></a>Farklı genel örneklerde aynı arabirimi uygulama
+
+F #, farklı genel örneklerde aynı arabirimi aynı şekilde uygulamayı destekler:
+
+```fsharp
+type IA<'T> =
+    abstract member Get : unit -> 'T
+
+type MyClass() =
+    interface IA<int> with
+        member x.Get() = 1
+    interface IA<string> with
+        member x.Get() = "hello"
+
+let mc = MyClass()
+let iaInt = mc :> IA<int>
+let iaString = mc :> IA<string>
+
+iaInt.Get() // 1
+iaString.Get() // "hello"
+```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

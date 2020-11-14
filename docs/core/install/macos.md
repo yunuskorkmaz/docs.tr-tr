@@ -4,12 +4,12 @@ description: .NET yükleyebileceğiniz macOS sürümleri hakkında bilgi edinin.
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: c5b98767388937ba1e06b0e856a9a923d4a18b3c
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 983c5d2c04b87759b898f449bc092161b03c8ace
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506785"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594462"
 ---
 # <a name="install-net-on-macos"></a>MacOS 'ta .NET 'i yükler
 
@@ -181,7 +181,7 @@ Visual Studio Code, Visual Studio gibi otomatikleştirilmiş bir .NET yükleyici
 
 [DotNet yükleme betikleri](../tools/dotnet-install-script.md) , çalışma zamanının Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET 5,0 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Anahtarı belirterek belirli bir sürümü seçebilirsiniz `current` . `runtime`Çalışma zamanı yüklemek için anahtarı ekleyin. Aksi halde, komut dosyası [SDK 'yı](./windows.md)yüklüyor.
+Komut dosyası, .NET 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Anahtarı belirterek belirli bir sürümü seçebilirsiniz `current` . `runtime`Çalışma zamanı yüklemek için anahtarı ekleyin. Aksi halde, komut dosyası [SDK 'yı](./windows.md)yüklüyor.
 
 ```bash
 ./dotnet-install.sh --channel 5.0 --runtime aspnetcore

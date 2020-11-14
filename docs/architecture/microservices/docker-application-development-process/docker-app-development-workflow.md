@@ -2,12 +2,12 @@
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 04b59a6c30b4fb8f34fe1d0e5cd5328ac77ecb4e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1ae4e3cda71676caeab849a92207477652050e25
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172560"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594599"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -77,7 +77,7 @@ Derlemek istediğiniz her özel görüntü için bir Dockerfile gerekir; Ayrıca
 
 Dockerfile, uygulamanızın veya hizmetinizin kök klasörüne yerleştirilir. Bu, Docker 'a uygulamanızı veya hizmetinizi bir kapsayıcıda ayarlamayı ve çalıştırmayı söyleyen komutları içerir. Kodda el ile Dockerfile oluşturabilir ve bunları .NET bağımlılıklarınızla birlikte projenize ekleyebilirsiniz.
 
-Visual Studio ve Docker Araçları ile bu görev yalnızca birkaç fare tıklamasını gerektirir. Visual Studio 2019 ' de yeni bir proje oluşturduğunuzda, Şekil 5-3 ' de gösterildiği gibi **Docker desteğini etkinleştir**adlı bir seçenek vardır.
+Visual Studio ve Docker Araçları ile bu görev yalnızca birkaç fare tıklamasını gerektirir. Visual Studio 2019 ' de yeni bir proje oluşturduğunuzda, Şekil 5-3 ' de gösterildiği gibi **Docker desteğini etkinleştir** adlı bir seçenek vardır.
 
 ![Docker desteğini etkinleştir onay kutusunu gösteren ekran görüntüsü.](./media/docker-app-development-workflow/enable-docker-support-check-box.png)
 
@@ -91,7 +91,7 @@ Ayrıca, Şekil 5-4 ' de gösterildiği gibi, mevcut bir ASP.NET Core Web uygula
 
 Bu eylem, gerekli yapılandırmayla projeye bir *Dockerfile* ekler ve yalnızca ASP.NET Core projelerinde kullanılabilir.
 
-Benzer bir şekilde, Visual Studio `docker-compose.yml` tüm çözüm için **> kapsayıcı Orchestrator desteği ekle**seçeneğine sahip bir dosya ekleyebilir... 4. adımda bu seçeneği daha ayrıntılı bir şekilde araştıracağız.
+Benzer bir şekilde, Visual Studio `docker-compose.yml` tüm çözüm için **> kapsayıcı Orchestrator desteği ekle** seçeneğine sahip bir dosya ekleyebilir... 4. adımda bu seçeneği daha ayrıntılı bir şekilde araştıracağız.
 
 ### <a name="using-an-existing-official-net-docker-image"></a>Mevcut bir resmi .NET Docker görüntüsünü kullanma
 
@@ -210,7 +210,7 @@ Ayrıntılar, satır satır:
 
 - **Satır #2:** Görüntüde **/App** dizinini oluşturun.
 
-- **Satır #3:** **80**numaralı bağlantı noktasını kullanıma sunun.
+- **Satır #3:** **80** numaralı bağlantı noktasını kullanıma sunun.
 
 - **Satır #5:** Oluşturma/yayımlama için "büyük" görüntüyle yeni bir aşama başlatın. Başvuru için **derlemeyi** çağırın.
 
@@ -230,9 +230,9 @@ Ayrıntılar, satır satır:
 
 - **Satır #23:** Projeyi (ve bağımlılıkları) ve çıktıyı görüntüdeki **/App** dizinine yayımlayın.
 
-- **Satır #25:** **Temel** 'den devam eden yeni bir aşama başlatın ve **nihai**çağrı yapın.
+- **Satır #25:** **Temel** 'den devam eden yeni bir aşama başlatın ve **nihai** çağrı yapın.
 
-- **Satır #26:** Geçerli dizini **/App**olarak değiştirin.
+- **Satır #26:** Geçerli dizini **/App** olarak değiştirin.
 
 - **Satır #27:** **/App** dizinini aşama **Yayımla** ' dan geçerli dizine kopyalayın.
 
@@ -264,7 +264,7 @@ Tüm çözüm için paketleri geri yükler, ancak yeniden geçerli stratejiyle 1
 
 Ancak, `dotnet restore` yalnızca klasörde tek bir proje veya çözüm dosyası varsa çalışır, bu nedenle bu, çok fazla ayrıntıya ulaşmadan bu bir bit daha karmaşıktır ve bunu çözmek için bir yoldur:
 
-1. Aşağıdaki satırları **. dockerıgnore**öğesine ekleyin:
+1. Aşağıdaki satırları **. dockerıgnore** öğesine ekleyin:
 
    - `*.sln`, ana klasör ağacındaki tüm çözüm dosyalarını yoksaymak için
 
@@ -290,7 +290,7 @@ Elde edilen dosya bundan sonra:
 11
 12  FROM base AS final
 13  WORKDIR /app
-14  COPY --from=publish /app
+14  COPY --from=publish /app .
 15  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
@@ -336,7 +336,7 @@ Bir uygulama birden çok kapsayıcıyla yapıldığında (yani çok kapsayıcıl
 
 ### <a name="creating-docker-images-with-visual-studio"></a>Visual Studio ile Docker görüntüleri oluşturma
 
-Docker desteğiyle bir proje oluşturmak için Visual Studio kullandığınızda, açıkça bir görüntü oluşturmazsınız. Bunun yerine, dockerte veya hizmeti çalıştırmak için **F5** tuşuna bastığınızda (veya **CTRL + F5**), görüntü sizin için oluşturulur. Bu adım, Visual Studio 'da otomatiktir ve bunun gerçekleşmediğini görmezsiniz, ancak nelerin altında olduğunu bilmeniz önemlidir.
+Docker desteğiyle bir proje oluşturmak için Visual Studio kullandığınızda, açıkça bir görüntü oluşturmazsınız. Bunun yerine, dockerte veya hizmeti çalıştırmak için **F5** tuşuna bastığınızda (veya **CTRL + F5** ), görüntü sizin için oluşturulur. Bu adım, Visual Studio 'da otomatiktir ve bunun gerçekleşmediğini görmezsiniz, ancak nelerin altında olduğunu bilmeniz önemlidir.
 
 ![İsteğe bağlı 4. adım için görüntü.](./media/docker-app-development-workflow/step-4-define-services-docker-compose-yml.png)
 

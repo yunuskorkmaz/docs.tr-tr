@@ -2,16 +2,16 @@
 title: Kod Tırnak İşaretleri
 description: 'Programlama yoluyla F # kod ifadeleri oluşturup bunlarla çalışmanıza olanak tanıyan bir dil özelliği olan F # kod teklifleri hakkında bilgi edinin.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 070e127397a5da7d70281d08ef7cafdb9b4f4fe5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc37fdbd6cd29e5ee94e5c0186dfe2bfeb666f32
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558341"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557200"
 ---
 # <a name="code-quotations"></a>Kod teklifleri
 
-Bu makalede, programlama yoluyla F # kod ifadelerini oluşturup birlikte çalışmanıza olanak tanıyan bir dil özelliği olan *kod teklifleri*açıklanmaktadır. Bu özellik, F # kodunu temsil eden bir soyut sözdizimi ağacı oluşturmanıza olanak sağlar. Soyut sözdizimi ağacı, uygulamanızın gereksinimlerine göre çapraz ve işlenebilir. Örneğin, ağacı kullanarak F # kodu oluşturabilir veya başka bir dilde kod oluşturabilirsiniz.
+Bu makalede, programlama yoluyla F # kod ifadelerini oluşturup birlikte çalışmanıza olanak tanıyan bir dil özelliği olan *kod teklifleri* açıklanmaktadır. Bu özellik, F # kodunu temsil eden bir soyut sözdizimi ağacı oluşturmanıza olanak sağlar. Soyut sözdizimi ağacı, uygulamanızın gereksinimlerine göre çapraz ve işlenebilir. Örneğin, ağacı kullanarak F # kodu oluşturabilir veya başka bir dilde kod oluşturabilirsiniz.
 
 ## <a name="quoted-expressions"></a>Tırnak işareti Ifadesi
 
@@ -38,6 +38,21 @@ Ancak aşağıdaki ifadeler geçerlidir.
 
 F # tekliflerini değerlendirmek için [f # teklif Değerlendiricisi](https://github.com/fsprojects/FSharp.Quotations.Evaluator)kullanmanız gerekir. F # ifade nesnelerini değerlendirmek ve yürütmek için destek sağlar.
 
+F # teklifleri de tür kısıtlaması bilgilerini korur. Aşağıdaki örneği inceleyin:
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+İşlev tarafından oluşturulan kısıtlama `inline` , kod kullanımı içinde tutulur. `negate`İşlevin alıntı yapılabilir formu artık değerlendirilebilirler.
+
 ## <a name="expr-type"></a>Expr türü
 
 Türün bir örneği `Expr` bir F # ifadesini temsil eder. Hem genel hem de genel olmayan `Expr` türler F # kitaplığı belgelerinde belgelenmiştir. Daha fazla bilgi için bkz. [FSharp. Quotations ad alanı](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations.html) ve [Quotations. Expr sınıfı](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html).
@@ -58,7 +73,7 @@ Splicing, sabit kod tekliflerini programlı bir şekilde veya başka bir kod tek
 
 ## <a name="example"></a>Örnek
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
 Aşağıdaki örnek, F # kodunu bir ifade nesnesine koymak için kod tekliflerinin kullanımını gösterir ve ardından ifadeyi temsil eden F # kodunu yazdırır. Kolay bir `println` `print` biçimde bir F # ifade nesnesi (türünde) görüntüleyen özyinelemeli bir işlev içeren bir işlev tanımlanmıştır `Expr` . [FSharp. Quotations. Patterns](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-patternsmodule.html) ve [FSharp. Quotations. DerivedPatterns](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-derivedpatternsmodule.html) modüllerinde ifade nesnelerini çözümlemek için kullanılabilen çeşitli etkin desenler vardır. Bu örnek, bir F # ifadesinde görünebilen tüm olası desenleri içermez. Tüm tanınmayan desenler joker karakter düzeniyle () bir eşleşme `_` tetikleyip, türü kullanılarak işlenir ve `ToString` Bu da tür üzerinde, `Expr` eşleştirme ifadenizde eklemek üzere etkin olan kalıbı bilmenizi sağlar.
 
@@ -66,7 +81,7 @@ Aşağıdaki örnek, F # kodunu bir ifade nesnesine koymak için kod tekliflerin
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
 
-### <a name="output"></a>Çıktı
+### <a name="output"></a>Çıkış
 
 ```fsharp
 fun (x:System.Int32) -> x + 1
@@ -76,7 +91,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 
 ## <a name="example"></a>Örnek
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
 Ayrıca, daha az etkin desenle ifade ağaçlarına çapraz geçiş yapmak için [ExprShape modülünde](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-exprshapemodule.html) üç etkin deseni de kullanabilirsiniz. Bu etkin desenler, bir ağaca geçiş yapmak istediğinizde yararlı olabilir ancak düğümlerin çoğunda tüm bilgilere ihtiyacınız yoktur. Bu desenleri kullandığınızda herhangi bir F # ifadesi şu üç desenden biriyle eşleşir: `ShapeVar` ifade bir değişkense, `ShapeLambda` ifade bir lambda ifadesiyse veya `ShapeCombination` ifade başka bir şeydir. Önceki kod örneğinde olduğu gibi etkin desenleri kullanarak bir ifade ağacında çapraz geçiş yaparsanız, tüm olası F # ifade türlerini işlemek için çok daha fazla desen kullanmanız gerekir ve kodunuz daha karmaşık olacaktır. Daha fazla bilgi için bkz. [ExprShape. ShapeVar&#124;ShapeLambda&#124;Shapekombinasyon etkin model](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-exprshapemodule.html#(%20|ShapeVar|ShapeLambda|ShapeCombination|%20)).
 
@@ -88,7 +103,7 @@ Diğer etkin model dallarındaki kod yalnızca aynı ifade ağacını yeniden ol
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
 
-### <a name="output"></a>Çıktı
+### <a name="output"></a>Çıkış
 
 ```fsharp
 1 + Module1.add(2,Module1.add(3,4))

@@ -43,7 +43,7 @@ items:
             href: ../core/install/templates.md
           - name: macOS Noter Onayı sorunları
             href: ../core/install/macos-notarization-issues.md
-          - name: .NET Core sürümlerini denetleme
+          - name: .NET sürümlerini denetleme
             href: ../core/install/how-to-detect-installed-versions.md
           - name: Yerelleştirilmiş IntelliSense’i yükleme
             href: ../core/install/localized-intellisense.md
@@ -1412,6 +1412,8 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
   - name: Çalışma zamanı kitaplıkları
     items:
+      - name: Genel Bakış
+        href: ../standard/runtime-libraries-overview.md
       - name: 'Sayıları, tarihleri ve diğer türleri biçimlendirme'
         items:
           - name: Genel Bakış
@@ -1446,7 +1448,7 @@ items:
                 href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
               - name: Tarihleri Gregoryen olmayan takvimlerde görüntüleme
                 href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
-      - name: Dizeler
+      - name: Dizelerle çalışma
         items:
           - name: .NET içinde karakter kodlaması
             href: ../standard/base-types/character-encoding-introduction.md
@@ -1481,109 +1483,71 @@ items:
                 href: ../standard/base-types/stringbuilder.md
               - name: 'Nasıl yapılır: Temel dize işlemeleri gerçekleştirme'
                 href: ../standard/base-types/basic-manipulations.md
-          - name: .NET içinde normal ifadeler
+          - name: Dizeleri ayrıştırma (dönüştürme)
             items:
               - name: Genel Bakış
-                href: ../standard/base-types/regular-expressions.md
-                displayName: regular expressions
-              - name: Dil başvurusu
-                items:
-                  - name: Genel Bakış
-                    href: ../standard/base-types/regular-expression-language-quick-reference.md
-                  - name: Karakter kaçışları
-                    href: ../standard/base-types/character-escapes-in-regular-expressions.md
-                  - name: Karakter sınıfları
-                    href: ../standard/base-types/character-classes-in-regular-expressions.md
-                  - name: Tutturucular
-                    href: ../standard/base-types/anchors-in-regular-expressions.md
-                  - name: Gruplandırma yapıları
-                    href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
-                  - name: Miktar Niceleyiciler
-                    href: ../standard/base-types/quantifiers-in-regular-expressions.md
-                  - name: Geri başvuru yapıları
-                    href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
-                  - name: Değişim yapıları
-                    href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
-                  - name: Değişimler
-                    href: ../standard/base-types/substitutions-in-regular-expressions.md
-                  - name: Normal ifade seçenekleri
-                    href: ../standard/base-types/regular-expression-options.md
-                  - name: Çeşitli yapılar
-                    href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
-              - name: Normal ifadeler için en iyi deneyimler
-                href: ../standard/base-types/best-practices.md
-              - name: Normal ifade nesne modeli
-                href: ../standard/base-types/the-regular-expression-object-model.md
-              - name: Normal ifade davranışı
-                items:
-                  - name: Genel Bakış
-                    href: ../standard/base-types/details-of-regular-expression-behavior.md
-                  - name: Geri Dönüş
-                    href: ../standard/base-types/backtracking-in-regular-expressions.md
-                  - name: Derleme ve yeniden kullanma
-                    href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
-                  - name: İş parçacığı güvenliği
-                    href: ../standard/base-types/thread-safety-in-regular-expressions.md
-              - name: Örnekler
-                items:
-                  - name: HREF’ler için tarama
-                    href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
-                  - name: Tarih biçimlerini değiştirme
-                    href: ../standard/base-types/regular-expression-example-changing-date-formats.md
-                  - name: Bir URL’den protokol ve bağlantı noktası numarası çıkarma
-                    href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
-                  - name: Dizeden geçersiz karakterleri çıkartma
-                    href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
-                  - name: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
-                    href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
-      - name: Dizeleri ayrıştırma (dönüştürme)
+                href: ../standard/base-types/parsing-strings.md
+              - name: Sayısal dizeleri ayrıştırma
+                href: ../standard/base-types/parsing-numeric.md
+              - name: Tarih ve saat dizelerini ayrıştırma
+                href: ../standard/base-types/parsing-datetime.md
+              - name: Diğer dizeleri ayrıştırma
+                href: ../standard/base-types/parsing-other.md
+      - name: Normal ifadeler
         items:
           - name: Genel Bakış
-            href: ../standard/base-types/parsing-strings.md
-          - name: Sayısal dizeleri ayrıştırma
-            href: ../standard/base-types/parsing-numeric.md
-          - name: Tarih ve saat dizelerini ayrıştırma
-            href: ../standard/base-types/parsing-datetime.md
-          - name: Diğer dizeleri ayrıştırma
-            href: ../standard/base-types/parsing-other.md
-      - name: Bağımlılık ekleme
-        items:
-          - name: Genel Bakış
-            href: ../core/extensions/dependency-injection.md
-            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
-          - name: Bağımlılık eklemeyi kullanma
-            href: ../core/extensions/dependency-injection-usage.md
-            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
-          - name: Bağımlılık ekleme yönergeleri
-            href: ../core/extensions/dependency-injection-guidelines.md
-            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
-      - name: Yapılandırma
-        items:
-          - name: Genel Bakış
-            href: ../core/extensions/configuration.md
-            displayName: 'configuration,config,configuration sources,config sources'
-          - name: Yapılandırma sağlayıcıları
-            href: ../core/extensions/configuration-providers.md
-            displayName: 'configuration providers,config providers'
-          - name: Özel yapılandırma sağlayıcısı uygulama
-            href: ../core/extensions/custom-configuration-provider.md
-            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
-          - name: Seçenekler deseni
-            href: ../core/extensions/options.md
-      - name: Günlüğe Kaydetme
-        items:
-          - name: Genel Bakış
-            href: ../core/extensions/logging.md
-          - name: Günlük sağlayıcıları
-            href: ../core/extensions/logging-providers.md
-          - name: Özel bir günlük sağlayıcısı uygulama
-            href: ../core/extensions/custom-logging-provider.md
-          - name: Yüksek performanslı günlük
-            href: ../core/extensions/high-performance-logging.md
-          - name: Konsol günlük biçimlendirme
-            href: ../core/extensions/console-log-formatter.md
-      - name: HostBuilder (genel konak)
-        href: ../core/extensions/generic-host.md
+            href: ../standard/base-types/regular-expressions.md
+            displayName: regular expressions
+          - name: Dil başvurusu
+            items:
+              - name: Genel Bakış
+                href: ../standard/base-types/regular-expression-language-quick-reference.md
+              - name: Karakter kaçışları
+                href: ../standard/base-types/character-escapes-in-regular-expressions.md
+              - name: Karakter sınıfları
+                href: ../standard/base-types/character-classes-in-regular-expressions.md
+              - name: Tutturucular
+                href: ../standard/base-types/anchors-in-regular-expressions.md
+              - name: Gruplandırma yapıları
+                href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
+              - name: Miktar Niceleyiciler
+                href: ../standard/base-types/quantifiers-in-regular-expressions.md
+              - name: Geri başvuru yapıları
+                href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
+              - name: Değişim yapıları
+                href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
+              - name: Değişimler
+                href: ../standard/base-types/substitutions-in-regular-expressions.md
+              - name: Normal ifade seçenekleri
+                href: ../standard/base-types/regular-expression-options.md
+              - name: Çeşitli yapılar
+                href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
+          - name: Normal ifadeler için en iyi deneyimler
+            href: ../standard/base-types/best-practices.md
+          - name: Normal ifade nesne modeli
+            href: ../standard/base-types/the-regular-expression-object-model.md
+          - name: Normal ifade davranışı
+            items:
+              - name: Genel Bakış
+                href: ../standard/base-types/details-of-regular-expression-behavior.md
+              - name: Geri Dönüş
+                href: ../standard/base-types/backtracking-in-regular-expressions.md
+              - name: Derleme ve yeniden kullanma
+                href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
+              - name: İş parçacığı güvenliği
+                href: ../standard/base-types/thread-safety-in-regular-expressions.md
+          - name: Örnekler
+            items:
+              - name: HREF’ler için tarama
+                href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
+              - name: Tarih biçimlerini değiştirme
+                href: ../standard/base-types/regular-expression-example-changing-date-formats.md
+              - name: Bir URL’den protokol ve bağlantı noktası numarası çıkarma
+                href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+              - name: Dizeden geçersiz karakterleri çıkartma
+                href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
+              - name: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
+                href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
       - name: Serileştirme
         items:
           - name: Genel Bakış
@@ -1753,6 +1717,44 @@ items:
             href: ../standard/io/memory-mapped-files.md
       - name: System.Console sınıfı
         href: ../standard/building-console-apps.md
+      - name: Bağımlılık ekleme
+        items:
+          - name: Genel Bakış
+            href: ../core/extensions/dependency-injection.md
+            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
+          - name: Bağımlılık eklemeyi kullanma
+            href: ../core/extensions/dependency-injection-usage.md
+            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
+          - name: Bağımlılık ekleme yönergeleri
+            href: ../core/extensions/dependency-injection-guidelines.md
+            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
+      - name: Yapılandırma
+        items:
+          - name: Genel Bakış
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: Yapılandırma sağlayıcıları
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: Özel yapılandırma sağlayıcısı uygulama
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
+          - name: Seçenekler deseni
+            href: ../core/extensions/options.md
+      - name: Günlüğe Kaydetme
+        items:
+          - name: Genel Bakış
+            href: ../core/extensions/logging.md
+          - name: Günlük sağlayıcıları
+            href: ../core/extensions/logging-providers.md
+          - name: Özel bir günlük sağlayıcısı uygulama
+            href: ../core/extensions/custom-logging-provider.md
+          - name: Yüksek performanslı günlük
+            href: ../core/extensions/high-performance-logging.md
+          - name: Konsol günlük biçimlendirme
+            href: ../core/extensions/console-log-formatter.md
+      - name: HostBuilder (genel konak)
+        href: ../core/extensions/generic-host.md
   - name: Veri erişimi
     items:
       - name: LINQ
