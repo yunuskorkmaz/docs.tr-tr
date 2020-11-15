@@ -1,13 +1,13 @@
 ---
 title: DotNet aracı install komutu
-description: DotNet aracı yükleme komutu, makinenizde belirtilen .NET Core aracını yükler.
+description: DotNet aracı yükleme komutu, makinenizde belirtilen .NET aracını yükler.
 ms.date: 02/14/2020
-ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 1dd870a8f91e557a2f59919682616aa8817fc070
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702819"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634330"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -15,7 +15,7 @@ ms.locfileid: "83702819"
 
 ## <a name="name"></a>Name
 
-`dotnet tool install`-Makinenizde belirtilen [.NET Core aracını](global-tools.md) yükleme.
+`dotnet tool install` -Makinenizde belirtilen [.NET aracını](global-tools.md) yükleme.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -40,7 +40,7 @@ dotnet tool install -h|--help
 
 ## <a name="description"></a>Açıklama
 
-Bu `dotnet tool install` komut, makinenizde .NET Core araçları yüklemenizi sağlayan bir yol sağlar. Komutunu kullanmak için aşağıdaki yükleme seçeneklerinden birini belirtin:
+Bu `dotnet tool install` komut, makinenizde .NET araçları yüklemenizi sağlayan bir yol sağlar. Komutunu kullanmak için aşağıdaki yükleme seçeneklerinden birini belirtin:
 
 * Genel bir aracı varsayılan konuma yüklemek için `--global` seçeneğini kullanın.
 * Bir genel aracı özel bir konuma yüklemek için `--tool-path` seçeneğini kullanın.
@@ -55,7 +55,7 @@ Veya seçeneğini belirttiğinizde, genel araçlar varsayılan olarak aşağıda
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-Yerel araçlar, geçerli dizinin altındaki bir *. config* dizinindeki *DotNet-Tools. JSON* dosyasına eklenir. Henüz bir bildirim dosyası yoksa, aşağıdaki komutu çalıştırarak oluşturun:
+Yerel araçlar, geçerli dizinin altındaki bir *. config* dizinindeki *dotnet-tools.js* dosyasına eklenir. Henüz bir bildirim dosyası yoksa, aşağıdaki komutu çalıştırarak oluşturun:
 
 ```dotnetcli
 dotnet new tool-manifest
@@ -67,7 +67,7 @@ Daha fazla bilgi için bkz. [yerel araç yüklemesi](global-tools.md#install-a-l
 
 - **`PACKAGE_NAME`**
 
-  Yüklenecek .NET Core aracını içeren NuGet paketinin adı/KIMLIĞI.
+  Yüklenecek .NET aracını içeren NuGet paketinin adı/KIMLIĞI.
 
 ## <a name="options"></a>Seçenekler
 
@@ -77,11 +77,11 @@ Daha fazla bilgi için bkz. [yerel araç yüklemesi](global-tools.md#install-a-l
 
 - **`configfile <FILE>`**
 
-  Kullanılacak NuGet yapılandırma (*NuGet. config*) dosyası.
+  Kullanılacak NuGet yapılandırma ( *nuget.config* ) dosyası.
 
 - **`framework <FRAMEWORK>`**
 
-  Aracının yükleneceği [hedef çerçeveyi](../../standard/frameworks.md) belirtir. .NET Core SDK, varsayılan olarak en uygun hedef Framework 'ü seçmaya çalışır.
+  Aracının yükleneceği [hedef çerçeveyi](../../standard/frameworks.md) belirtir. .NET SDK varsayılan olarak en uygun hedef çerçeveyi seçmenizi dener.
 
 - **`-g|--global`**
 
@@ -127,6 +127,6 @@ Daha fazla bilgi için bkz. [yerel araç yüklemesi](global-tools.md#install-a-l
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core araçları](global-tools.md)
-- [Öğretici: .NET Core CLI kullanarak .NET Core küresel aracı 'nı yükleyip kullanın](global-tools-how-to-use.md)
-- [Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın](local-tools-how-to-use.md)
+- [.NET araçları](global-tools.md)
+- [Öğretici: .NET CLı kullanarak .NET genel aracını yükleyip kullanma](global-tools-how-to-use.md)
+- [Öğretici: .NET CLı kullanarak .NET yerel aracını yükleyip kullanma](local-tools-how-to-use.md)

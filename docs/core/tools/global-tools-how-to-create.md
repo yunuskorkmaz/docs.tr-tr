@@ -1,20 +1,20 @@
 ---
-title: 'Öğretici: .NET Core aracı oluşturma'
-description: .NET Core aracı oluşturmayı öğrenin. Araç, .NET Core CLI kullanılarak yüklenen bir konsol uygulamasıdır.
+title: 'Öğretici: .NET aracı oluşturma'
+description: .NET aracı oluşturmayı öğrenin. Araç, .NET CLı kullanılarak yüklenen bir konsol uygulamasıdır.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: c1c17368d8efdece73f5312899553bacf884cfb3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062788"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633784"
 ---
-# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI kullanarak bir .NET Core aracı oluşturma
+# <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>Öğretici: .NET CLı kullanarak .NET aracı oluşturma
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-Bu öğreticide bir .NET Core aracı oluşturma ve paketleme öğretilir. .NET Core CLI, diğer kullanıcıların yükleyebileceği ve çalıştırabileceği bir araç olarak konsol uygulaması oluşturmanızı sağlar. .NET Core araçları, .NET Core CLI yüklenen NuGet paketlerdir. Araçlar hakkında daha fazla bilgi için bkz. [.NET Core araçlarına genel bakış](global-tools.md).
+Bu öğreticide bir .NET aracı oluşturma ve paketleme hakkında öğretilir. .NET CLı, diğer kullanıcıların yükleyebileceği ve çalıştırabileceği bir araç olarak konsol uygulaması oluşturmanıza imkan tanır. .NET araçları, .NET CLı 'den yüklenen NuGet paketlerdir. Araçlar hakkında daha fazla bilgi için bkz. [.net araçlarına genel bakış](global-tools.md).
 
 Oluşturacağınız araç, girdi olarak bir ileti alıp iletiyi bir robot görüntüsünü oluşturan metin satırlarıyla birlikte görüntüleyen bir konsol uygulamasıdır.
 
@@ -30,7 +30,7 @@ Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve 
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
-1. Bir komut istemi açın ve *Depo*adlı bir klasör oluşturun.
+1. Bir komut istemi açın ve *Depo* adlı bir klasör oluşturun.
 
 1. *Depo* klasörüne gidin ve şu komutu girin:
 
@@ -132,7 +132,7 @@ Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve 
 
 1. Yaptığınız değişiklikleri kaydedin.
 
-## <a name="test-the-application"></a>Uygulamayı test etme
+## <a name="test-the-application"></a>Uygulamayı test edin
 
 Projeyi çalıştırın ve çıktıyı görüntüleyin. Farklı sonuçları görmek için komut satırında bu çeşitlemeleri deneyin:
 
@@ -156,9 +156,9 @@ Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proj
    <PackageOutputPath>./nupkg</PackageOutputPath>
    ```
 
-   `<ToolCommandName>`, yüklendikten sonra aracı çağıracağı komutu belirten isteğe bağlı bir öğedir. Bu öğe sağlanmazsa, araç için komut adı *. csproj* uzantısı olmayan proje dosyası adıdır.
+   `<ToolCommandName>` , yüklendikten sonra aracı çağıracağı komutu belirten isteğe bağlı bir öğedir. Bu öğe sağlanmazsa, araç için komut adı *. csproj* uzantısı olmayan proje dosyası adıdır.
 
-   `<PackageOutputPath>`, NuGet paketinin nerede üretileceği belirleyen isteğe bağlı bir öğedir. NuGet paketi, .NET Core CLI aracınızı yüklemek için kullandığı şeydir.
+   `<PackageOutputPath>` , NuGet paketinin nerede üretileceği belirleyen isteğe bağlı bir öğedir. NuGet paketi, .NET Core CLI aracınızı yüklemek için kullandığı şeydir.
 
    Proje dosyası artık aşağıdaki örneğe benzer şekilde görünür:
 
@@ -191,7 +191,7 @@ Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proj
 
 ## <a name="troubleshoot"></a>Sorun giderme
 
-Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
+Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET araç kullanım sorunlarını giderme](troubleshoot-usage-issues.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

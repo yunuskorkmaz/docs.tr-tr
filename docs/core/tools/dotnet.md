@@ -2,12 +2,12 @@
 title: DotNet komutu
 description: DotNet komutu (.NET CLı için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 11/11/2020
-ms.openlocfilehash: a2b4b026e7c89536a6a7eaf69b31e3f62bf5adfc
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 7a0c8f2eb7ab407bd725db56cbf31da4689970e4
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556835"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634031"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -48,7 +48,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 `--roll-forward` , .NET Core 3. x sürümünden bu yana kullanılabilir. `--roll-forward-on-no-candidate-fx`.NET Core 2. x için kullanın.
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet`Komutun iki işlevi vardır:
 
@@ -239,7 +239,7 @@ Her araç hakkında daha fazla bilgi için, yazın `dotnet <tool-name> --help` .
 
 ## <a name="examples"></a>Örnekler
 
-Yeni bir .NET Core konsol uygulaması oluşturun:
+Yeni bir .NET konsol uygulaması oluşturun:
 
 ```dotnetcli
 dotnet new console

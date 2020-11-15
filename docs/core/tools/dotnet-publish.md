@@ -1,19 +1,19 @@
 ---
 title: dotnet publish komutu
-description: Dotnet publish komutu bir dizine .NET Core projesi veya çözümü yayımlar.
-ms.date: 02/24/2020
-ms.openlocfilehash: e35a0671cb964e7d9b68ed5bbe261045038229aa
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+description: Dotnet publish komutu bir dizine .NET projesi veya çözümü yayımlar.
+ms.date: 11/11/2020
+ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440575"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634435"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
 `dotnet publish` -Uygulamayı ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
 
@@ -41,7 +41,7 @@ dotnet publish -h|--help
 - Bir dosyada, uygulamanın beklediği paylaşılan çalışma zamanını belirten bir *.runtimeconfig.js* ve çalışma zamanına yönelik diğer yapılandırma seçenekleri (örneğin, çöp toplama türü).
 - NuGet önbelleğinden çıkış klasörüne kopyalanmış olan uygulamanın bağımlılıkları.
 
-`dotnet publish`Komutun çıktısı, yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtıma yöneliktir. Uygulamayı dağıtıma hazırlamak için tek resmi olarak desteklenen bir yoldur. Projenin belirttiği dağıtımın türüne bağlı olarak, barındırma sisteminde .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir. Daha fazla bilgi için bkz. [.NET Core CLI .NET Core Apps yayımlama](../deploying/deploy-with-cli.md).
+`dotnet publish`Komutun çıktısı, yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtıma yöneliktir. Uygulamayı dağıtıma hazırlamak için tek resmi olarak desteklenen bir yoldur. Projenin belirttiği dağıtımın türüne bağlı olarak, barındırma sisteminde .NET paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir. Daha fazla bilgi için bkz. .net [CLI ile .NET uygulamalarını yayımlama](../deploying/deploy-with-cli.md).
 
 ### <a name="implicit-restore"></a>Örtük geri yükleme
 
@@ -53,7 +53,7 @@ dotnet publish -h|--help
 
 `dotnet publish`Komut, `-p` özellikleri ayarlama ve bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Örneğin, şu biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>` .
 
-Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örneğin:
+Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örnek:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile
@@ -165,7 +165,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 - **`--self-contained [true|false]`**
 
-  .NET Core çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez. Varsayılan olarak, `true` bir çalışma zamanı tanımlayıcısı belirtilirse ve proje yürütülebilir bir projem ise (kitaplık projesi değil). Daha fazla bilgi için bkz. [.NET Core uygulaması yayımlama](../deploying/index.md) ve [.NET Core CLI .NET Core uygulamaları](../deploying/deploy-with-cli.md)yayımlama.
+  .NET çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez. Varsayılan olarak, `true` bir çalışma zamanı tanımlayıcısı belirtilirse ve proje yürütülebilir bir projem ise (kitaplık projesi değil). Daha fazla bilgi için bkz. .net [uygulama yayımlama](../deploying/index.md) ve .net [CLI Ile .NET uygulamaları yayımlama](../deploying/deploy-with-cli.md).
 
   Bu seçenek veya belirtilmeden kullanılırsa, `true` `false` varsayılan olur `true` . Bu durumda, çözüm veya proje bağımsız değişkenini hemen sonra yerleştirmeyin `--self-contained` , çünkü `true` veya `false` Bu konumda beklenmez.
 
@@ -175,7 +175,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Uygulamayı belirli bir çalışma zamanı için yayımlar. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Daha fazla bilgi için bkz. [.NET Core uygulaması yayımlama](../deploying/index.md) ve [.NET Core CLI .NET Core uygulamaları](../deploying/deploy-with-cli.md)yayımlama.
+  Uygulamayı belirli bir çalışma zamanı için yayımlar. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). Daha fazla bilgi için bkz. .net [uygulama yayımlama](../deploying/index.md) ve .net [CLI Ile .NET uygulamaları yayımlama](../deploying/deploy-with-cli.md).
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -231,8 +231,8 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core uygulama yayımlamaya genel bakış](../deploying/index.md)
-- [.NET Core CLI .NET Core uygulamaları yayımlayın](../deploying/deploy-with-cli.md)
+- [.NET uygulama yayımlamaya genel bakış](../deploying/index.md)
+- [.Net CLı ile .NET uygulamaları yayımlama](../deploying/deploy-with-cli.md)
 - [Hedef çerçeveler](../../standard/frameworks.md)
 - [Çalışma Zamanı Tanımlayıcısı (RID) kataloğu](../rid-catalog.md)
 - [MacOS Catalina Notarle çalışma](../install/macos-notarization-issues.md)

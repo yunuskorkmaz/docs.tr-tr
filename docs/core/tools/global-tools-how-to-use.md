@@ -1,16 +1,16 @@
 ---
-title: "Öğretici: .NET Core küresel aracı 'nı yükleyip kullanma"
+title: "Öğretici: .NET küresel aracı 'nı yükleyip kullanma"
 description: .NET aracını genel araç olarak yüklemeyi ve kullanmayı öğrenin.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 28e34a4e5a0344e314c5d23228c1af5839db991c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 01b773516da92fb16fb0f67fc6617e0c70d17c9d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062775"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633901"
 ---
-# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI kullanarak .NET Core küresel aracı 'nı yükleyip kullanın
+# <a name="tutorial-install-and-use-a-net-global-tool-using-the-net-cli"></a>Öğretici: .NET CLı kullanarak .NET genel aracını yükleyip kullanma
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
@@ -28,9 +28,9 @@ Bu öğreticide, genel bir aracın nasıl yükleneceği ve kullanılacağı öğ
    dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
-   `--global`Parametresi, .NET Core CLI araç ikililerini otomatik olarak PATH ortam değişkenine eklenen varsayılan bir konuma yüklemesini söyler.
+   `--global`Parametresi, .net CLI 'nın araç ikililerini PATH ortam değişkenine otomatik olarak eklenen varsayılan bir konuma yüklemesini söyler.
 
-   `--add-source`Parametresi, .NET Core CLI NuGet paketleri için ek bir kaynak akışı olarak *./nupkg* dizinini geçici olarak kullanmasını söyler. Paketinize, Nuget.org sitesinde değil, yalnızca *./nupkg* dizininde bulunduğunuzdan emin olmak için benzersiz bir ad verirsiniz.
+   `--add-source`Parametresi, .net CLI 'nın, NuGet paketleri için ek bir kaynak akışı olarak *./nupkg* dizinini geçici olarak kullanmasını söyler. Paketinize, Nuget.org sitesinde değil, yalnızca *./nupkg* dizininde bulunduğunuzdan emin olmak için benzersiz bir ad verirsiniz.
 
    Çıktı, aracı ve yüklü sürümü çağırmak için kullanılan komutu gösterir:
 
@@ -70,7 +70,7 @@ Bu öğreticide, genel bir aracın nasıl yükleneceği ve kullanılacağı öğ
    dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
-   `--tool-path`Parametresi, .NET Core CLI araç ikililerini belirtilen konuma yüklemesini söyler. Dizin yoksa, oluşturulur. Bu dizin, PATH ortam değişkenine otomatik olarak eklenmez.
+   `--tool-path`Parametresi, .net CLI 'nın belirtilen konuma araç ikililerini yüklemesini söyler. Dizin yoksa, oluşturulur. Bu dizin, PATH ortam değişkenine otomatik olarak eklenmez.
 
    Çıktı, aracı ve yüklü sürümü çağırmak için kullanılan komutu gösterir:
 
@@ -109,7 +109,7 @@ Bu öğreticide, genel bir aracın nasıl yükleneceği ve kullanılacağı öğ
 
 ## <a name="troubleshoot"></a>Sorun giderme
 
-Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
+Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET araç kullanım sorunlarını giderme](troubleshoot-usage-issues.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

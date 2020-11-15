@@ -1,13 +1,13 @@
 ---
 title: DotNet Aracı güncelleştirme komutu
-description: DotNet Aracı güncelleştirme komutu makinenizde belirtilen .NET Core aracını güncelleştirir.
+description: DotNet Aracı güncelleştirme komutu makinenizde belirtilen .NET aracını güncelleştirir.
 ms.date: 07/08/2020
-ms.openlocfilehash: a212fbb40af68019c1bc9a63963d960292be6b08
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 18b153e53a6dbcb32e50ae4a7d06a1c2f53d1eb5
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308877"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634083"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -15,7 +15,7 @@ ms.locfileid: "86308877"
 
 ## <a name="name"></a>Name
 
-`dotnet tool update`-Makinenizde belirtilen [.NET Core aracını](global-tools.md) güncelleştirir.
+`dotnet tool update` -Makinenizde belirtilen [.NET aracını](global-tools.md) güncelleştirir.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -42,9 +42,9 @@ dotnet tool update <PACKAGE_ID> --local
 dotnet tool update -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
-Bu `dotnet tool update` komut, makinenizde .NET Core araçlarını paketin en son kararlı sürümüne güncelleştirmeniz için bir yol sağlar. Komut, bir aracı kaldırır ve etkin bir şekilde güncelleştiren bir araç yükler. Komutunu kullanmak için aşağıdaki seçeneklerden birini belirtin:
+Bu `dotnet tool update` komut, makinenizde .net araçlarını paketin en son kararlı sürümüne güncelleştirmeniz için bir yol sağlar. Komut, bir aracı kaldırır ve etkin bir şekilde güncelleştiren bir araç yükler. Komutunu kullanmak için aşağıdaki seçeneklerden birini belirtin:
 
 * Varsayılan konumda yüklü olan küresel bir aracı güncelleştirmek için, seçeneğini kullanın. `--global`
 * Özel bir konuma yüklenmiş olan küresel bir aracı güncelleştirmek için `--tool-path` seçeneğini kullanın.
@@ -56,7 +56,7 @@ Bu `dotnet tool update` komut, makinenizde .NET Core araçlarını paketin en so
 
 - **`PACKAGE_ID`**
 
-  Güncelleştirilecek .NET Core küresel aracını içeren NuGet paketinin adı/KIMLIĞI. [DotNet araç listesi](dotnet-tool-list.md) komutunu kullanarak paket adını bulabilirsiniz.
+  Güncelleştirilecek .NET küresel aracını içeren NuGet paketinin adı/KIMLIĞI. [DotNet araç listesi](dotnet-tool-list.md) komutunu kullanarak paket adını bulabilirsiniz.
 
 ## <a name="options"></a>Seçenekler
 
@@ -66,7 +66,7 @@ Bu `dotnet tool update` komut, makinenizde .NET Core araçlarını paketin en so
 
 - **`--configfile <FILE>`**
 
-  Kullanılacak NuGet yapılandırma (*nuget.config*) dosyası.
+  Kullanılacak NuGet yapılandırma ( *nuget.config* ) dosyası.
 
 - **`--disable-parallel`**
 
@@ -144,7 +144,7 @@ Bu `dotnet tool update` komut, makinenizde .NET Core araçlarını paketin en so
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core araçları](global-tools.md)
+- [.NET araçları](global-tools.md)
 - [Anlamsal sürüm oluşturma](https://semver.org)
-- [Öğretici: .NET Core CLI kullanarak .NET Core küresel aracı 'nı yükleyip kullanın](global-tools-how-to-use.md)
-- [Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın](local-tools-how-to-use.md)
+- [Öğretici: .NET CLı kullanarak .NET genel aracını yükleyip kullanma](global-tools-how-to-use.md)
+- [Öğretici: .NET CLı kullanarak .NET yerel aracını yükleyip kullanma](local-tools-how-to-use.md)

@@ -3,12 +3,12 @@ title: C# dil sürümü oluşturma-C# Kılavuzu
 description: C# dil sürümünün projenize göre nasıl belirlendiği ve bu seçimin arkasındaki nedenler hakkında bilgi edinin. Varsayılanı el ile nasıl geçersiz kılacağınızı öğrenin.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: 327a98da37b97830ac7f752a3621a92d8cb161e0
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495466"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634508"
 ---
 # <a name="c-language-versioning"></a>C# dil sürümü oluşturma
 
@@ -31,11 +31,11 @@ Derleyici, bu kurallara göre bir varsayılan değer belirler:
 
 | Hedef çerçeve | sürüm | C# dil sürümü varsayılanı |
 |------------------|---------|-----------------------------|
-| .NET             | sürümünün     | C# 9,0                      |
+| .NET             | sürümünün     | C# 9.0                      |
 | .NET Core        | 3.x     | C# 8.0                      |
 | .NET Core        | 2.x     | C# 7.3                      |
 | .NET Standard    | 2.1     | C# 8.0                      |
-| .NET Standard    | 2.0     | C# 7.3                      |
+| .NET Standard    | 2,0     | C# 7.3                      |
 | .NET Standard    | 'in     | C# 7.3                      |
 | .NET Framework   | tümü     | C# 7.3                      |
 
@@ -80,7 +80,7 @@ Bu dosyayı içeren dizinin tüm alt dizinlerindeki derlemeler, Preview C# sür�
 
 ## <a name="c-language-version-reference"></a>C# dil sürümü başvurusu
 
-Aşağıdaki tabloda tüm geçerli C# dil sürümleri gösterilmektedir. Daha eski bir değer varsa, derleyicinizi her değeri anlayamayabilir. .NET Core 3,0 veya sonraki bir sürümünü yüklerseniz, listelenen her şeye erişebilirsiniz.
+Aşağıdaki tabloda tüm geçerli C# dil sürümleri gösterilmektedir. Daha eski bir değer varsa, derleyicinizi her değeri anlayamayabilir. En son .NET SDK 'sını yüklerseniz, listelenen her şeye erişebilirsiniz.
 
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
@@ -106,7 +106,8 @@ Aşağıdaki tabloda tüm geçerli C# dil sürümleri gösterilmektedir. Daha es
 > 7.1
 > 7.2
 > 7.3
-> 8.0 (default)
+> 8.0
+> 9.0 (default)
 > latestmajor
 > preview
 > latest

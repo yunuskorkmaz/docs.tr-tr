@@ -1,13 +1,13 @@
 ---
 title: DotNet aracı arama komutu
-description: DotNet aracı arama komutu, NuGet.org 'de yayınlanan .NET Core araçlarını arar.
+description: DotNet aracı arama komutu, NuGet.org 'de yayınlanan .NET araçlarını arar.
 ms.date: 11/11/2020
-ms.openlocfilehash: 4357ce4864cad386968e4a76466066fbf2ce4060
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: e0289e651ec4a439c791c8c948bef2d85d9c3794
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94558076"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634148"
 ---
 # <a name="dotnet-tool-search"></a>DotNet aracı araması
 
@@ -15,7 +15,7 @@ ms.locfileid: "94558076"
 
 ## <a name="name"></a>Name
 
-`dotnet tool search` -NuGet 'e yayınlanan tüm [.NET Core araçlarını](global-tools.md) arar.
+`dotnet tool search` -NuGet 'e yayınlanan tüm [.net araçlarını](global-tools.md) arar.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -26,7 +26,7 @@ dotnet tool search [--detail]  [--prerelease]
 dotnet tool search -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet tool search`Komut, .net küresel, araç yolu veya yerel araçlar olarak kullanılabilecek araçlar Için NuGet araması yapmanızı sağlar. Komut, araç adlarını ve başlıklar, açıklamalar ve Etiketler gibi meta verileri arar.
 
@@ -100,6 +100,6 @@ Komut [NuGet arama API](/nuget/api/search-query-service-resource#search-for-pack
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core araçları](global-tools.md)
-- [Öğretici: .NET Core CLI kullanarak .NET Core küresel aracı 'nı yükleyip kullanın](global-tools-how-to-use.md)
-- [Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın](local-tools-how-to-use.md)
+- [.NET araçları](global-tools.md)
+- [Öğretici: .NET CLı kullanarak .NET genel aracını yükleyip kullanma](global-tools-how-to-use.md)
+- [Öğretici: .NET CLı kullanarak .NET yerel aracını yükleyip kullanma](local-tools-how-to-use.md)

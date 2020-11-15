@@ -1,27 +1,27 @@
 ---
 title: global.json’a genel bakış
-description: .NET Core CLI komutlarını çalıştırırken .NET Core SDK sürümünü ayarlamak için global.jsdosyasını nasıl kullanacağınızı öğrenin.
+description: .NET CLı komutlarını çalıştırırken .NET SDK sürümünü ayarlamak için global.jsdosyasını nasıl kullanacağınızı öğrenin.
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 714e32ec841cee214f801de65bccf0041af66b0b
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281551"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634005"
 ---
 # <a name="globaljson-overview"></a>global.json’a genel bakış
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,0 SDK ve sonraki sürümleri
 
-*global.jsdosyadaki* , .NET Core CLI komutlarını çalıştırdığınızda hangi .NET Core SDK sürümünün kullanıldığını tanımlamanızı sağlar. .NET Core SDK seçilmesi, projenizin hedeflediği çalışma zamanını belirtmekten bağımsızdır. .NET Core SDK sürümü .NET Core CLI hangi sürümlerinin kullanıldığını gösterir.
+Dosyadaki *global.js* , .net CLI komutlarını çalıştırdığınızda HANGI .NET SDK sürümünün kullanıldığını tanımlamanızı sağlar. .NET SDK 'sının seçilmesi, projenizin hedeflediği çalışma zamanını belirtmekten bağımsızdır. .NET SDK sürümü, .NET CLı 'nın hangi sürümlerinin kullanıldığını belirtir.
 
 Genel olarak, SDK araçlarının en son sürümünü kullanmak istiyorsunuz, bu nedenle dosya *üzerindeglobal.js* gerekmez. Bazı Gelişmiş senaryolarda, SDK araçlarının sürümünü denetlemek isteyebilirsiniz ve bu makalede bunun nasıl yapılacağı açıklanır.
 
 Bunun yerine çalışma zamanının belirtilmesi hakkında daha fazla bilgi için bkz. [hedef çerçeveler](../../standard/frameworks.md).
 
-.NET Core SDK geçerli çalışma dizinindeki dosyanın bir *global.js* (proje diziniyle aynı olması gerekmez) veya üst dizinlerinden birine bakar.
+.NET SDK, geçerli çalışma dizininde (proje diziniyle aynı olmayan) veya üst dizinlerinden birinde bulunan bir *global.js* arar.
 
 ## <a name="globaljson-schema"></a>Şemada global.js
 
@@ -29,7 +29,7 @@ Bunun yerine çalışma zamanının belirtilmesi hakkında daha fazla bilgi içi
 
 Türüyle `object`
 
-Seçilecek .NET Core SDK hakkındaki bilgileri belirtir.
+Seçilecek .NET SDK bilgilerini belirtir.
 
 #### <a name="version"></a>sürüm
 
@@ -37,7 +37,7 @@ Seçilecek .NET Core SDK hakkındaki bilgileri belirtir.
 
 - Şu tarihten itibaren kullanılabilir: .NET Core 1,0 SDK.
 
-Kullanılacak .NET Core SDK sürümü.
+Kullanılacak .NET SDK sürümü.
 
 Bu alan:
 
@@ -84,7 +84,7 @@ Aşağıdaki tabloda anahtar için olası değerler gösterilmektedir `rollForwa
 | `latestPatch` | , İstenen ana, alt ve özellik bandı ile bir düzeltme eki düzeyi ve belirtilen değerden daha büyük veya eşit olan en son yüklenen düzeltme eki düzeyini kullanır. <br> Bulunamazsa, başarısız olur. |
 | `latestFeature` | , Belirtilen değerden daha büyük veya eşit olan bir özellik bandı ve düzeltme eki düzeyiyle istenen büyük ve küçük ile eşleşen en yüksek yüklü Özellik bandı ve düzeltme eki düzeyini kullanır. <br> Bulunamazsa, başarısız olur. |
 | `latestMinor` | , Belirtilen değerden daha büyük veya eşit olan bir ikincil, özellik bandı ve yama düzeyiyle istenen ana, özellik bandı ve düzeltme eki düzeyini kullanır. <br> Bulunamazsa, başarısız olur. |
-| `latestMajor` | En yüksek yüklü .NET Core SDK, belirtilen değerden daha büyük veya eşit olan bir sürümle kullanır. <br> Bulunamazsa başarısız olur. |
+| `latestMajor` | , Belirtilen değerden daha büyük veya eşit bir sürüme sahip en yüksek yüklü .NET SDK 'sını kullanır. <br> Bulunamazsa başarısız olur. |
 | `disable`     | İleri doğru değil. Tam eşleşme gereklidir. |
 
 ### <a name="msbuild-sdks"></a>MSBuild-SDK 'lar
@@ -149,11 +149,11 @@ Aşağıdaki örnek, belirli bir sürümün yüklü olduğu en yüksek düzeltme
 }
 ```
 
-## <a name="globaljson-and-the-net-core-cli"></a>global.jsve .NET Core CLI
+## <a name="globaljson-and-the-net-cli"></a>global.jsve .NET CLı
 
-Dosyasında *global.js* bir tane ayarlamak için MAKINENIZDE hangi SDK sürümlerinin yüklü olduğunu bilmemiz yararlı olur. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [.NET Core 'un zaten yüklü olduğunu denetleme](../install/how-to-detect-installed-versions.md#check-sdk-versions).
+Dosyasında *global.js* bir tane ayarlamak için MAKINENIZDE hangi SDK sürümlerinin yüklü olduğunu bilmemiz yararlı olur. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [.net 'in zaten yüklü olduğunu denetleme](../install/how-to-detect-installed-versions.md#check-sdk-versions).
 
-Makinenize ek .NET Core SDK sürümleri yüklemek için [.NET Core 'U indir](https://dotnet.microsoft.com/download/dotnet-core) sayfasını ziyaret edin.
+Makinenize ek .NET SDK sürümleri yüklemek için [.NET Core 'U indirme](https://dotnet.microsoft.com/download/dotnet-core) sayfasını ziyaret edin.
 
 Aşağıdaki örneğe benzer şekilde, [DotNet New](dotnet-new.md) komutunu yürüterek geçerli dizinde dosya üzerinde yeni bir *global.js* oluşturabilirsiniz:
 
@@ -164,7 +164,7 @@ dotnet new globaljson --sdk-version 3.0.100
 ## <a name="matching-rules"></a>Eşleşen kurallar
 
 > [!NOTE]
-> Eşleşen kurallar `dotnet.exe` , tüm yüklü .net çekirdeği yüklü çalışma zamanları genelinde ortak olan giriş noktasına tabidir. .NET Core çalışma zamanının en son yüklü sürümü için eşleşen kurallar, yan yana birden fazla çalışma zamanı yüklediğinizde veya bir *global.js* dosya kullanıyorsanız kullanılır.
+> Eşleşen kurallar `dotnet.exe` , tüm yüklü .net yüklü çalışma zamanları genelinde ortak olan giriş noktasına tabidir. .NET çalışma zamanının en son yüklü sürümü için eşleşen kurallar, yan yana birden fazla çalışma zamanı yüklediğinizde veya bir *global.js* dosya kullanıyorsanız kullanılır.
 
 ## <a name="net-core-3x"></a>[.NET Core 3. x](#tab/netcore3x)
 

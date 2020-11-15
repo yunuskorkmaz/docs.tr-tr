@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-ms.openlocfilehash: 3fb19c2b36d97710685cac4ecd10f47a119814ce
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 8f81df527f83183804132ce09ae713fbbcf6f3ce
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189192"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634252"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Nasıl yapılır: alt düzey eşitleme için SpinLock kullanma
 
@@ -26,7 +26,7 @@ Aşağıdaki örnek, ' nin nasıl kullanılacağını göstermektedir <xref:Syst
   
  Bu örnek <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> , çok iş parçacıklı erişim için Kullanıcı eşitlemesi gerektiren sınıfını kullanır. Başka bir seçenek de, <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> Kullanıcı kilitleri gerektirmeyen öğesini kullanmaktır.  
   
- Çağrısında öğesinin kullanımını aklınızda edin `false` <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> . Bu, en iyi performansı sağlar. `true`Kilit, diğer iş parçacıklarının çıkış için artık kullanılabilir olduğundan emin olmak için yazma arabelleğini temizleyecek bellek dilimini kullanmak üzere IA64 mimarilerinde belirtin.  
+ Çağrısında öğesinin kullanımını aklınızda edin `false` <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> . Bu, en iyi performansı sağlar. `true`Kilit, diğer iş parçacıklarının girmesi için kullanılabilir olduğundan emin olmak üzere yazma arabelleğini temizleyecek bellek dilimini kullanmak IÇIN IA64 mimarilerinde belirtin.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,16 +1,16 @@
 ---
-title: 'Öğretici: .NET Core yerel araçlarını yükleyip kullanın'
+title: 'Öğretici: .NET yerel araçlarını yükleyip kullanın'
 description: .NET aracını yerel bir araç olarak yüklemeyi ve kullanmayı öğrenin.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 555497a71d54713e62e54f8f293afdf74ead1743
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062684"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633893"
 ---
-# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın
+# <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>Öğretici: .NET CLı kullanarak .NET yerel aracını yükleyip kullanma
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
 
@@ -201,7 +201,7 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="troubleshoot"></a>Sorun giderme
 
-Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md).
+Öğreticiyi takip ederken bir hata mesajı alırsanız bkz. [.NET araç kullanım sorunlarını giderme](troubleshoot-usage-issues.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

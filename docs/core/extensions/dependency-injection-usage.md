@@ -3,25 +3,25 @@ title: .NET ' te bağımlılık ekleme 'yi kullanma
 description: .NET uygulamalarınıza bağımlılık ekleme işlemini nasıl kullanacağınızı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/23/2020
+ms.date: 11/13/2020
 ms.topic: tutorial
 no-loc:
 - Transient
 - Scoped
 - Singleton
 - Example
-ms.openlocfilehash: 589e15736c07b465fda308b04c91384a2502755c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: b1e84685ad95372c4b2038e913199f7283135b71
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888587"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634520"
 ---
 # <a name="tutorial-use-dependency-injection-in-net"></a>Öğretici: .NET 'te bağımlılık ekleme kullanma
 
 Bu öğreticide [, .net 'te bağımlılık ekleme (dı)](dependency-injection.md)'nin nasıl kullanılacağı gösterilmektedir. *Microsoft uzantıları* ile,, hizmetlerin bir içinde eklendiği ve yapılandırıldığı birinci sınıf bir vatandaşlık <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> . <xref:Microsoft.Extensions.Hosting.IHost>Arabirim, <xref:System.IServiceProvider> Tüm kayıtlı hizmetlerin kapsayıcısı olarak davranan örneği kullanıma sunar.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -88,6 +88,11 @@ Konsol uygulamasına bir hizmet olarak davranan aşağıdaki işlem günlükçü
 Aşağıdaki kodla *program.cs* güncelleştirin:
 
 :::code language="csharp" source="snippets/configuration/console-di/Program.cs" range="1-18,35-60" highlight="22-26":::
+
+> Her `services.Add{SERVICE_NAME}` genişletme yöntemi, hizmetlerini ekler ve potansiyel olarak yapılandırır. Uygulamaların bu kuralı izlemesini öneririz. <xref:Microsoft.Extensions.DependencyInjection?displayProperty=fullName>Hizmet kaydı gruplarını kapsüllemek için uzantı yöntemlerini ad alanına yerleştirin. Dı uzantısı yöntemlerine ilişkin ad alanı bölümü de dahil olmak üzere `Microsoft.Extensions.DependencyInjection` :
+>
+> - Ek blokları eklemeden [IntelliSense](/visualstudio/ide/using-intellisense) 'de görüntülenmesine izin verir `using` .
+> - `using` `Program` `Startup` Bu uzantı yöntemlerinin genellikle çağrıldığı, veya sınıflarında aşırı deyimleri engeller.
 
 Uygulama:
 

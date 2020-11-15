@@ -1,21 +1,21 @@
 ---
 title: DotNet araç listesi komutu
-description: DotNet araç listesi komutu, makinenizde yüklü olan .NET Core araçlarını listeler.
+description: DotNet araç listesi komutu, makinenizde yüklü olan .NET araçlarını listeler.
 ms.date: 02/14/2020
-ms.openlocfilehash: 4035c5be233232e53c6d7150485f737108c1e18d
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: d884f2c41834dd9704de3a8ca15417ba368fde4b
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925468"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634291"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet tool list`-Makinenizde yüklü olan belirtilen türdeki tüm [.NET Core araçlarını](global-tools.md) listeler.
+`dotnet tool list` -Makinenizde yüklü olan belirtilen türdeki tüm [.net araçlarını](global-tools.md) listeler.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -33,7 +33,7 @@ dotnet tool list -h|--help
 
 ## <a name="description"></a>Açıklama
 
-Bu `dotnet tool list` komut, makinenizde yüklü olan tüm .NET Core genel, araç yolu veya yerel araçlarını listeetmeniz için bir yol sağlar. Komut, paket adını, yüklü sürümü ve araç komutunu listeler.  Komutunu kullanmak için aşağıdakilerden birini belirtin:
+Bu `dotnet tool list` komut, makinenizde yüklü olan tüm .NET genel, araç yolu veya yerel araçları listelemek için bir yol sağlar. Komut, paket adını, yüklü sürümü ve araç komutunu listeler.  Komutunu kullanmak için aşağıdakilerden birini belirtin:
 
 * Varsayılan konumda yüklü olan küresel araçları listelemek için, `--global` seçeneğini kullanın
 * Özel bir konumda yüklü olan küresel araçları listelemek için `--tool-path` seçeneğini kullanın.
@@ -73,12 +73,12 @@ Bu `dotnet tool list` komut, makinenizde yüklü olan tüm .NET Core genel, ara�
 
   Belirli bir Linux/macOS dizininden küresel araçları listeler.
 
-- **`dotnet tool list`** veya**`dotnet tool list --local`**
+- **`dotnet tool list`** veya **`dotnet tool list --local`**
 
   Geçerli dizinde bulunan tüm yerel araçları listeler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core araçları](global-tools.md)
-- [Öğretici: .NET Core CLI kullanarak .NET Core küresel aracı 'nı yükleyip kullanın](global-tools-how-to-use.md)
-- [Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın](local-tools-how-to-use.md)
+- [.NET araçları](global-tools.md)
+- [Öğretici: .NET CLı kullanarak .NET genel aracını yükleyip kullanma](global-tools-how-to-use.md)
+- [Öğretici: .NET CLı kullanarak .NET yerel aracını yükleyip kullanma](local-tools-how-to-use.md)

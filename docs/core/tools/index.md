@@ -1,23 +1,23 @@
 ---
-title: .NET Core CLI
+title: .NET CLı
 titleSuffix: ''
-description: .NET Core CLI ve özelliklerine genel bir bakış.
+description: .NET CLı ve özelliklerine genel bakış.
 ms.topic: overview
 ms.date: 02/13/2020
-ms.openlocfilehash: 18dde384058206f437b53572b2f8331d65324482
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 6a12e2d16afe36092c10e14a7465fa3bdbb23f32
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062697"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633862"
 ---
-# <a name="net-core-cli-overview"></a>.NET Core CLI’ya genel bakış
+# <a name="net-cli-overview"></a>.NET CLı genel bakış
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-.NET Core komut satırı arabirimi (CLı), .NET Core uygulamaları geliştirmeye, oluşturmaya, çalıştırmaya ve yayımlamaya yönelik platformlar arası bir araç zinciridir.
+.NET komut satırı arabirimi (CLı), .NET uygulamaları geliştirmeye, oluşturmaya, çalıştırmaya ve yayımlamaya yönelik platformlar arası bir araç zinciridir.
 
-.NET Core CLI, [.NET Core SDK](../sdk.md)dahil edilir. .NET Core SDK nasıl yükleneceğini öğrenmek için bkz. [.NET Core 'U yüklemek](../install/windows.md).
+.Net CLı, [.NET SDK 'ya](../sdk.md)dahildir. .NET SDK 'yı yüklemeyi öğrenmek için bkz. [.NET Core 'U yüklemek](../install/windows.md).
 
 ## <a name="cli-commands"></a>CLI komutları
 
@@ -60,15 +60,15 @@ Aşağıdaki komutlar varsayılan olarak yüklenir:
 - [`tool install`](dotnet-tool-install.md)
 - [`tool list`](dotnet-tool-list.md)
 - [`tool update`](dotnet-tool-update.md)
-- [`tool restore`](global-tools.md#install-a-local-tool)3,0 .NET Core SDK bu yana kullanılabilir.
-- [`tool run`](global-tools.md#invoke-a-local-tool)3,0 .NET Core SDK bu yana kullanılabilir.
+- [`tool restore`](global-tools.md#install-a-local-tool) 3,0 .NET Core SDK bu yana kullanılabilir.
+- [`tool run`](global-tools.md#invoke-a-local-tool) 3,0 .NET Core SDK bu yana kullanılabilir.
 - [`tool uninstall`](dotnet-tool-uninstall.md)
 
-Araçlar, NuGet paketlerinden yüklenen ve komut isteminden çağrılan konsol uygulamalarıdır. Araçları kendiniz yazabilir veya üçüncü taraflarca yazılmış Araçları yükleyebilirsiniz. Araçlar genel araçlar, araç yolu araçları ve yerel araçlar olarak da bilinir. Daha fazla bilgi için bkz. [.NET Core araçlarına genel bakış](global-tools.md).
+Araçlar, NuGet paketlerinden yüklenen ve komut isteminden çağrılan konsol uygulamalarıdır. Araçları kendiniz yazabilir veya üçüncü taraflarca yazılmış Araçları yükleyebilirsiniz. Araçlar genel araçlar, araç yolu araçları ve yerel araçlar olarak da bilinir. Daha fazla bilgi için bkz. [.net araçlarına genel bakış](global-tools.md).
 
 ## <a name="command-structure"></a>Komut yapısı
 
-CLı komut yapısı, [sürücüden ("DotNet")](#driver), [komuttan](#command)ve muhtemelen komut [bağımsız değişkenlerinden](#arguments) ve [seçeneklerden](#options)oluşur. Bu kalıbı, yeni bir konsol uygulaması oluşturma ve aşağıdaki komutlar *my_app*adlı bir dizinden yürütüldüğünde gösterildiği gibi komut satırından çalıştırma gıbı birçok CLI işlemi içinde görürsünüz:
+CLı komut yapısı, [sürücüden ("DotNet")](#driver), [komuttan](#command)ve muhtemelen komut [bağımsız değişkenlerinden](#arguments) ve [seçeneklerden](#options)oluşur. Bu kalıbı, yeni bir konsol uygulaması oluşturma ve aşağıdaki komutlar *my_app* adlı bir dizinden yürütüldüğünde gösterildiği gibi komut satırından çalıştırma gıbı birçok CLI işlemi içinde görürsünüz:
 
 ```dotnetcli
 dotnet new console
@@ -80,7 +80,7 @@ dotnet /build_output/my_app.dll
 
 Sürücü [DotNet](dotnet.md) olarak adlandırılır ve [çerçeveye bağlı bir uygulama](../deploying/index.md) çalıştırarak ya da bir komut yürüten iki sorumluluklara sahiptir.
 
-Çerçeveye bağımlı bir uygulama çalıştırmak için, uygulamayı sürücüden sonra belirtin, örneğin, `dotnet /path/to/my_app.dll` . Komutu, uygulamanın DLL 'sinin bulunduğu klasörden yürütürken yalnızca yürütün `dotnet my_app.dll` . .NET Core çalışma zamanının belirli bir sürümünü kullanmak istiyorsanız, `--fx-version <VERSION>` seçeneğini kullanın ( [DotNet komut](dotnet.md) başvurusuna bakın).
+Çerçeveye bağımlı bir uygulama çalıştırmak için, uygulamayı sürücüden sonra belirtin, örneğin, `dotnet /path/to/my_app.dll` . Komutu, uygulamanın DLL 'sinin bulunduğu klasörden yürütürken yalnızca yürütün `dotnet my_app.dll` . .NET çalışma zamanının belirli bir sürümünü kullanmak istiyorsanız, `--fx-version <VERSION>` seçeneğini kullanın ( [DotNet komut](dotnet.md) başvurusuna bakın).
 
 Sürücüye bir komut sağlarsanız, `dotnet.exe` CLI komutu yürütme işlemini başlatır. Örnek:
 
@@ -92,7 +92,7 @@ dotnet build
 
 ### <a name="command"></a>Komut
 
-Komut bir eylem gerçekleştirir. Örneğin, `dotnet build` derleme kodu. `dotnet publish`kodu yayımlar. Komutlar, bir kural kullanılarak konsol uygulaması olarak uygulanır `dotnet {command}` .
+Komut bir eylem gerçekleştirir. Örneğin, `dotnet build` derleme kodu. `dotnet publish` kodu yayımlar. Komutlar, bir kural kullanılarak konsol uygulaması olarak uygulanır `dotnet {command}` .
 
 ### <a name="arguments"></a>Arguments
 
@@ -105,4 +105,4 @@ Komut satırında geçirdiğiniz seçenekler çağrılan komuta yönelik seçene
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DotNet/SDK GitHub deposu](https://github.com/dotnet/sdk/)
-- [.NET Core yükleme kılavuzu](../install/windows.md)
+- [.NET yükleme kılavuzu](../install/windows.md)

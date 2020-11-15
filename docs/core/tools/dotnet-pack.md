@@ -1,13 +1,13 @@
 ---
 title: DotNet paketi komutu
-description: DotNet Pack komutu, .NET Core projeniz için NuGet paketleri oluşturur.
+description: DotNet Pack komutu .NET projeniz için NuGet paketleri oluşturur.
 ms.date: 04/28/2020
-ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537841"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634239"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -30,7 +30,7 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet pack -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet pack`Komut projeyi oluşturur ve NuGet paketleri oluşturur. Bu komutun sonucu bir NuGet paketidir (yani, bir *. nupkg* dosyası).
 
@@ -46,7 +46,7 @@ Varsayılan olarak, `dotnet pack` önce projeyi oluşturur. Bu davranışı önl
 > [!NOTE]
 > Bazı durumlarda, örtük derleme gerçekleştirilemez. Bu, `GeneratePackageOnBuild` ayarlandığında, derleme ve paket hedefleri arasındaki döngüsel bağımlılığı önlemek için oluşabilir. Ayrıca, kilitli bir dosya veya başka bir sorun varsa derleme başarısız olabilir.
 
-`dotnet pack`Paketleme işlemi için komutuna MSBuild özellikleri sağlayabilirsiniz. Daha fazla bilgi için bkz. [NuGet meta veri özellikleri](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölümü, MSBuild-p anahtarının birkaç farklı senaryo için nasıl kullanılacağını gösterir.
+`dotnet pack`Paketleme işlemi için komutuna MSBuild özellikleri sağlayabilirsiniz. Daha fazla bilgi için bkz. [NuGet meta veri özellikleri](csproj.md#nuget-metadata-properties) ve [MSBuild Command-Line başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölümü, MSBuild-p anahtarının birkaç farklı senaryo için nasıl kullanılacağını gösterir.
 
 Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı geçersiz kılmak için, *. csproj* dosyanıza aşağıdaki özelliği ekleyin:
 
@@ -188,4 +188,4 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
   
   - [. Nuspec kullanarak paketleme](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Özelleştirilmiş paket oluşturmak için gelişmiş uzantı noktaları](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [Genel Özellikler](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [Genel Özellikler](/visualstudio/msbuild/msbuild-properties#global-properties)

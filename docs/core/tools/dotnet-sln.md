@@ -2,12 +2,12 @@
 title: DotNet sln komutu
 description: DotNet-sln komutu bir çözüm dosyasındaki projeleri eklemek, kaldırmak ve listelemek için kullanışlı bir seçenek sağlar.
 ms.date: 02/14/2020
-ms.openlocfilehash: efe52f64a29c8825070bae9ee96b430b32176ffa
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 898c53772a28b8cc3b65532dfc3d9bd6e73d467c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053037"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634376"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -15,7 +15,7 @@ ms.locfileid: "89053037"
 
 ## <a name="name"></a>Name
 
-`dotnet sln` -Bir .NET Core çözüm dosyasındaki projeleri listeler veya değiştirir.
+`dotnet sln` -Bir .NET çözüm dosyasındaki projeleri listeler veya değiştirir.
 
 ## <a name="synopsis"></a>Özeti
 

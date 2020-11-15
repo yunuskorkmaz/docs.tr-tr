@@ -1,22 +1,22 @@
 ---
 title: DotNet yeni komut
-description: DotNet New komutu, belirtilen şablona göre yeni .NET Core projeleri oluşturur.
+description: DotNet New komutu, belirtilen şablona göre yeni .NET projeleri oluşturur.
 no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400597"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634461"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,0 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
 `dotnet new` -Belirtilen şablonu temel alan yeni bir proje, yapılandırma dosyası veya çözüm oluşturur.
 
@@ -35,7 +35,7 @@ dotnet new -h|--help
 
 ## <a name="description"></a>Açıklama
 
-`dotnet new`Komut bir şablonu temel alan bir .NET Core projesi veya diğer yapılar oluşturur.
+`dotnet new`Komut bir şablonu temel alan bir .NET projesi veya başka yapılar oluşturur.
 
 Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturmak için [şablon altyapısını](https://github.com/dotnet/templating) çağırır.
 
@@ -56,7 +56,7 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
   - CLı çağrılırken bir şablon eşleşmesi bulamazsa `dotnet new` , bu da kısmi değildir.
   - Şablonun daha yeni bir sürümü kullanılabilir. Bu durumda, proje veya yapıt oluşturulur ancak CLı, şablonun güncelleştirilmiş bir sürümü hakkında sizi uyarır.
 
-  Aşağıdaki tabloda, .NET Core SDK ile önceden yüklenmiş olan şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir. Özel şablon seçeneklerini görmek için kısa ad bağlantısına tıklayın.
+  Aşağıdaki tabloda .NET SDK ile önceden yüklenmiş olarak gelen şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir. Özel şablon seçeneklerini görmek için kısa ad bağlantısına tıklayın.
 
 | Şablonlar                                    | Kısa ad                      | Dil     | Etiketler                                  | Sunulan özellikler |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -74,7 +74,7 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 | NUnit 3 test öğesi                            | `nunit-test`                    | [C#], F #, VB | Test/NUnit                            | 2.2        |
 | xUnit test projesi                           | [xUnit](#test)                  | [C#], F #, VB | Test/xUnit                            | 1,0        |
 | Razor bileşeni                              | `razorcomponent`                | Þ         | Web/ASP. NET                           | 3,0        |
-| Razor sayfası                                   | [sayfasında](#page)                   | Þ         | Web/ASP. NET                           | 2,0        |
+| Razor sayfası                                   | [page (sayfa)](#page)                    | Þ         | Web/ASP. NET                           | 2,0        |
 | MVC Viewıtemts                              | [viewıtems 'lar](#namespace)       | Þ         | Web/ASP. NET                           | 2,0        |
 | MVC ViewStart                                | `viewstart`                     | Þ         | Web/ASP. NET                           | 2,0        |
 | Blazor Sunucu uygulaması                            | [blazorserver](#blazorserver)   | Þ         | WebBlazor                            | 3,0        |
@@ -135,7 +135,7 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 
 - **`--nuget-source <SOURCE>`**
 
-  Yüklemesi sırasında kullanılacak bir NuGet kaynağını belirtir. .NET Core 2,1 SDK 'dan beri kullanılabilir.
+  Yüklemesi sırasında kullanılacak bir NuGet kaynağını belirtir.
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -177,6 +177,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
   | 3,0         | `netcoreapp3.0` |
 
@@ -196,7 +197,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp<version>` bir .NET Core sınıf kitaplığı oluşturmak veya `netstandard<version>` bir .NET Standard sınıf kitaplığı oluşturmak için. `netstandard2.0` varsayılan değerdir.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `net5.0` veya bir `netcoreapp<version>` .NET sınıf kitaplığı oluşturmak veya `netstandard<version>` bir .NET Standard sınıf kitaplığı oluşturmak için. .NET 5,0 SDK için varsayılan değer `net5.0` .
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -214,7 +215,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. `netcoreapp3.1` varsayılan değerdir. .NET Core 3,1 SDK 'dan beri kullanılabilir.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. `net5.0` varsayılan değerdir. .NET Core 3,1 SDK 'dan beri kullanılabilir.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -268,6 +269,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
   | 3,0         | `netcoreapp3.0` |
 
@@ -291,6 +293,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
   | 3,0         | `netcoreapp3.0` |
   | 2.2         | `netcoreapp2.2` |
@@ -306,7 +309,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 **_
 
-### <a name="page"></a>sayfasında
+### <a name="page"></a>page (sayfa)
 
 - _ *`-na|--namespace <NAMESPACE_NAME>`**
 
@@ -515,6 +518,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
   | 3,0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -602,6 +606,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
   | 3,0         | `netcoreapp3.0` |
 
@@ -654,6 +659,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
   | 3,0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -674,6 +680,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
   | 3,0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -759,6 +766,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
   | 3,0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -773,7 +781,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - _ *`--sdk-version <VERSION_NUMBER>`**
 
-  *global.json* dosyasında kullanılacak .NET Core SDK sürümünü belirtir.
+  Dosyasında *global.js* kullanılacak .NET SDK sürümünü belirtir.
 
 ***
 

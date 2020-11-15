@@ -1,23 +1,23 @@
 ---
-title: dotnet yardım komutu
-description: Dotnet yardım komutu, belirtilen komut için çevrimiçi olarak daha ayrıntılı belgeler gösterir.
+title: DotNet yardım komutu
+description: DotNet yardım komutu, belirtilen komut için çevrimiçi daha ayrıntılı belgeler gösterir.
 ms.date: 02/14/2020
-ms.openlocfilehash: a59e74a318118b6fd39d1895df02d76daa6fc9e1
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: d583142edabb24df972bdf9a06dbfe04688f9d97
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463686"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634474"
 ---
-# <a name="dotnet-help-reference"></a>dotnet yardım başvurusu
+# <a name="dotnet-help-reference"></a>DotNet yardım başvurusu
 
-**Bu makale şu şekilde dir:** ✔️ .NET Core 2.0 SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,0 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
-`dotnet help`- Belirtilen komut için daha ayrıntılı belgeleri çevrimiçi olarak gösterir.
+`dotnet help` -Belirtilen komut için çevrimiçi daha ayrıntılı belgeler gösterir.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
 dotnet help <COMMAND_NAME> [-h|--help]
@@ -25,13 +25,13 @@ dotnet help <COMMAND_NAME> [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-Komut, `dotnet help` docs.microsoft.com belirtilen komut hakkında daha ayrıntılı bilgi için başvuru sayfasını açar.
+`dotnet help`Komut, docs.Microsoft.com adresinde belirtilen komutla ilgili daha ayrıntılı bilgi için başvuru sayfasını açar.
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Arguments
 
 - **`COMMAND_NAME`**
 
-  .NET Core CLI komutunun adı. Geçerli CLI komutlarının listesi için [CLI komutlarına](index.md#cli-commands)bakın.
+  .NET CLı komutunun adı. Geçerli CLı komutlarının bir listesi için bkz. [CLI komutları](index.md#cli-commands).
 
 ## <a name="options"></a>Seçenekler
 
@@ -41,7 +41,7 @@ Komut, `dotnet help` docs.microsoft.com belirtilen komut hakkında daha ayrınt�
 
 ## <a name="examples"></a>Örnekler
 
-- [dotnet yeni](dotnet-new.md) komutu için dokümantasyon sayfasını açar:
+- [DotNet yeni](dotnet-new.md) komutunun belgeler sayfasını açar:
 
   ```dotnetcli
   dotnet help new

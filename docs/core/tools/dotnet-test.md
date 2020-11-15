@@ -2,12 +2,12 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 04/29/2020
-ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a5666cfe4c09b2b88d77b256fac922154c7d6bd7
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281616"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634389"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -255,7 +255,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 , `<operator>` Özelliği ve değeri arasındaki ilişkiyi açıklar:
 
-| İşleç | İşlev        |
+| Operatör | İşlev        |
 | :------: | --------------- |
 | `=`      | Tam eşleşme     |
 | `!=`     | Tam eşleşme yok |
@@ -268,7 +268,7 @@ Bir ifadesi `<operator>` , otomatik olarak on özelliği olarak kabul `contains`
 
 İfadeler koşullu işleçlerle birleştirilebilecek:
 
-| İşleç            | İşlev |
+| Operatör            | İşlev |
 | ------------------- | -------- |
 | <code>&#124;</code> | VEYA       |
 | `&`                 | AND      |
@@ -280,5 +280,5 @@ Seçmeli birim testi filtrelemeyi kullanma hakkında daha fazla bilgi ve örnekl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çerçeveler ve hedefler](../../standard/frameworks.md)
-- [.NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu](../rid-catalog.md)
+- [.NET çalışma zamanı tanımlayıcısı (RID) kataloğu](../rid-catalog.md)
 - [Komut satırı aracılığıyla runsettings bağımsız değişkenlerini geçirme](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

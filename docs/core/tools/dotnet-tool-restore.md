@@ -1,13 +1,13 @@
 ---
 title: DotNet aracı geri yükleme komutu
-description: DotNet aracı geri yükleme komutu, makinenizde geçerli dizin için kapsamdaki .NET Core yerel araçları yükler.
+description: DotNet aracı geri yükleme komutu, makinenizde geçerli dizin için kapsamdaki .NET yerel araçları 'nı yükler.
 ms.date: 02/14/2020
-ms.openlocfilehash: ceef3274ec9d337f8c51009d5a8c27e808b14035
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1b7fd10102f2c957b3eb235f6897b60bc8ca9c07
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302678"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634278"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -15,7 +15,7 @@ ms.locfileid: "87302678"
 
 ## <a name="name"></a>Name
 
-`dotnet tool restore`-Makinenizde geçerli dizin için kapsamdaki .NET Core yerel araçları yüklenir.
+`dotnet tool restore` -Makinenizde geçerli dizin için kapsamdaki .NET yerel araçları yüklenir.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -29,7 +29,7 @@ dotnet tool restore
 dotnet tool restore -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet tool restore`Komutu, geçerli dizinin kapsamındaki araç bildirim dosyasını bulur ve içinde listelenen araçları kurar. Bildirim dosyaları hakkında daha fazla bilgi için bkz. [yerel araç yükleyip](global-tools.md#install-a-local-tool) [yerel bir araç çağırma](global-tools.md#invoke-a-local-tool).
 
@@ -37,7 +37,7 @@ dotnet tool restore -h|--help
 
 - **`--configfile <FILE>`**
 
-  Kullanılacak NuGet yapılandırma (*nuget.config*) dosyası.
+  Kullanılacak NuGet yapılandırma ( *nuget.config* ) dosyası.
 
 - **`--add-source <SOURCE>`**
 
@@ -79,5 +79,5 @@ dotnet tool restore -h|--help
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core araçları](global-tools.md)
-- [Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın](local-tools-how-to-use.md)
+- [.NET araçları](global-tools.md)
+- [Öğretici: .NET CLı kullanarak .NET yerel aracını yükleyip kullanma](local-tools-how-to-use.md)

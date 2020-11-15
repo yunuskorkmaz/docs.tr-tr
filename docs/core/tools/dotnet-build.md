@@ -2,20 +2,20 @@
 title: DotNet derleme komutu
 description: DotNet derleme komutu bir projeyi ve tüm bağımlılıklarını oluşturur.
 ms.date: 02/14/2020
-ms.openlocfilehash: 6f33b449301f40949ff5dfe4077564344a9de8ec
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: ea0291129aeaed3bebef5c454ff003131bd3562b
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251172"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634487"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet build`-Bir projeyi ve tüm bağımlılıklarını oluşturur.
+`dotnet build` -Bir projeyi ve tüm bağımlılıklarını oluşturur.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -39,7 +39,7 @@ dotnet build -h|--help
 - Paylaşılan çalışma zamanını ve bir uygulamanın sürümünü belirten dosya *.runtimeconfig.js* .
 - Projenin bağımlı olduğu diğer kitaplıklar (proje başvuruları veya NuGet paket başvuruları aracılığıyla).
 
-.NET Core 3,0 ' den önceki sürümleri hedefleyen yürütülebilir projeler için, NuGet 'deki kitaplık bağımlılıkları genellikle çıkış klasörüne kopyalanmaz.  Bunlar, çalışma zamanında NuGet genel paketler klasöründen çözümlenirler. Göz önünde bulundurularak, ürünü `dotnet build` çalıştırmak için başka bir makineye aktarılmaya hazırlanın. Uygulamasının dağıtılabilecek bir sürümünü oluşturmak için (örneğin, [DotNet Publish](dotnet-publish.md) komutuyla) yayımlamanız gerekir. Daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).
+.NET Core 3,0 ' den önceki sürümleri hedefleyen yürütülebilir projeler için, NuGet 'deki kitaplık bağımlılıkları genellikle çıkış klasörüne kopyalanmaz.  Bunlar, çalışma zamanında NuGet genel paketler klasöründen çözümlenirler. Göz önünde bulundurularak, ürünü `dotnet build` çalıştırmak için başka bir makineye aktarılmaya hazırlanın. Uygulamasının dağıtılabilecek bir sürümünü oluşturmak için (örneğin, [DotNet Publish](dotnet-publish.md) komutuyla) yayımlamanız gerekir. Daha fazla bilgi için bkz. [.NET uygulama dağıtımı](../deploying/index.md).
 
 .NET Core 3,0 ve üstünü hedefleyen yürütülebilir projelerde, kitaplık bağımlılıkları çıkış klasörüne kopyalanır. Bu, başka bir yayınla özel mantık (örneğin, Web projeleri) yoksa, yapı çıkışının dağıtılabilir olması anlamına gelir.
 
@@ -63,9 +63,9 @@ Bir kitaplık oluşturmak için, özelliği atlayın `<OutputType>` veya değeri
 
 ### <a name="msbuild"></a>MSBuild
 
-`dotnet build`, projeyi derlemek için MSBuild kullanır, bu nedenle hem paralel hem de artımlı yapıları destekler. Daha fazla bilgi için bkz. [Artımlı derlemeler](/visualstudio/msbuild/incremental-builds).
+`dotnet build` , projeyi derlemek için MSBuild kullanır, bu nedenle hem paralel hem de artımlı yapıları destekler. Daha fazla bilgi için bkz. [Artımlı derlemeler](/visualstudio/msbuild/incremental-builds).
 
-Seçeneklerine ek olarak `dotnet build` komut, `-p` özellikleri ayarlama veya bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Bu seçenekler hakkında daha fazla bilgi için bkz. [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). Ayrıca [DotNet MSBuild](dotnet-msbuild.md) komutunu da kullanabilirsiniz.
+Seçeneklerine ek olarak `dotnet build` komut, `-p` özellikleri ayarlama veya bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Bu seçenekler hakkında daha fazla bilgi için bkz. [MSBuild Command-Line başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). Ayrıca [DotNet MSBuild](dotnet-msbuild.md) komutunu da kullanabilirsiniz.
 
 Çalışıyor, `dotnet build` çalıştırmaya eşdeğerdir `dotnet msbuild -restore` ; ancak, çıktının varsayılan ayrıntı düzeyi farklıdır.
 
@@ -153,7 +153,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-- Projeyi derleyin ve geri yükleme işlemi sırasında belirtilen NuGet paket kaynağını kullanın (.NET Core 2,0 SDK ve sonraki sürümleri):
+- Projeyi derleyin ve geri yükleme işlemi sırasında belirtilen NuGet paket kaynağını kullanın:
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages

@@ -2,20 +2,20 @@
 title: dotnet restore komutu
 description: Dotnet restore komutuyla bağımlılıkları ve projeye özel araçları nasıl geri yükleyeceğinizi öğrenin.
 ms.date: 02/27/2020
-ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: dcb68d6c690f2e12b61cfdfa6dc288bd474721c1
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925482"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634409"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet restore`-Bir projenin bağımlılıklarını ve araçlarını geri yükler.
+`dotnet restore` -Bir projenin bağımlılıklarını ve araçlarını geri yükler.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -46,7 +46,7 @@ Bazen, bu komutlarla örtük NuGet geri yüklemesini çalıştırmak kullanışl
 
 ### <a name="specify-feeds"></a>Akışları belirt
 
-Bağımlılıkları geri yüklemek için, NuGet paketlerin bulunduğu akışlara ihtiyaç duyuyor. Akışlar genellikle *nuget.config* yapılandırma dosyası aracılığıyla sağlanır. .NET Core SDK yüklendiğinde varsayılan bir yapılandırma dosyası sağlanır. Ek akışlar belirtmek için aşağıdakilerden birini yapın:
+Bağımlılıkları geri yüklemek için, NuGet paketlerin bulunduğu akışlara ihtiyaç duyuyor. Akışlar genellikle *nuget.config* yapılandırma dosyası aracılığıyla sağlanır. .NET SDK yüklendiğinde varsayılan bir yapılandırma dosyası sağlanır. Ek akışlar belirtmek için aşağıdakilerden birini yapın:
 
 - Proje dizininde kendi *nuget.config* dosyanızı oluşturun. Daha fazla bilgi için bu makalenin ilerleyen kısımlarında [yaygın NuGet yapılandırması](/nuget/consume-packages/configuring-nuget-behavior) ve [nuget.config farklılıkları](#nugetconfig-differences) bölümüne bakın.
 - Gibi `dotnet nuget` komutları kullanın [`dotnet nuget add source`](dotnet-nuget-add-source.md) .
@@ -71,11 +71,11 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 
 - [Bindingyönlendirmeler](/nuget/schema/nuget-config-file#bindingredirects-section)
 
-  Bağlama yeniden yönlendirmeleri öğelerle çalışmaz `<PackageReference>` ve .NET Core yalnızca `<PackageReference>` NuGet paketleri için öğeleri destekler.
+  Bağlama yeniden yönlendirmeleri öğelerle çalışmaz `<PackageReference>` ve .net yalnızca `<PackageReference>` NuGet paketleri için öğeleri destekler.
 
 - [çözümden](/nuget/schema/nuget-config-file#solution-section)
 
-  Bu ayar Visual Studio 'ya özeldir ve .NET Core için uygulanmaz. .NET Core bir dosya kullanmaz `packages.config` ve bunun yerine `<PackageReference>` NuGet paketleri için öğeleri kullanır.
+  Bu ayar Visual Studio 'ya özeldir ve .NET için uygulanmaz. .NET bir dosya kullanmaz `packages.config` ve bunun yerine `<PackageReference>` NuGet paketleri için öğeleri kullanır.
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
@@ -91,7 +91,7 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 
 - **`--configfile <FILE>`**
 
-  Geri yükleme işlemi için kullanılacak NuGet yapılandırma dosyası (*nuget.config*).
+  Geri yükleme işlemi için kullanılacak NuGet yapılandırma dosyası ( *nuget.config* ).
 
 - **`--disable-parallel`**
 
@@ -151,7 +151,7 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer `minimal` .
+  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer `minimal` olarak belirlenmiştir.
 
 ## <a name="examples"></a>Örnekler
 

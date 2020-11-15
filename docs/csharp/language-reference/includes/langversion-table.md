@@ -1,17 +1,18 @@
 ---
 ms.custom: updateeachrelease
-ms.openlocfilehash: d30d6ee2dae332895697b2fd1b931b7ec47d14bc
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 20d4434bc25fbd55cf2bbb309558395dd980d398
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656220"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634507"
 ---
 | Değer                     | Anlamı                                                                                                 |
 |---------------------------|---------------------------------------------------------------------------------------------------------|
 | `preview`                 | Derleyici, en son önizleme sürümündeki tüm geçerli dil sözdizimini kabul eder.                         |
 | `latest`                  | Derleyici derleyicinin en son yayınlanan sürümünden (ikincil sürüm dahil) söz dizimini kabul eder. |
 | `latestMajor` (`default`) | Derleyici derleyicinin en son yayınlanan ana sürümünden söz dizimini kabul eder.                     |
+| `9.0`                     | Derleyici yalnızca C# 9,0 veya daha düşük bir düzeyde bulunan sözdizimini kabul eder.                                   |
 | `8.0`                     | Derleyici yalnızca C# 8,0 veya daha düşük bir düzeyde bulunan sözdizimini kabul eder.                                   |
 | `7.3`                     | Derleyici yalnızca C# 7,3 veya daha düşük bir düzeyde bulunan sözdizimini kabul eder.                                   |
 | `7.2`                     | Derleyici yalnızca C# 7,2 veya daha düşük bir düzeyde bulunan sözdizimini kabul eder.                                   |
