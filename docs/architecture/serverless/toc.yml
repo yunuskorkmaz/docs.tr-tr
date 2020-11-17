@@ -24,7 +24,7 @@
           href: logic-apps.md
         - name: Azure Event Grid
           href: event-grid.md
-    - name: Dayanıklı Azure işlevleri
+    - name: Dayanıklı Azure İşlevleri
       href: durable-azure-functions.md
       items:
         - name: Düzenleme Desenleri
