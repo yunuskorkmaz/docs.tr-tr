@@ -124,7 +124,7 @@ Ardından, indirilen dosyayı ayıklayın ve `export` .NET tarafından kullanıl
 
 Çalışma zamanını ayıklamak ve .NET CLı komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET ikili sürümü indirin. Ardından, bir Terminal açın ve dosyanın kaydedildiği dizinden aşağıdaki komutları çalıştırın. Arşiv dosyası adı, indirdiklerinize bağlı olarak farklı olabilir.
 
-**Çalışma zamanını ayıklamak için aşağıdaki komutu kullanın** :
+**Çalışma zamanını ayıklamak için aşağıdaki komutu kullanın**:
 
 ```bash
 mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-5.0.0-osx-x64.tar.gz -C "$HOME/dotnet"
@@ -132,7 +132,7 @@ export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```
 
-**SDK 'yı ayıklamak için aşağıdaki komutu kullanın** :
+**SDK 'yı ayıklamak için aşağıdaki komutu kullanın**:
 
 ```bash
 mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-5.0.100-osx-x64.tar.gz -C "$HOME/dotnet"
@@ -145,9 +145,9 @@ export PATH=$PATH:$HOME/dotnet
 >
 > Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
 >
-> - **Bash kabuğu** : *~/.bash_profile* , *~/,bashrc*
-> - **Korn kabuğu** : *~/,KSHRC* veya *. Profile*
-> - **Z kabuğu** : *~/,zshrc* veya *. zprofile*
+> - **Bash kabuğu**: *~/.bash_profile*, *~/,bashrc*
+> - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
+> - **Z kabuğu**: *~/,zshrc* veya *. zprofile*
 >
 > Kabuğunuz için uygun kaynak dosyayı düzenleyin ve `:$HOME/dotnet` var olan deyimin sonuna ekleyin `PATH` . Hiçbir `PATH` ifade dahil yoksa, ile yeni bir satır ekleyin `export PATH=$PATH:$HOME/dotnet` .
 >
