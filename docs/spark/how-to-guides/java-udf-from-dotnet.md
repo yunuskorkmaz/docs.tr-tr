@@ -6,26 +6,26 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: edf525102bf5503dcb51247b5fa590aa0d42b369
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 17f0ff611e68a5dab2032f78ef75912f314d88a5
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224120"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688273"
 ---
-# <a name="call-a-java-udf-from-your-net-for-apache-spark-application"></a><span data-ttu-id="91c42-103">Apache Spark uygulamasında .NET 'ten bir Java UDF çağrısı yapın</span><span class="sxs-lookup"><span data-stu-id="91c42-103">Call a Java UDF from your .NET for Apache Spark application</span></span>
+# <a name="call-a-java-udf-from-your-net-for-apache-spark-application"></a><span data-ttu-id="9a53c-103">Apache Spark uygulamasında .NET 'ten bir Java UDF çağrısı yapın</span><span class="sxs-lookup"><span data-stu-id="9a53c-103">Call a Java UDF from your .NET for Apache Spark application</span></span>
 
-<span data-ttu-id="91c42-104">Bu makalede, [Apache Spark uygulamasına yönelik .net](https://github.com/dotnet/spark) 'ten Java User-Defined IŞLEVINI (UDF) çağırmayı öğreneceksiniz.</span><span class="sxs-lookup"><span data-stu-id="91c42-104">In this article, you learn how to call a Java User-Defined Function (UDF) from your [.NET for Apache Spark](https://github.com/dotnet/spark) application.</span></span>
+<span data-ttu-id="9a53c-104">Bu makalede, [Apache Spark uygulamasına yönelik .net](https://github.com/dotnet/spark) 'ten Java User-Defined IŞLEVINI (UDF) çağırmayı öğreneceksiniz.</span><span class="sxs-lookup"><span data-stu-id="9a53c-104">In this article, you learn how to call a Java User-Defined Function (UDF) from your [.NET for Apache Spark](https://github.com/dotnet/spark) application.</span></span>
 
-1. <span data-ttu-id="91c42-105">Java UDF 'larınızı tanımlama ve bir jar içinde derleme-Bu adım, bir jar dosyasında zaten tanımlanmış bir UDF 'niz varsa gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="91c42-105">How to define your Java UDFs and compile them into a jar - this step is not needed if you already have a UDF defined in a jar file.</span></span> <span data-ttu-id="91c42-106">Bu durumda, tüm ihtiyacınız olan paket de dahil olmak üzere UDF işlevinin tam adıdır.</span><span class="sxs-lookup"><span data-stu-id="91c42-106">In which case, all you need is the full name of the UDF function including the package.</span></span>
-2. <span data-ttu-id="91c42-107">Java UDF 'nizi Apache Spark uygulamanızda .NET uygulamanıza kaydedin ve çağırın.</span><span class="sxs-lookup"><span data-stu-id="91c42-107">Register and call your Java UDF in your .NET for Apache Spark application.</span></span>
+1. <span data-ttu-id="9a53c-105">Java UDF 'larınızı tanımlama ve bir jar içinde derleme-Bu adım, bir jar dosyasında zaten tanımlanmış bir UDF 'niz varsa gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="9a53c-105">How to define your Java UDFs and compile them into a jar - this step is not needed if you already have a UDF defined in a jar file.</span></span> <span data-ttu-id="9a53c-106">Bu durumda, tüm ihtiyacınız olan paket de dahil olmak üzere UDF işlevinin tam adıdır.</span><span class="sxs-lookup"><span data-stu-id="9a53c-106">In which case, all you need is the full name of the UDF function including the package.</span></span>
+2. <span data-ttu-id="9a53c-107">Java UDF 'nizi Apache Spark uygulamanızda .NET uygulamanıza kaydedin ve çağırın.</span><span class="sxs-lookup"><span data-stu-id="9a53c-107">Register and call your Java UDF in your .NET for Apache Spark application.</span></span>
 
-## <a name="define-and-compile-your-java-udfs"></a><span data-ttu-id="91c42-108">Java UDF 'larınızı tanımlama ve derleme</span><span class="sxs-lookup"><span data-stu-id="91c42-108">Define and compile your Java UDFs</span></span>
+## <a name="define-and-compile-your-java-udfs"></a><span data-ttu-id="9a53c-108">Java UDF 'larınızı tanımlama ve derleme</span><span class="sxs-lookup"><span data-stu-id="9a53c-108">Define and compile your Java UDFs</span></span>
 
-1. <span data-ttu-id="91c42-109">Maven veya SBT projesi oluşturun ve aşağıdaki bağımlılıkları proje yapılandırma dosyasına ekleyin:</span><span class="sxs-lookup"><span data-stu-id="91c42-109">Create a Maven or SBT project and add the following dependencies into the project configuration file:</span></span>
+1. <span data-ttu-id="9a53c-109">Maven veya SBT projesi oluşturun ve aşağıdaki bağımlılıkları proje yapılandırma dosyasına ekleyin:</span><span class="sxs-lookup"><span data-stu-id="9a53c-109">Create a Maven or SBT project and add the following dependencies into the project configuration file:</span></span>
     1. `org.apache.spark.spark-core_2.11.<version>`
     2. `org.apache.spark.spark-sql_2.11.<version>`
-2. <span data-ttu-id="91c42-110">[İlgili arabirimi](https://github.com/apache/spark/blob/master/sql/core/src/main/java/org/apache/spark/sql/api/java/UDF1.java) (UDF 'nin imzasına göre) uygulayarak ve ilgili paketi aşağıda gösterildiği gibi basit bir örnekte Içeri AKTARARAK Java UDF 'nizi tanımlayın</span><span class="sxs-lookup"><span data-stu-id="91c42-110">Define your Java UDF by implementing the [relevant interface](https://github.com/apache/spark/blob/master/sql/core/src/main/java/org/apache/spark/sql/api/java/UDF1.java) (according to your UDF's signature) and importing the relevant package as shown below in a simple example</span></span>
+2. <span data-ttu-id="9a53c-110">[İlgili arabirimi](https://github.com/apache/spark/blob/master/sql/core/src/main/java/org/apache/spark/sql/api/java/UDF1.java) (UDF 'nin imzasına göre) uygulayarak ve ilgili paketi aşağıda gösterildiği gibi basit bir örnekte Içeri AKTARARAK Java UDF 'nizi tanımlayın</span><span class="sxs-lookup"><span data-stu-id="9a53c-110">Define your Java UDF by implementing the [relevant interface](https://github.com/apache/spark/blob/master/sql/core/src/main/java/org/apache/spark/sql/api/java/UDF1.java) (according to your UDF's signature) and importing the relevant package as shown below in a simple example</span></span>
 
     ```java
     package com.ScalaUdf.app; // Name of package where UDF is defined
@@ -40,14 +40,14 @@ ms.locfileid: "92224120"
     }
     ```
 
-3. <span data-ttu-id="91c42-111">Projenizi derleyin ve çalıştırılabilir jar, oluşturun ve paketleyin `UdfApp-0.0.1.jar` .</span><span class="sxs-lookup"><span data-stu-id="91c42-111">Compile and package your project to create and executable jar say `UdfApp-0.0.1.jar`.</span></span>
+3. <span data-ttu-id="9a53c-111">Projenizi derleyin ve çalıştırılabilir jar, oluşturun ve paketleyin `UdfApp-0.0.1.jar` .</span><span class="sxs-lookup"><span data-stu-id="9a53c-111">Compile and package your project to create and executable jar say `UdfApp-0.0.1.jar`.</span></span>
 
-## <a name="register-and-call-java-udfs-in-net-for-apache-spark"></a><span data-ttu-id="91c42-112">Apache Spark için .NET 'te Java UDF 'Leri kaydedin ve çağırın</span><span class="sxs-lookup"><span data-stu-id="91c42-112">Register and call Java UDFs in .NET for Apache Spark</span></span>
+## <a name="register-and-call-java-udfs-in-net-for-apache-spark"></a><span data-ttu-id="9a53c-112">Apache Spark için .NET 'te Java UDF 'Leri kaydedin ve çağırın</span><span class="sxs-lookup"><span data-stu-id="9a53c-112">Register and call Java UDFs in .NET for Apache Spark</span></span>
 
-1. <span data-ttu-id="91c42-113">[`RegisterJava`](https://github.com/dotnet/spark/blob/8dcdcdc7c60d5f42cba5a90f1346d854ab5bf7bb/src/csharp/Microsoft.Spark/Sql/UDFRegistration.cs#L424)Java UDF 'Nizi Spark SQL 'e kaydetmek için API 'yi kullanın.</span><span class="sxs-lookup"><span data-stu-id="91c42-113">Use the [`RegisterJava`](https://github.com/dotnet/spark/blob/8dcdcdc7c60d5f42cba5a90f1346d854ab5bf7bb/src/csharp/Microsoft.Spark/Sql/UDFRegistration.cs#L424) API to register your Java UDF with Spark SQL.</span></span>
-2. <span data-ttu-id="91c42-114">`DataFrame`İşlevini kullanarak UDF 'NIZI SQL tablosu olarak çağırmak istediğiniz öğesine kaydolun [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982) .</span><span class="sxs-lookup"><span data-stu-id="91c42-114">Register the `DataFrame` on which you want to call your UDF as an SQL Table using the [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982) function.</span></span>
-3. <span data-ttu-id="91c42-115">`SparkSession.Sql`Spark SQL kullanarak tablo görünümünde UDF 'yi çağırmak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="91c42-115">Use `SparkSession.Sql` to call the UDF on the table view using Spark SQL.</span></span>
-<span data-ttu-id="91c42-116">Yukarıdaki adımları göstermek için temel bir örnek:</span><span class="sxs-lookup"><span data-stu-id="91c42-116">A basic example to illustrate the above steps:</span></span>
+1. <span data-ttu-id="9a53c-113">[`RegisterJava`](https://github.com/dotnet/spark/blob/8dcdcdc7c60d5f42cba5a90f1346d854ab5bf7bb/src/csharp/Microsoft.Spark/Sql/UDFRegistration.cs#L424)Java UDF 'Nizi Spark SQL 'e kaydetmek için API 'yi kullanın.</span><span class="sxs-lookup"><span data-stu-id="9a53c-113">Use the [`RegisterJava`](https://github.com/dotnet/spark/blob/8dcdcdc7c60d5f42cba5a90f1346d854ab5bf7bb/src/csharp/Microsoft.Spark/Sql/UDFRegistration.cs#L424) API to register your Java UDF with Spark SQL.</span></span>
+2. <span data-ttu-id="9a53c-114">`DataFrame`İşlevini kullanarak UDF 'NIZI SQL tablosu olarak çağırmak istediğiniz öğesine kaydolun [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982) .</span><span class="sxs-lookup"><span data-stu-id="9a53c-114">Register the `DataFrame` on which you want to call your UDF as an SQL Table using the [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982) function.</span></span>
+3. <span data-ttu-id="9a53c-115">`SparkSession.Sql`Spark SQL kullanarak tablo görünümünde UDF 'yi çağırmak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="9a53c-115">Use `SparkSession.Sql` to call the UDF on the table view using Spark SQL.</span></span>
+<span data-ttu-id="9a53c-116">Yukarıdaki adımları göstermek için temel bir örnek:</span><span class="sxs-lookup"><span data-stu-id="9a53c-116">A basic example to illustrate the above steps:</span></span>
 
     ```csharp
     class Program
@@ -68,13 +68,13 @@ ms.locfileid: "92224120"
     }
     ```
 
-4. <span data-ttu-id="91c42-117">Bu uygulamayı kullanarak, `spark-submit` daha önce derlenen Java UDF jar öğesini seçeneğiyle geçirerek gönderebilirsiniz `--jars` :</span><span class="sxs-lookup"><span data-stu-id="91c42-117">Submit this application using `spark-submit` by passing the previously compiled Java UDF jar through the `--jars` option:</span></span>
+4. <span data-ttu-id="9a53c-117">Bu uygulamayı kullanarak, `spark-submit` daha önce derlenen Java UDF jar öğesini seçeneğiyle geçirerek gönderebilirsiniz `--jars` :</span><span class="sxs-lookup"><span data-stu-id="9a53c-117">Submit this application using `spark-submit` by passing the previously compiled Java UDF jar through the `--jars` option:</span></span>
 
     ```bash
-    spark-submit --master local --jars UdfApp-0.0.1.jar --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-3.0.x-0.12.1.jar InterRuntimeUDFs.exe
+    spark-submit --master local --jars UdfApp-0.0.1.jar --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-2-4_2.11-1.0.0.jar InterRuntimeUDFs.exe
     ```
 
-    <span data-ttu-id="91c42-118">Sonuç `dfUdf` veri çerçevesi, giriş sütununun her satırına, tarafından tanımlandığı şekilde 5 sayı eklenerek `JavaUdf` :</span><span class="sxs-lookup"><span data-stu-id="91c42-118">The resultant `dfUdf` DataFrame had the number 5 added to each row of the input column as defined by `JavaUdf`:</span></span>
+    <span data-ttu-id="9a53c-118">Sonuç `dfUdf` veri çerçevesi, giriş sütununun her satırına, tarafından tanımlandığı şekilde 5 sayı eklenerek `JavaUdf` :</span><span class="sxs-lookup"><span data-stu-id="9a53c-118">The resultant `dfUdf` DataFrame had the number 5 added to each row of the input column as defined by `JavaUdf`:</span></span>
 
     ```text
     +-------+
@@ -85,6 +85,6 @@ ms.locfileid: "92224120"
     +-------+
     ```
 
-## <a name="call-net-udf-from-scala-or-python-in-apache-spark"></a><span data-ttu-id="91c42-119">Apache Spark içindeki Scala veya Python 'tan .NET UDF 'i çağırma</span><span class="sxs-lookup"><span data-stu-id="91c42-119">Call .NET UDF from Scala or Python in Apache Spark</span></span>
+## <a name="call-net-udf-from-scala-or-python-in-apache-spark"></a><span data-ttu-id="9a53c-119">Apache Spark içindeki Scala veya Python 'tan .NET UDF 'i çağırma</span><span class="sxs-lookup"><span data-stu-id="9a53c-119">Call .NET UDF from Scala or Python in Apache Spark</span></span>
 
-<span data-ttu-id="91c42-120">Ayrıca, bir C# UDF 'yi, Isla veya Python 'da yazılmış bir Apache Spark uygulamadan [, mini kullanılan açık kaynak aracını](https://github.com/imback82/sparkdotnetudf)kullanarak kaydedebilir ve çağırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="91c42-120">You can also register and invoke a C# UDF from an Apache Spark application written in Scala or Python using [the sparkdotnetudf open source tool](https://github.com/imback82/sparkdotnetudf).</span></span>
+<span data-ttu-id="9a53c-120">Ayrıca, bir C# UDF 'yi, Isla veya Python 'da yazılmış bir Apache Spark uygulamadan [, mini kullanılan açık kaynak aracını](https://github.com/imback82/sparkdotnetudf)kullanarak kaydedebilir ve çağırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9a53c-120">You can also register and invoke a C# UDF from an Apache Spark application written in Scala or Python using [the sparkdotnetudf open source tool](https://github.com/imback82/sparkdotnetudf).</span></span>
