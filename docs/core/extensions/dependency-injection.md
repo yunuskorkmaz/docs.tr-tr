@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: 2199f51ab13bedd50af747ce33ceee7b6eaefd8f
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 3692b9e779d450f07d47599417349bb57f72ac36
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063149"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687576"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 'e bağımlılık ekleme
 
@@ -48,8 +48,8 @@ public class Worker : BackgroundService
 
 Sınıfı oluşturur ve doğrudan `MessageWriter` sınıfa bağlıdır. Önceki örnekte olduğu gibi sabit kodlu bağımlılıklar sorunlu olur ve aşağıdaki nedenlerden dolayı kaçınılması gerekir:
 
-- `MessageWriter`Farklı bir uygulamayla değiştirmek için, `MessageService` sınıfın değiştirilmesi gerekir.
-- `MessageWriter`Bağımlılıkları varsa, sınıf tarafından da yapılandırılmalıdır `MessageService` . Uygulamasına bağlı olarak, birden çok sınıfı olan büyük bir projede `MessageWriter` yapılandırma kodu uygulama genelinde dağılmış hale gelir.
+- `MessageWriter`Farklı bir uygulamayla değiştirmek için, `Worker` sınıfın değiştirilmesi gerekir.
+- `MessageWriter`Bağımlılıkları varsa, sınıf tarafından da yapılandırılmalıdır `Worker` . Uygulamasına bağlı olarak, birden çok sınıfı olan büyük bir projede `MessageWriter` yapılandırma kodu uygulama genelinde dağılmış hale gelir.
 - Bu uygulamanın birim testi zordur. Uygulamanın `MessageWriter` Bu yaklaşım ile mümkün olmayan bir sahte veya saplama sınıfı kullanması gerekir.
 
 Bağımlılık ekleme bu sorunları şu şekilde giderir:
@@ -95,7 +95,7 @@ static IHostBuilder CreateHostBuilder(string[] args) =>
 
 `LoggingMessageWriter`<xref:Microsoft.Extensions.Logging.ILogger%601>, oluşturucuda istediği öğesine bağlıdır. `ILogger<TCategoryName>`[Framework tarafından sağlanmış bir hizmettir](#framework-provided-services).
 
-Bağımlılık ekleme işlemini zincirleme bir biçimde kullanmak olağan dışı değildir. Her istenen bağımlılık, kendi bağımlılıklarını ister. Kapsayıcı grafikteki bağımlılıkları çözer ve tamamen çözümlenen hizmeti döndürür. Çözümlenmesi gereken, genellikle *bağımlılık ağacı* , *bağımlılık grafiği* veya *nesne grafiği* olarak adlandırılan toplu bağımlılıklar kümesi.
+Bağımlılık ekleme işlemini zincirleme bir biçimde kullanmak olağan dışı değildir. Her istenen bağımlılık, kendi bağımlılıklarını ister. Kapsayıcı grafikteki bağımlılıkları çözer ve tamamen çözümlenen hizmeti döndürür. Çözümlenmesi gereken, genellikle *bağımlılık ağacı*, *bağımlılık grafiği* veya *nesne grafiği* olarak adlandırılan toplu bağımlılıklar kümesi.
 
 Kapsayıcı, `ILogger<TCategoryName>` [(genel) açık türlerden](/dotnet/csharp/language-reference/language-specification/types#open-and-closed-types)yararlanarak çözümlenir, her [(genel) oluşturulan türü](/dotnet/csharp/language-reference/language-specification/types#constructed-types)kaydetme ihtiyacını ortadan kaldırır.
 
@@ -246,7 +246,7 @@ public class ExampleService
 }
 ```
 
-Daha fazla bilgi için bkz.
+Daha fazla bilgi için bkz:
 
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAdd%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient%2A>

@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 47c716db931dc912b80844fe69283b12d030c238
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 3a02ac52155971f480c7f0c338d4a2a9a7d1d81c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955583"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688026"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile yapılandırılmış akış
 
@@ -24,7 +24,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > * Netcat kullanarak bir veri akışı oluşturun
 > * Akış verilerini çözümlemek için Kullanıcı tanımlı işlevler ve parlak SQL kullanma
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Apache Spark uygulama için ilk .NET ise, temel bilgileri öğrenecek başlangıç [öğreticisiyle](get-started.md) başlayın.
 
@@ -47,7 +47,7 @@ Apache Spark uygulama için ilk .NET ise, temel bilgileri öğrenecek başlangı
 
 ## <a name="establish-and-connect-to-a-data-stream"></a>Bir veri akışı oluşturun ve bu akışa bağlanın
 
-Akış işlemeyi test etmenin popüler bir yolu **netcat**kullanmaktır. netcat ( *NC*olarak da bilinir) ağ bağlantılarından okuyup yazmanızı sağlar. Bir Terminal penceresi aracılığıyla netcat ile bir ağ bağlantısı kurarsınız.
+Akış işlemeyi test etmenin popüler bir yolu **netcat** kullanmaktır. netcat ( *NC* olarak da bilinir) ağ bağlantılarından okuyup yazmanızı sağlar. Bir Terminal penceresi aracılığıyla netcat ile bir ağ bağlantısı kurarsınız.
 
 ### <a name="create-a-data-stream-with-netcat"></a>Netcat ile veri akışı oluşturma
 
@@ -71,7 +71,7 @@ Akış işlemeyi test etmenin popüler bir yolu **netcat**kullanmaktır. netcat 
 
 ### <a name="create-a-sparksession"></a>Mini oturum oluşturma
 
-1. `using` *Mymini Streamingapp*içindeki *program.cs* dosyasının en üstüne aşağıdaki ek deyimlerini ekleyin:
+1. `using` *Mymini Streamingapp* içindeki *program.cs* dosyasının en üstüne aşağıdaki ek deyimlerini ekleyin:
 
    ```csharp
    using System;
@@ -115,7 +115,7 @@ Func<Column, Column> udfArray =
     Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
 ```
 
-Bu UDF, özgün dizeyi ( *Str*içinde bulunur) içeren bir dizi oluşturmak için netcat terminalinden aldığı her dizeyi işler ve özgün dizenin uzunluğu ile birleştirilmiş özgün dizenin önüne gelir.
+Bu UDF, özgün dizeyi ( *Str* içinde bulunur) içeren bir dizi oluşturmak için netcat terminalinden aldığı her dizeyi işler ve özgün dizenin uzunluğu ile birleştirilmiş özgün dizenin önüne gelir.
 
 Örneğin, Netcat terminalinde *Hello World* girilmesi, şu durumlarda bir dizi üretir:
 
@@ -145,14 +145,14 @@ StreamingQuery query = arrayDf
 
 ## <a name="run-your-code"></a>Kodunuzu çalıştırın
 
-Spark 'ta yapılandırılmış akış, bir dizi küçük **toplu iş**aracılığıyla verileri işler.  Programınızı çalıştırdığınızda, Netcat bağlantısını oluşturduğunuz komut istemi yazmaya başlayabilmeniz için izin verir. Bu komut istemine veri yazdıktan sonra ENTER tuşuna her bastığınızda, Spark girişi bir toplu iş olarak değerlendirir ve UDF 'yi çalıştırır.
+Spark 'ta yapılandırılmış akış, bir dizi küçük **toplu iş** aracılığıyla verileri işler.  Programınızı çalıştırdığınızda, Netcat bağlantısını oluşturduğunuz komut istemi yazmaya başlayabilmeniz için izin verir. Bu komut istemine veri yazdıktan sonra ENTER tuşuna her bastığınızda, Spark girişi bir toplu iş olarak değerlendirir ve UDF 'yi çalıştırır.
 
 ### <a name="use-spark-submit-to-run-your-app"></a>Uygulamanızı çalıştırmak için Spark-Gönder kullanın
 
 Yeni bir netcat oturumu başlattıktan sonra, yeni bir Terminal açın ve `spark-submit` aşağıdaki komuta benzer şekilde komutunu çalıştırın:
 
 ```powershell
-spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
+spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
 ```
 
 > [!NOTE]

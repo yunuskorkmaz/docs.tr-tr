@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: eb285465fcacc3e7d4ee60765c30497dcefbc737
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efebaf0a66863eae0f71fbf1158b80260d7469cf
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441069"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688182"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>Jupyıter not defterlerinde Apache Spark için .NET kullanın
 
@@ -48,7 +48,7 @@ Jupi Not defterleri ile çalışmak için iki şey olması gerekir.
 
 ## <a name="start-net-for-apache-spark"></a>Apache Spark için .NET 'i başlatın
 
-Hata ayıklama modunda Apache Spark için .NET 'i başlatmak üzere aşağıdaki komutu çalıştırın. Bu `spark-submit` komut bir işlem başlatır ve bir [mini oturum](xref:Microsoft.Spark.Sql.SparkSession)bağlantısı bekler. `microsoft-spark-<version>.jar`Kullandığınız Apache Spark ilgili .NET sürümü için yolunu sağladığınızdan emin olun.
+Hata ayıklama modunda Apache Spark için .NET 'i başlatmak üzere aşağıdaki komutu çalıştırın. Bu `spark-submit` komut bir işlem başlatır ve bir [mini oturum](xref:Microsoft.Spark.Sql.SparkSession)bağlantısı bekler. `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar`Kullandığınız Apache Spark ilgili .NET sürümü için yolunu sağladığınızdan emin olun.
 
 **Ubuntu**
 
@@ -111,7 +111,7 @@ Jupyıter ile etkileşim kurmak için farklı arabirimler kullanabilirsiniz. Tar
 >- [.NET etkileşimli not defterleri uzantısı](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode)
 
 1. VS Code’u açın.
-1. Komut paleti **görünümünü > komut paleti** ' ni açın.
+1. Komut paleti **görünümünü > komut paleti**' ni açın.
 
     Komut paleti göründüğünde, yeni bir .NET etkileşimli not defteri oluşturmak için aşağıdaki komutu girin:
 

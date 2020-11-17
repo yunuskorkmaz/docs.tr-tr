@@ -1,16 +1,16 @@
 ---
 title: .NET 5’teki yenilikler
 description: .NET Core 'un bir sonraki gelişiminde bir çoklu platform ve açık kaynaklı bir geliştirme platformu olan .NET 5 hakkında bilgi edinin.
-ms.date: 11/06/2020
+ms.date: 11/16/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 10c1345f4a0a37e04377250da9a7b6df7df3a105
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 04f72675744426f7dbc99e5978a9ea4bbb8015b1
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594545"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687596"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5’teki yenilikler
 
@@ -62,7 +62,7 @@ Yeni uygulama geliştirme, `net5.0` sınıf kitaplıkları da dahil olmak üzere
 
 .NET 5 uygulamaları yazan geliştiricilerin en son C# sürümüne ve özelliklerine erişimi olur. .NET 5, dile birçok yeni özellik getiren C# 9 ile eşleştirilmiş. Aşağıda bazı önemli noktalar verilmiştir:
 
-- Kayıtlar: değer türleri gibi davranan ve yeni anahtar sözcüğünü dile tanıtan değişmez başvuru türleri `with` .
+- Kayıtlar: değer tabanlı eşitlik semantiklerine sahip başvuru türleri ve yeni bir ifade tarafından desteklenen yıkıcı olmayan mutasyon `with` .
 - İlişkisel desen eşleştirme: desen eşleştirme yeteneklerini, karşılaştırma değerlendirmeleri ve ifadeleri için, mantıksal desenler ve yeni anahtar sözcükler `and` ,, ve dahil olmak üzere ilişkisel Işleçlere genişletir `or` `not` .
 - En üst düzey deyimler: C# ' ın benimseme ve öğrenmesinin bir yolu olarak, `Main` aşağıdaki geçerli olduğu sürece yöntem atlanabilir ve uygulama basit olur:
 
@@ -140,35 +140,6 @@ Ve [ üzerindeSystem.Text.Js](../standard/serialization/system-text-json-overvie
 - [Özel dönüştürücülerin null işlemesine izin ver](../standard/serialization/system-text-json-converters-how-to.md#handle-null-values)
 - [JsonSerializerOptions 'ı Kopyala](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
 - [Web varsayılanları ile JsonSerializerOptions oluşturma](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)
-
-## <a name="net-maui"></a>.NET MAUı
-
-.NET MAUı, giderek daha popüler Xamarin. Forms araç seti 'nin bir evrimi ve [DotNet/MAUI](https://github.com/dotnet/maui)'de GitHub 'da açık kaynaktır. .Net MAUı sayesinde, .NET geliştiricileri için seçim, tüm modern iş yüklerini destekleyen tek bir yığın sağlayan basitleştirilmiştir: Android, iOS, macOS ve Windows. .NET MAUı ile birden çok platformu ve cihazı hedefleyen tek bir proje geliştirici deneyimi edinirsiniz.
-
-> [!IMPORTANT]
-> .NET MAUı erken önizlemededir. Örnek kaynak kodu, [Xamarin/NET6-Samples](https://github.com/xamarin/net6-samples)adresinde bulunabilir.
-
-### <a name="model-view-update-pattern"></a>Model-Görünüm-güncelleştirme modeli
-
-Geliştiriciler modern geliştirme düzenlerini sevdiğinde. UI geliştirmeye yönelik akıcı bir yaklaşım, "karaağaç mimarisi" tarafından ilham [Model-View-Update](https://elmprogramming.com/model-view-update-part-1.html) veya MVU deseninin bir sürümüdür. MVU veri ve durum yönetiminin tek yönlü bir akışını ve yalnızca gerekli değişiklikleri uygulayarak Kullanıcı arabirimini hızla güncelleştiren bir kod ilk geliştirme deneyimi yükseltir.
-
-Örnek olarak, MVU modelini kullanarak .NET MAUı 'de yazılmış aşağıdaki sayacı göz önünde bulundurun:
-
-```csharp
-readonly State<int> _count = 0;
-
-[Body]
-View body() => new StackLayout
-{
-    new Label("Welcome to .NET MAUI!"),
-    new Button(
-        () => $"You clicked {_count} times.",
-        () => ++ _count.Value)
-    )
-};
-```
-
-Daha fazla bilgi için bkz. [.net MAUI yol haritası](https://github.com/dotnet/maui/wiki/Roadmap)ve [.net MAUI makalesine giriş](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

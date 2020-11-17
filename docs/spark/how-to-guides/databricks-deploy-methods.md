@@ -4,12 +4,12 @@ description: Spark-gönder ve ayarla jar kullanarak Databricks 'e yönelik bir .
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: fd04f78c47b34ca07042a4e60e2214f5f1ecac55
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 4d37383ccb3c9b311e0fbd0ada195ac20113e505
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955003"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688208"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Databricks 'e Apache Spark iş için .NET gönderme
 
@@ -22,7 +22,7 @@ Apache Spark işleri için .NET 'i Databricks 'e göndermek için [Spark-gönder
 1. Databricks çalışma alanınıza gidin ve bir iş oluşturun. İşiniz için bir başlık seçin ve ardından **Spark-gönder**' i seçin. Aşağıdaki parametreleri iş yapılandırmasına yapıştırın ve **Onayla**' yı seçin.
 
     ```
-    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
     ```
 
     > [!NOTE]
@@ -40,7 +40,7 @@ Alternatif olarak, databricks 'e Apache Spark işleri için .NET göndermek üze
 
 1. Databricks kümenize gidin ve sol taraftaki menüden **işler** ' i ve ardından **jar ayarla**' yı seçin.
 
-2. Uygun olanını karşıya yükleyin `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` .
+2. Uygun olanını karşıya yükleyin `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar` .
 
 3. Aşağıdaki parametreleri, yerine yayımladığınız yürütülebilir dosya için doğru adı içerecek şekilde değiştirin `<your-app-name>` :
 
@@ -62,7 +62,7 @@ Alternatif olarak, databricks 'e Apache Spark işleri için .NET göndermek üze
     databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
     ```
 
-3. Uygulamanızda Kullanıcı tanımlı işlevleriniz varsa, bağımlılıklarıyla birlikte Kullanıcı tanımlı işlevler içeren dll 'Ler gibi uygulama derlemelerinin her bir *Microsoft. spark. Worker*çalışma dizinine yerleştirilmesi gerekir.
+3. Uygulamanızda Kullanıcı tanımlı işlevleriniz varsa, bağımlılıklarıyla birlikte Kullanıcı tanımlı işlevler içeren dll 'Ler gibi uygulama derlemelerinin her bir *Microsoft. spark. Worker* çalışma dizinine yerleştirilmesi gerekir.
 
     Uygulama derlemelerinizi Databricks kümenize yükleyin:
 

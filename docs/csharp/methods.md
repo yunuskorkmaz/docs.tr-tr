@@ -4,12 +4,12 @@ description: Yöntemlere, yöntem parametrelerine ve yöntem dönüş değerleri
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: d5ca96ab3a07b85fa525dd06c975f8e3221c82e8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ea07553d20ea6c18bac048a2e8d697f665bfb949
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223664"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687464"
 ---
 # <a name="methods-in-c"></a>İçindeki Yöntemler (C#)
 
@@ -45,7 +45,7 @@ Aşağıdaki örnek, beş yöntem içeren adlı bir sınıfı tanımlar `Motorcy
 
 ## <a name="method-invocation"></a>Yöntem çağırma
 
-Yöntemler *örnek* veya *statik*olabilir. Örnek yöntemini çağırmak için bir nesnesi örneği oluşturabilir ve yöntemi bu nesnede çağırabilirsiniz. örnek yöntemi Bu örnek ve verileri üzerinde çalışır. Yöntemin ait olduğu türün adına başvurarak statik bir yöntem çağırılır; statik yöntemler örnek verilerinde çalışmaz. Bir nesne örneği aracılığıyla statik bir yöntemi çağırma girişimi bir derleyici hatası oluşturur.
+Yöntemler *örnek* veya *statik* olabilir. Örnek yöntemini çağırmak için bir nesnesi örneği oluşturabilir ve yöntemi bu nesnede çağırabilirsiniz. örnek yöntemi Bu örnek ve verileri üzerinde çalışır. Yöntemin ait olduğu türün adına başvurarak statik bir yöntem çağırılır; statik yöntemler örnek verilerinde çalışmaz. Bir nesne örneği aracılığıyla statik bir yöntemi çağırma girişimi bir derleyici hatası oluşturur.
 
 Bir yöntemi çağırmak, bir alana erişme gibidir. Nesne adından sonra (bir örnek yöntemi arıyorsanız) veya tür adı (bir `static` yöntemi çağırırken), bir nokta, yöntemin adı ve parantez ekleyin. Bağımsız değişkenler parantez içinde listelenir ve virgülle ayrılır.
 
@@ -158,7 +158,7 @@ Aşağıdaki örnek, `ExampleMethod` yöntemi üç kez çağırır.  İlk iki y�
 
 [!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 
-İsteğe bağlı parametrelerin kullanımı, *aşırı yükleme çözünürlüğünü*etkiler veya C# derleyicisinin bir yöntem çağrısı tarafından hangi belirli aşırı yükün çağrılması gerektiğini belirleyen yöntemi aşağıda gösterildiği gibi:
+İsteğe bağlı parametrelerin kullanımı, *aşırı yükleme çözünürlüğünü* etkiler veya C# derleyicisinin bir yöntem çağrısı tarafından hangi belirli aşırı yükün çağrılması gerektiğini belirleyen yöntemi aşağıda gösterildiği gibi:
 
 - Bir yöntem, Dizin Oluşturucu veya Oluşturucu, parametrelerinden her biri isteğe bağlı veya bir konuma göre, çağırma deyimindeki tek bir bağımsız değişkene ve bu bağımsız değişken parametre türüne dönüştürülebileceğinden yürütme için bir adaydır.
 - Birden fazla aday bulunursa, tercih edilen dönüştürmeler için aşırı yükleme çözümleme kuralları, açıkça belirtilen bağımsız değişkenlere uygulanır. İsteğe bağlı parametreler için Atlanan bağımsız değişkenler yoksayılır.
@@ -184,7 +184,7 @@ Bir yöntemden döndürülen bir değer kullanmak için, çağırma yöntemi yö
 
 Bu durumda, `result` bir değeri depolamak için yerel bir değişken kullanmak isteğe bağlıdır. Kodun okunabilirliğini yardımcı olabilir veya metodun tüm kapsamı için bağımsız değişkenin özgün değerini depolamanız gerekirse gerekli olabilir.
 
-Bazen yönteminizin tek bir değerden fazlasını döndürmesini istersiniz. C# 7,0 ' den başlayarak, *kayıt düzeni türlerini* ve *demet sabit*değerlerini kullanarak bunu kolayca yapabilirsiniz. Demet türü, demet öğelerinin veri türlerini tanımlar. Demet sabit değerleri, döndürülen tanımlama grubunun gerçek değerlerini sağlar. Aşağıdaki örnekte, `(string, string, string, int)` yöntemi tarafından döndürülen demet türünü tanımlar `GetPersonalInfo` . İfade, `(per.FirstName, per.MiddleName, per.LastName, per.Age)` tanımlama grubu değişmez değeri; Yöntem, bir nesnenin yaş ve adının yanı sıra birinci, orta ve soyadı döndürür `PersonInfo` .
+Bazen yönteminizin tek bir değerden fazlasını döndürmesini istersiniz. C# 7,0 ' den başlayarak, *kayıt düzeni türlerini* ve *demet sabit* değerlerini kullanarak bunu kolayca yapabilirsiniz. Demet türü, demet öğelerinin veri türlerini tanımlar. Demet sabit değerleri, döndürülen tanımlama grubunun gerçek değerlerini sağlar. Aşağıdaki örnekte, `(string, string, string, int)` yöntemi tarafından döndürülen demet türünü tanımlar `GetPersonalInfo` . İfade, `(per.FirstName, per.MiddleName, per.LastName, per.Age)` tanımlama grubu değişmez değeri; Yöntem, bir nesnenin yaş ve adının yanı sıra birinci, orta ve soyadı döndürür `PersonInfo` .
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)

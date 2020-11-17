@@ -2,12 +2,12 @@
 title: .NET Core 'da EventCounters
 description: Bu makalede, olaylarınızın ne olduğunu, nasıl uygulanacağını ve bunları nasıl kullanacağınızı öğreneceksiniz.
 ms.date: 08/07/2020
-ms.openlocfilehash: be273776b888f13893fc694a111093cca1fa8a5e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 212cd6b495785dcd091187f97a1b5e44e5597a4a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955323"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687648"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 'da EventCounters
 
@@ -17,7 +17,7 @@ EventCounters, hafif, platformlar arası ve neredeyse gerçek zamanlı performan
 
 .NET Core çalışma zamanı ve birkaç .NET kitaplığı, .NET Core 3,0 ' den başlayarak EventCounters kullanarak temel tanılama bilgilerini yayımlar. .NET çalışma zamanı tarafından sunulan EventCounters dışında, kendi Eventsayaçlarınızı uygulamayı seçebilirsiniz. EventCounters, çeşitli ölçümleri izlemek için kullanılabilir.
 
-EventCounters, bir parçası olarak bulunur <xref:System.Diagnostics.Tracing.EventSource> ve otomatik olarak dinleyici araçlarına düzenli olarak gönderilir. İçindeki tüm diğer olaylar gibi <xref:System.Diagnostics.Tracing.EventSource> , bunlar hem işlem içi hem de işlem dışı <xref:System.Diagnostics.Tracing.EventListener> ve eventpipe ile tüketilebilir. Bu makale, EventCounters 'in platformlar arası özelliklerine odaklanmaktadır ve özellikle PerfView ve ETW (Windows için olay Izleme) özelliğini dışlar, ancak her ikisi de EventCounters ile kullanılabilir.
+EventCounters, bir parçası olarak bulunur <xref:System.Diagnostics.Tracing.EventSource> ve otomatik olarak dinleyici araçlarına düzenli olarak gönderilir. İçindeki tüm diğer olaylar gibi <xref:System.Diagnostics.Tracing.EventSource> , bunlar hem işlem içi hem de işlem dışı <xref:System.Diagnostics.Tracing.EventListener> ve [eventpipe](./eventpipe.md)ile tüketilebilir. Bu makale, EventCounters 'in platformlar arası özelliklerine odaklanmaktadır ve özellikle PerfView ve ETW (Windows için olay Izleme) özelliğini dışlar, ancak her ikisi de EventCounters ile kullanılabilir.
 
 ![-Proc ve proc dışı diyagram görüntüsü EventCounters](media/event-counters.svg)
 
@@ -124,7 +124,7 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 };
 ```
 
-, <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType> Toplam kilit çekişmesi sayısı artışını raporlamak için API 'yi kullanır. <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>Özelliği isteğe bağlıdır, ancak kullanıldığında sayacın en iyi gösterileceği zaman aralığı için bir ipucu sağlayabilir. Örneğin, kilit çakışması sayısı en iyi _sayı_olarak, <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> bir saniye olarak ayarlanır. Görüntüleme ücreti, farklı türlerde hız sayaçlarına göre ayarlanabilir.
+, <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType> Toplam kilit çekişmesi sayısı artışını raporlamak için API 'yi kullanır. <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>Özelliği isteğe bağlıdır, ancak kullanıldığında sayacın en iyi gösterileceği zaman aralığı için bir ipucu sağlayabilir. Örneğin, kilit çakışması sayısı en iyi _sayı_ olarak, <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> bir saniye olarak ayarlanır. Görüntüleme ücreti, farklı türlerde hız sayaçlarına göre ayarlanabilir.
 
 > [!NOTE]
 > , <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> [DotNet sayaçları](dotnet-counters.md)tarafından kullanılmaz ve olay dinleyicileri bunu kullanmak için gerekli değildir. _not_

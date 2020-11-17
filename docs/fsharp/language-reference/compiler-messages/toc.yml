@@ -13,3 +13,5 @@
       href: ./fs0008.md
     - name: FS0009 - Doğrulanamayabilecek kod
       href: ./fs0009.md
+    - name: FS0025 - Tamamlanmamış desen eşleşmesi
+      href: ./fs0025.md

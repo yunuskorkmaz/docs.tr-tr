@@ -2,12 +2,12 @@
 title: Günlüğe kaydetme ve izleme-.NET Core
 description: .NET Core günlüğe kaydetme ve izlemeye giriş.
 ms.date: 10/12/2020
-ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 9af04cceeef3fbfb8392eb91667c21374511548a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439930"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687589"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core günlüğe kaydetme ve izleme
 
@@ -55,7 +55,7 @@ Aşağıdaki API 'Ler daha fazla olay yönelimlidir. Basit dizeleri günlüğe k
   - Yalnızca seri hale getirilebilir nesnelerin izlenmesini sağlar.
   - , EventSource öğesini kullanmak için yapılandırılmış herhangi bir [EventListener](xref:System.Diagnostics.Tracing.EventListener) örneği aracılığıyla işlem içi tüketilebilir.
   - Şu yollarla işlem dışı tüketilebilir:
-    - Tüm platformlarda .NET Core EventPipe
+    - Tüm platformlarda [.NET Core EventPipe](./eventpipe.md)
     - [Windows için olay Izleme (ETW)](/windows/win32/etw/event-tracing-portal)
     - [Linux için LTTng izleme çerçevesi](https://lttng.org/)
       - İzlenecek yol: [PerfCollect kullanarak bir LTTng Izlemesi toplayın](trace-perfcollect-lttng.md).

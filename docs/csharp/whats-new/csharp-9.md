@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: dbc104cb0bbfc965b0cc055429713538f62ed0e8
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557226"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687366"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -30,13 +30,13 @@ C# 9,0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
 - Modül başlatıcılar
 - Kısmi yöntemlere yönelik yeni özellikler
 
-C# 9,0, **.NET 5** ' te desteklenir. Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../language-reference/configure-language-version.md).
+C# 9,0, **.NET 5**' te desteklenir. Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../language-reference/configure-language-version.md).
 
 [.Net İndirmeleri sayfasından](https://dotnet.microsoft.com/download)en son .NET SDK 'sını indirebilirsiniz.
 
 ## <a name="record-types"></a>Kayıt türleri
 
-C# 9,0, eşitlik için değer semantiğini sağlamak üzere birleştirilmiş Yöntemler sağlayan bir başvuru türü olan * *_kayıt türlerini_* tanıtır. Kayıtlar varsayılan olarak sabittir.
+C# 9,0, eşitlik için değer semantiğini sağlamak üzere birleştirilmiş Yöntemler sağlayan bir başvuru türü olan **_kayıt türlerini_* tanıtır. Kayıtlar varsayılan olarak sabittir.
 
 Kayıt türleri, .NET 'te değişmez başvuru türleri oluşturmayı kolaylaştırır. Geçmişte, .NET türleri büyük ölçüde başvuru türleri olarak sınıflandırılır (sınıflar ve anonim türler dahil) ve değer türleri (yapılar ve tanımlama birimleri dahil). Değişmez değer türleri önerilirken, değişebilir değer türleri genellikle hata sunmaz. Değer tür değişkenleri değerleri tutar, böylece değer türleri yöntemlere geçirildiğinde orijinal verilerin bir kopyasına değişiklikler yapılır.
 
@@ -104,9 +104,13 @@ Son olarak, destek [ `with` ifadelerini](../language-reference/operators/with-ex
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-Yukarıdaki satır `Person` `LastName` , özelliğin kopyası olduğu yeni bir kayıt oluşturur `person` `FirstName` `"Paul"` . Bir ifadede dilediğiniz sayıda özelliği ayarlayabilirsiniz `with` .
+Önceki satır `Person` `LastName` , özelliğinin bir kopyası olduğu `person` ve olduğu yeni bir kayıt oluşturur `FirstName` `"Paul"` . Bir ifadede dilediğiniz sayıda özelliği ayarlayabilirsiniz `with` . Ayrıca, `with` tam bir kopya oluşturmak için ifadeleri de kullanabilirsiniz. Değiştirilecek özellikler için boş kümesi belirtirsiniz:
+
+:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="WithCopy":::
 
 "Clone" yöntemi dışındaki birleştirilmiş üyelerin herhangi biri sizin tarafınızdan yazılabilir. Bir kayıt türünün herhangi bir sentezlenmiş yöntemin imzasıyla eşleşen bir yöntemi varsa, derleyici bu yöntemi birleştirmez. Önceki `Dog` kayıt örneği örnek olarak bir el kodlu <xref:System.String.ToString> yöntem içerir.
+
+Kayıt türleri hakkında daha fazla bilgi için bkz. kayıtlar öğreticisinde bu [araştırma](../tutorials/exploration/records.md) .
 
 ## <a name="init-only-setters"></a>Yalnızca init ayarlayıcılar
 
@@ -244,9 +248,9 @@ Son olarak, artık [Yerel işlevlere](../programming-guide/classes-and-structs/l
 
 Kod Oluşturucu, Roslyn Analysis API 'Lerini kullanarak öznitelikleri veya diğer kod öğelerini okur. Bu bilgilerden, derlemeye yeni kod ekler. Kaynak oluşturucuları yalnızca kod ekleyebilir; Bu kişiler, derlemede var olan herhangi bir kodu değiştirmesine izin verilmez.
 
-Kod üreticileri için eklenen iki özellik, * **kısmi Yöntem sözdizimi** _ ve _*_Modül başlatıcıları_*_ için uzantılardır. Birincisi, kısmi metotlarda yapılan değişiklikler. C# 9,0 öncesi, kısmi Yöntemler, bir `private` erişim değiştiricisi `void` belirtmemelidir, geri dönemeyebilir ve parametrelere sahip olamaz `out` . Bu kısıtlamalar, hiçbir yöntem uygulama sağlanmazsa, derleyicinin kısmi yönteme yapılan tüm çağrıları kaldırmasının anlamına gelir. C# 9,0 bu kısıtlamaları ortadan kaldırır, ancak kısmi Yöntem bildirimlerinin bir uygulamaya sahip olmasını gerektirir. Kod oluşturucuları, bu uygulamayı sağlayabilir. Yeni bir değişiklik yapmaktan kaçınmak için, derleyici eski kuralları takip etmek üzere bir erişim değiştiricisi olmadan herhangi bir kısmi yöntemi dikkate alır. Kısmi Yöntem `private` erişim değiştiricisini içeriyorsa, yeni kurallar bu kısmi yöntemi yönetir.
+Kod üreticileri için eklenen iki özellik, ***kısmi Yöntem sözdizimi** _ ve _*_Modül başlatıcıları_*_ için uzantılardır. Birincisi, kısmi metotlarda yapılan değişiklikler. C# 9,0 öncesi, kısmi Yöntemler, bir `private` erişim değiştiricisi `void` belirtmemelidir, geri dönemeyebilir ve parametrelere sahip olamaz `out` . Bu kısıtlamalar, hiçbir yöntem uygulama sağlanmazsa, derleyicinin kısmi yönteme yapılan tüm çağrıları kaldırmasının anlamına gelir. C# 9,0 bu kısıtlamaları ortadan kaldırır, ancak kısmi Yöntem bildirimlerinin bir uygulamaya sahip olmasını gerektirir. Kod oluşturucuları, bu uygulamayı sağlayabilir. Yeni bir değişiklik yapmaktan kaçınmak için, derleyici eski kuralları takip etmek üzere bir erişim değiştiricisi olmadan herhangi bir kısmi yöntemi dikkate alır. Kısmi Yöntem `private` erişim değiştiricisini içeriyorsa, yeni kurallar bu kısmi yöntemi yönetir.
 
-Kod üreticileri için ikinci yeni özellik _ * _Modül başlatıcıları_ * *. Modül başlatıcıları, <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> kendisine eklenmiş özniteliği olan yöntemlerdir. Bu yöntemler, tüm modülün içindeki başka bir alan erişimi veya yöntem çağrısından önce çalışma zamanı tarafından çağırılır. Modül başlatıcısı yöntemi:
+Kod üreticileri için ikinci yeni özellik _ *_Modül başlatıcıları_* *. Modül başlatıcıları, <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> kendisine eklenmiş özniteliği olan yöntemlerdir. Bu yöntemler, tüm modülün içindeki başka bir alan erişimi veya yöntem çağrısından önce çalışma zamanı tarafından çağırılır. Modül başlatıcısı yöntemi:
 
 - Statik olmalıdır
 - Parametresiz olmalıdır

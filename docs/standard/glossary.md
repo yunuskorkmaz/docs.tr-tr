@@ -1,14 +1,13 @@
 ---
 title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
-ms.date: 10/13/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.date: 11/16/2020
+ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224411"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687785"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -52,15 +51,22 @@ ASP.NET 'in platformlar arası, yüksek performanslı, açık kaynaklı bir uygu
 
 *.dll* / Uygulamalar veya diğer derlemeler tarafından çağrılabilecek bir API koleksiyonu içerebilen bir. dll *. exe* dosyası.
 
-Bir bütünleştirilmiş kod, arabirimler, sınıflar, yapılar, numaralandırmalar ve temsilciler gibi türler içerebilir. Projenin *bin* klasöründeki derlemeler bazen *ikili dosyalar*olarak adlandırılır. Ayrıca bkz. [kitaplık](#library).
+Bir bütünleştirilmiş kod, arabirimler, sınıflar, yapılar, numaralandırmalar ve temsilciler gibi türler içerebilir. Projenin *bin* klasöründeki derlemeler bazen *ikili dosyalar* olarak adlandırılır. Ayrıca bkz. [kitaplık](#library).
 
 ## <a name="bcl"></a>BCL
 
-Temel sınıf kitaplığı. *Çerçeve kitaplıkları*olarak da bilinir.
+Temel sınıf kitaplığı.
 
 Sistemi oluşturan kitaplıkların bir kümesi. \* (ve sınırlı bir ölçüde Microsoft. \* ) öznitelikleri. BCL, ASP.NET Core gibi daha üst düzey uygulama çerçevelerinin üzerine inşa eden genel amaçlı, alt düzey bir çerçevedir.
 
-[.NET 5 (ve .NET Core) ve sonraki SÜRÜMLERIN](#net-5-and-later-versions) BCL kaynak kodu, [.NET çalışma zamanı deposunda](https://github.com/dotnet/runtime)bulunur. .NET 'in bu yeni uygulamasına yönelik BCL API 'Lerinin çoğu .NET Framework de mevcuttur. bu sayede, bu kaynak kodu .NET Framework BCL kaynak kodunun bir çatalı olarak düşünebilirsiniz.
+[.NET 5 (ve .NET Core) ve sonraki SÜRÜMLERIN](#net-5-and-later-versions) BCL kaynak kodu, [.NET çalışma zamanı deposunda](https://github.com/dotnet/runtime)bulunur. Bu BCL API 'lerinin çoğu .NET Framework de mevcuttur. bu sayede, bu kaynak kodu .NET Framework BCL kaynak kodunun bir çatalı olarak düşünebilirsiniz.
+
+Aşağıdaki terimler genellikle BCL 'nin başvurduğu API 'lerin aynı koleksiyonuna başvurur:
+
+- [çekirdek .NET kitaplıkları](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [çerçeve kitaplıkları](#framework-libraries)
+- [çalışma zamanı kitaplıkları](#runtime)
+- [Paylaşılan çerçeve](#shared-framework)
 
 ## <a name="clr"></a>CLR
 
@@ -106,12 +112,18 @@ Genel olarak, belirli bir teknolojiyi temel alan uygulamaların geliştirilmesin
 
 "Framework" sözcüğünün aşağıdaki koşullarda farklı anlamları vardır:
 
+- [çerçeve kitaplıkları](#framework-libraries)
 - [.NET Framework](#net-framework)
+- [Paylaşılan çerçeve](#shared-framework)
 - [hedef çerçeve](#target-framework)
 - [TFD (hedef çerçeve bilinen adı)](#tfm)
 - [çerçeveye bağımlı uygulama](../core/deploying/index.md#publish-framework-dependent)
 
-Eski .NET belgelerinde, "Framework" Bazen bir [.NET uygulamasını](#implementation-of-net)ifade eder. Örneğin, bir makale bir Framework .NET 5 ' i çağırabilir.
+Bazen "Framework" bir [.NET uygulamasını](#implementation-of-net)ifade eder. Örneğin, bir makale bir Framework .NET 5 ' i çağırabilir.
+
+## <a name="framework-libraries"></a>çerçeve kitaplıkları
+
+Anlamı bağlama bağlıdır. , [.NET 5 (ve .NET Core) ve sonraki sürümler](#net-5-and-later-versions)için çerçeve kitaplıklarına başvurabilir ve bu durumda [BCL](#bcl) 'nin başvurduğu kitaplıklara başvurur. Ayrıca, BCL üzerinde derleme ve Web uygulamaları için ek API 'Ler sağlama ASP.NET Core Framework kitaplıklarına da başvurabilir.
 
 ## <a name="gc"></a>GC
 
@@ -145,7 +157,7 @@ Just-In-Time derleyicisi.
 .NET uygulamalarına örnek olarak şunlar verilebilir:
 
 - [.NET Framework](#net-framework)
-- [.NET 5 ve sonraki sürümleri (.NET Core 2.1-3.1 dahil)](#net-5-and-later-versions)
+- [.NET 5 ve sonraki sürümler (.NET Core 2.1-3.1 dahil)](#net-5-and-later-versions)
 - [Evrensel Windows Platformu (UWP)](#uwp)
 - [Mono](#mono)
 
@@ -258,21 +270,34 @@ Genel olarak, yönetilen programın yürütme ortamı. İşletim sistemi çalı�
 - .NET Native (UWP için)
 - Mono çalışma zamanı
 
-"Runtime" sözcüğünün aşağıdaki bağlamlarda farklı bir anlamı vardır:
+"Runtime" sözcüğünün bazı bağlamlarda farklı anlamları vardır:
 
-* [.Net indirme sayfası](https://dotnet.microsoft.com/download).
+* .Net [5,0 indirme sayfasında](https://dotnet.microsoft.com/download/dotnet/5.0) *.NET çalışma zamanı* .
 
-  Burada "Runtime" burada [clr](#clr) 'nin bir makineye indirip yükleyebilecekleri [BCL](#bcl) (çerçeve kitaplıkları) ile birlikte, makineye [bağlı](../core/deploying/index.md#publish-framework-dependent) uygulamaları makinede çalıştırabilmeniz için bir makineye indirebilir ve yükleyebilirsiniz.
+  *.NET çalışma zamanını* veya *ASP.NET Core çalışma zamanı* gibi diğer çalışma zamanlarını indirebilirsiniz. Bu kullanımdaki bir *çalışma zamanı* , makinede [çerçeveye bağımlı](../core/deploying/index.md#publish-framework-dependent) uygulama çalıştırmak için bir makineye yüklenmesi gereken bileşenler kümesidir. .NET çalışma zamanı, [BCL](#bcl)'Yi sağlayan [clr](#clr) ve .net [paylaşılan çerçevesini](#shared-framework)içerir.
 
-* [.NET 5 (ve .NET Core) ve sonraki sürümler](#net-5-and-later-versions)Için [çalışma zamanı tanımlayıcısı (RID)](../core/rid-catalog.md) .
+* *.NET çalışma zamanı kitaplıkları*
 
-  Burada "Runtime", .NET uygulamasının üzerinde çalıştığı işletim sistemi platformu ve CPU mimarisi anlamına gelir, örneğin: `linux-x64` .
+  [BCL](#bcl) 'in başvurduğu kitaplıkları ifade eder. Ancak, ASP.NET Core çalışma zamanı gibi diğer çalışma zamanları, BCL üzerinde derleme yapan ek kitaplıklar ile farklı [paylaşılan çerçeveler](#shared-framework)sahiptir.
 
-Eski .NET belgeleri bazen, aşağıdaki örneklerde olduğu gibi, [.NET uygulamasının bir uygulama](#implementation-of-net)açısından "Runtime" kullanır:
+* [Çalışma zamanı tanımlayıcısı (RID)](../core/rid-catalog.md).
 
-- "Çeşitli .NET çalışma zamanları .NET Standard belirli sürümlerini uygular."
-- "Birden çok çalışma zamanında çalıştırılması amaçlanan kitaplıkların bu çerçeveyi hedeflemesi gerekir." (.NET Standard başvurma)
-- "Çeşitli .NET çalışma zamanları .NET Standard belirli sürümlerini uygular. … Her .NET çalışma zamanı sürümü, desteklediği en yüksek .NET Standard sürümünü tanıtır... "
+  Burada *çalışma zamanı* , .NET uygulamasının üzerinde çalıştığı işletim sistemi platformu ve CPU mimarisi anlamına gelir, örneğin: `linux-x64` .
+
+* Bazen "Runtime", aşağıdaki örneklerde olduğu gibi bir [.NET uygulamasının](#implementation-of-net)anlamda kullanılması için kullanılır:
+
+  - "Çeşitli .NET çalışma zamanları .NET Standard belirli sürümlerini uygular. … Her .NET çalışma zamanı sürümü, desteklediği en yüksek .NET Standard sürümünü tanıtır... "
+  - "Birden çok çalışma zamanında çalıştırılması amaçlanan kitaplıkların bu çerçeveyi hedeflemesi gerekir." (.NET Standard başvurma)
+
+## <a name="shared-framework"></a>Paylaşılan çerçeve
+
+Anlamı bağlama bağlıdır. *.NET paylaşılan Framework* , [.NET çalışma zamanına](#runtime)dahil olan kitaplıkları ifade eder. Bu durumda, [.NET 5 (ve .NET Core) ve sonraki sürümlerin](#net-5-and-later-versions) *paylaşılan çatısı* , [BCL](#bcl) 'nin başvurduğu kitaplıklara başvurur.
+
+Başka paylaşılan çerçeveler vardır. *ASP.NET Core paylaşılan Framework* , Web Apps tarafından kullanılmak üzere BCL Plus ek API 'leri de içeren [ASP.NET Core çalışma zamanına](#runtime)dahil olan kitaplıklara başvurur.
+
+[Çerçeveye bağımlı uygulamalar](../core/deploying/index.md#publish-framework-dependent)için, paylaşılan çerçeve, uygulamayı çalıştıran makinedeki bir klasöre yüklenen derlemelerde bulunan kitaplıklardan oluşur. [Kendi içinde bulunan uygulamalar](../core/deploying/index.md#publish-self-contained)için, paylaşılan çerçeve derlemeleri uygulamaya dahildir.
+
+Daha fazla bilgi için bkz. [.NET Core temel elemanlarına derinlemesine bakış, 2. Bölüm: paylaşılan çerçeve](https://natemcmaster.com/blog/2018/08/29/netcore-primitives-2/).
 
 ## <a name="stack"></a>yığın
 
@@ -306,7 +331,7 @@ Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulama
 
 ## <a name="workload"></a>iş yükü
 
-Birisinin oluşturmakta olduğu bir uygulama türü. [Uygulama modelinden](#app-model)daha genel. Örneğin, bu dahil olmak üzere her .NET belgeleri sayfasının en üstünde, **Web**, **Mobil**, **bulut**, **Masaüstü**ve **Machine Learning \& verilerine**yönelik belgelere geçiş yapmanızı sağlayan **iş yükleri**için açılan bir liste vardır.
+Birisinin oluşturmakta olduğu bir uygulama türü. [Uygulama modelinden](#app-model)daha genel. Örneğin, bu dahil olmak üzere her .NET belgeleri sayfasının en üstünde, **Web**, **Mobil**, **bulut**, **Masaüstü** ve **Machine Learning \& verilerine** yönelik belgelere geçiş yapmanızı sağlayan **iş yükleri** için açılan bir liste vardır.
 
 Bazı bağlamlarda, *iş yükü* belirli bir uygulama türünü desteklemek üzere yüklemeyi seçebileceğiniz bir Visual Studio özellikleri koleksiyonuna başvurur. Bir örnek için bkz. [iş yükü seçme](../core/install/windows.md#select-a-workload).
 

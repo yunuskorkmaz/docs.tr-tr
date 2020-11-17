@@ -2,12 +2,12 @@
 title: DotNet-izleme aracı-.NET Core
 description: DotNet-Trace komut satırı aracını yükleme ve kullanma.
 ms.date: 11/21/2019
-ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 4a3694f6ed748779809ee4c4bfd941bb6f1ac490
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507234"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687635"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>DotNet-izleme performansı Analizi yardımcı programı
 
@@ -27,13 +27,13 @@ dotnet tool install --global dotnet-trace
 dotnet-trace [-h, --help] [--version] <command>
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet-trace`Araç:
 
 * , Platformlar arası bir .NET Core aracıdır.
 * Yerel bir profil oluşturucu olmadan çalışan bir işlemin .NET Core izlemelerinin toplanmasını mümkün bir şekilde sunar.
-* , `EventPipe` .NET Core çalışma zamanının platformlar arası teknolojisi etrafında oluşturulmuştur.
+* , [`EventPipe`](./eventpipe.md) .NET Core çalışma zamanı üzerine kurulmuştur.
 * Windows, Linux veya macOS 'ta aynı deneyimi sunar.
 
 ## <a name="options"></a>Seçenekler

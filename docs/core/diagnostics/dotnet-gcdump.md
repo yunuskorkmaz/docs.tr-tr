@@ -2,12 +2,12 @@
 title: DotNet-gcdump-.NET Core
 description: DotNet-gcdump komut satırı aracını yükleme ve kullanma.
 ms.date: 07/26/2020
-ms.openlocfilehash: a7b19f4d7487677b975621e7267a17894dae2e3a
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: c73afae9ecdfa907e9655634a0ac355cab4ef558
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656657"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687622"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Yığın Analizi Aracı (DotNet-gcdump)
 
@@ -27,9 +27,9 @@ dotnet tool install -g dotnet-gcdump
 dotnet-gcdump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
-`dotnet-gcdump`Genel araç, canlı .net IŞLEMLERININ GC (çöp toplayıcısı) dökümlerini toplamanın bir yoludur. Windows üzerinde ETW için platformlar arası bir alternatif olan EventPipe teknolojisini kullanır. GC dökümleri, hedef işlemde bir GC tetikleyerek, özel olayları açıp, nesne kökleri grafiğini Olay akışından yeniden oluşturarak oluşturulur. Bu işlem, işlem çalışırken ve en az ek yük ile GC dökümlerinin toplanmasını sağlar. Bu dökümler birkaç senaryo için yararlıdır:
+`dotnet-gcdump`Genel araç, [eventpipe](./eventpipe.md)kullanarak canlı .net Işlemlerinin GC (çöp toplayıcısı) dökümlerini toplar. GC dökümleri, hedef işlemde bir GC tetikleyerek, özel olayları açıp, nesne kökleri grafiğini Olay akışından yeniden oluşturarak oluşturulur. Bu işlem, işlem çalışırken ve en az ek yük ile GC dökümlerinin toplanmasını sağlar. Bu dökümler birkaç senaryo için yararlıdır:
 
 - Yığın üzerindeki nesne sayısını zaman içinde birkaç noktada karşılaştırma.
 - Nesnelerin kökleri çözümleniyor ("Bu tür için hala bir başvuru var?" gibi sorulara yanıt verme).

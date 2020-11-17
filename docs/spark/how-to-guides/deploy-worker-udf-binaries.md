@@ -4,12 +4,12 @@ description: Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 001798bfda628ce979570bcd89e7c5553347b275
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 19ecd4736baaf789a409229d35a6946c6021db45
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954964"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688195"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtma
 
@@ -23,7 +23,7 @@ Yapılandırmalarda, Apache Spark worker ve Kullanıcı tanımlı işlev ikilile
 
 Çalışanları dağıttığınızda ve UDF 'Leri yazarken, ayarlamanız gerekebilecek yaygın olarak kullanılan birkaç ortam değişkeni vardır:
 
-| Ortam değişkeni         | Açıklama
+| Ortam değişkeni         | Description
 | :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | <code>Microsoft.Spark.Worker</code>İkilinin oluşturulduğu yol.</br>Spark sürücüsü tarafından kullanılır ve Spark yürüticilerine geçirilir. Bu değişken ayarlanmamışsa, Spark yürüticileri ortam değişkeninde belirtilen yolda arama yapılır <code>PATH</code> .</br>_ör. "C:\bin\Microsoft.Spark.Worker"_
 | DOTNET_ASSEMBLY_SEARCH_PATHS | Derlemeleri yükleyecek olan virgülle ayrılmış yollar <code>Microsoft.Spark.Worker</code> .</br>Bir yol "." ile başlıyorsa, çalışma dizini 'nin önüne getirilir. **Yarn modunda**, "." kapsayıcının çalışma dizinini temsil eder.</br>_ör. "C:\Users \\ &lt; Kullanıcı adı &gt; \\ &lt; mysparkapp &gt; \Bin\Debug \\ &lt; DotNet sürümü &gt; "_
@@ -32,7 +32,7 @@ Yapılandırmalarda, Apache Spark worker ve Kullanıcı tanımlı işlev ikilile
 ### <a name="parameter-options"></a>Parametre seçenekleri
 Spark uygulaması [paketlenmiş](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies)olduktan sonra kullanarak başlatabilirsiniz `spark-submit` . Aşağıdaki tabloda, yaygın olarak kullanılan seçeneklerden bazıları gösterilmektedir:
 
-| Parametre Adı        | Açıklama
+| Parametre Adı        | Description
 | :---------------------| :----------
 | --sınıfı               | Uygulamanız için giriş noktası.</br>_Örneğin, org. Apache. spark. deploy. DotNet. DotnetRunner_
 | --Master              | Kümenin <a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">ana URL 'si</a> .</br>_ör. yarn_
@@ -60,7 +60,7 @@ Spark uygulaması [paketlenmiş](https://spark.apache.org/docs/latest/submitting
 ### <a name="after-submitting-my-spark-application-i-get-the-error-systemtypeloadexception-could-not-load-type-systemruntimeremotingcontextscontext"></a>Spark uygulamamı gönderdikten sonra hata alıyorum `System.TypeLoadException: Could not load type 'System.Runtime.Remoting.Contexts.Context'` .
 > **Hata:** [hata] [TaskRunner] [0] processstream (), şu özel durumla başarısız oldu: System. TypeLoadException: ' mscorlib, Version = 4.0.0.0, Culture = neutral, PublicKeyToken =... ' derlemesinden ' System. Runtime. Remoting. bağlamadı ' türü yüklenemedi.
 
-**Cevap:** Kullanmakta olduğunuz `Microsoft.Spark.Worker` sürümü denetleyin. İki sürüm vardır: **.NET Framework 4.6.1** ve **.NET Core 2.1. x**. Bu durumda, `Microsoft.Spark.Worker.net461.win-x64-<version>` ( [indirebileceğiniz](https://github.com/dotnet/spark/releases)) `System.Runtime.Remoting.Contexts.Context` yalnızca .NET Framework olduğundan kullanılmalıdır.
+**Cevap:** Kullanmakta olduğunuz `Microsoft.Spark.Worker` sürümü denetleyin. İki sürüm vardır: **.NET Framework 4.6.1** ve **.NET Core 3.1. x**. Bu durumda, `Microsoft.Spark.Worker.net461.win-x64-<version>` ( [indirebileceğiniz](https://github.com/dotnet/spark/releases)) `System.Runtime.Remoting.Contexts.Context` yalnızca .NET Framework olduğundan kullanılmalıdır.
 
 ### <a name="how-do-i-run-my-spark-application-with-udfs-on-yarn-which-environment-variables-and-parameters-should-i-use"></a>Nasıl yaparım? Spark uygulamamı YARN 'de UDF 'ler ile Çalıştır? Hangi ortam değişkenlerini ve parametreleri kullanmalıyım?
 
@@ -74,7 +74,7 @@ spark-submit \
 --conf spark.yarn.appMasterEnv.DOTNET_WORKER_DIR=./worker/Microsoft.Spark.Worker-<version> \
 --conf spark.yarn.appMasterEnv.DOTNET_ASSEMBLY_SEARCH_PATHS=./udfs \
 --archives hdfs://<path to your files>/Microsoft.Spark.Worker.net461.win-x64-<version>.zip#worker,hdfs://<path to your files>/mySparkApp.zip#udfs \
-hdfs://<path to jar file>/microsoft-spark-2.4.x-<version>.jar \
+hdfs://<path to jar file>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar \
 hdfs://<path to your files>/mySparkApp.zip mySparkApp
 ```
 

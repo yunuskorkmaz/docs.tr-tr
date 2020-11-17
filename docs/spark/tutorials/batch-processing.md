@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 666292fa2e9cecbd4e0aacd291f1008810eb257e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c161a0420de9e99478768926e5385dcfda1f9ee7
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955401"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688234"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile Batch işleme
 
@@ -26,7 +26,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > * Verileri bir veri çerçevesine okuyun ve analiz için hazırlayın
 > * Spark SQL kullanarak verileri işleme
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Apache Spark için .NET 'i ilk kez kullanıyorsanız, ortamınızı nasıl hazırlayacağınızı ve Apache Spark uygulama için ilk .NET uygulamanızı nasıl çalıştıracağınızı öğrenmek için [.NET ile çalışmaya başlama](get-started.md) hakkında bilgi edinmek için Apache Spark öğreticisine göz atın.
 
@@ -131,7 +131,7 @@ Bu uygulamanın hedefi, GitHub projeleri verileri hakkında bazı öngörülere 
    groupedDF.OrderBy(Desc("avg(forked_from)")).Show();
    ```
 
-1. Sonraki kod bloğu, son projelerin güncelleştirilme şeklini gösterir. *MyUDF* adlı yeni bir Kullanıcı tanımlı işlevi kaydeder ve öğreticinin başlangıcında bildirildiği bir tarih, *s_referenceDate*ile karşılaştırın. Her projenin tarihi başvuru tarihine göre karşılaştırılır. Daha sonra Spark SQL, veri kümesindeki her bir projeyi analiz etmek üzere verilerin her satırında UDF 'yi çağırmak için kullanılır.
+1. Sonraki kod bloğu, son projelerin güncelleştirilme şeklini gösterir. *MyUDF* adlı yeni bir Kullanıcı tanımlı işlevi kaydeder ve öğreticinin başlangıcında bildirildiği bir tarih, *s_referenceDate* ile karşılaştırın. Her projenin tarihi başvuru tarihine göre karşılaştırılır. Daha sonra Spark SQL, veri kümesindeki her bir projeyi analiz etmek üzere verilerin her satırında UDF 'yi çağırmak için kullanılır.
 
    ```csharp
    spark.Udf().Register<string, bool>(
@@ -158,7 +158,7 @@ Bu uygulamanın hedefi, GitHub projeleri verileri hakkında bazı öngörülere 
 1. Uygulamanızı ile çalıştırın `spark-submit` . Aşağıdaki komutu Microsoft Spark jar dosyanıza yönelik gerçek yollarla güncelleştirdiğinizden emin olun.
 
    ```console
-   spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /<path>/to/microsoft-spark-<version>.jar dotnet /<path>/to/netcoreapp<version>/GitHubProjects.dll
+   spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /<path>/to/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar dotnet /<path>/to/netcoreapp<version>/mySparkBatchApp.dll
    ```
 
 ## <a name="get-the-code"></a>Kodu alma

@@ -2,14 +2,14 @@
 title: .NET tanıtımı ve genel bakış
 description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kaynaklı bir geliştirme platformu olan .NET hakkında bilgi edinin.
 author: tdykstra
-ms.date: 09/28/2020
+ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506746"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687523"
 ---
 # <a name="introduction-to-net"></a>.NET’e giriş
 
@@ -153,7 +153,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 ### <a name="project-system-and-msbuild"></a>Proje sistemi ve MSBuild
 
-Bir .NET uygulaması, [MSBuild](/visualstudio/msbuild/msbuild)kullanılarak kaynak koddan oluşturulur. Proje dosyası ( *. csproj* , *. fsproj* veya *. vbproj* ), Kodu derleyip yayımlamadan sorumlu [hedefleri](/visualstudio/msbuild/msbuild-targets) ve ilişkili [görevleri](/visualstudio/msbuild/msbuild-tasks) belirtir. Standart hedef ve görev koleksiyonlarına başvuran SDK tanımlayıcıları vardır. Bu tanımlayıcıların kullanımı, proje dosyalarını küçük ve ile birlikte çalışmaya devam etmenize yardımcı olur. Örneğin, bir konsol uygulaması için bir proje dosyası aşağıda verilmiştir:
+Bir .NET uygulaması, [MSBuild](/visualstudio/msbuild/msbuild)kullanılarak kaynak koddan oluşturulur. Proje dosyası (*. csproj*, *. fsproj* veya *. vbproj*), Kodu derleyip yayımlamadan sorumlu [hedefleri](/visualstudio/msbuild/msbuild-targets) ve ilişkili [görevleri](/visualstudio/msbuild/msbuild-tasks) belirtir. Standart hedef ve görev koleksiyonlarına başvuran SDK tanımlayıcıları vardır. Bu tanımlayıcıların kullanımı, proje dosyalarını küçük ve ile birlikte çalışmaya devam etmenize yardımcı olur. Örneğin, bir konsol uygulaması için bir proje dosyası aşağıda verilmiştir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -254,7 +254,7 @@ Daha fazla bilgi için bkz. [yönetilmeyen kaynakları temizleme](../standard/ga
 
 * Bir uygulamayı *kendi içinde* yayımlamak, .net [çalışma zamanı](#sdk-and-runtimes) ve [kitaplıklarını](#runtime-libraries)ve uygulamayı ve onun bağımlılıklarını içeren bir yürütülebilir dosya oluşturur. Uygulamanın kullanıcıları bu uygulamayı .NET çalışma zamanı yüklü olmayan bir makinede çalıştırabilir. Kendi içinde bulunan uygulamalar platforma özgüdür ve isteğe bağlı olarak bir [AOT derlemesi](#aot-compiler)formu kullanılarak yayımlanabilir.
 
-* Bir uygulamayı *Framework 'e bağımlı* olarak yayımlamak, yalnızca uygulamanın kendisini ve onun bağımlılıklarını içeren bir yürütülebilir dosya ve ikili dosyalar ( *. dll* dosyaları) oluşturur. Uygulamanın kullanıcılarının .NET [çalışma zamanını](#sdk-and-runtimes)ayrı olarak yüklemesi gerekir. Yürütülebilir dosya platforma özgüdür, ancak Framework 'e bağımlı uygulamaların *. dll* dosyaları platformlar arası bir platformdur.
+* Bir uygulamayı *Framework 'e bağımlı* olarak yayımlamak, yalnızca uygulamanın kendisini ve onun bağımlılıklarını içeren bir yürütülebilir dosya ve ikili dosyalar (*. dll* dosyaları) oluşturur. Uygulamanın kullanıcılarının .NET [çalışma zamanını](#sdk-and-runtimes)ayrı olarak yüklemesi gerekir. Yürütülebilir dosya platforma özgüdür, ancak Framework 'e bağımlı uygulamaların *. dll* dosyaları platformlar arası bir platformdur.
 
   Çalışma zamanının farklı sürümlerini hedefleyen çerçeveye bağımlı uygulamalar çalıştırmak için çalışma zamanının birden çok sürümünü yan yana yükleyebilirsiniz. Daha fazla bilgi için bkz. [hedef çerçeveler](../standard/frameworks.md).
 
@@ -264,9 +264,9 @@ Daha fazla bilgi için bkz. [.NET uygulama yayımlamaya genel bakış](deploying
 
 ## <a name="runtime-libraries"></a>Çalışma zamanı kitaplıkları
 
-.NET, sınıf kitaplıklarının expantıcı standart bir kümesini içerir. Çekirdek kümesi, temel sınıf kitaplığı (BCL) olarak adlandırılır. Tüm küme çalışma zamanı kitaplıkları veya Framework kitaplıkları olarak adlandırılır. Bu kitaplıklar, birçok genel amaçlı ve iş yüküne özgü tür ve yardımcı program işlevselliğine yönelik uygulamalar sağlar.
+.NET, [çalışma zamanı kitaplıkları](../standard/glossary.md#runtime), [çerçeve kitaplıkları](../standard/glossary.md#framework-libraries)veya [temel sınıf kitaplığı (BCL)](../standard/glossary.md#bcl)olarak bilinen bir expante standart sınıf kitaplıkları kümesine sahiptir. Bu kitaplıklar, birçok genel amaçlı ve iş yüküne özgü tür ve yardımcı program işlevselliğine yönelik uygulamalar sağlar.
 
-Çalışma zamanı kitaplıklarında tanımlı türlerin bazı örnekleri aşağıda verilmiştir:
+.NET çalışma zamanı kitaplıklarında tanımlı türlerin bazı örnekleri aşağıda verilmiştir:
 
 * Ve gibi temel türler <xref:System.Boolean?displayProperty=nameWithType> <xref:System.Int32?displayProperty=nameWithType> .
 * Ve gibi koleksiyonlar <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> .
@@ -276,9 +276,9 @@ Daha fazla bilgi için bkz. [.NET uygulama yayımlamaya genel bakış](deploying
 * Ve gibi [serileştirme](../standard/serialization/index.md) yardımcı programı türleri <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> .
 * , Ve işlem hatları gibi yüksek performanslı <xref:System.Span%601?displayProperty=nameWithType> türler <xref:System.Numerics.Vector?displayProperty=nameWithType> . [Pipelines](../standard/io/pipelines.md)
 
-Daha fazla bilgi için bkz. [çerçeve kitaplıkları](../standard/framework-libraries.md) ve [Kitaplıklar için kaynak kodu](https://github.com/dotnet/runtime/tree/master/src/libraries).
+Daha fazla bilgi için bkz. [çalışma zamanı kitaplıklarına genel bakış](../standard/runtime-libraries-overview.md). Kitaplıkların kaynak kodu [GitHub DotNet/Runtime deposundadır](https://github.com/dotnet/runtime/tree/master/src/libraries).
 
-## <a name="microsoftextensions-libraries"></a>Microsoft. Extensions kitaplıkları
+### <a name="extensions-to-the-runtime-libraries"></a>Çalışma zamanı kitaplıklarının uzantıları
 
 Yaygın olarak kullanılan bazı uygulama işlevlerinin kitaplıkları çalışma zamanı kitaplıklarına dahil edilmez, ancak aşağıdaki gibi NuGet paketlerinde kullanılabilir hale gelir:
 
@@ -287,7 +287,7 @@ Yaygın olarak kullanılan bazı uygulama işlevlerinin kitaplıkları çalışm
 | [Microsoft. Extensions. Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) | [Uygulama ömür yönetimi (genel ana bilgisayar)](extensions/generic-host.md) |
 | [Microsoft. Extensions. Dependencyınjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection) | [Bağımlılık ekleme (dı)](extensions/dependency-injection.md)
 | [Microsoft.Extensions.Configurlama](https://www.nuget.org/packages/Microsoft.Extensions.Configuration) | [Yapılandırma](extensions/configuration.md) |
-| [Microsoft. Extensions. Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) | [Günlüğe kaydetme](extensions/logging.md) |
+| [Microsoft.Extensions.Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) | [Günlüğe kaydetme](extensions/logging.md) |
 | [Microsoft. Extensions. Options](https://www.nuget.org/packages/Microsoft.Extensions.Options) | [Seçenekler deseni](extensions/options.md) |
 
 Daha fazla bilgi için [GitHub 'daki DotNet/Extensions deposuna](https://github.com/dotnet/extensions)bakın.
@@ -344,6 +344,7 @@ Aynı sözcük farklı bağlamlarda farklı şekillerde kullanıldığından, .N
   | hedef çerçeve | Bir .NET uygulamasının veya kitaplığının dayandığı API 'lerin koleksiyonu. Örnekler: .NET Core 3,1, .NET Standard 2,0 |
   | Hedef çerçeve bilinen adı (tfd)  | TFD, .NET uygulaması veya kitaplığının hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimidir. Örnek: `net462` .NET Framework 4.6.2 için. |
   | çerçeveye bağımlı uygulama | Yalnızca [.net indirme sayfasından](https://dotnet.microsoft.com/download/dotnet-core)çalışma zamanını yüklediğiniz bir makinede çalışabilen bir uygulama. Bu kullanımdaki "Framework", .NET indirme sayfasından indirdiğinizde "çalışma zamanı" ile aynıdır. |
+  | çerçeve kitaplıkları | Bazen [çalışma zamanı kitaplıkları](#runtime-libraries)için bir eş anlamlı olarak kullanılır. |
 
 * **SDK**
 

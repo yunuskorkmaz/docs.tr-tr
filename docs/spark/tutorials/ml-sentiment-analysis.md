@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 16b4d34e4c581da2cd0ba798d87e53ccfc49f0e9
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 1c2c966a4ff50a9d2f6951e20d909c5c20c75bfb
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954899"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688247"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>Öğretici: Apache Spark ve ML.NET için .NET ile yaklaşım Analizi
 
@@ -25,7 +25,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > * Kullanıcı tanımlı bir işlevi yazın ve uygulayın.
 > * Apache Spark konsol uygulaması için bir .NET çalıştırın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * Daha önce Apache Spark uygulama için bir .NET geliştirmediyse, temel bilgileri öğrenecek başlangıç [öğreticisiyle](get-started.md) başlayın. Bu öğreticiye devam etmeden önce başlangıç öğreticisine yönelik tüm önkoşulları doldurun.
 
@@ -48,7 +48,7 @@ Aşağıdaki tabloda örnek veriler yer almaktadır:
 
 ## <a name="build-your-machine-learning-model"></a>Machine Learning modelinizi oluşturma
 
-1. Visual Studio 'Yu açın ve yeni bir C# konsol uygulaması (.NET Core) oluşturun. Projeyi *Mlmini model*olarak adlandırın.
+1. Visual Studio 'Yu açın ve yeni bir C# konsol uygulaması (.NET Core) oluşturun. Projeyi *Mlmini model* olarak adlandırın.
 
 1. **Çözüm Gezgini**, *mlmini model* projesine sağ tıklayın. **> Machine Learning Ekle**' yi seçin.
 
@@ -58,7 +58,7 @@ Aşağıdaki tabloda örnek veriler yer almaktadır:
 
 1. Açılır menüyü **tahmin etmek Için sütunlarda** yaklaşım ' *ı seçin.*
 
-1. **Eğitme** sayfasında, *60 saniyeye* eğitme süresini ayarlayın ve **eğitimi Başlat**' ı seçin. **Ilerlemeniz**durumunda eğitimin durumunu fark edin.
+1. **Eğitme** sayfasında, *60 saniyeye* eğitme süresini ayarlayın ve **eğitimi Başlat**' ı seçin. **Ilerlemeniz** durumunda eğitimin durumunu fark edin.
 
 1. Model Oluşturucu tamamlandıktan sonra eğitim sonuçlarını **değerlendirin** . Aşağıdaki metin kutusuna bir tümcecik yazarak **modelinizi deneyebilirsiniz** ve çıktıyı görmek için **tahmin** ' i seçin.
 
@@ -84,9 +84,9 @@ Model Oluşturucu sizin için bir konsol uygulaması oluşturur.
 
 ### <a name="create-a-sparksession"></a>Mini oturum oluşturma
 
-1. **Mlmini Modelml. ConsoleApp**için *program.cs* dosyasını açın. Bu dosya model Oluşturucu tarafından otomatik olarak oluşturuldu. `using`Deyimlerini, Main () yönteminin içeriğini ve `CreateSingleDataSample` bölgesini silin.
+1. **Mlmini Modelml. ConsoleApp** için *program.cs* dosyasını açın. Bu dosya model Oluşturucu tarafından otomatik olarak oluşturuldu. `using`Deyimlerini, Main () yönteminin içeriğini ve `CreateSingleDataSample` bölgesini silin.
 
-1. Aşağıdaki ek `using` deyimlerini *program.cs*üst kısmına ekleyin:
+1. Aşağıdaki ek `using` deyimlerini *program.cs* üst kısmına ekleyin:
 
    ```csharp
    using System;
@@ -97,7 +97,7 @@ Model Oluşturucu sizin için bir konsol uygulaması oluşturur.
    using MLSparkModelML.Model;
    ```
 
-1. Öğesini `DATA_FILEPATH` *yelptest.csv*yolu olarak değiştirin.
+1. Öğesini `DATA_FILEPATH` *yelptest.csv* yolu olarak değiştirin.
 
 1. `Main`Yeni bir oluşturma yöntemine aşağıdaki kodu ekleyin `SparkSession` . Spark oturumu, veri kümesi ve DataFrame API 'SI ile Spark programlamanın giriş noktasıdır.
 
@@ -157,7 +157,7 @@ spark.Stop();
 
 ### <a name="create-predict-method"></a>Tahmin () yöntemi oluştur
 
-Aşağıdaki kodu yönteminizin önüne ekleyin `Main()` . Bu kod, *ConsumeModel.cs*Içinde model Oluşturucu tarafından üretilme benzer. Bu yöntemin konsoluna taşınması, uygulamanızı her çalıştırışınızda model yüklemeyi yükler.
+Aşağıdaki kodu yönteminizin önüne ekleyin `Main()` . Bu kod, *ConsumeModel.cs* Içinde model Oluşturucu tarafından üretilme benzer. Bu yöntemin konsoluna taşınması, uygulamanızı her çalıştırışınızda model yüklemeyi yükler.
 
 ```csharp
 private static readonly PredictionEngine<ModelInput, ModelOutput> _predictionEngine;
@@ -182,7 +182,7 @@ static bool predict(string text)
 
 ## <a name="add-the-model-to-your-console-app"></a>Modeli konsol uygulamanıza ekleyin
 
-Çözüm Gezgini, *MLModel.zip* dosyasını **mlmini Modelml. model** projesinden kopyalayın ve **Mlmini modelml. consoleapp** projesine yapıştırın. *Mlmini Modelml. ConsoleApp. csproj*öğesine bir başvuru otomatik olarak eklenir.
+Çözüm Gezgini, *MLModel.zip* dosyasını **mlmini Modelml. model** projesinden kopyalayın ve **Mlmini modelml. consoleapp** projesine yapıştırın. *Mlmini Modelml. ConsoleApp. csproj* öğesine bir başvuru otomatik olarak eklenir.
 
 ## <a name="run-your-code"></a>Kodunuzu çalıştırın
 
@@ -198,7 +198,7 @@ dotnet publish
 Ardından konsol uygulamasının Yayımla klasörüne gidin ve aşağıdaki `spark-submit` komutu çalıştırın. Komutu, Microsoft Spark jar dosyanızın gerçek yoluyla güncelleştirmeyi unutmayın.
 
 ```dotnetcli
-%SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local microsoft-spark-2.4.x-0.10.0.jar dotnet MLSparkModelML.ConsoleApp.dll
+%SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local microsoft-spark-2-4_2.11-1.0.0.jar dotnet MLSparkModelML.ConsoleApp.dll
 ```
 
 ## <a name="get-the-code"></a>Kodu alma

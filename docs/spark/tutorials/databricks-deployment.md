@@ -4,12 +4,12 @@ description: Databricks 'e Apache Spark uygulamasının bir .NET uygulamasını 
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1f705878a577a7fa375346cae18010d8c8cc77e1
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: d17fd5002d47dcde804cb43fc27edb2c2c9be595
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955453"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688156"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Öğretici: Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı
 
@@ -24,7 +24,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > - Spark işi ve Spark kümesi oluşturun.
 > - Uygulamanızı Spark kümesinde çalıştırın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Başlamadan önce, aşağıdaki görevleri yapın:
 
@@ -35,12 +35,12 @@ Başlamadan önce, aşağıdaki görevleri yapın:
 ## <a name="create-an-azure-databricks-workspace"></a>Azure Databricks çalışma alanı oluşturma
 
 > [!Note]
-> Bu öğretici **Azure Ücretsiz deneme aboneliği**kullanılarak gerçekleştirilemez.
-> Ücretsiz hesabınız varsa, profilinize gidin ve aboneliğinizi **Kullandıkça Öde**ile değiştirin. Daha fazla bilgi için bkz. [Ücretsiz Azure hesabı](https://azure.microsoft.com/free/dotnet/). Ardından, [harcama limitini kaldırın](/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)ve bölgenizdeki vCPU 'lar için [bir kota artışı isteyin](/azure/azure-supportability/resource-manager-core-quotas-request) . Azure Databricks çalışma alanınızı oluşturduğunuzda, çalışma alanına 14 gün boyunca ücretsiz Premium Azure Databricks DBUs erişimi sağlamak için **deneme (Premium-14 gün ücretsiz DBUs)** fiyatlandırma katmanını seçebilirsiniz.
+> Bu öğretici **Azure Ücretsiz deneme aboneliği** kullanılarak gerçekleştirilemez.
+> Ücretsiz hesabınız varsa, profilinize gidin ve aboneliğinizi **Kullandıkça Öde** ile değiştirin. Daha fazla bilgi için bkz. [Ücretsiz Azure hesabı](https://azure.microsoft.com/free/dotnet/). Ardından, [harcama limitini kaldırın](/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)ve bölgenizdeki vCPU 'lar için [bir kota artışı isteyin](/azure/azure-supportability/resource-manager-core-quotas-request) . Azure Databricks çalışma alanınızı oluşturduğunuzda, çalışma alanına 14 gün boyunca ücretsiz Premium Azure Databricks DBUs erişimi sağlamak için **deneme (Premium-14 gün ücretsiz DBUs)** fiyatlandırma katmanını seçebilirsiniz.
 
 Bu bölümde Azure portalını kullanarak bir Azure Databricks çalışma alanı oluşturursunuz.
 
-1. Azure Portal, **kaynak**  >  **Analizi**oluştur  >  **Azure Databricks**' u seçin.
+1. Azure Portal, **kaynak**  >  **Analizi** oluştur  >  **Azure Databricks**' u seçin.
 
    ![Azure portal Azure Databricks kaynak oluşturma](./media/databricks-deployment/create-databricks-resource.png)
 
@@ -52,8 +52,8 @@ Bu bölümde Azure portalını kullanarak bir Azure Databricks çalışma alanı
     |**Abonelik**     | Açılan listeden Azure aboneliğinizi seçin.        |
     |**Kaynak grubu**     | Yeni bir kaynak grubu oluşturmayı veya mevcut bir kaynak grubunu kullanmayı seçin. Kaynak grubu, bir Azure çözümüne ilişkin kaynakları tutan bir kapsayıcıdır. Daha fazla bilgi için bkz. [Azure Kaynak Grubuna genel bakış](/azure/azure-resource-manager/resource-group-overview). |
     |**Konum**     | Tercih ettiğiniz bölgeyi seçin. Kullanılabilir bölgeler hakkında daha fazla bilgi için bkz. [bölgeye göre kullanılabilir Azure hizmetleri](https://azure.microsoft.com/regions/services/).        |
-    |**Fiyatlandırma Katmanı**     |  **Standart**, **Premium**veya **deneme**arasında seçim yapın. Bu katmanlar hakkında daha fazla bilgi için bkz. [Databricks fiyatlandırma sayfası](https://azure.microsoft.com/pricing/details/databricks/).       |
-    |**Sanal Ağ**     |   Hayır       |
+    |**Fiyatlandırma Katmanı**     |  **Standart**, **Premium** veya **deneme** arasında seçim yapın. Bu katmanlar hakkında daha fazla bilgi için bkz. [Databricks fiyatlandırma sayfası](https://azure.microsoft.com/pricing/details/databricks/).       |
+    |**Sanal Ağ**     |   No       |
 
 3. **Oluştur**’u seçin. Çalışma alanının oluşturulması birkaç dakika sürer. Çalışma alanı oluşturma sırasında, **Bildirimler**' de dağıtım durumunu görüntüleyebilirsiniz.
 
@@ -85,7 +85,7 @@ Bu bölümde Azure portalını kullanarak bir Azure Databricks çalışma alanı
 
 Databricks CLı yükleolduğunuza göre, kimlik doğrulama ayrıntılarını ayarlamanız gerekir.
 
-1. Databricks CLı komutunu çalıştırın `databricks configure --token` .
+1. Databricks CLı komutunu çalıştırın `databricks configure --token` .
 
 2. Configure komutunu çalıştırdıktan sonra, bir ana bilgisayar girmeniz istenir. Ana bilgisayar URL 'niz şu biçimi kullanır: `https://<Location>.azuredatabricks.net` . Örneğin, Azure Databricks hizmeti oluşturma sırasında **eastus2** ' ı seçtiyseniz, konak olur `https://eastus2.azuredatabricks.net` .
 
@@ -105,7 +105,10 @@ Artık oluşturduğunuz Azure Databricks kümelerine erişebiliyor ve dosyaları
 
 ## <a name="download-worker-dependencies"></a>Çalışan bağımlılıklarını indir
 
-1. Microsoft. spark. Worker, yazdığınız kullanıcı tanımlı işlevler (UDF 'ler) gibi uygulamanızı Apache Spark yürütmenize yardımcı olur. [Microsoft. spark. Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz)öğesini indirin.
+> [!Note]
+> Azure ve AWS Databricks, Linux tabanlıdır. Bu nedenle, uygulamanızı Databricks 'e dağıtmaya ilgileniyorsanız, uygulamanızın .NET Standard uyumlu olduğundan ve uygulamanızı derlemek için .NET Core derleyicisi kullandığınızdan emin olun.
+
+1. Microsoft. spark. Worker, yazdığınız kullanıcı tanımlı işlevler (UDF 'ler) gibi uygulamanızı Apache Spark yürütmenize yardımcı olur. [Microsoft. spark. Worker](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz)öğesini indirin.
 
 2. *İnstall-Worker.sh* , Apache Spark bağımlı dosyaları için .net ' i kümenizin düğümlerine kopyalamanızı sağlayan bir betiktir.
 
@@ -115,7 +118,7 @@ Artık oluşturduğunuz Azure Databricks kümelerine erişebiliyor ve dosyaları
 
    Yerel bilgisayarınızda **DB-init.sh** adlı yeni bir dosya oluşturun ve GitHub 'da bulunan [DB-init.sh içeriğini](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) yapıştırın.
 
-   Yeni oluşturduğunuz dosyada, `DOTNET_SPARK_RELEASE` değişkenini olarak ayarlayın `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz` . *DB-init.sh* dosyasının kalan kısmını olduğu gibi bırakın.
+   Yeni oluşturduğunuz dosyada, `DOTNET_SPARK_RELEASE` değişkenini olarak ayarlayın `https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz` . *DB-init.sh* dosyasının kalan kısmını olduğu gibi bırakın.
 
 > [!Note]
 > Windows kullanıyorsanız, *install-Worker.sh* ve *DB-init.sh* betiklerinizde yer alan satır SONLARıNı UNIX stili (LF) olduğunu doğrulayın. Satır sonlarını notepad + + ve atom gibi metin düzenleyicilerle değiştirebilirsiniz.
@@ -124,7 +127,7 @@ Artık oluşturduğunuz Azure Databricks kümelerine erişebiliyor ve dosyaları
 
 Daha sonra, Spark kümenizin uygulamanızı çalıştırmak için gereken tüm dosyalara erişebildiğinden emin olmak için, Apache Spark .NET sürümünde oluşturulan *mySparkApp* [-Get ile çalışmaya](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) başlayın.
 
-1. *MySparkApp*yayımlamak için aşağıdaki komutları çalıştırın:
+1. *MySparkApp* yayımlamak için aşağıdaki komutları çalıştırın:
 
    ```dotnetcli
    cd mySparkApp
@@ -135,7 +138,7 @@ Daha sonra, Spark kümenizin uygulamanızı çalıştırmak için gereken tüm d
 
    **Windows 'da:**
 
-   MySparkApp/bin/Release/netcoreapp 3.1/Ubuntu. 16.04-x64 dizinine gidin. Ardından, **Yayımla** klasörüne sağ tıklayıp **> sıkıştırılmış (daraltılmış) klasöre gönder**' i seçin. Yeni klasörü **publish.zip**olarak adlandırın.
+   MySparkApp/bin/Release/netcoreapp 3.1/Ubuntu. 16.04-x64 dizinine gidin. Ardından, **Yayımla** klasörüne sağ tıklayıp **> sıkıştırılmış (daraltılmış) klasöre gönder**' i seçin. Yeni klasörü **publish.zip** olarak adlandırın.
 
    **Linux 'ta aşağıdaki komutu çalıştırın:**
 
@@ -147,15 +150,15 @@ Daha sonra, Spark kümenizin uygulamanızı çalıştırmak için gereken tüm d
 
 Bu bölümde, kümenizin uygulamanızı bulutta çalıştırması için gereken her şeyin olması için birkaç dosyayı DBFS 'ye yüklersiniz. DBFS 'ye bir dosya yüklediğinizde, dosyanın bilgisayarınızda bulunduğu dizinde olduğunuzdan emin olun.
 
-1. *DB-init.sh*, *install-Worker.sh*ve *Microsoft. spark. Worker* öğesini dBFS 'ye yüklemek için aşağıdaki komutları çalıştırın:
+1. *DB-init.sh*, *install-Worker.sh* ve *Microsoft. spark. Worker* öğesini dBFS 'ye yüklemek için aşağıdaki komutları çalıştırın:
 
    ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
-   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz dbfs:/spark-dotnet/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz
    ```
 
-2. Geri kalan dosyaları karşıya yüklemek için aşağıdaki komutları çalıştırın: kümenizin uygulamanızı çalıştırması gerekecektir: daraltılmış yayımlama klasörü, *input.txt*ve *Microsoft-Spark-2,4. x-0.3.1. jar*.
+2. Geri kalan dosyaları karşıya yüklemek için aşağıdaki komutları çalıştırın: kümenizin uygulamanızı çalıştırması gerekecektir: daraltılmış yayımlama klasörü, *input.txt* ve *Microsoft-Spark-2-4_ 2.11-1.0.0. jar*.
 
    ```console
    cd mySparkApp
@@ -163,12 +166,12 @@ Bu bölümde, kümenizin uygulamanızı bulutta çalıştırması için gereken 
 
    cd mySparkApp\bin\Release\netcoreapp3.1\ubuntu.16.04-x64 directory
    databricks fs cp publish.zip dbfs:/spark-dotnet/publish.zip
-   databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
+   databricks fs cp microsoft-spark-2-4_2.11-1.0.0.jar dbfs:/spark-dotnet/microsoft-spark-2-4_2.11-1.0.0.jar
    ```
 
 ## <a name="create-a-job"></a>Bir iş oluşturma
 
-Uygulamanız, Apache Spark işleri için .NET çalıştırmak için kullandığınız komut olan **Spark-gönder**çalıştıran bir iş aracılığıyla Azure Databricks çalışır.
+Uygulamanız, Apache Spark işleri için .NET çalıştırmak için kullandığınız komut olan **Spark-gönder** çalıştıran bir iş aracılığıyla Azure Databricks çalışır.
 
 1. Azure Databricks çalışma alanınızda **işler** simgesini ve ardından **+ iş oluştur**' u seçin.
 
@@ -181,14 +184,14 @@ Uygulamanız, Apache Spark işleri için .NET çalıştırmak için kullandığ�
 3. Aşağıdaki parametreleri iş yapılandırmasına yapıştırın. Ardından **Onayla**' yı seçin.
 
    ```
-   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2-4_2.11-1.0.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
    ```
 
 ## <a name="create-a-cluster"></a>Küme oluşturma
 
 1. İşinizin kümesini yapılandırmak için işinize gidin ve **Düzenle** ' yi seçin.
 
-2. Kümenizi **Spark 2.4.1**olarak ayarlayın. Ardından **Gelişmiş Seçenekler**  >  **Başlangıç betikleri**' ni seçin. Init betiği yolunu olarak ayarlayın `dbfs:/spark-dotnet/db-init.sh` .
+2. Kümenizi **Spark 2.4.1** olarak ayarlayın. Ardından **Gelişmiş Seçenekler**  >  **Başlangıç betikleri**' ni seçin. Init betiği yolunu olarak ayarlayın `dbfs:/spark-dotnet/db-init.sh` .
 
    ![Azure Databricks Spark kümesini yapılandırma](./media/databricks-deployment/cluster-config.png)
 
@@ -206,7 +209,7 @@ Uygulamanız, Apache Spark işleri için .NET çalıştırmak için kullandığ�
 
    ![Azure Databricks iş çıkış tablosu](./media/databricks-deployment/table-output.png)
 
-   Tebrikler, ilk .NET Apache Spark uygulamanızı bulutta çalıştırdık!
+   Tebrikler, ilk .NET Apache Spark uygulamanızı Azure Databricks ' de çalıştırırsınız!
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 

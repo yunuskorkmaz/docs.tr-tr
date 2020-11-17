@@ -4,16 +4,16 @@ description: .NET kodu yazdığınız her yerde Spark alan ücretsiz, açık kay
 author: mamccrea
 ms.topic: overview
 ms.date: 10/09/2020
-ms.openlocfilehash: 2c743cf7f88d857fb87aed123bd687c353fd8b84
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 533a4d3b497ad499edcf3accf250477c03f98714
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955362"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688039"
 ---
 # <a name="what-is-net-for-apache-spark"></a>Apache Spark için .NET nedir?
 
-[Apache Spark](what-is-spark.md) , büyük veri kümeleri üzerinde analizler için genel amaçlı bir dağıtılmış işleme altyapısıdır. genellikle terabayt veya petabaytlarca veri. Popüler açık kaynaklı büyük veri analizi çerçevesi için Apache Spark, ücretsiz, açık kaynaklı ve platformlar arası .NET desteği için .NET ile, zaten bildiğiniz dilleri kullanarak Apache Spark gücünü büyük veri uygulamalarınıza ekleyebilirsiniz.
+[Apache Spark](what-is-spark.md) , büyük veri kümeleri üzerinde analizler için genel amaçlı bir dağıtılmış işleme altyapısıdır. genellikle terabayt veya petabaytlarca veri. Popüler açık kaynaklı büyük veri analizi çerçevesi için Apache Spark, ücretsiz, [Açık kaynaklı](https://github.com/dotnet/spark)ve platformlar arası .NET desteği için .NET ile, zaten bildiğiniz dilleri kullanarak Apache Spark gücünü büyük veri uygulamalarınıza ekleyebilirsiniz.
 
 ## <a name="why-choose-net-for-apache-spark"></a>Apache Spark için .NET neden seçmelisiniz?
 

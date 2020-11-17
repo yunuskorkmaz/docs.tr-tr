@@ -3,12 +3,12 @@ title: .NET Framework’ten .NET Core’a taşıma
 description: Bir .NET Framework projesi .NET Core 'a taşıma konusunda yararlı bulabileceğiniz yardım alabileceğiniz işlem ve bulma araçlarını anlayın.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 7719742294c04aadbfd2e5f223040d3b5b485b5b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 764c615d250474573f873b1745b9f1469e637d29
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439748"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687418"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework .NET Core 'a taşıma ile genel bakış
 
@@ -19,7 +19,7 @@ ms.locfileid: "94439748"
 
 ## <a name="overview-of-the-porting-process"></a>Taşıma işlemine genel bakış
 
-Birçok proje için .NET Framework .NET Core 'a (veya .NET Standard) taşıma görece bir şekilde ileriye doğru. Gerekli sayıda değişiklik vardır, ancak birçoğu aşağıda özetlenen desenleri izler. Uygulama modelinin .NET Core 'da (kitaplıklar, konsol uygulamaları ve Masaüstü uygulamaları gibi) kullanılabildiği projeler genellikle küçük değişiklikler gerektirir. Yeni bir uygulama modeli gerektiren projeler (örneğin, ASP.NET ' den ASP.NET Core taşıma gibi), biraz daha fazla iş gerektirir, ancak birçok desende dönüştürme sırasında kullanılabilecek analoglarından vardır. Bu belge, kod temellerini hedef .NET Standard veya .NET Core 'a başarıyla dönüştürmek üzere kullanıcılara çalışan ana stratejileri tanımlamaya yardımcı olmalıdır ve dönüştürme iki düzeyde ele alınacaktır: çözüm genelinde ve projeye özel. Uygulama modeline özgü dönüşümlerde yönergeler için en alttaki bağlantılara bakın.
+Birçok proje için .NET Framework .NET Core 'a (veya .NET Standard) taşıma oldukça basittir. Gerekli sayıda değişiklik vardır, ancak birçoğu aşağıda özetlenen desenleri izler. Uygulama modelinin .NET Core 'da (kitaplıklar, konsol uygulamaları ve Masaüstü uygulamaları gibi) kullanılabildiği projeler genellikle küçük değişiklikler gerektirir. Yeni bir uygulama modeli gerektiren projeler (örneğin, ASP.NET ' den ASP.NET Core taşıma gibi), biraz daha fazla iş gerektirir, ancak birçok desende dönüştürme sırasında kullanılabilecek analoglarından vardır. Bu belge, kod temellerini hedef .NET Standard veya .NET Core 'a başarıyla dönüştürmek üzere kullanıcılara çalışan ana stratejileri tanımlamaya yardımcı olmalıdır ve dönüştürme iki düzeyde ele alınacaktır: çözüm genelinde ve projeye özel. Uygulama modeline özgü dönüşümlerde yönergeler için en alttaki bağlantılara bakın.
 
 Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı öneririz. Bu adımların her biri, davranış değişikliklerine yönelik olası yerleri tanıtır, bu nedenle sonraki adımlara devam etmeden önce kitaplığınızı veya uygulamanızı yeterince test ettirdiğinizden emin olun. İlk adımlar, projenizin .NET Standard veya .NET Core 'a yönelik bir anahtara hazırlanmaya yöneliktir. Birim testleriniz varsa, çalışmakta olduğunuz üründeki değişiklikleri test etmeye devam edebilmeniz için önce bunları dönüştürmeniz en iyisidir. .NET Core 'a taşıma işlemi, kod tabanınızda önemli bir değişiklik olduğundan, kodunuzun bağlantı noktası oluşturduğunuz testleri çalıştırabilmeniz için test projelerinizin bağlantı noktası yapılması önemle önerilir. MSTest, xUnit ve NUnit tüm .NET Core üzerinde çalışır.
 

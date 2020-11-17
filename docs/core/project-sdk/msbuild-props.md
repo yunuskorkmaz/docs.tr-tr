@@ -4,12 +4,12 @@ description: MSBuild özellikleri ve .NET SDK tarafından anlaşılan öğeler i
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063234"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687477"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK projeleri için MSBuild başvurusu
 
@@ -123,7 +123,7 @@ Aşağıdaki XML, `System.Security` derlemeyi kırpmaya dışlar.
 
 ### <a name="useapphost"></a>UseAppHost
 
-`UseAppHost`Özelliği .NET SDK 'sının 2.1.400 sürümünde sunulmuştur. Dağıtım için yerel bir yürütülebilir dosyanın oluşturulup oluşturulmayacağını denetler. Kendi kendine kapsanan dağıtımlar için yerel bir yürütülebilir dosya gereklidir.
+`UseAppHost`Özelliği, bir dağıtım için yerel yürütülebilir dosyanın oluşturulup oluşturulmayacağını denetler. Kendi kendine kapsanan dağıtımlar için yerel bir yürütülebilir dosya gereklidir.
 
 .NET Core 3,0 ve sonraki sürümlerinde, çerçeveye bağlı bir yürütülebilir dosya varsayılan olarak oluşturulur. `UseAppHost` `false` Yürütülebilir dosyanın üretilmesini devre dışı bırakmak için özelliğini olarak ayarlayın.
 
@@ -354,7 +354,7 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 - [PackageReference](#packagereference)
 - [ProjectReference](#projectreference)
 - [Başvuru](#reference)
-- [Özellikleri geri yükle](#restore-properties)
+- [Geri yükleme ile ilgili özellikler](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
@@ -412,13 +412,44 @@ Aşağıdaki örnekteki proje dosyası kod parçacığı adlı bir projeye başv
 </ItemGroup>
 ```
 
-### <a name="restore-properties"></a>Özellikleri geri yükle
+### <a name="restore-related-properties"></a>Geri yükleme ile ilgili özellikler
 
 Başvurulan bir paketin geri yüklenmesi, tüm doğrudan bağımlılıklarını ve bu bağımlılıkların tüm bağımlılıklarını yükler. Ve gibi özellikler belirterek paket geri yüklemesini özelleştirebilirsiniz `RestorePackagesPath` `RestoreIgnoreFailedSources` . Bu ve diğer özellikler hakkında daha fazla bilgi için bkz. [hedefi geri yükleme](/nuget/reference/msbuild-targets#restore-target).
 
 ```xml
 <PropertyGroup>
   <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
+
+## <a name="hosting-properties-and-items"></a>Barındırma özellikleri ve öğeleri
+
+- [EnableComHosting](#enablecomhosting)
+- [EnableDynamicLoading](#enabledynamicloading)
+
+### <a name="enablecomhosting"></a>EnableComHosting
+
+Özelliği, bir `EnableComHosting` derlemenin BIR com sunucusu sağladığını gösterir. İçin ayarı `EnableComHosting` , `true` [EnableDynamicLoading](#enabledynamicloading) olduğunu da belirtir `true` .
+
+```xml
+<PropertyGroup>
+  <EnableComHosting>True</EnableComHosting>
+</PropertyGroup>
+```
+
+Daha fazla bilgi için bkz. [.net BILEŞENLERINI com 'Da kullanıma](../native-interop/expose-components-to-com.md)sunma.
+
+### <a name="enabledynamicloading"></a>EnableDynamicLoading
+
+`EnableDynamicLoading`Özelliği, bir derlemenin dinamik olarak yüklenen bir bileşen olduğunu gösterir. Bileşen bir [com kitaplığı](/windows/win32/com/the-component-object-model) veya [Yerel BIR konaktan kullanılabilecek](../tutorials/netcore-hosting.md)com olmayan bir kitaplık olabilir. Bu özelliğin olarak ayarlanması `true` aşağıdaki etkilere sahiptir:
+
+- Dosyadaki bir *.runtimeconfig.js* oluşturulur.
+- [Ileri alma](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward) , olarak ayarlanır `LatestMinor` .
+- NuGet başvuruları yerel olarak kopyalanır.
+
+```xml
+<PropertyGroup>
+  <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
 

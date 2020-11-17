@@ -4,22 +4,22 @@ description: Windows 'da Apache Spark için .NET uygulamanızı nasıl oluştura
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: db073e6b82e63b3f0b98c9fe66a5b4d9be1356ba
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 8f197c0050d149ed03e328e72868ad4ba2f728c1
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955531"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688117"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
 
 Bu makalede, Windows 'da Apache Spark uygulamalarınızı .NET için nasıl oluşturabileceğiniz öğretilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adımlarına atlayın.
 
-  1. **[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** indirme ve yükleme-SDK 'nın yüklenmesi, `dotnet` toolzincirini yolunuza ekler. .NET Core 2,1, 2,2 ve 3,1 desteklenir.
+  1. **[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** indirme ve yükleme-SDK 'nın yüklenmesi, `dotnet` toolzincirini yolunuza ekler. .NET Core 2,1, 2,2 ve 3,1 desteklenir.
   2. **[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (sürüm 16,3 veya üzeri) sürümünü yükler. Topluluk sürümü tamamen ücretsizdir. Yüklemenizi yapılandırırken bu bileşenleri en düşük düzeyde ekleyin:
      * .NET masaüstü geliştirme
        * Tüm gerekli bileşenler
@@ -35,14 +35,14 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
      - [Yol ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Maven 'i ekleyin. Örneğin, *C:\bin\apache-Maven-3.6.0\Bin*.
      - Komut satırınızdan çalıştırabildiğinizi doğrulayın `mvn` .
   5. **[Apache Spark 2.3 +](https://spark.apache.org/downloads.html)**' yı yükler.
-     - [Apache Spark 2.3 +](https://spark.apache.org/downloads.html) indirin ve bu dosyayı yerel bir klasöre (örneğin, *C:\bin\spark-2.3.2-bin-hadoop2.7 \* ) [7-zip](https://www.7-zip.org/)kullanarak ayıklayın. (Desteklenen Spark sürümleri 2,3.*, 2.4.0, 2.4.1, 2.4.3 ve 2.4.4)
-     - Yeni bir [ortam değişkeni](https://www.java.com/en/download/help/path.xml) ekleyin `SPARK_HOME` . Örneğin, * C:\bin\spark-2.3.2-bin-hadoop2.7 \* .
+     - [Apache Spark 2.3 +](https://spark.apache.org/downloads.html) indirin ve bu dosyayı yerel bir klasöre (örneğin, *C:\bin\spark-3.0.1-bin-hadoop2.7 \* ) [7-zip](https://www.7-zip.org/)kullanarak ayıklayın. (Desteklenen Spark sürümleri 2,3.*, 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 ve 3.0.1)
+     - Yeni bir [ortam değişkeni](https://www.java.com/en/download/help/path.xml) ekleyin `SPARK_HOME` . Örneğin, * C:\bin\spark-3.0.1-bin-hadoop2.7 \* .
 
        ```powershell
-       set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\
+       set SPARK_HOME=C:\bin\spark-3.0.1-bin-hadoop2.7\
        ```
 
-     - [Path ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Spark ekleyin. Örneğin, *C:\bin\spark-2.3.2-bin-hadoop2.7\bin*.
+     - [Path ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Spark ekleyin. Örneğin, *C:\bin\spark-3.0.1-bin-hadoop2.7\bin*.
 
        ```powershell
        set PATH=%SPARK_HOME%\bin;%PATH%
@@ -56,10 +56,10 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
               ____              __
              / __/__  ___ _____/ /__
             _\ \/ _ \/ _ `/ __/  '_/
-           /___/ .__/\_,_/_/ /_/\_\   version 2.3.2
+           /___/ .__/\_,_/_/ /_/\_\   version 3.0.1
               /_/
 
-        Using Scala version 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_201)
+        Using Scala version 2.12.10 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_201)
         Type in expressions to have them evaluated.
         Type :help for more information.
 
@@ -70,7 +70,7 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
         </details>
 
   6. **[Winutils](https://github.com/steveloughran/winutils)**'i yükler.
-     - `winutils.exe` [Winutils deposundan](https://github.com/steveloughran/winutils)ikili indirin. Spark dağıtımının derlenmiş olduğu Hadoop sürümünü seçmeniz gerekir. Exammple için, Spark 2.3.2 için Hadoop-2.7.1 kullanın.
+     - `winutils.exe` [Winutils deposundan](https://github.com/steveloughran/winutils)ikili indirin. Spark dağıtımının derlenmiş olduğu Hadoop sürümünü seçmeniz gerekir. Exammple için, Spark 3.0.1 için Hadoop-2.7.1 kullanın.
      - `winutils.exe`İkiliyi istediğiniz dizine kaydedin. Örneğin, *C:\hadoop\bin*.
      - `HADOOP_HOME`winutils.exe (bin olmadan) dizini yansıtacak şekilde ayarlanır. Örneğin, komut satırını kullanarak:
 
@@ -110,8 +110,9 @@ mvn clean package
 
 Desteklenen Spark sürümleri için oluşturulan JARs ' i görmeniz gerekir:
 
-* `microsoft-spark-2.3.x\target\microsoft-spark-2.3.x-<version>.jar`
-* `microsoft-spark-2.4.x\target\microsoft-spark-2.4.x-<version>.jar`
+* `microsoft-spark-2-3\target\microsoft-spark-2-3_2.11-<spark-dotnet-version>.jar`
+* `microsoft-spark-2-4\target\microsoft-spark-2-4_2.11-<spark-dotnet-version>.jar`
+* `microsoft-spark-3-0\target\microsoft-spark-3-0_2.12-<spark-dotnet-version>.jar`
 
 ### <a name="build-the-net-for-spark-sample-applications"></a>Spark örnek uygulamaları için .NET oluşturun
 
@@ -170,58 +171,58 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
 
       ```powershell
       cd C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker\
-      dotnet publish -f netcoreapp2.1 -r win10-x64
+      dotnet publish -f netcoreapp3.1 -r win-x64
       ```
 
       Örnek konsol çıkışı:
 
       ```powershell
-      PS C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker> dotnet publish -f netcoreapp2.1 -r win10-x64
-      Microsoft (R) Build Engine version 16.0.462+g62fb89029d for .NET Core
+      PS C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker> dotnet publish -f netcoreapp3.1 -r win-x64
+      Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
       Copyright (C) Microsoft Corporation. All rights reserved.
 
         Restore completed in 299.95 ms for C:\github\dotnet-spark\src\csharp\Microsoft.Spark\Microsoft.Spark.csproj.
         Restore completed in 306.62 ms for C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker\Microsoft.Spark.Worker.csproj.
-        Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.0\Microsoft.Spark.dll
-        Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\Microsoft.Spark.Worker.dll
-        Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish\
+        Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.1\Microsoft.Spark.dll
+        Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\Microsoft.Spark.Worker.dll
+        Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish\
       ```
 
   2. Örnekleri oluşturun:
 
       ```powershell
       cd C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples\
-      dotnet publish -f netcoreapp2.1 -r win10-x64
+      dotnet publish -f netcoreapp3.1 -r win-x64
       ```
 
       Örnek konsol çıkışı:
 
       ```powershell
-      PS C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples> dotnet publish -f netcoreapp2.1 -r win10-x64
-      Microsoft (R) Build Engine version 16.0.462+g62fb89029d for .NET Core
+      PS C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples> dotnet publish -f netcoreapp3.1 -r win-x64
+      Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
       Copyright (C) Microsoft Corporation. All rights reserved.
 
         Restore completed in 44.22 ms for C:\github\dotnet-spark\src\csharp\Microsoft.Spark\Microsoft.Spark.csproj.
         Restore completed in 336.94 ms for C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples\Microsoft.Spark.CSharp.Examples.csproj.
-        Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.0\Microsoft.Spark.dll
-        Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\Microsoft.Spark.CSharp.Examples.dll
-        Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish\
+        Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.1\Microsoft.Spark.dll
+        Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\Microsoft.Spark.CSharp.Examples.dll
+        Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish\
       ```
 
 ## <a name="run-the-net-for-spark-sample-applications"></a>Spark örnek uygulamaları için .NET çalıştırın
 
 Örnekleri oluşturduktan sonra, `spark-submit` .NET Framework veya .NET Core 'u hedeflemenize bakılmaksızın bunların çalıştırılması gerekir. [Önkoşul](#prerequisites) bölümünü izlediğinizden ve Apache Spark yüklediğinizden emin olun.
 
-  1. Ya da `DOTNET_WORKER_DIR` `PATH` ortam değişkenini, ikilinin oluşturulduğu yolu içerecek şekilde ayarlayın `Microsoft.Spark.Worker` (örneğin, *C:\GITHUB\DOTNET\SPARK\ARTIFACTS\BIN\MICROSOFT.spark.WORKER\DEBUG\NET461* for .NET Framework, .NET Core için *C:\github\dotnet-spark\artifacts\bin\Microsoft.spark.Worker\Debug\netcoreapp2.1\win10-x64\publish* ):
+  1. Ya da `DOTNET_WORKER_DIR` `PATH` ortam değişkenini, ikilinin oluşturulduğu yolu içerecek şekilde ayarlayın `Microsoft.Spark.Worker` (örneğin, *C:\GITHUB\DOTNET\SPARK\ARTIFACTS\BIN\MICROSOFT.spark.WORKER\DEBUG\NET461* for .NET Framework, .NET Core için *C:\github\dotnet-spark\artifacts\bin\Microsoft.spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish* ):
 
       ```powershell
-      set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish
+      set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish
       ```
   
-  2. PowerShell 'i açın ve uygulama ikilisinin oluşturulduğu dizine gidin (örneğin, .NET Framework için *C:\github\dotnet\spark\artifacts\bin\Microsoft.spark.CSharp.Examples\Debug\net461* , .NET Core için *C:\github\dotnet-spark\artifacts\bin\Microsoft.spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish* ):
+  2. PowerShell 'i açın ve uygulama ikilisinin oluşturulduğu dizine gidin (örneğin, .NET Framework için *C:\github\dotnet\spark\artifacts\bin\Microsoft.spark.CSharp.Examples\Debug\net461* , .NET Core için *C:\github\dotnet-spark\artifacts\bin\Microsoft.spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish* ):
 
       ```powershell
-      cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish
+      cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish
       ```
 
   3. Uygulamanızı çalıştırmak temel yapıyı izler:
@@ -243,7 +244,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
          spark-submit.cmd `
          --class org.apache.spark.deploy.dotnet.DotnetRunner `
          --master local `
-         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<version>.jar `
+         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar `
          Microsoft.Spark.CSharp.Examples.exe Sql.Batch.Basic %SPARK_HOME%\examples\src\main\resources\people.json
          ```
 
@@ -253,7 +254,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
          spark-submit.cmd `
          --class org.apache.spark.deploy.dotnet.DotnetRunner `
          --master local `
-         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<version>.jar `
+         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar `
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkWordCount localhost 9999
          ```
 
@@ -264,7 +265,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
          --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.2 `
          --class org.apache.spark.deploy.dotnet.DotnetRunner `
          --master local `
-         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<version>.jar `
+         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar `
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
          ```
 
@@ -275,6 +276,6 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
          --jars path\to\net.jpountz.lz4\lz4-1.3.0.jar,path\to\org.apache.kafka\kafka-clients-0.10.0.1.jar,path\to\org.apache.spark\spark-sql-kafka-0-10_2.11-2.3.2.jar,`path\to\org.slf4j\slf4j-api-1.7.6.jar,path\to\org.spark-project.spark\unused-1.0.0.jar,path\to\org.xerial.snappy\snappy-java-1.1.2.6.jar `
          --class org.apache.spark.deploy.dotnet.DotnetRunner `
          --master local `
-         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<version>.jar `
+         C:\github\dotnet-spark\src\scala\microsoft-spark-<version>\target\microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar `
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
           ```

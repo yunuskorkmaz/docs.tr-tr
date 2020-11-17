@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d4f44d095fffdfa05b82516cfe79700f9e239110
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 16ccc8f40f290c4bc10f03d1f4d1b296b17f6b11
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955414"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687831"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile çalışmaya başlama
 
@@ -53,40 +53,40 @@ Apache Spark, sıkıştırılmış. tgz dosyası olarak indirilir. Dosyayı ayı
 
 ### <a name="4-install-apache-spark"></a>4. Apache Spark yüklemesi
 
-[Apache Spark indirin ve yükleyin](https://spark.apache.org/downloads.html). 2,3. * veya 2.4.0, 2.4.1, 2.4.3 veya 2.4.4 (.NET Apache Spark Apache Spark diğer sürümleriyle uyumlu değildir) arasından seçim yapmanız gerekir.
+[Apache Spark indirin ve yükleyin](https://spark.apache.org/downloads.html). 2,3. * veya 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 veya 3.0.1 (.NET Apache Spark Apache Spark diğer sürümleriyle uyumlu değil) arasından seçim yapmanız gerekir.
 
-Aşağıdaki adımlarda kullanılan komutlar, [2.4.1 Apache Spark indirdiğiniz ve yüklediğiniz](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz)varsayılır. Farklı bir sürüm kullanmak istiyorsanız, **2.4.1** değerini uygun sürüm numarasıyla değiştirin. Ardından, **. tar** dosyasını ve Apache Spark dosyalarını ayıklayın.
+Aşağıdaki adımlarda kullanılan komutlar, [3.0.1 Apache Spark indirdiğiniz ve yüklediğiniz](https://spark.apache.org/downloads.html)varsayılır. Farklı bir sürüm kullanmak istiyorsanız, **3.0.1** değerini uygun sürüm numarasıyla değiştirin. Ardından, **. tar** dosyasını ve Apache Spark dosyalarını ayıklayın.
 
 İç içe geçmiş **. tar** dosyasını ayıklamak için:
 
-* İndirdiğiniz **Spark-2.4.1-bin-Hadoop 2.7. tgz** dosyasını bulun.
+* İndirdiğiniz **Spark-3.0.1-bin-Hadoop 2.7. tgz** dosyasını bulun.
 * Dosyaya sağ tıklayın ve **7-ZIP-> buradan Ayıkla**' yı seçin.
-* **Spark-2.4.1-bin-Hadoop 2.7. tar** , indirdiğiniz **. tgz** dosyası ile birlikte oluşturulur.
+* **Spark-3.0.1-bin-Hadoop 2.7. tar** , indirdiğiniz **. tgz** dosyası ile birlikte oluşturulur.
 
 Apache Spark dosyalarını ayıklamak için:
 
-* **Spark-2.4.1-bin-Hadoop 2.7. tar** öğesine sağ tıklayın ve **7-ZIP-> dosyaları ayıkla ' yı seçin...**
+* **Spark-3.0.1-bin-Hadoop 2.7. tar** öğesine sağ tıklayın ve **7-ZIP-> dosyaları ayıkla ' yı seçin...**
 * **Ayıkla** alanına **c:\Bin** yazın.
 * **Ayıkla** alanının altındaki onay kutusunun işaretini kaldırın.
 * **Tamam**’ı seçin.
-* Apache Spark dosyaları C:\bin\spark-2.4.1-bin-hadoop2.7\ ' ye ayıklanır
+* Apache Spark dosyaları C:\bin\spark-3.0.1-bin-hadoop2.7\ ' ye ayıklanır
 
-![Spark 'ı yükler](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
+![Spark 'ı yükler](./media/spark-extract-with-7-zip.png)
 
 Apache Spark bulmak için kullanılan ortam değişkenlerini ayarlamak için aşağıdaki komutları çalıştırın. Windows 'ta, komut istemi 'ni yönetici modunda çalıştırdığınızdan emin olun.
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
 ```console
-setx /M HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
-setx /M SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M HADOOP_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
+setx /M SPARK_HOME C:\bin\spark-3.0.1-bin-hadoop2.7\
 setx /M PATH "%PATH%;%HADOOP_HOME%;%SPARK_HOME%\bin"
 ```
 
 #### <a name="maclinux"></a>[Mac/Linux](#tab/linux)
 
 ```bash
-export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
+export SPARK_HOME=~/bin/spark-3.0.1-bin-hadoop2.7/
 export PATH="$SPARK_HOME/bin:$PATH"
 source ~/.bashrc
 ```
@@ -109,24 +109,22 @@ Apache Spark GitHub için .NET 'ten [Microsoft. spark. Worker](https://github.co
 
 Microsoft. spark. Worker öğesini ayıklamak için:
 
-* İndirdiğiniz **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip** dosyasını bulun.
+* İndirdiğiniz **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-1.0.0.zip** dosyasını bulun.
 * Sağ tıklayıp **7-ZIP-> dosyaları ayıkla ' yı seçin...**
 * **Ayıkla** alanına **c:\Bin** yazın.
 * **Ayıkla** alanının altındaki onay kutusunun işaretini kaldırın.
 * **Tamam**’ı seçin.
 
-![.NET Spark 'ı yükler](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
-
 ### <a name="6-install-winutils-windows-only"></a>6. WinUtils 'i (yalnızca Windows) yükler
 
-Apache Spark için .NET, Apache Spark birlikte WinUtils 'in yüklenmesini gerektirir. [winutils.exeindirin ](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe). Ardından, WinUtils 'ı **C:\bin\spark-2.4.1-bin-hadoop2.7\bin**'e kopyalayın.
+Apache Spark için .NET, Apache Spark birlikte WinUtils 'in yüklenmesini gerektirir. [winutils.exeindirin ](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe). Ardından, WinUtils 'ı **C:\bin\spark-3.0.1-bin-hadoop2.7\bin**'e kopyalayın.
 
 > [!NOTE]
 > Spark install klasörünüzün adının sonunda açıklanan farklı bir Hadoop sürümü kullanıyorsanız, Hadoop sürümünüzle uyumlu olan [WinUtils sürümünü seçin](https://github.com/steveloughran/winutils) .
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. DOTNET_WORKER_DIR ayarla ve bağımlılıkları denetle
 
-`DOTNET_WORKER_DIR`.NET uygulamaları tarafından Apache Spark .net bulmak için kullanılan ortam değişkenini ayarlamak için aşağıdaki komutlardan birini çalıştırın. `<PATH-DOTNET_WORKER_DIR>`' İ indirdiğiniz ve ayıkladığınız dizinle değiştirdiğinizden emin olun `Microsoft.Spark.Worker` . Windows 'ta, komut istemi 'ni yönetici modunda çalıştırdığınızdan emin olun.
+`DOTNET_WORKER_DIR`.NET uygulamaları tarafından Apache Spark çalışan ikililerini bulmak için kullanılan ortam değişkenini ayarlamak için aşağıdaki komutlardan birini çalıştırın. `<PATH-DOTNET_WORKER_DIR>`' İ indirdiğiniz ve ayıkladığınız dizinle değiştirdiğinizden emin olun `Microsoft.Spark.Worker` . Windows 'ta, komut istemi 'ni yönetici modunda çalıştırdığınızdan emin olun.
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
@@ -242,7 +240,7 @@ Yapı çıkış dizininize gidin ve `spark-submit` uygulamanızı Apache Spark �
 spark-submit ^
 --class org.apache.spark.deploy.dotnet.DotnetRunner ^
 --master local ^
-microsoft-spark-2.4.x-<version>.jar ^
+microsoft-spark-3-0_2.12-<version>.jar ^
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 
@@ -252,7 +250,7 @@ dotnet MySparkApp.dll <path-of-input.txt>
 spark-submit \
 --class org.apache.spark.deploy.dotnet.DotnetRunner \
 --master local \
-microsoft-spark-2.4.x-<version>.jar \
+microsoft-spark-3-0_2.12-<version>.jar \
 dotnet MySparkApp.dll <path-of-input.txt>
 ```
 

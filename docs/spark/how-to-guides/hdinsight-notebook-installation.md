@@ -4,12 +4,12 @@ description: Azure HDInsight 'ın Jupyıter not defterlerine Apache Spark için 
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b5689c9ccdd13209fec33674ad8fc80dcc369660
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955055"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688286"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark kümelerinde Jupyıter not defterlerine Apache Spark .NET 'i yükler
 
@@ -22,7 +22,7 @@ Jupi Not defterleri deneyimi aracılığıyla Apache Spark için .NET etkinleşt
 > [!NOTE]
 > Bu özellik *deneysel* ve HDInsight Spark ekibi tarafından desteklenmiyor.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Henüz bir tane yoksa [Azure HDInsight Spark](/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) kümesi oluşturun.
 
@@ -73,19 +73,19 @@ Azure portal, önceki adımda oluşturduğunuz **HDInsight Spark kümesini** se�
    | Name | *Apache Spark etkileşimli not defteri deneyimi için .NET 'i yükler* |
    | Bash betiği URI 'SI | Karşıya yüklediğiniz URI `install-interactive-notebook.sh` . |
    | Düğüm türleri| Baş ve çalışan |
-   | Parametreler | Apache Spark sürümü için .NET. [Apache Spark sürümleri için .net](https://github.com/dotnet/spark/releases)'i kontrol edebilirsiniz. Örneğin, Mini-mini DotNet sürüm 0.6.0 yüklemek istiyorsanız, bu durumda olur `0.6.0` .
+   | Parametreler | Apache Spark sürümü için .NET. [Apache Spark sürümleri için .net](https://github.com/dotnet/spark/releases)'i kontrol edebilirsiniz. Örneğin, Mini-mini DotNet sürüm 1.0.0 yüklemek istiyorsanız, bu durumda olur `1.0.0` .
 
    Komut dosyası eyleminin durumunun yanında yeşil onay işaretleri görüntülendiğinde sonraki adıma geçin.
 
 ### <a name="start-the-livy-server"></a>Livy sunucusunu Başlat
 
-Konaklar **hn0** ve **Hn1**Için Spark2 Server Için [Livy](#stop-the-livy-server) 'ı **başlatmak** üzere ( **Durdur**yerine)
+Konaklar **hn0** ve **Hn1** Için Spark2 Server Için [Livy](#stop-the-livy-server) 'ı **başlatmak** üzere ( **Durdur** yerine)
 
 ### <a name="set-up-spark-default-configurations"></a>Spark varsayılan yapılandırmasını ayarlama
 
 1. Portalda **genel bakış**' ı seçin ve ardından **ambarı giriş**' i seçin. İstendiğinde, küme için küme oturum açma kimlik bilgilerini girin.
 
-2. **Spark2** ve **configs**öğesini seçin. Ardından, **özel spark2-varsayılanlar**' ı seçin.
+2. **Spark2** ve **configs** öğesini seçin. Ardından, **özel spark2-varsayılanlar**' ı seçin.
 
    ![Yapılandırmaları ayarla](./media/hdinsight-notebook-installation/spark-configs.png)
 
@@ -101,7 +101,7 @@ Konaklar **hn0** ve **Hn1**Için Spark2 Server Için [Livy](#stop-the-livy-serve
 
    * **Özellik 2** Önceki betik eyleminde bulunan Apache Spark için .NET sürümünü kullanın.
        * Anahtar&ensp;&ensp;`spark.dotnet.packages`
-       * Değer: `["nuget: Microsoft.Spark, 0.6.0", "nuget: Microsoft.Spark.Extensions.Delta, 0.6.0"]`
+       * Değer: `["nuget: Microsoft.Spark, 1.0.0", "nuget: Microsoft.Spark.Extensions.Delta, 1.0.0"]`
 
    * **Özellik 3**
        * Anahtar&ensp;&ensp;`spark.dotnet.interpreter`

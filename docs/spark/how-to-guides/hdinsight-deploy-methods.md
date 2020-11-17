@@ -4,12 +4,12 @@ description: Spark-gönder ve Apache Livy kullanarak Azure HDInsight 'a Apache S
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: cb99cd8028d504924d2dd69910efed0065d0a2e2
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 74be4ecf33a9a881633da0630fa1c1a4bf0b19c6
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954925"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688169"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Azure HDInsight 'a Apache Spark iş için .NET gönderme
 
@@ -23,13 +23,13 @@ Azure HDInsight 'a Apache Spark işleri için .NET göndermek için [Spark-gönd
 
 2. SSH oturum açma bilgilerini kopyalayın ve oturumu bir terminale yapıştırın. Küme oluşturma sırasında ayarladığınız parolayı kullanarak kümenizde oturum açın. Sizi Ubuntu ve Spark 'a yönlendiren iletiler görmeniz gerekir.
 
-3. Uygulamanızı HDInsight kümenizde çalıştırmak için **Spark-gönder** komutunu kullanın. Örnek betikteki **myContainer** ve **mystorageaccount** ' ın blob Kapsayıcınızın ve depolama hesabınızın gerçek adlarıyla değiştirilmesini unutmayın. Ayrıca, `microsoft-spark-2.3.x-0.6.0.jar` dağıtım için kullanmakta olduğunuz uygun jar dosyası ile değiştirdiğinizden emin olun. `2.3.x` Apache Spark sürümünü temsil eder ve `0.6.0` [Apache Spark Worker için .net](https://github.com/dotnet/spark/releases)sürümünü temsil eder.
+3. Uygulamanızı HDInsight kümenizde çalıştırmak için **Spark-gönder** komutunu kullanın. Örnek betikteki **myContainer** ve **mystorageaccount** ' ın blob Kapsayıcınızın ve depolama hesabınızın gerçek adlarıyla değiştirilmesini unutmayın. Ayrıca, Microsoft-Spark jar 'i, kullanılan Apache Spark Spark ve .NET sürümü ile değiştirmeyi unutmayın.
 
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
    --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
@@ -46,7 +46,7 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 -H "X-Requested-By: <hdinsight username>" \
 -d @- << EOF
 {
-    "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar",
+    "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar",
     "className":"org.apache.spark.deploy.dotnet.DotnetRunner",
     "files":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<udf assembly>", "abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<file>"],
     "args":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip","<your app>","<app arg 1>","<app arg 2>,"...","<app arg n>"]

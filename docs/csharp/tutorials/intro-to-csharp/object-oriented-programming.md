@@ -2,12 +2,12 @@
 title: Object-Oriented programlama (C#)
 description: C#; soyutlama, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
 ms.date: 09/30/2020
-ms.openlocfilehash: 353edf8fc68f495f3d875fa678aaaf91f1fd6406
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 4ae31e18fcd88870f511e77bb0c555f35394fd1b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471601"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688000"
 ---
 # <a name="object-oriented-programming-c"></a>Object-Oriented programlama (C#)
 
@@ -18,7 +18,7 @@ C#, nesne yönelimli bir dildir. Nesne odaklı programlamada kullanılan temel t
 - *Devralma* , mevcut bir sınıfı temel alan yeni sınıflar oluşturma özelliğini açıklar.
 - Çok *biçimlilik* , her bir sınıf farklı yollarla aynı özellikleri veya yöntemleri uyguladığından bile, birbirinin yerine kullanılabilecek birden fazla sınıfa sahip olabileceği anlamına gelir.
 
-Önceki öğreticide, hem *soyutlamayı* hem de *kapsüllemeyi*gördüğünüz [sınıflara giriş](introduction-to-classes.md) . `BankAccount`Sınıf, bir banka hesabı kavramı için bir soyutlama sağladı. Sınıfını kullanan herhangi bir kodu etkilemeden uygulamasını değiştirebilirsiniz `BankAccount` . Hem `BankAccount` hem de `Transaction` sınıfları, koddaki bu kavramları anlatmak için gereken bileşenlerin kapsüllemesini sağlar.
+Önceki öğreticide, hem *soyutlamayı* hem de *kapsüllemeyi* gördüğünüz [sınıflara giriş](introduction-to-classes.md) . `BankAccount`Sınıf, bir banka hesabı kavramı için bir soyutlama sağladı. Sınıfını kullanan herhangi bir kodu etkilemeden uygulamasını değiştirebilirsiniz `BankAccount` . Hem `BankAccount` hem de `Transaction` sınıfları, koddaki bu kavramları anlatmak için gereken bileşenlerin kapsüllemesini sağlar.
 
 Bu öğreticide, yeni özellikler eklemek için bu uygulamayı *Devralma* ve çok *biçimlilik* kullanımını kullanacak şekilde genişleteceksiniz. Ayrıca, `BankAccount` önceki öğreticide öğrendiğiniz *soyutlama* ve *kapsülleme* tekniklerinden yararlanarak sınıfa özellikler ekleyeceksiniz.
 
@@ -48,9 +48,9 @@ public class GiftCardAccount : BankAccount
 }
 ```
 
-Bu sınıfların her biri paylaşılan davranışı paylaşılan *temel sınıfından*, sınıfından *devralır* `BankAccount` . *Türetilmiş sınıfların*her birinde yeni ve farklı işlevlere yönelik uygulamalar yazın.  Bu türetilmiş sınıfların, sınıfında tanımlanmış tüm davranışları zaten var `BankAccount` .
+Bu sınıfların her biri paylaşılan davranışı paylaşılan *temel sınıfından*, sınıfından *devralır* `BankAccount` . *Türetilmiş sınıfların* her birinde yeni ve farklı işlevlere yönelik uygulamalar yazın.  Bu türetilmiş sınıfların, sınıfında tanımlanmış tüm davranışları zaten var `BankAccount` .
 
-Her yeni sınıfı farklı bir kaynak dosyasında oluşturmak iyi bir uygulamadır. [Visual Studio](https://visualstudio.com)'da projeye sağ tıklayıp *Sınıf Ekle* ' yi seçerek yeni bir dosyaya yeni bir sınıf ekleyebilirsiniz. [Visual Studio Code](https://code.visualstudio.com), yeni bir kaynak dosya oluşturmak için *Dosya* ' yı ve ardından *Yeni* ' yi seçin. Her iki araçta, sınıfıyla eşleşecek dosyayı adlandırın: *InterestEarningAccount.cs*, *LineOfCreditAccount.cs*ve *GiftCardAccount.cs*.
+Her yeni sınıfı farklı bir kaynak dosyasında oluşturmak iyi bir uygulamadır. [Visual Studio](https://visualstudio.com)'da projeye sağ tıklayıp *Sınıf Ekle* ' yi seçerek yeni bir dosyaya yeni bir sınıf ekleyebilirsiniz. [Visual Studio Code](https://code.visualstudio.com), yeni bir kaynak dosya oluşturmak için *Dosya* ' yı ve ardından *Yeni* ' yi seçin. Her iki araçta, sınıfıyla eşleşecek dosyayı adlandırın: *InterestEarningAccount.cs*, *LineOfCreditAccount.cs* ve *GiftCardAccount.cs*.
 
 Önceki örnekte gösterildiği gibi sınıfları oluşturduğunuzda, türetilmiş sınıflarınızın derlenmediği fark edeceksiniz. Bir Oluşturucu, bir nesne başlatmaktan sorumludur. Türetilmiş sınıf oluşturucusunun türetilmiş sınıfını başlatması ve türetilmiş sınıfta bulunan temel sınıf nesnesinin nasıl başlatılacağını gösteren yönergeler sağlaması gerekir. Uygun başlatma normalde herhangi bir ek kod olmadan gerçekleşir. `BankAccount`Sınıfı, aşağıdaki imzaya sahip bir ortak Oluşturucu bildirir:
 
@@ -173,6 +173,8 @@ Geçersiz kılma, hesap fazla çizilmiş olduğunda bir ücret işlemi döndür�
 Programı çalıştırın ve sonuçları denetleyin.
 
 ## <a name="summary"></a>Özet
+
+Çıkdıysanız, Bu öğreticinin kaynağını [GitHub](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)deponuzda görebilirsiniz.
 
 Bu öğretici Object-Oriented programlamada kullanılan birçok tekniği göstermiştir:
 

@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 55a52754439020bd2a925aa3e987fb4ad99c9c3d
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ca6dab01cbd639594da0b51f145272a9a150e93c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224008"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687759"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>Apache Spark için .NET 'teki yayın değişkenlerini kullanın
 
@@ -96,6 +96,11 @@ Func<Column, Column> udf2 = Udf<string, string>(
 // Calling udf2 works fine as expected
 df.Select(udf2(df["_1"])).Show();
 ```
+
+## <a name="faqs"></a>SSS
+
+**Neden yayınlama değişkenleri .NET etkileşimli ile çalışır?**  
+.NET etkileşimli senaryolarından biri, seri hale getirilebilir olarak işaretlenmediği için bir hücrede tanımlanan her nesneyi hücre gönderim sınıfıyla birlikte ekleme, bu nedenle daha önce gösterildiği gibi aynı özel durumla başarısız olduğu için, yayın değişkenleri etkileşimli senaryolarla çalışmaz. Daha fazla bilgi için lütfen [Bu makaleye](dotnet-interactive-udf-issue.md)göz atın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
