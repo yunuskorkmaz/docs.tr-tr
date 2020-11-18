@@ -1,19 +1,18 @@
 ---
 title: PLıNQ ile olası tehlikeli
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: 012ac4078c1e2f17d6eef88ee295b11161a0e24a
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 1e1763132cd0ee8f1135e562c36ce4adf603f5af
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925278"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822249"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLıNQ ile olası tehlikeli
 

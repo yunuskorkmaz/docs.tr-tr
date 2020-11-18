@@ -2,7 +2,6 @@
 title: 'Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma'
 description: Bir sayıyı baştaki sıfırlarla doldurma hakkında bilgi edinin. Tamsayıları veya sayısal değerleri, belirli bir toplam uzunluğa veya belirli bir satır başına sıfırlar için öndeki sıfırlar ekleyin.
 ms.date: 02/25/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - number formatting [.NET]
 - numbers [.NET], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: 7c3ee376fde34663ee0599c0b1ae654871a71206
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 911d6059d3594ca35eb1c1c3e2d29a5684bce738
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888462"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822054"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma
 
@@ -29,9 +28,9 @@ ms.locfileid: "92888462"
 
 1. Tamsayıyı ondalık değer veya onaltılık bir değer olarak göstermek isteyip istemediğinizi belirleme.
 
-    - Tamsayıyı bir ondalık değer olarak göstermek için `ToString(String)` metodunu çağırın ve "D *n* " dizesini parametresinin değeri olarak geçirin `format` ; burada *n* , dizenin minimum uzunluğunu temsil eder.
+    - Tamsayıyı bir ondalık değer olarak göstermek için `ToString(String)` metodunu çağırın ve "D *n*" dizesini parametresinin değeri olarak geçirin `format` ; burada *n* , dizenin minimum uzunluğunu temsil eder.
 
-    - Tamsayıyı onaltılık bir değer olarak göstermek için `ToString(String)` metodunu çağırın ve "X *n* " dizesini biçim parametresinin değeri olarak geçirin; burada *n* , dizenin minimum uzunluğunu temsil eder.
+    - Tamsayıyı onaltılık bir değer olarak göstermek için `ToString(String)` metodunu çağırın ve "X *n*" dizesini biçim parametresinin değeri olarak geçirin; burada *n* , dizenin minimum uzunluğunu temsil eder.
 
 Ayrıca, biçim dizesini hem [C#](../../csharp/language-reference/tokens/interpolated.md) hem de [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)enterpolasyonlu bir dizedeki de kullanabilirsiniz ya da <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> [Bileşik biçimlendirme](composite-formatting.md)kullanan veya gibi bir yöntemi çağırabilirsiniz.
 
@@ -54,7 +53,7 @@ Aşağıdaki örnek, biçimlendirilen sayının toplam uzunluğu en az sekiz kar
 
 1. Sayısal olmayan dizenin uzunluğuna göre biçimlendirilen dizeye eklemek istediğiniz öndeki sıfırlar sayısını ekleyin. Baştaki sıfırların sayısını eklemek, doldurulmuş dizenin toplam uzunluğunu tanımlar.
 
-1. Tamsayı değerinin `ToString(String)` metodunu çağırın ve "D *n* " dizesini ondalık dizeler Için ve "X *n* " dizesini, onaltılık dizeler için geçirin; burada *n* , doldurulmuş dizenin toplam uzunluğunu temsil eder. Bileşik biçimlendirmeyi destekleyen bir yöntemde "D *n* " veya "X *n* " biçim dizesini de kullanabilirsiniz.
+1. Tamsayı değerinin `ToString(String)` metodunu çağırın ve "D *n*" dizesini ondalık dizeler Için ve "X *n*" dizesini, onaltılık dizeler için geçirin; burada *n* , doldurulmuş dizenin toplam uzunluğunu temsil eder. Bileşik biçimlendirmeyi destekleyen bir yöntemde "D *n*" veya "X *n*" biçim dizesini de kullanabilirsiniz.
 
 Aşağıdaki örnek, beş önde sıfır ile bir tamsayı değeri alt Pad.
 

@@ -1,17 +1,16 @@
 ---
 title: XPathNavigator Kullanarak Şema Doğrulama
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-ms.openlocfilehash: f6e56616543bf7d2ad2e6be4d7bf7cbc50ba3a23
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 304177ed4cb600aa27142e3b1c3690a3d7053c5d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292013"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822483"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator Kullanarak Şema Doğrulama
 Sınıfını kullanarak <xref:System.Xml.XmlDocument> bir nesnede bulunan XML içeriğini <xref:System.Xml.XmlDocument> iki şekilde doğrulayabilirsiniz. İlk yöntem, Validating nesnesini kullanarak XML içeriğini doğrulamak <xref:System.Xml.XmlReader> ve ikinci yöntem ise <xref:System.Xml.XmlDocument.Validate%2A> sınıfının yöntemini kullanmaktır <xref:System.Xml.XmlDocument> . Ayrıca, sınıfını kullanarak XML içeriğinin salt okunurdur doğrulamasını gerçekleştirebilirsiniz <xref:System.Xml.XPath.XPathDocument> .  
@@ -350,7 +349,7 @@ class ValidatingReaderExample
   
  Yöntemi kullanarak değerleri değiştirme hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> bkz. [XML verilerini XPathNavigator ile değiştirme](modify-xml-data-using-xpathnavigator.md) konusu.  
   
-### <a name="read-only-validation"></a>Salt okuma doğrulaması  
+### <a name="read-only-validation"></a>Read-Only doğrulaması  
  <xref:System.Xml.XPath.XPathDocument>Sınıfı, BIR XML belgesinin Salt okunabilir, bellek içi gösterimidir. Hem <xref:System.Xml.XPath.XPathDocument> sınıf hem de <xref:System.Xml.XmlDocument> sınıf, <xref:System.Xml.XPath.XPathNavigator> XML belgelerini gezinmek ve düzenlemek için nesneler oluşturur. <xref:System.Xml.XPath.XPathDocument>Sınıfı salt bir salt okunurdur, nesne nesnesinden <xref:System.Xml.XPath.XPathNavigator> döndürülen <xref:System.Xml.XPath.XPathDocument> nesneler, nesnede bulunan XML belgesini düzenleyemez <xref:System.Xml.XPath.XPathDocument> .  
   
  Doğrulama durumunda, <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlReader> Bu konuda daha önce açıklandığı gibi doğrulama nesnesini kullanarak bir nesne oluşturduğunuz gibi bir nesne oluşturabilirsiniz. <xref:System.Xml.XPath.XPathDocument>Nesne, yüklendiği gıbı XML belgesini doğrular, ancak nesne IÇINDEKI XML verilerini DÜZENLEYEMEDIĞINDEN <xref:System.Xml.XPath.XPathDocument> XML belgesini yeniden doğrulayamazsınız.  

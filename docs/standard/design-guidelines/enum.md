@@ -2,7 +2,6 @@
 title: Sabit Listesi Tasarımı
 description: Özel bir tür değer türü olan Numaralandırmalar için tasarım. Basit numaralandırmalar küçük ve kapalı seçim kümelerini tutar. Bayrak numaralandırmalarında sabit listesi değerlerinde bit düzeyinde işlemler desteklenir.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, enumerations
 - simple enumerations
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: 40a9faf53dc8a03674cd59074244c15cd304bdd2
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: a2e19197b114daa2a0956a6fc87231a6a81de916
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768543"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821365"
 ---
 # <a name="enum-design"></a>Sabit Listesi Tasarımı
 
@@ -29,17 +28,17 @@ Bayrak numaralandırmalarında, sabit listesi değerlerinde bit düzeyinde işle
 
 ✔️ statik sabitler yerine bir numaralandırma kullanmayı tercih edin.
 
-❌Açık kümeler (örneğin, işletim sistemi sürümü, arkadaşlarınızın adları vb.) için bir sabit listesi kullanmayın.
+❌ Açık kümeler (örneğin, işletim sistemi sürümü, arkadaşlarınızın adları vb.) için bir sabit listesi kullanmayın.
 
-❌Gelecekte kullanılmak üzere tasarlanan ayrılmış sabit listesi değerleri SAĞLAMAMıŞTıR.
+❌ Gelecekte kullanılmak üzere tasarlanan ayrılmış sabit listesi değerleri SAĞLAMAMıŞTıR.
 
 Daha sonraki bir aşamada mevcut sabit listesine her zaman bir değer ekleyebilirsiniz. Numaralandırmaların değerlerini ekleme hakkında daha fazla ayrıntı için bkz. [numaralandırmalar Için değer ekleme](#add_value) . Ayrılmış değerler yalnızca gerçek değerler kümesini Pollute ve Kullanıcı hatalarına neden olacak şekilde eğilimlidir.
 
-❌Yalnızca bir değerli Numaralandırmaların genel kullanıma sunulmaktan kaçının.
+❌ Yalnızca bir değerli Numaralandırmaların genel kullanıma sunulmaktan kaçının.
 
 C API 'Lerinde gelecekteki genişletilebilirliği sağlamaya yönelik yaygın bir uygulama, ayrılmış parametreleri Yöntem imzalarına eklemektir. Bu tür ayrılmış parametreler, tek bir varsayılan değer ile enum olarak ifade edilebilir. Bu, yönetilen API 'lerde yapılmamalıdır. Yöntem aşırı yüklemesi gelecekteki sürümlerde parametre eklenmesine izin verir.
 
-❌Numaralandırmalarda Sentinel değerlerini eklemeyin.
+❌ Numaralandırmalarda Sentinel değerlerini eklemeyin.
 
 Bazen Framework geliştiricilerine faydalı olsalar da, Sentinel değerleri Framework kullanıcılarına kafa karıştırıcı olur. Numaralandırıcılardan temsil edilen kümeden biri yerine sabit listesinin durumunu izlemek için kullanılırlar.
 
@@ -65,9 +64,9 @@ Bellek içi kullanım için, yönetilen nesnelerin her zaman `DWORD` hizalandı�
 
 ✔️, çoğul isimler veya isim tümcecikleriyle sabit numaralandırmalar ve tekil isimler veya isim tümcecikleriyle basit Numaralandırmalar.
 
-❌Doğrudan genişlemeyin <xref:System.Enum?displayProperty=nameWithType> .
+❌ Doğrudan genişlemeyin <xref:System.Enum?displayProperty=nameWithType> .
 
-<xref:System.Enum?displayProperty=nameWithType>, CLR tarafından Kullanıcı tanımlı numaralandırmalar oluşturmak için kullanılan özel bir türdür. Çoğu programlama dili, bu işlevselliğe erişmenizi sağlayan bir programlama öğesi sağlar. Örneğin, C# ' de, `enum` bir sabit listesi tanımlamak için anahtar sözcüğü kullanılır.
+<xref:System.Enum?displayProperty=nameWithType> , CLR tarafından Kullanıcı tanımlı numaralandırmalar oluşturmak için kullanılan özel bir türdür. Çoğu programlama dili, bu işlevselliğe erişmenizi sağlayan bir programlama öğesi sağlar. Örneğin, C# ' de, `enum` bir sabit listesi tanımlamak için anahtar sözcüğü kullanılır.
 
 <a name="design"></a>
 
@@ -79,11 +78,11 @@ Bellek içi kullanım için, yönetilen nesnelerin her zaman `DWORD` hizalandı�
 
 ✔️, bayrakların yaygın olarak kullanılan birleşimleri için özel Enum değerleri sağlamayı düşünün.
 
-Bit düzeyinde işlemler gelişmiş bir kavramdır ve basit görevler için gerekli olmamalıdır. <xref:System.IO.FileAccess.ReadWrite>, bu tür özel bir değere örnektir.
+Bit düzeyinde işlemler gelişmiş bir kavramdır ve basit görevler için gerekli olmamalıdır. <xref:System.IO.FileAccess.ReadWrite> , bu tür özel bir değere örnektir.
 
-❌Belirli değer birleşimlerinin geçersiz olduğu bayrak numaralandırmalarını oluşturmaktan KAÇıNıN.
+❌ Belirli değer birleşimlerinin geçersiz olduğu bayrak numaralandırmalarını oluşturmaktan KAÇıNıN.
 
-❌Değer "tüm bayraklar temizlenmedi" ve uygun şekilde adlandırılmış ve bir sonraki kılavuz tarafından belirtilen şekilde adlandırılmadığı sürece, sıfır bayrak Enum değerlerini kullanmaktan KAÇıNıN.
+❌ Değer "tüm bayraklar temizlenmedi" ve uygun şekilde adlandırılmış ve bir sonraki kılavuz tarafından belirtilen şekilde adlandırılmadığı sürece, sıfır bayrak Enum değerlerini kullanmaktan KAÇıNıN.
 
 ✔️ bayrak Numaralandırmaların sıfır değeri `None` . Bayrak numaralandırması için, değer her zaman "tüm bayraklar temizlenmelidir." anlamına gelir.
 
@@ -99,7 +98,7 @@ Bir sabit listesine eklemelere neden olan uygulama uyumsuzluklarını hakkında 
 
 *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
-*, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+*Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

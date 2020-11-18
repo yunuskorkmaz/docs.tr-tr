@@ -1,17 +1,16 @@
 ---
 title: XML Verilerine Nesne Hiyerarşisi Eşleme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 8507c4b323f97279c3054b76aaf8d52f14f0d4ad
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 97cc7558f51b7bcbdb5201ef0f0c463da8f2c070
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289141"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822613"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>XML Verilerine Nesne Hiyerarşisi Eşleme
 Bir XML belgesi bellekte olduğunda, kavramsal temsil bir ağaç olur. Programlama için ağacın düğümlerine erişmek üzere bir nesne hiyerarşiniz vardır. Aşağıdaki örnek, XML içeriğinin düğüm haline geldiğini gösterir.  
@@ -33,9 +32,9 @@ Bir XML belgesi bellekte olduğunda, kavramsal temsil bir ağaç olur. Programla
  ![örnek düğüm ağacı](media/simple-xml.gif "Simple_XML")  
 Kitap ve başlık düğümü ağaç gösterimi  
   
- Öğesi `book` bir **XmlElement** nesnesi olur, Next öğesi `title` de bir **XmlElement**olur, ancak öğe içeriği bir **XmlText** nesnesi haline gelir. **XmlElement** yöntemlerine ve özelliklerine bakarak, Yöntemler ve özellikler, **XmlText** nesnesinde bulunan yöntemlerden ve özelliklerden farklıdır. Bu nedenle, XML biçimlendirmesinin hangi düğüm türünde olacağını bilmek, düğüm türü gerçekleştirilebilecek eylemleri belirlediği için çok önemlidir.  
+ Öğesi `book` bir **XmlElement** nesnesi olur, Next öğesi `title` de bir **XmlElement** olur, ancak öğe içeriği bir **XmlText** nesnesi haline gelir. **XmlElement** yöntemlerine ve özelliklerine bakarak, Yöntemler ve özellikler, **XmlText** nesnesinde bulunan yöntemlerden ve özelliklerden farklıdır. Bu nedenle, XML biçimlendirmesinin hangi düğüm türünde olacağını bilmek, düğüm türü gerçekleştirilebilecek eylemleri belirlediği için çok önemlidir.  
   
- Aşağıdaki örnek, XML verilerinde okur ve düğüm türüne bağlı olarak farklı metin yazar. Aşağıdaki XML veri dosyasını input, **Items. xml**olarak kullanma:  
+ Aşağıdaki örnek, XML verilerinde okur ve düğüm türüne bağlı olarak farklı metin yazar. Aşağıdaki XML veri dosyasını girdi olarak kullanma, **items.xml**:  
   
  **Giriş**  
   
@@ -53,7 +52,7 @@ Kitap ve başlık düğümü ağaç gösterimi
 </Items>  
 ```  
   
- Aşağıdaki kod örneği **Items. xml** dosyasını okur ve her düğüm türü için bilgileri görüntüler.  
+ Aşağıdaki kod örneği **items.xml** dosyayı okur ve her düğüm türü için bilgileri görüntüler.  
   
 ```vb  
 Imports System  
@@ -186,12 +185,12 @@ public class Sample
   
 |Girdi|Çıktı|Düğüm türü testi|  
 |-----------|------------|--------------------|  
-|\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType. Xmlbildirimi|  
+|\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType.Xmlbildirimi|  
 |\<!-- This is a sample XML document -->|\<!--This is a sample XML document -->|XmlNodeType. Comment|  
-|\<!DOCTYPE Items [\<!ENTITY number "123">] >|\<!DOCTYPE Items [\<!ENTITY number "123">]|XmlNodeType. DocumentType|  
+|\<!DOCTYPE Items [\<!ENTITY number "123">] >|\<!DOCTYPE Items [\<!ENTITY number "123">]|XmlNodeType.DocumentType|  
 |\<Items>|\<Items>|XmlNodeType. element|  
 |\<Item>|\<Item>|XmlNodeType. element|  
-|Bir varlıkla test edin:&number;|Bir varlıkla test: 123|XmlNodeType. Text|  
+|Bir varlıkla test edin: &number;|Bir varlıkla test: 123|XmlNodeType. Text|  
 |\</Item>|\</Item>|XmlNodeType. EndElement|  
 |\<Item>|\<Item>|XmNodeType. element|  
 |alt öğe ile test etme|alt öğe ile test etme|XmlNodeType. Text|  

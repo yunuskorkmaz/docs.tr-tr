@@ -2,7 +2,6 @@
 title: Dizeleri türlere Dönüştür
 description: .NET ' te dize ayrıştırmayı anlayın. Ayrıştırma, .NET temel türünü temsil eden bir dizeyi bu temel türe dönüştürür. Ayrıştırma, biçimlendirme için ters işlemdir.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parsing strings, about parsing strings
 - IFormatProvider interface, parsing strings
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: 3d23fa9c7ecc3593f03f70dbd5ea7bda841e8f4f
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 8fbfe8596e49ed101ea7d6bb65298e432a6fac13
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400859"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821911"
 ---
 # <a name="parse-strings-in-net"></a>.NET 'teki dizeleri ayrıştırma
 
@@ -29,7 +28,7 @@ Bir *ayrıştırma* işlemi, .net temel türünü temsil eden bir dizeyi bu teme
  Dizelerin .NET **DateTime** türlerine nasıl dönüştürüleceğini açıklar.
 
  [Diğer dizeleri ayrıştırma](parsing-other.md)\
- Dizelerin **char** , **Boolean** ve **enum** türlerine nasıl dönüştürüleceğini açıklar.
+ Dizelerin **char**, **Boolean** ve **enum** türlerine nasıl dönüştürüleceğini açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
  [Biçimlendirme türleri](formatting-types.md)\

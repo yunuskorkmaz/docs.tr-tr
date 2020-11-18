@@ -1,14 +1,13 @@
 ---
 title: XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-ms.openlocfilehash: 1418e768db2f5f860ec40cf4e1351b4ec4a14a08
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 249b99a627f3bbcc1723f104a80cb61552404877
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282213"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822470"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme
 Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> XPath sorgusu kullanarak bir veya nesnesindeki düğümleri seçmek, bir XPath ifadesinin sonuçlarını değerlendirmek ve incelemek ve bir <xref:System.Xml.XPath.XPathDocument> veya nesnesindeki bir düğümün <xref:System.Xml.XmlDocument> belirli bir XPath ifadesiyle eşleşip eşleşmediğini belirlemek için yöntemler sağlar. Bu ve bir veya nesnesindeki düğümleri seçme, değerlendirme ve eşleştirme ile ilgili diğer kavramlar <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> aşağıdaki konularda açıklanmıştır.  

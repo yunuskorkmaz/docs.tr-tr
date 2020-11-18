@@ -1,7 +1,6 @@
 ---
 title: 'Nasıl yapılır: XML Öğelerini X.509 Sertifikalarıyla Şifreleme'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: c978bea7336e64d6622aca4d21c7ef3317d73957
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5007404c1e6e872c169ce7ce71425f14d20d3a25
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555727"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820195"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Nasıl yapılır: XML Öğelerini X.509 Sertifikalarıyla Şifreleme
 
@@ -37,7 +36,7 @@ Bu örnek, birden fazla uygulamanın şifrelenmiş verileri paylaşması gereken
 
 Bu örneği çalıştırmak için bir test sertifikası oluşturmanız ve onu bir sertifika deposuna kaydetmeniz gerekir. Bu görev için yönergeler yalnızca Windows [sertifika oluşturma aracı (Makecert.exe)](/windows/desktop/SecCrypto/makecert)için sağlanır.
 
-1. Bir test X. 509.952 sertifikası oluşturmak ve bunu yerel kullanıcı deposuna yerleştirmek için [Makecert.exe](/windows/desktop/SecCrypto/makecert) kullanın. Bir Exchange anahtarı oluşturmanız gerekir ve anahtarı dışa aktarılabilir yapmanız gerekir. Aşağıdaki komutu çalıştırın:  
+1. Bir test X. 509.952 sertifikası oluşturmak ve bunu yerel kullanıcı deposuna yerleştirmek için [Makecert.exe](/windows/desktop/SecCrypto/makecert) kullanın. Bir Exchange anahtarı oluşturmanız gerekir ve anahtarı dışa aktarılabilir yapmanız gerekir. Şu komutu çalıştırın:  
   
     ```console  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2020 -e 01/01/2025 -sky exchange -ss my  

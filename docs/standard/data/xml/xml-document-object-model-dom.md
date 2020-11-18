@@ -1,18 +1,17 @@
 ---
 title: XML Belge Nesne Modeli (DOM)
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-ms.openlocfilehash: dbc53d713d77cfdc9d0dbb8a201f2b5627a76921
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5e7c4e62b7bb19b1ddab61f78b360fed0b6752ef
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283396"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821781"
 ---
 # <a name="xml-document-object-model-dom"></a>XML Belge Nesne Modeli (DOM)
 
-XML Belge Nesne Modeli (DOM) sınıfı, bir XML belgesinin bellek içi gösterimidir. DOM bir XML belgesini programlı bir şekilde okumanıza, değiştirmenize ve değiştirmenize olanak sağlar. **XmlReader** sınıfı XML 'yi de okur; Ancak, önbelleğe alınmamış, salt iletme, salt okunurdur erişimi sağlar. Bu, bir özniteliğin veya bir öğenin içeriğinin veya **XmlReader**ile düğüm ekleme ve kaldırma yeteneğinin değerlerini düzenleme özelliği olmadığı anlamına gelir. Düzenlemeler, DOM 'ın birincil işlevidir. XML verilerinin bellekte temsil edildiği yaygın ve yapılandırılmış bir yoldur, ancak gerçek XML verileri bir dosya içinde veya başka bir nesneden geldiği sırada doğrusal bir biçimde depolanır. XML verileri aşağıda verilmiştir.
+XML Belge Nesne Modeli (DOM) sınıfı, bir XML belgesinin bellek içi gösterimidir. DOM bir XML belgesini programlı bir şekilde okumanıza, değiştirmenize ve değiştirmenize olanak sağlar. **XmlReader** sınıfı XML 'yi de okur; Ancak, önbelleğe alınmamış, salt iletme, salt okunurdur erişimi sağlar. Bu, bir özniteliğin veya bir öğenin içeriğinin veya **XmlReader** ile düğüm ekleme ve kaldırma yeteneğinin değerlerini düzenleme özelliği olmadığı anlamına gelir. Düzenlemeler, DOM 'ın birincil işlevidir. XML verilerinin bellekte temsil edildiği yaygın ve yapılandırılmış bir yoldur, ancak gerçek XML verileri bir dosya içinde veya başka bir nesneden geldiği sırada doğrusal bir biçimde depolanır. XML verileri aşağıda verilmiştir.
 
 ## <a name="input"></a>Giriş
 
@@ -56,11 +55,11 @@ XML belge yapısında, bu çizimdeki her bir daire, **XMLNode** nesnesi olarak a
 
   - **EntityReference**
 
-  - **Öğe**
+  - **Dosyalarında**
 
   - **Öznitelik**
 
-  **XmlDeclaration**, **Gösterim**, **varlık**, **CDataSection**, **metin**, **Açıklama**, **processinginstruction**ve **DocumentType** düğümlerinin alt düğümleri yoktur.
+  **XmlDeclaration**, **Gösterim**, **varlık**, **CDataSection**, **metin**, **Açıklama**, **processinginstruction** ve **DocumentType** düğümlerinin alt düğümleri yoktur.
 
 - **Kitap** ve **PubInfo** düğümleri tarafından diyagramda temsil edilen aynı düzeydeki düğümler eşdüzey düzeydir.
 
@@ -72,7 +71,7 @@ Bellekte oluşturulan düğümlerin türleri hakkında daha fazla bilgi için bk
 
 Microsoft, bir XML belgesiyle çalışmayı kolaylaştırmak için World Wide Web Konsorsiyumu (W3C) DOM düzey 1 ve düzey 2 ' de bulunan API 'Leri genişletmiştir. W3C standartları tam olarak desteklenirken ek sınıflar, Yöntemler ve özellikler, W3C XML DOM kullanılarak yapılabilecekleri daha fazla işlevsellik ekler. Yeni sınıflar, ADO.NET verileriyle eşitleme yöntemleri sunarak, verileri aynı anda XML olarak açığa çıkaran, ilişkisel verilere erişmenizi sağlar. Daha fazla bilgi için bkz. [bir veri kümesini XmlDataDocument Ile eşitleme](../../../framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).
 
-DOM, yapısını değiştirmek, düğüm eklemek veya kaldırmak ya da bir düğüm tarafından tutulan verileri bir öğe tarafından kapsanan metinde değiştirmek için, XML verilerini belleğe okumak için yararlıdır. Ancak diğer bazı sınıflar, diğer senaryolarda DOM 'dan daha hızlı bir şekilde kullanılabilir. XML 'e yönelik hızlı, önbelleğe alınmamış, salt ileri akış erişimi için **XmlReader** ve **XmlWriter**kullanın. İmleç modeli ve **XPath**ile rastgele erişime ihtiyacınız varsa, **XPathNavigator** sınıfını kullanın.
+DOM, yapısını değiştirmek, düğüm eklemek veya kaldırmak ya da bir düğüm tarafından tutulan verileri bir öğe tarafından kapsanan metinde değiştirmek için, XML verilerini belleğe okumak için yararlıdır. Ancak diğer bazı sınıflar, diğer senaryolarda DOM 'dan daha hızlı bir şekilde kullanılabilir. XML 'e yönelik hızlı, önbelleğe alınmamış, salt ileri akış erişimi için **XmlReader** ve **XmlWriter** kullanın. İmleç modeli ve **XPath** ile rastgele erişime ihtiyacınız varsa, **XPathNavigator** sınıfını kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

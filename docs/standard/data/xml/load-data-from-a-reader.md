@@ -1,14 +1,13 @@
 ---
 title: Okuyucudan Veri Yükleme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: 1c048b08380bebce3a627670d88ff6ae48084535
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ea125e57dd6251a4fbd401bac8f37826083965b8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289167"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822678"
 ---
 # <a name="load-data-from-a-reader"></a>Okuyucudan Veri Yükleme
 Bir XML belgesi <xref:System.Xml.XmlDocument.Load%2A> yöntemi ve bir parametresi kullanılarak yüklenirse <xref:System.Xml.XmlReader> , diğer biçimlerden verileri yükleme davranışına kıyasla oluşan davranışta farklılıklar vardır. Okuyucu ilk durumundaysa, <xref:System.Xml.XmlDocument.Load%2A> tüm içeriği okuyucudan kullanır ve okuyucudaki tüm VERILERDEN XML belge nesne modeli (DOM) oluşturur.  

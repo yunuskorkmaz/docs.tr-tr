@@ -1,28 +1,42 @@
 ---
-title: DotNet-dump-.NET Core
-description: DotNet-dump komut satırı aracını yükleme ve kullanma.
-ms.date: 10/14/2019
-ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+title: DotNet-döküm Tanılama aracı-.NET CLı
+description: Yerel hata ayıklayıcı olmadan Windows ve Linux dökümlerinin toplanması ve çözümlenmesi için DotNet-dump CLı aracını yüklemeyi ve kullanmayı öğrenin.
+ms.date: 11/17/2020
+ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598104"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822210"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Döküm toplama ve çözümleme yardımcı programı (DotNet-dump)
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
 
 > [!NOTE]
-> `dotnet-dump` macOS 'ta desteklenmez.
+> `dotnet-dump` macOS için yalnızca .NET 5,0 ve üzeri sürümlerde desteklenir.
 
-## <a name="install-dotnet-dump"></a>DotNet 'yi yükler-döküm
+## <a name="install"></a>Yükleme
 
-NuGet paketinin en son sürümünü yüklemek için `dotnet-dump` [NuGet package](https://www.nuget.org/packages/dotnet-dump) [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
+İndirmek ve yüklemek için iki yol vardır `dotnet-dump` :
 
-```dotnetcli
-dotnet tool install -g dotnet-dump
-```
+- **DotNet genel aracı:**
+
+  NuGet paketinin en son sürümünü yüklemek için `dotnet-dump` [NuGet package](https://www.nuget.org/packages/dotnet-dump) [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-dump
+  ```
+
+- **Doğrudan indirme:**
+
+  Platformunuzla eşleşen araç yürütülebilirini indirin:
+
+  | İşletim Sistemi  | Platform |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [ARM](https://aka.ms/dotnet-dump/win-arm) \| [ARM-x64](https://aka.ms/dotnet-dump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [ARM](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [MUSL-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [MUSL-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Özeti
 
@@ -58,7 +72,7 @@ Bir işlemden döküm yakalar.
 ### <a name="synopsis"></a>Özeti
 
 ```console
-dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
+dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--output] [--diag]
 ```
 
 ### <a name="options"></a>Seçenekler
@@ -69,7 +83,11 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`-p|--process-id <PID>`**
 
-  Kaynağından bir bellek dökümü toplanacak işlem KIMLIĞI sayısını belirtir.
+  Döküm toplanacak işlem KIMLIĞI sayısını belirtir.
+
+- **`-n|--name <name>`**
+
+  Döküm toplanacak işlemin adını belirtir.
 
 - **`--type <Full|Heap|Mini>`**
 

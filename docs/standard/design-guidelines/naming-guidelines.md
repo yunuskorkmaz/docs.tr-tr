@@ -2,7 +2,6 @@
 title: Adlandırma Kuralları
 description: Bu genel bakışta, çerçeve geliştirmede kullanılacak adlandırma kuralları hakkında bilgi edinin. Büyük/küçük harf, genel adlandırma ve diğer yönergeleri kapsayan makalelere gidin.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], about naming guidelines
 - naming guidelines [.NET Framework]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: fbcf5ef5eb02a5e45b5c981b4247ffe1c9c2631b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e82b6941d3ea0243f4ae16bc9d42ea8d1f1fccfb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447153"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820884"
 ---
 # <a name="naming-guidelines"></a>Adlandırma Kuralları
 Bir çerçeve geliştirmede tutarlı bir adlandırma kuralları kümesi takip etmek framework 'ün kullanılabilirlik açısından önemli bir katkı olabilir. Framework 'ün yaygın olarak ayrılmış projeler üzerinde birçok geliştirici tarafından kullanılmasını sağlar. Formun tutarlılığı ötesinde, Framework öğelerinin adları kolayca anlaşılmalıdır ve her bir öğenin işlevini iletmelidir.  
@@ -37,7 +36,7 @@ Bir çerçeve geliştirmede tutarlı bir adlandırma kuralları kümesi takip et
  [Kaynakları adlandırma](naming-resources.md)  
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*  
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,12 +2,12 @@
 title: Etki alanı model katmanında doğrulamaları tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Etki alanı modeli doğrulamaları için temel kavramları anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: f1e2d7430c642ad47f79cdd34d3a65e2cc70e239
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 18c8350d0bf514a8a01a210a2a2a6d8f73317580
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164278"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820637"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Etki alanı model katmanında tasarım doğrulamaları
 
@@ -15,7 +15,7 @@ DDD 'da, doğrulama kuralları ınvarıant olarak düşünülebilir. Bir toplama
 
 Etki alanı varlıkları her zaman geçerli varlıklar olmalıdır. Her zaman doğru olması gereken bir nesne için belirli sayıda ınvaryantlar vardır. Örneğin, bir order Item nesnesi her zaman pozitif bir tamsayı ve ayrıca bir makale adı ve fiyat olması gereken bir miktara sahip olmalıdır. Bu nedenle, ınvarıant zorlaması etki alanı varlıklarının sorumluluğundadır (özellikle toplama köküdür) ve bir varlık nesnesi geçerli olmadan mevcut olamaz. Sabit kurallar yalnızca sözleşmeler olarak ifade edilir ve ihlal edildiğinde özel durumlar veya bildirimler tetiklenir.
 
-Bunun arkasındaki nedenler birçok hatanın meydana gelir çünkü nesneler hiçbir zaman bir durumda olmamalıdır. Bu [çevrimiçi tartışma](http://codebetter.com/gregyoung/2009/05/22/always-valid/) , Greg başak 'tan iyi bir açıklama.
+Bunun arkasındaki nedenler birçok hatanın meydana gelir çünkü nesneler hiçbir zaman bir durumda olmamalıdır.
 
 Şimdi de bir kullanıcı profili alan bir SendUserCreationEmailService sunuyoruz... Bu hizmette adı null olmayan bir şekilde nasıl korkutuz? Yeniden denetliyoruz mi? Veya daha olası olabilir... "sizin için en iyi" onay ve "umuyoruz" gibi bir göz atın. size göndermeden önce birisinin bothered doğrulaması gerektiğini umuyoruz. Tabii ki, bir hatayı oluşturması gereken null bir ada sahip bir müşteriyi gönderdiğimde, yazılması gereken ilk testlerin bir kısmını kullanma. Ancak, bu tür testleri yeniden yazmaya başladığımızda bir kez daha... "adın null olmasına izin verdiğimiz takdirde bu testlerin tümüne sahip olmadığımızda bekleyin".
 
@@ -75,7 +75,7 @@ Bu modellerden yalnızca birini de kullanabilirsiniz. Örneğin, denetim deyimle
 
 ### <a name="use-deferred-validation-in-the-domain"></a>Etki alanında Ertelenmiş doğrulama kullan
 
-Etki alanındaki ertelenmiş doğrulamalarla uğraşmak için çeşitli yaklaşımlar vardır. [Etki alanı odaklı tasarımı uygulayan](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577)kitapta, Vaughn verunbu, doğrulama konusundaki bölümünde ele alınmaktadır.
+Etki alanındaki ertelenmiş doğrulamalarla uğraşmak için çeşitli yaklaşımlar vardır. [Domain-Driven tasarımını uygulayan](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577)kitapta, Vaughn Vernon, doğrulama konusundaki bölümünde ele alınmaktadır.
 
 ### <a name="two-step-validation"></a>İki aşamalı doğrulama
 
@@ -97,7 +97,7 @@ Veri açıklamaları ile alan doğrulamayı kullanma örneğin, doğrulama tanı
 - **Belirtim ve bildirim desenleri** \
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Lev Gorodinski. Etki alanı odaklı tasarımda doğrulama (DDD)** \
+- **Lev Gorodinski. Domain-Driven tasarımında doğrulama (DDD)** \
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
 - **Colın jakı. Etki alanı modeli doğrulaması** \

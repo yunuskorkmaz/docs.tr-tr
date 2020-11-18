@@ -1,7 +1,6 @@
 ---
 title: 'Nasıl yapılır: veri akışı bloğundan ileti yazma ve okuma'
 ms.date: 09/10/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-ms.openlocfilehash: 8eb92d917bb2b03c2a505a2ba238598e0c1a450c
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: be0e78989105cc59bd041ceb8c6f31073a702f83
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022863"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820793"
 ---
 # <a name="how-to-write-and-read-messages-from-a-dataflow-block"></a>Nasıl yapılır: veri akışı bloğundan ileti yazma ve okuma
 
@@ -55,7 +54,7 @@ Aşağıdaki örnek, bu makalenin tüm kodunu gösterir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu örnek, doğrudan bir ileti bloğundan okuma ve yazma işlemlerinin nasıl yapılacağını gösterir. Veri akışı bloklarını, veri akışı bloklarının grafik dizileri olan *ardışık düzenleri*ve veri akışı bloklarının grafikleri olan *ağları*oluşturmak için de bağlayabilirsiniz. Bir ardışık düzen veya ağda, kaynaklar, veriler kullanılabilir oldukça zaman uyumsuz olarak hedeflere yayarlar. Temel bir veri akışı işlem hattı oluşturan bir örnek için bkz. [Izlenecek yol: veri akışı Işlem hattı oluşturma](walkthrough-creating-a-dataflow-pipeline.md). Daha karmaşık bir veri akışı ağı oluşturan bir örnek için bkz. [Izlenecek yol: Windows Forms uygulamasında veri akışı kullanma](walkthrough-using-dataflow-in-a-windows-forms-application.md).
+Bu örnek, doğrudan bir ileti bloğundan okuma ve yazma işlemlerinin nasıl yapılacağını gösterir. Veri akışı bloklarını, veri akışı bloklarının grafik dizileri olan *ardışık düzenleri* ve veri akışı bloklarının grafikleri olan *ağları* oluşturmak için de bağlayabilirsiniz. Bir ardışık düzen veya ağda, kaynaklar, veriler kullanılabilir oldukça zaman uyumsuz olarak hedeflere yayarlar. Temel bir veri akışı işlem hattı oluşturan bir örnek için bkz. [Izlenecek yol: veri akışı Işlem hattı oluşturma](walkthrough-creating-a-dataflow-pipeline.md). Daha karmaşık bir veri akışı ağı oluşturan bir örnek için bkz. [Izlenecek yol: Windows Forms uygulamasında veri akışı kullanma](walkthrough-using-dataflow-in-a-windows-forms-application.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

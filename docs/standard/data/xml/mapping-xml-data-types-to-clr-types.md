@@ -1,14 +1,13 @@
 ---
 title: XML Veri Türlerini CLR Türleriyle Eşleme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-ms.openlocfilehash: f14c8d961fe0934b8e843c39a217e7c2db8237c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1a79d178a4e027973591061634cfb5904dd3e0cc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289115"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822587"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>XML Veri Türlerini CLR Türleriyle Eşleme
 

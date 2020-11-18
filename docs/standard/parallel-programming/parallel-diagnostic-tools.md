@@ -1,16 +1,15 @@
 ---
 title: Paralel Tanılama Araçları
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-ms.openlocfilehash: 0765b01e9c07d1250c99cd38aa55ba815511f274
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f3c34fe53890e5cc0aad9e4ead7d88805b1634a1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291727"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820663"
 ---
 # <a name="parallel-diagnostic-tools"></a>Paralel Tanılama Araçları
 Visual Studio, çok iş parçacıklı uygulamalarda hata ayıklama ve profil oluşturma için kapsamlı destek sağlar.  

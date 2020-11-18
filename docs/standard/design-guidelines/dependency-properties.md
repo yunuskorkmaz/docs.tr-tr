@@ -1,14 +1,13 @@
 ---
 title: Bağımlılık Özellikleri
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
-ms.openlocfilehash: 476ef1bb1ac5ec1f551979c64a41cbae55c554bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c6cebd7c6c630af6a1a439b48faccad2aea74a91
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280263"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821378"
 ---
 # <a name="dependency-properties"></a>Bağımlılık Özellikleri
 Bağımlılık özelliği (DP), değerini bir tür değişkeninde (alan) depolamak yerine bir özellik deposunda depolayan normal bir özelliktir.
@@ -26,15 +25,15 @@ Bağımlılık özelliği (DP), değerini bir tür değişkeninde (alan) depolam
 
  ✔️, özelliğin adını "Property" ile düzelterek, bağımlılık özelliği statik alanını adlandırın.
 
- ❌Doğrudan kodda bağımlılık özelliklerinin varsayılan değerlerini ayarlamayın; Bunun yerine meta verilerde ayarlayın.
+ ❌ Doğrudan kodda bağımlılık özelliklerinin varsayılan değerlerini ayarlamayın; Bunun yerine meta verilerde ayarlayın.
 
  Özelliği varsayılan olarak ayarlarsanız, bu özelliğin stil gibi bazı örtük yollarla ayarlanmasını engelleyebilirsiniz.
 
- ❌Statik alana erişmek için standart kod dışındaki özellik erişimcilerine kod yerleştirmeyin.
+ ❌ Statik alana erişmek için standart kod dışındaki özellik erişimcilerine kod yerleştirmeyin.
 
  Stil bir stil gibi örtük yollarla ayarlandıysa, stil statik alanı doğrudan kullandığından bu kod yürütülmez.
 
- ❌Güvenli verileri depolamak için bağımlılık özelliklerini kullanmayın. Hatta özel bağımlılık özelliklerine herkese açık bir şekilde erişilebilir.
+ ❌ Güvenli verileri depolamak için bağımlılık özelliklerini kullanmayın. Hatta özel bağımlılık özelliklerine herkese açık bir şekilde erişilebilir.
 
 ## <a name="attached-dependency-property-design"></a>İliştirilmiş bağımlılık özelliği tasarımı
  Önceki bölümde açıklanan bağımlılık özellikleri, bildirim türünün iç özelliklerini temsil eder; Örneğin, `Text` özelliği `TextButton` onu bildiren bir özelliğidir. Özel bir tür bağımlılık özelliği, ekli bağımlılık özelliğidir.
@@ -80,21 +79,21 @@ public class Grid {
 
  Ne yazık ki bağımlılık özellik erişimcileri rastgele doğrulama kodu içeremez. Bunun yerine, özellik kaydı sırasında bağımlılık özelliği doğrulama mantığının belirtilmesi gerekir.
 
- ❌Bağımlılık özelliği doğrulama mantığını özelliğin erişimcilerine yerleştirmeyin. Bunun yerine yöntemine bir doğrulama geri çağırması geçirin `DependencyProperty.Register` .
+ ❌ Bağımlılık özelliği doğrulama mantığını özelliğin erişimcilerine yerleştirmeyin. Bunun yerine yöntemine bir doğrulama geri çağırması geçirin `DependencyProperty.Register` .
 
 ## <a name="dependency-property-change-notifications"></a>Bağımlılık özelliği değişiklik bildirimleri
- ❌Bağımlılık özelliği erişimcilerinde değişiklik bildirimi mantığını uygulamayın. Bağımlılık özellikleri, için bir değişiklik bildirimi geri çağırması sağlayarak kullanılması gereken yerleşik bir değişiklik bildirimleri özelliğine sahiptir <xref:System.Windows.PropertyMetadata> .
+ ❌ Bağımlılık özelliği erişimcilerinde değişiklik bildirimi mantığını uygulamayın. Bağımlılık özellikleri, için bir değişiklik bildirimi geri çağırması sağlayarak kullanılması gereken yerleşik bir değişiklik bildirimleri özelliğine sahiptir <xref:System.Windows.PropertyMetadata> .
 
 ## <a name="dependency-property-value-coercion"></a>Bağımlılık özelliği değer zorlaması
  Özellik deposu gerçekten değiştirilmeden önce özellik ayarlayıcısına verilen değer ayarlayıcı tarafından değiştirilirse Özellik zorlaması gerçekleşir.
 
- ❌Bağımlılık özelliği erişimcilerinde zorlama mantığı uygulamayın.
+ ❌ Bağımlılık özelliği erişimcilerinde zorlama mantığı uygulamayın.
 
  Bağımlılık özellikleri yerleşik bir zorlama özelliğine sahiptir ve ' a bir zorlama geri çağırması sağlanarak kullanılabilir `PropertyMetadata` .
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

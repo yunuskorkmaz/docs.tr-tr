@@ -2,17 +2,16 @@
 title: Adlandırma Parametreleri
 description: Parametrelerin adlandırılmasıyla ilgili yönergeleri öğrenin. Örneğin, ortası büyük/küçük harf & açıklayıcı parametre adlarını kullanın &, tür yerine anlam temelinde adlandırmayı düşünün.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: 54f37c4d6a0f9a6931fa69d612bf0e45bf1f2ce7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b62cfbd58f671745054c557041e5d60af345c8d3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583524"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820845"
 ---
 # <a name="naming-parameters"></a>Adlandırma Parametreleri
 Görsel tasarım araçları IntelliSense ve sınıf tarama işlevselliği sağladığınızda, bir okunabilirlik işleminin belirgin olmasının ötesinde parametre adları için yönergeleri izlemek önemlidir.
@@ -30,11 +29,11 @@ Görsel tasarım araçları IntelliSense ve sınıf tarama işlevselliği sağla
 
  ✔️, işleç aşırı yükleme parametreleri için anlamlı adları göz önünde bulundurun.
 
- ❌İşleç aşırı yüklemesi parametre adları için kısaltmalar veya sayısal dizinler kullanmayın.
+ ❌ İşleç aşırı yüklemesi parametre adları için kısaltmalar veya sayısal dizinler kullanmayın.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

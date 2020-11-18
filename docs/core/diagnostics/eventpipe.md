@@ -3,12 +3,12 @@ title: EventPipe genel bakış
 description: EventPipe hakkında bilgi edinin ve performans sorunlarını tanılamak üzere .NET uygulamalarınızı izlemek için nasıl kullanacağınızı öğrenin.
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: d30cdf02c3ae300401febe2078dfd3431269c73e
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 00378c4f409b307afa9183e40de6078cdafd3ae7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688575"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820624"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -47,7 +47,7 @@ Aşağıdaki tabloda EventPipe ile ETW/LTTng arasındaki farkların bir özeti v
 
 .NET uygulamanızı birçok şekilde izlemek için EventPipe kullanabilirsiniz:
 
-* EventPipe 'ın üzerine inşa edilen [tanılama araçlarından](#tools-using-eventpipe) birini kullanın.
+* EventPipe 'ın üzerine inşa edilen [tanılama araçlarından](#tools-that-use-eventpipe) birini kullanın.
 
 * EventPipe oturumlarını kendiniz yapılandırmak ve başlatmak için kendi aracınızı yazmak üzere [Microsoft. Diagnostics. NETCore. Client](https://github.com/dotnet/diagnostics/blob/master/documentation/diagnostics-client-library-instructions.md) kitaplığını kullanın.
 

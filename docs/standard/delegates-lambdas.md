@@ -4,14 +4,13 @@ description: Belirli bir yöntem imzasını belirten bir türü tanımlayan tems
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 1307599a3832be5f48cd62a7b8c1be7f76a3d4a5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9be4fcdc29eac433dc7416578acbc664ac2e431c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063750"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821690"
 ---
 # <a name="delegates-and-lambdas"></a>Temsilciler ve lambda ifadeleri
 
@@ -46,9 +45,9 @@ public class Program
 
 Geliştirme sürecini kolaylaştırmak için, .NET, programcıların yeniden kullanılabilen ve yeni türler oluşturmak zorunda olmayan bir temsilci türleri kümesi içerir. Bu türler `Func<>` , `Action<>` ve ' dir `Predicate<>` ve yeni temsilci türleri tanımlamak zorunda kalmadan kullanılabilirler. Üç tür arasında, kullanılması amaçlanan şekilde yapılacak bazı farklılıklar vardır:
 
-* `Action<>`Temsilcinin bağımsız değişkenlerini kullanarak bir eylem gerçekleştirmeniz gerektiğinde kullanılır. Kapsülleyen Yöntem bir değer döndürmez.
-* `Func<>`genellikle bir dönüşüme sahip olduğunuzda kullanılır, diğer bir deyişle, temsilcinin bağımsız değişkenlerini farklı bir sonuca dönüştürmeniz gerekir. Tahminler iyi bir örnektir. Kapsülleyen yöntemi belirtilen değeri döndürür.
-* `Predicate<>`bağımsız değişkenin temsilcinin koşulunu karşılayıp karşılamadığını belirlemeniz gerektiğinde kullanılır. Ayrıca bir olarak yazılabilir, bu da `Func<T, bool>` yöntemin bir Boolean değer döndürdüğü anlamına gelir.
+* `Action<>` Temsilcinin bağımsız değişkenlerini kullanarak bir eylem gerçekleştirmeniz gerektiğinde kullanılır. Kapsülleyen Yöntem bir değer döndürmez.
+* `Func<>` genellikle bir dönüşüme sahip olduğunuzda kullanılır, diğer bir deyişle, temsilcinin bağımsız değişkenlerini farklı bir sonuca dönüştürmeniz gerekir. Tahminler iyi bir örnektir. Kapsülleyen yöntemi belirtilen değeri döndürür.
+* `Predicate<>` bağımsız değişkenin temsilcinin koşulunu karşılayıp karşılamadığını belirlemeniz gerektiğinde kullanılır. Ayrıca bir olarak yazılabilir, bu da `Func<T, bool>` yöntemin bir Boolean değer döndürdüğü anlamına gelir.
 
 Şimdi örneğimizi alıp `Func<>` özel bir tür yerine temsilciyi kullanarak yeniden yazabilirsiniz. Program tamamen aynı çalışmaya devam edecektir.
 
@@ -72,7 +71,7 @@ public class Program
 }
 ```
 
-Bu basit örnek için yöntemin dışında tanımlanmış bir yöntemin olması biraz daha fazla `Main` görünüyor. .NET Framework 2,0 *anonim temsilciler*kavramını ortaya sunmuştur, bu da ek bir tür veya yöntem belirtmeye gerek kalmadan "satır içi" Temsilciler oluşturmanızı sağlar.
+Bu basit örnek için yöntemin dışında tanımlanmış bir yöntemin olması biraz daha fazla `Main` görünüyor. .NET Framework 2,0 *anonim temsilciler* kavramını ortaya sunmuştur, bu da ek bir tür veya yöntem belirtmeye gerek kalmadan "satır içi" Temsilciler oluşturmanızı sağlar.
 
 Aşağıdaki örnekte, anonim bir temsilci bir listeyi yalnızca çift sayılarla filtreleyerek konsola yazdırır.
 

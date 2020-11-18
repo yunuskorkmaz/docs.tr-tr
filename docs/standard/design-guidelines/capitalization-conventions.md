@@ -2,7 +2,6 @@
 title: Büyük/Küçük Harf Kuralları
 description: Tanımlayıcılar, bileşik sözcükler ve genel terimler için büyük harfe çevirme kuralları uygulayın. .NET 'ta büyük/küçük harf duyarlılığı 'nın nasıl çalıştığını anlayın.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - camel-case names [.NET Framework]
 - class library design guidelines [.NET Framework], capitalization
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 4903dc587d84ef36bfaa641cfbda59484266c23c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 8df136fb57ad61ddfd87f4dec1f6490c63c3d977
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767799"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821534"
 ---
 # <a name="capitalization-conventions"></a>Büyük/Küçük Harf Kuralları
 Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Üyeler ve parametreler için tanımlayıcıların kolay okunmasını sağlamak üzere basit bir yöntem sağlar.
@@ -63,7 +62,7 @@ Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Ü
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Bileşik sözcüklerin ve ortak koşulların büyük bir olması
  Çoğu bileşik terim, büyük küçük harf amaçlarıyla tek sözcük olarak değerlendirilir.
 
- ❌Bu nedenle, kapalı biçimli bileşik sözcükler olarak adlandırılan her sözcüğü büyük harfle kaldırmayın.
+ ❌ Bu nedenle, kapalı biçimli bileşik sözcükler olarak adlandırılan her sözcüğü büyük harfle kaldırmayın.
 
  Bunlar, uç nokta gibi tek bir kelime olarak yazılmış olan Birleşik sözcüklerdir. Büyük/küçük harf yönergeleri için kapalı biçimli bir bileşik sözcüğü tek bir sözcük olarak değerlendirin. Bileşik bir sözcüğün kapalı biçimde yazılıp yazılmadığını öğrenmek için geçerli bir sözlük kullanın.
 
@@ -98,11 +97,11 @@ Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Ü
 ## <a name="case-sensitivity"></a>Büyük/küçük harf duyarlılığı
  CLR üzerinde çalışabilen dillerin, büyük/küçük harf duyarlılığı desteklemek için gerekli değildir, ancak bazıları. Diliniz destekliyorsa bile, çerçeve'nize erişebilen diğer diller değildir. Bu nedenle dışarıdan erişilebilen tüm API 'Ler, aynı bağlamdaki iki ad arasında ayrım yapmak için tek başına bir durum kullanamaz.
 
- ❌Tüm programlama dillerinin büyük/küçük harfe duyarlı olduğunu varsaymayın. Bunlar değildir. Adlar tek başına büyük/küçük harf bakımından farklı olamaz.
+ ❌ Tüm programlama dillerinin büyük/küçük harfe duyarlı olduğunu varsaymayın. Bunlar değildir. Adlar tek başına büyük/küçük harf bakımından farklı olamaz.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

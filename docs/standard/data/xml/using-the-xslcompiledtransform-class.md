@@ -1,14 +1,13 @@
 ---
 title: XslCompiledTransform Sınıfını Kullanma
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: f9b074f6-d6f4-49dd-a093-df510bf0cf7b
-ms.openlocfilehash: b9d14a79347610abcd2f770488acb53218ce3e46
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f2eae6f10cc2adf4628a0c2626617ef9a027c598
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556778"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821768"
 ---
 # <a name="using-the-xslcompiledtransform-class"></a>XslCompiledTransform Sınıfını Kullanma
 <xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, Microsoft .NET Framework XSLT işlemcisidir. Bu sınıf, stil sayfalarını derlemek ve XSLT dönüştürmelerini yürütmek için kullanılır.  

@@ -1,7 +1,6 @@
 ---
 title: Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: 2ed09882ba722ace0b7f7be2a35fffc362af2742
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: c597c1ae6153050f08ed2976f7ee6102cdd3c797
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159358"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822353"
 ---
 # <a name="metadata-and-self-describing-components"></a>Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler
 
@@ -157,11 +156,11 @@ JıT derleyicisi, tüm yöntemi için MSIL 'yi okur, onu tamamen analiz eder ve 
 
 Aşağıdaki tabloda, yöntemini açıklayan meta veri belirtecinin başvurduğu **MethodDef** tablosunun bir kısmı gösterilmektedir `Add` . Bu derlemede diğer meta veri tabloları var ve kendi benzersiz değerleri var olsa da, yalnızca bu tablo ele alınmıştır.
 
-|Satır|Göreli sanal adres (RVA)|ImplFlags|Bayraklar|Name<br /><br /> (Dize yığınına işaret eder.)|İmza (blob yığınına Işaret eder.)|
+|Satır|Göreli sanal adres (RVA)|ImplFlags|Bayraklar|Ad<br /><br /> (Dize yığınına işaret eder.)|İmza (blob yığınına Işaret eder.)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Yönetilen|Ortak<br /><br /> Reusespartisi<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> . ctor|. ctor (Oluşturucu)||
-|2|0x00002058|IL<br /><br /> Yönetilen|Ortak<br /><br /> Statik<br /><br /> Reusespartisi|Ana|Dize|
-|3|0x0000208c|IL<br /><br /> Yönetilen|Ortak<br /><br /> Statik<br /><br /> Reusespartisi|Ekle|int, int, int|
+|1|0x00002050|IL<br /><br /> Yönetilen|Genel<br /><br /> Reusespartisi<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> . ctor|. ctor (Oluşturucu)||
+|2|0x00002058|IL<br /><br /> Yönetilen|Genel<br /><br /> Statik<br /><br /> Reusespartisi|Ana|Dize|
+|3|0x0000208c|IL<br /><br /> Yönetilen|Genel<br /><br /> Statik<br /><br /> Reusespartisi|Ekle|int, int, int|
 
 Tablonun her sütunu, kodunuz hakkında önemli bilgiler içerir. **RVA** sütunu, çalışma zamanının bu YÖNTEMI tanımlayan MSIL 'nin başlangıç belleği adresini hesaplamasını sağlar. **ImplFlags** ve **Flags** sütunları, yöntemi tanımlayan bitmaskeleri içerir (örneğin, yöntemin genel mi yoksa özel mi olduğunu belirtir). **Ad** sütunu, dize yığınından yöntemin adını dizine ekler. **İmza** sütunu, blob yığınındaki yöntem imzasının tanımını dizinler.
 

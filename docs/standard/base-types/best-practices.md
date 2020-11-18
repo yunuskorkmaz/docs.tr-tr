@@ -2,7 +2,6 @@
 title: .NET 'teki normal Ifadeler için en iyi uygulamalar
 description: .NET ' te verimli, etkili normal ifadeler oluşturmayı öğrenin.
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - .NET regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 727c3f2b8465c5d69244abe0f441d2a24e84dc5f
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: ae74d263034de4d402520d751fe97af9e33a2a48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162927"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820598"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 'teki normal ifadeler için en iyi uygulamalar
 
@@ -104,7 +103,7 @@ Varsayılan olarak, en son kullanılan 15 statik normal ifade deseni önbelleğe
 
 `\p{Sc}+\s*\d+`Bu örnekte kullanılan normal ifade, giriş dizesinin bir para birimi simgesinden ve en az bir ondalık basamağından oluştuğunu doğrular. Desen aşağıdaki tabloda gösterildiği gibi tanımlanır.
 
-|Desen|Description|
+|Desen|Açıklama|
 |-------------|-----------------|
 |`\p{Sc}+`|Unicode Sembolü, Para Birimi kategorisinde bir ya da daha fazla karakter eşleyin.|
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|
@@ -118,14 +117,14 @@ Normal ifade motoruna seçeneğinin belirtimi aracılığıyla bağlanan normal 
 
 Özetlemek gerekirse, normal ifade yöntemlerini belirli bir normal ifadeyle nispeten ender olarak çağırıyorsanız, yorumlanan normal ifadeler kullanmanızı öneririz. Normal ifade yöntemlerinizi oldukça sık olarak belirli bir normal ifadeyle çağırıyorsanız, derlenmiş normal ifadeler kullanmalısınız. Yorumlanan normal ifadelerin yürütülme hızlarındaki yavaşlığın bunların başlama süresinin kısa olmasından elde edilen avantajı ortadan kaldırmaya başladığı eşiği veya derlenmiş normal ifadelerin başlama süresinin uzunluğunun bunların yürütülme hızından elde edilen avantajı ortadan kaldırmaya başladığı eşiği belirlemek güçtür. Normal ifadenin karmaşıklığı ve bunun işlediği özel veri gibi çeşitli faktörlere bağlıdır. Yorumlanan veya derlenmiş normal ifadelerin, belirli uygulama senaryonuz için en iyi performansı sunmadığını öğrenmek için, bu <xref:System.Diagnostics.Stopwatch> sınıfı, yürütme sürelerini karşılaştırmak için kullanabilirsiniz.
 
-Aşağıdaki örnek, ilk on cümleleri okurken ve Theodore Dreiser 'ın *Mali*metninde bulunan tüm tümceleri okurken derlenen ve yorumlanan normal ifadelerin performansını karşılaştırır. Örneğin çıktısında gösterildiği üzere normal ifade eşleme yöntemlerine yalnızca on çağrı yapıldığında, yorumlanan bir normal ifade derlenmiş bir normal ifadeden daha iyi performans sergiler. Ancak derlenmiş bir normal ifade, daha fazla sayıda çağrı yapıldığında (bu örnekte 13.000'den fazla) daha iyi performans gösterir.
+Aşağıdaki örnek, ilk on cümleleri okurken ve Theodore Dreiser 'ın *Mali* metninde bulunan tüm tümceleri okurken derlenen ve yorumlanan normal ifadelerin performansını karşılaştırır. Örneğin çıktısında gösterildiği üzere normal ifade eşleme yöntemlerine yalnızca on çağrı yapıldığında, yorumlanan bir normal ifade derlenmiş bir normal ifadeden daha iyi performans sergiler. Ancak derlenmiş bir normal ifade, daha fazla sayıda çağrı yapıldığında (bu örnekte 13.000'den fazla) daha iyi performans gösterir.
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compare1.cs#5)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compare1.vb#5)]
 
 Örnekte kullanılan normal ifade deseninin, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-|Desen|Description|
+|Desen|Açıklama|
 |-------------|-----------------|
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|
@@ -169,7 +168,7 @@ Geri dönüş için destek, normal ifadelere güç ve esneklik kazandırır. Ayr
 
 Genelde, geri izlemenin bir eşleme için gerekli olmadığı gerçeğine rağmen uygulamalar geri izleme kullandıkları için bir ceza öder. Örneğin, normal ifade, `\b\p{Lu}\w*\b` Aşağıdaki tabloda gösterildiği gibi, büyük bir karakterle başlayan tüm sözcüklerle eşleşir.
 
-|Desen|Description|
+|Desen|Açıklama|
 |-|-|
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|
 |`\p{Lu}`|Bir büyük harfli karakter eşleyin.|
@@ -192,7 +191,7 @@ Birçok durumda, geri izleme bir normal ifade desenini giriş metnine eşlemek i
 
 Bu durumlarda, yuvalanan miktar niceleyicileri kaldırarak ve dış alt ifadeyi sıfır genişliğinde bir ileriye dönük ya da geriye dönük onay ile değiştirerek normal ifade performansını en iyi hale getireceksiniz. İleriye dönük ve geriye dönük onaylar tutturuculardır; bunlar giriş dizesindeki işaretçiyi kaydırmaz, bunun yerine belirtilen koşulun sağlanıp sağlanmadığını kontrol etmek için ileriye ya da geriye bakar. Örneğin, bölüm numarası normal ifadesi olarak yeniden yazılabilir `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$` . Bu normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanmaktadır.
 
-|Desen|Description|
+|Desen|Açıklama|
 |-------------|-----------------|
 |`^`|Giriş dizesinin başında eşleşmeye başla.|
 |`[0-9A-Z]`|Alfasayısal bir karakterle eşleştirin Parça numarası en azından bu karakteri içermelidir.|
@@ -208,7 +207,7 @@ Aşağıdaki örnek, bu normal ifadenin parça numaraları içeriyor olabilecek 
 
 .NET 'teki normal ifade dili, iç içe nicelik belirteçleri ortadan kaldırmak için kullanabileceğiniz aşağıdaki dil öğelerini içerir. Daha fazla bilgi için bkz. [yapıları gruplandırma](grouping-constructs-in-regular-expressions.md).
 
-|Dil öğesi|Description|
+|Dil öğesi|Açıklama|
 |----------------------|-----------------|
 |`(?=` `subexpression` `)`|Sıfır genişlikli pozitif ileriye yönelik onay. Giriş dizesiyle eşleşip eşleşmediğini öğrenmek için geçerli konumun önüne bakın `subexpression` .|
 |`(?!` `subexpression` `)`|Sıfır genişlikli negatif ileriye yönelik onay. Giriş dizesiyle eşleşip engellenmeyeceğini öğrenmek için geçerli konumun önüne bakın `subexpression` .|
@@ -242,7 +241,7 @@ Ancak bu dil öğelerinin kullanılmasının bir maliyeti vardır. Bu, <xref:Sys
 
 Genelde oluşturma birimlerini gruplama, miktar niceleyicilerin yalnızca bunlara uygulanacağı şekilde bir normal ifadede kullanılır ve bu alt ifadeler tarafından yakalanan gruplar daha sonra kullanılmaz. Örneğin, normal ifade `\b(\w+[;,]?\s?)+[.?!]` bir tümcenin tamamını yakalamak için tasarlanmıştır. Aşağıdaki tabloda, bu normal ifade deseninin dil öğeleri ve bunların <xref:System.Text.RegularExpressions.Match> nesne ve koleksiyonları üzerindeki etkileri açıklanmaktadır <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .
 
-|Desen|Description|
+|Desen|Açıklama|
 |-------------|-----------------|
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|

@@ -1,7 +1,6 @@
 ---
 title: Oluşturucu Tasarımı
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines, constructors
 - constructors, design guidelines
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-ms.openlocfilehash: a258bebac57258cc1e8fbe2d6b5ccce88cb28872
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27fb73aa01adf31117d1b82724873db3a03fd269
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280354"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821404"
 ---
 # <a name="constructor-design"></a>Oluşturucu Tasarımı
 
@@ -55,11 +54,11 @@ Bir tür üzerinde açıkça herhangi bir Oluşturucu bildirmezseniz, birçok di
 
 Bir sınıfa parametreli Oluşturucu eklemek derleyicinin parametresiz oluşturucuyu eklemesini önler. Bu genellikle yanlışlıkla önemli değişikliklere neden olur.
 
-❌Yapılarda parametresiz oluşturucular açıkça tanımlamayı ÖNLEYIN.
+❌ Yapılarda parametresiz oluşturucular açıkça tanımlamayı ÖNLEYIN.
 
 Bu, parametresiz Oluşturucu tanımlanmamışsa, dizideki her yuvada çalıştırılması gerekmediğinden, dizi oluşturmayı daha hızlı hale getirir. C# dahil olmak üzere birçok derleyicilerin, yapıların bu nedenle parametresiz oluşturuculara sahip olduğuna izin vermez.
 
-❌Oluşturucusunun içindeki bir nesne üzerinde sanal üye çağırmaktan KAÇıNıN.
+❌ Oluşturucusunun içindeki bir nesne üzerinde sanal üye çağırmaktan KAÇıNıN.
 
 En türetilmiş türün Oluşturucusu henüz tam olarak çalıştırılmasa bile, sanal bir üyenin çağrılması en fazla türetilmiş geçersiz kılmanın çağrılmasına neden olur.
 
@@ -69,7 +68,7 @@ statik oluşturucuları özel hale getirmek ✔️.
 
 Sınıf oluşturucusu olarak da adlandırılan statik bir Oluşturucu, bir türü başlatmak için kullanılır. CLR, türün ilk örneği oluşturulmadan veya bu türdeki herhangi bir statik üye çağrılmadan önce statik oluşturucuyu çağırır. Statik Oluşturucu çağrıldığında kullanıcının denetimi yoktur. Statik bir Oluşturucu özel değilse, CLR dışındaki kodla çağrılabilir. Oluşturucuda gerçekleştirilen işlemlere bağlı olarak, bu beklenmeyen davranışlara neden olabilir. C# derleyicisi statik oluşturucuları özel olmaya zorlar.
 
-❌Statik oluşturuculardan özel durumlar atamayın.
+❌ Statik oluşturuculardan özel durumlar atamayın.
 
 Bir tür oluşturucusundan bir özel durum oluşturulursa, tür geçerli uygulama etki alanında kullanılamaz.
 
@@ -77,7 +76,7 @@ Bir tür oluşturucusundan bir özel durum oluşturulursa, tür geçerli uygulam
 
 *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
-*, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+*Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

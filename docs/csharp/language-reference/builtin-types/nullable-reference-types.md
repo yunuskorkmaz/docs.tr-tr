@@ -2,19 +2,19 @@
 title: Null yapılabilir başvuru türleri-C# başvurusu
 description: C# null yapılabilir başvuru türleri ve bunların nasıl kullanılacağı hakkında bilgi edinin
 ms.date: 04/06/2020
-ms.openlocfilehash: 274a613a8381a2b7718c9025f51aadb2eb32af36
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: d961af9ba3b4776e6b4ec3eeea5392fb0d0394ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471869"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822431"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Null yapılabilir başvuru türleri (C# Başvurusu)
 
 > [!NOTE]
 > Bu makalede null yapılabilir başvuru türleri ele alınmaktadır. [Null olabilir değer türleri](nullable-value-types.md)de bildirebilirsiniz.
 
-Null yapılabilir başvuru türleri, *null yapılabilen bir içeriğe*sahip olan kodda C# 8,0 ile başlayarak kullanılabilir. Null yapılabilir başvuru türleri, null statik analiz uyarıları ve [null-forverme işleci](../operators/null-forgiving.md) isteğe bağlı dil özellikleridir. Tümü varsayılan olarak kapalıdır. *Null yapılabilir bağlam* , derleme ayarları kullanılarak proje düzeyinde veya pragmalar kullanılarak kodda denetlenir.
+Null yapılabilir başvuru türleri, *null yapılabilen bir içeriğe* sahip olan kodda C# 8,0 ile başlayarak kullanılabilir. Null yapılabilir başvuru türleri, null statik analiz uyarıları ve [null-forverme işleci](../operators/null-forgiving.md) isteğe bağlı dil özellikleridir. Tümü varsayılan olarak kapalıdır. *Null yapılabilir bağlam* , derleme ayarları kullanılarak proje düzeyinde veya pragmalar kullanılarak kodda denetlenir.
 
  Null yapılabilir bir bağlamda:
 
@@ -49,11 +49,11 @@ try
 
 Önceki bölümdeki örneklerde, null yapılabilir başvuru türlerinin doğası gösterilmektedir. Null yapılabilir başvuru türleri yeni sınıf türleri değil, var olan başvuru türlerinde ek açıklamalar değildir. Derleyici, kodunuzda olası null başvuru hatalarını bulmanıza yardımcı olması için bu ek açıklamaları kullanır. Null yapılamayan bir başvuru türü ve null yapılabilir bir başvuru türü arasında çalışma zamanı farkı yoktur. Derleyici, null olamayan başvuru türleri için hiçbir çalışma zamanı denetimi eklemez. Avantajlar, derleme zamanı analizinde bulunur. Derleyici, kodunuzdaki olası null hataları bulmanıza ve düzeltmenize yardımcı olan uyarılar oluşturur. Amacınızı bildirirsiniz ve kodunuz bu amacı ihlal ettiğinde derleyici sizi uyarır.
 
-Null yapılabilir etkin bir bağlamda derleyici, herhangi bir başvuru türünün değişkenlerinde statik analiz gerçekleştirir, hem null yapılabilir hem de null değer atanamaz. Derleyici, her başvuru değişkeninin null durumunu *null* ya da *belki null*olarak izler. Null yapılamayan bir başvurunun varsayılan durumu *null değil*. Null yapılabilen bir başvurunun varsayılan durumu *null olabilir*.
+Null yapılabilir etkin bir bağlamda derleyici, herhangi bir başvuru türünün değişkenlerinde statik analiz gerçekleştirir, hem null yapılabilir hem de null değer atanamaz. Derleyici, her başvuru değişkeninin null durumunu *null* ya da *belki null* olarak izler. Null yapılamayan bir başvurunun varsayılan durumu *null değil*. Null yapılabilen bir başvurunun varsayılan durumu *null olabilir*.
 
-Null durumu *null*olmadığından, null olamayan başvuru türleri başvuru için her zaman güvenli olmalıdır. Bu kuralı zorlamak için, null olamayan bir başvuru türü null olmayan bir değere başlatılmamışsa, derleyici uyarıları yayınlar. Yerel değişkenlerin, bildirildiği yere atanması gerekir. Her oluşturucunun, gövdesinde, adlandırılmış bir oluşturucuda veya bir alan başlatıcısı kullanarak her alanı ataması gerekir. Durum, durumu *null*olan bir başvuruya null atanamaz bir başvuru atanmışsa, derleyici uyarıları yayınlar. Ancak, null olamayan bir başvuru *null*olmadığından, bu değişkenlere başvuruluyorsa hiçbir uyarı verilmemektedir.
+Null durumu *null* olmadığından, null olamayan başvuru türleri başvuru için her zaman güvenli olmalıdır. Bu kuralı zorlamak için, null olamayan bir başvuru türü null olmayan bir değere başlatılmamışsa, derleyici uyarıları yayınlar. Yerel değişkenlerin, bildirildiği yere atanması gerekir. Her oluşturucunun, gövdesinde, adlandırılmış bir oluşturucuda veya bir alan başlatıcısı kullanarak her alanı ataması gerekir. Durum, durumu *null* olan bir başvuruya null atanamaz bir başvuru atanmışsa, derleyici uyarıları yayınlar. Ancak, null olamayan bir başvuru *null* olmadığından, bu değişkenlere başvuruluyorsa hiçbir uyarı verilmemektedir.
 
-Null yapılabilir başvuru türleri başlatılabilir veya atanabilir `null` . Bu nedenle, Statik Analize başvurulmadan önce bir değişkenin *null* olduğunu belirlemesi gerekir. Null yapılabilir bir başvurunun null olduğu belirlenirse, *null*olamayan bir başvuru değişkenine atanamaz. Aşağıdaki sınıf bu uyarıların örneklerini gösterir:
+Null yapılabilir başvuru türleri başlatılabilir veya atanabilir `null` . Bu nedenle, Statik Analize başvurulmadan önce bir değişkenin *null* olduğunu belirlemesi gerekir. Null yapılabilir bir başvurunun null olduğu belirlenirse, *null* olamayan bir başvuru değişkenine atanamaz. Aşağıdaki sınıf bu uyarıların örneklerini gösterir:
 
 :::code language="csharp" source="snippets/shared/NullableReferenceTypes.cs" id="SnippetClassWithNullable":::
 
@@ -72,9 +72,9 @@ Null yapılabilir bağlamı denetlemek için iki yol vardır. Proje düzeyinde `
 Daha fazla bilgi için bkz. [C# dil belirtimi](~/_csharplang/spec/introduction.md)için aşağıdaki teklifler:
 
 - [Boş değer atanabilir başvuru türleri](~/_csharplang/proposals/csharp-8.0/nullable-reference-types.md)
-- [Taslak Nullable başvuru türleri belirtimi](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Taslak Nullable başvuru türleri belirtimi](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [Null yapılabilir değer türleri](nullable-value-types.md)
+- [Boş değer atanabilen değer türleri](nullable-value-types.md)

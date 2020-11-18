@@ -1,18 +1,17 @@
 ---
 title: Alan Tasarımı
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - fields, design guidelines
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-ms.openlocfilehash: 3a5ae985ab161899fbb5e96f9b0ef0cfa90b957c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6e58274f32ea129d3271c11e321bdbd454d2406a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289752"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821118"
 ---
 # <a name="field-design"></a>Alan Tasarımı
 Kapsülleme prensibi, nesne odaklı tasarımda en önemli olmaların biridir. Bu ilke, bir nesne içinde depolanan verilerin yalnızca o nesnenin erişimine açık olması gerektiğini belirtir.
@@ -21,7 +20,7 @@ Kapsülleme prensibi, nesne odaklı tasarımda en önemli olmaların biridir. Bu
 
  Bu katı kısıtlamadan yalnızca sabit ve statik salt okunurdur alanları hariç tutduk, çünkü bu tür alanlar, neredeyse tanım için hiçbir şekilde değişiklik gerektirmez.
 
- ❌Ortak veya korumalı örnek alanlarını sağlamaın.
+ ❌ Ortak veya korumalı örnek alanlarını sağlamaın.
 
  Genel veya korumalı hale getirmek yerine alanlara erişim için özellikler sağlamalısınız.
 
@@ -33,13 +32,13 @@ Kapsülleme prensibi, nesne odaklı tasarımda en önemli olmaların biridir. Bu
 
  Türün önceden tanımlanmış örnekleri varsa, bunları türün kendisine ait public salt okunurdur statik alanlar olarak bildirin.
 
- ❌Alanlara kesilebilir türlerin örneklerini atamayın `readonly` .
+ ❌ Alanlara kesilebilir türlerin örneklerini atamayın `readonly` .
 
  Kesilebilir tür, örneklendirildikten sonra değiştirilebilen örneklere sahip bir türdür. Örneğin, diziler, en çok koleksiyonlar ve akışlar değişebilir türlerdir, ancak, <xref:System.Int32?displayProperty=nameWithType> <xref:System.Uri?displayProperty=nameWithType> ve <xref:System.String?displayProperty=nameWithType> sabittir. Bir başvuru türü alanındaki salt okunurdur değiştirici, alanda depolanan örneğin değiştirilmesini önler, ancak örneği değiştiren Üyeler çağırarak alanın örnek verilerinin değiştirilmesini engellemez.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

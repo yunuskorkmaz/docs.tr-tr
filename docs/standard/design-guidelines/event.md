@@ -1,7 +1,6 @@
 ---
 title: Olay Tasarımı
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - pre-events
 - events [.NET Framework], design guidelines
@@ -10,15 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: 852c99b1a41691911f7ae82d3b8104526811757d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289830"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821339"
 ---
 # <a name="event-design"></a>Olay Tasarımı
-Olaylar en yaygın olarak kullanılan geri çağırma biçimidir (Framework 'ün Kullanıcı koduna çağrı yapmasına izin veren yapılar). Diğer geri çağırma mekanizmaları, temsilciler, sanal üyeler ve arabirim tabanlı eklentiler alan üyeleri içerir. kullanılabilirlik çalışmalarından veriler, geliştiricilerin büyük bölümünün diğer geri çağırma mekanizmalarını kullandıklarından daha rahat olduğunu gösterir. Olaylar, Visual Studio ve birçok dil ile tamamen tümleşiktir.
+Olaylar en yaygın olarak kullanılan geri çağırma biçimidir (Framework 'ün Kullanıcı koduna çağrı yapmasına izin veren yapılar). Diğer geri çağırma mekanizmaları, temsilciler, sanal üyeler ve arabirim tabanlı eklentiler alan üyeleri içerir. Kullanılabilirlik çalışmalarından veriler, geliştiricilerin büyük bölümünün diğer geri çağırma mekanizmalarını kullandıklarından daha rahat olduğunu gösterir. Olaylar, Visual Studio ve birçok dil ile tamamen tümleşiktir.
 
  İki olay grubu olduğunu unutmamak önemlidir: bir sistem değişikliği durumu, ön olaylar adı ve durum değişikliklerinden sonra oluşturulan olaylar, olaylar sonrası olarak adlandırılır. Bir form kapatılmadan önce oluşturulan bir ön olaya bir örnek olabilir `Form.Closing` . Bir form kapatıldıktan sonra oluşturulan olay sonrası bir örnek olabilir `Form.Closed` .
 
@@ -40,11 +39,11 @@ Olaylar en yaygın olarak kullanılan geri çağırma biçimidir (Framework 'ün
 
  Parametrenin adlandırılması `e` ve olay bağımsız değişkeni sınıfı olarak yazılması gerekir.
 
- ❌Statik olmayan bir olay oluşturulurken Gönderici olarak null geçirmeyin.
+ ❌ Statik olmayan bir olay oluşturulurken Gönderici olarak null geçirmeyin.
 
  statik bir olay oluştururken ✔️ gönderen olarak null geçirin.
 
- ❌Bir olayı oluştururken olay verileri parametresi olarak null geçirmeyin.
+ ❌ Bir olayı oluştururken olay verileri parametresi olarak null geçirmeyin.
 
  `EventArgs.Empty`Herhangi bir veriyi olay işleme yöntemine geçirmek istemiyorsanız, geçişi yapmalısınız. Geliştiriciler bu parametrenin null olmasını bekler.
 
@@ -63,11 +62,11 @@ Olaylar en yaygın olarak kullanılan geri çağırma biçimidir (Framework 'ün
 
  ✔️ <xref:System.EventArgs?displayProperty=nameWithType> veya alt sınıfını olay işleyicisinin ikinci parametresinin türü olarak kullanın ve çağırın `e` .
 
- ❌Olay işleyicilerinde ikiden fazla parametre yok.
+ ❌ Olay işleyicilerinde ikiden fazla parametre yok.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

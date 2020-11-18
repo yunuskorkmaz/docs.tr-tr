@@ -2,7 +2,6 @@
 title: Genel Adlandırma Kuralları
 description: Sözcük seçimiyle ilgili genel adlandırma kurallarını, kısaltmaların ve kısaltmaların kullanımıyla ilgili yönergeleri ve dile özgü adlardan kaçınmayla ilgili yönergeleri kullanın.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], conflicts
 - type names, conflicts
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769086"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821105"
 ---
 # <a name="general-naming-conventions"></a>Genel Adlandırma Kuralları
 
@@ -35,22 +34,22 @@ Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar 
 
  Özellik adı `CanScrollHorizontally` şundan daha iyidir `ScrollableX` (X eksenine yönelik bir tam başvuru).
 
- ❌Alt çizgi, kısa çizgi veya alfasayısal olmayan karakterler kullanmayın.
+ ❌ Alt çizgi, kısa çizgi veya alfasayısal olmayan karakterler kullanmayın.
 
- ❌Macarca gösterimini kullanmayın.
+ ❌ Macarca gösterimini kullanmayın.
 
- ❌Yaygın olarak kullanılan programlama dillerinin anahtar sözcükleriyle çakışan tanımlayıcılar kullanmaktan KAÇıNıN.
+ ❌ Yaygın olarak kullanılan programlama dillerinin anahtar sözcükleriyle çakışan tanımlayıcılar kullanmaktan KAÇıNıN.
 
  Ortak dil belirtiminin (CLS) kural 4 ' e göre, tüm uyumlu dillerin, söz konusu dilin anahtar sözcüğünü tanımlayıcı olarak kullanan adlandırılmış öğelere erişime izin veren bir mekanizma sağlaması gerekir. Örneğin, C#, bu durumda @ Sign 'ı kaçış mekanizması olarak kullanır. Ancak, bir yöntemi kaçış sırası olmadan kullanmak çok daha zor olduğundan ortak anahtar sözcüklerden kaçınmak iyi bir fikirdir.
 
 ## <a name="using-abbreviations-and-acronyms"></a>Kısaltmalar ve kısaltmalar kullanma
- ❌Tanımlayıcı adlarının parçası olarak kısaltmalar veya aykırılıkları kullanmayın.
+ ❌ Tanımlayıcı adlarının parçası olarak kısaltmalar veya aykırılıkları kullanmayın.
 
  Örneğin, yerine kullanın `GetWindow` `GetWin` .
 
- ❌Yaygın olarak kabul edilmeyen ve yalnızca gerekli olduğunda bile olmayan kısaltmalar kullanmayın.
+ ❌ Yaygın olarak kabul edilmeyen ve yalnızca gerekli olduğunda bile olmayan kısaltmalar kullanmayın.
 
-## <a name="avoiding-language-specific-names"></a>Dile özgü adlardan kaçınma
+## <a name="avoiding-language-specific-names"></a>Language-Specific adlarından kaçınma
  ✔️, tür adları için dile özgü anahtar sözcükler yerine anlam açısından ilginç adlar kullanır.
 
  Örneğin, `GetLength` daha iyi bir addır `GetInt` .
@@ -65,16 +64,16 @@ Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar 
 |**bayt**|**Bayt**|**unsigned char**|**Bayt**|
 |**short**|**Kısadır**|**short**|**Int16**|
 |**ushort**|**UInt16**|**imzasız short**|**UInt16**|
-|**int**|**Tamsayı**|**int**|**Int32**|
-|**u**|**UInt32**|**unsigned int**|**UInt32**|
+|**int**|**Gir**|**int**|**Int32**|
+|**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Kalacağını**|**__int64**|**Tutulamaz**|
 |**ulong**|**UInt64**|**imzasız __int64**|**UInt64**|
 |**float**|**Tek**|**float**|**Tek**|
 |**double**|**Çift**|**double**|**Çift**|
-|**bool**|**Boole**|**bool**|**Boole**|
+|**bool**|**Boolean**|**bool**|**Boolean**|
 |**char**|**Char**|**wchar_t**|**Char**|
-|**dizisinde**|**Dize**|**Dize**|**Dize**|
-|**nesne**|**Nesne**|**Nesne**|**Nesne**|
+|**string**|**Dize**|**Dize**|**Dize**|
+|**object**|**Nesne**|**Nesne**|**Nesne**|
 
  ✔️, tür adını yinelemek yerine veya gibi ortak bir ad kullanın, `value` `item` nadir olarak bir tanımlayıcının anlam anlamı yoktur ve parametre türü önemli değildir.
 
@@ -91,13 +90,13 @@ Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar 
 
  ✔️ var olan bir API 'nin yeni bir sürümünü göstermek için sayısal bir sonek kullanın, özellikle de var olan API 'nin adı anlamlı olan tek addır (yani, bir sektör standardı ise) ve anlamlı bir sonek eklemek (veya adı değiştirmek) uygun bir seçenek değildir.
 
- ❌Aynı API 'nin önceki bir sürümünden ayırt etmek için bir tanımlayıcı için "Ex" (ya da benzer) sonekini kullanmayın.
+ ❌ Aynı API 'nin önceki bir sürümünden ayırt etmek için bir tanımlayıcı için "Ex" (ya da benzer) sonekini kullanmayın.
 
  ✔️, 32 bit tamsayı yerine 64 bit tamsayı (uzun tamsayı) üzerinde çalışan API sürümlerini ("64" sonekini) kullanıma sunuyor. Yalnızca var olan 32 bitlik API olduğunda bu yaklaşımı uygulamanız gerekir; Bunu yalnızca 64 bitlik bir sürümle yepyeni yeni API 'Ler için yapmayın.
 
  *Bölüm &copy; 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

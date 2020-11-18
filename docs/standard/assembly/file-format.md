@@ -3,18 +3,17 @@ title: .NET derlemesi dosya biçimi
 description: .NET uygulamaları ve kitaplıklarını anlatmak ve içermesi için kullanılan .NET derleme dosyası biçimi hakkında bilgi edinin.
 author: richlander
 ms.date: 08/20/2019
-ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: b4aa961c3a6f2d4fa1580ff608aaf2a40d462fa0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1e98f0beb6756c9a02b2839eb88d6a5b13375786
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288517"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822197"
 ---
 # <a name="net-assembly-file-format"></a>.NET derlemesi dosya biçimi
 
-.NET *, .net*programlarını tamamen tanımlamakta ve içerecek şekilde kullanılan bir ikili dosya biçimi tanımlar. Derlemeler, tüm bağımlı kitaplıkların yanı sıra programların kendileri için de kullanılır. .NET programı, uygun .NET uygulamasının ötesinde bir veya daha fazla gerekli yapıt olmadan bir veya daha fazla derleme olarak yürütülebilir. İşletim sistemi API 'Leri de dahil olmak üzere yerel bağımlılıklar ayrı bir konudur ve bazı durumlarda bu biçimde (örneğin, WinRT) açıklansa da .NET derleme biçimi içinde yer alır.
+.NET *, .net* programlarını tamamen tanımlamakta ve içerecek şekilde kullanılan bir ikili dosya biçimi tanımlar. Derlemeler, tüm bağımlı kitaplıkların yanı sıra programların kendileri için de kullanılır. .NET programı, uygun .NET uygulamasının ötesinde bir veya daha fazla gerekli yapıt olmadan bir veya daha fazla derleme olarak yürütülebilir. İşletim sistemi API 'Leri de dahil olmak üzere yerel bağımlılıklar ayrı bir konudur ve bazı durumlarda bu biçimde (örneğin, WinRT) açıklansa da .NET derleme biçimi içinde yer alır.
 
 > Her CLı bileşeni, bu bileşene özgü bildirimler, uygulamalar ve başvurular için meta verileri taşır. Bu nedenle, bileşene özgü meta veriler bileşen meta verileri olarak adlandırılır ve sonuçta elde edilen bileşen ECMA 335 I. 9.1, bileşenler ve derlemelerden kendi kendine açıklanmaktadır.
 

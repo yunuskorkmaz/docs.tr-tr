@@ -2,7 +2,6 @@
 title: Tür Üyelerinin Adları
 description: .NET 'teki Yöntemler, özellikler, olaylar ve alanlar gibi tür üye adlandırma kılavuzlarını öğrenin.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
 - methods [.NET Framework], names
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662504"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820919"
 ---
 # <a name="names-of-type-members"></a>Tür Üyelerinin Adları
 Türler üye yapılır: Yöntemler, özellikler, olaylar, oluşturucular ve alanlar. Aşağıdaki bölümlerde, adlandırma türü üyelerine yönelik kılavuzlar açıklanır.
@@ -41,7 +40,7 @@ public class String {
 
  ✔️ adı, isim tümceciğini veya sıfatıcı kullanarak ad özellikleri YAPıN.
 
- ❌Aşağıdaki örnekte olduğu gibi "Get" yöntemlerinin adıyla eşleşen özelliklere sahip DEĞILDIR:
+ ❌ Aşağıdaki örnekte olduğu gibi "Get" yöntemlerinin adıyla eşleşen özelliklere sahip DEĞILDIR:
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -73,7 +72,7 @@ public class Control {
 
  Örneğin, bir pencere kapatılmadan önce oluşturulan bir Close olayı çağrılır `Closing` ve pencere kapatıldıktan sonra oluşturulan bir kapatma olayı çağırılır `Closed` .
 
- ❌Ön ve son olayları göstermek için "önce" veya "After" öneklerini veya postdüzeltmelerinizi kullanmayın. Yalnızca açıklandığı gibi, mevcut ve eski kullanım zamanlarını kullanın.
+ ❌ Ön ve son olayları göstermek için "önce" veya "After" öneklerini veya postdüzeltmelerinizi kullanmayın. Yalnızca açıklandığı gibi, mevcut ve eski kullanım zamanlarını kullanın.
 
  Aşağıdaki örnekte gösterildiği gibi, ad olay işleyicilerini (olay türleri olarak kullanılan temsilciler) "EventHandler" sonekiyle birlikte ✔️:
 
@@ -92,13 +91,13 @@ public class Control {
 
  ad alanlarını bir isim, isim tümceciği veya sıfatıcı kullanarak ✔️.
 
- ❌Alan adları için bir ön ek kullanmayın.
+ ❌ Alan adları için bir ön ek kullanmayın.
 
  Örneğin, statik alanları belirtmek için "g_" veya "s_" kullanmayın.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

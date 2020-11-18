@@ -2,7 +2,6 @@
 title: Sınıf ile Yapı Arasında Seçim Yapma
 description: Bir türün bir sınıf olarak tasarlanıp tasarlanmayacağına veya bir türü struct olarak tasarlamasına nasıl karar vereceğiniz hakkında bilgi edinin. Başvuru türlerinin ve değer türlerinin .NET 'teki farklı olduğunu anlayın.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], structures
 - class library design guidelines [.NET Framework], classes
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: b1f3d36f4a9b6e44451a8534ca79fb674071a955
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662608"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821482"
 ---
 # <a name="choosing-between-class-and-struct"></a>Sınıf ile Yapı Arasında Seçim Yapma
 Temel tasarım kararlarından biri olan her çerçeve tasarlayıcı, bir türü Sınıf (başvuru türü) veya yapı (değer türü) olarak tasarlamayacağındır. Bu seçimi yapmak için başvuru türleri ve değer türleri davranışlarındaki farkları iyi anlamak çok önemlidir.
@@ -37,7 +36,7 @@ Temel tasarım kararlarından biri olan her çerçeve tasarlayıcı, bir türü 
 
  ✔️, türün örnekleri küçük ve genellikle kısa süreli ise veya genellikle diğer nesnelere katıştırılmışsa sınıf yerine bir struct tanımlamayı düşünün.
 
- ❌Türün şu özelliklere sahip olmadığı durumlar dışında bir struct tanımlamaktan KAÇıNıN:
+ ❌ Türün şu özelliklere sahip olmadığı durumlar dışında bir struct tanımlamaktan KAÇıNıN:
 
 - Temel türler ( `int` , `double` , vb.) gibi tek bir değeri mantıksal olarak temsil eder.
 
@@ -51,7 +50,7 @@ Temel tasarım kararlarından biri olan her çerçeve tasarlayıcı, bir türü 
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

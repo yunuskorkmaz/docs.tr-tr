@@ -1,25 +1,24 @@
 ---
 title: Koleksiyonlar için yönergeler
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: cc853be2310cf72c4eb559f625c6a37a44ed7db8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276055"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821092"
 ---
 # <a name="guidelines-for-collections"></a>Koleksiyonlar için yönergeler
 Özellikle bir nesne grubunu işlemek için tasarlanan herhangi bir tür, bir koleksiyon olarak düşünülebilir. Bu tür türler için neredeyse her zaman uygundur <xref:System.Collections.IEnumerable> <xref:System.Collections.Generic.IEnumerable%601> . Bu bölümde, bu arabirimlerin yalnızca birini veya her ikisini de koleksiyonlar olarak uygulayan türler dikkate aldık.
 
- ❌Ortak API 'lerde zayıf türsüz koleksiyonlar kullanmayın.
+ ❌ Ortak API 'lerde zayıf türsüz koleksiyonlar kullanmayın.
 
  Koleksiyon öğelerini temsil eden tüm dönüş değerlerinin ve parametrelerinin türü, temel türlerinden hiçbirini değil, tam öğe türü olmalıdır (Bu yalnızca koleksiyonun genel üyeleri için geçerlidir).
 
  ❌<xref:System.Collections.ArrayList> <xref:System.Collections.Generic.List%601> Ortak API 'leri kullanmayın.
 
- Bu türler, genel API 'lerde değil, iç uygulamada kullanılmak üzere tasarlanan veri yapılarıdır. `List<T>`, API 'lerin ve esnekliğin Temizleme maliyetiyle performans ve güç için iyileştirilmiştir. Örneğin, öğesini döndürdüğünüzde `List<T>` , istemci kodu koleksiyonu değiştirdiğinde hiçbir zaman bildirim alamazsınız. Ayrıca, çok sayıda `List<T>` <xref:System.Collections.Generic.List%601.BinarySearch%2A> senaryoda yararlı olmayan veya geçerli olmayan birçok üye sunar. Aşağıdaki iki bölümde, genel API 'lerde kullanılmak üzere özel olarak tasarlanan türler (soyutlamalar) açıklanır.
+ Bu türler, genel API 'lerde değil, iç uygulamada kullanılmak üzere tasarlanan veri yapılarıdır. `List<T>` , API 'lerin ve esnekliğin Temizleme maliyetiyle performans ve güç için iyileştirilmiştir. Örneğin, öğesini döndürdüğünüzde `List<T>` , istemci kodu koleksiyonu değiştirdiğinde hiçbir zaman bildirim alamazsınız. Ayrıca, çok sayıda `List<T>` <xref:System.Collections.Generic.List%601.BinarySearch%2A> senaryoda yararlı olmayan veya geçerli olmayan birçok üye sunar. Aşağıdaki iki bölümde, genel API 'lerde kullanılmak üzere özel olarak tasarlanan türler (soyutlamalar) açıklanır.
 
  ❌`Hashtable` `Dictionary<TKey,TValue>` Ortak API 'leri kullanmayın.
 
@@ -29,7 +28,7 @@ ms.locfileid: "84276055"
 
  Dışındaki metotlardan döndürülen Numaralandırıcılar `GetEnumerator` ifadesiyle birlikte kullanılamaz `foreach` .
 
- ❌Hem hem de `IEnumerator<T>` `IEnumerable<T>` aynı türde uygulamayın. Aynı, genel olmayan arabirimler ve için geçerlidir `IEnumerator` `IEnumerable` .
+ ❌ Hem hem de `IEnumerator<T>` `IEnumerable<T>` aynı türde uygulamayın. Aynı, genel olmayan arabirimler ve için geçerlidir `IEnumerator` `IEnumerable` .
 
 ## <a name="collection-parameters"></a>Koleksiyon parametreleri
  ✔️, bir parametre türü olarak mümkün olan en az özelleştirilmiş türü kullanır. Koleksiyonları parametre olarak alan çoğu üye arabirimini kullanır `IEnumerable<T>` .
@@ -39,7 +38,7 @@ ms.locfileid: "84276055"
  Bunun yerine, veya öğesini kullanarak `IEnumerable<T>` `IEnumerable` nesnenin mi yoksa dinamik olarak mı kontrol ettiğine dikkat edin `ICollection<T>` `ICollection` .
 
 ## <a name="collection-properties-and-return-values"></a>Koleksiyon özellikleri ve dönüş değerleri
- ❌Ayarlanabilir koleksiyon özellikleri sağlamaın.
+ ❌ Ayarlanabilir koleksiyon özellikleri sağlamaın.
 
  Kullanıcılar, önce koleksiyonu temizleyerek ve sonra yeni içerikleri ekleyerek koleksiyonun içeriğini değiştirebilir. Tüm koleksiyonu değiştirmek ortak bir senaryodur, `AddRange` yöntemi koleksiyona sağlamayı düşünün.
 
@@ -65,14 +64,14 @@ ms.locfileid: "84276055"
 
  Anahtarlı koleksiyonlar genellikle daha büyük bellek baskılarına sahiptir ve bellek ek yükü anahtarlara sahip olmanın avantajlarından yararlanıyorsa kullanılmamalıdır.
 
- ❌Koleksiyon özelliklerinden veya koleksiyonlar döndüren metotlardan null değerler döndürme. Bunun yerine boş bir koleksiyon veya boş bir dizi döndürün.
+ ❌ Koleksiyon özelliklerinden veya koleksiyonlar döndüren metotlardan null değerler döndürme. Bunun yerine boş bir koleksiyon veya boş bir dizi döndürün.
 
  Genel kural, null ve boş (0 öğe) koleksiyonlarının veya dizilerinin aynı kabul edilmesidir.
 
 ### <a name="snapshots-versus-live-collections"></a>Anlık görüntüler ve canlı Koleksiyonlar
  Bir zaman noktasında bir durumu temsil eden koleksiyonlara anlık görüntü koleksiyonları denir. Örneğin, bir veritabanı sorgusundan döndürülen satırları içeren bir koleksiyon bir anlık görüntü olacaktır. Geçerli durumu her zaman temsil eden koleksiyonlara canlı koleksiyonlar denir. Örneğin, bir `ComboBox` öğe koleksiyonu canlı bir koleksiyondur.
 
- ❌Özelliklerden anlık görüntü koleksiyonları döndürme. Özellikler canlı koleksiyonlar döndürmelidir.
+ ❌ Özelliklerden anlık görüntü koleksiyonları döndürme. Özellikler canlı koleksiyonlar döndürmelidir.
 
  Özellik alıcıları çok hafif işlemler olmalıdır. Anlık görüntü döndürmek için bir O (n) işleminde iç koleksiyonun kopyasının oluşturulması gerekir.
 
@@ -91,7 +90,7 @@ ms.locfileid: "84276055"
 
  ✔️ bayt koleksiyonları yerine bayt dizilerini kullanın.
 
- ❌Özellik alıcısı her çağrıldığında özelliğin yeni bir dizi (örn. iç dizinin bir kopyası) döndürmesi gerekiyorsa özellikler için diziler kullanmayın.
+ ❌ Özellik alıcısı her çağrıldığında özelliğin yeni bir dizi (örn. iç dizinin bir kopyası) döndürmesi gerekiyorsa özellikler için diziler kullanmayın.
 
 ## <a name="implementing-custom-collections"></a>Özel Koleksiyonlar uygulama
  `Collection<T>` `ReadOnlyCollection<T>` yeni koleksiyonlar tasarlarken,, veya ' den devralmayı düşünün ✔️ `KeyedCollection<TKey,TItem>` .
@@ -102,12 +101,12 @@ ms.locfileid: "84276055"
 
  ✔️ Genel olmayan koleksiyon arabirimlerini uygulamayı düşünün ( `IList` ve `ICollection` ) koleksiyon genellikle bu arabirimleri giriş olarak alan API 'lere geçiriliyorsa.
 
- ❌Koleksiyon kavramıyla ilgisi olmayan karmaşık API 'Ler olan türlerde koleksiyon arabirimleri uygulamaktan KAÇıNıN.
+ ❌ Koleksiyon kavramıyla ilgisi olmayan karmaşık API 'Ler olan türlerde koleksiyon arabirimleri uygulamaktan KAÇıNıN.
 
- ❌Gibi genel olmayan temel koleksiyonlardan devralma `CollectionBase` . `Collection<T>`Yerine, `ReadOnlyCollection<T>` ve kullanın `KeyedCollection<TKey,TItem>` .
+ ❌ Gibi genel olmayan temel koleksiyonlardan devralma `CollectionBase` . `Collection<T>`Yerine, `ReadOnlyCollection<T>` ve kullanın `KeyedCollection<TKey,TItem>` .
 
 ### <a name="naming-custom-collections"></a>Özel koleksiyonları adlandırma
- Koleksiyonlar (uygulayan türler `IEnumerable` ) genellikle iki nedenden dolayı oluşturulur: (1) yapıya özgü işlemlere sahip yeni bir veri yapısı ve genellikle var olan veri yapılarından (örn.,,, <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601> ) ve (2) belirli bir öğe kümesinin tutulması için özel bir koleksiyon oluşturmak için (örn. <xref:System.Collections.Specialized.StringCollection> ). Veri yapıları genellikle uygulamaların ve kitaplıkların iç uygulamalarında kullanılır. Özel Koleksiyonlar genellikle API 'lerde (özellik ve parametre türleri olarak) gösterilmelidir.
+ Koleksiyonlar (uygulayan türler `IEnumerable` ) genellikle iki nedenden dolayı oluşturulur: (1) yapıya özgü işlemlere sahip yeni bir veri yapısı ve genellikle var olan veri yapılarından (örn.,,,  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601> ) ve (2) belirli bir öğe kümesinin tutulması için özel bir koleksiyon oluşturmak için (örn.  <xref:System.Collections.Specialized.StringCollection> ). Veri yapıları genellikle uygulamaların ve kitaplıkların iç uygulamalarında kullanılır. Özel Koleksiyonlar genellikle API 'lerde (özellik ve parametre türleri olarak) gösterilmelidir.
 
  ✔️, veya uygulayan soyutlamalar adlarında "Sözlük" sonekini kullanın `IDictionary` `IDictionary<TKey,TValue>` .
 
@@ -115,7 +114,7 @@ ms.locfileid: "84276055"
 
  ✔️ özel veri yapıları için uygun veri yapısı adını kullanın.
 
- ❌Koleksiyon soyutlamaları adlarında "LinkedList" veya "Hashtable" gibi belirli bir uygulamadan oluşan herhangi bir sonek kullanmaktan kaçının.
+ ❌ Koleksiyon soyutlamaları adlarında "LinkedList" veya "Hashtable" gibi belirli bir uygulamadan oluşan herhangi bir sonek kullanmaktan kaçının.
 
  ✔️ koleksiyon adlarını öğe türü adı ile önek olarak kullanmayı düşünün. Örneğin, türü öğeleri depolayan bir koleksiyon `Address` (uygulama) olarak `IEnumerable<Address>` adlandırılmalıdır `AddressCollection` . Öğe türü bir arabirimse, öğe türünün "I" öneki atlanabilir. Bu nedenle, bir <xref:System.IDisposable> öğe koleksiyonu çağrılabilir `DisposableCollection` .
 
@@ -125,7 +124,7 @@ ms.locfileid: "84276055"
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

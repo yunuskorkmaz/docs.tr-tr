@@ -2,19 +2,18 @@
 title: Üye Tasarımı Yönergeleri
 description: .NET 'teki üye tasarımı kılavuzlarını öğrenin. Üyeler, Yöntemler, özellikler, olaylar, oluşturucular ve alanları içerir.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], about member design guidelines
 - members [.NET Framework], design guidelines
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-ms.openlocfilehash: a1f0c1d74e8bffa7cfef975c7dafb9fd01479470
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 512fc3b7fde93279995a67be2fc0b285ba235f16
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594497"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820949"
 ---
 # <a name="member-design-guidelines"></a>Üye Tasarımı Yönergeleri
 Yöntemler, özellikler, olaylar, oluşturucular ve alanlar topluca üye olarak adlandırılır. Üyeler, son olarak çerçeve işlevselliğinin bir çerçevenin son kullanıcılarına sunulduğunu gösterir.  
@@ -34,7 +33,7 @@ Yöntemler, özellikler, olaylar, oluşturucular ve alanlar topluca üye olarak 
  [Parametre tasarımı](parameter-design.md)  
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*  
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

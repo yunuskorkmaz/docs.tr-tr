@@ -2,7 +2,6 @@
 title: .NET 'te sayısal dizeleri ayrıştırma
 description: .NET ' te sayısal dizeleri ayrıştırma hakkında bilgi edinin. Biçim sağlayıcıları, NumberStyles numaralandırma değerleri ve Unicode basamakları ile nasıl ayrıştırılcağınızı öğrenin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - enumerations [.NET], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: 2ddefde4c9dceffb6adf7e17a965a2b15ff60ed2
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6054456b50c48ecee61e95851aee095a4227b176
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889029"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821937"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>NET ' te sayısal dizeleri ayrıştırma
 Tüm sayısal türlerin iki statik ayrıştırma yöntemi vardır `Parse` ve `TryParse` bir sayının dize gösterimini sayısal bir türe dönüştürmek için kullanabilirsiniz. Bu yöntemler, [Standart sayısal biçim dizeleri](standard-numeric-format-strings.md) ve [özel sayısal biçim dizeleri](custom-numeric-format-strings.md)içinde belgelenen biçim dizeleri kullanılarak üretilmiş dizeleri ayrıştıramanıza olanak sağlar. Varsayılan olarak, `Parse` ve `TryParse` yöntemleri yalnızca tamsayı değerlerine tam sayı ondalık basamakları içeren dizeleri dönüştürebilir. İntegral ve kesirli ondalık basamaklar, Grup ayırıcılar ve bir ondalık ayırıcısı içeren dizeleri kayan nokta değerlerine başarıyla dönüştürebilirler. Yöntemi, `Parse` işlem başarısız olursa bir özel durum oluşturur, ancak `TryParse` Yöntem döndürülür `false` .  
