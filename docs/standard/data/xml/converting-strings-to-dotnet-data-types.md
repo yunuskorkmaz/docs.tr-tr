@@ -1,17 +1,16 @@
 ---
 title: Dizeleri .NET veri türlerine dönüştürme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 28c84b04bde045643158d8d2b9fed44b74334e77
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688006"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830967"
 ---
 # <a name="convert-strings-to-net-data-types"></a>Dizeleri .NET veri türlerine Dönüştür
 
@@ -34,7 +33,7 @@ Bir dizeyi .NET veri türüne dönüştürmek istiyorsanız, uygulama gereksinim
 > [!NOTE]
 > Tabloda listelenen herhangi bir .NET türünü **ToString** yöntemini kullanarak bir dizeye dönüştürürseniz, döndürülen dize temel tür değildir, ancak XML ŞEMASı (xsd) dize türüdür.  
   
- **DateTime** ve **TimeSpan** değer türü, bir **Tarih** saat içinde anlık bir zaman aralığını temsil ettiğinden, bir **TimeSpan** değeri bir zaman aralığı temsil ettiğinden farklılık gösterir. **DateTime** ve **TIMESPAN** biçimleri, XML şeması (xsd) veri türleri belirtiminde belirtilir. Örneğin:  
+ **DateTime** ve **TimeSpan** değer türü, bir **Tarih** saat içinde anlık bir zaman aralığını temsil ettiğinden, bir **TimeSpan** değeri bir zaman aralığı temsil ettiğinden farklılık gösterir. **DateTime** ve **TIMESPAN** biçimleri, XML şeması (xsd) veri türleri belirtiminde belirtilir. Örnek:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -70,7 +69,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- Ancak, bir dizeyi **Boolean** , **Single** veya **Double** 'A dönüştürüyorsanız, döndürülen .NET türü **System. Convert** sınıfı kullanılırken döndürülen türle aynı değildir.  
+ Ancak, bir dizeyi **Boolean**, **Single** veya **Double**'A dönüştürüyorsanız, döndürülen .NET türü **System. Convert** sınıfı kullanılırken döndürülen türle aynı değildir.  
   
 ## <a name="string-to-boolean"></a>Boole olarak dize  
  Aşağıdaki tabloda, **ToBoolean** yöntemi kullanılarak bir dize **Boole** değerine dönüştürülürken, verilen giriş dizeleri için hangi türün oluşturulduğu gösterilmektedir.  
@@ -91,7 +90,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
 <Boolean>1</Boolean>
 ```  
   
- Her ikisi de aşağıdaki kod tarafından Anlaşılabiliyorsa, **bValue** ise **System. Boolean. true** :  
+ Her ikisi de aşağıdaki kod tarafından Anlaşılabiliyorsa, **bValue** ise **System. Boolean. true**:  
   
 ```vb  
 Dim bvalue As Boolean = _  

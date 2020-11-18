@@ -1,7 +1,6 @@
 ---
 title: 'İzlenecek yol: Özel bir Veri Akışı Blok Türü Oluşturma'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,17 +9,17 @@ helpviewer_keywords:
 - TPL dataflow library, creating custom dataflow blocks
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
-ms.openlocfilehash: 37857e465bf4089dbeecc4cfd532d0702f795495
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 71f9002cc13f30bfe7988540472b09979d4e9d0a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284708"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829966"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>İzlenecek yol: Özel bir Veri Akışı Blok Türü Oluşturma
 TPL veri akışı kitaplığı çeşitli işlevleri etkinleştiren çeşitli veri akışı blok türleri sağlasa da, özel blok türleri de oluşturabilirsiniz. Bu belgede özel davranış uygulayan bir veri akışı blok türünün nasıl oluşturulacağı açıklanmaktadır.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
  Bu belgeyi okurken [veri akışını](dataflow-task-parallel-library.md) okuyun.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]

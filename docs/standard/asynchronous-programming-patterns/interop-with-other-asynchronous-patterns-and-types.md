@@ -1,7 +1,6 @@
 ---
 title: Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: 5ad49c70aaa69d8a4f830851b80b6a4839388b0f
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: b0dd786e1922d75edcb0326cc9e98037c6e4945c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888756"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830330"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma
 

@@ -2,7 +2,6 @@
 title: .NET 'teki Dizelerdeki karakterleri kırpma ve kaldırma
 description: Bir dizenin başından veya sonundan boş alanları kırpmaya veya .NET 'teki dizedeki belirli bir konumdan herhangi bir sayıda boşluk veya karakter kaldırmaya öğrenin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: d0057d503474f3f6ff886acda3ce1d72fb3ebe21
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 8bc2980aa887dc652485e135058b9f6f718e7b45
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888600"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831279"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>.NET 'teki Dizelerdeki karakterleri kırpma ve kaldırma
 Bir tümceyi tek tek sözcüklere ayrıştırdıysanız, sözcüğün her iki ucunda da boşluk olan (boşluk da denir) sözcüklerden oluşan sözcüklerle karşılaşabilirsiniz. Bu durumda, dizedeki belirli bir konumdan herhangi bir sayıda boşluğu veya diğer karakteri kaldırmak için **System. String** sınıfındaki trim yöntemlerinden birini kullanabilirsiniz. Aşağıdaki tabloda kullanılabilir kırpma yöntemleri açıklanmaktadır.  

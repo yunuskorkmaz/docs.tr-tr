@@ -1,21 +1,20 @@
 ---
 title: Gecikme Modları
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-ms.openlocfilehash: ee45fe5e8016c7507bc3a873e615fd8379810a8e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2e7b30a50e2513c567abf2116ab5495e717a8e22
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286021"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831201"
 ---
 # <a name="latency-modes"></a>Gecikme modları
 
-Nesneleri geri kazanmak için çöp toplayıcı (GC) bir uygulamadaki tüm yürütülen iş parçacıklarını durdurmalıdır. Çöp toplayıcısının etkin olduğu zaman dilimi, *gecikme*süresi olarak adlandırılır.
+Nesneleri geri kazanmak için çöp toplayıcı (GC) bir uygulamadaki tüm yürütülen iş parçacıklarını durdurmalıdır. Çöp toplayıcısının etkin olduğu zaman dilimi, *gecikme* süresi olarak adlandırılır.
 
 Örneğin, bir uygulamanın verileri aldığı veya içeriği gösterdiği durumlarda, tam bir çöp toplama işlemi kritik bir zamanda gerçekleşebilir ve performansı kesin bir şekilde gerçekleştirebilir. Özelliği değerlerden birine ayarlayarak çöp toplayıcısının izinsiz kullanımını ayarlayabilirsiniz <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> .
 
@@ -41,7 +40,7 @@ Aşağıdaki tabloda, değerleri kullanmaya yönelik uygulama senaryoları liste
 
 |Gecikme modu|Uygulama senaryoları|
 |------------------|---------------------------|
-|<xref:System.Runtime.GCLatencyMode.Batch>|Kullanıcı arabirimi (UI) veya sunucu tarafı işlemleri olmayan uygulamalar için.<br /><br />Arka plan atık toplama devre dışı bırakıldığında, bu, iş istasyonu ve sunucu çöp toplama için varsayılan moddur. <xref:System.Runtime.GCLatencyMode.Batch>mod ayrıca [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) ayarını geçersiz kılar, diğer bir deyişle, arka plan veya eşzamanlı koleksiyonları engeller.|
+|<xref:System.Runtime.GCLatencyMode.Batch>|Kullanıcı arabirimi (UI) veya sunucu tarafı işlemleri olmayan uygulamalar için.<br /><br />Arka plan atık toplama devre dışı bırakıldığında, bu, iş istasyonu ve sunucu çöp toplama için varsayılan moddur. <xref:System.Runtime.GCLatencyMode.Batch> mod ayrıca [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) ayarını geçersiz kılar, diğer bir deyişle, arka plan veya eşzamanlı koleksiyonları engeller.|
 |<xref:System.Runtime.GCLatencyMode.Interactive>|Kullanıcı arabirimi olan çoğu uygulama için.<br /><br />Bu, iş istasyonu ve sunucu çöp toplama için varsayılan moddur. Ancak, bir uygulama barındırılıyorsa, barındırma işleminin çöp toplayıcı ayarları önceliklidir.|
 |<xref:System.Runtime.GCLatencyMode.LowLatency>|Kısa süreli ve çöp toplayıcısından kesintiler kesintiye uğratan, zamana duyarlı işlemler içeren uygulamalar için. Örneğin, animasyonları veya veri alımı işlevlerini işleyen uygulamalar.|
 |<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|İçinde, atık toplayıcıdan kesintileri kesintiye uğratan daha uzun bir süre için zamana duyarlı işlemler içeren uygulamalar için. Örneğin, Ticaret saatlerinde Pazar verileri değiştikçe hızlı yanıt süresi gerektiren uygulamalar.<br /><br />Bu mod, diğer moddan daha büyük bir yönetilen yığın boyutuna neden olur. Yönetilen yığını sıkıştırmadığından, daha yüksek parçalanma mümkündür. Yeterli belleğin kullanılabildiğinden emin olun.|

@@ -1,14 +1,13 @@
 ---
 title: XML Şemasından Çıkarım Yapma
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: b18e7ffd-3c04-482d-9934-ba2f6a59b2c9
-ms.openlocfilehash: 212dafef0fefe701e27d148fd34984589e713fe8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d9bf14087a32ad04d9e3510c8543a3270f135653
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287681"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830928"
 ---
 # <a name="inferring-an-xml-schema"></a>XML Şemasından Çıkarım Yapma
 <xref:System.Xml.Schema.XmlSchemaInference>Bir XML belgesi yapısından BIR XML şeması tanım dili (xsd) şeması çıkarması Için şema nesne modeli (som) sınıfının nasıl kullanılacağını açıklar.  

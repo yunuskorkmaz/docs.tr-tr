@@ -2,7 +2,6 @@
 title: .NET içinde Tür Dönüştürme
 description: .NET ' te tür dönüştürmesi hakkında bilgi edinmek için, eski türün değerine denk gelen yeni bir tür değeri oluşturur, ancak özgün kimliğini saklayamayabilir.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 4f7e4400aa15532b04fd4e39219775af34068685
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 8e1ea153ccd65de967a34e79d4a26c96e678c4ad
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687537"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831032"
 ---
 # <a name="type-conversion-in-net"></a>.NET içinde tür dönüştürme
 

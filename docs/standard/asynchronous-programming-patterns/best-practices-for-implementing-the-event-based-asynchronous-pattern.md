@@ -1,7 +1,6 @@
 ---
 title: Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 8f2b1b4d6793be3e4de6fbc9fc09e8a7e690762c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6c2df4c2877f9191bd2b8190869c359a74de8e8f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888925"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830499"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
 

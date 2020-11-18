@@ -1,17 +1,16 @@
 ---
 title: Derlenmiş XPath İfadeleri
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: e74b52e471699fc663504fa42d6c7e502859adda
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 310d5eb01fff02d82ec3762d55ff14e5a6bcd621
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291532"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831019"
 ---
 # <a name="compiled-xpath-expressions"></a>Derlenmiş XPath İfadeleri
 <xref:System.Xml.XPath.XPathExpression>Nesnesi, <xref:System.Xml.XPath.XPathExpression.Compile%2A> sınıfının statik yönteminden <xref:System.Xml.XPath.XPathExpression> veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> sınıfın yöntemine döndürülen bir derlenmiş XPath sorgusunu temsil eder <xref:System.Xml.XPath.XPathNavigator> .  
@@ -35,7 +34,7 @@ ms.locfileid: "84291532"
   
  Aşağıdaki tabloda, W3C XPath dönüş türlerinin her biri, Microsoft .NET Framework equivalencies ve <xref:System.Xml.XPath.XPathExpression> nesnenin dönüş türüne göre hangi yöntemleri kullanılabileceği açıklanmaktadır.  
   
-|W3C XPath dönüş türü|.NET Framework eşdeğer tür|Description|Yöntemler|  
+|W3C XPath dönüş türü|.NET Framework eşdeğer tür|Açıklama|Yöntemler|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Belge düzeninde oluşturulan yinelemeler olmadan sıralanmamış bir düğüm koleksiyonu.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> veya <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|Bir `true` veya `false` değeri.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> veya<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  

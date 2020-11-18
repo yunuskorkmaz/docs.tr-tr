@@ -2,7 +2,6 @@
 title: Normal İfadelerdeki Miktar Niceleyiciler
 description: Eşleştirilecek girişte bir karakter, Grup veya karakter sınıfının kaç örneğinin bulunması gerektiğini belirten normal ifade nicelik belirteçleri hakkında bilgi edinin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 361286b992180e1d7fdf18d88022780cc3aa53fc
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 46f780dff948d290ee7906f8de7e74b03a404cc5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889432"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831045"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Niceleyiciler
 Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane karakter, Grup veya karakter sınıfının olması gerektiğini belirtir.  Aşağıdaki tabloda .NET tarafından desteklenen nicelik belirteçleri listelenmektedir.  
@@ -131,7 +130,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
 |`\D+`|En az bir ondalık olmayan basamakla eşleştirin.|  
   
 ### <a name="match-between-n-and-m-times-nm"></a>N ve y zamanları arasında eşleştir: {n, d}  
- `{` *N* . `,` *m* `}` nicelik belirteci, önceki öğeyle en az *n* kez eşleşir, ancak *n* ve *d* tamsayılardır. *m* `{`*n* `,` *k* `}` , geç eşdeğeri `{` *n* `,` *d* olan doyumsuz nicelik belirleyicgidir `}?` .  
+ `{` *N*. `,` *m* `}` nicelik belirteci, önceki öğeyle en az *n* kez eşleşir, ancak *n* ve *d* tamsayılardır. *m* `{`*n* `,` *k* `}` , geç eşdeğeri `{` *n* `,` *d* olan doyumsuz nicelik belirleyicgidir `}?` .  
   
  Aşağıdaki örnekte, normal ifade `(00\s){2,4}` iki sıfır basamağının iki ve dört tekrarı ile izleyen bir boşluk ile eşleştirmeye çalışır. Giriş dizesinin son bölümünün, en fazla dört kez bu kalıbı içerdiğini unutmayın. Ancak, bu alt dizenin yalnızca başlangıç kısmı (alana kadar ve sıfır ikilisi) normal ifade düzeniyle eşleşir.  
   
@@ -206,7 +205,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
  `{` *n* `}?` Bir çizim için önceki bölümde yer aldığı n nicelik için örneğe bakın. Bu örnekteki normal ifade, `{` *n* `,}` en az üç karakteri ve ardından bir nokta gelen bir dizeyi eşleştirmek için n nicelik belirteci kullanır.  
   
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>N ve k kez Eşleştir (geç eşleşme): {n, d}?  
- `{` *N* . `,` *m* `}?` nicelik belirteci önceki öğeyle `n` ve `m` zamanlardır; burada *n* ve *b* , mümkün olduğunca az sayıda tamdır. Bu, doyumsuz nicelik sayısının yavaş karşılığı `{` *n* `,` *m* `}` .  
+ `{` *N*. `,` *m* `}?` nicelik belirteci önceki öğeyle `n` ve `m` zamanlardır; burada *n* ve *b* , mümkün olduğunca az sayıda tamdır. Bu, doyumsuz nicelik sayısının yavaş karşılığı `{` *n* `,` *m* `}` .  
   
  Aşağıdaki örnekte, normal ifade `\b[A-Z](\w*?\s*?){1,10}[.!?]` bir ve on sözcükten oluşan cümleler ile eşleşir. 18 sözcük içeren bir cümle hariç giriş dizesindeki tüm cümlelere eşleşir.  
   

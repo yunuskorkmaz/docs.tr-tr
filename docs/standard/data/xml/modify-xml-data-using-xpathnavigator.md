@@ -1,23 +1,22 @@
 ---
 title: XPathNavigator Kullanarak XML Verilerini Değiştirme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 3b64bc8666274798ebaefc87ef3883fcec1ef6b1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 79bb23b77557a5a10f021e2167c9fa8ae3ee044a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288842"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830200"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verilerini Değiştirme
 Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesindeki düğümleri ve değerleri değiştirmek için kullanılan bir yöntemler kümesi sağlar. Bu yöntemleri kullanabilmeniz için <xref:System.Xml.XPath.XPathNavigator> nesnesi düzenlenebilir olmalıdır, yani <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği olmalıdır `true` .  
   
- <xref:System.Xml.XPath.XPathNavigator>bir XML belgesini düzenleyebilen nesneler, <xref:System.Xml.XmlDocument.CreateNavigator%2A> sınıfının yöntemiyle oluşturulur <xref:System.Xml.XmlDocument> . <xref:System.Xml.XPath.XPathNavigator>sınıfı tarafından oluşturulan nesneler <xref:System.Xml.XPath.XPathDocument> salt okunurdur ve <xref:System.Xml.XPath.XPathNavigator> bir nesne tarafından oluşturulan nesnenin Editing yöntemlerini kullanma girişimleri <xref:System.Xml.XPath.XPathDocument> bir ile sonuçlanır <xref:System.NotSupportedException> .  
+ <xref:System.Xml.XPath.XPathNavigator> bir XML belgesini düzenleyebilen nesneler, <xref:System.Xml.XmlDocument.CreateNavigator%2A> sınıfının yöntemiyle oluşturulur <xref:System.Xml.XmlDocument> . <xref:System.Xml.XPath.XPathNavigator> sınıfı tarafından oluşturulan nesneler <xref:System.Xml.XPath.XPathDocument> salt okunurdur ve <xref:System.Xml.XPath.XPathNavigator> bir nesne tarafından oluşturulan nesnenin Editing yöntemlerini kullanma girişimleri <xref:System.Xml.XPath.XPathDocument> bir ile sonuçlanır <xref:System.NotSupportedException> .  
   
  Düzenlenebilir nesneler oluşturma hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator> bkz. [XPathDocument ve XMLDOCUMENT kullanarak XML verilerini okuma](reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
@@ -28,7 +27,7 @@ Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesindeki düğüml
   
 |<xref:System.Xml.XPath.XPathNodeType>|Değiştirilen veriler|  
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
-|<xref:System.Xml.XPath.XPathNodeType.Root>|Desteklenmiyor.|  
+|<xref:System.Xml.XPath.XPathNodeType.Root>|Desteklenmez.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|Öğenin içeriği.|  
 |<xref:System.Xml.XPath.XPathNodeType.Attribute>|Özniteliğin değeri.|  
 |<xref:System.Xml.XPath.XPathNodeType.Text>|Metin içeriği.|  

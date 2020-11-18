@@ -2,19 +2,18 @@
 title: Görev tabanlı zaman uyumsuz programlama-.NET
 description: Bu makalede, .NET 'teki görev tabanlı zaman uyumsuz programlama hakkında bilgi edinin (TPL).
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: a1abe474628cd88e0c24f4152d83bd8ed7ad7950
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925252"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830031"
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 

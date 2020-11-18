@@ -1,7 +1,6 @@
 ---
 title: 'Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -22,12 +21,12 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-ms.openlocfilehash: bdc2cee343e9d9be44230e84ff45d6fa54901f48
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c8052030cdc385fc54852bb8ec48c783f2ee5bc4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288595"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830850"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme
 
@@ -35,7 +34,7 @@ Yalıtılmış depolama kullanan kod, yalıtılmış depolama dosyalarının ve 
 
 Bu nedenle, belirli bir yazma denemesinin başarısız olup olmadığını belirlemenize yardımcı olmak için, <xref:System.IO.IsolatedStorage.IsolatedStorage> sınıfı üç salt okunurdur: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A> , <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> , ve <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> . Bu özellikleri, mağazaya yazmanın izin verilen en fazla depolama boyutunun aşılmasına neden olup olmayacağını anlamak için kullanabilirsiniz. Yalıtılmış depolamaya aynı anda erişildiğini aklınızda bulundurun; Bu nedenle, kalan depolama miktarını hesaplarken, depolama alanı mağazaya yazmayı denediğinizde tüketilebilir. Ancak, kullanılabilir depolama alanının üst sınırına ulaşılmaya ulaşılmadığını belirlemenize yardımcı olması için deponun en büyük boyutunu kullanabilirsiniz.
 
-<xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>Özelliği, derlemenin düzgün şekilde çalışmasını sağlar. Bu nedenle, bu özelliği yalnızca <xref:System.IO.IsolatedStorage.IsolatedStorageFile> <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> , veya yöntemi kullanılarak oluşturulmuş nesneler üzerinde almalısınız <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> . <xref:System.IO.IsolatedStorage.IsolatedStorageFile>başka herhangi bir şekilde oluşturulan nesneler (örneğin, yöntemden döndürülen nesneler <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> ) doğru bir maksimum boyut döndürmez.
+<xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>Özelliği, derlemenin düzgün şekilde çalışmasını sağlar. Bu nedenle, bu özelliği yalnızca <xref:System.IO.IsolatedStorage.IsolatedStorageFile> <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> , veya yöntemi kullanılarak oluşturulmuş nesneler üzerinde almalısınız <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> . <xref:System.IO.IsolatedStorage.IsolatedStorageFile> başka herhangi bir şekilde oluşturulan nesneler (örneğin, yöntemden döndürülen nesneler <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> ) doğru bir maksimum boyut döndürmez.
 
 ## <a name="example"></a>Örnek
 

@@ -1,14 +1,13 @@
 ---
 title: XPath Ad Alanı Gezintisi
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: bad5e1245c7f48c114bd2a1809822cc131dad75a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4d2ef71a41d19fd5bb573afab66dc8a15e19c393
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551965"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831214"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath Ad Alanı Gezintisi
 XML belgeleriyle XPath sorguları kullanmak için, XML ad alanlarını ve ad alanları tarafından içerilen öğeleri doğru bir şekilde ele almanız gerekir. Ad alanları, adlar birden fazla bağlamda kullanıldığında oluşabilecek belirsizlikleri önler; Örneğin, ad `ID` BIR XML belgesinin farklı öğeleriyle ilişkili birden fazla tanımlayıcıya başvurabilir. Ad alanı sözdizimi, bir XML belgesinin öğelerini ayırt eden URI 'Leri, adları ve önekleri belirtir.  

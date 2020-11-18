@@ -2,7 +2,6 @@
 title: 'İzlenecek yol: Şifreleme Uygulaması Oluşturma'
 description: Bir şifreleme uygulamasının oluşturulmasına yol gösterir. Windows Forms uygulamasındaki içeriği şifrelemeyi ve şifrelerini çözmeyi öğrenin.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - cryptography [NET], cryptographic application example
 - cryptography [NET], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 16a887f23c584daa83106ae61c497bcae8dc4dd2
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 70218d60abb336cdb35fc2e89e62a50b6bd79c67
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557196"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830564"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>İzlenecek yol: Şifreleme Uygulaması Oluşturma
 
@@ -50,7 +49,7 @@ Bu izlenecek yol, şifreleme için aşağıdaki yönergeleri kullanır:
 |Ortak anahtar içeri aktarılıyor|Anahtarı bir XML dosyasından anahtar kapsayıcısına yükler.|  
 |Uygulamayı test etme|Bu uygulamayı test etmek için yordamları listeler.|  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
   

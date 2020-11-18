@@ -2,7 +2,6 @@
 title: Karma Kodlarla Veri Bütünlüğünü Sağlama
 description: .NET 'teki karma kodları kullanarak veri bütünlüğünü sağlama hakkında bilgi edinin. Karma değeri, verileri benzersiz bir şekilde tanımlayan sabit uzunlukta sayısal bir değerdir.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - encryption [.NET], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-ms.openlocfilehash: 3205e37f283cb205f5edfc5948a9cb9f7256f752
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 085a0ea387e3415e6e916bcdf9055ffaa6753fef
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556962"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831097"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Karma Kodlarla Veri Bütünlüğünü Sağlama
 Karma değeri, verileri benzersiz bir şekilde tanımlayan sabit uzunlukta sayısal bir değerdir. Karma değerler, büyük miktarlarda veriyi çok daha küçük sayısal değerler halinde temsil eder, bu nedenle dijital imzalarla birlikte kullanılır. Karma değeri, daha büyük değeri imzalamadan daha verimli bir şekilde imzalayabilirsiniz. Karma değerleri, güvenli olmayan kanallar aracılığıyla gönderilen verilerin bütünlüğünü doğrulamak için de kullanışlıdır. Alınan verilerin karma değeri, verilerin değiştirilip değiştirilmediğini tespit etmek için gönderilen verilerin karma değeriyle karşılaştırılabilir.  

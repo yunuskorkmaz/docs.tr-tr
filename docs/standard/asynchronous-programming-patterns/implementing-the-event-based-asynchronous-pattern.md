@@ -2,7 +2,6 @@
 title: Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 description: .NET ' te olay tabanlı zaman uyumsuz model (EAP) uygulamayı nasıl uygulayacağınızı öğrenin. EAP, zaman uyumsuz özellikleri olan bir sınıfı paketlemek için standart bir yoldur.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: ca4b1b3ff1fb7180250de7436db9a4d642e8118c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3f48f5d4f03928f8c9a2db2724e542be2b38fc63
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888795"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830356"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 
@@ -215,7 +214,7 @@ Sınıfınız, her biri farklı türde veriler döndüren birden çok zaman uyum
 
 Ve ' nin kullanımı, genellikle .NET 'te önerilse de `out` `ref` , mevcut olduklarında izlenecek kurallar aşağıda verilmiştir:
 
-Zaman uyumlu bir yöntem *MethodName* :
+Zaman uyumlu bir yöntem *MethodName*:
 
 - `out`*MethodName* parametresi _MethodName_**Async** öğesinin bir parçası olmamalıdır. Bunun yerine _, MethodName parametresinin bir parçası_ olmaları *gerekir (daha* uygun bir ad olmadıkça) parametre eşdeğeri olarak aynı **ada sahip.**
 

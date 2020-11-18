@@ -2,7 +2,6 @@
 title: Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
 description: Çok iş parçacıklı uygulamaların avantajlarından faydalanmalarını sağlayan ancak bazı tasarım karmaşıklıklarını gizleyecek olan, .NET 'teki olay tabanlı zaman uyumsuz desenleri (EAP 'ler) gözden geçirin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 5ab3229f71e264bbcd26d3d4c7bb52430b02865a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 88bdb1cb88a5d6ca5c948d5f3110ddb13bdda6ae
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888834"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830395"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
 Aynı anda pek çok görevi gerçekleştiren ve kullanıcı etkileşimine yanıt veren uygulamalar, genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading>Ad alanı, yüksek performanslı çok iş parçacıklı uygulamalar oluşturmak için gereken tüm araçları sağlar, ancak bu araçların kullanılması çok iş parçacıklı yazılım mühendisliğinde önemli bir deneyim gerektirir. Oldukça basit çok iş parçacıklı uygulamalar için, <xref:System.ComponentModel.BackgroundWorker> bileşen basit bir çözüm sağlar. Daha karmaşık zaman uyumsuz uygulamalarda, olay tabanlı zaman uyumsuz düzene uygun bir sınıf uygulamayı düşünün.  
@@ -37,7 +36,7 @@ Aynı anda pek çok görevi gerçekleştiren ve kullanıcı etkileşimine yanıt
   
 - Tanıdık olayları ve temsilciler modelini kullanarak bekleyen zaman uyumsuz işlemlerle iletişim kurun. Olay işleyicilerini ve temsilcileri kullanma hakkında daha fazla bilgi için bkz. [Olaylar](../events/index.md).  
   
- Olay tabanlı zaman uyumsuz deseninin desteklendiği bir sınıf, _MethodName_**zaman uyumsuz** adlı bir veya daha fazla yöntemlere sahip olur. Bu yöntemler, geçerli iş parçacığında aynı işlemi gerçekleştiren zaman uyumlu sürümleri yansıtabilir. Sınıfta bir _MethodName_**tamamlandı** olayı olabilir ve bir _MethodName_**Asynccancel** (veya yalnızca bir algıladığında **lasync** ) yöntemi olabilir.  
+ Olay tabanlı zaman uyumsuz deseninin desteklendiği bir sınıf, _MethodName_**zaman uyumsuz** adlı bir veya daha fazla yöntemlere sahip olur. Bu yöntemler, geçerli iş parçacığında aynı işlemi gerçekleştiren zaman uyumlu sürümleri yansıtabilir. Sınıfta bir _MethodName_**tamamlandı** olayı olabilir ve bir _MethodName_**Asynccancel** (veya yalnızca bir algıladığında **lasync**) yöntemi olabilir.  
   
  <xref:System.Windows.Forms.PictureBox> , olay tabanlı zaman uyumsuz stili destekleyen tipik bir bileşendir. Yöntemini çağırarak bir görüntüyü zaman uyumlu olarak indirebilirsiniz <xref:System.Windows.Forms.PictureBox.Load%2A> , ancak görüntü büyükse veya ağ bağlantısı yavaşsa, yükleme işlemi tamamlanana ve çağrısı geri alınana kadar uygulamanız yanıt vermeyi durdurur <xref:System.Windows.Forms.PictureBox.Load%2A> .  
   

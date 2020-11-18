@@ -1,7 +1,6 @@
 ---
 title: Çöp Toplama Bildirimleri
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: 389e851782edb82578c216951be440070b92723c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c91712b9d25221f1ffd9e9e980c420be32e2379a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286008"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831188"
 ---
 # <a name="garbage-collection-notifications"></a>Çöp Toplama Bildirimleri
 Ortak dil çalışma zamanı ile tam çöp toplamanın (yani 2. nesil bir koleksiyon) performansı olumsuz etkileyebileceği durumlar vardır. Bu, özellikle büyük hacimli istekleri işleyen sunucularla ilgili bir sorun olabilir; Bu durumda, uzun bir atık toplama bir istek zaman aşımına neden olabilir. Kritik bir süre boyunca tam bir koleksiyonun oluşmasını önlemek için, tam bir çöp toplamanın yaklaştığı ve iş yükünü başka bir sunucu örneğine yeniden yönlendirmek için işlem gerçekleştirilecek şekilde bir uyarı alabilirsiniz. Ayrıca, geçerli sunucu örneğinin istekleri işlemesini gerektirmeyen bir koleksiyonu kendiniz de yazabilirsiniz.  
@@ -63,7 +62,7 @@ Ortak dil çalışma zamanı ile tam çöp toplamanın (yani 2. nesil bir koleks
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Açıklama  
  Aşağıdaki örnekte, bir sunucu grubu gelen Web istekleri hizmetidir. İstekleri işleme iş yükünün benzetimini yapmak için, bir koleksiyona bayt dizileri eklenir <xref:System.Collections.Generic.List%601> . Her sunucu bir çöp toplama bildirimine kaydolduktan sonra `WaitForFullGCProc` <xref:System.GCNotificationStatus> , ve yöntemleri tarafından döndürülen numaralandırmayı sürekli olarak izlemek için Kullanıcı yönteminde bir iş parçacığı başlatır <xref:System.GC.WaitForFullGCApproach%2A> <xref:System.GC.WaitForFullGCComplete%2A> .  
   
  <xref:System.GC.WaitForFullGCApproach%2A>Ve yöntemleri, <xref:System.GC.WaitForFullGCComplete%2A> bir bildirim oluşturulduğunda ilgili olay işleme Kullanıcı yöntemlerini çağırır:  
@@ -94,7 +93,7 @@ Ortak dil çalışma zamanı ile tam çöp toplamanın (yani 2. nesil bir koleks
   
  Aşağıdaki kod `OnFullGCApproachNotify` ,  
   
- `WaitForFullGCProc`yöntemidir.  
+ `WaitForFullGCProc` yöntemidir.  
   
  [!code-cpp[GCNotification#5](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#5)]
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
@@ -102,7 +101,7 @@ Ortak dil çalışma zamanı ile tam çöp toplamanın (yani 2. nesil bir koleks
   
  Aşağıdaki kod `OnFullGCApproachComplete` ,  
   
- `WaitForFullGCProc`yöntemidir.  
+ `WaitForFullGCProc` yöntemidir.  
   
  [!code-cpp[GCNotification#6](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#6)]
  [!code-csharp[GCNotification#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#6)]

@@ -3,19 +3,18 @@ title: 'Nasıl yapılır: MetadataLoadContext kullanarak bütünleştirilmiş ko
 description: .NET derlemelerini inceleme amacıyla yüklemeyi sağlayan bir API olan MetadataLoadContext ' i nasıl kullanacağınızı öğrenin.
 author: MSDN-WhiteKnight
 ms.date: 03/10/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 7f90149a98632ea57e8d241a0ccdf4b50264ac5c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7205230986aa852813a651d2fcb7c5ef88ab18fe
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552030"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831357"
 ---
 # <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>Nasıl yapılır: MetadataLoadContext kullanarak bütünleştirilmiş kod içeriklerini Inceleme
 
 .NET ' teki yansıma API 'SI varsayılan olarak, geliştiricilerin ana yürütme bağlamına yüklenen derlemelerin içeriğini incelemesine olanak sağlar. Ancak, bazen bir derlemeyi yürütme bağlamına yüklemek mümkün değildir, örneğin başka bir platform veya işlemci mimarisi için derlenmişse veya bir [başvuru bütünleştirilmiş kodu](reference-assemblies.md). <xref:System.Reflection.MetadataLoadContext?displayProperty=fullName>API, bu derlemeleri yüklemenize ve incelemenize olanak sağlar. İçine yüklenen derlemeler <xref:System.Reflection.MetadataLoadContext> yalnızca meta veri olarak değerlendirilir, diğer bir deyişle, derlemedeki türleri inceleyebilirsiniz, ancak içinde yer alan herhangi bir kodu çalıştıramazsınız. Ana yürütme bağlamından farklı olarak, <xref:System.Reflection.MetadataLoadContext> otomatik olarak geçerli dizinden bağımlılıkları yüklemez; bunun yerine, geçirilen tarafından verilen özel bağlama mantığını kullanır <xref:System.Reflection.MetadataAssemblyResolver> .
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Kullanmak için <xref:System.Reflection.MetadataLoadContext> [System. Reflection. MetadataLoadContext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) NuGet paketini yükler. .NET Standard 2,0 uyumlu hedef çerçevede desteklenir, örneğin .NET Core 2,0 veya .NET Framework 4.6.1.
 

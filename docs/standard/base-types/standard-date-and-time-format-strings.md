@@ -2,7 +2,6 @@
 title: Standart tarih ve saat biçim dizeleri
 description: .NET 'teki bir tarih ve saat değerinin metin temsilini tanımlamak için standart tarih ve saat biçimi dizesi kullanmayı öğrenin.
 ms.date: 11/05/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.custom: contperfq2
-ms.openlocfilehash: dc294322317560344a6e3cdba1dbe2cce4f6a3fd
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: b6917fa8a012a6fe52db1ea2b79397a0484d9d8f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329761"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831331"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart tarih ve saat biçim dizeleri
 
@@ -39,7 +38,7 @@ Standart Tarih ve saat biçimi dizesi, bir veya değerinin metin temsilini tanı
 
 <a name="table"></a> Aşağıdaki tabloda standart tarih ve saat biçimi belirticileri açıklanmaktadır. Aksi belirtilmedikçe, belirli bir standart tarih ve saat biçim belirticisi, bir veya değeriyle kullanılıp kullanılmadığına bakılmaksızın özdeş bir dize temsili üretir <xref:System.DateTime> <xref:System.DateTimeOffset> . Standart Tarih ve saat biçimi dizelerini kullanma hakkında daha fazla bilgi için bkz. [Denetim Masası ayarları](#control-panel-settings) ve [DateTimeFormatInfo özellikleri](#datetimeformatinfo-properties) .
 
-|Biçim belirteci|Description|Örnekler|
+|Biçim belirteci|Açıklama|Örnekler|
 |----------------------|-----------------|--------------|
 |"d"|Kısa Tarih Modeli<br /><br /> Daha fazla bilgi:[kısa tarih ("d") Biçim belirleyicisi](#ShortDate).|2009-06-15T13:45:30-> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30-> 2009/06/15 (ja-JP)|
 |"D"|Uzun tarih deseni.<br /><br /> Daha fazla bilgi:[uzun tarih ("D") Biçim belirleyicisi](#LongDate).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30-> Montag, 15. Juni 2009 (de-DE)|

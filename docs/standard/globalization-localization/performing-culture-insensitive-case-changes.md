@@ -1,7 +1,6 @@
 ---
 title: Kültüre Duyarsız Büyük/Küçük Değişikliklerini Gerçekleştirme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-ms.openlocfilehash: 6baef7b0a5bbdacd33d84df01b1aa943897a9e3d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 777904654eceb0c6b0a7ca0a82cea98dd81b3010
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276822"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829823"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Kültüre Duyarsız Büyük/Küçük Değişikliklerini Gerçekleştirme
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>,, <xref:System.String.ToLower%2A?displayProperty=nameWithType> <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> Ve <xref:System.Char.ToLower%2A?displayProperty=nameWithType> yöntemleri herhangi bir parametreyi kabul etmayan aşırı yüklemeler sağlar. Varsayılan olarak, parametreleri olmayan bu aşırı yüklemeler, değerine göre değişiklik yapar <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> . Bu, kültüre göre değişebilen büyük/küçük harfe duyarlı sonuçlar üretir. Büyük/küçük harf duyarlı ya da kültüre duyarsız olmasını isteyip istemediğinizi net hale getirmek için, açıkça bir parametre belirtmenizi gerektiren bu yöntemlerin aşırı yüklerini kullanmanız gerekir `culture` . Kültüre duyarlı durum değişiklikleri için `CultureInfo.CurrentCulture` parametresi için öğesini belirtin `culture` . Kültüre duyarsız büyük/küçük harf değişiklikleri için `CultureInfo.InvariantCulture` parametresi için öğesini belirtin `culture` .  

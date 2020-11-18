@@ -1,14 +1,13 @@
 ---
 title: XslTransform Çıkışları
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 5fa8c8228382f7f326a8d2243ed0450fca31f6fb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 765f6f9a91cc44a55ab0d66ed71f19f60ef81a56
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288699"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830070"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform Çıkışları
 Stil sayfaları, özniteliği olan bir ifade kullanarak çıkış biçimini belirleyebildiğinden `<xsl:output>` `method` , aşağıdaki tabloda çıktı biçiminin <xref:System.Xml.Xsl.XslTransform.Transform%2A> çıktıyı yazmak için ne zaman kullanıldığı ve çıkış biçiminin de veya olarak bildirildiği açıklanmaktadır <xref:System.IO.Stream> <xref:System.IO.TextWriter> .  

@@ -2,7 +2,6 @@
 title: Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma
 description: .NET 'te şifreleme ve şifre çözme için simetrik ve asimetrik anahtarlar oluşturmayı ve yönetmeyi anlayın.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - asymmetric keys [.NET]
 - cryptography [.NET], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: 7ce19dc465fb1fac22545398e0724e6b76dd7098
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: aa95204a90f2aee684cdd20095d1816e890a0306
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556949"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831084"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma
 Anahtarları oluşturmak ve yönetmek, şifreleme işleminin önemli bir parçasıdır. Simetrik algoritmalar, bir anahtarın ve başlangıç vektörünün (IV) oluşturulmasını gerektirir. Anahtar, verinizin şifresini çözmemesi gereken herkesten gizli tutulmalıdır. IV'nin gizli olması gerekmez ancak her oturum için değiştirilmesi gerekir. Asimetrik algoritmalar bir ortak anahtarın, bir de özel anahtarın oluşturulmasını gerektirir. Ortak anahtar herhangi birine verilebilirken, özel anahtar yalnızca ortak anahtar ile şifrelenen verilerin şifresini çözecek tarafça bilinmelidir. Bu bölümde, hem simetrik, hem de asimetrik algoritmalar için anahtarların nasıl oluşturulacağı ve yönetileceği açıklanmaktadır.  

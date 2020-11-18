@@ -1,17 +1,16 @@
 ---
 title: XML Veri Türlerini Dönüştürme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: d8b60428bc129958355ce5b285662847e9e712c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d7ee7447ab7a8be1bad0d087dba5fc2afaa878e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282421"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830980"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML Veri Türlerini Dönüştürme
 **XmlConvert** sınıfında bulunan yöntemlerin çoğu, dizeleri ve kesin belirlenmiş biçimleri arasında veri dönüştürmek için kullanılır. Yöntemler yerel olarak bağımsızdır. Bu, dönüştürme yaparken herhangi bir yerel ayarı dikkate almaz demektir.  
@@ -52,7 +51,7 @@ Console.WriteLine(vDateTime);
 <TestInt32>-2147483648</TestInt32>  
 ```  
   
- Bu kod, **Int32** 'Yi bir **dizeye**dönüştürür:  
+ Bu kod, **Int32** 'Yi bir **dizeye** dönüştürür:  
   
 ```vb  
 Dim vInt32 As Int32 = -2147483648  

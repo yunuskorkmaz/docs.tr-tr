@@ -2,7 +2,6 @@
 title: Windows sistemlerinde dosya yolu biçimleri
 description: Bu makalede geleneksel DOS yolları, DOS cihaz yolları ve evrensel adlandırma kuralı (UNC) yolları gibi Windows sistemlerinde dosya yolu biçimleri hakkında bilgi edinin.
 ms.date: 06/06/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: e24772ee9c9d22786c9cfece43017f8526434601
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 378fe56bcd54469bc82d762868636daec6eb286e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188061"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831175"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerinde dosya yolu biçimleri
 
@@ -96,7 +95,7 @@ DOS cihaz yolu aşağıdaki bileşenlerden oluşur:
 
    Cihaz yolu belirticisinden sonra DOS cihaz yolunun ilk segmenti birimi veya sürücüyü tanımlar. (Örneğin, `\\?\C:\` ve `\\.\BootPartition\` .)
 
-   Bilinen UNCs 'Ler için belirli bir bağlantı vardır, ancak bu alınmaz `UNC` . Örneğin:
+   Bilinen UNCs 'Ler için belirli bir bağlantı vardır, ancak bu alınmaz `UNC` . Örnek:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`

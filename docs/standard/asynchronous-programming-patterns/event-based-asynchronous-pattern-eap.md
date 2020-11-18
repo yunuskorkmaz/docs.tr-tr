@@ -2,18 +2,17 @@
 title: Olay Tabanlı Zaman Uyumsuz Desen (EAP)
 description: Uygulama, en iyi uygulamalar, EAP istemcisi uygulama ve daha fazlası gibi .NET 'teki olay tabanlı zaman uyumsuz model (EAP) hakkında makalelerin bağlantılarını inceleyin.
 ms.date: 07/23/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous calls
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: 16aabeb55a56c63449a865d00044c463657de740
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c15bb6c9ec6ea737e6f240376e12bf8de3aa61bc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888847"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830408"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Olay Tabanlı Zaman Uyumsuz Desen (EAP)
 

@@ -2,7 +2,6 @@
 title: 'Normal İfade Örneği: HREF Tarama'
 description: .NET 'teki normal ifadeler örneğine bakın. Örnek, bir giriş dizesini arar ve tüm href öznitelik değerlerini ve konumlarını görüntüler.
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: f2f7cca1e357971d2b0be2a0d7ddfb8ae208a44a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6f11825a5d744fd03c08545213bd4d6eaa14dd6d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889406"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830291"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Normal İfade Örneği: HREF Tarama
 Aşağıdaki örnek bir giriş dizesini arar ve tüm href = "..." değerler ve dizedeki konumları.  

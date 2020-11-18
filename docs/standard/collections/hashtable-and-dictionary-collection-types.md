@@ -1,8 +1,7 @@
 ---
 title: Karma Tablo ve Sözlük Koleksiyon Türleri
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
-helpviewer_keywords:
+'\helpviewer_keywords':
 - Hashtable class, grouping data in collections
 - Hashtable collection type
 - hash tables
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - hash function
 - collections [.NET], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: 83bc5e8f3f1a55e2c4d1b9853c4974cfe86218f4
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: bb6d0802526db9b6b5673fe7d13b1f12af7acfcf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889367"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831227"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Karma Tablo ve Sözlük Koleksiyon Türleri
 <xref:System.Collections.Hashtable?displayProperty=nameWithType>Sınıfı ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> Genel sınıfları <xref:System.Collections.IDictionary?displayProperty=nameWithType> arabirimini uygular. <xref:System.Collections.Generic.Dictionary%602>Genel sınıf Ayrıca <xref:System.Collections.Generic.IDictionary%602> genel arabirimini de uygular. Bu nedenle, bu koleksiyonlardaki her öğe bir anahtar ve değer çiftidir.  

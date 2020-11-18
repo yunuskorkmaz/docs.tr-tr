@@ -1,25 +1,24 @@
 ---
 title: "İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma"
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - TPL dataflow library, in Windows Forms
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: 7cd82ffde5fccf938027a6ab6ea15fef226fef6f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c09259afdc5ede32791ba895ca012cdc2a0a1c18
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288439"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829953"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
 Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren bir veri akışı bloğu ağı oluşturma işlemi gösterilir.  
   
  Bu örnek, belirtilen klasörden görüntü dosyalarını yükler, bileşik bir görüntü oluşturur ve sonucu görüntüler. Örnek, görüntüleri ağ üzerinden yönlendirmek için veri akışı modelini kullanır. Veri akışı modelinde, bir programın bağımsız bileşenleri ileti göndererek birbirleriyle iletişim kurar. Bir bileşen bir ileti aldığında, bazı işlemleri gerçekleştirir ve sonucu başka bir bileşene geçirir. Bunu, bir uygulamanın bir programdaki işlem sırasını denetlemek için denetim yapılarını (örneğin, koşullu deyimler, döngüler vb.) kullandığı denetim akışı modeliyle karşılaştırın.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
  Bu yönergeyi başlamadan önce [veri akışını](dataflow-task-parallel-library.md) okuyun.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -47,7 +46,7 @@ Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren b
   
 3. <xref:System.Windows.Forms.ToolStripButton>Denetime denetim ekleyin <xref:System.Windows.Forms.ToolStrip> . <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>Özelliğini olarak ayarlayın <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> ve <xref:System.Windows.Forms.ToolStripItem.Text%2A> **klasörü seçin**.  
   
-4. Denetime ikinci bir <xref:System.Windows.Forms.ToolStripButton> denetim ekleyin <xref:System.Windows.Forms.ToolStrip> . <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>Özelliğini <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> , <xref:System.Windows.Forms.ToolStripItem.Text%2A> **iptal**edilecek özelliği ve özelliğini olarak ayarlayın <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> `False` .  
+4. Denetime ikinci bir <xref:System.Windows.Forms.ToolStripButton> denetim ekleyin <xref:System.Windows.Forms.ToolStrip> . <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>Özelliğini <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> , <xref:System.Windows.Forms.ToolStripItem.Text%2A> **iptal** edilecek özelliği ve özelliğini olarak ayarlayın <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> `False` .  
   
 5. <xref:System.Windows.Forms.PictureBox>Ana forma bir nesne ekleyin. <xref:System.Windows.Forms.Control.Dock%2A>Özelliğini olarak ayarlayın <xref:System.Windows.Forms.DockStyle.Fill> .  
   
@@ -57,7 +56,7 @@ Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren b
   
 ### <a name="to-create-the-dataflow-network"></a>Veri akışı ağını oluşturmak için  
   
-1. Projenize System. Threading. Tasks. Dataflow. dll başvurusunu ekleyin.  
+1. Projenize System.Threading.Tasks.Dataflow.dll bir başvuru ekleyin.  
   
 2. Form1.cs (Visual Basic için Form1. vb) 'in aşağıdaki `using` ( `Using` Visual Basic) deyimlerini içerdiğinden emin olun:  
   
@@ -84,7 +83,7 @@ Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren b
   
  Aşağıdaki tablo, ağın üyelerini açıklar.  
   
-|Üye|Tür|Description|  
+|Üye|Tür|Açıklama|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Bir klasör yolunu girdi olarak alır ve <xref:System.Drawing.Bitmap> çıktı olarak bir nesne koleksiyonu oluşturur.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Bir <xref:System.Drawing.Bitmap> nesne koleksiyonunu girdi olarak alır ve çıkış olarak bileşik bir bit eşlem üretir.|  

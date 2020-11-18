@@ -1,14 +1,13 @@
 ---
 title: XPathNavigator Kullanarak Düğüm Kümesinde Gezinme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-ms.openlocfilehash: 132154afdfd3e5bd6769bfcce338e598136e7515
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf0058f553488e453d0227291110d9edc96638f6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288764"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830135"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>XPathNavigator Kullanarak Düğüm Kümesinde Gezinme
 <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> Sınıfın düğüm kümesi gezinti yöntemlerini kullanarak bir veya nesnesindeki düğümlerin üzerinde gezinebilirsiniz <xref:System.Xml.XPath.XPathNavigator> . Sınıfın seçim yöntemlerinden biri tarafından döndürülen tüm düğümlerin veya seçili düğüm kümesinin üzerinde gezinebilirsiniz <xref:System.Xml.XPath.XPathNavigator> .  
@@ -18,7 +17,7 @@ ms.locfileid: "84288764"
   
  Bir nesnedeki düğümleri seçme hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator> bkz. [XPATHNAVIGATOR kullanarak XML verilerini seçme, değerlendirme ve eşleştirme](selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md). Öznitelik ve ad alanı düğümlerine gitme hakkında daha fazla bilgi için bkz. [XPathNavigator kullanarak öznitelik ve ad alanı düğümü gezintisi](attribute-and-namespace-node-navigation-using-xpathnavigator.md).  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>|' İ <xref:System.Xml.XPath.XPathNavigator> belirtilen konumuna gider <xref:System.Xml.XPath.XPathNavigator> .|  
 |<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>|Öğesini <xref:System.Xml.XPath.XPathNavigator> geçerli düğümün alt düğümüne gider.|  

@@ -2,7 +2,6 @@
 title: Şifreleme Hizmetleri
 description: .NET tarafından desteklenen şifreleme yöntemlerine ve uygulamalarına genel bakış.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography [.NET]
 - pattern of derived class inheritance
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 5558c60768b992984c3800b482961128d3bf5d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281727"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829914"
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 

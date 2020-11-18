@@ -1,7 +1,6 @@
 ---
 title: 'Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Desenin İstemcisini Uygulama'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,17 +17,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-ms.openlocfilehash: 95997f219a08c131905cfc86b78e94c36f3ec851
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 14d515ba84a9437499f4d5a75b1112990df05de6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888821"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830382"
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Desenin İstemcisini Uygulama
 Aşağıdaki kod örneği, [olay tabanlı zaman uyumsuz düzene genel bakış](event-based-asynchronous-pattern-overview.md)'a uygun bir bileşenin nasıl kullanılacağını göstermektedir. Bu örnek için form, `PrimeNumberCalculator` [nasıl yapılır: olay tabanlı zaman uyumsuz kalıbı destekleyen bir bileşeni uygulama](component-that-supports-the-event-based-asynchronous-pattern.md)bölümünde açıklanan bileşeni kullanır.  
   
- Bu örneği kullanan bir projeyi çalıştırdığınızda, kılavuz ve iki düğme içeren bir "ana sayı Hesaplayıcı" formu görürsünüz: **Yeni görev başlatın** ve **iptal edin** . **Yeni görev Başlat** düğmesine art arda birkaç kez tıklayabilirsiniz ve her tıklama için zaman uyumsuz bir işlem, rastgele oluşturulmuş bir test numarasının asal olup olmadığını belirlemekte bir hesaplama başlatır. Form düzenli olarak ilerleme ve artımlı sonuçları görüntüleyecektir. Her işleme benzersiz bir görev KIMLIĞI atanır. Hesaplama sonucu **sonuç** sütununda görüntülenir; sınama numarası ana değilse, bileşik olarak etiketlenir ve ilk **böleni** görüntülenir.  
+ Bu örneği kullanan bir projeyi çalıştırdığınızda, kılavuz ve iki düğme içeren bir "ana sayı Hesaplayıcı" formu görürsünüz: **Yeni görev başlatın** ve **iptal edin**. **Yeni görev Başlat** düğmesine art arda birkaç kez tıklayabilirsiniz ve her tıklama için zaman uyumsuz bir işlem, rastgele oluşturulmuş bir test numarasının asal olup olmadığını belirlemekte bir hesaplama başlatır. Form düzenli olarak ilerleme ve artımlı sonuçları görüntüleyecektir. Her işleme benzersiz bir görev KIMLIĞI atanır. Hesaplama sonucu **sonuç** sütununda görüntülenir; sınama numarası ana değilse, bileşik olarak etiketlenir ve ilk **böleni** görüntülenir.  
   
  Bekleyen tüm işlemler **iptal** düğmesi ile iptal edilebilir. Birden çok seçim yapılabilir.  
   

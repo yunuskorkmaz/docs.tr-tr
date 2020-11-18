@@ -1,7 +1,6 @@
 ---
 title: Yönetilen Yürütme İşlemi
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - source code language
 - code, managed execution process
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: bc455817d29d2427f3051e79145b535e3eeaccbb
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 17494c3b5620ac649aeb3e6ef73085097517d1f5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161107"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830681"
 ---
 # <a name="managed-execution-process"></a>Yönetilen Yürütme İşlemi
 <a name="introduction"></a> Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı olarak ele alınan aşağıdaki adımları içerir:

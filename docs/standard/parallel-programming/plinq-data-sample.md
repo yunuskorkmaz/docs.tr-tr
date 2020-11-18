@@ -1,19 +1,18 @@
 ---
 title: PLINQ Veri Örneği
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 44d3463f23269ceec6372b007ca8ba9684da8c02
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0ecdea3fa56ee2d8902b24006351c6d43e370c97
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291714"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830577"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Veri Örneği
 Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteriler, ürünler, siparişler ve sipariş ayrıntılarına dönüştüren yöntemlerle birlikte içerir. PLıNQ ile daha fazla denemek için, belirli diğer konulardan kod örneklerini bu konudaki koda yapıştırabilir ve `Main` yönteminden çağırabilirsiniz. Bu verileri kendi PLıNQ sorgularınız ile de kullanabilirsiniz.  
@@ -29,7 +28,7 @@ Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteril
   
 2. Bu adımları takip eden kodu kullanarak Module1. vb veya Program.cs içeriğini değiştirin.  
   
-3. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın. **Metin dosyası** ' nı seçin ve ardından **Tamam**' a tıklayın. Bu konudaki verileri kopyalayın ve ardından yeni metin dosyasına yapıştırın. **Dosya** menüsünde, **Kaydet**' e tıklayın, dosyayı plinqdata. csv olarak adlandırın ve ardından kaynak kodu dosyalarınızı içeren klasöre kaydedin.  
+3. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın. **Metin dosyası** ' nı seçin ve ardından **Tamam**' a tıklayın. Bu konudaki verileri kopyalayın ve ardından yeni metin dosyasına yapıştırın. **Dosya** menüsünde, **Kaydet**' e tıklayın, dosyayı Plinqdata.csv olarak adlandırın ve ardından kaynak kodu dosyalarınızı içeren klasöre kaydedin.  
   
 4. Projenin doğru bir şekilde oluşturulup çalıştığını doğrulamak için F5 tuşuna basın. Aşağıdaki çıkışın konsol penceresinde gösterilmesi gerekir.  
   

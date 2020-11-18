@@ -1,7 +1,6 @@
 ---
 title: 'Nasıl yapılır: Donanım Şifreleme Cihazlarına Erişim'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-ms.openlocfilehash: 7cd3aab80a8388c1d4ce08e4ae94aae84cfff239
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: c4f0b77985dea1818729af41b69a4a7d30427415
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557144"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829901"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Nasıl yapılır: Donanım Şifreleme Cihazlarına Erişim
 
@@ -27,7 +26,7 @@ ms.locfileid: "87557144"
 
 <xref:System.Security.Cryptography.CspParameters>Donanım şifreleme cihazlarına erişmek için sınıfını kullanabilirsiniz. Örneğin, uygulamanızı bir akıllı kart, donanım rastgele numara Oluşturucu veya belirli bir şifreleme algoritmasının donanım uygulamasıyla bütünleştirmek için bu sınıfı kullanabilirsiniz.  
 
-<xref:System.Security.Cryptography.CspParameters>Sınıfı, düzgün yüklenmiş bir donanım şifreleme cihazına erişen bir şifreleme hizmeti sağlayıcısı (CSP) oluşturur.  CSP 'nin kullanılabilirliğini, kayıt defteri düzenleyicisini (Regedit.exe) kullanarak aşağıdaki kayıt defteri anahtarını inceleyerek doğrulayabilirsiniz: HKEY_LOCAL_MACHINE \Software\Microsoft\Cryptography\Defaults\Provider.  
+<xref:System.Security.Cryptography.CspParameters>Sınıfı, düzgün yüklenmiş bir donanım şifreleme cihazına erişen bir şifreleme hizmeti sağlayıcısı (CSP) oluşturur.  CSP 'nin kullanılabilirliğini, kayıt defteri Düzenleyicisi (Regedit.exe) kullanarak aşağıdaki kayıt defteri anahtarını inceleyerek doğrulayabilirsiniz: HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
   
 ### <a name="to-sign-data-using-a-key-card"></a>Bir anahtar kartı kullanarak verileri imzalamak için  
   

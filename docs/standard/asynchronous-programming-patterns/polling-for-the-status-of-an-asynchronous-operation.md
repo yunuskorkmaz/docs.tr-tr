@@ -1,7 +1,6 @@
 ---
 title: Zaman Uyumsuz Bir İşlemin Durumu için Yoklama
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - polling asynchronous operation status
 - status information [.NET], asynchronous operations
 ms.assetid: b541af31-dacb-4e20-8847-1b1ff7c35363
-ms.openlocfilehash: c73ee50c67034feed07a4869deb0a32342bb45e5
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c4e8e7c66551e0a240eaa873513c3975703af946
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888743"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830317"
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>Zaman Uyumsuz Bir İşlemin Durumu için Yoklama
 Zaman uyumsuz bir işlemin sonuçlarını beklerken diğer işleri yapabilen uygulamalar, işlem tamamlanana kadar beklemeyi engellemez. Zaman uyumsuz bir işlemin tamamlanmasını beklerken yönergeleri yürütmeye devam etmek için şu seçeneklerden birini kullanın:  

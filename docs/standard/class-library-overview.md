@@ -2,7 +2,6 @@
 title: .NET sınıf kitaplığına genel bakış
 description: .NET sınıf kitaplığı hakkında bilgi edinin. .NET API 'Leri, sistem işlevlerine erişim sağlamak için sınıflar, arabirimler, temsilciler ve değer türlerini içerir.
 ms.date: 02/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - classes [.NET], library overview
 - .NET, library overview
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 95dcbea6e0b3f2cd91bd6955a11ede7c9731caca
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 44a46db4fa7ebf6dd5802cc07e7d18744c72ad68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687520"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831266"
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 
@@ -69,7 +68,7 @@ ms.locfileid: "92687520"
   
  Bu adlandırma şeması, .NET ' i genişleten kitaplık geliştiricilerinin hiyerarşik tür grupları oluşturmasını ve bunları tutarlı, bilgilendirici bir şekilde adlandırmasını kolaylaştırır. Ayrıca, türlerin tam adı (yani ad alanı ve tür adlarıyla) tarafından kesin bir şekilde tanımlanmasına izin verir ve bu da tür adı çakışmalarını önler. Kitaplık geliştiricilerinin ad alanları için ad oluştururken aşağıdaki kuralı kullanması beklenir:  
   
- *CompanyName* . *TechnologyName*  
+ *CompanyName*. *TechnologyName*  
   
  Örneğin, ad alanı `Microsoft.Word` bu kılavuza uyar.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "92687520"
 |Tamsayı|<xref:System.Byte>|8 bit işaretsiz tamsayı.|**Bayt**|**bayt**|**unsigned char**|**bayt**|  
 ||<xref:System.SByte>|8 bit işaretli tamsayı.<br /><br /> CLS uyumlu değildir.|**SByte**|**SByte**|**char**<br /> -veya-<br /> **işaretli** **karakter**|**SByte**|  
 ||<xref:System.Int16>|16 bit işaretli tamsayı.|**Kısadır**|**short**|**short**|**Int16**|  
-||<xref:System.Int32>|32 bitlik işaretli tamsayı.|**Tamsayı**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 bitlik işaretli tamsayı.|**Gir**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64 bitlik işaretli tamsayı.|**Kalacağını**|**long**|**__int64**|**tutulamaz**|  
 ||<xref:System.UInt16>|16 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**UShort**|**ushort**|**imzasız short**|**Int16**|  
 ||<xref:System.UInt32>|32 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**UInteger**|**uint**|**unsigned int**<br /> -veya-<br /> **imzasız long**|**Int32**|  
@@ -110,5 +109,5 @@ ms.locfileid: "92687520"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ortak tür sistemi](base-types/common-type-system.md)
-- [.NET API Browser](../../api/index.md)
+- [.NET API tarayıcısı](../../api/index.md)
 - [Genel Bakış](../framework/get-started/overview.md)

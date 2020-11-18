@@ -1,14 +1,13 @@
 ---
 title: XPath Sorguları ile Tanınan Düğüm Türleri
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-ms.openlocfilehash: b9fc55b11455491406970af2a9232b277160875f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 87f4ed0c8182e250f6926d6c3d82893e6f8b985c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288738"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830109"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>XPath Sorguları ile Tanınan Düğüm Türleri
 Bir XPath sorgusunda tanınan düğümlerin türleri Belge Nesne Modeli (DOM) içinde bulunan aynı düğüm türleri değildir.  

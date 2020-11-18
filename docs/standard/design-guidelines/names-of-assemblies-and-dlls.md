@@ -2,19 +2,18 @@
 title: Bütünleştirilmiş Kod ve DLL Adları
 description: Adlandırma derlemeleri ve dinamik bağlantı kitaplıkları (dll 'Ler) için kılavuz bilgi edinin. Bir derleme bir veya daha fazla dosyaya yayılabilir, ancak genellikle bir DLL ile bire bir eşler.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], DLLs
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: de7ce3ee774d4598521d7156d0d660c3fe30154c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d1484889eb7db537de970c31109f26a6d61ad8d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594484"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830057"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Bütünleştirilmiş Kod ve DLL Adları
 Derleme, yönetilen kod programlarının dağıtım ve kimlik birimidir. Derlemeler bir veya daha fazla dosyaya yayılabilse de, genellikle bir derleme DLL ile bire bir eşler. Bu nedenle, bu bölümde yalnızca DLL adlandırma kuralları açıklanmakta ve bu daha sonra derleme adlandırma kurallarına eşlenebilir.
@@ -33,7 +32,7 @@ Derleme, yönetilen kod programlarının dağıtım ve kimlik birimidir. Derleme
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

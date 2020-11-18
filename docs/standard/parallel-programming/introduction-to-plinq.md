@@ -2,19 +2,18 @@
 title: PLINQ'e Giriş
 description: .NET 'te PLıNQ kullanarak sorguları paralel hale getirme hakkında bilgi edinin. PLıNQ, paralel Language-Integrated sorgusu (LINQ) için temsil eder.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 37414c7963a3803518b41a5c6d262740313e2b37
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 9a6401e8955c51ea72db3ca203365147b00db64f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925356"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830655"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ'e Giriş
 
@@ -42,7 +41,7 @@ Bu makalenin geri kalanı, ana PLıNQ sınıflarına genel bir bakış sağlar v
 
 Standart sorgu işleçlerine ek olarak, <xref:System.Linq.ParallelEnumerable> sınıfı paralel yürütmeye özel davranışları etkinleştiren bir yöntemler kümesi içerir. Bu PLıNQ 'e özgü yöntemler aşağıdaki tabloda listelenmiştir.
 
-|ParallelEnumerable Işleci|Description|
+|ParallelEnumerable Işleci|Açıklama|
 |---------------------------------|-----------------|
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|PLıNQ için giriş noktası. Mümkünse sorgunun geri kalanının paralelleştirilmesine sahip olması gerektiğini belirtir.|
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Sorgunun geri kalanının paralel olmayan bir LINQ sorgusu olarak sırayla çalıştırılması gerektiğini belirtir.|

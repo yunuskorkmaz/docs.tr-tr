@@ -1,7 +1,6 @@
 ---
 title: Zaman Uyumsuz bir İşlemi Sonlandırarak Uygulama Yürütmesini Engelleme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - blocks, asynchronous operations
 - AsyncWaitHandle property
@@ -11,12 +10,12 @@ ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 74976176acc0fbb948c514358b7bd323cc20c134
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 848f3e6e1a421a8edfcd9a5506988bc132d721fe
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289960"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830486"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>Zaman Uyumsuz bir İşlemi Sonlandırarak Uygulama Yürütmesini Engelleme
 Zaman uyumsuz bir işlemin sonuçlarının, işlem tamamlanana kadar durdurulması gerekir. Zaman uyumsuz bir işlemin tamamlanmasını beklerken uygulamanızın ana iş parçacığını engellemek için aşağıdaki seçeneklerden birini kullanın:  

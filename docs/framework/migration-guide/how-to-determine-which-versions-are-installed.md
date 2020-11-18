@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: 79c60c8dbc29d8985f3cfb2ffc2436539155c555
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: fe28a4bf4a5432d6e33b7ad3238c1d7c0d4e7a84
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440151"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831370"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme
 
@@ -60,7 +60,7 @@ Kayıt defterindeki **Release** REG_DWORD değeri, yüklü .NET Framework sürü
 |  .NET Framework 4.7     | Windows 10 Creators Update üzerinde: 460798<br />Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 460805 |
 | .NET Framework 4.7.1   | Windows 10 Fall Creators Update ve Windows Server, sürüm 1709:461308<br/>Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 461310 |
 |  .NET Framework 4.7.2   | Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803:461808<br/>Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803 dışındaki tüm Windows işletim sistemlerinde: 461814 |
-|  .NET Framework 4.8     | Windows 10 Mayıs 2019 güncelleştirmesi ve Windows 10 Kasım 2019 güncelleştirmesi: 528040<br/>Windows 10 Mayıs 2020 güncelleştirmesi: 528372<br/>Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 528049 |
+|  .NET Framework 4.8     | Windows 10 Mayıs 2019 güncelleştirmesi ve Windows 10 Kasım 2019 güncelleştirmesi: 528040<br/>Windows 10 Mayıs 2020 güncelleştirmesi ve Windows 10 Ekim 2020 güncelleştirmesi: 528372<br/>Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 528049 |
 
 ### <a name="minimum-version"></a>En düşük sürüm
 
@@ -81,7 +81,7 @@ Kayıt defterindeki **Release** REG_DWORD değeri, yüklü .NET Framework sürü
 
 ### <a name="use-registry-editor"></a>Kayıt Defteri Düzenleyicisi 'Ni kullan
 
-01. **Başlat** menüsünde, **Çalıştır** ' ı seçin, *Regedit* ' i girin ve **Tamam** ' ı seçin.
+01. **Başlat** menüsünde, **Çalıştır**' ı seçin, *Regedit*' i girin ve **Tamam**' ı seçin.
 
    (Regedit çalıştırmak için yönetici kimlik bilgilerine sahip olmanız gerekir.)
 
@@ -106,7 +106,7 @@ Aşağıdaki örnekler, .NET Framework 4.6.2 veya sonraki bir sürümün yüklen
 01. <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A?displayProperty=nameWithType> <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> Windows kayıt defterindeki **HKEY_LOCAL_MACHINE \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v4 \\ Full** alt anahtarına erişmek için ve yöntemlerini kullanın.
 
     > [!IMPORTANT]
-    > Çalıştırdığınız uygulama 32-bit ise ve 64 bit Windows 'da çalışıyorsa, kayıt defteri yolları daha önce listelenenden farklı olacaktır. 64 bit kayıt defteri **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\** alt anahtarında kullanılabilir. Örneğin, .NET Framework 4,5 için kayıt defteri alt anahtarı **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\ Microsoft \\ net Framework Setup \\ NDP \\ v4 \\ Full** ' dır.
+    > Çalıştırdığınız uygulama 32-bit ise ve 64 bit Windows 'da çalışıyorsa, kayıt defteri yolları daha önce listelenenden farklı olacaktır. 64 bit kayıt defteri **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\** alt anahtarında kullanılabilir. Örneğin, .NET Framework 4,5 için kayıt defteri alt anahtarı **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\ Microsoft \\ net Framework Setup \\ NDP \\ v4 \\ Full**' dır.
 
 01. Yüklü sürümü öğrenmek için **yayın** REG_DWORD değerini denetleyin. İleriye dönük olarak uyumlu olması için [.NET Framework sürüm tablosunda](#version_table)listelenen değerden daha büyük veya ona eşit bir değer olup olmadığını kontrol edin.
 
@@ -145,13 +145,13 @@ Bu örnek sürüm denetimi için önerilen yöntemi izler:
 | 4,0 tam profil   | **HKLM \\ Software \\ Microsoft \\ net Framework Kurulumu \\ NDP \\ v4 \\ dolu**    | **Yüklemesi** REG_DWORD eşittir `1` |
 
 > [!IMPORTANT]
-> Çalıştırdığınız uygulama 32-bit ise ve 64 bit Windows 'da çalışıyorsa, kayıt defteri yolları daha önce listelenenden farklı olacaktır. 64 bit kayıt defteri **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\** alt anahtarında kullanılabilir. Örneğin, .NET Framework 3,5 için kayıt defteri alt anahtarı **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.5** ' dir.
+> Çalıştırdığınız uygulama 32-bit ise ve 64 bit Windows 'da çalışıyorsa, kayıt defteri yolları daha önce listelenenden farklı olacaktır. 64 bit kayıt defteri **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\** alt anahtarında kullanılabilir. Örneğin, .NET Framework 3,5 için kayıt defteri alt anahtarı **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.5**' dir.
 
 .NET Framework 1,0 alt anahtarına yönelik kayıt defteri yolunun diğerlerinden farklı olduğunu unutmayın.
 
 ### <a name="use-registry-editor-older-framework-versions"></a>Kayıt Defteri Düzenleyicisi 'Ni kullan (eski Framework sürümleri)
 
-01. **Başlat** menüsünde, **Çalıştır** ' ı seçin, *Regedit* ' i girin ve **Tamam** ' ı seçin.
+01. **Başlat** menüsünde, **Çalıştır**' ı seçin, *Regedit*' i girin ve **Tamam**' ı seçin.
 
     Regedit 'i çalıştırmak için yönetici kimlik bilgilerine sahip olmanız gerekir.
 
@@ -166,7 +166,7 @@ Bu örnek sürüm denetimi için önerilen yöntemi izler:
 <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType>Windows kayıt defterindeki **HKEY_LOCAL_MACHINE \\ Software \\ Microsoft \\ net Framework Setup \\ NDP** alt anahtarına erişmek için sınıfını kullanın.
 
 > [!IMPORTANT]
-> Çalıştırdığınız uygulama 32-bit ise ve 64 bit Windows 'da çalışıyorsa, kayıt defteri yolları daha önce listelenenden farklı olacaktır. 64 bit kayıt defteri **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\** alt anahtarında kullanılabilir. Örneğin, .NET Framework 3,5 için kayıt defteri alt anahtarı **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.5** ' dir.
+> Çalıştırdığınız uygulama 32-bit ise ve 64 bit Windows 'da çalışıyorsa, kayıt defteri yolları daha önce listelenenden farklı olacaktır. 64 bit kayıt defteri **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\** alt anahtarında kullanılabilir. Örneğin, .NET Framework 3,5 için kayıt defteri alt anahtarı **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.5**' dir.
 
 Aşağıdaki örnek, yüklü .NET Framework 1-4 sürümlerini bulur:
 
@@ -209,7 +209,7 @@ v4.0
 
      Döndürülen `System.Version` nesne, şu anda kodu yürüten çalışma zamanının sürümünü tanımlar. Derleme sürümlerini veya çalışma zamanının bilgisayarda yüklü olabilecek diğer sürümlerini döndürmez.
 
-     .NET Framework sürümleri 4, 4,5, 4.5.1 ve 4.5.2 için, döndürülen nesnenin dize temsili <xref:System.Version> 4.0.30319 biçimindedir. *xxxxx* , *xxxxx* 42000 ' den küçük. .NET Framework 4,6 ve sonraki sürümlerinde, 4.0.30319.42000 biçiminde olur.
+     .NET Framework sürümleri 4, 4,5, 4.5.1 ve 4.5.2 için, döndürülen nesnenin dize temsili <xref:System.Version> 4.0.30319 biçimindedir.*xxxxx*, *xxxxx* 42000 ' den küçük. .NET Framework 4,6 ve sonraki sürümlerinde, 4.0.30319.42000 biçiminde olur.
 
   1. **Sürüm** nesnesine sahip olduktan sonra, aşağıdaki gibi sorgulayın:
 
@@ -217,7 +217,7 @@ v4.0
 
      - Küçük yayın tanımlayıcısı için (örneğin, sürüm 4,0 için *0* ), <xref:System.Version.Minor%2A?displayProperty=nameWithType> özelliğini kullanın.
 
-     - Tüm sürüm dizesi için (örneğin, *4.0.30319.18010* ), <xref:System.Version.ToString%2A?displayProperty=nameWithType> yöntemini kullanın. Bu yöntem, kodu yürüten çalışma zamanının sürümünü yansıtan tek bir değer döndürür. Bu, bilgisayarda yüklü olabilecek derleme sürümlerini veya diğer çalışma zamanı sürümlerini döndürmez.
+     - Tüm sürüm dizesi için (örneğin, *4.0.30319.18010*), <xref:System.Version.ToString%2A?displayProperty=nameWithType> yöntemini kullanın. Bu yöntem, kodu yürüten çalışma zamanının sürümünü yansıtan tek bir değer döndürür. Bu, bilgisayarda yüklü olabilecek derleme sürümlerini veya diğer çalışma zamanı sürümlerini döndürmez.
 
   Aşağıdaki örnek <xref:System.Environment.Version%2A?displayProperty=nameWithType> CLR sürüm bilgilerini almak için özelliğini kullanır:
 

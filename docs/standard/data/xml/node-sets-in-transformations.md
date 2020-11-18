@@ -1,14 +1,13 @@
 ---
 title: Dönüşümlerdeki Düğüm Kümeleri
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-ms.openlocfilehash: 33cbae05cf35904903189ce767090d3d3cca8e4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 72b3af5b471d73cc159dd700ddd29c4ffb5ea639
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288751"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830122"
 ---
 # <a name="node-sets-in-transformations"></a>Dönüşümlerdeki Düğüm Kümeleri
 Düğüm kümeleri, XML yol dili (XPath) ifadelerinden döndürülen dört temel veri türünden biridir. Belge düzeninde oluşturulan ve yinelenen düğümleri olmayan düğümlerin sıralanmamış bir koleksiyonu olan düğüm kümesi, bir stil sayfasında bir değişkene atanabilir.  

@@ -2,19 +2,18 @@
 title: G/ç işlem hatları-.NET
 description: .NET ' te ı/O işlem hatlarını verimli bir şekilde kullanmayı ve kodunuzda sorunlardan kaçınmak hakkında bilgi edinin.
 ms.date: 08/27/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Pipelines
 - Pipelines I/O
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: a24d7f5c22c936cd3fd3fdc51f0f3ace56386574
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 508ae0e2b854f81ee639a63063a8f6d73ae84863
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271990"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830642"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 'teki System. ıO. işlem hatları
 
@@ -211,7 +210,7 @@ Aşağıdaki kod, `PipeReader` her bir üzerinde ve çağrılarındaki tüm ilet
 
 :::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyConnection1.cs" id="snippet":::
 
-### <a name="cancellation"></a>İptal
+### <a name="cancellation"></a>İptal Etme
 
 `PipeReader.ReadAsync`:
 
@@ -239,7 +238,7 @@ Aşağıdaki kod, `PipeReader` her bir üzerinde ve çağrılarındaki tüm ilet
 
 #### <a name="problematic-code"></a>Sorunlu kod
 
-❌**Veri kaybı**
+❌ **Veri kaybı**
 
 , `ReadResult` Olarak ayarlandığında verilerin son segmentini döndürebilir `IsCompleted` `true` . Okuma döngüsünden çıkmadan önce bu verilerin okunmamasından dolayı veri kaybı olur.
 
@@ -325,7 +324,7 @@ Arabelleği okuyan yardımcıları yazarken, çağrılmadan önce döndürülen 
 
 :::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyPipeWriter.cs" id="snippet2":::
 
-### <a name="cancellation"></a>İptal
+### <a name="cancellation"></a>İptal Etme
 
 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> , geçişini destekler <xref:System.Threading.CancellationToken> . Bekleyen bir `CancellationToken` `OperationCanceledException` Temizleme işlemi varken belirteç iptal edilirse bir sonuçları bir ile geçirme. `PipeWriter.FlushAsync` , özel durum oluşturmadan geçerli temizleme işlemini iptal etmenin bir yolunu destekler <xref:System.IO.Pipelines.PipeWriter.CancelPendingFlush%2A?displayProperty=nameWithType> . Çağırma `PipeWriter.CancelPendingFlush` , geçerli veya sonraki çağrıya, `PipeWriter.FlushAsync` veya olarak `PipeWriter.WriteAsync` ayarlanmış olarak dönüşmesine neden olur <xref:System.IO.Pipelines.FlushResult> `IsCanceled` `true` . Bu, bozucu olmayan ve olağanüstü olmayan bir şekilde boşaltmayı Temizleme için yararlı olabilir.
 

@@ -2,7 +2,6 @@
 title: 'Nasıl yapılır: dosyaları sıkıştırma ve ayıklama'
 description: System. ıO. Compression kullanarak dosyaları ayıkla & ayıklayın. ZipFile, ZipArchive, ZipArchiveEntry, DeflateStream & GZipStream kullanan örneklere bakın.
 ms.date: 01/14/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: ea078099aba3161818844d14af221eb582e7f11b
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: a1077c7277e0aa54e3c8883cfc27d93926485b8e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188295"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830863"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Nasıl yapılır: dosyaları sıkıştırma ve ayıklama
 

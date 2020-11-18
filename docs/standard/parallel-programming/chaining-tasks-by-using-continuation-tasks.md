@@ -2,23 +2,22 @@
 title: Devamlılık görevlerini kullanarak görevleri zincirleme
 description: .NET 'teki devamlılık görevlerini kullanarak görev zincirini öğrenin. Devamlılık görevi, başka bir görev tarafından çağrılan zaman uyumsuz bir görevdir.
 ms.date: 07/20/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: c7afbc1bb22a1743aed8e4ebd0a06c4f3fb57e86
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063841"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830616"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>Devamlılık görevlerini kullanarak görevleri zincirleme
 
-Zaman uyumsuz programlamada, tamamlandığında bir zaman uyumsuz işlem, ikinci bir işlemi çağırmak için ortaktır. Devamlılıklar, kendi işlemlerinin ilk işlemin sonuçlarını kullanmasına izin verir. Geleneksel olarak, devamlılıklar geri çağırma yöntemleri kullanılarak yapılır. Görev paralel kitaplığında, aynı işlevler _devamlılık görevleri_tarafından sağlanır. Bir devamlılık görevi (sadece devamlılık olarak da bilinir _), öncül_olarak bilinen başka bir görev tarafından çağrılan zaman uyumsuz bir görevdir.
+Zaman uyumsuz programlamada, tamamlandığında bir zaman uyumsuz işlem, ikinci bir işlemi çağırmak için ortaktır. Devamlılıklar, kendi işlemlerinin ilk işlemin sonuçlarını kullanmasına izin verir. Geleneksel olarak, devamlılıklar geri çağırma yöntemleri kullanılarak yapılır. Görev paralel kitaplığında, aynı işlevler _devamlılık görevleri_ tarafından sağlanır. Bir devamlılık görevi (sadece devamlılık olarak da bilinir _), öncül_ olarak bilinen başka bir görev tarafından çağrılan zaman uyumsuz bir görevdir.
 
 Devamlılıkların kullanımı nispeten kolaydır, ancak bu, güçlü ve esnektir. Örneğin, şunları yapabilirsiniz:
 

@@ -2,7 +2,6 @@
 title: Standart TimeSpan biçim dizeleri
 description: .NET 'teki bir TimeSpan değerinin metin temsilini tanımlamak için tek bir biçim belirticisi kullanan standart TimeSpan Biçim dizelerini gözden geçirin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 99529d480ca32cb8be1e2013ca4551534e10026b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888951"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831318"
 ---
 # <a name="standard-timespan-format-strings"></a>Standart TimeSpan biçim dizeleri
 
@@ -50,7 +49,7 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
 ## <a name="the-constant-c-format-specifier"></a>Sabit ("c") Biçim belirleyicisi  
  "C" biçim belirticisi aşağıdaki biçimde bir değerin dize gösterimini döndürür <xref:System.TimeSpan> :  
   
- [-] [ *d* .] *SS* : *dd* : *SS* [. *fffffff* ]  
+ [-] [*d*.] *SS*:*dd*:*SS*[.*fffffff*]  
   
  Köşeli ayraçlar ([ve]) içindeki öğeler isteğe bağlıdır. Nokta (.) ve iki nokta (:) değişmez simgeler. Aşağıdaki tabloda kalan öğeler açıklanmaktadır.  
   
@@ -76,7 +75,7 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
 ## <a name="the-general-short-g-format-specifier"></a>Genel kısa ("g") Biçim belirleyicisi  
  "G" <xref:System.TimeSpan> biçim belirticisi, <xref:System.TimeSpan> yalnızca gerekli öğeleri ekleyerek bir küçük biçimdeki değerin dize gösterimini döndürür. Aşağıdaki biçimdedir:  
   
- [-] [ *d* :] *h* : *mm* : *SS* [. *FFFFFFF* ]  
+ [-] [*d*:] *h*:*mm*:*SS*[.*FFFFFFF*]  
   
  Köşeli ayraçlar ([ve]) içindeki öğeler isteğe bağlıdır. İki nokta (:) sabit bir simgedir. Aşağıdaki tabloda kalan öğeler açıklanmaktadır.  
   
@@ -100,7 +99,7 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
 ## <a name="the-general-long-g-format-specifier"></a>Genel uzun ("G") Biçim belirleyicisi  
  "G" <xref:System.TimeSpan> biçim belirticisi, bir değerin dize gösterimini, <xref:System.TimeSpan> her zaman hem gün hem de kesirli saniyeleri içeren uzun bir biçimde döndürür. "G" standart biçim belirticisinden elde edilen dize aşağıdaki biçimdedir:  
   
- [-] *d* : *SS* : *dd* : *SS* . *fffffff*  
+ [-] *d*:*SS*:*dd*:*SS*. *fffffff*  
   
  Köşeli ayraçlar ([ve]) içindeki öğeler isteğe bağlıdır. İki nokta (:) sabit bir simgedir. Aşağıdaki tabloda kalan öğeler açıklanmaktadır.  
   
