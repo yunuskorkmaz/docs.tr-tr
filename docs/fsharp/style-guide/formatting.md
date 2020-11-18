@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: 'F # kodunu biçimlendirmeye yönelik yönergeleri öğrenin.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 401c0688cd7d0a945dc469f1ab5841b21e1d4ab4
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359291"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688260"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -29,7 +29,7 @@ Girintileme gerekli olduğunda, sekmeler değil, boşluk kullanmanız gerekir. E
 
 **Girintileme başına dört boşluk önerilir.**
 
-Bu şekilde, programların girintileme öznel bir önemi olur. Çeşitlemeler Tamam, ancak izlemeniz gereken ilk kural *girintileme tutarlılığından*oluşur. Genellikle kabul edilen bir girintileme stili seçin ve kod tabanınızın tamamında sistematik olarak kullanın.
+Bu şekilde, programların girintileme öznel bir önemi olur. Çeşitlemeler Tamam, ancak izlemeniz gereken ilk kural *girintileme tutarlılığından* oluşur. Genellikle kabul edilen bir girintileme stili seçin ve kod tabanınızın tamamında sistematik olarak kullanın.
 
 ## <a name="formatting-white-space"></a>Boşluk biçimlendirme
 
@@ -642,21 +642,17 @@ Bazı durumlarda okunabilirlik konusunda `do...yield` yardımcı olabilir. Bu du
 
 ## <a name="formatting-if-expressions"></a>İfadeleri biçimlendirme
 
-Koşullular girintileme, bunları yapan ifadelerin boyutlarına bağlıdır. `cond`, `e1` Ve kısaysa, `e2` bunları tek bir satıra yazmanız yeterlidir:
+Koşullular girintileme, bunları yapan ifadelerin boyutuna ve karmaşıklığına bağlıdır.
+Bunları bir satıra yazmanız yeterlidir:
+
+- `cond``e1`ve `e2` kısacası
+- `e1` ve `e2` `if/then/else` kendi kendilerine deyimler değildir.
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-Ya da `cond` `e1` `e2` daha uzunsa ve çok satırlı ise:
-
-```fsharp
-if cond
-then e1
-else e2
-```
-
-Deyimlerden herhangi biri çok satırlıdır:
+Deyimlerden herhangi biri çok satırlı veya `if/then/else` deyimlerdir.
 
 ```fsharp
 if cond then
@@ -665,13 +661,26 @@ else
     e2
 ```
 
-Ve ile birden çok `elif` koşul `else` , ile aynı kapsamda girintilenir `if` :
+Ve ile birden çok koşul, `elif` `else` `if` tek satır ifadelerinin kurallarını izlediklerinde ile aynı kapsamda girintilenir `if/then/else` .
 
 ```fsharp
 if cond1 then e1
 elif cond2 then e2
 elif cond3 then e3
 else e4
+```
+
+Koşulların veya ifadelerden herhangi biri çok satırlıdır, tüm `if/then/else` ifade çok satırlı olur:
+
+```fsharp
+if cond1 then
+    e1
+elif cond2 then
+    e2
+elif cond3 then
+    e3
+else
+    e4
 ```
 
 ### <a name="pattern-matching-constructs"></a>Model eşleştirme yapıları
@@ -879,6 +888,41 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
+```
+
+### <a name="formatting-constructors-static-members-and-member-invocations"></a>Biçimlendirme oluşturucuları, statik üyeler ve üye etkinleştirmeleri
+
+İfade kısaysa, bağımsız değişkenleri boşluklarla ayırın ve tek bir satırda saklayın.
+
+```fsharp
+let person = new Person(a1, a2)
+
+let myRegexMatch = Regex.Match(input, regex)
+
+let untypedRes = checker.ParseFile(file, source, opts)
+```
+
+İfade uzunsa, köşeli ayracını girintileme yerine newlines kullanın ve bir kapsamı girintileyin.
+
+```fsharp
+let person =
+    new Person(
+        argument1,
+        argument2
+    )
+
+let myRegexMatch =
+    Regex.Match(
+        "my longer input string with some interesting content in it",
+        "myRegexPattern"
+    )
+
+let untypedRes =
+    checker.ParseFile(
+        fileName,
+        sourceText,
+        parsingOptionsWithDefines
+    )
 ```
 
 ## <a name="formatting-attributes"></a>Biçimlendirme öznitelikleri

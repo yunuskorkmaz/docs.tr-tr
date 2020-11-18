@@ -99,6 +99,8 @@
       href: language-reference/unit-type.md
     - name: Dizeler
       href: language-reference/strings.md
+    - name: Ara değerli dizeler
+      href: language-reference/interpolated-strings.md
     - name: Demetler
       href: language-reference/tuples.md
     - name: F# Koleksiyon Türleri
@@ -248,6 +250,8 @@
       href: language-reference/byrefs.md
     - name: Başvuru Hücreleri
       href: language-reference/reference-cells.md
+    - name: nameof
+      href: language-reference/nameof.md
     - name: Derleyici Yönergeleri
       href: language-reference/compiler-directives.md
     - name: Derleyici Seçenekleri

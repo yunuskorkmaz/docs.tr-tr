@@ -1,13 +1,13 @@
 ---
 title: Desen Eşleştirme
 description: 'Verileri mantıksal yapılara göre karşılaştırmak, verileri yapısal parçalar halinde çıkarmak veya verilerden bilgi ayıklamak için F # içinde desenlerin nasıl kullanıldığını öğrenin.'
-ms.date: 08/15/2020
-ms.openlocfilehash: 6d284b941824bc15a8e872a4e28e22c0e159191d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.date: 11/12/2020
+ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811515"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687811"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 
@@ -47,6 +47,7 @@ Desteklenen desenler aşağıdaki tabloda gösterilmiştir. Çalışma zamanınd
 |Tür ek açıklaması ile birlikte desenler|*model* : *tür*|`a : int`|
 |Test modelini yazın|:? *tür* [as *Identifier* ]|`:? System.DateTime as dt`|
 |Null desenli|null|`null`|
+|NameOf deseninin|*ad ifade*|`nameof str`|
 
 ## <a name="constant-patterns"></a>Sabit desenler
 
@@ -139,7 +140,7 @@ Aşağıdaki örnek, `detectZeroTuple` Bu konunun ilerleyen kısımlarında yer 
 
 ## <a name="cons-pattern"></a>Dezavantajla
 
-Cons stili, bir listeyi ilk öğe, *baş*ve geri kalan öğeleri içeren bir liste, *tail*ve bir liste için bir liste oluşturmak için kullanılır.
+Cons stili, bir listeyi ilk öğe, *baş* ve geri kalan öğeleri içeren bir liste, *tail* ve bir liste için bir liste oluşturmak için kullanılır.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
@@ -214,6 +215,22 @@ Null değer, null değere izin veren türlerle çalışırken görünebilen null
 Aşağıdaki örnek, null ve değişken düzenlerini kullanır.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
+
+## <a name="nameof-pattern"></a>NameOf deseninin
+
+`nameof`Değeri, anahtar sözcüğünü izleyen ifadeye eşitse, bir dizeyle eşleşir `nameof` . Örneğin:
+
+```fsharp
+let f (str: string) =
+    match str with
+    | nameof str -> "It's 'str'!"
+    | _ -> "It is not 'str'!"
+
+f "str" // matches
+f "asdf" // does not match
+```
+
+[`nameof`](nameof.md)Ad alma hakkında bilgi için bkz. işleci.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
