@@ -1,28 +1,27 @@
 ---
 title: Dönüşümlerde XPathNavigator
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-ms.openlocfilehash: 59fb399d80e1d4d33d1a3c659d2ff74a37fd367d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b28a2d4991e2e4b14027460c0f3c97145862da2a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282824"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818381"
 ---
-# <a name="xpathnavigator-in-transformations"></a><span data-ttu-id="b5b4a-102">Dönüşümlerde XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="b5b4a-102">XPathNavigator in Transformations</span></span>
-<span data-ttu-id="b5b4a-103"><xref:System.Xml.XPath.XPathNavigator>Sınıfı, verilere salt okunurdur ve dönüşümler (XSLT) Için Genişletilebilir Stil sayfası dili girişi olarak kullanılmak üzere tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="b5b4a-103">The <xref:System.Xml.XPath.XPathNavigator> class provides read-only random access to data and is designed for use as an input to Extensible Stylesheet Language for Transformations (XSLT).</span></span> <span data-ttu-id="b5b4a-104">, Ve üzerinde uygulanır <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDataDocument> <xref:System.Xml.XmlDocument> .</span><span class="sxs-lookup"><span data-stu-id="b5b4a-104">It is implemented on the <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, and <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="b5b4a-105">, <xref:System.Xml.XPath.XPathNavigator> XML yol dili (XPath) önerisinin 5. bölümünde açıklandığı gibi World Wide Web Konsorsiyumu (W3C) veri modelini temel alır.</span><span class="sxs-lookup"><span data-stu-id="b5b4a-105">The <xref:System.Xml.XPath.XPathNavigator> is based upon the World Wide Web Consortium (W3C) Data Model as described in section 5 of the XML Path Language (XPath) recommendation.</span></span>  
+# <a name="xpathnavigator-in-transformations"></a><span data-ttu-id="73f74-102">Dönüşümlerde XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="73f74-102">XPathNavigator in Transformations</span></span>
+<span data-ttu-id="73f74-103"><xref:System.Xml.XPath.XPathNavigator>Sınıfı, verilere salt okunurdur ve dönüşümler (XSLT) Için Genişletilebilir Stil sayfası dili girişi olarak kullanılmak üzere tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="73f74-103">The <xref:System.Xml.XPath.XPathNavigator> class provides read-only random access to data and is designed for use as an input to Extensible Stylesheet Language for Transformations (XSLT).</span></span> <span data-ttu-id="73f74-104">, Ve üzerinde uygulanır <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDataDocument> <xref:System.Xml.XmlDocument> .</span><span class="sxs-lookup"><span data-stu-id="73f74-104">It is implemented on the <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, and <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="73f74-105">, <xref:System.Xml.XPath.XPathNavigator> XML yol dili (XPath) önerisinin 5. bölümünde açıklandığı gibi World Wide Web Konsorsiyumu (W3C) veri modelini temel alır.</span><span class="sxs-lookup"><span data-stu-id="73f74-105">The <xref:System.Xml.XPath.XPathNavigator> is based upon the World Wide Web Consortium (W3C) Data Model as described in section 5 of the XML Path Language (XPath) recommendation.</span></span>  
   
- <span data-ttu-id="b5b4a-106">, <xref:System.Xml.XPath.XPathNavigator> Herhangi bir mağaza üzerinde bir imleç modeli tanımlar ve tüm veri depolarındaki hızlı, salt okuma XPath sorguları sağlar.</span><span class="sxs-lookup"><span data-stu-id="b5b4a-106">The <xref:System.Xml.XPath.XPathNavigator> defines a cursor model over any store and provides fast, read-only XPath queries over any data store.</span></span> <span data-ttu-id="b5b4a-107"><xref:System.Xml.XPath.XPathNavigator>Ayrıca, sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır.</span><span class="sxs-lookup"><span data-stu-id="b5b4a-107">The <xref:System.Xml.XPath.XPathNavigator> is also the class to use for iterating over result tree fragments.</span></span>  
+ <span data-ttu-id="73f74-106">, <xref:System.Xml.XPath.XPathNavigator> Herhangi bir mağaza üzerinde bir imleç modeli tanımlar ve tüm veri depolarındaki hızlı, salt okuma XPath sorguları sağlar.</span><span class="sxs-lookup"><span data-stu-id="73f74-106">The <xref:System.Xml.XPath.XPathNavigator> defines a cursor model over any store and provides fast, read-only XPath queries over any data store.</span></span> <span data-ttu-id="73f74-107"><xref:System.Xml.XPath.XPathNavigator>Ayrıca, sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır.</span><span class="sxs-lookup"><span data-stu-id="73f74-107">The <xref:System.Xml.XPath.XPathNavigator> is also the class to use for iterating over result tree fragments.</span></span>  
   
- <span data-ttu-id="b5b4a-108">API, depodaki geçerli düğümden bilgi almanızı ve bağlantılı düğümlere taşımanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="b5b4a-108">The API enables you to get information from the current node in the store and move to connected nodes.</span></span> <span data-ttu-id="b5b4a-109">, Bir <xref:System.Xml.XPath.XPathNavigator> **taşıma** yöntemleri kümesi kullanarak bir mağaza üzerinde geçiş yapan bir imleç stil modelidir.</span><span class="sxs-lookup"><span data-stu-id="b5b4a-109">The <xref:System.Xml.XPath.XPathNavigator> is a cursor style model that performs traversal over a store using a set of **Move** methods.</span></span> <span data-ttu-id="b5b4a-110">, <xref:System.Xml.XPath.XPathNavigator> Her zaman bir düğüm üzerinde konumlandırılır.</span><span class="sxs-lookup"><span data-stu-id="b5b4a-110">The <xref:System.Xml.XPath.XPathNavigator> is always positioned on a node.</span></span> <span data-ttu-id="b5b4a-111">Başarısız olan herhangi bir **Move** yöntemi değişmeden bırakılamaz <xref:System.Xml.XPath.XPathNavigator> .</span><span class="sxs-lookup"><span data-stu-id="b5b4a-111">Any **Move** method that fails leaves the <xref:System.Xml.XPath.XPathNavigator> unchanged.</span></span>  
+ <span data-ttu-id="73f74-108">API, depodaki geçerli düğümden bilgi almanızı ve bağlantılı düğümlere taşımanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="73f74-108">The API enables you to get information from the current node in the store and move to connected nodes.</span></span> <span data-ttu-id="73f74-109">, Bir <xref:System.Xml.XPath.XPathNavigator> **taşıma** yöntemleri kümesi kullanarak bir mağaza üzerinde geçiş yapan bir imleç stil modelidir.</span><span class="sxs-lookup"><span data-stu-id="73f74-109">The <xref:System.Xml.XPath.XPathNavigator> is a cursor style model that performs traversal over a store using a set of **Move** methods.</span></span> <span data-ttu-id="73f74-110">, <xref:System.Xml.XPath.XPathNavigator> Her zaman bir düğüm üzerinde konumlandırılır.</span><span class="sxs-lookup"><span data-stu-id="73f74-110">The <xref:System.Xml.XPath.XPathNavigator> is always positioned on a node.</span></span> <span data-ttu-id="73f74-111">Başarısız olan herhangi bir **Move** yöntemi değişmeden bırakılamaz <xref:System.Xml.XPath.XPathNavigator> .</span><span class="sxs-lookup"><span data-stu-id="73f74-111">Any **Move** method that fails leaves the <xref:System.Xml.XPath.XPathNavigator> unchanged.</span></span>  
   
- <span data-ttu-id="b5b4a-112">, <xref:System.Xml.XPath.XPathNavigator> Sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır.</span><span class="sxs-lookup"><span data-stu-id="b5b4a-112">The <xref:System.Xml.XPath.XPathNavigator> is the class to use for iterating over result tree fragments.</span></span> <span data-ttu-id="b5b4a-113">Aşağıdaki kod örneği, bir stil sayfası içinde, XML içeren parametresiyle işlevi çağırarak bir sonuç ağacı parçası oluşturur `fragment` .</span><span class="sxs-lookup"><span data-stu-id="b5b4a-113">The following code sample creates a result tree fragment within a style sheet by calling the function with the parameter, `fragment`, which contains XML.</span></span>  
+ <span data-ttu-id="73f74-112">, <xref:System.Xml.XPath.XPathNavigator> Sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır.</span><span class="sxs-lookup"><span data-stu-id="73f74-112">The <xref:System.Xml.XPath.XPathNavigator> is the class to use for iterating over result tree fragments.</span></span> <span data-ttu-id="73f74-113">Aşağıdaki kod örneği, bir stil sayfası içinde, XML içeren parametresiyle işlevi çağırarak bir sonuç ağacı parçası oluşturur `fragment` .</span><span class="sxs-lookup"><span data-stu-id="73f74-113">The following code sample creates a result tree fragment within a style sheet by calling the function with the parameter, `fragment`, which contains XML.</span></span>  
   
-## <a name="testxsl"></a><span data-ttu-id="b5b4a-114">test. Xsl</span><span class="sxs-lookup"><span data-stu-id="b5b4a-114">test.xsl</span></span>  
+## <a name="testxsl"></a><span data-ttu-id="73f74-114">test. Xsl</span><span class="sxs-lookup"><span data-stu-id="73f74-114">test.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -55,13 +54,13 @@ ms.locfileid: "84282824"
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a><span data-ttu-id="b5b4a-115">test. xml</span><span class="sxs-lookup"><span data-stu-id="b5b4a-115">test.xml</span></span>  
+## <a name="testxml"></a><span data-ttu-id="73f74-115">test.xml</span><span class="sxs-lookup"><span data-stu-id="73f74-115">test.xml</span></span>  
   
 ```xml  
 <root>Some text</root>  
 ```  
   
- <span data-ttu-id="b5b4a-116">Aşağıdaki kod, **test. xsl** stil sayfası ve **test. xml** giriş verilerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="b5b4a-116">The following code uses the **test.xsl** style sheet and **test.xml** input data.</span></span>  
+ <span data-ttu-id="73f74-116">Aşağıdaki kod, **test. xsl** stil sayfasını ve **test.xml** giriş verilerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="73f74-116">The following code uses the **test.xsl** style sheet and **test.xml** input data.</span></span>  
   
 ```vb  
 Imports System  
@@ -107,13 +106,13 @@ public class sample
 }  
 ```  
   
-## <a name="output"></a><span data-ttu-id="b5b4a-117">Çıktı</span><span class="sxs-lookup"><span data-stu-id="b5b4a-117">Output</span></span>  
- <span data-ttu-id="b5b4a-118">Dönüşümün sonucu, **out. xml**dosyasında bulunur:</span><span class="sxs-lookup"><span data-stu-id="b5b4a-118">The result of the transformation is found in the file **out.xml**:</span></span>  
+## <a name="output"></a><span data-ttu-id="73f74-117">Çıkış</span><span class="sxs-lookup"><span data-stu-id="73f74-117">Output</span></span>  
+ <span data-ttu-id="73f74-118">Dönüşümün sonucu dosya **out.xml** bulunur:</span><span class="sxs-lookup"><span data-stu-id="73f74-118">The result of the transformation is found in the file **out.xml**:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b5b4a-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b5b4a-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73f74-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="73f74-119">See also</span></span>
 
-- [<span data-ttu-id="b5b4a-120">XslTransform Sınıfı XSLT İşlemcisini Uygular</span><span class="sxs-lookup"><span data-stu-id="b5b4a-120">XslTransform Class Implements the XSLT Processor</span></span>](xsltransform-class-implements-the-xslt-processor.md)
+- [<span data-ttu-id="73f74-120">XslTransform Sınıfı XSLT İşlemcisini Uygular</span><span class="sxs-lookup"><span data-stu-id="73f74-120">XslTransform Class Implements the XSLT Processor</span></span>](xsltransform-class-implements-the-xslt-processor.md)
