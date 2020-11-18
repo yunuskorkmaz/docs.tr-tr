@@ -1,23 +1,22 @@
 ---
 title: LINQ genel bakış-.NET
-description: Dil ile tümleşik sorgu (LINQ), dil düzeyinde sorgulama özellikleri ve C# ve Visual Basic için daha yüksek sıralı bir işlev API 'SI sağlar. bu sayede, açıklayıcı bildirime dayalı bir kod yazmanıza olanak tanınır.
+description: Language-Integrated Query (LINQ), dil düzeyinde sorgulama özellikleri ve C# ve Visual Basic için daha yüksek sıralı bir işlev API 'SI sağlar. bu sayede, açıklayıcı bildirime dayalı kod yazmanızı sağlar.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ed78082c97511a8dbcc48d413a75a46c9da906a9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555002"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825838"
 ---
 # <a name="linq-overview"></a>LINQ'e genel bakış
 
-Dil ile tümleşik sorgu (LINQ), dil düzeyinde sorgulama özellikleri ve C# ve Visual Basic için [daha yüksek sıralı bir işlev](https://en.wikipedia.org/wiki/Higher-order_function) API 'si sağlar. bu sayede, açıklayıcı bildirime dayalı bir kod yazmanıza olanak tanınır.
+Language-Integrated Query (LINQ), dil düzeyinde sorgulama özellikleri ve C# ve Visual Basic için [daha yüksek sıralı bir işlev](https://en.wikipedia.org/wiki/Higher-order_function) API 'si sağlar. bu sayede, açıklayıcı bildirime dayalı kod yazmanızı sağlar.
 
 ## <a name="language-level-query-syntax"></a>Dil düzeyi sorgu söz dizimi
 
@@ -111,7 +110,7 @@ End Function
 
 Bu görevi yapmak için XML belgesine el ile çapraz geçiş yapmak üzere kod yazma çok daha zor olabilir.
 
-XML ile etkileşim kurmak, LINQ sağlayıcılarıyla yapabileceğiniz tek şey değildir. [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) , bir MSSQL sunucu veritabanı için oldukça basit bir nesne Ilişkisel eşleyicisidir (ORM). [JSON.net](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) KITAPLıĞı, LINQ aracılığıyla verimli JSON belge geçişi sağlar. Ayrıca, gerek duyduğunuz şeyi yapan bir kitaplık yoksa [kendı LINQ sağlayıcınızı de yazabilirsiniz](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!
+XML ile etkileşim kurmak, LINQ sağlayıcılarıyla yapabileceğiniz tek şey değildir. [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) , bir MSSQL sunucu veritabanı için oldukça çıplak kemikler Object-Relational EŞLEYICI (ORM). [JSON.net](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) KITAPLıĞı, LINQ aracılığıyla verimli JSON belge geçişi sağlar. Ayrıca, gerek duyduğunuz şeyi yapan bir kitaplık yoksa [kendı LINQ sağlayıcınızı de yazabilirsiniz](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!
 
 ## <a name="reasons-to-use-the-query-syntax"></a>Sorgu söz dizimini kullanma nedenleri
 

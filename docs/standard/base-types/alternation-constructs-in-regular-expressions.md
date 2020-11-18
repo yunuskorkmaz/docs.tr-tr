@@ -2,7 +2,6 @@
 title: .NET normal Ifadelerinde değişim yapıları
 description: Normal ifadelerde koşullu eşleme için değişim yapılarını nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 30af871502e0db48853705206db5e2b3da28bb76
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 4fb9960ad3c92494cd3aa47516f6ba82ab606ee5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889185"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825305"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Normal İfadelerdeki Değişim Yapıları
 
@@ -49,7 +48,7 @@ Bu karakteri kullanan normal ifade, `|` `\bgr(a|e)y\b` Aşağıdaki tabloda gös
 |<code>(a&#124;e)</code>|Bir "a" veya "e" ile eşleş.|  
 |`y\b`|Bir sözcük sınırında "y" ile eşleşir.|  
 
-`|`Karakter, ya da karakter değişmez değerleri ve normal ifade dili öğelerinin herhangi bir birleşimini içerebilen birden çok karakterle veya alt ifadeyle eşleşme gerçekleştirmek için de kullanılabilir. (Karakter sınıfı bu işlevselliği sağlamaz.) Aşağıdaki örnek, bir `|` ABD sosyal güvenlik numarası (SSK), örneğin *ddd* gg dddd olan 9 basamaklı bir sayı - *dd* - *dddd* veya bir ABD işveren kimlik numarası (EIN) *dd* ayıklamak için kullanır - *ddddddd* .
+`|`Karakter, ya da karakter değişmez değerleri ve normal ifade dili öğelerinin herhangi bir birleşimini içerebilen birden çok karakterle veya alt ifadeyle eşleşme gerçekleştirmek için de kullanılabilir. (Karakter sınıfı bu işlevselliği sağlamaz.) Aşağıdaki örnek, bir `|` ABD sosyal güvenlik numarası (SSK), örneğin *ddd* gg dddd olan 9 basamaklı bir sayı - *dd* - *dddd* veya bir ABD işveren kimlik numarası (EIN) *dd* ayıklamak için kullanır - *ddddddd*.
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -73,7 +72,7 @@ Burada ifadesi eşleşmek üzere Başlangıç *düzensiyse* , *Evet* *ifadesi* e
 
 `(?(?=`*ifade* `)` *Evet* `|` *Hayır*`)`
 
-Burada `(?=` *ifadesi* `)` sıfır genişlikli bir onaylama yapısıdır. (Daha fazla bilgi için bkz. [yapıları gruplandırma](grouping-constructs-in-regular-expressions.md).) Normal ifade altyapısı *ifadeyi* bir tutturucu (sıfır genişlikli bir onaylama) olarak yorumladığı için, *ifadenin* sıfır genişlikli bir onaylama (daha fazla bilgi Için, bkz. [Tutturucular](anchors-in-regular-expressions.md)) veya *Evet* ' de bulunan bir alt ifade olması gerekir. Aksi halde, *Evet* deseninin eşleştirilemez.  
+Burada `(?=` *ifadesi* `)` sıfır genişlikli bir onaylama yapısıdır. (Daha fazla bilgi için bkz. [yapıları gruplandırma](grouping-constructs-in-regular-expressions.md).) Normal ifade altyapısı *ifadeyi* bir tutturucu (sıfır genişlikli bir onaylama) olarak yorumladığı için, *ifadenin* sıfır genişlikli bir onaylama (daha fazla bilgi Için, bkz. [Tutturucular](anchors-in-regular-expressions.md)) veya *Evet*' de bulunan bir alt ifade olması gerekir. Aksi halde, *Evet* deseninin eşleştirilemez.  
   
 > [!NOTE]
 > İfade adlandırılmış veya numaralandırılmış yakalama *grubsiyse* , değişim yapısı yakalama testi olarak yorumlanır; daha fazla bilgi için, [geçerli bir yakalama grubuna göre koşullu eşleme](#Conditional_Group)başlıklı sonraki bölüme bakın. Diğer bir deyişle, normal ifade altyapısı yakalanan alt dizeyle eşleştirmeye çalışmaz, bunun yerine grubun varlığını veya yokluğunu sınar.  

@@ -2,7 +2,6 @@
 title: Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri
 description: .NET ' te yönetilen iş parçacığı en iyi uygulamalarını öğrenin. Birçok iş parçacığını koordine etme veya engelleme iş parçacıklarını işleme gibi zor durumlarla çalışın.
 ms.date: 10/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 88e1f34388cd58fef59bc4005bcaf630c59a661e
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: b2a3f2efc12392316f6d90242ef0a9224e7d13a4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189010"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826319"
 ---
 # <a name="managed-threading-best-practices"></a>Yönetilen iş parçacığı en iyi uygulamaları
 

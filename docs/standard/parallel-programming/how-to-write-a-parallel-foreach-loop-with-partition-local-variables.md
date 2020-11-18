@@ -2,25 +2,24 @@
 title: 'Nasıl yapılır: Bölüm Yerel Değişkenleriyle bir Parallel. ForEach Döngüsü Yazma'
 description: .NET ' te bölüm yerel değişkenleri kullanan bir Parallel. ForEach döngüsünün nasıl yazılacağını gösteren bir örnek görürsünüz.
 ms.date: 06/26/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-ms.openlocfilehash: f598955fb2d6800f81bce050bdf474fc63bfb554
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f8cb7f465d4594c5b9405e8152c6c4a3f3e1ff7b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599782"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825435"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Nasıl yapılır: Bölüm Yerel Değişkenleriyle bir Parallel. ForEach Döngüsü Yazma
 
 Aşağıdaki örnek, <xref:System.Threading.Tasks.Parallel.ForEach%2A> bölüm yerel değişkenleri kullanan bir yöntemin nasıl yazılacağını gösterir. Bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü yürütüldüğünde, kaynak koleksiyonunu birden çok bölüme böler. Her bölümün, Bölüm yerel değişkeninin kendi kopyası vardır. Bölüm yerel değişkeni, birden çok bölümün tek bir iş parçacığında çalıştırılabilmesi dışında, [iş parçacığı yerel değişkenine](xref:System.Threading.ThreadLocal%601)benzer.
 
-Bu örnekteki kod ve parametreler karşılık gelen <xref:System.Threading.Tasks.Parallel.For%2A> yönteme benzer. Daha fazla bilgi için bkz. [nasıl yapılır: Iş parçacığı yerel değişkenleriyle bir Parallel. for döngüsü yazma](how-to-write-a-parallel-for-loop-with-thread-local-variables.md).
+Bu örnekteki kod ve parametreler karşılık gelen <xref:System.Threading.Tasks.Parallel.For%2A> yönteme benzer. Daha fazla bilgi için bkz. [nasıl yapılır: Thread-Local değişkenleriyle Parallel. for döngüsü yazma](how-to-write-a-parallel-for-loop-with-thread-local-variables.md).
 
 Bir döngüde bölüm yerel değişkeni kullanmak için <xref:System.Threading.Tasks.Parallel.ForEach%2A> , iki tür parametresi alan aşırı yüklerden birini çağırmanız gerekir. İlk tür parametresi, `TSource` kaynak öğenin türünü ve ikinci tür parametresini belirtir, `TLocal` bölüm yerel değişkeninin türünü belirtir.
 

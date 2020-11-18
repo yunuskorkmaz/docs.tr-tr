@@ -3,14 +3,13 @@ title: .NET sınıf kitaplıkları
 description: .NET sınıf kitaplıklarının, birden çok uygulama tarafından kullanılabilecek modüller için yararlı işlevler gruplandırılmasına nasıl olanak sağladığını öğrenin.
 author: richlander
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 35e408ed3552550f19879409128784b2513e56c8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: bbf8d5fa44af931e39f2bf1344c13f9d9d9bfe05
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224262"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823959"
 ---
 # <a name="net-class-libraries"></a>.NET sınıf kitaplıkları
 
@@ -42,7 +41,7 @@ Birçok kitaplık geliştiricisi, bir kaynaktan (koşullu derleme yönergeleri k
 
 .NET Standard kitaplıklar, platforma özgü ve taşınabilir kitaplıklar kavramlarının yerini alır. Temel platformdaki tüm işlevleri kullanıma sundukları (yapay platform veya platform kesişimleri olmadan), platforma özgüdür. Tüm destekleyici platformlarda çalıştıkları anlamda taşınabilir.
 
-.NET Standard bir kitaplık _sözleşmeleri_kümesi sunar. .NET uygulamalarının her sözleşmeyi tamamen desteklemesi veya hiç olmaması gerekir. Bu nedenle, her uygulama, bir .NET Standard sözleşmeleri kümesini destekler. Bu, her bir .NET Standard sınıf kitaplığının, anlaşma bağımlılıklarını destekleyen platformlarda desteklenmesine bağlıdır.
+.NET Standard bir kitaplık _sözleşmeleri_ kümesi sunar. .NET uygulamalarının her sözleşmeyi tamamen desteklemesi veya hiç olmaması gerekir. Bu nedenle, her uygulama, bir .NET Standard sözleşmeleri kümesini destekler. Bu, her bir .NET Standard sınıf kitaplığının, anlaşma bağımlılıklarını destekleyen platformlarda desteklenmesine bağlıdır.
 
 .NET Standard, .NET Framework işlevselliğinin tamamını açığa çıkarır (veya bir hedef değildir), ancak taşınabilir sınıf kitaplıklarından birçok API 'yi kullanıma sunırlar. Zamana göre daha fazla API eklenecektir.
 

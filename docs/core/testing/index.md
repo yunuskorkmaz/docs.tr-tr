@@ -4,12 +4,12 @@ description: Bu makalede, .NET 'te test için kavramların, terminolojinin ve ar
 author: IEvangelist
 ms.author: dapine
 ms.date: 10/19/2020
-ms.openlocfilehash: 36e88cc059447a98931593e0535c70cbc92a2cf4
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 137a8f4e3bc9e3be529d5034c233d283cf158b31
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223478"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824863"
 ---
 # <a name="testing-in-net"></a>.NET 'te test etme
 
@@ -43,7 +43,7 @@ Testleri yazmak için [en iyi uygulamaları](unit-testing-best-practices.md) akl
 
 ### <a name="xunit"></a>xUnit
 
-[xUnit](https://xunit.net) , .NET için ücretsiz, açık kaynaklı ve topluluk odaklı birim testi aracıdır. NUnit V2 özgün Inventor tarafından yazılan xUnit.net, birim testi .NET uygulamaları için en son teknolojiden oluşur. xUnit.net, ReSharper, CodeRush, TestDriven.NET ve [Xamarin](/apps/xamarin)ile birlikte kullanılabilir. [.Net Foundation](https://dotnetfoundation.org) 'ın bir projem ve bunların kullanım kuralları altında çalışır.
+[xUnit](https://xunit.net) , .NET için ücretsiz, açık kaynaklı ve topluluk odaklı birim testi aracıdır. NUnit V2 özgün Inventor tarafından yazılan xUnit.net, birim testi .NET uygulamaları için en son teknolojiden oluşur. xUnit.net, ReSharper, CodeRush, TestDriven.NET ve [Xamarin](https://dotnet.microsoft.com/apps/xamarin)ile birlikte kullanılabilir. [.Net Foundation](https://dotnetfoundation.org) 'ın bir projem ve bunların kullanım kuralları altında çalışır.
 
 Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 

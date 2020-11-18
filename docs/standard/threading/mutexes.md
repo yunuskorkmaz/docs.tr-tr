@@ -1,19 +1,18 @@
 ---
 title: Zaman Uyumu Sağlayıcılar
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - wait handles
 - threading [.NET], Mutex class
 - Mutex class, about Mutex class
 - threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: ba31fff03cfffda7cf2a40a3a82b2222e8951035
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 811ee0d2d1068fc1fe8e44aa17f01e2dc243fb98
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188997"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826241"
 ---
 # <a name="mutexes"></a>Zaman Uyumu Sağlayıcılar
 

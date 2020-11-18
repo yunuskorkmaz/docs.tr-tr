@@ -1,26 +1,25 @@
 ---
 title: System. buffers-.NET
 ms.date: 12/05/2019
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - buffers [.NET]
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: afcd6976e6220349fbec370c47b11596a35a81a2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739615"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823530"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET 'teki arabelleklerle çalışma
 
 Bu makalede, birden çok arabelleğe çalışan verileri okumaya yardımcı olan türlere genel bakış sunulmaktadır. Bunlar öncelikle nesneleri desteklemek için kullanılır <xref:System.IO.Pipelines.PipeReader> .
 
-## <a name="ibufferwritert"></a>Ibufferwriter \< T\>
+## <a name="ibufferwritert"></a>Ibufferwriter\<T\>
 
-<xref:System.Buffers.IBufferWriter%601?displayProperty=fullName>, zaman uyumlu arabelleğe alınmış yazma için bir sözleşmedir. En düşük düzeyde, arabirimi:
+<xref:System.Buffers.IBufferWriter%601?displayProperty=fullName> , zaman uyumlu arabelleğe alınmış yazma için bir sözleşmedir. En düşük düzeyde, arabirimi:
 
 - Temel ve kullanılması zor değildir.
 - Veya erişimine izin verir <xref:System.Memory%601> <xref:System.Span%601> . `Memory<T>`Veya `Span<T>` üzerine yazılabilir ve kaç `T` öğe yazıldığını belirleyebilirsiniz.
@@ -37,27 +36,27 @@ Bu yazma yöntemi `Memory<T>` / `Span<T>` , tarafından sağlanmış olan arabel
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet2)]
 
-<xref:System.Buffers.ArrayBufferWriter%601>, `IBufferWriter<T>` yedekleme deposu tek bir bitişik dizi olan uygulamasıdır.
+<xref:System.Buffers.ArrayBufferWriter%601> , `IBufferWriter<T>` yedekleme deposu tek bir bitişik dizi olan uygulamasıdır.
 
 ### <a name="ibufferwriter-common-problems"></a>Ibufferwriter yaygın sorunlar
 
-- `GetSpan`ve `GetMemory` en az istenen bellek miktarına sahip bir arabellek döndürür. Tam arabellek boyutlarını kabul etmeyin.
+- `GetSpan` ve `GetMemory` en az istenen bellek miktarına sahip bir arabellek döndürür. Tam arabellek boyutlarını kabul etmeyin.
 - Art arda yapılan çağrıların aynı arabelleğe veya aynı boyutlu arabelleğe Döneceğinin garantisi yoktur.
 - `Advance`Daha fazla veri yazmaya devam etmek için çağrıldıktan sonra yeni bir arabellek istenmesi gerekir. Daha önce elde edilen bir arabellek çağrıldıktan sonra üzerine yazılamaz `Advance` .
 
-## <a name="readonlysequencet"></a>ReadOnlySequence \< T\>
+## <a name="readonlysequencet"></a>ReadOnlySequence\<T\>
 
 ![Salt okunan belleğin sıra konumunun kanalda ve altında belleği gösteren ReadOnlySequence](media/buffers/ro-sequence.png)
 
-<xref:System.Buffers.ReadOnlySequence%601>, ardışık veya bitişik olmayan dizisini temsil eden bir struct `T` . Oluşturulabilir:
+<xref:System.Buffers.ReadOnlySequence%601> , ardışık veya bitişik olmayan dizisini temsil eden bir struct `T` . Oluşturulabilir:
 
-1. Bir `T[]`
-1. Bir `ReadOnlyMemory<T>`
+1. `T[]`
+1. `ReadOnlyMemory<T>`
 1. <xref:System.Buffers.ReadOnlySequenceSegment%601>Dizinin başlangıç ve bitiş konumunu temsil eden bağlantılı liste düğümü ve Dizin çifti.
 
 Üçüncü Gösterim, üzerinde çeşitli işlemlerde performans etkilerine sahip olduğu için en ilginç bir gösterimidir `ReadOnlySequence<T>` :
 
-|İmle|Çalışma|Karmaşıklık|
+|İmle|İşlem|Karmaşıklık|
 ---|---|---|
 |`T[]`/`ReadOnlyMemory<T>`|`Length`|`O(1)`|
 |`T[]`/`ReadOnlyMemory<T>`|`GetPosition(long)`|`O(1)`|
@@ -85,13 +84,13 @@ Yukarıdaki yöntem, her segmenti belirli bir bayt arar. Her bir parçayı takip
 
 Birleşimi `SequencePosition` ve `TryGet` bir Numaralandırıcı gibi davranır. Konum alanı her bir yinelemenin başlangıcında, içindeki her bir segmentin başlaması için değiştirilir `ReadOnlySequence<T>` .
 
-Önceki yöntem üzerinde bir genişletme yöntemi olarak mevcuttur `ReadOnlySequence<T>` . <xref:System.Buffers.BuffersExtensions.PositionOf%2A>, önceki kodu basitleştirmek için kullanılabilir:
+Önceki yöntem üzerinde bir genişletme yöntemi olarak mevcuttur `ReadOnlySequence<T>` . <xref:System.Buffers.BuffersExtensions.PositionOf%2A> , önceki kodu basitleştirmek için kullanılabilir:
 
 ```csharp
 SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => buffer.PositionOf(data);
 ```
 
-#### <a name="process-a-readonlysequencet"></a>ReadOnlySequence T işleme \<\>
+#### <a name="process-a-readonlysequencet"></a>ReadOnlySequence işleme\<T\>
 
 `ReadOnlySequence<T>`Verilerin dizideki birden çok parçaya bölünmesi gerektiğinden, işleme bir işlem zor olabilir. En iyi performansı elde etmek için kodu iki yola ayırın:
 
@@ -134,11 +133,11 @@ Boş kesimleri bir içinde depolamak için geçerlidir `ReadOnlySequence<T>` . K
 
 Yukarıdaki kod, `ReadOnlySequence<byte>` boş kesimleri olan bir oluşturur ve bu boş segmentlerin çeşitli API 'leri nasıl etkilediğini gösterir:
 
-- `ReadOnlySequence<T>.Slice`boş bir `SequencePosition` kesime işaret eden, bu segmenti korur.
-- `ReadOnlySequence<T>.Slice`bir int ile boş kesimleri atlar.
+- `ReadOnlySequence<T>.Slice` boş bir `SequencePosition` kesime işaret eden, bu segmenti korur.
+- `ReadOnlySequence<T>.Slice` bir int ile boş kesimleri atlar.
 - Numaralandırma, `ReadOnlySequence<T>` boş kesimleri numaralandırır.
 
-### <a name="potential-problems-with-readonlysequencet-and-sequenceposition"></a>ReadOnlySequence \< T> ve SequencePosition ile ilgili olası sorunlar
+### <a name="potential-problems-with-readonlysequencet-and-sequenceposition"></a>ReadOnlySequence ve SequencePosition ile ilgili olası sorunlar \<T>
 
 Bir ile ve normal arasında işlem yaparken birkaç olağandışı sonuç vardır `ReadOnlySequence<T>` / `SequencePosition` `ReadOnlySpan<T>` / `ReadOnlyMemory<T>` / `T[]` / `int` :
 
@@ -148,13 +147,13 @@ Bir ile ve normal arasında işlem yaparken birkaç olağandışı sonuç vardı
 - İkisi `SequencePosition` karşılaştırılamıyor, şunları yapmayı zorlaştırıyor:
   - Bir konumun başka bir konumdan büyük veya küçük olup olmadığını öğrenin.
   - Bazı ayrıştırma algoritmaları yazın.
-- `ReadOnlySequence<T>`, bir nesne başvurusundan daha büyük ve [içinde](../../csharp/language-reference/keywords/in-parameter-modifier.md) ya da mümkün olduğunda [başvuru](../../csharp/language-reference/keywords/ref.md) olarak geçirilmelidir. `ReadOnlySequence<T>` `in` `ref` [Yapının](../../csharp/language-reference/builtin-types/struct.md)kopyalarını geçirerek veya azaltır.
+- `ReadOnlySequence<T>` , bir nesne başvurusundan daha büyük ve [içinde](../../csharp/language-reference/keywords/in-parameter-modifier.md) ya da mümkün olduğunda [başvuru](../../csharp/language-reference/keywords/ref.md) olarak geçirilmelidir. `ReadOnlySequence<T>` `in` `ref` [Yapının](../../csharp/language-reference/builtin-types/struct.md)kopyalarını geçirerek veya azaltır.
 - Boş segmentler:
   - , Bir içinde geçerlidir `ReadOnlySequence<T>` .
   - Yöntemi kullanılarak yinelenirken görünebilirler `ReadOnlySequence<T>.TryGet` .
   - , Metodu nesneleriyle birlikte kullanarak diziyi Dilimleme gibi görünebilir `ReadOnlySequence<T>.Slice()` `SequencePosition` .
 
-## <a name="sequencereadert"></a>SequenceReader \< T\>
+## <a name="sequencereadert"></a>SequenceReader\<T\>
 
 <xref:System.Buffers.SequenceReader%601>:
 
@@ -166,7 +165,7 @@ Hem ikili hem de sınırlandırılmış verilerin işlenmesiyle ilgili yerleşik
 
 ### <a name="access-data"></a>Verilere erişme
 
-`SequenceReader<T>`, doğrudan içindeki verileri numaralandırma yöntemlerine sahiptir `ReadOnlySequence<T>` . Aşağıdaki kod, bir seferde bir işlem işleme örneğidir `ReadOnlySequence<byte>` `byte` :
+`SequenceReader<T>` , doğrudan içindeki verileri numaralandırma yöntemlerine sahiptir `ReadOnlySequence<T>` . Aşağıdaki kod, bir seferde bir işlem işleme örneğidir `ReadOnlySequence<byte>` `byte` :
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet8)]
 
@@ -188,8 +187,8 @@ Aşağıdaki örnek, öğesinin başlangıcından 4 baytlık büyük endian tams
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet10)]
 
-### <a name="sequencereadert-common-problems"></a>SequenceReader \< T \> yaygın sorunlar
+### <a name="sequencereadert-common-problems"></a>SequenceReader \<T\> genel sorunlar
 
 - `SequenceReader<T>`Değişebilir bir yapı olduğundan, her zaman [başvuruya](../../csharp/language-reference/keywords/ref.md)göre geçirilmelidir.
-- `SequenceReader<T>`yalnızca zaman uyumlu metotlarda kullanılabilmesi ve alanlarda depolanabilmesi için [başvuru yapısı](../../csharp/language-reference/builtin-types/struct.md#ref-struct) . Daha fazla bilgi için bkz. [yazma güvenli ve verimli C# kodu](../../csharp/write-safe-efficient-code.md).
-- `SequenceReader<T>`yalnızca ileri bir okuyucu olarak kullanılmak üzere iyileştirilmiştir. `Rewind`, diğer `Read` , ve API 'lerden yararlanarak belirtilemeyilecek küçük yedeklemeler için tasarlanmıştır `Peek` `IsNext` .
+- `SequenceReader<T>` yalnızca zaman uyumlu metotlarda kullanılabilmesi ve alanlarda depolanabilmesi için [başvuru yapısı](../../csharp/language-reference/builtin-types/struct.md#ref-struct) . Daha fazla bilgi için bkz. [yazma güvenli ve verimli C# kodu](../../csharp/write-safe-efficient-code.md).
+- `SequenceReader<T>` yalnızca ileri bir okuyucu olarak kullanılmak üzere iyileştirilmiştir. `Rewind` , diğer `Read` , ve API 'lerden yararlanarak belirtilemeyilecek küçük yedeklemeler için tasarlanmıştır `Peek` `IsNext` .

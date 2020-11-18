@@ -1,17 +1,16 @@
 ---
 title: msxsl:script Kullanan Betik Blokları
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-ms.openlocfilehash: e65308f097e81d844cb04b1ebd5cbcdd8a3aadad
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3cb65142243d1f910ffd0fb85750ba62786d79f0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292000"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824707"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script Kullanan Betik Blokları
 <xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, öğesini kullanarak katıştırılmış betikleri destekler `msxsl:script` . Stil sayfası yüklendiğinde, tanımlanmış tüm işlevler Kod Belge Nesne Modeli (CodeDOM) tarafından Microsoft ara dili (MSIL) ile derlenir ve çalışma zamanında yürütülür. Katıştırılmış betik bloğundan oluşturulan derleme, stil sayfası için oluşturulan derlemeden ayrıdır.  
@@ -31,7 +30,7 @@ ms.locfileid: "84292000"
   
  `msxsl`Ön ek, `urn:schemas-microsoft-com:xslt` ad alanı URI 'sine bağlanır. Stil sayfası, `xmlns:msxsl=urn:schemas-microsoft-com:xslt` ad alanı bildirimini içermelidir.  
   
- `language`Özniteliği isteğe bağlıdır. Değeri, gömülü kod bloğunun kod dilidir. Dil, yöntemi kullanılarak uygun CodeDOM derleyicisi ile eşleştirilir <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A?displayProperty=nameWithType> . <xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, uygun sağlayıcının makinede yüklü olduğunu varsayarak ve Machine. config dosyasının System. CodeDom bölümünde kayıtlı olan tüm Microsoft .net dillerini destekleyebilir. Bir `language` öznitelik belirtilmemişse, dil varsayılan olarak JScript olur. Dil adı büyük/küçük harfe duyarlı değildir, bu nedenle ' JavaScript ' ve ' JavaScript ' eşdeğerdir.  
+ `language`Özniteliği isteğe bağlıdır. Değeri, gömülü kod bloğunun kod dilidir. Dil, yöntemi kullanılarak uygun CodeDOM derleyicisi ile eşleştirilir <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A?displayProperty=nameWithType> . <xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, uygun sağlayıcının makinede yüklü olduğunu varsayarak ve machine.config dosyasının System. CodeDom bölümünde kayıtlı olan tüm Microsoft .net dillerini destekleyebilir. Bir `language` öznitelik belirtilmemişse, dil varsayılan olarak JScript olur. Dil adı büyük/küçük harfe duyarlı değildir, bu nedenle ' JavaScript ' ve ' JavaScript ' eşdeğerdir.  
   
  `implements-prefix`Özniteliği zorunludur. Bu öznitelik, bir ad alanını bildirmek ve betik bloğu ile ilişkilendirmek için kullanılır. Bu özniteliğin değeri, ad alanını temsil eden önekidir. Bu ön ek, bir stil sayfasında bir yerde tanımlanabilir.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "84292000"
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- CLR sayısal türleri öğesine dönüştürülür <xref:System.Double> . <xref:System.DateTime>Tür öğesine dönüştürülür <xref:System.String> . <xref:System.Xml.XPath.IXPathNavigable>türler öğesine dönüştürülür <xref:System.Xml.XPath.XPathNavigator> . **XPathNavigator []** , öğesine dönüştürüldü <xref:System.Xml.XPath.XPathNodeIterator> .  
+ CLR sayısal türleri öğesine dönüştürülür <xref:System.Double> . <xref:System.DateTime>Tür öğesine dönüştürülür <xref:System.String> . <xref:System.Xml.XPath.IXPathNavigable> türler öğesine dönüştürülür <xref:System.Xml.XPath.XPathNavigator> . **XPathNavigator []** , öğesine dönüştürüldü <xref:System.Xml.XPath.XPathNodeIterator> .  
   
  Diğer tüm türler bir hata oluşturur.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "84292000"
   
 - System.Xml.dll  
   
-- Microsoft. VisualBasic. dll (komut dosyası dili VB olduğunda)  
+- Microsoft.VisualBasic.dll (komut dosyası dili VB olduğunda)  
   
  Öğesini kullanarak ek derlemeleri içeri aktarabilirsiniz `msxsl:assembly` . Bu, stil sayfası derlendiğinde derlemeyi içerir. `msxsl:assembly`Öğesi aşağıdaki tanıma sahiptir:  
   
@@ -102,7 +101,7 @@ ms.locfileid: "84292000"
   
 - System.Xml  
   
-- System. xml. Xsl  
+- System.Xml. Xls  
   
 - System.Xml.XPath  
   
@@ -125,13 +124,13 @@ ms.locfileid: "84292000"
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]
  [!code-vb[XSLT_Script#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Script/VB/xslt_script.vb#1)]  
   
-#### <a name="numberxml"></a>Number. xml  
+#### <a name="numberxml"></a>number.xml  
  [!code-xml[XSLT_Script#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/number.xml#2)]  
   
 #### <a name="calcxsl"></a>Calc. Xsl  
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
-### <a name="output"></a>Çıktı  
+### <a name="output"></a>Çıkış  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

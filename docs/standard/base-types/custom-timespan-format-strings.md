@@ -2,7 +2,6 @@
 title: Özel TimeSpan biçim dizeleri
 description: .NET 'teki özel TimeSpan Biçim dizelerini anlayın. Özel biçim dizesi, herhangi bir sayıda sabit karakter & bir veya daha fazla TimeSpan biçim belirticisi içerir.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: b760e7ab7f39d4e4682d5d4c3a6421b9843e1d59
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: e8447e580ac85e1ebbc33f8c8334b7c5cfeb334b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888691"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824369"
 ---
 # <a name="custom-timespan-format-strings"></a>Özel TimeSpan biçim dizeleri
 
@@ -66,7 +65,7 @@ Değerlerin dize temsilleri, <xref:System.TimeSpan> yönteminin aşırı yükler
 |"FFFFF"|Bir zaman aralığı içinde saniyenin yüz binde. Tüm kesirli sondaki sıfırlar dahil edilmez.<br /><br /> Daha fazla bilgi: ["FFFFF" Özel Biçim belirleyicisi](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03,1|
 |"FFFFFF"|Saniyenin bir zaman aralığı içinde milionaltı. Tüm kesirli sondaki sıfırlar gösterilmez.<br /><br /> Daha fazla bilgi: ["FFFFFF" Özel Biçim belirleyicisi](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03,1|
 |"FFFFFFF"|Bir zaman aralığında on milyonlarca bir saniye. Tüm kesirli sondaki sıfırlar veya yedi sıfır gösterilmez.<br /><br /> Daha fazla bilgi: ["fffffff" Özel Biçim belirleyicisi](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03,19|
-|' *String* '|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|'*String*'|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |&#92;|"\" çıkış karakteri.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Başka bir karakter|Atlamayan herhangi bir karakter, Özel Biçim belirleyicisi olarak yorumlanır.<br /><br /> Daha fazla bilgi: [diğer karakterler](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 

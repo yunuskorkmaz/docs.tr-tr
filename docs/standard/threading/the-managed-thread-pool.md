@@ -2,19 +2,18 @@
 title: Yönetilen iş parçacığı havuzu
 description: Arka plan çalışan iş parçacıkları sağlayan .NET iş parçacığı havuzu hakkında bilgi edinin
 ms.date: 08/02/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread pooling [.NET]
 - thread pools [.NET]
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-ms.openlocfilehash: 099670f8451e9e2cf78b372d3a4d393882a30407
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 9bc90acd6d7e1bef81e767ce8c257fed78322554
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188698"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826189"
 ---
 # <a name="the-managed-thread-pool"></a>Yönetilen iş parçacığı havuzu
 

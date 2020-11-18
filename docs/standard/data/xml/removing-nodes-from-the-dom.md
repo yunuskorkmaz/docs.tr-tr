@@ -1,14 +1,13 @@
 ---
 title: DOM’dan Düğümleri Kaldırma
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 0a98e0ca-0555-45c1-ab69-0d8d20ca1abd
-ms.openlocfilehash: 5df95700bb1e84aa5f3adcc752b2314dc964477b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ecda49960f51d807730cb44b966aa2dfcada22d7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288647"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823712"
 ---
 # <a name="removing-nodes-from-the-dom"></a>DOM’dan Düğümleri Kaldırma
 XML Belge Nesne Modeli (DOM) bir düğümü kaldırmak için, <xref:System.Xml.XmlNode.RemoveChild%2A> belirli bir düğümü kaldırmak için yöntemini kullanın. Bir düğümü kaldırdığınızda, yöntemi kaldırılan düğüme ait olan alt ağacı kaldırır; diğer bir deyişle, bir yaprak düğüm değildir.  

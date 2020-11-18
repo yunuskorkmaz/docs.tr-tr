@@ -2,7 +2,6 @@
 title: 'Nasıl yapılır: dosyadan metin okuma'
 description: Bu makalede, masaüstü uygulamaları için .NET 'teki StreamReader sınıfını kullanarak metin dosyasındaki metni zaman uyumlu veya zaman uyumsuz olarak okuma örneklerine bakın.
 ms.date: 01/03/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 0e90887c2cc4a54355c51facf91c9cc3da7e4320
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189335"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823374"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Nasıl yapılır: dosyadan metin okuma
 

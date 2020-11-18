@@ -1,14 +1,13 @@
 ---
 title: Basit Türlerin Çıkarımını Yapma Kuralları
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289076"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823556"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Basit Türlerin Çıkarımını Yapma Kuralları
 <xref:System.Xml.Schema.XmlSchemaInference>Sınıfının öznitelikler ve öğeler için veri türünü nasıl kullandığını açıklar.  
@@ -22,9 +21,9 @@ ms.locfileid: "84289076"
   
  Aşağıdaki tabloda, sonuçta elde edilen şema için olası çıkartılan türler listelenmektedir.  
   
-|Basit tür|Description|  
+|Basit tür|Açıklama|  
 |-----------------|-----------------|  
-|boole|True, false, 0, 1.|  
+|boolean|True, false, 0, 1.|  
 |byte|-128 ile 127 arasında tamsayılar.|  
 |unsignedByte|0 ile 255 arasında tamsayılar.|  
 |short|-32768 ile 32767 arasında tamsayılar.|  
@@ -33,14 +32,14 @@ ms.locfileid: "84289076"
 |unsignedInt|0 ile 4294967295 arasında tamsayılar.|  
 |long|– 9223372036854775808 ile 9223372036854775807 arasında tamsayılar.|  
 |unsignedLong|0 ile 18446744073709551615 aralığındaki tamsayılar.|  
-|integer|"-" Önekli sınırlı sayıda basamak olabilir.|  
+|tamsayı|"-" Önekli sınırlı sayıda basamak olabilir.|  
 |decimal|0 ile 28 basamak arasındaki sayısal değerler.|  
 |float|, İsteğe bağlı olarak "E" veya "e" ve ardından üs değerini temsil eden bir tamsayı değeri gelir. Ondalık değerler-16777216 ile 16777216 arasında olabilir. Üs değerleri – 149 ile 104 arasında olabilir.<br /><br /> Float, özel değerlerin sonsuz ve sayısal olmayan değerleri göstermesini sağlar. Float için özel değerler şunlardır: 0,-0, INF,-INF, NaN.|  
 |double|Ondalık değerler dışında float ile aynı değeri-9007199254740992 9007199254740992 aralığında olabilir ve üs değerleri – 1075-970 aralığında olabilir.<br /><br /> Double, özel değerlerin sonsuz ve sayısal olmayan değerleri göstermesini sağlar. Float için özel değerler şunlardır: 0,-0, INF,-INF, NaN.|  
 |süre|W3C süre biçimi.|  
 |tarih saat|W3C dateTime biçimi.|  
 |time|W3C saat biçimi.|  
-|date|Yıl değerleri 0001 ile 9999 arasında kısıtlanmıştır.|  
+|tarih|Yıl değerleri 0001 ile 9999 arasında kısıtlanmıştır.|  
 |Gyearayı|W3C Gregoryen ay ve yıl biçimi.|  
 |string|Bir veya daha fazla Unicode karakteri.|  
   
@@ -67,7 +66,7 @@ ms.locfileid: "84289076"
 
 Şema, şema çıkarımı sırasında yoksayılan öznitelikleri tanımlar.  
   
-|Öznitelik|Description|  
+|Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`xsi:type`|Belirtilen bir öğeyle karşılaşılırsa, yok `xsi:type` `xsi:type` sayılır.|  
 |`xsi:nil`|Özniteliği olan bir öğe ile `xsi:nil` karşılaşılırsa, çıkarılan şemadaki öğe bildiriminin değeri olur `nillable="true"` . `xsi:nil`Özniteliği olarak ayarlanmış bir öğenin `true` alt öğeleri olamaz.|  

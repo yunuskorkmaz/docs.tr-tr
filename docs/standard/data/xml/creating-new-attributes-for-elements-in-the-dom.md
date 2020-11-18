@@ -1,17 +1,16 @@
 ---
 title: DOM Öğeleri için Yeni Öznitelikler Oluşturma
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-ms.openlocfilehash: 79a3390933256ed862d35c90db0aab2177cdfc41
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1cb37e47bedf955ea2c6f9faad628df2175fb703
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711018"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826033"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM Öğeleri için Yeni Öznitelikler Oluşturma
 
@@ -110,11 +109,11 @@ doc.DocumentElement.SetAttributeNode(attr);
 </book>
 ```
 
-Tam kod örneği adresinde <xref:System.Xml.XmlDocument.CreateAttribute%2A>bulunabilir.
+Tam kod örneği adresinde bulunabilir <xref:System.Xml.XmlDocument.CreateAttribute%2A> .
 
-Ayrıca, bir **XmlAttribute** düğümü oluşturabilir ve bunu koleksiyondaki uygun konuma yerleştirmek Için **InsertBefore** veya **InsertAfter** yöntemlerini kullanabilirsiniz. Öznitelik koleksiyonunda aynı ada sahip bir öznitelik zaten varsa, var olan **XmlAttribute** düğümü koleksiyondan kaldırılır ve yeni **XmlAttribute** düğümü eklenir. Bu, **SetAttribute** yöntemiyle aynı şekilde çalışır. Bu yöntemler, var olan bir düğümü bir parametre olarak, **InsertBefore** ve **InsertAfter**yapmak için başvuru noktası olarak alır. Yeni düğümün nereye yerleştirileceğini belirten bir başvuru düğümü sağlamazsanız, **InsertAfter** yöntemi için varsayılan değer, koleksiyonun başlangıcına yeni düğüm eklemek olur. Hiçbir başvuru düğümü sağlanmazsa, **InsertBefore**varsayılan konumu koleksiyonun sonunda olur.
+Ayrıca, bir **XmlAttribute** düğümü oluşturabilir ve bunu koleksiyondaki uygun konuma yerleştirmek Için **InsertBefore** veya **InsertAfter** yöntemlerini kullanabilirsiniz. Öznitelik koleksiyonunda aynı ada sahip bir öznitelik zaten varsa, var olan **XmlAttribute** düğümü koleksiyondan kaldırılır ve yeni **XmlAttribute** düğümü eklenir. Bu, **SetAttribute** yöntemiyle aynı şekilde çalışır. Bu yöntemler, var olan bir düğümü bir parametre olarak, **InsertBefore** ve **InsertAfter** yapmak için başvuru noktası olarak alır. Yeni düğümün nereye yerleştirileceğini belirten bir başvuru düğümü sağlamazsanız, **InsertAfter** yöntemi için varsayılan değer, koleksiyonun başlangıcına yeni düğüm eklemek olur. Hiçbir başvuru düğümü sağlanmazsa, **InsertBefore** varsayılan konumu koleksiyonun sonunda olur.
 
-Öznitelikleri için <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> bir **XmlNamedNodeMap** oluşturduysanız, yöntemini kullanarak bir özniteliği ada göre ekleyebilirsiniz. Daha fazla bilgi için bkz. [NamedNodeMaps ve NodeLists Içindeki düğüm koleksiyonları](node-collections-in-namednodemaps-and-nodelists.md).
+Öznitelikleri için bir **XmlNamedNodeMap** oluşturduysanız, yöntemini kullanarak bir özniteliği ada göre ekleyebilirsiniz <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> . Daha fazla bilgi için bkz. [NamedNodeMaps ve NodeLists Içindeki düğüm koleksiyonları](node-collections-in-namednodemaps-and-nodelists.md).
 
 ## <a name="default-attributes"></a>Varsayılan öznitelikler
 

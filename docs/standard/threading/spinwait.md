@@ -1,19 +1,18 @@
 ---
 title: SpinWait
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-ms.openlocfilehash: fb70697fd14f9f8734ca1a7896fc06c6bca5a71d
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 2031ebc30d0789181786053d401e69da782a619f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188932"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826215"
 ---
 # <a name="spinwait"></a>SpinWait
 

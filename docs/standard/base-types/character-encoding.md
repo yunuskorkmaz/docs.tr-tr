@@ -2,7 +2,6 @@
 title: .NET 'te karakter kodlama sınıfları kullanma
 description: .NET 'te karakter kodlama sınıflarını nasıl kullanacağınızı öğrenin.
 ms.date: 12/22/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: c626e79e7bbcd71c90775df8ee8c4d6570c29125
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 520316c0733d5c56b5ab77fbec7d4dd838af6338
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290584"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823296"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>.NET 'te karakter kodlama sınıfları kullanma
 
@@ -43,7 +42,7 @@ Kodlama ve kod çözme aynı zamanda doğrulamayı da içerebilir. Örneğin, s�
 
 Yöntemini çağırarak .NET 'te bulunan tüm Kodlamalar hakkında bilgi alabilirsiniz <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> . .NET, aşağıdaki tabloda listelenen karakter kodlama düzenlerini destekler.
 
-|Kodlama sınıfı|Description|
+|Kodlama sınıfı|Açıklama|
 |--------------|-----------|
 |[ASCII](xref:System.Text.ASCIIEncoding)|Bir baytın alt yedi bitini kullanarak sınırlı bir karakter aralığını kodlar. Bu kodlama yalnızca U+0000 ile U+007F arasındaki karakter değerlerini desteklediğinden, çoğu zaman uluslararası uygulamalar için yeterli değildir.|
 |[UTF-7](xref:System.Text.UTF7Encoding)|Karakterleri 7-bitlik ASCII karakter dizileri olarak temsil eder. ASCII olmayan Unicode karakterleri, ASCII karakterlerinin bir kaçış dizisi ile temsil edilir. UTF-7, e-posta ve haber grubu gibi protokolleri destekler. Ancak, UTF-7 özellikle güvenli veya sağlam değildir. Bazı durumlarda bir biti değiştirmek, bütün bir UTF-7 dizesinin yorumunu tamamen değiştirebilir. Diğer durumlarda, farklı UTF-7 dizeleri aynı metni kodlayabilir. ASCII olmayan karakterleri içeren diziler için UTF-7, UTF-8'den daha fazla alan gerektirir ve kodlama/kod çözme daha yavaştır. Sonuç olarak, mümkünse UTF-7 yerine UTF-8 kullanmanız gerekir.|
@@ -135,7 +134,7 @@ Bir karakter hedef kodlamada tam bir eşleşmeye sahip olmadığında, kodlayıc
 En uygun stratejiler farklı kod sayfaları için farklılık gösterir. Örneğin, bazı kod sayfalarında tam genişlikteki Latin karakterler, daha yaygın olan yarım genişlikteki Latin karakterlerle eşlenir. Diğer kod sayfaları için bu eşleme yapılmaz. Agresif bir en uygun stratejide bile, bazı kodlamalardaki bazı karakterler için mümkün olan hiçbir uygun karakter yoktur. Örneğin, bir Çince ideogramın kod sayfası 1252 için hiçbir mantıklı eşlemesi yoktur. Bu durumda, bir değiştirme dizesi kullanılır. Varsayılan olarak bu dize, yalnızca tek bir SORU İŞARETİ (U+003F) karakteridir.
 
 > [!NOTE]
-> En uygun stratejiler ayrıntılı olarak açıklanmamıştır. Ancak, birkaç kod sayfası [Unicode konsorsiyumun](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) Web sitesinde belgelenmiştir. Eşleme dosyalarının nasıl yorumlanacağı hakkında bir açıklama için lütfen bu klasördeki **README. txt** dosyasını gözden geçirin.
+> En uygun stratejiler ayrıntılı olarak açıklanmamıştır. Ancak, birkaç kod sayfası [Unicode konsorsiyumun](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) Web sitesinde belgelenmiştir. Eşleme dosyalarının nasıl yorumlanacağı hakkında bir açıklama için lütfen söz konusu klasördeki **readme.txt** dosyasını gözden geçirin.
 
 Aşağıdaki örnek, kod sayfası 1252'yi (Batı Avrupa dilleri için Windows kod sayfası) kullanarak en uygun eşlemeyi ve bunun dezavantajlarını gösterir. Kod sayfası 1252 için bir kodlama nesnesi almak üzere <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> yöntemi kullanılır. Varsayılan olarak, desteklemediği Unicode karakterleri için bir en uygun eşleme kullanır. Örnek; boşluklarla ayrılan, ASCII olmayan üç karakteri içeren bir dizeyi örnekler - DAİRELİ LATIN BÜYÜK HARF S (U+24C8), ÜST SİMGE BEŞ (U+2075) ve SONSUZLUK (U+221E). Örneğin çıktısının gösterdiği üzere, dize kodlandığında boşluk olmayan üç orijinal karakter, SORU İŞARETİ (U+003F), BEŞ BASAMAĞI (U+0035) ve SEKİZ BASAMAĞI (U+0038) ile değiştirilir. Özellikle SEKİZ BASAMAĞI, desteklenmeyen SONSUZLUK karakteri için kötü bir değiştirmedir ve SORU İŞARETİ, orijinal karakter için kullanılabilir bir eşleme bulunmadığını gösterir.
 

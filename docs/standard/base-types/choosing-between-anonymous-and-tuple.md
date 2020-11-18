@@ -4,13 +4,12 @@ description: Anonim türler ve demet türü arasında seçim yapmak için uygun 
 author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 9c186133a639faf187c89d872856d860a20f5a2d
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: f8465b2f22ecfafd739355ddd35635e2eee49232
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174224"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823205"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Anonim ve demet türleri arasında seçim yapma
 
@@ -18,7 +17,7 @@ Uygun türü seçmek, diğer türlere kıyasla kullanılabilirlik, performans ve
 
 ## <a name="usability-and-functionality"></a>Kullanılabilirlik ve işlevsellik
 
-Anonim türler, dil ile tümleşik sorgu (LINQ) ifadeleriyle C# 3,0 ' de tanıtılmıştır. LINQ ile, geliştiriciler genellikle sorguları üzerinde çalıştıkları nesnelerden birkaç Select özelliği tutan anonim türlere göre proje sonuçları. Aşağıdaki örneği bir nesne dizisi örnekleyen <xref:System.DateTime> ve iki özelliği olan anonim bir türde bir şekilde taşıyan bir değer ile yineleyen bir değer düşünün.
+Anonim türler Language-Integrated Query (LINQ) ifadelerine C# 3,0 ' de tanıtılmıştır. LINQ ile, geliştiriciler genellikle sorguları üzerinde çalıştıkları nesnelerden birkaç Select özelliği tutan anonim türlere göre proje sonuçları. Aşağıdaki örneği bir nesne dizisi örnekleyen <xref:System.DateTime> ve iki özelliği olan anonim bir türde bir şekilde taşıyan bir değer ile yineleyen bir değer düşünün.
 
 ```csharp-interactive
 var dates = new[]

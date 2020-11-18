@@ -1,18 +1,17 @@
 ---
 title: XML Şemalarını Çapraz Geçirme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-ms.openlocfilehash: 0951e83c3035de751801d194696eb64993260ef8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6371d7e16af45eebf09f95bce2864be3bf44321e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289843"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824681"
 ---
 # <a name="traversing-xml-schemas"></a>XML Şemalarını Çapraz Geçirme
 
@@ -28,11 +27,11 @@ Sınıfının aşağıdaki özellikleri, <xref:System.Xml.Schema.XmlSchema> XML 
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|
 |<xref:System.Xml.Schema.XmlSchema.AttributeGroups%2A>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|
 |<xref:System.Xml.Schema.XmlSchema.Groups%2A>|<xref:System.Xml.Schema.XmlSchemaGroup>|
-|<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude> , <xref:System.Xml.Schema.XmlSchemaImport> veya<xref:System.Xml.Schema.XmlSchemaRedefine>|
-|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject>(tüm genel düzey öğeler, öznitelikler ve türlere erişim sağlar).|
+|<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude> , <xref:System.Xml.Schema.XmlSchemaImport> veya <xref:System.Xml.Schema.XmlSchemaRedefine>|
+|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (tüm genel düzey öğeler, öznitelikler ve türlere erişim sağlar).|
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|
 |<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|
-|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute>(şema ad alanına ait olmayan özniteliklere erişim sağlar)|
+|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (şema ad alanına ait olmayan özniteliklere erişim sağlar)|
 
 > [!NOTE]
 > Özelliği hariç, yukarıdaki tabloda listelenen tüm özellikler, <xref:System.Xml.Schema.XmlSchema.Items%2A> şema derlenene kadar kullanılamayan, şema-derleme-bilgi kümesi (PSCı) özelliklerdir. <xref:System.Xml.Schema.XmlSchema.Items%2A>Özelliği, şemanın erişim için derlenmesinden önce kullanılabilen ve tüm genel düzey öğeleri, öznitelikleri ve türleri düzenlemek için kullanılabilecek bir ön şema derleme özelliğidir.

@@ -1,17 +1,16 @@
 ---
 title: Şema Derleme için XmlSchemaSet
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 44850755c41b212e88e0b90dd3b016f96a0af96d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5916511187741c703cb39a5c168e542e124ab26b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290233"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825929"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>Şema Derleme için XmlSchemaSet
 <xref:System.Xml.Schema.XmlSchemaSet>XML şeması tanım dili (xsd) şemaları depolanabilecek ve doğrulanabilen bir önbellek tanımlar.  
@@ -21,7 +20,7 @@ ms.locfileid: "84290233"
   
  <xref:System.Xml?displayProperty=nameWithType>Sürüm 1,0 ' de, XML şemaları bir <xref:System.Xml.Schema.XmlSchemaCollection> sınıfa bir şema kitaplığı olarak yüklenmiştir. <xref:System.Xml?displayProperty=nameWithType>Sürüm 2,0 ' de, <xref:System.Xml.XmlValidatingReader> ve <xref:System.Xml.Schema.XmlSchemaCollection> sınıfları kullanılmıyor ve <xref:System.Xml.XmlReader.Create%2A> sırasıyla Yöntemler ve sınıf ile değiştirilmiştir <xref:System.Xml.Schema.XmlSchemaSet> .  
   
- , <xref:System.Xml.Schema.XmlSchemaSet> Standart uyumluluk, performans ve kullanılmayan MICROSOFT XML verileri azaltılmış (xdr) şema biçimi gibi birçok sorunu gidermeye yönelik olarak sunulmuştur.  
+ , <xref:System.Xml.Schema.XmlSchemaSet> Standart uyumluluk, performans ve kullanılmayan Microsoft XML-Data azaltılmış (xdr) şema biçimi gibi birçok sorunu gidermeye yönelik olarak sunulmuştur.  
   
  Aşağıda, sınıfı ve sınıfı arasında bir karşılaştırma bulunur <xref:System.Xml.Schema.XmlSchemaCollection> <xref:System.Xml.Schema.XmlSchemaSet> .  
   

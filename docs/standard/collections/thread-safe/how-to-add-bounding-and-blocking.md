@@ -1,16 +1,15 @@
 ---
 title: 'Nasıl yapılır: Koleksiyona Sınırlama ve Engelleme İşlevi Ekleme'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, custom blocking collections
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
-ms.openlocfilehash: 57a01726e897f4ddbf8df5ede53609c198012d80
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 52ba264c5a0fc9cfffb00ee30b50f6b89dc1e660
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287880"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825045"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Nasıl yapılır: Koleksiyona Sınırlama ve Engelleme İşlevi Ekleme
 Bu örnek <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> , sınıfında arabirimini uygulayarak ve sonra bir sınıf örneğini bir için iç depolama mekanizması olarak kullanarak özel bir koleksiyon sınıfına nasıl sınırlama ve engelleme işlevselliği ekleneceğini gösterir <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> . Sınırlama ve engelleme hakkında daha fazla bilgi için bkz. [BlockingCollection genel bakış](blockingcollection-overview.md).  

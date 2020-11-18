@@ -1,14 +1,13 @@
 ---
 title: XPathNavigator Kullanarak XML Verilerini Düzenleme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
-ms.openlocfilehash: 11395c52e399068e5242a1e041ebd9ed94bc2881
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 812e8dbd0fce70459e9dd38c8b3889e1c1a88074
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292078"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826020"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verilerini Düzenleme
 <xref:System.Xml.XPath.XPathNavigator>Sınıfı, bir nesnede bulunan BIR XML belgesinden düğüm ve değer ekleme, değiştirme ve kaldırma yöntemleri sağlar <xref:System.Xml.XmlDocument> . Düğüm ve değerleri eklemek, değiştirmek ve kaldırmak için bu yöntemlerden herhangi birini kullanmak üzere, <xref:System.Xml.XPath.XPathNavigator> nesne düzenlenebilir olmalıdır, yani <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği doğru olmalıdır.  

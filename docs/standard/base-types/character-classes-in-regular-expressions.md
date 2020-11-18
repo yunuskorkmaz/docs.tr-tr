@@ -2,7 +2,6 @@
 title: .NET normal Ifadelerinde karakter sınıfları
 description: .NET normal ifadelerinde bir karakter kümesini temsil etmek için karakter sınıflarını nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 619a32d98d697b3b1d461921bfe581acb720be68
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 69cece42c5d7c92eb1af5e31f4fd83f5384b1d8e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888730"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823322"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal ifadelerde karakter sınıfları
 

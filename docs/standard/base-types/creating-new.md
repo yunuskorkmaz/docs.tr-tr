@@ -2,7 +2,6 @@
 title: .NET ' te yeni dizeler oluşturma
 description: Birkaç dizeyi, dize dizilerini veya .NET içindeki nesneleri birleştiren atama, sınıf oluşturucuları veya System. String yöntemlerini kullanarak dizeler oluşturmayı öğrenin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - strings [.NET], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: 7dedaf61f56f19343299c841bb4cee70fb9c767a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a00274b7b6b7e7a54d8546f2176109688a4c4678
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889445"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824889"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET ' te yeni dizeler oluşturma
 

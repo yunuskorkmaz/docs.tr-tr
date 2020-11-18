@@ -1,7 +1,6 @@
 ---
 title: 'Nasıl yapılır: Veri Akışı Bloğunu İptal Etme'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: 530c231deeaba007975849ab6dc41f4da6a859ea
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3dbe0675b73f902a7da0fb4f7881c1ee15022b36
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285553"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825864"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğunu İptal Etme
 Bu belgede, uygulamanızda iptalin nasıl etkinleştirileceği gösterilmektedir. Bu örnek, iş öğelerinin bir veri akışı ardışık düzeninde etkin olduğunu ve ayrıca İptalin etkilerini göstermek için Windows Forms kullanır.  
@@ -28,9 +27,9 @@ Bu belgede, uygulamanızda iptalin nasıl etkinleştirileceği gösterilmektedir
   
 2. Ana form için form tasarımcısında, Form1.cs (Visual Basic için Form1. vb), bir <xref:System.Windows.Forms.ToolStrip> denetim ekleyin.  
   
-3. <xref:System.Windows.Forms.ToolStripButton>Denetime denetim ekleyin <xref:System.Windows.Forms.ToolStrip> . <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> <xref:System.Windows.Forms.ToolStripItem.Text%2A> **Çalışma öğeleri eklemek**için özelliğini ve özelliğini ayarlayın.  
+3. <xref:System.Windows.Forms.ToolStripButton>Denetime denetim ekleyin <xref:System.Windows.Forms.ToolStrip> . <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> <xref:System.Windows.Forms.ToolStripItem.Text%2A> **Çalışma öğeleri eklemek** için özelliğini ve özelliğini ayarlayın.  
   
-4. Denetime ikinci bir <xref:System.Windows.Forms.ToolStripButton> denetim ekleyin <xref:System.Windows.Forms.ToolStrip> . <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>Özelliğini <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> , <xref:System.Windows.Forms.ToolStripItem.Text%2A> **iptal**edilecek özelliği ve özelliğini olarak ayarlayın <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> `False` .  
+4. Denetime ikinci bir <xref:System.Windows.Forms.ToolStripButton> denetim ekleyin <xref:System.Windows.Forms.ToolStrip> . <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>Özelliğini <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> , <xref:System.Windows.Forms.ToolStripItem.Text%2A> **iptal** edilecek özelliği ve özelliğini olarak ayarlayın <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> `False` .  
   
 5. Denetime dört <xref:System.Windows.Forms.ToolStripProgressBar> nesne ekleyin <xref:System.Windows.Forms.ToolStrip> .  
   
@@ -39,7 +38,7 @@ Bu belgede, uygulamanızda iptalin nasıl etkinleştirileceği gösterilmektedir
   
 ### <a name="to-create-the-dataflow-pipeline"></a>Veri akışı ardışık düzeni oluşturmak için  
   
-1. Projenizde, System. Threading. Tasks. Dataflow. dll ' ye bir başvuru ekleyin.  
+1. Projenizde System.Threading.Tasks.Dataflow.dll bir başvuru ekleyin.  
   
 2. Form1.cs (Visual Basic için Form1. vb) 'in aşağıdaki deyimlerini (Visual Basic) içerdiğinden emin olun `using` `Imports` .  
   

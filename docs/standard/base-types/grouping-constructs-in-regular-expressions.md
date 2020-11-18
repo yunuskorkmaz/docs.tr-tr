@@ -2,7 +2,6 @@
 title: Normal İfadelerdeki Gruplandırma Yapıları
 description: .NET ' te gruplandırma yapılarını kullanmayı öğrenin. Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve bir giriş dizesinin alt dizelerini yakalar.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: de424b4a022a5e2d2f8a9c12b4147383082f019b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 52f7efdf5591901602811cba8f2b6c1a4f42f96c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888514"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823010"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve bir giriş dizesinin alt dizelerini yakalar. Aşağıdakileri yapmak için gruplandırma yapılarını kullanabilirsiniz:  
@@ -62,7 +61,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Yakalanan gruplara dört şekilde erişebilirsiniz:  
   
-- Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, söz dizimi numarası kullanılarak aynı normal ifadede başvurulur `\` *number* , burada *sayı* yakalanan alt ifadenin sıra numarasıdır.  
+- Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, söz dizimi numarası kullanılarak aynı normal ifadede başvurulur `\` *number*, burada *sayı* yakalanan alt ifadenin sıra numarasıdır.  
   
 - Normal ifade içinde adlandırılmış yeniden başvuru yapısını kullanarak. Eşleşen alt ifadeye, sözdizimi adı kullanılarak aynı normal ifadede başvurulur `\k<` *name* `>` ; burada *ad* bir yakalama grubunun adı veya `\k<` *sayı* `>` , burada *sayı* bir yakalama grubunun sıra numarasıdır. Yakalama grubu, sıra numarasıyla aynı olan varsayılan bir ada sahiptir. Daha fazla bilgi için bu konunun ilerleyen kısımlarında bulunan [eşleşen alt ifadeler](#named_matched_subexpression) bölümüne bakın.  
   
@@ -107,7 +106,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
 - Normal ifade içinde adlandırılmış yeniden başvuru yapısını kullanarak. Eşleşen alt ifadeye, sözdizimi adı kullanılarak aynı normal ifadede başvurulur `\k<` *name* `>` ; burada *ad* , yakalanan alt ifadenin adıdır.  
   
-- Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, söz dizimi numarası kullanılarak aynı normal ifadede başvurulur `\` *number* , burada *sayı* yakalanan alt ifadenin sıra numarasıdır. Adlandırılmış eşleşen alt ifadeler, eşleşen alt ifadelerden sonra soldan sağa doğru numaralandırılır.  
+- Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, söz dizimi numarası kullanılarak aynı normal ifadede başvurulur `\` *number*, burada *sayı* yakalanan alt ifadenin sıra numarasıdır. Adlandırılmış eşleşen alt ifadeler, eşleşen alt ifadelerden sonra soldan sağa doğru numaralandırılır.  
   
 - `${` *name* `}` Bir veya yöntem çağrısında ad değiştirme sırasını kullanarak <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , *adı* yakalanan alt ifadenin adıdır.  
   

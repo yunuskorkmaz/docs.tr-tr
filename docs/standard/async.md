@@ -1,48 +1,47 @@
 ---
-title: Async Genel Bakış
-description: Async programlamanın, engelleme G/Ç ve birden çok çekirdekteki eşzamanlı işlemleri işlemeyi kolaylaştıran önemli bir teknik olduğunu öğrenin.
+title: Zaman uyumsuz genel bakış
+description: Zaman uyumsuz programlamanın, birden çok çekirdekte g/ç ve eş zamanlı işlemleri engellemeyi doğrudan işlemesini sağlayan bir anahtar tekniği olduğunu öğrenin.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 495f225a3732812666dfa2f5c8c07f6f5b849c95
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159734"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824811"
 ---
-# <a name="async-overview"></a>Async Genel Bakış
+# <a name="async-overview"></a>Zaman uyumsuz genel bakış
 
-O kadar uzun zaman önce, uygulamalar sadece yeni bir PC veya sunucu satın alarak daha hızlı var ve daha sonra bu eğilim durdu. Aslında, tersine döndü. Cep telefonları 1ghz tek çekirdekli ARM yongaları ve sunucu iş yükleri VMs geçişli ile ortaya çıktı. Kullanıcılar hala duyarlı Kullanıcı Bira ve işletme sahipleri kendi iş ile ölçeksunucular istiyorum istiyorum. Mobil ve buluta geçiş ve >3B kullanıcılarının internete bağlı nüfusu yeni bir yazılım kalıpları kümesiile sonuçlandı.
+Bu kadar uzun bir süre önce, uygulamalar daha yeni bir BILGISAYAR veya sunucu satın alarak daha hızlı bir şekilde daha hızlı bir şekilde daha hızlı Aslında tersine çevrilir. Cep telefonları, 1 GHz tek çekirdekli ARM yongalarını ve sunucu iş yüklerini VM 'lere geçti. Kullanıcılar hala yanıt veren kullanıcı arabirimi ve işletme sahiplerinin işletmeyle ölçeklendirebilmesini istiyor. Mobil ve buluta geçiş ve >3B kullanıcıların Internet 'e bağlı bir popülasyonu, yeni bir yazılım desenleri kümesiyle sonuçlanmıştır.
 
-- İstemci uygulamalarının her zaman açık, her zaman bağlı ve yüksek uygulama mağazası derecelendirmeleriyle kullanıcı etkileşimine (örneğin dokunma) sürekli yanıt vermesini bekler!
-- Hizmetlerin, incelikle yukarı ve aşağı ölçeklendirerek trafikteki ani artışlarla başa çıkaması bekleniyor.
+- İstemci uygulamalarının her zaman açık, her zaman bağlı ve sürekli olarak kullanıcı etkileşimine (örneğin, Touch) yüksek uygulama mağazası derecelendirmelerine sahip olması beklenir!
+- Hizmetin, trafiği yukarı ve aşağı doğru şekilde ölçeklendirerek, trafikte ani artışları işlemesi beklenir.
 
-Async programlama, engelleme G/Ç ve birden çok çekirdek teki eşzamanlı işlemleri işlemeyi kolaylaştıran önemli bir tekniktir. .NET, C#, Visual Basic ve F#'da kullanımı kolay, dil düzeyinde asynchronous programlama modelleri ile uygulamaların ve hizmetlerin duyarlı ve esnek olması için gereken yeteneği sağlar.
+Zaman uyumsuz programlama, birden çok çekirdekte g/ç ve eş zamanlı işlemleri engellemeyi doğrudan işlemesini sağlayan temel bir tekniktir. .NET, uygulama ve hizmetlerin C#, Visual Basic ve F # ' ta kullanımı kolay, dil düzeyi zaman uyumsuz programlama modelleriyle yanıt verme ve elastik olmasını sağlar.
 
-## <a name="why-write-async-code"></a>Neden Async Kodu Yaz?
+## <a name="why-write-async-code"></a>Zaman uyumsuz kod neden yazılır?
 
-Modern uygulamalar dosya ve ağ G/Ç'yi kapsamlı bir şekilde kullanır. G/Ç API'leri varsayılan olarak engellenir ve zorlu desenleri öğrenmek ve kullanmak istemediğiniz sürece kötü kullanıcı deneyimleri ve donanım kullanımı yla sonuçlanır. Görev tabanlı async API'leri ve dil düzeyindeki asynchronous programlama modeli bu modeli tersine çevirerek, async yürütmeyi öğrenmek için birkaç yeni kavramla varsayılan hale getirir.
+Modern uygulamalar, dosya ve ağ g/ç 'nin kapsamlı bir şekilde kullanılmasını kolaylaştırır. G/ç API 'Leri geleneksel olarak varsayılan olarak engellenerek, zorlu desenler öğrenmek ve kullanmak istemediğiniz müddetçe kötü kullanıcı deneyimleri ve donanım kullanımı ile sonuçlanır. Görev tabanlı zaman uyumsuz API 'Ler ve dil düzeyi zaman uyumsuz programlama modeli, bu modeli tersine çevirir ve daha fazla yeni kavram ile varsayılan olarak zaman uyumsuz yürütmeyi yapar.
 
-Async kodu aşağıdaki özelliklere sahiptir:
+Zaman uyumsuz kod aşağıdaki özelliklere sahiptir:
 
-- G/Ç isteklerinin geri dönmesini beklerken daha fazla isteği işlemek için iş parçacıkları vererek daha fazla sunucu isteklerini işler.
-- G/Ç isteklerini beklerken ve uzun süren çalışmaları diğer CPU çekirdeklerine geçirerek Kullanıcı Araları'nın Kullanıcı Arabirimi etkileşimine iş parçacığı vererek daha duyarlı olmasını sağlar.
-- Yeni .NET API'lerinin çoğu eşzamanlıdır.
-- .NET'te async kodu yazmak kolaydır!
+- G/ç isteklerinin dönmesi beklenirken daha fazla isteği işlemek için iş parçacıkları sunarak daha fazla sunucu isteği işler.
+- G/ç isteklerini beklerken ve uzun süre çalışan işleri diğer CPU çekirdeğlerine geçirerek Uıto 'ın Kullanıcı arabirimi etkileşimine yanıt vermesini sağlar.
+- Daha yeni .NET API 'Lerinin birçoğu zaman uyumsuzdur.
+- .NET ' te zaman uyumsuz kod yazmak kolaydır!
 
 ## <a name="whats-next"></a>Sırada ne var?
 
-Daha fazla bilgi [için, derinlemesine konu yla Ilgili Async konusuna](async-in-depth.md) bakın.
+Daha fazla bilgi için bkz. [zaman uyumsuz ayrıntılı](async-in-depth.md) konuları.
 
-[Asynchronous Programlama Desenleri](asynchronous-programming-patterns/index.md) konusu ,NET'te desteklenen üç eşzamanlı programlama deleline genel bir bakış sağlar:  
+[Zaman uyumsuz programlama desenleri](asynchronous-programming-patterns/index.md) konusu, .net 'te desteklenen üç zaman uyumsuz programlama desenlerine genel bakış sağlar:  
   
-- [Eşzamanlı Programlama Modeli (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (eski)  
+- [Zaman uyumsuz programlama modeli (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (eski)  
   
-- [Olay tabanlı Eşzamanlı Desen (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (eski)  
+- [Olay tabanlı zaman uyumsuz model (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (eski)  
   
-- [Görev tabanlı Eşzamanlı Desen (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (yeni geliştirme için önerilir)  
+- [Görev tabanlı zaman uyumsuz model (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (yeni geliştirme için önerilir)  
 
-Önerilen görev tabanlı programlama modeli hakkında daha fazla bilgi için [Görev tabanlı asynchronous programlama](parallel-programming/task-based-asynchronous-programming.md) konusuna bakın.
+Önerilen görev tabanlı programlama modeli hakkında daha fazla bilgi için [görev tabanlı zaman uyumsuz programlama](parallel-programming/task-based-asynchronous-programming.md) konusuna bakın.

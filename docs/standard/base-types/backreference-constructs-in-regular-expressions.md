@@ -2,7 +2,6 @@
 title: .NET normal Ifadelerinde geri başvuru yapıları
 description: Normal bir ifadede yeniden başvuru yapılarını kullanarak yinelenen metin öğelerini nasıl tanımlayacağınızı öğrenin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - .NET regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: bc0c6d3dcaa084c168a9c3fc0239116ec8899aae
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 79702f266e7233c96fef6b6aa32a7e756589f49c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889159"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825266"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Normal İfadelerdeki Yeniden Başvuru Yapıları
 
@@ -32,7 +31,7 @@ Geri başvurular, bir dize içinde yinelenen bir karakter veya alt dizenin tanı
 
 Numaralandırılmış geri başvuru, aşağıdaki sözdizimini kullanır:
 
-`\` *sayı*
+`\`*sayı*
 
 Burada *sayı* , normal ifadede yakalama grubunun sıralı konumudur. Örneğin, `\4` dördüncü yakalama grubunun içeriğiyle eşleşir. *Sayı* normal ifade modelinde tanımlanmamışsa, bir ayrıştırma hatası oluşur ve normal ifade altyapısı bir oluşturur <xref:System.ArgumentException> . Örneğin, `\b(\w+)\s\1` `(\w+)` ifadedeki ilk ve tek yakalama grubu olduğundan, normal ifade geçerli olur. Öte yandan, `\b(\w+)\s\2` geçersizdir ve numaralandırılmış bir yakalama grubu bulunmadığından bir bağımsız değişken özel durumu oluşturur `\2` . Ayrıca, *sayı* belirli bir sıra konumunda bir yakalama grubu tanımlarsa, ancak bu yakalama grubuna sıra konumundan farklı bir sayısal ad atanmışsa, normal ifade ayrıştırıcısı da bir oluşturur <xref:System.ArgumentException> .
 

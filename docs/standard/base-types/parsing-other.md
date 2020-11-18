@@ -1,7 +1,6 @@
 ---
 title: .NET 'teki diğer dizeleri ayrıştırma
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-ms.openlocfilehash: 5a8afde40dddd69a9648439be5c0f232db23b37b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 791ee37ff5f679d47492fc3cfdb61530bf570a36
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889016"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823998"
 ---
 # <a name="parsing-other-strings-in-net"></a>.NET 'teki diğer dizeleri ayrıştırma
 Sayısal ve dizelere ek olarak,, <xref:System.DateTime> ve türlerini temsil eden dizeleri de ayrıştırabilirsiniz <xref:System.Char> <xref:System.Boolean> <xref:System.Enum> .  

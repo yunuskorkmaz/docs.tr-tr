@@ -1,7 +1,6 @@
 ---
 title: Akışları oluştur
 ms.date: 01/21/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: 93295c1d70f510ef563abc3a191d6690b1174fa8
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: c50a372ee3434fcd7f72ad707ca82c5c9ad8a5c8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188581"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823387"
 ---
 # <a name="compose-streams"></a>Akışları oluştur
 *Yedekleme deposu* , disk veya bellek gibi bir depolama ortamıdır. Her farklı yedekleme deposu, sınıfının bir uygulama olarak kendi akışını uygular <xref:System.IO.Stream> .
@@ -33,13 +32,13 @@ Aşağıdaki kod örnekleri, *MyFile.txt* arabelleğe almak için mevcut *MyFile
 >Örnekler, *MyFile.txt* adlı bir dosyanın uygulamayla aynı klasörde zaten bulunduğunu varsayar.  
 
 ## <a name="example-use-streamreader"></a>Örnek: StreamReader kullanın
-Aşağıdaki örnek, bir <xref:System.IO.StreamReader> ' ın Oluşturucu bağımsız değişkeni olarak **StreamReader** 'A geçirilmiş olan **FILESTREAM** 'ten okuma karakterleri oluşturur. <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType> ardından, <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> daha fazla karakter bulana kadar okur.  
+Aşağıdaki örnek, bir <xref:System.IO.StreamReader> ' ın Oluşturucu bağımsız değişkeni olarak **StreamReader** 'A geçirilmiş olan **FILESTREAM**'ten okuma karakterleri oluşturur. <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType> ardından, <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> daha fazla karakter bulana kadar okur.  
   
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
 ## <a name="example-use-binaryreader"></a>Örnek: BinaryReader kullanın
-Aşağıdaki örnek, <xref:System.IO.BinaryReader> Oluşturucu bağımsız değişkeni olarak **BinaryReader** 'A geçirilmiş olan **FILESTREAM** 'ten baytları okumak için bir, oluşturur. <xref:System.IO.BinaryReader.ReadByte%2A> ardından, <xref:System.IO.BinaryReader.PeekChar%2A> daha fazla bayt bulana kadar okur.  
+Aşağıdaki örnek, <xref:System.IO.BinaryReader> Oluşturucu bağımsız değişkeni olarak **BinaryReader** 'A geçirilmiş olan **FILESTREAM**'ten baytları okumak için bir, oluşturur. <xref:System.IO.BinaryReader.ReadByte%2A> ardından, <xref:System.IO.BinaryReader.PeekChar%2A> daha fazla bayt bulana kadar okur.  
   
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]
  [!code-vb[System.IO.StreamReader#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source3.vb#21)]  

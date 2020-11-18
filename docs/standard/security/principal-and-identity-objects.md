@@ -2,7 +2,6 @@
 title: Asıl ve Kimlik Nesneleri
 description: .NET 'teki kullanıcıları temsil eden Identity Objects hakkında bilgi edinin. Ayrıca, bir rolün & bir kimlik nesnesini kapsülleyen Principal nesneleri hakkında bilgi edinin.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - WindowsIdentity objects
 - GenericIdentity objects
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - security [.NET], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: 79caeed6ed64a07238e398af1e12f51640b88b62
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: cfda506fc29e9a86e97b3c99faf2d4155c894f03
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555260"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824245"
 ---
 # <a name="principal-and-identity-objects"></a>Asıl ve Kimlik Nesneleri
 
@@ -41,7 +40,7 @@ Principal nesnesi, kodun çalıştığı güvenlik bağlamını temsil eder. Rol
   
 <xref:System.Security.Principal.IPrincipal>Arabirim, ilişkili bir **kimlik** nesnesine erişmek için bir özellik ve **asıl** nesne tarafından tanımlanan kullanıcının belirli bir rolün üyesi olup olmadığını belirlemek için bir yöntem tanımlar. Tüm **asıl** sınıflar, gereken ek özellikleri ve yöntemleri de, **IPrincipal** arabirimini ve uygular. Örneğin, ortak dil çalışma zamanı, Windows NT veya Windows 2000 Grup üyeliğini rollere eşlemek için ek işlevsellik uygulayan **WindowsPrincipal** sınıfını sağlar.  
   
-Bir **Principal** nesnesi, <xref:System.Runtime.Remoting.Messaging.CallContext> bir uygulama etki alanı () içindeki bir çağrı bağlamı () nesnesine bağlanır <xref:System.AppDomain> . Her yeni **AppDomain**ile her zaman bir varsayılan çağrı bağlamı oluşturulur, bu nedenle **asıl** nesneyi kabul etmek için her zaman bir çağrı bağlamı bulunur. Yeni bir iş parçacığı oluşturulduğunda iş parçacığı için bir **CallContext** nesnesi de oluşturulur. **Asıl** nesne başvurusu, oluşturma iş parçacığından yeni Iş parçacığının **CallContext**'e otomatik olarak kopyalanır. Çalışma zamanı hangi **asıl** nesnenin iş parçacığı oluşturucusuna ait olduğunu Belirleyeleyemiyorsa, **asıl** ve **kimlik** nesnesi oluşturma için varsayılan ilkeyi izler.  
+Bir **Principal** nesnesi, <xref:System.Runtime.Remoting.Messaging.CallContext> bir uygulama etki alanı () içindeki bir çağrı bağlamı () nesnesine bağlanır <xref:System.AppDomain> . Her yeni **AppDomain** ile her zaman bir varsayılan çağrı bağlamı oluşturulur, bu nedenle **asıl** nesneyi kabul etmek için her zaman bir çağrı bağlamı bulunur. Yeni bir iş parçacığı oluşturulduğunda iş parçacığı için bir **CallContext** nesnesi de oluşturulur. **Asıl** nesne başvurusu, oluşturma iş parçacığından yeni Iş parçacığının **CallContext**'e otomatik olarak kopyalanır. Çalışma zamanı hangi **asıl** nesnenin iş parçacığı oluşturucusuna ait olduğunu Belirleyeleyemiyorsa, **asıl** ve **kimlik** nesnesi oluşturma için varsayılan ilkeyi izler.  
   
 Yapılandırılabilir bir uygulama etki alanına özgü ilke, yeni bir uygulama etki alanıyla hangi tür **asıl** nesnenin ilişkilendirileceğine karar verme kurallarını tanımlar. Güvenlik ilkesinin izin verdiği durumlarda çalışma zamanı, yürütmenin geçerli iş parçacığıyla ilişkili işletim sistemi belirtecini yansıtan **asıl** ve **kimlik** nesneleri oluşturabilir. Varsayılan olarak, çalışma zamanı kimliği doğrulanmamış kullanıcıları temsil eden **asıl** ve **kimlik** nesnelerini kullanır. Çalışma zamanı, kod onlara erişmeye çalışana kadar bu varsayılan **sorumlusu** ve **kimlik** nesnelerini oluşturmaz.  
   
@@ -55,6 +54,6 @@ Bir uygulama etki alanı oluşturan güvenilir kod, varsayılan **asıl** ve **k
 - [Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma](how-to-create-genericprincipal-and-genericidentity-objects.md)
 - [Asıl Nesneyi Değiştirme](replacing-a-principal-object.md)
 - [Kimliğe Bürünme ve Geri Alma](impersonating-and-reverting.md)
-- [Rol Tabanlı Güvenlik](role-based-security.md)
+- [Rol tabanlı güvenlik](role-based-security.md)
 - [Temel Güvenlik Kavramları](key-security-concepts.md)
 - [ASP.NET Core güvenliği](/aspnet/core/security/)

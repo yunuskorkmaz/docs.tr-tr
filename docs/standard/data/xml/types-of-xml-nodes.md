@@ -1,19 +1,18 @@
 ---
 title: XML Düğüm Türleri
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-ms.openlocfilehash: 5e11d61e16659ac1a8ca1b0b2c0d493ffdad5621
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 97458fc26b3c63dd6d7882c180192aef63109e1a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282070"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824603"
 ---
 # <a name="types-of-xml-nodes"></a>XML Düğüm Türleri
 Bir XML belgesi, düğüm ağacı olarak belleğe okuna, düğümlerin düğüm türleri düğümler oluşturulduğunda karardır. XML Belge Nesne Modeli (DOM), World Wide Web Konsorsiyumu (W3C) tarafından belirlendiği ve DOM yapı modelinde bölümünde listelenen çeşitli düğüm türleri türlerine sahiptir. Aşağıdaki tabloda düğüm türleri, bu düğüm türüne atanan nesne ve her birinin kısa bir açıklaması listelenmektedir.  
   
-|DOM düğüm türü|Nesne|Description|  
+|DOM düğüm türü|Nesne|Açıklama|  
 |-------------------|------------|-----------------|  
 |Belge|<xref:System.Xml.XmlDocument>|Ağaçtaki tüm düğümlerin kapsayıcısı. Her zaman kök öğesiyle aynı olmayan belge kökü olarak da bilinir.|  
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Herhangi bir ağaç yapısı olmadan bir veya daha fazla düğüm içeren geçici bir paket.|  
@@ -32,12 +31,12 @@ Bir XML belgesi, düğüm ağacı olarak belleğe okuna, düğümlerin düğüm 
   
  Aşağıdaki tabloda, W3C tarafından tanımlanmayan ek düğüm türleri gösterilmektedir, ancak bunlar Microsoft .NET Framework nesne modelinde, **XmlNodeType** numaralandırmalar olarak kullanıma sunulmuştur. Bu nedenle, bu düğüm türleri için eşleşen bir DOM düğüm türü sütunu yok.  
   
-|Düğüm türü|Description|  
+|Düğüm türü|Açıklama|  
 |---------------|-----------------|  
 |<xref:System.Xml.XmlDeclaration>|Bildirim düğümünü temsil eder `<?xml version="1.0"…>` .|  
 |<xref:System.Xml.XmlSignificantWhitespace>|Karışık içerikte boşluk olan önemli boşluk temsil eder.|  
 |<xref:System.Xml.XmlWhitespace>|Bir öğenin içeriğindeki boşluğu temsil eder.|  
-|EndElement|**XmlReader** bir öğenin sonuna geldiğinde döndürülür.<br /><br /> Örnek XML:**\</item>**<br /><br /> Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
+|EndElement|**XmlReader** bir öğenin sonuna geldiğinde döndürülür.<br /><br /> Örnek XML: **\</item>**<br /><br /> Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
 |EndEntity|**XmlReader** , çağrısının sonuna geldiğinde bir çağrının sonucunu aldığında döndürülür <xref:System.Xml.XmlReader.ResolveEntity%2A> . Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
   
  XML 'de okuyan ve düğüm ve içeriği hakkında bilgi yazdırmak için düğüm türlerinde bir Case yapısı kullanan bir kod örneğini görüntülemek için bkz <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A> ..  

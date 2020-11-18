@@ -1,17 +1,16 @@
 ---
 title: XmlSchemaCollection ile XML Şeması (XSD) Doğrulaması
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 2ff8a8b85c3bfa594bd958a9a3688380885e0426
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 08eeb8440f89e488685e474bed607002f8ab6386
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290311"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824590"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XmlSchemaCollection ile XML Şeması (XSD) Doğrulaması
 XML <xref:System.Xml.Schema.XmlSchemaCollection> şeması tanım dili (xsd) şemalarında XML belgesini doğrulamak için kullanabilirsiniz. , <xref:System.Xml.Schema.XmlSchemaCollection> Şemaları, her doğrulama gerçekleştiğinde belleğe yüklenebilmeleri için, koleksiyonda depolayarak performansı geliştirir. Şema, şema koleksiyonunda varsa, `schemaLocation` koleksiyonda şemayı aramak için özniteliği kullanılır.  
@@ -52,7 +51,7 @@ vreader.Schemas.Add(xsc);
   
  `targetNamespace`Özniteliği `namespaceURI` , özelliği için yöntemine eklediğinizde genellikle kullanılır <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> <xref:System.Xml.Schema.XmlSchemaCollection> . Şemasını öğesine eklemeden önce bir null başvurusu belirtebilirsiniz <xref:System.Xml.Schema.XmlSchemaCollection> . Boş bir dize ("") ad alanı olmayan şemalar için kullanılmalıdır. , <xref:System.Xml.Schema.XmlSchemaCollection> Ad alanı olmayan yalnızca bir şemaya sahip olabilir.  
   
- Aşağıdaki kod örneği, bir XML şeması olan HeadCount. xsd öğesini öğesine ekler <xref:System.Xml.Schema.XmlSchemaCollection> ve Headcount. xml ' i doğrular.  
+ Aşağıdaki kod örneği, bir XML şeması olan HeadCount. xsd öğesini öğesine ekler <xref:System.Xml.Schema.XmlSchemaCollection> ve HeadCount.xml doğrular.  
   
 ```vb  
 Imports System  
@@ -123,7 +122,7 @@ namespace ValidationSample
 }  
 ```  
   
- Aşağıda, doğrulama için HeadCount. xml giriş dosyasının içeriği özetlenmektedir.  
+ Aşağıda, doğrulanacak HeadCount.xml giriş dosyasının içeriği özetlenmektedir.  
   
 ```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
@@ -147,7 +146,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- Aşağıdaki kod örneği, alan oluşturur <xref:System.Xml.XmlValidatingReader> <xref:System.Xml.XmlTextReader> . Sample4. xml giriş dosyası, sample4. xsd XML şemasına göre onaylanır.  
+ Aşağıdaki kod örneği, alan oluşturur <xref:System.Xml.XmlValidatingReader> <xref:System.Xml.XmlTextReader> . sample4.xml giriş dosyası, sample4. xsd XML şemasına göre onaylanır.  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -171,7 +170,7 @@ while(vr.Read()) {
     }  
 ```  
   
- Aşağıda, doğrulanacak sample4. xml girdi dosyasının içeriği özetlenmektedir.  
+ Aşağıda, doğrulanacak sample4.xml giriş dosyasının içeriği özetlenmektedir.  
   
 ```xml  
 <datatypes xmlns="datatypesTest">  

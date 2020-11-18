@@ -2,7 +2,6 @@
 title: .NET 'teki dizeleri karşılaştırma
 description: .NET 'teki dizeleri karşılaştırmak için yöntemler hakkında bilgi edinin. Compare, CompareOrdinal, CompareTo, StartsWith, EndsWith, eşittir, IndexOf, & LastIndexOf yöntemleri hakkında bilgi edinin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -19,12 +18,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 0efad4364d7d0070dd9c755234975e11ad524fbd
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 08a92e314ad0900679d46cc759c80db89b43f0f0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400741"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823153"
 ---
 # <a name="compare-strings-in-net"></a>.NET 'teki dizeleri karşılaştırın
 

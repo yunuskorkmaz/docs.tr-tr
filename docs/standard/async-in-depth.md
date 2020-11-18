@@ -1,42 +1,41 @@
 ---
-title: Derinlemesine Async
-description: .NET Görev tabanlı async modelini kullanarak I/O-bound ve CPU'ya bağlı asynchronous kodunu yazmanın nasıl basit olduğunu öğrenin.
+title: Zaman uyumsuz, derinlemesine
+description: .NET görev tabanlı zaman uyumsuz model kullanarak g/ç 'ye bağlı ve CPU 'ya bağlı zaman uyumsuz kod yazma hakkında bilgi edinin.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fcc41c4ea5037d643402fc722e8f16f28d560ee
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70169115"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823335"
 ---
-# <a name="async-in-depth"></a>Derinlemesine Async
+# <a name="async-in-depth"></a>Zaman uyumsuz, derinlemesine
 
-.NET Görev tabanlı async modeli kullanılarak G/Ç ve CPU'ya bağlı asynchronous kodu yazmak kolaydır. Model, C# `Task` ve `Task<T>` Visual `async` Basic'teki `await` tipler ve anahtar kelimeler tarafından ortaya atılır. (Dile özel kaynaklar [Bak](#see-also) bölümünde bulunur.) Bu makalede, .NET async'in nasıl kullanılacağı açıklanmaktadır ve kapakların altında kullanılan async çerçevesihakkında bilgi sağlar.
+G/ç ve CPU 'ya bağlı zaman uyumsuz kod yazma, .NET görev tabanlı zaman uyumsuz model kullanılarak basittir. Model `Task` ve `Task<T>` türleri ve `async` `await` C# ve Visual Basic ve anahtar kelimeleri tarafından gösterilir. (Dile özgü kaynaklar [Ayrıca bkz](#see-also) . bölümünde bulunur.) Bu makalede, .NET Async 'in nasıl kullanılacağı açıklanmaktadır ve bu bilgiler, kapsamakta olan zaman uyumsuz Framework hakkında öngörüler sağlar.
 
-## <a name="task-and-taskt"></a>Görev ve\<Görev T>
+## <a name="task-and-taskt"></a>Görev ve görev\<T>
 
-Görevler, Eşzamanlılık Vaadi Modeli olarak bilinen şeyi uygulamak için kullanılan [yapılardır.](https://en.wikipedia.org/wiki/Futures_and_promises)  Kısacası, size işlerin daha sonraki bir noktada tamamlanacağını ve temiz bir API ile sözle koordine olmanızı sağlayacak bir "söz" sunarlar.
+Görevler, [taahhüt modelinin Promise modeli olarak Bilinünü](https://en.wikipedia.org/wiki/Futures_and_promises)uygulamak için kullanılan yapılardır.  Kısa bir süre sonra, iş daha sonraki bir noktada tamamlanacak bir "Promise" sunar ve bu da bir temiz API ile Promise ile koordine etmenizi sağlar.
 
-- `Task`bir değer döndürmeyen tek bir işlemi temsil eder.
-- `Task<T>`türünde `T`bir değer döndüren tek bir işlemi temsil eder.
+- `Task` değer döndürmeyen tek bir işlemi temsil eder.
+- `Task<T>` türünde bir değer döndüren tek bir işlemi temsil eder `T` .
 
-İş parçacığı üzerinde bir soyutlama *değil,* eşzamanlı olarak gerçekleşen iş soyutlamaları olarak görevleri hakkında neden önemlidir. Varsayılan olarak, görevler geçerli iş parçacığı üzerinde yürütülür ve uygun olduğu şekilde İşletim Sistemi'ne yetkiveda çalışır. İsteğe bağlı olarak, görevlerin `Task.Run` API üzerinden ayrı bir iş parçacığı üzerinde çalışması açıkça istenebilir.
+Görevler, iş parçacığı üzerinde bir soyutlama değil, zaman uyumsuz olarak gerçekleşen işin soyut kısımları olarak *gerçekleşmekte* önemlidir. Varsayılan olarak, görevler geçerli iş parçacığı üzerinde yürütülür ve uygun şekilde Işletim sisteminde iş devredebilir. İsteğe bağlı olarak, görevler API aracılığıyla ayrı bir iş parçacığında çalışmak üzere açıkça istenebilir `Task.Run` .
 
-Görevler, bir görevin sonuç değerini izlemek, beklemek ve erişim için `Task<T>`bir API protokolünü ortaya çıkarır. Anahtar kelimeyle `await` birlikte dil tümleştirmesi, görevleri kullanmak için daha üst düzey bir soyutlama sağlar.
+Görevler, izleme için bir API protokolünü açığa çıkarır, bir görevin sonuç değerine (Bu durumda) ve bunlara erişmeyi bekler `Task<T>` . Anahtar sözcüğü ile dil tümleştirmesi, `await` görevleri kullanmaya yönelik daha yüksek düzeyde bir soyutlama sağlar.
 
-Bir `await` görev, görev tamamlanına kadar arayana denetim vererek çalışırken uygulamanızın veya hizmetin yararlı işler gerçekleştirmesine olanak tanır. Görev tamamlandıktan sonra yürütmeye devam etmek için kodunuzun geri aramalara veya olaylara dayanması gerekmez. Dil ve görev API tümleştirmesi bunu sizin için yapar. `Task<T>`Kullanıyorsanız, `await` anahtar kelime ayrıca Görev tamamlandığında döndürülen değeri "açar".  Bu çalışmaların ayrıntıları aşağıda daha ayrıntılı olarak açıklanmıştır.
+Kullanılarak `await` , görev tamamlanana kadar, bir görev çalışırken bir görev çalışırken, bir görev çalışırken, uygulama veya hizmetinizin yararlı çalışmalar gerçekleştirmesini sağlar. Görev tamamlandıktan sonra, bir yürütmeye devam etmek için kodunuzun geri çağırmaları veya olaylara dayalı olması gerekmez. Dil ve görev API 'SI tümleştirmesi sizin için bunu yapar. Kullanıyorsanız `Task<T>` , `await` anahtar sözcüğü görev tamamlandığında döndürülen değeri "sarmalama" olarak da döndürür.  Bunun nasıl çalıştığına ilişkin ayrıntılar aşağıda açıklanmaktadır.
 
-[Görev tabanlı Eşzamanlı Desen (TAP)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) konusunda görevler ve bunlarla etkileşim kurmanın farklı yolları hakkında daha fazla bilgi edinebilirsiniz.
+Görevler hakkında daha fazla bilgi edinmek için [görev tabanlı zaman uyumsuz düzende (dokunarak)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) bunlarla etkileşimde bulunmak için farklı yollar bulabilirsiniz.
 
-## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>G/Ç'ye Bağlı İşlem için Görevlere Daha Derin Dalış
+## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>G/ç ile bağlantılı bir Işlem için görevlere daha derin bakış
 
-Aşağıdaki bölümde, tipik bir async G/Ç aramasıyla ne olduğu 10.000 metrelik bir görünüm açıklanmaktadır. Birkaç örnekle başlayalım.
+Aşağıdaki bölümde, tipik bir zaman uyumsuz g/ç çağrısıyla ne olacağı hakkında 10.000 Foot görünümü açıklanmaktadır. Birkaç örnek ile başlayalım.
 
-İlk örnek bir async yöntemi çağırır ve büyük olasılıkla henüz tamamlanması için etkin bir görev döndürür.
+İlk örnek, zaman uyumsuz bir yöntemi çağırır ve muhtemelen tamamlanmamış olan etkin bir görevi döndürüyor.
 
 ```csharp
 public Task<string> GetHtmlAsync()
@@ -48,7 +47,7 @@ public Task<string> GetHtmlAsync()
 }
 ```
 
-İkinci örnek, görevde çalışmak `async` `await` için anahtar kelimelerin ve anahtar kelimelerin kullanımını ekler.
+İkinci örnek, `async` `await` görev üzerinde çalışmak için ve anahtar sözcüklerinin kullanımını ekler.
 
 ```csharp
 public async Task<string> GetFirstCharactersCountAsync(string url, int count)
@@ -74,51 +73,51 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 }
 ```
 
-Yerel ağ `GetStringAsync()` kitaplığına Bir P/Invoke interop çağrısına ulaşana kadar alt düzey .NET kitaplıkları (belki de diğer async yöntemlerini çağıran) aracılığıyla yapılan aramalara çağrı. Yerel kitaplık daha sonra bir Sistem API `write()` çağrısına (Linux'taki bir soket gibi) çağrıyapabilir. Görev [Tamamlama Kaynağı](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600))kullanılarak yerel/yönetilen sınırda bir görev nesnesi oluşturulur. Görev nesnesi katmanlar aracılığıyla geçirilir, muhtemelen çalıştırılır veya doğrudan döndürülür, sonunda ilk arayana döndürülür.
+`GetStringAsync()`Alt düzey .NET kitaplıkları (Belki de diğer zaman uyumsuz yöntemleri çağırır) aracılığıyla çağrı yapılan çağrı, yerel bir ağ kitaplığına P/Invoke birlikte çalışabilirlik çağrısına erişene kadar. Yerel kitaplık daha sonra bir sistem API çağrısı ( `write()` Linux üzerinde bir yuva gibi) ile çağırabilir. Bir görev nesnesi, muhtemelen [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600))kullanılarak yerel/yönetilen sınırında oluşturulur. Görev nesnesi, büyük olasılıkla üzerinde çalıştırılan veya doğrudan döndürülen, sonunda ilk çağırana döndürülen katmanlarla geçirilir.
 
-Yukarıdaki ikinci örnekte, `Task<T>` bir nesne `GetStringAsync`.'den döndürülür. `await` Anahtar kelimenin kullanımı yöntemin yeni oluşturulan görev nesnesini döndürmesine neden olur. Denetim `GetFirstCharactersCountAsync` yöntemde bu konumdan arayana döner. [Görev&lt;T&gt; ](xref:System.Threading.Tasks.Task%601) nesnesinin yöntemleri ve özellikleri, arayanların GetFirstCharactersCountAsync'de kalan kod yürütüldüğünde tamamlanacak olan görevin ilerlemesini izlemesini sağlar.
+Yukarıdaki ikinci örnekte, `Task<T>` öğesinden bir nesne döndürülür `GetStringAsync` . Anahtar sözcüğünün kullanılması, `await` yönteminin yeni oluşturulan bir görev nesnesi döndürmesini sağlar. Denetim, yöntemde bu konumdan çağırana döner `GetFirstCharactersCountAsync` . [Görev &lt; T &gt; ](xref:System.Threading.Tasks.Task%601) nesnesinin yöntemleri ve özellikleri, çağrı yapanların, Getfirstkarakterscountasync içindeki geri kalan kod yürütüldüğünde tamamlanacak olan görevin ilerlemesini izlemelerine olanak tanır.
 
-Sistem API çağrısından sonra, istek artık çekirdek alanında dır ve işletim sisteminin ağ alt sistemine `/net` (Linux Çekirdeği'nde olduğu gibi) doğru yola çıkar.  Burada işletim sistemi ağ isteğini *eşit bir şekilde*işleyecek.  Ayrıntılar kullanılan işletim sistemi bağlı olarak farklı olabilir (aygıt sürücüsü arama sı çalıştırılmak için geri gönderilen bir sinyal olarak zamanlanabilir veya bir aygıt sürücüsü araması yapılabilir ve *daha sonra* bir sinyal geri gönderilebilir), ancak sonunda çalışma süresi ağ isteği devam ettiği bildirilir.  Şu anda, aygıt sürücüsü için çalışma ya zamanlanmış olacak, devam ediyor, ya da zaten bitmiş (istek zaten "tel üzerinde" dışarı) - ama bu tüm eşzamanlı oluyor çünkü, cihaz sürücüsü hemen başka bir şey işlemek mümkün!
+Sistem API çağrısından sonra, istek artık çekirdek alanında bulunur ve bu, işletim sisteminin ağ alt sistemine (Linux çekirdekte olduğu gibi) yol getirir `/net` .  Burada işletim sistemi ağ isteklerini *zaman uyumsuz* olarak işleyecek.  Ayrıntılar, kullanılan işletim sistemine bağlı olarak farklı olabilir (cihaz sürücüsü çağrısı çalışma zamanına geri gönderilen bir sinyal olarak zamanlanabilir veya bir cihaz sürücüsü çağrısı yapılabilir ve *sonra* bir sinyal geri gönderilebilir), ancak sonunda çalışma zamanı, ağ isteğinin devam ettiğini bilgilendirilir.  Şu anda, cihaz sürücüsü için çalışma zamanlanmış, devam ediyor veya zaten bitmiş (istek zaten "kablo üzerinden") olur, ancak bu durum zaman uyumsuz olarak yapıldığından, cihaz sürücüsü başka bir şeyi hemen işleyebilir!
 
-Örneğin, Windows'da bir işletim sistemi iş parçacığı ağ aygıtı sürücüsüne bir çağrı yapar ve işlemi temsil eden bir Kesme İstek Paketi (IRP) aracılığıyla ağ işlemini gerçekleştirmesini ister.  Aygıt sürücüsü IRP alır, ağa arama yapar, IRP'yi "beklemede" olarak işaretler ve işletim sistemi'ne geri döner.  İşletim sistemi iş parçacığı artık IRP'nin "beklemede" olduğunu bildiğinden, bu iş için yapacak daha fazla işi yoktur ve diğer işleri gerçekleştirmek için kullanılabilmesi için "geri döner".
+Örneğin, Windows 'da bir işletim sistemi iş parçacığı ağ aygıtı sürücüsüne bir çağrı yapar ve bunu işlemi temsil eden bir kesme Isteği paketi (IRP) aracılığıyla ağ işlemini gerçekleştirmesini ister.  Aygıt sürücüsü IRP 'yi alır, ağa çağrı yapar, IRP 'yi "bekliyor" olarak işaretler ve işletim sistemine geri döner.  İşletim sistemi iş parçacığı artık IRP 'nin "bekliyor" olduğunu bildiğinden, bu iş için daha fazla iş yapmaya sahip değildir ve diğer işleri gerçekleştirmek için kullanılabilmesi için "geri döndürür".
 
-İstek yerine getirildiğinde ve veriler aygıt sürücüsünden geri geldiğinde, bir kesinti yle alınan yeni verilerin CPU'ya haber verirken.  Bu kesintinin nasıl işleneceğini os bağlı olarak değişir, ancak sonunda veri bir sistem interop çağrı ulaşana kadar işletim sistemi üzerinden geçirilecektir (örneğin, Linux'ta bir kesme işleyicisi işletim sistemi üzerinden veri geçmek için IRQ alt yarısını zamanlar asynchronously).  Bu *da* eşzamanlı olur unutmayın!  Bir sonraki kullanılabilir iş parçacığı async yöntemini yürütmek ve tamamlanan görevin sonucunu "açmak" mümkün olana kadar sonuç sıraya alınır.
+İstek yerine getirildiyse ve veriler cihaz sürücüsü aracılığıyla geri geldiğinde, bir kesme aracılığıyla alınan yeni verilerin CPU 'suna bildirir.  Bu kesmenin nasıl işlendiği, IŞLETIM sistemine bağlı olarak farklılık gösterir, ancak sonunda bir sistem birlikte çalışma çağrısına ulaşıncaya kadar veriler IŞLETIM sistemi üzerinden geçirilir (örneğin, Linux 'ta bir kesme işleyicisi verileri işletim sistemi ile zaman uyumsuz olarak geçirmek için IRQ 'nun alt yarısını zamanlıyor).  Bunun *de* zaman uyumsuz olarak gerçekleştiğini unutmayın!  Sonuç, bir sonraki kullanılabilir iş parçacığı zaman uyumsuz yöntemini yürütebilene ve tamamlanmış görevin sonucunu "sarmadan" çıkana kadar sıraya alınır.
 
-Tüm bu işlem boyunca, önemli bir paket **hiçbir iş parçacığı görevi çalıştırmak için adamıştır.**  Çalışma bazı bağlamlarda yürütülse de (diğer bir deyişle, işletim sistemi verileri aygıt sürücüsüne aktarmak ve kesintiye yanıt vermek zorunda), istekten gelen verilerin geri gelmesini *beklemeye* adanmış bir iş parçacığı yoktur.  Bu, sistemin bazı G/Ç aramalarının tamamlanmasını beklemek yerine çok daha büyük bir iş hacmini işlemesini sağlar.
+Bu işlemin tamamında, bir anahtar, **görevi çalıştırmak için hiçbir iş parçacığının ayrılmadığı** bir işlemdir.  Çalışma bazı bağlamda yürütülse de (yani işletim sisteminin bir cihaz sürücüsüne veri geçirmesi ve kesintiye yanıt vermesi gerekir), isteğin geri *dönmesi* için ayrılan iş parçacığı yok.  Bu, sistemin bazı g/ç çağrısının tamamlanmasını beklemek yerine çok daha büyük bir iş hacmi işlemesini sağlar.
 
-Yukarıdaki yapılacak bir çok iş gibi görünse de, duvar saati süresi açısından ölçüldüğünde, gerçek G / O iş yapmak için gereken süre ile karşılaştırıldığında küçük. Tüm kesin olmasa da, böyle bir arama için potansiyel bir zaman çizelgesi şu şekilde görünür:
+Yukarıdaki çok fazla iş olması gibi görünse de, duvar saati zamanı bakımından ölçüldüğünde, bu, gerçek g/ç işinin yapılması için gereken süre ile karşılaştırıldığında minscc olur. Her türlü kesin olmasa da bu tür bir çağrının olası bir zaman çizelgesi şuna benzer:
 
-0-1————————————————————————————————————————————————–2-3
+0-1 ———————————————————————————————————————————————— – 2-3
 
-- Puanlardan `0` async `1` yöntemi arayana denetim verene kadar harcanan zaman her şeydir.
-- Puanlardan `1` G/Ç'ye `2` harcanan süre, CPU maliyeti olmadan I/Ç'de harcanan süredir.
-- Son olarak, `2` puanlardan `3` harcanan zaman denetimi async yöntemine geri (ve potansiyel olarak bir değer) geçiriyor ve bu noktada yeniden yürütülmeye başlıyor.
+- `0` `1` Zaman uyumsuz bir yöntem, çağıranına denetim yapana kadar her şey için noktadan geçen süre.
+- Noktadan itibaren harcanan süre `1` , `2` CPU maliyeti olmadan g/ç 'de harcanan süredir.
+- Son olarak, noktadan harcanan süre `2` `3` zaman uyumsuz metoda denetim geri (ve potansiyel bir değer) geçirmekte ve bu noktada yeniden yürütüyordur.
 
-### <a name="what-does-this-mean-for-a-server-scenario"></a>Bu, sunucu senaryosu için ne anlama gelir?
+### <a name="what-does-this-mean-for-a-server-scenario"></a>Bu bir sunucu senaryosu için ne anlama geliyor?
 
-Bu model, tipik bir sunucu senaryosu iş yükü ile iyi çalışır.  Tamamlanmamış görevlerde engellemeye adanmış iş parçacıkları olmadığından, sunucu iş parçacığı havuzu çok daha yüksek hacimli web isteklerine hizmet verebilir.
+Bu model tipik bir sunucu senaryosu iş yükü ile iyi şekilde çalışmaktadır.  Tamamlanmamış görevlerde engellemeye ayrılmış iş parçacığı olmadığından, sunucu ThreadPool çok daha yüksek bir Web istekleri hacmine hizmet edebilir.
 
-İki sunucu düşünün: biri async kodu çalıştıran, diğeri çalıştırmayan.  Bu örnek için, her sunucunun hizmet istekleri için yalnızca 5 iş parçacığı vardır.  Bu sayıların hayali olarak küçük olduğunu ve yalnızca gösterici bir bağlamda hizmet verdiğini unutmayın.
+İki sunucu düşünün: zaman uyumsuz kod çalıştıran bir ve olmayan bir.  Bu örneğin, her sunucuda yalnızca hizmet istekleri için kullanılabilir 5 iş parçacığı bulunur.  Bu sayıların imaginarily küçük olduğunu ve yalnızca bir gösterim amaçlıdır bağlamında işlev olduğunu unutmayın.
 
-Her iki sunucunun da 6 eşzamanlı istek aldığını varsayalım. Her istek bir G/Ç işlemi gerçekleştirir.  Async kodu *olmayan* sunucu, 5 iş parçacığından biri G/Ç'ye bağlı çalışmayı bitirip yanıt yazana kadar 6. 20. istek geldiği noktada, sıra çok uzun sürdüğü için sunucu yavaşlamaya başlayabilir.
+Her iki sunucunun da 6 eşzamanlı istek alacağını varsayın. Her istek bir g/ç işlemi gerçekleştirir.  Zaman uyumsuz kod *içermeyen* sunucu, 5 iş parçacığından biri g/ç ile bağlantılı çalışmayı tamamlayana ve yanıt yazana kadar 6. isteği sıraya almak zorunda değildir. 20. isteğin geldiği noktada, sıra çok uzun sürtiğinden sunucu yavaşlamaya başlayabilir.
 
-Üzerinde async kodu *çalışan* sunucu hala 6 istek sıraya, ancak `async` kullandığı `await`için ve , her iş parçacığı, I / O-bound çalışma başladığında, yerine ne zaman bitirir serbest bırakılır.  20. istek gelene kadar, gelen istekler için kuyruk çok daha küçük olacaktır (içinde herhangi bir şey varsa) ve sunucu yavaşlamaz.
+Üzerinde çalışan zaman uyumsuz koda *sahip* sunucu yine 6. isteği sıraya alır, ancak kullandığından `async` `await` , iş parçacıklarının her biri bittiğinde değil g/ç bağlı iş başladığında serbest bırakılır.  20. isteğin geldiği zamana göre, gelen isteklerin kuyruğu çok daha küçüktür (herhangi bir şey varsa) ve sunucu yavaşmaz.
 
-Bu contrived bir örnek olmasına rağmen, gerçek dünyada çok benzer bir şekilde çalışır.  Aslında, bir sunucunun aldığı her istek için bir iş `async` parçacığı `await` ayırıyorsa, daha fazla istek kullanarak ve daha büyük bir istek siparişi işlemek mümkün olmasını bekleyebilirsiniz.
+Bu bir contrived örneği olmasına rağmen gerçek dünyada çok benzer bir biçimde çalışmaktadır.  Aslında, bir sunucunun `async` , `await` aldığı her istek için bir iş parçacığını ayrılmış hale aldığına göre daha fazla istek sırasını işleyebilmesini sağlayabilirsiniz.
 
-### <a name="what-does-this-mean-for-client-scenario"></a>Bu istemci senaryosu için ne anlama geliyor?
+### <a name="what-does-this-mean-for-client-scenario"></a>Bu, istemci senaryosu için ne anlama geliyor?
 
-Bir istemci uygulamasını `async` `await` kullanmak ve kullanmak için en büyük kazanç yanıt verme deki artıştır.  Bir uygulamayı iş parçacıklarını el ile yumurtlayarak yanıt vermeye zorlasanız da, bir `async` `await`iş parçacığı nın yumurtlama eylemi, sadece kullanmaya ve .  Özellikle mobil bir oyun gibi bir şey için, I / O söz konusu olduğunda mümkün olduğunca az UI iplik etkileyen çok önemlidir.
+İstemci uygulaması için ve kullanmanın en büyük kazancı, `async` `await` yanıt verme hızını artırır.  Bir uygulamayı iş parçacıklarını el ile oluşturarak yanıt verebilseniz de, iş parçacığı oluşturma işlemi, yalnızca ve ile ilgili pahalı bir işlemdir `async` `await` .  Özellikle bir mobil oyun gibi bir şey için, g/ç 'nin ilgili olduğu durumlarda Kullanıcı arabirimi iş parçacığını olabildiğince az etkilediğinde.
 
-Daha da önemlisi, I / O bağlı çalışma CPU üzerinde hemen hemen hiç zaman harcamak, ancak herhangi bir yararlı iş gerçekleştirmek için tüm bir CPU iş parçacığı adamak kaynakların kötü kullanımı olacaktır.
+Daha da önemlisi, g/ç bağlı işi CPU üzerinde neredeyse zaman harcadığından, tüm CPU iş parçacığını çok iyi bir şekilde gerçekleştirmek için kullanılabilir olan tüm yararlı işler, kaynakların kötü bir şekilde kullanılmasını sağlar.
 
-Ayrıca, kullanıcı arabirimi iş parçacığına iş gönderme (kullanıcı arabirimi güncelleştirme `async` gibi) yöntemlerle çok basittir ve ek çalışma gerektirmez (iş parçacığı için güvenli bir temsilci çağırmak gibi).
+Ek olarak, Kullanıcı arabirimi iş parçacığına (Kullanıcı arabirimini güncelleştirme gibi) dağıtım çok basittir `async` ve ek iş gerektirmez (iş parçacığı güvenli temsilcisini çağırma gibi).
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>CPU'ya Bağlı Bir\<İşlem için Görev ve Görev T> Daha Derin dalış
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>CPU-Bound Işlemi için görev ve göreve daha derin bakış \<T>
 
-CPU'ya `async` bağlı kod, G/Ç'ye `async` bağlı koddan biraz farklıdır.  İşlem üzerinde iş yapıldığından, bir iş parçacığının hesaplamaya ithaf edilmesinin bir yolu yoktur.  Kullanımı `async` ve `await` bir arka plan iş parçacığı ile etkileşim ve async yönteminin arayan duyarlı tutmak için temiz bir yol sağlar.  Bunun paylaşılan veriler için herhangi bir koruma sağlamadığını unutmayın.  Paylaşılan verileri kullanıyorsanız, yine de uygun bir eşitleme stratejisi uygulamanız gerekir.
+CPU-bağlantılı `async` kod, g/ç ile bağlantılı koddan biraz farklıdır `async` .  İş CPU üzerinde yapıldığından, bir iş parçacığını hesaplama altına almanın bir yolu yoktur.  Ve kullanımı, `async` `await` bir arka plan iş parçacığı ile etkileşime geçmek için temiz bir yol sağlar ve zaman uyumsuz yöntem çağıranı yanıt vermeye devam edecektir.  Bunun, paylaşılan veriler için herhangi bir koruma sağlamayacağını unutmayın.  Paylaşılan veriler kullanıyorsanız, yine de uygun bir eşitleme stratejisi uygulamanız gerekir.
 
-Burada bir CPU bağlı async arama 10.000 ayak görünümü:
+CPU ile bağlantılı zaman uyumsuz çağrının 10.000 Foot görünümü aşağıda verilmiştir:
 
 ```csharp
 public async Task<int> CalculateResult(InputData data)
@@ -136,17 +135,17 @@ public async Task<int> CalculateResult(InputData data)
 }
 ```
 
-`CalculateResult()`çağrıldığı iş parçacığı üzerinde yürütür.  `Task.Run`Aradığında, iş parçacığı havuzunda pahalı CPU'ya bağlı işlemi `DoExpensiveCalculation()`sıralar ve bir `Task<int>` tutamaç alır.  `DoExpensiveCalculation()`sonunda aynı anda bir sonraki kullanılabilir iş parçacığı, büyük olasılıkla başka bir CPU çekirdek üzerinde çalıştırılır.  Başka bir iş parçacığı üzerinde `DoExpensiveCalculation()` meşgul ken eşzamanlı iş yapmak mümkündür, çünkü adlandırılan `CalculateResult()` iş parçacığı hala yürütülmeye devam ediyor.
+`CalculateResult()` üzerinde çağrıldığı iş parçacığı üzerinde yürütülür.  Çağırdığında, `Task.Run` iş parçacığı havuzunda PAHALı CPU 'ya bağlı işlemi sıraya `DoExpensiveCalculation()` alır ve bir `Task<int>` tanıtıcı alır.  `DoExpensiveCalculation()` , büyük olasılıkla başka bir CPU çekirdeğinde, bir sonraki kullanılabilir iş parçacığında eşzamanlı olarak çalışır.  `DoExpensiveCalculation()`Çağıran iş parçacığı çalışmaya devam ettiği için, başka bir iş parçacığında meşgul olduğu sürece eşzamanlı çalışma yapılabilir `CalculateResult()` .
 
-Bir `await` kez karşılaşılan, `CalculateResult()` yürütme arayan teslim edilir, başka bir iş bir sonuç `DoExpensiveCalculation()` çalkalama ise geçerli iş parçacığı ile yapılmasını sağlar.  Tamamlandıktan sonra, sonuç ana iş parçacığı üzerinde çalıştırmak için sıraya alınır.  Sonunda, ana iş parçacığı yürütme `CalculateResult()`dönecektir , hangi noktada sonucu `DoExpensiveCalculation()`olacaktır .
+`await`Bir kez karşılaşılırsa, yürütülmesi `CalculateResult()` çağrı yapana geri gönderilir ve bu, bir sonucu ortaya tutarken geçerli iş parçacığı ile diğer çalışmanın yapılmasına izin verir `DoExpensiveCalculation()` .  İşlem tamamlandıktan sonra, sonuç ana iş parçacığında çalışacak şekilde sıralanır.  Sonuç olarak, ana iş parçacığı yürütmek üzere döner ve `CalculateResult()` Bu noktada sonucunu elde edecektir `DoExpensiveCalculation()` .
 
-### <a name="why-does-async-help-here"></a>Async neden burada yardımcı olur?
+### <a name="why-does-async-help-here"></a>Zaman uyumsuz yardım neden burada?
 
-`async`ve `await` yanıt verme gereksinimi olduğunda CPU'ya bağlı çalışmayı yönetmek için en iyi yöntemdir. CPU'ya bağlı çalışma ile async kullanmak için birden çok desen vardır. Bu async kullanarak küçük bir maliyet olduğunu ve sıkı döngüler için tavsiye edilmez dikkat etmek önemlidir.  Bu yeni özellik etrafında kodunuzu nasıl yazdığınızı belirlemek size kalmış.
+`async` ve `await` yanıt verme GEREKTIĞINDE CPU ile bağlantılı çalışmanın yönetilmesi için en iyi uygulamadır. CPU ile bağlantılı çalışmalarla zaman uyumsuz olarak kullanılması için birden çok desen vardır. Zaman uyumsuz kullanmanın küçük bir maliyeti olduğunu ve sıkı döngüler için önerilmediğini aklınızda bulundurmamak önemlidir.  Kodunuzu bu yeni özellik etrafında nasıl yazacağınızı belirlemektir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C'de asynchronous programlama #](../csharp/async.md)
-- [Async ve await ile asynchronous programlama (C#)](../csharp/programming-guide/concepts/async/index.md)
-- [F'de Async Programlama #](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Async ve Await ile Asynchronous Programlama (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)
+- [C 'de zaman uyumsuz programlama #](../csharp/async.md)
+- [Async ve await ile zaman uyumsuz programlama (C#)](../csharp/programming-guide/concepts/async/index.md)
+- [F 'de zaman uyumsuz programlama #](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

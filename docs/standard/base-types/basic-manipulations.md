@@ -2,19 +2,18 @@
 title: .NET 'teki temel dize Işlemeleri
 description: Birçok dize yöntemini çağıran bir örneğe bakın.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET], examples
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
-ms.openlocfilehash: 659f01cc1d7ae03e12e83329e4fd2446b7512475
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: e3e969520e068bde234c13d45ad790b76ecf8fdb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342624"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825165"
 ---
 # <a name="how-to-perform-basic-string-manipulations-in-net"></a>Nasıl yapılır: .NET 'te temel dize Işlemeleri gerçekleştirme
 

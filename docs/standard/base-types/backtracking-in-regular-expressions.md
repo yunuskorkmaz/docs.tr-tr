@@ -2,7 +2,6 @@
 title: .NET normal Ifadelerinde geri izleme
 description: Normal ifade deseninin eşleştirmesinde geri izlemeyi denetlemeyi öğrenin.
 ms.date: 11/12/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - strings [.NET], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: b8bd8308b91c2c358f4a462967424f55fa316504
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a15ef27f71eac9ed12889054283f8ac41d85922f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889146"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825253"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](quantifiers-in-regular-expressions.md) veya [değişim yapılarını](alternation-constructs-in-regular-expressions.md)içermesi durumunda geri izleme oluşur ve normal ifade altyapısı, bir eşleşme aramasına devam etmek için önceki kaydedilmiş bir duruma geri döner. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  

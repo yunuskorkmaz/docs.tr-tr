@@ -2,7 +2,6 @@
 title: Güvenlik ve Yarış Durumları
 'description:': Describes pitfalls to avoid around security holes exploited by race conditions, including dispose methods, constructors, cached objects, and finalizers.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-ms.openlocfilehash: a667bf69ba72cbe203bd2603c4c6b7a1e58a6d43
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 870dc0ac956bad045cb87b9c0968b4a8e9733812
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555116"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824128"
 ---
 # <a name="security-and-race-conditions"></a>Güvenlik ve Yarış Durumları
 
@@ -47,7 +46,7 @@ void Dispose()
 }  
 ```  
   
-Bu **Dispose** uygulamasının eşitlenmediği için `Cleanup` ilk bir iş parçacığı tarafından çağrılabilir ve daha önce ikinci bir iş parçacığı `_myObj` **null**olarak ayarlanmalıdır. Bunun bir güvenlik sorunu olup olmadığı, kod çalıştırıldığında ne olacağı hakkında farklılık gösterir `Cleanup` . Eşitlenmemiş **Dispose** uygulamalarıyla ilgili önemli bir sorun, dosyalar gibi kaynak tanıtıcılarının kullanımını içerir. Hatalı bırakma yanlış tanıtıcı kullanılmasına neden olabilir, bu da genellikle güvenlik açıklarına yol açar.  
+Bu **Dispose** uygulamasının eşitlenmediği için `Cleanup` ilk bir iş parçacığı tarafından çağrılabilir ve daha önce ikinci bir iş parçacığı `_myObj` **null** olarak ayarlanmalıdır. Bunun bir güvenlik sorunu olup olmadığı, kod çalıştırıldığında ne olacağı hakkında farklılık gösterir `Cleanup` . Eşitlenmemiş **Dispose** uygulamalarıyla ilgili önemli bir sorun, dosyalar gibi kaynak tanıtıcılarının kullanımını içerir. Hatalı bırakma yanlış tanıtıcı kullanılmasına neden olabilir, bu da genellikle güvenlik açıklarına yol açar.  
   
 ## <a name="race-conditions-in-constructors"></a>Oluşturuculardaki yarış koşulları
 

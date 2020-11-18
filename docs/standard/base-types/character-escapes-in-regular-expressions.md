@@ -2,7 +2,6 @@
 title: .NET normal Ifadelerinde karakter kaçışları
 description: .NET normal ifadelerinde özel karakterler ve kaçış karakterleri hakkında bilgi edinin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 927fb32163a7b44561c19fdb35e38b488fc50fb7
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 5a9890f9ada6a4e749c8cf5ee96d9e8668525040
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889523"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823270"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
 Normal ifadede ters eğik çizgi ( \\ ) aşağıdakilerden birini belirtir:  

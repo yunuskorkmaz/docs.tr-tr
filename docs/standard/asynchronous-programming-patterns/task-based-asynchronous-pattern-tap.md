@@ -2,7 +2,6 @@
 title: Görev Tabanlı Zaman Uyumsuz Desen (TAP)
 description: Görev tabanlı zaman uyumsuz model (TAP) hakkında bilgi edinin. .NET sürümünde geliştirme için önerilen zaman uyumsuz tasarım deseninin dokunun.
 ms.date: 02/26/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 2987e7baa52f627d1da41af21d05bfa22a247fbb
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: f194a0bafa0ab7b9606d72f091dbb12e94f31099
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889250"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824024"
 ---
 # <a name="task-based-asynchronous-pattern"></a>Görev tabanlı zaman uyumsuz model
 
@@ -44,7 +43,7 @@ TAP, bir zaman uyumsuz işlemin başlangıcını ve tamamlanmasını temsil etme
   
  Bazı durumlarda, işlemi tamamlamak için gereken iş, işlemi zaman uyumsuz olarak başlatmak için gereken işten daha azdır. Okuma işleminin bellekte zaten arabelleğe alınmış veri ile tamamlanabileceği bir akıştan okumak bu duruma bir örnektir. Bu gibi durumlarda, işlem zaman uyumlu olarak tamamlanabilir ve zaten tamamlanmış bir görevi döndürebilir.  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
  Bir zaman uyumsuz yöntem, zaman uyumsuz yöntem çağrısının dışına atılacak bir özel durumu sadece bir kullanım hatasına yanıt olarak harekete geçirmelidir. Kullanım hataları asla üretim kodunda gerçekleşmemelidir. Örneğin, `Nothing` yöntemin bağımsız değişkenlerinden biri bir hata durumuna neden olursa (genellikle bir özel durumla temsil edilen) bir null başvurusu (Visual Basic) geçirilirse, bir <xref:System.ArgumentNullException> null başvurusunun geçirilmeyeceğinden emin olmak için çağıran kodu değiştirebilirsiniz. Diğer bütün hatalar için, görev döndürülene kadar zaman uyumsuz yöntem zaman uyumlu olarak tamamlansa bile, zaman uyumsuz yöntem yürütülüyorken oluşan özel durumlar döndürülen göreve atanmalıdır. Genel olarak, bir görev en fazla bir özel durum içerir. Ancak, görev birden çok işlemi temsil ediyorsa (örneğin, <xref:System.Threading.Tasks.Task.WhenAll%2A> ), birden çok özel durum tek bir görevle ilişkilendirilebilir.  
   
 ## <a name="target-environment"></a>Hedef ortam  

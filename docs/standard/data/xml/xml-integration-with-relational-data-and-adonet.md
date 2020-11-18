@@ -1,14 +1,13 @@
 ---
 title: İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: f54c7a890ada01f2cffdd54c024cfbc98777200d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1f2ad78df3bb1a8c8b02a771c69152e785bec88f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289024"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824323"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 **XmlDataDocument** sınıfı, **XmlDocument**'ın TÜRETILMIŞ bir sınıfıdır ve XML verisi içerir. **XmlDataDocument** 'in avantajı, ilişkisel ve hiyerarşik veriler arasında bir köprü sağlar. Bu, bir **veri kümesine** bağlanabilen ve iki sınıfta bulunan veriler üzerinde yapılan değişiklikleri eşitleyebileceğiniz bir **XmlDocument** . Bir **veri kümesine** bağlanan bir **XmlDocument** , XML 'nin ilişkisel verilerle tümleştirilmesine olanak tanır ve verilerinizin XML veya ilişkisel biçimde temsil edilebilmesi gerekmez. Her ikisini de yapabilirsiniz ve verilerin tek bir gösterimiyle sınırlandırmayın.  
@@ -25,19 +24,19 @@ ms.locfileid: "84289024"
   
  Bir **XmlDataDocument** , **XslTransform**' ı desteklemeye ek olarak, ilişkisel verileri **XPath** sorguları ve doğrulama için kullanıma sunar.  Temel olarak, tüm XML Hizmetleri ilişkisel veriler üzerinden kullanılabilir ve denetim bağlama, CodeGen vb. gibi ilişkisel tesisler, XML uygunluğa ödün vermeden, yapılandırılmış bir XML projeksiyonu üzerinden kullanılabilir.  
   
- **XmlDataDocument** bir **XmlDocument**ÖĞESINDEN DEVRALıNDıĞıNDAN, W3C DOM uygulamasının bir uygulamasını sağlar. **XmlDataDocument** 'in ilişkilendirildiği ve içindeki verilerinin bir alt kümesini depoladığı olgu, bir **veri kümesi** herhangi bir şekilde bir **XmlDocument** olarak kullanımını kısıtlamaz veya değiştirmez. Bir **XmlDocument** kullanmak için yazılan kod, bir **XmlDataDocument**'e karşı değiştirilmeden çalışmaktadır. **Veri kümesi** , tabloları, sütunları, ilişkileri ve kısıtlamaları tanımlayarak aynı verilerin ilişkisel görünümünü sağlar ve tek başına, bellek içi kullanıcı veri deposudur.  
+ **XmlDataDocument** bir **XmlDocument** ÖĞESINDEN DEVRALıNDıĞıNDAN, W3C DOM uygulamasının bir uygulamasını sağlar. **XmlDataDocument** 'in ilişkilendirildiği ve içindeki verilerinin bir alt kümesini depoladığı olgu, bir **veri kümesi** herhangi bir şekilde bir **XmlDocument** olarak kullanımını kısıtlamaz veya değiştirmez. Bir **XmlDocument** kullanmak için yazılan kod, bir **XmlDataDocument**'e karşı değiştirilmeden çalışmaktadır. **Veri kümesi** , tabloları, sütunları, ilişkileri ve kısıtlamaları tanımlayarak aynı verilerin ilişkisel görünümünü sağlar ve tek başına, bellek içi kullanıcı veri deposudur.  
   
- Aşağıdaki çizimde XML verilerinde veri **kümesi** ve **XmlDataDocument**ile birlikte bulunan farklı ilişkilendirmeler gösterilmektedir:
+ Aşağıdaki çizimde XML verilerinde veri **kümesi** ve **XmlDataDocument** ile birlikte bulunan farklı ilişkilendirmeler gösterilmektedir:
   
  ![XML veri kümesiyle farklı ilişkilendirmeleri gösteren diyagram.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
- Çizimde XML verilerinin doğrudan bir **veri kümesine**yüklenebileceği gösterilmektedir ve bu, ILIŞKISEL şekilde XML ile doğrudan işleme sağlar. Ya da, XML DOM 'ın türetilmiş bir sınıfına yüklenebilir, bu, **XmlDataDocument**' dir ve daha sonra **veri kümesiyle**yüklenip eşitlenir. **Veri kümesi ve** **XmlDataDocument** tek bir veri kümesi üzerinden eşitlendiğinden, bir depodaki verilerde yapılan değişiklikler diğer depoya yansıtılır.  
+ Çizimde XML verilerinin doğrudan bir **veri kümesine** yüklenebileceği gösterilmektedir ve bu, ILIŞKISEL şekilde XML ile doğrudan işleme sağlar. Ya da, XML DOM 'ın türetilmiş bir sınıfına yüklenebilir, bu, **XmlDataDocument**' dir ve daha sonra **veri kümesiyle** yüklenip eşitlenir. **Veri kümesi ve** **XmlDataDocument** tek bir veri kümesi üzerinden eşitlendiğinden, bir depodaki verilerde yapılan değişiklikler diğer depoya yansıtılır.  
   
- **XmlDataDocument** , **XmlDocument**içindeki tüm düzen ve gezinme özelliklerini devralır. **XmlDataDocument** 'in ve devralınmış özelliklerinin kullanıldığı zamanlar, bir **veri KÜMESIYLE**eşitlendiğinde, XML 'i doğrudan **veri kümesine**yüklemeye kıyasla daha uygun bir seçenektir. Aşağıdaki tabloda, **veri kümesini**yüklemek için kullanılacak yöntemi seçerken göz önünde bulundurmanız gereken öğeler gösterilmektedir.  
+ **XmlDataDocument** , **XmlDocument** içindeki tüm düzen ve gezinme özelliklerini devralır. **XmlDataDocument** 'in ve devralınmış özelliklerinin kullanıldığı zamanlar, bir **veri KÜMESIYLE** eşitlendiğinde, XML 'i doğrudan **veri kümesine** yüklemeye kıyasla daha uygun bir seçenektir. Aşağıdaki tabloda, **veri kümesini** yüklemek için kullanılacak yöntemi seçerken göz önünde bulundurmanız gereken öğeler gösterilmektedir.  
   
 |XML 'ı doğrudan bir veri kümesine yükleme|Bir XmlDataDocument ile bir veri kümesiyle ne zaman eşitleneceğini|  
 |----------------------------------------------|-----------------------------------------------------------|  
-|Veri **kümesindeki** verilerin sorguları XPath 'ten SQL kullanılarak daha kolay.|Veri **kümesindeki**veriler üzerinde XPath sorguları gerekir.|  
+|Veri **kümesindeki** verilerin sorguları XPath 'ten SQL kullanılarak daha kolay.|Veri **kümesindeki** veriler üzerinde XPath sorguları gerekir.|  
 |Kaynak XML 'de öğe sıralamasını koruma kritik değildir.|Kaynak XML 'de öğe sıralamasını koruma kritik öneme sahiptir.|  
 |Öğe ve biçimlendirme arasındaki boşluk, kaynak XML 'de korunması gerekmez.|Kaynak XML 'de boşluk ve biçimlendirme koruması kritik öneme sahiptir.|  
   

@@ -2,20 +2,18 @@
 title: Yerel Veritabanı için SqlClient Desteği
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 841c455605b0b32668d26cab16a6207dc1c0f716
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 55ab1346de6f5c14f15d01344a984c18edf30e02
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203429"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824486"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Yerel Veritabanı için SqlClient Desteği
 
-SQL Server kod adından itibaren, LocalDB adlı bir SQL Server basit sürümü kullanıma sunulacaktır. Bu konuda, bir LocalDB veritabanına nasıl bağlanabileceği açıklanmaktadır.  
+Bu makalede bir LocalDB veritabanına nasıl bağlanabileceği açıklanır. LocalDB SQL Server basit bir sürümüdür.
   
-## <a name="remarks"></a>Açıklamalar  
-
- LocalDB 'yi yüklemek ve LocalDB örneğinizi yapılandırmak dahil olmak üzere LocalDB hakkında daha fazla bilgi için bkz. Books Online SQL Server.  
+## <a name="remarks"></a>Açıklamalar
   
  LocalDB ile neler yapabileceğinizi özetlemek için:  
   
@@ -31,7 +29,7 @@ SQL Server kod adından itibaren, LocalDB adlı bir SQL Server basit sürümü k
   
  `User Instance=True` bir LocalDB veritabanına bağlanılırken izin verilmez.  
   
- LocalDB 'yi [Microsoft SQL Server 2012 özellik paketinden](https://www.microsoft.com/download/en/details.aspx?id=29065)indirebilirsiniz. LocalDB örneğinizdeki verileri değiştirmek için sqlcmd.exe kullanacaksanız, SQL Server 2012 Feature Pack 'ten de alabileceğiniz SQL Server 2012 ' den sqlcmd gerekir.  
+LocalDB 'yi yükleme hakkında daha fazla bilgi için bkz. [SQL Server Express LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb).
   
 ## <a name="programmatically-create-a-named-instance"></a>Program aracılığıyla adlandırılmış bir örnek oluşturma  
 

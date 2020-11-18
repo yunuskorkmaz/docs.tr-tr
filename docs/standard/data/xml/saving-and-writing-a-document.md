@@ -1,17 +1,16 @@
 ---
 title: Belge Kaydetme ve Yazma
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-ms.openlocfilehash: 40d031c06f0b76668a634fac46b8defccce62f01
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0cb83935b4175060a04f4be48e6b4eee2f44ed7d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289050"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823504"
 ---
 # <a name="saving-and-writing-a-document"></a>Belge Kaydetme ve Yazma
 Yüklediğinizde ve kaydettiğinizde <xref:System.Xml.XmlDocument> , kaydedilen belge orijinalden aşağıdaki yollarla farklılık gösterebilir:  
@@ -56,7 +55,7 @@ doc.Save(tw);
  , <xref:System.Xml.XmlDeclaration> Ve üyeleri için <xref:System.Xml.XmlNode.OuterXml%2A> , <xref:System.Xml.XmlDeclaration.WriteTo%2A> <xref:System.Xml.XmlNode.InnerXml%2A> <xref:System.Xml.XmlDeclaration.Encoding%2A> özelliği ayarlanmamışsa, hiçbir kodlama yazılmaz. Aksi halde, XML bildiriminde yazılan kodlama, özelliğinde bulunan kodlamayla aynı olur <xref:System.Xml.XmlDeclaration.Encoding%2A> .  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>OuterXml özelliğini kullanarak belge Içeriği yazma  
- <xref:System.Xml.XmlNode.OuterXml%2A>Özelliği, World Wide Web Konsorsiyumu (W3C) XML belge nesne modeli (DOM) standartlarına yönelik bir Microsoft uzantısıdır. <xref:System.Xml.XmlNode.OuterXml%2A>Özelliği tüm XML belgesinin işaretlemesini veya yalnızca tek bir düğümün ve onun alt düğümlerinin işaretlemesini almak için kullanılır. <xref:System.Xml.XmlNode.OuterXml%2A>verilen düğümü ve onun tüm alt düğümlerini temsil eden biçimlendirmeyi döndürür.  
+ <xref:System.Xml.XmlNode.OuterXml%2A>Özelliği, World Wide Web Konsorsiyumu (W3C) XML belge nesne modeli (DOM) standartlarına yönelik bir Microsoft uzantısıdır. <xref:System.Xml.XmlNode.OuterXml%2A>Özelliği tüm XML belgesinin işaretlemesini veya yalnızca tek bir düğümün ve onun alt düğümlerinin işaretlemesini almak için kullanılır. <xref:System.Xml.XmlNode.OuterXml%2A> verilen düğümü ve onun tüm alt düğümlerini temsil eden biçimlendirmeyi döndürür.  
   
  Aşağıdaki kod örneği, bir belgenin tamamen dize olarak nasıl kaydedileceğini gösterir.  
   

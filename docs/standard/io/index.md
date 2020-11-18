@@ -2,7 +2,6 @@
 title: Dosya ve akış g/ç-.NET
 description: .NET ' te, verilerin bir depolama ortamına ya da bir depolama ortamına aktarılması olan dosya ve akış g/ç 'nin temellerini öğrenin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - IO namespace
 - files, I/O
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: aced59995c8d0f478d0565c8fb8faa4f40c32968
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 4c6efc059423740f19460f24f12df81ac54f884a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189205"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825825"
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 
