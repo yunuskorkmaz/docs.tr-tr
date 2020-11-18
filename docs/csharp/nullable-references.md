@@ -3,12 +3,12 @@ title: Boş değer atanabilir başvuru türleri
 description: Bu makalede, C# 8,0 ' ye eklenen null yapılabilir başvuru türlerine ilişkin bir genel bakış sunulmaktadır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: cb9438db6364b6dc5d34f3a776d3ed7ec2e9978b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 8a86546ef4adfd7695d957f807a62972b00316dc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440399"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829173"
 ---
 # <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
@@ -48,10 +48,10 @@ name!.Length;
 
 Herhangi bir başvuru türü, uyarıların ne zaman oluşturulacağını açıklayan dört adet *null* değer içerebilir:
 
-- Null *atanabilir olmayan* : null bu türdeki değişkenlere atanamaz. Bu tür değişkenlerin, başvuru yapılmadan önce null olarak işaretli olması gerekmez.
-- *Nullable* : null, bu türdeki değişkenlere atanabilir. Bu türdeki değişkenlerin başvurusunun kaldırılması, önce `null` bir uyarıya neden olup olmadığını denetler.
-- *Yükümlülüğü* : zorunluluvou, pre-C # 8,0 durumundadır. Bu tür değişkenlere başvuru yapılmadan başvuru yapılabilir veya atanabilir.
-- *Bilinmiyor* : bilinmiyor, genellikle kısıtlamaların tür *Nullable* veya *null değer* atanabilir olması gerektiğini bildirmeyecek tür parametreleri içindir.
+- Null *atanabilir olmayan*: null bu türdeki değişkenlere atanamaz. Bu tür değişkenlerin, başvuru yapılmadan önce null olarak işaretli olması gerekmez.
+- *Nullable*: null, bu türdeki değişkenlere atanabilir. Bu türdeki değişkenlerin başvurusunun kaldırılması, önce `null` bir uyarıya neden olup olmadığını denetler.
+- *Yükümlülüğü*: zorunluluvou, pre-C # 8,0 durumundadır. Bu tür değişkenlere başvuru yapılmadan başvuru yapılabilir veya atanabilir.
+- *Bilinmiyor*: bilinmiyor, genellikle kısıtlamaların tür *Nullable* veya *null değer* atanabilir olması gerektiğini bildirmeyecek tür parametreleri içindir.
 
 Değişken bildirimindeki bir türün null olabilme değeri, değişkenin bildirildiği *null yapılabilir bağlam* tarafından denetlenir.
 
@@ -70,7 +70,7 @@ Null yapılabilir bağlamlar, derleyicinin başvuru türü değişkenlerini nas�
 - `disable`: Nullable ek açıklama bağlamı **devre dışı bırakıldı**. Null yapılabilir uyarı bağlamı **devre dışı**.
   - Bir başvuru türü değişkenleri, C# ' ın önceki sürümlerinde olduğu gibi, zorunluluvou 'lardır. Tüm null değer alabilirlik uyarıları devre dışı bırakıldı.
 
-**Örnek** :
+**Örnek**:
 
 ```xml
 <Nullable>enable</Nullable>
@@ -205,7 +205,7 @@ public static class Program
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Taslak Nullable başvuru türleri belirtimi](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Taslak Nullable başvuru türleri belirtimi](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 - [Null yapılabilir başvurular öğreticisine giriş](tutorials/nullable-reference-types.md)
 - [Var olan bir kod temelinin Nullable başvurulara geçirilmesi](tutorials/upgrade-to-nullable-references.md)
 - [-Nullable (C# derleyici seçeneği)](language-reference/compiler-options/nullable-compiler-option.md)

@@ -1,7 +1,6 @@
 ---
 title: Normal Ifade davranışı
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: a93e0e7bac782d9a4ce47c1586796b063563d2b6
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 1e5d2d40f52220a8fff40eb19a24d8b2efd3cab5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888678"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829706"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal ifade davranışının ayrıntıları
 
@@ -148,7 +147,7 @@ ms.locfileid: "92888678"
 |-----------|-----------------|
 |[Geri Dönüş](backtracking-in-regular-expressions.md)|Normal ifade izleme dallarının alternatif eşleşmelerin nasıl bulunacağını gösteren bilgiler sağlar.|
 |[Derleme ve yeniden kullanma](compilation-and-reuse-in-regular-expressions.md)|Performansı artırmak için normal ifadeleri derleme ve yeniden kullanma hakkında bilgi sağlar.|
-|[İş parçacığı güvenliği](thread-safety-in-regular-expressions.md)|Normal ifade iş parçacığı güvenliği hakkında bilgi sağlar ve normal ifade nesnelerine erişimi ne zaman eşitlemeniz gerektiğini açıklar.|
+|[İş Parçacığı Güvenliği](thread-safety-in-regular-expressions.md)|Normal ifade iş parçacığı güvenliği hakkında bilgi sağlar ve normal ifade nesnelerine erişimi ne zaman eşitlemeniz gerektiğini açıklar.|
 |[.NET normal Ifadeleri](regular-expressions.md)|Normal ifadelerin programlama diline ilişkin bir genel bakış sağlar.|
 |[Normal İfade Nesnesi Modeli](the-regular-expression-object-model.md)|Normal ifade sınıflarının nasıl kullanılacağını gösteren bilgi ve kod örnekleri sağlar.|
 |[Normal İfade Dili - Hızlı Başvuru](regular-expression-language-quick-reference.md)|Normal ifadeleri tanımlamak için kullanabileceğiniz karakter, işleç ve yapılar kümesi hakkında bilgi sağlar.|

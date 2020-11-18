@@ -2,7 +2,6 @@
 title: Çöp toplamanın temelleri
 description: Çöp toplayıcısının nasıl çalıştığını ve en iyi performans için nasıl yapılandırılabileceğini öğrenin.
 ms.date: 11/15/2019
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
 - garbage collection, background
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: b70eb44c3d92e03ab4b33f81b87d48c70797cec5
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1536aaf936eb8d55aa56b80b50639541e89c9d2c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441017"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827821"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 

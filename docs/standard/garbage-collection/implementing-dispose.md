@@ -2,7 +2,6 @@
 title: Dispose metodu uygulama
 description: Bu makalede, .NET 'teki kodunuzun kullandığı yönetilmeyen kaynakları serbest bırakarak Dispose yöntemini uygulamayı öğrenin.
 ms.date: 09/08/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 863f78daf13ae9d795c37c1c6f428d387b9a026b
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: c9b13b2aa77449809f149ea26681d75fea629b61
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022928"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827795"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose metodu uygulama
 

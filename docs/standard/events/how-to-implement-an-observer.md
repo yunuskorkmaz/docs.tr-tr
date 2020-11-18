@@ -2,7 +2,6 @@
 title: 'Nasıl yapılır: Gözlemci Uygulama'
 description: .NET ' te bir gözlemci uygulayın. Gözlemci tasarım deseninin bir gözlemci arasında, bildirimler için kayıt ve sağlayıcı için bir bölüm gerekir.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - observers [.NET], observer design pattern
 - observer design pattern [.NET], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: 71df673b580f711ad692454d12beea991810f508
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: bfd595cec8e499b760f75f614bd0a61b031eb207
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064216"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828341"
 ---
 # <a name="how-to-implement-an-observer"></a>Nasıl yapılır: Gözlemci Uygulama
 Gözlemci tasarım deseninin, bildirimleri kaydeden bir gözlemci arasında bir bölme ve verileri izleyen ve bir veya daha fazla observers 'a bildirim gönderen bir sağlayıcı gerekir. Bu konu, bir gözlemci oluşturmayı açıklar. İlgili konu, [nasıl yapılır: sağlayıcı uygulama](how-to-implement-a-provider.md), bir sağlayıcının nasıl oluşturulacağını açıklar.  

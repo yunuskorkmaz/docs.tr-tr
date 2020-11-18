@@ -2,7 +2,6 @@
 title: Yönetilmeyen kaynakları Temizleme
 description: Dosyalar, Windows, & ağı veya veritabanı bağlantıları gibi .NET atık toplayıcısı tarafından işlenmeyen yönetilmeyen kaynakları temizleme bölümüne bakın.
 ms.date: 05/13/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Close method
 - Dispose method
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 07a8d754f1fc2612ae53407fa1b12a1eab7e38f2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: edfb01411df3d974073a397a20f58acdcd8521f3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599844"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827509"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Yönetilmeyen kaynakları Temizleme
 

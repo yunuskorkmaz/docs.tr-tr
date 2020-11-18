@@ -2,19 +2,18 @@
 title: Özel durum işleme (görev paralel kitaplığı)
 description: .NET 'teki görev paralel kitaplığı (TPL) kullanarak özel durum işlemeyi araştırma. Bkz. iç içe toplu özel durumlar, iç özel durumlar, gözlemlenen görev özel durumları, & daha fazlası.
 ms.date: 04/20/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: f1c1a994f4b3a8df0556a0190bc4eacb63f2921e
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: fd16fd4263c092f8678589e1a8dd9544955e798a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662543"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827340"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Özel durum işleme (görev paralel kitaplığı)
 
@@ -39,7 +38,7 @@ Bir özel durum yayan bir görevi beklemeyin veya <xref:System.Threading.Tasks.T
 Özel durumların katılan iş parçacığına balon ekleme yapmasına izin verildiğinde, özel durum oluşturulduktan sonra bir görev bazı öğeleri işlemeye devam edebilir.
 
 > [!NOTE]
-> "Yalnızca kendi kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak devam edebilir ve bu örneklerde gösterilen özel durum işleme davranışını görebilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel**altındaki **Etkinleştir yalnızca kendi kodum** onay kutusunun işaretini kaldırmanız yeterlidir.
+> "Yalnızca kendi kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak devam edebilir ve bu örneklerde gösterilen özel durum işleme davranışını görebilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel** altındaki **Etkinleştir yalnızca kendi kodum** onay kutusunun işaretini kaldırmanız yeterlidir.
 
 ## <a name="attached-child-tasks-and-nested-aggregateexceptions"></a>Bağlı alt görevler ve iç içe geçmiş AggregateExceptions
 

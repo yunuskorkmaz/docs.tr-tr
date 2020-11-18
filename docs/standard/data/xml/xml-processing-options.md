@@ -2,14 +2,13 @@
 title: XML İşleme Seçenekleri
 description: LINQ to XML, XmlReader, XmlWriter, XmlDocument, XPathNavigator, XslCompiledTransform, XmlLite ve MSXML dahil olmak üzere XML işleme seçeneklerini gözden geçirin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-ms.openlocfilehash: 707ac1e4c8e16e701faed8476f0e773270dc1174
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a0b3c6295874e891c1271b373fb012b5f191bcfb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554534"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829407"
 ---
 # <a name="xml-processing-options"></a>XML İşleme Seçenekleri
 XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerinin bir listesi için aşağıdaki tablolara bakın.  
@@ -18,7 +17,7 @@ XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerinin bir
   
 |**Seçenek**|**İşlem türü**|**Açıklama**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML (C#)](../../linq/linq-xml-overview.md) <br/> [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md) <br />( <xref:System.Xml.Linq> ad alanı)|Bellek içi|.NET Framework dil ile tümleşik sorgu (LINQ) teknolojisine göre.<br />-Nesneler, ilişkisel veriler ve XML verileri için SQL 'e benzeyen sorgu deneyimi sağlar.<br />-Sezgisel belge oluşturma ve dönüştürme özellikleri sağlar.<br />-Yeni kod yazıyorsanız bu seçeneği kullanın.|  
+|[LINQ to XML (C#)](../../linq/linq-xml-overview.md) <br/> [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md) <br />( <xref:System.Xml.Linq> ad alanı)|Bellek içi|-.NET Framework Language-Integrated Query (LINQ) teknolojisine dayalıdır.<br />-Nesneler, ilişkisel veriler ve XML verileri için SQL 'e benzeyen sorgu deneyimi sağlar.<br />-Sezgisel belge oluşturma ve dönüştürme özellikleri sağlar.<br />-Yeni kod yazıyorsanız bu seçeneği kullanın.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Akış tabanlı|-XML verilerine erişmenin hızlı, önbelleğe alınmamış ve salt ileri bir yolunu sağlar.<br />-Yöntemini kullanarak nesneler oluşturabilir <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> ve sınıfını kullanarak nesne üzerinde etkinleştirilecek özellikler kümesini belirtebilirsiniz <xref:System.Xml.XmlReaderSettings> .|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Akış tabanlı|-XML verisi oluşturmak için hızlı, önbelleğe alınmamış ve salt ileri bir yol sağlar.<br />-Yöntemini kullanarak nesneler oluşturabilir <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> ve sınıfını kullanarak nesne üzerinde etkinleştirilecek özellikler kümesini belirtebilirsiniz <xref:System.Xml.XmlWriterSettings> .|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Bellek içi|- [W3C belge nesne modeli (DOM) düzey 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) ve [DOM düzey 2 temel](https://www.w3.org/TR/DOM-Level-2-Core/) önerilerini uygular.<br />-Tanıdık DOM modeline göre yöntemleri ve özellikleri kullanarak düğümleri oluşturabilir, ekleyebilir, kaldırabilir ve değiştirebilirsiniz.<br />-W3C DOM kullanan mevcut kodu değiştiriyorsanız bu seçeneği kullanın.|  

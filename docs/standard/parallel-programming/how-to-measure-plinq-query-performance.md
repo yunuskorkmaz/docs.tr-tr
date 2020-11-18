@@ -1,19 +1,18 @@
 ---
 title: 'Nasıl yapılır: PLINQ Sorgu Performansını Ölçme'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, how to measure performance
 ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
-ms.openlocfilehash: f240b2c275305aec5699eb42406e0689925490a8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43f83a34531b853d108785052f637d9568c45280
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288192"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826885"
 ---
 # <a name="how-to-measure-plinq-query-performance"></a>Nasıl yapılır: PLINQ Sorgu Performansını Ölçme
 

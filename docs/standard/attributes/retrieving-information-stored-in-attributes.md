@@ -2,7 +2,6 @@
 title: Özniteliklerde Depolanan Bilgileri Alma
 description: Özniteliklerde depolanan bilgileri, örneğin bir öznitelik örneği, aynı kapsam için birçok örnek, farklı kapsamlar için çok sayıda örnek & almayı öğrenin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 710f3e3d1051bad4a61e59e330204d622b9fd683
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 8f58648f5cc73b911f0393f2a631b8976ac097b4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889211"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829030"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Özniteliklerde Depolanan Bilgileri Alma
 Özel bir özniteliğin alınması basit bir işlemdir. İlk olarak, almak istediğiniz özniteliğin bir örneğini bildirin. Ardından, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> Yeni özniteliğini almak istediğiniz özniteliğin değerine başlatmak için yöntemini kullanın. Yeni özniteliği başlatıldıktan sonra, değerlerini almak için özelliklerini kullanmanız yeterlidir.  

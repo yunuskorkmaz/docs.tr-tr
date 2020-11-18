@@ -2,18 +2,17 @@
 title: Dizeleri alt dizelere ayır
 description: String. Split, normal ifadeler ve String. SUBSTRING dahil olmak üzere bir dizenin parçalarını ayıklamaya yönelik farklı teknikler hakkında bilgi edinin.
 ms.date: 10/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET], breaking up
-ms.openlocfilehash: 88947c4576b0496e4b4e45042d665e3ca5857c53
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: b753476b7d8e5808fdcacc6f28bd1de5f8b232bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403632"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829655"
 ---
 # <a name="extract-substrings-from-a-string"></a>Dizeden alt dizeleri Ayıkla
 
@@ -44,7 +43,7 @@ Dönemler alt dizelerdeki çıktı, ancak artık iki ek boş alt dize eklenmişt
 
 ## <a name="regular-expressions"></a>Normal ifadeler
 
-Dizeniz sabit bir düzene uyuyorsa, öğelerini ayıklamak ve işlemek için normal bir ifade kullanabilirsiniz. Örneğin, dizeler " *Number* *Operand* *Number* " biçimini alıyorsa, dizenin öğelerini ayıklamak ve işlemek için [normal bir ifade](regular-expressions.md) kullanabilirsiniz. İşte bir örnek:
+Dizeniz sabit bir düzene uyuyorsa, öğelerini ayıklamak ve işlemek için normal bir ifade kullanabilirsiniz. Örneğin, dizeler "*Number* *Operand* *Number*" biçimini alıyorsa, dizenin öğelerini ayıklamak ve işlemek için [normal bir ifade](regular-expressions.md) kullanabilirsiniz. Aşağıda bir örnek verilmiştir:
 
 :::code language="csharp" source="snippets/parse-strings/csharp/regex.cs" id="1" interactive="try-dotnet":::
 :::code language="vb" source="snippets/parse-strings/vb/regex.vb" id="1":::

@@ -1,26 +1,25 @@
 ---
 title: Mühürleme
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - limiting extensibility
 - classes [.NET Framework], sealing
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-ms.openlocfilehash: a54c68efb4ac114fe0e5a5712eca877bef35c103
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 29023ad431f9d05caf44e59f66eccee24bfa0433
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290116"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828692"
 ---
 # <a name="sealing"></a>Mühürleme
 Nesne yönelimli çerçevelerin özelliklerinden biri, geliştiricilerin bunları çerçeve tasarımcıları tarafından beklenmeyen yollarla genişletebileceği ve özelleştirebilleridir. Bu, Genişletilebilir tasarımın güç ve tehlike ' dir. Çatısını tasarladığınızda, bu, bu nedenle, gerektiğinde genişletilebilirlik için dikkatle tasarlamak ve çok önemli olduğunda genişletilebilirliği kısıtlamak için çok önemlidir.
 
  Genişletilebilirlik 'in mühürlediği güçlü bir mekanizma. Sınıfı ya da tek üyeleri mühürleyebilirsiniz. Bir sınıfı mühürleyen, kullanıcıların sınıfından devralmasını önler. Bir üyeyi mühürleyen, kullanıcıların belirli bir üyeyi geçersiz kılmasını önler.
 
- ❌Bunu yapmak için iyi bir neden olmadan sınıfları mühürlemeyin.
+ ❌ Bunu yapmak için iyi bir neden olmadan sınıfları mühürlemeyin.
 
  Bir sınıfı mühürleyen bir genişletilebilirlik senaryosunu düşünmek iyi bir neden değil. Kullanışlı Üyeler ekleme gibi belirgin olmayan çeşitli nedenlerle sınıflardan devralması gibi Framework kullanıcıları. Kullanıcıların bir türden kalýtýmla devralması için açık olmayan nedenler örnekleri için bkz. [korumasız sınıflar](unsealed-classes.md) .
 
@@ -34,7 +33,7 @@ Nesne yönelimli çerçevelerin özelliklerinden biri, geliştiricilerin bunlar�
 
 - Sınıfı çok hızlı çalışma zamanı araması gerektiren bir özniteliktir. Sealed öznitelikleri, korumasız olanlardan biraz daha yüksek performans düzeylerine sahiptir. Bkz. [öznitelikler](attributes.md).
 
- ❌Korumalı türler üzerinde korumalı veya sanal üye bildirme.
+ ❌ Korumalı türler üzerinde korumalı veya sanal üye bildirme.
 
  Tanım olarak, korumalı türler öğesinden devralınamaz. Bu, korumalı türlerdeki korunan üyelerin çağrılabilmesi ve korumalı türlerde Sanal yöntemlerin geçersiz kılınamayacağını gösterir.
 
@@ -44,7 +43,7 @@ Nesne yönelimli çerçevelerin özelliklerinden biri, geliştiricilerin bunlar�
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,7 +2,6 @@
 title: 'Nasıl yapılır: üretici-tüketici veri akışı modelini uygulama'
 description: .NET 'teki TPL veri akışı kitaplığını kullanarak bir üretici-tüketici veri akışı deseninin nasıl uygulanacağını anlayın.
 ms.date: 09/24/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-ms.openlocfilehash: fc68d9e678dab88ec5008b6c15ef17a5d20f25ae
-ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
+ms.openlocfilehash: 3bc97cce2a063e7d5286ad886401cb6ae2ce3026
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91206386"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826937"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Nasıl yapılır: üretici-tüketici veri akışı modelini uygulama
 

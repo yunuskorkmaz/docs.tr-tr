@@ -1,7 +1,6 @@
 ---
 title: Dizi ve Listeleri Düzenlemek için Genel Temsilciler
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - delegates [.NET], generic delegates
 - chaining delegates
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: 2ee80acb51ab3c394a3c0b12fface93a9d541f30
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b3b18a2efc4dba432ee241d764c1a81101796baf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063208"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827288"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Dizi ve Listeleri Düzenlemek için Genel Temsilciler
 Bu konu, bir dizi veya koleksiyonun öğelerinde yapılacak dönüşümler, arama koşulları ve eylemler için genel temsilcilerin genel bir özetini sağlar.  

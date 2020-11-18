@@ -1,16 +1,15 @@
 ---
 title: Paralel Programlama için Veri Yapıları
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: cea9264a30469881e3ec54fc378af3ddb70bff8e
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925330"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829537"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Paralel Programlama için Veri Yapıları
 
@@ -21,7 +20,7 @@ ms.locfileid: "92925330"
   
  Aşağıdaki tabloda, eşzamanlı koleksiyon sınıfları listelenmektedir:  
   
-|Tür|Description|  
+|Tür|Açıklama|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|, Uygulayan iş parçacığı güvenli koleksiyonlar için engelleme ve sınırlayıcı yetenekler sağlar <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> . Üretici iş parçacıkları, kullanılabilir yuva yoksa veya koleksiyon doluysa engellenir. Koleksiyon boşsa, tüketici iş parçacıkları engeller. Bu tür Ayrıca, tüketiciler ve üreticileri tarafından engellenmeyen erişimi de destekler. <xref:System.Collections.Concurrent.BlockingCollection%601> , tarafından desteklenen herhangi bir koleksiyon sınıfı için engelleme ve sınırlama sağlamak üzere bir temel sınıf veya yedekleme deposu olarak kullanılabilir <xref:System.Collections.Generic.IEnumerable%601> .|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Ölçeklenebilir ekleme ve Get işlemleri sağlayan iş parçacığı güvenli bir paket uygulamasıdır.|  
@@ -36,7 +35,7 @@ ms.locfileid: "92925330"
   
  Aşağıdaki tabloda eşitleme türleri listelenmektedir:  
   
-|Tür|Description|  
+|Tür|Açıklama|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Birden çok iş parçacığının paralel bir algoritma üzerinde çalışmasını, her görevin gelişini işaret edip bir miktar veya tüm görevler gelene kadar engellemesini sağlar. Daha fazla bilgi için bkz. [engeli](../threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Kolay bir buluşma mekanizması sağlayarak çatalını ve katılmayı basitleştirir. Daha fazla bilgi için bkz. [CountdownEvent](../threading/countdownevent.md).|  
@@ -45,7 +44,7 @@ ms.locfileid: "92925330"
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Kilidi almaya çalışan iş parçacığının, bir döngü veya döndürme için, bir süre içinde, bir süre boyunca, bir zaman için bir döngü veya *döndürme* için beklemesini sağlayan bir karşılıklı dışlama kilit temel türü. Kilidin bekleme işleminin kısa olması beklenildiği senaryolarda, <xref:System.Threading.SpinLock> diğer kilitleme biçimlerinden daha iyi performans sunar. Daha fazla bilgi için bkz. [SpinLock](../threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Belirli bir süre için döngü uygulanacak küçük, hafif bir tür ve sonuç sayısı aşılırsa iş parçacığını bekleme durumuna yerleştirir.  Daha fazla bilgi için bkz. [SpinWait](../threading/spinwait.md).|  
   
- Daha fazla bilgi için bkz.  
+ Daha fazla bilgi için bkz:  
   
 - [Nasıl yapılır: Low-Level eşitleme için SpinLock kullanma](../threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "92925330"
   
  Aşağıdaki tabloda, yavaş başlatma türleri listelenmektedir:  
   
-|Tür|Description|  
+|Tür|Açıklama|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Hafif, iş parçacığı açısından güvenli yavaş başlatma sağlar.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Her bir iş parçacığı geç-başlatma işlevini çağırarak, iş parçacığı başına temelinde geç tarafından başlatılan bir değer sağlar.|  

@@ -1,25 +1,24 @@
 ---
-title: 'Nasıl Yapılır: Bekleme Tanıtıcıları İçeren İptal İsteklerini Dinleme'
+title: 'Nasıl yapılır: Bekleme Tanıtıcıları İçeren İptal İsteklerini Dinleme'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation, waiting with wait handles
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
-ms.openlocfilehash: e44b10b88bef61edcf3f547f56b4020740530e26
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ec5bc796532381b3e21e4dddc037a927b7e68833
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279549"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826449"
 ---
-# <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Nasıl Yapılır: Bekleme Tanıtıcıları İçeren İptal İsteklerini Dinleme
+# <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Nasıl yapılır: Bekleme Tanıtıcıları İçeren İptal İsteklerini Dinleme
 Bir olayın sinyal vermesini beklediği sırada bir yöntem engellenirse, iptal belirtecinin değerini denetleyebilir ve zamanında yanıt verebilir. İlk örnek, <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> Birleşik iptal çerçevesini yerel olarak desteklemeyen gibi olaylarla çalışırken bu sorunun nasıl çözüleceğini gösterir. İkinci örnekte <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> , Birleşik iptali destekleyen, kullanan daha kolay bir yaklaşım gösterilmektedir.  
   
 > [!NOTE]
-> "Yalnızca kendi kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak bu uygulamadan devam edebilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışına bakabilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel**altında "yalnızca kendi kodum" onay kutusunun işaretini kaldırmanız yeterlidir.  
+> "Yalnızca kendi kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak bu uygulamadan devam edebilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışına bakabilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel** altında "yalnızca kendi kodum" onay kutusunun işaretini kaldırmanız yeterlidir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, <xref:System.Threading.ManualResetEvent> Birleşik iptali desteklemeyen bekleme tanıtıcılarının engellemesini nasıl engellemenin nasıl yapılacağını göstermek için bir kullanır.  
@@ -35,4 +34,4 @@ Bir olayın sinyal vermesini beklediği sırada bir yöntem engellenirse, iptal 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen İş Parçacıklarında İptal](cancellation-in-managed-threads.md)
+- [Yönetilen Iş parçacıklarında iptal](cancellation-in-managed-threads.md)

@@ -2,7 +2,6 @@
 title: Özel durumlar için en iyi uygulamalar-.NET
 description: Try/catch/finally kullanma, özel durum olmadan ortak koşulları işleme ve önceden tanımlanmış .NET özel durum türlerini kullanma gibi özel durumlar için en iyi uygulamaları öğrenin.
 ms.date: 12/05/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 90dda00acd32852b032fc383580c5f34022ec9b4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 815dcc81cf41465bffd1515d366a66ff558304fa
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447101"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828237"
 ---
 # <a name="best-practices-for-exceptions"></a>Özel durumlar için en iyi uygulamalar
 
@@ -65,15 +64,15 @@ Değer türleri için, `Nullable<T>` hata göstergesi olarak veya varsayılan ol
 
 ## <a name="use-the-predefined-net-exception-types"></a>Önceden tanımlanmış .NET özel durum türlerini kullanın
 
-Yalnızca önceden tanımlanmış bir uygulama uygulanmazsa yeni bir özel durum sınıfı tanıtın. Örneğin:
+Yalnızca önceden tanımlanmış bir uygulama uygulanmazsa yeni bir özel durum sınıfı tanıtın. Örnek:
 
 - <xref:System.InvalidOperationException>Bir özellik kümesi veya yöntem çağrısı nesnenin geçerli durumuna uygun değilse bir özel durum oluşturur.
 
 - <xref:System.ArgumentException>Geçersiz parametreler geçirilirse, ' den türetilen önceden tanımlanmış sınıflardan birini veya bir özel durum oluşturur <xref:System.ArgumentException> .
 
-## <a name="end-exception-class-names-with-the-word-exception"></a>Sözcük ile özel durum sınıfı adlarını Sonlandır`Exception`
+## <a name="end-exception-class-names-with-the-word-exception"></a>Sözcük ile özel durum sınıfı adlarını Sonlandır `Exception`
 
-Özel bir özel durum gerekli olduğunda, bunu uygun şekilde adlandırın ve sınıfından türetirsiniz <xref:System.Exception> . Örneğin:
+Özel bir özel durum gerekli olduğunda, bunu uygun şekilde adlandırın ve sınıfından türetirsiniz <xref:System.Exception> . Örnek:
 
 [!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -89,7 +88,7 @@ Kendi özel durum sınıflarınızı oluştururken en az üç ortak Oluşturucu 
 
 - <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, bir dize iletisi ve bir iç özel durum kabul eder.
 
-Bir örnek için bkz. [nasıl yapılır: Kullanıcı tanımlı özel durumlar oluşturma](how-to-create-user-defined-exceptions.md).
+Bir örnek için bkz. [nasıl yapılır: oluşturma User-Defined özel durumları](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Kod uzaktan yürütüldüğünde özel durum verilerinin kullanılabilir olduğundan emin olun
 
@@ -99,7 +98,7 @@ Kullanıcı tanımlı özel durumlar oluştururken, özel durumlar için meta ve
 
 - Derlemeyi iki uygulama etki alanı tarafından paylaşılan ortak bir uygulama temel dizinine koyun.
 
-    \-veya
+    \- veya
 
 - Eğer etki alanları ortak bir uygulama temel dizini paylaşmıyorsa, özel durum bilgisi içeren derlemeyi bir tanımlayıcı ad ile imzalayıp derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtarak.
 
@@ -109,7 +108,7 @@ Temiz cümleler yazın ve son noktalama işaretlerini ekleyin. Özelliğe atanan
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>Her özel duruma yerelleştirilmiş bir dize iletisi ekleyin
 
-Kullanıcının gördüğü hata iletisi, <xref:System.Exception.Message?displayProperty=nameWithType> özel durum sınıfının adından değil, oluşturulan özel durumun özelliğinden türetilir. Genellikle, <xref:System.Exception.Message?displayProperty=nameWithType> ileti dizesini `message` bir [özel durum oluşturucusunun](xref:System.Exception.%23ctor%2A)bağımsız değişkenine geçirerek özelliğe bir değer atarsınız.
+Kullanıcının gördüğü hata iletisi, <xref:System.Exception.Message?displayProperty=nameWithType> özel durum sınıfının adından değil, oluşturulan özel durumun özelliğinden türetilir. Genellikle, <xref:System.Exception.Message?displayProperty=nameWithType>  ileti dizesini `message` bir [özel durum oluşturucusunun](xref:System.Exception.%23ctor%2A)bağımsız değişkenine geçirerek özelliğe bir değer atarsınız.
 
 Yerelleştirilmiş uygulamalar için, uygulamanızın oluşturabildiğini her özel durum için yerelleştirilmiş bir ileti dizesi sağlamalısınız. Yerelleştirilmiş hata iletileri sağlamak için kaynak dosyalarını kullanırsınız. Uygulamaları Yerelleştirme ve yerelleştirilmiş dizeleri alma hakkında bilgi için aşağıdaki makalelere bakın:
 
@@ -127,7 +126,7 @@ Yığın izlemesi özel durumun oluşturulduğu deyimden başlar ve `catch` öze
 
 ## <a name="use-exception-builder-methods"></a>Özel durum Oluşturucu yöntemlerini kullanın
 
-Bir sınıfın uygulamasında aynı özel durumu farklı yerlerde oluşturması yaygındır. Fazla kodu önlemek için, özel durumu oluşturmak ve döndürmek için yardımcı yöntemler kullanın. Örneğin:
+Bir sınıfın uygulamasında aynı özel durumu farklı yerlerde oluşturması yaygındır. Fazla kodu önlemek için, özel durumu oluşturmak ve döndürmek için yardımcı yöntemler kullanın. Örnek:
 
 [!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]

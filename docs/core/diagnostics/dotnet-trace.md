@@ -1,25 +1,39 @@
 ---
-title: DotNet-izleme aracı-.NET Core
-description: DotNet-Trace komut satırı aracını yükleme ve kullanma.
-ms.date: 11/21/2019
-ms.openlocfilehash: 4a3694f6ed748779809ee4c4bfd941bb6f1ac490
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+title: DotNet-Trace Tanılama aracı-.NET CLı
+description: .NET EventPipe kullanarak, yerel profil oluşturucu olmadan çalışan bir işlemin .NET izlemelerini toplamak için DotNet-Trace CLı aracını yüklemeyi ve kullanmayı öğrenin.
+ms.date: 11/17/2020
+ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687635"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829316"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>DotNet-izleme performansı Analizi yardımcı programı
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
 
-## <a name="install-dotnet-trace"></a>DotNet 'yi Install-Trace
+## <a name="install"></a>Yükleme
 
-`dotnet-trace` [DotNet aracı install](../tools/dotnet-tool-install.md) komutuyla [NuGet paketini](https://www.nuget.org/packages/dotnet-trace) yükler:
+İndirmek ve yüklemek için iki yol vardır `dotnet-trace` :
 
-```dotnetcli
-dotnet tool install --global dotnet-trace
-```
+- **DotNet genel aracı:**
+
+  NuGet paketinin en son sürümünü yüklemek için `dotnet-trace` [NuGet package](https://www.nuget.org/packages/dotnet-trace) [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-trace
+  ```
+
+- **Doğrudan indirme:**
+
+  Platformunuzla eşleşen araç yürütülebilirini indirin:
+
+  | İşletim Sistemi  | Platform |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [ARM](https://aka.ms/dotnet-trace/win-arm) \| [ARM-x64](https://aka.ms/dotnet-trace/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \| [ARM](https://aka.ms/dotnet-trace/linux-arm) \| [arm64](https://aka.ms/dotnet-trace/linux-arm64) \| [MUSL-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \| [MUSL-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Özeti
 
@@ -27,7 +41,7 @@ dotnet tool install --global dotnet-trace
 dotnet-trace [-h, --help] [--version] <command>
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet-trace`Araç:
 
@@ -97,7 +111,7 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`-p|--process-id <PID>`**
 
-  İzlemeyi toplanacak işlem kimliği.
+  İzlemeyi toplanacak işlem KIMLIĞI.
 
 - **`--profile <profile-name>`**
 
@@ -196,11 +210,12 @@ Kullanarak izlemeleri toplamak için `dotnet-trace` :
 
 ## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>Bir alt uygulama başlatın ve DotNet-Trace kullanarak başlangıçtan bir izleme toplayın
 
-NOTE: Bu yalnızca .NET 5,0 veya sonraki sürümleri çalıştıran uygulamalar için geçerlidir.
+> [!IMPORTANT]
+> Bu, yalnızca .NET 5,0 veya sonraki sürümleri çalıştıran uygulamalar için geçerlidir.
 
 Bazen bir işlemin başlangıcında bir izleme toplamak yararlı olabilir. .NET 5,0 veya üzeri sürümlerini çalıştıran uygulamalar için bu, DotNet-Trace kullanılarak yapılabilir.
 
-Bu, `hello.exe` ile `arg1` ve `arg2` komut satırı bağımsız değişkenleri olarak başlatılır ve çalışma zamanı başlangıcında bir izleme toplar:
+Bu, `hello.exe` `arg1` ve `arg2` komut satırı bağımsız değişkenleriyle başlatılır ve çalışma zamanı başlangıcında bir izleme toplar:
 
 ```console
 dotnet-trace collect -- hello.exe arg1 arg2

@@ -2,7 +2,6 @@
 title: Normal İfade Seçenekleri
 description: Büyük/küçük harfe duyarsız eşleştirme, çok satırlı mod ve sağdan sola mod gibi normal ifade seçeneklerini .NET 'te nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 5687d1e5a11e69cc9ecf2bd34067329cc52955d2
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a77409476c8b2c1b32429118edbe6ad6542a7b09
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889003"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828952"
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 
@@ -265,7 +264,7 @@ Ancak, aşağıdaki durumlarda, seçeneğini kullansanız bile normal bir ifaded
 
 - Köşeli ayraç içinde `{` *n* `}` , `{` *n* `,}` ve `{` *n* `,` *e* `}` gibi bir nicelik süresi içinde boşluk bulunamaz. Örneğin, normal ifade deseninin bir boşluk `\d{1, 3}` karakteri içerdiği için, bir veya daha fazla basamaklı bir sayı dizisi ile üç basamağa eşleşmesi başarısız olur.
 
-- Dil öğesi tanıtan bir karakter dizisi içinde boşluk kullanılamaz. Örneğin:
+- Dil öğesi tanıtan bir karakter dizisi içinde boşluk kullanılamaz. Örnek:
 
   - Language öğesi alt `(?:` *ifadesi* `)` yakalama olmayan bir grubu temsil eder ve `(?:` öğenin bölümünde gömülü boşluk bulunamaz. `(? :` *subexpression* `)` <xref:System.ArgumentException> Normal ifade altyapısı, stili ayrıştıramadığından ve alt ifadesi alt `( ?:` *subexpression* `)` *ifade* ile eşleşmediğinden, bu, bir çalışma zamanı oluşturur.
 

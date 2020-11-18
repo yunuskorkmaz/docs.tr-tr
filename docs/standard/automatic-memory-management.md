@@ -1,7 +1,6 @@
 ---
 title: Otomatik Bellek Yönetimi
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, automatic memory management
 - memory, allocating
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: a9b0e9a02d519eb18debe4249623df010e6f0e6d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: abb3133312893ba8a5584b4daa03faab6cf40974
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276198"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828991"
 ---
 # <a name="automatic-memory-management"></a>Otomatik Bellek Yönetimi
 Otomatik bellek yönetimi, ortak dil çalışma zamanının [yönetilen yürütme](managed-execution-process.md)sırasında sağladığı hizmetlerden biridir. Ortak dil çalışma zamanının atık toplayıcısı, bir uygulama için bellek ayırmayı ve serbest bırakma işlemini yönetir. Geliştiriciler için bu, yönetilen uygulamalar geliştirirken bellek yönetimi görevleri gerçekleştirmek için kod yazmaya gerek olmadığı anlamına gelir. Otomatik bellek yönetimi, bir nesneyi serbest bırakmayı unutarak bir bellek sızıntısına neden olmak veya daha önce serbest bırakılmış bir nesnenin belleğine erişmeye çalışmak gibi yaygın sorunları ortadan kaldırabilir. Bu bölümde, atık toplayıcının belleği nasıl ayırdığı ve serbest bıraktığı açıklanmaktadır.  
@@ -47,7 +46,7 @@ Otomatik bellek yönetimi, ortak dil çalışma zamanının [yönetilen yürütm
  Atık toplayıcısı nesil 0 için ilk toplama işlemini gerçekleştirdikten ve erişilebilen nesneleri nesil 1'e yükselttikten sonra, yönetilen yığının kalanını nesil 0 olarak değerlendirir. Nesil 0 dolana ve başka bir toplama işlemi gerçekleştirmek gerekene kadar yeni nesneler için nesil 0'da bellek ayırmaya devam eder. Bu noktada, atık toplayıcının optimizasyon motoru, önceki nesillerdeki nesnelerin incelenmesinin gerekip gerekmediğini belirler. Örneğin, nesil 0'da gerçekleştirilen bir toplama işlemi, uygulamanın yeni nesne oluşturma işlemini başarıyla tamamlayabilmesi için yeterli miktarda bellek geri kazanamazsa, atık toplayıcı önce nesil 1, ardından da nesil 2 için bir toplama işlemi gerçekleştirebilir. Eğer bu yeterince belleğin geri kazanılmasını sağlamazsa, atık toplayıcı nesil 2, 1 ve 0 için bir toplama işlemi gerçekleştirebilir. Her toplama işleminden sonra atık toplayıcı nesil 0 içindeki erişilebilir nesneleri sıkıştırıp nesil 1'e yükseltir. Nesil 1'de toplama işlemlerinden sonra varlığına devam eden nesneler nesil 2'ye yükselir. Atık toplayıcı yalnızca üç nesil desteklediği için, nesil 2'de bir toplama işleminden sonra varlığını sürdüren nesneler gelecekteki bir toplama işleminde erişilemez olarak belirlenene kadar nesil 2 içinde kalmaya devam eder.  
   
 ## <a name="releasing-memory-for-unmanaged-resources"></a>Yönetilmeyen Kaynaklar için Bellek Serbest Bırakma  
- Uygulamanızın oluşturduğu nesnelerin çoğu için, gerekli bellek yönetimi görevlerini otomatik olarak gerçekleştirilmesi konusunda atık toplayıcıya güvenebilirsiniz. Ancak, yönetilmeyen kaynakların açıkça temizlenmesi gerekir. Yönetilmeyen kaynakların en yaygın türü, bir dosya işleyicisi, pencere işleyicisi veya ağ bağlantısı gibi işletim sistemi kaynağını sarmalayan bir nesnedir. Atık toplayıcı yönetilmeyen bir kaynağı sarmalayan yönetilen bir nesnenin ömrünü takip edebilse de, kaynağı temizlemek için gerekli olan özel bilgilere sahip değildir. Yönetilmeyen bir kaynağı sarmalayan bir nesne oluşturduğunuzda, bir genel **Dispose** yönteminde yönetilmeyen kaynağı temizlemek için gerekli kodu sağlamanız önerilir. Bir **Dispose** yöntemi sunarak, nesnenizin kullanıcılarına, nesne ile işiniz bittiğinde belleği açık bir şekilde boşaltmaya olanak sağlayabilirsiniz. Yönetilmeyen bir kaynağı sarmalayan bir nesne kullandığınızda, **Dispose** hakkında farkında olmanız ve gerektiğinde bunu çağırmanız gerekir. Yönetilmeyen kaynakları temizleme hakkında daha fazla bilgi ve **Dispose**uygulayan tasarım deseninin bir örneği için bkz. [çöp toplama](garbage-collection/index.md).  
+ Uygulamanızın oluşturduğu nesnelerin çoğu için, gerekli bellek yönetimi görevlerini otomatik olarak gerçekleştirilmesi konusunda atık toplayıcıya güvenebilirsiniz. Ancak, yönetilmeyen kaynakların açıkça temizlenmesi gerekir. Yönetilmeyen kaynakların en yaygın türü, bir dosya işleyicisi, pencere işleyicisi veya ağ bağlantısı gibi işletim sistemi kaynağını sarmalayan bir nesnedir. Atık toplayıcı yönetilmeyen bir kaynağı sarmalayan yönetilen bir nesnenin ömrünü takip edebilse de, kaynağı temizlemek için gerekli olan özel bilgilere sahip değildir. Yönetilmeyen bir kaynağı sarmalayan bir nesne oluşturduğunuzda, bir genel **Dispose** yönteminde yönetilmeyen kaynağı temizlemek için gerekli kodu sağlamanız önerilir. Bir **Dispose** yöntemi sunarak, nesnenizin kullanıcılarına, nesne ile işiniz bittiğinde belleği açık bir şekilde boşaltmaya olanak sağlayabilirsiniz. Yönetilmeyen bir kaynağı sarmalayan bir nesne kullandığınızda, **Dispose** hakkında farkında olmanız ve gerektiğinde bunu çağırmanız gerekir. Yönetilmeyen kaynakları temizleme hakkında daha fazla bilgi ve **Dispose** uygulayan tasarım deseninin bir örneği için bkz. [çöp toplama](garbage-collection/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

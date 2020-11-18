@@ -2,7 +2,6 @@
 title: Olaylar Oluşturma ve İşleme
 description: Temsilci modelini temel alan .NET olaylarını işleme ve oluşturmayı öğrenin. Bu model, aboneler tarafından kayıt yaptırmasına veya sağlayıcılardan bildirimler almasına olanak tanır.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a2bfbe9a411d3099d02df7a43a42baaad2bb32da
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: e0b8de574475490cd3b15383b6ebc2ace4b74663
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064099"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828276"
 ---
 # <a name="handle-and-raising-events"></a>Olayları işleme ve oluşturma
 
@@ -32,7 +31,7 @@ Bir olay, bir eylem oluşumuna işaret etmek için bir nesne tarafından gönder
   
 Bir olayı tanımlamak için, [`event`](../../csharp/language-reference/keywords/event.md) [`Event`](../../visual-basic/language-reference/statements/event-statement.md) Event sınıfınızın imzasında C# veya Visual Basic anahtar sözcüğünü kullanırsınız ve olay için temsilci türünü belirtirsiniz. Temsilciler sonraki bölümde açıklanmaktadır.  
   
-Genellikle, bir olayı yükseltmek için `protected` ve `virtual` (C# ' de) veya `Protected` ve `Overridable` (Visual Basic) olarak işaretlenmiş bir yöntem eklersiniz. Bu yöntemin bulunduğu adı `On` *EventName* ; Örneğin, `OnDataReceived` . Yöntemi, türünde bir nesne veya türetilmiş bir tür olan bir olay veri nesnesini belirten bir parametre almalıdır <xref:System.EventArgs> . Bu yöntemi, türetilmiş sınıfların olayı oluşturma mantığını geçersiz kılmasını sağlamak için sağlarsınız. Türetilmiş bir sınıf, `On` kayıtlı temsilcilerin olayı aldığından emin olmak için her zaman temel sınıfın *EventName* metodunu çağırmalıdır.  
+Genellikle, bir olayı yükseltmek için `protected` ve `virtual` (C# ' de) veya `Protected` ve `Overridable` (Visual Basic) olarak işaretlenmiş bir yöntem eklersiniz. Bu yöntemin bulunduğu adı `On` *EventName*; Örneğin, `OnDataReceived` . Yöntemi, türünde bir nesne veya türetilmiş bir tür olan bir olay veri nesnesini belirten bir parametre almalıdır <xref:System.EventArgs> . Bu yöntemi, türetilmiş sınıfların olayı oluşturma mantığını geçersiz kılmasını sağlamak için sağlarsınız. Türetilmiş bir sınıf, `On` kayıtlı temsilcilerin olayı aldığından emin olmak için her zaman temel sınıfın *EventName* metodunu çağırmalıdır.  
 
 Aşağıdaki örnek adlı bir olayın nasıl bildirilemeyeceğini gösterir `ThresholdReached` . Olay <xref:System.EventHandler> temsilciyle ilişkilendirilir ve adlı bir yöntemde oluşturulur `OnThresholdReached` .  
   

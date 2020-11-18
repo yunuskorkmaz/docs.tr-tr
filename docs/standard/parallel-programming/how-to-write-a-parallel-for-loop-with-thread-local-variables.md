@@ -2,19 +2,18 @@
 title: 'Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma'
 description: Döngünün her ayrı görevde durum depolayan ve alan iş parçacığı yerel değişkenleri kullanan, .NET 'teki bir Parallel. for döngüsünün nasıl yazılacağını gösteren bir örnek görürsünüz.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 9cff507757aab2e5676df2fabb02a237a2172c17
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1e2dd0d554cdece23ac6d0e6b255ad70533236dc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599795"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826664"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma
 Bu örnek, bir döngü tarafından oluşturulan her ayrı görevde durumu depolamak ve almak için iş parçacığı yerel değişkenlerinin nasıl kullanılacağını gösterir <xref:System.Threading.Tasks.Parallel.For%2A> . İş parçacığı yerel verilerini kullanarak, paylaşılan duruma çok sayıda erişimi eşitleme yükünden kaçınabilirsiniz. Her yinelemede paylaşılan bir kaynağa yazmak yerine, görev için tüm yinelemeler tamamlanana kadar değeri hesaplar ve depolar. Ardından, son sonucu paylaşılan kaynağa yazabilir veya başka bir yönteme geçirebilirsiniz.  

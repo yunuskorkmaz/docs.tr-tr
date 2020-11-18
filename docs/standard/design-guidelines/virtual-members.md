@@ -1,18 +1,17 @@
 ---
 title: Sanal Üyeler
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - overridable members
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 918208bb44f84988b7fe903c589e82c7bf1f59e3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 22eb71ccfc1b9a3d359b0453e4ff47f3f41827f5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620774"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828406"
 ---
 # <a name="virtual-members"></a>Sanal Üyeler
 Sanal Üyeler geçersiz kılınabilir, böylece alt sınıfın davranışı değiştirilir. Bunlar, sağladıkları genişletilebilirlik açısından geri çağırmaları oldukça benzerdir ancak yürütme performansı ve bellek tüketimi açısından daha iyidir. Ayrıca, sanal Üyeler var olan türde (özelleşme) özel bir tür oluşturulmasını gerektiren senaryolarda daha doğal bir şekilde çalışır.
@@ -23,7 +22,7 @@ Sanal Üyeler geçersiz kılınabilir, böylece alt sınıfın davranışı değ
 
  Bir sanal üyeye yapılan herhangi bir çağrı öngörülemeyen yollarla geçersiz kılınabileceğinden ve rastgele kod yürütebildiğinden, geri çağırmalar (ve geri çağırmaların daha fazlası) gibi sanal Üyeler tasarım, test ve bakım açısından maliyetlidir. Ayrıca, sanal üyelerin sözleşmesini açıkça tanımlamak için çok daha fazla çaba gerekir. bu nedenle, bunları tasarlama ve belgeleme maliyeti daha yüksektir.
 
- ❌Bunu yapmak için iyi bir nedeniniz olmadığı için, Üyeler sanal yapmayın ve sanal üyelerin tasarlanması, sınanması ve saklanması ile ilgili tüm maliyetlerden haberdar olmanız gerekir.
+ ❌ Bunu yapmak için iyi bir nedeniniz olmadığı için, Üyeler sanal yapmayın ve sanal üyelerin tasarlanması, sınanması ve saklanması ile ilgili tüm maliyetlerden haberdar olmanız gerekir.
 
  Sanal üyeler, uyumluluk bozmadan bu kullanıcılara yapılabilecek değişikliklere göre daha az yasaklamalıdır. Ayrıca bunlar sanal olmayan üyelerden daha yavaştır, ancak sanal üyelere yapılan çağrılar satır içine alınmadı.
 
@@ -35,7 +34,7 @@ Sanal Üyeler geçersiz kılınabilir, böylece alt sınıfın davranışı değ
 
  *Bölüm &copy; 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

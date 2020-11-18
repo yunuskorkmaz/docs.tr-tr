@@ -2,19 +2,18 @@
 title: Zayıf Başvurular
 description: .NET Atık toplayıcısının, uygulamanın nesneye erişmesine izin verirken bir nesne toplamasına izin veren zayıf başvurular hakkında bilgi edinin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - weak references, short
 - weak references, using
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 1c18b4fa979058893e0683620ec6cff8e7b15b9b
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 40d17009c98a73b7cb51779663360726c5fc7403
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768189"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827366"
 ---
 # <a name="weak-references"></a>Zayıf Başvurular
 Çöp toplayıcı, uygulamanın kodu bu nesneye ulaşabilirken bir uygulama tarafından kullanılan bir nesneyi toplayamıyor. Uygulamanın nesneye güçlü bir başvurusu olduğu söylenir.  

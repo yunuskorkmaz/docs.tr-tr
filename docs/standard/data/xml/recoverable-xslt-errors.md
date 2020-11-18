@@ -1,14 +1,13 @@
 ---
 title: Kurtarılabilir XSLT Hataları
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: ada0b352cd867417ed3ecf86291df023ca7c579e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8a77600c8cc1baf61ed21cc7a480b75dd2fde2dc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289102"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827587"
 ---
 # <a name="recoverable-xslt-errors"></a>Kurtarılabilir XSLT Hataları
 W3C XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi, uygulama sağlayıcısının bir durumu nasıl ele verileceğine karar vermesine olanak tanıyan bölgeleri içerir. Bu alanların kısıtlı davranış olduğu kabul edilir. Örneğin, 7,3 bölümünde Işlem yönergeleri oluşturma bölümünde XSLT 1,0 önerisi, metin düğümleri dışındaki düğüm oluşturma içeriğinin örnekleniyor olması halinde bir hata olduğunu belirtir `xsl:processing-instruction` . Bazı sorunlar için XSLT 1,0 önerisi, işlemcinin hatadan kurtulmak için karar verdiğinde hangi kararın yapılması gerektiğini gösterir. Bölüm 7,3 ' de verilen sorun için, W3C, uygulamanın düğümleri ve bunların içeriğini yoksayarak bu hatadan kurtuyor olduğunu söyler.  
@@ -50,7 +49,7 @@ W3C XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi, uygulama sağlayıcısı
 |`value`ÖZNITELIĞI `xsl:number` Nan, sonsuz veya 0,5 küçüktür|eroyta 24|Kurtar|  
 |İkinci bağımsız değişken düğümü-belge işlevine ayarlanan boş ve URI başvurusu görelidir.|eroyta 14|Kurtar|  
   
- <sup>*</sup>Bu davranış, <xref:System.Xml.Xsl.XslTransform> sınıftan farklıdır. Daha fazla bilgi için bkz. [XslTransform sınıfında Isteğe bağlı davranışları uygulama](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
+ <sup>*</sup> Bu davranış, <xref:System.Xml.Xsl.XslTransform> sınıftan farklıdır. Daha fazla bilgi için bkz. [XslTransform sınıfında Isteğe bağlı davranışları uygulama](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

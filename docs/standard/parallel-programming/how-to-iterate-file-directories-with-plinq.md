@@ -1,16 +1,15 @@
 ---
 title: 'Nasıl yapılır: PLINQ ile Dosya Dizinlerini Yineleme'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: 5033cc24fce5fc17a950e4797de1ef4071e2b98a
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 4e9e8e646594ce3cd8b8861cb270170bafc9afb8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925382"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826924"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Nasıl yapılır: PLINQ ile Dosya Dizinlerini Yineleme
 

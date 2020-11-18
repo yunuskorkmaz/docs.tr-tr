@@ -2,16 +2,15 @@
 title: İş Parçacığı Koleksiyonları
 description: .NET ' te iş parçacığı açısından güvenli ve ölçeklenebilir koleksiyon sınıfları içeren System. Collections. eşzamanlı ad alanını kullanarak iş parçacığı açısından güvenli Koleksiyonlar ile çalışmaya başlayın.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 27b0e887d7dcff6a6c792cf2dfab6a449f59646f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5f64d7b6a9b3564248a2b6113724e948066bf45c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547694"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827756"
 ---
 # <a name="thread-safe-collections"></a>İş Parçacığı Koleksiyonları
 .NET Framework 4, <xref:System.Collections.Concurrent?displayProperty=nameWithType> hem iş parçacığı güvenli hem de ölçeklenebilir olan birkaç koleksiyon sınıfını içeren ad alanını tanıtır. Birden çok iş parçacığı, Kullanıcı kodunda ek eşitlemeye gerek duymadan, bu koleksiyonlardan öğeleri güvenle ve etkili bir şekilde ekleyebilir veya kaldırabilir. Yeni kod yazdığınızda, birden çok iş parçacığının koleksiyona aynı anda yazılacağı her seferinde eşzamanlı koleksiyon sınıflarını kullanın. Yalnızca paylaşılan bir koleksiyondan okuyorsanız <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanındaki sınıfları kullanabilirsiniz. .NET Framework 1.1 veya önceki çalışma zamanı sürümünü hedeflemeniz gerekmedikçe 1.0 koleksiyon sınıflarını kullanmamanızı öneririz.  
@@ -33,7 +32,7 @@ ms.locfileid: "90547694"
   
  Aşağıdaki tablo, <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanındaki koleksiyon türlerini listeler.  
   
-|Tür|Description|  
+|Tür|Açıklama|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|<xref:System.Collections.Concurrent.IProducerConsumerCollection%601> öğesini uygulayan herhangi bir tür için sınırlama ve engelleme işlevleri sağlar. Daha fazla bilgi için bkz. [BlockingCollection genel bakış](blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Anahtar-değer çiftlerinin sözlüğünün iş parçacığı açısından güvenli uygulaması.|  

@@ -1,14 +1,13 @@
 ---
 title: XPath Veri Modelini Kullanarak XML Verilerini İşleme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-ms.openlocfilehash: d449fe19640b19b1417c41b3a1ac7bd3a4de907a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cc35b570c592557658cd3dda0c844847c8b23763
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291298"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829290"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>XPath Veri Modelini Kullanarak XML Verilerini İşleme
 <xref:System.Xml?displayProperty=nameWithType>Ad alanı, veya sınıfları kullanarak XML belgelerinin, parçaların, düğümlerin veya düğüm kümesinin bellek içinde programlı bir gösterimini sağlar <xref:System.Xml.XmlDocument> <xref:System.Xml.XPath.XPathDocument> .  

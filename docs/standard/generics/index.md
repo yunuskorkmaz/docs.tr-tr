@@ -2,7 +2,6 @@
 title: .NET içindeki Genel Türler
 description: .NET 'teki genel türler hakkında bilgi edinin. & tanımlama türleri tanımlayın, avantajları & dezavantajlarını öğrenin, sınıf kitaplığı & dil desteğini anlayın ve daha fazlasını yapın.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063162"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827262"
 ---
 # <a name="generics-in-net"></a>.NET içindeki Genel Türler
 
@@ -56,9 +55,9 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
   
 - *Genel tür tanımı* , şablon olarak işlev gören veya kullanabileceği türlerin yer tutucuları içeren bir sınıf, yapı veya arabirim bildirimidir. Örneğin, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> sınıfı iki tür içerebilir: anahtarlar ve değerler. Genel tür tanımı yalnızca bir şablon olduğundan, bir sınıf, yapı veya genel tür tanımı olan arabirimin örneklerini oluşturamazsınız.  
   
-- Genel tür *parametreleri* veya *tür parametreleri* , genel tür veya yöntem tanımında yer tutuculardır. <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>Genel tür iki tür parametresine sahiptir `TKey` ve `TValue` bunların anahtar ve değer türlerini temsil eder.  
+- Genel tür *parametreleri* veya *tür parametreleri*, genel tür veya yöntem tanımında yer tutuculardır. <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>Genel tür iki tür parametresine sahiptir `TKey` ve `TValue` bunların anahtar ve değer türlerini temsil eder.  
   
-- *Oluşturulmuş bir genel* tür veya *oluşturulmuş tür* , genel tür tanımının genel tür parametreleri için türleri belirtmenin sonucudur.  
+- *Oluşturulmuş bir genel* tür veya *oluşturulmuş tür*, genel tür tanımının genel tür parametreleri için türleri belirtmenin sonucudur.  
   
 - *Genel tür bağımsız değişkeni* , genel tür parametresi için değiştirilen herhangi bir türdür.  
   

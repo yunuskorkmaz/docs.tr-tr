@@ -1,17 +1,16 @@
 ---
 title: Bir XML Belgesinde XmlNodeChangedEventArgs Kullanarak Olay İşleme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: 7bca8600468d3715b1d1cca46049eb07bb8e3d03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 582220f14b5b3800c6e04e2e01795686caace83c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287785"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829563"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Bir XML Belgesinde XmlNodeChangedEventArgs Kullanarak Olay İşleme
 **XmlNodeChangedEventArgs** , olayları Işlemek için **XmlDocument** nesnesinde kayıtlı olan olay işleyicilerine geçirilen bağımsız değişkenleri kapsüller. Olaylar ve tetiklendiklerinde bir açıklama aşağıdaki tabloda verilmiştir.  
@@ -26,7 +25,7 @@ ms.locfileid: "84287785"
 |<xref:System.Xml.XmlDocument.NodeChanged>|Bir düğümün değeri değiştirildiğinde.|  
   
 > [!NOTE]
-> **XmlDataDocument** bellek kullanımı, **veri kümesi** depolamayı kullanmak için tamamen iyileştirilirse, temel alınan **veri kümesinde**değişiklik yapıldığında **XmlDataDocument** , yukarıda listelenen olayları tetiklemeyebilir. Bu olaylara ihtiyacınız varsa, bellek kullanımını tam olarak iyileştirilmemiş hale getirmek için **XmlDocument** 'ın tamamına bir kez geçiş yapmanız gerekir.  
+> **XmlDataDocument** bellek kullanımı, **veri kümesi** depolamayı kullanmak için tamamen iyileştirilirse, temel alınan **veri kümesinde** değişiklik yapıldığında **XmlDataDocument** , yukarıda listelenen olayları tetiklemeyebilir. Bu olaylara ihtiyacınız varsa, bellek kullanımını tam olarak iyileştirilmemiş hale getirmek için **XmlDocument** 'ın tamamına bir kez geçiş yapmanız gerekir.  
   
  Aşağıdaki kod örneği bir olay işleyicisinin nasıl tanımlanacağını ve olay işleyicisinin bir olaya nasıl ekleneceğini gösterir.  
   

@@ -1,7 +1,6 @@
 ---
 title: Öznitelikleri Uygulama
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET], attributes
 - attributes [.NET], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 24fe58ddf48e40b422652baa4c5bba86eea6b84f
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 83cfb1d5b5aa3ebc8651406850a758146fd329d4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889237"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829108"
 ---
 # <a name="apply-attributes"></a>Öznitelikleri uygulama
 
@@ -37,7 +36,7 @@ Kodunuzdaki bir öğeye bir öznitelik uygulamak için aşağıdaki işlemi kull
 
 ## <a name="apply-an-attribute-to-a-method"></a>Bir yönteme öznitelik uygulama
 
- Aşağıdaki kod örneği, kodu eski olarak işaretleyen **System. Kullanımdan kaldırılmış Teattribute** 'un nasıl kullanılacağını göstermektedir. `"Will be removed in next version"` dizesi özniteliğe geçirilir. Bu öznitelik, özniteliğin açıkladığı kod çağırıldığında geçirilen dizeyi görüntüleyen bir derleyici uyarısına neden olur.
+ Aşağıdaki kod örneği, kodu eski olarak işaretleyen **System. Kullanımdan kaldırılmış Teattribute**'un nasıl kullanılacağını göstermektedir. `"Will be removed in next version"` dizesi özniteliğe geçirilir. Bu öznitelik, özniteliğin açıkladığı kod çağırıldığında geçirilen dizeyi görüntüleyen bir derleyici uyarısına neden olur.
 
  [!code-cpp[Conceptual.Attributes.Usage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#3)]
  [!code-csharp[Conceptual.Attributes.Usage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#3)]

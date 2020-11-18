@@ -1,7 +1,6 @@
 ---
 title: Parametre Tasarımı
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
 - members [.NET Framework], parameters
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 707ae48be3f45d82ed3819f943dc5ba3743172f3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621593"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828809"
 ---
 # <a name="parameter-design"></a>Parametre Tasarımı
 
@@ -24,11 +23,11 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
 
  Örneğin, bir koleksiyonu tasarlandıran ve her öğeyi konsola yazdıran bir yöntem tasarlamak istediğinizi varsayalım. Bu tür bir yöntem, <xref:System.Collections.IEnumerable> veya değil parametre olarak ele <xref:System.Collections.ArrayList> alınmalıdır <xref:System.Collections.IList> .
 
- ❌Ayrılmış parametreleri kullanmayın.
+ ❌ Ayrılmış parametreleri kullanmayın.
 
  Daha sonraki bir sürümde bir üyeye daha fazla giriş gerekiyorsa, yeni bir aşırı yükleme eklenebilir.
 
- ❌İşaretçi, işaretçi dizileri veya çok boyutlu diziler parametre olarak alan genel kullanıma açık yöntemlere sahip DEĞILDIR.
+ ❌ İşaretçi, işaretçi dizileri veya çok boyutlu diziler parametre olarak alan genel kullanıma açık yöntemlere sahip DEĞILDIR.
 
  İşaretçiler ve çok boyutlu diziler düzgün şekilde kullanılması nispeten zordur. Neredeyse tüm durumlarda, bu türleri parametre olarak almayı önlemek için API 'Ler yeniden dağıtılabilir.
 
@@ -43,7 +42,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>Enum ve Boole parametreleri arasında seçim yapma  
  ✔️, bir üyenin iki veya daha fazla Boole parametresine sahip olması halinde numaralandırmalar kullanın.
 
- ❌İki değerden daha fazla değere gerek olmadığından kesinlikle emin olmadığınız müddetçe, Boolean kullanmayın.
+ ❌ İki değerden daha fazla değere gerek olmadığından kesinlikle emin olmadığınız müddetçe, Boolean kullanmayın.
 
  Numaralandırmalar, daha sonra değerlerin eklenmesi için bir yer sağlar, ancak [enum tasarımında açıklanan numaralandırıcılara](enum.md)değer eklemenin tüm etkilerine dikkat etmeniz gerekir.
 
@@ -71,15 +70,15 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
 
  Bir bağımsız değişken bir by değeri parametresiyle geçirildiğinde, üye geçirilen gerçek bağımsız değişkenin bir kopyasını alır. Bağımsız değişken bir değer türü ise, bağımsız değişkenin bir kopyası yığına konur. Bağımsız değişken bir başvuru türü ise, başvurunun bir kopyası yığına konur. C#, VB.NET ve C++ gibi en popüler CLR dilleri, parametreleri değere göre geçirmek için varsayılan değer.
 
- Bir bağımsız değişken bir parametre aracılığıyla geçirildiğinde `ref` , üye geçirilen gerçek bağımsız değişkene bir başvuru alır. Bağımsız değişken bir değer türü ise, yığına bağımsız değişkene bir başvuru konur. Bağımsız değişken bir başvuru türü ise, bir başvuruya başvuru, yığına konur. `Ref`Parametreler, üyenin çağıran tarafından geçirilen bağımsız değişkenleri değiştirmesine izin vermek için kullanılabilir.
+ Bir bağımsız değişken bir parametre aracılığıyla geçirildiğinde `ref` , üye geçirilen gerçek bağımsız değişkene bir başvuru alır. Bağımsız değişken bir değer türü ise, yığına bağımsız değişkene bir başvuru konur. Bağımsız değişken bir başvuru türü ise, bir başvuruya başvuru, yığına konur. `Ref` Parametreler, üyenin çağıran tarafından geçirilen bağımsız değişkenleri değiştirmesine izin vermek için kullanılabilir.
 
- `Out`parametreler `ref` , bazı küçük farklılıklar ile parametrelere benzerdir. Parametre başlangıçta atanmamış olarak kabul edilir ve bir değer atanmadan önce üye gövdesinde okunamaz. Ayrıca, parametreye, üyenin döndürdüğü bir değere atanmalıdır.
+ `Out` parametreler `ref` , bazı küçük farklılıklar ile parametrelere benzerdir. Parametre başlangıçta atanmamış olarak kabul edilir ve bir değer atanmadan önce üye gövdesinde okunamaz. Ayrıca, parametreye, üyenin döndürdüğü bir değere atanmalıdır.
 
  ❌`out`Veya parametreleri kullanmaktan kaçının `ref` .
 
  `out`Veya `ref` parametrelerinin kullanılması, işaretçilerle deneyim gerektirir, değer türlerinin ve başvuru türlerinin nasıl farklı olduğunu ve birden çok dönüş değeriyle yöntemleri işleme. Ayrıca, `out` ve parametreleri arasındaki fark `ref` yaygın olarak anlaşılmaz. Genel bir hedef kitle için tasarlayan çerçeve mimarları, kullanıcıların, veya parametreleriyle birlikte çalışmasını beklememelidir `out` `ref` .
 
- ❌Başvuru türlerini başvuruya göre geçirmeyin.
+ ❌ Başvuru türlerini başvuruya göre geçirmeyin.
 
  Kural için, başvuruları değiştirmek için kullanılabilecek bir yöntem gibi bazı sınırlı özel durumlar vardır.
 
@@ -112,11 +111,11 @@ public class String {
 
  Son kullanıcıların dizileri az sayıda öğe ile geçmesini bekleseniz, dizi parametrelerine params anahtar sözcüğünü eklemeyi düşünün ✔️. Yaygın senaryolarda çok sayıda öğenin geçirilmesi bekleniyorsa, kullanıcılar muhtemelen bu öğeleri de satır içine geçirmeyecektir ve bu nedenle params anahtar sözcüğü gerekli değildir.
 
- ❌Arayan girişi neredeyse her zaman bir dizide zaten olacaksa params dizilerini kullanmaktan kaçının.
+ ❌ Arayan girişi neredeyse her zaman bir dizide zaten olacaksa params dizilerini kullanmaktan kaçının.
 
  Örneğin, bayt dizi parametrelerine sahip Üyeler tek tek baytlar ileterek neredeyse hiçbir şekilde çağrılmaz. Bu nedenle, .NET Framework bayt dizi parametreleri params anahtar sözcüğünü kullanmaz.
 
- ❌Dizi params dizi parametresini alan üye tarafından değiştirilirse params dizilerini kullanmayın.
+ ❌ Dizi params dizi parametresini alan üye tarafından değiştirilirse params dizilerini kullanmayın.
 
  Birçok derleyicilerin bağımsız değişkenlerini çağrı sitesinde geçici bir diziye değiştirdiğinden, dizi geçici bir nesne olabilir ve bu nedenle dizideki tüm değişiklikler kaybedilir.
 
@@ -145,7 +144,7 @@ public class String {
 
  ✔️, işaretçiler CLS uyumlu olmadığından, işaretçi bağımsız değişkeni alan tüm Üyeler için bir alternatif sağlar.
 
- ❌İşaretçi bağımsız değişkenlerinin pahalı bağımsız değişken denetimini yapmaktan KAÇıNıN.
+ ❌ İşaretçi bağımsız değişkenlerinin pahalı bağımsız değişken denetimini yapmaktan KAÇıNıN.
 
  ✔️ işaretçileri olan üyeleri tasarlarken, işaretçiyle ilgili genel kuralları izleyin.
 
@@ -153,7 +152,7 @@ public class String {
 
  *Bölüm &copy; 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

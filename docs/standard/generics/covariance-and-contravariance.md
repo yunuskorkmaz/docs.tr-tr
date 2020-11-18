@@ -2,7 +2,6 @@
 title: Genel Türlerde Kovaryans ve Kontravaryans
 description: Daha fazla türetilmiş bir tür kullanmanıza olanak tanıyan Kovaryans hakkında bilgi edinin ve .NET genel türleri 'nde daha az türetilmiş bir tür kullanmanıza olanak tanıyan değişken varyans.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1606238b22bd355b997b54cf94e0c28d16ec5cac
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063182"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827418"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve değişken varyans
 

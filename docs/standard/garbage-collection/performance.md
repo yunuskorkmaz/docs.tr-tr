@@ -2,17 +2,16 @@
 title: Çöp Toplama ve Performans
 description: Çöp toplama ve bellek kullanımı ile ilgili sorunlar hakkında bilgi edinin. Uygulamalarınızda çöp toplamanın etkisini en aza indirmeden öğrenin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 15ca3fd06bb607a4f0257b4c5cd62f9c935c6913
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93062977"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827548"
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
 
@@ -272,7 +271,7 @@ Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için 
 
 - Şu iki bellek performans sayacını inceleyin:
 
-  - **GC 'de% Time** . Son çöp toplama döngüsünden sonra gerçekleşen bir çöp toplamaya harcanan süresinin yüzdesini gösterir. Bu sayacı kullanarak çöp toplayıcısının yönetilen yığın alanı açmak için ne kadar süre harcadığını belirleyebilirsiniz. Eğer çöp toplamaya harcanan süre göreceli olarak düşükse, bu, yönetilen yığın dışında bir kaynak problemi olduğunu gösteriyor olabilir. Bu sayaç, süreçte eş zamanlı veya arka plan çöp toplama işlemleri varsa düzgün olmayabilir.
+  - **GC 'de% Time**. Son çöp toplama döngüsünden sonra gerçekleşen bir çöp toplamaya harcanan süresinin yüzdesini gösterir. Bu sayacı kullanarak çöp toplayıcısının yönetilen yığın alanı açmak için ne kadar süre harcadığını belirleyebilirsiniz. Eğer çöp toplamaya harcanan süre göreceli olarak düşükse, bu, yönetilen yığın dışında bir kaynak problemi olduğunu gösteriyor olabilir. Bu sayaç, süreçte eş zamanlı veya arka plan çöp toplama işlemleri varsa düzgün olmayabilir.
 
   - **Toplam kaydedilmiş bayt** sayısı. Çöp toplayıcısı tarafından o an yürütülen sanal bellek miktarını gösterir. Bu sayacı kullanarak çöp toplayıcı tarafından uygulamanızın kullandığı belleğin aşırı bir kısmının kullanılıp kullanılmadığını belirleyebilirsiniz.
 
@@ -282,7 +281,7 @@ Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için 
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Yetersiz bellek özel durumunun yönetilip yönetilmediğini belirlemek için
 
-1. SOS hata ayıklayıcı uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında, yazdırma özel durumu ( **PE** ) komutunu yazın:
+1. SOS hata ayıklayıcı uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında, yazdırma özel durumu (**PE**) komutunu yazın:
 
     **! PE**
 
@@ -424,7 +423,7 @@ Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için 
 
   Yönetilen yığın büyükse, **dumpheap** işleminin tamamlanması biraz zaman alabilir.
 
-  Analize çıktının son satırlarından başlayabilirsiniz çünkü en çok alan kullanan nesneler burada listelenmektedir. Örneğin:
+  Analize çıktının son satırlarından başlayabilirsiniz çünkü en çok alan kullanan nesneler burada listelenmektedir. Örnek:
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo
