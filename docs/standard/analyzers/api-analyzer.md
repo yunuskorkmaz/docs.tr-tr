@@ -3,13 +3,12 @@ title: .NET API Çözümleyicisi
 description: .NET API Çözümleyicisi 'nin kullanım dışı API 'Leri ve platform uyumluluk sorunlarını algılamaya nasıl yardımcı olabileceğini öğrenin.
 author: oliag
 ms.date: 02/20/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: a689ae347efbc8c2dd933b2f6920ac6cc06cda7d
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 47ef2368692aee56ebd3db7803cbde7368d38049
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756201"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819610"
 ---
 # <a name="net-api-analyzer"></a>.NET API Çözümleyicisi
 
@@ -45,7 +44,7 @@ API Çözümleyicisi, tek tek uyarıların görüntülenmesi üzerinde denetime 
    1. Paket kaynağı olarak "nuget.org" öğesini seçin.
    2. **Araştır** sekmesine gidin.
    3. **Yayın öncesi Ekle**' yi seçin.
-   4. **Microsoft. DotNet. çözümleyiciler**için arama yapın. uyumluluk.
+   4. **Microsoft. DotNet. çözümleyiciler** için arama yapın. uyumluluk.
    5. Listeden bu paketi seçin.
    6. **Install** düğmesini seçin.
    7. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
@@ -62,18 +61,18 @@ API Çözümleyicisi, tek tek uyarıların görüntülenmesi üzerinde denetime 
 
 KIMLIĞE tıkladığınızda, API 'nin neden kullanım dışı olduğuna ilişkin ayrıntılı bilgiler ve kullanılabilecek alternatif API 'Ler ile ilgili öneriler içeren bir Web sayfasına gidebilirsiniz.
 
-Vurgulanan üyeye sağ tıklayıp **Gizle \<diagnostic ID> **' yi seçerek herhangi bir uyarı bastırılabilir. Uyarıları basmanın iki yolu vardır:
+Vurgulanan üyeye sağ tıklayıp **Gizle \<diagnostic ID>**' yi seçerek herhangi bir uyarı bastırılabilir. Uyarıları basmanın iki yolu vardır:
 
 - [Yerel olarak (kaynakta)](#suppress-warnings-locally)
 - [küresel olarak (bir gizleme dosyasında)](#suppress-warnings-globally) önerilir
 
 ### <a name="suppress-warnings-locally"></a>Uyarıları yerel olarak gösterme
 
-Uyarıları yerel olarak gizlemek için uyarıları gizlemek istediğiniz üyeye sağ tıklayın ve sonra **Hızlı Eylemler ve yeniden düzenlemeler**  >  ** *Tanılama kimliğini* \<diagnostic ID> **  >  **kaynak bölümünde**göster ' i seçin. [#Pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) uyarı ön işlemci yönergesi, tanımlanan kapsamdaki kaynak kodunuza eklenir: ![ #pragma uyarı devre dışı ile çerçeveli kodun ekran görüntüsü.](media/api-analyzer/suppress-in-source.jpg)
+Uyarıları yerel olarak gizlemek için uyarıları gizlemek istediğiniz üyeye sağ tıklayın ve sonra **Hızlı Eylemler ve yeniden düzenlemeler**  >  ***Tanılama kimliğini* \<diagnostic ID>**  >  **kaynak bölümünde** göster ' i seçin. [#Pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) uyarı ön işlemci yönergesi, tanımlanan kapsamdaki kaynak kodunuza eklenir: ![ #pragma uyarı devre dışı ile çerçeveli kodun ekran görüntüsü.](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>Uyarıları küresel olarak gösterme
 
-Uyarıları küresel olarak gizlemek için uyarıları gizlemek istediğiniz üyeye sağ tıklayın ve sonra **Hızlı Eylemler ve yeniden düzenlemeler**  >  gizleme dosyasında** *Tanılama kimliğini* \<diagnostic ID> Gizle**' yi seçin  >  **in Suppression File**.
+Uyarıları küresel olarak gizlemek için uyarıları gizlemek istediğiniz üyeye sağ tıklayın ve sonra **Hızlı Eylemler ve yeniden düzenlemeler**  >  gizleme dosyasında ***Tanılama kimliğini* \<diagnostic ID> Gizle**' yi seçin  >  **in Suppression File**.
 
 ![Visual Studio 'da bir uyarıyı gösterme seçeneklerini gösteren sağ tıklama menüsünün ekran görüntüsü.](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -124,7 +123,7 @@ Tüm bu Tanılamalar yalnızca IDE 'de değil, aynı zamanda, CI sunucusunu içe
 
 ## <a name="configuration"></a>Yapılandırma
 
-Kullanıcı, tanılama nasıl ele alınacağına karar verir: uyarılar, hatalar, öneriler veya kapatılacak. Örneğin, bir mimari olarak uyumluluk sorunlarının hata olarak değerlendirilip bazı kullanım dışı API 'lere yapılan çağrılar uyarı üretirken, diğerleri yalnızca öneriler üretmeye karar verebilirsiniz. Bunu, tanılama KIMLIĞI ve proje tarafından ayrı ayrı yapılandırabilirsiniz. **Çözüm Gezgini**için, projenizin altındaki **Bağımlılıklar** düğümüne gidin. **Dependencies**  >  **Analyzers**  >  **Microsoft. DotNet. çözümleyiciler. uyumluluğu**çözümleyicilerinin düğümleri bağımlılıklarını genişletin. Tanılama KIMLIĞI ' ne sağ tıklayın, **kural kümesi önem derecesi ayarla**' yı seçin ve ardından istediğiniz seçeneği belirleyin.
+Kullanıcı, tanılama nasıl ele alınacağına karar verir: uyarılar, hatalar, öneriler veya kapatılacak. Örneğin, bir mimari olarak uyumluluk sorunlarının hata olarak değerlendirilip bazı kullanım dışı API 'lere yapılan çağrılar uyarı üretirken, diğerleri yalnızca öneriler üretmeye karar verebilirsiniz. Bunu, tanılama KIMLIĞI ve proje tarafından ayrı ayrı yapılandırabilirsiniz. **Çözüm Gezgini** için, projenizin altındaki **Bağımlılıklar** düğümüne gidin. **Dependencies**  >  **Analyzers**  >  **Microsoft. DotNet. çözümleyiciler. uyumluluğu** çözümleyicilerinin düğümleri bağımlılıklarını genişletin. Tanılama KIMLIĞI ' ne sağ tıklayın, **kural kümesi önem derecesi ayarla**' yı seçin ve ardından istediğiniz seçeneği belirleyin.
 
 ![Kural kümesi önem derecesine sahip tanılama ve açılır iletişim iletişimini gösteren Çözüm Gezgini ekran görüntüsü.](media/api-analyzer/disable-notifications.jpg)
 

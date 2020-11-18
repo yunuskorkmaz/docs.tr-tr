@@ -1,7 +1,6 @@
 ---
 title: 'Nasıl yapılır: Saat dilimlerini eklenmiş kaynağa kaydetme'
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063410"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817607"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Nasıl yapılır: Saat dilimlerini eklenmiş kaynağa kaydetme
 
@@ -68,7 +67,7 @@ Bu örnek <xref:System.TimeZoneInfo> , derleme zamanında bir kaynak dosyasında
 
 <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType>Yöntemi bir .NET XML kaynak dosyasına tüm başlık bilgilerini eklediğinden, mevcut bir dosyaya kaynak eklemek için kullanılamaz. Bu örnek, SerializedTimeZones. resx dosyasını denetleyerek ve varsa, iki serileştirilmiş zaman dilimi dışındaki tüm kaynaklarını genel bir nesneye depolayarak bunu gerçekleştirir <xref:System.Collections.Generic.Dictionary%602> . Varolan dosya daha sonra silinir ve var olan kaynaklar yeni bir SerializedTimeZones. resx dosyasına eklenir. Seri hale getirilmiş saat dilimi verileri de bu dosyaya eklenir.
 
-Kaynakların anahtar (veya **ad** ) alanları, gömülü boşluklar içermemelidir. <xref:System.String.Replace%28System.String%2CSystem.String%29>Yöntemi, kaynak dosyasına atanmadan önce saat dilimi tanımlayıcılarında tüm gömülü boşlukları kaldırmak için çağrılır.
+Kaynakların anahtar (veya **ad**) alanları, gömülü boşluklar içermemelidir. <xref:System.String.Replace%28System.String%2CSystem.String%29>Yöntemi, kaynak dosyasına atanmadan önce saat dilimi tanımlayıcılarında tüm gömülü boşlukları kaldırmak için çağrılır.
 
 ## <a name="compiling-the-code"></a>Kod derleme
 

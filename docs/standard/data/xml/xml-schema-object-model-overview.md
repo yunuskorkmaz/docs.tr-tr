@@ -1,14 +1,13 @@
 ---
 title: XML Şema Nesne Modeline (SOM) Genel Bakış
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-ms.openlocfilehash: 0358efdcc2e8b86f589eea312d791610da5238db
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c54f92ede64e59478a0e9bfd919666caa9481137
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290337"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819220"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML Şema Nesne Modeline (SOM) Genel Bakış
 Microsoft .NET çerçevesindeki şema nesne modeli (SOM), şemaları programlı bir şekilde oluşturmanıza, düzenlemenize ve doğrulamanıza olanak sağlayan zengin bir API 'dir. SOM, XML şeması belgelerinde Belge Nesne Modeli (DOM) XML belgelerinde çalışma biçimine benzer şekilde çalışır. XML şeması belgeleri, SOM 'a bir kez yüklendikten sonra şemaya uygun diğer XML belgelerinin yapısı ve geçerliliği hakkında anlam veren geçerli XML dosyalarıdır.  
@@ -32,7 +31,7 @@ Microsoft .NET çerçevesindeki şema nesne modeli (SOM), şemaları programlı 
 ## <a name="the-schema-object-model"></a>Şema nesne modeli  
  SOM, <xref:System.Xml.Schema?displayProperty=nameWithType> BIR XML şemasındaki öğelere karşılık gelen ad alanındaki kapsamlı bir sınıf kümesinden oluşur. Örneğin, `<xsd:schema>...</xsd:schema>` öğesi <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> sınıfıyla eşlenir ve bir öğe içinde yer alan tüm bilgiler `<xsd:schema/>` sınıfı kullanılarak temsil edilebilir <xref:System.Xml.Schema.XmlSchema> . Benzer şekilde, `<xsd:element>...</xsd:element>` ve `<xsd:attribute>...</xsd:attribute>` öğeleri <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> sırasıyla ve sınıflarıyla eşlenir <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> . Bu eşleme, <xref:System.Xml.Schema> izleyen diyagramda gösterilen ad alanında BIR XML şeması nesne modeli oluşturan BIR XML şemasının tüm öğeleri için devam eder.  
   
- ![System. xml. Schema nesne modeli](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
+ ![System.Xml. Şema nesne modeli](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
   
  Ad alanındaki her sınıf hakkında daha fazla bilgi için <xref:System.Xml.Schema> , <xref:System.Xml.Schema> .NET Framework sınıf kitaplığındaki ad alanı başvurusu belgelerine bakın.  
   

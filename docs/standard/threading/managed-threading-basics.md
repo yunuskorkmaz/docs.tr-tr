@@ -2,19 +2,18 @@
 title: Yönetilen İş Parçacığı Oluşturma Temelleri
 description: Özel durumlar, verileri eşitleme, ön plan & arka plan iş parçacıkları, yerel depolama ve daha fazlası gibi konuları kapsayan diğer yönetilen iş parçacığı makalelerine yönelik bağlantılara bakın.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
 - threading [.NET], multiple threads
 - threading [.NET], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: ca3073cca9887265b4bacb4f8dfeb01203f82621
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 16785b1c21c5810e55429f6756dcf591c90d8499
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189140"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819675"
 ---
 # <a name="managed-threading-basics"></a>Yönetilen iş parçacığı temelleri
 

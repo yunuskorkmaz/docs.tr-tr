@@ -2,18 +2,17 @@
 title: İş parçacıkları ve iş parçacığı
 description: İşler & iş parçacıkları, birden çok iş parçacığının ne zaman kullanılacağı &, .NET 'teki yanıt hızını veya aktarım hızını artırmak için iş parçacığı kullanımı hakkında bilgi edinin.
 ms.date: 11/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: f7af6e1e73016e67c097b4fdbfb5f5d2d84e00d3
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 20550b597e27c75f00d16528871007988dd6b885
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188139"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819545"
 ---
 # <a name="threads-and-threading"></a>İş parçacıkları ve iş parçacığı
 

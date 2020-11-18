@@ -1,21 +1,20 @@
 ---
-title: 'Nasıl Yapılır: Yoklama ile İptal İsteklerini Dinleme'
+title: 'Nasıl yapılır: Yoklama ile İptal İsteklerini Dinleme'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-ms.openlocfilehash: 6f70ce75b1d6a3d4d7e8a38d739005a261b07241
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ae7a2e0269c0c12c4dabe5e561e9bef53100aac1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279562"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819870"
 ---
-# <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Nasıl Yapılır: Yoklama ile İptal İsteklerini Dinleme
+# <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Nasıl yapılır: Yoklama ile İptal İsteklerini Dinleme
 Aşağıdaki örnek, kullanıcı kodunun, çağırma iş parçacığından İptalin istenip istenmediğini görmek için, düzenli aralıklarla bir iptal belirtecini yoklamasının bir yolunu gösterir. Bu örnek türünü kullanır <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> , ancak aynı model doğrudan <xref:System.Threading.ThreadPool?displayProperty=nameWithType> tür veya tür tarafından oluşturulan zaman uyumsuz işlemler için geçerlidir <xref:System.Threading.Thread?displayProperty=nameWithType> .  
   
 ## <a name="example"></a>Örnek  
@@ -30,4 +29,4 @@ Aşağıdaki örnek, kullanıcı kodunun, çağırma iş parçacığından İpta
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen İş Parçacıklarında İptal](cancellation-in-managed-threads.md)
+- [Yönetilen Iş parçacıklarında iptal](cancellation-in-managed-threads.md)

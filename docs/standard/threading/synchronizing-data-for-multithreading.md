@@ -2,18 +2,17 @@
 title: Çoklu İş Parçacığı Kullanımı için Veri Eşitleme
 description: .NET ' te çoklu iş parçacıklı verileri eşitlemeyi öğrenin. Eşitlenmiş kod bölgeleri, el ile eşitleme veya eşitlenmiş bağlamlar gibi stratejileri seçin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 63ee85f3d8bab865ce34566ec381d23676b27991
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188594"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819649"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu iş parçacıklı verileri eşitleme
 

@@ -1,17 +1,16 @@
 ---
 title: Dönüşümlerde XPathNavigator
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-ms.openlocfilehash: 59fb399d80e1d4d33d1a3c659d2ff74a37fd367d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b28a2d4991e2e4b14027460c0f3c97145862da2a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282824"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818381"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Dönüşümlerde XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator>Sınıfı, verilere salt okunurdur ve dönüşümler (XSLT) Için Genişletilebilir Stil sayfası dili girişi olarak kullanılmak üzere tasarlanmıştır. , Ve üzerinde uygulanır <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDataDocument> <xref:System.Xml.XmlDocument> . , <xref:System.Xml.XPath.XPathNavigator> XML yol dili (XPath) önerisinin 5. bölümünde açıklandığı gibi World Wide Web Konsorsiyumu (W3C) veri modelini temel alır.  
@@ -55,13 +54,13 @@ ms.locfileid: "84282824"
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a>test. xml  
+## <a name="testxml"></a>test.xml  
   
 ```xml  
 <root>Some text</root>  
 ```  
   
- Aşağıdaki kod, **test. xsl** stil sayfası ve **test. xml** giriş verilerini kullanır.  
+ Aşağıdaki kod, **test. xsl** stil sayfasını ve **test.xml** giriş verilerini kullanır.  
   
 ```vb  
 Imports System  
@@ -107,8 +106,8 @@ public class sample
 }  
 ```  
   
-## <a name="output"></a>Çıktı  
- Dönüşümün sonucu, **out. xml**dosyasında bulunur:  
+## <a name="output"></a>Çıkış  
+ Dönüşümün sonucu dosya **out.xml** bulunur:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  

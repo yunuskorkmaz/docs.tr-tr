@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: 3692b9e779d450f07d47599417349bb57f72ac36
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: cc030e32846690b6544b99030800b50055a3113e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687576"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818830"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 'e bağımlılık ekleme
 
@@ -66,7 +66,7 @@ Bu arabirim somut bir tür tarafından uygulanır, `MessageWriter` :
 
 :::code language="csharp" source="snippets/configuration/dependency-injection/MessageWriter.cs":::
 
-Örnek kod, `IMessageWriter` hizmeti somut tür ile kaydeder `MessageWriter` . <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped%2A>Yöntemi, hizmeti tek bir isteğin ömrü olan kapsamlı bir yaşam süresine kaydeder. [Hizmet yaşam süreleri](#service-lifetimes) bu konunun ilerleyen kısımlarında açıklanmıştır.
+Örnek kod, `IMessageWriter` hizmeti somut tür ile kaydeder `MessageWriter` . <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped%2A>Yöntemi, hizmeti tek bir isteğin ömrü olan kapsamlı bir yaşam süresine kaydeder. [Hizmet yaşam süreleri](#service-lifetimes) Bu makalenin ilerleyen kısımlarında açıklanmıştır.
 
 :::code language="csharp" source="snippets/configuration/dependency-injection/Program.cs" highlight="16":::
 
@@ -220,7 +220,7 @@ Yukarıdaki hizmet kayıt yöntemlerinden herhangi biri aynı hizmet türünün 
 
 :::code language="csharp" source="snippets/configuration/console-di-ienumerable/ExampleService.cs" highlight="9-18":::
 
-`ExampleService`İki Oluşturucu parametresini tanımlar; tek bir `IMessageWriter` ve bir `IEnumerable<IMessageWriter>` . Tek `IMessageWriter` şey kayıtlı olan en son uygudır, ancak `IEnumerable<IMessageWriter>` Tüm kayıtlı uygulamaları temsil eder.
+`ExampleService`İki Oluşturucu parametresini tanımlar; tek bir `IMessageWriter` ve bir `IEnumerable<IMessageWriter>` . Tek, kayıtlı `IMessageWriter` olan en son uygulama, `IEnumerable<IMessageWriter>` Tüm kayıtlı uygulamaları temsil eder.
 
 Framework Ayrıca, `TryAdd{LIFETIME}` yalnızca kayıtlı bir uygulama olmadığında hizmeti kaydeden genişletme yöntemleri de sağlar.
 

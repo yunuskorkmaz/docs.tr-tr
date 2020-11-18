@@ -2,19 +2,18 @@
 title: .NET içinde güvenlik
 description: .NET ' te güvenlik hakkında bilgi edinin. Anahtar güvenlik kavramlarını, rol tabanlı güvenliği, şifreleme modelini ve güvenli kodlama kılavuzlarını tanımlayan bağlantıları izleyin.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET, security
 - security [.NET], about security
 - application development [.NET], security
 - security [.NET]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-ms.openlocfilehash: 783cb8274d1fafe85d58758a36fae5d671f656f8
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: aee3fc66916a4bb6e7a4e3c496eb9b38356ad6e7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557118"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819987"
 ---
 # <a name="security-in-net"></a>.NET içinde güvenlik
 
@@ -25,7 +24,7 @@ Ortak dil çalışma zamanı ve .NET, geliştiricilerin güvenli kod yazmasına,
 - [Temel Güvenlik Kavramları](key-security-concepts.md)  
 Ortak dil çalışma zamanı güvenlik özelliklerine genel bir bakış sağlar.
 
-- [Rol Tabanlı Güvenlik](role-based-security.md)  
+- [Rol tabanlı güvenlik](role-based-security.md)  
 Kodunuzda rol tabanlı güvenlikle nasıl etkileşim kuracağınızı açıklar.
 
 - [Şifreleme Modeli](cryptography-model.md)  

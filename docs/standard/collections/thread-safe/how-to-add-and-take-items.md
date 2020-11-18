@@ -1,19 +1,18 @@
 ---
 title: "Nasıl yapılır: Öğeleri Tek Tek Ekleme ve Bir BlockingCollection'dan ve Alma"
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-ms.openlocfilehash: f895be4c20a0cccad23e27db3d488355a614cbfc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5501e108d1866fc1ae6fc66f9fe665b63373414b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287893"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818641"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Nasıl yapılır: Öğeleri Tek Tek Ekleme ve Bir BlockingCollection'dan ve Alma
 Bu örnek, bir <xref:System.Collections.Concurrent.BlockingCollection%601> engelleme ve engellenmeyen bir şekilde içindeki öğesinden öğe ekleme ve kaldırma işlemlerinin nasıl yapılacağını gösterir. Hakkında daha fazla bilgi için <xref:System.Collections.Concurrent.BlockingCollection%601> bkz. [BlockingCollection genel bakış](blockingcollection-overview.md).  

@@ -2,7 +2,6 @@
 title: Standart sayısal biçim dizeleri
 description: Bu makalede, standart sayısal biçim dizelerini .NET 'teki metin temsillerine biçimlendirmek için standart sayısal biçim dizeleri kullanmayı öğrenin.
 ms.date: 06/10/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: e5e1aa16d8df3d0cfce6dac00c91ca8e99e16e3d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: b8537e8dcfdd45ed8da18b8b82aae5e9fc0cd96e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888977"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818771"
 ---
 # <a name="standard-numeric-format-strings"></a>Standart sayısal biçim dizeleri
 
@@ -33,8 +32,8 @@ Standart sayısal biçim dizeleri, genel sayısal türleri biçimlendirmek için
 - `xx`*duyarlık belirleyicisi* olarak adlandırılan isteğe bağlı bir tamsayıdır. Precision belirleyici 0'dan 99'a kadar uzanır ve sonuç basamak sayısını etkiler. Duyarlık belirticisinin bir sayının dize temsilindeki basamak sayısını denetlediğine unutmayın. Sayının kendisini yuvarlamaz. Bir yuvarlama işlemi gerçekleştirmek için, <xref:System.Math.Ceiling%2A?displayProperty=nameWithType> <xref:System.Math.Floor%2A?displayProperty=nameWithType> veya <xref:System.Math.Round%2A?displayProperty=nameWithType> yöntemini kullanın.
 
   *Duyarlık belirtici* , sonuç dizesindeki kesirli basamakların sayısını denetliyorsa, sonuç dizesi sonsuz kesin sonuca en yakın bir gösterilebilir tablo sonucuna yuvarlanmış bir sayıyı yansıtır. Eşit olarak yaklaşık iki doğru gösterilebilir tablo sonucu varsa:
-  - **.Net core 2,0 ' ye kadar .NET Framework ve .NET Core 'da** , çalışma zamanı, en az önemli basamakla (yani, kullanılarak) sonucu seçer <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> .
-  - **.NET Core 2,1 ve üzeri sürümlerde** , çalışma zamanı, en az önemli bir basamakla (yani, kullanılarak) sonucu seçer <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType> .
+  - **.Net core 2,0 ' ye kadar .NET Framework ve .NET Core 'da**, çalışma zamanı, en az önemli basamakla (yani, kullanılarak) sonucu seçer <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> .
+  - **.NET Core 2,1 ve üzeri sürümlerde**, çalışma zamanı, en az önemli bir basamakla (yani, kullanılarak) sonucu seçer <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType> .
 
   > [!NOTE]
   > Duyarlık belirtici, sonuç dizesindeki basamakların sayısını belirler. Bir sonuç dizesini başında veya sonunda boşluklarla doldurma için, [Bileşik biçimlendirme](composite-formatting.md) özelliğini kullanın ve biçim öğesinde bir *Hizalama bileşeni* tanımlayın.

@@ -1,14 +1,13 @@
 ---
 title: XSLT Güvenlik Konuları
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-ms.openlocfilehash: 81db764016607ebe6facfc530dbb2bac8e6b8cfe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ad96ebb6048e8a397e0761a2217fec89e0d206b0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282520"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818290"
 ---
 # <a name="xslt-security-considerations"></a>XSLT Güvenlik Konuları
 XSLT dili, size harika bir güç ve esneklik sağlayan zengin bir özellik kümesine sahiptir. Bu, yararlı olsa da dış kaynaklar tarafından da yararlanılabilen birçok özellik içerir. XSLT 'yi güvenli bir şekilde kullanabilmek için XSLT kullanırken ortaya çıkan güvenlik sorunlarının türlerini ve bu riskleri azaltmak için kullanabileceğiniz temel stratejileri anlamanız gerekir.  
@@ -58,4 +57,4 @@ XSLT dili, size harika bir güç ve esneklik sağlayan zengin bir özellik küme
 
 - [XSLT Dönüşümleri](xslt-transformations.md)
 - [XSLT İşleme Sırasında Dış Kaynakları Çözümleme](resolving-external-resources-during-xslt-processing.md)
-- [Kod Erişimi Güvenliği](../../../framework/misc/code-access-security.md)
+- [Kod erişim güvenliği](../../../framework/misc/code-access-security.md)

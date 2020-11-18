@@ -3,13 +3,13 @@ title: .NET Standard’daki yenilikler
 description: Bu makalede, .NET Standard her yeni sürümünde bulunan yeni özellikler ve geliştirmeler özetlenmektedir.
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
-ms.technology: dotnet-standard
-ms.openlocfilehash: 36bd1f9a0dad06d11110b35e9a66f22140cee5ca
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.prod: dotnet-whatsnew
+ms.openlocfilehash: 299477a7375381fa7f8064562e2a68e221944a05
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557278"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817180"
 ---
 # <a name="whats-new-in-net-standard"></a>.NET Standard’daki yenilikler
 

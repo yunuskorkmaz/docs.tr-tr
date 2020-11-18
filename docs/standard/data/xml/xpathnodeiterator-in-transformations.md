@@ -1,20 +1,19 @@
 ---
 title: Dönüşümlerde XPathNodeIterator
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-ms.openlocfilehash: 88b8f4acbb9fa92d71659ee006ee544275353954
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cd8320071f1de15d503c94c138c02cab5742685c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282759"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818439"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>Dönüşümlerde XPathNodeIterator
-, Bir <xref:System.Xml.XPath.XPathNodeIterator> XML yol dili (XPath) sorgusunun sonucu olarak oluşturulan bir düğüm kümesi veya düğüm kümesi yöntemi kullanılarak bir düğüm kümesine dönüştürülen bir sonuç ağacı parçasının üzerinde yinelemek için yöntemler sağlar. , <xref:System.Xml.XPath.XPathNodeIterator> Bu düğüm kümesi içindeki düğümleri yinelemenize olanak sağlar. Düğüm kümesi alındıktan sonra, <xref:System.Xml.XPath.XPathNodeIterator> sınıf seçili düğüm kümesine salt okunurdur ve salt ileri bir imleç sağlar. Düğüm kümesi belge sırasıyla oluşturulur, bu nedenle bu yöntemin çağrılması belge düzeninde sonraki düğüme gider. <xref:System.Xml.XPath.XPathNodeIterator>kümedeki tüm düğümlerin düğüm ağacını oluşturmaz. Bunun yerine, veride tek bir düğüm penceresi sağlar ve bu, ağaçta hareket ettiği sırada işaret ettiği temel düğümü ortaya çıkar. Sınıfından kullanılabilir yöntemler ve özellikler, <xref:System.Xml.XPath.XPathNodeIterator> geçerli düğümden bilgi almanızı sağlar. Kullanılabilir yöntemlerin ve özelliklerin listesi için bkz <xref:System.Windows.Forms.ToolBar> ..  
+, Bir <xref:System.Xml.XPath.XPathNodeIterator> XML yol dili (XPath) sorgusunun sonucu olarak oluşturulan bir düğüm kümesi veya düğüm kümesi yöntemi kullanılarak bir düğüm kümesine dönüştürülen bir sonuç ağacı parçasının üzerinde yinelemek için yöntemler sağlar. , <xref:System.Xml.XPath.XPathNodeIterator> Bu düğüm kümesi içindeki düğümleri yinelemenize olanak sağlar. Düğüm kümesi alındıktan sonra, <xref:System.Xml.XPath.XPathNodeIterator> sınıf seçili düğüm kümesine salt okunurdur ve salt ileri bir imleç sağlar. Düğüm kümesi belge sırasıyla oluşturulur, bu nedenle bu yöntemin çağrılması belge düzeninde sonraki düğüme gider. <xref:System.Xml.XPath.XPathNodeIterator> kümedeki tüm düğümlerin düğüm ağacını oluşturmaz. Bunun yerine, veride tek bir düğüm penceresi sağlar ve bu, ağaçta hareket ettiği sırada işaret ettiği temel düğümü ortaya çıkar. Sınıfından kullanılabilir yöntemler ve özellikler, <xref:System.Xml.XPath.XPathNodeIterator> geçerli düğümden bilgi almanızı sağlar. Kullanılabilir yöntemlerin ve özelliklerin listesi için bkz <xref:System.Windows.Forms.ToolBar> ..  
   
  Bir <xref:System.Xml.XPath.XPathNodeIterator> XPath sorgusundan oluşturulmuş bir düğüm kümesi üzerinde hareket ettirildiğinde ve yalnızca ileri hareket ettirildiğinde, taşıma <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> Yöntemi yöntemini kullanmaktır. Bu yöntemin dönüş türü `Boolean` , `true` sonraki Seçili düğüme taşınırsa döndürülür ve `false` daha fazla seçili düğüm yoksa döndürülüyor. Dönerse `true` , aşağıdaki listede kullanılabilen özellikler gösterilmektedir:  
   
@@ -26,7 +25,7 @@ ms.locfileid: "84282759"
   
  İlk kez bir düğüm kümesine baktığınızda, <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> Seçilen küme için ilk düğümde konumlandırmaya yönelik bir çağrı yapılmalıdır <xref:System.Xml.XPath.XPathNodeIterator> . Bu, bir while döngüsünün yazılmasına izin verir.  
   
- Aşağıdaki kod örneği <xref:System.Xml.XPath.XPathNodeIterator> ' de bir öğesine bir parametresi olarak nasıl geçirileceğini gösterir <xref:System.Xml.Xsl.XslTransform> <xref:System.Xml.Xsl.XsltArgumentList> . Kodun girişi **Books. xml**' dir ve stil sayfası **Text. xsl**' dir. **Test. xml** dosyası <xref:System.Xml.XPath.XPathDocument> .  
+ Aşağıdaki kod örneği <xref:System.Xml.XPath.XPathNodeIterator> ' de bir öğesine bir parametresi olarak nasıl geçirileceğini gösterir <xref:System.Xml.Xsl.XslTransform> <xref:System.Xml.Xsl.XsltArgumentList> . Kodun girişi **books.xml** ve stil sayfası **Text. xsl** olur. Dosya **test.xml** <xref:System.Xml.XPath.XPathDocument> .  
   
 ```vb  
 Imports System  
@@ -87,7 +86,7 @@ public class sample
 }  
 ```  
   
-## <a name="booksxml"></a>Books. xml  
+## <a name="booksxml"></a>books.xml  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -140,13 +139,13 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </xsl:stylesheet>  
 ```  
   
-## <a name="testxml"></a>test. xml  
+## <a name="testxml"></a>test.xml  
   
 ```xml  
 <Title attr="Test">this is a test</Title>  
 ```  
   
-## <a name="output-outxml"></a>Output (out. xml)  
+## <a name="output-outxml"></a>Çıkış (out.xml)  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

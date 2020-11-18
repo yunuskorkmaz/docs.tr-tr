@@ -2,19 +2,18 @@
 title: Yönetilen İş Parçacıklarında İptal
 description: Yönetilen iş parçacıklarında iptali anlayın. Zaman uyumsuz veya uzun süreli zaman uyumlu işlemler için birlikte çalışırken iptal belirteçleri hakkında bilgi edinin.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 09c39202f1564ac544fdf30a07952990b309b661
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188477"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819961"
 ---
 # <a name="cancellation-in-managed-threads"></a>Yönetilen İş Parçacıklarında İptal
 

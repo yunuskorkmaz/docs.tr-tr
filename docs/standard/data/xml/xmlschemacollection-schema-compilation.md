@@ -1,20 +1,19 @@
 ---
 title: XmlSchemaCollection Şema Derlemesi
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: 3d517652665d6d0693e141d623483ff8946bbbf4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7e93331d106dc74878e4d211c4dc6458c37088a3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290246"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819129"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection Şema Derlemesi
-**XmlSchemaCollection** , XML verileri AZALTıLMıŞ (xdr) ve XML şeması tanım DILI (xsd) şemaları depolanabilecek ve doğrulanabilen bir önbellek veya kitaplıktır. **XmlSchemaCollection** , şemaları bir dosya veya URL 'den erişmek yerine bellekte önbelleğe alarak performansı geliştirir.  
+**XmlSchemaCollection** , XML-Data AZALTıLMıŞ (xdr) ve XML şeması tanım DILI (xsd) şemaları depolanabileceği ve doğrulandığı bir önbellek veya kitaplıktır. **XmlSchemaCollection** , şemaları bir dosya veya URL 'den erişmek yerine bellekte önbelleğe alarak performansı geliştirir.  
   
 > [!NOTE]
 > **XmlSchemaCollection** sınıfı hem XDR şemaları hem de XML şemaları depolasa da, **XmlSchema** nesnesi alan veya döndüren herhangi bir yöntem ve özellik yalnızca XML şemalarını destekler.  

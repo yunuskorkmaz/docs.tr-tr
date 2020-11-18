@@ -2,14 +2,13 @@
 title: .NET taşınabilirlik Çözümleyicisi-.NET
 description: .Net taşınabilirlik Çözümleyicisi aracını kullanarak kodunuzun, .NET Core, .NET Standard, UWP ve Xamarin gibi çeşitli .NET uygulamaları arasında nasıl olduğunu değerlendirmek için nasıl kullanılacağı hakkında bilgi edinin.
 ms.date: 09/13/2019
-ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: d61dd9ebe744686885dad41ef700caaea9853f85
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 03b5f88a17baf8713b06bdd0eac192d9e093b969
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414805"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819714"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
@@ -75,7 +74,7 @@ Raporun taşınabilirlik Özeti bölümünde, çalıştırmada bulunan her derle
 
 ![Taşınabilirlik ayrıntılarının ekran görüntüsü.](./media/portability-analyzer/api-catalog-portablility-details.png)
 
-Raporun **Ayrıntılar** bölümünde, seçilen **hedeflenen platformların**hiçbirinde eksik olan API 'ler listelenir.
+Raporun **Ayrıntılar** bölümünde, seçilen **hedeflenen platformların** hiçbirinde eksik olan API 'ler listelenir.
 
 - Hedef türü: tür, hedef platformdan eksik API 'ye sahip
 - Hedef üye: Yöntem bir hedef platformda yok

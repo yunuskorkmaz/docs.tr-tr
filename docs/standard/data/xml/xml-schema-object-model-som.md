@@ -1,14 +1,13 @@
 ---
 title: XML Şema Nesne Modeli (SOM)
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-ms.openlocfilehash: 1de9fdf9950ba3ae356779ca802afb71f24a345e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b64e5bb88d5754447d8f75577f3c51f2aa467bb5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290324"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818407"
 ---
 # <a name="xml-schema-object-model-som"></a>XML Şema Nesne Modeli (SOM)
 XML şeması, uyumlu XML belgelerinde yapı oluşturmaya ve doğrulamaya yönelik güçlü ve karmaşık bir araçtır. İlişkisel bir veritabanındaki veri modellemesi gibi, bir şema, belgelerde kullanılabilecek öğeleri belirterek XML belgelerinin yapısını tanımlamaya yönelik bir yol sağlar ve bu öğelerin söz konusu şema için geçerli olması için izlenmesi gereken yapı ve türler de vardır.  

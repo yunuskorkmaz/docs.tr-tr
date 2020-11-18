@@ -2,7 +2,6 @@
 title: DateTime ve DateTimeOffset arasında dönüştürme
 description: .NET 'teki DateTimeOffset değerleri ile tarih saat değerleri arasında dönüştürme. DateTimeOffset yapısı, DateTime yapısından daha fazla zaman dilimi tanıma sağlar.
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: cccfa37663e5a046b08f70a89ebb7f3566486139
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: af75a467c344e299037dc6c2077e4a6ef6df2df9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063852"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818088"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime ve DateTimeOffset arasında dönüştürme
 

@@ -3,17 +3,16 @@ title: .NET mimari bileşenleri
 description: .NET Standard, .NET uygulamaları, .NET çalışma zamanları ve araç araçları gibi .NET mimari bileşenlerini açıklar.
 author: cartermp
 ms.date: 10/05/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 316063dbcfba5c92b4a9c6a17051e0a7fc178a3a
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224396"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819428"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 
-.NET uygulaması, bir veya daha fazla *.net*uygulamasında geliştirilir ve çalışır. .NET uygulamaları .NET Framework, .NET 5 (ve .NET Core) ve mono 'yı içerir. .NET Standard adlı çok sayıda .NET uygulaması için ortak bir API belirtimi vardır. Bu makalede, bu kavramların her birine kısa bir giriş sunulmaktadır.
+.NET uygulaması, bir veya daha fazla *.net* uygulamasında geliştirilir ve çalışır. .NET uygulamaları .NET Framework, .NET 5 (ve .NET Core) ve mono 'yı içerir. .NET Standard adlı çok sayıda .NET uygulaması için ortak bir API belirtimi vardır. Bu makalede, bu kavramların her birine kısa bir giriş sunulmaktadır.
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -89,7 +88,7 @@ Daha fazla bilgi için bkz. [Evrensel Windows platformu giriş](/windows/uwp/get
 .NET ' in her uygulamasıyla çalışan kapsamlı bir araç ve altyapı bileşeni kümesine erişirsiniz. Bu araçlar ve bileşenler şunlardır:
 
 - .NET dilleri ve derleyicileri
-- .NET proje sistemi ( *. csproj*, *. vbproj*ve *. fsproj* dosyaları temel alınarak)
+- .NET proje sistemi ( *. csproj*, *. vbproj* ve *. fsproj* dosyaları temel alınarak)
 - [MSBuild](/visualstudio/msbuild/msbuild), proje derlemek için kullanılan derleme altyapısı
 - [NuGet](/nuget/), Microsoft 'un .NET için Paket Yöneticisi
 - [Pasta](https://cakebuild.net/) ve [sahte](https://fake.build/) gibi açık kaynaklı derleme düzenleme araçları

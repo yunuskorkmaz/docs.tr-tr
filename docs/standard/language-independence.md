@@ -1,18 +1,17 @@
 ---
 title: Dil bağımsızlığı ve dilden bağımsız bileşenler
 description: ".NET ' te C#, C++/CLı, F #, IronPython, VB, Visual COBOL ve PowerShell gibi birçok desteklenen dilden birinde nasıl geliştirme yapabileceğinizi öğrenin."
-ms.date: 07/22/2016
 dev_langs:
 - csharp
 - vb
-ms.technology: dotnet-standard
+ms.date: 07/22/2016
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 524f8dc9838d7c438e8155da683c4fa5b01f36a3
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 259db1b9d33dd3b068f4d4fa18d2118db34bf0b0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162992"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819090"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil bağımsızlığı ve dilden bağımsız bileşenler
 
@@ -127,11 +126,11 @@ Oluşturucular | [Oluşturucular](#constructors) | Bir nesne Oluşturucusu, bir 
 Listelemeler | [Listelemeler](#enumerations) | Bir numaralandırmanın temel alınan türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" ve bu alan işaretlenir `RTSpecialName` . |  7
 Listelemeler | [Listelemeler](#enumerations) | [System. FlagsAttribute](xref:System.FlagsAttribute) (Bölüm IV kitaplığı) özel özniteliğinin varlığı veya yokluğu tarafından belirtilen iki farklı tür numaralandırmalar vardır. Biri adlandırılmış tamsayı değerlerini temsil eder; diğeri adlandırılmamış bir değer oluşturmak için birleştirilebilen adlandırılmış bit bayraklarını temsil eder. Öğesinin değeri `enum` belirtilen değerlerle sınırlı değil. |  8
 Listelemeler | [Listelemeler](#enumerations) | Sabit listesinin değişmez statik alanları, sabit listesinin kendi türüne sahip olacaktır. |  9
-Ekinlikler | [Ekinlikler](#events) | Bir olayı uygulayan yöntemler `SpecialName` meta verilerde işaretlenir. |29
-Ekinlikler | [Ekinlikler](#events) | Bir olayın ve erişimcilerinin erişilebilirliği aynı olacaktır. |30
-Ekinlikler | [Ekinlikler](#events) | `add` `remove` Bir olay için ve yöntemlerinin her ikisi de mevcut ya da yok olacaktır. |31
-Ekinlikler | [Ekinlikler](#events) | `add` `remove` Bir olay için ve yöntemlerinin her biri, türü olay türünü tanımlayan ve [System. Delegate](xref:System.Delegate)'ten türetilebilecek bir parametre alır. |32
-Ekinlikler | [Ekinlikler](#events) | Olaylar belirli bir adlandırma düzenine bağlı olacaktır. CLS kuralı 29 ' da başvurulan SpecialName özniteliği, uygun ad karşılaştırmaları içinde yok sayılacak ve tanımlayıcı kurallarına uymalecektir.  |33
+Olaylar | [Olaylar](#events) | Bir olayı uygulayan yöntemler `SpecialName` meta verilerde işaretlenir. |29
+Olaylar | [Olaylar](#events) | Bir olayın ve erişimcilerinin erişilebilirliği aynı olacaktır. |30
+Olaylar | [Olaylar](#events) | `add` `remove` Bir olay için ve yöntemlerinin her ikisi de mevcut ya da yok olacaktır. |31
+Olaylar | [Olaylar](#events) | `add` `remove` Bir olay için ve yöntemlerinin her biri, türü olay türünü tanımlayan ve [System. Delegate](xref:System.Delegate)'ten türetilebilecek bir parametre alır. |32
+Olaylar | [Olaylar](#events) | Olaylar belirli bir adlandırma düzenine bağlı olacaktır. CLS kuralı 29 ' da başvurulan SpecialName özniteliği, uygun ad karşılaştırmaları içinde yok sayılacak ve tanımlayıcı kurallarına uymalecektir.  |33
 Özel durumlar | [Özel durumlar](#exceptions) | Oluşturulan nesneler [System. Exception](xref:System.Exception) veya bundan devralan bir tür olmalıdır. Nonetheless, diğer özel durum türlerinin yayılmasını engellemek için CLS uyumlu yöntemler gerekli değildir. | 40
 Genel | [CLS Uyumluluk kuralları](#cls-compliance-rules) | CLS kuralları yalnızca, tanımlayıcı derlemenin dışında erişilebilen veya görülebilen bir türün bölümleri için geçerlidir. | 1
 Genel | [CLS Uyumluluk kuralları](#cls-compliance-rules) | CLS olmayan uyumlu türlerin üyeleri CLS uyumlu olarak işaretlenmemelidir. | 2
@@ -177,7 +176,7 @@ Alt bölümleri dizine:
 * [Genel türler ve Üyeler](#generic-types-and-members)
 * [Oluşturucular](#constructors)
 * [Özellikler](#properties)
-* [Ekinlikler](#events)
+* [Olaylar](#events)
 * [Aşırı Yüklemeler](#overloads)
 * [Özel durumlar](#exceptions)
 * [Öznitelikler](#attributes)
@@ -295,7 +294,7 @@ Bir yöntemin dönüş türü veya özellik türü de dahil olmak üzere üye im
 
 .NET [ortak tür sistemi](common-type-system.md) , doğrudan ortak dil çalışma zamanı tarafından desteklenen ve bir derlemenin meta verilerinde özel olarak kodlanmış bir dizi yerleşik tür içerir. Bu iç türlerin, aşağıdaki tabloda listelenen türler CLS uyumludur.
 
-CLS uyumlu tür | Description
+CLS uyumlu tür | Açıklama
 ------------------ | -----------
 [Bayt](xref:System.Byte) | 8 bit işaretsiz tamsayı
 [Int16](xref:System.Int16) | 16 bit işaretli tamsayı
@@ -303,7 +302,7 @@ CLS uyumlu tür | Description
 [Tutulamaz](xref:System.Int64) | 64-bit işaretli tamsayı
 [Tek](xref:System.Single) | Tek duyarlıklı kayan nokta değeri
 [Çift](xref:System.Double) | Çift duyarlıklı kayan nokta değeri
-[Boole](xref:System.Boolean) | doğru veya yanlış değer türü
+[Boolean](xref:System.Boolean) | doğru veya yanlış değer türü
 [Char](xref:System.Char) | UTF-16 kodlu kod birimi
 [Kategori](xref:System.Decimal) | Kayan nokta olmayan ondalık sayı
 [Serisi](xref:System.IntPtr) | Platform tanımlı boyutun işaretçisi veya işleyicisi
@@ -311,7 +310,7 @@ CLS uyumlu tür | Description
 
 Aşağıdaki tabloda listelenen iç türler CLS uyumlu değildir.
 
-Uyumlu olmayan tür | Description | CLS uyumlu alternatif
+Uyumlu olmayan tür | Açıklama | CLS uyumlu alternatif
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | 8 bit işaretli tamsayı veri türü | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16 bit işaretsiz tamsayı | [Int32](xref:System.Int32)
@@ -2038,7 +2037,7 @@ CLS uyumlu türlerdeki özellikler aşağıdaki kurallara uymalıdır:
 
 * Bir özelliğin hem alıcı hem de ayarlayıcı varsa, her ikisi de sanal, hem statik hem de her iki örnek olmalıdır. C# derleyicisi otomatik olarak bu kuralı özellik tanımı sözdizimi üzerinden zorlar.
 
-### <a name="events"></a>Ekinlikler
+### <a name="events"></a>Olaylar
 
 Bir olay, adı ve türü ile tanımlanır. Olay türü, olayı göstermek için kullanılan bir temsilcisidir. Örneğin, `DbConnection.StateChange` olay türündedir `StateChangeEventHandler` . Olayın kendisinin yanı sıra, olay adına göre adlara sahip üç yöntem olayın uygulamasını sağlar ve `SpecialName` derlemenin meta verilerinde olarak işaretlenir:
 
@@ -2544,7 +2543,7 @@ End Structure
 
 CLS uyumlu bir özniteliğin Oluşturucusu veya özellikleri yalnızca aşağıdaki türleri açığa alabilir:
 
-* [Boole](xref:System.Boolean)
+* [Boolean](xref:System.Boolean)
 
 * [Bayt](xref:System.Byte)
 
@@ -2630,7 +2629,7 @@ End Class
 
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute özniteliği
 
-[CLSCompliantAttribute](xref:System.CLSCompliantAttribute) özniteliği, bir program öğesinin ortak dil belirtimi ile uyumlu olup olmadığını belirtmek için kullanılır. `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)`Oluşturucu, program ÖĞESININ CLS uyumlu olup olmadığını belirten, *ısuyumlu*tek bir gerekli parametre içerir.
+[CLSCompliantAttribute](xref:System.CLSCompliantAttribute) özniteliği, bir program öğesinin ortak dil belirtimi ile uyumlu olup olmadığını belirtmek için kullanılır. `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)`Oluşturucu, program ÖĞESININ CLS uyumlu olup olmadığını belirten, *ısuyumlu* tek bir gerekli parametre içerir.
 
 Derleme zamanında derleyici, CLS uyumlu olarak kabul edilen uyumlu olmayan öğeleri algılar ve bir uyarı gönderir. Derleyici, açıkça uyumsuz olacak şekilde bildirilmeyen türler veya Üyeler için uyarıları göstermez.
 

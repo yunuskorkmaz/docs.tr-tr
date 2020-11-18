@@ -1,22 +1,21 @@
 ---
 title: Eklenen ve Ayrılan Alt Görevler
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-ms.openlocfilehash: c8a5d2c1ccb8bb2d272c2582cd416cdfd75506d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e5d27aff02d0afd1c288e5d18e52be4745132a70
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285696"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817529"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Eklenen ve Ayrılan Alt Görevler
-Bir *alt görev* (veya *iç içe görev*), <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> *üst görev*olarak bilinen başka bir görevin Kullanıcı temsilcisinde oluşturulan bir örneğidir. Bir alt görev ayrılabilir veya bağlı olabilir. *Ayrılmış bir alt görev* , üst öğesinden bağımsız olarak yürütülen bir görevdir. *Bağlı bir alt görev* , <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> üst öğesi açıkça olmayan veya varsayılan olarak, eklenmesini engelleyen seçenekle oluşturulan iç içe bir görevdir. Bir görev, yalnızca sistem kaynaklarıyla sınırlı sayıda eklenmiş ve ayrılmış alt görev oluşturabilir.  
+Bir *alt görev* (veya *iç içe görev*), <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> *üst görev* olarak bilinen başka bir görevin Kullanıcı temsilcisinde oluşturulan bir örneğidir. Bir alt görev ayrılabilir veya bağlı olabilir. *Ayrılmış bir alt görev* , üst öğesinden bağımsız olarak yürütülen bir görevdir. *Bağlı bir alt görev* , <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> üst öğesi açıkça olmayan veya varsayılan olarak, eklenmesini engelleyen seçenekle oluşturulan iç içe bir görevdir. Bir görev, yalnızca sistem kaynaklarıyla sınırlı sayıda eklenmiş ve ayrılmış alt görev oluşturabilir.  
   
  Aşağıdaki tabloda iki alt görev türü arasındaki temel farklılıklar listelenmiştir.  
   

@@ -2,7 +2,6 @@
 title: Normal İfade Dili - Hızlı Başvuru
 description: Bu hızlı başvuru bölümünde, giriş metnini eşleştirmek için normal ifade desenleri kullanmayı öğrenin. Bir düzende bir veya daha fazla karakter sabit değeri, işleç veya yapı bulunur.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 f1_keywords:
 - VS.RegularExpressionBuilder
 helpviewer_keywords:
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 986e7417d85655acc66a5c308aa79477c96fd629
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 1b261211997837e8664ea60e9210a7f0517f7a9f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889315"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818810"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
 
@@ -47,8 +46,8 @@ Bir normal ifadede ters eğik çizgi karakteri ( \\ ), kendisini izleyen karakte
 |`\f`|Form besleme ile eşleşir, \u000C.|`[\f]{2,}`|`"\f\f\f"` içinde `"\f\f\f"`|
 |`\n`|Yeni bir satırla eşleşir, \u000A.|`\r\n(\w+)`|`"\r\nThese are\ntwo lines."` içinde `"\r\nThese"`|
 |`\e`|Bir çıkışla eşleşir, \u001B.|`\e`|`"\x001B"` içinde `"\x001B"`|
-|`\`*nnn*|Bir karakter belirtmek için sekizlik gösterim kullanır ( *nnn* iki veya üç basamaktan oluşur).|`\w\040\w`|`"a b"``"c d"`içinde,`"a bc d"`|
-|`\x` *nn*|Bir karakter belirtmek için onaltılık gösterim kullanır ( *nn* tam olarak iki basamak içerir).|`\w\x20\w`|`"a b"``"c d"`içinde,`"a bc d"`|
+|`\`*nnn*|Bir karakter belirtmek için sekizlik gösterim kullanır (*nnn* iki veya üç basamaktan oluşur).|`\w\040\w`|`"a b"``"c d"`içinde,`"a bc d"`|
+|`\x` *nn*|Bir karakter belirtmek için onaltılık gösterim kullanır (*nn* tam olarak iki basamak içerir).|`\w\x20\w`|`"a b"``"c d"`içinde,`"a bc d"`|
 |`\c`*X*<br /><br /> `\c` *x*|X *veya x tarafından BELIRTILEN* ASCII denetim karakteriyle *eşleşir; burada* *x* veya *x* , denetim karakterinin harfidir.|`\cC`|`"\x0003"` içinde `"\x0003"` (CTRL-C)|
 |`\u`*nnnn*|Onaltılık gösterim kullanarak bir Unicode karakteriyle eşleşir ( *nnnn* ile gösterildiği gibi, tam olarak dört basamaklı).|`\w\u0020\w`|`"a b"``"c d"`içinde,`"a bc d"`|
 |`\`|Bu konudaki bu ve diğer tablolarda kaçış karakteri olarak tanınmayan bir karakterden önce geldiğinde karakterle eşleşir. Örneğin, ile `\*` aynıdır `\x2A` ve ile `\.` aynıdır `\x2E` . Bu, normal ifade altyapısının dil öğelerini ( \* veya? gibi) ve karakter değişmez değerlerini (veya ile temsil edilen) belirsizliğini sağlar `\*` `\?` .|`\d+[\+-x\*]\d+`|`"(2+2) * 3*9"` içinde `"2+2"` ve `"3*9"`|
@@ -129,7 +128,7 @@ Yeniden başvuru, aynı normal ifadede daha sonra tanımlanabilecek alt ifadeyle
 
 |Yeniden başvuru yapısı|Açıklama|Desen|Eşleşmeler|
 |-----------------------------|-----------------|-------------|-------------|
-|`\` *sayı*|Yeniden başvuru. Numaralandırılmış ifadenin değeriyle eşleşir.|`(\w)\1`|`"seek"` içinde `"ee"`|
+|`\`*sayı*|Yeniden başvuru. Numaralandırılmış ifadenin değeriyle eşleşir.|`(\w)\1`|`"seek"` içinde `"ee"`|
 |`\k<`*ad*`>`|Adlandırılan yeniden başvuru. Adlandırılmış ifadenin değeriyle eşleşir.|`(?<char>\w)\k<char>`|`"seek"` içinde `"ee"`|
 
 ## <a name="alternation-constructs"></a>Değişim Yapıları
@@ -140,7 +139,7 @@ Değişim yapıları, ve/veya eşleştirmeyi etkinleştirmek üzere bir normal i
 |---------------------------|-----------------|-------------|-------------|
 |<code>&#124;</code>|Dikey çubuk () karakteriyle ayrılmış herhangi bir öğeyle eşleşir <code>&#124;</code> .|<code>th(e&#124;is&#124;at)</code>|`"the"``"this"`içinde,`"this is the day."`|
 |`(?(`*ifade* `)` *Evet* <code>&#124;</code> *Hayır*`)`|*Expression* ile belirlenen normal ifade deseninin eşleşiyorsa *Evet* ile eşleşir; Aksi takdirde, isteğe bağlı *hiçbir* bölüm ile eşleşir. *ifade* sıfır genişlikli bir onaylama olarak yorumlanır.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"``"910"`içinde,`"A10 C103 910"`|
-|`(?(`*ad* `)` *Evet* <code>&#124;</code> *Hayır*`)`|*Ad* , adlandırılmış veya numaralandırılmış yakalama grubu, eşleşme içeriyorsa *Evet* ile eşleşir; Aksi takdirde, isteğe bağlı *No* ile eşleşir.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "``"\"Yiska playing.jpg\""`içinde,`"Dogs.jpg \"Yiska playing.jpg\""`|
+|`(?(`*ad* `)` *Evet* <code>&#124;</code> *Hayır*`)`|*Ad*, adlandırılmış veya numaralandırılmış yakalama grubu, eşleşme içeriyorsa *Evet* ile eşleşir; Aksi takdirde, isteğe bağlı *No* ile eşleşir.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "``"\"Yiska playing.jpg\""`içinde,`"Dogs.jpg \"Yiska playing.jpg\""`|
 
 ## <a name="substitutions"></a>Değişimler
 
@@ -148,7 +147,7 @@ Değişimler değiştirme desenlerinde desteklenen normal ifade dil öğeleridir
 
 |Karakter|Açıklama|Desen|Değiştirme deseni|Giriş dizesi|Sonuç Dizesi|
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|
-|`$` *sayı*|Grup *numarasıyla* eşleşen alt dizeyi değiştirir.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
+|`$`*sayı*|Grup *numarasıyla* eşleşen alt dizeyi değiştirir.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
 |`${`*ad*`}`|Adlandırılmış grup *adıyla* eşleştirilen alt dizeyi değiştirir.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
 |`$$`|Değişmez değerli bir "$" işaretinin yerini alır.|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|
 |`$&`|Tam eşleşmenin bir kopyasının yerini alır.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|

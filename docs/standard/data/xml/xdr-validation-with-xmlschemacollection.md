@@ -1,26 +1,25 @@
 ---
 title: XmlSchemaCollection ile XDR Doğrulaması
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9edde2fc0da97b570162775a33c95d472cda974b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710004"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819285"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XmlSchemaCollection ile XDR Doğrulaması
 
-Doğrulamak istediğiniz XML-Data azaltılmış (XDR) şeması **XmlSchemaCollection**içinde depolanıyorsa, şema koleksiyona eklendiğinde belirtilen ad alanı URI 'siyle ilişkilendirilir. **XmlValidatingReader** , XML belgesindeki ad alanı URI 'sini KOLEKSIYONDAKI bu URI 'ye karşılık gelen şemaya eşler.
+Doğrulamak istediğiniz XML-Data azaltılmış (XDR) şeması **XmlSchemaCollection** içinde depolanıyorsa, şema koleksiyona eklendiğinde belirtilen ad alanı URI 'siyle ilişkilendirilir. **XmlValidatingReader** , XML belgesindeki ad alanı URI 'sini KOLEKSIYONDAKI bu URI 'ye karşılık gelen şemaya eşler.
 
 > [!IMPORTANT]
-> <xref:System.Xml.Schema.XmlSchemaCollection> Sınıf artık kullanımdan kalkmıştır ve <xref:System.Xml.Schema.XmlSchemaSet> sınıfıyla değiştirilmiştir. <xref:System.Xml.Schema.XmlSchemaSet> Sınıf hakkında daha fazla bilgi için bkz. [şema derlemesi için XmlSchemaSet](xmlschemaset-for-schema-compilation.md).
+> <xref:System.Xml.Schema.XmlSchemaCollection>Sınıf artık kullanımdan kalkmıştır ve <xref:System.Xml.Schema.XmlSchemaSet> sınıfıyla değiştirilmiştir. Sınıf hakkında daha fazla bilgi için <xref:System.Xml.Schema.XmlSchemaSet> bkz. [şema derlemesi için XmlSchemaSet](xmlschemaset-for-schema-compilation.md).
 
-Örneğin, XML belgesinin kök öğesi ise `<bookstore xmlns="urn:newbooks-schema">`, şema **XmlSchemaCollection** 'a eklendiğinde, aşağıdaki gibi aynı ad alanına başvurur:
+Örneğin, XML belgesinin kök öğesi ise `<bookstore xmlns="urn:newbooks-schema">` , şema **XmlSchemaCollection** 'a eklendiğinde, aşağıdaki gibi aynı ad alanına başvurur:
 
 ```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
@@ -70,7 +69,7 @@ Namespace ValidationSample
         End Sub
 
         Public Shared Sub ValidationHandler(sender As Object, args As ValidationEventArgs)
-            Console.WriteLine("***Validation error")
+            Console.WriteLine("**_Validation error")
             Console.WriteLine($"Severity:{args.Severity}")
             Console.WriteLine($"Message:{args.Message}")
         End Sub
@@ -123,7 +122,7 @@ namespace ValidationSample
 
         public static void ValidationHandler(object sender, ValidationEventArgs args)
         {
-            Console.WriteLine("***Validation error");
+            Console.WriteLine("_*_Validation error");
             Console.WriteLine($"\tSeverity:{args.Severity}");
             Console.WriteLine($"\tMessage:{args.Message}");
         }
@@ -131,7 +130,7 @@ namespace ValidationSample
 }
 ```
 
-Aşağıda, doğrulanacak olan *Headcount. xml*girdi dosyasının içeriği özetlenmektedir:
+Aşağıda, doğrulanacak _HeadCount.xml * giriş dosyasının içeriği özetlenmektedir:
 
 ```xml
 <!--Load HeadCount.xdr in SchemaCollection for Validation-->

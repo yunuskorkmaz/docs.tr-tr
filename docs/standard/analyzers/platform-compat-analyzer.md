@@ -3,18 +3,19 @@ title: Platform uyumluluk çözümleyicisi
 description: Platformlar arası uygulamalarda ve kitaplıklarda platform uyumluluk sorunlarını algılamaya yardımcı olabilecek bir Roslyn Çözümleyicisi.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805304"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819493"
 ---
 # <a name="platform-compatibility-analyzer"></a>Platform uyumluluk çözümleyicisi
 
 Büyük olasılıkla "One .NET" gibi bir uygulama oluşturmak için kullanabileceğiniz tek bir birleştirilmiş platform olduğunu duydunuz. .NET 5,0 SDK ASP.NET Core, Entity Framework Core, WinForms, WPF, Xamarin ve ML.NET içerir ve zaman içinde daha fazla platform için destek ekler. .NET 5,0, .NET 'in farklı özellikleri hakkında neden olmanız gerektiği, ancak temel alınan işletim sistemini (OS) tamamen soyutlamayı denemeyen bir deneyim sunmak için çaba harcar. Platforma özgü API 'Leri, örneğin P/Invoke, WinRT veya iOS ve Android için Xamarin bağlamaları gibi bir arayabileceksiniz.
 
-Ancak, platforma özgü API 'Lerin bir bileşende kullanılması, kodun artık tüm platformlarda çalışmamasıdır. Bu sayede, geliştiricilerin platforma özgü API 'Leri farkında olmadan tanılamayı alması için tasarım zamanında bunu tespit etmek için bir yol gerekiyordu. .NET 5,0, bu hedefe ulaşmak için [Platform uyumluluk Çözümleyicisi](/visualstudio/code-quality/ca1416) 'ni ve tamamlayıcı API 'leri sunarak, geliştiricilerin uygun yerlerde platforma özel API 'leri tanımlamasına ve kullanmasına yardımcı olur.
+Ancak, platforma özgü API 'Lerin bir bileşende kullanılması, kodun artık tüm platformlarda çalışmamasıdır. Bu sayede, geliştiricilerin platforma özgü API 'Leri farkında olmadan tanılamayı alması için tasarım zamanında bunu tespit etmek için bir yol gerekiyordu. .NET 5,0, bu hedefe ulaşmak için [Platform uyumluluk Çözümleyicisi](../../fundamentals/code-analysis/quality-rules/ca1416.md) 'ni ve tamamlayıcı API 'leri sunarak, geliştiricilerin uygun yerlerde platforma özel API 'leri tanımlamasına ve kullanmasına yardımcı olur.
+
 Yeni API 'Ler şunları içerir:
 
 - <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> API 'Leri platforma özel olarak açıklama eklemek ve <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> API 'leri belirli BIR işletim sisteminde desteklenmeyen şekilde açıklama eklemek için. Bu öznitelikler isteğe bağlı olarak sürüm numarasını içerebilir ve çekirdek .NET kitaplıklarında platforma özgü bazı API 'lere zaten uygulanmış olabilir.
@@ -23,21 +24,21 @@ Yeni API 'Ler şunları içerir:
 > [!TIP]
 > Platform uyumluluk Çözümleyicisi, [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md)'nin [platformlar arası sorunları keşfetmesini](../../standard/analyzers/api-analyzer.md#discover-cross-platform-issues) yükseltir ve değiştirir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin biridir. .NET 5,0 ' den itibaren bu çözümleyiciler [.NET SDK 'ya dahildir](../../fundamentals/code-analysis/overview.md). Platform uyumluluğu Çözümleyicisi, yalnızca `net5.0` veya sonraki bir sürümü hedefleyen projeler için varsayılan olarak etkindir. Ancak, diğer çerçeveleri hedefleyen projeler için [etkinleştirebilirsiniz](/visualstudio/code-quality/ca1416.md#configurability) .
+Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin biridir. .NET 5.0’dan itibaren bu çözümleyiciler, [.NET SDK](../../fundamentals/code-analysis/overview.md)’ya dahildir. Platform uyumluluğu Çözümleyicisi, yalnızca `net5.0` veya sonraki bir sürümü hedefleyen projeler için varsayılan olarak etkindir. Ancak, diğer çerçeveleri hedefleyen projeler için [etkinleştirebilirsiniz](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability) .
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>Çözümleyici platform bağımlılığını nasıl belirler
 
-- **Öznitelik olmayan BIR API** , **tüm işletim sistemi platformlarında**çalıştığı kabul edilir.
+- **Öznitelik olmayan BIR API** , **tüm işletim sistemi platformlarında** çalıştığı kabul edilir.
 - İle işaretlenen bir API `[SupportedOSPlatform("platform")]` yalnızca belirtilen işletim sistemine taşınabilir olarak değerlendirilir `platform` .
   - Özniteliği **birden çok platform desteği** () göstermek için birden çok kez uygulanabilir `[SupportedOSPlatform("windows"), SupportedOSPlatform("Android6.0")]` .
-  - Platforma özgü API 'Lere uygun bir **Platform bağlamı**olmadan başvuruluyorsa, çözümleyici bir **Uyarı** üretir:
+  - Platforma özgü API 'Lere uygun bir **Platform bağlamı** olmadan başvuruluyorsa, çözümleyici bir **Uyarı** üretir:
     - Projenin desteklenen platformu hedeflediğini (örneğin, Windows 'a özgü bir API çağrısı ve proje hedefleri) yoksa **uyarır** `<TargetFramework>net5.0-ios14.0</TargetFramework>` .
     - Projenin çoklu hedefli () olduğunu **uyarır** `<TargetFramework>net5.0</TargetFramework>` .
     - Platforma özgü API 'ye, **belirtilen platformlardan** herhangi birini hedefleyen bir proje içinde başvuruluyorsa (örneğin, Windows 'a özgü bir API çağrısı ve proje hedefleri için), **uyarı vermez** `<TargetFramework>net5.0-windows</TargetFramework>` .
     - Platforma özgü API çağrısı karşılık gelen platform denetimi yöntemleriyle (örneğin,) korunmuş olursa, **uyarı vermez** `if(OperatingSystem.IsWindows())` .
-    - Platforma özgü API 'ye, platforma özgü bir içerikten (aynı zamanda öğesine sahip olan**çağrı sitesi** ) başvuruluyorsa, **uyarı vermez** `[SupportedOSPlatform("platform")` .
+    - Platforma özgü API 'ye, platforma özgü bir içerikten (aynı zamanda öğesine sahip olan **çağrı sitesi** ) başvuruluyorsa, **uyarı vermez** `[SupportedOSPlatform("platform")` .
 - İle işaretlenen bir API `[UnsupportedOSPlatform("platform")]` , yalnızca belirtilen işletim sisteminde desteklenmeyen `platform` ancak diğer tüm platformlar için desteklenen olarak kabul edilir.
   - Özniteliği farklı platformlarla birden çok kez uygulanabilir, örneğin, `[UnsupportedOSPlatform("iOS"), UnsupportedOSPlatform("Android6.0")]` .
   - Çözümleyici, yalnızca **warning** `platform` çağrı sitesi için geçerli olduğunda bir uyarı oluşturur:
@@ -80,7 +81,7 @@ Daha fazla bilgi için, [özniteliklerin nasıl çalıştığı ve bu nesnelerin
     ```
 
   - **Tutarsız liste**. Bazı platformların en düşük sürümü diğer platformlar için ise, bu, `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` çözümleyici için desteklenmeyen tutarsız olarak kabul edilir.
-  - Ve özniteliklerinin en düşük sürümleri `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` eşitse, çözümleyici platformu **yalnızca desteklenen listenin**bir parçası olarak değerlendirir.
+  - Ve özniteliklerinin en düşük sürümleri `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` eşitse, çözümleyici platformu **yalnızca desteklenen listenin** bir parçası olarak değerlendirir.
 - Platform öznitelikleri, türler, Üyeler (metotlar, alanlar, Özellikler ve olaylar) ve farklı platform adları veya sürümleri olan derlemeler için uygulanabilir.
   - En üst düzeyde uygulanan öznitelikler `target` , tüm üyelerini ve türlerini etkiler.
   - Alt düzey öznitelikler yalnızca "alt ek açıklamalar, platformlar desteğini daraltabilir, ancak bunları genişlezler" kuralına uyduklarında geçerlidir.

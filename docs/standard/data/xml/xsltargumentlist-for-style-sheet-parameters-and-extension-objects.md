@@ -1,17 +1,16 @@
 ---
 title: Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 1c69a6e78207e146c8dbd6cdc252f27f36ab37a2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6f0be433abcebed7f9da70225563a04170426314
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281706"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818212"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList>Sınıfı, dönüşümler (XSLT) parametreleri ve XSLT uzantı nesneleri Için Genişletilebilir Stil sayfası dili içerir. <xref:System.Xml.Xsl.XslTransform.Transform%2A>Yöntemine geçirildiğinde, bu parametreler ve uzantı nesneleri stil sayfalarından çağrılabilir.  
@@ -41,8 +40,8 @@ ms.locfileid: "84281706"
 |Dize|System. String|XPath|  
 |Boole|System. Boolean|XPath|  
 |Sayı|System. Double|XPath|  
-|Sonuç ağacı parçası|System. xml. XPath. XPathNavigator|XSLT|  
-|Düğüm kümesi|System. xml. XPath. XPathNodeIterator|XPath|  
+|Sonuç ağacı parçası|System.Xml. XPath. XPathNavigator|XSLT|  
+|Düğüm kümesi|System.Xml. XPath. XPathNodeIterator|XPath|  
   
  Parametre nesnesi yukarıdaki sınıflardan biri değilse, uygun şekilde bir Double veya String öğesine zorlanır. Int16, UInt16, Int32, UInt32, Int64, UInt64, tek ve ondalık türler Double 'a zorlanır. Diğer tüm türler yöntemi kullanılarak bir dizeye zorlanır `ToString` .  
   
@@ -138,7 +137,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Giriş  
- Order. xml  
+ order.xml  
   
 ```xml  
 <!--Represents a customer order-->  
@@ -169,7 +168,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Çıktı  
+### <a name="output"></a>Çıkış  
   
 ```xml  
 <order>  
@@ -306,7 +305,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Giriş  
- Number. xml  
+ number.xml  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -341,7 +340,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Çıktı  
+### <a name="output"></a>Çıkış  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

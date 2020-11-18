@@ -1,7 +1,6 @@
 ---
 title: System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
 description: DateTime ve DateTimeOffset türlerinin kitaplığındaki System.Text.Jsnasıl desteklenbir genel bakış.
-ms.technology: dotnet-standard
 author: layomia
 ms.author: laakinri
 ms.date: 07/22/2019
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 020e6903069da2c5d8761c86e890c4e9575a3fae
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3f8161c40f21428a4a22bef09582754069f3a2b6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188763"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817542"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
 

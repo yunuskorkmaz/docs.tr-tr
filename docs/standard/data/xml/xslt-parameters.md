@@ -1,17 +1,16 @@
 ---
 title: XSLT Parametreleri
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: 7651360b375071c48ba0d23b64881ac794e51e86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c203e17e327cf64690c2748c7f3a4e74b5306501
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282538"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818303"
 ---
 # <a name="xslt-parameters"></a>XSLT Parametreleri
 XSLT parametreleri yöntemi kullanılarak öğesine eklenir <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> . Tam ad ve ad alanı URI 'SI parametre nesnesiyle ilişkili zamanda ilişkilendirilir.  
@@ -38,7 +37,7 @@ XSLT parametreleri yöntemi kullanılarak öğesine eklenir <xref:System.Xml.Xsl
   
  * Bu, tek bir düğüm içeren bir düğüm kümesine eşdeğerdir.  
   
- Parametre nesnesi yukarıdaki sınıflardan biri değilse, aşağıdaki kurallara göre dönüştürülür. Ortak dil çalışma zamanı (CLR) sayısal türleri öğesine dönüştürülür <xref:System.Double> . <xref:System.DateTime>Tür öğesine dönüştürülür <xref:System.String> . <xref:System.Xml.XPath.IXPathNavigable>türler öğesine dönüştürülür <xref:System.Xml.XPath.XPathNavigator> . **XPathNavigator []** , öğesine dönüştürüldü <xref:System.Xml.XPath.XPathNodeIterator> .  
+ Parametre nesnesi yukarıdaki sınıflardan biri değilse, aşağıdaki kurallara göre dönüştürülür. Ortak dil çalışma zamanı (CLR) sayısal türleri öğesine dönüştürülür <xref:System.Double> . <xref:System.DateTime>Tür öğesine dönüştürülür <xref:System.String> . <xref:System.Xml.XPath.IXPathNavigable> türler öğesine dönüştürülür <xref:System.Xml.XPath.XPathNavigator> . **XPathNavigator []** , öğesine dönüştürüldü <xref:System.Xml.XPath.XPathNodeIterator> .  
   
  Diğer tüm türler bir hata oluşturur.  
   
@@ -50,13 +49,13 @@ XSLT parametreleri yöntemi kullanılarak öğesine eklenir <xref:System.Xml.Xsl
   
 ### <a name="input"></a>Giriş  
   
-##### <a name="orderxml"></a>Order. xml  
+##### <a name="orderxml"></a>order.xml  
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
   
 ##### <a name="discountxsl"></a>Discount. Xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a>Çıktı  
+### <a name="output"></a>Çıkış  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

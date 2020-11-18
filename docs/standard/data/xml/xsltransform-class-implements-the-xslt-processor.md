@@ -1,17 +1,16 @@
 ---
 title: XslTransform Sınıfı XSLT İşlemcisini Uygular
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-ms.openlocfilehash: eec5d6588d907e2d12b588ab3bfe743d6d1eaff9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 57632321edf086b644da7ea4fca893edb589834f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281615"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818186"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform Sınıfı XSLT İşlemcisini Uygular
 
@@ -178,14 +177,14 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-Örnek, input olarak Library. xml ve print_root. xsl dosyalarını kullanır ve aşağıdakileri konsola verir:
+Örnek, library.xml ve print_root. xsl dosyalarını girdi olarak kullanır ve aşağıdakileri konsola verir:
 
 ```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl
 Root node is book.
 ```
 
-Library. xml
+library.xml
 
 ```xml
 <library>

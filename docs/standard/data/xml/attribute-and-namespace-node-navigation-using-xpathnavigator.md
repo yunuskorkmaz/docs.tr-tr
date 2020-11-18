@@ -1,14 +1,13 @@
 ---
 title: XPathNavigator Kullanarak Öznitelik ve Ad Alanı Düğümünde Gezinme
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: 90c8fe7450a6ca853aaea452e30a292dbdcd9d98
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf29c15463030774b488beed776c9cfe623072d1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291623"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819415"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>XPathNavigator Kullanarak Öznitelik ve Ad Alanı Düğümünde Gezinme
 <xref:System.Xml.XPath.XPathNavigator>Sınıfı, bir veya nesnesi içindeki düğüm kümelerinde gezinmek için kullanılan ilk küme, bir veya nesne içindeki *düğüm kümelerine* gitmek için kullanılır [Node Set Navigation Using XPathNavigator](node-set-navigation-using-xpathnavigator.md) <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> . Bu konuda açıklanan ikinci küme, veya nesne içindeki *öznitelik ve ad alanı düğümlerine* gezinmek için kullanılır <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> .  
@@ -68,7 +67,7 @@ ms.locfileid: "84291623"
   
 - Üzerine getirildiğinde `element1` : `xmlns:books="http://www.contoso.com/books"` , `xmlns="http://www.contoso.com"` ve `xmlns:xml="http://www.w3.org/XML/1998/namespace"` .  
   
-- Şu konuma yerleştirilme `root` :`xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+- Şu konuma yerleştirilme `root` : `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
   
 > [!NOTE]
 > <xref:System.Xml.XPath.XPathNavigator>Sınıfı, ters belge düzeninde ad alanı düğümleri döndürür. Bu nedenle, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> temelde geçerli kapsamdaki son ad alanı düğümüne gider.  

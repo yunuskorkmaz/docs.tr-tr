@@ -1,18 +1,17 @@
 ---
 title: Belgeye Katıştırılmış Stil Sayfası Yönergeleri
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-ms.openlocfilehash: 19e25ab7262bb006144eea71e74bd7454066b3f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 25946fd14a82428ae4367cd33511df68e9929203
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710160"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818576"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Belgeye Katıştırılmış Stil Sayfası Yönergeleri
 
-Bazen varolan XML, öğesinin `<?xml:stylesheet?>`stil sayfası yönergesini içerir. Microsoft Internet Explorer, `<?xml-stylesheet?>` söz dizimini bir alternatif olarak kabul eder. XML verileri aşağıdaki verilerde gösterildiği gibi `<?xml:stylesheet?>` bir yönerge içerdiğinde, bu verileri XML belge nesne modeli yüklemeye ÇALıŞMAK (DOM) bir özel durum oluşturur.
+Bazen varolan XML, öğesinin stil sayfası yönergesini içerir `<?xml:stylesheet?>` . Microsoft Internet Explorer, söz dizimini bir alternatif olarak kabul eder `<?xml-stylesheet?>` . XML verileri `<?xml:stylesheet?>` aşağıdaki verilerde gösterildiği gibi bir yönerge içerdiğinde, bu VERILERI XML belge nesne modeli yüklemeye çalışmak (DOM) bir özel durum oluşturur.
 
 ```xml
 <?xml version="1.0" ?>
@@ -31,9 +30,9 @@ XML belirtiminde ad alanlarının 6. bölümünde, **Load** ve **LoadXml** yönt
 
 - Hiçbir varlık adı, Işleme yönergesi hedefi veya gösterim adı herhangi bir iki nokta üst üste içermez.
 
-İki nokta `<?xml:stylesheet?>` üst üste içeren, artık kuralı ikinci madde işaretiyle ihlal edersiniz.
+`<?xml:stylesheet?>`İki nokta üst üste içeren, artık kuralı ikinci madde işaretiyle ihlal edersiniz.
 
-World Wide Web Konsorsiyumu (W3C) [Ile xml belgelerinin sürüm 1,0 önerisi Ile ilişkilendirme](https://www.w3.org/TR/xml-stylesheet/), XSLT stil SAYFASıNı bir XML belgesi `<?xml-stylesheet?>`ile ilişkilendirmek için işleme yönergesi, iki nokta üst üste yerine bir tire ile.
+World Wide Web Konsorsiyumu (W3C) [Ile xml belgelerinin sürüm 1,0 önerisi Ile ilişkilendirme](https://www.w3.org/TR/xml-stylesheet/), XSLT stil SAYFASıNı bir XML belgesi ile ilişkilendirmek için işleme yönergesi, `<?xml-stylesheet?>` iki nokta üst üste yerine bir tire ile.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

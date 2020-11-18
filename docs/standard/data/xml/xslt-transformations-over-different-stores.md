@@ -1,14 +1,13 @@
 ---
 title: Farklı Mağazalarda XSLT Dönüşümleri
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
-ms.openlocfilehash: 0eb98aad00227688df3e097ad674b44a29e5cb1a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7ed5c938b3c6995fb1315931a8d1fa21b57c1d9d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281719"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818251"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>Farklı Mağazalarda XSLT Dönüşümleri
 > [!NOTE]

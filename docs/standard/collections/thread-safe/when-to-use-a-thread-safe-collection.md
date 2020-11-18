@@ -2,16 +2,15 @@
 title: Bir İş Parçacığı Koleksiyonunun Ne Zaman Kullanılacağı
 description: .NET ' te iş parçacığı güvenli bir koleksiyonun ne zaman kullanılacağını öğrenin. Çok iş parçacıklı ekleme & kaldırma işlemlerini desteklemek için özel olarak tasarlanan 5 koleksiyon türü vardır.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 92fb912cdd2030f87bee1109b9944e1fa857dddd
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326034"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819467"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>İş parçacığı güvenli koleksiyonu ne zaman kullanılır?
 
@@ -36,7 +35,7 @@ ms.locfileid: "85326034"
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue (T) ve Queue (T) karşılaştırması  
  Saf üretici-tüketici senaryolarında her öğe için işlem zamanının çok küçük (birkaç yönerge) olduğu durumlarda, <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> bir <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> dış kilidine sahip olan bir üzerinde ila büyüklükteki performans avantajları sunabilir. Bu senaryoda, <xref:System.Collections.Concurrent.ConcurrentQueue%601> ayrılmış bir iş parçacığının kuyruğa alınması ve ayrılmış bir iş parçacığının de de sıraya alınması durumunda en iyi şekilde çalışır. Bu kuralı zorunlu kılmaz, <xref:System.Collections.Generic.Queue%601> <xref:System.Collections.Concurrent.ConcurrentQueue%601> birden fazla çekirdeğe sahip bilgisayarlardan daha hızlı bir şekilde daha hızlı işlem yapabilirsiniz.  
   
- İşlem süresi 500 FLOPS (kayan nokta işlemleri) veya daha fazla olduğunda, iki iş parçacığı kuralı için geçerli değildir <xref:System.Collections.Concurrent.ConcurrentQueue%601> , daha sonra çok iyi ölçeklenebilirlik vardır. <xref:System.Collections.Generic.Queue%601>Bu senaryoda iyi ölçeklenmez.  
+ İşlem süresi 500 FLOPS (kayan nokta işlemleri) veya daha fazla olduğunda, iki iş parçacığı kuralı için geçerli değildir <xref:System.Collections.Concurrent.ConcurrentQueue%601> , daha sonra çok iyi ölçeklenebilirlik vardır. <xref:System.Collections.Generic.Queue%601> Bu senaryoda iyi ölçeklenmez.  
   
  Karma üretici-tüketici senaryolarında, işleme süresi çok küçük olduğunda, bir <xref:System.Collections.Generic.Queue%601> dış kilit ölçeği bundan daha iyidir <xref:System.Collections.Concurrent.ConcurrentQueue%601> . Ancak, işleme süresi 500 kat veya daha uzun bir süre içinde olduğunda, <xref:System.Collections.Concurrent.ConcurrentQueue%601> daha sonra ölçeklendirir.  
   

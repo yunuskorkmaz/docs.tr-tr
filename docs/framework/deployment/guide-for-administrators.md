@@ -6,26 +6,26 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-ms.openlocfilehash: b358f0909147e52293fd802bc98caa31b284d7b1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 12076334d3ede0c8ab9b618ba2018f23c9fc6ae4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558725"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817100"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 
-Bu adım adım makalede, bir sistem yöneticisinin Microsoft uç noktası Configuration Manager kullanarak bir ağ üzerinde .NET Framework 4,5 ve sistem bağımlılıklarını nasıl dağıtabileceğinizi açıklanmaktadır. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. 4,5 .NET Framework yüklemeye yönelik yazılım ve donanım gereksinimlerinin bir listesi için bkz. [sistem gereksinimleri](../get-started/system-requirements.md).
+Bu adım adım makalede, bir sistem yöneticisinin Microsoft uç noktası Configuration Manager kullanarak bir ağ üzerinde .NET Framework 4,5 ve sistem bağımlılıklarını nasıl dağıtabileceğiniz açıklanır. Bu makalede tüm hedef istemci bilgisayarlarının .NET Framework için en düşük gereksinimleri karşıladığı varsayılır. .NET Framework 4,5 ' i yüklemeye yönelik yazılım ve donanım gereksinimlerinin bir listesi için bkz. [sistem gereksinimleri](../get-started/system-requirements.md).
 
 > [!NOTE]
-> Bu belgede başvurulan yazılım, sınırlama olmadan, .NET Framework 4,5, Configuration Manager ve Active Directory, her biri lisans hüküm ve koşullarına tabidir. Bu yönergeler, bu tür lisans koşullarını ve koşulları gözden geçirilmiş yazılımların sahipleri tarafından kabul edildiği varsaymaktadır. Bu yönergeler, bu tür lisans anlaşmalarının koşullarından feragat etmiş sayılmaz.
+> Bu belgede başvurulan yazılım, kısıtlama olmadan, .NET Framework 4,5, Configuration Manager ve Active Directory dahil olmak üzere her biri lisans hüküm ve koşullarına tabidir. Bu yönergeler, bu tür lisans koşullarını ve koşulları gözden geçirilmiş yazılımların sahipleri tarafından kabul edildiği varsaymaktadır. Bu yönergeler, bu tür lisans anlaşmalarının koşullarından feragat etmiş sayılmaz.
 >
 > .NET Framework için destek hakkında daha fazla bilgi için Microsoft Desteği Web sitesinde [.NET Framework resmi destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) ' ne bakın.
 
 Bu konu aşağıdaki bölümleri içermektedir:
 
 - [Dağıtım işlemi](#the_deployment_process)
-- [.NET Framework'ü dağıtma](#deploying_in_a_test_environment)
+- [.NET Framework dağıtma](#deploying_in_a_test_environment)
 - [Koleksiyon oluşturma](#creating_a_collection)
 - [Paket ve program oluşturma](#creating_a_package)
 - [Dağıtım noktası seçme](#select_dist_point)
@@ -52,7 +52,7 @@ Destekleyici altyapıyı kullanıyorsanız, .NET Framework yeniden dağıtılabi
 
 <a name="deploying_in_a_test_environment"></a>
 
-## <a name="deploying-the-net-framework"></a>.NET Framework'ü dağıtma
+## <a name="deploying-net-framework"></a>.NET Framework dağıtma
 
 Configuration Manager, kullanıcıların yükleme işlemiyle etkileşimde bulunmayan .NET Framework 4,5 sessiz yüklemesini dağıtmak için kullanabilirsiniz. Şu adımları izleyin:
 
@@ -94,7 +94,7 @@ Bir koleksiyon oluşturmak için:
 
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>.NET Framework yeniden dağıtılabilir paketi için paket ve program oluşturma
 
-Aşağıdaki adımlar, .NET Framework yeniden dağıtılabilir için el ile bir paket oluşturur. Paket, .NET Framework'ün kurulumu için belirtilen parametreleri ve paketin hedef bilgisayarlara nereden dağıtılacağını içerir.
+Aşağıdaki adımlar, .NET Framework yeniden dağıtılabilir için el ile bir paket oluşturur. Paket, .NET Framework yüklemek için belirtilen parametreleri ve paketin hedef bilgisayarlara dağıtılacağı konumu içerir.
 
 Bir paket oluşturmak için:
 
@@ -122,7 +122,7 @@ Bir paket oluşturmak için:
 
     2. **Komut satırı:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (komut satırı seçenekleri, bu adımların ardından tabloda açıklanmıştır)
 
-    3. Şunu **Çalıştır:** **Gizli**öğesini seçin.
+    3. Şunu **Çalıştır:** **Gizli** öğesini seçin.
 
     4. **Program çalışabilir:** Kullanıcının oturum açmış olmasından bağımsız olarak programın çalıştıracağınızı belirten seçeneği belirleyin.
 
@@ -136,7 +136,7 @@ Aşağıdaki tablo, 7. adımda belirtilen komut satırı seçeneklerini açıkla
 |**/norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, Yapılandırma Yöneticisi'nin bilgisayarı yeniden başlatmayı üstlenmesi gerekir.|
 |**/ChainingPackage** *PackageName*|Zincirlemeyi yapan paketin adını belirtir. Bu bilgiler, Microsoft Müşteri Deneyimini Geliştirme Programı (CEIP) için kaydolup diğer yükleme oturum bilgileriyle birlikte raporlanır. Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "zincirleme ürün"**.|
 
-Bu adımlar, .NET Framework 4.5 adlı bir paket oluşturur. Program, .NET Framework 4.5'in sessiz bir kurulumunu dağıtır. Sessiz yüklemede, kullanıcılar yükleme işlemiyle etkileşime girmez ve zincirleme uygulama, dönüş kodunu yakalayıp yeniden başlatmayı işleymelidir; bkz. [bir yükleme paketinden Ilerleme bilgileri alma](/previous-versions/cc825975(v=vs.100)).
+Bu adımlar, .NET Framework 4.5 adlı bir paket oluşturur. Program .NET Framework 4,5 ' nin sessiz yüklemesini dağıtır. Sessiz yüklemede, kullanıcılar yükleme işlemiyle etkileşime girmez ve zincirleme uygulama, dönüş kodunu yakalayıp yeniden başlatmayı işleymelidir; bkz. [bir yükleme paketinden Ilerleme bilgileri alma](/previous-versions/cc825975(v=vs.100)).
 
 <a name="select_dist_point"></a>
 
@@ -162,7 +162,7 @@ Bir önceki bölümde oluşturulan .NET Framework 4.5 paketi için bir dağıtı
 
 8. Sihirbazı tamamlayın.
 
-Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz tüm bilgileri içerir. Paketi ve programı dağıtmadan önce, dağıtım noktasında yüklü olduğunu doğrulayın; Configuration Manager belge kitaplığındaki [Configuration Manager ile dağıttığınız Içeriği izlemek](/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) Için "içerik durumu izleme" bölümüne bakın.
+Paket artık .NET Framework 4,5 ' i sessizce dağıtmak için ihtiyacınız olan tüm bilgileri içerir. Paketi ve programı dağıtmadan önce, dağıtım noktasında yüklü olduğunu doğrulayın; Configuration Manager belge kitaplığındaki [Configuration Manager ile dağıttığınız Içeriği izlemek](/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) Için "içerik durumu izleme" bölümüne bakın.
 
 <a name="deploying_package"></a>
 
@@ -174,7 +174,7 @@ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz t�
 
 2. **Yazılım kitaplığı** çalışma alanında **uygulama yönetimi**' ni genişletin ve **paketler**' i seçin.
 
-3. Paket listesinden **.NET Framework 4,5**adlı oluşturduğunuz paketi seçin.
+3. Paket listesinden **.NET Framework 4,5** adlı oluşturduğunuz paketi seçin.
 
 4. **Giriş** sekmesinde, **dağıtım** grubunda, **Dağıt**' ı seçin.
 
@@ -182,14 +182,14 @@ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz t�
 
 6. Sihirbazın **içerik** sayfasında, yazılımı dağıtmak istediğiniz noktanın görüntülendiğini doğrulayın ve ardından **İleri**' yi seçin.
 
-7. Sihirbazın **dağıtım ayarları** sayfasında, **eylemin** **yüklenmek**üzere ayarlandığını ve **amacın** **gerekli**olarak ayarlandığını onaylayın. Bu, yazılım paketinin hedeflenen bilgisayarlarda zorunlu bir yükleme olmasını sağlar. **İleri**’yi seçin.
+7. Sihirbazın **dağıtım ayarları** sayfasında, **eylemin** **yüklenmek** üzere ayarlandığını ve **amacın** **gerekli** olarak ayarlandığını onaylayın. Bu, yazılım paketinin hedeflenen bilgisayarlarda zorunlu bir yükleme olmasını sağlar. **İleri**’yi seçin.
 
-8. Sihirbazın **zamanlama** sayfasında, .NET Framework yüklenmesini istediğiniz tarihi belirtin. Bir yükleme süresi atamak için **Yeni** ' yi seçebilir veya yazılımın kullanıcı oturum açtığında ya da kapalıyken veya mümkün olan en kısa sürede yüklenmesine izin verebilirsiniz. **İleri**’yi seçin.
+8. Sihirbazın **zamanlama** sayfasında .NET Framework yüklenmesini istediğiniz tarihi belirtin. Bir yükleme süresi atamak için **Yeni** ' yi seçebilir veya yazılımın kullanıcı oturum açtığında ya da kapalıyken veya mümkün olan en kısa sürede yüklenmesine izin verebilirsiniz. **İleri**’yi seçin.
 
 9. Sihirbazın **Kullanıcı deneyimi** sayfasında varsayılan değerleri kullanın ve **İleri**' yi seçin.
 
     > [!WARNING]
-    > Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için bkz. [tanıtım adı özellikleri: Zamanlama sekmesi](/previous-versions/system-center/configuration-manager-2007/bb694016(v=technet.10)).
+    > Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir.
 
 10. Sihirbazın **dağıtım noktaları** sayfasında, varsayılan değerleri kullanın ve **İleri**' yi seçin.
 
@@ -221,8 +221,6 @@ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz t�
 
 - [System Center 2012 Configuration Manager için Site Yönetimi](/previous-versions/system-center/system-center-2012-R2/gg681983(v=technet.10))
 
-- [Tek site planlama ve dağıtım Configuration Manager](/previous-versions/system-center/configuration-manager-2007/bb680961(v=technet.10))
-
 **Windows bilgisayarlar için System Center 2012 Configuration Manager istemcisi:**
 
 - [System Center 2012 Configuration Manager için İstemci Dağıtma](/previous-versions/system-center/system-center-2012-R2/gg699391(v=technet.10))
@@ -238,7 +236,7 @@ Aşağıdaki günlük dosyaları .NET Framework kurulum sırasında oluşturulur
 - %temp%\Microsoft .NET Framework *Version* \* . txt
 - %temp%\Microsoft .NET Framework *Version* \* . html
 
-Burada *Sürüm* , yüklemekte olduğunuz .NET Framework sürümü (4,5 veya 4.7.2 gibi).
+Burada *Sürüm* , yüklemekte olduğunuz .NET Framework sürümü, örneğin 4,5 veya 4.7.2.
 
 Ayrıca, `/log` .NET Framework yükleme komutunda komut satırı seçeneğini kullanarak, günlük dosyalarının yazıldığı dizini de belirtebilirsiniz. Daha fazla bilgi için bkz. [geliştiriciler için .NET Framework dağıtım kılavuzu](deployment-guide-for-developers.md#command-line-options).
 

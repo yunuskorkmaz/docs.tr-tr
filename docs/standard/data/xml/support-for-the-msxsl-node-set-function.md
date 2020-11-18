@@ -1,14 +1,13 @@
 ---
 title: msxsl:node-set() İşlevi Desteği
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 30652d8cbaac333cc1cb35954742b16dc7c4764b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 26ae3014af93377dc106b5638ba194bd38e3dc9e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071995"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818550"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>msxsl:node-set() İşlevi Desteği
 `msxsl:node-set`İşlevi, bir sonuç ağacı parçasını bir düğüm kümesine dönüştürmenize olanak sağlar. Sonuçta elde edilen düğüm kümesi her zaman tek bir düğüm içerir ve ağacın kök düğümüdür.  

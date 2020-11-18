@@ -2,7 +2,6 @@
 title: Başlatma zamanında iş parçacığı oluşturma ve veri geçirme
 description: .NET 'teki bir işletim sistemi işleminin başlangıç saatinde iş parçacıkları oluşturmayı ve verileri nasıl geçibileceğinizi anlayın.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET], passing data to threads
 - threading [.NET], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-ms.openlocfilehash: a1e8f8f6e017d29f352d79ea08c09b2d97041bba
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3f44eb9dabc9145cd0e6ec9bfd3d484c9079e803
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188386"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819935"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Başlatma zamanında iş parçacığı oluşturma ve veri geçirme
 
