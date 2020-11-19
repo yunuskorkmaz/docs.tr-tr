@@ -1,15 +1,15 @@
 ---
-title: Kapsayıcılarda tanılamayı toplayın
+title: Kapsayıcılarda tanılama toplama
 description: Bu makalede, .NET Core tanılama araçları 'nın Docker kapsayıcılarında nasıl kullanılabileceğini öğreneceksiniz.
 ms.date: 09/01/2020
-ms.openlocfilehash: e57f3696433bbf6f35b2e3e5d1e72ae8b1e3eeb3
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: cf4bbdf75e943f093a2202f91303a2eea7125487
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451093"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916215"
 ---
-# <a name="collect-diagnostics-in-containers"></a>Kapsayıcılarda tanılamayı toplayın
+# <a name="collect-diagnostics-in-containers"></a>Kapsayıcılarda tanılama toplama
 
 Diğer senaryolarda .NET Core sorunlarını tanılamak için yararlı olan aynı tanılama araçları, Docker kapsayıcılarında de çalışır. Ancak bazı araçların bir kapsayıcıda çalışması için özel adımlar gerekir. Bu makalede, performans izlemelerinin toplanması ve dökümleri toplama araçlarının Docker kapsayıcılarında nasıl kullanılabileceği ele alınmaktadır.
 
@@ -23,17 +23,17 @@ Bir kapsayıcıda bu araçların kullanıldığı tek karmaşıktonlu etken, .NE
 
 ```dockerfile
 # In build stage
-# Install desired .NET CLI diagnostics tools
-RUN dotnet tool install --tool-path /tools dotnet-trace
-RUN dotnet tool install --tool-path /tools dotnet-counters
-RUN dotnet tool install --tool-path /tools dotnet-dump
+# Install desired .NET CLI diagnostics tools
+RUN dotnet tool install --tool-path /tools dotnet-trace
+RUN dotnet tool install --tool-path /tools dotnet-counters
+RUN dotnet tool install --tool-path /tools dotnet-dump
 
 ...
 
 # In final stage
-# Copy diagnostics tools
-WORKDIR /tools
-COPY --from=build /tools .
+# Copy diagnostics tools
+WORKDIR /tools
+COPY --from=build /tools .
 ```
 
 Alternatif olarak, CLı araçlarını yüklemek için gerektiğinde .NET Core SDK bir kapsayıcıya yüklenebilir. .NET Core SDK yüklemesinin .NET Core çalışma zamanını yeniden yüklemenin yan etkisi olacağını unutmayın. Bu nedenle, kapsayıcıda bulunan çalışma zamanına uyan SDK sürümünü yüklediğinizden emin olun.
@@ -49,7 +49,7 @@ Farklı bir kapsayıcıdaki işlemlerin tanılanması için .NET Core küresel C
 
 **Bu araç şu şekilde geçerlidir: ✔️** .net Core 2,1 ve sonraki sürümleri
 
-[`PerfCollect`](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/linux-performance-tracing.md)Betik, performans izlemelerini toplamak için faydalıdır ve .NET Core 3,0 ' den önce izlemeleri toplamak için önerilen araçtır. `PerfCollect`Bir kapsayıcıda kullanıyorsanız, aşağıdaki gereksinimleri göz önünde bulundurun:
+[`PerfCollect`](./trace-perfcollect-lttng.md)Betik, performans izlemelerini toplamak için faydalıdır ve .NET Core 3,0 ' den önce izlemeleri toplamak için önerilen araçtır. `PerfCollect`Bir kapsayıcıda kullanıyorsanız, aşağıdaki gereksinimleri göz önünde bulundurun:
 
 1. `PerfCollect`[ `SYS_ADMIN` özelliği](https://man7.org/linux/man-pages/man7/capabilities.7.html) gerektirir (aracı çalıştırmak için `perf` ), kapsayıcının [Bu özellik ile başlatıldığından](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)emin olun.
 2. `PerfCollect` profil oluşturmanın başladığı uygulamadan önce bazı ortam değişkenlerinin ayarlanmasını gerektirir. Bunlar bir [Dockerfile](https://docs.docker.com/engine/reference/builder/#env) içinde ya da [kapsayıcı başlatılırken](https://docs.docker.com/engine/reference/run/#env-environment-variables)ayarlanabilir. Bu değişkenlerin normal üretim ortamlarında ayarlanmaması gerektiğinden, profili oluşturulacak bir kapsayıcıyı başlatırken yalnızca eklemeniz yaygındır. PerfCollect 'in gerektirdiği iki değişken şunlardır:

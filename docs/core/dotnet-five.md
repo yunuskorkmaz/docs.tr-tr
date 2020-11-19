@@ -1,16 +1,16 @@
 ---
 title: .NET 5’teki yenilikler
 description: .NET Core 'un bir sonraki gelişiminde bir çoklu platform ve açık kaynaklı bir geliştirme platformu olan .NET 5 hakkında bilgi edinin.
-ms.date: 11/16/2020
+ms.date: 11/18/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 04f72675744426f7dbc99e5978a9ea4bbb8015b1
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 077fb06db40519af2bf8ac2f659488acdf525aec
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687596"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916222"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5’teki yenilikler
 
@@ -46,11 +46,23 @@ ASP.NET Core 5,0, .NET 5,0 tabanlıdır ancak "Core" adını ASP.NET MVC 5 ile k
 
 Aşağıdaki teknolojilerin .NET Framework .NET 5,0 ' e bağlantı noktası yoktur, ancak .NET 5,0 ' de alternatifler vardır:
 
-| Teknoloji                             | Önerilen alternatif                                                                         |
-|----------------------------------------|-------------------------------------------------------------------------------------------------|
-| Web Forms                              | ASP.NET Core [Blazor](/aspnet/core/blazor) veya [Razor Pages](/aspnet/core/tutorials/razor-pages) |
-| Windows Communication Foundation (WCF) | [gRPC](/aspnet/core/grpc)                                                                       |
-| Windows Workflow (WF)                  | [Açık kaynaklı CoreWF](https://github.com/UiPath-Open/corewf)                                     |
+| Teknoloji            | Önerilen alternatif                                                                         |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| Web Forms             | ASP.NET Core [Blazor](/aspnet/core/blazor) veya [Razor Pages](/aspnet/core/tutorials/razor-pages) |
+| Windows Workflow (WF) | [Açık kaynaklı CoreWF](https://github.com/UiPath-Open/corewf)                                     |
+
+### <a name="windows-communication-foundation"></a>Windows Communication Foundation
+
+[Windows Communication Foundation (WCF)](../framework/wcf/index.md) özgün uygulanması yalnızca Windows 'da desteklenir; ancak .NET Foundation 'da kullanılabilir bir istemci bağlantı noktası var. Bu, tamamen [açık kaynak](https://github.com/dotnet/wcf), platformlar arası ve Microsoft tarafından desteklenmektedir. Temel NuGet paketleri aşağıda listelenmiştir:
+
+- [System. ServiceModel. dupleks](https://www.nuget.org/packages/System.ServiceModel.Duplex)
+- [System. ServiceModel. FEDERATION](https://www.nuget.org/packages/System.ServiceModel.Federation)
+- [System. ServiceModel. http](https://www.nuget.org/packages/System.ServiceModel.Http)
+- [System. ServiceModel. NetTcp](https://www.nuget.org/packages/System.ServiceModel.NetTcp)
+- [System. ServiceModel. Ilkel öğeler](https://www.nuget.org/packages/System.ServiceModel.Primitives)
+- [System. ServiceModel. Security](https://www.nuget.org/packages/System.ServiceModel.Security)
+
+Topluluk, belirtilen istemci kitaplıklarını karmaşıren sunucu bileşenlerini korur. GitHub deposu [Corewcf](https://github.com/CoreWCF/CoreWCF)'de bulunabilir. Sunucu bileşenleri Microsoft tarafından _resmi olarak desteklenmez._ WCF 'ye alternatif olarak, [GRPC](/aspnet/core/grpc)'yi düşünün.
 
 ## <a name="net-50-doesnt-replace-net-standard"></a>.NET 5,0 .NET Standard değiştirmez
 

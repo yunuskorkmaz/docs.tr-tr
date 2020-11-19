@@ -1,25 +1,25 @@
 ---
-title: Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
-description: .NET Core sınıf kitaplığı için bir birim test projesi oluşturun. .NET Core sınıf kitaplığının birim testleriyle düzgün çalıştığını doğrulayın.
-ms.date: 06/08/2020
+title: Visual Studio kullanarak .NET sınıf kitaplığı test etme
+description: Visual Studio 'Yu kullanarak bir .NET sınıf kitaplığı için bir birim testi projesi oluşturma ve çalıştırma hakkında bilgi edinin.
+ms.date: 11/18/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3d56627b937fa0ad5f8002f396ce617e09ce9d2c
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177299"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916133"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
+# <a name="tutorial-test-a-net-class-library-with-net-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET sınıf kitaplığını .NET ile test etme
 
 Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otomatikleştirilmesi gösterilmektedir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Visual Studio kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
+- Bu öğretici, [Visual Studio kullanarak bir .NET sınıf kitaplığı oluşturma](library-with-visual-studio.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
 
 ## <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
@@ -27,17 +27,19 @@ Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sa
 
 1. Visual Studio’yu çalıştırın.
 
-1. `ClassLibraryProjects` [Visual Studio 'yu kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio.md)bölümünde oluşturduğunuz çözümü açın.
+1. `ClassLibraryProjects` [Visual Studio 'yu kullanarak .NET sınıf kitaplığı oluşturma](library-with-visual-studio.md)bölümünde oluşturduğunuz çözümü açın.
 
 1. Çözüme "StringLibraryTest" adlı yeni bir birim test projesi ekleyin.
 
-   1. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
+   1. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
 
    1. **Yeni Proje Ekle** sayfasında, arama kutusuna **MSTest** yazın. Dil listesinden **C#** veya **Visual Basic** seçin ve ardından platform listesinden **tüm platformlar** ' ı seçin.
 
-   1. **MSTest test projesi (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
+   1. **Birim testi proje** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-   1. **Yeni projenizi yapılandırın** sayfasında, **Proje adı** kutusuna **stringlibrarytest** girin. Ardından **Oluştur**’u seçin.
+   1. **Yeni projenizi yapılandırın** sayfasında, **Proje adı** kutusuna **stringlibrarytest** girin. Ardından **İleri**' yi seçin.
+
+   1. **Ek bilgiler** sayfasında, **hedef çerçeve** kutusunda **.NET 5,0 (geçerli)** seçeneğini belirleyin. Ardından **Oluştur**’u seçin.
 
 1. Visual Studio projeyi oluşturur ve kod penceresinde aşağıdaki kodla sınıf dosyasını açar. Kullanmak istediğiniz dil gösterilmiyorsa sayfanın en üstündeki dil seçicisini değiştirin.
 
@@ -122,21 +124,21 @@ Test yöntemleri oluşturmak için:
 1. Menü çubuğunda **Dosya**  >  **Kaydet UnitTest1.cs as** veya **Dosya**  >  **Kaydet UnitTest1. vb**' yi seçin. **Dosyayı farklı kaydet** Iletişim kutusunda **Kaydet** düğmesinin yanındaki oku seçin ve **kodlamayla kaydet**' i seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio dosyayı farklı Kaydet iletişim kutusu](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/save-file-as-dialog.png" alt-text="Visual Studio dosyayı farklı Kaydet iletişim kutusu":::
 
 1. **Farklı kaydet** iletişim kutusunda, dosyayı kaydetmek için **Evet** düğmesini seçin.
 
 1. **Gelişmiş kaydetme seçenekleri** iletişim kutusunda, **kodlama** açılan LISTESINDEN **Unicode (imzayla UTF-8)-kod sayfası 65001** ' i seçin ve **Tamam**' ı seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio Gelişmiş kaydetme seçenekleri iletişim kutusu](./media/testing-library-with-visual-studio/advanced-save-options.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/advanced-save-options.png" alt-text="Visual Studio Gelişmiş kaydetme seçenekleri iletişim kutusu":::
 
    Kaynak kodunuzu UTF8 kodlu bir dosya olarak kaydedemeyebilirsiniz, Visual Studio bunu bir ASCII dosyası olarak kaydedebilir. Söz konusu olduğunda, çalışma zamanı, ASCII aralığının dışında UTF8 karakterlerinin kodunu doğru şekilde çözmez ve test sonuçları doğru olmayacaktır.
 
 1. Menü çubuğunda, **Test**  >  **Çalıştır tüm testler**' i seçin. **Test Gezgini** penceresi açılmazsa **Test**  >  **Test Gezgini**' ni seçerek açın. **Geçen testler** bölümünde üç test listelenir ve **Özet** bölümü Test çalıştırmasının sonucunu raporlar.
 
    > [!div class="mx-imgBorder"]
-   > ![Testleri geçirerek test Gezgini penceresi](./media/testing-library-with-visual-studio/test-explorer-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/test-explorer-window.png" alt-text="Testleri geçirerek test Gezgini penceresi":::
 
 ## <a name="handle-test-failures"></a>Test başarısızlıklarını işle
 
@@ -158,14 +160,14 @@ Test odaklı geliştirme (TDD) yapıyorsanız, önce testleri yazarsınız ve il
 1. Test Çalıştır **Test**  >  **tüm testleri** menü çubuğundan Çalıştır öğesini seçerek testi çalıştırın. **Test Gezgini** penceresi, iki testin başarılı olduğunu ve bir başarısız olduğunu gösterir.
 
    > [!div class="mx-imgBorder"]
-   > ![Başarısız testlerle test Gezgini penceresi](./media/testing-library-with-visual-studio/failed-test-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-window.png" alt-text="Başarısız testlerle test Gezgini penceresi":::
 
 1. Başarısız testi seçin `TestDoesNotStartWith` .
 
    **Test Gezgini** penceresi onay tarafından oluşturulan iletiyi görüntüler: "onaylama. IsFalse başarısız oldu. ' Error ' bekleniyor: false; gerçek: true ". Hata nedeniyle "hata" sonunda dizide hiçbir dize sınanmadı.
 
    > [!div class="mx-imgBorder"]
-   > ![IsFalse onaylama hatasını gösteren test Gezgini penceresi](./media/testing-library-with-visual-studio/failed-test-detail.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-detail.png" alt-text="IsFalse onaylama hatasını gösteren test Gezgini penceresi":::
 
 1. Adım 1 ' de eklediğiniz "Error" dizesini kaldırın. Testi ve test geçişini yeniden çalıştırın.
 
@@ -175,28 +177,28 @@ Artık, kitaplığın hata ayıklama derlemesini çalıştırırken testlerin ba
 
 Yayın derlemesini test etmek için:
 
-1. Visual Studio araç çubuğunda, derleme yapılandırmasını **Debug** iken **Release**olarak değiştirin.
+1. Visual Studio araç çubuğunda, derleme yapılandırmasını **Debug** iken **Release** olarak değiştirin.
 
    > [!div class="mx-imgBorder"]
-   > ![Yayın derlemesi vurgulanmış Visual Studio araç çubuğu](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png" alt-text="Yayın derlemesi vurgulanmış Visual Studio araç çubuğu":::
 
 1. **Çözüm Gezgini**, **StringLibrary** projesine sağ tıklayın ve kitaplığı yeniden derlemek için bağlam menüsünden **Oluştur** ' u seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Build komutuyla StringLibrary bağlam menüsü](./media/testing-library-with-visual-studio/build-library-context-menu.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/build-library-context-menu.png" alt-text="Build komutuyla StringLibrary bağlam menüsü":::
 
-1. **Test Run**  >  Menü çubuğundan**tüm testleri** Çalıştır test ' i seçerek birim testlerini çalıştırın. Testler geçer.
+1. **Test Run**  >  Menü çubuğundan **tüm testleri** Çalıştır test ' i seçerek birim testlerini çalıştırın. Testler geçer.
 
 ## <a name="debug-tests"></a>Hata ayıklama testleri
 
-IDE 'niz olarak Visual Studio kullanıyorsanız, [öğretici: Visual Studio kullanarak bir .NET Core konsol uygulamasında hata](debugging-with-visual-studio.md) ayıklamak için, birim testi projenizi kullanarak kodda hata ayıklama yapabilirsiniz. *Gösterimi* uygulama projesini başlatmak yerine **stringlibrarytests** projesine sağ tıklayın ve bağlam menüsünden **testlerin hatalarını ayıkla** ' yı seçin.
+IDE 'niz olarak Visual Studio kullanıyorsanız, öğretici: birim test projenizi kullanarak kodda hata ayıklamak için [Visual Studio 'yu kullanarak bir .NET konsol uygulamasında hata ayıklama](debugging-with-visual-studio.md) için gösterilen aynı süreci kullanabilirsiniz. *Gösterimi* uygulama projesini başlatmak yerine **stringlibrarytests** projesine sağ tıklayın ve bağlam menüsünden **testlerin hatalarını ayıkla** ' yı seçin.
 
 Visual Studio, hata ayıklayıcı ekli olarak test projesi başlatır. Yürütme, test projesine veya temeldeki kitaplık koduna eklediğiniz herhangi bir kesme noktasında durur.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [Birim testi temelleri-Visual Studio](/visualstudio/test/unit-test-basics)
-* [.NET Core ve .NET Standard birim testi](../testing/index.md)
+* [.NET 'te birim testi](../testing/index.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -213,4 +215,4 @@ Bir kitaplığı bir NuGet paketi olarak yayımlarsanız, diğerleri onu yükley
 Bir kitaplığın paket olarak dağıtılması gerekmez. Onu kullanan bir konsol uygulamasıyla paketlenmiş olabilir. Bir konsol uygulamasını yayımlamayı öğrenmek için bu serideki önceki öğreticiye bakın:
 
 > [!div class="nextstepaction"]
-> [Visual Studio kullanarak bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio.md)
+> [Visual Studio kullanarak bir .NET konsol uygulaması yayımlama](publishing-with-visual-studio.md)

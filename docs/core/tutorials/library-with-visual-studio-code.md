@@ -1,40 +1,42 @@
 ---
-title: Visual Studio Code kullanarak .NET Standard sınıf kitaplığı oluşturma
-description: Visual Studio Code kullanarak .NET Standard sınıf kitaplığı oluşturmayı öğrenin.
-ms.date: 06/08/2020
-ms.openlocfilehash: 966b9b0b48f67809e82d9133c523995cd97b6015
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+title: Visual Studio Code kullanarak bir .NET sınıf kitaplığı oluşturma
+description: Visual Studio Code kullanarak .NET sınıf kitaplığı oluşturmayı öğrenin.
+ms.date: 11/18/2020
+ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495518"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916097"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak .NET Standard kitaplığı oluşturma
+# <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak .NET sınıf kitaplığı oluşturma
 
-Bu öğreticide, tek bir dize işleme yöntemi içeren basit bir yardımcı program kitaplığı oluşturacaksınız. Bunu, sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../csharp/programming-guide/classes-and-structs/extension-methods.md) olarak uygulamalısınız <xref:System.String> .
+Bu öğreticide, tek bir dize işleme yöntemi içeren basit bir yardımcı program kitaplığı oluşturacaksınız.
 
-Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve yöntemleri tanımlar. .NET Standard 2,0 ' i hedefleyen bir sınıf kitaplığı, kitaplığınızın bu .NET Standard sürümünü destekleyen herhangi bir .NET uygulamasının çağrılmasına izin verir. Sınıf kitaplığınızı bitirdiğinizde, bir üçüncü taraf bileşen olarak veya bir veya daha fazla uygulamayla paketlenmiş bileşen olarak dağıtabilirsiniz.
+Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve yöntemleri tanımlar. Kitaplık .NET Standard 2,0 hedefliyorsa, .NET Standard 2,0 ' yi destekleyen herhangi bir .NET uygulamasıyla (.NET Framework dahil) çağrılabilir. Kitaplık .NET 5 ' i hedefliyorsa, .NET 5 ' i hedefleyen herhangi bir uygulama tarafından çağrılabilir. Bu öğreticide, .NET 5 ' in nasıl hedeflenecek gösterilmektedir.
 
-## <a name="prerequisites"></a>Ön koşullar
+Bir sınıf kitaplığı oluşturduğunuzda, bir üçüncü taraf bileşen olarak veya bir veya daha fazla uygulamayla paketlenmiş bileşen olarak dağıtabilirsiniz.
+
+## <a name="prerequisites"></a>Önkoşullar
 
 1. [C# uzantısı](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) yüklü [Visual Studio Code](https://code.visualstudio.com/) . Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
-2. [.NET Core 3,1 SDK veya üzeri](https://dotnet.microsoft.com/download)
+2. [.Net 5,0 SDK veya üzeri](https://dotnet.microsoft.com/download)
 
 ## <a name="create-a-solution"></a>Çözüm oluşturma
 
 ' De Sınıf Kitaplığı projesini yerleştirmek için boş bir çözüm oluşturarak başlayın. Bir çözüm, bir veya daha fazla proje için kapsayıcı görevi görür. Aynı çözüme ek ve ilgili projeler ekleyeceksiniz.
 
-1. Visual Studio Code’u başlatma.
+1. Visual Studio Code’u başlatın.
 
-1. Ana menüden **Dosya**  >  **açma klasörünü** (MacOS üzerinde**Open...** ) seçin
+1. Ana menüden **Dosya**  >  **açma klasörünü** (MacOS üzerinde **Open...** ) seçin
 
-1. **Klasörü aç** iletişim kutusunda bir *classlibraryprojects* klasörü oluşturun ve **Klasör Seç** ' e tıklayın (MacOS üzerinde**açın** ).
+1. **Klasörü aç** iletişim kutusunda bir *classlibraryprojects* klasörü oluşturun ve **Klasör Seç** ' e tıklayın (MacOS üzerinde **açın** ).
 
-1. Ana menüden **Terminal görünümü ' nu** seçerek **View**Visual Studio Code açın  >  **Terminal** .
+1. Ana menüden **Terminal görünümü ' nu** seçerek **View** Visual Studio Code açın  >  **Terminal** .
 
    **Terminal** , *classlibraryprojects* klasöründe komut istemiyle açılır.
 
-1. **Terminalde**aşağıdaki komutu girin:
+1. **Terminalde** aşağıdaki komutu girin:
 
    ```dotnetcli
    dotnet new sln
@@ -48,7 +50,7 @@ Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve y�
 
 ## <a name="create-a-class-library-project"></a>Sınıf kitaplığı projesi oluşturma
 
-Çözüme "StringLibrary" adlı yeni bir .NET Standard sınıf kitaplığı projesi ekleyin.
+Çözüme "StringLibrary" adlı yeni bir .NET sınıf kitaplığı projesi ekleyin.
 
 1. Terminalde, kitaplık projesini oluşturmak için aşağıdaki komutu çalıştırın:
 
@@ -81,15 +83,15 @@ Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve y�
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
-1. Kitaplığın doğru .NET Standard sürümünü hedeflediğinden emin olun. **Gezgin**'de *StringLibrary/StringLibrary. csproj*öğesini açın.
+1. Kitaplığın .NET 5 ' i hedeflediğinden emin olun. **Gezgin**'de *StringLibrary/StringLibrary. csproj* öğesini açın.
 
-   `TargetFramework`Öğesi, projenin 2,0 .NET Standard hedeflediği gösterir.
+   `TargetFramework`Öğesi, projenin .net 5,0 ' i hedeflediğini gösterir.
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
 
      <PropertyGroup>
-       <TargetFramework>netstandard2.0</TargetFramework>
+       <TargetFramework>net5.0</TargetFramework>
      </PropertyGroup>
 
    </Project>
@@ -116,7 +118,7 @@ Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve y�
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
      All projects are up-to-date for restore.
-     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\netstandard2.0\StringLibrary.dll
+     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\net5.0\StringLibrary.dll
    Build succeeded.
        0 Warning(s)
        0 Error(s)
@@ -208,12 +210,11 @@ Başlangıçta, yeni konsol uygulaması projesi sınıf kitaplığına erişemez
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-* [.NET Core CLI ile Kitaplıklar geliştirin](libraries.md)
-* [.NET Standard sürümleri ve destekledikleri platformlar](../../standard/net-standard.md).
+* [.NET CLı ile Kitaplıklar geliştirme](libraries.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Bu öğreticide, bir çözüm oluşturdunuz, bir kitaplık projesi eklediniz ve kitaplığı kullanan bir konsol uygulaması projesi ekledik. Sonraki öğreticide, çözüme bir birim testi projesi eklersiniz.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code kullanarak .NET Core ile .NET Standard kitaplığı test etme](testing-library-with-visual-studio-code.md)
+> [.NET sınıf kitaplığı 'nı kullanarak .NET ile test Visual Studio Code](testing-library-with-visual-studio-code.md)

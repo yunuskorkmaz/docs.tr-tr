@@ -4,12 +4,12 @@ author: IEvangelist
 description: Uygulama başlatma ve ömür yönetiminden sorumlu .NET genel ana bilgisayarı hakkında bilgi edinin.
 ms.author: dapine
 ms.date: 09/18/2020
-ms.openlocfilehash: a1f82f6c6b5d250d6e81351aa02e50e23636280b
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: d00a8aeae8b4de2cbcb091992fa739c47da6dafc
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608275"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916176"
 ---
 # <a name="net-generic-host"></a>.NET genel ana bilgisayar
 
@@ -62,7 +62,7 @@ public class Program
   - Ön eki olan ortam değişkenleri `DOTNET_` .
   - Komut satırı bağımsız değişkenleri.
 - Uygulama yapılandırmasını şuradan yükler:
-  - * Üzerindeappsettings.js*.
+  - *Üzerindeappsettings.js*.
   - *appSettings. {Environment}. JSON*.
   - Uygulama ortamda çalıştığında gizli dizi Yöneticisi `Development` .
   - Ortam değişkenleri.
@@ -74,7 +74,7 @@ public class Program
   - Olay günlüğü (yalnızca Windows üzerinde çalışırken)
 - Ortam olduğunda kapsam doğrulaması ve [bağımlılık doğrulaması](xref:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions.ValidateOnBuild) etkinleştirilir `Development` .
 
-`ConfigureServices`Yöntemi, örneğe hizmet ekleme özelliğini kullanıma sunar <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> . Daha sonra, bu hizmetler bağımlılık ekleme yoluyla kullanılabilir hale getirilebilir.
+`ConfigureServices`Yöntemi, örneğe hizmet ekleme özelliğini kullanıma sunar <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> . Daha sonra, bu hizmetler bağımlılık ekleme işleminden bir şekilde kullanılabilirlik yapılabilir.
 
 ## <a name="framework-provided-services"></a>Framework tarafından sunulan hizmetler
 

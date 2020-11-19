@@ -1,25 +1,25 @@
 ---
-title: Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama
-description: Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
+title: Visual Studio kullanarak bir .NET konsol uygulamasında hata ayıklama
+description: Visual Studio kullanarak bir .NET konsol uygulamasında hata ayıklamayı öğrenin.
 ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 8a914dc6cf069c011ea5b077ada514bf8cec331d
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957231"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916197"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak bir .NET konsol uygulamasında hata ayıklama
 
 Bu öğreticide, Visual Studio 'da kullanılabilen hata ayıklama araçları tanıtılmaktadır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
+- Bu öğretici, [Visual Studio kullanarak bir .NET konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="use-debug-build-configuration"></a>Hata ayıklama derleme yapılandırmasını kullan
 
@@ -31,11 +31,11 @@ Hata ayıklama yapılandırmasında, bir program tam sembolik hata ayıklama bil
 
 1. Visual Studio’yu çalıştırın.
 
-1. [Visual Studio kullanarak .NET Core konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz projeyi açın.
+1. [Visual Studio kullanarak .NET konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz projeyi açın.
 
    Geçerli derleme yapılandırması araç çubuğunda gösterilir. Aşağıdaki araç çubuğu görüntüsünde, Visual Studio 'nun uygulamanın hata ayıklama sürümünü derlemek üzere yapılandırıldığı gösterilmektedir:
 
-   ![Hata ayıklama vurgulanmış Visual Studio araç çubuğu](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png" alt-text="Hata ayıklama vurgulanmış Visual Studio araç çubuğu":::
 
 ## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
 
@@ -45,15 +45,15 @@ Kesme *noktası,* kesme noktası olan satır yürütülmeden önce uygulamanın 
 
    Aşağıdaki görüntüde gösterildiği gibi, Visual Studio, kesme noktasının ayarlandığı ve sol kenar boşluğunda kırmızı bir nokta görüntüleyen çizgiyi gösterir.
 
-   ![Kesme noktası ayarlanmış Visual Studio program penceresi](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/set-breakpoint-in-editor.png" alt-text="Kesme noktası ayarlanmış Visual Studio program penceresi":::
 
-1. Programı hata ayıklama modunda çalıştırmak için <kbd>F5</kbd> tuşuna basın. Hata ayıklamayı başlatmak için başka bir yol da **Debug**menüden hata ayıklama  >  **başlatma hata** Ayıkla ' yı seçmektir.
+1. Programı hata ayıklama modunda çalıştırmak için <kbd>F5</kbd> tuşuna basın. Hata ayıklamayı başlatmak için başka bir yol da **Debug** menüden hata ayıklama  >  **başlatma hata** Ayıkla ' yı seçmektir.
 
 1. Program bir ad isteminde bulunduğunda konsol penceresine bir dize girin ve ardından <kbd>ENTER</kbd>tuşuna basın.
 
 1. Program yürütme, kesme noktasına ulaştığında ve Yöntem yürütmeden önce duraklar `Console.WriteLine` . **Yereller** penceresi, yürütülmekte olan yöntemde tanımlanan değişkenlerin değerlerini görüntüler.
 
-   ![Visual Studio 'da bir kesme noktasının ekran görüntüsü](./media/debugging-with-visual-studio/breakpoint-hit.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-hit.png" alt-text="Visual Studio 'da bir kesme noktasının ekran görüntüsü":::
 
 ## <a name="use-the-immediate-window"></a>Hemen penceresini kullanma
 
@@ -67,25 +67,25 @@ Kesme *noktası,* kesme noktası olan satır yürütülmeden önce uygulamanın 
 
    **Komut** penceresi, dize değişkeninin değerini ve değerin özelliklerini görüntüler <xref:System.DateTime> . Ayrıca, değişkenlerin değerleri **Yereller** penceresinde güncelleştirilir.
 
-   ![Visual Studio 2019 ' de Yereller ve anında Windows](./media/debugging-with-visual-studio/locals-immediate-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/locals-immediate-window.png" alt-text="Visual Studio 2019 ' de Yereller ve anında Windows":::
 
 1. Program yürütmeye devam etmek için <kbd>F5</kbd> tuşuna basın. Devam etmenin başka bir yolu da menüden **Debug**  >  **devam et** ' i seçmekten.
 
    Konsol penceresinde görünen değerler, **hemen** penceresinde yaptığınız değişikliklere karşılık gelir.
 
-   ![Girilen değerleri gösteren konsol penceresi](./media/debugging-with-visual-studio/console-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/console-window.png" alt-text="Girilen değerleri gösteren konsol penceresi":::
 
 1. Uygulamadan çıkmak ve hata ayıklamayı durdurmak için herhangi bir tuşa basın.
 
 ## <a name="set-a-conditional-breakpoint"></a>Koşullu kesme noktası ayarlama
 
-Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey girmezse ne olur? Bunu, *koşullu kesme noktası*adında yararlı bir hata ayıklama özelliği ile test edebilirsiniz.
+Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey girmezse ne olur? Bunu, *koşullu kesme noktası* adında yararlı bir hata ayıklama özelliği ile test edebilirsiniz.
 
 1. Kesme noktasını temsil eden kırmızı noktaya sağ tıklayın. Bağlam menüsünde **koşullar** ' ı seçerek **kesme noktası ayarları** iletişim kutusunu açın. Henüz seçili değilse, **koşullar** kutusunu seçin.
 
-   ![Kesme noktası ayarları panelini gösteren düzenleyici-C #](./media/debugging-with-visual-studio/breakpoint-settings.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-settings.png" alt-text="Kesme noktası ayarları panelini gösteren düzenleyici-C #":::
 
-1. **Koşullu ifade**için, 5 ise testlerin örnek kodunu gösteren alana aşağıdaki kodu girin `x` . Kullanmak istediğiniz dil gösterilmiyorsa sayfanın en üstündeki dil seçicisini değiştirin.
+1. **Koşullu ifade** için, 5 ise testlerin örnek kodunu gösteren alana aşağıdaki kodu girin `x` . Kullanmak istediğiniz dil gösterilmiyorsa sayfanın en üstündeki dil seçicisini değiştirin.
 
    ```csharp
    String.IsNullOrEmpty(name)
@@ -97,7 +97,7 @@ Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey
 
    Kesme noktası her isabet edildiğinde, hata ayıklayıcı `String.IsNullOrEmpty(name)` yöntemini çağırır ve yalnızca Yöntem çağrısı döndürürse bu satırı keser `true` .
 
-   Koşullu bir ifade yerine, bir deyim belirtilen sayıda yürütülmeden önce program yürütmeyi kesen bir *isabet sayısı*belirtebilirsiniz. Diğer bir seçenek de bir *filtre koşulu*belirtmektir. Bu, iş parçacığı tanımlayıcısı, işlem adı veya iş parçacığı adı olarak bu tür özniteliklere dayalı olarak program yürütmeyi keser.
+   Koşullu bir ifade yerine, bir deyim belirtilen sayıda yürütülmeden önce program yürütmeyi kesen bir *isabet sayısı* belirtebilirsiniz. Diğer bir seçenek de bir *filtre koşulu* belirtmektir. Bu, iş parçacığı tanımlayıcısı, işlem adı veya iş parçacığı adı olarak bu tür özniteliklere dayalı olarak program yürütmeyi keser.
 
 1. İletişim kutusunu kapatmak için **Kapat** ' ı seçin.
 
@@ -121,7 +121,7 @@ Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey
 
    Soru işareti, [bir ifadeyi değerlendirmek](/visualstudio/ide/reference/immediate-window#enter-commands)için hemen penceresini yönlendirir.
 
-   ![Deyimin yürütülmesi yapıldıktan sonra bir true değeri döndüren komut penceresi-C #](./media/debugging-with-visual-studio/immediate-window-output.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/immediate-window-output.png" alt-text="Deyimin yürütülmesi yapıldıktan sonra bir true değeri döndüren komut penceresi-C #":::
 
 1. Program yürütmeye devam etmek için <kbd>F5</kbd> tuşuna basın.
 
@@ -133,17 +133,17 @@ Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey
 
 Visual Studio Ayrıca, bir program aracılığıyla satıra göre çizgi ve yürütmeyi izlemeye de olanak tanır. Normalde, bir kesme noktası ayarlar ve program kodunuzun küçük bir bölümünde program akışını takip edersiniz. Bu program küçük olduğundan programın tamamında ilerlayabilirsiniz.
 
-1. **Hata ayıklama**  >  **adımını**seçin. Tek seferde bir ifadede hata ayıklamanın başka bir yolu da <kbd>F11</kbd>tuşuna basılarak yapılır.
+1. **Hata ayıklama**  >  **adımını** seçin. Tek seferde bir ifadede hata ayıklamanın başka bir yolu da <kbd>F11</kbd>tuşuna basılarak yapılır.
 
    Visual Studio, sonraki yürütme satırının yanında bir ok görüntüler.
 
    C#
 
-   ![Visual Studio Step into yöntemi-C #](./media/debugging-with-visual-studio/step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-method.png" alt-text="Visual Studio Step into yöntemi-C #":::
 
    Visual Basic
 
-   ![Visual Studio adımla yöntemi-Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-method.png" alt-text="Visual Studio adımla yöntemi-Visual Basic":::
 
    Bu noktada, **Yereller** penceresi `args` dizinin boş olduğunu ve `name` `date` varsayılan değerlere sahip olduğunu gösterir. Ayrıca, Visual Studio boş bir konsol penceresi açtı.
 
@@ -151,11 +151,11 @@ Visual Studio Ayrıca, bir program aracılığıyla satıra göre çizgi ve yür
 
    C#
 
-   ![Metot kaynağı-C içindeki Visual Studio adımı #](./media/debugging-with-visual-studio/step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-source-method.png" alt-text="Metot kaynağı-C içindeki Visual Studio adımı #":::
 
    Visual Basic
 
-   ![Visual Studio adımla Yöntem kaynağı-Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-source-method.png" alt-text="Visual Studio adımla Yöntem kaynağı-Visual Basic":::
 
 1. <kbd>F11</kbd>tuşuna basın. Visual Studio, değişken atamasını içeren ifadeyi vurgular `name` . **Yereller** penceresi olduğunu gösterir `name` `null` ve konsol penceresi "adınız nedir?" dizesini görüntüler.
 
@@ -167,7 +167,7 @@ Visual Studio Ayrıca, bir program aracılığıyla satıra göre çizgi ve yür
 
 1. <kbd>F11</kbd>tuşuna basın. Visual Studio yöntemini çağırır <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> . Konsol penceresi biçimlendirilen dizeyi görüntüler.
 
-1. **Hata ayıklama**  >  **adımını**seçin. Adım adım yürütmeyi durdurmaya yönelik başka bir yöntem de <kbd>SHIFT</kbd> + <kbd>F11</kbd>tuşuna basmaktır.
+1. **Hata ayıklama**  >  **adımını** seçin. Adım adım yürütmeyi durdurmaya yönelik başka bir yöntem de <kbd>SHIFT</kbd> + <kbd>F11</kbd>tuşuna basmaktır.
 
    Konsol penceresinde bir ileti görüntülenir ve bir tuşa basmanız bekler.
 
@@ -177,9 +177,9 @@ Visual Studio Ayrıca, bir program aracılığıyla satıra göre çizgi ve yür
 
 Uygulamanızın hata ayıklama sürümünü sınadıktan sonra yayın sürümünü derleyip test etmeniz gerekir. Yayın sürümü bazen bir uygulamanın davranışını olumsuz yönde etkileyebilecek derleyici iyileştirmeleri içerir. Örneğin, performansı artırmak için tasarlanan derleyici iyileştirmeleri, çok iş parçacıklı uygulamalarda yarış koşulları oluşturabilir.
 
-Konsol uygulamanızın yayın sürümünü derlemek ve test etmek için, araç çubuğundaki derleme yapılandırmasını **Hata Ayıkla** 'dan **Release**olarak değiştirin.
+Konsol uygulamanızın yayın sürümünü derlemek ve test etmek için, araç çubuğundaki derleme yapılandırmasını **Hata Ayıkla** 'dan **Release** olarak değiştirin.
 
-![hata ayıklama vurgulanmış olarak varsayılan Visual Studio araç çubuğu](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
+:::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-release.png" alt-text="Yayın vurgulanmış olan varsayılan Visual Studio araç çubuğu":::
 
 <kbd>F5</kbd> tuşuna bastığınızda veya **Build** menüsünden **çözüm oluştur** ' u seçtiğinizde, Visual Studio uygulamanın yayın sürümünü derler. Hata ayıklama sürümünü yaptığınız gibi test edebilirsiniz.
 
@@ -188,4 +188,4 @@ Konsol uygulamanızın yayın sürümünü derlemek ve test etmek için, araç �
 Bu öğreticide, Visual Studio hata ayıklama araçları 'nı kullandınız. Sonraki öğreticide, uygulamanın dağıtılabilir bir sürümünü yayımlarsınız.
 
 > [!div class="nextstepaction"]
-> [Visual Studio kullanarak bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio.md)
+> [Visual Studio kullanarak bir .NET konsol uygulaması yayımlama](publishing-with-visual-studio.md)

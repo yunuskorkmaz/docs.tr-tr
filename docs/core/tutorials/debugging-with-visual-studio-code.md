@@ -1,21 +1,21 @@
 ---
-title: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
-description: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
+title: Visual Studio Code kullanarak bir .NET konsol uygulamasında hata ayıklama
+description: Visual Studio Code kullanarak bir .NET konsol uygulamasında hata ayıklamayı öğrenin.
 ms.date: 05/26/2020
-ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118305"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916235"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET konsol uygulamasında hata ayıklama
 
-Bu öğreticide, .NET Core uygulamalarıyla çalışmak üzere Visual Studio Code sağlanan hata ayıklama araçları tanıtılmaktadır.
+Bu öğreticide, .NET uygulamalarıyla çalışmak üzere Visual Studio Code sağlanan hata ayıklama araçları tanıtılmaktadır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Visual Studio Code kullanarak bir .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
+- Bu öğretici, [Visual Studio Code kullanarak bir .NET konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="use-debug-build-configuration"></a>Hata ayıklama derleme yapılandırmasını kullan
 
@@ -25,9 +25,9 @@ Hata ayıklama yapılandırmasında, bir program tam sembolik hata ayıklama bil
 
 Varsayılan olarak, Visual Studio Code başlatma ayarları hata ayıklama derleme yapılandırmasını kullanır, bu nedenle hata ayıklamadan önce değiştirmeniz gerekmez.
 
-1. Visual Studio Code’u başlatma.
+1. Visual Studio Code’u başlatın.
 
-1. [Visual Studio Code kullanarak .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz projenin klasörünü açın.
+1. [Visual Studio Code kullanarak .NET konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz projenin klasörünü açın.
 
 ## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
 
@@ -35,7 +35,7 @@ Kesme *noktası,* kesme noktası olan satır yürütülmeden önce uygulamanın 
 
 1. *Program.cs* dosyasını açın.
 
-1. Kod penceresinin sol kenar boşluğuna tıklayarak adı, tarihi ve saati gösteren satırda bir *kesme noktası* ayarlayın. Sol kenar boşluğu satır numaralarının solunda bulunur. Bir kesme noktası ayarlamak için diğer yollar <kbd>F9</kbd> tuşuna basarak veya **Run**  >  kod satırı seçiliyken menüden**geçiş kesme noktası** Çalıştır ' i seçmektir.
+1. Kod penceresinin sol kenar boşluğuna tıklayarak adı, tarihi ve saati gösteren satırda bir *kesme noktası* ayarlayın. Sol kenar boşluğu satır numaralarının solunda bulunur. Bir kesme noktası ayarlamak için diğer yollar <kbd>F9</kbd> tuşuna basarak veya **Run**  >  kod satırı seçiliyken menüden **geçiş kesme noktası** Çalıştır ' i seçmektir.
 
    Visual Studio Code, sol kenar boşluğunda kırmızı bir nokta görüntüleyerek kesme noktasının ayarlandığı satırı gösterir.
 
@@ -43,9 +43,9 @@ Kesme *noktası,* kesme noktası olan satır yürütülmeden önce uygulamanın 
 
 ## <a name="set-up-for-terminal-input"></a>Terminal girişi için ayarlama
 
-Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **Hata ayıklama konsolu** çalışan bir program için Terminal girişini kabul etmez. Hata ayıklarken Terminal girişini işlemek için tümleşik Terminal (Visual Studio Code Windows) veya harici bir terminalde kullanabilirsiniz. Bu öğreticide, tümleşik Terminal kullanılır.
+Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **Hata ayıklama konsolu** çalışan bir program için Terminal girişini kabul etmez. Hata ayıklama sırasında terminal girişini işlemek için tümleşik terminali (Visual Studio Code pencerelerinden birisi) veya bir dış terminali kullanabilirsiniz. Bu öğreticide, tümleşik terminal kullanacağız.
 
-1. *. Vscode/launch.js*açın.
+1. *.vscode/launch.json* dosyasını açın.
 
 1. `console`Ayarını olarak değiştirin `integratedTerminal` .
 
@@ -69,7 +69,7 @@ Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **H
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Visual Studio Code hata ayıkla sekmesini açın":::
 
-1. Bölmenin üst kısmındaki yeşil oku seçerek **.NET Core başlatma (konsol)**' nin yanına tıklayın. Programı hata ayıklama modunda başlatmak için diğer yollar <kbd>F5</kbd> tuşuna basarak veya **Run**  >  menüden**hata ayıklamayı Başlat** Çalıştır ' i seçmekten yapılır.
+1. Bölmenin üst kısmındaki yeşil oku seçerek **.NET Core başlatma (konsol)**' nin yanına tıklayın. Programı hata ayıklama modunda başlatmak için diğer yollar <kbd>F5</kbd> tuşuna basarak veya **Run**  >  menüden **hata ayıklamayı Başlat** Çalıştır ' i seçmekten yapılır.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="Hata ayıklamayı Başlat":::
 
@@ -103,7 +103,7 @@ Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **H
 
 1. **Terminal** sekmesini yeniden seçin.
 
-   Konsol penceresinde görünen değerler, **hata ayıklama konsolunda**yaptığınız değişikliklere karşılık gelir.
+   Konsol penceresinde görünen değerler, **hata ayıklama konsolunda** yaptığınız değişikliklere karşılık gelir.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/changed-variable-values.png" alt-text="Girilen değerleri gösteren Terminal":::
 
@@ -111,7 +111,7 @@ Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **H
 
 ## <a name="set-a-conditional-breakpoint"></a>Koşullu kesme noktası ayarlama
 
-Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey girmezse ne olur? Bunu, *koşullu kesme noktası*adında yararlı bir hata ayıklama özelliği ile test edebilirsiniz.
+Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey girmezse ne olur? Bunu, *koşullu kesme noktası* adında yararlı bir hata ayıklama özelliği ile test edebilirsiniz.
 
 1. Kesme noktasını temsil eden kırmızı nokta üzerinde sağ tıklayın (macOS üzerinde<kbd>CTRL</kbd>+ tıklama). Bağlam menüsünde, bir koşullu ifade girmenize izin veren bir iletişim kutusu açmak için **kesme noktasını Düzenle** ' yi seçin.
 
@@ -127,7 +127,7 @@ Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey
 
    Kesme noktası her isabet edildiğinde, hata ayıklayıcı `String.IsNullOrEmpty(name)` yöntemini çağırır ve yalnızca Yöntem çağrısı döndürürse bu satırı keser `true` .
 
-   Koşullu bir ifade yerine, bir deyim belirtilen sayıda yürütülmeden önce program yürütmeyi kesen bir *isabet sayısı*belirtebilirsiniz. Diğer bir seçenek de bir *filtre koşulu*belirtmektir. Bu, iş parçacığı tanımlayıcısı, işlem adı veya iş parçacığı adı olarak bu tür özniteliklere dayalı olarak program yürütmeyi keser.
+   Koşullu bir ifade yerine, bir deyim belirtilen sayıda yürütülmeden önce program yürütmeyi kesen bir *isabet sayısı* belirtebilirsiniz. Diğer bir seçenek de bir *filtre koşulu* belirtmektir. Bu, iş parçacığı tanımlayıcısı, işlem adı veya iş parçacığı adı olarak bu tür özniteliklere dayalı olarak program yürütmeyi keser.
 
 1. <kbd>F5</kbd>'e basarak programı hata ayıklama ile başlatın.
 
@@ -173,7 +173,7 @@ Visual Studio Code Ayrıca, bir program aracılığıyla satır içine girerek v
 
 1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 
-   Visual Studio Code, `Console.WriteLine` ad istemi için öğesini yürütür ve sonraki yürütme satırını vurgular. Sonraki satır, `Console.ReadLine` içindir `name` . **Değişkenler** penceresi değiştirilmez ve **Terminal** sekmesi "adınız nedir?" olarak gösterilir. ekran görüntüsü.
+   Visual Studio Code, `Console.WriteLine` ad istemi için öğesini yürütür ve sonraki yürütme satırını vurgular. Sonraki satır, `Console.ReadLine` içindir `name` . **Değişkenler** penceresi değiştirilmez ve **Terminal** sekmesi "adınız nedir?" olarak gösterilir. isteme.
 
 1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 
@@ -224,4 +224,4 @@ dotnet run --configuration Release
 Bu öğreticide hata ayıklama araçları Visual Studio Code kullandınız. Sonraki öğreticide, uygulamanın dağıtılabilir bir sürümünü yayımlarsınız.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code kullanarak bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio-code.md)
+> [Visual Studio Code kullanarak bir .NET konsol uygulaması yayımlama](publishing-with-visual-studio-code.md)

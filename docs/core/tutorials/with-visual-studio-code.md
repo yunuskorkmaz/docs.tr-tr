@@ -1,40 +1,40 @@
 ---
-title: Visual Studio Code kullanarak bir .NET Core konsol uygulaması oluşturma
-description: Visual Studio Code ve .NET Core CLI kullanarak .NET Core konsol uygulaması oluşturmayı öğrenin.
-ms.date: 05/22/2020
-ms.openlocfilehash: e936c23d8525e42a9d2781cc680067c9da2ce42f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+title: Visual Studio Code kullanarak bir .NET konsol uygulaması oluşturma
+description: Visual Studio Code ve .NET CLı kullanarak bir .NET konsol uygulaması oluşturmayı öğrenin.
+ms.date: 11/17/2020
+ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811932"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915875"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulaması oluşturma
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET konsol uygulaması oluşturma
 
-Bu öğreticide, Visual Studio Code ve .NET Core CLI kullanılarak .NET Core konsol uygulaması oluşturma ve çalıştırma gösterilmektedir. Proje oluşturma, derleme ve çalıştırma gibi proje görevleri, .NET Core CLI kullanılarak yapılır. Bu öğreticiyi, farklı bir kod Düzenleyicisi ile izleyebilir ve tercih ediyorsanız komutları terminalde çalıştırabilirsiniz.
+Bu öğreticide, Visual Studio Code ve .NET CLı kullanarak bir .NET konsol uygulamasının nasıl oluşturulacağı ve çalıştırılacağı gösterilmektedir. Proje oluşturma, derleme ve çalıştırma gibi proje görevleri .NET CLı kullanılarak yapılır. Bu öğreticiyi, farklı bir kod Düzenleyicisi ile izleyebilir ve tercih ediyorsanız komutları terminalde çalıştırabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 1. [C# uzantısı](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) yüklü [Visual Studio Code](https://code.visualstudio.com/) . Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
-2. [.NET Core 3,1 SDK veya üzeri](https://dotnet.microsoft.com/download)
+2. [.Net 5,0 SDK veya üzeri](https://dotnet.microsoft.com/download)
 
 ## <a name="create-the-app"></a>Uygulama oluşturma
 
-"HelloWorld" adlı bir .NET Core konsol uygulaması projesi oluşturun.
+"HelloWorld" adlı bir .NET konsol uygulaması projesi oluşturun.
 
-1. Visual Studio Code’u başlatma.
+1. Visual Studio Code’u başlatın.
 
-1. Ana menüden **Dosya**  >  **açma klasörünü** (**File**  >  MacOS üzerinde dosya**Aç...** ) seçin.
+1. Ana menüden **Dosya**  >  **açma klasörünü** (**File**  >  MacOS üzerinde dosya **Aç...** ) seçin.
 
-1. **Klasörü aç** iletişim kutusunda bir *HelloWorld* klasörü oluşturun ve **Klasör Seç** ' e tıklayın (MacOS üzerinde**açın** ).
+1. **Klasörü aç** iletişim kutusunda bir *HelloWorld* klasörü oluşturun ve **Klasör Seç** ' e tıklayın (MacOS üzerinde **açın** ).
 
    Klasör adı, varsayılan olarak proje adı ve ad alanı adı olur. Daha sonra, proje ad alanının olduğunu varsayan öğreticide kod ekleyeceksiniz `HelloWorld` .
 
-1. Ana menüden **Terminal görünümü ' nu** seçerek **View**Visual Studio Code açın  >  **Terminal** .
+1. Ana menüden **Terminal görünümü ' nu** seçerek **View** Visual Studio Code açın  >  **Terminal** .
 
    **Terminal** , *HelloWorld* klasöründe komut istemiyle açılır.
 
-1. **Terminalde**aşağıdaki komutu girin:
+1. **Terminalde** aşağıdaki komutu girin:
 
    ```dotnetcli
    dotnet new console
@@ -63,7 +63,7 @@ namespace HelloWorld
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-**Terminalde**aşağıdaki komutu çalıştırın:
+**Terminalde** aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet run
@@ -77,7 +77,7 @@ Program "Merhaba Dünya!" görüntülüyor ve bitiyor.
 
 Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uygulamayı geliştirin.
 
-1. Üzerine tıklayarak *program.cs* açın.
+1. *Program.cs* dosyasını tıklayarak açın.
 
    Visual Studio Code bir C# dosyasını ilk açışınızda, [Omnisharp](https://www.omnisharp.net/) düzenleyicide yüklenir.
 
@@ -87,7 +87,7 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
    ![Eksik varlıklar için istem](media/with-visual-studio-code/missing-assets.png)
 
-1. `Main`Aşağıdaki kodla, çağıran satır olan *program.cs*içindeki yönteminin içeriğini değiştirin `Console.WriteLine` :
+1. `Main`Aşağıdaki kodla, çağıran satır olan *program.cs* içindeki yönteminin içeriğini değiştirin `Console.WriteLine` :
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
@@ -110,7 +110,7 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
 1. Bir ad girip <kbd>ENTER</kbd> tuşuna basarak istemi yanıtlayın.
 
-   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="Değiştirilen program çıkışındaki Terminal penceresi":::
+   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="Değiştirilmiş program çıkışını içeren Terminal penceresi":::
 
 1. Programdan çıkmak için herhangi bir tuşa basın.
 
@@ -120,7 +120,7 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, bir .NET Core konsol uygulaması oluşturdunuz. Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.
+Bu öğreticide, bir .NET konsol uygulaması oluşturdunuz. Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama](debugging-with-visual-studio-code.md)
+> [Visual Studio Code kullanarak bir .NET konsol uygulamasında hata ayıklama](debugging-with-visual-studio-code.md)

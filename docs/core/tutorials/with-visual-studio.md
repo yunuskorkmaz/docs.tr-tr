@@ -1,48 +1,58 @@
 ---
-title: Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma
-description: Visual Studio kullanarak C# veya Visual Basic .NET Core konsol uygulaması oluşturmayı öğrenin.
+title: Visual Studio kullanarak bir .NET konsol uygulaması oluşturma
+description: Visual Studio kullanarak C# veya Visual Basic .NET konsol uygulaması oluşturmayı öğrenin.
 ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: d543a05eb00a59c5c08ada28fc8392875385aa8a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e395122e59f17ed66bbd9d83b01610993f663ce1
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537541"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915951"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET Core konsol uygulaması oluşturma
+# <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak bir .NET konsol uygulaması oluşturma
 
-Bu öğreticide, Visual Studio 2019 ' de .NET Core konsol uygulaması oluşturma ve çalıştırma gösterilmektedir.
+Bu öğreticide, Visual Studio 2019 ' de bir .NET konsol uygulamasının nasıl oluşturulacağı ve çalıştırılacağı gösterilmektedir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16,6 veya sonraki bir sürüm](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET Core 3,1 SDK 'Sı, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
+- **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16,8 veya sonraki bir sürüm](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET 5,0 SDK, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
 
-  Daha fazla bilgi için bkz. [Visual Studio ile .NET Core SDK yüklemesi](../install/windows.md#install-with-visual-studio).
+  Daha fazla bilgi için bkz. [Visual Studio ile .NET SDK 'Yı yükler](../install/windows.md#install-with-visual-studio).
 
 ## <a name="create-the-app"></a>Uygulama oluşturma
 
-"HelloWorld" adlı bir .NET Core konsol uygulaması projesi oluşturun.
+"HelloWorld" adlı bir .NET konsol uygulaması projesi oluşturun.
 
 1. Visual Studio 2019’u başlatın.
 
+1. **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **Önizleme özellikleri**' ni seçin ve ardından **Yeni projede tüm .NET Core şablonlarını göster ' i seçin (yeniden başlatma gerektirir)**.
+
+   :::image type="content" source="media/with-visual-studio/dotnet-options.png" alt-text="Tüm .NET şablonları seçeneğini göster":::
+
+1. Visual Studio 'Yu kapatın ve yeniden açın.
+
 1. Başlangıç sayfasında **Yeni proje oluştur**' u seçin.
 
-   ![Visual Studio başlangıç sayfasında yeni bir proje oluştur düğmesi seçili](./media/with-visual-studio/start-window.png)
+   :::image type="content" source="./media/with-visual-studio/start-window.png" alt-text="Visual Studio başlangıç sayfasında yeni bir proje oluştur düğmesi seçili":::
 
-1. **Yeni proje oluştur** sayfasında, arama kutusuna **konsol** girin. Ardından, dil listesinden **C#** veya **Visual Basic** ' yi seçin ve ardından platform listesinden **tüm platformlar** ' ı seçin. **Konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
+1. **Yeni proje oluştur** sayfasında, arama kutusuna **konsol** girin. Ardından, dil listesinden **C#** veya **Visual Basic** ' yi seçin ve ardından platform listesinden **tüm platformlar** ' ı seçin. **Konsol uygulaması** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-   ![Filtreler seçiliyken yeni bir proje penceresi oluştur](./media/with-visual-studio/create-new-project.png)
+   :::image type="content" source="./media/with-visual-studio/create-new-project.png" alt-text="Filtreler seçiliyken yeni bir proje penceresi oluştur":::
 
    > [!TIP]
-   > .NET Core şablonlarını görmüyorsanız, muhtemelen gerekli iş yükünün eksik olması gerekir. **Aradığınızı bulmuyor musunuz?** iletisi altında, **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Visual Studio Yükleyicisi açılır. **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğundan emin olun.
+   > .NET şablonlarını görmüyorsanız, muhtemelen gerekli iş yükü eksik olabilir. **Aradığınızı bulmuyor musunuz?** iletisi altında, **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Visual Studio Yükleyicisi açılır. **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğundan emin olun.
 
 1. **Yeni projenizi yapılandırın** iletişim kutusunda, **Proje adı** kutusuna **HelloWorld** yazın. Ardından **Oluştur**’u seçin.
 
-   ![Yeni proje pencerenizi proje adı, konum ve çözüm adı alanlarıyla yapılandırın](./media/with-visual-studio/configure-new-project.png)
+   :::image type="content" source="./media/with-visual-studio/configure-new-project.png" alt-text="Yeni proje pencerenizi proje adı, konum ve çözüm adı alanlarıyla yapılandırın":::
+
+1. **Ek bilgi** iletişim kutusunda **.NET 5,0 (geçerli)** öğesini seçin ve ardından **Oluştur**' u seçin.
+
+   :::image type="content" source="media/with-visual-studio/additional-info.png" alt-text="Ek bilgi iletişim kutusu":::
 
 Şablon basit bir "Merhaba Dünya" uygulaması oluşturur. <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>"Merhaba Dünya!" öğesini göstermek için yöntemini çağırır Konsol penceresinde.
 
@@ -81,9 +91,9 @@ Kullanmak istediğiniz dil gösterilmiyorsa sayfanın en üstündeki dil seçici
 
 1. <kbd>Ctrl</kbd> + Programı hata ayıklamadan çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
 
-   Bir konsol penceresi "Merhaba Dünya!" metniyle açılıyor ekranda ve bazı Visual Studio hata ayıklama bilgilerinde yazdırılır.
+   Bir konsol penceresi "Merhaba Dünya!" metniyle açılıyor ekranda yazdırılır.
 
-   ![Merhaba Dünya devam etmek için herhangi bir tuşa basarak konsol penceresi](./media/with-visual-studio/hello-world-console.png)
+   :::image type="content" source="./media/with-visual-studio/hello-world-console.png" alt-text="Merhaba Dünya devam etmek için herhangi bir tuşa basarak konsol penceresi":::
 
 1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 
@@ -106,13 +116,17 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
 1. Bir ad girip <kbd>ENTER</kbd> tuşuna basarak istemi yanıtlayın.
 
-   ![Değiştirilen program çıkışıyla konsol penceresi](./media/with-visual-studio/hello-world-update.png)
+   :::image type="content" source="./media/with-visual-studio/hello-world-update.png" alt-text="Değiştirilen program çıkışıyla konsol penceresi":::
 
 1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 
+## <a name="additional-resources"></a>Ek kaynaklar
+
+- [Geçerli yayınlar ve uzun süreli destek yayınları](../releases-and-support.md#net-core-and-net-5-version-lifecycles)
+
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, bir .NET Core konsol uygulaması oluşturdunuz. Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.
+Bu öğreticide, bir .NET konsol uygulaması oluşturdunuz. Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.
 
 > [!div class="nextstepaction"]
-> [Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama](debugging-with-visual-studio.md)
+> [Visual Studio kullanarak bir .NET konsol uygulamasında hata ayıklama](debugging-with-visual-studio.md)

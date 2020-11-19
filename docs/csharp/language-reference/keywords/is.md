@@ -8,25 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: f5c67392705156d6ff05e6f140c7187f41b1d033
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134516"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915836"
 ---
 # <a name="is-c-reference"></a>is (C# Başvurusu)
 
-`is`İşleci, bir ifadenin sonucunun verilen türle uyumlu olup olmadığını denetler veya (C# 7,0 ' den itibaren) bir ifadeyi bir düzene göre sınar. Tür testi işleci hakkında daha fazla bilgi için, `is` [tür-test ve atama işleçleri](../operators/type-testing-and-cast.md) makalesinin [işleç](../operators/type-testing-and-cast.md#is-operator) bölümüne bakın.
+`is`İşleci, bir ifadenin sonucunun verilen türle uyumlu olup olmadığını denetler veya (C# 7,0 ' den itibaren) bir ifadeyi bir düzene göre sınar. Tür testi işleci hakkında daha fazla bilgi için `is` , [tür-test ve atama işleçleri](../operators/type-testing-and-cast.md) makalesinin [işleç](../operators/type-testing-and-cast.md#is-operator) bölümüne bakın.
 
 ## <a name="pattern-matching-with-is"></a>İle eşleşen desenler `is`
 
 C# 7,0 ile başlayarak, `is` ve [Switch](switch.md) deyimleri, model eşleştirmeyi destekler. `is`Anahtar sözcüğü aşağıdaki desenleri destekler:
 
-- Bir ifadenin belirtilen türe dönüştürülüp dönüştürülebileceğini test eden [tür stili](#type-pattern), bu, bir ifadenin bu türden bir değişkene dönüştürülmesini sağlar.
-
+- Bir ifadenin belirtilen bir türe dönüştürülüp dönüştürülebileceğini test eden [tür stili](#type-pattern), ve mümkünse, değişkeni bu türden bir değişkene yayınlar.
 - Bir ifadenin belirtilen sabit değer olarak değerlendirilip değerlendirilmediğini test eden [sabit bir model](#constant-pattern).
-
 - [var olan model](#var-pattern), her zaman başarılı olan ve bir ifadenin değerini yeni bir yerel değişkene bağlayan bir eşleşme.
 
 ### <a name="type-pattern"></a>Tür stili
@@ -39,14 +37,11 @@ Model eşleştirmeyi gerçekleştirmek için tür modelini kullanırken, `is` bi
 
 Burada *Expr* , bir türün bir örneğini değerlendiren bir ifadedir, *tür* , *ifadenin* sonucunun dönüştürülecek türün adı ve *varname* , test ise *ifadenin* sonucunun dönüştürülebileceği nesnedir `is` `true` .
 
-`is`İfade, `true` *Expr* değilse `null` ve aşağıdakilerden herhangi biri doğru ise geçerlidir:
+`is`İfade, Expr 'nin olmaması `true` *expr* `null` ve aşağıdaki koşullardan herhangi biri doğru ise olur:
 
-- *Expr* , *türü*ile aynı türde bir örneğidir.
-
-- *Expr* *türünden*türetilen bir türün örneğidir. Diğer bir deyişle, *ifadenin* sonucu *türünde*bir örneğe eklenebilir.
-
-- *ifadenin* *türünde bir*temel sınıf olan bir derleme zamanı türü vardır ve *Expr* *türü* *veya türünden türetilmiş*bir çalışma zamanı türü vardır. Bir değişkenin *derleme zamanı türü* , bildiriminde tanımlanan değişkenin türüdür. Bir değişkenin *çalışma zamanı türü* , bu değişkene atanan örneğin türüdür.
-
+- *Expr* , *türü* ile aynı türde bir örneğidir.
+- *Expr* *türünden* türetilen bir türün örneğidir. Diğer bir deyişle, *ifadenin* sonucu *türünde* bir örneğe eklenebilir.
+- *ifadenin* *türünde bir* temel sınıf olan bir derleme zamanı türü vardır ve *Expr* *türü* *veya türünden türetilmiş* bir çalışma zamanı türü vardır. Bir değişkenin *derleme zamanı türü* , bildiriminde tanımlanan değişkenin türüdür. Bir değişkenin *çalışma zamanı türü* , bu değişkene atanan örneğin türüdür.
 - *Expr* , *tür* arabirimini uygulayan bir türün örneğidir.
 
 C# 7,1 ile başlayarak, *Expr* genel bir tür parametresi ve kısıtlamaları tarafından tanımlanan bir derleme zamanı türüne sahip olabilir.
@@ -105,6 +100,8 @@ Aşağıdaki örnek, denetimlerin karşılaştırmasını gösterir `null` :
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
 
+İfade, `x is null` başvuru türleri ve null yapılabilir değer türleri için farklı şekilde hesaplanır. Null yapılabilir değer türleri için kullanır <xref:System.Nullable%601.HasValue?displayProperty=nameWithType> . Başvuru türleri için kullanır `x == null` .
+
 ### <a name="var-pattern"></a>var deseninin
 
 Desenli bir model eşleşmesi `var` her zaman başarılı olur. Sözdizimi şöyledir:
@@ -113,9 +110,9 @@ Desenli bir model eşleşmesi `var` her zaman başarılı olur. Sözdizimi şöy
    expr is var varname
 ```
 
-Burada, *ifadenin* değeri her zaman *varname*adlı bir yerel değişkene atanır. *varname* , *Expr*'nin derleme zamanı türüyle aynı türde bir değişkendir.
+Burada, *ifadenin* değeri her zaman *varname* adlı bir yerel değişkene atanır. *varname* , *Expr*'nin derleme zamanı türüyle aynı türde bir değişkendir.
 
-Eğer *expr* ifadesi olarak değerlendirilirse `null` , `is` ifade, `true` `null` *varname*öğesini üretir ve atar. Var olan model, `is` `true` bir değer için üreten birkaç kullanımdır `null` .
+Eğer *expr* ifadesi olarak değerlendirilirse `null` , `is` ifade, `true` `null` *varname* öğesini üretir ve atar. Var olan model, `is` `true` bir değer için üreten birkaç kullanımdır `null` .
 
 `var`Aşağıdaki örnekte gösterildiği gibi, bir Boolean ifadesinde geçici bir değişken oluşturmak için, bu kalıbı kullanabilirsiniz:
 
@@ -127,7 +124,7 @@ Eğer *expr* ifadesi olarak değerlendirilirse `null` , `is` ifade, `true` `null
   
 Daha fazla bilgi için [c# dil belirtiminin](~/_csharplang/spec/introduction.md) ve aşağıdaki c# dil tekliflerinin [, bkz.:](~/_csharplang/spec/expressions.md#the-is-operator)
 
-- [Desen eşleştirme](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
+- [Model eşleştirme](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [Genel türler ile desen eşleştirme](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
 ## <a name="see-also"></a>Ayrıca bkz.
