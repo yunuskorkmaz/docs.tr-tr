@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6a5e4a09cceb9fbc39764d76daa300aad148bf15
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 723691aac68ef8d36051073e8c954199396d4e0a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94482783"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94884641"
 ---
 | Ad | Paket | Docs | Kaynak |
 | ---- | ------- | ---- | ------ |
@@ -382,7 +382,7 @@ ms.locfileid: "94482783"
 | Event Hubs-olay Işlemcisi | NuGet [5.2.0](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.2.0)<br>NuGet [5.3.0-Beta. 3](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.3.0-beta.3) | [belgeler](/dotnet/api/overview/azure/Messaging.EventHubs.Processor-readme-pre/) | GitHub [5.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.2.0/sdk/eventhub/Azure.Messaging.EventHubs.Processor/)<br>GitHub [5.3.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.3.0-beta.3/sdk/eventhub/Azure.Messaging.EventHubs.Processor/) |
 | Event Hubs-olay Işlemcisi | NuGet [4.3.1](https://www.nuget.org/packages/Microsoft.Azure.EventHubs.Processor/4.3.1) |  | GitHub [4.3.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.EventHubs.Processor_4.3.1/sdk/eventhub/Microsoft.Azure.EventHubs.Processor/) |
 | Event Hubs Service Fabric Işlemcisi | NuGet [0.5.4](https://www.nuget.org/packages/Microsoft.Azure.EventHubs.ServiceFabricProcessor/0.5.4) |  | GitHub [0.5.4](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.EventHubs.ServiceFabricProcessor_0.5.4/sdk/eventhub/Microsoft.Azure.EventHubs.ServiceFabricProcessor/) |
-| Uzantılar-Azure | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.0.0)<br>NuGet [1.1.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.1.0-beta.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Extensions.Azure_1.0.0/sdk/core/Microsoft.Extensions.Azure/)<br>GitHub [1.1.0-Beta. 1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Extensions.Azure_1.1.0-beta.1/sdk/core/Microsoft.Extensions.Azure/) |
+| Uzantılar-Azure | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.0.0)<br>NuGet [1.1.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Extensions.Azure/1.1.0-beta.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Extensions.Azure_1.0.0/sdk/core/Microsoft.Extensions.Azure/) |
 | Uzantılar-önbelleğe alma Cosmos | NuGet [1.0.0-preview5](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Cosmos/1.0.0-preview5) |  | GitHub [1.0.0-preview5](https://github.com/Azure/Microsoft.Extensions.Caching.Cosmos/tree/v1.0.0-preview4) |
 | Form Tanıma | NuGet [3.0.0](https://www.nuget.org/packages/Azure.AI.FormRecognizer/3.0.0) | [belgeler](/dotnet/api/overview/azure/AI.FormRecognizer-readme/) | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.FormRecognizer_3.0.0/sdk/formrecognizer/Azure.AI.FormRecognizer/) |
 | Form Tanıma | NuGet [0.8.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.FormRecognizer/0.8.0-preview) |  | GitHub [0.8.0-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/FormRecognizer) |
@@ -417,7 +417,7 @@ ms.locfileid: "94482783"
 | Geçiş | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Relay/2.0.1) | [belgeler](/dotnet/api/overview/azure/service-bus-relay) | GitHub [2.0.1](https://github.com/Azure/azure-relay-dotnet/tree/2.0.1) |
 | Şema kayıt defteri | NuGet [1.0.0-Beta. 2](https://www.nuget.org/packages/Azure.Data.SchemaRegistry/1.0.0-beta.2) | [belgeler](/dotnet/api/overview/azure/Data.SchemaRegistry-readme-pre/) | GitHub [1.0.0-Beta. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Data.SchemaRegistry_1.0.0-beta.2/sdk/schemaregistry/Azure.Data.SchemaRegistry/) |
 | Şema kayıt defteri-Apache avro | NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Azure.Data.SchemaRegistry.ApacheAvro/1.0.0-beta.1) | [belgeler](/dotnet/api/overview/azure/Microsoft.Data.SchemaRegistry.ApacheAvro-readme-pre/) |  |
-| Arayın | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search_10.1.0/sdk/search/Microsoft.Azure.Search/) |
+| Ara | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search_10.1.0/sdk/search/Microsoft.Azure.Search/) |
 | Arama-ortak | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search.Common/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search.Common_10.1.0/sdk/search/Microsoft.Azure.Search.Common/) |
 | Arama verileri | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search.Data/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search.Data_10.1.0/sdk/search/Microsoft.Azure.Search.Data/) |
 | Arama hizmeti | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search.Service/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search.Service_10.1.0/sdk/search/Microsoft.Azure.Search.Service/) |
