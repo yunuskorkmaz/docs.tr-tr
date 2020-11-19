@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: 'F # kodunu biçimlendirmeye yönelik yönergeleri öğrenin.'
 ms.date: 08/31/2020
-ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8f5e333c015f30ae8449c76a3075763370a98e4d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688260"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830525"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -102,7 +102,7 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>Uzun tanımlarda parametreleri yeni bir satıra yerleştir
 
-Çok uzun bir işlev tanımınız varsa, parametreleri yeni satırlara yerleştirip sonraki parametrenin girintileme düzeyiyle eşleşecek şekilde Girintile.
+Uzun bir işlev tanımınız varsa, parametreleri yeni satırlara yerleştirip sonraki parametrenin girintileme düzeyiyle eşleşecek şekilde Girintile.
 
 ```fsharp
 module M =
@@ -308,7 +308,7 @@ Ad alanları, özel durumlar, olaylar ve proje/ `.dll` adlar PascalCase ' i de k
 
 ### <a name="avoid-underscores-in-names"></a>Adlarda alt çizgileri önleyin
 
-Tarihsel olarak, bazı F # kitaplıklarında adlarda alt çizgiler kullanıldı. Ancak, bu, kısmen kabul edilmez, kısmen de .NET adlandırma kurallarına çakışıyor. Yani, bazı F # programcıları büyük ölçüde, kısmen geçmiş nedenlerle alt çizgi kullanır ve tolerans ve saygı önemli öneme sahiptir. Bununla birlikte, stilin genellikle onu kullanıp kullanmayacağınızı belirten bir seçeneğe sahip olan diğerlerinin beğenmediğini unutmayın.
+Tarihsel olarak, bazı F # kitaplıklarında adlarda alt çizgiler kullanıldı. Ancak, bu, kısmen kabul edilmez, kısmen de .NET adlandırma kurallarına çakışıyor. Yani, bazı F # programcıları büyük ölçüde, kısmen geçmiş nedenlerle alt çizgi kullanır ve tolerans ve saygı önemli öneme sahiptir. Ancak, bu stil genellikle kullanılıp kullanılmayacağını öğrenmek için bir seçenek olan başkaları tarafından ayırt edilir.
 
 Bir özel durum, yerel bileşenlerle birlikte çalışmaya dahildir ve alt çizgilerin ortak olduğu durumdur.
 
@@ -643,9 +643,9 @@ Bazı durumlarda okunabilirlik konusunda `do...yield` yardımcı olabilir. Bu du
 ## <a name="formatting-if-expressions"></a>İfadeleri biçimlendirme
 
 Koşullular girintileme, bunları yapan ifadelerin boyutuna ve karmaşıklığına bağlıdır.
-Bunları bir satıra yazmanız yeterlidir:
+Bunları bir satıra yazın:
 
-- `cond``e1`ve `e2` kısacası
+- `cond`, `e1` , ve `e2` kısacası
 - `e1` ve `e2` `if/then/else` kendi kendilerine deyimler değildir.
 
 ```fsharp
@@ -992,7 +992,7 @@ let MyUrl = "www.mywebsitethatiamworkingwith.com"
 
 ## <a name="formatting-computation-expression-operations"></a>Hesaplama ifade işlemlerini biçimlendirme
 
-[Hesaplama ifadeleri](../language-reference/computation-expressions.md) için özel işlemler oluştururken, camelCase adlandırması kullanılması önerilir:
+[Hesaplama ifadeleri](../language-reference/computation-expressions.md)için özel işlemler oluştururken, camelCase adlandırması kullanılması önerilir:
 
 ```fsharp
 type MathBuilder () =
@@ -1031,5 +1031,5 @@ let myNumber =
     }
 ```
 
-Kullanılan adlandırma kuralı, sonunda modellenen etki alanı tarafından yönetilmelidir.
+Modellenen etki alanı, sonunda adlandırma kuralını kullanmalıdır.
 Farklı bir kural kullanmak istiyorsanız, bunun yerine bu kural kullanılmalıdır.

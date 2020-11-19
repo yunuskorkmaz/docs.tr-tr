@@ -2,12 +2,12 @@
 title: Ara değerli dizeler
 description: 'Doğrudan içerdikleri F # ifadelerini gömmeyi sağlayan özel bir dize biçimi olan, enterpolasyonlu dizeler hakkında bilgi edinin.'
 ms.date: 11/12/2020
-ms.openlocfilehash: a49d4e743306fd9bdabb1e019ec4e6c77e0e1f5a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8c552b44cea7d6c51ec333b6bdd4d407c6f10da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688610"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829693"
 ---
 # <a name="interpolated-strings"></a>Ara değerli dizeler
 
@@ -44,7 +44,7 @@ let str = $"A pair of braces: {{}}"
 
 ## <a name="typed-interpolated-strings"></a>Türü belirlenmiş dizeler
 
-Enterpolasyonlu dizeler, türü safey zorlamak için F # biçim belirticilerine de sahiptir.
+Enterpolasyonlu dizeler tür güvenliğini zorlamak için F # biçim belirticilerine de sahip olabilir.
 
 ```fsharp
 let name = "Phillip"
@@ -72,7 +72,7 @@ printfn $"""Name: {"Phillip"}, Age: %d{age}"""
 
 ## <a name="aligning-expressions-in-interpolated-strings"></a>Enterpolasyonlu dizelerde ifadeleri hizalama
 
-Enterpolasyonlu dizelerin içindeki ifadeleri `|` ve kaç boşluk olduğunu bir belirtim ile sola hizalayabilirsiniz veya sağa hizalayabilirsiniz. Aşağıdaki enterpolasyonlu dize sol ve sağ ifadeleri sırasıyla 7 boşlukla sola ve sağa hizalar.
+Enterpolasyonlu dizelerin içindeki ifadeleri `|` ve kaç boşluk olduğunu bir belirtim ile sola hizalayabilirsiniz veya sağa hizalayabilirsiniz. Aşağıdaki enterpolasyonlu dize sol ve sağ ifadeleri sırasıyla yedi boşlukla sola ve sağa hizalar.
 
 ```fsharp
 printfn $"""|{"Left",-7}|{"Right",7}|"""
@@ -89,7 +89,7 @@ printfn $"The speed of light is {speedOfLight:N3} km/s."
 // "The speed of light is 299,792.458 km/s."
 ```
 
-Ayrıca, enterpolasyonlu bir dize bir <xref:System.FormattableString> tür ek açıklaması aracılığıyla bir olarak oluşturulabilir.
+Ayrıca, enterpolasyonlu bir dize bir tür <xref:System.FormattableString> ek açıklaması aracılığıyla olarak denetlenebilir.
 
 ```fsharp
 let frmtStr = $"The speed of light is {speedOfLight:N3} km/s." : FormattableString
