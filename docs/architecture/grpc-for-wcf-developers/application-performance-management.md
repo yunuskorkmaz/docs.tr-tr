@@ -2,12 +2,12 @@
 title: Uygulama performansı yönetimi-WCF geliştiricileri için gRPC
 description: ASP.NET Core gRPC uygulamaları için günlüğe kaydetme, ölçümler ve izleme.
 ms.date: 09/02/2019
-ms.openlocfilehash: bccb5ba92e2dc8fa2def4dc192b0ca58b332861a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165916"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982348"
 ---
 # <a name="application-performance-management"></a>Uygulama Performansı Yönetimi
 
@@ -67,7 +67,7 @@ Daha gelişmiş ölçümler ve ölçüm verilerini daha geniş veri depolarına 
 | Ölçüm       | Bir olayın çeşitli zaman yayıldığında oluşma oranını ölçer. |
 | Zamanlayıcı       | Etkinlik süresini ve oluşma hızını izler, histogram olarak depolanır. |
 
-*Uygulama ölçümlerini*kullanarak bir arabirim, `IMetrics` bağımlılık ekleme yoluyla elde edilebilir ve bir GRPC hizmeti için bu ölçülerden herhangi birini kaydetmek için kullanılır. Aşağıdaki örnek, `Get` zaman içinde yapılan isteklerin sayısını nasıl saymayı gösterir:
+*Uygulama ölçümlerini* kullanarak bir arabirim, `IMetrics` bağımlılık ekleme yoluyla elde edilebilir ve bir GRPC hizmeti için bu ölçülerden herhangi birini kaydetmek için kullanılır. Aşağıdaki örnek, `Get` zaman içinde yapılan isteklerin sayısını nasıl saymayı gösterir:
 
 ```csharp
 public class StockData : Stocks.StocksBase
@@ -112,15 +112,15 @@ public class StockData : Stocks.StocksBase
 
 Dağıtılmış izleme, mikro hizmetler ve dağıtılmış mimarilerin artan kullanımını gösteren, izleme sırasında görece son bir geliştirmede oluşur. İstemci tarayıcısından, uygulamadan veya cihazdan gelen tek bir istek birçok adım ve alt isteklere ayrılabilir ve bir ağ genelinde birçok hizmetin kullanımını içerir. Bu, günlük iletilerinin ve ölçümlerinin tetiklediği belirli bir istekle ilişkilendirilmesi güç sağlar. Dağıtılmış izleme, isteklere tanımlayıcılar uygular ve bu, günlüklerin ve ölçümlerin belirli bir işlemle bağıntılı olmasını sağlar. Bu, [WCF 'nin uçtan uca izlemeye](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md)benzerdir, ancak birden çok platformda uygulanır.
 
-Dağıtılmış izleme popülerliği arttı ve standartlaştırmaya başlıyor. Bulut Yerel Bilgi Işlem altyapısı, [Açık izleme standardı](https://opentracing.io)oluşturdu ve [Deleger](https://www.jaegertracing.io/) ve [elastik APM](https://www.elastic.co/products/apm)gibi arka uçlar ile çalışmaya yönelik satıcıya ait kitaplıkları sağlamaya çalışıyor. Aynı zamanda, Google aynı sorun kümesini karşılamak için [Opencensus projesini](https://opencensus.io/) oluşturmuştur. Bu iki proje, gelecekteki sektörün sektör standardı olacak şekilde yeni bir proje olan [Opentelemetriyi](https://opentelemetry.io)birleştiriyor.
+Dağıtılmış izleme popülerliği arttı ve standartlaştırmaya başlıyor. Bulut Yerel Bilgi Işlem altyapısı, [Açık izleme standardı](https://opentracing.io)oluşturdu ve [deleger](https://www.jaegertracing.io/) ve [elastik APM](https://www.elastic.co/products/apm)gibi arka uçlar ile çalışmaya yönelik satıcıya ait kitaplıkları sağlamaya çalışıyor. Aynı zamanda, Google aynı sorun kümesini karşılamak için [Opencensus projesini](https://opencensus.io/) oluşturmuştur. Bu iki proje, gelecekteki sektörün sektör standardı olacak şekilde yeni bir proje olan [Opentelemetriyi](https://opentelemetry.io)birleştiriyor.
 
 ### <a name="how-distributed-tracing-works"></a>Dağıtılmış izlemenin nasıl çalıştığı
 
-Dağıtılmış izleme, tek bir *izlemenin*parçası olan *spans*adlandırılmış, zaman aşımına uğramış işlemler, bir sistemin birden çok düğümünde işlemeyi içerebilir. Yeni bir işlem başlatıldığında, benzersiz tanımlayıcı ile bir izleme oluşturulur. Her alt işlem için, kendi tanımlayıcısı ve izleme tanımlayıcısı ile bir span oluşturulur. İstek sistem etrafında geçerken, çeşitli bileşenler *üst*ilişkilerini içeren *alt* yayılma oluşturabilir. Bir yayılma, izleme ve yayma tanımlayıcılarını ve ayrıca anahtar ve değer çiftleri ( *Bagaj*adı verilir) biçimindeki yararlı verileri içeren bir *içeriğe*sahiptir.
+Dağıtılmış izleme, tek bir *izlemenin* parçası olan *spans* adlandırılmış, zaman aşımına uğramış işlemler, bir sistemin birden çok düğümünde işlemeyi içerebilir. Yeni bir işlem başlatıldığında, benzersiz tanımlayıcı ile bir izleme oluşturulur. Her alt işlem için, kendi tanımlayıcısı ve izleme tanımlayıcısı ile bir span oluşturulur. İstek sistem etrafında geçerken, çeşitli bileşenler *üst* ilişkilerini içeren *alt* yayılma oluşturabilir. Bir yayılma, izleme ve yayma tanımlayıcılarını ve ayrıca anahtar ve değer çiftleri ( *Bagaj* adı verilir) biçimindeki yararlı verileri içeren bir *içeriğe* sahiptir.
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>İle dağıtılmış izleme `DiagnosticSource`
 
-.NET Core, dağıtılmış izlemeler ve yayılmalar için iyi eşleşen bir iç modüle sahiptir: [Diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Ayrıca, bir işlem içinde tanılamayı oluşturmak ve kullanmak için basit bir yol sağlamak için, `DiagnosticSource` modül bir *etkinlik*kavramıdır. Etkinlik etkin bir şekilde dağıtılmış izlemenin veya bir izleme içindeki yayılımın bir uygulamasıdır. Modülün iç işlevleri, tanımlayıcıları ayırmak da dahil olmak üzere üst/alt etkinliklerden yararlanın. Türünü kullanma hakkında daha fazla bilgi için `Activity` bkz. [GitHub 'Da etkinlik Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
+.NET Core, dağıtılmış izlemeler ve yayılmalar için iyi eşleşen bir iç modüle sahiptir: [Diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Ayrıca, bir işlem içinde tanılamayı oluşturmak ve kullanmak için basit bir yol sağlamak için, `DiagnosticSource` modül bir *etkinlik* kavramıdır. Etkinlik etkin bir şekilde dağıtılmış izlemenin veya bir izleme içindeki yayılımın bir uygulamasıdır. Modülün iç işlevleri, tanımlayıcıları ayırmak da dahil olmak üzere üst/alt etkinliklerden yararlanın. Türünü kullanma hakkında daha fazla bilgi için `Activity` bkz. [GitHub 'Da etkinlik Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
 
 , `DiagnosticSource` Çekirdek Framework 'ün bir parçası olduğundan, çeşitli çekirdek bileşenleri tarafından desteklenir. Bunlar, <xref:System.Net.Http.HttpClient> gRPC çerçevesinde açık destek de dahil olmak üzere, Entity Framework Core ve ASP.NET Core içerir. ASP.NET Core bir istek aldığında, [W3C Trace bağlam](https://www.w3.org/TR/trace-context) standardı ile eşleşen BIR çift http üst bilgisi olup olmadığını denetler. Üstbilgiler bulunursa bir etkinlik, üst bilgilerden kimlik değerleri ve bağlamı kullanılarak başlatılır. Üst bilgi bulunmazsa, standart biçimle eşleşen üretilen kimlik değerleriyle bir etkinlik başlatılır. Bu etkinliğin ömrü boyunca Framework veya uygulama kodu tarafından oluşturulan tüm Tanılamalar, izleme ve span tanımlayıcılarıyla etiketlenebilir. `HttpClient`Destek, her istekte geçerli bir etkinlik olup olmadığını denetleyerek ve izleme üst bilgilerini giden isteğe otomatik olarak ekleyerek bunu daha fazla genişletir.
 
@@ -155,7 +155,7 @@ public class Startup
 
 OpenTracing paketi bir Özet katmanıdır ve bu nedenle arka uca özel uygulama gerektirir. OpenTracing API uygulamaları aşağıdaki açık kaynak arka uçları için kullanılabilir.
 
-| Ad | Paket | Web sitesi |
+| Ad | Paket | Web Sitesi |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | Elastik APM | [Elastik. APM. NetCoreAll](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |

@@ -1,15 +1,15 @@
 ---
-title: Linux dökümlerinde hata ayıkla
+title: Linux dökümlerinin hatasını ayıklama
 description: Bu makalede, Linux ortamlarından dökümleri nasıl toplayacağınızı ve analiz edeceğinizi öğreneceksiniz.
 ms.date: 08/27/2020
-ms.openlocfilehash: d62295e165f56e32ef73ab628ca9ebd77a4435d1
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 692d6228fae31de015412c23c4ec5317024faaab
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598357"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982268"
 ---
-# <a name="debug-linux-dumps"></a>Linux dökümlerinde hata ayıkla
+# <a name="debug-linux-dumps"></a>Linux dökümlerinin hatasını ayıklama
 
 **Bu makale şu şekilde geçerlidir: ✔️** .net Core 3,0 SDK ve sonraki sürümleri
 
@@ -19,7 +19,7 @@ Linux üzerinde dökümler toplamanın iki önerilen yolu [`dotnet-dump`](dotnet
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>İle yönetilen dökümler `dotnet-dump`
 
-[`dotnet-dump`](dotnet-dump.md)Aracın kullanımı basittir ve herhangi bir yerel hata ayıklayıcıya bağımlılığı yoktur. `dotnet-dump` geleneksel hata ayıklama araçlarının kullanılamadığı çok sayıda Linux platformunda (alp veya ARM32/ARM64 gibi) çalışmaktadır. Ancak, `dotnet-dump` yalnızca yönetilen durumu yakalar, bu nedenle yerel koddaki hata ayıklama sorunları için kullanılamaz. Tarafından toplanan dökümler, `dotnet-dump` dökümün oluşturulduğu işletim sistemi ve mimariye sahip bir ortamda çözümlenir. [`dotnet-gcdump`](dotnet-gcdump.md)Araç yalnızca GC yığın bilgilerini yakalayan, ancak Windows üzerinde çözümlenebilecek dökümler üreten bir alternatif olarak kullanılabilir.
+[`dotnet-dump`](dotnet-dump.md)Aracın kullanımı basittir ve herhangi bir yerel hata ayıklayıcıya bağımlılığı yoktur. `dotnet-dump` geleneksel hata ayıklama araçlarının kullanılamadığı çok sayıda Linux platformunda (alp veya ARM32/ARM64 gibi) çalışmaktadır. Ancak, `dotnet-dump` yalnızca yönetilen durumu yakalar, bu nedenle yerel koddaki hata ayıklama sorunları için kullanılamaz. Tarafından toplanan dökümler, `dotnet-dump` dökümün oluşturulduğu işletim sistemi ve mimarili bir ortamda çözümlenir. [`dotnet-gcdump`](dotnet-gcdump.md)Araç yalnızca GC yığın bilgilerini yakalayan, ancak Windows üzerinde çözümlenebilecek dökümler üreten bir alternatif olarak kullanılabilir.
 
 ### <a name="core-dumps-with-createdump"></a>İle temel dökümler `createdump`
 
@@ -29,7 +29,7 @@ Linux üzerinde dökümler toplamanın iki önerilen yolu [`dotnet-dump`](dotnet
 
 - **`<input-filename>`**
 
-  Dönüştürülecek giriş izleme dosyası. *Trace. NetTrace*için varsayılanlar.
+  Dönüştürülecek giriş izleme dosyası. *Trace. NetTrace* için varsayılanlar.
 
 ### <a name="options"></a>Seçenekler
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - email [.NET], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 0f6b8b19ae6047bc419ce949ab76288a24e00f74
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 88ff326e16ede6a422e9403b71905845014c4c25
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821989"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982498"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
 
@@ -56,7 +56,7 @@ E-posta adresinin geçerli olduğunu doğrulamak için yöntemi, `IsValidEmail` 
 @ Karakteriyle birlikte etki alanı adı yöntemine geçirilir ve bu, `DomainMapper` <xref:System.Globalization.IdnMapping> US-ASCII karakter aralığının dışındaki Unicode karakterleri, Punyıcode 'a dönüştürmek için sınıfını kullanır. Yöntemi, `invalid` `True` <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> yöntemi etki alanı adında geçersiz karakterler algılarsa, bayrağını da ayarlar. Yöntemi, önüne @ simgesinden önce gelen Punyıcode etki alanı adını döndürür `IsValidEmail` .
 
 > [!TIP]
-> `(@)(.+)$`Etki alanını normalleştirmek için basit normal ifade deseninin kullanılması önerilir ve sonra geçtiğini veya başarısız olduğunu gösteren bir değer döndürür. Ancak, bu makaledeki örnekte e-postayı doğrulamak için normal bir ifadenin nasıl kullanılacağı açıklanmaktadır. Bir e-postayı nasıl doğruladığınızdan bağımsız olarak, mevcut olduğundan emin olmak için adrese her zaman bir sınama e-postası göndermeniz gerekir.
+> `(@)(.+)$`Etki alanını normalleştirmek ve sonra geçtiğini veya başarısız olduğunu belirten bir değer döndürmek için basit bir normal ifade deseninin kullanılması önerilir. Ancak, bu makaledeki örnekte e-postayı doğrulamak için normal bir ifadenin nasıl kullanılacağı açıklanmaktadır. Bir e-postayı nasıl doğruladığınızdan bağımsız olarak, mevcut olduğundan emin olmak için adrese her zaman bir sınama e-postası göndermeniz gerekir.
 
 `IsValidEmail`Yöntemi daha sonra, <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType> adresin bir normal ifade düzenine uygun olduğunu doğrulamak için yöntemini çağırır.
 

@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 45286e18c41da7eb6717729360077b64539c3db5
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 896b88cbf1f7f31d2d26d69ec7d219da6b27ceff
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877731"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982295"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>.NET Core ve .NET 5 için yayınlar ve destek
 
@@ -18,9 +18,9 @@ Microsoft, .NET 5,0 (ve .NET Core) ve sonraki sürümler için büyük yayınlar
 
 ## <a name="release-types"></a>Sürüm türleri
 
-Her yayının türü hakkındaki bilgiler, *büyük. Minor. Patch*biçimindeki sürüm numarası olarak kodlanır.
+Her yayının türü hakkındaki bilgiler, *büyük. Minor. Patch* biçimindeki sürüm numarası olarak kodlanır.
 
-Örneğin:
+Örnek:
 
 * .NET Core 3,0 ve NET 5,0 ana sürümlerdir.
 * .NET Core 3,1, .NET Core 3,0 ana sürümünden sonraki ilk küçük sürümdür.
@@ -42,7 +42,7 @@ Bakım güncelleştirmeleri (düzeltme ekleri) neredeyse her ay sevk edin ve bu 
 
 .NET SDK için sürüm oluşturma, .NET çalışma zamanından biraz farklı şekilde çalışır. Yeni Visual Studio sürümleriyle uyum sağlamak için, .NET SDK güncelleştirmeleri bazen yeni özellikleri veya MSBuild ve NuGet gibi bileşenlerin yeni sürümlerini içerir. Bu yeni özellikler veya bileşenler, önceki SDK güncelleştirmelerinde aynı ana veya ikincil sürüm için sevk edilen sürümlerle uyumsuz olabilir.
 
-.NET SDK, bu tür güncelleştirmeleri ayırt etmek için özellik bantları kavramını kullanır. Örneğin, ilk .NET Core 3,1 SDK 'Sı 3.1.100 idi. Bu sürüm, 3.1.1 xx  *özellik bandına*karşılık gelir. Özellik bantları, sürüm numarasının üçüncü bölümündeki yüzlerce grupta tanımlanmıştır. Örneğin, 3.1.101 ve 3.1.201, 3.1.101 ve 3.1.199 aynı özellik bandında olduğu sürece iki farklı özellik bantındaki sürümleridir. .NET Core SDK 3.1.101 yüklendiğinde, varsa .NET Core SDK 3.1.100 makineden kaldırılır. Aynı makineye .NET Core SDK 3.1.200 yüklendiğinde, .NET Core SDK 3.1.101 kaldırılmaz.
+.NET SDK, bu tür güncelleştirmeleri ayırt etmek için özellik bantları kavramını kullanır. Örneğin, ilk .NET Core 3,1 SDK 'Sı 3.1.100 idi. Bu sürüm, 3.1.1 xx  *özellik bandına* karşılık gelir. Özellik bantları, sürüm numarasının üçüncü bölümündeki yüzlerce grupta tanımlanmıştır. Örneğin, 3.1.101 ve 3.1.201, 3.1.101 ve 3.1.199 aynı özellik bandında olduğu sürece iki farklı özellik bantındaki sürümleridir. .NET Core SDK 3.1.101 yüklendiğinde, varsa .NET Core SDK 3.1.100 makineden kaldırılır. Aynı makineye .NET Core SDK 3.1.200 yüklendiğinde, .NET Core SDK 3.1.101 kaldırılmaz.
 
 ### <a name="runtime-roll-forward-and-compatibility"></a>Çalışma zamanı alma-iletme ve uyumluluk
 
@@ -107,7 +107,7 @@ Bir işletim sistemi sürümü destek dışında kaldığında, bu sürümü tes
 
 Daha fazla bilgi için bkz. [.net OS yaşam döngüsü ilkesi](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
 
-## <a name="get-support"></a>Destek alın
+## <a name="get-support"></a>Destek alma
 
 Microsoft yardımlı destek ve topluluk desteği arasında seçim yapabilirsiniz.
 

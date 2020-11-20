@@ -5,12 +5,12 @@ ms.date: 11/18/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 077fb06db40519af2bf8ac2f659488acdf525aec
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 1101e218f225eed2a2013ed9e19b60f4ece57738
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916222"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982302"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5’teki yenilikler
 
@@ -53,7 +53,7 @@ Aşağıdaki teknolojilerin .NET Framework .NET 5,0 ' e bağlantı noktası yokt
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
 
-[Windows Communication Foundation (WCF)](../framework/wcf/index.md) özgün uygulanması yalnızca Windows 'da desteklenir; ancak .NET Foundation 'da kullanılabilir bir istemci bağlantı noktası var. Bu, tamamen [açık kaynak](https://github.com/dotnet/wcf), platformlar arası ve Microsoft tarafından desteklenmektedir. Temel NuGet paketleri aşağıda listelenmiştir:
+[Windows Communication Foundation (WCF)](../framework/wcf/index.md) özgün uygulanması yalnızca Windows 'da desteklenmektedir. Ancak, .NET Foundation 'da kullanılabilir bir istemci bağlantı noktası vardır. Bu, tamamen [açık kaynak](https://github.com/dotnet/wcf), platformlar arası ve Microsoft tarafından desteklenmektedir. Temel NuGet paketleri aşağıda listelenmiştir:
 
 - [System. ServiceModel. dupleks](https://www.nuget.org/packages/System.ServiceModel.Duplex)
 - [System. ServiceModel. FEDERATION](https://www.nuget.org/packages/System.ServiceModel.Federation)
@@ -62,7 +62,7 @@ Aşağıdaki teknolojilerin .NET Framework .NET 5,0 ' e bağlantı noktası yokt
 - [System. ServiceModel. Ilkel öğeler](https://www.nuget.org/packages/System.ServiceModel.Primitives)
 - [System. ServiceModel. Security](https://www.nuget.org/packages/System.ServiceModel.Security)
 
-Topluluk, belirtilen istemci kitaplıklarını karmaşıren sunucu bileşenlerini korur. GitHub deposu [Corewcf](https://github.com/CoreWCF/CoreWCF)'de bulunabilir. Sunucu bileşenleri Microsoft tarafından _resmi olarak desteklenmez._ WCF 'ye alternatif olarak, [GRPC](/aspnet/core/grpc)'yi düşünün.
+Topluluk, belirtilen istemci kitaplıklarını tamamlayan sunucu bileşenlerini korur. GitHub deposu [Corewcf](https://github.com/CoreWCF/CoreWCF)'de bulunabilir. Sunucu bileşenleri Microsoft tarafından _resmi olarak desteklenmez._ WCF 'ye alternatif olarak, [GRPC](/aspnet/core/grpc)'yi düşünün.
 
 ## <a name="net-50-doesnt-replace-net-standard"></a>.NET 5,0 .NET Standard değiştirmez
 
@@ -120,7 +120,7 @@ Bu, [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-
 
 .NET 5 ' teki Visual Basic için yeni dil özellikleri yoktur. Bununla birlikte, .NET 5 ile Visual Basic desteği şu şekilde genişletilir:
 
-| Description                            | `dotnet new` parametresinin |
+| Açıklama                            | `dotnet new` parametresinin |
 |----------------------------------------|------------------------|
 | Konsol Uygulaması                    | `console`              |
 | Sınıf kitaplığı                          | `classlib`             |

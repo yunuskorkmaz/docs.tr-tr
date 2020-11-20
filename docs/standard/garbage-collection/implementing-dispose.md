@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: c9b13b2aa77449809f149ea26681d75fea629b61
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ec731ff4c1020100c2b7ff5041d42291141a5209
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827795"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982413"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose metodu uygulama
 
@@ -78,7 +78,7 @@ Yöntemin gövdesi iki kod bloğundan oluşur:
 
   - **Büyük miktarlarda bellek kullanan veya nadir kaynaklarını tüketen yönetilen nesneler.** ' A büyük yönetilen nesne başvuruları atayarak, `null` ulaşılamaz olma olasılığı yüksektir. Bu, bunları belirleyici olmayan şekilde geri kazanıladıklarından daha hızlı bir şekilde yayınlar ve bu genellikle koşullu bloğun dışında yapılır.
 
-Yöntem çağrısı bir sonlandırıcının geliyorsa, yalnızca yönetilmeyen kaynakları serbest bırakma kodu yürütmelidir. Gerçekleştirici, yanlış yolun, geri kazanılabileceğini yönetilen nesnelerle etkileşimde olmamasını sağlamaktan sorumludur. Bu önemlidir çünkü çöp toplayıcının sonlandırma sırasında yönetilen nesneleri yok sayılamayan sıra belirleyici değildir.
+Yöntem çağrısı bir sonlandırıcının geliyorsa, yalnızca yönetilmeyen kaynakları serbest bırakma kodu yürütmelidir. Uygulayıcısı, yanlış yolun, geri kazanılabileceğini yönetilen nesnelerle etkileşimde olmamasını sağlamaktan sorumludur. Bu önemlidir çünkü çöp toplayıcının sonlandırma sırasında yönetilen nesneleri yok sayılamayan sıra belirleyici değildir.
 
 ## <a name="cascade-dispose-calls"></a>Basamaklı atma çağrıları
 

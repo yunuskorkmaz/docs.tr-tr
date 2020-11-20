@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 2ed2a88b91f06bb02c72d3e310ae09d58637205f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2dda65f605ea9de616f01d6e52eb4e0e5def4db7
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197475"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982524"
 ---
 # <a name="handling-null-values"></a>Null Değerleri İşleme
 
@@ -20,7 +20,7 @@ Bir sütundaki değer bilinmiyorsa veya eksik olduğunda, ilişkisel veritabanı
 > [!NOTE]
 > .NET Framework sürüm 2,0,, programcıların bir değer türünü temel alınan türün tüm değerlerini temsil edecek şekilde genişletmesine izin veren null yapılabilir değer türleri için destek sunmuştur. Bu CLR null yapılabilir değer türleri yapının bir örneğini temsil eder <xref:System.Nullable> . Bu özellik, özellikle değer türleri kutulanmış ve kutulandığında, nesne türleriyle gelişmiş uyumluluk sağlayan yararlı olur. ANSI SQL null değeri bir `null` başvuru (veya Visual Basic) ile aynı şekilde davranmadığından, clr null yapılabilir değer türleri veritabanı boş değerlerini depolamak için tasarlanmamıştır `Nothing` . Veritabanı ANSI SQL null değerleriyle çalışma için yerine null değerleri kullanın <xref:System.Data.SqlTypes> <xref:System.Nullable> . Visual Basic ' de CLR değeri null yapılabilir türleriyle çalışma hakkında daha fazla bilgi için bkz. [Nullable değer türlerini](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)görüntüle ve C# için bkz. [Nullable değer türleri](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
   
-## <a name="nulls-and-three-valued-logic"></a>Null değerler ve üç değerli mantık  
+## <a name="nulls-and-three-valued-logic"></a>Null değerler ve Three-Valued mantığı  
 
  Sütun tanımlarında null değerlere izin verilmesi, uygulamanıza üç değerli mantık getirir. Karşılaştırma, üç koşuldan birini değerlendirebilir:  
   
@@ -94,7 +94,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Ayrıca, aşağıdaki kurallar null atamalarının bir örneği için geçerlidir `DataRow.["columnName"]` :  
   
-1. Varsayılan *varsayılan* değer, kesin tür belirtilmiş null sütunları hariç, kesin olarak belirlenmiş null `DbNull.Value` değer olan null sütunlarıdır.  
+1. *Varsayılan* değer, kesin belirlenmiş tür belirlenmiş null sütunlar hariç olmak üzere, kesin türü kesin belirlenmiş null `DbNull.Value` değer olan tüm içindir.  
   
 2. XML dosyalarına serileştirme sırasında null değerler hiçbir şekilde yazılmaz ("xsi: Nil" içinde olduğu gibi).  
   

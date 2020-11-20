@@ -4,12 +4,12 @@ author: IEvangelist
 description: Microsoft. Extensions. Logging NuGet paketi tarafından sunulan günlüğe kaydetme çerçevesini nasıl kullanacağınızı öğrenin.
 ms.author: dapine
 ms.date: 09/30/2020
-ms.openlocfilehash: d409d78698e4e85eaf9f2894ee1ed00cea0c0583
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 5a4d333368082389c4dfc134bb6a9a2e618d47e9
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888560"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982322"
 ---
 # <a name="logging-in-net"></a>.NET oturumu açma
 
@@ -30,7 +30,7 @@ Aşağıdaki örnek:
 
 ## <a name="configure-logging"></a>Günlüğe kaydetmeyi yapılandırma
 
-Günlüğe kaydetme yapılandırması genellikle `Logging` *appSettings* 'in bölümü tarafından sağlanır. `{Environment}` *. JSON* dosyaları. Aşağıdaki *appsettings.Development.js* dosyadaki .net Worker hizmet şablonları tarafından oluşturulmuştur:
+Günlüğe kaydetme yapılandırması genellikle `Logging` *appSettings*'in bölümü tarafından sağlanır. `{Environment}` *. JSON* dosyaları. Aşağıdaki *appsettings.Development.js* dosyadaki .net Worker hizmet şablonları tarafından oluşturulmuştur:
 
 :::code language="json" source="snippets/configuration/worker-service/appsettings.Development.json":::
 
@@ -64,7 +64,7 @@ En düşük günlük düzeyi şu şekilde belirtilebilir:
 - Belirli Kategoriler: Örneğin, `Logging:LogLevel:Microsoft:Warning`
 - Tüm sağlayıcılar ve tüm Kategoriler: `Logging:LogLevel:Default:Warning`
 
-Minimum düzeyin altındaki tüm Günlükler * **değil** _:
+Minimum düzeyin altındaki tüm Günlükler ***değil** _:
 
 - Sağlayıcıya geçirildi.
 - Günlüğe kaydedilir veya gösterilir.
@@ -179,10 +179,10 @@ Aşağıdaki tabloda <xref:Microsoft.Extensions.Logging.LogLevel> değerler, kol
 
 | LogLevel | Değer | Yöntem | Açıklama |
 |--|--|--|--|
-| [İzleme](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | En ayrıntılı iletileri içerir. Bu iletilerde hassas uygulama verileri bulunabilir. Bu iletiler varsayılan olarak devre dışıdır ve üretimde * **Not** _ etkinleştirilmelidir. |
-| [Hata ayıklama](xref:Microsoft.Extensions.Logging.LogLevel) | 1 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug%2A> | Hata ayıklama ve geliştirme için. Yüksek hacimden dolayı üretimde dikkatli olarak kullanın. |
+| [İzleme](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | En ayrıntılı iletileri içerir. Bu iletilerde hassas uygulama verileri bulunabilir. Bu iletiler varsayılan olarak devre dışıdır ve üretimde ***Not** _ etkinleştirilmelidir. |
+| [H](xref:Microsoft.Extensions.Logging.LogLevel) | 1 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug%2A> | Hata ayıklama ve geliştirme için. Yüksek hacimden dolayı üretimde dikkatli olarak kullanın. |
 | [Bilgi](xref:Microsoft.Extensions.Logging.LogLevel) | 2 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation%2A> | Uygulamanın genel akışını izler. Uzun süreli bir değere sahip olabilir. |
-| [Uyarı](xref:Microsoft.Extensions.Logging.LogLevel) | 3 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning%2A> | Olağandışı veya beklenmeyen olaylar için. Genellikle, uygulamanın başarısız olmasına neden olmayan hataları veya koşulları içerir. |
+| [Warning](xref:Microsoft.Extensions.Logging.LogLevel) | 3 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning%2A> | Olağandışı veya beklenmeyen olaylar için. Genellikle, uygulamanın başarısız olmasına neden olmayan hataları veya koşulları içerir. |
 | [Hata](xref:Microsoft.Extensions.Logging.LogLevel) | 4 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogError%2A> | İşlenemeyen hatalar ve özel durumlar için. Bu iletiler, uygulama genelinde bir hata değil, geçerli işlemde veya istekte bir hata olduğunu gösterir. |
 | [Kritik](xref:Microsoft.Extensions.Logging.LogLevel) | 5 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogCritical%2A> | Anında ilgilenilmesi gereken hatalarda. Örnekler: veri kaybı senaryoları, disk alanı yetersiz. |
 | [Hiçbiri](xref:Microsoft.Extensions.Logging.LogLevel) | 6 |  | Hiçbir ileti yazılması gerektiğini belirtir. |
@@ -222,7 +222,7 @@ public async Task<T> GetAsync<T>(string id)
 
 Yukarıdaki kodda, ilk `Log{LogLevel}` parametresi `AppLogEvents.Read` [günlük olay kimliğidir](#log-event-id). İkinci parametre, kalan Yöntem parametreleri tarafından belirtilen bağımsız değişken değerleri için yer tutucuları olan bir ileti şablonudur. Yöntem parametreleri bu makalenin ilerleyen kısımlarında bulunan [ileti şablonu](#log-message-template) bölümünde açıklanmaktadır.
 
-Uygun günlük düzeyini yapılandırın ve `Log{LogLevel}` belirli bir depolama ortamına ne kadar günlük çıkışının yazıldığını denetlemek için doğru yöntemleri çağırın. Örneğin:
+Uygun günlük düzeyini yapılandırın ve `Log{LogLevel}` belirli bir depolama ortamına ne kadar günlük çıkışının yazıldığını denetlemek için doğru yöntemleri çağırın. Örnek:
 
 - Üretimde:
   - Veya düzeylerinde günlüğe kaydetme, `Trace` `Information` yüksek hacimli ayrıntılı günlük iletileri oluşturur. Maliyetleri denetlemek ve veri depolama sınırlarını aşmamak için, `Trace` `Information` iletileri yüksek hacimli ve düşük maliyetli bir veri deposuna günlüğe kaydedin. `Trace`Belirli kategorileri ve sınırlamayı değerlendirin `Information` .
@@ -530,6 +530,6 @@ class Program
 
 - [.NET 'te günlüğe kaydetme sağlayıcıları](logging-providers.md)
 - [.NET ' te özel bir günlüğe kaydetme sağlayıcısı uygulama](custom-logging-provider.md)
-- [Konsol günlüğü biçimlendirmesi](console-log-formatter.md)
+- [Konsol günlük biçimlendirme](console-log-formatter.md)
 - [.NET 'te yüksek performanslı günlüğe kaydetme](high-performance-logging.md)
 - [GitHub.com/DotNet/Extensions](https://github.com/dotnet/extensions/issues) deposu 'nda günlüğe kaydetme hataları oluşturulmalıdır
