@@ -46,6 +46,8 @@
               href: tutorials/intro-to-csharp/introduction-to-classes.md
             - name: Nesne Odaklı programlama
               href: tutorials/intro-to-csharp/object-oriented-programming.md
+    - name: Kayıt türlerini keşfetme
+      href: tutorials/exploration/records.md
     - name: Üst düzey deyimleri keşfetme
       href: tutorials/exploration/top-level-statements.md
     - name: Nesnelerdeki desenleri keşfet
