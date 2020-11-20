@@ -372,8 +372,30 @@ items:
             href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
             href: ../core/diagnostics/event-counters.md
+          - name: EventPipe
+            href: ../core/diagnostics/eventpipe.md
           - name: Günlüğe kaydetme ve izleme
             href: ../core/diagnostics/logging-tracing.md
+          - name: Çalıştırma Zamanı Olayları
+            items:
+              - name: Genel Bakış
+                href: ../fundamentals/diagnostics/runtime-events.md
+              - name: Çekişme Olayları
+                href: ../fundamentals/diagnostics/runtime-contention-events.md
+              - name: Özel Durum Olayları
+                href: ../fundamentals/diagnostics/runtime-exception-events.md
+              - name: Atık Toplama Olayları
+                href: ../fundamentals/diagnostics/runtime-garbage-collection-events.md
+              - name: Birlikte Çalışma Olayları
+                href: ../fundamentals/diagnostics/runtime-interop-events.md
+              - name: Yükleyici ve Bağlayıcı Olayları
+                href: ../fundamentals/diagnostics/runtime-loader-binder-events.md
+              - name: Yöntem Olayları
+                href: ../fundamentals/diagnostics/runtime-method-events.md
+              - name: ThreadPool Olayları
+                href: ../fundamentals/diagnostics/runtime-thread-events.md
+              - name: Tür Sistemi Olayları
+                href: ../fundamentals/diagnostics/runtime-type-events.md
           - name: Kapsayıcılarda tanılama toplama
             href: ../core/diagnostics/diagnostics-in-containers.md
           - name: .NET Core CLI genel araçları
@@ -1590,8 +1612,6 @@ items:
                 href: ../standard/serialization/how-to-chunk-serialized-data.md
               - name: 'Nasıl yapılır: .NET Standard nesnesinin serileştirilebilir olup olmadığını belirleme'
                 href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
-              - name: Örnek
-                href: ../standard/serialization/basic-serialization-technology-sample.md
           - name: XML ve SOAP serileştirmesi
             items:
               - name: Genel Bakış
