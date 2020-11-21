@@ -5,13 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 01af1446097bbed25874b45d57a5dde85ae63891
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 46941c811b42891b38ab6f0c4a9b428d368cf4a4
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91199165"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099432"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Özet özellikleri tanımlama (C# Programlama Kılavuzu)
 
@@ -37,7 +39,7 @@ Aşağıdaki örnek, [soyut](../../language-reference/keywords/abstract.md) öze
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- Özelliğindeki değiştiriciler Özellik bildiriminin kendine yerleştirilir. Örneğin:  
+- Özelliğindeki değiştiriciler Özellik bildiriminin kendine yerleştirilir. Örnek:  
   
     ```csharp  
     public abstract double Area  
@@ -60,6 +62,6 @@ Aşağıdaki örnek, [soyut](../../language-reference/keywords/abstract.md) öze
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Sınıflar ve yapılar](./index.md)
+- [Sınıflar ve Yapılar](./index.md)
 - [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](./abstract-and-sealed-classes-and-class-members.md)
 - [Özellikler](./properties.md)

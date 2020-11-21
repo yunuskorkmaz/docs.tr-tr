@@ -26,16 +26,16 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827262"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098820"
 ---
 # <a name="generics-in-net"></a>.NET içindeki Genel Türler
 
-Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalıştığı kesin veri türüne göre uyarlamanızı sağlar. Örneğin, anahtar <xref:System.Collections.Hashtable> ve değerlerin herhangi bir türde olmasına izin veren sınıfını kullanmak yerine, <xref:System.Collections.Generic.Dictionary%602> genel sınıfını kullanabilir ve anahtar için izin verilen türü ve değer için izin verilen türü belirtebilirsiniz. Genel türlerin avantajları arasında kod yeniden kullanılabilirliği ve tür güvenliği artar.  
+Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalıştığı kesin veri türüne göre uyarlamanızı sağlar. Örneğin, anahtar <xref:System.Collections.Hashtable> ve değerlerin herhangi bir türde olmasına izin veren sınıfını kullanmak yerine, <xref:System.Collections.Generic.Dictionary%602> Genel sınıfı kullanabilir ve anahtar ve değer için izin verilen türleri belirtebilirsiniz. Genel türlerin avantajları arasında kod yeniden kullanılabilirliği ve tür güvenliği artar.  
 
 ## <a name="defining-and-using-generics"></a>Genel türleri tanımlama ve kullanma
  Genel türler, depotıkları veya kullandıkları bir veya daha fazla türden bir veya daha fazla yer tutucu (tür parametreleri) içeren sınıflar, yapılar, arabirimler ve yöntemlerdir. Genel koleksiyon sınıfı, bir tür parametresini, depoladığı nesnelerin türü için yer tutucu olarak kullanabilir; tür parametreleri, alanlarının türleri ve yöntemlerinin parametre türleri olarak görüntülenir. Genel bir yöntem, kendi tür parametresini dönüş değerinin türü veya resmi parametrelerinden birinin türü olarak kullanabilir. Aşağıdaki kod basit bir genel sınıf tanımını gösterir.  

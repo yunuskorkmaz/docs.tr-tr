@@ -6,13 +6,15 @@ helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 7e24331d37e8fdbe2bc66a2d9f73a5f6a7242af9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9960ba2c39d58734a04cb7ca892ed321fd09822b
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864351"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099054"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma (C# Programlama Kılavuzu)
 
@@ -40,7 +42,7 @@ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word 
 
 7. **Tamam** düğmesine tıklayın.
 
-     Yeni proje **Çözüm Gezgini**görüntülenir.
+     Yeni proje **Çözüm Gezgini** görüntülenir.
 
 ## <a name="to-add-a-reference"></a>Başvuru eklemek için
 
@@ -60,7 +62,7 @@ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word 
 
 ## <a name="to-display-text-in-a-word-document"></a>Bir Word belgesinde metin göstermek için
 
-1. `Program` *Program.cs*içindeki sınıfında, bir Word uygulaması ve Word belgesi oluşturmak için aşağıdaki yöntemi ekleyin. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) yönteminde dört isteğe bağlı parametre vardır. Bu örnek, varsayılan değerlerini kullanır. Bu nedenle, çağırma ifadesinde herhangi bir bağımsız değişken gerekmez.
+1. `Program` *Program.cs* içindeki sınıfında, bir Word uygulaması ve Word belgesi oluşturmak için aşağıdaki yöntemi ekleyin. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) yönteminde dört isteğe bağlı parametre vardır. Bu örnek, varsayılan değerlerini kullanır. Bu nedenle, çağırma ifadesinde herhangi bir bağımsız değişken gerekmez.
 
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]
 
