@@ -2,12 +2,12 @@
 title: 'F # 5,0-F # kılavuzundaki yenilikler'
 description: "F # 5,0 ' de bulunan yeni özelliklere genel bakış alın."
 ms.date: 11/06/2020
-ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557148"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982472"
 ---
 # <a name="whats-new-in-f-50"></a>F # 5,0 ' deki yenilikler
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-Paket başvuruları hakkında daha fazla bilgi için [F# Etkileşimli](../tutorials/fsharp-interactive/index.md) öğreticisine bakın.
+Bu özellik [F # Tooling RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)' i uygular. Paket başvuruları hakkında daha fazla bilgi için [F# Etkileşimli](../tutorials/fsharp-interactive/index.md) öğreticisine bakın.
 
 ## <a name="string-interpolation"></a>Dize ilişkilendirme
 
@@ -102,6 +102,8 @@ let str =
 ```
 
 Bu, uygulamada çok fazla yapmanız önerilmez.
+
+Bu özellik [F # RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md)' i uygular.
 
 ## <a name="support-for-nameof"></a>NameOf desteği
 
@@ -176,6 +178,8 @@ let deserialize (e: RecordedEvent) : MyEvent =
 
 Önceki kod, Match ifadesinde dize sabit değeri yerine ' NameOf ' kullanır.
 
+Bu özellik [F # RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md)' i uygular.
+
 ## <a name="open-type-declarations"></a>Açık tür bildirimleri
 
 F # 5, açık tür bildirimleri için de destek ekler. Açık tür bildirimi, bazı farklı söz dizimi ve F # semantiğini sığdırmak için biraz farklı davranış dışında C# dilinde statik bir sınıf açma gibidir.
@@ -200,6 +204,8 @@ printfn "%A" A
 
 C# ' den farklı olarak, `open type` aynı ada sahip bir üyeyi kullanıma sunan iki tür üzerinde olduğunuzda, `open` diğer adı gölgeli son türden üye. Bu, zaten mevcut olan gölgeleme etrafında F # semantiğinin tutarlıdır.
 
+Bu özellik [F # RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md)' i uygular.
+
 ## <a name="consistent-slicing-behavior-for-built-in-data-types"></a>Yerleşik veri türleri için tutarlı Dilimleme davranışı
 
 `FSharp.Core`F # 5 ' ten önce tutarlı olmaması için kullanılan yerleşik veri türlerini (dizi, liste, dize, 2B dizi, 3B dizi, 4d dizi) Dilimleme davranışı. Bazı kenar durumu davranışları özel durum oluşturdu ve bazı durumlar. F # 5 ' te, tüm yerleşik türler artık oluşturulması imkansız olan dilimler için boş dilimler döndürüyor:
@@ -221,6 +227,8 @@ let emptyArray = a.[-2..(-1)]
 // F# 5: returns empty string
 let emptyString = s.[-2..(-1)]
 ```
+
+Bu özellik [F # RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md)' i uygular.
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays-in-fsharpcore"></a>FSharp. Core 'da 3B ve 4D dizileri için sabit Dizin dilimleri
 
@@ -260,6 +268,8 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
+Bu özellik [F # RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md)'yi uygular.
+
 ## <a name="f-quotations-improvements"></a>F # tırnak geliştirmeleri
 
 F # [kod teklifleri](../language-reference/code-quotations.md) artık tür kısıtlaması bilgilerini tutma özelliğine sahiptir. Aşağıdaki örneği inceleyin:
@@ -276,6 +286,8 @@ let inline negate x = -x
 ```
 
 İşlev tarafından oluşturulan kısıtlama `inline` , kod kullanımı içinde tutulur. `negate`İşlevin alıntı yapılabilir formu artık değerlendirilebilirler.
+
+Bu özellik [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)' i uygular.
 
 ## <a name="applicative-computation-expressions"></a>Uygulama hesaplama Ifadeleri
 
@@ -326,6 +338,8 @@ let printApplicatives () =
 
 Günümüzde bu kitaplıkta yer alan bir kitaplık yazarımız varsa, bilmeniz gereken bazı ek hususlar vardır.
 
+Bu özellik [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)' i uygular.
+
 ## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>Arabirimler farklı genel örneklerde uygulanabilir
 
 Artık aynı arabirimi farklı genel örneklerde de uygulayabilirsiniz:
@@ -347,6 +361,8 @@ let iaString = mc :> IA<string>
 iaInt.Get() // 1
 iaString.Get() // "hello"
 ```
+
+Bu özellik [F # RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md)' i uygular.
 
 ## <a name="default-interface-member-consumption"></a>Varsayılan arabirim üyesi tüketimi
 
@@ -387,6 +403,8 @@ printfn "DIM from C# but via Object Expression: %d" md'.Z
 
 Bu, kullanıcıların varsayılan bir uygulama kullanabilmesini beklediklerinde modern C# dilinde yazılmış C# kodu ve .NET bileşenlerinden yararlanarak güvenle yararlanmanızı sağlar.
 
+Bu özellik [F # RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md)' i uygular.
+
 ## <a name="simplified-interop-with-nullable-value-types"></a>Null yapılabilir değer türleriyle Basitleştirilmiş birlikte çalışma
 
 [Null yapılabilir (değer) türleri](https://docs.microsoft.com/dotnet/api/system.nullable-1) (tarihsel olarak null yapılabilir türler olarak adlandırılır) F # tarafından desteklenmelidir, ancak bunlarla etkileşim kurmak istediğiniz `Nullable` her seferinde bir veya sarmalayıcı oluşturmanız gerektiğinden bu, geleneksel olarak bir sorun teşkil etti `Nullable<SomeType>` . Artık derleyici, hedef türü eşleşiyorsa bir değer türünü bir olarak öğesine dönüştürür `Nullable<ThatValueType>` . Aşağıdaki kod artık mümkündür:
@@ -404,6 +422,8 @@ dateTimes.Append(DateTime.Parse("2019/01/01"))
 // The previous line is now equivalent to this line
 dateTimes.Append(Nullable<DateTime>(DateTime.Parse("2019/01/01")))
 ```
+
+Bu özellik [F # RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md)' i uygular.
 
 ## <a name="preview-reverse-indexes"></a>Önizleme: ters dizinler
 
@@ -463,6 +483,8 @@ let run () =
 
 run() // Prints the same thing twice
 ```
+
+Bu özellik [F # RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md)' i uygular.
 
 ## <a name="preview-overloads-of-custom-keywords-in-computation-expressions"></a>Önizleme: hesaplama ifadelerinde özel anahtar sözcüklerin aşırı yüklemeleri
 
@@ -535,3 +557,5 @@ let password =
 ```
 
 Bu değişiklikten önce, `InputBuilder` türü olduğu gibi yazabilirsiniz, ancak örnekte kullanıldığı şekilde kullanamazsınız. Aşırı Yüklemeler, isteğe bağlı parametreler ve artık `System.ParamArray` türlere izin verildiğinden, her şey yalnızca istediğiniz gibi çalışmaktadır.
+
+Bu özellik [F # RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md)' i uygular.
