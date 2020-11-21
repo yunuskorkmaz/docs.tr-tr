@@ -5,26 +5,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: de9034772bad1f28e27abe01595309dd84ddc3e7
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 39e191ce3b113b483fe93d70a0cadf02a7bee915
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864572"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099380"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="b1a63-104">Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="b1a63-104">How to implement a lightweight class with auto-implemented properties (C# Programming Guide)</span></span>
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="428fd-104">Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="428fd-104">How to implement a lightweight class with auto-implemented properties (C# Programming Guide)</span></span>
 
-<span data-ttu-id="b1a63-105">Bu örnek, yalnızca bir otomatik uygulanan özellikler kümesini kapsüllemek için hizmet veren sabit bir basit sınıfın nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b1a63-105">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="b1a63-106">Başvuru türü semantiğini kullanmanız gerektiğinde, yapı yerine bu tür yapıyı kullanın.</span><span class="sxs-lookup"><span data-stu-id="b1a63-106">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>
+<span data-ttu-id="428fd-105">Bu örnek, yalnızca bir otomatik uygulanan özellikler kümesini kapsüllemek için hizmet veren sabit bir basit sınıfın nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="428fd-105">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="428fd-106">Başvuru türü semantiğini kullanmanız gerektiğinde, yapı yerine bu tür yapıyı kullanın.</span><span class="sxs-lookup"><span data-stu-id="428fd-106">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>
 
-<span data-ttu-id="b1a63-107">Değişmez bir özelliği iki şekilde yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="b1a63-107">You can make an immutable property in two ways:</span></span>
+<span data-ttu-id="428fd-107">Değişmez bir özelliği iki şekilde yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="428fd-107">You can make an immutable property in two ways:</span></span>
 
-- <span data-ttu-id="b1a63-108">[Set](../../language-reference/keywords/set.md) erişimcisinin [Private](../../language-reference/keywords/private.md)olarak bildirilmesini sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b1a63-108">You can declare the [set](../../language-reference/keywords/set.md) accessor to be [private](../../language-reference/keywords/private.md).</span></span>  <span data-ttu-id="b1a63-109">Özelliği yalnızca tür içinde ayarlanabilir, ancak tüketicilere sabittir.</span><span class="sxs-lookup"><span data-stu-id="b1a63-109">The property is only settable within the type, but it is immutable to consumers.</span></span>
+- <span data-ttu-id="428fd-108">[Set](../../language-reference/keywords/set.md) erişimcisinin [Private](../../language-reference/keywords/private.md)olarak bildirilmesini sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="428fd-108">You can declare the [set](../../language-reference/keywords/set.md) accessor to be [private](../../language-reference/keywords/private.md).</span></span>  <span data-ttu-id="428fd-109">Özelliği yalnızca tür içinde ayarlanabilir, ancak tüketicilere sabittir.</span><span class="sxs-lookup"><span data-stu-id="428fd-109">The property is only settable within the type, but it is immutable to consumers.</span></span>
 
-  <span data-ttu-id="b1a63-110">Özel bir `set` erişimci bildirdiğinizde, özelliği başlatmak için bir nesne Başlatıcısı kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="b1a63-110">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="b1a63-111">Bir Oluşturucu veya Factory yöntemi kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b1a63-111">You must use a constructor or a factory method.</span></span>
-- <span data-ttu-id="b1a63-112">Yalnızca [Get](../../language-reference/keywords/get.md) erişimcisini bildirebilirsiniz. Bu, özelliği türün Oluşturucusu dışında her yerde sabit hale getirir.</span><span class="sxs-lookup"><span data-stu-id="b1a63-112">You can declare only the [get](../../language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type's constructor.</span></span>
+  <span data-ttu-id="428fd-110">Özel bir `set` erişimci bildirdiğinizde, özelliği başlatmak için bir nesne Başlatıcısı kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="428fd-110">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="428fd-111">Bir Oluşturucu veya Factory yöntemi kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="428fd-111">You must use a constructor or a factory method.</span></span>
+- <span data-ttu-id="428fd-112">Yalnızca [Get](../../language-reference/keywords/get.md) erişimcisini bildirebilirsiniz. Bu, özelliği türün Oluşturucusu dışında her yerde sabit hale getirir.</span><span class="sxs-lookup"><span data-stu-id="428fd-112">You can declare only the [get](../../language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type's constructor.</span></span>
 
-<span data-ttu-id="b1a63-113">Aşağıdaki örnek, Get ve Private kümesi ile tek bir get erişimcisine sahip bir özelliğin nasıl farklı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="b1a63-113">The following example shows how a property with only get accessor differs than one with get and private set.</span></span>
+<span data-ttu-id="428fd-113">Aşağıdaki örnek, Get ve Private kümesi ile tek bir get erişimcisine sahip bir özelliğin nasıl farklı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="428fd-113">The following example shows how a property with only get accessor differs than one with get and private set.</span></span>
 
 ```csharp
 class Contact
@@ -47,9 +49,9 @@ class Contact
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="b1a63-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="b1a63-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="428fd-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="428fd-114">Example</span></span>
 
-<span data-ttu-id="b1a63-115">Aşağıdaki örnek, otomatik uygulanan özellikleri olan sabit bir sınıfı uygulamak için iki yol göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="b1a63-115">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="b1a63-116">Her bir şekilde, bir özel ve özelliklerden biri olan özelliklerden birini bildirir `set` `get` .</span><span class="sxs-lookup"><span data-stu-id="b1a63-116">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="b1a63-117">İlk sınıf yalnızca özellikleri başlatmak için bir Oluşturucu kullanır ve ikinci sınıf Oluşturucu çağıran bir statik fabrika yöntemi kullanır.</span><span class="sxs-lookup"><span data-stu-id="b1a63-117">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>
+<span data-ttu-id="428fd-115">Aşağıdaki örnek, otomatik uygulanan özellikleri olan sabit bir sınıfı uygulamak için iki yol göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="428fd-115">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="428fd-116">Her bir şekilde, bir özel ve özelliklerden biri olan özelliklerden birini bildirir `set` `get` .</span><span class="sxs-lookup"><span data-stu-id="428fd-116">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="428fd-117">İlk sınıf yalnızca özellikleri başlatmak için bir Oluşturucu kullanır ve ikinci sınıf Oluşturucu çağıran bir statik fabrika yöntemi kullanır.</span><span class="sxs-lookup"><span data-stu-id="428fd-117">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>
 
 ```csharp
 // This class is immutable. After an object is created,
@@ -144,10 +146,10 @@ public class Program
 */
 ```
 
-<span data-ttu-id="b1a63-118">Derleyici, otomatik uygulanan her özellik için yedekleme alanları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b1a63-118">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="b1a63-119">Alanlara doğrudan kaynak kodundan erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="b1a63-119">The fields are not accessible directly from source code.</span></span>
+<span data-ttu-id="428fd-118">Derleyici, otomatik uygulanan her özellik için yedekleme alanları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="428fd-118">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="428fd-119">Alanlara doğrudan kaynak kodundan erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="428fd-119">The fields are not accessible directly from source code.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b1a63-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b1a63-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="428fd-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="428fd-120">See also</span></span>
 
-- [<span data-ttu-id="b1a63-121">Özellikler</span><span class="sxs-lookup"><span data-stu-id="b1a63-121">Properties</span></span>](./properties.md)
-- [<span data-ttu-id="b1a63-122">sýný</span><span class="sxs-lookup"><span data-stu-id="b1a63-122">struct</span></span>](../../language-reference/builtin-types/struct.md)
-- [<span data-ttu-id="b1a63-123">Nesne ve Koleksiyon Başlatıcıları</span><span class="sxs-lookup"><span data-stu-id="b1a63-123">Object and Collection Initializers</span></span>](./object-and-collection-initializers.md)
+- [<span data-ttu-id="428fd-121">Özellikler</span><span class="sxs-lookup"><span data-stu-id="428fd-121">Properties</span></span>](./properties.md)
+- [<span data-ttu-id="428fd-122">sýný</span><span class="sxs-lookup"><span data-stu-id="428fd-122">struct</span></span>](../../language-reference/builtin-types/struct.md)
+- [<span data-ttu-id="428fd-123">Nesne ve Koleksiyon Başlatıcıları</span><span class="sxs-lookup"><span data-stu-id="428fd-123">Object and Collection Initializers</span></span>](./object-and-collection-initializers.md)
