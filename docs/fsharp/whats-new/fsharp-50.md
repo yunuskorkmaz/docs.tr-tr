@@ -2,12 +2,12 @@
 title: 'F # 5,0-F # kılavuzundaki yenilikler'
 description: "F # 5,0 ' de bulunan yeni özelliklere genel bakış alın."
 ms.date: 11/06/2020
-ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982472"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098703"
 ---
 # <a name="whats-new-in-f-50"></a>F # 5,0 ' deki yenilikler
 
@@ -285,15 +285,15 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-İşlev tarafından oluşturulan kısıtlama `inline` , kod kullanımı içinde tutulur. `negate`İşlevin alıntı yapılabilir formu artık değerlendirilebilirler.
+İşlev tarafından oluşturulan kısıtlama, `inline` kod teklifinde tutulur. `negate`İşlevin alıntılanmış formu artık değerlendirilebilirler.
 
 Bu özellik [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)' i uygular.
 
 ## <a name="applicative-computation-expressions"></a>Uygulama hesaplama Ifadeleri
 
-[Hesaplama ifadeleri (CEs)](../language-reference/computation-expressions.md) , bugün "bağlamsal hesaplamalar" modellemek için veya daha işlevsel programlama kolay terminolojisinde, birli hesaplamalar için kullanılır.
+[Hesaplama ifadeleri (CEs)](../language-reference/computation-expressions.md) , bugün "bağlamsal hesaplamalar" modellemek için veya daha işlevsel programlama kullanımı kolay terminoloji, monanabilir hesaplamalar için kullanılır.
 
-F # 5, farklı bir hesaplama modeli sunan uygulama ve uygulama sunar. Uygulama, her hesaplamanın bağımsız olduğu ve sonuçları sonunda biriktiği için daha verimli hesaplamalar sağlar. Hesaplamalar diğerinden bağımsız olduğunda, Ayrıca, CE yazarlarının daha verimli kitaplıklar yazmasına olanak tanımak de oldukça paralelleştirilebilir. Bu avantaj bir kısıtlamada gelir, ancak daha önce hesaplanan değerlere bağımlı olan hesaplamalar buna izin verilmez.
+F # 5, farklı bir hesaplama modeli sunan uygulama ve uygulama sunar. Uygulama, her hesaplamanın bağımsız olduğu ve sonuçları sonunda biriktiği için daha verimli hesaplamalar sağlar. Hesaplamalar diğerinden bağımsız olduğunda, Ayrıca, CE yazarlarının daha verimli kitaplıklar yazmasına olanak tanımak de oldukça paralelleştirilebilir. Bu avantaj bir kısıtlamada gelir, ancak önceden hesaplanan değerlere bağımlı olan hesaplamalar buna izin verilmez.
 
 Aşağıdaki örnek, türü için temel bir uygulama gösterir `Result` .
 
@@ -340,7 +340,7 @@ Günümüzde bu kitaplıkta yer alan bir kitaplık yazarımız varsa, bilmeniz g
 
 Bu özellik [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md)' i uygular.
 
-## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>Arabirimler farklı genel örneklerde uygulanabilir
+## <a name="interfaces-can-be-implemented-at-different-generic-instantiations"></a>Arabirimler, farklı genel örneklerde uygulanabilir
 
 Artık aynı arabirimi farklı genel örneklerde de uygulayabilirsiniz:
 
@@ -490,7 +490,7 @@ Bu özellik [F # RFC FS-1076](https://github.com/fsharp/fslang-design/blob/maste
 
 Hesaplama ifadeleri, kitaplık ve çerçeve yazarları için güçlü bir özelliktir. Bunlar, çalışmakta olduğunuz etki alanı için iyi bilinen üyeleri tanımlamanıza ve bir DSL oluşturacak şekilde bileşenlerinizi önemli ölçüde iyileştirmenize olanak tanır.
 
-F # 5 hesaplama Ifadelerinde ek yükleme özel işlemleri için Önizleme desteği ekler. Aşağıdaki kodun yazıldı ve tüketilmesi için aşağıdaki kodun kullanılmasına izin verir:
+F # 5 hesaplama Ifadelerinde ek yükleme özel işlemleri için Önizleme desteği ekler. Aşağıdaki kodun yazılmasına ve kullanılmasına izin verir:
 
 ```fsharp
 open System

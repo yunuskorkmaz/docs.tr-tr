@@ -2,12 +2,12 @@
 title: XML Belgeleri
 description: "Açıklamalardan belge oluşturmak için F # ' da destek hakkında bilgi edinin."
 ms.date: 09/15/2020
-ms.openlocfilehash: 8720d66204333eb21dc998655467f9a5745a33f3
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 24d9dbfb5e28d39e224ef9428f025298464fc7f4
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982485"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099015"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
 
@@ -17,7 +17,7 @@ XML belge açıklamaları, Kullanıcı tanımlı herhangi bir tür veya üyenin 
 Bunlar, derleme zamanında bir XML belge dosyası oluşturmak için derleyici tarafından işlenebilecekleri için özeldir.
 Derleyici tarafından oluşturulan XML dosyası, .NET derlemenizin yanı sıra, türler veya üyeler hakkında hızlı bilgileri göstermek için araç ipuçları kullanabilmesi için, .NET derlemeniz ile dağıtılabilir. Ayrıca, XML dosyası [fsdocs](http://fsprojects.github.io/FSharp.Formatting/) gibi araçlar aracılığıyla, API başvuru Web siteleri oluşturmak için çalıştırılabilir.
 
-Tüm diğer yorumlar gibi XML belgesi açıklamaları derleyici tarafından yok sayılır, aşağıda açıklanan seçenekler derleme zamanında, açıklamaların geçerliliğini ve tamamlananmasını denetlemek için etkin değildir.
+Tüm diğer yorumlar gibi XML belgesi açıklamaları derleyici tarafından yok sayılır, aşağıda açıklanan seçenekler derleme zamanında açıklamaların geçerliliğini ve tamamını denetlemek için etkin değildir.
 
 XML dosyasını, derleme zamanında aşağıdakilerden birini yaparak oluşturabilirsiniz:
 
@@ -33,9 +33,9 @@ XML belge açıklamalarını yazmanın iki yolu vardır: XML etiketleriyle ve ol
 
 ## <a name="comments-without-xml-tags"></a>XML etiketleri olmayan Yorumlar
 
-Bir `///` yorum ile başlamadıysanız, `<` tüm açıklama metni hemen izleyen kod yapısına ait Özet belgeler olarak alınır. Her yapı için yalnızca kısa bir özet yazmak istediğinizde bu yöntemi kullanın.
+Bir `///` yorum ile başlamadıysanız `<` , tüm açıklama metni hemen izleyen kod yapısına ait Özet belgeler olarak alınır. Her yapı için yalnızca kısa bir özet yazmak istediğinizde bu yöntemi kullanın.
 
-Yorum, belge hazırlığı sırasında XML olarak kodlanır, bu nedenle ve gibi karakterlerin kaçış olmaması `<` `>` `&` gerekir. Açıkça bir Özet etiketi belirtmezseniz, **param** veya etiket **döndüren** Etiketler gibi başka Etiketler belirtmemelisiniz.
+Yorum, belge hazırlığı sırasında XML olarak kodlanır, bu nedenle, ve gibi karakterlerin kaçış olmaması `<` `>` `&` gerekir. Açıkça bir Özet etiketi belirtmezseniz, **param** veya etiket **döndüren** Etiketler gibi başka Etiketler belirtmemelisiniz.
 
 Aşağıdaki örnek, XML etiketleri olmadan alternatif yöntemi gösterir. Bu örnekte, açıklama içindeki metnin tamamı bir Özet olarak değerlendirilir.
 
@@ -43,7 +43,7 @@ Aşağıdaki örnek, XML etiketleri olmadan alternatif yöntemi gösterir. Bu ö
 
 ## <a name="comments-with-xml-tags"></a>XML etiketleriyle ilgili açıklamalar
 
-Bir yorum gövdesi ile başlıyorsa `<` (normalde `<summary>` ) XML ETIKETLERI kullanılarak XML biçimli bir açıklama gövdesi olarak kabul edilir. Bu ikincisi, kısa bir Özet, ek açıklamalar, her bir parametre ve tür parametresi ve oluşturulan özel durumlar için belgeler ve dönüş değerinin bir açıklaması için ayrı notlar belirlemenizi sağlar.
+Bir yorum gövdesi ile başlıyorsa `<` (normalde `<summary>` ), XML ETIKETLERI kullanılarak XML biçimli bir açıklama gövdesi olarak kabul edilir. Bu ikincisi, kısa bir Özet, ek açıklamalar, her bir parametre ve tür parametresi ve oluşturulan özel durumlar için belgeler ve dönüş değerinin bir açıklaması için ayrı notlar belirlemenizi sağlar.
 
 Aşağıda, bir imza dosyasındaki tipik bir XML belgesi yorumu verilmiştir:
 
@@ -105,7 +105,7 @@ C# ve diğer .NET dillerinde XML belgelerinin bazı özellikleri C# ' de destekl
 
 - F # ' da, çapraz başvuruların karşılık gelen sembolün tam XML imzasını kullanması gerekir, örneğin `cref="T:System.Console"` .
   Gibi basit C# stili çapraz başvurular `cref="Console"` ayrıntılı, tam XML imzalarına değildir ve bu öğeler F # derleyicisi tarafından denetlenmez. Bazı belge araçları, sonraki işleme tarafından bu çapraz başvuruların kullanılmasına izin verebilir, ancak tam imzaların kullanılması gerekir.
-  
+
 - Etiketler `<include>` , `<inheritdoc>` F # derleyicisi tarafından desteklenmez. Kullanıldıklarında hata verilmez, ancak oluşturulan belgeleri etkilemeden yalnızca oluşturulan belgeler dosyasına kopyalanırlar.
 
 - Kullanıldığında bile, çapraz başvurular F # derleyicisi tarafından denetlenmez `-warnon:3390` .

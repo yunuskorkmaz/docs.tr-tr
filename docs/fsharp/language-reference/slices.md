@@ -1,25 +1,25 @@
 ---
 title: Dilimler
 description: 'Mevcut F # veri türleri için dilimleri kullanmayı ve diğer veri türleri için kendi dilimlerinizi nasıl tanımlayacağınızı öğrenin.'
-ms.date: 12/23/2019
-ms.openlocfilehash: a3920ad9e1b205b506aaee92c4606bcebf94feba
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.date: 11/20/2020
+ms.openlocfilehash: 9c072648ed46ae29871f2be5cc64b493f6a9b857
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557085"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098963"
 ---
 # <a name="slices"></a>Dilimler
 
-F # ' da, dilim, `GetSlice` tanımında veya kapsam içi [tür uzantısında](type-extensions.md)yöntemi olan herhangi bir veri türünün bir alt kümesidir. Bu en yaygın olarak F # dizileri ve listeleri ile kullanılır. Bu makalede, var olan F # türlerinden dilimlerin nasıl yapılacağı ve kendi dilimlerinizi nasıl tanımlayabileceğiniz açıklanır.
+Bu makalede, var olan F # türlerinden dilimlerin nasıl yapılacağı ve kendi dilimlerinizi nasıl tanımlayabileceğiniz açıklanır.
 
-Dilimler, [Dizin oluşturuculardan](./members/indexed-properties.md)benzerdir, ancak temel alınan veri yapısından tek bir değer vermek yerine birden çok tane oluşur.
+F # ' da, dilim herhangi bir veri türünün alt kümesidir.  Dilimler, [Dizin oluşturuculardan](./members/indexed-properties.md)benzerdir, ancak temel alınan veri yapısından tek bir değer vermek yerine birden çok tane oluşur. Dilimler, `..` bir veri türünde belirtilen dizinlerin aralığını seçmek için işleç sözdizimini kullanır. Daha fazla bilgi için bkz. [döngü ifadesi başvuru makalesi](./loops-for-in-expression.md).
 
-F # Şu anda Dilimleme dizeleri, listeler, diziler ve 2B diziler için iç destek içerir.
+F # Şu anda Dilimleme dizeleri, listeler, diziler ve çok boyutlu (2B, 3B, 4D) diziler için iç destek içerir. Dilimleme en yaygın olarak F # dizileri ve listeleriyle kullanılır. `GetSlice`Tür tanımınızda veya kapsam içi bir [tür uzantısında](type-extensions.md)yöntemi kullanarak özel veri türlerinizi Dilimleme ekleyebilirsiniz.
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a>F # listeleri ve dizileri ile temel Dilimleme
+## <a name="slicing-f-lists-and-arrays"></a>F # listelerini ve dizilerini Dilimleme
 
-Dilimlenmiş en yaygın veri türleri, F # listeleri ve dizilerdir. Aşağıdaki örnek, listenin nasıl yapılacağını gösterir:
+Dilimlenmiş en yaygın veri türleri, F # listeleri ve dizilerdir.  Aşağıdaki örnek, listelerin nasıl dilimleyeceğinizi göstermektedir:
 
 ```fsharp
 // Generate a list of 100 integers
@@ -89,8 +89,6 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-F # Çekirdek Kitaplığı Şu anda `GetSlice` 3B diziler için tanımlamaz. 3B dizilerini veya daha fazla boyutun diğer dizilerini dilimlemek isterseniz, `GetSlice` üyeyi kendiniz tanımlayın.
-
 ## <a name="defining-slices-for-other-data-structures"></a>Diğer veri yapıları için dilimleri tanımlama
 
 F # Çekirdek Kitaplığı, sınırlı bir tür kümesi için dilimleri tanımlar. Daha fazla veri türü için dilimleri tanımlamak isterseniz, tür tanımının kendisinde veya bir tür uzantısında bunu yapabilirsiniz.
@@ -151,9 +149,9 @@ printfn "%A" xs.[2..5] // Includes the 5th index
 
 ## <a name="built-in-f-empty-slices"></a>Yerleşik F # boş dilimler
 
-Sözdizimi mevcut olmayan bir dilim oluşturamazsa, F # listeleri, diziler, sıralar, dizeler, 2B diziler, 3B diziler ve 4D dizileri hepsi boş bir dilim oluşturur.
+F # listeleri, diziler, sıralar, dizeler, çok boyutlu (2B, 3B, 4D) diziler, sözdizimi mevcut olmayan bir dilim üretemedi boş bir dilim üretir.
 
-Aşağıdaki topluluklara bir göz atın:
+Aşağıdaki örneği inceleyin:
 
 ```fsharp
 let l = [ 1..10 ]
@@ -165,7 +163,8 @@ let emptyArray = a.[-2..(-1)]
 let emptyString = s.[-2..(-1)]
 ```
 
-C# geliştiricileri, bunları boş bir dilim oluşturmak yerine bir özel durum oluşturması için bekleyebilir. Bu, boş koleksiyonların F # ' ta bir olgusuna göre belirtilmiş bir tasarım karardır. Boş bir F # listesi, başka bir F # listesiyle birleştirilebilir, var olan bir dizeye boş bir dize eklenebilir ve bu şekilde devam eder. Bu, parametre olarak geçirilen değerlere göre dilimler almak ve boş bir koleksiyon üreterek, F # kodunun kompozisyonu ile uyumlu olacak şekilde dilimlerden yararlanmak için ortak olabilir.
+> [!IMPORTANT]
+> C# geliştiricileri, bunları boş bir dilim oluşturmak yerine bir özel durum oluşturması için bekleyebilir. Bu, boş koleksiyonların F # ' ta bir olgusuna göre belirtilmiş bir tasarım karardır. Boş bir F # listesi, başka bir F # listesiyle birleştirilebilir, var olan bir dizeye boş bir dize eklenebilir ve bu şekilde devam eder. Parametre olarak geçirilen değerlere bağlı olarak dilimleri almak ve boş bir koleksiyon, F # kodunun kompozisyonu ile uyumlu hale getirerek sınır dışı > dayanıklı olması çok yaygın olabilir.
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays"></a>3B ve 4D dizileri için sabit Dizin dilimleri
 
@@ -174,12 +173,14 @@ F # 3D ve 4D dizileri için, belirli bir dizini "düzeltir" ve diğer boyutları
 Bunu göstermek için aşağıdaki 3B diziyi göz önünde bulundurun:
 
 *z = 0*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 0 | 1 |
 | **1** | 2 | 3 |
 
 *z = 1*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 4 | 5 |
@@ -203,7 +204,7 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
-Son satır, `y` `z` 3B dizisinin ve bunların özetini düzeltir ve `x` matriste karşılık gelen değerleri geri alır.
+Son satır `y` `z` 3B dizisinin ve dizinlerini düzeltir ve `x` matriste karşılık gelen değerleri geri alır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
