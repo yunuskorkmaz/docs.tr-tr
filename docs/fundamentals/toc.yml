@@ -414,6 +414,8 @@ items:
                 href: ../core/diagnostics/dotnet-sos.md
           - name: .NET Core tanılama öğreticileri
             items:
+              - name: PerfCollect ile Linux’ta performans izlemesi toplama
+                href: ../core/diagnostics/trace-perfcollect-lttng.md
               - name: EventCounters ile performans ölçümlerini alma
                 href: ../core/diagnostics/event-counter-perf.md
               - name: Bellek sızıntısında hata ayıklama

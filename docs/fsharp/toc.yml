@@ -37,8 +37,6 @@
           href: tutorials/type-providers/type-provider-security.md
         - name: Tür Sağlayıcıları Sorunlarını Giderme
           href: tutorials/type-providers/troubleshooting-type-providers.md
-    - name: F# Etkileşimli
-      href: tutorials/fsharp-interactive/index.md
 - name: F# yenilikleri
   items:
     - name: F# 5.0
@@ -266,6 +264,10 @@
       href: language-reference/verbose-syntax.md
     - name: Derleyici hataları ve uyarıları
       href: language-reference/compiler-messages/index.md
+- name: F# Araçları
+  items:
+    - name: F# Etkileşimli
+      href: tools/fsharp-interactive/index.md
 - name: F# stil kılavuzu
   href: style-guide/index.md
   items:
