@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-ms.openlocfilehash: f840438e175790a2b4c97302963b910f98dffb7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b7c10e82aca2b2ece7ea4d7209c1f3c9a456434
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176571"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670413"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit Metodu
-Önbelleğe alınmış derleme başvuruyu belleğe adazıyor.  
+
+Önbelleğe alınmış derleme başvurusunu belleğe kaydeder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Commit (  
@@ -35,18 +36,20 @@ HRESULT Commit (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwFlags`  
- [içinde] Fusion.idl'de tanımlanan bayraklar.  
+ 'ndaki Fusion. IDL içinde tanımlanan bayraklar.  
   
  `pulDisposition`  
- [çıkış, isteğe bağlı] İşlemin sonucunu gösteren bir değer.  
+ [Out, isteğe bağlı] İşlemin sonucunu gösteren bir değer.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Fusion.h  
+ **Üst bilgi:** Fusion. h  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

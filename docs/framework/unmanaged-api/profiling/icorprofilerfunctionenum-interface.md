@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 0a1d4a38-cd0b-4231-91df-13646218ae72
 topic_type:
 - apiref
-ms.openlocfilehash: b69afa7676ad174725f13c1113ff3bd9972995f8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 84c3b504dff8a04172dde903c1681c9f3fb2fcd2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503087"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669243"
 ---
 # <a name="icorprofilerfunctionenum-interface"></a>ICorProfilerFunctionEnum Arabirimi
+
 Ortak dil çalışma zamanındaki bir işlevler koleksiyonunu sırayla yinelemek için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[Clone Yöntemi](icorprofilerfunctionenum-clone-method.md)|Bu arabirimin kopyasına bir arabirim işaretçisi alır `ICorProfilerFunctionEnum` .|  
 |[GetCount Yöntemi](icorprofilerfunctionenum-getcount-method.md)|Uygulama tarafından yüklenen veya profil oluşturucu tarafından zorla yüklenen işlevlerin sayısını alır.|  
@@ -35,11 +36,13 @@ Ortak dil çalışma zamanındaki bir işlevler koleksiyonunu sırayla yinelemek
 |[Skip Yöntemi](icorprofilerfunctionenum-skip-method.md)|Belirlenen sayıda öğe atlanabilmesi için Numaralandırıcının imlecini geçerli konumundan ilerletir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ICorProfilerFunctionEnum`Arabirim bir Numaralandırıcı. Bir dizinin alıcısından alıcı için uygun bir hızda öğe çekmesini sağlar. Diğer bir deyişle, alıcı, dizi öğelerinin akışını açıkça denetleyebilir ve böylece büyük dizileri Yöntem parametreleri olarak geçirme ile ilişkili sorunlardan kaçınarak.  
   
- `ICorProfilerFunctionEnum`zaten JıT olarak derlenen işlevlerin üzerine numaralandırılır, ancak Ngen. exe ile oluşturulan yerel görüntülerden yüklenen işlevleri içermez.  
+ `ICorProfilerFunctionEnum` daha önce JıT olarak derlenen işlevlerin üzerine numaralandırılır, ancak Ngen.exe ile oluşturulan yerel görüntülerden yüklenen işlevleri içermez.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

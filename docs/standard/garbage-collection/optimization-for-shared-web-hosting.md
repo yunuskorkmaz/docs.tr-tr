@@ -6,14 +6,15 @@ helpviewer_keywords:
 - garbage collection, optimizing
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
-ms.openlocfilehash: 6398c6749028827e5e3ee79a5511ac0879facbef
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: abab4ac451a70fbc81ac6d7c9da6f8d0123287a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824473"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669035"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Paylaşılan Web Barındırma için İyileştirme
+
 Birkaç küçük Web sitesini barındırarak paylaşılan bir sunucunun yöneticisiyseniz, `gcTrimCommitOnLowMemory` `runtime` .net dizinindeki Aspnet.config dosyasındaki düğümüne aşağıdaki ayarı ekleyerek performansı iyileştirir ve site kapasitesini artırabilirsiniz:  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
@@ -28,6 +29,7 @@ Birkaç küçük Web sitesini barındırarak paylaşılan bir sunucunun yönetic
  Koşulların izin vermesi durumunda çöp toplayıcı, `gcTrimCommitOnLowMemory` ayarın geçerli uygulamayı ve yok saymasını sağlamamasına karar verebilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML parçası, ayarı nasıl etkinleştireceğinizi gösterir `gcTrimCommitOnLowMemory` . Üç nokta, düğümde yer alan diğer ayarları gösterir `runtime` .  
   
 ```xml  

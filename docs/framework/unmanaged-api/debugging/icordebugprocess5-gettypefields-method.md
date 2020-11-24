@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: a2c7f7b722abac6acf71d3b64276862441695a5f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e4eba37487ca2ee0a88caf5a59f86949a6521e40
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212795"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670946"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields Metodu
+
 Bir türe ait alanlar hakkında bilgi sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetTypeFields(  
@@ -37,6 +38,7 @@ HRESULT GetTypeFields(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `id`  
  'ndaki Alan bilgilerinin alındığı türün tanımlayıcısı.  
   
@@ -50,9 +52,11 @@ HRESULT GetTypeFields(
  dışı İçinde bulunan [COR_FIELD](cor-field-structure.md) nesne sayısı için bir işaretçi `fields` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `celt`Alan bilgilerinin doldurmak için kullandığı alan sayısını belirten parametresi, `fields` alanın değerine karşılık gelmelidir `COR_TYPE_LAYOUT::numFields` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

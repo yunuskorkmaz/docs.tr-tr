@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-ms.openlocfilehash: 9386c77cc98df17d797d5886e1603ffc4824b6dc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 22ab29f8a204a4b27dafdefcd3652cc3dcf9769c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205232"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671141"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap Yöntemi
+
 Yönetilen yığındaki nesneler için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumerateHeap(  
@@ -34,15 +35,18 @@ HRESULT EnumerateHeap(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppObject`  
  dışı Yönetilen yığında bulunan nesneler için bir Numaralandırıcı olan [ICorDebugHeapEnum](icordebugheapenum-interface.md) arabirimi nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Yöntemi çağırmadan önce `ICorDebugProcess5::EnumerateHeap` , [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) metodunu çağırmanız ve `areGCStructuresValid` döndürülen [COR_HEAPINFO](cor-heapinfo-structure.md) nesnesinin alanının değerini inceleyerek, atık toplama yığınının geçerli durumunda sıralanabilir olduğundan emin olmanız gerekir. Ayrıca, `ICorDebugProcess5::EnumerateHeap` `E_FAIL` yönetilen yığın için bellekten önce, işlemin kullanım ömrü içinde çok erken bir şekilde iliştirmiş olmanız halinde döndürür.  
   
  [ICorDebugHeapEnum](icordebugheapenum-interface.md) arabirimi nesnesi, [cor_heapobject](cor-heapobject-structure.md) nesneleri Listeletmanızı sağlayan ıcordebugger genum arabiriminden türetilmiş standart bir Numaralandırıcı. Bu yöntem, [ICorDebugHeapEnum](icordebugheapenum-interface.md) toplama nesnesini tüm nesneler hakkında bilgi sağlayan [cor_heapobject](cor-heapobject-structure.md) örneklerle doldurur. Koleksiyon, herhangi bir nesne tarafından kök olmayan ancak henüz atık toplayıcı tarafından toplanmamış nesneler hakkında bilgi sağlayan [cor_heapobject](cor-heapobject-structure.md) örnekleri de içerebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

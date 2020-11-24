@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4837d398-16a1-4e32-902c-022cd1aad3ca
 topic_type:
 - apiref
-ms.openlocfilehash: ea352b189d65e0be6a2bbc81c19a03d1edd8143d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8e0981415c03120cc30e6349daced51e79216938
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554807"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669971"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime Yöntemi
+
 Denetimin ortak dil çalışma zamanını (CLR) terk eden ve sırasıyla yönetilen koddan çağrılan yönetilmeyen bir işlev girerek konağa bildirir.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,7 +34,7 @@ HRESULT ReverseLeaveRuntime ();
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|`ReverseLeaveRuntime` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
@@ -44,9 +45,11 @@ HRESULT ReverseLeaveRuntime ();
 |E_OUTOFMEMORY|İstenen kaynak ayırmayı tamamlamaya yetecek miktarda bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR, `ReverseLeaveRuntime` ana bilgisayarı şu anda yürütülmekte olan görevin, platform Invoke aracılığıyla yönetilen koddan çağrılan yönetilmeyen bir işleve bir denetim döndüğünü bilgilendirmek için çağırır. Her çağrısı, `ReverseLeaveRuntime` bir [Smarenterruntime](ihosttaskmanager-reverseenterruntime-method.md)öğesine karşılık gelen çağrısıyla eşleşir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
