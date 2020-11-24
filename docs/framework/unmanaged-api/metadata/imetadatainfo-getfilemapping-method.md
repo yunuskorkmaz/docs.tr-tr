@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 5ef5d9ae3da4dff13a461162f0ba3466d3d8192c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8823f3cc016072d3f20100c29532459da5e97492
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501267"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682397"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping Yöntemi
+
 Eşlenen dosyanın bellek bölgesini ve eşleme türünü alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT GetFileMapping (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppvData`  
  dışı Eşlenen dosyanın başlangıcına yönelik bir işaretçi.  
   
@@ -47,13 +49,14 @@ HRESULT GetFileMapping (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
 |`S_OK`|Tüm çıkışlar doldurulur.|  
 |`E_INVALIDARG`|NULL bir bağımsız değişken değeri olarak geçirildi.|  
 |`COR_E_NOTSUPPORTED`|CLR uygulama bellek bölgesi hakkında bilgi sağlayamıyor. Bu durum aşağıdaki nedenlerden kaynaklanabilir:<br /><br /> -Meta veri kapsamı `ofWrite` veya `ofCopyMemory` bayrağıyla açıldı.<br />-Meta veri kapsamı bayrak olmadan açıldı `ofReadOnly` .<br />-Dosyanın yalnızca meta veri bölümünü açmak için [ımetadatadağıtıcı:: OpenScopeOnMemory](imetadatadispenser-openscopeonmemory-method.md) yöntemi kullanıldı.<br />-Dosya taşınabilir bir çalıştırılabilir (PE) dosyası değil. **Note:**  Bu koşullar CLR uygulamasına Bağımlıdır ve CLR 'nin gelecek sürümlerinde zayıflatılmış olma olasılığı yüksektir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  ' A işaret eden bellek `ppvData` yalnızca temeldeki meta veri kapsamı açık olduğu sürece geçerlidir.  
   
  Bu yöntemin çalışması için, [ımetadatadağıtıcı:: OpenScope](imetadatadispenser-openscope-method.md) metodunu çağırarak, disk üzerindeki bir dosyanın meta verilerini belleğe eşlediğinizde, bayrağını belirtmeniz gerekir `ofReadOnly` ve `ofWrite` veya bayrağını belirtmemelidir `ofCopyMemory` .  
@@ -63,15 +66,16 @@ HRESULT GetFileMapping (
  Üç parametreden herhangi biri için NULL geçirme desteklenmez. Yöntemi döndürülür `E_INVALIDARG` ve çıktıların hiçbiri doldurulmaz. Eşleme türü yok sayılıyor veya bölgenin boyutu olağan dışı program sonlandırmasına neden olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [IMetaDataInfo Arabirimi](imetadatainfo-interface.md)
-- [CorFileMapping Sabit Listesi](corfilemapping-enumeration.md)
+- [CorFileMapping Numaralandırması](corfilemapping-enumeration.md)

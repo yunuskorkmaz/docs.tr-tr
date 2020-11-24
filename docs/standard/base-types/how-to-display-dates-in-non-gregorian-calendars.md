@@ -10,14 +10,15 @@ helpviewer_keywords:
 - calendars [.NET], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 6263ac2b6ce18399fa4fa56c9e2ab662a1a367b9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e8d628f3e15b080b4a5509726ece9da26523269
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820572"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681399"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme
+
 <xref:System.DateTime>Ve <xref:System.DateTimeOffset> türleri varsayılan takvim olarak Gregoryen takvimi kullanır. Bu, bir tarih ve saat değerinin yönteminin, bu tarih ve saat `ToString` başka bir takvim kullanılarak oluşturulmuş olsa bile, Gregoryen takvimdeki tarih ve saatin dize gösterimini gösterdiği anlamına gelir. Bu, Farsça takvimi ile bir tarih ve saat değeri oluşturmak için iki farklı yol kullanan aşağıdaki örnekte gösterilmiştir, ancak yine de bu tarih ve saat değerlerini, yöntemi çağırdığında Gregoryen takviminde görüntüler <xref:System.DateTime.ToString%2A> . Bu örnek, belirli bir takvimdeki tarihi görüntülemek için yaygın olarak kullanılan iki ancak yanlış tekniği yansıtır.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -63,6 +64,7 @@ ms.locfileid: "94820572"
     - <xref:System.Globalization.Calendar.GetMilliseconds%2A> , milisaniye cinsinden uygun takvimdeki milisaniyeyi görüntüler.  
   
 ## <a name="example"></a>Örnek  
+
  Örnek iki farklı takvimi kullanarak bir tarih görüntüler. Bu, AR-JO kültürü için varsayılan takvim olarak Hicri takvimini tanımladıktan sonra tarihi görüntüler ve SK-IR kültürüne göre isteğe bağlı bir takvim olarak desteklenmeyen Farsça takvimini kullanarak tarihi görüntüler.  
   
  [!code-csharp[Formatting.HowTo.Calendar#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#2)]

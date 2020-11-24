@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-ms.openlocfilehash: fc406f6e87e5b2be48c6fe7d5fc988774ac5cd11
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 967f8f25e240f484ae86852c740be12cd3a6409e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379986"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681827"
 ---
 # <a name="icordebugtypegetbase-method"></a>ICorDebugType::GetBase Yöntemi
+
 Bir ICorDebugType öğesine, varsa, bu tür tarafından temsil edilen türün temel türünü temsil eden bir arabirim işaretçisi alır `ICorDebugType` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetBase (  
@@ -34,13 +35,16 @@ HRESULT GetBase (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pBase`  
- dışı `ICorDebugType`Temel türü temsil eden nesnenin adresine yönelik bir işaretçi.  
+ dışı `ICorDebugType` Temel türü temsil eden nesnenin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir türün temel türünü aramak, bir nesnenin veya onun üst sınıflarının tüm alanlarını yazdırmak gibi yaygın hata ayıklayıcı işlevselliği uygulamak için yararlıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

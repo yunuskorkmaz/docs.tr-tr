@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-ms.openlocfilehash: 522e992e6d7e9a64f7590bbec0e9106e0e1f8f47
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cb1e0f2bc597b48496dc362c9d7a364421c68a87
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212145"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681853"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription Metodu
+
 [ICorDebugMDA](icordebugmda-interface.md)tarafından temsil edilen yönetilen hata ayıklama Yardımcısı 'NıN (MDA) açıklamasını içeren bir dize alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetDescription (  
@@ -37,6 +38,7 @@ HRESULT GetDescription (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cchName`  
  'ndaki Açıklamayı depolayacak dize arabelleğinin boyutu.  
   
@@ -47,9 +49,11 @@ HRESULT GetDescription (
  dışı MDA öğesinin açıklamasını içeren bir dize arabelleği.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Dize uzunluğu sıfır olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

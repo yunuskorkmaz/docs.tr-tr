@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: b9fb1c03-417f-41d4-aed4-02cb4ade8def
 topic_type:
 - apiref
-ms.openlocfilehash: 0ea584bfff4340e5e9635d6c31e177e88765b582
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e86074031b8fc2c82636e7aef2177eaf04a9db14
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500877"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682373"
 ---
 # <a name="cor_prf_gc_root_kind-enumeration"></a>COR_PRF_GC_ROOT_KIND Numaralandırması
+
 [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md) geri çağırması tarafından sunulan çöp toplama kökünün türünü gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -37,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`COR_PRF_GC_ROOT_STACK`|Kök, yığındaki bir değişkendir.|  
 |`COR_PRF_GC_ROOT_FINALIZER`|Kök, Sonlandırıcı sırasındaki bir giriştir.|  
@@ -45,6 +46,7 @@ typedef enum {
 |`COR_PRF_GC_ROOT_OTHER`|Kök türü belirtilmemiş.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
@@ -55,4 +57,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)
+- [Profil Oluşturma Numaralandırmaları](profiling-enumerations.md)

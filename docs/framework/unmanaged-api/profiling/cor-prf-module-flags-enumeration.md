@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: 12e7faa8d9fee7698de9d9734f522d818f225c84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7d9e187d4aede772b7a002359cd3bdd350aaec77
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500825"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682152"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>COR_PRF_MODULE_FLAGS Numaralandırması
+
 Modülün özelliklerini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum  
@@ -41,10 +42,10 @@ typedef enum
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |COR_PRF_MODULE_DISK|Modül diskten yüklendi.|  
-|COR_PRF_MODULE_NGEN|Modül yerel görüntü Oluşturucu (Ngen. exe) tarafından oluşturuldu.|  
+|COR_PRF_MODULE_NGEN|Modül yerel görüntü Oluşturucu (Ngen.exe) tarafından oluşturuldu.|  
 |COR_PRF_MODULE_DYNAMIC|Modül, ad alanındaki metotlar tarafından oluşturulmuştur <xref:System.Reflection.Emit?displayProperty=nameWithType> .|  
 |COR_PRF_MODULE_COLLECTIBLE|Modülün yaşam süresi çöp toplayıcı tarafından yönetiliyor.|  
 |COR_PRF_MODULE_RESOURCE|Modül meta veri içermiyor ve kesinlikle kaynak olarak kullanılır. Bu bitin yönetilen eşdeğeri <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> yöntemidir.|  
@@ -52,9 +53,11 @@ typedef enum
 |COR_PRF_MODULE_WINDOWS_RUNTIME|Windows Çalışma Zamanı içerik türü bayrağı, Bu modülün derlemesi için meta verilerde ayarlanır. Tüm Windows meta veri (. winmd) modülleri için bu durum budur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  COR_PRF_MODULE_FLAGS bitler, `pdwModuleFlags` [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) yönteminin çıkış parametresinde profil oluşturucuya döndürülür. İki veya daha fazla bayrak için bazı birleşimler olasıdır, ancak tüm birleşimler mümkün değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
@@ -65,4 +68,4 @@ typedef enum
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)
+- [Profil Oluşturma Numaralandırmaları](profiling-enumerations.md)

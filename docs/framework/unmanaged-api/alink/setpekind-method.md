@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: 5a8442b1f0869e1592a05dfeeb0f5e6d583f3ea8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be8a11cbf70e2c6f19ace67648b124515c1fb3c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179384"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680046"
 ---
 # <a name="setpekind-method"></a>SetPEKind Yöntemi
-Makineye özgü veya makineye özgü taşınabilir çalıştırılabilir türünü belirler.  
+
+Taşınabilir yürütülebilir türü, makineye özgü veya makine belirsiz olarak belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetPEKind(  
@@ -36,27 +37,30 @@ HRESULT SetPEKind(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `AssemblyID`  
- Derlemenin kimliği.  
+ Derlemenin KIMLIĞI.  
   
  `FileToken`  
- PE türünün ayarlanabilmek için dosya belirteci. Bağlanmamış bir `AssemblyID` ağ modül belirtmezise NULL olabilir.  
+ PE türü ayarlanacak dosyanın belirteci. `AssemblyID`İlişkisiz bir netmodule BELIRTMEZSE null olabilir.  
   
  `dwPEKind`  
- [CorPEKind Numaralandırma](../metadata/corpekind-enumeration.md)da belirtildiği gibi PE türü.  
+ [CorPEKind numaralandırması](../metadata/corpekind-enumeration.md)tarafından BELIRTILDIĞI gibi PE türü.  
   
  `dwMachine`  
- Hedef makine mimarisi, NT üstbilgisinde belirtildiği gibi.  
+ NT üstbilgisinde gösterildiği gibi hedef makine mimarisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Alink.h gerektirir.  
+
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetPEKind Metodu](../metadata/imetadataimport2-getpekind-method.md)
+- [GetPEKind Yöntemi](../metadata/imetadataimport2-getpekind-method.md)
 - [IALink2 Arabirimi](ialink2-interface.md)
 - [IALink Arabirimi](ialink-interface.md)
 - [ALink API](index.md)

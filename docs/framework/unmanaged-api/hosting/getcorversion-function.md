@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2f09cd37-bf3a-4cc5-87b0-adc42a7eed31
 topic_type:
 - apiref
-ms.openlocfilehash: 23d68e8e4bbd87779e3b49f0c40f5a5ab9f5124f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e7ef3f300c8cfa0c275d15913e171abe09385eea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617223"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681216"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion İşlevi
+
 Geçerli işlemde çalışan ortak dil çalışma zamanının (CLR) sürüm numarasını döndürür.  
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
@@ -38,6 +39,7 @@ HRESULT GetCORVersion (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbuffer`  
  CLR 'nin şu anda işleme yüklenmiş çalışma zamanının sürümünü belirten bir dize döndürdüğü bir arabelleğin işaretçisi. Döndürülen dize [CorBindToRuntimeEx](corbindtoruntimeex-function.md)öğesine geçirilen dizelerle aynı formu alır, örneğin, "v 1.0.1216". Çalışma zamanı işleme henüz yüklenmemişse, işlev, bilgisayarda yüklü olan çalışma zamanının en son sürümü için uygun dizin bilgilerini döndürür.  
   
@@ -48,11 +50,12 @@ HRESULT GetCORVersion (
  Aslında ' de döndürülen karakter sayısına yönelik bir işaretçi `pbuffer` . `pbuffer`Null işaretçisiyse, çalışma zamanı E_POINTER döndürür. Karakter sayısının uzunluğu daha büyükse `pbuffer` , çalışma zamanı ERROR_INSUFFICIENT_BUFFER döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kitaplık:** MSCorEE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

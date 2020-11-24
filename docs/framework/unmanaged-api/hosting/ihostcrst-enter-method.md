@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 100dd7eb-7053-4295-9bb3-32ba47f6ec79
 topic_type:
 - apiref
-ms.openlocfilehash: 79afaac4dce1c4baa9802d81af90c425f5de7a08
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: a5c2646d7c9dbf8a7aea4a7fb9bd0a6b8c1d5d66
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804916"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680560"
 ---
 # <a name="ihostcrstenter-method"></a>IHostCrst::Enter Yöntemi
+
 Geçerli [IHostCrst](ihostcrst-interface.md) örneği tarafından temsil edilen kritik bölüme girer.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT Enter (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `option`  
  'ndaki [WAIT_OPTION](wait-option-enumeration.md) değerlerinden biri, işlem engelliyorsa konağın yapması gereken eylemi belirtir.  
   
@@ -41,7 +43,7 @@ HRESULT Enter (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Enter`başarıyla döndürüldü.|  
+|S_OK|`Enter` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -49,17 +51,19 @@ HRESULT Enter (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Enter`Win32 işlevini yansıtır `EnterCriticalSection` .  
+
+ `Enter` Win32 işlevini yansıtır `EnterCriticalSection` .  
   
 > [!NOTE]
 > Bu yöntem, kritik bölüm girilene kadar döndürmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

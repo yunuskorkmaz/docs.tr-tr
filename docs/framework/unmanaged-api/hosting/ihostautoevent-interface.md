@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-ms.openlocfilehash: a24939ac0b0808546ef3615fae4909c6c3cf8a2e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 6893b019c7e86d3f359cf64752d30f7896203786
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804992"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680878"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent Arabirimi
+
 Ana bilgisayarın otomatik sıfırlama olayı uygulamasının bir gösterimini sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -32,11 +33,12 @@ Ana bilgisayarın otomatik sıfırlama olayı uygulamasının bir gösterimini s
 |[Wait Yöntemi](ihostautoevent-wait-method.md)|Geçerli örneğin, `IHostAutoEvent` olaya ait olana veya belirli bir süre geçtikten sonra beklenmesine neden olur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

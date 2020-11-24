@@ -2,12 +2,12 @@
 title: Windows Kapsayıcıları ayarlamak için bir DockerFile içinde Windows PowerShell komutları kullanma (Docker standardına göre)
 description: Windows kapsayıcılarında Docker ile çalışırken PowerShell 'in nasıl kullanılacağını öğrenin
 ms.date: 08/06/2020
-ms.openlocfilehash: 6096e4cbad4fb37b485d595c650dc10dc5ed5a22
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: d65538c821a848d83915e715ee3a02990b40e836
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434817"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681255"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>Windows Kapsayıcıları ayarlamak için bir DockerFile içinde Windows PowerShell komutları kullanma (Docker standardına göre)
 
@@ -24,7 +24,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 Bu durumda, Windows PowerShell 'i kullanarak Windows Server çekirdek temel görüntüsünü ve IIS 'yi de yüklersiniz.
 
-Benzer şekilde, burada gösterildiği gibi geleneksel ASP.NET 4. x ve .NET 4,6 veya diğer Windows yazılımları gibi ek bileşenleri ayarlamak için Windows PowerShell komutlarını da kullanabilirsiniz:
+Benzer şekilde, burada gösterildiği gibi geleneksel ASP.NET 4. x ve .NET Framework 4,6 ya da başka bir Windows yazılımı gibi ek bileşenler ayarlamak için Windows PowerShell komutlarını da kullanabilirsiniz:
 
 ```dockerfile
 RUN powershell add-windowsfeature web-asp-net45

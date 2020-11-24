@@ -12,14 +12,15 @@ helpviewer_keywords:
 - dates [.NET], milliseconds
 - milliseconds [.NET]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 333b41fe3d4fa68ce26ab5dbd7d5938dda220b9a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 722334c324f663ba46a3c861885d4221fc566b8d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822119"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681268"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme
+
 <xref:System.DateTime.ToString?displayProperty=nameWithType> gibi varsayılan tarih ve saat biçimlendirme yöntemleri, bir zaman değerinin saatlerini, dakikalarını ve saniyelerini içerir ancak milisaniye bileşenini içermez. Bu konu, biçimlendirilen tarih ve saat dizelerine bir tarihin ve saatin milisaniye bileşeninin nasıl eklendiğini gösterir.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Bir DateTime değerinin milisaniye bileşenini görüntülemek için  
@@ -29,6 +30,7 @@ ms.locfileid: "94822119"
 2. Bir saatin milisaniye bileşeninin dize gösterimini ayıklamak için, tarih ve saat değerinin <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%2A> yöntemini çağırın ve `fff` veya `FFF` özel biçim desenini tek başına veya başka özel biçim tanımlayıcılarıyla birlikte `format` parametresi olarak geçirin.  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, her ikisi de tek başına olan ve daha uzun bir tarih ve saat dizesine eklenen bir <xref:System.DateTime> ve bir <xref:System.DateTimeOffset> değerine ait milisaniye bileşenini konsolda görüntüler.  
   
  [!code-csharp[Formatting.HowTo.Millisecond#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Millisecond/cs/Millisecond.cs#1)]

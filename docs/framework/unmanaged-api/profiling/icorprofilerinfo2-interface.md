@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 91bd49b6-4d12-494f-a8f1-2f251e8c65e3
 topic_type:
 - apiref
-ms.openlocfilehash: 4480fefa51eec2f2751bd71910db87b72a1c32cf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6c146f3deed31601411bef39ab12b52dfec8cd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496736"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681593"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 Arabirimi
+
 Olay izlemeyi ve istek bilgilerini denetlemek için ortak dil çalışma zamanı (CLR) ile iletişim kurmak üzere kod profil oluşturucular kullanan yöntemler sağlar. `ICorProfilerInfo2`Arabirim, [ICorProfilerInfo](icorprofilerinfo-interface.md) arabiriminin bir uzantısıdır. Diğer bir deyişle, .NET Framework sürüm 2,0 ve sonraki sürümlerde desteklenen yeni yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[DoStackSnapshot Yöntemi](icorprofilerinfo2-dostacksnapshot-method.md)|Profil oluşturucuya yönetilen çağrı çerçevelerini raporlamak için belirtilen iş parçacığının yığınını gösterir.|  
 |[EnumModuleFrozenObjects Yöntemi](icorprofilerinfo2-enummodulefrozenobjects-method.md)|Belirtilen modüldeki dondurulmuş nesneler üzerinde yinelemeye izin veren bir Numaralandırıcı alır.|  
@@ -51,6 +52,7 @@ Olay izlemeyi ve istek bilgilerini denetlemek için ortak dil çalışma zamanı
 |[SetEnterLeaveFunctionHooks2 Yöntemi](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)|Yönetilen işlevlerin "Enter", "Leave" ve "cloncall" kancalarında çağrılacak Profil Oluşturucu uygulanmış işlevleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Profil Oluşturucu, `ICorProfilerInfo2` olay izleme ve istek bilgilerini denetlemek üzere clr ile iletişim kurmak için arabirimdeki bir yöntemi çağırır.  
   
  Arabirim yöntemleri, `ICorProfilerInfo2` clr tarafından ücretsiz iş parçacıklı model kullanılarak uygulanır. Her yöntem, başarılı veya başarısız olduğunu göstermek için bir HRESULT döndürür. Olası dönüş kodlarının listesi için CorError. h dosyasına bakın.  
@@ -58,6 +60,7 @@ Olay izlemeyi ve istek bilgilerini denetlemek için ortak dil çalışma zamanı
  CLR, `ICorProfilerInfo2` başlatma sırasında, profil oluşturucunun [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)uygulamasını kullanarak her kod profil oluşturucuya bir arabirim geçirir. Kod Profilcisi daha sonra, `ICorProfilerInfo2` clr denetimi altında yürütülen yönetilen kod hakkında bilgi almak için arabirimin yöntemlerini çağırabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

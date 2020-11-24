@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 4 Performansı
 description: Bu makalede, .NET Framework 4 ' ün bir parçası olan Windows Workflow Foundation ana düzeltmesinin performans özellikleri açıklanmaktadır.
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0a68548a8b5e521fccdb544e318c3091315814f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558348"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682347"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 Performansı
 
@@ -20,7 +20,7 @@ ms.locfileid: "90558348"
 
  [!INCLUDE[wf1](../../../includes/wf1-md.md)].NET Framework 4 ' te tanıtılan sürümü, bu konunun geri kalanı IÇIN WF4 olarak adlandırılacaktır. [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET Framework 3,0 ' de kullanıma sunulmuştur ve .NET Framework 3,5 SP1 aracılığıyla birkaç küçük düzeltme vardı. Workflow Foundation 'ın .NET Framework 3,5 sürümü, bu konunun geri kalanı için WF3 olarak adlandırılacaktır. WF3, WF4 ile yan yana .NET Framework 4 ' te gönderilir. WF3 yapıtları WF4 'e geçirme hakkında daha fazla bilgi için bkz. [Windows Workflow Foundation 4 geçiş kılavuzu](migration-guidance.md).
 
- Windows Communication Foundation (WCF), Microsoft 'un hizmet odaklı uygulamalar oluşturmaya yönelik Birleşik programlama modelidir. İlk olarak, WF3 ile birlikte .NET 3,0 'nin bir parçası olarak sunulmuştur ve artık .NET Framework temel bileşenlerinden biridir.
+ Windows Communication Foundation (WCF), Microsoft 'un hizmet odaklı uygulamalar oluşturmaya yönelik Birleşik programlama modelidir. İlk olarak WF3 ile birlikte .NET Framework 3,0 ' nin bir parçası olarak sunulmuştur ve artık .NET Framework temel bileşenlerinden biridir.
 
  Windows Server AppFabric, IIS üzerinde çalışan Web uygulamaları ve bileşik uygulamalar oluşturmayı, ölçeklendirmenizi ve yönetmeyi kolaylaştıran bir tümleşik teknolojiler kümesidir. Hizmetleri ve iş akışlarını izlemek ve yönetmek için araçlar sağlar. Daha fazla bilgi için bkz. [Windows Server AppFabric 1,0](/previous-versions/appfabric/ff384253(v=azure.10)).
 
@@ -51,7 +51,7 @@ ms.locfileid: "90558348"
  Uygulamalar genellikle g/ç veya dağıtılmış bilgi işlem işlemleri gibi uzun süre çalışan engelleme işlemleri için zaman uyumsuz programlama ile daha iyi performans ve ölçeklenebilirlik sahibi olur. WF4, temel etkinlik türleri aracılığıyla zaman uyumsuz destek sağlar <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity%601> . Çalışma zamanı zaman uyumsuz etkinlikleri yerel olarak anlamıştır ve bu nedenle, zaman uyumsuz çalışma devam ederken örneği kalıcı olmayan bir bölgeye otomatik olarak yerleştirebilir. Özel Etkinlikler, iş akışı Zamanlayıcı iş parçacığını tutmadan zaman uyumsuz çalışma gerçekleştirmek ve paralel çalışabilecek etkinlikleri engellemek için bu türlerden türetilebilir.
 
 ### <a name="messaging"></a>Mesajlaşma
- Başlangıçta WF3, dış olaylar veya Web Hizmetleri etkinleştirmeleri aracılığıyla çok sınırlı mesajlaşma desteğine sahipti. .NET 3,5 ' de, iş akışları WCF istemcileri olarak uygulanabilir veya ve ile WCF hizmeti olarak kullanıma sunulabilir <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity> . WF4 ' de, iş akışı tabanlı mesajlaşma programlama kavramı, WCF mesajlaşma mantığının WF ile sıkı bir şekilde tümleştirilmesine daha da güçleşti.
+ Başlangıçta WF3, dış olaylar veya Web Hizmetleri etkinleştirmeleri aracılığıyla çok sınırlı mesajlaşma desteğine sahipti. .NET Framework 3,5 ' de, iş akışları WCF istemcileri olarak uygulanabilir veya ve ile WCF hizmeti olarak kullanıma sunulabilir <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity> . WF4 ' de, iş akışı tabanlı mesajlaşma programlama kavramı, WCF mesajlaşma mantığının WF ile sıkı bir şekilde tümleştirilmesine daha da güçleşti.
 
  .NET 4 ' te WCF 'de sunulan Birleşik ileti işleme işlem hattı, WF4 Services 'ın WF3 'den önemli ölçüde daha iyi performans ve ölçeklenebilirlik sağlanmasına yardımcı olur. WF4, karmaşık Ileti değişim düzenlerini (MEPs) modelleyebilir daha zengin mesajlaşma programlama desteği de sağlar. Geliştiriciler, serileştirme maliyetlerini ödemeksizin daha iyi performans elde etmek için kolayca programlama veya türsüz hizmet sözleşmeleri elde etmek üzere türü belirlenmiş hizmet sözleşmelerini kullanabilir. WF4 içindeki sınıfı aracılığıyla istemci tarafı kanal önbelleğe alma desteği, <xref:System.ServiceModel.Activities.SendMessageChannelCache> geliştiricilerin en düşük çabayla hızlı uygulamalar oluşturmasına yardımcı olur. Daha fazla bilgi için bkz. [gönderme etkinlikleri Için önbellek paylaşımı düzeylerini değiştirme](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
 
@@ -69,7 +69,7 @@ ms.locfileid: "90558348"
 ### <a name="environment-setup"></a>Ortamı Ayarlama
  ![İş akışı performans ölçümü için ortam kurulumu](./media/performance/performance-test-environment.gif)
 
- Yukarıdaki şekil, bileşen düzeyinde performans ölçümü için kullanılan makine yapılandırmasını gösterir. Tek bir sunucu ve 1 GB/sn 'lik Ethernet ağ arabirimine bağlanmış beş istemci. Kolay ölçümler için sunucu, Windows Server 2008 x86 çalıştıran bir çift proc/dört çekirdekli sunucunun tek bir çekirdeğini kullanacak şekilde yapılandırılmıştır. Sistem CPU kullanımı yaklaşık %100 ' de korunur.
+ Yukarıdaki şekil, bileşen düzeyinde performans ölçümü için kullanılan makine yapılandırmasını gösterir. 1 1-Gbps Ethernet ağ arabirimine bağlı tek bir sunucu ve beş istemci. Kolay ölçümler için sunucu, Windows Server 2008 x86 çalıştıran bir çift proc/dört çekirdekli sunucunun tek bir çekirdeğini kullanacak şekilde yapılandırılmıştır. Sistem CPU kullanımı yaklaşık %100 ' de korunur.
 
 ### <a name="test-details"></a>Test ayrıntıları
  WF3, <xref:System.Workflow.Activities.CodeActivity> büyük olasılıkla BIR WF3 iş akışında kullanılabilen en basit etkinliktir.  Etkinlik, iş akışı Programlayıcısının özel kod koyabileceğiniz arka plan kod içinde bir yöntemi çağırır.  WF4 ' de, aynı işlevselliği sağlayan, WF3 'ye doğrudan analog yoktur <xref:System.Workflow.Activities.CodeActivity> .  <xref:System.Activities.CodeActivity>WF4 IÇINDE WF3 ile ilişkili olmayan bir temel sınıf olduğunu unutmayın <xref:System.Workflow.Activities.CodeActivity> .  İş akışı yazarlarının özel etkinlikler oluşturması ve yalnızca XAML iş akışları oluşturması önerilir.  Aşağıdaki sınamalarda, çağrılan bir etkinlik `Comment` WF4 iş akışlarında boş bir yerde kullanılır <xref:System.Workflow.Activities.CodeActivity> .  Etkinlikteki kod şu `Comment` şekildedir:

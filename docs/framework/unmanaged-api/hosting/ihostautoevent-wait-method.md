@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535d51c5-9112-401b-8c36-85f35d7ee609
 topic_type:
 - apiref
-ms.openlocfilehash: 7baabafc61e14d127ff3f0cdb7453be6f1a2abeb
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: f07958a1a21bb3e93e4ca8202a65407b39188af4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804967"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680787"
 ---
 # <a name="ihostautoeventwait-method"></a>IHostAutoEvent::Wait Yöntemi
+
 Geçerli [IHostAutoEvent](ihostautoevent-interface.md) örneğinin, ait olana veya belirtilen süre geçtikten sonra beklemesini sağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,8 +36,9 @@ HRESULT Wait (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwMilliseconds`  
- 'ndaki `IHostAutoEvent`Hiçbir iş parçacığı veya fiber sahiplik alırsa, geçerli örneğin döndürülmeden önce beklemesi gereken milisaniye sayısı.  
+ 'ndaki `IHostAutoEvent` Hiçbir iş parçacığı veya fiber sahiplik alırsa, geçerli örneğin döndürülmeden önce beklemesi gereken milisaniye sayısı.  
   
  `option`  
  'ndaki Bu işlem engelliyorsa konağın yapması gereken eylemi belirten [WAIT_OPTION](wait-option-enumeration.md) değerlerinden biri.  
@@ -45,7 +47,7 @@ HRESULT Wait (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Wait`başarıyla döndürüldü.|  
+|S_OK|`Wait` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -54,11 +56,12 @@ HRESULT Wait (
 |HOST_E_DEADLOCK|Ana bilgisayar bekleme aralığı sırasında bir kilitlenme algıladı ve kilitlenme kurbanı olarak geçerli örnek tarafından temsil edilen olayı seçti `IHostAutoEvent` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

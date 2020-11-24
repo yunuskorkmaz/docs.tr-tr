@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: dd9cdf3cdda0605d9454fe096be01655e67a0d0a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 86d2e931e6462fb9f6ff5e3cd31b8d3fd188dd5a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169303"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682048"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -53,7 +53,7 @@ Uygulama katmanları, gereksinimlerdeki gelecekteki değişikliklere yanıt olar
 Mantıksal katmanlama, kurumsal yazılım uygulamalarında kod organizasyonunu iyileştirmeye yönelik yaygın bir tekniktir ve kodun katmanlara düzenlenebilmesinin birkaç yolu vardır.
 
 > [!NOTE]
- > _Katmanlar_ , uygulama içindeki mantıksal ayrımı temsil eder. Uygulama mantığının fiziksel olarak ayrı sunuculara veya işlemlere dağıtıldığı olayda, bu ayrı fiziksel dağıtım hedeflerine _Katman_olarak başvurulur. Tek bir katmana dağıtılan N katmanlı bir uygulamanın olması mümkündür ve oldukça yaygındır.
+ > _Katmanlar_ , uygulama içindeki mantıksal ayrımı temsil eder. Uygulama mantığının fiziksel olarak ayrı sunuculara veya işlemlere dağıtıldığı olayda, bu ayrı fiziksel dağıtım hedeflerine _Katman_ olarak başvurulur. Tek bir katmana dağıtılan N katmanlı bir uygulamanın olması mümkündür ve oldukça yaygındır.
 
 ## <a name="traditional-n-layer-architecture-applications"></a>Geleneksel "N katmanlı" mimari uygulamaları
 
@@ -97,7 +97,7 @@ Azure 'da bir Web uygulamasını ölçeklendirmeye yönelik en basit yaklaşım,
 
 ## <a name="clean-architecture"></a>Mimariyi temizle
 
-Bağımlılık Inversion Ilkesini ve etki alanı odaklı tasarım (DDD) ilkelerini izleyen uygulamalar benzer bir mimariye ulaşacak. Bu mimari, yıl boyunca pek çok adla geçmiş. İlk adlardan biri altılık mimariydi ve bağlantı noktaları ve bağdaştırıcılar tarafından izlenir. Daha yakın zamanda, [Çoklu kare mimarisi](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) veya [Temizleme mimarisi](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)olarak alıntı yapılır. İkinci ad, temiz mimari, bu e-kitapta bu mimarinin adı olarak kullanılır.
+Bağımlılık Inversion Ilkesinin yanı sıra Domain-Driven tasarımı (DDD) ilkelerini izleyen uygulamalar benzer bir mimariye ulaşacak. Bu mimari, yıl boyunca pek çok adla geçmiş. İlk adlardan biri altılık mimariydi ve bağlantı noktaları ve bağdaştırıcılar tarafından izlenir. Daha yakın zamanda, [Çoklu kare mimarisi](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) veya [Temizleme mimarisi](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)olarak alıntı yapılır. İkinci ad, temiz mimari, bu e-kitapta bu mimarinin adı olarak kullanılır.
 
 EShopOnWeb Reference uygulaması, kodunu projeler halinde organize eden temizleme mimarisi yaklaşımını kullanır. [Ardalış/Temizleme mimarisi](https://github.com/ardalis/cleanarchitecture) GitHub deposunda kendi ASP.NET Core için başlangıç noktası olarak kullanabileceğiniz bir çözüm şablonu bulabilirsiniz.
 
@@ -175,7 +175,7 @@ ASP.NET Core MVC uygulamasındaki kullanıcı arabirimi katmanı, uygulamanın g
 ##### <a name="ui-layer-types"></a>UI katman türleri
 
 - Denetleyiciler
-- FilTReleri
+- Filtreler
 - Görünümler
 - ViewModel 'lar
 - Başlangıç
@@ -193,7 +193,7 @@ Bu modeli yönetmek için, uygulamayı temsil etmek üzere tek bir kapsayıcı d
 
 ![Şekil 5-13](./media/image5-13.png)
 
-Şekil 5-13 ' de gösterildiği gibi, her bir kapsayıcı içinde birden çok bileşen/kitaplık veya iç katman ekleyebilirsiniz. Ancak, _"bir kapsayıcı tek bir işlem yaptığı ve tek bir işlemde_yaptığı" kapsayıcı ilkesini takip eden tek parçalı desenler bir çakışma olabilir.
+Şekil 5-13 ' de gösterildiği gibi, her bir kapsayıcı içinde birden çok bileşen/kitaplık veya iç katman ekleyebilirsiniz. Ancak, _"bir kapsayıcı tek bir işlem yaptığı ve tek bir işlemde_ yaptığı" kapsayıcı ilkesini takip eden tek parçalı desenler bir çakışma olabilir.
 
 Bu yaklaşımın downi, uygulamanın ne zaman büyüdüğü, ölçeklendirilmesi için de gelir. Uygulamanın tamamı ölçeklenmez, aslında bir sorun değildir. Ancak çoğu durumda, uygulamanın birkaç bölümü ölçeklendirmeyi gerektiren sıkıştırma noktalarınken diğer bileşenler daha az kullanılır.
 
@@ -241,7 +241,7 @@ Son olarak, uygulamayı kapsayıcı iş mantığı ve depolama sunucusu arasınd
 
 `eShopOnWeb`Proje .NET Core üzerinde çalışır. Bu nedenle, Linux tabanlı veya Windows tabanlı kapsayıcılardan çalıştırılabilir. Docker dağıtımı için SQL Server aynı konak türünü kullanmak istediğinizi unutmayın. Linux tabanlı kapsayıcılar daha küçük bir ayak izine izin verir ve tercih edilir.
 
-**Çözüm Gezgini** bir projeye sağ tıklayıp **Add**  >  **Docker desteği**Ekle ' yi seçerek var olan bir uygulamaya Docker desteği eklemek için Visual Studio 2017 veya sonraki bir sürümünü kullanabilirsiniz. Bu, gerekli dosyaları ekler ve projeyi kullanmak için değiştirir. Geçerli `eShopOnWeb` örnekte bu dosyalar zaten var.
+**Çözüm Gezgini** bir projeye sağ tıklayıp **Add**  >  **Docker desteği** Ekle ' yi seçerek var olan bir uygulamaya Docker desteği eklemek için Visual Studio 2017 veya sonraki bir sürümünü kullanabilirsiniz. Bu, gerekli dosyaları ekler ve projeyi kullanmak için değiştirir. Geçerli `eShopOnWeb` örnekte bu dosyalar zaten var.
 
 Çözüm düzeyi dosya, `docker-compose.yml` hangi görüntülerin derlemesinin ve hangi kapsayıcıların başlatılabileceğinize ilişkin bilgiler içerir. Bu dosya `docker-compose` , aynı anda birden çok uygulamayı başlatmak için komutunu kullanmanıza olanak sağlar. Bu durumda, yalnızca Web projesi başlatılıyor. Ayrıca, ayrı bir veritabanı kapsayıcısı gibi bağımlılıkları yapılandırmak için de kullanabilirsiniz.
 
@@ -268,7 +268,7 @@ networks:
 `docker-compose.yml`Dosya, projedeki öğesine başvurur `Dockerfile` `Web` . `Dockerfile`Kullanılacak temel kapsayıcıyı ve uygulamanın nasıl yapılandırılacağını belirtmek için kullanılır. `Web`' `Dockerfile` :
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -278,7 +278,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 

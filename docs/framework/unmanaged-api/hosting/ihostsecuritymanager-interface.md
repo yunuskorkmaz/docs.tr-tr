@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 37f606a67bef79936c81b2a36f12a00d24bd82f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501475"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680540"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager Arabirimi
+
 Şu anda yürütülmekte olan iş parçacığının güvenlik bağlamı üzerinde erişime ve denetime izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetSecurityContext Yöntemi](ihostsecuritymanager-getsecuritycontext-method.md)|Konaktan istenen [IHostSecurityContext](ihostsecuritycontext-interface.md) değerini alır.|  
 |[ImpersonateLoggedOnUser Yöntemi](ihostsecuritymanager-impersonateloggedonuser-method.md)|Geçerli Kullanıcı kimliğinin kimlik bilgileri kullanılarak kodun yürütülmesini ister.|  
@@ -36,7 +37,8 @@ ms.locfileid: "84501475"
 |[SetThreadToken Yöntemi](ihostsecuritymanager-setthreadtoken-method.md)|Yürütülmekte olan iş parçacığı için bir tanıtıcı ayarlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir konak, ortak dil çalışma zamanı (CLR) ve Kullanıcı kodu tarafından iş parçacığı belirteçlerine yönelik tüm kod erişimini denetleyebilir. Ayrıca, tüm güvenlik bağlamı bilgilerinin zaman uyumsuz işlemlere veya kısıtlanmış kod erişimi olan kod noktalarına geçirilmesini de sağlayabilirsiniz. `IHostSecurityContext`CLR için donuk olan bu güvenlik bağlamı bilgilerini kapsüller.  
+
+ Bir konak, ortak dil çalışma zamanı (CLR) ve Kullanıcı kodu tarafından iş parçacığı belirteçlerine yönelik tüm kod erişimini denetleyebilir. Ayrıca, tüm güvenlik bağlamı bilgilerinin zaman uyumsuz işlemlere veya kısıtlanmış kod erişimi olan kod noktalarına geçirilmesini de sağlayabilirsiniz. `IHostSecurityContext` CLR için donuk olan bu güvenlik bağlamı bilgilerini kapsüller.  
   
  CLR yönetilen iş parçacığı bağlamını dahili olarak işler. Aşağıdaki durumlarda işlemi özel olarak sorgular `IHostSecurityManager` :  
   
@@ -49,11 +51,12 @@ ms.locfileid: "84501475"
 - G/ç tamamlama bağlantı noktalarıyla bakım yapılıyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

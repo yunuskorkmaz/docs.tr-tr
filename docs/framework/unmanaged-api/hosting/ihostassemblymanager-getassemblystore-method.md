@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0f74593-9bb1-4a11-8096-e29734b20698
 topic_type:
 - apiref
-ms.openlocfilehash: 587861529c340fad9fd817b904e4d3651b236e8d
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 936ea068f3cc5567a00af5f2bdd5f3d9cd52bc81
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805080"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681190"
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore Yöntemi
+
 Konak tarafından yüklenen derlemelerin listesini temsil eden bir [IHostAssemblyStore](ihostassemblystore-interface.md) için bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetAssemblyStore (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppAssemblyStore`  
  dışı Örnek için bir işlev işaretçisi `IHostAssemblyStore` veya ana bilgisayar uygulamadıysanız null `IHostAssemblyStore` .  
   
@@ -41,7 +43,7 @@ HRESULT GetAssemblyStore (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetAssemblyStore`başarıyla döndürüldü.|  
+|S_OK|`GetAssemblyStore` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -50,17 +52,19 @@ HRESULT GetAssemblyStore (
 |E_NOINTERFACE|Konak, uygulamasının bir uygulamasını sağlamaz `IHostAssemblyStore` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IHostAssemblyStore`bir konağın CLR 'den bağımsız olarak derlemelere ve modüllere bağlanmasına izin veren yöntemler sağlar. Konaklar genellikle derlemelerin dosya sistemi dışındaki biçimlerden yüklenmesine izin vermek için derleme depoları sağlar.  
+
+ `IHostAssemblyStore` bir konağın CLR 'den bağımsız olarak derlemelere ve modüllere bağlanmasına izin veren yöntemler sağlar. Konaklar genellikle derlemelerin dosya sistemi dışındaki biçimlerden yüklenmesine izin vermek için derleme depoları sağlar.  
   
 > [!NOTE]
 > Konak uygulamadıysanız `IHostAssemblyStore` , `GetAssemblyStore` E_NOINTERFACE HRESULT değeri döndürmelidir ve `ppAssemblyStore` null olarak ayarlanmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
