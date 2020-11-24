@@ -15,32 +15,34 @@ helpviewer_keywords:
 ms.assetid: 80046b2e-55b7-40a2-9adf-cf2763ee59c8
 topic_type:
 - apiref
-ms.openlocfilehash: 5e2d5116de09c4b3e1c67991282fc3607d22674f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b5e3656672b68f662368ca77ee84e6fa387a7a7e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503061"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669269"
 ---
-# <a name="icorprofilerfunctionenumreset-method"></a><span data-ttu-id="b796d-102">ICorProfilerFunctionEnum::Reset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b796d-102">ICorProfilerFunctionEnum::Reset Method</span></span>
-<span data-ttu-id="b796d-103">Numaralandırıcının imlecini sıranın başlangıç konumuna taşımaktır.</span><span class="sxs-lookup"><span data-stu-id="b796d-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilerfunctionenumreset-method"></a><span data-ttu-id="eb566-102">ICorProfilerFunctionEnum::Reset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eb566-102">ICorProfilerFunctionEnum::Reset Method</span></span>
+
+<span data-ttu-id="eb566-103">Numaralandırıcının imlecini sıranın başlangıç konumuna taşımaktır.</span><span class="sxs-lookup"><span data-stu-id="eb566-103">Moves the enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b796d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b796d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb566-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="eb566-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b796d-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b796d-105">Requirements</span></span>  
- <span data-ttu-id="b796d-106">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b796d-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="b796d-107">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="b796d-107">**Header:** CorProf.idl, CorProf.h</span></span>  
-  
- <span data-ttu-id="b796d-108">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="b796d-108">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="b796d-109">**.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b796d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b796d-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b796d-110">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="eb566-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="eb566-105">Requirements</span></span>  
 
-- [<span data-ttu-id="b796d-111">ICorProfilerFunctionEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b796d-111">ICorProfilerFunctionEnum Interface</span></span>](icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="b796d-112">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b796d-112">Profiling Interfaces</span></span>](profiling-interfaces.md)
+ <span data-ttu-id="eb566-106">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb566-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="eb566-107">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="eb566-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+  
+ <span data-ttu-id="eb566-108">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="eb566-108">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="eb566-109">**.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb566-109">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="eb566-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eb566-110">See also</span></span>
+
+- [<span data-ttu-id="eb566-111">ICorProfilerFunctionEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="eb566-111">ICorProfilerFunctionEnum Interface</span></span>](icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="eb566-112">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="eb566-112">Profiling Interfaces</span></span>](profiling-interfaces.md)

@@ -15,41 +15,45 @@ helpviewer_keywords:
 ms.assetid: 35bc1188-9767-4141-8038-60ea015b99ac
 topic_type:
 - apiref
-ms.openlocfilehash: afbb007b6293e6e9cff92281a6f5e93b1e7924ec
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e929c74ba0f1f33ddbb28476b3c9e0a512567ac6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502983"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669061"
 ---
-# <a name="icorprofilerinfoendinprocdebugging-method"></a><span data-ttu-id="262d6-102">ICorProfilerInfo::EndInprocDebugging Yöntemi</span><span class="sxs-lookup"><span data-stu-id="262d6-102">ICorProfilerInfo::EndInprocDebugging Method</span></span>
-<span data-ttu-id="262d6-103">İşlem içi hata ayıklama oturumunu kapatır.</span><span class="sxs-lookup"><span data-stu-id="262d6-103">Shuts down an in-process debugging session.</span></span> <span data-ttu-id="262d6-104">Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="262d6-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilerinfoendinprocdebugging-method"></a><span data-ttu-id="07fc8-102">ICorProfilerInfo::EndInprocDebugging Yöntemi</span><span class="sxs-lookup"><span data-stu-id="07fc8-102">ICorProfilerInfo::EndInprocDebugging Method</span></span>
+
+<span data-ttu-id="07fc8-103">İşlem içi hata ayıklama oturumunu kapatır.</span><span class="sxs-lookup"><span data-stu-id="07fc8-103">Shuts down an in-process debugging session.</span></span> <span data-ttu-id="07fc8-104">Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="07fc8-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="262d6-105">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="262d6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07fc8-105">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="07fc8-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EndInprocDebugging(  
     [in]  DWORD dwProfilerContext);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="262d6-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="262d6-106">Parameters</span></span>  
- `dwProfilerContext`  
- <span data-ttu-id="262d6-107">'ndaki Hata ayıklama oturumunu tanımlayan bir değer.</span><span class="sxs-lookup"><span data-stu-id="262d6-107">[in] A value that identifies the debugging session.</span></span> <span data-ttu-id="262d6-108">Bu değer [ICorProfilerInfo:: BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) yönteminde alınan ile aynı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="262d6-108">This value must be the same as that received in the [ICorProfilerInfo::BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) method.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="262d6-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="262d6-109">Remarks</span></span>  
- <span data-ttu-id="262d6-110">[ICorProfilerInfo:: BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) ve `EndInprocDebugging` aynı geri arama yöntemini çağırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="262d6-110">You must call [ICorProfilerInfo::BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) and `EndInprocDebugging` within the same callback method.</span></span>  
-  
- <span data-ttu-id="262d6-111">CLR hata ayıklama Hizmetleri, 1,0 ve 1,1 .NET Framework sürümlerinde sınırlı sayıda işlem hata ayıklamayı destekliyordu.</span><span class="sxs-lookup"><span data-stu-id="262d6-111">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span></span> <span data-ttu-id="262d6-112">İşlem içi hata ayıklama, hata ayıklama API 'sinin İnceleme kısımlarını kullanmak için bir profil oluşturucu etkinleştirdi.</span><span class="sxs-lookup"><span data-stu-id="262d6-112">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="262d6-113">Bununla birlikte, müşteri geri bildirimleri nedeniyle işlem içi hata ayıklama 2,0 sürümündeki .NET Framework kaldırılmıştır ve, profil oluşturma API 'SI ile birlikte daha fazla bir işlev kümesiyle değiştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="262d6-113">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="262d6-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="262d6-114">Requirements</span></span>  
- <span data-ttu-id="262d6-115">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="262d6-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="262d6-116">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="262d6-116">**Header:** CorProf.idl, CorProf.h</span></span>  
-  
- <span data-ttu-id="262d6-117">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="262d6-117">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="262d6-118">**.NET Framework sürümü:** 1,0</span><span class="sxs-lookup"><span data-stu-id="262d6-118">**.NET Framework Version:** 1.0</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="262d6-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="262d6-119">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="07fc8-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="07fc8-106">Parameters</span></span>  
 
-- [<span data-ttu-id="262d6-120">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="262d6-120">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+ `dwProfilerContext`  
+ <span data-ttu-id="07fc8-107">'ndaki Hata ayıklama oturumunu tanımlayan bir değer.</span><span class="sxs-lookup"><span data-stu-id="07fc8-107">[in] A value that identifies the debugging session.</span></span> <span data-ttu-id="07fc8-108">Bu değer [ICorProfilerInfo:: BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) yönteminde alınan ile aynı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="07fc8-108">This value must be the same as that received in the [ICorProfilerInfo::BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) method.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="07fc8-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="07fc8-109">Remarks</span></span>  
+
+ <span data-ttu-id="07fc8-110">[ICorProfilerInfo:: BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) ve `EndInprocDebugging` aynı geri arama yöntemini çağırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="07fc8-110">You must call [ICorProfilerInfo::BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) and `EndInprocDebugging` within the same callback method.</span></span>  
+  
+ <span data-ttu-id="07fc8-111">CLR hata ayıklama Hizmetleri, 1,0 ve 1,1 .NET Framework sürümlerinde sınırlı sayıda işlem hata ayıklamayı destekliyordu.</span><span class="sxs-lookup"><span data-stu-id="07fc8-111">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span></span> <span data-ttu-id="07fc8-112">İşlem içi hata ayıklama, hata ayıklama API 'sinin İnceleme kısımlarını kullanmak için bir profil oluşturucu etkinleştirdi.</span><span class="sxs-lookup"><span data-stu-id="07fc8-112">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="07fc8-113">Bununla birlikte, müşteri geri bildirimleri nedeniyle işlem içi hata ayıklama 2,0 sürümündeki .NET Framework kaldırılmıştır ve, profil oluşturma API 'SI ile birlikte daha fazla bir işlev kümesiyle değiştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="07fc8-113">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="07fc8-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="07fc8-114">Requirements</span></span>  
+
+ <span data-ttu-id="07fc8-115">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07fc8-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="07fc8-116">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="07fc8-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+  
+ <span data-ttu-id="07fc8-117">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="07fc8-117">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="07fc8-118">**.NET Framework sürümü:** 1,0</span><span class="sxs-lookup"><span data-stu-id="07fc8-118">**.NET Framework Version:** 1.0</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="07fc8-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="07fc8-119">See also</span></span>
+
+- [<span data-ttu-id="07fc8-120">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="07fc8-120">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
