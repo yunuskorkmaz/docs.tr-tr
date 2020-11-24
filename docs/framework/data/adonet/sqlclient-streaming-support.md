@@ -2,31 +2,31 @@
 title: SqlClient Akış Desteği
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: a396e3e172c63b0b71b085d4694184c42cc42f3e
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 7ff7feafb0501d5d98a0e692545e6b243c096e10
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609251"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678876"
 ---
-# <a name="sqlclient-streaming-support"></a><span data-ttu-id="f9e71-102">SqlClient Akış Desteği</span><span class="sxs-lookup"><span data-stu-id="f9e71-102">SqlClient Streaming Support</span></span>
+# <a name="sqlclient-streaming-support"></a><span data-ttu-id="e1ad1-102">SqlClient Akış Desteği</span><span class="sxs-lookup"><span data-stu-id="e1ad1-102">SqlClient Streaming Support</span></span>
 
-<span data-ttu-id="f9e71-103">SQL Server ile bir uygulama (.NET Framework 4,5 ' de yeni) arasında akış desteği, sunucuda (belgeler, görüntüler ve medya dosyaları) yapılandırılmamış verileri destekler.</span><span class="sxs-lookup"><span data-stu-id="f9e71-103">Streaming support between SQL Server and an application (new in .NET Framework 4.5) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="f9e71-104">Bir SQL Server veritabanı ikili büyük nesneleri (blob) saklayabilir, ancak Blobların alınması çok fazla bellek kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="f9e71-104">A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>
+<span data-ttu-id="e1ad1-103">SQL Server ile bir uygulama (.NET Framework 4,5 ' de yeni) arasında akış desteği, sunucuda (belgeler, görüntüler ve medya dosyaları) yapılandırılmamış verileri destekler.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-103">Streaming support between SQL Server and an application (new in .NET Framework 4.5) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="e1ad1-104">Bir SQL Server veritabanı ikili büyük nesneleri (blob) saklayabilir, ancak Blobların alınması çok fazla bellek kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-104">A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>
 
-<span data-ttu-id="f9e71-105">SQL Server akış desteği, verileri akışa almak zorunda kalmadan veri akışı yapan uygulamaların yazılmasını kolaylaştırır ve daha az bellek taşması özel durumu oluşmasına neden olur.</span><span class="sxs-lookup"><span data-stu-id="f9e71-105">Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>
+<span data-ttu-id="e1ad1-105">SQL Server akış desteği, verileri akışa almak zorunda kalmadan veri akışı yapan uygulamaların yazılmasını kolaylaştırır ve daha az bellek taşması özel durumu oluşmasına neden olur.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-105">Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>
 
-<span data-ttu-id="f9e71-106">Akış desteği, büyük Blobları göndermek, almak ve işlemek için, özellikle de iş nesnelerinin SQL Azure bağlanan senaryolarda, orta katman uygulamaların daha iyi ölçeklendirilmesine olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="f9e71-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>
+<span data-ttu-id="e1ad1-106">Akış desteği, büyük Blobları göndermek, almak ve işlemek için, özellikle de iş nesnelerinin SQL Azure bağlanan senaryolarda, orta katman uygulamaların daha iyi ölçeklendirilmesine olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="f9e71-107">Bir uygulama `Context Connection` bağlantı dizesi anahtar sözcüğünü de kullanıyorsa, zaman uyumsuz çağrılar desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="f9e71-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
+> <span data-ttu-id="e1ad1-107">Bir uygulama `Context Connection` bağlantı dizesi anahtar sözcüğünü de kullanıyorsa, zaman uyumsuz çağrılar desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
 >
-> <span data-ttu-id="f9e71-108">Akışı desteklemek için eklenen üyeler, sorgulardan verileri almak ve sorguları ve saklı yordamlara parametreleri geçirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f9e71-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="f9e71-109">Akış özelliği temel OLTP ve veri geçiş senaryolarına yöneliktir ve şirket içi ve şirket dışı veri geçişleri ortamları için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="f9e71-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on-premises and off-premises data migrations environments.</span></span>
+> <span data-ttu-id="e1ad1-108">Akışı desteklemek için eklenen üyeler, sorgulardan verileri almak ve sorguları ve saklı yordamlara parametreleri geçirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="e1ad1-109">Akış özelliği temel OLTP ve veri geçiş senaryolarına yöneliktir ve şirket içi ve şirket dışı veri geçişleri ortamları için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on-premises and off-premises data migrations environments.</span></span>
 
-## <a name="streaming-support-from-sql-server"></a><span data-ttu-id="f9e71-110">SQL Server akış desteği</span><span class="sxs-lookup"><span data-stu-id="f9e71-110">Streaming Support from SQL Server</span></span>
+## <a name="streaming-support-from-sql-server"></a><span data-ttu-id="e1ad1-110">SQL Server akış desteği</span><span class="sxs-lookup"><span data-stu-id="e1ad1-110">Streaming Support from SQL Server</span></span>
 
-<span data-ttu-id="f9e71-111">SQL Server akış desteği,, ve <xref:System.Data.Common.DbDataReader> <xref:System.Data.SqlClient.SqlDataReader> <xref:System.IO.Stream> <xref:System.Xml.XmlReader> nesneleri almak ve bunlara yanıt vermek için sınıflarında ve içindeki yeni işlevleri sunar <xref:System.IO.TextReader> .</span><span class="sxs-lookup"><span data-stu-id="f9e71-111">Streaming support from SQL Server introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span> <span data-ttu-id="f9e71-112">Bu sınıflar, sorgulardan verileri almak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f9e71-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="f9e71-113">Sonuç olarak, SQL Server adresinden akış desteği OLTP senaryolarından ve şirket içi ve şirket dışı ortamlar için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="f9e71-113">As a result, Streaming support from SQL Server addresses OLTP scenarios and applies to on-premises and off-premises environments.</span></span>
+<span data-ttu-id="e1ad1-111">SQL Server akış desteği,, ve <xref:System.Data.Common.DbDataReader> <xref:System.Data.SqlClient.SqlDataReader> <xref:System.IO.Stream> <xref:System.Xml.XmlReader> nesneleri almak ve bunlara yanıt vermek için sınıflarında ve içindeki yeni işlevleri sunar <xref:System.IO.TextReader> .</span><span class="sxs-lookup"><span data-stu-id="e1ad1-111">Streaming support from SQL Server introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span> <span data-ttu-id="e1ad1-112">Bu sınıflar, sorgulardan verileri almak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="e1ad1-113">Sonuç olarak, SQL Server adresinden akış desteği OLTP senaryolarından ve şirket içi ve şirket dışı ortamlar için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-113">As a result, Streaming support from SQL Server addresses OLTP scenarios and applies to on-premises and off-premises environments.</span></span>
 
-<span data-ttu-id="f9e71-114"><xref:System.Data.SqlClient.SqlDataReader>SQL Server 'den akış desteğini etkinleştirmek için aşağıdaki Üyeler eklenmiştir:</span><span class="sxs-lookup"><span data-stu-id="f9e71-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from SQL Server:</span></span>
+<span data-ttu-id="e1ad1-114"><xref:System.Data.SqlClient.SqlDataReader>SQL Server 'den akış desteğini etkinleştirmek için aşağıdaki Üyeler eklenmiştir:</span><span class="sxs-lookup"><span data-stu-id="e1ad1-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from SQL Server:</span></span>
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +40,7 @@ ms.locfileid: "91609251"
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-<span data-ttu-id="f9e71-115"><xref:System.Data.Common.DbDataReader>SQL Server 'den akış desteğini etkinleştirmek için aşağıdaki Üyeler eklenmiştir:</span><span class="sxs-lookup"><span data-stu-id="f9e71-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from SQL Server:</span></span>
+<span data-ttu-id="e1ad1-115"><xref:System.Data.Common.DbDataReader>SQL Server 'den akış desteğini etkinleştirmek için aşağıdaki Üyeler eklenmiştir:</span><span class="sxs-lookup"><span data-stu-id="e1ad1-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from SQL Server:</span></span>
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -48,37 +48,37 @@ ms.locfileid: "91609251"
 
 3. <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
 
-## <a name="streaming-support-to-sql-server"></a><span data-ttu-id="f9e71-116">SQL Server için akış desteği</span><span class="sxs-lookup"><span data-stu-id="f9e71-116">Streaming Support to SQL Server</span></span>
+## <a name="streaming-support-to-sql-server"></a><span data-ttu-id="e1ad1-116">SQL Server için akış desteği</span><span class="sxs-lookup"><span data-stu-id="e1ad1-116">Streaming Support to SQL Server</span></span>
 
-<span data-ttu-id="f9e71-117">SQL Server için akış desteği,, <xref:System.Data.SqlClient.SqlParameter> ve nesnelerini kabul etmek ve bunlara yanıt vermek için sınıfında yeni işlevsellik sunmaktadır <xref:System.Xml.XmlReader> <xref:System.IO.Stream> <xref:System.IO.TextReader> .</span><span class="sxs-lookup"><span data-stu-id="f9e71-117">Streaming support to SQL Server introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="f9e71-118"><xref:System.Data.SqlClient.SqlParameter> , parametreleri sorgulara ve saklı yordamlara geçirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f9e71-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>
+<span data-ttu-id="e1ad1-117">SQL Server için akış desteği,, <xref:System.Data.SqlClient.SqlParameter> ve nesnelerini kabul etmek ve bunlara yanıt vermek için sınıfında yeni işlevsellik sunmaktadır <xref:System.Xml.XmlReader> <xref:System.IO.Stream> <xref:System.IO.TextReader> .</span><span class="sxs-lookup"><span data-stu-id="e1ad1-117">Streaming support to SQL Server introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="e1ad1-118"><xref:System.Data.SqlClient.SqlParameter> , parametreleri sorgulara ve saklı yordamlara geçirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>
 
-<span data-ttu-id="f9e71-119">Bir <xref:System.Data.SqlClient.SqlCommand> nesne veya çağrıyı elden atma <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> tüm akış işlemlerini iptal etmelidir.</span><span class="sxs-lookup"><span data-stu-id="f9e71-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="f9e71-120">Bir uygulama gönderirse <xref:System.Threading.CancellationToken> iptali garanti edilmez.</span><span class="sxs-lookup"><span data-stu-id="f9e71-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>
+<span data-ttu-id="e1ad1-119">Bir <xref:System.Data.SqlClient.SqlCommand> nesne veya çağrıyı elden atma <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> tüm akış işlemlerini iptal etmelidir.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="e1ad1-120">Bir uygulama gönderirse <xref:System.Threading.CancellationToken> iptali garanti edilmez.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>
 
-<span data-ttu-id="f9e71-121">Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türler öğesinin bir kabul edileceği <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.IO.Stream> :</span><span class="sxs-lookup"><span data-stu-id="f9e71-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>
+<span data-ttu-id="e1ad1-121">Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türler öğesinin bir kabul edileceği <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.IO.Stream> :</span><span class="sxs-lookup"><span data-stu-id="e1ad1-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>
 
-- <span data-ttu-id="f9e71-122">**İkili**</span><span class="sxs-lookup"><span data-stu-id="f9e71-122">**Binary**</span></span>
+- <span data-ttu-id="e1ad1-122">**İkili**</span><span class="sxs-lookup"><span data-stu-id="e1ad1-122">**Binary**</span></span>
 
-- <span data-ttu-id="f9e71-123">**Ikili**</span><span class="sxs-lookup"><span data-stu-id="f9e71-123">**VarBinary**</span></span>
+- <span data-ttu-id="e1ad1-123">**Ikili**</span><span class="sxs-lookup"><span data-stu-id="e1ad1-123">**VarBinary**</span></span>
 
-<span data-ttu-id="f9e71-124">Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türler öğesinin bir kabul edileceği <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.IO.TextReader> :</span><span class="sxs-lookup"><span data-stu-id="f9e71-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>
+<span data-ttu-id="e1ad1-124">Aşağıdaki <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türler öğesinin bir kabul edileceği <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.IO.TextReader> :</span><span class="sxs-lookup"><span data-stu-id="e1ad1-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>
 
-- <span data-ttu-id="f9e71-125">**Char**</span><span class="sxs-lookup"><span data-stu-id="f9e71-125">**Char**</span></span>
+- <span data-ttu-id="e1ad1-125">**Char**</span><span class="sxs-lookup"><span data-stu-id="e1ad1-125">**Char**</span></span>
 
-- <span data-ttu-id="f9e71-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="f9e71-126">**NChar**</span></span>
+- <span data-ttu-id="e1ad1-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="e1ad1-126">**NChar**</span></span>
 
-- <span data-ttu-id="f9e71-127">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="f9e71-127">**NVarChar**</span></span>
+- <span data-ttu-id="e1ad1-127">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="e1ad1-127">**NVarChar**</span></span>
 
-- <span data-ttu-id="f9e71-128">**'Sini**</span><span class="sxs-lookup"><span data-stu-id="f9e71-128">**Xml**</span></span>
+- <span data-ttu-id="e1ad1-128">**'Sini**</span><span class="sxs-lookup"><span data-stu-id="e1ad1-128">**Xml**</span></span>
 
-<span data-ttu-id="f9e71-129">**XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türü öğesinin bir kabul edileceği <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.Xml.XmlReader> .</span><span class="sxs-lookup"><span data-stu-id="f9e71-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>
+<span data-ttu-id="e1ad1-129">**XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> türü öğesinin bir kabul edileceği <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.Xml.XmlReader> .</span><span class="sxs-lookup"><span data-stu-id="e1ad1-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>
 
-<span data-ttu-id="f9e71-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> , ve türündeki değerleri kabul <xref:System.Xml.XmlReader> edebilir <xref:System.IO.TextReader> <xref:System.IO.Stream> .</span><span class="sxs-lookup"><span data-stu-id="f9e71-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>
+<span data-ttu-id="e1ad1-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> , ve türündeki değerleri kabul <xref:System.Xml.XmlReader> edebilir <xref:System.IO.TextReader> <xref:System.IO.Stream> .</span><span class="sxs-lookup"><span data-stu-id="e1ad1-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>
 
-<span data-ttu-id="f9e71-131"><xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> Ve <xref:System.IO.Stream> nesnesi tarafından tanımlanan değere aktarılır <xref:System.Data.SqlClient.SqlParameter.Size%2A> .</span><span class="sxs-lookup"><span data-stu-id="f9e71-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>
+<span data-ttu-id="e1ad1-131"><xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> Ve <xref:System.IO.Stream> nesnesi tarafından tanımlanan değere aktarılır <xref:System.Data.SqlClient.SqlParameter.Size%2A> .</span><span class="sxs-lookup"><span data-stu-id="e1ad1-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>
 
-## <a name="sample----streaming-from-sql-server"></a><span data-ttu-id="f9e71-132">Örnek--SQL Server akışı</span><span class="sxs-lookup"><span data-stu-id="f9e71-132">Sample -- Streaming from SQL Server</span></span>
+## <a name="sample----streaming-from-sql-server"></a><span data-ttu-id="e1ad1-132">Örnek--SQL Server akışı</span><span class="sxs-lookup"><span data-stu-id="e1ad1-132">Sample -- Streaming from SQL Server</span></span>
 
-<span data-ttu-id="f9e71-133">Örnek veritabanını oluşturmak için aşağıdaki Transact-SQL ' i kullanın:</span><span class="sxs-lookup"><span data-stu-id="f9e71-133">Use the following Transact-SQL to create the sample database:</span></span>
+<span data-ttu-id="e1ad1-133">Örnek veritabanını oluşturmak için aşağıdaki Transact-SQL ' i kullanın:</span><span class="sxs-lookup"><span data-stu-id="e1ad1-133">Use the following Transact-SQL to create the sample database:</span></span>
 
 ```sql
 CREATE DATABASE [Demo]
@@ -97,17 +97,17 @@ INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'Another row', 0x666
 GO
 ```
 
-<span data-ttu-id="f9e71-134">Örnek, aşağıdakilerin nasıl yapılacağını göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="f9e71-134">The sample shows how to do the following:</span></span>
+<span data-ttu-id="e1ad1-134">Örnek, aşağıdakilerin nasıl yapılacağını göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="e1ad1-134">The sample shows how to do the following:</span></span>
 
-- <span data-ttu-id="f9e71-135">Büyük dosyaları almak için zaman uyumsuz bir yol sağlayarak bir kullanıcı arabirimi iş parçacığını engellemeyi önleyin.</span><span class="sxs-lookup"><span data-stu-id="f9e71-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>
+- <span data-ttu-id="e1ad1-135">Büyük dosyaları almak için zaman uyumsuz bir yol sağlayarak bir kullanıcı arabirimi iş parçacığını engellemeyi önleyin.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>
 
-- <span data-ttu-id="f9e71-136">SQL Server .NET Framework 4,5 ' de büyük bir metin dosyası aktarın.</span><span class="sxs-lookup"><span data-stu-id="f9e71-136">Transfer a large text file from SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="e1ad1-136">SQL Server .NET Framework 4,5 ' de büyük bir metin dosyası aktarın.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-136">Transfer a large text file from SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="f9e71-137">Büyük bir XML dosyasını SQL Server .NET Framework 4,5 ' den aktarın.</span><span class="sxs-lookup"><span data-stu-id="f9e71-137">Transfer a large XML file from SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="e1ad1-137">Büyük bir XML dosyasını SQL Server .NET Framework 4,5 ' den aktarın.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-137">Transfer a large XML file from SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="f9e71-138">SQL Server verileri alın.</span><span class="sxs-lookup"><span data-stu-id="f9e71-138">Retrieve data from SQL Server.</span></span>
+- <span data-ttu-id="e1ad1-138">SQL Server verileri alın.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-138">Retrieve data from SQL Server.</span></span>
 
-- <span data-ttu-id="f9e71-139">Büyük dosyaları (Blobları) bir SQL Server veritabanından başka bir veritabanına aktarma belleği olmadan.</span><span class="sxs-lookup"><span data-stu-id="f9e71-139">Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.</span></span>
+- <span data-ttu-id="e1ad1-139">Büyük dosyaları (Blobları) bir SQL Server veritabanından başka bir veritabanına aktarma belleği olmadan.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-139">Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.</span></span>
 
 ```csharp
 using System;
@@ -131,7 +131,7 @@ namespace StreamingFromServer {
          Console.WriteLine("Done");
       }
 
-      // Application retrieving a large BLOB from SQL Server in .NET 4.5 using the new asynchronous capability
+      // Application retrieving a large BLOB from SQL Server in .NET Framework 4.5 using the new asynchronous capability
       private static async Task CopyBinaryValueToFile() {
          string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "binarydata.bin");
 
@@ -159,7 +159,7 @@ namespace StreamingFromServer {
          }
       }
 
-      // Application transferring a large Text File from SQL Server in .NET 4.5
+      // Application transferring a large Text File from SQL Server in .NET Framework 4.5
       private static async Task PrintTextValues() {
          using (SqlConnection connection = new SqlConnection(connectionString)) {
             await connection.OpenAsync();
@@ -194,7 +194,7 @@ namespace StreamingFromServer {
          }
       }
 
-      // Application transferring a large Xml Document from SQL Server in .NET 4.5
+      // Application transferring a large Xml Document from SQL Server in .NET Framework 4.5
       private static async Task PrintXmlValues() {
          using (SqlConnection connection = new SqlConnection(connectionString)) {
             await connection.OpenAsync();
@@ -237,7 +237,7 @@ namespace StreamingFromServer {
          }
       }
 
-      // Application transferring a large Xml Document from SQL Server in .NET 4.5
+      // Application transferring a large Xml Document from SQL Server in .NET Framework 4.5
       // This goes via NVarChar and TextReader to enable asynchronous reading
       private static async Task PrintXmlValuesViaNVarChar() {
          XmlReaderSettings xmlSettings = new XmlReaderSettings() {
@@ -298,9 +298,9 @@ namespace StreamingFromServer {
 }
 ```
 
-## <a name="sample----streaming-to-sql-server"></a><span data-ttu-id="f9e71-140">Örnek--SQL Server akışı</span><span class="sxs-lookup"><span data-stu-id="f9e71-140">Sample -- Streaming to SQL Server</span></span>
+## <a name="sample----streaming-to-sql-server"></a><span data-ttu-id="e1ad1-140">Örnek--SQL Server akışı</span><span class="sxs-lookup"><span data-stu-id="e1ad1-140">Sample -- Streaming to SQL Server</span></span>
 
-<span data-ttu-id="f9e71-141">Örnek veritabanını oluşturmak için aşağıdaki Transact-SQL ' i kullanın:</span><span class="sxs-lookup"><span data-stu-id="f9e71-141">Use the following Transact-SQL to create the sample database:</span></span>
+<span data-ttu-id="e1ad1-141">Örnek veritabanını oluşturmak için aşağıdaki Transact-SQL ' i kullanın:</span><span class="sxs-lookup"><span data-stu-id="e1ad1-141">Use the following Transact-SQL to create the sample database:</span></span>
 
 ```sql
 CREATE DATABASE [Demo2]
@@ -321,19 +321,19 @@ CREATE TABLE [BinaryStreamsCopy] (
 GO
 ```
 
-<span data-ttu-id="f9e71-142">Örnek, aşağıdakilerin nasıl yapılacağını göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="f9e71-142">The sample shows how to do the following:</span></span>
+<span data-ttu-id="e1ad1-142">Örnek, aşağıdakilerin nasıl yapılacağını göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="e1ad1-142">The sample shows how to do the following:</span></span>
 
-- <span data-ttu-id="f9e71-143">Büyük bir BLOBUN SQL Server .NET Framework 4,5 ' de aktarılıyor.</span><span class="sxs-lookup"><span data-stu-id="f9e71-143">Transferring a large BLOB to SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="e1ad1-143">Büyük bir BLOBUN SQL Server .NET Framework 4,5 ' de aktarılıyor.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-143">Transferring a large BLOB to SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="f9e71-144">Büyük bir metin dosyasını .NET Framework 4,5 ' de SQL Server aktarma.</span><span class="sxs-lookup"><span data-stu-id="f9e71-144">Transferring a large text file to SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="e1ad1-144">Büyük bir metin dosyasını .NET Framework 4,5 ' de SQL Server aktarma.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-144">Transferring a large text file to SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="f9e71-145">Büyük bir blobu aktarmak için yeni zaman uyumsuz özelliğini kullanma.</span><span class="sxs-lookup"><span data-stu-id="f9e71-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>
+- <span data-ttu-id="e1ad1-145">Büyük bir blobu aktarmak için yeni zaman uyumsuz özelliğini kullanma.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>
 
-- <span data-ttu-id="f9e71-146">Büyük bir blobu aktarmak için yeni zaman uyumsuz özelliği ve await anahtar sözcüğünü kullanma.</span><span class="sxs-lookup"><span data-stu-id="f9e71-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>
+- <span data-ttu-id="e1ad1-146">Büyük bir blobu aktarmak için yeni zaman uyumsuz özelliği ve await anahtar sözcüğünü kullanma.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>
 
-- <span data-ttu-id="f9e71-147">Büyük bir BLOBUN aktarımı iptal ediliyor.</span><span class="sxs-lookup"><span data-stu-id="f9e71-147">Cancelling the transfer of a large BLOB.</span></span>
+- <span data-ttu-id="e1ad1-147">Büyük bir BLOBUN aktarımı iptal ediliyor.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-147">Cancelling the transfer of a large BLOB.</span></span>
 
-- <span data-ttu-id="f9e71-148">Yeni zaman uyumsuz özelliği kullanarak bir SQL Server diğerine akış.</span><span class="sxs-lookup"><span data-stu-id="f9e71-148">Streaming from one SQL Server to another using the new asynchronous feature.</span></span>
+- <span data-ttu-id="e1ad1-148">Yeni zaman uyumsuz özelliği kullanarak bir SQL Server diğerine akış.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-148">Streaming from one SQL Server to another using the new asynchronous feature.</span></span>
 
 ```csharp
 using System;
@@ -394,7 +394,7 @@ namespace StreamingToServer {
          }
       }
 
-      // Application transferring a large BLOB to SQL Server in .NET 4.5
+      // Application transferring a large BLOB to SQL Server in .NET Framework 4.5
       private static async Task StreamBLOBToServer() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             await conn.OpenAsync();
@@ -412,7 +412,7 @@ namespace StreamingToServer {
          }
       }
 
-      // Application transferring a large Text File to SQL Server in .NET 4.5
+      // Application transferring a large Text File to SQL Server in .NET Framework 4.5
       private static async Task StreamTextToServer() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             await conn.OpenAsync();
@@ -455,9 +455,9 @@ namespace StreamingToServer {
 }
 ```
 
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a><span data-ttu-id="f9e71-149">Örnek--bir SQL Server başka bir SQL Server akış</span><span class="sxs-lookup"><span data-stu-id="f9e71-149">Sample -- Streaming From One SQL Server to Another SQL Server</span></span>
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a><span data-ttu-id="e1ad1-149">Örnek--bir SQL Server başka bir SQL Server akış</span><span class="sxs-lookup"><span data-stu-id="e1ad1-149">Sample -- Streaming From One SQL Server to Another SQL Server</span></span>
 
-<span data-ttu-id="f9e71-150">Bu örnek, yük iptali desteğiyle, bir SQL Server büyük bir BLOBUN arasındaki zaman uyumsuz olarak nasıl akışa alınacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f9e71-150">This sample demonstrates how to asynchronously stream a large BLOB from one SQL Server to another, with support for cancellation.</span></span>
+<span data-ttu-id="e1ad1-150">Bu örnek, yük iptali desteğiyle, bir SQL Server büyük bir BLOBUN arasındaki zaman uyumsuz olarak nasıl akışa alınacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-150">This sample demonstrates how to asynchronously stream a large BLOB from one SQL Server to another, with support for cancellation.</span></span>
 
 ```csharp
 using System;
@@ -522,6 +522,6 @@ namespace StreamingFromServerToAnother {
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="f9e71-151">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f9e71-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1ad1-151">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e1ad1-151">See also</span></span>
 
-- [<span data-ttu-id="f9e71-152">ADO.NET’te Veri Alma ve Değiştirme</span><span class="sxs-lookup"><span data-stu-id="f9e71-152">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
+- [<span data-ttu-id="e1ad1-152">ADO.NET’te Veri Alma ve Değiştirme</span><span class="sxs-lookup"><span data-stu-id="e1ad1-152">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)

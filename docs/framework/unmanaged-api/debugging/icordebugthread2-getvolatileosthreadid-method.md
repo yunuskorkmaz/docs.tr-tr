@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f0922545-c2cf-40c8-9ef6-ca033563e682
 topic_type:
 - apiref
-ms.openlocfilehash: e8d59d617efa7656a3034d5c5e009a46b6121cdb
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 177c6057432912c402c379c70a22506d9bde261e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377655"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678616"
 ---
-# <a name="icordebugthread2getvolatileosthreadid-method"></a><span data-ttu-id="6b5e9-102">ICorDebugThread2::GetVolatileOSThreadID Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6b5e9-102">ICorDebugThread2::GetVolatileOSThreadID Method</span></span>
-<span data-ttu-id="6b5e9-103">Bu ICorDebugThread2 için işletim sistemi iş parçacığı tanımlayıcısını alır.</span><span class="sxs-lookup"><span data-stu-id="6b5e9-103">Gets the operating system thread identifier for this ICorDebugThread2.</span></span>  
+# <a name="icordebugthread2getvolatileosthreadid-method"></a><span data-ttu-id="f6584-102">ICorDebugThread2::GetVolatileOSThreadID Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f6584-102">ICorDebugThread2::GetVolatileOSThreadID Method</span></span>
+
+<span data-ttu-id="f6584-103">Bu ICorDebugThread2 için işletim sistemi iş parçacığı tanımlayıcısını alır.</span><span class="sxs-lookup"><span data-stu-id="f6584-103">Gets the operating system thread identifier for this ICorDebugThread2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6b5e9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6b5e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6584-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="f6584-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVolatileOSThreadID (  
@@ -33,15 +34,17 @@ HRESULT GetVolatileOSThreadID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6b5e9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6b5e9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f6584-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f6584-105">Parameters</span></span>  
+
  `pdwTid`  
- <span data-ttu-id="6b5e9-106">dışı Bu iş parçacığının işletim sistemi iş parçacığı tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="6b5e9-106">[out] The operating system thread identifier for this thread.</span></span>  
+ <span data-ttu-id="f6584-106">dışı Bu iş parçacığının işletim sistemi iş parçacığı tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="f6584-106">[out] The operating system thread identifier for this thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6b5e9-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6b5e9-107">Requirements</span></span>  
- <span data-ttu-id="6b5e9-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b5e9-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6584-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f6584-107">Requirements</span></span>  
+
+ <span data-ttu-id="f6584-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f6584-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6b5e9-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="6b5e9-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f6584-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="f6584-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6b5e9-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="6b5e9-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f6584-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="f6584-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6b5e9-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b5e9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="f6584-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6584-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
