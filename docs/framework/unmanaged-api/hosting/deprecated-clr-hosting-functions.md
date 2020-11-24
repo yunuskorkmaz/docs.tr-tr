@@ -7,19 +7,21 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 083d0ff285abb4a99ad05c791bc504ff7f282c6a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9e19502672973f292991b72c7ea9b4fdc17f5707
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504374"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673130"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Kullanım Dışı CLR Barındırma İşlevleri
+
 Bu bölümde, barındırma API 'sinin önceki sürümlerinin kullanıldığı yönetilmeyen genel statik işlevler açıklanmaktadır.  
   
  `_Cor*`Yalnızca .NET Framework tarafından kullanılan altyapı işlevleri (işlevler) dışında, bu işlevler .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="activation-functions"></a>Etkinleştirme işlevleri  
+
  [ClrCreateManagedInstance İşlevi](clrcreatemanagedinstance-function.md)  
  Kullanım dışı. Belirtilen yönetilen türün bir örneğini oluşturur.  
   
@@ -57,6 +59,7 @@ Bu bölümde, barındırma API 'sinin önceki sürümlerinin kullanıldığı y�
  Kullanım dışı. Bir uygulama tarafından istenen CLR ile ilgili sürüm ve dizin bilgilerini alır.  
   
 ## <a name="clr-version-functions"></a>CLR sürüm işlevleri  
+
  Bu bölümdeki işlevler bir CLR sürümü döndürür; CLR 'yi etkinleştirmez.  
   
  [GetCORVersion İşlevi](getcorversion-function.md)  
@@ -78,6 +81,7 @@ Bu bölümde, barındırma API 'sinin önceki sürümlerinin kullanıldığı y�
  Kullanım dışı. Konağın clr 'yi açıkça başlatmadan önce işlem içinde hangi CLR sürümünün kullanılacağını belirlemesine izin verir.  
   
 ## <a name="hosting-functions"></a>Barındırma işlevleri  
+
  [CallFunctionShim İşlevi](callfunctionshim-function.md)  
  Kullanım dışı. Belirtilen kitaplıkta belirtilen ad ve parametrelere sahip işleve bir çağrı yapar.  
   
@@ -139,6 +143,7 @@ Bu bölümde, barındırma API 'sinin önceki sürümlerinin kullanıldığı y�
  Kullanım dışı. Ana bilgisayarı bir bekleme tutamacının sinyal ettiğini veya zaman aşımına uğradığını bildiren bir işleve işaret eder.  
   
 ## <a name="infrastructure-functions"></a>Altyapı işlevleri  
+
  Bu bölümdeki işlevler yalnızca .NET Framework tarafından kullanılır.  
   
  [_CorDllMain İşlevi](cordllmain-function.md)  

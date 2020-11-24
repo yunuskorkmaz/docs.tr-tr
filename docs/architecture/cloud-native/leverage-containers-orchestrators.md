@@ -2,12 +2,12 @@
 title: Kapsayıcılardan ve düzenleyicilerden yararlanma
 description: Azure 'da Docker kapsayıcılarını ve Kubernetes düzenleyicilerinden yararlanın
 ms.date: 05/31/2020
-ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 0ca69b71aa7d414a7bc55253b123020d49468dee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877580"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672519"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Kapsayıcılardan ve düzenleyicilerden yararlanma
 
@@ -78,7 +78,7 @@ AKS, küme temelli bir teknolojidir. Federasyon sanal makineleri veya düğümle
 
 ## <a name="what-are-the-scaling-benefits"></a>Ölçeklendirme avantajları nelerdir?
 
-Kapsayıcılarda oluşturulan hizmetler, Kubernetes gibi Orchestration araçları tarafından sunulan ölçeklendirme avantajlarından yararlanabilir. Tasarım kapsayıcıları tarafından yalnızca kendileri hakkında bilgi sahibi. Birlikte çalışması gereken birden çok kapsayıcınız varsa, bunları daha yüksek bir düzeyde düzenlemeniz gerekir. Çok sayıda kapsayıcıyı ve ağ yapılandırması gibi paylaşılan bağımlılıklarını organize etmek, düzenleme araçlarının günü kaydetmek için nereden geldiği yerdir! Kubernetes kapsayıcı grupları üzerinde bir soyutlama katmanı oluşturur ve bunları *Pod*olarak düzenler. *Düğüm*olarak adlandırılan çalışan makinelerdeki pods çalıştırılır. Bu düzenlenmiş yapı, *küme*olarak adlandırılır. Şekil 3-3, bir Kubernetes kümesinin farklı bileşenlerini gösterir.
+Kapsayıcılarda oluşturulan hizmetler, Kubernetes gibi Orchestration araçları tarafından sunulan ölçeklendirme avantajlarından yararlanabilir. Tasarım kapsayıcıları tarafından yalnızca kendileri hakkında bilgi sahibi. Birlikte çalışması gereken birden çok kapsayıcınız varsa, bunları daha yüksek bir düzeyde düzenlemeniz gerekir. Çok sayıda kapsayıcıyı ve ağ yapılandırması gibi paylaşılan bağımlılıklarını organize etmek, düzenleme araçlarının günü kaydetmek için nereden geldiği yerdir! Kubernetes kapsayıcı grupları üzerinde bir soyutlama katmanı oluşturur ve bunları *Pod* olarak düzenler. *Düğüm* olarak adlandırılan çalışan makinelerdeki pods çalıştırılır. Bu düzenlenmiş yapı, *küme* olarak adlandırılır. Şekil 3-3, bir Kubernetes kümesinin farklı bileşenlerini gösterir.
 
 ![Kubernetes kümesi bileşenleri. ](./media/kubernetes-cluster-components.png)
  **Şekil 3-3**. Kubernetes kümesi bileşenleri.
@@ -184,12 +184,12 @@ Visual Studio, Web tabanlı uygulamalar için Docker geliştirmeyi destekler. Ye
 Bu seçenek belirlendiğinde proje, bir `Dockerfile` Docker kapsayıcısında uygulamayı derlemek ve barındırmak için kullanılabilen bir kökünde oluşturulur. Şekil 3 -6. git 'de örnek bir Dockerfile gösterilmektedir
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
 RUN dotnet restore "eShopWeb/eShopWeb.csproj"
@@ -216,7 +216,7 @@ Uygulamanın çalışması için varsayılan davranış, Docker 'ı kullanmak ü
 
 [Azure dev Spaces](/azure/dev-spaces/) , yerel geliştirmeye ek olarak, birden çok geliştiricinin Azure 'Da kendi Kubernetes yapılandırmalarına göre çalışması için kullanışlı bir yol sağlar. Şekil 3-7 ' de görebileceğiniz gibi, uygulamayı Azure Dev Spaces de çalıştırabilirsiniz.
 
-Ayrıca, dilediğiniz zaman mevcut bir ASP.NET Core uygulamasına Docker desteği ekleyebilirsiniz. Visual Studio Çözüm Gezgini, Şekil 3-8 ' de gösterildiği gibi projeye sağ tıklayın ve **Add**  >  **Docker desteği**Ekle ' yi seçin.
+Ayrıca, dilediğiniz zaman mevcut bir ASP.NET Core uygulamasına Docker desteği ekleyebilirsiniz. Visual Studio Çözüm Gezgini, Şekil 3-8 ' de gösterildiği gibi projeye sağ tıklayın ve **Add**  >  **Docker desteği** Ekle ' yi seçin.
 
 ![Visual Studio Docker desteği ekle](./media/visual-studio-add-docker-support.png)
 

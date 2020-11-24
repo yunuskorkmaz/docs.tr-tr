@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-ms.openlocfilehash: ff7e7b299d185b8db263d2076c1e075b87b487fc
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 495d84470c559df13ea64b63dd00582f4335d4e3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616404"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673202"
 ---
 # <a name="destroyiceefilegen-function"></a>DestroyICeeFileGen İşlevi
+
 Bir [ICeeFileGen](iceefilegen-class.md) nesnesini yok eder.  
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
@@ -37,21 +38,25 @@ HRESULT DestroyICeeFileGen (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ceeFileGen`  
- 'ndaki `ICeeFileGen`Yok edilecek nesne.  
+ 'ndaki `ICeeFileGen` Yok edilecek nesne.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, standart COM hata kodlarını döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `DestroyICeeFileGen``ICeeFileGen` [CreateICeeFileGen](createiceefilegen-function.md) işlevi tarafından oluşturulan nesneyi yok eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ICeeFileGen. h  
   
- **Kitaplık:** MSCorPE. dll  
+ **Kitaplık:** MSCorPE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -7,18 +7,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-ms.openlocfilehash: 9e1d4b7e8c805436c32d2ae7b340ee251741f4a1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 82944fd3fb97c3086ffd47fbd2ba1f3192e6deb4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824577"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672259"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>XmlSchemaSet ile XML şeması (XSD) doğrulaması
 
 XML belgeleri, bir XML şeması tanım dili (XSD) şemasına göre doğrulanabilir <xref:System.Xml.Schema.XmlSchemaSet> .  
   
 ## <a name="validate-xml-documents"></a>XML belgelerini doğrula  
+
  XML belgeleri, <xref:System.Xml.XmlReader.Create%2A> sınıfının yöntemi tarafından onaylanır <xref:System.Xml.XmlReader> . XML belgesini doğrulamak için, XML <xref:System.Xml.XmlReaderSettings> belgesi doğrulanacak BIR XML şeması tanım dili (xsd) şeması içeren bir nesne oluşturun.  
   
 > [!NOTE]

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 3db37576f5da7b26e7bd9d3343f8bb8b97f2ba82
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 501a4543940437bfe2a6cb0952aed8184107150c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895241"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672168"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName Yöntemi
+
 Uygulama etki alanının adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetName (  
@@ -37,19 +38,22 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cchName`  
  'ndaki `szName` Dizinin boyutu. Bu yöntemi sorgu moduna almak için bu değeri sıfır olarak ayarlayın.  
   
  `pcchName`  
- dışı Adın boyutuna veya aslında ' de `szName`döndürülen karakter sayısına yönelik bir işaretçi. Sorgu modunda, bu değer çağıranın ad için ne kadar büyük bir arabellek ayrılacağını bilmesini sağlar.  
+ dışı Adın boyutuna veya aslında ' de döndürülen karakter sayısına yönelik bir işaretçi `szName` . Sorgu modunda, bu değer çağıranın ad için ne kadar büyük bir arabellek ayrılacağını bilmesini sağlar.  
   
  `szName`  
  dışı Uygulama etki alanının adını depolayan bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir hata ayıklayıcı, `GetName` ad için gereken bir arabellek boyutunu almak üzere yöntemi bir kez çağırır. Hata ayıklayıcı arabelleği ayırır ve sonra arabelleği dolduracak ikinci kez yöntemi çağırır. Adın boyutunu almak için ilk çağrı *sorgu modu*olarak adlandırılır.  
+
+ Bir hata ayıklayıcı, `GetName` ad için gereken bir arabellek boyutunu almak üzere yöntemi bir kez çağırır. Hata ayıklayıcı arabelleği ayırır ve sonra arabelleği dolduracak ikinci kez yöntemi çağırır. Adın boyutunu almak için ilk çağrı *sorgu modu* olarak adlandırılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

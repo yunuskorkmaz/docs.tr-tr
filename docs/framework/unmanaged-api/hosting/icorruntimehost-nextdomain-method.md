@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe07a05b-f6d6-44b5-ab01-b9a6eb15c350
 topic_type:
 - apiref
-ms.openlocfilehash: 079164d15141983711e976e0209cc22c818d9cd9
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 598c46d50d7b4a67c1b2c0d844c9b12deb12a428
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760426"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671375"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain Yöntemi
+
 Numaralandırmadaki bir sonraki etki alanına bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,11 +36,12 @@ HRESULT NextDomain (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `hEnum`  
  'ndaki [EnumDomains](icorruntimehost-enumdomains-method.md)çağrısıyla edinilen Numaralandırıcı.  
   
  `pAppDomain`  
- dışı <xref:System._AppDomain?displayProperty=nameWithType>Numaradaki bir sonraki etki alanını temsil eden tür için bir arabirim işaretçisi veya daha fazla etki alanı yoksa null.  
+ dışı <xref:System._AppDomain?displayProperty=nameWithType> Numaradaki bir sonraki etki alanını temsil eden tür için bir arabirim işaretçisi veya daha fazla etki alanı yoksa null.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -51,11 +53,12 @@ HRESULT NextDomain (
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:** 1,0, 1,1  
   

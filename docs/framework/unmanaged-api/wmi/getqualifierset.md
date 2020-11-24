@@ -1,5 +1,5 @@
 ---
-title: GetQualifierSet fonksiyonu (Yönetilmeyen API Başvurusu)
+title: GetQualifierSet işlevi (yönetilmeyen API Başvurusu)
 description: GetQualifierSet işlevi, bir sınıf veya örnek için niteleyici kümesini alır.
 ms.date: 11/06/2017
 api_name:
@@ -14,19 +14,20 @@ helpviewer_keywords:
 - GetQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 368f0a13871bd48780fa30b370d37157d2724bb8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9bb882a0f62499167b79bf3e6691d05e394720f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176779"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671349"
 ---
-# <a name="getqualifierset-function"></a>GetQualifierSet fonksiyonu
+# <a name="getqualifierset-function"></a>GetQualifierSet işlevi
+
 Bir sınıf örneği veya sınıf tanımı için niteleyici kümesini alır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetQualifierSet (
@@ -39,39 +40,40 @@ HRESULT GetQualifierSet (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[içinde] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`  
-[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `ppQualSet`  
-[çıkış] Sınıf nesnesinin niteleyicilerine erişim sağlayan arabirim işaretçisini alır. `ppQualSet`olamaz. `null` Bir hata oluşursa, yeni bir nesne döndürülür ve işaretçi değiştirilmemiş olarak bırakılır.
+dışı Sınıf nesnesinin niteleyicilerine erişime izin veren arabirim işaretçisini alır. `ppQualSet` olamaz `null` . Bir hata oluşursa, yeni bir nesne döndürülmez ve işaretçi değiştirilmemiş olarak kalır.
 
 ## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Genel bir başarısızlık oldu. |
+|`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen yöntem yok. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak için yeterli bellek yok. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre. `null` |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre `null` . |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu [işlev, IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) yöntemine bir çağrı yıkıyor.
+Bu işlev, [IWbemClassObject:: GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) yöntemine bir çağrı kaydırır.
 
-[IWbemQualifierSet işaretçisi,](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) arayanın bu elemeleri eklemesini, düzenlemesini veya silmesini sağlar. Bu tür eklenen, düzenlenen veya silinen niteleyiciler tüm örnek veya sınıf tanımı için geçerlidir.
+[IWbemQualifierSet işaretçisi](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) , çağıranın bu niteleyicileri eklemesine, düzenlemesine veya silmesine izin verir. Bu tür eklenmiş, düzenlenmiş veya silinen niteleyiciler, tüm örnek veya sınıf tanımı için geçerlidir.
 
 ## <a name="requirements"></a>Gereksinimler  
-**Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

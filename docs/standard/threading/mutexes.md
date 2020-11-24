@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 811ee0d2d1068fc1fe8e44aa17f01e2dc243fb98
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: aa5a13b5b1cfcd7305df39c1ff5005deb45eb4ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826241"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672181"
 ---
 # <a name="mutexes"></a>Zaman Uyumu Sağlayıcılar
 
@@ -21,6 +21,7 @@ ms.locfileid: "94826241"
  Kod örnekleri için, oluşturucuların başvuru belgelerine bakın <xref:System.Threading.Mutex.%23ctor%2A> .  
   
 ## <a name="using-mutexes"></a>Birbirini kapsamayan kullanma  
+
  Bir iş parçacığı <xref:System.Threading.WaitHandle.WaitOne%2A> sahiplik istemek için bir mutex yöntemini çağırır. Çağrı, mutex kullanılabilir olana kadar ya da isteğe bağlı zaman aşımı aralığı aşana kadar engeller. Bir mutex 'in durumu, kendisine ait bir iş parçacığı yoksa sinyal edilir.  
   
  Bir iş parçacığı yöntemini çağırarak bir mutex yayınlar <xref:System.Threading.Mutex.ReleaseMutex%2A> . Zaman uyumu sağlayıcılar iş parçacığı benzeşimine sahiptir; diğer bir deyişle, mutex yalnızca sahibi olan iş parçacığı tarafından kullanılabilir. Bir iş parçacığı sahip olmadığı bir mutex yayınlarsa, iş parçacığında bir bir zaman <xref:System.ApplicationException> atılır.  
@@ -30,11 +31,13 @@ ms.locfileid: "94826241"
  Bir iş parçacığı bir sürümüne sahipse <xref:System.Threading.Mutex> , bu iş parçacığı <xref:System.Threading.Mutex> yürütmeyi engellemeden yinelenen bekleme istek çağrılarında aynısını belirtebilir; ancak, <xref:System.Threading.Mutex> sahipliği serbest bırakmak için kaç kez serbest bırakmalıdır.  
   
 ## <a name="abandoned-mutexes"></a>Bırakılan mutex 'ler  
+
  Bir iş parçacığı bir serbest bırakılmadan sonlandığında <xref:System.Threading.Mutex> , mutex terk edilir. Bu genellikle, mutex 'in koruduğu kaynak tutarsız bir durumda bırakılmış olduğundan ciddi bir programlama hatası gösterir. <xref:System.Threading.AbandonedMutexException>Mutex 'i alan bir sonraki iş parçacığında oluşturulur.
   
  Sistem genelinde bir mutex söz konusu olduğunda, bırakılan bir mutex, bir uygulamanın aniden sonlandırıldığı (örneğin, Windows Görev Yöneticisi kullanılarak) anlamına gelebilir.  
   
 ## <a name="local-and-system-mutexes"></a>Yerel ve sistem zaman uyumu sağlayıcılar  
+
  Birbirini kapsamayan iki tür vardır: yerel zaman uyumu sağlayıcılar ve adlandırılmış sistem zaman uyumu. Bir <xref:System.Threading.Mutex> adı kabul eden bir Oluşturucu kullanarak bir nesne oluşturursanız, bu ad bir işletim sistemi nesnesi ile ilişkilendirilir. Adlandırılmış sistem zaman uyumu sağlayıcılar, işletim sistemi genelinde görünür ve işlem etkinliklerini eşzamanlı hale getirmek için kullanılabilir. <xref:System.Threading.Mutex>Aynı adlı sistem mutex 'i temsil eden birden çok nesne oluşturabilirsiniz ve bu <xref:System.Threading.Mutex.OpenExisting%2A> yöntemi kullanarak var olan bir adlandırılmış sistem mutex 'i açabilirsiniz.  
   
  Yerel bir mutex yalnızca işlem içinde bulunur. Bu, işleinizdeki yerel nesneye yönelik bir başvuruya sahip herhangi bir iş parçacığı tarafından kullanılabilir <xref:System.Threading.Mutex> . Her <xref:System.Threading.Mutex> nesne ayrı bir yerel mutex.  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: e45b180ac6d943d89740ad7ae10500ea4ad1aa9c
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 101151469e2eece20afe289c9d95387ce6dc7c6a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975972"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672129"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack Yöntemi
+
 Özel durum nesnesine katıştırılmış çağrı yığınına bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumerateExceptionCallStack(  
@@ -34,15 +35,18 @@ HRESULT EnumerateExceptionCallStack(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  ppCallStackEnum  
  dışı Yönetilen bir özel durum nesnesi için yığın izleme numaralandırıcısı olan [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) arabirimi nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hiçbir çağrı yığını bilgisi yoksa, yöntemi döndürür `S_OK`ve [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) , 0 uzunluğunda geçerli bir Numaralandırıcı olur. Yöntem yığın izleme bilgilerini alamadığında, dönüş değeri olur `E_FAIL` ve hiçbir Numaralandırıcı döndürülmez.  
+
+ Hiçbir çağrı yığını bilgisi yoksa, yöntemi döndürür `S_OK` ve [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) , 0 uzunluğunda geçerli bir Numaralandırıcı olur. Yöntem yığın izleme bilgilerini alamadığında, dönüş değeri olur `E_FAIL` ve hiçbir Numaralandırıcı döndürülmez.  
   
- [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) nesnesi, özel durum nesnesinin `_stackTrace` alanından yığın izleme verilerinin kodunu çözmekten sorumludur.  
+ [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) nesnesi, `_stackTrace` özel durum nesnesinin alanından yığın izleme verilerinin kodunu çözmekten sorumludur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

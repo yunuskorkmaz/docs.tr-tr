@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 300c2661-b7d1-4c39-b080-9ebdef0fd523
 topic_type:
 - apiref
-ms.openlocfilehash: 7c46f00063cdf9281a5f1080594e8d6dbc6c101e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 50e37b770e3ee6e0a5cdfca61fc5b09749e5735f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804592"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673211"
 ---
 # <a name="ihostmanualevent-interface"></a>IHostManualEvent Arabirimi
+
 Konağın el ile sıfırlama olayının temsili için bir uygulama sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -33,11 +34,12 @@ Konağın el ile sıfırlama olayının temsili için bir uygulama sağlar.
 |[Wait Yöntemi](ihostmanualevent-wait-method.md)|Geçerli örneğin, `IHostManualEvent` sahip olana kadar beklemesini veya belirli bir süre geçtikten sonra gelmesini sağlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

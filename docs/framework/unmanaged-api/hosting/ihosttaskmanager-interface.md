@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: 190908c675b96b8ea2d81fb0203aa16a80d6a8b4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: deb14d291bfd511e8f3534f3c5e32787c259c5e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501410"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673117"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager Arabirimi
+
 Ortak dil çalışma zamanının (CLR) standart işletim sistemi iş parçacığı veya fiber işlevlerini kullanmak yerine ana bilgisayar aracılığıyla görevlerle çalışmasına izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[BeginDelayAbort Yöntemi](ihosttaskmanager-begindelayabort-method.md)|Ana bilgisayara, yönetilen kodun geçerli görevin durdurulmayan bir dönem girdiğini bildirir.|  
 |[BeginThreadAffinity Yöntemi](ihosttaskmanager-beginthreadaffinity-method.md)|Yönetilen koda, geçerli görevin başka bir işletim sistemi iş parçacığına taşınmaması gereken bir dönem girmediğini bildirir.|  
@@ -48,14 +49,16 @@ Ortak dil çalışma zamanının (CLR) standart işletim sistemi iş parçacığ
 |[SwitchToTask Yöntemi](ihosttaskmanager-switchtotask-method.md)|Ana bilgisayara geçerli görevi geçiş yapmak zorunda olduğunu bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IHostTaskManager`, yönetilen sunucudan yönetilmeyen koddan ve tam tersi yönde aktarım yapıldığında ve ana bilgisayarın kod yürütmesi sırasında gerçekleştirebileceği belirli eylemleri belirtmek için, CLR 'nin görev oluşturmasına ve yönetmesine izin verir.  
+
+ `IHostTaskManager` , yönetilen sunucudan yönetilmeyen koddan ve tam tersi yönde aktarım yapıldığında ve ana bilgisayarın kod yürütmesi sırasında gerçekleştirebileceği belirli eylemleri belirtmek için, CLR 'nin görev oluşturmasına ve yönetmesine izin verir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

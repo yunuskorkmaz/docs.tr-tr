@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-ms.openlocfilehash: da6efae38cd70a68feea56b12e86be23fde7f0cb
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0e029aa848a6630ae00c834dd2b924dc4ebce537
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762194"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671778"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString Yöntemi
+
 Belirtilen kültür için bir HRESULT değerini uygun bir hata iletisine çevirir.  
   
  Bu yöntem aşağıdaki işlevlerin yerini alır:  
@@ -42,6 +43,7 @@ HRESULT LoadErrorString(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `iResourceID`  
  'ndaki Çevrilecek HRESULT.  
   
@@ -49,26 +51,28 @@ HRESULT LoadErrorString(
  dışı Verilen HRESULT ile ilişkilendirilen ileti dizesi.  
   
  `pcchBuffer`  
- [in, out] `pwzbuffer`Arabellek taşmalarını önlemek için boyutu. `pwzbuffer`Null ise, `pcchBuffer` `pwzbuffer` ön ayırmaya izin vermek için beklenen boyutunu sağlar.  
+ [in, out] `pwzbuffer` Arabellek taşmalarını önlemek için boyutu. `pwzbuffer`Null ise, `pcchBuffer` `pwzbuffer` ön ayırmaya izin vermek için beklenen boyutunu sağlar.  
   
  `iLocaleID`  
  'ndaki Kültür tanımlayıcısı. Varsayılan kültürü kullanmak için-1 ' i belirtmeniz gerekir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`pcchBuffer`null.|  
-|E_INVALIDARG|`pwzBuffer`null.|  
+|E_POINTER|`pcchBuffer` null.|  
+|E_INVALIDARG|`pwzBuffer` null.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
@@ -76,4 +80,4 @@ HRESULT LoadErrorString(
 
 - [ICLRRuntimeInfo Arabirimi](iclrruntimeinfo-interface.md)
 - [Barındırma Arabirimleri](hosting-interfaces.md)
-- [Barındırma](index.md)
+- [Hosting](index.md)

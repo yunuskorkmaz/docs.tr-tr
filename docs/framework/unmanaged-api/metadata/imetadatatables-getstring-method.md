@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 895c35cf-b95d-4e3b-93b5-cfc1cf9044fc
 topic_type:
 - apiref
-ms.openlocfilehash: 41e7b8193ce3288d526db8d7d8c289b0a053ee4e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ecaa003084064be1071a85aa726c38d773ec0b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489762"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672584"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString Metodu
+
 Geçerli başvuru kapsamındaki tablo sütunundan belirtilen dizindeki dizeyi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT GetString (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ixString`  
  'ndaki Sonraki değeri aramaya başlamak için kullanılacak dizin.  
   
@@ -42,11 +44,12 @@ HRESULT GetString (
  dışı Döndürülen dize değerine yönelik işaretçiye yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

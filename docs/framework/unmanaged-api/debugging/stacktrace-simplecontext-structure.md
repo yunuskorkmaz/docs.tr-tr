@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-ms.openlocfilehash: 45ae947cda5b4ddadfb10f5b2bdc78a95f031703
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 30775b4a6f904d06b9c77e6b2b64aec693c446d7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420699"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671804"
 ---
 # <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext Yapısı
+
 Tam bir yapının yerine kullanılabilecek basit bir bağlam sağlar `CONTEXT` .  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 struct StackTrace_SimpleContext  
@@ -45,9 +46,11 @@ struct StackTrace_SimpleContext
 |`InstructionOffset`|X86 platformlarında yönerge işaretçisi veya giriş yönergesi işaretçisi (EıP).|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Yığın izleme işlevlerinin tipik olarak yalnızca adresi, çerçeve sapmasını ve yığın adresini döndürmesi gerektiğinden, `SimpleContext` büyük bir yapı yerine isteğe bağlı olarak yapıyı kullanabilirsiniz `CONTEXT` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** SOS_Stacktrace. h  

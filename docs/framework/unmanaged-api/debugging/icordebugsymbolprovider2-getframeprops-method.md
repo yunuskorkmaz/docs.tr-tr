@@ -2,17 +2,18 @@
 title: 'ICorDebugSymbolProvider2:: GetFrameProps yöntemi'
 ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
-ms.openlocfilehash: ad44c5a7b2d901967ae354f3c30218a8c7f2c2de
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: ba1fd104c35b6e6dfdfd771f71eb19f8d532a1d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379330"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672017"
 ---
 # <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2:: GetFrameProps yöntemi
+
 Bir yöntemin göreli sanal adresini Başlatan yöntemi ve ana çerçeveye kod göreli sanal adres verildiğinde döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetFrameProps(  
@@ -23,6 +24,7 @@ HRESULT GetFrameProps(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `codeRva`  
  'ndaki Kod göreli sanal adresi.  
   
@@ -38,6 +40,7 @@ HRESULT GetFrameProps(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
