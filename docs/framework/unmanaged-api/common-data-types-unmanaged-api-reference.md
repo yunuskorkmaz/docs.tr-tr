@@ -2,15 +2,16 @@
 title: Ortak Veri Türleri (Yönetilmeyen API Başvurusu)
 ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-ms.openlocfilehash: 86f3886b96d0156ec2f0431369c7a54954cd4cad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c00ff6d0947b5d847a9622dce02bd310491818c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132445"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673988"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Ortak Veri Türleri (Yönetilmeyen API Başvurusu)
-Bu konu, C/C++ `typedef` deyimleri tarafından tanımlanan .NET Framework Için yönetilmeyen API 'ler tarafından kullanılan basit veri türlerini listeler. Bu veri türleri genellikle C/C++ ilkel veri türleri için diğer adlardır. Genellikle, bu veri türlerinin değerleri opaktır; diğer bir deyişle, bunlar belirli bir işlev veya yöntem tarafından, değişiklik yapılmadan diğer işlevlere veya yöntemlere geçirilebilmeleri için döndürülür.  
+
+Bu konu, C/C++ deyimleri tarafından tanımlanan .NET Framework için yönetilmeyen API 'Ler tarafından kullanılan basit veri türlerini listeler `typedef` . Bu veri türleri genellikle C/C++ temel veri türleri için diğer adlardır. Genellikle, bu veri türlerinin değerleri opaktır; diğer bir deyişle, bunlar belirli bir işlev veya yöntem tarafından, değişiklik yapılmadan diğer işlevlere veya yöntemlere geçirilebilmeleri için döndürülür.  
   
 |Veri türü|Tanım|Tanımlı|Açıklama|  
 |---------------|----------------|----------------|-----------------|  
@@ -18,7 +19,7 @@ Bu konu, C/C++ `typedef` deyimleri tarafından tanımlanan .NET Framework Için 
 |AssemblyId|`typedef UINT_PTR AssemblyID;`|CorProf. h|Bir derlemenin tanımlayıcısı.|  
 |ClassID|`typedef UINT_PTR ClassID;`|CorProf. h|Yönetilen bir sınıfın tanımlayıcısı.|  
 |CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|ClrData. h|64 bitlik bir bellek adresi.|
-|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|Kullanılamıyor|64 bitlik bir bellek adresi.|
+|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|Kullanılamaz|64 bitlik bir bellek adresi.|
 |CONNıD|`typedef DWORD CONNID;`|CorDebug. h, mscoree. h|Bir Microsoft SQL Server örneğine bağlı bir iş parçacığının bağlantı tanımlayıcısı.|  
 |ContextId|`typedef UINT_PTR ContextID;`|CorProf. h|Belirli bir yönetilen iş parçacığıyla ilişkili bağlamın tanımlayıcısı.|  
 |COR_PRF_ELT_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|CorProf. h|Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir tanıtıcı.|  
@@ -31,9 +32,9 @@ Bu konu, C/C++ `typedef` deyimleri tarafından tanımlanan .NET Framework Için 
 |mdMethodDef|`typedef mdToken mdMethodDef;`|CorDebug. h|Yöntem tanımı belirteci.|
 |mdToken|`typedef UINT32 mdToken;`|CorProf. h|Meta veri belirteci (meta veri tablosundaki bir satır).|  
 |Modül kimliği|`typedef UINT_PTR ModuleID;`|CorProf. h|Bütünleştirilmiş kod modülünün tanımlayıcısı.|  
-|Uzantının|`typedef UINT_PTR ObjectID;`|CorProf. h|Bir nesnenin tanımlayıcısı.|  
+|ObjectID|`typedef UINT_PTR ObjectID;`|CorProf. h|Bir nesnenin tanımlayıcısı.|  
 |PCCOR_SIGNATURE|`typedef SIZE_T PCCOR_SIGNATURE;`|CorDebug. h|Üye veya meta veri imzası işaretçisi.|
-|Işlem|`typedef UINT_PTR ProcessID;`|CorProf. h|Yönetilen bir işlemin tanımlayıcısı.|  
+|ProcessID|`typedef UINT_PTR ProcessID;`|CorProf. h|Yönetilen bir işlemin tanımlayıcısı.|  
 |ReJitId|`typedef UINT_PTR ReJITID;`|CorProf. h|Bir jderlenen işlevinin tanımlayıcısı.|  
 |SIZE_T|`typedef ULONG_PTR SIZE_T;`|CorSym. h|64 bitlik bir bellek adresine yönelik bir işaretçi.|
 |TASKıD|`typedef UINT64 TASKID;`|CorDebug. h, mscoree. h|[ICLRTask](./hosting/iclrtask-interface.md) örneğinin tanımlayıcısı.|  
@@ -41,4 +42,4 @@ Bu konu, C/C++ `typedef` deyimleri tarafından tanımlanan .NET Framework Için 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilmeyen API Başvurusu](index.md)
+- [Yönetilmeyen API başvurusu](index.md)

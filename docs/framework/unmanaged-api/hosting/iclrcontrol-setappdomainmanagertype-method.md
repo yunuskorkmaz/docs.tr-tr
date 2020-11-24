@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ec57828b-2aad-496d-a35a-e45d4bd7fe77
 topic_type:
 - apiref
-ms.openlocfilehash: e62f9fd6b8421ea131eff0e6b36523718589c921
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28fdd5340aee0fcd9875dd983c8c7649b5491c04
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615838"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674716"
 ---
 # <a name="iclrcontrolsetappdomainmanagertype-method"></a>ICLRControl::SetAppDomainManagerType Yöntemi
+
 <xref:System.AppDomainManager>Uygulama etki alanı yöneticileri için tür olarak türetilmiş bir tür belirler.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,11 +36,12 @@ HRESULT SetAppDomainManagerType (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pwzAppDomainManagerAssembly`  
  'ndaki İstenen türün içinden türetildiği derlemenin adı <xref:System.AppDomainManager> .  
   
  `pwzAppDomainManagerType`  
- 'ndaki `pwzAppDomainManagerAssembly`Özelliklerini uygulayan parametresinde uygulanan türün adı <xref:System.AppDomainManager> .  
+ 'ndaki `pwzAppDomainManagerAssembly` Özelliklerini uygulayan parametresinde uygulanan türün adı <xref:System.AppDomainManager> .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -53,11 +55,12 @@ HRESULT SetAppDomainManagerType (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

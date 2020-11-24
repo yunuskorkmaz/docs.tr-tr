@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93424a87-ba13-4fa1-b4dc-69d44437b7ae
 topic_type:
 - apiref
-ms.openlocfilehash: 4c83ffaf920abe005ba987e0a744e13aa0d3c016
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 199c130d70cfbf0d383c2e0dc148ffe3dc1242d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615676"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673572"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump Yöntemi
+
 Hata raporlama için özel yığın dökümlerinin yapılandırmasını belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,11 +38,12 @@ HRESULT BeginCustomDump (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwFlavor`  
  'ndaki Özel yığın dökümünden sonra oluşturulacak yığın dökümü türünü gösteren bir [ECustomDumpFlavor](ecustomdumpflavor-enumeration.md) değeri.  
   
  `dwNumItems`  
- 'ndaki `items`Dizinin uzunluğu. `dwFlavor`DUMP_FLAVOR_Mini değilse, sıfır olmalıdır `dwNumItems` .  
+ 'ndaki `items` Dizinin uzunluğu. `dwFlavor`DUMP_FLAVOR_Mini değilse, sıfır olmalıdır `dwNumItems` .  
   
  `items`  
  'ndaki Mini döküme eklenecek öğeleri belirten bir [Customdumpitem](customdumpitem-structure.md) örnekleri dizisi. `dwFlavor`DUMP_FLAVOR_Mini değilse, null olmalıdır `items` .  
@@ -61,22 +63,24 @@ HRESULT BeginCustomDump (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `BeginCustomDump`Yöntemi özel yığın dökümü yapılandırmasını ayarlar. [EndCustomDump](iclrerrorreportingmanager-endcustomdump-method.md) yöntemi özel yığın dökümü yapılandırmasını temizler ve ilişkili tüm durumları serbest bırakır. Özel yığın dökümü tamamlandıktan sonra çağrılmalıdır.  
   
 > [!IMPORTANT]
 > Çağırma hatası, `EndCustomDump` belleğin sızmasını sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [CustomDumpItem Yapısı](customdumpitem-structure.md)
-- [ECustomDumpFlavor Sabit Listesi](ecustomdumpflavor-enumeration.md)
+- [ECustomDumpFlavor Numaralandırması](ecustomdumpflavor-enumeration.md)
 - [ICLRErrorReportingManager Arabirimi](iclrerrorreportingmanager-interface.md)

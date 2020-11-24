@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ac5c1245-9acf-4271-9c08-3d9b7c670df3
 topic_type:
 - apiref
-ms.openlocfilehash: 69ba58cc8c5235a15749281b3107481be9528f84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 42a9fc1a05e97bbd893f0a2e77087e6524ad844f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503984"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674547"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen Yöntemi
+
 Tanımlayıcı ad kullanımı için yeni bir ortak/özel anahtar çifti oluşturur.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,8 +38,9 @@ HRESULT StrongNameKeyGen (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `wszKeyContainer`  
- 'ndaki İstenen anahtar kapsayıcısı adı. `wszKeyContainer`geçici bir ad oluşturmak için boş olmayan bir dize ya da null olmalıdır.  
+ 'ndaki İstenen anahtar kapsayıcısı adı. `wszKeyContainer` geçici bir ad oluşturmak için boş olmayan bir dize ya da null olmalıdır.  
   
  `dwFlags`  
  'ndaki Anahtarın kaydedilip edilmeyeceğini belirten bir değer. Aşağıdaki değerler desteklenir:  
@@ -54,17 +56,20 @@ HRESULT StrongNameKeyGen (
  dışı Bayt cinsinden boyutu `ppbKeyBlob` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK`Yöntem başarıyla tamamlanırsa; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
+
+ `S_OK` Yöntem başarıyla tamamlanırsa; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  [ICLRStrongName:: StrongNameKeyGen](iclrstrongname-strongnamekeygen-method.md) yöntemi 1024 bitlik bir anahtar oluşturur. Anahtar alındıktan sonra, ayrılan belleği serbest bırakmak için [ICLRStrongName:: StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md) metodunu çağırmanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

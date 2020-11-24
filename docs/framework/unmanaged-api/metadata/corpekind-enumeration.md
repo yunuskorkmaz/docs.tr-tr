@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-ms.openlocfilehash: 8b6eab8156f72847eb6dd3369950f9b46a3fc877
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 001be0c5e8897bacf76d2a044fb9400768473052
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007565"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673547"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind Numaralandırması
+
 [IMetaDataImport2:: GetPEKind](imetadataimport2-getpekind-method.md)çağrısından döndürülen bir taşınabilir YÜRÜTÜLEBILIR (PE) dosyasını tanımlayan değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorPEKind {  
@@ -51,9 +52,11 @@ typedef enum CorPEKind {
 |pe32BitPreferred|Bu PE dosyasının platformdan bağımsız olduğunu ve 32 bitlik bir ortamda yüklenmesinin tercih edildiğini gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu değerler bit düzeyinde kombinasyonlara uygulanabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

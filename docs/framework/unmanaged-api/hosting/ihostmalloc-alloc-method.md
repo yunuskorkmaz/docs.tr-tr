@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3007f5e-d75d-4b37-842b-704e9edced5e
 topic_type:
 - apiref
-ms.openlocfilehash: 6f58e2290afa166d48306c0bbb50edd1df36888b
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 5858b03676db0839621b121131ded4da9950ce88
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804640"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675132"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc Yöntemi
+
 Konağın yığından belirtilen bellek miktarını ayırmasını ister.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT Alloc (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cbSize`  
  'ndaki Geçerli bellek ayırma isteğinin bayt cinsinden boyutu.  
   
@@ -49,7 +51,7 @@ HRESULT Alloc (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Alloc`başarıyla döndürüldü.|  
+|S_OK|`Alloc` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -58,14 +60,16 @@ HRESULT Alloc (
 |E_OUTOFMEMORY|Ayırma isteğini tamamlamaya yetecek miktarda bellek yoktu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR, `IHostMalloc` [IHostMemoryManager:: createmayırma](ihostmemorymanager-createmalloc-method.md) yöntemini çağırarak bir örneğe bir arabirim işaretçisi alır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

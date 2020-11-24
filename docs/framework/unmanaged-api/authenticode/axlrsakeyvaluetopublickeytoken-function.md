@@ -8,18 +8,18 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
-ms.openlocfilehash: 1f53df33a65d3f75b7574eda3507e370c2e086ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c1e2bfc7fd55e807af68744e28faa473daea772
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099826"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674222"
 ---
 # <a name="_axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken işlevi
 
 Bir mod ve üs değeri bir tanımlayıcı ad ortak anahtar belirtecine dönüştürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT _AxlRSAKeyValueToPublicKeyToken (  
@@ -30,17 +30,19 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pModulusBlob`  
- 'ndaki Base64 kodlu mod Blobu (\<Mod > öğesinden).  Bkz. [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) yapısı.  
+ 'ndaki Base64 ile kodlanmış mod Blobu (öğesinden \<Modulus> ).  [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) yapısına bakın.  
   
  `pExponentBlob`  
- 'ndaki Base64 ile kodlanmış üs Blobu (\<üs > öğesinden). Bkz. [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) yapısı.  
+ 'ndaki Base64 ile kodlanmış üs Blobu (öğesinden \<Exponent> ). [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) yapısına bakın.  
   
  `ppwszPublicKeyToken`  
  dışı Onaltılık kodlanmış ortak anahtar belirtecini almak için bir WCHAR * işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- işlev başarılı olursa `S_OK`. Aksi takdirde, bir hata kodu döndürür.  
+
+ `S_OK` işlev başarılı olursa. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

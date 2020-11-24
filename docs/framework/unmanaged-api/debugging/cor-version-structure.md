@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 5efaee1c-a001-4c73-9525-4160f4c71567
 topic_type:
 - apiref
-ms.openlocfilehash: cc9a67e16635209c3bf303e97dc3e5938943a653
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 874c0520482cc5a3bbfcdd17924edee84fe91ff5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099086"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675327"
 ---
 # <a name="cor_version-structure"></a>COR_VERSION Yapısı
+
 Ortak dil çalışma zamanının Standart Dört parçalı sürüm numarasını depolar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _COR_VERSION {  
@@ -45,16 +46,18 @@ typedef struct _COR_VERSION {
 |`dwSubBuild`|Alt yapı numarası.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Sürüm numarası 1.0.3705.288 ise, 1 ana sürüm numarasıdır, 0 küçük sürüm numarasıdır, 3705 derleme numarasıdır ve 288 alt yapı numarasıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

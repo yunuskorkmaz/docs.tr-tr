@@ -2,14 +2,15 @@
 title: msxsl:node-set() İşlevi Desteği
 ms.date: 03/30/2017
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 26ae3014af93377dc106b5638ba194bd38e3dc9e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6c84e3789916e8d842e51e8417cb27505cb5cba6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818550"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673403"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>msxsl:node-set() İşlevi Desteği
+
 `msxsl:node-set`İşlevi, bir sonuç ağacı parçasını bir düğüm kümesine dönüştürmenize olanak sağlar. Sonuçta elde edilen düğüm kümesi her zaman tek bir düğüm içerir ve ağacın kök düğümüdür.  
   
 > [!NOTE]
@@ -18,6 +19,7 @@ ms.locfileid: "94818550"
  `msxsl:node-set`İşlevi, bir sonuç ağacı parçasını bir düğüm kümesine dönüştürmenize olanak sağlar. Sonuçta elde edilen düğüm kümesi her zaman tek bir düğüm içerir ve ağacın kök düğümüdür.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnekte, `$books` stil sayfasındaki düğüm ağacı olan bir değişkendir. İşleviyle birlikte bulunan for-each deyimleri, `node-set` kullanıcının bu düğüm ağacı üzerinde bir düğüm kümesi olarak yinemasına olanak tanır.  
   
 ## <a name="nodesetxsl"></a>nodeset. Xsl  
@@ -43,6 +45,7 @@ ms.locfileid: "94818550"
 ```  
   
 ## <a name="output"></a>Çıkış  
+
  Dönüşümün çıktısı  
   
 ```xml  

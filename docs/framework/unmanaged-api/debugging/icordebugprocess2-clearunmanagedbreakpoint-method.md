@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-ms.openlocfilehash: 2b228383c3b393fe43f60d39e59cca37af36233f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a713fd006f1e9ad8fe7109651c2cda5025da3566
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212500"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673949"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint Yöntemi
+
 Belirtilen adresteki daha önce ayarlanan bir kesme noktasını kaldırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ClearUnmanagedBreakpoint (  
@@ -34,10 +35,12 @@ HRESULT ClearUnmanagedBreakpoint (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `address`  
- 'ndaki `CORDB_ADDRESS`Kesme noktasının ayarlandığı adresi belirten bir değer.  
+ 'ndaki `CORDB_ADDRESS` Kesme noktasının ayarlandığı adresi belirten bir değer.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Belirtilen kesme noktası daha önce [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)için daha önceki bir çağrı tarafından ayarlanmıştır.  
   
  `ClearUnmanagedBreakpoint`Yöntemi, hata ayıklamakta olan işlem çalışırken çağrılabilir.  
@@ -45,6 +48,7 @@ HRESULT ClearUnmanagedBreakpoint (
  `ClearUnmanagedBreakpoint`Hata ayıklayıcı yalnızca yönetilen modda eklenmişse veya belirtilen adreste hiçbir kesme noktası yoksa, yöntemi bir hata kodu döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: d821413e67b36392d936499cd22f2e065f1556ec
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cef817b52718acfbc4360e9d3742a5a78abd3afe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503854"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675054"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent Yöntemi
+
 Belirtilen üyenin [ımetadatayay::D efineMemberRef](imetadataemit-definememberref-method.md)öğesine yapılan önceki bir çağrı tarafından tanımlandığı gibi, belirtilen türün bir üyesi olduğunu ve [ımetadatayayma::D efinetypedef](imetadataemit-definetypedef-method.md)'in bir önceki çağrısıyla tanımlanan bir üyesini olduğunu belirler.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,18 +36,20 @@ HRESULT SetParent (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `mr`  
- 'ndaki `mdMemberRef`Yeni bir üst öğe alacak belirteç.  
+ 'ndaki `mdMemberRef` Yeni bir üst öğe alacak belirteç.  
   
  `tk`  
- 'ndaki `mdToken`Yeni üst öğe için.  
+ 'ndaki `mdToken` Yeni üst öğe için.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7dcdcc6d9d0106af1bb83ee591cff76239b416
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d319382b577844a804c3e4562676491a15de5f63
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504462"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673793"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg İşlevi
+
 Bir XML dosyasından okunan sürüm bilgilerini kullanarak ortak dil çalışma zamanını (CLR) bir işleme yükler.  
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
@@ -40,8 +41,9 @@ HRESULT CorBindToRuntimeByCfg (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pCfgStream`  
- 'ndaki `IStream`XML dosyasını okuyan bir nesne işaretçisi.  
+ 'ndaki `IStream` XML dosyasını okuyan bir nesne işaretçisi.  
   
  `reserved`  
  'ndaki Gelecekte kullanılmak üzere ayrılmıştır. Değer olarak 0 (sıfır) kullanın.  
@@ -59,14 +61,16 @@ HRESULT CorBindToRuntimeByCfg (
  dışı Döndürülen arabirimin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  XML dosyasının biçimi, standart uygulama yapılandırma dosyasından sonra modellenir. XML dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosya şeması](../../configure-apps/file-schema/index.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kitaplık:** MSCorEE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

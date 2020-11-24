@@ -8,17 +8,18 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
-ms.openlocfilehash: 7cd25a24533b04dc45ee734f9e9639391311405a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 388814d1c63f048c0aa231a1d0058a390cba9493
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099739"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674066"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense İşlevi
+
 Authenticode XrML lisansının geçerliliğini doğrular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CertVerifyAuthenticodeLicense (  
@@ -30,10 +31,11 @@ HRESULT CertVerifyAuthenticodeLicense (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pLicenseBlob`  
  'ndaki Doğrulanacak olan Authenticode XrML lisansı.  
   
- Bkz. [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) yapısı.  
+ [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) yapısına bakın.  
   
  `dwFlags`  
  'ndaki Seçim. Aşağıdaki değerlerden oluşan bir bileşim:  
@@ -51,7 +53,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 - AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
- dışı İmzalayan bilgilerini almak için. Lisans imzalanmadıysa, `dwError` TRUST_E_NOSIGNATURE olarak ayarlanır. Bu, kullandıktan sonra [CertFreeAuthenticodeSignerInfo](certfreeauthenticodesignerinfo-function.md) işlevini kullanarak kaynakların serbest bir şekilde kullanıma yönelik sorumluluğundadır.  
+ dışı İmzalayan bilgilerini almak için. Lisans imzalanmamışsa, `dwError` TRUST_E_NOSIGNATURE olarak ayarlanır. Bu, kullandıktan sonra [CertFreeAuthenticodeSignerInfo](certfreeauthenticodesignerinfo-function.md) işlevini kullanarak kaynakların serbest bir şekilde kullanıma yönelik sorumluluğundadır.  
   
  Bkz. [AXL_AUTHENTICODE_SIGNER_INFO yapısı](axl-authenticode-signer-info-structure.md).  
   
@@ -61,7 +63,8 @@ HRESULT CertVerifyAuthenticodeLicense (
  Bkz. [AXL_AUTHENTICODE_TIMESTAMPER_INFO yapısı](axl-authenticode-timestamper-info-structure.md).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa `S_OK` döndürür. Aksi takdirde, bir hata kodu döndürür.  
+
+ `S_OK`Başarılı olursa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

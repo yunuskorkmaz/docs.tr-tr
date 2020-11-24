@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-ms.openlocfilehash: 1e6ee1f2f497ef30a5390e7afac55c54705248ed
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4c3e0953d71020ba62ee4ab68aa9e21ea3f0f521
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007812"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675041"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps Yöntemi
+
 [Imetadatayayma::D efinePermissionSet](imetadataemit-definepermissionset-method.md)için önceki bir çağrı tarafından tanımlanan izin kümesinin meta veri imzasının özelliklerini ayarlar veya güncelleştirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -38,6 +39,7 @@ HRESULT SetPermissionSetProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `tk`  
  'ndaki Tasarlankullanılacak nesneyi temsil eden bir meta veri belirteci.  
   
@@ -51,14 +53,15 @@ HRESULT SetPermissionSetProps (
  'ndaki Bayt cinsinden boyutu `pvPermission` .  
   
  `ppm`  
- dışı `mdPermission`Güncelleştirilmiş izinleri temsil eden bir meta veri belirteci.  
+ dışı `mdPermission` Güncelleştirilmiş izinleri temsil eden bir meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

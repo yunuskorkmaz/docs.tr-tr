@@ -16,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5e3c3958-80bb-43b1-a96b-dd3e6dbd9cd7
 topic_type:
 - apiref
-ms.openlocfilehash: 1d42292705dae03e9bf1a1555508dfb69cebde82
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 575e194cf952f02a3fe4fce9e955e45e1bc3653d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132429"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673919"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration İşlevi
+
 Geçerli ortak dil çalışma zamanı (CLR) Continue-, [EnumerateCLRs işlevi](enumerateclrs-function.md)tarafından döndürülen bir dizi tanıtıcıda bulunan Başlangıç olaylarını kapatır ve tanıtıcı ve dize yolu dizileri için belleği serbest bırakır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CloseCLREnumeration (  
@@ -37,6 +38,7 @@ HRESULT CloseCLREnumeration (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pHandleArray`  
  'ndaki [EnumerateCLRs işlevinden](enumerateclrs-function.md)döndürülen olay tanıtıcısı dizisine yönelik işaretçi.  
   
@@ -44,23 +46,25 @@ HRESULT CloseCLREnumeration (
  'ndaki [EnumerateCLRs işlevinden](enumerateclrs-function.md)döndürülen CLR dize yollarının dizisine yönelik işaretçi.  
   
  `dwArrayLength`  
- 'ndaki `pHandleArray` ya da `pStringArray` boyutunu (uzunluk) içeren DWORD (aynı).  
+ 'ndaki Ya da (uzunluk) boyutunu ( `pHandleArray` aynı) IÇEREN DWORD `pStringArray` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  S_OK  
  [EnumerateCLRs işlevi](enumerateclrs-function.md) tarafından açılan tutamaçlar kapatılır ve tanıtıcı ve dize dizileri için ayrılan bellek serbest bırakılır.  
   
  E_INVALIDARG  
- `pHandleArray` uzunluğu `dwArrayLength`geçirilen uzunluğa uymuyor.  
+ Uzunluğu `pHandleArray` geçilen uzunlukla eşleşmiyor `dwArrayLength` .  
   
- E_FAıL (veya diğer E_ dönüş kodları)  
- İşlev, `pHandleArray` ve `pStringArray`için belleği serbest gönderemedi.  
+ E_FAIL (veya diğer E_ dönüş kodları)  
+ İşlevi ve için belleği serbest bırakılamıyor `pHandleArray` `pStringArray` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üstbilgi:** dbgshim. h  
   
- **Kitaplık:** dbgshim. dll  
+ **Kitaplık:** dbgshim.dll  
   
  **.NET Framework sürümleri:** 3,5 SP1

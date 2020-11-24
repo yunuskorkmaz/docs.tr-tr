@@ -5,20 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-ms.openlocfilehash: 791c1d16db6a2079ccccebf4dc33d5a0eb12d3c5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9b12e60fcfac8c8fc4c2f2c80aac7400dfc8d6f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824980"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673468"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verileri Seçme
+
 Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathDocument> XPath ifadesi kullanarak bir veya nesnesindeki düğüm kümesi seçmek için kullanılan bir yöntemler kümesi sağlar <xref:System.Xml.XmlDocument> . Seçili düğüm kümesi üzerinde yineleme yapabilirsiniz.  
   
 ## <a name="xpathnavigator-selection-methods"></a>XPathNavigator seçim yöntemleri  
+
  Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathDocument> XPath ifadesi kullanarak bir veya nesnesindeki düğüm kümesi seçmek için kullanılan bir yöntemler kümesi sağlar <xref:System.Xml.XmlDocument> . <xref:System.Xml.XPath.XPathNavigator>Sınıfı ayrıca, bir XPath ifadesi kullanmaktan daha hızlı üst, alt ve alt düğümleri seçmek için iyileştirilmiş bir yöntemler kümesi sağlar. Seçili düğüm kümesi, <xref:System.Xml.XPath.XPathNodeIterator> <xref:System.Xml.XPath.XPathNavigator> tek bir seçili düğüm olması durumunda bir nesne veya nesne içinde döndürülür.  
   
 ### <a name="selecting-nodes-using-xpath-expressions"></a>XPath Ifadeleri kullanarak düğüm seçme  
+
  Bir XPath ifadesi kullanarak bir düğüm kümesi seçmek için aşağıdaki seçim yöntemlerinden birini kullanın.  
   
 - <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
@@ -57,6 +60,7 @@ while(nodes.MoveNext())
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="optimized-selection-methods"></a>İyileştirilmiş seçim yöntemleri  
+
  <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>Sınıfının, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A> ve <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> yöntemleri, <xref:System.Xml.XPath.XPathNavigator> Genel, alt ve üst düğümleri almak Için yaygın olarak kullanılan XPath ifadelerini temsil eder. Bu yöntemler performans için iyileştirilmiştir ve bunlara karşılık gelen XPath ifadelerinden daha hızlıdır. <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A> Ve <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> yöntemleri bir <xref:System.Xml.XPath.XPathNodeType> değere veya seçilecek düğümlerin yerel adına ve ad alanı URI 'sine göre üst, alt ve alt düğümleri seçer. Seçili üst öğe, alt ve alt düğümleri bir <xref:System.Xml.XPath.XPathNodeIterator> nesnesinde döndürülür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -2,12 +2,12 @@
 title: DotNet paketi komutu
 description: DotNet Pack komutu .NET projeniz için NuGet paketleri oluşturur.
 ms.date: 04/28/2020
-ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634239"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674807"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -118,7 +118,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - **`-s|--serviceable`**
 
-  Paketteki hizmet verebilir bayrağını ayarlar. Daha fazla bilgi için bkz. [.net blogu: .NET 4.5.1, .net NuGet kitaplıkları Için Microsoft güvenlik güncelleştirmelerini destekler](https://aka.ms/nupkgservicing).
+  Paketteki hizmet verebilir bayrağını ayarlar. Daha fazla bilgi için bkz. [.net blogu: .NET Framework 4.5.1, .net NuGet kitaplıkları Için Microsoft güvenlik güncelleştirmelerini destekler](https://aka.ms/nupkgservicing).
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
@@ -185,7 +185,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
   ```
 
   , Ve kullanma hakkında daha fazla bilgi için `NuspecFile` `NuspecBasePath` `NuspecProperties` aşağıdaki kaynaklara bakın:
-  
+
   - [. Nuspec kullanarak paketleme](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Özelleştirilmiş paket oluşturmak için gelişmiş uzantı noktaları](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
   - [Genel Özellikler](/visualstudio/msbuild/msbuild-properties#global-properties)
