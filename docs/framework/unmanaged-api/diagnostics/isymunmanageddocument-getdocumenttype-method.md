@@ -15,30 +15,33 @@ helpviewer_keywords:
 ms.assetid: 2d381ab1-7e7c-4281-af2b-e54d879b3ef8
 topic_type:
 - apiref
-ms.openlocfilehash: 5ec69aa06816b117fb05853001e59532629504c4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d30ee9318d76aaf3ad2cde789ae292aed54f457e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614610"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689686"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="23069-102">ISymUnmanagedDocument::GetDocumentType Metodu</span><span class="sxs-lookup"><span data-stu-id="23069-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="23069-103">Bu belgenin belge türünü alır.</span><span class="sxs-lookup"><span data-stu-id="23069-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="2dc78-102">ISymUnmanagedDocument::GetDocumentType Metodu</span><span class="sxs-lookup"><span data-stu-id="2dc78-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+
+<span data-ttu-id="2dc78-103">Bu belgenin belge türünü alır.</span><span class="sxs-lookup"><span data-stu-id="2dc78-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23069-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="23069-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2dc78-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="2dc78-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="23069-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="23069-105">Parameters</span></span>  
- `pRetVal`  
- <span data-ttu-id="23069-106">dışı Belge türünü alan bir değişkene yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="23069-106">[out] Pointer to a variable that receives the document type.</span></span>  
-  
-## <a name="return-value"></a><span data-ttu-id="23069-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="23069-107">Return Value</span></span>  
- <span data-ttu-id="23069-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="23069-108">S_OK if the method succeeds.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="23069-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="23069-109">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="2dc78-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2dc78-105">Parameters</span></span>  
 
-- [<span data-ttu-id="23069-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="23069-110">ISymUnmanagedDocument Interface</span></span>](isymunmanageddocument-interface.md)
+ `pRetVal`  
+ <span data-ttu-id="2dc78-106">dışı Belge türünü alan bir değişkene yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="2dc78-106">[out] Pointer to a variable that receives the document type.</span></span>  
+  
+## <a name="return-value"></a><span data-ttu-id="2dc78-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="2dc78-107">Return Value</span></span>  
+
+ <span data-ttu-id="2dc78-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="2dc78-108">S_OK if the method succeeds.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="2dc78-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2dc78-109">See also</span></span>
+
+- [<span data-ttu-id="2dc78-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2dc78-110">ISymUnmanagedDocument Interface</span></span>](isymunmanageddocument-interface.md)
