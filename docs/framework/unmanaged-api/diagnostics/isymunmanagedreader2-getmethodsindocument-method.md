@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-ms.openlocfilehash: 68a0f9ec8793d465a6fa3b1cb6936eddd7be4c8f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2e7eb183200c6e6de8ee18b58aab457c7e7bf2eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615416"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675756"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument Yöntemi
+
 Belirtilen belgede satır bilgilerine sahip her yöntemi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,24 +38,27 @@ HRESULT GetMethodsInDocument(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `document`  
  'ndaki Belgeye yönelik bir işaretçi.  
   
  `cMethod`  
- 'ndaki `ULONG32`Dizi boyutunu belirten bir `pRetVal` .  
+ 'ndaki `ULONG32` Dizi boyutunu belirten bir  `pRetVal` .  
   
  `pcMethod`  
- dışı `ULONG32`Yöntemlerini içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Yöntemlerini içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
   
  `pRetVal`  
  dışı Yöntemleri alan arabelleğin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader2 Yöntemi](isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2 Arabirimi](isymunmanagedreader2-interface.md)

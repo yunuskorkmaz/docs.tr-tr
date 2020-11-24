@@ -3,12 +3,12 @@ title: XML şema tanımı Aracı (XSD.exe'nin)
 description: XML serileştirici Oluşturucusu, belirtilen derlemedeki türler için bir XML serileştirme derlemesi oluşturur ve bu da XmlSerializer 'ın başlangıç performansını geliştirir.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a66ebfee3a461bb800e61e4f1d789f497da2f9d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281759"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676614"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML şema tanımı Aracı (XSD.exe'nin)
 
@@ -50,6 +50,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |**/p \[ arameters \] :** _file.xml_|Çeşitli işlem modları için seçenekler belirtilen .xml dosyasından okuyun. Kısa biçim `/p:` . Daha fazla bilgi için, [açıklamalar](#remarks) bölümüne bakın.|
 
 ## <a name="xsd-file-options"></a>XSD dosyası seçenekleri
+
  .Xsd dosyaları için aşağıdaki seçeneklerden birini belirtmelisiniz.
 
 |Seçenek|Açıklama|
@@ -205,6 +206,7 @@ Aşağıdaki tabloda öğesi ile de kullanılabilecek öznitelikler gösterilmek
 |Yardım|Araç için komut sözdizimini ve seçenekleri görüntüler. Ayarlanan `true` veya `false`.|
 
 ## <a name="examples"></a>Örnekler
+
  Aşağıdaki komutu bir XML şema oluşturur `myFile.xdr` ve geçerli dizine kaydeder.
 
 ```console

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-ms.openlocfilehash: 42cb4e76bb77aebcee3b28035635a877513cdc04
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 49b0298f4fa776c93f89ac380ce65568b493379b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008995"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677121"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation Sabit Listesi
+
 Yerel başvuruların işleme için bayrak değerlerini içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorLocalRefPreservation  
@@ -44,6 +45,7 @@ typedef enum CorLocalRefPreservation
 |`MDPreserveLocalMemberRef`|Yerel üye başvurularını koruma.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

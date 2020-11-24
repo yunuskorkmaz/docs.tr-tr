@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa3cc15d-058e-4e6f-b03e-39569646ba47
 topic_type:
 - apiref
-ms.openlocfilehash: b372021fcda39d9973d96a9c39e93e38617887a6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bca84fdba575ed9bfe572b9fd7a5869620962de6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615468"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675873"
 ---
 # <a name="isymunmanagedreader-interface"></a>ISymUnmanagedReader Arabirimi
+
 Bir sembol deposu içindeki belgelere, yöntemlere ve değişkenlere erişim sağlayan bir sembol okuyucuyu temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -47,9 +48,10 @@ Bir sembol deposu içindeki belgelere, yöntemlere ve değişkenlere erişim sa�
 |[UpdateSymbolStore Yöntemi](isymunmanagedreader-updatesymbolstore-method.md)|Var olan sembol deposunu bir Delta sembol deposu ile güncelleştirir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedReader2 Yöntemi](isymunmanagedreader2-interface.md)
+- [Tanılama Sembol Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedReader2 Arabirimi](isymunmanagedreader2-interface.md)

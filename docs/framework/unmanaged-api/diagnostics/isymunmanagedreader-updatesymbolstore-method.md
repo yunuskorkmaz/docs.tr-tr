@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-ms.openlocfilehash: ccc787aa1c820a486d9a513055c9c9834b90bd1a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6670d985eed4c55550b23d3f4110ee20f3b75661
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615442"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675834"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore Yöntemi
+
 Var olan sembol deposunu bir Delta sembol deposu ile güncelleştirir. Bu yöntem, sembol deposunu değişimleri ile orijinal taşınabilir yürütülebilir (PE) dosyası eşleşecek şekilde güncelleştirmek için Düzenle ve devam et senaryolarında kullanılır.  
   
 > [!NOTE]
@@ -37,6 +38,7 @@ HRESULT UpdateSymbolStore (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `filename`  
  'ndaki Sembol deposunu içeren dosyanın adı.  
   
@@ -44,9 +46,11 @@ HRESULT UpdateSymbolStore (
  'ndaki Parametresi için alternatif olarak kullanılan dosya akışı `filename` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -2,17 +2,18 @@
 title: 'ICorDebugStaticFieldSymbol:: GetSize yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
-ms.openlocfilehash: e36c94bf411e75f915cca86aee74cdf161674d25
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 34567247935588363d96b141717d7ec07bb76546
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379408"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677217"
 ---
 # <a name="icordebugstaticfieldsymbolgetsize-method"></a>ICorDebugStaticFieldSymbol:: GetSize yöntemi
+
 Statik alanın bayt cinsinden boyutunu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSize(  
@@ -21,6 +22,7 @@ HRESULT GetSize(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pcbSize`  
  dışı Alanın uzunluğuna yönelik bir işaretçi.  
   
@@ -30,6 +32,7 @@ HRESULT GetSize(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

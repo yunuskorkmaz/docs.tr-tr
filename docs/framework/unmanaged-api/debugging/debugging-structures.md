@@ -6,18 +6,19 @@ helpviewer_keywords:
 - debugging structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
-ms.openlocfilehash: a18094fb2621478dbdb4bbf672df436234112ed0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bf84f8ddb1e86da3b9d0e4326584e61304640558
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793751"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676276"
 ---
 # <a name="debugging-structures"></a>Hata Ayıklama Yapıları
 
 Bu bölümde hata ayıklama API 'sinin kullandığı yönetilmeyen yapılar açıklanmaktadır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
+
  [CLRDATA_ADDRESS_RANGE yapısı](clrdata-address-range-structure.md) Bir adres aralığı tanımlar.
 
  [CLRDATA_IL_ADDRESS_MAP yapısı](clrdata-il-address-map-structure.md) Adres eşleme için bir Il tanımlar
@@ -68,16 +69,16 @@ Bu bölümde hata ayıklama API 'sinin kullandığı yönetilmeyen yapılar aç�
 
  [Dacprejdata yapısı](dacprejitdata-structure.md) Belirli bir profil oluşturucu tarafından işaretlenmiş yöntem hakkında temel bilgileri tanımlar.
 
- [StackTrace_SimpleContext yapısı](stacktrace-simplecontext-structure.md) Tam `CONTEXT` yapısının yerine kullanılabilecek basit bir bağlam sağlar.
+ [StackTrace_SimpleContext yapısı](stacktrace-simplecontext-structure.md) Tam bir yapının yerine kullanılabilecek basit bir bağlam sağlar `CONTEXT` .
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
- [Hata Ayıklama Coclass’ları](debugging-coclasses.md)
+ [Hata Ayıklama Yardımcı Sınıfları](debugging-coclasses.md)
 
  [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
 
  [Hata Ayıklama Genel Statik İşlevleri](debugging-global-static-functions.md)
 
- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
+ [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)
 
  [Hata Ayıklama](index.md)

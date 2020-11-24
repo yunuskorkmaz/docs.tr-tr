@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-ms.openlocfilehash: 896e797acc76e8d8034bd964e488317a62eed97b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1ae9fc1f1154866945d40cd63042fa8a43b88905
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378771"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677303"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext Yöntemi
+
 [Icordebugstackyürüme](icordebugstackwalk-interface.md) nesnesinin geçerli bağlamını iş parçacığı için geçerli bir bağlam olarak ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetContext([in] CorDebugSetContextFlag flag,  
@@ -34,6 +35,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `flag`  
  'ndaki Bir [CorDebugSetContextFlag](cordebugsetcontextflag-enumeration.md) bayrağı, bağlamın yığındaki etkin kareden mi yoksa yığının geriye doğru bir şekilde mi devraldığını gösterir.  
   
@@ -41,9 +43,10 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
  'ndaki Arabelleğin ayrılan boyutu `CONTEXT` .  
   
  `context`  
- 'ndaki `CONTEXT`Arabellek.  
+ 'ndaki `CONTEXT` Arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
@@ -53,9 +56,10 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 |E_INVALIDARG|Bağlam null.|  
 |HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER)|Bağlam arabelleği çok küçük.|  
   
-## <a name="exceptions"></a>Özel durumlar  
+## <a name="exceptions"></a>Özel Durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, iş parçacığının geçerli bağlamını değiştirmez.  
   
  Geçerli içeriğin geçersiz bir bağlam olarak ayarlanması, yığın denetçisi 'nden öngörülemeyen sonuçlara neden olabilir.  
@@ -63,6 +67,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
  [Icordebugstackizlenecek yol:: GetContext](icordebugstackwalk-getcontext-method.md) yöntemini hemen çağırarak, bu bağlamın tam bit düzeyinde bir kopyasını alabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

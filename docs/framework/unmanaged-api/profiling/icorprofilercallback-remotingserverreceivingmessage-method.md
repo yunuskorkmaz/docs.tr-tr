@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-ms.openlocfilehash: 157e6bc6cb9603fa9558ad6d39f0b086849fc7b0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0fc84a15d3250d5103c1dbc6486960f0ea780a2b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499902"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676822"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage Yöntemi
+
 Profil oluşturucuya işlemin bir uzak yöntem çağırma veya etkinleştirme isteği aldığını bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT RemotingClientSendingMessage(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pCookie`  
  'ndaki Şu koşullarda [ICorProfilerCallback:: RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md) içinde belirtilen değere karşılık gelen bir değer:  
   
@@ -46,12 +48,14 @@ HRESULT RemotingClientSendingMessage(
  Bu, uzaktan iletişim çağrılarının ve mantıksal çağrı yığınının oluşturulmasına kolay bir şekilde eşleştirilmesini sağlar.  
   
  `fIsAsync`  
- 'ndaki `true`Çağrının zaman uyumsuz olduğu bir değer; Aksi takdirde, `false` .  
+ 'ndaki `true` Çağrının zaman uyumsuz olduğu bir değer; Aksi takdirde, `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  İleti isteği zaman uyumsuz ise, istek herhangi bir rastgele iş parçacığı tarafından hizmet verebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

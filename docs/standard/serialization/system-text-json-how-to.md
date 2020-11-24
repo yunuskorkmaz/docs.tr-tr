@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: aba45a99562b67df17e1ff33ecc3c8bbad63ec30
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1e8c46e11d3a82ca0bce29f9cb7bbc749c219198
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440822"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676731"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -30,7 +30,7 @@ Kod örnekleri, aşağıdaki sınıfa ve türevlerini ifade eder:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
 
-## <a name="namespaces"></a>Ad alanları
+## <a name="namespaces"></a>Ad Alanları
 
 <xref:System.Text.Json>Ad alanı tüm giriş noktalarını ve ana türleri içerir. <xref:System.Text.Json.Serialization>Ad alanı, serileştirme ve seri durumdan çıkarma ile ilgili gelişmiş senaryolar ve özelleştirme için öznitelikler ve API 'leri içerir. Bu makalede gösterilen kod örnekleri, `using` Bu ad alanlarından biri veya her ikisi için yönergeler gerektirir:
 
@@ -116,6 +116,7 @@ UTF-8 ' e seri hale getirmek için <xref:System.Text.Json.JsonSerializer.Seriali
 UTF-8 ' i seri hale getirmek, dize tabanlı yöntemler kullanmaktan daha hızlı% 5-10 daha hızlıdır. Aradaki fark, baytların (UTF-8 olarak) dizelere dönüştürülmesi gerekmez (UTF-16).
 
 ## <a name="serialization-behavior"></a>Serileştirme davranışı
+
 ::: zone pivot="dotnet-5-0"
 
 * Varsayılan olarak, tüm ortak özellikler serileştirilir. [Yoksayılacak özellikleri belirtebilirsiniz](#ignore-properties).

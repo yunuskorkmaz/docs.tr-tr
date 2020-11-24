@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-ms.openlocfilehash: d4936ec32d54a465803d493048cba2b70ed50db6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c1f519dd539a266d61945ad221bccceaa1361779
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818511"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675626"
 ---
 # <a name="user-defined-functions-and-variables"></a>Kullanıcı Tanımlı İşlevler ve Değişkenler
+
 <xref:System.Xml.XPath.XPathNavigator>Sınıfı, verilerle etkileşim kurmak için kullanılan bir yöntemler kümesi sağlar <xref:System.Xml.XPath.XPathDocument> . XPath sorgu ifadeleri tarafından kullanılmak üzere uzantı işlevleri ve değişkenler uygulayarak standart XPath işlevlerini tamamlayabilirsiniz. <xref:System.Xml.XPath.XPathExpression.SetContext%2A>Yöntemi öğesinden türetilmiş Kullanıcı tanımlı bir bağlamı kabul edebilir <xref:System.Xml.Xsl.XsltContext> . Kullanıcı tanımlı işlevler özel bağlam tarafından çözümlenir.  
   
  Uzantı işlevleri ve değişkenler, XML ekleme saldırılarını önlemeye yardımcı olabilir. Bu senaryolarda, Kullanıcı girişi özel değişkenlere atanır ve işlem yönergeleriyle birleştirilmiş ham giriş olarak değil uzantı işlevleri tarafından işlenir. Uzantı işlevleri ve değişkenler, yalnızca tasarımcı tarafından amaçlanan XML verilerinde davranması için Kullanıcı girişi içerir.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9907b98-4253-4cb6-a296-37ae9977c81a
 topic_type:
 - apiref
-ms.openlocfilehash: 4fa66e10b3920da415a9fc53eee240875b44d9db
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dd9ff09580d6f6d0271fb21dc78c8fc2a9429960
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892850"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677472"
 ---
 # <a name="icordebugcontext-interface"></a>ICorDebugContext Arabirimi
 
@@ -31,6 +31,7 @@ Bir bağlam nesnesini temsil eder. Bu arabirim henüz uygulanmamış.
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

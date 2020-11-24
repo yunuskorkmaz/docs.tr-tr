@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 505a7f6c-d92b-42b4-b539-433f5102ea9b
 topic_type:
 - apiref
-ms.openlocfilehash: 528db447df4d71d67441b05ad29e6a900c59afbb
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 40df1416e68c86efe6d404119cb37277fe21ac56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892818"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677550"
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>ICorDebugComObjectValue Arabirimi
+
 Bir çalışma zamanı çağrılabilir sarmalayıcı (RCW) ile ilişkili bilgileri almak için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -32,9 +33,11 @@ Bir çalışma zamanı çağrılabilir sarmalayıcı (RCW) ile ilişkili bilgile
 |[GetCachedInterfaceTypes Yöntemi](icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|Geçerli nesnenin küçük harf olarak kullanıldığı veya kullanıldığı arabirim türleri için bir Numaralandırıcı sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- "ICorDebugValue" arabiriminin bir örneğinin bir RCW 'yu temsil ettiğini denetlemek için, ile `QueryInterface` `IID_ICorDebugComObjectValue`"ICorDebugValue" üzerinde bir hata ayıklayıcı çağırır.  
+
+ "ICorDebugValue" arabiriminin bir örneğinin bir RCW 'yu temsil ettiğini denetlemek için, `QueryInterface` ile "ICorDebugValue" üzerinde bir hata ayıklayıcı çağırır `IID_ICorDebugComObjectValue` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

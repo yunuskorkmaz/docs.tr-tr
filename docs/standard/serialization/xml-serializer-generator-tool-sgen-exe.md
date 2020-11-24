@@ -3,12 +3,12 @@ title: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 description: XML serileştirici Oluşturucusu, bir derlemedeki türler için bir XML serileştirme derlemesi oluşturur ve bu da XmlSerializer 'ın başlangıç performansını geliştirir.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 80295a9a54b6f9b1970fb65dacdee43b2e938070
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: c2f33236e39f61638118f45f0d5ab5385df27ac3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282355"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676523"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 
@@ -32,7 +32,7 @@ sgen [options]
 |**/a \[ erleme \] :**_dosya adı_|*Dosya adı* tarafından belirtilen derlemede veya yürütülebilir dosyada bulunan tüm türler için serileştirme kodu oluşturur. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
 |**/c \[ ompiler \] :**_Seçenekler_|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  
 |**/d \[ ebug\]**|Bir hata ayıklayıcısı ile kullanılan bir görüntü oluşturur.|  
-|**/f \[ Orce\]**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan değer **false** 'dur.|  
+|**/f \[ Orce\]**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan değer **false**'dur.|  
 |**/Help veya/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/k \[ UT\]**|Serileştirme derlemeye derlenen sonra oluşturulan kaynak dosyaların ve diğer geçici dosyaları silmeyi göstermez. Bu araç belirli bir tür için serileştirme kod oluşturmak olup olmadığını belirlemek için kullanılabilir.|  
 |**/n \[ ologo\]**|Microsoft başlangıç başlığı görüntülenmesini engeller.|  
@@ -45,6 +45,7 @@ sgen [options]
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  XML seri hale getirici oluşturucunun kullanılmadığında bir <xref:System.Xml.Serialization.XmlSerializer> seri hale getirme kodu ve bir seri hale getirme derlemesi her türü için bir uygulama her çalıştırıldığında oluşturur. XML serileştirme başlatmasının performansını artırmak için, bu derlemeleri önceden oluşturmak üzere Sgen.exe aracını kullanın. Bu derlemeleri uygulama ile sonra dağıtılabilir.  
   
  XML seri hale getirici oluşturucunun ayrıca seri hale getirme işlemi türü ilk kez yüklendiğinde isabet bir performans tabi olmayan çünkü sunucularla iletişim kurmak için XML Web hizmeti proxy kullanan istemciler performansını geliştirebilir.  
@@ -54,6 +55,7 @@ sgen [options]
  Serileştirilecek tür içeren derlemenin MyType.dll adlandırılmışsa, ardından ilişkili seri hale getirme derlemesi MyType.XmlSerializers.dll olarak adlandırılır.  
   
 ## <a name="examples"></a>Örnekler  
+
  Aşağıdaki komutu Data.dll adlı derlemesinde bulunan tüm türleri serileştirmek için Data.XmlSerializers.dll adlı bir derleme oluşturur.  
   
 ```console  

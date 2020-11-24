@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 3b47d1559300a462ccda42bc88da43f66c1043ec
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 369335deb67d74ee3cb9fa407533e40716aa3a3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491309"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676874"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps Yöntemi
+
 Bildirim türü, temsilciler için ekleme ve kaldırma yöntemleri ve tüm bayraklar ve diğer ilişkili veriler de dahil olmak üzere, belirtilen olay belirteci tarafından temsil edilen olay için meta veri bilgilerini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -46,6 +47,7 @@ HRESULT GetEventProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ev`  
  'ndaki Meta verilerinin alınacağı olayı temsil eden olay meta veri belirteci.  
   
@@ -83,11 +85,12 @@ HRESULT GetEventProps (
  dışı İçinde döndürülen belirteçlerin sayısı `rmdOtherMethod` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

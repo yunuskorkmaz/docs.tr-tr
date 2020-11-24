@@ -2,12 +2,12 @@
 title: Docker uygulamaları için iç döngü geliştirme iş akışı
 description: Docker uygulamaları için "Inner-loop" geliştirme iş akışı hakkında bilgi edinin.
 ms.date: 08/06/2020
-ms.openlocfilehash: 071e16afede91f4cfd6cbe8662fa68814ffdcdd7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d66274a64591f79f242c1e8a63951b51d94a9ecd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539768"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676536"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -107,7 +107,7 @@ Dağıtılması için bir `DockerFile` özel görüntü ve dağıtılacak kapsay
 
 **Şekil 4-24**. **Çalışma alanına Docker dosyaları Ekle** komutu kullanılarak Docker dosyaları eklendi
 
-Bir DockerFile eklediğinizde, kullanacağınız temel Docker görüntüsünü (kullanma gibi `FROM mcr.microsoft.com/dotnet/core/aspnet` ) belirtirsiniz. Genellikle, [Docker Hub kayıt defterinde](https://hub.docker.com/) ( [.NET Core için bir görüntü](https://hub.docker.com/_/microsoft-dotnet-core/) veya [Node.jsiçin ](https://hub.docker.com/_/node/)bir görüntü gibi) herhangi bir resmi depodan aldığınız bir temel görüntünün en üstünde özel görüntünüzü oluşturacaksınız.
+Bir DockerFile eklediğinizde, kullanacağınız temel Docker görüntüsünü (kullanma gibi `FROM mcr.microsoft.com/dotnet/aspnet` ) belirtirsiniz. Genellikle, [Docker Hub kayıt defterinde](https://hub.docker.com/) ( [.NET Core için bir görüntü](https://hub.docker.com/_/microsoft-dotnet/) veya [Node.jsiçin ](https://hub.docker.com/_/node/)bir görüntü gibi) herhangi bir resmi depodan aldığınız bir temel görüntünün en üstünde özel görüntünüzü oluşturacaksınız.
 
 > [!TIP]
 > Uygulamanızdaki her proje için bu yordamı tekrarlamanız gerekir. Ancak, uzantı ilk kez oluşturulan Docker-Compose dosyasını geçersiz kılacak. Üzerine yazılmaması gerekir, bu nedenle uzantı, Docker-Compose çalıştırmadan önce el ile birleştirebilmeniz için ayrı Docker-Compose dosyaları oluşturur.
@@ -119,12 +119,12 @@ Sürüm numarasına sahip bir dil yığınının resmi deposunu kullanmak, tüm 
 Aşağıda .NET Core kapsayıcısı için örnek bir DockerFile verilmiştir:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["src/WebApi/WebApi.csproj", "src/WebApi/"]
 RUN dotnet restore "src/WebApi/WebApi.csproj"
@@ -141,7 +141,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApi.dll"]
 ```
 
-Bu durumda, görüntü, satıra göre resmi ASP.NET Core Docker görüntüsünün 3,1 sürümünü (Linux ve Windows için çoklu mimari) temel alır `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1` . (Bu konu hakkında daha fazla bilgi için, [ASP.NET Core Docker görüntü](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) sayfasına ve [.NET Core Docker görüntü](https://hub.docker.com/_/microsoft-dotnet-core/) sayfasına bakın).
+Bu durumda, görüntü, satıra göre resmi ASP.NET Core Docker görüntüsünün 3,1 sürümünü (Linux ve Windows için çoklu mimari) temel alır `FROM mcr.microsoft.com/dotnet/aspnet:3.1` . (Bu konu hakkında daha fazla bilgi için, [ASP.NET Core Docker görüntü](https://hub.docker.com/_/microsoft-dotnet-aspnet/) sayfasına ve [.NET Core Docker görüntü](https://hub.docker.com/_/microsoft-dotnet/) sayfasına bakın).
 
 DockerFile 'da, Docker 'ın çalışma zamanında kullanacağınız TCP bağlantı noktasını (bağlantı noktası 80 veya 443) dinleyebildiğini da söyleyebilirsiniz.
 
@@ -154,9 +154,9 @@ Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek 
 
 **Çoklu mimari görüntü depoları kullanma**
 
-Depodaki tek bir görüntü adı, Linux görüntüsü ve Windows görüntüsü gibi platform türevlerini içerebilir. Bu özellik, Microsoft (temel görüntü oluşturucuları) gibi satıcıların birden çok platformu (yani, Linux ve Windows) kapsayacak şekilde tek bir depo oluşturmasını sağlar. Örneğin, Docker Hub kayıt defterinde bulunan [DotNet/Core/ASPNET](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) deposu, aynı görüntü adı kullanılarak Linux ve Windows nano Server için destek sağlar.
+Depodaki tek bir görüntü adı, Linux görüntüsü ve Windows görüntüsü gibi platform türevlerini içerebilir. Bu özellik, Microsoft (temel görüntü oluşturucuları) gibi satıcıların birden çok platformu (yani, Linux ve Windows) kapsayacak şekilde tek bir depo oluşturmasını sağlar. Örneğin, Docker Hub kayıt defterinde bulunan [DotNet/Core/ASPNET](https://hub.docker.com/_/microsoft-dotnet-aspnet/) deposu, aynı görüntü adı kullanılarak Linux ve Windows nano Server için destek sağlar.
 
-Bir Windows ana bilgisayarının [DotNet/Core/ASPNET](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) görüntüsünü çekmek, Windows türevini çeker, ancak aynı görüntü adının bir Linux ana bilgisayardan çekmesinde Linux varyantı çekilir.
+Bir Windows ana bilgisayarının [DotNet/Core/ASPNET](https://hub.docker.com/_/microsoft-dotnet-aspnet/) görüntüsünü çekmek, Windows türevini çeker, ancak aynı görüntü adının bir Linux ana bilgisayardan çekmesinde Linux varyantı çekilir.
 
 **_Sıfırdan taban görüntünüzü oluşturma_**
 
@@ -242,7 +242,7 @@ Bu durumda, bu dosya üç hizmeti tanımlar: Web API hizmeti (özel hizmetiniz),
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>5. Adım: Docker uygulamanızı derleme ve çalıştırma
 
-Uygulamanızda yalnızca tek bir kapsayıcı varsa, bunu yalnızca Docker konağına (VM veya fiziksel sunucu) dağıtarak çalıştırmanız gerekir. Ancak, uygulamanız birden çok hizmetten yapılırsa, _bunu_da oluşturmanız gerekir. Farklı seçenekleri görelim.
+Uygulamanızda yalnızca tek bir kapsayıcı varsa, bunu yalnızca Docker konağına (VM veya fiziksel sunucu) dağıtarak çalıştırmanız gerekir. Ancak, uygulamanız birden çok hizmetten yapılırsa, _bunu_ da oluşturmanız gerekir. Farklı seçenekleri görelim.
 
 **_Seçenek A: tek bir kapsayıcı veya hizmet çalıştırma_**
 
