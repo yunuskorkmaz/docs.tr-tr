@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-ms.openlocfilehash: aa906e314c408b7653e611b07d7ad21d4519b715
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 90ce4e888ddb3a10dd0dfd7e68463311db86742f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616989"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677771"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect Yöntemi
+
 Belirtilen oluşturma için bir çöp toplamayı zorlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT Collect (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `Generation`  
  'ndaki Toplanacak oluşturma. -1 değeri, tüm nesiller koleksiyonunu zorlar.  
   
@@ -41,7 +43,7 @@ HRESULT Collect (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Collect`başarıyla döndürüldü.|  
+|S_OK|`Collect` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -49,14 +51,16 @@ HRESULT Collect (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Collect`Yöntemi, clr 'nin çöp toplayıcısının geçerli durumundan bağımsız olarak bir koleksiyon gerçekleştirmesini zorlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -68,4 +72,4 @@ HRESULT Collect (
 - [ICLRGCManager Arabirimi](iclrgcmanager-interface.md)
 - [CLR Barındırma Arabirimleri](clr-hosting-interfaces.md)
 - [Barındırma Arabirimleri](hosting-interfaces.md)
-- [Barındırma](index.md)
+- [Hosting](index.md)

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-ms.openlocfilehash: 7037065be138c369b847e7f86de7b46fc5ae601a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8b54cb30ec96ad0fb7851af6f2d465fe771886ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616885"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677862"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters Yapısı
+
 Bir olayın tür adını ve olayla ilişkili geçerli özel durumun parametrelerini depolar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _BucketParameters {  
@@ -43,6 +44,7 @@ typedef struct _BucketParameters {
 |`pszParams`|Her biri olayla ilişkili geçerli özel durum için bir parametre belirten dizeler dizisi.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. IDL  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: 860fdcae0d1937f53ee964d9d4631ec812b3d379
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ee8bab4fe7659b1fe5b7edeabc81187d0a13e5bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83379135"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679006"
 ---
 # <a name="how-to-chunk-serialized-data"></a>Nasıl yapılır: öbek serileştirilmiş veriler
 
@@ -46,6 +46,7 @@ Büyük veri kümeleri, Web hizmeti iletilerinde gönderirken oluşan iki sorunl
 2. <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>Öbekli veri akışını okumak ve baytları diske yazmak için yöntemini uygulayın. Bu uygulama, ilerleme çubuğu gibi bir grafik denetimi tarafından kullanılabilecek ilerleme olayları da oluşturur.  
   
 ## <a name="example"></a>Örnek  
+
 Aşağıdaki kod örneği, ASP.NET arabelleğe almayı devre dışı etkinleştiren istemcideki Web yöntemini gösterir. Ayrıca istemci-tarafı uygulaması gösterir <xref:System.Xml.Serialization.IXmlSerializable> verileri chunks arabirimi <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> yöntemi.  
   
 [!code-csharp[HowToChunkSerializedData#1](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#1)]

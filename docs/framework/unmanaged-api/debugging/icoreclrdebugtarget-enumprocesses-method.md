@@ -17,17 +17,18 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 0c1b18f24fd30b5f6d5e85633fc0c25839aba6df
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 7e0219ae0d7d474812865f01e4e2fcfe2e4da991
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396414"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679370"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses Yöntemi
+
 Uzak bir bilgisayarda çalışan işlemi numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumProcesses (  
@@ -37,6 +38,7 @@ HRESULT EnumProcesses (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pcProcs`  
  dışı İçinde döndürülen işlem sayısı `ppProcs` . Bu değer 0 (sıfır) olabilir.  
   
@@ -44,6 +46,7 @@ HRESULT EnumProcesses (
  dışı Uzak bilgisayarda çalışan süreçler temsil eden bir [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) yapıları dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  S_OK  
  Başarılı.  
   
@@ -54,14 +57,16 @@ HRESULT EnumProcesses (
  Diğer sorunlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem tarafından ayrılan belleği boşaltmak için, [ıreclrdebugtarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) metodunu çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Kitaplık:** mscordbi_macx86. dll  
+ **Kitaplık:** mscordbi_macx86.dll  
   
  **.NET Framework sürümleri:** 3,5 SP1  
   

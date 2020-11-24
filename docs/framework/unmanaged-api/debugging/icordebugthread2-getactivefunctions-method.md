@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-ms.openlocfilehash: e064a7db131a671adc4d0b6df522f3456e3a31d5
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2d5674d6b5962ca539de02cda1e5658daed83622
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377160"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678759"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions Metodu
+
 Bu iş parçacığı çerçevelerinin her birinde etkin işlev hakkında bilgi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetActiveFunctions (  
@@ -37,8 +38,9 @@ HRESULT GetActiveFunctions (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cFunctions`  
- 'ndaki `pFunctions`Dizinin boyutu.  
+ 'ndaki `pFunctions` Dizinin boyutu.  
   
  `pcFunctions`  
  dışı Dizide döndürülen nesne sayısına yönelik bir işaretçi `pFunctions` . Döndürülen nesne sayısı, yığındaki yönetilen çerçeve sayısına eşit olacaktır.  
@@ -49,11 +51,13 @@ HRESULT GetActiveFunctions (
  İlk öğe yaprak çerçeve için kullanılacaktır ve bu nedenle yığının köküne geri dönün.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `pFunctions`Girişte null ise, `GetActiveFunctions` yalnızca yığında olan işlev sayısını döndürür. Yani, `pFunctions` girişte null ise, `GetActiveFunctions` yalnızca içinde bir değer döndürür `pcFunctions` .  
   
  `GetActiveFunctions`Yöntemi, bir yığın izlemesinde çerçevelerden aynı bilgileri elde etmek için en iyi duruma getirme amaçlıdır ve yalnızca tam yığın izlemesinde bir ICorDebugILFrame nesnesine sahip olacak çerçeveleri içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-ms.openlocfilehash: 8622920a81f4b469361ffa879f7a4eeda697cab9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 70fe8b132f03925c41b6bc7aae8e60fea1b05202
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504231"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678304"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats Metodu
+
 Ortak dil çalışma zamanının çöp toplama sistemiyle ilgili geçerli istatistik kümesini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,14 +35,15 @@ HRESULT GetStats (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pStats`  
  [in, out] İstenen istatistikleri içeren bir [cor_gc_stats](cor-gc-stats-structure.md) örneği.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetStats`başarıyla döndürüldü.|  
+|S_OK|`GetStats` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -49,6 +51,7 @@ HRESULT GetStats (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR, yalnızca alanı tarafından belirtilen istatistikleri hesaplar ve döndürür `Flags` `pStats` .  
   
  `Flags` [Cor_gc_stats](cor-gc-stats-structure.md) yapısındaki hangi istatistiklerin ayarlanacağını belirtmek için alanı [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) numaralandırmanın bir veya daha fazla değerine ayarlayın.  
@@ -62,11 +65,12 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -74,7 +78,7 @@ pCLRGCManager->GetStats(&GCStats);
 
 - [Otomatik bellek yönetimi](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS Yapısı](cor-gc-stats-structure.md)
-- [COR_GC_STAT_TYPES Sabit Listesi](cor-gc-stat-types-enumeration.md)
+- [COR_GC_STAT_TYPES Numaralandırması](cor-gc-stat-types-enumeration.md)
 - [Çöp toplama](../../../standard/garbage-collection/index.md)
 - [ICLRControl Arabirimi](iclrcontrol-interface.md)
 - [ICLRGCManager Arabirimi](iclrgcmanager-interface.md)

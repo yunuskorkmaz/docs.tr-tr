@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 8e8d8d38ab8170a9bf9fae098e267be1a38f27d0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 4ca78c71f464a914c07583825d4a7027ebb11bf6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281795"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679045"
 ---
 # <a name="custom-serialization"></a>Özel serileştirme
 
@@ -51,6 +51,7 @@ Serileştirme sırasında ve sonrasında özel yöntemler çalıştırmanın ön
  Ayrıca, var olan bir serileştirilebilir türe yeni bir alan eklerken, bu <xref:System.Runtime.Serialization.OptionalFieldAttribute> özniteliği alana uygulayın. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Ve, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Yeni alan eksik bir akış işlendiği zaman alanın yokluğunu yoksayar.  
   
 ## <a name="implementing-the-iserializable-interface"></a>ISerializable arabirimini uygulama  
+
  Serileştirme denetiminin diğer yolu, <xref:System.Runtime.Serialization.ISerializable> bir nesne üzerinde arabirimini uygulayarak elde edilir. Ancak, önceki bölümdeki yöntemin serileştirme denetlemek için bu yöntemin yerini almıştır.  
   
  Ayrıca, [seri hale getirilebilir](xref:System.SerializableAttribute) özniteliğiyle işaretlenmiş bir sınıfta varsayılan serileştirme kullanmamalısınız ve sınıf düzeyinde ya da oluşturucuları üzerinde bildirim veya kesinlik güvenliği vardır. Bunun yerine, bu sınıflar her zaman uygulamalıdır <xref:System.Runtime.Serialization.ISerializable> arabirimi.  

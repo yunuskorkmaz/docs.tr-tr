@@ -16,14 +16,15 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 88bdb1cb88a5d6ca5c948d5f3110ddb13bdda6ae
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eb7680607c1def7cdc0dd5670b594e2ee1a6bfff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830395"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678122"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
+
 Aynı anda pek çok görevi gerçekleştiren ve kullanıcı etkileşimine yanıt veren uygulamalar, genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading>Ad alanı, yüksek performanslı çok iş parçacıklı uygulamalar oluşturmak için gereken tüm araçları sağlar, ancak bu araçların kullanılması çok iş parçacıklı yazılım mühendisliğinde önemli bir deneyim gerektirir. Oldukça basit çok iş parçacıklı uygulamalar için, <xref:System.ComponentModel.BackgroundWorker> bileşen basit bir çözüm sağlar. Daha karmaşık zaman uyumsuz uygulamalarda, olay tabanlı zaman uyumsuz düzene uygun bir sınıf uygulamayı düşünün.  
   
  Olay tabanlı zaman uyumsuz model, çok iş parçacıklı uygulamaların avantajlarından yararlanır ve çok iş parçacıklı tasarımda bulunan karmaşık sorunların çoğunu gizler. Bu kalıbı destekleyen bir sınıf kullanmak şunları yapmanıza izin verebilir:  
@@ -48,11 +49,13 @@ Aynı anda pek çok görevi gerçekleştiren ve kullanıcı etkileşimine yanıt
 > İndirme işlemi, isteğin yapıldığı gibi bitecektir <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> , bu nedenle <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> iptal etme isteğini yansıtmayabilir. Bu, *yarış durumu* olarak adlandırılır ve çok iş parçacıklı programlamada yaygın bir sorundur. Çoklu iş parçacıklı programlamada sorunlar hakkında daha fazla bilgi için bkz. [yönetilen Iş parçacığı En Iyi yöntemleri](../threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Olay tabanlı zaman uyumsuz düzenin özellikleri  
+
  Olay tabanlı zaman uyumsuz model, belirli bir sınıf tarafından desteklenen işlemlerin karmaşıklığına bağlı olarak birkaç form alabilir. En basit sınıflarda tek bir _MethodName_**zaman uyumsuz** yöntemi ve karşılık gelen bir _MethodName_**tamamlandı** olayı olabilir. Daha karmaşık sınıfların, her biri karşılık gelen _MethodName_**tamamlandı** olayına ve bu yöntemlerin eşzamanlı sürümlerine sahip birkaç _MethodName_**zaman uyumsuz** yöntemi olabilir. Sınıflar, her zaman uyumsuz yöntem için, isteğe bağlı olarak iptali, ilerleme raporlaması ve artımlı sonuçları destekleyebilir.  
   
  Zaman uyumsuz bir yöntem aynı zamanda birden fazla bekleyen çağrıyı destekleyebilir (birden çok eşzamanlı çağırma), kodunuzun diğer bekleyen işlemleri tamamlamadan önce herhangi bir sayıda çağrı yapmasına izin verir. Bu durumu doğru şekilde işlemek, uygulamanızın her bir işlemin tamamlanmasını izlemesini gerektirebilir.  
   
 ### <a name="examples-of-the-event-based-asynchronous-pattern"></a>Olay tabanlı zaman uyumsuz model örnekleri  
+
  <xref:System.Media.SoundPlayer>Ve <xref:System.Windows.Forms.PictureBox> bileşenleri, olay tabanlı zaman uyumsuz düzenin basit uygulamalarını temsil eder. <xref:System.Net.WebClient>Ve <xref:System.ComponentModel.BackgroundWorker> bileşenleri, olay tabanlı zaman uyumsuz düzenin daha karmaşık uygulamalarını temsil eder.  
   
  Aşağıda, düzene uyan örnek bir sınıf bildirimi verilmiştir:  
@@ -107,17 +110,20 @@ public class AsyncExample
  Kurgusal `AsyncExample` sınıfta, her ikisi de zaman uyumlu ve zaman uyumsuz çağırmaları destekleyen iki yöntem vardır. Zaman uyumlu aşırı yüklemeler herhangi bir yöntem çağrısı gibi davranır ve işlemi çağıran iş parçacığında yürütür; işlem zaman alıyorsa, çağrı dönüşmeden önce dikkat çekici bir gecikme olabilir. Zaman uyumsuz aşırı yüklemeler işlemi başka bir iş parçacığında başlatır ve ardından hemen geri döner ve bu işlem, çağıran iş parçacığının işlem "arka planda" yürütüldüğü sırada devam etmesine izin verir.  
   
 ### <a name="asynchronous-method-overloads"></a>Zaman uyumsuz yöntem aşırı yüklemeleri  
+
  Zaman uyumsuz işlemler için olası iki aşırı yükleme vardır: tek çağrı ve Çoklu çağrı. Bu iki formu Yöntem imzalarına göre ayırabilirsiniz: birden çok çağırma formunda, adlı ek bir parametre bulunur `userState` . Bu form, kodunuzun `Method1Async(string param, object userState)` bekleyen zaman uyumsuz işlemlerin bitmesini beklemeden birden çok kez çağrı yapmayı olanaklı kılar. Diğer taraftan, `Method1Async(string param)` önceki bir çağırma tamamlanmadan önce çağırmayı denerseniz Yöntem bir oluşturur <xref:System.InvalidOperationException> .  
   
  `userState`Çoklu çağrı aşırı yüklemelerinin parametresi, zaman uyumsuz işlemler arasında ayrım yapmanıza olanak tanır. Her bir çağrı için benzersiz bir değer (örneğin, bir GUID veya karma kod) sağlarsınız `Method1Async(string param, object userState)` ve her işlem tamamlandığında, olay işleyiciniz işlemin hangi örneğinin tamamlanma olayını gerçekleştirdiğini belirleyebilir.  
   
 ### <a name="tracking-pending-operations"></a>Bekleyen Işlemleri izleme  
+
  Çoklu çağrı yüklerini kullanırsanız, kodunuzun `userState` bekleyen görevler için nesneleri (görev kimlikleri) izlemesi gerekir. Her yapılan çağrı için `Method1Async(string param, object userState)` genellikle yeni, benzersiz bir `userState` nesne oluşturup bir koleksiyona eklersiniz. Bu nesneye karşılık gelen görev `userState` tamamlanma olayını harekete geçirirse, tamamlama yöntemi uygulamanız <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> onu inceleyerek ve koleksiyonunuzdan kaldırır. Bu şekilde kullanılırsa `userState` parametresi bir görev kimliği rolünü alır.  
   
 > [!NOTE]
 > Birden çok çağırma aşırı yüküne yönelik çağrılarınız için benzersiz bir değer sağlamanız dikkat etmeniz gerekir `userState` . Benzersiz olmayan görev kimlikleri, zaman uyumsuz sınıfın oluşturmasına neden olur <xref:System.ArgumentException> .  
   
 ### <a name="canceling-pending-operations"></a>Bekleyen Işlemleri iptal etme  
+
  Her zaman zaman uyumsuz işlemleri tamamlanmadan önce iptal edebilmek önemlidir. Olay tabanlı zaman uyumsuz model uygulayan sınıflar bir `CancelAsync` yöntemine (yalnızca bir zaman uyumsuz yöntem varsa) veya _MethodName_**asynccancel** yöntemine (birden çok zaman uyumsuz yöntem varsa) sahip olur.  
   
  Birden çok çağırma yöntemine izin veren Yöntemler bir `userState` parametre alır ve her görevin ömrünü izlemek için kullanılabilir. `CancelAsync``userState`belirli bekleyen görevleri iptal etmenizi sağlayan bir parametre alır.  
@@ -125,6 +131,7 @@ public class AsyncExample
  Aynı anda yalnızca tek bir bekleyen işlemi destekleyen metotlar, örneğin `Method1Async(string param)` , iptal edilemez.  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>Ilerleme güncellemeleri ve artımlı sonuçlar alınıyor  
+
  Olay tabanlı zaman uyumsuz düzene uygun bir sınıf, isteğe bağlı olarak ilerleme durumunu ve artımlı sonuçları izlemek için bir olay sağlayabilir. Bu, genellikle adlandırılmış `ProgressChanged` veya _MethodName_**ProgressChanged & lt** ve buna karşılık gelen olay işleyicisi bir <xref:System.ComponentModel.ProgressChangedEventArgs> parametre alır.  
   
  Olayın olay işleyicisi, `ProgressChanged` <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> zaman uyumsuz bir görevin tamamlanan yüzdesini belirlemek için özelliğini inceleyebilir. Bu özellik 0 ile 100 arasında değişir ve <xref:System.Windows.Forms.ProgressBar.Value%2A> bir öğesinin özelliğini güncelleştirmek için kullanılabilir <xref:System.Windows.Forms.ProgressBar> . Birden çok zaman uyumsuz işlem beklendiğinde, <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> hangi işlemin ilerleme durumunu ayırt etmek için özelliğini kullanabilirsiniz.  

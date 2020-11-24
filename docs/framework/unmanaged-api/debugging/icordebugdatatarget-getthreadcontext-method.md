@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-ms.openlocfilehash: 79708aa5a2abcb8d7465f82a8beb918484c193b9
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: faacea6a2f04ef20025fd33adb4ce76eaf54f32c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976557"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679747"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext Metodu
+
 Belirtilen iş parçacığı için geçerli iş parçacığı bağlamını döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetThreadContext(  
@@ -36,6 +37,7 @@ HRESULT GetThreadContext(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwThreadID`  
  'ndaki Bağlamını alınacak olan iş parçacığının tanımlayıcısı. Tanımlayıcı, işletim sistemi tarafından tanımlanır.  
   
@@ -43,15 +45,17 @@ HRESULT GetThreadContext(
  'ndaki İçeriğin hangi bölümlerinin okunabileceği belirten, platforma bağımlı bayrakların bit düzeyinde birleşimi.  
   
  `contextSize`  
- 'ndaki Boyutu `pContext`.  
+ 'ndaki Boyutu `pContext` .  
   
  `pContext`  
  dışı İş parçacığı bağlamının depolanacağı arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Windows platformlarında, `pContext` `CONTEXT` [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) yöntemi tarafından belirtilen makine türüne uygun bir yapı (Winnt. h içinde tanımlanır) olmalıdır. `contextFlags``CONTEXT` yapının `ContextFlags` alanıyla aynı değerlere sahip olmalıdır. Yapı `CONTEXT` , işlemciye özeldir; Ayrıntılar için WinNT. h dosyasına bakın.  
+
+ Windows platformlarında, `pContext` `CONTEXT` [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) yöntemi tarafından belirtilen makine türüne uygun bir yapı (Winnt. h içinde tanımlanır) olmalıdır. `contextFlags` yapının alanıyla aynı değerlere sahip olmalıdır `ContextFlags` `CONTEXT` . `CONTEXT`Yapı, işlemciye özeldir; Ayrıntılar Için Winnt. h dosyasına bakın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

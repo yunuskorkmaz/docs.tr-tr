@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-ms.openlocfilehash: 4d954057c519263da49f8aaeeeef6ab9402b6956
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4e368b2c63e8e43b5c392bec4b79daac8bae249d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378368"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678549"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException Yöntemi
+
 İş parçacığının işlenmeyen bir özel duruma sahip olup olmadığını gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetBlockingObjects (  
@@ -34,10 +35,12 @@ HRESULT GetBlockingObjects (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppBlockingObjectEnum`  
  dışı [CorDebugBlockingObject](cordebugblockingobject-structure.md) yapılarının sıralı numaralandırmanın adresine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
@@ -46,9 +49,11 @@ HRESULT GetBlockingObjects (
 |S_FALSE|İş parçacığında işlenmeyen bir özel durum yoktu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, iş parçacığının işlenmeyen bir özel duruma sahip olup olmadığını gösterir. İşlenmeyen özel durum geri çağrısının tetiklendiği veya yerel JıT-Attach başlatıldığı zaman, bu yöntemin S_OK döndürmesi garanti edilir. [ICorDebugThread. GetCurrentException](icordebugthread-getcurrentexception-method.md) yönteminin işlenmemiş özel durumu döndürmeyeceği garantisi yoktur; Ancak, işlenmeyen özel durum geri çağırması alındıktan sonra veya yerel JıT-Attach sonrasında işlem henüz devam ettirilmemişse olur. Ayrıca, yerel JıT-iliştirme tetiklendiğinde işlenmemiş bir özel durumla birden fazla iş parçacığına sahip olması mümkündür. Böyle bir durumda, JıT-Attach ' i tetikleyen özel durumu belirlemenin bir yolu yoktur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-ms.openlocfilehash: 36a18d92f05db55957bba55de84490c0da1a1f86
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 8fb0cfc72867653eaff65f3183dacf9191604290
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976518"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679734"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual Yöntemi
+
 Belirtilen adresten başlayarak bir ardışık bellek bloğunu alır ve sağlanan arabellekte döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ReadVirtual(  
@@ -37,6 +38,7 @@ HRESULT ReadVirtual(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `address`  
  'ndaki İstenen belleğin başlangıç adresi.  
   
@@ -47,12 +49,14 @@ HRESULT ReadVirtual(
  'ndaki Hedef adresten alınacak bayt sayısı.  
   
  `pBytesRead`  
- dışı Hedef adresten gerçekten okunan bayt sayısı. Bu daha az olabilir `bytesRequested`.  
+ dışı Hedef adresten gerçekten okunan bayt sayısı. Bu daha az olabilir `bytesRequested` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  İlk bayt (belirtilen başlangıç adresinde) okunurken, çağrının başarılı döndürmesi gerekir (null ile sonlandırılmış dizeler gibi, kendi kendine tanımlayan uzunlukla veri yapılarının etkili şekilde okunmasını desteklemek için).  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

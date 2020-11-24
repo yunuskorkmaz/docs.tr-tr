@@ -8,17 +8,18 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
-ms.openlocfilehash: 33b8f47813a3bf43bd69741c9febb150fa3a92e3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 989e99198efd1519f607a2e3164ff4de584e88af
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099900"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679890"
 ---
 # <a name="_axlpublickeyblobtopublickeytoken-function"></a>\_AxlPublicKeyBlobToPublicKeyToken Işlevi
+
 Bir CSP PUBLICKEYBLOB biçiminden tanımlayıcı ad ortak anahtar belirtecini hesaplar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT _AxlPublicKeyBlobToPublicKeyToken (  
@@ -28,6 +29,7 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pCspPublicKeyBlob`  
  'ndaki CSP ortak anahtar blobu.  
   
@@ -35,7 +37,8 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
  dışı Onaltılık kodlanmış ortak anahtar karmasını almak için bir WCHAR * işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- işlev başarılı olursa `S_OK`; Aksi takdirde `S_FALSE`.  
+
+ `S_OK` işlev başarılı olursa; Aksi takdirde `S_FALSE` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: cb2b69c5e6dfed4e0cb4e4e324c4ec6ad664f3e7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 6eebabc3a08027eab4ac55c1e46dd75b1f75bd21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212756"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679708"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback Arabirimi
+
 Hata ayıklayıcı geri aramalarını işlemek için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -56,6 +57,7 @@ Hata ayıklayıcı geri aramalarını işlemek için yöntemler sağlar.
 |[UpdateModuleSymbols Yöntemi](icordebugmanagedcallback-updatemodulesymbols-method.md)|Hata ayıklayıcıya bir CLR modülünün sembolleri değiştiğini bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Tüm geri çağrılar aynı iş parçacığında çağrılır ve eşitlenmiş durumda işlemle birlikte çağırılır.  
   
  Her geri çağırma uygulaması [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) ' i çağırmalıdır ve yürütmeyi sürdürmelidir. `ICorDebugController::Continue`Geri çağırma işlemi geri alınmadan önce çağrılmamışsa, işlem durdurulmuş olarak kalır ve çağrılana kadar başka olay geri çağırmaları gerçekleşmeyecektir `ICorDebugController::Continue` .  
@@ -66,6 +68,7 @@ Hata ayıklayıcı geri aramalarını işlemek için yöntemler sağlar.
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
