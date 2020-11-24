@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-ms.openlocfilehash: 841379702e24428a8092cfd1d2cbd3c5b4e17ba4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f5d7df60a7b9c728b73fe6592226a8b6734b1e66
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615611"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692156"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange Yöntemi
+
 Eklenmiş kaynağın belirtilen aralığını verilen arabelleğe döndürür. Arabellek, kaynağı tutabilecek kadar büyük olmalıdır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -40,6 +41,7 @@ HRESULT GetSourceRange(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `startLine`  
  'ndaki Geçerli belgedeki başlangıç satırı.  
   
@@ -62,6 +64,7 @@ HRESULT GetSourceRange(
  dışı Kaynak belge için bayt cinsinden belirtilen aralığın boyutu ve uzunluğu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

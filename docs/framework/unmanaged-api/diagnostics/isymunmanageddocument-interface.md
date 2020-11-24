@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c26b366-6e81-467c-9dd0-02dd26fee0a3
 topic_type:
 - apiref
-ms.openlocfilehash: a8ff6d3a925773e58e0713a87b167420c246f85b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 83c683e1f60f13f7cee4ddc6fe5af5a94e36eb93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615572"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692182"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument Arabirimi
+
 Bir sembol deposu tarafından başvurulan bir belgeyi temsil eder. Belge, Tekdüzen Kaynak Bulucu (URL) ve belge türü GUID 'SI tarafından tanımlanır. Belgeyi, URL ve belge türü GUID kullanılarak nasıl depolandığına bakılmaksızın bulabilirsiniz. Belge kaynağını sembol deposunda depolayıp bu arabirim aracılığıyla alabilirsiniz.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -41,4 +42,4 @@ Bir sembol deposu tarafından başvurulan bir belgeyi temsil eder. Belge, Tekdü
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [Tanılama Sembol Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)

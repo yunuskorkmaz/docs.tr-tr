@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-ms.openlocfilehash: b1327e13006ca4b3f9074c1348b1817c9a1b3728
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5ecc42950775a620796a1c775e5f088f461a12c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503958"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690831"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask Arabirimi
+
 Konağın ortak dil çalışma zamanı (CLR) isteği yapmasına veya ilişkili görev hakkında CLR 'ye bildirim sağlamasına imkan tanıyan yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[Abort Yöntemi](iclrtask-abort-method.md)|CLR 'nin geçerli örneğin temsil ettiği görevi iptal ettiğini ister `ICLRTask` .|  
 |[ExitTask Yöntemi](iclrtask-exittask-method.md)|CLR 'ye geçerli örnekle ilişkili görevin `ICLRTask` sonlandırdığını bildirir ve görevi düzgün bir şekilde kapatmaya çalışır.|  
@@ -41,16 +42,18 @@ Konağın ortak dil çalışma zamanı (CLR) isteği yapmasına veya ilişkili g
 |[YieldTask Yöntemi](iclrtask-yieldtask-method.md)|CLR 'nin işlemci zamanının diğer görevler için kullanılabilir olmasını ister. CLR, görevin işlem süresini karşılayabileceği bir duruma koyulacağı garantisi vermez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  , `ICLRTask` Clr için bir görevin gösterimidir. Kod yürütme sırasında herhangi bir noktada, bir görev çalışıyor ya da çalıştırmayı bekliyor olarak açıklanabilir. Konak `ICLRTask::SwitchIn` , clr 'ye geçerli `ICLRTask` örneği temsil eden görevin Şu anda bir çalıştırılabilir durumunda olduğunu bildirmek için yöntemini çağırır. Bir çağrısından sonra `ICLRTask::SwitchIn` konak, çalışma zamanının [IHostTaskManager:: BeginThreadAffinity](ihosttaskmanager-beginthreadaffinity-method.md) ve [IHostTaskManager:: EndThreadAffinity](ihosttaskmanager-endthreadaffinity-method.md) yöntemlerine yapılan çağrılar tarafından belirtildiği gibi iş parçacığı benzeşimi gerektirdiği durumlar dışında, görevi herhangi bir işletim sistemi iş parçacığında zamanlayabilir. Daha sonra, işletim sistemi bu görevi iş parçacığından kaldırmaya ve çalışır durumda olmayan bir duruma yerleştirmeye karar verebilir. Örneğin, görev, eşitleme temelleri üzerinde engellediğinde veya g/ç işlemlerinin tamamlanmasını bekliyorsa bu durum oluşabilir. Konak, geçerli [SwitchOut](iclrtask-switchout-method.md) örnek tarafından temsil edilen görevin `ICLRTask` artık bir ÇALıŞTıRıLABILIR durumunda olmadığını clr 'ye bildirmek için geçiş yöntemini çağırır.  
   
  Bir görev genellikle kod yürütmenin sonunda sonlanır. Bu sırada, ana bilgisayar ilişkili öğesini `ICLRTask::ExitTask` yok etmek için çağırır `ICLRTask` . Bununla birlikte, görevler, `ICLRTask::Reset` örneğinin yeniden kullanılmasına izin veren çağrısı kullanılarak da geri dönüştürülebilir `ICLRTask` . Bu yaklaşım, örneklerin tekrar tekrar oluşturulmasına ve yok edilmesinin yükünü önler.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

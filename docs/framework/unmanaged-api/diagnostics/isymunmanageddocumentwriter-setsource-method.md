@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea5b9d9f-ff06-4bd3-8de5-6435343aba59
 topic_type:
 - apiref
-ms.openlocfilehash: 06c6f9b05d34ea98dde437393ded289cbab2f61d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 31475b08b569b925aab9cab869545f0912c4ecf8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615533"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691597"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource Yöntemi
+
 Yazılmakta olan bir belge için gömülü kaynağı ayarlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,16 +35,19 @@ HRESULT SetSource(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `sourceSize`  
- 'ndaki `ULONG32`Arabellek boyutunu içeren bir `source` .  
+ 'ndaki `ULONG32` Arabellek boyutunu içeren bir `source` .  
   
  `source`  
  'ndaki Gömülü kaynağı depolayan arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-ms.openlocfilehash: b20e18d5f4314a0ab1442ac7bd5c6514e4db85d5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 365bc0dc73b04d3afd171c40f336432f77552b6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609488"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690960"
 ---
 # <a name="notify_filter-enumeration"></a>NOTIFY_FILTER Numaralandırması
+
 Hata ayıklayıcı işlevleri için geri çağırmaları tanımlar. Daha fazla bilgi için bkz. [INotifySource2:: SetNotifyFilter](inotifysource2-setnotifyfilter-method.md) yöntemi.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 enum tagNOTIFY_FILTER  
@@ -52,8 +53,9 @@ enum tagNOTIFY_FILTER
 |`NOTIFY_FILTER_NONE`|Hiçbir bildirim yönteminin çağrılması gerektiğini gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** ProtocolNotify2. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Sabit Listeleri](diagnostics-symbol-store-enumerations.md)
+- [Tanılama Sembol Deposu Numaralandırmaları](diagnostics-symbol-store-enumerations.md)

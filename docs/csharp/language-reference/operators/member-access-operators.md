@@ -1,7 +1,7 @@
 ---
 title: Üye erişim işleçleri ve ifadeleri-C# başvurusu
 description: Tür üyelerine erişmek için kullanabileceğiniz C# işleçleri hakkında bilgi edinin.
-ms.date: 04/17/2020
+ms.date: 11/13/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 688a1fcff84a6e8f2fa31533a2bc459bf8c8717a
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 28d3d9c3261f1a852d16f2637309b21412611c10
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916796"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691246"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Üye erişim işleçleri ve ifadeleri (C# Başvurusu)
 
@@ -138,9 +138,6 @@ Yukarıdaki örnek, null-koşullu bir işlemin sonucu olarak değerlendirmek iç
 
 Null koşullu üye erişim işleci `?.` ELVIS işleci olarak da bilinir.
 
-> [!NOTE]
-> C# 8 ' de, [null-forverme işleci](null-forgiving.md) önceki null koşullu işlemlerin listesini sonlandırır. Örneğin, ifadesi `x?.y!.z` olarak ayrıştırılır `(x?.y)!.z` . Bu yorum nedeniyle,, `z` olsa bile değerlendirilir, bu da `x` `null` bir ile sonuçlanabilir <xref:System.NullReferenceException> .
-
 ### <a name="thread-safe-delegate-invocation"></a>İş parçacığı açısından güvenli temsilci çağırma
 
 `?.`Bir temsilcinin null olup olmadığını denetlemek ve iş parçacığı güvenli bir şekilde (örneğin, [bir olay](../../../standard/events/how-to-raise-and-consume-events.md)yükselttiğinizde) aşağıdaki kodun gösterdiği gibi, bir temsilciyi çağırmak için işlecini kullanın:
@@ -197,9 +194,9 @@ Yukarıdaki örnekte gösterildiği gibi, ifadesi `a..b` <xref:System.Range?disp
 
 `..`Açık uçlu bir Aralık almak için işlecin işlenenlerinden herhangi birini atlayabilirsiniz:
 
-- `a..`eşdeğerdir`a..^0`
-- `..b`eşdeğerdir`0..b`
-- `..`eşdeğerdir`0..^0`
+- `a..` eşdeğerdir `a..^0`
+- `..b` eşdeğerdir `0..b`
+- `..` eşdeğerdir `0..^0`
 
 [!code-csharp[ranges with omitted operands](snippets/shared/MemberAccessOperators.cs#RangesOptional)]
 

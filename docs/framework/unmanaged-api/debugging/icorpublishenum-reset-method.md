@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-ms.openlocfilehash: d1076d5c1f4300666fbb1e91a8c0feddecd14e2f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 296ff6d5d78a22106c6a61ea8c7567a8e0fff3aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421152"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693339"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset Yöntemi
+
 İmlecini numaralandırmanın başlangıcına taşımalıdır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -32,9 +33,11 @@ HRESULT Reset ();
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- `Reset`Hiçbir parametre alır.  
+
+ `Reset` Hiçbir parametre alır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorPub. IDL, CorPub. h  

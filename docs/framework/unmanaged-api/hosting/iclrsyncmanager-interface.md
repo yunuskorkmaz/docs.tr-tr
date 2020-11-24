@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a49f9d80-1c76-4ddd-8c49-34f913a5c596
 topic_type:
 - apiref
-ms.openlocfilehash: b0b9c0b7d178557806a9ab2893bff2d34dc408ff
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5bfab21a36becf943b1813f266cf70c4b5e5b1d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557742"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690999"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager Arabirimi
+
 Konağın istenen görevler hakkında bilgi almasını ve eşitleme uygulamasında kilitlenmeleri algılamasını sağlayan yöntemleri tanımlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -34,6 +35,7 @@ Konağın istenen görevler hakkında bilgi almasını ve eşitleme uygulamasın
 |[GetRWLockOwnerNext Yöntemi](iclrsyncmanager-getrwlockownernext-method.md)|Geçerli okuyucu-yazıcı kilidinde bekleyen bir sonraki görevi alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  

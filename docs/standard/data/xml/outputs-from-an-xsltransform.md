@@ -2,14 +2,15 @@
 title: XslTransform Çıkışları
 ms.date: 03/30/2017
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 765f6f9a91cc44a55ab0d66ed71f19f60ef81a56
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ebe276a9627a36f1248f0043af6c82e76fe7fd78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830070"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691376"
 ---
 # <a name="outputs-from-an-xsltransform"></a>XslTransform Çıkışları
+
 Stil sayfaları, özniteliği olan bir ifade kullanarak çıkış biçimini belirleyebildiğinden `<xsl:output>` `method` , aşağıdaki tabloda çıktı biçiminin <xref:System.Xml.Xsl.XslTransform.Transform%2A> çıktıyı yazmak için ne zaman kullanıldığı ve çıkış biçiminin de veya olarak bildirildiği açıklanmaktadır <xref:System.IO.Stream> <xref:System.IO.TextWriter> .  
   
 > [!NOTE]
@@ -52,6 +53,7 @@ Stil sayfaları, özniteliği olan bir ifade kullanarak çıkış biçimini beli
 - medya-türü: medya türü  
   
 ## <a name="escaping-special-characters"></a>Özel karakterleri kaçış  
+
  `<xsl:text disable-output-escaping>`Etiketi, özel karakterlerin BIR XML biçimine (örneğin, `<&lt>` simgenin yerine kullanılması) veya mevcut koşulda sola atlanıp atlanmayacağını belirtmek için kullanılır `"<"` . `disable-output-escaping`Özniteliği bir veya nesnesine dönüştürülürken yok sayılır <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter> ve özel karakterler üzerinde hiçbir etkisi olmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

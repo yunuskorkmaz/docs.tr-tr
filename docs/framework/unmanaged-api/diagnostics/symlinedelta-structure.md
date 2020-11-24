@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 9634e995-d46d-4397-ab66-cc5781d11e4e
 topic_type:
 - apiref
-ms.openlocfilehash: fb3b89d25b4c2e23c3980b167db4279246c4d27b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: dd45703540f8dc41b746ca03b4f09d74186aa9aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609306"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690947"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA Yapısı
+
 Düzenleme sonucu olarak taşınan yöntemler hakkında sembol işleyicisine bilgi sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _SYMLINEDELTA  
@@ -42,6 +43,7 @@ typedef struct _SYMLINEDELTA
 |`delta`|Yöntemin taşındığı satır sayısı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** Corsya. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.

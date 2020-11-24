@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-ms.openlocfilehash: 657d2d638a419ba88d4cf7152f4505de1bd23706
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ebf484524b32d8e917d88c21425fab314dfc41be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421078"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692624"
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum Arabirimi
+
 ICorPublishEnum [ICorPublishEnum](icorpublishenum-interface.md) arabiriminin bir [ICorPublishProcess](icorpublishprocess-interface.md) nesneleri koleksiyonunu gezme yöntemleri sağlayan bir alt sınıfı.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -31,11 +32,13 @@ ICorPublishEnum [ICorPublishEnum](icorpublishenum-interface.md) arabiriminin bir
 |[Next Yöntemi](icorpublishprocessenum-next-method.md)|`ICorPublishProcess`Geçerli konumdan başlayarak koleksiyondan belirtilen sayıda örnek alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ICorPublishProcessEnum`Arabirim, [ICorPublishEnum](icorpublishenum-interface.md)soyut arabiriminin yöntemlerini uygular.  
   
  `ICorPublishProcessEnum` [ICorPublish:: EnumProcesses](icorpublish-enumprocesses-method.md) yöntemi tarafından bir örnek oluşturulur. Nesne koleksiyonunun çapraz geçişi, `ICorPublishProcess` örnek oluşturulduğu sırada verilen filtre ölçütlerini temel alır `ICorPublishProcessEnum` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorPub. IDL, CorPub. h  
