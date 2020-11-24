@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a034c21e-e371-4360-b470-29e88288948f
 topic_type:
 - apiref
-ms.openlocfilehash: 006045ce101884119f676e4f6324815eb21a10a4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: dfc2e39a6a39e7386bd7358d422d5c6978ec42ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614662"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683296"
 ---
 # <a name="isymunmanagedwriter3-interface"></a>ISymUnmanagedWriter3 Arabirimi
+
 Bir sembol yazıcısını temsil eder ve belgeleri, dizi noktalarını, sözcük temelli kapsamları ve değişkenleri tanımlamak için yöntemler sağlar. Bu arabirim [ıstreamunmanagedwriter](isymunmanagedwriter-interface.md) arabirimini genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -32,10 +33,11 @@ Bir sembol yazıcısını temsil eder ve belgeleri, dizi noktalarını, sözcük
 |[OpenMethod2 Yöntemi](isymunmanagedwriter3-openmethod2-method.md)|Bir yöntemi açar ve görüntüde gerçek bölüm konumunu sağlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [Tanılama Sembol Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)
 - [ISymUnmanagedWriter2 Arabirimi](isymunmanagedwriter2-interface.md)

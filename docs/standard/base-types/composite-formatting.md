@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 588efff637359586630554decf57072597365d32
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a0252d013ee6cf7cba7f953fc8a1e2c66c510ca7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823101"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683959"
 ---
 # <a name="composite-formatting"></a>Bileşik biçimlendirme
 
@@ -43,6 +43,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
 - <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>Trace dinleyicilerine bir bilgilendirme yöntemi yazan yöntemi.  
   
 ## <a name="composite-format-string"></a>Bileşik Biçim Dizesi  
+
  Bileşik biçimlendirme özelliğini destekleyen metotlarda bir bileşik biçimlendirme dizesi ve nesne listesi bağımsız değişkenler olarak kullanılır. Bir bileşik biçimlendirme dizesi sıfır veya daha fazla sabit metin bölümüyle karışık olarak bir veya daha fazla biçim öğesinden oluşur. Sabit metin seçtiğiniz herhangi bir dizedir, ve her biçim öğesi listedeki bir nesneye veya kutulu yapıya karşılık gelir. Bileşik biçimlendirme özelliği, her biçim öğesinin yerine listede karşılık gelen nesnenin dize temsili yerleştirilmiş bir şekilde yeni bir sonuç dizesi döndürür.  
   
  Aşağıdaki kod parçasını göz önünde bulundurun <xref:System.String.Format%2A> .  
@@ -53,6 +54,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
  Sabit metin " `Name =` " ve " `, hours =` ". Biçim öğeleri, `{0}` dizini 0 olan, nesnesine karşılık gelen "" `name` ve dizini 1 olan, nesnesine karşılık gelen "" olan "" dir `{1:hh}` `DateTime.Now` .  
   
 ## <a name="format-item-syntax"></a>Biçim Öğesi Sözdizimi  
+
  Her biçim öğesi aşağıdaki biçimi alır ve aşağıdaki bileşenlerden oluşur:  
   
  `{`*Dizin*[ `,` *Hizalama*] [ `:` *FormatString*]`}`  
@@ -60,6 +62,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
  Eşleşen ayraçlar ("{" ve "}") gereklidir.  
   
 ### <a name="index-component"></a>Dizin Bileşeni  
+
  Parametre tanımlayıcısı olarak da bilinen zorunlu *Dizin* bileşeni, nesne listesinde karşılık gelen bir öğeyi tanımlayan 0 ' dan başlayan bir sayıdır. Yani, parametre tanımlayıcısı 0 olan biçim öğesi listedeki ilk nesneyi biçimlendirir, parametre tanımlayıcısı 1 olan biçim öğesi listedeki ikinci nesneyi biçimlendirir ve bu şekilde devam eder. Aşağıdaki örnek, 10 ' dan küçük olan asal sayıları temsil etmek için, sıfır ile numaralandırılmış dört parametre belirticilerini içerir:  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
@@ -73,6 +76,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
  Her biçim öğesi listedeki herhangi bir nesneye başvurabilir. Örneğin, üç nesne varsa, şu şekilde bir bileşik biçim dizesi belirterek ikinci, birinci ve üçüncü nesneyi biçimlendirebilirsiniz: " {1} {0} {2} ". Bir biçimlendirme nesnesi tarafından başvurulmayan nesneler yok sayılır. Bir <xref:System.FormatException> parametre Belirleyicisi, nesne listesi sınırları dışında bir öğe tasarladığı zaman çalışma zamanında oluşturulur.  
   
 ### <a name="alignment-component"></a>Hizalama Bileşeni  
+
  İsteğe bağlı *Hizalama* bileşeni, tercih edilen biçimli alan genişliğini gösteren işaretli bir tamsayıdır. *Hizalama* değeri biçimlendirilen dizenin uzunluğundan küçükse, *Hizalama* yok sayılır ve biçimlendirilen dizenin uzunluğu alan genişliği olarak kullanılır. *Hizalama* pozitif ise ve *Hizalama* negatifse sola hizalı ise, alandaki biçimlendirilen veriler sağa hizalanır. Eğer iç boşluk gerekliyse, boşluk kullanılır. *Hizalama* belirtilmişse virgül gereklidir.  
   
  Aşağıdaki örnek, biri çalışanların adlarını ve diğeri iki haftalık bir dönemde çalıştıkları saatleri içeren iki diziyi tanımlar. Bileşik biçim dizesi, adları 20 karakterlik bir alana sola hizalar ve saatlerini 5 karakterli bir alanda sağa hizalar. "N1" standart biçim dizesinin aynı zamanda bir kesirli basamaklı saatleri biçimlendirmek için de kullanıldığını unutmayın.  
@@ -81,6 +85,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Biçim Dizesi Bileşeni  
+
  İsteğe bağlı *FormatString* bileşeni, biçimlendirilen nesne türüne uygun bir biçim dizesidir. Karşılık gelen nesne bir sayısal değer ise standart veya özel sayısal biçim dizesi, karşılık gelen nesne bir nesne ise standart veya özel tarih ve saat biçimi dizesi <xref:System.DateTime> ya da karşılık gelen nesne bir numaralandırma değeri ise bir [numaralandırma biçim dizesi](enumeration-format-strings.md) belirtin. *FormatString* belirtilmemişse, bir sayısal, tarih ve saat veya numaralandırma türü için genel ("G") Biçim belirleyicisi kullanılır. *FormatString* belirtilmişse, iki nokta üst üste gereklidir.  
   
  Aşağıdaki tabloda, .NET sınıf kitaplığı 'nda önceden tanımlanmış bir biçim dizeleri kümesini destekleyen türler veya tür kategorileri listelenmiştir ve desteklenen biçim dizelerini listeleyen konuların bağlantılarını sağlar. Dize biçimlendirmenin, tüm varolan türler için yeni biçimlendirme dizeleri tanımlanabilmesini mümkün kılmanın yanı sıra uygulamada tanımlanmış bir tür tarafından desteklenen bir biçimlendirme dizesi kümesinin tanımlanabilmesine olanak veren genişletilebilir bir mekanizma olduğuna dikkat edin. Daha fazla bilgi için bkz <xref:System.IFormattable> . ve <xref:System.ICustomFormatter> arabirimi konuları.  
@@ -94,6 +99,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
 |<xref:System.TimeSpan>|[Standart TimeSpan Biçim dizeleri](standard-timespan-format-strings.md)<br /><br /> [Özel TimeSpan Biçim dizeleri](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>Çıkış Yapan Ayraçlar  
+
  Açma ve kapatma ayraçları bir biçim öğesinin başlangıcı ve bitişi olarak yorumlanır. Sonuç olarak, sabit bir açılış veya kapanış ayracını görüntülemek için bir kaçış dizisi kullanmanız gerekir. Bir açılış ayracı ("{") görüntülemek için sabit metinde iki açılış ayracı ("{{"), veya bir kapanış ayracı ("}") görüntülemek için sabit metinde iki kapanış ayracı ("}}") belirtin. Bir biçim öğesindeki ayraçlar, karşılaşıldıkları sırada sıralı olarak yorumlanır. İç içe ayraçları yorumlama desteklenmez.  
   
  Kaçırılan ayraçların yorumlanma şekli beklenmeyen sonuçlara neden olabilir. Örneğin, {0:D} bir açılış ayracı, ondalık sayı olarak biçimlendirilen sayısal bir değer ve bir kapanış ayracı görüntülemesi amaçlanan "{{}}" biçim öğesini göz önünde bulundurun. Ancak, biçim öğesi aslında şu şekilde yorumlanır:  
@@ -114,6 +120,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>İşlem Sırası  
+
  Bileşik biçimlendirme yöntemine yapılan çağrı, <xref:System.IFormatProvider> değeri olmayan bir bağımsız değişken içeriyorsa `null` , çalışma zamanı <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> bir uygulama istemek için yöntemini çağırır <xref:System.ICustomFormatter> . Yöntem bir uygulama döndürebiliyor ise <xref:System.ICustomFormatter> , bileşik biçimlendirme yöntemi çağrısının süresi boyunca önbelleğe alınır.
   
  Bir biçim öğesine karşılık gelen parametre listesindeki her bir değer, aşağıdaki gibi bir dizeye dönüştürülür:  
@@ -135,6 +142,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
  Üstteki adımlar gerçekleştirildikten sonra hizalama uygulanır.  
   
 ## <a name="code-examples"></a>Kod Örnekleri  
+
  Aşağıdaki örnekte, bileşik biçimlendirme kullanılarak oluşturulan bir dize ve bir nesnenin yöntemi kullanılarak oluşturulan bir dize gösterilmektedir `ToString` . İki biçimlendirme türü de eşdeğer sonuçlar üretir.  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]

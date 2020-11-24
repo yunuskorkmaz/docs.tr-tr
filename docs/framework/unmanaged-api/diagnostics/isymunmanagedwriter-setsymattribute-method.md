@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-ms.openlocfilehash: 39b0c065a324f2b3939467901739f995bc9abbad
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 484affb2ca87ca50a805d1bb46b7749d294d09f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614766"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683517"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute Yöntemi
+
 Özel bir özniteliği adına göre tanımlar. Bu öznitelikler, meta veri özel özniteliklerinin aksine sembol deposunda tutulur.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,22 +37,25 @@ HRESULT SetSymAttribute(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `parent`  
  'ndaki Özniteliğin tanımlandığı meta veri belirteci.  
   
  `name`  
- 'ndaki `WCHAR`Özniteliği adını içeren bir işaretçisi.  
+ 'ndaki `WCHAR` Özniteliği adını içeren bir işaretçisi.  
   
  `cData`  
- 'ndaki `ULONG32`Dizi boyutunu belirten bir `data` .  
+ 'ndaki `ULONG32` Dizi boyutunu belirten bir `data` .  
   
  `data`  
  'ndaki Öznitelik değeri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

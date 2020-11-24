@@ -11,17 +11,19 @@ helpviewer_keywords:
 - enumerations [.NET], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: 6054456b50c48ecee61e95851aee095a4227b176
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1339301786ed0f7ddd41565ca3fc64c2a859b3f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821937"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683764"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>NET ' te sayısal dizeleri ayrıştırma
+
 Tüm sayısal türlerin iki statik ayrıştırma yöntemi vardır `Parse` ve `TryParse` bir sayının dize gösterimini sayısal bir türe dönüştürmek için kullanabilirsiniz. Bu yöntemler, [Standart sayısal biçim dizeleri](standard-numeric-format-strings.md) ve [özel sayısal biçim dizeleri](custom-numeric-format-strings.md)içinde belgelenen biçim dizeleri kullanılarak üretilmiş dizeleri ayrıştıramanıza olanak sağlar. Varsayılan olarak, `Parse` ve `TryParse` yöntemleri yalnızca tamsayı değerlerine tam sayı ondalık basamakları içeren dizeleri dönüştürebilir. İntegral ve kesirli ondalık basamaklar, Grup ayırıcılar ve bir ondalık ayırıcısı içeren dizeleri kayan nokta değerlerine başarıyla dönüştürebilirler. Yöntemi, `Parse` işlem başarısız olursa bir özel durum oluşturur, ancak `TryParse` Yöntem döndürülür `false` .  
   
 ## <a name="parsing-and-format-providers"></a>Ayrıştırma ve Biçim Sağlayıcıları  
+
  Genellikle, sayısal değerlerin dize temsilleri kültüre göre farklılık gösterir. Para birimi sembolleri, Grup (veya binlik) ayırıcılar gibi sayısal dizelerin öğeleri ve tüm ondalık ayırıcıları kültüre göre farklılık gösterir. Yöntemleri ayrıştırarak, kültüre özgü bu çeşitlemeleri tanıyan bir biçim sağlayıcısını örtük veya açık olarak kullanın. Veya yöntemine yapılan bir çağrıda biçim sağlayıcısı belirtilmemişse `Parse` `TryParse` , geçerli iş parçacığı kültürü ( <xref:System.Globalization.NumberFormatInfo> özelliği tarafından döndürülen nesne) ile ilişkili biçim sağlayıcısı <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType> kullanılır.  
   
  Biçim sağlayıcısı bir uygulamayla temsil edilir <xref:System.IFormatProvider> . Bu arabirim tek bir üyeye sahiptir, <xref:System.IFormatProvider.GetFormat%2A> tek parametresi, <xref:System.Type> biçimlendirilecek türü temsil eden bir nesnedir. Bu yöntem, biçimlendirme bilgileri sağlayan nesnesini döndürür. .NET, <xref:System.IFormatProvider> sayısal dizeleri ayrıştırmak için aşağıdaki iki uygulama destekler:  
@@ -36,6 +38,7 @@ Tüm sayısal türlerin iki statik ayrıştırma yöntemi vardır `Parse` ve `Tr
  [!code-vb[Parsing.Numbers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/formatproviders1.vb#1)]  
   
 ## <a name="parsing-and-numberstyles-values"></a>Ayrıştırma ve NumberStyles Değerleri  
+
  Ayrıştırma işleminin işleyebileceği stil öğeleri (beyaz boşluk, Grup ayırıcıları ve ondalık ayırıcı gibi) bir <xref:System.Globalization.NumberStyles> numaralandırma değeri tarafından tanımlanır. Varsayılan olarak, tam sayı değerlerini temsil eden dizeler değeri kullanılarak ayrıştırılır <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType> ve yalnızca sayısal basamaklar, baştaki ve sondaki boşluk ve baştaki işaretine izin verir. Kayan nokta değerlerini temsil eden dizeler ve değerlerinin bir birleşimi kullanılarak ayrıştırılır <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> ; Bu bileşik stil, baştaki ve sondaki boşluk, baştaki işareti, ondalık ayırıcısı, Grup ayırıcısı ve üs ile birlikte ondalık basamakların kullanılmasına izin verir. `Parse` `TryParse` Türünde bir parametre içeren <xref:System.Globalization.NumberStyles> ve bir veya daha fazla bayrak ayarlayarak ya da yönteminin bir aşırı yüklemesini çağırarak <xref:System.Globalization.NumberStyles> , ayrıştırma işleminin başarılı olması için dizedeki mevcut olabilecek stil öğelerini kontrol edebilirsiniz.  
   
  Örneğin, bir grup ayırıcısı içeren bir dize <xref:System.Int32> , yöntemi kullanılarak bir değere dönüştürülemez <xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType> . Ancak, aşağıdaki örnekte gösterildiği gibi bayrağını kullanırsanız dönüştürme işlemi başarılı olur <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> .  
@@ -74,6 +77,7 @@ Tüm sayısal türlerin iki statik ayrıştırma yöntemi vardır `Parse` ve `Tr
 |<xref:System.Globalization.NumberStyles.HexNumber?displayProperty=nameWithType>|<xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> Ve <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType> stillerini içerir.|  
   
 ## <a name="parsing-and-unicode-digits"></a>Ayrıştırma ve Unicode Rakamları  
+
  Unicode standart, çeşitli yazma sistemlerindeki basamakların kod noktalarını tanımlar. Örneğin, U + 0030 ile U + 0039 arasındaki kod noktaları, 0 ile 9 arasındaki temel Latin rakamlarını temsil ediyorsa, U + 09E6 ' dan U + 09EF 'e ait kod noktaları, 0 ile 9 arasındaki tam sayı rakamlarını temsil eder ve U + FF10 arasındaki kod noktaları, 0 ile 9 arasında tam sayı basamaklarını temsil eder. Ancak, Yöntemler ayrıştırılırken tanınan tek sayısal basamaklar, U + 0030 ile U + 0039 arasında kod noktalarıyla 0-9 temel Latin rakamları. Bir sayısal ayrıştırma yöntemi başka basamaklar içeren bir dize geçirtiyse, yöntem bir oluşturur <xref:System.FormatException> .  
   
  Aşağıdaki örnek, <xref:System.Int32.Parse%2A?displayProperty=nameWithType> farklı yazma sistemlerindeki rakamlardan oluşan dizeleri ayrıştırmak için yöntemini kullanır. Örnekteki Çıktının gösterdiği gibi, temel Latin rakamlarını Ayrıştırma girişimi başarılı olur, ancak tam genişlikli, Arapça Hintçe ve Bangla rakamlarını Ayrıştırma girişimi başarısız olur.  

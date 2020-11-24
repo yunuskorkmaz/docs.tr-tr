@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b2f7007f-c446-4b18-aed1-a25cff8aee31
 topic_type:
 - apiref
-ms.openlocfilehash: b8d2e49031e59db0527de3c848d7d390095797bf
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 7d3c35ed6cda637e3b885afe089ddfa590d51076
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396785"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683621"
 ---
 # <a name="icordebugvalue-interface"></a>ICorDebugValue Arabirimi
+
 Hata ayıklanan işlemdeki bir değeri temsil eder. Değer bir okuma veya yazma değeri olabilir.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -34,6 +35,7 @@ Hata ayıklanan işlemdeki bir değeri temsil eder. Değer bir okuma veya yazma 
 |[GetType Yöntemi](icordebugvalue-gettype-method.md)|Bu nesnenin temel türünü alır `ICorDebugValue` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Genel olarak, bir değer nesnesinin sahipliği döndürüldüğünde geçirilir. Alıcı, nesne ile işiniz bittiğinde nesneden bir başvuruyu kaldırmaktan sorumludur.  
   
  Değerin nereden alındığına bağlı olarak, işlem sürdürülmeden sonra değer geçerli kalmayabilir. Bu nedenle, genellikle değer [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) yönteminin bir çağrısında tutulmamalıdır.  
@@ -42,6 +44,7 @@ Hata ayıklanan işlemdeki bir değeri temsil eder. Değer bir okuma veya yazma 
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

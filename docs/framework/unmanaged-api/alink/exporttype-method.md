@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 91a7ce63-f5b8-4f16-b2c4-e1d0baa88944
 topic_type:
 - apiref
-ms.openlocfilehash: 84c41e467c57afd2562e7aa8dd72ce4796249667
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b8db08b22765bac0ed2fe058db49d6882b8d22df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438573"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684804"
 ---
 # <a name="exporttype-method"></a>ExportType Yöntemi
+
 Bir türün verilebilir olduğunu belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ExportType(  
@@ -38,6 +39,7 @@ HRESULT ExportType(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `AssemblyID`  
  Dışarı aktarılacak derlemenin KIMLIĞI.  
   
@@ -51,15 +53,17 @@ HRESULT ExportType(
  Dışarı aktarılabilir hale getirmek için tam tür adı.  
   
  `dwFlags`  
- `tdPublic` veya `tdNested`gibi bayrakları `ComType`. Bu parametre [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
+ `ComType` veya gibi bayraklar `tdPublic` `tdNested` . Bu parametre [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
   
  `pType`  
  İçe aktarılmış tür için belirteç alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.

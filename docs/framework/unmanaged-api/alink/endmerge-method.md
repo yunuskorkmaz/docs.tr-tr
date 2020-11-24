@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 1d03bb15-a2c8-4a04-8fc6-b126c89c3778
 topic_type:
 - apiref
-ms.openlocfilehash: cacf7eab1e53f590ad46fd98ed2f5dcbd14cd30a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ed4ac7b12caa0dd78b79554258de62b8752553e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434411"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684934"
 ---
 # <a name="endmerge-method"></a>EndMerge Yöntemi
+
 Tüm özel özniteliklerin yayma kapsamıyla birleştirildiğini gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EndMerge(  
@@ -34,13 +35,16 @@ HRESULT EndMerge(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `AssemblyID`  
  Derlemenin KIMLIĞI.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.

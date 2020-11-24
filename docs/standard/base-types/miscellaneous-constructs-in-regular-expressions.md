@@ -9,17 +9,19 @@ helpviewer_keywords:
 - .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: c9abccd6c93bad89cc737822fce3990c77b1b96e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef8f126559b51aa9b918f04e27f5599fba519b43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821950"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683803"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Normal İfadelerdeki Çeşitli Yapılar
+
 .NET 'teki normal ifadeler üç çeşitli dil yapılarını içerir. Bir normal ifade deseninin ortasında belirli eşleştirme seçeneklerini etkinleştirmenizi veya devre dışı bırakmanızı sağlar. Kalan iki, açıklamaları normal bir ifadeye eklemenizi sağlar.  
   
 ## <a name="inline-options"></a>Satır içi seçenekler  
+
  Sözdizimini kullanarak normal bir ifadenin bir parçası için belirli bir model eşleştirme seçeneklerini ayarlayabilir veya devre dışı bırakabilirsiniz  
   
 `(?imnsx-imnsx)`  
@@ -56,6 +58,7 @@ ms.locfileid: "94821950"
 |`\b`|Bir sözcük sınırıyla eşleş.|  
   
 ## <a name="inline-comment"></a>Satır içi açıklama  
+
  `(?#` *Açıklama* `)` yapısı, bir normal ifadeye satır içi bir yorum eklemenizi sağlar. Normal ifade altyapısı, açıklama yöntemi tarafından döndürülen dizeye dahil edilse de, bu açıklamanın herhangi bir parçasını model eşleme içinde kullanmaz <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> . Açıklama ilk kapanış parantezinde sona erer.  
   
  Aşağıdaki örnek, önceki bölümdeki örnekteki ilk normal ifade deseninin yinelenir. Karşılaştırmayı, büyük/küçük harfe duyarlı olup olmadığını belirtmek için normal ifadeye iki satır içi açıklama ekler. Normal ifade deseninin `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` aşağıdaki şekilde tanımlanması gerekir.  
@@ -75,6 +78,7 @@ ms.locfileid: "94821950"
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>Satır sonu açıklaması  
+
  Bir sayı işareti ( `#` ), normal ifade deseninin sonunda kaçışsız # karakteriyle başlayan ve satırın sonuna kadar devam eden bir x-Mode yorumunu işaretler. Bu yapıyı kullanmak için, `x` seçeneğini etkinleştirmeniz (satır içi seçenekler aracılığıyla) veya <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> `option` nesneyi örnekledikten <xref:System.Text.RegularExpressions.Regex> ya da statik bir yöntemi çağırırken parametreye değeri sağlamanız gerekir <xref:System.Text.RegularExpressions.Regex> .  
   
  Aşağıdaki örnek satır sonu açıklama yapısını gösterir. Bir dizenin en az bir biçim öğesi içeren bir bileşik biçim dizesi olup olmadığını belirler. Aşağıdaki tabloda, normal ifade deseninin yapıları açıklanmaktadır:  

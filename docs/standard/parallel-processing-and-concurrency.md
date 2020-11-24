@@ -7,17 +7,19 @@ helpviewer_keywords:
 - concurrency [.NET]
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-ms.openlocfilehash: 7ac888ed877adf3652f5de243a046f3c5117dc61
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3cdb5c2ecd23635d8faf0eb4bc93d201869039b0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817503"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682685"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>.NET ' te paralel Işleme, eşzamanlılık ve zaman uyumsuz programlama
+
 .NET, uygulamanızın bir kullanıcıya daha fazla yanıt vermesini ve kullanıcı bilgisayarının performansını en üst düzeye çıkarmak için birden çok yürütme iş parçacığını kullanan paralel kod yazmak üzere zaman uyumsuz kod yazmanız için çeşitli yollar sunar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Zaman uyumsuz programlama](async.md)  
  .NET tarafından sunulan zaman uyumsuz programlama mekanizmalarını açıklar.  
   

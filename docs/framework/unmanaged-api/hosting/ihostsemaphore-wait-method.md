@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0da962a3-ce55-44dd-ab7a-14ad7105af4a
 topic_type:
 - apiref
-ms.openlocfilehash: 22d570711c293dd8c0cc6fefd198dd46d6489bea
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 69b2338e6992c386a3cd34a632d69b73a67f14fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803545"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683010"
 ---
 # <a name="ihostsemaphorewait-method"></a>IHostSemaphore::Wait Yöntemi
+
 Geçerli [ıhostsemafor](ihostsemaphore-interface.md) örneğinin, kendisine ait olana veya belirtilen süre geçtikten sonra beklemesini sağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT Wait (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwMilliseconds`  
  'ndaki Geçerli örneğe ait değilse, döndürülmeden önce beklenecek milisaniye sayısı `IHostSemaphore` .  
   
@@ -45,7 +47,7 @@ HRESULT Wait (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Wait`başarıyla döndürüldü.|  
+|S_OK|`Wait` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -54,11 +56,12 @@ HRESULT Wait (
 |HOST_E_DEADLOCK|Ana bilgisayar bekleme aralığı sırasında bir kilitlenme algıladı ve geçerli `IHostSemaphore` örneği bir kilitlenme kurbanı olarak seçti.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-ms.openlocfilehash: 40df78cdf99c2e0f53be9664f3f5c6386b6c6f93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8c6fd7dca13afe7504e447caca9a217c8136c27
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179405"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684531"
 ---
 # <a name="getscope2-method"></a>GetScope2 Metodu
-Bir alma kapsamı alır.  
+
+İçeri aktarma kapsamı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetScope2(  
@@ -36,23 +37,26 @@ HRESULT GetScope2(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `AssemblyID`  
- Hedef montaj kimliği.  
+ Hedef derlemenin KIMLIĞI.  
   
  `FileToken`  
- Hangi dosyanın kimlik almak için.  
+ İçinden içeri aktarılacak dosyanın KIMLIĞI.  
   
  `dwScope`  
- Almak için sıfır tabanlı kapsam.  
+ İçeri aktarılacak sıfır tabanlı kapsam.  
   
  `ppImportScope`  
- Belirtilen kapsam için [IMetaDataImport2 Arabirim](../metadata/imetadataimport2-interface.md) arabirimine işaretçisi alır.  
+ Belirtilen kapsam için [IMetaDataImport2 arabirimi](../metadata/imetadataimport2-interface.md) arabirimine yönelik bir işaretçi alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Alink.h gerektirir.  
+
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

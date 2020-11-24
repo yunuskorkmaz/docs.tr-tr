@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9afd0e04-a403-41e2-9528-a6dcbcdcbd4d
 topic_type:
 - apiref
-ms.openlocfilehash: e5fd1730bbe5b6f2905691dce41a7f503227534a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e0df443e691292817ff37900fbc87204a8325ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179078"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684505"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypes-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypes Metodu
-Önbelleğe alınmış tüm Windows Runtime türleri için bir sayısallaştırıcı alır.  
+
+Tüm önbelleğe alınmış Windows Çalışma Zamanı türleri için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetCachedWinRTTypes (
@@ -34,17 +35,19 @@ HRESULT GetCachedWinRTTypes (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppGuidToTypeEnum`  
- [çıkış] Şu anda uygulama etki alanında yüklenen Windows Runtime türlerinin yönetilen gösterimlerini sayısala bilen [bir ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md) arabirim nesnesine işaretçi.  
+ dışı Bir [ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md) arabirim nesnesine yönelik bir işaretçi, uygulama etki alanında şu anda yüklü olan Windows çalışma zamanı türlerinin yönetilen gösterimlerini numaralandırabilirler.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Windows Çalışma Zamanı  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

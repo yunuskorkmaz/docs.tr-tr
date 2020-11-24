@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: fdebc1f3-b62e-4d9e-b775-8ccaa8ecb250
 topic_type:
 - apiref
-ms.openlocfilehash: f3bb978b8358992fd9aa7da922e28efc1ed1a951
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1c005e58f18b03a7da5f3836f719b95c41bca95
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446485"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684947"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest Yöntemi
+
 Son bildirimi yayar. Diğer tüm dosyaları içeri aktardıktan sonra ve tüm seçenekleri ayarlayarak bu yöntemi çağırın. İlişkisiz modüller için bu yöntemi çağırmayın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EmitManifest(  
@@ -36,6 +37,7 @@ HRESULT EmitManifest(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `AssemblyID`  
  Derlemenin KIMLIĞI.  
   
@@ -46,9 +48,11 @@ HRESULT EmitManifest(
  İsteğe bağlı olarak, derleme bildirimi belirtecini alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

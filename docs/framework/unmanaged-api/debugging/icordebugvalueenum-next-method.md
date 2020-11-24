@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-ms.openlocfilehash: db1721fed6414310556ceac493275e069a781ac8
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e1c8d94a90092b1497267c78d5fadf5a6e6de707
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397137"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684336"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next Yöntemi
+
 Geçerli konumdan başlayarak Numaralandırmadaki belirtilen "ICorDebugValue" örneklerinin sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Next (  
@@ -37,16 +38,18 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `celt`  
- 'ndaki `ICorDebugValue`Alınacak örnek sayısı.  
+ 'ndaki `ICorDebugValue` Alınacak örnek sayısı.  
   
  `values`  
  dışı Her biri bir nesneye işaret eden işaretçiler dizisi `ICorDebugValue` .  
   
  `pceltFetched`  
- dışı `ICorDebugValue`Aslında döndürülen örnek sayısına yönelik işaretçi. Bu değer bir ise null olabilir `celt` .  
+ dışı `ICorDebugValue` Aslında döndürülen örnek sayısına yönelik işaretçi. Bu değer bir ise null olabilir `celt` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

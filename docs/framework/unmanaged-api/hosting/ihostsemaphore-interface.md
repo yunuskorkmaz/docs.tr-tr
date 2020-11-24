@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c0765321-656c-441e-bab5-58176292be1e
 topic_type:
 - apiref
-ms.openlocfilehash: 8345d85502087568cb05dd262cccf181e3ca07ac
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: cccbf9a28b16ffee14b3fd3ec43c376109d6ccec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803699"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683062"
 ---
 # <a name="ihostsemaphore-interface"></a>IHostSemaphore Arabirimi
+
 Ana bilgisayarın iş parçacığı için semafor uygulamasını temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -32,11 +33,12 @@ Ana bilgisayarın iş parçacığı için semafor uygulamasını temsil eder.
 |[Wait Yöntemi](ihostsemaphore-wait-method.md)|Geçerli örneğin, `IHostSemaphore` ait olana veya belirtilen süre geçtikten sonra beklemesini sağlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -16,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3506df38-6cea-42f6-946e-4287863bcfb3
 topic_type:
 - apiref
-ms.openlocfilehash: 0e54027806cef07fad4740c3bf5226fd26c72570
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7e3696121475885f5061bd96eb6905d7ccae734
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108771"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683179"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum İşlevi
+
 Derlemedeki nesneleri belirtilen [IAssemblyName](iassemblyname-interface.md)ile numaralandıracak bir [IAssemblyEnum](iassemblyenum-interface.md) örneğine yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CreateAssemblyEnum (  
@@ -39,32 +40,35 @@ HRESULT CreateAssemblyEnum (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pEnum`  
- dışı İstenen `IAssemblyEnum` işaretçisini içeren bir bellek konumu işaretçisi.  
+ dışı İstenen işaretçiyi içeren bir bellek konumu işaretçisi `IAssemblyEnum` .  
   
  `pUnkReserved`  
- 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pUnkReserved`, null bir başvuru olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pUnkReserved` null bir başvuru olmalıdır.  
   
  `pName`  
- 'ndaki İstenen derlemenin `IAssemblyName`. Bu ad, numaralandırmayı filtrelemek için kullanılır. Genel derleme önbelleğindeki tüm derlemeleri listelemek için null olabilir.  
+ 'ndaki `IAssemblyName` İstenen derlemenin ' i. Bu ad, numaralandırmayı filtrelemek için kullanılır. Genel derleme önbelleğindeki tüm derlemeleri listelemek için null olabilir.  
   
  `dwFlags`  
  'ndaki Numaralandırıcının davranışını değiştirme bayrakları. Bu parametre [asm_cache_flags](asm-cache-flags-enumeration.md) numaralandırmasından tam olarak bir bit içerir.  
   
  `pvReserved`  
- 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved`, null bir başvuru olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved` null bir başvuru olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `dwFlags` parametresi `ASM_CACHE_FLAGS` numaralandırmasından tam olarak bir bit içerir.  
+
+ `dwFlags`Parametresi Numaralandırmadaki tam olarak bir bit içeriyor `ASM_CACHE_FLAGS` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Fusion. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

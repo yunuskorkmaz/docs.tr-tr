@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8451f100f9e1b8d68045050d1b584ae44c29195d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500097"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684077"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback Arabirimi
+
 Profil oluşturucunun abone olduğu olaylar gerçekleştiğinde, bir kod Profilcisi bildirmek için ortak dil çalışma zamanı (CLR) tarafından kullanılan yöntemleri sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[AppDomainCreationFinished Yöntemi](icorprofilercallback-appdomaincreationfinished-method.md)|Profil oluşturucuyu bir uygulama etki alanının oluşturulduğunu bildirir.|  
 |[AppDomainCreationStarted Yöntemi](icorprofilercallback-appdomaincreationstarted-method.md)|Profil oluşturucuyu bir uygulama etki alanının oluşturulduğunu bildirir.|  
@@ -60,8 +61,8 @@ Profil oluşturucunun abone olduğu olaylar gerçekleştiğinde, bir kod Profilc
 |[ExceptionUnwindFunctionLeave Yöntemi](icorprofilercallback-exceptionunwindfunctionleave-method.md)|Profil oluşturucuyu, özel durum işlemenin geri sarma aşamasının bir işlevi geriye doğru izlemeyi tamamladığını bildirir.|  
 |[FunctionUnloadStarted Yöntemi](icorprofilercallback-functionunloadstarted-method.md)|Profil oluşturucuyu, çalışma zamanının bir işlevi kaldırmak için başlatıldığını bildirir.|  
 |[Initialize Yöntemi](icorprofilercallback-initialize-method.md)|Her yeni CLR uygulaması başlatıldığında profil oluşturucuyu başlatmak için çağırılır.|  
-|[JITCachedFunctionSearchFinished Yöntemi](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Profiler öğesine, daha önce NGen. exe kullanılarak derlenen bir işlev için bir aramanın tamamlandığını bildirir.|  
-|[JITCachedFunctionSearchStarted Yöntemi](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Profil oluşturucuyu, daha önce NGen. exe kullanılarak derlenen bir işlev için bir aramanın başlatıldığını bildirir.|  
+|[JITCachedFunctionSearchFinished Yöntemi](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Profil oluşturucuyu, daha önce NGen.exe kullanılarak derlenen bir işlev için bir aramanın tamamlandığını bildirir.|  
+|[JITCachedFunctionSearchStarted Yöntemi](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Profil oluşturucuyu, daha önce NGen.exe kullanılarak derlenen bir işlev için bir aramanın başlatıldığını bildirir.|  
 |[JITCompilationFinished Yöntemi](icorprofilercallback-jitcompilationfinished-method.md)|Profiler öğesine JıT derleyicisinin bir işlevi derlemeyi tamamladığını bildirir.|  
 |[JITCompilationStarted Yöntemi](icorprofilercallback-jitcompilationstarted-method.md)|Profil oluşturucuyu, Just-In-Time (JıT) derleyicisinin bir işlevi derlemek için başlatıldığını bildirir.|  
 |[JITFunctionPitched Yöntemi](icorprofilercallback-jitfunctionpitched-method.md)|Profiler öğesine JıT derlenmiş bir işlevin bellekten kaldırıldığını bildirir.|  
@@ -99,6 +100,7 @@ Profil oluşturucunun abone olduğu olaylar gerçekleştiğinde, bir kod Profilc
 |[UnmanagedToManagedTransition Yöntemi](icorprofilercallback-unmanagedtomanagedtransition-method.md)|Profil oluşturucuyu yönetilmeyen koddan yönetilen koda geçiş olduğunu bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR, profil oluşturucunun `ICorProfilerCallback` abone olduğu bir olay olduğunda profil oluşturucuyu bilgilendirmek için (veya [ICorProfilerCallback2](icorprofilercallback2-interface.md)) arabirimindeki bir yöntemi çağırır. Bu, CLR 'nin kod Profilcisi ile iletişim kurduğu birincil geri çağırma arabirimidir.  
   
  Bir kod profil oluşturucu arabirimin yöntemlerini uygulamalıdır `ICorProfilerCallback` . .NET Framework sürüm 2,0 veya üzeri için, profil oluşturucunun de yöntemleri uygulaması gerekir `ICorProfilerCallback2` . Her yöntem uygulamasının başarılı veya hatalı E_FAIL S_OK değerine sahip bir HRESULT döndürmesi gerekir. Şu anda CLR [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md)hariç her geri çağırma tarafından döndürülen HRESULT 'yi yoksayar.  
@@ -109,6 +111,7 @@ Profil oluşturucunun abone olduğu olaylar gerçekleştiğinde, bir kod Profilc
 > Profil Oluşturucu tek bir COM nesnesi kaydeder. Profiler .NET Framework sürüm 1,0 veya 1,1 ' i hedefliyorsanız, söz konusu COM nesnesinin yalnızca yöntemini uygulaması gerekir `ICorProfilerCallback` . .NET Framework sürüm 2,0 veya sonraki bir sürümü hedefliyorsanız, COM nesnesinin yöntemlerini de uygulaması gerekir `ICorProfilerCallback2` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

@@ -2,12 +2,12 @@
 title: docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 description: Docker-Compose. yıml ile çok kapsayıcılı bir uygulama için mikro hizmet birleşimini belirtme.
 ms.date: 01/30/2020
-ms.openlocfilehash: 47f2bf9bcdbf021ec4232ff9e25f6b2b228aaeaa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c375d328ab9064315682fab91cb5e49e9a384b56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539313"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682672"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 
@@ -84,7 +84,7 @@ services:
 
 Bu dosyadaki kök anahtar hizmetdir. Bu anahtar altında, `docker-compose up` komutunu çalıştırdığınızda veya bu Docker-Compose. yıml dosyasını kullanarak Visual Studio 'dan dağıtırken dağıtmak ve çalıştırmak istediğiniz hizmetleri tanımlarsınız. Bu durumda, aşağıdaki tabloda açıklandığı gibi, Docker-Compose. yıml dosyasında birden çok hizmet tanımlanmıştır.
 
-| Hizmet adı | Description |
+| Hizmet adı | Açıklama |
 |--------------|-------------|
 | webmvc       | Sunucu tarafı C 'den mikro hizmetleri kullanan ASP.NET Core MVC uygulamasını içeren kapsayıcı\#|
 | Katalog-API  | Katalog ASP.NET Core Web API mikro hizmeti de dahil olmak üzere kapsayıcı |
@@ -388,7 +388,7 @@ services:
 
 Bu örnekte, geliştirme geçersiz kılma yapılandırması konağa bazı bağlantı noktaları gösterir, yönlendirme URL 'Leri ile ortam değişkenlerini tanımlar ve geliştirme ortamı için bağlantı dizelerini belirtir. Bu ayarlar yalnızca geliştirme ortamına yöneliktir.
 
-Çalıştırdığınızda `docker-compose up` (veya Visual Studio 'dan başlattığınızda), komut geçersiz kılmaları her iki dosyayı birleştiriyor gibi otomatik olarak okur.
+Çalıştırdığınızda `docker-compose up` (veya Visual Studio 'dan başlattığınızda), komut geçersiz kılmaları her iki dosyayı birleştiriyor gibi otomatik olarak okur.
 
 Üretim ortamı için farklı yapılandırma değerleriyle, bağlantı noktalarıyla veya bağlantı dizelerine sahip başka bir oluşturma dosyası istediğinizi varsayalım. Farklı ayarlar ve ortam değişkenleriyle adlı dosya gibi başka bir geçersiz kılma dosyası oluşturabilirsiniz `docker-compose.prod.yml` . Bu dosya farklı bir git deposunda depolanabilir veya yönetilen ve farklı bir ekip tarafından güvenli hale getirilmiş olabilir.
 
@@ -437,7 +437,7 @@ Docker-Compose,. env dosyasındaki her satırın biçimde olmasını bekler \<va
 Internet 'teki kaynaklarda Docker ve .NET Core 'u araştırıyorsanız, kaynağınızı bir kapsayıcıya kopyalayarak bir Docker görüntüsü oluşturmanın basitliğini gösteren Dockerfiles 'ı bulabilirsiniz. Bu örnekler, basit bir yapılandırma kullanarak, uygulamanızla birlikte paketlenmiş bir Docker görüntüsüne sahip olabilirsiniz. Aşağıdaki örnekte, bu Vein içindeki basit bir Dockerfile gösterilmektedir.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -458,7 +458,7 @@ Kapsayıcı ve mikro hizmetler modelinde, kapsayıcılardan sürekli olarak baş
 
 3. **Üretim**: odak, kapsayıcıların hızlı bir şekilde dağıtılmasını ve başlamasını sağlar. bu sayede, bu görüntüler uygulamayı çalıştırmak için gereken ikili ve içerikle sınırlıdır.
 
-.NET ekibi, [DotNet/Core](https://hub.docker.com/_/microsoft-dotnet-core/) 'da dört temel çeşit sağlar (Docker Hub 'da):
+.NET ekibi, [DotNet/Core](https://hub.docker.com/_/microsoft-dotnet/) 'da dört temel çeşit sağlar (Docker Hub 'da):
 
 1. **SDK**: geliştirme ve derleme senaryoları için
 1. **ASPNET**: ASP.NET üretim senaryoları için
