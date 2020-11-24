@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-ms.openlocfilehash: 67c25015f1127a62c480a8fc09c5945682097124
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5d50711eda266cecdb817c778f04aa845fa4c342
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823686"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686650"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>XSLT İşleme Sırasında Dış Kaynakları Çözümleme
+
 Dış kaynakları çözmeniz gerekebilmeniz için bir XSLT dönüştürmesi sırasında birkaç zaman vardır.  
   
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver sınıfını kullanma  
+
  <xref:System.Xml.XmlResolver>Sınıfı, dış kaynakları çözümlemek için kullanılır. Aşağıdaki tabloda <xref:System.Xml.XmlResolver> XSLT işleme sırasında ne zaman dahil olduğu açıklanır.  
   
 |XSLT görevi|İçin XmlResolver kullanılma|  
@@ -36,6 +38,7 @@ Dış kaynakları çözmeniz gerekebilmeniz için bir XSLT dönüştürmesi sır
 - Hiçbir dış kaynağa erişilmemesini sağlamak istiyorsanız `null` <xref:System.Xml.XmlResolver> bağımsız değişkeni için belirtebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir ağ kaynağında depolanan bir stil sayfasını derler. Bir <xref:System.Xml.XmlUrlResolver> nesne, stil sayfasına erişmek için gereken kimlik bilgilerini belirtir.  
   
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]

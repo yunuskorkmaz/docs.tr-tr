@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-ms.openlocfilehash: 40efccba86f1bca8af838961dccdc7f98f8c93c2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 61275e9232b3d9e516636869d7153f33133cbd03
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820403"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686871"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>DOM’da XML Belgesi Okuma
+
 XML bilgileri farklı biçimlerden belleğe okundu. Bir dize, akış, URL, metin okuyucu veya öğesinden türetilmiş bir sınıftan okunabilir <xref:System.Xml.XmlReader> .  
   
  <xref:System.Xml.XmlDocument.Load%2A>Yöntemi, belgeyi belleğe getirir ve farklı biçimlerden her birinden veri almak için kullanılabilir yöntemler daha fazla bulunabilir. Ayrıca, <xref:System.Xml.XmlDocument.LoadXml%2A> bir DIZEDEN XML okuyan bir yöntem de vardır.  

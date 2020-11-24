@@ -2,14 +2,15 @@
 title: XML Verilerini Bellek İçinde İşleme
 ms.date: 03/30/2017
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-ms.openlocfilehash: 1b74e029bcda4476d166b83ddecb06e5d607fc3d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 878e008f5c7c3a018389e8666263269162989812
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824706"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686923"
 ---
 # <a name="processing-xml-data-in-memory"></a>XML Verilerini Bellek İçinde İşleme
+
 Microsoft .NET Framework, XML verilerini işlemek için üç model içerir: <xref:System.Xml.XmlDocument> Class, <xref:System.Xml.XPath.XPathDocument> class ve [LINQ to XML (C#)](../../linq/linq-xml-overview.md) ve [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md).  
   
  <xref:System.Xml.XmlDocument>Sınıfı, W3C belge nesne modeli (DOM) düzey 1 çekirdeğini ve çekırdek DOM düzeyi 2 önerilerini uygular. DOM, bir XML belgesinin bellek içi (önbellek) ağaç gösterimidir. <xref:System.Xml.XmlDocument>Ve ilgili sınıfları Ile xml belgeleri oluşturabilir, verileri yükleyebilir ve erişebilir, verileri değiştirebilir ve değişiklikleri kaydedebilirsiniz.  
@@ -19,6 +20,7 @@ Microsoft .NET Framework, XML verilerini işlemek için üç model içerir: <xre
  [LINQ to XML](../../linq/linq-xml-overview.md) , XML verilerini işlemek için .NET Framework sürüm 3,5 ' de tanıtılan bir modeldir. [Dil Ile tümleşik sorgu (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)kullanan bellek içi bir modeldir. LINQ, yeni sorgu özellikleri sağlamak için C# ve Visual Basic dil sözdizimini genişletir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [DOM Modelini Kullanarak XML Verilerini İşleme](process-xml-data-using-the-dom-model.md)  
  <xref:System.Xml.XmlDocument>XML verilerini işlemek için ve ilgili sınıflarının kullanımını açıklar.  
   
@@ -29,4 +31,5 @@ Microsoft .NET Framework, XML verilerini işlemek için üç model içerir: <xre
  LINQ to XML kısa bir genel bakış sağlar ve LINQ to XML belgelerine bağlantılar sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [XML belgeleri ve verileri](index.md)

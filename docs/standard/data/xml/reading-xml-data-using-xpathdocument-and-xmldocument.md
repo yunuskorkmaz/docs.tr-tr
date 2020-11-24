@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-ms.openlocfilehash: cd95d2331f9f178b916cf22ec4b1ead7d7c4a116
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8ffd03d1a9915bade6c4d421d5fad096a4784fb8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824356"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686793"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma
+
 Ad alanındaki bir XML belgesini bulmanın iki yolu vardır <xref:System.Xml.XPath?displayProperty=nameWithType> . Bunlardan biri, salt okunurdur sınıfını kullanarak bir XML belgesini okumalıdır <xref:System.Xml.XPath.XPathDocument> ve diğer ad alanındaki düzenlenebilir sınıfını kullanarak BIR XML belgesini okumalıdır <xref:System.Xml.XmlDocument> <xref:System.Xml?displayProperty=nameWithType> .  
   
 ## <a name="reading-xml-documents-using-the-xpathdocument-class"></a>XPathDocument sınıfını kullanarak XML belgelerini okuma  
+
  <xref:System.Xml.XPath.XPathDocument>Sınıfı, XPath veri modelini kullanarak BIR XML belgesinin hızlı, Salt okunabilir ve bellek içi gösterimini sağlar. Sınıfının örnekleri, <xref:System.Xml.XPath.XPathDocument> altı oluşturucularından biri kullanılarak oluşturulur. Bu oluşturucular, bir XML belgesinin bir <xref:System.IO.Stream> , <xref:System.IO.TextReader> , veya nesnesi Ile bir <xref:System.Xml.XmlReader> `string` XML dosyasının yolunu kullanarak okumanızı sağlar.  
   
  Aşağıdaki örnek, <xref:System.Xml.XPath.XPathDocument> sınıfının `string` YAPıCıSıNı bir XML belgesi okumak için kullanmayı gösterir.  
@@ -29,6 +31,7 @@ XPathDocument document = new XPathDocument("books.xml");
 ```  
   
 ## <a name="reading-xml-documents-using-the-xmldocument-class"></a>XmlDocument sınıfını kullanarak XML belgelerini okuma  
+
  <xref:System.Xml.XmlDocument>Sınıfı, W3C belge nesne modeli (DOM) düzey 1 Core ve çekırdek DOM düzeyi 2 uygulayan BIR XML belgesinin düzenlenebilir bellek içi gösterimidir. Sınıfının örnekleri, <xref:System.Xml.XmlDocument> üç oluşturucularından biri kullanılarak oluşturulur. <xref:System.Xml.XmlDocument>Sınıf oluşturucusunu parametre olmadan çağırarak yeni, boş bir nesne oluşturabilirsiniz <xref:System.Xml.XmlDocument> . Oluşturucuyu çağırdıktan sonra, <xref:System.Xml.XmlDocument.Load%2A> bir,, veya nesnesinden yeni nesneye XML verisi yüklemek için yöntemini ve <xref:System.Xml.XmlDocument> <xref:System.IO.Stream> <xref:System.IO.TextReader> <xref:System.Xml.XmlReader> `string` bir XML dosyasının yolunu kullanın.  
   
  Aşağıdaki örnek, <xref:System.Xml.XmlDocument> sınıf oluşturucunun parametre olmadan ve <xref:System.Xml.XmlDocument.Load%2A> bir XML belgesini okuma yöntemiyle kullanılması gösterilmektedir.  
@@ -44,6 +47,7 @@ document.Load("books.xml");
 ```  
   
 ## <a name="determining-the-encoding-of-an-xml-document"></a>XML belgesinin kodlamasını belirleme  
+
  Bir <xref:System.Xml.XmlReader> nesne, BIR XML belgesini okumak ve <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> önceki bölümlerde gösterildiği gibi oluşturmak ve nesneler oluşturmak için kullanılabilir. Ancak, bir <xref:System.Xml.XmlReader> nesne kodlanmayan verileri okuyabilir ve sonuç olarak herhangi bir kodlama bilgisi sağlamaz.  
   
  <xref:System.Xml.XmlTextReader>Sınıfı sınıfından devralır <xref:System.Xml.XmlReader> , özelliğini kullanarak kodlama bilgilerini sağlar <xref:System.Xml.XmlTextReader.Encoding%2A> ve bir <xref:System.Xml.XPath.XPathDocument> nesne veya nesne oluşturmak için kullanılabilir <xref:System.Xml.XmlDocument> .  
@@ -51,11 +55,13 @@ document.Load("books.xml");
  Sınıfı tarafından verilen kodlama bilgileri hakkında daha fazla bilgi için <xref:System.Xml.XmlTextReader> bkz <xref:System.Xml.XmlTextReader.Encoding%2A> <xref:System.Xml.XmlTextReader> . sınıf başvurusu belgelerindeki özelliği.  
   
 ## <a name="creating-xpathnavigator-objects"></a>XPathNavigator nesneleri oluşturma  
+
  Bir veya nesnesine bir XML belgesi okuduktan sonra <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> , <xref:System.Xml.XPath.XPathNavigator> seçim yapmak, değerlendirmek, gezinmek ve bazı durumlarda temel alınan XML verilerini düzenlemek için bir nesne oluşturabilirsiniz.  
   
  Hem <xref:System.Xml.XPath.XPathDocument> hem de <xref:System.Xml.XmlDocument> sınıfları sınıfının yanı sıra, <xref:System.Xml.XmlNode> <xref:System.Xml.XPath.IXPathNavigable> <xref:System.Xml.XPath?displayProperty=nameWithType> ad alanının arabirimini uygular. Sonuç olarak, üç sınıf de bir <xref:System.Xml.XPath.IXPathNavigable.CreateNavigator%2A> nesne döndüren bir yöntem sağlar <xref:System.Xml.XPath.XPathNavigator> .  
   
 ### <a name="editing-xml-documents-using-the-xpathnavigator-class"></a>XPathNavigator sınıfını kullanarak XML belgelerini Düzenle  
+
  XML verilerini seçmeye, değerlendirmeye ve gezinmeye ek olarak, <xref:System.Xml.XPath.XPathNavigator> sınıfı, BIR XML belgesini oluşturan nesneye göre bazı durumlarda düzenlemek için kullanılabilir.  
   
  Sınıf <xref:System.Xml.XPath.XPathDocument> düzenlenebilir olsa da, sınıf salt okunurdur ve bir nesneden oluşturulan <xref:System.Xml.XmlDocument> nesneler, bir <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathDocument> NESNEDEN oluşturulan nesneler bir XML belgesini düzenlemek için kullanılamaz <xref:System.Xml.XmlDocument> . <xref:System.Xml.XPath.XPathDocument>Sınıfı yalnızca BIR XML belgesini okumak için kullanılmalıdır. Bir XML belgesini düzenlemeniz veya sınıf tarafından sunulan ve olay işleme gibi ek işlevlere erişmeniz gereken durumlarda, <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument> sınıf kullanılmalıdır.  

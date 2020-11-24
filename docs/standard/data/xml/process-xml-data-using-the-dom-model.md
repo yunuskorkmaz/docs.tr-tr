@@ -2,14 +2,15 @@
 title: DOM Modelini Kullanarak XML Verilerini İşleme
 ms.date: 03/30/2017
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-ms.openlocfilehash: 2608008f33eb8bc0dd0a9b5fe96e619df6138b51
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b0e24527e0edafee16511ea03a229e049b31126c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830915"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686975"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>DOM Modelini Kullanarak XML Verilerini İşleme
+
 XML Belge Nesne Modeli (DOM), XML verilerini standart bir nesne kümesi olarak değerlendirir ve XML verilerini bellekte işlemek için kullanılır. `System.Xml`Ad alanı, XML belgelerinin, parçaların, düğümlerin veya düğüm kümelerinin programlı bir gösterimini sağlar. World Wide Web Konsorsiyumu (W3C) DOM düzeyi 1 çekirdeğini ve DOM düzey 2 temel önerilerini temel alır.  
   
  <xref:System.Xml.XmlDocument>Sınıfı BIR XML belgesini temsil eder. Diğer tüm XML nesnelerini alma ve oluşturma üyelerini içerir. <xref:System.Xml.XmlDocument>Ve ilişkili sınıflarını kullanarak XML belgeleri oluşturabilir, verileri yükleyebilir ve erişebilir, verileri değiştirebilir ve değişiklikleri kaydedebilirsiniz.  
@@ -55,5 +56,6 @@ XML Belge Nesne Modeli (DOM), XML verilerini standart bir nesne kümesi olarak d
 - [DOM Genişletme](extending-the-dom.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [XPath Veri Modelini Kullanarak XML Verilerini İşleme](process-xml-data-using-the-xpath-data-model.md)  
  Sınıfını kullanarak XML işlemesini açıklar <xref:System.Xml.XPath.XPathNavigator> .

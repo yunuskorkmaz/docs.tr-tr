@@ -2,19 +2,21 @@
 title: Basit Türlerin Çıkarımını Yapma Kuralları
 ms.date: 03/30/2017
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8fa3037d9ad5af057f477733ffdea74681f5549
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823556"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686546"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Basit Türlerin Çıkarımını Yapma Kuralları
+
 <xref:System.Xml.Schema.XmlSchemaInference>Sınıfının öznitelikler ve öğeler için veri türünü nasıl kullandığını açıklar.  
   
  <xref:System.Xml.Schema.XmlSchemaInference>Sınıfı, öznitelikler ve öğeler için veri türünü basit türler olarak anlar. Bu bölümde, birden çok farklı değerin tek bir türe göre nasıl mutabık kılınmasıyla ve şema tanımlama `xsi` özniteliklerinin nasıl işlendiği açıklanmaktadır.  
   
 ## <a name="inferred-types"></a>Çıkartılan türler  
+
  <xref:System.Xml.Schema.XmlSchemaInference>Sınıfı, öğe ve öznitelik değerlerini basit türler olarak anlar ve sonuç şemasında bir tür özniteliği içerir. Tüm çıkartılan türler basit türlerdir. Ortaya çıkan şemanın bir parçası olarak hiçbir temel tür veya model dahil değildir.  
   
  Değerler, XML belgesinde karşılaştığı şekilde ayrı ayrı incelenir. Tür, İncelenme sırasında bir değer için algılanır. Bir öznitelik veya öğe için bir tür çıkarsanmışsa ve şu anda çıkartılan türle eşleşmeyen öznitelik veya öğe için bir değer ile karşılaşılırsa, <xref:System.Xml.Schema.XmlSchemaInference> sınıf her bir kural kümesinin türünü yükseltir. Bu kurallar, bu konunun ilerleyen kısımlarında bulunan yükseltme türü bölümünde ele alınmıştır.  
@@ -44,6 +46,7 @@ ms.locfileid: "94823556"
 |string|Bir veya daha fazla Unicode karakteri.|  
   
 ## <a name="type-promotion"></a>Tür Yükseltme  
+
  <xref:System.Xml.Schema.XmlSchemaInference>Sınıfı özniteliği ve öğe değerlerini tek seferde inceler. Değerlerle karşılaşıldığında, en kısıtlayıcı, imzasız tür algılanır. Bir tür öznitelik veya öğe için çıkarsanmışsa ve şu anda çıkartılan türle eşleşmeyen yeni bir değerle karşılaşılırsa, çıkartılan tür, şu anda çıkartılan tür ve yeni değer için geçerli olan yeni bir türe yükseltilir. <xref:System.Xml.Schema.XmlSchemaInference>Sınıfı, çıkartılan türü yükseltirken önceki değerleri dikkate almaz.  
   
  Örneğin, iki XML belgelerinden aşağıdaki XML parçalarını göz önünde bulundurun:  

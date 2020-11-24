@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
-ms.openlocfilehash: fb92a1fe984014aef9973b821227fbd1c1176a6c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 18c391e33e0c43f2407ccbc87c12b6c25a12509d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819272"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686533"
 ---
 # <a name="xml-document-creation"></a>XML Belgesi Oluşturma
+
 XML belgesi oluşturmanın iki yolu vardır. Bir yol, parametresiz bir **XmlDocument** oluşturmaktır. Diğer bir deyişle, bir **XmlDocument** oluşturmak ve bunu bir XmlNameTable parametresi olarak iletmektir. Aşağıdaki örnek, parametresiz yeni, boş bir **XmlDocument** oluşturmayı gösterir.  
   
 ```vb  

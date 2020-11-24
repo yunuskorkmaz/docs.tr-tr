@@ -2,14 +2,15 @@
 title: XPath Veri Modelini Kullanarak XML Verilerini İşleme
 ms.date: 03/30/2017
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-ms.openlocfilehash: cc35b570c592557658cd3dda0c844847c8b23763
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 840fb40cc650d8f65af533d4102f18132bce3f53
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829290"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686962"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>XPath Veri Modelini Kullanarak XML Verilerini İşleme
+
 <xref:System.Xml?displayProperty=nameWithType>Ad alanı, veya sınıfları kullanarak XML belgelerinin, parçaların, düğümlerin veya düğüm kümesinin bellek içinde programlı bir gösterimini sağlar <xref:System.Xml.XmlDocument> <xref:System.Xml.XPath.XPathDocument> .  
   
  <xref:System.Xml.XPath.XPathDocument>Sınıfı, XPath veri modelini kullanarak BIR XML belgesinin hızlı, Salt okunabilir ve bellek içi gösterimini sağlar. <xref:System.Xml.XmlDocument>Sınıfı, W3C belge nesne modeli (DOM) düzey 1 Core ve çekırdek DOM düzeyi 2 uygulayan BIR XML belgesinin düzenlenebilir bellek içi gösterimini sağlar. Her iki sınıf de <xref:System.Xml.XPath.IXPathNavigable> arabirimini uygular ve <xref:System.Xml.XPath.XPathNavigator> seçim yapmak, değerlendirmek, gezinmek ve bazı durumlarda, temel alınan XML verilerini düzenlemek için kullanılan bir nesne döndürür.  
@@ -17,6 +18,7 @@ ms.locfileid: "94829290"
  Aşağıdaki bölümlerde, <xref:System.Xml.XPath.XPathNavigator> döndüren sınıfına göre sınıfının işlevleri açıklanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma](reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  Bir <xref:System.Xml.XPath.XPathDocument> XML belgesini okumak ve <xref:System.Xml.XmlDocument> bir XML belgesini okumak ve düzenlemek için bir salt okunurdur ve düzenlenebilir sınıf nesnesi oluşturmayı açıklar. Bu konu ayrıca <xref:System.Xml.XPath.XPathNavigator> BIR XML belgesini gezinmek ve düzenlemek için her sınıftan bir nesne döndürme işlemini açıklar.  
   

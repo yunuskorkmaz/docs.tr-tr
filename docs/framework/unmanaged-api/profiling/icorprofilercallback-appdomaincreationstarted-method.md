@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: fcebe65b7f39dd2849946e445a694ad5e9b1a65d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 901546c80c3bee32afddfa8e8cffbd2b679bc43b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685402"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted Yöntemi
+
 Profil oluşturucuyu bir uygulama etki alanının oluşturulduğunu bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,9 +40,11 @@ HRESULT AppDomainCreationStarted(
   \[' de] oluşturulmakta olan etki alanını tanımlar.
   
 ## <a name="remarks"></a>Açıklamalar  
+
  ID, [ICorProfilerCallback:: AppDomainCreationFinished](icorprofilercallback-appdomaincreationfinished-method.md) yöntemi çağrılana kadar herhangi bir bilgi isteği için geçerli değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

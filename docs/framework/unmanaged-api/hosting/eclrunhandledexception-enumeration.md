@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: 63b07dda2293d3e05bd3c8fcdc45f20a498ea54c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bccd44e1bead4feadf67929dc104557715904577
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616313"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686481"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException Numaralandırması
+
 Kullanıcı kodunda işlenmemiş özel durumları yönetmeye yönelik kullanılabilir seçenekleri açıklar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -41,22 +42,24 @@ typedef enum {
 |`eHostDeterminedPolicy`|Ortak dil çalışma zamanının (CLR) işlenmemiş özel durumları yok saymadığını ve konağın başka bir eylem belirlemesine izin verir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR 'nin önceki sürümler gibi davrandığını belirtmek için, üyesini kullanın `eHostDeterminedPolicy` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kitaplık:** MSCorEE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [EClrFailure Sabit Listesi](eclrfailure-enumeration.md)
-- [EClrOperation Sabit Listesi](eclroperation-enumeration.md)
+- [EClrFailure Numaralandırması](eclrfailure-enumeration.md)
+- [EClrOperation Numaralandırması](eclroperation-enumeration.md)
 - [ICLRPolicyManager Arabirimi](iclrpolicymanager-interface.md)
 - [SetUnhandledExceptionPolicy Yöntemi](iclrpolicymanager-setunhandledexceptionpolicy-method.md)
 - [IHostPolicyManager Arabirimi](ihostpolicymanager-interface.md)
-- [Barındırma Sabit Listeleri](hosting-enumerations.md)
+- [Barındırma Numaralandırmaları](hosting-enumerations.md)

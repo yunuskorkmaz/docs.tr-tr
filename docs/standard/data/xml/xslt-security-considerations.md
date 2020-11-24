@@ -2,17 +2,19 @@
 title: XSLT Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-ms.openlocfilehash: ad96ebb6048e8a397e0761a2217fec89e0d206b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a8d077cf35da56795cc0b0c22e9bab26ce99f3a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818290"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685207"
 ---
 # <a name="xslt-security-considerations"></a>XSLT Güvenlik Konuları
+
 XSLT dili, size harika bir güç ve esneklik sağlayan zengin bir özellik kümesine sahiptir. Bu, yararlı olsa da dış kaynaklar tarafından da yararlanılabilen birçok özellik içerir. XSLT 'yi güvenli bir şekilde kullanabilmek için XSLT kullanırken ortaya çıkan güvenlik sorunlarının türlerini ve bu riskleri azaltmak için kullanabileceğiniz temel stratejileri anlamanız gerekir.  
   
 ## <a name="xslt-extensions"></a>XSLT uzantıları  
+
  En popüler iki XSLT uzantısı stil sayfası komut dosyası ve uzantı nesneleridir. Bu uzantılar XSLT işlemcisinin kod yürütmesine izin verir.  
   
 - Uzantı nesneleri, XSL dönüşümlerine programlama özellikleri ekler.  
@@ -20,15 +22,19 @@ XSLT dili, size harika bir güç ve esneklik sağlayan zengin bir özellik küme
 - Betikler, uzantı öğesi kullanılarak stil sayfasına gömülebilir `msxsl:script` .  
   
 ### <a name="extension-objects"></a>Uzantı nesneleri  
+
  Uzantı nesneleri yöntemi kullanılarak eklenir <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> . Uzantı nesnelerini desteklemek için FullTrust izin kümesi gereklidir. Bu, uzantı nesne kodu yürütüldüğünde izinlerin yükselmesinin gerçekleşmemesini sağlar. <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>Metodu FullTrust izinleri olmadan çağırmaya çalışmak, bir güvenlik özel durumunun oluşturulması durumunda oluşur.  
   
 ### <a name="style-sheet-scripts"></a>Stil sayfası betikleri  
+
  Betikler uzantı öğesi kullanılarak bir stil sayfasına gömülebilir `msxsl:script` . Komut dosyası desteği <xref:System.Xml.Xsl.XslCompiledTransform> Varsayılan olarak devre dışı bırakılan sınıf üzerinde isteğe bağlı bir özelliktir. Komut dosyası, <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> özelliği olarak ayarlanarak `true` ve <xref:System.Xml.Xsl.XsltSettings> yöntemine nesnesine geçirerek etkinleştirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> .  
   
 #### <a name="guidelines"></a>Yönergeler  
+
  Komut dosyasını yalnızca stil sayfası güvenilen bir kaynaktan geldiğinde etkinleştirin. Stil sayfasının kaynağını doğrulayamezseniz veya stil sayfası güvenilir bir kaynaktan geliyorsa `null` XSLT ayarları bağımsız değişkenine geçiş yapın.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
+
  XSLT dili,, veya gibi özelliklere sahiptir; `xsl:import` `xsl:include` `document()` burada işlemci, URI başvurularını çözümlemek için gereklidir. <xref:System.Xml.XmlResolver>Sınıfı, dış kaynakları çözümlemek için kullanılır. Dış kaynakların aşağıdaki iki durumda çözümlenmesi gerekebilir:  
   
 - Bir stil sayfası derlerken, <xref:System.Xml.XmlResolver> `xsl:import` ve çözümü için kullanılır `xsl:include` .  
@@ -41,6 +47,7 @@ XSLT dili, size harika bir güç ve esneklik sağlayan zengin bir özellik küme
  <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>Ve <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemlerinin her biri <xref:System.Xml.XmlResolver> bağımsız değişkenlerinden biri olarak kabul eden aşırı yüklemeleri içerir. <xref:System.Xml.XmlResolver>Belirtilmemişse, <xref:System.Xml.XmlUrlResolver> kimlik bilgileri olmayan bir varsayılan kullanılır.  
   
 #### <a name="guidelines"></a>Yönergeler  
+
  `document()`İşlevi yalnızca, stil sayfası güvenilir bir kaynaktan geldiğinde etkinleştirin.  
   
  Aşağıdaki listede bir nesne belirtmek isteyebileceğiniz zaman açıklanmaktadır <xref:System.Xml.XmlResolver> :  

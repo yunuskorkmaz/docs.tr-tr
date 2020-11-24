@@ -15,12 +15,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: 30cde57a5c837d9dc324e9cd263d2a1011641af4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ecfba7b6b5908a16bb23860704a35035f58e3ed4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829849"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686026"
 ---
 # <a name="localizability-review"></a>Yerelleştirilebilirlik incelemesi
 
@@ -35,11 +35,13 @@ Yerelleştirilebilirlik incelemesi, aşağıdaki üç denetimi içerir:
 - [Uygulamanızı Uluslararası verilerle test etmeniz mi gerekiyor?](#test)
 
 <a name="global"></a>
+
 ## <a name="implement-globalization-recommendations"></a>Genelleştirme önerilerini Uygula
 
 Uygulamanızı aklına göre tasarlanıp geliştirip geliştirdiyseniz ve [Genelleştirme](globalization.md) makalesinde açıklanan önerileri izlediyseniz, Yerelleştirilebilirlik incelemesi büyük ölçüde kalite güvencesi geçişine sahip olur. Aksi takdirde, bu aşamada [Genelleştirme](globalization.md) önerilerini gözden geçirmeniz ve uygulamanız ve kaynak koddaki yerelleştirmeyi önleyen hataları çözmeniz gerekir.
 
 <a name="culture"></a>
+
 ## <a name="handle-culture-sensitive-features"></a>Kültüre duyarlı özellikleri işleme
 
 .NET, kültüre göre farklılık gösteren çeşitli alanlarda programlama desteği sağlamaz. Çoğu durumda, aşağıdaki gibi özellik alanlarının işlenmesi için özel kod yazmanız gerekir:
@@ -58,6 +60,7 @@ Uygulamanızı aklına göre tasarlanıp geliştirip geliştirdiyseniz ve [Genel
    [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]
 
 <a name="test"></a>
+
 ## <a name="test-your-application"></a>Uygulamanızı test etme
 
 Uygulamanızı yerelleştirebilmeniz için, işletim sisteminin Uluslararası sürümlerindeki Uluslararası verileri kullanarak test etmelisiniz. Bu noktada Kullanıcı arabiriminin büyük bir çoğunluğu yerelleştirilemez, ancak aşağıdaki gibi sorunları tespit edebilirsiniz:
@@ -79,6 +82,6 @@ Uygulamanızı geliştirirken Genelleştirme önerilerini izlediyseniz, kültür
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genelleştirme ve yerelleştirme](index.md)
-- [Yerelleştirme](localization.md)
+- [Localization (Yerelleştirme)](localization.md)
 - [Genelleştirme](globalization.md)
 - [Masaüstü uygulamalarındaki kaynaklar](../../framework/resources/index.md)

@@ -2,17 +2,19 @@
 title: Kurtarılabilir XSLT Hataları
 ms.date: 03/30/2017
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: 8a77600c8cc1baf61ed21cc7a480b75dd2fde2dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2123ead435fe389693f3b141a26873700ba5647f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827587"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686780"
 ---
 # <a name="recoverable-xslt-errors"></a>Kurtarılabilir XSLT Hataları
+
 W3C XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi, uygulama sağlayıcısının bir durumu nasıl ele verileceğine karar vermesine olanak tanıyan bölgeleri içerir. Bu alanların kısıtlı davranış olduğu kabul edilir. Örneğin, 7,3 bölümünde Işlem yönergeleri oluşturma bölümünde XSLT 1,0 önerisi, metin düğümleri dışındaki düğüm oluşturma içeriğinin örnekleniyor olması halinde bir hata olduğunu belirtir `xsl:processing-instruction` . Bazı sorunlar için XSLT 1,0 önerisi, işlemcinin hatadan kurtulmak için karar verdiğinde hangi kararın yapılması gerektiğini gösterir. Bölüm 7,3 ' de verilen sorun için, W3C, uygulamanın düğümleri ve bunların içeriğini yoksayarak bu hatadan kurtuyor olduğunu söyler.  
   
 ## <a name="discretionary-behaviors"></a>İsteğe bağlı davranışlar  
+
  Aşağıdaki tabloda XSLT 1,0 önerisi tarafından izin verilen her bir isteğe bağlı davranış ve bu davranışların sınıf tarafından nasıl işlendiği listelenmiştir <xref:System.Xml.Xsl.XslCompiledTransform> .  
   
 - Kurtarma, <xref:System.Xml.Xsl.XslCompiledTransform> sınıfın bu hatadan kurtulacak olduğunu gösterir. <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType>Olay, XSLT işlemcisinden gelen olayları raporlamak için kullanılabilir.  

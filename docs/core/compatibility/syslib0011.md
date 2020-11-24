@@ -3,12 +3,12 @@ title: SYSLIB0011 uyarısı
 description: Derleme zamanı uyarı SYSLIB0011 üreten kullanım dışı meler hakkında bilgi edinin.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 1b4f4c24c64148319f659b78573a4d80fd5b98a7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 99cdd9f5335f71eb9325039891db17972fb48532
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440021"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685012"
 ---
 # <a name="syslib0011-binaryformatter-serialization-is-obsolete"></a>SYSLIB0011: BinaryFormatter serileştirme artık kullanılmıyor
 
@@ -32,4 +32,4 @@ ms.locfileid: "94440021"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [BinaryFormatter kullanımdan çıkarılması ve disablement hataları çözümleniyor](https://aka.ms/binaryformatter)
-- [BinaryFormatter serileştirme yöntemleri artık kullanılmıyor ve ASP.NET uygulamalarında yasaklanmış](corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
+- [BinaryFormatter serileştirme yöntemleri artık kullanılmıyor ve ASP.NET uygulamalarında yasaklanmış](core-libraries/5.0/binaryformatter-serialization-obsolete.md)

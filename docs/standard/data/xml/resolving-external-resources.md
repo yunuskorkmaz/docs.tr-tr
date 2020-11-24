@@ -2,17 +2,19 @@
 title: Dış Kaynakları Çözümleme
 ms.date: 03/30/2017
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-ms.openlocfilehash: 460fee3464c7de9a6ad0ca97bf5341fe5078fb47
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dffaef1b27d5814591c935c0ca795ba4ea3eba84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820377"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686611"
 ---
 # <a name="resolving-external-resources"></a>Dış Kaynakları Çözümleme
+
 **XmlDocument** 'un **XMLRESOLVER** özelliği, XML verilerinde satır içi olmayan kaynakları bulmak için **XmlDocument** sınıfı tarafından, dış belge türü tanımları (DTD 'ler), varlıklar ve şemalar gibi kullanılır. Bu öğeler bir ağda veya yerel bir sürücüde bulunabilir ve bir Tekdüzen Kaynak tanımlayıcısı (URI) ile tanımlanabilir. Bu, **XmlDocument** 'nin belgede bulunan **EntityReference** düğümlerini ÇÖZÜMLEMESINE ve belgeyi dış DTD veya şemaya göre doğrulamasına olanak sağlar.  
   
 ## <a name="fully-trusted-xmldocument"></a>Fully-Trusted XmlDocument  
+
  **XmlResolver** özelliği, **XmlDocument. Load** yönteminin işlevlerini etkiler. Aşağıdaki tabloda, **XmlDocument** nesnesi tam olarak güvenilir olduğunda **XmlDocument.Xmlçözümleyici** özelliğinin nasıl çalıştığı gösterilmektedir. Aşağıdaki tabloda, Load girişi bir **TextReader**, **String**, **Stream** veya **URI** olduğunda **XmlDocument. Load** yöntemleri gösterilmektedir. **XmlDocument** bir **XmlReader**'dan yüklenirse, bu tablo **Load** yöntemine uygulanmaz.  
   
 |XmlResolver özelliği|İşlev|Notlar|  
@@ -28,6 +30,7 @@ ms.locfileid: "94820377"
 |**XmlDocument** tarafından kullanılan **XmlResolver** sınıfı, **XmlReader** tarafından kullanılan sınıftır.|**XmlDocument** , **XmlReader**'a atanan **XmlResolver** 'ı kullanır.<br /><br /> XmlDocument **. Resolver** özelliği, **XmlReader**'dan bir **XmlResolver** alındığından, **XmlDocument** güven düzeyinden bağımsız olarak ayarlanamaz. **XmlDocument**'un **XmlResolver** özelliğini ayarlayarak **xmlokuyucuları**' **XmlResolver** 'ın ayarlarını geçersiz kılmayı deneyemezsiniz.|**XmlReader** , **XmlTextReader**, **XmlValidatingReader** veya özel yazılı bir okuyucu olabilir. Kullanılan okuyucu varlık çözünürlüğünü destekliyorsa, dış varlıklar çözümlenir. Geçirilen okuyucu varlık başvurularını desteklemiyorsa, varlık başvuruları çözümlenmez.|  
   
 ## <a name="semi-trusted-xmldocument"></a>Semi-Trusted XmlDocument  
+
  Aşağıdaki tabloda, nesne yarı güvenilir olduğunda **XmlDocument.Xmlçözümleyici** özelliğinin nasıl çalıştığı gösterilmektedir. Bu tablo, Load girişi bir **TextReader**, **String**, **Stream** veya **URI** olduğunda **XmlDocument. Load** yöntemleri için geçerlidir. **XmlDocument** bir **XmlReader**'dan yüklenirse, bu tablo **Load** yöntemine uygulanmaz.  
   
 |XmlResolver özelliği|İşlev|Notlar|  

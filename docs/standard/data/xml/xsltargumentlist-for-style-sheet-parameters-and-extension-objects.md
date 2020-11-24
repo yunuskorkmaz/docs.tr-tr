@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 6f0be433abcebed7f9da70225563a04170426314
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe227a2d3efc5c36b818b7f4431896e6f62b1f26
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818212"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685051"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList
+
 <xref:System.Xml.Xsl.XsltArgumentList>Sınıfı, dönüşümler (XSLT) parametreleri ve XSLT uzantı nesneleri Için Genişletilebilir Stil sayfası dili içerir. <xref:System.Xml.Xsl.XslTransform.Transform%2A>Yöntemine geçirildiğinde, bu parametreler ve uzantı nesneleri stil sayfalarından çağrılabilir.  
   
 > [!NOTE]
@@ -31,6 +32,7 @@ ms.locfileid: "94818212"
 - , İle birlikte stil sayfasına sonuç ağacı parçalarının geçirilmesini destekler <xref:System.Xml.XPath.XPathNodeIterator> .  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT stil sayfası parametreleri  
+
  XSLT parametreleri yöntemi kullanılarak öğesine eklenir <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> . Tam ad ve ad alanı Tekdüzen Kaynak tanımlayıcısı (URI), parametre nesnesiyle ilişkili zamanda ilişkilendirilir.  
   
  Parameter nesnesi bir World Wide Web Konsorsiyumu (W3C) türüne karşılık gelmelidir. Aşağıdaki tablo, karşılık gelen W3C türlerini, eşdeğer .NET Framework sınıfları (türü) ve W3C türünün bir XML Path Language (XPath) türü ya da XSLT türü olup olmadığını gösterir.  
@@ -54,6 +56,7 @@ ms.locfileid: "94818212"
 3. <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XslTransform.Transform%2A> Yöntemini yöntemine geçirin.  
   
 ### <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> hesaplanan indirim tarihini tutacak bir parametre oluşturmak için yöntemini kullanır. İndirim tarihi, sipariş tarihinden itibaren 20 gün olacak şekilde hesaplanır.  
   
 ```vb  
@@ -137,6 +140,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Giriş  
+
  order.xml  
   
 ```xml  
@@ -178,6 +182,7 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>XSLT Genişletme Nesneleri  
+
  XSLT uzantı nesneleri, <xref:System.Xml.Xsl.XsltArgumentList> yöntemi kullanılarak öğesine eklenir <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> . Tam ad ve ad alanı URI 'SI, o zaman uzantı nesnesiyle ilişkilendirilir.  
   
  Bir nesne eklendiğinde, ' ın çağıranı <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> güvenlik ilkesinde tam güvenilir olmalıdır. Arayan yarı güvenilir ise, ekleme başarısız olur.  
@@ -195,6 +200,7 @@ public class Sample
 3. <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XslTransform.Transform%2A> Yöntemini yöntemine geçirin.  
   
 ### <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, yarıçapı verilen bir dairenin çevresini hesaplar.  
   
 ```vb  
@@ -305,6 +311,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Giriş  
+
  number.xml  
   
 ```xml  
@@ -341,6 +348,7 @@ public class Sample
 ```  
   
 ### <a name="output"></a>Çıkış  
+
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

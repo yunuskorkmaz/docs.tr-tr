@@ -2,12 +2,12 @@
 title: Docker terimleri
 description: Docker ile çalışırken gündelik olarak kullanılan bazı temel terminolojiyi öğrenin.
 ms.date: 08/06/2020
-ms.openlocfilehash: b47639a2995c3a0a30ea7111c16bbea21f1048ba
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: a323075bdd73a117769913ac59426b5bec5df614
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915188"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686458"
 ---
 # <a name="docker-terminology"></a>Docker terimleri
 
@@ -35,7 +35,7 @@ docker build
 
 **Kayıt defteri**: depolara erişim sağlayan bir hizmet. Çoğu ortak görüntü için varsayılan kayıt defteri, [Docker Hub](https://hub.docker.com/) ' dır (kuruluş olarak Docker tarafından sahiplenilir). Kayıt defteri genellikle birden çok ekipten depoları içerir. Şirketler genellikle oluşturdukları görüntüleri depolamak ve yönetmek için özel kayıt defterlerine sahiptir. Azure Container Registry başka bir örnektir.
 
-**Çok katmanlı görüntü**: çok mimaride, Docker 'ın çalıştırıldığı platforma göre uygun görüntünün seçimini kolaylaştıran bir özelliktir. Örneğin, bir Dockerfile, kayıt defterinden **MCR.Microsoft.com/DotNet/Core/SDK:3.1 öğesinden** bir temel görüntü Istediğinde, Docker 'ın çalıştırıldığı işletim sistemine ve sürüme bağlı olarak **3,1-SDK-nanoserver-1909**, **3,1-SDK-nanoserver-1809** veya **3,1-SDK-Buster-Slim**alır.
+**Çok katmanlı görüntü**: çok mimaride, Docker 'ın çalıştırıldığı platforma göre uygun görüntünün seçimini kolaylaştıran bir özelliktir. Örneğin, bir Dockerfile, kayıt defterinden **MCR.Microsoft.com/DotNet/SDK:3.1 öğesinden** bir temel görüntü Istediğinde, Docker 'ın çalıştırıldığı işletim sistemine ve sürüme bağlı olarak **3,1-SDK-nanoserver-1909**, **3,1-SDK-nanoserver-1809** veya **3,1-SDK-Buster-Slim** alır.
 
 **Docker Hub**: görüntüleri karşıya yüklemek ve bunlarla çalışmak için ortak bir kayıt defteri. Docker Hub, Docker görüntüsü barındırma, genel veya özel kayıt defterleri, derleme Tetikleyicileri ve Web kancaları, GitHub ve BitBucket ile tümleştirme sağlar.
 

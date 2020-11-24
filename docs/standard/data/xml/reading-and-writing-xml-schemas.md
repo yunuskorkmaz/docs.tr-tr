@@ -7,17 +7,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-ms.openlocfilehash: ae951efafd68d0ddf4f74876edd4c12564d68dde
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7ba736272579451cf30c5e78026ffaa4186e03c9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830889"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686858"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>XML Şemaları Okuma ve Yazma
+
 Şema nesne modeli (SOM) API 'SI, dosyalardan veya diğer kaynaklardan XML şeması tanım dili (XSD) şemalarını okumak ve yazmak ve <xref:System.Xml.Schema?displayProperty=nameWithType> World Wide Web Konsorsiyumu (W3C) XML şeması önerisi içinde tanımlanan yapılara eşlenen ad alanındaki sınıfları kullanarak XML şemaları oluşturmak için kullanılabilir.  
   
 ## <a name="reading-and-writing-xml-schemas"></a>XML Şemaları Okuma ve Yazma  
+
  <xref:System.Xml.Schema.XmlSchema>Sınıfı, <xref:System.Xml.Schema.XmlSchema.Read%2A> ve <xref:System.Xml.Schema.XmlSchema.Write%2A> XML şemaları okumak ve yazmak için yöntemler sağlar. <xref:System.Xml.Schema.XmlSchema.Read%2A>Yöntemi, <xref:System.Xml.Schema.XmlSchema> XML şemasını temsil eden bir nesne döndürür ve <xref:System.Xml.Schema.ValidationEventHandler> şema doğrulama UYARıLARıNı ve bir XML Şeması okunurken karşılaşılan hataları işlemek için isteğe bağlı olarak bir parametre olarak alır.  
   
  <xref:System.Xml.Schema.XmlSchema.Write%2A>Yöntemi <xref:System.IO.Stream> , ve nesnelerine XML şemaları Yazar <xref:System.IO.TextWriter> <xref:System.Xml.XmlWriter> ve isteğe bağlı bir <xref:System.Xml.XmlNamespaceManager> nesneyi parametre olarak alabilir. Bir <xref:System.Xml.XmlNamespaceManager> XML şemasında karşılaşılan ad alanlarını işlemek için kullanılır. Sınıfı hakkında daha fazla bilgi için <xref:System.Xml.XmlNamespaceManager> bkz. [XML belgesinde ad alanlarını yönetme](managing-namespaces-in-an-xml-document.md).  

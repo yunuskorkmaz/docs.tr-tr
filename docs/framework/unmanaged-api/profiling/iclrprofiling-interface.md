@@ -14,25 +14,27 @@ helpviewer_keywords:
 ms.assetid: 8b53ccc6-1b5e-4b30-a100-c9683d553f5a
 topic_type:
 - apiref
-ms.openlocfilehash: 56d5cfde2efb322521615977f72b0d308ad378f6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 30c19af5f579ea5abb88d062a4f536fa2a876625
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500547"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685348"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling Arabirimi
+
 , Bir profil oluşturucunun çalışan bir işleme iliştirmesine olanak sağlayan [ıclrprofile:: AttachProfiler](iclrprofiling-attachprofiler-method.md) metodunu sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[AttachProfiler Yöntemi](iclrprofiling-attachprofiler-method.md)|Belirtilen işlem oluşturucuyu belirtilen işleme iliştirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

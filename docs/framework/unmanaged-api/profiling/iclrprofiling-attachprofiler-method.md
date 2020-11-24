@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 48ac09e1862ae58e79707235e891f72920de1251
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94495ca0ea75bd41996d430159474c707a3e68b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500565"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685428"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler Yöntemi
+
 Belirtilen işlem oluşturucuyu belirtilen işleme iliştirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -64,9 +65,10 @@ HRESULT AttachProfiler(
   \[' de] işaret eden verilerin bayt cinsinden boyutu `pvClientData` .
 
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem aşağıdaki HRESULTs 'leri döndürür.  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Belirtilen profil oluşturucu hedef işleme başarıyla eklendi.|  
 |CORPROF_E_PROFILER_ALREADY_ACTIVE|Zaten bir profil oluşturucu etkin veya hedef işleme iliştiriliyor.|  
@@ -84,9 +86,11 @@ HRESULT AttachProfiler(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="memory-management"></a>Bellek Yönetimi  
+
  COM kuralları ile birlikte, çağıran `AttachProfiler` (örneğin, profil oluşturucu geliştiricisi tarafından yazılan tetikleyici kodu), parametresinin işaret ettiği veriler için bellek ayırmayı ve serbest bırakmayı sağlamaktan sorumludur `pvClientData` . CLR çağrıyı yürüttüğünde `AttachProfiler` , ' a `pvClientData` işaret eden ve hedef işleme ileten belleğin bir kopyasını oluşturur. Hedef işlemin içindeki CLR kendi bloğunun kopyasını aldığında `pvClientData` , bloğunu yöntemi aracılığıyla Profiler 'a geçirir `InitializeForAttach` ve sonra `pvClientData` bloğun kopyasını hedef işlemden kaldırır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

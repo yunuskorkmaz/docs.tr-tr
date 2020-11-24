@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 61538656580878da775d4a42dac40165c7941eee
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 206a659656f1019af1540b9b2476ae7fe9ba93eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818277"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685116"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Kullanarak XSLT stil sayfası betiği oluşturma \<msxsl:script>
+
 <xref:System.Xml.Xsl.XslTransform>Sınıfı, öğesini kullanarak gömülü komut dosyalarını destekler `script` .  
   
 > [!NOTE]
@@ -98,6 +99,7 @@ ms.locfileid: "94818277"
  Bu, ve işaretleri hariç olmadığından bir özel durum oluşturur. Belge XML olarak yüklenir ve öğe etiketleri arasındaki metne özel bir işleme uygulanmaz `msxsl:script` .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, yarıçapı verilen bir dairenin çevresini hesaplamak için gömülü bir betiği kullanır.  
   
 ```vb  
@@ -165,6 +167,7 @@ public class Sample
 ```  
   
 ## <a name="input"></a>Giriş  
+
  number.xml  
   
 ```xml  

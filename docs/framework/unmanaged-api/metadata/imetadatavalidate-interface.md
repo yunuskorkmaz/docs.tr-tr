@@ -14,29 +14,31 @@ helpviewer_keywords:
 ms.assetid: db98608a-e85c-4f50-9d7b-5f57a426ddb6
 topic_type:
 - apiref
-ms.openlocfilehash: 2dbd4559bad54aee69f6980e8baf6441480f482c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 518ee65bc684f643bf4f608223c0fa40ea3f0dd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489732"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685545"
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate Arabirimi
+
 Meta veri imzalarını doğrulamak için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[ValidateMetaData Yöntemi](imetadatavalidate-validatemetadata-method.md)|Geçerli meta veri kapsamındaki nesnelerin meta veri imzalarını doğrular.|  
 |[ValidatorInit Yöntemi](imetadatavalidate-validatorinit-method.md)|Geçerli meta veri kapsamındaki modülün türünü belirten bir bayrak ayarlar ve doğrulama hataları için belirtilen geri çağırma yöntemini kaydeder.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

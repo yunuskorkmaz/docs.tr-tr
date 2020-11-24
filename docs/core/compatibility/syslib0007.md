@@ -3,16 +3,16 @@ title: SYSLIB0007 uyarısı
 description: Derleme zamanı uyarı SYSLIB0007 üreten kullanım dışı meler hakkında bilgi edinin.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 4c0feac1d673e3462a4f2db470825b15cf1b1706
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: db7150fa3e3c566adf110034734e068fac079c6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439948"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685025"
 ---
 # <a name="syslib0007-default-implementations-of-cryptography-algorithms-not-supported"></a>SYSLIB0007: şifreleme algoritmalarının varsayılan uygulamaları desteklenmez
 
-.NET Framework ' deki şifreleme yapılandırma sistemi, uygun şifreleme çevikliğine izin vermez ve .NET Core ve .NET 5 + ' da mevcut değildir. . NET ' in geri uyumluluk gereksinimleri Ayrıca, Framework 'ün şifreleme ile ilgili bazı şifreleme API 'Lerini güncelleştirmesini sağlar. Sonuç olarak, aşağıdaki API 'Ler .NET 5,0 ' den itibaren kullanılmıyor olarak işaretlenir. Bu API 'lerin kullanımı, `SYSLIB0007` derleme zamanında uyarı oluşturur.
+.NET Framework ' deki şifreleme yapılandırma sistemi, uygun şifreleme çevikliğine izin vermez ve .NET Core ve .NET 5 + ' da mevcut değildir. .NET 'in geriye dönük uyumluluk gereksinimleri Ayrıca, Framework 'ün şifreleme ile ilgili bazı şifreleme API 'Lerini güncelleştirmesini de yasaklıyor. Sonuç olarak, aşağıdaki API 'Ler .NET 5,0 ' den itibaren kullanılmıyor olarak işaretlenir. Bu API 'lerin kullanımı, `SYSLIB0007` derleme zamanında uyarı oluşturur.
 
 - <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create?displayProperty=fullName>
 - <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=fullName>
@@ -38,4 +38,4 @@ ms.locfileid: "94439948"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Şifreleme son değişiklikleri](cryptography.md#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported)
+- [Şifrelenmiş soyutlamalar için varsayılan uygulamaların örneği oluşturma desteklenmiyor](cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-ms.openlocfilehash: 387f5f01f2d2589c0b34e50b69398e1feb0e77e0
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3005db62bba4089c669a00f62e3c1e62f9e1dae9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008254"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685714"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection Yöntemi
+
 Belirtilen uzunluğa göre belirtilen kod bölümünü keser.  
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
@@ -37,6 +38,7 @@ HRESULT TruncateSection (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `section`  
  'ndaki Kesmeyin bölüm.  
   
@@ -44,14 +46,16 @@ HRESULT TruncateSection (
  'ndaki Bölümün kesirli kısmını kesmek için bayt cinsinden uzunluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `TruncateSection`Yalnızca diğer yöntemler tarafından işlenmemiş özel bölüm gereksinimleriniz varsa çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

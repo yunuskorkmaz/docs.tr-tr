@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: c203e17e327cf64690c2748c7f3a4e74b5306501
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64a62840594773270a658738120812c59b4896cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818303"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685220"
 ---
 # <a name="xslt-parameters"></a>XSLT Parametreleri
+
 XSLT parametreleri yöntemi kullanılarak öğesine eklenir <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> . Tam ad ve ad alanı URI 'SI parametre nesnesiyle ilişkili zamanda ilişkilendirilir.  
   
 ### <a name="to-use-an-xslt-parameter"></a>XSLT parametresi kullanmak için  
@@ -24,6 +25,7 @@ XSLT parametreleri yöntemi kullanılarak öğesine eklenir <xref:System.Xml.Xsl
 3. <xref:System.Xml.Xsl.XsltArgumentList>Nesneyi <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemine geçirin.  
   
 ## <a name="parameter-types"></a>Parametre Türleri  
+
  Parameter nesnesi bir W3C türüne karşılık gelmelidir. Aşağıdaki tabloda karşılık gelen W3C türleri, eşdeğer Microsoft .NET sınıfları (türü) ve W3C türünün bir XPath türü veya XSLT türü olup olmadığı gösterilmektedir.  
   
 |W3C türü|Eşdeğer .NET sınıfı (tür)|XPath veya XSLT türü|  
@@ -42,6 +44,7 @@ XSLT parametreleri yöntemi kullanılarak öğesine eklenir <xref:System.Xml.Xsl
  Diğer tüm türler bir hata oluşturur.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> hesaplanan indirim tarihini tutacak bir parametre oluşturmak için yöntemini kullanır. İndirim tarihi, sipariş tarihinden itibaren 20 gün olacak şekilde hesaplanır.  
   
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
@@ -50,9 +53,11 @@ XSLT parametreleri yöntemi kullanılarak öğesine eklenir <xref:System.Xml.Xsl
 ### <a name="input"></a>Giriş  
   
 ##### <a name="orderxml"></a>order.xml  
+
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
   
 ##### <a name="discountxsl"></a>Discount. Xsl  
+
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
 ### <a name="output"></a>Çıkış  

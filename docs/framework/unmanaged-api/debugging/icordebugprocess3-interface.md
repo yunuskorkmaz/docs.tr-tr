@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ced9c82e-d7b0-4806-a151-98b6611d3097
 topic_type:
 - apiref
-ms.openlocfilehash: 826736d2db7aa1e618a2e5fe0655cedad9556b17
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ef8dbd5253c02355f85fba626fa7e68ed62df4bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213445"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686463"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 Arabirimi
+
 Özel hata ayıklayıcı bildirimlerini denetler.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -31,12 +32,14 @@ ms.locfileid: "83213445"
 |[SetEnableCustomNotification Yöntemi](icordebugprocess3-setenablecustomnotification-method.md)|Belirtilen türdeki özel hata ayıklayıcı bildirimlerini etkinleştir ve devre dışı bırakır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu arabirim, ICorDebugProcess ve ICorDebugProcess2 arabirimlerini mantıksal olarak genişletir.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

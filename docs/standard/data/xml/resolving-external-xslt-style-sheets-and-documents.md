@@ -2,14 +2,15 @@
 title: Dış XSLT Stil Sayfaları ile Belgelerini Çözümleme
 ms.date: 03/30/2017
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 370d1df296666e5b5c162db34bd7fb35ae8a2e0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f1fbf950f7d67d46937652987516e5faf9857b85
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823595"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686572"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Dış XSLT Stil Sayfaları ile Belgelerini Çözümleme
+
 Dış kaynakları çözmeniz gerekebilmeniz için bir dönüştürme sırasında birkaç zaman vardır.  
   
 > [!NOTE]
@@ -24,6 +25,7 @@ Dış kaynakları çözmeniz gerekebilmeniz için bir dönüştürme sırasında
 - <xref:System.Xml.Xsl.XslTransform.Transform%2A>Tüm işlevleri çözümlemek için `document()` .  
   
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver sınıfını kullanma  
+
  Bir ağ kaynağına erişmek için kimlik doğrulaması gerekiyorsa, <xref:System.Xml.Xsl.XslTransform.Load%2A> <xref:System.Xml.XmlResolver> nesneyi geçirmek için <xref:System.Xml.XmlResolver> gerekli kimlik bilgisi özellikleri ayarlanmış bir parametreye sahip yöntemleri kullanın.  
   
  Kullanmak istediğiniz özel bir özel varsa <xref:System.Xml.XmlResolver> veya farklı kimlik bilgileri belirtmeniz gerekiyorsa, dış kaynağın çözümüne ne zaman ihtiyaç duydığına bağlı olarak, aşağıdaki tabloda gereken görev listelenmektedir.  
