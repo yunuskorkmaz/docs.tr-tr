@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-ms.openlocfilehash: 9211af4726617598f3dd8772383cade6368e6c08
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ef9b177bee0651b6b8ea994610315ce93524e8e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007630"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676939"
 ---
-# <a name="cornativelinkflags-enumeration"></a><span data-ttu-id="abb08-102">CorNativeLinkFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="abb08-102">CorNativeLinkFlags Enumeration</span></span>
-<span data-ttu-id="abb08-103">Yerel kod bağlanırken bağlayıcı tarafından kullanılan bayrak değerlerini sağlar.</span><span class="sxs-lookup"><span data-stu-id="abb08-103">Provides flag values used by the linker when linking native code.</span></span>  
+# <a name="cornativelinkflags-enumeration"></a><span data-ttu-id="46f4d-102">CorNativeLinkFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="46f4d-102">CorNativeLinkFlags Enumeration</span></span>
+
+<span data-ttu-id="46f4d-103">Yerel kod bağlanırken bağlayıcı tarafından kullanılan bayrak değerlerini sağlar.</span><span class="sxs-lookup"><span data-stu-id="46f4d-103">Provides flag values used by the linker when linking native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abb08-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="abb08-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46f4d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="46f4d-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  
@@ -36,24 +37,25 @@ typedef enum
 } CorNativeLinkFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="abb08-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="abb08-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="46f4d-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="46f4d-105">Members</span></span>  
   
-|<span data-ttu-id="abb08-106">Üye</span><span class="sxs-lookup"><span data-stu-id="abb08-106">Member</span></span>|<span data-ttu-id="abb08-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="abb08-107">Description</span></span>|  
+|<span data-ttu-id="46f4d-106">Üye</span><span class="sxs-lookup"><span data-stu-id="46f4d-106">Member</span></span>|<span data-ttu-id="46f4d-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="46f4d-107">Description</span></span>|  
 |------------|-----------------|  
-|`nlfNone`|<span data-ttu-id="abb08-108">Bayrak olmadığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="abb08-108">Indicates no flags.</span></span>|  
-|`nlfLastError`|<span data-ttu-id="abb08-109">Bir `setLastError` anahtar sözcüğü gösterir.</span><span class="sxs-lookup"><span data-stu-id="abb08-109">Indicates a `setLastError` keyword.</span></span>|  
-|`nlfNoMangle`|<span data-ttu-id="abb08-110">Bir `nomangle` anahtar sözcüğü gösterir.</span><span class="sxs-lookup"><span data-stu-id="abb08-110">Indicates a `nomangle` keyword.</span></span>|  
-|`nlfMaxValue`|<span data-ttu-id="abb08-111">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="abb08-111">Not used.</span></span>|  
+|`nlfNone`|<span data-ttu-id="46f4d-108">Bayrak olmadığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="46f4d-108">Indicates no flags.</span></span>|  
+|`nlfLastError`|<span data-ttu-id="46f4d-109">Bir `setLastError` anahtar sözcüğü gösterir.</span><span class="sxs-lookup"><span data-stu-id="46f4d-109">Indicates a `setLastError` keyword.</span></span>|  
+|`nlfNoMangle`|<span data-ttu-id="46f4d-110">Bir `nomangle` anahtar sözcüğü gösterir.</span><span class="sxs-lookup"><span data-stu-id="46f4d-110">Indicates a `nomangle` keyword.</span></span>|  
+|`nlfMaxValue`|<span data-ttu-id="46f4d-111">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="46f4d-111">Not used.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="abb08-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="abb08-112">Requirements</span></span>  
- <span data-ttu-id="abb08-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="abb08-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="abb08-114">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="abb08-114">**Header:** Cor.h</span></span>  
-  
- <span data-ttu-id="abb08-115">**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="abb08-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
-  
- <span data-ttu-id="abb08-116">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abb08-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="abb08-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="abb08-117">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="46f4d-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="46f4d-112">Requirements</span></span>  
 
-- [<span data-ttu-id="abb08-118">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="abb08-118">Metadata Enumerations</span></span>](metadata-enumerations.md)
+ <span data-ttu-id="46f4d-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46f4d-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="46f4d-114">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="46f4d-114">**Header:** Cor.h</span></span>  
+  
+ <span data-ttu-id="46f4d-115">**Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="46f4d-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+  
+ <span data-ttu-id="46f4d-116">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46f4d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="46f4d-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="46f4d-117">See also</span></span>
+
+- [<span data-ttu-id="46f4d-118">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="46f4d-118">Metadata Enumerations</span></span>](metadata-enumerations.md)
