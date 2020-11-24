@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7e7c2d0-e58c-4650-b40c-47b2be2cda45
 topic_type:
 - apiref
-ms.openlocfilehash: 93ed63b4abacce1d8943434965aacf67190631b6
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9898b760edbb149afcd6bf957a30d0a47287485b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805196"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687827"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>IGCHost::SetVirtualMemLimit Yöntemi
+
 Çalışma zamanının sanal belleğinin en büyük boyutunu ayarlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,18 +35,21 @@ HRESULT SetVirtualMemLimit (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `sztMaxVirtualMemMB`  
  'ndaki Çalışma zamanının sanal belleğinin megabayt cinsinden en büyük boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Çalışma zamanının sanal belleğinin en büyük boyutu dinamik olarak değiştirilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** GCHost. IDL, GCHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

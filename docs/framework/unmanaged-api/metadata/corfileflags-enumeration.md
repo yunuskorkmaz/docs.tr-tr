@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: d16703fd-518f-412e-92cb-74433d11032e
 topic_type:
 - apiref
-ms.openlocfilehash: c8c2757e99b80204ad52e69a596d62c55c369965
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70d789f417700734b546cac6ff527ed5aa84fcf9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007422"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688633"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags Numaralandırması
+
 IMetaDataAssemblyEmit çağrısında tanımlanan dosya türünü tanımlayan değerleri içerir [::D efineFile](imetadataassemblyemit-definefile-method.md).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorFileFlags {  
@@ -43,6 +44,7 @@ typedef enum CorFileFlags {
 |`ffContainsNoMetaData`|Dosyanın, muhtemelen bir kaynak dosyasında meta veri içermediğini belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

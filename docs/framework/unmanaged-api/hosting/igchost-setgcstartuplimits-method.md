@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cae53926-82ac-4d1d-b297-0bde0bd1bebb
 topic_type:
 - apiref
-ms.openlocfilehash: 3b0c11ac9d827bd252018172e2337df653054a7b
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 0eea9dba57886edfef13c31948a9cff94c6c1bfd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805209"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687892"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits Yöntemi
+
 Oluşturma 0 ' nın segment boyutunu ve en büyük boyutunu ayarlar.  
   
 > [!IMPORTANT]
@@ -38,6 +39,7 @@ HRESULT SetGCStartupLimits (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `SegmentSize`  
  'ndaki Çöp toplama sistemi tarafından kullanılan segmentin boyutu.  
   
@@ -45,14 +47,16 @@ HRESULT SetGCStartupLimits (
  'ndaki 0 üretimi için en büyük boyut.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `SetGCStartupLimits`Yöntemi yalnızca bir kez çağrılabilir. Bu değerler daha sonra değiştirilemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** GCHost. IDL, GCHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

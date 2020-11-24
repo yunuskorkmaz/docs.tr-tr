@@ -10,12 +10,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: a9f0703217b55c90c4e98503402d3fbf60a45ea7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831071"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687553"
 ---
 # <a name="key-security-concepts"></a>Temel Güvenlik Kavramları
 
@@ -49,6 +49,7 @@ Bir sorumlu bir kullanıcının kimliğini ve rolünü temsil eder ve kullanıc�
 Daha fazla bilgi için bkz. [Principal ve Identity Objects](principal-and-identity-objects.md).  
   
 ## <a name="authentication"></a>Kimlik Doğrulaması  
+
 Kimlik doğrulaması, kullanıcının kimlik bilgilerini inceleyerek ve bu kimlik bilgilerini bazı yetkililerle doğrulayarak sorumlu kimliğini bulma ve doğrulama işlemidir. Kimlik doğrulama sırasında elde edilen bilgiler, kodunuz tarafından doğrudan kullanılabilir. Geçerli kullanıcının kimliğini doğrulamak ve bu sorumlunun kodunuza erişmesine izin verip vermeyeceğinizi anlamak için .NET rol tabanlı güvenliği de kullanabilirsiniz. <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType>Belirli roller için sorumlunun nasıl doğrulanacağını gösteren örnekler için, yönteminin aşırı yüklerini inceleyin. Örneğin, <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> geçerli kullanıcının Yöneticiler grubunun bir üyesi olup olmadığını anlamak için aşırı yüklemeyi kullanabilirsiniz.  
   
 Günümüzde, .NET rol tabanlı güvenlikle birlikte kullanılabilecek çeşitli kimlik doğrulama mekanizmaları kullanılmaktadır. En yaygın olarak kullanılan mekanizmalardan bazıları temel, Özet, Passport, işletim sistemi (NTLM veya Kerberos gibi) veya uygulama tanımlı mekanizmalarda oluşur.  

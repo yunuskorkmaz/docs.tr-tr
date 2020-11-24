@@ -6,36 +6,39 @@ helpviewer_keywords:
 - fusion enumerations [.NET Framework]
 - enumerations [.NET Framework fusion]
 ms.assetid: 5817b4bc-b0ba-4b2f-a11c-a03dd8cb8f84
-ms.openlocfilehash: 9a030d1f0ec6cc4fd7ca526574caa4c281e2573e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c014d6fcf8ac34ebc82b43214a358039d8c28907
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108498"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688763"
 ---
 # <a name="fusion-enumerations"></a>Fusion Numaralandırmaları
+
 Bu bölümde Fusion API 'sinin kullandığı yönetilmeyen numaralandırmalar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ASM_CACHE_FLAGS Sabit Listesi](asm-cache-flags-enumeration.md)  
+
+ [ASM_CACHE_FLAGS Numaralandırması](asm-cache-flags-enumeration.md)  
  Genel derleme önbelleğinde [IAssemblyCacheItem](iassemblycacheitem-interface.md) tarafından temsil edilen bir derlemenin kaynağını gösterir.  
   
- [ASM_CMP_FLAGS Sabit Listesi](asm-cmp-flags-enumeration.md)  
+ [ASM_CMP_FLAGS Numaralandırması](asm-cmp-flags-enumeration.md)  
  [IAssemblyName:: IsEqual](iassemblyname-isequal-method.md) yöntemiyle Karşılaştırılacak iki derlemenin sürümünü, derlemeyi, kültürünü, imzasını, vb. gösterir.  
   
- [ASM_DISPLAY_FLAGS Sabit Listesi](asm-display-flags-enumeration.md)  
+ [ASM_DISPLAY_FLAGS Numaralandırması](asm-display-flags-enumeration.md)  
  Görünen adı [IAssemblyName:: GetDisplayName](iassemblyname-getdisplayname-method.md) yöntemi tarafından alınacak derlemenin sürümünü, derlemesini, kültürünü, imzasını ve benzerlerini gösterir.  
   
- [ASM_NAME Sabit Listesi](asm-name-enumeration.md)  
+ [ASM_NAME Numaralandırması](asm-name-enumeration.md)  
  Özellikleri alınacak veya [IAssemblyName](iassemblyname-interface.md) yöntemlerine göre ayarlanacak olan derlemenin sürümünü, derlemeyi, kültürünü, imzasını, vb. gösterir.  
   
- [AssemblyComparisonResult Sabit Listesi](assemblycomparisonresult-enumeration.md)  
+ [AssemblyComparisonResult Numaralandırması](assemblycomparisonresult-enumeration.md)  
  [CompareAssemblyIdentity](compareassemblyidentity-function.md) işlevi tarafından belirlendiği şekilde, iki derleme kimliğinin denklik olduğunu gösterir.  
   
- [CREATE_ASM_NAME_OBJ_FLAGS Sabit Listesi](create-asm-name-obj-flags-enumeration.md)  
- [CreateAssemblyNameObject](createassemblynameobject-function.md) işlevi tarafından oluşturulduğunda bir `IAssemblyName` nesnesinin özniteliklerini belirtir.  
+ [CREATE_ASM_NAME_OBJ_FLAGS Numaralandırması](create-asm-name-obj-flags-enumeration.md)  
+ `IAssemblyName` [CreateAssemblyNameObject](createassemblynameobject-function.md) işlevi tarafından oluşturulduğunda nesnenin özniteliklerini belirtir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Fusion Arabirimleri](fusion-interfaces.md)  
   
  [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)  

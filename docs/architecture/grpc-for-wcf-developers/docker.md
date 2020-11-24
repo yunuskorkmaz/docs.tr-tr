@@ -2,12 +2,12 @@
 title: WCF geliştiricileri için Docker-gRPC
 description: ASP.NET Core gRPC uygulamaları için Docker görüntüleri oluşturma
 ms.date: 09/02/2019
-ms.openlocfilehash: 379750edfa1a9fc282e43ffa83e5695425f31a26
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152721"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688451"
 ---
 # <a name="create-docker-images"></a>Docker görüntüleri oluşturma
 
@@ -22,8 +22,8 @@ Microsoft, .NET Core uygulamaları oluşturmaya ve çalıştırmaya yönelik bir
 
 | Görüntü | Açıklama |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | İle uygulama oluşturmak için `docker build` . Üretimde kullanılmamalıdır. |
-| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | Çalışma zamanı ve ASP.NET Core bağımlılıklarını içerir. Üretim için. |
+| [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/) | İle uygulama oluşturmak için `docker build` . Üretimde kullanılmamalıdır. |
+| [mcr.microsoft.com/dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) | Çalışma zamanı ve ASP.NET Core bağımlılıklarını içerir. Üretim için. |
 
 Her görüntü için, etiketlere göre ayırt edilen farklı Linux dağıtımlarını temel alan dört çeşit vardır.
 
@@ -41,11 +41,11 @@ Alp temel görüntüsü 100 MB boyutunda, de, ve Ubuntu görüntüleri için 200
 
 ## <a name="create-a-docker-image"></a>Docker görüntüsü oluşturma
 
-Docker görüntüsü bir *Dockerfile*tarafından tanımlanır. Bu, uygulamayı oluşturmak için gereken tüm komutları içeren bir metin dosyasıdır ve uygulamayı oluşturmak ya da çalıştırmak için gerekli tüm bağımlılıkları yükler. Aşağıdaki örnekte, bir ASP.NET Core 3,0 uygulaması için en basit Dockerfile gösterilmektedir:
+Docker görüntüsü bir *Dockerfile* tarafından tanımlanır. Bu, uygulamayı oluşturmak için gereken tüm komutları içeren bir metin dosyasıdır ve uygulamayı oluşturmak ya da çalıştırmak için gerekli tüm bağımlılıkları yükler. Aşağıdaki örnekte, bir ASP.NET Core 3,0 uygulaması için en basit Dockerfile gösterilmektedir:
 
 ```dockerfile
 # Application build steps
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
 
 WORKDIR /src
 
@@ -56,7 +56,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
 
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
@@ -95,7 +95,7 @@ Docker için Microsoft temel görüntüleri, `ASPNETCORE_URLS` ortam değişkeni
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```

@@ -1,49 +1,22 @@
 ---
 title: Ağ bozan değişiklikler
-description: .NET Core 'da ağ üzerindeki son değişiklikleri listeler.
+description: .NET Core 2,0 ve 3,0 ' de ağ üzerindeki son değişiklikleri listeler.
 ms.date: 05/05/2020
-ms.openlocfilehash: fdbd3f3bdcae5048b4f01e4d827f8a0e876c5c15
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 761c6481888bcb8e91f7b4212355aca067632495
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050537"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689218"
 ---
-# <a name="networking-breaking-changes"></a>Ağ bozan değişiklikler
+# <a name="networking-breaking-changes-in-net-core-20-and-30"></a>.NET Core 2,0 ve 3,0 ' de ağ bozan değişiklikler
 
 Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Tanıtılan sürüm |
 | - | - |
-| [NegotiateStream ve SslStream ardışık başlama işlemlerine izin ver](#negotiatestream-and-sslstream-allow-successive-begin-operations) | 5.0 |
-| [Socket. LocalEndPoint, SendToAsync çağrıldıktan sonra güncellenir](#socketlocalendpoint-is-updated-after-calling-sendtoasync) | 5.0 |
-| [.NET çalışma zamanından WinHttpHandler kaldırıldı](#winhttphandler-removed-from-net-runtime) | 5.0 |
-| [Multicastop. Group null bir değer kabul etmez](#multicastoptiongroup-doesnt-accept-a-null-value) | 5.0 |
-| [Tanımlama bilgisi yol işleme artık RFC 6265 ' e uyar](#cookie-path-handling-now-conforms-to-rfc-6265) | 5.0 |
-| [HttpRequestMessage. Version öğesinin varsayılan değeri 1,1 olarak değiştirildi](#default-value-of-httprequestmessageversion-changed-to-11) | 3.0 |
-| [WebClient. Iptallasync her zaman hemen iptal etmez](#webclientcancelasync-doesnt-always-cancel-immediately) | 2.0 |
-
-## <a name="net-50"></a>.NET 5,0
-
-[!INCLUDE [negotiatestream-sslstream-dont-fail-on-successive-begin-calls](../../../includes/core-changes/networking/5.0/negotiatestream-sslstream-dont-fail-on-successive-begin-calls.md)]
-
-***
-
-[!INCLUDE [localendpoint-updated-on-sendtoasync](../../../includes/core-changes/networking/5.0/localendpoint-updated-on-sendtoasync.md)]
-
-***
-
-[!INCLUDE [winhttphandler-removed-from-runtime](../../../includes/core-changes/networking/5.0/winhttphandler-removed-from-runtime.md)]
-
-***
-
-[!INCLUDE [multicastoption-group-doesnt-accept-null](../../../includes/core-changes/networking/5.0/multicastoption-group-doesnt-accept-null.md)]
-
-***
-
-[!INCLUDE [cookie-path-conforms-to-rfc6265](../../../includes/core-changes/networking/5.0/cookie-path-conforms-to-rfc6265.md)]
-
-***
+| [HttpRequestMessage. Version öğesinin varsayılan değeri 1,1 olarak değiştirildi](#default-value-of-httprequestmessageversion-changed-to-11) | 3,0 |
+| [WebClient. Iptallasync her zaman hemen iptal etmez](#webclientcancelasync-doesnt-always-cancel-immediately) | 2,0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

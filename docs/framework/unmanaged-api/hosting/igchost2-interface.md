@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e5323fa4-18ac-424d-859d-a65a550d08d9
 topic_type:
 - apiref
-ms.openlocfilehash: 976673a0caab4e041cc80e5536544c195fcf692a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 7529ecd215d74eb0eedbec8b90eba367ed20d56f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805174"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687749"
 ---
 # <a name="igchost2-interface"></a>IGCHost2 Arabirimi
+
 Çöp toplama sistemi hakkında bilgi edinmek ve çöp toplamanın bazı yönlerini denetlemek için yöntemler sağlar.  
   
 > [!NOTE]
@@ -34,11 +35,12 @@ ms.locfileid: "83805174"
 |[SetGCStartupLimitsEx Yöntemi](igchost2-setgcstartuplimitsex-method.md)|Oluşturma 0 ' nın segment boyutunu ve en büyük boyutunu ayarlar. 1. nesil ve kesim boyutlarını daha büyük olarak sunar `DWORD` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** GCHost. IDL, GCHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
@@ -46,4 +48,4 @@ ms.locfileid: "83805174"
 
 - [Barındırma Arabirimleri](hosting-interfaces.md)
 - [CLR Barındırma Arabirimleri](clr-hosting-interfaces.md)
-- [CorRuntimeHost Coclass](corruntimehost-coclass.md)
+- [CorRuntimeHost Ortak Sınıfı](corruntimehost-coclass.md)

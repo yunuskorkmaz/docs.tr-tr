@@ -1,5 +1,5 @@
 ---
-title: GetNames işlevi (Yönetilmeyen API Başvurusu)
+title: GetNames işlevi (yönetilmeyen API Başvurusu)
 description: GetNames işlevi bir nesnenin özelliklerinin adlarını alır.
 ms.date: 11/06/2017
 api_name:
@@ -14,19 +14,20 @@ helpviewer_keywords:
 - GetNames function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 449f0ce9c291d4bbcad4947214e56ff46f55beed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd889158e61b86f42d88bcf86eda7d816277e6ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174959"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687664"
 ---
 # <a name="getnames-function"></a>GetNames işlevi
-Bir alt kümeyi veya nesnenin özelliklerinin tüm adlarını alır.
+
+Bir nesnenin özelliklerinin bir alt kümesini ya da tümünü alır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetNames (
@@ -42,71 +43,72 @@ HRESULT GetNames (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[içinde] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`  
-[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `wszQualifierName`  
-[içinde] Bir filtrenin `LPCWSTR` parçası olarak çalışan bir niteleyici adı belirten bir geçerli için işaretçi. Daha fazla bilgi için [Açıklamalar](#remarks) bölümüne bakın. Bu parametre `null`olabilir .
+'ndaki Bir `LPCWSTR` filtrenin parçası olarak çalışan bir niteleyici adı belirten geçerli bir işaretçisi. Daha fazla bilgi için, [açıklamalar](#remarks) bölümüne bakın. Bu parametre olabilir `null` .
 
 `lFlags`  
-[içinde] Bit alanlarının birleşimi. Daha fazla bilgi için [Açıklamalar](#remarks) bölümüne bakın.
+'ndaki Bit alanlarının birleşimi. Daha fazla bilgi için, [açıklamalar](#remarks) bölümüne bakın.
 
-`pQualifierValue`[içinde] Filtre değerine `VARIANT` başlattı geçerli bir yapıiçin işaretçi. Bu parametre `null`olabilir .
+`pQualifierValue` 'ndaki `VARIANT` Filtre değerine başlatılan geçerli bir yapıya yönelik işaretçi. Bu parametre olabilir `null` .
 
 `pstrNames`  
-[çıkış] Özellik `SAFEARRAY` adları içeren bir yapı. Girişte, bu parametre her zaman `null`bir işaretçi olmalıdır. Daha fazla bilgi için [Açıklamalar](#remarks) bölümüne bakın.
+dışı `SAFEARRAY` Özellik adlarını içeren bir yapı. Girişte, bu parametrenin her zaman bir işaretçi olması gerekir `null` . Daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın.
 
 ## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Genel bir başarısızlık oldu. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değildir veya bayraklar ve parametrelerin yanlış bir birleşimi belirtilmiş. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak için yeterli bellek yok. |
+|`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değil veya bayrakların ve parametrelerin yanlış birleşimi belirtildi. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu [işlev, IWbemClassObject::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) yöntemine bir çağrı yıkıyor.
+Bu işlev, [IWbemClassObject:: GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) yöntemine bir çağrı kaydırır.
 
-Döndürülen ad, bayraklar ve parametrelerin birleşimi tarafından denetlenir. Örneğin, işlev tüm özelliklerin adlarını veya yalnızca anahtar özelliklerinin adlarını döndürebilir.  Birincil filtre `lFlags` parametrede belirtilir ve diğer parametreler buna bağlı olarak değişir.
+Döndürülen adlı ad, bayrakların ve parametrelerin birleşimiyle denetlenir. Örneğin, işlev tüm özelliklerin adlarını veya yalnızca anahtar özelliklerinin adlarını döndürebilir.  Birincil filtre `lFlags` parametresinde belirtilir ve diğer parametreler buna bağlı olarak farklılık gösterir.
 
-Bayrak değerleri `lFlags` bit alanlarıdır
+İçindeki bayrak değerleri `lFlags` bit alanlardır
 
-`lEnumFlags` Bağımsız değişken olarak geçirilebilen *bayraklar, WbemCli.h* üstbilgi dosyasında tanımlanan bit alanlarıdır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz.  Her gruptan bir bayrağı başka bir gruptan herhangi bir bayrakla birleştirebilirsiniz. Ancak, aynı grubun bayrakları birbirini dışlar.
+Bağımsız değişken olarak geçirilebilecek bayraklar, `lEnumFlags` *Wbemcli. h* üstbilgi dosyasında tanımlanan bit alanlardır veya kodunuzda sabitler olarak tanımlayabilirsiniz.  Her bir grup için herhangi bir bayrak ile bir bayrak birleştirebilirsiniz. Ancak, aynı gruptaki Bayraklar birbirini dışlıyor.
 
 | Grup 1 bayrakları |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Tüm özellik adlarını döndürün. `strQualifierName`ve `pQualifierVal` kullanılmaz. |
-| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Yalnızca parametre tarafından belirtilen adı niteleyen `strQualifierName` özellikleri döndürün. Bu bayrak kullanılırsa, `strQualifierName`belirtmelisiniz. |
-|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Yalnızca parametre tarafından belirtilen adınitelemeye sahip `strQualifierName` olmayan özellikleri döndürün. Bu bayrak kullanılırsa, `strQualifierName`belirtmelisiniz. |
-|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Yalnızca `wszQualifierName` parametre tarafından belirtilen adı niteleyen ve yapı tarafından belirtilen değere sahip `pQualifierVal` özellikleri döndürün. Bu bayrak kullanılırsa, hem `wszQualifierName` a `pQualifierValue`hem de bir . belirtmeniz gerekir |
+| `WBEM_FLAG_ALWAYS` | 0 | Tüm özellik adlarını döndürür. `strQualifierName` ve `pQualifierVal` kullanılmıyor. |
+| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Yalnızca parametresi tarafından belirtilen ad niteleyicisi olan özellikleri döndürür `strQualifierName` . Bu bayrak kullanılırsa, belirtmeniz gerekir `strQualifierName` . |
+|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Yalnızca parametresi tarafından belirtilen adın niteleyicisi olmayan özellikleri döndürür `strQualifierName` . Bu bayrak kullanılırsa, belirtmeniz gerekir `strQualifierName` . |
+|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Yalnızca parametresi tarafından belirtilen ad niteleyicisi olan `wszQualifierName` ve aynı zamanda yapı tarafından belirtilen bir değere sahip olan özellikleri döndürür `pQualifierVal` . Bu bayrak kullanılırsa, hem a hem de belirtmeniz gerekir `wszQualifierName` `pQualifierValue` . |
 
 | Grup 2 bayrakları |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Yalnızca anahtarları tanımlayan özelliklerin adlarını döndürün. |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | Yalnızca nesne başvuruları olan özellik adlarını döndürün. |
+|`WBEM_FLAG_KEYS_ONLY` | 4, | Yalnızca anahtarları tanımlayan özelliklerin adlarını döndürür. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Yalnızca nesne başvuruları olan özellik adlarını döndürür. |
 
 | Grup 3 bayrakları |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca en çok türetilmiş sınıfa ait özellik adlarını döndürün. Özellikleri üst sınıflardan hariç tinler. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Yalnızca üst sınıflara ait özellik adlarını döndürün. |
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Yalnızca sistem özelliklerinin adlarını döndürün. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Yalnızca sistem dışı özelliklerin adlarını döndürün. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca en türetilmiş sınıfa ait olan özellik adlarını döndürür. Üst sınıflardan özellikleri dışlayın. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Yalnızca üst sınıflara ait olan özellik adlarını döndürür. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Yalnızca sistem özelliklerinin adlarını döndürür. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Yalnızca sistem dışı özelliklerin adlarını döndürür. |
 
-İşlev her zaman `SAFEARRAY` yeni `WBEM_S_NO_ERROR` `pstrNames` bir döner ve her zaman onu işaret etmek için ayarlanır ayırır. Döndürülen dizi, belirtilen filtrelerle hiçbir özellik eşleşmezse 0 elemana sahip olabilir. İşlev, yeni bir `WBM_S_NO_ERROR` `SAFEARRAY` yapının döndürülmesi dışında bir değer döndürür.
+İşlevi, döndürürse her zaman yeni bir ayırır `SAFEARRAY` `WBEM_S_NO_ERROR` ve `pstrNames` her zaman onu işaret etmek üzere ayarlanır. Belirtilen filtrelerle eşleşen hiçbir özellik yoksa döndürülen dizide 0 öğesi olabilir. İşlev dışında bir değer döndürürse `WBM_S_NO_ERROR` , yeni bir `SAFEARRAY` Yapı döndürülmez.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 385fc4d3-365c-4645-b7b0-6c4c5344b79f
 topic_type:
 - apiref
-ms.openlocfilehash: d654f6d57bd784063fc7f87dd9767bdc27ad2776
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 09bc0f87cd35f12a15566fb525c2ce42990ac69b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615585"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688204"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource Yöntemi
+
 `true`Belgenin hata ayıklama sembollerine katıştırılmış kaynak olup olmadığını döndürür; Aksi takdirde, döndürür `false` .  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -33,10 +34,12 @@ HRESULT HasEmbeddedSource(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pRetVal`  
  dışı Belgenin hata ayıklama sembollerine gömülü kaynak olup olmadığını gösteren bir değişkene yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

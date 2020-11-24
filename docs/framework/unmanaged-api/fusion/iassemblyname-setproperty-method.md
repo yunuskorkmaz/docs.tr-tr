@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 496c3add-f60b-4073-943f-d1bcf33330cb
 topic_type:
 - apiref
-ms.openlocfilehash: ffa1fa2f5e141728a56f1b598a1aae9602b2ac86
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04b3e73e2166efb2ec0821d21da3da4c53b0ca4b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108213"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688659"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty Yöntemi
+
 Belirtilen özellik tanımlayıcısı tarafından başvurulan özelliğin değerini ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetProperty (  
@@ -36,21 +37,23 @@ HRESULT SetProperty (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `PropertyId`  
  'ndaki Değeri ayarlanacak özelliğin benzersiz tanımlayıcısı.  
   
  `pvProperty`  
- 'ndaki `PropertyId`başvurduğu özelliğin ayarlanacağı değer.  
+ 'ndaki Tarafından başvurulan özelliğin ayarlanacağı değer `PropertyId` .  
   
  `cbProperty`  
- 'ndaki `pvProperty`bayt cinsinden boyutu.  
+ 'ndaki Bayt cinsinden boyutu `pvProperty` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Fusion. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

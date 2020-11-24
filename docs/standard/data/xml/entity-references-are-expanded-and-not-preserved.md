@@ -2,14 +2,15 @@
 title: Varlık Başvuruları Genişletilir ve Korunmaz
 ms.date: 03/30/2017
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-ms.openlocfilehash: a446ef35cc9e22660e66d71a9c9332f80117d1ae
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5a3c93807866c5925696f2d913dfc443d8ff12a4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827678"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687456"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Varlık Başvuruları Genişletilir ve Korunmaz
+
 Varlık başvurusu genişletildiğinde ve gösterdiği metin tarafından değiştirildiğinde, **XmlEntityReference** düğümü oluşturulmaz. Bunun yerine, varlık bildirimi ayrıştırılır ve bildirimdeki içerikten oluşturulan düğümler **XmlEntityReference** yerine kopyalanır. Bu nedenle, `&publisher;` örnekte `&publisher;` kaydedilmez, ancak bunun yerine **XmlText** düğümü oluşturulur.  
   
  ![Genişletilmiş ağaç yapısı](media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  

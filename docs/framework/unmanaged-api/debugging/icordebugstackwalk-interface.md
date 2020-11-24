@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-ms.openlocfilehash: 5f71dfcdffaaa683ca4f2abebaa99115ef90e0ff
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b37a89c0a86df49c894dc43676f8feafb80f5c95
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378902"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687521"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk Arabirimi
+
 İş parçacığının yığınındaki yönetilen yöntemleri veya çerçeveleri almak için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -39,6 +40,7 @@ ms.locfileid: "83378902"
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

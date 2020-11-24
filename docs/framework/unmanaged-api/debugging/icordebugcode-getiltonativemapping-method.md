@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-ms.openlocfilehash: 3de85626be6ae8e4769ac261f4de1479461417ec
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 0adb9e58ca2c6b5b430a0413fa11ba59d79a0539
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893537"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688113"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping Metodu
+
 Microsoft ara dili (MSIL) uzaklıklarından yerel uzaklıklara olan eşlemeleri temsil eden "COR_DEBUG_IL_TO_NATIVE_MAP" örneklerinin bir dizisini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetILToNativeMapping (  
@@ -37,21 +38,24 @@ HRESULT GetILToNativeMapping (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cMap`  
  'ndaki `map` Dizinin boyutu.  
   
  `pcMap`  
- dışı `map` Dizide döndürülen gerçek öğe sayısı için bir işaretçi.  
+ dışı Dizide döndürülen gerçek öğe sayısı için bir işaretçi `map` .  
   
  `map`  
- dışı Her biri bir `COR_DEBUG_IL_TO_NATIVE_MAP` MSIL öğesinden yerel bir uzaklığa bir eşlemeyi temsil eden yapıların dizisi.  
+ dışı `COR_DEBUG_IL_TO_NATIVE_MAP` Her biri BIR MSIL öğesinden yerel bir uzaklığa bir eşlemeyi temsil eden yapıların dizisi.  
   
  Döndürülen öğelerin dizisinde bir sıralama yoktur.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemi `GetILToNativeMapping` , yalnızca bu "ICorDebugCode" ÖRNEĞI, MSIL kodundan derlenen yerel kodu (JIT) gösterirse anlamlı sonuçlar döndürür.  
+
+ `GetILToNativeMapping`Yöntemi, yalnızca bu "ICorDebugCode" örneği, MSIL kodundan derlenen yerel kodu (JIT) gösterirse anlamlı sonuçlar döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

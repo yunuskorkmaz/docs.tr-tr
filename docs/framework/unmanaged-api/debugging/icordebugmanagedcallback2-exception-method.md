@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: 612b63ba9aa3504cab5196932293946d486955ce
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c5be9231bcd5aaddfa0cf1b0051f8e1184faef04
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210208"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687638"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception Yöntemi
+
 Hata ayıklayıcıya bir özel durum işleyici aramasının başlatıldığını bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Exception (  
@@ -39,6 +40,7 @@ HRESULT Exception (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pAppDomain`  
  'ndaki Özel durumun oluşturulduğu iş parçacığını içeren uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.  
   
@@ -58,13 +60,14 @@ HRESULT Exception (
  'ndaki Özel durum hakkında ek bilgi belirten [CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md) sabit listesinin bir değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Exception`Geri çağırma, özel durum işleme sürecinin arama aşamasında çeşitli noktalarda çağrılır. Diğer bir deyişle, özel durum geriye doğru bir şekilde bir kez çağrılabilir.  
   
  İşlenmekte olan özel durum, parametrenin başvurduğu ICorDebugThread nesnesinden alınabilir `pThread` .  
   
  Belirli bir çerçeve ve konum `dwEventType` parametresi tarafından aşağıdaki gibi belirlenir:  
   
-|Değeri`dwEventType`|Değeri`pFrame`|Değeri`nOffset`|  
+|Değeri `dwEventType`|Değeri `pFrame`|Değeri `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|Özel durumu oluşturan çerçeve.|Çerçevedeki yönerge işaretçisi.|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|Oluşturulan özel durum noktasına en yakın Kullanıcı kodu çerçevesi.|Çerçevedeki yönerge işaretçisi.|  
@@ -72,6 +75,7 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_UNHANDLED|NULL|Tanımlayan.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

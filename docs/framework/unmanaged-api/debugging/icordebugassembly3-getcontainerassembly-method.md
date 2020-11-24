@@ -2,17 +2,18 @@
 title: ICorDebugAssembly3::GetContainerAssembly Yöntemi
 ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
-ms.openlocfilehash: 068a08d70f2443edfe0970ec1ffb8cba9953c6b9
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 51e68e73983425cdd7d648b6856809fcba590f70
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894847"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688555"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>ICorDebugAssembly3::GetContainerAssembly Yöntemi
-Bu `ICorDebugAssembly3` nesnenin kapsayıcı derlemesini döndürür.  
+
+Bu nesnenin kapsayıcı derlemesini döndürür `ICorDebugAssembly3` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetContainerAssembly(  
@@ -21,19 +22,23 @@ HRESULT GetContainerAssembly(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppAssembly`  
  Kapsayıcı derlemesini temsil eden bir ICorDebugAssembly nesnesinin adresine yönelik bir işaretçi veya yöntem çağrısı başarısız olursa **null** .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK`Yöntem çağrısı başarılı olursa; Aksi halde `S_FALSE`,, `ppAssembly` ve **null**.  
+
+ `S_OK` Yöntem çağrısı başarılı olursa; Aksi halde, `S_FALSE` , `ppAssembly` ve **null**.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu derleme, tek bir kapsayıcı derlemesi içindeki diğer kullanıcılarla birleştirilmişse, bu yöntem kapsayıcı derlemesini döndürür. Daha fazla bilgi ve terminoloji için [ICorDebugProcess6:: Enablevirtualmodulebölünmesi](icordebugprocess6-enablevirtualmodulesplitting-method.md) konusuna bakın.  
   
 > [!NOTE]
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

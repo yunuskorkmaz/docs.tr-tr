@@ -12,19 +12,20 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-ms.openlocfilehash: c6fdb7040620bb7a5b6aea6e0dc41e08d6f346d0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 097502f4321531922d6c4385e2eccbf32f66f026
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210364"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688360"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap Yöntemi
+
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
  Bu örnek için profil oluşturucu tarafından işaretlenmiş ara dil (IL) uzaklıklarını orijinal Yöntem Il uzaklıklarından bir eşleme döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT GetInstrumentedILMap(  
@@ -35,6 +36,7 @@ HRESULT GetInstrumentedILMap(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  cMap  
  'ndaki Dizinin depolama kapasitesi `map` . Daha fazla bilgi için Açıklamalar bölümüne bakın.  
   
@@ -45,13 +47,15 @@ HRESULT GetInstrumentedILMap(
  dışı Profil Oluşturucu tarafından izlenen Il 'den özgün yöntemin Il 'ye eşlemeler hakkında bilgi sağlayan COR_IL_MAP değerleri dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Profil Oluşturucu [ICorProfilerInfo:: SetILInstrumentedCodeMap](../profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) metodunu çağırarak eşlemeyi ayarlarsa, hata ayıklayıcı eşlemeyi almak için bu yöntemi çağırabilir ve yığın izlemeleri ve değişken yaşam SÜRELERI için Il farklarını hesaplarken dahili eşlemeyi kullanır.  
   
- `cMap`0 ise ve `pcMap` **null**değilse, `pcMap` kullanılabilir COR_IL_MAP değeri sayısı olarak ayarlanır. `cMap`Sıfır olmayan ise, dizinin depolama kapasitesini temsil eder `map` . Yöntemi döndürüldüğünde, `map` en fazla `cMap` öğe içerir ve `pcMap` gerçekten diziye yazılan COR_IL_MAP değerlerinin sayısına ayarlanır `map` .  
+ `cMap`0 ise ve `pcMap` **null** değilse, `pcMap` kullanılabilir COR_IL_MAP değeri sayısı olarak ayarlanır. `cMap`Sıfır olmayan ise, dizinin depolama kapasitesini temsil eder `map` . Yöntemi döndürüldüğünde, `map` en fazla `cMap` öğe içerir ve `pcMap` gerçekten diziye yazılan COR_IL_MAP değerlerinin sayısına ayarlanır `map` .  
   
  Il düzenlenmemişse veya eşleme bir profil oluşturucu tarafından sağlanmamışsa, bu yöntem döndürür `S_OK` ve `pcMap` 0 olarak ayarlanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

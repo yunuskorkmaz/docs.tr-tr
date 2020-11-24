@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: d815486e-b3bd-4fe8-ba28-02abdb4d67ba
 topic_type:
 - apiref
-ms.openlocfilehash: 786582c7118fbed394de7c414a10243616cf4ee1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 51beed47e7187d6fa22e60baed16598a8ad73adb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209805"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688997"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain Yöntemi
+
 Hata ayıklayıcıya bir uygulama etki alanının çıkış olduğunu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ExitAppDomain (  
@@ -35,6 +36,7 @@ HRESULT ExitAppDomain (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pProcess`  
  'ndaki Verilen uygulama etki alanını içeren işlemi temsil eden ICorDebugProcess nesnesine yönelik bir işaretçi.  
   
@@ -42,6 +44,7 @@ HRESULT ExitAppDomain (
  'ndaki Çıkış yapan uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

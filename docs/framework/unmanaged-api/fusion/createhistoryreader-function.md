@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 66a89acf-8c32-44c0-8787-960c99c7b3ec
 topic_type:
 - apiref
-ms.openlocfilehash: 80979f0424469bb1d4771ad6507bb8c9d5364ab4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9dae3f1403d33aaf3cfb87d17856640548a90b4d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108603"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688984"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader İşlevi
+
 Belirtilen dosya için bir geçmiş okuyucu oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CreateHistoryReader (  
@@ -34,6 +35,7 @@ HRESULT CreateHistoryReader (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `wzFilePath`  
  'ndaki Dosya yolu.  
   
@@ -41,19 +43,21 @@ HRESULT CreateHistoryReader (
  dışı Başarılı tamamlandığında, geçmiş okuyucu için bir işaretçi içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki tabloda açıklanan değerlere ek olarak, WinError. h içinde tanımlanan standart COM hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Metodun başarıyla tamamlandığını gösterir.|  
-|E_INVALIDARG|`wzFilePath` veya `ppHistoryReader` null başvuruya ayarlandığını gösterir.|  
+|E_INVALIDARG|`wzFilePath`Bunun veya `ppHistoryReader` null bir başvuruya ayarlandığını gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Kitaplık:** Fusion. dll  
+ **Kitaplık:** Fusion.dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

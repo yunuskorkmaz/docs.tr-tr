@@ -2,14 +2,15 @@
 title: Varlık Başvuruları Korunur
 ms.date: 03/30/2017
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
-ms.openlocfilehash: 2cc2fcf3fdc2a89e4f72ae65e6e7385cb83f168c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 484eb5c874c6de05acae7dcd87a477c186b81482
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823842"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687274"
 ---
 # <a name="entity-references-are-preserved"></a>Varlık Başvuruları Korunur
+
 Varlık başvurusu genişletilmemişse ancak korunmadığında, XML Belge Nesne Modeli (DOM) bir varlık başvurusuyla karşılaştığında bir **XmlEntityReference** düğümü oluşturur.  
   
  Aşağıdaki XML 'i kullanarak  

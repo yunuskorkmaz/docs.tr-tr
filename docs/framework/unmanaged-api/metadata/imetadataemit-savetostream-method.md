@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0290a49-3818-4a43-ad46-3014faa34f97
 topic_type:
 - apiref
-ms.openlocfilehash: 87e00a69643b6bc403188fb0fdb6f9e3f3d82115
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3f8da08b96c47c90ecccae28dd1662a7abffaf1d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003886"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688568"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream Yöntemi
+
 Geçerli kapsamdaki tüm meta verileri belirtilen öğesine kaydeder `IStream` .  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT SaveToStream (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pIStream`  
  'ndaki Kaydedilecek yazılabilir akış.  
   
@@ -42,11 +44,12 @@ HRESULT SaveToStream (
  'ndaki Ayrılamadı. Sıfır olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

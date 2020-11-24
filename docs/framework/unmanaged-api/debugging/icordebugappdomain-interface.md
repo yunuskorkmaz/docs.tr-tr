@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be7ae711-1217-4a44-be40-166e29641b77
 topic_type:
 - apiref
-ms.openlocfilehash: 140e67417f4fad552f972a93bc8c620b440b2370
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 98273a5d4602c023863758045bdb2a6a502ba7a7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895168"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687235"
 ---
 # <a name="icordebugappdomain-interface"></a>ICorDebugAppDomain Arabirimi
 
@@ -46,6 +46,7 @@ Uygulama etki alanlarındaki hataları ayıklamak için yöntemler sağlar. Bu a
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

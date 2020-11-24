@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: 0d98df05291ed8405addcfd183d7e02332e4e025
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0f2f5acfc6a23398b15af3a63345050eb0dfd5b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209701"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687196"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences Yöntemi
+
 Bir işlemde çöp toplanabilecek tüm nesneler için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumerateGCReferences(  
@@ -35,6 +36,7 @@ HRESULT EnumerateGCReferences(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `enumerateWeakReferences`  
  'ndaki Zayıf başvuruların da oluşturulup oluşturulmayacağını gösteren bir Boolean değer. `enumerateWeakReferences`İse `true` , `ppEnum` Numaralandırıcı hem güçlü başvuruları hem de zayıf başvuruları içerir. `enumerateWeakReferences`İse `false` , Numaralandırıcı yalnızca güçlü başvurular içerir.  
   
@@ -42,9 +44,11 @@ HRESULT EnumerateGCReferences(
  dışı Çöp toplanabilecek nesneler için bir Numaralandırıcı olan [ıcorıtcggcreferenceenum](icordebuggcreferenceenum-interface.md) adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, bir işlemdeki yönetilen herhangi bir nesne için tam kök zinciri belirlemenin bir yolunu sağlar ve bir nesnenin neden hala etkin olduğunu tespit etmek için kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

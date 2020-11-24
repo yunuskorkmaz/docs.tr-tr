@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5237628-2675-45ed-a39e-65c0731b6a56
 topic_type:
 - apiref
-ms.openlocfilehash: ccf82531eb1f78bcfc6762d10d53ffee59f30ad8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1cd5e34d6afefab2fda7e20d4bf73b373ad42787
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003969"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688607"
 ---
 # <a name="imetadataemitsavetomemory-method"></a>IMetaDataEmit::SaveToMemory Yöntemi
+
 Geçerli kapsamdaki tüm meta verileri belirtilen bellek alanına kaydeder.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT SaveToMemory (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbData`  
  dışı Meta veri yazmaya başlamak için kullanılacak adres.  
   
@@ -42,11 +44,12 @@ HRESULT SaveToMemory (
  'ndaki Ayrılan belleğin bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

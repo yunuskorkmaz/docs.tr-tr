@@ -6,17 +6,19 @@ helpviewer_keywords:
 - fusion global static functions [.NET Framework]
 - global static functions [.NET Framework fusion]
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
-ms.openlocfilehash: ff94ed23f3e39888b4f7e255feece99898f8aa74
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 691fd50e05cadd3f82196fc6ba5df9bb84a66faa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108262"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688750"
 ---
 # <a name="fusion-global-static-functions"></a>Fusion Genel Statik İşlevleri
+
 Bu bölümde Fusion API 'sinin kullandığı yönetilmeyen genel statik işlevler açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [ClearDownloadCache İşlevi](cleardownloadcache-function.md)  
  İndirilen derlemelerin genel derleme önbelleğini temizler.  
   
@@ -24,7 +26,7 @@ Bu bölümde Fusion API 'sinin kullandığı yönetilmeyen genel statik işlevle
  , Eşdeğer olup olmadıklarını anlamak için iki derleme kimliğini karşılaştırır.  
   
  [CreateApplicationContext İşlevi](createapplicationcontext-function.md)  
- Yalnızca dahili. (Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
+ Sadece dahili. (Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
   
  [CreateAssemblyCache İşlevi](createassemblycache-function.md)  
  Genel derleme önbelleğini temsil eden yeni bir [IAssemblyCache](iassemblycache-interface.md) örneğine yönelik bir işaretçi alır.  
@@ -45,7 +47,7 @@ Bu bölümde Fusion API 'sinin kullandığı yönetilmeyen genel statik işlevle
  Uygulama kimlikleri ve başvuruları için anahtarları yöneten bir [ıappidaduthority](iappidauthority-interface.md) örneğine yönelik bir işaretçi alır.  
   
  [GetAssemblyIdentityFromFile İşlevi](getassemblyidentityfromfile-function.md)  
- Belirtilen dosya yolundaki derlemede belirtilen `IID` sahip bir `IUnknown` nesnesine yönelik bir işaretçi alır.  
+ `IUnknown`Belirtilen dosya yolundaki derlemede belirtilen bir nesneye yönelik bir işaretçi alır `IID` .  
   
  [GetCachePath İşlevi](getcachepath-function.md)  
  Belirtilen bayrakları kullanarak önbelleğe alınmış derlemenin yolunu alır.  
@@ -66,9 +68,10 @@ Bu bölümde Fusion API 'sinin kullandığı yönetilmeyen genel statik işlevle
  Bir derlemenin ilke sonrası görünen adını alır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Fusion Arabirimleri](fusion-interfaces.md)  
   
- [Fusion Sabit Listeleri](fusion-enumerations.md)  
+ [Fusion Numaralandırmaları](fusion-enumerations.md)  
   
  [Fusion Yapıları](fusion-structures.md)  
   
