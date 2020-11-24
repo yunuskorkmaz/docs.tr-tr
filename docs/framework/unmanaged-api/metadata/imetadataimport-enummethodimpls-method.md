@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 40ab610110e96018b1c598d04b24a762ecb50717
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492028"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690525"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls Yöntemi
+
 Belirtilen türdeki yöntemleri temsil eden MethodBody ve MethodDeclaration belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,6 +40,7 @@ HRESULT EnumMethodImpls (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `phEnum`  
  [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
@@ -59,17 +61,18 @@ HRESULT EnumMethodImpls (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`başarıyla döndürüldü.|  
+|`S_OK`|`EnumMethodImpls` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak hiçbir yöntem belirteci yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

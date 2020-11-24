@@ -6,24 +6,27 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: c09259afdc5ede32791ba895ca012cdc2a0a1c18
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: da42358007b887f6bab05c35e0f7542f1069abd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829953"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689816"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
+
 Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren bir veri akışı bloğu ağı oluşturma işlemi gösterilir.  
   
  Bu örnek, belirtilen klasörden görüntü dosyalarını yükler, bileşik bir görüntü oluşturur ve sonucu görüntüler. Örnek, görüntüleri ağ üzerinden yönlendirmek için veri akışı modelini kullanır. Veri akışı modelinde, bir programın bağımsız bileşenleri ileti göndererek birbirleriyle iletişim kurar. Bir bileşen bir ileti aldığında, bazı işlemleri gerçekleştirir ve sonucu başka bir bileşene geçirir. Bunu, bir uygulamanın bir programdaki işlem sırasını denetlemek için denetim yapılarını (örneğin, koşullu deyimler, döngüler vb.) kullandığı denetim akışı modeliyle karşılaştırın.  
   
-## <a name="prerequisites"></a>Ön koşullar  
+## <a name="prerequisites"></a>Önkoşullar  
+
  Bu yönergeyi başlamadan önce [veri akışını](dataflow-task-parallel-library.md) okuyun.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="sections"></a>Bölümler  
+
  Bu izlenecek yol aşağıdaki bölümleri içerir:  
   
 - [Windows Forms uygulaması oluşturma](#winforms)  
@@ -35,7 +38,9 @@ Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren b
 - [Tam Örnek](#complete)  
   
 <a name="winforms"></a>
+
 ## <a name="creating-the-windows-forms-application"></a>Windows Forms uygulaması oluşturma  
+
  Bu bölümde temel Windows Forms uygulamasının nasıl oluşturulacağı ve ana forma nasıl denetim ekleneceği açıklanmaktadır.  
   
 ### <a name="to-create-the-windows-forms-application"></a>Windows Forms uygulamasını oluşturmak için  
@@ -51,7 +56,9 @@ Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren b
 5. <xref:System.Windows.Forms.PictureBox>Ana forma bir nesne ekleyin. <xref:System.Windows.Forms.Control.Dock%2A>Özelliğini olarak ayarlayın <xref:System.Windows.Forms.DockStyle.Fill> .  
   
 <a name="network"></a>
+
 ## <a name="creating-the-dataflow-network"></a>Veri akışı ağını oluşturma  
+
  Bu bölümde, görüntü işlemeyi gerçekleştiren veri akışı ağının nasıl oluşturulacağı açıklanmaktadır.  
   
 ### <a name="to-create-the-dataflow-network"></a>Veri akışı ağını oluşturmak için  
@@ -101,7 +108,9 @@ Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren b
  Bu örnek, özelliği ayarlamak yerine paylaşılan bir iptal belirteci kullanır, <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> çünkü <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> Özellik kalıcı olarak veri akışı blok yürütmeyi iptal eder. İptal belirteci, Kullanıcı bir veya daha fazla işlemi iptal ettiğinde bile, bu örneğin aynı veri akışı ağını birden çok kez yeniden kullanmasına olanak sağlar. <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>Bir veri akışı bloğunun yürütülmesini kalıcı olarak iptal etmek için kullanan bir örnek için bkz. [nasıl yapılır: veri akışı bloğunu iptal](how-to-cancel-a-dataflow-block.md)etme.  
   
 <a name="ui"></a>
+
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Veri akışı ağını Kullanıcı arabirimine bağlama  
+
  Bu bölümde, veri akışı ağının Kullanıcı arabirimine nasıl bağlanacağı açıklanmaktadır. Bileşik görüntünün ve işlemin iptalinin oluşturulması, **Klasör Seç** ve **iptal** düğmelerinden başlatılır. Kullanıcı bu düğmelerden birini seçtiğinde, uygun eylem zaman uyumsuz bir şekilde başlatılır.  
   
 ### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Veri akışı ağını Kullanıcı arabirimine bağlamak için  
@@ -119,7 +128,9 @@ Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren b
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
 <a name="complete"></a>
+
 ## <a name="the-complete-example"></a>Tam Örnek  
+
  Aşağıdaki örnekte bu izlenecek yol için tüm kod gösterilmektedir.  
   
  [!code-csharp[TPLDataflow_CompositeImages#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#100)]  

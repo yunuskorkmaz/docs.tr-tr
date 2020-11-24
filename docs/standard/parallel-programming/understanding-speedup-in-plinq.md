@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 247ebb868a9256deaf59c1369e6143e15af4d6b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64eb346ba57e9af9f5be0cc1b42398c4f539d4d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829979"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689907"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ'te Hızlandırmayı Anlama
+
 PLıNQ 'in birincil amacı, çok çekirdekli bilgisayarlarda sorgu temsilcilerini paralel olarak yürüterek LINQ to Objects sorgularının yürütülmesini hızlandırmaya yönelik olur. PLıNQ, bir kaynak koleksiyondaki her öğenin işlenmesi bağımsız temsilciler arasında herhangi bir paylaşılan durum olmadan bağımsız olduğunda en iyi şekilde çalışır. Bu gibi işlemler LINQ to Objects ve PLıNQ ' de ortaktır ve genellikle birden çok iş parçacığında zamanlamaya göre kolayca bir şekilde çalıştıkları için "*delightfully Parallel*" olarak adlandırılır. Ancak, tüm sorgular tamamen eş dışı paralel işlemlerden oluşamaz; Çoğu durumda, bir sorgu paralelleştirilmedi veya paralel yürütmeyi yavaşlatabilecek bazı işleçleri içerir. Tamamen de tamamen paralel olan sorgularda, PLıNQ hala veri kaynağını bölümleyip iş parçacıkları üzerinde işi zamanlamaya ve genellikle sorgu tamamlandığında sonuçları birleştirmelidir. Tüm bu işlemler paralelleştirme hesaplama maliyetine ekler; paralel hale getirme ekleme maliyetlerine *ek yük* denir. Bir PLıNQ sorgusunda en iyi performansı elde etmek için, amaç paralel olan parçaları en üst düzeye çıkarmaktır ve ek yük gerektiren parçaları en aza indirmektir. Bu makalede, doğru sonuçları sunarken mümkün olduğunca verimli olan PLıNQ sorgularını yazmanıza yardımcı olacak bilgiler sağlanmaktadır.  
   
 ## <a name="factors-that-impact-plinq-query-performance"></a>PLıNQ sorgu performansını etkileyen faktörler  
+
  Aşağıdaki bölümlerde, paralel sorgu performansını etkileyen en önemli faktörlerin bazıları listelenmiştir. Bunlar, her durumda sorgu performansını tahmin etmek için yeterli olmayan genel deyimlerdir. Her zaman olduğu gibi, bilgisayarlardaki belirli sorguların gerçek performansını, bir dizi temsili yapılandırması ve yükleri ile ölçmek önemlidir.  
   
 1. Genel çalışmanın hesaplama maliyeti.  
@@ -65,6 +67,7 @@ PLıNQ 'in birincil amacı, çok çekirdekli bilgisayarlarda sorgu temsilcilerin
      Bazı durumlarda, Dizin oluşturamayacak bir kaynak koleksiyonu üzerinde PLıNQ sorgusu, dengesiz bir iş yüküne neden olabilir. Bu gerçekleştiğinde, özel bir bölümleyici oluşturarak sorgu performansını artırabilirsiniz. Daha fazla bilgi için bkz. [PLıNQ ve TPL Için Özel Bölümleyiciler](custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="when-plinq-chooses-sequential-mode"></a>PLıNQ sıralı modu seçtiğinde  
+
  PLıNQ, sorgu sırayla çalışır şekilde her zaman bir sorguyu en az hızlı bir şekilde yürütmeye çalışır. PLıNQ, Kullanıcı temsilcilerinin ne kadar pahalı olduğunu veya giriş kaynağının ne kadar büyük olduğunu fark etmez, bazı sorgu "şekillerini" arar. Özellikle, genellikle bir sorgunun paralel modda daha yavaş yürütülmesine neden olan sorgu işleçlerini veya işleç birleşimlerini arar. Böyle bir şekil bulduğunda, PLıNQ varsayılan olarak sıralı moda geri döner.  
   
  Ancak, belirli bir sorgunun performansını ölçdikten sonra, aslında paralel modda daha hızlı çalıştığını belirleyebilirsiniz. Bu gibi durumlarda, <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> sorguyu paralel hale getirmek için PLINQ 'a yönlendirmek üzere yöntemi aracılığıyla bayrağını kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: PLıNQ 'Te yürütme modunu belirtme](how-to-specify-the-execution-mode-in-plinq.md).  

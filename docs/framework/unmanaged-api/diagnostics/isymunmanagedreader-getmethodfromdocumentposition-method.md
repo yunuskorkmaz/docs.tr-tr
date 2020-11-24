@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55773dbc-9053-46e3-8a3c-86caa9d91fb4
 topic_type:
 - apiref
-ms.openlocfilehash: 8015056b110fe8a5b5122b1bc81143980b780047
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 417644e5d0c7af802d5266bd1825efa83c181597
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614987"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689608"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition Yöntemi
+
 Bir belgede verilen konumdaki kesme noktasını içeren yöntemi döndürür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT GetMethodFromDocumentPosition (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `document`  
  'ndaki Belirtilen belge.  
   
@@ -49,9 +51,11 @@ HRESULT GetMethodFromDocumentPosition (
  dışı Kesme noktasını içeren yöntemi temsil eden bir [ıdimunmanagedmethod Interface](isymunmanagedmethod-interface.md) nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

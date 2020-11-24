@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae6cfb29-bc2c-4606-af86-1d32ebd31020
 topic_type:
 - apiref
-ms.openlocfilehash: 864acb07797676c825afe62321b0d65e37938fa6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3f0d0e060bba832080dd8fbfab62f3115fec0aab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615013"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689647"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a>ISymUnmanagedReader::GetMethod Yöntemi
+
 Yöntem belirteci verilen bir sembol okuyucu yöntemini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetMethod (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `token`  
  'ndaki Yöntem belirteci.  
   
@@ -41,9 +43,11 @@ HRESULT GetMethod (
  dışı Döndürülen arabirime yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

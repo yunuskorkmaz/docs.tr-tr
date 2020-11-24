@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: 61d81c94e3a9c092b5d45791962635c761e8da8a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1dd71dbe0ddb894cb5ed05c32e50429d27c66aa2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008150"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689335"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile Yöntemi
+
 `File`Bu derleme tarafından başvurulan derleme için meta verileri içeren bir meta veri yapısı oluşturur ve ilişkili meta veri belirtecini döndürür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -38,6 +39,7 @@ HRESULT DefineFile (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `szName`  
  'ndaki Tüketilecek dosyanın adı.  
   
@@ -48,20 +50,22 @@ HRESULT DefineFile (
  'ndaki Bayt cinsinden boyut `pbHashValue` .  
   
  `dwFileFlags`  
- 'ndaki `FileFlags`Özellik ayarlarını belirten değerlerin bit tabanlı birleşimi.  
+ 'ndaki `FileFlags` Özellik ayarlarını belirten değerlerin bit tabanlı birleşimi.  
   
  `pmdf`  
  dışı Döndürülen belirtece yönelik bir işaretçi `File` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu `File` derlemenin oluşturulduğu zaman, meta verileri içeren dosya hariç olmak üzere, bu derlemenin parçası olan her bir dosya için bir meta veri yapısının tanımlanması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platform:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

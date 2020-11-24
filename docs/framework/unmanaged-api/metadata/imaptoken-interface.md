@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4c5c4df0-43f3-4830-a01b-8d029806f2c4
 topic_type:
 - apiref
-ms.openlocfilehash: 7858237f46ecfa71f0ce0e726ec8ef441b291456
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2ecd3a5660b0672185cd1b13f5a41261631713e4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008215"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690648"
 ---
 # <a name="imaptoken-interface"></a>IMapToken Arabirimi
+
 Derlemeler arasında eşleme özellikleri sağlar.  
   
 > [!NOTE]
@@ -34,11 +35,12 @@ Derlemeler arasında eşleme özellikleri sağlar.
 |[Map Yöntemi](imaptoken-map-method.md)|Meta veri imzalarını kullanarak iki derleme arasındaki ilişkiyi eşler.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

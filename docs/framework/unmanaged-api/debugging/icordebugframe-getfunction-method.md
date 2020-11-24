@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 879d2311-0ff1-4616-a8b3-959ea5868b2e
 topic_type:
 - apiref
-ms.openlocfilehash: 7bf73266f0269cfcd5371c5155856800036cc066
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9f9a6238057f56459eb8dca2375da412c3cd569d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209844"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690323"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction Metodu
+
 Bu yığın çerçevesiyle ilişkili kodu içeren işlevi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetFunction (  
@@ -34,13 +35,16 @@ HRESULT GetFunction (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppFunction`  
  dışı Bu yığın çerçevesiyle ilişkili kodu içeren işlevi temsil eden bir ICorDebugFunction nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetFunction`Çerçeve belirli bir işlevle ilişkilendirilmediği takdirde yöntem başarısız olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: bfdc946b-8238-4eb9-8a85-884049fb0fd4
 topic_type:
 - apiref
-ms.openlocfilehash: b29de0b70daa783197e78fe985d379d4124bc140
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: b52499e509bf172b03b5e4d2b1e4c677dc800281
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205143"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690479"
 ---
 # <a name="icordebugframegetcaller-method"></a>ICorDebugFrame::GetCaller Metodu
+
 Bu çerçeveyi çağıran geçerli zincirde ICorDebugFrame nesnesine yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetCaller (  
@@ -34,10 +35,12 @@ HRESULT GetCaller (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppFrame`  
- dışı `ICorDebugFrame`Çağırma çerçevesini temsil eden nesnenin adresine yönelik bir işaretçi. Çağrılan çerçeve geçerli zincirde en dıştaki çerçevedir ise bu değer null olur.  
+ dışı `ICorDebugFrame` Çağırma çerçevesini temsil eden nesnenin adresine yönelik bir işaretçi. Çağrılan çerçeve geçerli zincirde en dıştaki çerçevedir ise bu değer null olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: fbaa0794-a031-4015-8beb-2749e47ac340
 topic_type:
 - apiref
-ms.openlocfilehash: c8914ba1090ec5fd6540e9ead302675cb44f37e6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 29dc87bf465fc9751b5af795f7640b095e535e63
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208609"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690401"
 ---
 # <a name="icordebugframegetcode-method"></a>ICorDebugFrame::GetCode Yöntemi
+
 Bu yığın çerçevesiyle ilişkili koda yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetCode (  
@@ -34,10 +35,12 @@ HRESULT GetCode (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppCode`  
  dışı Bu kareyle ilişkili kodu temsil eden bir ICorDebugCode nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

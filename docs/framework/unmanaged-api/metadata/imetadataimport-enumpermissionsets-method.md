@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-ms.openlocfilehash: 79b1493d262288c1d85a56538810e35a73441595
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: eef2c733f96d74e3353a940cc90f1a631cf48a36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491777"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690531"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets Yöntemi
+
 Belirtilen meta veri kapsamındaki nesneler için izinleri numaralandırır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,6 +40,7 @@ HRESULT EnumPermissionSets
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `phEnum`  
  [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
@@ -59,17 +61,18 @@ HRESULT EnumPermissionSets
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets`başarıyla döndürüldü.|  
+|`S_OK`|`EnumPermissionSets` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: c404acb3-4c59-4100-9a4c-483cbdb1d736
 topic_type:
 - apiref
-ms.openlocfilehash: 9e91d990a8f23335248043c59eb210e8c4155e3a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f2f13976dfd4e5601bf8b54bed7b851884fbb9d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445624"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690453"
 ---
 # <a name="linkresource-method"></a>LinkResource Yöntemi
+
 Bir kaynaktaki bağlantılar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT LinkResource(  
@@ -37,6 +38,7 @@ HRESULT LinkResource(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `AssemblyID`  
  Derlemenin KIMLIĞI.  
   
@@ -44,18 +46,20 @@ HRESULT LinkResource(
  Dosyanın adı.  
   
  `pszNewLocation`  
- İsteğe bağlı yeni dosya adı. NULL olmayan `pszFileName`, pszNewLocation ' a kopyalanacaktır.  
+ İsteğe bağlı yeni dosya adı. NULL olmayan bir değer, `pszFileName` pszNewLocation ' a kopyalanacaktır.  
   
  `pszResourceName`  
  Kaynağın adı.  
   
  `dwFlags`  
- `mrPublic` ve `mrPrivate`gibi erişilebilirlik bayrakları. Bu parametre [DefineManifestResource metoduna](../metadata/imetadataassemblyemit-definemanifestresource-method.md)geçirilebilir.  
+ Ve gibi erişilebilirlik bayrakları `mrPublic` `mrPrivate` . Bu parametre [DefineManifestResource metoduna](../metadata/imetadataassemblyemit-definemanifestresource-method.md)geçirilebilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
