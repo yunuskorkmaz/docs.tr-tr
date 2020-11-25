@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: fa2be894af6e44d09c25a736f45acba56052f9fa
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: bf498a14af3dccc7278155ecfc74132c2b519ed3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895048"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698201"
 ---
-# <a name="icordebugarrayvaluegetdimensions-method"></a><span data-ttu-id="87e21-102">ICorDebugArrayValue::GetDimensions Metodu</span><span class="sxs-lookup"><span data-stu-id="87e21-102">ICorDebugArrayValue::GetDimensions Method</span></span>
-<span data-ttu-id="87e21-103">Bu dizinin her bir boyutundaki öğelerin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="87e21-103">Gets the number of elements in each dimension of this array.</span></span>  
+# <a name="icordebugarrayvaluegetdimensions-method"></a><span data-ttu-id="2b964-102">ICorDebugArrayValue::GetDimensions Metodu</span><span class="sxs-lookup"><span data-stu-id="2b964-102">ICorDebugArrayValue::GetDimensions Method</span></span>
+
+<span data-ttu-id="2b964-103">Bu dizinin her bir boyutundaki öğelerin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="2b964-103">Gets the number of elements in each dimension of this array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87e21-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="87e21-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b964-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="2b964-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDimensions (  
@@ -35,20 +36,22 @@ HRESULT GetDimensions (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="87e21-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="87e21-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2b964-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2b964-105">Parameters</span></span>  
+
  `cdim`  
- <span data-ttu-id="87e21-106">'ndaki Bu ıcorınumber Garrayvalue nesnesinin boyut sayısı.</span><span class="sxs-lookup"><span data-stu-id="87e21-106">[in] The number of dimensions of this ICorDebugArrayValue object.</span></span>  
+ <span data-ttu-id="2b964-106">'ndaki Bu ıcorınumber Garrayvalue nesnesinin boyut sayısı.</span><span class="sxs-lookup"><span data-stu-id="2b964-106">[in] The number of dimensions of this ICorDebugArrayValue object.</span></span>  
   
- <span data-ttu-id="87e21-107">Bu değer Ayrıca, boyutu `dims` `ICorDebugArrayValue` nesnenin boyut sayısına eşit olduğundan dizinin boyutudur.</span><span class="sxs-lookup"><span data-stu-id="87e21-107">This value is also the size of the `dims` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="2b964-107">Bu değer Ayrıca, `dims` boyutu nesnenin boyut sayısına eşit olduğundan dizinin boyutudur `ICorDebugArrayValue` .</span><span class="sxs-lookup"><span data-stu-id="2b964-107">This value is also the size of the `dims` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
   
  `dims`  
- <span data-ttu-id="87e21-108">dışı Her biri, bu `ICorDebugArrayValue` nesnedeki bir boyuttaki öğelerin sayısını belirten bir tamsayılar dizisi.</span><span class="sxs-lookup"><span data-stu-id="87e21-108">[out] An array of integers, each of which specifies the number of elements in a dimension in this `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="2b964-108">dışı Her biri, bu nesnedeki bir boyuttaki öğelerin sayısını belirten bir tamsayılar dizisi `ICorDebugArrayValue` .</span><span class="sxs-lookup"><span data-stu-id="2b964-108">[out] An array of integers, each of which specifies the number of elements in a dimension in this `ICorDebugArrayValue` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="87e21-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="87e21-109">Requirements</span></span>  
- <span data-ttu-id="87e21-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87e21-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b964-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2b964-109">Requirements</span></span>  
+
+ <span data-ttu-id="2b964-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b964-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87e21-111">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="87e21-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2b964-111">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="2b964-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="87e21-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="87e21-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2b964-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="2b964-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="87e21-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87e21-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2b964-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b964-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
