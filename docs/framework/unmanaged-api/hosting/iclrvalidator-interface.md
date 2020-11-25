@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2edd0a10-77fb-4173-91eb-f2970cc364d0
 topic_type:
 - apiref
-ms.openlocfilehash: e071f9cba7e991c59bf697647e0e4badea57573a
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: d9ccd5c6c91b1ab2166ff40a0fb2048e15927d3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762051"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723954"
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator Arabirimi
+
 Taşınabilir çalıştırılabilir (PE) görüntüleri ve raporlama doğrulama hatalarını doğrulamak için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -32,11 +33,12 @@ Taşınabilir çalıştırılabilir (PE) görüntüleri ve raporlama doğrulama 
 |[Validate Yöntemi](iclrvalidator-validate-method.md)|Belirtilen dosyadaki taşınabilir yürütülebilir dosyayı veya Microsoft ara dilini (MSIL) doğrular.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** IValidator. IDL, IValidator. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: e5acda4137d020d35d3144e9cc61e174024e165a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 740cd1b78b96c2fcaecf39a725973d738037f403
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826475"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723759"
 ---
 # <a name="exceptions-in-managed-threads"></a>Yönetilen iş parçacıklarında özel durumlar
 
@@ -35,6 +35,7 @@ Ortak dil çalışma zamanı, program akışını denetlemek için kullanılan, 
 > Yönetilen herhangi bir kodun özel durum işleyicisi yüklemesi şansı olmadan önce, çalışma zamanının işlenmeyen bir özel durum oluşturması mümkündür. Yönetilen kodun böyle bir özel durumu işleme şansı olmasa da, özel durumun doğal olarak devam etmesi için izin verilir.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Geliştirme sırasında Iş parçacığı sorunlarını gösterme  
+
  İş parçacıklarının sessizce başarısız olmasına izin verildiğinde, uygulamayı sonlandırmadan ciddi programlama sorunları saptanmayabilir. Bu, gelişmiş dönemler için çalışan hizmetler ve diğer uygulamalar için özel bir sorundur. İş parçacıkları başarısız olduğu sürece program durumu yavaş yavaş bozulur. Uygulama performansı düşebilir veya uygulama yanıt vermiyor olabilir.  
   
  İşletim sistemi programı sonlandırana kadar, iş parçacıklarında işlenmeyen özel durumların doğal olarak devam etmesini sağlamak, geliştirme ve test sırasında böyle sorunlar ortaya çıkarır. Program sonlandırışları üzerindeki hata raporları hata ayıklamayı destekler.  

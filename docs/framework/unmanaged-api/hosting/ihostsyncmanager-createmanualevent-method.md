@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68661fbd-09cf-46dc-890b-e694f8a3880a
 topic_type:
 - apiref
-ms.openlocfilehash: 334520df749ba428e6480188cd0655bb734725a6
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 67af8f125b2be39138bac5d51148215f3a3acf86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803307"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723876"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>IHostSyncManager::CreateManualEvent Yöntemi
+
 El ile sıfırlama olay nesnesi oluşturur.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT CreateManualEvent (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `bInitialState`  
  [in] `true` , nesne sinyalse, aksi durumda `false` .  
   
@@ -45,7 +47,7 @@ HRESULT CreateManualEvent (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`CreateManualEvent`başarıyla döndürüldü.|  
+|S_OK|`CreateManualEvent` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -54,14 +56,16 @@ HRESULT CreateManualEvent (
 |E_OUTOFMEMORY|İstenen olay nesnesini oluşturmak için yeterli bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `CreateManualEvent``IHostManualEvent` [IHostManualEvent:: Reset](ihostmanualevent-reset-method.md) yöntemine çağrı gerektiren, sinyal olmayan bir duruma ayarlamak için bir el ile sıfırlama olay nesnesi oluşturur. `CreateManualEvent``CreateEvent`parametresi için belirtilen bir değere sahip Win32 işlevini yansıtır `true` `bManualReset` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

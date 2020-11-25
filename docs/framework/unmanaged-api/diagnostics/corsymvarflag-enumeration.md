@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: d41e048b67d4bc7159f6dd5266457651f1658290
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ed08d9f818f6fc180dbd655243488bf8a527ae11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420597"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725293"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag Numaralandırması
+
 Bir değişkenin derleyici tarafından oluşturulup oluşturulmayacağını gösterir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorSymVarFlag
@@ -40,8 +41,9 @@ typedef enum CorSymVarFlag
 |`VAR_IS_COMP_GEN`|Verilen değişkenin derleyicinin ürettiği olduğunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Sabit Listeleri](diagnostics-symbol-store-enumerations.md)
+- [Tanılama Sembol Deposu Numaralandırmaları](diagnostics-symbol-store-enumerations.md)

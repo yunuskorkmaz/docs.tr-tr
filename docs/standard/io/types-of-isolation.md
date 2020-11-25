@@ -17,12 +17,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: ce6afc6438060b88e8740eab24ace960f3b78fa3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e2ba53a285649f8081c4836661ad3d70739aa64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830538"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725332"
 ---
 # <a name="types-of-isolation"></a>Yalıtım türleri
 
@@ -54,7 +54,9 @@ Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kıs�
 > Yalıtılmış depolama, Windows 8. x Mağazası uygulamaları için kullanılamaz. Bunun yerine, `Windows.Storage` yerel verileri ve dosyaları depolamak için WINDOWS çalışma zamanı API 'sinde bulunan ad alanlarında uygulama veri sınıflarını kullanın. Daha fazla bilgi için bkz. Windows Geliştirme Merkezi 'nde [uygulama verileri](/previous-versions/windows/apps/hh464917(v=win.10)) .  
   
 <a name="UserAssembly"></a>
+
 ## <a name="isolation-by-user-and-assembly"></a>Kullanıcı ve Derlemeye Göre Yalıtım  
+
  Veri deposunu kullanan derlemeye herhangi bir uygulamanın etki alanından erişilebilir olması gerektiğinde, Kullanıcı ve derlemeye göre yalıtım uygundur. Genellikle, bu durumda, yalıtılmış depolama, birden fazla uygulama için geçerli olan ve kullanıcının adı ya da lisans bilgileri gibi belirli bir uygulamaya bağlı olmayan verileri depolamak için kullanılır. Kullanıcı ve derlemeye göre yalıtılmış depolamaya erişmek için, kodun uygulamalar arasında aktarılmasını sağlamak üzere koda güvenilmesi gerekir. Genellikle, Kullanıcı ve derlemeye göre yalıtım için Internet 'te değil, intranet üzerinde izin verilir. Statik yöntemi çağırmak <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> ve bir kullanıcıya geçirmek, bir derlemeyi <xref:System.IO.IsolatedStorage.IsolatedStorageScope> Bu tür yalıtımına sahip bir depolama döndürür.  
   
  Aşağıdaki kod örneği, Kullanıcı ve derleme tarafından yalıtılmış bir depo alır. Depoya nesne üzerinden erişilebilir `isoFile` .  
@@ -72,7 +74,9 @@ Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kıs�
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
 <a name="UserDomainAssembly"></a>
+
 ## <a name="isolation-by-user-domain-and-assembly"></a>Kullanıcı, Etki Alanı ve Derlemeye Göre Yalıtım  
+
  Uygulamanız özel veri deposu gerektiren bir üçüncü taraf derleme kullanıyorsa, özel verileri depolamak için yalıtılmış depolamayı kullanabilirsiniz. Kullanıcı, etki alanı ve derlemeye göre yalıtım, yalnızca belirli bir derlemedeki kodun verilere erişmesini sağlar ve yalnızca derleme depoyu oluştururken çalışan uygulama tarafından ve yalnızca deponun oluşturulduğu Kullanıcı uygulamayı çalıştırdığında kullanılabilir. Kullanıcı, etki alanı ve derlemeye göre yalıtım, üçüncü taraf derlemenin diğer uygulamalara veri sızmasını önler. Yalıtılmış depolama kullanmak istediğinizi bildiğiniz ancak hangi tür yalıtımın kullanılacağı konusunda emin değilseniz, bu yalıtım türü varsayılan seçiminiz olmalıdır. Statik yöntemini çağırmak <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> <xref:System.IO.IsolatedStorage.IsolatedStorageFile> ve bir Kullanıcı, etki alanı ve derlemeye geçirmek <xref:System.IO.IsolatedStorage.IsolatedStorageScope> Bu tür yalıtımına sahip depolama döndürür.  
   
  Aşağıdaki kod örneği, Kullanıcı, etki alanı ve derleme tarafından yalıtılmış bir depoyu alır. Depoya nesne üzerinden erişilebilir `isoFile` .  
@@ -88,7 +92,9 @@ Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kıs�
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
 <a name="Roaming"></a>
+
 ## <a name="isolated-storage-and-roaming"></a>Ayrık Depolama ve Dolaşım  
+
  Gezici Kullanıcı profilleri, bir kullanıcının ağ üzerinde bir kimlik ayarlaması ve bu kimliği herhangi bir ağ bilgisayarında oturum açmak için, tüm kişiselleştirilmiş ayarları yerine getiren bir Windows özelliğidir. Yalıtılmış depolama kullanan bir derleme, kullanıcının yalıtılmış depolamanın gezici kullanıcı profili ile hareket etmesi gerektiğini belirtebilir. Dolaşım, Kullanıcı ve derlemeye göre yalıtım ile veya Kullanıcı, etki alanı ve derlemeye göre yalıtımla birlikte kullanılabilir. Dolaşım kapsamı kullanılmazsa, bir dolaşım Kullanıcı profili kullanılsa bile depolar dolaşımda olmaz.  
   
  Aşağıdaki kod örneği, Kullanıcı ve derleme tarafından yalıtılmış bir dolaşım deposu alır. Depoya nesne üzerinden erişilebilir `isoFile` .  

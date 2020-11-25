@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f02e763-73f7-42cb-a41c-f78499d9482c
 topic_type:
 - apiref
-ms.openlocfilehash: 15c843fe138be55a3480f46e0ef8b37bcb445ad0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4abcf9f4575b32dd125fd8a00783043900993c3e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497978"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724110"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize Yöntemi
+
 Belirtilen nesnenin boyutunu alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetObjectSize(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `objectId`  
  'ndaki Nesnenin KIMLIĞI.  
   
@@ -43,7 +45,7 @@ HRESULT GetObjectSize(
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
-> Bu yöntem artık kullanılmıyor. 64-bit platformlarda 4.000'DEN büyük nesneler için COR_E_OVERFLOW döndürür. Bunun yerine [ICorProfilerInfo4:: GetObjectSize2](icorprofilerinfo4-getobjectsize2-method.md) yöntemini kullanın.  
+> Bu yöntem artık kullanılmıyor. 64-bit platformlarda 4.000'DEN büyük nesneler için COR_E_OVERFLOW döndürür. Bunun yerine  [ICorProfilerInfo4:: GetObjectSize2](icorprofilerinfo4-getobjectsize2-method.md) yöntemini kullanın.  
   
  Aynı türdeki farklı nesneler genellikle aynı boyutta olur. Ancak, diziler veya dizeler gibi bazı türlerin her nesne için farklı boyutta bir boyutu olabilir.  
   
@@ -54,6 +56,7 @@ HRESULT GetObjectSize(
 - 64 bit Windows üzerinde hizalama her zaman 8 bayttır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

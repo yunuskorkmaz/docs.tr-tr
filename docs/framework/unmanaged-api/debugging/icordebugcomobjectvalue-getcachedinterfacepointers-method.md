@@ -13,17 +13,18 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-ms.openlocfilehash: fa22c17ed7d5bcd689f21d2d855d9be7a6a8e164
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: c3120a0dd859f581e6356fc260043cb83250ae9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892802"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724838"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers Metodu
+
 Geçerli çalışma zamanında çağrılabilir sarmalayıcı (RCW) üzerinde önbelleğe alınmış ham arabirim işaretçilerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetCachedInterfacePointers(  
@@ -34,21 +35,23 @@ HRESULT GetCachedInterfacePointers(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `bIInspectableOnly`  
- 'ndaki Yöntemin yalnızca, çalışma zamanı çağrılabilir sarmalayıcı (RCW) tarafından önbelleğe`IInspectable` alınan Windows çalışma zamanı arabirimleri (arabirimler) veya tüm com arabirimlerini döndürmeyeceğini belirten bir değer.  
+ 'ndaki Yöntemin yalnızca `IInspectable` , çalışma zamanı çağrılabilir sarmalayıcı (RCW) tarafından önbelleğe alınan Windows çalışma zamanı arabirimleri (arabirimler) veya tüm com arabirimlerini döndürmeyeceğini belirten bir değer.  
   
  `celt`  
  'ndaki Adresleri alınacak olan nesne sayısı.  
   
  `pceltFetched`  
- dışı Aslında ' de `CORDB_ADDRESS` `ptrs`döndürülen değer sayısına yönelik bir işaretçi.  
+ dışı `CORDB_ADDRESS` Aslında ' de döndürülen değer sayısına yönelik bir işaretçi `ptrs` .  
   
  `ptrs`  
- Önbelleğe alınmış arabirim nesnelerinin adreslerini içeren bir `CORDB_ADDRESS` değer dizisinin başlangıç adresine yönelik bir işaretçi.  
+ Önbelleğe alınmış arabirim nesnelerinin adreslerini içeren bir değer dizisinin başlangıç adresine yönelik bir işaretçi `CORDB_ADDRESS` .  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

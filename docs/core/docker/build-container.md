@@ -4,12 +4,12 @@ description: Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b6775c760ef3f5bf1c9519430b038f149c9cf30f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7605f847a76907f4f9d0a451ba69332d6d174615
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538507"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724734"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: bir .NET Core uygulamasını Kapsayıize edin
 
@@ -24,7 +24,7 @@ Bu öğreticide şunları yaptınız:
 > - Docker görüntüsü oluşturma
 > - Docker kapsayıcısı oluşturma ve çalıştırma
 
-Docker kapsayıcısının bir .NET Core uygulaması için görevleri oluşturup dağıtduklarını anlayacaksınız. *Docker platformu* , uygulamaları *Docker görüntüleri*olarak hızlı bir şekilde oluşturmak ve paketlemek için *Docker altyapısını* kullanır. Bu görüntüler, katmanlı bir kapsayıcıda dağıtılacak ve çalıştırılacak *Dockerfile* biçiminde yazılır.
+Docker kapsayıcısının bir .NET Core uygulaması için görevleri oluşturup dağıtduklarını anlayacaksınız. *Docker platformu* , uygulamaları *Docker görüntüleri* olarak hızlı bir şekilde oluşturmak ve paketlemek için *Docker altyapısını* kullanır. Bu görüntüler, katmanlı bir kapsayıcıda dağıtılacak ve çalıştırılacak *Dockerfile* biçiminde yazılır.
 
 > [!NOTE]
 > Bu öğretici ASP.NET Core uygulamalar için **değildir** . ASP.NET Core kullanıyorsanız, [bir ASP.NET Core uygulama](/aspnet/core/host-and-deploy/docker/building-net-docker-images) öğreticisini nasıl Kapsayıyoruz hakkında bilgi edinin.
@@ -40,7 +40,7 @@ Aşağıdaki önkoşulları yükler:
 
 ## <a name="create-net-core-app"></a>.NET Core uygulaması oluşturma
 
-Docker kapsayıcısının çalışacağı bir .NET Core uygulamasına ihtiyacınız vardır. Terminalinizi açın, henüz yapmadıysanız bir çalışma klasörü oluşturun ve bunu girin. Çalışma klasöründe, *uygulama*adlı bir alt dizinde yeni bir proje oluşturmak için aşağıdaki komutu çalıştırın:
+Docker kapsayıcısının çalışacağı bir .NET Core uygulamasına ihtiyacınız vardır. Terminalinizi açın, henüz yapmadıysanız bir çalışma klasörü oluşturun ve bunu girin. Çalışma klasöründe, *uygulama* adlı bir alt dizinde yeni bir proje oluşturmak için aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet new console -o App -n NetCore.Docker
@@ -182,13 +182,13 @@ NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.pdb  NetCore.Docker
 *. Csproj* Içeren dizinde *dockerfile* adlı bir dosya oluşturun ve bunu bir metin düzenleyicisinde açın. Bu öğretici, .NET Core çalışma zamanı görüntüsünü içeren ASP.NET Core çalışma zamanı görüntüsünü kullanır ve .NET Core konsol uygulamasına karşılık gelir.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:3.1
 ```
 
 > [!NOTE]
-> ASP.NET Core çalışma zamanı görüntüsü kasıtlı olarak burada kullanılır, ancak `mcr.microsoft.com/dotnet/core/runtime:3.1` görüntü kullanılmış olabilir.
+> ASP.NET Core çalışma zamanı görüntüsü kasıtlı olarak burada kullanılır, ancak `mcr.microsoft.com/dotnet/runtime:3.1` görüntü kullanılmış olabilir.
 
-`FROM`Anahtar sözcüğü tam bir Docker kapsayıcı görüntüsü adı gerektirir. Microsoft Container Registry (MCR, mcr.microsoft.com), genel olarak erişilebilen kapsayıcıları barındıran Docker Hub 'ının bir genel yöneticisdir. Segment, kapsayıcının `dotnet/core` `aspnet` kapsayıcı görüntüsü adı olduğu yerde kapsayıcı deposudur. Görüntü, `3.1` sürüm oluşturma için kullanılan ile etiketlenir. Bu nedenle, `mcr.microsoft.com/dotnet/core/aspnet:3.1` .NET Core 3,1 çalışma zamanı. SDK 'nizin hedeflediği çalışma zamanıyla eşleşen çalışma zamanı sürümünü çekdiğinizden emin olun. Örneğin, önceki bölümde oluşturulan uygulama .NET Core 3,1 SDK 'sını ve *Dockerfile* içinde başvurulan temel görüntüyü **3,1**ile etiketledi.
+`FROM`Anahtar sözcüğü tam bir Docker kapsayıcı görüntüsü adı gerektirir. Microsoft Container Registry (MCR, mcr.microsoft.com), genel olarak erişilebilen kapsayıcıları barındıran Docker Hub 'ının bir genel yöneticisdir. Segment, kapsayıcının `dotnet/core` `aspnet` kapsayıcı görüntüsü adı olduğu yerde kapsayıcı deposudur. Görüntü, `3.1` sürüm oluşturma için kullanılan ile etiketlenir. Bu nedenle, `mcr.microsoft.com/dotnet/aspnet:3.1` .NET Core 3,1 çalışma zamanı. SDK 'nizin hedeflediği çalışma zamanıyla eşleşen çalışma zamanı sürümünü çekdiğinizden emin olun. Örneğin, önceki bölümde oluşturulan uygulama .NET Core 3,1 SDK 'sını ve *Dockerfile* içinde başvurulan temel görüntüyü **3,1** ile etiketledi.
 
 *Dockerfile* dosyasını kaydedin. Çalışma klasörünün dizin yapısı aşağıdaki gibi görünmelidir. Daha derin düzey dosya ve klasörlerden bazıları, makalede yer kazanmak için atlandı:
 
@@ -217,16 +217,16 @@ Terminalinizden aşağıdaki komutu çalıştırın:
 docker build -t counter-image -f Dockerfile .
 ```
 
-Docker, *Dockerfile*dosyasındaki her satırı işleyecek. `.` `docker build` Komutunda Docker 'ın bir *dockerfile dosyasını*bulmak için geçerli klasörü kullanmasını söyler. Bu komut, görüntüyü oluşturur ve bu görüntüye işaret eden **Counter-Image** adlı bir yerel depo oluşturur. Bu komut tamamlandıktan sonra, `docker images` yüklenen görüntülerin listesini görmek için komutunu çalıştırın:
+Docker, *Dockerfile* dosyasındaki her satırı işleyecek. `.` `docker build` Komutunda Docker 'ın bir *dockerfile dosyasını* bulmak için geçerli klasörü kullanmasını söyler. Bu komut, görüntüyü oluşturur ve bu görüntüye işaret eden **Counter-Image** adlı bir yerel depo oluşturur. Bu komut tamamlandıktan sonra, `docker images` yüklenen görüntülerin listesini görmek için komutunu çalıştırın:
 
 ```console
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              e6780479db63        4 days ago          190MB
-mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/aspnet         3.1                 e6780479db63        4 days ago          190MB
 ```
 
-İki görüntünün aynı **görüntü kimliği** değerini paylaştığından emin olun. *Dockerfile* 'daki tek komut yeni görüntünün varolan bir görüntüye dayandırdığı için, her iki görüntü arasında değer aynıdır. *Dockerfile dosyasına*üç komut ekleyelim. Her komut, için **Sayaç-görüntü** deposu giriş noktalarını temsil eden son komutla yeni bir görüntü katmanı oluşturur.
+İki görüntünün aynı **görüntü kimliği** değerini paylaştığından emin olun. *Dockerfile* 'daki tek komut yeni görüntünün varolan bir görüntüye dayandırdığı için, her iki görüntü arasında değer aynıdır. *Dockerfile dosyasına* üç komut ekleyelim. Her komut, için **Sayaç-görüntü** deposu giriş noktalarını temsil eden son komutla yeni bir görüntü katmanı oluşturur.
 
 ```dockerfile
 COPY bin/Release/netcoreapp3.1/publish/ App/
@@ -236,7 +236,7 @@ ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 
 `COPY`Komut, Docker 'a bilgisayarınızdaki belirtilen klasörü kapsayıcıda bir klasöre kopyalamasını söyler. Bu örnekte, *Publish* klasörü kapsayıcıda *uygulama* adlı bir klasöre kopyalanır.
 
-`WORKDIR`Komut, kapsayıcının içindeki **geçerli dizini** *uygulama*olarak değiştirir.
+`WORKDIR`Komut, kapsayıcının içindeki **geçerli dizini** *uygulama* olarak değiştirir.
 
 Sonraki komut, `ENTRYPOINT` Docker öğesine kapsayıcıyı yürütülebilir olarak çalışacak şekilde yapılandırmasını söyler. Kapsayıcı başladığında, `ENTRYPOINT` komutu çalışır. Bu komut sona erdiğinde kapsayıcı otomatik olarak durur.
 
@@ -245,7 +245,7 @@ Terminalinizden `docker build -t counter-image -f Dockerfile .` komutunu çalı�
 ```console
 docker build -t counter-image -f Dockerfile .
 Sending build context to Docker daemon  1.117MB
-Step 1/4 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+Step 1/4 : FROM mcr.microsoft.com/dotnet/aspnet:3.1
  ---> e6780479db63
 Step 2/4 : COPY bin/Release/netcoreapp3.1/publish/ App/
  ---> d1732740eed2
@@ -263,12 +263,12 @@ Successfully tagged counter-image:latest
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              cd11c3df9b19        41 seconds ago      190MB
-mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/aspnet         3.1                 e6780479db63        4 days ago          190MB
 ```
 
-*Dockerfile* 'daki her komut bir katman oluşturdu ve BIR **görüntü kimliği**oluşturdu. Son **görüntü kimliği** (sizinki farklı olacak) **cd11c3df9b19** ve bir sonraki adımda bu görüntüye göre bir kapsayıcı oluşturacaksınız.
+*Dockerfile* 'daki her komut bir katman oluşturdu ve BIR **görüntü kimliği** oluşturdu. Son **görüntü kimliği** (sizinki farklı olacak) **cd11c3df9b19** ve bir sonraki adımda bu görüntüye göre bir kapsayıcı oluşturacaksınız.
 
-## <a name="create-a-container"></a>Bir kapsayıcı oluşturma
+## <a name="create-a-container"></a>Kapsayıcı oluşturma
 
 Artık uygulamanızı içeren bir görüntünüz olduğuna göre, bir kapsayıcı oluşturabilirsiniz. Bir kapsayıcıyı iki şekilde oluşturabilirsiniz. İlk olarak, durdurulan yeni bir kapsayıcı oluşturun.
 
@@ -470,7 +470,7 @@ Sonra, makinenizde artık istemediğiniz görüntüleri silin. *Dockerfile* dosy
 
 ```console
 docker rmi counter-image:latest
-docker rmi mcr.microsoft.com/dotnet/core/aspnet:3.1
+docker rmi mcr.microsoft.com/dotnet/aspnet:3.1
 ```
 
 `docker images`Yüklenen görüntülerin listesini görmek için komutunu kullanın.

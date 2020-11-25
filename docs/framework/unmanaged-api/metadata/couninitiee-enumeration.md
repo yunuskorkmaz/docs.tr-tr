@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-ms.openlocfilehash: 14942680a79c4d1fcc69092a4f752738db1fb0b0
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b0f8c7e6d2acf4d4c080cc147bf6d42bf13cb51b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008927"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723837"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE Numaralandırması
+
 Ortak dil çalışma zamanı başlatılırken [Counınitialeee](../hosting/couninitializeee-function.md) tarafından kullanılan sabitleri belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum tagCOUNINITEE  
@@ -42,11 +43,12 @@ typedef enum tagCOUNINITEE
 |`COUNINITEE_DLL`|Bir derlemeyi kaldırmak için başlatma modunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

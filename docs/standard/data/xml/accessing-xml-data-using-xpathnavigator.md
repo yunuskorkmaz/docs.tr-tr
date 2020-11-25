@@ -2,17 +2,19 @@
 title: XPathNavigator Kullanarak XML Verilerine Erişme
 ms.date: 03/30/2017
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-ms.openlocfilehash: a3911230598a282d66fa50bf1d82c4b4083a30e4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f87e2e12b7ebc740809dc8db902f2ece92e8f127
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821898"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725410"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verilerine Erişme
+
 <xref:System.Xml.XPath.XPathNavigator>Sınıfı düğümlerde gezinmek, XML verilerini ayıklamak ve bir veya nesnesinde kesin olarak BELIRLENMIŞ XML verilerine erişmek için yöntemler <xref:System.Xml.XPath.XPathDocument> sağlar <xref:System.Xml.XmlDocument> .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [XPathNavigator Kullanarak Düğüm Kümesinde Gezinme](node-set-navigation-using-xpathnavigator.md)  
  <xref:System.Xml.XPath.XPathNavigator>Bir veya nesnesindeki düğümlerde gezinmek için kullanılan sınıfın düğüm kümesi gezinti yöntemlerini açıklar <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> .  
   

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da4b1d6f2a7079ef33859fce29c9555ac06fcfc2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107979"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725657"
 ---
 # <a name="identity_attribute-structure"></a>IDENTITY_ATTRIBUTE Yapısı
+
 Bir [IDefinitionIdentity](idefinitionidentity-interface.md) örneği hakkında meta veri özniteliği bilgilerini içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _IDENTITY_ATTRIBUTE {  
@@ -43,16 +44,18 @@ typedef struct _IDENTITY_ATTRIBUTE {
 |`pszValue`|Özniteliğin değerini içeren, null ile sonlandırılmış bir karakter dizesinin işaretçisi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IDENTITY_ATTRIBUTE` yapısı, null ile sonlandırılmış karakter dizelerine yönelik üç işaretçi içerir. Bu üç dize bir özniteliği tanımlıyor.  
+
+ `IDENTITY_ATTRIBUTE`Yapı, null ile sonlandırılmış karakter dizelerine yönelik üç işaretçi içerir. Bu üç dize bir özniteliği tanımlıyor.  
   
- Bir `IDENTITY_ATTRIBUTE` yapısının örneği, bir [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) yapısının örneğiyle ilişkilendirilir. `IDENTITY_ATTRIBUTE` yapısı gerçek dizeleri içerir ve karşılık gelen `IDENTITY_ATTRIBUTE_BLOB` yapısı `IDENTITY_ATTRIBUTE` yapısında listelenen üç dizeye olan uzaklıkları listeler.  
+ Bir yapının örneği bir `IDENTITY_ATTRIBUTE` [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) yapısının örneğiyle ilişkilendirilir. `IDENTITY_ATTRIBUTE`Yapı gerçek dizeleri içerir ve ilgili `IDENTITY_ATTRIBUTE_BLOB` Yapı, yapıda listelenen üç dizenin farklarını listeler `IDENTITY_ATTRIBUTE` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Yalıtım. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

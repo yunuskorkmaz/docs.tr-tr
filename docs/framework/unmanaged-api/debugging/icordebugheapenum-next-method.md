@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: 5d0b231b4014e60a9e8778c6b9d6ed7758b2d8c5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 320b3ca55a60ec7751c88a246ab6ee90b6b6c4cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208479"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724357"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next Yöntemi
+
 Yönetilen yığında nesneler hakkında bilgi içeren [cor_heapobject](cor-heapobject-structure.md) örneklerinin belirtilen sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Next(  
@@ -35,6 +36,7 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  celt  
  'ndaki Alınacak nesne sayısı.  
   
@@ -45,9 +47,11 @@ HRESULT Next(
  dışı Aslında ' de döndürülen [cor_heapobject](cor-heapobject-structure.md) nesnelerinin sayısına yönelik bir işaretçi `objects` . Bu değer 1 ise `null` olabilir `celt` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `COR_HEAPOBJECT.type`Alan, iç içe geçmiş bir başvuru SAYıLı com arabiriminin tanımlayıcısıdır. Bu başvuru, çağıran tarafından yayınlanmalıdır `ICorDebugHeapEnum::Next` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: be31b0232889227fa5d4990c9481305eea343f11
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bdba09f5709cf99bc0d076e3875a914cc7c5a11e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826488"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723772"
 ---
 # <a name="destroying-threads"></a>İş parçacıklarını yok etme
 
@@ -30,6 +30,7 @@ ms.locfileid: "94826488"
  Yöntemine yapılan bir çağrıda bekleyen iş parçacıkları, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> çağıran diğer iş parçacıkları tarafından kesintiye uğratılmasını sağlayabilir <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> .  
   
 ## <a name="handling-threadabortexception"></a>Threadadbortexception işleme  
+
  İş parçacığınızdan, <xref:System.Threading.Thread.Abort%2A> kendi kodunuzun çağrılması veya iş parçacığının çalıştığı bir uygulama etki alanının kaldırılması sonucu olarak (iş <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> parçacıklarını sonlandırmak için kullanır), iş parçacığınızdan <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> , <xref:System.Threading.ThreadAbortException> `finally` aşağıdaki kodda gösterildiği gibi, bir yan tümcede herhangi bir son işlem gerçekleştirmesi gerekir.  
   
 ```vb  

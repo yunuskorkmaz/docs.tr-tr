@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 92fb912cdd2030f87bee1109b9944e1fa857dddd
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ab1d4d436ce833af94e7eaba35943e499a047a05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819467"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725072"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>İş parçacığı güvenli koleksiyonu ne zaman kullanılır?
 
@@ -33,6 +33,7 @@ ms.locfileid: "94819467"
  Performans artışı, bilgisayardaki çekirdek sayısıyla orantılıdır. Ölçeklendirilen bir algoritma, iki çekirdekden daha fazla sekiz çekirdekli daha hızlı gerçekleştirilir.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue (T) ve Queue (T) karşılaştırması  
+
  Saf üretici-tüketici senaryolarında her öğe için işlem zamanının çok küçük (birkaç yönerge) olduğu durumlarda, <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> bir <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> dış kilidine sahip olan bir üzerinde ila büyüklükteki performans avantajları sunabilir. Bu senaryoda, <xref:System.Collections.Concurrent.ConcurrentQueue%601> ayrılmış bir iş parçacığının kuyruğa alınması ve ayrılmış bir iş parçacığının de de sıraya alınması durumunda en iyi şekilde çalışır. Bu kuralı zorunlu kılmaz, <xref:System.Collections.Generic.Queue%601> <xref:System.Collections.Concurrent.ConcurrentQueue%601> birden fazla çekirdeğe sahip bilgisayarlardan daha hızlı bir şekilde daha hızlı işlem yapabilirsiniz.  
   
  İşlem süresi 500 FLOPS (kayan nokta işlemleri) veya daha fazla olduğunda, iki iş parçacığı kuralı için geçerli değildir <xref:System.Collections.Concurrent.ConcurrentQueue%601> , daha sonra çok iyi ölçeklenebilirlik vardır. <xref:System.Collections.Generic.Queue%601> Bu senaryoda iyi ölçeklenmez.  
@@ -40,6 +41,7 @@ ms.locfileid: "94819467"
  Karma üretici-tüketici senaryolarında, işleme süresi çok küçük olduğunda, bir <xref:System.Collections.Generic.Queue%601> dış kilit ölçeği bundan daha iyidir <xref:System.Collections.Concurrent.ConcurrentQueue%601> . Ancak, işleme süresi 500 kat veya daha uzun bir süre içinde olduğunda, <xref:System.Collections.Concurrent.ConcurrentQueue%601> daha sonra ölçeklendirir.  
   
 ## <a name="concurrentstack-vs-stack"></a>ConcurrentStack ile yığın karşılaştırması  
+
  Saf üretici-tüketici senaryolarında, işlem süresi çok küçük olduğunda <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> ve bir <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType> dış kilit varsa, büyük olasılıkla bir ayrılmış gönderme iş parçacığı ve ayrılmış bir kayan iş parçacığı ile aynı şekilde çalışır. Ancak, iş parçacıklarının sayısı arttıkça her iki tür de daha fazla çekişme nedeniyle yavaşlar ve <xref:System.Collections.Generic.Stack%601> bundan daha iyi çalışabilir <xref:System.Collections.Concurrent.ConcurrentStack%601> . İşlem süresi 500 kat veya daha uzun bir süre içinde olduğunda her iki tür de aynı fiyata göre ölçeklendirilir.  
   
  Karma üretici-tüketici senaryolarında <xref:System.Collections.Concurrent.ConcurrentStack%601> hem küçük hem de büyük iş yükleri için daha hızlıdır.  
@@ -47,6 +49,7 @@ ms.locfileid: "94819467"
  Ve kullanımı, <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> erişim sürelerini önemli ölçüde hızlandırabilir.  
   
 ## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary ve sözlük karşılaştırması  
+
  Genel olarak, <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> birden çok iş parçacığından aynı anda anahtar veya değer eklediğiniz ve güncelleştirdiğiniz herhangi bir senaryoda bir kullanın. Sık sık güncelleştirmeler ve görece birkaç okuma içeren senaryolarda, genellikle daha fazla <xref:System.Collections.Concurrent.ConcurrentDictionary%602> avantaj sunar. Birçok okuma ve birçok güncelleştirme içeren senaryolarda, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> genellikle herhangi bir sayıda çekirdeği olan bilgisayarlarda önemli ölçüde daha hızlıdır.  
   
  Sık sık güncelleştirmeler içeren senaryolarda, içindeki eşzamanlılık derecesini artırabilir <xref:System.Collections.Concurrent.ConcurrentDictionary%602> ve daha fazla çekirdeğe sahip bilgisayarlarda performansın artmasının yapılıp yapılmayacağını görmek için ölçebilir. Eşzamanlılık düzeyini değiştirirseniz, genel işlemlerden mümkün olduğunca kaçının.  
@@ -54,11 +57,13 @@ ms.locfileid: "94819467"
  Yalnızca anahtar veya değerleri okuyorsanız, <xref:System.Collections.Generic.Dictionary%602> Sözlük hiçbir iş parçacığı tarafından değiştirilmemişse hiçbir eşitleme gerekmediğinden, daha hızlıdır.  
   
 ## <a name="concurrentbag"></a>ConcurrentBag  
+
  Saf üretici-tüketici senaryolarında, <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> muhtemelen diğer eşzamanlı koleksiyon türlerinden daha yavaş çalışacak.  
   
  Karma üretici-tüketici senaryolarında, <xref:System.Collections.Concurrent.ConcurrentBag%601> genellikle büyük ve küçük iş yükleri için diğer eş zamanlı koleksiyon türünden daha hızlı ve daha ölçeklenebilir olur.  
   
 ## <a name="blockingcollection"></a>BlockingCollection  
+
  Sınırlama ve engelleme semantiği gerektiğinde, <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> büyük olasılıkla herhangi bir özel uygulamadan daha hızlı gerçekleşir. Ayrıca zengin iptal, numaralandırma ve özel durum işlemeyi da destekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

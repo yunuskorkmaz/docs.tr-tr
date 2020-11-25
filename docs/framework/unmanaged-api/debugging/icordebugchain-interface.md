@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-ms.openlocfilehash: 6ae0fec0f8de2bbe3862f9f70ed9cf3d32af34c4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a0285970a8a42c078aa663579e1d5998d0d1c037
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894209"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724461"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain Arabirimi
 
@@ -43,12 +43,14 @@ Fiziksel veya mantıksal bir çağrı yığınının bir kesimini temsil eder.
 |[IsManaged Yöntemi](icordebugchain-ismanaged-method.md)|Bu zincirin yönetilen kodu çalıştırıp çalıştırmadığını gösteren bir değer alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir zincirdeki yığın çerçeveleri bitişik yığın alanı kaplar ve aynı iş parçacığını ve bağlamı paylaşır. Bir zincir, yönetilen ya da yönetilmeyen kod zincirlerini temsil edebilir. Boş `ICorDebugChain` bir örnek, yönetilmeyen bir kod zincirini temsil eder.  
+
+ Bir zincirdeki yığın çerçeveleri bitişik yığın alanı kaplar ve aynı iş parçacığını ve bağlamı paylaşır. Bir zincir, yönetilen ya da yönetilmeyen kod zincirlerini temsil edebilir. Boş bir `ICorDebugChain` örnek, yönetilmeyen bir kod zincirini temsil eder.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

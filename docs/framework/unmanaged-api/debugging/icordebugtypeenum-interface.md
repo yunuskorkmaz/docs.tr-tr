@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 159ccfcf-b37c-4ad9-8e0d-a9a443262472
 topic_type:
 - apiref
-ms.openlocfilehash: c647bc7a4a1b8a25a225482ee46db4cc1837b501
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 620dbace00afe004454457b2d502461b80359add
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396656"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725683"
 ---
 # <a name="icordebugtypeenum-interface"></a>ICorDebugTypeEnum Arabirimi
+
 "Icordebugger Genum" yöntemlerini uygular ve "ICorDebugType" dizilerini numaralandırır.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -36,6 +37,7 @@ ms.locfileid: "83396656"
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

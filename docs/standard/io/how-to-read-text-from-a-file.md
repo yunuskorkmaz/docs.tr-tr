@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48b862ff77bf4ace48a5481fe9bedcf354b5654b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823374"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725345"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Nasıl yapılır: dosyadan metin okuma
 
@@ -27,6 +27,7 @@ Aşağıdaki örnek, masaüstü uygulamaları için .NET kullanılarak bir metin
 > Bu kod örnekleri, Evrensel Windows (UWP) uygulamalarına uygulanmaz çünkü Windows Çalışma Zamanı dosyalara okuma ve yazma için farklı akış türleri sağlar. UWP uygulamasında bir dosyadaki metnin nasıl okunacağını gösteren bir örnek için bkz. [hızlı başlangıç: dosya okuma ve yazma](/previous-versions/windows/apps/hh758325(v=win.10)). .NET Framework akışlar ve Windows Çalışma Zamanı akışları arasında nasıl dönüştürme yapılacağını gösteren örnekler için bkz. [nasıl yapılır: .NET Framework akışlar ve Windows çalışma zamanı akışları arasında dönüştürme](how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example-synchronous-read-in-a-console-app"></a>Örnek: konsol uygulamasında zaman uyumlu okuma  
+
 Aşağıdaki örnek, bir konsol uygulaması içinde zaman uyumlu okuma işlemini gösterir. Bu örnek, bir akış okuyucusu kullanarak metin dosyasını açar, içeriği bir dizeye kopyalar ve dizeyi konsola verir.  
   
 > [!IMPORTANT]
@@ -36,6 +37,7 @@ Aşağıdaki örnek, bir konsol uygulaması içinde zaman uyumlu okuma işlemini
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/sync-console/Program.vb":::
   
 ## <a name="example-asynchronous-read-in-a-wpf-app"></a>Örnek: WPF uygulamasında zaman uyumsuz okuma
+
  Aşağıdaki örnek, bir Windows Presentation Foundation (WPF) uygulamasında zaman uyumsuz okuma işlemini gösterir.  
   
 > [!IMPORTANT]

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: 727cd82226b9a59c4879ffea5e87f93dd5fe38c9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8f44247ca7904a40f5ebc092d95c2e08b6048438
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504114"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725579"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure Yöntemi
+
 Belirtilen hata oluştuğunda ortak dil çalışma zamanının (CLR) yapması gereken ilke eylemini belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT SetActionOnFailure (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `failure`  
  'ndaki İşlem gerçekleştirilecek hata türünü belirten [EClrFailure](eclrfailure-enumeration.md) değerlerinden biri.  
   
@@ -43,9 +45,9 @@ HRESULT SetActionOnFailure (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnFailure`başarıyla döndürüldü.|  
+|S_OK|`SetActionOnFailure` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -54,33 +56,35 @@ HRESULT SetActionOnFailure (
 |E_INVALIDARG|Belirtilen işlem için bir ilke eylemi ayarlanamaz veya işlem için geçersiz bir ilke eylemi belirtildi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, CLR bellek gibi bir kaynağı ayıramadığında bir özel durum oluşturur. `SetActionOnFailure`konağın hata sonrasında gerçekleştirilecek ilke eylemini belirterek bu davranışı geçersiz kılmasına izin verir. Aşağıdaki tabloda, desteklenen [EClrFailure](eclrfailure-enumeration.md) ve [EPolicyAction](epolicyaction-enumeration.md) değerlerinin birleşimleri gösterilmektedir. (FAIL_ ön eki [EClrFailure](eclrfailure-enumeration.md) değerlerinden çıkarılır.)  
+
+ Varsayılan olarak, CLR bellek gibi bir kaynağı ayıramadığında bir özel durum oluşturur. `SetActionOnFailure` konağın hata sonrasında gerçekleştirilecek ilke eylemini belirterek bu davranışı geçersiz kılmasına izin verir. Aşağıdaki tabloda, desteklenen [EClrFailure](eclrfailure-enumeration.md) ve [EPolicyAction](epolicyaction-enumeration.md) değerlerinin birleşimleri gösterilmektedir. (FAIL_ ön eki [EClrFailure](eclrfailure-enumeration.md) değerlerinden çıkarılır.)  
   
 ||CriticalHandle dışı kaynak|Kritikkaynak|FatalRuntime|OrphanedLock|StackOverflow|Accessihlaihlaline|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
-|`eNoAction`|X|X||||Yok||  
-|eThrowException|X|X||||Yok||  
-|`eAbortThread`|X|X||||Yok|X|  
-|`eRudeAbortThread`|X|X||||Yok|X|  
-|`eUnloadAppDomain`|X|X||X||Yok|X|  
-|`eRudeUnloadAppDomain`|X|X||X|X|Yok|X|  
-|`eExitProcess`|X|X||X|X|Yok|X|  
-|eFastExitProcess|X|X||X|X|Yok||  
-|`eRudeExitProcess`|X|X|X|X|X|Yok||  
-|`eDisableRuntime`|X|X|X|X|X|Yok||  
+|`eNoAction`|X|X||||YOK||  
+|eThrowException|X|X||||YOK||  
+|`eAbortThread`|X|X||||YOK|X|  
+|`eRudeAbortThread`|X|X||||YOK|X|  
+|`eUnloadAppDomain`|X|X||X||YOK|X|  
+|`eRudeUnloadAppDomain`|X|X||X|X|YOK|X|  
+|`eExitProcess`|X|X||X|X|YOK|X|  
+|eFastExitProcess|X|X||X|X|YOK||  
+|`eRudeExitProcess`|X|X|X|X|X|YOK||  
+|`eDisableRuntime`|X|X|X|X|X|YOK||  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [EClrFailure Sabit Listesi](eclrfailure-enumeration.md)
-- [EPolicyAction Sabit Listesi](epolicyaction-enumeration.md)
+- [EClrFailure Numaralandırması](eclrfailure-enumeration.md)
+- [EPolicyAction Numaralandırması](epolicyaction-enumeration.md)
 - [ICLRControl Arabirimi](iclrcontrol-interface.md)
 - [ICLRPolicyManager Arabirimi](iclrpolicymanager-interface.md)

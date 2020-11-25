@@ -6,20 +6,23 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: bb011a8b81d9808c7517ebc2517529af7c4b975a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 177c52ea7217821735250b297974ac0ebaa1eb2e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819377"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725384"
 ---
 # <a name="building-xml-schemas"></a>XML Şemaları Derleme
+
 Ad alanındaki sınıflar, <xref:System.Xml.Schema?displayProperty=nameWithType> World Wide Web Konsorsiyumu (W3C) XML şeması önerisi içinde tanımlanan yapılara eşlenir ve XML şemaları bellek içinde oluşturmak için kullanılabilir.  
   
 ## <a name="building-an-xml-schema"></a>XML şeması oluşturma  
+
  Aşağıdaki kod örneklerinde, SOM API 'SI, bellek içi bir müşteri XML şeması oluşturmak için kullanılır.  
   
 ### <a name="creating-element-and-attributes"></a>Öğe ve öznitelikler oluşturma  
+
  Kod örnekleri, aşağıdan yukarıya ait müşteri şemasını oluşturur, alt öğeleri, öznitelikleri ve önce karşılık gelen türlerini ve ardından üst düzey öğeleri oluşturur.  
   
  Aşağıdaki kod örneğinde, `FirstName` ve `LastName` öğelerinin yanı sıra `CustomerId` Müşteri ŞEMASıNıN özniteliği de <xref:System.Xml.Schema.XmlSchemaElement> <xref:System.Xml.Schema.XmlSchemaAttribute> som 'un ve sınıfları kullanılarak oluşturulur. <xref:System.Xml.Schema.XmlSchemaElement.Name%2A> <xref:System.Xml.Schema.XmlSchemaElement> <xref:System.Xml.Schema.XmlSchemaAttribute> Bir XML şeması içindeki ve öğelerinin "Name" özniteliğine karşılık gelen ve sınıflarının özelliklerinden ayrı `<xs:element />` `<xs:attribute />` olarak, şemanın (,, vb.) izin verdiği tüm diğer özniteliklerin `defaultValue` `fixedValue` `form` ve sınıflarında karşılık gelen özellikleri vardır <xref:System.Xml.Schema.XmlSchemaElement> <xref:System.Xml.Schema.XmlSchemaAttribute> .  
@@ -29,6 +32,7 @@ Ad alanındaki sınıflar, <xref:System.Xml.Schema?displayProperty=nameWithType>
  [!code-vb[XmlSchemaCreateExample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#2)]  
   
 ### <a name="creating-schema-types"></a>Şema türleri oluşturma  
+
  Öğelerin ve özniteliklerin içeriği türlerine göre tanımlanır. Türleri yerleşik şema türlerinden biri olan öğeler ve öznitelikler oluşturmak için, <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> <xref:System.Xml.Schema.XmlSchemaElement> veya sınıflarının özelliği, <xref:System.Xml.Schema.XmlSchemaAttribute> sınıfı kullanılarak yerleşik türün karşılık gelen nitelenmiş adı ile ayarlanır <xref:System.Xml.XmlQualifiedName> . Öğeler ve öznitelikler için Kullanıcı tanımlı bir tür oluşturmak için veya sınıfı kullanılarak yeni bir basit veya karmaşık tür oluşturulur <xref:System.Xml.Schema.XmlSchemaSimpleType> <xref:System.Xml.Schema.XmlSchemaComplexType> .  
   
 > [!NOTE]
@@ -46,6 +50,7 @@ Ad alanındaki sınıflar, <xref:System.Xml.Schema?displayProperty=nameWithType>
  [!code-vb[XmlSchemaCreateExample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#3)]  
   
 ### <a name="creating-and-compiling-schemas"></a>Şemaları oluşturma ve derleme  
+
  Bu noktada, alt öğeler ve öznitelikler, karşılık gelen türleri ve en üst düzey `Customer` öğe som API 'si kullanılarak bellek içinde oluşturulmuştur. Aşağıdaki kod örneğinde, şema öğesi sınıfı kullanılarak oluşturulur <xref:System.Xml.Schema.XmlSchema> , en üst düzey öğeler ve türler özelliği kullanılarak buna eklenir <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> ve tam şema sınıfı kullanılarak derlenir <xref:System.Xml.Schema.XmlSchemaSet> ve konsola yazılır.  
   
  [!code-cpp[XmlSchemaCreateExample#4](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#4)]

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-ms.openlocfilehash: c9375854b45432eafb6cc706a1a62f5424e0fee8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3ac1b3606131f534195df9b6b59bf72b1bff27fb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210494"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724539"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch Yöntemi
+
 Belirtilen günlük anahtarının önem derecesini ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ModifyLogSwitch(  
@@ -34,6 +35,7 @@ HRESULT ModifyLogSwitch(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pLogSwitchName`  
  'ndaki Günlük anahtarının adını belirten bir dize işaretçisi.  
   
@@ -41,9 +43,11 @@ HRESULT ModifyLogSwitch(
  'ndaki Belirtilen günlük anahtarı için ayarlanacak önem düzeyi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem yalnızca [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) geri çağırma işlemi gerçekleştirildikten sonra geçerlidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: c9e403dc8cbb75a1e93c426a9e0b3a2083f1f10e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5b4052485a6d420eb83578d135ce51f8a918aab0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210468"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724526"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext Yöntemi
+
 Bu işlemdeki verilen iş parçacığının bağlamını ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetThreadContext(  
@@ -36,11 +37,12 @@ HRESULT SetThreadContext(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `threadID`  
  'ndaki Bağlamını ayarlanacak iş parçacığının KIMLIĞI.  
   
  `contextSize`  
- 'ndaki `context`Dizinin boyutu.  
+ 'ndaki `context` Dizinin boyutu.  
   
  `context`  
  'ndaki İş parçacığının bağlamını tanımlayan bir bayt dizisi.  
@@ -48,6 +50,7 @@ HRESULT SetThreadContext(
  Bağlam, iş parçacığının yürütüldüğü işlemcinin mimarisini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `SetThreadContext`İş parçacığı gerçekten, bağlamı geçici olarak değiştirilen bir "ele geçirilmiş" durumda olabileceğinden, hata ayıklayıcı Win32 işlevi yerine bu yöntemi çağırmalıdır. Bu yöntem, yalnızca bir iş parçacığı yerel kodda olduğunda kullanılmalıdır. Yönetilen koddaki iş parçacıkları için [ICorDebugRegisterSet](icordebugregisterset-interface.md) kullanın. Bant dışı (OOB) hata ayıklama olayı sırasında bir iş parçacığının bağlamını hiçbir şekilde değiştirmeniz gerekmez.  
   
  Geçirilen veriler, geçerli platform için bir bağlam yapısı olmalıdır.  
@@ -55,6 +58,7 @@ HRESULT SetThreadContext(
  Yanlış kullanılırsa, bu yöntem çalışma zamanını bozabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

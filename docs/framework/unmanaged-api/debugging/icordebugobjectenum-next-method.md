@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-ms.openlocfilehash: 70514464f27d6123a4de1d5800ed016a39541287
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8e188f304908a8029a57bb059046205c35346f3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207550"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724695"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next Yöntemi
+
 Geçerli konumdan başlayarak Numaralandırmadaki belirtilen nesne sayısının göreli sanal adreslerini (RVA) alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Next (  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `celt`  
  'ndaki Alınacak nesne sayısı.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  dışı Gerçekten döndürülen nesne sayısına yönelik işaretçi. Bu değer bir ise null olabilir `celt` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

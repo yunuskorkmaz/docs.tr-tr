@@ -14,20 +14,21 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 8af71314cf8a24c710d3b8980c082daaf9186715
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d5d19fb3fb7c727227827dacbaac2c910ac8b3c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501878"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725228"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes Numaralandırması
+
 Sembol okuyucu ararken kullanılacak ilkeyi belirtir. Bu sabitler, [ISymUnmanagedBinder2:: GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md) ve [ISymUnmanagedBinder3:: GetReaderFromCallback](isymunmanagedbinder3-getreaderfromcallback-method.md) yöntemleri tarafından kullanılır.  
   
 > [!IMPORTANT]
 > Güvenilmeyen bir kaynaktan program veritabanı (PDB) dosyasını açmak için bir güvenlik riskidir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorSymSearchPolicyAttributes  
@@ -41,7 +42,7 @@ typedef enum CorSymSearchPolicyAttributes
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`AllowRegistryAccess`|Sembol arama yolları için kayıt defterini sorgular.|  
 |`AllowSymbolServerAccess`|Bir sembol sunucusuna erişir.|  
@@ -49,8 +50,9 @@ typedef enum CorSymSearchPolicyAttributes
 |`AllowReferencePathAccess`|PDB 'yi. exe dosyasının olduğu yerde arar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Sabit Listeleri](diagnostics-symbol-store-enumerations.md)
+- [Tanılama Sembol Deposu Numaralandırmaları](diagnostics-symbol-store-enumerations.md)

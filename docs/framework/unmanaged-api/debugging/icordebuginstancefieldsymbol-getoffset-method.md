@@ -2,17 +2,18 @@
 title: 'Icordebugınstancefieldsymbol:: GetOffset Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 7e470150-2b92-4425-989c-315f48964fd2
-ms.openlocfilehash: 7d553c1a446e06f34c20da18c0edfe6773cfb597
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2d73de46bbb1023f20dd9023076630611c74be5d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209987"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724929"
 ---
 # <a name="icordebuginstancefieldsymbolgetoffset-method"></a>Icordebugınstancefieldsymbol:: GetOffset Yöntemi
+
 Üst sınıfındaki bu örnek alanının bayt cinsinden konumunu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetOffset(  
@@ -21,6 +22,7 @@ HRESULT GetOffset(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pcbOffset`  
  Bu örnek alanın üst sınıfında kaydırılacağı bayt sayısına yönelik bir işaretçi.  
   
@@ -30,6 +32,7 @@ HRESULT GetOffset(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

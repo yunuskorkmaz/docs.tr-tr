@@ -2,17 +2,18 @@
 title: 'ICorDebugVariableSymbol:: GetValue yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-ms.openlocfilehash: f217f7226d53a27363f66eb90a340fd3604a0217
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 0a57b1a31e1ef4b0db317012b25bc65ecbbaf011
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396514"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725969"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol:: GetValue yöntemi
+
 Bir değişkenin değerini bir bayt dizisi olarak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetValue(  
@@ -26,6 +27,7 @@ HRESULT GetValue(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `offset`  
  'ndaki Değerin okunacağı değişkenin başlangıç boşluğu. Bu parametre, bir nesnedeki üye alanlarını okurken kullanılır.  
   
@@ -50,6 +52,7 @@ HRESULT GetValue(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

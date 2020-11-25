@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-ms.openlocfilehash: 5991b0abaedabe2337cd754c7bd19f96c5e9b685
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f71d8956e8706cdc71b94b6e6e2e8210e5b9161e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420623"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725241"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind Numaralandırması
+
 Bellek adresi türünü gösterir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorSymAddrKind  
@@ -58,8 +59,9 @@ typedef enum CorSymAddrKind
 |`ADDR_NATIVE_ISECTOFFSET`|İlk adresin bölüm olduğunu ve ikinci adresin bir konum olduğunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Sabit Listeleri](diagnostics-symbol-store-enumerations.md)
+- [Tanılama Sembol Deposu Numaralandırmaları](diagnostics-symbol-store-enumerations.md)

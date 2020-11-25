@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 937de6a0-6fbf-4ddc-80ea-a6217b73e62b
 topic_type:
 - apiref
-ms.openlocfilehash: 603ab20b57dc4ba736b0342797d0be649a5bebc4
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2a5a618491bf2c624669728d97a690cca315bff8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207490"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724682"
 ---
 # <a name="icordebugobjectvalue-interface"></a>ICorDebugObjectValue Arabirimi
 
@@ -38,12 +38,14 @@ Bir nesnesi içeren bir değeri temsil eden "ICorDebugValue" öğesinin bir alt 
 |[SetFromManagedCopy Yöntemi](icordebugobjectvalue-setfrommanagedcopy-method.md)|Kullanımdan kalktı. Bu yöntemi çağırmayın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ICorDebugObjectValue`Hata ayıklamakta olan işlem devam edene kadar geçerli kalır.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

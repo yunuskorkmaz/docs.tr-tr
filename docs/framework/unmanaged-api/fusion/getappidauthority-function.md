@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9f968dad-0d09-47fb-bebc-94c39a0d16ad
 topic_type:
 - apiref
-ms.openlocfilehash: 22a6af61251942f068676daaee2bdfa868e32a97
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e731ac1c652b8b4505073a3a10463ae0ce21ac0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134551"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724500"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority İşlevi
+
 Uygulama kimlikleri ve başvuruları için anahtarları yöneten bir [ıappidaduthority](iappidauthority-interface.md) örneğine yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAppIdAuthority (  
@@ -34,15 +35,17 @@ HRESULT GetAppIdAuthority (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppIAppIdAuthority`  
- dışı Döndürülen `IAppIdAuthority` işaretçisi.  
+ dışı Döndürülen `IAppIdAuthority` işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Yalıtım. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

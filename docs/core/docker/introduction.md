@@ -3,12 +3,12 @@ title: Docker 'a giriş
 description: Bu makalede bir .NET Core uygulaması bağlamında Docker 'a bir giriş ve genel bakış sunulmaktadır.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 16ad49c39d588aac8f8a7a918eb4d799f37823ac
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 6303c16e914c86f3a431a9e5367e6feb8ff88c9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654828"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724748"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker’a Giriş
 
@@ -34,9 +34,9 @@ Kapsayıcı bir görüntünün çalıştırılabilir örneğidir. Görüntünüz
 
 Kapsayıcı kayıt defterleri, bir görüntü depoları koleksiyonudur. Görüntülerinizi bir kayıt defteri görüntüsünde temel alabilirsiniz. Kapsayıcılardan doğrudan kayıt defterindeki bir görüntüden kapsayıcı oluşturabilirsiniz. [Docker kapsayıcıları, görüntüleri ve kayıt defterleri arasındaki ilişki](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) , [Kapsayıcılı uygulamaları veya mikro hizmetleri tasarlayarak ve derlerken](../../architecture/microservices/architect-microservice-container-applications/index.md)önemli bir kavramdır. Bu yaklaşım geliştirme ve dağıtım arasındaki süreyi büyük ölçüde kısaltır.
 
-Docker 'da, kullanabileceğiniz [Docker Hub 'ında](https://hub.docker.com/) barındırılan ortak bir kayıt defteri vardır. [.NET Core ile ilgili görüntüler](https://hub.docker.com/_/microsoft-dotnet-core/) Docker Hub 'ında listelenmiştir.
+Docker 'da, kullanabileceğiniz [Docker Hub 'ında](https://hub.docker.com/) barındırılan ortak bir kayıt defteri vardır. [.NET Core ile ilgili görüntüler](https://hub.docker.com/_/microsoft-dotnet/) Docker Hub 'ında listelenmiştir.
 
-[Microsoft Container Registry (MCR)](/azure/container-registry) , Microsoft tarafından sunulan kapsayıcı görüntülerinin resmi kaynağıdır. MCR, genel olarak çoğaltılan görüntüler sağlamak için Azure CDN oluşturulmuştur. Ancak, MCR, herkese açık bir Web sitesine sahip değildir ve Microsoft tarafından sunulan kapsayıcı görüntüleri hakkında bilgi almanın birincil yolu [Microsoft Docker Hub sayfalarıdır](https://hub.docker.com/_/microsoft-dotnet-core/).
+[Microsoft Container Registry (MCR)](/azure/container-registry) , Microsoft tarafından sunulan kapsayıcı görüntülerinin resmi kaynağıdır. MCR, genel olarak çoğaltılan görüntüler sağlamak için Azure CDN oluşturulmuştur. Ancak, MCR, herkese açık bir Web sitesine sahip değildir ve Microsoft tarafından sunulan kapsayıcı görüntüleri hakkında bilgi almanın birincil yolu [Microsoft Docker Hub sayfalarıdır](https://hub.docker.com/_/microsoft-dotnet/).
 
 ### <a name="dockerfile"></a>Dockerfile
 
@@ -44,9 +44,9 @@ Docker 'da, kullanabileceğiniz [Docker Hub 'ında](https://hub.docker.com/) bar
 
 ## <a name="net-core-images"></a>.NET Core görüntüleri
 
-Resmi .NET Core Docker görüntüleri Microsoft Container Registry (MCR) ' de yayımlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet-core/)bulunabilir. Her depo, .NET (SDK veya çalışma zamanı) ve kullanabileceğiniz farklı .NET birleşimlerinin görüntülerini içerir.
+Resmi .NET Core Docker görüntüleri Microsoft Container Registry (MCR) ' de yayımlanır ve [Microsoft .NET Core Docker Hub deposunda](https://hub.docker.com/_/microsoft-dotnet/)bulunabilir. Her depo, .NET (SDK veya çalışma zamanı) ve kullanabileceğiniz farklı .NET birleşimlerinin görüntülerini içerir.
 
-Microsoft, belirli senaryolar için uyarlanmış görüntüler sağlar. Örneğin, [ASP.NET Core deposu](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) üretimde ASP.NET Core uygulamaları çalıştırmak için oluşturulmuş görüntüler sağlar.
+Microsoft, belirli senaryolar için uyarlanmış görüntüler sağlar. Örneğin, [ASP.NET Core deposu](https://hub.docker.com/_/microsoft-dotnet-aspnet/) üretimde ASP.NET Core uygulamaları çalıştırmak için oluşturulmuş görüntüler sağlar.
 
 ## <a name="azure-services"></a>Azure hizmetleri
 

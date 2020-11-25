@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: a338116f6eae670cad785807ed580039fbd7fb78
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a166648252215e49b206aae1c3ab1e08985fde2d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207402"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724643"
 ---
 # <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 Arabirimi
 
@@ -29,7 +29,7 @@ Devralma ve geçersiz kılmaları desteklemek için "ICorDebugObjectValue" arabi
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType Yöntemi](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType`henüz uygulanmadı.|  
+|[GetVirtualMethodAndType Yöntemi](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` henüz uygulanmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -37,6 +37,7 @@ Devralma ve geçersiz kılmaları desteklemek için "ICorDebugObjectValue" arabi
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

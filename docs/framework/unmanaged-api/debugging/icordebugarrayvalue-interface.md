@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: bd1e86b83c43af20604416f158ab9e74f399821b
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 90688132b98f8316a4b08988c08b2f7cc7ce0fd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894964"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725059"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue Arabirimi
 
@@ -39,12 +39,14 @@ Tek boyutlu veya çok boyutlu bir diziyi temsil eden ICorDebugHeapValue öğesin
 |[HasBaseIndicies Yöntemi](icordebugarrayvalue-hasbaseindicies-method.md)|Dizinin temel dizinlere sahip olup olmadığını belirler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugArrayValue`hem tek boyutlu hem çok boyutlu dizileri destekler.  
+
+ `ICorDebugArrayValue` hem tek boyutlu hem çok boyutlu dizileri destekler.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

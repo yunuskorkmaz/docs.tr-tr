@@ -14,24 +14,26 @@ helpviewer_keywords:
 ms.assetid: 3367166f-31fe-43d0-8107-2e786f984e50
 topic_type:
 - apiref
-ms.openlocfilehash: e1b8cf3e8d78c8ef4715467760805cc50975d014
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d3bbdea3b2f23ddd2207ff2a036f32978cd837e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442143"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725137"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay Arabirimi
+
 Çalışan uygulamayla ilgili geçerli bağlama bilgilerini görüntüleyen yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetCurrentDisplay Metodu](ibindingdisplay-getcurrentdisplay-method.md)|Geçerli bağlama görüntüleme bilgilerini döndürür.|  
+|[GetCurrentDisplay Yöntemi](ibindingdisplay-getcurrentdisplay-method.md)|Geçerli bağlama görüntüleme bilgilerini döndürür.|  
 |[InitializeForProcess Yöntemi](ibindingdisplay-initializeforprocess-method.md)|Nesnesini başlatır `IBindingDisplay` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** BindingDisplay. h  
@@ -42,4 +44,4 @@ ms.locfileid: "83442143"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [Tanılama Sembol Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 455fd06dbdbfd5d9753f3d7270647a742751d804
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1c65efa006a8b2f4fb4db257b4ad2cde99c4e75e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420662"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725267"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType Sabit Listesi
+
 Bir değişkenin yerel konum türünü gösterir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum VariableLocationType  
@@ -44,9 +45,11 @@ typedef enum VariableLocationType
 |`VLT_INVALID`|Değişken, YAZMAÇ veya yazmaç göreli bellek konumunda depolanmaz.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Sabit listesinin bir üyesi `VariableLocationType` [ıcordebugvariablehome:: GetLocationType](icordebugvariablehome-getlocationtype-method.md) yöntemi tarafından döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

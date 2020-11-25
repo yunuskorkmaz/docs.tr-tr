@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 40594774-5105-4187-a06b-4e7f50bada3c
 topic_type:
 - apiref
-ms.openlocfilehash: e855d9ec4105559bb72f48ecb594707f0a0ec4c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ba3a1899abfea10393a57bbf6ed61bbfc483262
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095909"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724669"
 ---
 # <a name="icordebugobjectvaluegetcontext-method"></a>ICorDebugObjectValue::GetContext Yöntemi
-`GetContext`, .NET Framework bu sürümünde uygulanmıyor.  
+
+`GetContext` .NET Framework bu sürümünde uygulanmıyor.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetContext (  
@@ -34,6 +35,7 @@ HRESULT GetContext (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-ms.openlocfilehash: db3ba3380d1fc30a8f34683618b5cc326d7d1906
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a729249f7b0681941a0b1a478dbe2c0d9d6cd01c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123053"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723967"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx İşlevi
+
 Bir derlemenin ilke sonrası görünen adını alır.  
   
  Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT PreBindAssemblyEx (  
@@ -40,6 +41,7 @@ HRESULT PreBindAssemblyEx (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pAppCtx`  
  'ndaki Uygulama bağlamını tanımlar.  
   
@@ -56,19 +58,21 @@ HRESULT PreBindAssemblyEx (
  dışı İlke sonrası görünen adını içerir.  
   
  `pvReserved`  
- 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved`, null bir başvuru olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved` null bir başvuru olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ppNamePostPolicy` output parametresi yalnızca işlev HRESULT FUSION_E_REF_DEF_MISMATCH döndürürse ayarlanır. Aksi halde, null olur.  
+
+ `ppNamePostPolicy`Output parametresi yalnızca Işlev HRESULT FUSION_E_REF_DEF_MISMATCH döndürürse ayarlanır. Aksi halde, null olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Fusion. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

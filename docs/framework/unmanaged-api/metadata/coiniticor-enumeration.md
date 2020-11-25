@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-ms.openlocfilehash: ef7851ddb33003b0b4b51065cf1fea3696ca6abd
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4d5bc66cdc292d390cb4ea187277fda8b8a071fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005953"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724214"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR Numaralandırması
+
 [CoInitializeCor](../hosting/coinitializecor-function.md) tarafından ortak dil çalışma zamanını başlatırken kullanılan sabitleri belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum tagCOINITCOR  
@@ -40,11 +41,12 @@ typedef enum tagCOINITCOR
 |`COINITCOR`|Varsayılan başlatma modunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9e15a0c1-8ab6-43d0-ae28-6ec7a4edd913
 topic_type:
 - apiref
-ms.openlocfilehash: 30312e6e09535cee2968b1f9e8ac87b461c5ff40
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 1948075d87b5a44397a1eaab3adb4edbc96d7143
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703523"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725644"
 ---
 # <a name="iclroneventmanager-interface"></a>ICLROnEventManager Arabirimi
+
 Ana bilgisayarın ortak dil çalışma zamanı (CLR) olayları için geri çağırmaları kaydetmesine ve kaydını kaydetmesine izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -32,23 +33,25 @@ Ana bilgisayarın ortak dil çalışma zamanı (CLR) olayları için geri çağ�
 |[UnregisterActionOnEvent Yöntemi](iclroneventmanager-unregisteractiononevent-method.md)|Belirtilen olay için önceden kaydedilmiş bir geri çağırma işaretçisinin kaydını siler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Olay geri çağırmaları kaydetmek ve kaydını silmek için, ana bilgisayar `ICLROnEventManager` [ICLRControl:: GetCLRManager](iclrcontrol-getclrmanager-method.md) metodunu çağırarak öğesine bir başvuru alır.  
   
 > [!NOTE]
 > [EClrEvent](eclrevent-enumeration.md) tarafından tanımlanan olaylar birden çok kez tetiklenebilir ve farklı iş PARÇACıKLARıNDAN clr 'nin kaldırılmasına veya devre dışı bırakılmasına işaret edebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [EClrEvent Sabit Listesi](eclrevent-enumeration.md)
+- [EClrEvent Numaralandırması](eclrevent-enumeration.md)
 - [IActionOnCLREvent Arabirimi](iactiononclrevent-interface.md)
 - [ICLRControl Arabirimi](iclrcontrol-interface.md)
 - [Barındırma Arabirimleri](hosting-interfaces.md)

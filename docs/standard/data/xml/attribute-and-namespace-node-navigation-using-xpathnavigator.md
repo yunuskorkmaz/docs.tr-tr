@@ -2,17 +2,19 @@
 title: XPathNavigator Kullanarak Öznitelik ve Ad Alanı Düğümünde Gezinme
 ms.date: 03/30/2017
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: cf29c15463030774b488beed776c9cfe623072d1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d561afdc477119a6d9d04eacfcd6a6bdb9d0e2d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819415"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725397"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>XPathNavigator Kullanarak Öznitelik ve Ad Alanı Düğümünde Gezinme
+
 <xref:System.Xml.XPath.XPathNavigator>Sınıfı, bir veya nesnesi içindeki düğüm kümelerinde gezinmek için kullanılan ilk küme, bir veya nesne içindeki *düğüm kümelerine* gitmek için kullanılır [Node Set Navigation Using XPathNavigator](node-set-navigation-using-xpathnavigator.md) <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> . Bu konuda açıklanan ikinci küme, veya nesne içindeki *öznitelik ve ad alanı düğümlerine* gezinmek için kullanılır <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> .  
   
 ## <a name="attribute-node-navigation"></a>Öznitelik düğümü gezintisi  
+
  Öznitelikler bir öğenin alt öğeleri değil, bir öğenin özellikleridir. Bu ayrım, <xref:System.Xml.XPath.XPathNavigator> eşdüzey, üst ve alt düğümlerde gezinmek için kullanılan sınıfının yöntemleri nedeniyle önemlidir.  
   
  Örneğin, <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> ve <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> yöntemleri bir öğeden bir özniteliğe veya öznitelikler arasında gezinmek için kullanılmaz. Bunun yerine, özniteliklerin farklı gezinti yöntemleri vardır.  
@@ -31,6 +33,7 @@ ms.locfileid: "94819415"
 > <xref:System.Xml.XPath.XPathNavigator>Nesne bir öznitelik veya ad alanı düğümüne yerleştirilse,,,, <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A> , <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> ve <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> yöntemleri her zaman döndürülür `false` ve konumunu etkilemez <xref:System.Xml.XPath.XPathNavigator> . Özel durumlar <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> , <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> ve <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> yöntemlerdir.  
   
 ## <a name="namespace-node-navigation"></a>Ad alanı düğümü gezintisi  
+
  Her bir öğe, öğe için kapsamdaki bir ad alanı URI 'sine (ad alanına bağlanan XML öneki dahil olmak üzere) bir tane olan bir ad alanı düğümü kümesine sahiptir (her bir `http://www.w3.org/XML/1998/namespace` XML belgesinde örtülü olarak bildirildiği) ve biri öğesi için kapsamdadır. Bu ad alanı düğümler üst öğedir; Ancak, bir ad alanı düğümü alt öğesi üst öğesi değil.  
   
  Özniteliklerde olduğu gibi, <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> ve <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> yöntemleri bir öğeden bir ad alanı düğümüne veya ad alanı düğümleri arasında gezinmek için kullanılmaz. Bunun yerine, ad alanı düğümlerinin farklı gezinme yöntemleri vardır.  
@@ -49,6 +52,7 @@ ms.locfileid: "94819415"
 > <xref:System.Xml.XPath.XPathNavigator>Nesne bir öznitelik veya ad alanı düğümüne yerleştirilse,,,, <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A> , <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A> <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> ve <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> yöntemleri her zaman döndürülür `false` ve konumunu etkilemez <xref:System.Xml.XPath.XPathNavigator> . Özel durumlar <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> , <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> ve <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A> yöntemlerdir.  
   
 ### <a name="the-xpathnamespacescope-enumeration"></a>XPathNamespaceScope numaralandırması  
+
  Ad alanı düğümlerine gezinirken, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> ve <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> yöntemleri <xref:System.Xml.XPath.XPathNamespaceScope> parametresiyle çağrılabilir. Bu yöntemler, hiçbir parametre olmadan çağrılan karşılıklarından farklı davranır. <xref:System.Xml.XPath.XPathNamespaceScope>Numaralandırmada <xref:System.Xml.XPath.XPathNamespaceScope.All> , veya değerleri vardır <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml> <xref:System.Xml.XPath.XPathNamespaceScope.Local> .  
   
  Aşağıdaki örneklerde, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> ve <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> yöntemleri tarafından bir XML belgesindeki çeşitli kapsamlardaki hangi ad alanlarının döndürüldüğü gösterilmektedir.  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0b933686-226e-4373-92b7-fac579ee7b1a
 topic_type:
 - apiref
-ms.openlocfilehash: 1c11946bc5ea69a090091c014aba859935b48b36
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 2a4a0bfae6f9a1970f0d4aca8b37f8fc68194462
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396672"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725696"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2:: GetTypeId metodu
+
 Bu tür için bir [COR_TYPEID](cor-typeid-structure.md) alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetTypeID(  
@@ -34,10 +35,12 @@ HRESULT GetTypeID(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `id`  
  dışı Bu ICorDebugType için [COR_TYPEID](cor-typeid-structure.md) işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Dönüş değeri `S_OK` başarılı veya hata durumunda hata `HRESULT` kodu. `HRESULT`Kodlar şunları içerir:  
   
 |Dönüş kodu|Açıklama|  
@@ -47,11 +50,13 @@ HRESULT GetTypeID(
 |`CORDBG_E_UNSUPPORTED`|Tür desteklenmiyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, çalışma zamanına yüklenmiş olan [COR_TYPEID](cor-typeid-structure.md)veya bir tür çalışma zamanına yüklenmiş bir türü tanımlayan donuk bir tanıtıcı görevi gören ICorDebugType öğesinden bir eşleme sağlar.  
   
  ICorDebugType 'ın gösterdiği tür henüz yüklenmediyse, bu yöntem döndürür `CORDBG_E_CLASS_NOT_LOADED` .  Tür desteklenmiyorsa, döndürür `CORDBG_E_UNSUPPORTED` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

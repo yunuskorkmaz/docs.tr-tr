@@ -8,14 +8,15 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: a4c434c5d458602db8a4d582b239d6e57def6ace
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 46a25fc6e9119481f728275e0569429cc6c46dc9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499005"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725436"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationStarted yöntemi
+
 [.NET Framework 4,7 ve sonraki sürümlerde desteklenir]  
   
 Dinamik bir yöntemin JıT derlemesi başladığında profil oluşturucuyu bilgilendirir.  
@@ -32,7 +33,8 @@ HRESULT DynamicMethodJITCompilationStarted(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
-'ndaki`functionId`  
+
+'ndaki `functionId`  
 JıT derlemesinin başlatıldığı bellek içi işlevin tanımlayıcısı.
 
 [in] `fIsSafeToBlock` 
@@ -47,11 +49,12 @@ JıT derlemesinin başlatıldığı bellek içi işlevin tanımlayıcısı.
 Bu geri çağırma, dinamik bir yöntem JıT olarak derlendiğinde tetiklenir. Buna çeşitli Il saplamaları ve LCG yöntemleri dahildir. Amacı, profil oluşturucu yazıcılarını kullanıcılara derlenen yöntemi tanımlamak için yeterli bilgi sağlamaktır.
 
 > [!NOTE]
-> `functionId`Dinamik metotların meta verisi olmadığından, meta veri belirteçlerine çözümlemek için değerler kullanılamaz.
+> `functionId` Dinamik metotların meta verisi olmadığından, meta veri belirteçlerine çözümlemek için değerler kullanılamaz.
 
 `pILHeader`İşaretçi yalnızca geri çağırma sırasında geçerlidir.
 
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

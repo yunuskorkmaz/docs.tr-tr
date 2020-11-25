@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7963c87-6ec5-49b3-a5cd-e0fe0c43f9b4
 topic_type:
 - apiref
-ms.openlocfilehash: 95ae081d61200e4fd020609a4d23783f265d2cc6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: db7fb5f2c1b5d1fa8be1328852ca4402538396f3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615364"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725904"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a>ISymUnmanagedScope::GetParent Yöntemi
+
 Bu kapsamın üst kapsamını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -33,13 +34,16 @@ HRESULT GetParent(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pRetVal`  
  dışı Döndürülen [ıdimunmanagedscope](isymunmanagedscope-interface.md) arabirimine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

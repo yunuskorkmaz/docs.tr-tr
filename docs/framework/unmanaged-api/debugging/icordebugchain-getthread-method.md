@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: b3390319-6366-418c-ba80-b552ac4dfc1e
 topic_type:
 - apiref
-ms.openlocfilehash: 28b54026c8743f31a420e164944f60709e2e271b
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ad220289b45078130a0a41e67373fd3384ae9682
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894365"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724422"
 ---
 # <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread Yöntemi
+
 Bu çağrı zincirinin parçası olduğu fiziksel iş parçacığını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetThread (  
@@ -34,10 +35,12 @@ HRESULT GetThread (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppThread`  
  dışı Bu çağrı zincirinin parçası olduğu fiziksel iş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-ms.openlocfilehash: 8cc803e3cf1442d324bf2eed0a37d0d236acd86d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1a8ab5aa5909af60089d5e4cc8092e15bc75e8cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724188"
 ---
 # <a name="cor_field_offset-structure"></a>COR_FIELD_OFFSET Yapısı
+
 Belirtilen alanın bir sınıf içindeki sapmasını depolar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct COR_FIELD_OFFSET {  
@@ -35,15 +36,17 @@ typedef struct COR_FIELD_OFFSET {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`ridOfField`|`mdFieldDef`Alanı temsil eden bir meta veri belirteci.|  
 |`ulOffset`|Alanın sınıfının içindeki boşluğu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  [IMetaDataImport:: GetClassLayout](imetadataimport-getclasslayout-method.md) ve [ımetadatayayma:: SetClassLayout](imetadataemit-setclasslayout-method.md) metotları türünde bir parametre alır `COR_FIELD_OFFSET` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h, CorProf. IDL  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: 40ecc183c32500ad9e88ceb1bfc0528d717430e8
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 841e3ca608d20a4b8618508e69195de0b1da1341
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894463"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724409"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange Metodu
+
 Bu zincir için yığın segmentinin adres aralığını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetStackRange (  
@@ -35,16 +36,19 @@ HRESULT GetStackRange (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pStart`  
- dışı Yığın segmentinin başlangıç `CORDB_ADDRESS` adresi olan değere yönelik bir işaretçi.  
+ dışı `CORDB_ADDRESS` Yığın segmentinin başlangıç adresi olan değere yönelik bir işaretçi.  
   
  `pEnd`  
- dışı Yığın kesiminin bitiş adresi `CORDB_ADDRESS` olan değere yönelik bir işaretçi.  
+ dışı `CORDB_ADDRESS` Yığın kesiminin bitiş adresi olan değere yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Sayısal Aralık yalnızca yığın çerçeve konumlarının karşılaştırılmasının anlamı vardır. Aslında yığında depolandıkları hakkında varsayımlar yapamazsınız.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
