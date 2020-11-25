@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: e08308d2-7397-4616-b7a6-f81b7686fed6
 topic_type:
 - apiref
-ms.openlocfilehash: 528a385657721298772693809dd696531c6a4e8f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7114ab301c1c5eeb517a7658dc1035650e0ca150
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134398"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719872"
 ---
-# <a name="iassemblyenumreset-method"></a><span data-ttu-id="85ca3-102">IAssemblyEnum::Reset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="85ca3-102">IAssemblyEnum::Reset Method</span></span>
-<span data-ttu-id="85ca3-103">Bu [IAssemblyEnum](iassemblyenum-interface.md) nesnesini başlangıç konumuna sıfırlar.</span><span class="sxs-lookup"><span data-stu-id="85ca3-103">Resets this [IAssemblyEnum](iassemblyenum-interface.md) object to its starting position.</span></span>  
+# <a name="iassemblyenumreset-method"></a><span data-ttu-id="cdce3-102">IAssemblyEnum::Reset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cdce3-102">IAssemblyEnum::Reset Method</span></span>
+
+<span data-ttu-id="cdce3-103">Bu [IAssemblyEnum](iassemblyenum-interface.md) nesnesini başlangıç konumuna sıfırlar.</span><span class="sxs-lookup"><span data-stu-id="cdce3-103">Resets this [IAssemblyEnum](iassemblyenum-interface.md) object to its starting position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="85ca3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="85ca3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cdce3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cdce3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset (  
@@ -33,13 +34,14 @@ HRESULT Reset (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="85ca3-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="85ca3-105">Requirements</span></span>  
- <span data-ttu-id="85ca3-106">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="85ca3-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="85ca3-107">**Üst bilgi:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="85ca3-107">**Header:** Fusion.h</span></span>  
-  
- <span data-ttu-id="85ca3-108">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85ca3-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="85ca3-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="85ca3-109">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="cdce3-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cdce3-105">Requirements</span></span>  
 
-- [<span data-ttu-id="85ca3-110">IAssemblyEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="85ca3-110">IAssemblyEnum Interface</span></span>](iassemblyenum-interface.md)
+ <span data-ttu-id="cdce3-106">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cdce3-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="cdce3-107">**Üst bilgi:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="cdce3-107">**Header:** Fusion.h</span></span>  
+  
+ <span data-ttu-id="cdce3-108">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cdce3-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="cdce3-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cdce3-109">See also</span></span>
+
+- [<span data-ttu-id="cdce3-110">IAssemblyEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cdce3-110">IAssemblyEnum Interface</span></span>](iassemblyenum-interface.md)
