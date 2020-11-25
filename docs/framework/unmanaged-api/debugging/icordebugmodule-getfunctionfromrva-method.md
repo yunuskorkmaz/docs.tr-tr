@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f5a34517-2422-484f-be89-2ce0b4bce195
 topic_type:
 - apiref
-ms.openlocfilehash: 6245942f0b5cedd478ba0704acc1fef7251b8211
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 85f368eaa024e7792e5feefeb08f0bac1b59494d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109613"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710135"
 ---
-# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="60c22-102">ICorDebugModule::GetFunctionFromRVA Yöntemi</span><span class="sxs-lookup"><span data-stu-id="60c22-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
-<span data-ttu-id="60c22-103">Bu yöntem .NET Framework geçerli sürümünde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="60c22-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="7fd02-102">ICorDebugModule::GetFunctionFromRVA Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7fd02-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
+
+<span data-ttu-id="7fd02-103">Bu yöntem .NET Framework geçerli sürümünde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="7fd02-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="60c22-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="60c22-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7fd02-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7fd02-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionFromRVA(  
@@ -34,7 +35,8 @@ HRESULT GetFunctionFromRVA(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="60c22-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="60c22-105">Requirements</span></span>  
- <span data-ttu-id="60c22-106">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="60c22-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7fd02-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7fd02-105">Requirements</span></span>  
+
+ <span data-ttu-id="7fd02-106">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="7fd02-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60c22-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="60c22-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7fd02-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7fd02-107">See also</span></span>
