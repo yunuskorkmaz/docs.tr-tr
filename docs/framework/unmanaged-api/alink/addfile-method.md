@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9e707abb-f905-4568-9356-12aa21d1b11c
 topic_type:
 - apiref
-ms.openlocfilehash: 4dd104805d547613315335bc9c95b5c60a9cab14
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 53ca4005f5681cfc5d550301d8aad1406aceb3a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446676"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717207"
 ---
-# <a name="addfile-method"></a><span data-ttu-id="b95ca-102">AddFile Metodu</span><span class="sxs-lookup"><span data-stu-id="b95ca-102">AddFile Method</span></span>
-<span data-ttu-id="b95ca-103">Derlemeye dosya ekler.</span><span class="sxs-lookup"><span data-stu-id="b95ca-103">Adds files to the assembly.</span></span> <span data-ttu-id="b95ca-104">, İlişkisiz modüller oluşturmak için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="b95ca-104">Can also be used to create unbound modules.</span></span>  
+# <a name="addfile-method"></a><span data-ttu-id="74d25-102">AddFile Metodu</span><span class="sxs-lookup"><span data-stu-id="74d25-102">AddFile Method</span></span>
+
+<span data-ttu-id="74d25-103">Derlemeye dosya ekler.</span><span class="sxs-lookup"><span data-stu-id="74d25-103">Adds files to the assembly.</span></span> <span data-ttu-id="74d25-104">, İlişkisiz modüller oluşturmak için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="74d25-104">Can also be used to create unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b95ca-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b95ca-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="74d25-105">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="74d25-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT AddFile(  
@@ -37,30 +38,33 @@ HRESULT AddFile(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b95ca-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b95ca-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="74d25-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="74d25-106">Parameters</span></span>  
+
  `AssemblyID`  
- <span data-ttu-id="b95ca-107">Artırılması için derlemenin benzersiz KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="b95ca-107">Unique ID of the assembly to be augmented.</span></span>  
+ <span data-ttu-id="74d25-107">Artırılması için derlemenin benzersiz KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="74d25-107">Unique ID of the assembly to be augmented.</span></span>  
   
  `pszFilename`  
- <span data-ttu-id="b95ca-108">Eklenecek dosyanın tam adı.</span><span class="sxs-lookup"><span data-stu-id="b95ca-108">Fully qualified name of file to be added.</span></span>  
+ <span data-ttu-id="74d25-108">Eklenecek dosyanın tam adı.</span><span class="sxs-lookup"><span data-stu-id="74d25-108">Fully qualified name of file to be added.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="b95ca-109">`ffContainsNoMetaData` ve `ffWriteable`gibi COM+ Fıledef bayrakları.</span><span class="sxs-lookup"><span data-stu-id="b95ca-109">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="b95ca-110">`dwFlags` [DefineFile yöntemine](../metadata/imetadataassemblyemit-definefile-method.md)geçirilir.</span><span class="sxs-lookup"><span data-stu-id="b95ca-110">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="74d25-109">Ve gibi COM+ FileDef bayrakları `ffContainsNoMetaData` `ffWriteable` .</span><span class="sxs-lookup"><span data-stu-id="74d25-109">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="74d25-110">`dwFlags`[DefineFile yöntemine](../metadata/imetadataassemblyemit-definefile-method.md)geçirilir.</span><span class="sxs-lookup"><span data-stu-id="74d25-110">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="b95ca-111">Gerekirse meta verileri yayan için kullanılacak [ımetadatayayma arabirimi](../metadata/imetadataemit-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="b95ca-111">[IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.</span></span>  
+ <span data-ttu-id="74d25-111">Gerekirse meta verileri yayan için kullanılacak [ımetadatayayma arabirimi](../metadata/imetadataemit-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="74d25-111">[IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="b95ca-112">Eklenen dosyanın benzersiz KIMLIĞININ depolanacağı işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b95ca-112">Pointer to where the unique ID of the added file will be stored.</span></span>  
+ <span data-ttu-id="74d25-112">Eklenen dosyanın benzersiz KIMLIĞININ depolanacağı işaretçi.</span><span class="sxs-lookup"><span data-stu-id="74d25-112">Pointer to where the unique ID of the added file will be stored.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b95ca-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b95ca-113">Return Value</span></span>  
- <span data-ttu-id="b95ca-114">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="b95ca-114">Returns S_OK if the method succeeds.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="b95ca-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b95ca-115">Requirements</span></span>  
- <span data-ttu-id="b95ca-116">ALink. h gerektirir.</span><span class="sxs-lookup"><span data-stu-id="b95ca-116">Requires alink.h.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b95ca-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b95ca-117">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="74d25-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="74d25-113">Return Value</span></span>  
 
-- [<span data-ttu-id="b95ca-118">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b95ca-118">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="b95ca-119">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b95ca-119">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="b95ca-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="b95ca-120">ALink API</span></span>](index.md)
+ <span data-ttu-id="74d25-114">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="74d25-114">Returns S_OK if the method succeeds.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="74d25-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="74d25-115">Requirements</span></span>  
+
+ <span data-ttu-id="74d25-116">ALink. h gerektirir.</span><span class="sxs-lookup"><span data-stu-id="74d25-116">Requires alink.h.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="74d25-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="74d25-117">See also</span></span>
+
+- [<span data-ttu-id="74d25-118">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="74d25-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="74d25-119">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="74d25-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="74d25-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="74d25-120">ALink API</span></span>](index.md)
