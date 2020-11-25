@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: b55de00188d92623c493dfc5f9aca915890ae5df
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021471"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032091"
 ---
-### <a name="private-fields-added-to-built-in-struct-types"></a><span data-ttu-id="43b6e-101">Yerleşik yapı türlerine eklenen özel alanlar</span><span class="sxs-lookup"><span data-stu-id="43b6e-101">Private fields added to built-in struct types</span></span>
+### <a name="private-fields-added-to-built-in-struct-types"></a><span data-ttu-id="c460b-101">Yerleşik yapı türlerine eklenen özel alanlar</span><span class="sxs-lookup"><span data-stu-id="c460b-101">Private fields added to built-in struct types</span></span>
 
-<span data-ttu-id="43b6e-102">[Başvuru derlemelerinde](../../../../docs/standard/assembly/reference-assemblies.md) [belirli yapı türlerine özel](#affected-apis) alanlar eklendi.</span><span class="sxs-lookup"><span data-stu-id="43b6e-102">Private fields were added to [certain struct types](#affected-apis) in [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md).</span></span> <span data-ttu-id="43b6e-103">Sonuç olarak, C#'da, bu yapı türleri her zaman yeni [işleç](../../../../docs/csharp/language-reference/operators/new-operator.md) veya [varsayılan literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal)kullanılarak anlık olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="43b6e-103">As a result, in C#, those struct types must always be instantiated by using the [new operator](../../../../docs/csharp/language-reference/operators/new-operator.md) or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
+<span data-ttu-id="c460b-102">Özel alanlar, [başvuru derlemelerindeki](../../../../docs/standard/assembly/reference-assemblies.md) [belirli yapı türlerine](#affected-apis) eklenmiştir.</span><span class="sxs-lookup"><span data-stu-id="c460b-102">Private fields were added to [certain struct types](#affected-apis) in [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md).</span></span> <span data-ttu-id="c460b-103">Sonuç olarak, C# ' ta, bu yapı türlerinin her zaman [New işleci](../../../../docs/csharp/language-reference/operators/new-operator.md) veya [Default sabit değeri](../../../../docs/csharp/language-reference/operators/default.md#default-literal)kullanılarak oluşturulması gerekir.</span><span class="sxs-lookup"><span data-stu-id="c460b-103">As a result, in C#, those struct types must always be instantiated by using the [new operator](../../../../docs/csharp/language-reference/operators/new-operator.md) or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="43b6e-104">Açıklamayı değiştir</span><span class="sxs-lookup"><span data-stu-id="43b6e-104">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="c460b-104">Açıklamayı Değiştir</span><span class="sxs-lookup"><span data-stu-id="c460b-104">Change description</span></span>
 
-<span data-ttu-id="43b6e-105">.NET Core 2.0 ve önceki sürümlerde, örneğin, bazı <xref:System.ConsoleKeyInfo>sağlanan yapı türleri, `new` işleç veya [varsayılan gerçek c#](../../../../docs/csharp/language-reference/operators/default.md#default-literal) kullanmadan anında olabilir.</span><span class="sxs-lookup"><span data-stu-id="43b6e-105">In .NET Core 2.0 and previous versions, some provided struct types, for example, <xref:System.ConsoleKeyInfo>, could be instantiated without using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C#.</span></span> <span data-ttu-id="43b6e-106">Bunun nedeni, C# derleyicisi tarafından kullanılan [başvuru derlemelerinin](../../../../docs/standard/assembly/reference-assemblies.md) structs için özel alanları içermemesidir.</span><span class="sxs-lookup"><span data-stu-id="43b6e-106">This was because the [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md) used by the C# compiler didn't contain the private fields for the structs.</span></span> <span data-ttu-id="43b6e-107">.NET yapı türleri için tüm özel alanlar .NET Core 2.1'den başlayan başvuru derlemelerine eklenir.</span><span class="sxs-lookup"><span data-stu-id="43b6e-107">All private fields for .NET struct types are added to the reference assemblies starting in .NET Core 2.1.</span></span>
+<span data-ttu-id="c460b-105">.NET Core 2,0 ve önceki sürümlerinde, bazı sunulan yapı türleri, örneğin,, <xref:System.ConsoleKeyInfo> `new` C# içinde işleç veya [varsayılan değişmez değer](../../../../docs/csharp/language-reference/operators/default.md#default-literal) kullanılmadan oluşturulabilir.</span><span class="sxs-lookup"><span data-stu-id="c460b-105">In .NET Core 2.0 and previous versions, some provided struct types, for example, <xref:System.ConsoleKeyInfo>, could be instantiated without using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C#.</span></span> <span data-ttu-id="c460b-106">Bunun nedeni, C# derleyicisi tarafından kullanılan [başvuru derlemelerinin](../../../../docs/standard/assembly/reference-assemblies.md) yapılar için özel alanlar içermiyordu.</span><span class="sxs-lookup"><span data-stu-id="c460b-106">This was because the [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md) used by the C# compiler didn't contain the private fields for the structs.</span></span> <span data-ttu-id="c460b-107">.NET yapı türleri için tüm özel alanlar, .NET Core 2,1 ' den başlayarak başvuru derlemelerine eklenir.</span><span class="sxs-lookup"><span data-stu-id="c460b-107">All private fields for .NET struct types are added to the reference assemblies starting in .NET Core 2.1.</span></span>
 
-<span data-ttu-id="43b6e-108">Örneğin, aşağıdaki C# kodu .NET Core 2.0'da derler, ancak .NET Core 2.1'de değil:</span><span class="sxs-lookup"><span data-stu-id="43b6e-108">For example, the following C# code compiles in .NET Core 2.0, but not in .NET Core 2.1:</span></span>
+<span data-ttu-id="c460b-108">Örneğin, aşağıdaki C# kodu .NET Core 2,0 ' de derlenir, ancak .NET Core 2,1 ' de değildir:</span><span class="sxs-lookup"><span data-stu-id="c460b-108">For example, the following C# code compiles in .NET Core 2.0, but not in .NET Core 2.1:</span></span>
 
 ```csharp
 ConsoleKeyInfo key;    // Struct type
@@ -25,17 +25,17 @@ if (key.ToString() == "y")
 }
 ```
 
-<span data-ttu-id="43b6e-109">.NET Core 2.1'de önceki kod aşağıdaki derleyici hatasıyla sonuçlanır: **CS0165 - Atanmamış yerel değişken 'anahtar' kullanımı**</span><span class="sxs-lookup"><span data-stu-id="43b6e-109">In .NET Core 2.1, the previous code results in the following compiler error: **CS0165 - Use of unassigned local variable 'key'**</span></span>
+<span data-ttu-id="c460b-109">.NET Core 2,1 ' de, önceki kod şu derleyici hatasına neden olur: **CS0165-atanmamış yerel değişken ' Key ' kullanımı**</span><span class="sxs-lookup"><span data-stu-id="c460b-109">In .NET Core 2.1, the previous code results in the following compiler error: **CS0165 - Use of unassigned local variable 'key'**</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="43b6e-110">Sürüm tanıtıldı</span><span class="sxs-lookup"><span data-stu-id="43b6e-110">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="c460b-110">Sunulan sürüm</span><span class="sxs-lookup"><span data-stu-id="c460b-110">Version introduced</span></span>
 
-<span data-ttu-id="43b6e-111">2.1</span><span class="sxs-lookup"><span data-stu-id="43b6e-111">2.1</span></span>
+<span data-ttu-id="c460b-111">2.1</span><span class="sxs-lookup"><span data-stu-id="c460b-111">2.1</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="43b6e-112">Önerilen eylem</span><span class="sxs-lookup"><span data-stu-id="43b6e-112">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="c460b-112">Önerilen eylem</span><span class="sxs-lookup"><span data-stu-id="c460b-112">Recommended action</span></span>
 
-<span data-ttu-id="43b6e-113">`new` İşleç veya [varsayılan literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal)kullanarak yapı türlerini anında.</span><span class="sxs-lookup"><span data-stu-id="43b6e-113">Instantiate struct types by using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
+<span data-ttu-id="c460b-113">`new`İşleç veya [varsayılan değişmez değeri](../../../../docs/csharp/language-reference/operators/default.md#default-literal)kullanarak struct Types örneğini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="c460b-113">Instantiate struct types by using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
 
-<span data-ttu-id="43b6e-114">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="43b6e-114">For example:</span></span>
+<span data-ttu-id="c460b-114">Örnek:</span><span class="sxs-lookup"><span data-stu-id="c460b-114">For example:</span></span>
 
 ```csharp
 ConsoleKeyInfo key = new ConsoleKeyInfo();    // Struct type.
@@ -51,11 +51,11 @@ if (key.ToString() == "y")
     Console.WriteLine("Yes!");
 ```
 
-#### <a name="category"></a><span data-ttu-id="43b6e-115">Kategori</span><span class="sxs-lookup"><span data-stu-id="43b6e-115">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="c460b-115">Kategori</span><span class="sxs-lookup"><span data-stu-id="c460b-115">Category</span></span>
 
-<span data-ttu-id="43b6e-116">Çekirdek .NET kitaplıkları</span><span class="sxs-lookup"><span data-stu-id="43b6e-116">Core .NET libraries</span></span>
+<span data-ttu-id="c460b-116">Core .NET kitaplıkları</span><span class="sxs-lookup"><span data-stu-id="c460b-116">Core .NET libraries</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="43b6e-117">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="43b6e-117">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="c460b-117">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="c460b-117">Affected APIs</span></span>
 
 - <xref:System.ArraySegment%601.Enumerator?displayProperty=fullName>
 - <xref:System.ArraySegment%601?displayProperty=fullName>
