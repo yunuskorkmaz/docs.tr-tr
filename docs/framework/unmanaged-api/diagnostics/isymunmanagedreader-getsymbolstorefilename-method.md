@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c84f4846-9bc8-44a4-9a76-e39106d6d8b2
 topic_type:
 - apiref
-ms.openlocfilehash: 6ffab3b2f81680404f870cfd63ae5125173a346c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: df503e44f20a0b1f02e2c609cc4b52712520faea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615520"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720574"
 ---
-# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="a4361-102">ISymUnmanagedReader::GetSymbolStoreFileName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a4361-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
-<span data-ttu-id="a4361-103">Sembol deposunun disk üzerindeki dosya adını sağlar.</span><span class="sxs-lookup"><span data-stu-id="a4361-103">Provides the on-disk file name of the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="cfa92-102">ISymUnmanagedReader::GetSymbolStoreFileName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cfa92-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
+
+<span data-ttu-id="cfa92-103">Sembol deposunun disk üzerindeki dosya adını sağlar.</span><span class="sxs-lookup"><span data-stu-id="cfa92-103">Provides the on-disk file name of the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a4361-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="a4361-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cfa92-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="cfa92-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSymbolStoreFileName (  
@@ -35,22 +36,25 @@ HRESULT GetSymbolStoreFileName (
         length_is (*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a4361-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a4361-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cfa92-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cfa92-105">Parameters</span></span>  
+
  `cchName`  
- <span data-ttu-id="a4361-106">'ndaki `szName`Arabelleğin boyutu.</span><span class="sxs-lookup"><span data-stu-id="a4361-106">[in] The size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="cfa92-106">'ndaki `szName` Arabelleğin boyutu.</span><span class="sxs-lookup"><span data-stu-id="cfa92-106">[in] The size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="a4361-107">dışı Null sonlandırma dahil olmak üzere içinde döndürülen adın uzunluğunu alan değişkene yönelik bir işaretçi `szName` .</span><span class="sxs-lookup"><span data-stu-id="a4361-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
+ <span data-ttu-id="cfa92-107">dışı Null sonlandırma dahil olmak üzere içinde döndürülen adın uzunluğunu alan değişkene yönelik bir işaretçi `szName` .</span><span class="sxs-lookup"><span data-stu-id="cfa92-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="a4361-108">dışı Sembol deposunun dosya adını alan değişkene yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a4361-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
+ <span data-ttu-id="cfa92-108">dışı Sembol deposunun dosya adını alan değişkene yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="cfa92-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a4361-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a4361-109">Return Value</span></span>  
- <span data-ttu-id="a4361-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="a4361-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="a4361-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a4361-111">Requirements</span></span>  
- <span data-ttu-id="a4361-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="a4361-112">**Header:** CorSym.idl, CorSym.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="a4361-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a4361-113">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="cfa92-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="cfa92-109">Return Value</span></span>  
 
-- [<span data-ttu-id="a4361-114">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a4361-114">ISymUnmanagedReader Interface</span></span>](isymunmanagedreader-interface.md)
+ <span data-ttu-id="cfa92-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="cfa92-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="cfa92-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cfa92-111">Requirements</span></span>  
+
+ <span data-ttu-id="cfa92-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="cfa92-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="cfa92-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cfa92-113">See also</span></span>
+
+- [<span data-ttu-id="cfa92-114">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cfa92-114">ISymUnmanagedReader Interface</span></span>](isymunmanagedreader-interface.md)
