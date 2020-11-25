@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 58eed4c8-d80c-4c6a-a875-967a90dd926c
 topic_type:
 - apiref
-ms.openlocfilehash: a57e73495ac22a25a5f13c06d4c75dee7dde41e0
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 326e170fa98c9e365f9b68bedb585f547ca207ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894626"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727711"
 ---
 # <a name="icordebugchaingetprevious-method"></a>ICorDebugChain::GetPrevious Metodu
+
 İş parçacığı için önceki çerçeve zincirini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetPrevious (  
@@ -34,10 +35,12 @@ HRESULT GetPrevious (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppChain`  
  dışı Bu iş parçacığı için önceki çerçeve zincirini temsil eden bir ıcordebugzincirleri nesnesinin adresine yönelik bir işaretçi. Bu zincir ilk zincirdir, `ppChain` null olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

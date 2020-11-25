@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-ms.openlocfilehash: 4c79d0e4e37f3f884651e49c8fff6db72fac4f50
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb6b5d43e60b52c867535c42d59a098ef3c959bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179299"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726393"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP Yapısı
-Bir işlevin göreli mahsup değişiklikleri belirtir.  
+
+Bir işlevin göreli uzaklığının değişikliklerini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _COR_IL_MAP {  
@@ -38,57 +39,59 @@ typedef struct _COR_IL_MAP {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`oldOffset`|Eski Microsoft ara dili (MSIL) işlevin başına göre ofset.|  
-|`newOffset`|Yeni MSIL ofset fonksiyonun başına göre.|  
-|`fAccurate`|`true`haritalamanın doğru olduğu biliniyorsa; aksi `false`takdirde, .|  
+|`oldOffset`|İşlevin başlangıcına göre eski Microsoft ara dili (MSIL) uzaklıkları.|  
+|`newOffset`|İşlevin başlangıcına göre yeni MSIL fark.|  
+|`fAccurate`|`true` eşlemenin doğru olduğu bilinmektedir; Aksi takdirde, `false` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Haritanın biçimi aşağıdaki gibidir: Hata ayıklayıcı, `oldOffset` özgün, değiştirilmemiş MSIL kodu içinde bir MSIL mahsup anlamına gelir varsayar. Parametre, `newOffset` yeni, araçlı kod içinde ilgili MSIL mahsup anlamına gelir.  
+
+ Haritanın biçimi şu şekildedir: hata ayıklayıcı, `oldOffset` orijinal, DEĞIŞTIRILMEMIŞ MSIL kodu içindeki BIR MSIL sapmasını ifade eden kabul edilir. `newOffset`Parametresi, yeni ve belgelenmiş kod içindeki karşılık gelen MSIL sapmasını ifade eder.  
   
- Düzgün çalışmaya adım atmak için aşağıdaki gereksinimlerin karşılanması gerekir:  
+ Adımların düzgün çalışması için aşağıdaki gereksinimlerin karşılanması gerekir:  
   
-- Harita artan sırada sıralanmalıdır.  
+- Haritanın artan sırada sıralanması gerekir.  
   
-- İşletilmiş MSIL kodu yeniden sıralanmamalıdır.  
+- Belgelenmiş MSIL kodu yeniden sıralanmaz.  
   
-- Özgün MSIL kodu kaldırılmamalıdır.  
+- Orijinal MSIL kodu kaldırılmamalıdır.  
   
-- Harita, program veritabanı (PDB) dosyasındaki tüm sıra noktalarını eşlemek için girişleri içermelidir.  
+- Map, program veritabanı (PDB) dosyasındaki tüm sıra noktalarını eşlemek için girdiler içermelidir.  
   
- Harita, eksik girişleri interpolate etmez. Aşağıdaki örnekte bir harita ve sonuçları gösterilmektedir.  
+ Eşleme, eksik girişleri enterpolamıyor. Aşağıdaki örnek bir eşlemeyi ve sonuçlarını gösterir.  
   
- Harita:  
+ Harita  
   
-- 0 eski ofset, 0 yeni ofset  
+- 0 eski fark, 0 yeni fark  
   
-- 5 eski ofset, 10 yeni ofset  
+- 5 eski fark, 10 yeni fark  
   
-- 9 eski ofset, 20 yeni ofset  
+- 9 eski fark, 20 yeni fark  
   
  Sonuçlar:  
   
-- 0, 1, 2, 3 veya 4'lü eski bir ofset, 0'ın yeni bir mahsup'una eşlenir.  
+- 0, 1, 2, 3 veya 4 ' ün eski bir kayması, 0 ' ın yeni bir uzaklığa eşlenir.  
   
-- 5, 6, 7 veya 8'lik eski bir ofset, yeni ofset 10'a eşlenir.  
+- 5, 6, 7 veya 8 ' in eski bir kayması, yeni %10 ' a eşlenir.  
   
-- 9 veya daha yüksek eski bir ofset yeni ofset 20 eşlenir.  
+- Daha eski bir 9 veya üzeri fark, 20. yeni uzaklığa eşlenir.  
   
-- 0, 1, 2, 3, 4, 5, 6, 7, 8 veya 9'un yeni bir mahsup hakkı eski ofset 0'a eşlenir.  
+- 0, 1, 2, 3, 4, 5, 6, 7, 8 ya da 9 ' un yeni bir kayması, 0 ' dan eski uzaklığa eşlenir.  
   
-- 10, 11, 12, 13, 14, 15, 16, 17, 18 veya 19'luk yeni bir ofset, eski ofset 5'e eşlenir.  
+- 10, 11, 12, 13, 14, 15, 16, 17, 18 veya 19 ' un yeni bir kayması, 5 eski uzaklığa eşlenir.  
   
-- 20 veya daha yüksek yeni bir ofset eski ofset 9 eşlenir.  
+- 20 veya üzeri yeni bir konum, eski konum 9 ' A eşlenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorProf.idl  
+ **Üst bilgi:** CorDebug. IDL, CorProf. IDL  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama Yapıları](debugging-structures.md)
-- [Hata ayıklama](index.md)
+- [Hata Ayıklama](index.md)

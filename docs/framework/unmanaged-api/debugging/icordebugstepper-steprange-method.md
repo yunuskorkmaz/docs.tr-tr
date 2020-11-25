@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: b9776112-6e6d-4708-892a-8873db02e16f
 topic_type:
 - apiref
-ms.openlocfilehash: b040d9454a5a3a0d550bb645953c783357419f73
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d9698afa2723a5d772ecf5a055f09c5ee3bc13f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727659"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange Yöntemi
+
 Bu ICorDebugStepper, kendi kapsayıcı iş parçacığı aracılığıyla tek adımlı ve belirtilen aralıkların en son ötesinde koda ulaştığında geri dönüşmesine neden olur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT StepRange (  
@@ -36,16 +37,18 @@ HRESULT StepRange (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `bStepIn`  
- 'ndaki `true`İş parçacığı içinde çağrılan bir işleve adım adım olarak ayarlanır. `false`İşlevin üzerinde adımla için olarak ayarlayın.  
+ 'ndaki `true` İş parçacığı içinde çağrılan bir işleve adım adım olarak ayarlanır. `false`İşlevin üzerinde adımla için olarak ayarlayın.  
   
  `ranges`  
  'ndaki Her biri bir Aralık belirten COR_DEBUG_STEP_RANGE yapılarından oluşan dizi.  
   
  `cRangeCount`  
- 'ndaki `ranges`Dizinin boyutu.  
+ 'ndaki `ranges` Dizinin boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `StepRange`Yöntemi, [ICorDebugStepper:: Step](icordebugstepper-step-method.md) yöntemi gibi çalışarak, belirtilen aralığın dışındaki koda ulaşılana kadar tamamlanmaz.  
   
  Tek seferde bir yönergeyi adımlamayı kullanmaktan daha etkili olabilir. Aralıklar, Stepper 'ın çerçevesinin başından itibaren bir konum çiftleri listesi olarak belirtilir.  
@@ -53,6 +56,7 @@ HRESULT StepRange (
  Aralıklar bir yöntemin Microsoft ara dili (MSIL) koduna göredir. [ICorDebugStepper:: SetRangeIL](icordebugstepper-setrangeil-method.md) öğesini, `false` aralıkları bir yöntemin yerel koduna göre yapmak için ile çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

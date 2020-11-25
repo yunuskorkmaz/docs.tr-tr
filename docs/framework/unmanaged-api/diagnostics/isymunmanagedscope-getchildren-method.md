@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8f3c83a7a89553ba600f3e0e368eec0ddd0350e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614870"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727615"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren Metodu
+
 Bu kapsamın alt öğelerini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,19 +37,22 @@ HRESULT GetChildren(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cChildren`  
- 'ndaki `ULONG32`Dizi boyutunu belirten bir `children` .  
+ 'ndaki `ULONG32` Dizi boyutunu belirten bir `children` .  
   
  `pcChildren`  
- dışı `ULONG32`Alt öğeleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Alt öğeleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
   
  `children`  
  dışı Döndürülen alt öğe dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

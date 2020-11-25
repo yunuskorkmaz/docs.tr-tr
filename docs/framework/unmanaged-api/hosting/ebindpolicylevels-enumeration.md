@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-ms.openlocfilehash: 94d2ec12309249afbecdc4130f8fe20c927b0a9b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a0992ca8ac4bfffef681c74de455a0eeb627a042
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616378"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726853"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels Numaralandırması
+
 Derleme ilkesini uygulamak veya değiştirmek için kullanılacak düzeyi belirleyen bayraklar sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -49,22 +50,24 @@ typedef enum {
 |`ePolicyLevelNone`|İlke düzeyindeki bayrakları belirtir.|  
 |`ePolicyLevelPublisher`|İlkenin yayımcı düzeyinde uygulanması gerektiğini belirtir.|  
 |`ePolicyLevelRetargetable`|İlkenin değişken düzeylerinde geçerli olması gerektiğini belirtir.|  
-|`ePolicyPortability`|İlkenin .NET Framework bütünleştirilmiş kod uygulamaları arasında taşınabilirliği desteklemesi gerektiğini belirtir. Bkz. [ \< supporttaşınabilirlik>](../../configure-apps/file-schema/runtime/supportportability-element.md) yapılandırma dosyası öğesi.|  
+|`ePolicyPortability`|İlkenin .NET Framework bütünleştirilmiş kod uygulamaları arasında taşınabilirliği desteklemesi gerektiğini belirtir. Bkz [\<supportPortability>](../../configure-apps/file-schema/runtime/supportportability-element.md) . yapılandırma dosyası öğesi.|  
 |`ePolicyUnifiedToCLR`|İlkenin ortak dil çalışma zamanı (CLR) ile birleştirilmiş olması gerektiğini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu numaralandırma, uygulama ilkesindeki değişiklikleri belirtmek için [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) arabiriminin yöntemlerine geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kitaplık:** MSCorEE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ICLRAssemblyIdentityManager Arabirimi](iclrassemblyidentitymanager-interface.md)
-- [Barındırma Sabit Listeleri](hosting-enumerations.md)
+- [Barındırma Numaralandırmaları](hosting-enumerations.md)

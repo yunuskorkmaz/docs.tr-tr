@@ -16,14 +16,15 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 4c7051fa45dfc23a09b037b78030ff90af182a7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e3c97f28a05f2e5396872fe808cae0d48d5a4824
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829017"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727009"
 ---
 # <a name="writing-custom-attributes"></a>Özel Öznitelikler Yazma
+
 Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturmanız gerekmez. Nesne odaklı programlama hakkında bilgi sahibiyseniz ve sınıfların nasıl tasarlanacağını biliyorsanız, daha fazla bilgiye sahip olmanız gerekir. Özel öznitelikler temelde doğrudan veya dolaylı olarak türetilmiş geleneksel sınıflardır <xref:System.Attribute?displayProperty=nameWithType> . Geleneksel sınıflar gibi özel öznitelikler ise verileri depolayan ve alan yöntemler içerir.  
   
  Özel öznitelik sınıflarını doğru şekilde tasarlamak için birincil adımlar şunlardır:  
@@ -39,6 +40,7 @@ Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturma
  Bu bölümde, bu adımların her biri açıklanmakta ve özel bir [öznitelik örneği](#custom-attribute-example)ile sonlanır.  
   
 ## <a name="applying-the-attributeusageattribute"></a>AttributeUsageAttribute uygulanıyor  
+
  Özel bir öznitelik bildirimi, <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> öznitelik sınıfınızın bazı anahtar özelliklerini tanımlayan ile başlar. Örneğin, özniteetin diğer sınıfların devralınıp alınmayacağını belirtebilir veya özniteliğin hangi öğeleri uygulanacağını belirtebilirsiniz. Aşağıdaki kod parçası, ' nin nasıl kullanılacağını göstermektedir <xref:System.AttributeUsageAttribute> .  
   
  [!code-cpp[Conceptual.Attributes.Usage#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#5)]
@@ -48,6 +50,7 @@ Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturma
  , <xref:System.AttributeUsageAttribute> Özel özniteliklerin oluşturulması için önemli olan üç üyeye sahiptir: [AttributeTargets](#attributetargets-member), [devralınan](#inherited-property)ve [AllowMultiple](#allowmultiple-property).  
   
 ### <a name="attributetargets-member"></a>AttributeTargets üyesi  
+
  Önceki örnekte, <xref:System.AttributeTargets.All?displayProperty=nameWithType> Bu özniteliğin tüm program öğelerine uygulanabileceğini belirten belirtilmiştir. Alternatif olarak, <xref:System.AttributeTargets.Class?displayProperty=nameWithType> özniteliğiyle yalnızca bir sınıfa uygulanabileceğini veya <xref:System.AttributeTargets.Method?displayProperty=nameWithType> özniteliğiyle yalnızca bir yönteme uygulanabileceğini belirten belirtebilirsiniz. Tüm program öğeleri, bu şekilde özel bir öznitelik tarafından açıklama için işaretlenebilir.  
   
  Ayrıca birden çok değer geçirebilirsiniz <xref:System.AttributeTargets> . Aşağıdaki kod parçası, özel bir özniteliğin herhangi bir sınıfa veya yönteme uygulanabileceğini belirtir.  
@@ -57,6 +60,7 @@ Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturma
  [!code-vb[Conceptual.Attributes.Usage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#6)]  
   
 ### <a name="inherited-property"></a>Devralınan Özellik  
+
  <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType>Özelliği, özniteettiğiniz özniteliğin uygulandığı sınıflardan türetilmiş sınıflar tarafından devralınıp alınmayacağını belirtir. Bu özellik bir `true` (varsayılan) ya da bayrağını alır `false` . Aşağıdaki örnekte, `MyAttribute` varsayılan <xref:System.AttributeUsageAttribute.Inherited%2A> değerine sahiptir `true` , ancak `YourAttribute` <xref:System.AttributeUsageAttribute.Inherited%2A> değerini içerir `false` .  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
@@ -76,6 +80,7 @@ Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturma
  [!code-vb[Conceptual.Attributes.Usage#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#10)]  
   
 ### <a name="allowmultiple-property"></a>AllowMultiple özelliği  
+
  <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType>Özelliği, özniteliğinde birden çok özniteliğin bir öğede mevcut olup olmadığını gösterir. Olarak ayarlanırsa `true` , birden çok örneğe izin verilir; `false` (varsayılan) olarak ayarlandıysa, yalnızca bir örneğe izin verilir.  
   
  Aşağıdaki örnekte, `MyAttribute` varsayılan <xref:System.AttributeUsageAttribute.AllowMultiple%2A> değerine sahiptir `false` , ancak `YourAttribute` değerini içerir `true` .  
@@ -93,6 +98,7 @@ Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturma
  Hem <xref:System.AttributeUsageAttribute.AllowMultiple%2A> özelliği hem de <xref:System.AttributeUsageAttribute.Inherited%2A> özelliği olarak ayarlandıysa `true` , başka bir sınıftan devralınan bir sınıf bir özniteliği devralınabilir ve aynı özniteliğin aynı alt sınıfta uygulanan başka bir örneğine sahip olabilir. <xref:System.AttributeUsageAttribute.AllowMultiple%2A>Olarak ayarlanırsa `false` , üst sınıftaki özniteliklerin değerlerinin, alt sınıfta aynı özniteliğin yeni örnekleri tarafından üzerine yazılır.  
   
 ## <a name="declaring-the-attribute-class"></a>Öznitelik sınıfını bildirme  
+
  Uygulamasını uyguladıktan sonra <xref:System.AttributeUsageAttribute> , öznitedefinizin ayrıntılarını tanımlamaya başlayabilirsiniz. Bir öznitelik sınıfının bildirimi, aşağıdaki kodda gösterildiği gibi geleneksel bir sınıfın bildirimine benzer şekilde görünür.  
   
  [!code-cpp[Conceptual.Attributes.Usage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#14)]
@@ -110,6 +116,7 @@ Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturma
 - Microsoft Visual Basic 'de tüm özel öznitelik sınıflarının <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> özniteliği olmalıdır.  
   
 ## <a name="declaring-constructors"></a>Oluşturucu bildirme  
+
  Öznitelikler, geleneksel sınıflarla aynı şekilde oluşturucular ile başlatılır. Aşağıdaki kod parçası tipik bir öznitelik oluşturucusunu gösterir. Bu ortak Oluşturucu bir parametre alır ve değerine eşit bir üye değişkenini ayarlar.  
   
  [!code-cpp[Conceptual.Attributes.Usage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#15)]
@@ -125,6 +132,7 @@ Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturma
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>Özellikleri bildirme  
+
  Adlandırılmış bir parametre tanımlamak veya öznitedefinizin tarafından depolanan değerleri döndürmek için kolay bir yol sağlamak istiyorsanız, bir [özellik](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))bildirin. Öznitelik özellikleri döndürülecek veri türü açıklamasına sahip ortak varlıklar olarak bildirilmelidir. Özelliğin değerini tutacak değişkeni tanımlayın ve **Get** ve **set** yöntemleriyle ilişkilendirin. Aşağıdaki kod örneği, öznitelikinizdeki basit bir özelliğin nasıl uygulanacağını gösterir.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
@@ -132,6 +140,7 @@ Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturma
  [!code-vb[Conceptual.Attributes.Usage#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#16)]  
   
 ## <a name="custom-attribute-example"></a>Özel öznitelik örneği  
+
  Bu bölüm önceki bilgileri içerir ve bir kod bölümünün yazarı hakkındaki bilgileri belgeleyen basit bir özniteliğin nasıl tasarlanacağını gösterir. Bu örnekteki özniteliği, programcının adını ve düzeyini ve kodun gözden geçirilip geçirilmediğini depolar. Bu, kaydedilecek gerçek değerleri depolamak için üç özel değişken kullanır. Her değişken, değerleri alıp ayarlayan ortak bir özellik tarafından temsil edilir. Son olarak, Oluşturucu iki gerekli parametre ile tanımlanır.  
   
  [!code-cpp[Conceptual.Attributes.Usage#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#4)]

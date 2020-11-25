@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-ms.openlocfilehash: 702c5f9f2bc08c824bdc0607741a6afd65a3e89b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 62aad8339b34a4831211a45bd645906d73393d25
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497263"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727152"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs Yöntemi
+
 `ClassID`Belirtilen meta veri belirtecini ve `ClassID` tür bağımsız değişkenlerinin değerlerini kullanarak bir türün türünü alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,22 +38,24 @@ HRESULT GetClassFromTokenAndTypeArgs(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `moduleID`  
  'ndaki Türün bulunduğu modülün KIMLIĞI.  
   
  `typeDef`  
- 'ndaki `mdTypeDef`Türe başvuran bir meta veri belirteci.  
+ 'ndaki `mdTypeDef` Türe başvuran bir meta veri belirteci.  
   
  `cTypeArgs`  
  'ndaki Verilen tür için tür parametrelerinin sayısı. Bu değer, genel olmayan türler için sıfır olmalıdır.  
   
  `typeArgs`  
- 'ndaki `ClassID`Her biri türünün bağımsız değişkeni olan bir değerler dizisi. `typeArgs` `cTypeArgs` Sıfır olarak AYARLANDıYSA değeri null olabilir.  
+ 'ndaki `ClassID` Her biri türünün bağımsız değişkeni olan bir değerler dizisi. `typeArgs` `cTypeArgs` Sıfır olarak AYARLANDıYSA değeri null olabilir.  
   
  `pClassID`  
  dışı Belirtilen türün bir işaretçisi `ClassID` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetClassFromTokenAndTypeArgs`Yöntemi `mdTypeRef` meta veri belirteci yerine bir ile çağırmak `mdTypeDef` öngörülemeyen sonuçlara neden olabilir; çağıranlar, verileri geçirirken bir ile çözmelidir `mdTypeRef` `mdTypeDef` .  
   
  Tür zaten yüklü değilse, çağıran, `GetClassFromTokenAndTypeArgs` çok sayıda bağlamda tehlikeli bir işlem olan yüklemeyi tetikler. Örneğin, modüller veya diğer türler yüklenirken bu yöntemin çağrılması, çalışma zamanı döngüsel olarak yükleme yapmayı denediğinde sonsuz döngüye neden olabilir.  
@@ -60,6 +63,7 @@ HRESULT GetClassFromTokenAndTypeArgs(
  Genel olarak, kullanımı `GetClassFromTokenAndTypeArgs` önerilmez. Profil oluşturucular belirli bir tür için olaylar ile ilgileniyorsa, bu türden ve ' ı depolamalıdır `ModuleID` `mdTypeDef` ve belirli bir, istenen türde olup olmadığını denetlemek için [ICorProfilerInfo2:: GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md) kullanın `ClassID` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

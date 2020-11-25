@@ -2,12 +2,12 @@
 title: .NET Core çalışma zamanı ve SDK 'nın sürümü oluşturma
 description: Bu makale, .NET Core SDK ve çalışma zamanının nasıl sürümlendirilemez (anlamsal sürüm oluşturma ile benzerdir).
 ms.date: 06/24/2020
-ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: baa3f94947699d21ce7426054359d91f7781b565
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619760"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726710"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 'un sürümü oluşturma konusuna genel bakış
 
@@ -51,21 +51,21 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="understand-runtime-version-number-changes"></a>Çalışma zamanı sürüm numarası değişikliklerini anlama
 
-`MAJOR`Şu durumlarda artırılır:
+`MAJOR` Şu durumlarda artırılır:
 
 - Üründe önemli değişiklikler veya yeni bir ürün yönü meydana gelir.
 - Son değişiklikler alındı. Son değişiklikleri kabul etmek için yüksek bir çubuk vardır.
 - Eski sürüm artık desteklenmiyor.
 - Mevcut bağımlılığın daha yeni bir `MAJOR` sürümü benimsemiştir.
 
-`MINOR`Şu durumlarda artırılır:
+`MINOR` Şu durumlarda artırılır:
 
 - Ortak API yüzey alanı eklendi.
 - Yeni bir davranış eklenmiştir.
 - Mevcut bağımlılığın daha yeni bir `MINOR` sürümü benimsemiştir.
 - Yeni bir bağımlılık ortaya çıkarılmıştır.
 
-`PATCH`Şu durumlarda artırılır:
+`PATCH` Şu durumlarda artırılır:
 
 - Hata düzeltmeleri yapılır.
 - Daha yeni bir platform için destek eklenmiştir.
@@ -90,7 +90,7 @@ Bir sürüm kapatıldıktan sonra, yayın dalları genellikle günlük derlemele
 
 .NET Standard bir .NET başvuru derlemesinden oluşur. Her platforma özel birden çok uygulama vardır. Başvuru derlemesi, belirli bir .NET Standard sürümünün parçası olan .NET API 'lerinin tanımını içerir. Her uygulama, belirli bir platformda .NET Standard sözleşmesini yerine getirir. .NET Standard hakkında daha fazla bilgi edinmek için .NET kılavuzundaki [.NET Standard](../../standard/net-standard.md) makalesine bakın.
 
-.NET Standard Reference derlemesi bir `MAJOR.MINOR` sürüm oluşturma düzeni kullanır. `PATCH`düzey, yalnızca bir API belirtimi (uygulama olmadan) kullanıma sunduğundan ve tanıma göre API üzerinde yapılan herhangi bir değişiklik, özellik kümesindeki bir değişikliği ve bu nedenle yeni bir sürümü temsil ettiğinden .NET Standard için kullanışlı değildir `MINOR` .
+.NET Standard Reference derlemesi bir `MAJOR.MINOR` sürüm oluşturma düzeni kullanır. `PATCH` düzey, yalnızca bir API belirtimi (uygulama olmadan) kullanıma sunduğundan ve tanıma göre API üzerinde yapılan herhangi bir değişiklik, özellik kümesindeki bir değişikliği ve bu nedenle yeni bir sürümü temsil ettiğinden .NET Standard için kullanışlı değildir `MINOR` .
 
 Her platformdaki uygulamalar, genellikle platform sürümünün bir parçası olarak ve bu nedenle bu platformda .NET Standard kullanan programcılara yönelik olarak güncelleştirilemeyebilir.
 
@@ -98,11 +98,11 @@ Her platformdaki uygulamalar, genellikle platform sürümünün bir parçası ol
 
 | .NET Core | .NET Standard |
 |-----------|---------------|
-| 1.0       | 1,6 kadar     |
-| 2.0       | 2,0 kadar     |
+| 1,0       | 1,6 kadar     |
+| 2,0       | 2,0 kadar     |
 | 2.1       | 2,0 kadar     |
-| 2,2       | 2,0 kadar     |
-| 3.0       | 2,1 kadar     |
+| 2.2       | 2,0 kadar     |
+| 3,0       | 2,1 kadar     |
 | 3,1       | 2,1 kadar     |
 
 .NET Standard sürümlerinin etkileşimli bir tablosu ve bunların .NET uygulamalarına nasıl karşılık geldiği için, bkz. [.NET Standard sürümler](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
@@ -113,4 +113,4 @@ Her platformdaki uygulamalar, genellikle platform sürümünün bir parçası ol
 - [.NET Core dağıtımı paketleme](../distribution-packaging.md)
 - [.NET Core destek yaşam döngüsü olgu sayfası](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2 + sürüm bağlama](https://github.com/dotnet/designs/issues/3)
-- [.NET Core için Docker görüntüleri](https://hub.docker.com/_/microsoft-dotnet-core/)
+- [.NET Core için Docker görüntüleri](https://hub.docker.com/_/microsoft-dotnet/)

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 840a71ed-bf5a-4f5e-8ed6-762222b34493
 topic_type:
 - apiref
-ms.openlocfilehash: 56dc5f87b32b3aaa0bfbb69541d5a01ae26606ab
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 747f165a98dfd1264ea58d61aaa1615c6d71e073
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213245"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726304"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>ICorDebugFunction2::GetJMCStatus Metodu
+
 Bu ICorDebugFunction2 nesnesi tarafından temsil edilen işlevin Kullanıcı kodu olarak işaretlenip işaretlenmediğini gösteren bir değer alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetJMCStatus (  
@@ -34,13 +35,16 @@ HRESULT GetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbIsJustMyCode`  
  dışı Boolean değere yönelik bir işaretçi `true` , bu işlev kullanıcı kodu olarak işaretlenmişse; Aksi takdirde değer olur `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bunu temsil eden işlevin `ICorDebugFunction2` ayıklanamayacağını belirlerseniz, `pbIsJustMyCode` her zaman olur `false` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-ms.openlocfilehash: 525fa2efa39909390d874fb97d9f11e647340ea9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ea4f6f129cf2919124b1bef1fd837f2b1e13760e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496951"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727061"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress Metodu
+
 Belirtilen göreli sanal adres (RVA) statik alanının adresini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT GetRVAStaticAddress(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `classId`  
  'ndaki İstenen RVA-statik alanını içeren sınıfın KIMLIĞI.  
   
@@ -45,6 +47,7 @@ HRESULT GetRVAStaticAddress(
  dışı RVA-statik alanının adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetRVAStaticAddress`Yöntemi aşağıdakilerden birini döndürebilir:  
   
 - Belirtilen bağlamda verilen statik alana bir adres atanmadığı takdirde bir CORPROF_E_DATAINCOMPLETE HRESULT.  
@@ -54,6 +57,7 @@ HRESULT GetRVAStaticAddress(
  Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetRVAStaticAddress` tüm statik alanları için CORPROF_E_DATAINCOMPLETE döndürür, ancak bazı statik alanlar zaten başlatılmış olabilir ve atık toplama nesnelerini kök olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

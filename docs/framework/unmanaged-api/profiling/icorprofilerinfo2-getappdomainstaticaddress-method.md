@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a9e0ea7-a9e2-4817-b1c4-fcf15b215ea9
 topic_type:
 - apiref
-ms.openlocfilehash: 3dc5f04504cca632892c16d31c92a33935b356e0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 271f9f4fd0d85407aedf088ffb524fa6e0398e37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497344"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727217"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress Yöntemi
+
 Belirtilen uygulama etki alanının kapsamındaki belirtilen uygulama etki alanı-statik alanının adresini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ RESULT GetAppDomainStaticAddress(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `classId`  
  'ndaki İstenen uygulama etki alanı-statik alanını içeren sınıfın sınıf KIMLIĞI.  
   
@@ -49,6 +51,7 @@ RESULT GetAppDomainStaticAddress(
  dışı Belirtilen uygulama etki alanı içindeki statik alanın adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetAppDomainStaticAddress`Yöntemi aşağıdakilerden birini döndürebilir:  
   
 - Belirtilen bağlamda verilen statik alana bir adres atanmadığı takdirde bir CORPROF_E_DATAINCOMPLETE HRESULT.  
@@ -58,6 +61,7 @@ RESULT GetAppDomainStaticAddress(
  Bir sınıfın sınıf oluşturucusu tamamlanmadan önce `GetAppDomainStaticAddress` tüm statik alanları için CORPROF_E_DATAINCOMPLETE döndürür, ancak bazı statik alanlar zaten başlatılmış ve atık toplama nesnelerini kök olarak oluşturacak olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e986986-2223-4d5f-b040-85d716146924
 topic_type:
 - apiref
-ms.openlocfilehash: 200e68abb3f176c267045bf2a5e7e35d18400519
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7c4589c3371d2c66279684a365cde102bef58c6e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610099"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727594"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant Yöntemi
+
 Sabit değer için bir ad tanımlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,22 +37,25 @@ HRESULT DefineConstant(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `name`  
- 'ndaki `WCHAR`Sabit adı tanımlayan bir işaretçisi.  
+ 'ndaki `WCHAR` Sabit adı tanımlayan bir işaretçisi.  
   
  `value`  
  'ndaki Sabitin değeri.  
   
  `cSig`  
- 'ndaki `signature`Dizinin boyutu.  
+ 'ndaki `signature` Dizinin boyutu.  
   
  `signature`  
  'ndaki Sabit için tür imzası.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

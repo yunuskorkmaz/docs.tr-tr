@@ -6,17 +6,19 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dd6999e9f9e16264bde3cf62ce3a888841347607
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494052"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727477"
 ---
 # <a name="profiling-interfaces"></a>Profil Oluşturma Arabirimleri
+
 Bu bölümde, ortak dil çalışma zamanı (CLR) tarafından yürütülen bir programın profilini oluşturma olanağı sağlayan yönetilmeyen arabirimler açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [ICLRProfiling Arabirimi](iclrprofiling-interface.md)  
  Bir profil oluşturucunun çalışan bir işleme iliştirmesine olanak sağlayan [AttachProfiler](iclrprofiling-attachprofiler-method.md) yöntemini sağlar.  
   
@@ -81,7 +83,7 @@ Ortak dil çalışma zamanının, dinamik bir yöntemin atık olarak toplandığ
  Uygulama veya profil oluşturucu tarafından yüklenen bir modül koleksiyonunda sırayla yinelemek için yöntemler sağlar.  
   
  [ICorProfilerObjectEnum Arabirimi](icorprofilerobjectenum-interface.md)  
- [Ngen. exe (yerel görüntü Oluşturucu)](../../tools/ngen-exe-native-image-generator.md)tarafından oluşturulan dondurulmuş nesneler koleksiyonunda sırayla yinelemek için yöntemler sağlar.  
+ [Ngen.exe (yerel görüntü Oluşturucu)](../../tools/ngen-exe-native-image-generator.md)tarafından oluşturulan dondurulmuş nesnelerden oluşan bir koleksiyon aracılığıyla sırayla yinelemek için yöntemler sağlar.  
   
  [ICorProfilerThreadEnum Arabirimi](icorprofilerthreadenum-interface.md)  
  CLR 'deki iş parçacığı koleksiyonunda sırayla yinelemek için yöntemler sağlar.  
@@ -90,10 +92,11 @@ Ortak dil çalışma zamanının, dinamik bir yöntemin atık olarak toplandığ
  Yeni bir Microsoft ara dili (MSIL) işlev gövdesi için bellek ayırmak üzere [ayırma](imethodmalloc-alloc-method.md) yöntemi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Profil oluşturmaya genel bakış](profiling-overview.md)  
+
+ [Profil Oluşturmaya Genel Bakış](profiling-overview.md)  
   
  [Profil Oluşturma Genel Statik İşlevleri](profiling-global-static-functions.md)  
   
- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)  
+ [Profil Oluşturma Numaralandırmaları](profiling-enumerations.md)  
   
  [Profil Oluşturma Yapıları](profiling-structures.md)

@@ -11,28 +11,32 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 8bac9d265211d2f266db634d4bcebb87c2debd9a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 7613d93e1ca2ac9594759434966745a238ba166e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726736"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
+
 Görev tabanlı zaman uyumsuz model ' i (dokunarak) üç şekilde uygulayabilirsiniz: C# ve Visual Basic derleyicileri, Visual Studio 'da, el ile veya derleyicinin ve el ile yapılan yöntemlerin bir birleşimi aracılığıyla. Aşağıdaki bölümlerde her bir yöntem ayrıntılı olarak ele alınmaktadır. İşlem-bağlantılı ve g/ç ile bağlantılı zaman uyumsuz işlemleri uygulamak için dokunma düzenine de yararlanabilirsiniz. [Iş yükleri](#workloads) bölümü her bir işlem türünü ele alır.
 
 ## <a name="generating-tap-methods"></a>DOKUNMA yöntemlerini oluşturma
 
 ### <a name="using-the-compilers"></a>Derleyicileri kullanma
+
 .NET Framework 4,5 ' den başlayarak, `async` anahtar kelimesiyle ( `Async` Visual Basic) nitelendirilen tüm yöntemler zaman uyumsuz bir yöntem olarak değerlendirilir ve C# ve Visual Basic DERLEYICILERI, dokunarak yöntemi zaman uyumsuz olarak uygulamak için gereken dönüştürmeleri gerçekleştirir. Zaman uyumsuz bir yöntem, ya da <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesnesi döndürmelidir. İkincisi için, işlevin gövdesi bir döndürmelidir `TResult` ve derleyici bu sonucun elde edilen görev nesnesi aracılığıyla kullanılabilir hale gelmesini sağlar. Benzer şekilde, yöntemin gövdesinde işlenmemiş olan tüm özel durumlar, çıkış görevine göre sıralanır ve sonuçta elde edilen görevin durumunda sonlanmasına neden olur <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> . Bu kuralın istisnası, bir <xref:System.OperationCanceledException> (ya da türetilmiş tür) işlenmemiş olduğunda, sonuçta elde edilen görevin durumu sona erdiği durumdur <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .
 
 ### <a name="generating-tap-methods-manually"></a>DOKUNMA yöntemlerini el ile oluşturma
-Uygulama üzerinde daha iyi denetim için dokunma deseninin el ile uygulanmasını sağlayabilirsiniz. Derleyici, ad <xref:System.Threading.Tasks?displayProperty=nameWithType> alanı ve ad alanındaki destekleme türlerinden açığa çıkarılan genel yüzey alanını kullanır <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> . DOKUNARAK kendinize uygulamak için bir <xref:System.Threading.Tasks.TaskCompletionSource%601> nesne oluşturur, zaman uyumsuz işlem gerçekleştirir ve tamamlandığında,, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A> <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> veya <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> yöntemini ya da `Try` Bu yöntemlerin birinin sürümünü çağırın. DOKUNMA yöntemini el ile uyguladığınızda, gösterilen zaman uyumsuz işlem tamamlandığında ortaya çıkan görevi tamamlamalısınız. Örneğin:
+
+Uygulama üzerinde daha iyi denetim için dokunma deseninin el ile uygulanmasını sağlayabilirsiniz. Derleyici, ad <xref:System.Threading.Tasks?displayProperty=nameWithType> alanı ve ad alanındaki destekleme türlerinden açığa çıkarılan genel yüzey alanını kullanır <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> . DOKUNARAK kendinize uygulamak için bir <xref:System.Threading.Tasks.TaskCompletionSource%601> nesne oluşturur, zaman uyumsuz işlem gerçekleştirir ve tamamlandığında,, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A> <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> veya <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> yöntemini ya da `Try` Bu yöntemlerin birinin sürümünü çağırın. DOKUNMA yöntemini el ile uyguladığınızda, gösterilen zaman uyumsuz işlem tamamlandığında ortaya çıkan görevi tamamlamalısınız. Örnek:
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
 
 ### <a name="hybrid-approach"></a>Karma yaklaşım
+
  DOKUNMA deseninin el ile uygulanmasını, ancak derleyicinin çekirdek mantığını derleyiciye devretmek için yararlı bulabilirsiniz. Örneğin, bir derleyicinin ürettiği zaman uyumsuz yöntem dışındaki bağımsız değişkenleri doğrulamak istediğinizde karma yaklaşımı kullanmak isteyebilirsiniz, böylece özel durumlar, nesne aracılığıyla gösterilmektense metodun doğrudan çağıranına çıkabilir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> :
 
  [!code-csharp[Conceptual.TAP_Patterns#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#2)]
@@ -41,9 +45,11 @@ Uygulama üzerinde daha iyi denetim için dokunma deseninin el ile uygulanmasın
  Bu tür bir temsilcinin yararlı olduğu başka bir durum da hızlı yol iyileştirme uygulıyoruz ve önbelleğe alınmış bir görevi döndürmek isteyeceksiniz.
 
 ## <a name="workloads"></a>İş yükleri
+
 İşlem-bağlantılı ve g/ç ile bağlantılı zaman uyumsuz işlemleri dokunarak yöntemler olarak uygulayabilirsiniz. Bununla birlikte, bir kitaplıktan ortak yöntemler genel kullanıma sunulduğunda, yalnızca g/ç 'ye bağlanan işlemleri içeren iş yükleri için sağlanması gerekir (hesaplamayı da içerebilir, ancak tamamen hesaplama olmamalıdır). Bir yöntem yalnızca işlem bağlantılı ise, yalnızca zaman uyumlu bir uygulama olarak kullanıma sunulmalıdır. Bunu kullanan kod daha sonra, işi başka bir iş parçacığına devretmek veya paralellik elde etmek için, bu zaman uyumlu yöntemin bir çağrısını bir göreve sarmayı tercih edebilir. Bir yöntem g/ç bağlantılı ise, yalnızca zaman uyumsuz bir uygulama olarak kullanıma sunulmalıdır.
 
 ### <a name="compute-bound-tasks"></a>İşlem bağlantılı görevler
+
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>Sınıfı, yoğun şekilde yoğun işlemleri temsil etmek için idealdir. Varsayılan olarak, <xref:System.Threading.ThreadPool> verimli yürütme sağlamak için sınıfındaki özel desteğin avantajlarından yararlanır ve ayrıca zaman uyumsuz hesaplamaların ne zaman, nerede ve nasıl yürütüldüğü üzerinde önemli bir denetim sağlar.
 
 Aşağıdaki yollarla, işlem ile bağlantılı görevler oluşturabilirsiniz:
@@ -74,6 +80,7 @@ Aşağıdaki yollarla, işlem ile bağlantılı görevler oluşturabilirsiniz:
 Görevin gövdesinde başka bir özel durum yakalanıyorsa, görev <xref:System.Threading.Tasks.TaskStatus.Faulted> durumunda sonlanır ve görevde bekleyen ya da sonuç olarak bir özel durum oluşturulmasına neden olur.
 
 ### <a name="io-bound-tasks"></a>G/ç bağlantılı görevler
+
 Yürütmenin tamamı için bir iş parçacığı tarafından doğrudan yedeklenmez bir görev oluşturmak için <xref:System.Threading.Tasks.TaskCompletionSource%601> türünü kullanın. Bu tür <xref:System.Threading.Tasks.TaskCompletionSource%601.Task%2A> , ilişkili bir örnek döndüren bir özelliği gösterir <xref:System.Threading.Tasks.Task%601> . Bu görevin yaşam döngüsü,,, <xref:System.Threading.Tasks.TaskCompletionSource%601> <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A> <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> ve çeşitleri gibi yöntemlerle denetlenir `TrySet` .
 
 Belirli bir süre sonra tamamlanacak bir görev oluşturmak istediğinizi varsayalım. Örneğin, Kullanıcı arabirimindeki bir etkinliği geciktirmek isteyebilirsiniz. <xref:System.Threading.Timer?displayProperty=nameWithType>Sınıfı zaten belirli bir süre geçtikten sonra bir temsilciyi zaman uyumsuz olarak çağırma özelliği sağlar ve <xref:System.Threading.Tasks.TaskCompletionSource%601> bunu kullanarak <xref:System.Threading.Tasks.Task%601> süreölçer üzerine bir ön nokta koyabilirsiniz, örneğin:
@@ -92,6 +99,7 @@ Belirli bir süre sonra tamamlanacak bir görev oluşturmak istediğinizi varsay
 [!code-vb[Conceptual.TAP_Patterns#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#6)]
 
 ### <a name="mixed-compute-bound-and-io-bound-tasks"></a>Karma işlem ile bağlantılı ve g/ç 'ye sınırlı görevler
+
 Zaman uyumsuz yöntemler yalnızca işlem ile bağlantılı veya g/ç bağlantılı işlemlerle sınırlı değildir ancak ikisinin bir karışımını temsil edebilir. Aslında, birden çok zaman uyumsuz işlem genellikle daha büyük karışık işlemler halinde birleştirilir. Örneğin, önceki bir örnekte gösterilen `RenderAsync` yöntemi, bazı giriş `imageData` verilerine göre bir resmi işlemek için yoğun bir hesaplama işlem gerçekleştirdi. Bu `imageData` , zaman uyumsuz olarak erişebileceğiniz bir Web hizmetinden gelebilir:
 
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]

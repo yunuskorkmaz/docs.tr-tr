@@ -14,19 +14,20 @@ helpviewer_keywords:
 - Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 587e085f6fe9f6c19d3605c673cd3bd6f68162f1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c2a7fae32e82caae40a95bfdad10fa78082988ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127372"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726797"
 ---
 # <a name="next-function"></a>Next işlevi
+
 Bir [beginenumeration](beginenumeration.md)çağrısıyla başlayan bir Numaralandırmadaki bir sonraki özelliği alır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Next (
@@ -52,18 +53,18 @@ HRESULT Next (
 'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `pstrName`\
-dışı Özellik adını içeren yeni bir `BSTR`. Ad gerekli değilse bu parametreyi `null` olarak ayarlayabilirsiniz.
+dışı `BSTR` Özellik adını içeren yeni bir. Ad gerekmiyorsa, bu parametreyi olarak ayarlayabilirsiniz `null` .
 
 `pVal`\
-dışı Özelliğin değeriyle doldurulmuş bir `VARIANT`. Değer gerekli değilse bu parametreyi `null` olarak ayarlayabilirsiniz. İşlev bir hata kodu döndürürse, `pVal` geçirilen `VARIANT` değiştirilmemiş olarak kalır.
+dışı , `VARIANT` Özelliğinin değeri ile doldurulmuştur. Değer gerekmiyorsa, bu parametreyi olarak ayarlayabilirsiniz `null` . İşlev bir hata kodu döndürürse, `VARIANT` geçilen öğesine `pVal` değiştirilmemiş olarak kalır.
 
 `pvtType`\
-dışı `CIMTYPE` değişkenine yönelik bir işaretçi (özelliğin türünün yerleştirildiği bir `LONG`). Bu özelliğin değeri bir `VT_NULL_VARIANT`olabilir, bu durumda özelliğin gerçek türünü belirlemesi gerekir. Bu parametre de `null`olabilir.
+dışı Bir `CIMTYPE` değişken işaretçisi ( `LONG` özelliğin türünün yerleştirildiği bir). Bu özelliğin değeri bir olabilir `VT_NULL_VARIANT` , bu durumda özelliğin gerçek türünü belirlenmesi gerekir. Bu parametre de olabilir `null` .
 
 `plFlavor`\
-[out] `null`veya özelliğin kaynağına bilgi alan bir değer. Olası değerler için [açıklamalar] bölümüne bakın.
+[out] `null` veya özelliğin kaynağına bilgi alan bir değer. Olası değerler için [açıklamalar] bölümüne bakın.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
 Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
@@ -71,7 +72,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçersiz. |
-| `WBEM_E_UNEXPECTED` | 0x8004101D | [`BeginEnumeration`](beginenumeration.md) işlevine hiçbir çağrı yoktu. |
+| `WBEM_E_UNEXPECTED` | 0x8004101D | İşleve bir çağrı yoktu [`BeginEnumeration`](beginenumeration.md) . |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Yeni bir sabit listesi başlatmak için yeterli kullanılabilir bellek yok. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem ile Windows Yönetimi arasındaki uzak yordam çağrısı başarısız oldu. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
@@ -83,9 +84,9 @@ Bu işlev [IWbemClassObject:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbe
 
 Bu yöntem ayrıca sistem özelliklerini de döndürür.
 
-Özelliğin temeldeki türü bir nesne yolu, bir tarih veya saat ya da başka bir özel tür ise, döndürülen tür yeterli bilgi içermez. Çağıran, özelliğin bir nesne başvurusu, bir tarih veya saat ya da başka bir özel tür olup olmadığını belirlemesi için belirtilen özelliğin `CIMTYPE` incelemesi gerekir.
+Özelliğin temeldeki türü bir nesne yolu, bir tarih veya saat ya da başka bir özel tür ise, döndürülen tür yeterli bilgi içermez. Çağıran, `CIMTYPE` özelliğin bir nesne başvurusu, bir tarih veya saat ya da başka bir özel tür olduğunu belirleyebilmek için belirtilen özelliği için öğesini incelemesi gerekir.
 
-`plFlavor` `null`değilse, `LONG` değeri özelliğin kaynağı hakkında aşağıdaki gibi bilgileri alır:
+`plFlavor`Değilse `null` , `LONG` değeri özelliğin kaynağı hakkında aşağıdaki gibi bilgileri alır:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
@@ -99,7 +100,7 @@ Bu yöntem ayrıca sistem özelliklerini de döndürür.
 
 **Üst bilgi:** WMINet_Utils. IDL
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

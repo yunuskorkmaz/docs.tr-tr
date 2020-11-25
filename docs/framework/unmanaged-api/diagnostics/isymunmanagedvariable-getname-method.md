@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: eedf1ef0-9d4a-4847-a201-4e99572dfe5e
 topic_type:
 - apiref
-ms.openlocfilehash: b48d131fa99b65d38856d2b635bf59145db9157e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f9da3ca8684da3bbc87146b3b52effdc4f91393d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615247"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726892"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName Metodu
+
 Bu değişkenin adını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,19 +37,22 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cchName`  
- 'ndaki `pcchName`Parametrenin işaret ettiği arabelleğin uzunluğu.  
+ 'ndaki `pcchName` Parametrenin işaret ettiği arabelleğin uzunluğu.  
   
  `pcchName`  
- dışı `ULONG32`Null sonlandırma dahil olmak üzere, adı içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Null sonlandırma dahil olmak üzere, adı içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
  `szName`  
  dışı Adı depolayan arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

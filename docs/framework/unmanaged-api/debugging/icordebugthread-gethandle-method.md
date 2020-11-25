@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-ms.openlocfilehash: 16aafa439fc81c3606f98ca2ba860316ec46e0db
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5debd09f3ca0b4562f62913f9530cc4fa6f9110b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379747"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728036"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle Yöntemi
+
 Bu ICorDebugThread 'in etkin bölümü için geçerli tanıtıcıyı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetHandle (  
@@ -34,15 +35,18 @@ HRESULT GetHandle (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `phThreadHandle`  
  dışı Bu iş parçacığının etkin bölümünün tanıtıcısı olan bir HTHREAD için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Tanıtıcı, işlem yürütüldüğü gibi değişebilir ve iş parçacığının farklı parçaları için farklı olabilir.  
   
  Bu tanıtıcının sahibi hata ayıklama API 'sidir. Hata ayıklayıcı, kullanmadan önce onu çoğaltmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

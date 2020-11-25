@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: 19d0dcf8a5633371765861fcc29df4ef8c91ebc4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 85df98e83396c9439c28dd41a3ffa02b820c9c3e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795722"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726060"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister Numaralandırması
+
 Belirli bir işlemci mimarisiyle ilişkili kayıtları belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorDebugRegister {  
@@ -190,15 +191,17 @@ typedef enum CorDebugRegister {
 |`REGISTER_ARM_LR`|ARM işlemcisinde bağlantı yazmacı (R14).|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  IA-64 işlemcisinde 128 genel amaçlı veri kayıtları ve 128 kayan nokta veri kayıtları vardır ancak yalnızca değerler `REGISTER_IA64_R0` ve `REGISTER_IA64_F0` sağlanır. Diğer değerler aşağıdaki şekilde belirlenebilir:  
   
-- IA-64 işlemcisinde #127 `REGISTER_IA64_R0` veri kaydı `REGISTER_IA64_R1` aracılığıyla `REGISTER_IA64_R127`#1 veri kaydına karşılık gelen değerler için kayıt numarasını öğesine ekleyin.  
+- `REGISTER_IA64_R0` `REGISTER_IA64_R1` `REGISTER_IA64_R127` IA-64 işlemcisinde #127 veri kaydı aracılığıyla #1 veri kaydına karşılık gelen değerler için kayıt numarasını öğesine ekleyin.  
   
-- , IA-64 işlemcisinde `REGISTER_IA64_F0` #127 FP `REGISTER_IA64_F1` VERI `REGISTER_IA64_F127`kaydı aracılığıyla #1 FP veri kaydına karşılık gelen değerler için kayıt numarasını öğesine ekleyin.  
+- , `REGISTER_IA64_F0` `REGISTER_IA64_F1` `REGISTER_IA64_F127` IA-64 işlemcisinde #127 FP veri kaydı aracılığıyla #1 FP veri kaydına karşılık gelen değerler için kayıt numarasını öğesine ekleyin.  
   
- Örneğin, IA-64 işlemcisinde #83 veri kaydını belirtmeniz gerekiyorsa + 83 kullanın `REGISTER_IA64_R0` .  
+ Örneğin, IA-64 işlemcisinde #83 veri kaydını belirtmeniz gerekiyorsa `REGISTER_IA64_R0` + 83 kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

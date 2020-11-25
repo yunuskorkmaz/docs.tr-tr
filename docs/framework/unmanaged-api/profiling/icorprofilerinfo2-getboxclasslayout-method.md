@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-ms.openlocfilehash: 630b67a64716f26577bbc376970e4f76216f4da5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff39a688132112e88438bc192d7c1ab61f169400
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497362"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727165"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout Yöntemi
+
 Belirtilen değer türünün paketleniyorsa nerede bulunduğu hakkında bilgi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetBoxClassLayout(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `classId`  
  'ndaki Kutulanmış değer türünü tanımlayan sınıfın KIMLIĞI.  
   
@@ -41,9 +43,11 @@ HRESULT GetBoxClassLayout(
  dışı Değer türünün kutulanmış nesne KIMLIĞI işaretçisine göre göreli bir tamsayı.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `pBufferOffset`Değer, bir kutu içindeki değer türünün konumudur. `pBufferOffset`Kutulanmış bir nesneye uygulandıktan sonra, nesnenin değerini yorumlamak için değer türünün sınıf düzeni kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-ms.openlocfilehash: ca2d00611a7530dfb0d1c2a27123947bdf69820d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ca6c89a671c4d7882e7cefdb820d07ac5636530
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727412"
 ---
 # <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT Yapısı
-Bellekte bir dizi nesnesinin düzeni hakkında bilgi sağlar.  
+
+Bellekte bir dizi nesnesinin yerleşimi hakkında bilgi sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct COR_ARRAY_LAYOUT {  
@@ -44,29 +45,31 @@ typedef struct COR_ARRAY_LAYOUT {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`componentID`|Dizinin içerdiği nesne türünün tanımlayıcısı.|  
-|`componentType`|Bileşenin çöp toplama başvurusu mu, değer sınıfı mı yoksa ilkel mi olduğunu gösteren bir CorElementType numaralandırma değeri.|  
-|`firstElementOffset`|Dizideki ilk öğeye ofset.|  
+|`componentType`|Bileşenin bir çöp toplama başvurusu, bir değer sınıfı veya temel öğe olup olmadığını gösteren bir CorElementType numaralandırma değeri.|  
+|`firstElementOffset`|Dizideki ilk öğenin boşluğu.|  
 |`elementSize`|Her öğenin boyutu.|  
-|`countOffset`|Dizideki öğe sayısına mahsup.|  
-|`rankSize`|Rütbenin büyüklüğü, baytlar halinde.|  
-|`numRanks`|Dizideki rütbe sayısı.|  
-|`rankOffset`|Rütbelerin başladığı ofset.|  
+|`countOffset`|Dizideki öğe sayısının boşluğu.|  
+|`rankSize`|Derecenin bayt cinsinden boyutu.|  
+|`numRanks`|Dizideki derecelendirmelerinin sayısı.|  
+|`rankOffset`|Derecelendirmelerinin başlayacağı fark.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Alan, `rankSize` çok boyutlu bir dizideki bir sıralamanın boyutunu belirtir. Tek boyutlu diziler için de doğrudur.  
+
+ `rankSize`Alan, çok boyutlu bir dizideki bir derece boyutunu belirtir. Tek boyutlu diziler için de doğrudur.  
   
- Tek boyutlu `numRanks` bir dizi ve `N` çok boyutlu boyutlar dizisi `N` için değeri 1'dir.  
+ Değeri, `numRanks` tek boyutlu bir dizi için ve `N` çok boyutlu bir boyut dizisi için 1 ' dir `N` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama Yapıları](debugging-structures.md)
-- [Hata ayıklama](index.md)
+- [Hata Ayıklama](index.md)

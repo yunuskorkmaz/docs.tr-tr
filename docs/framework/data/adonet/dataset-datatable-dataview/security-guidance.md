@@ -3,12 +3,12 @@ title: Veri kümesi ve DataTable Güvenlik Kılavuzu
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: e9973df02ff478eedc932099fb8be0526a97b899
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679461"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726073"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Veri kümesi ve DataTable Güvenlik Kılavuzu
 
@@ -18,7 +18,7 @@ Bu makale için geçerlidir:
 * .NET Core ve üzeri
 * .NET 5,0 ve üzeri
 
-[DataSet](/dotnet/api/system.data.dataset) ve [DataTable](/dotnet/api/system.data.datatable) türleri, veri kümelerinin yönetilen nesneler olarak belirtilmesine izin veren eski .net bileşenleridir. Bu bileşenler, .NET 1,0 ' de özgün [ADO.NET altyapısının](./index.md)bir parçası olarak sunulmuştur. Bu kullanıcıların, ilişkisel veri kümesi üzerinde yönetilen bir görünüm sağlaması, verilerin temel kaynağının XML, SQL veya başka bir teknoloji olması durumunda olup olmadığını soyutlıyoruz.
+[DataSet](/dotnet/api/system.data.dataset) ve [DataTable](/dotnet/api/system.data.datatable) türleri, veri kümelerinin yönetilen nesneler olarak belirtilmesine izin veren eski .net bileşenleridir. Bu bileşenler, özgün [ADO.NET altyapısının](./index.md)bir parçası olarak .NET Framework 1,0 ' de tanıtılmıştı. Bu kullanıcıların, ilişkisel veri kümesi üzerinde yönetilen bir görünüm sağlaması, verilerin temel kaynağının XML, SQL veya başka bir teknoloji olması durumunda olup olmadığını soyutlıyoruz.
 
 ADO.NET hakkında daha fazla bilgi için, bkz. [ADO.net belgeleri](../index.md).
 
@@ -34,13 +34,9 @@ ADO.NET hakkında daha fazla bilgi için, bkz. [ADO.net belgeleri](../index.md).
 
 Gelen XML verileri, türü bu listede olmayan bir nesne içeriyorsa:
 
-* Aşağıdaki ileti ve yığın izleme ile bir özel durum oluşturulur.  
-Hata İletisi:  
-Burada System. InvalidOperationException: Type ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = ' kullanılamaz \<token value\> . [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)Daha fazla ayrıntı için bkz..  
-Yığın Izlemesi:  
-System. Data. TypeLimiter. EnsureTypeIsAllowed (tür türü, TypeLimiter capturedLimiter) konumunda  
-System. Data. DataColumn. UpdateColumnType (tür türü, StorageType typeCode) konumunda  
-System. Data. DataColumn. set_DataType (tür değeri)  
+* Aşağıdaki ileti ve yığın izleme ile bir özel durum oluşturulur.
+Hata Iletisi: System. InvalidOperationException: Type ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' burada buna izin verilmez. [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)Daha fazla ayrıntı için bkz..
+Yığın Izlemesi: System.Data.DataColumn.set_DataType (tür değeri) konumundaki System. Data. TypeLimiter. EnsureTypeIsAllowed (tür türü, TypeLimiter capturedLimiter).
 
 * Seri durumdan çıkarma işlemi başarısız olur.
 
@@ -134,7 +130,7 @@ Uygulamanız 2,0 veya 3,5 .NET Framework hedefliyorsa, izin verilen türler list
 
 #### <a name="extend-programmatically-net-framework-net-core-net-50"></a>Programlı olarak genişlet (.NET Framework, .NET Core, .NET 5.0 +)
 
-İzin verilen türlerin listesi Ayrıca, aşağıdaki kodda gösterildiği gibi, iyi bilinen Key _System. Data. Datasetdefaultallodilimlerin Types_ile [AppDomain. SetData](/dotnet/api/system.appdomain.setdata) kullanılarak programlı bir şekilde genişletilebilir.
+İzin verilen türlerin listesi Ayrıca, aşağıdaki kodda gösterildiği gibi, iyi bilinen Key _System. Data. Datasetdefaultallodilimlerin Types_ ile [AppDomain. SetData](/dotnet/api/system.appdomain.setdata) kullanılarak programlı bir şekilde genişletilebilir.
 
 ```csharp
 Type[] extraAllowedTypes = new Type[]
@@ -157,7 +153,7 @@ Uzantı mekanizması kullanılıyorsa, Key _System. Data. Datasetdefaultallodili
 > [!WARNING]
 > "Denetim modunda" bir uygulamanın çalıştırılması yalnızca test için kullanılan geçici bir ölçü olmalıdır. Denetim modu etkinleştirildiğinde `DataSet` ve `DataTable` uygulamanızın içinde bir güvenlik deliği ortaya çıkaracak tür kısıtlamalarını zorunlu kılmaz. Daha fazla bilgi için, [Güvenilmeyen girişle ilgili](#swr)olarak [tüm tür kısıtlamalarını](#ratr) ve güvenliği kaldırma başlıklı bölümlere bakın.
 
-Denetim modu, _App.config_aracılığıyla etkinleştirilebilir:
+Denetim modu, _App.config_ aracılığıyla etkinleştirilebilir:
 
 * Öğe için konacak doğru değer hakkında bilgi için bu belgedeki [yapılandırma Ile genişletme](#etc) bölümüne bakın `<configSections>` .
 * `<allowedTypes auditOnly="true">`Aşağıdaki biçimlendirmede gösterildiği gibi denetleme modunu etkinleştirmek için kullanın.
@@ -178,7 +174,7 @@ Denetim modu, _App.config_aracılığıyla etkinleştirilebilir:
 </configuration>
 ```
 
-Denetim modu etkinleştirildikten sonra, tercih ettiğiniz yerleşik _App.config_ `TraceListener` `DataSet` `TraceSource.` Izleme kaynağının adı _System. Data. DataSet_olan yerleşik bir bağlantı kurmak içinApp.configkullanabilirsiniz. Aşağıdaki örnek, izleme olaylarını konsola _ve_ diskteki bir günlük dosyasına yazmayı gösterir.
+Denetim modu etkinleştirildikten sonra, tercih ettiğiniz yerleşik _App.config_ `TraceListener` `DataSet` `TraceSource.` Izleme kaynağının adı _System. Data. DataSet_ olan yerleşik bir bağlantı kurmak içinApp.configkullanabilirsiniz. Aşağıdaki örnek, izleme olaylarını konsola _ve_ diskteki bir günlük dosyasına yazmayı gösterir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -224,7 +220,7 @@ Bir uygulamanın tüm tür sınırlaması kısıtlamalarını ve ' den kaldırma
 
 , `AppContext` , Olarak `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` ayarlandığında, ve ' `true` dan tüm tür sınırlandırma kısıtlamalarını kaldırır `DataSet` `DataTable` .
 
-.NET Framework, bu anahtar aşağıdaki yapılandırmada gösterildiği gibi _App.config_aracılığıyla etkinleştirilebilir:
+.NET Framework, bu anahtar aşağıdaki yapılandırmada gösterildiği gibi _App.config_ aracılığıyla etkinleştirilebilir:
 
 ```xml
 <configuration>
@@ -235,7 +231,7 @@ Bir uygulamanın tüm tür sınırlaması kısıtlamalarını ve ' den kaldırma
 </configuration>
 ```
 
-ASP.NET içinde, `<AppContextSwitchOverrides>` öğesi kullanılabilir değil. Bunun yerine, aşağıdaki yapılandırmada gösterildiği gibi, anahtar _Web.config_aracılığıyla etkinleştirilebilir:
+ASP.NET içinde, `<AppContextSwitchOverrides>` öğesi kullanılabilir değil. Bunun yerine, aşağıdaki yapılandırmada gösterildiği gibi, anahtar _Web.config_ aracılığıyla etkinleştirilebilir:
 
 ```xml
 <configuration>
@@ -248,7 +244,7 @@ ASP.NET içinde, `<AppContextSwitchOverrides>` öğesi kullanılabilir değil. B
 
 Daha fazla bilgi için, bkz [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) . öğesi.
 
-.NET Core, .NET 5 ve ASP.NET Core, bu ayar, aşağıdaki JSON 'da gösterildiği gibi, _runtimeconfig.js_tarafından denetlenir:
+.NET Core, .NET 5 ve ASP.NET Core, bu ayar, aşağıdaki JSON 'da gösterildiği gibi, _runtimeconfig.js_ tarafından denetlenir:
 
 ```json
 {
@@ -293,7 +289,7 @@ Yapılandırmak için kayıt defterini kullanma hakkında daha fazla bilgi için
 
 ## <a name="safety-with-regard-to-untrusted-input"></a>Güvenilmeyen girişle ilgili güvenlik
 
-Ancak `DataSet` `DataTable` , XML yüklerini seri durumdan çıkarma sırasında bulunmasına izin verilen türlerin varsayılan sınırlamalarını uygular __ `DataSet` ve `DataTable` Güvenilmeyen girişle doldurulurken genel olarak güvenli değildir.__ Aşağıda, bir `DataSet` veya `DataTable` örneğinin güvenilmeyen girişi okuyabilme yöntemlerinin ayrıntılı olmayan bir listesi verilmiştir.
+Ancak `DataSet` `DataTable` , XML yüklerini seri durumdan çıkarma sırasında bulunmasına izin verilen türlerin varsayılan sınırlamalarını uygular __`DataSet` ve `DataTable` Güvenilmeyen girişle doldurulurken genel olarak güvenli değildir.__ Aşağıda, bir `DataSet` veya `DataTable` örneğinin güvenilmeyen girişi okuyabilme yöntemlerinin ayrıntılı olmayan bir listesi verilmiştir.
 
 * Bir `DataAdapter` veritabanına başvurur ve `DataAdapter.Fill` yöntemi bir `DataSet` veritabanı sorgusunun içeriğiyle doldurmak için kullanılır.
 * `DataSet.ReadXml`Or `DataTable.ReadXml` yöntemi, sütun ve satır bilgilerini IÇEREN bir XML dosyasını okumak için kullanılır.
@@ -475,13 +471,13 @@ public class MyClass
 Güvenilmeyen bir `DataSet` `DataTable` JSON blobundan bu şekilde veya bu şekilde seri durumdan çıkarmak güvenli değildir. Bu model, hizmet reddi saldırılarına karşı savunmasızdır. Bu tür bir saldırı, uygulamayı kilitlerler veya yanıt vermemeye işleyebilir.
 
 > [!NOTE]
-> Microsoft, _Newtonsoft.Js_gibi üçüncü taraf kitaplıkların uygulanmasını garanti etmez veya desteklemez. Bu bilgiler, tamamlanma zamanı için sağlanır ve bu yazma zamanından itibaren doğru olur.
+> Microsoft, _Newtonsoft.Js_ gibi üçüncü taraf kitaplıkların uygulanmasını garanti etmez veya desteklemez. Bu bilgiler, tamamlanma zamanı için sağlanır ve bu yazma zamanından itibaren doğru olur.
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>BinaryFormatter aracılığıyla DataSet veya DataTable serisini kaldırma
 
-Geliştiricilerin `BinaryFormatter` `NetDataContractSerializer` `SoapFormatter` Güvenilmeyen bir yükün veya örneğinin serisini kaldırmak için hiçbir şekilde,, veya ilgili ***güvenli olmayan*** biçimleri kullanması gerekir `DataSet` `DataTable` :
+Geliştiricilerin `BinaryFormatter` `NetDataContractSerializer` `SoapFormatter` Güvenilmeyen bir yükün bir veya örneğinin serisini kaldırmak için hiçbir şekilde,, veya ilgili ***unsafe** _ biçimlendiricileri tuşlarını `DataSet` kullanmaması gerekir `DataTable` :
 
-* Bu, tam bir uzaktan kod yürütme saldırısından etkilenir.
+_ Bu, tam bir uzaktan kod yürütme saldırısından etkilenir.
 * `SerializationBinder`Bu tür bir saldırıyı engellemek için özel kullanımı yeterli değildir.
 
 ## <a name="safe-replacements"></a>Güvenli değişiklikler

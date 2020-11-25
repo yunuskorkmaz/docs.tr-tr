@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9777d8bb-4abc-4be8-aa7c-34f853eceb9c
 topic_type:
 - apiref
-ms.openlocfilehash: d04c9865d8272bf8d04080f6049ddfb1d4c643bb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 19e07fb181f631335a0c56bd59b6fc8e14e2f36d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614584"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726931"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a>ISymUnmanagedENCUpdate::GetLocalVariableCount Yöntemi
+
 Yerel değişkenlerin sayısını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,16 +35,19 @@ HRESULT GetLocalVariableCount(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `mdMethodToken`  
  'ndaki Yöntemlerin meta veri belirteci.  
   
  `pcLocals`  
- dışı `ULONG32`Yerel değişken sayısını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Yerel değişken sayısını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

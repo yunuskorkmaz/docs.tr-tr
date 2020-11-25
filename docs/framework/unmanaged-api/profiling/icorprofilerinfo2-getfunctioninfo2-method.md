@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aa60f24-8bbd-4c83-83c5-86ad191b1d82
 topic_type:
 - apiref
-ms.openlocfilehash: f5438ddc655f0f6a7c11d978a47b1bf9e2a13059
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e44b8afe22fdb10077048dc7bc2ccb1f605edd75
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497016"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727102"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 Yöntemi
+
 Bir işlevin varsa, üst sınıfı, meta veri belirtecini ve `ClassID` her tür bağımsız değişkenini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -40,11 +41,12 @@ HRESULT GetFunctionInfo2(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `funcId`  
  'ndaki Üst sınıfı ve diğer bilgileri almak için işlevin KIMLIĞI.  
   
  `frameInfo`  
- 'ndaki `COR_PRF_FRAME_INFO`Yığın çerçevesi hakkındaki bilgileri gösteren bir değer.  
+ 'ndaki `COR_PRF_FRAME_INFO` Yığın çerçevesi hakkındaki bilgileri gösteren bir değer.  
   
  `pClassId`  
  dışı İşlevin üst sınıfına yönelik bir işaretçi.  
@@ -56,15 +58,16 @@ HRESULT GetFunctionInfo2(
  dışı İşlevin meta veri belirtecine yönelik bir işaretçi.  
   
  `cTypeArgs`  
- 'ndaki `typeArgs`Dizinin boyutu.  
+ 'ndaki `typeArgs` Dizinin boyutu.  
   
  `pcTypeArgs`  
  dışı Toplam değer sayısına yönelik bir işaretçi `ClassID` .  
   
  `typeArgs`  
- dışı `ClassID`Her biri işlevin tür bağımsız DEĞIŞKENININ kimliği olan bir değer dizisi. Yöntemi döndürüldüğünde, `typeArgs` değerlerin bazılarını veya tümünü içerecektir `ClassID` .  
+ dışı `ClassID` Her biri işlevin tür bağımsız DEĞIŞKENININ kimliği olan bir değer dizisi. Yöntemi döndürüldüğünde, `typeArgs` değerlerin bazılarını veya tümünü içerecektir `ClassID` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Profil Oluşturucu kodu, belirli bir modül için [meta](../metadata/index.md) veri arabirimi elde etmek üzere [ICorProfilerInfo:: GetModuleMetaData öğesini](icorprofilerinfo-getmodulemetadata-method.md) çağırabilir. Tarafından başvurulan konuma döndürülen meta veri belirteci, `pToken` daha sonra işlevin meta verilerine erişmek için kullanılabilir.  
   
  Ve parametreleri aracılığıyla döndürülen sınıf KIMLIĞI ve tür bağımsız değişkenleri, `pClassId` `typeArgs` `frameInfo` Aşağıdaki tabloda gösterildiği gibi, parametresine geçirilen değere bağlıdır.  
@@ -80,6 +83,7 @@ HRESULT GetFunctionInfo2(
  Alternatif olarak, `GetFunctionInfo2` `pcTypeArgs` doğru arabellek boyutunu elde etmek için ilk olarak sıfır uzunluklu bir arabellek ile çağrı yapabilirsiniz. Daha sonra, arabellek boyutunu `pcTypeArgs` bir değer boyutuna bölünen olarak döndürülen değere ayarlayabilir `ClassID` ve `GetFunctionInfo2` yeniden çağırabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

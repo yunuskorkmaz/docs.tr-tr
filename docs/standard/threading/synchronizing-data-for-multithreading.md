@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e1b90bdc5657c1fd22c6e77e31890ff63c3cc3ea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819649"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727464"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu iş parçacıklı verileri eşitleme
 
@@ -33,17 +33,20 @@ Birden çok iş parçacığı tek bir nesnenin özelliklerine ve yöntemlerine �
 |Kategori|Genel alanlar|Statik alanlar|Statik yöntemler|Örnek alanları|Örnek yöntemleri|Belirli kod blokları|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Eşitleme yok|Hayır|Hayır|Hayır|Hayır|Hayır|Hayır|  
-|Eşitlenmiş bağlam|Hayır|Hayır|Hayır|Yes|Yes|Hayır|  
-|Eşitlenmiş kod bölgeleri|Hayır|Hayır|Yalnızca işaretlenmişse|No|Yalnızca işaretlenmişse|Yalnızca işaretlenmişse|  
+|Eşitlenmiş bağlam|Hayır|Hayır|Hayır|Evet|Evet|Hayır|  
+|Eşitlenmiş kod bölgeleri|Hayır|Hayır|Yalnızca işaretlenmişse|Hayır|Yalnızca işaretlenmişse|Yalnızca işaretlenmişse|  
 |El ile eşitleme|El ile|El ile|El ile|El ile|El ile|El ile|  
   
 ## <a name="no-synchronization"></a>Eşitleme yok  
+
  Bu, nesneler için varsayılandır. Herhangi bir iş parçacığı herhangi bir zamanda herhangi bir yönteme veya alana erişebilir. Tek seferde yalnızca bir iş parçacığının bu nesnelere erişmesi gerekir.  
   
 ## <a name="manual-synchronization"></a>El ile eşitleme  
+
  .NET sınıf kitaplığı, iş parçacıklarını eşitlemeye yönelik bir dizi sınıf sağlar. Bkz. [eşitleme temel elemanlarına genel bakış](overview-of-synchronization-primitives.md).  
   
 ## <a name="synchronized-code-regions"></a>Eşitlenmiş kod bölgeleri  
+
  <xref:System.Threading.Monitor>Kod bloklarını, örnek yöntemleri ve statik yöntemleri senkronize etmek için sınıfını veya bir derleyici anahtar sözcüğünü kullanabilirsiniz. Eşitlenmiş statik alanlar için destek yoktur.  
   
  Hem Visual Basic hem de C#, belirli bir dil anahtar sözcüğü, `lock` C# ' deki Ifade veya `SyncLock` Visual Basic içindeki deyimle birlikte kod blokları işaretlemesini destekler. Kod bir iş parçacığı tarafından yürütüldüğünde, kilidi almak için bir girişimde bulunuldu. Kilit zaten başka bir iş parçacığı tarafından edindiyseniz, kilit kullanılabilir hale gelene kadar iş parçacığı engeller. İş parçacığı eşitlenmiş kod bloğundan çıktığında, iş parçacığının bloğundan nasıl çıkmadığına bakılmaksızın kilit serbest bırakılır.  
@@ -59,6 +62,7 @@ Birden çok iş parçacığı tek bir nesnenin özelliklerine ve yöntemlerine �
 > Yöntemleri korumak için (örneğin, C# ' ta, Visual Basic veya C++ ' da) türü kilitlemeyin `typeof(MyType)` `GetType(MyType)` `MyType::typeid` `static` ( `Shared` Visual Basic içindeki Yöntemler). Bunun yerine özel bir statik nesne kullanın. Benzer şekilde, `this` `Me` örnek yöntemleri kilitlemek için C# ' de (Visual Basic) kullanmayın. Bunun yerine özel bir nesne kullanın. Bir sınıf veya örnek, kendi dışında bir kodla kilitlenebilir, bu da kilitlenmelere veya performans sorunlarına yol açabilir.  
   
 ### <a name="compiler-support"></a>Derleyici desteği  
+
  Hem Visual Basic hem de C# <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> , nesneyi kilitlemek için ve kullanan bir Language anahtar sözcüğünü destekler. Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ifadesini destekler; C#, [Lock](../../csharp/language-reference/keywords/lock-statement.md) ifadesini destekler.  
   
  Her iki durumda da, kod bloğunda bir özel durum oluşturulursa, **kilit** veya **SyncLock** tarafından alınan kilit otomatik olarak serbest bırakılır. C# ve Visual Basic derleyicileri, Monitor ile **TRY** / **finally** bloğunu yayar. TRY 'ın başlangıcında **ENTER** , **finally** bloğunda **Monitor. Exit** yazın. **Kilit** veya **SyncLock** bloğunun içinde bir özel durum oluşturulursa, **finally** işleyicisi herhangi bir temizleme işi yapmanıza olanak tanımak için çalışır.  

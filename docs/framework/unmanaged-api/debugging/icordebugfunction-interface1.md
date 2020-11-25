@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: 6b7b6969c1f207decbf47217e98b7fee3aa9ce54
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 668b27932ea7a2bdc244e1ac0bb8e6891cbd4d17
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213250"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726307"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction Arabirimi
 
@@ -39,6 +39,7 @@ Yönetilen bir işlevi veya yöntemi temsil eder.
 |[GetToken Metodu](icordebugfunction-gettoken-method.md)|Bu işlev için meta veri belirtecini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ICorDebugFunction`Arabirim, genel tür parametrelerine sahip bir işlevi temsil etmiyor. Örneğin, bir `ICorDebugFunction` örnek temsil eder `Func<T>` ancak değil `Func<string>` . Genel tür parametrelerini almak için [ICorDebugILFrame2:: EnumerateTypeParameters](icordebugilframe2-enumeratetypeparameters-method.md) çağırın.  
   
  Yöntemin meta veri belirteci, `mdMethodDef` ve yöntemin nesnesi arasındaki ilişki, `ICorDebugFunction` işlevde Düzenle ve devam et iznine sahip olup olmadığına bağlıdır:  
@@ -51,6 +52,7 @@ Yönetilen bir işlevi veya yöntemi temsil eder.
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

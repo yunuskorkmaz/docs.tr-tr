@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9e07657-1682-4c30-a336-f8658ff1a125
 topic_type:
 - apiref
-ms.openlocfilehash: 0d2975d6247cd9ecdb07b564d77518151404c7d0
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 5d57bc742ebcba00f9fbe569a4be27b82a5f8055
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762473"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726515"
 ---
 # <a name="iclrtaskgetmemstats-method"></a>ICLRTask::GetMemStats Yöntemi
+
 Geçerli [ICLRTask](iclrtask-interface.md) örneğinin temsil ettiği görevle ilgili istatistiksel bellek kullanım bilgilerini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetMemStats (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pMemUsage`  
  dışı Ayrılan bayt sayısı dahil olmak üzere, görevin bellek kullanımıyla ilgili ayrıntıları içeren [COR_GC_THREAD_STATS](cor-gc-thread-stats-structure.md) örneğine yönelik bir işaretçi.  
   
@@ -41,7 +43,7 @@ HRESULT GetMemStats (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetMemStats`başarıyla döndürüldü.|  
+|S_OK|`GetMemStats` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -49,11 +51,12 @@ HRESULT GetMemStats (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

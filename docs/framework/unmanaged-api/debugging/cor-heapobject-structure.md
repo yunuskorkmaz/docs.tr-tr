@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-ms.openlocfilehash: efb3d913e1d8ef0c486d7e5e1d9777ae7d88bc71
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54af02b48dabdf2042763954805f0d454323ac89
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179331"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726372"
 ---
 # <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT Yapısı
-Yönetilen yığındaki bir nesne hakkında bilgi sağlar.  
+
+Yönetilen yığında bir nesne hakkında bilgi sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _COR_HEAPOBJECT {  
@@ -39,30 +40,32 @@ typedef struct _COR_HEAPOBJECT {
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`address`|Bellekteki nesnenin adresi.|  
-|`size`|Nesnenin toplam boyutu, baytlar içinde.|  
-|`type`|Nesnenin türünü temsil eden [COR_TYPEID](cor-typeid-structure.md) belirteci.|  
+|`size`|Nesnenin bayt cinsinden toplam boyutu.|  
+|`type`|Nesnenin türünü temsil eden bir [COR_TYPEID](cor-typeid-structure.md) belirteci.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_HEAPOBJECT`örnekler [ICorDebugProcess5::EnumerateHeap](icordebugprocess5-enumerateheap-method.md) yöntemi ni arayarak doldurulan bir [ICorDebugHeapEnum](icordebugheapenum-interface.md) arabirim nesnesini sayısallandırarak alınabilir.  
+
+ `COR_HEAPOBJECT`örnekler, [ICorDebugProcess5:: EnumerateHeap](icordebugprocess5-enumerateheap-method.md) yöntemi çağırarak doldurulan bir [ICorDebugHeapEnum](icordebugheapenum-interface.md) arabirimi nesnesi numaralandırarak alınabilir.  
   
- Örnek, `COR_HEAPOBJECT` yönetilen yığındaki canlı bir nesne veya herhangi bir nesne tarafından köklü olmayan ancak çöp toplayıcı tarafından henüz toplanmamış bir nesne hakkında bilgi sağlar.  
+ `COR_HEAPOBJECT`Örnek, yönetilen yığında canlı bir nesne veya herhangi bir nesne tarafından kökü belirtilmemiş ancak çöp toplayıcı tarafından henüz toplanmayan bir nesne hakkında bilgi sağlar.  
   
- Daha iyi performans `COR_HEAPOBJECT.address` için `CORDB_ADDRESS` alan, hata ayıklama API'sinin çoğunda kullanılan ICorDebugValue arabirim değeri yerine bir değerdir. Belirli bir nesne adresi için bir ICorDebugValue nesnesi elde etmek `CORDB_ADDRESS` için, değeri [ICorDebugProcess5::GetObject](icordebugprocess5-getobject-method.md) yöntemine geçirebilirsiniz.  
+ Daha iyi performans için, `COR_HEAPOBJECT.address` alan, `CORDB_ADDRESS` hata ayıklama API 'sinin büyük bir kısmında kullanılan ICorDebugValue arabirimi değeri yerine bir değerdir. Belirli bir nesne adresi için bir ICorDebugValue nesnesi almak üzere, `CORDB_ADDRESS` değeri [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) yöntemine geçirebilirsiniz.  
   
- Daha iyi performans `COR_HEAPOBJECT.type` için `COR_TYPEID` alan, hata ayıklama API'sinin çoğunda kullanılan ICorDebugType arabirim değeri yerine bir değerdir. Belirli bir tür kimliği için bir ICorDebugType nesnesi elde etmek `COR_TYPEID` için, değeri [ICorDebugProcess5::GetTypeForTypeID](icordebugprocess5-gettypefortypeid-method.md) yöntemine geçirebilirsiniz.  
+ Daha iyi performans için, `COR_HEAPOBJECT.type` alan, `COR_TYPEID` hata ayıklama API 'sinin büyük bir kısmında kullanılan ICorDebugType arabirim değeri yerine bir değerdir. Verilen tür KIMLIĞI için bir ICorDebugType nesnesi elde etmek için, `COR_TYPEID` değeri [ICorDebugProcess5:: GetTypeForTypeID](icordebugprocess5-gettypefortypeid-method.md) metoduna geçirebilirsiniz.  
   
- Yapı, `COR_HEAPOBJECT` referans sayılan com arabirimi içerir. `COR_HEAPOBJECT` [ICorDebugHeapEnum::Sonraki](icordebugheapenum-next-method.md) yöntem çağırarak enumerator bir örnek alırsanız, daha sonra başvuru serbest gerekir.  
+ `COR_HEAPOBJECT`Yapı, başvuru sayılı BIR com arabirimi içerir. `COR_HEAPOBJECT` [ICorDebugHeapEnum:: Next](icordebugheapenum-next-method.md) metodunu çağırarak numaralandırıcıdan bir örnek alırsanız, daha sonra başvuruyu serbest bırakmanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama Yapıları](debugging-structures.md)
-- [Hata ayıklama](index.md)
+- [Hata Ayıklama](index.md)

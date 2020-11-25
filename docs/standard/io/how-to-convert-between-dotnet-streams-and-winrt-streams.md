@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: ee36845f19ef4a7c3923b1032ab6eb45d2f60733
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c2ab384b6d84a14d5e8f4cfe66281a26b14421f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830824"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726970"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Nasıl yapılır: .NET Framework ve Windows Çalışma Zamanı akışları arasında dönüştürme (yalnızca Windows)
 
@@ -19,6 +19,7 @@ UWP uygulamaları için .NET Framework, tam .NET Framework bir alt kümesidir. U
 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType>Sınıfı, bu dönüştürmeleri kolaylaştıran yöntemler içerir. Ancak, .NET Framework ve Windows Çalışma Zamanı akışları arasındaki temel farklılıklar, aşağıdaki bölümlerde açıklandığı gibi, bu yöntemlerin kullanılmasıyla ilgili sonuçları etkiler:
 
 ## <a name="convert-from-a-windows-runtime-to-a-net-framework-stream"></a>Bir Windows Çalışma Zamanı .NET Framework akışına dönüştürme
+
 Bir Windows Çalışma Zamanı akışından .NET Framework akışına dönüştürmek için aşağıdaki yöntemlerden birini kullanın <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> :
 
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> Windows Çalışma Zamanı bir rastgele erişim akışını UWP uygulamaları için .NET 'teki yönetilen bir akışa dönüştürür.
@@ -32,6 +33,7 @@ Windows Çalışma Zamanı, yalnızca okumayı, yalnızca yazmayı veya okumayı
 Dönüştürmek istediğiniz Windows Çalışma Zamanı akışının özellikleri ile eşleşen dönüştürme yöntemini kullanmak en iyi uygulamadır. Ancak, <xref:Windows.Storage.Streams.IRandomAccessStream> okunabilir ve yazılabilir olduğundan (hem hem de uygular <xref:Windows.Storage.Streams.IOutputStream> <xref:Windows.Storage.Streams.IInputStream> ), dönüştürme yöntemleri özgün akışın yeteneklerini korur. Örneğin, bunu <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> dönüştürmek için kullanmak, <xref:Windows.Storage.Streams.IRandomAccessStream> dönüştürülmüş .NET Framework akışını okunamala sınırlar. Aynı zamanda yazılabilir.
 
 ## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>Örnek: Windows Çalışma Zamanı .NET Framework akışa rastgele erişim dönüştürme
+
 Windows Çalışma Zamanı Rastgele erişimli bir akıştan .NET Framework akışına dönüştürmek için <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> yöntemini kullanın.
 
 Aşağıdaki kod örneği, bir dosya seçmenizi, dosyayı Windows Çalışma Zamanı API 'lerle açmanızı ve ardından bunu bir .NET Framework akışına dönüştürmenizi ister. Akışı okur ve bir metin bloğuna çıkarır. Sonuçları yazmadan önce genellikle akışı .NET Framework API 'Leri ile işleyebilirsiniz.
@@ -42,6 +44,7 @@ Bu örneği çalıştırmak için adlı bir metin bloğu ve adında bir düğme 
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage1.xaml.vb)]
 
 ## <a name="convert-from-a-net-framework-to-a-windows-runtime-stream"></a>Bir .NET Framework Windows Çalışma Zamanı akışına dönüştürme
+
 Bir .NET Framework akışından Windows Çalışma Zamanı akışına dönüştürmek için aşağıdaki yöntemlerden birini kullanın <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> :
 
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> UWP uygulamaları için .NET içindeki yönetilen bir akışı, Windows Çalışma Zamanı giriş akışına dönüştürür.

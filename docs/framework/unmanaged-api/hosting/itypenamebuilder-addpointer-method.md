@@ -15,28 +15,30 @@ helpviewer_keywords:
 ms.assetid: b6f1dbd4-1a9f-44dd-b54b-c530ab44eb48
 topic_type:
 - apiref
-ms.openlocfilehash: 5df472c41fafbf1f6f9e4ac4cb3e72d9f8f581ed
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 68c1919c84224940ae57eb8c5c9466bd224e7cca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008735"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727724"
 ---
 # <a name="itypenamebuilderaddpointer-method"></a>ITypeNameBuilder::AddPointer Yöntemi
+
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT AddPointer ( );  
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

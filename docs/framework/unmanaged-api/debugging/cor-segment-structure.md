@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 93aeecb9-7fef-4545-8daf-f566dfc47084
 topic_type:
 - apiref
-ms.openlocfilehash: a5c743064b8ca645cf45d02b8800c88187bf4c6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 738e29fa15340c76b055b608140f3c3bfbd29611
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179281"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726359"
 ---
 # <a name="cor_segment-structure"></a>COR_SEGMENT Yapısı
-Yönetilen yığındaki bellek bölgesi hakkında bilgi içerir.  
+
+Yönetilen yığında bir bellek bölgesi hakkındaki bilgileri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _COR_SEGMENT {  
@@ -41,24 +42,26 @@ typedef struct _COR_SEGMENT {
 |------------|-----------------|  
 |`start`|Bellek bölgesinin başlangıç adresi.|  
 |`end`|Bellek bölgesinin bitiş adresi.|  
-|`gen`|Bellek bölgesinin oluşumunu gösteren [bir CorDebugGenerationTypes](cordebuggenerationtypes-enumeration.md) numaralandırma üyesi.|  
+|`gen`|Bellek bölgesinin üretimini gösteren [CorDebugGenerationTypes](cordebuggenerationtypes-enumeration.md) sabit listesi üyesi.|  
 |`heap`|Bellek bölgesinin bulunduğu yığın numarası. Daha fazla bilgi için Açıklamalar bölümüne bakın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yapı, `COR_SEGMENTS` yönetilen yığındaki bellek bölgesini temsil eder.  `COR_SEGMENTS`nesneler [ICorDebugHeapRegionEnum](icordebugheapsegmentenum-interface.md) toplama nesnesi, [ICorDebugProcess5::EnumerateHeapRegions](icordebugprocess5-enumerateheapregions-method.md) yöntemi çağırarak doldurulur üyeleridir.  
+
+ `COR_SEGMENTS`Yapı, yönetilen yığında bir bellek bölgesini temsil eder.  `COR_SEGMENTS`nesneler, [ICorDebugProcess5:: Enumerateheapregion](icordebugprocess5-enumerateheapregions-method.md) yöntemi çağırarak doldurulan [ICorDebugHeapRegionEnum](icordebugheapsegmentenum-interface.md) koleksiyon nesnesinin üyeleridir.  
   
- Alan, `heap` bildirilen yığına karşılık gelen işlemci numarasıdır. İş istasyonu çöp toplayıcıları için değeri her zaman sıfırdır, çünkü iş istasyonlarında yalnızca bir çöp toplama yığını vardır. Sunucu çöp toplayıcıları için değeri, yığının bağlı olduğu işlemciye karşılık gelir. Çöp toplayıcının uygulama ayrıntıları nedeniyle gerçek işlemcilerden daha fazla veya daha az çöp toplama yığını olabileceğini unutmayın.  
+ `heap`Alan, bildirilen yığına karşılık gelen işlemci numarasıdır. İş istasyonları yalnızca bir atık toplama yığınına sahip olduğundan, iş istasyonu atık toplayıcıları için değeri her zaman sıfırdır. Sunucu çöp toplayıcıları için, değeri yığının eklendiği işlemciye karşılık gelir. Çöp toplayıcısının uygulama ayrıntıları nedeniyle gerçek işlemcilerin olduğu daha fazla veya daha az atık toplama yığınlarının olabileceğini unutmayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama Yapıları](debugging-structures.md)
-- [Hata ayıklama](index.md)
+- [Hata Ayıklama](index.md)

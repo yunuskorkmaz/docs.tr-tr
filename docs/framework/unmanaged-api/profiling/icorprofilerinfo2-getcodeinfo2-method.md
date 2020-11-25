@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-ms.openlocfilehash: 04ce9ebded4be7ac3b20a4ceb78dd02294bbff4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e88fe1b3c93ca278d0e64a5eb3274c86bd8f0f6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502905"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727139"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 Yöntemi
+
 Belirtilen yerel kod kapsamlarını alır, bununla ilişkili `FunctionID` .  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,11 +38,12 @@ HRESULT GetCodeInfo2(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `functionID`  
  'ndaki Yerel kodun ilişkilendirildiği işlevin KIMLIĞI.  
   
  `cCodeInfos`  
- 'ndaki `codeInfos`Dizinin boyutu.  
+ 'ndaki `codeInfos` Dizinin boyutu.  
   
  `pcCodeInfos`  
  dışı [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) yapılarının toplam sayısına yönelik bir işaretçi.  
@@ -50,6 +52,7 @@ HRESULT GetCodeInfo2(
  dışı Arayan tarafından sağlanmış arabellek. Yöntem çağrıldıktan sonra, `COR_PRF_CODE_INFO` her biri yerel kod bloğunu açıklayan bir yapı dizisi içerir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Kapsamlar, Microsoft ara dili (MSIL) kaydırmasının artırılması sırasında sıralanır.  
   
  `GetCodeInfo2`Geri döndüğünde, `codeInfos` arabelleğin tüm yapıları içerecek kadar büyük olduğunu doğrulamanız gerekir `COR_PRF_CODE_INFO` . Bunu yapmak için değerini `cCodeInfos` parametresinin değeriyle karşılaştırın `cchName` . `cCodeInfos`Bir yapının boyutuna göre ayrılmışsa `COR_PRF_CODE_INFO` `pcCodeInfos` , daha küçük bir arabellek ayırarak, `codeInfos` `cCodeInfos` Yeni, daha büyük boyutla güncelleştirin ve `GetCodeInfo2` yeniden çağırın.  
@@ -57,6 +60,7 @@ HRESULT GetCodeInfo2(
  Alternatif olarak, `GetCodeInfo2` `codeInfos` doğru arabellek boyutunu elde etmek için ilk olarak sıfır uzunluklu bir arabellek ile çağrı yapabilirsiniz. Daha sonra `codeInfos` arabellek boyutunu ' de döndürülen değere ayarlayabilir `pcCodeInfos` , bir yapının boyutuyla çarpılır `COR_PRF_CODE_INFO` ve `GetCodeInfo2` yeniden çağırabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

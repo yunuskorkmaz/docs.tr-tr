@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-ms.openlocfilehash: 7f1276e1adeece086ca7b6791eb6e870faf4d010
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 17a6220598010c0bee9c3f0485860aa0b2dc5f3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502879"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727113"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs Metodu
+
 `FunctionID`Belirtilen meta veri belirtecini, sınıfını ve `ClassID` tür bağımsız değişkenlerinin değerlerini kullanarak bir işlevi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -38,11 +39,12 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `moduleID`  
  'ndaki İşlevin bulunduğu modülün KIMLIĞI.  
   
  `funcDef`  
- 'ndaki `mdMethodDef`İşleve başvuran bir meta veri belirteci.  
+ 'ndaki `mdMethodDef` İşleve başvuran bir meta veri belirteci.  
   
  `classId`  
  'ndaki İşlevin kapsayan sınıfının KIMLIĞI.  
@@ -51,12 +53,13 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  'ndaki Verilen işlev için tür parametrelerinin sayısı. Bu değer, genel olmayan işlevler için sıfır olmalıdır.  
   
  `typeArgs`  
- 'ndaki `ClassID`Her biri işlevin bağımsız değişkeni olan bir değer dizisi. `typeArgs` `cTypeArgs` Sıfır olarak AYARLANDıYSA değeri null olabilir.  
+ 'ndaki `ClassID` Her biri işlevin bağımsız değişkeni olan bir değer dizisi. `typeArgs` `cTypeArgs` Sıfır olarak AYARLANDıYSA değeri null olabilir.  
   
  `pFunctionID`  
- dışı `FunctionID`Belirtilen işlevin işaretçisi.  
+ dışı `FunctionID` Belirtilen işlevin işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetFunctionFromTokenAndTypeArgs`Yöntemi `mdMethodRef` meta veri belirteci yerine meta verilerle çağırmak `mdMethodDef` öngörülemeyen sonuçlara neden olabilir. Çağıranlar, `mdMethodRef` geçişini yaparken öğesine çözmelidir `mdMethodDef` .  
   
  İşlev zaten yüklü değilse, çağırma, `GetFunctionFromTokenAndTypeArgs` çok sayıda bağlamda tehlikeli bir işlem olan yüklemenin oluşmasına neden olur. Örneğin, modül veya tür yükleme sırasında bu yöntemi çağırmak, çalışma zamanı döngüsel olarak yükleme yapmayı denediğinde sonsuz döngüye neden olabilir.  
@@ -64,6 +67,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  Genel olarak, kullanımı `GetFunctionFromTokenAndTypeArgs` önerilmez. Profil oluşturucular belirli bir işlev için olaylar ile ilgileniyorsa, `ModuleID` `mdMethodDef` Bu işlevin ve bu işlevi depolamalıdır ve [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) kullanarak belirli bir işlevin istenen işlevden olup olmadığını denetler `FunctionID` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

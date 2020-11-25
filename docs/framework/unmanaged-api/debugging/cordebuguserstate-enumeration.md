@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: d502b4098016fb14793bccd6feb641e92e3c2611
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 968874a46279b7eac651d45c3890429a326651b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795644"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726957"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState Numaralandırması
+
 Bir iş parçacığının kullanıcı durumunu belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorDebugUserState {  
@@ -55,11 +56,13 @@ typedef enum CorDebugUserState {
 |`USER_THREADPOOL`|İş parçacığı iş parçacığı havuzundan yapılır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir iş parçacığının kullanıcı durumu, iş parçacığının hata ayıklayıcı tarafından incelediği durumdur. Bir iş parçacığında Kullanıcı durumlarının bir birleşimi olabilir.  
   
  Bir iş parçacığının kullanıcı durumunu almak için [ICorDebugThread:: GetUserState](icordebugthread-getuserstate-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

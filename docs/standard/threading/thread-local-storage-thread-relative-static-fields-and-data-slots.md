@@ -7,12 +7,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: c9ea2939dcff321a1d4e24e7a97c056c016e5fdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b45c83887d278589cc1704ec1398ec99e27550ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819636"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727529"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>İş Parçacığında Yerel Depolama: İş Parçacığı Göreli Statik Alanları ve Veri Yuvaları
 
@@ -27,6 +27,7 @@ ms.locfileid: "94819636"
 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>Nesne ilk tüketilmişse, geç başlatılan iş parçacığı yerel nesneleri oluşturmak için sınıfını kullanabilirsiniz. Daha fazla bilgi için bkz. [yavaş başlatma](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Yönetilen TLS 'deki verilerin benzersizliği  
+
  İş parçacığı göreli statik alanları veya veri yuvaları kullanmanıza bakılmaksızın, yönetilen TLS 'deki veriler, iş parçacığı ve uygulama etki alanı birleşimine özgüdür.  
   
 - Bir uygulama etki alanı içinde, her iki iş parçacığı aynı alanı veya yuvayı kullandıklarında bile, bir iş parçacığı başka bir iş parçacığından verileri değiştiremez.  
@@ -38,6 +39,7 @@ ms.locfileid: "94819636"
  Benzer şekilde, bir iş parçacığı iki farklı uygulama etki alanında aynı adlandırılmış veri yuvasını aldığında, ilk uygulama etki alanındaki veriler ikinci uygulama etki alanındaki verilerden bağımsız kalır.  
   
 ## <a name="thread-relative-static-fields"></a>Thread-Relative statik alanlar  
+
  Bir veri parçasının her zaman bir iş parçacığı ve uygulama-etki alanı birleşimine benzersiz olduğunu biliyorsanız, <xref:System.ThreadStaticAttribute> özniteliğini statik alana uygulayın. Diğer herhangi bir statik alanı kullandığınız için alanı kullanın. Alanındaki veriler, onu kullanan her iş parçacığı için benzersizdir.  
   
  İş parçacığı göreli statik alanları, veri yuvalardan daha iyi performans sağlar ve derleme zamanı tür denetimi avantajına sahiptir.  

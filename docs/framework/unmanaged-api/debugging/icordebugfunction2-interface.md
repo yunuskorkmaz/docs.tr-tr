@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b936bef-9b75-48bf-859f-42e419c65f1c
 topic_type:
 - apiref
-ms.openlocfilehash: 611091d39da6d7f646457457f20ce1eaf37db361
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d9e84a70d72db1338c80140ce3350774bfae4bca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213211"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726281"
 ---
 # <a name="icordebugfunction2-interface"></a>ICorDebugFunction2 Arabirimi
 
@@ -40,6 +40,7 @@ Kullanıcı dışı kodu atlayan Yalnızca kendi kodum adım adım hata ayıklam
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
