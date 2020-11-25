@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: dc0da9842df7b0a827293c42d80ccdd418a043b2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4a179bff7ec7988c5b7410fa99eab346d4add1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819207"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734835"
 ---
 # <a name="memory-mapped-files"></a>Bellek eşlemeli dosyalar
 
@@ -31,6 +31,7 @@ Bellek eşlemeli bir dosya, sanal bellekteki bir dosyanın içeriğini içerir. 
      Kalıcı olmayan dosyalar, bir diskte bulunan bir dosya ile ilişkilendirilmemiş bellekle eşleştirilmiş dosyalardır. Son işlem dosyayla çalışmayı bitirdiğinde, veriler kaybolur ve dosya çöp toplama tarafından geri kazanılır. Bu dosyalar, işlemler arası iletişimler (IPC) için paylaşılan bellek oluşturmak üzere uygundur.  
   
 ## <a name="processes-views-and-managing-memory"></a>Belleği işleme, görüntüleme ve yönetme  
+
  Bellek eşlemeli dosyalar, birden çok işlem arasında paylaşılabilir. İşlemler, dosyayı oluşturan işlem tarafından atanan ortak bir ad kullanarak aynı bellek eşlemeli dosyayla eşlenir.  
   
  Bellek eşlemeli bir dosyayla çalışmak için, tüm bellek eşlemeli dosyanın veya bunun bir kısmının görünümünü oluşturmanız gerekir. Ayrıca, bellek eşlemeli dosyanın aynı kısmına birden fazla görünüm de oluşturabilirsiniz, böylece eşzamanlı bellek oluşturulabilir. İki görünümün eşzamanlı kalması için aynı bellek eşlemeli dosyadan oluşturulması gerekir.  
@@ -48,6 +49,7 @@ Bellek eşlemeli bir dosya, sanal bellekteki bir dosyanın içeriğini içerir. 
  ![Bir bellek&#45;eşlenmiş dosyanın görünümlerini gösteren ekran görüntüsü.](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>Memory-Mapped dosyaları ile programlama  
+
  Aşağıdaki tabloda, bellek eşlemeli dosya nesnelerini ve bunların üyelerini kullanmaya yönelik bir kılavuz verilmiştir.  
   
 |Görev|Kullanılacak yöntemler veya Özellikler|  
@@ -61,6 +63,7 @@ Bellek eşlemeli bir dosya, sanal bellekteki bir dosyanın içeriğini içerir. 
 |Bir görünüm oluşturuluncaya kadar bellek ayırmayı geciktirmek için (yalnızca kalıcı olmayan dosyalar).<br /><br /> (Geçerli sistem sayfa boyutunu anlamak için, <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> özelliğini kullanın.)|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> değeri olan Yöntem <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> .<br /><br /> - veya -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A><xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions>parametre olarak sabit listesi olan Yöntemler.|  
   
 ### <a name="security"></a>Güvenlik  
+
  Bir sabit listesini parametre olarak alan aşağıdaki yöntemleri kullanarak, bellek eşlemeli bir dosya oluştururken erişim hakları uygulayabilirsiniz <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> :  
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
@@ -78,6 +81,7 @@ Bellek eşlemeli bir dosya, sanal bellekteki bir dosyanın içeriğini içerir. 
 ## <a name="examples"></a>Örnekler  
   
 ### <a name="persisted-memory-mapped-files"></a>Kalıcı Memory-Mapped dosyaları  
+
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A>Yöntemler diskte var olan bir dosyadan bellek eşlemeli bir dosya oluşturur.  
   
  Aşağıdaki örnek, son derece büyük bir dosyanın bir bölümünün bellek eşlemeli bir görünümünü oluşturur ve bir kısmını yönetir.  
@@ -93,6 +97,7 @@ Bellek eşlemeli bir dosya, sanal bellekteki bir dosyanın içeriğini içerir. 
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
 ### <a name="non-persisted-memory-mapped-files"></a>Kalıcı olmayan Memory-Mapped dosyaları  
+
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A>Ve <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> yöntemleri, diskte var olan bir dosyayla eşlenmemiş bir bellek eşlemeli dosya oluşturur.  
   
  Aşağıdaki örnek, bellek eşlemeli bir dosyaya Boole değerleri yazan üç ayrı işlem (konsol uygulaması) içerir. Aşağıdaki eylem sırası oluşur:  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - interprocess communication [.NET], pipes
 - I/O [.NET], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-ms.openlocfilehash: 3ec4ee61bfd3a0a82eb0a0884b89c19a9300b078
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bb8804c32b9f2b54b05298779bddae117c10dcf5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819103"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734809"
 ---
 # <a name="pipe-operations-in-net"></a>.NET 'teki kanal Işlemleri
+
 Kanallar, işlemler arası iletişim için bir yol sağlar. İki tür kanal vardır:  
   
 - Anonim kanallar.  

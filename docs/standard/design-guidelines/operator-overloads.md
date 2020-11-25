@@ -7,14 +7,15 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7757e6cfdb9ae31f6e94c26a2684f8176174499a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830044"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734822"
 ---
 # <a name="operator-overloads"></a>İşleç Aşırı Yüklemeleri
+
 İşleç aşırı yüklemeleri, çerçeve türlerinin yerleşik dil temelleri gibi görünmesine izin verir.
 
  Bazı durumlarda izin verilen ve yararlı olsa da, işleç aşırı yüklemeleri dikkatle kullanılmalıdır. Çerçeve tasarımcılarının basit yöntemler olması gereken işlemler için İşleçleri kullanmaya başladığı durumlar gibi, operatör aşırı yüklemesinde çok sayıda durum vardır. Aşağıdaki kılavuzlar, işleç aşırı yüklemesini ne zaman ve nasıl kullanacağınızı belirlemenize yardımcı olmalıdır.
@@ -85,9 +86,11 @@ ms.locfileid: "94830044"
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
 ### <a name="overloading-operator-"></a>Aşırı yükleme Işleci = =
+
  Aşırı yükleme `operator ==` oldukça karmaşıktır. İşlecinin semantiğinin, gibi diğer birçok üye ile uyumlu olması gerekir <xref:System.Object.Equals%2A?displayProperty=nameWithType> .
 
 ### <a name="conversion-operators"></a>Dönüşüm İşleçleri
+
  Dönüştürme işleçleri, bir türden diğerine dönüştürmeye izin veren birli işleçlerdir. İşleçler, işlenen ya da dönüş türü üzerinde statik üye olarak tanımlanmalıdır. İki tür dönüştürme işleci vardır: örtük ve açık.
 
  ❌ Bu dönüştürme, son kullanıcılar tarafından açıkça beklenmiyorsa, bir dönüştürme işleci sağlamayan.
