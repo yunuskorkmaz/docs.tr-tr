@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9608861-ae64-4467-8a73-be05ad34beac
 topic_type:
 - apiref
-ms.openlocfilehash: a27e7ca156ca138078215a65486ac4b965c6a93d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d8f2788d63f27aac30cf239b410eecea31f09212
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496340"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697889"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2 Yöntemi
+
 Belirtilen iş parçacığının ve uygulama etki alanının kapsamındaki belirtilen thread-static alanının adresini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT GetThreadStaticAddress2(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `classId`  
  'ndaki İstenen iş parçacığı-statik alanını içeren sınıfın KIMLIĞI.  
   
@@ -53,6 +55,7 @@ HRESULT GetThreadStaticAddress2(
  dışı Belirtilen iş parçacığı içindeki statik alanın adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetThreadStaticAddress2`Yöntemi aşağıdakilerden birini döndürebilir:  
   
 - Belirtilen bağlamda verilen statik alana bir adres atanmadığı takdirde bir CORPROF_E_DATAINCOMPLETE HRESULT.  
@@ -64,6 +67,7 @@ HRESULT GetThreadStaticAddress2(
  [ICorProfilerInfo2:: GetThreadStaticAddress](icorprofilerinfo2-getthreadstaticaddress-method.md) yöntemi `GetThreadStaticAddress2` yöntemine benzer, ancak bir uygulama etki alanı bağımsız değişkenini kabul etmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

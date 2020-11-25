@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-ms.openlocfilehash: 0cb83935b4175060a04f4be48e6b4eee2f44ed7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14497bb5b027209c4707eab9bcf1b60f85740dfd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823504"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697564"
 ---
 # <a name="saving-and-writing-a-document"></a>Belge Kaydetme ve Yazma
+
 Yüklediğinizde ve kaydettiğinizde <xref:System.Xml.XmlDocument> , kaydedilen belge orijinalden aşağıdaki yollarla farklılık gösterebilir:  
   
 - <xref:System.Xml.XmlDocument.PreserveWhitespace%2A>Özelliği `true` yöntemi çağrılmadan önce olarak ayarlandıysa <xref:System.Xml.XmlDocument.Save%2A> , çıktıda boşluk korunur; Bu özellik ise `false` <xref:System.Xml.XmlDocument> çıktıyı otomatik olarak girintiler.  
@@ -30,6 +31,7 @@ Yüklediğinizde ve kaydettiğinizde <xref:System.Xml.XmlDocument> , kaydedilen 
 - <xref:System.Xml.XmlDocument>' I bir dosyaya veya akışa yazmak isterseniz, yazılan çıkış belgenin içeriğiyle aynı olur. Diğer bir deyişle, <xref:System.Xml.XmlDeclaration> yalnızca belgede bulunan bir belge varsa yazılır ve belgeyi yazarken kullanılan kodlama, bildirim düğümünde belirtilen kodlamayla aynı olur.  
   
 ## <a name="writing-an-xmldeclaration"></a>XmlDeclaration yazma  
+
  , <xref:System.Xml.XmlDocument> Ve <xref:System.Xml.XmlDeclaration> <xref:System.Xml.XmlNode.OuterXml%2A> <xref:System.Xml.XmlNode.InnerXml%2A> <xref:System.Xml.XmlNode.WriteTo%2A> yöntemlerinin yanı sıra <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument.Save%2A> <xref:System.Xml.XmlDocument.WriteContentTo%2A> bir XML bildirimi oluşturur.  
   
  , Ve, <xref:System.Xml.XmlDocument> ve yöntemlerinin özellikleri için, <xref:System.Xml.XmlNode.OuterXml%2A> <xref:System.Xml.XmlDocument.InnerXml%2A> <xref:System.Xml.XmlDocument.Save%2A> <xref:System.Xml.XmlDocument.WriteTo%2A> <xref:System.Xml.XmlDocument.WriteContentTo%2A> XML bildiriminde yazılan kodlama <xref:System.Xml.XmlDeclaration> düğümden alınır. <xref:System.Xml.XmlDeclaration>Düğüm yoksa, <xref:System.Xml.XmlDeclaration> yazılmaz. Düğümde bir kodlama yoksa <xref:System.Xml.XmlDeclaration> , kodlama XML bildiriminde yazılmaz.  
@@ -55,6 +57,7 @@ doc.Save(tw);
  , <xref:System.Xml.XmlDeclaration> Ve üyeleri için <xref:System.Xml.XmlNode.OuterXml%2A> , <xref:System.Xml.XmlDeclaration.WriteTo%2A> <xref:System.Xml.XmlNode.InnerXml%2A> <xref:System.Xml.XmlDeclaration.Encoding%2A> özelliği ayarlanmamışsa, hiçbir kodlama yazılmaz. Aksi halde, XML bildiriminde yazılan kodlama, özelliğinde bulunan kodlamayla aynı olur <xref:System.Xml.XmlDeclaration.Encoding%2A> .  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>OuterXml özelliğini kullanarak belge Içeriği yazma  
+
  <xref:System.Xml.XmlNode.OuterXml%2A>Özelliği, World Wide Web Konsorsiyumu (W3C) XML belge nesne modeli (DOM) standartlarına yönelik bir Microsoft uzantısıdır. <xref:System.Xml.XmlNode.OuterXml%2A>Özelliği tüm XML belgesinin işaretlemesini veya yalnızca tek bir düğümün ve onun alt düğümlerinin işaretlemesini almak için kullanılır. <xref:System.Xml.XmlNode.OuterXml%2A> verilen düğümü ve onun tüm alt düğümlerini temsil eden biçimlendirmeyi döndürür.  
   
  Aşağıdaki kod örneği, bir belgenin tamamen dize olarak nasıl kaydedileceğini gösterir.  

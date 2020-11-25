@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-ms.openlocfilehash: 7da12554ba1db9a467aa03c01bfb3b584125b129
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 55f219b5b834f365b87440e69bfa7d2c4e519235
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213198"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696103"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus Yöntemi
+
 Yalnızca kendi kodum Adımlama için bu ICorDebugFunction2 tarafından temsil edilen işlevi işaretler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetJMCStatus (  
@@ -34,8 +35,9 @@ HRESULT SetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `bIsJustMyCode`  
- 'ndaki `true`İşlevi Kullanıcı kodu olarak işaretlemek için olarak ayarlayın; Aksi takdirde, olarak ayarlayın `false` .  
+ 'ndaki `true` İşlevi Kullanıcı kodu olarak işaretlemek için olarak ayarlayın; Aksi takdirde, olarak ayarlayın `false` .  
   
 ## <a name="return-values"></a>Dönüş Değerleri  
   
@@ -45,9 +47,11 @@ HRESULT SetJMCStatus (
 |`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|İşlev, hata ayıklanamadığından Kullanıcı kodu olarak işaretlenemedi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir Yalnızca kendi kodum Stepper, Kullanıcı olmayan kodu atlar. Kullanıcı kodu hata ayıklanabilir kodunun bir alt kümesi olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

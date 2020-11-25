@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 4a65a98ee04c3870dae2f49b3da2a8e72b1ffae4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 1c94e03aa088d8f48eb7f7a418cebd0492319513
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795839"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696602"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType Numaralandırması
+
 Yığın çerçevesinin türünü tanımlar. Bu numaralandırma [ICorDebugInternalFrame:: GetFrameType](icordebuginternalframe-getframetype-method.md) yöntemi tarafından kullanılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorDebugInternalFrameType {  
@@ -47,7 +48,7 @@ typedef enum CorDebugInternalFrameType {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Null değer. `ICorDebugInternalFrame::GetFrameType` Yöntem hiçbir şekilde bu değeri döndürmez.|  
+|`STUBFRAME_NONE`|Null değer. `ICorDebugInternalFrame::GetFrameType`Yöntem hiçbir şekilde bu değeri döndürmez.|  
 |`STUBFRAME_M2U`|Yönetilen-yönetilmeyen bir saplama çerçevesi.|  
 |`STUBFRAME_U2M`|Yönetilmeyenden yönetilene bir saplama çerçevesi.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Uygulama etki alanları arasında geçiş.|  
@@ -60,6 +61,7 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_JIT_COMPILATION`|Çalışma zamanı JıT olarak bir yöntemi derlemedir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -14,32 +14,34 @@ helpviewer_keywords:
 ms.assetid: 71ea170f-872d-4fc5-81b6-27da1dec9b19
 topic_type:
 - apiref
-ms.openlocfilehash: 5ed0075da1429c70900750f3f28e8ce36a41fb28
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: df4f0ba018b55202c22cb90b22b927a9c426c4ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134535"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696862"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache Arabirimi
+
 Fusion teknolojisinin kullanması için genel derleme önbelleğini temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CreateAssemblyCacheItem Yöntemi](iassemblycache-createassemblycacheitem-method.md)|Yeni bir [IAssemblyCacheItem](iassemblycacheitem-interface.md)öğesine bir başvuru alır.|  
-|[CreateAssemblyScavenger Yöntemi](iassemblycache-createassemblyscavenger-method.md)|Fusion teknolojisinin iç kullanımı için ayrılmıştır.|  
-|[InstallAssembly Yöntemi](iassemblycache-installassembly-method.md)|Belirtilen derlemeyi genel derleme önbelleğine yüklenir.|  
-|[QueryAssemblyInfo Yöntemi](iassemblycache-queryassemblyinfo-method.md)|Belirtilen derleme hakkında istenen verileri alır.|  
-|[UninstallAssembly Yöntemi](iassemblycache-uninstallassembly-method.md)|Belirtilen derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır.|  
+|[CreateAssemblyCacheItem Metodu](iassemblycache-createassemblycacheitem-method.md)|Yeni bir [IAssemblyCacheItem](iassemblycacheitem-interface.md)öğesine bir başvuru alır.|  
+|[CreateAssemblyScavenger Metodu](iassemblycache-createassemblyscavenger-method.md)|Fusion teknolojisinin iç kullanımı için ayrılmıştır.|  
+|[InstallAssembly Metodu](iassemblycache-installassembly-method.md)|Belirtilen derlemeyi genel derleme önbelleğine yüklenir.|  
+|[QueryAssemblyInfo Metodu](iassemblycache-queryassemblyinfo-method.md)|Belirtilen derleme hakkında istenen verileri alır.|  
+|[UninstallAssembly Metodu](iassemblycache-uninstallassembly-method.md)|Belirtilen derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Fusion. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

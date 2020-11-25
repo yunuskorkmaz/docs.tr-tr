@@ -2,17 +2,18 @@
 title: ICorDebugLoadedModule::GetBaseAddress Metodu
 ms.date: 03/30/2017
 ms.assetid: 7c036772-d58a-47f1-a5fa-31779898ef0d
-ms.openlocfilehash: d8c91c10577efd6a76af778cd01002de006df43a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 29153da86812583a0ea789da0c0816f08e0a6b43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209883"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698084"
 ---
 # <a name="icordebugloadedmodulegetbaseaddress-method"></a>ICorDebugLoadedModule::GetBaseAddress Metodu
+
 Yüklenen modülün temel adresini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetBaseAddress(  
@@ -21,6 +22,7 @@ HRESULT GetBaseAddress(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pAddress`  
  dışı Yüklenen modülün temel adresine yönelik bir işaretçi.  
   
@@ -30,6 +32,7 @@ HRESULT GetBaseAddress(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

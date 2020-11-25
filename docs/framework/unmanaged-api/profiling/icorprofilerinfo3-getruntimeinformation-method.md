@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: b8e503af11fa1d02aac2ec83edde0ffbd562d8e5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fdb2b1601e0164de19bcc1e8f60856346aeaacb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496405"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698019"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation Metodu
+
 Profili oluşturulan ortak dil çalışma zamanı (CLR) hakkında sürüm bilgileri sağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -42,6 +43,7 @@ HRESULT GetRuntimeInformation(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pClrInstanceId`  
  dışı İşlemdeki çalışan bir CLR örneğinin temsili KIMLIĞI. Bu, `ClrInstanceID` Windows için olay izleme (ETW) başlatma olay raporlarıdır.  
   
@@ -70,9 +72,11 @@ HRESULT GetRuntimeInformation(
  dışı CLR sürüm dizesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Herhangi bir parametre için null değeri geçirebilirsiniz. Ancak `pcchVersionString` aynı zamanda null olmadığı için null olamaz `szVersionString` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

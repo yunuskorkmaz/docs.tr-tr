@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 756c1c25-08a7-4060-9798-dbeaa2f3bee5
 topic_type:
 - apiref
-ms.openlocfilehash: 9a6ee58cda5e0b673b3ff1378240f89323e30194
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 37d6b6d5112089df18fb138086db5e138a69629c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496067"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697759"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 Metodu
+
 Belirtilen işlevin JıT yeniden derlenmiş sürümünde yer alan kodun yerel uzaklıklarından Microsoft ara dil (MSIL) uzaklıklarını bir harita alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -38,6 +39,7 @@ HRESULT GetILToNativeMapping(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `functionId`  
  'ndaki Kodu içeren işlevin KIMLIĞI.  
   
@@ -51,10 +53,11 @@ HRESULT GetILToNativeMapping(
  dışı Kullanılabilir COR_DEBUG_IL_TO_NATIVE_MAP yapılarının toplam sayısı.  
   
  `map`  
- dışı `COR_DEBUG_IL_TO_NATIVE_MAP`Her biri uzaklıkları belirten yapıların dizisi. `GetILToNativeMapping2`Yöntem döndüğünde, `map` yapıların bazılarını veya tümünü içerir `COR_DEBUG_IL_TO_NATIVE_MAP` .  
+ dışı `COR_DEBUG_IL_TO_NATIVE_MAP` Her biri uzaklıkları belirten yapıların dizisi. `GetILToNativeMapping2`Yöntem döndüğünde, `map` yapıların bazılarını veya tümünü içerir `COR_DEBUG_IL_TO_NATIVE_MAP` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetILToNativeMapping2`, [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) yöntemine benzerdir, ancak profil oluşturucunun gelecek sürümlerde yeniden derlenen işlevin kimliğini belirtmesini sağlar.  
+
+ `GetILToNativeMapping2` , [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) yöntemine benzerdir, ancak profil oluşturucunun gelecek sürümlerde yeniden derlenen işlevin kimliğini belirtmesini sağlar.  
   
 > [!NOTE]
 > [ICorProfilerFunctionControl:: SetILInstrumentedCodeMap](icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) yöntemi, .NET Framework 4,5 ' de uygulanmıyor, bu nedenle JIT yeniden derlenecek olan işlevlerin ilk derlenmiş işlevden farklı bir IL-yerel eşlemesi olamaz. Bu nedenle, `GetILToNativeMapping2` .NET Framework 4,5 ' de sıfır olmayan BIR JıT kimliği ile çağrılamaz.  
@@ -66,6 +69,7 @@ HRESULT GetILToNativeMapping(
  Alternatif olarak, `GetILToNativeMapping2` `map` doğru arabellek boyutunu elde etmek için ilk olarak sıfır uzunluklu bir arabellek ile çağrı yapabilirsiniz. Daha sonra arabellek boyutunu içinde döndürülen değere ayarlayabilir `pcMap` ve `GetILToNativeMapping2` yeniden çağırabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
@@ -76,7 +80,7 @@ HRESULT GetILToNativeMapping(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetILToNativeMapping Yöntemi](icorprofilerinfo-getiltonativemapping-method.md)
+- [GetILToNativeMapping Metodu](icorprofilerinfo-getiltonativemapping-method.md)
 - [ICorProfilerInfo4 Arabirimi](icorprofilerinfo4-interface.md)
 - [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
 - [Profil Oluşturma](index.md)

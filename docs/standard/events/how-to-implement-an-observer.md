@@ -9,14 +9,15 @@ helpviewer_keywords:
 - observers [.NET], observer design pattern
 - observer design pattern [.NET], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: bfd595cec8e499b760f75f614bd0a61b031eb207
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73f6d2c25c727717394c79268b71b44ea9ff7800
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828341"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697486"
 ---
 # <a name="how-to-implement-an-observer"></a>Nasıl yapılır: Gözlemci Uygulama
+
 Gözlemci tasarım deseninin, bildirimleri kaydeden bir gözlemci arasında bir bölme ve verileri izleyen ve bir veya daha fazla observers 'a bildirim gönderen bir sağlayıcı gerekir. Bu konu, bir gözlemci oluşturmayı açıklar. İlgili konu, [nasıl yapılır: sağlayıcı uygulama](how-to-implement-a-provider.md), bir sağlayıcının nasıl oluşturulacağını açıklar.  
   
 ### <a name="to-create-an-observer"></a>Gözlemci oluşturmak için  
@@ -42,6 +43,7 @@ Gözlemci tasarım deseninin, bildirimleri kaydeden bir gözlemci arasında bir 
      [!code-vb[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#11)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek `TemperatureReporter` , <xref:System.IObserver%601> bir sıcaklık izleme uygulaması için uygulama sağlayan, sınıfının tüm kaynak kodunu içerir.  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]

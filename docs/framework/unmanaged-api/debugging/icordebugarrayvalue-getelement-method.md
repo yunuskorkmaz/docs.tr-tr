@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-ms.openlocfilehash: 7a52e61f41bd1d7f68523dd16f70010ffbba401e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 0b6b6f46c7fff8f1d4c2ad555c93423f9ca8ac09
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895031"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698159"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement Yöntemi
+
 Verilen dizi öğesinin değerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetElement (  
@@ -37,13 +38,14 @@ HRESULT GetElement (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cdim`  
- 'ndaki Bu `ICorDebugArrayValue` nesnenin boyut sayısı.  
+ 'ndaki Bu nesnenin boyut sayısı `ICorDebugArrayValue` .  
   
- Bu değer Ayrıca, boyutu `indices` `ICorDebugArrayValue` nesnenin boyut sayısına eşit olduğundan dizinin boyutudur.  
+ Bu değer Ayrıca, `indices` boyutu nesnenin boyut sayısına eşit olduğundan dizinin boyutudur `ICorDebugArrayValue` .  
   
  `indices`  
- 'ndaki Her biri `ICorDebugArrayValue` nesnenin boyutu içinde bir konum belirten Dizin değerleri dizisi.  
+ 'ndaki Her biri nesnenin boyutu içinde bir konum belirten Dizin değerleri dizisi `ICorDebugArrayValue` .  
   
  Bu değer null olmamalıdır.  
   
@@ -51,6 +53,7 @@ HRESULT GetElement (
  dışı Belirtilen öğenin değerini temsil eden ICorDebugValue nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: 8e31f0a649fd1ca80d6557a0a7176549c67bf203
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a4ebf65dfaaa487e87f3fd78e54c468c7e24a89
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501930"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697252"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection Yöntemi
+
 Hata ayıklayıcıya yeni bir bağlantı oluşturulduğunu bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT CreateConnection (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pProcess`  
  'ndaki Bağlantının oluşturulduğu işlemi temsil eden bir "ICorDebugProcess" nesnesi işaretçisi  
   
@@ -46,6 +48,7 @@ HRESULT CreateConnection (
  'ndaki Yeni bağlantının adı için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `CreateConnection`Aşağıdaki durumlardan birinde bir geri çağırma harekete geçirilir:  
   
 - Bir hata ayıklayıcı bağlantıları içeren bir işleme iliştirayarlandığında. Bu durumda, çalışma zamanı `CreateConnection` işlemdeki her bağlantı için bir olay ve bir [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) olayı oluşturur ve gönderir.  
@@ -53,6 +56,7 @@ HRESULT CreateConnection (
 - Bir ana bilgisayar [BARıNDıRMA API](../hosting/index.md)'Sinde [ICLRDebugManager:: BeginConnection](../hosting/iclrdebugmanager-beginconnection-method.md) öğesini çağırdığında.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

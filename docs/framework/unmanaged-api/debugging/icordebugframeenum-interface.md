@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 4bc8d56bf116cd64e3e1c5d2238e557784c56711
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4277a552d217ad7f601bfe72cae32a1f25dd6be4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209610"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696238"
 ---
 # <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum Arabirimi
 
@@ -37,6 +37,7 @@ Icordebugger Genum yöntemlerini uygular ve ICorDebugFrame dizilerini numaraland
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

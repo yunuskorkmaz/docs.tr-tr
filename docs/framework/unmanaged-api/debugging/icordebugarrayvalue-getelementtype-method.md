@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: ed71961e-ae9b-4dfc-9554-06637696d697
 topic_type:
 - apiref
-ms.openlocfilehash: 8b5a6f4447730ebc6e4b23d3cd06df85b2d7fee6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1deadef7517772460adc96cd0dd630d85cb21c9f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894999"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698175"
 ---
 # <a name="icordebugarrayvaluegetelementtype-method"></a>ICorDebugArrayValue::GetElementType Metodu
+
 Dizideki öğelerin basit türünü gösteren bir değer alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetElementType (  
@@ -34,10 +35,12 @@ HRESULT GetElementType (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pType`  
  dışı Türü gösteren CorElementType numaralandırması değerine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

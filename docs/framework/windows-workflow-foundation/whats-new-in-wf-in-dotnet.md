@@ -1,23 +1,23 @@
 ---
-title: .NET 4.5 içinde Windows Workflow Foundation’daki Yenilikler
+title: .NET Framework 4,5 ' deki Windows Workflow Foundation yenilikler
 description: .NET Framework 4,5 ' de Windows Workflow Foundation yeni etkinlikler, tasarımcı özellikleri ve iş akışı geliştirme modelleri gibi birçok yeni özellik sunar.
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b115a0a5bb5e425e808270d3daf8bb0aeb942b3c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0d7086fd5ff9bfa410568a74092be3e29f732e23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556622"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697915"
 ---
-# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 içinde Windows Workflow Foundation’daki Yenilikler
+# <a name="whats-new-in-windows-workflow-foundation-in-net-framework-45"></a>.NET Framework 4,5 ' deki Windows Workflow Foundation yenilikler
 
-.NET Framework 4,5 ' de Windows Workflow Foundation (WF), yeni etkinlikler, tasarımcı özellikleri ve iş akışı geliştirme modelleri gibi birçok yeni özellik sunmaktadır. .NET Framework 4,5 ' de tanıtılan yeni iş akışı özelliklerinin birçoğu, yeniden barındırılan iş akışı tasarımcısında desteklenir. Desteklenen yeni özellikler hakkında daha fazla bilgi için bkz. [yeniden barındırılan iş akışı Tasarımcısı yeni Workflow Foundation 4,5 özellikleri Için destek](wf-features-in-the-rehosted-workflow-designer.md). .NET 3,0 ve .NET 3,5 iş akışı uygulamalarını en son sürümü kullanacak şekilde geçirme hakkında daha fazla bilgi için bkz. [Geçiş Kılavuzu](migration-guidance.md). Bu konu, .NET Framework 4,5 ' de tanıtılan yeni iş akışı özelliklerine genel bir bakış sağlar.
+.NET Framework 4,5 ' de Windows Workflow Foundation (WF), yeni etkinlikler, tasarımcı özellikleri ve iş akışı geliştirme modelleri gibi birçok yeni özellik sunmaktadır. .NET Framework 4,5 ' de tanıtılan yeni iş akışı özelliklerinin birçoğu, yeniden barındırılan iş akışı tasarımcısında desteklenir. Desteklenen yeni özellikler hakkında daha fazla bilgi için bkz. [yeniden barındırılan iş akışı Tasarımcısı yeni Workflow Foundation 4,5 özellikleri Için destek](wf-features-in-the-rehosted-workflow-designer.md). En son sürümü kullanmak üzere 3,0 .NET Framework ve .NET Framework 3,5 iş akışı uygulamalarını geçirme hakkında daha fazla bilgi için bkz. [Geçiş Kılavuzu](migration-guidance.md). Bu makalede .NET Framework 4,5 ' de tanıtılan yeni iş akışı özelliklerine genel bir bakış sunulmaktadır.
 
 > [!WARNING]
-> .NET Framework 4,5 ' de tanıtılan yeni Windows Workflow Foundation özellikleri, Framework 'ün önceki sürümlerini hedefleyen projeler için kullanılamaz. .NET Framework 4,5 ' i hedefleyen bir proje Framework 'ün önceki bir sürümüne yeniden hedeflerse, bazı sorunlar meydana gelebilir.
+> .NET Framework 4,5 ' de tanıtılan yeni Windows Workflow Foundation özellikleri, Framework 'ün önceki sürümlerini hedefleyen projeler için kullanılamaz. .NET Framework 4,5 ' i hedefleyen bir proje Framework 'ün önceki bir sürümüne yeniden hedeflendiğinde, bazı sorunlar oluşabilir.
 >
-> - C# ifadeleri, **xaml 'de Ileti değeri ayarlanmış**şekilde tasarımcıda yer alır.
+> - C# ifadeleri, **xaml 'de Ileti değeri ayarlanmış** şekilde tasarımcıda yer alır.
 > - Aşağıdaki hata da dahil olmak üzere pek çok derleme hatası meydana gelir.
 >
 > **Dosya biçimi geçerli hedefleme çerçevesiyle uyumlu değil. Dosya biçimini dönüştürmek için lütfen dosyayı açık olarak kaydedin. Bu hata iletisi, dosyayı kaydettikten ve tasarımcıyı yeniden açıldıktan sonra kalır.**
@@ -89,7 +89,7 @@ Akış çizelgeleri .NET Framework 4,5 için güncelleştirilir ve aşağıdaki 
 
 Daha büyük iş akışlarını daha yönetilebilir hale getirmek için iş akışları artık anahtar sözcüğü ile aranabilecek. Bu özellik yalnızca Visual Studio 'da kullanılabilir; Bu özellik yeniden barındırılan bir tasarımcıda kullanılamaz. Kullanılabilecek iki tür arama vardır:
 
-- Hızlı bul, **CTRL + F** ya da **Düzenle**, **Bul ve Değiştir**, **hızlı bul**ile başlatıldı.
+- Hızlı bul, **CTRL + F** ya da **Düzenle**, **Bul ve Değiştir**, **hızlı bul** ile başlatıldı.
 
 - Dosyalarda bul, **CTRL + SHIFT + F** ile başlatılan veya **Düzenle**, **Bul ve Değiştir**, **dosyalarda bul**.
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 1779bb51267af3c2f50ec03112f3c45199390333
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef7363cd1c5161217fa4cf74dbfae9dee86fa76f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830434"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697746"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama
 
@@ -51,6 +51,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
  Bu konudaki kodu tek bir liste olarak kopyalamak için bkz. [nasıl yapılır: olay tabanlı zaman uyumsuz düzendeki bir Istemciyi uygulama](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="creating-the-component"></a>Bileşeni oluşturma  
+
  İlk adım, olay tabanlı zaman uyumsuz düzene uygulanacak bileşeni oluşturmaktır.  
   
 ### <a name="to-create-the-component"></a>Bileşeni oluşturmak için  
@@ -58,6 +59,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
 - Öğesinden devralan adlı bir sınıf oluşturun `PrimeNumberCalculator` <xref:System.ComponentModel.Component> .  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Ortak zaman uyumsuz olayları ve temsilcileri tanımlama  
+
  Bileşeniniz, olayları kullanarak istemcilerle iletişim kurar. _MethodName_**olay uyarıları** istemcileri, zaman uyumsuz bir görevin tamamlanmasını sağlar ve _MethodName_**ProgressChanged & lt** olayı, zaman uyumsuz bir görevin ilerleme durumunu istemcilere bildirir.  
   
 ### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Bileşeninizin istemcilerine yönelik zaman uyumsuz olayları tanımlamak için:  
@@ -83,6 +85,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#6)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  Bu noktada, bileşeni oluşturabilirsiniz.  
   
 ### <a name="to-test-your-component"></a>Bileşeninizi test etmek için  
@@ -99,6 +102,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
      Bu uyarılar sonraki bölümde temizlenir.  
   
 ## <a name="defining-private-delegates"></a>Özel temsilciler tanımlama  
+
  Bileşenin zaman uyumsuz yönleri, `PrimeNumberCalculator` olarak bilinen özel bir temsilci ile dahili olarak uygulanır <xref:System.Threading.SendOrPostCallback> . Bir <xref:System.Threading.SendOrPostCallback> iş parçacığında yürütülen bir geri çağırma yöntemini temsil eder <xref:System.Threading.ThreadPool> . Geri çağırma yöntemi türünde tek bir parametre alan bir imzaya sahip olmalıdır <xref:System.Object> , bu, bir sarmalayıcı sınıfında temsilciler arasında durum geçirmeniz gereken anlamına gelir. Daha fazla bilgi için bkz. <xref:System.Threading.SendOrPostCallback>.  
   
 ### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Bileşeninizin iç zaman uyumsuz davranışını uygulamak için:  
@@ -130,6 +134,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
      [!code-vb[System.ComponentModel.AsyncOperationManager#23](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#23)]  
   
 ## <a name="implementing-public-events"></a>Ortak olayları uygulama  
+
  Olay tabanlı zaman uyumsuz model uygulayan bileşenler olayları kullanarak istemcilerle iletişim kurar. Bu olaylar, sınıfının yardımıyla uygun iş parçacığında çağrılır <xref:System.ComponentModel.AsyncOperation> .  
   
 ### <a name="to-raise-events-to-your-components-clients"></a>Bileşenin istemcilerine olay yükseltmek için:  
@@ -140,6 +145,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
      [!code-vb[System.ComponentModel.AsyncOperationManager#24](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#24)]  
   
 ## <a name="implementing-the-completion-method"></a>Tamamlama yöntemini uygulama  
+
  Tamamlanma temsilcisi, zaman uyumsuz işlem başarılı tamamlama, hata veya iptal ile sona erdiğinde, temel alınan, serbest iş parçacıklı zaman uyumsuz davranışın çağıracağı yöntemdir. Bu çağrı, rastgele bir iş parçacığında gerçekleşir.  
   
  Bu yöntem, istemcinin görev KIMLIĞININ, benzersiz istemci belirteçleri iç koleksiyonundan kaldırıldığı yerdir. Bu yöntem, karşılık gelen yöntemini çağırarak belirli bir zaman uyumsuz işlemin ömrünü de sonlandırır <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> <xref:System.ComponentModel.AsyncOperation> . Bu çağrı, uygulama modeli için uygun olan iş parçacığında tamamlanma olayını başlatır. <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>Yöntemi çağrıldıktan sonra, bu örneği <xref:System.ComponentModel.AsyncOperation> artık kullanılamaz ve bunu kullanmaya yönelik sonraki girişimler bir özel durum oluşturur.  
@@ -154,6 +160,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#26)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  Bu noktada, bileşeni oluşturabilirsiniz.  
   
 ### <a name="to-test-your-component"></a>Bileşeninizi test etmek için  
@@ -169,6 +176,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
      Bu uyarı sonraki bölümde çözümlenir.  
   
 ## <a name="implementing-the-worker-methods"></a>Çalışan yöntemlerini uygulama  
+
  Şimdiye kadar, bileşen için zaman uyumsuz kod destekleme kodu uyguladık `PrimeNumberCalculator` . Artık gerçek işi yapan kodu uygulayabilirsiniz. Üç yöntem uygulayacaksınız: `CalculateWorker` , `BuildPrimeNumberList` , ve `IsPrime` . Birlikte, `BuildPrimeNumberList` `IsPrime` bir sayının, test numarasının kare köküne kadar tüm asal sayıları bularak bir sayının asal olup olmadığını belirleyen, en iyi bilinen bir algoritma oluşturur. Bu nokta tarafından hiçbir izleme bulunmazsa, test numarası asal olur.  
   
  Bu bileşen en yüksek verimlilik için yazılmışsa, farklı test numaraları için çeşitli etkinleştirmeleri tarafından bulunan tüm asal sayıları hatırlayacaktı. Ayrıca, 2, 3 ve 5 gibi önemsiz bir göz atın. Bu örneğin amacı, zaman alan işlemlerin zaman uyumsuz olarak nasıl yürütülebileceğini göstermek, ancak bu iyileştirmelerin sizin için bir alıştırma olarak ayrılmamaktır.  
@@ -208,6 +216,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#29)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  Bu noktada, bileşeni oluşturabilirsiniz.  
   
 ### <a name="to-test-your-component"></a>Bileşeninizi test etmek için  
@@ -217,6 +226,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
      Yazılması gereken işlemler, zaman uyumsuz işlemleri başlatma ve iptal etme yöntemleridir `CalculatePrimeAsync` `CancelAsync` .  
   
 ## <a name="implementing-the-start-and-cancel-methods"></a>Start ve Cancel yöntemlerini uygulama  
+
  Çalışan metodunu, sarmalayan temsilciyi çağırarak kendi iş parçacığında başlatabilirsiniz `BeginInvoke` . Belirli bir zaman uyumsuz işlemin ömrünü yönetmek için <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> <xref:System.ComponentModel.AsyncOperationManager> yardımcı sınıfında yöntemi çağırın. Bu <xref:System.ComponentModel.AsyncOperation> , istemci olay işleyicilerinde doğru iş parçacığına veya içeriğe çağrı getiren bir döndürür.  
   
  Kendisine karşılık gelen bir bekleyen işlemi çağırarak iptal edersiniz <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> <xref:System.ComponentModel.AsyncOperation> . Bu işlem sonlanır ve bundan sonraki çağrılar <xref:System.ComponentModel.AsyncOperation> bir özel durum oluşturur.  
@@ -234,6 +244,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#4)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  Bu noktada, bileşeni oluşturabilirsiniz.  
   
 ### <a name="to-test-your-component"></a>Bileşeninizi test etmek için  
@@ -245,6 +256,7 @@ Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız,
  Bileşenini kullanan örnek bir istemci için `PrimeNumberCalculator` bkz. [nasıl yapılır: olay tabanlı zaman uyumsuz düzende istemci uygulama](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
+
  `CalculatePrime`Yöntemin zaman uyumlu eşdeğerini yazarak bu örneği doldurabilirsiniz `CalculatePrimeAsync` . Bu, `PrimeNumberCalculator` bileşeni olay tabanlı zaman uyumsuz düzeniyle tamamen uyumlu hale getirir.  
   
  Farklı test numaraları için çeşitli etkinleştirmeleri tarafından bulunan tüm asal sayıların listesini koruyarak bu örneği geliştirebilirsiniz. Bu yaklaşımı kullanarak, her görev önceki görevler tarafından gerçekleştirilen işin avantajına sahip olur. Bu listeyi bölgelerle korumamaya dikkat `lock` edin, bu nedenle listeye farklı iş parçacıkları tarafından erişim serileştirilir.  
