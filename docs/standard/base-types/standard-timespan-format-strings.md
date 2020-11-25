@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 251f90e85d037d8cf4f3fd58bc27659c98d04b5e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831318"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734250"
 ---
 # <a name="standard-timespan-format-strings"></a>Standart TimeSpan biçim dizeleri
 
@@ -47,6 +47,7 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
 |"G"|Genel uzun biçim|Bu belirtici her zaman gün ve yedi kesirli basamak verir. Kültüre duyarlıdır ve formu alır `[-]d':'hh':'mm':'ss.fffffff` .<br /><br /> Daha fazla bilgi: [genel uzun ("G") Biçim belirleyicisi](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00, 0000000 (fr-FR)|  
 
 ## <a name="the-constant-c-format-specifier"></a>Sabit ("c") Biçim belirleyicisi  
+
  "C" biçim belirticisi aşağıdaki biçimde bir değerin dize gösterimini döndürür <xref:System.TimeSpan> :  
   
  [-] [*d*.] *SS*:*dd*:*SS*[.*fffffff*]  
@@ -73,6 +74,7 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
 
 ## <a name="the-general-short-g-format-specifier"></a>Genel kısa ("g") Biçim belirleyicisi  
+
  "G" <xref:System.TimeSpan> biçim belirticisi, <xref:System.TimeSpan> yalnızca gerekli öğeleri ekleyerek bir küçük biçimdeki değerin dize gösterimini döndürür. Aşağıdaki biçimdedir:  
   
  [-] [*d*:] *h*:*mm*:*SS*[.*FFFFFFF*]  
@@ -97,6 +99,7 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
 
 ## <a name="the-general-long-g-format-specifier"></a>Genel uzun ("G") Biçim belirleyicisi  
+
  "G" <xref:System.TimeSpan> biçim belirticisi, bir değerin dize gösterimini, <xref:System.TimeSpan> her zaman hem gün hem de kesirli saniyeleri içeren uzun bir biçimde döndürür. "G" standart biçim belirticisinden elde edilen dize aşağıdaki biçimdedir:  
   
  [-] *d*:*SS*:*dd*:*SS*. *fffffff*  

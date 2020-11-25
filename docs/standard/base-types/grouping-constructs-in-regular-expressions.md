@@ -13,14 +13,15 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 52f7efdf5591901602811cba8f2b6c1a4f42f96c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 62de6dc3b6276aab4667c719033ee3b66928ea2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823010"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734380"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
+
 Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve bir giriş dizesinin alt dizelerini yakalar. Aşağıdakileri yapmak için gruplandırma yapılarını kullanabilirsiniz:  
   
 - Giriş dizesinde yinelenen bir alt ifadeyi eşleştirin.  
@@ -49,7 +50,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
  Gruplar ve normal ifade nesne modeli hakkında bilgi için bkz. [gruplandırma yapıları ve normal ifade nesneleri](#Objects).  
   
 <a name="matched_subexpression"></a>
+
 ## <a name="matched-subexpressions"></a>Eşleşen Alt İfadeler  
+
  Aşağıdaki gruplandırma yapısı eşleşen bir alt ifadeyi yakalar:  
   
  `(`alt *ifade*`)`  
@@ -88,7 +91,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`\W`|Boşluk ve noktalama işaretleri de dahil olmak üzere sözcüksiz bir karakterle eşleştirin. Bu, normal ifade deseninin, ilk yakalanan gruptan kelimeyle başlayan bir sözcükle eşleşmesini önler.|  
   
 <a name="named_matched_subexpression"></a>
+
 ## <a name="named-matched-subexpressions"></a>Adlandırılmış Eşleşen Alt İfadeler  
+
  Aşağıdaki gruplandırma yapısı eşleşen bir alt ifadeyi yakalar ve ada veya numaraya göre erişmenizi sağlar:  
   
 `(?<name>subexpression)`  
@@ -118,7 +123,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
   
  Basit bir normal ifade modelinde, numaralandırılmış (adlandırılmamış) ve adlandırılmış grupların programlı olarak veya normal ifade dili sözdizimi kullanılarak nasıl başvurulabileceği gösterilmektedir. Normal ifade, `((?<One>abc)\d+)?(?<Two>xyz)(.*)` aşağıdaki yakalama gruplarını numaraya göre ve adına göre oluşturur. İlk yakalama grubu (sayı 0) her zaman tüm modele başvurur.  
   
-|Sayı|Ad|Desen|  
+|Sayı|Name|Desen|  
 |------------|----------|-------------|  
 |0|0 (varsayılan ad)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (varsayılan ad)|`((?<One>abc)\d+)`|  
@@ -162,7 +167,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`(?<digit>\d+)?`|Bir veya daha fazla ondalık basamak karakterinin sıfır veya bir oluşumunu eşleştirin. Eşleşmeyi `digit` adlandırılmış gruba atayın.|  
   
 <a name="balancing_group_definition"></a>
+
 ## <a name="balancing-group-definitions"></a>Grup Tanımlarını Dengeleme  
+
  Bir Dengeleme grubu tanımı, daha önce tanımlanmış bir grubun tanımını ve geçerli grupta, daha önce tanımlanan grup ve geçerli grup arasındaki aralığı siler. Bu gruplandırma yapısı aşağıdaki biçimdedir:  
   
 `(?<name1-name2>subexpression)`  
@@ -235,7 +242,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |24|`$`|Giriş dizesinin sonuyla eşleşir.|  
   
 <a name="noncapturing_group"></a>
+
 ## <a name="noncapturing-groups"></a>Yakalama Yapmayan Gruplar  
+
  Aşağıdaki gruplandırma yapısı bir alt ifade ile eşleşen alt dizeyi yakalamaz:  
   
 `(?:subexpression)`
@@ -261,7 +270,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`\.`|Bir noktayla eşleştirin.|  
   
 <a name="group_options"></a>
+
 ## <a name="group-options"></a>Grup Seçenekleri  
+
  Aşağıdaki gruplandırma yapısı, bir alt ifade içinde belirtilen seçenekleri uygular veya devre dışı bırakır:  
   
  `(?imnsx-imnsx:`alt *ifade*`)`  
@@ -285,7 +296,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]  
   
 <a name="zerowidth_positive_lookahead_assertion"></a>
+
 ## <a name="zero-width-positive-lookahead-assertions"></a>Sıfır Genişlik Pozitif İleriye Yönelik Onaylar  
+
  Aşağıdaki gruplandırma yapısı sıfır genişlikli pozitif ileri yönlü bir onaylama işlemi tanımlar:  
   
  `(?=`alt *ifade*`)`  
@@ -308,7 +321,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`(?=\sis\b)`|Sözcük karakterlerinin ardından bir boşluk karakteri ve "olup olmadığını" dizesinin bir sözcük sınırı üzerinde bittiğini belirleme. Öyleyse, eşleşme başarılı olur.|  
   
 <a name="zerowidth_negative_lookahead_assertion"></a>
+
 ## <a name="zero-width-negative-lookahead-assertions"></a>Sıfır Genişlik Negatif İleriye Yönelik Onaylar  
+
  Aşağıdaki gruplandırma yapısı sıfır Genişlik negatif ileriye yönelik bir onaylama tanımlar:  
   
  `(?!`alt *ifade*`)`  
@@ -346,7 +361,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`\p{P})`|Sonraki karakter bir noktalama simgesi (nokta veya virgül gibi) değilse, eşleşme başarılı olur.|  
   
 <a name="zerowidth_positive_lookbehind_assertion"></a>
+
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Sıfır Genişlik Pozitif Geriye Yönelik Onaylar  
+
  Aşağıdaki gruplandırma yapısı sıfır genişlikli pozitif geriye yönelik bir onaylama işlemi tanımlar:  
   
  `(?<=`alt *ifade*`)`  
@@ -371,7 +388,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
  Sıfır genişlikli pozitif geriye yönelik onaylar Ayrıca, yakalanan bir gruptaki son karakter veya karakterlerin, bu grubun normal ifade düzeniyle eşleşen karakterlerin bir alt kümesi olması gerektiğinde geri izlemeyi sınırlandırmak için de kullanılır. Örneğin, bir grup tüm ardışık kelime karakterlerini yakaladığında, son karakterin alfabetik olmasını gerektirmek için sıfır genişlikli pozitif geriye yönelik bir onaylama işlemi kullanabilirsiniz.  
   
 <a name="zerowidth_negative_lookbehind_assertion"></a>
+
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Sıfır Genişlik Negatif Geriye Yönelik Onaylar  
+
  Aşağıdaki gruplandırma yapısı sıfır Genişlik negatif geriye yönelik bir onaylama işlemi tanımlar:  
   
  `(?<!`alt *ifade*`)`  
@@ -396,7 +415,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |<code>(?<!(Saturday&#124;Sunday) )</code>|Eşleşmeden önce "Cumartesi" veya "Pazar" dizelerinden sonra bir boşluk gelmesi durumunda eşleşme başarılı olur.|  
   
 <a name="atomic_groups"></a>
+
 ## <a name="atomic-groups"></a>Atomik gruplar  
+
  Aşağıdaki gruplandırma yapısı bir atomik grubu temsil eder (diğer bazı normal ifade altyapılarında geri alma olmayan alt ifade, atomik alt ifade veya yalnızca bir kez alt ifade olarak bilinir):
   
  `(?>`alt *ifade*`)`  
@@ -425,7 +446,9 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve
 |`(?>(\w)\1+)`|Yinelenen bir sözcük karakterinin bir veya daha fazla tekrarı ile eşleşir, ancak bir sözcük sınırının son karakteriyle eşleşecek şekilde geri izlememeyin.|  
   
 <a name="Objects"></a>
+
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Yapıları ve Normal İfade Nesnelerini Gruplandırma  
+
  Normal bir ifade yakalama grubuyla eşleşen alt dizeler <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> , <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> özelliği tarafından döndürülen nesneden alınabilecek nesneler tarafından temsil edilir <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . <xref:System.Text.RegularExpressions.GroupCollection>Nesnesi aşağıdaki gibi doldurulur:  
   
 - Koleksiyondaki ilk <xref:System.Text.RegularExpressions.Group> nesne (sıfır dizinindeki nesne) tüm eşleşmeyi temsil eder.  

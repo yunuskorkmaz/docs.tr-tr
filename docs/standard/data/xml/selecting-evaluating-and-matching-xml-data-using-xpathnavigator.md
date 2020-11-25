@@ -2,17 +2,19 @@
 title: XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme
 ms.date: 03/30/2017
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-ms.openlocfilehash: 249b99a627f3bbcc1723f104a80cb61552404877
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3096582055dc17d5724cebd79e74d2aa24154bcb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822470"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734679"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme
+
 Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> XPath sorgusu kullanarak bir veya nesnesindeki düğümleri seçmek, bir XPath ifadesinin sonuçlarını değerlendirmek ve incelemek ve bir <xref:System.Xml.XPath.XPathDocument> veya nesnesindeki bir düğümün <xref:System.Xml.XmlDocument> belirli bir XPath ifadesiyle eşleşip eşleşmediğini belirlemek için yöntemler sağlar. Bu ve bir veya nesnesindeki düğümleri seçme, değerlendirme ve eşleştirme ile ilgili diğer kavramlar <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> aşağıdaki konularda açıklanmıştır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [XPathNavigator Kullanarak XML Verileri Seçme](select-xml-data-using-xpathnavigator.md)  
  Bir <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathDocument> XPath ifadesi kullanarak bir veya nesnesindeki düğüm kümesi seçmek için kullanılan sınıf yöntemleri kümesini açıklar <xref:System.Xml.XmlDocument> .  
   

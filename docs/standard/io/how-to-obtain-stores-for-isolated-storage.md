@@ -12,14 +12,15 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-ms.openlocfilehash: a3803f50c99b8c31030c6afe756e209c9350137f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ac53432374b546a46417e9d3b9de342a7ea2ef81
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830746"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734627"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma
+
 Yalıtılmış bir mağaza, bir veri bölmesi içinde sanal bir dosya sistemi sunar. <xref:System.IO.IsolatedStorage.IsolatedStorageFile>Sınıfı yalıtılmış bir mağaza ile etkileşim kurmak için çeşitli yöntemler sağlar. Mağaza oluşturmak ve almak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile> üç statik yöntem sağlar:  
   
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Kullanıcı ve derleme tarafından yalıtılmış depolamayı döndürür.  
@@ -45,6 +46,7 @@ Yalıtılmış bir mağaza, bir veri bölmesi içinde sanal bir dosya sistemi su
  Kodun, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> deponun kendisini almak için yeterli erişimi olmayan koda bir nesne geçirilmesini engelleyen bir mekanizma yoktur. Etki alanı ve derleme kimlikleri ve yalıtılmış depolama izinleri yalnızca <xref:System.IO.IsolatedStorage.IsolatedStorage> <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> , genellikle, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> veya yönteminde bir nesne başvurusu elde edildiğinde denetlenir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> . Bu nedenle, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Bu başvuruları kullanan kodun sorumluluğu, bu nedenle nesnelere başvuruları koruma.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, Kullanıcı ve derleme tarafından yalıtılmış bir depo elde eden bir sınıfa ilişkin basit bir örnek sağlar. Kod, <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> yöntemin geçirdiği bağımsız değişkenlere ekleyerek Kullanıcı, etki alanı ve derleme tarafından yalıtılmış bir depoyu almak üzere değiştirilebilir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> .  
   
  Kodu çalıştırdıktan sonra, komut satırına **Storeadm/List** yazarak bir deponun oluşturulduğunu doğrulayabilirsiniz. Bu, [yalıtılmış depolama aracını (Storeadm.exe)](../../framework/tools/storeadm-exe-isolated-storage-tool.md) çalıştırır ve Kullanıcı için geçerli yalıtılmış tüm depoları listeler.  

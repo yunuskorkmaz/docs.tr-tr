@@ -2,20 +2,20 @@
 title: .NET 5 + ' da dizeleri karşılaştırırken davranış değişiklikleri
 description: .NET 5 ve sonraki Windows sürümlerindeki dize karşılaştırma davranışı değişiklikleri hakkında bilgi edinin.
 ms.date: 11/04/2020
-ms.openlocfilehash: 49be2169bb165b8fe0205800415542bea7bf9787
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403636"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734237"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>.NET 5 + ' da dizeleri karşılaştırırken davranış değişiklikleri
 
-.NET 5,0, genelleştirme API 'Lerinin artık tüm desteklenen platformlar arasında [Varsayılan olarak ICU 'yi kullandığı](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows) bir çalışma zamanı davranış değişikliği sunar. Bu, önceki .NET Core sürümlerinden ve Windows üzerinde çalışırken işletim sisteminin ulusal dil desteği (NLS) işlevselliğini kullanan .NET Framework bir sistemdir. Bu değişiklikler hakkında daha fazla bilgi için, davranış değişikliğini alan uyumluluk anahtarları dahil, bkz. [.NET Genelleştirme ve ıCU](../globalization-localization/globalization-icu.md).
+.NET 5,0, genelleştirme API 'Lerinin artık tüm desteklenen platformlar arasında [Varsayılan olarak ICU 'yi kullandığı](../../core/compatibility/globalization/5.0/icu-globalization-api.md) bir çalışma zamanı davranış değişikliği sunar. Bu, önceki .NET Core sürümlerinden ve Windows üzerinde çalışırken işletim sisteminin ulusal dil desteği (NLS) işlevselliğini kullanan .NET Framework bir sistemdir. Bu değişiklikler hakkında daha fazla bilgi için, davranış değişikliğini alan uyumluluk anahtarları dahil, bkz. [.NET Genelleştirme ve ıCU](../globalization-localization/globalization-icu.md).
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
-Bu değişiklik, birleştirme için sunulmuştur. Tüm desteklenen işletim sistemleri genelinde NET ' in Genelleştirme davranışı. Ayrıca, uygulamaların işletim sisteminin yerleşik kitaplıklarına göre değil, kendi Genelleştirme kitaplıklarını paketleyebilme olanağı da sağlar. Daha fazla bilgi için bkz. [Son değişiklik bildirimi](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows).
+Bu değişiklik, birleştirme için sunulmuştur. Tüm desteklenen işletim sistemleri genelinde NET ' in Genelleştirme davranışı. Ayrıca, uygulamaların işletim sisteminin yerleşik kitaplıklarına göre değil, kendi Genelleştirme kitaplıklarını paketleyebilme olanağı da sağlar. Daha fazla bilgi için bkz. [Son değişiklik bildirimi](../../core/compatibility/globalization/5.0/icu-globalization-api.md).
 
 ## <a name="behavioral-differences"></a>Davranış farkları
 
@@ -139,7 +139,7 @@ Her API 'nin varsayılan davranışının daha ayrıntılı bir analizi için <x
 
 ## <a name="ordinal-vs-linguistic-search-and-comparison"></a>Ordinal ve dilsel arama ve karşılaştırma
 
-*Sıra sayısı* ( *dil olmayan* ) arama ve karşılaştırma, bir dizeyi tek tek öğelerine ayırır ve bir Char- `char` by-char araması veya karşılaştırması gerçekleştirir. Örneğin, `"dog"` `"dog"` *equal* `Ordinal` iki dize tam olarak aynı karakter sırasından bulunduğundan, dizeler ve bir karşılaştırıcı altında eşit olarak karşılaştırın. Ancak, `"dog"` `"Dog"` tam olarak aynı karakter dizisinden oluşmadığından, bir karşılaştırıcı altında *eşit değildir* olarak karşılaştırın `Ordinal` . Diğer bir deyişle, büyük harfli `'D'` kod noktası, `U+0044` küçük harfli kod noktası öncesinde oluşur `'d'` `U+0064` ve daha `"dog"` önce sıralamaya neden olur `"Dog"` .
+*Sıra sayısı* ( *dil olmayan*) arama ve karşılaştırma, bir dizeyi tek tek öğelerine ayırır ve bir Char- `char` by-char araması veya karşılaştırması gerçekleştirir. Örneğin, `"dog"` `"dog"` *equal* `Ordinal` iki dize tam olarak aynı karakter sırasından bulunduğundan, dizeler ve bir karşılaştırıcı altında eşit olarak karşılaştırın. Ancak, `"dog"` `"Dog"` tam olarak aynı karakter dizisinden oluşmadığından, bir karşılaştırıcı altında *eşit değildir* olarak karşılaştırın `Ordinal` . Diğer bir deyişle, büyük harfli `'D'` kod noktası, `U+0044` küçük harfli kod noktası öncesinde oluşur `'d'` `U+0064` ve daha `"dog"` önce sıralamaya neden olur `"Dog"` .
 
 Bir `OrdinalIgnoreCase` karşılaştırıcı, char-char temelinde hala çalışır, ancak işlemi gerçekleştirirken büyük/küçük harf farklarını ortadan kaldırır. Bir karşılaştırıcı altında char, `OrdinalIgnoreCase` `'d'` `'D'` ve karakter çiftleri ve gibi *eşit* olarak karşılaştırılmaktadır `'á'` `'Á'` . Ancak, vurgusuz karakter, `'a'` aksanlı char *değerine eşit değil* olarak karşılaştırılmaktadır `'á'` .
 

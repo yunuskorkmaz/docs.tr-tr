@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-ms.openlocfilehash: 85a9e81d28995229e6b47d7fe4d0b541265999f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2331a852adb4dd254af85060a5077f454bcfe0eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821352"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734432"
 ---
 # <a name="equality-operators"></a>Eşitlik İşleçleri
+
 Bu bölüm, eşitlik işleçlerini aşırı yüklemeyi ve `operator==` `operator!=` eşitlik işleçlerini gösterir.
 
  ❌ Farklı bir eşitlik işleçlerinden birini aşırı yüklemeyin.
@@ -29,11 +30,13 @@ Bu bölüm, eşitlik işleçlerini aşırı yüklemeyi ve `operator==` `operator
  Örneğin, bağımsız değişkenlerden biri oluşturmak yerine null ise false döndürün `NullReferenceException` .
 
 ## <a name="equality-operators-on-value-types"></a>Değer türlerinde eşitlik Işleçleri
+
  eşitlik anlamlı ise, değer türlerinde eşitlik işleçlerini aşırı yükleme ✔️.
 
  Çoğu programlama dilinde, değer türleri için varsayılan bir uygulama yoktur `operator==` .
 
 ## <a name="equality-operators-on-reference-types"></a>Başvuru türlerinde eşitlik Işleçleri
+
  ❌ Değişebilir başvuru türlerinde eşitlik işleçlerini aşırı yüklemeyi ÖNLEYIN.
 
  Birçok dilde başvuru türleri için yerleşik eşitlik işleçleri vardır. Yerleşik operatörler genellikle başvuru eşitliğini uygular ve varsayılan davranış değer eşitliğine değiştirildiğinde çok sayıda geliştirici şaşırtır.

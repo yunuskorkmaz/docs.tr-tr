@@ -16,12 +16,12 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-ms.openlocfilehash: ebd2ae6684e7b3390b29aeebeb2552b4616a69f3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 43685a6ecb92510ad8d80c472a1c774d46cbb5f7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734640"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma
 
@@ -32,6 +32,7 @@ Yalıtılmış depolamada bir dizin aramak için <xref:System.IO.IsolatedStorage
  Bu yöntemlerin hiçbiri özyinelemeli değildir; <xref:System.IO.IsolatedStorage.IsolatedStorageFile> sınıfı, Deponuzdaki tüm dizinleri veya dosyaları listelemek için herhangi bir yöntem sağlamaz. Ancak özyinelemeli yöntemler aşağıdaki kod örneğinde gösterilmiştir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, yalıtılmış bir depoda dosyaların ve dizinlerin nasıl oluşturulacağını göstermektedir. İlk olarak, Kullanıcı, etki alanı ve derleme için yalıtılmış bir mağaza alınır ve `isoStore` değişkenine yerleştirilir. <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A>Yöntemi birkaç farklı dizin ayarlamak için kullanılır ve <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> Oluşturucu bu dizinlerde bazı dosyalar oluşturur. Kod daha sonra yöntemin sonuçları boyunca döngü yapılır `GetAllDirectories` . Bu yöntem, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> geçerli dizindeki tüm dizin adlarını bulmak için kullanır. Bu adlar bir dizide depolanır ve sonra `GetAllDirectories` bulduğu her bir dizine geçerek kendisini çağırır. Sonuç olarak, tüm dizin adları bir dizide döndürülür. Ardından, kod `GetAllFiles` yöntemini çağırır. Bu yöntem, `GetAllDirectories` tüm dizinlerin adlarını bulmak için öğesini çağırır ve sonra yöntemini kullanarak her bir dizini dosyalar için denetler <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> . Sonuç, görüntüleme için bir dizide döndürülür.  
   
  [!code-cpp[Conceptual.IsolatedStorage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source8.cpp#9)]

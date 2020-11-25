@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-ms.openlocfilehash: daf5319f5d57f44cb20ce9f28d3c7b84c7015ff6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 3794a3b308bd5c96a38337d8b81e61167e4dc988
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894912"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734055"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName Metodu
+
 Bu `ICorDebugAssembly` örneğin temsil ettiği derlemenin adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetName (  
@@ -36,6 +37,7 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cchName`  
  'ndaki `szName` Dizinin boyutu.  
   
@@ -46,9 +48,11 @@ HRESULT GetName (
  dışı Adı depolayan bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetName` Yöntemi, derlemenin tam yolunu ve dosya adını döndürür.  
+
+ `GetName`Yöntemi, derlemenin tam yolunu ve dosya adını döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

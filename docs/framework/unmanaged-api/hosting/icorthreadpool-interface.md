@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-ms.openlocfilehash: c50c109dc786a0749cca1543d10b7d172e03f0b1
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 2be1c5273a5450ce0f793ffa1fc10746e2f1161f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805346"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733964"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool Arabirimi
+
 İş parçacığı havuzuna erişim için yöntemler sağlar.  
   
 > [!NOTE]
@@ -44,11 +45,12 @@ ms.locfileid: "83805346"
 |[CorGetAvailableThreads Yöntemi](icorthreadpool-corgetavailablethreads-method.md)|Yalnızca iç kullanım için ayrılmıştır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

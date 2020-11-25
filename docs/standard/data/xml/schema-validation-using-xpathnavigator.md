@@ -5,22 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-ms.openlocfilehash: 304177ed4cb600aa27142e3b1c3690a3d7053c5d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1c91dfa63723cc087662630232376e74394c7b13
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822483"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734705"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator Kullanarak Şema Doğrulama
+
 Sınıfını kullanarak <xref:System.Xml.XmlDocument> bir nesnede bulunan XML içeriğini <xref:System.Xml.XmlDocument> iki şekilde doğrulayabilirsiniz. İlk yöntem, Validating nesnesini kullanarak XML içeriğini doğrulamak <xref:System.Xml.XmlReader> ve ikinci yöntem ise <xref:System.Xml.XmlDocument.Validate%2A> sınıfının yöntemini kullanmaktır <xref:System.Xml.XmlDocument> . Ayrıca, sınıfını kullanarak XML içeriğinin salt okunurdur doğrulamasını gerçekleştirebilirsiniz <xref:System.Xml.XPath.XPathDocument> .  
   
 ## <a name="validating-xml-data"></a>XML verileri doğrulanıyor  
+
  <xref:System.Xml.XmlDocument>Sınıf, varsayılan olarak DTD veya XML şeması tanım dili (xsd) şema doğrulamasını kullanarak BIR XML belgesini doğrulamaz. Yalnızca XML belgesinin düzgün biçimlendirildiğini doğrular.  
   
  Bir XML belgesini doğrulamaya yönelik ilk yol, doğrulama nesnesi kullanılarak bir nesneye yüklendiğinde belgeyi doğrulamaktır <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlReader> . İkinci yol, sınıfının yöntemini kullanarak daha önce türsüz bir XML belgesini doğrulamaktır <xref:System.Xml.XmlDocument.Validate%2A> <xref:System.Xml.XmlDocument> . Her iki durumda da, doğrulanan XML belgesinde yapılan değişiklikler, sınıfının yöntemi kullanılarak yeniden doğrulanabilir <xref:System.Xml.XmlDocument.Validate%2A> <xref:System.Xml.XmlDocument> .  
   
 ### <a name="validating-a-document-as-it-is-loaded"></a>Belge yüklendiği için doğrulanıyor  
+
  Bir nesne, bir nesneyi <xref:System.Xml.XmlReader> <xref:System.Xml.XmlReaderSettings> <xref:System.Xml.XmlReader.Create%2A> <xref:System.Xml.XmlReader> parametre olarak alan sınıfın yöntemine geçirerek bir doğrulama nesnesi oluşturulur <xref:System.Xml.XmlReaderSettings> . <xref:System.Xml.XmlReaderSettings>Parametre olarak geçirilen nesne, <xref:System.Xml.XmlReaderSettings.ValidationType%2A> özelliğine ayarlanmış bir özelliği `Schema` ve <xref:System.Xml.XmlDocument> ÖZELLIĞINE eklenen nesne içindeki XML belgesi için bir XML şeması içerir <xref:System.Xml.XmlReaderSettings.Schemas%2A> . Doğrulama <xref:System.Xml.XmlReader> nesnesi daha sonra nesneyi oluşturmak için kullanılır <xref:System.Xml.XmlDocument> .  
   
  Aşağıdaki örnek, `contosoBooks.xml` <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument> bir doğrulama nesnesi kullanılarak nesnesini oluşturarak dosyayı nesnesine yüklendiği şekilde doğrular <xref:System.Xml.XmlReader> . XML belgesi şemasına göre geçerli olduğundan, şema doğrulama hataları veya uyarılar oluşturulmaz.  
@@ -129,6 +132,7 @@ class ValidatingReaderExample
 > Bir XML belgesi, <xref:System.Xml.XmlDocument> varsayılan değerleri tanımlayan ilişkili bir şemaya sahip bir nesneye yüklendiğinde, <xref:System.Xml.XmlDocument> nesne bu varsayılanlara XML belgesinde görünmiş gibi davranır. Bu, özelliğin, <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> `false` boş bir öğe olarak yazılmış XML belgesinde olsa bile, her zaman şemanın varsayılan olarak ayarlanmış bir öğe için döndüğü anlamına gelir.  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>Validate metodunu kullanarak bir belgeyi doğrulama  
+
  <xref:System.Xml.XmlDocument.Validate%2A>Sınıfının yöntemi, nesne <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument> özelliğinde belirtilen şemalara karşı bır nesnede bulunan XML belgesini doğrular <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument.Schemas%2A> ve bilgi kümesi genişletmesini gerçekleştirir. Sonuç olarak, <xref:System.Xml.XmlDocument> nesnede türü belirtilmiş bir belge ile değiştirilmiş olan, daha önce türsüz BIR XML belgesidir.  
   
  <xref:System.Xml.XmlDocument>Nesnesi, <xref:System.Xml.Schema.ValidationEventHandler> yöntemine parametre olarak geçirilen temsilciyi kullanarak şema doğrulama hatalarını ve uyarılarını raporlar <xref:System.Xml.XmlDocument.Validate%2A> .  
@@ -216,6 +220,7 @@ class ValidateExample
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 ### <a name="validating-modifications"></a>Değişiklikler doğrulanıyor  
+
  Bir XML belgesinde değişiklikler yapıldıktan sonra, sınıfının metodunu kullanarak XML belgesi şemasına karşı değişiklikleri doğrulayabilirsiniz <xref:System.Xml.XmlDocument.Validate%2A> <xref:System.Xml.XmlDocument> .  
   
  Aşağıdaki örnek, `contosoBooks.xml` <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument> bir doğrulama nesnesi kullanılarak nesnesini oluşturarak dosyayı nesnesine yüklendiği şekilde doğrular <xref:System.Xml.XmlReader> . XML belgesi, şema doğrulama hataları veya uyarılar üretilmeden yüklendiğinden başarıyla doğrulanacaktır. Örnek daha sonra şemaya göre geçersiz olan XML belgesinde iki değişiklik yapar `contosoBooks.xsd` . İlk değişiklik, bir şema doğrulama hatasına neden olan geçersiz bir alt öğe ekliyor ve ikinci değişiklik, bir özel duruma neden olan düğümün türüne göre geçersiz bir değere sahip bir değer olarak belirlenmiş bir değerin değerini ayarlıyor.  
@@ -350,6 +355,7 @@ class ValidatingReaderExample
  Yöntemi kullanarak değerleri değiştirme hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> bkz. [XML verilerini XPathNavigator ile değiştirme](modify-xml-data-using-xpathnavigator.md) konusu.  
   
 ### <a name="read-only-validation"></a>Read-Only doğrulaması  
+
  <xref:System.Xml.XPath.XPathDocument>Sınıfı, BIR XML belgesinin Salt okunabilir, bellek içi gösterimidir. Hem <xref:System.Xml.XPath.XPathDocument> sınıf hem de <xref:System.Xml.XmlDocument> sınıf, <xref:System.Xml.XPath.XPathNavigator> XML belgelerini gezinmek ve düzenlemek için nesneler oluşturur. <xref:System.Xml.XPath.XPathDocument>Sınıfı salt bir salt okunurdur, nesne nesnesinden <xref:System.Xml.XPath.XPathNavigator> döndürülen <xref:System.Xml.XPath.XPathDocument> nesneler, nesnede bulunan XML belgesini düzenleyemez <xref:System.Xml.XPath.XPathDocument> .  
   
  Doğrulama durumunda, <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlReader> Bu konuda daha önce açıklandığı gibi doğrulama nesnesini kullanarak bir nesne oluşturduğunuz gibi bir nesne oluşturabilirsiniz. <xref:System.Xml.XPath.XPathDocument>Nesne, yüklendiği gıbı XML belgesini doğrular, ancak nesne IÇINDEKI XML verilerini DÜZENLEYEMEDIĞINDEN <xref:System.Xml.XPath.XPathDocument> XML belgesini yeniden doğrulayamazsınız.  

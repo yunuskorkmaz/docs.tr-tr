@@ -14,14 +14,15 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 5a9890f9ada6a4e749c8cf5ee96d9e8668525040
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 820e6cd7fa4a60fa6adfcaf0f0ff4d25fdda0f21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823270"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734393"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
+
 Normal ifadede ters eğik çizgi ( \\ ) aşağıdakilerden birini belirtir:  
   
 - Aşağıdaki bölümde gösterildiği gibi, bu karakteri izleyen karakter özel bir karakterdir. Örneğin, bir `\b` normal ifade eşleşmesinin bir sözcük sınırında başlaması gerektiğini belirten bir bağlantıdır, `\t` bir sekmeyi temsil eder ve `\x020` bir alanı temsil eder.  
@@ -32,6 +33,7 @@ Normal ifadede ters eğik çizgi ( \\ ) aşağıdakilerden birini belirtir:
 > Karakter kaçışları normal ifade desenlerinde tanınır ancak değiştirme desenlerinde kabul edilmez.  
   
 ## <a name="character-escapes-in-net"></a>.NET 'teki karakter kaçışları  
+
  Aşağıdaki tabloda, .NET 'teki normal ifadeler tarafından desteklenen karakter çıkışları listelenmektedir.  
   
 |Karakter veya sıra|Açıklama|  
@@ -52,6 +54,7 @@ Normal ifadede ters eğik çizgi ( \\ ) aşağıdakilerden birini belirtir:
 |`\`|Bunun ardından, kaçış karakteri olarak tanınmayan bir karakter gelmesi durumunda, bu karakterle eşleşir. Örneğin, `\*` bir yıldız işareti (*) ile eşleşir ve ile aynıdır `\x2A` .|  
   
 ## <a name="an-example"></a>Bir Örnek  
+
  Aşağıdaki örnek, bir normal ifadede karakter kaçışları kullanımını gösterir. Dünyanın en büyük şehirlerinin adlarını ve 2009 içindeki popülasyonlarını içeren bir dizeyi ayrıştırır. Her şehir adı, bir sekme ( `\t` ) veya dikey çubuk (&#124; veya) tarafından popülasyondan ayrılır `\u007c` . Bireysel şehirler ve bunların popülasyonu bir satır başı ve satır besleme ile birbirinden ayrılır.  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]

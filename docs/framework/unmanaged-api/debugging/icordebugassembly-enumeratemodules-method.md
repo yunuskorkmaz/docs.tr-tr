@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c7ba51a1-0dd5-4452-b471-232febe0f897
 topic_type:
 - apiref
-ms.openlocfilehash: 12dc5466d5be73b327f171c389c41c55901f2915
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 6d00d17a5876dd7454b9f89ffa916bc62efb3d0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894951"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734133"
 ---
 # <a name="icordebugassemblyenumeratemodules-method"></a>ICorDebugAssembly::EnumerateModules Yöntemi
-İçinde yer alan modüller için bir Numaralandırıcı alır `ICorDebugAssembly`.  
+
+İçinde yer alan modüller için bir Numaralandırıcı alır `ICorDebugAssembly` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumerateModules (  
@@ -34,10 +35,12 @@ HRESULT EnumerateModules (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppModules`  
  dışı Numaralandırıcı olan ICorDebugModuleEnum arabiriminin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

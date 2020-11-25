@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: acd74cb5-7e22-4a07-83c3-82288e1abd9f
 topic_type:
 - apiref
-ms.openlocfilehash: 8d18e6c1dca7f52b17c19f4638410a08866905f7
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 5231db8de6129ed593e4e0d508b312b7034c01f0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804806"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733912"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>IHostIoCompletionManager::Bind Yöntemi
+
 Belirtilen tanıtıcıyı, daha önceki bir [CreateIoCompletionPort](ihostiocompletionmanager-createiocompletionport-method.md)çağrısıyla oluşturulmuş bir g/ç tamamlama bağlantı noktasına bağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT Bind (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `hPort`  
  'ndaki Bağlanacak g/ç tamamlama bağlantı noktası `hHandle` . Değeri `hPort` null ise `hHandle` varsayılan g/ç tamamlama bağlantı noktasına bağlanır.  
   
@@ -45,7 +47,7 @@ HRESULT Bind (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Bind`başarıyla döndürüldü.|  
+|S_OK|`Bind` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -53,17 +55,19 @@ HRESULT Bind (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir g/ç tamamlama bağlantı noktası, için çağrısı kullanılarak oluşturulur `CreateIoCompletionPort` . CLR, `Bind` Bu bağlantı noktasına bir tanıtıcı bağlamak için çağırır.  
   
 > [!NOTE]
 > G/ç isteği tamamlandığında, ana bilgisayar [ıclriocompletionmanager:: Ontamamlanmıştır](iclriocompletionmanager-oncomplete-method.md) metodunu çağırmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

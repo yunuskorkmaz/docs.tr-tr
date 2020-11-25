@@ -8,17 +8,19 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-ms.openlocfilehash: d8e75f7104b755476f255563c9c1f7ece14f67db
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef420d47e6204aef5e3d9bc12ace31fbf5521ee7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828471"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734367"
 ---
 # <a name="using-standard-exception-types"></a>Standart Özel Durum Türlerini Kullanma
+
 Bu bölümde, çerçevesi tarafından sunulan standart özel durumlar ve kullanımlarının ayrıntıları açıklanmaktadır. Liste, ayrıntılı anlamına gelir. Diğer Framework özel durum türlerinin kullanımı için lütfen .NET Framework başvuru belgelerine bakın.
 
 ## <a name="exception-and-systemexception"></a>Özel durum ve SystemException
+
  ❌<xref:System.Exception?displayProperty=nameWithType>Veya oluşturun <xref:System.SystemException?displayProperty=nameWithType> .
 
  ❌`System.Exception` `System.SystemException` Yeniden oluşturma amacını taşımadığınız müddetçe, çerçeve kodunu yakalamayın.
@@ -26,12 +28,15 @@ Bu bölümde, çerçevesi tarafından sunulan standart özel durumlar ve kullan�
  ❌`System.Exception` `System.SystemException` En üst düzey özel durum işleyicileri dışında, yakalanmaktan kaçının.
 
 ## <a name="applicationexception"></a>ApplicationException
+
  ❌ ' İ throw veya türemeyin <xref:System.ApplicationException> .
 
 ## <a name="invalidoperationexception"></a>InvalidOperationException
+
  <xref:System.InvalidOperationException>nesne uygunsuz bir durumdaysa ✔️ oluşturun.
 
 ## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException, ArgumentNullException ve ArgumentOutOfRangeException
+
  <xref:System.ArgumentException>bir üyeye hatalı bağımsız değişkenler geçirilmezse, ✔️ veya alt türlerinden birini oluşturun. Varsa, en çok türetilmiş özel durum türünü tercih edin.
 
  ✔️, alt `ParamName` sınıflarından birini oluştururken özelliğini ayarlayın `ArgumentException` .
@@ -41,11 +46,13 @@ Bu bölümde, çerçevesi tarafından sunulan standart özel durumlar ve kullan�
  `value`özellik ayarlayıcılarının örtük değer parametresinin adı için ✔️ kullanın.
 
 ## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException, IndexOutOfRangeException ve AccessViolationException
+
  ❌ Genel olarak çağrılabilir API 'Lerin açıkça veya örtük olarak,, veya olarak throw yapmasına izin vermeyin <xref:System.NullReferenceException> <xref:System.AccessViolationException> <xref:System.IndexOutOfRangeException> . Bu özel durumlar, yürütme altyapısı tarafından ayrılmıştır ve oluşturulur ve çoğu durumda bir hata olduğunu gösterir.
 
  Bağımsız değişken denetimini, bu özel durumların üretilmesini önlemek için yapın. Bu özel durumları oluşturmak, zaman içinde değişebilir yönteminizin uygulama ayrıntılarını sunar.
 
 ## <a name="stackoverflowexception"></a>StackOverflowException
+
  ❌ Açık olarak throw <xref:System.StackOverflowException> . Özel durum yalnızca CLR tarafından açıkça oluşturulmalıdır.
 
  ❌ Yakalamayın `StackOverflowException` .
@@ -53,9 +60,11 @@ Bu bölümde, çerçevesi tarafından sunulan standart özel durumlar ve kullan�
  Rastgele yığın taşlarına sahip olan yönetilen kodu yazmak neredeyse imkansızdır. CLR 'nin yönetilmeyen parçaları, yığın dışına çıkmaları, rastgele yığın taşlarından yedeklenmek yerine iyi tanımlanmış konumlara taşımak için yoklamalar kullanılarak tutarlı kalır.
 
 ## <a name="outofmemoryexception"></a>OutOfMemoryException
+
  ❌ Açık olarak throw <xref:System.OutOfMemoryException> . Bu özel durum yalnızca CLR altyapısı tarafından oluşturulmalıdır.
 
 ## <a name="comexception-sehexception-and-executionengineexception"></a>ComException, şehir özel durumu ve ExecutionEngineException
+
  ❌ Açık olarak <xref:System.Runtime.InteropServices.COMException> ,  <xref:System.ExecutionEngineException> , ve oluşturun <xref:System.Runtime.InteropServices.SEHException> . Bu özel durumlar yalnızca CLR altyapısı tarafından atılır.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*

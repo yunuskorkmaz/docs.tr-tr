@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: 9a3a6c07a9cace0ac9834cdb05925a301285204c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c76c8b23e707b530cbf1c28d03fbf2f84d424482
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615325"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734016"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData Metodu
+
 Modülün kaynak sunucu verilerini döndürür. Çağıran, kullanarak kaynakları serbest vermelidir `CoTaskMemFree` .  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,16 +35,19 @@ HRESULT GetSourceServerData(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pDataByteCount`  
- dışı `ULONG32`Kaynak sunucu verilerinin bayt cinsinden boyutunu alan bir bir işaretçisi.  
+ dışı `ULONG32` Kaynak sunucu verilerinin bayt cinsinden boyutunu alan bir bir işaretçisi.  
   
  `ppData`  
  dışı Döndürülen değere yönelik bir işaretçi `pDataByteCount` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

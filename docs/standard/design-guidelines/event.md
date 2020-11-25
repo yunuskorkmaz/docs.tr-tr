@@ -9,14 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d04ffd2cab21177f1342a13259a81df22b65723a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821339"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734419"
 ---
 # <a name="event-design"></a>Olay Tasarımı
+
 Olaylar en yaygın olarak kullanılan geri çağırma biçimidir (Framework 'ün Kullanıcı koduna çağrı yapmasına izin veren yapılar). Diğer geri çağırma mekanizmaları, temsilciler, sanal üyeler ve arabirim tabanlı eklentiler alan üyeleri içerir. Kullanılabilirlik çalışmalarından veriler, geliştiricilerin büyük bölümünün diğer geri çağırma mekanizmalarını kullandıklarından daha rahat olduğunu gösterir. Olaylar, Visual Studio ve birçok dil ile tamamen tümleşiktir.
 
  İki olay grubu olduğunu unutmamak önemlidir: bir sistem değişikliği durumu, ön olaylar adı ve durum değişikliklerinden sonra oluşturulan olaylar, olaylar sonrası olarak adlandırılır. Bir form kapatılmadan önce oluşturulan bir ön olaya bir örnek olabilir `Form.Closing` . Bir form kapatıldıktan sonra oluşturulan olay sonrası bir örnek olabilir `Form.Closed` .
@@ -52,6 +53,7 @@ Olaylar en yaygın olarak kullanılan geri çağırma biçimidir (Framework 'ün
  <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>Son kullanıcının olayları iptal edebilmesini sağlamak için olay bağımsız değişkeni olarak veya alt sınıfını kullanın.
 
 ### <a name="custom-event-handler-design"></a>Özel olay Işleyicisi tasarımı
+
  `EventHandler<T>`Çerçevenin, genel türleri DESTEKLEMEYEN clr 'nin önceki sürümleriyle çalışması gerektiğinde olduğu gibi, kullanılamayan durumlar vardır. Bu gibi durumlarda, özel bir olay işleyicisi temsilcisi tasarlamanızı ve geliştirmeniz gerekebilir.
 
  ✔️ olay işleyicileri için void dönüş türü kullanın.
