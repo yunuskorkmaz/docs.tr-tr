@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: d41e048b67d4bc7159f6dd5266457651f1658290
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ed08d9f818f6fc180dbd655243488bf8a527ae11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420597"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725293"
 ---
-# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="af94d-102">CorSymVarFlag Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="af94d-102">CorSymVarFlag Enumeration</span></span>
-<span data-ttu-id="af94d-103">Bir değişkenin derleyici tarafından oluşturulup oluşturulmayacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="af94d-103">Indicates whether a variable is compiler-generated.</span></span>  
+# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="19dd3-102">CorSymVarFlag Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="19dd3-102">CorSymVarFlag Enumeration</span></span>
+
+<span data-ttu-id="19dd3-103">Bir değişkenin derleyici tarafından oluşturulup oluşturulmayacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="19dd3-103">Indicates whether a variable is compiler-generated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af94d-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="af94d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19dd3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="19dd3-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSymVarFlag
@@ -33,15 +34,16 @@ typedef enum CorSymVarFlag
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="af94d-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="af94d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="19dd3-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="19dd3-105">Members</span></span>  
   
-|<span data-ttu-id="af94d-106">Üye</span><span class="sxs-lookup"><span data-stu-id="af94d-106">Member</span></span>|<span data-ttu-id="af94d-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="af94d-107">Description</span></span>|  
+|<span data-ttu-id="19dd3-106">Üye</span><span class="sxs-lookup"><span data-stu-id="19dd3-106">Member</span></span>|<span data-ttu-id="19dd3-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="19dd3-107">Description</span></span>|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|<span data-ttu-id="af94d-108">Verilen değişkenin derleyicinin ürettiği olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="af94d-108">Indicates that the given variable is compiler-generated.</span></span>|  
+|`VAR_IS_COMP_GEN`|<span data-ttu-id="19dd3-108">Verilen değişkenin derleyicinin ürettiği olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="19dd3-108">Indicates that the given variable is compiler-generated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="af94d-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="af94d-109">Requirements</span></span>  
- <span data-ttu-id="af94d-110">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="af94d-110">**Header:** CorSym.idl, CorSym.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="af94d-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="af94d-111">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="19dd3-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="19dd3-109">Requirements</span></span>  
 
-- [<span data-ttu-id="af94d-112">Tanılama Simge Deposu Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="af94d-112">Diagnostics Symbol Store Enumerations</span></span>](diagnostics-symbol-store-enumerations.md)
+ <span data-ttu-id="19dd3-110">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="19dd3-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="19dd3-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="19dd3-111">See also</span></span>
+
+- [<span data-ttu-id="19dd3-112">Tanılama Sembol Deposu Numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="19dd3-112">Diagnostics Symbol Store Enumerations</span></span>](diagnostics-symbol-store-enumerations.md)
