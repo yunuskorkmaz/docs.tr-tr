@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9a26547a-9a34-4284-a463-78a7d4b496cf
 topic_type:
 - apiref
-ms.openlocfilehash: 5dbb5dc483bc5a08c59606654d55b5a62266e509
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13d71a9da2539c45076e5eb92e153e37c1df4b47
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134377"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727919"
 ---
-# <a name="iassemblynamegetdisplayname-method"></a><span data-ttu-id="f5707-102">IAssemblyName::GetDisplayName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f5707-102">IAssemblyName::GetDisplayName Method</span></span>
-<span data-ttu-id="f5707-103">Bu [IAssemblyName](iassemblyname-interface.md) nesnesi tarafından başvurulan derlemenin okunabilir adını alır.</span><span class="sxs-lookup"><span data-stu-id="f5707-103">Gets the human-readable name of the assembly referenced by this [IAssemblyName](iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetdisplayname-method"></a><span data-ttu-id="c8aa2-102">IAssemblyName::GetDisplayName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c8aa2-102">IAssemblyName::GetDisplayName Method</span></span>
+
+<span data-ttu-id="c8aa2-103">Bu [IAssemblyName](iassemblyname-interface.md) nesnesi tarafından başvurulan derlemenin okunabilir adını alır.</span><span class="sxs-lookup"><span data-stu-id="c8aa2-103">Gets the human-readable name of the assembly referenced by this [IAssemblyName](iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f5707-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f5707-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8aa2-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="c8aa2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDisplayName (  
@@ -35,24 +36,26 @@ HRESULT GetDisplayName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f5707-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f5707-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c8aa2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c8aa2-105">Parameters</span></span>  
+
  `szDisplayName`  
- <span data-ttu-id="f5707-106">dışı Başvurulan derlemenin adını içeren dize arabelleği.</span><span class="sxs-lookup"><span data-stu-id="f5707-106">[out] The string buffer that contains the name of the referenced assembly.</span></span>  
+ <span data-ttu-id="c8aa2-106">dışı Başvurulan derlemenin adını içeren dize arabelleği.</span><span class="sxs-lookup"><span data-stu-id="c8aa2-106">[out] The string buffer that contains the name of the referenced assembly.</span></span>  
   
  `pccDisplayName`  
- <span data-ttu-id="f5707-107">[in, out] `szDisplayName`, null Sonlandırıcı karakteri de dahil olmak üzere geniş karakter cinsinden boyutudur.</span><span class="sxs-lookup"><span data-stu-id="f5707-107">[in, out] The size of `szDisplayName` in wide characters, including a null terminator character.</span></span>  
+ <span data-ttu-id="c8aa2-107">[in, out] `szDisplayName` Bir null Sonlandırıcı karakteri de dahil olmak üzere geniş karakter cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="c8aa2-107">[in, out] The size of `szDisplayName` in wide characters, including a null terminator character.</span></span>  
   
  `dwDisplayFlags`  
- <span data-ttu-id="f5707-108">'ndaki `szDisplayName`özelliklerini etkileyen [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) değerlerinin bit düzeyinde birleşimi.</span><span class="sxs-lookup"><span data-stu-id="f5707-108">[in] A bitwise combination of [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) values that influence the features of `szDisplayName`.</span></span>  
+ <span data-ttu-id="c8aa2-108">'ndaki Özelliklerini etkileyen [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) değerlerinin bit düzeyinde birleşimi `szDisplayName` .</span><span class="sxs-lookup"><span data-stu-id="c8aa2-108">[in] A bitwise combination of [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) values that influence the features of `szDisplayName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f5707-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f5707-109">Requirements</span></span>  
- <span data-ttu-id="f5707-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f5707-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="f5707-111">**Üst bilgi:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="f5707-111">**Header:** Fusion.h</span></span>  
-  
- <span data-ttu-id="f5707-112">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f5707-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f5707-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f5707-113">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="c8aa2-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c8aa2-109">Requirements</span></span>  
 
-- [<span data-ttu-id="f5707-114">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f5707-114">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="f5707-115">Fusion Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="f5707-115">Fusion Enumerations</span></span>](fusion-enumerations.md)
+ <span data-ttu-id="c8aa2-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c8aa2-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="c8aa2-111">**Üst bilgi:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="c8aa2-111">**Header:** Fusion.h</span></span>  
+  
+ <span data-ttu-id="c8aa2-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8aa2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c8aa2-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c8aa2-113">See also</span></span>
+
+- [<span data-ttu-id="c8aa2-114">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c8aa2-114">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="c8aa2-115">Fusion Numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="c8aa2-115">Fusion Enumerations</span></span>](fusion-enumerations.md)

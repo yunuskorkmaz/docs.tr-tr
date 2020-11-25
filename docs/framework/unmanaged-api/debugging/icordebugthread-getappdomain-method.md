@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 415b3d34-8b35-4b60-a318-140646cc83f8
 topic_type:
 - apiref
-ms.openlocfilehash: 52efebf8a2786afaabe87b96b35a13c5fa1eb578
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 882176f381a7c5bc4a0297021b89a96948a1cea8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379776"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728075"
 ---
-# <a name="icordebugthreadgetappdomain-method"></a><span data-ttu-id="88d9c-102">ICorDebugThread::GetAppDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="88d9c-102">ICorDebugThread::GetAppDomain Method</span></span>
-<span data-ttu-id="88d9c-103">Bu ICorDebugThread 'in Şu anda yürütüldüğü uygulama etki alanına bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="88d9c-103">Gets an interface pointer to the application domain in which this ICorDebugThread is currently executing.</span></span>  
+# <a name="icordebugthreadgetappdomain-method"></a><span data-ttu-id="4012d-102">ICorDebugThread::GetAppDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4012d-102">ICorDebugThread::GetAppDomain Method</span></span>
+
+<span data-ttu-id="4012d-103">Bu ICorDebugThread 'in Şu anda yürütüldüğü uygulama etki alanına bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="4012d-103">Gets an interface pointer to the application domain in which this ICorDebugThread is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="88d9c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="88d9c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4012d-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="4012d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAppDomain (  
@@ -33,15 +34,17 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="88d9c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="88d9c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4012d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4012d-105">Parameters</span></span>  
+
  `ppAppDomain`  
- <span data-ttu-id="88d9c-106">dışı Bu iş parçacığının Şu anda yürütüldüğü uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="88d9c-106">[out] A pointer to an ICorDebugAppDomain object that represents the application domain in which this thread is currently executing.</span></span>  
+ <span data-ttu-id="4012d-106">dışı Bu iş parçacığının Şu anda yürütüldüğü uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4012d-106">[out] A pointer to an ICorDebugAppDomain object that represents the application domain in which this thread is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="88d9c-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="88d9c-107">Requirements</span></span>  
- <span data-ttu-id="88d9c-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="88d9c-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4012d-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4012d-107">Requirements</span></span>  
+
+ <span data-ttu-id="4012d-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4012d-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="88d9c-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="88d9c-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4012d-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="4012d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="88d9c-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="88d9c-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4012d-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="4012d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="88d9c-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88d9c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4012d-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4012d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
