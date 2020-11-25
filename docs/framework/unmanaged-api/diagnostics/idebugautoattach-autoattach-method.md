@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-ms.openlocfilehash: aae03b0dc76639c50f4615d41eef73990226b5f7
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 64dd653bb0d4e383075a999e0803e4acfd0fae3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442130"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720106"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach Yöntemi
+
 Sunucu tarafından çağrılan hata ayıklayıcı otomatik iliştirme işlemini gerçekleştirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,6 +40,7 @@ HRESULT AutoAttach
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `guidPort`  
  'ndaki Her zaman olarak ayarlayın `GUID_NULL` .  
   
@@ -55,9 +57,11 @@ HRESULT AutoAttach
  'ndaki Hata ayıklama fiili tarafından geçirilen dize.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** Dbgoto Attach. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

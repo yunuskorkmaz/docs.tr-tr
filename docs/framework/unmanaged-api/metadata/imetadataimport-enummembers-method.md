@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-ms.openlocfilehash: cc3bc5140da0634b5172f6253de3de37bff487f1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 92503df60ae44dfd44819fe3eda8e6a0549b2b66
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492065"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721001"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers Yöntemi
+
 Belirtilen türdeki üyeleri temsil eden MemberDef belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -38,6 +39,7 @@ HRESULT EnumMembers (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `phEnum`  
  [in, out] Numaralandırıcı için bir işaretçi.  
   
@@ -55,22 +57,24 @@ HRESULT EnumMembers (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers`başarıyla döndürüldü.|  
+|`S_OK`|`EnumMembers` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak MemberDef belirteçleri yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir sınıf için üye koleksiyonları numaralandırılırken, `EnumMembers` doğrudan sınıfında tanımlanmış üyeleri (alanlar ve Yöntemler, ancak Özellikler veya olaylar **değil** ) döndürür. Sınıf, devralınan Üyeler için bir uygulama sağladığından bile, sınıfın devraldığı herhangi bir üye döndürmez. Devralınan üyeleri listelemek için çağıran, devralma zincirini açıkça yürümelidir. Devralma zincirinin kurallarının, özgün meta verileri oluşturan dile veya derleyiciye göre değişebileceğini unutmayın.
 
  Özellikler ve olaylar tarafından numaralandırılmıyor `EnumMembers` . Bunları listelemek için, [EnumProperties](imetadataimport-enumproperties-method.md) veya [trmevents](imetadataimport-enumevents-method.md)kullanın.
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

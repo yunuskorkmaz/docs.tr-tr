@@ -6,19 +6,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: a97ff5afef23c361b1f675d2f07f43b3bc5df299
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 74dbe6b84c8d9400790f763f811da5542c732892
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818394"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720886"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath Sorguları ve Ad Alanları
+
 XPath sorguları bir XML belgesindeki ad alanlarını algılar ve öğe ve öznitelik adlarını nitelemek için ad alanı öneklerini kullanabilir. Bir ad alanı önekiyle niteleyen öğe ve öznitelik adları, bir XPath sorgusunun döndürdüğü düğümleri yalnızca belirli bir ad alanına ait olan düğümlere sınırlandırır.  
   
  Örneğin, önek `books` ad alanıyla eşleniyorsa `http://www.contoso.com/books` , aşağıdaki XPath sorgusu `/books:books/books:book` yalnızca `book` ad alanındaki öğeleri seçer `http://www.contoso.com/books` .  
   
 ## <a name="the-xmlnamespacemanager"></a>XmlNamespaceManager  
+
  Bir XPath sorgusunda ad alanlarını kullanmak için, sınıfı gibi arabiriminden türetilmiş bir nesne, <xref:System.Xml.IXmlNamespaceResolver> <xref:System.Xml.XmlNamespaceManager> ad alanı URI 'Si ve XPath sorgusuna dahil edilecek ön ek ile oluşturulur.  
   
  <xref:System.Xml.XmlNamespaceManager>Nesnesi, aşağıdaki yolların her birinde sorgusunda kullanılabilir.  
@@ -36,6 +38,7 @@ XPath sorguları bir XML belgesindeki ad alanlarını algılar ve öğe ve özni
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>Varsayılan ad alanı  
+
  Aşağıdaki XML belgesinde, ad alanını bildirmek için boş ön eki olan varsayılan ad alanı kullanılır `http://www.contoso.com/books` .  
   
 ```xml  

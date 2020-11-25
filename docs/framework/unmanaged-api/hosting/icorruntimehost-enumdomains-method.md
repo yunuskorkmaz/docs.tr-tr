@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96b74995-0cde-4876-b6df-7fc164e6a5d1
 topic_type:
 - apiref
-ms.openlocfilehash: a97471e1c257902633b7eb363c3cc51288c70917
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: f4338429dc24bf5196b92d3f18e73c98442f61e7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762259"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720668"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains Yöntemi
+
 Geçerli işlemdeki etki alanları için bir Numaralandırıcı alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT EnumDomains (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `hEnum`  
  dışı Etki alanları için bir Numaralandırıcı.  
   
@@ -47,11 +49,12 @@ HRESULT EnumDomains (
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümü:** 1,0, 1,1  
   

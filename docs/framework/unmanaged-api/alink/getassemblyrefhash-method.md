@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: af040c4a6c9b85930d2d9261f8587ba69eb204e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433878"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721484"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash Yöntemi
+
 Verilen derleme için bir karma blobu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAssemblyRefHash(  
@@ -35,6 +36,7 @@ HRESULT GetAssemblyRefHash(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `FileToken`  
  Karmasının başvurabileceği derlemenin KIMLIĞI.  
   
@@ -45,9 +47,11 @@ HRESULT GetAssemblyRefHash(
  Karma Blobun boyutunu bayt cinsinden alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.

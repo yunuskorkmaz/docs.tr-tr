@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-ms.openlocfilehash: 1a56c3ebe4b1c528f9c6555bdfbf1270a438410d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e3031bf123ff9107b4cebc0723f1be0d423bdaec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617119"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721757"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback Yöntemi
+
 Belirtilen işlevi bir apartman içinde yürütür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT _stdcall DoCallback(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pFunc`  
  'ndaki Apartman içinde yürütülecek işleve yönelik bir işaretçi.  
   
@@ -42,11 +44,12 @@ HRESULT _stdcall DoCallback(
  'ndaki İşlevin bağımsız değişkenine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

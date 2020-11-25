@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: 420f22a242a20f8bdf5d5b84f47a297a2f503db0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9fcb5e189af9f72de7635aad550a5e8ab5522dbd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546027"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720626"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost Arabirimi
+
 Ana bilgisayarın ortak dil çalışma zamanını (CLR) açık olarak başlatıp durdurmasına, uygulama etki alanlarını oluşturup yapılandırmasına, varsayılan etki alanına erişime ve işlemde çalışan tüm etki alanlarını listelemeye olanak tanıyan yöntemler sağlar.  
   
  .NET Framework sürüm 2,0 ' de, bu arabirimin yerini [ICLRRuntimeHost](iclrruntimehost-interface.md)almıştır.  
@@ -39,7 +40,7 @@ Ana bilgisayarın ortak dil çalışma zamanını (CLR) açık olarak başlatıp
 |[CurrentDomain Yöntemi](icorruntimehost-currentdomain-method.md)|<xref:System._AppDomain>Geçerli iş parçacığında yüklü olan etki alanını temsil eden türün bir arabirim işaretçisini alır.|  
 |[DeleteLogicalThreadState Yöntemi](icorruntimehost-deletelogicalthreadstate-method.md)|Kullanmayın.|  
 |[EnumDomains Yöntemi](icorruntimehost-enumdomains-method.md)|Geçerli işlemdeki etki alanları için bir Numaralandırıcı alır.|  
-|[GetConfiguration Yöntemi](icorruntimehost-getconfiguration-method.md)|Konağın CLR 'nin geri çağırma yapılandırmasını belirtmesini sağlayan bir nesne alır.|  
+|[GetConfiguration yöntemi](icorruntimehost-getconfiguration-method.md)|Konağın CLR 'nin geri çağırma yapılandırmasını belirtmesini sağlayan bir nesne alır.|  
 |[GetDefaultDomain Yöntemi](icorruntimehost-getdefaultdomain-method.md)|<xref:System._AppDomain>Geçerli işlem için varsayılan etki alanını temsil eden türün bir arabirim işaretçisini alır.|  
 |[LocksHeldByLogicalThread Yöntemi](icorruntimehost-locksheldbylogicalthread-method.md)|Kullanmayın.|  
 |[MapFile Yöntemi](icorruntimehost-mapfile-method.md)|Belirtilen dosyayı belleğe eşler. Bu yöntem artık kullanılmıyor.|  
@@ -51,6 +52,7 @@ Ana bilgisayarın ortak dil çalışma zamanını (CLR) açık olarak başlatıp
 |[UnloadDomain Yöntemi](icorruntimehost-unloaddomain-method.md)|Belirtilen uygulama etki alanını geçerli işlemden kaldırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  

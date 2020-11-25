@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-ms.openlocfilehash: b28a2d4991e2e4b14027460c0f3c97145862da2a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 935f0b2263fbf909decee354b0109d16d82a06e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818381"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720860"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Dönüşümlerde XPathNavigator
+
 <xref:System.Xml.XPath.XPathNavigator>Sınıfı, verilere salt okunurdur ve dönüşümler (XSLT) Için Genişletilebilir Stil sayfası dili girişi olarak kullanılmak üzere tasarlanmıştır. , Ve üzerinde uygulanır <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDataDocument> <xref:System.Xml.XmlDocument> . , <xref:System.Xml.XPath.XPathNavigator> XML yol dili (XPath) önerisinin 5. bölümünde açıklandığı gibi World Wide Web Konsorsiyumu (W3C) veri modelini temel alır.  
   
  , <xref:System.Xml.XPath.XPathNavigator> Herhangi bir mağaza üzerinde bir imleç modeli tanımlar ve tüm veri depolarındaki hızlı, salt okuma XPath sorguları sağlar. <xref:System.Xml.XPath.XPathNavigator>Ayrıca, sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır.  
@@ -107,6 +108,7 @@ public class sample
 ```  
   
 ## <a name="output"></a>Çıkış  
+
  Dönüşümün sonucu dosya **out.xml** bulunur:  
   
 ```xml  

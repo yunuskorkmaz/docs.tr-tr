@@ -3,18 +3,21 @@ title: XML Belgesinde Ad Alanlarını Yönetme
 description: Bir XML belgesinde ad alanlarını yönetmeyi öğrenin. XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve önceden tanımlanmış URI 'Ler ile ilişkilendirir.
 ms.date: 03/30/2017
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: ab9dceed66e65ea74d0996071ab3a17057e43fc3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 120493de430c2372f3f71d1d1498ba880feda3d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822626"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720158"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML Belgesinde Ad Alanlarını Yönetme
+
 XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve önceden tanımlanmış URI 'Ler ile ilişkilendirir. Bu ilişkilendirmeleri oluşturmak için, ad alanı URI 'Leri için ön ekleri tanımlar ve bu önekleri, XML verilerinde öğe ve öznitelik adlarını nitelemek için kullanabilirsiniz. Ad alanları öğe ve öznitelik adı çakışmalarını önler ve aynı ada sahip öğelerin ve özniteliklerin işlenmesini ve farklı şekilde doğrulanmasını etkinleştirir.  
   
 <a name="declare"></a>
+
 ## <a name="declaring-namespaces"></a>Ad alanlarını bildirme  
+
  Bir öğe üzerinde bir ad alanı bildirmek için `xmlns:` özniteliğini kullanın:  
   
  `xmlns:<name>=<"uri">`  
@@ -32,7 +35,9 @@ XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve �
  Bir öğenin belirli bir ad alanının parçası olduğunu belirtmek için, buna ad alanı öneki ekleyin. Örneğin, bir `Author` öğe `mybook` ad alanına aitse, olarak belirtilir `<mybook:Author>` .  
   
 <a name="scope"></a>
+
 ## <a name="declaration-scope"></a>Bildirim kapsamı  
+
  Bir ad alanı, içinde bildirildiği öğenin sonuna kadar bildirim noktasından etkilidir. Bu örnekte, öğesinde tanımlanan ad alanı öğesi gibi `BOOK` öğe dışındaki öğelere uygulanmaz `BOOK` `Publisher` :  
   
 ```xml  
@@ -59,6 +64,7 @@ XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve �
 ```  
   
 ## <a name="managing-namespaces"></a>Ad alanlarını yönetme  
+
  <xref:System.Xml.XmlNamespaceManager>Sınıfı, bir ad alanı URI 'leri ve bunların ön eklerini depolar ve bu koleksiyonda ad alanlarını arayabilir, eklemenize ve kaldırmanıza olanak tanır. Bazı bağlamlarda, daha iyi XML işleme performansı için bu sınıf gereklidir. Örneğin, <xref:System.Xml.Xsl.XsltContext> sınıfı <xref:System.Xml.XmlNamespaceManager> XPath desteği için kullanır.  
   
  Ad alanı Yöneticisi ad alanları üzerinde herhangi bir doğrulama gerçekleştirmez, ancak ön eklerin ve ad alanlarının zaten doğrulanmış olduğunu varsayar ve [W3C ad](https://www.w3.org/TR/REC-xml-names/) alanları belirtimine uyum sağlar.  

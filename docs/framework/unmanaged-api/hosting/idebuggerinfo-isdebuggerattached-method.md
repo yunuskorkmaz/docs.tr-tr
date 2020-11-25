@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e21872f-602f-411a-a423-bff5cdf27000
 topic_type:
 - apiref
-ms.openlocfilehash: 95b7a2f6d35104c3353853549dacc783355feb5b
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 28b0c5ad5ed8b706974399dcd5468e9810b9fd57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805328"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721705"
 ---
 # <a name="idebuggerinfoisdebuggerattached-method"></a>IDebuggerInfo::IsDebuggerAttached Yöntemi
+
 Yönetilen bir hata ayıklayıcının bu işleme bağlı olup olmadığını gösteren bir değer alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,15 +35,17 @@ HRESULT IsDebuggerAttached (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbAttached`  
- dışı `true`Yönetilen bir hata ayıklayıcı işleme eklenmişse bir değere yönelik işaretçi; Aksi takdirde, `false` .  
+ dışı `true` Yönetilen bir hata ayıklayıcı işleme eklenmişse bir değere yönelik işaretçi; Aksi takdirde, `false` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: b6fb168c-b24b-4ecf-a390-2b5ba3317ae6
 topic_type:
 - apiref
-ms.openlocfilehash: 75517ae55ebae07242f19c19c5473780ce4b0809
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 1b27983b3f10eba225442dcd2f5df02062e53ed4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762922"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720282"
 ---
 # <a name="iclrtaskswitchout-method"></a>ICLRTask::SwitchOut Yöntemi
+
 Geçerli [ICLRTask](iclrtask-interface.md) örneği tarafından temsil edilen görevin artık bir çalıştırılabilir durumunda olmadığını ortak dil çalışma zamanına (CLR) bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT SwitchOut ();  
@@ -35,7 +36,7 @@ HRESULT SwitchOut ();
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SwitchOut`başarıyla döndürüldü.|  
+|S_OK|`SwitchOut` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -43,14 +44,16 @@ HRESULT SwitchOut ();
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir ana bilgisayar `SwitchOut` , clr 'yi, geçerli örneği temsil eden görevi yürütmeyi geçici olarak durdurduğunu bilgilendirmek için çağırır `ICLRTask` ve görevi yeniden zamanlayacaktır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

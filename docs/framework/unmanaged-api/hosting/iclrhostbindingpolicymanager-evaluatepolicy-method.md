@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-ms.openlocfilehash: f72a66354bfc907dab7ebc24de515bdfb20ddfb2
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 9840217abdf8b3e1d0917b7447572b6860c181c8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703600"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720314"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy Yöntemi
+
 Bağlama ilkesini konak adına değerlendirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,6 +40,7 @@ HRESULT EvaluatePolicy (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pwzReferenceIdentity`  
  'ndaki İlke değerlendirmesinden önce derlemeye bir başvuru.  
   
@@ -46,7 +48,7 @@ HRESULT EvaluatePolicy (
  'ndaki İlke verilerini içeren bir arabelleğin işaretçisi.  
   
  `cbAppPolicySize`  
- 'ndaki `pbApplicationPolicy`Arabelleğin boyutu.  
+ 'ndaki `pbApplicationPolicy` Arabelleğin boyutu.  
   
  `pwzPostPolicyReferenceIdentity`  
  dışı Yeni ilke verileri değerlendirmesinden sonra derlemeye bir başvuru.  
@@ -63,7 +65,7 @@ HRESULT EvaluatePolicy (
 |-------------|-----------------|  
 |S_OK|Değerlendirme başarıyla tamamlandı.|  
 |E_INVALIDARG|`pwzReferenceIdentity`Ya da `pbApplicationPolicy` null bir başvurudur.|  
-|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize`çok küçük.|  
+|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` çok küçük.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -71,14 +73,16 @@ HRESULT EvaluatePolicy (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `EvaluatePolicy`Yöntemi, konağın konağa özgü derleme sürümü oluşturma gereksinimlerini korumak için bağlama ilkesini etkilemesini sağlar. İlke altyapısının kendisi CLR içinde kalır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

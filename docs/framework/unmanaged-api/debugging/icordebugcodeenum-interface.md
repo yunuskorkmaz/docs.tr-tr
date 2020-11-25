@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5589171-a4a0-4c00-bbdc-6e0a42233b75
 topic_type:
 - apiref
-ms.openlocfilehash: cce0efa925683b5361a5422112db3f8231e2dfb4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b611dcabc1e5cc36f5c6342f0a832cc81de8c1d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893271"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720743"
 ---
 # <a name="icordebugcodeenum-interface"></a>ICorDebugCodeEnum Arabirimi
 
@@ -29,7 +29,7 @@ ms.locfileid: "82893271"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](icordebugcodeenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki `ICorDebugCode` belirtilen örnek sayısını alır.|  
+|[Next Yöntemi](icordebugcodeenum-next-method.md)|`ICorDebugCode`Geçerli konumdan başlayarak Numaralandırmadaki belirtilen örnek sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -37,6 +37,7 @@ ms.locfileid: "82893271"
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

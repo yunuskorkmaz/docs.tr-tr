@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 57c33c58-bf0b-4533-b569-e6a682d02cba
 topic_type:
 - apiref
-ms.openlocfilehash: fbf501d906ecc0bf55719fa33d1af2d4db1cc2ef
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0f38314df766b74164bf5e98d9b2153d2dddbcc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617106"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721744"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback Arabirimi
+
 Bir grup içinde geri çağırma yapmak için yöntemler sağlar. *Apartman* , aynı iş parçacığı erişim gereksinimlerini paylaşan nesneler için bir işlem içindeki mantıksal bir kapsayıcıdır.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -31,11 +32,12 @@ Bir grup içinde geri çağırma yapmak için yöntemler sağlar. *Apartman* , a
 |[DoCallback Yöntemi](iapartmentcallback-docallback-method.md)|Belirtilen işlevi bir apartman içinde yürütür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

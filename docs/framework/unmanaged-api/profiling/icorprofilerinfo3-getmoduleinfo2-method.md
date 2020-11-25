@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-ms.openlocfilehash: d2b7e93866bf0aa79849925234a4d6e4cc9b5b52
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2213b674cce27c77156b8de1bbf20d2975e3e55c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502827"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721601"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 Metodu
+
 Modül KIMLIĞI verildiğinde, modülün dosya adını, modülün üst derleme KIMLIĞINI ve modülün özelliklerini açıklayan bir bit maskesini döndürür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -40,6 +41,7 @@ HRESULT GetModuleInfo2(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `moduleId`  
  'ndaki Bilgilerin alınacağı modülün KIMLIĞI.  
   
@@ -62,6 +64,7 @@ HRESULT GetModuleInfo2(
  dışı [Cor_prf_module_flags](cor-prf-module-flags-enumeration.md) Numaralandırmadaki, modülün özelliklerini belirten değerlerin bir bit maskesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Dinamik modüller için parametresi, `szName` modülün meta veri adıdır ve temel adres 0 (sıfır) olur. Meta veri adı, meta veriler içindeki modül tablosundan Ad sütunundaki değerdir. Bu, <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> yönetilen koda özellik olarak ve `szName` [IMetaDataImport:: GetScopeProps](../metadata/imetadataimport-getscopeprops-method.md) yönteminin parametresi olarak yönetilmeyen meta veri istemci koduna olarak da sunulur.  
   
  `GetModuleInfo2`Yöntemi modülün kimliği mevcut olduğu anda çağrılabilir olsa da, ana DERLEMENIN kimliği, profil oluşturucu [ICorProfilerCallback:: ModuleAttachedToAssembly geri çağrısını](icorprofilercallback-moduleattachedtoassembly-method.md) alıncaya kadar kullanılamaz.  
@@ -71,6 +74,7 @@ HRESULT GetModuleInfo2(
  Alternatif olarak, `GetModuleInfo2` `szName` doğru arabellek boyutunu elde etmek için ilk olarak sıfır uzunluklu bir arabellek ile çağrı yapabilirsiniz. Daha sonra arabellek boyutunu içinde döndürülen değere ayarlayabilir `pcchName` ve `GetModuleInfo2` yeniden çağırabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-ms.openlocfilehash: d036ddf353aa3a622ade05e1e2daa7f170d28f63
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 7aca5fcb5a55331756b4f98c08eb46fc4db1e289
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396773"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720353"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 Arabirimi
+
 "ICorDebugType" nesnelerine yönelik destek sağlamak için "ICorDebugValue" arabirimini genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -36,6 +37,7 @@ ms.locfileid: "83396773"
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

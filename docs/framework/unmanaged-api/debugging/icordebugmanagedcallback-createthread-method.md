@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-ms.openlocfilehash: 5fa3bafd35912a7729833896f7e6f0bb2ff9b121
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 56ec7c56b167c29c9951638c5eee159e1d3c7ffb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212392"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721302"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>ICorDebugManagedCallback::CreateThread Yöntemi
+
 Hata ayıklayıcıya bir iş parçacığının yönetilen kodu yürütmeye başlatıldığını bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CreateThread (  
@@ -35,6 +36,7 @@ HRESULT CreateThread (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pAppDomain`  
  'ndaki İş parçacığını içeren uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.  
   
@@ -42,9 +44,11 @@ HRESULT CreateThread (
  'ndaki İş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  İş parçacığı yürütülecek ilk yönetilen kod yönergesinde konumlandırılacaktır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

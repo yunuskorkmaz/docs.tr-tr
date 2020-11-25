@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-ms.openlocfilehash: fb117352299a93aface6e58837307284ec4b8340
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9d0349e4801c550731b6d126197003917c4a46e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616092"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721796"
 ---
 # <a name="hosting-structures"></a>Barındırma Yapıları
+
 Bu bölümde, barındırma API 'sinin kullandığı yönetilmeyen yapılar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [AssemblyBindInfo Yapısı](assemblybindinfo-structure.md)  
  Başvurulan derleme hakkında ayrıntılı bilgi sağlar.  
   
@@ -42,10 +44,11 @@ Bu bölümde, barındırma API 'sinin kullandığı yönetilmeyen yapılar açı
  Oluşan taşma türünü ve taşma nedeniyle oluşan özel durum hakkında bilgi depolar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Barındırma Yardımcı Sınıfları](hosting-coclasses.md)  
   
  [Barındırma Arabirimleri](hosting-interfaces.md)  
   
  [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)  
   
- [Barındırma Sabit Listeleri](hosting-enumerations.md)
+ [Barındırma Numaralandırmaları](hosting-enumerations.md)

@@ -1,6 +1,6 @@
 ---
-title: QualifierSet_Next işlevi (Yönetilmeyen API Başvurusu)
-description: QualifierSet_Next işlevi bir sonraki elemeyi bir numaralandırmada alır.
+title: QualifierSet_Next işlevi (yönetilmeyen API Başvurusu)
+description: QualifierSet_Next işlevi bir Numaralandırmadaki bir sonraki niteleyiciyi alır.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Next
@@ -14,19 +14,20 @@ helpviewer_keywords:
 - QualifierSet_Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: d3702426bc409d601ccfc6b7a8e93e8d9729c64e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54d79a3dc081e9cdcb42153b6f7aa457557e3399
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174881"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721133"
 ---
-# <a name="qualifierset_next-function"></a>QualifierSet_Next fonksiyonu
-[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevine yapılan bir çağrıyla başlayan bir numaralandırmada bir sonraki elemeyi alır.
+# <a name="qualifierset_next-function"></a>QualifierSet_Next işlevi
+
+[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevine yapılan çağrıyla başlatılan bir Numaralandırmadaki bir sonraki niteleyiciyi alır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT QualifierSet_Next (
@@ -41,45 +42,46 @@ HRESULT QualifierSet_Next (
 
 ## <a name="parameters"></a>Parametreler
 
-`vFunc`[içinde] Bu parametre kullanılmaz.
+`vFunc` 'ndaki Bu parametre kullanılmıyor.
 
-`ptr`[içinde] [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneğine işaretçi.
+`ptr` 'ndaki Bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği işaretçisi.
 
-`lFlags`[içinde] Saklı -dır. Bu parametre 0 olmalıdır.
+`lFlags` 'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
-`pstrName`[çıkış] Elemenin adı. `null`Bu parametre yoksayılmazsa; aksi `pstrName` takdirde, geçerli `BSTR` bir veya bellek sızıntısı oluşur işaret etmemelidir. Null değilse, işlev her zaman `BSTR` döndürdüğünde `WBEM_S_NO_ERROR`yeni bir ayırır.
+`pstrName` dışı Niteleyicinin adı. `null`Bu parametre yok sayılır; Aksi takdirde, `pstrName` geçerli bir `BSTR` veya bir Bellek sızıntısının gerçekleşmemelidir. Null değilse, işlev her zaman döndürüldüğünde yeni bir değer ayırır `BSTR` `WBEM_S_NO_ERROR` .
 
-`pVal`[çıkış] Başarılı olduğunda, eleme değeri. İşlev başarısız olursa, işaret edilen `VARIANT` ler `pVal` değiştirilmez. Bu parametre `null`ise, parametre yoksayılır.
+`pVal` dışı Başarılı olduğunda, niteleyicinin değeri. İşlev başarısız olursa, `VARIANT` tarafından işaret edilen `pVal` değiştirilmez. Bu parametre ise `null` parametresi yok sayılır.
 
-`plFlavor`[çıkış] Niteleyici lezzet alan bir UZUN için bir işaretçi. Lezzet bilgisi istenemiyorsa, `null`bu parametre .
+`plFlavor` dışı Niteleyiciyi alan bir LONG işaretçisi. Flavor bilgileri istenmiyorsa, bu parametre olabilir `null` .
 
 ## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değildir. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Arayan [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)aramadı. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Yeni bir numaralandırmabaşlatmak için yeterli bellek kullanılabilir değil. |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | Numaralandırmada artık eleme ler kalmamaktadır. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+|`WBEM_E_UNEXPECTED` | 0x8004101D | Çağıran [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)çağırmadı. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Yeni bir sabit listesi başlatmak için yeterli kullanılabilir bellek yok. |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | Numaralandırmada başka niteleyiciler kalmadı. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev [IWbemQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) bir çağrı sarar::Sonraki yöntem.
+Bu işlev, [IWbemQualifierSet:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) yöntemine bir çağrı kaydırır.
 
-`QualifierSet_Next` İşlev dönene `WBEM_S_NO_MORE_DATA`kadar tüm niteleyicileri sayısallandırmak için işlevi tekrar tekrar çağırırsınız. Numaralandırmayı erken sonlandırmak için [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) işlevini arayın.
+İşlev `QualifierSet_Next` döndürülünceye kadar tüm niteleyicileri numaralandırmak için işlevi tekrar tekrar çağırın `WBEM_S_NO_MORE_DATA` . Numaralandırmayı erken sonlandırmak için [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) işlevini çağırın.
 
-Numaralandırma sırasında döndürülen niteleyicilerin sırası tanımsızdır.
+Numaralandırma sırasında döndürülen niteleyicilerin sırası tanımsız.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

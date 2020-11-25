@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ff04d75-85ac-4df9-886d-dbaa037c0552
 topic_type:
 - apiref
-ms.openlocfilehash: 78e667acf1573769a1a67b4c964d7801f11838fe
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 02facbb0ff1c0f8978d4f4f720ab370f70f07fe2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805122"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721692"
 ---
 # <a name="igcthreadcontrol-interface"></a>IGCThreadControl Arabirimi
+
 Bir çöp toplama işlemi için engellenebilecek iş parçacıklarının zamanlamaya katılmak için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -33,11 +34,12 @@ Bir çöp toplama işlemi için engellenebilecek iş parçacıklarının zamanla
 |[ThreadIsBlockingForSuspension Yöntemi](igcthreadcontrol-threadisblockingforsuspension-method.md)|Bir atık toplama ya da başka bir askıya alma için, çağrıyı yapan iş parçacığının engellemek üzere olduğunu ana bilgisayara bildirir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

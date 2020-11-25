@@ -4,12 +4,12 @@ description: "F # ' da, denetim akışı yapıları ve bağlamaları kullanılar
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812165"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705312"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
@@ -24,7 +24,7 @@ Hesaplamalar birçok form alabilir. En yaygın hesaplama biçimi, anlaşılması
 - Etkili hesaplamalar
 - Genel hesaplamalar
 
-Daha genel olarak, bir uygulamanın belirli bölümlerinde gerçekleştirmeniz gereken *bağlama duyarlı* hesaplamalar vardır. Bağlama duyarlı kod yazmak zor olabilir. bu sayede, bu şekilde, belirli bir bağlam dışındaki hesaplamalar, bunu yapmaktan kaçınmak için soyut hale gelir. Bu soyutlamalar genellikle kendi kendinize yazmak zordur. Bu, F # ' ın **Hesaplama ifadeleri**olarak adlandırılan genelleştirilmiş bir yoludur.
+Daha genel olarak, bir uygulamanın belirli bölümlerinde gerçekleştirmeniz gereken *bağlama duyarlı* hesaplamalar vardır. Bağlama duyarlı kod yazmak zor olabilir. bu sayede, bu şekilde, belirli bir bağlam dışındaki hesaplamalar, bunu yapmaktan kaçınmak için soyut hale gelir. Bu soyutlamalar genellikle kendi kendinize yazmak zordur. Bu, F # ' ın **Hesaplama ifadeleri** olarak adlandırılan genelleştirilmiş bir yoludur.
 
 Hesaplama ifadeleri, bağlama duyarlı hesaplamaları kodlamak için Tekdüzen bir sözdizimi ve soyutlama modeli sunar.
 
@@ -181,7 +181,7 @@ Aksine `yield` , `yield!` açıkça belirtilmesi gerekir. Hesaplama ifadelerinde
 `return`Anahtar sözcüğü, hesaplama ifadesine karşılık gelen türdeki bir değeri sarmalar. Kullanılarak hesaplama ifadelerinden `yield` , bir hesaplama ifadesini "tamamlaması" için kullanılır:
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         let! data = fetch url
         return data
@@ -198,7 +198,7 @@ let result = Async.RunSynchronously req
 `return!`Anahtar sözcüğü bir hesaplama ifadesinin değerini yeniden ayırır ve bu sonucu hesaplama ifadesine karşılık gelen türde kaydırır:
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         return! fetch url
     }

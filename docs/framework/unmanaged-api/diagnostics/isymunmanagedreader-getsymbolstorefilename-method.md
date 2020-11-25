@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c84f4846-9bc8-44a4-9a76-e39106d6d8b2
 topic_type:
 - apiref
-ms.openlocfilehash: 6ffab3b2f81680404f870cfd63ae5125173a346c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: df503e44f20a0b1f02e2c609cc4b52712520faea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615520"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720574"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName Yöntemi
+
 Sembol deposunun disk üzerindeki dosya adını sağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,8 +37,9 @@ HRESULT GetSymbolStoreFileName (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cchName`  
- 'ndaki `szName`Arabelleğin boyutu.  
+ 'ndaki `szName` Arabelleğin boyutu.  
   
  `pcchName`  
  dışı Null sonlandırma dahil olmak üzere içinde döndürülen adın uzunluğunu alan değişkene yönelik bir işaretçi `szName` .  
@@ -46,9 +48,11 @@ HRESULT GetSymbolStoreFileName (
  dışı Sembol deposunun dosya adını alan değişkene yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

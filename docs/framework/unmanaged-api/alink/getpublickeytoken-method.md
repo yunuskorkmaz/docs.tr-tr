@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4a16374c-94b0-47b0-9fed-88c2b0cdccd4
 topic_type:
 - apiref
-ms.openlocfilehash: 2e7ed4e1529104db30b0b06665f74342d9ca9a01
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e41be6407076a2609a83a5be3b0c42d28914ec38
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447237"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720348"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken Metodu
+
 Belirli bir keyfile veya anahtar kapsayıcısı için ortak anahtar belirtecini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetPublicKeyToken(  
@@ -36,6 +37,7 @@ HRESULT GetPublicKeyToken(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pszKeyFile`  
  Anahtarın dosya adı.  
   
@@ -46,12 +48,14 @@ HRESULT GetPublicKeyToken(
  Anahtar belirtecinin depolanacağı adres.  
   
  `pcbPublicKeyToken`  
- `pvPublicKeyToken`tarafından gösterilen arabelleğin boyutunu bayt cinsinden belirtir. Dönüş sonrasında, kullanılan gerçek bayt sayısını içerir.  
+ Tarafından gösterilen arabelleğin boyutunu bayt cinsinden belirtir `pvPublicKeyToken` . Dönüş sonrasında, kullanılan gerçek bayt sayısını içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

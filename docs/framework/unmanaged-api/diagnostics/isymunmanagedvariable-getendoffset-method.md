@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5d777c5-d450-4c0f-999c-b3953ee22cfb
 topic_type:
 - apiref
-ms.openlocfilehash: 91117eae23d38f3bc608f3203ebe53f92516c9c9
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cf4179f839b62409d5b2185f3e11e8e732c29187
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610502"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721874"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>ISymUnmanagedVariable::GetEndOffset Yöntemi
+
 Bu değişkenin üst sapmasını üst öğesi içinde alır. Bu bir kapsamdaki yerel değişkense, bitiş boşluğu kapsam için tanımlanan uzaklıklar içinde kalır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -33,13 +34,16 @@ HRESULT GetEndOffset(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pRetVal`  
  dışı Bitiş sapmasını alan bir işaretçisine bir işaretçisi `ULONG32` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

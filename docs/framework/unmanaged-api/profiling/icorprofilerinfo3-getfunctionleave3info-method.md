@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: df7083d2-fd43-44c7-9ce5-912c25cef0ff
 topic_type:
 - apiref
-ms.openlocfilehash: bab52d9179d7454cab4a47e1a2bfe80a49b00c2a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f365a95b0859f4f97dab96ec85af6d7dfb96d8e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502840"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721627"
 ---
 # <a name="icorprofilerinfo3getfunctionleave3info-method"></a>ICorProfilerInfo3::GetFunctionLeave3Info Yöntemi
+
 [FunctionLeave3WithInfo işlev](functionleave3withinfo-function.md) işlevi tarafından Profiler 'a bildirilen işlevin yığın çerçevesini ve dönüş değerini sağlar. Bu yöntem yalnızca `FunctionLeave3WithInfo` geri çağırma sırasında çağrılabilir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,8 +37,9 @@ HRESULT GetFunctionLeave3Info(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `functionId`  
- 'ndaki `FunctionID`Döndüren işlevin.  
+ 'ndaki `FunctionID` Döndüren işlevin.  
   
  `eltInfo`  
  'ndaki Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir tanıtıcı. Profil Oluşturucu, `eltInfo` [FunctionLeave3WithInfo](functionleave3withinfo-function.md) işlevi tarafından Profiler 'a verilen aynısını sağlamalıdır.  
@@ -51,6 +53,7 @@ HRESULT GetFunctionLeave3Info(
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

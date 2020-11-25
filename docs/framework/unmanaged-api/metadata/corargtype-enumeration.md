@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 3c1cb268-57a0-4664-91c7-f6908ff29e32
 topic_type:
 - apiref
-ms.openlocfilehash: ac822dda30d697cbbbcacf19eb6a57d1e5fb4c3b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6388d804df43964866073d7c3b32dca84fb2d06f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007955"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720431"
 ---
 # <a name="corargtype-enumeration"></a>CorArgType Numaralandırması
+
 Çalışma zamanı tanıtıcısının yerel türünü tanımlayan değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -45,6 +46,7 @@ typedef enum CorArgType {
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

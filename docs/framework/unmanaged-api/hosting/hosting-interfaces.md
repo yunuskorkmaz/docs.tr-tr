@@ -6,14 +6,15 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], hosting
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
-ms.openlocfilehash: b1459bf78276abe0daefd7a7ee814841f3c65dfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f82301da1813b8d50deebf4452d8c07809c186c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550670"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721809"
 ---
 # <a name="hosting-interfaces"></a>Barındırma Arabirimleri
+
 Bu bölümde, yönetilmeyen ana bilgisayarların ortak dil çalışma zamanını (CLR) uygulamalarıyla tümleştirmeleri için kullanabileceği arabirimler açıklanmaktadır.  
   
  .NET Framework 2,0 sürümü barındırma arabirimleri, .NET Framework sürüm 1,0 ve 1,1 arabirimlerini yerine alır. İki arabirim kümesi arasında önemli farklılıklar vardır. Bunları karıştırmak beklenmeyen davranışlara neden olabilir ve önerilmez.  
@@ -23,6 +24,7 @@ Bu bölümde, yönetilmeyen ana bilgisayarların ortak dil çalışma zamanını
  .NET Framework 4 barındırma arabirimleri, .NET Framework 2,0 arabirimlerinin yerini alır.
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Kullanım Dışı CLR Barındırma Arabirimleri ve Yardımcı Sınıfları](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  1,0 ve 1,1 .NET Framework sürümlerinde tanıtılan barındırma arabirimlerini açıklar.  
   
@@ -33,6 +35,7 @@ Bu bölümde, yönetilmeyen ana bilgisayarların ortak dil çalışma zamanını
  .NET Framework 4 ' te tanıtılan barındırma arabirimlerini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Barındırma Yardımcı Sınıfları](hosting-coclasses.md)  
   
  [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)  

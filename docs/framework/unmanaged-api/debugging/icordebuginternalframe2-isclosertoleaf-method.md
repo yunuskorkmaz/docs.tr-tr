@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 4a01ccd4e5cb9aadc6a693b2c6ceaff31c114bbc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 83d3eda0f3c4619ec7a5df91d13ab9f3a58e5f01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209896"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721354"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf Yöntemi
+
 `this`İç karenin belirtilen ICorDebugFrame nesnesinden daha yakın olup olmadığını denetler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,  
@@ -33,25 +34,29 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pFrameToCompare`  
  'ndaki Karşılaştırma nesnesine yönelik bir işaretçi `ICorDebugFrame` .  
   
  `pIsCloser`  
- [out] `true` `this`iç çerçeve, tarafından belirtilen çerçeveden daha yakınsa `pFrameToCompare` , aksi durumda, `false` .  
+ [out] `true` `this` iç çerçeve, tarafından belirtilen çerçeveden daha yakınsa `pFrameToCompare` , aksi durumda, `false` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Karşılaştırma başarıyla gerçekleştirildi.|  
 |E_FAIL|Karşılaştırma gerçekleştirilemedi.|  
-|E_INVALIDARG|`pFrameToCompare`ya da `pIsCloser` null.|  
+|E_INVALIDARG|`pFrameToCompare` ya da `pIsCloser` null.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IsCloserToLeaf`yığındaki diğer çerçevelerle iç çerçeveler Ekleme ilkesi uygulamak için kullanılabilir.  
+
+ `IsCloserToLeaf` yığındaki diğer çerçevelerle iç çerçeveler Ekleme ilkesi uygulamak için kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

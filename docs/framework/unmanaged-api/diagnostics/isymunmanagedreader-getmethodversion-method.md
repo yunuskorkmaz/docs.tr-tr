@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6f9ac84-302a-4f5e-b990-e76f4269fceb
 topic_type:
 - apiref
-ms.openlocfilehash: 8ee4c1bffccb44d15fa53eb3d4d6c0fcdc3e7697
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b0590f93c6a4c5ef28e03fc909c1f6a1474e5fad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614974"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720613"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion Metodu
+
 Yöntem sürümünü alır. Yöntem sürümü 1 ' de başlar ve yöntemin her yeniden derlenmesi sırasında artırılır. Yeniden derleme, yöntemde değişiklik yapılmadan meydana gelebilir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetMethodVersion (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pMethod`  
  'ndaki Sürümünün alınacağı yöntem.  
   
@@ -41,9 +43,11 @@ HRESULT GetMethodVersion (
  dışı Yöntem sürümünü alan bir değişkene yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97f15656-8677-4079-8553-a1d8603355d6
 topic_type:
 - apiref
-ms.openlocfilehash: ce0e192a9d7d5abf56a55f844cf886c386f1c563
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 00f6032f41caf54d7366de30a449f1ae76e8bbd0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442000"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719989"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut Yöntemi
+
 Bir çağrı çıkış olduğunda çağrılır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT OnSyncCallOut
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `in_CallID`  
  'ndaki Giden çağrının KIMLIĞI. Bkz. [CALL_ID yapısı](call-id-structure.md).  
   
@@ -47,9 +49,11 @@ HRESULT OnSyncCallOut
  dışı Çağrı arabelleğinin bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** ProtocolNotify2. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.

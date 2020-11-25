@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: ea451bdd645d2d4dea4c5dd00408e0bc51804803
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 35b82c33e54619eb9bebd5e5749ae202e905357a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492076"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721003"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName Yöntemi
+
 Belirtilen ada sahip belirtilen türdeki üyeleri temsil eden MemberDef belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,6 +40,7 @@ HRESULT EnumMembersWithName (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `phEnum`  
  [in, out] Numaralandırıcı için bir işaretçi.  
   
@@ -58,21 +60,23 @@ HRESULT EnumMembersWithName (
  dışı İçinde döndürülen MemberDef belirteçlerinin gerçek sayısı `rMembers` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, alanları ve yöntemleri numaralandırır, ancak özellikleri veya olayları numaralandırır. [IMetaDataImport:: EnumMembers](imetadataimport-enummembers-method.md)'ın aksine, `EnumMembersWithName` belirtilen ada sahip olmayan tüm alan ve üye belirteçlerini atar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`başarıyla döndürüldü.|  
+|`S_OK`|`EnumTypeDefs` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak MemberDef belirteçleri yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

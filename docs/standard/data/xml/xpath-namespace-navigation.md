@@ -2,19 +2,21 @@
 title: XPath Ad Alanı Gezintisi
 ms.date: 03/30/2017
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: 4d2ef71a41d19fd5bb573afab66dc8a15e19c393
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d5350f0c8f73c5efb0f7d9e4c492a841b4978c36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831214"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720899"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath Ad Alanı Gezintisi
+
 XML belgeleriyle XPath sorguları kullanmak için, XML ad alanlarını ve ad alanları tarafından içerilen öğeleri doğru bir şekilde ele almanız gerekir. Ad alanları, adlar birden fazla bağlamda kullanıldığında oluşabilecek belirsizlikleri önler; Örneğin, ad `ID` BIR XML belgesinin farklı öğeleriyle ilişkili birden fazla tanımlayıcıya başvurabilir. Ad alanı sözdizimi, bir XML belgesinin öğelerini ayırt eden URI 'Leri, adları ve önekleri belirtir.  
   
  Bu konudaki örnekte, ile bir XML belgesinde gezinme içindeki ön eklerin kullanımı gösterilmektedir <xref:System.Xml.XPath.XPathNavigator> . Ad alanları ve sözdizimi hakkında daha fazla bilgi için bkz. [XML Files: XML ad alanlarını anlama](/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
   
 ## <a name="namespace-declarations"></a>Ad alanı bildirimleri  
+
  Ad alanı bildirimleri, bir örneği kullanılırken bir XML belgesinin öğelerini ayırt edilemez ve adreslenebilir hale getirir <xref:System.Xml.XPath.XPathNavigator> . Ad alanı önekleri ad alanlarını adresleme için kısa bir sözdizimi sağlar.  
   
  Ön ekler form tarafından tanımlanır: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` Bu sözdiziminde, "" ön eki, `e` ad alanının biçimsel URI 'si için bir kısaltmadır. `Body`Öğesini, `Envelope` sözdizimini kullanarak ad alanının bir üyesi olarak tanımlayabilirsiniz: `e:Body` .  
@@ -35,6 +37,7 @@ XML belgeleriyle XPath sorguları kullanmak için, XML ad alanlarını ve ad ala
 ```  
   
 ## <a name="navigation-by-namespace-prefix"></a>Ad alanı ön ekine göre gezinti  
+
  Bu bölümdeki kod, bir <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XmlNamespaceManager> `Search` önceki bölümdeki XML belgesinden öğeyi seçmek için ve nesnelerini kullanır. Sorgu, `xpath` yoldaki her öğe için ad alanı öneklerini içerir. Her bir öğeyi içeren ad alanlarının kesin kimliğini belirtmek, yöntemi tarafından öğesine doğru gezinmeyi sağlar `Search` <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> .  
   
 ```csharp  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa25dd33223ad2a9521aed0917ce35a2a33fa2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cac8393408de626efe2360999e259780eac29f38
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213393"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721341"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError Yöntemi
+
 Hata ayıklayıcısını, ortak dil çalışma zamanının, bir işlev tam zamanında (JıT) derlenmesinden önce ayarlanmış bir kesme noktasını doğru bir şekilde bağlamadığı konusunda bilgilendirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT BreakpointSetError (  
@@ -37,6 +38,7 @@ HRESULT BreakpointSetError (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pAppDomain`  
  'ndaki İlişkisiz kesme noktasını içeren uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.  
   
@@ -50,9 +52,11 @@ HRESULT BreakpointSetError (
  'ndaki Hatayı gösteren bir tamsayı.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Verilen kesme noktası hiçbir şekilde isabet ettirilmeyecek. Hata ayıklayıcı devre dışı bırakıp yeniden bağlamasını bilmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -6,20 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - IALink interface
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
-ms.openlocfilehash: 73b6bb9eac3f706df5cb1fd63b2f67c9791c8ed2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 657c16f6e96633e568903ca4a55b4c68c1a49fa5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441822"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720327"
 ---
 # <a name="ialink-interface"></a>IALink Arabirimi
+
 .NET Framework derlemeleri oluşturulmasına yardımcı olur. Diğer şeyler arasında arabirim, çok modüllü derlemeler için derleme bildirimleri yazma, güçlü adlara sahip derlemeleri imzalama ve netmodules oluşturma konusunda yardımcı olan yöntemleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [AddFile yöntemi](addfile-method.md)  
+
+ [AddFile Metodu](addfile-method.md)  
   
- [AddImport yöntemi](addimport-method.md)  
+ [AddImport Metodu](addimport-method.md)  
   
  [CloseAssembly Yöntemi](closeassembly-method.md)  
   
@@ -39,7 +41,7 @@ ms.locfileid: "74441822"
   
  [ExportNestedType Yöntemi](exportnestedtype-method.md)  
   
- [ExportNestedTypeForwarder Yöntemi](exportnestedtypeforwarder-method.md)  
+ [ExportNestedTypeForwarder Metodu](exportnestedtypeforwarder-method.md)  
   
  [ExportType Yöntemi](exporttype-method.md)  
   
@@ -49,13 +51,13 @@ ms.locfileid: "74441822"
   
  [GetAssemblyRefHash Yöntemi](getassemblyrefhash-method.md)  
   
- [GetResolutionScope Yöntemi](getresolutionscope-method.md)  
+ [GetResolutionScope Metodu](getresolutionscope-method.md)  
   
- [GetScope yöntemi](getscope-method.md)  
+ [GetScope Metodu](getscope-method.md)  
   
- [GetWin32ResBlob Yöntemi](getwin32resblob-method.md)  
+ [GetWin32ResBlob Metodu](getwin32resblob-method.md)  
   
- [ImportFile Yöntemi](importfile-method.md)  
+ [ImportFile Metodu](importfile-method.md)  
   
  [ImportFile2 Yöntemi](importfile2-method.md)  
   
@@ -77,4 +79,4 @@ ms.locfileid: "74441822"
 
 - [ALink API](index.md)
 - [IALink2 Arabirimi](ialink2-interface.md)
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../tools/al-exe-assembly-linker.md)
+- [Al.exe (bütünleştirilmiş kod bağlayıcı)](../../tools/al-exe-assembly-linker.md)

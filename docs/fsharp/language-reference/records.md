@@ -2,12 +2,12 @@
 title: Kayıtlar
 description: 'F # kayıtlarının, isteğe bağlı olarak, adlandırılmış değerlerin basit toplamlarını nasıl temsil ettiğini öğrenin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812360"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682035"
 ---
 # <a name="records"></a>Kayıtlar
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde, *TypeName* kayıt türünün adı, *Label1* ve *Etiket 2* değerleri *Etiketler*olarak adlandırılır ve *Type1* ve *type2* bu değerlerin türleridir. *üye listesi* , türü için isteğe bağlı üyelerin listesidir.  `[<Struct>]`Özniteliği, başvuru türü olan bir kayıt yerine bir struct kaydı oluşturmak için kullanabilirsiniz.
+Önceki sözdiziminde, *TypeName* kayıt türünün adı, *Label1* ve *Etiket 2* değerleri *Etiketler* olarak adlandırılır ve *Type1* ve *type2* bu değerlerin türleridir. *üye listesi* , türü için isteğe bağlı üyelerin listesidir.  `[<Struct>]`Özniteliği, başvuru türü olan bir kayıt yerine bir struct kaydı oluşturmak için kullanabilirsiniz.
 
 Bazı örnekler aşağıda verilmiştir.
 
@@ -34,7 +34,7 @@ Bazı örnekler aşağıda verilmiştir.
 
 Her etiket ayrı bir satırda olduğunda, noktalı virgül isteğe bağlıdır.
 
-*Kayıt ifadeleri*olarak bilinen ifadelerde değerler belirleyebilirsiniz. Derleyici, kullanılan etiketlerden tür kullanır (Etiketler diğer kayıt türlerinden yeterince farklı olursa). Küme ayraçları ({}) kayıt ifadesini kapsar. Aşağıdaki kod, etiketleriyle üç float öğesi olan bir kaydı Başlatan bir kayıt ifadesi gösterir `x` `y` `z` .
+*Kayıt ifadeleri* olarak bilinen ifadelerde değerler belirleyebilirsiniz. Derleyici, kullanılan etiketlerden tür kullanır (Etiketler diğer kayıt türlerinden yeterince farklı olursa). Küme ayraçları ({}) kayıt ifadesini kapsar. Aşağıdaki kod, etiketleriyle üç float öğesi olan bir kaydı Başlatan bir kayıt ifadesi gösterir `x` `y` `z` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
@@ -50,7 +50,7 @@ Yöntemler, sınıf türleri için olduğu gibi kayıt türleri için tanımlana
 
 ## <a name="creating-records-by-using-record-expressions"></a>Kayıt Ifadeleri kullanarak kayıt oluşturma
 
-Kayıtları kayıtta tanımlanan etiketleri kullanarak başlatabilirsiniz. Bunu yapan bir ifade, *kayıt ifadesi*olarak adlandırılır. Kayıt ifadesini kapsamak ve noktalı virgülü sınırlayıcı olarak kullanmak için küme ayraçları kullanın.
+Kayıtları kayıtta tanımlanan etiketleri kullanarak başlatabilirsiniz. Bunu yapan bir ifade, *kayıt ifadesi* olarak adlandırılır. Kayıt ifadesini kapsamak ve noktalı virgülü sınırlayıcı olarak kullanmak için küme ayraçları kullanın.
 
 Aşağıdaki örnek, bir kaydın nasıl oluşturulacağını göstermektedir.
 
@@ -68,7 +68,7 @@ Başka bir kayıt oluşturma biçimi, var olan bir kaydı kopyalamanız gerekti�
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-Kayıt ifadesinin bu formu, *Copy ve Update Record ifadesi*olarak adlandırılır.
+Kayıt ifadesinin bu formu, *Copy ve Update Record ifadesi* olarak adlandırılır.
 
 Kayıtlar varsayılan olarak sabittir; Ancak, bir Kopyala ve Güncelleştir ifadesi kullanarak, değiştirilmiş kayıtları kolayca oluşturabilirsiniz. Ayrıca, açıkça kesilebilir bir alan belirtebilirsiniz.
 
@@ -157,7 +157,7 @@ type Person =
     member this.WeirdToString() =
         this.Name + this.Address + string this.Age
 
-let p = { Name = "a"; Age = 12; Address = "abc123 }
+let p = { Name = "a"; Age = 12; Address = "abc123" }
 let weirdString = p.WeirdToString()
 ```
 
@@ -185,4 +185,4 @@ Kayıtlar için başvuru eşitlik gerekiyorsa, `[<ReferenceEquality>]` kaydın �
 - [Sınıflar](classes.md)
 - [F # dil başvurusu](index.md)
 - [Başvuru-eşitlik](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
-- [Model eşleştirme](pattern-matching.md)
+- [Desen Eşleştirme](pattern-matching.md)

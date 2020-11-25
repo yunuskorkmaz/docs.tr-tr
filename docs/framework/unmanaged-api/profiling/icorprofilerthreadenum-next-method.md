@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3535279-3c63-41a2-ab0e-a129dc5a01e8
 topic_type:
 - apiref
-ms.openlocfilehash: 37d1acfa70a1a2b2c18fb34fb5d6024f3b61e2ab
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dc8e85c5a6047ad5dd99520b57789605333d5bf2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494351"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721211"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>ICorProfilerThreadEnum::Next Yöntemi
+
 Numaralandırıcının dizideki geçerli konumundan başlayarak ardışık iş parçacığı koleksiyonundan belirtilen sayıda bitişik iş parçacığı alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,24 +37,27 @@ HRESULT Next (    [in]  ULONG      celt,
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `celt`  
  'ndaki Alınacak iş parçacıklarının sayısı.  
   
  `ids`  
- dışı `ThreadID`Her biri alınan bir iş parçacığını temsil eden bir değer dizisi.  
+ dışı `ThreadID` Her biri alınan bir iş parçacığını temsil eden bir değer dizisi.  
   
  `pceltFetched`  
  dışı Gerçekten dizide döndürülen iş parçacığı sayısına yönelik bir işaretçi `ids` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`celt`öğeler döndürüldü.|  
+|S_OK|`celt` öğeler döndürüldü.|  
 |S_FALSE|Daha az `celt` öğe döndürüldü, bu, numaralandırmanın tamamlandığını gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

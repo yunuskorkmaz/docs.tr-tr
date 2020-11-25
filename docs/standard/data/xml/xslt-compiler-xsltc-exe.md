@@ -2,14 +2,15 @@
 title: XSLT Derleyicisi (xsltc.exe)
 ms.date: 03/30/2017
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-ms.openlocfilehash: cfeebc3ac0c0259c975439dc93c3c5f003b60c40
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 89e2291cb4eafe9ca9e5001061b960f348fe4719
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818329"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720834"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT Derleyicisi (xsltc.exe)
+
 XSLT derleyicisi (xsltc.exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derlenmiş stil sayfası daha sonra doğrudan <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemine geçirilebilir. xsltc.exe ile imzalı derlemeler oluşturamazsınız.  
   
  xsltc.exe aracı Visual Studio 'Ya dahildir. Daha fazla bilgi için bkz. [Visual Studio İndirmeleri](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
@@ -41,6 +42,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  XSLT çözümleri, birden çok stil sayfası modülünden oluşabilir. xsltc.exe Aracı, stil sayfalarından derleme oluşturur. Daha sonra derlemeler <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemine geçirilebilir. Bu, bazı XSLT dağıtım senaryolarında performans maliyetlerinin azaltılmasına yardımcı olabilir.  
   
 > [!NOTE]
@@ -49,6 +51,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  xsltc.exe Aracı, Sınıf ( `/class:` *ad*) veya derleme ( `/out:` *AssemblyName*) adlarını doğrulamaz. Adlar geçerli değilse, ortak dil çalışma zamanı tarafından hatalar oluşturulur.  
   
 ## <a name="examples"></a>Örnekler  
+
  Aşağıdaki komut, stil sayfasını derler ve booksort.dll adlı bir derleme oluşturur.  
   
 ```console  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c35199bf-bc47-4901-b467-4e8a37644bbb
 topic_type:
 - apiref
-ms.openlocfilehash: cf257ab86d27946c861c89dff5e6f09a42013e58
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 397dbbeb0b85cb549a8b5917f977ecb13b3d6539
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804708"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720223"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped Yöntemi
+
 Ana bilgisayara, `OVERLAPPED` zaman uyumsuz g/ç istekleri için kullanılan bir Win32 yapısına eklenecek özel verileri başlatma fırsatı sağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,14 +35,15 @@ HRESULT InitializeHostOverlapped (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pvOverlapped`  
- 'ndaki `OVERLAPPED`G/ç isteğine dahil edilecek Win32 yapısına yönelik bir işaretçi.  
+ 'ndaki `OVERLAPPED` G/ç isteğine dahil edilecek Win32 yapısına yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`InitializeHostOverlapped`başarıyla döndürüldü.|  
+|S_OK|`InitializeHostOverlapped` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -50,6 +52,7 @@ HRESULT InitializeHostOverlapped (
 |E_OUTOFMEMORY|İstenen kaynağı ayırmak için yeterli bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Windows platformu işlevleri, `OVERLAPPED` zaman uyumsuz g/ç isteklerinin durumunu depolamak için yapıyı kullanır. CLR, `InitializeHostOverlapped` konağa özel verileri ekleme fırsatına bir örneğe çağrı yapmak için yöntemini çağırır `OVERLAPPED` .  
   
 > [!IMPORTANT]
@@ -58,11 +61,12 @@ HRESULT InitializeHostOverlapped (
  E_OUTOFMEMORY dönüş değeri konağın özel verilerini başlatamadığını gösterir. Bu durumda, CLR bir hata bildirir ve çağrı başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

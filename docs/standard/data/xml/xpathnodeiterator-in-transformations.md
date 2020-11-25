@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-ms.openlocfilehash: cd8320071f1de15d503c94c138c02cab5742685c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a1542c0800f9042e27a4b0806d717c58d7783c79
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818439"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720847"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>Dönüşümlerde XPathNodeIterator
+
 , Bir <xref:System.Xml.XPath.XPathNodeIterator> XML yol dili (XPath) sorgusunun sonucu olarak oluşturulan bir düğüm kümesi veya düğüm kümesi yöntemi kullanılarak bir düğüm kümesine dönüştürülen bir sonuç ağacı parçasının üzerinde yinelemek için yöntemler sağlar. , <xref:System.Xml.XPath.XPathNodeIterator> Bu düğüm kümesi içindeki düğümleri yinelemenize olanak sağlar. Düğüm kümesi alındıktan sonra, <xref:System.Xml.XPath.XPathNodeIterator> sınıf seçili düğüm kümesine salt okunurdur ve salt ileri bir imleç sağlar. Düğüm kümesi belge sırasıyla oluşturulur, bu nedenle bu yöntemin çağrılması belge düzeninde sonraki düğüme gider. <xref:System.Xml.XPath.XPathNodeIterator> kümedeki tüm düğümlerin düğüm ağacını oluşturmaz. Bunun yerine, veride tek bir düğüm penceresi sağlar ve bu, ağaçta hareket ettiği sırada işaret ettiği temel düğümü ortaya çıkar. Sınıfından kullanılabilir yöntemler ve özellikler, <xref:System.Xml.XPath.XPathNodeIterator> geçerli düğümden bilgi almanızı sağlar. Kullanılabilir yöntemlerin ve özelliklerin listesi için bkz <xref:System.Windows.Forms.ToolBar> ..  
   
  Bir <xref:System.Xml.XPath.XPathNodeIterator> XPath sorgusundan oluşturulmuş bir düğüm kümesi üzerinde hareket ettirildiğinde ve yalnızca ileri hareket ettirildiğinde, taşıma <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> Yöntemi yöntemini kullanmaktır. Bu yöntemin dönüş türü `Boolean` , `true` sonraki Seçili düğüme taşınırsa döndürülür ve `false` daha fazla seçili düğüm yoksa döndürülüyor. Dönerse `true` , aşağıdaki listede kullanılabilen özellikler gösterilmektedir:  

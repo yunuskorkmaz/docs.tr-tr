@@ -2,14 +2,15 @@
 title: Okuyucudan Veri Yükleme
 ms.date: 03/30/2017
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: ea125e57dd6251a4fbd401bac8f37826083965b8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 345b6e35c84fe531e131d27bd09fbd8a87b4521a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822678"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720145"
 ---
 # <a name="load-data-from-a-reader"></a>Okuyucudan Veri Yükleme
+
 Bir XML belgesi <xref:System.Xml.XmlDocument.Load%2A> yöntemi ve bir parametresi kullanılarak yüklenirse <xref:System.Xml.XmlReader> , diğer biçimlerden verileri yükleme davranışına kıyasla oluşan davranışta farklılıklar vardır. Okuyucu ilk durumundaysa, <xref:System.Xml.XmlDocument.Load%2A> tüm içeriği okuyucudan kullanır ve okuyucudaki tüm VERILERDEN XML belge nesne modeli (DOM) oluşturur.  
   
  Okuyucu, belgenin herhangi bir yerinde zaten bir düğüm üzerinde konumlandırılmışsa ve ardından dönüştürme <xref:System.Xml.XmlDocument.Load%2A> yöntemine geçtiğinde, geçerli <xref:System.Xml.XmlDocument.Load%2A> bir üst etikete kadar, geçerli derinliği belleğe kapatan bitiş etiketine kadar geçerli düğümü ve tüm eşdüzey düzeylerini okumaya çalışır. Denenen işlemin başarısı, <xref:System.Xml.XmlDocument.Load%2A> Yük denendiğinde okuyucunun üzerinde bulunduğu düğüme bağlıdır, <xref:System.Xml.XmlDocument.Load%2A> OKUYUCUDAN XML 'nin doğru biçimlendirildiğini doğrular. XML doğru biçimlendirilmemiş ise <xref:System.Xml.XmlDocument.Load%2A> bir özel durum oluşturur. Örneğin, aşağıdaki düğüm kümesi iki kök düzeyi öğe içerir, XML doğru biçimlendirilmemiş ve <xref:System.Xml.XmlDocument.Load%2A> bir özel durum oluşturur.  

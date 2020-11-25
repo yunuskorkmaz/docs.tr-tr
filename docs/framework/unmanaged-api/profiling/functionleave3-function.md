@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-ms.openlocfilehash: 456d9a0e8236948ac69ed069495b1999ebf7e80a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8eaf36579bb82d66ff356aa68afc38c70d7eaca3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500617"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720392"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 İşlevi
+
 Denetim oluşturucuyu, denetimin bir işlevden döndürülmekte olduğunu bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   \[' de] denetimin döndürüldüğü işlevin tanımlayıcısı.
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `FunctionLeave3`Geri çağırma işlevi, profil oluşturucuyu işlevler çağrılmakta olduğunu ancak değer incelemesini desteklemiyor olduğunu bildirir. Bu işlevin uygulamanızı kaydetmek için [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 metodunu](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) kullanın.  
   
  `FunctionLeave3`İşlev bir geri çağırmasıdır; uygulamanız gerekir. Uygulamanın `__declspec(naked)` Storage-Class özniteliğini kullanması gerekir.  
@@ -52,6 +54,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
  `FunctionLeave3`İşlev yönetilen kod içine çağırmamalıdır veya yönetilen bellek ayırmaya hiçbir şekilde neden olmamalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  

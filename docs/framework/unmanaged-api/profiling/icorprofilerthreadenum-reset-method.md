@@ -15,23 +15,25 @@ helpviewer_keywords:
 ms.assetid: 81d7c86f-d062-4eed-8df3-448091ce8c49
 topic_type:
 - apiref
-ms.openlocfilehash: 19f3a4ecb6680d9951cd09525ec079b85fc5839c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 59285ad106b975ded63c43c78dfa081fdbdb3327
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494338"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721198"
 ---
 # <a name="icorprofilerthreadenumreset-method"></a>ICorProfilerThreadEnum::Reset Yöntemi
+
 Numaralandırıcının imlecini sıranın başlangıç konumuna taşımaktır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Reset();  
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
