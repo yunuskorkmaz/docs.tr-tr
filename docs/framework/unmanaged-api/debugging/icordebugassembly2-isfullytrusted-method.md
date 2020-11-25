@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 26cbd27d-12bf-444a-8197-ccd14d37dda3
 topic_type:
 - apiref
-ms.openlocfilehash: dd82709064fe7f7d912d93f4b3f0248769f02b9e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8a2a6be0db76f5ee2c7fa67c2038e0a5c845bd0f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894883"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719716"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>ICorDebugAssembly2::IsFullyTrusted Yöntemi
+
 Derlemeye çalışma zamanı güvenlik sistemi tarafından tam güven verilip verilmediğini gösteren bir değer alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT IsFullyTrusted(  
@@ -34,13 +35,16 @@ HRESULT IsFullyTrusted(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbFullyTrusted`  
- dışı `true` derlemeye çalışma zamanı güvenlik sistemi tarafından tam güven verildiyse; Aksi takdirde `false`,.  
+ [out] `true` derlemeye çalışma zamanı güvenlik sistemi tarafından tam güven verildiyse; Aksi takdirde, `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, derleme için güvenlik ilkesi henüz çözümlenmemişse, yani derlemede hiçbir kod henüz çalıştırılmadıysa, bir HRESULT CORDBG_E_NOTREADY döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

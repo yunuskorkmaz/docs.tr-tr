@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: dc2b3281-3820-487e-930d-350b66dc6417
 topic_type:
 - apiref
-ms.openlocfilehash: e22b390271a7813dd1d34aecf5f8a62d7eb81005
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 554f47cc4bd948e2b6106c1d71a2a4b7968d43f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007446"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718871"
 ---
 # <a name="coreventattr-enumeration"></a>CorEventAttr Numaralandırması
+
 Bir olayın meta verilerini tanımlayan değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorEventAttr {  
@@ -46,6 +47,7 @@ typedef enum CorEventAttr {
 |`evRTSpecialName`|Ortak dil çalışma zamanının olay adının kodlamasını denetlemesi gerektiğini belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

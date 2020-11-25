@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 75ad8670008242008aa344835143ff9b2add0a6c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501546"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719599"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager Arabirimi
+
 Ortak dil çalışma zamanının (CLR) konak tarafından sağlanan g/ç tamamlama bağlantı noktalarıyla etkileşime girmesine izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[Bind Yöntemi](ihostiocompletionmanager-bind-method.md)|Bir tanıtıcıyı g/ç tamamlama bağlantı noktasına bağlar.|  
 |[CloseIoCompletionPort Yöntemi](ihostiocompletionmanager-closeiocompletionport-method.md)|Daha önceki bir çağrısıyla oluşturulmuş bir bağlantı noktasını kapatır `CreateIoCompletionPort` .|  
@@ -41,14 +42,16 @@ Ortak dil çalışma zamanının (CLR) konak tarafından sağlanan g/ç tamamlam
 |[SetMinThreads Yöntemi](ihostiocompletionmanager-setminthreads-method.md)|Ana bilgisayarın g/ç tamamlama için en az sayıda iş parçacığı sayısını ayarlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `IHostIoCompletionManager``ICLRIoCompletionManager`clr tarafından uygulanan arabirime karşılık gelir. CLR, `IHostIoCompletionManager` tutamaçları konağın sağladığı bağlantı noktalarına bağlamak için yöntemini çağırır ve konak `ICLRIoCompletionManager` g/ç isteklerinin tamamlanmasını raporlamak için yöntemlerini çağırır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

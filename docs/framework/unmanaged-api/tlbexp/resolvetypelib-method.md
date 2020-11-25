@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: 65bbae614c8872ab5d78b3855b56ceaf2aad50da
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 84eea78b9c2e73e24238a5ecbc9442f3d63dbd4e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558192"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719794"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib Yöntemi
+
 Tam nitelikli yolunu döndürerek bir tür kitaplığının basit adını çözer.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT ResolveTypeLib(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `bstrSimpleName`  
  'ndaki Tür kitaplığının basit adını içeren bir [BSTR](/previous-versions/windows/desktop/automat/bstr) .  
   
@@ -47,10 +49,10 @@ HRESULT ResolveTypeLib(
  'ndaki Tür kitaplığının yerelleştirme KIMLIĞI.  
   
  `wMajorVersion`  
- 'ndaki Tür kitaplığının ana sürüm numarası. Örneğin, *x. y*sürümü için ana sürüm numarası *x*olur.  
+ 'ndaki Tür kitaplığının ana sürüm numarası. Örneğin, *x. y* sürümü için ana sürüm numarası *x* olur.  
   
  `wMinorVersion`  
- 'ndaki Tür kitaplığının ikincil sürüm numarası. Örneğin, *x. y*sürümü için, ikincil sürüm numarası *y*' dir.  
+ 'ndaki Tür kitaplığının ikincil sürüm numarası. Örneğin, *x. y* sürümü için, ikincil sürüm numarası *y*' dir.  
   
  `syskind`  
  'ndaki İşletim ortamını tanımlayan bir [Syskind](/windows/win32/api/oaidl/ne-oaidl-syskind) bayrağı. Ortak değerler SYS_WIN32 ve SYS_WIN64.  
@@ -59,11 +61,13 @@ HRESULT ResolveTypeLib(
  dışı Parametresinde adlı tür kitaplığının tam yolunu içeren bir [BSTR](/previous-versions/windows/desktop/automat/bstr) için bir işaretçi `bstrSimpleName` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ResolveTypeLib`Yöntemi, [Tlbexp.exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md) Işlemi sırasında [LoadTypeLibWithResolver işlevi](loadtypelibwithresolver-function.md) tarafından çağrılır.  
   
  Bu arabirimin özel uygulamaları, parametresinde adlı tür kitaplığının tam yolunu içeren bir [BSTR](/previous-versions/windows/desktop/automat/bstr) döndürmelidir `bstrSimpleName` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** TlbRef. IDL, TlbRef. h  

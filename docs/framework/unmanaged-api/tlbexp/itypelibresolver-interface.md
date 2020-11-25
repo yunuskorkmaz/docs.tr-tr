@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: edaaed1d-0d26-40f0-83f1-48efc0ded1c6
 topic_type:
 - apiref
-ms.openlocfilehash: 7c8c21a589554bac81ebfce3505917869ef8de27
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1398da1ef6f7f62ecd9c9e58f7b6010916bf9c57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553603"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719781"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver Arabirimi
+
 Bir tür kitaplığının dosya yolunu çözen [Resolvettypeınfo lib yöntemini](resolvetypelib-method.md)sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -31,6 +32,7 @@ Bir tür kitaplığının dosya yolunu çözen [Resolvettypeınfo lib yöntemini
 |[ResolveTypeLib Yöntemi](resolvetypelib-method.md)|Tam nitelikli yolunu döndürerek bir tür kitaplığının basit adını çözer.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** TlbRef. IDL, TlbRef. h  

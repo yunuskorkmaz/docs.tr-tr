@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 67a8a9f2-dee3-44b2-a1c0-f307a3bdf90f
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7866b92be3195b0a767a823a0d7fb1c0aa4918
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 566bba09f6bfac2f7616dc5caf32ef431f2e1e67
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104241"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719807"
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>StrongNameTokenFromAssemblyEx İşlevi
+
 Belirtilen derleme dosyasından bir tanımlayıcı ad belirteci oluşturur ve belirtecin temsil ettiği ortak anahtarı döndürür.  
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) yöntemini kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 BOOLEAN StrongNameTokenFromAssemblyEx (  
@@ -39,6 +40,7 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `wszFilePath`  
  'ndaki Bütünleştirilmiş kod için Taşınabilir çalıştırılabilir (PE) dosyanın yolu.  
   
@@ -55,23 +57,26 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
  dışı Ortak anahtarın bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- başarılı tamamlamada `true`; Aksi takdirde, `false`.  
+
+ `true` başarıyla tamamlandığında; Aksi takdirde, `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Tanımlayıcı ad belirteci, ortak anahtarın kısaltılmış biçimidir. Belirteç, derlemeyi imzalamak için kullanılan ortak anahtardan oluşturulan 64 bitlik bir karmadır. Belirteç, derlemenin tanımlayıcı adının bir parçasıdır ve derleme meta verilerinden okunabilir.  
   
  Anahtar alındıktan ve belirteç oluşturulduktan sonra, ayrılan belleği serbest bırakmak için [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini çağırmanız gerekir.  
   
- `StrongNameTokenFromAssemblyEx` işlevi başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
+ `StrongNameTokenFromAssemblyEx`İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak Için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** StrongName. h  
   
- **Kitaplık:** Mscoree. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** mscoree.dll bir kaynak olarak eklendi  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

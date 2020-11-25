@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-ms.openlocfilehash: b7a068efcf20b2028e9c193567d15b59e582febf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1d7489e997868a9486f77d176580cee18213a99d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500929"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718572"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>COR_PRF_GC_GENERATION Numaralandırması
+
 Çöp toplama oluşturmayı tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -38,7 +39,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`COR_PRF_GC_GEN_0`|Nesne, oluşturma 0 olarak depolanır.|  
 |`COR_PRF_GC_GEN_1`|Nesnesi 1. nesil olarak depolanır.|  
@@ -47,6 +48,7 @@ typedef enum {
 |`COR_PRF_GC_PINNED_OBJECT_HEAP`|Nesnesi sabitlenmiş nesne yığınında depolanır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Çöp toplayıcı, nesneleri yaşa göre nesslerde ayırarak bellek yönetimi performansını geliştirir. Çöp toplayıcı Şu anda üç nesil, numaralandırılmış 0, 1 ve 2 ve biri büyük nesneler ve sabitlenmiş nesneler için olmak üzere iki özel yığın kesimi kullanmaktadır.
   
  Boyutu bir eşik değerinden daha büyük olan nesneler büyük nesne yığınında depolanır. Sabitlenmiş nesneler, normal yığınlara ayırmanın performans maliyetinden kaçınmak için sabitlenmiş nesne yığınına ayrılabilir. Ayrılan diğer nesneler 0 oluşturmaya ait. Atık toplama sonrasında var olan tüm nesneler 1. kuşak ' e yükseltilir. Çöp toplama işleminden sonra var olan nesneler 2. kuşak ' e taşınır.  
@@ -56,6 +58,7 @@ typedef enum {
  `COR_PRF_GC_GENERATION`Sabit listesi [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) yapısı tarafından kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
@@ -66,4 +69,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)
+- [Profil Oluşturma Numaralandırmaları](profiling-enumerations.md)

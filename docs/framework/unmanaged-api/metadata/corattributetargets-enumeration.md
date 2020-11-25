@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbe721bad56ec2be434039f00e741ad9a177815f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007929"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718976"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets Numaralandırması
+
 Bir öznitelik uygulamak için geçerli olduğu uygulama öğelerini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorAttributeTargets  
@@ -80,11 +81,13 @@ typedef enum CorAttributeTargets
 |`catClassMembers`|Öznitelik, bir sınıfın üyesine uygulanabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `CorAttributeTargets`Sabit listesi değerleri, tercih edilen birleşimi almak için bit DÜZEYINDE veya işlemle birleştirilebilir.  
   
  `CorAttributeTargets`Yönetilen numaralandırmayı paraleller <xref:System.AttributeTargets?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-ms.openlocfilehash: 310319e8fefe80017c58706e2beaee5eb1e78422
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c9b20500a4a9e4649a938e00e3b059d1395da1d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007916"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718936"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention Numaralandırması
+
 Yönetilen kodda yapılan çağırma kurallarının türlerini tanımlayan değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorCallingConvention  
@@ -67,6 +68,7 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|Açık sayıda tür bağımsız değişkeni olan bir genel yöntem imzasını gösterir. Bu, normal bir parametre sayısından önce gelir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

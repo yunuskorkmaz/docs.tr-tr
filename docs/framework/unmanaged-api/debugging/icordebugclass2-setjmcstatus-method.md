@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-ms.openlocfilehash: 9fb2f960098e970b4d3d9f0be499f4d9fda6558e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1db2c9b5e65ae150f05242172f5ea16db433bbb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893904"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717831"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus Yöntemi
+
 Sınıfının her yöntemi için, yöntemin Kullanıcı tanımlı kod olup olmadığını belirten bir değer ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetJMCStatus (  
@@ -34,15 +35,18 @@ HRESULT SetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `bIsJustMyCode`  
- 'ndaki Yöntemin Kullanıcı `true` tanımlı kod olduğunu belirtmek için olarak ayarlayın; Aksi takdirde, olarak `false`ayarlayın.  
+ 'ndaki `true` Metodun Kullanıcı tanımlı kod olduğunu belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Just-Code (JMC) Stepper, Kullanıcı tanımlı olmayan kodu atlar. Kullanıcı tanımlı kodun bir hata ayıklanabilir kodu alt kümesi olması gerekir.  
   
- `SetJMCStatus`Tüm diğer yöntemler için değeri başarıyla ayarlasa bile, herhangi bir yöntem için değeri ayarlayamazsa, bir S_FALSE HRESULT değeri döndürür.  
+ `SetJMCStatus` Tüm diğer yöntemler için değeri başarıyla ayarlasa bile, herhangi bir yöntem için değeri ayarlayamazsa, bir S_FALSE HRESULT değeri döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

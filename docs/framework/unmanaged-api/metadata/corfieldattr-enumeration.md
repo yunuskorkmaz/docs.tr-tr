@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-ms.openlocfilehash: dea69e18fc517eddddc5b99950a6f3b16ee3e426
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4e40f684cc1578672cb8ff474972ce9cdc39efb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007409"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718832"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr Numaralandırması
+
 Bir alanla ilgili meta verileri tanımlayan değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorFieldAttr {  
@@ -81,6 +82,7 @@ typedef enum CorFieldAttr {
 |`fdHasFieldRVA`|Alanın göreli bir sanal adresi olduğunu belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

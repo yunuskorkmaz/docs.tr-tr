@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 6d758aad-29a7-44fe-9481-bbff5b799a32
 topic_type:
 - apiref
-ms.openlocfilehash: fec049297bfa12d86cb2a7f7950e84ae540832b1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1d1b0cbb8be33f285b63e7353da973455e0fd752
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007448"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718858"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder Numaralandırması
+
 Meta veriler sıralı dışı bırakıldığında bir hata iletisinin oluşturulması gereken koşulları belirten bayrak değerlerini içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorErrorIfEmitOutOfOrder {  
@@ -55,6 +56,7 @@ typedef enum CorErrorIfEmitOutOfOrder {
 |`MDEventOutOfOrder`|Bir olay bir sıra dışına yayıldığınızda derleyicinin bir hata mesajı oluşturması gerektiğini gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

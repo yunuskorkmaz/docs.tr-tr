@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f165200e-3a91-47f7-88fc-13ff10c8babc
 topic_type:
 - apiref
-ms.openlocfilehash: 3681106bca94f1fefb2f24a1aa4254eb2b1b0531
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b2b0af36f84bd6623792fe0a987eaf40f2717f46
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499746"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718195"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences Yöntemi
+
 Sıkıştırma olmayan bir atık toplama işleminin sonucu olarak yığındaki nesnelerin yerleşimini raporlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,13 +38,14 @@ HRESULT SurvivingReferences(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cSurvivingObjectIDRanges`  
  'ndaki Sıkıştırma olmayan çöp toplamanın sonucu olarak kalan bitişik nesnelerin blok sayısı. Diğer bir deyişle, değeri, `cSurvivingObjectIDRanges` `objectIDRangeStart` `cObjectIDRangeLength` `ObjectID` her nesne bloğu için sırasıyla bir ve uzunluğu depolayan ve dizilerinin boyutudur.  
   
  Sonraki iki bağımsız değişkeni `SurvivingReferences` paralel dizilerdir. Diğer bir deyişle, `objectIDRangeStart` `cObjectIDRangeLength` aynı bitişik nesne bloğuna sorun.  
   
  `objectIDRangeStart`  
- 'ndaki `ObjectID`Her biri, bellekte bulunan bitişik ve canlı nesneler bloğunun başlangıç adresi olan bir değer dizisi.  
+ 'ndaki `ObjectID` Her biri, bellekte bulunan bitişik ve canlı nesneler bloğunun başlangıç adresi olan bir değer dizisi.  
   
  `cObjectIDRangeLength`  
  'ndaki Her biri bellekteki bitişik nesnelerin devam eden bloğunun boyutu olan tamsayılar dizisi.  
@@ -61,7 +63,7 @@ HRESULT SurvivingReferences(
   
  Aşağıdaki aralıkta olan herhangi bir değeri için `i` , nesne çöp toplamayı sona bıraktı:  
   
- 0 <=`i` < `cSurvivingObjectIDRanges`  
+ 0 <= `i` < `cSurvivingObjectIDRanges`  
   
  Sıkıştırma olmayan bir atık toplama, "ölü" nesneler tarafından kullanılan belleği geri kazanır, ancak serbest bırakılmış alanı sıkıştıramaz. Sonuç olarak, bellek yığına döndürülür, ancak hiçbir "canlı" nesne taşınmaz.  
   
@@ -70,6 +72,7 @@ HRESULT SurvivingReferences(
  `SurvivingReferences`Sınırlı iç arabelleğe alma, sunucu çöp toplama durumunda birden çok iş parçacığı raporlama ve diğer nedenlerden dolayı belirli bir atık toplama sırasında birden fazla geri çağırma alınabilir. Çöp toplama sırasında birden fazla geri çağırma durumunda, bilgiler birikimlidir. herhangi bir geri aramada bildirilen tüm başvurular `SurvivingReferences` çöp toplamayı sürdürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

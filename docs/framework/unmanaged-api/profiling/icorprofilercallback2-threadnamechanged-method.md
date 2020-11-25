@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-ms.openlocfilehash: 3eb108ed20d0fd1287cb82eb4d552206aeae15d4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8398febd17c7e77f2ad281ebeafc138fca4a47d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718039"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged Yöntemi
+
 Kod Profilcisi bir iş parçacığı adının değiştiğini bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT ThreadNameChanged(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `threadId`  
  'ndaki İş parçacığının KIMLIĞI.  
   
@@ -45,6 +47,7 @@ HRESULT ThreadNameChanged(
  'ndaki İş parçacığının yeni adı. Ad, null ile Sonlandırılmamış.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

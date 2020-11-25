@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: b3e7d0c2-3baa-4ef8-8e3f-b865cf252940
 topic_type:
 - apiref
-ms.openlocfilehash: 155354b335caf83c466c8d9d6711f36c7efc9298
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dd915a82551f5bed688a28ab77f5d6cf4e38af0f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894808"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719261"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>ICorDebugAssemblyEnum::Next Yöntemi
+
 Geçerli imleç konumundan başlayarak koleksiyondan belirtilen sayıda derlemeyi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Next (  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `celt`  
  'ndaki Alınacak derleme sayısı.  
   
@@ -44,9 +46,10 @@ HRESULT Next (
  dışı Her biri bir derlemeyi temsil eden ICorDebugAssembly nesnesine işaret eden işaretçiler dizisi.  
   
  `pceltFetched`  
- dışı Aslında döndürülen derleme sayısına yönelik bir işaretçi. Bu değer bir `celt` ise null olabilir.  
+ dışı Aslında döndürülen derleme sayısına yönelik bir işaretçi. Bu değer bir ise null olabilir `celt` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

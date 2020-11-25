@@ -15,28 +15,30 @@ helpviewer_keywords:
 ms.assetid: ea4b283b-1210-4f41-a7a2-c398b1adde4e
 topic_type:
 - apiref
-ms.openlocfilehash: f5786db1f17e8a463dc78f9c93464145be3a8f32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d41ccd30707eba269bbac7231e06792363615544
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499993"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719326"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationfinished-method"></a>ICorProfilerCallback::RemotingClientInvocationFinished Yöntemi
+
 Bir uzaktan iletişim çağrısının istemci üzerinde tamamlanmasının çalıştırıldığı profil oluşturucuyu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT RemotingClientInvocationFinished();  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Uzaktan iletişim çağrısı zaman uyumlu ise, sunucuda tamamlanmayı da çalıştırmıştır. Uzaktan iletişim çağrısı zaman uyumsuz ise, çağrı işlendiği zaman yanıt beklenmeye devam edebilir. Bir yanıt bekleniyorsa, [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) çağrısı ve bir `RemotingClientInvocationFinished` zaman uyumsuz çağrının gerekli ikincil işlemesini göstermek için ek bir çağrı olarak gerçekleşir.  
   
  Aşağıdaki geri arama çiftlerinin her biri aynı iş parçacığında gerçekleşir:  
   
-- `RemotingClientInvocationStarted`ve [ICorProfilerCallback:: RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
+- `RemotingClientInvocationStarted` ve [ICorProfilerCallback:: RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
   
 - [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) ve [ICorProfilerCallback:: RemotingClientInvocationFinished](icorprofilercallback-remotingclientinvocationfinished-method.md)  
   
@@ -49,6 +51,7 @@ HRESULT RemotingClientInvocationFinished();
 - Profil Oluşturucu, zaman uyumsuz uzaktan iletişim olayları için doğru bildirimler almaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-ms.openlocfilehash: a18583ce807ffa672811f3a0cd1e744233f6eb30
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ee10907fb7f5d90db1bdce845272cd3de38e35a6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008839"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718702"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout Yöntemi
+
 Önceki bir [DefineTypeDef yöntemi](imetadataemit-definetypedef-method.md)çağrısıyla tanımlanmış bir sınıf için alanların yerleşimini tamamlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,8 +38,9 @@ HRESULT SetClassLayout (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `td`  
- 'ndaki `mdTypeDef`Çıkarılacak sınıfı belirten bir belirteç.  
+ 'ndaki `mdTypeDef` Çıkarılacak sınıfı belirten bir belirteç.  
   
  `dwPackSize`  
  'ndaki Paketleme boyutu: 1, 2, 4, 8 veya 16 bayt. Paketleme boyutu bitişik alanlar arasındaki baytların sayısıdır.  
@@ -50,6 +52,7 @@ HRESULT SetClassLayout (
  'ndaki Sınıfın bayt cinsinden boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Sınıfı ilk olarak [ımetadatayayma::D efinetypedef](imetadataemit-definetypedef-method.md) yöntemi çağırarak ve sınıfın alanları için üç düzenden birini belirterek tanımlanır: otomatik, sıralı veya açık. Normal olarak, Otomatik düzeni kullanır ve çalışma zamanının alanları düzenlemenin en iyi yolunu seçmesini sağlayabilirsiniz.  
   
  Ancak, alanların yönetilmeyen kodun kullandığı düzenlemeye göre yerleşimini tercih edebilirsiniz. Bu durumda, `SetClassLayout` alanların yerleşimini tamamlamaya yönelik sıralı ya da açık Düzen ' i ve çağrı ' yı seçin:  
@@ -59,11 +62,12 @@ HRESULT SetClassLayout (
 - Açık Düzen: her alanın sapmasını belirtin ya da sınıf boyutunu ve paketleme boyutunu belirtin.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

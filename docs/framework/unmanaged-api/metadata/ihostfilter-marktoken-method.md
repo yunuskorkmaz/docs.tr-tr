@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7061343-d0a3-4fd5-b312-61974f98bd62
 topic_type:
 - apiref
-ms.openlocfilehash: 11529ce896f265f2b200fa6e511d4b913e9147c8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b4db3b115517f0a146aeab469f091008d31efc86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008228"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718234"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken Yöntemi
+
 Belirtilen meta veri belirtecinin işleneceğini belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,18 +35,21 @@ HRESULT MarkToken (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `tk`  
  'ndaki İşlenecek meta veri belirteci.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Genellikle, meta veri kapsamlarındaki bir belirtecin işlenmesini istersiniz. `MarkToken`Yöntemi, [ımetadatayayma:: SetHandler](imetadataemit-sethandler-method.md) yöntemi aracılığıyla meta veri altyapısına geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

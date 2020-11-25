@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ed8364eb-f01b-46f6-b5e3-5dda9cae2dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 622fdfa37c93e406950e73941775828ae4b112fa
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 8b5bbb65034e5b715532397c9ecc650da9aee912
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379431"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718299"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper Arabirimi
+
 Bir hata ayıklayıcının gerçekleştirdiği kod yürütmedeki bir adımı temsil eder, bir komutun çıkarılması ve tamamlanması arasında bir tanımlayıcı görevi görür ve bir adımı iptal etmek için bir yol sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -38,6 +39,7 @@ Bir hata ayıklayıcının gerçekleştirdiği kod yürütmedeki bir adımı tem
 |[StepRange Yöntemi](icordebugstepper-steprange-method.md)|Bunun `ICorDebugStepper` , kendisini kapsayan iş parçacığı aracılığıyla tek adımlı ve belirtilen aralıkların en son ötesinde koda ulaştığında dönüşmesine neden olur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ICorDebugStepper`Arabirim aşağıdaki amaçlara hizmet eder:  
   
 - Verilen bir step komutu ve bu komutun tamamlanması arasında bir tanımlayıcı görevi görür.  
@@ -54,6 +56,7 @@ Bir hata ayıklayıcının gerçekleştirdiği kod yürütmedeki bir adımı tem
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

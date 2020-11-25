@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: fbf6ce8c8c9628b08872058a794fb0e005764ab1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a32a1eb850943b84a0d368f883e44fd4ccf32ee9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501306"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719586"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod Yöntemi
+
 Belirtilen imzaya sahip bir yöntem veya genel işlev için tanım oluşturur ve bu yöntem tanımına bir belirteç döndürür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -41,8 +42,9 @@ HRESULT DefineMethod (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `td`  
- 'ndaki `mdTypedef`Metodun üst sınıfının veya üst arabiriminin belirteci. `td` `mdTokenNil` Genel bir işlev tanımlıyorsanız, olarak ayarlayın.  
+ 'ndaki `mdTypedef` Metodun üst sınıfının veya üst arabiriminin belirteci. `td` `mdTokenNil` Genel bir işlev tanımlıyorsanız, olarak ayarlayın.  
   
  `szName`  
  'ndaki Unicode 'daki üye adı.  
@@ -66,11 +68,13 @@ HRESULT DefineMethod (
  dışı Üye belirteci.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Meta veri API 'SI, bu yöntemleri, bu parametre içinde belirtilen bir kapsayan sınıf veya arabirim için arayanla aynı sırada kalıcı hale getirme garantisi verir `td` .  
   
  `DefineMethod`Ve belirli parametre ayarlarının kullanımıyla ilgili ek bilgiler aşağıda verilmiştir.  
   
 ## <a name="slots-in-the-v-table"></a>V tablosundaki yuvalar  
+
  Çalışma zamanı, v tablosu yuvaları ayarlamak için yöntem tanımlarını kullanır. Bir veya daha fazla yuvanın bir COM arabirim düzeniyle eşlik koruması olması gibi bir veya daha fazla yuva atlanması gerektiği durumlarda, v tablosundaki yuva veya yuvaları almak için bir kukla Yöntem tanımlanmıştır; öğesini `dwMethodFlags` `mdRTSpecialName` [Cormethodadttr](cormethodattr-enumeration.md) numaralandırmasının değerine ayarlayın ve adı şu şekilde belirtin:  
   
  _VtblGap\<*SequenceNumber*>\<\_*CountOfSlots*>
@@ -78,14 +82,17 @@ HRESULT DefineMethod (
  Burada *SequenceNumber* , yöntemin dizi numarasıdır ve *Countofslotlar* , v tablosundaki atlanacak yuva sayısıdır. *Countofslotlar* atlanırsa, 1 varsayılır. Bu kukla Yöntemler yönetilen veya yönetilmeyen koddan çağrılabilir değildir ve bunları, yönetilen veya yönetilmeyen koddan çağırma girişimleri bir özel durum oluşturur. Tek amacı, çalışma zamanının COM tümleştirmesi için oluşturduğu v tablosunda yer kaplamesidir.  
   
 ## <a name="duplicate-methods"></a>Yinelenen Yöntemler  
+
  Yinelenen yöntemleri tanımlamamalısınız. Diğer bir deyişle,, `DefineMethod` ve parametrelerinde yinelenen bir değer kümesiyle çağırmamalıdır `td` `wzName` `pvSig` . (Bu üç parametre birlikte, yöntemini benzersiz bir şekilde tanımlar.). Ancak, yöntem tanımlarından biri için `mdPrivateScope` parametreyi parametre içinde ayarlayabilmeniz için yinelenen bir üçlü kullanabilirsiniz `dwMethodFlags` . ( `mdPrivateScope` Bit, derleyicinin bu yöntem tanımına bir başvuru yaymayacağı anlamına gelir.)  
   
 ## <a name="method-implementation-information"></a>Yöntem uygulama bilgileri  
+
  Yöntem uygulamasıyla ilgili bilgiler genellikle yöntemin bildirildiği sırada bilinmez. Bu nedenle, `ulCodeRVA` çağırma sırasında ve parametrelerinde değerleri geçirmeniz gerekmez `dwImplFlags` `DefineMethod` . Değerler, daha sonra [ımetadatayayma:: SetMethodImplFlags](imetadataemit-setmethodimplflags-method.md) veya [ımetadatayayma:: SetRVA](imetadataemit-setrva-method.md)aracılığıyla uygun şekilde sağlanabilir.  
   
  Platform çağrısı (PInvoke) veya COM birlikte çalışma senaryoları gibi bazı durumlarda, Yöntem gövdesi sağlanmaz ve `ulCodeRVA` sıfıra ayarlanmalıdır. Bu durumlarda, çalışma zamanı uygulamayı bulacağından yöntem soyut olarak etiketlenmemelidir.  
   
 ## <a name="defining-a-method-for-pinvoke"></a>PInvoke için bir yöntem tanımlama  
+
  Her yönetilmeyen işlevin PInvoke aracılığıyla çağrılması için, hedef yönetilmeyen işlevi temsil eden bir yönetilen yöntem tanımlamanız gerekir. Yönetilen yöntemi tanımlamak için, `DefineMethod` PInvoke 'un kullanıldığı yönteme bağlı olarak belirli değerlere ayarlanmış parametrelerden bazıları ile kullanın:  
   
 - Doğru PInvoke-yönetilmeyen bir DLL 'de bulunan harici bir yönetilmeyen yöntemin çağrılmasını içerir.  
@@ -102,11 +109,12 @@ HRESULT DefineMethod (
 |`dwImplFlags`|`miCil`Ve ayarlayın `miManaged` .|`miNative`Ve ayarlayın `miUnmanaged` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

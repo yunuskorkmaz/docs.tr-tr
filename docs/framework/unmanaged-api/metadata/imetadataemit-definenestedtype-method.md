@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 2b24c2ca6907dfdb63ad934ec30557c246db174c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 99dc141cca0f911c8dd65645f6c22d950cc678d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004362"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719547"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType Yöntemi
+
 Bir tür tanımının meta veri imzasını oluşturur, `mdTypeDef` Bu tür için bir belirteç döndürür ve tanımlı türün parametre tarafından başvurulan türün bir üyesi olduğunu belirtir `tdEncloser` .  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,6 +40,7 @@ HRESULT DefineNestedType (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `szTypeDef`  
  'ndaki Unicode 'daki türün adı.  
   
@@ -55,14 +57,15 @@ HRESULT DefineNestedType (
  'ndaki Kapsayan türün belirteci. Dizinin son öğesi olmalıdır `mdTokenNil` .  
   
  `ptd`  
- dışı `mdTypeDef`Atanan belirteç.  
+ dışı `mdTypeDef` Atanan belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

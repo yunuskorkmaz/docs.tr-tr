@@ -14,19 +14,20 @@ helpviewer_keywords:
 - CreateClassEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 1d637479bd140e635ee647a1e30d03343d8b0dcd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b80954e288f6720c75d0af0b8af083fa4856754
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107528"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719742"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi işlevi
+
 Belirtilen seçim ölçütlerini karşılayan tüm sınıflar için bir Numaralandırıcı döndürür.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT CreateClassEnumWmi (
@@ -46,7 +47,7 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>Parametreler
 
 `strSuperclass`\
-'ndaki `null` veya boş değilse, bir üst sınıfın adını belirtir; Numaralandırıcı bu sınıfın yalnızca alt sınıflarını döndürür. `null` veya boş ise ve `lFlags` WBEM_FLAG_SHALLOW ise, yalnızca üst düzey sınıfları (üst sınıfı olmayan sınıflar) döndürür. `null` veya boş ise ve `lFlags` `WBEM_FLAG_DEEP`, ad alanındaki tüm sınıfları döndürür.
+'ndaki Aksi takdirde `null` veya boşsa, bir üst sınıfın adını belirtir; Numaralandırıcı yalnızca bu sınıfın alt sınıflarını döndürür. `null`Ya da boşsa ve WBEM_FLAG_SHALLOW ise `lFlags` , yalnızca üst düzey sınıfları (üst sınıfı olmayan sınıflar) döndürür. `null`Ya da boşsa ve ise, `lFlags` `WBEM_FLAG_DEEP` ad alanındaki tüm sınıfları döndürür.
 
 `lFlags`\
 'ndaki Bu işlevin davranışını etkileyen bayrakların birleşimi. Aşağıdaki değerler *Wbemcli. h* üstbilgi dosyasında tanımlanmıştır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
@@ -55,15 +56,15 @@ HRESULT CreateClassEnumWmi (
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Ayarlanırsa, işlev geçerli bağlantının yerel ayarında yerelleştirilmiş ad alanında depolanan değiştirilmiş niteleyicileri alır. <br/> Ayarlanmamışsa, işlev yalnızca anında ad alanında depolanan niteleyicileri alır. |
 | `WBEM_FLAG_DEEP` | 0 | Sabit Listesi hiyerarşideki tüm alt sınıfları içerir, ancak bu sınıf değildir. |
-| `WBEM_FLAG_SHALLOW` | 1\. | Sabit listesi yalnızca bu sınıfın saf örneklerini içerir ve bu sınıfta bulunmayan özellikleri sağlayan tüm alt sınıfların örneklerini dışlar. |
+| `WBEM_FLAG_SHALLOW` | 1 | Sabit listesi yalnızca bu sınıfın saf örneklerini içerir ve bu sınıfta bulunmayan özellikleri sağlayan tüm alt sınıfların örneklerini dışlar. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrak, yarı zaman uyumlu bir çağrıya neden olur. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | İşlev, salt ileri bir Numaralandırıcı döndürür. Genellikle, yalnızca ileri Numaralandırıcılar daha hızlıdır ve geleneksel numaralandırıcılardan daha az bellek kullanır, ancak [kopyalama](clone.md)çağrılarına izin vermez. |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI, serbest bırakılana kadar Numaralandırmadaki nesnelere işaretçiler tutar. |
 
-Önerilen bayraklar `WBEM_FLAG_RETURN_IMMEDIATELY` ve en iyi performans için `WBEM_FLAG_FORWARD_ONLY`.
+Önerilen bayraklar `WBEM_FLAG_RETURN_IMMEDIATELY` ve `WBEM_FLAG_FORWARD_ONLY` en iyi performans için.
 
 `pCtx`\
-'ndaki Genellikle, bu değer `null`. Aksi takdirde, istenen sınıfları sağlayan sağlayıcı tarafından kullanılabilen bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) örneğine yönelik bir işaretçidir.
+'ndaki Genellikle, bu değer `null` . Aksi takdirde, istenen sınıfları sağlayan sağlayıcı tarafından kullanılabilen bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) örneğine yönelik bir işaretçidir.
 
 `ppEnum`\
 dışı Numaralandırıcı için işaretçiyi alır.
@@ -86,7 +87,7 @@ dışı Numaralandırıcı için işaretçiyi alır.
 `strAuthority`\
 'ndaki Kullanıcının etki alanı adı. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
 
-## <a name="return-value"></a>Dönüş değeri
+## <a name="return-value"></a>Döndürülen değer
 
 Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
@@ -113,7 +114,7 @@ Bu işlev, [IWbemServices:: CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbe
 
 **Üst bilgi:** WMINet_Utils. IDL
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

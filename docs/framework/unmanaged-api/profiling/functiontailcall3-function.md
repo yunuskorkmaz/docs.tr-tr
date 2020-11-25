@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1e48243f-5de6-4bd6-a1d0-e1d248bca4b8
 topic_type:
 - apiref
-ms.openlocfilehash: 55955cd47bd32fb4294b0b8e852dd692702bd74f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dfe1a530ea009300e7cfbf002053d2e2b6034845
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500552"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719287"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 İşlevi
+
 Profil oluşturucuyu Şu anda yürütülmekte olan işlevin başka bir işleve tail çağrısı gerçekleştirmek üzere olduğunu bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
   \[' de] Şu anda yürütülmekte olan işlevin bir kuyruk çağrısını yapmak üzere olan tanımlayıcısı.
 
 ## <a name="remarks"></a>Açıklamalar  
+
  `FunctionTailcall3`Geri çağırma işlevi, profil oluşturucuyu işlevler çağrılmakta olduğunu bildirir. Bu işlevin uygulamanızı kaydetmek için [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 metodunu](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) kullanın.  
   
  `FunctionTailcall3`İşlev bir geri çağırmasıdır; uygulamanız gerekir. Uygulamanın `__declspec(naked)` Storage-Class özniteliğini kullanması gerekir.  
@@ -52,6 +54,7 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
  `FunctionTailcall3`İşlev yönetilen kod içine çağırmamalıdır veya yönetilen bellek ayırmaya hiçbir şekilde neden olmamalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  

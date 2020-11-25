@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 3e184022-0247-4824-a23d-6b29593d8d01
 topic_type:
 - apiref
-ms.openlocfilehash: c2c7ae7a8930949c79b5e24e2da75f3b4649e7f6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3252e3b33da743c0e146e25f798c0e669aeb74ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500994"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718611"
 ---
 # <a name="cor_prf_codegen_flags-enumeration"></a>COR_PRF_CODEGEN_FLAGS Sabit Listesi
+
 [ICorProfilerFunctionControl:: SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) yöntemiyle ayarlanabilmesi için kod oluşturma bayraklarını tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -35,15 +36,17 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`COR_PRF_CODEGEN_DISABLE_INLINING`|Bu işlevin gövdesinde hiçbir işlev satır içine alınmaz. Ancak, işlevin kendisine çağıranları satır içine alınmış olabilir.|  
 |`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|Bu işlevin gövdesi için tüm iyileştirmeler devre dışı bırakılacak. Ancak, işlevin kendisi hala çağıranlar içinde yer alabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `COR_PRF_CODEGEN_FLAGS`Numaralandırma, [ICorProfilerFunctionControl:: SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) yöntemi tarafından, profil oluşturucunun JIT işlevi için kod oluşturmayı denetlemesini etkinleştirmek üzere kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
@@ -54,4 +57,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)
+- [Profil Oluşturma Numaralandırmaları](profiling-enumerations.md)

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: cc507cb0-df2e-49c2-b32e-0c3271a8df9a
 topic_type:
 - apiref
-ms.openlocfilehash: f9b00d5e34300f1ed16eaddff3bf8e877219f910
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: c796e3782a498c798c9b47f028ef05c2de00f54d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893795"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717675"
 ---
 # <a name="icordebugcodegetaddress-method"></a>ICorDebugCode::GetAddress Yöntemi
+
 Bu "ICorDebugCode" arabiriminin gösterdiği kod kesiminin göreli sanal adresini (RVA) alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAddress (  
@@ -34,10 +35,12 @@ HRESULT GetAddress (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pStart`  
  dışı Kod parçasının RVA 'Sı için bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

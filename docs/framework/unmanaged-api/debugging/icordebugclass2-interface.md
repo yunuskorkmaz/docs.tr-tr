@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-ms.openlocfilehash: ff15297eb479f7474c9f07123a29263fb4da3205
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ce3f289ae914817071fad5274c45d1e5fae71a06
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893984"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717987"
 ---
 # <a name="icordebugclass2-interface"></a>ICorDebugClass2 Arabirimi
 
-Bir genel sınıfı veya türünde <xref:System.Type>bir yöntem parametresi olan bir sınıfı temsil eder. Bu arabirim [ICorDebugClass](icordebugclass-interface.md)'ı genişletir.  
+Bir genel sınıfı veya türünde bir yöntem parametresi olan bir sınıfı temsil eder <xref:System.Type> . Bu arabirim [ICorDebugClass](icordebugclass-interface.md)'ı genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -38,6 +38,7 @@ Bir genel sınıfı veya türünde <xref:System.Type>bir yöntem parametresi ola
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

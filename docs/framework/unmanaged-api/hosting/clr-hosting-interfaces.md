@@ -6,19 +6,21 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework], version 2.0
 - .NET Framework 2.0, hosting interfaces
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
-ms.openlocfilehash: e6913e18a4ff6e616f357a4ef43fb8b892264943
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 77f2ba64d9bdbe9793d56e88dae46fd506119ab8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616846"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719053"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR Barındırma Arabirimleri
+
 Bu bölümde, yönetilmeyen ana bilgisayarların ortak dil çalışma zamanını (CLR) uygulamalarıyla tümleştirmeleri için kullanabileceği arabirimler açıklanmaktadır. Bilgiler .NET Framework sürüm 2,0 ve sonraki sürümlere aittir. Bu arabirimler konağın, çalışma zamanının daha birçok yönünü 1,0 ve 1,1 sürümlerinde mümkün olandan çok daha fazla denetlemesine olanak tanır ve CLR ile konağın yürütme modeli arasında çok daha sıkı bir tümleştirme sağlar.  
   
  .NET Framework sürüm 1,0 ve 1,1 ' de barındırma modeli, CLR 'yi bir işleme yüklemek, belirli ayarları yapılandırmak ve olay bildirimleri almak için yönetilmeyen bir konağı etkinleştirdi. Ancak, genel olarak, ana bilgisayar ve CLR bu işlemde bağımsız olarak çalışır. .NET Framework sürüm 2,0 ve sonraki sürümlerinde, yeni soyutlama katmanları konağın Win32 derlemesinde bulunan türler tarafından şu anda sağlanmış birçok kaynağı sağlamasına ve konağın yapılandırabilmesinin bir dizi özelliği genişletmesine izin verir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [IActionOnCLREvent Arabirimi](iactiononclrevent-interface.md)  
  Kayıtlı bir olay için geri çağırma gerçekleştiren bir yöntem sağlar.  
   
@@ -185,6 +187,7 @@ Bu bölümde, yönetilmeyen ana bilgisayarların ortak dil çalışma zamanını
  Taşınabilir çalıştırılabilir (PE) görüntüleri ve raporlama doğrulama hatalarını doğrulamak için yöntemler sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Kullanım Dışı CLR Barındırma Arabirimleri ve Yardımcı Sınıfları](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  .NET Framework sürüm 1,0 ve 1,1 ' de sunulan barındırma arabirimlerini tanımlayan konuları içerir.  
   

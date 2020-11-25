@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-ms.openlocfilehash: 0ef49d2d833841eac62b2b964a0fdc902b4fb6a9
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 232068a5fee8f7bd3dfbddf4d9452e80d6fd6170
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894767"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719196"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next Yöntemi
+
 Geçerli konumdan başlayarak Numaralandırmadaki belirtilen [CorDebugBlockingObject](cordebugblockingobject-structure.md) nesnelerinin sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Next([in] ULONG  celt,  
@@ -35,6 +36,7 @@ HRESULT Next([in] ULONG  celt,
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `celt`  
  'ndaki Alınacak nesne sayısı.  
   
@@ -45,22 +47,25 @@ HRESULT Next([in] ULONG  celt,
  dışı Alınan nesne sayısına yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem aşağıdaki özel HRESULT'ları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|S_FALSE|`pceltFetched`eşit `celt`değildir.|  
+|S_FALSE|`pceltFetched` eşit değildir `celt` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem tipik bir COM numaralandırıcısı gibi çalışır.  
   
- Giriş dizisi değerleri en az boyutta `celt`olmalıdır. Dizi, Numaralandırmadaki bir sonraki `celt` değerle veya daha az `celt` kalırsa kalan tüm değerlerle doldurulur. Bu yöntem döndüğünde, `pceltFetched` alınan değer sayısıyla doldurulur. Geçersiz `values` işaretçiler içeriyorsa veya daha küçük `celt`olan bir arabelleğe işaret ediyorsa ya `pceltFetched` da geçersiz bir işaretçisiyse, sonuç tanımsızdır.  
+ Giriş dizisi değerleri en az boyutta olmalıdır `celt` . Dizi, `celt` Numaralandırmadaki bir sonraki değerle veya daha az kalırsa kalan tüm değerlerle doldurulur `celt` . Bu yöntem döndüğünde, `pceltFetched` alınan değer sayısıyla doldurulur. `values`Geçersiz işaretçiler içeriyorsa veya daha küçük olan bir arabelleğe işaret ediyorsa ya da `celt` `pceltFetched` geçersiz bir işaretçisiyse, sonuç tanımsızdır.  
   
 > [!NOTE]
 > [CorDebugBlockingObject](cordebugblockingobject-structure.md) yapısının serbest bırakılması gerekmez, ancak Içindeki "ICorDebugValue" arabiriminin serbest bırakılması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -2,12 +2,12 @@
 title: Ocelot ile API Ağ Geçitlerini uygulama
 description: Ocelot ile API ağ geçitleri uygulamayı ve kapsayıcı tabanlı bir ortamda Ocelot 'yi kullanmayı öğrenin.
 ms.date: 03/02/2020
-ms.openlocfilehash: 5cee56e6b68bc08f9e1de41605951989a55dc0df
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 6d9229228e228b664a602ce9a682d435505a8107
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679233"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718104"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot ile API ağ geçitleri uygulama
 
@@ -88,7 +88,7 @@ HTTP isteği, mikro hizmet veritabanına ve gerekli ek eylemlere erişen bu tür
 Mikro hizmet URL 'SI ile ilgili olan kapsayıcılar yerel geliştirme PC 'nizde (yerel Docker ana bilgisayarı) dağıtıldığında, her mikro hizmet kapsayıcısı, aşağıdaki dockerfile içinde olduğu gibi, dockerfile içinde her zaman bir iç bağlantı noktasına (genellikle bağlantı noktası 80) sahiptir:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -283,7 +283,7 @@ EShopOnContainers 'da, Ocelot API ağ geçidiyle tek bir Docker kapsayıcı gör
 
 **Şekil 6-33**. Birden çok API ağ geçidi türü genelinde tek bir Ocelot Docker görüntüsünü yeniden kullanma
 
-EShopOnContainers 'da, "genel Ocelot API Gateway Docker Image", Docker-Compose. yml dosyasında belirtilen ' OcelotApiGw ' adlı projeyle ve "eShop/ocelotapigw" görüntü adına oluşturulur. Daha sonra, Docker 'a dağıtım yaparken, Docker-Compose. yıml dosyasında aşağıdaki ayıklama bölümünde gösterildiği gibi, aynı Docker görüntüsünden oluşturulan dört API-Gateway kapsayıcısı olacaktır.
+EShopOnContainers 'da, "genel Ocelot API Gateway Docker Image", Docker-Compose. yml dosyasında belirtilen ' OcelotApiGw ' adlı projeyle ve "eShop/ocelotapigw" görüntü adına oluşturulur. Daha sonra, Docker 'a dağıtım yaparken, Docker-Compose. yıml dosyasında aşağıdaki ayıklama bölümünde gösterildiği gibi, aynı Docker görüntüsünden oluşturulan dört API-Gateway kapsayıcı olacaktır.
 
 ```yml
   mobileshoppingapigw:
@@ -521,7 +521,7 @@ Bu örnekte, yetkilendirme ara yazılımı çağrıldığında, kullanıcının 
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>Kubernetes ınress ve Ocelot API ağ geçitlerini kullanma
 
-Kubernetes (bir Azure Kubernetes hizmet kümesinde olduğu gibi) kullanılırken, genellikle tüm HTTP isteklerini *NGINX*temelinde [Kubernetes giriş katmanı](https://kubernetes.io/docs/concepts/services-networking/ingress/) üzerinden birleştirmişsinizdir.
+Kubernetes (bir Azure Kubernetes hizmet kümesinde olduğu gibi) kullanılırken, genellikle tüm HTTP isteklerini *NGINX* temelinde [Kubernetes giriş katmanı](https://kubernetes.io/docs/concepts/services-networking/ingress/) üzerinden birleştirmişsinizdir.
 
 Kubernetes 'te herhangi bir giriş yaklaşımı kullanmıyorsanız, hizmetlerinizin ve klarınızın IP 'Leri yalnızca küme ağı tarafından yönlendirilebilir.
 

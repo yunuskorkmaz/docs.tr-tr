@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5da1bf3d-dddf-4892-b266-578ee54d570b
 topic_type:
 - apiref
-ms.openlocfilehash: 967f38add9ae5996c6ac33388203b55161a84e39
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b18de87cf89985e0f7ec11edf58b43d67720251c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498277"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718026"
 ---
 # <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a>ICorProfilerInfo::GetILFunctionBodyAllocator Yöntemi
+
 Microsoft ara dili (MSIL) kodundaki bir yöntemin gövdesini değiştirmek için kullanılacak belleği ayırmak üzere bir yöntemi sağlayan bir arabirim alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetILFunctionBodyAllocator(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `moduleId`  
  'ndaki Yöntemin bulunduğu modülün KIMLIĞI.  
   
@@ -41,9 +43,11 @@ HRESULT GetILFunctionBodyAllocator(
  dışı Belleği ayırmak için bir yöntem sağlayan bir [IMethodMalloc](imethodmalloc-interface.md) arabirimine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  MSIL kodundaki bir yöntem gövdesi, yüklenen modüle göre, bir göreli sanal adres (RVA) olarak yerleştirilmelidir, bu da modülün 4 GB dahilinde izlediği anlamına gelir. Bir aracın bir Yöntem gövdesinin ölçeğini daha kolay hale getirmek için `GetILFunctionBodyAllocator` yöntemi, belleğin bu Aralık içinde ayrılmasını sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

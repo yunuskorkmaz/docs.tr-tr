@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 208e5c2d-3f3f-404e-8b3c-7cccc14ddb16
 topic_type:
 - apiref
-ms.openlocfilehash: 8be4332da77c3fbf4229a3fbeb9ba835a7a13eee
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 221acf9bea714728a81b9f15c8165c1f9eba16a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894801"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719209"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>ICorDebugBlockingObjectEnum Arabirimi
+
 [CorDebugBlockingObject](cordebugblockingobject-structure.md) yapılarının listesi için bir Numaralandırıcı sağlar. Bu arabirim, ıcordebuggenum arabiriminin bir alt sınıfıdır.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -31,12 +32,14 @@ ms.locfileid: "82894801"
 |[Next Yöntemi](icordebugblockingobjectenum-next-method.md)|[CorDebugBlockingObject](cordebugblockingobject-structure.md) yapılarının listesini sıralar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her `CorDebugBlockingObject` yapı, bir iş parçacığını engelleyen bir nesneyi temsil eder.  
+
+ Her `CorDebugBlockingObject` Yapı, bir iş parçacığını engelleyen bir nesneyi temsil eder.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
