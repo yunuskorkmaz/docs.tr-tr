@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: e95f96847c6e069758362fb6febc28dc31911bc9
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: d6b05333b9e02c4202c0fd9bdee9b5c055aa4da3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396293"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694366"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName Yöntemi
+
 Bu [ICorPublishAppDomain](icorpublishappdomain-interface.md)tarafından temsil edilen uygulama etki alanının adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetName (  
@@ -37,8 +38,9 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cchName`  
- 'ndaki `szName`Dizinin boyutu.  
+ 'ndaki `szName` Dizinin boyutu.  
   
  `pcchName`  
  dışı Dizide döndürülen, null karakter dahil olmak üzere geniş karakter sayısına yönelik bir işaretçi `szName` .  
@@ -47,11 +49,13 @@ HRESULT GetName (
  dışı Adın kaydedileceği bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `szName`Null değilse, `GetName` yöntemi `cchName` içine (null Sonlandırıcı dahil) kadar karakter kopyalar `szName` . İçinde null olmayan bir değer döndürülürse `pcchName` , ad içindeki gerçek karakter sayısı (null Sonlandırıcı dahil) `szName` dizide depolanır.  
   
  `GetName`Yöntemi, kaç karakterin kopyalandığına BAKıLMAKSıZıN HRESULT s_ok döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorPub. IDL, CorPub. h  

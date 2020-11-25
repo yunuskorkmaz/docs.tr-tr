@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: ccd2350589126109ff11da439a8b83abfc4b91fa
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a0abc7168ff7bffdbb835c1c1bc93de9df6e381c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210481"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694873"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory Yöntemi
+
 Bu işlem için belirtilen bellek alanını okur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ReadMemory(  
@@ -36,8 +37,9 @@ HRESULT ReadMemory(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `address`  
- 'ndaki `CORDB_ADDRESS`Okunacak belleğin temel adresini belirten bir değer.  
+ 'ndaki `CORDB_ADDRESS` Okunacak belleğin temel adresini belirten bir değer.  
   
  `size`  
  'ndaki Bellekten okunacak bayt sayısı.  
@@ -49,6 +51,7 @@ HRESULT ReadMemory(
  dışı Belirtilen arabelleğe aktarılan bayt sayısına yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ReadMemory`Yöntemi öncelikle, hata ayıklanan yönetilmeyen bölümü tarafından kullanılmakta olan bellek bölgelerini incelemek için birlikte çalışma hata ayıklaması tarafından kullanılmak üzere tasarlanmıştır. Bu yöntem, Microsoft ara dili (MSIL) kodu ve yerel JıT derlenmiş kod okumak için de kullanılabilir.  
   
  Yönetilen kesme noktaları, parametrede döndürülen verilerden kaldırılır `buffer` . [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)tarafından ayarlanan yerel kesme noktaları için hiçbir değişiklik yapılmayacak.  
@@ -56,6 +59,7 @@ HRESULT ReadMemory(
  İşlem belleğini önbelleğe alma işlemi yapılmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

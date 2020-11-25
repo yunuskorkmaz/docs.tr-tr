@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 87c4fcb2-7703-4a2e-afb6-42973381b960
 topic_type:
 - apiref
-ms.openlocfilehash: 1bd2f537cfa6a27c24ba91ea7caa29dc9e71a74e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 3ff4efe8b3e2932da7f65246bf4ad614a4dd86cd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396318"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694418"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish Arabirimi
+
 , Bu süreçlerdeki uygulama etki alanlarıyla ilgili süreçler ve bilgiler hakkında bilgi yayımlamak için genel arabirim görevi görür.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -32,6 +33,7 @@ ms.locfileid: "83396318"
 |[GetProcess Yöntemi](icorpublish-getprocess-method.md)|Belirtilen tanımlayıcıya sahip işlemi temsil eden bir [ICorPublishProcess](icorpublishprocess-interface.md) örneğini alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorPub. IDL, CorPub. h  

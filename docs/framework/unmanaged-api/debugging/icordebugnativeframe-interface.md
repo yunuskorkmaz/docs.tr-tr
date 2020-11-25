@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04819c58-7246-4b32-befb-680cf1dbc436
 topic_type:
 - apiref
-ms.openlocfilehash: dd87745a29514a2f9f05aa142baae4e05d4b4a7b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 043dc0fdd5218d7bc6b80428d1eb891b3f01ee8c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206606"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695562"
 ---
 # <a name="icordebugnativeframe-interface"></a>ICorDebugNativeFrame Arabirimi
 
@@ -45,6 +45,7 @@ Yerel çerçeveler için kullanılan ICorDebugFrame 'in özelleştirilmiş bir u
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

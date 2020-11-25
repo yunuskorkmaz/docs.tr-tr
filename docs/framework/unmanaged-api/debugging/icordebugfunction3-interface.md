@@ -10,14 +10,15 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: 8c9c507f00780d5ef5c5aeb28a1b10493351f37e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 17eda7470e5f2e4b41d1f2ed164843eaeeedea93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546978"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695876"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3 Arabirimi
+
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
  Bir ReJIT isteğinden koda erişim sağlamak için ICorDebugFunction arabirimini mantıksal olarak genişletir.  
@@ -31,6 +32,7 @@ ms.locfileid: "90546978"
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
@@ -43,4 +45,4 @@ ms.locfileid: "90546978"
 
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
 - [Hata Ayıklama](index.md)
-- [ReJIT: nasıl yapılır Kılavuzu](/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: A How-To Kılavuzu](/archive/blogs/davbr/rejit-a-how-to-guide)

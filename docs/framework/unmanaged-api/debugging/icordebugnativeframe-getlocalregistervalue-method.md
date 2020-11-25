@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-ms.openlocfilehash: 97d79f70097bef7768316907887cea2c38dd81e1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a90bba4a4dc9ca92ccdc4af1636d194f92fd7373
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212834"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695731"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue Yöntemi
+
 Bu yerel çerçeve için belirtilen kasada depolanan bir bağımsız değişkenin veya yerel değişkenin değerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetLocalRegisterValue (  
@@ -37,6 +38,7 @@ HRESULT GetLocalRegisterValue (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `reg`  
  'ndaki Değeri içeren kaydı belirten "CorDebugRegister" numaralandırmasının değeri.  
   
@@ -44,15 +46,17 @@ HRESULT GetLocalRegisterValue (
  'ndaki Parametresi tarafından başvurulan ikili meta veri imzasının boyutunu belirten bir tamsayı `pvSigBlob` .  
   
  `pvSigBlob`  
- 'ndaki `PCCOR_SIGNATURE`Değerin türünün ikili meta veri imzasına işaret eden bir değer.  
+ 'ndaki `PCCOR_SIGNATURE` Değerin türünün ikili meta veri imzasına işaret eden bir değer.  
   
  `ppValue`  
  dışı Belirtilen kasada depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetLocalRegisterValue`Yöntemi yerel bir çerçevede veya bir tam zamanında (JIT) derlenmiş çerçevede kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

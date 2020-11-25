@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c96770b0-3e09-47bb-bd29-20353b043459
 topic_type:
 - apiref
-ms.openlocfilehash: 660bc13e8109994f59444c0adebbc97f54de0b43
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 745be25183f6b94e7a807c4230961d72e2836fe5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207588"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695341"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue Yöntemi
+
 Bu nesne değeri için belirtilen sınıftaki belirtilen alanın değerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetFieldValue (  
@@ -36,21 +37,24 @@ HRESULT GetFieldValue (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pClass`  
  'ndaki Alan değerinin alınacağı sınıfı temsil eden bir "ICorDebugClass" nesnesine yönelik bir işaretçi.  
   
  `fieldDef`  
- 'ndaki `mdFieldDef`Alanı tanımlayan meta verilere başvuruda bulunan bir belirteç.  
+ 'ndaki `mdFieldDef` Alanı tanımlayan meta verilere başvuruda bulunan bir belirteç.  
   
  `ppValue`  
  dışı Belirtilen alanın değerini temsil eden bir "ICorDebugValue" nesnesine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Parametresinde belirtilen sınıf, `pClass` nesne değerinin sınıfının hiyerarşisinde olmalıdır ve alan bu sınıfın bir alanı olmalıdır.  
   
- `GetFieldValue`Genel nesneler ve genel sınıflar için yöntem yine de başarılı olur. Örneğin, MyDictionary \< v> sözlük \< dizesinden, v> ' den devralırsa ve nesne değeri mydictionary Int32> türünde Ise, \< `ICorDebugClass` sözlük \< K, r> sözlük dizesinin bir alanını başarıyla alır, \< Int32>.  
+ `GetFieldValue`Genel nesneler ve genel sınıflar için yöntem yine de başarılı olur. Örneğin, MyDictionary \<V> sözlükten devralırsa \<string,V> ve nesne değeri MyDictionary türünde Ise \<int32> , `ICorDebugClass` Sözlük nesnesini \<K,V> başarılı bir şekilde sözlük alanı alır \<string,int32> .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

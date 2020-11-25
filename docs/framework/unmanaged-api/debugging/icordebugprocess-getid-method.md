@@ -15,27 +15,30 @@ helpviewer_keywords:
 ms.assetid: b0ba8453-fa7e-4c14-93e5-335409cd4a47
 topic_type:
 - apiref
-ms.openlocfilehash: 8cd40ffb60bf837a9aa3b0db34892350a05964d7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 65d9c3688f3a41312a17e6058f73596fc2503dd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213289"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694991"
 ---
 # <a name="icordebugprocessgetid-method"></a>ICorDebugProcess::GetID Metodu
+
 İşlemin işletim sistemi (OS) KIMLIĞINI alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetID([out] DWORD *pdwProcessId);  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pdwProcessId`  
  dışı İşlemin benzersiz KIMLIĞI.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

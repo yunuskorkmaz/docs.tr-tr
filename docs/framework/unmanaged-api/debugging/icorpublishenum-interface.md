@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 76a136b5-e444-417a-8ade-f1596d597dc7
 topic_type:
 - apiref
-ms.openlocfilehash: acbc37d0f49af21c60ff6989932c5d341673512b
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 492d4b727ce507340fec47d30a791aa49d0cecb6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421182"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693352"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum Arabirimi
+
 , Süreçler ve uygulama etki alanları hakkında bilgi yayımlarken kullanılan numaralandırıcıların soyut temel arabirimi olarak görev yapar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -34,6 +35,7 @@ ms.locfileid: "83421182"
 |[Skip Yöntemi](icorpublishenum-skip-method.md)|İmleci belirtilen öğe sayısına göre numaralandırmada ileri doğru kaydırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Aşağıdaki Numaralandırıcılar öğesinden türetilir `ICorPublishEnum` :  
   
 - [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)  
@@ -41,6 +43,7 @@ ms.locfileid: "83421182"
 - [ICorPublishProcessEnum](icorpublishprocessenum-interface.md)  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorPub. IDL, CorPub. h  

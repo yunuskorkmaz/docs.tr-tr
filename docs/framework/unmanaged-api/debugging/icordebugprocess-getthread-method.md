@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: a48261ed-700b-41c9-8cb4-18c526546603
 topic_type:
 - apiref
-ms.openlocfilehash: 081852f91f243c4a979e2969220e71bd10c8c56b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e70204aa555ed9411d1d2cd5ad8cde7e0c53de2a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212897"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695003"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread Metodu
+
 Belirtilen işletim sistemi (OS) iş parçacığı KIMLIĞINE sahip bu işlemin iş parçacığını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetThread(  
@@ -34,6 +35,7 @@ HRESULT GetThread(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwThreadId`  
  'ndaki Alınacak iş parçacığının işletim sistemi iş parçacığı KIMLIĞI.  
   
@@ -41,6 +43,7 @@ HRESULT GetThread(
  dışı İş parçacığını temsil eden ICorDebugThread nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

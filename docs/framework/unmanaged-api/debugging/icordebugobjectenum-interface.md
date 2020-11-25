@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-ms.openlocfilehash: 0594caf53a889d51ea78e2ee9d6fff4d30f7cff2
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9400c4fa3ddcefef923d7bcfaae80e2cef62dc7d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205285"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695471"
 ---
 # <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum Arabirimi
 
@@ -37,6 +37,7 @@ Icorıı Genum yöntemlerini uygular ve nesnelerin dizilerini göreli sanal adre
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 5be25292-8357-445f-a09b-f997c0de761c
 topic_type:
 - apiref
-ms.openlocfilehash: b0e8fd162ccc1cfc944fb870f493febfe2e5ef42
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 42e5ffeeb81bc5e9a99c8ada8d58296fc9f610d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207679"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695419"
 ---
 # <a name="icordebugobjectvaluegetclass-method"></a>ICorDebugObjectValue::GetClass Yöntemi
+
 Bu nesne değerinin sınıfını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetClass (  
@@ -34,13 +35,16 @@ HRESULT GetClass (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppClass`  
  dışı Bu "ICorDebugObjectValue" nesnesi tarafından temsil edilen nesne değerinin sınıfını temsil eden "ICorDebugClass" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetClass`Ve [ICorDebugValue:: GetType](icordebugvalue-gettype-method.md) yöntemleri her biri bir değerin türü hakkında bilgi döndürür; bunların her ikisi de genel türler tarafından [ICorDebugValue2:: GetExactType](icordebugvalue2-getexacttype-method.md)tarafından yerine geçiyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

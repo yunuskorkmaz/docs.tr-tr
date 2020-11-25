@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 621b4543-a8f7-4117-98e4-930992cd688a
 topic_type:
 - apiref
-ms.openlocfilehash: 17cb3440c5b33d461b1624608ce115e1942d6beb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2a74688b90fbce63c9107d9389ddfd7bf5cd717b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129714"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695185"
 ---
 # <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a>ICorDebugObjectValue2::GetVirtualMethodAndType Yöntemi
+
 Bu yöntem henüz uygulanmadı.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetVirtualMethodAndType (  
@@ -36,6 +37,7 @@ HRESULT GetVirtualMethodAndType (
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  "ICorDebugFunction" ve "ICorDebugType" örneklerine, belirtilen üye başvurusu için en çok türetilmiş yöntemi ve türü temsil eden arabirim işaretçileri alır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
