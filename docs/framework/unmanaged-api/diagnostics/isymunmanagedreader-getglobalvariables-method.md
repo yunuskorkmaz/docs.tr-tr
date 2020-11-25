@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-ms.openlocfilehash: 20bfb3e48f411524bd4d9798f17dd935595a12bb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 299787ea4eb8a5c25bdab64ad08445839c9f24d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615026"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707548"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables Metodu
+
 Tüm genel değişkenleri döndürür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,19 +37,22 @@ HRESULT GetGlobalVariables(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cVars`  
  'ndaki Tarafından işaret edilen arabelleğin uzunluğu `pcVars` .  
   
  `pcVars`  
- dışı `ULONG32`Değişkenleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Değişkenleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
   
  `pVars`  
  dışı Değişkenleri içeren bir arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

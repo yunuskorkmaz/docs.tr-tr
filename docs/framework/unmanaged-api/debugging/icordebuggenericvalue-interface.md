@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: 7c5359ddf2c021f77ad1ea0a8579316c3c773fd5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cfa0950ca2ef4e969258c147b762fa95e52a82e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209792"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705828"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue Arabirimi
 
@@ -29,11 +29,12 @@ Tüm değerler için geçerli olan "ICorDebugValue" öğesinin bir alt sınıfı
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetValue Yöntemi](icordebuggenericvalue-getvalue-method.md)|Değeri belirtilen arabelleğe kopyalar.|  
+|[GetValue Metodu](icordebuggenericvalue-getvalue-method.md)|Değeri belirtilen arabelleğe kopyalar.|  
 |[SetValue Yöntemi](icordebuggenericvalue-setvalue-method.md)|Belirtilen arabellekteki yeni bir değer kopyalar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugGenericValue`, Uzaktan erişilemeyen için bir alt arabirimdir.  
+
+ `ICorDebugGenericValue` , Uzaktan erişilemeyen için bir alt arabirimdir.  
   
  Başvuru türleri için, değer başvurunun içeriği yerine başvurudur.  
   
@@ -43,6 +44,7 @@ Tüm değerler için geçerli olan "ICorDebugValue" öğesinin bir alt sınıfı
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

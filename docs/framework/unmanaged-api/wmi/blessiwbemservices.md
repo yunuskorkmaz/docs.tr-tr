@@ -1,6 +1,6 @@
 ---
-title: BlessIWbemServices fonksiyonu (Yönetilmeyen API Başvurusu)
-description: BlessIWbemServices işlevi, kullanıcı kimlik bilgilerinin bir IWbemServices sınıfına erişime izin verip vermediğini gösterir.
+title: Blessıwbemservices işlevi (yönetilmeyen API Başvurusu)
+description: Blessıwbemservices işlevi, Kullanıcı kimlik bilgilerinin bir IWbemServices sınıfına erişime izin verip vermediğini belirtir.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -14,19 +14,20 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 4b15af840cc00b3ec261604db4f3625c6b975d3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43ef617ee754c9dcd661b31abba6b17434563c22
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176870"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708159"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices işlevi
-Kullanıcı kimlik bilgilerinin belirtilen [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) sınıfına erişime izin verip vermediğini gösterir.
+
+Kullanıcı kimlik bilgilerinin belirtilen [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) sınıfına erişime izin verip vermediğini belirtir.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT BlessIWbemServices (
@@ -42,43 +43,43 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>Parametreler
 
 `pIWbemServices`\
-[içinde] İzinlerin gerekli olduğu [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesnesine bir işaretçi.
+'ndaki İzinleri gerekli olan [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesnesine yönelik bir işaretçi.
 
 `strUser`\
-[içinde] Kullanıcı adı.
+'ndaki Kullanıcı adı.
 
 `strPassword`\
-[içinde] `strUser`' ile ilişkili parola
+'ndaki İle ilişkili parola `strUser` .
 
 `strAuthority`\
-[içinde] Kullanıcının etki alanı adı. Daha fazla bilgi için [ConnectServerWmi](connectserverwmi.md) işlevine bakın.
+'ndaki Kullanıcının etki alanı adı. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
 
 `impLevel`\
-[içinde] Kimliğe bürünme düzeyi.
+'ndaki Kimliğe bürünme düzeyi.
 
 `authnLevel`\
-[içinde] Yetkilendirme düzeyi.
+'ndaki Yetkilendirme düzeyi.
 
 ## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler *WinError.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler *Winerror. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | Bir veya daha fazla bağımsız değişken geçersizdir. |
-| `E_POINTER` | 0x80004003 | `pIWbemServices``null`. |
+| `E_INVALIDARG` | 0x80070057 | Bir veya daha fazla bağımsız değişken geçersiz. |
+| `E_POINTER` | 0x80004003 | `pIWbemServices`, `null` değeridir. |
 | `E_FAIL` | 0x80000008 | Belirtilmeyen bir hata oluştu. |
-| `E_OUTOFMEMORY` | 0x80000002 | İşlemi gerçekleştirmek için yetersiz bellek kullanılabilir. |
+| `E_OUTOFMEMORY` | 0x80000002 | İşlemi gerçekleştirmek için yeterli bellek yok. |
 | `S_OK` | 0 | İşlev çağrısı başarılı oldu. |
 
 ## <a name="requirements"></a>Gereksinimler  
 
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

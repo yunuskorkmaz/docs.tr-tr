@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 9fb144d2-07e0-4a0e-8e05-907bbb6c9e03
 topic_type:
 - apiref
-ms.openlocfilehash: 5c12ca20deee06fcaca68365644fd9dff95379ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b90cc6fe99cf592f1b3fd117888462a957e4ce35
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121154"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708432"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage İşlevi
+
 Zaten bellekle eşlenmiş bir derlemenin ilişkili ortak anahtar için geçerli olduğunu doğrular.  
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: Strongnamedoğrulamaları Icationfromımage](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 BOOLEAN StrongNameSignatureVerificationFromImage (  
@@ -38,6 +39,7 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbBase`  
  'ndaki Eşlenen derleme bildiriminin göreli sanal adresi.  
   
@@ -62,22 +64,25 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
  `pdwOutFlags`  
  dışı Ek çıkış bilgileri için bayrak. Aşağıdaki değer desteklenir:  
   
-- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-Bu değer, kayıt defteri ayarları nedeniyle doğrulamanın başarılı olduğunu belirtmek için `false` olarak ayarlanır.  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-Bu değer `false` , kayıt defteri ayarları nedeniyle doğrulamanın başarılı olduğunu belirtmek için olarak ayarlanır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- başarılı tamamlamada `true`; Aksi takdirde, `false`.  
+
+ `true` başarıyla tamamlandığında; Aksi takdirde, `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `StrongNameSignatureVerificationFromImage` işlevi başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
+
+ `StrongNameSignatureVerificationFromImage`İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak Için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** StrongName. h  
   
- **Kitaplık:** Mscoree. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** mscoree.dll bir kaynak olarak eklendi  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

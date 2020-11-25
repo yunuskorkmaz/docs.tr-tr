@@ -14,18 +14,19 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 60832e823ed2f51fdd13c467dbbef4378de27885
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821105"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706716"
 ---
 # <a name="general-naming-conventions"></a>Genel Adlandırma Kuralları
 
 Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar ve kısaltmalar kullanma yönergeleri ve dile özgü adların kullanılmasıyla ilgili öneriler açıklanmaktadır.
 
 ## <a name="word-choice"></a>Sözcük seçimi
+
  ✔️ kolayca okunabilir tanımlayıcı adlarını seçin.
 
  Örneğin, adlı bir özellik, `HorizontalAlignment` daha fazla İngilizce-okunabilir `AlignmentHorizontal` .
@@ -43,6 +44,7 @@ Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar 
  Ortak dil belirtiminin (CLS) kural 4 ' e göre, tüm uyumlu dillerin, söz konusu dilin anahtar sözcüğünü tanımlayıcı olarak kullanan adlandırılmış öğelere erişime izin veren bir mekanizma sağlaması gerekir. Örneğin, C#, bu durumda @ Sign 'ı kaçış mekanizması olarak kullanır. Ancak, bir yöntemi kaçış sırası olmadan kullanmak çok daha zor olduğundan ortak anahtar sözcüklerden kaçınmak iyi bir fikirdir.
 
 ## <a name="using-abbreviations-and-acronyms"></a>Kısaltmalar ve kısaltmalar kullanma
+
  ❌ Tanımlayıcı adlarının parçası olarak kısaltmalar veya aykırılıkları kullanmayın.
 
  Örneğin, yerine kullanın `GetWindow` `GetWin` .
@@ -50,6 +52,7 @@ Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar 
  ❌ Yaygın olarak kabul edilmeyen ve yalnızca gerekli olduğunda bile olmayan kısaltmalar kullanmayın.
 
 ## <a name="avoiding-language-specific-names"></a>Language-Specific adlarından kaçınma
+
  ✔️, tür adları için dile özgü anahtar sözcükler yerine anlam açısından ilginç adlar kullanır.
 
  Örneğin, `GetLength` daha iyi bir addır `GetInt` .
@@ -64,13 +67,13 @@ Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar 
 |**bayt**|**Bayt**|**unsigned char**|**Bayt**|
 |**short**|**Kısadır**|**short**|**Int16**|
 |**ushort**|**UInt16**|**imzasız short**|**UInt16**|
-|**int**|**Gir**|**int**|**Int32**|
+|**int**|**Tamsayı**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Kalacağını**|**__int64**|**Tutulamaz**|
 |**ulong**|**UInt64**|**imzasız __int64**|**UInt64**|
 |**float**|**Tek**|**float**|**Tek**|
 |**double**|**Çift**|**double**|**Çift**|
-|**bool**|**Boolean**|**bool**|**Boolean**|
+|**bool**|**Boole**|**bool**|**Boole**|
 |**char**|**Char**|**wchar_t**|**Char**|
 |**string**|**Dize**|**Dize**|**Dize**|
 |**object**|**Nesne**|**Nesne**|**Nesne**|
@@ -78,6 +81,7 @@ Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar 
  ✔️, tür adını yinelemek yerine veya gibi ortak bir ad kullanın, `value` `item` nadir olarak bir tanımlayıcının anlam anlamı yoktur ve parametre türü önemli değildir.
 
 ## <a name="naming-new-versions-of-existing-apis"></a>Mevcut API 'lerin yeni sürümlerini adlandırma
+
  ✔️ var olan bir API 'nin yeni sürümlerini oluştururken eski API 'ye benzer bir ad kullanın.
 
  Bu, API 'Ler arasındaki ilişkiyi vurgulamaya yardımcı olur.

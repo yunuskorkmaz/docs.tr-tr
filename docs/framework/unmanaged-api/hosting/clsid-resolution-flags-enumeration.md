@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-ms.openlocfilehash: 5ac015f958d9504bbd14a66ead86548b8df32764
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 19731f34d259757e6de62dd4b4f0d4735d1c2e61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616781"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706170"
 ---
 # <a name="clsid_resolution_flags-enumeration"></a>CLSID_RESOLUTION_FLAGS Numaralandırması
+
 Ortak dil çalışma zamanının (CLR) bir kaç çözüm içermesi gerektiğini belirten değerleri içerir `CLSID` .  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -41,6 +42,7 @@ typedef enum {
 |`CLSID_RESOLUTION_REGISTERED`|Çalışma zamanının kayıt defterini arayacağı ve dolgu ilkesi uyguladığı anlamına gelir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
@@ -49,4 +51,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Sabit Listeleri](hosting-enumerations.md)
+- [Barındırma Numaralandırmaları](hosting-enumerations.md)

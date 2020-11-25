@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 6b1fcd11-c7fb-4be2-8910-abc862d4caf4
 topic_type:
 - apiref
-ms.openlocfilehash: 649a9159f99afa64615c40c23a98a80318ae0d7f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e9c9674bfe0e5a8006a4881e103b633ee8f2af1d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009177"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706063"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType Numaralandırması
+
 Bir nesnenin ortak dil çalışma zamanı tarafından nasıl serileştirildiği belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorSerializationType {  
@@ -79,6 +80,7 @@ typedef enum CorSerializationType {
 |`SERIALIZATION_TYPE_ENUM`|Nesne bir sabit listesi olarak serileştirilir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

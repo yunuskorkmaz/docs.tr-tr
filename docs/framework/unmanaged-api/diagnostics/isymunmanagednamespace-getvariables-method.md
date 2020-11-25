@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-ms.openlocfilehash: 091f497024b48589953456e1ea6daf6635738240
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f554fa95f552285ad92d9f780a8d77f53e6890b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707704"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables Metodu
+
 Bu ad alanı içinde genel kapsamda tanımlanan tüm değişkenleri döndürür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,19 +37,22 @@ HRESULT GetVariables(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cVars`  
- 'ndaki `ULONG32`Dizi boyutunu belirten bir `pVars` .  
+ 'ndaki `ULONG32` Dizi boyutunu belirten bir `pVars` .  
   
  `pcVars`  
- dışı `ULONG32`Ad alanlarını içermesi için gereken arabellek boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Ad alanlarını içermesi için gereken arabellek boyutunu alan bir işaretçisi.  
   
  `pVars`  
  dışı Ad alanlarını içeren bir arabelleğin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

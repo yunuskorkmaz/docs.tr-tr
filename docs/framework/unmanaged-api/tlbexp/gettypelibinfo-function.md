@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-ms.openlocfilehash: 4c630f5f7e3dc66ce44f10cd69fcd108226b0250
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e9f6ae9a0fcd6651395c54c2e44973e53668c1ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554338"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708328"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo İşlevi
+
 [Tlibattr](/windows/win32/api/oaidl/ns-oaidl-tlibattr) yapısını inceleyerek belirtilen tür kitaplığıyla ilgili bilgileri döndürür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -38,6 +39,7 @@ HRESULT GetTypeLibInfo(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `szFile`  
  'ndaki Tür kitaplığının dosya adı.  
   
@@ -51,17 +53,19 @@ HRESULT GetTypeLibInfo(
  dışı Tür kitaplığı için hedef işletim sistemini tanımlayan bir [Syskind](/windows/win32/api/oaidl/ne-oaidl-syskind) bayrağı. Ortak değerler SYS_WIN32 ve SYS_WIN64.  
   
  `pTypeLibMajorVer`  
- dışı Tür kitaplığının ana sürüm numarası. Örneğin, *x. y*sürümü için ana sürüm numarası *x*olur.  
+ dışı Tür kitaplığının ana sürüm numarası. Örneğin, *x. y* sürümü için ana sürüm numarası *x* olur.  
   
  `pTypeLibMinorVer`  
- dışı Tür kitaplığının ikincil sürüm numarası. Örneğin, *x. y*sürümü için, ikincil sürüm numarası *y*' dir.  
+ dışı Tür kitaplığının ikincil sürüm numarası. Örneğin, *x. y* sürümü için, ikincil sürüm numarası *y*' dir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetTypeLibInfo`İşlev, [Tlbexp.exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md)tarafından çağrılır. Bu araç, ortak dil çalışma zamanı (CLR) derlemesindeki türleri açıklayan bir tür kitaplığı oluşturur.  
   
  Herhangi bir parametre null ise, işlev ' ı döndürür `HRESULT` `E_POINTER` . Aksi takdirde, döndürür `S_OK` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** TlbRef. h  

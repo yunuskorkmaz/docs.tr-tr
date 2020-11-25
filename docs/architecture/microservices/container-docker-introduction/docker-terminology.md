@@ -2,12 +2,12 @@
 title: Docker terimleri
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker terminolojisi
 ms.date: 01/30/2020
-ms.openlocfilehash: 16aaaa2df0f68434b766d4d1cc96974e83449953
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: b30ea26ee174caf3484931945c832c72a1acf93d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199904"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707780"
 ---
 # <a name="docker-terminology"></a>Docker terimleri
 
@@ -35,7 +35,7 @@ docker build
 
 **Kayıt defteri**: depolara erişim sağlayan bir hizmet. Çoğu ortak görüntü için varsayılan kayıt defteri, [Docker Hub](https://hub.docker.com/) ' dır (kuruluş olarak Docker tarafından sahiplenilir). Kayıt defteri genellikle birden çok ekipten depoları içerir. Şirketler genellikle oluşturdukları görüntüleri depolamak ve yönetmek için özel kayıt defterlerine sahiptir. Azure Container Registry başka bir örnektir.
 
-**Çok katmanlı görüntü**: çok mimaride, Docker 'ın çalıştırıldığı platforma göre uygun görüntünün seçimini kolaylaştıran bir özelliktir. Örneğin, bir Dockerfile, kayıt defterinden **MCR.Microsoft.com/DotNet/Core/SDK:3.1 öğesinden** bir temel görüntü Istediğinde, Docker 'ın çalıştırıldığı işletim sistemine ve sürüme bağlı olarak **3,1-SDK-nanoserver-1909**, **3,1-SDK-nanoserver-1809** veya **3,1-SDK-Buster-Slim**alır.
+**Çok katmanlı görüntü**: çok mimaride, Docker 'ın çalıştırıldığı platforma göre uygun görüntünün seçimini kolaylaştıran bir özelliktir. Örneğin, bir Dockerfile, kayıt defterinden **MCR.Microsoft.com/DotNet/SDK:3.1 öğesinden** bir temel görüntü Istediğinde, Docker 'ın çalıştırıldığı işletim sistemine ve sürüme bağlı olarak **3,1-SDK-nanoserver-1909**, **3,1-SDK-nanoserver-1809** veya **3,1-SDK-Buster-Slim** alır.
 
 **Docker Hub**: görüntüleri karşıya yüklemek ve bunlarla çalışmak için ortak bir kayıt defteri. Docker Hub, Docker görüntüsü barındırma, genel veya özel kayıt defterleri, derleme Tetikleyicileri ve Web kancaları, GitHub ve BitBucket ile tümleştirme sağlar.
 
@@ -54,5 +54,5 @@ docker build
 **Orchestrator**: kümelerin ve Docker konaklarının yönetimini kolaylaştıran bir araç. Düzenleyiciler, bir komut satırı arabirimi (CLı) veya grafik kullanıcı arabirimi aracılığıyla görüntülerini, kapsayıcıları ve konaklarını yönetmenizi sağlar. Kapsayıcı ağ, yapılandırma, Yük Dengeleme, hizmet bulma, yüksek kullanılabilirlik, Docker ana bilgisayar yapılandırması ve daha fazlasını yönetebilirsiniz. Bir Orchestrator, bir düğüm koleksiyonunda çalıştırma, dağıtma, ölçekleme ve düzeltme yüklerini çalıştırmaktan sorumludur. Genellikle, Orchestrator ürünleri, piyasadaki diğer tekliflerin yanı sıra Kubernetes ve Azure Service Fabric gibi küme altyapısı sağlayan ürünlerdir.
 
 >[!div class="step-by-step"]
->[Önceki](docker-defined.md)
->[İleri](docker-containers-images-registries.md)
+>[Önceki](docker-defined.md) 
+> [Sonraki](docker-containers-images-registries.md)

@@ -2,17 +2,18 @@
 title: 'ICorDebugVariableSymbol:: SetValue yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-ms.openlocfilehash: 38afd355938ec1beb1dbfd33de36116d25b07b4e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 3ef9b9b9a095d6d6026ffc38873661355d660488
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397069"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707847"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol:: SetValue yöntemi
+
 Bir bayt dizisinin değerini bir değişkene atar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetValue(  
@@ -26,6 +27,7 @@ HRESULT SetValue(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `offset`  
  'ndaki Değişkenin değeri ayarlanacak başlangıç boşluğu. Bu parametre, bir nesnedeki üye alanlarına yazılırken kullanılır.  
   
@@ -50,6 +52,7 @@ HRESULT SetValue(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

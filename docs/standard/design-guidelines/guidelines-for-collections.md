@@ -2,14 +2,15 @@
 title: Koleksiyonlar için yönergeler
 ms.date: 10/22/2008
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a143e88be01bf2c8f45e25f26498d2d3ccbd98da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821092"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706677"
 ---
 # <a name="guidelines-for-collections"></a>Koleksiyonlar için yönergeler
+
 Özellikle bir nesne grubunu işlemek için tasarlanan herhangi bir tür, bir koleksiyon olarak düşünülebilir. Bu tür türler için neredeyse her zaman uygundur <xref:System.Collections.IEnumerable> <xref:System.Collections.Generic.IEnumerable%601> . Bu bölümde, bu arabirimlerin yalnızca birini veya her ikisini de koleksiyonlar olarak uygulayan türler dikkate aldık.
 
  ❌ Ortak API 'lerde zayıf türsüz koleksiyonlar kullanmayın.
@@ -31,6 +32,7 @@ ms.locfileid: "94821092"
  ❌ Hem hem de `IEnumerator<T>` `IEnumerable<T>` aynı türde uygulamayın. Aynı, genel olmayan arabirimler ve için geçerlidir `IEnumerator` `IEnumerable` .
 
 ## <a name="collection-parameters"></a>Koleksiyon parametreleri
+
  ✔️, bir parametre türü olarak mümkün olan en az özelleştirilmiş türü kullanır. Koleksiyonları parametre olarak alan çoğu üye arabirimini kullanır `IEnumerable<T>` .
 
  ❌<xref:System.Collections.Generic.ICollection%601> <xref:System.Collections.ICollection> Yalnızca özelliğine erişmek için parametre olarak veya parametresi kullanmaktan kaçının `Count` .
@@ -38,6 +40,7 @@ ms.locfileid: "94821092"
  Bunun yerine, veya öğesini kullanarak `IEnumerable<T>` `IEnumerable` nesnenin mi yoksa dinamik olarak mı kontrol ettiğine dikkat edin `ICollection<T>` `ICollection` .
 
 ## <a name="collection-properties-and-return-values"></a>Koleksiyon özellikleri ve dönüş değerleri
+
  ❌ Ayarlanabilir koleksiyon özellikleri sağlamaın.
 
  Kullanıcılar, önce koleksiyonu temizleyerek ve sonra yeni içerikleri ekleyerek koleksiyonun içeriğini değiştirebilir. Tüm koleksiyonu değiştirmek ortak bir senaryodur, `AddRange` yöntemi koleksiyona sağlamayı düşünün.
@@ -69,6 +72,7 @@ ms.locfileid: "94821092"
  Genel kural, null ve boş (0 öğe) koleksiyonlarının veya dizilerinin aynı kabul edilmesidir.
 
 ### <a name="snapshots-versus-live-collections"></a>Anlık görüntüler ve canlı Koleksiyonlar
+
  Bir zaman noktasında bir durumu temsil eden koleksiyonlara anlık görüntü koleksiyonları denir. Örneğin, bir veritabanı sorgusundan döndürülen satırları içeren bir koleksiyon bir anlık görüntü olacaktır. Geçerli durumu her zaman temsil eden koleksiyonlara canlı koleksiyonlar denir. Örneğin, bir `ComboBox` öğe koleksiyonu canlı bir koleksiyondur.
 
  ❌ Özelliklerden anlık görüntü koleksiyonları döndürme. Özellikler canlı koleksiyonlar döndürmelidir.
@@ -80,6 +84,7 @@ ms.locfileid: "94821092"
  Genel olarak, paylaşılan bir kaynağı (örneğin, bir dizindeki dosyalar) temsil eden tüm koleksiyonlar geçici bir uygulamadır. Uygulama yalnızca ileri bir Numaralandırıcı değilse, bu tür koleksiyonlar canlı koleksiyonlar olarak uygulamak oldukça zordur veya imkansız olur.
 
 ## <a name="choosing-between-arrays-and-collections"></a>Diziler ve koleksiyonlar arasında seçim yapma
+
  ✔️ diziler üzerinde koleksiyonları tercih ediyor.
 
  Koleksiyonlar içerik üzerinde daha fazla denetim sağlar, zaman içinde gelişiyor ve daha fazla kullanılabilir. Ayrıca, diziyi kopyalama maliyeti yüksek olduğundan, salt okuma senaryolarında diziler kullanılması önerilmez. Kullanılabilirlik çalışmaları, bazı geliştiricilerin koleksiyon tabanlı API 'Leri kullanarak daha rahat olduğunu göstermiştir.
@@ -93,6 +98,7 @@ ms.locfileid: "94821092"
  ❌ Özellik alıcısı her çağrıldığında özelliğin yeni bir dizi (örn. iç dizinin bir kopyası) döndürmesi gerekiyorsa özellikler için diziler kullanmayın.
 
 ## <a name="implementing-custom-collections"></a>Özel Koleksiyonlar uygulama
+
  `Collection<T>` `ReadOnlyCollection<T>` yeni koleksiyonlar tasarlarken,, veya ' den devralmayı düşünün ✔️ `KeyedCollection<TKey,TItem>` .
 
  `IEnumerable<T>`yeni koleksiyonlar tasarlarken uygulamayı ✔️. Uygulamayı, `ICollection<T>` hatta `IList<T>` mantıklı olduğunu düşünün.
@@ -106,6 +112,7 @@ ms.locfileid: "94821092"
  ❌ Gibi genel olmayan temel koleksiyonlardan devralma `CollectionBase` . `Collection<T>`Yerine, `ReadOnlyCollection<T>` ve kullanın `KeyedCollection<TKey,TItem>` .
 
 ### <a name="naming-custom-collections"></a>Özel koleksiyonları adlandırma
+
  Koleksiyonlar (uygulayan türler `IEnumerable` ) genellikle iki nedenden dolayı oluşturulur: (1) yapıya özgü işlemlere sahip yeni bir veri yapısı ve genellikle var olan veri yapılarından (örn.,,,  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> <xref:System.Collections.Generic.Stack%601> ) ve (2) belirli bir öğe kümesinin tutulması için özel bir koleksiyon oluşturmak için (örn.  <xref:System.Collections.Specialized.StringCollection> ). Veri yapıları genellikle uygulamaların ve kitaplıkların iç uygulamalarında kullanılır. Özel Koleksiyonlar genellikle API 'lerde (özellik ve parametre türleri olarak) gösterilmelidir.
 
  ✔️, veya uygulayan soyutlamalar adlarında "Sözlük" sonekini kullanın `IDictionary` `IDictionary<TKey,TValue>` .

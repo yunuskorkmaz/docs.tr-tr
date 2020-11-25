@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0c3d4835-e111-4e82-af6d-53f140b8f2c9
 topic_type:
 - apiref
-ms.openlocfilehash: d6f348eb781efdef89926ec1bc267281bf3a5004
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 092c3b328887b7d36ead77c64d31310b614b616a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503113"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707535"
 ---
 # <a name="icorprofilerfunctionenumclone-method"></a>ICorProfilerFunctionEnum::Clone Yöntemi
+
 Bu [ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md) arabiriminin bir kopyasına bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -32,10 +33,12 @@ HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppEnum`  
  dışı Bu [ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md) arabiriminin kopyasına işaret eden arabirim işaretçisinin bir işaretçisi. Numaralandırıcı kopyası kendi numaralandırma durumunu bu numaralandırıcıda ayrı olarak tutar. Ancak, kopyanın ilk imleç konumu, bu Numaralandırıcının geçerli imleç konumuyla aynıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

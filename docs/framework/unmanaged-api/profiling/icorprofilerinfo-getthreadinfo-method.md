@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-ms.openlocfilehash: 532288364b2db1e6be49b9e6f87019b1e41e6866
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 516a12b7a4457a0f67da24294ad96fb79d1aa5aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497926"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707522"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo Yöntemi
+
 Belirtilen iş parçacığı için geçerli Win32 iş parçacığı kimliğini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetThreadInfo(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `threadId`  
  'ndaki Geçerli Win32 KIMLIĞI alınacak iş parçacığının KIMLIĞI.  
   
@@ -41,6 +43,7 @@ HRESULT GetThreadInfo(
  dışı Belirtilen iş parçacığının geçerli Win32 iş parçacığı KIMLIĞINE yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

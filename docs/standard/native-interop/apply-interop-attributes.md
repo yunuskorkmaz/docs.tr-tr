@@ -14,19 +14,21 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 38632c5a1f462c3a7b537978fde81424916746da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188685"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706300"
 ---
 # <a name="applying-interop-attributes"></a>Birlikte Çalışma Özniteliklerini Uygulama
+
 <xref:System.Runtime.InteropServices>Ad alanı, birlikte çalışabilirlik 'e özgü özniteliklerin üç kategorisini sağlar: tasarım zamanında sizin tarafınızdan, dönüştürme işlemi SıRASıNDA com birlikte çalışma araçları ve API 'leri tarafından uygulanan ve sizin tarafınızdan ya da com birlikte çalışma tarafından uygulanan bunlar.  
   
  Yönetilen koda öznitelik uygulama görevi hakkında bilginiz yoksa, bkz. [öznitelikleri kullanarak meta verileri genişletme](../attributes/index.md). Diğer özel öznitelikler gibi türler, Yöntemler, özellikler, parametreler, alanlar ve diğer üyelere birlikte çalışma için özel öznitelikler de uygulayabilirsiniz.  
   
 ## <a name="design-time-attributes"></a>Design-Time öznitelikleri  
+
  Tasarım zamanı özniteliklerini kullanarak, COM birlikte çalışma araçları ve API 'Leri tarafından gerçekleştirilen dönüştürme sürecinin sonucunu ayarlayabilirsiniz. Aşağıdaki tabloda, yönetilen kaynak kodunuza uygulayabileceğiniz öznitelikler açıklanmaktadır. COM birlikte çalışma araçları, bazen bu tabloda açıklanan öznitelikleri de uygulayabilir.  
   
 |Öznitelik|Açıklama|  
@@ -55,6 +57,7 @@ ms.locfileid: "93188685"
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|Bir sınıfın alanlarının fiziksel yerleşimini denetler.<br /><br /> COM birlikte çalışabilirlik araçları, bu özniteliği uygulayabilir.|  
   
 ## <a name="conversion-tool-attributes"></a>Conversion-Tool öznitelikleri  
+
  Aşağıdaki tabloda, dönüştürme işlemi sırasında COM birlikte çalışma araçlarının uygulandığı öznitelikler açıklanmaktadır. Bu öznitelikleri tasarım zamanında uygulamayın.  
   
 |Öznitelik|Açıklama|  

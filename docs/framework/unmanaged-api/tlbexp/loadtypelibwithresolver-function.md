@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 395d5f63eef12570c07f1f601de7f9e480d62905
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6497dd3e720874e47de9dfda74e483a642cbb181
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540511"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708237"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver İşlevi
+
 Bir tür kitaplığını yükler ve dahili olarak başvurulan tüm tür kitaplıklarını çözümlemek için sağlanan [ıtypeelibresolver arabirimini](itypelibresolver-interface.md) kullanır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT LoadTypeLibWithResolver(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `szFile`  
  'ndaki Tür kitaplığının dosya yolu.  
   
@@ -54,6 +56,7 @@ HRESULT LoadTypeLibWithResolver(
  dışı Yüklenmekte olan tür kitaplığına bir başvuru.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Aşağıdaki tabloda listelenen HRESULT değerlerinden biri.  
   
 |Döndürülen değer|Anlamı|  
@@ -68,6 +71,7 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|Tür kitaplığı veya DLL yüklenemedi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  [Tlbexp.exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md) , `LoadTypeLibWithResolver` derlemeyi tür kitaplığı dönüştürme işlemi sırasında işlevini çağırır.  
   
  Bu işlev, kayıt defterine en az erişimli olan belirtilen tür kitaplığını yükler. Bu işlev daha sonra, her birinin yüklenmesi ve üst tür kitaplığına eklenmesi gereken dahili olarak Başvurulmuş tür kitaplıkları için tür kitaplığını inceler.  
@@ -83,6 +87,7 @@ HRESULT LoadTypeLibWithResolver(
  Doğrudan çağrı yaparsanız `LoadTypeLibWithResolver` kendi [ITypeLibResolver arabirimi](itypelibresolver-interface.md) uygulamanızı sağlamanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** TlbRef. h  

@@ -1,6 +1,6 @@
 ---
-title: DeleteMethod işlevi (Yönetilmeyen API Başvurusu)
-description: DeleteMethod işlevi belirtilen yöntemi CIM sınıf tanımından siler.
+title: DeleteMethod işlevi (yönetilmeyen API Başvurusu)
+description: DeleteMethod işlevi, belirtilen yöntemi CıM sınıf tanımından siler.
 ms.date: 11/06/2017
 api_name:
 - DeleteMethod
@@ -14,19 +14,20 @@ helpviewer_keywords:
 - DeleteMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 4059555d74c0b0f151332ddcf9faedecf238e795
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ca58ed3510360b20577890055e4284869d1bf94
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174998"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708107"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod işlevi
-Belirtilen yöntemi CIM sınıfı tanımından siler.
+
+Belirtilen yöntemi CıM sınıf tanımından siler.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Delete (
@@ -39,37 +40,38 @@ HRESULT Delete (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[içinde] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`  
-[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `wszName`  
-[içinde] Sınıf tablosundan kaldırılacak yöntemin adı. `wszName`geçerli `LPCWSTR`bir işaretçi olmalıdır.
+'ndaki Sınıf tablosundan kaldırılacak yöntemin adı. `wszName` geçerli bir işaretçi olmalıdır `LPCWSTR` .
 
 ## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen yöntem yok. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak için yeterli bellek yok. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamaya yetecek bellek yok. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu [işlev, IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) yöntemine bir çağrı yıkıyor.
+Bu işlev, [IWbemClassObject::D eleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) yöntemine bir çağrı kaydırır.
 
-Yöntem silme CIM örneklerine işaret eden [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçileri için desteklenmez.
+Metot silme, CıM örneklerini işaret eden [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçileri için desteklenmez.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

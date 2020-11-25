@@ -6,14 +6,15 @@ helpviewer_keywords:
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-ms.openlocfilehash: 6e58274f32ea129d3271c11e321bdbd454d2406a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4329ca9e74fa02411bd39755a432fc7d4858597d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821118"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706703"
 ---
 # <a name="field-design"></a>Alan Tasarımı
+
 Kapsülleme prensibi, nesne odaklı tasarımda en önemli olmaların biridir. Bu ilke, bir nesne içinde depolanan verilerin yalnızca o nesnenin erişimine açık olması gerektiğini belirtir.
 
  Prensibi yorumlamak için kullanışlı bir yol, türün (ad veya tür değişiklikleri) alanlara yapılan değişikliklerin, türün üyeleri için dışında bir kod olmadan yapılabilmesi için bir türün tasarlanmalıdır. Bu yorum hemen tüm alanların özel olması gerektiğini gösterir.

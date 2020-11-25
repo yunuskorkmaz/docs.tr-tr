@@ -9,14 +9,15 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 17494c3b5620ac649aeb3e6ef73085097517d1f5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf62afff86a6a315e40a681250396af4bd3563e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830681"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706365"
 ---
 # <a name="managed-execution-process"></a>Yönetilen Yürütme İşlemi
+
 <a name="introduction"></a> Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı olarak ele alınan aşağıdaki adımları içerir:
 
 1. [Derleyici seçme](#choosing_a_compiler).
@@ -36,7 +37,9 @@ ms.locfileid: "94830681"
      Ortak dil çalışma zamanı, yürütme sırasında kullanılabilecek yürütme ve Hizmetleri yürütmeye olanak tanıyan altyapıyı sağlar.
 
 <a name="choosing_a_compiler"></a>
+
 ## <a name="choosing-a-compiler"></a>Derleyici seçme
+
  Ortak dil çalışma zamanı (CLR) tarafından belirtilen avantajları elde etmek için Visual Basic, C#, Visual C++, F # gibi çalışma zamanını hedefleyen bir veya daha fazla dil derleyicisini veya Eiffel, Perl veya COBOL derleyicisi gibi birçok üçüncü taraf derleyicisinden birini kullanmanız gerekir.
 
  Çok dilli bir yürütme ortamı olduğundan, çalışma zamanı çok çeşitli veri türlerini ve dil özelliklerini destekler. Kullandığınız dil derleyicisi, hangi çalışma zamanı özelliklerinin kullanılabilir olduğunu belirler ve bu özellikleri kullanarak kodunuzu tasarlayamazsınız. Çalışma zamanı değil, kodunuzun kullanması gereken söz dizimini belirler. Bileşeninizin diğer dillerde yazılmış bileşenler tarafından tamamen kullanılabilir olması gerekiyorsa, bileşeninizin verilme türleri yalnızca [Dil bağımsızlığı ve Language-Independent bileşenlerinde](language-independence-and-language-independent-components.md) (CLS) bulunan dil özelliklerini kullanıma sunmalıdır. <xref:System.CLSCompliantAttribute>KODUNUZUN CLS uyumlu olduğundan emin olmak için özniteliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Dil bağımsızlığı ve Language-Independent bileşenleri](language-independence-and-language-independent-components.md).
@@ -44,7 +47,9 @@ ms.locfileid: "94830681"
  [Başa dön](#introduction)
 
 <a name="compiling_to_msil"></a>
+
 ## <a name="compiling-to-msil"></a>MSIL 'e derleme
+
  Yönetilen koda derlerken, derleyici kaynak kodunuzu Microsoft ara dili 'ne (MSIL) çevirir ve bu, yerel koda etkin bir şekilde dönüştürülebilecek bir CPU bağımsız yönerge kümesidir. MSIL, nesneler üzerinde Yöntem yükleme, depolama, başlatma ve çağırma yönergelerini, ayrıca aritmetik ve mantıksal işlemler, denetim akışı, doğrudan bellek erişimi, özel durum işleme ve diğer işlemler için yönergeler içerir. Kod çalıştırılmadan önce, MSIL 'nin genellikle [tam zamanında (JIT) derleyicisi](#compiling_msil_to_native_code)tarafından, CPU 'ya özgü koda dönüştürülmesi gerekir. Ortak dil çalışma zamanı, desteklediği her bilgisayar mimarisi için bir veya daha fazla JıT derleyicisi sağladığından, aynı MSIL kümesi JıT derlenebilir ve desteklenen herhangi bir mimaride çalıştırılabilir.
 
  Bir derleyici MSIL ürettiğini de meta veriler üretir. Meta veriler, her türün tanımı, her bir türün üyesi, kodunuzun başvurduğu Üyeler ve çalışma zamanının yürütme sırasında kullandığı diğer veriler de dahil olmak üzere kodunuzdaki türleri açıklar. MSIL ve meta veriler, bir Taşınabilir çalıştırılabilir (PE) dosyasında bulunur ve bu, yüklenen Microsoft PE ve ortak nesne dosyası biçimi (COFF) tarafından yürütülebilir içerik için kullanılmaktadır. MSIL veya yerel kod ile meta verilerin yanı sıra bu dosya biçimi, işletim sisteminin ortak dil çalışma zamanı görüntülerini tanımasını sağlar. Dosyadaki meta verilerin MSIL ile birlikte bulunması, kodunuzun kendisini tanımlamasını sağlar, bu da tür kitaplıkları veya arabirim tanımlama dili (IDL) için gerekli değildir. Çalışma zamanı, yürütme sırasında gerekli olduğu gibi dosyadaki meta verileri bulur ve ayıklar.
@@ -52,7 +57,9 @@ ms.locfileid: "94830681"
  [Başa dön](#introduction)
 
 <a name="compiling_msil_to_native_code"></a>
+
 ## <a name="compiling-msil-to-native-code"></a>MSIL 'i yerel koda derleme
+
  Microsoft ara dili 'ni (MSIL) çalıştırabilmeniz için önce, hedef makine mimarisi için ortak dil çalışma zamanına göre yerel koda derlenmesi gerekir. .NET, bu dönüştürmeyi gerçekleştirmek için iki yol sunar:
 
 - .NET tam zamanında (JıT) derleyicisi.
@@ -60,11 +67,13 @@ ms.locfileid: "94830681"
 - [Ngen.exe (yerel görüntü Oluşturucu)](../framework/tools/ngen-exe-native-image-generator.md).
 
 ### <a name="compilation-by-the-jit-compiler"></a>JıT derleyicisi tarafından derleme
+
  JıT derlemesi, bir derlemenin içeriği yüklenip yürütüldüğünde, uygulama çalışma zamanında MSIL 'i yerel koda dönüştürür. Ortak dil çalışma zamanı desteklenen her bir CPU mimarisi için bir JıT derleyicisi sağladığından, geliştiriciler JıT derlenebilecek ve farklı makine mimarilerine sahip farklı bilgisayarlarda çalıştırılabilen bir MSIL derlemeleri kümesi oluşturabilir. Ancak, yönetilen kodunuz platforma özgü yerel API 'Leri veya platforma özgü bir sınıf kitaplığını çağırırsa, yalnızca o işletim sisteminde çalışır.
 
  JıT derlemesi, bazı kodların yürütme sırasında hiçbir zaman çağrılmaması olasılığını dikkate alır. Bir PE dosyasındaki tüm MSIL 'yi yerel koda dönüştürmek için zaman ve bellek kullanmak yerine, yürütme sırasında MSIL 'yi dönüştürür ve sonuçta elde edilen yerel kodu belleğe depolayarak bu işlem bağlamındaki sonraki çağrılar için erişilebilir olur. Yükleyici, türü yüklenip başlatıldığında bir tür içinde her bir yönteme bir saplama oluşturur ve ekler. Bir yöntem ilk kez çağrıldığında, saplama denetimi JıT derleyicisine geçirir ve bu yöntem için MSIL 'i yerel koda dönüştürür ve saplama, doğrudan oluşturulan yerel koda işaret etmek üzere değişiklik yapar. Bu nedenle, JıT ile derlenen yönteme yapılan sonraki çağrılar doğrudan yerel koda gider.
 
 ### <a name="install-time-code-generation-using-ngenexe"></a>NGen.exe kullanarak kod oluşturmayı Install-Time
+
  JıT derleyicisi, bu derlemede tanımlanan tek tek Yöntemler çağrıldığında bir derlemenin MSIL 'sini yerel koda dönüştürdüğünden, çalışma zamanında performansı olumsuz etkiler. Çoğu durumda, performansı azaleden performans kabul edilebilir. Daha da önemlisi, JıT derleyicisi tarafından oluşturulan kod, derlemeyi tetikleyen işleme bağlanır. Birden çok işlem arasında paylaştırılamaz. Oluşturulan kodun bir uygulamanın birden çok üzerinde veya bir derleme kümesini paylaşan birden çok işlem arasında paylaşılmasına izin vermek için, ortak dil çalışma zamanı bir güncel derleme modunu destekler. Bu güncel derleme modu, MSIL derlemelerini JıT derleyicisi tarafından çok benzer şekilde yerel koda dönüştürmek için [Ngen.exe (yerel görüntü Oluşturucu)](../framework/tools/ngen-exe-native-image-generator.md) kullanır. Ancak, Ngen.exe işlemi JıT derleyicisinden üç şekilde farklıdır:
 
 - Uygulama çalışırken değil uygulamayı çalıştırmadan önce MSIL 'den yerel koda dönüştürme gerçekleştirir.
@@ -74,6 +83,7 @@ ms.locfileid: "94830681"
 - Oluşturulan kodu, diskteki bir dosya olarak yerel görüntü önbelleğinde devam ettirir.
 
 ### <a name="code-verification"></a>Kod doğrulama
+
  Bir yönetici, kodun doğrulamayı atlamasına izin veren bir güvenlik ilkesi kurmadığı sürece MSIL kodu, yerel koda derlemenin bir parçası olarak bir doğrulama işlemi iletmelidir. Doğrulama, kodun güvenli olup olmadığını öğrenmek için MSIL ve meta verileri inceler, bu da yalnızca erişim yetkisi olan bellek konumlarına erişir. Tür güvenliği nesneleri birbirlerinden yalıtmaya yardımcı olur ve bunları yanlışlıkla veya kötü amaçlı bozulmalara karşı korumanıza yardımcı olur. Ayrıca, kod üzerinde Güvenlik kısıtlamalarının güvenilir bir şekilde zorlanacağını güvence altına alır.
 
  Çalışma zamanı, aşağıdaki deyimlerin önem derecesi türü güvenli olan kod için doğru olmasına bağlıdır:
@@ -89,7 +99,9 @@ ms.locfileid: "94830681"
  [Başa dön](#introduction)
 
 <a name="running_code"></a>
+
 ## <a name="running-code"></a>Kod çalıştırma
+
  Ortak dil çalışma zamanı, yönetilen yürütmenin yürütme sırasında kullanılabilecek bir yerde ve hizmet almasını sağlayan altyapıyı sağlar. Bir yöntem çalıştırılmadan önce, işlemciye özel koda derlenmesi gerekir. MSIL 'nin oluşturulduğu her yöntem, ilk kez çağrıldığında JıT olarak derlenir ve sonra çalıştırılır. Yöntemin bir sonraki çalıştırılışında, var olan JıT derlenmiş yerel kod çalıştırılır. JıT derleme ve sonra kodu çalıştırma işlemi, yürütme tamamlanana kadar yinelenir.
 
  Yürütme sırasında yönetilen kod, atık toplama, güvenlik, yönetilmeyen kodla birlikte çalışabilirlik, çapraz dil hata ayıklama desteği ve gelişmiş dağıtım ve sürüm oluşturma desteği gibi hizmetleri alır.

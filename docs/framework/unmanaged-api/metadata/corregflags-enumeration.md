@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-ms.openlocfilehash: d8d7a43848929e49a8cb48fb957f37213ac78f2e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5ea588194720394ad9f361fbba702f3fcdcbe110
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007357"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706105"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags Numaralandırması
+
 Modül veya bileşik görüntü yüklerken kayıt için kullanılan bayrak değerlerini sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum
@@ -44,11 +45,12 @@ typedef enum
 |`regHasRefs`|Modülün veya Composite sınıf başvurularına sahip olduğunu belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

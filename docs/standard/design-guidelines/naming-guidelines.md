@@ -11,14 +11,15 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: e82b6941d3ea0243f4ae16bc9d42ea8d1f1fccfb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: de68eeb287b13bc9f55230243f23cd03508f2561
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820884"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706430"
 ---
 # <a name="naming-guidelines"></a>Adlandırma Kuralları
+
 Bir çerçeve geliştirmede tutarlı bir adlandırma kuralları kümesi takip etmek framework 'ün kullanılabilirlik açısından önemli bir katkı olabilir. Framework 'ün yaygın olarak ayrılmış projeler üzerinde birçok geliştirici tarafından kullanılmasını sağlar. Formun tutarlılığı ötesinde, Framework öğelerinin adları kolayca anlaşılmalıdır ve her bir öğenin işlevini iletmelidir.  
   
  Bu bölümün amacı, geliştiricilere anında anlam veren adlara neden olan tutarlı bir adlandırma kuralları kümesi sağlamaktır.  
@@ -26,6 +27,7 @@ Bir çerçeve geliştirmede tutarlı bir adlandırma kuralları kümesi takip et
  Bu adlandırma kurallarını genel kod geliştirme yönergeleri olarak benimseme, kodunuzun tamamında daha tutarlı adlandırma oluşmasına neden olsa da, bunları yalnızca herkese açık olan API 'lere (ortak veya korumalı türler ve Üyeler ve açıkça uygulanan arabirimler) uygulamanız gerekir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Büyük harfe dönüştürme kuralları](capitalization-conventions.md)  
  [Genel adlandırma kuralları](general-naming-conventions.md)  
  [Derlemelerin ve DLL 'Lerin adları](names-of-assemblies-and-dlls.md)  

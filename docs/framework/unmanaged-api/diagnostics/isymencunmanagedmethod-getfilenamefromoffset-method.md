@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-ms.openlocfilehash: 857410187edf1c712865626a3327dd4c92cc211f
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: ad9631039c8d032e7ffdba1e6098b66398f82277
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441935"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707392"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset Yöntemi
+
 Bir uzaklığa ilişkin dosya adını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,22 +38,25 @@ HRESULT GetFileNameFromOffset(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwOffset`  
- 'ndaki `ULONG32`Bu, sapmayı içeren bir.  
+ 'ndaki `ULONG32` Bu, sapmayı içeren bir.  
   
  `cchName`  
- 'ndaki `ULONG32`Arabellek boyutunu belirten bir `szName` .  
+ 'ndaki `ULONG32` Arabellek boyutunu belirten bir `szName` .  
   
  `pcchName`  
- dışı `ULONG32`Dosya adlarını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Dosya adlarını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
  `szName`  
  dışı Dosya adlarını içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

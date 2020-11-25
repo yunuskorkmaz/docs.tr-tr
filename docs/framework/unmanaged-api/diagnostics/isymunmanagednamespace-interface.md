@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d42bea4e-5848-4e43-a883-69af7a313ce9
 topic_type:
 - apiref
-ms.openlocfilehash: 3bcb642ac62fb00780a4fda7aaeebaabb386db33
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d9b295060426acd7f925bcf19c05ba216fdc2a4d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615078"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707905"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace Arabirimi
+
 Bir ad alanını temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -33,8 +34,9 @@ Bir ad alanını temsil eder.
 |[GetVariables Yöntemi](isymunmanagednamespace-getvariables-method.md)|Bu ad alanı içinde genel kapsamda tanımlanan tüm değişkenleri döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [Tanılama Sembol Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)

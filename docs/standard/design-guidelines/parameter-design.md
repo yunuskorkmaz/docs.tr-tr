@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 707ae48be3f45d82ed3819f943dc5ba3743172f3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 815075198f34c0c045603b9d377b9d5fbdf1a91d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828809"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707886"
 ---
 # <a name="parameter-design"></a>Parametre Tasarımı
 
@@ -40,6 +40,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
  Bu, Yöntemler arasındaki ilişkiyi daha iyi bir şekilde iletir.
 
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>Enum ve Boole parametreleri arasında seçim yapma  
+
  ✔️, bir üyenin iki veya daha fazla Boole parametresine sahip olması halinde numaralandırmalar kullanın.
 
  ❌ İki değerden daha fazla değere gerek olmadığından kesinlikle emin olmadığınız müddetçe, Boolean kullanmayın.
@@ -49,6 +50,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
  ✔️, gerçekten iki durumlu değerler olan Oluşturucu parametreleri için Boolean kullanmayı düşünün ve yalnızca Boole özelliklerini başlatmak için kullanılır.
 
 ### <a name="validating-arguments"></a>Bağımsız değişkenler doğrulanıyor
+
  ✔️ ortak, korumalı veya açıkça uygulanmış üyelere geçirilen bağımsız değişkenleri doğrular. <xref:System.ArgumentException?displayProperty=nameWithType>Doğrulama başarısız olursa, veya alt sınıflarından biri oluşturun.
 
  Gerçek doğrulamanın ortak veya korumalı üyenin kendisinde olması gerekmediğini unutmayın. Bu, bazı özel veya iç bir yordamın daha düşük bir düzeyinde gerçekleşecektir. Ana nokta, son kullanıcılara sunulan tüm yüzey alanının bağımsız değişkenleri denetlemesini sağlar.
@@ -66,6 +68,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
  Üye güvenliğe duyarlı ise, bir kopya yapmanız ve sonra bağımsız değişkeni doğrulamanız ve işlemesi önerilir.
 
 ### <a name="parameter-passing"></a>Parametre Geçirme
+
  Bir çerçeve tasarımcısının perspektifinden, üç temel parametre grubu vardır: değere göre parametreler, `ref` Parametreler ve `out` Parametreler.
 
  Bir bağımsız değişken bir by değeri parametresiyle geçirildiğinde, üye geçirilen gerçek bağımsız değişkenin bir kopyasını alır. Bağımsız değişken bir değer türü ise, bağımsız değişkenin bir kopyası yığına konur. Bağımsız değişken bir başvuru türü ise, başvurunun bir kopyası yığına konur. C#, VB.NET ve C++ gibi en popüler CLR dilleri, parametreleri değere göre geçirmek için varsayılan değer.
@@ -83,6 +86,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
  Kural için, başvuruları değiştirmek için kullanılabilecek bir yöntem gibi bazı sınırlı özel durumlar vardır.
 
 ### <a name="members-with-variable-number-of-parameters"></a>Değişken parametre sayısı olan Üyeler
+
  Değişken sayıda bağımsız değişken alan Üyeler, bir dizi parametresi sağlayarak ifade edilir. Örneğin, <xref:System.String> aşağıdaki yöntemi sağlar:
 
 ```csharp
@@ -140,6 +144,7 @@ public class String {
  C++ gibi bazı CLR dilleri, yöntem olarak adlandırılan değişken parametre listelerinin geçirilmesi için alternatif bir kural destekler `varargs` . Bu kural, CLS uyumlu olmadığından çerçeve içinde kullanılmamalıdır.
 
 ### <a name="pointer-parameters"></a>İşaretçi parametreleri
+
  Genel olarak, işaretçiler iyi tasarlanmış bir yönetilen kod çerçevesinin genel yüzey alanında görünmemelidir. Çoğu zaman işaretçiler kapsüllenmelidir. Ancak bazı durumlarda, birlikte çalışabilirlik nedenleriyle işaretçiler gereklidir ve bu gibi durumlarda işaretçiler kullanılması uygundur.
 
  ✔️, işaretçiler CLS uyumlu olmadığından, işaretçi bağımsız değişkeni alan tüm Üyeler için bir alternatif sağlar.

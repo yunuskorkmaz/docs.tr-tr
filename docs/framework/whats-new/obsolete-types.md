@@ -1,18 +1,18 @@
 ---
 title: .NET Framework eski türler
-description: Derleme tarafından düzenlenen .NET Framework 4,5 ve .NET 4,6 ' de kullanımdan kalkmış türlerin listesine bakın. Önerilen alternatifler de listelenir.
+description: Derleme tarafından düzenlenen .NET Framework 4,5 ve .NET Framework 4,6 ' de kullanımdan kalkmış türlerin listesine bakın. Önerilen alternatifler de listelenir.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: 795735b66c7568dada0196a6426a0a9aaf52398a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ccf39283152ecdc6b7827f2185de215c17ecc845
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558543"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707922"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework eski türler
 
@@ -134,8 +134,8 @@ Aşağıdaki tablolarda sistem derlemelerinde Kullanımdan kaldırılmış olara
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> kullanın.|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> kullanın.|
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> kullanın.|
-|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> yalnızca .NET 2,0 saydamlık uyumluluğu için kullanılır.|
-|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> yalnızca .NET 2,0 saydamlık uyumluluğu için kullanılır. Lütfen <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> bunun yerine kullanın.|
+|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> yalnızca .NET Framework 2,0 saydamlık uyumluluğu için kullanılır.|
+|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> yalnızca .NET Framework 2,0 saydamlık uyumluluğu için kullanılır. Lütfen <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> bunun yerine kullanın.|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|Bu tür kullanımdan kalkmıştır ve .NET Framework gelecek bir sürümünde kaldırılacaktır.|
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|Derleme düzeyinde bildirime dayalı güvenlik artık kullanılmıyor ve varsayılan olarak CLR tarafından uygulanmıyor.|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|Bu tür kullanımdan kalkmıştır ve .NET Framework gelecek bir sürümünde kaldırılacaktır.|

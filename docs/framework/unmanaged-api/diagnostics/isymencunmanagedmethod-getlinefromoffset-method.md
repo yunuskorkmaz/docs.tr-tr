@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-ms.openlocfilehash: d9a7b18e90a3038c1ffb634ccc7315143875c809
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 196993df9058d3eb8167e0144255c5fe366c54f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441922"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707366"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset Yöntemi
+
 Bir uzaklığa ilişkin satır bilgilerini alır. Eğer fark parametresi ( `dwOffset` ) bir sıra noktası değilse, bu yöntem önceki uzaklığa ilişkin satır bilgilerini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -38,8 +39,9 @@ HRESULT GetLineFromOffset(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwOffset`  
- 'ndaki `ULONG32`Bu, sapmayı içeren bir.  
+ 'ndaki `ULONG32` Bu, sapmayı içeren bir.  
   
  `pline`  
  dışı Satırı alan bir işaretçisi `ULONG32` .  
@@ -48,18 +50,20 @@ HRESULT GetLineFromOffset(
  dışı Sütununu alan öğesine yönelik bir işaretçi `ULONG32` .  
   
  `pendLine`  
- dışı `ULONG32`Bitiş satırını alan bir işaretçisi.  
+ dışı `ULONG32` Bitiş satırını alan bir işaretçisi.  
   
  `pendColumn`  
  dışı Bitiş sütununu alan öğesine yönelik bir işaretçi `ULONG32` .  
   
  `pdwStartOffset`  
- dışı `ULONG32`İlişkili dizi noktasını alan öğesine yönelik bir işaretçi.  
+ dışı `ULONG32` İlişkili dizi noktasını alan öğesine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

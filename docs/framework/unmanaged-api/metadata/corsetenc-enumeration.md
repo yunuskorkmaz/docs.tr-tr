@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-ms.openlocfilehash: 93a194ea72ab894544927cf96304397b7211b5ac
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: df945803f2d56d04ccc68f314eb55665579ed7fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009164"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706000"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC Numaralandırması
+
 Meta veri oluşturma sırasında davranışı etkilemek için kullanılan değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorSetENC {  
@@ -56,6 +57,7 @@ typedef enum CorSetENC {
 |`MDUpdateMask`|`MDUpdateENC`, `MDUpdateFull` Ve içerir `MDUpdateIncremental` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-ms.openlocfilehash: 950fb3b9c51ae2c9470b5aadd31c877d7aa6b6f6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 4604d78f66b872a30457c51bf65890caf613c4fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615065"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707639"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument Metodu
+
 Bir belge bulur. Belge dili, satıcı ve tür isteğe bağlıdır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT GetDocument (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `url`  
  'ndaki Belgeyi tanımlayan URL.  
   
@@ -53,9 +55,11 @@ HRESULT GetDocument (
  dışı Döndürülen arabirime yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

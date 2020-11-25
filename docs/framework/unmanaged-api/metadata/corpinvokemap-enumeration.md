@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: 199a649b0481c2a740926636345eefbda6831ef2
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: da3ee54b1c3361149c11a9cfad8bdb07a5007ecf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007552"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706157"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap Numaralandırması
+
 PInvoke çağrısı seçeneklerini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum  CorPinvokeMap {  
@@ -78,9 +79,9 @@ typedef enum  CorPinvokeMap {
 |`pmThrowOnUnmappableCharUseAssem`|Ayrılmış.|  
 |`pmThrowOnUnmappableCharEnabled`|Birlikte çalışma sıralayıcısı, eşlenebilir bir karakterle karşılaştığında bir özel durum oluşturur.|  
 |`pmThrowOnUnmappableCharDisabled`|Birlikte çalışma sıralayıcısı, eşlenebilir bir karakterle karşılaştığında özel durum oluşturmaz.|  
-|`pmThrowOnUnmappableCharMask`|Ayrıldı|  
+|`pmThrowOnUnmappableCharMask`|Ayrılmıştır|  
 |`pmSupportsLastError`|Aranan `SetLastError` yöntemden dönmeden önce çağrılan tarafından Win32 işlevini çağırmaya izin verin.|  
-|`pmCallConvMask`|Ayrıldı|  
+|`pmCallConvMask`|Ayrılmıştır|  
 |`pmCallConvWinapi`|Varsayılan platform çağırma kuralını kullanın. Örneğin, Windows 'ta varsayılan olarak `StdCall` ve Windows CE .net ' dir `Cdecl` .|  
 |`pmCallConvCdecl`|`Cdecl`Çağırma kuralını kullanın. Bu durumda, çağıran yığını temizler. Bu, işlevleri çağırma `varargs` (diğer bir deyişle, değişken sayıda parametre kabul eden işlevler) sunar.|  
 |`pmCallConvStdcall`|`StdCall`Çağırma kuralını kullanın. Bu durumda, çağrılan yığını temizler. Bu, platform Invoke ile yönetilmeyen işlevleri çağırmak için varsayılan kuraldır.|  
@@ -89,6 +90,7 @@ typedef enum  CorPinvokeMap {
 |`pmMaxValue`|Ayrılmış.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

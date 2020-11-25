@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: b2a3f2efc12392316f6d90242ef0a9224e7d13a4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 88cbf266d15a10ff7c56e07a30161e0a800989d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826319"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708055"
 ---
 # <a name="managed-threading-best-practices"></a>Yönetilen iş parçacığı en iyi uygulamaları
 
@@ -25,9 +25,11 @@ ms.locfileid: "94826319"
 > .NET Framework 4 ' den başlayarak, paralel kitaplığı ve PLıNQ görevi, çok iş parçacıklı programlamaya ait karmaşıklığın ve risklerden bazılarını azaltan API 'Ler sağlar. Daha fazla bilgi için bkz. [.net 'Te paralel programlama](../parallel-programming/index.md).  
   
 ## <a name="deadlocks-and-race-conditions"></a>Kilitlenmeler ve yarış koşulları  
+
  Çoklu iş parçacığı işleme ve yanıt verme sorunlarını çözer, ancak bunu yaparken yeni sorunlar ortaya koymaktadır: Kilitlenmeler ve yarış koşulları.  
   
 ### <a name="deadlocks"></a>Kilitlenmeler  
+
  İki iş parçacığının her biri zaten kilitlediği bir kaynağı kilitlemeyi denediğinde bir kilitlenme oluşur. Ne iş parçacığı başka bir işlem yapabilir.  
   
  Yönetilen iş parçacığı sınıflarının birçok yöntemi, kilitlenmeleri tespit etmenize yardımcı olmak için zaman aşımı sağlar. Örneğin, aşağıdaki kod adlı bir nesne üzerinde bir kilit edinmeye çalışır `lockObject` . Kilit 300 milisaniye içinde alınamıyorsa, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> döndürür `false` .  
@@ -59,6 +61,7 @@ else {
 ```  
   
 ### <a name="race-conditions"></a>Yarış durumları  
+
  Yarış durumu, bir programın sonucu, ilk olarak iki veya daha fazla iş parçacığının belirli bir kod bloğuna eriştiği durumlarda oluşan hatadır. Programı birçok kez çalıştırmak farklı sonuçlar üretir ve belirli bir çalıştırmanın sonucu tahmin edilemez.  
   
  Yarış koşulunun basit bir örneği bir alanı artırdığında. Bir sınıfın bir örneği oluşturulduğunda (Visual Basic **paylaşılan** ), **static** `objCt++;` (C#) veya `objCt += 1` (Visual Basic) gibi bir kod kullanarak, sınıfın bir örneği oluşturulduğu her seferinde artan bir özel statik alana sahip olduğunu varsayalım. Bu işlem, değeri `objCt` bir kayda yüklemeyi, değeri arttırmanızı ve içinde depolamayı gerektirir `objCt` .  
@@ -70,6 +73,7 @@ else {
  Yarış durumları, birden çok iş parçacığının etkinliklerini eşitlediğinizde de gerçekleşebilir. Her bir kod satırı yazdığınızda, bir iş parçacığının satırı yürütmeden önce (veya satırı oluşturan tek bir makine yönergelerinden önce) önceden atıldıktan sonra ne olabileceğini göz önünde bulundurmanız gerekir.  
   
 ## <a name="static-members-and-static-constructors"></a>Statik üyeler ve statik oluşturucular  
+
  Sınıf Oluşturucusu (C# ' deki `static` oluşturucu `Shared Sub New` Visual Basic) çalışmayı bitirene kadar bir sınıf başlatılmaz. Başlatılmamış bir türdeki kodun yürütülmesini engellemek için, ortak dil çalışma zamanı, sınıf oluşturucusunun çalışmayı bitirene kadar diğer iş parçacıklarından gelen tüm çağrıları `static` sınıf üyelerine ( `Shared` Visual Basic Üyeler) engeller.  
   
  Örneğin, bir sınıf Oluşturucusu yeni bir iş parçacığı başlatır ve iş parçacığı yordamı sınıfının bir üyesini çağırırsa `static` , sınıf oluşturucusu tamamlanana kadar yeni iş parçacığı engeller.  
@@ -83,6 +87,7 @@ Birden çok işlemci olup olmadığı veya sistemde yalnızca bir işlemcinin ku
 <xref:System.Environment.ProcessorCount?displayProperty=nameWithType>Çalışma zamanında kullanılabilir işlemcilerin sayısını öğrenmek için özelliğini kullanın.
   
 ## <a name="general-recommendations"></a>Genel öneriler  
+
  Birden çok iş parçacığı kullanırken aşağıdaki yönergeleri göz önünde bulundurun:  
   
 - <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>Diğer iş parçacıklarını sonlandırmak için kullanmayın. Başka bir iş parçacığında **iptali** çağırmak, bu iş parçacığı üzerinde bir özel durum oluşturmak için, iş parçacığının işleme göre hangi noktaya ulaşılmadığını bilmeksizin kaydedilir.  
@@ -163,6 +168,7 @@ Birden çok işlemci olup olmadığı veya sistemde yalnızca bir işlemcinin ku
     > <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>Yöntem aşırı yüklemesi, başvuru türleri için tür açısından güvenli bir alternatif sağlar.
   
 ## <a name="recommendations-for-class-libraries"></a>Sınıf kitaplıkları için öneriler  
+
  Çoklu iş parçacığı için sınıf kitaplıkları tasarlarken aşağıdaki yönergeleri göz önünde bulundurun:  
   
 - Mümkünse eşitleme gereksinimini önleyin. Bu, özellikle de yoğun olarak kullanılan kod için geçerlidir. Örneğin, bir algoritma ortadan kaldırmak yerine bir yarış durumuna göre ayarlanabilir. Gereksiz eşitleme performansı düşürür ve Kilitlenmeler ve yarış koşullarından oluşan olasılığı oluşturur.  

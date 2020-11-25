@@ -6,14 +6,15 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-ms.openlocfilehash: a524c0b0e01fbde95ce2341874511960b3e5738e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6ee3b8cdf348a5eade3903e2d26b4f9b93886305
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616859"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706820"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri
+
 Bu bölümde, yönetilmeyen ana bilgisayarların .NET Framework 4, .NET Framework 4,5 ve sonraki sürümlerindeki ortak dil çalışma zamanını (CLR) bütünleştirmek için kullanabileceği arabirimler açıklanmaktadır. Bu arabirimler, bir ana bilgisayarın çalışma zamanını yapılandırmak ve bir işleme yüklemek için yöntemler sağlar.  
   
  .NET Framework 4 ' te başlayarak, tüm barındırma arabirimleri aşağıdaki özelliklere sahiptir:  
@@ -25,6 +26,7 @@ Bu bölümde, yönetilmeyen ana bilgisayarların .NET Framework 4, .NET Framewor
 - [Cocreateınstance işlevini](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)kullanan hiçbir Grup modeli, toplama veya kayıt defteri etkinleştirmesi yoktur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [ICLRAppDomainResourceMonitor Arabirimi](iclrappdomainresourcemonitor-interface.md)  
  Bir uygulama etki alanının belleğini ve CPU kullanımını denetleyen yöntemler sağlar.  
   
@@ -53,11 +55,12 @@ Bu bölümde, yönetilmeyen ana bilgisayarların .NET Framework 4, .NET Framewor
  [ICLRTask arabiriminin](iclrtask-interface.md)tüm işlevlerini sağlar; Ayrıca, geçerli iş parçacığında iş parçacığı iptal vermesinin ertelenmesini sağlayan yöntemler sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Kullanım Dışı CLR Barındırma Arabirimleri ve Yardımcı Sınıfları](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  1,0 ve 1,1 .NET Framework sürümleriyle birlikte sunulan barındırma arabirimlerini açıklar.  
   
  [CLR Barındırma Arabirimleri](clr-hosting-interfaces.md)  
  2,0, 3,0 ve 3,5 .NET Framework sürümleriyle birlikte sunulan barındırma arabirimlerini açıklar.  
   
- [Barındırma](index.md)  
+ [Hosting](index.md)  
  .NET Framework barındırılmasını tanıtır.

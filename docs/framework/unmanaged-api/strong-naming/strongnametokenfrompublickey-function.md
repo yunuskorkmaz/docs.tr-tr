@@ -18,19 +18,20 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-ms.openlocfilehash: 20be3114908ef78966eead05ae8ba6333a491404
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89556cf0e1ef65c35278a526e10fc791063ea2c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175063"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708354"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey İşlevi
-Ortak anahtarı temsil eden bir belirteç alır. Güçlü bir ad belirteci, ortak anahtarın kısaltılmış biçimidir.  
+
+Ortak anahtarı temsil eden bir belirteç alır. Tanımlayıcı ad belirteci, ortak anahtarın kısaltılmış biçimidir.  
   
- Bu işlev amortismana kaldırıldı. Bunun yerine [ICLRStrongName::StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md) yöntemini kullanın.  
+ Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md) yöntemini kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 BOOLEANStrongNameTokenFromPublicKey (
@@ -42,34 +43,38 @@ BOOLEANStrongNameTokenFromPublicKey (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbPublicKeyBlob`  
- [içinde] Güçlü ad imzasını oluşturmak için kullanılan anahtar çiftinin ortak bölümünü içeren [PublicKeyBlob](publickeyblob-structure.md) türünden bir yapı.  
+ 'ndaki Tanımlayıcı ad imzasını oluşturmak için kullanılan anahtar çiftinin ortak bölümünü içeren [PublicKeyBlob](publickeyblob-structure.md) türünde bir yapı.  
   
  `cbPublicKeyBlob`  
- [içinde] Boyutu, bayt, ve. `pbPublicKeyBlob`  
+ 'ndaki Bayt cinsinden boyutu `pbPublicKeyBlob` .  
   
  `ppbStrongNameToken`  
- [çıkış] Anahtara karşılık gelen güçlü ad `pbPublicKeyBlob`belirteci. Ortak dil çalışma süresi belirteci döndürmek için bellek ayırır. Arayan, [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini kullanarak bu belleği serbest etmelidir.  
+ dışı Geçilen anahtara karşılık gelen tanımlayıcı ad belirteci `pbPublicKeyBlob` . Ortak dil çalışma zamanı, belirtecin döndürüleceği belleği ayırır. Çağıranın bu belleği [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini kullanarak boşaltmalıdır.  
   
  `pcbStrongNameToken`  
- [çıkış] Döndürülen güçlü ad belirteci boyutu, baytlar halinde.  
+ dışı Döndürülen tanımlayıcı ad belirtecinin bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarılı bir şekilde tamamlandığında; aksi `false`takdirde, .  
+
+ `true` başarıyla tamamlandığında; Aksi takdirde, `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Güçlü bir ad belirteci, meta verilerde önemli bilgileri depolarken yer kazanmak için kullanılan ortak anahtarın kısaltılmış biçimidir. Özellikle, bağlı derleme başvurmak için derleme başvurularında güçlü ad belirteçleri kullanılır.  
+
+ Tanımlayıcı ad belirteci, anahtar bilgilerini meta verilerde depolarken alan kazanmak için kullanılan bir ortak anahtarın kısaltılmış biçimidir. Özellikle, tanımlayıcı ad belirteçleri, bağımlı derlemeye başvurmak için derleme başvurularında kullanılır.  
   
- `StrongNameTokenFromPublicKey` İşlev başarıyla tamamlanmamışsa, oluşturulan son hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini arayın.  
+ `StrongNameTokenFromPublicKey`İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak Için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** StrongName.h  
+ **Üst bilgi:** StrongName. h  
   
- **Kütüphane:** mscoree.dll'de kaynak olarak dahil  
+ **Kitaplık:** mscoree.dll bir kaynak olarak eklendi  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

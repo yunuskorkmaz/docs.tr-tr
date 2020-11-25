@@ -12,17 +12,19 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 409e881198a359fa28356e22ea73d5b724742a0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820919"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706482"
 ---
 # <a name="names-of-type-members"></a>Tür Üyelerinin Adları
+
 Türler üye yapılır: Yöntemler, özellikler, olaylar, oluşturucular ve alanlar. Aşağıdaki bölümlerde, adlandırma türü üyelerine yönelik kılavuzlar açıklanır.
 
 ## <a name="names-of-methods"></a>Yöntemlerin adları
+
  Yöntemler işlem yapma yöntemi olduğundan, tasarım yönergeleri, yöntem adlarının fiiller veya fiil tümceleri olmasını gerektirir. Bu kılavuz aşağıdaki şekilde, yöntem adlarını özellik ve tür adlarından ayırt etmek için kullanılır, bu da isim veya sıfatıcı tümceciklerdir.
 
  ✔️ fiiller veya fiil tümceleri olan yöntem adlarını verir.
@@ -36,6 +38,7 @@ public class String {
 ```
 
 ## <a name="names-of-properties"></a>Özelliklerin adları
+
  Diğer üyelerin aksine, özelliklere ad tümceciği veya sıfatıcı adlar verilmelidir. Bunun nedeni, bir özelliğin veri başvurduğu ve özelliğin adının bu şekilde yansıtıldığı anlamına gelir. Pascalum, her zaman özellik adları için kullanılır.
 
  ✔️ adı, isim tümceciğini veya sıfatıcı kullanarak ad özellikleri YAPıN.
@@ -62,6 +65,7 @@ public class Control {
 ```
 
 ## <a name="names-of-events"></a>Olay adları
+
  Olaylar her zaman, ya da oluşan bir eyleme (ya da oluşan bir işlem) başvurur. Bu nedenle, metotlarda olduğu gibi, olaylar fiiller ile adlandırılır ve etkinliğin ne zaman gerçekleştiğini göstermek için fiil zaman hali kullanılır.
 
  bir fiil veya fiil ifadesi ile ad olayları ✔️.
@@ -85,6 +89,7 @@ public class Control {
  ✔️ olay bağımsız değişkeni sınıflarını "EventArgs" sonekiyle birlikte adlandırın.
 
 ## <a name="names-of-fields"></a>Alanların adları
+
  Alan adlandırma yönergeleri statik ortak ve korumalı alanlar için geçerlidir. İç ve özel alanlar yönergeler kapsamında değildir ve ortak veya korumalı örnek alanlarına [üye tasarım yönergeleri](member.md)tarafından izin verilmez.
 
  ✔️, alan adlarında Pascalbüyük harfleri kullanır.

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ef83bd2-3d8e-499e-8a12-d9d6fd6ced30
 topic_type:
 - apiref
-ms.openlocfilehash: 4a23e9aa259f430c0d0579657952fc6aba4c307c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d48c2bdd55e487038048f432c5586d49f393118c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441662"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706950"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback Metodu
+
 Kullanıcının `IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` bellekten hata ayıklama dizini bilgilerini elde etmek için bir veya geri çağırma yoluyla uygulama veya sağlama yapmasına izin verir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -38,6 +39,7 @@ HRESULT GetReaderFromCallback(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `importer`  
  'ndaki Meta veri içeri aktarma arabirimine yönelik bir işaretçi.  
   
@@ -57,9 +59,11 @@ HRESULT GetReaderFromCallback(
  dışı Döndürülen [ıdimunmanagedreader](isymunmanagedreader-interface.md) arabirimine ayarlanmış bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** Corsya. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.

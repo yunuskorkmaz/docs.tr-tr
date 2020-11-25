@@ -1,6 +1,6 @@
 ---
-title: Başlama fonksiyonu (Yönetilmeyen API Başvurusu)
-description: BeginEnumeration işlevi numaralandırmanın başlangıcına kadar bir numaralandırıcıyı sıfırlar
+title: BeginEnumeration işlevi (yönetilmeyen API Başvurusu)
+description: BeginEnumeration işlevi bir Numaralandırıcı numaralandırmanın başlangıcına sıfırlanır
 ms.date: 11/06/2017
 api_name:
 - BeginEnumeration
@@ -14,19 +14,20 @@ helpviewer_keywords:
 - BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: eac23916bd78ec3970a87566e2d2f4d79b379824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6057526ddbe2efed65f8569e829c35524829e43e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176883"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708224"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration işlevi
-Numaralandırmanın başına kadar bir numaralandırıcıyı sıfırlar.  
+
+Bir numaralandırıcıyı numaralandırmanın başına geri döndürür.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT BeginEnumeration (
@@ -39,69 +40,70 @@ HRESULT BeginEnumeration (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`\
-[içinde] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`\
-[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `lEnumFlags`\
-[içinde] [Numaralandırmada](#remarks) yer alan özellikleri denetleyen Açıklamalar bölümünde açıklanan bayrakların veya değerlerin bityişli bir birleşimi.
+'ndaki Numaralandırmada içerilen özellikleri denetleyen [açıklamalar](#remarks) bölümünde açıklanan bayrakların veya değerlerin bit düzeyinde birleşimi.
 
 ## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bulunan bayrakların `lEnumFlags` birleşimi geçersiz veya geçersiz bir bağımsız değişken belirtilmiş. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | İkinci bir `BeginEnumeration` arama, müdahale etmeden [`EndEnumeration`](endenumeration.md)yapıldı. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Yeni bir numaralandırmabaşlatmak için yeterli bellek kullanılabilir değil. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | İçindeki bayrakların birleşimi `lEnumFlags` geçersiz ya da geçersiz bir bağımsız değişken belirtildi. |
+|`WBEM_E_UNEXPECTED` | 0x8004101D | İçin bir `BeginEnumeration` araya giren çağrı yapılmadan ikinci bir çağrı yapıldı [`EndEnumeration`](endenumeration.md) . |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Yeni bir sabit listesi başlatmak için yeterli kullanılabilir bellek yok. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu [işlev, IWbemClassObject::BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) yöntemine bir çağrı yıkıyor.
+Bu işlev, [IWbemClassObject:: BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) yöntemine bir çağrı kaydırır.
 
-`lEnumFlags` Bağımsız değişken *WbemCli.h* üstbilgi dosyasında tanımlandığı şekilde geçirilebilen bayraklar veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz.  Her gruptan bir bayrağı başka bir gruptan herhangi bir bayrakla birleştirebilirsiniz. Ancak, aynı grubun bayrakları birbirini dışlar.
+Bağımsız değişken olarak geçirilebilecek bayraklar, `lEnumFlags` *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz.  Her bir grup için herhangi bir bayrak ile bir bayrak birleştirebilirsiniz. Ancak, aynı gruptaki Bayraklar birbirini dışlıyor.
 
 **Grup 1**
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Yalnızca anahtarı oluşturan özellikleri ekleyin. |
+|`WBEM_FLAG_KEYS_ONLY` | 4, | Yalnızca anahtarı oluşturan özellikleri ekleyin. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Yalnızca nesne başvuruları olan özellikleri ekleyin. |
 
 **Grup 2**
 
 Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Numaralandırmayı yalnızca sistem özellikleriyle sınırlandırın. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Yerel ve yayılan özellikleri ekleyin, ancak sistem özelliklerini numaralandırmadan hariç tutar. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Numaralandırmayı yalnızca sistem özellikleriyle sınırlayın. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Yerel ve yayılmış özellikleri ekleyin, ancak Numaralandırmadaki sistem özelliklerini dışlayın. |
 
 Sınıflar için:
 
 Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Numaralandırmayı sınıf tanımında geçersiz kılınan özelliklerle sınırlandırın. |
-|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Numaralandırmayı geçerli sınıf tanımında geçersiz kılınan özelliklerle ve sınıfta tanımlanan yeni özelliklerle sınırlandırın. |
-| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Bir maske (bayrak yerine) bir `lEnumFlags` değer karşı ya `WBEM_FLAG_CLASS_OVERRIDES_ONLY` `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` da ayarlanmış olup olmadığını kontrol etmek için uygulamak için. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Numaralandırmayı sınıfın kendisinde tanımlanan veya değiştirilen özelliklerle sınırlandırın. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Numaralandırmayı temel sınıflardan devralınan özelliklerle sınırlandırın. |
+|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Sabit listesini, sınıf tanımında geçersiz kılınan özelliklerle sınırlayın. |
+|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Sabit listesini geçerli sınıf tanımında geçersiz kılınan özelliklerle ve sınıfta tanımlanan yeni özelliklerle sınırlayın. |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Ya `lEnumFlags` da ayarlanmış olup olmadığını denetlemek için bir değere karşı uygulanacak bir maske (bayrak yerine) `WBEM_FLAG_CLASS_OVERRIDES_ONLY` `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` . |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Sabit listesini, sınıfın kendisinde tanımlanan veya değiştirilen özelliklerle sınırlayın. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Sabit listesini temel sınıflardan devralınan özelliklerle sınırlayın. |
 
-Örneğin:
+Örnekler için:
 
 Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Numaralandırmayı sınıfın kendisinde tanımlanan veya değiştirilen özelliklerle sınırlandırın. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Numaralandırmayı temel sınıflardan devralınan özelliklerle sınırlandırın. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Sabit listesini, sınıfın kendisinde tanımlanan veya değiştirilen özelliklerle sınırlayın. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Sabit listesini temel sınıflardan devralınan özelliklerle sınırlayın. |
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

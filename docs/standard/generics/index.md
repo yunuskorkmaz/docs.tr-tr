@@ -26,18 +26,19 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: f361e0e250368694d7afa078183b1e5cb7ef1464
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098820"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707873"
 ---
 # <a name="generics-in-net"></a>.NET içindeki Genel Türler
 
 Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalıştığı kesin veri türüne göre uyarlamanızı sağlar. Örneğin, anahtar <xref:System.Collections.Hashtable> ve değerlerin herhangi bir türde olmasına izin veren sınıfını kullanmak yerine, <xref:System.Collections.Generic.Dictionary%602> Genel sınıfı kullanabilir ve anahtar ve değer için izin verilen türleri belirtebilirsiniz. Genel türlerin avantajları arasında kod yeniden kullanılabilirliği ve tür güvenliği artar.  
 
 ## <a name="defining-and-using-generics"></a>Genel türleri tanımlama ve kullanma
+
  Genel türler, depotıkları veya kullandıkları bir veya daha fazla türden bir veya daha fazla yer tutucu (tür parametreleri) içeren sınıflar, yapılar, arabirimler ve yöntemlerdir. Genel koleksiyon sınıfı, bir tür parametresini, depoladığı nesnelerin türü için yer tutucu olarak kullanabilir; tür parametreleri, alanlarının türleri ve yöntemlerinin parametre türleri olarak görüntülenir. Genel bir yöntem, kendi tür parametresini dönüş değerinin türü veya resmi parametrelerinden birinin türü olarak kullanabilir. Aşağıdaki kod basit bir genel sınıf tanımını gösterir.  
   
  [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
@@ -51,6 +52,7 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
  [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
 
 ### <a name="generics-terminology"></a>Genel türler terminolojisi  
+
  .NET ' te genel türleri tartışmak için aşağıdaki terimler kullanılır:  
   
 - *Genel tür tanımı* , şablon olarak işlev gören veya kullanabileceği türlerin yer tutucuları içeren bir sınıf, yapı veya arabirim bildirimidir. Örneğin, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> sınıfı iki tür içerebilir: anahtarlar ve değerler. Genel tür tanımı yalnızca bir şablon olduğundan, bir sınıf, yapı veya genel tür tanımı olan arabirimin örneklerini oluşturamazsınız.  
@@ -80,6 +82,7 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
  [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
 ## <a name="advantages-and-disadvantages-of-generics"></a>Genel türlerin avantajları ve dezavantajları
+
  Genel koleksiyonları ve temsilcileri kullanmanın birçok avantajı vardır:  
   
 - Tür güvenliği. Genel türler, türden güvenlik yükünü derleyicisinden derleyiciye kaydır. Derleme zamanında zorlandığından, doğru veri türü için test etmek için kod yazmanıza gerek yoktur. Tür atama ihtiyacı ve çalışma zamanı hatalarının olma olasılığı azalır.  
@@ -112,6 +115,7 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
      Daha fazla bilgi için içindeki "Iç Içe türler" başlığına bakın <xref:System.Type.MakeGenericType%2A> .  
 
 ## <a name="class-library-and-language-support"></a>Sınıf kitaplığı ve dil desteği  
+
  .NET aşağıdaki ad alanlarında çok sayıda genel koleksiyon sınıfı sağlar:  
   
 - <xref:System.Collections.Generic>Ad alanı, .NET tarafından sunulan <xref:System.Collections.Generic.List%601> ve genel sınıflar gibi genel koleksiyon türlerinin çoğunu içerir <xref:System.Collections.Generic.Dictionary%602> .  
@@ -127,6 +131,7 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
  Visual C++, C# ve Visual Basic tümü, genel türleri tanımlamaya ve kullanmaya yönelik tam destek sağlar. Dil desteği hakkında daha fazla bilgi için, bkz. [Visual Basic genel türler](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Generics 'e giriş](../../csharp/programming-guide/generics/index.md)ve [Visual C++ genel türler](/cpp/windows/overview-of-generics-in-visual-cpp).
 
 ## <a name="nested-types-and-generics"></a>İç içe türler ve genel türler  
+
  Genel türde iç içe yerleştirilmiş bir tür, kapsayan genel türün tür parametrelerine bağlı olabilir. Ortak dil çalışma zamanı, iç içe geçmiş türleri kendi genel tür parametrelerine sahip olmasalar bile genel olacak şekilde değerlendirir. İç içe geçmiş bir türün örneğini oluşturduğunuzda, kapsayan tüm genel türler için tür bağımsız değişkenleri belirtmeniz gerekir.  
 
 ## <a name="related-topics"></a>İlgili Konular  
@@ -135,7 +140,7 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
 |-----------|-----------------|  
 |[.NET 'teki genel Koleksiyonlar](collections.md)|.NET 'teki genel koleksiyon sınıflarını ve diğer genel türleri açıklar.|  
 |[Dizileri ve listeleri Işlemek için genel Temsilciler](delegates-for-manipulating-arrays-and-lists.md)|Bir dizi veya koleksiyonun öğelerinde yapılacak dönüşümler, arama koşulları ve eylemler için genel temsilcileri açıklar.|  
-|[Genel arabirimler](interfaces.md)|Genel türlerin aileleri arasında ortak işlevsellik sağlayan genel arabirimleri açıklar.|  
+|[Genel Arabirimler](interfaces.md)|Genel türlerin aileleri arasında ortak işlevsellik sağlayan genel arabirimleri açıklar.|  
 |[Kovaryans ve değişken sapması](covariance-and-contravariance.md)|Genel tür parametrelerindeki Kovaryans ve değişken varyansı açıklar.|  
 |[Yaygın olarak kullanılan koleksiyon türleri](../collections/commonly-used-collection-types.md)|.NET 'teki genel türler dahil olmak üzere koleksiyon türlerinin özellikleri ve kullanım senaryoları hakkında özet bilgiler sağlar.|  
 |[Genel Koleksiyonlar ne zaman kullanılır?](../collections/when-to-use-generic-collections.md)|Genel koleksiyon türlerinin ne zaman kullanılacağını belirlemek için genel kuralları açıklar.|  
@@ -145,6 +150,7 @@ Genel türler, bir yöntemi, sınıfı, yapıyı veya arabirimi üzerinde çalı
 |[Visual C++ 'daki genel bakışa genel bakış](/cpp/windows/overview-of-generics-in-visual-cpp)|Genel türler ve şablonlar arasındaki farklılıklar dahil olmak üzere C++ kullanıcıları için genel türler özelliğini açıklar.|  
 
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

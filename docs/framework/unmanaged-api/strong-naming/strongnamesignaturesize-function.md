@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-ms.openlocfilehash: a19d875b8fb81f2af3821e69452f0f0ed591cd22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a2b3afe66f1eaa358c5f80de50f14ceb730048b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176896"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708485"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize İşlevi
-Güçlü ad imzasının boyutunu döndürür. `StrongNameSignatureSize`genellikle derleyiciler tarafından, gecikme imzalı bir derleme oluştururken dosyada ne kadar alan ayırılabildiğini belirlemek için kullanılır.  
+
+Tanımlayıcı ad imzasının boyutunu döndürür. `StrongNameSignatureSize` genellikle derleyiciler tarafından, gecikmeli imzalanmış bir derleme oluştururken dosyada ne kadar alan ayrılacağını tespit etmek için kullanılır.  
   
- Bu işlev amortismana kaldırıldı. Bunun yerine [ICLRStrongName::StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md) yöntemini kullanın.  
+ Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: Strongnametifturesize](../hosting/iclrstrongname-strongnamesignaturesize-method.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 BOOLEAN StrongNameSignatureSize (
@@ -37,29 +38,33 @@ BOOLEAN StrongNameSignatureSize (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbPublicKeyBlob`  
- [içinde] Güçlü ad imzasını oluşturmak için kullanılan anahtar çiftinin ortak bölümünü içeren [PublicKeyBlob](publickeyblob-structure.md) türünden bir yapı.  
+ 'ndaki Tanımlayıcı ad imzasını oluşturmak için kullanılan anahtar çiftinin ortak bölümünü içeren [PublicKeyBlob](publickeyblob-structure.md) türünde bir yapı.  
   
  `cbPublicKeyBlob`  
- [içinde] Boyutu, bayt, ve. `pbPublicKeyBlob`  
+ 'ndaki Bayt cinsinden boyutu `pbPublicKeyBlob` .  
   
  `pcbSize`  
- [içinde] Güçlü ad imzasını depolamak için gereken bayt sayısı.  
+ 'ndaki Tanımlayıcı ad imzasını depolamak için gereken bayt sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarılı bir şekilde tamamlandığında; aksi `false`takdirde, .  
+
+ `true` başarıyla tamamlandığında; Aksi takdirde, `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `StrongNameSignatureSize` İşlev başarıyla tamamlanmamışsa, oluşturulan son hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini arayın.  
+
+ `StrongNameSignatureSize`İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak Için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** StrongName.h  
+ **Üst bilgi:** StrongName. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

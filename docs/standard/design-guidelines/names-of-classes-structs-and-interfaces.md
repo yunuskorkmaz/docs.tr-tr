@@ -13,14 +13,15 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-ms.openlocfilehash: b9de9329cc8e1bfc47a46523c7119bb3b2c244d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 49bafda0d5c362fa02313c5304436069d054cfd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290220"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706521"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Sınıf, Yapı ve Arabirimlerin Adları
+
 Aşağıdaki adlandırma yönergeleri genel tür adlandırması için geçerlidir.
 
  ✔️ sınıfları ve yapıları, Pascalbüyük harfleri kullanarak isimler veya isim tümcecikleriyle adlandırın.
@@ -31,7 +32,7 @@ Aşağıdaki adlandırma yönergeleri genel tür adlandırması için geçerlidi
 
  İsimler ve ad tümcecikleri nadiren kullanılmalıdır ve bu, türün bir arabirim değil, soyut bir sınıf olması gerektiğini gösteriyor olabilir.
 
- ❌Sınıf adlarına bir ön ek vermeyin (ör. "C").
+ ❌ Sınıf adlarına bir ön ek vermeyin (ör. "C").
 
  ✔️, türetilmiş sınıfların adını temel sınıfın adı ile sona erdirmenizi düşünün.
 
@@ -44,7 +45,8 @@ Aşağıdaki adlandırma yönergeleri genel tür adlandırması için geçerlidi
  ✔️, sınıfın standart bir uygulama olduğu bir sınıf-arabirim çifti tanımlarken adların yalnızca arabirim adındaki "I" ön ekiyle farklı olduğundan emin olun.
 
 ## <a name="names-of-generic-type-parameters"></a>Genel tür parametrelerinin adları
- .NET Framework 2,0 ' e Genel türler eklendi. Özellik, *Type parametresi*olarak adlandırılan yeni bir tanımlayıcı türü sunmuştur.
+
+ .NET Framework 2,0 ' e Genel türler eklendi. Özellik, *Type parametresi* olarak adlandırılan yeni bir tanımlayıcı türü sunmuştur.
 
  ✔️, genel tür parametrelerini açıklayıcı adlarla, tek bir harf adı tamamen kendi kendine açıklama olmadığından ve açıklayıcı bir ad değer eklemedikçe tanımlayıcı adlarla adlandırın.
 
@@ -69,14 +71,15 @@ public interface ISessionChannel<TSession> where TSession : ISession {
  Örneğin, ile kısıtlanmış bir parametre `ISession` çağrılabilir `TSession` .
 
 ## <a name="names-of-common-types"></a>Ortak türlerin adları
+
  ✔️, belirli .NET Framework türlerinden türetilen türleri adlandırırken veya BUNLARı uygulamadan aşağıdaki tabloda açıklanan yönergeleri izleyin.
 
 |Temel tür|Türetilmiş/uygulama türü Kılavuzu|
 |---------------|------------------------------------------|
 |`System.Attribute`|✔️ "özniteliğini" sonekini özel öznitelik sınıflarının adlarına ekleme.|
-|`System.Delegate`|✔️ "EventHandler" sonekini, olaylarda kullanılan temsilcilerin adlarına ekler.<br /><br /> ✔️, "geri çağırma" sonekini olay işleyicileri olarak kullanıldıkları dışındaki temsilcilerin adlarına ekler.<br /><br /> ❌"Temsilci" sonekini bir temsilciye eklemeyin.|
+|`System.Delegate`|✔️ "EventHandler" sonekini, olaylarda kullanılan temsilcilerin adlarına ekler.<br /><br /> ✔️, "geri çağırma" sonekini olay işleyicileri olarak kullanıldıkları dışındaki temsilcilerin adlarına ekler.<br /><br /> ❌ "Temsilci" sonekini bir temsilciye eklemeyin.|
 |`System.EventArgs`|"EventArgs" sonekini eklemek ✔️.|
-|`System.Enum`|❌Bu sınıftan türemeyin; Bunun yerine diliniz tarafından desteklenen anahtar sözcüğü kullanın; Örneğin, C# ' de `enum` anahtar sözcüğünü kullanın.<br /><br /> ❌"Enum" veya "Flag" sonekini eklemeyin.|
+|`System.Enum`|❌ Bu sınıftan türemeyin; Bunun yerine diliniz tarafından desteklenen anahtar sözcüğü kullanın; Örneğin, C# ' de `enum` anahtar sözcüğünü kullanın.<br /><br /> ❌ "Enum" veya "Flag" sonekini eklemeyin.|
 |`System.Exception`|son eki "özel durum" ✔️ ekler.|
 |`IDictionary` <br /> `IDictionary<TKey,TValue>`|"Sözlük" sonekini eklemek ✔️. `IDictionary`Bu, belirli bir koleksiyon türüdür, ancak bu kılavuz, aşağıdaki genel Koleksiyonlar Kılavuzu ' na göre önceliklidir.|
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|"Collection" sonekini eklemek ✔️.|
@@ -84,21 +87,22 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`CodeAccessPermission IPermission`|✔️ sonek "Iznini" ekleyin.|
 
 ## <a name="naming-enumerations"></a>Sabit listeleri adlandırma
+
  Genel olarak numaralandırma türlerinin (numaralandırmalar olarak da bilinir) adları, standart tür adlandırma kurallarını (Pascalbüyük harfleri, vb.) izlemelidir. Ancak, özel olarak Numaralandırmalar için uygulanan ek yönergeler vardır.
 
  ✔️, değerleri bit alanları olmadığı takdirde sabit listesi için tekil tür adı kullanın.
 
  ✔️, bit alanları olan bir numaralandırma için, Flags sabit listesi olarak da adlandırılan bir çoğul tür adı kullanın.
 
- ❌Enum türü adlarında bir "enum" soneki kullanmayın.
+ ❌ Enum türü adlarında bir "enum" soneki kullanmayın.
 
- ❌Enum türü adlarında "Flag" veya "Flags" soneklerini kullanmayın.
+ ❌ Enum türü adlarında "Flag" veya "Flags" soneklerini kullanmayın.
 
- ❌Sabit listesi değer adlarında bir ön ek kullanmayın (örn. "ad" with ADO numaralandırmaları, zengin metin numaralandırmaları için "RTF" vb.).
+ ❌ Sabit listesi değer adlarında bir ön ek kullanmayın (örn. "ad" with ADO numaralandırmaları, zengin metin numaralandırmaları için "RTF" vb.).
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Microsoft Windows geliştirme serisi 'nin bir parçası olarak, Addison-Wesley Professional tarafından, yeniden [kullanılabilir .NET kitaplıkları Için kurallar, deyimler ve desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vabzysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

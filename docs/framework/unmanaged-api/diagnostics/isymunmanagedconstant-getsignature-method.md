@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 332d60418c744a9391c7c0afc20248c2239b090c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 4436e4528c1dc486eb5c443c5a9467ac69a26c7d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441626"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706937"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature Yöntemi
+
 Sabitin imzasını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,23 +37,26 @@ HRESULT GetSignature(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cSig`  
- 'ndaki `pcSig`Parametrenin işaret ettiği arabelleğin uzunluğu.  
+ 'ndaki `pcSig` Parametrenin işaret ettiği arabelleğin uzunluğu.  
   
  `pcSig`  
- dışı `ULONG32`İmzayı içermesi için gereken arabelleğin boyutunu, karakter cinsinden alan bir işaretçisi.  
+ dışı `ULONG32` İmzayı içermesi için gereken arabelleğin boyutunu, karakter cinsinden alan bir işaretçisi.  
   
  `sig`  
  dışı İmzayı depolayan arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ISymUnmanagedConstant Arabirimi](isymunmanagedconstant-interface.md)
 - [GetName Yöntemi](isymunmanagedconstant-getname-method.md)
-- [GetValue Yöntemi](isymunmanagedconstant-getvalue-method.md)
+- [GetValue Metodu](isymunmanagedconstant-getvalue-method.md)
