@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: be9cab04-65ec-44d5-a39a-f90709fdd043
 topic_type:
 - apiref
-ms.openlocfilehash: 24c316ea6bab11fb55e8e0fc1dc9832a312dbc6a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 75341b1af034972c861b75f29a06eaa2c4e33c3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397191"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703046"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>ICorDebugUnmanagedCallback::DebugEvent Yöntemi
+
 Hata ayıklayıcıyı yerel bir olayın harekete geçirildiğinde bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DebugEvent (  
@@ -35,6 +36,7 @@ HRESULT DebugEvent (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pDebugEvent`  
  'ndaki Yerel olaya yönelik bir işaretçi.  
   
@@ -42,6 +44,7 @@ HRESULT DebugEvent (
  [in] `true` yönetilmeyen bir olay oluştuktan sonra yönetilen işlem durumu ile etkileşim varsa, hata ayıklayıcı [ICorDebugController:: Continue](icordebugcontroller-continue-method.md); Aksi takdirde, `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Hata ayıklanmakta olan iş parçacığı bir Win32 iş parçacığı ise, Win32 hata ayıklama arabiriminin herhangi bir üyesini kullanmayın. `ICorDebugController::Continue`Yalnızca bir Win32 iş parçacığı üzerinde ve yalnızca bant dışı bir olayı geçmiş olduğunda çağırabilirsiniz.  
   
  `DebugEvent`Geri çağırmalar, geri aramalar için standart kuralları uygulamaz. `DebugEvent`' İ çağırdığınızda, işlem ham, işletim sistemi-hata ayıklama durdurulmuş durumda olur. İşlem eşitlenmez. Yönetilen kod hakkında bilgi isteklerini karşılamak için gerektiğinde otomatik olarak eşitlenmiş duruma girer, bu da diğer iç içe çağrılar ile sonuçlanabilir `DebugEvent` .  
@@ -51,6 +54,7 @@ HRESULT DebugEvent (
  .NET Framework sürüm 2,0 ' de, hata ayıklayıcı hemen bir bant dışı kesme noktası olayını geçmiş olarak devam etmelidir. Hata ayıklayıcı, kesme noktaları eklemek ve kaldırmak için [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md) ve [ICorDebugProcess2:: ClearUnmanagedBreakpoint](icordebugprocess2-clearunmanagedbreakpoint-method.md) yöntemlerini kullanıyor olmalıdır. Bu yöntemler, tüm bant dışı kesme noktalarını otomatik olarak atlar. Bu nedenle, gönderilen tek bant dışı kesme noktaları, bir Win32 işlevine çağrı gibi, zaten yönerge akışında olan ham kesme noktaları olmalıdır `DebugBreak` . `ICorDebugProcess::ClearCurrentException` [ICorDebugProcess:: GetThreadContext](icordebugprocess-getthreadcontext-method.md), [ICorDebugProcess:: SetThreadContext](icordebugprocess-setthreadcontext-method.md)veya [hata ayıklama API](index.md)'sinin başka bir üyesini kullanmayı denemeyin.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

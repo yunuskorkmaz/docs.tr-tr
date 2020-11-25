@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 079d9245526ff7914d1cbd6a91f0f2d96a690af5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2eba599c0f7d47ab78c1b158129f03877a4a5d9f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702634"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps Yöntemi
+
 Belirtilen MethodSpec belirteci tarafından başvurulan metodun meta veri imzasını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT GetMethodSpecProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `mi`  
  'ndaki Metodun örneklenmesini temsil eden bir MethodSpec belirteci.  
   
@@ -50,11 +52,12 @@ HRESULT GetMethodSpecProps (
  dışı Bayt cinsinden boyutu `ppvSigBlob` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

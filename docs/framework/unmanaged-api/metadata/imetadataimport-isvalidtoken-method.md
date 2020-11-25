@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aeb0fc63-9eff-4384-9284-cb9900572d74
 topic_type:
 - apiref
-ms.openlocfilehash: 9190d021b801be951d214406dde7e6d76da15608
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b4dc1e60f3d29e2671882d1900a1c49e56969601
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503448"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702868"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>IMetaDataImport::IsValidToken Yöntemi
+
 Belirtilen belirtecin bir kod nesnesine geçerli bir başvuru içerip içermediğini gösteren bir değer alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,18 +35,21 @@ BOOL IsValidToken (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `tk`  
  'ndaki Başvuru geçerliliğini denetlenecek belirteç.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  `true``tk`geçerli kapsam içinde geçerli bir meta veri belirtecidir. Tersi durumda `false`.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

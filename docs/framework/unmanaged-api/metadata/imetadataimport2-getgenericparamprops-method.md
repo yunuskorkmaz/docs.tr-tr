@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-ms.openlocfilehash: 7e97b2d4ad1fec4675d1484959b115a4d4b87e90
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 16f69d571ffed87a2e848124ce16ac942d319c37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490620"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702702"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps Yöntemi
+
 Belirtilen belirteç tarafından temsil edilen genel parametreyle ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -41,11 +42,12 @@ HRESULT GetGenericParamProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `gp`  
  'ndaki Meta veri döndürülecek genel parametresini temsil eden belirteç.  
   
  `pulParamSeq`  
- dışı `Type`Parametrenin üst Oluşturucu veya yöntemdeki sıra konumu.  
+ dışı `Type` Parametrenin üst Oluşturucu veya yöntemdeki sıra konumu.  
   
  `pdwParamFlags`  
  dışı Genel parametresi için tanımlayan [CorGenericParamAttr](corgenericparamattr-enumeration.md) numaralandırması değeri `Type` .  
@@ -60,17 +62,18 @@ HRESULT GetGenericParamProps (
  dışı Genel parametrenin adı.  
   
  `cchName`  
- 'ndaki `wzName`Arabelleğin boyutu.  
+ 'ndaki `wzName` Arabelleğin boyutu.  
   
  `pchName`  
  dışı Adın, geniş karakter olarak döndürülen boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: 5c0fb023dd355f3a9c1ed846913f86b354592ed5
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 35b7bff5d4d778a429ddc1dcd0206e6e8970ee4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860613"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703505"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext Metodu
+
 Hedef işlemde verilen iş parçacığı için geçerli yürütme bağlamını alır. Bu yöntem, ortak dil çalışma zamanı veri erişim Hizmetleri tarafından çağrılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetThreadContext (  
@@ -38,6 +39,7 @@ HRESULT GetThreadContext (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `threadID`  
  'ndaki Hedef işlemdeki bir iş parçacığının işletim sistemi tanımlayıcısı.  
   
@@ -50,12 +52,14 @@ HRESULT GetThreadContext (
  `context`  
  dışı İçeriğin yerleştirileceği bir arabelleğin işaretçisi.  
   
- `context` Arabellekteki verilerin Win32 `CONTEXT` yapısı biçiminde olması gerekir. Bağlam, işlemciye özgü kayıt verilerini belirtir, bu nedenle Win32 `CONTEXT` yapısının tanımı işlemcinin mimarisine bağlıdır. Win32 `CONTEXT` yapısının tanımı için Winnt. h üst bilgi dosyasına bakın.  
+ `context`Arabellekteki verilerin Win32 yapısı biçiminde olması gerekir `CONTEXT` . Bağlam, işlemciye özgü kayıt verilerini belirtir, bu nedenle Win32 `CONTEXT` yapısının tanımı işlemcinin mimarisine bağlıdır. Win32 yapısının tanımı için WinNT. h üst bilgi dosyasına bakın `CONTEXT` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  
