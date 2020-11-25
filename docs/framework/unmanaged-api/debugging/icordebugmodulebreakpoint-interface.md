@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34667162-f314-475f-ae1b-ce9cb0fcbb83
 topic_type:
 - apiref
-ms.openlocfilehash: 7026d135b02563b6c718be4096d2c5cad9d33cec
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 14f2b6822744070e649cf9a6722272992c0bf1c8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212288"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709524"
 ---
 # <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint Arabirimi
 
@@ -37,6 +37,7 @@ Belirli modüllere erişim sağlar. Bu arabirim, ICorDebugBreakpoint arabirimini
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

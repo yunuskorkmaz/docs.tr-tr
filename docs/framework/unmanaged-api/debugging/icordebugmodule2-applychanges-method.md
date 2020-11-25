@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-ms.openlocfilehash: 99824e9a7fd759fb30bfa377156fc28eb934a2b4
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a6b1a7c9be821890a3f15d8c3297273607f5bedd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212236"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709706"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges Yöntemi
+
 Meta verilerde yapılan değişiklikleri ve Microsoft ara dili (MSIL) kodundaki değişiklikleri çalışan işleme uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ApplyChanges (  
@@ -37,6 +38,7 @@ HRESULT ApplyChanges (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cbMetadata`  
  'ndaki Delta meta verilerinin bayt cinsinden boyutu.  
   
@@ -52,7 +54,8 @@ HRESULT ApplyChanges (
  'ndaki Güncelleştirilmiş MSIL kodunu içeren arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pbMetadata`Parametresi özel bir delta meta veri biçiminde ( [IMetaDataEmit2:: SaveDeltaToMemory](../metadata/imetadataemit2-savedeltatomemory-method.md)olarak çıktı olarak). `pbMetadata`önceki meta verileri temel olarak alır ve bu temele uygulanacak tek değişiklikleri açıklar.  
+
+ `pbMetadata`Parametresi özel bir delta meta veri biçiminde ( [IMetaDataEmit2:: SaveDeltaToMemory](../metadata/imetadataemit2-savedeltatomemory-method.md)olarak çıktı olarak). `pbMetadata` önceki meta verileri temel olarak alır ve bu temele uygulanacak tek değişiklikleri açıklar.  
   
  Buna karşılık, `pbIL[` ] parametresi güncelleştirilmiş yöntemi için yenı MSIL içerir ve bu yöntem için ÖNCEKI MSIL 'i tamamen değiştirmek üzere tasarlanmıştır  
   
@@ -63,6 +66,7 @@ HRESULT ApplyChanges (
  `ApplyChanges`Yöntem başarısız olursa, hata ayıklama oturumu geçersiz bir durumdaydı ve yeniden başlatılması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

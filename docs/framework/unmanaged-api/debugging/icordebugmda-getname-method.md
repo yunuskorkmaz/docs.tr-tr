@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-ms.openlocfilehash: 6a6769265a2e140f1fa001bb8240bc5d4bd76018
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 516fcf8a97b92eac8dfff9eae34199caa97c2d2f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213679"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710941"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName Yöntemi
+
 [ICorDebugMDA](icordebugmda-interface.md)tarafından temsil edilen yönetilen hata ayıklama Yardımcısı 'NıN (MDA) adını içeren bir dize alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetName (  
@@ -37,8 +38,9 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cchName`  
- 'ndaki `szName`Dizinin boyutu.  
+ 'ndaki `szName` Dizinin boyutu.  
   
  `pcchName`  
  dışı Adın uzunluğuna yönelik bir işaretçi.  
@@ -47,9 +49,11 @@ HRESULT GetName (
  dışı Adın kaydedileceği bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  MDA adları benzersiz değerlerdir. `GetName`Yöntemi, XML akışının alınması ve şemayı temel alarak akıştan ad ayıklamanın uygun bir performans alternatifidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

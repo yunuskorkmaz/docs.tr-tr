@@ -2,17 +2,18 @@
 title: 'Icordebugmergedassemblyrecord:: GetVersion yöntemi'
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-ms.openlocfilehash: cad71080c86e92beb318722db86011b09ce02e91
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7352a77fc8f41124d7e6c78a3dfc6ccd6d3a94aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207634"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710512"
 ---
 # <a name="icordebugmergedassemblyrecordgetversion-method"></a>Icordebugmergedassemblyrecord:: GetVersion yöntemi
+
 Derlemenin sürüm bilgilerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetVersion(  
@@ -24,6 +25,7 @@ HRESULT GetVersion(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pMajor`  
  dışı Ana sürüm numarasına yönelik bir işaretçi.  
   
@@ -37,12 +39,14 @@ HRESULT GetVersion(
  dışı Düzeltme numarasına yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Derleme sürüm numaraları hakkında bilgi için bkz <xref:System.Version> . sınıf konusu.  
   
 > [!NOTE]
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

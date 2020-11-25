@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 89940711-98e7-4aa6-bffc-5e39e91e1b7d
 topic_type:
 - apiref
-ms.openlocfilehash: c5fa55a84ed8907a5072f6099c3bf02cd6d78683
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 637cac67e73d38aca0fdc5eaeae5405c4a859aa3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213138"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709823"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory Yöntemi
+
 Bu modülün yalnızca bellekte mevcut olup olmadığını gösteren bir değer alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT IsInMemory(  
@@ -34,13 +35,16 @@ HRESULT IsInMemory(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pInMemory`  
  [out] `true` Bu modül yalnızca bellekte mevcutsa; Aksi takdirde, `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Ortak dil çalışma zamanı (CLR), modüllerin ham akışlarının yüklenmesini destekler. Bu tür modüller *bellek içi modüller* olarak adlandırılır ve diskte bulunmamaktadır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

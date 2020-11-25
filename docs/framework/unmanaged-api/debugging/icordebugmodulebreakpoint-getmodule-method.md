@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: ffd5d9ec-4564-4200-b625-b306eec0ebd7
 topic_type:
 - apiref
-ms.openlocfilehash: 714819504099ea978ed31d471b4ceb9fc17a6552
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: b6363ef901d5297862ca46e685bb783aaaeb4123
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212301"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709628"
 ---
 # <a name="icordebugmodulebreakpointgetmodule-method"></a>ICorDebugModuleBreakpoint::GetModule Metodu
+
 Bu kesme noktasının ayarlandığı modüle başvuran bir "ICorDebugModule" için bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetModule (  
@@ -34,10 +35,12 @@ HRESULT GetModule (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppModule`  
- dışı `ICorDebugModule`Kesme noktasının ayarlandığı modüle başvuran bir arabirimin adresine yönelik bir işaretçi.  
+ dışı `ICorDebugModule` Kesme noktasının ayarlandığı modüle başvuran bir arabirimin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

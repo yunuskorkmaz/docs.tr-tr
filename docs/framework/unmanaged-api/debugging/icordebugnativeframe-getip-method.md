@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-ms.openlocfilehash: 53576ca938074fb7e5974a96bb53a84cb6ed67ab
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c9c0598f8e7b3e8654124f50663c912f3cd61659
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213601"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709316"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP Metodu
+
 Yönerge işaretçisinin Şu anda ayarlandığı yerel kod konumu konumunu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetIP (  
@@ -34,13 +35,16 @@ HRESULT GetIP (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pnOffset`  
  dışı Yerel koddaki konum konumunu gösteren bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu "ICorDebugNativeFrame" tarafından temsil edilen yığın çerçevesi etkin ise, konum yürütülecek sonraki yönergenin adresidir. Bu yığın çerçevesi etkin değilse, Aralık, yığın çerçevesi yeniden etkinleştirildiğinde yürütülecek sonraki yönergenin adresidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

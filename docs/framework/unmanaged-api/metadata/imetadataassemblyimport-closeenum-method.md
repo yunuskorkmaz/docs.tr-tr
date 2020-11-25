@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9df4087-12b3-46d9-b075-9067dd7805df
 topic_type:
 - apiref
-ms.openlocfilehash: 63e81e822eb55b4090aeee6d6be3c72adbd94451
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d2ce26daa5f5c36e4073eee653cc650c1a8d54c9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009138"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708952"
 ---
 # <a name="imetadataassemblyimportcloseenum-method"></a>IMetaDataAssemblyImport::CloseEnum Yöntemi
+
 Belirtilen numaralandırma örneğine bir başvuru yayınlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,15 +35,17 @@ void CloseEnum (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `hEnum`  
  'ndaki Kapatılacak numaralandırma örneği.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

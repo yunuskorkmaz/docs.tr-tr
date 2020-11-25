@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c2541c30-fa6e-43b6-9682-77d8898f33e1
 topic_type:
 - apiref
-ms.openlocfilehash: 1a65f9f117ff013a1f6dc7403a5bc0c7b3dbb2c3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9bd6999fddb4e76642df60442ad679d604f0d7cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136597"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710356"
 ---
 # <a name="icordebugmodulecreatebreakpoint-method"></a>ICorDebugModule::CreateBreakpoint Yöntemi
+
 Bu yöntem .NET Framework geçerli sürümünde uygulanmadı.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT CreateBreakpoint(  
@@ -34,4 +35,5 @@ HRESULT CreateBreakpoint(
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorDebug. IDL, CorDebug. h

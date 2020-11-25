@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: d350f69d-9aff-4f5a-8301-daea22dee2da
 topic_type:
 - apiref
-ms.openlocfilehash: f16150ad7d9ecec4b4aceee5c9266e9a7859f1cb
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4b77ad2f31f10bd14ce7d8242a584da737428344
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213302"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709319"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue Yöntemi
+
 Bir bağımsız değişkenin veya yerel değişkenin değerini alır; bu, alt sözcük ve üst sözcük, bu yerel çerçeve için sırasıyla bellek konumunda ve belirtilen yazmaç üzerinde depolanır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetLocalRegisterMemoryValue (  
@@ -38,22 +39,24 @@ HRESULT GetLocalRegisterMemoryValue (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `highWordReg`  
  'ndaki Değerin yüksek sözcüğünü içeren kaydı belirten "CorDebugRegister" numaralandırmasının değeri.  
   
  `lowWordAddress`  
- 'ndaki `CORDB_ADDRESS`Değerin düşük sözcüğünü içeren bellek konumunu belirten bir değer.  
+ 'ndaki `CORDB_ADDRESS` Değerin düşük sözcüğünü içeren bellek konumunu belirten bir değer.  
   
  `cbSigBlob`  
  'ndaki Parametresi tarafından başvurulan ikili meta veri imzasının boyutunu belirten bir tamsayı `pvSigBlob` .  
   
  `pvSigBlob`  
- 'ndaki `PCCOR_SIGNATURE`Değerin türünün ikili meta veri imzasına işaret eden bir değer.  
+ 'ndaki `PCCOR_SIGNATURE` Değerin türünün ikili meta veri imzasına işaret eden bir değer.  
   
  `ppValue`  
  dışı Belirtilen yazmaç ve bellek konumunda depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -2,17 +2,18 @@
 title: 'ICorDebugSymbolProvider:: Getassemblyımagebytes yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-ms.openlocfilehash: a555acb9e23098b0a0f70924032771b1ae18e88e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b52614065d599edf8e556524c33e8bc50b4924ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83376112"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709186"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider:: Getassemblyımagebytes yöntemi
+
 Birleştirilen derlemede göreli bir sanal adres (RVA) verilen birleştirilmiş bir derlemeden verileri okur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAssemblyImageBytes(  
@@ -23,6 +24,7 @@ HRESULT GetAssemblyImageBytes(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `rva`  
  'ndaki Birleştirilmiş bir derlemede göreli bir sanal adres (RVA).  
   
@@ -38,6 +40,7 @@ HRESULT GetAssemblyImageBytes(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

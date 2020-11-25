@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: 105e56f2508eabbb6876a09d35e6abfbfc08950b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 86e17b48bc491c45f8b46be23ab626dc1f2a6962
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212249"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709849"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule Arabirimi
 
@@ -34,10 +34,10 @@ Yürütülebilir bir dosya veya dinamik bağlantı kitaplığı (DLL) olan bir o
 |[EnableJITDebugging Yöntemi](icordebugmodule-enablejitdebugging-method.md)|Just-In-Time (JıT) derleyicisinin Bu modüldeki yöntemler için hata ayıklama bilgilerini koruyamayacağını belirler.|  
 |[GetAssembly Yöntemi](icordebugmodule-getassembly-method.md)|Bu modülün kapsayan derlemesini alır.|  
 |[GetBaseAddress Yöntemi](icordebugmodule-getbaseaddress-method.md)|Modülün temel adresini alır.|  
-|[GetClassFromToken Yöntemi](icordebugmodule-getclassfromtoken-method.md)|Meta verilerden ICorDebugClass alır.|  
+|[GetClassFromToken Metodu](icordebugmodule-getclassfromtoken-method.md)|Meta verilerden ICorDebugClass alır.|  
 |[GetEditAndContinueSnapshot Yöntemi](icordebugmodule-geteditandcontinuesnapshot-method.md)|Kullanım dışı.|  
 |[GetFunctionFromRVA Yöntemi](icordebugmodule-getfunctionfromrva-method.md)|Uygulanmaz.|  
-|[GetFunctionFromToken Yöntemi](icordebugmodule-getfunctionfromtoken-method.md)|Meta veri belirteci tarafından belirtilen işlevi alır.|  
+|[GetFunctionFromToken Metodu](icordebugmodule-getfunctionfromtoken-method.md)|Meta veri belirteci tarafından belirtilen işlevi alır.|  
 |[GetGlobalVariableValue Yöntemi](icordebugmodule-getglobalvariablevalue-method.md)|Belirtilen genel değişken için bir değer nesnesi alır.|  
 |[GetMetaDataInterface Yöntemi](icordebugmodule-getmetadatainterface-method.md)|Modülün meta verilerini incelemek için kullanılabilecek bir meta veri arabirim işaretçisi alır.|  
 |[GetName Yöntemi](icordebugmodule-getname-method.md)|Modülün dosya adını alır.|  
@@ -53,6 +53,7 @@ Yürütülebilir bir dosya veya dinamik bağlantı kitaplığı (DLL) olan bir o
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

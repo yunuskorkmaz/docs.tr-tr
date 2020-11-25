@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 989762c4-3d15-4485-b8ee-69e0fa8ec895
 topic_type:
 - apiref
-ms.openlocfilehash: 86e2b28448caf2a872e44490e8ee4763b056ed44
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e0ae11ee24a5e25fb439d5c502c4cda5bcb6a80e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206962"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710278"
 ---
 # <a name="icordebugmodulegetassembly-method"></a>ICorDebugModule::GetAssembly Metodu
+
 Bu modülün kapsayan derlemesini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAssembly(  
@@ -34,10 +35,12 @@ HRESULT GetAssembly(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppAssembly`  
  dışı Bu modülü içeren derlemeyi temsil eden ICorDebugAssembly nesnesine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

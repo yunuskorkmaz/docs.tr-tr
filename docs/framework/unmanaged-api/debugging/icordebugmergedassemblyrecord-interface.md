@@ -2,14 +2,15 @@
 title: ICorDebugMergedAssemblyRecord Arabirimi
 ms.date: 03/30/2017
 ms.assetid: fe280b11-9479-4e34-a07c-0d1ea8088422
-ms.openlocfilehash: 721f6c1cf468b3b518d2ea213588ae2410249690
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a26702c6b21e4bfe352d861387a80b976a8dc556
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208726"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710499"
 ---
 # <a name="icordebugmergedassemblyrecord-interface"></a>ICorDebugMergedAssemblyRecord Arabirimi
+
 Birleştirilmiş bir derleme hakkında bilgi sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -29,6 +30,7 @@ Birleştirilmiş bir derleme hakkında bilgi sağlar.
 > Bu arabirim yalnızca .NET Native kullanılabilir. Bu arabirimi .NET Native dışında ICorDebug senaryolarında uygularsanız, ortak dil çalışma zamanı bu arabirimi yoksayar.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

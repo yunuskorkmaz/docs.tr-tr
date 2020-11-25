@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40fcdbc5-3bb2-41e9-b995-40984c209a7f
 topic_type:
 - apiref
-ms.openlocfilehash: 2b5a42c89e0e3efed61b1b471c227e0df85a51aa
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 69e05fc33b3489f535f1d051da0294fe59e11e00
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614909"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708965"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo Yöntemi
+
 Sembol arama bilgilerini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,19 +37,22 @@ HRESULT GetSymbolSearchInfo(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cSearchInfo`  
- 'ndaki `ULONG32`Boyutunu gösteren bir `rgpSearchInfo` .  
+ 'ndaki `ULONG32` Boyutunu gösteren bir `rgpSearchInfo` .  
   
  `pcSearchInfo`  
- dışı `ULONG32`Arama bilgilerini içermesi için gereken arabellek boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Arama bilgilerini içermesi için gereken arabellek boyutunu alan bir işaretçisi.  
   
  `rgpSearchInfo`  
  dışı Döndürülen [ıdimunmanagedsymbolsearchınfo](isymunmanagedsymbolsearchinfo-interface.md) arabirimine ayarlanmış bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

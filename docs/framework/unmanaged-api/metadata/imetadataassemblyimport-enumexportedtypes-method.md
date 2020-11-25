@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-ms.openlocfilehash: 514488c6e0d2e89de0d8ee483def485ec9f3ef25
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: a8b2377c48331ff9f0e69876c51fb78c7190f694
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009112"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708900"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes Yöntemi
+
 Geçerli meta veri kapsamındaki derleme bildiriminde başvurulan verilen türleri numaralandırır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,31 +38,33 @@ HRESULT EnumExportedTypes (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `phEnum`  
  [in, out] Numaralandırıcı için bir işaretçi. Yöntem ilk kez çağrıldığında bu null bir değer olmalıdır `EnumExportedTypes` .  
   
  `rExportedTypes`  
- dışı `mdExportedType`Meta veri belirteçlerinin numaralandırılması.  
+ dışı `mdExportedType` Meta veri belirteçlerinin numaralandırılması.  
   
  `cMax`  
- 'ndaki `mdExportedType`Diziye yerleştirilebilecek en fazla belirteç sayısı `rExportedTypes` .  
+ 'ndaki `mdExportedType` Diziye yerleştirilebilecek en fazla belirteç sayısı `rExportedTypes` .  
   
  `pcTokens`  
- dışı `mdExportedType`Gerçekte içine yerleştirilmiş olan belirteçlerin sayısı `rExportedTypes` .  
+ dışı `mdExportedType` Gerçekte içine yerleştirilmiş olan belirteçlerin sayısı `rExportedTypes` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes`başarıyla döndürüldü.|  
+|`S_OK`|`EnumExportedTypes` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda, `pcTokens` sıfır olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platform:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

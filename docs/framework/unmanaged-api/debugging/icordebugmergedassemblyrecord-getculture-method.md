@@ -2,17 +2,18 @@
 title: 'Icordebugmergedassemblyrecord:: GetCulture yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-ms.openlocfilehash: f73aac169cc048a87aca3bfc325cf8c6243012e9
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 636d0fd25d345f513e00504b9eb5adb4f0c03b0f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207866"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710655"
 ---
 # <a name="icordebugmergedassemblyrecordgetculture-method"></a>Icordebugmergedassemblyrecord:: GetCulture yöntemi
+
 Derlemenin kültür adı dizesini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetCulture(  
@@ -23,6 +24,7 @@ HRESULT GetCulture(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cchCulture`  
  'ndaki Arabellekteki karakterlerin sayısı `szCulture` .  
   
@@ -33,12 +35,14 @@ HRESULT GetCulture(
  dışı Kültür adını içeren bir karakter dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Kültür adı, "en-US" (Ingilizce (Birleşik Devletler) kültürü için) veya "nötr" (nötr kültür için) gibi bir kültürü tanımlayan benzersiz bir dizedir.  
   
 > [!NOTE]
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -13,19 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - StrongNameSignatureGeneration function [.NET Framework strong naming]
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
-ms.openlocfilehash: d7f481e5c61ec65d2e7414bd47227866f3435028
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78a89c07b9a7ddbccee9716de37c96d23635f87b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176909"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708536"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>StrongNameSignatureGeneration İşlevi
-Belirtilen derleme için güçlü bir ad imzası oluşturur.  
+
+Belirtilen derleme için bir tanımlayıcı ad imzası oluşturur.  
   
- Bu işlev amortismana kaldırıldı. Bunun yerine [ICLRStrongName::StrongNameSignatureGeneration](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md) yöntemini kullanın.  
+ Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameSignatureGeneration](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 BOOLEAN StrongNameSignatureGeneration (
@@ -39,50 +40,54 @@ BOOLEAN StrongNameSignatureGeneration (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `wszFilePath`  
- [içinde] Güçlü ad imzasının oluşturulacağı derlemenin bildirimini içeren dosyaya giden yol.  
+ 'ndaki Tanımlayıcı ad imzasının üretilecektir derlemenin bildirimini içeren dosyanın yolu.  
   
  `wszKeyContainer`  
- [içinde] Ortak/özel anahtar çiftini içeren anahtar kapsayıcısının adı.  
+ 'ndaki Ortak/özel anahtar çiftini içeren anahtar kapsayıcısının adı.  
   
- Null `pbKeyBlob` ise, `wszKeyContainer` şifreleme hizmet sağlayıcısı (CSP) içinde geçerli bir kapsayıcı belirtilmelidir. Bu durumda, dosyayı imzalamak için kapsayıcıda depolanan anahtar çifti kullanılır.  
+ `pbKeyBlob`Null ise, `wszKeyContainer` şifreleme hizmet sağlayıcısı (CSP) içinde geçerli bir kapsayıcı belirtmeniz gerekir. Bu durumda, kapsayıcıda depolanan anahtar çifti dosyayı imzalamak için kullanılır.  
   
- Null `pbKeyBlob` değilse, anahtar çiftinin anahtar ikili büyük nesnesinde (BLOB) bulunduğu varsayılır.  
+ `pbKeyBlob`Null değilse, anahtar çiftinin anahtar ikili büyük nesne (blob) içinde yer aldığı varsayılır.  
   
- Anahtarlar 1024 bit Rivest-Shamir-Adleman (RSA) imzalama anahtarları olmalıdır. Şu anda başka anahtar türü desteklenmez.  
+ Anahtarlar 1024-bit Rivest-Shamir-Adtaman (RSA) imzalama anahtarları olmalıdır. Şu anda başka türde anahtarlar desteklenmiyor.  
   
  `pbKeyBlob`  
- [içinde] Ortak/özel anahtar çiftine işaretçi. Bu çift Win32 `CryptExportKey` işlevi tarafından oluşturulan biçimdedir. Null `pbKeyBlob` ise, tarafından `wszKeyContainer` belirtilen anahtar kapsayıcı anahtar çiftini içerdiği varsayılır.  
+ 'ndaki Ortak/özel anahtar çifti işaretçisi. Bu çift Win32 işlevi tarafından oluşturulan biçimdedir `CryptExportKey` . `pbKeyBlob`Null ise, tarafından belirtilen anahtar kapsayıcının `wszKeyContainer` anahtar çiftini içermesi varsayılır.  
   
  `cbKeyBlob`  
- [içinde] Boyutu, bayt, ve. `pbKeyBlob`  
+ 'ndaki Bayt cinsinden boyutu `pbKeyBlob` .  
   
  `ppbSignatureBlob`  
- [çıkış] Ortak dil çalışma zamanının imzayı döndürdettiği konuma işaretçi. Null `ppbSignatureBlob` ise, çalışma zamanı tarafından belirtilen dosyada `wszFilePath`imzayı depolar.  
+ dışı Ortak dil çalışma zamanının imzayı döndürdüğü konuma yönelik bir işaretçi. `ppbSignatureBlob`Null ise, çalışma zamanı imzayı tarafından belirtilen dosyada depolar `wszFilePath` .  
   
- Null `ppbSignatureBlob` değilse, ortak dil çalışma zamanı imzayı döndürmek için alan ayırır. Arayan, [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini kullanarak bu alanı boşaltmalıdır.  
+ `ppbSignatureBlob`Null değilse, ortak dil çalışma zamanı, imzanın geri döndürüleceği alanı ayırır. Çağıranın, [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini kullanarak bu alanı boşaltmalıdır.  
   
  `pcbSignatureBlob`  
- [çıkış] Döndürülen imzanın baytlar halindeki boyutu.  
+ dışı Döndürülen imzanın bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarılı bir şekilde tamamlandığında; aksi `false`takdirde, .  
+
+ `true` başarıyla tamamlandığında; Aksi takdirde, `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- İmza oluşturmadan imzanın boyutunu hesaplamak için `wszFilePath` null belirtin.  
+
+ İmza `wszFilePath` boyutunu imzayı oluşturmadan hesaplamak için null değerini belirtin.  
   
- İmza doğrudan dosyada depolanabilir veya arayana döndürülebilir.  
+ İmza, doğrudan dosyada depolanabilir veya çağırana döndürülür.  
   
- `StrongNameSignatureGeneration` İşlev başarıyla tamamlanmamışsa, oluşturulan son hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini arayın.  
+ `StrongNameSignatureGeneration`İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak Için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** StrongName.h  
+ **Üst bilgi:** StrongName. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

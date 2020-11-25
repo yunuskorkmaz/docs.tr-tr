@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-ms.openlocfilehash: 2a8200f942405395429db182b7501a07fc1f930a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 44f4c59f95c28f9982d67875584e2f9803c0ed3b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212327"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709576"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi
+
 Dinamik bir modül için hata ayıklama simgesi okuyucu oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CreateReaderForInMemorySymbols (  
@@ -34,6 +35,7 @@ HRESULT CreateReaderForInMemorySymbols (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  riıd  
  'ndaki Döndürülecek COM arabiriminin IID 'si. Genellikle bu bir [ıstreamunmanagedreader arabirimidir](../diagnostics/isymunmanagedreader-interface.md).  
   
@@ -41,6 +43,7 @@ HRESULT CreateReaderForInMemorySymbols (
  dışı Döndürülen arabirime yönelik işaretçinin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  S_OK  
  Okuyucu başarıyla oluşturuldu.  
   
@@ -54,6 +57,7 @@ HRESULT CreateReaderForInMemorySymbols (
  Okuyucu oluşturulamıyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, bellek içi (dinamik olmayan) modüller için bir sembol okuyucu nesnesi oluşturmak için de kullanılabilir, ancak yalnızca semboller önce kullanılabilir olduktan sonra ( [UpdateModuleSymbols yöntemi](icordebugmanagedcallback-updatemodulesymbols-method.md) geri çağırması tarafından gösterilir).  
   
  Bu yöntem, her çağrılışında yeni bir okuyucu örneği döndürür ( [CComPtrBase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)gibi). Bu nedenle, hata ayıklayıcı sonucu önbelleğe almalıdır ve yalnızca temeldeki veriler değiştiği zaman yeni bir örnek ister (yani, bir [LoadClass Yöntemi](icordebugmanagedcallback-loadclass-method.md) geri çağırması alındığında).  
@@ -61,6 +65,7 @@ HRESULT CreateReaderForInMemorySymbols (
  Dinamik modüller, ilk tür yükleninceye kadar kullanılabilir simgelere sahip değildir ( [LoadClass Yöntemi](icordebugmanagedcallback-loadclass-method.md) geri çağırması tarafından belirtildiği gibi).  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

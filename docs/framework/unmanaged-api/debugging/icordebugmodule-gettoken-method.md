@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f759f87a-18ae-4c1a-8300-29b803432d0a
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf4d82200709971201da60d06d0cb929641a104
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6ffc74247a4ecafcc3744923c0def99220b5ca6f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501891"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709888"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken Yöntemi
+
 Bu modül için tablo girişi belirtecini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,13 +35,16 @@ HRESULT GetToken(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pToken`  
- dışı `mdModule`Modülün meta verilerine başvuran belirtece yönelik bir işaretçi.  
+ dışı `mdModule` Modülün meta verilerine başvuran belirtece yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Belirteç [IMetaDataImport](../metadata/imetadataimport-interface.md), [IMetaDataImport2](../metadata/imetadataimport2-interface.md)ve [IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) meta veri alma arabirimlerine geçirilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
@@ -51,4 +55,4 @@ HRESULT GetToken(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veriler](../metadata/index.md)
+- [Meta veri](../metadata/index.md)
