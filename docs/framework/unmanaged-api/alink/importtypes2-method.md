@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 32f3ba58-9695-41e9-ba58-fd19e45ed396
 topic_type:
 - apiref
-ms.openlocfilehash: 8dae903ab76ab83ac0818c4bc4a76e81094bdf65
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2ec7708edd86b9f2656d0eee434992c3b73200ca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445670"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705052"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 Yöntemi
+
 Türlerin içeri aktarımını başlatır. [ImportFile yöntemi](importfile-method.md)aracılığıyla içeri aktarılan her kapsamdan türleri içeri aktarmaya başlamak için bu yöntemi çağırın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ImportTypes2(  
@@ -38,6 +39,7 @@ HRESULT ImportTypes2(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `AssemblyID`  
  İçeri aktarılacak derleme KIMLIĞI.  
   
@@ -57,9 +59,11 @@ HRESULT ImportTypes2(
  İsteğe bağlı olarak, belirtilen kapsamdaki türlerin sayısını alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.

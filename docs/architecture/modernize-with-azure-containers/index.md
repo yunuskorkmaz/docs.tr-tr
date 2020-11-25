@@ -2,24 +2,20 @@
 title: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
 description: Bu e-defterle, mevcut uygulamaları Azure bulutuna ve kapsayıcılara kaldırıp modernleştirin ve bunlarla aynı şekilde geçiş yapmayı öğrenin.
 ms.date: 04/28/2018
-ms.openlocfilehash: 74359b526bead85788a6ddc8039ef05b4c475d5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172277"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705338"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
 
 ![Modernleştirin .NET uygulamaları kılavuzu 'nun kapak resmi.](./media/index/web-application-guide-cover-image.png)
 
-YAYIMLAYAN  
-Microsoft Press ve Microsoft Devdıv  
-Microsoft Corporation 'ın bölümleri  
-One Microsoft Way  
-Redmond, Washington 98052-6399  
+Microsoft Corporation One Microsoft tetetete98052-6399 i
 
-Telif hakkı © 2020 Microsoft Corporation  
+Telif hakkı © 2020 Microsoft Corporation
 
 All rights reserved. Bu kitabın içeriğinin bir kısmı herhangi bir biçimde veya herhangi bir şekilde, yayımcının yazılı izni olmadan çoğaltılamaz.
 
@@ -37,12 +33,7 @@ Yazar:
 > **Cesar de La Torre**, SR. PM, .net ürün ekibi, Microsoft Corp.
 
 Katılımcılar ve gözden geçirenler:
-> **Scott Hunter**, Iş ortağı Direktörü, .NET ekibi, Microsoft  
-> **Paul Yuknewicz**, sorumlu PM yöneticisi, Visual Studio Araçları ekibi, Microsoft  
-> **Lisa Guthrie**, SR. PM, Visual Studio Araçları ekibi, Microsoft  
-> **Ankit Asthana**, ana PM Yöneticisi, .NET ekibi, Microsoft  
-> **Unaı Zorrilla**, geliştirici lideri, düz kavramlar  
-> **Javier Valero**, çalışma müdürü, Grupo 'da  
+> **Scott Hunter**, Iş ortağı Müdürü, .NET ekibi, Microsoft **Paul Yuknewicz**, sorumlu PM Yöneticisi, Visual Studio Araçları ekibi, Microsoft **Lisa Guthrie**, SR. PM, Visual Studio Araçları ekibi, Microsoft **Ankit Asthana**, asıl PM Yöneticisi, .NET ekibi, Microsoft **Unaı Zorrilla**, geliştirici lideri, düz kavramlar **Javier Valero**, KRA solug
 
 ## <a name="introduction"></a>Giriş
 
@@ -70,7 +61,7 @@ Kuruluşun en iyi uzun süreli çevikliği ve değeri olan modern uygulamalarda,
 
 Şekil 1-1 ' de, mevcut .NET uygulamalarını artımlı aşamalarda buluta taşıdığınızda gerçekleştirebileceğiniz olası yollar gösterilmektedir.
 
- ![Mevcut .NET uygulamaları ve hizmetleri için modernleştirme yolları](./media/image1-1.png)
+ ![Mevcut .NET uygulamaları ve hizmetleri için modernleştirme yolları](./media/image1-1.png)
 
 **Şekil 1-1**. Mevcut .NET uygulamaları ve hizmetleri için modernleştirme yolları
 
@@ -103,7 +94,7 @@ Tablo 1-1 ' nin başlıca avantajları ve her bir geçişi ya da modernleştirme
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Vade düzeyine göre anahtar teknolojileri ve mimarileri
 
-.NET Framework uygulamalar başlangıçta, geç 2001 ' de yayınlanan .NET Framework sürüm 1,0 ile başlatılır. Daha sonra, şirketler yeni sürümlere (2,0, 3,5 ve .NET 4. x gibi) taşınır. Bu uygulamaların çoğu Windows Server ve Internet Information Server (IIS) üzerinde çalışır ve SQL Server, Oracle, MySQL veya diğer RDBMS gibi ilişkisel bir veritabanı kullanır.
+.NET Framework uygulamalar başlangıçta, geç 2001 ' de yayınlanan .NET Framework sürüm 1,0 ile başlatılır. Daha sonra, şirketler yeni sürümlere (2,0, 3,5 ve .NET Framework 4. x) taşınır. Bu uygulamaların çoğu Windows Server ve Internet Information Server (IIS) üzerinde çalışır ve SQL Server, Oracle, MySQL veya diğer RDBMS gibi ilişkisel bir veritabanı kullanır.
 
 Birçok mevcut .NET uygulaması günümüzde .NET Framework 4. x veya hatta .NET Framework 3,5 ' i temel alabilir ve ASP.NET MVC, ASP.NET Web Forms, ASP.NET Web API 'SI, Windows Communication Foundation (WCF), ASP.NET SignalR ve ASP.NET Web sayfaları gibi Web çerçeveleri kullanabilirsiniz. Bu .NET Framework teknolojiler Windows 'a bağımlıdır. Bu bağımlılık, yalnızca eski uygulamaları geçiriyorsanız ve uygulama altyapınızda minimum değişiklikler yapmak istiyorsanız göz önünde bulundurmanız önemlidir.
 
@@ -142,31 +133,31 @@ Yükseltme ve kaydırma geçişleri için uygulama senaryolarınızda birçok fa
 
 ## <a name="modernization-scenarios"></a>Modernleştirme senaryoları
 
-Modernleştirme senaryolarında yalnızca söz konusu vade düzeyindeki öğeleri kullanan, buluta Iyileştirilmiş saf bir uygulamanız olabilir. Ya da, Şekil 1-5 ' de olduğu gibi bulut altyapıya yönelik ve diğer öğelerden buluta En Iyi duruma getirilmiş ("seçim ve seçim" veya karma model) bazı öğelere sahip bir ara durum uygulamanız olabilir.
+Modernleştirme senaryolarında yalnızca söz konusu vade düzeyindeki öğeleri kullanan bir saf Cloud-Optimized uygulamasına sahip olabilirsiniz. Veya şekil 1-5 ' de olduğu gibi, bulut Infrastructure-Ready ve diğer Cloud-Optimized öğelerden ("seçim ve seçim" veya karma model) bazı öğelere sahip bir ara durum uygulamanız olabilir.
 
 !["Seçme ve seçme" senaryosu, IaaS, DevOps ve kapsayıcılama varlıkları üzerinde veritabanıyla birlikte](./media/image1-5.png)
 
 **Şekil 1-5.** "Seçme ve seçme" senaryosu, IaaS, DevOps ve kapsayıcılama varlıkları üzerinde veritabanıyla birlikte
 
-Daha sonra, birçok mevcut .NET Framework uygulamasına yönelik ideal senaryo olarak, çok az iş açısından önemli avantajlar elde etmek için buluta Iyileştirilmiş bir uygulamaya geçiş yapabilirsiniz. Bu yaklaşım ayrıca, olası gelecek bir evrimi olarak bulutta yerel için de ayarlar. Şekil 1-6 bir örnek gösterir.
+Daha sonra, çok sayıda mevcut .NET Framework uygulamasının geçirilmesi için ideal senaryo olarak, küçük çalışmalardan önemli avantajlar elde etmek için bir Cloud-Optimized uygulamasına geçiş yapabilirsiniz. Bu yaklaşım ayrıca, olası gelecek bir evrimi olarak Cloud-Native için de ayar yapar. Şekil 1-6 bir örnek gösterir.
 
-![Windows kapsayıcıları ve yönetilen Hizmetleri olan örnek buluta Iyileştirilmiş uygulamalar senaryosu](./media/image1-6.png)
+![Windows kapsayıcıları ve yönetilen hizmetlerle örnek Cloud-Optimized uygulamalar senaryosu](./media/image1-6.png)
 
-**Şekil 1-6.** Windows kapsayıcıları ve yönetilen Hizmetleri olan örnek buluta Iyileştirilmiş uygulamalar senaryosu
+**Şekil 1-6.** Windows kapsayıcıları ve yönetilen hizmetlerle örnek Cloud-Optimized uygulamalar senaryosu
 
-Ayrıca, belirli senaryolar için birkaç mikro hizmet ekleyerek, buluta Iyileştirilmiş mevcut uygulamanızı genişletebilirsiniz. Bu, sizi, mevcut kılavuzun ana odağı olmayan, bulut Yerel modeli düzeyine taşır.
+Daha da fazla, belirli senaryolar için birkaç mikro hizmet ekleyerek mevcut Cloud-Optimized uygulamanızı genişletebilirsiniz. Bu, sizi, mevcut kılavuzun ana odağı olmayan Cloud-Native modeli düzeyine taşır.
 
 ## <a name="what-this-guide-does-not-cover"></a>Bu kılavuzun kapsamayan
 
-Bu kılavuz, Şekil 1-7 ' de gösterildiği gibi örnek senaryoların belirli bir alt kümesini içerir. Bu kılavuz yalnızca kaldırma ve kaydırma senaryolarında, son olarak da buluta Iyileştirilmiş modelde odaklanır. Bulut için Iyileştirilmiş modelde, .NET Framework bir uygulama Windows kapsayıcıları kullanılarak modernlanmış ve izleme ve CI/CD işlem hatları gibi ek bileşenler. Her bileşen, buluta, daha hızlı ve çeviklik ile uygulama dağıtmaya yönelik temel uygulamalardır.
+Bu kılavuz, Şekil 1-7 ' de gösterildiği gibi örnek senaryoların belirli bir alt kümesini içerir. Bu kılavuz yalnızca kaldırma ve kaydırma senaryolarında ve son olarak Cloud-Optimized modelinde odaklanır. Cloud-Optimized modelinde, bir .NET Framework uygulama Windows kapsayıcıları ve izleme ve CI/CD işlem hatları gibi ek bileşenler kullanılarak modernlanmış olur. Her bileşen, buluta, daha hızlı ve çeviklik ile uygulama dağıtmaya yönelik temel uygulamalardır.
 
-![Bulutta yerel, bu kılavuzda kapsanmıyor](./media/image1-7.png)
+![Cloud-Native bu kılavuzda Kapsanmadı](./media/image1-7.png)
 
-**Şekil 1-7.** Bulutta yerel, bu kılavuzda kapsanmıyor
+**Şekil 1-7.** Cloud-Native bu kılavuzda Kapsanmadı
 
 Bu kılavuzun odağı özeldir. Bu, mevcut .NET uygulamalarınızın, yeniden mimari ve kod değişikliği olmadan bir yükseltme ve kaydırma işlemlerini gerçekleştirmek için uygulayabileceğiniz yolu gösterir. Son olarak, uygulamanızı nasıl Iyileştirecağınızı gösterir.
 
-Bu kılavuzda, mikro hizmetler mimarisine nasıl geliştikçe olduğu gibi, bulutta yerel uygulamalar oluşturma konusu gösterilmez. Uygulamalarınızı yeniden mimaride veya mikro hizmetleri temel alan yepyeni uygulamalar oluşturmak için, bkz. e-book [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://aka.ms/microservicesebook).
+Bu kılavuzda, mikro hizmetler mimarisine nasıl geliştikçe gibi Cloud-Native uygulamaları nasıl oluşturacağınız gösterilmez. Uygulamalarınızı yeniden mimaride veya mikro hizmetleri temel alan yepyeni uygulamalar oluşturmak için, bkz. e-book [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://aka.ms/microservicesebook).
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 

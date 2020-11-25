@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 30817373-0a21-49c1-a0c4-8e8daeecb8db
 topic_type:
 - apiref
-ms.openlocfilehash: 308c501e17446719067d2dc0580d698c1770bf53
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 95ad3cbea4269173f22e662d15772ff97f7ee900
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610671"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705455"
 ---
 # <a name="isymunmanagedsymbolsearchinfo-interface"></a>ISymUnmanagedSymbolSearchInfo Arabirimi
+
 Arama yolu hakkında bilgi almak için yöntemler sağlar. `QueryInterface` [Istreamunmanagedreader](isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne çağırarak bu arabirimi elde edin.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -33,8 +34,9 @@ Arama yolu hakkında bilgi almak için yöntemler sağlar. `QueryInterface` [Ist
 |[GetSearchPathLength Yöntemi](isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|Arama yolu uzunluğunu alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [Tanılama Sembol Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)

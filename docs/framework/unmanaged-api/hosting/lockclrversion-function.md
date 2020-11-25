@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-ms.openlocfilehash: 09bcebfdcfea3d5728d404cdb6b5fb170a5432c3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2ff08ec8f194ccc9e968b3a7ee017afe788f4b03
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008501"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704948"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion İşlevi
+
 Konağın, CLR 'yi açıkça başlatmadan önce işlem içinde ortak dil çalışma zamanının (CLR) hangi sürümünün kullanılacağını belirlemesine izin verir.  
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
@@ -38,6 +39,7 @@ HRESULT LockClrVersion (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `hostCallback`  
  'ndaki Başlatma sonrasında CLR tarafından çağrılacak işlev.  
   
@@ -48,6 +50,7 @@ HRESULT LockClrVersion (
  'ndaki Başlatma işleminin tamamlandığını CLR bilgilendirmek için konak tarafından çağrılacak işlev.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart COM hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
@@ -56,7 +59,8 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|Bağımsız değişkenlerden biri veya birkaçı null.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR başlatmadan önce konak çağırır `LockClrVersion` . `LockClrVersion`tümü [FLockClrVersionCallback](flockclrversioncallback-function-pointer.md)türünde geri çağırmalar olan üç parametre alır. Bu tür aşağıdaki gibi tanımlanır.  
+
+ CLR başlatmadan önce konak çağırır `LockClrVersion` . `LockClrVersion` tümü [FLockClrVersionCallback](flockclrversioncallback-function-pointer.md)türünde geri çağırmalar olan üç parametre alır. Bu tür aşağıdaki gibi tanımlanır.  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -72,7 +76,7 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
     - Parametresi tarafından belirtilen işlev `pBeginHostSetup` .  
   
-    - `CorBindToRuntimeEx`(veya başka bir çalışma zamanı başlatma işlevi).  
+    - `CorBindToRuntimeEx` (veya başka bir çalışma zamanı başlatma işlevi).  
   
     - [ICLRRuntimeHost:: SetHostControl](iclrruntimehost-sethostcontrol-method.md).  
   
@@ -83,11 +87,12 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
  ' Den ' e yapılan tüm çağrılar, `pBeginHostSetup` `pEndHostSetup` aynı mantıksal yığın ile tek bir iş parçacığında veya fiber üzerinde gerçekleşmelidir. Bu iş parçacığı, üzerinde çağrılan iş parçacığından farklı olabilir `hostCallback` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kitaplık:** MSCorEE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

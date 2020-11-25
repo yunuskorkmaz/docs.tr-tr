@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 40de06d47654337542d2c80dc325f8201335312a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 315e4cc3b93fc78e11a4fb399bbe6f8a9f55ac84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379148"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705013"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters Metodu
+
 Bit maskesi tarafından belirtilen her kaydın (Şu anda kod yürüten bilgisayardaki) değerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetRegisters (  
@@ -37,6 +38,7 @@ HRESULT GetRegisters (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `mask`  
  'ndaki Hangi yazmaç değerlerinin alınacağını belirten bir bit maskesi. Her bit bir kayda karşılık gelir. Bir bit olarak ayarlandıysa, kaydın değeri alınır; Aksi takdirde, kaydın değeri alınmadı.  
   
@@ -44,14 +46,16 @@ HRESULT GetRegisters (
  'ndaki Alınacak kayıt değerlerinin sayısı.  
   
  `regBuffer`  
- dışı `CORDB_REGISTER`Her biri bir yazmaç değeri alan bir nesne dizisi.  
+ dışı `CORDB_REGISTER` Her biri bir yazmaç değeri alan bir nesne dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Dizinin boyutu, bit maskesinde bir tane olarak ayarlanan bit sayısına eşit olmalıdır. `regCount`Parametresi, kayıt değerlerini alacak arabellekteki öğelerin sayısını belirtir. Değer, `regCount` maskenin gösterdiği kayıt sayısı için çok küçük ise, üstteki numaralandırılmış Yazmaçları kümeden kesilecek. `regCount`Değer çok büyükse, kullanılmamış `regBuffer` öğeler değiştirilmemiş olur.  
   
  Bit maskesi kullanılamayan bir kaydı belirtirse, `GetRegisters` Bu kayıt için belirsiz bir değer döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

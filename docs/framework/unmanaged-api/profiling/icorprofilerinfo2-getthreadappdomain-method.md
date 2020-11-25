@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a11b264-8540-4732-aa35-bc2d95b95b8e
 topic_type:
 - apiref
-ms.openlocfilehash: 70535f8bcee95c2596c43617eb5893e2d92a355b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 010b2dff27ac17906e16fe58729facc7a217b43f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496787"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703765"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain Yöntemi
+
 Belirtilen iş parçacığının kodu çalıştırmakta olduğu uygulama etki alanının KIMLIĞINI alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetThreadAppDomain(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `threadId`  
  'ndaki İş parçacığını belirten KIMLIK.  
   
@@ -41,6 +43,7 @@ HRESULT GetThreadAppDomain(
  dışı Uygulama etki alanının KIMLIĞINE yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

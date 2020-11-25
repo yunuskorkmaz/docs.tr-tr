@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-ms.openlocfilehash: 12a0792e8fafc73b480de6bacc86f98470dfedf7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9485e3ca657ab108d2bcc9d00b1c475f8ee3c086
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503295"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703960"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences Yöntemi
+
 Belirtilen nesne tarafından başvurulan bellekteki nesneler hakkında profil oluşturucuyu bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT ObjectReferences(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `objectId`  
  'ndaki Nesnelere başvuran nesnenin KIMLIĞI.  
   
@@ -49,6 +51,7 @@ HRESULT ObjectReferences(
  'ndaki Tarafından başvurulan nesnelerin bir dizi kimliği `objectId` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ObjectReferences`Bir çöp toplama işlemi tamamlandıktan sonra yığında kalan her nesne için yöntemi çağırılır. Profil Oluşturucu bu geri aramadan bir hata döndürürse, profil oluşturma hizmetleri sonraki atık toplamaya kadar bu geri aramayı çağırmayı sona erecek.  
   
  `ObjectReferences`Geri çağırma [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) geri çağırması ile birlikte kullanılabilir ve çalışma zamanı için tamamen bir nesne başvurusu grafiği oluşturur. Ortak dil çalışma zamanı (CLR), her bir nesne başvurusunun yöntemi tarafından yalnızca bir kez bildirilmesini sağlar `ObjectReferences` .  
@@ -58,6 +61,7 @@ HRESULT ObjectReferences(
  Null değeri, `ClassId` `objectId` kaldırılması gereken bir türe sahip olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

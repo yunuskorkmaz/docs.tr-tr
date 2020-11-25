@@ -4,12 +4,12 @@ description: Kendi içindeki uygulamaların kırpılacağını nasıl denetleyec
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e36aca3aadb6968f73a439ca985dc410d1bc88d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515838"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704662"
 ---
 # <a name="trimming-options"></a>Kırpma seçenekleri
 
@@ -140,11 +140,11 @@ SDK, özelliği kullanarak hata ayıklayıcı desteğini devre dışı bırakmay
 
 - `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
 
-    BinaryFormatter serileştirme desteğini kaldırın. Daha fazla bilgi için bkz. [BinaryFormatter serileştirme yöntemleri artık kullanılmıyor](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps).
+    BinaryFormatter serileştirme desteğini kaldırın. Daha fazla bilgi için bkz. [BinaryFormatter serileştirme yöntemleri artık kullanılmıyor](../compatibility/core-libraries/5.0/binaryformatter-serialization-obsolete.md).
 
 - `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
 
-    Güvenli olmayan UTF-7 kodlama kodunu kaldır. Daha fazla bilgi için bkz. [UTF-7 kod yolları artık kullanılmıyor](../compatibility/corefx.md#utf-7-code-paths-are-obsolete).
+    Güvenli olmayan UTF-7 kodlama kodunu kaldır. Daha fazla bilgi için bkz. [UTF-7 kod yolları artık kullanılmıyor](../compatibility/core-libraries/5.0/utf-7-code-paths-obsolete.md).
 
 - `<EventSourceSupport>false</EventSourceSupport>`
 

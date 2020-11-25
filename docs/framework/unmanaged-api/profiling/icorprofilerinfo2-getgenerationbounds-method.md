@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c37185f-d1e0-4a6e-8b99-707f7df61d88
 topic_type:
 - apiref
-ms.openlocfilehash: 2e6e3a6432d6568532a5f5b9676b5f130eb83d0b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2b9bf1a9f40764f6d0544bafb91f967905eb40c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502900"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703921"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds Yöntemi
+
 Yığın kesimleri olan bellek bölgelerini alır, bu, çeşitli çöp toplama nesilleri yapar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT GetGenerationBounds(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cObjectRanges`  
  'ndaki Dizi için çağıran tarafından ayrılan öğe sayısı `ranges` .  
   
@@ -45,15 +47,17 @@ HRESULT GetGenerationBounds(
  dışı Her biri çöp toplama yapılmakta olan kuşak içindeki belleğin bir aralığını (yani bloğunu) açıklayan [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) yapıları dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetGenerationBounds`Çöp toplama işlemi devam ettiğinden, yöntemi herhangi bir profil oluşturucu geri çağrısından çağrılabilir.
 
  Nesklerde en fazla kaydırma, çöp koleksiyonları sırasında gerçekleşir. Nesiller koleksiyonlar arasında büyüyebilir ancak genellikle hareket etmez. Bu nedenle, çağrının en ilginç yerleri `GetGenerationBounds` ve ' dir `ICorProfilerCallback2::GarbageCollectionStarted` `ICorProfilerCallback2::GarbageCollectionFinished` .  
   
- Program başlatma sırasında bazı nesneler ortak dil çalışma zamanı (CLR) tarafından genellikle 2. nesil 3 ve 0 ' da ayrılır. Bu nedenle, yönetilen kodun yürütülmeye başladığı zaman, bu nesiller de nesneleri içerecektir. Atık toplayıcı tarafından oluşturulan kukla nesneler dışında, 1 ve 2. nesil normalde boş olur. (Kukla nesnelerin boyutu, CLR 'nin 32 bitlik uygulamalarında 12 bayttır; boyut 64 bit uygulamalarda daha büyüktür.) Ayrıca, yerel görüntü Oluşturucu (NGen. exe) tarafından üretilen modüller içindeki 2. nesil aralıkları görebilirsiniz. Bu durumda, kuşak 2 ' deki nesneler, çöp toplayıcı tarafından değil NGen. exe çalıştırıldığında ayrılan *dondurulmuş nesnelerdir*.  
+ Program başlatma sırasında bazı nesneler ortak dil çalışma zamanı (CLR) tarafından genellikle 2. nesil 3 ve 0 ' da ayrılır. Bu nedenle, yönetilen kodun yürütülmeye başladığı zaman, bu nesiller de nesneleri içerecektir. Atık toplayıcı tarafından oluşturulan kukla nesneler dışında, 1 ve 2. nesil normalde boş olur. (Kukla nesnelerin boyutu, CLR 'nin 32 bitlik uygulamalarında 12 bayttır; boyut 64 bit uygulamalarda daha büyüktür.) Ayrıca, yerel görüntü Oluşturucu (NGen.exe) tarafından üretilen modüller içindeki 2. nesil aralıkları görebilirsiniz. Bu durumda, kuşak 2 ' deki nesneler, çöp toplayıcı tarafından değil NGen.exe çalıştığında ayrılan *dondurulmuş nesnelerdir*.  
   
  Bu işlev, arayana ayrılan arabellekleri kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

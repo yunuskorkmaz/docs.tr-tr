@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d69fb6d-ee35-4318-8224-5eea2bd16818
 topic_type:
 - apiref
-ms.openlocfilehash: 3059d30f3969b4e19cee5a8d7a34c606f3849c05
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: df9dc1a36a9adcef3f93a9929565cef117e84d75
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008748"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704233"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA Yöntemi
+
 Belirtilen metodun göreli sanal adresini ayarlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT SetRVA (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `md`  
  'ndaki Hedef Yöntem veya yöntem uygulamasına yönelik belirteç.  
   
@@ -42,11 +44,12 @@ HRESULT SetRVA (
  'ndaki Kod veya veri alanının adresi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

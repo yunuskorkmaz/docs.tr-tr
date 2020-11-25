@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 524c7fd3-9b5c-46e7-99ba-555fd2fe33f0
 topic_type:
 - apiref
-ms.openlocfilehash: c0f7e1fd6bf4c9386300b11477df85e87899fc67
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 7fc431861ac8f5c0e47e12e688f4ca004313c062
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803317"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704454"
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>IHostSyncManager::CreateMonitorEvent Yöntemi
+
 İzlenen otomatik sıfırlama olay nesnesi oluşturur.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT CreateMonitorEvent (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cookie`  
  'ndaki Olay nesnesiyle ilişkilendirmek için bir tanımlama bilgisi.  
   
@@ -45,7 +47,7 @@ HRESULT CreateMonitorEvent (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`CreateMonitorEvent`başarıyla döndürüldü.|  
+|S_OK|`CreateMonitorEvent` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -54,16 +56,18 @@ HRESULT CreateMonitorEvent (
 |E_OUTOFMEMORY|İstenen olay nesnesini oluşturmak için yeterli bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `CreateMonitorEvent``IHostAutoEvent`clr 'nin yönetilen türün uygulamasında kullandığı bir döndürür <xref:System.Threading.Monitor?displayProperty=nameWithType> . Bu yöntem, Win32 `CreateEvent` işlevini, `false` parametresi için belirtilen bir değerle yansıtır `bManualReset` .  
   
  Ana bilgisayar, [ICLRSyncManager:: Getmonitortorowner](iclrsyncmanager-getmonitorowner-method.md) yöntemini çağırarak monitörde hangi görevin beklediğini belirleyen tanımlama bilgisini kullanabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

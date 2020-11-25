@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: bcbe321f-b83a-4e9a-9f10-8d913e244dc9
 topic_type:
 - apiref
-ms.openlocfilehash: cda6d90865f8ad2b9d565f6a6378c35b03c65bf7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f30307884a268008fd4d1a8de31ec5a49b6ab92d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446998"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705247"
 ---
 # <a name="importfile-method"></a>ImportFile Metodu
+
 Derlemeleri ve ilişkisiz modülleri içeri aktarır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ImportFile(  
@@ -38,6 +39,7 @@ HRESULT ImportFile(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pszFilename`  
  İçeri aktarılacak dosyanın tam adı.  
   
@@ -57,9 +59,11 @@ HRESULT ImportFile(
  İçeri aktarılan dosya ve/veya kapsamların sayısına yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.

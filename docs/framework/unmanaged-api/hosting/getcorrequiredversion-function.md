@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1588fe7b-c378-4f4b-9c4b-48647f1119cc
 topic_type:
 - apiref
-ms.openlocfilehash: 6b9fd62102056a8d5f859ac913f4786f04c1df7e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9590d19f4e5f5890af53a108492bd1b6d130fb72
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617249"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704506"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion İşlevi
+
 Gerekli ortak dil çalışma zamanı (CLR) sürüm numarasını alır.  
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
@@ -37,6 +38,7 @@ HRESULT GetCORRequiredVersion (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbuffer`  
  dışı Sürüm numarasını belirten bir dize içeren bir arabellek.  
   
@@ -47,11 +49,12 @@ HRESULT GetCORRequiredVersion (
  dışı Arabellekte döndürülen bayt sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kitaplık:** MSCorEE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

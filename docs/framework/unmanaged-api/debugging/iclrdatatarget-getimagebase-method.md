@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 71b07e11cd3fec1a0dbebe986d98067c2e6f18e1
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: f1b9f55a383f1deb867c6b3e2fa385a82158d1e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860638"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703583"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase Yöntemi
+
 Belirtilen görüntünün taban bellek adresini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetImageBase (  
@@ -35,6 +36,7 @@ HRESULT GetImageBase (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `imagePath`  
  'ndaki Görüntünün yolu da dahil olmak üzere dosya adı.  
   
@@ -42,9 +44,11 @@ HRESULT GetImageBase (
  dışı Görüntünün temel adresini depolayan CLRDATA_ADDRESS işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Görüntü dosyası adı bir yola sahip olabilir veya olmayabilir. Bir yol belirtilmişse, eşleşme tam yol üzerinde yapılır; Aksi takdirde, eşleştirme yalnızca dosya adı üzerinde yapılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  

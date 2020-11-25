@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: e2903637faa11a3c0a62080cc6fafcf1fc668a56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860922"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705000"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType Sabit Listesi
+
 Atık olarak toplanmış bir nesnenin kaynağını tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -65,13 +66,15 @@ typedef enum {
 |`CorHandleAll`|Tanıtıcı tablosundan tüm başvuruları döndürün. Bu değer yalnızca [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) yöntemi tarafından kullanılır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorGCReferenceType` Sabit listesi aşağıdaki gibi kullanılır:  
+
+ `CorGCReferenceType`Sabit listesi aşağıdaki gibi kullanılır:  
   
 - `type` [Cor_gc_reference](cor-gc-reference-structure.md) yapısı alanının değeri olarak, bir başvurunun veya tanıtıcının kaynağını gösterir.  
   
 - `types` [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) metoduna bağımsız değişken olarak, sabit listesine dahil edilecek tanıtıcı türlerini belirtir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

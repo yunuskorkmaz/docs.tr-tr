@@ -14,31 +14,33 @@ helpviewer_keywords:
 ms.assetid: 9180ac5a-7019-4716-9f83-8a91d157239a
 topic_type:
 - apiref
-ms.openlocfilehash: 8f6a117d1e2fe76c271b0b014e6079370c8b4fe4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 867c09caa3bd3aed50de21c2ef91a02782830be2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127061"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704558"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity Arabirimi
+
 Bir kod nesnesinin benzersiz imzasına bir başvuruyu temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|Belirtilen öznitelik değişiklikleri dışında, bu `IReferenceIdentity`özdeş olan yeni bir `IReferenceIdentity` örneğine bir arabirim işaretçisi alır.|  
-|`IReferenceIdentity::EnumAttributes`|Bu `IReferenceIdentity`ilişkili öznitelikleri içeren `IEnumIDENTITY_ATTRIBUTE` örneğine yönelik bir arabirim işaretçisi alır.|  
+|`IReferenceIdentity::Clone`|`IReferenceIdentity` `IReferenceIdentity` Belirtilen öznitelik değişiklikleri dışında, bu ile özdeş olan yeni bir örneğe bir arabirim işaretçisi alır.|  
+|`IReferenceIdentity::EnumAttributes`|`IEnumIDENTITY_ATTRIBUTE`Bu ile ilişkili öznitelikleri içeren bir örneğe bir arabirim işaretçisi alır `IReferenceIdentity` .|  
 |`IReferenceIdentity::GetAttribute`|Belirtilen ad alanındaki özniteliğin değerini belirtilen adla alır.|  
 |`IReferenceIdentity::SetAttribute`|Belirtilen ad alanına ve belirtilen ada sahip olan özniteliği belirtilen değere ayarlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Yalıtım. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

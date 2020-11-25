@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 458a90bc47711d9f831805faa8468a49f3e0d305
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491270"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704009"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps Metodu
+
 Belirtilen FieldDef belirtecinin başvurduğu alanla ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -44,6 +45,7 @@ HRESULT GetFieldProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `mb`  
  'ndaki İlişkili meta verileri almak için alanı temsil eden bir FieldDef belirteci.  
   
@@ -54,7 +56,7 @@ HRESULT GetFieldProps (
  dışı Alanın adı.  
   
  `cchField`  
- 'ndaki *SzField*arabelleğinin geniş karakterdeki boyutu.  
+ 'ndaki *SzField* arabelleğinin geniş karakterdeki boyutu.  
   
  `pchField`  
  dışı Döndürülen arabelleğin gerçek boyutu.  
@@ -78,11 +80,12 @@ HRESULT GetFieldProps (
  dışı Herhangi bir dize yoksa, karakter cinsinden boyut `ppValue` veya sıfır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

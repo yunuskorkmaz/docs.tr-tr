@@ -2,14 +2,15 @@
 title: DOM’da Yeni Düğümler Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: 835d92b972341e67bc163563ec62c24db610a65a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dea7add100fbdbb9e761fe39d0d824d27975757f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822756"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704753"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>DOM’da Yeni Düğümler Oluşturma
+
 <xref:System.Xml.XmlDocument>Tüm düğüm türleri için oluşturma yöntemine sahiptir. Gerektiğinde bir ada sahip bir ad ve içerik veya diğer parametre (örneğin, bir metin düğümü) ve düğüm oluşturulur. Aşağıdaki yöntemler, uygun bir düğüm oluşturmak için bir ada ve diğer birkaç parametreye sahip olması gereken değerlerdir.  
   
 - <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  

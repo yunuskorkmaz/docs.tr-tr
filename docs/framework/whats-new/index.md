@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c99f7c0778b1160c926d5ed62a6a2d295f5c50c5
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 3421afee304125413f4fcade6b20df990e922f58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557252"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704805"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework yenilikleri
 
@@ -104,7 +104,7 @@ Sistem durumu uç noktaları, Hizmetleri sistem durumlarına göre yönetmek iç
 
 Sistem durumu uç noktasını açığa çıkarmak ve WCF hizmeti durum bilgilerini yayımlamak için iki yol vardır:
 
-- Kod üzerinden. Örneğin:
+- Kod üzerinden. Örnek:
 
   ```csharp
   ServiceHost host = new ServiceHost(typeof(Service1),
@@ -126,7 +126,7 @@ Sistem durumu uç noktasını açığa çıkarmak ve WCF hizmeti durum bilgileri
   host.Description.Behaviors.Add(healthBehavior)
   ```
 
-- Bir yapılandırma dosyası kullanarak. Örneğin:
+- Bir yapılandırma dosyası kullanarak. Örnek:
 
   ```xml
   <behaviors>
@@ -138,7 +138,7 @@ Sistem durumu uç noktasını açığa çıkarmak ve WCF hizmeti durum bilgileri
   </behaviors>
   ```
 
-Hizmetin sistem durumu,,,, gibi sorgu parametreleri kullanılarak sorgulanabilir `OnServiceFailure` `OnDispatcherFailure` `OnListenerFailure` `OnThrottlePercentExceeded` ve her sorgu parametresi için bir http yanıt kodu belirtilebilir. Bir sorgu parametresi için HTTP yanıt kodu atlanırsa, varsayılan olarak bir 503 HTTP yanıt kodu kullanılır. Örneğin:
+Hizmetin sistem durumu,,,, gibi sorgu parametreleri kullanılarak sorgulanabilir `OnServiceFailure` `OnDispatcherFailure` `OnListenerFailure` `OnThrottlePercentExceeded` ve her sorgu parametresi için bir http yanıt kodu belirtilebilir. Bir sorgu parametresi için HTTP yanıt kodu atlanırsa, varsayılan olarak bir 503 HTTP yanıt kodu kullanılır. Örnek:
 
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
@@ -255,7 +255,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-<xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType>Ve <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> yöntemleri, <xref:System.Security.Cryptography.DSA> <xref:System.Security.Cryptography.RSA> belirli bir anahtar boyutuyla yeni veya anahtarlar oluşturmanıza imkan tanır. Örneğin:
+<xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType>Ve <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> yöntemleri, <xref:System.Security.Cryptography.DSA> <xref:System.Security.Cryptography.RSA> belirli bir anahtar boyutuyla yeni veya anahtarlar oluşturmanıza imkan tanır. Örnek:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -470,7 +470,7 @@ NET Framework 4.7.2, şifreleme tabanlı Always Encrypted destekler. Always Encr
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, belirli bir kanıtlama protokolünü yürütmek için gereken bilgileri almak üzere SQL Server tarafından kullanılan kanıtlama parametrelerini sağlar.
 
-Uygulama yapılandırma dosyası daha sonra, <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> şifreleme sağlayıcısı için işlevselliği sağlayan soyut sınıfın somut bir uygulamasını belirtir. Örneğin:
+Uygulama yapılandırma dosyası daha sonra, <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> şifreleme sağlayıcısı için işlevselliği sağlayan soyut sınıfın somut bir uygulamasını belirtir. Örnek:
 
 ```xml
 <configuration>
@@ -653,7 +653,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir işlem hattındaki istekler
 
 **ASP.NET Forms kimlik doğrulama kimlik bilgileri için SHA-2 karma seçenekleri**
 
-.NET Framework 4,7 ve önceki sürümlerde, ASP.NET izin verilen geliştiricilerin, Kullanıcı kimlik bilgilerini MD5 veya SHA1 kullanarak yapılandırma dosyalarında karma parolalara depolamasına olanak sağlar. .NET Framework 4.7.1 ile başlayarak, ASP.NET, SHA256, SHA384 ve SHA512 olur gibi yeni güvenli SHA-2 karma seçeneklerini de destekler. SHA1 varsayılan olarak kalır ve varsayılan olmayan bir karma algoritması Web yapılandırma dosyasında tanımlanabilir. Örneğin:
+.NET Framework 4,7 ve önceki sürümlerde, ASP.NET izin verilen geliştiricilerin, Kullanıcı kimlik bilgilerini MD5 veya SHA1 kullanarak yapılandırma dosyalarında karma parolalara depolamasına olanak sağlar. .NET Framework 4.7.1 ile başlayarak, ASP.NET, SHA256, SHA384 ve SHA512 olur gibi yeni güvenli SHA-2 karma seçeneklerini de destekler. SHA1 varsayılan olarak kalır ve varsayılan olmayan bir karma algoritması Web yapılandırma dosyasında tanımlanabilir. Örnek:
 
 ```xml
 <system.web>
@@ -958,7 +958,7 @@ End Function
 
 .NET Framework 4.6.2 ' de bunu ele almak için temel sınıfa aşağıdaki üç yöntem eklenmiştir  <xref:System.Security.Cryptography.ECDiffieHellman> ve bu KDF yordamlarını ve bunların girişlerini daha net bir şekilde temsil eder:
 
-|Ecdıfıfiehellman yöntemi|Description|
+|Ecdıfıfiehellman yöntemi|Açıklama|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Formülü kullanarak önemli malzemeleri türetiliyor<br /><br /> Karma (secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> Karma (secretPrepend Orelo *x* Orelo secretAppend)<br /><br /> Burada *x* , EC Diffie-Hellman algoritmasının hesaplanan sonucudur.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Formülü kullanarak önemli malzemeleri türetiliyor<br /><br /> HMAC (hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC (hmacKey, secretPrepend Orelo *x* Orellsecretappend)<br /><br /> Burada *x* , EC Diffie-Hellman algoritmasının hesaplanan sonucudur.|
@@ -968,7 +968,7 @@ End Function
 
 Windows şifreleme kitaplığı (CNG), kalıcı simetrik anahtarları depolama ve donanımla depolanan simetrik anahtarları kullanma desteği eklendi ve geliştiricilerin bu özelliği kullanmasını olanaklı hale 4.6.2 .NET Framework.  Anahtar adları ve anahtar sağlayıcılarının kavramı uygulamaya özgü olduğundan, bu özelliğin kullanılması tercih edilen fabrika yaklaşımı (çağırma gibi) yerine somut uygulama türleri oluşturucusunun kullanılmasını gerektirir `Aes.Create` .
 
-AES ( <xref:System.Security.Cryptography.AesCng> ) ve 3DES () algoritmaları için kalıcı anahtar simetrik şifreleme desteği var <xref:System.Security.Cryptography.TripleDESCng> . Örneğin:
+AES ( <xref:System.Security.Cryptography.AesCng> ) ve 3DES () algoritmaları için kalıcı anahtar simetrik şifreleme desteği var <xref:System.Security.Cryptography.TripleDESCng> . Örnek:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1623,7 +1623,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **HDPı geliştirmeleri**
 
-    WPF 'de HDPı desteği artık .NET Framework 4,6 ' de daha iyidir. Kenarlıkların bulunduğu denetimlerde kırpma örneklerini azaltmak için yerleşim yuvarlama sırasında değişiklikler yapılmıştır. Varsayılan olarak, bu özellik yalnızca <xref:System.Runtime.Versioning.TargetFrameworkAttribute> .net 4,6 olarak ayarlandıysa etkindir.  Framework 'ün önceki sürümlerini hedefleyen ancak .NET Framework 4,6 üzerinde çalışan uygulamalar, app.config dosyasının bölümüne aşağıdaki satırı ekleyerek yeni davranışı kabul edebilir [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) :
+    WPF 'de HDPı desteği artık .NET Framework 4,6 ' de daha iyidir. Kenarlıkların bulunduğu denetimlerde kırpma örneklerini azaltmak için yerleşim yuvarlama sırasında değişiklikler yapılmıştır. Varsayılan olarak, bu özellik yalnızca <xref:System.Runtime.Versioning.TargetFrameworkAttribute> .NET Framework 4,6 olarak ayarlandıysa etkindir.  Framework 'ün önceki sürümlerini hedefleyen ancak .NET Framework 4,6 üzerinde çalışan uygulamalar, app.config dosyasının bölümüne aşağıdaki satırı ekleyerek yeni davranışı kabul edebilir [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) :
 
     ```xml
     <AppContextSwitchOverrides
@@ -1843,7 +1843,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 ## <a name="whats-new-in-net-framework-451"></a>.NET Framework 4.5.1 yenilikleri
 
-**Nisan 2014 güncelleştirmeleri** :
+**Nisan 2014 güncelleştirmeleri**:
 
 - [Visual Studio 2013 güncelleştirme 2](https://go.microsoft.com/fwlink/p/?LinkId=393658) , bu senaryoları desteklemek Için taşınabilir sınıf kitaplığı şablonlarına yönelik güncelleştirmeleri içerir:
 
@@ -1967,7 +1967,7 @@ Yönetilen profil temelli Iyileştirme (Mpgo.exe), yerel görüntü derlemelerin
 
 ### <a name="parallel-computing"></a>Paralel bilgi işlem
 
-.NET Framework 4,5, paralel bilgi işlem için çeşitli yeni özellikler ve iyileştirmeler sağlar. Bunlar, geliştirilmiş performans, artırılmış denetim, zaman uyumsuz programlama için geliştirilmiş destek, yeni bir veri akışı kitaplığı ve paralel hata ayıklama ve performans analizi için geliştirilmiş destek içerir. .Net blogu ile paralel programlamada [.net 4,5 ' de paralellik Için nasıl yeni](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) bir giriş olduğuna bakın.
+.NET Framework 4,5, paralel bilgi işlem için çeşitli yeni özellikler ve iyileştirmeler sağlar. Bunlar, geliştirilmiş performans, artırılmış denetim, zaman uyumsuz programlama için geliştirilmiş destek, yeni bir veri akışı kitaplığı ve paralel hata ayıklama ve performans analizi için geliştirilmiş destek içerir. .NET blogu ile paralel programlamada [.NET Framework 4,5 ' de paralellik için](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) yenilikler bölümüne bakın.
 
 <a name="web"></a>
 
