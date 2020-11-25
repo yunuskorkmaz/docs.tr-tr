@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-ms.openlocfilehash: 90304eb94e6f53d3132c97f5ababdc45f6053d7c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: dd053134792b80a006849e465bc0025cf77a9ad8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006577"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729960"
 ---
-# <a name="rundll32shimw-function"></a><span data-ttu-id="9d9aa-102">RunDll32ShimW İşlevi</span><span class="sxs-lookup"><span data-stu-id="9d9aa-102">RunDll32ShimW Function</span></span>
-<span data-ttu-id="9d9aa-103">Belirtilen komutu yürütür.</span><span class="sxs-lookup"><span data-stu-id="9d9aa-103">Executes the specified command.</span></span>  
+# <a name="rundll32shimw-function"></a><span data-ttu-id="dfd08-102">RunDll32ShimW İşlevi</span><span class="sxs-lookup"><span data-stu-id="dfd08-102">RunDll32ShimW Function</span></span>
+
+<span data-ttu-id="dfd08-103">Belirtilen komutu yürütür.</span><span class="sxs-lookup"><span data-stu-id="dfd08-103">Executes the specified command.</span></span>  
   
- <span data-ttu-id="9d9aa-104">Bu işlev .NET Framework 4 ' te kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="9d9aa-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="dfd08-104">Bu işlev .NET Framework 4 ' te kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="dfd08-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d9aa-105">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="9d9aa-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfd08-105">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="dfd08-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT RunDll32ShimW (  
@@ -37,28 +38,30 @@ HRESULT RunDll32ShimW (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9d9aa-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9d9aa-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dfd08-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dfd08-106">Parameters</span></span>  
+
  `hwnd`  
- <span data-ttu-id="9d9aa-107">'ndaki Komut çıkışının gösterileceği pencerenin tutamacı.</span><span class="sxs-lookup"><span data-stu-id="9d9aa-107">[in] A handle to a window in which the command output will be displayed.</span></span>  
+ <span data-ttu-id="dfd08-107">'ndaki Komut çıkışının gösterileceği pencerenin tutamacı.</span><span class="sxs-lookup"><span data-stu-id="dfd08-107">[in] A handle to a window in which the command output will be displayed.</span></span>  
   
  `hinst`  
- <span data-ttu-id="9d9aa-108">'ndaki Komutu içeren kitaplığa yönelik bir tanıtıcı.</span><span class="sxs-lookup"><span data-stu-id="9d9aa-108">[in] A handle to the library that contains the command.</span></span>  
+ <span data-ttu-id="dfd08-108">'ndaki Komutu içeren kitaplığa yönelik bir tanıtıcı.</span><span class="sxs-lookup"><span data-stu-id="dfd08-108">[in] A handle to the library that contains the command.</span></span>  
   
  `lpszCmdLine`  
- <span data-ttu-id="9d9aa-109">'ndaki Yürütülecek komutu belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="9d9aa-109">[in] A string that specifies the command to be executed.</span></span>  
+ <span data-ttu-id="dfd08-109">'ndaki Yürütülecek komutu belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="dfd08-109">[in] A string that specifies the command to be executed.</span></span>  
   
  `nCmdShow`  
- <span data-ttu-id="9d9aa-110">'ndaki Çıkış penceresi için görüntüleme modunu belirten bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="9d9aa-110">[in] An integer that specifies the display mode for the output window.</span></span>  
+ <span data-ttu-id="dfd08-110">'ndaki Çıkış penceresi için görüntüleme modunu belirten bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="dfd08-110">[in] An integer that specifies the display mode for the output window.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9d9aa-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9d9aa-111">Requirements</span></span>  
- <span data-ttu-id="9d9aa-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d9aa-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="9d9aa-113">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="9d9aa-113">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="9d9aa-114">**Kitaplık:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="9d9aa-114">**Library:** MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="9d9aa-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d9aa-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="9d9aa-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9d9aa-116">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="dfd08-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dfd08-111">Requirements</span></span>  
 
-- [<span data-ttu-id="9d9aa-117">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="9d9aa-117">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)
+ <span data-ttu-id="dfd08-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dfd08-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="dfd08-113">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="dfd08-113">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="dfd08-114">**Kitaplık:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dfd08-114">**Library:** MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="dfd08-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfd08-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="dfd08-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dfd08-116">See also</span></span>
+
+- [<span data-ttu-id="dfd08-117">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="dfd08-117">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)
