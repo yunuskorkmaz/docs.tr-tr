@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b5cff02-2005-44eb-a2bc-50214c4b0e1d
 topic_type:
 - apiref
-ms.openlocfilehash: ff06c285bf5306977b520ed9ff845e70fb25989a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a6c2209433a652523fd8e3a7cc2db1272600e1bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499391"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730272"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished Yöntemi
+
 Profil oluşturucuyu, Just-In-Time (JıT) derleyicisinin bir işlevi yeniden derleme işlemi tamamlandığını bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT ReJITCompilationFinished(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `functionId`  
  'ndaki Yeniden derlenen işlevin KIMLIĞI.  
   
@@ -45,11 +47,12 @@ HRESULT ReJITCompilationFinished(
  'ndaki JıT yeniden derlemenin başarılı olup olmadığını gösteren bir değer.  
   
  `fIsSafeToBlock`  
- [in] `true` Bu engellemenin, çalışma zamanının çağıran iş parçacığının bu geri aramadan dönmesini beklemesine neden olabileceğini göstermek için; `false`engellemenin çalışma zamanının işlemini etkilemeyeceğini göstermek için.  
+ [in] `true` Bu engellemenin, çalışma zamanının çağıran iş parçacığının bu geri aramadan dönmesini beklemesine neden olabileceğini göstermek için; `false` engellemenin çalışma zamanının işlemini etkilemeyeceğini göstermek için.  
   
  Bir değeri `true` çalışma zamanına zarar vermez, ancak profil oluşturma sonuçlarını etkileyebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

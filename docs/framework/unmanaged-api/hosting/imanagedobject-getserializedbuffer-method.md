@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c17105bb-b49f-434e-8f9b-77f8c85b9220
 topic_type:
 - apiref
-ms.openlocfilehash: c68ec0b41bb38afc7cefaf47df718fffcf42d250
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 159ece09ae0b6a67780639da8aae8c0e4b412bb8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842437"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730701"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>IManagedObject::GetSerializedBuffer Yöntemi
+
 Bu yönetilen nesnenin dize temsilini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,18 +35,21 @@ HRESULT GetSerializedBuffer (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pBSTR`  
  dışı Serileştirilmiş nesne olan dize işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetSerializedBuffer`Yöntemi, istemciye sıralanabilmesi için nesneyi seri hale getirir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

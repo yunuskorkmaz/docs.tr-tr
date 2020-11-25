@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: db268876-6178-4a81-aca3-318ee7f96001
 topic_type:
 - apiref
-ms.openlocfilehash: efbfa310c90f48c99219cb185f090a1b854949a2
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 3aecebe2803d3a795db801491d0f60a5eb7c00ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842289"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730792"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads Yöntemi
+
 Konağın iş parçacığı havuzunda eşzamanlı olarak tuttuğu en fazla iş parçacığı sayısını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetMaxThreads (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pdwMaxWorkerThreads`  
  dışı Konağın iş parçacığı havuzunda sakladığı en fazla iş parçacığı sayısına yönelik bir işaretçi.  
   
@@ -41,7 +43,7 @@ HRESULT GetMaxThreads (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetMaxThreads`başarıyla döndürüldü.|  
+|S_OK|`GetMaxThreads` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR (bir işleme yüklenmemiş) veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -50,16 +52,18 @@ HRESULT GetMaxThreads (
 |E_NOTIMPL|Konak, uygulamasının bir uygulamasını sağlamaz `GetMaxThreads` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR, `GetMaxThreads` iş parçacığı havuzundaki toplam iş parçacığı sayısını belirlemede çağırır. [GetAvailableThreads](ihostthreadpoolmanager-getavailablethreads-method.md) yöntemi şu anda iş öğelerini işlemeyen iş parçacığı sayısını alır. Parametrenin döndürülen değerinin üzerindeki tüm istekler, `pdwMaxWorkerThreads` iş parçacıkları kullanılabilir olana kadar sıraya alınır.  
   
  Konak uygulamasının bir uygulamasını sağlamıyorsa `GetMaxThreads` , E_NOTIMPL BIR HRESULT değeri döndürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

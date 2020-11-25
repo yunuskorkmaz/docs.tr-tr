@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-ms.openlocfilehash: fb198782bb91a8301507fd6cadcffb0378230f0e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4d66d09e02b907281f64400b0c605a7b5c44d476
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396580"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731052"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>Icordebugvariablehome:: GetLiveRange yöntemi
+
 Bu değişkenin canlı olduğu yerel aralığı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetLiveRange(  
@@ -35,6 +36,7 @@ HRESULT GetLiveRange(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pStartOffset`  
  dışı Değişkenin ilk yaşam olduğu mantıksal fark.  
   
@@ -42,6 +44,7 @@ HRESULT GetLiveRange(
  dışı Değişkenin son yaşam olduğu noktadan hemen sonra mantıksal konum.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8d9744a5-e08b-4ab2-9855-5c22711cc1e6
 topic_type:
 - apiref
-ms.openlocfilehash: 47a90ed63ae217cb150f392ad9196f8d0d5764e3
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 75b97f4333f3e81533b1f10b8c3c7ba6197ac94a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894635"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730090"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext Metodu
+
 İş parçacığı için bir sonraki çerçeve zincirini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetNext (  
@@ -34,10 +35,12 @@ HRESULT GetNext (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppChain`  
  dışı İş parçacığı için bir sonraki çerçeve zincirini temsil eden ıcordebugzincirine ait adrese yönelik bir işaretçi. Bu zincir son zincirdir, `ppChain` null olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

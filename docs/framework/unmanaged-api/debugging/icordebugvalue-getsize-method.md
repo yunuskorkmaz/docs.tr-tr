@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 445a9ee3-e050-4f3a-931a-96b0efb00110
 topic_type:
 - apiref
-ms.openlocfilehash: 9ff7128f55236ae4d0c3a9067a279c496cfb6798
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 9f5688ae4f76f9ddfde231aa6252d666c9152eec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396745"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731089"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize Metodu
+
 Bu "ICorDebugValue" nesnesinin bayt cinsinden boyutunu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSize (  
@@ -34,15 +35,18 @@ HRESULT GetSize (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pSize`  
  dışı Bu değer nesnesinin bayt cinsinden boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Değerin türü bir başvuru türü ise, bu yöntem nesnenin boyutu yerine işaretçinin boyutunu döndürür.  
   
  `ICorDebugValue::GetSize`Yöntemi `COR_E_OVERFLOW` 64-bit platformlarda 4 GB 'den büyük nesneler için döndürür. 4 GB 'den büyük nesneler için yerine [ICorDebugValue3:: GetSize64](icordebugvalue3-getsize64-method.md) yöntemini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

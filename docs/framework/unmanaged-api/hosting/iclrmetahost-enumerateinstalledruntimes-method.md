@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e359384-0d3d-451c-807e-5d7fcebf2be7
 topic_type:
 - apiref
-ms.openlocfilehash: c99607bfe5fda01eb1abfd7771cb3907ddabeec5
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: f8f67edde7f99878429ca0bbd89aaf52336aa79c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703783"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730454"
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>ICLRMetaHost::EnumerateInstalledRuntimes Yöntemi
+
 Bir bilgisayara yüklenen ortak dil çalışma zamanının (CLR) her sürümü için geçerli bir [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) arabirimi içeren bir sabit listesi döndürür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -33,27 +34,30 @@ HRESULT EnumerateInstalledRuntimes (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppEnumerator`  
  dışı Bilgisayarda yüklü olan her CLR sürümüne karşılık gelen [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) arabirimlerinin bir listesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`ppEnumerator`null.|  
+|E_POINTER|`ppEnumerator` null.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ICLRMetaHost Arabirimi](iclrmetahost-interface.md)
-- [Barındırma](index.md)
+- [Hosting](index.md)

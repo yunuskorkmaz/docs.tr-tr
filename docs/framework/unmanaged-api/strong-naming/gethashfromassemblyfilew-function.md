@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: d1b2b172-5353-42af-a877-cf653c68ece0
 topic_type:
 - apiref
-ms.openlocfilehash: cf7667f0f2a0f77cd793e00a5de8b030b0c53ec8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b895c77850c0457fd2a152c1128c016093599f76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140703"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730987"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW İşlevi
+
 Belirtilen karma algoritmasını kullanarak belirtilen derleme dosyasının karmasını alır. Derleme dosyasının yolu Unicode dize olarak belirtilmelidir.  
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md) yöntemini kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetHashFromAssemblyFileW (  
@@ -39,6 +40,7 @@ HRESULT GetHashFromAssemblyFileW (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `wszFilePath`  
  'ndaki Karma hale getirilen dosyanın yolu. Bu parametre bir Unicode dize olmalıdır.  
   
@@ -49,19 +51,20 @@ HRESULT GetHashFromAssemblyFileW (
  dışı Döndürülen karma arabelleği.  
   
  `cchHash`  
- 'ndaki İstenen en büyük boyut `pbHash`.  
+ 'ndaki İstenen en büyük boyut `pbHash` .  
   
  `pchHash`  
- dışı `pbHash`bayt cinsinden döndürülen boyut.  
+ dışı Bayt cinsinden döndürülen boyut `pbHash` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** StrongName. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

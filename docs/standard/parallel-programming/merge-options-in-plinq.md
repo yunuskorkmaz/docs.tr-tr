@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: e6690a600b7b00272471362bc087633d52a98f25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e6212abbc0d9f64765b03c3dd2e9132e9ca96ab7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824850"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730623"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ'te Birleştirme Seçenekleri
+
 Bir sorgu paralel olarak yürütülerek PLıNQ, kaynak dizisini birden çok iş parçacığının aynı anda farklı parçalar üzerinde, genellikle ayrı iş parçacıklarında çalışabilmesi için bölümler. Sonuçlar bir iş parçacığında tüketilecektir (örneğin, bir `foreach` ( `For Each` Visual Basic) döngüsünde, her iş parçacığının sonuçlarının tek bir sırayla birleştirilmesi gerekir. PLıNQ tarafından gerçekleştirilen birleştirme türü sorguda bulunan işleçlere bağlıdır. Örneğin, sonuçlara yeni bir sıra uygulayan işleçler tüm iş parçacıklarından tüm öğeleri arabelleğe almalıdır. Tüketim iş parçacığının perspektifinden (aynı zamanda uygulama kullanıcısının), tam olarak arabelleğe alınmış bir sorgu, ilk sonucunu oluşturmadan önce fark edilebilir bir süre için çalıştırılabilir. Diğer işleçler, varsayılan olarak kısmen arabelleğe alınır; sonuçları toplu işlerle sonuçlarlar. Bir işleç, <xref:System.Linq.ParallelEnumerable.ForAll%2A> Varsayılan olarak ara belleğe alınmadı. Tüm iş parçacıklarından tüm öğeleri hemen oluşturur.  
   
  <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A>Yöntemini kullanarak, aşağıdaki örnekte gösterildiği gibi, PLıNQ için ne tür birleştirme yapılacağını belirten bir ipucu sağlayabilirsiniz.  
@@ -27,6 +28,7 @@ Bir sorgu paralel olarak yürütülerek PLıNQ, kaynak dizisini birden çok iş 
  Belirli bir sorgu istenen seçeneği desteklenemez, bu durumda seçenek yalnızca yok sayılır. Çoğu durumda, PLıNQ sorgusu için bir birleştirme seçeneği belirtmeniz gerekmez. Ancak, bazı durumlarda bir sorgunun varsayılan olmayan bir modda en iyi şekilde yürütüldüğünü test ederek ve ölçüyle fark edebilirsiniz. Bu seçeneğin yaygın kullanımı, bir öbek birleştirme işlecinin, daha fazla yanıt veren bir kullanıcı arabirimi sağlamak için sonuçlarını akışını zorlamaktır.  
   
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
+
  <xref:System.Linq.ParallelMergeOptions>Sabit listesi, desteklenen sorgu şekilleri için, sonuçları bir iş parçacığında kullanılırken sorgunun son çıkışının nasıl yapılacağını belirten aşağıdaki seçenekleri içerir:  
   
 - `Not Buffered`  
@@ -42,6 +44,7 @@ Bir sorgu paralel olarak yürütülerek PLıNQ, kaynak dizisini birden çok iş 
      <xref:System.Linq.ParallelMergeOptions.FullyBuffered>Seçeneği, herhangi bir öğeden herhangi biri alınmadan önce tüm sorgunun çıkışının arabelleğe alınmasına neden olur. Bu seçeneği kullandığınızda, ilk öğe tüketim iş parçacığında kullanılabilir olmadan önce daha uzun sürebilir, ancak tüm sonuçlar yine de diğer seçenekler kullanılarak daha hızlı oluşturulabilir.  
   
 ## <a name="query-operators-that-support-merge-options"></a>Birleştirme seçeneklerini destekleyen sorgu Işleçleri  
+
  Aşağıdaki tabloda, belirtilen kısıtlamalara tabi olan tüm birleştirme seçeneği modlarını destekleyen işleçler listelenmektedir.  
   
 |Operatör|Kısıtlamalar|  

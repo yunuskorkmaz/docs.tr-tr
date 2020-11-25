@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc07232b-b2e4-4dab-87e2-3c955974ab48
 topic_type:
 - apiref
-ms.openlocfilehash: a05cfb43b5b4a328d22c4df04049a7fa156ca080
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 54dfa2741d3b4c1b2eada75ee8d214a2d0b250a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841938"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730779"
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>IHostThreadPoolManager::GetMinThreads Yöntemi
+
 Olasılığına of istekleri içinde, konağın iş parçacığı havuzunda sakladığı en az boş iş parçacığı sayısını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetMinThreads (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `MinThreads`  
  dışı Konağın Şu anda koruduğu en az sayıda boştaki çalışan iş parçacığı için bir işaretçi.  
   
@@ -41,7 +43,7 @@ HRESULT GetMinThreads (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetMinThreads`başarıyla döndürüldü.|  
+|S_OK|`GetMinThreads` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -50,14 +52,16 @@ HRESULT GetMinThreads (
 |E_NOTIMPL|Konak, uygulamasının bir uygulamasını sağlamaz `GetMinThreads` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Uygulamasının uygulamasını sağlaması için konak gerekli değildir `GetMinThreads` . Bu durumda, E_NOTIMPL HRESULT değeri döndürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

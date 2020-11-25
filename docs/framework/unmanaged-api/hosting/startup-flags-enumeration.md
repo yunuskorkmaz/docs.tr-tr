@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c3f4d644bd7073655d2d77fe7f65a3a46cfea24
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006421"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729916"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS Numaralandırması
+
 Ortak dil çalışma zamanının (CLR) başlangıç davranışını gösteren değerleri içerir. Varsayılan olarak, atık toplama eşzamanlı değildir ve yalnızca temel sınıf kitaplığı, etki alanı nötr alanına yüklenir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -73,14 +74,15 @@ typedef enum {
 |`STARTUP_ARM`|Uygulama etki alanı kaynak izlemenin etkinleştirildiğini belirtir. Bkz <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> . özelliği ve [ \<appDomainResourceMonitoring> öğesi](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kitaplık:** MSCorEE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Sabit Listeleri](hosting-enumerations.md)
+- [Barındırma Numaralandırmaları](hosting-enumerations.md)

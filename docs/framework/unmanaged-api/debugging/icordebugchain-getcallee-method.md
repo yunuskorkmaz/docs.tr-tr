@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 19560c79-abdc-4bdf-a5fe-eb362a59edc0
 topic_type:
 - apiref
-ms.openlocfilehash: ba9a4e32216fd6fad285397bfc48fbc54f602b88
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a28da34cd3080826f346b8957aa6ba38258b924f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894658"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730129"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee Yöntemi
+
 Bu zincir tarafından çağrılan zinciri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetCallee (  
@@ -34,13 +35,16 @@ HRESULT GetCallee (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppChain`  
  dışı Çağrılan zinciri temsil eden bir ıcordebugzincirleri nesnesinin adresine yönelik bir işaretçi. Bu zincir Şu anda yürütüliyorsa (yani, bu zincir, çağrılan bir zincirin dönmesi beklenmez), `ppChain` null olur.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu zincir, yürütmeyi devam etmeden önce çağrılan zincirin döndürülmesini bekler. Çağrılan zincir, çapraz iş parçacığı sıralanmış çağrılar söz konusu olduğunda başka bir iş parçacığında olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -2,14 +2,15 @@
 title: Serileştirme
 ms.date: 10/22/2008
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-ms.openlocfilehash: 85481e9d759a71346d83c66f67d9623fc32e76ec
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 58ed937df5b60daf9fcbcb7610d6026c5e9805fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828679"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730935"
 ---
 # <a name="serialization"></a>Serileştirme
+
 Serileştirme, bir nesneyi, kolayca kalıcı veya taşınan bir biçime dönüştürme işlemidir. Örneğin, bir nesneyi seri hale getirebilirsiniz, HTTP kullanarak Internet üzerinden taşıyabilirsiniz ve hedef makinede serisi kaldırılamaz.
 
  .NET Framework, çeşitli serileştirme senaryoları için optimize edilmiş üç ana serileştirme teknolojisi sunar. Aşağıdaki tablo, bu teknolojiler ve bu teknolojiler için ilgili ana Framework türleri listeler.
@@ -23,6 +24,7 @@ Serileştirme, bir nesneyi, kolayca kalıcı veya taşınan bir biçime dönüş
  ✔️, yeni türler tasarlarken serileştirme hakkında düşünün.
 
 ## <a name="choosing-the-right-serialization-technology-to-support"></a>Destek için sağ serileştirme teknolojiyi seçmenizde
+
  ✔️, Web hizmetlerinde kalıcı veya kullanımda olması gerekiyorsa, veri sözleşmesi serileştirmesini desteklemeyi düşünün.
 
  ✔️, bir tür serileştirildiğinde üretilen XML biçimi üzerinde daha fazla denetime ihtiyacınız varsa veri anlaşması serileştirmesine ek olarak veya veri sözleşmesi serileştirmesi yerine XML serileştirmesini desteklemeyi düşünün.
@@ -34,6 +36,7 @@ Serileştirme, bir nesneyi, kolayca kalıcı veya taşınan bir biçime dönüş
  ❌ Yalnızca genel Kalıcılık nedenleriyle çalışma zamanı serileştirme veya XML serileştirme desteği kullanmaktan kaçının. Bunun yerine veri sözleşmesi serileştirmesini tercih edin.
 
 ## <a name="supporting-data-contract-serialization"></a>Veri sözleşmesi serileştirmesini destekleme
+
  Türler, türü <xref:System.Runtime.Serialization.DataContractAttribute> için ve <xref:System.Runtime.Serialization.DataMemberAttribute> türüne (alanları ve Özellikler) türüne uygulayarak veri sözleşmesi serileştirmesini destekleyebilir.
 
  ✔️, türün kısmi güvende kullanılabilmesi için, genel türünden veri üyelerini işaretlemeyi düşünün.
@@ -63,6 +66,7 @@ Serileştirme, bir nesneyi, kolayca kalıcı veya taşınan bir biçime dönüş
  Arabirim, seri hale getiricinin, gidiş dönüşü sırasında hiçbir veri kaybolmamasını sağlar. <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType>Özelliği, geçerli sürüme bilinmeyen türün gelecekteki sürümünden verileri depolamak için kullanılır ve bu nedenle veri üyelerinde depolayamez. Geçerli sürüm daha sonra serileştirilildiğinde ve gelecek bir sürüme seri durumdan çıkarılacağından, ek veriler serileştirilmiş akışta kullanılabilir.
 
 ## <a name="supporting-xml-serialization"></a>XML serileştirme destekleme
+
  Veri anlaşması serileştirme .NET Framework, ancak veri sözleşmesi serileştirmesi tarafından desteklenmeyen serileştirme senaryoları vardır. Örneğin, seri hale getirici tarafından üretilen veya tüketilen XML şekli üzerinde size tam denetim vermez. Bu tür hassas denetim gerekliyse, XML serileştirmesi kullanılmalıdır ve bu serileştirme teknolojisini desteklemek için türlerinizi tasarlamanız gerekir.
 
  ❌ Oluşturulan XML şeklini denetlemek için çok güçlü bir nedeniniz yoksa, özel olarak XML serileştirme için türlerinizi tasarlamaktan KAÇıNıN. Bu serileştirme teknolojisinin yerini, önceki bölümde ele alınan veri sözleşmesi serileştirmesi almıştır.
@@ -70,6 +74,7 @@ Serileştirme, bir nesneyi, kolayca kalıcı veya taşınan bir biçime dönüş
  ✔️ <xref:System.Xml.Serialization.IXmlSerializable> , XML serileştirme öznitelikleri uygulanarak, seri hale GETIRILEN XML şekli üzerinde daha fazla denetime sahip olmak istiyorsanız arabirimi uygulamayı düşünün. Arabiriminin iki yöntemi <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> ve <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> , serileştirilmiş XML akışını tam olarak denetlemenize olanak tanır. Ayrıca, uygulanarak, türü için oluşturulan XML şemasını da denetleyebilirsiniz `XmlSchemaProviderAttribute` .
 
 ## <a name="supporting-runtime-serialization"></a>Çalışma zamanı serileştirme destekleme
+
  Çalışma zamanı serileştirme .NET uzaktan Iletişim tarafından kullanılan bir teknolojidir. Türlerinizi .NET uzaktan Iletişim kullanılarak aktarılyacağını düşünüyorsanız, çalışma zamanı serileştirmesini desteklediklerinden emin olmanız gerekir.
 
  Çalışma zamanı serileştirme için temel destek,, <xref:System.SerializableAttribute> ve daha gelişmiş senaryolar, basit bir çalışma zamanı seri hale getirilebilir bir model (uygulama <xref:System.Runtime.Serialization.ISerializable> ve sağlama serileştirme Oluşturucusu) uygulanmasını içerir.

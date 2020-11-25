@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10409db9-9fd2-4e4d-b8cd-cf6fec0afaa2
 topic_type:
 - apiref
-ms.openlocfilehash: c5b150b161acba3820ced367049f08153dd091aa
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: d6f56f689a35fa025a924be0db67c893f160fc7f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842445"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730740"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a>IHostThreadPoolManager::SetMinThreads Yöntemi
+
 Konağın olasılığına isteklerinde saklanması gereken en az boş iş parçacığı sayısını ayarlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT SetMinThreads (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `MinThreads`  
  'ndaki Konağın saklanması gereken yeni iş parçacığı sayısı alt sınırı.  
   
@@ -41,7 +43,7 @@ HRESULT SetMinThreads (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SetMinThreads`başarıyla döndürüldü.|  
+|S_OK|`SetMinThreads` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -50,14 +52,16 @@ HRESULT SetMinThreads (
 |E_NOTIMPL|Konak, uygulamasının bir uygulamasını sağlamaz `SetMinThreads` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Uygulamasının uygulamasını sağlaması için bir konak gerekli değildir `SetMinThreads` . Bu durumda, E_NOTIMPL HRESULT değeri döndürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

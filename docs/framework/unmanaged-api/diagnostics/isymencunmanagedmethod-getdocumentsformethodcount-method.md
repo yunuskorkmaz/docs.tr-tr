@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc1a823a-3ff3-4a33-b641-96edc93d2b17
 topic_type:
 - apiref
-ms.openlocfilehash: d096101189d52401c407a4108c9c81e201d3f30d
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 53897b6f964afb1f8ca95bc8f93c532e148ad129
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441948"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730519"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethodCount Metodu
+
 Bu yöntemin içinde satır bulunan belge sayısını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -33,13 +34,16 @@ HRESULT GetDocumentsForMethodCount(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pRetVal`  
- dışı `ULONG32`Belgeleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Belgeleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

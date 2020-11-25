@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 542c7c65-dd56-4651-b76f-5db2465e4a15
 topic_type:
 - apiref
-ms.openlocfilehash: 876ae07a432bfa36a7d9f43ae6c32ec03d7d3289
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4e240743894e0a7076e593b55966307d304ebd28
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496600"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731195"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a>ICorProfilerInfo3::GetFunctionEnter3Info Yöntemi
+
 [FunctionEnter3WithInfo](functionenter3withinfo-function.md) işlevi tarafından Profiler 'a bildirilen işlevin yığın çerçevesini ve bağımsız değişken bilgilerini sağlar. Bu yöntem yalnızca `FunctionEnter3WithInfo` geri çağırma sırasında çağrılabilir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -38,8 +39,9 @@ HRESULT GetFunctionEnter3Info(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `functionId`  
- 'ndaki `FunctionID`Girilen işlevin.  
+ 'ndaki `FunctionID` Girilen işlevin.  
   
  `eltInfo`  
  'ndaki Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir tanıtıcı. Profil Oluşturucu, `eltInfo` [FunctionEnter3WithInfo](functionenter3withinfo-function.md) işlevi tarafından verilen aynısını sağlamalıdır.  
@@ -54,9 +56,11 @@ HRESULT GetFunctionEnter3Info(
  dışı İşlevin bellekteki bağımsız değişkenlerinin konumlarını soldan sağa sırada açıklayan [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) yapısına yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Profil Oluşturucu incelenen işlevin yapısı için yeterli alan ayırmalıdır `COR_PRF_FUNCTION_ARGUMENT_INFO` ve parametresindeki boyutu belirtmelidir `pcbArgumentInfo` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

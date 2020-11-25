@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a436e89-eb28-4d15-bcf1-a072f86dbd99
 topic_type:
 - apiref
-ms.openlocfilehash: 4d37b7d803509ebfa861b7502d419f868bd12e11
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: be006afaf5966aa4e6d11c73b92004d676c97c7f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804383"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731273"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree Yöntemi
+
 Karşılık gelen Win32 işlevi için bir mantıksal sarmalayıcı görevi görür. Uygulamaları `VirtualFree` yayınlar, serbest bırakır veya yayınlar, çağıran işlemin sanal adres alanındaki bir sayfa bölgesini kaldırır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT VirtualFree (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `lpAddress`  
  'ndaki Boşaltılacak sanal bellek sayfalarının temel adresine yönelik bir işaretçi.  
   
@@ -49,7 +51,7 @@ HRESULT VirtualFree (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`VirtualFree`başarıyla döndürüldü.|  
+|S_OK|`VirtualFree` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -58,16 +60,18 @@ HRESULT VirtualFree (
 |HOST_E_INVALIDOPERATION|Ana bilgisayar aracılığıyla ayrılmamış belleği serbest bırakma girişiminde bulunuldu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `VirtualFree``lpAddress` [IHostMemoryManager:: VirtualAlloc](ihostmemorymanager-virtualalloc-method.md) işlevine daha önceki bir çağrı yoluyla parametresiyle ilişkili sanal bellek sayfalarını boşaltır. Ana bilgisayar üzerinden ayrılmamış belleği serbest bırakma denemeleri HOST_E_INVALIDOPERATION döndürmelidir.  
   
  Semantiği, Win32 uygulamasıyla aynıdır `VirtualFree` . Daha fazla bilgi için bkz. Windows platformu belgeleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

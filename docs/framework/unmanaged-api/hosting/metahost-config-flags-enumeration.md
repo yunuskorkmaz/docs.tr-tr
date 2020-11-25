@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 6f1e389f-ed99-4d6a-a0ba-72d7d869a01d
 topic_type:
 - apiref
-ms.openlocfilehash: 6b37fcfc04e3ec880c67f102ec12d7f3e4b06a43
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 01e55659bf2a348ec763f51112cbdcd706f27c84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493168"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730012"
 ---
 # <a name="metahost_config_flags-enumeration"></a>METAHOST_CONFIG_FLAGS Numaralandırması
+
 `pdwConfigFlags` [ICLRMetaHostPolicy:: GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md) yönteminin, `useLegacyV2RuntimeActivationPolicy` yapılandırma dosyasının [ \<startup> öğesindeki](../../configure-apps/file-schema/startup/startup-element.md) varlık varlığını ve ayarlarını belirten parametresinde döndürülen olası bayrakları açıklar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -37,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_UNSET`|`useLegacyV2RuntimeActivationPolicy`Özniteliği [ \<startup> öğede](../../configure-apps/file-schema/startup/startup-element.md)yoktu.|  
 |`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_TRUE`|`useLegacyV2RuntimeActivationPolicy`Özniteliği vardı ve olarak ayarlanmıştır `true` .|  
@@ -47,16 +48,17 @@ typedef enum {
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Metahost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Sabit Listeleri](hosting-enumerations.md)
+- [Barındırma Numaralandırmaları](hosting-enumerations.md)
 - [GetRequestedRuntime Yöntemi](iclrmetahostpolicy-getrequestedruntime-method.md)
-- [\<startup>Dosyalarında](../../configure-apps/file-schema/startup/startup-element.md)
+- [\<startup> Dosyalarında](../../configure-apps/file-schema/startup/startup-element.md)

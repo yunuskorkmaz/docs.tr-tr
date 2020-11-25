@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7e916a6-1c39-4676-972d-da3d8546044b
 topic_type:
 - apiref
-ms.openlocfilehash: 6ebe07fc7cd963cbe9cae3cd8c3f7c0580dad5fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bf052a3ba19367a741dd38ba4b3781c792fd9ff7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788816"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731124"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a>ICorDebugEditAndContinueSnapshot::GetMvid Metodu
+
 `GetMvid` artık kullanılmıyor. Bu yöntemi çağırmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

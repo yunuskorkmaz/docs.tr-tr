@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dc37f9d-87ee-4cb3-9216-ced600184ce8
 topic_type:
 - apiref
-ms.openlocfilehash: d429995e41006798aee5f796150bedbd6ae87f6f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8468b0e7faa520fe2d27e17674af5503871d3b62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003880"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730389"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA Yöntemi
+
 Belirtilen belirtecin başvurduğu alanın göreli sanal adresi için genel bir değişken değeri ayarlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT SetFieldRVA (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `fd`  
  'ndaki Hedef alan için belirteç.  
   
@@ -42,11 +44,12 @@ HRESULT SetFieldRVA (
  'ndaki Bir kodun veya veri alanının adresi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

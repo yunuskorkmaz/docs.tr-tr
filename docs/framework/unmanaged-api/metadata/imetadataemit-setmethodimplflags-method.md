@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bc82d9b-9544-4be3-ba51-a2d4d806158a
 topic_type:
 - apiref
-ms.openlocfilehash: a02456393680169ce33369ee5914f6c5216081c6
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 486d545413337f6696bd9f21c516466fc3747256
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009229"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730363"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>IMetaDataEmit::SetMethodImplFlags Yöntemi
+
 Belirtilen belirteç tarafından başvurulan devralınmış Yöntem uygulamasının meta veri imzasını ayarlar veya güncelleştirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT SetMethodImplFlags (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `md`  
  'ndaki Değiştirilecek metodun belirteci.  
   
@@ -42,11 +44,12 @@ HRESULT SetMethodImplFlags (
  'ndaki Yöntem uygulama özelliklerini belirten [CorMethodImpl](cormethodimpl-enumeration.md) numaralandırması değerlerinin birleşimi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

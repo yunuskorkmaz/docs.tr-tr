@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 8615deb2e42b039120d97b3eb5af23beb31b0808
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5cc3436716bcfc2ed0f9fd7ff7982bac7a48de9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502853"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731208"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule Metodu
+
 Verilen modülün yüklendiği uygulama etki alanlarının tanımlayıcılarını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,11 +38,12 @@ HRESULT GetAppDomainsContainingModule(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `moduleId`  
  'ndaki Yüklenen modülün KIMLIĞI.  
   
  `cAppDomainIds`  
- 'ndaki `appDomainIds`Dizinin boyutu.  
+ 'ndaki `appDomainIds` Dizinin boyutu.  
   
  `pcAppDomainIds`  
  dışı Döndürülen öğelerin toplam sayısına yönelik bir işaretçi.  
@@ -50,9 +52,11 @@ HRESULT GetAppDomainsContainingModule(
  dışı Uygulama etki alanı KIMLIĞI değerleri dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Yöntemi, çağıran ayrılmış arabellekleri kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

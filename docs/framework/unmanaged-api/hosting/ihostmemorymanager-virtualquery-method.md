@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 757af1e6-b9e8-49e7-b5db-342be3aa205f
 topic_type:
 - apiref
-ms.openlocfilehash: 71c56b5dab2409be05e8260b1a2e39d28a709bba
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 6e3cb5bcec831f143d45f733c9e2f977390aade6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804375"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731253"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery Yöntemi
+
 Karşılık gelen Win32 işlevi için bir mantıksal sarmalayıcı görevi görür. Win32 uygulamasının, `VirtualQuery` çağırma işleminin sanal adres alanındaki bir sayfa aralığı hakkında bilgi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT VirtualQuery (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `lpAddress`  
  'ndaki Sorgulanacak sanal bellekteki adrese yönelik bir işaretçi.  
   
@@ -53,7 +55,7 @@ HRESULT VirtualQuery (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`VirtualQuery`başarıyla döndürüldü.|  
+|S_OK|`VirtualQuery` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -61,17 +63,19 @@ HRESULT VirtualQuery (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `VirtualQuery`çağıran işlemin sanal adres alanındaki bir sayfa aralığı hakkında bilgi sağlar. Bu uygulama, `pResult` parametrenin değerini bilgi arabelleğinde döndürülen bayt sayısına ayarlar ve bır HRESULT değeri döndürür. Win32 `VirtualQuery` işlevinde, dönüş değeri arabellek boyutudur. Daha fazla bilgi için bkz. Windows platformu belgeleri.  
+
+ `VirtualQuery` çağıran işlemin sanal adres alanındaki bir sayfa aralığı hakkında bilgi sağlar. Bu uygulama, `pResult` parametrenin değerini bilgi arabelleğinde döndürülen bayt sayısına ayarlar ve bır HRESULT değeri döndürür. Win32 `VirtualQuery` işlevinde, dönüş değeri arabellek boyutudur. Daha fazla bilgi için bkz. Windows platformu belgeleri.  
   
 > [!IMPORTANT]
 > İşletim sisteminin uygulamasının uygulanması kilitlenme gerektirmez `VirtualQuery` ve Kullanıcı kodunda askıya alınmış rastgele iş parçacıkları ile tamamlanmayı çalıştırabilir. Bu yöntemin barındırılan bir sürümünü uygularken harika bir uyarı kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

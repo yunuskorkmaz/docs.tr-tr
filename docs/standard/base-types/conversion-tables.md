@@ -11,17 +11,19 @@ helpviewer_keywords:
 - tables [.NET], type conversions
 - data types [.NET], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: c84b1eae8a36a8d4e844cb7b1eb110c32c35993f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dc98a326155273805e3157d99755de2e97f83a46
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823023"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730220"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET’te Tür Dönüştürme Tabloları
+
 Genişleyen dönüştürme, bir türün değeri eşit veya daha büyük boyutta başka bir türe dönüştürüldüğünde gerçekleşir. Bir tür değeri daha küçük boyutta olan başka bir türün değerine dönüştürüldüğünde bir daraltma dönüştürmesi oluşur. Bu konudaki tablolarda her iki tür dönüştürme için de konu gösteren davranışlar gösterilmektedir.  
   
 ## <a name="widening-conversions"></a>Dönüştürmeleri Genişletme  
+
  Aşağıdaki tabloda, bilgi kaybı olmadan gerçekleştirilebilecek genişletme dönüştürmeleri açıklanmaktadır.  
   
 |Tür|, Veri kaybı olmadan dönüştürülebilir|  
@@ -48,6 +50,7 @@ Genişleyen dönüştürme, bir türün değeri eşit veya daha büyük boyutta 
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
 ## <a name="narrowing-conversions"></a>Daraltma dönüştürmeleri  
+
  Veya arasında bir daraltma <xref:System.Single> dönüştürmesi <xref:System.Double> , bilgi kaybına neden olabilir. Hedef türü kaynağın boyutunu doğru bir şekilde ifade edemez, elde edilen tür sabit veya olarak ayarlanır `PositiveInfinity` `NegativeInfinity` . `PositiveInfinity` pozitif bir sayıyı sıfıra bölen sonuçlar ve bir <xref:System.Single> veya değeri <xref:System.Double> alanın değerini aştığında de döndürülür `MaxValue` . `NegativeInfinity` negatif sayının sıfıra bölünmesiyle elde edilen sonuçlar, bir <xref:System.Single> veya değeri <xref:System.Double> alanın değerinin altına düştüğünde da döndürülür `MinValue` . ' Dan ' a dönüştürme <xref:System.Double> <xref:System.Single> , veya ile sonuçlanabilir `PositiveInfinity` `NegativeInfinity` .  
   
  Daraltma dönüştürmesi aynı zamanda diğer veri türleri için bilgi kaybına neden olabilir. Ancak, <xref:System.OverflowException> dönüştürülmekte olan bir türün değeri hedef türü ve alanları tarafından belirtilen aralığın dışında kalırsa `MaxValue` `MinValue` ve dönüştürme çalışma zamanı tarafından, hedef türü değerinin veya değerini aşmadığından emin olmak için kontrol edildiğinde oluşturulur `MaxValue` `MinValue` . Sınıfıyla gerçekleştirilen dönüşümler <xref:System.Convert?displayProperty=nameWithType> her zaman bu şekilde denetlenir.  

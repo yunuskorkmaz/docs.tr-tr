@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 61d26dfd-7f24-4e7d-a63e-b30a463f08e1
 topic_type:
 - apiref
-ms.openlocfilehash: cc03960c2d45a6cf8aed58eaf048a0531decb08f
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 64d5ba9ad5557f99b175c277d48003529d77861c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842341"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730818"
 ---
 # <a name="ihostthreadpoolmanagergetavailablethreads-method"></a>IHostThreadPoolManager::GetAvailableThreads Yöntemi
+
 İş öğelerini işlemeyen iş parçacığı havuzundaki iş parçacığı sayısını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetAvailableThreads (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pdwAvailableWorkerThreads`  
  dışı İş öğelerinin Şu anda işlemeyen iş parçacığı havuzundaki iş parçacığı sayısına yönelik işaretçi.  
   
@@ -41,7 +43,7 @@ HRESULT GetAvailableThreads (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetAvailableThreads`başarıyla döndürüldü.|  
+|S_OK|`GetAvailableThreads` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -50,14 +52,16 @@ HRESULT GetAvailableThreads (
 |E_NOTIMPL|Konak, uygulamasının bir uygulamasını sağlamaz `GetAvailableThreads` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Konak uygulamasının bir uygulamasını sağlamıyorsa `GetAvailableThreads` , E_NOTIMPL BIR HRESULT değeri döndürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

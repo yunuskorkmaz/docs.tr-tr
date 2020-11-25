@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-ms.openlocfilehash: 527e48d02d5267d6ae41214686c2e8c997d85dca
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2cee763674da7472ca48355e7eaba3b7dfb7adbe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499551"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730311"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters Yöntemi
+
 Kod Profilcisi yeni bir yeniden derlenmiş Yöntem gövdesi için alternatif kod oluşturma bayrakları ayarlamasına izin verir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -32,19 +33,22 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `moduleID`  
  'ndaki CLR 'nin JıT yeniden derleme parametrelerine ihtiyacı olan yöntemini içeren modül.  
   
  `methodId`  
- 'ndaki `MethodDef`Clr 'nın JIT yeniden derleme parametrelerine ihtiyacı olan yöntemi.  
+ 'ndaki `MethodDef` Clr 'nın JIT yeniden derleme parametrelerine ihtiyacı olan yöntemi.  
   
  `pFunctionControl`  
  'ndaki Profiler 'ın yeniden Derlenmekte olan yönteme yönelik JıT yeniden derleme bilgileri sağlamak için kullanabileceği [ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md) arabirimine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR, `GetReJITParameters` profil oluşturucunun belirli bir yöntemi yeniden derleme parametrelerini belirleyebilmesi için bir geri çağırma işlemini yayınlar. `GetReJITParameters`Geri çağırma, işlev başına yalnızca bir kez verilir; profil oluşturucu tarafından sağlanan parametreler, bu işlevin tüm örneklerine uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

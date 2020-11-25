@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 0ecdea3fa56ee2d8902b24006351c6d43e370c97
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: cdbecc0c7483ec189c7c19f19d75ababeb20989f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830577"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730558"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Veri Örneği
+
 Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteriler, ürünler, siparişler ve sipariş ayrıntılarına dönüştüren yöntemlerle birlikte içerir. PLıNQ ile daha fazla denemek için, belirli diğer konulardan kod örneklerini bu konudaki koda yapıştırabilir ve `Main` yönteminden çağırabilirsiniz. Bu verileri kendi PLıNQ sorgularınız ile de kullanabilirsiniz.  
   
  Veriler, Northwind veritabanının bir alt kümesini temsil eder. 50 (50) müşteri kayıtları dahildir, ancak tüm alanları içermez. Siparişlerdeki satırların bir alt kümesi ve her müşteri için karşılık gelen Order_Detail verileri dahildir. Tüm ürünler dahil edilmiştir.  

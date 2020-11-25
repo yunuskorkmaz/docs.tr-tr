@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c3a2cd90-7c4e-4374-bb87-b41befb8344f
 topic_type:
 - apiref
-ms.openlocfilehash: bac29b5950f1547c5c60ac716d40d2ef4b1a2cc2
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: b6625b0ef4dc3de4067514a0b39849c7a958d5c4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730767"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager Arabirimi
+
 Ortak dil çalışma zamanını (CLR) iş parçacığı havuzunu yapılandırmak ve iş öğelerini iş parçacığı havuzuna sıraya almak için etkinleştiren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -36,14 +37,16 @@ Ortak dil çalışma zamanını (CLR) iş parçacığı havuzunu yapılandırmak
 |[SetMinThreads Yöntemi](ihostthreadpoolmanager-setminthreads-method.md)|Konağın olasılığına isteklerinde saklanması gereken en az boş iş parçacığı sayısını ayarlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Ana bilgisayar, ve yöntemlerine yapılan çağrılarında belirtilen değerleri kullanarak iş parçacığı havuzunu yapılandırmak için gerekli değildir `SetMaxThreads` `SetMinThreads` . Bu durumda, ana bilgisayar bu yöntemlerden bir E_NOTIMPL HRESULT değeri döndürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

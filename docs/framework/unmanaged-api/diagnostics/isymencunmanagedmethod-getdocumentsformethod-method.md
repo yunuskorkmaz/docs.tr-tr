@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: 89be772ee3d8a6fc5acb74d5ebe6d3c691764f89
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d9fe18225dc27e93d4e97940cba878e4d73b4ed2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441961"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730532"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod Yöntemi
+
 Bu yöntemin içindeki satırları içeren belgeleri alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,19 +36,22 @@ HRESULT GetDocumentsForMethod(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cDocs`  
  'ndaki Tarafından işaret edilen arabelleğin uzunluğu `pcDocs` .  
   
  `pcDocs`  
- dışı `ULONG32`Belgeyi içermesi için gereken arabelleğin boyutunu, karakter cinsinden alan bir işaretçisi.  
+ dışı `ULONG32` Belgeyi içermesi için gereken arabelleğin boyutunu, karakter cinsinden alan bir işaretçisi.  
   
  `documents`  
  'ndaki Belgeleri içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

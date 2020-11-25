@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 488069f3ea16352cb7bb5e81b9a726637a7a65f8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 46312aaf530e69f0e6a90e35515f1373d01b4340
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499369"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730246"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError Yöntemi
+
 Profil oluşturucuyu, Just-In-Time (JıT) derleyicisinin yeniden derleme sürecinde bir hatayla karşılaşdığını bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,11 +37,12 @@ HRESULT ReJITError(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `moduleID`  
- 'ndaki `ModuleID`Başarısız yeniden derleme denemesinin yapıldığı yer.  
+ 'ndaki `ModuleID` Başarısız yeniden derleme denemesinin yapıldığı yer.  
   
  `methodId`  
- 'ndaki `MethodDef`Başarısız yeniden derleme denemesinin yapıldığı yöntemin yöntemi.  
+ 'ndaki `MethodDef` Başarısız yeniden derleme denemesinin yapıldığı yöntemin yöntemi.  
   
  `functionId`  
  'ndaki Yeniden derleme için yeniden Derlenmekte olan veya işaretlenmiş işlev örneği. Bu değer, `NULL` bir örnek oluşturma temelinde hata temelinde gerçekleştiyse (örneğin, profil oluşturucu yeniden derlenecek Yöntem için geçersiz bir meta veri belirteci belirtilmişse) Bu değer olabilir.  
@@ -49,11 +51,12 @@ HRESULT ReJITError(
  'ndaki Hatanın doğasını gösteren bir HRESULT. Değerlerin listesi için durum HRESULTS bölümüne bakın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu geri aramadan döndürülen değerler yok sayılır.  
   
 ## <a name="status-hresults"></a>Durum HRESULTS  
   
-|Durum dizisi HRESULT|Description|  
+|Durum dizisi HRESULT|Açıklama|  
 |--------------------------|-----------------|  
 |E_INVALIDARG|`moduleID`Veya `methodDef` belirteci `NULL` .|  
 |CORPROF_E_DATAINCOMPLETE|Modül henüz tam olarak yüklenmedi veya kaldırılıyor sürecinde.|  
@@ -63,6 +66,7 @@ HRESULT ReJITError(
 |Diğer|İşletim sistemi, CLR denetimi dışında bir hata döndürdü. Örneğin, bir bellek sayfasının erişim korumasını değiştirmek için bir sistem çağrısı başarısız olursa, işletim sistemi hatası görüntülenir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

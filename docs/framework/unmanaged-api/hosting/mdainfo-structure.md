@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 517e0ae7fb5d5151f94f82d9146ebbf40bad2ef9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8e88d90e3291d21888fae7aa162f84b6377658c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503867"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730025"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo Yapısı
+
 `Event_MDAFired`Yönetilen hata ayıklama Yardımcısı (MDA) oluşturulmasını tetikleyen olayla ilgili ayrıntıları sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _MDAInfo {  
@@ -35,12 +36,13 @@ typedef struct _MDAInfo {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`lpMDACaption`|Geçerli MDA 'ın başlığı. Başlık, olayı tetikleyen hata türünü açıklar `Event_MDAFired` .|  
 |`lpMDAMessage`|Geçerli MDA tarafından sunulan çıkış iletisi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Yönetilen hata ayıklama yardımcıları (MDAs), çalışma zamanı yürütme altyapısında geçersiz koşulları tanımlama veya altyapının durumu hakkında ek bilgi dökümü gibi görevleri gerçekleştirmek için ortak dil çalışma zamanı (CLR) ile birlikte çalışan hata ayıklama yardımlarıdır. MDAs, tuzak zor olan olaylar hakkında XML iletileri oluşturur. Yönetilen ve yönetilmeyen kod arasındaki geçişlerde hata ayıklama için özellikle faydalıdır.  
   
  Çalışma zamanı, bir MDA öğesinin oluşturulmasını tetikleyen bir olay harekete geçirildiğinde aşağıdaki adımları gerçekleştirir:  
@@ -52,11 +54,12 @@ typedef struct _MDAInfo {
  Ana bilgisayar Mdaları etkinleştirmeyi seçebilir ve bir MDA etkinleştirildiğinde bildirim alabilir. Bu, ana bilgisayara varsayılan davranışı geçersiz kılmak ve olayı oluşturan yönetilen iş parçacığını durdurmak için, işlem durumunu bozmasını engellemek için bir fırsat sağlar. MDAs kullanma hakkında daha fazla bilgi için bkz. [yönetilen hata ayıklama yardımcıları Ile hataları tanılama](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. IDL  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

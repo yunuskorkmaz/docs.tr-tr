@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 73c31c5249262fe9b6624201bc5b9bd6b1374d1e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 37d350231e03e8a435977328a288abff2f336a4b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823751"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731169"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Dizine Göre Sıralı Düğüm Alma
+
 World Wide Web Konsorsiyumu (W3C) XML Belge Nesne Modeli (DOM), **XmlNamedNodeMap** tarafından işlenen sıralanmamış bir küme aksine, sıralı düğüm listesini işleyebilme özelliğine sahip bir NodeList ' i de açıklar. Microsoft .NET çerçevesindeki NodeList, **XmlNodeList** olarak adlandırılır. Bir **XmlNodeList** döndüren yöntemler ve özellikler şunlardır:  
   
 - XmlNode. ChildNodes  

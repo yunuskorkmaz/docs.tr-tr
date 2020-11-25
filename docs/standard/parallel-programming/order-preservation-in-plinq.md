@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 59d32f8801a1429718f39ab912f55cfcc5788a0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 997bb80b6e30d4769613c4a1df647e6cd475a8ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820780"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730610"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ'te Sıra Koruma
+
 PLıNQ 'te hedef, doğruluğu sürdürirken performansı en üst düzeye çıkarmaktır. Bir sorgu mümkün olduğunca hızlı çalışmalıdır, ancak yine de doğru sonuçları üretir. Bazı durumlarda doğruluk, kaynak sırasının sırasını gerektirir; Ancak, sıralama hesaplama açısından pahalı olabilir. Bu nedenle, varsayılan olarak PLıNQ, kaynak sırasının sırasını korumaz. Bu şekilde, PLıNQ benzerdir, [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] ancak sıralamayı koruyan LINQ to Objects farklı değildir.  
   
  Varsayılan davranışı geçersiz kılmak için, kaynak dizideki işlecini kullanarak sıra korumasını açabilirsiniz <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> . Daha sonra yöntemi kullanarak sorgu içinde sıra korumasını kapatabilirsiniz <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> . Her iki yöntemle de sorgu, sorgunun paralel veya sıralı olarak yürütülüp yürütülmeyeceğini tespit eden buluşsal yöntemler temelinde işlenir. Daha fazla bilgi için bkz. [PLıNQ 'Te hızlı Hızlandırlamayı anlama](understanding-speedup-in-plinq.md).  
@@ -39,6 +40,7 @@ PLıNQ 'te hedef, doğruluğu sürdürirken performansı en üst düzeye çıkar
  PLıNQ 'nın, sorgunun geri kalanı için Order-prodüme işleçleri tarafından üretilen bir dizinin sıralamasını koruyabileceğini unutmayın. Diğer bir deyişle, ve gibi işleçler <xref:System.Linq.ParallelEnumerable.OrderBy%2A> , <xref:System.Linq.ParallelEnumerable.ThenBy%2A> öğesine yapılan bir çağrı tarafından izlenmiş gibi değerlendirilir <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> .  
   
 ## <a name="query-operators-and-ordering"></a>Sorgu Işleçleri ve sıralaması  
+
  Aşağıdaki sorgu işleçleri bir sorgudaki sonraki tüm işlemlere sıra koruma sağlar veya şu şekilde <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> adlandırılır:  
   
 - <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  

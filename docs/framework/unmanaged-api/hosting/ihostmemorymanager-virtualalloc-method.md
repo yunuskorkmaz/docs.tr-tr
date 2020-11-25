@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4dff3646-a050-4bd9-ac31-fe307e8637ec
 topic_type:
 - apiref
-ms.openlocfilehash: de41b5e0aaf835ee2d4e4f32696fe104d5830b57
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: a2deabc5f1c7ea0f42b6d8ec3944d984854ae571
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804445"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731286"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc Yöntemi
+
 Karşılık gelen Win32 işlevi için bir mantıksal sarmalayıcı görevi görür. Win32 uygulamasının, `VirtualAlloc` çağıran işlemin sanal adres alanındaki bir sayfa bölgesini ayırır veya kaydeder.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,6 +40,7 @@ HRESULT VirtualAlloc (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pAddress`  
  'ndaki Ayrılacak bölgenin başlangıç adresine yönelik bir işaretçi.  
   
@@ -61,7 +63,7 @@ HRESULT VirtualAlloc (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`VirtualAlloc`başarıyla döndürüldü.|  
+|S_OK|`VirtualAlloc` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -70,16 +72,18 @@ HRESULT VirtualAlloc (
 |E_OUTOFMEMORY|Ayırma isteğini tamamlamaya yetecek miktarda bellek yoktu|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  ' İ çağırarak, işleminizin adres alanında bir bölgeyi ayırabilirsiniz `VirtualAlloc` . Parametresi, istediğiniz `pAddress` bellek bloğunun başlangıç adresini içerir. Bu parametre genellikle null olarak ayarlanır. İşletim sistemi, işlem için kullanılabilen boş adres aralıklarının bir kaydını tutar. `pAddress`Null değeri, sisteme uygun olduğu yerde bölge ayırmasını sağlar. Alternatif olarak, bellek bloğu için belirli bir başlangıç adresi sağlayabilirsiniz. Her iki durumda da, çıkış parametresi `ppMem` ayrılan belleğe bir işaretçi olarak döndürülür. İşlevin kendisi bir HRESULT değeri döndürür.  
   
  Win32 `VirtualAlloc` işlevinin bir `ppMem` parametresi yoktur ve bunun yerine, ayrılan belleğe işaretçiyi döndürür. Daha fazla bilgi için bkz. Windows platformu belgeleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

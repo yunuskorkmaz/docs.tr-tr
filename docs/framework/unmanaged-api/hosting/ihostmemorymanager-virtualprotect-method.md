@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13be0299-df0d-4951-aabf-0676a30b385f
 topic_type:
 - apiref
-ms.openlocfilehash: 473a52b55f793abc76883b0a5cd5b2a04756d9f7
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9822e5a1fb09e9d3bce541ff63cf766ae8611789
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804364"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731260"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect Yöntemi
+
 Karşılık gelen Win32 işlevi için bir mantıksal sarmalayıcı görevi görür. ' Nin Win32 uygulamasında, `VirtualProtect` çağıran işlemin sanal adres alanındaki bir kaydedilmiş sayfalar bölgesinde koruma değişir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT VirtualProtect (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `lpAddress`  
  'ndaki Koruma öznitelikleri değiştirilecek olan sanal belleğin temel adresine yönelik bir işaretçi.  
   
@@ -53,7 +55,7 @@ HRESULT VirtualProtect (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`VirtualProtect`başarıyla döndürüldü.|  
+|S_OK|`VirtualProtect` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -61,14 +63,16 @@ HRESULT VirtualProtect (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu uygulama, `VirtualProtect` BIR HRESULT değeri döndürür, ancak Win32 uygulamasının başarılı olduğunu belirtmek için sıfır olmayan bir değer ve hatayı göstermek için sıfır değeri döndürür. Daha fazla bilgi için bkz. Windows platformu belgeleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

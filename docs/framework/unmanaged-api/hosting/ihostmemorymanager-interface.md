@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0f71e4c45e43c2027b12998532f2b04401a51951
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501514"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731338"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager Arabirimi
+
 Ortak dil çalışma zamanının (CLR), standart Win32 sanal bellek işlevlerini kullanmak yerine ana bilgisayar üzerinden sanal bellek istekleri yapmasına izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[AcquiredVirtualAddressSpace Yöntemi](ihostmemorymanager-acquiredvirtualaddressspace-method.md)|Ana bilgisayara ortak dil çalışma zamanının (CLR) belirtilen belleği işletim sisteminden almış olduğunu bildirir.|  
 |[CreateMAlloc Yöntemi](ihostmemorymanager-createmalloc-method.md)|Ana bilgisayar tarafından oluşturulan bir yığından bellek ayırmaları istemek için kullanılan bir [IHostMAlloc](ihostmalloc-interface.md) örneğine bir arabirim işaretçisi alır.|  
@@ -40,14 +41,16 @@ Ortak dil çalışma zamanının (CLR), standart Win32 sanal bellek işlevlerini
 |[VirtualQuery Yöntemi](ihostmemorymanager-virtualquery-method.md)|, Çağıran işlemin sanal adres alanındaki bir sayfa aralığı hakkında bilgi alan ilgili Win32 işlevi için bir mantıksal sarmalayıcı görevi görür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IHostMemoryManager`Ayrıca, CLR 'nin yığın üzerinde bellek istekleri yapması ve işlem içindeki bellek baskısı düzeyini, ana bilgisayar tarafından bildirilen bir işaretçiye ulaşmak üzere CLR için yöntemler sağlar.  
+
+ `IHostMemoryManager` Ayrıca, CLR 'nin yığın üzerinde bellek istekleri yapması ve işlem içindeki bellek baskısı düzeyini, ana bilgisayar tarafından bildirilen bir işaretçiye ulaşmak üzere CLR için yöntemler sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

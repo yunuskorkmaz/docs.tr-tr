@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b74d7629-5f46-458f-8d67-2456a1e7030c
 topic_type:
 - apiref
-ms.openlocfilehash: aee258c49e6726ebef990257456fd273b01b9ef0
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1757662d2004dce3156182c35b37237ff91bae7f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007851"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730350"
 ---
 # <a name="imetadataemitsetmoduleprops-method"></a>IMetaDataEmit::SetModuleProps Yöntemi
+
 Imetadatayayma için önceki bir çağrı tarafından tanımlanan bir modüle yapılan başvuruları güncelleştirir [::D efineModuleRef](imetadataemit-definemoduleref-method.md).  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,15 +35,17 @@ HRESULT SetModuleProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `szName`  
  'ndaki Unicode 'daki modül adı. Bu, yalnızca dosya adıdır ve tam yol adı değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

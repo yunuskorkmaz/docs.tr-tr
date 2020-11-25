@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: b92c3d3328c657762ed002155ef4947a9292b19e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 0c84a91c7da553d0c84a4995b4744576d861dcb9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894727"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730207"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint Arabirimi
 
@@ -29,18 +29,20 @@ Bir işlevde bir kesme noktasını veya bir değer üzerinde bir izleme noktası
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Activate Yöntemi](icordebugbreakpoint-activate-method.md)|Bunun `ICorDebugBreakpoint`etkin durumunu ayarlar.|  
-|[IsActive Yöntemi](icordebugbreakpoint-isactive-method.md)|Bu `ICorDebugBreakpoint` , etkin olup olmadığını gösteren bir değer alır.|  
+|[Activate Yöntemi](icordebugbreakpoint-activate-method.md)|Bunun etkin durumunu ayarlar `ICorDebugBreakpoint` .|  
+|[IsActive Yöntemi](icordebugbreakpoint-isactive-method.md)|Bu, etkin olup olmadığını gösteren bir değer alır `ICorDebugBreakpoint` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kesme noktaları, Koşullu ifadeleri doğrudan desteklemez. Bu tür işlevler isteniyorsa, bir hata ayıklayıcının üzerinde uygulaması gerekir `ICorDebugBreakpoint`.  
+
+ Kesme noktaları, Koşullu ifadeleri doğrudan desteklemez. Bu tür işlevler isteniyorsa, bir hata ayıklayıcının üzerinde uygulaması gerekir `ICorDebugBreakpoint` .  
   
- ICorDebugFunctionBreakpoint Arabirimi işlevleri içindeki `ICorDebugBreakpoint` kesme noktalarını destekleyecek şekilde genişletilir.  
+ ICorDebugFunctionBreakpoint Arabirimi `ICorDebugBreakpoint` işlevleri içindeki kesme noktalarını destekleyecek şekilde genişletilir.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

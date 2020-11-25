@@ -2,17 +2,18 @@
 title: 'ICorDebugSymbolProvider:: GetMethodLocalSymbols yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
-ms.openlocfilehash: 7e9aa01a3fa1c90b0ab4f85970c4eb294b9a4904
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c5a21436c939ddfca0219618efe64d9e0e40aef4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379608"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730857"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider:: GetMethodLocalSymbols yöntemi
+
 Yöntemin yerel sembollerini, bu yöntemin göreli sanal adresi (RVA) verildiğinde alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetMethodLocalSymbols(  
@@ -24,6 +25,7 @@ HRESULT GetMethodLocalSymbols(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `nativeRVA`  
  'ndaki Metodun yerel göreli sanal adresi.  
   
@@ -42,6 +44,7 @@ HRESULT GetMethodLocalSymbols(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

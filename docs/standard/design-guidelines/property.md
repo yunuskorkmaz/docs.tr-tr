@@ -5,14 +5,15 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ed287b98c012622caa5f8f1cc90fced90dda3e62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828744"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730974"
 ---
 # <a name="property-design"></a>Özellik Tasarımı
+
 Özellikler teknik açıdan yöntemlere çok benzer olsa da, bunlar kullanım senaryolarında oldukça farklıdır. Akıllı alanlar olarak görülenmelidir. Alanların çağırma söz dizimi ve yöntemlerin esnekliği vardır.
 
  çağıranın özelliğin değerini değiştirememelidir ✔️ salt-al özellikleri oluşturun.
@@ -38,6 +39,7 @@ ms.locfileid: "94828744"
  Özellik alıcıları basit işlemler olmalıdır ve herhangi bir önkoşullara sahip olmamalıdır. Alıcı bir özel durum oluştur, büyük olasılıkla bir yöntem olarak yeniden tasarlanması gerekir. Bu kuralın, bağımsız değişkenlerin doğrulanması sonucunda özel durumlar beklediğimiz Dizin oluşturucular için uygulanmadığından emin olun.
 
 ### <a name="indexed-property-design"></a>Dizinli özellik tasarımı
+
  Dizinli bir özellik, parametrelere sahip olabilecek ve dizi dizine benzer özel söz dizimi ile çağrılabilen özel bir özelliktir.
 
  Dizinli özellikler genellikle Dizin oluşturucular olarak adlandırılır. Dizin oluşturucular yalnızca bir mantıksal koleksiyondaki öğelere erişim sağlayan API 'lerde kullanılmalıdır. Örneğin, bir dize bir karakter koleksiyonudur ve üzerindeki Dizin Oluşturucu, <xref:System.String?displayProperty=nameWithType> kendi karakterlerine erişmek için eklenmiştir.
@@ -69,6 +71,7 @@ ms.locfileid: "94828744"
  Bu, C# derleyicisi tarafından zorlanır.
 
 ### <a name="property-change-notification-events"></a>Özellik değişiklik bildirimi olayları
+
  Bazen bir özellik değerindeki değişiklikleri kullanıcıya bildiren bir olay sağlamak yararlı olur. Örneğin, `System.Windows.Forms.Control` `TextChanged` özelliğinin değeri değiştirildikten sonra bir olay oluşturur `Text` .
 
  ✔️, üst düzey API 'lerde (genellikle Tasarımcı bileşenleri) özellik değerleri değiştirildiğinde değişiklik bildirimi olaylarını yükseltmeyi göz önünde bulundurun.

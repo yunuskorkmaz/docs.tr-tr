@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: da830aaaced179fed642340c33e7b7c37b350aa3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6f4fbb40053628d60ba7f094fcb5d50a94d63e1a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006564"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729947"
 ---
 # <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS Numaralandırması
+
 Ortak dil çalışma zamanı (CLR) hakkında hangi bilgilerin döndürüleceğini belirten değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -55,6 +56,7 @@ typedef enum {
 |`RUNTIME_INFO_UPGRADE_VERSION`|Sürüm yükseltme bilgilerinin dahil edileceğini gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Aşağıdaki platform mimarisi bayrakları tek seferde belirtilebilir ve birleştirilemez:  
   
 - RUNTIME_INFO_REQUEST_IA64  
@@ -64,14 +66,15 @@ typedef enum {
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kitaplık:** MSCorEE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Sabit Listeleri](hosting-enumerations.md)
+- [Barındırma Numaralandırmaları](hosting-enumerations.md)
