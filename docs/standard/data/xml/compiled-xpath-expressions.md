@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: 310d5eb01fff02d82ec3762d55ff14e5a6bcd621
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 99f06db3c6f1e634e9c4a677c01d1b0849afe43f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831019"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701516"
 ---
 # <a name="compiled-xpath-expressions"></a>Derlenmiş XPath İfadeleri
+
 <xref:System.Xml.XPath.XPathExpression>Nesnesi, <xref:System.Xml.XPath.XPathExpression.Compile%2A> sınıfının statik yönteminden <xref:System.Xml.XPath.XPathExpression> veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> sınıfın yöntemine döndürülen bir derlenmiş XPath sorgusunu temsil eder <xref:System.Xml.XPath.XPathNavigator> .  
   
 ## <a name="the-xpathexpression-class"></a>XPathExpression sınıfı  
+
  Aynı XPath sorgusu birden çok kez kullanılıyorsa, bir nesneyle temsil edilen derlenmiş bir XPath sorgusu <xref:System.Xml.XPath.XPathExpression> faydalıdır.  
   
  Örneğin, <xref:System.Xml.XPath.XPathNavigator.Select%2A> her seferinde XPath sorgusunu temsil eden bir dize kullanmak yerine, yöntemi birden çok kez çağırırken sınıfın <xref:System.Xml.XPath.XPathExpression.Compile%2A> yöntemini <xref:System.Xml.XPath.XPathExpression> veya <xref:System.Xml.XPath.XPathNavigator.Compile%2A> sınıf yöntemini kullanın <xref:System.Xml.XPath.XPathNavigator> ve daha sonra kullanmak üzere bir nesnede XPath sorgusunu derleyip önbelleğe alma <xref:System.Xml.XPath.XPathExpression> .  
@@ -45,6 +47,7 @@ ms.locfileid: "94831019"
 > <xref:System.Xml.XPath.XPathNavigator.Matches%2A>Yöntemi, parametresi olarak bir XPath ifadesini kabul eder. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>YÖNTEMI <xref:System.Xml.XPath.XPathNavigator> W3C XPath dönüş türlerinden birini değil bir nesne döndürür.  
   
 ### <a name="the-returntype-property"></a>ReturnType Özelliği  
+
  Bir XPath sorgusu bir nesneye derlendikten sonra <xref:System.Xml.XPath.XPathExpression> , <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> <xref:System.Xml.XPath.XPathExpression> XPath sorgusunun döndürdüğü şeyi belirlemek için nesnesinin özelliğini kullanabilirsiniz.  
   
  <xref:System.Xml.XPath.XPathExpression.ReturnType%2A>Özelliği, <xref:System.Xml.XPath.XPathResultType> W3C XPath dönüş türlerini temsil eden aşağıdaki sabit listesi değerlerinden birini döndürür.  
@@ -110,6 +113,7 @@ Console.WriteLine(nodes.Current.Value);
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="higher-performance-xpath-expressions"></a>Daha yüksek performans XPath Ifadeleri  
+
  Daha iyi performans için, sorgularınızda olası en belirli XPath ifadesini kullanın. Örneğin, düğüm `book` düğümün bir alt düğümüdür `bookstore` ve `bookstore` düğüm bir XML belgesindeki en üstteki öğe ise, XPath ifadesinin kullanılması `/bookstore/book` kullanmaktan daha hızlıdır `//book` . `//book`XPath ifadesi, eşleşen düğümleri belirlemek IÇIN XML ağacındaki her düğümü tarar.  
   
  Ayrıca, sınıf tarafından sağlanan düğüm kümesi gezinme yöntemlerinin kullanılması, <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathNavigator> seçim ölçütlerinizin basit olduğu durumlarda sınıfının sağladığı seçim yöntemlerine göre performansın iyileşmesine neden olabilir. Örneğin, geçerli düğümün ilk alt öğesini seçmeniz gerekiyorsa, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> yöntemi `child::*[1]` XPath ifadesini ve yöntemini kullanmak için kullanmak daha hızlıdır <xref:System.Xml.XPath.XPathNavigator.Select%2A> .  

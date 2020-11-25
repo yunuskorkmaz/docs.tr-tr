@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: 14eb90c707618796d6d62ed2ec5710ceba31ba6c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 114d5d58d0d9098944299aefd0cb99a70c5da09d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500383"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700269"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished Yöntemi
+
 Profil oluşturucuyu bir sınıfın kaldırmayı tamamladığını bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -44,9 +45,11 @@ HRESULT ClassUnloadFinished(
   \[içinde] sınıfın başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Sınıfı kaldırma işleminin bazı bölümleri geri aramadan sonra devam edebilir `ClassUnloadFinished` . ' De HRESULT hatası, `hrStatus` bir hatayı gösterir. Ancak, içinde başarılı bir HRESULT, `hrStatus` yalnızca sınıfın kaldırılmasının ilk bölümünün başarılı olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0cee7481f9c002f860bff7f12b8be0bb763dadb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830967"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701477"
 ---
 # <a name="convert-strings-to-net-data-types"></a>Dizeleri .NET veri türlerine Dönüştür
 
@@ -72,6 +72,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
  Ancak, bir dizeyi **Boolean**, **Single** veya **Double**'A dönüştürüyorsanız, döndürülen .NET türü **System. Convert** sınıfı kullanılırken döndürülen türle aynı değildir.  
   
 ## <a name="string-to-boolean"></a>Boole olarak dize  
+
  Aşağıdaki tabloda, **ToBoolean** yöntemi kullanılarak bir dize **Boole** değerine dönüştürülürken, verilen giriş dizeleri için hangi türün oluşturulduğu gösterilmektedir.  
   
 |Geçerli dize giriş parametresi|.NET çıkış türü|  
@@ -104,6 +105,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>Dizeden tek  
+
  Aşağıdaki tabloda, bir dizeyi **ToSingle** yöntemi kullanılarak **tek tek** dönüştürme sırasında verilen giriş dizeleri için oluşturulan tür gösterilmektedir.  
   
 |Geçerli dize giriş parametresi|.NET çıkış türü|  
@@ -112,6 +114,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Tek. NegativeInfinity|  
   
 ## <a name="string-to-double"></a>Double için dize  
+
  Aşağıdaki tabloda, **ToDouble** yöntemi kullanılarak bir dizeyi **tek tek** dönüştürmek için verilen giriş dizeleri için hangi türün oluşturulduğu gösterilmektedir.  
   
 |Geçerli dize giriş parametresi|.NET çıkış türü|  

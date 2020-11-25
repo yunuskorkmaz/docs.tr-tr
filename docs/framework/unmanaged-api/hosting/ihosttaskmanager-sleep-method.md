@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f67d25f3-9199-4c5f-b1e8-1c819243cfd5
 topic_type:
 - apiref
-ms.openlocfilehash: bb12547155383bb410f592018232ca6f688bab8a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 372b15a565f8a7484c1c42c387098a38f7bbf428
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841913"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702062"
 ---
 # <a name="ihosttaskmanagersleep-method"></a>IHostTaskManager::Sleep Yöntemi
+
 Ana bilgisayara geçerli görevin uykuya geçmesini bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT Sleep (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwMilliseconds`  
  'ndaki İş parçacığının uyku moduna alacağı zaman aralığı (milisaniye cinsinden).  
   
@@ -45,7 +47,7 @@ HRESULT Sleep (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Sleep`başarıyla döndürüldü.|  
+|S_OK|`Sleep` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -53,14 +55,16 @@ HRESULT Sleep (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR genellikle `IHostTaskManager::Sleep` <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> kullanıcı kodundan çağrıldığında ' i çağırır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

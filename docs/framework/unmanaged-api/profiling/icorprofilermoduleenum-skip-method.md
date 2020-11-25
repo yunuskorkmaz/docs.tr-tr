@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8dc29c6a-e2ba-41d8-a1e0-0fdd21421e0b
 topic_type:
 - apiref
-ms.openlocfilehash: b48b782b7c8be35bfb815d72758f0bc316fb2114
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6a967f9a50b3220e2d5e206503330a2bab764c4b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494728"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701646"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>ICorProfilerModuleEnum::Skip Yöntemi
+
 Belirlenen sayıda öğe atlanabilmesi için Numaralandırıcının imlecini geçerli konumundan ilerletir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -32,21 +33,25 @@ HRESULT Skip([in] ULONG celt);
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `celt`  
  'ndaki Atlanacak öğe sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`celt`öğeler atlandı.|  
+|S_OK|`celt` öğeler atlandı.|  
 |S_FALSE|Daha az öğe olmadığını `celt` belirten öğe atlandı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu Numaralandırıcı imlecinizin yeni konumu (geçerli konum) + ' dır `celt` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

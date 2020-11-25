@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: d7ee7447ab7a8be1bad0d087dba5fc2afaa878e8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 108cfbf1ee8ff3d6fbe088d6dd14d0354750cb0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830980"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701503"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML Veri Türlerini Dönüştürme
+
 **XmlConvert** sınıfında bulunan yöntemlerin çoğu, dizeleri ve kesin belirlenmiş biçimleri arasında veri dönüştürmek için kullanılır. Yöntemler yerel olarak bağımsızdır. Bu, dönüştürme yaparken herhangi bir yerel ayarı dikkate almaz demektir.  
   
 ## <a name="reading-string-as-types"></a>Dize tür olarak okunuyor  
+
  Aşağıdaki örnek bir dize okur ve bunu bir **Tarih saat** türüne dönüştürür.  
   
  Aşağıdaki XML girişi verildi:  
@@ -41,6 +43,7 @@ Console.WriteLine(vDateTime);
 ```  
   
 ## <a name="writing-strings-as-types"></a>Dizeleri tür olarak yazma  
+
  Aşağıdaki örnek bir **Int32** okur ve bunu bir dizeye dönüştürür.  
   
  Aşağıdaki XML girişi verildi:  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e087dbbb-f4fb-4fbe-8292-e4f1a14d0df2
 topic_type:
 - apiref
-ms.openlocfilehash: e84639c1d63e6935b9b363f01c12bf0fbd3390e3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c384fe6c4357c63bc56f9f9b1cc907dea64fddf7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615624"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700944"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength Yöntemi
+
 Gömülü kaynağın uzunluğunu bayt olarak alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -33,10 +34,12 @@ HRESULT GetSourceLength(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pRetVal`  
  dışı Gömülü kaynağın bayt cinsinden uzunluğunu belirten bir değişken işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

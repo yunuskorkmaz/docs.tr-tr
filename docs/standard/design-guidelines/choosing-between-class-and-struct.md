@@ -12,14 +12,15 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: b1f3d36f4a9b6e44451a8534ca79fb674071a955
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 05ba9abbc9495d927b7f58ebb06f152c0c15772f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821482"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701256"
 ---
 # <a name="choosing-between-class-and-struct"></a>Sınıf ile Yapı Arasında Seçim Yapma
+
 Temel tasarım kararlarından biri olan her çerçeve tasarlayıcı, bir türü Sınıf (başvuru türü) veya yapı (değer türü) olarak tasarlamayacağındır. Bu seçimi yapmak için başvuru türleri ve değer türleri davranışlarındaki farkları iyi anlamak çok önemlidir.
 
  Başvuru türleri ve değer türleri arasındaki ilk fark, başvuru türlerinin yığında ve atık toplanmış olarak ayrıldığı, ancak değer türlerinin yığın üzerinde ayrıldığı ya da yığın olarak ya da kendi kapsayıcı türü serbest bırakıldığında serbest bırakıldığı durumlarda serbest bırakıldığı ' dır. Bu nedenle, değer türlerinin ayırmaları ve ayırması, genel bir ucuz 'da, başvuru türlerinin tahsislerini ve ayırmayı kaldırır.

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - with expression [C#]
 - with operator [C#]
-ms.openlocfilehash: 8412dfe8663703d3b201fe98b5f4752da1b344cf
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: d7d3758c8c5da7859974b5b50b63d2a5ca16b24d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556718"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702231"
 ---
 # <a name="with-expression-c-reference"></a>With ifadesi (C# Başvurusu)
 
@@ -26,7 +26,7 @@ Yukarıdaki örnekte gösterildiği gibi, hangi üyelerin değiştirileceğini v
 
 :::code language="csharp" source="snippets/with-expression/InheritanceExample.cs" :::
 
-Bir başvuru türü üyesi olması durumunda, bir kayıt kopyalanırken yalnızca bir örneğe başvuru kopyalanır. Hem kopya hem de özgün kaydın aynı başvuru türü örneğine erişimi vardır. Aşağıdaki örnekte bu davranış gösterilmektedir:
+Bir başvuru türü üyesi söz konusu olduğunda, bir kayıt kopyalanırken yalnızca bir örneğe başvuru kopyalanır. Hem kopya hem de özgün kaydın aynı başvuru türü örneğine erişimi vardır. Aşağıdaki örnekte bu davranış gösterilmektedir:
 
 :::code language="csharp" source="snippets/with-expression/ExampleWithReferenceType.cs" :::
 

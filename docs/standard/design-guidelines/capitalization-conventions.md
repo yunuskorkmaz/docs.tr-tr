@@ -9,17 +9,19 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8df136fb57ad61ddfd87f4dec1f6490c63c3d977
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e416a8346952a41d9c89f526bfce990dfc277fc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821534"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701269"
 ---
 # <a name="capitalization-conventions"></a>Büyük/Küçük Harf Kuralları
+
 Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Üyeler ve parametreler için tanımlayıcıların kolay okunmasını sağlamak üzere basit bir yöntem sağlar.
 
 ## <a name="capitalization-rules-for-identifiers"></a>Tanımlayıcılar için büyük harfe dönüştürme kuralları
+
  Bir Tanımlayıcıdaki sözcükleri ayırt etmek için, Tanımlayıcıdaki her sözcüğün ilk harfini büyük harfle yapın. Sözcükleri ayırt etmek için alt çizgi kullanmayın veya bu konuyla ilgili olarak tanımlayıcılardan herhangi bir yerde. Tanımlayıcının kullanılmasına bağlı olarak, tanımlayıcıları büyük harfle almanın iki uygun yolu vardır:
 
 - Pascalbüyük harf
@@ -60,6 +62,7 @@ Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Ü
 |Parametre|Ortası büyük harf|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Bileşik sözcüklerin ve ortak koşulların büyük bir olması
+
  Çoğu bileşik terim, büyük küçük harf amaçlarıyla tek sözcük olarak değerlendirilir.
 
  ❌ Bu nedenle, kapalı biçimli bileşik sözcükler olarak adlandırılan her sözcüğü büyük harfle kaldırmayın.
@@ -95,6 +98,7 @@ Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Ü
 |`Writable`|`writable`|`Writeable`|
 
 ## <a name="case-sensitivity"></a>Büyük/küçük harf duyarlılığı
+
  CLR üzerinde çalışabilen dillerin, büyük/küçük harf duyarlılığı desteklemek için gerekli değildir, ancak bazıları. Diliniz destekliyorsa bile, çerçeve'nize erişebilen diğer diller değildir. Bu nedenle dışarıdan erişilebilen tüm API 'Ler, aynı bağlamdaki iki ad arasında ayrım yapmak için tek başına bir durum kullanamaz.
 
  ❌ Tüm programlama dillerinin büyük/küçük harfe duyarlı olduğunu varsaymayın. Bunlar değildir. Adlar tek başına büyük/küçük harf bakımından farklı olamaz.

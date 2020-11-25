@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ebc9cc33-fcd6-4cae-9ecb-ea21c51874e6
 topic_type:
 - apiref
-ms.openlocfilehash: b411190ff36410c1d293f1e48b31975be8a13aee
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a0b966e85bedcbef622aba2f6b181b98e0950e01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616040"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700684"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime Metodu
+
 Uygulama etki alanı oluşturulduğundan bu yana geçerli uygulama etki alanında yürütme sırasında tüm iş parçacıkları tarafından kullanılan toplam işlemci süresini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -33,6 +34,7 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwAppDomainId`  
  'ndaki İstenen uygulama etki alanının KIMLIĞI.  
   
@@ -48,14 +50,16 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 |E_FAIL|Uygulama etki alanı kaynak izleme etkin değil.<br /><br /> -veya-<br /><br /> Diğer tüm arızalar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, yönetilen özelliğin yönetilmeyen eşdeğeridir <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
@@ -64,4 +68,4 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 - [ICLRAppDomainResourceMonitor Arabirimi](iclrappdomainresourcemonitor-interface.md)
 - [Barındırma Arabirimleri](hosting-interfaces.md)
 - [Uygulama etki alanı kaynak Izleme](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
-- [Barındırma](index.md)
+- [Hosting](index.md)

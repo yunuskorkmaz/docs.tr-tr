@@ -15,23 +15,25 @@ helpviewer_keywords:
 ms.assetid: aaac8f98-5cf4-42c7-b04b-556cce367e36
 topic_type:
 - apiref
-ms.openlocfilehash: b79c8dd9f27805e00535dde53c6ee9f5ee457b42
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1a9e377ba98c0c2302e341149bd5acb46c24051a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500269"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699995"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute Yöntemi
+
 `catch`Ortak dil çalışma zamanı (CLR) içinde bir özel durum bloğu yürütüldüğünde çağırılır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT ExceptionCLRCatcherExecute();  
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
