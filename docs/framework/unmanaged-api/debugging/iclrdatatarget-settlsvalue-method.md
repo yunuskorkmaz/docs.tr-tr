@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4a2d6a24-749a-47ad-9f01-4517203d3f35
 topic_type:
 - apiref
-ms.openlocfilehash: 6c98fc93fd659ccfc0ccd42eec7d95382cf342f8
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: d2eaab1f42eb04d8e9727220a08842ca75a2eadf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860518"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723694"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue Yöntemi
+
 Hedef işlemde belirtilen iş parçacığının iş parçacığı yerel deposunda (TLS) bir değer ayarlar. Bu yöntem, ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetTLSValue (  
@@ -36,6 +37,7 @@ HRESULT SetTLSValue (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `threadID`  
  'ndaki Hedef işlemdeki bir iş parçacığının işletim sistemi tanımlayıcısı.  
   
@@ -43,12 +45,14 @@ HRESULT SetTLSValue (
  'ndaki Konumun dizini. Bu değer, belirtilen iş parçacığının yerel deposunda geçerli bir dizin olmalıdır.  
   
  `value`  
- 'ndaki Verilen `CLRDATA_ADDRESS` TLS konumuna yerleştirilecek değeri belirten bir değer.  
+ 'ndaki `CLRDATA_ADDRESS` VERILEN TLS konumuna yerleştirilecek değeri belirten bir değer.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-ms.openlocfilehash: 66b50bad0e8d2622922da96c213643ac3be83a9e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 21838bdd8ff45f8f74524dc4da52364fb032b396
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895368"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723408"
 ---
 # <a name="icordebug-interface"></a>ICorDebug Arabirimi
+
 Geliştiricilerin ortak dil çalışma zamanı (CLR) ortamındaki uygulamalarda hata ayıklamasına imkan tanıyan yöntemler sağlar.  
   
 > [!NOTE]
@@ -36,20 +37,22 @@ Geliştiricilerin ortak dil çalışma zamanı (CLR) ortamındaki uygulamalarda 
 |[DebugActiveProcess Yöntemi](icordebug-debugactiveprocess-method.md)|Hata ayıklayıcıyı mevcut bir işleme iliştirir.|  
 |[EnumerateProcesses Yöntemi](icordebug-enumerateprocesses-method.md)|Hata ayıklamakta olan işlemlere yönelik bir Numaralandırıcı alır.|  
 |[GetProcess Yöntemi](icordebug-getprocess-method.md)|Verilen işlem KIMLIĞINE sahip "ICorDebugProcess" nesnesini döndürür.|  
-|[Initialize Yöntemi](icordebug-initialize-method.md)|`ICorDebug` Nesnesini başlatır.|  
+|[Initialize Yöntemi](icordebug-initialize-method.md)|Nesnesini başlatır `ICorDebug` .|  
 |[SetManagedHandler Yöntemi](icordebug-setmanagedhandler-method.md)|Yönetilen olaylar için olay işleyicisi nesnesini belirtir.|  
 |[SetUnmanagedHandler Yöntemi](icordebug-setunmanagedhandler-method.md)|Yönetilmeyen olaylar için olay işleyicisi nesnesini belirtir.|  
-|[Terminate Yöntemi](icordebug-terminate-method.md)|`ICorDebug` Nesneyi sonlandırır.|  
+|[Terminate Yöntemi](icordebug-terminate-method.md)|Nesneyi sonlandırır `ICorDebug` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebug`hata ayıklayıcı işlemi için bir olay işleme döngüsünü temsil eder. Hata ayıklayıcının [ICorDebugManagedCallback:: ExitProcess geri çağırması](icordebugmanagedcallback-exitprocess-method.md) , bu arabirimi serbest bırakmadan önce hata ayıklamakta olan tüm işlemlerden geri aramasını beklemesi gerekir.  
+
+ `ICorDebug` hata ayıklayıcı işlemi için bir olay işleme döngüsünü temsil eder. Hata ayıklayıcının [ICorDebugManagedCallback:: ExitProcess geri çağırması](icordebugmanagedcallback-exitprocess-method.md) , bu arabirimi serbest bırakmadan önce hata ayıklamakta olan tüm işlemlerden geri aramasını beklemesi gerekir.  
   
- `ICorDebug` Nesne, daha fazla yönetilen hata ayıklamayı denetlemek için ilk nesnedir. .NET Framework sürüm 1,0 ve 1,1 ' de, bu nesne COM ' `CoClass` dan oluşturulan bir nesnedir. .NET Framework sürüm 2,0 ' de, bu nesne artık bir `CoClass` nesne değildir. Daha fazla sürüm tanıyan [CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md) işlevi tarafından oluşturulmalıdır. Bu yeni oluşturma işlevi `ICorDebug`, istemcilerin belirli bir uygulamasını almasını sağlar ve bu da hata ayıklama API 'sinin belirli bir sürümüne öykünür.  
+ `ICorDebug`Nesne, daha fazla yönetilen hata ayıklamayı denetlemek için ilk nesnedir. .NET Framework sürüm 1,0 ve 1,1 ' de, bu nesne COM ' `CoClass` dan oluşturulan bir nesnedir. .NET Framework sürüm 2,0 ' de, bu nesne artık bir nesne değildir `CoClass` . Daha fazla sürüm tanıyan [CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md) işlevi tarafından oluşturulmalıdır. Bu yeni oluşturma işlevi, istemcilerin belirli bir uygulamasını almasını sağlar `ICorDebug` ve bu da hata ayıklama API 'sinin belirli bir sürümüne öykünür.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

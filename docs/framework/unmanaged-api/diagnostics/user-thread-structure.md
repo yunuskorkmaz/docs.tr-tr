@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: a57c7d71-c4b0-41f9-a964-0c5ee84a3124
 topic_type:
 - apiref
-ms.openlocfilehash: 5144feab742bc5dac36563d701d81a699d0bb2f3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 409651aa69e957418ad46f61e1bd57add0eb10a6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609449"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722901"
 ---
 # <a name="user_thread-structure"></a>USER_THREAD Yapısı
+
 Bir iş parçacığı hakkındaki hata ayıklayıcıyla ilgili bilgi sağlar. Daha fazla bilgi için bkz. [INotifySource2:: SetNotifyFilter](inotifysource2-setnotifyfilter-method.md) yöntemi.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct tagUSER_THREAD  
@@ -44,6 +45,7 @@ typedef struct tagUSER_THREAD
 |`dwTid`|İş parçacığı KIMLIĞI.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** ProtocolNotify2. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.

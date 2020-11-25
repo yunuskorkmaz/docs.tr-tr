@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-ms.openlocfilehash: 585287f63f57f55e877c94684820833b6d1add60
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a8326f95286ef05dd370797a531417f81ed5c65b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616547"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723161"
 ---
 # <a name="_corimageunloading-function"></a>_CorImageUnloading İşlevi
+
 Yönetilen modül görüntüleri kaldırıldığında yükleyiciyi bilgilendirir.  
   
  Bu işlev uygulanmadı. Çağrılırsa, E_NOTIMPL döndürür.  
@@ -35,15 +36,17 @@ STDAPI (VOID) _CorImageUnloading(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ImageBase`  
  'ndaki Boşaltılacak görüntünün başlangıç konumuna yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

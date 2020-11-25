@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-ms.openlocfilehash: 734f8eaa7c520bbf1ad1208ece42751e967a208a
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 69c52c13a4a0aca5094274de969ebed6e09651b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859723"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723512"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator Arabirimi
+
 Hedef işlemdeki derlemelerin meta verilerini bulmak için veri erişim Hizmetleri katmanı tarafından kullanılır.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -31,9 +32,11 @@ Hedef işlemdeki derlemelerin meta verilerini bulmak için veri erişim Hizmetle
 |[GetMetadata Yöntemi](iclrmetadatalocator-getmetadata-method.md)|Hedef işlemden bir görüntünün meta verilerini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  API istemcisi (yani hata ayıklayıcı) bu arabirimi belirli hedef işlem için uygun şekilde yürütmelidir. Örneğin, canlı bir işlem için uygulama, bellek dökümünden farklı olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  

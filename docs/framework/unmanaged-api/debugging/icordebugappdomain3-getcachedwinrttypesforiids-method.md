@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 23682ca0-1bcf-48e6-996e-69f7ba337682
 topic_type:
 - apiref
-ms.openlocfilehash: f8e92ec4f813e8810273a1514298d0739a3d2406
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aff86fb63b87869ed13028bd7344afe11363f51
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179058"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723187"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs Yöntemi
-Arabirim tanımlayıcılarını temel alan bir uygulama etki alanında önbelleğe alınmış Windows Runtime türleri için bir sayı eritici alır.  
+
+Bir uygulama etki alanındaki önbelleğe alınmış Windows Çalışma Zamanı türleri için kendi arabirim tanımlayıcılarına göre bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetCachedWinRTTypesForIIDs (
@@ -36,26 +37,29 @@ HRESULT GetCachedWinRTTypesForIIDs (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cReqTypes`  
- [içinde] Gerekli türlerin sayısı.  
+ 'ndaki Gerekli türlerin sayısı.  
   
  `iidsToResolve`  
- [içinde] Alınacak Windows Runtime türlerinin yönetilen gösterimlerine karşılık gelen arabirim tanımlayıcılarını içeren bir diziiçin işaretçi.  
+ 'ndaki Alınacak Windows Çalışma Zamanı türlerinin yönetilen temsillerine karşılık gelen arabirim tanımlayıcılarını içeren bir dizi işaretçisi.  
   
  `ppTypesEnum`  
- [çıkış] Alınan Windows Runtime türlerinin önbelleğe alınmış yönetilen gösterimlerinin numaralandırılmasına olanak tanıyan "ICorDebugTypeEnum" arabirimi `iidsToResolve`nesnesinin adresine işaretçi.  
+ dışı İçindeki arabirim tanımlayıcılarına göre alınan Windows Çalışma Zamanı türlerinin önbelleğe alınmış yönetilen temsillerine yönelik numaralandırılmasına izin veren bir "ICorDebugTypeEnum" arabirim nesnesinin adresine yönelik bir işaretçi `iidsToResolve` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntem belirli bir arabirim tanımlayıcısı için bilgi almak için başarısız olursa, "ICorDebugTypeEnum" koleksiyonunda `ELEMENT_TYPE_END` karşılık gelen giriş veri alma sorunları `ELEMENT_TYPE_VOID` nedeniyle hatalar için bir tür veya bilinmeyen arabirim tanımlayıcıları için olacaktır.  
+
+ Yöntem belirli bir arabirim tanımlayıcısı için bilgileri alamadığında, "ICorDebugTypeEnum" koleksiyonundaki karşılık gelen giriş, `ELEMENT_TYPE_END` veri alımı sorunları veya bilinmeyen arabirim tanımlayıcıları nedeniyle hata için bir tür olur `ELEMENT_TYPE_VOID` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Windows Çalışma Zamanı  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

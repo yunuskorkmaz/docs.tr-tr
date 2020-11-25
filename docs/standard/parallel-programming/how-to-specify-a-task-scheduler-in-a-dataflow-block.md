@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 716892940bf8387cbe3d39fd36258c5ede02ee8b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8c27c1ca61356b36183bb74b8360e41f5324d25
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826911"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722446"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğunda Görev Zamanlayıcı Belirtme
+
 Bu belgede, uygulamanızda veri akışı kullandığınızda belirli bir görev zamanlayıcısını nasıl ilişkilenbileceğiniz gösterilmektedir. Örnek, <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> okuyucu görevlerinin etkin olduğu ve bir yazıcı görevinin etkin olduğu zaman göstermek için bir Windows Forms uygulamasındaki sınıfını kullanır. Ayrıca, <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> bir veri akışı bloğunun Kullanıcı arabirimi iş parçacığında çalışmasını sağlamak için yöntemini kullanır.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -30,6 +31,7 @@ Bu belgede, uygulamanızda veri akışı kullandığınızda belirli bir görev 
 3. Forma bir <xref:System.Windows.Forms.Timer> denetim ekleyin. <xref:System.Windows.Forms.Timer.Interval%2A>Özelliğini olarak ayarlayın `2500` .  
   
 ## <a name="adding-dataflow-functionality"></a>Veri akışı Işlevselliği ekleme  
+
  Bu bölümde, uygulamaya katılan veri akışı bloklarının oluşturulması ve bunların her birinin bir Görev Zamanlayıcısı ile ilişkilendirilmesi açıklanmaktadır.  
   
 ### <a name="to-add-dataflow-functionality-to-the-application"></a>Uygulamaya veri akışı Işlevselliği eklemek için  
@@ -73,6 +75,7 @@ Bu belgede, uygulamanızda veri akışı kullandığınızda belirli bir görev 
  Bu örnek ayrıca, <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> bazı veri akışı bloklarının aynı anda çalışmasını sağlamak için sınıfını ve aynı nesne üzerinde çalışan diğer tüm veri akışı bloklarına göre özel olarak hareket etmek için başka bir veri akışı bloğunu kullanır <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> . Bu teknik, birden çok veri akışı bloğu bir kaynağı paylaşıyorsa ve bir kaynağa erişimi el ile eşitlemeye yönelik gereksinimi ortadan kaldırdığı için bu kaynağa özel erişim gerektirirken yararlıdır. El ile eşitlemenin eleme kodu daha verimli hale getirir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, Form1.cs için tüm kodu gösterir (Visual Basic için Form1. vb).  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]

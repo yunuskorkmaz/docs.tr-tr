@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-ms.openlocfilehash: b7b15261d825c1bd5f217c4cecd82ed36a716d0e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9d14ec33128596a148ca3509a49c8c97fafe82d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008267"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723109"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString Yöntemi
+
 Belirtilen göreli sanal adreste depolanan dizeyi alır.  
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
@@ -37,6 +38,7 @@ HRESULT GetString (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `RVA`  
  'ndaki Döndürülecek dizenin göreli sanal adresi.  
   
@@ -44,11 +46,12 @@ HRESULT GetString (
  dışı Döndürülen dize.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

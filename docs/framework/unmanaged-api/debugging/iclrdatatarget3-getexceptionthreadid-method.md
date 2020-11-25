@@ -12,17 +12,18 @@ api_type:
 ms.assetid: 307d6ac7-4a86-45f3-999d-6b47004a68f2
 topic_type:
 - apiref
-ms.openlocfilehash: 63c92e3f34527f895552f45d43f332f778470b13
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 0a8b7a90cd909379f870f6a501a940386d2e1451
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860426"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723603"
 ---
 # <a name="iclrdatatarget3getexceptionthreadid-method"></a>ICLRDataTarget3::GetExceptionThreadID Metodu
+
 Özel durumu oluşturan iş parçacığının KIMLIĞINI almak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetExceptionThreadID(  
@@ -31,11 +32,13 @@ HRESULT GetExceptionThreadID(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `threadID`  
  dışı Özel durumu oluşturan iş parçacığının KIMLIĞI.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Dönüş değeri `S_OK` başarılı veya hata durumunda hata `HRESULT` kodu. `HRESULT` Kodlar şunlar olabilir ancak bunlarla sınırlı değildir:  
+
+ Dönüş değeri `S_OK` başarılı veya hata durumunda hata `HRESULT` kodu. `HRESULT`Kodlar şunlar olabilir ancak bunlarla sınırlı değildir:  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
@@ -43,9 +46,11 @@ HRESULT GetExceptionThreadID(
 |`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|Özel durum için geçerli bir iş parçacığı KIMLIĞI bulunamadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  

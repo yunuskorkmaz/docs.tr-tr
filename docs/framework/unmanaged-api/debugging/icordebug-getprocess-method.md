@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 10a40ba0-1b65-4721-bd11-cf12d57b280d
 topic_type:
 - apiref
-ms.openlocfilehash: 59afc8ae7d66e81e4dca3923f9c6f7ff3a3a6605
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 46c2b444984c5a0062f1cfbc0cd29dbe409b16fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895379"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723447"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess Yöntemi
+
 Belirtilen işlem için "ICorDebugProcess" örneğine bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetProcess (  
@@ -35,13 +36,15 @@ HRESULT GetProcess (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwProcessId`  
  'ndaki İşlemin KIMLIĞI.  
   
  `ppProcess`  
- dışı Belirtilen işlem için bir `ICorDebugProcess` örneğin adresine yönelik bir işaretçi.  
+ dışı Belirtilen işlem için bir örneğin adresine yönelik bir işaretçi `ICorDebugProcess` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

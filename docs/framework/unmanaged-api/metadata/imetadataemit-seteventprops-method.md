@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: 720133e64c02aa09c9ff7e43a20630b0d55c1acf
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5c2880ac07f0317bc36ff4bbde68cd3a25febf52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008761"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721991"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps Yöntemi
+
 [Imetadatayayma::D efineEvent](imetadataemit-defineevent-method.md)için önceki bir çağrı tarafından tanımlanan bir olayın belirtilen özelliğini ayarlar veya güncelleştirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -40,6 +41,7 @@ HRESULT SetEventProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ev`  
  'ndaki Olay belirteci.  
   
@@ -62,11 +64,12 @@ HRESULT SetEventProps (
  'ndaki Olayla ilişkili diğer yöntemler için bir belirteç dizisi. Dizinin son öğesi olmalıdır `mdMethodDefNil` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

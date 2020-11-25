@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-ms.openlocfilehash: 9c22ca47a606da0949529cf55655bbcde19cb5c9
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5eee2aee5873fe512136bc5407e395acdc31af29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795670"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722615"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState Numaralandırması
+
 Hata ayıklama için bir iş parçacığının durumunu belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorDebugThreadState {  
@@ -41,11 +42,13 @@ typedef enum CorDebugThreadState {
 |`THREAD_SUSPEND`|İş parçacığı çalıştırılamıyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Hata ayıklayıcı, `CorDebugThreadState` bir iş parçacığının yürütmesini denetlemek için sabit listesini kullanır. Bir iş parçacığının durumu [ICorDebugThread:: SetDebugState](icordebugthread-setdebugstate-method.md) veya [ICorDebugController:: SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md) yöntemi kullanılarak ayarlanabilir.  
   
  [BARıNDıRMA API](../hosting/index.md) 'sine sunulan bir geri çağırma, ileti balonları, bu nedenle kesintiye uğramış bir durum gerekli değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

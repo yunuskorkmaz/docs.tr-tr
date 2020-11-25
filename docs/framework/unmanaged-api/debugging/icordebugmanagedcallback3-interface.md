@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a95389d3-cf2e-47a4-9805-61426acc6b65
 topic_type:
 - apiref
-ms.openlocfilehash: 63e3f166c4cbf17f4892dccf770343bfbf6e0284
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: e04f5be6d2612b26bf7d71807753d170e6a5a7a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209753"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723304"
 ---
 # <a name="icordebugmanagedcallback3-interface"></a>ICorDebugManagedCallback3 Arabirimi
+
 Etkinleştirilmiş bir özel hata ayıklayıcı bildiriminin tetiklendiğini gösteren bir geri arama yöntemi sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -31,12 +32,14 @@ Etkinleştirilmiş bir özel hata ayıklayıcı bildiriminin tetiklendiğini gö
 |[CustomNotification Yöntemi](icordebugmanagedcallback3-customnotification-method.md)|Etkin bir özel hata ayıklayıcı bildiriminin yapıldığını gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu arabirim, [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) ve [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) arabirimlerinin mantıksal bir uzantısıdır.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

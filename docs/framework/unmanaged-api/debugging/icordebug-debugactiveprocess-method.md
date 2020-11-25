@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-ms.openlocfilehash: 3630e25b6c24edaa366f1b0fae088e760e851fa4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1713623fa575bea6df649106b37212f7aeaee6db
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895401"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723473"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess Yöntemi
+
 Hata ayıklayıcıyı mevcut bir işleme iliştirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DebugActiveProcess (  
@@ -36,19 +37,22 @@ HRESULT DebugActiveProcess (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `id`  
  'ndaki Hata ayıklayıcının eklendiği işlemin KIMLIĞI.  
   
  `win32Attach`  
- 'ndaki Hata ayıklayıcı, işlem için Win32 `true` hata ayıklayıcısı olarak davranması ve yönetilmeyen geri çağırmaları dağıtmak için olarak ayarlanan Boole değeri; Aksi takdirde `false`,.  
+ 'ndaki `true` Hata ayıklayıcının, işlem Için Win32 hata ayıklayıcısı olarak davranması ve yönetilmeyen geri çağırmaları dağıtımı gerekiyorsa olarak ayarlanan Boolean değeri; aksi durumda, `false` .  
   
  `ppProcess`  
  dışı Hata ayıklayıcının eklendiği işlemi temsil eden bir "ICorDebugProcess" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  , IA-64 tabanlı ve AMD64 tabanlı platformlar gibi Win9x ve x86 olmayan platformlarda birlikte çalışma hata ayıklaması desteklenmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

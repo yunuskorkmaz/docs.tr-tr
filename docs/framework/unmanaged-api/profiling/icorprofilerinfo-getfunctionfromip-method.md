@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f069802a-198f-46dd-9f09-4f77adffc9ba
 topic_type:
 - apiref
-ms.openlocfilehash: 339c5db1610a3cf087085ce19fc663436d9c4ec1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4a7e21ae60253c741b57674212e0ecabdd844d2d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498316"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722571"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP Yöntemi
+
 Yönetilen bir kod yönerge işaretçisini bir ile eşler `FunctionID` .  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -44,6 +45,7 @@ HRESULT GetFunctionFromIP(
   \[out] döndürülen işlev KIMLIĞI.
 
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

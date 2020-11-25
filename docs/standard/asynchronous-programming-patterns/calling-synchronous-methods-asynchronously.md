@@ -20,12 +20,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 668ac7552289a9d1015b62ed9e68f53415dd6211
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8d12ab2904b336f38e56387c8aaf2a851a46007e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830447"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722732"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Zaman Uyumlu Metotları Zaman Uyumsuz Olarak Çağırma
 
@@ -55,6 +55,7 @@ Bu konudaki kod örnekleri, `BeginInvoke` `EndInvoke` zaman uyumsuz çağrılar 
 > Hangi tekniği kullanırsanız kullanın, zaman `EndInvoke` uyumsuz çağrlarınızın tamamlanmasını her zaman çağırın.
 
 ## <a name="defining-the-test-method-and-asynchronous-delegate"></a>Test yöntemini ve zaman uyumsuz temsilciyi tanımlama
+
  Aşağıdaki kod örnekleri, zaman uyumsuz olarak aynı uzun süre çalışan yöntemi çağırmanın çeşitli yollarını gösterir `TestMethod` . `TestMethod`Yöntemi, işleme başlamış olduğunu göstermek için bir konsol iletisi görüntüler ve birkaç saniye uyku moduna geçin ve sonra sona erer. `TestMethod` , `out` ve imzaları için bu tür parametrelerin Eklenme şeklini gösteren bir parametreye sahiptir `BeginInvoke` `EndInvoke` . `ref`Parametreleri benzer şekilde işleyebilirsiniz.
 
  Aşağıdaki kod örneği, `TestMethod` `AsyncMethodCaller` zaman uyumsuz olarak çağırmak için kullanılabilen adlı temsilcinin ve tanımını gösterir `TestMethod` . Kod örneklerini derlemek için, ve temsilcisinin tanımlarını dahil etmeniz gerekir `TestMethod` `AsyncMethodCaller` .
@@ -64,6 +65,7 @@ Bu konudaki kod örnekleri, `BeginInvoke` `EndInvoke` zaman uyumsuz çağrılar 
  [!code-vb[AsyncDelegateExamples#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/TestMethod.vb#1)]
 
 ## <a name="waiting-for-an-asynchronous-call-with-endinvoke"></a>EndInvoke ile zaman uyumsuz bir çağrı bekleniyor
+
  Bir yöntemi zaman uyumsuz olarak yürütmenin en basit yolu, temsilcinin `BeginInvoke` metodunu çağırarak, ana iş parçacığında bazı işler yaparak ve sonra temsilcinin metodunu çağıran yöntemi çalıştırmaya başlamadır `EndInvoke` . `EndInvoke` , zaman uyumsuz çağrı tamamlanana kadar döndürülmediği için çağıran iş parçacığını engelleyebilir. Bu, dosya veya ağ işlemleriyle birlikte kullanmak için iyi bir tekniktir.
 
 > [!IMPORTANT]
@@ -74,6 +76,7 @@ Bu konudaki kod örnekleri, `BeginInvoke` `EndInvoke` zaman uyumsuz çağrılar 
  [!code-vb[AsyncDelegateExamples#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/EndInvoke.vb#2)]
 
 ## <a name="waiting-for-an-asynchronous-call-with-waithandle"></a>WaitHandle ile zaman uyumsuz bir çağrı bekleniyor
+
  <xref:System.Threading.WaitHandle> <xref:System.IAsyncResult.AsyncWaitHandle%2A> Tarafından döndürülen özelliğini kullanarak elde edebilirsiniz <xref:System.IAsyncResult> `BeginInvoke` . , <xref:System.Threading.WaitHandle> Zaman uyumsuz çağrı tamamlandığında sinyal alırsınız ve yöntemini çağırarak bunu bekleyebilirsiniz <xref:System.Threading.WaitHandle.WaitOne%2A> .
 
  Kullanıyorsanız <xref:System.Threading.WaitHandle> , zaman uyumsuz çağrı tamamlanmadan önce veya sonra, ancak sonuçları almak için çağrılmadan önce ek işlem yapabilirsiniz `EndInvoke` .
@@ -86,6 +89,7 @@ Bu konudaki kod örnekleri, `BeginInvoke` `EndInvoke` zaman uyumsuz çağrılar 
  [!code-vb[AsyncDelegateExamples#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/WaitHandle.vb#3)]
 
 ## <a name="polling-for-asynchronous-call-completion"></a>Zaman uyumsuz çağrı tamamlama yoklaması
+
  <xref:System.IAsyncResult.IsCompleted%2A> <xref:System.IAsyncResult> `BeginInvoke` Zaman uyumsuz çağrının ne zaman tamamlandığını saptamak için tarafından döndürülen özelliğini kullanabilirsiniz. Bu işlem, Kullanıcı arabirimine hizmet veren bir iş parçacığından zaman uyumsuz çağrı yaparken yapabilirsiniz. Tamamlanma yoklaması, zaman uyumsuz çağrı bir iş parçacığında yürütüldüğünde, çağıran iş parçacığının yürütmeye devam etmesine izin verir <xref:System.Threading.ThreadPool> .
 
  [!code-cpp[AsyncDelegateExamples#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/polling.cpp#4)]
@@ -93,6 +97,7 @@ Bu konudaki kod örnekleri, `BeginInvoke` `EndInvoke` zaman uyumsuz çağrılar 
  [!code-vb[AsyncDelegateExamples#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/polling.vb#4)]
 
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>Zaman uyumsuz bir arama tamamlandığında bir geri çağırma yöntemi yürütülüyor
+
  Zaman uyumsuz çağrıyı başlatan iş parçacığının sonuçları işleyen iş parçacığı olması gerekmiyorsa, çağrı tamamlandığında bir geri çağırma yöntemi çalıştırabilirsiniz. Geri çağırma yöntemi bir <xref:System.Threading.ThreadPool> iş parçacığında yürütülür.
 
  Bir geri çağırma yöntemi kullanmak için, `BeginInvoke` <xref:System.AsyncCallback> geri çağırma yöntemini temsil eden bir temsilci geçirmeniz gerekir. Geri çağırma yöntemi tarafından kullanılacak bilgileri içeren bir nesnesi de geçirebilirsiniz. Geri çağırma yönteminde, <xref:System.IAsyncResult> geri çağırma yönteminin tek parametresi olan öğesini bir <xref:System.Runtime.Remoting.Messaging.AsyncResult> nesnesine dönüştürebilirsiniz. Daha sonra <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> çağrabilmeniz için çağrıyı başlatmak üzere kullanılan temsilciyi almak için özelliğini kullanabilirsiniz `EndInvoke` .

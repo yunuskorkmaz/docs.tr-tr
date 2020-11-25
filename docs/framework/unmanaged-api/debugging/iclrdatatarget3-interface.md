@@ -10,14 +10,15 @@ api_type:
 ms.assetid: d2711bdf-64b3-404c-a0c3-01ba4907f703
 topic_type:
 - apiref
-ms.openlocfilehash: af944a9c2bb04f37b06f27cfbe38e23c9613d768
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 7297bfa5297878dde6867a99029ac88754a05290
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860409"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723590"
 ---
 # <a name="iclrdatatarget3-interface"></a>ICLRDataTarget3 Arabirimi
+
 Özel durum bilgilerine erişim sağlayan [ICLRDataTarget2](iclrdatatarget2-interface.md) öğesinin bir alt sınıfı.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -29,9 +30,11 @@ ms.locfileid: "82860409"
 |[GetExceptionThreadID Yöntemi](iclrdatatarget3-getexceptionthreadid-method.md)|Özel durumu oluşturan iş parçacığının KIMLIĞINI almak için CLR veri erişim Hizmetleri tarafından çağırılır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  API istemcisi (yani hata ayıklayıcı) bu arabirimi belirli hedef işlem için uygun şekilde yürütmelidir. Örneğin, canlı bir işlem bir bellek dökümününkinden farklı bir yürütmeye sahip olur. Hedef, kendi bellek bölümlerinin değiştirilmesini desteklemiyor olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-ms.openlocfilehash: c3bbc66079e05abf494ad112b8aa0ac68e3c3e2f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 3f832850fac918a568d02e9ef2f1e5b140ffc04f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868115"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722758"
 ---
 # <a name="profiling-structures"></a>Profil Oluşturma Yapıları
+
 Bu bölümde profil oluşturma API 'sinin kullandığı yönetilmeyen yapılar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı](cor-prf-assembly-reference-info-structure.md)  
  Ortak dil çalışma zamanını, bir derleme başvurusu kapatma ilerlemesi gerçekleştirirken göz önünde bulundurmanız gereken bir başvuru bütünleştirilmiş kodu hakkında bilgiler sağlar.  
   
@@ -39,6 +41,7 @@ Bu bölümde profil oluşturma API 'sinin kullandığı yönetilmeyen yapılar a
  Çöp toplama işlemi yapılmakta olan belleğin bir aralığını (yani bloğunu) açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  COR_DEBUG_IL_TO_NATIVE_MAP  
   
  COR_IL_MAP  
@@ -49,4 +52,4 @@ Bu bölümde profil oluşturma API 'sinin kullandığı yönetilmeyen yapılar a
   
  [Profil Oluşturma Genel Statik İşlevleri](profiling-global-static-functions.md)  
   
- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)
+ [Profil Oluşturma Numaralandırmaları](profiling-enumerations.md)

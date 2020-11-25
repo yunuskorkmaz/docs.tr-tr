@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b8b9f8e63a0b52dde0e814f53cfc75e6f6d48e78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614831"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723031"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable Yöntemi
+
 Geçerli sözcük kapsamındaki tek bir değişkeni tanımlar. Bu yöntem, bir kapsam genelinde birden çok evye sahip olan aynı ada sahip bir değişken için birden çok kez çağrılabilir. Ancak bu durumda, `startOffset` ve `endOffset` parametrelerinin değerleri çakışmamalıdır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -42,14 +43,15 @@ HRESULT DefineLocalVariable(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `name`  
- 'ndaki `WCHAR`Yerel değişken adını tanımlayan bir işaretçisi.  
+ 'ndaki `WCHAR` Yerel değişken adını tanımlayan bir işaretçisi.  
   
  `attributes`  
  'ndaki Yerel değişken öznitelikleri.  
   
  `cSig`  
- 'ndaki `ULONG32`Bu, arabelleğin bayt cinsinden boyutunu belirten bir `signature` .  
+ 'ndaki `ULONG32` Bu, arabelleğin bayt cinsinden boyutunu belirten bir `signature` .  
   
  `signature`  
  'ndaki Yerel değişken imzası.  
@@ -73,9 +75,11 @@ HRESULT DefineLocalVariable(
  'ndaki Değişkenin bitiş boşluğu. Bu parametre isteğe bağlıdır. 0 ise, bu parametre yok sayılır ve değişken tüm kapsam genelinde tanımlanır. Sıfır olmayan bir değerse, değişken geçerli kapsamın uzaklıkları dahilinde olur.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: 9cc68e39dfef096b8ab6a8ba743f7a516cc349be
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: fef0902aedbcd8572d2dc67fae7927f754af4489
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210416"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723317"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock Metodu
+
 Bu nesne üzerinde izleyici kilidine sahip yönetilen iş parçacığını döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetThreadOwningMonitorLock (  
@@ -35,6 +36,7 @@ HRESULT GetThreadOwningMonitorLock (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppThread`  
  dışı Bu nesne üzerindeki izleyici kilidine sahip yönetilen iş parçacığı.  
   
@@ -42,6 +44,7 @@ HRESULT GetThreadOwningMonitorLock (
  dışı Bu iş parçacığının, sahip olunmadan önce kilidi serbest bırakmak zorunda olduğu zaman sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
@@ -49,9 +52,10 @@ HRESULT GetThreadOwningMonitorLock (
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |S_FALSE|Bu nesnede izleyici kilidine sahip yönetilen iş parçacığı yok.|  
   
-## <a name="exceptions"></a>Özel durumlar  
+## <a name="exceptions"></a>Özel Durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Yönetilen bir iş parçacığının bu nesne üzerindeki izleyici kilidine sahip olması durumunda:  
   
 - Yöntemi S_OK döndürür.  
@@ -65,6 +69,7 @@ HRESULT GetThreadOwningMonitorLock (
  Bir hata oluşursa, eğer varsa, iş parçacığı bu nesnede izleyici kilidine sahipse, yöntem hata belirten bir HRESULT döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-ms.openlocfilehash: 740dad54bc3a79ff546176abdc35487d89ed8f44
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b41891227d94b66bf59128d620eba9da117fe92a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009255"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722056"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig Metodu
+
 Belirtilen meta veri imzası için bir belirteç alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT GetTokenFromSig (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pvSig`  
  'ndaki Kalıcı yapılacak ve depolanacak imza.  
   
@@ -43,14 +45,15 @@ HRESULT GetTokenFromSig (
  'ndaki İçindeki bayt sayısı `pvSig` .  
   
  `pmsig`  
- dışı `mdSignature`Atanan belirteç.  
+ dışı `mdSignature` Atanan belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

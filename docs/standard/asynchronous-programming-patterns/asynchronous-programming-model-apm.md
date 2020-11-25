@@ -11,14 +11,15 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 7b976cf48214fb623563b09aab8a991a5a05d3ca
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a6e2ed06e92adffa6c8a61b27bbff994370e8b34
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824447"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722745"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Zaman Uyumsuz Programlama Modeli (APM)
+
 Tasarım modelini kullanan zaman uyumsuz bir işlem, <xref:System.IAsyncResult> adlı `BeginOperationName` ve `EndOperationName` sırasıyla zaman uyumsuz işlem *OperationName* ' i başlayan ve biten iki yöntem olarak uygulanır. Örneğin, <xref:System.IO.FileStream> sınıfı <xref:System.IO.FileStream.BeginRead%2A> <xref:System.IO.FileStream.EndRead%2A> bir dosyadan zaman uyumsuz olarak okunan baytları ve yöntemleri sağlar. Bu yöntemler, yönteminin zaman uyumsuz sürümünü uygular <xref:System.IO.FileStream.Read%2A> .  
   
 > [!NOTE]
@@ -27,6 +28,7 @@ Tasarım modelini kullanan zaman uyumsuz bir işlem, <xref:System.IAsyncResult> 
  Çağrıldıktan sonra `BeginOperationName` bir uygulama, farklı bir iş parçacığında zaman uyumsuz işlem gerçekleşirken çağıran iş parçacığı üzerinde yönergeleri yürütmeye devam edebilir. Her çağrısı için `BeginOperationName` , uygulamanın, `EndOperationName` işlemin sonuçlarını almak için de çağırması gerekir.  
   
 ## <a name="beginning-an-asynchronous-operation"></a>Zaman uyumsuz bir Işlem başlatılıyor  
+
  `BeginOperationName`Yöntemi zaman uyumsuz Işlem *OperationName* ' i başlatır ve arabirimi uygulayan bir nesne döndürür <xref:System.IAsyncResult> . <xref:System.IAsyncResult> nesneler, zaman uyumsuz bir işlemle ilgili bilgileri depolar. Aşağıdaki tabloda bir zaman uyumsuz işlemle ilgili bilgiler gösterilmektedir.  
   
 |Üye|Açıklama|  
@@ -41,6 +43,7 @@ Tasarım modelini kullanan zaman uyumsuz bir işlem, <xref:System.IAsyncResult> 
  `BeginOperationName` denetimi çağıran iş parçacığına hemen döndürür. `BeginOperationName`Yöntem özel durumlar oluşturursa, zaman uyumsuz işlem başlatılmadan önce özel durumlar oluşturulur. `BeginOperationName`Yöntem özel durumlar oluşturursa, geri çağırma yöntemi çağrılmaz.  
   
 ## <a name="ending-an-asynchronous-operation"></a>Zaman uyumsuz bir Işlem sonlandırılıyor  
+
  `EndOperationName`Yöntemi, zaman uyumsuz Işlem *OperationName* öğesini sonlandırır. Yöntemin dönüş değeri, `EndOperationName` zaman uyumlu karşılığına göre döndürülen türdür ve zaman uyumsuz işleme özeldir. Örneğin, <xref:System.IO.FileStream.EndRead%2A> yöntemi bir öğesinden okunan bayt sayısını döndürür <xref:System.IO.FileStream> ve <xref:System.Net.Dns.EndGetHostByName%2A> yöntemi <xref:System.Net.IPHostEntry> bir ana bilgisayar hakkında bilgi içeren bir nesne döndürür. `EndOperationName`Yöntemi, yönteminin zaman uyumlu sürümünün imzasında belirtilen tüm out veya ref parametrelerini alır. Zaman uyumlu yöntemin parametrelerinin yanı sıra, `EndOperationName` yöntemi de bir <xref:System.IAsyncResult> parametre içerir. Çağıranlar öğesine karşılık gelen çağrının döndürdüğü örneği iletmelidir `BeginOperationName` .  
   
  Çağrıldığında nesnenin temsil ettiği zaman uyumsuz işlem <xref:System.IAsyncResult> tamamlandıysa `EndOperationName` , `EndOperationName` zaman uyumsuz işlem tamamlanana kadar çağıran iş parçacığını engeller. Zaman uyumsuz işlem tarafından oluşturulan özel durumlar `EndOperationName` yönteminden oluşturulur. `EndOperationName`Yöntemi aynı ile birden çok kez çağırma efekti <xref:System.IAsyncResult> tanımlı değil. Benzer şekilde, `EndOperationName` <xref:System.IAsyncResult> ilgili BEGIN yöntemi tarafından döndürülmediğinde yöntemi çağırmak da tanımlanmamıştır.  

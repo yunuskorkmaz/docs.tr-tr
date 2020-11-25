@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0b82a9f-edc6-4878-9c81-48de53c02142
 topic_type:
 - apiref
-ms.openlocfilehash: 9cb97d9f383b7b54b431457042c4c4a7fc9cd876
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: af855e3ba47dc329a4fb722c3e13d5f1816beba4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762841"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723285"
 ---
 # <a name="iclrtaskmanagergetcurrenttask-method"></a>ICLRTaskManager::GetCurrentTask Metodu
+
 Yöntem çağrısının başlatıldığı işletim sistemi iş parçacığında çalışmakta olan [ICLRTask](iclrtask-interface.md) örneğini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,8 +35,9 @@ HRESULT GetCurrentTask (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppTask`  
- dışı `ICLRTask`Şu anda, çağrının kaynaklandığı işletim sistemi iş parçacığında yürütülmekte olan bir örneğin adresine yönelik bir işaretçi veya şu anda bu iş parçacığında yürütülen bir görev yoksa null.  
+ dışı `ICLRTask` Şu anda, çağrının kaynaklandığı işletim sistemi iş parçacığında yürütülmekte olan bir örneğin adresine yönelik bir işaretçi veya şu anda bu iş parçacığında yürütülen bir görev yoksa null.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -49,14 +51,16 @@ HRESULT GetCurrentTask (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ICLRTask`Parametresinin işaret ettiği örnek, `ppTask` clr için şu anda yürütülmekte olan görevi temsil eder. `ICLRTask`Örnek, ana bilgisayar için görevi temsil eden karşılık gelen bir [IHostTask](ihosttask-interface.md) örneğiyle ilişkilendirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

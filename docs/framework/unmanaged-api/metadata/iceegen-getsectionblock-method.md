@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: ed534890fc90d3b8543a1166c85903f10163f0a8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9ce3afded5f914ecf970d8db738becc7f5cfff84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008343"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723148"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock Metodu
+
 Kod tabanının bir bölüm bloğunu alır.  
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
@@ -39,6 +40,7 @@ HRESULT GetSectionBlock (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `section`  
  'ndaki Kod tabanı bloğunun alınacağı bölüm.  
   
@@ -52,14 +54,16 @@ HRESULT GetSectionBlock (
  dışı Alınan bloğun adresini alan konuma yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetSectionBlock`Yalnızca diğer yöntemler tarafından işlenmemiş özel bölüm gereksinimleriniz varsa çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

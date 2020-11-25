@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: dcf01c00a106c131646a16597dca4092a06c5983
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860811"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723070"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData Yapısı
 
@@ -28,7 +28,7 @@ Metodun çalışma zamanı bilgileri için bir aktarım arabelleği tanımlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 struct DacpMethodDescData
@@ -61,7 +61,7 @@ struct DacpMethodDescData
 | `wSlotNumber`                | Yöntem tablosundaki yuva numarası.                                                   |
 | `NativeCodeAddr`             | Metodun ilk yerel adresi.                                                            |
 | `data`                       | Çalışma zamanı tarafından dahili olarak kullanılan arabelleğin işaretçisi.                                             |
-| `MethodDescPtr`              | Çalışma zamanında öğesine `MethodDesc` işaretçisi.                                                     |
+| `MethodDescPtr`              | `MethodDesc`Çalışma zamanında öğesine işaretçisi.                                                     |
 | `nativeCodeInfo`             | Yöntemleri izlemek için çalışma zamanı tarafından dahili olarak kullanılan bir arabelleğin işaretçisi.                            |
 | `moduleInfo`                 | Modül bilgileri için çalışma zamanı tarafından dahili olarak kullanılan bir arabelleğin işaretçisi.                      |
 | `MDToken`                    | Verilen yöntemle ilişkili belirteç.                                                         |
@@ -78,6 +78,7 @@ struct DacpMethodDescData
 Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın.
 
 ## <a name="requirements"></a>Gereksinimler
+
 **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
 **Üst bilgi:** Seçim  
 **Kitaplık:** Seçim  

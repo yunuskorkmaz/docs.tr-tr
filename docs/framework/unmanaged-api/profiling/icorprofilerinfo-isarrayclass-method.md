@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-ms.openlocfilehash: 2a3f5bb0c54935e524cc955a5e11aac75b0c0923
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2608f91a7c5baa935e48fbe58ad4d14aaaad1f0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497562"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722511"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass Yöntemi
+
 Belirtilen sınıfın bir dizi sınıfı olup olmadığını belirler.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT IsArrayClass(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `classId`  
  'ndaki İnceedilecek sınıfın KIMLIĞI.  
   
@@ -49,9 +51,11 @@ HRESULT IsArrayClass(
  dışı Dizinin derecesini (yani boyut sayısını) gösteren bir tamsayı işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Belirtilen sınıf bir dizi sınıfınse, `IsArrayClass` Yöntem bir S_OK HRESULT ve null olmayan herhangi bir çıkış parametresi için değerler döndürür. Aksi takdirde, S_FALSE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

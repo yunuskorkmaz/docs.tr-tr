@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: ba25d166-1d28-4f1d-aca2-de298bbca669
 topic_type:
 - apiref
-ms.openlocfilehash: 14a2fa36393135a1e5ccecb69879113a62a9d065
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: bf672c90cdbb9e9fb66105820a264a49601b38d7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895395"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723460"
 ---
 # <a name="icordebugenumerateprocesses-method"></a>ICorDebug::EnumerateProcesses Yöntemi
+
 Hata ayıklamakta olan işlemlere yönelik bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumerateProcesses (  
@@ -34,10 +35,12 @@ HRESULT EnumerateProcesses (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppProcess`  
  Ayıklanmakta olan işlemlerin numaralandırıcısının bulunduğu ICorDebugProcessEnum nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

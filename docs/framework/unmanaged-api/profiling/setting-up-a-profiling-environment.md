@@ -10,14 +10,15 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: adf790e0b2d2b72b5a1f0b2a41b80db6d5026869
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9c712c5efe8d6d79454b70d0bf4f3ca2fa83b637
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494026"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722485"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Profil Oluşturma Ortamını Ayarlama
+
 > [!NOTE]
 > .NET Framework 4 ' te profil oluşturmak için önemli değişiklikler yapıldı.  
   
@@ -41,6 +42,7 @@ ms.locfileid: "84494026"
 > .NET Framework 4 ve sonraki sürümlerde 2,0, 3,0 ve 3,5 .NET Framework sürümlerini kullanmak için COMPLUS_ProfAPI_ProfilerCompatibilitySetting ortam değişkenini ayarlamanız gerekir.  
   
 ## <a name="environment-variable-scope"></a>Ortam değişkeni kapsamı  
+
  COR_ENABLE_PROFILING nasıl ayarlarsınız ve COR_PROFILER ortam değişkenleri, etki alanının etki kapsamını tespit eder. Bu değişkenleri aşağıdaki yollarla ayarlayabilirsiniz:  
   
 - Değişkenleri bir [ICorDebug:: CreateProcess](../debugging/icordebug-createprocess-method.md) çağrısında ayarlarsanız, bunlar yalnızca sizin çalıştırdığınız uygulamaya uygulanır. (Bu uygulamalar, ortamı miras alan uygulama tarafından başlatılan diğer uygulamalar için de geçerlidir.)  
@@ -62,6 +64,7 @@ ms.locfileid: "84494026"
 - Profil Oluşturucu işlem içi örneği oluşturulan bir COM nesnesi olduğundan, profili oluşturulan her uygulama profil oluşturucunun kendi kopyasına sahip olur. Bu nedenle, tek bir profil oluşturucu örneği birden çok uygulamadan veri işlemek zorunda değildir. Ancak, profil oluşturucunun günlüğe kaydetme koduna, günlük dosyasının diğer profili oluşturulmuş uygulamalardan üzerine yazılmasına engel olmak için mantık eklemeniz gerekecektir.  
   
 ## <a name="initializing-the-profiler"></a>Profil oluşturucuyu başlatma  
+
  Her iki ortam değişkeni denetimi başarılı olduğunda, CLR, profil oluşturucunun bir örneğini COM işlevine benzer bir şekilde oluşturur `CoCreateInstance` . Profil Oluşturucu doğrudan öğesine çağrısıyla yüklenmez `CoCreateInstance` . Bu nedenle, `CoInitialize` iş parçacığı modelini ayarlamayı gerektiren öğesine yapılan bir çağrı önlenmiş olur. CLR daha sonra Profiler 'da [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) yöntemini çağırır. Bu yöntemin imzası aşağıdaki gibidir.  
   
 ```cpp  
@@ -71,6 +74,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
  Profil Oluşturucu `pICorProfilerInfoUnk` [ICorProfilerInfo](icorprofilerinfo-interface.md) veya [ICorProfilerInfo2](icorprofilerinfo2-interface.md) arabirim işaretçisini sorgulayıp profil oluşturma sırasında daha fazla bilgi isteyebilmesi için kaydetmeniz gerekir.  
   
 ## <a name="setting-event-notifications"></a>Olay bildirimlerini ayarlama  
+
  Profil Oluşturucu daha sonra hangi bildirim kategorisini ilgilendiğinizi belirlemek için [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) yöntemini çağırır. Örneğin, Profil Oluşturucu yalnızca işlev girme ve bildirim ve çöp toplama bildirimleri ile ilgileniyorsanız, aşağıdakileri belirtir.  
   
 ```cpp  
@@ -84,7 +88,9 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  Bazı profil oluşturucu olayları sabittir. Bu, geri çağırmada bu olaylar ayarlandığı anda kapatılamadığını `ICorProfilerCallback::Initialize` ve yeni olayların açık olamayacağı anlamına gelir. Değişmez bir olayı değiştirme girişimleri, `ICorProfilerInfo::SetEventMask` başarısız BIR HRESULT döndürüyor ile sonuçlanır.  
   
 <a name="windows_service"></a>
+
 ## <a name="profiling-a-windows-service"></a>Windows hizmeti profili oluşturma  
+
  Bir Windows hizmetinin profilini oluşturmak, ortak dil çalışma zamanı uygulamasının profilini oluşturmaya benzer. Her iki profil oluşturma işlemi de ortam değişkenleri aracılığıyla etkinleştirilir. İşletim sistemi başlatıldığında bir Windows hizmeti başlatıldığı için, bu konuda daha önce açıklanan ortam değişkenlerinin zaten mevcut olması ve sistem başlamadan önce gerekli değerlere ayarlanması gerekir. Ayrıca, profil oluşturma DLL 'sinin sistemde zaten kayıtlı olması gerekir.  
   
  COR_ENABLE_PROFILING ve COR_PROFILER ortam değişkenlerini ayarladıktan ve profil oluşturucu DLL 'sini kaydettikten sonra, Windows hizmetinin bu değişiklikleri algılayabilmesi için hedef bilgisayarı yeniden başlatmanız gerekir.  
@@ -95,4 +101,4 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil oluşturmaya genel bakış](profiling-overview.md)
+- [Profil Oluşturmaya Genel Bakış](profiling-overview.md)

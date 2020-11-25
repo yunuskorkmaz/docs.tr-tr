@@ -2,14 +2,15 @@
 title: Var Olan Düğümleri Bir Belgeden Diğerine Kopyalama
 ms.date: 03/30/2017
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2e66d6eb83692e8e6541ce869062e2ce67c3c1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829615"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722212"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Var Olan Düğümleri Bir Belgeden Diğerine Kopyalama
+
 **ImportNode** yöntemi, bir düğümün veya tüm düğüm alt ağacının bir **XmlDocument** 'dan diğerine kopyalandığı mekanizmadır. Çağrıdan döndürülen düğüm, öznitelik değerleri, düğüm adı, düğüm türü ve önek, yerel ad ve ad alanı Tekdüzen Kaynak tanımlayıcısı (URI) gibi tüm ad alanıyla ilgili öznitelikleri dahil olmak üzere kaynak belgesinden düğümün bir kopyasıdır. Kaynak belge değiştirilmez. Düğümü içeri aktardıktan sonra, düğümleri eklemek için kullanılan yöntemlerden birini kullanarak ağaca yine de eklemeniz gerekir.  
   
  Düğüm yeni belgeye eklendiğinde, yeni belge düğümün sahibi olur. Bunun nedeni, oluşturulan her düğümün, düğümler ayrı belge parçalarında oluşturulsa bile, sahip olduğu bir belgeye sahip olması nedenidir. Bu, XML Belge Nesne Modeli (DOM) gereksinimidir ve **XmlDocument** sınıfında fabrika oluşturma tasarımı tarafından zorlanır. Örneğin, **CreateElement**, yeni düğümler oluşturmanın tek yoludur.  

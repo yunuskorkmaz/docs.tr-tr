@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 944941c2356cae93ecc85f1714b4b29aefcb50ad
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 32224431051b958a3f01ffeb15cdb6db1dae2657
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008410"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722108"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps Metodu
+
 Belirtilen meta veri imzasıyla, dışarıya aktarılmış türün özelliklerinin kümesini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -40,8 +41,9 @@ HRESULT GetExportedTypeProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `mdct`  
- 'ndaki `mdExportedType`İçe aktarılmış türü temsil eden bir meta veri belirteci.  
+ 'ndaki `mdExportedType` İçe aktarılmış türü temsil eden bir meta veri belirteci.  
   
  `szName`  
  dışı İçe aktarılmış türün adı.  
@@ -50,23 +52,24 @@ HRESULT GetExportedTypeProps (
  'ndaki Öğesinin geniş karakterdeki boyutu `szName` .  
   
  `pchName`  
- dışı Aslında içinde döndürülen geniş karakter sayısı`szName`  
+ dışı Aslında içinde döndürülen geniş karakter sayısı `szName`  
   
  `ptkImplementation`  
  dışı Bir `mdFile` , `mdAssemblyRef` veya, bir veya daha fazla `mdExportedType` içe aktarılmış türün özelliklerine erişim izni veren bir meta veri belirteci.  
   
  `ptkTypeDef`  
- dışı `mdTypeDef`Dosyadaki bir türü temsil eden belirtece yönelik bir işaretçi.  
+ dışı `mdTypeDef` Dosyadaki bir türü temsil eden belirtece yönelik bir işaretçi.  
   
  `pdwExportedTypeFlags`  
  dışı İçe aktarılmış türe uygulanan meta verileri tanımlayan bayrakların işaretçisi. Bayrak değeri bir veya daha fazla [CorTypeAttr](cortypeattr-enumeration.md) değeri olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

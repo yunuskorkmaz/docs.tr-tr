@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-ms.openlocfilehash: afc818dfe625bfc329ceb1660539eb119702a90d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 17396d3038578c16b74c3717174dc0fa4dc17631
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500682"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722849"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper İşlevi
-Profil oluşturucuyu, bir işlevin verilen tanımlayıcısının, bu işlev için [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md)ve [FunctionTailcall2](functiontailcall2-function.md) geri ÇAĞıRMALAR içinde kullanılacak alternatif bir kimliğe yeniden eşlenilebileceği konusunda bilgilendirir. `FunctionIDMapper`Ayrıca, profil oluşturucunun bu işlev için geri çağırmaları almak isteyip istemediğini belirtmek için de olanak sağlar.  
+
+Profil oluşturucuyu, bir işlevin verilen tanımlayıcısının, bu işlev için [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md)ve [FunctionTailcall2](functiontailcall2-function.md) geri ÇAĞıRMALAR içinde kullanılacak alternatif bir kimliğe yeniden eşlenilebileceği konusunda bilgilendirir. `FunctionIDMapper` Ayrıca, profil oluşturucunun bu işlev için geri çağırmaları almak isteyip istemediğini belirtmek için de olanak sağlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
   
@@ -44,9 +45,11 @@ UINT_PTR __stdcall FunctionIDMapper (
   \[out] profil oluşturucunun `true` ,, ve geri çağırmaları almak istiyorsa bir değere yönelik bir işaretçi `FunctionEnter2` `FunctionLeave2` `FunctionTailcall2` ; Aksi takdirde, bu değeri olarak ayarlar `false` .
 
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Profiler, yürütme altyapısının alternatif işlev tanımlayıcısı olarak kullandığı bir değer döndürür. Dönüş değeri, `false` içinde döndürülmediği takdirde null olamaz `pbHookFunction` . Aksi takdirde, bir null dönüş değeri beklenmedik sonuçlar üretir, bu da işlemi çok büyük olasılıkla halele vermez.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `FunctionIDMapper`İşlev bir geri çağırma. Bir işlev KIMLIĞINI profil Oluşturucu için daha kullanışlı olan başka bir tanımlayıcıya yeniden eşlemek için profil oluşturucu tarafından uygulanır. , `FunctionIDMapper` Verilen herhangi bir işlev için kullanılacak ALTERNATIF kimliği döndürür. Yürütme altyapısı daha sonra bu alternatif KIMLIĞI geçirerek (geleneksel işlev KIMLIĞINE ek olarak,, `clientData` `FunctionEnter2` `FunctionLeave2` , ve `FunctionTailcall2` kancalarının çağrıldığı işlevi belirlemek için),, ve kancalarının parametresindeki profil oluşturucuya geri dönerek profil oluşturucunun isteğine geçer.  
   
  İşlevin uygulamasını belirtmek için [ICorProfilerInfo:: SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md) yöntemini kullanabilirsiniz `FunctionIDMapper` . `ICorProfilerInfo::SetFunctionIDMapper`Yöntemi yalnızca bir kez çağırabilir ve [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) geri çağırmasında bunu yapmanızı öneririz.  
@@ -56,6 +59,7 @@ UINT_PTR __stdcall FunctionIDMapper (
  Profil oluşturucular, profili oluşturulmuş bir uygulamanın birden çok iş parçacığının aynı anda aynı yöntemi/işlevi aldığı durumlarda toleranslı olmalıdır. Bu gibi durumlarda, profil oluşturucu `FunctionIDMapper` aynı için birden fazla geri çağırma alabilir `FunctionID` . Profil Oluşturucu aynı değeri aynı değer ile birden çok kez çağrıldığında, bu geri aramadan aynı değerleri döndürmelidir `FunctionID` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  

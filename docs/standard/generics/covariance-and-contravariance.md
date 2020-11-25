@@ -11,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9d5d5b27fb77500aa5f6deff3fcb1c739ba8b094
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827418"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722667"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve değişken varyans
 
@@ -71,6 +71,7 @@ Bir tür sistemine başvururken, Kovaryans, değişken varyans ve ınvaryans aş
 - C# 9 ' dan itibaren, covaryant dönüş türleri desteklenir. Geçersiz kılma yöntemi, daha türetilmiş bir dönüş türünü, geçersiz kıldığı yöntemi bildirebilir ve geçersiz kılan, salt okunurdur özelliği daha türetilmiş bir tür bildirebilir.
 
 <a name="InterfaceCovariantTypeParameters"></a>
+
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Birlikte değişken tür parametrelerine sahip genel arabirimler
 
 Birçok genel arabirimde birlikte değişken tür parametreleri vardır, örneğin,, <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Collections.Generic.IEnumerator%601> <xref:System.Linq.IQueryable%601> ve <xref:System.Linq.IGrouping%602> . Bu arabirimlerin tüm tür parametreleri birlikte değişen olduğundan, tür parametreleri yalnızca üyelerin dönüş türleri için kullanılır.  
@@ -154,21 +155,21 @@ Aşağıdaki arabirim ve temsilci türlerinde birlikte değişken ve/veya deği�
   
 |Tür|Birlikte değişken türde parametreler|Değişken karşıtı türde parametreler|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> Hedef <xref:System.Action%6016>||Yes|  
-|<xref:System.Comparison%601>||Yes|  
-|<xref:System.Converter%602>|Yes|Yes|  
-|<xref:System.Func%601>|Yes||  
-|<xref:System.Func%602> Hedef <xref:System.Func%6017>|Yes|Yes|  
-|<xref:System.IComparable%601>||Yes|  
-|<xref:System.Predicate%601>||Yes|  
-|<xref:System.Collections.Generic.IComparer%601>||Yes|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Yes||  
-|<xref:System.Collections.Generic.IEnumerator%601>|Yes||  
-|<xref:System.Collections.Generic.IEqualityComparer%601>||Yes|  
-|<xref:System.Linq.IGrouping%602>|Yes||  
-|<xref:System.Linq.IOrderedEnumerable%601>|Yes||  
-|<xref:System.Linq.IOrderedQueryable%601>|Yes||  
-|<xref:System.Linq.IQueryable%601>|Yes||  
+|<xref:System.Action%601> Hedef <xref:System.Action%6016>||Evet|  
+|<xref:System.Comparison%601>||Evet|  
+|<xref:System.Converter%602>|Evet|Evet|  
+|<xref:System.Func%601>|Evet||  
+|<xref:System.Func%602> Hedef <xref:System.Func%6017>|Evet|Evet|  
+|<xref:System.IComparable%601>||Evet|  
+|<xref:System.Predicate%601>||Evet|  
+|<xref:System.Collections.Generic.IComparer%601>||Evet|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Evet||  
+|<xref:System.Collections.Generic.IEnumerator%601>|Evet||  
+|<xref:System.Collections.Generic.IEqualityComparer%601>||Evet|  
+|<xref:System.Linq.IGrouping%602>|Evet||  
+|<xref:System.Linq.IOrderedEnumerable%601>|Evet||  
+|<xref:System.Linq.IOrderedQueryable%601>|Evet||  
+|<xref:System.Linq.IQueryable%601>|Evet||  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

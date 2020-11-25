@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
-ms.openlocfilehash: 42f721e56c803fb404f7885d126bea9560224f4c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d1e13d2bcc7525f261df90c36aa4214f318cf3c0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824993"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722719"
 ---
 # <a name="how-to-migrate-your-xsltransform-code"></a>Nasıl yapılır: XslTransform Kodunuzu Geçirme
+
 Yeni XSLT sınıfları, mevcut sınıflara çok benzer olacak şekilde tasarlanmıştır. <xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, sınıfının yerini alır <xref:System.Xml.Xsl.XslTransform> . Stil sayfaları yöntemi kullanılarak derlenir <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> . Dönüşümler yöntemi kullanılarak yürütülür <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> . Aşağıdaki yordamlarda ortak XSLT görevleri gösterilmektedir ve sınıfı ile sınıf karşılaştırması kullanılarak kod karşılaştırılır <xref:System.Xml.Xsl.XslTransform> <xref:System.Xml.Xsl.XslCompiledTransform> .  
   
 ### <a name="to-transform-a-file-and-output-to-a-uri"></a>Bir dosyayı ve çıktıyı bir URI 'ye dönüştürmek için  

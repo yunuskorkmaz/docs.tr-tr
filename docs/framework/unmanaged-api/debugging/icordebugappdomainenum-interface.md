@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-ms.openlocfilehash: 38603fb53b9cd6548595437b05c1e99ef208d940
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 37b6bcb48681704e3db47f81a51a9d21f00dfb37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895090"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723200"
 ---
 # <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum Arabirimi
 
-, Numaralandırmadaki bir sonraki konumdan başlayarak belirtilen sayıda `Next` `ICorDebugAppDomainEnum` değer döndüren yöntemini sağlar. Bu arabirim "ıcordebuggenum" öğesinin bir alt sınıfıdır.  
+, `Next` `ICorDebugAppDomainEnum` Numaralandırmadaki bir sonraki konumdan başlayarak belirtilen sayıda değer döndüren yöntemini sağlar. Bu arabirim "ıcordebuggenum" öğesinin bir alt sınıfıdır.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -37,6 +37,7 @@ ms.locfileid: "82895090"
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

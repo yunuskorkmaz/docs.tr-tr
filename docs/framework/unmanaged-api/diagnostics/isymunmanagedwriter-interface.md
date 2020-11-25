@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d6733ec-f081-4166-bc17-de09e16dc304
 topic_type:
 - apiref
-ms.openlocfilehash: 8f0bbd26bde562df5482d167c9d2775e01426f55
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fddfd2a163f6e6513b648ee0b724c0b5bd54c81a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610060"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722940"
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter Arabirimi
+
 Bir sembol yazıcısını temsil eder ve belgeleri, dizi noktalarını, sözcük temelli kapsamları ve değişkenleri tanımlamak için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -54,10 +55,11 @@ Bir sembol yazıcısını temsil eder ve belgeleri, dizi noktalarını, sözcük
 |[UsingNamespace Yöntemi](isymunmanagedwriter-usingnamespace-method.md)|Verilen tam ad alanı adının şu anda açık olan sözlü kapsam içinde kullanıldığını belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [Tanılama Sembol Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter2 Arabirimi](isymunmanagedwriter2-interface.md)
 - [ISymUnmanagedWriter3 Arabirimi](isymunmanagedwriter3-interface.md)

@@ -14,19 +14,20 @@ helpviewer_keywords:
 - GetErrorInfo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 9a80c0b5522113e704336cda29362a0406077931
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5da4eaa459c515689b822e4cb537380245e800e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553681"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722771"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo işlevi
+
 Önceki işlev çağrısından hata bilgilerini alır.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 IErrorInfo* GetErrorInfo();
@@ -41,6 +42,7 @@ IErrorInfo* GetErrorInfo();
 Bu işlev, [ICommandText Threadingınfo:: GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) yöntemine bir çağrı kaydırır.
 
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** WMINet_Utils. def  

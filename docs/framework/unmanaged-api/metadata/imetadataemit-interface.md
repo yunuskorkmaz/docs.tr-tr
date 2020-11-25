@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3b48fd47-7397-4e2c-8bec-8157aa08978c
 topic_type:
 - apiref
-ms.openlocfilehash: a2c2512abc28f0140fc261c5136c7e1255db96de
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f5495c170abf3e991a6e28016687f8ae77f0b423
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009222"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722030"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit Arabirimi
+
 Tanımlı olan kapsamda derleme hakkında meta veriler oluşturma, değiştirme ve kaydetme yöntemleri sağlar. Meta veriler bellekte depolanabilir veya diske kaydedilebilir.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -54,7 +55,7 @@ Tanımlı olan kapsamda derleme hakkında meta veriler oluşturma, değiştirme 
 |[GetSaveSize Yöntemi](imetadataemit-getsavesize-method.md)|Geçerli kapsamdaki derlemenin tahmini ikili boyutunu alır.|  
 |[GetTokenFromSig Yöntemi](imetadataemit-gettokenfromsig-method.md)|Belirtilen meta veri imzası için bir belirteç alır.|  
 |[GetTokenFromTypeSpec Yöntemi](imetadataemit-gettokenfromtypespec-method.md)|Belirtilen meta veri imzasına sahip tür için bir meta veri belirteci alır.|  
-|[Merge Metodu](imetadataemit-merge-method.md)|Belirtilen içeri aktarılan kapsamı birleştirilecek kapsamlar listesine ekler.|  
+|[Merge Yöntemi](imetadataemit-merge-method.md)|Belirtilen içeri aktarılan kapsamı birleştirilecek kapsamlar listesine ekler.|  
 |[MergeEnd Yöntemi](imetadataemit-mergeend-method.md)|' A bir veya daha fazla çağrı tarafından belirtilen tüm meta veri kapsamlarını geçerli kapsama birleştirir `IMetaDataEmit::Merge` .|  
 |[Save Yöntemi](imetadataemit-save-method.md)|Geçerli kapsamdaki tüm meta verileri belirtilen adresteki dosyaya kaydeder.|  
 |[SaveToMemory Yöntemi](imetadataemit-savetomemory-method.md)|Geçerli kapsamdaki tüm meta verileri belirtilen bellek alanına kaydeder.|  
@@ -79,11 +80,12 @@ Tanımlı olan kapsamda derleme hakkında meta veriler oluşturma, değiştirme 
 |[TranslateSigWithScope Yöntemi](imetadataemit-translatesigwithscope-method.md)|Bir derlemeyi geçerli kapsama aktarır ve birleştirilmiş kapsam için yeni bir meta veri imzası alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

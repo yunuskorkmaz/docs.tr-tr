@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-ms.openlocfilehash: 0a36af5b411673081e74aa243ec8e0f8f876f238
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 1fb701a40abe2dc6e51443837c07ee5ba05ddfbe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860478"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723655"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual Yöntemi
+
 Daha önce hedef işlemin adres alanında ayrılan belleği boşaltmak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT FreeVirtual(  
@@ -36,8 +37,9 @@ HRESULT FreeVirtual(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `addr`  
- 'ndaki Boşaltılacak `CLRDATA_ADDRESS` belleğin başlangıç adresini belirten bir değer.  
+ 'ndaki `CLRDATA_ADDRESS` Boşaltılacak belleğin başlangıç adresini belirten bir değer.  
   
  `size`  
  'ndaki Boşaltılacak belleğin bayt cinsinden boyutu.  
@@ -46,11 +48,13 @@ HRESULT FreeVirtual(
  'ndaki Belleğin boşaltımı kontrol eden bayraklar. Bkz. Win32 `VirtualFree` işlevi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `FreeVirtual` Yöntemi, Win32 `VirtualFree` işlevi için bir mantıksal sarmalayıcı görevi görür.  
+
+ `FreeVirtual`Yöntemi, Win32 işlevi için bir mantıksal sarmalayıcı görevi görür `VirtualFree` .  
   
  Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  

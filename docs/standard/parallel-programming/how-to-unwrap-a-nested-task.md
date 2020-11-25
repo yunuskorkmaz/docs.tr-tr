@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-ms.openlocfilehash: cda42dbc88d73eadf04720c0faaf98151d371127
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3eec3b7e8cc76ee171d88a7886b4983000848084
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825565"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722628"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>Nasıl yapılır: İç İçe Geçmiş Bir Görevi Sarmalamadan Çıkarma
+
 Aşağıdaki örnekte gösterildiği gibi, bir yöntemden bir görev döndürebilir ve sonra bu görevden bekleyebilir veya devam edebilirsiniz:  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
@@ -35,6 +36,7 @@ Aşağıdaki örnekte gösterildiği gibi, bir yöntemden bir görev döndürebi
  Yöntemler, veya <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> `Task<Task>` `Task<Task<TResult>>` ( `Task(Of Task)` `Task(Of Task(Of TResult))` Visual Basic) bir veya ' a ( `Task` `Task<TResult>` `Task(Of TResult)` Visual Basic) dönüştürmek için kullanılabilir. Yeni görev iç iç içe görevi tamamen temsil eder ve iptal durumu ve tüm özel durumları içerir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, genişletme yöntemlerinin nasıl kullanılacağını göstermektedir <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> .  
   
  [!code-csharp[TPL_UnWrap#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#04)]

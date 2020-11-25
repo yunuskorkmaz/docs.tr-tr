@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 32d71aba5d8a650293a4d8653fb2a2e383b8a800
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 110efce0bd7fae1a4f39f5d879496bf541ffe667
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282373"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722160"
 ---
 # <a name="serialization-guidelines"></a>Serileştirme yönergeleri
 
@@ -39,6 +39,7 @@ Bu makalede, serileştirilmesi için bir API tasarlarken göz önünde bulundurm
   Serileştirme, her tür için önemli bir tasarım olduğundan, programların türdeki örnekleri kalıcı hale getirmesinin veya iletmesinin gerekebileceği için bu bir tasarıma sahiptir.
 
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>Destekleyecek doğru serileştirme teknolojisini seçme
+
  Belirtilen her türlü none, bir veya daha fazla seri hale getirme teknolojilerini destekler.
 
 - Yazdığınız örneklerin Web hizmetlerinde kalıcı olması veya kullanılması gerekiyorsa, *veri sözleşmesi serileştirmesini* desteklemeyi düşünün.
@@ -52,6 +53,7 @@ Bu makalede, serileştirilmesi için bir API tasarlarken göz önünde bulundurm
 - Sadece genel Kalıcılık nedenlerle destekleme çalışma zamanı serileştirme veya XML serileştirme özen gösterin. Bunun yerine veri sözleşmesi serileştirmesini tercih et
 
 #### <a name="data-contract-serialization"></a>Veri sözleşmesi serileştirme
+
  Türler, türü <xref:System.Runtime.Serialization.DataContractAttribute> için ve <xref:System.Runtime.Serialization.DataMemberAttribute> türüne (alanları ve Özellikler) türüne uygulayarak veri sözleşmesi serileştirmesini destekleyebilir.
 
  [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)]
@@ -96,6 +98,7 @@ Bu makalede, serileştirilmesi için bir API tasarlarken göz önünde bulundurm
      Daha fazla bilgi için bkz. [Ileri uyumlu veri sözleşmeleri](../../framework/wcf/feature-details/forward-compatible-data-contracts.md).
 
 #### <a name="xml-serialization"></a>XML serileştirme
+
  Veri anlaşması serileştirme .NET Framework ' deki ana (varsayılan) serileştirme teknolojisidir, ancak veri sözleşmesi serileştirmesi tarafından desteklenmeyen serileştirme senaryoları vardır. Örneğin, seri hale getirici tarafından üretilen veya tüketilen XML şekli üzerinde size tam denetim vermez. Bu tür hassas denetim gerekliyse, *XML serileştirmesi* kullanılmalıdır ve bu serileştirme teknolojisini desteklemek için türlerinizi tasarlamanız gerekir.
 
 1. Oluşturulan XML şeklini denetlemek için çok güçlü bir nedeniniz yoksa, özel olarak XML serileştirme için türlerinizi tasarlamaktan KAÇıNıN. Bu serileştirme teknolojisinin yerini, önceki bölümde ele alınan veri sözleşmesi serileştirmesi almıştır.
@@ -108,6 +111,7 @@ Bu makalede, serileştirilmesi için bir API tasarlarken göz önünde bulundurm
 2. <xref:System.Xml.Serialization.IXmlSerializable>XML serileştirme özniteliklerini uygulayarak, seri hale GETIRILEN XML 'nin şekli üzerinde daha fazla denetime sahip olmak istiyorsanız arabirimi uygulamayı düşünün. Arabiriminin iki yöntemi <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> ve <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> , serileştirilmiş XML akışını tam olarak denetlemenize olanak tanır. Ayrıca, özniteliğini uygulayarak tür için oluşturulan XML şemasını da denetleyebilirsiniz <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> .
 
 #### <a name="runtime-serialization"></a>Çalışma zamanı serileştirme
+
  *Çalışma zamanı serileştirme* .NET uzaktan iletişim tarafından kullanılan bir teknolojidir. Türlerinizi .NET uzaktan Iletişim kullanılarak aktarılyacağını düşünüyorsanız, çalışma zamanı serileştirmesini desteklediklerinden emin olun.
 
  *Çalışma zamanı serileştirme* için temel destek özniteliği uygulanarak sağlanabildiği <xref:System.SerializableAttribute> gibi, daha gelişmiş senaryolar basit bir *çalışma zamanı seri hale getirilebilir bir model* (Uygula- <xref:System.Runtime.Serialization.ISerializable> ve bir serileştirme Oluşturucusu sağlar) uygulamayı içerir.

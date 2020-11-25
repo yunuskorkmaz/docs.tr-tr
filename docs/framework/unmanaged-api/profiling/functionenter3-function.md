@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: b435e1a3504dd623421f977ffc48264f8b0dcb5a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 98a821eabb393d8b5042647e6ef6ffce7ab10783
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500708"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722888"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 İşlevi
+
 Profil oluşturucuya denetimin bir işleve geçtiğini bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   \[' de] denetimin geçirildiği işlevin tanımlayıcısı.
 
 ## <a name="remarks"></a>Açıklamalar  
+
  `FunctionEnter3`Geri çağırma işlevi, profil oluşturucuyu işlevler çağrılmakta olduğunu ancak bağımsız değişken incelemesini desteklemez. Bu işlevin uygulamanızı kaydetmek için [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 metodunu](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) kullanın.  
   
  `FunctionEnter3`İşlev bir geri çağırmasıdır; uygulamanız gerekir. Uygulamanın `__declspec(naked)` Storage-Class özniteliğini kullanması gerekir.  
@@ -48,6 +50,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 - Çıkışta, çağıran tarafından gönderilen tüm parametreleri kaldırarak yığını geri yüklemeniz gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  

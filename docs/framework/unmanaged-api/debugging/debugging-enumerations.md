@@ -6,106 +6,108 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: c37b6ff42b428184d301d63b6dbbd9d80a72bf3f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdd4b60d068677ae2a0874b589294ba220f0d854
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179137"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723005"
 ---
 # <a name="debugging-enumerations"></a>Hata Ayıklama Numaralandırmaları
-Bu bölümde, hata ayıklama API'sinin kullandığı yönetilmeyen sayısallaştırmalar açıklanmaktadır.  
+
+Bu bölümde hata ayıklama API 'sinin kullandığı yönetilmeyen numaralandırmalar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [CLR_DEBUGGING_PROCESS_FLAGS Numaralandırması](clr-debugging-process-flags-enumeration.md)  
- [ICLRDebugging::OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) yöntemi tarafından kullanılan değerleri sağlar.  
+ [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) yöntemi tarafından kullanılan değerleri sağlar.  
   
- [CLRDataEnumMemoryFlags Sabit Listesi](clrdataenummemoryflags-enumeration.md)  
- [ICLRDataEnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) için bir çağrı hangi bellek bölgeleri gösterir::EnumMemoryRegions yöntemi içermelidir.  
+ [CLRDataEnumMemoryFlags Numaralandırması](clrdataenummemoryflags-enumeration.md)  
+ Hangi bellek bölgelerinin [ıclrdataenummemoryregion:: EnumMemoryRegion](iclrdataenummemoryregions-enummemoryregions-method.md) yöntemine yönelik bir çağrı içermesi gerektiğini gösterir.  
   
  [COR_PUB_ENUMPROCESS Numaralandırması](cor-pub-enumprocess-enumeration.md)  
- Numaralandırılacak işlem türünü tanımlar.  
+ Numaralandırılacak işlemin türünü tanımlar.  
   
  [CorDebugBlockingReason Numaralandırması](cordebugblockingreason-enumeration.md)  
- Bir iş parçacığının belirli bir nesne üzerinde engellenme nedenlerini belirtir.  
+ Bir iş parçacığının belirli bir nesne üzerinde engellenip engellenme nedenlerini belirtir.  
   
  CorDebugChainReason  
- Çağrı zincirinin başlatılmasının nedenini veya nedenlerini gösterir.  
+ Bir çağrı zincirinin başlatılması için neden veya nedenleri gösterir.  
   
  [CorDebugCodeInvokeKind Numaralandırması](cordebugcodeinvokekind-enumeration.md)  
- Dışa aktarılan bir işlevin yönetilen kodu nasıl çağırdığını açıklar.  
+ Bir içe aktarılmış işlevin yönetilen kodu nasıl çağırılacağını açıklar.  
   
  [CorDebugCodeInvokePurpose Numaralandırması](cordebugcodeinvokepurpose-enumeration.md)  
- Dışa aktarılan bir işlevin yönetilen kodu neden aradığını açıklar.  
+ Bir içe aktarılmış işlevin neden yönetilen kodu çağırıyor olduğunu açıklar.  
   
  CorDebugCreateProcessFlags  
- [ICorDebug::CreateProcess](icordebug-createprocess-method.md) yöntemine yapılan bir çağrıda kullanılabilecek ek hata ayıklama seçenekleri sağlar.  
+ [ICorDebug:: CreateProcess](icordebug-createprocess-method.md) metoduna yapılan bir çağrıda kullanılabilecek ek hata ayıklama seçenekleri sağlar.  
   
  [CorDebugDebugEventKind Numaralandırması](cordebugdebugeventkind-enumeration.md)  
- [DecodeEvent](icordebugprocess6-decodeevent-method.md) yöntemiyle bilgileri deşifre edilen olayın türünü gösterir.  
+ Bilgileri [DecodeEvent](icordebugprocess6-decodeevent-method.md) yöntemi tarafından kodu çözülen olay türünü gösterir.  
   
- [CorDebugDecodeEventFlagsWindows Sabit Listesi](cordebugdecodeeventflagswindows-enumeration.md)  
- Windows platformundaki hata ayıklama olayları hakkında ek bilgiler sağlar.  
+ [CorDebugDecodeEventFlagsWindows Numaralandırması](cordebugdecodeeventflagswindows-enumeration.md)  
+ Windows platformunda hata ayıklama olayları hakkında ek bilgi sağlar.  
   
  CorDebugExceptionCallbackType  
- [ICorDebugManagedCallback2::Özel durum](icordebugmanagedcallback2-exception-method.md) olayından yapılan geri arama türünü gösterir.  
+ Bir [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) olayından yapılan geri aramanın türünü gösterir.  
   
- [CorDebugExceptionFlags Sabit Listesi](cordebugexceptionflags-enumeration.md)  
- Özel durum hakkında ek bilgiler sağlar.  
+ [CorDebugExceptionFlags Numaralandırması](cordebugexceptionflags-enumeration.md)  
+ Bir özel durum hakkında ek bilgi sağlar.  
   
  CorDebugExceptionUnwindCallbackType  
- Gevşeme aşamasında geri arama tarafından sinyal verilen olayı gösterir.  
+ Geriye doğru izleme aşamasında geri çağırma tarafından sinyal edilen olayı gösterir.  
   
  [CorDebugGCType Sabit Listesi](cordebuggctype-enumeration.md)  
- Çöp toplayıcısının iş istasyonunda mı yoksa sunucuda mı çalıştığını gösterir.  
+ Çöp toplayıcının bir iş istasyonunda veya sunucuda çalışıp çalışmadığını belirtir.  
   
  [CorDebugGenerationTypes Sabit Listesi](cordebuggenerationtypes-enumeration.md)  
- Yönetilen yığında bellek bir bölgenin nesil belirtir.  
+ Yönetilen yığında bir bellek bölgesinin üretilmesini belirtir.  
   
  CorDebugHandleType  
- Tutamaç türünü gösterir.  
+ Tanıtıcı türünü gösterir.  
   
  [CorDebugIlToNativeMappingTypes Numaralandırması](cordebugiltonativemappingtypes-enumeration.md)  
- Belirli bir yerel yönerge aralığının özel bir kod bölgesine karşılık gelip gelmediğini gösterir.  
+ Belirli bir yerel yönerge aralığının özel bir kod bölgesine karşılık geldiğini gösterir.  
   
  CorDebugIntercept  
- Adım atılabilir kod türlerini gösterir.  
+ İçine bulanan kod türlerini gösterir.  
   
  [CorDebugInterfaceVersion Numaralandırması](cordebuginterfaceversion-enumeration.md)  
- .NET Framework'ün bir sürümünü veya arabirimin tanıtıldığı .NET Framework sürümünü belirtir.  
+ .NET Framework sürümünü veya bir arabirimin tanıtılmasıyla .NET Framework sürümünü belirtir.  
   
  CorDebugInternalFrameType  
  Yığın çerçevesinin türünü tanımlar.  
   
  [CorDebugJITCompilerFlags Numaralandırması](cordebugjitcompilerflags-enumeration.md)  
- Yönetilen tam zamanında (JIT) derleyicisinin davranışını etkileyen değerler içerir.  
+ Yönetilen Just-In-Time (JıT) derleyicisinin davranışını etkileyen değerler içerir.  
   
  [CorDebugJITCompilerFlagsDeprecated Numaralandırması](cordebugjitcompilerflagsdeprecated-enumeration.md)  
- Kullanımdan kalktı. Bunun `CORDEBUG_JIT_DEFAULT` yerine [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) numaralandırma üyesini kullanın.  
+ Kullanımdan kalktı. `CORDEBUG_JIT_DEFAULT`Bunun yerine [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) numaralandırmasının üyesini kullanın.  
   
  CorDebugMappingResult  
- Yönerge işaretçisinin (IP) değerinin nasıl elde edildiğine ilişkin ayrıntıları sağlar.  
+ Yönerge işaretçisinin (IP) değerinin nasıl alındıklarına ilişkin ayrıntıları sağlar.  
   
- [CorDebugMDAFlags Sabit Listesi](cordebugmdaflags-enumeration.md)  
- Yönetilen hata ayıklama yardımcısının (MDA) kovulduğunuiş iş parçacığının durumunu belirtir.  
+ [CorDebugMDAFlags Numaralandırması](cordebugmdaflags-enumeration.md)  
+ Yönetilen hata ayıklama Yardımcısı 'nın (MDA) harekete geçirildiği iş parçacığının durumunu belirtir.  
   
  [CorDebugNGenPolicy Sabit Listesi](cordebugngenpolicy-enumeration.md)  
- Hata ayıkıcının yerel görüntü önbelleğinden yerel (NGen) görüntüler yükleyip yüklemediğini belirleyen bir değer sağlar.  
+ Bir hata ayıklayıcının yerel görüntü önbelleğinden yerel (NGen) görüntüler yükleyip yüklemeyeceğini belirleyen bir değer sağlar.  
   
  [CorDebugPlatform Numaralandırması](cordebugplatform-enumeration.md)  
- [ICorDebugDataTarget::GetPlatform](icordebugdatatarget-getplatform-method.md) yöntemi tarafından kullanılan hedef platform değerlerini sağlar.  
+ [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) yöntemi tarafından kullanılan hedef platform değerlerini sağlar.  
   
- [CorDebugRecordFormat Sabit Listesi](cordebugrecordformat-enumeration.md)  
- Yerel bir özel durum hata ayıklama olayı hakkında bilgi içeren bir bayt dizisinde verilerin biçimini açıklar.  
+ [CorDebugRecordFormat Numaralandırması](cordebugrecordformat-enumeration.md)  
+ Bir yerel özel durum ayıklama olayı hakkında bilgi içeren bir bayt dizisindeki verilerin biçimini açıklar.  
   
  CorDebugRegister  
  Belirli bir işlemci mimarisiyle ilişkili kayıtları belirtir.  
   
  [CorDebugSetContextFlag Numaralandırması](cordebugsetcontextflag-enumeration.md)  
- Bağlamın yığındaki etkin (veya yaprak) çerçeveden mi yoksa başka bir çerçeveden gevşemeyle hesaplanıp hesaplanmadığını gösterir.  
+ Bağlamın yığındaki etkin (veya yaprak) kareden mi olduğunu yoksa başka bir çerçeveden geriye doğru bir şekilde mi hesaplandığını gösterir.  
   
- [CorDebugStateChange Sabit Listesi](cordebugstatechange-enumeration.md)  
- İşlemdeki değişikliklere bağlı olarak atılması gereken önbelleğe alınmış veri miktarını açıklar.  
+ [CorDebugStateChange Numaralandırması](cordebugstatechange-enumeration.md)  
+ İşlemdeki değişikliklere göre atılması gereken önbelleğe alınmış verilerin miktarını açıklar.  
   
  CorDebugStepReason  
  Tek bir adımın sonucunu gösterir.  
@@ -114,32 +116,33 @@ Bu bölümde, hata ayıklama API'sinin kullandığı yönetilmeyen sayısallaşt
  Hata ayıklama için bir iş parçacığının durumunu belirtir.  
   
  \>CorDebugUnmappedStop  
- Adım layıcı tarafından kod yürütülmesinde durmayı tetiklenebilen eşlenmemiş kod türünü belirtir.  
+ Stepper tarafından kod yürütmede bir durdurmak tetikleyemeyecek eşlenmemiş kod türünü belirtir.  
   
  CorDebugUserState  
- İş parçacığının kullanıcı durumunu gösterir.  
+ Bir iş parçacığının kullanıcı durumunu belirtir.  
   
  [CorGCReferenceType Sabit Listesi](corgcreferencetype-enumeration.md)  
- Çöp toplanacak bir nesnenin kaynağını tanımlar.  
+ Atık olarak toplanmış bir nesnenin kaynağını tanımlar.  
   
  [ILCodeKind Numaralandırması](ilcodekind-enumeration.md)  
- Hata ayıklayıcının yerel değişkenlere veya profil oluşturucu ReJIT enstrümantasyonuna eklenen koda erişip erişemeyeceğini belirten değerler sağlar.  
+ Hata ayıklayıcının profil oluşturucu ReJIT araçları 'nda eklenen yerel değişkenlere veya koda erişip erişemeyeceğini belirten değerler sağlar.  
   
- [LoggingLevelEnum Sabit Listesi](logginglevelenum-enumeration.md)  
- Yönetilen bir iş parçacığı bir olay günlüğe kaydettiğinde olay günlüğüne yazılan açıklayıcı iletinin önem düzeyini gösterir.  
+ [LoggingLevelEnum Numaralandırması](logginglevelenum-enumeration.md)  
+ Yönetilen bir iş parçacığı bir olay günlüğe kaydederken olay günlüğüne yazılan açıklayıcı bir iletinin önem derecesini gösterir.  
   
  [LogSwitchCallReason Numaralandırması](logswitchcallreason-enumeration.md)  
- Hata ayıklama/izleme anahtarında gerçekleştirilen işlemi gösterir.  
+ Hata ayıklama/izleme anahtarı üzerinde gerçekleştirilen işlemi gösterir.  
   
  [VariableLocationType Sabit Listesi](variablelocationtype-enumeration.md)  
  Bir değişkenin yerel konum türünü gösterir.  
   
- [WriteableMetadataUpdateMode Sabit Listesi](writeablemetadataupdatemode-enumeration.md)  
- Meta verilerdeki bellek güncelleştirmelerinin hata ayıklayan tarafından görülüp görülemeyeceğini belirten değerler sağlar.
+ [WriteableMetadataUpdateMode Numaralandırması](writeablemetadataupdatemode-enumeration.md)  
+ Meta verilerde bellek içi güncelleştirmelerin hata ayıklayıcıya görünür olup olmadığını belirten değerler sağlar.
 
- [ClrDataSourceType Numaralandırma](clrdatasourcetype-enumeration.md) CLRDATA_IL_ADDRESS_MAP yapısı tarafından kullanılan değerleri sağlar.
+ [ClrDataSourceType numaralandırması](clrdatasourcetype-enumeration.md) CLRDATA_IL_ADDRESS_MAP yapısı tarafından kullanılan değerleri sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Hata Ayıklama Yardımcı Sınıfları](debugging-coclasses.md)  
   
  [Hata Ayıklama Arabirimleri](debugging-interfaces.md)  

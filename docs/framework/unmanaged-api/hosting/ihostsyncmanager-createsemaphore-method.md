@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37679e94-5ff9-4173-8fa5-457febeb89bf
 topic_type:
 - apiref
-ms.openlocfilehash: 680280e959d523356b95a5a4d9390c80720c0330
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9af38a58ce8786c56d9f50089605dc994167497e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803136"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722134"
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>IHostSyncManager::CreateSemaphore Yöntemi
+
 Bekleme olayları için semafor olarak kullanılacak ortak dil çalışma zamanı (CLR) için bir [ıhostsemafor](ihostsemaphore-interface.md) nesnesi oluşturur.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT CreateSemaphore (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwInitial`  
  'ndaki İçin başlangıç sayısı `ppSemaphore` .  
   
@@ -49,7 +51,7 @@ HRESULT CreateSemaphore (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`CreateSemaphore`başarıyla döndürüldü.|  
+|S_OK|`CreateSemaphore` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -58,14 +60,16 @@ HRESULT CreateSemaphore (
 |E_OUTOFMEMORY|İstenen olay nesnesini oluşturmak için yeterli bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CreateSemaphore`aynı ada sahip Win32 işlevini yansıtır. `dwInitial`Ve `dwMax` parametreleri, semafor sayısı Için `lInitialCount` sırasıyla Win32 ve parametreler için aynı semantiğini kullanır `lMaximumCount` . `dwInitial`sıfır ile `dwMax` (dahil) arasında olmalıdır. `dwMax`sıfırdan büyük olmalıdır.  
+
+ `CreateSemaphore` aynı ada sahip Win32 işlevini yansıtır. `dwInitial`Ve `dwMax` parametreleri, semafor sayısı Için `lInitialCount` sırasıyla Win32 ve parametreler için aynı semantiğini kullanır `lMaximumCount` . `dwInitial` sıfır ile `dwMax` (dahil) arasında olmalıdır. `dwMax` sıfırdan büyük olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

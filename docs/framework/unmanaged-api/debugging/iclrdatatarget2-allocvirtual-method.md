@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-ms.openlocfilehash: 20b73549d30fe210e4d44902d2f459ea9c682360
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 6d3985919ea7e766db7d07e4ed81484851156ca5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723678"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual Yöntemi
+
 Bu hedef işlemin adres alanına bellek ayırmak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağırılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT AllocVirtual(  
@@ -38,8 +39,9 @@ HRESULT AllocVirtual(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `addr`  
- 'ndaki Ayrılacak `CLRDATA_ADDRESS` belleğin istenen başlangıç adresini belirten bir değer.  
+ 'ndaki `CLRDATA_ADDRESS` Ayrılacak belleğin istenen başlangıç adresini belirten bir değer.  
   
  `size`  
  'ndaki Ayrılacak belleğin bayt cinsinden boyutu.  
@@ -51,14 +53,16 @@ HRESULT AllocVirtual(
  'ndaki Ayrılan bellek için koruma öznitelikleri. Bkz. Win32 `VirtualAlloc` işlevi.  
   
  `virt`  
- dışı Ayrılan belleğin gerçek başlangıç `CLRDATA_ADDRESS` adresini belirten bir değer işaretçisi.  
+ dışı `CLRDATA_ADDRESS` Ayrılan belleğin gerçek başlangıç adresini belirten bir değer işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `AllocVirtual` Yöntemi, Win32 `VirtualAlloc` işlevi için bir mantıksal sarmalayıcı görevi görür.  
+
+ `AllocVirtual`Yöntemi, Win32 işlevi için bir mantıksal sarmalayıcı görevi görür `VirtualAlloc` .  
   
  Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  

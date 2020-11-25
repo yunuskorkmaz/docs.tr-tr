@@ -15,29 +15,32 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-ms.openlocfilehash: 44bb98f54debb129f951cc388fea81ca0f17b20c
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: cf9c9d11c4725908fcf7ff4a0c91882b70a80190
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895315"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723382"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate Yöntemi
-`ICorDebug` Nesneyi sonlandırır.  
+
+Nesneyi sonlandırır `ICorDebug` .  
   
 > [!NOTE]
-> `Terminate`hata ayıklamakta olan tüm işlemler için [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) geri çağırması alınana kadar çağrılmamalıdır.  
+> `Terminate` hata ayıklamakta olan tüm işlemler için [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) geri çağırması alınana kadar çağrılmamalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Terminate ();  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Terminate``ICorDebug` nesne artık gerekli olmadığında çağrılmalıdır.  
+
+ `Terminate``ICorDebug`nesne artık gerekli olmadığında çağrılmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -6,17 +6,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: f382165ca8e2b972c47a080244a3d0054b5eb604
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b2feb14e304c8ba7ecc19b2e79b943204044da05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822743"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722680"
 ---
 # <a name="including-or-importing-xml-schemas"></a>XML Şemalarını Dahil Etme veya İçeri Aktarma
+
 XML şeması `<xs:import />` ,, `<xs:include />` ve öğelerini içerebilir `<xs:redefine />` . Bu şema öğeleri, dahil edilen veya içeri aktaran şemanın yapısını tamamlamak için kullanılabilen diğer XML şemalarına başvurur. , <xref:System.Xml.Schema.XmlSchemaImport> <xref:System.Xml.Schema.XmlSchemaInclude> Ve <xref:System.Xml.Schema.XmlSchemaRedefine> sınıfları, şema nesne modeli (som) API 'sinde bu öğelerle eşlenir.  
   
 ## <a name="including-or-importing-an-xml-schema"></a>XML şeması ekleme veya Içeri aktarma  
+
  Aşağıdaki kod örneği, adres şeması ile [XML şemaları oluşturma](building-xml-schemas.md) konusunda oluşturulan müşteri şemasını tamamlar. Adres şeması ile müşterinin şeması, adres türlerini müşteri şemasında kullanılabilir hale getirir.  
   
  Adres şeması, `<xs:include />` `<xs:import />` olduğu gibi adres şemasının bileşenlerini kullanmak için ya da öğelerinden birini kullanarak ya da `<xs:redefine />` herhangi bir bileşeni, müşteri şemasının ihtiyaçlarına uyacak şekilde değiştirmek için bir öğe kullanılarak birleştirilebilir. Adres şeması, `targetNamespace` Müşteri şemasından farklı bir öğesine sahip olduğundan, `<xs:import />` öğesi ve bu nedenle içeri aktarma semantiği kullanılır.  

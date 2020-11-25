@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 836e4843ead940bc9f76ff6bdd0433e21e400afd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 13636da9c3e8ac4aa9e8dc1fa02b2e33afef4717
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500643"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722264"
 ---
 # <a name="functionleave-function"></a>FunctionLeave İşlevi
+
 Profiler öğesine bir işlevin çağırana dönmek üzere olduğunu bildirir.  
   
 > [!NOTE]
@@ -42,6 +43,7 @@ void __stdcall FunctionLeave (
   \[içinde] döndüren işlevin tanımlayıcısı.
 
 ## <a name="remarks"></a>Açıklamalar  
+
  `FunctionLeave`İşlev bir geri çağırmasıdır; uygulamanız gerekir. Uygulamanın `__declspec` ( `naked` ) depolama sınıfı özniteliğini kullanması gerekir.  
   
  Yürütme altyapısı, bu işlevi çağırmadan önce hiçbir kaydı kaydetmez.  
@@ -55,6 +57,7 @@ void __stdcall FunctionLeave (
  Ayrıca, `FunctionLeave` işlev yönetilen koda çağrı içermemelidir veya herhangi bir şekilde yönetilen bellek ayırmaya neden olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  

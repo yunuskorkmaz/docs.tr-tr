@@ -15,12 +15,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: d9ee7020c7ec06f079b7f0a05d5fea67ff1c1a90
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0f80be2d1da43341f8e2af6f32580be2e01289dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823192"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723226"
 ---
 # <a name="common-type-system"></a>Ortak tür sistemi
 
@@ -170,11 +170,13 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
 - Türün üyelerinin her biri için tanımlar.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Öznitelikler, Kullanıcı tanımlı ek meta veriler sağlar. En yaygın olarak, kendi derlemesinde bir tür hakkındaki ek bilgileri depolamak veya tasarım zamanı ya da çalışma zamanı ortamında bir tür üyesinin davranışını değiştirmek için kullanılır.  
   
  Öznitelikleri, ' den devraldığı sınıflardır <xref:System.Attribute?displayProperty=nameWithType> . Özniteliklerin kullanımını destekleyen dillerin, öznitelikleri bir dil öğesine uygulamak için kendi sözdizimi vardır. Öznitelikler, neredeyse tüm dil öğeleri için uygulanabilir; bir özniteliğin uygulanabileceğini belirleyen belirli öğeler, <xref:System.AttributeUsageAttribute> Bu öznitelik sınıfına uygulanan öğesi tarafından tanımlanır.  
   
 ### <a name="type-accessibility"></a>Tür erişilebilirliği  
+
  Tüm türlerin, diğer türlerden erişilebilirliğini yöneten bir değiştiricisi vardır. Aşağıdaki tabloda, çalışma zamanı tarafından desteklenen tür erişilebilirlik türleri açıklanmaktadır.  
   
 |Erişilebilirlik|Açıklama|  
@@ -197,6 +199,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
 - ' Nin belirtilen erişilebilirliği `M` ise `private` , öğesinin erişilebilirlik etki alanı `M` öğesinin program metni olur `T` .  
   
 ### <a name="type-names"></a>Tür Adları  
+
  Ortak tür sistemi, adlar üzerinde yalnızca iki kısıtlama uygular:  
   
 - Tüm adlar Unicode (16 bit) karakter dizeleri olarak kodlanır.  
@@ -208,6 +211,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
  Bir tür diğer modüllerdeki ve derlemelerdeki türlere başvuru yapabilse de, bir tür bir .NET modülü içinde tam olarak tanımlanmalıdır. (Derleyici desteğine bağlı olarak, birden çok kaynak kodu dosyasına ayrılabilir.) Tür adlarının yalnızca bir ad alanı içinde benzersiz olması gerekir. Bir türü tam olarak tanımlamak için tür adı, türü uygulamasını içeren ad alanı tarafından nitelenmelidir.  
   
 ### <a name="base-types-and-interfaces"></a>Temel türler ve arabirimler  
+
  Bir tür, başka bir türden değerleri ve davranışları devralınabilir. Ortak tür sistemi, türlerin birden fazla temel türden devralmasını izin vermez.  
   
  Bir tür, herhangi bir sayıda arabirim uygulayabilir. Bir arabirim uygulamak için bir türün, bu arabirimin tüm sanal üyelerini uygulaması gerekir. Sanal bir yöntem, türetilmiş bir tür tarafından uygulanabilir ve statik veya dinamik olarak çağrılabilir.  
@@ -291,12 +295,14 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
 |virtual|Yöntemler, Özellikler ve olaylar|Yöntemi türetilmiş bir tür tarafından uygulanabilir ve statik veya dinamik olarak çağrılabilir. Dinamik çağırma kullanılırsa, çağrı çalışma zamanında (derleme zamanında bilinen tür yerine) yapan örnek türü, yöntemin hangi uygulamanın çağrılacağını belirler. Statik olarak sanal bir yöntemi çağırmak için, değişkenin istenen sürümünü kullanan bir türe dönüştürülmesi gerekebilir.|  
   
 ### <a name="overloading"></a>Aşırı Yükleme  
+
  Her tür üyesinin benzersiz bir imzası vardır. Yöntem imzaları yöntem adından ve bir parametre listesinden oluşur (yöntemin bağımsız değişkenlerinin sırası ve türleri). Aynı ada sahip birden çok yöntem, imzaları farklı olduğu sürece bir tür içinde tanımlanabilir. Aynı ada sahip iki veya daha fazla yöntem tanımlandığında, yöntemi aşırı yüklenmiş olarak kabul edilir. Örneğin, ' de, <xref:System.Char?displayProperty=nameWithType> <xref:System.Char.IsDigit%2A> yöntemi aşırı yüklenmiştir. Bir yöntem bir alır <xref:System.Char> . Diğer yöntem bir ve kullanır <xref:System.String> <xref:System.Int32> .  
   
 > [!NOTE]
 > Dönüş türü yöntemin imzasının bir parçası olarak kabul edilmez. Diğer bir deyişle, yalnızca dönüş türüne göre farklılık gösteren yöntemler aşırı yüklenemez.  
   
 ### <a name="inherit-override-and-hide-members"></a>Üyeleri devralma, geçersiz kılma ve gizleme  
+
  Türetilmiş bir tür, temel türünün tüm üyelerini devralır; diğer bir deyişle, bu Üyeler üzerinde tanımlanır ve türetilmiş türü için kullanılabilir. Devralınan üyelerin davranışı veya nitelikleri iki şekilde değiştirilebilir:  
   
 - Türetilmiş bir tür, aynı imzaya sahip yeni bir üye tanımlayarak, devralınan bir üyeyi gizleyebilir. Bu, daha önce genel bir üyeyi özel yapmak veya olarak işaretlenen devralınmış bir yöntem için yeni davranış tanımlamak üzere yapılabilir `final` .  
