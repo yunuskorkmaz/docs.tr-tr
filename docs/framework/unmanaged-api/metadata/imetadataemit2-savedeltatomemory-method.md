@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: e2146726-0084-4c9e-a2d2-e8d461b13b21
 topic_type:
 - apiref
-ms.openlocfilehash: 8a6f11996425c92d9b0e3123ee2d3a064739454b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a4dbe090987248ef77ce371b5bc6fb42d898f726
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492770"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705416"
 ---
-# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="f8fbd-102">IMetaDataEmit2::SaveDeltaToMemory Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f8fbd-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
-<span data-ttu-id="f8fbd-103">Değişiklikleri geçerli Düzenle ve devam et oturumundan belleğe kaydeder.</span><span class="sxs-lookup"><span data-stu-id="f8fbd-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
+# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="ed277-102">IMetaDataEmit2::SaveDeltaToMemory Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ed277-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
+
+<span data-ttu-id="ed277-103">Değişiklikleri geçerli Düzenle ve devam et oturumundan belleğe kaydeder.</span><span class="sxs-lookup"><span data-stu-id="ed277-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8fbd-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="f8fbd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed277-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="ed277-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveDeltaToMemory (  
@@ -34,23 +35,25 @@ HRESULT SaveDeltaToMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f8fbd-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f8fbd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ed277-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ed277-105">Parameters</span></span>  
+
  `pbData`  
- <span data-ttu-id="f8fbd-106">dışı Meta veri değişim yazmanın başlayacağı adres.</span><span class="sxs-lookup"><span data-stu-id="f8fbd-106">[out] The address at which to begin writing the metadata delta.</span></span>  
+ <span data-ttu-id="ed277-106">dışı Meta veri değişim yazmanın başlayacağı adres.</span><span class="sxs-lookup"><span data-stu-id="ed277-106">[out] The address at which to begin writing the metadata delta.</span></span>  
   
  `cbData`  
- <span data-ttu-id="f8fbd-107">'ndaki Değişikliklerin boyutu.</span><span class="sxs-lookup"><span data-stu-id="f8fbd-107">[in] The size of the changes.</span></span> <span data-ttu-id="f8fbd-108">Boyutunu öğrenmek için [IMetaDataEmit2:: GetDeltaSaveSize](imetadataemit2-getdeltasavesize-method.md) kullanın.</span><span class="sxs-lookup"><span data-stu-id="f8fbd-108">Use [IMetaDataEmit2::GetDeltaSaveSize](imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
+ <span data-ttu-id="ed277-107">'ndaki Değişikliklerin boyutu.</span><span class="sxs-lookup"><span data-stu-id="ed277-107">[in] The size of the changes.</span></span> <span data-ttu-id="ed277-108">Boyutunu öğrenmek için [IMetaDataEmit2:: GetDeltaSaveSize](imetadataemit2-getdeltasavesize-method.md) kullanın.</span><span class="sxs-lookup"><span data-stu-id="ed277-108">Use [IMetaDataEmit2::GetDeltaSaveSize](imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f8fbd-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f8fbd-109">Requirements</span></span>  
- <span data-ttu-id="f8fbd-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8fbd-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="f8fbd-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="f8fbd-111">**Header:** Cor.h</span></span>  
-  
- <span data-ttu-id="f8fbd-112">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="f8fbd-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
-  
- <span data-ttu-id="f8fbd-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8fbd-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f8fbd-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f8fbd-114">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="ed277-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ed277-109">Requirements</span></span>  
 
-- [<span data-ttu-id="f8fbd-115">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f8fbd-115">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
-- [<span data-ttu-id="f8fbd-116">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f8fbd-116">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+ <span data-ttu-id="ed277-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed277-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="ed277-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="ed277-111">**Header:** Cor.h</span></span>  
+  
+ <span data-ttu-id="ed277-112">**Kitaplık:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="ed277-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+  
+ <span data-ttu-id="ed277-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed277-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ed277-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ed277-114">See also</span></span>
+
+- [<span data-ttu-id="ed277-115">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ed277-115">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+- [<span data-ttu-id="ed277-116">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ed277-116">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)

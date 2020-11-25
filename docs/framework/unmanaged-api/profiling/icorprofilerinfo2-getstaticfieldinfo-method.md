@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-ms.openlocfilehash: e1dd6addd9053ffb6cf2ce23408673d8fca17cb5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff84bdfb8bbd5331fb94eed766f09137adf9e62c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496847"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703850"
 ---
-# <a name="icorprofilerinfo2getstaticfieldinfo-method"></a><span data-ttu-id="42c08-102">ICorProfilerInfo2::GetStaticFieldInfo Yöntemi</span><span class="sxs-lookup"><span data-stu-id="42c08-102">ICorProfilerInfo2::GetStaticFieldInfo Method</span></span>
-<span data-ttu-id="42c08-103">Belirtilen alan için geçerli olan statik türünü gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="42c08-103">Gets a value that indicates the kind of static that applies to the specified field.</span></span>  
+# <a name="icorprofilerinfo2getstaticfieldinfo-method"></a><span data-ttu-id="b04e1-102">ICorProfilerInfo2::GetStaticFieldInfo Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b04e1-102">ICorProfilerInfo2::GetStaticFieldInfo Method</span></span>
+
+<span data-ttu-id="b04e1-103">Belirtilen alan için geçerli olan statik türünü gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="b04e1-103">Gets a value that indicates the kind of static that applies to the specified field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42c08-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="42c08-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b04e1-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="b04e1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStaticFieldInfo (  
@@ -34,31 +35,34 @@ HRESULT GetStaticFieldInfo (
     [out] COR_PRF_STATIC_TYPE  *pFieldInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="42c08-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="42c08-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b04e1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b04e1-105">Parameters</span></span>  
+
  `classId`  
- <span data-ttu-id="42c08-106">'ndaki Statik alanın tanımlandığı sınıfın KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="42c08-106">[in] The ID of the class in which the static field is defined.</span></span>  
+ <span data-ttu-id="b04e1-106">'ndaki Statik alanın tanımlandığı sınıfın KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="b04e1-106">[in] The ID of the class in which the static field is defined.</span></span>  
   
  `fieldToken`  
- <span data-ttu-id="42c08-107">'ndaki Statik alan için meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="42c08-107">[in] The metadata token for the static field.</span></span>  
+ <span data-ttu-id="b04e1-107">'ndaki Statik alan için meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="b04e1-107">[in] The metadata token for the static field.</span></span>  
   
  `pFieldInfo`  
- <span data-ttu-id="42c08-108">dışı Belirtilen alanın statik olup olmadığını belirten [COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md) sabit değerinin bir işaretçisi ve bu durumda, alan için geçerli olan statik türü.</span><span class="sxs-lookup"><span data-stu-id="42c08-108">[out] A pointer to a value of the [COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.</span></span>  
+ <span data-ttu-id="b04e1-108">dışı Belirtilen alanın statik olup olmadığını belirten [COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md) sabit değerinin bir işaretçisi ve bu durumda, alan için geçerli olan statik türü.</span><span class="sxs-lookup"><span data-stu-id="b04e1-108">[out] A pointer to a value of the [COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="42c08-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="42c08-109">Remarks</span></span>  
- <span data-ttu-id="42c08-110">Bu bilgiler, statik alanın adresini almak için hangi işlevin çağrılacağını belirlemede kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="42c08-110">This information can be used to determine which function to call to get the address of the static field.</span></span>  
-  
- <span data-ttu-id="42c08-111">Profil Oluşturucu kodu, gerçekten bir adresi olduğundan emin olmak için statik bir alana ait meta verileri denetlemelidir.</span><span class="sxs-lookup"><span data-stu-id="42c08-111">The profiler code should still check the metadata for a static field to ensure that it actually has an address.</span></span> <span data-ttu-id="42c08-112">Statik sabit değerler (diğer bir deyişle, sabitler) yalnızca meta verilerde bulunur ve bir adrese sahip değildir.</span><span class="sxs-lookup"><span data-stu-id="42c08-112">Static literals (that is, constants) exist only in the metadata and do not have an address.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="42c08-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="42c08-113">Requirements</span></span>  
- <span data-ttu-id="42c08-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="42c08-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="42c08-115">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="42c08-115">**Header:** CorProf.idl, CorProf.h</span></span>  
-  
- <span data-ttu-id="42c08-116">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="42c08-116">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="42c08-117">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42c08-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="42c08-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="42c08-118">See also</span></span>
+## <a name="remarks"></a><span data-ttu-id="b04e1-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b04e1-109">Remarks</span></span>  
 
-- [<span data-ttu-id="42c08-119">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="42c08-119">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
-- [<span data-ttu-id="42c08-120">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="42c08-120">ICorProfilerInfo2 Interface</span></span>](icorprofilerinfo2-interface.md)
+ <span data-ttu-id="b04e1-110">Bu bilgiler, statik alanın adresini almak için hangi işlevin çağrılacağını belirlemede kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="b04e1-110">This information can be used to determine which function to call to get the address of the static field.</span></span>  
+  
+ <span data-ttu-id="b04e1-111">Profil Oluşturucu kodu, gerçekten bir adresi olduğundan emin olmak için statik bir alana ait meta verileri denetlemelidir.</span><span class="sxs-lookup"><span data-stu-id="b04e1-111">The profiler code should still check the metadata for a static field to ensure that it actually has an address.</span></span> <span data-ttu-id="b04e1-112">Statik sabit değerler (diğer bir deyişle, sabitler) yalnızca meta verilerde bulunur ve bir adrese sahip değildir.</span><span class="sxs-lookup"><span data-stu-id="b04e1-112">Static literals (that is, constants) exist only in the metadata and do not have an address.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="b04e1-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b04e1-113">Requirements</span></span>  
+
+ <span data-ttu-id="b04e1-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b04e1-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="b04e1-115">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="b04e1-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+  
+ <span data-ttu-id="b04e1-116">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="b04e1-116">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="b04e1-117">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b04e1-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="b04e1-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b04e1-118">See also</span></span>
+
+- [<span data-ttu-id="b04e1-119">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b04e1-119">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+- [<span data-ttu-id="b04e1-120">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b04e1-120">ICorProfilerInfo2 Interface</span></span>](icorprofilerinfo2-interface.md)
