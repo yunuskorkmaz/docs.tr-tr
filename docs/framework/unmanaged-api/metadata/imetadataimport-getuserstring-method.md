@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-ms.openlocfilehash: 358ca84f32e1b233116605bf5486cc9a01b42e67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: af3de5454ce3d4a763c216de6e8efdb39407457b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503516"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729141"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString Metodu
+
 Belirtilen meta veri belirteci tarafından temsil edilen sabit dizeyi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT GetUserString (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `stk`  
  'ndaki İçin ilişkili dizeyi döndürecek dize belirteci.  
   
@@ -50,11 +52,12 @@ HRESULT GetUserString (
  dışı Döndürülen geniş karakterdeki boyut `szString` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c682f744-996e-43c7-a9ea-c57cbc755398
 topic_type:
 - apiref
-ms.openlocfilehash: bbf84ffbee7d504f7fc6a902285b43857f0ac4d7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 67e5e66ae88cfcc777d631268ed555bcb4eb31b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008644"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728751"
 ---
 # <a name="itypenamefactorygettypenamebuilder-method"></a>ITypeNameFactory::GetTypeNameBuilder Metodu
+
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetTypeNameBuilder (  
@@ -34,11 +35,12 @@ HRESULT GetTypeNameBuilder (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

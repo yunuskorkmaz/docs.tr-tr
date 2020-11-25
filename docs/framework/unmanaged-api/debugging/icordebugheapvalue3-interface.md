@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9c421bb0-e647-4b2d-a986-f3d578cc7f20
 topic_type:
 - apiref
-ms.openlocfilehash: 5add6da1ace372ecf6e513902bbf98f5f79c6778
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a1f4964c89aa3b658c57946d4b5a0327797118f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210403"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728712"
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3 Arabirimi
+
 Nesnelerin monitör kilit özelliklerini gösterir. Bu arabirim ICorDebugHeapValue ve ICorDebugHeapValue2 arabirimlerini genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -37,6 +38,7 @@ Nesnelerin monitör kilit özelliklerini gösterir. Bu arabirim ICorDebugHeapVal
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

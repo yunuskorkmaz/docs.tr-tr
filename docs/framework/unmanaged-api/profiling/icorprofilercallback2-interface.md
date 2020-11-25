@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4a261dba-450d-4f1f-8d98-865b58bfc992
 topic_type:
 - apiref
-ms.openlocfilehash: 3b0e60602d2f36552c3e0e85ec51205b4128486b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 597a3dfecd42e206c98974093fa2417eba570f6a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499772"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729471"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 Arabirimi
+
 Profil oluşturucunun abone olduğu olaylar gerçekleştiğinde, bir kod Profilcisi bildirmek için ortak dil çalışma zamanı (CLR) tarafından kullanılan yöntemleri sağlar. `ICorProfilerCallback2`Arabirim, [ICorProfilerCallback](icorprofilercallback-interface.md) arabiriminin bir uzantısıdır. Diğer bir deyişle, .NET Framework sürüm 2,0 ' de tanıtılan yeni geri çağrılar sağlar.  
   
 > [!NOTE]
@@ -29,7 +30,7 @@ Profil oluşturucunun abone olduğu olaylar gerçekleştiğinde, bir kod Profilc
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[FinalizeableObjectQueued Yöntemi](icorprofilercallback2-finalizeableobjectqueued-method.md)|Kod Profilcisi, sonlandırıcısı olan bir nesnenin, yönteminin yürütülmesi için Sonlandırıcı iş parçacığına sıraya alınmış olduğunu bildirir `Finalize` .|  
 |[GarbageCollectionFinished Yöntemi](icorprofilercallback2-garbagecollectionfinished-method.md)|Profiler öğesine bir çöp toplamanın tamamlandığını ve tüm çöp toplama geri çağırmaları için verildiğini bildirir.|  
@@ -41,6 +42,7 @@ Profil oluşturucunun abone olduğu olaylar gerçekleştiğinde, bir kod Profilc
 |[ThreadNameChanged Yöntemi](icorprofilercallback2-threadnamechanged-method.md)|Kod Profilcisi bir iş parçacığı adının değiştiğini bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR, profil oluşturucunun `ICorProfilerCallback` `ICorProfilerCallback2` abone olduğu bir olay olduğunda profil oluşturucuyu bilgilendirmek için (veya) arabirimindeki bir yöntemi çağırır. Bu, CLR 'nin kod Profilcisi ile iletişim kurduğu birincil geri çağırma arabirimidir.  
   
  Bir kod profil oluşturucu arabirimin yöntemlerini uygulamalıdır `ICorProfilerCallback` . .NET Framework 2,0 ve sonraki sürümlerinde, profil oluşturucunun de yöntemleri uygulaması gerekir `ICorProfilerCallback2` . Her yöntem uygulamasının başarılı veya E_FAIL hata durumunda S_OK değerine sahip bir HRESULT döndürmesi gerekir. Şu anda CLR [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md)hariç her geri çağırma tarafından döndürülen HRESULT 'yi yoksayar.  
@@ -51,6 +53,7 @@ Profil oluşturucunun abone olduğu olaylar gerçekleştiğinde, bir kod Profilc
 > Profil Oluşturucu tek bir COM nesnesi kaydeder. Profiler .NET Framework sürüm 1,0 veya 1,1 ' i hedefliyorsanız, bu COM nesnesi yalnızca ' nin yöntemlerini uygular `ICorProfilerCallback` . .NET Framework sürüm 2,0 ve üzeri hedefleniyorsa, COM nesnesinin yöntemlerini de uygulaması gerekir `ICorProfilerCallback2` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

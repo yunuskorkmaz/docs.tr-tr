@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 5e5bf097a4b1e366fff807595b22c4696a91cf43
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9e907450b4ae985ee30d9958eec8baba797b495a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614558"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728608"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables Yöntemi
+
 Yerel değişkenleri alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,11 +38,12 @@ HRESULT GetLocalVariables(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `mdMethodToken`  
  'ndaki Metodun meta veri belirteci.  
   
  `cLocals`  
- 'ndaki `ULONG`Parametresinin boyutunu gösteren bir `rgLocals` .  
+ 'ndaki `ULONG` Parametresinin boyutunu gösteren bir `rgLocals` .  
   
  `rgLocals`  
  dışı [Imımunmanagedvariable](isymunmanagedvariable-interface.md) örneklerinin döndürülen dizisi.  
@@ -50,9 +52,11 @@ HRESULT GetLocalVariables(
  dışı `ULONG` `rgLocals` Yerelleri içermesi için gereken arabellek boyutunu alan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.

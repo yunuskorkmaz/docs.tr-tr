@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-ms.openlocfilehash: 467ba53f90081f0c3499fb22acab96b5e380a3f4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 47c0c4dfa78e85bcc83f0bb2a333955c8e8666fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395838"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728374"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress Metodu
+
 Bu "ICorDebugValue" nesnesinin, hata ayıklama sürecinde olan adresini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAddress (  
@@ -34,13 +35,16 @@ HRESULT GetAddress (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pAddress`  
- dışı `CORDB_ADDRESS`Bu değer nesnesinin adresini belirten nesne işaretçisi.  
+ dışı `CORDB_ADDRESS` Bu değer nesnesinin adresini belirten nesne işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Değer kullanılamıyorsa 0 (sıfır) döndürülür. Bu durum, değer en az kısmen Yazmaçlarda veya çöp toplayıcı tanıtıcısında () depolanıyorsa meydana gelebilir `GCHandle` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

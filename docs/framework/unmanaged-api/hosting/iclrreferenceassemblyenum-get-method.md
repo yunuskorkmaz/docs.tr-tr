@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f21c1612-9c5d-4abc-a337-577086d29c17
 topic_type:
 - apiref
-ms.openlocfilehash: 5afa7b37b804b6a11a894e0e6c7708c7787a20ae
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3968adf418fcea847ee2be5a412385d041a53544
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703358"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728917"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>ICLRReferenceAssemblyEnum::Get Yöntemi
+
 Belirtilen dizinde derleme kimliğini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT Get (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwIndex`  
  'ndaki Döndürülecek derleme kimliğinin sıfır tabanlı dizini.  
   
@@ -43,14 +45,14 @@ HRESULT Get (
  dışı Bütünleştirilmiş kod kimlik verilerini içeren bir arabellek.  
   
  `pcchBufferSize`  
- [in, out] `pwzBuffer`Arabelleğin boyutu.  
+ [in, out] `pwzBuffer` Arabelleğin boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Get`başarıyla döndürüldü.|  
-|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer`çok küçük.|  
+|S_OK|`Get` başarıyla döndürüldü.|  
+|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` çok küçük.|  
 |ERROR_NO_MORE_ITEMS|Sabit listesi daha fazla öğe içermiyor.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
@@ -59,14 +61,16 @@ HRESULT Get (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Get`genellikle iki kez çağırılır. İlk çağrı için null bir değer sağlar `pwzBuffer` ve `pcchBufferSize` için uygun boyuta ayarlanır `pwzBuffer` . İkinci çağrı uygun boyutta bir boyut sağlar `pwzBuffer` ve tamamlandıktan sonra kurallı derleme kimliği verilerini içerir.  
+
+ `Get` genellikle iki kez çağırılır. İlk çağrı için null bir değer sağlar `pwzBuffer` ve `pcchBufferSize` için uygun boyuta ayarlanır `pwzBuffer` . İkinci çağrı uygun boyutta bir boyut sağlar `pwzBuffer` ve tamamlandıktan sonra kurallı derleme kimliği verilerini içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

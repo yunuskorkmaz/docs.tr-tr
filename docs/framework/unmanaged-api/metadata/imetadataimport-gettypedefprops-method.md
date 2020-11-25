@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-ms.openlocfilehash: 6346b1e34e508e5c173bfd0119ac7451d7eef40e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9dd973fe3e0802c49c220db51a21c223730e5aec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490802"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729177"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps Yöntemi
+
 <xref:System.Type>Belirtilen typedef belirteci tarafından temsil edilen için meta veri bilgilerini döndürür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,6 +40,7 @@ HRESULT GetTypeDefProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `td`  
  'ndaki Meta verilerini döndürecek türü temsil eden TypeDef belirteci.  
   
@@ -58,11 +60,12 @@ HRESULT GetTypeDefProps (
  dışı İstenen türün temel türünü temsil eden bir TypeDef veya TypeRef meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

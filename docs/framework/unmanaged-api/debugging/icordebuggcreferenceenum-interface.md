@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f3c91c9-c035-454f-96cc-011cab1ea06b
 topic_type:
 - apiref
-ms.openlocfilehash: 5650a7e6e6cb0108f0d043914ea94debe2b703bf
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 12ce800cb83ef4f79710aa441b50be860526023c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213107"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728127"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum Arabirimi
+
 Çöp toplama işlemi yapılacak nesneler için bir numaralandırıcı sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -31,6 +32,7 @@ ms.locfileid: "83213107"
 |[Next Yöntemi](icordebuggcreferenceenum-next-method.md)|Atık olarak toplanabilecek nesneler hakkında bilgi içeren [cor_gc_reference](cor-gc-reference-structure.md) örneklerinin belirtilen sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ICorDebugGCReferenceEnum`Arabirim "ıcorhata ayıklama Genum" arabirimini uygular.  
   
  `ICorDebugGCReferenceEnum` [ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md) yöntemi çağırarak bir örnek [cor_gc_reference](cor-gc-reference-structure.md) örneklerle doldurulur. [Cor_gc_reference](cor-gc-reference-structure.md) nesneler [ıcorıtcggcreference:: Next](icordebuggcreferenceenum-next-method.md) yöntemi çağırarak Numaralandırılabilir.  
@@ -44,6 +46,7 @@ ms.locfileid: "83213107"
 - Sonlandırıcı sırasından nesneler. Sonlandırıcı, Sonlandırıcı çalıştırılıncaya kadar kök nesneleri kuyruğa al.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

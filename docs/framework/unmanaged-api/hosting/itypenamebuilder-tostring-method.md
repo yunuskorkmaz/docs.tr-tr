@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6372aca7-869a-4af6-ba2b-0eb1047ef5c0
 topic_type:
 - apiref
-ms.openlocfilehash: 18355fe9c607977f9da47389216feb2307430e1b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 205fe679f6c75702dd0cfd87c4ce5fd35cfa39f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008605"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728764"
 ---
 # <a name="itypenamebuildertostring-method"></a>ITypeNameBuilder::ToString Yöntemi
+
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT ToString (  
@@ -34,11 +35,12 @@ HRESULT ToString (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

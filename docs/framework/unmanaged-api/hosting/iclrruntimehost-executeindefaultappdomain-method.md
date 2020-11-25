@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30b5cf9a-a762-4bd4-be12-d6c1442b78b1
 topic_type:
 - apiref
-ms.openlocfilehash: 070c52258b66dcc352f2beef81b9a0694b8301ce
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: df0b2d96963ad03e04bd8770d8a8078c6c20b8ff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703280"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728877"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain Yöntemi
+
 Belirtilen yönetilen derlemede belirtilen türde belirtilen metodu çağırır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -38,11 +39,12 @@ HRESULT ExecuteInDefaultAppDomain (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pwzAssemblyPath`  
- 'ndaki <xref:System.Reflection.Assembly>Yöntemi çağrılacak öğesini tanımlayan öğesine yolu <xref:System.Type> .  
+ 'ndaki <xref:System.Reflection.Assembly> Yöntemi çağrılacak öğesini tanımlayan öğesine yolu <xref:System.Type> .  
   
  `pwzTypeName`  
- 'ndaki <xref:System.Type>Çağrılacak yöntemi tanımlayan öğesinin adı.  
+ 'ndaki <xref:System.Type> Çağrılacak yöntemi tanımlayan öğesinin adı.  
   
  `pwzMethodName`  
  'ndaki Çağrılacak yöntemin adı.  
@@ -57,7 +59,7 @@ HRESULT ExecuteInDefaultAppDomain (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInDefaultAppDomain`başarıyla döndürüldü.|  
+|S_OK|`ExecuteInDefaultAppDomain` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -65,6 +67,7 @@ HRESULT ExecuteInDefaultAppDomain (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürürse, CRL artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Çağrılan yöntem aşağıdaki imzaya sahip olmalıdır:  
   
 ```cpp  
@@ -74,11 +77,12 @@ static int pwzMethodName (String pwzArgument)
  , `pwzMethodName` çağrılan yöntemin adını temsil eder ve `pwzArgument` Bu yönteme parametre olarak geçirilen dize değerini temsil eder. HRESULT değeri S_OK olarak ayarlandıysa, `pReturnValue` çağrılan yöntem tarafından döndürülen tamsayı değerine ayarlanır. Aksi takdirde, `pReturnValue` ayarlı değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

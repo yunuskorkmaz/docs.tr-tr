@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: e249f9fc-e24a-4506-903c-92781f6eab7c
 topic_type:
 - apiref
-ms.openlocfilehash: 769e63ac6e23ae0264b79a1cd8d6e3cc1ac5a744
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9a82162023fa05e85fc9bbeb16961f2aafd9a4ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132406"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729804"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>CLRDataEnumMemoryFlags Numaralandırması
+
 Hangi bellek bölgelerinin [ıclrdataenummemoryregion:: EnumMemoryRegion](iclrdataenummemoryregions-enummemoryregions-method.md) yöntemine yönelik bir çağrı içermesi gerektiğini gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CLRDataEnumMemoryFlags {  
@@ -42,14 +43,15 @@ typedef enum CLRDataEnumMemoryFlags {
 |`CLRDATA_ENUM_MEM_HEAP`|Tam bir yığın dökümü.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb2860ef-06cb-4968-a6c3-6d048ecda2a4
 topic_type:
 - apiref
-ms.openlocfilehash: dc556dfb59e999ed9b7fc5f35c603dc26c35f314
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 015d0061e5be5bbc212243ca06f1d165abe4496a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378716"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729310"
 ---
 # <a name="icordebugthread3-interface"></a>ICorDebugThread3 Arabirimi
+
 [Icordebugstackyürüme](icordebugstackwalk-interface.md) ve ilgili arabirimlere giriş noktası sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -32,12 +33,14 @@ ms.locfileid: "83378716"
 |[GetActiveInternalFrames Yöntemi](icordebugthread3-getactiveinternalframes-method.md)|Yığında iç çerçeveler ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) nesneleri) dizisini döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugThread3`, ICorDebugThread arabirimine yönelik mantıksal bir uzantıdır.  
+
+ `ICorDebugThread3` , ICorDebugThread arabirimine yönelik mantıksal bir uzantıdır.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

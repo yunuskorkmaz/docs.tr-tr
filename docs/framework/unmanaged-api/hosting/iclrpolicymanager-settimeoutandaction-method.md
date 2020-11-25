@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-ms.openlocfilehash: 02e836601be72d54f561e077cd3c466470bafb25
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 41e13e20a1cf5a7000907b1cc7d8d2af5174ceba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504101"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728985"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction Yöntemi
+
 Belirtilen işlem için bir zaman aşımı değeri ayarlar ve işlem gerçekleştiğinde ortak dil çalışma zamanının (CLR) yapması gereken ilke eylemini belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT SetTimeoutAndAction (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `operation`  
  'ndaki Zaman aşımı ve ilke ayarlanacak işlemi belirten [EClrOperation](eclroperation-enumeration.md) değerlerinden biri `action` . Aşağıdaki değerler desteklenir:  
   
@@ -55,9 +57,9 @@ HRESULT SetTimeoutAndAction (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SetTimeoutAndAction`başarıyla döndürüldü.|  
+|S_OK|`SetTimeoutAndAction` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -66,24 +68,26 @@ HRESULT SetTimeoutAndAction (
 |E_INVALIDARG|Belirtilen için bir zaman aşımı ayarlanamaz `operation` veya geçersiz bir değer sağlandı `action` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `SetTimeoutAndAction`[ICLRPolicyManager:: setTimeout](iclrpolicymanager-settimeout-method.md) ve [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) yöntemlerinin yeteneklerini kapsüller ve bu iki yönteme sıralı çağrılar yerine çağrılabilir.  
   
 > [!IMPORTANT]
 > Tüm ilke eylemi değerleri CLR işlemleri için zaman aşımı davranışı olarak belirtilemez. Geçerli değerler için bu iki yöntem için konuların açıklamalar bölümlerine bakın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [EClrOperation Sabit Listesi](eclroperation-enumeration.md)
-- [EPolicyAction Sabit Listesi](epolicyaction-enumeration.md)
+- [EClrOperation Numaralandırması](eclroperation-enumeration.md)
+- [EPolicyAction Numaralandırması](epolicyaction-enumeration.md)
 - [ICLRPolicyManager Arabirimi](iclrpolicymanager-interface.md)
 - [SetActionOnTimeout Yöntemi](iclrpolicymanager-setactionontimeout-method.md)
 - [ICLRPolicyManager:: Settimeoutandadction](iclrpolicymanager-settimeoutandaction-method.md)

@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 1e2dd0d554cdece23ac6d0e6b255ad70533236dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f3adcfa98f4004f283b24bcd31dc243c18c2644c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826664"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729375"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma
+
 Bu örnek, bir döngü tarafından oluşturulan her ayrı görevde durumu depolamak ve almak için iş parçacığı yerel değişkenlerinin nasıl kullanılacağını gösterir <xref:System.Threading.Tasks.Parallel.For%2A> . İş parçacığı yerel verilerini kullanarak, paylaşılan duruma çok sayıda erişimi eşitleme yükünden kaçınabilirsiniz. Her yinelemede paylaşılan bir kaynağa yazmak yerine, görev için tüm yinelemeler tamamlanana kadar değeri hesaplar ve depolar. Ardından, son sonucu paylaşılan kaynağa yazabilir veya başka bir yönteme geçirebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 1.000.000 öğelerini içeren bir dizideki değerlerin toplamını hesaplamak için yöntemini çağırır. Her öğenin değeri, dizinine eşittir.  
   
  [!code-csharp[TPL_Parallel#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/forandforeach_simple.cs#05)]

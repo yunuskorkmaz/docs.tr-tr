@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-ms.openlocfilehash: 7a089831c39c36b0f8a0c7746e95a96e4ddfc5d9
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 40cb59a2ad0539764702369b13d632eddbab8174
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209402"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728166"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass Yöntemi
+
 Bu işlevin üyesi olduğu sınıfı temsil eden bir ICorDebugClass nesnesi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetClass (  
@@ -34,10 +35,12 @@ HRESULT GetClass (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppClass`  
- dışı `ICorDebugClass`Sınıfı temsil eden nesnenin adresine yönelik bir işaretçi veya bu işlev bir sınıfın üyesi değilse null.  
+ dışı `ICorDebugClass` Sınıfı temsil eden nesnenin adresine yönelik bir işaretçi veya bu işlev bir sınıfın üyesi değilse null.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

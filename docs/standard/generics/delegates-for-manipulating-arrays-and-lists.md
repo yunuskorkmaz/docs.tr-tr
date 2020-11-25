@@ -9,17 +9,19 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: b3b18a2efc4dba432ee241d764c1a81101796baf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5356671b4f1c48c125e49c35a2f8ddc5ea1ca26b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827288"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728517"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Dizi ve Listeleri Düzenlemek için Genel Temsilciler
+
 Bu konu, bir dizi veya koleksiyonun öğelerinde yapılacak dönüşümler, arama koşulları ve eylemler için genel temsilcilerin genel bir özetini sağlar.  
   
 ## <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Dizi ve Listeleri Düzenlemek için Genel Temsilciler  
+
  <xref:System.Action%601>Genel temsilci, belirtilen türdeki bir öğe üzerinde bazı eylemleri gerçekleştiren bir yöntemi temsil eder. Öğesinde istenen eylemi gerçekleştiren bir yöntem oluşturabilir, <xref:System.Action%601> Bu yöntemi temsil etmek için temsilcinin bir örneğini oluşturabilir ve sonra diziyi ve temsilciyi <xref:System.Array.ForEach%2A?displayProperty=nameWithType> static genel yöntemine geçitirsiniz. Yöntemi, dizideki her öğe için çağrılır.  
   
  <xref:System.Collections.Generic.List%601>Genel sınıf Ayrıca <xref:System.Collections.Generic.List%601.ForEach%2A> temsilciyi kullanan bir yöntem sağlar <xref:System.Action%601> . Bu yöntem genel değildir.  
@@ -36,6 +38,7 @@ Bu konu, bir dizi veya koleksiyonun öğelerinde yapılacak dönüşümler, aram
  <xref:System.Converter%602>Genel temsilci iki tür arasında bir dönüştürme tanımlamanızı ve bir türdeki bir diziyi diğerinin dizisine dönüştürmenizi veya bir tür listesini diğerinin bir listesine dönüştürmenizi sağlar. Mevcut listenin öğelerini yeni bir türe dönüştüren bir yöntem oluşturun, yöntemi temsil eden bir temsilci örneği oluşturun ve özgün diziden yeni türün bir <xref:System.Array.ConvertAll%2A?displayProperty=nameWithType> dizisini oluşturmak için genel statik yöntemini veya özgün <xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType> listeden yeni türün bir listesini üretmek için genel örnek yöntemini kullanın.  
   
 ### <a name="chaining-delegates"></a>Zincirin temsilcileri  
+
  Bu temsilcileri kullanan yöntemlerin çoğu, başka bir yönteme geçirilebilen bir dizi veya liste döndürür. Örneğin, bir dizinin belirli öğelerini seçmek, bu öğeleri yeni bir türe dönüştürmek ve yeni bir diziye kaydetmek istiyorsanız, <xref:System.Array.FindAll%2A> genel yöntemin döndürdüğü diziyi <xref:System.Array.ConvertAll%2A> genel yönteme geçirebilirsiniz. Yeni öğe türü doğal bir sıralama düzeni yoksa, <xref:System.Array.ConvertAll%2A> genel yöntemin döndürdüğü diziyi <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> genel metoda geçirebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
@@ -44,5 +47,5 @@ Bu konu, bir dizi veya koleksiyonun öğelerinde yapılacak dönüşümler, aram
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
 - [Genel Türler](index.md)
 - [.NET 'teki genel Koleksiyonlar](collections.md)
-- [Genel arabirimler](interfaces.md)
+- [Genel Arabirimler](interfaces.md)
 - [Kovaryans ve değişken sapması](covariance-and-contravariance.md)

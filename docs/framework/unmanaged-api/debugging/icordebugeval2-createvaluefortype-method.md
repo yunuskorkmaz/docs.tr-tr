@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-ms.openlocfilehash: fd7acaa8bcb4d53893855bcd25ff68cf26e30354
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 0b17bd729733665fbc4645aecd2e588b7eba14bb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976167"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729700"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType Yöntemi
+
 Belirtilen türdeki yeni bir ICorDebugValue değeri, sıfır veya null değeri olan bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CreateValueForType (  
@@ -35,18 +36,21 @@ HRESULT CreateValueForType (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pType`  
  'ndaki Türü temsil eden ICorDebugType nesnesine yönelik işaretçi.  
   
  `ppValue`  
- dışı Değeri temsil eden bir `ICorDebugValue` nesnenin adresine yönelik işaretçi.  
+ dışı `ICorDebugValue` Değeri temsil eden bir nesnenin adresine yönelik işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CreateValueForType`gibi `List<int>`oluşturulmuş türler de dahil olmak üzere, rastgele bir nesne türü belirtmenize Izin vererek [ıcorınkıx Geval:: CreateValue](icordebugeval-createvalue-method.md) öğesini genelleştirir. Bu yöntemin tek amacı, bir işlev değerlendirmesine geçirilebilecek bir değer üretmesidir.  
+
+ `CreateValueForType` gibi oluşturulmuş türler de dahil olmak üzere, rastgele bir nesne türü belirtmenize izin vererek [ıcorınkıx Geval:: CreateValue](icordebugeval-createvalue-method.md) öğesini genelleştirir `List<int>` . Bu yöntemin tek amacı, bir işlev değerlendirmesine geçirilebilecek bir değer üretmesidir.  
   
  Tür bir sınıf veya değer türü olmalıdır. Dizi değerleri veya dize değerleri oluşturmak için bu yöntemi kullanamazsınız.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

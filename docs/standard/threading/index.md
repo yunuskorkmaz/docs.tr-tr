@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 568b93fbfb6f757719d44a07b99ac18375ed539a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 28ba05c345d22b14512d280f3855934d727b3142
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826345"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728452"
 ---
 # <a name="managed-threading"></a>Yönetilen iş parçacığı oluşturma
 
@@ -21,6 +21,7 @@ Tek bir işlemciye veya birkaç kullanıcıya sahip bilgisayarlar için gelişti
 > .NET Framework 4 ' ten itibaren, çok iş parçacıklı programlama, <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları, [paralel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), ad alanındaki eşzamanlı koleksiyon sınıfları <xref:System.Collections.Concurrent?displayProperty=nameWithType> ve iş parçacıkları yerine görev kavramını temel alan bir programlama modeli ile büyük ölçüde basitleştirilmiştir. Daha fazla bilgi için bkz. [paralel programlama](../parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Yönetilen İş Parçacığı Oluşturma Temelleri](managed-threading-basics.md)  
  Yönetilen iş parçacığına genel bir bakış sağlar ve birden çok iş parçacığının ne zaman kullanılacağını açıklar.  
   
@@ -34,6 +35,7 @@ Tek bir işlemciye veya birkaç kullanıcıya sahip bilgisayarlar için gelişti
  İş parçacıklarının etkinliklerini ve farklı iş parçacıklarında erişilen nesnelerin verilerini eşleştirmek için kullanabileceğiniz yönetilen sınıfları açıklar ve iş parçacığı havuzu iş parçacıkları için bir genel bakış sağlar.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.Threading>  
  Yönetilen iş parçacıklarını kullanma ve eşitleme için sınıflar içerir.  
   
@@ -44,6 +46,7 @@ Tek bir işlemciye veya birkaç kullanıcıya sahip bilgisayarlar için gelişti
  Eşzamanlı işleme görevlerinin oluşturulması ve zamanlanması için sınıflar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Uygulama Etki Alanları](../../framework/app-domains/application-domains.md)  
  Uygulama etki alanlarına ve bunların ortak dil altyapısı tarafından kullanımına ilişkin bir genel bakış sağlar.  
   

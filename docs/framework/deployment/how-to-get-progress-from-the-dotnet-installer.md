@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma'
-description: .NET 4,5 Yükleyicisinden nasıl ilerleme alabileceğinizi öğrenin. Bu .NET sürümü için uygulamalar geliştirirseniz uygulamanızın kurulumuna .NET 4,5 kurulumunu dahil edebilirsiniz.
+title: 'Nasıl yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma'
+description: .NET Framework 4,5 Yükleyicisinden nasıl ilerleme alabileceğinizi öğrenin. Bu .NET sürümü için uygulamalar geliştirirseniz, uygulamanızın kurulumuna .NET Framework 4,5 kurulumunu dahil edebilirsiniz.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 7e21a376c5a7551ecadeaa70c0a70968dc5752fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904266"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729128"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma
 
 .NET Framework 4,5 yeniden dağıtılabilir bir çalışma zamanı. .NET Framework bu sürümü için uygulamalar geliştirirseniz, uygulamanızın kurulumunun önkoşul bir parçası olarak, (zincir) .NET Framework 4,5 kurulumunu dahil edebilirsiniz. Özelleştirilmiş veya Birleşik bir kurulum deneyimi sunmak için, .NET Framework 4,5 kurulumunu sessizce başlatmak ve uygulamanızın kurulum ilerlemesini gösterirken ilerlemesini izlemek isteyebilirsiniz. Sessiz izlemeyi etkinleştirmek için, .NET Framework 4,5 kurulumu (izlenen), kurulumla iletişim kurmak için bellek eşlemeli g/ç (MıO) kesimini kullanarak bir protokolü tanımlar (izleyici veya bağlayıcı). Bu protokol, bir Chainer 'ın ilerleme bilgilerini elde etme, ayrıntılı sonuçlar alma, iletilere yanıt verme ve .NET Framework 4,5 kurulumunu iptal etme yolunu tanımlar.
 

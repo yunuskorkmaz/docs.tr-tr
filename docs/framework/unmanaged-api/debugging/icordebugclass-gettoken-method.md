@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: ee5c848a-eac4-4462-b07a-07ccd76a75df
 topic_type:
 - apiref
-ms.openlocfilehash: 3433f5f69927afb501c2596571f138e3a69fabb6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 59f450117d1a52ce7b900d9d67330fc98281afa0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894120"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728426"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken Metodu
-Bu sınıfın `TypeDef` tanımına başvuran meta veri belirtecini alır.  
+
+`TypeDef`Bu sınıfın tanımına başvuran meta veri belirtecini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetToken (  
@@ -34,10 +35,12 @@ HRESULT GetToken (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pTypeDef`  
- dışı Bu sınıfın tanımına başvuran `mdTypeDef` bir belirteç işaretçisi.  
+ dışı `mdTypeDef` Bu sınıfın tanımına başvuran bir belirteç işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

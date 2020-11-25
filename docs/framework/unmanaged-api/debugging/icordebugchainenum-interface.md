@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6639335c-48e1-4e74-a4f3-70a6a0f54af1
 topic_type:
 - apiref
-ms.openlocfilehash: 4556ebbd05e0660da14fb59d806c8feb0b45b9bb
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dd2507bb66e036dfbb1f4e8cc262f01d926adca1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894223"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728231"
 ---
 # <a name="icordebugchainenum-interface"></a>ICorDebugChainEnum Arabirimi
 
@@ -29,7 +29,7 @@ Icordebugger Genum yöntemlerini uygular ve ıcordebugzincir dizilerini numarala
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](icordebugchainenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki `ICorDebugChain` belirtilen örnek sayısını alır.|  
+|[Next Yöntemi](icordebugchainenum-next-method.md)|`ICorDebugChain`Geçerli konumdan başlayarak Numaralandırmadaki belirtilen örnek sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -37,6 +37,7 @@ Icordebugger Genum yöntemlerini uygular ve ıcordebugzincir dizilerini numarala
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

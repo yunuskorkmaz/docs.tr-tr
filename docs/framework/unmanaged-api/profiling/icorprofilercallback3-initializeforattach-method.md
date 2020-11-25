@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-ms.openlocfilehash: 9bff594d0307153fb468b28c1535977f06997748
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c85bba9a5d913820b69cbc214275b733a53197ee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499720"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729453"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach Yöntemi
+
 Profil oluşturucuya bir iliştirme işleminden sonra durumunu başlatma fırsatı vermek için ortak dil çalışma zamanı (CLR) tarafından çağırılır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT InitializeForAttach(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pCorProfilerInfoUnk`  
  'ndaki Arabirim için arabirim işaretçisi `ICorProfilerInfo*` .  
   
@@ -45,9 +47,11 @@ HRESULT InitializeForAttach(
  'ndaki Öğesinin işaret ettiği verilerin bayt cinsinden boyutu `pvClientData` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR, `InitializeForAttach` profil oluşturucuya geri çağırmaları isteme fırsatı vermek için çağırır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

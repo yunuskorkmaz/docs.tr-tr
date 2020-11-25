@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-ms.openlocfilehash: fe7350e6d8e400ae37b5b8b7854a56f3c5c53ea7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 788fd1815415bf8bcfa20d431a5451679d2025bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491767"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728283"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs Yöntemi
+
 İçeri aktarılan modülleri temsil eden ModuleRef belirteçlerini numaralandırır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT EnumModuleRefs (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `phEnum`  
  [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
@@ -51,17 +53,18 @@ HRESULT EnumModuleRefs (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs`başarıyla döndürüldü.|  
+|`S_OK`|`EnumModuleRefs` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda, `pcModuleRefs` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

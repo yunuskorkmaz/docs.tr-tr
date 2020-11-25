@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-ms.openlocfilehash: 9d589bfc3093d03d87acb47ade0fc6c972bcd335
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 14274932461fa7a5278c9a09b421f50be098cb91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976115"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729674"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray Yöntemi
+
 Belirtilen öğe türü ve boyutlarının yeni bir dizisini ayırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT NewParameterizedArray(  
@@ -37,6 +38,7 @@ HRESULT NewParameterizedArray(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pElementType`  
  'ndaki Dizide depolanan öğe türünü temsil eden ICorDebugType nesnesine yönelik bir işaretçi.  
   
@@ -50,9 +52,11 @@ HRESULT NewParameterizedArray(
  'ndaki Seçim. Dizi boyutunun alt sınırı. Bu değer atlanırsa, her bir boyut için sıfırdan daha düşük bir sınır varsayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dizinin öğeleri, genel bir türün örnekleri olabilir. Dizi, iş parçacığının çalışmakta olduğu uygulama etki alanında her zaman oluşturulur. .NET Framework 2,0 ' de, değeri `rank` 1 olmalıdır.  
+
+ Dizinin öğeleri, genel bir türün örnekleri olabilir. Dizi, iş parçacığının çalışmakta olduğu uygulama etki alanında her zaman oluşturulur. .NET Framework 2,0 ' de, değeri 1 olmalıdır `rank` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

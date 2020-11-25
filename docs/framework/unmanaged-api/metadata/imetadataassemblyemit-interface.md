@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 34fb03cc-2285-4a45-ac48-ad993b7a921a
 topic_type:
 - apiref
-ms.openlocfilehash: 807e1ee831a43a4ef1e7b0a269ee38131f24081e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5d8bc54a94e1571ff8335c934407bbf235179ecc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008127"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728296"
 ---
 # <a name="imetadataassemblyemit-interface"></a>IMetaDataAssemblyEmit Arabirimi
+
 Kaynakları çözümlemek ve kullanmak için ortak dil çalışma zamanı tarafından kullanılan kendi kendine tanımlama modelini destekleyen yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -42,11 +43,12 @@ Kaynakları çözümlemek ve kullanmak için ortak dil çalışma zamanı taraf�
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -10,14 +10,15 @@ api_type:
 ms.assetid: 51c4de0c-3813-4142-be25-a85bb84efb90
 topic_type:
 - apiref
-ms.openlocfilehash: 6d5d22ebb93a981efbc0c0183d45b684f93e8ed0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 980e97dd8ec4792e35bb8c7fbbc2091e9ced719a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210377"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728660"
 ---
 # <a name="icordebugilcode-interface"></a>ICorDebugILCode Arabirimi
+
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
  Ara dil (IL) kodu segmentini temsil eder.  
@@ -29,6 +30,7 @@ ms.locfileid: "83210377"
 |[GetEHClauses Yöntemi](icordebugilcode-getehclauses-method.md)|Bu Il için tanımlanan özel durum işleme (EH) yan tümcelerinin listesine yönelik bir işaretçi döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

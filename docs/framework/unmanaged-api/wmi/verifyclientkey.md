@@ -1,6 +1,6 @@
 ---
-title: VerifyClientKey işlevi (Yönetilmeyen API Başvurusu)
-description: VerifyClientKey işlevi istemci anahtarının doğru güvenliğe sahip olmasını sağlar.
+title: VerifyClientKey işlevi (yönetilmeyen API Başvurusu)
+description: VerifyClientKey işlevi, istemci anahtarının doğru güvenliğe sahip olmasını sağlar.
 ms.date: 11/06/2017
 api_name:
 - VerifyClientKey
@@ -14,19 +14,20 @@ helpviewer_keywords:
 - VerifyClientKey function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: ebb794240494deb0c831b50e95461ec52017a215
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26cffe9936f2e01078b6f54e8499b58519f1018e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176714"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729427"
 ---
 # <a name="verifyclientkey-function"></a>VerifyClientKey işlevi
+
 İstemci anahtarının doğru güvenliğe sahip olmasını sağlar.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 LONG VerifyClientKey();
@@ -34,17 +35,18 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>Döndürülen değer
 
-İşlev başarılı olursa, iade `ERROR_SUCCESS` değeri (0) olur.
+İşlev başarılı olursa, dönüş değeri `ERROR_SUCCESS` (0) olur.
 
-İşlev başarısız olursa, iade değeri *WinError.h'de*tanımlanan sıfır olmayan bir hata kodudur.
+İşlev başarısız olursa, dönüş değeri, *Winerror. h* içinde tanımlanan sıfır olmayan bir hata kodudur.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** WMINet_Utils.def  
+ **Üst bilgi:** WMINet_Utils. def  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

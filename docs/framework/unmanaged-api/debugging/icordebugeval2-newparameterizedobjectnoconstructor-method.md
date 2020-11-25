@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-ms.openlocfilehash: 90fce1710f97341fb49be1d07f7af2edf8cb848c
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 796c6aa4c42a037fe612b4b1ee5267a678cf5224
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976089"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729648"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor Yöntemi
+
 Bir Oluşturucu yöntemini çağırmayı denemeden, belirtilen sınıfın yeni parametreli tür nesnesini başlatır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT NewParameterizedObjectNoConstructor (  
@@ -36,6 +37,7 @@ HRESULT NewParameterizedObjectNoConstructor (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pClass`  
  'ndaki Örnek oluşturulacak nesnenin sınıfını temsil eden ICorDebugClass nesnesine yönelik bir işaretçi.  
   
@@ -46,9 +48,11 @@ HRESULT NewParameterizedObjectNoConstructor (
  'ndaki Her biri, örneklendiği nesnenin tür bağımsız değişkenini temsil eden bir ICorDebugType nesnesine işaret eden bir işaretçiler dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yanlış `NewParameterizedObjectNoConstructor` sayıda tür bağımsız değişkeni ya da yanlış tür bağımsız değişken türleri geçirilirse yöntem başarısız olur.  
+
+ `NewParameterizedObjectNoConstructor`Yanlış sayıda tür bağımsız değişkeni ya da yanlış tür bağımsız değişken türleri geçirilirse yöntem başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

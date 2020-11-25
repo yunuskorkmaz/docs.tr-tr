@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 18a5e337b6026a20a95b1c29f3d7bda5187efc66
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 3d3d4af8e9ee073c0aefec418a3b53c4589adf0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795888"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729115"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept Numaralandırması
+
 Ele geçirilebilecek kod türlerini gösterir (yani, ile).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorDebugIntercept {  
@@ -51,9 +52,11 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_ALL`|Tüm kod yakalanabilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Ele geçirilebilecek kod türlerini oluşturmak için [ICorDebugStepper:: Setyakatmask](icordebugstepper-setinterceptmask-method.md) yöntemini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

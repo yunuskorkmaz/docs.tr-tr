@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-ms.openlocfilehash: f6ede42ac90f65f934e285f879bcef62d13b65cb
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 8c91296bd4185fd98962d49f611a3cdcb5f0ad28
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976102"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729672"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject Yöntemi
+
 Yeni parametreli bir tür nesnesi oluşturur ve nesnenin Oluşturucu yöntemini çağırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT NewParameterizedObject (  
@@ -38,6 +39,7 @@ HRESULT NewParameterizedObject (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pConstructor`  
  'ndaki Örnek oluşturulacak nesnenin oluşturucusunu temsil eden bir ICorDebugFunction nesnesine yönelik bir işaretçi.  
   
@@ -54,9 +56,11 @@ HRESULT NewParameterizedObject (
  'ndaki Her biri, oluşturucuya geçirilen bir bağımsız değişken değerini temsil eden bir ICorDebugValue nesnesine işaret eden bir işaretçiler dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Nesnenin Oluşturucusu parametre alabilir <xref:System.Type> .  
+
+ Nesnenin oluşturucusu <xref:System.Type> parametre alabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

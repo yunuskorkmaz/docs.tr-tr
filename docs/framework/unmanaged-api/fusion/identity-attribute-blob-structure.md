@@ -16,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a59e70257064220e8138f9d267a815fcdbf3929
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176558"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729037"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB Yapısı
-Bir derlemede tek bir öznitelik hakkında bilgi `DWORD`içerir ve üç s oluşur. Her `DWORD` `CurrentIntoBuffer` [biri, IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) arabiriminin yöntemiyle üretilen bir karakter arabelleği içine bir ofset  
+
+Bir derlemedeki tek bir öznitelikle ilgili bilgiler içerir ve üç ' dan oluşur `DWORD` . Her biri `DWORD` , `CurrentIntoBuffer` [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) arabiriminin yöntemi tarafından oluşturulan bir karakter arabelleği için bir uzaklığa sahiptir  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
@@ -40,20 +41,21 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ofsNamespace`|Karakter arabelleği içine ilk ofset. Bu uzaklık özniteliğin ad alanı tarafından değil, bir dizi boş karakter tarafından izlenir. Bu nedenle, kullanılmaz.|  
-|`ofsName`|Karakter arabelleği içine ikinci ofset. Bu konum, özniteliğin adının başlangıcını işaretler.|  
-|`ofsValue`|Karakter arabelleği içine üçüncü ofset. Bu konum, öznitelik değerinin başlangıcını işaretler.|  
+|`ofsNamespace`|Karakter arabelleğinin ilk boşluğu. Bu uzaklığa daha sonra özniteliğin ad alanı, ancak bir dizi null karakteri gelmelidir. Bu nedenle, kullanılmaz.|  
+|`ofsName`|Karakter arabelleğinin ikinci değeri. Bu konum, özniteliğin adının başlangıcını belirtir.|  
+|`ofsValue`|Karakter arabelleğinin üçüncü boşluğu. Bu konum, öznitelik değerinin başlangıcını işaretler.|  
   
 ## <a name="sample"></a>Örnek  
- Aşağıdaki örnek, sonunda kalabalık `IDENTITY_ATTRIBUTE_BLOB` bir yapıyla sonuçlanan birkaç temel adımı göstermektedir:  
+
+ Aşağıdaki örnek, sonunda doldurulmuş bir yapıya neden olan birkaç temel adımı göstermektedir `IDENTITY_ATTRIBUTE_BLOB` :  
   
-1. Derleme için bir [IReferenceIdentity](ireferenceidentity-interface.md) edinin.  
+1. Derleme için bir [IReferenceIdentity](ireferenceidentity-interface.md) alın.  
   
-2. Yöntemi arayın ve bir IEnumIDENTITY_ATTRIBUTE edinin. [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) `IReferenceIdentity::EnumAttributes`  
+2. Yöntemini çağırın `IReferenceIdentity::EnumAttributes` ve bir [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)alın.  
   
-3. Bir karakter arabelleği oluşturun ve `IDENTITY_ATTRIBUTE_BLOB` bir yapı olarak döküm.  
+3. Bir karakter arabelleği oluşturun ve yapı olarak atayın `IDENTITY_ATTRIBUTE_BLOB` .  
   
-4. Arabirimin `CurrentIntoBuffer` yöntemini `IEnumIDENTITY_ATTRIBUTE` arayın. Bu yöntem öznitelikleri `Namespace` `Name`kopyalar `Value` , , ve karakter arabelleği içine. Bu dizeleri için üç `IDENTITY_ATTRIBUTE_BLOB` uzaklıklar yapıda kullanılabilir olacaktır.  
+4. `CurrentIntoBuffer`Arabirimin yöntemini çağırın `IEnumIDENTITY_ATTRIBUTE` . Bu yöntem, ve özniteliklerini `Namespace` `Name` `Value` karakter arabelleğine kopyalar. Bu dizelerin üç uzaklıkları yapıda kullanılabilir hale gelir `IDENTITY_ATTRIBUTE_BLOB` .  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -220,12 +222,14 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
- C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+
+ C: \\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>Örnek çıktı  
- Kültür = nötr  
+
+ Kültür = bağımsız  
   
- isim = Sistem  
+ ad = sistem  
   
  processorArchitecture = MSIL  
   
@@ -234,11 +238,12 @@ Exit:
  Sürüm = 2.0.0.0  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Yalıtım.h  
+ **Üst bilgi:** Yalıtım. h  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

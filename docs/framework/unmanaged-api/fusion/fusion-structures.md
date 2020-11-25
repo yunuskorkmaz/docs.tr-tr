@@ -6,17 +6,19 @@ helpviewer_keywords:
 - structures [.NET Framework fusion]
 - unmanaged structures [.NET Framework], fusion
 ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
-ms.openlocfilehash: d20a2eab2c7a9798c87a4431174d6f70f32149e7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0e901ab6c78333a430ca43b01c65bfb01ee1b08e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108134"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728343"
 ---
 # <a name="fusion-structures"></a>Fusion Yapıları
+
 Bu bölümde Fusion API 'sinin kullandığı yönetilmeyen yapılar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [ASSEMBLY_INFO Yapısı](assembly-info-structure.md)  
  Genel derleme önbelleğinde kayıtlı olan bir derleme hakkındaki bilgileri içerir.  
   
@@ -30,8 +32,9 @@ Bu bölümde Fusion API 'sinin kullandığı yönetilmeyen yapılar açıklanmak
  İlişkili bir [IDENTITY_ATTRIBUTE](identity-attribute-structure.md) yapısına ilişkin konum bilgilerini içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Fusion Arabirimleri](fusion-interfaces.md)  
   
  [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)  
   
- [Fusion Sabit Listeleri](fusion-enumerations.md)
+ [Fusion Numaralandırmaları](fusion-enumerations.md)

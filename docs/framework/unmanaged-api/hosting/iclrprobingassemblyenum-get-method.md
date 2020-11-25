@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdb67a77-782f-44cf-a8a1-b75999b0f3c8
 topic_type:
 - apiref
-ms.openlocfilehash: ea66c142afc097d1003df4e7f5f5b960a91e2ab0
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 9a6145ff2874890f052f18a7e537e20ff259933c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703391"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728946"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get Yöntemi
+
 Belirtilen dizinde derleme kimliğini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT Get (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `dwIndex`  
  'ndaki Döndürülecek derleme kimliğinin sıfır tabanlı dizini.  
   
@@ -43,14 +45,14 @@ HRESULT Get (
  dışı Bütünleştirilmiş kod kimlik verilerini içeren bir arabellek.  
   
  `pcchBufferSize`  
- [in, out] `pwzBuffer`Arabelleğin boyutu.  
+ [in, out] `pwzBuffer` Arabelleğin boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Get`başarıyla döndürüldü.|  
-|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer`çok küçük.|  
+|S_OK|`Get` başarıyla döndürüldü.|  
+|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` çok küçük.|  
 |ERROR_NO_MORE_ITEMS|Sabit listesi daha fazla öğe içermiyor.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
@@ -59,16 +61,18 @@ HRESULT Get (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürürse, CLR artık işlem içinde kullanılamaz. Herhangi bir barındırma yöntemine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  0 dizinindeki kimlik, işlemci mimarisine özgü kimliktir. Dizin 1 ' deki kimlik, Microsoft ara dili (MSIL) için mimari olarak nötr derlemedir. Dizin 2 ' deki kimlik hiçbir mimari bilgisi içermiyor.  
   
- `Get`genellikle iki kez çağırılır. İlk çağrı için null bir değer sağlar `pwzBuffer` ve `pcchBufferSize` için uygun boyuta ayarlanır `pwzBuffer` . İkinci çağrı uygun boyutta bir boyut sağlar `pwzBuffer` ve tamamlandıktan sonra kurallı derleme kimliği verilerini içerir.  
+ `Get` genellikle iki kez çağırılır. İlk çağrı için null bir değer sağlar `pwzBuffer` ve `pcchBufferSize` için uygun boyuta ayarlanır `pwzBuffer` . İkinci çağrı uygun boyutta bir boyut sağlar `pwzBuffer` ve tamamlandıktan sonra kurallı derleme kimliği verilerini içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

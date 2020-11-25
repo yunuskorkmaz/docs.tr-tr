@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: be83af41-3dec-4c77-8529-9dd6b8042af6
 topic_type:
 - apiref
-ms.openlocfilehash: db07e2afa64ea2bf80416e6ab8cba5a4dcdc8dcf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fd482bfe8e95a53cafd1530c88f09df146a1b150
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499681"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729440"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3 Arabirimi
+
 Ortak dil çalışma zamanının (CLR) profil oluşturucuya iliştirme ve ayır durum bilgilerini iletişim kurmak için kullandığı geri çağırma yöntemleri sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[InitializeForAttach Yöntemi](icorprofilercallback3-initializeforattach-method.md)|Profil oluşturucuya bir iliştirme işleminden sonra durumunu başlatma fırsatı vermek için CLR tarafından çağırılır.|  
 |[ProfilerAttachComplete Yöntemi](icorprofilercallback3-profilerattachcomplete-method.md)|Profiler tarafından, profil oluşturucunun artık yakalama yöntemlerini çağırabelirteolabileceğini göstermek için çağırılır.|  
@@ -35,6 +36,7 @@ Ortak dil çalışma zamanının (CLR) profil oluşturucuya iliştirme ve ayır 
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

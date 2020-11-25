@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 828c7660d6c006e700302d119ce4caf7d76e5d84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123063"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728569"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly İşlevi
+
 Belirtilen derlemenin yönetilip yönetilmediğini gösteren bir değer alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT IsFrameworkAssembly (  
@@ -36,6 +37,7 @@ HRESULT IsFrameworkAssembly (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pwzAssemblyReference`  
  'ndaki Denetlenecek derlemenin adı.  
   
@@ -46,16 +48,18 @@ HRESULT IsFrameworkAssembly (
  'ndaki Derlemenin benzersiz kimliğini içeren bir Uncanonicalized dizesi.  
   
  `pccSize`  
- 'ndaki `pwzFrameworkAssemblyIdentity`boyutu.  
+ 'ndaki Boyutu `pwzFrameworkAssemblyIdentity` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pwzAssemblyReference` parametresi, bir derlemenin adını içeren bir karakter dizesinin bir işaretçisidir.  
+
+ Parametresi, bir `pwzAssemblyReference` derlemenin adını içeren bir karakter dizesinin bir işaretçisidir.  
   
- Bu derleme .NET Framework bir parçasıysa, `pbIsFrameworkAssembly` parametresi bir `true`Boolean değeri içerir.  
+ Bu derleme .NET Framework bir parçasıysa, `pbIsFrameworkAssembly` parametresi bir Boolean değeri içerir `true` .  
   
- Adlandırılmış derleme .NET Framework bir parçası değilse veya `pwzAssemblyReference` parametresi bir derlemeyi isimlendirilemez `pbIsFrameworkAssembly` Boolean değeri `false`içerecektir.  
+ Adlandırılmış derleme .NET Framework bir parçası değilse veya `pwzAssemblyReference` parametre bir derlemeyi `pbIsFrameworkAssembly` Isimlendirilemez, Boolean değeri içerir `false` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

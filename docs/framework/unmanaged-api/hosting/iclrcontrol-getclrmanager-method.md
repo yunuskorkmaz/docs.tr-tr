@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a11bfa4-cbb0-4082-82b5-f9fba66c93f5
 topic_type:
 - apiref
-ms.openlocfilehash: 04cb45cd021532b6cb3d74a195cbd62e1ab8d31d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d18b3a5c06ac0d3a86f7823f3b140c76c6c9a746
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615859"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728361"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager Yöntemi
+
 Konağın ortak dil çalışma zamanını (CLR) yapılandırmak için kullanabileceği bir yönetici türü örneğine yönelik bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,8 +36,9 @@ HRESULT GetCLRManager (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `riid`  
- 'ndaki `IID`Döndürülecek yönetici türü. Aşağıdaki `IID` değerler desteklenir.  
+ 'ndaki `IID` Döndürülecek yönetici türü. Aşağıdaki `IID` değerler desteklenir.  
   
 - IID_ICLRDebugManager: `ppObject` [ICLRDebugManager](iclrdebugmanager-interface.md)türünden olacağını belirtir.  
   
@@ -68,11 +70,12 @@ HRESULT GetCLRManager (
 |E_NOINTERFACE|Arabirim türü desteklenmiyor.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

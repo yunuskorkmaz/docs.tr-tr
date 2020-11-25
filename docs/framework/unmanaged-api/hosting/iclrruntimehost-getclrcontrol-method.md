@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e47e3655-efd5-4572-a1dc-50c69bf2a468
 topic_type:
 - apiref
-ms.openlocfilehash: 68bcdc33e34075cc5876ee721ef57282cdaa6e86
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 928ac05fbd3a19a17e7f37674b2a75f8bc799fc6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703690"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728881"
 ---
 # <a name="iclrruntimehostgetclrcontrol-method"></a>ICLRRuntimeHost::GetCLRControl Yöntemi
+
 Ana bilgisayarlarının ortak dil çalışma zamanının (CLR) yönlerini özelleştirmek için kullanabileceği [ICLRControl arabirimi](iclrcontrol-interface.md) türünde bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetCLRControl(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pCLRControl`  
  dışı Ana bilgisayarların CLR 'nin ek yönlerini yapılandırmasını sağlayan [ICLRControl arabirimi](iclrcontrol-interface.md) türünde bir arabirim işaretçisi.  
   
@@ -41,7 +43,7 @@ HRESULT GetCLRControl(
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetCLRControl`başarıyla döndürüldü.|  
+|S_OK|`GetCLRControl` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -50,14 +52,16 @@ HRESULT GetCLRControl(
 |HOST_E_INVALIDOPERATION|CLR zaten başlatılmış.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICLRControl`Konağın yönetici türlerinden birine bir arabirim işaretçisi almasını sağlayan [GetCLRManager Yöntemi](iclrcontrol-getclrmanager-method.md) yöntemini sağlar.  
+
+ `ICLRControl` Konağın yönetici türlerinden birine bir arabirim işaretçisi almasını sağlayan [GetCLRManager Yöntemi](iclrcontrol-getclrmanager-method.md) yöntemini sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

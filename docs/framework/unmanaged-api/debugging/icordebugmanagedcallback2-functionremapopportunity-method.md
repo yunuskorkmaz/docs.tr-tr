@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-ms.openlocfilehash: d2fc59621cbb6752830c7a8392ce4e0c476ef9e7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 50fabec08a63d348b0a1934f029582ae1446519e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210065"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729063"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity Yöntemi
+
 Kod yürütmenin, düzenlenmiş bir işlevin daha eski bir sürümündeki bir sıra noktasına ulaştığı hata ayıklayıcıya bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT FunctionRemapOpportunity (  
@@ -38,6 +39,7 @@ HRESULT FunctionRemapOpportunity (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pAppDomain`  
  'ndaki Düzenlenen işlevi içeren uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.  
   
@@ -54,11 +56,13 @@ HRESULT FunctionRemapOpportunity (
  'ndaki İşlevin eski sürümündeki yönerge işaretçisinin Microsoft ara dili (MSIL) boşluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu geri çağırma, [ICorDebugILFrame2:: RemapFunction](icordebugilframe2-remapfunction-method.md) metodunu çağırarak, yönerge işaretçisini belirtilen işlevin yeni sürümünde doğru yere yeniden eşlemek için bir fırsat sağlar. Hata ayıklayıcı `RemapFunction` [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) metodunu çağırmadan önce çağrıdıysa, çalışma zamanı eski kodu yürütmeye devam eder ve `FunctionRemapOpportunity` sonraki dizi noktasında başka bir geri çağırma harekete geçmeyecektir.  
   
  Bu geri çağırma, hata ayıklayıcı S_OK dönene kadar verilen işlevin daha eski bir sürümünü yürüten her çerçeve için çağrılacaktır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

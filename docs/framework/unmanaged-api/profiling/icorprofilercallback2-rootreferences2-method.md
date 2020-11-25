@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-ms.openlocfilehash: 2ce58113f40c8eb67a89b6ab6c9bb8f755975bd5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9e53e7bcecd900bb6c71d0a822e9b63ff6726e58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499759"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729528"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 Yöntemi
+
 Çöp toplama gerçekleştirildikten sonra profil oluşturucuyu kök başvuruları hakkında bilgilendirir. Bu yöntem [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) yönteminin bir uzantısıdır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT RootReferences2(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cRootRefs`  
  'ndaki `rootRefIds`,, `rootKinds` `rootFlags` , Ve `rootIds` dizilerindeki öğelerin sayısı.  
   
@@ -55,6 +57,7 @@ HRESULT RootReferences2(
  Kök türü bir yığın ise, kök KIMLIĞI değişkeni içeren işleve yöneliktir. Bu kök KIMLIĞI 0 ise, işlev CLR 'ye iç olan adlandırılmamış bir işlevdir. Kök türü bir tanıtıcı ise, kök KIMLIĞI çöp toplama tutamacı içindir. Diğer kök türleri için KIMLIK donuk bir değerdir ve göz ardı edilmelidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `rootRefIds`,, `rootKinds` , `rootFlags` Ve `rootIds` dizileri paralel dizilerdir. ,,, `rootRefIds[i]` `rootKinds[i]` `rootFlags[i]` Ve `rootIds[i]` hepsi aynı köke sahip olur.  
   
  Her ikisi de `RootReferences` `RootReferences2` profil oluşturucuyu bildirmek için çağırılır. Profil oluşturucular, normalde bir yöntemi veya diğerini uygular, ancak geçirilen bilgiler `RootReferences2` geçilen bir üst kümesidir `RootReferences` .  
@@ -64,6 +67,7 @@ HRESULT RootReferences2(
  Tarafından döndürülen nesne kimlikleri `RootReferences2` geri çağırma sırasında geçerli değildir çünkü çöp toplama nesneleri eski adreslerden yeni adreslere taşıma işleminin ortasında olabilir. Bu nedenle, profil oluşturucular bir çağrı sırasında nesneleri incelemeyi denememelidir `RootReferences2` . [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) çağrıldığında tüm nesneler yeni konumlarına taşınır ve güvenle incelenebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

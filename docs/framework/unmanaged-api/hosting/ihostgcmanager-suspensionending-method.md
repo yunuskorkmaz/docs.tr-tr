@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8849a1db-17f0-44b7-880a-bd36d431eb91
 topic_type:
 - apiref
-ms.openlocfilehash: 4c05ee766bf40be2e9c39f01c7e1b16cb9fab50d
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: e2624f5fce168662fac8fd5f4324617c7acf802c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804845"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729557"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>IHostGCManager::SuspensionEnding Yöntemi
+
 Ana bilgisayara ortak dil çalışma zamanının (CLR) bir çöp toplama işlemi için askıya alınmış iş parçacıklarında görevlerin yürütülmesini sürdürmesinin devam ettirdiğinizi bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT SuspensionEnding (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `generation`  
  'ndaki İş parçacığının devam etmesinden önce son kullanılan çöp toplama oluşturma.  
   
@@ -41,7 +43,7 @@ HRESULT SuspensionEnding (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SuspensionEnding`başarıyla döndürüldü.|  
+|S_OK|`SuspensionEnding` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -49,17 +51,19 @@ HRESULT SuspensionEnding (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR, `SuspensionEnding` bir atık toplama gerçekleştirdikten sonra, Konağı iş parçacığının yürütmeyi sürdürmesini bildirmek için çağırır.  
   
 > [!IMPORTANT]
 > Yöntem çağrısının yapıldığı iş parçacığını yeniden zamanlamayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

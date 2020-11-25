@@ -14,32 +14,34 @@ helpviewer_keywords:
 ms.assetid: c2ec2748-e9ae-4e1b-80db-6fcec5cb81a1
 topic_type:
 - apiref
-ms.openlocfilehash: 7e6bc57fb470a5c12549bb5f9445ecf1551425a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 71a6ea9f593da093985a4420e690f1bdd7f9d139
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107836"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728998"
 ---
 # <a name="ienumidentity_attribute-interface"></a>IEnumIDENTITY_ATTRIBUTE Arabirimi
+
 Geçerli kapsamdaki kod nesnesinin öznitelikleri için bir Numaralandırıcı işlevi görür.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|Bu `IEnumIDENTITY_ATTRIBUTE`aynı üyeleri içeren yeni bir `IEnumIDENTITY_ATTRIBUTE` yönelik bir arabirim işaretçisi alır.|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Bu `IEnumIDENTITY_ATTRIBUTE` öğelerinde içerilen verileri belirtilen veri arabelleğine yazar.|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|İle aynı üyeleri içeren yeni bir arabirim işaretçisi alır `IEnumIDENTITY_ATTRIBUTE` `IEnumIDENTITY_ATTRIBUTE` .|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Bu öğelerin içerdiği verileri `IEnumIDENTITY_ATTRIBUTE` belirtilen veri arabelleğine yazar.|  
 |`IEnumIDENTITY_ATTRIBUTE::Next`|Geçerli konumdan başlayarak belirtilen sayıda öznitelik alır.|  
-|`IEnumIDENTITY_ATTRIBUTE::Reset`|Yönerge işaretçisini bu `IEnumIDENTITY_ATTRIBUTE`başına kaydırır.|  
+|`IEnumIDENTITY_ATTRIBUTE::Reset`|Yönerge işaretçisini bunun başlangıcına taşıdır `IEnumIDENTITY_ATTRIBUTE` .|  
 |`IEnumIDENTITY_ATTRIBUTE::Skip`|Yönerge işaretçisini, geçerli konumdan başlayarak belirtilen sayıda öğe kadar ileri kaydırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Yalıtım. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

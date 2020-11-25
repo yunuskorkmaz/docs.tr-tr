@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 13c9f063-371c-4911-a5e7-e1e0b88ae382
 topic_type:
 - apiref
-ms.openlocfilehash: 1d00d150f98e44fb5c6484378266b7d9b238f4a9
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2b4d22fac7125ad113aaef5b093396a065f682c1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008592"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728725"
 ---
 # <a name="itypenamefactoryparsetypename-method"></a>ITypeNameFactory::ParseTypeName Yöntemi
+
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT ParseTypeName (  
@@ -36,11 +37,12 @@ HRESULT ParseTypeName (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

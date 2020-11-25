@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: c2abf2813c6e1a9db4264bded32d9cb9c58a2bcb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a16621f4c9b06f049239dc4e2335d70a167dd756
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491062"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729271"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps Metodu
+
 Belirtilen ParamDef belirtecinin başvurduğu parametreye ait meta veri değerlerini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -43,6 +44,7 @@ HRESULT GetParamProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `tk`  
  'ndaki Meta verilerini döndürecek parametreyi temsil eden ParamDef belirteci.  
   
@@ -71,18 +73,19 @@ HRESULT GetParamProps (
  dışı Parametresi tarafından döndürülen sabit dize işaretçisi.  
   
  `pcchValue`  
- dışı `ppValue`Geniş karakter veya dize yoksa sıfır olan boyut `ppValue` .  
+ dışı `ppValue` Geniş karakter veya dize yoksa sıfır olan boyut `ppValue` .  
   
 ## <a name="remarks"></a>Açıklamalar
 
 İçindeki sıra değerleri, `pulSequence` Parametreler için 1 ile başlar. Dönüş değerinin sıra numarası 0 ' dır.
 
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

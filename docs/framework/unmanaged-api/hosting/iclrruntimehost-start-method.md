@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c0a6dce5-0a8d-42e8-808b-6ca14df9d289
 topic_type:
 - apiref
-ms.openlocfilehash: e5ed1cbb640e760d75e1722871453a0bec283bde
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 2358af3dff97dbe648da924bc929dd2f83b12df0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703906"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728816"
 ---
 # <a name="iclrruntimehoststart-method"></a>ICLRRuntimeHost::Start Yöntemi
+
 Ortak dil çalışma zamanını (CLR) bir işleme başlatır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Start();  
@@ -35,7 +36,7 @@ HRESULT Start();
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Start`başarıyla döndürüldü.|  
+|S_OK|`Start` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -43,14 +44,16 @@ HRESULT Start();
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Birçok senaryoda `Start` , çalışma zamanı, yönetilen kodu çalıştırmak için ilk istek üzerine otomatik olarak başlatılacak olduğundan, bu çağrı için gerekli değildir. Bununla birlikte, yalnızca `Start` çalışma zamanının başlatılması gerektiğinde tam olarak belirtmek için kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

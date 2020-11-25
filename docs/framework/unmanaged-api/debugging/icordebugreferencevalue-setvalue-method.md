@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3d3f6eec-d772-401f-a028-1a2ecdc31e95
 topic_type:
 - apiref
-ms.openlocfilehash: 892471e7b35b4f4093df3f86d4777947b6e484e0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3fdd3180a01e4609ac40fd358879c0d2569234ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378313"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728387"
 ---
 # <a name="icordebugreferencevaluesetvalue-method"></a>ICorDebugReferenceValue::SetValue Yöntemi
+
 Belirtilen bellek adresini ayarlar. Yani bu yöntem, bu ICorDebugReferenceValue öğesini bir nesneyi işaret etmek üzere ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetValue (  
@@ -34,10 +35,12 @@ HRESULT SetValue (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `value`  
- 'ndaki `CORDB_ADDRESS`Bu noktaların gösterdiği nesnenin adresini belirten bir değer `ICorDebugReferenceValue` .  
+ 'ndaki `CORDB_ADDRESS` Bu noktaların gösterdiği nesnenin adresini belirten bir değer `ICorDebugReferenceValue` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

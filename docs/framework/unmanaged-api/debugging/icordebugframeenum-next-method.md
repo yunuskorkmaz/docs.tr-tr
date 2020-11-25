@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-ms.openlocfilehash: 4652e4b34d614ad3b7b852925fcc63309bdd1498
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 76b96dfd9d22c7e770671dcc01cb421430df729f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209467"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728192"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next Yöntemi
+
 Geçerli konumdan başlayarak, belirtilen ICorDebugFrame örneklerinin sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Next (  
@@ -37,8 +38,9 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `celt`  
- 'ndaki `ICorDebugFrame`Alınacak örnek sayısı.  
+ 'ndaki `ICorDebugFrame` Alınacak örnek sayısı.  
   
  `frames`  
  dışı Her biri bir nesneye işaret eden işaretçiler dizisi `ICorDebugFrame` .  
@@ -47,6 +49,7 @@ HRESULT Next (
  dışı Aslında döndürülen örnek sayısına yönelik bir işaretçi `ICorDebugFrame` . Bu değer bir ise null olabilir `celt` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

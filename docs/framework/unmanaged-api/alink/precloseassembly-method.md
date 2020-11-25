@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 6d23ac54-15ea-4027-a172-9ebef43e8f56
 topic_type:
 - apiref
-ms.openlocfilehash: fcfd3e79bbb52837a333b5ffacf5c13ae60f2490
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 31c0c5e23d1a985c2005693e25ca91379037482a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445618"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728686"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly Yöntemi
+
 Derleme dosyasını kapatır. Diğer tüm dosyaları kapattıktan sonra, ancak derleme dosyasını kapatmadan önce bu yöntemi çağırın. İlişkisiz modüller için bu yöntemi çağırmayın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT PreCloseAssembly(  
@@ -33,13 +34,16 @@ HRESULT PreCloseAssembly(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `AssemblyID`  
  Derlemenin KIMLIĞI.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

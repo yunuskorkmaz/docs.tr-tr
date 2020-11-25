@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-ms.openlocfilehash: a2b76cb59a95082e0cf9c0884b8277cca3c8fe8d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: e5bab32f6d18c87b030f484a47bc3f1d525d2338
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976076"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729635"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength Yöntemi
+
 Belirtilen bir uzunluğa sahip, belirtilen içeriğe sahip bir dize oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT NewStringWithLength (  
@@ -35,6 +36,7 @@ HRESULT NewStringWithLength (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `string`  
  'ndaki Dize değerine yönelik bir işaretçi.  
   
@@ -42,11 +44,13 @@ HRESULT NewStringWithLength (
  'ndaki Dizenin uzunluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Dizenin sondaki NULL karakterinin yönetilen dizede olması bekleniyorsa, `NewStringWithLength` yöntemi çağıranın dize uzunluğunun sondaki null karakteri içerdiğinden emin olması gerekir.  
   
  Dize her zaman iş parçacığının yürütüldüğü uygulama etki alanında oluşturulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 99e8c8d7-a1c0-47c8-9dbd-03e0b2bcb4d5
 topic_type:
 - apiref
-ms.openlocfilehash: e8b778c0880040f5ffd639a445fd5663ce493219
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: bcd4c8ba4b81821ae7dd9deaf0f76a76d335aff8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379093"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728400"
 ---
 # <a name="icordebugreferencevalueisnull-method"></a>ICorDebugReferenceValue::IsNull Yöntemi
+
 Bu ICorDebugReferenceValue değerinin null bir değer olup olmadığını belirten bir değer alır, bu durumda `ICorDebugReferenceValue` bir nesneyi işaret etmez.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT IsNull (  
@@ -34,10 +35,12 @@ HRESULT IsNull (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbNull`  
  dışı Bu nesne null ise bir Boolean değeri işaretçisi `true` `ICorDebugReferenceValue` ; Aksi durumda, `pbNull` `false` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

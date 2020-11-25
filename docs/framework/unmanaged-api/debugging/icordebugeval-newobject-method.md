@@ -15,19 +15,20 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-ms.openlocfilehash: e9570d3c916123093f69e7f26d3778f1c7184b1f
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a4d6dd0df9f38561ab5014d7ab65fde6793c9846
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976193"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729752"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject Yöntemi
+
 Yeni bir nesne örneği ayırır ve belirtilen Oluşturucu yöntemini çağırır.  
   
  Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorDebugEval2:: NewParameterizedObject](icordebugeval2-newparameterizedobject-method.md) kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT NewObject (  
@@ -38,6 +39,7 @@ HRESULT NewObject (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pConstructor`  
  'ndaki Çağrılacak Oluşturucu.  
   
@@ -48,6 +50,7 @@ HRESULT NewObject (
  'ndaki Her biri oluşturucuya geçirilecek bir bağımsız değişkeni temsil eden ICorDebugValue nesnelerinin dizisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

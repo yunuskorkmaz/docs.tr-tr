@@ -12,19 +12,20 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-ms.openlocfilehash: e1fd68cd079b381d941d416831133c54e49ac48a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 38936a57944e9a0920c374f473c4cbe8e8d70abb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210390"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728673"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses Metodu
+
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
  Bu ara dil (IL) için tanımlanan özel durum işleme (EH) yan tümceleri listesine yönelik bir işaretçi döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT GetEHClauses(  
@@ -34,6 +35,7 @@ HRESULT GetEHClauses(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cClauses`  
  'ndaki Dizinin depolama kapasitesi `clauses` . Daha fazla bilgi için Açıklamalar bölümüne bakın.  
   
@@ -44,9 +46,11 @@ HRESULT GetEHClauses(
  dışı Bu Il için tanımlanan özel durum işleme yan tümceleri hakkında bilgi içeren bir [corhata ayıklama Gehclause](cordebugehclause-structure.md) nesneleri dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `cClauses`0 ise ve `pcClauses` **null**değilse, `pcClauses` kullanılabilir özel durum işleme yan tümceleri sayısına ayarlanır. `cClauses`Sıfır olmayan ise, dizinin depolama kapasitesini temsil eder `clauses` . Yöntemi döndürüldüğünde, `clauses` en fazla `cClauses` öğe içerir ve `pcClauses` gerçekten diziye yazılan yan tümce sayısına ayarlanır `clauses` .  
+
+ `cClauses`0 ise ve `pcClauses` **null** değilse, `pcClauses` kullanılabilir özel durum işleme yan tümceleri sayısına ayarlanır. `cClauses`Sıfır olmayan ise, dizinin depolama kapasitesini temsil eder `clauses` . Yöntemi döndürüldüğünde, `clauses` en fazla `cClauses` öğe içerir ve `pcClauses` gerçekten diziye yazılan yan tümce sayısına ayarlanır `clauses` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3930fd9b-2bc3-4b72-80a0-b6eeb94d60c6
 topic_type:
 - apiref
-ms.openlocfilehash: edcc0ebcadc1bd95574b0276bfd0e2d42e5474fd
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5165ef081aad849c11747807d8cc76b2df0a6c74
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379816"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729323"
 ---
 # <a name="icordebugthread-interface"></a>ICorDebugThread Arabirimi
+
 Bir işlemdeki bir iş parçacığını temsil eder. Bir örneğin yaşam süresi, `ICorDebugThread` temsil ettiği iş parçacığının ömrü ile aynıdır.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -51,6 +52,7 @@ Bir işlemdeki bir iş parçacığını temsil eder. Bir örneğin yaşam süres
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
