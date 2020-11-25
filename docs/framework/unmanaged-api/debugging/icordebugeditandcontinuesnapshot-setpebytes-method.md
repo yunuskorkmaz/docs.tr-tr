@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7235c225-cb6e-49e9-a95b-09a646579841
 topic_type:
 - apiref
-ms.openlocfilehash: f678f98d7b40f5f4c0db8773f7f6a0aa81aa1b91
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6c654cfb2b2680987b2801a37f3d87352968431d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783026"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722966"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="38e61-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="38e61-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
-<span data-ttu-id="38e61-103">`SetPEBytes` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="38e61-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="38e61-104">Bu yöntemi çağırmayın.</span><span class="sxs-lookup"><span data-stu-id="38e61-104">Do not call this method.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="38e61-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="38e61-105">See also</span></span>
+# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="670e3-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="670e3-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
 
-- [<span data-ttu-id="38e61-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="38e61-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+<span data-ttu-id="670e3-103">`SetPEBytes` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="670e3-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="670e3-104">Bu yöntemi çağırmayın.</span><span class="sxs-lookup"><span data-stu-id="670e3-104">Do not call this method.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="670e3-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="670e3-105">See also</span></span>
+
+- [<span data-ttu-id="670e3-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="670e3-106">Debugging Interfaces</span></span>](debugging-interfaces.md)

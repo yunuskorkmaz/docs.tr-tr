@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: b9ae2b36bff9b4a6c048a8de99fa7d09350b1401
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: aeb39782c4c0624501a0e2a71960f5d16ab3c03e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859714"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723486"
 ---
-# <a name="icordebugcreateprocess-method"></a><span data-ttu-id="252ce-102">ICorDebug::CreateProcess Yöntemi</span><span class="sxs-lookup"><span data-stu-id="252ce-102">ICorDebug::CreateProcess Method</span></span>
-<span data-ttu-id="252ce-103">Hata ayıklayıcının denetimi altında bir işlem ve birincil iş parçacığını başlatır.</span><span class="sxs-lookup"><span data-stu-id="252ce-103">Launches a process and its primary thread under the control of the debugger.</span></span>  
+# <a name="icordebugcreateprocess-method"></a><span data-ttu-id="a38db-102">ICorDebug::CreateProcess Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a38db-102">ICorDebug::CreateProcess Method</span></span>
+
+<span data-ttu-id="a38db-103">Hata ayıklayıcının denetimi altında bir işlem ve birincil iş parçacığını başlatır.</span><span class="sxs-lookup"><span data-stu-id="a38db-103">Launches a process and its primary thread under the control of the debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="252ce-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="252ce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a38db-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="a38db-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateProcess (  
@@ -44,61 +45,64 @@ HRESULT CreateProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="252ce-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="252ce-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a38db-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a38db-105">Parameters</span></span>  
+
  `lpApplicationName`  
- <span data-ttu-id="252ce-106">'ndaki Başlatılan işlem tarafından yürütülecek modülü belirten, null ile sonlandırılmış bir dize işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="252ce-106">[in] Pointer to a null-terminated string that specifies the module to be executed by the launched process.</span></span> <span data-ttu-id="252ce-107">Modül, çağıran işlemin güvenlik bağlamında yürütülür.</span><span class="sxs-lookup"><span data-stu-id="252ce-107">The module is executed in the security context of the calling process.</span></span>  
+ <span data-ttu-id="a38db-106">'ndaki Başlatılan işlem tarafından yürütülecek modülü belirten, null ile sonlandırılmış bir dize işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="a38db-106">[in] Pointer to a null-terminated string that specifies the module to be executed by the launched process.</span></span> <span data-ttu-id="a38db-107">Modül, çağıran işlemin güvenlik bağlamında yürütülür.</span><span class="sxs-lookup"><span data-stu-id="a38db-107">The module is executed in the security context of the calling process.</span></span>  
   
  `lpCommandLine`  
- <span data-ttu-id="252ce-108">'ndaki Başlatılan işlem tarafından yürütülecek komut satırını belirten, null ile sonlandırılmış bir dize işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="252ce-108">[in] Pointer to a null-terminated string that specifies the command line to be executed by the launched process.</span></span> <span data-ttu-id="252ce-109">Uygulama adı (örneğin, "SomeApp. exe") ilk bağımsız değişken olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="252ce-109">The application name (for example, "SomeApp.exe") must be the first argument.</span></span>  
+ <span data-ttu-id="a38db-108">'ndaki Başlatılan işlem tarafından yürütülecek komut satırını belirten, null ile sonlandırılmış bir dize işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="a38db-108">[in] Pointer to a null-terminated string that specifies the command line to be executed by the launched process.</span></span> <span data-ttu-id="a38db-109">Uygulama adı (örneğin, "SomeApp.exe") ilk bağımsız değişken olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="a38db-109">The application name (for example, "SomeApp.exe") must be the first argument.</span></span>  
   
  `lpProcessAttributes`  
- <span data-ttu-id="252ce-110">'ndaki İşlemin güvenlik tanımlayıcısını belirten `SECURITY_ATTRIBUTES` Win32 yapısına yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="252ce-110">[in] Pointer to a Win32 `SECURITY_ATTRIBUTES` structure that specifies the security descriptor for the process.</span></span> <span data-ttu-id="252ce-111">Null `lpProcessAttributes` ise, işlem varsayılan bir güvenlik tanımlayıcısı alır.</span><span class="sxs-lookup"><span data-stu-id="252ce-111">If `lpProcessAttributes` is null, the process gets a default security descriptor.</span></span>  
+ <span data-ttu-id="a38db-110">'ndaki `SECURITY_ATTRIBUTES` İşlemin güvenlik tanımlayıcısını belirten Win32 yapısına yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a38db-110">[in] Pointer to a Win32 `SECURITY_ATTRIBUTES` structure that specifies the security descriptor for the process.</span></span> <span data-ttu-id="a38db-111">`lpProcessAttributes`Null ise, işlem varsayılan bir güvenlik tanımlayıcısı alır.</span><span class="sxs-lookup"><span data-stu-id="a38db-111">If `lpProcessAttributes` is null, the process gets a default security descriptor.</span></span>  
   
  `lpThreadAttributes`  
- <span data-ttu-id="252ce-112">'ndaki İşlemin birincil iş parçacığının `SECURITY_ATTRIBUTES` güvenlik tanımlayıcısını belirten Win32 yapısına yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="252ce-112">[in] Pointer to a Win32 `SECURITY_ATTRIBUTES` structure that specifies the security descriptor for the primary thread of the process.</span></span> <span data-ttu-id="252ce-113">Null `lpThreadAttributes` ise, iş parçacığı varsayılan bir güvenlik tanımlayıcısı alır.</span><span class="sxs-lookup"><span data-stu-id="252ce-113">If `lpThreadAttributes` is null, the thread gets a default security descriptor.</span></span>  
+ <span data-ttu-id="a38db-112">'ndaki `SECURITY_ATTRIBUTES` İşlemin birincil iş parçacığının güvenlik tanımlayıcısını belirten Win32 yapısına yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a38db-112">[in] Pointer to a Win32 `SECURITY_ATTRIBUTES` structure that specifies the security descriptor for the primary thread of the process.</span></span> <span data-ttu-id="a38db-113">`lpThreadAttributes`Null ise, iş parçacığı varsayılan bir güvenlik tanımlayıcısı alır.</span><span class="sxs-lookup"><span data-stu-id="a38db-113">If `lpThreadAttributes` is null, the thread gets a default security descriptor.</span></span>  
   
  `bInheritHandles`  
- <span data-ttu-id="252ce-114">'ndaki Çağıran işlemdeki `true` her bir devralınabilir tanıtıcının başlatılan işlem tarafından devralındığını veya `false` tanıtıcıların devralınamayacağını belirtmek için olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="252ce-114">[in] Set to `true` to indicate that each inheritable handle in the calling process is inherited by the launched process, or `false` to indicate that the handles are not inherited.</span></span> <span data-ttu-id="252ce-115">Devralınan tutamaçlar, özgün tanıtıcılarla aynı değere ve erişim haklarına sahiptir.</span><span class="sxs-lookup"><span data-stu-id="252ce-115">The inherited handles have the same value and access rights as the original handles.</span></span>  
+ <span data-ttu-id="a38db-114">'ndaki `true` Çağıran işlemdeki her bir devralınabilir tanıtıcının başlatılan işlem tarafından devralındığını veya tanıtıcıların devralınamayacağını belirtmek için olarak ayarlayın `false` .</span><span class="sxs-lookup"><span data-stu-id="a38db-114">[in] Set to `true` to indicate that each inheritable handle in the calling process is inherited by the launched process, or `false` to indicate that the handles are not inherited.</span></span> <span data-ttu-id="a38db-115">Devralınan tutamaçlar, özgün tanıtıcılarla aynı değere ve erişim haklarına sahiptir.</span><span class="sxs-lookup"><span data-stu-id="a38db-115">The inherited handles have the same value and access rights as the original handles.</span></span>  
   
  `dwCreationFlags`  
- <span data-ttu-id="252ce-116">'ndaki Öncelik sınıfını ve başlatılan işlemin davranışını denetleyen [Win32 Işlemi oluşturma bayraklarının](/windows/win32/procthread/process-creation-flags) bit düzeyinde birleşimi.</span><span class="sxs-lookup"><span data-stu-id="252ce-116">[in] A bitwise combination of the [Win32 Process Creation Flags](/windows/win32/procthread/process-creation-flags) that control the priority class and the behavior of the launched process.</span></span>  
+ <span data-ttu-id="a38db-116">'ndaki Öncelik sınıfını ve başlatılan işlemin davranışını denetleyen [Win32 Işlemi oluşturma bayraklarının](/windows/win32/procthread/process-creation-flags) bit düzeyinde birleşimi.</span><span class="sxs-lookup"><span data-stu-id="a38db-116">[in] A bitwise combination of the [Win32 Process Creation Flags](/windows/win32/procthread/process-creation-flags) that control the priority class and the behavior of the launched process.</span></span>  
   
  `lpEnvironment`  
- <span data-ttu-id="252ce-117">'ndaki Yeni işlem için ortam bloğunun işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="252ce-117">[in] Pointer to an environment block for the new process.</span></span>  
+ <span data-ttu-id="a38db-117">'ndaki Yeni işlem için ortam bloğunun işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="a38db-117">[in] Pointer to an environment block for the new process.</span></span>  
   
  `lpCurrentDirectory`  
- <span data-ttu-id="252ce-118">'ndaki İşlem için geçerli dizinin tam yolunu belirten, null ile sonlandırılmış bir dize işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="252ce-118">[in] Pointer to a null-terminated string that specifies the full path to the current directory for the process.</span></span> <span data-ttu-id="252ce-119">Bu parametre null ise, yeni işlem çağıran işlemle aynı geçerli sürücü ve dizine sahip olur.</span><span class="sxs-lookup"><span data-stu-id="252ce-119">If this parameter is null, the new process will have the same current drive and directory as the calling process.</span></span>  
+ <span data-ttu-id="a38db-118">'ndaki İşlem için geçerli dizinin tam yolunu belirten, null ile sonlandırılmış bir dize işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="a38db-118">[in] Pointer to a null-terminated string that specifies the full path to the current directory for the process.</span></span> <span data-ttu-id="a38db-119">Bu parametre null ise, yeni işlem çağıran işlemle aynı geçerli sürücü ve dizine sahip olur.</span><span class="sxs-lookup"><span data-stu-id="a38db-119">If this parameter is null, the new process will have the same current drive and directory as the calling process.</span></span>  
   
  `lpStartupInfo`  
- <span data-ttu-id="252ce-120">'ndaki Başlatılan işlemin ana penceresinin `STARTUPINFOW` pencere istasyonunu, masaüstünü, standart tutamaçlarını ve görünümünü belirten bir Win32 yapısına yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="252ce-120">[in] Pointer to a Win32 `STARTUPINFOW` structure that specifies the window station, desktop, standard handles, and appearance of the main window for the launched process.</span></span>  
+ <span data-ttu-id="a38db-120">'ndaki `STARTUPINFOW` Başlatılan işlemin ana penceresinin pencere istasyonunu, masaüstünü, standart tutamaçlarını ve görünümünü belirten bir Win32 yapısına yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a38db-120">[in] Pointer to a Win32 `STARTUPINFOW` structure that specifies the window station, desktop, standard handles, and appearance of the main window for the launched process.</span></span>  
   
  `lpProcessInformation`  
- <span data-ttu-id="252ce-121">'ndaki Başlatılacak işlemle ilgili kimlik `PROCESS_INFORMATION` bilgilerini belirten Win32 yapısına yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="252ce-121">[in] Pointer to a Win32 `PROCESS_INFORMATION` structure that specifies the identification information about the process to be launched.</span></span>  
+ <span data-ttu-id="a38db-121">'ndaki `PROCESS_INFORMATION` Başlatılacak işlemle ilgili kimlik bilgilerini belirten Win32 yapısına yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a38db-121">[in] Pointer to a Win32 `PROCESS_INFORMATION` structure that specifies the identification information about the process to be launched.</span></span>  
   
  `debuggingFlags`  
- <span data-ttu-id="252ce-122">'ndaki Hata ayıklama seçeneklerini belirten CorDebugCreateProcessFlags numaralandırması değeri.</span><span class="sxs-lookup"><span data-stu-id="252ce-122">[in] A value of the CorDebugCreateProcessFlags enumeration that specifies the debugging options.</span></span>  
+ <span data-ttu-id="a38db-122">'ndaki Hata ayıklama seçeneklerini belirten CorDebugCreateProcessFlags numaralandırması değeri.</span><span class="sxs-lookup"><span data-stu-id="a38db-122">[in] A value of the CorDebugCreateProcessFlags enumeration that specifies the debugging options.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="252ce-123">dışı İşlemi temsil eden ICorDebugProcess nesnesinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="252ce-123">[out] A pointer to the address of a ICorDebugProcess object that represents the process.</span></span>  
+ <span data-ttu-id="a38db-123">dışı İşlemi temsil eden ICorDebugProcess nesnesinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a38db-123">[out] A pointer to the address of a ICorDebugProcess object that represents the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="252ce-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="252ce-124">Remarks</span></span>  
- <span data-ttu-id="252ce-125">Bu yöntemin parametreleri Win32 `CreateProcess` yöntemiyle aynıdır.</span><span class="sxs-lookup"><span data-stu-id="252ce-125">The parameters of this method are the same as those of the Win32 `CreateProcess` method.</span></span>  
-  
- <span data-ttu-id="252ce-126">Yönetilmeyen karma mod hata ayıklamayı etkinleştirmek için DEBUG_PROCESS &#124; `dwCreationFlags` DEBUG_ONLY_THIS_PROCESS olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="252ce-126">To enable unmanaged mixed-mode debugging, set `dwCreationFlags` to DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS.</span></span> <span data-ttu-id="252ce-127">Yalnızca yönetilen hata ayıklamayı kullanmak istiyorsanız, bu bayrakları ayarlamayın.</span><span class="sxs-lookup"><span data-stu-id="252ce-127">If you want to use only managed debugging, do not set these flags.</span></span>  
-  
- <span data-ttu-id="252ce-128">Hata ayıklayıcı ve hataları Ayıklanacak işlem (ekli işlem) tek bir konsolu paylaşıyorsa ve birlikte çalışma hata ayıklaması kullanılırsa, ekli işlemin konsol kilitlerini tutması ve hata ayıklama olayında durdurulması mümkündür.</span><span class="sxs-lookup"><span data-stu-id="252ce-128">If the debugger and the process to be debugged (the attached process) share a single console, and if interop debugging is used, it is possible for the attached process to hold console locks and stop at a debug event.</span></span> <span data-ttu-id="252ce-129">Hata ayıklayıcı daha sonra konsolu kullanma denemesini engeller.</span><span class="sxs-lookup"><span data-stu-id="252ce-129">The debugger will then block any attempt to use the console.</span></span> <span data-ttu-id="252ce-130">Bu sorundan kaçınmak için, `dwCreationFlags` parametresindeki CREATE_NEW_CONSOLE bayrağını ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="252ce-130">To avoid this problem, set the CREATE_NEW_CONSOLE flag in the `dwCreationFlags` parameter.</span></span>  
-  
- <span data-ttu-id="252ce-131">Birlikte çalışabilirlik hata ayıklaması, IA-64 tabanlı ve AMD64 tabanlı platformlar gibi Win9x ve x86 olmayan platformlarda desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="252ce-131">Interop debugging is not supported on Win9x and non-x86 platforms such as IA-64-based and AMD64-based platforms.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="252ce-132">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="252ce-132">Requirements</span></span>  
- <span data-ttu-id="252ce-133">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="252ce-133">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="252ce-134">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="252ce-134">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="252ce-135">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="252ce-135">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="252ce-136">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="252ce-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="252ce-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="252ce-137">See also</span></span>
+## <a name="remarks"></a><span data-ttu-id="a38db-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a38db-124">Remarks</span></span>  
 
-- [<span data-ttu-id="252ce-138">ICorDebug Arabirimi</span><span class="sxs-lookup"><span data-stu-id="252ce-138">ICorDebug Interface</span></span>](icordebug-interface.md)
+ <span data-ttu-id="a38db-125">Bu yöntemin parametreleri Win32 `CreateProcess` yöntemiyle aynıdır.</span><span class="sxs-lookup"><span data-stu-id="a38db-125">The parameters of this method are the same as those of the Win32 `CreateProcess` method.</span></span>  
+  
+ <span data-ttu-id="a38db-126">Yönetilmeyen karma mod hata ayıklamayı etkinleştirmek için `dwCreationFlags` DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="a38db-126">To enable unmanaged mixed-mode debugging, set `dwCreationFlags` to DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS.</span></span> <span data-ttu-id="a38db-127">Yalnızca yönetilen hata ayıklamayı kullanmak istiyorsanız, bu bayrakları ayarlamayın.</span><span class="sxs-lookup"><span data-stu-id="a38db-127">If you want to use only managed debugging, do not set these flags.</span></span>  
+  
+ <span data-ttu-id="a38db-128">Hata ayıklayıcı ve hataları Ayıklanacak işlem (ekli işlem) tek bir konsolu paylaşıyorsa ve birlikte çalışma hata ayıklaması kullanılırsa, ekli işlemin konsol kilitlerini tutması ve hata ayıklama olayında durdurulması mümkündür.</span><span class="sxs-lookup"><span data-stu-id="a38db-128">If the debugger and the process to be debugged (the attached process) share a single console, and if interop debugging is used, it is possible for the attached process to hold console locks and stop at a debug event.</span></span> <span data-ttu-id="a38db-129">Hata ayıklayıcı daha sonra konsolu kullanma denemesini engeller.</span><span class="sxs-lookup"><span data-stu-id="a38db-129">The debugger will then block any attempt to use the console.</span></span> <span data-ttu-id="a38db-130">Bu sorundan kaçınmak için, parametresindeki CREATE_NEW_CONSOLE bayrağını ayarlayın `dwCreationFlags` .</span><span class="sxs-lookup"><span data-stu-id="a38db-130">To avoid this problem, set the CREATE_NEW_CONSOLE flag in the `dwCreationFlags` parameter.</span></span>  
+  
+ <span data-ttu-id="a38db-131">Birlikte çalışabilirlik hata ayıklaması, IA-64 tabanlı ve AMD64 tabanlı platformlar gibi Win9x ve x86 olmayan platformlarda desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="a38db-131">Interop debugging is not supported on Win9x and non-x86 platforms such as IA-64-based and AMD64-based platforms.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="a38db-132">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a38db-132">Requirements</span></span>  
+
+ <span data-ttu-id="a38db-133">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a38db-133">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="a38db-134">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="a38db-134">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+  
+ <span data-ttu-id="a38db-135">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="a38db-135">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="a38db-136">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a38db-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="a38db-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a38db-137">See also</span></span>
+
+- [<span data-ttu-id="a38db-138">ICorDebug Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a38db-138">ICorDebug Interface</span></span>](icordebug-interface.md)
