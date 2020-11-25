@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: 3dbe0675b73f902a7da0fb4f7881c1ee15022b36
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c0f184720849a0c21fdeda1de4543a2443d60674
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825864"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713359"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğunu İptal Etme
+
 Bu belgede, uygulamanızda iptalin nasıl etkinleştirileceği gösterilmektedir. Bu örnek, iş öğelerinin bir veri akışı ardışık düzeninde etkin olduğunu ve ayrıca İptalin etkilerini göstermek için Windows Forms kullanır.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,6 +35,7 @@ Bu belgede, uygulamanızda iptalin nasıl etkinleştirileceği gösterilmektedir
 5. Denetime dört <xref:System.Windows.Forms.ToolStripProgressBar> nesne ekleyin <xref:System.Windows.Forms.ToolStrip> .  
   
 ## <a name="creating-the-dataflow-pipeline"></a>Veri akışı işlem hattı oluşturma  
+
  Bu bölümde, iş öğelerini işleyen ve ilerleme çubuğunu güncelleştiren veri akışı işlem hattının nasıl oluşturulacağı açıklanmaktadır.  
   
 ### <a name="to-create-the-dataflow-pipeline"></a>Veri akışı ardışık düzeni oluşturmak için  
@@ -65,6 +67,7 @@ Bu belgede, uygulamanızda iptalin nasıl etkinleştirileceği gösterilmektedir
  Bu örnek, <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> işlem hattının üyelerini oluştururken özelliği ayarlar. Özelliği, <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> veri akışı blok yürütmeyi kalıcı olarak iptal ettiğinden, Kullanıcı işlemi iptal ettikten sonra işlem hattına daha fazla iş öğesi eklemek istediğinde tüm işlem hattının yeniden oluşturulması gerekir. Bir işlem iptal edildikten sonra diğer çalışmanın gerçekleştirilebilmesi için bir veri akışı bloğunu iptal etmenin alternatif bir yolunu gösteren bir örnek için, bkz. [Izlenecek yol: Windows Forms uygulamasında veri akışı kullanma](walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Veri akışı ardışık düzenini Kullanıcı arabirimine bağlama  
+
  Bu bölümde, veri akışı ardışık düzeninin Kullanıcı arabirimine nasıl bağlanacağı açıklanmaktadır. İşlem hattının oluşturulması ve iş öğelerinin işlem hattına eklenmesi, **Iş öğeleri ekle** düğmesi için olay işleyicisi tarafından denetlenir. İptali, **iptal** düğmesi tarafından başlatılır. Kullanıcı bu düğmelerden birini tıkladığında, uygun eylem zaman uyumsuz bir şekilde başlatılır.  
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>Veri akışı ardışık düzenini Kullanıcı arabirimine bağlamak için  
@@ -84,6 +87,7 @@ Bu belgede, uygulamanızda iptalin nasıl etkinleştirileceği gösterilmektedir
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, Form1.cs için tüm kodu gösterir (Visual Basic için Form1. vb).  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]

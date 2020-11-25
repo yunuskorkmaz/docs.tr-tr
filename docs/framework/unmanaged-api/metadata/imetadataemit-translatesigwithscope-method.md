@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: 7ef6dbc46806febc6fba89b39a8b894377225c23
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 80d33da2eb2a7f0cfbe5dcb7279fff9973dada2e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003990"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712930"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope Yöntemi
+
 Bir derlemeyi geçerli kapsama aktarır ve birleştirilmiş kapsam için yeni bir meta veri imzası alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -44,6 +45,7 @@ HRESULT TranslateSigWithScope (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pAssemImport`  
  'ndaki İçeri aktarma derlemesi için arabirim (imzanın tanımlandığı yer).  
   
@@ -78,11 +80,12 @@ HRESULT TranslateSigWithScope (
  dışı Çevrilen İmzadaki gerçek bayt sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

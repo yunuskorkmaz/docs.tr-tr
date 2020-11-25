@@ -6,12 +6,12 @@ ms.topic: error-reference
 ms.date: 10/09/2020
 f1_keywords:
 - NETSDK1071
-ms.openlocfilehash: 852232cba04bb93a17872280e10848c2896991ae
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1381fc63941ec04efb31035d13913620a195c236
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445804"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713086"
 ---
 # <a name="netsdk1071-explicitly-versioned-packagereference-to-a-metapackage-that-would-be-included-with-the-framework"></a>NETSDK1071: çerçeveye dahil edilecek bir metapackage öğesine açıkça sürümlü PackageReference.
 
@@ -32,7 +32,7 @@ Bunu çözmek için:
 1. .NET Core veya .NET Standard hedeflenirken, `Microsoft.NETCore.App` proje dosyanıza veya proje dosyanızda açık başvuruların önlenmesini göz önünde bulundurun `NETStandard.Library` .
 2. .NET Core 'u hedeflerken çalışma zamanının belirli bir sürümüne ihtiyacınız varsa, `<RuntimeFrameworkVersion>` doğrudan metapackage 'e başvurmak yerine özelliğini kullanın. Örnek olarak, [bağımsız dağıtımlar](../../deploying/index.md#publish-self-contained) kullanıyorsanız ve 1.0.0 LTS çalışma zamanının belirli bir yaması olması halinde bu durum oluşabilir.
 3. .NET Standard hedeflenirken belirli bir sürümüne ihtiyacınız varsa `NetStandard.Library` , `<NetStandardImplicitPackageVersion>` özelliğini kullanabilir ve bunu ihtiyacınız olan sürüme ayarlayabilirsiniz.
-4. .NET Framework projelerine veya ya da eplicitly başvuruları ekleme veya güncelleştirme `Microsoft.NETCore.App` `NETSTandard.Library` . NuGet, `NETStandard.Library` .NET Standard tabanlı bir NuGet paketi kullanırken ihtiyacınız olan herhangi bir sürümü otomatik olarak kurar.
+4. .NET Framework projelerine ya da başvuruları açıkça eklemeyin veya `Microsoft.NETCore.App` güncelleştirin `NETSTandard.Library` . NuGet, `NETStandard.Library` .NET Standard tabanlı bir NuGet paketi kullanırken ihtiyacınız olan herhangi bir sürümü otomatik olarak kurar.
 5. `Microsoft.AspNetCore.App` `Microsoft.AspNetCore.All` .NET Core 2.1 + için bir sürüm belirtmeyin, .NET Core SDK otomatik olarak uygun sürümü seçer. (Note: Bu, yalnızca proje de kullanılıyorsa .NET Core 2,1 hedeflenirken geçerlidir `Microsoft.NET.Sdk.Web` . Bu sorun .NET Core 2,2 SDK 'sında çözüldü.)
 6. Uyarının devre dışı olmasını istiyorsanız, devre dışı bırakabilirsiniz:
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: e4401ea8a70e7ace8d8efc5e0a6d29f6db51b3df
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c9ff918121e7bb4ee972e674207810358b3f36f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503821"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712917"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam Yöntemi
+
 Genel tür parametresi için bir tanım oluşturur ve bu genel tür parametresine bir belirteç alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -40,6 +41,7 @@ HRESULT DefineGenericParam (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `tk`  
  'ndaki `mdTypeDef` `mdMethodDef` Genel parametre tanımlamak için yöntemi veya oluşturucuyu temsil eden bir veya belirteci.  
   
@@ -62,11 +64,12 @@ HRESULT DefineGenericParam (
  dışı Genel parametreyi temsil eden bir belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
