@@ -2,14 +2,15 @@
 title: ICorDebugDataTarget2 Arabirimi
 ms.date: 03/30/2017
 ms.assetid: 13f11388-2f91-48d8-98d6-6a4a63cb5746
-ms.openlocfilehash: 1c598d23cac77e50cf302e6936b88b5eb6e558c2
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: aa1db39b564b987fb8d0f79d529f5af59b7e4c02
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976441"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713762"
 ---
 # <a name="icordebugdatatarget2-interface"></a>ICorDebugDataTarget2 Arabirimi
+
 [ICorDebugDataTarget](icordebugdatatarget-interface.md)arabirimini mantıksal olarak genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -28,6 +29,7 @@ ms.locfileid: "82976441"
 > Bu arabirim yalnızca .NET Native kullanılabilir. Bu arabirimi .NET Native dışında ICorDebug senaryolarında uygularsanız, ortak dil çalışma zamanı bu arabirimi yoksayar.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8bdd7f4c-19f2-4ede-875e-603773e8c128
 topic_type:
 - apiref
-ms.openlocfilehash: 143eefd557511f80007c88c1678143a885377467
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a5b9d57aab834ba3ca72a2ea8576ec70cd88eb77
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212990"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713580"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle Metodu
+
 Bir atık toplama tanıtıcısına sahip olan, belirtilen yönetilen nesneye bir başvuru işaretçisi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetReferenceValueFromGCHandle (  
@@ -35,6 +36,7 @@ HRESULT GetReferenceValueFromGCHandle (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `handle`  
  'ndaki Bir atık toplama tanıtıcısına sahip yönetilen bir nesne için bir işaretçi. Bu değer bir <xref:System.IntPtr> nesnedir ve <xref:System.Runtime.InteropServices.GCHandle> yönetilen nesne için öğesinden alınabilir.  
   
@@ -42,6 +44,7 @@ HRESULT GetReferenceValueFromGCHandle (
  dışı Belirtilen yönetilen nesneye bir başvuruyu temsil eden ICorDebugReferenceValue nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Döndürülen başvuru değerini bir çöp toplama başvuru değeri ile karıştırmayın.  
   
  Döndürülen başvuru normal bir başvuru gibi davranır. Bir kesme noktasından sonra kod yürütme devam ettiğinde devre dışıdır. Hedef nesnenin ömrü, başvuru değerinin yaşam süresinden etkilenmez.  
@@ -50,6 +53,7 @@ HRESULT GetReferenceValueFromGCHandle (
 > `GetReferenceValueFromGCHandle`Yöntemi tanıtıcıyı doğrulamaz. Bu nedenle, `GetReferenceValueFromGCHandle` Yöntem hata ayıklayıcıyı ve geçersiz bir tanıtıcı geçiriliyorsa kodun ayıklanmasına neden olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

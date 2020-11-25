@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 32d54a5b-8ad3-405b-a1b9-0936a3b49d1e
 topic_type:
 - apiref
-ms.openlocfilehash: 89be29c770098d92ce3c47f7c45b1bb8580f2edb
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2b18289af460f64085fedd7b32387ebcb8c51715
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213523"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713554"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>ICorDebugProcess2::GetThreadForTaskID Yöntemi
+
 Belirtilen tanımlayıcıya sahip görevin yürütüldüğü iş parçacığını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetThreadForTaskID (  
@@ -35,6 +36,7 @@ HRESULT GetThreadForTaskID (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `taskid`  
  'ndaki Görevin tanımlayıcısı.  
   
@@ -42,9 +44,11 @@ HRESULT GetThreadForTaskID (
  dışı Alınacak iş parçacığını temsil eden bir ICorDebugThread2 nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Konak, [ICLRTask:: SetTaskIdentifier](../hosting/iclrtask-settaskidentifier-method.md) metodunu kullanarak görev tanımlayıcısını ayarlayabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

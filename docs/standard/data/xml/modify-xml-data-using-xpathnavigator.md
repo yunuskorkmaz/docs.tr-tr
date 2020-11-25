@@ -6,14 +6,15 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 79bb23b77557a5a10f021e2167c9fa8ae3ee044a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 10de24d97d15ed4b6de3effa21410fb22054ec68
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830200"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714464"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verilerini Değiştirme
+
 Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesindeki düğümleri ve değerleri değiştirmek için kullanılan bir yöntemler kümesi sağlar. Bu yöntemleri kullanabilmeniz için <xref:System.Xml.XPath.XPathNavigator> nesnesi düzenlenebilir olmalıdır, yani <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği olmalıdır `true` .  
   
  <xref:System.Xml.XPath.XPathNavigator> bir XML belgesini düzenleyebilen nesneler, <xref:System.Xml.XmlDocument.CreateNavigator%2A> sınıfının yöntemiyle oluşturulur <xref:System.Xml.XmlDocument> . <xref:System.Xml.XPath.XPathNavigator> sınıfı tarafından oluşturulan nesneler <xref:System.Xml.XPath.XPathDocument> salt okunurdur ve <xref:System.Xml.XPath.XPathNavigator> bir nesne tarafından oluşturulan nesnenin Editing yöntemlerini kullanma girişimleri <xref:System.Xml.XPath.XPathDocument> bir ile sonuçlanır <xref:System.NotSupportedException> .  
@@ -21,6 +22,7 @@ Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesindeki düğüml
  Düzenlenebilir nesneler oluşturma hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator> bkz. [XPathDocument ve XMLDOCUMENT kullanarak XML verilerini okuma](reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="modifying-nodes"></a>Düğümleri değiştirme  
+
  Bir düğümün değerini değiştirmenin basit bir tekniği, <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> sınıfının ve yöntemlerini kullanmaktır <xref:System.Xml.XPath.XPathNavigator> .  
   
  Aşağıdaki tabloda, bu yöntemlerin farklı düğüm türlerinde etkileri listelenmektedir.  
@@ -41,6 +43,7 @@ Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesindeki düğüml
  <xref:System.Xml.XPath.XPathNavigator>Sınıfı ayrıca düğüm eklemek ve kaldırmak için kullanılan bir yöntemler kümesi sağlar. XML belgesinden düğüm ekleme ve kaldırma hakkında daha fazla bilgi için bkz. [XML verilerini XPathNavigator kullanarak ekleme](insert-xml-data-using-xpathnavigator.md) ve XPathNavigator 'YI [kullanarak XML verilerini kaldırma](remove-xml-data-using-xpathnavigator.md) .  
   
 ### <a name="modifying-untyped-values"></a>Türsüz değerleri değiştirme  
+
  <xref:System.Xml.XPath.XPathNavigator.SetValue%2A>Yöntemi, `string` bir parametre olarak geçirilen türsüz değeri <xref:System.Xml.XPath.XPathNavigator> nesnenin şu anda konumlandırılmış olan düğümün değeri olarak ekler. Değer, herhangi bir tür olmadan veya şema bilgileri kullanılabiliyorsa düğüm türüne göre yeni değerin geçerli olduğunu doğrulamadan eklenir.  
   
  Aşağıdaki örnekte, <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> yöntemi dosyadaki tüm öğeleri güncelleştirmek için kullanılır `price` `contosoBooks.xml` .  
@@ -54,6 +57,7 @@ Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesindeki düğüml
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
 ### <a name="modifying-typed-values"></a>Yazılan değerleri değiştirme  
+
  Bir düğümün türü bir W3C XML şeması basit türü olduğunda, yöntemi tarafından yerleştirilen yeni değer, <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> değer ayarlanmadan önce basit türdeki modellerle denetlenir. Yeni değer, düğüm türüne göre geçerli değilse (örneğin, `-1` türü olan bir öğe üzerinde değerini ayarlamak `xs:positiveInteger` ), bir özel durumla sonuçlanır.  
   
  Aşağıdaki örnek, `price` dosyasındaki ilk öğe öğesinin değerini `book` `contosoBooks.xml` bir değere değiştirmeye çalışır <xref:System.DateTime> . Öğesinin XML şeması türü `price` dosyalarda olarak tanımlandığından `xs:decimal` `contosoBooks.xsd` , bu durum bir özel durumla sonuçlanır.  
@@ -103,6 +107,7 @@ navigator.SetTypedValue(DateTime.Now);
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 #### <a name="the-effects-of-editing-strongly-typed-xml-data"></a>Türü kesin belirlenmiş XML verilerinin düzenlenmesinin etkileri  
+
  <xref:System.Xml.XPath.XPathNavigator>Sınıfı, türü kesin BELIRLENMIŞ XML 'yi açıklamak için temel olarak W3C XML şemasını kullanır. Bir W3C XML şema belgesine karşı doğrulamaya dayalı tür bilgileriyle öğe ve özniteliklere açıklama eklenebilir. Diğer öğeleri veya öznitelikleri içerebilen öğelere karmaşık türler denir, ancak yalnızca metinsel içeriğe sahip olanlar basit türler olarak adlandırılır.  
   
 > [!NOTE]
@@ -115,6 +120,7 @@ navigator.SetTypedValue(DateTime.Now);
  Şema doğrulaması ve sınıfı hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator> bkz. [XPathNavigator kullanarak şema doğrulaması](schema-validation-using-xpathnavigator.md).  
   
 ### <a name="modifying-attributes"></a>Öznitelikleri değiştirme  
+
  <xref:System.Xml.XPath.XPathNavigator.SetValue%2A>Ve <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> yöntemleri, türsüz ve yazılan öznitelik düğümlerini ve "düğümleri değiştirme" bölümünde listelenen diğer düğüm türlerini değiştirmek için kullanılabilir.  
   
  Aşağıdaki örnek, `genre` dosyasındaki ilk öğenin özniteliğinin değerini değiştirir `book` `books.xml` .  
@@ -152,6 +158,7 @@ Console.WriteLine(navigator.OuterXml);
  Ve yöntemleri hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> , "türsüz değerleri değiştirme" ve "yazılı değerleri değiştirme" bölümlerine bakın.  
   
 ## <a name="innerxml-and-outerxml-properties"></a>InnerXml ve OuterXml özellikleri  
+
  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A>Sınıfının ve <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> Özellikleri, <xref:System.Xml.XPath.XPathNavigator> bir <xref:System.Xml.XPath.XPathNavigator> nesnenin şu anda konumlandırılmış olduğu düğümlerin XML işaretlemesini değiştirir.  
   
  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A>Özelliği, <xref:System.Xml.XPath.XPathNavigator> belirtilen XML 'nin ayrıştırılmış içeriğiyle bir nesne şu anda konumlandırılmış olan alt düğümlerin XML işaretlemesini değiştirir `string` . Benzer şekilde, <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> özelliği de bir nesnenin şu anda bulunduğu alt DÜĞÜMLERIN XML işaretlemesini ve <xref:System.Xml.XPath.XPathNavigator> geçerli düğümün kendisini değiştirir.  
@@ -193,6 +200,7 @@ Console.WriteLine(navigator.OuterXml);
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
 ## <a name="modifying-namespace-nodes"></a>Ad alanı düğümlerini değiştirme  
+
  Belge Nesne Modeli (DOM) içinde, ad alanı bildirimleri eklenebilir, güncelleştirilemeyebilir ve silinebilecek normal öznitelikler gibi değerlendirilir. <xref:System.Xml.XPath.XPathNavigator>Bir ad alanı düğümünün değerini değiştirme, aşağıdaki örnekte gösterildiği gibi ad alanı düğümünün kapsamındaki öğelerin ve özniteliklerin kimliğini değiştirebildiğinden, sınıf ad alanı düğümleri üzerinde bu tür işlemlere izin vermez.  
   
 ```xml  
@@ -232,9 +240,11 @@ Console.WriteLine(navigator.OuterXml);
  Yukarıdaki XML örneğinde, özniteliği `a:parent-id` `parent` `http://www.contoso.com/parent-id` ad alanındaki öğesine eklenir. <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>Yöntemi, öğesinde konumlandırılmış özniteliği eklemek için kullanılır `parent` . `http://www.contoso.com`Ad alanı bildirimi, <xref:System.Xml.XPath.XPathNavigator> XML belgesinin geri kalanının tutarlılığını korumak için sınıfı tarafından otomatik olarak eklenir.  
   
 ## <a name="modifying-entity-reference-nodes"></a>Varlık başvurusu düğümlerini değiştirme  
+
  Bir nesnedeki varlık başvuru düğümleri <xref:System.Xml.XmlDocument> salt okunurdur ve ya da sınıfları kullanılarak düzenlenemez <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XmlNode> . Bir varlık başvuru düğümünü değiştirme girişimleri bir ile sonuçlanır <xref:System.InvalidOperationException> .  
   
 ## <a name="modifying-xsinil-nodes"></a>Xsi: Nil düğümlerini değiştirme  
+
  W3C XML şeması önerisi, boş bırakılamakta olan bir öğe kavramını tanıtır. Bir öğe boş bırakıldığında, öğede içerik olmaması ve hala geçerli olması mümkündür. Boş bırakılmakta olan bir öğe kavramı, nesne kavramıyla benzerdir `null` . Temel fark, bir `null` nesneye hiçbir şekilde erişilememektedir, `xsi:nil` ancak bir öğesi erişilebilir ancak içeriğe (alt öğe veya metin) sahip olmayan nitelikler gibi özelliklere sahip olabilir. Bir `xsi:nil` XML belgesindeki öğesi üzerinde değeri olan özniteliğin varlığı, `true` bir öğenin içeriğe sahip olmadığını göstermek için kullanılır.  
   
  Bir <xref:System.Xml.XPath.XPathNavigator> nesnesi, değeri olan bir özniteliğe sahip geçerli bir öğeye içerik eklemek için kullanılırsa `xsi:nil` `true` , `xsi:nil` özniteliğinin değeri olarak ayarlanır `false` .  
@@ -243,6 +253,7 @@ Console.WriteLine(navigator.OuterXml);
 > `xsi:nil`Özniteliği olarak ayarlanmış bir öğenin içeriği `false` silinirse, özniteliğinin değeri olarak değiştirilmez `true` .  
   
 ## <a name="saving-an-xml-document"></a>XML belgesi kaydetme  
+
  <xref:System.Xml.XmlDocument>Bu konu başlığı altında açıklanan Düzenle yöntemlerinin sonucu olarak bir nesne üzerinde yapılan değişikliklerin kaydedilmesi, sınıfının yöntemleri kullanılarak gerçekleştirilir <xref:System.Xml.XmlDocument> . Bir nesne üzerinde yapılan değişiklikleri kaydetme hakkında daha fazla bilgi için <xref:System.Xml.XmlDocument> bkz. [belgeyi kaydetme ve yazma](saving-and-writing-a-document.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

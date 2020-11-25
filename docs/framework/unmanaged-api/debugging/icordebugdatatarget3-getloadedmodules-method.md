@@ -2,17 +2,18 @@
 title: ICorDebugDataTarget3::GetLoadedModules Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: c3565f4f9284bc121b0e2d3b0885cbea927acfdd
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: efbada02b7a24e0a7ed613b86b8a4a1a0b5b051a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976427"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713760"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules Yöntemi
+
 Şimdiye kadar yüklenmiş modüllerin listesini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetLoadedModules(  
@@ -23,6 +24,7 @@ HRESULT GetLoadedModules(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cRequestedModules`  
  'ndaki Bilgilerin istendiği modül sayısı.  
   
@@ -38,6 +40,7 @@ HRESULT GetLoadedModules(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

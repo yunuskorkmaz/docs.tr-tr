@@ -2,14 +2,15 @@
 title: Bir XML Belgesindeki Düğüm, İçerik ve Değerleri Değiştirme
 ms.date: 03/30/2017
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-ms.openlocfilehash: 13fb18208831356e34301bc22715b68fda1f671f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c3f3f4a279f3bcb967e018abafbd2e1f7a0af473
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830187"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714477"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Bir XML Belgesindeki Düğüm, İçerik ve Değerleri Değiştirme
+
 Belgedeki düğümleri ve içerikleri değiştirebileceğiniz birçok yol vardır. Şunları yapabilirsiniz:  
   
 - Özelliğini kullanarak düğümlerin değerini değiştirin <xref:System.Xml.XmlNode.Value%2A> .  

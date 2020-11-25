@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3847495-0ae6-4a72-b496-65ce2424afc6
 topic_type:
 - apiref
-ms.openlocfilehash: 4de3530cb912f9e60a6bdf11026f9168a188c8ce
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 69c4a64dee0eb12481a78aa6f185ab568266ee30
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008833"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715407"
 ---
 # <a name="iceegengenerateceememoryimage-method"></a>ICeeGen::GenerateCeeMemoryImage Yöntemi
+
 Kod tabanı için bellekte bir görüntü oluşturur.  
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
@@ -36,15 +37,17 @@ HRESULT GenerateCeeMemoryImage (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppImage`  
  dışı Oluşturulan görüntüye yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

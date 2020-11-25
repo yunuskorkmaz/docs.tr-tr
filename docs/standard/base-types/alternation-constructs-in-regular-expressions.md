@@ -14,12 +14,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 4fb9960ad3c92494cd3aa47516f6ba82ab606ee5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0a1b46443d5cd9f8a19f4cfb9f9b07a5e33e719e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825305"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714698"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Normal İfadelerdeki Değişim Yapıları
 
@@ -30,6 +30,7 @@ Değişim yapıları,/veya veya koşullu eşleştirmeyi etkinleştirmek için bi
 - [Geçerli bir yakalanan gruba göre koşullu eşleme](#Conditional_Group)
 
 <a name="Either_Or"></a>
+
 ## <a name="pattern-matching-with-124"></a>&#124; ile eşleşen desenler
 
 Dikey çubuk ( `|` ) karakterini, bir dizi desenden eşleştirmek için kullanabilirsiniz, burada `|` karakter her bir deseni ayırır.
@@ -62,6 +63,7 @@ Normal ifade `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` Aşağıdaki tabloda gösteri
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
   
 <a name="Conditional_Expr"></a>
+
 ## <a name="conditional-matching-with-an-expression"></a>Bir ifadeyle koşullu eşleme
 
 Bu dil öğesi, bir başlangıç deseniyle eşleşmediğine bağlı olarak iki desenden birini eşleştirmeye çalışır. Sözdizimi şöyledir:  
@@ -93,6 +95,7 @@ Normal ifade deseninin `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` Aşağıda
 |`\b`|Bir sözcük sınırıyla eşleş.|  
 
 <a name="Conditional_Group"></a>
+
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Geçerli bir yakalanan gruba göre koşullu eşleme
 
 Bu dil öğesi, belirtilen bir yakalama grubuyla eşleşip eşleşmediğine bağlı olarak iki desenden birini eşleştirmeye çalışır. Sözdizimi şöyledir:

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 40d17009c98a73b7cb51779663360726c5fc7403
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1eb5e57f5cc1065f1b8510e4fb0a980a85abca29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827366"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714217"
 ---
 # <a name="weak-references"></a>Zayıf Başvurular
+
 Çöp toplayıcı, uygulamanın kodu bu nesneye ulaşabilirken bir uygulama tarafından kullanılan bir nesneyi toplayamıyor. Uygulamanın nesneye güçlü bir başvurusu olduğu söylenir.  
   
  Zayıf bir başvuru, uygulamanın nesneye erişmesine hala izin verirken çöp toplayıcısının nesneyi toplamasını sağlar. Zayıf bir başvuru yalnızca, kesin bir başvuru olmadığında nesne toplanana kadar belirsiz süre boyunca geçerlidir. Zayıf bir başvuru kullandığınızda, uygulama nesneye bir güçlü başvuru elde edebilir ve bu da toplanmasını önler. Ancak, güçlü bir başvurunun yeniden kurulmadan önce çöp toplayıcının nesneye her zaman ulaşmak her zaman risk vardır.  
@@ -29,6 +30,7 @@ ms.locfileid: "94827366"
  Bir nesneyle zayıf bir başvuru oluşturmak için, <xref:System.WeakReference> izlenecek nesnenin örneğini kullanarak oluşturursunuz. Sonra <xref:System.WeakReference.Target%2A> Bu nesneye özelliği ayarlarsınız ve nesnesine özgün başvuruyu olarak ayarlarsınız `null` . Kod örneği için bkz <xref:System.WeakReference> . sınıf kitaplığı 'nda.  
   
 ## <a name="short-and-long-weak-references"></a>Kısa ve uzun zayıf başvurular  
+
  Kısa bir zayıf başvuru veya uzun bir zayıf başvuru oluşturabilirsiniz:  
   
 - Kısadır  
@@ -44,6 +46,7 @@ ms.locfileid: "94827366"
  Güçlü bir başvuru oluşturmak ve nesneyi tekrar kullanmak için, <xref:System.WeakReference.Target%2A> öğesinin özelliğini <xref:System.WeakReference> nesnesinin türüne atayın. <xref:System.WeakReference.Target%2A>Özelliği döndürürse `null` nesne toplanmıştı; Aksi takdirde, uygulama kendisine güçlü bir başvuru içerdiğinden nesneyi kullanmaya devam edebilirsiniz.  
   
 ## <a name="guidelines-for-using-weak-references"></a>Zayıf başvuruları kullanmaya yönelik yönergeler  
+
  Yalnızca nesnenin durumu sonlandıralındıktan sonra tahmin edildiğinde uzun zayıf başvuruları kullanın.  
   
  Küçük nesnelere zayıf başvurular kullanmaktan kaçının çünkü işaretçinin kendisi büyük veya daha büyük olabilir.  

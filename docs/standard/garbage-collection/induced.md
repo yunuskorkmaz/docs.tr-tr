@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 637ba9b3b73d685ee2263315a08f982d862efb35
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 25e94221355569931a31b566a53434cbed9ea93f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827730"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714243"
 ---
 # <a name="induced-collections"></a>Uyarılmış Koleksiyonlar
+
 Çoğu durumda, çöp toplayıcı bir koleksiyon gerçekleştirmek için en iyi zamanı belirleyebilir ve bağımsız olarak çalışmasına izin verin. Zorunlu bir koleksiyonun uygulamanızın performansını iyileştirebileceği nadir durumlar vardır. Bu durumlarda, <xref:System.GC.Collect%2A?displayProperty=nameWithType> çöp toplamayı zorlamak için metodunu kullanarak çöp toplama işlemini gerçekleştirebilirsiniz.  
   
  <xref:System.GC.Collect%2A?displayProperty=nameWithType>Uygulamanızın kodundaki belirli bir noktada kullanılan bellek miktarı açısından önemli bir azalma olduğunda yöntemini kullanın. Örneğin, uygulamanız birkaç denetimi olan karmaşık bir iletişim kutusu kullanıyorsa, <xref:System.GC.Collect%2A> iletişim kutusu kapatıldığında arama, iletişim kutusu tarafından kullanılan belleği hemen geri kazanma performansını iyileştirebilir. Çöp toplayıcı nesneleri en iyi olmayan zamanlarda geri almaya çalışıyorsa, uygulamanızın çöp toplamayı çok sık karşılamadığından emin olun. Bir <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> <xref:System.GC.Collect%2A> sonraki bölümde anlatıldığı gibi, yalnızca koleksiyon üretken olduğunda toplanacak yöntemine bir numaralandırma değeri sağlayabilirsiniz.  
   
 ## <a name="gc-collection-mode"></a>GC toplama modu  
+
  <xref:System.GC.Collect%2A?displayProperty=nameWithType> <xref:System.GCCollectionMode> Zorunlu bir koleksiyonun davranışını aşağıdaki gibi belirtmek için bir değer içeren yöntem aşırı yüklemelerinin birini kullanabilirsiniz.  
   
 |`GCCollectionMode` deeri|Açıklama|  
@@ -26,6 +28,7 @@ ms.locfileid: "94827730"
 |<xref:System.GCCollectionMode.Optimized>|Çöp toplayıcıyı, geçerli saatin nesneleri geri kazanmak için en uygun olup olmadığını belirlemesine olanak sağlar.<br /><br /> Çöp toplayıcı, bir koleksiyonun hizalı hale getirmek için yeterince üretken olacağını belirleyebilir ve bu durumda geri kazanma nesneleri olmadan geri dönecektir.|  
   
 ## <a name="background-or-blocking-collections"></a>Arka plan veya engelleme koleksiyonları  
+
  <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=nameWithType>Alınmış bir koleksiyonun engellenip engellenmeyeceğini belirtmek için yöntem aşırı yüklemesini çağırabilirsiniz. Gerçekleştirilen koleksiyonun türü, yöntemin `mode` ve parametrelerinin birleşimine bağlıdır `blocking` . `mode` , numaralandırmanın bir üyesidir <xref:System.GCCollectionMode> ve `blocking` bir <xref:System.Boolean> değerdir. Aşağıdaki tabloda `mode` ve `blocking` bağımsız değişkenlerinin etkileşimi özetlenmektedir.  
   
 |`mode`|`blocking` = `true`|`blocking` = `false`|  

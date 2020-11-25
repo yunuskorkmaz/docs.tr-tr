@@ -14,35 +14,37 @@ helpviewer_keywords:
 ms.assetid: f7f8e605-6b67-4151-936f-f04ecd671d90
 topic_type:
 - apiref
-ms.openlocfilehash: de49d66667033dfc6918b139f90cd5523661597f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f6feed9f59715f9a2801cd3a2a99a087957d4377
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134323"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715075"
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName Arabirimi
+
 Bir derlemenin benzersiz kimliğini tanımlamak ve bunlarla çalışmak için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone Yöntemi](iassemblyname-clone-method.md)|Bu `IAssemblyName` nesnesinin basit bir kopyasını oluşturur.|  
-|[Finalize Yöntemi](iassemblyname-finalize-method.md)|Bu `IAssemblyName` nesnesinin, yıkıcısı çağrılmadan önce kaynakları serbest bırakmasıyla ve diğer temizleme işlemlerini gerçekleştirmesine izin verir.|  
-|[GetDisplayName Yöntemi](iassemblyname-getdisplayname-method.md)|Bu `IAssemblyName` nesnesi tarafından başvurulan derlemenin okunabilir adını alır.|  
-|[GetName Yöntemi](iassemblyname-getname-method.md)|Bu `IAssemblyName` nesnesi tarafından başvurulan derlemenin basit, şifrelenmemiş adını alır.|  
-|[GetProperty Yöntemi](iassemblyname-getproperty-method.md)|Belirtilen `PropertyId`başvurduğu özelliğe bir işaretçi alır.|  
-|[GetVersion Yöntemi](iassemblyname-getversion-method.md)|Bu `IAssemblyName` nesnesi tarafından başvurulan derleme için sürüm bilgilerini alır.|  
-|[IsEqual Yöntemi](iassemblyname-isequal-method.md)|Belirtilen bir `IAssemblyName` nesnesinin, belirtilen karşılaştırma bayraklarını temel alarak bu `IAssemblyName`eşit olup olmadığını belirler.|  
-|[SetProperty Yöntemi](iassemblyname-setproperty-method.md)|Belirtilen `PropertyId`başvurduğu özelliğin değerini ayarlar.|  
+|[Clone Yöntemi](iassemblyname-clone-method.md)|Bu nesnenin basit bir kopyasını oluşturur `IAssemblyName` .|  
+|[Finalize Metodu](iassemblyname-finalize-method.md)|Bu `IAssemblyName` nesnenin, yıkıcısı çağrılmadan önce kaynakları serbest bırakma ve diğer temizleme işlemlerini gerçekleştirmesine izin verir.|  
+|[GetDisplayName Metodu](iassemblyname-getdisplayname-method.md)|Bu nesne tarafından başvurulan derlemenin okunabilir adını alır `IAssemblyName` .|  
+|[GetName Yöntemi](iassemblyname-getname-method.md)|Bu nesnenin başvurduğu derlemenin basit, şifrelenmemiş adını alır `IAssemblyName` .|  
+|[GetProperty yöntemi](iassemblyname-getproperty-method.md)|Belirtilen özelliğin başvurduğu özelliğe bir işaretçi alır `PropertyId` .|  
+|[GetVersion Yöntemi](iassemblyname-getversion-method.md)|Bu nesne tarafından başvurulan derleme için sürüm bilgilerini alır `IAssemblyName` .|  
+|[IsEqual Yöntemi](iassemblyname-isequal-method.md)|Belirtilen `IAssemblyName` `IAssemblyName` karşılaştırma bayraklarını temel alarak belirtilen bir nesnenin bu değere eşit olup olmadığını belirler.|  
+|[SetProperty Yöntemi](iassemblyname-setproperty-method.md)|Belirtilen öğesinin başvurduğu özelliğin değerini ayarlar `PropertyId` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Fusion. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

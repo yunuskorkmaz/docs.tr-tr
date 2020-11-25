@@ -13,14 +13,15 @@ helpviewer_keywords:
 - IsStarted method [.NET Framework hosting]
 - ICLRRuntimeInfo::IsStarted method [.NET Framework hosting]
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
-ms.openlocfilehash: 85a7adddf395e07297c8fb6ceab4aa81e0aaf012
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 1dfeb6101a6b8e33ab2fe35f318087d7f1834b6a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762207"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714893"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted Yöntemi
+
 Çalışma zamanının başlatıldığını (yani, [ICLRRuntimeHost:: Start yönteminin](iclrruntimehost-start-method.md) çağrıldığından ve başarılı olup olmadığını) gösterir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -32,6 +33,7 @@ HRESULT IsStarted(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbStarted`  
  [out] `true` Bu çalışma zamanı başlatılmışsa; Aksi takdirde, `false` .  
   
@@ -39,6 +41,7 @@ HRESULT IsStarted(
  dışı Çalışma zamanını başlatmak için kullanılan bayrakları döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
@@ -47,14 +50,16 @@ HRESULT IsStarted(
 |E_NOTIMPL|Ortak dil çalışma zamanı (CLR) sürümü .NET Framework 4 ' teki CLR sürümünden daha eski.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, .NET Framework 4 ' teki CLR sürümünden önceki CLR sürümleriyle çalışmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
@@ -62,4 +67,4 @@ HRESULT IsStarted(
 
 - [ICLRRuntimeInfo Arabirimi](iclrruntimeinfo-interface.md)
 - [Barındırma Arabirimleri](hosting-interfaces.md)
-- [Barındırma](index.md)
+- [Hosting](index.md)

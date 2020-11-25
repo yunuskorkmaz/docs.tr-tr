@@ -4,12 +4,12 @@ description: Hangi Windows sürümlerini .NET yükleyebileceğinizi öğrenin.
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: fe18cda64e0c9986884486298adf4a83b604f323
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594547"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715127"
 ---
 # <a name="install-net-on-windows"></a>Windows 'a .NET yükler
 
@@ -30,7 +30,7 @@ En son .NET sürümü 5,0 ' dir.
 
 Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve desteklenen Windows sürümlerinin bir listesi verilmiştir. Bu sürümler, [.NET sürümü destek sonuna](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya [Windows 'un yaşam sonuna ulaştığı](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)sürece desteklenene kadar desteklenmeye devam eder.
 
-Windows 10 sürümleri hizmet son tarihleri sürüme göre bölündü. Aşağıdaki tabloda yalnızca **Home** , **Pro** , **Pro eğitim** ve **iş istasyonları için Pro** sürümleri göz önünde bulundurululur. Belirli Ayrıntılar için [Windows yaşam döngüsü olgu sayfasını](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) kontrol edin.
+Windows 10 sürümleri hizmet son tarihleri sürüme göre bölündü. Aşağıdaki tabloda yalnızca **Home**, **Pro**, **Pro eğitim** ve **iş istasyonları için Pro** sürümleri göz önünde bulundurululur. Belirli Ayrıntılar için [Windows yaşam döngüsü olgu sayfasını](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) kontrol edin.
 
 - ✔️, Windows veya .NET Core sürümünün hala desteklendiğini gösterir.
 - Bir ❌ Windows veya .NET Core sürümünün bu Windows sürümünde desteklenmediğini belirtir.
@@ -204,7 +204,7 @@ Aşağıdaki hatalardan birini alırsanız, önceki gereksinimler de gereklidir:
 
 [DotNet yükleme betikleri](../tools/dotnet-install-script.md) , CI otomasyonu ve çalışma zamanının yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Anahtarı belirterek belirli bir sürümü seçebilirsiniz `Channel` . `Runtime`Çalışma zamanı yüklemek için anahtarı ekleyin. Aksi halde, komut dosyası SDK 'Yı yüklüyor.
+Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Anahtarı belirterek belirli bir sürümü seçebilirsiniz `Channel` . `Runtime`Çalışma zamanı yüklemek için anahtarı ekleyin. Aksi halde, komut dosyası SDK 'Yı yüklüyor.
 
 ```powershell
 dotnet-install.ps1 -Channel 5.0 -Runtime aspnetcore

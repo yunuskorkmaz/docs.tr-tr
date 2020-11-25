@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f2db2ca-203f-4ac3-9530-208642ca385e
 topic_type:
 - apiref
-ms.openlocfilehash: 05f39befa8966046cd71db82da37c44f20992cff
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c179d5e1ca976d8f425e7c408ceb663cba64f641
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008813"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715348"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection Yöntemi
+
 Belirtilen tanıtıcı tarafından başvurulan ara dil kodu tabanının bölümünü alır.  
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
@@ -36,15 +37,17 @@ HRESULT GetIlSection (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `section`  
  'ndaki Alınacak bölüm için tanıtıcı.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

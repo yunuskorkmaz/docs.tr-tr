@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cca4a9a1-731b-4411-9e04-00cffe7a56d8
 topic_type:
 - apiref
-ms.openlocfilehash: 39d8713b2b78047e615b6c2fdd6e95e9aacbd2ae
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f84abd9b44310d85bc59e3d09e7fd0398f13fcd0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008852"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715413"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile Yöntemi
+
 Şu anda bu [ICeeGen](iceegen-interface.md) arabirimine yüklenmiş kod tabanını içeren bir kod tabanı dosyası oluşturur.  
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
@@ -34,14 +35,16 @@ HRESULT GenerateCeeFile ();
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- `GenerateCeeFile`Hiçbir parametre alır.  
+
+ `GenerateCeeFile` Hiçbir parametre alır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
