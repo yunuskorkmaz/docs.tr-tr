@@ -5,14 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-ms.openlocfilehash: 57608ef143e6efd7f59d12d808274fa17961c483
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1a2d1f0972bc610cb4943dacc74c1bae8c54012b
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673481"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032222"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script Kullanan Betik Blokları
+
+> [!NOTE]
+> Betik blokları yalnızca .NET Framework desteklenir. .NET Core veya .NET 5,0 veya üzeri _sürümlerde desteklenmez._
 
 <xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, öğesini kullanarak katıştırılmış betikleri destekler `msxsl:script` . Stil sayfası yüklendiğinde, tanımlanmış tüm işlevler Kod Belge Nesne Modeli (CodeDOM) tarafından Microsoft ara dili (MSIL) ile derlenir ve çalışma zamanında yürütülür. Katıştırılmış betik bloğundan oluşturulan derleme, stil sayfası için oluşturulan derlemeden ayrıdır.  
   
@@ -94,7 +97,7 @@ ms.locfileid: "95673481"
   
  `name`Öznitelik, derlemenin adını içerir ve `href` özniteliği derlemenin yolunu içerir. Derleme adı "System. Data, Version = 2.0.3600.0, Culture = neutral, PublicKeyToken = b77a5c561934e089" gibi bir tam ad veya "System. Web" gibi kısa bir ad olabilir.  
   
-#### <a name="namespaces"></a>Ad Alanları  
+#### <a name="namespaces"></a>Ad alanları  
 
  Aşağıdaki ad alanları varsayılan olarak dahil edilmiştir:  
   

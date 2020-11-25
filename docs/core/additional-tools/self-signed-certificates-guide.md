@@ -3,12 +3,12 @@ title: Self-Signed sertifikalarına genel bakış oluşturma
 description: .NET Core ve ASP.NET Core projelerine yönelik işlevselliği ve otomatik olarak imzalanan sertifikaları kullanmak için diğer seçenekleri ekleyen Microsoft DotNet dev-CERT aracına genel bakış.
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: 15bbe3997ca34b503074595fa027bc6dfff1c0a7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b5bf4b719495c2d6ec248e8592367ac452be91c1
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761422"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032183"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>.NET CLı ile otomatik olarak imzalanan sertifikalar oluşturma
 
@@ -18,23 +18,23 @@ Daha sonra, bir kapsayıcıda barındırılan [ASP.NET Core uygulaması](https:/
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Örnekte, ya da kullanabilirsiniz `.netcore 3.1` `.net 5` .
+Örnekte, .NET Core 3,1 veya .NET 5 ' i kullanabilirsiniz.
 
-İçin `dotnet dev-certs` uygun sürüme sahip olduğunuzdan emin olun `dotnet` :
+İçin `dotnet dev-certs` , uygun .NET sürümünün yüklü olduğundan emin olun:
 
-* [Windows 'a DotNet 'yi yükler](../install/windows.md)
-* [Linux 'ta DotNet 'yi yükler](../install/linux.md)
-* [MacOS 'ta DotNet 'yi yükler](../install/macos.md)
+* [Windows 'a .NET yükler](../install/windows.md)
+* [Linux 'ta .NET 'i yükler](../install/linux.md)
+* [MacOS 'ta .NET 'i yükler](../install/macos.md)
 
 Bu örnek, [Docker Istemcisinin](https://www.docker.com/products/docker) [Docker 17,06](https://docs.docker.com/release-notes/docker-ce) veya sonraki bir sürümünü gerektirir.
 
 ## <a name="prepare-sample-app"></a>Örnek uygulamayı hazırlama
 
-Test için kullanmak istediğiniz çalışma zamanına bağlı olarak örnek uygulamayı hazırlamanız gerekir.
+Test için kullanmak istediğiniz çalışma zamanına bağlı olarak, [.NET Core 3,1](#net-core-31-sample-app) veya [.NET 5](#net-5-sample-app)gibi örnek uygulamayı hazırlamanız gerekir.
 
-Bu kılavuzda, [örnek bir uygulama](https://hub.docker.com/_/microsoft-dotnet-samples) kullanacaksınız ve uygun yerlerde değişiklik yaparsınız.
+Bu kılavuzda, [örnek bir uygulama](https://hub.docker.com/_/microsoft-dotnet-samples) kullanacaksınız ve uygun yerlerde değişiklik yapacaksınız.
 
-### <a name="prepare-net-core-31-sample-app"></a>.NET Core 3,1 örnek uygulamasını hazırlayın
+### <a name="net-core-31-sample-app"></a>.NET Core 3,1 örnek uygulama
 
 Örnek uygulamayı alma.
 
@@ -61,7 +61,7 @@ Uygun derlemelerin kapsayıcıya eklendiğinden emin olmak için [DotNet-docker\
 </Project>
 ```
 
-Çalışma zamanının. netcore 3,1 ' ye işaret ettiğini doğrulamak için Dockerfile 'ı değiştirin:
+Çalışma zamanının .NET Core 3,1 ' e işaret ettiğini doğrulamak için Dockerfile 'ı değiştirin:
 
 ```Dockerfile
 # https://hub.docker.com/_/microsoft-dotnet-core
@@ -97,13 +97,13 @@ Test için kapsayıcıyı yerel olarak oluşturun.
 docker build -t aspnetapp:my-sample -f Dockerfile .
 ```
 
-### <a name="prepare-net-5-sample-app"></a>.NET 5 örnek uygulamasını hazırlama
+### <a name="net-5-sample-app"></a>.NET 5 örnek uygulama
 
 Bu kılavuzda, [örnek aspnetapp](https://hub.docker.com/_/microsoft-dotnet-samples) .NET 5 için denetlenmelidir.
 
 Örnek uygulama [Dockerfile](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/Dockerfile) 'ın .NET 5 kullandığını denetleyin.
 
-Konak işletim sistemine bağlı olarak, ASPNET çalışma zamanının güncellenmesi gerekebilir. Örneğin, `mcr.microsoft.com/dotnet/aspnet:5.0-nanoservercore-2009 AS runtime` `mcr.microsoft.com/dotnet/aspnet:5.0-windowsservercore-ltsc2019 AS runtime` Dockerfile içinde olarak değiştirme, uygun Windows çalışma zamanını hedeflemeye yardımcı olur.
+Ana bilgisayar işletim sistemine bağlı olarak, ASP.NET çalışma zamanının güncellenmesi gerekebilir. Örneğin, `mcr.microsoft.com/dotnet/aspnet:5.0-nanoservercore-2009 AS runtime` `mcr.microsoft.com/dotnet/aspnet:5.0-windowsservercore-ltsc2019 AS runtime` Dockerfile içinde olarak değiştirme, uygun Windows çalışma zamanını hedeflemeye yardımcı olur.
 
 Örneğin, Windows 'da sertifikaların test edilmesine yardımcı olur:
 
@@ -147,7 +147,7 @@ Linux 'ta sertifikaları test etmemiz durumunda mevcut Dockerfile 'ı kullanabil
 ```
 
 > [!NOTE]
-> Dağıtımı *kırpmak* için DotNet Publish parametrelerini kullanmak ISTIYORSANıZ, SSL sertifikalarını desteklemek için uygun bağımlılıkların eklendiğinden emin olun.
+> `dotnet publish`Dağıtımı *kırpmak* için parametreleri kullanmak istiyorsanız, SSL sertifikalarını desteklemek için uygun bağımlılıkların eklendiğinden emin olun.
 Uygun derlemelerin kapsayıcıya eklendiğinden emin olmak için [DotNet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetapp/aspnetapp.csproj) 'i güncelleştirin. Başvuru için,. csproj dosyasını, kendi içinde olan dağıtımlar için kırpma kullanılırken [SSL sertifikalarını destekleyecek](../deploying/trim-self-contained.md#support-for-ssl-certificates) şekilde güncelleştirmeyi denetleyin.
 
 Örnek uygulamaya işaret ettiğinizden emin olun.
@@ -162,7 +162,15 @@ Test için kapsayıcıyı yerel olarak oluşturun.
 docker build -t aspnetapp:my-sample -f Dockerfile .
 ```
 
-## <a name="create-a-self-signed-certificate-with-dotnet-dev-certs"></a>DotNet dev-CERT ile kendinden imzalı bir sertifika oluşturma
+## <a name="create-a-self-signed-certificate"></a>Otomatik olarak imzalanan sertifika oluşturma
+
+Kendinden imzalı bir sertifika oluşturabilirsiniz:
+
+- [DotNet dev-CERT ile](#with-dotnet-dev-certs)
+- [PowerShell ile](#with-powershell)
+- [OpenSSL ile](#with-openssl)
+
+### <a name="with-dotnet-dev-certs"></a>DotNet dev-CERT ile
 
 `dotnet dev-certs`Otomatik olarak imzalanan sertifikalarla çalışmak için ' i kullanabilirsiniz. Bu örnek bir PowerShell konsolu kullanır.
 
@@ -191,7 +199,7 @@ docker run --rm -it -p 8000:80 -p 8001:443 -e ASPNETCORE_URLS="https://+;http://
 
 Uygulama başladıktan sonra Web tarayıcınızda sayfasına gidin `https://localhost:8001` .
 
-### <a name="clean-up"></a>Temizleme
+#### <a name="clean-up"></a>Temizleme
 
 Gizlilikler ve sertifikalar kullanımda değilse, bunları temizlediğinizden emin olun.
 
@@ -200,7 +208,7 @@ dotnet user-secrets remove "Kestrel:Certificates:Development:Password" -p aspnet
 dotnet dev-certs https --clean
 ```
 
-## <a name="create-a-self-signed-certificate-with-powershell"></a>PowerShell ile otomatik olarak imzalanan sertifika oluşturma
+### <a name="with-powershell"></a>PowerShell ile
 
 Otomatik olarak imzalanan sertifikalar oluşturmak için PowerShell 'i kullanabilirsiniz. [PKI istemcisi](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps&preserver-view=true) , kendinden imzalı bir sertifika oluşturmak için kullanılabilir.
 
@@ -238,7 +246,7 @@ Uygulama kurulduktan sonra tarayıcıda contoso.com:8001 adresine gidin.
 
 Konak girdilerinin `contoso.com` uygun IP adresinde (örneğin, 127.0.0.1) yanıt verecek şekilde güncelleştirildiğinden emin olun. Sertifika tanınmazsa, kapsayıcınıza yüklenmiş sertifikaya da konakta güvenildiğinden ve için uygun SAN/DNS girişleri olduğundan emin olun `contoso.com` .
 
-### <a name="clean-up"></a>Temizleme
+#### <a name="clean-up"></a>Temizleme
 
 ```powershell
 $cert | Remove-Item
@@ -246,7 +254,7 @@ Get-ChildItem $certFilePath | Remove-Item
 $rootCert | Remove-item
 ```
 
-## <a name="create-a-self-signed-certificate-with-openssl"></a>OpenSSL ile otomatik olarak imzalanan sertifika oluşturma
+### <a name="with-openssl"></a>OpenSSL ile
 
 Otomatik olarak imzalanan sertifikalar oluşturmak için [OpenSSL](https://www.openssl.org/) kullanabilirsiniz. Bu örnek, ile WSL/Ubuntu ve Bash kabuğunu kullanır `OpenSSL` .
 
@@ -336,7 +344,7 @@ Uygulama kurulduktan sonra tarayıcıda contoso.com:8001 adresine gidin.
 
 Konak girdilerinin `contoso.com` uygun IP adresinde (örneğin, 127.0.0.1) yanıt verecek şekilde güncelleştirildiğinden emin olun. Sertifika tanınmazsa, kapsayıcınıza yüklenmiş sertifikaya da konakta güvenildiğinden ve için uygun SAN/DNS girişleri olduğundan emin olun `contoso.com` .
 
-### <a name="clean-up"></a>Temizleme
+#### <a name="clean-up"></a>Temizleme
 
 Testi tamamladıktan sonra otomatik olarak imzalanan sertifikaları temizlediğinizden emin olun.
 

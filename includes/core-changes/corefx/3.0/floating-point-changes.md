@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 719f336e1b38597674d6ee8f0c5429dd965054b1
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83720938"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032092"
 ---
 ### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>Kayan nokta biçimlendirme ve ayrıştırma davranışı değişti
 
@@ -18,7 +18,7 @@ Kayan nokta ayrıştırma ve biçimlendirme davranışı ( <xref:System.Double> 
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 

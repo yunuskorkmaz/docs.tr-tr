@@ -1,38 +1,38 @@
 ---
 ms.openlocfilehash: 15ba678431b97e7c961c119d83546569bdf9bad2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74282520"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032763"
 ---
-### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP: Bazı çerez SameSite varsayılanları Hiçbiri olarak değiştirildi
+### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP: bazı tanımlama bilgisi SameSite Varsayılanları None olarak değiştirildi
 
-`SameSite`bazı Çapraz Site İsteği (CSRF) saldırılarını azaltmaya yardımcı olabilecek tanımlama bilgileri için bir seçenektir. Bu seçenek başlangıçta sunulduğunda, çeşitli ASP.NET Core API'lerinde tutarsız varsayılanlar kullanılmıştır. Tutarsızlık kafa karıştırıcı sonuçlara yol açmıştır. Core 3.0ASP.NET itibariyle, bu varsayılanlar daha iyi hizalanır. Bu özelliği bileşen başına olarak kabul etmeniz gerekir.
+`SameSite` , bazı siteler arası Istek sahteciliği (CSRF) saldırılarını azaltmaya yardımcı olabilecek tanımlama bilgilerine yönelik bir seçenektir. Bu seçenek başlangıçta tanıtıldığında, çeşitli ASP.NET Core API 'lerde tutarsız varsayılanlar kullanılmıştır. Tutarsızlık, sonuçları kafa karıştırıcı olarak yönlendirdi. ASP.NET Core 3,0 itibariyle, Bu varsayılanlar daha iyi hizalanmıştır. Bu özelliği bileşen başına temelinde kabul etmeniz gerekir.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Benzer ASP.NET Core API'leri farklı varsayılan <xref:Microsoft.AspNetCore.Http.SameSiteMode> değerler kullansın. Tutarsızlık bir örnek görülür `HttpResponse.Cookies.Append(String, String)` ve `HttpResponse.Cookies.Append(String, String, CookieOptions)`, hangi varsayılan `SameSiteMode.None` `SameSiteMode.Lax`ve , sırasıyla.
+Benzer ASP.NET Core API 'Leri farklı varsayılan <xref:Microsoft.AspNetCore.Http.SameSiteMode> değerler kullandı. Ve ' de `HttpResponse.Cookies.Append(String, String)` `HttpResponse.Cookies.Append(String, String, CookieOptions)` Varsayılan olarak `SameSiteMode.None` `SameSiteMode.Lax` , ve sırasıyla olarak görülen tutarsızlığa bir örnektir.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Tüm etkilenen API'ler varsayılan `SameSiteMode.None`.
+Etkilenen tüm API 'Ler varsayılan olarak `SameSiteMode.None` .
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Varsayılan değer, bir `SameSite` kabul özelliği yapmak için değiştirildi.
+Varsayılan değer, `SameSite` bir katılım özelliği oluşturmak için değiştirilmiştir.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Tanımlama bilgileri yayıp yasanan `SameSite` her bileşenin senaryolarına uygun olup olmadığına karar vermesi gerekir. Etkilenen API'lerin kullanımını gözden geçirin ve gerektiğinde yeniden yapılandırın. `SameSite`
+Tanımlama bilgilerini gösteren her bileşen, senaryoları için uygun olup olmadığına karar vermeniz gerekir `SameSite` . Etkilenen API 'lerin kullanımını gözden geçirin ve `SameSite` gerektiği şekilde yeniden yapılandırın.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

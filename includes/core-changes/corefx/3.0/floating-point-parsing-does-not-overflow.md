@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 935d9b2368ea4a0eeca7943dcbd584d24d2a6633
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721249"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032105"
 ---
 ### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>Kayan nokta ayrıştırma işlemleri artık başarısız olmaz veya bir OverflowException oluşturmaz
 
@@ -20,7 +20,7 @@ Bu değişiklik, geliştirilmiş IEEE 754:2008 uyumluluğu için yapılmıştır
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 

@@ -1,35 +1,35 @@
 ---
 ms.openlocfilehash: 9544b65f31772d0f4cee918528a73171fec4de99
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021815"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032050"
 ---
-### <a name="change-in-default-value-of-useshellexecute"></a>UseShellExecute'ın varsayılan değerindeki değişiklik
+### <a name="change-in-default-value-of-useshellexecute"></a>UseShellExecute varsayılan değerindeki değişiklik
 
-<xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>.NET Core `false` üzerinde varsayılan değeri vardır. .NET Framework'de varsayılan `true`değeri .
+<xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> , .NET Core üzerinde varsayılan bir değer içerir `false` . .NET Framework, varsayılan değeri ' dir `true` .
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>örneğin Paint'i başlatan gibi `Process.Start("mspaint.exe")` kodlarla doğrudan bir uygulama başlatmanızı sağlar. Ayrıca, '' olarak ayarlanmışsa, <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> dolaylı `true`olarak ilişkili bir uygulamayı başlatmanızı sağlar. .NET Framework'de, *.txt* dosyalarını `Process.Start("mytextfile.txt")` bu düzenleyiciyle ilişkilendirdiyseniz, not defteri gibi kodun başlatılması anlamına gelen varsayılan <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> değerdir. `true` .NET Framework'de dolaylı olarak bir uygulama başlatılmasını <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> `false`önlemek için, açıkça . .NET Core'da varsayılan <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> `false`değer. Bu, varsayılan olarak, ilişkili uygulamaların . `Process.Start`
+<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> bir uygulamayı doğrudan başlatmanıza olanak tanır. Örneğin, Paint 'i Başlatan gibi kodla `Process.Start("mspaint.exe")` . Ayrıca, olarak ayarlandıysa ilişkili bir uygulamayı dolaylı olarak başlatmanıza olanak tanır <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> `true` . .NET Framework ' de, varsayılan değeri, <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> `true` `Process.Start("mytextfile.txt")` *. txt* dosyalarını bu düzenleyici ile ilişkilendirdiyseniz Not defteri 'ni başlatacağı anlamına gelir. .NET Framework bir uygulamanın dolaylı olarak başlatılmasını engellemek için, açıkça olarak ayarlamanız gerekir <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> `false` . .NET Core 'da, için varsayılan değer <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> `false` . Bu, varsayılan olarak ilişkili uygulamaların, çağırdığınızda başlatılmayacağı anlamına gelir `Process.Start` .
 
-Bu değişiklik performans nedenleriyle .NET Core'da kullanılmaya başlandı. Genellikle, <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> doğrudan bir uygulama başlatmak için kullanılır. Doğrudan bir uygulama başlatmanın Windows kabuğunu içermesi ve ilişkili performans maliyetine tabi olması gerekmez. Bu varsayılan durumu daha hızlı yapmak için ,NET Core varsayılan değerini <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> `false`. İhtiyacınız olduğunda daha yavaş yolu tercih edebilirsiniz.
+Bu değişiklik, performans nedenleriyle .NET Core 'da sunulmuştur. Genellikle, <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> bir uygulamayı doğrudan başlatmak için kullanılır. Bir uygulamayı doğrudan başlatmak, Windows kabuğunu dahil etmek ve ilişkili performans maliyetine tabi olmak zorunda değildir. Bu varsayılan örneği daha hızlı hale getirmek için, .NET Core varsayılan değerini <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> olarak değiştirir `false` . Gerekirse, daha yavaş yolu kabul edebilirsiniz.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 2.1
 
 > [!NOTE]
-> .NET Core'un önceki `UseShellExecute` sürümlerinde, Windows için uygulanmadı.
+> .NET Core 'un önceki sürümlerinde `UseShellExecute` Windows için uygulanmadı.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Uygulamanız eski davranışa <xref:System.Diagnostics.Process.Start(System.Diagnostics.ProcessStartInfo)?displayProperty=nameWithType> dayanıyorsa, <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute> `true` <xref:System.Diagnostics.ProcessStartInfo> nesneüzerinde ayarla'yı arayın.
+Uygulamanız eski davranışı kullanıyorsa, <xref:System.Diagnostics.Process.Start(System.Diagnostics.ProcessStartInfo)?displayProperty=nameWithType> <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute> nesne üzerinde olarak ayarla ' yı çağırın `true` <xref:System.Diagnostics.ProcessStartInfo> .
 
 #### <a name="category"></a>Kategori
 
-Çekirdek .NET kitaplıkları
+Core .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

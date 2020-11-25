@@ -1,44 +1,44 @@
 ---
 ms.openlocfilehash: ae5a5fbf97ed4a03de7d35b9d5d5ca8de3aebc39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72393969"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032708"
 ---
-### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Önbelleğe alma: YanıtCaching "pubternal" türleri iç değiştirildi
+### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Önbelleğe alma: ResponseCaching "pubternal" türleri iç olarak değiştirildi
 
-core 3.0 ASP.NET, "pubternal" `ResponseCaching` türleri `internal`değiştirildi.
+ASP.NET Core 3,0 ' de, ' deki "pubternal" türleri `ResponseCaching` olarak değiştirilmiştir `internal` .
 
-Buna ek olarak, `IResponseCachingPolicyProvider` varsayılan `IResponseCachingKeyProvider` uygulamaları ve artık yöntemin `AddResponseCaching` bir parçası olarak hizmetlere eklenir.
+Buna ek olarak, ve varsayılan uygulamaları, `IResponseCachingPolicyProvider` `IResponseCachingKeyProvider` artık, metodun bir parçası olarak hizmetlere eklenmez `AddResponseCaching` .
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-ASP.NET Core'da "pubternal" türleri `public` olarak bildirilir, ancak bir ad `.Internal`alanı içinde yer almaktadır. Bu tür ler herkese açık olsa da, destek politikaları yoktur ve kırılma değişikliklerine tabidirler. Ne yazık ki, bu tür kazara kullanımı, bu projelerde değişiklikler kırma ve çerçeve korumak için yeteneği sınırlayan sonuçlanan yaygın olmuştur.
+ASP.NET Core, "pubternal" türleri olarak belirtilir, `public` ancak ile düzeltilen bir ad alanında bulunur `.Internal` . Bu türler genel olsa da, destek ilkesi yoktur ve bu değişiklikler önemli değişikliklere tabidir. Ne yazık ki, bu türlerin yanlışlıkla kullanılması yaygındır ve bu projelerde oluşan değişikliklere neden olacak ve Framework 'ün bakımını yapma yeteneğini sınırlandırmıştır.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Bu türler genel olarak görünür, ancak desteklenmez.
+Bu türler herkese açık olarak görünür, ancak desteklenmez.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Bu tür `internal`şimdi .
+Bu türler artık `internal` .
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-`internal` Kapsam, desteklenmeyen ilkeyi daha iyi yansıtır.
+`internal`Kapsam, desteklenmeyen ilkeyi daha iyi yansıtır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Uygulamanız veya kitaplığınız tarafından kullanılan kopya türleri.
+Uygulamanız veya kitaplığınız tarafından kullanılan türleri kopyalayın.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 ms.openlocfilehash: 4cf1e5787fe2e430d20208d8e79b610e9126c67c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622633"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031715"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 
@@ -125,7 +125,7 @@ Bir derleme oluşturmak için, aşağıdaki gibi bir komutla [Al.exe (bütünle�
 Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v:3.0.0.0
 ```
 
-`compatkey.dat`, tanımlayıcı ad anahtar dosyasıdır. Bu komut, genel derleme önbelleğine yerleştirebileceğiniz, tanımlayıcı adlı bir derleme oluşturur.
+`compatkey.dat` , tanımlayıcı ad anahtar dosyasıdır. Bu komut, genel derleme önbelleğine yerleştirebileceğiniz, tanımlayıcı adlı bir derleme oluşturur.
 
 > [!NOTE]
 > Yayımcı ilkesi, paylaşılan bir bileşen kullanan tüm uygulamaları etkiler.
@@ -231,9 +231,9 @@ Aşağıdaki bilgiler veriliyor:
 
 - Başvurulan derleme adı: myAssembly
 
-- Uygulama kök dizini:`http://www.code.microsoft.com`
+- Uygulama kök dizini: `http://www.code.microsoft.com`
 
-- [\<probing>](../configure-apps/file-schema/runtime/probing-element.md)yapılandırma dosyasındaki öğe şunları belirtir: bin
+- [\<probing>](../configure-apps/file-schema/runtime/probing-element.md) yapılandırma dosyasındaki öğe şunları belirtir: bin
 
 - Kültür: de
 

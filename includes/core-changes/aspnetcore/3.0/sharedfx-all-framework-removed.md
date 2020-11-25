@@ -1,42 +1,42 @@
 ---
 ms.openlocfilehash: 959f3959c28c7d0159be7a213986345e2865b9a2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394434"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032862"
 ---
-### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>Paylaşılan çerçeve: Kaldırıldı Microsoft.AspNetCore.All
+### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>Paylaşılan çerçeve: Microsoft. AspNetCore. All kaldırıldı
 
-Core 3.0ASP.NETdan `Microsoft.AspNetCore.All` başlayarak, metapaket `Microsoft.AspNetCore.All` ve eşleşen paylaşılan çerçeve artık üretilmemaktadır. Bu paket Core 2.2ASP.NETde mevcuttur ve ASP.NET Core 2.1'de servis güncellemeleri almaya devam edecektir.
+ASP.NET Core 3,0 ' den başlayarak, `Microsoft.AspNetCore.All` metapackage ve eşleşen `Microsoft.AspNetCore.All` paylaşılan çerçeve artık üretilmez. Bu paket ASP.NET Core 2,2 ' de kullanılabilir ve ASP.NET Core 2,1 ' de hizmet güncelleştirmelerini almaya devam edecektir.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`Microsoft.AspNetCore.All` Uygulamalar,.NET Core'daki `Microsoft.AspNetCore.All` paylaşılan çerçeveyi hedeflemek için meta paketi kullanabilir.
+Uygulamalar, `Microsoft.AspNetCore.All` `Microsoft.AspNetCore.All` .NET Core 'da paylaşılan çerçeveyi hedeflemek için metapackage kullanabilir.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-.NET Core 3.0 paylaşılan `Microsoft.AspNetCore.All` bir çerçeve içermez.
+.NET Core 3,0, paylaşılan bir `Microsoft.AspNetCore.All` çerçeve içermez.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Meta `Microsoft.AspNetCore.All` paket çok sayıda dış bağımlılık içeriyordu.
+`Microsoft.AspNetCore.All`Metapackage çok sayıda dış bağımlılığı içeriyordu.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Çerçeveyi kullanmak için `Microsoft.AspNetCore.App` projenizi geçirin. Daha önce mevcut olan `Microsoft.AspNetCore.All` bileşenler NuGet'de hala kullanılabilir. Bu bileşenler artık paylaşılan çerçeveye dahil olmak yerine uygulamanızla birlikte dağıtılır.
+Çerçevesini kullanmak için projenizi geçirin `Microsoft.AspNetCore.App` . Daha önce ' de kullanılabilir olan bileşenler `Microsoft.AspNetCore.All` NuGet üzerinde hala kullanılabilir. Bu bileşenler artık, paylaşılan çerçeveye eklenmek yerine uygulamanızla birlikte dağıtılır.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-None
+Yok
 
 <!-- 
 

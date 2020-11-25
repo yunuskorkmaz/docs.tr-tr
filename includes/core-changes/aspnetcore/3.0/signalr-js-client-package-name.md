@@ -1,46 +1,46 @@
 ---
 ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901831"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032882"
 ---
-### <a name="signalr-javascript-client-package-name-changed"></a>SignalR: JavaScript istemci paket adı değiştirildi
+### <a name="signalr-javascript-client-package-name-changed"></a>SignalR: JavaScript istemci paketi adı değiştirildi
 
-Core 3.0 Preview 7ASP.NET, SignalR JavaScript istemci `@aspnet/signalr` `@microsoft/signalr`paket adı . Ad değişikliği, Azure SignalR Hizmeti sayesinde SignalR'ın ASP.NET Core uygulamasından daha kullanışlı olduğu gerçeğini yansıtır.
+ASP.NET Core 3,0 Preview 7 ' de, SignalR JavaScript istemci paketi adı ' dan ' a değiştirilmiştir `@aspnet/signalr` `@microsoft/signalr` . Ad değişikliği, SignalR 'nin Azure SignalR hizmeti sayesinde yalnızca ASP.NET Core uygulamalardan daha fazla yararlı olduğunu yansıtır.
 
-Bu değişikliğe tepki vermek *için, paket.json* dosyalarınızdaki, `require` deyimlerinizdeki ve ECMAScript `import` deyimlerinizdeki başvuruları değiştirin. Bu yeniden adın bir parçası olarak hiçbir API değişmez.
+Bu değişikliğe tepki vermek için, dosyalar, *package.json* `require` deyimler ve ECMAScript deyimleriylepackage.jsbaşvuruları değiştirin `import` . Bu yeniden adlandırma kapsamında hiçbir API değişmeyecektir.
 
-Tartışma için [dotnet/aspnetcore#11637'ye](https://github.com/dotnet/aspnetcore/issues/11637)bakın.
+Tartışma için bkz. [DotNet/aspnetcore # 11637](https://github.com/dotnet/aspnetcore/issues/11637).
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-İstemci paketi `@aspnet/signalr`nin adı .
+İstemci paketi adı `@aspnet/signalr` .
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-İstemci paketi `@microsoft/signalr`nin adı .
+İstemci paketinin adı `@microsoft/signalr` .
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Ad değişikliği, Azure SignalR Hizmeti sayesinde SignalR'ın ASP.NET Core uygulamalarının ötesinde yararlı olduğunu açıklar.
+Ad değişikliği, SignalR 'nin Azure SignalR hizmeti için teşekkürler ASP.NET Core uygulamalar ötesinde yararlı olduğunu açıklığa kavuşturar.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Yeni pakete `@microsoft/signalr`geçin.
+Yeni pakete geçiş yapın `@microsoft/signalr` .
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-None
+Yok
 
 <!-- 
 

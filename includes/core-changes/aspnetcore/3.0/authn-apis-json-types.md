@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 9bdfcca2fd03e24a636be3340f5057dc3f39358e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539611"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032732"
 ---
 ### <a name="authentication-newtonsoftjson-types-replaced"></a>Kimlik doğrulaması: değiştirilmekte olan türler üzerinde Newtonsoft.Js
 
@@ -17,7 +17,7 @@ Daha fazla bilgi için bkz. [DotNet/aspnetcore # 7105](https://github.com/dotnet
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 

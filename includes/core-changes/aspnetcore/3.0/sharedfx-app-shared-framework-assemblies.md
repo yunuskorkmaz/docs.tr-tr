@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: d598d8d3203e804e5e935c3564b0053f9fc2e9a6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144984"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032871"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Paylaşılan çerçeve: Microsoft. AspNetCore. app öğesinden kaldırılan derlemeler
 
@@ -18,7 +18,7 @@ Değişikliğin bir parçası olarak, bazı önemli değişiklikler ' de kullan�
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
@@ -54,7 +54,7 @@ Projelerin NuGet paketleri olarak içindeki derlemeleri kullanması gerekli değ
 
 Bu değişiklik `Microsoft.AspNetCore.App` , ASP.NET Core 2. x ile başvurulan tüm ikili dosyalar için geçerlidir. Önemli özel durumlar şunlardır:
 
-- `Microsoft.Extensions`hedef .NET Standard devam eden kitaplıklar, NuGet paketleri olarak kullanılabilir (bkz <https://github.com/dotnet/extensions> .).
+- `Microsoft.Extensions` hedef .NET Standard devam eden kitaplıklar, NuGet paketleri olarak kullanılabilir (bkz <https://github.com/dotnet/extensions> .).
 - ' Nin parçası olmayan ASP.NET Core ekibi tarafından oluşturulan API 'Ler `Microsoft.AspNetCore.App` . Örneğin, aşağıdaki bileşenler NuGet paketleri olarak kullanılabilir:
   - Entity Framework Core
   - Üçüncü taraf tümleştirme sağlayan API 'Ler
@@ -67,7 +67,7 @@ Daha fazla bilgi için bkz. [3,0 ' de paylaşılan çerçeve derlemeleri için p
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

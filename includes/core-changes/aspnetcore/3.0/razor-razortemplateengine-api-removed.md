@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 35dd8db243b03e1dfd6311195ec97673cf114877
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957698"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032844"
 ---
 ### <a name="razor-razortemplateengine-api-removed"></a>Razor: RazorTemplateEngine API 'SI kaldırıldı
 
@@ -14,7 +14,7 @@ Tartışma için bkz. GitHub sorunu [DotNet/aspnetcore # 25215](https://github.c
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 

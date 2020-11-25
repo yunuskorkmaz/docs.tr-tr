@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901586"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032827"
 ---
-### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: Denetleyici eylem adlarından kesilmiş async sonek
+### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: zaman uyumsuz son ek, denetleyici eylem adlarından kırpılmakta
 
-[nokta/aspnetcore#4849](https://github.com/dotnet/aspnetcore/issues/4849)adresinin bir parçası olarak, ASP.NET Core MVC `Async` varsayılan olarak eylem adlarından sonekleri kırpar. Core 3.0 ile ASP.NET başlayarak, bu değişiklik hem yönlendirme yi hem de bağlantı oluşturmayı etkiler.
+[DotNet/aspnetcore # 4849](https://github.com/dotnet/aspnetcore/issues/4849)adreslemesinin bir parçası olarak ASP.NET Core MVC, `Async` Varsayılan olarak eylem adlarından son eki kırpar. ASP.NET Core 3,0 ' den itibaren bu değişiklik hem yönlendirme hem de bağlantı üretimini etkiler.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
@@ -29,7 +29,7 @@ public class ProductController : Controller
 }
 ```
 
-Eylem üzerinden `Product/ListAsync`routable olduğunu . Bağlantı oluşturma `Async` sonekinin belirtilmesi gerektirir. Örnek:
+Eylem aracılığıyla yönlendirilebilir `Product/ListAsync` . Bağlantı oluşturma, sonekin belirtilmesini gerektirir `Async` . Örnek:
 
 ```cshtml
 <a asp-controller="Product" asp-action="ListAsync">List</a>
@@ -37,13 +37,13 @@ Eylem üzerinden `Product/ListAsync`routable olduğunu . Bağlantı oluşturma `
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-ASP.NET Core 3.0'da, eylem `Product/List`. Bağlantı oluşturma kodu `Async` sonek atlamalıdır. Örnek:
+ASP.NET Core 3,0 ' de, eylem aracılığıyla yönlendirilebilir `Product/List` . Bağlantı oluşturma kodu `Async` son eki atmalıdır. Örnek:
 
 ```cshtml
 <a asp-controller="Product" asp-action="List">List</a>
 ```
 
-Bu değişiklik öznitelik kullanılarak `[ActionName]` belirtilen adları etkilemez. Yeni davranış aşağıdakilere `MvcOptions.SuppressAsyncSuffixInActionNames` `false` ayarlayarak `Startup.ConfigureServices`devre dışı tutulabilir:
+Bu değişiklik, özniteliği kullanılarak belirtilen adları etkilemez `[ActionName]` . Yeni davranış, içinde olarak ayarlanarak devre dışı `MvcOptions.SuppressAsyncSuffixInActionNames` bırakılabilir `false` `Startup.ConfigureServices` :
 
 ```csharp
 services.AddMvc(options =>
@@ -54,14 +54,14 @@ services.AddMvc(options =>
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Kural olarak, asynchronous .NET yöntemleri `Async`ile suffixed vardır. Ancak, bir yöntem bir MVC eylemi tanımladığında, sonek `Async` kullanmak istenmez.
+Kurala göre, zaman uyumsuz .NET yöntemleri ile sonlardır `Async` . Ancak, bir yöntem bir MVC eylemini tanımladığında, sonekin kullanılması istenmeyen bir işlemdir `Async` .
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Uygulamanız, adın `Async` sonekini koruyan MVC eylemlerine bağlıysa, aşağıdaki azaltıcı etkenlerden birini seçin:
+Uygulamanız, adın sonekini koruyan MVC eylemlerine bağımlıysa `Async` , aşağıdaki azaltmaları aşağıdakilerden birini seçin:
 
-- Özgün `[ActionName]` adı korumak için özniteliği kullanın.
-- Yeniden adlandırmayı aşağıdaki lere `MvcOptions.SuppressAsyncSuffixInActionNames` `false` ayarlayarak `Startup.ConfigureServices`tamamen devre dışı
+- `[ActionName]`Özgün adı korumak için özniteliğini kullanın.
+- Yeniden adlandırmayı tamamen devre dışı bırak `MvcOptions.SuppressAsyncSuffixInActionNames` `false` `Startup.ConfigureServices` :
 
 ```csharp
 services.AddMvc(options =>
@@ -72,11 +72,11 @@ services.AddMvc(options =>
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-None
+Yok
 
 <!-- 
 

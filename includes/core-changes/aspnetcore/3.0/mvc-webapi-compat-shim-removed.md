@@ -1,34 +1,34 @@
 ---
 ms.openlocfilehash: 75945e7ff26c1c6db891d12cef4c16ed210da6af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394405"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032843"
 ---
-### <a name="mvc-web-api-compatibility-shim-removed"></a>MVC: Web API uyumluluk şim kaldırıldı
+### <a name="mvc-web-api-compatibility-shim-removed"></a>MVC: Web API 'SI uyumluluk dolgusu kaldırıldı
 
-core 3.0 ASP.NET ile `Microsoft.AspNetCore.Mvc.WebApiCompatShim` başlayarak, paket artık kullanılamaz.
+ASP.NET Core 3,0 ' den başlayarak, `Microsoft.AspNetCore.Mvc.WebApiCompatShim` paket artık kullanılamıyor.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-`Microsoft.AspNetCore.Mvc.WebApiCompatShim` (WebApiCompatShim) paketi, mevcut Web API uygulamalarını ASP.NET Core'a geçirmeyi kolaylaştırmak için ASP.NET Core'da ASP.NET 4.x Web API 2 ile kısmi uyumluluk sağlar. Ancak, WebApiCompatShim kullanan uygulamalar, son ASP.NET Core sürümlerinde API ile ilgili özelliklerden yararlanamaz. Bu özellikler arasında geliştirilmiş Açık API belirtimi oluşturma, standartlaştırılmış hata işleme ve istemci kodu oluşturma yer alır. 3.0'daki API çabalarını daha iyi odaklamak için WebApiCompatShim kaldırıldı. WebApiCompatShim'i kullanan varolan uygulamalar yeni `[ApiController]` modele geçmelidir.
+`Microsoft.AspNetCore.Mvc.WebApiCompatShim`(WebApiCompatShim) paketi, mevcut Web API uygulamalarının ASP.NET Core geçişini kolaylaştırmak için ASP.NET 4. x Web API 2 ile ASP.NET Core kısmi uyumluluk sağlar. Ancak, WebApiCompatShim kullanan uygulamalar, son ASP.NET Core sürümlerindeki API ile ilgili özelliklerden faydalanmalarından yararlanabilir. Bu tür özellikler, geliştirilmiş açık API belirtim oluşturma, standartlaştırılmış hata işleme ve istemci kodu oluşturma özelliklerini içerir. API çabalarını 3,0 ' de daha iyi odaklamak için WebApiCompatShim kaldırılmıştır. WebApiCompatShim kullanan mevcut uygulamalar, daha yeni modele geçirilmesi gerekir `[ApiController]` .
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Web API uyumluluk şim bir geçiş aracıydı. Kullanıcı erişimini ASP.NET Core'a eklenen yeni işlevlere kısıtlamar.
+Web API 'SI uyumluluk dolgusu bir geçiş aracıdır. ASP.NET Core eklenen yeni işlevlere Kullanıcı erişimini kısıtlar.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Bu şim kullanımını kaldırın ve doğrudan ASP.NET Core'daki benzer işlevsellik için geçiş yapmak.
+Bu dolgunun kullanımını kaldırın ve ASP.NET Core kendi kendine benzer işlevlere doğrudan geçirin.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

@@ -4,12 +4,12 @@ description: .NET SDK ve .NET çalışma zamanının CentOS 'a yüklenmesi için
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b2ed62d024c6f0d78a4ec64693f1dafeabd8f47b
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: b30aa206057107aa17fcd62e0f042f9fe3ad56dc
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594638"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031936"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>CentOS 'a .NET SDK veya .NET çalışma zamanı yüklemesi
 
@@ -39,6 +39,10 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 - 2,0
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+
+## <a name="remove-preview-versions"></a>Önizleme sürümlerini Kaldır
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 

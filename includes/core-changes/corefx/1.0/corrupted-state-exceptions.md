@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 394f2daebad7b6af94bee4d7876796e87fe8ab19
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135638"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032064"
 ---
 ### <a name="handling-corrupted-state-exceptions-is-not-supported"></a>Bozuk durum özel durumlarını işleme desteklenmiyor
 
@@ -18,7 +18,7 @@ Daha önce, bozuk işlem durumu özel durumları, örneğin, C# ' de bir [try-ca
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-1.0
+1,0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 

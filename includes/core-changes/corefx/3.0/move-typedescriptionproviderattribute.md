@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 7a2617f27dfd6bb527ff6d408fae6382075f24ae
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721361"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032168"
 ---
 ### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>TypeDescriptionProviderAttribute başka bir derlemeye taşındı
 
@@ -18,7 +18,7 @@ ms.locfileid: "83721361"
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 

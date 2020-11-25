@@ -1,48 +1,48 @@
 ---
 ms.openlocfilehash: 5741e8cdd51e00d5459c4c1032a56682429aab17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901644"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032835"
 ---
-### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: "Pubternal" türleri dahili olarak değiştirildi
+### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: "Pubternal" türleri iç olarak değiştirildi
 
-Core 3.0ASP.NET, MVC'deki tüm "pubternal" türleri `public` desteklenen bir ad `internal` alanında veya uygun şekilde güncelleştirildi.
+ASP.NET Core 3,0 ' de, MVC içindeki tüm "pubternal" türleri `public` desteklenen bir ad alanında ya da uygun şekilde güncelleştirildi `internal` .
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-ASP.NET Core'da "pubternal" türleri `public` -suffixed `.Internal`ad alanında olduğu ancak ikamet ettiğini beyan eder. Bu tür `public`olmasına ne kadar , hiçbir destek ilkesi var ve kırılma değişikliklerine tabidir. Ne yazık ki, bu tür kazara kullanımı, bu projelerde değişiklikler kırma ve çerçeve korumak için yeteneği sınırlayan sonuçlanan yaygın olmuştur.
+ASP.NET Core, "pubternal" türleri olarak belirtilir, `public` ancak bir `.Internal` -sonsabit ad alanında bulunur. Bu türler olsa `public` da, destek ilkesi yoktur ve bu değişiklikler önemli değişikliklere tabidir. Ne yazık ki, bu türlerin yanlışlıkla kullanılması yaygındır ve bu projelerde oluşan değişikliklere neden olacak ve Framework 'ün bakımını yapma yeteneğini sınırlandırmıştır.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-MVC bazı türleri `public` ama `.Internal` bir ad alanı vardı. Bu tür hiçbir destek ilkesi vardı ve kırılma değişikliklere tabi idi.
+MVC içindeki bazı türler `public` , ancak bir `.Internal` ad alanında. Bu türlerin destek ilkesi yoktu ve değişiklikler ortadan kaldırıldı.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Tüm bu tür desteklenen `public` bir ad alanında olmak üzere `internal`güncelleştirilir veya .
+Bu tür türler desteklenen bir ad alanında olacak şekilde güncelleştirilir `public` veya olarak işaretlenir `internal` .
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-"Pubternal" türlerinin kazara kullanımı yaygın olmuştur, bu projelerde değişiklikler kırma ve çerçeve korumak için yeteneğini sınırlayan sonuçlanan.
+"Pubternal" türlerinin yanlışlıkla kullanılması yaygındır ve bu projelerde oluşan değişikliklere neden olacak ve Framework 'ün bakımını yapma yeteneğini sınırlandırmıştır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Gerçekten `public` olmuş ve yeni, desteklenen bir ad alanına taşınmış türleri kullanıyorsanız, başvurularınızı yeni ad alanlarıyla eşleşecek şekilde güncelleyin.
+Gerçekten olan `public` ve yeni ve desteklenen bir ad alanına taşınan türler kullanıyorsanız, başvurularınızı yeni ad alanlarıyla eşleşecek şekilde güncelleştirin.
 
-Olarak işaretlenmiş türleri `internal`kullanıyorsanız, bir alternatif bulmanız gerekir. Daha önce "pubternal" türleri kamu kullanımı için desteklenmedi. Bu ad alanlarında uygulamalarınız için kritik öneme sahip belirli türler varsa, [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues)adresinden bir sorun dosyalayın. İstenen tiplerin `public`yapılmasında dikkat edilmesi gereken hususlar göz önünde bulundurulabilir.
+Olarak işaretlenen türler kullanıyorsanız `internal` , alternatif bulmanız gerekir. Daha önce "pubternal" türleri genel kullanım için hiçbir şekilde desteklenmez. Bu ad alanlarında uygulamalarınız için kritik olan belirli türler varsa, [DotNet/aspnetcore](https://github.com/dotnet/aspnetcore/issues)' da bir sorun yapın. İstenen türleri oluşturmak için dikkat edilmesi gereken noktalar `public` .
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-Bu değişiklik, aşağıdaki ad alanlarındatürleri içerir:
+Bu değişiklik aşağıdaki ad alanları türlerini içerir:
 
 - `Microsoft.AspNetCore.Mvc.Cors.Internal`
 - `Microsoft.AspNetCore.Mvc.DataAnnotations.Internal`

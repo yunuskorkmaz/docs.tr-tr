@@ -4,12 +4,12 @@ description: RHEL üzerinde .NET SDK ve .NET çalışma zamanı yüklemek için 
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: cb03f84cf84557d467f0a067b8d5629a843ec7e3
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 931cad51ff8e35ff16b67ff9b795feb36010a66b
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594579"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031788"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>RHEL üzerinde .NET SDK veya .NET çalışma zamanı 'nı yükler
 
@@ -39,6 +39,10 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 - 3,0
 - 2.2
 - 2,0
+
+## <a name="remove-preview-versions"></a>Önizleme sürümlerini Kaldır
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 

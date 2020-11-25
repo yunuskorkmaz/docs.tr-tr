@@ -1,41 +1,41 @@
 ---
 ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73041665"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032796"
 ---
-### <a name="identity-ui-uses-static-web-assets-feature"></a>Kimlik: UI statik web varlıkları özelliğini kullanır
+### <a name="identity-ui-uses-static-web-assets-feature"></a>Kimlik: UI statik Web varlıkları özelliğini kullanır
 
-ASP.NET Core 3.0 statik bir web varlıkları özelliği tanıttı ve Kimlik UI bunu benimsemiştir.
+ASP.NET Core 3,0, statik bir Web varlıkları özelliği sunmuştur ve kimlik Kullanıcı arabirimi benimsemiştir.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-Kimlik UI statik web varlıkları özelliği benimseyen bir sonucu olarak:
+Statik Web varlıkları özelliğini benimseme kimlik UI 'sinin sonucu olarak:
 
-- Çerçeve seçimi, proje dosyanızdaki `IdentityUIFrameworkVersion` özelliği kullanarak gerçekleştirilir.
-- Bootstrap 4, Kimlik Arabirimi için varsayılan UI çerçevesidir. Bootstrap 3 yaşamın sonuna ulaştı ve desteklenen bir sürüme göç düşünmelisiniz.
+- Çerçeve seçimi, `IdentityUIFrameworkVersion` proje dosyanızdaki özelliği kullanılarak gerçekleştirilir.
+- Bootstrap 4, kimlik Kullanıcı arabirimi için varsayılan UI çerçevesidir. Bootstrap 3 yaşam sonuna ulaştı ve desteklenen bir sürüme geçirmeyi göz önünde bulundurmanız gerekir.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Kimlik Arabirimi için varsayılan UI çerçevesi **Bootstrap 3**idi. UI çerçevesi, 'deki `AddDefaultUI` `Startup.ConfigureServices`yöntem çağrısına bir parametre kullanılarak yapılandırılabilir.
+Kimlik Kullanıcı arabirimi için varsayılan UI çerçevesi **önyükleme 3** idi. UI çerçevesi, içindeki yöntem çağrısına bir parametre kullanılarak yapılandırılabilir `AddDefaultUI` `Startup.ConfigureServices` .
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Kimlik Arabirimi için varsayılan UI çerçevesi **Bootstrap**4'dür. U-UI `AddDefaultUI` çerçevesi, yöntem çağrısı yerine proje dosyanızda yapılandırılmalıdır.
+Kimlik Kullanıcı arabirimi için varsayılan UI çerçevesi **önyükleme 4**' dir. UI çerçevesi, yöntem çağrısı yerine proje dosyanızda yapılandırılmalıdır `AddDefaultUI` .
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Statik web varlıkları özelliğinin benimsenmesi, UI çerçeve yapılandırmasının MSBuild'e taşınmasını gerektiriyordu. Hangi çerçeveye yerleştirilemeye karar verebilmek için bir yapı zamanı kararıdır, çalışma zamanı kararı değil.
+UI çerçevesi yapılandırmasının MSBuild 'e taşınması için statik Web varlıkları özelliğini benimseme özelliği gereklidir. Hangi çerçevenin katıştırılması, çalışma zamanı kararı değil, derleme zamanı karardır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Yeni Bootstrap 4 bileşenlerinin uyumlu olduğundan emin olmak için sitenizin UI'sini inceleyin. Gerekirse, Bootstrap `IdentityUIFrameworkVersion` 3'e dönmek için MSBuild özelliğini kullanın. Özelliği proje dosyanızdaki bir `<PropertyGroup>` öğeye ekleyin:
+Yeni önyükleme 4 bileşenlerinin uyumlu olduğundan emin olmak için site Kullanıcı arabirimini gözden geçirin. Gerekirse, `IdentityUIFrameworkVersion` önyükleme 3 ' e dönmek için MSBuild özelliğini kullanın. Özelliği `<PropertyGroup>` proje dosyanızdaki bir öğeye ekleyin:
 
 ```xml
 <IdentityUIFrameworkVersion>Bootstrap3</IdentityUIFrameworkVersion>
@@ -43,7 +43,7 @@ Yeni Bootstrap 4 bileşenlerinin uyumlu olduğundan emin olmak için sitenizin U
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

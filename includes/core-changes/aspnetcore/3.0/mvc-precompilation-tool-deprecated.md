@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8395428e1729a00fc1af72cf53fe689ee95b5fdf
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721330"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032828"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC: ön derleme aracı kullanım dışı
 
@@ -14,7 +14,7 @@ ASP.NET Core 3,0 ' de, ASP.NET Core 1,1-Era MVC prederlemesini kaldırma aracı 
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 

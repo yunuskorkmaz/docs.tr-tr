@@ -1,44 +1,44 @@
 ---
 ms.openlocfilehash: 4d99d0b6e99a7a9b976cf11832b33ad3bdc6d299
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901687"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032756"
 ---
-### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Barındırma: ObjectPoolProvider WebHostBuilder bağımlılıkları kaldırıldı
+### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Barındırma: ObjectPoolProvider WebHostBuilder bağımlılıklarından kaldırıldı
 
-ASP.NET Core'un oyun için daha `ObjectPoolProvider` fazla ödeme yapmasını sağlamanın bir parçası olarak, bu bağımlılıklar ana kümeden çıkarıldı. `ObjectPoolProvider` Şimdi güvenen belirli bileşenler kendilerini ekleyin.
+Yürütme için ASP.NET Core daha fazla ödeme yapma kapsamında, `ObjectPoolProvider` ana bağımlılıklar kümesinden kaldırılmıştır. Artık bağlı olan belirli bileşenler kendisini `ObjectPoolProvider` ekler.
 
-Tartışma için [dotnet/aspnetcore#5944'e](https://github.com/dotnet/aspnetcore/issues/5944)bakın.
+Tartışma için bkz. [DotNet/aspnetcore # 5944](https://github.com/dotnet/aspnetcore/issues/5944).
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`WebHostBuilder`di `ObjectPoolProvider` kapsayıcıda varsayılan olarak sağlar.
+`WebHostBuilder``ObjectPoolProvider`dı kapsayıcısında varsayılan olarak sağlar.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-`WebHostBuilder`artık varsayılan `ObjectPoolProvider` olarak DI kapsayıcısında sağlar.
+`WebHostBuilder` Artık `ObjectPoolProvider` Varsayılan olarak dı kapsayıcısında sağlamaz.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Bu değişiklik ASP.NET Core oyun için daha fazla ödeme yapmak için yapıldı.
+Bu değişiklik ASP.NET Core yürütmek için daha fazla ödeme yapmak üzere yapılmıştır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Bileşeniniz bunu `ObjectPoolProvider`gerektiriyorsa, `IServiceCollection`bağımlılıklarınıza .
+Bileşeniniz gerektiriyorsa `ObjectPoolProvider` , bağımlılıklarınızın aracılığıyla eklenmesi gerekir `IServiceCollection` .
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-None
+Yok
 
 <!-- 
 

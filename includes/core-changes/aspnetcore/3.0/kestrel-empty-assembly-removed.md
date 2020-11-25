@@ -1,35 +1,35 @@
 ---
 ms.openlocfilehash: 1c9c899d77dd69e185281d98bfec18ce73d80815
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394105"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032811"
 ---
-### <a name="kestrel-empty-https-assembly-removed"></a>Kerkenez: Boş HTTPS derlemesi kaldırıldı
+### <a name="kestrel-empty-https-assembly-removed"></a>Kestrel: boş HTTPS derlemesi kaldırıldı
 
 Derleme <xref:Microsoft.AspNetCore.Server.Kestrel.Https?displayProperty=fullName> kaldırıldı.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-ASP.NET Core 2.1'de `Microsoft.AspNetCore.Server.Kestrel.Https` içeriği <xref:Microsoft.AspNetCore.Server.Kestrel.Core?displayProperty=fullName>. Bu değişiklik öznitelikleri kullanarak `[TypeForwardedTo]` kırılmayan bir şekilde yapıldı.
+ASP.NET Core 2,1 ' de, içeriği `Microsoft.AspNetCore.Server.Kestrel.Https` öğesine taşındı <xref:Microsoft.AspNetCore.Server.Kestrel.Core?displayProperty=fullName> . Bu değişiklik öznitelikler kullanılarak kırılmamış bir şekilde gerçekleştirildi `[TypeForwardedTo]` .
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-- 2.0'a başvuran `Microsoft.AspNetCore.Server.Kestrel.Https` kitaplıklar, Temel bağımlılıkASP.NET tümASP.NET 2.1 veya sonraki güncelleştirmeleri gerekir. Aksi takdirde, ASP.NET Core 3.0 uygulamasına yüklendiklerinde kırılabilirler.
-- Core 2.1 ve daha sonra ASP.NET hedefleyen uygulamalar ve `Microsoft.AspNetCore.Server.Kestrel.Https` kütüphaneler NuGet paketine yapılan doğrudan başvuruları kaldırmalıdır.
+- `Microsoft.AspNetCore.Server.Kestrel.Https`2,0 'ye başvuran Kitaplıklar tüm ASP.NET Core bağımlılıklarını 2,1 veya üzeri olarak güncelleştirmemelidir. Aksi takdirde, ASP.NET Core 3,0 uygulamasına yüklendiğinde bu uygulamalar kesintiye uğrabilirler.
+- ASP.NET Core 2,1 ve üstünü hedefleyen uygulamalar ve kitaplıklar, NuGet paketine doğrudan başvuruları kaldırmalıdır `Microsoft.AspNetCore.Server.Kestrel.Https` .
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-None
+Yok
 
 <!-- 
 

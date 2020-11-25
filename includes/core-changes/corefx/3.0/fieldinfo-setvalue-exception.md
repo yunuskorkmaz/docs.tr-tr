@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 02c9305a36f47dfaf0b1fa8d19b07cd2d34badae
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721678"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032121"
 ---
 ### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo. SetValue statik, yalnızca init alanları için özel durum oluşturur
 
@@ -21,7 +21,7 @@ ms.locfileid: "83721678"
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0
+3,0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 

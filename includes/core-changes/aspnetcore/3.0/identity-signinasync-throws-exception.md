@@ -1,42 +1,42 @@
 ---
 ms.openlocfilehash: 6679e38aefa7d61ce430dc5375ff3b35c641ea27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394186"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032780"
 ---
-### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>Kimlik: SignInAsync kimliği doğrulanmamış kimlik için özel durum atar
+### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>Kimlik: Signınasync kimliği doğrulanmamış kimlik için özel durum oluşturur
 
-Varsayılan olarak, `SignInAsync` ilkeler / kimlikler `IsAuthenticated` için `false`bir özel durum atar.
+Varsayılan olarak, `SignInAsync` olan sorumlular/kimlikler için bir özel durum `IsAuthenticated` oluşturur `false` .
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`SignInAsync`olduğu kimlikler `IsAuthenticated` de dahil olmak üzere herhangi bir `false`ilke / kimlik kabul eder.
+`SignInAsync` içindeki kimlikler dahil tüm sorumluları/kimlikleri kabul eder `IsAuthenticated` `false` .
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Varsayılan olarak, `SignInAsync` ilkeler / kimlikler `IsAuthenticated` için `false`bir özel durum atar. Bu davranışı bastırmak için yeni bir bayrak var, ancak varsayılan davranış değişti.
+Varsayılan olarak, `SignInAsync` olan sorumlular/kimlikler için bir özel durum `IsAuthenticated` oluşturur `false` . Bu davranışı bastırmak için yeni bir bayrak bulunur, ancak varsayılan davranış değişmiştir.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Eski davranış sorunluydu, çünkü varsayılan olarak bu `[Authorize]`  /  `RequireAuthenticatedUser()`ilkeler .
+Varsayılan olarak, bu sorumlular tarafından reddedildiği için eski davranış soruna neden oldu `[Authorize]`  /  `RequireAuthenticatedUser()` .
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Core 3.0 Preview 6ASP.NET varsayılan `RequireAuthenticatedSignIn` olarak `AuthenticationOptions` üzerinde `true` bir bayrak vardır. Eski davranışı `false` geri yüklemek için bu bayrağı ayarlayın.
+ASP.NET Core 3,0 Preview 6 ' da, varsayılan olarak ' de bir `RequireAuthenticatedSignIn` bayrak vardır `AuthenticationOptions` `true` . `false`Eski davranışı geri yüklemek için bu bayrağı ayarlayın.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-None
+Yok
 
 <!-- 
 

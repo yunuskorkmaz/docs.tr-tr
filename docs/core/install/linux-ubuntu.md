@@ -4,12 +4,12 @@ description: Ubuntu 'da .NET SDK ve .NET çalışma zamanı yüklemenin çeşitl
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 419bcf3ccd011cadba8f8c64e195d7dbdbf7e241
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 22ce3379e028f065528e1f507a2d8c1ae598f0e8
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507025"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031858"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Ubuntu 'da .NET SDK veya .NET çalışma zamanı 'nı yükler
 
@@ -46,15 +46,27 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 - 2.2
 - 2,0
 
+## <a name="remove-preview-versions"></a>Önizleme sürümlerini Kaldır
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
+
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="2010-"></a>20,10 ✔️
 
-Ubuntu 20,10 için .NET 5 ve .NET Core 3,1 paket akışlarında Şu anda bir sorun var. Sorun hakkında daha fazla bilgi için bkz. [GitHub sorunu DotNet/Core # 5549](https://github.com/dotnet/core/issues/5549). Sorun çözüldüğünde bu makale güncelleştirilecektir.
+> [!IMPORTANT]
+> .NET Core 2,1, paket akışında henüz kullanılamıyor.
 
-.NET 5 veya .NET Core 3,1 ' i Ubuntu 20,10 ' ye yüklemek için, [20,04](#2004-)için yönergeleri izleyin.
+[!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
+
+```bash
+wget https://packages.microsoft.com/config/ubuntu/20.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+```
+
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="2004-"></a>20,04 ✔️
 

@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: b55de00188d92623c493dfc5f9aca915890ae5df
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021471"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032091"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>Yerleşik yapı türlerine eklenen özel alanlar
 
-[Başvuru derlemelerinde](../../../../docs/standard/assembly/reference-assemblies.md) [belirli yapı türlerine özel](#affected-apis) alanlar eklendi. Sonuç olarak, C#'da, bu yapı türleri her zaman yeni [işleç](../../../../docs/csharp/language-reference/operators/new-operator.md) veya [varsayılan literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal)kullanılarak anlık olmalıdır.
+Özel alanlar, [başvuru derlemelerindeki](../../../../docs/standard/assembly/reference-assemblies.md) [belirli yapı türlerine](#affected-apis) eklenmiştir. Sonuç olarak, C# ' ta, bu yapı türlerinin her zaman [New işleci](../../../../docs/csharp/language-reference/operators/new-operator.md) veya [Default sabit değeri](../../../../docs/csharp/language-reference/operators/default.md#default-literal)kullanılarak oluşturulması gerekir.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 2.0 ve önceki sürümlerde, örneğin, bazı <xref:System.ConsoleKeyInfo>sağlanan yapı türleri, `new` işleç veya [varsayılan gerçek c#](../../../../docs/csharp/language-reference/operators/default.md#default-literal) kullanmadan anında olabilir. Bunun nedeni, C# derleyicisi tarafından kullanılan [başvuru derlemelerinin](../../../../docs/standard/assembly/reference-assemblies.md) structs için özel alanları içermemesidir. .NET yapı türleri için tüm özel alanlar .NET Core 2.1'den başlayan başvuru derlemelerine eklenir.
+.NET Core 2,0 ve önceki sürümlerinde, bazı sunulan yapı türleri, örneğin,, <xref:System.ConsoleKeyInfo> `new` C# içinde işleç veya [varsayılan değişmez değer](../../../../docs/csharp/language-reference/operators/default.md#default-literal) kullanılmadan oluşturulabilir. Bunun nedeni, C# derleyicisi tarafından kullanılan [başvuru derlemelerinin](../../../../docs/standard/assembly/reference-assemblies.md) yapılar için özel alanlar içermiyordu. .NET yapı türleri için tüm özel alanlar, .NET Core 2,1 ' den başlayarak başvuru derlemelerine eklenir.
 
-Örneğin, aşağıdaki C# kodu .NET Core 2.0'da derler, ancak .NET Core 2.1'de değil:
+Örneğin, aşağıdaki C# kodu .NET Core 2,0 ' de derlenir, ancak .NET Core 2,1 ' de değildir:
 
 ```csharp
 ConsoleKeyInfo key;    // Struct type
@@ -25,17 +25,17 @@ if (key.ToString() == "y")
 }
 ```
 
-.NET Core 2.1'de önceki kod aşağıdaki derleyici hatasıyla sonuçlanır: **CS0165 - Atanmamış yerel değişken 'anahtar' kullanımı**
+.NET Core 2,1 ' de, önceki kod şu derleyici hatasına neden olur: **CS0165-atanmamış yerel değişken ' Key ' kullanımı**
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 2.1
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-`new` İşleç veya [varsayılan literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal)kullanarak yapı türlerini anında.
+`new`İşleç veya [varsayılan değişmez değeri](../../../../docs/csharp/language-reference/operators/default.md#default-literal)kullanarak struct Types örneğini oluşturun.
 
-Örneğin:
+Örnek:
 
 ```csharp
 ConsoleKeyInfo key = new ConsoleKeyInfo();    // Struct type.
@@ -53,7 +53,7 @@ if (key.ToString() == "y")
 
 #### <a name="category"></a>Kategori
 
-Çekirdek .NET kitaplıkları
+Core .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

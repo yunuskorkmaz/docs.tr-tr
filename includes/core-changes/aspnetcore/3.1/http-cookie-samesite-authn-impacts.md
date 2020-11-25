@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8b6d334677991382d235fd53cd3c98e3a77d650d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539624"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032692"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: Browser SameSite değişikliklerinin etkisi kimlik doğrulaması
 
@@ -22,7 +22,7 @@ Bu sorunla ilgili tartışmak için bkz. [DotNet/aspnetcore # 14996](https://git
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Google, geriye doğru uyumlu olmayan yeni bir taslak standardı önerdi. Standart varsayılan modu olarak değiştirir ve geri `Lax` çevirmek için yeni bir giriş ekler `None` . `Lax` çoğu uygulama tanımlama bilgisi için yeterli olacaktır; ancak, OpenID Connect ve WS-Federation oturum açma gibi siteler arası senaryoları keser. İsteğin akışlarına yönelik farklılıklar nedeniyle çoğu OAuth oturum açma işlemleri etkilenmez. Yeni `None` parametre, önceki taslak standardını uygulayan istemcilerle uyumluluk sorunlarına neden olur (örneğin, iOS 12). Chrome 80, değişiklikleri içerir. Chrome ürün başlatma zaman çizelgesi için bkz. [SameSite Updates](https://www.chromium.org/updates/same-site) .
+Google, geriye doğru uyumlu olmayan yeni bir taslak standardı önerdi. Standart varsayılan modu olarak değiştirir ve geri `Lax` çevirmek için yeni bir giriş ekler `None` . `Lax` çoğu uygulama tanımlama bilgisi için yeterli olacaktır; ancak, openıd Connect ve WS-Federation oturum açma gibi siteler arası senaryoları keser. İsteğin akışlarına yönelik farklılıklar nedeniyle çoğu OAuth oturum açma işlemleri etkilenmez. Yeni `None` parametre, önceki taslak standardını uygulayan istemcilerle uyumluluk sorunlarına neden olur (örneğin, iOS 12). Chrome 80, değişiklikleri içerir. Chrome ürün başlatma zaman çizelgesi için bkz. [SameSite Updates](https://www.chromium.org/updates/same-site) .
 
 ASP.NET Core 3,1, yeni davranışı uygulamak için güncelleştirilmiştir `SameSite` . Güncelleştirme, öğesinin davranışını yeniden tanımlar `SameSiteMode.None` `SameSite=None` ve `SameSiteMode.Unspecified` özniteliği atlamak için yeni bir değer ekler `SameSite` . `Unspecified`Tanımlama bilgilerini kullanan bazı bileşenler, OpenID Connect bağıntı ve nonce tanımlama bilgileri gibi senaryolarına daha belirgin bir şekilde değer ayarlamış olsa da, tüm tanımlama bilgisi API 'leri için varsayılan olarak ' i
 
@@ -78,7 +78,7 @@ Elektron sürümleri, daha eski bir Kmıum sürümlerini içerir. Örneğin, Mic
 
 2016 `SameSite` Standart uygulanan, bilinmeyen değerler değer olarak değerlendirilir `SameSite=Strict` . Sonuç olarak, özgün standardı destekleyen eski tarayıcılar, değeri olan bir özellik görtiklerinde kesintiye uğramayabilir `SameSite` `None` . Web uygulamaları, bu eski tarayıcıları desteklemeyi amaçlarsa tarayıcı algılaması gerçekleştirmelidir. ASP.NET Core, `User-Agent` istek üst bilgisi değerleri son derece kararsız olduğundan ve haftalık olarak değişeceğinden sizin için tarayıcı algılaması uygulamaz. Bunun yerine, tanımlama bilgisi ilkesindeki bir uzantı noktası, özel bir mantığı eklemenize olanak tanır `User-Agent` .
 
-*Startup.cs*içinde aşağıdaki kodu ekleyin:
+*Startup.cs* içinde aşağıdaki kodu ekleyin:
 
 ```csharp
 private void CheckSameSite(HttpContext httpContext, CookieOptions options)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ab2fc0645f76870dead99b5f45eef763643fb27
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 83808f2f3a05333ed5d9e3809cbc2fd6e230d02c
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506907"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031787"
 ---
 
 [.NET Core, Snap Store 'da bulunabilir.](https://snapcraft.io/dotnet-sdk)
@@ -15,7 +15,7 @@ Yalnızca .NET Core 'un desteklenen sürümleri yaslama aracılığıyla kullan�
 
 ### <a name="install-the-sdk"></a>SDK Yükleme
 
-.NET SDK için Yaslama paketleri aynı tanımlayıcı altında yayımlanır: `dotnet-sdk` . Belirli bir SDK sürümü kanal belirtilerek yüklenebilir. SDK, birlikte yanıt verme çalışma zamanını içerir. Aşağıdaki tabloda kanallar listelenmektedir:
+.NET SDK için Yaslama paketleri aynı tanımlayıcı altında yayımlanır: `dotnet-sdk` . Belirli bir SDK sürümü kanal belirtilerek yüklenebilir. SDK ilgili çalışma zamanını içerir. Aşağıdaki tabloda kanallar listelenmektedir:
 
 | .NET sürümü | Yaslama paketi             |
 |--------------|--------------------------|
@@ -76,7 +76,7 @@ Running 'dotnet restore' on /home/myhome/test/test.csproj...
 /snap/dotnet-sdk/27/sdk/2.2.103/NuGet.targets(114,5): error :   The remote certificate is invalid according to the validation procedure. [/home/myhome/test/test.csproj]
 ```
 
-Bu sorunu çözmek için birkaç ortamınızı değişkeni ayarlayın:
+Bu sorunu çözmek için birkaç ortam değişkeni ayarlayın:
 
 ```bash
 export SSL_CERT_FILE=[path-to-certificate-file]

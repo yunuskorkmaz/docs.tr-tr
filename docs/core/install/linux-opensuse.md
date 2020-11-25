@@ -4,12 +4,12 @@ description: OpenSUSE üzerinde .NET SDK ve .NET çalışma zamanı yüklemek i�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 17012f3689e5834fd1629946767e931cb22a2c1b
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: eb31e3109ccd40999c22a27607d48544bf117dc2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506908"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031871"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>OpenSUSE 'e .NET SDK veya .NET çalışma zamanı yüklemesi
 
@@ -36,6 +36,10 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 - 3,0
 - 2.2
 - 2,0
+
+## <a name="remove-preview-versions"></a>Önizleme sürümlerini Kaldır
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 

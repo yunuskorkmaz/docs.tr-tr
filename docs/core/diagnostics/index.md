@@ -3,12 +3,12 @@ title: Tanılama araçlarına genel bakış-.NET Core
 description: .NET Core uygulamalarını tanılamak için kullanılabilen araçlara ve tekniklere genel bakış.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982315"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031923"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 'da hangi tanılama araçları kullanılabilir?
 
@@ -27,6 +27,10 @@ Bu makale, ihtiyacınız olan çeşitli araçları bulmanıza yardımcı olur.
 ## <a name="unit-testing"></a>Birim testi
 
 [Birim testi](../testing/index.md) , yüksek kaliteli yazılımların sürekli tümleştirilmesine ve dağıtımına yönelik temel bir bileşendir. Birim testleri, bir şeyi kesen bir erken uyarı sağlayacak şekilde tasarlanmıştır.
+
+## <a name="dumps"></a>Dökümleri
+
+[Döküm](./dumps.md) , oluşturma sırasında işlemin anlık görüntüsünü içeren bir dosyadır. Bunlar, hata ayıklama amacıyla uygulamanızın durumunu incelemek için yararlı olabilir.
 
 ## <a name="collect-diagnostics-in-containers"></a>Kapsayıcılarda tanılama toplama
 

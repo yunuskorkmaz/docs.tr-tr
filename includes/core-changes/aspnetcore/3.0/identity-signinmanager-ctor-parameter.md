@@ -1,30 +1,30 @@
 ---
 ms.openlocfilehash: ed5a90063b8963d79f412ec1c5c0b9030f980f83
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275504"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032788"
 ---
-### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Kimlik: SignInManager constructor yeni parametre kabul eder
+### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Kimlik: SignInManager Oluşturucusu yeni parametreyi kabul ediyor
 
-Core 3.0 ile ASP.NET `IUserConfirmation<TUser>` ile `SignInManager` başlayan, yeni bir parametre oluşturucuya eklendi. Daha fazla bilgi için [dotnet/aspnetcore#8356'ya](https://github.com/dotnet/aspnetcore/issues/8356)bakın.
+ASP.NET Core 3,0 ' den başlayarak, oluşturucuya yeni bir `IUserConfirmation<TUser>` parametre eklenmiştir `SignInManager` . Daha fazla bilgi için bkz. [DotNet/aspnetcore # 8356](https://github.com/dotnet/aspnetcore/issues/8356).
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Değişiklik için motivasyon kimlik yeni e-posta / onay akışları için destek eklemek oldu.
+Değişiklik için mosyon, kimlik içinde yeni e-posta/onay akışları için destek eklemektir.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-El ile bir `SignInManager`inşa, bir `IUserConfirmation` uygulama sağlamak veya sağlamak için bağımlılık enjeksiyon bir kapmak.
+El ile oluşturuyorsanız `SignInManager` , `IUserConfirmation` sağlama veya bağımlılık ekleme için bir uygulama sağlayın.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

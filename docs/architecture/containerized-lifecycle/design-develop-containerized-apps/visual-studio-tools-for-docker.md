@@ -4,11 +4,11 @@ description: Visual Studio 2017 sürüm 15,7 ve sonraki sürümlerde bulunan Doc
 ms.date: 08/06/2020
 ms.custom: vs-dotnet
 ms.openlocfilehash: ae20ebf7c3c27d7f2ebe51c33719b82048f86241
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678933"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032196"
 ---
 # <a name="use-docker-tools-in-visual-studio-on-windows"></a>Windows üzerinde Visual Studio 'da Docker Araçları kullanma
 
@@ -25,7 +25,7 @@ En son Docker for Windows sürümleriyle, aşağıdaki başvurularda açıkland�
 
 Bir projeye ekleyebileceğiniz iki adet Docker desteği düzeyi vardır. ASP.NET Core projelerinde, `Dockerfile` Docker desteğini etkinleştirerek yalnızca projeye bir dosya ekleyebilirsiniz. Bir sonraki düzey, `Dockerfile` Proje (zaten yoksa) ve çözüm düzeyinde bir dosya ekleyen kapsayıcı düzenleme destedir `docker-compose.yml` . Docker Compose aracılığıyla kapsayıcı düzenleme desteği, Visual Studio 2017 sürüm 15,0 ' den 15,7 ' de varsayılan olarak eklenir. Kapsayıcı düzenleme desteği, Visual Studio 2017 sürüm 15,8 veya üzeri bir katılım özelliğidir. Visual Studio 2019 ve üzeri, **Kubernetes/Held** dağıtımını da destekler.
 
-**> Docker desteği ekleme** ve **ekleme > kapsayıcı Orchestrator destek** komutları, Şekil 4-31 ' de gösterildiği gibi **Çözüm Gezgini**içindeki bir ASP.NET Core projesi için proje düğümünün sağ tıklama menüsünde (veya bağlam menüsü) bulunur:
+**> Docker desteği ekleme** ve **ekleme > kapsayıcı Orchestrator destek** komutları, Şekil 4-31 ' de gösterildiği gibi **Çözüm Gezgini** içindeki bir ASP.NET Core projesi için proje düğümünün sağ tıklama menüsünde (veya bağlam menüsü) bulunur:
 
 ![Visual Studio 'da Docker desteği Ekle menü seçeneği](media/add-docker-support-menu.png)
 
@@ -45,9 +45,9 @@ Docker desteğini eklediğinizde veya etkinleştirdiğinizde, Visual Studio proj
 
 Çok kapsayıcılı bir çözüm oluşturmak istediğinizde, projelerinize kapsayıcı düzenleme desteği ekleyin. Bu, aynı _Docker-Compose. yıml_ dosyasında tanımlandıklarında bir kapsayıcı grubunu (bir bütün çözüm) aynı anda çalıştırmanıza ve hata ayıklamanıza olanak tanır.
 
-Kapsayıcı düzenleme desteği eklemek için **Çözüm Gezgini**çözüm veya proje düğümüne sağ tıklayın ve **> kapsayıcı düzenleme desteği ekle**' yi seçin. Ardından, kapsayıcıları yönetmek için **Kubernetes/Held** veya **Docker Compose** seçin.
+Kapsayıcı düzenleme desteği eklemek için **Çözüm Gezgini** çözüm veya proje düğümüne sağ tıklayın ve **> kapsayıcı düzenleme desteği ekle**' yi seçin. Ardından, kapsayıcıları yönetmek için **Kubernetes/Held** veya **Docker Compose** seçin.
 
-Projenize kapsayıcı düzenleme desteğini ekledikten sonra şekil 4-33 ' de gösterildiği gibi, projeye eklenen bir Dockerfile ve **Çözüm Gezgini**çözüme eklenen bir **Docker-Compose** klasörü görürsünüz:
+Projenize kapsayıcı düzenleme desteğini ekledikten sonra şekil 4-33 ' de gösterildiği gibi, projeye eklenen bir Dockerfile ve **Çözüm Gezgini** çözüme eklenen bir **Docker-Compose** klasörü görürsünüz:
 
 ![Visual Studio 'da Çözüm Gezgini Docker dosyaları](media/docker-support-solution-explorer.png)
 
@@ -79,7 +79,7 @@ Aşağıdaki tablo, bu seçeneklerin nasıl ayarlanacağına karar vermenize yar
 | **Docker Compose**                          |                    | Docker Compose sayfası, tek proje sayfasıyla aynı ayarları içerir, ancak bunlar çok Kapsayıcılı çözümler için geçerlidir.                                                                                                                                                                                                                                                                                           |
 
 > [!WARNING]
-> Localhost SSL sertifikasına güvenilmiyor ve seçeneğini **hiçbir zaman**olarak AYARLARSANıZ, HTTPS Web istekleri uygulamanızdaki veya hizmetinizdeki çalışma zamanında başarısız olabilir. Bu durumda, bir kez daha önce **sorulması** için değeri yeniden, daha iyi bir şekilde ayarlamak için komutunu kullanarak geliştirme makinenizdeki sertifikalara güvenin `dotnet dev-certs https --trust` .
+> Localhost SSL sertifikasına güvenilmiyor ve seçeneğini **hiçbir zaman** olarak AYARLARSANıZ, HTTPS Web istekleri uygulamanızdaki veya hizmetinizdeki çalışma zamanında başarısız olabilir. Bu durumda, bir kez daha önce **sorulması** için değeri yeniden, daha iyi bir şekilde ayarlamak için komutunu kullanarak geliştirme makinenizdeki sertifikalara güvenin `dotnet dev-certs https --trust` .
 
 > [!TIP]
 > Hizmet uygulamasıyla ilgili daha fazla ayrıntı ve Docker için Visual Studio Araçları kullanımı için aşağıdaki makaleleri okuyun:

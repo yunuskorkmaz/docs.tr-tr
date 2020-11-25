@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: cd66317bc93343e03a73dec74dff534776ca42e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73198589"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032772"
 ---
-### <a name="http-response-body-infrastructure-changes"></a>HTTP: Yanıt gövde altyapı değişiklikleri
+### <a name="http-response-body-infrastructure-changes"></a>HTTP: yanıt gövdesi altyapı değişiklikleri
 
-BIR HTTP yanıt organını destekleyen altyapı değişti. Doğrudan kullanıyorsanız, `HttpResponse` herhangi bir kod değişikliği yapmanız gerekmez. Sarma lıyor, değiştiriyor `HttpResponse.Body` veya erişiyorsanız `HttpContext.Features`daha fazla bilgi edinin.
+Bir HTTP yanıt gövdesini yedekleyen altyapı değişti. `HttpResponse`Doğrudan kullanıyorsanız, herhangi bir kod değişikliği yapmanız gerekmez. Sarmalandıysanız veya değiştiriyorsanız daha fazla bilgi edinin `HttpResponse.Body` `HttpContext.Features` .
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
@@ -24,19 +24,19 @@ HTTP yanıt gövdesi ile ilişkili üç API vardı:
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Değiştirirseniz, `HttpResponse.Body`beklenen API'lerin tümü için varsayılan uygulamaları `StreamResponseBodyFeature` sağlamak için verilen akışınızın etrafındaki bir sarmalayıcıyla tümünün `IHttpResponseBodyFeature` yerini alır. Özgün akışı geri ayarlamak bu değişikliği geri döndürer.
+`HttpResponse.Body`' Yi değiştirirseniz, `IHttpResponseBodyFeature` `StreamResponseBodyFeature` tüm beklenen API 'ler için varsayılan uygulamalar sağlamak üzere, kullanarak, verilen akışın çevresindeki bir sarmalayıcı ile tamamen değiştirilir. Özgün akışın geri ayarlanması bu değişikliği geri alır.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Motivasyon tek bir yeni özellik arabirimi içine yanıt gövdesi API'ler birleştirmektir.
+Mosyon, yanıt gövdesi API 'Lerini tek bir yeni özellik arabirimi halinde birleştirmenize olanak sağlar.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Daha `IHttpResponseBodyFeature` önce kullandığınız `IHttpResponseFeature.Body` `IHttpSendFileFeature`yeri , `IHttpBufferingFeature`veya .
+`IHttpResponseBodyFeature`Daha önce, veya kullandığınızı kullanın `IHttpResponseFeature.Body` `IHttpSendFileFeature` `IHttpBufferingFeature` .
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

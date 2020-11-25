@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 07dd58c314c826c426193b829ea1f64669fb888b
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 540eebd957ce8ce0928db2bd8317cb220cba30bb
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594578"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031777"
 ---
 
 [DotNet yükleme betikleri](../../tools/dotnet-install-script.md) , **SDK** ve **çalışma zamanının** Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği konumundan indirebilirsiniz <https://dot.net/v1/dotnet-install.sh> .
 
-Komut dosyası, .NET 3,1 olan en son SDK [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. (LTS) sürümü olmayan geçerli sürümü yüklemek için `-c Current` parametresini kullanın.
+Komut dosyası, .NET Core 3,1 olan en son SDK [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan olarak kullanılır. (LTS) sürümü olmayan geçerli sürümü yüklemek için `-c Current` parametresini kullanın.
 
 ```bash
 ./dotnet-install.sh -c Current
