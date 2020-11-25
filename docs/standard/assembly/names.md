@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [.NET], assemblies
 - assemblies [.NET], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-ms.openlocfilehash: 136c3b7a06ce72be02e00bcc4d2354160178468c
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 9aa94b4ee54c0a663c9f38392d37369af9f27e48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687581"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731455"
 ---
 # <a name="assembly-names"></a>Derleme adları
 
@@ -48,6 +48,7 @@ Sürüm, .NET Framework sürüm 1,0 ile birlikte gelen tüm .NET Framework derle
 > Çalışma zamanı derleme adlarını bir derlemeye bağlarken büyük/küçük harfe duyarsız olarak değerlendirir, ancak bir derleme adında hangi durumun kullanıldığını korur. Windows SDK çeşitli araçlar, derleme adlarını büyük/küçük harfe duyarlı olarak işler. En iyi sonuçlar için, derleme adlarını büyük küçük harfe duyarlı olsalar gibi yönetin.
 
 ## <a name="name-application-components"></a>Uygulama bileşenlerini Adlandır
+
  Çalışma zamanı, bir derlemenin kimliğini belirlerken dosya adını dikkate almaz. Derleme adı, sürüm, kültür ve tanımlayıcı adından oluşan derleme kimliğinin çalışma zamanına açık olması gerekir.
 
  Örneğin, *myAssembly.dll* adlı bir derlemeye başvuran *myAssembly.exe* adlı bir derlemeye sahipseniz, *myAssembly.exe* çalıştırırsanız bağlama doğru bir şekilde gerçekleşir. Ancak, yöntemi kullanarak başka bir uygulama *myAssembly.exe* yürütülüyorsa <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> , çalışma zamanı, `myAssembly` *myAssembly.exe* istekleri istediğinde zaten yüklü olduğunu belirler `myAssembly` . Bu durumda *myAssembly.dll* hiçbir şekilde yüklenmez. *myAssembly.exe* istenen türü içermediğinden, bir <xref:System.TypeLoadException> meydana gelir.
@@ -55,7 +56,7 @@ Sürüm, .NET Framework sürüm 1,0 ile birlikte gelen tüm .NET Framework derle
  Bu sorunu önlemek için, uygulamanızı oluşturan derlemelerin aynı derleme adına sahip olmadığından ve farklı dizinlerde aynı ada sahip derlemeler içerdiğinden emin olun.
 
 > [!NOTE]
-> .NET Framework, genel derleme önbelleğine tanımlayıcı adlandırılmış bir derleme yerleştirirseniz, derlemenin dosya adı, *. exe* veya *. dll* gibi dosya adı uzantısını dahil değil, derleme adıyla eşleşmelidir. Örneğin, bir derlemenin dosya adı *myAssembly.dll* , derleme adı olmalıdır `myAssembly` . Yalnızca kök uygulama dizininde dağıtılan özel derlemeler, dosya adından farklı bir derleme adına sahip olabilir.
+> .NET Framework, genel derleme önbelleğine tanımlayıcı adlandırılmış bir derleme yerleştirirseniz, derlemenin dosya adı, *. exe* veya *. dll* gibi dosya adı uzantısını dahil değil, derleme adıyla eşleşmelidir. Örneğin, bir derlemenin dosya adı *myAssembly.dll*, derleme adı olmalıdır `myAssembly` . Yalnızca kök uygulama dizininde dağıtılan özel derlemeler, dosya adından farklı bir derleme adına sahip olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

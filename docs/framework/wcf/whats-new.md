@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: b6ce7fe19a8d7cc00823502e322ee53a1bd0a931
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 76b52cedd1e2e64805e2ad47e582d07ca70415cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245628"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731559"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5'teki Yenilikler
 
@@ -31,7 +31,7 @@ Visual Studio 'da bir hizmet başvurusu eklediğinizde veya SvcUtil.exe aracın�
 
 Daha fazla bilgi için bkz. [WCF basitleştirme özellikleri](wcf-simplification-features.md).
 
-### <a name="contract-first-development"></a>Sözleşme-Ilk geliştirme
+### <a name="contract-first-development"></a>Contract-First geliştirme
 
 WCF artık sözleşmenin ilk geliştirmeyi destekler. svcutil.exe bir WSDL belgesinden hizmet ve veri sözleşmeleri oluşturmanıza olanak sağlayan bir/serviceContract anahtarı vardır.
 
@@ -49,7 +49,7 @@ Yapılandırmayı basitleştirmek için, bir dizi Aktarım özelliği varsayıla
 
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 
-<xref:System.Xml.XmlDictionaryReaderQuotas>bir ileti oluştururken kodlayıcı tarafından kullanılan bellek miktarını sınırlayan, XML sözlüğü okuyucuları için yapılandırılabilir kota değerleri içerir. Bu kotalar yapılandırılabilir olsa da, varsayılan değerler bir geliştiricinin bunları açıkça ayarlamak zorunda olma olasılığını azaltmak üzere değiştirilmiştir. Daha fazla bilgi için bkz. [WCF basitleştirme özellikleri](wcf-simplification-features.md).
+<xref:System.Xml.XmlDictionaryReaderQuotas> bir ileti oluştururken kodlayıcı tarafından kullanılan bellek miktarını sınırlayan, XML sözlüğü okuyucuları için yapılandırılabilir kota değerleri içerir. Bu kotalar yapılandırılabilir olsa da, varsayılan değerler bir geliştiricinin bunları açıkça ayarlamak zorunda olma olasılığını azaltmak üzere değiştirilmiştir. Daha fazla bilgi için bkz. [WCF basitleştirme özellikleri](wcf-simplification-features.md).
 
 ### <a name="wcf-configuration-validation"></a>WCF yapılandırma doğrulaması
 
@@ -73,7 +73,7 @@ Bazı üçüncü taraf WSDL işlem yığınları, bir xsd: Import aracılığıy
 
 ## <a name="websocket-support"></a>WebSocket desteği
 
-WebSockets, TCP 'ye benzer performans özellikleriyle 80 ve 443 bağlantı noktaları üzerinden doğru çift yönlü iletişim sağlayan bir teknolojidir. WebSocket aktarımı üzerinden iletişimi desteklemek için iki yeni bağlama eklenmiştir. <xref:System.ServiceModel.NetHttpBinding> ve <xref:System.ServiceModel.NetHttpsBinding>. Daha fazla bilgi için bkz: [sistem tarafından sunulan bağlamalar](system-provided-bindings.md).
+WebSockets, TCP 'ye benzer performans özellikleriyle 80 ve 443 bağlantı noktaları üzerinden doğru çift yönlü iletişim sağlayan bir teknolojidir. WebSocket aktarımı üzerinden iletişimi desteklemek için iki yeni bağlama eklenmiştir. <xref:System.ServiceModel.NetHttpBinding> ve <xref:System.ServiceModel.NetHttpsBinding> . Daha fazla bilgi için bkz: [sistem tarafından sunulan bağlamalar](system-provided-bindings.md).
 
 ## <a name="new-transport-default-values"></a>Yeni aktarım varsayılan değerleri
 
@@ -93,7 +93,7 @@ Yeni ve mevcut WCF hizmeti geliştiricilerinin hizmetlerini yapılandırmasına 
 
 ## <a name="configuring-wcf-services-in-code"></a>WCF Hizmetlerini Kodda Yapılandırma
 
-Windows Communication Foundation (WCF), geliştiricilerin yapılandırma dosyalarını veya kodu kullanarak hizmetleri yapılandırmalarına olanak tanır. Yapılandırma dosyaları, bir hizmetin dağıtıldıktan sonra yapılandırılması gerektiğinde faydalıdır. Yapılandırma dosyalarını kullanırken, bir BT uzmanı 'nın yalnızca yapılandırma dosyasını güncelleştirmesi gerekir, yeniden derleme gerekmez. Bununla birlikte yapılandırma dosyaları, karmaşık ve bakım açısından zor olabilir. Yapılandırma dosyalarını hata ayıklama desteği yoktur ve yapılandırma öğeleri, yazma yapılandırma dosyalarını hata-açık ve zor hale getiren adlara göre başvurulur. WCF Ayrıca koddaki Hizmetleri yapılandırmanıza de olanak tanır. WCF 'nin önceki sürümlerinde (4,0 ve önceki sürümler), kodda hizmetleri yapılandırmak kendi kendine barındırılan senaryolarda kolaydır, <xref:System.ServiceModel.ServiceHost> sınıf ServiceHost. Open çağrılmadan önce uç noktaları ve davranışları yapılandırmanıza izin verilir. Ancak, Web 'de barındırılan senaryolarda sınıfına erişiminiz yok <xref:System.ServiceModel.ServiceHost> . Web 'de barındırılan bir hizmeti yapılandırmak için `System.ServiceModel.ServiceHostFactory` , oluşturmuş <xref:System.ServiceModel.Activation.ServiceHostFactory> ve gerekli tüm yapılandırmaları gerçekleştirmiş bir oluşturma gerekiyordu. WCF, .NET 4,5 ile başlayarak, kodda hem şirket içinde barındırılan hem de Web 'de barındırılan Hizmetleri yapılandırmanın daha kolay bir yolunu sunar. Daha fazla bilgi için bkz. [KODDA WCF hizmetlerini yapılandırma](configuring-wcf-services-in-code.md).
+Windows Communication Foundation (WCF), geliştiricilerin yapılandırma dosyalarını veya kodu kullanarak hizmetleri yapılandırmalarına olanak tanır. Yapılandırma dosyaları, bir hizmetin dağıtıldıktan sonra yapılandırılması gerektiğinde faydalıdır. Yapılandırma dosyalarını kullanırken, bir BT uzmanı 'nın yalnızca yapılandırma dosyasını güncelleştirmesi gerekir, yeniden derleme gerekmez. Bununla birlikte yapılandırma dosyaları, karmaşık ve bakım açısından zor olabilir. Yapılandırma dosyalarını hata ayıklama desteği yoktur ve yapılandırma öğeleri, yazma yapılandırma dosyalarını hata-açık ve zor hale getiren adlara göre başvurulur. WCF Ayrıca koddaki Hizmetleri yapılandırmanıza de olanak tanır. WCF 'nin önceki sürümlerinde (4,0 ve önceki sürümler), kodda hizmetleri yapılandırmak kendi kendine barındırılan senaryolarda kolaydır, <xref:System.ServiceModel.ServiceHost> sınıf ServiceHost. Open çağrılmadan önce uç noktaları ve davranışları yapılandırmanıza izin verilir. Ancak, Web 'de barındırılan senaryolarda sınıfına erişiminiz yok <xref:System.ServiceModel.ServiceHost> . Web 'de barındırılan bir hizmeti yapılandırmak için `System.ServiceModel.ServiceHostFactory` , oluşturmuş <xref:System.ServiceModel.Activation.ServiceHostFactory> ve gerekli tüm yapılandırmaları gerçekleştirmiş bir oluşturma gerekiyordu. .NET Framework 4,5 ' den başlayarak, WCF hem şirket içinde barındırılan hem de Web 'de barındırılan hizmetleri yapılandırmak için daha kolay bir yol sağlar. Daha fazla bilgi için bkz. [KODDA WCF hizmetlerini yapılandırma](configuring-wcf-services-in-code.md).
 
 ## <a name="channelfactory-caching"></a>ChannelFactory önbelleğe alma
 

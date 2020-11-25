@@ -4,12 +4,12 @@ description: .NET uygulamaları ve kitaplıklarını anlatmak ve içermesi için
 author: richlander
 ms.date: 08/20/2019
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 1e98f0beb6756c9a02b2839eb88d6a5b13375786
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b1de3f46f04f24dd4bbb2f695de8741feb29f226
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822197"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731546"
 ---
 # <a name="net-assembly-file-format"></a>.NET derlemesi dosya biçimi
 
@@ -17,7 +17,7 @@ ms.locfileid: "94822197"
 
 > Her CLı bileşeni, bu bileşene özgü bildirimler, uygulamalar ve başvurular için meta verileri taşır. Bu nedenle, bileşene özgü meta veriler bileşen meta verileri olarak adlandırılır ve sonuçta elde edilen bileşen ECMA 335 I. 9.1, bileşenler ve derlemelerden kendi kendine açıklanmaktadır.
 
-Biçim tam olarak belirtilmiştir ve [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm)olarak standartlaştırılmış olur. Tüm .NET derleyicileri ve çalışma zamanları bu biçimi kullanır. Belgelenmiş ve sık güncelleştirilmemiş bir ikili biçiminin varlığı, birlikte çalışabilirlik için önemli bir avantajdır (korumalı bir gereksinimdir). Biçim en son, 2005 (.NET 2,0) ' de genel türler ve işlemci mimarisine uyum sağlamak için en son bir şekilde güncelleştirildi.
+Biçim tam olarak belirtilmiştir ve [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm)olarak standartlaştırılmış olur. Tüm .NET derleyicileri ve çalışma zamanları bu biçimi kullanır. Belgelenmiş ve sık güncelleştirilmemiş bir ikili biçiminin varlığı, birlikte çalışabilirlik için önemli bir avantajdır (korumalı bir gereksinimdir). Biçim en son, genel türler ve işlemci mimarisine uyum sağlamak için 2005 (.NET Framework 2,0) ' de bir yinelenen şekilde güncelleştirildi.
 
 Biçim CPU ve işletim sistemi belirsiz ' dir. Birçok yongaları ve CPU 'yu hedefleyen .NET uygulamalarının bir parçası olarak kullanılmıştır. Biçimin kendisi Windows herıt 'e sahip olsa da, herhangi bir işletim sisteminde uyguıtable olur. İşletim sistemi ile birlikte çalışabilirlik için en önemli seçenek, çoğu değerin küçük endian biçiminde depolanmasıdır. Makine işaretçi boyutuna özgü bir benzeşimine sahip değildir (örneğin, 32 bit, 64 bit).
 

@@ -6,19 +6,21 @@ helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-ms.openlocfilehash: f0160f033760582c914a0d64c21415e5e921d907
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: b9c690c77dafc247f7282c3f56384481efe53399
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811086"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731533"
 ---
 # <a name="enhanced-strong-naming"></a>Tanımlayıcı adlandırmayı iyileştirme
+
 Tanımlayıcı ad imzası, derlemeleri tanımlamak için .NET Framework bir kimlik mekanizmasıdır. Genellikle bir oluşturana (imzalayan) bir alıcıya (Doğrulayıcı) geçirilen verilerin bütünlüğünü doğrulamak için kullanılan ortak anahtar dijital imzadır. Bu imza, bir derleme için benzersiz bir kimlik olarak kullanılır ve derlemeye yapılan başvuruların belirsiz olmamasını sağlar. Derleme, derleme sürecinin bir parçası olarak imzalanır ve sonra yüklendiğinde doğrulanır.  
   
  Tanımlayıcı ad imzaları kötü amaçlı tarafların bir bütünleştirilmiş koda müdahale etmelerini önlemeye yardımcı olur ve derlemeyi özgün imzalayan anahtarıyla yeniden imzalamasını önler. Ancak, tanımlayıcı ad anahtarları yayımcı hakkında güvenilir bilgiler içermez ve bir sertifika hiyerarşisi içermez. Tanımlayıcı ad imzası, derlemeyi imzalayan kişinin güvenilirliğini garanti etmez veya bu kişinin, anahtarın meşru sahibi olup olmadığını belirtir; yalnızca anahtarın sahibinin derlemeyi imzaladığı anlamına gelir. Bu nedenle, üçüncü taraf koda güvenmek için bir güvenlik doğrulayıcısı olarak tanımlayıcı ad imzası kullanılması önerilmez. Microsoft Authenticode, kodun kimliğini doğrulamak için önerilen yoldur.  
   
 ## <a name="limitations-of-conventional-strong-names"></a>Geleneksel tanımlayıcı adların sınırlamaları  
+
  .NET Framework 4,5 ' den önceki sürümlerde kullanılan tanımlayıcı adlandırma teknolojisinin aşağıdaki eksiklikleri vardır:  
   
 - Anahtarlar sürekli saldırı aşamasındadır ve geliştirilmiş teknikler ve donanımlar, ortak anahtardan özel bir anahtar çıkarmayı kolaylaştırır. Saldırılara karşı koruma sağlamak için daha büyük anahtarlar gereklidir. .NET Framework 4,5 ' den önceki sürümlerde .NET Framework, herhangi bir boyut anahtarıyla (varsayılan boyut 1024 bit) oturum açabilme olanağı sağlar, ancak yeni bir anahtarla bir derlemeyi imzalamak, derlemenin eski kimliğine başvuran tüm ikili dosyaları keser. Bu nedenle, uyumluluk sağlamak istiyorsanız İmzalama anahtarının boyutunu yükseltmek son derece zordur.  
@@ -26,6 +28,7 @@ Tanımlayıcı ad imzası, derlemeleri tanımlamak için .NET Framework bir kiml
 - Tanımlayıcı ad imzalama yalnızca SHA-1 algoritmasını destekler. SHA-1 ' in yakın zamanda güvenli karma uygulamalar için yetersiz olduğu belirlenmiştir. Bu nedenle, daha güçlü bir algoritma (SHA-256 veya üzeri) gereklidir. SHA-1 ' i, FIPS ile uyumlu olan ve yalnızca FIPS uyumlu yazılım ve algoritmaları kullanmayı seçen sorunlar sunacak şekilde kaybedecektir.  
   
 ## <a name="advantages-of-enhanced-strong-names"></a>Gelişmiş tanımlayıcı adların avantajları  
+
  Gelişmiş tanımlayıcı adların başlıca avantajları, önceden var olan kesin adlarla ve bir kimliğin diğerine eşdeğer bir şekilde talep etme özelliği ile uyumludur:  
   
 - Önceden varolan imzalı derlemeler içeren geliştiriciler, eski kimliklere başvuran Derlemelerle uyumluluğu sürdürirken kimliklerini SHA-2 algoritmalarına geçirebilir.  
@@ -33,11 +36,13 @@ Tanımlayıcı ad imzası, derlemeleri tanımlamak için .NET Framework bir kiml
 - Yeni derlemeler oluşturan ve önceden var olan güçlü ad imzalarıyla ilgilenme yapan geliştiriciler, daha güvenli SHA-2 algoritmalarını kullanabilir ve derlemeleri her zaman sahip oldukları şekilde imzalayabilirler.  
   
 ## <a name="use-enhanced-strong-names"></a>Gelişmiş tanımlayıcı adlar kullanın  
+
  Tanımlayıcı ad anahtarları bir imza anahtarından ve bir kimlik anahtarından oluşur. Derleme imza anahtarıyla imzalanır ve kimlik anahtarı tarafından tanımlanır. .NET Framework 4,5 ' den önce bu iki anahtar birbirinin aynısıdır. .NET Framework 4,5 ' den başlayarak, kimlik anahtarı önceki .NET Framework sürümlerle aynı kalır, ancak imza anahtarı daha güçlü bir karma algoritmayla geliştirilmiştir. Ayrıca, imza anahtarı kimlik anahtarıyla imzalanır ve bir sayaç imzası oluşturulur.  
   
  <xref:System.Reflection.AssemblySignatureKeyAttribute>Özniteliği, derleme meta verilerinin derleme kimliği için önceden mevcut ortak anahtarı kullanmasını sağlar, bu da eski derleme başvurularının çalışmaya devam etmesine olanak tanır.  <xref:System.Reflection.AssemblySignatureKeyAttribute>Özniteliği, yeni imza anahtarı sahibinin de eski kimlik anahtarının sahibi olduğundan emin olmak için sayaç imzasını kullanır.  
   
 ### <a name="sign-with-sha-2-without-key-migration"></a>Anahtar Geçişi olmadan SHA-2 ile imzala  
+
  Bir derlemeyi tanımlayıcı ad imzasına geçirmeden imzalamak için komut isteminden aşağıdaki komutları çalıştırın:  
   
 1. Yeni kimlik anahtarını (gerekliyse) oluşturun.  
@@ -65,6 +70,7 @@ Tanımlayıcı ad imzası, derlemeleri tanımlamak için .NET Framework bir kiml
     ```  
   
 ### <a name="sign-with-sha-2-with-key-migration"></a>Anahtar geçişi ile SHA-2 ile oturum açma  
+
  Bir derlemeyi geçirilmiş bir tanımlayıcı ad imzasıyla imzalamak için komut isteminden aşağıdaki komutları çalıştırın.  
   
 1. Bir kimlik ve imza anahtarı çifti oluşturun (gerekirse).  

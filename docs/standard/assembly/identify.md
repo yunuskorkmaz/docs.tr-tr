@@ -6,12 +6,12 @@ ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: fb1bcfa50ec380f10ab67cc47331f91dc3e4b32d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b78acaad31996f8fc2b965f51f541e99aeceb111
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380142"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731507"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly"></a>Nasıl yapılır: bir dosyanın derleme olup olmadığını belirleme
 
@@ -19,7 +19,7 @@ Bir dosya, yalnızca yönetilmiyorsa ve meta verilerinde bir derleme girişi iç
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Bir dosyanın derleme olup olmadığını el ile belirleme  
   
-1. [Ildadsm. exe ' yi (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md)başlatın.  
+1. Ildasm.exe başlatın [ (Il ayırıcı)](../../framework/tools/ildasm-exe-il-disassembler.md).  
   
 2. Sınamak istediğiniz dosyayı yükleyin.  
   
@@ -32,6 +32,7 @@ Bir dosya, yalnızca yönetilmiyorsa ve meta verilerinde bir derleme girişi iç
 2. Bir <xref:System.BadImageFormatException> özel durum oluşturulursa, dosya bir derleme değildir.  
   
 ## <a name="example"></a>Örnek  
+
 Bu örnek, bir derleme olup olmadığını görmek için bir DLL 'yi sınar.  
 
 ```csharp

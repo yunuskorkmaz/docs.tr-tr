@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: ac6de9a16fad6ba9d14f3960ddd28c42c111f254
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b1672d98d76241e5af4b6b60a38785f1278e15a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009398"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731598"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName Yöntemi
+
 Adı ve kapsayan türü verilen, verilen bir türe yönelik bir işaretçi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT FindExportedTypeByName (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `szName`  
  'ndaki İçe aktarılmış türün adı.  
   
@@ -46,14 +48,16 @@ HRESULT FindExportedTypeByName (
  dışı Bir belirteç için, `mdExportedType` dışarıya eklenen türü temsil eden bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `FindExportedTypeByName`Yöntemi, başvuruları çözümlemek için ortak dil çalışma zamanı tarafından çalıştırılan standart kuralları kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

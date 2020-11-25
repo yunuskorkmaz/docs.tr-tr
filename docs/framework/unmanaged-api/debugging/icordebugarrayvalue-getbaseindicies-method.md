@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-ms.openlocfilehash: 9aadbe7c6f18c6b15350267d1f9ecaa3a23cdd20
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ea5c5a728afb9ac90f8599c833caab11fd0c65fe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895065"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731468"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies Metodu
+
 Dizideki her boyutun temel dizinini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetBaseIndicies (  
@@ -36,13 +37,15 @@ HRESULT GetBaseIndicies (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cdim`  
- 'ndaki Bu `ICorDebugArrayValue` nesnenin boyut sayısı. Bu değer Ayrıca, boyutu `indicies` `ICorDebugArrayValue` nesnenin boyut sayısına eşit olduğundan dizinin boyutudur.  
+ 'ndaki Bu nesnenin boyut sayısı `ICorDebugArrayValue` . Bu değer Ayrıca, `indicies` boyutu nesnenin boyut sayısına eşit olduğundan dizinin boyutudur `ICorDebugArrayValue` .  
   
  `indicies`  
- dışı Her biri, bu `ICorDebugArrayValue` nesnenin bir boyutunun temel dizini (yani, başlangıç dizini) olan tamsayılar dizisi.  
+ dışı Her biri, bu nesnenin bir boyutunun temel dizini (yani, başlangıç dizini) olan tamsayılar dizisi `ICorDebugArrayValue` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

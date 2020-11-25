@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-ms.openlocfilehash: 40766ce5837053493f2e3f1f25fe7d1d63ec695f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7c77cb2e89cb8fd87bf219780b9460649de19c9d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616811"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731777"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost Coclass’ı
+
 Çalışma zamanı tarafından kod yürütmeyi yönetmek için arabirimler sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 coclass CLRRuntimeHost {  
@@ -41,11 +42,12 @@ coclass CLRRuntimeHost {
 |[ICLRValidator Arabirimi](iclrvalidator-interface.md)|Taşınabilir yürütülebilir görüntülerin doğrulanması ve doğrulama hatalarının ayrıntılı raporlanması için yöntemler sağlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. IDL  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

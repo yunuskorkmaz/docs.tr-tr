@@ -9,16 +9,16 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-ms.openlocfilehash: 4b3bf6f7f6b8cf459a13dd0aca45069f82d01130
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 365c21c6ea35683d7d3fad777cab3527103903c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687583"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731520"
 ---
 # <a name="assembly-manifest"></a>Derleme bildirimi
 
-Statik veya dinamik tüm derlemeler, derleme içindeki öğelerin birbirleriyle nasıl ilişkili olduğunu açıklayan bir veri koleksiyonu içerir. Derleme bildirimi, bu derleme metaverilerini içerir. Bir derleme bildirimi, derlemenin sürüm gereksinimlerini ve güvenlik kimliğini belirtmek, derlemenin kapsamını tanımlamak ve kaynaklara, sınıflara yapılan atıfları çözmek için gereken tüm metaverileri içerir. Derleme bildirimi, Microsoft ara dili (MSIL) koduna sahip bir PE dosyasında ( *. exe* veya *. dll* ) ya da yalnızca derleme bildirimi bilgilerini IÇEREN tek başına bir pe dosyasında depolanabilir.  
+Statik veya dinamik tüm derlemeler, derleme içindeki öğelerin birbirleriyle nasıl ilişkili olduğunu açıklayan bir veri koleksiyonu içerir. Derleme bildirimi, bu derleme metaverilerini içerir. Bir derleme bildirimi, derlemenin sürüm gereksinimlerini ve güvenlik kimliğini belirtmek, derlemenin kapsamını tanımlamak ve kaynaklara, sınıflara yapılan atıfları çözmek için gereken tüm metaverileri içerir. Derleme bildirimi, Microsoft ara dili (MSIL) koduna sahip bir PE dosyasında ( *. exe* veya *. dll*) ya da yalnızca derleme bildirimi bilgilerini IÇEREN tek başına bir pe dosyasında depolanabilir.  
   
  Aşağıdaki görselde, bildirimin saklanabileceği farklı şekilleri gösterilmektedir.  
   
@@ -39,6 +39,7 @@ Statik veya dinamik tüm derlemeler, derleme içindeki öğelerin birbirleriyle 
 - Derlemeyi kendini açıklayan hale getirir.  
   
 ## <a name="assembly-manifest-contents"></a>Bütünleştirilmiş kod bildirim içerikleri  
+
  Aşağıdaki tabloda, derleme bildiriminde bulunan bilgiler gösterilmektedir. İlk dört öğe: derleme adı, sürüm numarası, kültür ve tanımlayıcı ad bilgileri derlemenin kimliğini yapar.  
   
 |Bilgi|Açıklama|  

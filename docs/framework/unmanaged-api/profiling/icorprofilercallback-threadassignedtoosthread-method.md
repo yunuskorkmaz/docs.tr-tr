@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f9671e5a-7b14-4f5b-8404-58136422c8b2
 topic_type:
 - apiref
-ms.openlocfilehash: 182a82300183046ccb4a93a79af0dd8f23848c20
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d6f34d88dd79fe350f1c018e3afa55e5b180c46
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503186"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732014"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread Yöntemi
+
 Profil oluşturucuyu yönetilen bir iş parçacığının belirli bir işletim sistemi iş parçacığı kullanılarak uygulandığını bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT ThreadAssignedToOSThread(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `managedThreadId`  
  'ndaki Yönetilen iş parçacığının tanımlayıcısı.  
   
@@ -41,9 +43,11 @@ HRESULT ThreadAssignedToOSThread(
  'ndaki İşletim sistemi iş parçacığının tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ThreadAssignedToOSThread`Geri çağırma, profil oluşturucunun, işletim sistemi iş parçacıklarının, yönetilen iş parçacıkları arasında doğru bir eşlemeyi koruyabilmesi için vardır.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
