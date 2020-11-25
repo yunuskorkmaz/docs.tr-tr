@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb5ffae5-287b-4a87-9ca8-7ce3ae0601b7
 topic_type:
 - apiref
-ms.openlocfilehash: 7f09cb2264b21fdfbc892069f2c2f0a963b131f8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cfc384a71ac7e91181bdec09f0d385bacbe31753
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615975"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716674"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList Metodu
+
 Sağlanan kısmi derleme kimlikleri listesinden bir [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) örneğine yönelik bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT  GetCLRAssemblyReferenceList (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `ppwzAssemblyReferences`  
  'ndaki "Ad, özellik = değer..." biçiminde null ile sonlandırılmış dizeler dizisi Bu, kısmi derleme kimliklerinin bir listesini belirtir.  
   
@@ -43,7 +45,7 @@ HRESULT  GetCLRAssemblyReferenceList (
  'ndaki İçindeki öğe sayısı `ppwzAssemblyReferences` .  
   
  `ppReferenceList`  
- dışı `ICLRAssemblyReferenceList`İçinde belirtilen derlemelerin listesi için derleme kimliği verilerini içeren bir nesneye yönelik arabirim işaretçisi `ppwzAssemblyReferences` .  
+ dışı `ICLRAssemblyReferenceList` İçinde belirtilen derlemelerin listesi için derleme kimliği verilerini içeren bir nesneye yönelik arabirim işaretçisi `ppwzAssemblyReferences` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -57,11 +59,12 @@ HRESULT  GetCLRAssemblyReferenceList (
 |E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

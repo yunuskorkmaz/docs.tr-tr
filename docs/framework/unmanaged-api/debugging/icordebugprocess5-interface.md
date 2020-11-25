@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-ms.openlocfilehash: 1953a3e0492e4cfcdaea761b68ea22cf5a4a8ed7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cef69ac7e3572b67dd676ce8408e4210d93accf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205526"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717584"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 Arabirimi
+
 Yönetilen yığına erişimi desteklemek, yönetilen nesnelerin çöp toplaması hakkında bilgi sağlamak ve bir hata ayıklayıcının uygulamanın yerel yerel görüntü önbelleğinden görüntü yükleyip yüklememeyeceğini anlamak için ICorDebugProcess arabirimini genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -42,12 +43,14 @@ Yönetilen yığına erişimi desteklemek, yönetilen nesnelerin çöp toplamas�
 |[GetTypeLayout Yöntemi](icordebugprocess5-gettypelayout-method.md)|Bir nesnenin tür tanımlayıcısına göre bellek içindeki düzeni hakkında bilgi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu arabirim, ICorDebugProcess, ICorDebugProcess2 ve [ICorDebugProcess3](icordebugprocess3-interface.md) arabirimlerini mantıksal olarak genişletir.  
   
 > [!NOTE]
 > Bu arabirim, başka bir makineden ya da başka bir işlemden uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

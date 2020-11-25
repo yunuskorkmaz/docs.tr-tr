@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-ms.openlocfilehash: ea7f7a9d4589e4f08b1b1e20b4d073bb5f822714
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0ed83005bd4ab23124a458a024985d011dfce8c1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212769"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717610"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID Metodu
+
 Bir tür tanımlayıcısını ICorDebugType değerine dönüştürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetTypeForTypeID(  
@@ -35,6 +36,7 @@ HRESULT GetTypeForTypeID(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `id`  
  'ndaki Tür tanımlayıcısı.  
   
@@ -42,9 +44,11 @@ HRESULT GetTypeForTypeID(
  dışı ICorDebugType nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bazı durumlarda, bir tür tanımlayıcısı döndüren yöntemler null `COR_TYPEID` değer döndürebilir. Bu değer `id` bağımsız değişken olarak geçirilirse, `GetTypeForTypeID` yöntemi başarısız olur ve döndürür `E_FAIL` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

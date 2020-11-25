@@ -12,14 +12,15 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - blocking application execution
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
-ms.openlocfilehash: 15750575aaa4f937104bd36db5f9dedd4cd12f0a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1e7fc71ef5a4a44b2bb4c039305e06c157c65f75
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830473"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716167"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Bir AsyncWaitHandle Kullanarak Uygulamanın Yürütülmesini Engelleme
+
 Zaman uyumsuz bir işlemin sonuçlarının, işlem tamamlanana kadar durdurulması gerekir. Zaman uyumsuz bir işlemin tamamlanmasını beklerken uygulamanızın ana iş parçacığını engellemek için aşağıdaki seçeneklerden birini kullanın:  
   
 - <xref:System.IAsyncResult.AsyncWaitHandle%2A> <xref:System.IAsyncResult> Zaman uyumsuz işlemin **BEGIN**_OperationName_ yöntemi tarafından döndürülen özelliğini kullanın. Bu yaklaşım, bu konuda gösterilmiştir.  
@@ -29,6 +30,7 @@ Zaman uyumsuz bir işlemin sonuçlarının, işlem tamamlanana kadar durdurulmas
  <xref:System.Threading.WaitHandle>Zaman uyumsuz bir işlem tamamlanana kadar engellemek için bir veya daha fazla nesne kullanan uygulamalar genellikle **BEGIN**_OperationName_ yöntemini çağırır, işlem sonuçları olmadan yapılabilecek işleri gerçekleştirir ve ardından zaman uyumsuz işlemler tamamlanana kadar blok yapmaz. Bir uygulama <xref:System.Threading.WaitHandle.WaitOne%2A> , yöntemini kullanarak yöntemlerinden birini çağırarak tek bir işlemde bloke edebilir <xref:System.IAsyncResult.AsyncWaitHandle%2A> . Zaman uyumsuz işlemlerin tamamlanmasını beklerken engellemek için, ilişkili <xref:System.IAsyncResult.AsyncWaitHandle%2A> nesneleri bir dizide depolayın ve yöntemlerinden birini çağırın <xref:System.Threading.WaitHandle.WaitAll%2A> . Zaman uyumsuz işlemler kümesinden herhangi birinin tamamlanmasını beklerken engellemek için, ilişkili <xref:System.IAsyncResult.AsyncWaitHandle%2A> nesneleri bir dizide depolayın ve yöntemlerden birini çağırın <xref:System.Threading.WaitHandle.WaitAny%2A> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, Kullanıcı tarafından belirtilen bir bilgisayar için etki alanı adı sistem bilgilerini almak üzere DNS sınıfındaki zaman uyumsuz yöntemleri kullanmayı gösterir. Örnek, <xref:System.Threading.WaitHandle> zaman uyumsuz işlemle ilişkili öğesini kullanarak engellemeyi gösterir. `null` `Nothing` <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` Bu yaklaşım kullanıldığında gerekli olmadığından, ve parametreleri için (Visual Basic olarak) geçtiğini unutmayın `stateObject` .  
   
  [!code-csharp[AsyncDesignPattern#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlockWait.cs#2)]

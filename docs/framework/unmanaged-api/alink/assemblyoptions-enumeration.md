@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-ms.openlocfilehash: ed45e06297b77ea60304cdcfe1b08e97f9e4c085
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 352e1acd1fdd8297754e18b2e8c6448ea723a557
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446593"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717038"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions Numaralandırması
+
 Derleme seçeneklerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum _AssemblyOptions {  
@@ -78,10 +79,11 @@ typedef enum _AssemblyOptions {
 |optLastAssemOption|Öğe sayısı sayacı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üstbilgi:** ALink. h  
   
- **Kitaplık**: ALink. dll  
+ **Kitaplık**: alink.dll  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../tools/al-exe-assembly-linker.md)
+- [Al.exe (bütünleştirilmiş kod bağlayıcı)](../../tools/al-exe-assembly-linker.md)

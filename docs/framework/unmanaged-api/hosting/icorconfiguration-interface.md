@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aaf96116-372b-4538-afb1-9e0fcdac1f98
 topic_type:
 - apiref
-ms.openlocfilehash: 3b8c9421dea4040a9f183b886f1ad8575cace780
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: fa8d15bc8e504a57d5cc87c170a3a5b022798add
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762441"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715790"
 ---
 # <a name="icorconfiguration-interface"></a>ICorConfiguration Arabirimi
+
 Ortak dil çalışma zamanını (CLR) yapılandırmak için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -34,15 +35,16 @@ Ortak dil çalışma zamanını (CLR) yapılandırmak için yöntemler sağlar.
 |[SetGCThreadControl Yöntemi](icorconfiguration-setgcthreadcontrol-method.md)|Bir çöp toplama işlemi için engellenmeyen çalışma zamanı olmayan görevler için iş parçacıkları zamanlama için geri çağırma arabirimini ayarlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Barındırma Arabirimleri](hosting-interfaces.md)
-- [CorRuntimeHost Coclass](corruntimehost-coclass.md)
+- [CorRuntimeHost Ortak Sınıfı](corruntimehost-coclass.md)

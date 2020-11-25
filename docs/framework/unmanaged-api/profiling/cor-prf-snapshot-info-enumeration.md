@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-ms.openlocfilehash: 6168c5b27868a261871b292e17ca02b04ae89917
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5290db008bfe5727ed5899c2ed6f7e41ae9a353a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500786"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716362"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO Numaralandırması
+
 Profil oluşturucunun [StackSnapshotCallback](stacksnapshotcallback-function.md) işlevine yapılan her çağrıda bir yığın anlık görüntüsüne ne kadar veri geçirileceğini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum _COR_PRF_SNAPSHOT_INFO {  
@@ -36,16 +37,18 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
 ## <a name="members"></a>Üyeler  
   
-|Üyeler|Description|  
+|Üyeler|Açıklama|  
 |-------------|-----------------|  
 |`COR_PRF_SNAPSHOT_DEFAULT`|Parametresi dışında tüm parametrelerin değerlerinin geçirilmesi gerektiğini gösterir `StackSnapshotCallback` `context` .|  
 |`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Parametresi dahil tüm parametrelerin değerlerinin geçirilmesi gerektiğini gösterir `StackSnapshotCallback` `context` .|  
 |`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Daha basit, alternatif bir yığın yürüme algoritmasının kullanılacağını gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Numaralandırma tarafından verilen değerler, `COR_PRF_SNAPSHOT_INFO` [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) metoduna parametre olarak geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
@@ -57,4 +60,4 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DoStackSnapshot Yöntemi](icorprofilerinfo2-dostacksnapshot-method.md)
-- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)
+- [Profil Oluşturma Numaralandırmaları](profiling-enumerations.md)

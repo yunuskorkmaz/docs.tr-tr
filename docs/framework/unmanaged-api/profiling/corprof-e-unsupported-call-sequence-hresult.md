@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: d6cba2ec3e82c07ce60f0f2b2199cc97e31a000b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a75b51b57bdf2923ca6386f42c19c0b2f44fd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555555"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717480"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 
@@ -72,6 +72,7 @@ Bu iki senaryo aşağıdaki bölümlerde ele alınmıştır.
  Daha fazla bilgi için bkz. CLR profil oluşturma API 'SI blogda [neden corprof_e_unsupported_call_sequence sahip olduğumuz](/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) girişi.  
   
 ## <a name="triggering-garbage-collections"></a>Çöp koleksiyonları tetikleniyor  
+
  Bu senaryo, bir geri çağırma yöntemi içinde çalışan bir profil Oluşturucu içerir (örneğin, `ICorProfilerCallback` metotlardan biri) yasaklıyor çöp toplama. Profiler bir çöp toplama tetikleyebilen bir bilgilendirici yöntemi (örneğin, arabirimdeki bir yöntemi) çağırmaya çalışırsa `ICorProfilerInfo` , bilgilendirici yöntem corprof_e_unsupported_call_sequence hresult ile başarısız olur.  
   
  Aşağıdaki tabloda çöp koleksiyonları sağlayan geri çağırma yöntemleri ve çöp koleksiyonlarının tetikleyebileceğini bilgilendirici Yöntemler gösterilmektedir. Profil Oluşturucu listelenmiş geri çağırma yöntemlerinden birinin içinde yürütülüyorsa ve listelenen bilgilendirici yöntemlerden birini çağırırsa, bu bilgi yöntemi HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE başarısız olur.  

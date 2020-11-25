@@ -16,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7cfaee76-e284-4a66-a431-8e33f0f60038
 topic_type:
 - apiref
-ms.openlocfilehash: c44a12ef377d29e0b33b8be86aa1d8f0aa9d26bd
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 791bd2754a96b97a38e2509c0c61a644324857cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397149"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716960"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget Arabirimi
+
 Başvuru sayılarını denetleyen, işlem numaralandırmakta olan ve uzak bir Macintosh Silverlight hedefine bağlı bir hata ayıklayıcı ile ilişkili belleği serbest alan yöntemler sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 class ICoreClrDebugTarget {  
@@ -56,14 +57,16 @@ class ICoreClrDebugTarget {
 |[ICoreClrDebugTarget::FreeMemory Yöntemi](icoreclrdebugtarget-freememory-method.md)|Bu sınıftaki sabit listesi yöntemleriyle ayrılan belleği serbest bırakır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Şu anda bu işlev yalnızca uzak bir Macintosh bilgisayarda çalışan Silverlight tabanlı bir uygulama hedefinde hata ayıklama için desteklenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Kitaplık:** mscordbi_macx86. dll  
+ **Kitaplık:** mscordbi_macx86.dll  
   
  **.NET Framework sürümleri:** 3,5 SP1  
   

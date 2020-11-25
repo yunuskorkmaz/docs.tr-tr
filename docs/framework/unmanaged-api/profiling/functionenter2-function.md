@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 8c88e97f8187ac347f4ff39890c8d87ee80c8f9e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e8466970a1c137276e842b37f0305fdfd9169be6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500721"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717291"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 İşlevi
+
 Profil oluşturucuyu denetimin bir işleve geçtiğini ve yığın çerçevesi ve işlev bağımsız değişkenleri hakkında bilgi sağladığını bildirir. Bu işlev [FunctionEnter](functionenter-function.md) işlevinin yerini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -58,6 +59,7 @@ void __stdcall FunctionEnter2 (
   Bağımsız değişken bilgilerine erişebilmek için `COR_PRF_ENABLE_FUNCTION_ARGS` bayrağın ayarlanması gerekir. Profil Oluşturucu, olay bayraklarını ayarlamak için [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) yöntemini kullanabilir.
 
 ## <a name="remarks"></a>Açıklamalar  
+
  Ve parametrelerinin değerleri, `func` `argumentInfo` `FunctionEnter2` değerler değişeceğinden veya yok edileceği için döndüğünde geçerli değildir.  
   
  `FunctionEnter2`İşlev bir geri çağırmasıdır; uygulamanız gerekir. Uygulamanın `__declspec` ( `naked` ) depolama sınıfı özniteliğini kullanması gerekir.  
@@ -73,6 +75,7 @@ void __stdcall FunctionEnter2 (
  Ayrıca, `FunctionEnter2` işlev yönetilen koda çağrı içermemelidir veya herhangi bir şekilde yönetilen bellek ayırmaya neden olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  

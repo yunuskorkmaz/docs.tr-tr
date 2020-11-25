@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: da984f89-4f53-4ab0-ae6f-3e2ee6085994
 topic_type:
 - apiref
-ms.openlocfilehash: d3949189a72583ebb50b67a270694a31f1eb23dc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0996d7eb5b7354a67106ec7aa8818d5e4d46232e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503217"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717294"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed Yöntemi
+
 Profil oluşturucuyu, belirtilen iş parçacığının askıya alındıktan sonra devam ettirmekte olduğunu bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -33,10 +34,12 @@ HRESULT RuntimeThreadResumed(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `threadId`  
  'ndaki Devam eden iş parçacığının KIMLIĞI.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

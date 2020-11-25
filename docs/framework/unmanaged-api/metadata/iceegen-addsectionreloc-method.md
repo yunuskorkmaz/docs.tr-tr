@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 2f66d34fcfdd8c61dcc92817ec1a928ac5b603fc
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 87a5224247c2d94613de482fbaa34bf978198bf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008904"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715543"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc Yöntemi
+
 Kod tabanına bir. reloc yönergesi ekler.  
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
@@ -39,6 +40,7 @@ HRESULT AddSectionReloc (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `section`  
  'ndaki . Reloc yönergesinin ekleneceği bellek içi kodun bölümü.  
   
@@ -46,17 +48,18 @@ HRESULT AddSectionReloc (
  'ndaki Bölümün boşluğu.  
   
  `relativeTo`  
- 'ndaki `offset`Başvurduğu bölüm.  
+ 'ndaki `offset` Başvurduğu bölüm.  
   
  `relocType`  
  'ndaki Add. reloc yönergesinin türünü gösteren [CeeSectionRelocType](ceesectionreloctype-enumeration.md) değerlerinden biri.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

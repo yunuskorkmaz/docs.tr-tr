@@ -15,23 +15,25 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-ms.openlocfilehash: f6873de1a864489d144a671b1a9e1349eaf77d15
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9761eb5085a77279c4d07d39946a5ad1453ecaaf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503191"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717288"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown Yöntemi
+
 Profil oluşturucuyu uygulamanın kapandığını bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Shutdown();  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Profil Oluşturucu kodu, yöntemi çağrıldıktan sonra [ICorProfilerInfo](icorprofilerinfo-interface.md) arabiriminin yöntemlerini güvenli bir şekilde çağıramaz `Shutdown` . Yöntemlere yapılan çağrılar `ICorProfilerInfo` , yöntemin dönüşden sonra tanımsız davranışa neden olur `Shutdown` . Bazı sabit olaylar, kapatmadan sonra yine de gerçekleşebilir; Profil Oluşturucu, bu gerçekleştiğinde hemen döndürülmelidir.  
   
  `Shutdown`Yöntemi yalnızca, profili oluşturulan yönetilen uygulama yönetilen kod olarak (yani, işlem yığınındaki ilk çerçeve yönetiliyorsa) başlatıldığında çağrılır. Uygulama, yönetilmeyen kod olarak başlatıldıysa ancak daha sonra yönetilen koda atlamışsa, bu nedenle ortak dil çalışma zamanının (CLR) bir örneğini oluşturur, ardından `Shutdown` çağrılmaz. Bu gibi durumlarda, profil oluşturucu kendi kitaplığına `DllMain` , herhangi bir kaynağı boşaltmak ve verilerin temizleme işlemini gerçekleştirmek için DLL_PROCESS_DETACH değerini kullanan bir yordamı içermelidir.  
@@ -39,6 +41,7 @@ HRESULT Shutdown();
  Genel olarak, profil oluşturucunun beklenmedik kapanmalar ile Cope olması gerekir. Örneğin, bir işlem Win32's yöntemi tarafından durdurulur `TerminateProcess` (Winbase. h içinde bildirilmiştir). Diğer durumlarda CLR, belirli yönetilen iş parçacıklarını (arka plan iş parçacıkları) bunlar için düzenli olarak yok etme iletileri teslim etmeden durdurur.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

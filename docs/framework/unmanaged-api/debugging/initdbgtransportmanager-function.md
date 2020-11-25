@@ -16,23 +16,25 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-ms.openlocfilehash: e18ceb25b9c58a9710ef967cb071e3ef55beea8c
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: a5b4783eadb8045733b9ebd6d10c4e31f7829498
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421052"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716687"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager İşlevi
+
 İşlem ve çalışma zamanı numaralandırması için uzak hedefe bağlanmak üzere aktarım yöneticisini başlatır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT InitDbgTransportManager ();  
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  S_OK  
  Başarılı.  
   
@@ -43,10 +45,11 @@ HRESULT InitDbgTransportManager ();
  Diğer sorunlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Kitaplık:** mscordbi_macx86. dll  
+ **Kitaplık:** mscordbi_macx86.dll  
   
  **.NET Framework sürümleri:** 3,5 SP1

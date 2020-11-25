@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd2afb38-675b-4c3c-a9f3-8ab3b133eb02
 topic_type:
 - apiref
-ms.openlocfilehash: 38042876cf4397418d2e6e6ed2bfbeb2df2d62d8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 33d56354a560949b2f451df9ef82d4f433951195
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762298"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715569"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain Yöntemi
+
 <xref:System.AppDomain?displayProperty=nameWithType>Geçerli iş parçacığında yüklü olan etki alanını temsil eden türün bir arabirim işaretçisini alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,8 +35,9 @@ HRESULT CurrentDomain (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pAppDomain`  
- dışı <xref:System.AppDomain?displayProperty=nameWithType>İş parçacığının geçerli uygulama etki alanını temsil eden tür işaretçisi. Bu işaretçi yazıldığı `IUnknown` için çağıranlar genellikle `QueryInterface` türünde bir işaretçi almak için çağrı çağırmalıdır <xref:System._AppDomain> .  
+ dışı <xref:System.AppDomain?displayProperty=nameWithType> İş parçacığının geçerli uygulama etki alanını temsil eden tür işaretçisi. Bu işaretçi yazıldığı `IUnknown` için çağıranlar genellikle `QueryInterface` türünde bir işaretçi almak için çağrı çağırmalıdır <xref:System._AppDomain> .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -47,11 +49,12 @@ HRESULT CurrentDomain (
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:** 1,0, 1,1  
   
