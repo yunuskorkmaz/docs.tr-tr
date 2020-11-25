@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4d164676-0ee9-4f67-a8ea-cb474db09053
 topic_type:
 - apiref
-ms.openlocfilehash: 5ba45cf526a6ebca6975a75d06308d089770ad5b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 37e3c9139a202e3cb31bd824d182389ae10b7389
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500279"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699943"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a>ICorProfilerCallback::ExceptionOSHandlerLeave Yöntemi
+
 Uygulanmaz. Yönetilmeyen özel durum bilgisine ihtiyacı olan bir profil oluşturucu, bu bilgileri diğer yollarla almalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT ExceptionOSHandlerLeave(  
@@ -33,6 +34,7 @@ HRESULT ExceptionOSHandlerLeave(
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

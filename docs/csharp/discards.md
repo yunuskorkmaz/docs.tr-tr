@@ -3,18 +3,18 @@ title: Atarsa-C# Kılavuzu
 description: ", Atanmamış, discardable değişkenleri ve atma 'un kullanılabileceği yollarla ilgili olarak, C# ' nin atma desteğini açıklar."
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: baa7c559095460cf747cb5c8f7ad581270893bd7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869329"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698812"
 ---
 # <a name="discards---c-guide"></a>Atarsa-C# Kılavuzu
 
-C# 7,0 ' den itibaren C#, uygulama kodunda kasıtlı olarak kullanılmamış olan geçici ve kukla değişkenler olan atma 'yı destekler. Atma, atanmamış değişkenlere eşdeğerdir; Bunlar bir değere sahip değildir. Yalnızca tek bir atma değişkeni olduğundan ve bu değişkene ayrılan depolama alanı bulunmayabilir, atma işlemi bellek ayırmalarını azaltabilir. Kodunuzun amacını açık hale yaptığından, okunabilirliği ve bakım yapamazı geliştirir.
+C# 7,0 ' den itibaren C#, uygulama kodunda kasıtlı olarak kullanılmamış olan yer tutucu değişkenleri olan atma 'yı destekler. Atma, atanmamış değişkenlere eşdeğerdir; Bunlar bir değere sahip değildir. Yalnızca tek bir atma değişkeni olduğundan ve bu değişkene ayrılan depolama alanı bulunmayabilir, atma işlemi bellek ayırmalarını azaltabilir. Kodunuzun amacını açık hale yaptığından, okunabilirliği ve bakım yapamazı geliştirir.
 
-Bir değişkenin, adı olarak alt çizgi () atayarak bir atma olduğunu belirtirsiniz `_` . Örneğin, aşağıdaki yöntem çağrısı, ilk ve ikinci değerlerin dıştığı 3 tanımlama grubu döndürür ve *alan* , daha önce bildirildiği bir değişken *Getcityınformation*tarafından döndürülen karşılık gelen üçüncü bileşene ayarlanır:
+Bir değişkenin, adı olarak alt çizgi () atayarak bir atma olduğunu belirtirsiniz `_` . Örneğin, aşağıdaki yöntem çağrısı, ilk ve ikinci değerlerin dıştığı 3 tanımlama grubu döndürür ve *alan* , daha önce bildirildiği bir değişken *Getcityınformation* tarafından döndürülen karşılık gelen üçüncü bileşene ayarlanır:
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);

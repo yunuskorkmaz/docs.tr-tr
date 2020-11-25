@@ -6,14 +6,15 @@ helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: b62cfbd58f671745054c557041e5d60af345c8d3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9f03eda511c2ef0c9565d270c52fd72bf54692d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820845"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698357"
 ---
 # <a name="naming-parameters"></a>Adlandırma Parametreleri
+
 Görsel tasarım araçları IntelliSense ve sınıf tarama işlevselliği sağladığınızda, bir okunabilirlik işleminin belirgin olmasının ötesinde parametre adları için yönergeleri izlemek önemlidir.
 
  ✔️ parametre adlarında Camelbüyük harfleri kullanın.
@@ -23,6 +24,7 @@ Görsel tasarım araçları IntelliSense ve sınıf tarama işlevselliği sağla
  ✔️, parametre türü yerine parametrenin anlamı temelinde adları kullanmayı düşünün.
 
 ### <a name="naming-operator-overload-parameters"></a>Adlandırma Işleci aşırı yükleme parametreleri
+
  `left`parametrelere bir anlamı yoksa `right` ikili işleç aşırı yüklemesi parametre adları için ve kullanın ✔️.
 
  `value`parametrelere bir anlamı yoksa birli işleç aşırı yüklemesi parametre adları için ✔️ kullanın.

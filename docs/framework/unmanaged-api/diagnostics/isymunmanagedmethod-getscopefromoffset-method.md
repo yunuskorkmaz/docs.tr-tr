@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-ms.openlocfilehash: 4eefd019280f501a6ce194e5ce84388e32cc66e1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cf2784ce0ac6e614e75a341660808b9fe03ada0e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615169"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699449"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset Metodu
+
 Bu yöntem içinde verilen sapmayı kapsayan en kapsamlı sözcük kapsamını alır. Bu, yerel değişken aramalarını başlatmak için kullanılabilir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,18 +35,21 @@ HRESULT GetScopeFromOffset(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `offset`  
- 'ndaki `ULONG`Bu, sapmayı içeren bir.  
+ 'ndaki `ULONG` Bu, sapmayı içeren bir.  
   
  `pRetVal`  
  dışı Döndürülen [ıdimunmanagedscope](isymunmanagedscope-interface.md) arabirimine ayarlanmış bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedMethod Yöntemi](isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod Arabirimi](isymunmanagedmethod-interface.md)

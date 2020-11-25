@@ -4,12 +4,12 @@ description: .NET Core işlevselliğini desteklemek ve genişletmek için yükle
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f7bfa660f7521adf4950d5bbdd59628bb88cca4d
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557938"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699007"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core ek araçlara genel bakış
 
@@ -46,3 +46,7 @@ WCF [DotNet-Svcutil aracı](dotnet-svcutil-guide.md) , bir ağ konumundaki veya 
 ## <a name="xml-serializer-generator"></a>XML Serileştirici Oluşturucusu
 
 .NET Framework için [XML serileştirici Oluşturucu (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) gibi, [Microsoft.Xmlserileştirici. Generator NuGet paketi](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) .NET Core ve .NET Standard kitaplıkları için çözümdür. Kullanarak bu türlerin nesnelerini serileştirmek veya serileştirmek durumunda XML serileştirmesinin başlangıç performansını geliştirmek için bir derlemede bulunan türler için bir XML serileştirme bütünleştirilmiş kodu oluşturur <xref:System.Xml.Serialization.XmlSerializer> .
+
+## <a name="generating-self-signed-certificates"></a>Self-Signed sertifikaları oluşturma
+
+Geliştirme ve test senaryoları için otomatik olarak imzalanan sertifikalar oluşturmak üzere [DotNet dev-CERT](self-signed-certificates-guide.md) ' yi kullanabilirsiniz.

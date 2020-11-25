@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 747ee407-ee8c-484d-9583-25089236d2d1
 topic_type:
 - apiref
-ms.openlocfilehash: 841827017262b731fd5e6f6bd0b5862fecaf2744
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 7730c2dddaca98e4cb06cdb381e8a46ff23c97f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841730"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699215"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>IHostTaskManager::SetLocale Yöntemi
+
 Ana bilgisayara, ortak dil çalışma zamanının (CLR) Şu anda yürütülmekte olan görevde yerel ayarı veya kültürü değiştirdiğinizi bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT SetLocale (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `lcid`  
  'ndaki Yeni atanan coğrafi kültür ve dille eşlenen yerel ayar tanımlayıcı değeri.  
   
@@ -41,7 +43,7 @@ HRESULT SetLocale (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SetLocale`başarıyla döndürüldü.|  
+|S_OK|`SetLocale` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -50,14 +52,16 @@ HRESULT SetLocale (
 |E_NOTIMPL|Konak, yönetilen kullanıcı kodunun yerel ayarı değiştirmesine izin vermez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Çalışma zamanı, `SetLocale` <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliğin değeri yönetilen kod tarafından değiştirildiğinde çağrılır. Bu yöntem, ana bilgisayarın yerel ayarların eşitlenmesi için sahip olabileceği herhangi bir mekanizmayı yürütmesi için bir fırsat sağlar. Bir konak yerel ayarın yönetilen koddan değiştirilmesine izin vermezse veya yerel ayarları eşitlemeye yönelik bir mekanizma uygulamaz, bu yöntemden E_NOTIMPL döndürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

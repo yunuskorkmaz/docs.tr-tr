@@ -1,27 +1,24 @@
 ---
 description: '! (null-forverme) işleci-C# başvurusu'
 title: '! (null-forverme) işleci-C# başvurusu'
-ms.date: 10/11/2019
+ms.date: 11/13/2020
 f1_keywords:
 - nullForgiving_CSharpKeyword
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: f2eb57bba462d471a041c17024fa7031c2c7f87d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5489c77fa7290bdd1c03e04d8cc777ab772fdce7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830590"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699636"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forverme) işleci (C# Başvurusu)
 
 C# 8,0 ve üzeri sürümlerde, birli sonek `!` operatörü null-forverme işleçtir. Etkin bir [null yapılabilir ek açıklama bağlamında](../../nullable-references.md#nullable-annotation-context), bir başvuru türünün ifadesinin bu ifade olduğunu bildirmek için null-forverme işlecini kullanırsınız `x` `null` : `x!` . Birli önek `!` işleci, [mantıksal değilleme işleçtir](boolean-logical-operators.md#logical-negation-operator-).
 
 Null-forverme işlecinin çalışma zamanında hiçbir etkisi yoktur. Yalnızca ifadenin null durumunu değiştirerek derleyicinin statik akış analizini etkiler. Çalışma zamanında ifade, `x!` temel alınan ifadenin sonucu olarak değerlendirilir `x` .
-
-> [!NOTE]
-> C# 8 ' de, null-forverme işleci önceki [null koşullu](member-access-operators.md#null-conditional-operators--and-) işlemlerin listesini sonlandırır. Örneğin, ifadesi `x?.y!.z` olarak ayrıştırılır `(x?.y)!.z` . Bu yorum nedeniyle,, `z` olsa bile değerlendirilir, bu da `x` `null` bir ile sonuçlanabilir <xref:System.NullReferenceException> .
 
 Null yapılabilir başvuru türleri özelliği hakkında daha fazla bilgi için bkz. [Nullable başvuru türleri](../builtin-types/nullable-reference-types.md).
 

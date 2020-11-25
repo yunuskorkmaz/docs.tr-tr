@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 50ce4e5e6125eae493bb62032d5c6bd8887c1afb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008969"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699098"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr Numaralandırması
+
 Tür meta verilerini gösteren değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorTypeAttr {  
@@ -112,6 +113,7 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|Türün onunla ilişkili güvenlik olduğunu belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

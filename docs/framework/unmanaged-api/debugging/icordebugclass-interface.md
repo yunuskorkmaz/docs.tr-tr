@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: d7417e8dc193172c77d23fe3fa72c8298d802b5c
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 4f488741f4233f06c128e0a262ce798ef27af3ff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894037"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699644"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass Arabirimi
 
@@ -31,17 +31,19 @@ Basit veya karmaşık (yani kullanıcı tarafından tanımlanmış) olabilecek b
 |------------|-----------------|  
 |[GetModule Yöntemi](icordebugclass-getmodule-method.md)|Bu sınıfı tanımlayan modülü alır.|  
 |[GetStaticFieldValue Yöntemi](icordebugclass-getstaticfieldvalue-method.md)|Belirtilen statik alanın değerini alır.|  
-|[GetToken Metodu](icordebugclass-gettoken-method.md)|Bu sınıf `TypeDef` için meta veri belirtecini alır.|  
+|[GetToken Metodu](icordebugclass-gettoken-method.md)|`TypeDef`Bu sınıf için meta veri belirtecini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Arabirim `ICorDebugClass` , örneği oluşturulmuş bir genel türü temsil eder. ICorDebugType arabirimi bir örneklenmiş genel türü temsil eder. Örneğin, `Hashtable<K, V>` tarafından `ICorDebugClass`temsil edilir, ancak `Hashtable<Int32, String>` tarafından `ICorDebugType`temsil edilir.  
+
+ `ICorDebugClass`Arabirim, örneği oluşturulmuş bir genel türü temsil eder. ICorDebugType arabirimi bir örneklenmiş genel türü temsil eder. Örneğin, tarafından temsil edilir `Hashtable<K, V>` `ICorDebugClass` , ancak `Hashtable<Int32, String>` tarafından temsil edilir `ICorDebugType` .  
   
- Genel olmayan türler hem hem de `ICorDebugClass` ile temsil edilir `ICorDebugType`. İkinci arabirim, tür örneği oluşturma ile başa çıkmak için .NET Framework sürüm 2,0 ' de tanıtılmıştı.  
+ Genel olmayan türler hem hem de ile temsil `ICorDebugClass` edilir `ICorDebugType` . İkinci arabirim, tür örneği oluşturma ile başa çıkmak için .NET Framework sürüm 2,0 ' de tanıtılmıştı.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

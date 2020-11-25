@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 38763e687c66dcb038a874c9c17cb0d67e547816
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615152"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699358"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints Yöntemi
+
 Bu yöntemin içindeki tüm sıra noktalarını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -40,11 +41,12 @@ HRESULT GetSequencePoints(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cPoints`  
  'ndaki ,,,,, `ULONG32` `offsets` `documents` `lines` `columns` `endLines` Ve `endColumns` dizilerinin boyutunu alan bir.  
   
  `pcPoints`  
- dışı `ULONG32`Dizi noktalarını içermesi için gereken arabelleğin uzunluğunu alan öğesine bir işaretçisi.  
+ dışı `ULONG32` Dizi noktalarını içermesi için gereken arabelleğin uzunluğunu alan öğesine bir işaretçisi.  
   
  `offsets`  
  'ndaki Dizi noktaları için yöntemin başlangıcından Microsoft ara dili (MSIL) uzaklıklarını depolayan bir dizi.  
@@ -65,11 +67,13 @@ HRESULT GetSequencePoints(
  'ndaki Sıra noktalarının sonundaki belgelerdeki sütunların dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedMethod Yöntemi](isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod Arabirimi](isymunmanagedmethod-interface.md)

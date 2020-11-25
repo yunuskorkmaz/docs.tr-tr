@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 9d0fe1afef126a9c4f73a74d969d36df27182be9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ce034260fd3e6746bb7d516483b5e6872dfdc172
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829381"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699033"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Veri Paralelliği (Görev Paralel Kitaplığı)
+
 *Veri paralelliği* , kaynak koleksiyondaki veya dizideki öğelerde aynı işlemin eşzamanlı olarak (yani paralel) gerçekleştirildiği senaryolara başvurur. Veri paralel işlemlerinde, kaynak koleksiyon, birden çok iş parçacığının aynı anda farklı kesimlerde çalışabilmesi için bölümlenmiş olur.  
   
  Görev paralel kitaplığı (TPL), sınıfı aracılığıyla verileri paralellik olarak destekler <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> . Bu sınıf [for](../../csharp/language-reference/keywords/for.md) ve [foreach](../../csharp/language-reference/keywords/foreach-in.md) döngüleri ( `For` ve Visual Basic) için yöntem tabanlı paralel uygulamalar sağlar `For Each` . <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>Sıralı bir döngü yazdığınızda bir veya döngüsünün döngü mantığını yazın <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> . İş parçacığı oluşturmak veya iş öğelerini kuyruğa almak zorunda değilsiniz. Temel Döngülerde kilit almanız gerekmez. TPL, tüm düşük düzeydeki işleri sizin için işler. Ve kullanımı hakkında ayrıntılı bilgi için <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> , [paralel programlama için belge desenlerini indirin: .NET Framework 4 Ile paralel desenleri anlama ve uygulama](https://www.microsoft.com/download/details.aspx?id=19222). Aşağıdaki kod örneğinde basit bir `foreach` döngü ve onun paralel eşdeğeri gösterilmektedir.  

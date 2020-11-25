@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-ms.openlocfilehash: 1855c73849c35bf709b0af261a88e6cd7a40abfb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b45b0a59a29a27e7b0a395f3928215959450f9a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008306"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698474"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen Yöntemi
+
 Belirtilen bölümün uzunluğunu alır.  
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
@@ -37,6 +38,7 @@ HRESULT GetSectionDataLen (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `section`  
  'ndaki Uzunluğu alınacak olan veri bölümü.  
   
@@ -44,14 +46,16 @@ HRESULT GetSectionDataLen (
  dışı Belirtilen bölümün döndürdüğü uzunluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetSectionDataLen`Yalnızca diğer yöntemler tarafından işlenmemiş özel bölüm gereksinimleriniz varsa çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

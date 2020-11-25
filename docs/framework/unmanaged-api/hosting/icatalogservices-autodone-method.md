@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3002f051-7aaa-4669-9314-cbc65b3a1772
 topic_type:
 - apiref
-ms.openlocfilehash: 631da8936873b57040f1c60e8db6867ea2eed2c8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 958d36ee4d51d2975139acb9997cc19fb51a00c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617054"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698461"
 ---
 # <a name="icatalogservicesautodone-method"></a>ICatalogServices::Autodone Yöntemi
+
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Autodone ( );  

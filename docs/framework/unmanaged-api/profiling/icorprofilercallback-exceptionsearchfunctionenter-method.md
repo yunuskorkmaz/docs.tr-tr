@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfd54573-b7e6-4bd1-a184-7f08a8b39fae
 topic_type:
 - apiref
-ms.openlocfilehash: 244227aadb50720514f7511be563089d520b4bf5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9c39d984db62326b31a4760a817ee82def6dd78f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500201"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699826"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter Yöntemi
+
 Profil oluşturucuyu, özel durum işlemenin arama aşamasının geçerli özel durum için bir işleyici bulmak üzere bir işlev aramaya başladığını bildirir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,6 +40,7 @@ HRESULT ExceptionSearchFunctionEnter(
   \[' de] girilen işlevin KIMLIĞI.
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

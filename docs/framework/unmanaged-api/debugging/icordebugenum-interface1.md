@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: b208444de3b427329988f27b9d252b54143b7240
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976336"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698799"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum Arabirimi
 
@@ -29,13 +29,14 @@ Bir hata ayıklama uygulaması tarafından kullanılan numaralandırıcıların 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone Yöntemi](icordebugenum-clone-method.md)|Bu `ICorDebugEnum` nesnenin bir kopyasını oluşturur.|  
+|[Clone Yöntemi](icordebugenum-clone-method.md)|Bu nesnenin bir kopyasını oluşturur `ICorDebugEnum` .|  
 |[GetCount Yöntemi](icordebugenum-getcount-method.md)|Numaralandırmadaki öğelerin sayısını alır.|  
 |[Reset Yöntemi](icordebugenum-reset-method.md)|İmleci numaralandırmanın başlangıcına kaydırır.|  
 |[Skip Yöntemi](icordebugenum-skip-method.md)|İmleci belirtilen öğe sayısına göre numaralandırmada ileri doğru kaydırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki Numaralandırıcılar öğesinden `ICorDebugEnum`türetilir:  
+
+ Aşağıdaki Numaralandırıcılar öğesinden türetilir `ICorDebugEnum` :  
   
 - ICorDebugAppDomainEnum  
   
@@ -83,6 +84,7 @@ Bir hata ayıklama uygulaması tarafından kullanılan numaralandırıcıların 
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

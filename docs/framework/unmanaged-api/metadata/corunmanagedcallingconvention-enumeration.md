@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-ms.openlocfilehash: b4c521489f38360d45c2cf8ff3780e057299f0b4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9d35f6b1928d714216b669704ec28e53895f6549
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008956"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699072"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention Numaralandırması
+
 Yönetilmeyen kod için çağrı kurallarını belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorUnmanagedCallingConvention {  
@@ -56,9 +57,11 @@ typedef enum CorUnmanagedCallingConvention {
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Kullanılmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  CLR, .NET Framework sürüm 1,0 ' de "hızlı" çağırma kuralını desteklemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  

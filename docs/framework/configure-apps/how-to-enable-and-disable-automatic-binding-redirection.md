@@ -1,17 +1,17 @@
 ---
 title: Yeniden oluşturulmuş bağlama yeniden yönlendirmelerini etkinleştir veya devre dışı bırak
-description: Otomatik bağlama yeniden yönlendirmesini etkinleştirme veya devre dışı bırakma konusunu okuyun. Bu özellik, .NET 4.5.1 veya üstünü hedefleyen masaüstü uygulamalarını ve Web uygulamalarını etkiler.
+description: Otomatik bağlama yeniden yönlendirmesini etkinleştirme veya devre dışı bırakma konusunu okuyun. Bu özellik, .NET Framework 4.5.1 veya üstünü hedefleyen masaüstü uygulamalarını ve Web uygulamalarını etkiler.
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: b099ab4958b1cf41b76884243e252e19a7a951b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105397"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698838"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma
 
@@ -29,7 +29,7 @@ Visual Studio 2017 sürüm 15,7 veya sonraki bir sürümü varsa, projenin özel
 
 2. **Uygulama** sayfasında **bağlama yeniden yönlendirmeleri otomatik oluştur** seçeneğinin işaretini kaldırın.
 
-3. **Ctrl** + Değişikliği kaydetmek için CTRL**S** tuşuna basın.
+3. **Ctrl** + Değişikliği kaydetmek için CTRL **S** tuşuna basın.
 
 ### <a name="disable-manually-in-the-project-file"></a>Proje dosyasında el ile devre dışı bırak
 
@@ -94,7 +94,7 @@ Bir **web.config** dosyasına bağlama yeniden yönlendirmeleri eklemek için:
 
    ![Derleme başvurusu çakışmaları için derleme uyarısı](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
-2. Derleme bağlama çakışmaları varsa bir uyarı görüntülenir. Uyarıya çift tıklayın veya uyarıyı seçin ve **ENTER**tuşuna basın.
+2. Derleme bağlama çakışmaları varsa bir uyarı görüntülenir. Uyarıya çift tıklayın veya uyarıyı seçin ve **ENTER** tuşuna basın.
 
    Kaynak **web.config** dosyasına gerekli bağlama yeniden yönlendirmelerini otomatik olarak eklemenize olanak sağlayan bir iletişim kutusu görüntülenir.
 
@@ -102,5 +102,5 @@ Bir **web.config** dosyasına bağlama yeniden yönlendirmeleri eklemek için:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<bindingRedirect>Dosyalarında](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect> Dosyalarında](./file-schema/runtime/bindingredirect-element.md)
 - [Derleme Sürümlerini Yönlendirme](redirect-assembly-versions.md)

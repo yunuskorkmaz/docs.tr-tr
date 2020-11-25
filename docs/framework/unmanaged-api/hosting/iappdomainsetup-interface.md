@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-ms.openlocfilehash: 1726f8929404e0dde979972d7830a6951dd71891
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d504101747995557ba526c88de451ebab7b3c556
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617067"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698565"
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup Arabirimi
+
 Konağın, <xref:System.AppDomain?displayProperty=nameWithType> kendisini oluşturmak Için [ICorRuntimeHost:: CreateDomainEx](icorruntimehost-createdomainex-method.md) metodunu çağırmadan önce bir tür yapılandırmasına izin veren özellikler sağlar.  
   
 ## <a name="properties"></a>Özellikler  
@@ -40,16 +41,18 @@ Konağın, <xref:System.AppDomain?displayProperty=nameWithType> kendisini oluşt
 |<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|Gölge kopyalamanın açık veya kapalı olup olmadığını gösteren bir dize alır veya ayarlar. Geçerli değerler "true" veya "false" şeklindedir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `IAppDomainSetup`Arabirim, <xref:System.IAppDomainSetup> türün uyguladığı yönetilen arabirime karşılık gelir <xref:System.AppDomainSetup> . <xref:System.IAppDomainSetup?displayProperty=nameWithType>Özelliklerinin ayrıntılı açıklamaları için bkz..  
   
- `IAppDomainSetup`oluşturma işleminden önce bir örneğe eklenebilen derleme bağlama bilgilerini temsil eder <xref:System.AppDomain> . Örneğin, bir ana bilgisayar, <xref:System.AppDomainSetup.ApplicationBase%2A> yönetilen derlemeler için ortak dil çalışma zamanı (CLR) yoklamaları olan kök dizin oluşturmak için özelliğini ayarlayabilir.  
+ `IAppDomainSetup` oluşturma işleminden önce bir örneğe eklenebilen derleme bağlama bilgilerini temsil eder <xref:System.AppDomain> . Örneğin, bir ana bilgisayar, <xref:System.AppDomainSetup.ApplicationBase%2A> yönetilen derlemeler için ortak dil çalışma zamanı (CLR) yoklamaları olan kök dizin oluşturmak için özelliğini ayarlayabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

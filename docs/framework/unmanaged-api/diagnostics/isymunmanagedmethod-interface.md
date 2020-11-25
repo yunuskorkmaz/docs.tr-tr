@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f204d74c-cc79-4092-83bb-60654be95649
 topic_type:
 - apiref
-ms.openlocfilehash: 7a98a0c40f68cef9bab1ea2de0850208aaef77a0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b72a77fecd15a43efbddd9dfd4618897c3372f88
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615130"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699280"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod Arabirimi
+
 Sembol deposu içindeki bir yöntemi temsil eder. Bu arabirim, türle ilgili öznitelikler yerine yalnızca bir yöntemin sembolüyle ilgili özniteliklerine erişim sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -29,7 +30,7 @@ Sembol deposu içindeki bir yöntemi temsil eder. Bu arabirim, türle ilgili öz
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetNamespace Yöntemi](isymunmanagedmethod-getnamespace-method.md)|Bu yöntemin tanımlandığı ad alanını alır.|  
-|[GetOffset Yöntemi](isymunmanagedmethod-getoffset-method.md)|Bu yöntemin içindeki, bir belge içinde verilen konuma karşılık gelen sapmayı döndürür.|  
+|[GetOffset Metodu](isymunmanagedmethod-getoffset-method.md)|Bu yöntemin içindeki, bir belge içinde verilen konuma karşılık gelen sapmayı döndürür.|  
 |[GetParameters Yöntemi](isymunmanagedmethod-getparameters-method.md)|Bu yöntemin parametrelerini alır.|  
 |[GetRanges Yöntemi](isymunmanagedmethod-getranges-method.md)|Belgedeki bir konum verildiğinde, konumun bu yöntem içinde kapsamakta olduğu Microsoft ara dili (MSIL) aralıklarına karşılık gelen başlangıç ve bitiş konumu çiftleri dizisini döndürür.|  
 |[GetRootScope Yöntemi](isymunmanagedmethod-getrootscope-method.md)|Bu metot içindeki kök sözcük kapsamını alır. Bu kapsam tüm yöntemi barındırır.|  
@@ -40,8 +41,9 @@ Sembol deposu içindeki bir yöntemi temsil eder. Bu arabirim, türle ilgili öz
 |[GetToken Metodu](isymunmanagedmethod-gettoken-method.md)|Bu yöntem için meta veri belirtecini döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [Tanılama Sembol Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)

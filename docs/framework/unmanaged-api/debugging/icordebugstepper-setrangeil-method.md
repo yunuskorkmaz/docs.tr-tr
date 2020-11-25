@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: a20c95f0-6da7-4b41-b27f-584211cebb92
 topic_type:
 - apiref
-ms.openlocfilehash: 7fadffaab6eee5beed513f339ea300acef5a1c6b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5a27f155021661022b27022bbb252e00dfa67255
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378997"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698786"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>ICorDebugStepper::SetRangeIL Yöntemi
+
 [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md) öğesine yapılan çağrıların, yerel koda göre veya bir şekilde ele alınan metodun Microsoft ara DILI (MSIL) koduna göreli bağımsız değişken değerlerini geçirip geçirmeyeceğini belirten bir değer belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetRangeIL (  
@@ -34,10 +35,12 @@ HRESULT SetRangeIL (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `bIL`  
- 'ndaki `true`ARALıKLARıN MSIL koduna göreli olduğunu belirtmek için olarak ayarlayın. `false`Aralıkların yerel koda göreli olduğunu belirtmek için olarak ayarlayın. Varsayılan değer: `true`.  
+ 'ndaki `true` ARALıKLARıN MSIL koduna göreli olduğunu belirtmek için olarak ayarlayın. `false`Aralıkların yerel koda göreli olduğunu belirtmek için olarak ayarlayın. `true` varsayılan değerdir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

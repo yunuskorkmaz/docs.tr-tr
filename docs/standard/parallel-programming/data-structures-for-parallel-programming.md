@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e0214afe4dba7f838f420907374f1472d6d3911
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829537"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699020"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Paralel Programlama için Veri Yapıları
 
 .NET, bir dizi eşzamanlı koleksiyon sınıfı, hafif eşitleme temelleri ve yavaş başlatma türleri dahil olmak üzere paralel programlamada yararlı olan çeşitli türler sağlar. Bu türleri, paralel kitaplığı ve PLıNQ görevi dahil, çok iş parçacıklı uygulama kodu ile birlikte kullanabilirsiniz.  
   
 ## <a name="concurrent-collection-classes"></a>Eşzamanlı koleksiyon sınıfları  
+
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>Ad alanındaki koleksiyon sınıfları iş parçacığı güvenli ekleme ve kaldırma işlemleri sağlar ve bu işlemler, mümkün olan her yerde kilitleri önlemenize ve kilitlerin gerekli olduğu hassas bir kilit kullanılmasına neden olur. Eşzamanlı bir koleksiyon sınıfı, öğelere eriştiğinde kullanıcı kodunun herhangi bir kilit geçirmesine gerek yoktur. Eşzamanlı koleksiyon sınıfları, <xref:System.Collections.ArrayList?displayProperty=nameWithType> <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> birden çok iş parçacığının bir koleksiyondaki öğeleri eklemesi ve kaldırması halinde (Kullanıcı tarafından uygulanan kilitleme ile) gibi türlerin performansını önemli ölçüde iyileştirebilir.  
   
  Aşağıdaki tabloda, eşzamanlı koleksiyon sınıfları listelenmektedir:  
@@ -31,6 +32,7 @@ ms.locfileid: "94829537"
  Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../collections/thread-safe/index.md).  
   
 ## <a name="synchronization-primitives"></a>Eşitleme temelleri  
+
  Ad alanındaki eşitleme temelleri, <xref:System.Threading?displayProperty=nameWithType> eski çoklu iş parçacıklı kodda bulunan pahalı kilitleme mekanizmalarından kaçınarak ayrıntılı eşzamanlılık ve daha hızlı performans sağlar.
   
  Aşağıdaki tabloda eşitleme türleri listelenmektedir:  
@@ -44,13 +46,14 @@ ms.locfileid: "94829537"
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Kilidi almaya çalışan iş parçacığının, bir döngü veya döndürme için, bir süre içinde, bir süre boyunca, bir zaman için bir döngü veya *döndürme* için beklemesini sağlayan bir karşılıklı dışlama kilit temel türü. Kilidin bekleme işleminin kısa olması beklenildiği senaryolarda, <xref:System.Threading.SpinLock> diğer kilitleme biçimlerinden daha iyi performans sunar. Daha fazla bilgi için bkz. [SpinLock](../threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Belirli bir süre için döngü uygulanacak küçük, hafif bir tür ve sonuç sayısı aşılırsa iş parçacığını bekleme durumuna yerleştirir.  Daha fazla bilgi için bkz. [SpinWait](../threading/spinwait.md).|  
   
- Daha fazla bilgi için bkz:  
+ Daha fazla bilgi için bkz.  
   
 - [Nasıl yapılır: Low-Level eşitleme için SpinLock kullanma](../threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
 - [Nasıl yapılır: eş zamanlı işlemleri bir engel Ile eşitler](../threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Yavaş başlatma sınıfları  
+
  Yavaş başlatma sayesinde bir nesne için bellek, gerekli olana kadar ayrılmaz. Yavaş başlatma, nesne ayırmalarını bir programın kullanım ömrü boyunca eşit bir şekilde dağıtarak performansı iyileştirebilir. Türü sarmalayarak herhangi bir özel tür için yavaş başlatmayı etkinleştirebilirsiniz <xref:System.Lazy%601> .  
   
  Aşağıdaki tabloda, yavaş başlatma türleri listelenmektedir:  
@@ -64,6 +67,7 @@ ms.locfileid: "94829537"
  Daha fazla bilgi için bkz. [yavaş başlatma](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Özel durumları topla  
+
  <xref:System.AggregateException?displayProperty=nameWithType>Tür, farklı iş parçacıklarında aynı anda oluşturulan birden fazla özel durumu yakalamak ve bunları birleştirme iş parçacığına tek bir özel durum olarak döndürmek için kullanılabilir. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>Ve <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> TÜRLERI ve PLINQ <xref:System.AggregateException> Bu amaçla yoğun bir şekilde kullanılır. Daha fazla bilgi için bkz. [özel durum işleme](exception-handling-task-parallel-library.md) ve [nasıl yapılır: PLINQ sorgusunda özel durumları işleme](how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
