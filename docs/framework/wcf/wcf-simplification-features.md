@@ -2,12 +2,12 @@
 title: WCF Kolaylaştırma Özellikleri
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: d582c075377cf53d75ddf1bb9f37764e24e486ec
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8a818ec0852cfae20ef23fede04b55b08a7449a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545083"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732924"
 ---
 # <a name="wcf-simplification-features"></a>WCF Kolaylaştırma Özellikleri
 
@@ -72,7 +72,7 @@ WCF 4,5 tarafından oluşturulan aynı yapılandırma dosyasının bir örneği 
 </configuration>
 ```
 
-## <a name="contract-first-development"></a>Sözleşme-Ilk geliştirme
+## <a name="contract-first-development"></a>Contract-First geliştirme
 
 WCF artık sözleşmenin ilk geliştirmeyi destekler. svcutil.exe aracında bir WSDL belgesinden hizmet ve veri sözleşmeleri oluşturmanıza olanak sağlayan bir/serviceContract anahtarı vardır.
 
@@ -88,7 +88,7 @@ WCF, geliştiricilere WCF Hizmetleri yazarken ASP.NET HTTP işlem hattının öz
 
 - WCF 'ye, zaman uyumsuz akış için yeni destek eklenmiştir. Zaman uyumsuz akışı etkinleştirmek için,  <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> uç nokta davranışını hizmet konağına ekleyin ve <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> özelliğini olarak ayarlayın `true` . Bu, bir hizmet, yavaş okuyan birden çok istemciye akış iletileri gönderirken ölçeklenebilirlik sağlayabilir. WCF artık istemci başına bir iş parçacığını engellemez ve başka bir istemciye hizmet vermek için iş parçacığını boşaltacaktır.
 
-- Bir hizmetin IIS 'de barındırıldığı durumlarda iletilerin arabelleğe alınması ile ilgili sınırlamalar kaldırılmıştır. Önceki WCF sürümlerinde, akış ileti aktarımı kullanan IIS tarafından barındırılan bir hizmet için ileti alırken, ASP.NET, WCF 'ye göndermeden önce tüm iletiyi arabelleğe alabilir. Bu, büyük bellek tüketimine neden olur. Bu arabelleğe alma, .NET 4,5 ' de kaldırılmıştır ve artık IIS tarafından barındırılan WCF Hizmetleri, tüm ileti alınmadan önce gelen akışı işlemeye başlayabilir ve böylece gerçek akış de mümkün değildir. Bu, WCF 'nin iletilere anında yanıt vermesini ve gelişmiş performansa izin vermesini sağlar. Ayrıca, `maxRequestLength` gelen isteklerde ASP.net boyut sınırı için artık bir değer belirtmeniz gerekmez. Bu özellik ayarlandıysa, yok sayılır. Daha fazla bilgi için `maxRequestLength` bkz. [ \<httpRuntime> yapılandırma öğesi](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71)). MaxAllowedContentLength 'ı yapılandırmanız hala gerekir, daha fazla bilgi Için bkz. [IIS Istek sınırları](/previous-versions/iis/settings-schema/ms689462(v=vs.90)).
+- Bir hizmetin IIS 'de barındırıldığı durumlarda iletilerin arabelleğe alınması ile ilgili sınırlamalar kaldırılmıştır. Önceki WCF sürümlerinde, akış ileti aktarımı kullanan IIS tarafından barındırılan bir hizmet için ileti alırken, ASP.NET, WCF 'ye göndermeden önce tüm iletiyi arabelleğe alabilir. Bu, büyük bellek tüketimine neden olur. Bu arabelleğe alma, .NET Framework 4,5 ' de kaldırılmıştır ve artık IIS tarafından barındırılan WCF Hizmetleri, tüm ileti alınmadan önce gelen akışı işlemeye başlayabilir ve böylece gerçek akışı etkinleştirir. Bu, WCF 'nin iletilere anında yanıt vermesini ve gelişmiş performansa izin vermesini sağlar. Ayrıca, `maxRequestLength` gelen isteklerde ASP.net boyut sınırı için artık bir değer belirtmeniz gerekmez. Bu özellik ayarlandıysa, yok sayılır. Daha fazla bilgi için `maxRequestLength` bkz. [ \<httpRuntime> yapılandırma öğesi](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71)). MaxAllowedContentLength 'ı yapılandırmanız hala gerekir, daha fazla bilgi Için bkz. [IIS Istek sınırları](/previous-versions/iis/settings-schema/ms689462(v=vs.90)).
 
 ## <a name="new-transport-default-values"></a>Yeni aktarım varsayılan değerleri
 
@@ -109,7 +109,7 @@ Aşağıdaki tablo, değişen ayarları ve ek bilgilerin nerede bulunacağını 
 
 <xref:System.Xml.XmlDictionaryReaderQuotas> bir ileti oluştururken kodlayıcı tarafından kullanılan bellek miktarını sınırlayan, XML sözlüğü okuyucuları için yapılandırılabilir kota değerleri içerir. Bu kotalar yapılandırılabilir olsa da, varsayılan değerler bir geliştiricinin bunları açıkça ayarlaması gereksinimini azaltmak üzere değiştirilmiştir. `MaxReceivedMessageSize` Kota, bellek tüketimini sınırlayabilmesi için, ' nin karmaşıklığıyla uğraşmanız gereksinimini ortadan yacak şekilde değişmemiştir <xref:System.Xml.XmlDictionaryReaderQuotas> . Aşağıdaki tabloda kotalar, yeni varsayılan değerleri ve her kotanın ne için kullanıldığı hakkında kısa bir açıklama gösterilmektedir.
 
-|Kota adı|Varsayılan değer|Description|
+|Kota adı|Varsayılan değer|Açıklama|
 |----------------|-------------------|-----------------|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32. MaxValue|İzin verilen en fazla dizi uzunluğunu alır ve ayarlar. Bu kota, bayt dizileri dahil olmak üzere XML okuyucunun döndürdüğü temel elemanların bir dizisinin maksimum boyutunu sınırlandırır. Bu kota, XML okuyucusu üzerinde bellek tüketimini sınırlamaz, ancak okuyucu kullanan herhangi bir bileşende. Örneğin,, <xref:System.Runtime.Serialization.DataContractSerializer> ile güvenli hale getirilmiş bir okuyucu kullandığında <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> , bu kotadan daha büyük olan bayt dizilerinin serisini kaldırmaz.|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32. MaxValue|Her okuma için döndürülen izin verilen bayt sayısını alır ve ayarlar. Bu kota, öğe başlangıç etiketi ve özniteliklerini okurken tek bir okuma işleminde okunan bayt sayısını sınırlar. (Akış olmayan durumlarda, öğe adının kendisi kotaya karşı sayılmaz). Öznitelik adlarının benzersizlik için denetlenmesi gerektiğinden, çok fazla XML özniteliği orantısız işleme süresi kullanabilir. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> Bu tehdidi azaltır.|

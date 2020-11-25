@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4401546e-4d48-453f-a1fb-b2ebda54df5c
 topic_type:
 - apiref
-ms.openlocfilehash: d744abf5c502e9b9510cf9fd6479149b6c2177cc
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 24679118e4255282f7da3ff8be2ce9c08250e181
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762220"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732053"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory Metodu
+
 Bu arabirimle ilişkili ortak dil çalışma zamanının (CLR) yükleme dizinini alır.  
   
  Bu yöntem 2,0, 3,0 ve 3,5 .NET Framework sürümlerinde sunulan [GetCORSystemDirectory](getcorsystemdirectory-function.md) işlevinin yerini alır.  
@@ -36,32 +37,35 @@ HRESULT GetRuntimeDirectory(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pwzBuffer`  
  dışı CLR yükleme dizinini döndürür. Yükleme yolu tam olarak nitelenir; Örneğin, "c:\Windows\Microsoft.NET\Framework\v1.0.3705 \\ ".  
   
  `pchBuffer`  
- [in, out] `pwzBuffer`Arabellek taşmalarını önlemek için boyutunu belirtir. `pwzBuffer`Null ise, `pchBuffer` gereken boyutunu döndürür `pwzBuffer` .  
+ [in, out] `pwzBuffer` Arabellek taşmalarını önlemek için boyutunu belirtir. `pwzBuffer`Null ise, `pchBuffer` gereken boyutunu döndürür `pwzBuffer` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`pwzBuffer`ya da `pchBuffer` null.|  
+|E_POINTER|`pwzBuffer` ya da `pchBuffer` null.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ICLRRuntimeInfo Arabirimi](iclrruntimeinfo-interface.md)
-- [Barındırma](index.md)
+- [Hosting](index.md)

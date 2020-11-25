@@ -5,12 +5,12 @@ helpviewer_keywords:
 - collections [.NET], generic
 - generic collections [.NET]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: eeee207d7fe70cc736ca962ef99f3dac2295902b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7b8b7b458a1667a1d3239ef378c729929678e8aa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822899"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733080"
 ---
 # <a name="when-to-use-generic-collections"></a>Genel koleksiyonların kullanılma zamanı
 
@@ -62,6 +62,7 @@ Uygulamanızdaki işlevleri kullanmayı istediğinizde, <xref:System.Collections
 LINQ to Objects özelliği, nesne türü veya arabirimini uyguladığı sürece, bellek içi nesnelere erişmek için LINQ sorgularını kullanmanıza olanak sağlar <xref:System.Collections.IEnumerable?displayProperty=nameWithType> <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . LINQ sorguları verilere erişim için ortak bir model sağlar; genellikle standart döngülerden daha kısa ve okunabilir `foreach` ; filtreleme, sıralama ve gruplama özellikleri sağlar. LINQ sorguları da performansı iyileştirebilir. Daha fazla bilgi için bkz. [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)ve [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md).
 
 ## <a name="additional-functionality"></a>Ek Işlevsellik
+
 Genel türlerden bazıları genel olmayan koleksiyon türlerinde bulunmayan işlevlere sahiptir. Örneğin, <xref:System.Collections.Generic.List%601> genel olmayan sınıfına karşılık gelen sınıfı, <xref:System.Collections.ArrayList> Listeyi aramak için yöntemler belirtmenize imkan tanıyan temsilci gibi genel temsilcileri kabul eden bir dizi yöntemi <xref:System.Predicate%601> , <xref:System.Action%601> listenin her bir öğesi üzerinde işlem yapan yöntemleri temsil eden temsilciyi ve <xref:System.Converter%602> türler arasında dönüştürmeleri tanımlamanızı sağlayan temsilciyi içerir.
 
 <xref:System.Collections.Generic.List%601>Sınıfı, <xref:System.Collections.Generic.IComparer%601> Listeyi sıralamak ve aramak için kendi genel arabirim uygulamalarınızı belirtmenizi sağlar. <xref:System.Collections.Generic.SortedDictionary%602>Ve <xref:System.Collections.Generic.SortedList%602> sınıflarının bu özelliği de vardır. Ayrıca, bu sınıflar koleksiyon oluşturulduğunda Karşılaştırıcılar belirtmenizi sağlar. Benzer şekilde, <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.ObjectModel.KeyedCollection%602> sınıfları kendi eşitlik karşılaştırmalarınızı belirtmenizi sağlar.

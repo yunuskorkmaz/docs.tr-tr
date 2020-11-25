@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: f194a0bafa0ab7b9606d72f091dbb12e94f31099
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eae224312d147f3ec68b75824d90e5df40d886e7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824024"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733743"
 ---
 # <a name="task-based-asynchronous-pattern"></a>Görev tabanlı zaman uyumsuz model
 
@@ -35,6 +35,7 @@ TAP, bir zaman uyumsuz işlemin başlangıcını ve tamamlanmasını temsil etme
  DOKUNMA sözdiziminin, zaman uyumsuz programlama modeli (APM) ve olay tabanlı zaman uyumsuz desen (EAP) gibi eski zaman uyumsuz programlama desenlerinde kullanılan sözdiziminden farklı olduğu örnekler için bkz. [zaman uyumsuz programlama desenleri](index.md).  
   
 ## <a name="initiating-an-asynchronous-operation"></a>Zaman uyumsuz bir işlem başlatılıyor  
+
  TAP tabanlı bir zaman uyumsuz yöntem elde edilen görevi döndürmeden önce, az miktarda bir işi (bağımsız değişkenleri doğrulamak ya da zaman uyumsuz işlemi başlatmak gibi) zaman uyumlu olarak yapabilir. Zaman uyumsuz yöntemin çabuk dönmesini sağlamak için zaman uyumlu iş olabildiğince az tutulmalıdır. Hızlı dönüşün nedenleri şunlardır:  
   
 - Zaman uyumsuz yöntemler kullanıcı arabirimi (UI) iş parçacıkları tarafında çağırılabilirler, ve herhangi bir uzun süre çalışan zaman uyumlu iş uygulamanın yanıt verme becerisine zarar verebilir.  
@@ -43,20 +44,24 @@ TAP, bir zaman uyumsuz işlemin başlangıcını ve tamamlanmasını temsil etme
   
  Bazı durumlarda, işlemi tamamlamak için gereken iş, işlemi zaman uyumsuz olarak başlatmak için gereken işten daha azdır. Okuma işleminin bellekte zaten arabelleğe alınmış veri ile tamamlanabileceği bir akıştan okumak bu duruma bir örnektir. Bu gibi durumlarda, işlem zaman uyumlu olarak tamamlanabilir ve zaten tamamlanmış bir görevi döndürebilir.  
   
-## <a name="exceptions"></a>Özel durumlar  
+## <a name="exceptions"></a>Özel Durumlar  
+
  Bir zaman uyumsuz yöntem, zaman uyumsuz yöntem çağrısının dışına atılacak bir özel durumu sadece bir kullanım hatasına yanıt olarak harekete geçirmelidir. Kullanım hataları asla üretim kodunda gerçekleşmemelidir. Örneğin, `Nothing` yöntemin bağımsız değişkenlerinden biri bir hata durumuna neden olursa (genellikle bir özel durumla temsil edilen) bir null başvurusu (Visual Basic) geçirilirse, bir <xref:System.ArgumentNullException> null başvurusunun geçirilmeyeceğinden emin olmak için çağıran kodu değiştirebilirsiniz. Diğer bütün hatalar için, görev döndürülene kadar zaman uyumsuz yöntem zaman uyumlu olarak tamamlansa bile, zaman uyumsuz yöntem yürütülüyorken oluşan özel durumlar döndürülen göreve atanmalıdır. Genel olarak, bir görev en fazla bir özel durum içerir. Ancak, görev birden çok işlemi temsil ediyorsa (örneğin, <xref:System.Threading.Tasks.Task.WhenAll%2A> ), birden çok özel durum tek bir görevle ilişkilendirilebilir.  
   
 ## <a name="target-environment"></a>Hedef ortam  
+
  Bir TAP yöntemi oluştururken, zaman uyumsuz yürütülmenin nerede olacağını belirleyebilirsiniz. İş yükünü iş parçacığı havuzunda yürütmeyi, zaman uyumsuz g/ç kullanarak uygulamayı (İşlemin yürütülmesinin büyük bölümü için bir iş parçacığına bağlı kalmadan), belirli bir iş parçacığında çalıştırmayı (UI iş parçacığı gibi) veya herhangi bir sayıda olası bağlamı kullanmayı tercih edebilirsiniz. Bir TAP yönteminin yürütülmesi hiçbir şey olmasa da, bir <xref:System.Threading.Tasks.Task> koşulun sistemde başka bir yerde (örneğin, bir sıraya alınmış veri yapısına ulaşan verileri temsil eden bir görev) oluşumunu temsil eden bir, döndürebilir.
 
  TAP metodunu çağıran, elde edilen görevde zaman uyumlu olarak bekleyen TAP yönteminin tamamlanmasını beklemeyi engelleyebilir veya zaman uyumsuz işlem tamamlandığında ek (devamlılık) kodu çalıştırabilir. Devam kodunun yaratıcısı kodun nerede çalışacağına dair denetime sahiptir. <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task.ContinueWith%2A> Devamlılığın üzerinde oluşturulmuş dil desteğini kullanarak (örneğin, Visual Basic C# ' de, `await` `Await` `AwaitValue` F # ' da), devam kodunu doğrudan, sınıf üzerinde yöntemler aracılığıyla (örneğin,) veya örtük olarak oluşturabilirsiniz.  
   
 ## <a name="task-status"></a>Görev durumu  
+
  <xref:System.Threading.Tasks.Task>Sınıfı, zaman uyumsuz işlemler için bir yaşam döngüsü sağlar ve bu döngüye numaralandırma tarafından temsil edilir <xref:System.Threading.Tasks.TaskStatus> . Ve ' den türetilen türlerin köşe durumlarını desteklemek <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> ve oluşturma işleminden oluşturma ile ayırmayı desteklemek için, <xref:System.Threading.Tasks.Task> sınıfı bir <xref:System.Threading.Tasks.Task.Start%2A> yöntemi gösterir. Ortak oluşturucular tarafından oluşturulan görevler <xref:System.Threading.Tasks.Task> , yaşam döngüsünü zamanlanmamış durumda başladıklarından *cold tasks* <xref:System.Threading.Tasks.TaskStatus.Created> ve yalnızca bu örneklerde çağrıldığında zamanlandıklarından soğuk görevler olarak adlandırılır <xref:System.Threading.Tasks.Task.Start%2A> .
 
  Diğer tüm görevler yaşam döngülerine etkin bir durumda başlar, bu da temsil ettikleri zaman uyumsuz işlemlerin zaten başlatıldığı ve görev durumlarının dışında bir numaralandırma değeri olduğu anlamına gelir <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> . TAP yöntemlerinden döndürülen tüm görevler etkinleştirilmelidir. **Bir TAP yöntemi, döndürülecek görevi örneklemek için bir görevin oluşturucusunu dahili olarak kullanıyorsa, dokunarak yöntemi <xref:System.Threading.Tasks.Task.Start%2A> <xref:System.Threading.Tasks.Task> döndürmeden önce nesneyi çağırmalıdır.** Bir TAP yönteminin tüketicileri, döndürülen görevin etkin olduğunu ve <xref:System.Threading.Tasks.Task.Start%2A> <xref:System.Threading.Tasks.Task> bir tap yönteminden döndürülen herhangi bir çağrı yapmayı denemeyeceğini güvenle varsayabilir. <xref:System.Threading.Tasks.Task.Start%2A>Etkin bir görevde çağırma bir <xref:System.InvalidOperationException> özel durumla sonuçlanır.  
   
 ## <a name="cancellation-optional"></a>İptal (isteğe bağlı)  
+
  TAP kullanırken, iptal etmek hem zaman uyumsuz yöntem oluşturucuları hem de zaman uyumsuz yöntem tüketicileri için isteğe bağlıdır. Bir işlem iptaline izin veriyorsa, zaman uyumsuz yöntemin bir iptal belirtecini (örnek) kabul eden bir aşırı yüklemesini kullanıma sunar <xref:System.Threading.CancellationToken> . Kuralına göre parametresi olarak adlandırılır `cancellationToken` .  
   
  [!code-csharp[Conceptual.TAP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#1)]
@@ -69,6 +74,7 @@ TAP, bir zaman uyumsuz işlemin başlangıcını ve tamamlanmasını temsil etme
  İlk ve daha sonra iptal etme özelliğini ortaya çıkarmak isteyen zaman uyumsuz yöntemler için, iptal belirtecini kabul etmeyen bir aşırı yükleme sağlamanız gerekmez. İptal edilemeyen yöntemler için iptal belirteci kabul eden bir aşırı yükleme sağlamayın; bu çağırana hedef yöntemin iptal edilip edilemez olduğunu belirtmeye yardımcı olur.  İptal gerektirmeyen tüketici kodu <xref:System.Threading.CancellationToken> <xref:System.Threading.CancellationToken.None%2A> , bağımsız değişken değeri olarak bir ve sağlayan bir yöntemi çağırabilir. <xref:System.Threading.CancellationToken.None%2A> , varsayılan olarak işlevsel olarak eşdeğerdir <xref:System.Threading.CancellationToken> .  
   
 ## <a name="progress-reporting-optional"></a>İlerleme raporlaması (isteğe bağlı)  
+
  Bazı zaman uyumsuz işlemler ilerleme bildirimlerinden faydalanır; bunlar genel olarak kullanıcı arayüzünü zaman uyumsuz işlemin ilerlemesi ile ilgili bilgiyle güncelleştirmekte kullanılır.
 
  TAP, işlem <xref:System.IProgress%601> zaman uyumsuz metoda genellikle adlı bir parametre olarak geçirilen bir arabirim aracılığıyla işlenir `progress` .  Zaman uyumsuz yöntem çağırıldığında ilerleme arabirimini sağlamak yanlış kullanım nedeniyle ortaya çıkan yarış durumlarını engellemeye yardımcı olur (yanlış kayıt olan olay işleyicilerinin işlem başladıktan sonra güncellemeleri kaçırabilmesi).  Daha da önemlisi, ilerleme arabirimi ilerlemenin tüketici kodunda belirlendiği üzere farklı uygulamalarını destekleyebilir.  Örneğin, tüketici kod yalnızca en son ilerleme güncellemesini isteyebilir, ya da tüm güncellemeleri arabelleğe koyabilir, ya da her güncelleme için bir eylem çağırabilir, ya da çağrının belirli bir iş parçacığına yönlendirilip yönlendirilmediğini denetlemek isteyebilir. Bu seçeneklerin tümü, belirli bir tüketicinin ihtiyaçlarına göre özelleştirilmiş bir arabirimin farklı bir uygulamasını kullanarak elde edilebilir.  İptalde olduğu gibi, dokunma uygulamaları <xref:System.IProgress%601> yalnızca API ilerleme bildirimlerini destekliyorsa bir parametre sağlamalıdır.
@@ -93,6 +99,7 @@ TAP, bir zaman uyumsuz işlemin başlangıcını ve tamamlanmasını temsil etme
  TAP uygulamalarında bir parametreyi kabul eden aşırı yüklemeler varsa `progress` , bağımsız değişkenin olması gerekir `null` , bu durumda hiçbir ilerleme bildirilmez. DOKUNMA uygulamaları ilerleme durumunu <xref:System.Progress%601> nesneye zaman uyumlu olarak bildirmeli ve zaman uyumsuz yöntemin ilerlemeyi hızlı bir şekilde sağlamasına olanak sağlar. Ayrıca, ilerleme durumunun, bilgilerin nasıl ve en iyi şekilde işleneceğini belirlemesine izin verir. Örneğin, ilerleme örneği geri aramaları yönlendirmeyi ve yakalanan bir eşitleme bağlamında olay çağırmayı seçebilir.  
   
 ## <a name="iprogresst-implementations"></a>IProgress \<T> uygulamaları  
+
 .NET, <xref:System.Progress%601> uygulayan sınıfını sağlar <xref:System.IProgress%601> . <xref:System.Progress%601>Sınıfı şu şekilde bildirilmiştir:  
   
 ```csharp  
@@ -108,6 +115,7 @@ public class Progress<T> : IProgress<T>
  Bir örneği <xref:System.Progress%601> <xref:System.Progress%601.ProgressChanged> , zaman uyumsuz işlem bir ilerleme güncelleştirmesi raporlayan her seferinde oluşturulan bir olayı ortaya koyar. <xref:System.Progress%601.ProgressChanged>Olay, <xref:System.Threading.SynchronizationContext> örnek örneği oluşturulduğunda yakalanan nesne üzerinde tetiklenir <xref:System.Progress%601> . Eğer hiçbir eşitleme bağlamı kullanılabilir değilse, iş parçacığı havuzunu hedefleyen bir varsayılan bağlam kullanılır. İşleyiciler bu olay ile kayıtlı olabilir. Tek bir işleyici Ayrıca <xref:System.Progress%601> oluşturucuya kolaylık sağlaması için de sağlanmayabilir ve olay için bir olay işleyicisi gibi davranır <xref:System.Progress%601.ProgressChanged> . İlerleme güncelleştirmeleri zaman uyumsuz işlemi olay işleyicileri yürütülürken geciktirmemek için zaman uyumsuz olarak harekete geçirilir. Başka bir <xref:System.IProgress%601> uygulama farklı anlamları uygulamayı seçebilir.  
   
 ## <a name="choosing-the-overloads-to-provide"></a>Sağlanacak aşırı yüklemeleri seçme  
+
  Bir dokunma uygulamasında hem isteğe bağlı hem de <xref:System.Threading.Tasks.TaskFactory.CancellationToken%2A> isteğe bağlı <xref:System.IProgress%601> Parametreler kullanılıyorsa, bu muhtemelen en fazla dört aşırı yükleme gerektirebilir:  
   
 ```csharp  

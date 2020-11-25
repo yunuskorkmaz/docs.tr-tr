@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 00693f1a87334620442e8865e76183b2dab68878
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3237b67f8f711e9ef213d6fc66f1513c534fbdeb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503625"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733210"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps Yöntemi
+
 Belirtilen belirteç tarafından başvurulan üyeyle ilişkili meta verileri alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -40,6 +41,7 @@ HRESULT GetMemberRefProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `mr`  
  'ndaki İçin ilişkili meta verileri döndürecek MemberRef belirteci.  
   
@@ -62,11 +64,12 @@ HRESULT GetMemberRefProps (
  dışı Bayt cinsinden boyut `ppvSigBlob` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: e709acce-6a17-4346-b38a-467dba567358
 topic_type:
 - apiref
-ms.openlocfilehash: c0e4c43ac18b5e214d38dd7a57452a3871e4b43d
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: f6f589656a3063fc89bd276b32d0ed751fd8d2d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796034"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733405"
 ---
 # <a name="cordebugcreateprocessflags-enumeration"></a>CorDebugCreateProcessFlags Numaralandırması
+
 [ICorDebug:: CreateProcess](icordebug-createprocess-method.md) metoduna yapılan bir çağrıda kullanılabilecek ek hata ayıklama seçenekleri sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorDebugCreateProcessFlags {  
@@ -39,6 +40,7 @@ typedef enum CorDebugCreateProcessFlags {
 |`DEBUG_NO_SPECIAL_OPTIONS`|Hiçbir özel seçenek ayarlanmadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

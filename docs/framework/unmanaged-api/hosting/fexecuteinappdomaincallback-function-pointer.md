@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-ms.openlocfilehash: 6fd7a19d9fc77b43bbceb1b5e5399a455429e700
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8b9c6bb41b7438b9764ac2a8a7fc1677bc08557a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616159"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733691"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback İşlev İşaretçisi
+
 Yönetilen kodu yürütmek için ortak dil çalışma zamanı (CLR) tarafından çağrılan bir işleve işaret eder.  
   
  Bu işlev işaretçisi .NET Framework 4 ' te kullanım dışı bırakıldı.  
@@ -35,17 +36,19 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cookie`  
  'ndaki Yürütülebilecek yönetilen kodu içeren, bir veya daha fazla arayana ayrılan belleğe yönelik işaretçi.  
   
  Bu belleğin ayrılması ve ömrü, çağıran tarafından denetlenir (yani, CLR). Bu, CLR tarafından yönetilen yığın belleği değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorWks. dll  
+ **Kitaplık:** MSCorWks.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

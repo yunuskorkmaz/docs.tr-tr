@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: a3d7cf29-1414-49e6-8aae-9b3283c4f5f0
 topic_type:
 - apiref
-ms.openlocfilehash: 4bfad8b985a8ef059031464e99a8004842b276c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4b0de5f9759491f1303edc978b1548e91214daf8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445577"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733756"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps Yöntemi
+
 Derleme düzeyi özellikleri atar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetAssemblyProps(  
@@ -36,11 +37,12 @@ HRESULT SetAssemblyProps(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `AssemblyID`  
  Derlemenin KIMLIĞI.  
   
  `FileToken`  
- Özelliği tanımlayan dosya. `AssemblyID` ilişkisiz bir netmodule belirtmezse NULL olabilir.  
+ Özelliği tanımlayan dosya. `AssemblyID`İlişkisiz bir netmodule BELIRTMEZSE null olabilir.  
   
  `Option`  
  Değiştirme seçeneğini belirtir.  
@@ -49,9 +51,11 @@ HRESULT SetAssemblyProps(
  Seçeneğin yeni değeri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

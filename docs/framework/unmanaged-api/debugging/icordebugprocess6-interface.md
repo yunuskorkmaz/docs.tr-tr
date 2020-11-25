@@ -2,14 +2,15 @@
 title: ICorDebugProcess6 Arabirimi
 ms.date: 03/30/2017
 ms.assetid: 34a10ac2-882c-4797-8369-f120e8e640c7
-ms.openlocfilehash: 4ad350e36ee15d7c1781e03698fbee3fd40c4c12
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ba70bab28eeddad6e3cf3c2b82b196a69ce68647
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212873"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732612"
 ---
 # <a name="icordebugprocess6-interface"></a>ICorDebugProcess6 Arabirimi
+
 Yerel özel durum ayıklama olayları ve sanal modül bölünmesi içinde kodlanmış yönetilen hata ayıklama olaylarının kodunu çözme gibi özellikleri etkinleştirmek için ICorDebugProcess arabirimini mantıksal olarak genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -29,6 +30,7 @@ Yerel özel durum ayıklama olayları ve sanal modül bölünmesi içinde kodlan
 > Arabirim yalnızca .NET Native kullanılabilir. `QueryInterface` `E_NOINTERFACE` .NET Native dışında ICorDebug senaryolarına yönelik bir arabirim işaretçisi alma çağrısı yapılmaya çalışılıyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

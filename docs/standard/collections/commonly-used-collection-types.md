@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 2ab86a6cbf0b92ecdaf0a97041d493f9494e3225
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1b992837bcb32537f24643ef4781b6d170a058d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831253"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733561"
 ---
 # <a name="commonly-used-collection-types"></a>Çok Kullanılan Koleksiyon Türleri
+
 Koleksiyon türleri, karma tablolar, kuyruklar, yığınlar, paketler, sözlükler ve listeler gibi veri koleksiyonlarının ortak çeşitleridir.  
   
  Koleksiyonlar <xref:System.Collections.ICollection> arabirim, <xref:System.Collections.IList> arabirim, <xref:System.Collections.IDictionary> arabirim veya genel karşılıklarına dayalıdır. Arabirim <xref:System.Collections.IList> ve <xref:System.Collections.IDictionary> arabirim her ikisi de <xref:System.Collections.ICollection> arabiriminden türetilir; bu nedenle, tüm koleksiyonlar <xref:System.Collections.ICollection> doğrudan veya dolaylı olarak arayüze dayalıdır. <xref:System.Collections.IList>Arayüzde (örneğin,, <xref:System.Array> <xref:System.Collections.ArrayList> veya <xref:System.Collections.Generic.List%601> ) veya doğrudan arayüzde (örneğin,,, veya) temel alan koleksiyonlarda <xref:System.Collections.ICollection> <xref:System.Collections.Queue> <xref:System.Collections.Concurrent.ConcurrentQueue%601> <xref:System.Collections.Stack> <xref:System.Collections.Concurrent.ConcurrentStack%601> <xref:System.Collections.Generic.LinkedList%601> , her öğe yalnızca bir değer içerir. <xref:System.Collections.IDictionary>Arayüze ( <xref:System.Collections.Hashtable> ve <xref:System.Collections.SortedList> sınıfları, <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.Generic.SortedList%602> Genel sınıfları gibi) veya sınıfları temel alan koleksiyonlar içinde <xref:System.Collections.Concurrent.ConcurrentDictionary%602> her öğe hem bir anahtar hem de bir değer içerir.  <xref:System.Collections.ObjectModel.KeyedCollection%602>Sınıf, değerler içine gömülü anahtarlar içeren bir değer listesi olduğundan ve bu nedenle, bir liste ve sözlük gibi davranır.  
@@ -40,6 +41,7 @@ Koleksiyon türleri, karma tablolar, kuyruklar, yığınlar, paketler, sözlükl
 |[Genel Türler](../generics/index.md)|.NET tarafından sunulan genel koleksiyonlar, temsilciler ve arabirimler dahil olmak üzere genel türler özelliğini açıklar. C#, Visual Basic ve Visual C++ için özellik belgelerinin bağlantılarını ve yansıma gibi destekleyici teknolojileri sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cbaca4e1-4473-459b-ba34-f1f59ce7c0ba
 topic_type:
 - apiref
-ms.openlocfilehash: 2dd70693528904459a34689dbad944c65c971254
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: fca7b11a83b5a695feae82fe5f25218f87afbce2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441649"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732898"
 ---
 # <a name="isymunmanagedconstantgetname-method"></a>ISymUnmanagedConstant::GetName Yöntemi
+
 Sabitin adını alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,23 +37,26 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cchName`  
- 'ndaki `szName`Parametrenin işaret ettiği arabelleğin uzunluğu.  
+ 'ndaki `szName` Parametrenin işaret ettiği arabelleğin uzunluğu.  
   
  `pcchName`  
- dışı `ULONG32`Null sonlandırma dahil olmak üzere, adı içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Null sonlandırma dahil olmak üzere, adı içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
  `szName`  
  dışı Adı depolayan arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ISymUnmanagedConstant Arabirimi](isymunmanagedconstant-interface.md)
-- [GetSignature Yöntemi](isymunmanagedconstant-getsignature-method.md)
-- [GetValue Yöntemi](isymunmanagedconstant-getvalue-method.md)
+- [GetSignature Metodu](isymunmanagedconstant-getsignature-method.md)
+- [GetValue Metodu](isymunmanagedconstant-getvalue-method.md)

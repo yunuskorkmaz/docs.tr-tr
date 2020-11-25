@@ -9,14 +9,15 @@ ms.date: 03/30/2017
 - hash function
 - collections [.NET], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: bb6d0802526db9b6b5673fe7d13b1f12af7acfcf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 56e8ceff05f8f9777af370301a96cd17d0286f44
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831227"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733535"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Karma Tablo ve Sözlük Koleksiyon Türleri
+
 <xref:System.Collections.Hashtable?displayProperty=nameWithType>Sınıfı ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> Genel sınıfları <xref:System.Collections.IDictionary?displayProperty=nameWithType> arabirimini uygular. <xref:System.Collections.Generic.Dictionary%602>Genel sınıf Ayrıca <xref:System.Collections.Generic.IDictionary%602> genel arabirimini de uygular. Bu nedenle, bu koleksiyonlardaki her öğe bir anahtar ve değer çiftidir.  
   
  Bir <xref:System.Collections.Hashtable> nesne, koleksiyonun öğelerini içeren demetlerden oluşur. Bir demet, içindeki öğelerin bir sanal alt grubudur ve <xref:System.Collections.Hashtable> Bu, arama ve alma işlemlerini birçok koleksiyondan daha kolay ve hızlı bir şekilde gerçekleştirir. Her demet, bir karma işlev kullanılarak oluşturulan ve öğesinin anahtarını temel alan bir karma kodla ilişkilendirilir.  

@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 82e9a7da-321b-48b8-b239-52eaffda6be8
 topic_type:
 - apiref
-ms.openlocfilehash: 85ac976daec8fd76ee21012a30611235609f4b34
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c6fab627f21977e85f9885ca4b49a0276faa5ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109489"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732170"
 ---
 # <a name="asm_cache_flags-enumeration"></a>ASM_CACHE_FLAGS Numaralandırması
+
 Genel derleme önbelleğinde [IAssemblyCacheItem](iassemblycacheitem-interface.md) tarafından temsil edilen bir derlemenin kaynağını gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -40,23 +41,24 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|Ngen. exe ' yi kullanarak önceden derlenmiş derlemelerin önbelleğini numaralandırır.|  
+|`ASM_CACHE_ZAP`|Ngen.exe kullanarak önceden derlenmiş derlemelerin önbelleğini sıralar.|  
 |`ASM_CACHE_GAC`|Genel derleme önbelleğini numaralandırır.|  
 |`ASM_CACHE_DOWNLOAD`|İsteğe bağlı olarak indirilen veya gölge kopyalanmış derlemeleri numaralandırır.|  
 |`ASM_CACHE_ROOT`|[GetCachePath](getcachepath-function.md) işlevinin, ortak dil çalışma zamanı (CLR) sürüm 2,0 için genel derleme önbelleği yolunu döndürmesi gerektiğini gösterir. Yalnızca bir [GetCachePath](getcachepath-function.md)çağrısı bağlamında anlamlıdır.|  
 |`ASM_CACHE_ROOT_EX`|[GetCachePath](getcachepath-function.md) işlevinin CLR sürüm 4 için genel derleme önbelleğinin yolunu döndürmesi gerektiğini gösterir. Yalnızca bir [GetCachePath](getcachepath-function.md)çağrısı bağlamında anlamlıdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Fusion. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [GetCachePath İşlevi](getcachepath-function.md)
 - [IAssemblyCacheItem Arabirimi](iassemblycacheitem-interface.md)
-- [Fusion Sabit Listeleri](fusion-enumerations.md)
+- [Fusion Numaralandırmaları](fusion-enumerations.md)

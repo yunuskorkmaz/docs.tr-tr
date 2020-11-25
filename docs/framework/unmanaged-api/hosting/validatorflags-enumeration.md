@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: a3f5c266-3fcc-4ad1-aaf5-4cdbe26304ad
 topic_type:
 - apiref
-ms.openlocfilehash: d5eb225241f597baf7a0a5584f4aaf8bf8411ea2
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 92c430cdb8b46cf75dde9a8395ce713116dc05a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009476"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732875"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags Numaralandırması
+
 [ICLRValidator:: Validate](iclrvalidator-validate-method.md) metoduna yapılan bir çağrıda gerçekleştirilmesi gereken doğrulamanın türünü belirten değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 enum ValidatorFlags {  
@@ -47,15 +48,16 @@ enum ValidatorFlags {
 |`VALIDATOR_SHOW_SOURCE_LINES`|Doğrulama hatası iletilerinin, doğrulama hatalarını oluşturan kaynak kodu satırlarını içermesi gerektiğini belirtir. Bu alan değeri 2,0 .NET Framework sürümünde geçerli değildir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** IValidator. IDL, IValidator. h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kitaplık:** MSCorEE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ICLRErrorReportingManager Arabirimi](iclrerrorreportingmanager-interface.md)
-- [Barındırma Sabit Listeleri](hosting-enumerations.md)
+- [Barındırma Numaralandırmaları](hosting-enumerations.md)

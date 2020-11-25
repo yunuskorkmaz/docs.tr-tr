@@ -15,23 +15,25 @@ helpviewer_keywords:
 ms.assetid: 65fd55ac-4a24-4479-9384-a2e8013bfb2b
 topic_type:
 - apiref
-ms.openlocfilehash: 4390f379e5092cc59d123631f5e6d8da82e2bd7f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: f0a03ecce49bbc3c1c03d037c9be31a8e994259d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703896"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732105"
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>ICLRRuntimeInfo::BindAsLegacyV2Runtime Yöntemi
+
 Tüm eski ortak dil çalışma zamanı (CLR) sürüm 2 etkinleştirme ilkesi kararlarının geçerli çalışma zamanını bağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT BindAsLegacyV2Runtime ();  
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli HRESULTs 'leri döndürür:  
   
 |HRESULT|Açıklama|  
@@ -40,14 +42,16 @@ HRESULT BindAsLegacyV2Runtime ();
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Farklı bir çalışma zamanı eski CLR sürüm 2 etkinleştirme ilkesine zaten bağlıydı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Geçerli çalışma zamanı tüm eski CLR sürüm 2 etkinleştirme ilkesi kararlarında zaten bağlıysa (örneğin, `useLegacyV2RuntimeActivationPolicy` yapılandırma dosyasındaki [ \< Başlangıç> öğesindeki](../../configure-apps/file-schema/startup/startup-element.md) özniteliğini kullanarak), bu yöntem bir hata sonucu döndürmez; bunun yerine, yöntemin eski etkinleştirme ilkesini başarıyla bağlamış olması gibi, sonuç S_OK olur.  
+
+ Geçerli çalışma zamanı tüm eski CLR sürüm 2 etkinleştirme ilkesi kararlarında zaten bağlıysa (örneğin, `useLegacyV2RuntimeActivationPolicy` yapılandırma dosyasındaki [ \<startup> öğesindeki](../../configure-apps/file-schema/startup/startup-element.md) özniteliğini kullanarak), bu yöntem bir hata sonucu döndürmez; bunun yerine, yöntemin eski etkinleştirme ilkesini başarıyla bağlamış olduğu gibi, sonuç S_OK.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
@@ -55,5 +59,5 @@ HRESULT BindAsLegacyV2Runtime ();
 
 - [ICLRRuntimeInfo Arabirimi](iclrruntimeinfo-interface.md)
 - [Barındırma Arabirimleri](hosting-interfaces.md)
-- [Barındırma](index.md)
-- [\<başlangıç> öğesi](../../configure-apps/file-schema/startup/startup-element.md)
+- [Hosting](index.md)
+- [\<startup> Dosyalarında](../../configure-apps/file-schema/startup/startup-element.md)

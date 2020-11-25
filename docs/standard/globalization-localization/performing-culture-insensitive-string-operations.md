@@ -10,12 +10,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 868f36a1025f0b121a8765edf50bb42679736240
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a418432dfaba9ab070ddb6dc862dcbd798c16343
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829771"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732222"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Kültüre duyarsız dize işlemlerini gerçekleştirme
 
@@ -24,6 +24,7 @@ Kültüre duyarlı dize işlemleri gerçekleştiren çoğu .NET yöntemi, varsay
  Bu bölüm, varsayılan olarak kültüre duyarlı olan .NET yöntemlerini kullanarak kültüre duyarsız dize işlemlerinin nasıl gerçekleştirileceğini göstermek için aşağıdaki makaleleri sağlar.  
   
 ## <a name="in-this-section"></a>Bu bölümde  
+
  [Kültüre Duyarsız Dize Karşılaştırmalarını Gerçekleştirme](performing-culture-insensitive-string-comparisons.md)  
  <xref:System.String.Compare%2A?displayProperty=nameWithType>Ve <xref:System.String.CompareTo%2A?displayProperty=nameWithType> yöntemlerinin kültüre duyarsız dize karşılaştırmaları gerçekleştirmek için nasıl kullanılacağını açıklar.  
   
@@ -37,6 +38,7 @@ Kültüre duyarlı dize işlemleri gerçekleştiren çoğu .NET yöntemi, varsay
  <xref:System.Array.Sort%2A?displayProperty=nameWithType>Ve <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> yöntemlerinin, diziler içinde kültüre duyarsız işlemler gerçekleştirmek için nasıl kullanılacağını açıklar.  
   
 ## <a name="related-sections"></a>İlgili bölümler  
+
  [Kültüre duyarsız dize Işlemleri](culture-insensitive-string-operations.md)  
  Dizeler üzerinde işlem gerçekleştirirken kültür için neden farkında olmanız gerektiğini ve kültüre duyarlı işlemlerin ne zaman gerçekleştirileceğini ve kültüre duyarsız işlemlerin ne zaman gerçekleştirileceğini açıklar.
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-ms.openlocfilehash: cd5d1f2d59d3e55ba454f23d2e5dd4b1316c0df4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8ed492b573215736c82ab6c231cc5f2e188ea013
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615182"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732157"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges Yöntemi
+
 Belgedeki bir konum verildiğinde, konumun bu yöntem içinde kapsamakta olduğu Microsoft ara dili (MSIL) aralıklarına karşılık gelen başlangıç ve bitiş konumu çiftleri dizisini döndürür. Dizi tamsayılar dizisidir ve [Start, End, Start, End] biçiminde olur. Aralık çifti sayısı, dizinin uzunluğu 2 ' ye bölünür.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -39,6 +40,7 @@ HRESULT GetRanges(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `document`  
  'ndaki Kaydırın istendiği belge.  
   
@@ -49,20 +51,22 @@ HRESULT GetRanges(
  'ndaki Aralıklara karşılık gelen belge sütunu.  
   
  `cRanges`  
- 'ndaki `ranges`Dizinin boyutu.  
+ 'ndaki `ranges` Dizinin boyutu.  
   
  `pcRanges`  
- dışı `ULONG32`Aralıkları içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
+ dışı `ULONG32` Aralıkları içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
   
  `ranges`  
  dışı Aralıkları alan arabelleğin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedMethod Yöntemi](isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod Arabirimi](isymunmanagedmethod-interface.md)

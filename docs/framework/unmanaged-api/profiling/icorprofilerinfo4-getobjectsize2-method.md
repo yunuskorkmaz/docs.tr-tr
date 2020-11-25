@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-ms.openlocfilehash: b605419a291f7bee76ecad7e07be9a7a989f9fe9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 960f8f1fe2315e068d599aa5a31e03f521b235a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496015"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733873"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>ICorProfilerInfo4::GetObjectSize2 Yöntemi
+
 Belirtilen nesnenin boyutunu döndürür. [ICorProfilerInfo:: GetObjectSize](icorprofilerinfo-getobjectsize-method.md) yöntemini, içinde belirtilebilenden daha büyük nesnelerin raporlama boyutlarına göre değiştirir `ULONG` .  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,6 +35,7 @@ HRESULT GetObjectSize2(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `objectId`  
  'ndaki Nesnenin KIMLIĞI.  
   
@@ -41,9 +43,11 @@ HRESULT GetObjectSize2(
  dışı Nesnenin boyutunun bayt cinsinden işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Aynı türdeki farklı nesneler genellikle aynı boyutta olur. Ancak, diziler veya dizeler gibi bazı türlerin her nesne için farklı boyutta bir boyutu olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

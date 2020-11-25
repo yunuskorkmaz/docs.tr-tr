@@ -1,6 +1,6 @@
 ---
-title: SpawnInstance işlevi (Yönetilmeyen API Başvurusu)
-description: SpawnInstance işlevi sınıfın yeni bir örneğini oluşturur.
+title: SpawnInstance işlevi (yönetilmeyen API Başvurusu)
+description: SpawnInstance işlevi bir sınıfın yeni bir örneğini oluşturur.
 ms.date: 11/06/2017
 api_name:
 - SpawnInstance
@@ -14,19 +14,20 @@ helpviewer_keywords:
 - SpawnInstance function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: a15eb8123c1ee807444bdb4c6fe71cdccc08f434
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 176bc83dd02381af8c2bc3995a37e7fee7c1bebf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176727"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732235"
 ---
-# <a name="spawninstance-function"></a>SpawnInstance fonksiyonu
-Sınıfın yeni bir örneğini oluşturur.
+# <a name="spawninstance-function"></a>SpawnInstance işlevi
+
+Bir sınıfın yeni bir örneğini oluşturur.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SpawnInstance (
@@ -39,43 +40,44 @@ HRESULT SpawnInstance (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[içinde] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`  
-[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `lFlags`  
-[içinde] Saklı -dır. Bu parametre 0 olmalıdır.
+'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `ppNewInstance`  
-[çıkış] İşaretçiyi sınıfın yeni örneğine alır. Bir hata oluşursa, yeni bir nesne `ppNewInstance` döndürülür ve değiştirilmemiş bırakılır.
+dışı Sınıfın yeni örneğine işaretçiyi alır. Bir hata oluşursa, yeni bir nesne döndürülmez ve `ppNewInstance` değiştirilmemiş olarak kalır.
 
 ## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`geçerli bir sınıf tanımı değildir ve yeni örnekler doğuramaz. Ya eksik ya da [PutClassWmi](putclasswmi.md)çağırarak Windows Yönetimi kayıtlı olmamıştır. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak için yeterli bellek yok. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass``null`. |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` geçerli bir sınıf tanımı değil ve yeni örnekler üretilemedi. Tamamlanmamış ya da [Putclasswmı](putclasswmi.md)çağırarak Windows yönetimine kaydedilmemiş. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass`, `null` değeridir. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu [işlev, IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) yöntemine bir çağrı yıklar.
+Bu işlev, [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) yöntemine bir çağrı kaydırır.
 
-`ptr`Windows Yönetimi'nden elde edilen bir sınıf tanımı olmalıdır. (Bir örnekten bir örnek yumurtlamanın desteklenir, ancak döndürülen örnek boş olduğunu unutmayın.) Daha sonra yeni örnekler oluşturmak için bu sınıf tanımını kullanırsınız. Örneği Windows Yönetimi'ne yazmak istiyorsanız [PutInstanceWmi](putinstancewmi.md) işlevine bir çağrı gereklidir.
+`ptr` Windows yönetiminden alınmış bir sınıf tanımı olmalıdır. (Bir örnekten örnek oluşturma desteklendiğini, ancak döndürülen örnek boş olduğunu unutmayın.) Daha sonra bu sınıf tanımını yeni örnekler oluşturmak için kullanırsınız. Örneği Windows yönetimine yazmayı düşünüyorsanız [Putınstancewmi](putinstancewmi.md) işlevine yapılan bir çağrı gerekir.
 
-Otomatik `ppNewClass` olarak döndürülen yeni nesne, geçerli nesnenin bir alt sınıfı olur. Bu davranış geçersiz kılınamaz. Alt sınıfların (türetilmiş sınıflar) oluşturulabileceği başka bir yöntem yoktur.
+Otomatik olarak döndürülen yeni nesne, `ppNewClass` geçerli nesnenin bir alt sınıfı olur. Bu davranışın üzerine yazılamıyor. Alt sınıfların (türetilmiş sınıflar) oluşturulabilmesi için başka bir yöntem yoktur.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** WMINet_Utils.idl  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

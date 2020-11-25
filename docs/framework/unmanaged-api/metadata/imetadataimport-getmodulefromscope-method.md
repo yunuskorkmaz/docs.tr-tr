@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: add68d3f-45fd-4bef-af94-eb5273f26b11
 topic_type:
 - apiref
-ms.openlocfilehash: 4e2b2501b6b7117cefcfa43511ef20f25106bb42
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2eddd7a80c2b9c1b71f3e7fc5b1e4686ba11bccd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503594"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733171"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope Yöntemi
+
 Geçerli meta veri kapsamında başvurulan modül için bir meta veri belirteci alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -34,15 +35,17 @@ HRESULT GetModuleFromScope (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pmd`  
  dışı Geçerli meta veri kapsamında başvurulan modülü temsil eden belirtece yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

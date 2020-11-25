@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 343f633b3807391b8deea28f56a5166ac3d8c8c5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e4d40568710498df811954c86bb36382d93057a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823868"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733548"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Koleksiyonlardaki karşılaştırma ve sıralamalar
 
@@ -26,6 +26,7 @@ ms.locfileid: "94823868"
 Koleksiyonlar genellikle bir eşitlik karşılaştırıcısı ve/veya bir sıralama karşılaştırıcısı kullanır. Karşılaştırmalar için iki yapı kullanılır.
 
 <a name="BKMK_Checkingforequality"></a>
+
 ## <a name="check-for-equality"></a>Eşitlik için denetle
 
 ,, Ve gibi yöntemler, `Contains` <xref:System.Collections.IList.IndexOf%2A> <xref:System.Collections.Generic.List%601.LastIndexOf%2A> `Remove` koleksiyon öğeleri için eşitlik karşılaştırıcısı kullanır. Koleksiyon genel ise, öğeler aşağıdaki yönergelere göre eşitlik için karşılaştırılır:
@@ -37,6 +38,7 @@ Koleksiyonlar genellikle bir eşitlik karşılaştırıcısı ve/veya bir sıral
 Ayrıca, sözlük koleksiyonları için bazı Oluşturucu aşırı yüklemeleri <xref:System.Collections.Generic.IEqualityComparer%601> , anahtarları eşitlik için karşılaştırmak üzere kullanılan bir uygulamayı kabul eder. Bir örnek için, oluşturucuya bakın <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A> .
 
 <a name="BKMK_Determiningsortorder"></a>
+
 ## <a name="determine-sort-order"></a>Sıralama düzenini belirleme
 
 Ve gibi yöntemler `BinarySearch` `Sort` , koleksiyon öğeleri için bir sıralama karşılaştırıcısı kullanır. Karşılaştırmalar koleksiyonun öğeleri arasında veya bir öğe ile belirtilen değer arasında olabilir. Nesneleri karşılaştırmak için ve bir kavramı vardır `default comparer` `explicit comparer` .
@@ -54,6 +56,7 @@ Açık karşılaştırmalar sağlamak için bazı yöntemler bir **IComparer** u
 Sistemin geçerli kültür ayarı karşılaştırmaları etkileyebilir ve bir koleksiyon içinde sıralama yapabilir. Varsayılan olarak, **koleksiyonlar** sınıflarında karşılaştırmalar ve sıralamalar kültüre duyarlıdır. Kültür ayarını yoksaymak ve bu nedenle tutarlı karşılaştırma ve sıralama sonuçları elde etmek için, <xref:System.Globalization.CultureInfo.InvariantCulture%2A> bir kabul eden üye aşırı yüklerini kullanın <xref:System.Globalization.CultureInfo> . Daha fazla bilgi için bkz. [koleksiyonlarda Culture-Insensitive dize Işlemleri gerçekleştirme](../globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) ve [diziler Içinde Culture-Insensitive dize işlemleri gerçekleştirme](../globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).
 
 <a name="BKMK_Equalityandsortexample"></a>
+
 ## <a name="equality-and-sort-example"></a>Eşitlik ve sıralama örneği
 
 Aşağıdaki kod <xref:System.IEquatable%601> <xref:System.IComparable%601> basit bir iş nesnesi üzerinde ve üzerinde bir uygulamasını gösterir. Ayrıca, nesnesi bir listede depolandığında ve sıralandığında, yöntemi çağırmanın, <xref:System.Collections.Generic.List%601.Sort> tür için varsayılan karşılaştırıcının kullanılmasına `Part` ve <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> bir anonim yöntem kullanılarak uygulanan yönteme neden olduğunu görürsünüz.

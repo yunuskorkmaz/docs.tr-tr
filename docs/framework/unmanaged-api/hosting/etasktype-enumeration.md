@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 332488fee4c982fdbaecceeaa2a6a3876f1602a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493324"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733704"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType Numaralandırması
+
 Bir [ICLRTask](iclrtask-interface.md) veya [IHostTask](ihosttask-interface.md) arabirimi tarafından temsil edilen görevin türünü gösteren değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum ETaskType {  
@@ -44,7 +45,7 @@ typedef enum ETaskType {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`TT_ADUNLOAD`|Arabirim bir uygulama etki alanı kaldırma görevini temsil eder.|  
 |`TT_DEBUGGERHELPER`|Arabirim bir hata ayıklayıcı Yardımcısı görevini temsil eder.|  
@@ -59,14 +60,15 @@ typedef enum ETaskType {
 |`TT_USER`|Arabirim bir Kullanıcı görevini temsil eder.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll  
+ **Kitaplık:** MSCorEE.dll  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Sabit Listeleri](hosting-enumerations.md)
+- [Barındırma Numaralandırmaları](hosting-enumerations.md)

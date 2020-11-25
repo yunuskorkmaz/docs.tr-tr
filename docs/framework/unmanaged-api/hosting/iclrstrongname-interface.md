@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501657"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733639"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName Arabirimi
+
 Derlemeleri tanımlayıcı adlarla imzalamak için temel genel statik işlevler sağlar. Tüm `ICLRStrongName` Yöntemler standart com HRESULTs döndürür.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetHashFromAssemblyFile Yöntemi](iclrstrongname-gethashfromassemblyfile-method.md)|Belirtilen karma algoritmasını kullanarak belirtilen derleme dosyasının karmasını alır.|  
 |[GetHashFromAssemblyFileW Yöntemi](iclrstrongname-gethashfromassemblyfilew-method.md)|Belirtilen karma algoritmasını kullanarak, Unicode dizesi olarak belirtilen derleme dosyasının karmasını alır.|  
@@ -55,14 +56,16 @@ Derlemeleri tanımlayıcı adlarla imzalamak için temel genel statik işlevler 
 |[StrongNameTokenFromPublicKey Yöntemi](iclrstrongname-strongnametokenfrompublickey-method.md)|Ortak anahtarı temsil eden bir belirteç alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ICLRStrongName`Ve parametrelerini kullanarak [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md) metodunu çağırarak bir örneğini alabilirsiniz `CLSID_CLRStrongName` `IID_ICLRStrongName` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

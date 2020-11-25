@@ -8,31 +8,33 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 617b27923e96d9abc62ccbf158b076c6e45b20a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22a133d02bb69026190428905379323362943d40
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175102"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732391"
 ---
 # <a name="icorprofilercallback8-interface"></a>ICorProfilerCallback8 Arabirimi
-[.NET Framework 4.7 ve sonraki sürümlerde desteklendi]  
 
- Profilciye dinamik bir yöntemin JIT derlemesinin başladığını ve bittiğini bildirmek için ortak dil çalışma zamanı tarafından kullanılan geri arama yöntemlerini sağlayan [ICorProfilerCallback7'nin](icorprofilercallback7-interface.md) bir alt sınıfı.
+[.NET Framework 4,7 ve sonraki sürümlerde desteklenir]  
+
+ Ortak dil çalışma zamanı tarafından, bir dinamik yöntemin JıT derlemesinin başlatıldığını ve tamamlandığını bildiren profil oluşturucu bildirmek için kullanılan geri çağırma yöntemleri sağlayan bir [ICorProfilerCallback7](icorprofilercallback7-interface.md) alt sınıfı.
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[DynamicMethodJITCompilationStarted Yöntemi](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|Profiloluşturucuya dinamik bir yöntemin JIT derlemesinin başladığını belirtir.|  
-|[DynamicMethodJITCompilationFinished Yöntemi](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|Profiloluşturucuya dinamik bir yöntemin JIT derlemesinin tamamladığını belirtir.|  
+|[DynamicMethodJITCompilationStarted Yöntemi](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|Profiler öğesine dinamik bir yöntemin JıT derlemesinin başlatıldığını bildirir.|  
+|[DynamicMethodJITCompilationFinished Yöntemi](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|Profiler öğesine dinamik bir yöntemin JıT derlemesinin tamamlandığını bildirir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
-**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

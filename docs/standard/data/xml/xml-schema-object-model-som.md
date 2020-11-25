@@ -2,19 +2,21 @@
 title: XML Şema Nesne Modeli (SOM)
 ms.date: 03/30/2017
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-ms.openlocfilehash: b64e5bb88d5754447d8f75577f3c51f2aa467bb5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b2af024f9821401b1380347580cc0dc5aeb21c3c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818407"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733028"
 ---
 # <a name="xml-schema-object-model-som"></a>XML Şema Nesne Modeli (SOM)
+
 XML şeması, uyumlu XML belgelerinde yapı oluşturmaya ve doğrulamaya yönelik güçlü ve karmaşık bir araçtır. İlişkisel bir veritabanındaki veri modellemesi gibi, bir şema, belgelerde kullanılabilecek öğeleri belirterek XML belgelerinin yapısını tanımlamaya yönelik bir yol sağlar ve bu öğelerin söz konusu şema için geçerli olması için izlenmesi gereken yapı ve türler de vardır.  
   
  Şema nesne modeli (SOM), <xref:System.Xml.Schema?displayProperty=nameWithType> bir dosyadaki şemayı okumanızı veya bir bellek içinde programlı bir şekilde şema oluşturmasını sağlayan ad alanında bir sınıf kümesi sağlar. Şema daha sonra bir dosyaya çapraz, düzenlenebilir, derlenir, doğrulanabilir veya yazılabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [XML Şema Nesne Modeline (SOM) Genel Bakış](xml-schema-object-model-overview.md)  
  Şema nesne modeli (SOM) ve sağladığı özellikleri ve sınıfları açıklar.  
   

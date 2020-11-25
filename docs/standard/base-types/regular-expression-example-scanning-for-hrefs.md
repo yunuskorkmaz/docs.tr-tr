@@ -13,19 +13,21 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 6f11825a5d744fd03c08545213bd4d6eaa14dd6d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: aceccc019542bb1afe3082881626cfc32740a338
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830291"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733652"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Normal İfade Örneği: HREF Tarama
+
 Aşağıdaki örnek bir giriş dizesini arar ve tüm href = "..." değerler ve dizedeki konumları.  
 
 [!INCLUDE [regex](../../../includes/regex.md)]
 
 ## <a name="the-regex-object"></a>Regex Nesnesi
+
  `DumpHRefs`Yöntemi kullanıcı kodundan birden çok kez çağrabileceğinden, `static` ( `Shared` Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yöntemini kullanır. Bu, normal ifade altyapısının normal ifadeyi önbelleğe almasını sağlar ve <xref:System.Text.RegularExpressions.Regex> yöntemin her çağrılışında yeni bir nesne örneği oluşturma yükünü önler. Bir <xref:System.Text.RegularExpressions.Match> nesne daha sonra dizedeki tüm eşleşmeler arasında yineleme yapmak için kullanılır.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
@@ -49,9 +51,11 @@ Aşağıdaki örnek bir giriş dizesini arar ve tüm href = "..." değerler ve d
 |`(?<1>\S+)`|Adlı yakalama grubuna bir veya daha fazla boşluk olmayan karakter atayın `1` .|  
   
 ## <a name="match-result-class"></a>Sonuç Sınıfını Eşleştirme  
+
  Bir aramanın sonuçları <xref:System.Text.RegularExpressions.Match> sınıfında depolanır ve bu, arama tarafından ayıklanan tüm alt dizelere erişim sağlar. Ayrıca, aranan dizeyi ve kullanılan normal ifadeyi anımsar ve bu sayede, <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> son birinin sona erdiği yerde başka bir arama gerçekleştirmek için yöntemini çağırabilir.  
   
 ## <a name="explicitly-named-captures"></a>Açıkça Adlandırılmış Yakalamalar  
+
  Geleneksel normal ifadelerde yakalama parantezleri otomatik olarak sıralı olarak numaralandırılır. Bu iki soruna yol açar. İlk olarak, bir normal ifade bir parantez kümesi eklenerek veya kaldırılarak değiştirilirse, numaralandırılmış yakalamalara başvuran tüm kodların yeni numaralandırmayı yansıtacak şekilde yeniden yazılması gerekir. İkincisi, kabul edilebilir bir eşleşme için iki alternatif ifade sağlamak üzere genellikle farklı parantezler kümesi kullanıldığından, bu iki ifadenin hangisinin gerçekten sonuç döndürdüğünden belirlenmesi zor olabilir.  
   
  Bu sorunları gidermek için, <xref:System.Text.RegularExpressions.Regex> sınıfı `(?<name>…)` belirtilen bir yuvaya eşleşme yakalama sözdizimini destekler (yuva bir dize veya tamsayı kullanılarak adlandırılabilir; tamsayılar daha hızlı bir şekilde eklenebilir). Bu nedenle, hepsi aynı dize için alternatif eşleşmeler aynı yere yönlendirilebilir. Bir çakışma olması durumunda, bir yuvaya bırakılan son eşleşme, başarılı eşleşmedir. (Ancak, tek bir yuva için birden fazla eşleşme listesinin tamamı kullanılabilir. <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>Ayrıntılar için koleksiyona bakın.)  

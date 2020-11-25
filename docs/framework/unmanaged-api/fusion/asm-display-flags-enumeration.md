@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-ms.openlocfilehash: ebaab57b647250823443b48d9e45921036372d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1eefd1ee5597ded269c56c05eec118b11294dd8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176610"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732144"
 ---
 # <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS Numaralandırması
-Görüntü adı IAssemblyName tarafından alınacak derlemenin sürümünü, inşasını, kültürünü, imzasını ve benzeri lerini [gösterir::GetDisplayName](iassemblyname-getdisplayname-method.md) yöntemi.  
+
+Görünen adı [IAssemblyName:: GetDisplayName](iassemblyname-getdisplayname-method.md) yöntemi tarafından alınacak derlemenin sürümünü, derlemesini, kültürünü, imzasını ve benzerlerini gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum {  
@@ -50,18 +51,20 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ASM_DISPLAYF_FULL`[iAssemblyName](iassemblyname-interface.md) nesnesinin sürümünde yapılan değişiklikleri yansıtır. Döndürülen değerin değişmez olduğunu düşünmeyin.  
+
+ `ASM_DISPLAYF_FULL`[IAssemblyName](iassemblyname-interface.md) nesnesinin sürümünde yapılan tüm değişiklikleri yansıtır. Döndürülen değerin sabit olduğunu varsaymayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Fusion.h  
+ **Üst bilgi:** Fusion. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [IAssemblyName Arabirimi](iassemblyname-interface.md)
-- [Fusion Sabit Listeleri](fusion-enumerations.md)
+- [Fusion Numaralandırmaları](fusion-enumerations.md)

@@ -18,35 +18,39 @@ helpviewer_keywords:
 ms.assetid: e91bf8c3-7c26-4732-938e-2e5b04abfc99
 topic_type:
 - apiref
-ms.openlocfilehash: d5eedc34b75d3a0c02969c06454b0f7ec942ed17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90abfcd573795ae529714e21b13f90d6e15c7dad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176948"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732274"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo İşlevi
-Güçlü ad işlevlerinden biri tarafından yükseltilen son hata kodunu alır.  
+
+Tanımlayıcı ad işlevlerinden biri tarafından oluşturulan son hata kodunu alır.  
   
- Bu işlev amortismana kaldırıldı.  
+ Bu işlev kullanım dışı bırakıldı.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Güçlü ad işlevlerinden biri tarafından ayarlanan son COM hata kodu.  
+
+ Tanımlayıcı ad işlevlerinden biri tarafından ayarlanan son COM hata kodu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Güçlü ad yöntemlerinin çoğu `true` basit `false` veya başarılı bir tamamlama göstergesi döndürün. Güçlü `StrongNameErrorInfo` ad işlevleri tarafından oluşturulan son hatayı belirten bir HRESULT almak için işlevi kullanın.  
+
+ Tanımlayıcı ad yöntemlerinin çoğu, başarılı bir tamamlamayı basit veya bir şekilde döndürür `true` `false` . `StrongNameErrorInfo`Tanımlayıcı ad işlevleri tarafından oluşturulan son hatayı belirten BIR HRESULT almak için işlevini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** StrongName.h  
+ **Üst bilgi:** StrongName. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

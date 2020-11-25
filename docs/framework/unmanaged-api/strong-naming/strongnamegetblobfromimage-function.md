@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 1de658e6-da32-4d01-9097-6f43c92222e1
 topic_type:
 - apiref
-ms.openlocfilehash: 41226cd909900bd2da7bdcf9b9a49567d3042b01
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3a84221f94bad76d69f0dc67fe695ada3f3862f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094887"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732248"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage İşlevi
+
 Belirtilen bellek adresindeki derleme görüntüsünün ikili gösterimini alır.  
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameGetBlobFromImage](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 BOOLEAN StrongNameGetBlobFromImage (  
@@ -38,32 +39,36 @@ BOOLEAN StrongNameGetBlobFromImage (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pbBase`  
  'ndaki Eşlenen derleme bildiriminin bellek adresi.  
   
  `dwLength`  
- 'ndaki `pbBase`konumundaki görüntünün bayt cinsinden boyutu.  
+ 'ndaki İçindeki görüntünün bayt cinsinden boyutu `pbBase` .  
   
  `pbBlob`  
  'ndaki Görüntünün ikili gösterimini içeren bir arabellek.  
   
  `pcbBlob`  
- [in, out] `pbBlob`istenen en büyük boyut (bayt cinsinden). Dönüş sonrasında, `pbBlob`bayt cinsinden gerçek boyut.  
+ [in, out] İstenen en büyük boyut (bayt) `pbBlob` . Dönüş sonrasında, bayt cinsinden gerçek boyut `pbBlob` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- başarılı tamamlamada `true`; Aksi takdirde, `false`.  
+
+ `true` başarıyla tamamlandığında; Aksi takdirde, `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `StrongNameGetBlobFromImage` işlevi başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
+
+ `StrongNameGetBlobFromImage`İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak Için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** StrongName. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

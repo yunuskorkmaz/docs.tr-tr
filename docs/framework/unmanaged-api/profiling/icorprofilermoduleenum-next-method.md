@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 7a3ad94a4149d6ebb70e077926771e28d7f82779
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94c2c159cf386e00dfc0d1df97536d7ade53407e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494845"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732950"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next Yöntemi
+
 Numaralandırıcının dizideki geçerli konumundan başlayarak sıralı bir modül koleksiyonundan belirtilen sayıda bitişik modülü alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,24 +36,27 @@ HRESULT Next([in]  ULONG      celt,
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `celt`  
  'ndaki Alınacak modül sayısı.  
   
  `ids`  
- dışı `ModuleID`Her biri alınan bir modülü temsil eden bir değer dizisi.  
+ dışı `ModuleID` Her biri alınan bir modülü temsil eden bir değer dizisi.  
   
  `pceltFetched`  
  dışı Dizide gerçekten döndürülen öğe sayısına yönelik bir işaretçi `ids` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Description|  
+|HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`celt`öğeler döndürüldü.|  
+|S_OK|`celt` öğeler döndürüldü.|  
 |S_FALSE|Daha az `celt` öğe döndürüldü, bu, numaralandırmanın tamamlandığını gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  

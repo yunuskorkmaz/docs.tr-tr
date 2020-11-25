@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
 topic_type:
 - apiref
-ms.openlocfilehash: c0d8b66c8b85710b0365bfc410188c81431720ff
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 93070690ea6b30b22949953f1ed0b8c5b1e92764
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703442"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732490"
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>ICLRPolicyManager::SetDefaultAction Yöntemi
+
 Belirtilen işlem gerçekleştiğinde ortak dil çalışma zamanının (CLR) yapması gereken ilke eylemini belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -35,6 +36,7 @@ HRESULT SetDefaultAction (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `operation`  
  'ndaki CLR davranışının özelleştirilmesi gereken eylemi belirten [EClrOperation](eclroperation-enumeration.md) değerlerinden biri.  
   
@@ -45,7 +47,7 @@ HRESULT SetDefaultAction (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SetDefaultAction`başarıyla döndürüldü.|  
+|S_OK|`SetDefaultAction` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -54,9 +56,10 @@ HRESULT SetDefaultAction (
 |E_INVALIDARG|İçin geçersiz bir `action` `operation` değer belirtildi veya geçersiz bir değer sağlandı `operation` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tüm ilke eylemi değerleri CLR işlemleri için varsayılan davranış olarak belirtilemez. `SetDefaultAction`Genellikle, davranışı yükseltmek için kullanılabilir. Örneğin, bir ana bilgisayar, iş parçacığı iptal işlemini işlenmemiş iş parçacığı iptal edilecek olarak belirtebilir, ancak tersini belirtemez. Aşağıdaki tabloda `action` olası her bir değer için geçerli değerler açıklanmaktadır `operation` .  
+
+ Tüm ilke eylemi değerleri CLR işlemleri için varsayılan davranış olarak belirtilemez. `SetDefaultAction` Genellikle, davranışı yükseltmek için kullanılabilir. Örneğin, bir ana bilgisayar, iş parçacığı iptal işlemini işlenmemiş iş parçacığı iptal edilecek olarak belirtebilir, ancak tersini belirtemez. Aşağıdaki tabloda `action` olası her bir değer için geçerli değerler açıklanmaktadır `operation` .  
   
-|Değer`operation`|İçin geçerli değerler`action`|  
+|Değer `operation`|İçin geçerli değerler `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadAbort|-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
@@ -66,16 +69,17 @@ HRESULT SetDefaultAction (
 |OPR_FinalizerRun|-eNoAction<br />-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [EClrOperation Sabit Listesi](eclroperation-enumeration.md)
-- [EPolicyAction Sabit Listesi](epolicyaction-enumeration.md)
+- [EClrOperation Numaralandırması](eclroperation-enumeration.md)
+- [EPolicyAction Numaralandırması](epolicyaction-enumeration.md)
 - [ICLRPolicyManager Arabirimi](iclrpolicymanager-interface.md)

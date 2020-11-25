@@ -7,17 +7,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 0153279608e2359747f1be6b9542d6906c1b3995
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 16b18f4fede11e776e5656843ed9a408dff370eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559310"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732755"
 ---
 # <a name="unmanaged-api-reference"></a>Yönetilmeyen API Başvurusu
+
 Bu bölüm, çalışma zamanı Konakları, derleyiciler, kod çözücüler, gizleme, hata ayıklayıcılar ve profil oluşturucular gibi yönetilen kodla ilgili uygulamalar tarafından kullanılabilecek yönetilmeyen API 'Ler hakkında bilgiler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Ortak Veri Türleri](common-data-types-unmanaged-api-reference.md)  
  Özellikle yönetilmeyen profil oluşturma ve hata ayıklama API 'Lerinde kullanılan ortak veri türlerini listeler.  
   
@@ -45,7 +47,7 @@ Bu bölüm, çalışma zamanı Konakları, derleyiciler, kod çözücüler, gizl
  [Hosting](./hosting/index.md)  
  Yönetilmeyen ana bilgisayarların CLR 'yi uygulamalarıyla tümleştirmesini sağlayan barındırma API 'sini açıklar.  
   
- [Meta Veriler](./metadata/index.md)  
+ [Veriyi](./metadata/index.md)  
  Bir derleyicinin, CLR tarafından yüklenen türler olmadan bir bileşenin meta verilerini oluşturmasına veya erişmesine olanak tanıyan meta veri API 'sini açıklar.  
   
  [Profil Oluşturma](./profiling/index.md)  
@@ -61,4 +63,5 @@ Bu bölüm, çalışma zamanı Konakları, derleyiciler, kod çözücüler, gizl
  Derleme-tür kitaplığı dönüştürme işlemi sırasında tür kitaplığı verme programı (Tlbexp.exe) tarafından kullanılan iki yardımcı işlevi ve arabirimi açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Geliştirme Kılavuzu](../development-guide.md)

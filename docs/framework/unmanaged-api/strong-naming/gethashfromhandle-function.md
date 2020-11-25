@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-ms.openlocfilehash: dc241324f5844610d7b86b7cb9668f84d4525395
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 904dcb707e704cfec2dba4e6587f7e3acaf7b538
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140657"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732339"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle İşlevi
+
 Belirtilen karma algoritmasını kullanarak, belirtilen dosya tanıtıcısına sahip dosyanın içeriği üzerinde bir karma oluşturur.  
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) yöntemini kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetHashFromHandle (  
@@ -39,6 +40,7 @@ HRESULT GetHashFromHandle (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `hFile`  
  'ndaki Karma hale getirilen dosyanın tanıtıcısı.  
   
@@ -49,19 +51,20 @@ HRESULT GetHashFromHandle (
  dışı Döndürülen karma arabelleği.  
   
  `cchHash`  
- 'ndaki İstenen en büyük boyut `pbHash`.  
+ 'ndaki İstenen en büyük boyut `pbHash` .  
   
  `pchHash`  
- dışı Döndürülen `pbHash`bayt cinsinden boyutu.  
+ dışı Döndürülen bayt cinsinden boyutu `pbHash` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** StrongName. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7400d460c4d1ebf5c02d8313f33a5a63de1734d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823855"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733522"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 
@@ -26,6 +26,7 @@ Benzer veriler genellikle koleksiyon olarak depolandığında ve değiştirildi�
 .NET Framework 4 ' ten itibaren, <xref:System.Collections.Concurrent> ad alanındaki koleksiyonlar, koleksiyon öğelerine birden çok iş parçacığından erişmek için verimli iş parçacığı güvenli işlemleri sağlar. <xref:System.Collections.Immutable>Ad alanındaki ([NuGet paketi](https://www.nuget.org/packages/System.Collections.Immutable)) sabit koleksiyon sınıfları, işlemler orijinal koleksiyonun bir kopyasında yapıldığından ve özgün koleksiyon değiştirilemediğinden, doğal olarak iş parçacığı açısından güvenlidir.
 
 <a name="BKMK_Commoncollectionfeatures"></a>
+
 ## <a name="common-collection-features"></a>Ortak koleksiyon özellikleri
 
 Tüm Koleksiyonlar koleksiyondaki öğeleri eklemek, kaldırmak veya bulmak için yöntemler sağlar. Ayrıca, arabirimi veya arabirimi doğrudan veya dolaylı olarak uygulayan tüm koleksiyonlar <xref:System.Collections.ICollection> <xref:System.Collections.Generic.ICollection%601> Bu özellikleri paylaşır:
@@ -57,6 +58,7 @@ Ayrıca, birçok koleksiyon sınıfı aşağıdaki özellikleri içerir:
     Ad alanındaki genel olmayan koleksiyon türleri <xref:System.Collections> eşitlemeyle bazı iş parçacığı güvenliği sağlar; genellikle <xref:System.Collections.ICollection.SyncRoot%2A> ve üyeleri aracılığıyla gösterilir  <xref:System.Collections.ICollection.IsSynchronized%2A> . Bu koleksiyonlar varsayılan olarak iş parçacığı açısından güvenli değildir. Bir koleksiyona ölçeklenebilir ve verimli bir çok iş parçacıklı erişim gerekiyorsa, ad alanındaki sınıflardan birini kullanın <xref:System.Collections.Concurrent> veya sabit bir koleksiyon kullanmayı deneyin. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](thread-safe/index.md).
 
 <a name="BKMK_Choosingacollection"></a>
+
 ## <a name="choose-a-collection"></a>Bir koleksiyon seçin
 
 Genel olarak, genel Koleksiyonlar kullanmanız gerekir. Aşağıdaki tabloda bazı yaygın koleksiyon senaryoları ve bu senaryolar için kullanabileceğiniz koleksiyon sınıfları açıklanmaktadır. Genel koleksiyonlarınız için yeni olduğunuzda, bu tablo göreviniz için en iyi sonucu veren genel koleksiyonu seçmenize yardımcı olur.
@@ -94,6 +96,7 @@ Bir `List<T>` döngü veya döngü kullanılarak etkili bir şekilde numaraland�
 Ayrıca, `SortedSet<T>` ile aynı karmaşıklığa sahiptir `ImmutableSortedSet<T>` . Çünkü her ikisi de ikili ağaçlar kullanır. Kuşkusuz önemli fark, `ImmutableSortedSet<T>` değişmez bir ikili ağaç kullanır. `ImmutableSortedSet<T>`Ayrıca <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder?displayProperty=nameWithType> , mutasyona izin veren bir sınıf sağladığından, hem dengesslik hem de performans sağlayabilirsiniz.
 
 <a name="BKMK_RelatedTopics"></a>
+
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
@@ -108,7 +111,9 @@ Ayrıca, `SortedSet<T>` ile aynı karmaşıklığa sahiptir `ImmutableSortedSet<
 |System. Collections. sabit|Değişmez koleksiyonları tanıtır ve koleksiyon türlerine bağlantılar sağlar.|
 
 <a name="BKMK_Reference"></a>
+
 ## <a name="reference"></a>Başvuru
+
 <xref:System.Array?displayProperty=nameWithType>
 <xref:System.Collections?displayProperty=nameWithType>
 <xref:System.Collections.Concurrent?displayProperty=nameWithType>

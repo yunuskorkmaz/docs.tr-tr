@@ -1,17 +1,17 @@
 ---
 title: Kod Erişim Güvenlik İlkesi Uyumluluğu ve Geçiş
-description: Bir Özeti okuyun ve .NET 4 ' te kod erişimi güvenlik ilkesi uyumluluğu ve geçişi hakkındaki bağlantılara bakın.
+description: Bir Özeti okuyun ve .NET Framework 4 ' te kod erişimi güvenlik ilkesi uyumluluğu ve geçişi hakkındaki bağlantılara bakın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - policy migration, compatibility
 - CLR policy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-ms.openlocfilehash: e5affd9d16635fa28342b5b7390a083185975f2b
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 389976556175c0b6b300e75d01327d91f94f0db9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281738"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733392"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Kod Erişim Güvenlik İlkesi Uyumluluğu ve Geçiş
 
@@ -23,7 +23,7 @@ Uyarıları ve hataları aşağıdakilerden birini yaparak önleyebilirsiniz:
 
 - Kullanılmayan çağrılar için .NET Framework 4 yerine [geçme](#migration) .
 
-   \-veya
+   \- veya
 
 - Eski CAS ilkesi davranışını kabul etmek için [ \<NetFx40_LegacySecurityPolicy> yapılandırma öğesini](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) kullanma.
 
@@ -156,5 +156,5 @@ Bir derlemenin korumalı alanını istiyorsanız, <xref:System.AppDomain.CreateD
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Korumalı Alanda Kısmen Güvenilen Kodu Çalıştırma](how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Nasıl yapılır: bir korumalı alanda kısmen güvenilen kod çalıştırma](how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Güvenli Kodlama Yönergeleri](../../standard/security/secure-coding-guidelines.md)

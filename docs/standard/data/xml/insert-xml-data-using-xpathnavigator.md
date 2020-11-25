@@ -6,14 +6,15 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-ms.openlocfilehash: 1a0fa96c0fc4db1ab005961728e81b6940cd00e6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 50e5b363a35eb3f11d7eb26bb34c53910a59201b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822718"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733418"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verileri Ekleme
+
 Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesine eşdüzey, alt ve öznitelik düğümleri eklemek için kullanılan bir yöntemler kümesi sağlar. Bu yöntemleri kullanabilmeniz için <xref:System.Xml.XPath.XPathNavigator> nesnesi düzenlenebilir olmalıdır, yani <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği olmalıdır `true` .  
   
  <xref:System.Xml.XPath.XPathNavigator> bir XML belgesini düzenleyebilen nesneler, <xref:System.Xml.XmlDocument.CreateNavigator%2A> sınıfının yöntemiyle oluşturulur <xref:System.Xml.XmlDocument> . <xref:System.Xml.XPath.XPathNavigator> sınıfı tarafından oluşturulan nesneler <xref:System.Xml.XPath.XPathDocument> salt okunurdur ve bir <xref:System.Xml.XPath.XPathNavigator> nesne tarafından oluşturulan nesnenin Editing yöntemlerini kullanma girişimleri <xref:System.Xml.XPath.XPathDocument> bir ile sonuçlanır <xref:System.NotSupportedException> .  
@@ -21,9 +22,11 @@ Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesine eşdüzey, a
  Düzenlenebilir nesneler oluşturma hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator> bkz. [XPathDocument ve XMLDOCUMENT kullanarak XML verilerini okuma](reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="inserting-nodes"></a>Düğüm ekleme  
+
  <xref:System.Xml.XPath.XPathNavigator>Sınıfı, BIR XML belgesine eşdüzey, alt ve öznitelik düğümleri eklemek için yöntemler sağlar. Bu yöntemler, bir nesnenin geçerli konumuyla ilişkili olarak farklı konumlara düğüm ve öznitelik eklemenize olanak sağlar <xref:System.Xml.XPath.XPathNavigator> ve aşağıdaki bölümlerde açıklanmıştır.  
   
 ### <a name="inserting-sibling-nodes"></a>Eşdüzey düğümler ekleme  
+
  <xref:System.Xml.XPath.XPathNavigator>Sınıfı eşdüzey düğümleri eklemek için aşağıdaki yöntemleri sağlar.  
   
 - <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
@@ -53,6 +56,7 @@ Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesine eşdüzey, a
  , Ve yöntemleri hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A> <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A> <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A> bkz <xref:System.Xml.XPath.XPathNavigator> . sınıf başvurusu belgeleri.  
   
 ### <a name="inserting-child-nodes"></a>Alt düğümler ekleniyor  
+
  <xref:System.Xml.XPath.XPathNavigator>Sınıfı alt düğümleri eklemek için aşağıdaki yöntemleri sağlar.  
   
 - <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
@@ -82,6 +86,7 @@ Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesine eşdüzey, a
  , Ve yöntemleri hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A> <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A> bkz <xref:System.Xml.XPath.XPathNavigator> . sınıf başvurusu belgeleri.  
   
 ### <a name="inserting-attribute-nodes"></a>Öznitelik düğümleri ekleniyor  
+
  <xref:System.Xml.XPath.XPathNavigator>Sınıfı, öznitelik düğümleri eklemek için aşağıdaki yöntemleri sağlar.  
   
 - <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
@@ -103,6 +108,7 @@ Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> XML belgesine eşdüzey, a
  Ve yöntemleri hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> bkz <xref:System.Xml.XPath.XPathNavigator> . sınıf başvurusu belgeleri.  
   
 ## <a name="copying-nodes"></a>Düğümler kopyalanıyor  
+
  Belirli durumlarda, bir XML belgesini başka bir XML belgesinden içerik ile doldurmak isteyebilirsiniz. Hem <xref:System.Xml.XPath.XPathNavigator> sınıf hem de <xref:System.Xml.XmlWriter> sınıf, düğümleri varolan bir <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlReader> nesne veya nesneden bir nesneye kopyalayabilir <xref:System.Xml.XPath.XPathNavigator> .  
   
  <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>Sınıfının, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A> ve <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> yöntemlerinin hepsi bir <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathNavigator> nesne veya <xref:System.Xml.XmlReader> nesneyi parametre olarak kabul edebilecek aşırı yüklemeleridir.  
@@ -148,9 +154,11 @@ document.Save("newBooks.xml");
 ```  
   
 ## <a name="inserting-values"></a>Değer ekleme  
+
  <xref:System.Xml.XPath.XPathNavigator>Sınıfı, <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> bir düğümün değerlerini bir nesnesine eklemek için ve yöntemlerini sağlar <xref:System.Xml.XmlDocument> .  
   
 ### <a name="inserting-untyped-values"></a>Türsüz değerler ekleme  
+
  <xref:System.Xml.XPath.XPathNavigator.SetValue%2A>Yöntemi, `string` bir parametre olarak geçirilen türsüz değeri <xref:System.Xml.XPath.XPathNavigator> nesnenin şu anda konumlandırılmış olan düğümün değeri olarak ekler. Değer, herhangi bir tür olmadan veya şema bilgileri kullanılabiliyorsa düğüm türüne göre yeni değerin geçerli olduğunu doğrulamadan eklenir.  
   
  Aşağıdaki örnekte, <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> yöntemi dosyadaki tüm öğeleri güncelleştirmek için kullanılır `price` `contosoBooks.xml` .  
@@ -164,6 +172,7 @@ document.Save("newBooks.xml");
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
 ### <a name="inserting-typed-values"></a>Yazılan değerler ekleniyor  
+
  Bir düğümün türü bir W3C XML şeması basit türü olduğunda, yöntemi tarafından yerleştirilen yeni değer, <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> değer ayarlanmadan önce basit türdeki modellerle denetlenir. Yeni değer, düğüm türüne göre geçerli değilse (örneğin, `-1` türü olan bir öğe üzerinde değerini ayarlamak `xs:positiveInteger` ), bir özel durumla sonuçlanır.  
   
  Aşağıdaki örnek, `price` dosyasındaki ilk öğe öğesinin değerini `book` `contosoBooks.xml` bir değere değiştirmeye çalışır <xref:System.DateTime> . Öğesinin XML şeması türü `price` dosyalarda olarak tanımlandığından `xs:decimal` `contosoBooks.xsd` , bu durum bir özel durumla sonuçlanır.  
@@ -213,6 +222,7 @@ navigator.SetTypedValue(DateTime.Now);
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 ## <a name="the-innerxml-and-outerxml-properties"></a>InnerXml ve OuterXml özellikleri  
+
  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A>Sınıfının ve <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> Özellikleri, <xref:System.Xml.XPath.XPathNavigator> bir <xref:System.Xml.XPath.XPathNavigator> nesnenin şu anda konumlandırılmış olduğu düğümlerin XML işaretlemesini değiştirir.  
   
  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A>Özelliği, <xref:System.Xml.XPath.XPathNavigator> belirtilen XML 'nin ayrıştırılmış içeriğiyle bir nesne şu anda konumlandırılmış olan alt düğümlerin XML işaretlemesini değiştirir `string` . Benzer şekilde, <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> özelliği de bir nesnenin şu anda bulunduğu alt DÜĞÜMLERIN XML işaretlemesini ve <xref:System.Xml.XPath.XPathNavigator> geçerli düğümün kendisini değiştirir.  
@@ -220,6 +230,7 @@ navigator.SetTypedValue(DateTime.Now);
  Bu konuda açıklanan yöntemlere ek olarak, <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> ve <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> ÖZELLIKLERI bir XML belgesine düğüm ve değer eklemek için kullanılabilir. <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A>Ve özelliklerini kullanarak düğüm ve değer ekleme hakkında daha fazla bilgi için <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> bkz. [XPathNavigator kullanarak XML verilerini değiştirme](modify-xml-data-using-xpathnavigator.md) konusu.  
   
 ## <a name="namespace-and-xmllang-conflicts"></a>Namespace ve XML: lang çakışmaları  
+
  Ad alanı ve bildirimlerin kapsamı ile ilgili bazı çakışmalar `xml:lang` <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A> , <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> <xref:System.Xml.XPath.XPathNavigator> nesneleri parametre olarak alan sınıfın,, ve yöntemlerini kullanarak XML verileri eklenirken meydana gelebilir <xref:System.Xml.XmlReader> .  
   
  Olası ad alanı çakışmaları aşağıda verilmiştir.  
@@ -246,9 +257,11 @@ navigator.SetTypedValue(DateTime.Now);
 - `xml:lang`Nesnenin bağlamı içinde kapsam içinde bir öznitelik varsa <xref:System.Xml.XPath.XPathNavigator> ancak <xref:System.Xml.XmlReader> nesnenin bağlamında yok, `xml:lang` yeni eklenen düğüme hiçbir öznitelik eklenmez.  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>XmlWriter ile düğüm ekleme  
+
  "Düğüm ve değer ekleme" bölümünde açıklanan eşdüzey, alt ve öznitelik düğümlerini eklemek için kullanılan yöntemler aşırı yüklenmiştir. <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>Sınıfının, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A> , <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> ve yöntemleri, <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XmlWriter> düğümleri eklemek için kullanılan bir nesne döndürüyor.  
   
 ### <a name="unsupported-xmlwriter-methods"></a>Desteklenmeyen XmlWriter yöntemleri  
+
  Sınıf kullanarak bir XML belgesine bilgi yazmak için kullanılan yöntemlerin hepsi, <xref:System.Xml.XmlWriter> <xref:System.Xml.XPath.XPathNavigator> XPath veri modeli ve belge nesne MODELI (DOM) arasındaki fark nedeniyle sınıfı tarafından desteklenir.  
   
  Aşağıdaki tablo, <xref:System.Xml.XmlWriter> sınıfı tarafından desteklenmeyen sınıf yöntemlerini açıklar <xref:System.Xml.XPath.XPathNavigator> .  
@@ -264,6 +277,7 @@ navigator.SetTypedValue(DateTime.Now);
  Sınıfı hakkında daha fazla bilgi için <xref:System.Xml.XmlWriter> bkz <xref:System.Xml.XmlWriter> . sınıf başvurusu belgeleri.  
   
 ### <a name="multiple-xmlwriter-objects"></a>Birden çok XmlWriter nesnesi  
+
  <xref:System.Xml.XPath.XPathNavigator>Bir veya daha fazla açık nesne içeren BIR XML belgesinin farklı bölümlerine işaret eden birden çok nesne olması mümkündür <xref:System.Xml.XmlWriter> . Birden çok <xref:System.Xml.XmlWriter> nesneye izin verilir ve tek iş parçacıklı senaryolarda desteklenir.  
   
  Birden çok nesne kullanırken göz önünde bulundurmanız gereken önemli notlar aşağıda verilmiştir <xref:System.Xml.XmlWriter> .  
@@ -325,6 +339,7 @@ document.Save("book.xml");
 ```  
   
 ## <a name="saving-an-xml-document"></a>XML belgesi kaydetme  
+
  <xref:System.Xml.XmlDocument>Bu konuda açıklanan yöntemlerin sonucu olarak bir nesne üzerinde yapılan değişikliklerin kaydedilmesi, sınıfının yöntemleri kullanılarak gerçekleştirilir <xref:System.Xml.XmlDocument> . Bir nesne üzerinde yapılan değişiklikleri kaydetme hakkında daha fazla bilgi için <xref:System.Xml.XmlDocument> bkz. [belgeyi kaydetme ve yazma](saving-and-writing-a-document.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

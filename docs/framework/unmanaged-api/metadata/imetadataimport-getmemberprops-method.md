@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f01d65a339c77e6af3e768c620f17ef0190c1e58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503646"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733231"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps Metodu
+
 Belirtilen <xref:System.Type> meta veri belirtecinin başvurduğu üyenin adı, ikili imzası ve göreli sanal adresi de dahil olmak üzere, belirtilen üye tanımı için meta verilerde depolanan bilgileri alır. Bu basit bir yardımcı yöntemdir: *MB* bir MethodDef Ise **GetMethodProps** çağrılır; *MB* bir fieldDef Ise, **GetFieldProps** çağırılır. Ayrıntılar için diğer yöntemlere bakın.
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -46,6 +47,7 @@ HRESULT GetMemberProps (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `mb`  
  'ndaki İlişkili meta verileri almak için üyeye başvuran belirteç.  
   
@@ -86,11 +88,12 @@ HRESULT GetMemberProps (
  dışı Karakter cinsinden boyut `ppValue` veya dize yoksa sıfır `ppValue` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

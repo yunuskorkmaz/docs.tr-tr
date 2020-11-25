@@ -6,17 +6,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 1f7b8c8b3cf51aa707a17b3a9e58c6a8c0d3d833
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4540e1706cbd3dad9490f100d7e8fa58e80a9206
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830239"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733444"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>XML Belgelerinden Şema Çıkarımı Yapma
+
 Bu konuda, sınıfının bir XML <xref:System.Xml.Schema.XmlSchemaInference> belgesi yapısından BIR XML şeması tanım dili (xsd) şeması çıkarması için nasıl kullanılacağı açıklanmaktadır.  
   
 ## <a name="the-schema-inference-process"></a>Şema çıkarımı Işlemi  
+
  <xref:System.Xml.Schema.XmlSchemaInference>Ad alanı sınıfı, <xref:System.Xml.Schema?displayProperty=nameWithType> bir XML belgesi yapısından bir veya daha fazla XML şeması tanım DILI (xsd) şeması oluşturmak için kullanılır. Oluşturulan şemalar özgün XML belgesini doğrulamak için kullanılabilir.  
   
  Sınıfı tarafından bir XML belgesi işlendiği için <xref:System.Xml.Schema.XmlSchemaInference> , <xref:System.Xml.Schema.XmlSchemaInference> sınıfı XML belgesindeki öğeleri ve öznitelikleri tanımlayan şema bileşenleriyle ilgili varsayımlar yapar. <xref:System.Xml.Schema.XmlSchemaInference>Sınıfı, belirli bir öğe veya öznitelik için en kısıtlayıcı türü azaltarak, şema bileşenlerini kısıtlanmış bir şekilde de algılar. XML belgesi hakkında daha fazla bilgi toplandığından, bu kısıtlamalar daha az kısıtlayıcı olan türleri azaltarak gevşur. Çıkarsanan en az kısıtlayıcı tür `xs:string` .  
@@ -34,6 +36,7 @@ Bu konuda, sınıfının bir XML <xref:System.Xml.Schema.XmlSchemaInference> bel
  Yukarıdaki örnekte, `attribute1` özniteliğe işlem tarafından bir değer ile karşılaşıldığında `6` <xref:System.Xml.Schema.XmlSchemaInference> , türünde olduğu varsayılır `xs:unsignedByte` . `parent`İşlem tarafından ikinci öğe ile karşılaşıldığında <xref:System.Xml.Schema.XmlSchemaInference> , `xs:string` özniteliğinin değeri artık olduğundan, kısıtlama, türü olarak değiştirilerek gevşerek yapılır `attribute1` `A` . Benzer şekilde, `minOccurs` `child` şemada çıkarılan tüm öğelerin özniteliği, `minOccurs="0"` ikinci üst öğenin alt öğeleri olmadığından, öğesine gevşulmuş olarak ayarlanır.  
   
 ## <a name="inferring-schemas-from-xml-documents"></a>XML Belgelerinden Şema Çıkarımı Yapma  
+
  <xref:System.Xml.Schema.XmlSchemaInference>Sınıfı BIR <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> XML belgesinden şemayı çıkarsmak için iki aşırı yüklenmiş yöntem kullanır.  
   
  İlk yöntem, bir <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> XML belgesini temel alan bir şema oluşturmak için kullanılır. İkinci <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> Yöntem, birden çok XML belgesini açıklayan bir şemayı çıkarmakta kullanılır. Örneğin, <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> tüm XML belgesi kümesini açıklayan bir şema oluşturmak için birden çok XML belgesini tek seferde bir kez akışa aktarabilirsiniz.  
@@ -65,6 +68,7 @@ Bu konuda, sınıfının bir XML <xref:System.Xml.Schema.XmlSchemaInference> bel
  [!code-xml[XmlSchemaInferenceExamples#16](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/InferSchema2.xml#16)]  
   
 ## <a name="inline-schemas"></a>Satır içi şemalar  
+
  İşlem sırasında satır içi bir XML şeması tanım dili (XSD) şemasına karşılaşılırsa <xref:System.Xml.Schema.XmlSchemaInference> , bir oluşturulur <xref:System.Xml.Schema.XmlSchemaInferenceException> . Örneğin, aşağıdaki satır içi şema bir oluşturur <xref:System.Xml.Schema.XmlSchemaInferenceException> .  
   
 ```xml  
@@ -77,6 +81,7 @@ Bu konuda, sınıfının bir XML <xref:System.Xml.Schema.XmlSchemaInference> bel
 ```  
   
 ## <a name="schemas-that-cannot-be-refined"></a>Iyileştirilelemez şemalar  
+
  XML şeması tanım dili (XSD) şema <xref:System.Xml.Schema.XmlSchemaInference> işleminin, daraltmak için bir tür verildiyse ve bir özel durumun oluşturulmasına neden olması halinde işleyememesi gereken W3C xml şema yapıları vardır. Üst düzey kompozisyonu bir sıra dışında herhangi bir şey olan karmaşık bir tür gibi. Şema nesne modelinde (SOM), bu bir <xref:System.Xml.Schema.XmlSchemaComplexType> <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> özelliği bir örneği olmayan öğesine karşılık gelir <xref:System.Xml.Schema.XmlSchemaSequence> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-ms.openlocfilehash: 5644c20ec5df2606c7258131573691997f424e50
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a6e5ecee9a89da98a73dfb20935c5ec594d5958f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895022"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732937"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition Metodu
+
 Diziyi sıfır tabanlı, tek boyutlu bir dizi olarak düşünerek belirtilen konumdaki öğeyi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetElementAtPosition (  
@@ -35,6 +36,7 @@ HRESULT GetElementAtPosition (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `nPosition`  
  'ndaki Alınacak öğenin konumu.  
   
@@ -42,9 +44,11 @@ HRESULT GetElementAtPosition (
  dışı Öğesinin değerini temsil eden ICorDebugValue nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Çok boyutlu bir dizinin düzeni, dizi düzeninin C++ stilini izler.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
