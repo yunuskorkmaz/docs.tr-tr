@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 75a165e2fd517f36d779a934a5bdd9c41956411a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c5d491b66e4ec64dffa4e19dabff876c9c473036
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396759"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711799"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>Icordebugvariablehome:: GetOffset Yöntemi
+
 Bir değişken için temel kaydın konumunu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetOffset(  
@@ -34,10 +35,12 @@ HRESULT GetOffset(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `pOffset`  
  dışı Temel kayıttaki fark.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Yöntemi aşağıdaki değerleri döndürür:  
   
 |Değer|Açıklama|  
@@ -46,6 +49,7 @@ HRESULT GetOffset(
 |`E_FAIL`|Değişken, YAZMAÇ göreli bir bellek konumunda değil.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

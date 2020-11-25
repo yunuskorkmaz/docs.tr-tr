@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1032055b-cabb-45c5-a50e-7e853201b175
 topic_type:
 - apiref
-ms.openlocfilehash: 76d23fe9221ae5a07d79b8c5c1a7ad297922b003
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 270546f0270521e38cfdcae5e4d2137202c13cb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501254"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711097"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn Yöntemi
+
 Verilen tablodaki belirtilen sütun ve satır hücresinde bulunan değere bir işaretçi alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -62,21 +63,22 @@ HRESULT GetColumn (
 |--------------------------|---------------|-----------------------------------|
 | `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *Pval* , tam bir belirteç içerir. İşlevi, RID 'yi otomatik olarak tam belirtece dönüştürür. |
 | `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | Dönüş sonrasında *Pval* bir tam belirteç içerecektir. İşlevi CodedToken 'ı otomatik olarak tam belirtece açar. |
-| `iSHORT`(96)            | Int16         | Otomatik olarak 32 bit olarak oturum açın.  |
-| `iUSHORT`(97)           | UInt16        | Otomatik olarak 32 bit olarak oturum açın.  |
-| `iLONG`(98)             | Int32         |                                        |
-| `iULONG`(99)            | UInt32        |                                        |
-| `iBYTE`(100)            | Bayt          | Otomatik olarak 32 bit olarak oturum açın.  |
-| `iSTRING`(101)          | Dize yığın dizini | *Pval* , dize yığınında bir dizindir. Gerçek sütun dize değerini almak için [IMetaDataTables:: GetString](imetadatatables-getstring-method.md) kullanın. |
-| `iGUID`(102)            | GUID yığın dizini | *Pval* , GUID yığınının bir dizinidir. Gerçek sütun GUID değerini almak için [IMetaDataTables:: GetGuid](imetadatatables-getguid-method.md) kullanın. |
-| `iBLOB`(103)            | Blob yığın dizini | *Pval* , blob yığınında bir dizindir. Gerçek sütun blobu değerini almak için [IMetaDataTables:: GetBlob](imetadatatables-getblob-method.md) kullanın. |
+| `iSHORT` (96)            | Int16         | Otomatik olarak 32 bit olarak oturum açın.  |
+| `iUSHORT` (97)           | UInt16        | Otomatik olarak 32 bit olarak oturum açın.  |
+| `iLONG` (98)             | Int32         |                                        |
+| `iULONG` (99)            | UInt32        |                                        |
+| `iBYTE` (100)            | Bayt          | Otomatik olarak 32 bit olarak oturum açın.  |
+| `iSTRING` (101)          | Dize yığın dizini | *Pval* , dize yığınında bir dizindir. Gerçek sütun dize değerini almak için [IMetaDataTables:: GetString](imetadatatables-getstring-method.md) kullanın. |
+| `iGUID` (102)            | GUID yığın dizini | *Pval* , GUID yığınının bir dizinidir. Gerçek sütun GUID değerini almak için [IMetaDataTables:: GetGuid](imetadatatables-getguid-method.md) kullanın. |
+| `iBLOB` (103)            | Blob yığın dizini | *Pval* , blob yığınında bir dizindir. Gerçek sütun blobu değerini almak için [IMetaDataTables:: GetBlob](imetadatatables-getblob-method.md) kullanın. |
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

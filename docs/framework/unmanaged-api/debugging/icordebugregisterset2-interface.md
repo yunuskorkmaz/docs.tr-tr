@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d7fbccbf-3b6b-4db8-a96d-768e1cb6b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: f989f1c1f29c63af54ff125f4ad1aaa2bcee6757
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c04bb3a7584fcb783af929e87713dbec67ad705f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378207"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712332"
 ---
 # <a name="icordebugregisterset2-interface"></a>ICorDebugRegisterSet2 Arabirimi
+
 64 ' den fazla kayda sahip donanım platformları için [ICorDebugRegisterSet](icordebugregisterset-interface.md) arabiriminin yeteneklerini genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -38,6 +39,7 @@ ms.locfileid: "83378207"
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

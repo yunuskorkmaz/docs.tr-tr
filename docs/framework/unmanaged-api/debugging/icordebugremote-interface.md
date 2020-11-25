@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-ms.openlocfilehash: ef11aa48f679592126f736c2877c697f02cb5e62
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 276d36c511105087190cb7e9dfeaa6932efc67ff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379243"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712111"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote Arabirimi
+
 Yönetilen bir hata ayıklayıcıyı uzak hedef işleminde başlatma veya ekleme özelliği sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 interface ICorDebugRemote : IUnknown  
@@ -64,9 +65,11 @@ interface ICorDebugRemote : IUnknown
 |[ICorDebugRemote::DebugActiveProcessEx Yöntemi](icordebugremote-debugactiveprocessex-method.md)|Hata ayıklayıcı altındaki uzak makinede bir işlem başlatır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Şu anda bu işlev yalnızca uzak bir Macintosh makinesinde çalışan Silverlight tabanlı bir uygulama hedefinde hata ayıklama için desteklenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

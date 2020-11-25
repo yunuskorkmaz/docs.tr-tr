@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-ms.openlocfilehash: d5cdb8c6740970f6a7469be8c763961bf76d6ecc
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cddcf66939a2ae7ab9e7f63a6fd61b72c56f6c7a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795949"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712735"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType Numaralandırması
+
 Bir [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) olayından yapılan geri aramanın türünü gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorDebugExceptionCallbackType {  
@@ -41,10 +42,11 @@ typedef enum CorDebugExceptionCallbackType {
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|Özel durum oluşturuldu.|  
 |`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|İşlem için Kullanıcı kodu girilen özel durum.|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Bu özel durum, Kullanıcı kodunda bir `catch` blok buldu.|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Bu özel durum, `catch` Kullanıcı kodunda bir blok buldu.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|Özel durum işlenmedi.|  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

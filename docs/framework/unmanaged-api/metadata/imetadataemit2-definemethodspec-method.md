@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-ms.openlocfilehash: 8e067dc4943e6847177c13a683703e3a649a49e4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 817b3a18b047bfca1f3a7c7099920a12e6253f58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503828"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712839"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec Yöntemi
+
 Bir yönteminin genel bir örneğini oluşturur ve tanımına bir belirteç alır.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -37,6 +38,7 @@ HRESULT DefineMethodSpec (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `tkParent`  
  'ndaki Genel örneğin oluşturulacağı yöntemi için bir belirteç. Belirtecin veya türünde olması gerekir `mdMethodDef` `mdMemberRef` .  
   
@@ -50,11 +52,12 @@ HRESULT DefineMethodSpec (
  dışı Metodun meta veri imza tanımına belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

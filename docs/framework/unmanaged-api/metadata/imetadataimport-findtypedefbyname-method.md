@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4c2cd88-ac28-4bad-9ab1-2cf9d2de41e6
 topic_type:
 - apiref
-ms.openlocfilehash: 5485f43afe08fafa559d0418327a8f4f186860e7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: df1516a916b2b48080e4f94937fba063926330ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491517"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711305"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName Yöntemi
+
 Belirtilen ada sahip için TypeDef meta veri belirtecine yönelik bir işaretçi alır <xref:System.Type> .  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -36,6 +37,7 @@ HRESULT FindTypeDefByName
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `szTypeDef`  
  'ndaki TypeDef belirtecinin alınacağı türün adı.  
   
@@ -46,11 +48,12 @@ HRESULT FindTypeDefByName
  dışı Eşleşen TypeDef belirtecine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

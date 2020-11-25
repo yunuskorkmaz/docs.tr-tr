@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-ms.openlocfilehash: 020724c422af7cba0165e6f37d0eacb7742153ec
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3e946d8a27ec6b568b2f3c3633695c9f6795c938
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379268"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712059"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName Yöntemi
+
 Uzaktan hata ayıklama hedef makinesinin tam etki alanı adını veya IPv4 adresini döndürür. IPV6 Şu anda desteklenmiyor.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetHostName (  
@@ -36,6 +37,7 @@ HRESULT GetHostName (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
+
  `cchHostName`  
  'ndaki Arabelleğin karakter cinsinden boyutu `szHostName` . Bu parametre 0 (sıfır) ise null olmalıdır `szHostName` .  
   
@@ -46,6 +48,7 @@ HRESULT GetHostName (
  dışı Ana bilgisayar adını veya IP adresini içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  S_OK  
  Ana bilgisayar adı veya IP adresi başarıyla döndürüldü.  
   
@@ -53,9 +56,11 @@ HRESULT GetHostName (
  Ana bilgisayar adı veya IP adresi döndürülemiyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yöntem, hata ayıklayıcı yazıcı tarafından uygulanır. Birden çok çağrı paradigmasını izlemelidir: ilk çağrıda, çağıran her ikisine de null değeri geçirir `cchHostName` `szHostName` ve `pcchHostName` gereken arabelleğin boyutunu döndürür. İkinci çağrıda, daha önce döndürülen boyut geçirilir `cchHostName` ve uygun boyutta bir arabellek geçirilir `szHostName` .  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL  

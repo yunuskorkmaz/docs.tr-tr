@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-ms.openlocfilehash: 5e88652ff75223e30e6abc454f1e1af91494c7b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 9407dda7aab337f667cd5043b562d0eac94f0f04
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396697"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711929"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType Arabirimi
+
 Temel veya karmaşık (yani Kullanıcı tanımlı) bir türü temsil eder. Tür geneldir ise, `ICorDebugType` örneklenmiş genel türü temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -37,7 +38,8 @@ Temel veya karmaşık (yani Kullanıcı tanımlı) bir türü temsil eder. Tür 
 |[GetType Yöntemi](icordebugtype-gettype-method.md)|Bunun başvurduğu ortak dil çalışma zamanının yerel türünü açıklayan bir CorElementType değeri alır <xref:System.Type> `ICorDebugType` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tür geneldir ise, `ICorDebugClass` örneklenmemiş türü temsil eder. `ICorDebugType`Arabirim, bir örneklenmiş genel türü temsil eder. Örneğin, Hashtable \< K, V> tarafından temsil edilir `ICorDebugClass` , ancak Hashtable \< ınt32, String> tarafından temsil edilir `ICorDebugType` .  
+
+ Tür geneldir ise, `ICorDebugClass` örneklenmemiş türü temsil eder. `ICorDebugType`Arabirim, bir örneklenmiş genel türü temsil eder. Örneğin, Hashtable \<K, V> tarafından temsil edilir `ICorDebugClass` , ancak Hashtable \<Int32, String> tarafından temsil edilir `ICorDebugType` .  
   
  Genel olmayan türler hem hem de ile temsil `ICorDebugClass` edilir `ICorDebugType` . İkinci arabirim, tür örneği oluşturma ile başa çıkmak için .NET Framework sürüm 2,0 ' de tanıtılmıştı.  
   
@@ -45,6 +47,7 @@ Temel veya karmaşık (yani Kullanıcı tanımlı) bir türü temsil eder. Tür 
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  

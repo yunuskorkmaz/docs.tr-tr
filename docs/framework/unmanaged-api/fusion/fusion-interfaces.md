@@ -6,17 +6,19 @@ helpviewer_keywords:
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-ms.openlocfilehash: 81c66825e69d9526abddfe06133426a2274ad08f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 59e34a39bada1dcf5e66a0c5b92a7fcbfb41d884
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108189"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711695"
 ---
 # <a name="fusion-interfaces"></a>Fusion Arabirimleri
+
 Bu bölümde, Fusion API 'sinin bir uygulama kaynaklarının özelliklerine erişmek ve uygulama için bu kaynakların doğru sürümlerini bulmak için kullandığı yönetilmeyen arabirimler açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [IAppIdAuthority Arabirimi](iappidauthority-interface.md)  
  Uygulama kimlikleri ve başvuruları için anahtarlar oluşturan ve karşılaştıran yöntemler sağlar.  
   
@@ -27,7 +29,7 @@ Bu bölümde, Fusion API 'sinin bir uygulama kaynaklarının özelliklerine eri�
  Genel derleme önbelleğindeki tek bir derlemeyi temsil eder.  
   
  [IAssemblyEnum Arabirimi](iassemblyenum-interface.md)  
- `IAssemblyName` nesnelerinin bir dizisi için bir Numaralandırıcı temsil eder.  
+ Bir nesne dizisi için bir numaralandırıcısı temsil eder `IAssemblyName` .  
   
  [IAssemblyName Arabirimi](iassemblyname-interface.md)  
  Bir derlemenin benzersiz kimliğini tanımlamak ve bunlarla çalışmak için yöntemler sağlar.  
@@ -39,13 +41,13 @@ Bu bölümde, Fusion API 'sinin bir uygulama kaynaklarının özelliklerine eri�
  Geçerli kapsamdaki uygulamayı tanımlayan kodun benzersiz imzasını temsil eder.  
   
  [IEnumDefinitionIdentity Arabirimi](ienumdefinitionidentity-interface.md)  
- `IDefinitionIdentity` nesnelerinin bir koleksiyonu için numaralandırıcı görevi görür.  
+ Bir nesne koleksiyonu için numaralandırıcı görevi görür `IDefinitionIdentity` .  
   
  [IEnumIDENTITY_ATTRIBUTE Arabirimi](ienumidentity-attribute-interface.md)  
  Geçerli kapsamdaki kod nesnesinin öznitelikleri için bir Numaralandırıcı işlevi görür.  
   
  [IEnumReferenceIdentity Arabirimi](ienumreferenceidentity-interface.md)  
- `IReferenceIdentity` nesnelerinin bir koleksiyonu için bir Numaralandırıcı işlevi görür.  
+ Bir nesne koleksiyonu için bir Numaralandırıcı görevi görür `IReferenceIdentity` .  
   
  [IIdentityAuthority Arabirimi](iidentityauthority-interface.md)  
  Kod nesneleri için kimlik anahtarlarını yönetir.  
@@ -63,13 +65,15 @@ Bu bölümde, Fusion API 'sinin bir uygulama kaynaklarının özelliklerine eri�
  Bir kod nesnesinin benzersiz imzasına bir başvuruyu temsil eder.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)  
   
- [Fusion Sabit Listeleri](fusion-enumerations.md)  
+ [Fusion Numaralandırmaları](fusion-enumerations.md)  
   
  [Fusion Yapıları](fusion-structures.md)
