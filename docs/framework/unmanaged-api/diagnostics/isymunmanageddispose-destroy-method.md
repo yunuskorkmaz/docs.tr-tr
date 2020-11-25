@@ -15,28 +15,31 @@ helpviewer_keywords:
 ms.assetid: a854ab9f-d2ba-470e-867f-808c1e7bd07a
 topic_type:
 - apiref
-ms.openlocfilehash: 5bd94cb851d4bb044d4ce03b97d6342a2c9652e4
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 6a31026f5b1669c0c29762048dc2c5c1c7bbb6a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441324"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732833"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="01b39-102">ISymUnmanagedDispose::Destroy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="01b39-102">ISymUnmanagedDispose::Destroy Method</span></span>
-<span data-ttu-id="01b39-103">Alttaki nesnenin tüm iç başvuruları serbest bırakmaya ve sonraki yöntem çağrılarında hata döndürmesine neden olur.</span><span class="sxs-lookup"><span data-stu-id="01b39-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
+# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="66b19-102">ISymUnmanagedDispose::Destroy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="66b19-102">ISymUnmanagedDispose::Destroy Method</span></span>
+
+<span data-ttu-id="66b19-103">Alttaki nesnenin tüm iç başvuruları serbest bırakmaya ve sonraki yöntem çağrılarında hata döndürmesine neden olur.</span><span class="sxs-lookup"><span data-stu-id="66b19-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01b39-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="01b39-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66b19-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="66b19-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Destroy();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="01b39-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="01b39-105">Return Value</span></span>  
- <span data-ttu-id="01b39-106">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="01b39-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="01b39-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="01b39-107">Requirements</span></span>  
- <span data-ttu-id="01b39-108">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="01b39-108">**Header:** CorSym.idl, CorSym.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="01b39-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="01b39-109">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="66b19-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="66b19-105">Return Value</span></span>  
 
-- [<span data-ttu-id="01b39-110">ISymUnmanagedDispose Arabirimi</span><span class="sxs-lookup"><span data-stu-id="01b39-110">ISymUnmanagedDispose Interface</span></span>](isymunmanageddispose-interface.md)
+ <span data-ttu-id="66b19-106">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="66b19-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="66b19-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="66b19-107">Requirements</span></span>  
+
+ <span data-ttu-id="66b19-108">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="66b19-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="66b19-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="66b19-109">See also</span></span>
+
+- [<span data-ttu-id="66b19-110">ISymUnmanagedDispose Arabirimi</span><span class="sxs-lookup"><span data-stu-id="66b19-110">ISymUnmanagedDispose Interface</span></span>](isymunmanageddispose-interface.md)
