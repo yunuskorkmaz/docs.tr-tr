@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 ms.openlocfilehash: 9478501ea98ec1b9d3ec2761bc4ebf3f6bef656c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91152448"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# derleyici seçenekleri)
@@ -42,7 +42,7 @@ ms.locfileid: "91152448"
   
 2. Ortak dil çalışma zamanı sistem dizini.  
   
-3. **-Lib**tarafından belirtilen dizinler.  
+3. **-Lib** tarafından belirtilen dizinler.  
   
 4. LıB ortam değişkeni tarafından belirtilen dizinler.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "91152448"
   
  **-lib** eklenebilir; bir defadan fazla belirtmek önceki değerlere ekler.  
   
- **-Lib** kullanmanın bir alternatifi, gereken tüm derlemeleri çalışma dizinine kopyalamaktır; Bu, yalnızca derleme adını **başvuruya**iletmeniz için izin verir. Daha sonra çalışma dizininden derlemeleri silebilirsiniz. Bağımlı derlemenin yolu bütünleştirilmiş kod bildiriminde belirtilmediğinden, uygulama hedef bilgisayarda başlatılabilir ve derlemeyi genel derleme önbelleğinde bulabilir ve kullanacaktır.  
+ **-Lib** kullanmanın bir alternatifi, gereken tüm derlemeleri çalışma dizinine kopyalamaktır; Bu, yalnızca derleme adını **başvuruya** iletmeniz için izin verir. Daha sonra çalışma dizininden derlemeleri silebilirsiniz. Bağımlı derlemenin yolu bütünleştirilmiş kod bildiriminde belirtilmediğinden, uygulama hedef bilgisayarda başlatılabilir ve derlemeyi genel derleme önbelleğinde bulabilir ve kullanacaktır.  
   
  Derleyici derlemeye başvuru yapabildiğinden, ortak dil çalışma zamanının derlemeyi çalışma zamanında bulabileceği ve yükleyebilecektir anlamına gelmez. Çalışma zamanının başvurulmuş derlemeleri nasıl arayacağını görmek için bkz. [çalışma zamanının derlemeleri nasıl konumlandırır](../../../framework/deployment/how-the-runtime-locates-assemblies.md) .  
   

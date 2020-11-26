@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
 ms.openlocfilehash: 9e84ff95f7f0addac1c2c2d79af0ab53572da27f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193809"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (C# derleyici seçenekleri)
@@ -38,7 +38,7 @@ ms.locfileid: "91193809"
 
  **-Recurse** seçeneği, kaynak kodu dosyalarını belirtilen dizinin ( `dir` ) veya proje dizininin tüm alt dizinlerinde derlemenize olanak tanır.  
   
- Proje dizinindeki tüm eşleşen dosyaları **-Recurse**kullanmadan derlemek için dosya adında joker karakterler kullanabilirsiniz.  
+ Proje dizinindeki tüm eşleşen dosyaları **-Recurse** kullanmadan derlemek için dosya adında joker karakterler kullanabilirsiniz.  
   
  Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   

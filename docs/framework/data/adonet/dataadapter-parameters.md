@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: 1264d678b4823149498150f13d8783a82890f6a0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91177721"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter Parametreleri
@@ -167,7 +167,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
-> Parametre için bir parametre adı sağlanmadığında *parametreye, "* parametre1" ile başlayarak*N* parametresinin artımlı bir varsayılan adı verilir. Bir parametre adı belirlediğinizde parametre*N* adlandırma kuralını kullanmaktan kaçınmanızı öneririz, çünkü sağladığınız ad içinde varolan bir varsayılan parametre adıyla çakışabilir `ParameterCollection` . Sağlanan ad zaten varsa, bir özel durum oluşturulur.  
+> Parametre için bir parametre adı sağlanmadığında *parametreye, "* parametre1" ile başlayarak *N* parametresinin artımlı bir varsayılan adı verilir. Bir parametre adı belirlediğinizde parametre *N* adlandırma kuralını kullanmaktan kaçınmanızı öneririz, çünkü sağladığınız ad içinde varolan bir varsayılan parametre adıyla çakışabilir `ParameterCollection` . Sağlanan ad zaten varsa, bir özel durum oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

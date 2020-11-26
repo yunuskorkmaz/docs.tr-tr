@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 ms.openlocfilehash: 9131db17d767c76fe6a57f5d5353474153e0c269
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91194095"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C# derleyici seçeneği)
@@ -72,7 +72,7 @@ class An_Internal_Class
   
 ## <a name="example"></a>Örnek  
 
- Bu örnek, moduleassemblyname_1.dll derlemede ortak olmayan bir türe erişen. netmodule 'yi oluşturur. Bu. netmodule csman_an_assembly adlı bir derlemede derlenip,. netmodule 'nin csman_an_assembly arkadaş derleme erişimi veren bir derlemede genel olmayan türlere erişmesine izin vererek **-moduleassemblyname**belirtemez.  
+ Bu örnek, moduleassemblyname_1.dll derlemede ortak olmayan bir türe erişen. netmodule 'yi oluşturur. Bu. netmodule csman_an_assembly adlı bir derlemede derlenip,. netmodule 'nin csman_an_assembly arkadaş derleme erişimi veren bir derlemede genel olmayan türlere erişmesine izin vererek **-moduleassemblyname** belirtemez.  
   
 ```csharp  
 // moduleassemblyname_2.cs  

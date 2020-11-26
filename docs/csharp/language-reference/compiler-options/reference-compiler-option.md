@@ -15,10 +15,10 @@ helpviewer_keywords:
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
 ms.openlocfilehash: cd7346ae4094a84a398306394f771e040dd7b72f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193796"
 ---
 # <a name="-reference-c-compiler-options"></a>-Reference (C# derleyici seçenekleri)
@@ -46,7 +46,7 @@ ms.locfileid: "91193796"
   
  İçeri aktardığınız dosyaların bir bildirim içermesi gerekir; çıkış dosyası [-target: Module](./target-module-compiler-option.md)dışındaki [-target](./target-compiler-option.md) seçeneklerinden biriyle derlenmiş olmalıdır.  
   
- **-r** **-Reference**öğesinin kısa biçimidir.  
+ **-r** **-Reference** öğesinin kısa biçimidir.  
   
  Derleme bildirimi içermeyen bir çıkış dosyasından meta verileri içeri aktarmak için [-addmodule](./addmodule-compiler-option.md) kullanın.  
   

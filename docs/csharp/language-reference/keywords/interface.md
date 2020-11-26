@@ -8,10 +8,10 @@ helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
 ms.openlocfilehash: 24f95e828522f467c519c0c8a7ba9410aa97af4e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89134594"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# Başvurusu)
@@ -33,12 +33,12 @@ Arabirim, bir ad alanı veya sınıf üyesi olabilir. Arabirim bildirimi, aşağ
 - [Dizin Oluşturucular](../../programming-guide/indexers/using-indexers.md)
 - [Ekinlikler](event.md)
 
-Bu önceki üye bildirimleri genellikle gövde içermez. C# 8,0 ' den başlayarak bir arabirim üyesi bir gövde bildirebilir. Bu, varsayılan bir *uygulama*olarak adlandırılır. Gövdeler içeren Üyeler, arabirimin geçersiz kılan bir uygulama sağlamayan sınıflar ve yapılar için "varsayılan" bir uygulama sağlamasına izin verir. Buna ek olarak, C# 8,0 ' den itibaren bir arabirim şunlar olabilir:
+Bu önceki üye bildirimleri genellikle gövde içermez. C# 8,0 ' den başlayarak bir arabirim üyesi bir gövde bildirebilir. Bu, varsayılan bir *uygulama* olarak adlandırılır. Gövdeler içeren Üyeler, arabirimin geçersiz kılan bir uygulama sağlamayan sınıflar ve yapılar için "varsayılan" bir uygulama sağlamasına izin verir. Buna ek olarak, C# 8,0 ' den itibaren bir arabirim şunlar olabilir:
 
 - [Sabitler](const.md)
 - [İşleçler](../operators/operator-overloading.md)
 - [Statik Oluşturucu](../../programming-guide/classes-and-structs/constructors.md#static-constructors).
-- [İç içe türler](../../programming-guide/classes-and-structs/nested-types.md)
+- [İç içe geçmiş türler](../../programming-guide/classes-and-structs/nested-types.md)
 - [Statik alanlar, Yöntemler, özellikler, Dizin oluşturucular ve olaylar](static.md)
 - Açık arabirim uygulama sözdizimini kullanan üye bildirimleri.
 - Açık erişim değiştiricileri (varsayılan erişim [`public`](access-modifiers.md) ).

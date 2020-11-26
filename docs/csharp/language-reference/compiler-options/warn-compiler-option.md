@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.custom: updateeachrelease
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: d59274423e6f9844d3ab22f3ac513ba1a05d7f07
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91171357"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# derleyici seçenekleri)
@@ -52,7 +52,7 @@ ms.locfileid: "91171357"
   
  Tüm uyarıları hata olarak değerlendirmek için [-warnaserror](./warnaserror-compiler-option.md) kullanın. Belirli uyarıları devre dışı bırakmak için [-nowarn](./nowarn-compiler-option.md) kullanın.  
   
- **-w** , **-Warn**kısa biçimidir.  
+ **-w** , **-Warn** kısa biçimidir.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   

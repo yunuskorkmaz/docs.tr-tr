@@ -17,10 +17,10 @@ helpviewer_keywords:
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
 ms.openlocfilehash: b985c85e2fddce459ed68b3d07ba7d54a8b2d0a7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89125611"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Visual Studio Komut Satırı için ortam değişkenlerini ayarlama
@@ -34,11 +34,11 @@ Visual Studio 'nun geçerli sürümü, Visual Studio 'nun önceki bir sürümün
 
 ### <a name="to-run-vsdevcmdbat"></a>VsDevCmd.BAT çalıştırmak için
 
-1. **Başlangıç** menüsünde **VS 2019 için geliştirici komut istemi**açın.  **Visual Studio 2019** klasöründedir.
+1. **Başlangıç** menüsünde **VS 2019 için geliştirici komut istemi** açın.  **Visual Studio 2019** klasöründedir.
 
-2. \\*Version* \\ *Offering*Yüklemenizin \Common7\Tools veya \Program Files (x86) \Microsoft Visual Studio \\ *Version* \\ *teklif*\Common7\Tools alt dizinine yönelik \Program Files\Microsoft Visual Studio Version teklifini değiştirin.  (*Sürüm* , geçerli sürüm için *2019* . *Teklif* , *Enterprise*, *Professional* veya *Community*'den biridir.)
+2. \\*Version* \\ *Offering* Yüklemenizin \Common7\Tools veya \Program Files (x86) \Microsoft Visual Studio \\ *Version* \\ *teklif*\Common7\Tools alt dizinine yönelik \Program Files\Microsoft Visual Studio Version teklifini değiştirin.  (*Sürüm* , geçerli sürüm için *2019* . *Teklif* , *Enterprise*, *Professional* veya *Community*'den biridir.)
 
-3. **Vsdevcmd**yazarak VsDevCmd.bat çalıştırın.
+3. **Vsdevcmd** yazarak VsDevCmd.bat çalıştırın.
 
     > [!CAUTION]
     > VsDevCmd.bat bilgisayardan bilgisayara farklılık gösterebilir. Eksik veya hasarlı bir VsDevCmd.bat dosyasını başka bir bilgisayardaki VsDevCmd.bat değiştirme. Bunun yerine, eksik dosyayı yerine koymak için kurulumu yeniden çalıştırın.

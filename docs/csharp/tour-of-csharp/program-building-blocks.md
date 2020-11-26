@@ -3,10 +3,10 @@ title: C# programlarının yapı taşları "
 description: C# üyeleri, ifadeler ve deyimler hakkında bilgi edinin. Türler yazdığınız üyeleri içerir. Bu Üyeler deyimlerden ve ifadelerden oluşturulur.
 ms.date: 08/06/2020
 ms.openlocfilehash: e4350f2c2b6005fb59dd868f0f7f628bd07b0053
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93342702"
 ---
 # <a name="program-building-blocks"></a>Program yapı taşları
@@ -20,15 +20,15 @@ A üyeleri `class` _*_statik Üyeler_*_ veya _*_örnek üyeleridir_*_. Statik Ü
 Aşağıdaki liste, bir sınıfın içerebileceği üye türlerine genel bir bakış sağlar.
 
 - _ * Sabitler * *: sınıfla ilişkili sabit değerler
-- **Alanlar** : sınıfıyla ilişkili değişkenler
-- **Yöntemler** : sınıfı tarafından gerçekleştirilebilecek eylemler
-- **Özellikler** : sınıfının adlandırılmış özelliklerini okuma ve yazma ile ilişkili eylemler
-- **Dizin oluşturucular** : bir dizi gibi sınıfın dizin oluşturma örnekleri ile ilişkili eylemler
-- **Olaylar** : sınıfı tarafından oluşturulabilecek bildirimler
-- **İşleçler** : sınıf tarafından desteklenen dönüşümler ve ifade işleçleri
-- **Oluşturucular** : sınıf veya sınıf örneklerinin başlatılması için gereken eylemler
-- **Sonlandırıcılar** : sınıf örneklerinin kalıcı olarak atılmadan önce gerçekleştirilen eylemler
-- **Türler** : sınıf tarafından belirtilen iç içe türler
+- **Alanlar**: sınıfıyla ilişkili değişkenler
+- **Yöntemler**: sınıfı tarafından gerçekleştirilebilecek eylemler
+- **Özellikler**: sınıfının adlandırılmış özelliklerini okuma ve yazma ile ilişkili eylemler
+- **Dizin oluşturucular**: bir dizi gibi sınıfın dizin oluşturma örnekleri ile ilişkili eylemler
+- **Olaylar**: sınıfı tarafından oluşturulabilecek bildirimler
+- **İşleçler**: sınıf tarafından desteklenen dönüşümler ve ifade işleçleri
+- **Oluşturucular**: sınıf veya sınıf örneklerinin başlatılması için gereken eylemler
+- **Sonlandırıcılar**: sınıf örneklerinin kalıcı olarak atılmadan önce gerçekleştirilen eylemler
+- **Türler**: sınıf tarafından belirtilen iç içe türler
 
 ## <a name="accessibility"></a>Erişilebilirlik
 
@@ -189,7 +189,7 @@ Diğer üyelerin aksine, örnek oluşturucular devralınmaz. Bir sınıf, sını
 
 *Özellikler* , alanlar için doğal bir uzantıdır. Her ikisi de ilişkili türlerin bulunduğu isimlerdir ve alanlara ve özelliklere erişim için sözdizimi aynıdır. Ancak, alanların aksine, Özellikler depolama konumlarını göstermiyor. Bunun yerine, özellikler, değerleri okunmak veya yazıldığında yürütülen deyimleri belirten *erişimcileri* vardır.
 
-Bir özellik, bildirim bir get erişimcisi ile sona erene veya sınırlayıcılar arasında yazılmış bir set erişimcisi ya da bir `{` noktalı virgülle bitmesi dışında, bir alan gibi tanımlanır `}` . Hem get erişimcisine hem de bir set erişimcisine sahip olan bir özellik *okuma-yazma özelliğidir* , yalnızca bir get erişimcisine sahip olan bir özellik *salt okunurdur* ve yalnızca bir set erişimcisi olan bir özellik yalnızca bir salt *yazılır özelliktir*.
+Bir özellik, bildirim bir get erişimcisi ile sona erene veya sınırlayıcılar arasında yazılmış bir set erişimcisi ya da bir `{` noktalı virgülle bitmesi dışında, bir alan gibi tanımlanır `}` . Hem get erişimcisine hem de bir set erişimcisine sahip olan bir özellik *okuma-yazma özelliğidir*, yalnızca bir get erişimcisine sahip olan bir özellik *salt okunurdur* ve yalnızca bir set erişimcisi olan bir özellik yalnızca bir salt *yazılır özelliktir*.
 
 Get erişimcisi, özellik türünün dönüş değeri olan parametresiz bir yönteme karşılık gelir. Bir set erişimcisi, value adlı tek parametreli ve dönüş türü olmayan bir yönteme karşılık gelir. Get erişimcisi özelliğin değerini hesaplar. Set erişimcisi, özelliği için yeni bir değer sağlar. Özellik bir atamanın hedefi ya da veya işleneni, `++` `--` set erişimcisi çağrılır. Özelliğin başvurduğu diğer durumlarda, get erişimcisi çağrılır.
 
@@ -211,7 +211,7 @@ Bir özelliğin erişimcisi sanal olabilir. Bir özellik bildirimi `virtual` ,, 
 
 Dizin oluşturucular aşırı yüklenebilir. Bir sınıf, parametrelerinin sayısı veya türleri farklı olduğu sürece birden çok Dizin Oluşturucu bildirebilir.
 
-### <a name="events"></a>Olaylar
+### <a name="events"></a>Ekinlikler
 
 Bir *olay* , bir sınıf veya nesnenin bildirimler sağlamasını sağlayan bir üyedir. Bildirimin bir `event` anahtar sözcük içermesi ve türün bir temsilci türü olması dışında bir olay, bir alan gibi bildirilmiştir.
 
@@ -247,12 +247,12 @@ Bu `Console.WriteLine` `True` iki liste aynı sırada aynı değerleri taşıyan
 
 *İfadeler* , *işlenenler* ve *işleçlerden* oluşturulur. Bir ifadenin işleçleri, işlenenlerin hangi işlemleri uygulanacağını gösterir. İşleç örnekleri,, `+` , `-` `*` ve içerir `/` `new` . İşlenenlerin örnekleri, sabit değerleri, alanları, yerel değişkenleri ve ifadeleri içerir.
 
-Bir ifade birden çok işleç içerdiğinde işleçlerin *önceliği* , her bir işlecin değerlendirilme sırasını denetler. Örneğin, `x + y * z` `x + (y * z)` `*` işleç işleçten daha yüksek önceliğe sahip olduğu için ifade değerlendirilir `+` .
+Bir ifade birden çok işleç içerdiğinde işleçlerin *önceliği*, her bir işlecin değerlendirilme sırasını denetler. Örneğin, `x + y * z` `x + (y * z)` `*` işleç işleçten daha yüksek önceliğe sahip olduğu için ifade değerlendirilir `+` .
 
 Aynı önceliğe sahip iki işleç arasında bir işlenen gerçekleştiğinde, işleçlerin *ilişkilendirilebilirliği* , işlemlerin gerçekleştirileceği sırayı denetler:
 
-* Atama ve null birleşim işleçleri hariç olmak üzere tüm ikili işleçler *sola ilişkilendirilebilir* , yani işlemler soldan sağa yapılır. Örneğin, `x + y + z` olarak değerlendirilir `(x + y) + z` .
-* Atama işleçleri, null birleşim `??` ve `??=` İşleçler ve koşullu operatör `?:` *doğru ilişkilendirilebilir* , yani işlemler sağdan sola yapılır. Örneğin, `x = y = z` olarak değerlendirilir `x = (y = z)` .
+* Atama ve null birleşim işleçleri hariç olmak üzere tüm ikili işleçler *sola ilişkilendirilebilir*, yani işlemler soldan sağa yapılır. Örneğin, `x + y + z` olarak değerlendirilir `(x + y) + z` .
+* Atama işleçleri, null birleşim `??` ve `??=` İşleçler ve koşullu operatör `?:` *doğru ilişkilendirilebilir*, yani işlemler sağdan sola yapılır. Örneğin, `x = y = z` olarak değerlendirilir `x = (y = z)` .
 
 Öncelik ve ilişkilendirilebilirlik, parantezler kullanılarak denetlenebilir. Örneğin, ilk olarak ile `x + y * z` çarpar `y` `z` ve sonra sonucunu ekler `x` , ancak ilk olarak `(x + y) * z` sonucu ekler `x` ve `y` sonra sonucunu ile çarpar `z` .
 

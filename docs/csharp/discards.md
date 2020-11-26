@@ -4,10 +4,10 @@ description: ", Atanmamış, discardable değişkenleri ve atma 'un kullanılabi
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
 ms.openlocfilehash: baa7c559095460cf747cb5c8f7ad581270893bd7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "95698812"
 ---
 # <a name="discards---c-guide"></a>Atarsa-C# Kılavuzu
@@ -69,15 +69,15 @@ Yok saymayı seçtiğiniz herhangi bir değişkeni belirtmek için tek başına 
 
 `_`Ayrıca geçerli bir tanımlayıcı olduğunu unutmayın. Desteklenen bir bağlam dışında kullanıldığında, `_` atma olarak kabul edilir, ancak geçerli bir değişken olarak değerlendirilir. Adlı bir tanımlayıcı `_` zaten kapsamda ise, `_` tek başına atma olarak kullanılması şu şekilde olabilir:
 
-- İstenen atma değeri atanarak kapsam içi değişkenin değerini yanlışlıkla değiştirme `_` . Örnek:
+- İstenen atma değeri atanarak kapsam içi değişkenin değerini yanlışlıkla değiştirme `_` . Örneğin:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- Tür güvenliğini ihlal eden bir derleyici hatası. Örnek:
+- Tür güvenliğini ihlal eden bir derleyici hatası. Örneğin:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- Derleyici hatası CS0136, " \_ Bu ad bir yerel veya parametre tanımlamak için kapsayan bir yerel kapsamda kullanıldığı için," ' ' adlı yerel veya parametre bu kapsamda bildirilemez. " Örnek:
+- Derleyici hatası CS0136, " \_ Bu ad bir yerel veya parametre tanımlamak için kapsayan bir yerel kapsamda kullanıldığı için," ' ' adlı yerel veya parametre bu kapsamda bildirilemez. " Örneğin:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 

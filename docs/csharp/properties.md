@@ -4,10 +4,10 @@ description: Doğrulama, hesaplanan değerler, yavaş değerlendirme ve özellik
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
 ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89358914"
 ---
 # <a name="properties"></a>Özellikler
@@ -107,7 +107,7 @@ Bir özelliğin yalnızca bir üye alanının değerini döndürmesi gerekmez. H
 
 Yukarıdaki örnek, tam ad için biçimlendirilen dizeyi oluşturmak üzere [dize ilişkilendirme](./language-reference/tokens/interpolated.md) özelliğini kullanır.
 
-Ayrıca, hesaplanan özelliği oluşturmak için daha kısa bir yol sağlayan *Expression-Bodied üyesini*de kullanabilirsiniz `FullName` :
+Ayrıca, hesaplanan özelliği oluşturmak için daha kısa bir yol sağlayan *Expression-Bodied üyesini* de kullanabilirsiniz `FullName` :
 
 [!code-csharp[A computed property using an expression bodied member](../../samples/snippets/csharp/properties/Person.cs#11)]
 
@@ -115,7 +115,7 @@ Ayrıca, hesaplanan özelliği oluşturmak için daha kısa bir yol sağlayan *E
 
 ### <a name="cached-evaluated-properties"></a>Önbelleğe alınan değerlendirilen Özellikler
 
-Hesaplanan bir özellik kavramını depolama ile karıştırabilir ve *önbelleğe alınmış bir değerlendirilen Özellik*oluşturabilirsiniz.  Örneğin, `FullName` özelliği yalnızca ilk kez erişildiği zaman dize biçimlendirmesi olacak şekilde güncelleştirebilirsiniz:
+Hesaplanan bir özellik kavramını depolama ile karıştırabilir ve *önbelleğe alınmış bir değerlendirilen Özellik* oluşturabilirsiniz.  Örneğin, `FullName` özelliği yalnızca ilk kez erişildiği zaman dize biçimlendirmesi olacak şekilde güncelleştirebilirsiniz:
 
 [!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 
@@ -141,7 +141,7 @@ Bu teknik, otomatik uygulanan özelliğindeki yedekleme alanına eklediğiniz t�
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.`İşleci *null koşullu işleç*olarak adlandırılır. İşlecin sağ tarafını değerlendirmeden önce null başvurusunu denetler. Nihai sonuç, olay üzerinde abone olmadığında `PropertyChanged` , olayı yürütmek için kodun yürütülmeyeceğini unutmayın. `NullReferenceException`Bu durumda bu onay olmadan bir oluşturur. Daha fazla bilgi için bkz. [`events`](events-overview.md). Bu örnek ayrıca `nameof` özellik adı sembolünden metin gösterimine dönüştürmek için New işlecini de kullanır.
+`?.`İşleci *null koşullu işleç* olarak adlandırılır. İşlecin sağ tarafını değerlendirmeden önce null başvurusunu denetler. Nihai sonuç, olay üzerinde abone olmadığında `PropertyChanged` , olayı yürütmek için kodun yürütülmeyeceğini unutmayın. `NullReferenceException`Bu durumda bu onay olmadan bir oluşturur. Daha fazla bilgi için bkz. [`events`](events-overview.md). Bu örnek ayrıca `nameof` özellik adı sembolünden metin gösterimine dönüştürmek için New işlecini de kullanır.
 Kullanmak `nameof` , özelliğin adını yanlış yazmış olduğunuz hataları azaltabilir.
 
 Bu durumda, <xref:System.ComponentModel.INotifyPropertyChanged> uygulamanız gereken senaryoları desteklemek için Erişimcilerde kod yazabileceğiniz bir örnek örneğidir.

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
 ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92471657"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# Başvurusu)
@@ -42,7 +42,7 @@ Değer türü aşağıdaki iki türden biri olabilir:
 
 ## <a name="built-in-value-types"></a>Yerleşik değer türleri
 
-C# *basit türler*olarak da bilinen aşağıdaki yerleşik değer türlerini sağlar:
+C# *basit türler* olarak da bilinen aşağıdaki yerleşik değer türlerini sağlar:
 
 - [Tamsayı sayısal türler](integral-numeric-types.md)
 - [Kayan nokta sayısal türleri](floating-point-numeric-types.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: f22a67348b19b8c97513ca685b2b10b34b1fd6fd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89141952"
 ---
 # <a name="using-directive-c-reference"></a>using yönergesi (C# Başvurusu)
@@ -30,13 +30,13 @@ ms.locfileid: "89141952"
 
     Daha fazla bilgi için bkz. [using static yönergesi](using-static.md).
 
-- Bir ad alanı veya tür için bir diğer ad oluşturmak için. Bu, *Using alias yönergesi*olarak adlandırılır.
+- Bir ad alanı veya tür için bir diğer ad oluşturmak için. Bu, *Using alias yönergesi* olarak adlandırılır.
 
     ```csharp
     using Project = PC.MyCompany.Project;
     ```
 
-`using`Anahtar sözcüğü Ayrıca, dosyalar ve yazı tipleri gibi nesnelerin doğru şekilde işlenmesini sağlamaya yardımcı olan *using deyimleri*oluşturmak için de kullanılır <xref:System.IDisposable> . Daha fazla bilgi için bkz. [using deyimleri](using-statement.md) .
+`using`Anahtar sözcüğü Ayrıca, dosyalar ve yazı tipleri gibi nesnelerin doğru şekilde işlenmesini sağlamaya yardımcı olan *using deyimleri* oluşturmak için de kullanılır <xref:System.IDisposable> . Daha fazla bilgi için bkz. [using deyimleri](using-statement.md) .
 
 ## <a name="using-static-type"></a>Statik tür kullanma
 
@@ -100,5 +100,5 @@ Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-refere
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Ad alanlarını kullanma](../../programming-guide/namespaces/using-namespaces.md)
 - [C# anahtar sözcükleri](index.md)
-- [Ad Alanları](../../programming-guide/namespaces/index.md)
+- [Ad alanları](../../programming-guide/namespaces/index.md)
 - [using Deyimi](using-statement.md)
