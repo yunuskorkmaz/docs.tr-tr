@@ -8,30 +8,35 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: 13e20c1a940b7bfa777245ba35f3cc1b003d15b2
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 228226d90e70d296681e48ffe85dada8eb18209a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247375"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 
 `jitCompilationStart`Yönetilen hata ayıklama Yardımcısı (MDA), Just-In-Time (JIT) derleyicisi bir işlevi derlemeye başladığında raporlamak için etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
+
  Çalışma kümesi boyutu, zaten yerel görüntü biçiminde olan bir program için artar, çünkü mscorjit.dll işleme yüklenir.  
   
 ## <a name="cause"></a>Nedeni  
+
 Programın bağımlı olduğu tüm derlemeler yerel biçimde üretilmez veya bir derleme doğru şekilde kaydedilmemiş.  
 
 ## <a name="resolution"></a>Çözüm  
+
  Bu MDA ' ın etkinleştirilmesi, hangi işlevin JıT olarak derlendiğini tanımlamanızı sağlar. İşlevi içeren derlemenin yerel biçimde oluşturulduğundan ve doğru şekilde kaydedildiğinden emin olun.
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+
  Bu MDA, bir yöntem JıT derlenmeden hemen önce bir ileti günlüğe kaydedilir, bu nedenle bu MDA 'ın etkinleştirilmesi performansı önemli ölçüde etkiler. Bir yöntem satır içi ise, bu MDA ayrı bir ileti oluşturmaz.  
   
 ## <a name="output"></a>Çıkış  
+
  Aşağıdaki kod örneği, örnek çıktıyı gösterir. Bu durumda, çıkış, derleme testinde, "ns2.CO" sınıfındaki "d" yönteminin JıT olarak derlendiğini gösterir.  
   
 ```output
@@ -39,6 +44,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>Yapılandırma  
+
  Aşağıdaki yapılandırma dosyasında, ilk JıT derlenmiş olduğunda hangi yöntemlerin raporlanacağı filtreleneceği için kullanılabilecek çeşitli filtreler gösterilmektedir. Ad özniteliğinin değerini olarak ayarlayarak tüm yöntemlerin rapor olduğunu belirtebilirsiniz \* .  
   
 ```xml  
@@ -60,6 +66,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, önceki yapılandırma dosyası ile kullanılmak üzere tasarlanmıştır.  
   
 ```csharp

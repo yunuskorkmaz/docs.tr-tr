@@ -14,14 +14,15 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 43ab281e6ec28ff23ea584b03fd4278c6682e33e
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 30a35ded6fc86af6dc6dd4bf19cdf60f66570e0c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167271"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247258"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Sertifika Yönetim Aracı)
+
 Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven listelerini (CTL) ve sertifika iptal listelerini (CRL) yönetir.  
   
  Sertifika Yöneticisi Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için [komut istemlerini](developer-command-prompt-for-vs.md)kullanın.  
@@ -53,25 +54,26 @@ Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven list
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |**/Add**|Bir sertifika deposuna sertifikalar, CTL'ler ve CRL'ler ekler.|  
-|**/All**|**/Add**ile kullanıldığında tüm girdileri ekler. **/Del&lt**ile kullanıldığında tüm girdileri siler. **/Add** veya **/del&lt** seçenekleri olmadan kullanıldığında tüm girişleri görüntüler. **/All** seçeneği **/PUT**ile kullanılamaz.|  
-|**/c**|**/Add**ile kullanıldığında sertifikaları ekler. **/Del&lt**ile kullanıldığında sertifikaları siler. , **/PUT**ile kullanıldığında sertifikaları kaydeder. **/Add**, **/del&lt**veya **/PUT** seçeneği olmadan kullanıldığında sertifikaları görüntüler.|  
-|**/CRL**|**/Add**Ile kullanıldığında CRL 'leri ekler. **/Del&lt**Ile kullanıldığında CRL 'leri siler. , **/PUT**Ile kullanıldığında CRL 'leri kaydeder. **/Add**, **/del&lt**veya **/PUT** seçeneği olmadan kullanıldığında CRL 'leri görüntüler.|  
-|**/CTL**|**/Add**Ile kullanıldığında CTL ekler. **/Del&lt**Ile kullanıldığında CTL 'leri siler. **/PUT**Ile kullanıldığında CTL 'leri kaydeder. **/Add**, **/del&lt**veya **/PUT** seçeneği olmadan kullanıldığında CTL 'leri görüntüler.|  
+|**/All**|**/Add** ile kullanıldığında tüm girdileri ekler. **/Del&lt** ile kullanıldığında tüm girdileri siler. **/Add** veya **/del&lt** seçenekleri olmadan kullanıldığında tüm girişleri görüntüler. **/All** seçeneği **/PUT** ile kullanılamaz.|  
+|**/c**|**/Add** ile kullanıldığında sertifikaları ekler. **/Del&lt** ile kullanıldığında sertifikaları siler. , **/PUT** ile kullanıldığında sertifikaları kaydeder. **/Add**, **/del&lt** veya **/PUT** seçeneği olmadan kullanıldığında sertifikaları görüntüler.|  
+|**/CRL**|**/Add** Ile kullanıldığında CRL 'leri ekler. **/Del&lt** Ile kullanıldığında CRL 'leri siler. , **/PUT** Ile kullanıldığında CRL 'leri kaydeder. **/Add**, **/del&lt** veya **/PUT** seçeneği olmadan kullanıldığında CRL 'leri görüntüler.|  
+|**/CTL**|**/Add** Ile kullanıldığında CTL ekler. **/Del&lt** Ile kullanıldığında CTL 'leri siler. **/PUT** Ile kullanıldığında CTL 'leri kaydeder. **/Add**, **/del&lt** veya **/PUT** seçeneği olmadan kullanıldığında CTL 'leri görüntüler.|  
 |**/del&lt**|Bir sertifika deposundan sertifikaları, CTL'leri ve CRL'leri siler.|  
 |**/E** *EncodingType*|Sertifika kodlama türünü belirtir. Varsayılan değer: `X509_ASN_ENCODING`.|  
 |**/F** *dwFlags*|Depo açık bayrağını belirtir. Bu, **CertOpenStore**'A geçirilen *dwFlags* parametresidir. Varsayılan değer CERT_SYSTEM_STORE_CURRENT_USER değeridir. Bu seçenek yalnızca **/y** seçeneği kullanılırsa değerlendirilir.|  
 |**/h**[**ELP**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/n** *Nam*|Eklenecek, silinecek veya kaydedilecek sertifika için ortak adı belirtir. Bu seçenek yalnızca sertifikalarla kullanılabilir; CTL'ler veya CRL'ler ile kullanılamaz.|  
-|**/Put**|Bir sertifika deposundan bir X.509 sertifikasını, CTL'yi veya CRL'yi dosyaya kaydeder. Dosya X.509 biçiminde kaydedilir. Dosyayı PKCS #7 biçiminde kaydetmek için **/PUT** seçeneğiyle birlikte **/7** seçeneğini kullanabilirsiniz. **/PUT** seçeneğinin arkasından **/c**, **/CTL**veya **/CRL**gelmelidir. **/All** seçeneği **/PUT**ile kullanılamaz.|  
-|**/r** *konumu*|Sistem deposu için kayıt defteri konumunu tanımlar. Bu seçenek yalnızca **/s** seçeneğini belirtirseniz değerlendirilir. *konum* aşağıdakilerden biri olmalıdır:<br /><br /> -   `currentUser`sertifika deposunun HKEY_CURRENT_USER anahtarı altında olduğunu gösterir. Bu varsayılan seçenektir.<br />-   `localMachine`sertifika deposunun HKEY_LOCAL_MACHINE anahtarı altında olduğunu gösterir.|  
-|**sn**|Sertifika deposunun bir sistem deposu olduğunu gösterir. Bu seçeneği belirtmezseniz, mağaza bir **StoreFile**olarak kabul edilir.|  
+|**/Put**|Bir sertifika deposundan bir X.509 sertifikasını, CTL'yi veya CRL'yi dosyaya kaydeder. Dosya X.509 biçiminde kaydedilir. Dosyayı PKCS #7 biçiminde kaydetmek için **/PUT** seçeneğiyle birlikte **/7** seçeneğini kullanabilirsiniz. **/PUT** seçeneğinin arkasından **/c**, **/CTL** veya **/CRL** gelmelidir. **/All** seçeneği **/PUT** ile kullanılamaz.|  
+|**/r** *konumu*|Sistem deposu için kayıt defteri konumunu tanımlar. Bu seçenek yalnızca **/s** seçeneğini belirtirseniz değerlendirilir. *konum* aşağıdakilerden biri olmalıdır:<br /><br /> -   `currentUser` sertifika deposunun HKEY_CURRENT_USER anahtarı altında olduğunu gösterir. Bu varsayılan seçenektir.<br />-   `localMachine` sertifika deposunun HKEY_LOCAL_MACHINE anahtarı altında olduğunu gösterir.|  
+|**sn**|Sertifika deposunun bir sistem deposu olduğunu gösterir. Bu seçeneği belirtmezseniz, mağaza bir **StoreFile** olarak kabul edilir.|  
 |**/SHA1** *sha1Hash*|Eklenecek, silinecek veya kaydedilecek sertifikanın, CTL'nin veya CRL'nin SHA1 karmasını belirtir.|  
-|**çıktıda**|Ayrıntılı modu belirtir; sertifikalar, CTL'ler ve CRL'ler hakkında ayrıntılı bilgi görüntüler. Bu seçenek **/Add**, **/del&lt**veya **/PUT** seçenekleriyle birlikte kullanılamaz.|  
+|**çıktıda**|Ayrıntılı modu belirtir; sertifikalar, CTL'ler ve CRL'ler hakkında ayrıntılı bilgi görüntüler. Bu seçenek **/Add**, **/del&lt** veya **/PUT** seçenekleriyle birlikte kullanılamaz.|  
 |**/y** *sağlayıcısı*|Depo sağlayıcısı adını sağlar.|  
 |**/7**|Hedef depoyu bir PKCS #7 nesnesi olarak kaydeder.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Certmgr.exe aşağıdaki temel işlevleri gerçekleştirir:  
   
 - Sertifikaları, CTL'leri ve CRL'leri konsolda görüntüler.  
@@ -94,6 +96,7 @@ Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven list
  Sertifikalar hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](../wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="examples"></a>Örnekler  
+
  Aşağıdaki komut, ayrıntılı çıktıyla çağrılan bir varsayılan sistem deposunu görüntüler `my` .  
   
 ```console  

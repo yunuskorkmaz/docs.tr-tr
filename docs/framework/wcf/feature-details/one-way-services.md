@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: 0d69af40e4b9a0133e44b64b45466f9aac84ffe2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c4b69d68c52e9f199348544e5838babc9f4d8c2c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598755"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248090"
 ---
 # <a name="one-way-services"></a>Tek Yönlü Hizmetler
+
 Bir hizmet işleminin varsayılan davranışı, istek-yanıt örünğidir. İstek-yanıt modelinde, hizmet işlemi kodda bir yöntem olarak gösterilse bile, istemci yanıt iletisini bekler `void` . Tek yönlü bir işlem ile yalnızca bir ileti iletilir. Alıcı bir yanıt iletisi göndermez ve gönderici bir ileti bekler.  
   
  Tek yönlü tasarım modelini kullanın:  
@@ -43,7 +44,8 @@ public interface IOneWayCalculator
   
  Tam bir örnek için bkz. [tek yönlü](../samples/one-way.md) örnek.  
   
-## <a name="clients-blocking-with-one-way-operations"></a>Tek yönlü Işlemlerle engelleyen istemciler  
+## <a name="clients-blocking-with-one-way-operations"></a>One-Way Işlemler ile engelleyen istemciler  
+
  Bazı tek yönlü uygulamalar, giden veriler ağ bağlantısına yazıldığında, bazı senaryolarda bir bağlamanın veya bir hizmetin uygulanması, bir WCF istemcisinin tek yönlü işlemler kullanılarak engellenmesine neden olabileceği unutulmamalıdır. WCF istemci uygulamalarında, WCF istemci nesnesi, giden veriler ağ bağlantısına yazıldıktan kadar döndürmez. Bu, tek yönlü işlemler de dahil olmak üzere tüm ileti değişimi desenleri için geçerlidir; Bu, verileri ulaşım 'e yazarken oluşan herhangi bir sorunun istemcinin döndürmesini önlediği anlamına gelir. Soruna bağlı olarak, sonuç bir özel durum veya hizmete ileti gönderilirken bir gecikme olabilir.  
   
  Örneğin, taşıma uç noktayı bulamazsa, <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> çok gecikmeden oluşan bir özel durum oluşturulur. Ancak, hizmetin verileri bazı nedenlerle okuyamasının yanı sıra, istemci aktarım gönderme işleminin döndürmesini engelleyen bir durum da olasıdır. Bu durumlarda, <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> istemci taşıma bağlamasındaki süre aşılırsa, bir oluşturulur, <xref:System.TimeoutException?displayProperty=nameWithType> ancak zaman aşımı süresi aşılana kadar olmaz. Hizmetin belirli bir noktadan sonra işleyememesi için bir hizmette çok sayıda ileti tetikleyede mümkündür. Bu durumda, tek yönlü istemci, hizmet iletileri işleyebilir veya bir özel durum oluşana kadar engeller.  

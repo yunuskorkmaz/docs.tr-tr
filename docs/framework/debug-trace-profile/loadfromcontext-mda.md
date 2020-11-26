@@ -8,22 +8,27 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 631939b38ace4d26d0deb5b104cc5de0df3d9f3a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051655"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247362"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
+
 `loadFromContext`Bağlam içine bir derleme yüklenirse yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilir `LoadFrom` . Bu durum, çağırma işleminin <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> veya diğer benzer yöntemlerin sonucu olarak ortaya çıkabilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
+
  Bazı yükleyici yöntemlerinin kullanımı, derlemelerin bağlamda yüklenmesine neden olabilir `LoadFrom` . Bu bağlamın kullanılması serileştirme, atama ve bağımlılık çözümlemesi için beklenmeyen davranışlara neden olabilir. Genel olarak, `Load` Bu sorunlardan kaçınmak için derlemelerin bağlamına yüklenmesi önerilir. Bir derlemenin Bu MDA ' dan ne şekilde yüklendiğini belirlemek zordur.  
   
 ## <a name="cause"></a>Nedeni  
+
  Genellikle, `LoadFrom` `Load` genel derleme önbelleği veya özelliği gibi bağlam dışındaki bir yoldan yüklenmişse, bir derleme bağlamına yüklenmiştir <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> .  
   
 ## <a name="resolution"></a>Çözüm  
+
  <xref:System.Reflection.Assembly.LoadFrom%2A>Çağrılara artık gerek duyulmayan uygulamalar için yapılandırma. Bunu yapmak için aşağıdaki teknikleri kullanabilirsiniz:  
   
 - Derlemeleri genel bütünleştirilmiş kod önbelleğine yükler.  
@@ -35,9 +40,11 @@ ms.locfileid: "86051655"
  Her durumda, kod yöntemini kullanacak şekilde değiştirilebilir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> .  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+
  MDA 'nin CLR üzerinde hiçbir etkisi yoktur. Yükleme isteğinin sonucu olarak kullanılan bağlamı bildirir.  
   
-## <a name="output"></a>Çıktı  
+## <a name="output"></a>Çıkış  
+
  MDA, derlemenin bağlama göre yüklendiğini bildirir `LoadFrom` . Derlemenin basit adını ve yolunu belirtir. Ayrıca, bağlamını kullanmaktan kaçınmak için azaltıcı etkenleri de önerir `LoadFrom` .  
   
 ## <a name="configuration"></a>Yapılandırma  
@@ -51,6 +58,7 @@ ms.locfileid: "86051655"
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneğinde, bu MDA ' i etkinleştirebilecek bir durum gösterilmektedir:  
   
 ```csharp

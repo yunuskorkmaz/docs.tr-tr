@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 97e5201aecc540594aa154bb5a2e93e85c925570
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167341"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247349"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)
+
 ActiveX Denetimi Alma Programı, ActiveX denetimi için bir COM tür kitaplığındaki tür tanımlarını bir Windows Formları denetimine dönüştürür.  
   
  Windows Forms, yalnızca Windows Forms denetimleri barındırabilir — diğer bir deyişle, öğesinden türetilmiş sınıflar <xref:System.Windows.Forms.Control> . Aximp.exe, Windows Formu üzerinde barındırılabilen bir ActiveX denetimi için bir sarmalayıcı sınıfı oluşturur. Bu, diğer Windows Formları denetimleri için geçerli olanla aynı tasarım zamanı desteği ve programlama metodolojisini kullanmanıza olanak tanır.  
@@ -27,7 +28,7 @@ ActiveX Denetimi Alma Programı, ActiveX denetimi için bir COM tür kitaplığ�
   
  Komut satırına şunu yazın:  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 aximp [options]{file.dll | file.ocx}  
@@ -43,11 +44,11 @@ aximp [options]{file.dll | file.ocx}
 |------------|-----------------|  
 |`/delaysign`|Sonuç olarak oluşan denetimi gecikmeli imzalamayı kullanarak imzalamasını Aximp.exe'ye belirtir. Bu seçeneği,, ya da seçeneğiyle belirtmeniz `/keycontainer:` gerekir `/keyfile:` `/publickey:` . Gecikmeli imzalama işlemi hakkında daha fazla bilgi için bkz. [bir derlemeyi IMZALAMAYı geciktirme](../../standard/assembly/delay-sign.md).|  
 |`/help`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|`/keycontainer:`*ContainerName*|Sonuç denetimini, *ContainerName*tarafından belirtilen anahtar kapsayıcısında bulunan ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar.|  
-|`/keyfile:` *filename*|Ortaya çıkan denetimi, yayımcının *dosya adında*bulunan resmi ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar.|  
+|`/keycontainer:`*ContainerName*|Sonuç denetimini, *ContainerName* tarafından belirtilen anahtar kapsayıcısında bulunan ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar.|  
+|`/keyfile:` *filename*|Ortaya çıkan denetimi, yayımcının *dosya adında* bulunan resmi ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar.|  
 |`/nologo`|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |`/out:` *filename*|Oluşturulacak derlemenin adını belirtir.|  
-|`/publickey:` *filename*|Elde edilen denetimi dosya *adı*tarafından belirtilen dosyada bulunan ortak anahtarı kullanarak tanımlayıcı bir adla imzalar.|  
+|`/publickey:` *filename*|Elde edilen denetimi dosya *adı* tarafından belirtilen dosyada bulunan ortak anahtarı kullanarak tanımlayıcı bir adla imzalar.|  
 |`/rcw:` *filename*|Yeni birini üretmek yerine, belirtilen çalışma zamanı çağrılabilir sarmalayıcısını kullanır. Birden çok örnek belirtebilirsiniz. Geçerli dizin, göreli yollar için kullanılır. Daha fazla bilgi için bkz. [çalışma zamanında çağrılabilir sarmalayıcı](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Başarı iletilerinin görüntülenmesini bastırır.|  
 |`/source`|Windows Formları sarmalayıcısı için C# kaynak kodu üretir.|  
@@ -58,7 +59,7 @@ aximp [options]{file.dll | file.ocx}
   
  COM türleri için ortak dil çalışma zamanı proxy 'si: *ProgID*. dll  
   
- ActiveX denetimleri için proxy Windows Forms (AX 'in ActiveX 'i belirtir): AX*ProgID*. dll  
+ ActiveX denetimleri için proxy Windows Forms (AX 'in ActiveX 'i belirtir): AX *ProgID*. dll  
   
 > [!NOTE]
 > ActiveX denetiminin bir üyesinin adı .NET Framework'te tanımlanan bir adla eşleşirse, AxHost türetilmiş sınıfını oluşturduğunda, Aximp.exe ada "Ctl" önekini ekler. Örneğin, ActiveX denetiminizin "Layout" adlı bir üyesi varsa, Layout olayı .NET Framework içinde tanımlandığından, AxHost türetilen sınıfında "CtlLayout" olarak yeniden adlandırılır.  
@@ -72,6 +73,7 @@ aximp [options]{file.dll | file.ocx}
  Uygulama geliştirmede kullanmak üzere bir .NET derlemesi oluşturmak için Aximp.exe'yi shdocvw.dll ile birlikte kullanmak da sorunlara neden olabilir. Bu durumda, uygulamanız shdocvw.dll'in hem sistem sürümünü hem de üretilen sürümünü yükler ve istem sürümüne öncelik verebilir. Bu durumda, WebBrowser ActiveX denetimi içinde bir Web sayfasını yüklemeyi denediğinizde, kullanıcılara bir Aç/Kaydet iletişim kutusu görüntülenebilir. Kullanıcı **Aç**' ı tıklattığında, Web sayfası Internet Explorer 'da açılır. Bu yalnızca, Internet Explorer sürüm 6 veya önceki sürümlerin çalıştığı bilgisayarlarda olur. Bu sorunu engellemek için yönetilen <xref:System.Windows.Forms.WebBrowser> denetimi kullanın veya Visual Studio 'yu kullanarak yönetilen shdocvw.dll oluşturma bölümünde açıklandığı gibi, bkz. [tür kitaplıklarına başvurular ekleme](../interop/how-to-add-references-to-type-libraries.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki komut Media Player denetimi için MediaPlayer.dll ve AxMediaPlayer.dll oluşturur `msdxm.ocx` .  
   
 ```console
