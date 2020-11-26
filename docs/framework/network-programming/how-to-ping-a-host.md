@@ -5,17 +5,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: ac62f58eea41419de2d5651269154d9abb757aba
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1e77f7eb4dbb8a69848bc6b20e98e0df931f22c9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502502"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244034"
 ---
-# <a name="how-to-ping-a-host"></a><span data-ttu-id="47740-104">Nasıl yapılır: Konağa Ping Yapma</span><span class="sxs-lookup"><span data-stu-id="47740-104">How to: Ping a Host</span></span>
-<span data-ttu-id="47740-105">Bu örnek, uzak bir ana bilgisayara nasıl ping alınacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="47740-105">This sample shows how to ping a remote host.</span></span>  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="7c8fb-104">Nasıl yapılır: Konağa Ping Yapma</span><span class="sxs-lookup"><span data-stu-id="7c8fb-104">How to: Ping a Host</span></span>
+
+<span data-ttu-id="7c8fb-105">Bu örnek, uzak bir ana bilgisayara nasıl ping alınacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="7c8fb-105">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="47740-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="47740-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7c8fb-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="7c8fb-106">Example</span></span>  
   
 ```csharp
 using System;  
@@ -121,7 +122,8 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="47740-107">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="47740-107">Compiling the Code</span></span>  
- <span data-ttu-id="47740-108">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="47740-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="7c8fb-107">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="7c8fb-107">Compiling the Code</span></span>  
+
+ <span data-ttu-id="7c8fb-108">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="7c8fb-108">This example requires:</span></span>  
   
-- <span data-ttu-id="47740-109">**System.net** ad alanına başvurular.</span><span class="sxs-lookup"><span data-stu-id="47740-109">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="7c8fb-109">**System.net** ad alanına başvurular.</span><span class="sxs-lookup"><span data-stu-id="7c8fb-109">References to the **System.Net** namespace.</span></span>
