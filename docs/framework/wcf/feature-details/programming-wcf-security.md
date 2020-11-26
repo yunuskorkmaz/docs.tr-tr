@@ -8,15 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4ffbf6a05abd3ed9ebcea4b2e85f0dc305a4f2db
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535904"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244775"
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
-Bu konuda, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevleri açıklanmaktadır. Bu konu, toplu olarak *Aktarım güvenliği*olarak bilinen kimlik doğrulama, gizlilik ve bütünlüğü içerir. Bu konu, yetkilendirmeyi kapsamaz (kaynaklara veya hizmetlere erişimin denetimi); Yetkilendirme hakkında bilgi için bkz. [Yetkilendirme](authorization-in-wcf.md).  
+
+Bu konuda, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevleri açıklanmaktadır. Bu konu, toplu olarak *Aktarım güvenliği* olarak bilinen kimlik doğrulama, gizlilik ve bütünlüğü içerir. Bu konu, yetkilendirmeyi kapsamaz (kaynaklara veya hizmetlere erişimin denetimi); Yetkilendirme hakkında bilgi için bkz. [Yetkilendirme](authorization-in-wcf.md).  
   
 > [!NOTE]
 > Özellikle WCF ile ilgili olarak güvenlik kavramlarına değerli bir giriş için, [Web Hizmetleri geliştirmeleri (WVAS) 3,0 Için senaryolar, desenler ve uygulama KıLAVUZLARıNDAKI](/previous-versions/msp-n-p/ff648183(v=pandp.10))MSDN 'de bulunan desenler ve uygulamalar öğreticilerine bakın.  
@@ -24,6 +25,7 @@ Bu konuda, güvenli bir Windows Communication Foundation (WCF) uygulaması oluş
  WCF güvenliğini programlama, aşağıdaki üç adımı temel alır: güvenlik modu, istemci kimlik bilgileri türü ve kimlik bilgisi değerleri. Bu adımları kod veya yapılandırma aracılığıyla yapabilirsiniz.  
   
 ## <a name="setting-the-security-mode"></a>Güvenlik modunu ayarlama  
+
  Aşağıda, WCF 'de güvenlik moduyla programlama için genel adımlar açıklanmıştır:  
   
 1. Uygulama gereksinimlerinize uygun olan önceden tanımlanmış bağlamalardan birini seçin. Bağlama seçeneklerinin bir listesi için bkz. [sistem tarafından sunulan bağlamalar](../system-provided-bindings.md). Varsayılan olarak, neredeyse her bağlamada Güvenlik etkindir. Tek istisna, <xref:System.ServiceModel.BasicHttpBinding> sınıftır (yapılandırma,, [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) ).  
@@ -55,6 +57,7 @@ Bu konuda, güvenli bir Windows Communication Foundation (WCF) uygulaması oluş
      İstemci ve hizmet simetrik anahtar kullanarak bir kanal oluştururken güvenli bir oturum oluşur (iletişim kutusu kapatılıncaya kadar hem istemci hem de sunucu bir konuşma uzunluğu için aynı anahtarı kullanır).  
   
 ## <a name="setting-the-client-credential-type"></a>Istemci kimlik bilgisi türünü ayarlama  
+
  Uygun şekilde bir istemci kimlik bilgisi türü seçin. Daha fazla bilgi için bkz. [kimlik bilgisi türü seçme](selecting-a-credential-type.md). Aşağıdaki istemci kimlik bilgisi türleri kullanılabilir:  
   
 - `Windows`  
@@ -92,12 +95,14 @@ Bu konuda, güvenli bir Windows Communication Foundation (WCF) uygulaması oluş
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
 ## <a name="setting-service-credential-values"></a>Hizmet kimlik bilgisi değerlerini ayarlama  
+
  Bir istemci kimlik bilgisi türünü seçtikten sonra, hizmet ve İstemcinin kullanacağı gerçek kimlik bilgilerini ayarlamanız gerekir. Hizmette, kimlik bilgileri sınıfı kullanılarak ayarlanır <xref:System.ServiceModel.Description.ServiceCredentials> ve <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> sınıfının özelliği tarafından döndürülür <xref:System.ServiceModel.ServiceHostBase> . Kullanımdaki bağlama hizmet kimlik bilgisi türünü, seçilen güvenlik modunu ve istemci kimlik bilgisinin türünü gösterir. Aşağıdaki kod, bir hizmet kimlik bilgileri için bir sertifika ayarlar.  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
   
 ## <a name="setting-client-credential-values"></a>Istemci kimlik bilgisi değerlerini ayarlama  
+
  İstemcisinde, <xref:System.ServiceModel.Description.ClientCredentials> sınıfını kullanarak ve sınıfının özelliği tarafından döndürülen istemci kimlik bilgileri değerlerini ayarlayın <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> <xref:System.ServiceModel.ClientBase%601> . Aşağıdaki kod, bir sertifikayı TCP protokolünü kullanarak bir istemci üzerinde kimlik bilgileri olarak ayarlar.  
   
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]

@@ -2,17 +2,19 @@
 title: İstemci
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: 8f2d93458c2bec16b737d8bfcbd423494941dc3e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b9887d6200a0101be2185b5bc2fdcc969fc7c69e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585291"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243306"
 ---
 # <a name="client"></a>İstemci
+
 Bu bölüm Windows Communication Foundation (WCF) istemci uygulamalarını gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [İstemci Birlikte Kullanılabilirliği](client-interoperability.md)  
  WCF ve diğer teknolojiler arasında birlikte çalışabilirliği gösterir.  
   
@@ -32,4 +34,4 @@ Bu bölüm Windows Communication Foundation (WCF) istemci uygulamalarını göst
  Yazılmış bir istemci kullanırken kaynakları otomatik olarak temizlemek için C# "Using" ifadesini nasıl kullanmamalısınız gösterir.  
   
  [Türü Belirlenmiş İstemci](typed-client.md)  
- [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan, yazılmış bir istemciden nasıl bilgi alınacağını gösterir.
+ [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan, yazılmış bir istemciden nasıl bilgi alınacağını gösterir.

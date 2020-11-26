@@ -2,14 +2,15 @@
 title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: b36b646f650c2a2974c7b0689a9367961075ea14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eb2f14db8b58fd182bbe711bf559055659a02652
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553037"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243696"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
+
 Bu örnek, Web hizmetlerini Microsoft Office Visual Basic for Applications (Office VBA) veya Visual Basic 6,0 gibi COM tabanlı geliştirme ortamlarında bütünleştirmek için Windows Communication Foundation (WCF) hizmet bilinen adının nasıl kullanılacağını gösterir. Bu örnek, bir Windows betik ana istemcisi (. vbs), destekleyici istemci kitaplığı (. dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (. dll) içerir. Hizmet bir Hesaplayıcı hizmetidir ve COM istemcisi, hizmet üzerinde matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) çağırır. İstemci etkinliği ileti kutusu penceresinde görünür.  
   
 > [!NOTE]
@@ -50,6 +51,7 @@ public interface ICalculator
 - Meta veri değişimi sözleşmesi – sözleşme, meta veri değişimi (MEX) uç noktasından çalışma zamanında alınır.  
   
 ## <a name="typed-contract"></a>Yazılı sözleşme  
+
  Bilinen bir sözleşme kullanımıyla bilinen adı kullanmak için, hizmet sözleşmesi için uygun şekilde öznitelikli türler COM ile kaydedilmelidir. İlk olarak, bir istemcinin [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak oluşturulması gerekir. Yazılan proxy 'yi oluşturmak için istemci dizinindeki bir komut isteminden aşağıdaki komutu çalıştırın.  
   
 ```console  
@@ -77,7 +79,7 @@ gacutil.exe /i client.dll
 > [!NOTE]
 > Hizmet bilinen adı yalnızca tür kaydı gerektirir ve hizmetle iletişim kurmak için proxy kullanmaz.  
   
- ComCalcClient. vbs istemci uygulaması, hizmet `GetObject` için bir ara sunucu oluşturmak üzere işlevini kullanır ve hizmetin adresini, bağlamasını ve sözleşmesini belirtmek için hizmet bilinen kullanım sözdizimini kullanır.  
+ ComCalcClient.vbs istemci uygulaması, hizmetin `GetObject` adresini, bağlamayı ve sözleşmesini belirtmek için hizmet bilinen kullanım sözdizimini kullanarak hizmet için bir proxy oluşturmak üzere işlevini kullanır.  
   
 ```vbscript
 Set typedServiceMoniker = GetObject(  
@@ -103,9 +105,10 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
  Örneği çalıştırdığınızda, işlem yanıtı bir Windows komut dosyası ana ileti kutusu penceresinde görüntülenir. Bu, bir WCF hizmeti ile iletişim kurmak için yazılan bilinen adı kullanarak COM çağrıları yapan bir COM istemcisini gösterir. İstemci uygulamasında COM kullanımına rağmen hizmetle iletişim yalnızca Web hizmeti çağrılarından oluşur.  
   
 ## <a name="wsdl-contract"></a>WSDL sözleşmesi  
+
  Bilinen adı bir WSDL sözleşmesiyle kullanmak için, hiçbir istemci kitaplığı kaydı gerekmez, ancak hizmet için WSDL sözleşmesinin, hizmet için WSDL uç noktasına erişmek üzere bir tarayıcı kullanma gibi bir bant dışı mekanizmadan alınması gerekir. Bilinen ad daha sonra bu sözleşmeye yürütme zamanında erişebilir.  
   
- ComCalcClient. vbs istemci uygulaması, `FileSystemObject` yerel olarak KAYDEDILEN WSDL dosyasına erişmek için öğesini kullanır ve ardından `GetObject` hizmet için bir ara sunucu oluşturmak üzere işlevini kullanır.  
+ ComCalcClient.vbs istemci uygulaması, `FileSystemObject` yerel olarak KAYDEDILEN WSDL dosyasına erişmek için öğesini kullanır ve ardından `GetObject` hizmet için bir ara sunucu oluşturmak üzere işlevini kullanır.  
   
 ```vbscript  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
@@ -148,9 +151,10 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
  Örneği çalıştırdığınızda, işlem yanıtı bir Windows komut dosyası ana ileti kutusu penceresinde görüntülenir. Bu, bir WCF hizmeti ile iletişim kurmak için bir WSDL sözleşmesinin bilinen adını kullanarak COM çağrısı yapan bir COM istemcisini gösterir.  
   
 ## <a name="metadata-exchange-contract"></a>Meta veri değişimi sözleşmesi  
+
  Bilinen adı, WSDL sözleşimiyle birlikte bir MEX sözleşmesiyle birlikte kullanmak için, istemci kaydı gerekmez. Hizmetin sözleşmesi, meta veri değişim iç kullanımı üzerinden yürütme sırasında alınır.  
   
- ComCalcClient. vbs istemci uygulaması, `GetObject` hizmeti için bir ara sunucu oluşturmak üzere işlevini kullanır.  
+ ComCalcClient.vbs istemci uygulaması, `GetObject` hizmeti için bir proxy oluşturmak üzere işlevini kullanır.  
   
 ```vbscript  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
@@ -203,7 +207,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 1. Aşağıdaki adresi yazarak, bir tarayıcı kullanarak hizmete erişebilme sınamasını yapın: `http://localhost/servicemodelsamples/service.svc` . Yanıt olarak bir onay sayfası görüntülenmelidir.  
   
-2. Dile özgü klasörün altındaki \Client öğesinden ComCalcClient. vbs ' yi çalıştırın. İstemci etkinliği ileti kutusu pencereleri ' nde görüntülenir.  
+2. \ İstemciden dile özgü klasör altında ComCalcClient.vbs çalıştırın. İstemci etkinliği ileti kutusu pencereleri ' nde görüntülenir.  
   
 3. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
@@ -231,7 +235,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 11. Bir tarayıcı kullanarak hizmete istemci bilgisayardan erişebilmeniz için test edin.  
   
-12. İstemci bilgisayarda ComCalcClient. vbs ' yi başlatın.  
+12. İstemci bilgisayarda ComCalcClient.vbs başlatın.  
   
 #### <a name="to-clean-up-after-the-sample"></a>Örnekten sonra temizlemek için  
   

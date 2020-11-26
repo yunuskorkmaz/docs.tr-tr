@@ -13,23 +13,27 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-ms.openlocfilehash: 0806d2eaa1752c88bebd03304fbe5c8094416a48
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: a9347338d53755b74b3ff291f75cb6b221134130
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415933"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244281"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
+
 `fatalExecutionEngineError`Yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanında (CLR) önemli bir hata algılandığında etkinleştirilir. İşlem sonlandırılacak.  
   
 ## <a name="symptoms"></a>Belirtiler  
+
  Beklenmeyen işlem sonlandırma. Çeşitli nedenlerden dolayı bir CLR hatası gerçekleşebildiğinden diğer belirtiler belirlenemez.  
   
 ## <a name="cause"></a>Nedeni  
+
  CLR 'nin bozulmuş olması. Bu, genellikle hatalı oluşturulmuş platform çağırma işlevlerine yapılan çağrılar ve CLR 'ye geçersiz veri geçirme gibi birçok sorun nedeniyle veri bozulması nedeniyle oluşur.  
   
 ## <a name="resolution"></a>Çözüm  
+
  Ek Mdaları etkinleştirmek sorunu belirlemenize yardımcı olur. Aşağıdaki Mdalar, sorunu tanılamak için özellikle yararlı olabilir:  
   
 - [invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)  
@@ -57,9 +61,11 @@ ms.locfileid: "85415933"
 - [invalidGCHandleCookie](invalidgchandlecookie-mda.md)  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+
  Bu MDA çalışma zamanının davranışı üzerinde hiçbir etkisi yoktur.  
   
-## <a name="output"></a>Çıktı  
+## <a name="output"></a>Çıkış  
+
  Kritik hataya neden olan CLR işlevinin adresi, hatanın oluştuğu iş parçacığının KIMLIĞI ve hata kodu.  
   
 ## <a name="configuration"></a>Yapılandırma  

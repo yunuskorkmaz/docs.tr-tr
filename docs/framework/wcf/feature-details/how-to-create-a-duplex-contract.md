@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 9320e5b36b8faba3602fbe1df1b95c05dcc7fa7e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: cce1784865a1599e69c3f604c288ef62c9c43652
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247097"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243722"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma
+
 Bu konuda, çift yönlü (çift yönlü) bir sözleşme kullanan Yöntemler oluşturmaya yönelik temel adımlar gösterilmektedir. Çift yönlü bir anlaşma, istemcilerin ve sunucuların birbirleriyle her ikisi ile iletişim kurmasına olanak tanır; böylece birbirlerine çağrı başlatabilir. Çift yönlü sözleşme Windows Communication Foundation (WCF) Hizmetleri için kullanılabilen üç ileti deseninden biridir. Diğer iki ileti deseni tek yönlü ve istek-yanıt ' dir. Çift yönlü sözleşme, istemci ve sunucu arasındaki 2 1 yönlü sözleşmelerden oluşur ve yöntemin bağıntılı olmasını gerektirmez. Hizmetiniz daha fazla bilgi için istemciyi sorgulayıp istemci üzerinde açık bir olay oluşturması gerektiğinde bu tür bir sözleşmeyi kullanın. Bir çift yönlü sözleşme için istemci uygulaması oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: çift yönlü sözleşme Ile hizmetlere erişme](how-to-access-services-with-a-duplex-contract.md). Çalışan bir örnek için bkz. [çift yönlü](../samples/duplex.md) örnek.  
   
 ### <a name="to-create-a-duplex-contract"></a>Çift yönlü sözleşme oluşturmak için  
@@ -57,6 +58,7 @@ Bu konuda, çift yönlü (çift yönlü) bir sözleşme kullanan Yöntemler olu�
 3. Geri çağırma arabirimi tarafından tanımlanan yöntemleri çağırın.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği çift yönlü iletişimi gösterir. Hizmetin sözleşmesi, ileri ve geri gitmek için hizmet işlemlerini içerir. İstemci sözleşmesi, konumunu raporlamak için bir hizmet işlemi içerir.  
   
  [!code-csharp[S_WS_DualHttp#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#5)]

@@ -2,22 +2,25 @@
 title: İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 91a1b4bab3ac47f41821ad69228310c3993cf037
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 415b27f5ac40d097c5bdf7b09d63ce901003f83f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555048"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243883"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları
+
 Bu konu başlığı altında, gizli bilgilerin sunulanlarından nasıl koruyabileceğiniz ve WebHost kullanırken yararlı olan ipuçları açıklanmaktadır.  
   
 ## <a name="using-a-custom-trace-listener-with-webhost"></a>WebHost ile özel bir Izleme dinleyicisi kullanma  
+
  Kendi izleme dinleyicinizi yazıyorsanız, izlemelerin Web 'de barındırılan bir hizmette kaybolması ihtimaline dikkat etmeniz gerekir. WebHost geri dönüştürüldüğünde canlı işlemi kapatır ve yinelenen bir işlem sürer. Ancak, iki işlemin bir süredir aynı kaynağa erişimi olması gerekir, bu da dinleyici türüne bağımlıdır. Bu durumda, `XmlWriterTraceListener` ikinci işlem için yeni bir izleme dosyası oluşturur; Windows olay izleme aynı oturum içinde birden çok işlemi yönetir ve aynı dosyaya erişim sağlar. Kendi dinleyiciniz benzer işlevler sağlamıyorsa, dosya iki işlem tarafından kilitlendiğinde izlemeler kaybolabilir.  
   
  Ayrıca, özel bir İzleme dinleyicisinin, uzak bir veritabanına, örneğin, uzak bir veritabanına izleme ve mesaj gönderebildiği farkında olmanız gerekir. Bir uygulama dağıtıcı olarak, uygun erişim denetimiyle özel dinleyicileri yapılandırmanız gerekir. Ayrıca, uzak konumda açığa çıkarılabilen herhangi bir kişisel bilgi için güvenlik denetimi de uygulamalısınız.  
   
 ## <a name="logging-sensitive-information"></a>Gizli bilgileri günlüğe kaydetme  
+
  İzlemeler, bir ileti kapsamda olduğunda ileti üst bilgileri içerir. İzleme etkin olduğunda, bir sorgu dizesi gibi uygulamaya özgü üst bilgilerde kişisel bilgiler; ve kredi kartı numarası gibi gövde bilgileri günlüklerde görünür hale gelebilir. Uygulama dağıtıcı, yapılandırma ve izleme dosyalarında erişim denetimini zormaktan sorumludur. Bu tür bilgilerin görünmesini istemiyorsanız, izleme günlüklerini paylaşmak istiyorsanız izlemeyi devre dışı bırakmanız veya verilerin bir kısmını filtrelemeniz gerekir.  
   
  Aşağıdaki ipuçları, bir izleme dosyasının içeriğinin istenmeden gösterilmesini önlemeye yardımcı olabilir:  

@@ -11,16 +11,18 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 8758b793866ec0317f91d636476d33bd001ddd78
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 895e39593b5e84d708392d3d994267b25bc4eeea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051226"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244177"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
+
 Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata ayıklama çıkışı Visual Studio 'daki çıkış penceresine gider. Ancak, dağıtılmış bir uygulamada izleme özelliklerini dahil etmek için, izlenen uygulamalarınızı **Trace** derleyici yönergesi etkinken derlemeniz gerekir. Bu, izleme kodunun uygulamanızın yayın sürümüne derlenmesini sağlar. **İzleme** yönergesini etkinleştirmezseniz, derleme sırasında tüm izleme kodu yok sayılır ve dağıtacağınız yürütülebilir koda dahil edilmez.  
   
- Hem izleme hem de hata ayıklama yöntemlerinin ilişkili koşullu öznitelikleri vardır. Örneğin, izlemenin koşullu özniteliği **true**ise, tüm Trace deyimleri bir derlemeye (derlenmiş bir. exe dosyası veya. dll) dahil edilir; **Trace** Conditional özniteliği **false**ise, Trace deyimleri dahil edilmez.  
+ Hem izleme hem de hata ayıklama yöntemlerinin ilişkili koşullu öznitelikleri vardır. Örneğin, izlemenin koşullu özniteliği **true** ise, tüm Trace deyimleri bir derlemeye (derlenmiş bir. exe dosyası veya. dll) dahil edilir; **Trace** Conditional özniteliği **false** ise, Trace deyimleri dahil edilmez.  
   
  Bir derleme veya her ikisi için de **Trace** veya **Debug** koşullu özniteliği açık olabilir ya da hiçbiri. Bu nedenle, dört tür derleme vardır: **hata ayıklama**, **izleme**, her ikisi de veya hiçbiri. Üretim dağıtımı için bazı yayın yapıları ne içermez; Çoğu hata ayıklama derlemesi her ikisini de içerir.  
   
@@ -60,12 +62,12 @@ Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata 
     |Deki|Anlamı|  
     |---------------|-------------|  
     |`vbc`|Visual Basic derleyici|  
-    |`csc`|C# derleyicisi|  
+    |`csc`|C# derleyici|  
     |`-r:`|Bir dış derlemeye (EXE veya DLL) başvurur|  
     |`-d:`|Koşullu derleme sembolünü tanımlar|  
   
     > [!NOTE]
-    > Büyük harflerle TRACE veya DEBUG yazmanız gerekir. Koşullu derleme komutları hakkında daha fazla bilgi için, `vbc /?` komut istemine (Visual Basic için) veya `csc /?` (C# için) girin. Daha fazla bilgi için, bkz. [komut satırından oluşturma](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) veya [komut satırı derleyicisini çağırma](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
+    > Büyük harflerle TRACE veya DEBUG yazmanız gerekir. Koşullu derleme komutları hakkında daha fazla bilgi için, `vbc /?` komut istemine (Visual Basic için) veya `csc /?` (C# için) girin. Daha fazla bilgi için, bkz. [komut satırından oluşturma](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) veya [Command-Line derleyicisini çağırma](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>#CONST veya #define kullanarak koşullu derleme gerçekleştirmek için  
   
@@ -86,7 +88,7 @@ Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata 
   
 Derleyici yönergesini kaynak kodınızdan silin.  
   
-\-veya  
+\- veya  
   
 Derleyici yönergesini açıklama.  
   
@@ -95,7 +97,7 @@ Derleyici yönergesini açıklama.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme ve İşaretleme Uygulamaları](tracing-and-instrumenting-applications.md)
+- [Uygulamaları izleme ve İşaretleme](tracing-and-instrumenting-applications.md)
 - [Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma](how-to-create-initialize-and-configure-trace-switches.md)
 - [İzleme Anahtarları](trace-switches.md)
 - [İz Dinleyicileri](trace-listeners.md)

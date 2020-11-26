@@ -2,14 +2,15 @@
 title: Windows Hizmet Uygulamasında Barındırma
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: cb952cfcd670a790033fbec70de00a4db2541237
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9f5c78adad34b5fed53a50e85f0361eef469de99
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555854"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243078"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows Hizmet Uygulamasında Barındırma
+
 Windows Hizmetleri (eski adıyla Windows NT Hizmetleri), uzun süre çalışan bir çalıştırılabilirte canlı olması gereken uygulamalara özellikle uygun bir işlem modeli sağlar ve herhangi bir kullanıcı arabirimi formu görüntülemez. Bir Windows hizmet uygulamasının işlem ömrü, Windows hizmeti uygulamalarını başlatabilmenizi, durdurmanızı ve duraklatmanızı sağlayan hizmet Denetim Yöneticisi (SCM) tarafından yönetilir. Bir Windows hizmeti işlemini bilgisayar başlatıldığında otomatik olarak başlayacak şekilde yapılandırabilirsiniz. Bu, "Always On" uygulamaları için uygun bir barındırma ortamı yapar. Windows hizmeti uygulamaları hakkında daha fazla bilgi için bkz. [Windows hizmeti uygulamaları](https://go.microsoft.com/fwlink/?LinkId=89450).  
   
  Uzun süre çalışan Windows Communication Foundation (WCF) hizmetlerini barındıran uygulamalar, Windows hizmetleriyle birçok özelliği paylaşır. WCF hizmetleri özellikle kullanıcıyla etkileşime girmeyecek ve bu nedenle herhangi bir kullanıcı arabirimi formu uygulamayan uzun süreli sunucu yürütülebilirlerdir. Bu nedenle, bir Windows hizmeti uygulaması içindeki WCF hizmetleri barındırma, güçlü, uzun süreli ve WCF uygulamaları oluşturmaya yönelik bir seçenektir.  

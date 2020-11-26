@@ -2,14 +2,15 @@
 title: İstemci Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 6678ef7232b115f2bcb80b5f64621866f82b1f29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dee57e039d4510673b7205fd44fa300b24ac1df5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553538"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243319"
 ---
 # <a name="client-validation"></a>İstemci Doğrulaması
+
 Hizmetler, istemci proxy türlerinin otomatik olarak oluşturulmasını ve yapılandırılmasını sağlamak için sık sık meta verileri yayımlar. Hizmet güvenilmediği zaman, istemci uygulamaları, meta verilerin güvenlik, işlemler, hizmet sözleşmesinin türü vb. ile ilgili olarak istemci uygulama ilkesine uygun olduğunu doğrulamalıdır. Aşağıdaki örnek, hizmet uç noktasının kullanımı güvenli olduğundan emin olmak için hizmet uç noktasını doğrulayan bir istemci uç noktası davranışının nasıl yazılacağını gösterir.  
   
  Hizmet dört hizmet uç noktasını kullanıma sunar. İlk uç nokta, WSDualHttpBinding kullanır, ikinci uç nokta NTLM kimlik doğrulaması kullanır, üçüncü uç nokta işlem akışına izin vermez ve dördüncü uç nokta sertifika tabanlı kimlik doğrulaması kullanır.  

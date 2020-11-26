@@ -18,14 +18,15 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: e83979e5843c52fc3a446a5b669ae8822b32ddad
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4260bc8b3f9a2550faa28dd4d35842327b4e5935
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555594"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244112"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Yönetilen Kodda Prototipler Oluşturma
+
 Bu konu, yönetilmeyen işlevlere nasıl erişmekte olduğunu ve yönetilen kodda Yöntem tanımına açıklama eklenen çeşitli öznitelik alanlarını tanıtır. Nasıl oluşturulacağını gösteren örnekler için. Platform çağırma ile kullanılacak NET tabanlı bildirimler, bkz. [Platform çağırma Ile verileri sıralama](marshaling-data-with-platform-invoke.md).  
   
  Yönetilen koddan yönetilmeyen bir DLL işlevine erişebilmek için önce işlevin adını ve onu dışarı aktaran DLL 'nin adını bilmeniz gerekir. Bu bilgilerle, DLL 'de uygulanan yönetilmeyen bir işlev için yönetilen tanımı yazmaya başlayabilirsiniz. Ayrıca, platform çağırma işlevinin işlevi nasıl oluşturduğunu ve işlevden veri sıraladığı yöntemi ayarlayabilirsiniz.  
@@ -34,6 +35,7 @@ Bu konu, yönetilmeyen işlevlere nasıl erişmekte olduğunu ve yönetilen kodd
 > Bir dize ayıran Windows API işlevleri, gibi bir yöntemi kullanarak dizeyi boşaltmaya olanak sağlar `LocalFree` . Platform çağırma, bu tür parametreleri farklı işler. Platform çağırma çağrıları için parametreyi `IntPtr` tür yerine bir tür yapın `String` . <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>Türü bir dizeye el ile dönüştürmek için sınıfı tarafından sunulan yöntemleri kullanın ve el ile boşaltın.  
   
 ## <a name="declaration-basics"></a>Bildirim temelleri  
+
  Yönetilmeyen işlevlere yönetilen tanımlar, aşağıdaki örneklerde görebileceğiniz gibi dile bağımlıdır. Daha kapsamlı kod örnekleri için bkz. [Platform çağırma örnekleri](platform-invoke-examples.md).  
   
 ```vb
@@ -84,6 +86,7 @@ extern "C" int MessageBox(
 ```
   
 ## <a name="adjusting-the-definition"></a>Tanımı ayarlama  
+
  Onları açıkça ayarlayıp ayarlamazsanız, öznitelik alanları yönetilen kodun davranışını tanımlayan çalışmalardır. Platform çağırma, bir derlemede meta veriler olarak var olan çeşitli alanlarda ayarlanan varsayılan değerlere göre çalışır. Bir veya daha fazla alanın değerlerini ayarlayarak bu varsayılan davranışı değiştirebilirsiniz. Çoğu durumda, <xref:System.Runtime.InteropServices.DllImportAttribute> bir değer ayarlamak için öğesini kullanırsınız.  
   
  Aşağıdaki tablo, platform Invoke ile ilgili olan öznitelik alanlarının tamamını listeler. Her alan için tablo, varsayılan değeri ve yönetilmeyen DLL işlevlerini tanımlamak için bu alanların nasıl kullanılacağına ilişkin bilgilere bir bağlantı içerir.  
@@ -102,9 +105,11 @@ extern "C" int MessageBox(
  Ayrıntılı başvuru bilgileri için bkz <xref:System.Runtime.InteropServices.DllImportAttribute> ..  
   
 ## <a name="platform-invoke-security-considerations"></a>Platform çağırma güvenlik konuları  
- `Assert`, `Deny` Ve `PermitOnly` <xref:System.Security.Permissions.SecurityAction> numaralandırmanın üyeleri *Yığın ilerleme değiştiricileri*olarak adlandırılır. Bu Üyeler platform çağırma bildirimleri ve COM arabirim tanım dili (IDL) deyimlerinde bildirime dayalı öznitelikler olarak kullanılıyorsa yok sayılır.  
+
+ `Assert`, `Deny` Ve `PermitOnly` <xref:System.Security.Permissions.SecurityAction> numaralandırmanın üyeleri *Yığın ilerleme değiştiricileri* olarak adlandırılır. Bu Üyeler platform çağırma bildirimleri ve COM arabirim tanım dili (IDL) deyimlerinde bildirime dayalı öznitelikler olarak kullanılıyorsa yok sayılır.  
   
 ### <a name="platform-invoke-examples"></a>Platform Çağırma Örnekleri  
+
  Bu bölümdeki platform çağırma örnekleri, `RegistryPermission` yığın yürüme değiştiricilerine sahip özniteliğin kullanımını gösterir.  
   
  Aşağıdaki örnekte,, <xref:System.Security.Permissions.SecurityAction> `Assert` `Deny` ve `PermitOnly` değiştiricileri yok sayılır.  
@@ -184,6 +189,7 @@ class PInvokeScenario
 ```  
   
 #### <a name="com-interop-examples"></a>COM birlikte çalışabilirlik örnekleri  
+
  Bu bölümdeki COM birlikte çalışabilirlik örnekleri, `RegistryPermission` yığın yürüme değiştiricilerine sahip özniteliğin kullanımını gösterir.  
   
  Aşağıdaki COM birlikte çalışma arabirimi bildirimleri, `Assert` `Deny` `PermitOnly` önceki bölümde bulunan Platform çağırma örneklerine benzer şekilde,, ve değiştiricilerini yoksayar.  

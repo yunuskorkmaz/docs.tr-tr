@@ -9,17 +9,19 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-ms.openlocfilehash: 2d7f14c67d47e58bcb88eab4621df63d7c598a7a
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: bbd8d5644f8620444d80845b9920b925b6891176
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415946"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244333"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
+
 `failedQI`Yönetilen hata ayıklama Yardımcısı (MDA), çalışma zamanı `QueryInterface` çağrılabilir bir sarmalayıcı (RCW) ADıNA bir com arabirimi işaretçisine çağrı yaptığında etkinleştirilir ve `QueryInterface` çağrı başarısız olur.  
   
 ## <a name="symptoms"></a>Belirtiler  
+
  RCW üzerinde bir dönüştürme başarısız olur veya bir RCW 'dan COM çağrısı beklenmedik şekilde başarısız olur.  
   
 ## <a name="cause"></a>Nedeni  
@@ -31,12 +33,15 @@ ms.locfileid: "85415946"
 - OLE 'e ait bir ara sunucu HRESULT hatası döndürdü.  
   
 ## <a name="resolution"></a>Çözüm  
+
  COM kuralları hakkında MSDN belgelerine bakın.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+
  Bir `QueryInterface` çağrı başarısız olursa bağlam çağrılır ve `QueryInterface` yanlış bir bağlamın hata olup olmadığını görmek için çağrı yeniden denenir.  
   
-## <a name="output"></a>Çıktı  
+## <a name="output"></a>Çıkış  
+
  Arabirimin yönetilen adı, arabirimin GUID 'si ve hatanın HRESULT değeri.  
   
 ## <a name="configuration"></a>Yapılandırma  

@@ -2,27 +2,30 @@
 title: 3823 - RoutingServiceSendingFaultResponse
 ms.date: 03/30/2017
 ms.assetid: 843cbce6-f2df-4067-aaf2-394b65034282
-ms.openlocfilehash: 7a9875e14a86adcc697d0d1695b9072dea514177
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbff8d25f76dd9a4469c9381979e02d6d3e78af0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936415"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243156"
 ---
 # <a name="3823---routingservicesendingfaultresponse"></a>3823 - RoutingServiceSendingFaultResponse
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3823|  
-|anahtar sözcükler|RoutingServices|  
+|ID|3823|  
+|Anahtar sözcükler|Yönlendirme hizmetleri|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, yönlendirme hizmeti geri hatasına yanıt iletisi gönderirken yayınlanır.  
+
+ Bu olay, yönlendirme hizmeti bir hata yanıtı iletisi geri gönderilirken yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Yönlendirme hizmeti, '%1' eylemi ile bir hata yanıt iletisi geri gönderme.  
+
+ Yönlendirme hizmeti, ' %1 ' eylemi ile bir hata yanıt iletisi geri gönderiyor.  
   
 ## <a name="details"></a>Ayrıntılar

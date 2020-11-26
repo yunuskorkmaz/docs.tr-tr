@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: d1fee4fdde18563ec6ccce4f0675d8581184be08
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d63b03e519484ad6ec90b4267a49b77738593e45
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596740"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244658"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation'da Kuyruklar
+
 Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) desteğini tartışır. WCF, bir taşıma olarak Microsoft Message Queuing (daha önce MSMQ olarak bilinir) kullanarak sıraya alma desteği sağlar ve aşağıdaki senaryoları sağlar:  
   
 - Gevşek olarak bağlanmış uygulamalar. Uygulamaları göndermek, alıcı uygulamanın iletiyi işlemek için kullanılabilir olup olmadığını bilmeleri gerekmeden iletileri sıralara gönderebilir. Sıra, gönderen uygulamanın iletileri işlemeye ne kadar hızlı bir şekilde işleyebildiğini bağlı olmayan bir hızda sıraya ileti göndermesini sağlayan işleme bağımsızlık sağlar. Bir kuyruğa ileti gönderilirken genel sistem kullanılabilirliği artar ve ileti işlemeye sıkı bir şekilde bağlı değildir.  
@@ -25,6 +26,7 @@ Bu bölümdeki konular, kuyruklar için Windows Communication Foundation (WCF) d
  Bir WCF uygulamasında kuyruklar özelliğini kullanmak için standart bağlamalardan birini kullanabilir veya standart bağlamalardan biri gereksinimlerinizi karşılamadığı takdirde özel bir bağlama oluşturabilirsiniz. İlgili standart bağlamalar ve bir tane seçme hakkında daha fazla bilgi için bkz. [nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamaları Ile Exchange iletileri](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Özel Bağlamalar Oluşturma hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](../extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Kuyruklar Genel Bakış](queues-overview.md)  
  Message Queuing kavramlarına genel bakış.  
   

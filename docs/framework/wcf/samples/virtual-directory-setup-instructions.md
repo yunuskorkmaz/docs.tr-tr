@@ -2,20 +2,21 @@
 title: Sanal Dizin Ayarlama Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 2d9443431601ffc712da40bd1c085f595471336b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dba6547888935ccf36ec0924fd3c95e8fbda5688
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602368"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243657"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Sanal Dizin Ayarlama Yönergeleri
+
 Windows Communication Foundation (WCF) örnekleri,%SystemDrive%\inetpub\wwwroot\servicemodelsamples klasörüne eşlenmiş servicemodelsamples adlı ortak bir sanal dizinin paylaşılması için tasarlanmıştır.  
   
 > [!NOTE]
 > % SystemDrive%, Internet Information Services (IIS) yüklü olduğu sürücü konumuna bağlı olarak genellikle C: veya D: ' dır.  
   
- Sanal dizin oluşturmak için [Windows Communication Foundation Örnekleri Için bir kerelik kurulum yordamından](one-time-setup-procedure-for-the-wcf-samples.md) Setupvroot. bat ve Cleanupvroot. bat dosyalarını çalıştırabilirsiniz. Sanal dizini el ile oluşturmayı tercih ediyorsanız, aşağıdaki yordamları kullanın.  
+ Sanal dizini oluşturmak için [Windows Communication Foundation Örnekleri Için tek seferlik kurulum yordamından](one-time-setup-procedure-for-the-wcf-samples.md) Setupvroot.bat ve Cleanupvroot.bat dosyalarını çalıştırabilirsiniz. Sanal dizini el ile oluşturmayı tercih ediyorsanız, aşağıdaki yordamları kullanın.  
   
 ## <a name="procedures"></a>Yordamlar  
   
@@ -25,7 +26,7 @@ Windows Communication Foundation (WCF) örnekleri,%SystemDrive%\inetpub\wwwroot\
   
 2. Sol bölmede, bilgisayarın adı ile düğümünü genişletin ve ardından **siteler** düğümünü genişletin.  
   
-3. **Varsayılan Web sitesi**' ne sağ tıklayın ve **ardından uygulama Ekle ' yi seçerek** **Uygulama Ekle penceresini**açın.  
+3. **Varsayılan Web sitesi**' ne sağ tıklayın ve **ardından uygulama Ekle ' yi seçerek** **Uygulama Ekle penceresini** açın.  
   
 4. Penceresinde, `servicemodelsamples` oluşturmakta olduğunuz sanal dizinin diğer adı olarak yazın.  
   
@@ -33,7 +34,7 @@ Windows Communication Foundation (WCF) örnekleri,%SystemDrive%\inetpub\wwwroot\
   
 6. Fiziksel yolu%SystemDrive%\inetpub\wwwroot\servicemodelsamples. olarak ayarla  WCF örneklerinin çoğu yapılandırıldığında bu konuma hizmet yürütülebilir dosyalarını kopyalar.  
   
-7. **Tamam**'a tıklayın. Web uygulaması artık WCF örnekleri için oluşturulmuştur.  
+7. **Tamam** düğmesine tıklayın. Web uygulaması artık WCF örnekleri için oluşturulmuştur.  
   
     > [!NOTE]
     > Tüm WCF örnekleri aynı servicemodelsamples Web uygulamasını kullandığından, bu görevin yalnızca bir kez gerçekleştirilmesi gerekir.  
@@ -72,7 +73,7 @@ Windows Communication Foundation (WCF) örnekleri,%SystemDrive%\inetpub\wwwroot\
   
 1. Servicemodelsamples düğümüne tıklayın. Pencerenin alt kısmında iki görünüm listelenir. Henüz seçili değilse **Özellikler Görünümü** ' nü seçin.  
   
-2. **Dizin tarama**girişine çift tıklayın.  
+2. **Dizin tarama** girişine çift tıklayın.  
   
 3. Eylemler bölmesinde **Etkinleştir** seçeneğini belirleyin. Bu, bir hizmetin Hata ayıklamasında yardımcı olan Internet Explorer 'ı kullanarak dizinin dizinine erişmenizi sağlar.  
   
@@ -132,7 +133,7 @@ Windows Communication Foundation (WCF) örnekleri,%SystemDrive%\inetpub\wwwroot\
   
     1. **Başlat** ' a ve ardından **Denetim Masası**' na tıklayın.  
   
-    2. **Kullanıcı hesapları** simgesini görmüyorsanız **Kategori görünümüne geç ' e**tıklayın.  
+    2. **Kullanıcı hesapları** simgesini görmüyorsanız **Kategori görünümüne geç ' e** tıklayın.  
   
     3. **Kullanıcı hesapları** simgesine tıklayın.  
   

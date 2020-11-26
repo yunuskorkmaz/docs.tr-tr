@@ -2,73 +2,83 @@
 title: HTTP, TCP veya Named-Pipe Kullanan Zaman Uyumsuz Senaryolar
 ms.date: 03/30/2017
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-ms.openlocfilehash: 6ae96c0aac5010adf37eb78ed57d1549885ece58
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00213c8d117f4319d7e29312dd0b9805d916231a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185781"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244151"
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP, TCP veya Named-Pipe Kullanan Zaman Uyumsuz Senaryolar
-Bu konu, http, TCP veya adlandırılmış boru kullanarak çok iş parçacığı istekleri ile farklı eşzamanlı istek/yanıt senaryoları için etkinlikleri ve aktarımları açıklar.  
-  
-## <a name="asynchronous-requestreply-without-errors"></a>Hatasız Asynchronous İstek/Yanıtla  
- Bu bölümde, çok iş parçacığı istemcileri olan bir eşzamanlı istek/yanıt senaryosu için etkinlikler ve aktarımlar açıklanır.  
-  
- Arayan etkinliği `beginCall` döndüğünde sonlandırır `endCall` ve döndürür. Geri arama denirse, geri arama geri döner.  
-  
- Çağrılan `beginCall` etkinlik, geri döndüğünde, `endCall` döndüğünde veya bu etkinlikten çağrıldığında geri arama geri döndüğünde sona erer.  
-  
-### <a name="asynchronous-client-without-callback"></a>Geri Arama olmadan Asynchronous İstemci  
-  
-#### <a name="propagation-is-enabled-on-both-sides-using-http"></a>Http kullanılarak Her İki Tarafta Da Yayılma Etkindir  
- ![PropagateActivity her iki tarafta doğru ayarlanmış hiçbir geri arama ile asynchronous istemci.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-client-no-callback.gif)
-  
- Eğer `propagateActivity=true`, ProcessMessage hangi ProcessAction etkinliğine aktagerektiğini gösterir.  
-  
- HTTP tabanlı senaryolar için ReceiveBytes gönderilecek ilk iletiye çağrılır ve isteğin kullanım ömrü boyunca vardır.  
-  
-#### <a name="propagation-is-disabled-on-either-sides-using-http"></a>Yayılma, HTTP kullanılarak Her Iki Tarafta Devre Dışı Bırakılır  
- Her `propagateActivity=false` iki tarafta ise, ProcessMessage hangi ProcessAction etkinliğine aktanınacak olduğunu göstermez. Bu nedenle, yeni bir kimlik içeren yeni bir geçici İşlem Eylemi etkinliği çağrılır. Eşzamanlı yanıt ServiceModel kodundaki istekle eşleştiğinde, Etkinlik Kimliği yerel bağlamdan alınabilir. Gerçek İşlem Eylem etkinliği bu kimlikle aktarılabilir.  
-  
- ![PropagateActivity her iki tarafta yanlış olarak ayarlanmış hiçbir geri arama ile asynchronous istemci.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-scenario-propagation-disabled-either-side.gif)  
 
- HTTP tabanlı senaryolar için ReceiveBytes gönderilecek ilk iletiye çağrılır ve isteğin kullanım ömrü boyunca vardır.  
+Bu konuda, HTTP, TCP veya adlandırılmış kanal kullanan çok iş parçacıklı istekler ile farklı zaman uyumsuz istek/yanıt senaryolarına yönelik etkinlikler ve aktarımlar açıklanmaktadır.  
   
- Bir İşlem Eylem etkinliği, arayan veya callee'de ve `propagateActivity=false` yanıt iletisi eylem üstbilgisini içermediği zaman, eşzamanlı bir istemcide oluşturulur.  
-  
-#### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>TCP veya Adlandırılmış Boru Kullanılarak Her İki Tarafta Da Yayılma Etkindir  
- ![PropagateActivity'in her iki tarafta da doğru olarak ayarlandığı ve boru/TCP olarak adlandırılan geri aramasız asynchronous istemcisi.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-scenario-propagation-enabled-using-tcp.gif)  
-  
- Adlandırılmış Boru veya TCP tabanlı bir senaryo için, istemci açıldığında ReceiveBytes çağrılır ve bağlantının ömrü boyunca var olur.  
-  
- İlk görüntüye benzer `propagateActivity=true`şekilde, ProcessMessage hangi ProcessAction etkinliğine aktagerektiğini gösterirse.  
-  
-#### <a name="propagation-is-disabled-on-either-sides-using-tcp-or-named-pipe"></a>Yayılma, TCP veya Adlandırılmış Boru kullanılarak Her İki Tarafta Devre Dışı Bırakılır  
- Adlandırılmış Boru veya TCP tabanlı bir senaryo için, istemci açıldığında ReceiveBytes çağrılır ve bağlantının ömrü boyunca var olur.  
-  
- İkinci görüntüye benzer `propagateActivity=false` şekilde, her iki tarafta ysa, ProcessMessage hangi ProcessAction etkinliğine aktanınacak olduğunu göstermez. Bu nedenle, yeni bir kimlik içeren yeni bir geçici İşlem Eylemi etkinliği çağrılır. Eşzamanlı yanıt ServiceModel kodundaki istekle eşleştiğinde, Etkinlik Kimliği yerel bağlamdan alınabilir. Gerçek İşlem Eylem etkinliği bu kimlikle aktarılabilir.  
-  
- ![PropagateActivity'in her iki tarafta da false olarak ayarlandığı ve pipe/TCP adlı geri araması olmayan asynchronous istemci.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-scenario-propagation-disabled-using-tcp.gif)  
+## <a name="asynchronous-requestreply-without-errors"></a>Hata olmadan zaman uyumsuz Istek/yanıt  
 
-### <a name="asynchronous-client-with-callback"></a>Callback ile asynchronous istemcisi  
- Bu senaryo, geri arama ve , ve `endCall`bunların transferleri için G ve A', etkinlikleri ekler ve bunların içinde/dışında.  
+ Bu bölümde, çok iş parçacıklı istemcilerle zaman uyumsuz istek/yanıt senaryosuna yönelik etkinlikler ve aktarımlar açıklanmaktadır.  
   
- Bu bölümde sadece HTTP `propagateActivity` = `true`kullanarak gösterir . Ancak, ek etkinlikler ve aktarımlar diğer durumlar `propagateActivity` = `false`için de geçerlidir (diğer durumlarda (diğer bir deyişle, TCP veya Named-Pipe kullanarak).  
+ Çağıran etkinlik, döndüğünde sonlanır `beginCall` ve `endCall` döndürür. Bir geri çağırma çağrılırsa geri arama döndürülür.  
   
- Geri arama, istemci sonuçların hazır olduğunu bildirmek için kullanıcı kodunu aradığında yeni bir etkinlik (G) oluşturur. Kullanıcı kodu `endCall` daha sonra geri arama içinde (Şekil 5'te gösterildiği gibi) veya geri arama dışında (Şekil 6) çağırır. Hangi kullanıcı etkinliğinin `endCall` çağrıldığı bilinmedığından, bu etkinlik `A’`etiketlenir. A'nın A ile aynı veya A'dan farklı olması mümkündür.  
+ Çağrılan etkinlik, döndürüldüğünde `beginCall` , `endCall` döndüğünde veya geri çağırma, Bu etkinlikten çağrıldıysa döndürülür.  
   
- ![Geri arama ile bir eşzamanlı istemci gösterir, geri arama da endcall.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-client-callback-endcall-in-callback.gif)  
+### <a name="asynchronous-client-without-callback"></a>Geri çağırma olmadan zaman uyumsuz Istemci  
+  
+#### <a name="propagation-is-enabled-on-both-sides-using-http"></a>Yayma, HTTP kullanarak her Iki tarafta da etkindir  
 
- ![Geri arama, geri arama dışında endcall ile bir eşzamanlı istemci gösterir.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-client-callback-endcall-outside-callback.gif)  
-
-### <a name="asynchronous-server-with-callback"></a>Geri Arama lı Asynchronous Server  
- ![Geri arama ile bir eşzamanlı sunucu gösterir.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-server-callback.gif)  
-
- Kanal yığını Ileti Alma'daki istemciyi geri çağırır: Bu işleme ait izler ProcessRequest etkinliğinin kendisine yayılır.  
+ ![PropagateActivity her iki tarafta da true olarak ayarlandığında, geri arama olmadan zaman uyumsuz istemci.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-client-no-callback.gif)
   
-## <a name="asynchronous-requestreply-with-errors"></a>Hatalarla Eşkron İstek/Yanıtla  
- Hata iletisi `endCall`hataları sırasında alınır. Aksi takdirde, etkinlikler ve aktarımlar önceki senaryolara benzer.  
+ Eğer `propagateActivity=true` , ProcessMessage hangi ProcessAction etkinliğinin aktarılacağı anlamına gelir.  
   
-## <a name="asynchronous-one-way-with-or-without-errors"></a>Asynchronous One-Way veya Hatalar olmadan  
- İstemciye yanıt veya hata döndürülür.
+ HTTP tabanlı senaryolar için, gönderilen ilk ileti üzerinde ReceiveBytes çağrılır ve isteğin ömrü için mevcut olur.  
+  
+#### <a name="propagation-is-disabled-on-either-sides-using-http"></a>Yayma, HTTP kullanarak her Iki tarafta da devre dışı bırakıldı  
+
+ `propagateActivity=false`İki taraftan, ProcessMessage, hangi ProcessAction etkinliğinin aktarılacağı anlamına gelmez. Bu nedenle, yeni KIMLIĞE sahip yeni bir geçici ProcessAction etkinliği çağırılır. Zaman uyumsuz yanıt, ServiceModel kodundaki istekle eşleştiğinde, etkinlik KIMLIĞI Yerel içerikten alınabilir. Gerçek ProcessAction etkinliği bu KIMLIKLE öğesine aktarılabilir.  
+  
+ ![PropagateActivity her iki tarafta da false olarak ayarlandığında, geri çağırması olmayan zaman uyumsuz istemci.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-scenario-propagation-disabled-either-side.gif)  
+
+ HTTP tabanlı senaryolar için, gönderilen ilk ileti üzerinde ReceiveBytes çağrılır ve isteğin ömrü için mevcut olur.  
+  
+ Bir Işlem eylemi etkinliği, çağıran veya çağrılan zaman uyumsuz bir istemcide oluşturulur `propagateActivity=false` ve yanıt iletisi bir eylem üst bilgisi içermez.  
+  
+#### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>Yayılma, TCP veya adlandırılmış kanal kullanılarak her Iki tarafta de etkinleştirilir  
+
+ ![PropagateActivity her iki tarafta da true, ve adlandırılmış kanal/TCP olarak ayarlandığı zaman uyumsuz istemci geri çağırması yok.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-scenario-propagation-enabled-using-tcp.gif)  
+  
+ Named-Pipe veya TCP tabanlı bir senaryoda, istemci açıldığında ReceiveBytes çağrılır ve bağlantı ömrü boyunca mevcut olur.  
+  
+ İlk resme benzer şekilde, `propagateActivity=true` ProcessMessage, hangi ProcessAction etkinliğinin aktarılacağı anlamına gelir.  
+  
+#### <a name="propagation-is-disabled-on-either-sides-using-tcp-or-named-pipe"></a>Yayma, TCP veya adlandırılmış kanal kullanılarak Iki tarafta da devre dışı bırakıldı  
+
+ Named-Pipe veya TCP tabanlı bir senaryoda, istemci açıldığında ReceiveBytes çağrılır ve bağlantı ömrü boyunca mevcut olur.  
+  
+ İkinci görüntüye benzer şekilde, `propagateActivity=false` her iki tarafta de ProcessMessage, hangi ProcessAction etkinliğinin aktarılacağı anlamına gelmez. Bu nedenle, yeni KIMLIĞE sahip yeni bir geçici ProcessAction etkinliği çağırılır. Zaman uyumsuz yanıt, ServiceModel kodundaki istekle eşleştiğinde, etkinlik KIMLIĞI Yerel içerikten alınabilir. Gerçek ProcessAction etkinliği bu KIMLIKLE öğesine aktarılabilir.  
+  
+ ![PropagateActivity her iki tarafta ve adlandırılmış kanal/TCP 'de yanlış olarak ayarlandığı hiçbir geri arama olmadan zaman uyumsuz istemci.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-scenario-propagation-disabled-using-tcp.gif)  
+
+### <a name="asynchronous-client-with-callback"></a>Geri çağırma ile zaman uyumsuz istemci  
+
+ Bu senaryo, geri çağırma için ve `endCall` , ve bunların aktarımları içindeki/giden etkinliklere G ve A ' yı ekler.  
+  
+ Bu bölüm yalnızca ile HTTP kullanımını gösterir `propagateActivity` = `true` . Ancak, ek etkinlikler ve aktarımlar diğer durumlar için de geçerlidir (yani, `propagateActivity` = `false` TCP veya adlandırılmış kanal kullanarak).  
+  
+ Geri arama, istemci, sonuçların hazırlandığını bildirmek için Kullanıcı kodunu çağırdığında yeni bir etkinlik (G) oluşturur. Kullanıcı kodu daha sonra `endCall` geri çağırma içinde (Şekil 5 ' te gösterildiği gibi) veya geri çağırma dışında çağırır (Şekil 6). Hangi kullanıcı etkinliğinin `endCall` çağrıldığı bilinmiyor, bu etkinlik etiketlidir `A’` . ' Bir ' ile aynı veya arasında farklı olabilir.  
+  
+ ![Geri çağırma ile zaman uyumsuz bir istemciyi gösterir, geri çağırma sırasında endCall.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-client-callback-endcall-in-callback.gif)  
+
+ ![Geri çağırma, geri çağırma dışında zaman uyumsuz bir istemciyi gösterir.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-client-callback-endcall-outside-callback.gif)  
+
+### <a name="asynchronous-server-with-callback"></a>Geri çağırma ile zaman uyumsuz sunucu  
+
+ ![Geri çağırma ile zaman uyumsuz bir sunucu gösterir.](./media/asynchronous-scenarios-using-http-tcp-or-named-pipe/asynchronous-server-callback.gif)  
+
+ Kanal yığını istemciyi geri çağırır Ileti alma: Bu işleme yönelik izlemeler, ProcessRequest etkinliğinin kendisidir.  
+  
+## <a name="asynchronous-requestreply-with-errors"></a>Zaman uyumsuz Istek/hatalarla yanıtla  
+
+ Hata iletisi hataları sırasında alınır `endCall` . Aksi takdirde, etkinlikler ve aktarımlar önceki senaryolara benzerdir.  
+  
+## <a name="asynchronous-one-way-with-or-without-errors"></a>Hatasız veya hata olmadan zaman uyumsuz One-Way  
+
+ İstemciye yanıt veya hata döndürülmez.

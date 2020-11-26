@@ -2,14 +2,15 @@
 title: İzleme
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 569a97dc21a434cd711ad4c735f828df588f3af7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 10b9be028710cdda378aeef0ca235a00aa451e08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578987"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243917"
 ---
 # <a name="tracing"></a>İzleme
+
 Windows Communication Foundation (WCF), hata izleme ve analiz için uygulama izleme ve Tanılama verileri sağlar. Bir uygulamanın nasıl davrandığına veya neden hata hatalarıyla karşılaşma anlamak için bir hata ayıklayıcı yerine izlemeyi kullanabilirsiniz. Ayrıca, uçtan uca bir deneyim sağlamak için bileşenler arasındaki hataları ve işlemleri de ilişkilendirebilir.  
   
  WCF, Tanılama izleme için aşağıdaki verileri verir:  
@@ -19,6 +20,7 @@ Windows Communication Foundation (WCF), hata izleme ve analiz için uygulama izl
 - İzleme özelliğinin düzgün çalışmamasına zaman Windows hata olayları.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [İzlemeyi Yapılandırma](configuring-tracing.md)  
   
  Bu konu başlığı altında, farklı düzeylerde izlemeyi özel gereksinimlerinize uyacak şekilde nasıl yapılandırabileceğiniz açıklanmaktadır.  

@@ -2,14 +2,15 @@
 title: Zehirli İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: d219c18bb072684deb6cc1d8a2d17b1989762151
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9aeb404cea18a7dd6a9c416c0728d9905c0d782d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590572"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244827"
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
+
 *Zararlı ileti* , uygulamaya yönelik en fazla teslim deneme sayısını aşmış bir iletidir. Bu durum, kuyruk tabanlı bir uygulama hatalar nedeniyle bir iletiyi işleyemediği zaman ortaya çıkabilir. Bir sıraya alınmış uygulama, güvenilirlik taleplerini karşılamak için bir işlem altında iletileri alır. Sıraya alınan bir iletinin alındığı işlemi iptal etmek, iletinin yeni bir işlem altında yeniden deneneceği şekilde kuyruktaki iletiyi bırakır. İşlemin iptaline neden olan sorun düzeltilmezse, alıcı uygulama, en fazla sayıda teslim denemesi aşılıncaya ve bir zarar iletisi sonuçlarıyla aynı iletiyi alıp iptal etmeden bir döngüde kalabilir.  
   
  Birçok nedenden dolayı bir ileti bir zarar iletisi olabilir. En yaygın nedenler uygulamaya özgüdür. Örneğin, bir uygulama kuyruktan bir ileti okur ve bazı veritabanı işlemlerini gerçekleştirdiğinde, uygulama veritabanında bir kilit alamaz ve işlemin iptal edilmesini sağlar. Veritabanı işlemi durdurulduğundan, ileti kuyrukta kalır, bu da uygulamanın iletiyi ikinci kez yeniden kullanmasına ve veritabanında kilit edinmeye yönelik başka bir girişim yapmasına neden olur. Ayrıca, geçersiz bilgiler içeriyorsa iletiler zarar verebilir. Örneğin, bir satınalma siparişi geçersiz bir müşteri numarası içerebilir. Bu durumlarda, uygulama gönüllü olarak işlemi iptal edebilir ve iletiyi bir zarar iletisi haline zorlayabilir.  
@@ -17,13 +18,14 @@ ms.locfileid: "84590572"
  Nadir durumlarda, iletiler uygulamaya dağıtılması başarısız olabilir. Windows Communication Foundation (WCF) katmanı, iletide yanlış çerçeve varsa, kendisine bağlı geçersiz ileti kimlik bilgileri veya geçersiz bir eylem üstbilgisi gibi iletiyle ilgili bir sorun bulabilir. Bu durumlarda, uygulama hiçbir zaman iletiyi almaz; Ancak, ileti hala zarar görmüş bir ileti haline gelebilir ve el ile işlenebilir.  
   
 ## <a name="handling-poison-messages"></a>Zarar Iletilerini işleme  
+
  WCF 'de, zehirli ileti işleme, uygulamaya dağıtılan ve uygulamaya özel nedenlerden dolayı işlenemeyecek olan, uygulamaya veya iletilere iletilemez olan iletilerle ilgilenmek için alıcı bir uygulama mekanizması sağlar. Her kullanılabilir sıraya alınmış bağlamaların her birinde aşağıdaki özelliklerle, zehirli ileti işlemeyi yapılandırın:  
   
 - `ReceiveRetryCount`. Uygulama kuyruğundan uygulamaya bir ileti teslimini yeniden deneme sayısının üst sınırını belirten bir tamsayı değeri. Varsayılan değer 5 ' tir. Bu, bir veritabanında geçici bir kilitlenme gibi bir anında yeniden denemenin sorunu düzelttiği durumlarda yeterlidir.  
   
-- `MaxRetryCycles`. En fazla yeniden deneme döngüsü sayısını belirten bir tamsayı değeri. Yeniden deneme çevrimi, bir iletiyi uygulama kuyruğundan yeniden deneme alt sırasına ve yapılandırılabilir bir gecikmeden sonra yeniden deneme alt sırasından yeniden uygulama kuyruğuna aktarma işleminden oluşur. Varsayılan değer 2 ' dir. Windows Vista 'da ileti en fazla ( `ReceiveRetryCount` + 1) * ( `MaxRetryCycles` + 1) kez denenir. `MaxRetryCycles`Windows Server 2003 ve Windows XP 'de yok sayılır.  
+- `MaxRetryCycles`. En fazla yeniden deneme döngüsü sayısını belirten bir tamsayı değeri. Yeniden deneme çevrimi, bir iletiyi uygulama kuyruğundan yeniden deneme alt sırasına ve yapılandırılabilir bir gecikmeden sonra yeniden deneme alt sırasından yeniden uygulama kuyruğuna aktarma işleminden oluşur. Varsayılan değer 2 ' dir. Windows Vista 'da ileti en fazla ( `ReceiveRetryCount` + 1) * ( `MaxRetryCycles` + 1) kez denenir. `MaxRetryCycles` Windows Server 2003 ve Windows XP 'de yok sayılır.  
   
-- `RetryCycleDelay`. Yeniden deneme döngüleri arasındaki gecikme süresi. Varsayılan değer 30 dakikadır. `MaxRetryCycles`ve `RetryCycleDelay` birlikte, düzenli bir gecikmeden sonra yeniden denenmede sorunu çözdükleri sorunu gidermeye yönelik bir mekanizma sağlar. Örneğin, bu, bekleyen işlem işleme SQL Server bir kilitli satırı işler.  
+- `RetryCycleDelay`. Yeniden deneme döngüleri arasındaki gecikme süresi. Varsayılan değer 30 dakikadır. `MaxRetryCycles` ve `RetryCycleDelay` birlikte, düzenli bir gecikmeden sonra yeniden denenmede sorunu çözdükleri sorunu gidermeye yönelik bir mekanizma sağlar. Örneğin, bu, bekleyen işlem işleme SQL Server bir kilitli satırı işler.  
   
 - `ReceiveErrorHandling`. En fazla yeniden deneme sayısı denendikten sonra teslim başarısız olan bir ileti için gerçekleştirilecek eylemi belirten bir sabit listesi. Değerler hata, bırakma, reddetme ve taşıma olabilir. Varsayılan seçenek hatadır.  
   
@@ -60,6 +62,7 @@ Aşağıda, bir ileti için yapılan en fazla teslim denemesi sayısı verilmiş
 > WCF hizmetinizin gereksinimlerine bağlı olarak bu bağlamalardaki özellikleri değiştirebilirsiniz. Tüm zarar iletisi işleme mekanizması, alıcı uygulamada yereldir. Alma uygulaması son olarak durdurulmadığı ve gönderene olumsuz bir bildirim gönderen sürece işlem gönderme uygulaması tarafından görünmez. Bu durumda, ileti gönderenin teslim edilemeyen ileti kuyruğuna taşınır.  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>En iyi yöntem: Msmqkirmessageexception Işleme  
+
  Hizmet bir iletinin Poison olduğunu belirlediğinde, sıradaki aktarım, <xref:System.ServiceModel.MsmqPoisonMessageException> zarar iletisini içeren bir oluşturur `LookupId` .  
   
  Alıcı bir uygulama <xref:System.ServiceModel.Dispatcher.IErrorHandler> , uygulamanın gerektirdiği hataları işlemek için arabirimi uygulayabilir. Daha fazla bilgi için bkz. [hata işleme ve raporlama üzerinde denetimi genişletme](../samples/extending-control-over-error-handling-and-reporting.md).  
@@ -80,21 +83,26 @@ Aşağıda, bir ileti için yapılan en fazla teslim denemesi sayısı verilmiş
 
  Buna ek olarak,,,,,,,, `ReceiveErrorHandling` `Fault` `ServiceHost` zarar iletisi ile karşılaşıldığında hata olur. Hatalı olaya bağlanabilir ve hizmeti kapatabilir, düzeltici eylemler gerçekleştirebilir ve yeniden başlatabilirsiniz. Örneğin, `LookupId` <xref:System.ServiceModel.MsmqPoisonMessageException> öğesine yayıldığı `IErrorHandler` ve hizmet ana bilgisayarı hataları olduğunda, iletiyi `System.Messaging` `LookupId` kuyruktan kaldırmak ve iletiyi bazı dış depolardan ya da başka bir sıraya depolamak için kullanarak kuyruktan ileti almak için API 'sini kullanabilirsiniz. `ServiceHost`Normal işlemeyi sürdürmeye daha sonra yeniden başlatabilirsiniz. [MSMQ 4,0 ' de zarar Iletisi işleme](../samples/poison-message-handling-in-msmq-4-0.md) bu davranışı gösterir.  
   
-## <a name="transaction-time-out-and-poison-messages"></a>İşlem zaman aşımı ve zarar Iletileri  
+## <a name="transaction-time-out-and-poison-messages"></a>İşlem Time-Out ve zarar Iletileri  
+
  Sıraya alınan aktarım kanalı ve Kullanıcı kodu arasında bir hata sınıfı meydana gelebilir. Bu hatalar, ileti güvenliği katmanı veya hizmet dağıtma mantığı gibi içindeki katmanlar tarafından algılanabilir. Örneğin, SOAP güvenlik katmanında eksik bir X. 509.440 sertifikası algılandı ve eksik bir eylem, iletinin uygulamaya dağıtıldığı durumlardır. Bu durumda, hizmet modeli iletiyi bırakır. İleti bir işlem içinde okunduğu ve bu işlem için bir sonuç sağlanamadığından, işlem zaman aşımına uğrar, iptal edilir ve ileti kuyruğa geri konur. Diğer bir deyişle, belirli bir hata sınıfı için işlem hemen iptal edilmez ancak işlem zaman aşımına uğrayana kadar bekler. Kullanarak bir hizmet için işlem zaman aşımını değiştirebilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute> .  
   
- Bilgisayar genelinde işlem zaman aşımını değiştirmek için Machine. config dosyasını değiştirin ve uygun işlem zaman aşımını ayarlayın. İşlem sırasında ayarlanan zaman aşımına bağlı olarak, işlemin sonunda iptal edilir ve kuyruğa geri döner ve iptal sayısının artmasını unutmayın. Sonuç olarak, ileti zarar haline gelir ve doğru değerlendirme Kullanıcı ayarlarına göre yapılır.  
+ Bilgisayar genelinde işlem zaman aşımını değiştirmek için machine.config dosyasını değiştirin ve uygun işlem zaman aşımını ayarlayın. İşlem sırasında ayarlanan zaman aşımına bağlı olarak, işlemin sonunda iptal edilir ve kuyruğa geri döner ve iptal sayısının artmasını unutmayın. Sonuç olarak, ileti zarar haline gelir ve doğru değerlendirme Kullanıcı ayarlarına göre yapılır.  
   
 ## <a name="sessions-and-poison-messages"></a>Oturumlar ve zarar Iletileri  
+
  Bir oturum, aynı yeniden deneme ve zarar iletisi işleme yordamlarına tek bir ileti olarak girer. Daha önce zarar iletileri için listelenen özellikler tüm oturum için geçerlidir. Bu, tüm oturumun yeniden deneneceği ve ileti reddedilirse son bir zarar iletisi kuyruğuna ya da gönderenin atılacak ileti kuyruğuna gittiği anlamına gelir.  
   
 ## <a name="batching-and-poison-messages"></a>Toplu ve zarar Iletileri  
+
  Bir ileti bir zarar iletisi haline gelirse ve bir toplu işin parçasıysa, tüm toplu işlem geri alınır ve kanal tek seferde bir ileti okumak üzere döndürülür. Toplu işleme hakkında daha fazla bilgi için bkz. [işlem Içindeki Iletileri toplu işleme](batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Zarar sırasındaki Iletiler için zehirli ileti Işleme  
- Poison-Message kuyruğuna bir ileti yerleştirildiğinde, zehirli ileti işleme bitmez. Zarar iletisi sırasındaki iletiler yine de okunmalıdır ve işlenmelidir. Son zarar alt sırasından gelen iletileri okurken, zarar iletisi işleme ayarlarının bir alt kümesini kullanabilirsiniz. Geçerli ayarlar `ReceiveRetryCount` ve ' dir `ReceiveErrorHandling` . `ReceiveErrorHandling`Bırakma, reddetme veya hata olarak ayarlayabilirsiniz. `MaxRetryCycles`yok sayılır ve Move olarak ayarlandıysa bir özel durum oluşturulur `ReceiveErrorHandling` .  
+
+ Poison-Message kuyruğuna bir ileti yerleştirildiğinde, zehirli ileti işleme bitmez. Zarar iletisi sırasındaki iletiler yine de okunmalıdır ve işlenmelidir. Son zarar alt sırasından gelen iletileri okurken, zarar iletisi işleme ayarlarının bir alt kümesini kullanabilirsiniz. Geçerli ayarlar `ReceiveRetryCount` ve ' dir `ReceiveErrorHandling` . `ReceiveErrorHandling`Bırakma, reddetme veya hata olarak ayarlayabilirsiniz. `MaxRetryCycles` yok sayılır ve Move olarak ayarlandıysa bir özel durum oluşturulur `ReceiveErrorHandling` .  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista, Windows Server 2003 ve Windows XP farkları  
+
  Daha önce belirtildiği gibi, tüm Poison-Message işleme ayarları Windows Server 2003 ve Windows XP için geçerlidir. Windows Server 2003, Windows XP ve Windows Vista 'daki Message Queuing arasındaki aşağıdaki önemli farklılıklar, zehirli ileti işleme ile ilgilidir:  
   
 - Windows Vista 'daki Message Queuing alt sıraları destekler, ancak Windows Server 2003 ve Windows XP alt sıraları desteklemez. Alt sıralar, zehirli ileti işlemede kullanılır. Yeniden deneme kuyrukları ve zarar sırası, zarar iletisi işleme ayarlarına göre oluşturulan uygulama kuyruğu için alt çizglardır. , `MaxRetryCycles` Oluşturulacak yeniden deneme alt sıraların sayısını belirler. Bu nedenle, Windows Server 2003 veya Windows XP 'de çalışırken `MaxRetryCycles` yok sayılır ve `ReceiveErrorHandling.Move` buna izin verilmez.  

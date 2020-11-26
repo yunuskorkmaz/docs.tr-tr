@@ -2,14 +2,15 @@
 title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 13c66fbe1b59158cb9d2ba3829bb12f1180ad576
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 490c67c92407626a67ea8561a378ef3e70266fe2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552985"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243683"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
+
 Bu örnek, ' de Windows Communication Foundation (WCF) tarafından ETW 'ye yazma işlemleri için kendi izleme olaylarınızın akışa nasıl ekleneceğini gösterir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] . Analitik izlemeler, yüksek performans cezası ödemeksizin hizmetlerinizin görünürlüğünü daha kolay hale getirmek için tasarlanmıştır. Bu örnek, <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> WCF hizmetleriyle tümleştirilen olayları yazmak için API 'lerinin nasıl kullanılacağını gösterir.  
   
  API 'ler hakkında daha fazla bilgi için <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> bkz <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> ..  
@@ -17,9 +18,11 @@ Bu örnek, ' de Windows Communication Foundation (WCF) tarafından ETW 'ye yazma
  Windows 'da olay izleme hakkında daha fazla bilgi edinmek için bkz. [ETW Ile hata ayıklamayı ve performans ayarlamayı geliştirme](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).  
   
 ## <a name="disposing-eventprovider"></a>EventProvider elden atılıyor  
+
  Bu örnek <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> , uygulayan sınıfını kullanır <xref:System.IDisposable?displayProperty=nameWithType> . Bir WCF hizmeti için izlemeyi uygularken, <xref:System.Diagnostics.Eventing.EventProvider> hizmetin kullanım ömrü boyunca kaynaklarını kullanabilmeniz olasıdır. Bu nedenle ve okunabilirlik için bu örnek sarmalanmamış hiçbir şekilde yok <xref:System.Diagnostics.Eventing.EventProvider> . Bazı nedenlerle hizmetinizin izleme için farklı gereksinimleri varsa ve bu kaynağı atlamazsanız, bu örneği yönetilmeyen kaynakların elden atılamamasının en iyi uygulamalarına uygun olarak değiştirmeniz gerekir. Yönetilmeyen kaynakları elden atma hakkında daha fazla bilgi için bkz. [Dispose yöntemi uygulama](../../../standard/garbage-collection/implementing-dispose.md).  
   
-## <a name="self-hosting-vs-web-hosting"></a>Kendi kendine barındırma ile Web barındırma  
+## <a name="self-hosting-vs-web-hosting"></a>Self-Hosting ile Web barındırma  
+
  Web 'de barındırılan hizmetlerde, WCF 'nin analitik izlemeleri, izlemeleri yayan hizmeti belirlemek için kullanılan "HostReference" adlı bir alan sağlar. Genişletilebilir kullanıcı izlemeleri bu modele katılabilir ve bu örnekte bunu gerçekleştirmek için en iyi yöntemler gösterilmektedir. Sonuçta elde edilen dizede ' &#124; ' karakteri göründüğünde bir Web ana bilgisayar başvurusunun biçimi aşağıdakilerden biri olabilir:  
   
 - Uygulama kökte değilse.  
@@ -33,9 +36,10 @@ Bu örnek, ' de Windows Communication Foundation (WCF) tarafından ETW 'ye yazma
  Self-hosted Hizmetleri için, WCF 'nin analitik izlemeleri "HostReference" alanını doldurmamaktadır. `WCFUserEventProvider`Bu örnekteki sınıf, kendi kendine barındırılan bir hizmet tarafından kullanıldığında tutarlı bir şekilde davranır.  
   
 ## <a name="custom-event-details"></a>Özel olay ayrıntıları  
+
  WCF 'nin ETW olay sağlayıcısı bildirimi, WCF hizmeti yazarları tarafından hizmet kodu içinden yayınlanarak tasarlanan üç olay tanımlar. Aşağıdaki tabloda, üç olay dökümü gösterilmektedir.  
   
-|Olay|Description|Olay Kimliği|  
+|Olay|Açıklama|Olay Kimliği|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Bu olayı, hizmetinize bir sorun olmayan bir not oluştuğunda ortaya çıkar. Örneğin, bir veritabanına başarıyla çağrı yaptıktan sonra bir olay yayabilirsiniz.|301|  
 |Userdefinedwarninggerçekleşti|Bu olayı, gelecekte hata oluşmasına neden olabilecek bir sorun oluştuğunda göster. Örneğin, bir veritabanına yapılan çağrı başarısız olduğunda ancak gereksiz bir veri deposuna geri dönerek kurtarılamadığında bir uyarı olayı oluşturabilirsiniz.|302|  
@@ -61,7 +65,7 @@ Bu örnek, ' de Windows Communication Foundation (WCF) tarafından ETW 'ye yazma
   
 6. İletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-     Icalsoltor hizmeti, sol bölmede **hizmet projelerim**altında eklenir.  
+     Icalsoltor hizmeti, sol bölmede **hizmet projelerim** altında eklenir.  
   
 7. Olay Görüntüleyicisi uygulamasını açın.  
   
@@ -69,11 +73,11 @@ Bu örnek, ' de Windows Communication Foundation (WCF) tarafından ETW 'ye yazma
   
 8. **Başlat** menüsünde, **Yönetim Araçları**' nı seçin ve ardından **Olay Görüntüleyicisi**. **Analitik** ve **hata ayıklama** günlüklerini etkinleştirin.  
   
-9. Olay Görüntüleyicisi ' deki ağaç görünümünde **Olay Görüntüleyicisi**, **uygulamalar ve hizmetler günlükleri**, **Microsoft**, **Windows**ve ardından **uygulama sunucusu-uygulamalar**' a gidin. **Uygulama sunucusu-uygulamalar**' a sağ tıklayın, **Görünüm**' ü seçin ve ardından **analitik ve hata ayıklama günlüklerini görüntüleyin**.  
+9. Olay Görüntüleyicisi ' deki ağaç görünümünde **Olay Görüntüleyicisi**, **uygulamalar ve hizmetler günlükleri**, **Microsoft**, **Windows** ve ardından **uygulama sunucusu-uygulamalar**' a gidin. **Uygulama sunucusu-uygulamalar**' a sağ tıklayın, **Görünüm**' ü seçin ve ardından **analitik ve hata ayıklama günlüklerini görüntüleyin**.  
   
      **Analitik ve hata ayıklama günlüklerini göster** seçeneğinin işaretli olduğundan emin olun. **Analitik** günlüğü etkinleştirin.  
   
-     Olay Görüntüleyicisi 'daki ağaç görünümünde **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**ve ardından **analitik**' e gidin. **Analitik** öğesine sağ tıklayın ve **günlüğü etkinleştir**' i seçin.  
+     Olay Görüntüleyicisi 'daki ağaç görünümünde **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar** ve ardından **analitik**' e gidin. **Analitik** öğesine sağ tıklayın ve **günlüğü etkinleştir**' i seçin.  
   
 10. WCF test Istemcisini kullanarak hizmeti test edin.  
   
@@ -99,14 +103,15 @@ Bu örnek, ' de Windows Communication Foundation (WCF) tarafından ETW 'ye yazma
   
 1. **Olay Görüntüleyicisi**'ni açın.  
   
-2. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve sonra **uygulama-sunucu uygulamaları**' na gidin. **Analitik** öğesine sağ tıklayın ve **günlüğü devre dışı bırak**' ı seçin.  
+2. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows** ve sonra **uygulama-sunucu uygulamaları**' na gidin. **Analitik** öğesine sağ tıklayın ve **günlüğü devre dışı bırak**' ı seçin.  
   
-3. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama-sunucu-uygulamalar**ve ardından **analitik**' e gidin. **Analitik** öğesine sağ tıklayın ve **Günlüğü Temizle**' yi seçin.  
+3. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama-sunucu-uygulamalar** ve ardından **analitik**' e gidin. **Analitik** öğesine sağ tıklayın ve **Günlüğü Temizle**' yi seçin.  
   
 4. Olayları temizlemek için **Temizle** ' ye tıklayın.  
   
 ## <a name="known-issue"></a>Bilinen sorun  
- **Olay Görüntüleyicisi** IÇINDE, ETW olaylarının kodunu çözemediği bilinen bir sorun vardır. Şöyle bir hata iletisi görebilirsiniz: " \<id> kaynak Microsoft-Windows-Application Server 'Dan olay kimliği açıklaması-uygulamalar bulunamıyor. Bu olayı başlatan bileşen yerel bilgisayarınızda yüklü değil veya yükleme bozuk. Bileşeni yerel bilgisayara yükleyebilir veya onarabilirsiniz. " Bu hatayla karşılaşırsanız, **Eylemler** menüsünden **Yenile** ' yi seçin. Olay daha sonra doğru şekilde kod çözmelidir.  
+
+ **Olay Görüntüleyicisi** IÇINDE, ETW olaylarının kodunu çözemediği bilinen bir sorun vardır. Şöyle bir hata iletisi görebilirsiniz: "kaynaktan olay KIMLIĞI için açıklama \<id> Microsoft-Windows-Application Server-Applications bulunamıyor. Bu olayı başlatan bileşen yerel bilgisayarınızda yüklü değil veya yükleme bozuk. Bileşeni yerel bilgisayara yükleyebilir veya onarabilirsiniz. " Bu hatayla karşılaşırsanız, **Eylemler** menüsünden **Yenile** ' yi seçin. Olay daha sonra doğru şekilde kod çözmelidir.  
   
 > [!IMPORTANT]
 > Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  

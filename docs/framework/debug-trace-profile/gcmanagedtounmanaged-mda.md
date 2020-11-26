@@ -13,29 +13,35 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - garbage collection, run-time errors
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
-ms.openlocfilehash: 76c621a1f2bb780d38228f2a84d4c77441774770
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 668b06109e59f1239cd2b3e3017aeee1916ce69e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415920"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244242"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>gcManagedToUnmanaged MDA
+
 `gcManagedToUnmanaged`Yönetilen hata ayıklama Yardımcısı (MDA), bir iş parçacığı yönetilen 'ten yönetilmeyen koda geçiş yaptığında çöp toplamaya neden olur.  
   
 ## <a name="symptoms"></a>Belirtiler  
+
  Yönetilmeyen bir Kullanıcı bileşeni, COM 'a sunulan bir yönetilen nesneyi kullanmaya çalışırken bir erişim ihlali oluşturur. COM nesnesi yayımlanmış gibi görünüyor. Erişim ihlali belirleyici olmayan bir değer.  
   
 ## <a name="cause"></a>Nedeni  
+
  Yönetilmeyen bir bileşen, yönetilen bir COM nesnesini doğru bir şekilde saymadığı takdirde, yönetilmeyen bileşen nesneye bir başvuru tuttuğunda, çalışma zamanı COM 'a sunulan bir yönetilen nesne toplayabilir. <xref:System.Runtime.InteropServices.Marshal.Release%2A>Çöp koleksiyonları sırasında çalışma zamanı çağırır, bu nedenle Kullanıcı bileşeni atık toplama gerçekleşmeden önce nesneyi kullanıyorsa, henüz toplanmamıştır. Bu, belirleyici olmayan bir ISM kaynağıdır.  
   
 ## <a name="resolution"></a>Çözüm  
+
  Bu yardımcıyı etkinleştirmek, nesnenin koleksiyon için uygun olduğu zaman arasındaki süreyi azaltır ve <xref:System.Runtime.InteropServices.Marshal.Release%2A> çağrılır, hangi yönetilmeyen bileşenin ilk olarak toplanan nesneye erişmeye çalıştığını izlemeye yardımcı olur.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+
  Her iş parçacığı yönetilen 'ten yönetilmeyen koda geçiş yaptığında çöp toplamaya neden olur.  
   
-## <a name="output"></a>Çıktı  
+## <a name="output"></a>Çıkış  
+
  Bu MDA hiçbir çıkış üretmez.  
   
 ## <a name="configuration"></a>Yapılandırma  

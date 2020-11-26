@@ -2,32 +2,35 @@
 title: 1104 - WorkflowActivityResume
 ms.date: 03/30/2017
 ms.assetid: 7fe95d1e-34bd-43ca-b92e-587d2d248fff
-ms.openlocfilehash: 4c9ae5fd386fc93ea19578097aa4e0afdda527e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a9c40e2c403d43dc980af116e4b6e98b3b2090b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924130"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243566"
 ---
 # <a name="1104---workflowactivityresume"></a>1104 - WorkflowActivityResume
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1104|  
-|anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|1104|  
+|Anahtar sözcükler|WFRuntime|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir iş akışı etkinliği devam ettirildi gösterir.  
+
+ Bir iş akışı etkinliğinin sürdürüldüğünü gösterir.  
   
 ## <a name="message"></a>İleti  
- WorkflowInstance ID: '%1' Aktivita E2E  
+
+ WorkflowInstance kimliği: ' %1 ' E2E etkinliği  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|WorkflowInstanceID|xs:string|İş akışı örnek kimliği.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|WorkflowInstanceId|xs: String|İş akışı örnek kimliği.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|
