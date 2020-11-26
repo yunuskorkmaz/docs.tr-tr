@@ -133,7 +133,7 @@ items:
             href: ../core/tutorials/index.md
   - name: Yenilikler
     items:
-      - name: .NET 5’teki yenilikler
+      - name: .NET 5.0’teki yenilikler
         href: ../core/dotnet-five.md
       - name: ​.NET Core 3.1’deki yenilikler
         href: ../core/whats-new/dotnet-core-3-1.md
