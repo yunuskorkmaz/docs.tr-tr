@@ -2,27 +2,30 @@
 title: 505 - CreateServiceHostStart
 ms.date: 03/30/2017
 ms.assetid: 5f2c670b-c212-458e-bcd0-cdc2f17a6cf6
-ms.openlocfilehash: 4d174c32d43a5328a83d3a431e8f4c37499d4af6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44a6b08bd6cd02fe40a9a1c1e8bf50a2bd0cffe0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999680"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235368"
 ---
 # <a name="505---createservicehoststart"></a>505 - CreateServiceHostStart
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|505|  
-|anahtar sözcükler|WebHost|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|505|  
+|Anahtar sözcükler|Leyemedi|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay CreateServiceHost başladığında yayılır.  
+
+ CreateServiceHost başladığında bu olay yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Begin CreateServiceHost.  
+
+ CreateServiceHost 'u başlatın.  
   
 ## <a name="details"></a>Ayrıntılar

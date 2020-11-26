@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: 3c6cfd084055d59d3292b49897ff710f14f92737
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7cf54754661182dca1e91c75b158d9b0a34a1f5e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320870"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236487"
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>Nasıl yapılır: Kodda Hizmet Bağlama Belirtme
-Bu örnekte, bir Hesaplayıcı hizmeti için `ICalculator` sözleşmesi tanımlanmıştır, hizmet `CalculatorService` sınıfına uygulanır ve ardından, hizmetin <xref:System.ServiceModel.BasicHttpBinding> sınıfını kullanması gerektiği belirtilir.  
+
+Bu örnekte, bir `ICalculator` anlaşma Hesaplayıcı hizmeti için tanımlanmıştır, hizmet `CalculatorService` sınıfında uygulanır ve ardından uç noktası kodda tanımlanır ve burada hizmetin sınıfını kullanması gerektiği belirtilir <xref:System.ServiceModel.BasicHttpBinding> .  
   
  Genellikle, bağlama ve adres bilgilerini, kod içinde imperatively yerine bildirimli olarak yapılandırmaya göre belirlemek en iyi uygulamadır. Dağıtılmış bir hizmetin bağlamaları ve adresleri genellikle hizmet geliştirildiğinde kullanılanlardan farklı olduğundan, koddaki uç noktaların tanımlanması genellikle pratik değildir. Daha genel olarak, bağlama ve adresleme bilgilerini koddan tutmanın, uygulamayı yeniden derlemek veya yeniden dağıtmak zorunda kalmadan değiştirilmesine izin verir.  
   
@@ -43,7 +44,7 @@ Bu örnekte, bir Hesaplayıcı hizmeti için `ICalculator` sözleşmesi tanımla
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Bağlama özelliklerinin varsayılan değerlerini değiştirmek için  
   
-1. @No__t-0 sınıfının varsayılan özellik değerlerinden birini değiştirmek için, Konağı oluşturmadan önce bağlamasındaki özellik değerini yeni değere ayarlayın. Örneğin, varsayılan açık ve kapalı zaman aşımı değerlerini 1 dakika ila 2 dakika olarak değiştirmek için aşağıdakileri kullanın.  
+1. Sınıfının varsayılan özellik değerlerinden birini değiştirmek için <xref:System.ServiceModel.BasicHttpBinding> , Konağı oluşturmadan önce bağlamasındaki özellik değerini yeni değere ayarlayın. Örneğin, varsayılan açık ve kapalı zaman aşımı değerlerini 1 dakika ila 2 dakika olarak değiştirmek için aşağıdakileri kullanın.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#5)]
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  
@@ -51,4 +52,4 @@ Bu örnekte, bir Hesaplayıcı hizmeti için `ICalculator` sözleşmesi tanımla
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](using-bindings-to-configure-services-and-clients.md)
-- [Uç Nokta Adresi Belirtme](specifying-an-endpoint-address.md)
+- [Bir Uç Noktası Adresi Belirtme](specifying-an-endpoint-address.md)

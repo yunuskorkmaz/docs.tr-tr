@@ -2,17 +2,18 @@
 title: WindowsStreamSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4b0508c5-669c-4fe3-9225-8a10f8ee3be4
-ms.openlocfilehash: 556df52011ced0bcad9ac2bf15b9570ce2ac7d14
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbffbc8dcf2463a09371b7ae126d6f51afc349d4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991334"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234785"
 ---
 # <a name="windowsstreamsecuritybindingelement"></a>WindowsStreamSecurityBindingElement
+
 WindowsStreamSecurityBindingElement  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class WindowsStreamSecurityBindingElement : BindingElement  
@@ -22,23 +23,26 @@ class WindowsStreamSecurityBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- WindowsStreamSecurityBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
+
+ WindowsStreamSecurityBindingElement sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- WindowsStreamSecurityBindingElement sınıfı şu özelliğe sahip:  
+
+ WindowsStreamSecurityBindingElement sınıfı aşağıdaki özelliğe sahiptir:  
   
-### <a name="protectionlevel"></a>protectionLevel  
+### <a name="protectionlevel"></a>ProtectionLevel  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- TCP akışı koruma düzeyi.  
+ TCP akışı için koruma düzeyi.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

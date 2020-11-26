@@ -2,17 +2,18 @@
 title: TransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 54ecfbee-53c0-410c-a7fa-a98f2e40c545
-ms.openlocfilehash: bdb5ca7400a41dd724c2ad7fc76695a82874ded6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45bfcd069391156bc85cc4c26f2b172770197a9e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641625"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234849"
 ---
 # <a name="transportbindingelement"></a>TransportBindingElement
+
 TransportBindingElement  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class TransportBindingElement : BindingElement  
@@ -25,44 +26,50 @@ class TransportBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- TransportBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
+
+ TransportBindingElement sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  TransportBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="manualaddressing"></a>manualAddressing  
+### <a name="manualaddressing"></a>ManualAddressing  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Kullanıcının ileti adresleme denetimini ele geçirmesine isteyip istemediğini belirten bir Boole değeri.  
+ Kullanıcının ileti adreslemesinin denetimini almak isteyip istemediğini belirten bir Boole değeri.  
   
-### <a name="maxbufferpoolsize"></a>maxBufferPoolSize  
+### <a name="maxbufferpoolsize"></a>MaxBufferPoolSize  
+
  Veri türü: sint64  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bağlama için en fazla arabellek havuzu boyutu.  
+ Bağlama için en büyük arabellek havuzu boyutu.  
   
-### <a name="maxreceivedmessagesize"></a>maxReceivedMessageSize  
+### <a name="maxreceivedmessagesize"></a>Değerini  
+
  Veri türü: sint64  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bu bağlama tarafından işlenen bir ileti için en büyük boyutu.  
+ Bu bağlama tarafından işlenen bir ileti için boyut üst sınırı.  
   
 ### <a name="scheme"></a>Düzen  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Taşıma için kullanılacak URI düzeni.  
+ Taşımanın URI şeması.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

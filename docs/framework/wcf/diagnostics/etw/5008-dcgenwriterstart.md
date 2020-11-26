@@ -2,27 +2,30 @@
 title: 5008 - DCGenWriterStart
 ms.date: 03/30/2017
 ms.assetid: a132bd14-15e9-4a14-8a64-41ac85adf620
-ms.openlocfilehash: 5955c23aa4e220fc597945b4f68623d7459ad633
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61273ac5e56984a2b44d8ead98e2140a4c628bf8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61957307"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235577"
 ---
 # <a name="5008---dcgenwriterstart"></a>5008 - DCGenWriterStart
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|5008|  
-|anahtar sözcükler|Serileştirme|  
+|ID|5008|  
+|Anahtar sözcükler|Serileştirme|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay yayılan zaman DataContract oluşturmak yazıcı başlatır.  
+
+ Bu olay, DataContract oluşturma yazıcısı başladığında yayınlanır.  
   
 ## <a name="message"></a>İleti  
- DataContract başlangıç %2 için %1 yazıcı oluşturur.  
+
+ %2 için DataContract üretme %1 yazıcısı başladı.  
   
 ## <a name="details"></a>Ayrıntılar

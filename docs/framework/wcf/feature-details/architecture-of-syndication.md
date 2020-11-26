@@ -2,14 +2,15 @@
 title: Dağıtım Mimarisi
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 718778993a953ae819a2bee5a4a050a81d3a4b84
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc8c9cfbdc4f5d8ee01dfcf5098cfbc74afc2467
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234810"
 ---
 # <a name="architecture-of-syndication"></a>Dağıtım Mimarisi
+
 Dağıtım API 'SI, dağıtılmış içeriğin çok sayıda biçimde kabloda yazılmasına izin veren biçim nötr bir programlama modeli sağlamak üzere tasarlanmıştır. Soyut veri modeli aşağıdaki sınıflardan oluşur:  
   
 - <xref:System.ServiceModel.Syndication.SyndicationCategory>  
@@ -36,6 +37,7 @@ Dağıtım API 'SI, dağıtılmış içeriğin çok sayıda biçimde kabloda yaz
 > Atom 1,0 belirtimi, bir tarih yapılarından birinde kesirli saniye belirtilmesine izin verir. WCF uygulamasının serileştirilmesi ve serisi kaldırılırken Kesirli saniyeler yok sayılır.  
   
 ## <a name="object-model"></a>Nesne modeli  
+
  Dağıtım için nesne modeli, aşağıdaki tablolardaki sınıf gruplarından oluşur.  
   
  Sınıfları biçimlendirme:  

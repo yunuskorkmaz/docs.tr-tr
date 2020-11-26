@@ -9,14 +9,15 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
-ms.openlocfilehash: 6f54875d6aadb1da18cf25a1bec0a0e451f4a24c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3146d607392a590974f452e06eb5a8b125e58e69
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619565"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236370"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Derlemeleri Oluşturma
+
 [Tür kitaplığı alma programı (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) , com tür kitaplığı 'nda bulunan coclass 'ları ve arabirimlerin meta verilere dönüştürüldüğü bir komut satırı aracıdır. Bu araç otomatik olarak tür bilgileri için birlikte çalışma derlemesi ve ad alanı oluşturur. Bir sınıfın meta verileri kullanılabilir olduktan sonra, yönetilen istemciler COM türünde örnekler oluşturabilir ve kendi yöntemlerini, tıpkı bir .NET örneğinde olduğu gibi çağırabilir. Tlbimp.exe, tüm tür kitaplığını tek seferde meta verilere dönüştürür ve bir tür kitaplığında tanımlanan türlerin bir alt kümesi için tür bilgisi üretemiyor.  
   
 ### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>Bir tür kitaplığından birlikte çalışma derlemesi oluşturmak için  
@@ -28,6 +29,7 @@ ms.locfileid: "85619565"
      **/Out:** anahtarını eklemek, LOANLib.dll gibi değiştirilmiş bir ada sahip bir birlikte çalışma derlemesi üretir. Birlikte çalışma derleme adının değiştirilmesi, özgün COM DLL 'sinden ayırt etmenize yardımcı olabilir ve yinelenen adlara sahip olmadan oluşabilecek sorunları önleyebilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki komut ad alanında Loanlib.dll derlemesini üretir `Loanlib` .  
   
 ```console  

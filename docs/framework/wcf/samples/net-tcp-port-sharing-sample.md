@@ -2,14 +2,15 @@
 title: Net.TCP Bağlantı Noktası Paylaşımı Örneği
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 6c196380951d0da912cd937e3ebc38a03f80489c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fa62734ed6a4a016011c9f29b3665dae05a000c6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584318"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235395"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Bağlantı Noktası Paylaşımı Örneği
+
 TCP/IP protokolü, aynı makinede çalışan birden çok ağ uygulamasına olan bağlantıları ayırt etmek için bağlantı noktası olarak adlandırılan 16 bitlik bir sayı kullanır. Bir uygulama bir bağlantı noktasında dinliyorsa, bu bağlantı noktası için tüm TCP trafiği bu uygulamaya gider. Diğer uygulamalar bu bağlantı noktasını aynı anda dinleyemiyor.  
   
 > [!IMPORTANT]
@@ -34,6 +35,7 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
  Bağlantı noktası Paylaşımı, <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> <xref:System.ServiceModel.NetTcpBinding> bağlama veya bağlama öğesinin özelliği ayarlanarak sunucuda etkindir <xref:System.ServiceModel.Channels.TcpTransportBindingElement> . İstemci, bağlantı noktası paylaşımının sunucuda kullanmak üzere nasıl yapılandırıldığını öğrenmek zorunda değildir.  
   
 ## <a name="enabling-port-sharing"></a>Bağlantı noktası paylaşımını etkinleştirme  
+
  Aşağıdaki kod, sunucuda bağlantı noktası paylaşımını etkinleştirmeyi gösterir. `ICalculator`Rastgele BIR URI yolu olan sabit bir bağlantı noktasında hizmetin bir örneğini başlatır. İki hizmet aynı bağlantı noktasını paylaşsa da, NetTcp bağlantı noktası paylaşım hizmeti 'nin iletileri doğru uygulamaya yönlendirebilmesi için genel uç nokta adresleri yine de benzersiz olmalıdır.  
 
 ```csharp
@@ -56,6 +58,7 @@ Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is 
 ```  
   
 ## <a name="running-the-sample"></a>Örnek çalıştırma  
+
  Sınama istemcisini, iletilerin bağlantı noktasını paylaşan hizmetlere doğru yönlendirildiğini denetlemek için kullanabilirsiniz.  
 
 ```csharp
@@ -102,14 +105,14 @@ class client
 }  
 ```
 
- Hizmetin her örneği, benzersiz sayısını ve adresini yazdırır. Örneğin, Service. exe ' yi çalıştırdığınızda aşağıdaki metni görebilirsiniz.  
+ Hizmetin her örneği, benzersiz sayısını ve adresini yazdırır. Örneğin, service.exe çalıştırdığınızda aşağıdaki metni görebilirsiniz.  
   
 ```console  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
- Client. exe ' yi çalıştırdığınızda burada gördüğünüz hizmet numarasını girin.  
+ client.exe çalıştırdığınızda burada gördüğünüz hizmet numarasını girin.  
   
 ```console  
 Enter the service number to test: 4381  

@@ -3,14 +3,15 @@ title: ServiceModel Kayıt Aracı (ServiceModelReg.exe)
 description: Hizmet etkinleştirmesiyle ilgili sorunlar yaşıyorsanız, tek bir makineye WCF ve WF bileşenlerinin kaydedilmesini yönetmek için bu komut satırı aracını kullanın.
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 347b1b8071abe7d8eb7e16ffd879c1fdb9825bc7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: d8d5bc4dc3de021e2110fb953dbc4d6c7d7972d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245901"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235928"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel Kayıt Aracı (ServiceModelReg.exe)
+
 Bu komut satırı aracı, WCF ve WF bileşenlerinin tek bir makinede kaydını yönetme olanağı sağlar. Normal koşullarda, WCF ve WF bileşenleri yüklendiğinde yapılandırıldığı için bu aracı kullanmanız gerekmez. Ancak hizmet etkinleştirme ile ilgili sorun yaşıyorsanız, bu aracı kullanarak bileşenleri kaydetmeyi deneyebilirsiniz.  
   
 ## <a name="syntax"></a>Syntax  
@@ -20,16 +21,17 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Araç aşağıdaki konumda bulunabilir:  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation \  
   
 > [!NOTE]
-> Windows Vista 'da ServiceModel Kayıt Aracı çalıştırıldığında, **Windows özellikleri** iletişim kutusu **Microsoft .NET Framework 3,0** altında **Windows Communication Foundation HTTP Etkinleştirme** seçeneğinin açık olduğunu yansıtmayabilir. **Windows özellikleri** Iletişim kutusuna **Başlat**' a ve ardından **Çalıştır** ' a tıklayıp **OptionalFeatures**yazarak erişilebilir.  
+> Windows Vista 'da ServiceModel Kayıt Aracı çalıştırıldığında, **Windows özellikleri** iletişim kutusu **Microsoft .NET Framework 3,0** altında **Windows Communication Foundation HTTP Etkinleştirme** seçeneğinin açık olduğunu yansıtmayabilir. **Windows özellikleri** Iletişim kutusuna **Başlat**' a ve ardından **Çalıştır** ' a tıklayıp **OptionalFeatures** yazarak erişilebilir.  
   
  Aşağıdaki tablolarda ServiceModelReg.exe ile kullanılabilecek seçenekler açıklanır.  
   
-|Seçenek|Description|  
+|Seçenek|Açıklama|  
 |------------|-----------------|  
 |`-ia`|Tüm WCF ve WF bileşenlerini yükleme.|  
 |`-ua`|Tüm WCF ve WF bileşenlerini kaldırır.|  
@@ -43,6 +45,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-?`|Yardım metnini görüntüler|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>FileLoadException hatası düzeltiliyor  
+
  Daha önceki WCF sürümlerini makinenize yüklediyseniz, `FileLoadFoundException` Yeni bir yükleme kaydetmek Için ServiceModelReg aracını çalıştırdığınızda bir hata alabilirsiniz. Bu, önceki yüklemeden dosyaları el ile kaldırmış olsanız bile bu durum oluşabilir, ancak machine.config ayarları değişmeden kalır.  
   
  Hata iletisi aşağıdakine benzer.  
@@ -69,6 +72,7 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
  Bu dosyadaki "System. ServiceModel, Version = 2.0.0.0" öğesine başvuran XML düğümlerini bulun, bunları ve tüm alt düğümleri silin. Dosyayı kaydedin ve yeniden çalıştırın ServiceModelReg.exe bu sorunu çözer.  
   
 ## <a name="examples"></a>Örnekler  
+
  Aşağıdaki örneklerde ServiceModelReg.exe aracının en yaygın seçeneklerinin nasıl kullanılacağı gösterilmektedir.  
   
 ```console  

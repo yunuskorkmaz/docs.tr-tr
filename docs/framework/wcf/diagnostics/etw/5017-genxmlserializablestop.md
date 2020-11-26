@@ -2,27 +2,30 @@
 title: 5017 - GenXmlSerializableStop
 ms.date: 03/30/2017
 ms.assetid: 41f0d433-487a-4e48-b397-d8d7b6b64b50
-ms.openlocfilehash: ca6a891af0ab3a8ffec2549bef549e4e29517064
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42ed95a099f05d9dc25fa0ed5ed63f8a75347a08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999667"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235392"
 ---
 # <a name="5017---genxmlserializablestop"></a>5017 - GenXmlSerializableStop
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|5017|  
-|anahtar sözcükler|Serileştirme|  
+|ID|5017|  
+|Anahtar sözcükler|Serileştirme|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Xml seri hale getirilebilir oluşturma durduğunda bu olay yayılır.  
+
+ Bu olay, oluşturma XML 'i seri hale getirilebilir durdurulduğunda yayınlanır.  
   
 ## <a name="message"></a>İleti  
- XML seri hale getirilebilir durdurma oluşturur.  
+
+ Seri hale getirilebilir XML üretme durdu.  
   
 ## <a name="details"></a>Ayrıntılar

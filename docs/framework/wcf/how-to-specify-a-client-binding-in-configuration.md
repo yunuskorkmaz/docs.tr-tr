@@ -3,14 +3,15 @@ title: 'Nasıl yapılır: Yapılandırmada İstemci Bağlama Belirtme'
 description: Bir yapılandırma dosyasında bir WCF istemcisi için bağlamayı bildirimli olarak belirtmeyi öğrenin. İstemci bu örnekteki bir hizmete erişir.
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 28778b6ae853199c5d7943f329bb087760f4bb11
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e8a552211b28c1323b2afd595c5b060db6b2824a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244497"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236513"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Nasıl yapılır: Yapılandırmada İstemci Bağlama Belirtme
+
 Bu örnekte, bir hesap makinesi hizmeti kullanmak için bir istemci konsol uygulaması oluşturulur ve bu istemcinin bağlaması yapılandırmada bildirimli olarak belirtilir. İstemci, `CalculatorService` arabirimini uygulayan öğesine erişir `ICalculator` ve hem hizmet hem de istemci <xref:System.ServiceModel.BasicHttpBinding> sınıfını kullanır.  
   
  Özetlenen yordamda, hesap makinesi hizmetinin çalıştığı varsayılmaktadır. Hizmeti oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: yapılandırmada hizmet bağlaması belirtme](how-to-specify-a-service-binding-in-configuration.md). Ayrıca, istemci bileşenlerini otomatik olarak oluşturmak için Windows Communication Foundation (WCF) tarafından sağlanan [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) kullanır. Araç, hizmete erişmek için istemci kodunu ve yapılandırmasını üretir.  

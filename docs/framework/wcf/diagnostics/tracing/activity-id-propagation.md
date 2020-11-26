@@ -2,47 +2,53 @@
 title: Etkinlik Kimliği Yayma
 ms.date: 03/30/2017
 ms.assetid: cd1c1ae5-cc8a-4f51-90c9-f7b476bcfe70
-ms.openlocfilehash: 642d4da49f90d3fc6f2b0dfc9896d724acb075b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0f0478b16bf2ca0975ae0290a8855756ecfc383e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651816"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236110"
 ---
 # <a name="activity-id-propagation"></a>Etkinlik Kimliği Yayma
-ServiceModel Etkinlik izleme etkin (ServiceModel yayma) veya devre dışı (kullanıcı için Etkinlik yayma) olduğunda yayma olur.  
+
+Bir ServiceModel (ServiceModel yayma) veya devre dışı bırakıldığında (kullanıcıdan kullanıcıya etkinlik yayma), yayma gerçekleşir.  
   
-## <a name="servicemodel-activity-tracing-is-enabled"></a>ServiceModel Etkinlik izleme etkin  
- ServiceModel ActivityTracing etkinleştirilirse, yayma ProcessAction etkinlikler arasında gerçekleşir.  
+## <a name="servicemodel-activity-tracing-is-enabled"></a>ServiceModel etkinlik Izleme etkin  
+
+ ServiceModel ActivityTracing etkinse, işlem, ProcessAction etkinlikleri arasında gerçekleşir.  
   
 ### <a name="server"></a>Sunucu  
- Zaman `propagateActivity` özniteliği `true` hem istemci hem de sunucu kimliği `ProcessAction` sunucudaki etkinlik kimliği yayılan aynı `ActivityId` ileti üst bilgisi.  
+
+ `propagateActivity`Özniteliği hem istemcide hem de sunucuda olarak ayarlandığında `true` , `ProcessAction` sunucudaki etkinliğin kimliği, YAYıLAN ileti üstbilgisindeki kimlikle aynı olur `ActivityId` .  
   
- Hiçbir `ActivityId` başlığıdır iletide (diğer bir deyişle, `propagateActivity` = `false` istemci üzerinde), veya `propagateActivity` = `false` sunucuda, sunucunun yeni bir etkinlik kimliği oluşturur.  
+ `ActivityId`İletide (yani, `propagateActivity` = `false` istemcide) veya sunucuda bir başlık yoksa, `propagateActivity` = `false` sunucu yeni bir etkinlik kimliği oluşturur.  
   
 ### <a name="client"></a>İstemci  
- İstemcinin zaman uyumlu olarak tek iş parçacıklı olup olmadığını, istemci, herhangi bir ayarı yok sayar `propagateActivity` istemci veya sunucu. Bunun yerine, yanıt isteği etkinliğini ele alınır. İstemci zaman uyumlu veya zaman uyumsuz olması durumunda birden çok iş parçacıklı, `propagateActivity` = `true` istemci ve sunucu tarafından gönderilen ileti içinde bir etkinlik kimliği üst bilgisi yoktur, istemci etkinlik kimliği gelen iletiyi alır ve aktarır Yayılan etkinlik kimliğini içeren bir işlem eylem etkinliği Aksi takdirde istemci iletiyi işle etkinliği için yeni bir işlem eylem etkinliği aktarır. Bu ek aktarım için yeni bir işlem eylem etkinliği tutarlılık sağlamak için gerçekleştirilir. İş parçacığının yanıt ileti işleme için tahsis edildiğinde bu etkinliği içinde istemci yerel iş parçacığı bağlamından BeginCall etkinliğin etkinlik kimliği alır. Ardından, ilk işlem eylem etkinliği aktarır.  
+
+ İstemci eşzamanlı olarak tek iş parçacıklı ise istemci, `propagateActivity` istemci veya sunucu üzerinde herhangi bir ayarı yoksayar. Bunun yerine, yanıt istek etkinliğinde işlenir. İstemci, istemcide zaman uyumsuz veya zaman uyumlu iş parçacıklı ise `propagateActivity` = `true` ve sunucu tarafından gönderilen iletide bir etkinlik kimliği üst bilgisi varsa, istemci, iletideki etkinlik kimliğini alır ve yayılan etkinlik kimliğini içeren işlem eylemi etkinliğine aktarır. Aksi halde istemci, Işlem Iletisi etkinliğinden yeni bir Işlem eylemi etkinliğine aktarır. Yeni bir Işlem eylemi etkinliğine yönelik bu ek aktarım, tutarlılık açısından yapılır. Bu etkinliğin içinde istemci, iş parçacığı yanıt iletisi işleme için ayrıldığında yerel iş parçacığı bağlamından BeginCall etkinliğinin etkinlik KIMLIĞINI alır. Ardından ilk Işlem eylemi etkinliğine aktarır.  
   
- İstemci, istemci çift yönlü ise, iletiyi almak için sunucuda görür.  
+ İstemci çift yönlü ise, istemci iletiyi alırken sunucu olarak davranır.  
   
-### <a name="propagation-in-fault-messages"></a>Hata iletileri yayma  
- Geçerli işleme ve hata iletileri fark yoktur. Varsa `propagateActivity` = `true`, SOAP hatası ileti üstbilgilerini eklenen etkinlik kimliği ortam etkinlik için aynıdır.  
+### <a name="propagation-in-fault-messages"></a>Hata Iletilerinde yayma  
+
+ Geçerli ve hata iletilerini işlemede fark yoktur. İse `propagateActivity` = `true` , SOAP hata iletisi başlıklarına eklenen etkinlik kimliği çevresel etkinliklerle aynıdır.  
   
-## <a name="servicemodel-activity-tracing-is-disabled"></a>ServiceModel etkinliği izleme devre dışı bırakıldı  
- ServiceModel ActivityTracing devre dışıysa, yayma ServiceModel etkinlikleri giden olmadan doğrudan kullanıcı kodu etkinlikler arasında gerçekleşir. Bir kullanıcı tanımlı etkinlik kimliği de ileti etkinlik kimliği üst bilgisi dağıtılır.  
+## <a name="servicemodel-activity-tracing-is-disabled"></a>ServiceModel etkinliği Izleme devre dışı  
+
+ ServiceModel ActivityTracing devre dışıysa, doğrudan ServiceModel etkinliklerine geçmeden Kullanıcı kodu etkinlikleri arasında yayma yapılır. Kullanıcı tanımlı bir etkinlik KIMLIĞI de ileti etkinlik KIMLIĞI üst bilgisi aracılığıyla dağıtılır.  
   
- Varsa `propagateActivity` = `true` ve `ActivityTracing` = `off` ServiceModel izleme dinleyicisi (bakılmaksızın izleme ServiceModel üzerinde etkin olup olmadığı) istemci veya sunucu üzerinde şunlar:  
+ `propagateActivity` = `true` Ve `ActivityTracing` = `off` bir ServiceModel Trace dinleyicisi için (izlemenin ServiceModel üzerinde etkin olup olmamasına bakılmaksızın), istemci veya sunucuda aşağıdakiler gerçekleşir:  
   
-- Bir ileti biçimlendirilmiş kadar işlem istek veya yanıt göndererek, TLS etkinlik kimliği kullanıcı kodunun yayılır. Gönderilmeden önce bir etkinlik kimliği üst bilgisi da iletiye eklenir.  
+- İşlem isteği veya gönderme yanıtı üzerinde, bir ileti oluşturuluncaya kadar, TLS 'deki etkinlik KIMLIĞI kullanıcı kodundan dağıtılır. Bir etkinlik KIMLIĞI üst bilgisi, gönderilmeden önce iletiye de eklenir.  
   
-- Alınan ileti nesne oluşturulduktan hemen sonra isteği alındığında veya yanıt alma, etkinlik kimliği ileti başlığından alınır. Kullanıcı kodu ulaşılana kadar ileti kapsamından kaybolur hemen sonra TLS etkinlik kimliği yayılır.  
+- İstek veya alma yanıtı alındığında, alınan ileti nesnesi oluşturulduktan hemen sonra etkinlik KIMLIĞI ileti başlığından alınır. Kullanıcı koduna ulaşılana kadar, ileti kapsamdan kaybolduktan sonra TLS 'deki etkinlik KIMLIĞI dağıtılır.  
   
- Bu Eylemler, kullanıcı izlemeleri yayma açıksa aynı etkinliğin görünür garanti. Ancak, üzerinde ServiceModel izlemeleri garanti etmez. ServiceModel izlemeleri kullanıcı kod etkinliğinde ortaya yalnızca izlemeleri işlenmesini kullanıcı kod etkinliği ayarlandığı aynı iş parçacığında yürütülür.  
+ Bu eylemler, yayma açık ise Kullanıcı izlemelerinin aynı etkinlikte görüneceğini garanti eder. Ancak, ServiceModel izlemelerinde garanti vermez. Yalnızca bu izlemelerin işlenmesi Kullanıcı kodu etkinliğinin ayarlandığı iş parçacığında yürütülürse, ServiceModel izlemeleri bir Kullanıcı kodu etkinliğinde oluşur.  
   
- Genel olarak, aşağıdaki konumlarda ServiceModel izlemeleri gösterilebilir:  
+ Genel olarak, ServiceModel izlemeleri aşağıdaki yerlerde gözlemlenebilir:  
   
-- ServiceModel izlemeyi devre dışı bırakılırsa kullanıcı etkinliklerini verilmiş tüm izlemeleri görünür. Yayma hem sunucu hem de istemci sırasında etkin olduğunda bu izlemelerin aynı etkinliğin olacaktır.  
+- ServiceModel izleme devre dışıysa, tüm yayınlanan izlemeler Kullanıcı etkinlikleri ' nde görünür. Hem sunucu hem de istemcide yayma etkinse, bu izlemeler aynı etkinlikte olacaktır.  
   
-- Yayma iki ucu da etkinse, kullanıcı izlemeleri ServiceModel izleme etkinleştirildi, ancak ActivityTracing devre dışı bırakıldı, aynı etkinliğin görünür. Etkinlik başlangıçta ayarlandığı kullanıcı kodu işleme olarak aynı iş parçacığında ortaya sürece ServiceModel izlemeleri varsayılan 0000 etkinliğinde görüntülenir.  
+- ServiceModel izleme etkinse ancak ActivityTracing devre dışıysa, her iki uçta de yayma etkinse kullanıcı izlemeleri aynı etkinlikte görüntülenir. ServiceModel izlemeleri, etkinliğin başlangıçta ayarlandığı Kullanıcı kodu işlemeyle aynı iş parçacığında gerçekleşmedikleri sürece varsayılan 0000 etkinliğinde görüntülenir.  
   
-- ServiceModel izleme hem ActivityTracing etkinleştirilirse, kullanıcının kullanıcı tanımlı etkinlikler görüntülenir ve ServiceModel izlemeleri ServiceModel tanımlı etkinlikler görünür. Yayma ServiceModel düzeyinde gerçekleşir.
+- Hem ServiceModel izleme hem de ActivityTracing etkinse, kullanıcı izlemeleri Kullanıcı tanımlı etkinliklerde görünür ve ServiceModel izlemeleri ServiceModel tarafından tanımlanan etkinliklerde görüntülenir. Yayma, ServiceModel düzeyinde gerçekleşir.

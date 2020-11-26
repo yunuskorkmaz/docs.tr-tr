@@ -2,31 +2,32 @@
 title: JSON ve XML Arasında Eşleme
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: 55812ad15d1f38bb0c295e6895dfff329035206d
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 649d0f50aae806394587c7b79a7970c2de03e087
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464061"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234654"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON ve XML Arasında Eşleme
-Okuyucular ve yazarlar tarafından <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> üretilen JavaScript Nesne Gösterimi (JSON) içeriği üzerinde bir XML API sağlar. JSON, JavaScript nesnesi literallerinin bir alt kümesini kullanarak verileri kodlar. Bu fabrika tarafından üretilen okuyucular ve yazarlar da JSON içeriği gönderildiğinde veya Windows Communication Foundation <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> (WCF) uygulamaları tarafından alınan veya . <xref:System.ServiceModel.WebHttpBinding>
 
-JSON içeriği yle baş harfe battığında, JSON okuyucusu metinsel bir XML okuyucusunun XML örneği üzerinden yaptığı gibi çalışır. JSON yazar, bir metin XML okuyucu belirli bir XML örneği üretir aramaları bir dizi verildiğinde, JSON içerik yazar. XML ve JSON içeriğinin bu örneği arasındaki eşleme, gelişmiş senaryolarda kullanılmak üzere bu konuda açıklanmıştır.
+Tarafından üretilen okuyucular ve yazıcılar, <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> JavaScript nesne gösterimi (JSON) içeriğine yönelik BIR XML API 'si sağlar. JSON, JavaScript 'in nesne sabit değerlerinin bir alt kümesini kullanarak verileri kodlar. Bu fabrika tarafından üretilen okuyucular ve yazıcılar, veya kullanılarak JSON içeriği gönderilirken veya Windows Communication Foundation (WCF) uygulamalar tarafından alındığında da kullanılır <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> <xref:System.ServiceModel.WebHttpBinding> .
 
-Dahili olarak, JSON WCF tarafından işlendiğinde bir XML bilgi seti olarak temsil edilir. Normalde eşleme sadece mantıklı bir olduğu gibi bu iç gösterimi ile ilgili olmak zorunda değildir: JSON normalde fiziksel bellekxml dönüştürülür veya XML JSON dönüştürülür değildir. Eşleme, XML API'lerinin JSON içeriğine erişmek için kullanıldığı anlamına gelir.
+JSON içeriğiyle birlikte başlatıldığında JSON okuyucusu, metinsel XML okuyucusu bir XML örneğinin üzerinde çalıştığı şekilde davranır. JSON yazarı, bir metinsel XML okuyucusuna yönelik bir dizi çağrının belirli bir XML örneğini oluşturduğu durumlarda JSON içeriğini yazar. Bu XML örneği ile JSON içeriği arasındaki eşleme, bu konuda Gelişmiş senaryolarda kullanılmak üzere açıklanmaktadır.
 
-WCF JSON kullandığında, olağan senaryo, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> davranış tarafından veya uygun olduğunda <xref:System.ServiceModel.Description.WebHttpBehavior> davranış tarafından otomatik olarak takılı olmasıdır. JSON <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ve XML bilgi seti arasındaki haritalama anlar ve doğrudan JSON ile ilgileniyor gibi davranır. (Herhangi bir XML <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> okuyucu veya yazar ile, XML aşağıdaki haritalama uygun olduğu anlayışı ile kullanmak mümkündür.)
+Dahili olarak, JSON, WCF tarafından işlendiğinde bir XML bilgi kümesi olarak temsil edilir. Normalde, eşleme yalnızca mantıksal bir değer olduğu için bu iç gösterimle ilgilenmemeniz gerekmez: JSON normalde bellekteki XML 'e fiziksel olarak dönüştürülmez veya XML 'den JSON 'a dönüştürülmez. Eşleme, XML API 'Lerinin JSON içeriğine erişmek için kullanıldığı anlamına gelir.
 
-Gelişmiş senaryolarda, aşağıdaki eşleme doğrudan erişmek için gerekli olabilir. Bu senaryolar, JSON'u özel yollarla seri hale getirmek ve deserialize etmek istediğinizde, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>json içeren iletiler için <xref:System.ServiceModel.Channels.Message> doğrudan türle uğraşırken oluşur. JSON-XML eşleme, ileti günlüğe kaydetme için de kullanılır. WCF'de ileti günlüğe kaydetme özelliğini kullanırken, JSON iletileri bir sonraki bölümde açıklanan eşleme yle XML olarak günlüğe kaydedilir.
+WCF JSON kullandığında, her zamanki senaryo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> otomatik olarak <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> davranışa göre veya <xref:System.ServiceModel.Description.WebHttpBehavior> uygun olduğunda davranışa göre prize takılır. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>JSON Ile xml bilgi kümesi arasındaki eşlemeyi anlamıştır ve doğrudan JSON ile ilgilendiği gibi davranır. ( <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> XML 'nin aşağıdaki eşlemeye uygun olduğunu anlamak için herhangi BIR XML okuyucusu veya yazıcı ile kullanabilirsiniz.)
 
-Eşleme kavramını açıklığa kavuşturmak için aşağıdaki örnek bir JSON belgesidir.
+Gelişmiş senaryolarda, aşağıdaki eşlemeye doğrudan erişmek için gerekli hale gelebilir. Bu senaryolar, JSON 'u özel yöntemlerle seri hale getirmek ve seri durumdan çıkarmak istediğinizde, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> veya <xref:System.ServiceModel.Channels.Message> doğrudan JSON içeren iletiler için tür ile ilgilenirken oluşur. JSON-XML eşlemesi de ileti günlüğe kaydetme için kullanılır. WCF 'de ileti günlüğü özelliğini kullanırken JSON iletileri, sonraki bölümde açıklanan eşlemeye göre XML olarak günlüğe kaydedilir.
+
+Bir eşlemenin kavramını netleştirmek için aşağıdaki örnek bir JSON belgesidir.
 
 ```json
 {"product":"pencil","price":12}
 ```
 
-Daha önce bahsedilen okuyuculardan birini kullanarak bu JSON belgesini <xref:System.Xml.XmlDictionaryReader> okumak için, aşağıdaki XML belgesini okumak için yaptığınız gibi aynı arama sırasını kullanın.
+Daha önce bahsedilen okuyuculardan birini kullanarak bu JSON belgesini okumak için, <xref:System.Xml.XmlDictionaryReader> AŞAĞıDAKI XML belgesini okumak için kullandığınız her bir çağrı dizisini kullanın.
 
 ```xml
 <root type="object">
@@ -35,46 +36,46 @@ Daha önce bahsedilen okuyuculardan birini kullanarak bu JSON belgesini <xref:Sy
 </root>
 ```
 
-Ayrıca, örnekteki JSON iletisi WCF tarafından alınır ve günlüğe kaydedilirse, önceki günlükte XML parçasını görürsünüz.
+Ayrıca, örnekteki JSON iletisi WCF tarafından alınıp günlüğe kaydedildiğinde, XML parçasını önceki günlükte görürsünüz.
 
-## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON ve XML Bilgi Seti Arasında Haritalama
+## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON ile XML bilgi kümesi arasında eşleme
 
-Resmi olarak, haritalama JSON arasında [rfc 4627](https://www.ietf.org/rfc/rfc4627.txt) açıklandığı gibi (bazı kısıtlamalar rahat ve bazı diğer kısıtlamalar hariç) ve [XML Bilgi Seti](https://www.w3.org/TR/2004/REC-xml-infoset-20040204/)açıklandığı gibi XML bilgi kümesi (ve metinsel XML) . [Kare ayraçlarda] *bilgi öğeleri* ve alanları tanımları için bu konuya bakın.
+Yani, eşleme, [RFC 4627](https://www.ietf.org/rfc/rfc4627.txt) ' de AÇıKLANDıĞı gibi JSON arasındadır (bazı kısıtlamalar gevşek ve diğer diğer kısıtlamalar hariç) ve XML [bilgi kümesi](https://www.w3.org/TR/2004/REC-xml-infoset-20040204/)Içinde açıklandığı gibi xml bilgi KÜMESI (ve metinsel XML değildir). [Köşeli ayraç] içindeki *bilgi öğelerinin* ve alanlarının tanımları için bu konuya bakın.
 
-Boş bir JSON belgesi boş bir XML belgesine eşler ve boş bir JSON belgesine boş bir XML belge eşlemleri. XML'den JSON eşlemesine, beyaz boşluktan önce ve belgeden sonra beyaz boşluk tan sonra izbırakana izin verilmez.
+Boş bir JSON belgesi boş bir XML belgesiyle eşlenir ve boş bir XML belgesi boş bir JSON belgesiyle eşlenir. XML-JSON eşlemesinde, önceki boşluk ve belgenin sonundaki beyaz boşluk kullanılamaz.
 
-Eşleme, Belge Bilgi Öğesi (DII) veya Bir Öğe Bilgi Öğesi (EII) ve JSON arasında tanımlanır. EII veya DII'nin [belge öğesi] özelliği Root JSON Öğesi olarak adlandırılır. Bu eşlemede belge parçalarının (birden çok kök öğeye sahip XML) desteklenmediğini unutmayın.
+Eşleme, bir belge bilgisi öğesi (DII) veya bir öğe bilgisi öğesi (EII) ve JSON arasında tanımlanır. EII veya DII 'ın [Document element] özelliği kök JSON öğesi olarak adlandırılır. Belge parçalarının (birden çok kök öğe içeren XML) bu eşlemede desteklenmediğini unutmayın.
 
-Örnek: Aşağıdaki belge:
+Örnek: aşağıdaki belge:
 
 ```xml
 <?xml version="1.0"?>
 <root type="number">42</root>
 ```
 
-Ve aşağıdaki unsur:
+Ve aşağıdaki öğesi:
 
 ```xml
 <root type="number">42</root>
 ```
 
-İkisinin de JSON'a ait bir haritası var. <`root`> öğesi her iki durumda da Root JSON Öğesidir.
+Her ikisinde de JSON eşleştirmesi vardır. <`root`> öğesi her iki durumda da kök JSON öğesidir.
 
-Ayrıca, bir DII durumunda, aşağıdaki ler göz önünde bulundurulmalıdır:
+Ayrıca, bir DII söz konusu olduğunda aşağıdakiler göz önünde bulundurulmalıdır:
 
-- [Çocuklar] listesindeki bazı öğeler bulunmamalıdır. JSON'dan haritalanmış XML okurken bu gerçeğe güvenmeyin.
+- [Children] listesindeki bazı öğeler mevcut olmamalıdır. JSON 'dan eşlenen XML 'yi okurken bu olguyu kullanmayın.
 
-- [çocuklar] listesinde yorum bilgisi öğesi bulunmamaktadır.
+- [Children] listesinde yorum bilgisi öğesi yoktur.
 
-- [Çocuklar] listesinde DTD bilgi öğesi bulunmamaktadır.
+- [Children] listesinde DTD bilgisi öğesi yoktur.
 
-- [çocuklar] listesinde hiçbir kişisel Bilgi (PI) `<?xml…>` bilgi öğesi bulunmamaktadır (bildirim PI bilgi öğesi olarak kabul edilmez)
+- [Children] listesi hiçbir kişisel bilgi (PI) bilgi öğesi bulundurmaz ( `<?xml…>` bildirim BIR PI bilgi öğesi olarak değerlendirilmez)
 
-- [notasyonlar] kümesi boş.
+- [Gösterimler] kümesi boş.
 
-- [Ayrıştırılmamış varlıklar] kümesi boştur.
+- [Ayrıştırılmamış varlıklar] kümesi boş.
 
-Örnek: [çocuklar] bir PI ve yorum tuttuğundan, aşağıdaki belgenin JSON ile eşleme leri yoktur.
+Örnek: Şu belgede JSON ile eşleme yok çünkü [children] bir PI ve bir açıklama barındırır.
 
 ```xml
 <?xml version="1.0"?>
@@ -82,74 +83,74 @@ Ayrıca, bir DII durumunda, aşağıdaki ler göz önünde bulundurulmalıdır:
 <root type="number">42</root>
 ```
 
-Kök JSON Öğesi için EII aşağıdaki özelliklere sahiptir:
+Kök JSON öğesi için EII aşağıdaki özelliklere sahiptir:
 
-- [yerel ad] değeri "kök" vardır.
+- [yerel ad] "root" değerine sahip.
 
-- [namespace adı] hiçbir değeri vardır.
+- [Namespace Name] değeri yok.
 
-- [önek] hiçbir değeri vardır.
+- [önek] değeri yok.
 
-- [çocuklar] EII (daha fazla açıklandığı şekilde Iç Öğeleri temsil eden) veya CIIs (daha fazla açıklandığı gibi Karakter Bilgi Öğeleri) veya bunların hiçbiri, ancak her ikisi de içerebilir.
+- [children], Eine (daha fazla açıklandığı gibi Iç öğeleri temsil eder) veya CIAS (daha fazla açıklanacak olan karakter bilgileri öğeleri) ya da bunlardan hiçbirini (daha fazlasını değil) içerebilir.
 
-- [öznitelikler] aşağıdaki isteğe bağlı öznitelik bilgi öğelerini (AIIs) içerebilir
+- [öznitelikler] aşağıdaki isteğe bağlı öznitelik bilgileri öğelerini içerebilir (AIIS)
 
-- JSON Türü Özniteliği ("türü") daha ayrıntılı olarak açıklanmıştır. Bu öznitelik, eşlenen XML'deki JSON türünü (dize, sayı, boolean, nesne, dizi veya null) korumak için kullanılır.
+- Daha ayrıntılı olarak açıklandığı gibi JSON türü özniteliği ("tür"). Bu öznitelik, eşlenmiş XML 'de JSON türünü (dize, sayı, Boolean, nesne, dizi veya null) korumak için kullanılır.
 
-- Daha sonra açıklandığı gibi\_\_Veri Sözleşmesi Adı Atfı (" türü"). Bu öznitelik yalnızca JSON türü özniteliği de varsa ve [normalleştirilmiş değeri] "nesne" ise kullanılabilir. Bu öznitelik, veri `DataContractJsonSerializer` sözleşmesi türü bilgilerini korumak için kullanılır - örneğin, türemiş bir türün serihale edildiği ve taban türünün beklendiği çok biçimli durumlarda. Çoğu durumda `DataContractJsonSerializer`, bu öznitelik ile çalışmıyorsanız, bu öznitelik yoksayılır.
+- Daha ayrıntılı olarak açıklandığı gibi, veri anlaşması adı özniteliği (" \_ \_ tür"). Bu öznitelik yalnızca JSON türü özniteliği de varsa ve [normalleştirilmiş değer] değeri "Object" ise mevcut olabilir. Bu öznitelik, `DataContractJsonSerializer` veri anlaşması türü bilgilerini korumak için tarafından kullanılır; Örneğin, türetilmiş bir türün serileştirildiği ve temel bir türün beklendiği çok biçimli durumlarda. İle çalışmıyorsanız, `DataContractJsonSerializer` çoğu durumda bu öznitelik yok sayılır.
 
-- [kapsam içi ad alanları] infoset belirtimi `http://www.w3.org/XML/1998/namespace` tarafından zorunlu olarak "xml" bağlama içerir.
+- [kapsam içi ad alanları], "xml" öğesinin `http://www.w3.org/XML/1998/namespace` bilgi kümesi belirtimine göre uygulanan olarak bağlamasını içerir.
 
-- [alt], [öznitelikler] ve [kapsam içi ad alanları] daha önce belirtildiği gibi dışında herhangi bir öğe ye sahip olmamalıdır ve [ad alanı öznitelikleri] üye olmamalıdır, ancak JSON'dan eşlenen XML'i okurken bu gerçeklere güvenmeyin.
+- [children], [öznitelikler] ve [kapsam içi ad alanları], daha önce belirtildiği gibi herhangi bir öğeye sahip olmamalıdır ve [ad alanı öznitelikleri] hiçbir üye içermemelidir, ancak JSON 'dan eşlenen XML 'yi okurken bu olgulara güvenmeyin.
 
-Örnek: [namespace öznitelikleri] boş olmadığından aşağıdaki belgejson eşleme vardır.
+Örnek: Şu belgenin JSON ile eşlemesi yok, çünkü [ad alanı öznitelikleri] boş değil.
 
 ```xml
 <?xml version="1.0"?>
 <root xmlns:a="myattributevalue">42</root>
 ```
 
-JSON Türü Özniteliği için AII aşağıdaki özelliklere sahiptir:
+JSON türü özniteliği için AII aşağıdaki özelliklere sahiptir:
 
-- [namespace adı] hiçbir değeri vardır.
-- [önek] hiçbir değeri vardır.
-- [yerel ad] "türü".
+- [Namespace Name] değeri yok.
+- [önek] değeri yok.
+- [yerel ad] "tür".
 - [normalleştirilmiş değer] aşağıdaki bölümde açıklanan olası tür değerlerinden biridir.
-- [belirtilen] `true`olduğunu.
-- [öznitelik türü] hiçbir değeri vardır.
-- [referanslar] hiçbir değeri vardır.
+- [belirtilen] `true` .
+- [öznitelik türü] bir değere sahip değil.
+- [References] değeri yok.
 
-Veri Sözleşmesi Adı Özniteliği için AII aşağıdaki özelliklere sahiptir:
+Veri anlaşması adı özniteliği için AII aşağıdaki özelliklere sahiptir:
 
-- [namespace adı] hiçbir değeri vardır.
-- [önek] hiçbir değeri vardır.
-- [yerel ad]\_\_" type" (iki alt ve sonra "yazın") olduğunu.
-- [normalleştirilmiş değer] geçerli bir Unicode dizesidir – bu dizenin JSON ile eşlenemesi aşağıdaki bölümde açıklanmıştır.
-- [belirtilen] `true`olduğunu.
-- [öznitelik türü] hiçbir değeri vardır.
-- [referanslar] hiçbir değeri vardır.
+- [Namespace Name] değeri yok.
+- [önek] değeri yok.
+- [yerel ad] " \_ \_ tür" (iki alt çizgi ve sonra "tür").
+- [normalleştirilmiş değer] geçerli herhangi bir Unicode dizesidir: Bu dizenin JSON ile eşlenmesi aşağıdaki bölümde açıklanmıştır.
+- [belirtilen] `true` .
+- [öznitelik türü] bir değere sahip değil.
+- [References] değeri yok.
 
-Kök JSON Öğesi veya diğer iç öğeler içinde bulunan iç öğeler aşağıdaki özelliklere sahiptir:
+Kök JSON öğesi veya diğer iç öğeler içinde yer alan iç öğeler aşağıdaki özelliklere sahiptir:
 
-- [yerel ad] daha sonra açıklandığı gibi herhangi bir değere sahip olabilir.
-- [namespace name], [önek], [altlar], [öznitelikler], [ad alanı öznitelikleri]ve [kapsam içi ad alanları] Root JSON Öğesi ile aynı kurallara tabidir.
+- [yerel ad] daha fazla açıklanacak şekilde herhangi bir değere sahip olabilir.
+- [ad alanı adı], [önek], [alt öğeler], [öznitelikler], [ad alanı öznitelikleri] ve [kapsam içi ad alanları], kök JSON öğesiyle aynı kurallara tabidir.
 
-Hem Root JSON Öğesi hem de iç öğelerde, JSON Türü Özniteliği JSON ve olası [çocuklar] ve bunların yorumlanması için eşleme tanımlar. Özniteliğin [normalleştirilmiş değeri] büyük/küçük türdedir ve küçük olmalıdır ve beyaz boşluk içeremez.
+Hem kök JSON öğesinde hem de iç öğelerde, JSON türü özniteliği JSON ve olası [alt öğeler] ve yorumlarına yönelik eşlemeyi tanımlar. Özniteliğin [normalleştirilmiş değer] büyük küçük harfe duyarlıdır ve küçük harfle yazılmalıdır ve boşluk içeremez.
 
-|JSON Tipi Öznitelik'in AII[normalleştirilmiş değeri]|İlgili EII'nin [çocuklarına] izin verilmesi|JSON için Haritalama|
+|[normalleştirilmiş değer] JSON türü özniteliğinin AII|Karşılık gelen EII izin verilen [alt öğe]|JSON ile eşleme|
 |---------------------------------------------------------|---------------------------------------------------|---------------------|
-|`string`(veya JSON tipi AII'nin yokluğu)<br /><br /> A `string` ve JSON türü AII yokluğu varsayılan `string` yapar aynıdır.<br /><br /> Yani, `<root> string1</root>` JSON `string` "string1" için haritalar.|0 veya daha fazla CIIs|Bir JSON `string` (JSON RFC, bölüm 2.5). Her `char` biri CII'deki [karakter koduna] karşılık gelen bir karakterdir. Hiçbir CIIs varsa, boş bir JSON `string`için eşler.<br /><br /> Örnek: Aşağıdaki öğe bir JSON parçasıyla eşler:<br /><br /> `<root type="string">42</root>`<br /><br /> JSON parçası "42".<br /><br /> XML'den JSON eşlemesine, kaçan karakterlere haritadan kaçan karakterler, diğerleri kaçamayan karakterlerle eşlenir. "/" karakteri özeldir – olması gerekmese bile kaçar ("\\/" olarak yazılır).<br /><br /> Örnek: Aşağıdaki öğe bir JSON parçasıyla eşler.<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> JSON parçası \\"da\\/ta"dır.\\<br /><br /> JSON'dan XML eşlemesine kadar, kaçan karakterler ve karakterler ilgili [karakter kodu] ile doğru bir şekilde eşlenir.<br /><br /> Örnek: JSON parçası "\u0041BC", aşağıdaki XML öğesine eşler.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Dize, XML'e eşlenen eteklere girmiyor beyaz boşluk (JSON RFC'nin bölüm 2'sinde'ws' ile çevrelenebilir.<br /><br /> Örnek: JSON parçası "ABC", (ilk çift teklifönce boşluklar vardır), aşağıdaki XML öğesine eşler.<br /><br /> `<root type="string">ABC</root>`<br /><br /> XML haritalarında json beyaz uzay için herhangi bir beyaz boşluk.<br /><br /> Örnek: Aşağıdaki XML öğesi bir JSON parçasıyla eşler.<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> JSON parçası " A BC ".|
-|`number`|1 veya daha fazla CIIs|Bir JSON `number` (JSON RFC, bölüm 2.4), muhtemelen beyaz alan ile çevrili. Sayı/beyaz boşluk birleşimindeki her karakter, CII'deki [karakter koduna] karşılık gelen bir karakterdir.<br /><br /> Örnek: Aşağıdaki öğe bir JSON parçasıyla eşler.<br /><br /> `<root type="number">    42</root>`<br /><br /> JSON parçası 42<br /><br /> (Beyaz alan korunur).|
-|`boolean`|4 veya 5 CiIs (karşılık gelir `true` veya `false`), muhtemelen ek beyaz alan CIIs ile çevrili.|Dize "true" karşılık gelen bir CII dizisi literal `true`eşlenir ve dize karşılık gelen bir CII dizisi "yanlış" `false`literal eşlenir. Çevreleyen beyaz alan korunur.<br /><br /> Örnek: Aşağıdaki öğe bir JSON parçasıyla eşler.<br /><br /> `<root type="boolean"> false</root>`<br /><br /> JSON `false`parçası.|
-|`null`|Hiçbiri izin vermedi.|`null`Gerçek. JSON'dan XML haritalamaya kadar, xml'e eşlenen alamadım beyaz boşluk ('ws' bölüm 2) ile çevrili `null` olabilir.<br /><br /> Örnek: Aşağıdaki öğe bir JSON parçasıyla eşler.<br /><br /> `<root type="null"/>`<br /><br /> or<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> Her iki durumda da `Null`JSON parçası .|
-|`object`|0 veya daha fazla ÇED.|JSON RFC'nin bölüm 2.2'sinde olduğu gibi bir `begin-object` (sol kıvırcık ayraç) ve ardından her EII için bir üye kaydı daha da açıklandığı şekilde anlatılmaktadır. Birden fazla EII varsa, üye kayıtlar arasında değer ayırıcılar (virgüller) vardır. Tüm bu bir son nesne (sağ kıvırcık ayraç) tarafından takip edilir.<br /><br /> Örnek: Aşağıdaki öğe JSON parçasıyla eşler.<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> JSON `{"type1":"aaa","type2":"bbb"}`parçası.<br /><br /> XML'de JSON eşlemesinde Veri Sözleşmesi Türü Özniteliği varsa, başlangıçta ek bir Üye Kaydı eklenir. Adı, Veri Sözleşmesi Türü Özniteliğinin (" türü")\_\_[yerel adı] ve değeri özniteliğin [normalleştirilmiş değeri] dir. Tam tersine, JSON'dan XML eşlemesine, ilk üye kaydın adı Veri Sözleşmesi Türü Özniteliğinin [yerel adı] ise (yani" türü"),\_\_eşlenen XML'de karşılık gelen bir Veri Sözleşmesi Türü Özniteliği bulunur, ancak ilgili EII mevcut değildir. Bu özel eşlemenin uygulanabilmesi için bu üye kaydının önce JSON nesnesinde oluşması gerektiğini unutmayın. Bu, üye kayıtlarının sırasının önemli olmadığı olağan JSON işleminden ayrılmayı temsil eder.<br /><br /> Örnek:<br /><br /> Aşağıdaki JSON parçası XML eşler.<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> XML aşağıdaki koddur.<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> \_ \_AII türünün mevcut olduğuna, ancak \_ \_EII türü olmadığına dikkat edin.<br /><br /> Ancak, JSON'daki sıra aşağıdaki örnekte gösterildiği gibi tersine çevrilir.<br /><br /> `{"name":"John","\_\_type":"Person"}`<br /><br /> Karşılık gelen XML gösterilir.<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> Yani, \__type özel bir anlamı ve haritaları her zamanki gibi bir EII değil, AII için durur.<br /><br /> Bir JSON değerieşlendiğinde AII'nin [normalleştirilmiş değeri] için kaçan/kaçan kurallar, bu tablonun "dize" satırında belirtilen JSON dizeleri ile aynıdır.<br /><br /> Örnek:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> önceki örnekte aşağıdaki JSON eşlenebilir.<br /><br /> `{"__type":"\\abc"}`<br /><br /> XML ile JSON eşleme de ilk EII'nin [yerel\_\_adı] "türü" olmamalıdır.<br /><br /> Beyaz boşluk`ws`( ) nesneler için JSON eşleme XML üzerinde oluşturulan asla ve XML eşleme JSON üzerinde yoksayılır.<br /><br /> Örnek: Aşağıdaki JSON parçası bir XML öğesine eşler.<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> XML öğesi aşağıdaki kodda gösterilir.<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
-|array|0 veya daha fazla ÇED|JSON RFC'nin bölüm 2.3'ünde olduğu gibi bir başlangıç dizisi (sol kare ayraç), ardından her EII için daha fazla açıklandığı şekilde bir dizi kaydı. Birden fazla EII varsa, dizi kayıtları arasında değer ayırıcılar (virgüller) vardır. Tüm bunları bir son dizi takip ediyor.<br /><br /> Örnek: Aşağıdaki XML öğesi bir JSON parçasıyla eşler.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> JSON parçası.`["aaa","bbb"]`<br /><br /> Beyaz boşluk`ws`( ) diziler için JSON eşleme XML üzerinde oluşturulan asla ve XML eşleme JSON üzerinde yoksayılır.<br /><br /> Örnek: Bir JSON parçası.<br /><br />`["aaa", "bbb"]`<br /><br /> Eşlenebilen XML öğesi.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
+|`string` (veya JSON türü AII yokluğu)<br /><br /> A `string` ve JSON türü AII yokluğu, varsayılan olarak aynı olur `string` .<br /><br /> Bu nedenle, `<root> string1</root>` JSON `string` "Dize1" ile eşlenir.|0 veya daha fazla CIO|JSON `string` (JSON RFC, bölüm 2,5). Her biri, `char` CII öğesinden [karakter koduna] karşılık gelen bir karakterdir. Hiçbir CIO yoksa, boş bir JSON ile eşlenir `string` .<br /><br /> Örnek: aşağıdaki öğe bir JSON parçasına eşlenir:<br /><br /> `<root type="string">42</root>`<br /><br /> JSON parçası "42".<br /><br /> XML 'den JSON eşlemesinde, kaçışlı olması gereken karakterler kaçış karakterleri ile eşlenir, diğer tüm diğerleri de kaçışsız karakterlerle eşlenir. "/" Karakteri özeldir; ("/" olarak yazılmış) olmasa bile kaçış olur \\ .<br /><br /> Örnek: aşağıdaki öğe bir JSON parçasına eşlenir.<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> JSON parçası "" de \\ \\ /ta \\ "" dir.<br /><br /> JSON 'dan XML eşlemesi için, kaçış karakteri ve kaçış karakterleri karşılık gelen [karakter kodu] ile doğru eşlemedir.<br /><br /> Örnek: "\u0041BC" JSON parçası aşağıdaki XML öğesiyle eşlenir.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Dize, XML 'e eşlenmiş olmayan, JSON RFC 'nin 2. bölümünde yer alan boşluk (' ws ') ile çevrelenebilir.<br /><br /> Örnek: "ABC" JSON parçası (ilk çift tırnadan önce boşluklar bulunur), aşağıdaki XML öğesiyle eşlenir.<br /><br /> `<root type="string">ABC</root>`<br /><br /> XML 'deki tüm boşluklar JSON 'daki boşluk ile eşlenir.<br /><br /> Örnek: aşağıdaki XML öğesi bir JSON parçasına eşlenir.<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> JSON parçası "bir BC" dır.|
+|`number`|1 veya daha fazla CIO|Muhtemelen boşluk `number` ile çevrelenen BIR JSON (JSON RFC, bölüm 2,4). Sayı/boşluk kombinasyondaki her bir karakter, CII öğesinden [karakter koduna] karşılık gelen bir karakterdir.<br /><br /> Örnek: aşağıdaki öğe bir JSON parçasına eşlenir.<br /><br /> `<root type="number">    42</root>`<br /><br /> JSON parçası 42 ' dir<br /><br /> (Boşluk korunur).|
+|`boolean`|4 veya 5 CII (veya buna karşılık `true` gelen `false` ), büyük olasılıkla ek beyaz boşluk CIO tarafından çevrelenmiş.|"True" dizesine karşılık gelen bir CII sırası değişmez değere eşlenir `true` ve "false" dizesine karşılık gelen BIR CII sırası değişmez değere eşlenir `false` . Çevreleyen boşluk korunur.<br /><br /> Örnek: aşağıdaki öğe bir JSON parçasına eşlenir.<br /><br /> `<root type="boolean"> false</root>`<br /><br /> JSON parçası `false` .|
+|`null`|Hiçbiri izin verilmiyor.|Değişmez değer `null` . JSON ile XML eşleme üzerinde, `null` XML 'e eşlenmemiş boşluk (Bölüm 2 ' de ' ws ') ile çevrelenebilir.<br /><br /> Örnek: aşağıdaki öğe bir JSON parçasına eşlenir.<br /><br /> `<root type="null"/>`<br /><br /> veya<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> Her iki durumda da JSON parçası olur `Null` .|
+|`object`|0 veya daha fazla Eior.|`begin-object`JSON RFC 'nin 2,2 bölümünde olduğu gibi bir (sol küme ayracı) ve ardından her EII için bir üye kaydının daha sonra açıklandığı gibi. Birden fazla EII varsa, üye kayıtları arasında değer ayırıcıları (virgüller) vardır. Bunun ardından bir son nesne (sağ kaşlı ayraç) gelir.<br /><br /> Örnek: aşağıdaki öğe JSON parçasına eşlenir.<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> JSON parçası `{"type1":"aaa","type2":"bbb"}` .<br /><br /> Veri sözleşmesi türü özniteliği XML üzerinde JSON eşlemesinde varsa, başlangıca ek bir üye kaydı eklenir. Adı, veri anlaşması türü özniteliği ("tür") için [yerel ad] \_ \_ ve değeri özniteliğin [normalleştirilmiş değer]. Buna karşılık, JSON ile XML eşleme arasında, ilk üyenin kayıt adı veri sözleşmesi türü özniteliğinin [yerel adı] ise (yani, " \_ \_ tür"), eşlenen XML 'de karşılık gelen bir veri sözleşmesi türü özniteliği bulunur, ancak buna karşılık gelen bir EII yoktur. Bu özel eşlemenin uygulanabilmesi için önce Bu üye kaydının JSON nesnesinde gerçekleşmesi gerektiğini unutmayın. Bu, üye kayıtlarının sırasının önemli olmadığı olağan JSON işlemeden bir ayrıltı temsil eder.<br /><br /> Örnek:<br /><br /> Aşağıdaki JSON parçası XML ile eşlenir.<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> XML aşağıdaki koddur.<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> \_ \_ Aİİ türünün var olduğunu ancak \_ \_ EII türünde olmadığını unutmayın.<br /><br /> Ancak, JSON 'daki sıra, aşağıdaki örnekte gösterildiği gibi tersine çevrilir.<br /><br /> `{"name":"John","\_\_type":"Person"}`<br /><br /> Karşılık gelen XML gösterilir.<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> Diğer bir deyişle, \_ _Type özel anlamlara sahip olacak şekilde sona erer ve AII değil, her zamanki gibi BIR EII eşlenir.<br /><br /> Bir JSON değeriyle eşlendiğinde AII 'nin [normalleştirilmiş değer] için kaçış/kaçış kuralları, bu tablonun "String" satırında belirtilen JSON dizeleriyle aynı.<br /><br /> Örnek:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> önceki örnek için aşağıdaki JSON ile eşlenebilir.<br /><br /> `{"__type":"\\abc"}`<br /><br /> Bir XML-JSON eşlemesinde, ilk EII 'nin [yerel adı] " \_ \_ tür" olmaması gerekir.<br /><br /> Boşluk ( `ws` ), nesneler IÇIN XML Ile JSON eşlemesinde hiçbir şekilde oluşturulmaz ve JSON Ile XML eşlemesi arasında yok sayılır.<br /><br /> Örnek: aşağıdaki JSON parçası bir XML öğesiyle eşlenir.<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> XML öğesi aşağıdaki kodda gösterilmiştir.<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
+|array|0 veya daha fazla EİA|JSON RFC 'nin 2,3 bölümünde olduğu gibi bir BEGIN-Array (sol köşeli ayraç) ve ardından her EII için bir dizi kaydının daha sonra açıklandığı gibi. Birden fazla EII varsa, dizi kayıtları arasında değer ayırıcıları (virgüller) vardır. Bunun ardından bir bitiş dizisi gelir.<br /><br /> Örnek: aşağıdaki XML öğesi bir JSON parçasına eşlenir.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> JSON parçası `["aaa","bbb"]`<br /><br /> Boşluk ( `ws` ), diziler IÇIN XML Ile JSON eşlemesinde hiçbir şekilde oluşturulmaz ve JSON 'DAN XML eşlemesinde yok sayılır.<br /><br /> Örnek: bir JSON parçası.<br /><br />`["aaa", "bbb"]`<br /><br /> Eşlendiği XML öğesi.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
 
-Üye Kayıtları aşağıdaki gibidir:
+Üye kayıtları aşağıdaki gibi çalışır:
 
-- İç öğenin [yerel adı] `string` JSON `member` RFC bölüm 2.2'de tanımlandığı şekilde bir bölümü eşler.
+- İç öğenin [yerel ad] `string` , `member` JSON RFC 'nin 2,2 bölümünde tanımlanan bir bölümüyle eşlenir.
 
-Örnek: Aşağıdaki öğe bir JSON parçasıyla eşler.
+Örnek: aşağıdaki öğe bir JSON parçasına eşlenir.
 
 ```xml
 <root type="object">
@@ -163,13 +164,13 @@ Aşağıdaki JSON parçası görüntülenir.
 {"myLocalName":"aaa"}
 ```
 
-- XML'den JSON haritalamada, JSON'da kaçması gereken karakterler kaçılır ve diğerleri kaçamaz. "/" karakteri, kaçması gereken bir karakter olmasa da, yine de kaçmıştır (JSON'dan XML haritalama için kaçmak zorunda değildir). Bu JSON veri için ASP.NET `DateTime` AJAX biçimini desteklemek için gereklidir.
+- XML-JSON eşlemesinde, JSON 'da kaçışın olması gereken karakterlerin üzerine kaçışın ve diğerlerinin kaçışsız olması gerekir. "/" Karakteri, kaçılması gereken bir karakter olmasa da, bununla birlikte kaçışın, ancak JSON 'dan XML eşlemesi için kaçılması gerekmez. Bu, JSON 'daki veriler için ASP.NET AJAX biçimini desteklemek için gereklidir `DateTime` .
 
-- JSON-XML eşlemesi üzerinde, tüm karakterler (gerekirse kaçamayan karakterler de dahil `string` olmak üzere) [yerel ad] üreten bir karakter oluşturmak için alınır.
+- JSON for XML eşlemesinde, bir `string` [yerel ad] üreten bir oluşturmak için tüm karakterler (varsa kaçan karakterler dahil) alınır.
 
-- İç öğeler [çocuklar] bölüm 2.2 değerine harita, `JSON Type Attribute` sadece `Root JSON Element`gibi göre . ÇED'lerin birden fazla iç içe geçme düzeyine (diziler içinde iç içe geçme dahil) izin verilir.
+- İç öğeler [alt öğe], ' ın ' de olduğu gibi, Bölüm 2,2 ' deki değere eşlenir `JSON Type Attribute` `Root JSON Element` . Birden çok sayıda iç içe geçme düzeyine (diziler içinde iç içe geçme dahil) izin verilir.
 
-Örnek: Aşağıdaki öğe bir JSON parçasıyla eşler.
+Örnek: aşağıdaki öğe bir JSON parçasına eşlenir.
 
 ```xml
 <root type="object">
@@ -182,24 +183,24 @@ Aşağıdaki JSON parçası görüntülenir.
 </root >
 ```
 
-Aşağıdaki JSON parçası ne eşler.
+Aşağıdaki JSON parçası, eşlendiği şeydir.
 
 ```json
 {"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}
 ```
 
 > [!NOTE]
-> Önceki eşlemede XML kodlama adımı yoktur. Bu nedenle, WCF yalnızca anahtar adlarda tüm karakterlerin XML öğesi adlarında geçerli karakterler olduğu JSON belgelerini destekler. Örneğin, < bir XML öğesi için geçerli bir ad olmadığından JSON belgesi {"<":"a"} desteklenmez.
+> Önceki eşlemede XML kodlama adımı yok. Bu nedenle, WCF yalnızca anahtar adlarındaki tüm karakterlerin XML öğe adlarında geçerli karakterler olduğu JSON belgelerini destekler. Örneğin, "a"} JSON belgesi, bir XML öğesi için geçerli bir ad olmadığından, {"<": "a"} < desteklenmez.
 
-Önceki eşleme JSON kaçış / unescaping adımları içerdiğinden ters durum (XML geçerli ancak JSON değil) herhangi bir soruna neden olmaz.
+Önceki eşleme JSON kaçış/unkaçış adımlarını içerdiğinden, ters durum (XML 'de geçerli olan ancak JSON içinde olmayan karakterler) herhangi bir soruna neden olmaz.
 
-Array Records aşağıdaki gibi çalışır:
+Dizi kayıtları aşağıdaki gibi çalışır:
 
-- İç öğenin [yerel adı] "öğe"dir.
+- İç öğenin [yerel ad] öğesi "öğe".
 
-- İç öğenin [alt] bölüm 2.3 değerine harita, Kök JSON Öğesi için yaptığı gibi JSON Türü Özniteliği göre. ÇED'lerin birden çok iç içe geçme düzeyine (nesnelerin içinde iç içe geçme dahil) izin verilir.
+- İç öğenin [alt öğeleri], Node JSON öğesi için olduğu gibi JSON türü özniteliğine göre Bölüm 2,3 ' deki değere eşlenir. Birden çok sayıda iç içe geçme düzeyine (nesneler içinde iç içe geçme dahil) izin verilir.
 
-Örnek: Aşağıdaki öğe bir JSON parçasıyla eşler.
+Örnek: aşağıdaki öğe bir JSON parçasına eşlenir.
 
 ```xml
 <root type="array">
@@ -211,7 +212,7 @@ Array Records aşağıdaki gibi çalışır:
 </root>
 ```
 
-Aşağıdaki JSON parçası.
+JSON parçası aşağıda verilmiştir.
 
 ```json
 ["myValue1",2,[true,null]]
