@@ -2,32 +2,35 @@
 title: 1007 - WorkflowApplicationPersisted
 ms.date: 03/30/2017
 ms.assetid: f4ea4452-28e3-4e66-93c6-eb12ee29bcb1
-ms.openlocfilehash: 0b3c290ad06eda6921626c0d7a1c8ec854c30e7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa4c7b2c98924eb43f78ab23a145b93906e302fc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925274"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239829"
 ---
 # <a name="1007---workflowapplicationpersisted"></a>1007 - WorkflowApplicationPersisted
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1007|  
-|anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|1007|  
+|Anahtar sözcükler|WFRuntime|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir iş akışı uygulamasını kalıcı gösterir.  
+
+ Bir iş akışı uygulamasının kalıcı olduğunu gösterir.  
   
 ## <a name="message"></a>İleti  
- WorkflowApplication ID: '%1' Trvalý.  
+
+ WorkflowApplication kimliği: ' %1 ' kalıcı oldu.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|WorkflowApplicationId|`xs:string`|İş akışı uygulama kimliği|  
-|AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Workflowapplicationıd|`xs:string`|İş akışı uygulama kimliği|  
+|AppDomain|`xs:string`|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

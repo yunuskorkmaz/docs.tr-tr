@@ -10,24 +10,27 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 4f51a31a433986822a9dba22bf8f17ade00bbb76
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8a97c4bfbe361eafc11cd920b032424f67c3a5fb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168100"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240452"
 ---
 # <a name="ui-automation-events-overview"></a>UI Otomasyonu Olaylarına Genel Bakış
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]olay bildirimi, ekran okuyucular ve ekran büyüteçleri gibi yardımcı teknolojiler için önemli bir özelliktir. Bu UI Otomasyonu istemcileri, içinde bir şeyler olduğunda UI Otomasyon sağlayıcıları tarafından oluşturulan olayları izler [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ve son kullanıcıları bilgilendirmek için bu bilgileri kullanır.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] olay bildirimi, ekran okuyucular ve ekran büyüteçleri gibi yardımcı teknolojiler için önemli bir özelliktir. Bu UI Otomasyonu istemcileri, içinde bir şeyler olduğunda UI Otomasyon sağlayıcıları tarafından oluşturulan olayları izler [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ve son kullanıcıları bilgilendirmek için bu bilgileri kullanır.  
   
  Herhangi bir istemcinin herhangi bir olayı dinlememesi durumunda, hiçbir istemcinin bu olaylara abone olup olmadığı veya hiç bir şekilde değil, herhangi bir istemciye etkinlik yapmasına izin vererek verimlilik geliştirilmiştir.  
   
 <a name="Types_of_Events"></a>
+
 ## <a name="types-of-events"></a>Olay türleri  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]olaylar aşağıdaki kategorilere ayrılır.  
+
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylar aşağıdaki kategorilere ayrılır.  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
@@ -40,7 +43,7 @@ ms.locfileid: "87168100"
   
  Aşağıdaki olaylar, Kullanıcı arabiriminin durumu değiştirilmese bile oluşturulabilir.  
   
-- `AutomationPropertyChangedEvent`(değiştirilen özelliğe bağlı olarak)  
+- `AutomationPropertyChangedEvent` (değiştirilen özelliğe bağlı olarak)  
   
 - `ElementSelectedEvent`  
   
@@ -49,8 +52,10 @@ ms.locfileid: "87168100"
 - `TextChangedEvent`  
   
 <a name="UI_Automation_Event_Identifiers"></a>
+
 ## <a name="ui-automation-event-identifiers"></a>UI Otomasyonu olay tanımlayıcıları  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]olaylar nesneler tarafından tanımlanır <xref:System.Windows.Automation.AutomationEvent> . <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>Özelliği, olay türünü benzersiz bir şekilde tanımlayan bir değer içerir.  
+
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] olaylar nesneler tarafından tanımlanır <xref:System.Windows.Automation.AutomationEvent> . <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>Özelliği, olay türünü benzersiz bir şekilde tanımlayan bir değer içerir.  
   
  İçin olası değerler <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> Aşağıdaki tabloda, olay bağımsız değişkenleri için kullanılan türle birlikte verilmiştir. İstemciler ve sağlayıcılar tarafından kullanılan tanımlayıcıların farklı sınıflardan aynı adlı alanları olduğunu unutmayın.  
   
@@ -64,7 +69,9 @@ ms.locfileid: "87168100"
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowClosedEventArgs>|  
   
 <a name="UI_Automation_Event_Arguments"></a>
+
 ## <a name="ui-automation-event-arguments"></a>UI Otomasyonu olay bağımsız değişkenleri  
+
  Aşağıdaki sınıflar olay bağımsız değişkenlerini kapsüller.  
   
 |Sınıf|Açıklama|  

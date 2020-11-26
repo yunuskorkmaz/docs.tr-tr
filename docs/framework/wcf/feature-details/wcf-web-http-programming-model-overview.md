@@ -2,14 +2,15 @@
 title: WCF Web HTTP Programlama Modeli Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 34d7945b8a7898955794e2ad5813bc66f52b60c7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 713dd05daa5071f253afd70e735475e49a986aa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594939"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239022"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP Programlama Modeli Genel Bakış
+
 Windows Communication Foundation (WCF) WEB HTTP programlama modeli, WCF ile WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri sağlar. WCF WEB HTTP Hizmetleri, Web tarayıcıları dahil olmak üzere en geniş olası istemciler arasında erişilecek şekilde tasarlanmıştır ve aşağıdaki benzersiz gereksinimlere sahiptir:  
   
 - URI **'ler ve URI işleme** URI 'Ler, WEB HTTP Hizmetleri tasarımında merkezi bir rol oynar. WCF WEB HTTP programlama modeli, <xref:System.UriTemplate> <xref:System.UriTemplateTable> URI işleme özellikleri sağlamak için ve sınıflarını kullanır.  
@@ -29,6 +30,7 @@ Windows Communication Foundation (WCF) WEB HTTP programlama modeli, WCF ile WEB 
 > WebDAV uzantısının tüm PUT isteklerini işlemeye çalıştığı için, IIS için WebDAV uzantısını yüklemek Web HTTP hizmetlerinin HTTP 405 hatası döndürmesine neden olabilir. Bu sorunu geçici olarak çözmek için WebDAV uzantısını kaldırabilir veya Web siteniz için WebDAV uzantısını devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [IIS ve WebDAV](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable ile URI Işleme  
+
  URI şablonları, yapısal olarak benzer URI 'lerin büyük kümelerini ifade etmek için etkili bir sözdizimi sağlar. Örneğin, aşağıdaki şablon, "a" ile başlayan ve ara segmentin değeri olmadan "c" ile biten üç kesimli tüm URI 'lerin kümesini ifade eder: a/{segment}/c  
   
  Bu şablon, aşağıdaki gibi URI 'Leri açıklar:  
@@ -43,7 +45,7 @@ Windows Communication Foundation (WCF) WEB HTTP programlama modeli, WCF ile WEB 
   
  Bu şablonda, süslü ayraç gösterimi ("{segment}"), değişmez değer yerine bir değişken segmentini gösterir.  
   
- .NET Framework, adlı URI şablonlarıyla çalışmak için bir API sağlar <xref:System.UriTemplate> . `UriTemplates`şunları yapmanıza izin verir:  
+ .NET Framework, adlı URI şablonlarıyla çalışmak için bir API sağlar <xref:System.UriTemplate> . `UriTemplates` şunları yapmanıza izin verir:  
   
 - `Bind`Şablonla eşleşen *tam kapalı bir URI* oluşturmak için bir parametre kümesiyle yöntemlerden birini çağırabilirsiniz. Bu, URI şablonundaki tüm değişkenlerin gerçek değerlerle değiştirildiği anlamına gelir.  
   
@@ -51,11 +53,12 @@ Windows Communication Foundation (WCF) WEB HTTP programlama modeli, WCF ile WEB 
   
 - `Bind`() ve `Match` (), ( `Match` `Bind` (x)) çağırabilmeniz ve ile başlattığınız aynı ortamla geri dönebilmeniz için ters ayarlanır.  
   
- <xref:System.UriTemplate>Bir veri yapısındaki bir nesne kümesini, içerilen şablonların her birini bağımsız olarak ele alan bir veri yapısında izlemek istediğiniz birçok zaman vardır (özellikle sunucuda, URI 'ye dayalı bir hizmet işlemine bir istek gönderilirken gereklidir). <xref:System.UriTemplateTable>bir dizi URI şablonu temsil eder ve bir dizi şablon ve aday URI değeri verilen en iyi eşleşmeyi seçer. Bu, herhangi bir ağ yığını (WCF dahil) ile bağlantılı değildir, bu sayede gerektiğinde kullanabilirsiniz.  
+ <xref:System.UriTemplate>Bir veri yapısındaki bir nesne kümesini, içerilen şablonların her birini bağımsız olarak ele alan bir veri yapısında izlemek istediğiniz birçok zaman vardır (özellikle sunucuda, URI 'ye dayalı bir hizmet işlemine bir istek gönderilirken gereklidir). <xref:System.UriTemplateTable> bir dizi URI şablonu temsil eder ve bir dizi şablon ve aday URI değeri verilen en iyi eşleşmeyi seçer. Bu, herhangi bir ağ yığını (WCF dahil) ile bağlantılı değildir, bu sayede gerektiğinde kullanabilirsiniz.  
   
  WCF hizmet modeli, <xref:System.UriTemplate> <xref:System.UriTemplateTable> hizmet işlemlerini bir tarafından tanımlanan bir URI kümesiyle ilişkilendirmek için ve ' ı kullanır <xref:System.UriTemplate> . Ya da kullanılarak bir hizmet işlemi ile ilişkilendirilir <xref:System.UriTemplate> <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> . Ve hakkında daha fazla bilgi için <xref:System.UriTemplate> <xref:System.UriTemplateTable> bkz. [UriTemplate ve UriTemplateTable](uritemplate-and-uritemplatetable.md)  
   
 ## <a name="webget-and-webinvoke-attributes"></a>WebGet ve Webvoke öznitelikleri  
+
  WCF WEB HTTP Hizmetleri, çeşitli Invoke fiillerine (örneğin, HTTP POST, PUT ve DELETE) ek olarak alma fiillerini (örneğin, HTTP GET) kullanır. WCF WEB HTTP programlama modeli, Service Developers 'in ve ile hizmet işlemleriyle ilişkili olan URI şablonunu ve fiilini denetlemesine olanak tanır <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> . <xref:System.ServiceModel.Web.WebGetAttribute>Ve, <xref:System.ServiceModel.Web.WebInvokeAttribute> tek tek işlemlerin URI 'lere ve bu URI 'ler Ile ilişkili http yöntemlerine nasıl bağlandığını denetlemenize olanak tanır. Örneğin, <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> aşağıdaki koda ve ekleme.  
   
 ```csharp
@@ -80,7 +83,7 @@ interface ICustomer
   
  `POST /UpdateCustomerName`  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute>Varsayılan olarak postala, ancak diğer fiiller için de kullanabilirsiniz.  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute> Varsayılan olarak postala, ancak diğer fiiller için de kullanabilirsiniz.  
   
 ```csharp
 [ServiceContract]  
@@ -99,9 +102,10 @@ interface ICustomer
  WCF WEB HTTP programlama modelini kullanan bir WCF hizmetinin tüm bir örneğini görmek için bkz [. nasıl yapılır: Temel WCF Web http hizmeti oluşturma](how-to-create-a-basic-wcf-web-http-service.md)  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate sorgu dizesi parametreleri ve URL 'Leri  
+
  Web stili hizmetler bir Web tarayıcısından, bir hizmet işlemiyle ilişkili bir URL yazılarak çağrılabilir. Bu hizmet işlemleri, URL içindeki bir dize biçiminde belirtilmesi gereken sorgu dizesi parametreleri alabilir. Aşağıdaki tabloda bir URL ve kullanılan biçim içinde geçirilebilecek türler gösterilmektedir.  
   
-|Tür|Biçimlendir|  
+|Tür|Biçim|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128-127|  
@@ -118,13 +122,14 @@ interface ICustomer
 |<xref:System.Boolean>|True veya false (büyük/küçük harf duyarsız)|  
 |<xref:System.String>|Herhangi bir dize (null dize desteklenmez ve hiçbir kaçış yapılmaz)|  
 |<xref:System.DateTime>|AA/GG/YYYY<br /><br /> AA/GG/YYYY HH: MM: SS [PM&#124;PM]<br /><br /> Ayın günü yılı<br /><br /> Ay günü yıl HH: MM: SS [PM&#124;PM]|  
-|<xref:System.TimeSpan>|Gg. SS: DD: SS<br /><br /> Burada gg = gün, SS = saat, MM = dakika, SS = saniye|  
+|<xref:System.TimeSpan>|GG. HH: MM: SS<br /><br /> Burada gg = gün, SS = saat, MM = dakika, SS = saniye|  
 |<xref:System.Guid>|Bir GUID, örneğin:<br /><br /> 936Dad01f-9ABD-4d9d-80c7-02af85c822a8|  
 |<xref:System.DateTimeOffset>|AA/GG/YYYY SS: DD: SS MM: SS<br /><br /> Burada gg = gün, SS = saat, MM = dakika, SS = saniye|  
-|Numaralandırmalar|Örneğin, aşağıdaki kodda gösterildiği gibi, numaralandırmayı tanımlayan sabit listesi değeri.<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> Sorgu dizesinde her bir numaralandırma değeri (veya ilgili tamsayı değerleri) belirtilebilir.|  
+|Listelemeler|Örneğin, aşağıdaki kodda gösterildiği gibi, numaralandırmayı tanımlayan sabit listesi değeri.<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> Sorgu dizesinde her bir numaralandırma değeri (veya ilgili tamsayı değerleri) belirtilebilir.|  
 |' A sahip olan türler `TypeConverterAttribute` , türü dize gösterimine ve öğesinden dönüştürebilir.|Tür Dönüştürücüne bağlıdır.|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Biçimler ve WCF WEB HTTP programlama modeli  
+
  WCF WEB HTTP programlama modelinin birçok farklı veri biçiminde çalışmak için yeni özellikleri vardır. Bağlama katmanında, <xref:System.ServiceModel.WebHttpBinding> aşağıdaki farklı veri türlerini okuyup yazabilir:  
   
 - XML  
@@ -142,6 +147,7 @@ interface ICustomer
 WCF WEB HTTP programlama modeli WS-* protokollerini desteklemediğinden, bir WCF WEB HTTP hizmetini güvenli hale getirmenin tek yolu, Hizmeti SSL kullanarak HTTPS üzerinden kullanıma sunmasıdır. IIS 7,0 ile SSL ayarlama hakkında daha fazla bilgi için bkz. [IIS 'de SSL uygulama](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP programlama modeli sorunlarını giderme  
+
  Bir kanal oluşturmak için bir kullanarak WCF WEB HTTP Hizmetleri çağrılırken, <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> <xref:System.ServiceModel.Description.WebHttpBehavior> <xref:System.ServiceModel.EndpointAddress> farklı bir öğesine geçirilmiş olsa bile yapılandırma dosyasında kümesini kullanır <xref:System.ServiceModel.EndpointAddress> <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.

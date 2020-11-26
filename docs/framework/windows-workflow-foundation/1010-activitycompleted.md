@@ -2,35 +2,38 @@
 title: 1010 - ActivityCompleted
 ms.date: 03/30/2017
 ms.assetid: d256284e-3fd2-4c33-82f4-abb617575706
-ms.openlocfilehash: 355281e6aa8f621bd2f9c0862e641fafec872750
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0ebf32ec1d5fe5b34ffe650d5547891be0eb665
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008377"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239919"
 ---
 # <a name="1010---activitycompleted"></a>1010 - ActivityCompleted
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1010|  
-|anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|1010|  
+|Anahtar sözcükler|WFRuntime|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir etkinlik yürütmeyi tamamladığını gösterir.  
+
+ Bir etkinliğin yürütmenin tamamlandığını gösterir.  
   
 ## <a name="message"></a>İleti  
- Etkinliği '%1', DisplayName: '%2', InstanceId: '%3' '%4' durumunda tamamlandı.  
+
+ DisplayName: ' %2 ', InstanceId: ' %3 ' olan ' %1 ' Activity 'si ' %4 ' durumunda tamamlandı.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Etkinlik|xs:string|Etkinlik türü adı.|  
-|displayName|xs:string|Etkinliğin görünen adı.|  
-|InstanceId|xs:string|Etkinlik örneği kimliği.|  
-|Durum|xs:string|Etkinliğin durumu.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Etkinlik|xs: String|Etkinliğin tür adı.|  
+|DisplayName|xs: String|Etkinliğin görünen adı.|  
+|InstanceId|xs: String|Etkinliğin örnek kimliği.|  
+|Durum|xs: String|Etkinliğin durumu.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

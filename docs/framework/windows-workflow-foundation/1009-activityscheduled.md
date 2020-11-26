@@ -2,37 +2,40 @@
 title: 1009 - ActivityScheduled
 ms.date: 03/30/2017
 ms.assetid: 307e38b6-d47e-47a4-9708-e74d8314b1a1
-ms.openlocfilehash: 0e3ea53a7b0509fcb8b73b61193742d615ac7e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 812531d4206dfee20f183b9461330e71263b0bf8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924663"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239776"
 ---
 # <a name="1009---activityscheduled"></a>1009 - ActivityScheduled
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1009|  
-|anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|1009|  
+|Anahtar sözcükler|WFRuntime|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Yürütme için zamanlanan bir etkinlik gösterir.  
+
+ Bir etkinliğin yürütme için zamanlanmakta olduğunu gösterir.  
   
 ## <a name="message"></a>İleti  
- Üst etkinlik '%1', DisplayName: '%2', InstanceId: '%3' zamanlanmış alt etkinliği '%4', DisplayName: '%5', InstanceId: '%6'.  
+
+ DisplayName: ' %2 ', InstanceId: ' %3 ' olan ' %4 ', DisplayName: ' %5 ', InstanceId: ' %6 ' olan ' %1 ' üst etkinliği  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|ParentActivity|xs:string|Üst etkinliğin tür adı.|  
-|ParentDisplayName|xs:string|Üst etkinliğin görünen adı.|  
-|ParentInstanceId|xs:string|Üst etkinliği örneği kimliği.|  
-|ChildActivity|xs:string|Zamanlanmış bir alt etkinlik türü adı.|  
-|ChildDisplayName|xs:string|Zamanlanmış bir alt etkinlik görünen adı.|  
-|ChildInstanceId|xs:string|Zamanlanmış bir alt etkinlik örneği kimliği.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|ParentActivity|xs: String|Üst etkinliğin tür adı.|  
+|ParentDisplayName|xs: String|Ana etkinliğin görünen adı.|  
+|Parentınstanceıd|xs: String|Ana etkinliğin örnek kimliği.|  
+|ChildActivity|xs: String|Zamanlanan alt etkinliğin tür adı.|  
+|ChildDisplayName|xs: String|Zamanlanan alt etkinliğin görünen adı.|  
+|Childınstanceıd|xs: String|Zamanlanan alt etkinliğin örnek kimliği.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

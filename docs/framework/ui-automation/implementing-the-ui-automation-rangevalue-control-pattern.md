@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: ccb6aeb5f8451975d7e2e9649bbb82c0c3ae23d5
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 9b5bfd571b078b7aeab149f5371004ac832fadcc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164085"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239568"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI Otomasyon RangeValue Denetim Düzeni Uygulama
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87164085"
  <xref:System.Windows.Automation.RangeValuePattern>Denetim deseninin bir Aralık içindeki bir değere ayarlanabilir denetimleri desteklemek için kullanılır. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+
  Aralık değeri denetim modelini uygularken, aşağıdaki kılavuz ve kurallara göz önünde aklınızda olmanız gerekir:  
   
 - Denetimler, yerel ayar veya kullanıcı tercihlerine göre desteklenen özelliklerinin yeniden yüklenmesine izin verir. Bunun bir örneği, sıcaklığın Fahrenveya santigrat cinsinden gösterilmesi için ayarlanabilir bir termometre denetimidir.  
@@ -34,27 +37,30 @@ ms.locfileid: "87164085"
 Değerin tamsayı türünde ve en düşük ve en yüksek özellik değerlerinin, sırasıyla 0 ve 100 olarak normalleştirilme Ilerleme çubuğu örneği  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>
+
 ## <a name="required-members-for-irangevalueprovider"></a>IRangeValueProvider için gerekli Üyeler  
   
 |Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|Hiçbiri|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|Yok|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|Yok|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|Yok|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|Yok|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|Yok|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|Yok|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|Yok|  
   
  Bu denetim deseninin ilişkili olayları yok.  
   
 <a name="Exceptions"></a>
-## <a name="exceptions"></a>Özel durumlar  
+
+## <a name="exceptions"></a>Özel Durumlar  
+
  Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.  
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>değerinden büyük veya bundan küçük bir değerle çağırılır <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty> .|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> değerinden büyük veya bundan küçük bir değerle çağırılır <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty> .|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,14 +2,15 @@
 title: ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: b5f0f730f90227dcccc7e5ebf533d80a28f6e6eb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 37a442f85ddf5c0a1687c05e26f140d052eaa94f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599301"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239100"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
+
 Windows Communication Foundation (WCF) AJAX hizmetlerine, ASP.NET AJAX gerekmeden JavaScript etkin herhangi bir Web sayfasından erişilebilir. Bu konuda, böyle bir WCF hizmetinin nasıl oluşturulacağı açıklanmaktadır.  
   
  WCF 'yi ASP.NET AJAX ile kullanmayla ilgili yönergeler için bkz. [ASP.NET AJAX IçIN WCF Hizmetleri oluşturma](creating-wcf-services-for-aspnet-ajax.md).  
@@ -23,6 +24,7 @@ Windows Communication Foundation (WCF) AJAX hizmetlerine, ASP.NET AJAX gerekmede
 - WCF AJAX hizmetlerine erişme.  
   
 ## <a name="creating-an-ajax-endpoint"></a>AJAX uç noktası oluşturma  
+
  Bir WCF hizmetinde AJAX desteğini etkinleştirmenin en temel yolu, <xref:System.ServiceModel.Activation.WebServiceHostFactory> Aşağıdaki örnekte olduğu gibi hizmeti ile ilişkili. svc dosyasında kullanmaktır.  
   
 ```text
@@ -61,7 +63,8 @@ Windows Communication Foundation (WCF) AJAX hizmetlerine, ASP.NET AJAX gerekmede
   
  Çalışan bir örnek için bkz. [JSON ve XML Ile AJAX Hizmeti](../samples/ajax-service-with-json-and-xml-sample.md).  
   
-## <a name="creating-an-ajax-compatible-service-contract"></a>AJAX uyumlu hizmet sözleşmesi oluşturma  
+## <a name="creating-an-ajax-compatible-service-contract"></a>AJAX-Compatible hizmet sözleşmesi oluşturma  
+
  Varsayılan olarak, bir AJAX uç noktası üzerinden kullanıma sunulan hizmet sözleşmeleri XML biçimindeki verileri döndürür. Ayrıca, varsayılan olarak hizmet işlemlerine, aşağıdaki örnekte gösterildiği gibi, uç nokta adresini ve ardından işlem adını içeren URL 'lere HTTP POST istekleri aracılığıyla erişilebilir.  
   
 ```csharp
@@ -102,6 +105,7 @@ string[] GetCities(string firstLetters, int maxNumber);
 ```  
   
 ## <a name="accessing-ajax-services"></a>AJAX hizmetlerine erişme  
+
  WCF AJAX uç noktaları her zaman hem JSON hem de XML isteklerini kabul eder.  
   
  İçerik türü "Application/JSON" olan HTTP POST istekleri JSON olarak değerlendirilir ve XML 'yi (örneğin, "text/xml") gösteren içerik türü olanlar XML olarak değerlendirilir.  

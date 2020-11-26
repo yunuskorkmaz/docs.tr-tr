@@ -2,17 +2,19 @@
 title: UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: 40944129ce3b01d8422d5aba4cfbf913c56265ed
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: fd2fdc812f5fe06b3b89605b9478325932199a96
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144636"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239206"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
+
 Çok noktaya yayın uygulamaları, bağlantı noktası bağlantıları oluşturmak gerekmeden çok sayıda alıcıya aynı anda küçük iletiler gönderir. Bu tür uygulamaların vurgulaması, güvenilirlik üzerinde hızlanır. Diğer bir deyişle, belirli bir iletinin gerçekten alındığından emin olmak için verilerin zamanında gönderilmesi daha önemlidir. WCF artık kullanarak çok noktaya yayın uygulamaları yazmayı desteklemektedir <xref:System.ServiceModel.UdpBinding> . Bu aktarım, bir hizmetin bir dizi istemciye aynı anda küçük iletiler gönderebilmesi gereken senaryolarda yararlıdır. Bir stok şeridi uygulaması, bu tür bir hizmete örnektir.  
   
 ## <a name="implementing-a-multicast-application"></a>Çok noktaya yayın uygulaması uygulama  
+
  Bir çok noktaya yayın uygulaması uygulamak için, bir hizmet sözleşmesi tanımlayın ve çok noktaya yayın iletilerine yanıt vermesi gereken her yazılım bileşeni için hizmet sözleşmesini uygulayın. Örneğin, bir stok şeridi uygulaması bir hizmet sözleşmesini tanımlayabilir:  
   
 ```csharp
@@ -91,9 +93,11 @@ while (true)
  Bu kod, stok bilgilerini oluşturur ve ardından doğru UDP adresinde dinleme yapan Hizmetleri çağırmak üzere çok noktaya yayın iletileri göndermek için ıtockticker hizmet sözleşmesini kullanır.  
   
 ### <a name="udp-and-reliable-messaging"></a>UDP ve güvenilir mesajlaşma  
+
   UDP bağlaması, UDP protokolünün hafif doğası nedeniyle güvenilir mesajlaşma özelliğini desteklemez. İletilerin uzak bir uç nokta tarafından alındığını onaylamanız gerekiyorsa, HTTP veya TCP gibi güvenilir mesajlaşmayı destekleyen bir aktarım kullanın. Güvenilir Mesajlaşma hakkında daha fazla bilgi için bkz <https://go.microsoft.com/fwlink/?LinkId=231830> ..  
   
 ### <a name="two-way-multicast-messaging"></a>İki yönlü çok noktaya yayın Iletisi  
+
  Çok noktaya yayın iletileri genellikle tek yönlü olsa da, UdpBinding istek/yanıt iletisi değişimini destekler. UDP taşıması kullanılarak gönderilen iletiler hem kimden hem de kime adresini içerir. Kimden adresi kötü amaçlı olarak değiştirilecekse, kimden adresini kullanırken dikkatli olunmalıdır.  Adres aşağıdaki kod kullanılarak denetlenebilir:  
   
 ```csharp
@@ -113,6 +117,7 @@ else
  Bu kod, adresin çok noktaya yayın adresi olduğunu belirten 0xE0 içerip içermediğini görmek için kimden adresinin ilk baytını denetler.  
   
 ### <a name="security-considerations"></a>Güvenlikle İlgili Dikkat Edilmesi Gerekenler  
+
  Çok noktaya yayın iletilerini dinlerken, yönlendiriciye, çok noktaya yayın adresini dinlediğini bildiren bir ıCMP paketi gönderilir. Yerel alt ağ üzerindeki izinleri olan herkes bu paket türlerini dinleyebilir ve hangi çok noktaya yayın adresini ve hangi bağlantı noktasını dinleyeceğini belirleyebilir.  
   
  Tüm güvenlik amaçları için gönderenin IP adresini kullanmayın. Bu bilgiler sahte olabilir ve bir uygulamanın yanlış makineye yanıt göndermesini sağlayabilir. Bu tehdidi hafifletmek için bir yol ileti düzeyi güvenliği etkinleştirmektir. Ağ düzeyinde IPSec (Internet Protokolü güvenliği) ve/veya NAP (ağ erişim koruması) de kullanılabilir.

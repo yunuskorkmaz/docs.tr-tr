@@ -11,14 +11,15 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-ms.openlocfilehash: c6a4dfc54152ade6136e4292bbd1c4522553d491
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: f61ad954215aecfc9380a47de788d36f327ab0b3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281608"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239543"
 ---
 # <a name="registration-free-com-interop"></a>Kayıtsız COM Birlikte Çalışma
+
 Kayıtsız COM birlikte çalışması, derleme bilgilerini depolamak için Windows kayıt defteri kullanmadan bir bileşeni etkinleştirir. Dağıtım sırasında bir bileşeni bir bilgisayara kaydetmek yerine, tasarım zamanında, bağlama ve etkinleştirme hakkında bilgi içeren Win32 stili bildirim dosyaları oluşturursunuz. Kayıt defteri anahtarları yerine, bir nesnenin etkinleştirilmesini doğrudan bu bildirim dosyaları.  
   
  Dağıtım sırasında bunları kaydetmek yerine derlemeleriniz için kayıtsız etkinleştirme kullanmak iki avantaj sunar:  
@@ -36,7 +37,7 @@ Kayıtsız COM birlikte çalışması, derleme bilgilerini depolamak için Windo
     |Bütünleştirilmiş kod türü|İşletim sistemi|.NET Framework sürümü|  
     |-------------------|----------------------|----------------------------|  
     |COM yan yana|Microsoft Windows XP|Gerekli değildir.|  
-    |. NET tabanlı|SP2 ile Windows XP|NET Framework sürüm 1,1 veya üzeri.|  
+    |.NET tabanlı|SP2 ile Windows XP|NET Framework sürüm 1,1 veya üzeri.|  
   
      Windows Server 2003 ailesi, için kayıtsız COM birlikte çalışabilirliği de destekler. NET tabanlı derlemeler.  
   

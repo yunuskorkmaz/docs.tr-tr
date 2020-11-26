@@ -2,31 +2,34 @@
 title: 1039 - ExitNoPersistBlock
 ms.date: 03/30/2017
 ms.assetid: 3b46ea28-3ee0-43eb-96ff-a6d696da87f8
-ms.openlocfilehash: b456ed3ab1b26946e2682b1b121949fee6a35b31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7ab7ec33d665f27be0151b15a77e5a14ee8fc88
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924468"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238996"
 ---
 # <a name="1039---exitnopersistblock"></a>1039 - ExitNoPersistBlock
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1039|  
-|anahtar sözcükler|WFRuntime|  
+|ID|1039|  
+|Anahtar sözcükler|WFRuntime|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir kalıcı blok çıkıldı gösterir.  
+
+ Kalıcı olmayan bir bloğun çıkmadığını gösterir.  
   
 ## <a name="message"></a>İleti  
- Herhangi bir kalıcı engelleme çıkılıyor.  
+
+ Kalıcı olmayan bir bloktan çıkılıyor.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

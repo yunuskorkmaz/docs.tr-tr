@@ -2,20 +2,22 @@
 title: Özel Güvenli Meta Veri Uç Noktaları
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 75f271fdbb5db34dc59918da16d014daf32a368f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d699c8dedfec3068bf0fc1504b47d78fde1988dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555568"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240907"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Özel Güvenli Meta Veri Uç Noktaları
+
 Bu örnek, meta veri olmayan Exchange bağlamalarından birini kullanan güvenli meta veri uç noktası ile bir hizmetin nasıl uygulanacağını ve bu meta veri uç noktasından meta verileri getirmek için [ServiceModel meta veri yardımcı programı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) veya istemcilerini yapılandırmayı gösterir. Meta veri uç noktalarını açığa çıkarmak için kullanılabilir iki sistem tarafından sağlanan bağlama vardır: mexHttpBinding ve mexHttpsBinding. mexHttpBinding, bir meta veri uç noktasının HTTP üzerinden güvenli olmayan bir şekilde kullanıma sunulması için kullanılır. mexHttpsBinding, HTTPS üzerinden bir meta veri uç noktası oluşturmak için güvenli bir şekilde kullanılır. Bu örnek, kullanarak güvenli bir meta veri uç noktasının nasıl açığa alınacağını gösterir <xref:System.ServiceModel.WSHttpBinding> . Bağlamasındaki güvenlik ayarlarını değiştirmek istediğinizde, ancak HTTPS kullanmak istemiyorsanız bunu yapmak isteyebilirsiniz. MexHttpsBinding kullanırsanız, meta veri uç noktanız güvende olur, ancak bağlama ayarlarını değiştirmek mümkün değildir.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 ## <a name="service"></a>Hizmet  
+
  Bu örnekteki hizmette iki uç nokta bulunur. Uygulama uç noktası, `ICalculator` `WSHttpBinding` `ReliableSession` sertifikaları etkin ve güvenli bir şekilde `Message` sertifikalar kullanarak sunar. Meta veri uç noktası `WSHttpBinding` aynı güvenlik ayarlarıyla ancak Hayır ile de kullanılır `ReliableSession` . İlgili yapılandırma aşağıda verilmiştir:  
   
 ```xml  
@@ -57,6 +59,7 @@ Bu örnek, meta veri olmayan Exchange bağlamalarından birini kullanan güvenli
  İkinci istemci, `MetadataResolver` bilinen bir sözleşmenin meta verilerini dinamik olarak getirmek için öğesini kullanır ve sonra dinamik olarak üretilen istemcideki işlemleri çağırır.  
   
 ## <a name="svcutil-client"></a>Svcutil istemcisi  
+
  Uç noktanızı barındırmak için varsayılan bağlamayı kullanırken `IMetadataExchange` , bu uç noktanın adresiyle Svcutil.exe çalıştırabilirsiniz:  
   
 ```console  
@@ -92,6 +95,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
  Önde gelen ". \\ " Bu dizindeki Svcutil.exe kopyasının (karşılık gelen bir Svcutil.exe.config sahip olan) çalıştırılmasını sağlar.  
   
 ## <a name="metadataresolver-client"></a>MetadataResolver istemcisi  
+
  İstemci sözleşmeyi bilir ve tasarım zamanında meta verilerle nasıl iletişim kuracağınızı, istemci, kullanarak uygulama uç noktalarının bağlamasını ve adresini dinamik olarak bulabilir `MetadataResolver` . Bu örnek istemci, tarafından kullanılan bağlama ve kimlik bilgilerinin, bir oluşturup yapılandırarak tarafından nasıl yapılandırılacağını gösteren bunu gösterir `MetadataResolver` `MetadataExchangeClient` .  
   
  Svcutil.exe.config ' de görünen aynı bağlama ve sertifika bilgileri, imperatively üzerinde belirlenebilir `MetadataExchangeClient` :  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 17d780c059530be8c91890302ea4066de2d4aa73
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 95729c1d26a9ae7fdec4fa4215f9478251612242
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163214"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240400"
 ---
 # <a name="ui-automation-properties-overview"></a>UI Otomasyon Özelliklerine Genel Bakış
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -26,10 +27,12 @@ ms.locfileid: "87163214"
 - [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>
+
 ## <a name="property-identifiers"></a>Özellik tanımlayıcıları  
+
  Her özellik bir sayı ve bir ad ile tanımlanır. Özelliklerin adları yalnızca hata ayıklama ve Tanılama için kullanılır. Sağlayıcılar gelen özellik isteklerini tanımlamak için sayısal kimlikleri kullanır. Ancak, istemci uygulamaları, <xref:System.Windows.Automation.AutomationProperty> almak istedikleri özellikleri tanımlamak için yalnızca sayıyı ve adı kapsülleyen kullanın.  
   
- <xref:System.Windows.Automation.AutomationProperty>belirli özellikleri temsil eden nesneler çeşitli sınıflarda alanlar olarak kullanılabilir. Güvenlik nedenleriyle, UI Otomasyon sağlayıcıları bu nesneleri Uiautomationtypes.dll bulunan ayrı bir sınıf kümesinden alır.  
+ <xref:System.Windows.Automation.AutomationProperty> belirli özellikleri temsil eden nesneler çeşitli sınıflarda alanlar olarak kullanılabilir. Güvenlik nedenleriyle, UI Otomasyon sağlayıcıları bu nesneleri Uiautomationtypes.dll bulunan ayrı bir sınıf kümesinden alır.  
   
  Aşağıdaki tablo, kimlikleri içeren sınıfların özelliklerini kategorilere ayırır <xref:System.Windows.Automation.AutomationProperty> .  
   
@@ -53,7 +56,9 @@ ms.locfileid: "87163214"
 |Pencerenin özellikleri ve durumu|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
 <a name="Properties_by_Category"></a>
+
 ## <a name="properties-by-category"></a>Kategoriye göre Özellikler  
+
  Aşağıdaki tablolar, kimlikleri ve içinde bulunan özellikleri sınıflandırmıştır <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers> . Bu özellikler tüm denetimlerde ortaktır. Ancak, bir kaç tane, sağlayıcı uygulamasının ömrü boyunca statik olması olasıdır; çoğu dinamik özellik denetim desenleriyle ilişkilendirilir.  
   
  **Özellik erişim** sütunu, ve ' a ek olarak her bir özellik için diğer erişimcileri <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> listeler <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> . İstemci uygulamasında Özellikler alma hakkında daha fazla bilgi için bkz. [istemciler Için UI Otomasyon özellikleri](ui-automation-properties-for-clients.md).  
@@ -137,8 +142,10 @@ ms.locfileid: "87163214"
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
 <a name="Localization"></a>
-## <a name="localization"></a>Yerelleştirme  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]sağlayıcılar, işletim sisteminin dilinde aşağıdaki özellikleri sunmalıdır:  
+
+## <a name="localization"></a>Localization (Yerelleştirme)  
+
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sağlayıcılar, işletim sisteminin dilinde aşağıdaki özellikleri sunmalıdır:  
   
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   
@@ -151,7 +158,9 @@ ms.locfileid: "87163214"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
 <a name="Properties_and_Events"></a>
+
 ## <a name="properties-and-events"></a>Özellikler ve olaylar  
+
  İçindeki özellikleriyle yakından birlikte, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değiştirme olaylarının kavramıdır. Dinamik özellikler için, istemci uygulamanın bir özellik değerinin değiştiğini bilmesi için bir yol gerekir, böylece bilgi önbelleğini güncelleştirebilir veya yeni bilgilere başka bir şekilde tepki verebilir.  
   
  Sağlayıcılar, değişikliklere bir şeyler olduğunda olaylar yükseltir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Örneğin, bir onay kutusu seçiliyse veya silinirse, sağlayıcının Iki durumlu düzenin uygulamasıyla bir özellik değiştirildi olayı tetiklenir. Sağlayıcılar, herhangi bir istemcinin olayları dinleyip dinlemediğini veya belirli olayları dinlemediğine bağlı olarak olayları seçerek oluşturabilir.  

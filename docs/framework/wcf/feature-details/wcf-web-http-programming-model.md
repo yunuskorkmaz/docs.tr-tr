@@ -6,17 +6,19 @@ helpviewer_keywords:
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-ms.openlocfilehash: dd9cc282750e59e5ccbfec428c7252ab9689395f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 644bcba9f8ced965ff962962bd83e1ae170159a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589857"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239009"
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP Programlama Modeli
+
 Windows Communication Foundation (WCF) Web HTTP programlama modeli, geliştiricilerin WCF hizmet işlemlerini SOAP olmayan uç noktalara sunmasına olanak tanır. Bu bölümdeki konular, özelliği ayrıntılı olarak inceler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [WCF Web HTTP Programlama Modeli Genel Bakış](wcf-web-http-programming-model-overview.md)  
  Windows Communication Foundation (WCF) Web HTTP programlama modeline genel bir bakış sağlar.  
   

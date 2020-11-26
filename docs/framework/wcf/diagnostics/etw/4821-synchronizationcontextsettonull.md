@@ -2,27 +2,30 @@
 title: 4821 - SynchronizationContextSetToNull
 ms.date: 03/30/2017
 ms.assetid: 0fbff6f6-752a-4a4a-b5a3-3adb5e688527
-ms.openlocfilehash: 30d3c6ac701f678334955d48a39e7a2f49734b63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3dc5f96331d40f04b589cc21846ad42f436a094
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651564"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240166"
 ---
 # <a name="4821---synchronizationcontextsettonull"></a>4821 - SynchronizationContextSetToNull
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4821|  
-|anahtar sözcükler|Bulma|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|4821|  
+|Anahtar sözcükler|Bulma|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay SynchronizationContext ayarladığınızda yayıldığını bulma işlemi başlatmadan önce DiscoveryClientChannel tarafından null.  
+
+ Bu olay, SynchronizationContext, bulma işlemini başlatmadan önce DiscoveryClientChannel tarafından null olarak ayarlandığında yayılır.  
   
 ## <a name="message"></a>İleti  
- SynchronizationContext kümesi bulma işlemi başlatmadan önce DiscoveryClientChannel tarafından null.  
+
+ SynchronizationContext, bulma işlemini başlatmadan önce DiscoveryClientChannel tarafından null olarak ayarlandı.  
   
 ## <a name="details"></a>Ayrıntılar

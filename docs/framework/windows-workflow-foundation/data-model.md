@@ -4,28 +4,30 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
-ms.openlocfilehash: c001d2a7a388b46e277b23a527c8792bcdcebfeb
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 6702dd59c34864e732b5b0d149b974ba370495dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378135"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239581"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Windows Workflow Foundation Veri Modeli
-Windows Workflow Foundation veri modeli üç kavramlarını oluşur: değişken, bağımsız değişkenler ve ifadeler. Değişkenleri temsil eden veri depolama ve küme içi ve dışı bir etkinlik bağımsız değişkenleri veri akışını temsil eder. Bağımsız değişkenler (bir değer atanır) ilişkili değişkenler başvurabilir ifadeleri kullanarak.  
+
+Windows Workflow Foundation veri modeli üç kavramdan oluşur: değişkenler, bağımsız değişkenler ve ifadeler. Değişkenler, verilerin depolanmasını ve bir etkinliğin dışına veri akışını temsil eder. Bağımsız değişkenler, değişkenlere başvurabileceği ifadeler kullanılarak bağlanır (değer atanır).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Değişkenler ve bağımsız değişkenler](variables-and-arguments.md).  
- Değişkenleri ve bağımsız değişkenler ve nasıl kullanıldıkları kavramlarını açıklar.  
+ Değişkenlerin ve bağımsız değişkenlerin kavramlarını ve bunların nasıl kullanıldığını açıklar.  
   
  [İfadeler](expressions.md)  
- İfadeler ve iş akışı geliştirilmesinde nasıl kullanılacağını açıklar.  
+ Deyimlerini ve bunların iş akışı geliştirmede nasıl kullanıldığını açıklar.  
   
  [C# İfadeleri](csharp-expressions.md)  
- Açıklar C# ifadeleri iş akışlarında, .NET Framework 4.5 ile sunulan.  
+ .NET Framework 4,5 ile tanıtılan iş akışlarında C# ifadelerini açıklar.  
   
- [Özellikler ve Bağımsız Değişkenler](properties-vs-arguments.md)  
- Etkinlik girişi için kullanılacak türünü seçmek açıklar.  
+ [Özellikler ve Arguments](properties-vs-arguments.md)  
+ Etkinlik girişi için kullanılacak türü seçme işlemini açıklar.  
   
  [CacheMetadata ile verileri kullanıma sunma](exposing-data-with-cachemetadata.md)  
- Çalışan etkinliğin üyeleri hakkındaki meta verileri özel bir dizi kullanıma açıklar.
+ Yürütülen etkinliğin üyeleri hakkında özel meta veri kümesinin nasıl kullanılabileceğini açıklar.

@@ -2,18 +2,20 @@
 title: İstek-Yanıt Bağıntısı
 ms.date: 03/30/2017
 ms.assetid: cf4379bf-2d08-43f3-9584-dfa30ffcb1f6
-ms.openlocfilehash: 34a41a149e740faf0f3816bba2c9bd9b47d4996e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da7739af7368cd7ebb55ed0ea2511e10f0bcb3f5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184552"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239074"
 ---
 # <a name="request-reply-correlation"></a>İstek-Yanıt Bağıntısı
-İstek-yanıt korelasyon bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> iş akışı hizmetinde iki yönlü bir işlem <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> uygulamak için bir çift ve başka bir Web hizmetinde iki yönlü bir işlem çağıran bir çift ile kullanılır. Bir WCF hizmetinde iki yönlü bir işlem çağırıldığında, hizmet geleneksel zorunlu kod tabanlı Windows Communication Foundation (WCF) hizmeti veya bir iş akışı hizmeti olabilir. İstek-yanıt bağıntısı kullanmak için iki yönlü <xref:System.ServiceModel.BasicHttpBinding>bir bağlama kullanılmalıdır. İster iki yönlü bir işlem çağırın ister uygulayın, korelasyon başlatma adımları benzerdir ve bu bölümde ele alınmıştır.  
+
+İstek-Yanıt Bağıntısı, bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> iş akışı hizmetinde iki yönlü bir işlem ve <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> başka bir Web hizmetinde iki yönlü bir işlem çağıran bir çifte bir çifte birlikte kullanılır. Bir WCF hizmetinde iki yönlü bir işlem çağrılırken, hizmet geleneksel bir zorunlu kod tabanlı Windows Communication Foundation (WCF) hizmeti olabilir veya bir iş akışı hizmeti olabilir. İstek-yanıt bağıntısını kullanmak için iki yönlü bir bağlama kullanılmalıdır, örneğin <xref:System.ServiceModel.BasicHttpBinding> . İki yönlü bir işlemi çağırarak veya uyguladığınızda, bağıntı başlatma adımları benzerdir ve bu bölümde ele alınmıştır.  
   
-## <a name="using-correlation-in-a-two-way-operation-with-receivesendreply"></a>Receive/SendReply ile İki Yönlü Bir İşlemde Korelasyon Kullanma  
- <xref:System.ServiceModel.Activities.Receive> / Bir <xref:System.ServiceModel.Activities.SendReply> çift, iş akışı hizmetinde iki yönlü bir işlem uygulamak için kullanılır. Çalışma süresi, yanıtın doğru arayana gönderilmesini sağlamak için istek-yanıt korelasyonuna neden olabilir. İş akışı hizmetleri için <xref:System.ServiceModel.Activities.WorkflowServiceHost>geçerli olan bir iş akışı barındırıldığında, varsayılan korelasyon başlatma yeterlidir. Bu senaryoda, <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> bir çift bir iş akışı tarafından kullanılır ve belirli bir korelasyon yapılandırması gereklidir.  
+## <a name="using-correlation-in-a-two-way-operation-with-receivesendreply"></a>Alma/SendReply ile Two-Way Işleminde bağıntı kullanma  
+
+ <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> Çift yönlü bir işlemi bir iş akışı hizmetinde uygulamak için bir çift kullanılır. Çalışma zamanı, yanıtın doğru arayana dağıtılması için istek-yanıt bağıntısını kullanır. Bir iş akışı kullanılarak barındırıldığı zaman <xref:System.ServiceModel.Activities.WorkflowServiceHost> , iş akışı hizmetleri için bu durum, varsayılan bağıntı başlatması yeterlidir. Bu senaryoda, bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çift iş akışı tarafından kullanılır ve belirli bir bağıntı yapılandırması gerekli değildir.  
   
 ```csharp  
 Receive StartOrder = new Receive  
@@ -32,8 +34,9 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.  
 ```  
   
-### <a name="explicitly-initializing-request-reply-correlation"></a>İstek-Yanıt İlişkisi'ni Açıkça Başlatma  
- Diğer iki yönlü işlemler paralelse, korelasyon açıkça yapılandırılmalıdır. Bu bir <xref:System.ServiceModel.Activities.CorrelationHandle> belirterek yapılabilir <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>ve , ya <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> da <xref:System.ServiceModel.Activities.CorrelationScope>bir içine yerleştirerek . Bu örnekte, istek-yanıt korelasyon <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> bir çift üzerinde yapılandırılır.  
+### <a name="explicitly-initializing-request-reply-correlation"></a>Request-Reply bağıntı açıkça başlatılıyor  
+
+ Diğer iki yönlü işlemler paralel ise, bağıntı açıkça yapılandırılmalıdır. Bu, <xref:System.ServiceModel.Activities.CorrelationHandle> ve <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> ' i belirterek ya da içine yerleştirerek yapılabilir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> <xref:System.ServiceModel.Activities.CorrelationScope> . Bu örnekte, istek-yanıt bağıntı bir çift üzerinde yapılandırılır <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> .  
   
 ```csharp  
 Variable<CorrelationHandle> RRHandle = new Variable<CorrelationHandle>();  
@@ -61,7 +64,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.  
 ```  
   
- Korelasyon açıkça yapılandırılma <xref:System.ServiceModel.Activities.CorrelationScope> yerine, bir etkinlik kullanılabilir. <xref:System.ServiceModel.Activities.CorrelationScope>içerdiği ileti <xref:System.ServiceModel.Activities.CorrelationHandle> etkinliklerine örtülü olarak yer alır. Bu örnekte, <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> bir çift <xref:System.ServiceModel.Activities.CorrelationScope>içinde yer alan . Açık bir korelasyon yapılandırması gerekmez.  
+ Bağıntıyı açıkça yapılandırmak yerine bir <xref:System.ServiceModel.Activities.CorrelationScope> etkinlik kullanılabilir. <xref:System.ServiceModel.Activities.CorrelationScope> , <xref:System.ServiceModel.Activities.CorrelationHandle> içerdiği mesajlaşma etkinliklerini örtülü olarak sağlar. Bu örnekte, <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> bir çift içinde bulunur <xref:System.ServiceModel.Activities.CorrelationScope> . Açık bağıntı yapılandırması gerekli değildir.  
   
 ```csharp  
 Receive StartOrder = new Receive  
@@ -93,9 +96,10 @@ CorrelationScope s = new CorrelationScope
 // Construct a workflow using the CorrelationScope.  
 ```  
   
- Ek korelasyonlar gerekiyorsa, istenilen <xref:System.ServiceModel.Activities.Send.CorrelationInitializers%2A> `CorrelationInitializer` türleri kullanarak ilgili ileti etkinliklerinin özelliği kullanılarak yapılandırılabilir.  
+ Ek bağıntılar gerekliyse, <xref:System.ServiceModel.Activities.Send.CorrelationInitializers%2A> istenen türleri kullanarak ilgili mesajlaşma etkinliklerinin özelliği kullanılarak yapılandırılabilirler `CorrelationInitializer` .  
   
-## <a name="using-correlation-in-a-two-way-operation-with-sendreceivereply"></a>Gönder/Al Yanıtla İki Yönlü Bir İşlemde Korelasyon Kullanma  
- <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.WorkflowServiceHost>Etkinlik yalnızca barındırılan bir iş akışı hizmetinde <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> <xref:System.ServiceModel.Activities.Send> kullanılabilirken ve çift, Web hizmetinde bir yöntem çağırması gereken herhangi bir iş akışında kullanılabilir. İş akışı önceki bölümde <xref:System.ServiceModel.Activities.WorkflowServiceHost> açıklanan varsayılan korelasyon kullanılarak barındırılırsa, ancak yoksa, korelasyon açıkça istenilen <xref:System.ServiceModel.Activities.CorrelationInitializer> kullanılarak <xref:System.ServiceModel.Activities.CorrelationHandle>ve , ya da örtülü tutamaç yönetimi kullanılarak yapılandırılmalıdır . <xref:System.ServiceModel.Activities.CorrelationScope>  
+## <a name="using-correlation-in-a-two-way-operation-with-sendreceivereply"></a>Send/ReceiveReply ile Two-Way Işleminde bağıntı kullanma  
+
+ <xref:System.ServiceModel.Activities.Receive>Etkinlik yalnızca tarafından barındırılan bir iş akışı hizmetinde kullanılabilir ancak <xref:System.ServiceModel.Activities.WorkflowServiceHost> <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> çift bir Web hizmetindeki yöntemi çağırması gereken herhangi bir iş akışında kullanılabilir. İş akışı daha sonra kullanılarak barındırılıyorsa <xref:System.ServiceModel.Activities.WorkflowServiceHost> , önceki bölümde açıklanan varsayılan bağıntı uygulanır, ancak yoksa, bağıntı doğrudan istenen <xref:System.ServiceModel.Activities.CorrelationInitializer> ve <xref:System.ServiceModel.Activities.CorrelationHandle> veya ' nin örtük tanıtıcı Yönetimi kullanılarak yapılandırılmalıdır <xref:System.ServiceModel.Activities.CorrelationScope> .  
   
- İki yönlü işlemleri olan bir hizmette **Hizmet Başvurusu Ekle'yi** kullanırken, açıkça belirtilen İstek/Yanıt korelasyonla bir <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> çifti dahili olarak saran etkinlikler oluşturulur.
+ İki yönlü işlemlerle bir hizmette **hizmet başvurusu Ekle** kullanırken, etkinlik, <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> isteğe bağlı olarak istek/yanıt bağıntısı ile dahili olarak bir çift olarak sarılacağı şekilde oluşturulur.

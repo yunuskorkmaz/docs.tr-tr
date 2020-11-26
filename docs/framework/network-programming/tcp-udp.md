@@ -17,14 +17,15 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: ae6d2f9ced2235aa1b9b8fada8064d7e4be970a0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b5b8b5cb3ce38fcff9115b2f9acf23fc5a970adf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502099"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239452"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
+
 Uygulamalar <xref:System.Net.Sockets.TcpClient> ,, ve sınıflarıyla Iletim Denetim Protokolü (TCP) ve Kullanıcı Datagram Protokolü (UDP) hizmetlerini kullanabilir <xref:System.Net.Sockets.TcpListener> <xref:System.Net.Sockets.UdpClient> . Bu protokol sınıfları sınıfının üzerine kurulmuştur <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> ve veri aktarma ayrıntılarının ayrıntılarını alır.  
   
  Protokol sınıfları, durum bilgilerini koruma veya protokole özgü yuvaları ayarlama ayrıntılarını bilme olmadan ağ hizmetlerine basit ve kolay erişim sağlamak için **yuva** sınıfının zaman uyumlu yöntemlerini kullanır. Zaman uyumsuz **yuva** yöntemlerini kullanmak için, sınıfı tarafından sağlanan zaman uyumsuz yöntemleri kullanabilirsiniz <xref:System.Net.Sockets.NetworkStream> . Protokol sınıfları tarafından gösterilmeyen **yuva** sınıfının özelliklerine erişmek için **yuva** sınıfını kullanmanız gerekir.  

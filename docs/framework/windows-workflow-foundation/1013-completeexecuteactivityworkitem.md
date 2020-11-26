@@ -2,34 +2,37 @@
 title: 1013 - CompleteExecuteActivityWorkItem
 ms.date: 03/30/2017
 ms.assetid: 31fc57b3-ef2f-48f0-a5de-b4e2c5c9ded7
-ms.openlocfilehash: c1ff62bb4143bb798ea7adb7c3fee539ef68bc37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 654f961088c371ab53e4a81f40e3c63335efb1a8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925196"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239594"
 ---
 # <a name="1013---completeexecuteactivityworkitem"></a>1013 - CompleteExecuteActivityWorkItem
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1013|  
-|anahtar sözcükler|WFRuntime|  
+|ID|1013|  
+|Anahtar sözcükler|WFRuntime|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir ExecuteActivityWorkItem tamamlandığını gösterir  
+
+ Bir ExecuteActivityWorkItem 'ın tamamlandığını belirtir  
   
 ## <a name="message"></a>İleti  
- '%1', DisplayName etkinliği için bir ExecuteActivityWorkItem tamamlandı: '%2', InstanceId: '%3'.  
+
+ DisplayName: ' %2 ', InstanceId: ' %3 ' olan ' %1 ' Activity 'si için bir ExecuteActivityWorkItem tamamlandı.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Etkinlik|xs:string|Etkinlik türü adı.|  
-|displayName|xs:string|Etkinliğin görünen adı.|  
-|InstanceId|xs:string|Etkinlik örneği kimliği.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Etkinlik|xs: String|Etkinliğin tür adı.|  
+|DisplayName|xs: String|Etkinliğin görünen adı.|  
+|InstanceId|xs: String|Etkinliğin örnek kimliği.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

@@ -2,14 +2,15 @@
 title: Özel İleti Filtresi
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 0e4da0f2283fd537afe3cacdddfb36c327cfd3b4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 24dab723a06c128337c1d956a98a1aa85a258e33
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600050"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240933"
 ---
 # <a name="custom-message-filter"></a>Özel İleti Filtresi
+
 Bu örnek, Windows Communication Foundation (WCF) tarafından uç noktalara ileti göndermek için kullanılan ileti filtrelerinin nasıl değiştirileceğini gösterir.  
   
 > [!NOTE]

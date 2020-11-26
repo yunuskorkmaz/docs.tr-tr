@@ -2,32 +2,35 @@
 title: 1001 - WorkflowApplicationCompleted
 ms.date: 03/30/2017
 ms.assetid: 7a2ab59a-cf66-437a-b01e-f8f7268a3f7a
-ms.openlocfilehash: 430174b96a499fff7e0156327bb15e066ce2ca36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be97991be9b61908a23486da0ef255ebfbdc5485
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008648"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239958"
 ---
 # <a name="1001---workflowapplicationcompleted"></a>1001 - WorkflowApplicationCompleted
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1001|  
-|anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|1001|  
+|Anahtar sözcükler|WFRuntime|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir iş akışı uygulama kapalı durumda tamamlandığını gösterir.  
+
+ Bir iş akışı uygulamasının kapalı durumda tamamlandığını gösterir.  
   
 ## <a name="message"></a>İleti  
- WorkflowInstance ID: '%1' kapalı durumda tamamlandı.  
+
+ WorkflowInstance kimliği: ' %1 ' kapalı durumda tamamlandı.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|WorkflowInstanceID|`xs:string`|İş akışı örnek kimliği|  
-|AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|WorkflowInstanceId|`xs:string`|İş akışının örnek kimliği|  
+|AppDomain|`xs:string`|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

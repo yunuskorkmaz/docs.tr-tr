@@ -6,39 +6,41 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 8220e8e773409be76bc7522d57551f1bddb90e5d
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7de4ad48ae275b4119f05a5269e9819c201027fd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474364"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240595"
 ---
 # <a name="loader-etw-events"></a>Yükleyici ETW Olayları
+
 Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler toplar.  
   
  Tüm yükleyici olayları `LoaderKeyword` (0x8) anahtar sözcüğü altında oluşturulur. `DCStart`Ve olayları, `DCEnd` `LoaderRundownKeyword` etkin ile (0x8) altında oluşturulur `StartRundown` / `EndRundown` . (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
 
 ## <a name="application-domain-events"></a>Uygulama etki alanı olayları
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
 |Olayı yükseltmek için anahtar sözcük|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`0x8|`AppDomainLoad_V1` ve `AppDomainUnLoad_V1`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Bilgilendirici (4)|  
+|`LoaderKeyword` 0x8|`AppDomainLoad_V1` ve `AppDomainUnLoad_V1`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Description|  
+|Olay|Olay Kimliği|Açıklama|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1`(tüm uygulama etki alanları için günlüğe kaydedilir)|156|Bir işlemin ömrü boyunca her bir uygulama etki alanı oluşturulduğunda tetiklenir.|  
+|`AppDomainLoad_V1` (tüm uygulama etki alanları için günlüğe kaydedilir)|156|Bir işlemin ömrü boyunca her bir uygulama etki alanı oluşturulduğunda tetiklenir.|  
 |`AppDomainUnLoad_V1`|157|Bir işlemin ömrü boyunca her uygulama etki alanı yok edildiğinde tetiklenir.|  
 |`AppDomainDCStart_V1`|157|Başlangıç özeti sırasında uygulama etki alanlarını numaralandırır.|  
 |`AppDomainDCEnd_V1`|158|Bir son özeti sırasında uygulama etki alanlarını numaralandırır.|  
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |AppDomainID|Win: UInt64|Bir uygulama etki alanı için benzersiz tanımlayıcı.|  
 |AppDomainFlags|Win: UInt32|0x1: varsayılan etki alanı.<br /><br /> 0x2: yürütülebilir.<br /><br /> 0x4: uygulama etki alanı, bit 28-31: Bu etki alanının paylaşılması ilkesi.<br /><br /> 0: paylaşılan bir etki alanı.|  
@@ -47,17 +49,18 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
 
 ## <a name="clr-loader-assembly-events"></a>CLR yükleyicisi derleme olayları  
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
 |Olayı yükseltmek için anahtar sözcük|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`0x8|`AssemblyLoad` ve `AssemblyUnload`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Bilgilendirici (4)|  
+|`LoaderKeyword` 0x8|`AssemblyLoad` ve `AssemblyUnload`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Description|  
+|Olay|Olay Kimliği|Açıklama|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|Bir derleme yüklendiğinde tetiklenir.|  
 |`AssemblyUnload_V1`|155|Bir derleme kaldırıldığında tetiklenir.|  
@@ -66,7 +69,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |AssemblyId|Win: UInt64|Derlemenin benzersiz KIMLIĞI.|  
 |AppDomainID|Win: UInt64|Bu derlemenin etki alanının KIMLIĞI.|  
@@ -76,18 +79,19 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
 ## <a name="module-events"></a>Modül olayları
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
 |Olayı yükseltmek için anahtar sözcük|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`0x8|`ModuleLoad_V2` ve `ModuleUnload_V2`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Bilgilendirici (4)|  
+|`LoaderKeyword` 0x8|`ModuleLoad_V2` ve `ModuleUnload_V2`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Bilgilendirici (4)|  
 ||||  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Description|  
+|Olay|Olay Kimliği|Açıklama|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Bir işlemin ömrü boyunca bir modül yüklendiğinde tetiklenir.|  
 |`ModuleUnload_V2`|153|Bir işlem süresince bir modül kaldırıldığında tetiklenir.|  
@@ -96,7 +100,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Modül kimliği|Win: UInt64|Modülün benzersiz KIMLIĞI.|  
 |AssemblyId|Win: UInt64|Bu modülün bulunduğu derlemenin KIMLIĞI.|  
@@ -121,17 +125,18 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
 - "NativePdb" ile başlayan alan adları, çağırarak oluşturulan NGen PDB öğesine başvurur `NGEN createPDB` . Bu PDB yerel PDB biçimini kullanır ve dosyalar, satır numaraları ve sembol adları gibi orijinal yönetilen kaynak kodundaki öğelerin NGen modülüne derlenen yerel öğelerle nasıl eşlendiğini açıklar.  
 
 ## <a name="clr-domain-module-events"></a>CLR etki alanı modülü olayları
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
 |Olayı yükseltmek için anahtar sözcük|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword`0x8|`DomainModuleLoad_V1`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Bilgilendirici (4)|  
-|`LoaderRundownKeyword`(0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Bilgilendirici (4)|  
+|`LoaderKeyword` 0x8|`DomainModuleLoad_V1`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Bilgilendirici (4)|  
+|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Description|  
+|Olay|Olay Kimliği|Açıklama|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Bir uygulama etki alanı için bir modül yüklendiğinde tetiklenir.|  
 |`DomainModuleDCStart_V1`|151|Başlangıç özeti sırasında bir uygulama etki alanı için yüklenen modülleri numaralandırır ve tüm uygulama etki alanları için günlüğe kaydedilir.|  
@@ -139,7 +144,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Modül kimliği|Win: UInt64|Bu modülün ait olduğu derlemeyi tanımlar.|  
 |AssemblyId|Win: UInt64|Bu modülün bulunduğu derlemenin KIMLIĞI.|  
@@ -151,6 +156,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
 
 ## <a name="module-range-events"></a>Modül aralığı olayları
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
 |Olayı yükseltmek için anahtar sözcük|Olay|Düzey|  
@@ -161,7 +167,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Description|  
+|Olay|Olay Kimliği|Açıklama|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|Bu olay, yüklü bir yerel görüntü Oluşturucu (NGen) görüntüsü IBC ile iyileştirilildiğinde ve NGen görüntüsünün sık kullanılan bölümleri hakkında bilgi içeriyorsa vardır.|  
 |`ModuleRangeDCStart`|160|Bir `ModuleRange` Özeti başlangıcında tetiklenen bir olay.|  
@@ -169,7 +175,7 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|Win: UInt16|CLR 'nin birden fazla örneği yüklenirse, bir işlemde CLR 'nin belirli bir örneğini benzersiz şekilde tanımlar.|  
 |Modül kimliği|Win: UInt64|Bu modülün ait olduğu derlemeyi tanımlar.|  
@@ -180,9 +186,10 @@ Bu olaylar, uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve ka
 |RangeBegin2|Win: UnicodeString||  
   
 ### <a name="remarks"></a>Açıklamalar  
+
  .NET Framework bir işlemde yüklü bir NGen görüntüsü IBC ile iyileştirildiğinden, `ModuleRange` Ngen görüntüsündeki etkin aralıkları içeren olay, ve ile birlikte kaydedilir `moduleID` `ClrInstanceID` .  NGen resmi IBC ile iyileştirilmemişse bu olay günlüğe kaydedilmez. Modül adını öğrenmek için, bu olay modül yük ETW olayları ile harmanlanmalıdır.  
   
- Bu olay için yük boyutu değişkendir; `Count`alan, olayda yer alan Aralık uzaklıksayısını gösterir.  Bu olay, gerçek aralıkları belirlemede Windows olayı ile harmanlanmalıdır `IStart` . Windows görüntü yükleme olayı, bir görüntü her yüklendiğinde günlüğe kaydedilir ve yüklenen görüntünün sanal adresini içerir.  
+ Bu olay için yük boyutu değişkendir; `Count` alan, olayda yer alan Aralık uzaklıksayısını gösterir.  Bu olay, gerçek aralıkları belirlemede Windows olayı ile harmanlanmalıdır `IStart` . Windows görüntü yükleme olayı, bir görüntü her yüklendiğinde günlüğe kaydedilir ve yüklenen görüntünün sanal adresini içerir.  
   
  Modül aralığı olayları, 4 ' ten büyük veya buna eşit olan ve bilgilendirici olaylar olarak sınıflandırılan herhangi bir ETW düzeyi altında tetiklenir.  
   

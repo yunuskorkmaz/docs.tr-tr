@@ -2,12 +2,12 @@
 title: API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 description: API Gateway deseninin ve doğrudan istemciden mikro hizmet iletişiminin farklılıklarını ve kullanımlarını anlayın.
 ms.date: 01/07/2019
-ms.openlocfilehash: 90761605dde197e44658e3ba0b0a3a2c06b5942c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 88cea3b7c2fdd09bec605431308df8783c343332
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152708"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240608"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 
@@ -105,7 +105,7 @@ Daha fazla bilgi için bkz. [ağ geçidi toplama stili](/azure/architecture/patt
 
 **Çapraz kesme sorunları veya ağ geçidi boşaltma.** Her bir API ağ geçidi ürünü tarafından sunulan özelliklere bağlı olarak, her bir mikro hizmetten bağımsız olarak tek bir katmanda çapraz kesme sorunlarını birleştirerek her bir mikro hizmetin uygulanmasını kolaylaştıran ağ geçidine işlevsellik devreolursunuz. Bu özellikle, aşağıdaki işlev gibi her iç mikro hizmette düzgün şekilde uygulanması karmaşık olabilecek özelleştirilmiş özellikler için kullanışlıdır:
 
-- Kimlik doğrulaması ve yetkilendirme
+- Kimlik doğrulama ve yetkilendirme
 - Hizmet bulma tümleştirmesi
 - Yanıtları Önbelleğe Alma
 - Yeniden deneme ilkeleri, devre kesici ve QoS
@@ -113,7 +113,7 @@ Daha fazla bilgi için bkz. [ağ geçidi toplama stili](/azure/architecture/patt
 - Yük dengeleme
 - Günlüğe kaydetme, izleme, bağıntı
 - Üstbilgiler, sorgu dizeleri ve talep dönüştürme
-- IP beyaz listesi
+- IP allowlisteleme
 
 Daha fazla bilgi için bkz. [ağ geçidi boşaltma model](/azure/architecture/patterns/gateway-offloading).
 

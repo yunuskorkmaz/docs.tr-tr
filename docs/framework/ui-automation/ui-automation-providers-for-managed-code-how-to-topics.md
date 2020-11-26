@@ -9,20 +9,22 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-ms.openlocfilehash: ed296daf24b6a3f8e8ced5c843151cc8478ead9d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 6ed4994d6e1f0f1a59d0fa36ffd5d8e17673cc7e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163201"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240361"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Yönetilen Kod Nasıl Yapılır Konuları İçin UI Otomasyon Sağlayıcılar
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
  Bu bölüm, öğeleri için yazma sağlayıcıları içindeki görevleri gösteren kod örnekleri içerir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Sunucu Tarafı UI Otomasyon Sağlayıcıyı Gösterme](expose-a-server-side-ui-automation-provider.md)  
  [UI Otomasyon Sağlayıcı Dönüş Özellikleri](return-properties-from-a-ui-automation-provider.md)  
  [UI Otomasyon Sağlayıcıda Olay Tetikleme](raise-events-from-a-ui-automation-provider.md)  
