@@ -2,27 +2,30 @@
 title: 3320 - SocketAccepted
 ms.date: 03/30/2017
 ms.assetid: b98b0066-b78c-4c11-9567-43dbbbd254ce
-ms.openlocfilehash: 5cab6d3ea93dec7c79eedb53a1a01ce89ce67eda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b985737a19e0e9ced1e7d77a8cb74a3ab3af63c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595808"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248766"
 ---
 # <a name="3320---socketaccepted"></a>3320 - SocketAccepted
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3320|  
-|anahtar sözcükler|TCP|  
+|ID|3320|  
+|Anahtar sözcükler|TCP|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, Yuva kabul edildiğinde yayınlanır.  
+
+ Yuva kabul edildiğinde bu olay yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Kabul edilen ListenerId:% 1 SocketId:% 2.  
+
+ Listenerıd: %1 kabul edilen Socketıd: %2.  
   
 ## <a name="details"></a>Ayrıntılar

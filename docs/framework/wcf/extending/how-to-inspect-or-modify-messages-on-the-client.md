@@ -3,25 +3,27 @@ title: 'Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme'
 description: Uygun arabirimi uygulayarak bir WCF istemcisi veya hizmeti genelinde gelen veya giden iletileri incelemeyi veya değiştirmeyi öğrenin.
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 6f6a3d20d7f3a9fb79de5cd3e29096e270d0f188
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1f8b75001754739b48d10ee577ae26a175e72860
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247513"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249052"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme
+
 Bir WCF istemcisi genelinde gelen veya giden iletileri, bir <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> oluşturup istemci çalışma zamanına ekleyerek inceleyebilir veya değiştirebilirsiniz. Daha fazla bilgi için bkz. [Istemcileri genişletme](extending-clients.md). Hizmetin eşdeğer özelliği <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> . Tüm kod örneği için bkz. [Ileti Inspectors](../samples/message-inspectors.md) örneği.  
   
 ### <a name="to-inspect-or-modify-messages"></a>İletileri incelemek veya değiştirmek için  
   
 1. <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> arabirimini gerçekleştirin.  
   
-2. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> İstemci ileti denetçisini eklemek istediğiniz kapsama göre veya uygulayın. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>uç nokta düzeyindeki davranışı değiştirmenize izin verir. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>Sözleşme düzeyindeki davranışı değiştirmenize izin verir.  
+2. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> İstemci ileti denetçisini eklemek istediğiniz kapsama göre veya uygulayın. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> uç nokta düzeyindeki davranışı değiştirmenize izin verir. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> Sözleşme düzeyindeki davranışı değiştirmenize izin verir.  
   
 3. Veya metodunu çağırmadan önce davranışını ekleyin <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> . Ayrıntılar için bkz. [çalışma zamanını davranışlar Ile yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örnekleri sırasıyla gösterilmektedir:  
   
 - Bir istemci denetçisi uygulamasıdır.  

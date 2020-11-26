@@ -5,30 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: b4a673f97f06e8d489d9acc85d84e1ecea4656e4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e8b2674d8efc0ef3ac2f1dd6ab0df559195c274c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795590"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249039"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Nasıl yapılır: Parametreleri İnceleme veya Değiştirme
-<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> Arabirimi uygulayarak ve istemci ya da hizmet çalışma zamanına ekleyerek bir Windows Communication Foundation (WCF) istemci nesnesi veya WCF hizmetinde tek bir işlem için gelen veya giden iletileri inceleyebilir veya değiştirebilirsiniz. Genellikle bir işlem davranışı, tek bir işlem için parametre Inspector eklemek için kullanılır; diğer davranışlar daha büyük bir kapsamdaki çalışma zamanına kolay erişim sağlamak için kullanılabilir. Daha fazla bilgi için bkz. [Istemcileri genişletme](extending-clients.md) ve [dispatchleri genişletme](extending-dispatchers.md).  
+
+<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>Arabirimi uygulayarak ve istemci ya da hizmet çalışma zamanına ekleyerek bir Windows Communication Foundation (WCF) istemci nesnesi veya WCF hizmetinde tek bir işlem için gelen veya giden iletileri inceleyebilir veya değiştirebilirsiniz. Genellikle bir işlem davranışı, tek bir işlem için parametre Inspector eklemek için kullanılır; diğer davranışlar daha büyük bir kapsamdaki çalışma zamanına kolay erişim sağlamak için kullanılabilir. Daha fazla bilgi için bkz. [Istemcileri genişletme](extending-clients.md) ve [dispatchleri genişletme](extending-dispatchers.md).  
   
 ### <a name="inspecting-or-modifying-parameters"></a>Parametreleri İnceleme veya değiştirme  
   
 1. <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> arabirimini gerçekleştirin.  
   
-2. <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A?displayProperty=nameWithType> Ya <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> da özelliklerine parametre denetçisi eklemek için bir, veya (gerekli kapsama bağlı olarak) uygulayın. <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A?displayProperty=nameWithType>  
+2. Ya da <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> özelliklerine parametre denetçisi eklemek için bir, veya (gerekli kapsama bağlı olarak) uygulayın <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A?displayProperty=nameWithType> .  
   
-3. ' <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> İçağırmadan<xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> önce davranışını veya metodunu ekleyin. <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> Ayrıntılar için bkz. [çalışma zamanını davranışlar Ile yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).  
+3. ' İ çağırmadan önce davranışını <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> veya metodunu ekleyin <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> . Ayrıntılar için bkz. [çalışma zamanını davranışlar Ile yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örnekleri sırasıyla gösterilmektedir:  
   
 - Bir parametre denetçisi uygulamasıdır.  
   
-- <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType> ,<xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> Ve<xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>bir kullanarak parametre denetçisini ekleyen davranış uygulamasıdır.  
+- , Ve bir kullanarak parametre denetçisini ekleyen davranış uygulamasıdır <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> .  
   
 - İstemciye parametre denetçisi eklemek için bir istemci uygulamasındaki uç nokta davranışını yükleyen ve çalıştıran bir yapılandırma dosyası.  
   

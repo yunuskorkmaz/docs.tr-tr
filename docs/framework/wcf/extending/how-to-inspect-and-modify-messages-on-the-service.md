@@ -5,25 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
-ms.openlocfilehash: 1356983361c483170d9d7365932b788f2421bf09
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8d1ce6ef00462adb38e3d59c3d9bd35694c4dbe9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795608"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249065"
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>Nasıl yapılır: Hizmette İletileri Denetleme ve Değiştirme
-Bir Windows Communication Foundation (WCF) istemcisinde gelen veya giden iletileri, bir <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> oluşturup hizmet çalışma zamanına ekleyerek inceleyebilir veya değiştirebilirsiniz. Daha fazla bilgi için bkz. [Dispatchleri genişletme](extending-dispatchers.md). Hizmetin eşdeğer özelliği <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
+
+Bir Windows Communication Foundation (WCF) istemcisinde gelen veya giden iletileri, bir <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> oluşturup hizmet çalışma zamanına ekleyerek inceleyebilir veya değiştirebilirsiniz. Daha fazla bilgi için bkz. [Dispatchleri genişletme](extending-dispatchers.md). Hizmetin eşdeğer özelliği <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> .  
   
 ### <a name="to-inspect-or-modify-messages"></a>İletileri incelemek veya değiştirmek için  
   
 1. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> arabirimini gerçekleştirin.  
   
-2. Hizmet ileti denetçinizi kolayca <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> eklemek istediğiniz kapsama bağlı olarak <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>,veyaarabiriminiuygulayın <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>.  
+2. <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> Hizmet ileti denetçinizi kolayca eklemek istediğiniz kapsama bağlı olarak, veya arabirimini uygulayın.  
   
-3. <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> Metodu<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>üzerinde çağrılmadan önce davranışınızı ekleyin. Ayrıntılar için bkz. [çalışma zamanını davranışlar Ile yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).  
+3. Metodu üzerinde çağrılmadan önce davranışınızı ekleyin <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> . Ayrıntılar için bkz. [çalışma zamanını davranışlar Ile yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örnekleri sırasıyla gösterilmektedir:  
   
 - Bir hizmet denetçisi uygulamasıdır.  

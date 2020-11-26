@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 8a9342c07c15d65df0310c0cb35b4b2c6f2ba686
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9df911779422ca2710686963a040a95258db8891
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419661"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248925"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Nasıl yapılır: Durum Makinesi İş Akışı Oluşturma
+
 İş akışları, yerleşik etkinliklerin yanı sıra özel etkinliklerden de oluşturulabilir. Bu konu, etkinlik gibi yerleşik etkinlikleri <xref:System.Activities.Statements.StateMachine> ve önceki [nasıl yapılır: etkinlik oluşturma](how-to-create-an-activity.md) konusunun özel etkinliklerini kullanan bir iş akışı oluşturmaya yönelik adımları açıklamaktadır. İş akışı, sayıyı tahmin eden bir oyunu modelleyen.  
   
 > [!NOTE]
@@ -109,9 +110,9 @@ ms.locfileid: "83419661"
   
 11. İş akışı Tasarımcısı ' nın en üstünde bulunan içerik haritası ' nda **StateMachine** ' e tıklayarak iş akışı tasarımcısında genel durum makinesi görünümüne geri dönün.  
   
-12. **Araç kutusunun** **durum makinesi** ' nden bir **FinalState** etkinliği sürükleyin **, tahmin etme** durumunun üzerine gelin ve **tahmin ve** **sonlandırmasız**değer arasında bir geçiş oluşturulacak şekilde, **tahmin durumu gir** ' in sağında görüntülenen üçgenin üzerine bırakın.  
+12. **Araç kutusunun** **durum makinesi** ' nden bir **FinalState** etkinliği sürükleyin **, tahmin etme** durumunun üzerine gelin ve **tahmin ve** **sonlandırmasız** değer arasında bir geçiş oluşturulacak şekilde, **tahmin durumu gir** ' in sağında görüntülenen üçgenin üzerine bırakın.  
   
-13. Geçişin varsayılan adı **T2**'dir. İş akışı tasarımcısında geçişe tıklayarak seçin ve **DisplayName** değerini **tahmin**olarak ayarlayın. Ardından, **sonlandırıdurumu**' na tıklayıp seçin ve tam geçiş adının iki durumdan birinin üzerine bulunmadığından görüntülenecek bir oda olması için sağa sürükleyin. Bu, öğreticideki kalan adımların tamamlanmasını daha kolay hale getirir.  
+13. Geçişin varsayılan adı **T2**'dir. İş akışı tasarımcısında geçişe tıklayarak seçin ve **DisplayName** değerini **tahmin** olarak ayarlayın. Ardından, **sonlandırıdurumu**' na tıklayıp seçin ve tam geçiş adının iki durumdan birinin üzerine bulunmadığından görüntülenecek bir oda olması için sağa sürükleyin. Bu, öğreticideki kalan adımların tamamlanmasını daha kolay hale getirir.  
   
 14. İş akışı tasarımcısında yeni yeniden adlandırılmış **tahmin doğru** geçişine çift tıklayarak genişletin.  
   
@@ -134,7 +135,7 @@ ms.locfileid: "83419661"
     > [!NOTE]
     > Tetikleyici olayı alındığında ve varsa, olarak değerlendirilen bir geçiş gerçekleşir <xref:System.Activities.Statements.Transition.Condition%2A> `True` . Bu geçiş için, Kullanıcı `Guess` rastgele oluşturulmuş ile eşleşiyorsa `Target` Denetim **sonlandırna** geçer ve iş akışı tamamlanır.  
   
-19. Tahminin doğru olup olmadığına bağlı olarak, iş akışı, başka bir TRY için **FinalState** 'e ya da tahmin durumuna **gir** 'e geçiş yapılmalıdır. Her iki geçiş de, kullanıcının tahminin **readInt** etkinliği aracılığıyla alınması için bekleyen tetikleyiciyi paylaşır. Buna paylaşılan geçiş adı verilir. Paylaşılan bir geçiş oluşturmak için, **tahmin doğru** geçişinin başlangıcını belirten daireye tıklayın ve istediğiniz duruma sürükleyin. Bu durumda, geçiş bir kendinden geçiştir, bu nedenle **tahmin doğru** geçişinin başlangıç noktasını sürükleyin ve **tahmin** durumunun sonuna geri bırakın. Geçişi oluşturduktan sonra iş akışı tasarımcısında seçin ve **DisplayName** özelliğini **tahmin yanlış**olarak ayarlayın.  
+19. Tahminin doğru olup olmadığına bağlı olarak, iş akışı, başka bir TRY için **FinalState** 'e ya da tahmin durumuna **gir** 'e geçiş yapılmalıdır. Her iki geçiş de, kullanıcının tahminin **readInt** etkinliği aracılığıyla alınması için bekleyen tetikleyiciyi paylaşır. Buna paylaşılan geçiş adı verilir. Paylaşılan bir geçiş oluşturmak için, **tahmin doğru** geçişinin başlangıcını belirten daireye tıklayın ve istediğiniz duruma sürükleyin. Bu durumda, geçiş bir kendinden geçiştir, bu nedenle **tahmin doğru** geçişinin başlangıç noktasını sürükleyin ve **tahmin** durumunun sonuna geri bırakın. Geçişi oluşturduktan sonra iş akışı tasarımcısında seçin ve **DisplayName** özelliğini **tahmin yanlış** olarak ayarlayın.  
   
     > [!NOTE]
     > Paylaşılan geçişler, geçiş Tasarımcısı ' nın altında **Paylaşılan tetikleyici geçişi ekle** ' ye tıklayarak geçiş Tasarımcısı içinden de oluşturulabilir ve sonra, bağlantı açılan listesinden, **kullanılabilir durumlar** ' da istenen hedef durumu seçebilirsiniz.  
@@ -195,5 +196,5 @@ ms.locfileid: "83419661"
 - [Windows Workflow Foundation Programlama](programming.md)
 - [İş Akışları Tasarlama](designing-workflows.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl Yapılır: Etkinlik Oluşturma](how-to-create-an-activity.md)
+- [Nasıl yapılır: Etkinlik Oluşturma](how-to-create-an-activity.md)
 - [Nasıl yapılır: İş Akışı Çalıştırma](how-to-run-a-workflow.md)

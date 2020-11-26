@@ -2,23 +2,24 @@
 title: Önemli İzlemeler
 ms.date: 03/30/2017
 ms.assetid: 40a1770e-3b09-4142-b0dd-f9ef73642074
-ms.openlocfilehash: c230c65b4d3fd45c4905d4ae5f4cbbf90e10faad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ad7c217b528cb2ad22169c1aea6391462bab1ae
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784969"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248676"
 ---
 # <a name="significant-traces"></a>Önemli İzlemeler
-Bu konu, Windows Communication Foundation (WCF) tarafından yayılan ana izlemeler bazıları listelenmiştir.  
+
+Bu konuda Windows Communication Foundation (WCF) tarafından oluşturulan bazı önemli izlemeler listelenmiştir.  
   
 ## <a name="significant-traces"></a>Önemli İzlemeler  
   
 |İzleme|Açıklama|  
 |-----------|-----------------|  
-|İleti günlüğü izleme|Bir WCF ileti ileti günlüğü tarafından günlüğe kaydedildiğinde, izleme yayıldığını özelliği `System.ServiceModel.MessageLogging` izleme kaynağı etkinleştirilir. Bu izleme tıklayarak iletisi görüntülenir. Bir ileti için dört yapılandırılabilir günlüğe kaydetme noktası vardır: `ServiceLevelSendRequest`, `TransportSend`, `TransportReceive`, `ServiceLevelReceiveRequest`, ayrıca ileti günlüğü izleme iletisi kaynak özniteliği tarafından belirtilen.|  
-|Alınan ileti izleme|Bu izleme, bir WCF ileti alındığında yayıldığını `System.ServiceModel` izleme kaynağı bilgi veya ayrıntılı düzeyinde etkinleştirilir. Bu izleme iletisi bağıntı oku etkinliği graf görünümünü görmek gereklidir.|  
-|Gönderilen ileti izleme|Bu izleme, bir WCF ileti gönderildiğinde yayıldığını `System.ServiceModel` izleme kaynağı bilgi veya ayrıntılı düzeyinde etkinleştirilir. Bu izleme iletisi bağıntı oku etkinliği graf görünümünü görmek gereklidir.|  
-|Get ChannelEndpointElement|Bu izleme, bilgi düzeyinde yapısı kanal fabrikası yayınlanır. Bu, istemci uç noktası açıklamasını Bahsediyor (uzak adres, bağlama, anlaşma adı) sağlar.|  
-|ServiceElement öğesini Al|Bu izleme, bilgi düzeyinde yapı hizmeti ana bilgisayarı olarak yayınlanır. Bu hizmet sözleşmesini ve bağlama açıklamasını sağlar.|  
-|SocketConnection oluşturma|Bu izleme, istemci tarafından gerçekleştirilen ilk işlem eylemi ve alma bayt etkinliğini hizmette yayınlanır. Bu, yerel ve uzak IP adreslerini sağlar. Bilgi düzeyinde yayılır.|
+|İleti günlüğü izleme|İzleme kaynağı etkinleştirildiğinde, ileti günlüğü özelliği tarafından bir WCF iletisi günlüğe kaydedildiğinde izleme yayınlanır `System.ServiceModel.MessageLogging` . Bu izlemeye tıkladığınızda ileti görüntülenir. İleti için dört yapılandırılabilir günlüğe yazma noktası vardır:,,,, `ServiceLevelSendRequest` `TransportSend` Ayrıca ileti `TransportReceive` `ServiceLevelReceiveRequest` günlüğü izlemesinde ileti kaynağı özniteliğiyle gösterilir.|  
+|İleti alındı izlemesi|Bu izleme, `System.ServiceModel` bilgi veya ayrıntılı düzeyde izleme kaynağı etkinse BIR WCF iletisi alındığında yayınlanır. Bu izleme, Etkinlik Grafiği görünümünde ileti bağıntı okuna bakmak için gereklidir.|  
+|İleti gönderme izlemesi|Bu izleme, `System.ServiceModel` bilgi veya ayrıntılı düzeyde izleme kaynağı etkinse BIR WCF iletisi gönderildiğinde yayınlanır. Bu izleme, Etkinlik Grafiği görünümünde ileti bağıntı okuna bakmak için gereklidir.|  
+|ChannelEndpointElement al|Bu izleme, bilgi düzeyinde, kanal fabrikası oluşturma içinde yayınlanır. İstemcinin konuştuğu uç noktanın açıklamasını (uzak adres, bağlama, anlaşma adı) sağlar.|  
+|ServiceElement al|Bu izleme, bilgi düzeyinde hizmet ana bilgisayarı oluşturma bölümünde yayınlanır. Hizmet sözleşmesinin ve bağlamanın bir açıklamasını sağlar.|  
+|SocketConnection oluşturma|Bu izleme, istemci tarafından gerçekleştirilen ilk Işlem eyleminde ve hizmet üzerindeki baytları al etkinliğinde yayınlanır. Yerel ve uzak IP adreslerini sağlar. Bilgi düzeyinde yayınlanır.|

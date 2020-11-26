@@ -2,19 +2,20 @@
 title: 'Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: a006795c87a2ae845d03db90dce296692c4339fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: db4bad81241295e168685c8b80546f2305021066
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186440"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249026"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma
-Bu konu, MEX olmayan bir bağlama üzerinden mex bitiş noktasından meta verilerin nasıl alınır açıklar. Bu örnekteki kod, [Özel Güvenli Meta Veri Bitiş Noktası](../samples/custom-secure-metadata-endpoint.md) örneğini temel almıştır.  
+
+Bu konu, bir MEX uç noktasından bir MEX olmayan bağlama üzerinden meta verilerin nasıl alınacağını açıklamaktadır. Bu örnekteki kod, [özel güvenli meta veri uç noktası](../samples/custom-secure-metadata-endpoint.md) örneğine dayalıdır.  
   
-### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>MEX olmayan bir bağlama üzerinden meta veri almak için  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Bir MEX olmayan bağlama üzerinden meta verileri almak için  
   
-1. MEX bitiş noktası tarafından kullanılan bağlamayı belirleyin. Windows Communication Foundation (WCF) hizmetleri için, hizmetin yapılandırma dosyasına erişerek MEX bağlamayı belirleyebilirsiniz. Bu durumda, MEX bağlama aşağıdaki hizmet yapılandırmasında tanımlanır.  
+1. MEX uç noktası tarafından kullanılan bağlamayı belirleme. Windows Communication Foundation (WCF) Hizmetleri için, hizmetin yapılandırma dosyasına erişerek MEX bağlamasını belirleyebilirsiniz. Bu durumda, MEX bağlaması aşağıdaki hizmet yapılandırmasında tanımlanmıştır.  
   
     ```xml  
     <services>  
@@ -48,7 +49,7 @@ Bu konu, MEX olmayan bir bağlama üzerinden mex bitiş noktasından meta verile
      </bindings>  
     ```  
   
-2. İstemci yapılandırma dosyasında, aynı özel bağlamayı yapılandırın. Burada istemci, MEX `clientCredentials` bitiş noktasından meta veri isteğinde bulunmak üzere hizmete kimlik doğrulaması yapmak için kullanılacak bir sertifika sağlamak için bir davranış da tanımlar. Özel bir bağlama üzerinden meta veri istemek için Svcutil.exe kullanırken, Svcutil.exe (Svcutil.exe.config) için yapılandırma dosyasına MEX uç noktası yapılandırmasını eklemeniz gerekir ve bitiş noktası yapılandırmasının adı adresin URI şemasıyla eşleşmelidir aşağıdaki kodda gösterildiği gibi MEX bitiş noktası.  
+2. İstemci yapılandırma dosyasında, aynı özel bağlamayı yapılandırın. Burada istemci Ayrıca `clientCredentials` , MEX uç noktasından meta veriler istenirken hizmette kimlik doğrulaması yapmak için kullanılacak bir sertifika sağlamak üzere bir davranış tanımlar. Özel bir bağlama üzerinden meta veri istemek için Svcutil.exe kullanırken, MEX uç noktası yapılandırmasını Svcutil.exe (Svcutil.exe.config) yapılandırma dosyasına eklemeniz ve uç nokta yapılandırmasının adının, aşağıdaki kodda gösterildiği gibi, MEX uç noktası adresinin URI düzeniyle eşleşmesi gerekir.  
   
     ```xml  
     <system.serviceModel>  
@@ -83,7 +84,7 @@ Bu konu, MEX olmayan bir bağlama üzerinden mex bitiş noktasından meta verile
     </system.serviceModel>  
     ```  
   
-3. Bir `MetadataExchangeClient` ve `GetMetadata`çağrı oluşturun. Bunu yapmanın iki yolu vardır: yapılandırmada özel bağlamayı belirtebilir veya aşağıdaki örnekte gösterildiği gibi koddaki özel bağlamayı belirtebilirsiniz.  
+3. `MetadataExchangeClient`Ve çağrısı oluşturun `GetMetadata` . Bunu iki şekilde yapabilirsiniz: yapılandırma içinde özel bağlamayı belirtebilir veya aşağıdaki örnekte gösterildiği gibi özel bağlamayı kodda belirtebilirsiniz.  
   
     ```csharp
     // The custom binding is specified in configuration.  
@@ -114,15 +115,15 @@ Bu konu, MEX olmayan bir bağlama üzerinden mex bitiş noktasından meta verile
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4. Aşağıdaki `WsdlImporter` kodda `ImportAllEndpoints`gösterildiği gibi a ve çağrı oluşturun.  
+4. `WsdlImporter` `ImportAllEndpoints` Aşağıdaki kodda gösterildiği gibi bir ve çağrısı oluşturun.  
   
     ```csharp
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. Bu noktada, hizmet bitiş noktaları koleksiyonuna sahipsiniz. Meta veri alma hakkında daha fazla bilgi için [bkz: Meta verileri Hizmet Bitiş Noktalarına Aktarın.](../feature-details/how-to-import-metadata-into-service-endpoints.md)  
+5. Bu noktada, hizmet uç noktaları koleksiyonunuz vardır. Meta verileri içeri aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: meta verileri hizmet uç noktalarına aktarma](../feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta veriler](../feature-details/metadata.md)
+- [Meta veri](../feature-details/metadata.md)

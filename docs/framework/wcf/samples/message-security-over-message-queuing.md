@@ -2,14 +2,15 @@
 title: İleti Kuyruğa Alma ile İleti Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 1733cea17c82f85751b810f4a6033caefd828e29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1b262a5f4343e07aecf5eebda32cc995f86ec77b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558647"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248948"
 ---
 # <a name="message-security-over-message-queuing"></a>İleti Kuyruğa Alma ile İleti Güvenliği
+
 Bu örnek, istemci için X. 509v3 sertifika kimlik doğrulamasıyla WS-Security kullanan bir uygulamanın nasıl uygulanacağını gösterir ve sunucunun X. 509v3 sertifikasını MSMQ üzerinden kullanarak sunucu kimlik doğrulaması gerektirir. İleti güvenliği bazen MSMQ deposundaki iletilerin şifrelenmesinin ve uygulamanın kendi ileti kimlik doğrulamasını gerçekleştirebileceği durumlarda daha da tercih edilir.
 
  Bu örnek, [IŞLENEN MSMQ bağlama](transacted-msmq-binding.md) örneğine dayalıdır. İletiler şifrelenir ve imzalanır.
@@ -83,16 +84,19 @@ Bu örnek, istemci için X. 509v3 sertifika kimlik doğrulamasıyla WS-Security 
     > Bu betik, bilgisayarlar arasında bu örneği çalıştırırken bir istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan Windows Communication Foundation (WCF) örneklerini çalıştırırsanız, CurrentUser-Trustedkişiler deposuna yüklenmiş olan hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için şu komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` .
 
 ## <a name="requirements"></a>Gereksinimler
+
  Bu örnek, MSMQ 'nun yüklü ve çalışıyor olmasını gerektirir.
 
 ## <a name="demonstrates"></a>Gösteriler
+
  İstemci, hizmetin ortak anahtarını kullanarak iletiyi şifreler ve kendi sertifikasını kullanarak iletiyi imzalar. Sıradan iletiyi okuyan hizmet, güvenilen kişiler deposundaki sertifikayla istemci sertifikasının kimliğini doğrular. Daha sonra iletinin şifresini çözer ve iletiyi hizmet işlemine gönderir.
 
  Windows Communication Foundation (WCF) iletisi MSMQ iletisinin gövdesinde bir yük olarak yapıldığından, gövde MSMQ deposunda şifreli olarak kalır. Bu, iletinin istenmeyen açıklanmasını sağlar. MSMQ 'nun, taşıma işlemi yaptığı İletinin şifrelenip şifrelenmediğini unutmayın.
 
  Örnek, ileti düzeyindeki karşılıklı kimlik doğrulamanın MSMQ ile nasıl kullanılabileceğini gösterir. Sertifikalar bant dışı olarak değiştirilir. Hizmet ve istemcinin aynı anda çalışmaya ve çalışır durumda olmaması gerektiğinden, bu her zaman kuyruğa alınmış uygulama ile aynıdır.
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
+
  Örnek istemci ve hizmet kodu, [IŞLENEN MSMQ bağlama](transacted-msmq-binding.md) örneğiyle tek bir farklılık ile aynıdır. İşlem sözleşmesine, iletinin imzalanması ve şifrelenmesi gerektiğini öneren koruma düzeyiyle açıklama eklenir.
 
 ```csharp
