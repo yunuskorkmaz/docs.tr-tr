@@ -2,21 +2,24 @@
 title: Standart Uç Noktaları
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-ms.openlocfilehash: 48924e06457cf9f91ce4f900bb38de4d22bfc550
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: a2f8d45990c5bc845aeee87ee82a2d043d6d1292
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463785"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246452"
 ---
 # <a name="standard-endpoints"></a>Standart Uç Noktaları
-Uç noktalar bir adres, bir bağlama ve sözleşme belirtilerek tanımlanır. Bitiş noktasına ayarlanabilecek diğer parametreler davranış yapılandırması, üstbilgi ve dinleme URI'lerini içerir.  Belirli uç nokta türleri için bu değerler değişmez. Örneğin, meta veri alışverişi uç <xref:System.ServiceModel.Description.IMetadataExchange> noktaları her zaman sözleşmeyi kullanır. Her zaman belirtilen <xref:System.ServiceModel.Description.WebHttpEndpoint> bir bitiş noktası davranışı gerektiren gibi diğer uç noktalar. Bir uç noktanın kullanılabilirliği, sık kullanılan uç nokta özellikleri için varsayılan değerlere sahip uç noktalarına sahip olarak geliştirilebilir. Standart uç noktalar, bir geliştiricinin varsayılan değerlere sahip veya bir veya daha fazla uç noktanın özelliklerinin değişmediği bir uç nokta tanımlamasını sağlar.  Bu uç noktalar, statik bir niteen bilgi belirtmek zorunda kalmadan böyle bir bitiş noktası kullanmanıza olanak sağlar. Standart uç noktaları altyapı ve uygulama uç noktaları için kullanılabilir.  
+
+Uç noktalar bir adres, bağlama ve bir sözleşme belirtilerek tanımlanır. Bir uç noktada ayarlanmış olabilecek diğer parametreler, davranış yapılandırması, üst bilgiler ve dinleme URI 'Leri içerir.  Belirli uç nokta türleri için bu değerler değişmez. Örneğin, meta veri değişimi uç noktaları sözleşmeyi her zaman kullanır <xref:System.ServiceModel.Description.IMetadataExchange> . <xref:System.ServiceModel.Description.WebHttpEndpoint>Her zaman belirli bir uç nokta davranışı gerektiren diğer uç noktalar. Bir uç noktanın kullanılabilirliği, yaygın olarak kullanılan uç nokta özellikleri için varsayılan değerlere sahip uç noktalara sahip olunarak artırılabilir. Standart uç noktalar, bir geliştiricinin varsayılan değerleri olan veya bir ya da daha fazla bitiş noktası özelliklerinin değişmediğinden bir uç nokta tanımlamasını sağlar.  Bu uç noktalar, statik bir doğası bilgilerini belirtmek zorunda kalmadan böyle bir uç nokta kullanmanızı sağlar. Standart uç noktalar, altyapı ve uygulama uç noktaları için kullanılabilir.  
   
-## <a name="infrastructure-endpoints"></a>Altyapı Uç Noktaları  
- Bir hizmet, hizmet yazarı tarafından açıkça uygulanmayan bazı özellikleri olan uç noktalarını ortaya çıkarabilir. Örneğin, meta veri değişimi bitiş noktası <xref:System.ServiceModel.Description.IMetadataExchange> sözleşmeyi ortaya çıkarır, ancak bir hizmet yazarı olarak bu arabirimi uygulamazsanız, WCF tarafından uygulanır. Bu tür altyapı uç noktaları, bazıları değiştirilemez olabilecek bir veya daha fazla uç nokta özelliği için varsayılan değerlere sahiptir. Meta <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> veri alışverişi bitiş noktasının <xref:System.ServiceModel.Description.IMetadataExchange>özelliği, bağlama gibi diğer özellikler geliştirici tarafından sağlanabilirken olmalıdır. Altyapı uç noktaları <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> özelliği ' `true`ne ayarlayarak tanımlanır.  
+## <a name="infrastructure-endpoints"></a>Altyapı uç noktaları  
+
+ Bir hizmet, hizmet yazarı tarafından açıkça uygulanmayan bazı özelliklerle uç noktalar açığa çıkabilir. Örneğin, meta veri değişimi uç noktası sözleşmeyi kullanıma sunar <xref:System.ServiceModel.Description.IMetadataExchange> , ancak bir hizmet yazarı olarak bu arabirimi uygulamaz, WCF tarafından uygulanır. Bu tür altyapı uç noktaları, bir veya daha fazla uç nokta özelliği için varsayılan değerlere sahiptir ve bunlardan bazıları geri alınamaz. <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>Meta veri değişimi uç noktasının özelliği olmalıdır <xref:System.ServiceModel.Description.IMetadataExchange> ; ancak bağlama gibi diğer özellikler geliştirici tarafından sağlanabilecek. Altyapı uç noktaları, <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> özelliği olarak ayarlanarak tanımlanır `true` .  
   
-## <a name="application-endpoints"></a>Uygulama Bitiş Noktaları  
- Uygulama geliştiricileri, adres, bağlama veya sözleşme için varsayılan değerleri belirten kendi standart uç noktalarını tanımlayabilir. Bir sınıfı türeterek <xref:System.ServiceModel.Description.ServiceEndpoint> ve uygun uç nokta özelliklerini ayarlayarak standart bir bitiş noktası tanımlarsınız. Değiştirilebilen özellikler için varsayılan değerler sağlayabilirsiniz. Diğer bazı özellikleri değiştirilemez statik değerlere sahip olacaktır. Aşağıdaki örnek, standart bir bitiş noktasının nasıl uygulanacağını gösterir.  
+## <a name="application-endpoints"></a>Uygulama uç noktaları  
+
+ Uygulama geliştiricileri, adres, bağlama veya sözleşme için varsayılan değerleri belirten kendi standart uç noktalarını tanımlayabilir. Bir sınıf türeterek <xref:System.ServiceModel.Description.ServiceEndpoint> ve uygun uç nokta özelliklerini ayarlayarak standart bir uç nokta tanımlarsınız. Değiştirilebilen özellikler için varsayılan değerler sağlayabilirsiniz. Bazı diğer özellikler, değişmeyen statik değerlere sahip olur. Aşağıdaki örnek, standart bir uç noktanın nasıl uygulanacağını gösterir.  
   
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
@@ -42,7 +45,7 @@ public class CustomEndpoint : ServiceEndpoint
 }
 ```
   
- Yapılandırma dosyasında kullanıcı tanımlı özel bitiş noktası kullanmak için <xref:System.ServiceModel.Configuration.StandardEndpointElement>bir sınıf türetmeniz, bir sınıf <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>türetmeniz ve app.config veya machine.config'deki uzantılar bölümündeyeni standart bitiş noktasını kaydetmeniz gerekir.  Aşağıdaki <xref:System.ServiceModel.Configuration.StandardEndpointElement> örnekte gösterildiği gibi, standart bitiş noktası için yapılandırma desteği sağlar.  
+ Bir yapılandırma dosyasında Kullanıcı tanımlı özel uç nokta kullanmak için, öğesinden bir sınıf türetmeniz <xref:System.ServiceModel.Configuration.StandardEndpointElement> , öğesinden bir sınıf türetmeniz <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> ve yeni standart uç noktayı app.config veya machine.config uzantı bölümüne kaydetmeniz gerekir.  , <xref:System.ServiceModel.Configuration.StandardEndpointElement> Aşağıdaki örnekte gösterildiği gibi standart uç nokta için yapılandırma desteği sağlar.  
   
 ```csharp
 public class CustomEndpointElement : StandardEndpointElement
@@ -103,7 +106,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```  
   
- Standart <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> bitiş noktası için yapılandırmada <`standardEndpoints`> bölümünün altında görünen koleksiyon için destek türünü sağlar.  Aşağıdaki örnek, bu sınıfın nasıl uygulanacağını gösterir.  
+ , <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> `standardEndpoints` Standart uç nokta yapılandırmasındaki <> bölümü altında görüntülenen koleksiyon için yedekleme türünü sağlar.  Aşağıdaki örnek, bu sınıfın nasıl uygulanacağını gösterir.  
   
 ```csharp
 public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
@@ -112,7 +115,7 @@ public class CustomEndpointCollectionElement : StandardEndpointCollectionElement
 }
 ```
 
-Aşağıdaki örnek, uzantılar bölümünde standart bir bitiş noktasının nasıl kaydedilebildiğini gösterir.
+Aşağıdaki örnek, uzantılar bölümünde standart bir uç noktanın nasıl kaydedileceği gösterilmektedir.
 
 ```xml  
 <extensions>  
@@ -125,14 +128,15 @@ Aşağıdaki örnek, uzantılar bölümünde standart bir bitiş noktasının na
 </extensions>  
 ```  
   
-## <a name="configuring-a-standard-endpoint"></a>Standart Bitiş Noktası Nı Yapılandırma  
- Standart uç noktalar kodda veya yapılandırmada eklenebilir.  Koda standart bir bitiş noktası eklemek için uygun standart uç nokta türünü anında anında anlamanız ve aşağıdaki örnekte gösterildiği gibi servis ana lığına eklemeniz yeterlidir:  
+## <a name="configuring-a-standard-endpoint"></a>Standart uç nokta yapılandırma  
+
+ Standart uç noktalar, koda veya yapılandırmaya eklenebilir.  Koda standart bir uç nokta eklemek için, uygun standart uç nokta türünü örnek olarak oluşturmanız ve aşağıdaki örnekte gösterildiği gibi hizmet ana bilgisayarına eklemeniz yeterlidir:  
   
 ```csharp  
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- Yapılandırmada standart bir bitiş noktası eklemek `endpoint` için, <`service`> öğesine ve <`standardEndpoints`> öğesinde gerekli yapılandırma ayarlarına <bir> öğesi ekleyin. Aşağıdaki örnek, bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, bir , standart uç noktalardan biri ile gemi nasıl ekler [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]gösterir.  
+ Yapılandırmaya standart bir uç nokta eklemek için, `endpoint` <`service`> öğesine ve gerekli yapılandırma ayarlarına <> öğesinde bir <> öğesi ekleyin `standardEndpoints` . Aşağıdaki örnek <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> , ile birlikte gelen standart uç noktalardan birini nasıl ekleneceğini gösterir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
   
 ```xml  
 <services>  
@@ -147,43 +151,44 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
 </standardEndpoints>
 ```  
   
- Standart bitiş noktası türü, <`endpoint`> öğesindeki tür özniteliği kullanılarak belirtilir. Bitiş noktası <`standardEndpoints`> öğesi içinde yapılandırılır. Yukarıdaki örnekte, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> bir bitiş noktası eklenir ve yapılandırılır. <`udpDiscoveryEndpoint`> öğesi, `standardEndpoint` <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>'nin özelliğini ayarlayan <bir> içerir.  
+ Standart uç nokta türü, <> öğesindeki Kind özniteliği kullanılarak belirtilir `endpoint` . Uç nokta <> öğesi içinde yapılandırılır `standardEndpoints` . Yukarıdaki örnekte, bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> uç nokta eklenir ve yapılandırılır. <`udpDiscoveryEndpoint`> öğesi `standardEndpoint` , öğesinin özelliğini ayarlayan bir <> içerir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> .  
   
-## <a name="standard-endpoints-shipped-with-the-net-framework"></a>.NET Çerçevesi ile Gönderilen Standart Uç Noktaları  
- Aşağıdaki tabloda, [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]'ile gönderilen standart uç noktaları listele  
+## <a name="standard-endpoints-shipped-with-the-net-framework"></a>.NET Framework birlikte gönderilen standart uç noktalar  
+
+ Aşağıdaki tabloda ile birlikte gelen standart uç noktalar listelenmiştir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
   
  `Mex Endpoint`  
- Hizmet meta verilerini ortaya çıkarmak için kullanılan standart bir uç nokta.  
+ Hizmet meta verilerini açığa çıkarmak için kullanılan standart bir uç nokta.  
   
  <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
- Duyuru iletileri göndermek için hizmetler tarafından kullanılan standart bir bitiş noktası.  
+ Hizmetler tarafından duyuru iletileri göndermek için kullanılan standart bir uç nokta.  
   
  <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
- Bulma iletileri göndermek için hizmetler tarafından kullanılan standart bir bitiş noktası.  
+ Bulma iletilerini göndermek için hizmetler tarafından kullanılan standart bir uç nokta.  
   
  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
- UDP çok noktaya yayın bağlama üzerinden bulma işlemleri için önceden yapılandırılan standart bir uç nokta.  
+ Bir UDP çok noktaya yayın bağlaması üzerinde bulma işlemleri için önceden yapılandırılmış standart bir uç nokta.  
   
  <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
- Bir UDP bağlama üzerinden duyuru iletileri göndermek için hizmetler tarafından kullanılan standart bir bitiş noktası.  
+ Hizmetler tarafından bir UDP bağlaması üzerinden duyuru iletileri göndermek için kullanılan standart bir uç nokta.  
   
  <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
- Çalışma zamanında bitiş noktası adresini dinamik olarak bulmak için WS-Discovery kullanan standart bir uç nokta.  
+ Çalışma zamanında dinamik olarak uç nokta adresini bulmak için WS-Discovery kullanan standart bir uç nokta.  
   
  <xref:System.ServiceModel.Description.ServiceMetadataEndpoint>  
- Meta veri alışverişi için standart bir bitiş noktası.  
+ Meta veri değişimi için standart bir uç nokta.  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint>  
- Davranışı otomatik olarak <xref:System.ServiceModel.WebHttpBinding> ekleyen bir bağlama <xref:System.ServiceModel.Description.WebHttpBehavior> içeren standart bir bitiş noktası  
+ <xref:System.ServiceModel.WebHttpBinding>Otomatik olarak davranışını ekleyen bağlama içeren standart bir uç nokta <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
  <xref:System.ServiceModel.Description.WebScriptEndpoint>  
- Davranışı otomatik olarak <xref:System.ServiceModel.WebHttpBinding> ekleyen bağlayıcılı standart bir bitiş noktası. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>  
+ <xref:System.ServiceModel.WebHttpBinding>Davranışı otomatik olarak ekleyen bağlama içeren standart bir uç nokta <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> .  
   
  <xref:System.ServiceModel.Description.WebServiceEndpoint>  
- Bağlamalı standart bir <xref:System.ServiceModel.WebHttpBinding> bitiş noktası.  
+ Bağlama içeren standart bir uç nokta <xref:System.ServiceModel.WebHttpBinding> .  
   
  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>  
- İş akışı örneklerinde denetim işlemlerini aramanızı sağlayan standart bir uç nokta.  
+ İş akışı örneklerinde denetim işlemlerini çağırmanızı sağlayan standart bir uç nokta.  
   
  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>  
- İş akışı oluşturmayı ve yer imi yeniden başlatılmasını destekleyen standart bir bitiş noktası.
+ İş akışı oluşturmayı ve sürdürme yer işaretini destekleyen standart bir uç nokta.

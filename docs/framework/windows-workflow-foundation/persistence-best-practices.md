@@ -2,17 +2,19 @@
 title: Kalıcılık En İyi Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: b0276bdfd6dcf2e12357224d9a92484a5da9eac3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 950a5d5c742b7882db93d71f3e7f205009f2a863
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558257"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246153"
 ---
 # <a name="persistence-best-practices"></a>Kalıcılık En İyi Uygulamaları
+
 Bu belge iş akışı tasarımı ve iş akışı kalıcılığı ile ilgili yapılandırma için en iyi yöntemleri içerir.  
   
 ## <a name="design-and-implementation-of-durable-workflows"></a>Dayanıklı Iş akışlarının tasarımı ve uygulanması  
+
  Genel olarak, iş akışları, bir olayı beklediği için iş akışının boşta olduğu zamanlarla birlikte Aralanmış kısa dönemlerde çalışır. Bu olay, ileti veya süresi dolan bir zamanlayıcı gibi şeyler olabilir. İş akışı örneğini boşta kaldığında kaldırabilmek için, hizmet ana bilgisayarı iş akışı örneğini kalıcı hale vermelidir. Bu, yalnızca iş akışı örneği kalıcı olmayan bir bölgede değilse (örneğin, bir işlemin tamamlanmasını bekliyorsa veya zaman uyumsuz geri çağırma için beklerken) mümkündür. Boş bir iş akışı örneğinin kaldırılmasına izin vermek için, iş akışı yazarı yalnızca kısa süreli eylemler için işlem kapsamlarını ve zaman uyumsuz etkinlikleri kullanmalıdır. Özellikle yazar, gecikme etkinliklerini bu kalıcı olmayan bölgeler içinde mümkün olduğunca kısa tutmaya devam etmelidir.  
   
  İş akışı yalnızca, iş akışı tarafından kullanılan tüm veri türleri seri hale getirilebilir ise kalıcı olabilir. Ayrıca, kalıcı iş akışlarında kullanılan özel türlerin, <xref:System.Runtime.Serialization.NetDataContractSerializer> tarafından kalıcı hale getirilemeyen şekilde seri hale getirilebilir olması gerekir <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> .  
@@ -24,6 +26,7 @@ Bu belge iş akışı tasarımı ve iş akışı kalıcılığı ile ilgili yap�
  Windows Server App Fabric, kalıcılığı yapılandırmayı ve kullanımını büyük ölçüde basitleştirir. Daha fazla bilgi için bkz. [Windows Server App Fabric kalıcılığı](/previous-versions/appfabric/ee677272(v=azure.10))  
   
 ## <a name="configuration-of-scalability-parameters"></a>Ölçeklenebilirlik parametrelerinin yapılandırması  
+
  Ölçeklenebilirlik ve performans gereksinimleri aşağıdaki parametrelerin ayarlarını belirlemenizi ister:  
   
 - <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
@@ -35,6 +38,7 @@ Bu belge iş akışı tasarımı ve iş akışı kalıcılığı ile ilgili yap�
  Bu parametrelerin geçerli senaryoya göre aşağıdaki şekilde ayarlanması gerekir.  
   
 ### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Senaryo: En Iyi yanıt süresi gerektiren az sayıda Iş akışı örneği  
+
  Bu senaryoda, tüm iş akışı örneklerinin Boşta olduklarında yüklenmiş olarak kalması gerekir. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>Büyük bir değere ayarlayın. Bu ayarın kullanılması, bir iş akışı örneğinin bilgisayarlar arasında taşınmasına engel olur. Bu ayarı yalnızca aşağıdakilerden biri veya daha fazlası geçerliyse kullanın:  
   
 - Bir iş akışı örneği, ömrü boyunca tek bir ileti alır.  
@@ -46,14 +50,17 @@ Bu belge iş akışı tasarımı ve iş akışı kalıcılığı ile ilgili yap�
  <xref:System.Activities.Statements.Persist> <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Hizmet ana bilgisayarı veya bilgisayar hatalarından sonra iş akışı örneğinizin kurtarılmasını etkinleştirmek için etkinlikleri kullanın veya 0 olarak ayarlayın.  
   
 ### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Senaryo: Iş akışı örnekleri uzun süre boşta kalır  
+
  Bu senaryoda, <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> kaynakları mümkün olan en kısa sürede serbest bırakmak için 0 olarak ayarlayın.  
   
 ### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Senaryo: Iş akışı örnekleri kısa bir süre içinde birden çok Ileti alır  
+
  Bu senaryoda, bu <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> iletiler aynı bilgisayar tarafından alınmışsa, bu senaryoda 60 saniyeye ayarlanır. Bu, bir iş akışı örneğinin kaldırılmasının ve yüklenmesinin hızlı bir sırasını önler. Bu aynı zamanda örneği çok uzun süre boyunca bellekte tutmaz.  
   
  <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>0 olarak ayarlayın ve <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> Bu iletiler farklı bilgisayarlar tarafından alınmışsa, BasicRetry veya kararlılığı olarak ayarlayın. Bu, iş akışı örneğinin başka bir bilgisayar tarafından yüklenmesine izin verir.  
   
 ### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Senaryo: Iş akışı kısa sürelerle gecikme etkinlikleri kullanır  
+
  Bu senaryoda, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> zaman aşımına uğradı bir etkinlik nedeniyle yüklenmesi gereken örnekler için kalıcılık veritabanını düzenli olarak yoklar <xref:System.Activities.Statements.Delay> . <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>Bir sonraki yoklama aralığında sona erecektir bir Zamanlayıcı bulursa, SQL Iş akışı örnek deposu yoklama aralığını kısaltır. Sonraki yoklama, Zamanlayıcının süresi dolduktan sonra doğru yapılır. Bu şekilde, SQL Iş akışı örneği deposu tarafından ayarlanan yoklama aralığından daha uzun süre çalışan zamanlayıcılar üzerinde yüksek bir doğrulukla ulaşır <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A> . Kısa gecikmelerin zamanında işlenmesini sağlamak için, en az bir yoklama aralığı için iş akışı örneğinin bellekte kalması gerekir.  
   
  <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>Son kullanma süresini kalıcılık veritabanına yazmak için 0 olarak ayarlayın.  
@@ -63,6 +70,7 @@ Bu belge iş akışı tasarımı ve iş akışı kalıcılığı ile ilgili yap�
  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A>Bu, kalıcılık veritabanındaki daha fazla yüke yol ettiğinden, bunun azalmasını önermiyoruz. Öğesini kullanan her hizmet ana bilgisayarı, her <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> algılama dönemi için veritabanını bir kez yoklar. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A>Bir zaman aralığı çok küçük olarak ayarlandığında, hizmet ana bilgisayarlarının sayısı büyükse sisteminizin performansının azalmasına neden olabilir.  
   
 ## <a name="configuring-the-sql-workflow-instance-store"></a>SQL Iş akışı örnek deposunu yapılandırma  
+
  SQL Iş akışı örneği deposunda aşağıdaki yapılandırma parametreleri vardır:  
   
  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceEncodingOption%2A>  

@@ -2,21 +2,25 @@
 title: Özellikler ve Arguments
 ms.date: 03/30/2017
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
-ms.openlocfilehash: a6ea4755599f18e8bbaa8187941623578d2168ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ed443b962e6cccb8a0f670f1dbd744bfa8ed354
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962636"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245932"
 ---
 # <a name="properties-vs-arguments"></a>Özellikler ve Arguments
-Bir etkinlik içinde veri geçirmek için kullanılabilen birkaç seçeneğiniz vardır. Kullanmanın yanı sıra <xref:System.Activities.InArgument>, etkinlikleri de geliştirilebilir standart CLR özellikleri veya ortak kullanarak veri alması <xref:System.Activities.ActivityAction> özellikleri. Bu konuda, uygun bir yöntem türü seç anlatılmaktadır.  
+
+Bir etkinliğe veri geçirmek için kullanabileceğiniz çeşitli seçenekler vardır. Kullanmanın yanı sıra <xref:System.Activities.InArgument> , aynı zamanda standart CLR özellikleri veya ortak özellikler kullanılarak veri alan etkinlikler de geliştirilebilir <xref:System.Activities.ActivityAction> . Bu konu başlığı altında, uygun yöntem türünü seçme açıklanmaktadır.  
   
 ## <a name="using-clr-properties"></a>CLR özelliklerini kullanma  
- Bir etkinlik içinde veri geçirirken, CLR Özellikleri (kullanımı alın ve verileri göstermek için yordamlar ayarlayın diğer bir deyişle, genel yöntemler) en kısıtlamaları olan seçenektir. Çözüm derlendiğinde bir CLR özelliği geçirilen parametrenin değeri bilinmesi gerekir; Bu değer, her iş akışı örneğiyle aynı olacaktır. Bu şekilde, bir değeri bir CLR özelliği geçirilen kod içinde tanımlanmış bir sabit benzer; Bu değer, etkinlik süresince değiştiremezsiniz ve etkinlik için farklı örnekleri değiştirilemez. <xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A> bir etkinlik tarafından kullanıma sunulan bir CLR özellik örneğidir; Etkinlik çağıran yöntem adı üzerinde çalışma zamanı koşullarına göre değiştirilemez ve etkinlik her örneğinin aynı olacaktır.  
+
+ Verileri bir etkinliğe geçirirken, CLR özellikleri (diğer bir deyişle, verileri açığa çıkarmak için Get ve set yordamlarını kullanan ortak Yöntemler) en fazla kısıtlamalara sahip olan seçenektir. CLR özelliğine geçirilen parametrenin değeri, çözüm derlendiğinde bilinmelidir; Bu değer, iş akışının her örneği için aynı olacaktır. Bu şekilde, CLR özelliğine geçirilen bir değer, kodda tanımlanan bir sabit değere benzerdir; Bu değer etkinliğin ömrü için değiştirilemez ve etkinliğin farklı örnekleri için değiştirilemez. <xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A> , bir etkinliğin açığa çıkarılan CLR özelliğine bir örnektir; Etkinlik çağrılarının Yöntem adı çalışma zamanı koşullarına göre değiştirilemez ve etkinliğin her örneği için aynı olacaktır.  
   
 ## <a name="using-arguments"></a>Bağımsız değişkenleri kullanma  
- Verileri yalnızca bir kez etkinlik yaşam süresi boyunca değerlendirildiğinde bağımsız değişkenleri kullanılmalıdır; diğer bir deyişle, etkinlik yaşam süresi boyunca değerini değiştirmez, ancak değeri farklı örneklerini etkinlik için farklı olabilir. <xref:System.Activities.Statements.If.Condition%2A> bir kez değerlendirilen bir değerin bir örnektir; Bu nedenle, bağımsız değişken olarak tanımlanır. <xref:System.Activities.Statements.WriteLine.Text%2A> başka bir örnek olduğundan yalnızca Etkinlik yürütme sırasında bir kez değerlendirilir, bir bağımsız değişken olarak tanımlanan bir yöntemin olmakla birlikte bu etkinlik için farklı örneklerinde farklı olabilir.  
+
+ Bağımsız değişkenler etkinliğin kullanım ömrü boyunca yalnızca bir kez değerlendirildiğinde kullanılmalıdır; diğer bir deyişle, etkinliğin ömrü boyunca değeri değişmez, ancak değer etkinliğin farklı örnekleri için farklı olabilir. <xref:System.Activities.Statements.If.Condition%2A> bir kez değerlendirilen bir değere örnektir; Bu nedenle, bir bağımsız değişken olarak tanımlanmıştır. <xref:System.Activities.Statements.WriteLine.Text%2A> , etkinliğin yürütülmesi sırasında yalnızca bir kez değerlendirildiğinden ve etkinliğin farklı örnekleri için farklı olabilecek bir bağımsız değişken olarak tanımlanması gereken bir yönteme ait başka bir örnektir.  
   
 ## <a name="using-activityaction"></a>ActivityAction kullanma  
- Birden çok kez ömrünü Etkinlik yürütme sırasında değerlendirilecek verileri gerektiğinde bir <xref:System.Activities.ActivityAction> kullanılmalıdır. Örneğin, <xref:System.Activities.Statements.While.Condition%2A> özelliği, her yineleme için değerlendirilir <xref:System.Activities.Statements.While> döngü. Varsa bir <xref:System.Activities.InArgument> bu amaçla, döngü asla çıkış, bağımsız değişken her yinelemede hesaplanması değil ve her zaman olduğu döndürmesine aynı sonucu kullanıldı.
+
+ Etkinliğin çalışmasının ömrü boyunca verilerin birden çok kez değerlendirilmesi gerektiğinde, <xref:System.Activities.ActivityAction> kullanılması gerekir. Örneğin, <xref:System.Activities.Statements.While.Condition%2A> özellik döngünün her yinelemesi için değerlendirilir <xref:System.Activities.Statements.While> . <xref:System.Activities.InArgument>Bu amaçla kullanıldıysa, bağımsız değişken her yineleme için yeniden değerlendirilmeyeceğinden ve her zaman aynı sonucu döndüren için döngü hiçbir zaman çıkmayacaktır.

@@ -6,26 +6,27 @@ helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-ms.openlocfilehash: 385519229bdb76841cdf592d95e96d2288ec5e1a
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 354740b36ccab742022058288da84b22d460edc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474234"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245620"
 ---
 # <a name="runtime-information-etw-events"></a>Çalışma Zamanı Bilgileri ETW Olayları
+
 Bu ETW olayları, çalışma zamanı hakkındaki SKU, sürüm numarası, çalışma zamanının etkinleştirildiği yol, ile başlatıldığı komut satırı parametreleri, GUID (varsa) ve diğer ilgili bilgiler dahil olmak üzere çalışma zamanı hakkındaki bilgileri günlüğe kaydeder. Bir işlem içinde birden çok çalışma alanı yürütülerek, bu olaylar tarafından sunulan bilgiler (ClrInstanceID) çalışma zamanlarının belirsizliğini ortadan kaldırmaya yardımcı olur.  
   
  Aşağıdaki tabloda iki çalışma zamanı bilgi olayı gösterilmektedir. Olaylar herhangi bir anahtar sözcük veya maske altında oluşturulabilir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
   
-|Olay|Olay Kimliği|Sağlayıcı|Description|  
+|Olay|Olay Kimliği|Sağlayıcı|Açıklama|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|Çalışma zamanı yüklendiğinde tetiklenir.|  
 |`RuntimeInformationDCStart`|187|Clrrunaşağı|Yüklenen çalışma zamanlarını numaralandırır.|  
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
 |Sku|Win: UInt16|1 – Masaüstü CLR.<br /><br /> 2 – CoreCLR.|  

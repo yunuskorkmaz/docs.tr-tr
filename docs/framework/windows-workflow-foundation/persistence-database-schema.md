@@ -2,20 +2,22 @@
 title: Kalıcılık Veritabanı Şeması
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 04b57789e7c1ab6bfebd9c9b345ee0fb7dfb3e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0ee076aa327f298007dfb18af324fb81c309067
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558244"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246101"
 ---
 # <a name="persistence-database-schema"></a>Kalıcılık Veritabanı Şeması
+
 Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görünümler açıklanmaktadır.  
   
 ## <a name="instances-view"></a>Örnek görünümü  
+
  **Örnekler** görünümü veritabanındaki tüm Iş akışı örnekleri hakkında genel bilgiler içerir.  
   
-|Sütun adı|Sütun türü|Description|  
+|Sütun adı|Sütun türü|Açıklama|  
 |-----------------|-----------------|-----------------|  
 |InstanceId|Benzersiz tanımlayıcı|Bir iş akışı örneğinin KIMLIĞI.|  
 |PendingTimer|DateTime|Bir gecikme etkinliğinde iş akışının engellenip engellenmediğini ve Zamanlayıcının süresi dolduktan sonra devam edecek olduğunu gösterir. İş akışı, bir zamanlayıcının süre sonu beklenememesi durumunda bu değer null olabilir.|  
@@ -27,10 +29,10 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 |Activeyer Işaretleri|Nvarchar (max)|İş akışı örneği boşta ise, bu özellik örneğin hangi yer işaretlerinin engellendiğini gösterir. Örnek boşta değilse, bu sütun NULL olur.|  
 |CurrentMachine|Nvarchar (128)|Bilgisayar adının şu anda bellekte yüklü iş akışı örneği olduğunu gösterir.|  
 |LastMachine|Nvarchar (450)|İş akışı örneğini yükleyen son bilgisayarı gösterir.|  
-|ExecutionStatus|Nvarchar (450)|Iş akışının geçerli yürütme durumunu gösterir. Olası durumlar **yürütme**, **Boşta**ve **kapalı**durumlarını içerir.|  
+|ExecutionStatus|Nvarchar (450)|Iş akışının geçerli yürütme durumunu gösterir. Olası durumlar **yürütme**, **Boşta** ve **kapalı** durumlarını içerir.|  
 |IsInitialized|Sürümleri|İş akışı örneğinin başlatılmış olup olmadığını gösterir. Başlatılmış bir iş akışı örneği, en az bir kez kalıcı olan bir iş akışı örneğidir.|  
 |Isaskıya alındı|Sürümleri|İş akışı örneğinin askıya alınıp alınmadığını gösterir.|  
-|IsCompleted|Sürümleri|Iş akışı örneğinin yürütülmesinin tamamlanıp bitmediğini belirtir. **Note:**  IIF, **InstanceCompletionAction** özelliği **DeleteAll**olarak ayarlanmış, örnekler tamamlandıktan sonra görünümden kaldırılır.|  
+|IsCompleted|Sürümleri|Iş akışı örneğinin yürütülmesinin tamamlanıp bitmediğini belirtir. **Note:**  IIF, **InstanceCompletionAction** özelliği **DeleteAll** olarak ayarlanmış, örnekler tamamlandıktan sonra görünümden kaldırılır.|  
 |EncodingOption|Iç|Veri özelliklerini seri hale getirmek için kullanılan kodlamayı açıklar.<br /><br /> -0 – kodlama yok<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary (max)|Örnek yüklendiğinde iş akışı çalışma zamanına geri sağlanacak serileştirilmiş örnek veri özelliklerini içerir.<br /><br /> Her ilkel özellik yerel bir CLR türüdür ve bu, Blobun serisini kaldırmak için özel derlemeler gerekmediği anlamına gelir.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary (max)|Örnek yüklendiğinde iş akışı çalışma zamanına geri sağlanmayan serileştirilmiş örnek veri özelliklerini içerir.<br /><br /> Her ilkel özellik yerel bir CLR türüdür ve bu, Blobun serisini kaldırmak için özel derlemeler gerekmediği anlamına gelir.|  
@@ -38,7 +40,7 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 |WriteOnlyComplexDataProperties|Varbinary (max)|Örnek yüklendiğinde iş akışı çalışma zamanına geri sağlanmayan serileştirilmiş örnek veri özelliklerini içerir.<br /><br /> Seri hale getirici, bu bloba depolanan tüm nesne türleri hakkında bilgi gerektirir.|  
 |IdentityName|Nvarchar (max)|İş akışı tanımının adı.|  
 |IdentityPackage|Nvarchar (max)|İş akışı oluşturulduğunda verilen paket bilgileri (örneğin, derleme adı).|  
-|Yapı|BigInt|İş akışı sürümünün yapı numarası.|  
+|Oluşturma|BigInt|İş akışı sürümünün yapı numarası.|  
 |Ana|BigInt|İş akışı sürümünün ana numarası.|  
 |İkincil|BigInt|İş akışı sürümünün küçük sayısı.|  
 |Revizyon|BigInt|İş akışı sürümünün düzeltme numarası.|  
@@ -47,9 +49,10 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 > **Örnekler** görünümü bir Delete tetikleyicisi de içerir. Uygun izinlere sahip kullanıcılar, iş akışı örneklerini veritabanından zorla kaldıracak bu görünüme karşı delete deyimlerini yürütebilir. İş akışı çalışma zamanının altındaki bir örneği silmek istenmeden sonuçlara neden olabileceğinden, doğrudan görünümden yalnızca son çare olarak silinmesini öneririz. Bunun yerine, iş akışı çalışma zamanının örneği sonlandırmayı sağlamak için Iş akışı örneği yönetim uç noktasını kullanın. Görünümden çok sayıda örnek silmek istiyorsanız, bu örneklerde çalışan etkin çalışma zamanları olmadığından emin olun.  
   
 ## <a name="servicedeployments-view"></a>Servicedağıtımlar görünümü  
+
  **Servicedağıtımlar** görünümü tüm Web (IIS/WAS) barındırılan iş akışı hizmetleri için dağıtım bilgilerini içerir. Web 'de barındırılan her iş akışı örneği, bu görünümdeki bir satıra başvuran bir **ServiceDeploymentId** içerir.  
   
-|Sütun adı|Sütun türü|Description|  
+|Sütun adı|Sütun türü|Açıklama|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|Bu görünüm için birincil anahtar.|  
 |SiteAdı|Nvarchar (max)|İş akışı hizmetini içeren sitenin adını temsil eder (örneğin, **varsayılan Web sitesi**).|  
@@ -65,9 +68,10 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 2. **Örnekler** görünümündeki girişler tarafından başvurulan bir ServiceDeployment satırını silme girişimleri, işlem olmadan sonuçlanır. ServiceDeployment satırlarını yalnızca sıfır başvuru ile silebilirsiniz.  
   
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties görünümü  
+
  **InstancePromotedProperties** görünümü, Kullanıcı tarafından belirtilen tüm yükseltilen özelliklerle ilgili bilgiler içerir. Yükseltilen bir özellik, bir kullanıcının örnekleri almak için sorgularda kullanabileceği birinci sınıf bir özellik olarak çalışır.  Örneğin, bir Kullanıcı her zaman **değer1** sütununda bir siparişin maliyetini depolayan bir PurchaseOrder yükseltmesi ekleyebilir. Bu, bir kullanıcının maliyeti belirli bir değeri aşan tüm satın alma siparişlerinin sorgulanbilmesini sağlar.  
   
-|Sütun türü|Sütun türü|Description|  
+|Sütun türü|Sütun türü|Açıklama|  
 |-|-|-|  
 |InstanceId|Benzersiz tanımlayıcı|Iş akışı örneğinin KIMLIĞI|  
 |EncodingOption|Iç|Yükseltilen ikili özellikleri seri hale getirmek için kullanılan kodlamayı açıklar.<br /><br /> -0 – kodlama yok<br />-1 – GZipStream|  

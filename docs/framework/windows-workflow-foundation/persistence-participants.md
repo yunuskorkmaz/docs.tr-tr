@@ -2,63 +2,64 @@
 title: Kalıcılık Katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 73799fd66dd619d2573a1d334a6dbd23a9ff5b4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bff6cc8fafb1832dc4d0e33b754fe3adb81dcf6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592142"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246114"
 ---
 # <a name="persistence-participants"></a>Kalıcılık Katılımcıları
-Kalıcılık Katılımcısı bir uygulama ana bilgisayarı tarafından tetiklenen bir Kalıcılık işlemi (kaydetme veya yük) katılabilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] İki soyut sınıf ile birlikte gelen **PersistenceParticipant** ve **PersistenceIOParticipant**, hangi Kalıcılık Katılımcısı oluşturma için kullanabilirsiniz. Kalıcılık Katılımcısı bu sınıflardan birine türetilen, ilgilenilen yöntemlerini uygular ve sonra sınıfa bir örneğini ekler <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> koleksiyonunda <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Uygulama konağı, bir iş akışı örneği kalıcı olduğunda bu tür iş akışı uzantılar için Ara ve uygun zamanlarda Kalıcılık katılımcıları uygun yöntemleri çağırmak olabilir.  
+
+Kalıcılık Katılımcısı, bir uygulama ana bilgisayarı tarafından tetiklenen bir kalıcılık işlemine (kaydetme veya yükleme) katılabilir. , [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Bir Kalıcılık Katılımcısı oluşturmak için kullanabileceğiniz iki soyut sınıf ( **persistencekatılımcı** ve **Persistenceıopmakalenıpant**) ile birlikte gelir. Bir Kalıcılık Katılımcısı, bu sınıfların birinden türetilir, ilgilendiğiniz yöntemleri uygular ve sonra bir sınıfının bir örneğini <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> koleksiyonuna ekler <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Uygulama Konağı, bir iş akışı örneğini kalıcı hale getiren ve uygun zamanlarda Kalıcılık katılımcıları üzerinde uygun yöntemleri çağırdığınızda bu tür iş akışı uzantılarını arayabilir.  
   
- Aşağıdaki listede, kalan (Kaydet) işlemi farklı aşamalarında Kalıcılık alt sistemi tarafından gerçekleştirilen görevleri açıklar. Kalıcılık katılımcıları üçüncü ve dördüncü aşamasında kullanılır. Katılımcı bir g/ç Katılımcısı (g/ç işlemlerinde da katıldığı bir Kalıcılık Katılımcısı) ise, katılımcı de altıncı aşamasında kullanılır.  
+ Aşağıdaki listede, devam eden (Kaydet) işleminin farklı aşamalarda Kalıcılık alt sistemi tarafından gerçekleştirilen görevler açıklanmaktadır. Kalıcılık katılımcıları, üçüncü ve dördüncü aşamalarda kullanılır. Katılımcı bir g/ç katılımcısıdır (g/ç işlemlerine da katılan bir Kalıcılık Katılımcısı), katılımcı de altıncı aşamada kullanılır.  
   
-1. İş akışı durumu, yer işaretleri, eşlenen değişkenleri ve zaman damgası dahil olmak üzere yerleşik değerleri toplar.  
+1. İş akışı durumu, yer işaretleri, eşlenmiş değişkenler ve zaman damgası dahil yerleşik değerleri toplar.  
   
-2. İş akışı örneği ile ilişkili Uzantı koleksiyonu eklenen tüm Kalıcılık katılımcıları toplar.  
+2. İş akışı örneğiyle ilişkili uzantı koleksiyonuna eklenen tüm Kalıcılık katılımcılarını toplar.  
   
-3. Çağıran <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> tüm Kalıcılık katılımcıları tarafından uygulanan yöntem.  
+3. <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A>Tüm Kalıcılık katılımcıları tarafından uygulanan yöntemi çağırır.  
   
-4. Çağıran <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> tüm Kalıcılık katılımcıları tarafından uygulanan yöntem.  
+4. <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A>Tüm Kalıcılık katılımcıları tarafından uygulanan yöntemi çağırır.  
   
-5. Kalıcı veya iş akışı kalıcı depoya kaydedin.  
+5. İş akışını kalıcı hale getirin veya kalıcı depoya kaydedin.  
   
-6. Çağıran <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> tüm g/ç Kalıcılık katılımcıları yöntemi. Katılımcı bir g/ç katılımcı değilse bu görev atlandı. Kalıcılık bölüm işlemsel ise, işlem Transaction.Current özelliğinde sağlanır.  
+6. <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A>Tüm Kalıcılık g/ç katılımcıları üzerinde yöntemini çağırır. Katılımcı bir g/ç katılımcısı değilse, bu görev atlanır. Kalıcılık bölümü işlem ise, işlem Transaction. Current özelliğinde sağlanır.  
   
-7. Tüm Kalıcılık katılımcıları tamamlanmasını bekler. Tüm katılımcıları kalıcı örnek verileri başarılı olursa, işlem taahhüt eder.  
+7. Tüm Kalıcılık katılımcılarının tamamlanmasını bekler. Tüm katılımcılar kalıcı örnek verilerinde başarılı olursa, işlemi kaydeder.  
   
- Kalıcılık Katılımcısı türetildiği **PersistenceParticipant** uygulayabilir ve sınıf **CollectValues** ve **MapValues** yöntemleri. Türetilen bir g/ç Kalıcılık Katılımcısı **PersistenceIOParticipant** uygulayabilir ve sınıf **BeginOnSave** uygulama yanı sıra yöntemi **CollectValues**ve **MapValues** yöntemleri.  
+ Bir Kalıcılık Katılımcısı, **persistencekatılımcı** sınıfından türetilir ve **CollectValues** ve **MapValues** yöntemlerini uygulayabilir. Kalıcılık g/ç katılımcısı, **Persistenceıopmakalenıpant** sınıfından türetilir ve **CollectValues** ve **MapValues** yöntemlerini uygulamaya ek olarak **BeginOnSave** metodunu uygulayabilir.  
   
- Her aşama, sonraki aşamasına başlamadan önce tamamlanır. Örneğin, gelen değerleri toplanan **tüm** Kalıcılık katılımcıları ilk aşamasında. Ardından ilk aşamada toplanan tüm değerler tüm Kalıcılık Katılımcıları ikinci aşamasında eşleme için sağlanır. Ardından birinci ve İkinci aşamada eşlenen ve toplanan tüm değerler için kalıcı bir sağlayıcı üçüncü aşamada sağlanır ve benzeri.  
+ Her aşama, sonraki aşama başlamadan önce tamamlanır. Örneğin, ilk aşamadaki **Tüm** Kalıcılık katılımcılarının değerleri toplanır. Ardından ilk aşamada toplanan tüm değerler, eşleme için ikinci aşamadaki tüm Kalıcılık katılımcılarına sağlanır. Ardından ilk ve ikinci aşamada toplanan ve eşlenen tüm değerler, üçüncü aşamadaki Kalıcılık sağlayıcısına sağlanır ve bu şekilde devam eder.  
   
- Aşağıdaki listede, yükleme işlemi farklı aşamalarında Kalıcılık alt sistemi tarafından gerçekleştirilen görevleri açıklar. Kalıcılık katılımcıları dördüncü aşamasında kullanılır. Kalıcılık g/ç katılımcıları (g/ç işlemlerinde ayrıca katılmayı Kalıcılık katılımcıları), ayrıca üçüncü aşamada kullanılır.  
+ Aşağıdaki listede, yük işleminin farklı aşamalarda Kalıcılık alt sistemi tarafından gerçekleştirilen görevler açıklanmaktadır. Kalıcılık katılımcıları dördüncü aşamada kullanılır. Kalıcılık g/ç katılımcıları (Ayrıca g/ç işlemlerine katılan Kalıcılık katılımcıları) üçüncü aşamada de kullanılır.  
   
-1. İş akışı örneği ile ilişkili Uzantı koleksiyonu eklenen tüm Kalıcılık katılımcıları toplar.  
+1. İş akışı örneğiyle ilişkili uzantı koleksiyonuna eklenen tüm Kalıcılık katılımcılarını toplar.  
   
-2. İş akışını sürdürme deposundan yükler.  
+2. Kalıcılık deposundan iş akışını yükler.  
   
-3. Çağıran <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> tüm g/ç Kalıcılık Katılımcıları ve tamamlamak tüm Kalıcılık katılımcıları bekler. Kalıcılık bölüm işlemsel ise, işlem Transaction.Current sağlanır.  
+3. <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A>Tüm Kalıcılık g/ç katılımcıları üzerinde öğesini çağırır ve tüm Kalıcılık katılımcılarının tamamlanmasını bekler. Kalıcılık bölümü işlem halinde ise işlem Transaction. Current ' da sağlanır.  
   
-4. İş akışı örneği sürdürme deposundan alınan verileri temel alan bellekte yükler.  
+4. Kalıcılık deposundan alınan verileri temel alarak, belleğe iş akışı örneğini yükler.  
   
-5. Çağıran <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> her Kalıcılık Katılımcısı üzerinde.  
+5. <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A>Her bir Kalıcılık Katılımcısı üzerinde çağırır.  
   
- Kalıcılık Katılımcısı türetildiği **PersistenceParticipant** uygulayabilir ve sınıf **PublishValues** yöntemi. Türetilen bir g/ç Kalıcılık Katılımcısı **PersistenceIOParticipant** uygulayabilir ve sınıf **BeginOnLoad** uygulama yanı sıra yöntemi **PublishValues**yöntemi.  
+ Bir Kalıcılık Katılımcısı, **persistencekatılımcı** sınıfından türetilir ve **PublishValues** metodunu uygulayabilir. Kalıcılık g/ç katılımcısı, **Persistenceıopmakalenıpant** sınıfından türetilir ve **PublishValues** metodunu uygulamaya ek olarak **BeginOnLoad** metodunu uygulayabilir.  
   
- Bir iş akışı örneği yüklenirken kalıcı bir sağlayıcı bu örneği üzerinde bir kilit oluşturur. Bu örnek, bir çok düğümlü senaryosunda birden fazla konak tarafından yüklenen engeller. Kilitli bir iş akışı örneği yüklemeye çalışırsanız aşağıdaki gibi bir özel durum görürsünüz: Özel durum "System.ServiceModel.persistence.ınstancelockexception: İstenen işlemi tamamlayamadı çünkü kilitleme örneği için ' 00000000-0000-0000-0000-000000000000' alınmamış ". Aşağıdakilerden biri oluştuğunda, bu hataya neden olur:  
+ Bir iş akışı örneği yüklenirken kalıcılık sağlayıcısı bu örnekte bir kilit oluşturur. Bu, örneğin çok düğümlü bir senaryoda birden çok konak tarafından yüklenmesini engeller. Kilitlenen bir iş akışı örneğini yüklemeye çalışırsanız, şunlar gibi bir özel durum görürsünüz: "System. ServiceModel. kalıcılık. InstanceLockException:" 00000000-0000-0000-0000-000000000000 "örneği için kilit alınamadığından istenen işlem tamamlanamadı. Aşağıdakilerden biri gerçekleştiğinde bu hata oluşur:  
   
-- Bir çok düğümlü senaryosunda örneği başka bir ana bilgisayar tarafından yüklenir.  Bu tür çakışmaları çözmek için birkaç farklı yolu vardır: yeniden deneme ve kilit sahibi olan düğüme işleme iletmek veya çalışmalarını kaydetmeleri için başka bir konak neden olacak yük zorla.  
+- Çok düğümlü bir senaryoda, örnek başka bir ana bilgisayar tarafından yüklenir.  Bu çakışma türlerini çözmek için birkaç farklı yol vardır: işlemeyi, kilidi olan düğüme iletin ve yeniden deneyin ya da yükü zorlamak için, diğer konağın çalışmalarını kaydedememesine neden olacak.  
   
-- Tek düğümlü senaryo ve konak kilitlendi.  Ana bilgisayar başlatıldığında, kilit henüz süresi dolmadığından hala eski ana bilgisayar tarafından kilitli bir örnek yüklemek yeni ana bilgisayara yeniden (bir işlem geri dönüştürme veya yeni bir Kalıcılık sağlayıcı üreteci oluşturma) çalışır.  
+- Tek düğümlü bir senaryoda ve ana bilgisayar kilitlendi.  Konak yeniden başlatıldığında (bir işlem geri dönüşümü veya yeni bir kalıcılık sağlayıcısı fabrikası oluştururken), kilidin henüz geçerliliği tamamlanmadığından, yeni ana bilgisayar eski ana bilgisayar tarafından kilitlenen bir örneği yüklemeye çalışır.  
   
-- Tek düğümlü bir senaryo örneği, söz konusu noktada durduruldu ve farklı bir ana bilgisayar kimliği olan yeni bir Kalıcılık sağlayıcı örneği oluşturulur  
+- Tek düğümlü bir senaryoda ve söz konusu örnek bir noktada durduruluyordu ve farklı bir ana bilgisayar KIMLIĞI olan yeni bir kalıcılık sağlayıcısı örneği oluşturulur.  
   
- Varsayılan değer olan 5 dakika kilit zaman aşımı değerine sahip, farklı bir zaman aşımı çağrılırken belirtebilirsiniz <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>.  
+ Kilit zaman aşımı değeri varsayılan 5 dakikalık bir değere sahiptir, çağrılırken farklı bir zaman aşımı değeri belirtebilirsiniz <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A> .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-- [Nasıl yapılır: Özel Kalıcılık Katılımcısı oluşturma](how-to-create-a-custom-persistence-participant.md)  
+- [Nasıl yapılır: Özel Kalıcılık Katılımcısı Oluşturma](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

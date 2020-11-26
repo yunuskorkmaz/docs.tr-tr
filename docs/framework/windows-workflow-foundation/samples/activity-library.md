@@ -2,35 +2,36 @@
 title: Etkinlik Kitaplığı
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-ms.openlocfilehash: fae2a94b5e5e776625aa7f26700980640b66afd4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a0c289315d7181645573098916788f18493abb8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142907"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245717"
 ---
 # <a name="activity-library"></a>Etkinlik Kitaplığı
-Bu bölümde, Windows İş Akışı Temeli'nde (WF) gelişmiş özel etkinlikler gösteren örnekler bulunur.  
+
+Bu bölüm Windows Workflow Foundation (WF) içinde gelişmiş özel etkinlikleri gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde
 
  [SendMail Özel Etkinliği](sendmail-custom-activity.md)  
- İş akışı uygulamasında kullanılmak üzere SMTP kullanarak posta <xref:System.Activities.AsyncCodeActivity> göndermekten türeyen özel bir etkinliğin nasıl oluşturulurulur.  
+ <xref:System.Activities.AsyncCodeActivity>Bir iş akışı uygulamasında kullanmak üzere SMTP kullanarak e-posta göndermek için öğesinden türetilen özel bir etkinliğin nasıl oluşturulacağını gösterir.  
   
  [Kısıtlanmış Paralel ForEach](throttled-parallel-foreach.md)  
- Eşzamanlı şube `ThrottleParallelForEach` sayısını kısıtlamak <xref:System.Activities.Statements.ParallelForEach%601> için eşzamanlı bir faktör ayarlamaya izin verdiği bir özel durum la birlikte, etkinliğin aktiviteye nasıl benzediğini gösterir.
+ `ThrottleParallelForEach`Etkinliğin, <xref:System.Activities.Statements.ParallelForEach%601> eşzamanlı dalların yürütülmesi için bir eşzamanlılık faktörü ayarlanmasını olanaklı hale verdiği bir özel durumla nasıl benzediğini gösterir.
   
  [Veritabanı Erişimi Etkinlikleri](database-access-activities.md)  
- Veritabanlarına erişimin bilgileri almasına veya değiştirmesine ve veritabanına erişmek için [ADO.NET](../../data/adonet/index.md) kullanmasına izin veren etkinliklerin nasıl oluşturulutamamını gösterir.  
+ Veritabanlarına erişilmesine, bilgileri alma veya değiştirme ve veritabanına erişmek için [ADO.net](../../data/adonet/index.md) kullanma izni veren etkinliklerin nasıl oluşturulduğunu gösterir.  
   
  [.NET Framework 4.5’te Dış İlke Etkinliği](externalized-policy-activity-in-net-framework-4-5.md)  
- ExternalizedPolicy4 etkinliğinin, WF 3.5'te sevk edilen kurallar altyapısını kullanarak doğrudan <xref:System.Workflow.Activities.Rules.RuleSet> Windows Workflow Foundation in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) içinde .NET Framework 3.5 (WF 3.5) nesnelerinde varolan Windows İş Akışı Temeli'nin yürütülmesine nasıl izin verdiğini gösterir.
+ ExternalizedPolicy4 etkinliğinin, <xref:System.Workflow.Activities.Rules.RuleSet> [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] WF 3,5 ' te sunulan Rules altyapısını kullanarak doğrudan (WF 4,5) içindeki Windows Workflow Foundation .NET Framework 3,5 (WF 3,5) nesnelerinde var olan Windows Workflow Foundation nasıl yürütmeye izin verdiğini gösterir.
   
  [Genel Olmayan ForEach](non-generic-foreach.md)  
- <xref:System.Activities.Statements.ForEach%601> Etkinliğin genel olmayan bir sürümününasıl oluşturulabildiğini gösterir.  
+ Etkinliğin genel olmayan bir sürümünün nasıl oluşturulacağını gösterir <xref:System.Activities.Statements.ForEach%601> .  
   
  [Genel Olmayan ParallelForEach](non-generic-parallelforeach.md)  
- <xref:System.Activities.Statements.ParallelForEach%601> Etkinliğin genel olmayan bir sürümününasıl oluşturulabildiğini gösterir.  
+ Etkinliğin genel olmayan bir sürümünün nasıl oluşturulacağını gösterir <xref:System.Activities.Statements.ParallelForEach%601> .  
   
  [WorkflowInstanceId Alma](get-workflowinstanceid.md)  
- İş akışı örneği kimliğini döndürmek `GetWorkflowInstanceId`için özel etkinliğin nasıl kullanılacağını gösterir.
+ `GetWorkflowInstanceId`İş akışı örnek kimliğini döndürmek için özel etkinliğin nasıl kullanılacağını gösterir.

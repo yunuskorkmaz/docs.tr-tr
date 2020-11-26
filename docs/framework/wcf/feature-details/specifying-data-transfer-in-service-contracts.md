@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: ae05fb5ea0ee4962d9889e2a29399a3913a0d9d5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 30cdae7e15b80ca826eeea652566a535271477d9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600302"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246400"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Hizmet Sözleşmelerinde Veri Aktarımını Belirtme
+
 Windows Communication Foundation (WCF) bir mesajlaşma altyapısı olarak düşünülebilir. Hizmet işlemleri iletileri alabilir, işleyebilir ve iletileri gönderebilir. İletiler, işlem sözleşmeleri kullanılarak açıklanır. Örneğin, aşağıdaki sözleşmeyi göz önünde bulundurun.  
   
 ```csharp  
@@ -40,6 +41,7 @@ End Interface
  Bu konu başlığı altında, bir işlem sözleşmesinin iletileri nasıl açıklayabileceği çeşitli yollar açıklanmaktadır.  
   
 ## <a name="describing-messages-by-using-parameters"></a>Parametreleri kullanarak Iletileri açıklama  
+
  Bir iletiyi tanımlamanın en kolay yolu bir parametre listesi ve dönüş değeri kullanmaktır. Yukarıdaki örnekte, `fromCity` ve `toCity` dize parametreleri istek iletisini tanımlamakta kullanıldı ve yanıt iletisini anlatmak için float dönüş değeri kullanıldı. Dönüş değeri yalnızca bir yanıt iletisini anlatmak için yeterli değilse, out parametreleri kullanılabilir. Örneğin, aşağıdaki işlem `fromCity` `toCity` kendi istek iletisine sahiptir ve yanıt iletisindeki bir para birimiyle bir sayı ile birlikte bir sayıdır:  
   
 ```csharp  
@@ -87,7 +89,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- Bazen, `DataContractSerializer` türlerinizi seri hale getirmek için yeterli değildir. WCF, <xref:System.Xml.Serialization.XmlSerializer> parametreleri seri hale getirmek için de kullanabileceğiniz alternatif bir serileştirme altyapısını destekler. , Gibi <xref:System.Xml.Serialization.XmlSerializer> öznitelikleri kullanarak SONUÇTAKI XML üzerinde daha fazla denetim kullanmanıza olanak sağlar `XmlAttributeAttribute` . <xref:System.Xml.Serialization.XmlSerializer>Öğesini belirli bir işlem için veya tüm hizmet için kullanmak üzere değiştirmek için, <xref:System.ServiceModel.XmlSerializerFormatAttribute> özniteliği bir işleme veya hizmete uygulayın. Örnek:  
+ Bazen, `DataContractSerializer` türlerinizi seri hale getirmek için yeterli değildir. WCF, <xref:System.Xml.Serialization.XmlSerializer> parametreleri seri hale getirmek için de kullanabileceğiniz alternatif bir serileştirme altyapısını destekler. , Gibi <xref:System.Xml.Serialization.XmlSerializer> öznitelikleri kullanarak SONUÇTAKI XML üzerinde daha fazla denetim kullanmanıza olanak sağlar `XmlAttributeAttribute` . <xref:System.Xml.Serialization.XmlSerializer>Öğesini belirli bir işlem için veya tüm hizmet için kullanmak üzere değiştirmek için, <xref:System.ServiceModel.XmlSerializerFormatAttribute> özniteliği bir işleme veya hizmete uygulayın. Örneğin:  
   
 ```csharp  
 [ServiceContract]  
@@ -141,6 +143,7 @@ public float GetAirfare(
 ```  
   
 ## <a name="describing-empty-messages"></a>Boş Iletileri açıklama  
+
  Boş bir istek iletisi, hiçbir giriş veya başvuru parametresi olmadan açıklanabilir. Örneğin, C# ' de:  
   
  `[OperationContract]`  
@@ -180,6 +183,7 @@ Sub SetLightbulbStatus(isOne As Boolean)
  `SetTemperatureStatus`İşlem boş bir ileti döndürüyor. Giriş iletisini işlerken bir sorun oluşursa bunun yerine bir hata döndürebilir. `SetLightbulbStatus`İşlem hiçbir şey döndürmüyor. Bu işlemden bir hata koşulunu iletmenin bir yolu yoktur.  
   
 ## <a name="describing-messages-by-using-message-contracts"></a>Ileti sözleşmelerini kullanarak Iletileri açıklama  
+
  Tüm iletiyi göstermek için tek bir tür kullanmak isteyebilirsiniz. Bu amaçla bir veri sözleşmesi kullanmak mümkün olsa da, bunu yapmanın önerilen yolu bir ileti sözleşmesi kullanmaktır; bu, sonuçta elde edilen XML 'de gereksiz kaydırma düzeylerini önler. Ayrıca, ileti sözleşmeleri sonuç iletileri üzerinde daha fazla denetim yapmanıza olanak sağlar. Örneğin, ileti gövdesinde hangi bilgi parçalarının olması gerektiğine ve ileti üstbilgilerinde olması gerektiğine karar verebilirsiniz. Aşağıdaki örnek, ileti sözleşmelerinin kullanımını gösterir.  
   
 ```csharp  
@@ -246,6 +250,7 @@ End Class
  Önceki örnekte, <xref:System.Runtime.Serialization.DataContractSerializer> sınıf varsayılan olarak hala kullanılmaktadır. <xref:System.Xml.Serialization.XmlSerializer>Sınıf, ileti sözleşmeleri ile de kullanılabilir. Bunu yapmak için, <xref:System.ServiceModel.XmlSerializerFormatAttribute> özniteliği işlem ya da sözleşmeye uygulayın ve <xref:System.Xml.Serialization.XmlSerializer> ileti üstbilgilerinde ve gövde üyelerinde sınıfıyla uyumlu türleri kullanın.  
   
 ## <a name="describing-messages-by-using-streams"></a>Akışları kullanarak Iletileri açıklama  
+
  İşlemler içindeki iletileri tanımlamanın bir başka yolu da bir <xref:System.IO.Stream> işlem sözleşmesindeki veya bir ileti sözleşmesi gövde üyesi olarak ya da bir ileti sözleşme gövdesi üyesi olarak türetilmiş sınıflarından birini ya da bir ileti sözleşmesi gövde üyesini (Bu durumda tek üye olmalıdır) kullanmaktır. Gelen iletilerde, türün olması gerekir; `Stream` türetilmiş sınıfları kullanamazsınız.  
   
  WCF, seri hale getirici 'yi çağırmak yerine bir akıştan veri alır ve bunu doğrudan giden bir iletiye koyar veya gelen iletiden veri alıp doğrudan bir akışa koyar. Aşağıdaki örnek, akışlarının kullanımını gösterir.  
@@ -304,6 +309,7 @@ End Class
  Daha fazla bilgi için bkz. [büyük veri ve akış](large-data-and-streaming.md).  
   
 ## <a name="using-the-message-class"></a>İleti Sınıfını Kullanma  
+
  Gönderilen veya alınan iletiler üzerinde tamamen programlı denetim sağlamak için, <xref:System.ServiceModel.Channels.Message> Aşağıdaki örnek kodda gösterildiği gibi, sınıfını doğrudan kullanabilirsiniz.  
   
 ```csharp  
@@ -319,6 +325,7 @@ Sub LogMessage(m As Message)
  Bu, [Ileti sınıfını kullanma](using-the-message-class.md)konusunda ayrıntılı olarak açıklanan gelişmiş bir senaryodur.  
   
 ## <a name="describing-fault-messages"></a>Hata Iletilerini açıklama  
+
  Dönüş değeri ve çıkış ya da başvuru parametreleri tarafından tanımlanan iletilere ek olarak, tek yönlü olmayan tüm işlemler en az iki olası ileti döndürebilir: normal yanıt iletisi ve bir hata iletisi. Aşağıdaki işlem sözleşmesini göz önünde bulundurun.  
   
 ```csharp  
@@ -373,6 +380,7 @@ End Class
  <xref:System.Xml.Serialization.XmlSerializer>Hataları anlatmak için sınıfını kullanamazsınız. , <xref:System.ServiceModel.XmlSerializerFormatAttribute> Hata sözleşmeleri üzerinde hiçbir etkiye sahip değildir.  
   
 ## <a name="using-derived-types"></a>Türetilmiş türleri kullanma  
+
  Bir işlemde veya bir ileti sözleşmesinde temel tür kullanmak ve ardından işlemi çağırırken türetilmiş bir tür kullanmak isteyebilirsiniz. Bu durumda, <xref:System.ServiceModel.ServiceKnownTypeAttribute> türetilmiş türlerin kullanılmasına izin vermek için özniteliği veya bazı alternatif mekanizmayı kullanmanız gerekir. Aşağıdaki işlemi göz önünde bulundurun.  
   
 ```csharp  
@@ -430,16 +438,19 @@ End Class
  <xref:System.ServiceModel.ServiceKnownTypeAttribute>Özniteliği bir işleme veya tüm hizmete uygulayabilirsiniz. Özniteliği gibi bilinen türlerin bir listesini almak için çağrılacak yöntemin türünü ya da adını kabul eder <xref:System.Runtime.Serialization.KnownTypeAttribute> . Daha fazla bilgi için bkz. [veri sözleşmesi bilinen türleri](data-contract-known-types.md).  
   
 ## <a name="specifying-the-use-and-style"></a>Kullanımı ve stili belirtme  
+
  Web Hizmetleri Açıklama Dili (WSDL) kullanarak hizmetleri açıkladığınızda, yaygın olarak kullanılan iki stil belge ve uzak yordam çağrısı (RPC) ' dir. Belge stilinde, tüm ileti gövdesi şema kullanılarak tanımlanır ve WSDL, bu şema içindeki öğelere başvurarak çeşitli ileti gövdesi parçalarını açıklar. RPC stilinde, WSDL bir öğesi yerine her ileti bölümü için bir şema türü anlamına gelir. Bazı durumlarda, bu stillerden birini el ile seçmeniz gerekir. Bu işlemi, <xref:System.ServiceModel.DataContractFormatAttribute> özniteliği uygulayıp `Style` özelliği ayarlayarak (kullanırken <xref:System.Runtime.Serialization.DataContractSerializer> ) veya özniteliği üzerinde ayarını yaparak yapabilirsiniz `Style` <xref:System.ServiceModel.XmlSerializerFormatAttribute> <xref:System.Xml.Serialization.XmlSerializer> .  
   
- Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> iki seri hale GETIRILMIŞ XML biçimini destekler: `Literal` ve `Encoded` . `Literal`en yaygın olarak kabul edilen formdur ve desteklediği tek formdur <xref:System.Runtime.Serialization.DataContractSerializer> . `Encoded`, SOAP belirtiminin 5. bölümünde açıklanan eski bir formdur ve yeni hizmetler için önerilmez. Moda geçmek için `Encoded` , `Use` <xref:System.ServiceModel.XmlSerializerFormatAttribute> özniteliğinde özelliğini olarak ayarlayın `Encoded` .  
+ Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> iki seri hale GETIRILMIŞ XML biçimini destekler: `Literal` ve `Encoded` . `Literal` en yaygın olarak kabul edilen formdur ve desteklediği tek formdur <xref:System.Runtime.Serialization.DataContractSerializer> . `Encoded` , SOAP belirtiminin 5. bölümünde açıklanan eski bir formdur ve yeni hizmetler için önerilmez. Moda geçmek için `Encoded` , `Use` <xref:System.ServiceModel.XmlSerializerFormatAttribute> özniteliğinde özelliğini olarak ayarlayın `Encoded` .  
   
  Çoğu durumda, ve özellikleri için varsayılan ayarları değiştirmemelisiniz `Style` `Use` .  
   
 ## <a name="controlling-the-serialization-process"></a>Serileştirme Işlemini denetleme  
+
  Verilerin serileştirilme şeklini özelleştirmek için çeşitli şeyler yapabilirsiniz.  
   
 ### <a name="changing-server-serialization-settings"></a>Sunucu serileştirme ayarlarını değiştirme  
+
  Varsayılan kullanımda olduğunda <xref:System.Runtime.Serialization.DataContractSerializer> , hizmetine özniteliği uygulayarak serileştirme işleminin bazı yönlerini kontrol edebilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute> . Özellikle, seri hale getirilen `MaxItemsInObjectGraph` en fazla nesne sayısını sınırlayan kotayı ayarlamak için özelliğini kullanabilirsiniz <xref:System.Runtime.Serialization.DataContractSerializer> . `IgnoreExtensionDataObject`Özelliği, gidiş yuvarlama sürümü özelliğini devre dışı bırakmak için kullanabilirsiniz. Kotalar hakkında daha fazla bilgi için bkz. [veriler Için güvenlik konuları](security-considerations-for-data.md). Gidiş dönüşü hakkında daha fazla bilgi için bkz. [Forward-uyumlu veri sözleşmeleri](forward-compatible-data-contracts.md).  
   
 ```csharp  
@@ -464,6 +475,7 @@ End Interface
 ```  
   
 ### <a name="serialization-behaviors"></a>Serileştirme davranışları  
+
  WCF 'de iki davranış mevcuttur, ve, <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> belirli bir işlem için hangi seri hale getiricinin kullanımda olduğuna bağlı olarak otomatik olarak takılır. Bu davranışlar otomatik olarak uygulandığından, normalde bunların farkında olmanız gerekmez.  
   
  Ancak, `DataContractSerializerOperationBehavior` `MaxItemsInObjectGraph` `IgnoreExtensionDataObject` `DataContractSurrogate` serileştirme işlemini özelleştirmek için kullanabileceğiniz, ve özelliklerini içerir. İlk iki özellik, önceki bölümde açıklanan anlama sahiptir. `DataContractSurrogate`Özelliği, serileştirme işlemini özelleştirmek ve genişletmek için güçlü bir mekanizma olan veri sözleşmesi yedekleri 'ni etkinleştirmek için kullanabilirsiniz. Daha fazla bilgi için bkz. [veri sözleşmesi yedeklerin kapıları](../extending/data-contract-surrogates.md).  
@@ -533,6 +545,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
  Web 'de barındırılan bir durumda, yeni bir `ServiceHost` türetilmiş sınıf oluşturmanız ve bir hizmet ana bilgisayar fabrikası kullanarak içine takabilirsiniz.  
   
 ### <a name="controlling-serialization-settings-in-configuration"></a>Yapılandırmada serileştirme ayarlarını denetleme  
+
  `MaxItemsInObjectGraph`Ve, `IgnoreExtensionDataObject` `dataContractSerializer` Aşağıdaki örnekte gösterildiği gibi, uç nokta veya hizmet davranışı kullanılarak yapılandırma yoluyla denetlenebilirler.  
   
 ```xml  
@@ -558,6 +571,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
 ```  
   
 ### <a name="shared-type-serialization-object-graph-preservation-and-custom-serializers"></a>Paylaşılan tür serileştirme, nesne grafik koruma ve özel serileştiriciler  
+
  <xref:System.Runtime.Serialization.DataContractSerializer>Veri sözleşmesi adlarını kullanarak seri hale getirir ve .net tür adları değildir. Bu, hizmet odaklı mimari olanakları ile tutarlıdır ve harika bir esneklik sağlar; .NET türleri, Tel sözleşmeyi etkilemeden değişebilir. Nadir durumlarda, gerçek .NET tür adlarını seri hale getirmek isteyebilirsiniz ve bu sayede istemci ile sunucu arasında sıkı bir şekilde iletişim kurarak, .NET Framework Remoting teknolojisine benzer. Bu, genellikle .NET Framework uzaktan iletişim 'dan WCF 'ye geçiş yapılırken oluşan nadir durumlar dışında, önerilen bir uygulama değildir. Bu durumda, sınıfı yerine sınıfını kullanmanız gerekir <xref:System.Runtime.Serialization.NetDataContractSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> .  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>Normalde nesne grafiklerini nesne ağaçları olarak serileştirir. Diğer bir deyişle, aynı nesneye birden çok kez bahsedildiğinde birden çok kez serileştirilir. Örneğin, `PurchaseOrder` adresi ve adı Address olan iki alanı olan bir örneği göz önünde `billTo` bulundurun `shipTo` . Her iki alan de aynı adres örneğine ayarlanmışsa serileştirme ve serisini kaldırma sonrasında iki özdeş adres örneği vardır. Bu, XML 'deki nesne grafiklerini temsil etmek için standart birlikte çalışabilen bir yol olmadığından ( <xref:System.Xml.Serialization.XmlSerializer> ve üzerinde önceki bölümde açıklandığı gibi, üzerinde bulunan eskı SOAP kodlamalı standart dışında), bu yapılır `Style` `Use` . Ağaç olarak nesne grafiklerinin serileştirilmesi, örneğin döngüsel başvuruları olan grafikler serileştirilemiyor. Bazen, birlikte çalışabilir olmasa bile, doğru nesne grafiği serileştirmesine geçiş yapmak gerekir. Bu, <xref:System.Runtime.Serialization.DataContractSerializer> `preserveObjectReferences` olarak ayarlanan parametresiyle oluşturulan kullanılarak yapılabilir `true` .  

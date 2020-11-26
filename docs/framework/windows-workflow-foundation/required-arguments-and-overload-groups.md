@@ -2,18 +2,20 @@
 title: Gerekli Bağımsız Değişkenler ve Aşırı Yüklenmiş Gruplar
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 4eb62306f52b8ff890d5a5333c3789bd84ad7f60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 452285b1f5b73ecf75fc50f59365aa2633f26e42
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142946"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245880"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Gerekli Bağımsız Değişkenler ve Aşırı Yüklenmiş Gruplar
-Etkinlikler, belirli bağımsız değişkenlerin yürütme için geçerli olması için belirli bağımsız değişkenlerin bağlanması için yapılandırılabilir. Öznitelik, `RequiredArgument` bir etkinlikteki belirli bağımsız değişkenlerin gerekli `OverloadGroup` olduğunu ve öznitelik in gerekli bağımsız değişkenkategorilerini birlikte gruplandırmak için kullanılır. İşleçlik leri kullanarak, etkinlik yazarları basit veya karmaşık etkinlik doğrulama yapılandırmaları sağlayabilir.  
+
+Etkinlikler, etkinliğin yürütmeye geçerli olması için belirli bağımsız değişkenlerin bağlanması gerektiği için yapılandırılabilir. `RequiredArgument`Özniteliği, bir etkinliğin belirli bağımsız değişkenlerinin gerekli olduğunu ve `OverloadGroup` öznitelik gereken bağımsız değişkenlerin kategorilerini gruplamak için kullanıldığını belirtmek için kullanılır. Etkinlik yazarları, özniteliklerini kullanarak basit veya karmaşık etkinlik doğrulama yapılandırması sağlayabilir.  
   
-## <a name="using-required-arguments"></a>Gerekli Bağımsız Değişkenleri Kullanma  
- Bir etkinlikte `RequiredArgument` öznitelik kullanmak için, kullanarak <xref:System.Activities.RequiredArgumentAttribute>istenen bağımsız değişkenleri gösterir. Bu örnekte, `Add` iki gerekli bağımsız değişkeni olan bir etkinlik tanımlanır.  
+## <a name="using-required-arguments"></a>Gerekli bağımsız değişkenleri kullanma  
+
+ `RequiredArgument`Özniteliği bir etkinlikte kullanmak için, kullanarak istenen bağımsız değişkenleri belirtin <xref:System.Activities.RequiredArgumentAttribute> . Bu örnekte, `Add` iki gerekli bağımsız değişkene sahip bir etkinlik tanımlanmıştır.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -31,7 +33,7 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- XAML'de gerekli bağımsız değişkenler <xref:System.Activities.RequiredArgumentAttribute>de kullanılarak belirtilir. Bu örnekte `Add` etkinlik üç bağımsız değişken kullanılarak <xref:System.Activities.Statements.Assign%601> tanımlanır ve ekleme işlemini gerçekleştirmek için bir etkinlik kullanır.  
+ XAML 'de, gereken bağımsız değişkenler de kullanılarak belirtilir <xref:System.Activities.RequiredArgumentAttribute> . Bu örnekte, `Add` etkinlik üç bağımsız değişken kullanılarak tanımlanır ve <xref:System.Activities.Statements.Assign%601> ekleme işlemini gerçekleştirmek için bir etkinlik kullanır.  
   
 ```xaml  
 <Activity x:Class="ValidationDemo.Add" ...>  
@@ -59,15 +61,15 @@ public sealed class Add : CodeActivity<int>
 </Activity>  
 ```  
   
- Etkinlik kullanılırsa ve gerekli bağımsız değişkenlerden biri bağlı değilse aşağıdaki doğrulama hatası döndürülür.  
+ Etkinlik kullanılıyorsa ve gerekli bağımsız değişkenlerden herhangi biri bağlanmazsa, aşağıdaki doğrulama hatası döndürülür.  
   
- **Gerekli bir etkinlik bağımsız değişkeni 'Operand1' için değer verilmedi.**  
+ **Gerekli ' Operand1 ' etkinlik bağımsız değişkeninin değeri sağlanmadı.**  
 > [!NOTE]
-> Doğrulama hatalarını ve uyarılarını denetleme ve işleme hakkında daha fazla bilgi için [bkz.](invoking-activity-validation.md)  
+> Doğrulama hatalarını ve uyarılarını denetleme ve işleme hakkında daha fazla bilgi için bkz. [etkinlik doğrulamasını çağırma](invoking-activity-validation.md).  
   
-## <a name="using-overload-groups"></a>Aşırı Yük Gruplarını Kullanma
+## <a name="using-overload-groups"></a>Aşırı yükleme grupları kullanma
 
-Aşırı yükleme grupları, bir etkinlikte hangi bağımsız değişken birleşimlerinin geçerli olduğunu belirtmek için bir yöntem sağlar. Bağımsız değişkenler kullanılarak <xref:System.Activities.OverloadGroupAttribute>birlikte gruplandırılır. Her gruba <xref:System.Activities.OverloadGroupAttribute>. Etkinlik, aşırı yükleme grubundaki yalnızca bir bağımsız değişken kümesi bağlı olduğunda geçerlidir. Aşağıdaki örnekte, `CreateLocation` bir sınıf tanımlanır.  
+Aşırı yükleme grupları, bir etkinlikte hangi bağımsız değişken birleşimlerinin geçerli olduğunu belirten bir yöntem sağlar. Bağımsız değişkenler kullanılarak birlikte gruplandırılır <xref:System.Activities.OverloadGroupAttribute> . Her gruba tarafından belirtilen bir ad verilir <xref:System.Activities.OverloadGroupAttribute> . Etkinlik, aşırı yükleme grubundaki yalnızca bir bağımsız değişken kümesi bağlandığında geçerlidir. Aşağıdaki örnekte, bir `CreateLocation` sınıf tanımlanmıştır.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -104,9 +106,9 @@ class CreateLocation: Activity
 }  
 ```  
   
- Bu etkinliğin amacı, ABD'de bir konum belirtmektir. Bunu yapmak için, etkinliğin kullanıcı bağımsız değişkenler üç grup birini kullanarak konumu belirtebilirsiniz. Bağımsız değişkenlerin geçerli birleşimlerini belirtmek için üç aşırı yükleme grubu tanımlanır. `G1``Latitude` ve `Longitude` bağımsız değişkenleri içerir. `G2`içerir `Street` `City`, `State`ve . `G3`içerir `Street` `Zip`ve . `Name`ayrıca gerekli bir bağımsız değişkendir, ancak aşırı yükleme grubunun bir parçası değildir. Bu etkinliğin geçerli olabilmek için, `Name` bir ve yalnızca bir aşırı yükleme grubundaki tüm bağımsız değişkenlerle birbirine bağlı olması gerekir.  
+ Bu etkinliğin amacı, ABD 'de bir konum belirtmektir. Bunu yapmak için, etkinliğin kullanıcısı üç bağımsız değişken grubundan birini kullanarak konumu belirtebilir. Bağımsız değişkenlerin geçerli birleşimlerini belirtmek için, üç aşırı yükleme grubu tanımlanmıştır. `G1``Latitude`ve `Longitude` bağımsız değişkenlerini içerir. `G2``Street`, `City` , ve içerir `State` . `G3``Street`ve içerir `Zip` . `Name` Ayrıca gerekli bir bağımsız değişkendir, ancak aşırı yükleme grubunun bir parçası değildir. Bu etkinliğin geçerli olması için `Name` bir ve yalnızca bir aşırı yükleme grubundaki tüm bağımsız değişkenlerle birlikte bağlanması gerekir.  
   
- [Veritabanı Erişim Etkinlikleri](./samples/database-access-activities.md) örneğinden alınan aşağıdaki örnekte, iki aşırı `ConnectionString` `ConfigFileSectionName`yükleme grubu vardır: ve . Bu etkinliğin geçerli olabilmesi `ProviderName` için, `ConnectionString` bağımsız değişkenler `ConfigName` veya bağımsız değişkenin bağlı olması gerekir, ancak her ikisi de geçerli değildir.  
+ Aşağıdaki örnekte, [veritabanı erişim etkinlikleri](./samples/database-access-activities.md) örneğinden alınan iki aşırı yükleme grubu vardır: `ConnectionString` ve `ConfigFileSectionName` . Bu etkinliğin geçerli olması için, `ProviderName` ve `ConnectionString` bağımsız değişkenlerin bir veya bağımsız değişken olması gerekir, `ConfigName` ancak her ikisine birden değil.  
   
 ```csharp  
 public class DbUpdate: AsyncCodeActivity  
@@ -142,21 +144,21 @@ public class DbUpdate: AsyncCodeActivity
 }  
 ```  
   
- Aşırı yükleme grubu tanımlanırken:  
+ Aşırı yükleme grubu tanımlarken:  
   
-- Aşırı yükleme grubu bir alt küme veya başka bir aşırı yük grubunun eşdeğer kümesi olamaz.  
+- Aşırı yükleme grubu, başka bir aşırı yükleme grubunun alt kümesi veya eşdeğer bir kümesi olamaz.  
   
     > [!NOTE]
-    > Bu kuralın bir istisnası vardır. Aşırı yük grubu başka bir aşırı yük grubunun alt kümesiyse ve `RequiredArgument` alt `false`küme yalnızca aşırı yükleme grubunun geçerli olduğu bağımsız değişkenleri içeriyorsa.  
+    > Bu kural için bir özel durum var. Bir aşırı yükleme grubu başka bir aşırı yükleme grubunun alt kümesiyse ve alt küme yalnızca olduğu bağımsız değişkenleri `RequiredArgument` içeriyorsa `false` , aşırı yükleme grubu geçerli olur.  
   
-- Aşırı yük grupları çakışabilir, ancak grupların kesişimi aşırı yük gruplarından birinin veya her ikisinin gerekli tüm bağımsız değişkenlerini içeriyorsa bir hatadır. Önceki örnekte `G2` ve `G3` aşırı yükleme grupları çakıştı, ancak kesişim bir veya her iki grubun tüm bağımsız değişkenlerini içermediğinden bu geçerliydi.  
+- Aşırı yükleme grupları örtüşüyor, ancak grupların kesişimi bir veya her ikisinin de aşırı yükleme grubunun tüm gerekli bağımsız değişkenlerini içeriyorsa, bu bir hatadır. Önceki örnekte, `G2` ve `G3` aşırı yükleme grupları örtüşüyor, ancak kesişme, bir grubun tüm bağımsız değişkenlerini içermediğinden bu geçerli olduğundan  
   
- Bir aşırı yük grubunda bağımsız değişkenler bağlanırken:  
+ Bir aşırı yükleme grubundaki bağımsız değişkenleri bağlamada:  
   
-- Gruptaki tüm `RequiredArgument` bağımsız değişkenler bağlıysa, aşırı yükleme grubu bağlı olarak kabul edilir.  
+- Gruptaki tüm bağımsız değişkenler bağlıysa, aşırı yükleme grubu, bağlantılı olarak değerlendirilir `RequiredArgument` .  
   
-- Bir grubun sıfır `RequiredArgument` bağımsız değişkeni varsa ve en az bir bağımsız değişken bağlıysa, grup bağlı olarak kabul edilir.  
+- Bir grupta sıfır `RequiredArgument` bağımsız değişken ve en az bir bağımsız değişken varsa, Grup, bağlantılı olarak kabul edilir.  
   
-- Bir aşırı yük grubunda bağımsız değişken yoksa, `RequiredArgument` aşırı yük grupları bağlı değilse, bir doğrulama hatasıdır.  
+- Bir aşırı yükleme grubunun hiçbir bağımsız değişkeni yoksa, hiçbir aşırı yükleme grubu bağlanmamışsa, bu bir doğrulama hatasıdır `RequiredArgument` .  
   
-- Birden fazla aşırı yük grubuna bağlı olması bir hatadır, yani bir aşırı yük grubundaki tüm gerekli bağımsız değişkenler bağlanır ve başka bir aşırı yükleme grubundaki herhangi bir bağımsız değişken de bağlıdır.
+- Birden fazla aşırı yükleme grubuna sahip olması hatadır, diğer bir deyişle, bir aşırı yükleme grubundaki tüm gerekli bağımsız değişkenler bağlanır ve başka bir aşırı yükleme grubundaki herhangi bir bağımsız değişken de bağlanır.
