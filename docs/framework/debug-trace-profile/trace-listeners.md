@@ -15,17 +15,18 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-ms.openlocfilehash: d08f86c782284a296090cf63e4b03c8d446a95fc
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 8cd79d21d66d23f834b7ef0012d8360884028ac6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803529"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238125"
 ---
 # <a name="trace-listeners"></a>İz Dinleyicileri
-**Trace**, **Debug** ve kullanırken <xref:System.Diagnostics.TraceSource> gönderilen iletileri toplamak ve kaydetmek için bir mekanizmanız olması gerekir. İzleme iletileri *dinleyiciler*tarafından alınır. Bir dinleyicinin amacı, izleme iletilerini toplamak, depolamak ve yönlendirmaktır. Dinleyiciler izleme çıkışını günlük, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
+
+**Trace**, **Debug** ve kullanırken <xref:System.Diagnostics.TraceSource> gönderilen iletileri toplamak ve kaydetmek için bir mekanizmanız olması gerekir. İzleme iletileri *dinleyiciler* tarafından alınır. Bir dinleyicinin amacı, izleme iletilerini toplamak, depolamak ve yönlendirmaktır. Dinleyiciler izleme çıkışını günlük, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
   
- Dinleyicileri, her biri **hata ayıklama**, **izleme**ve sınıflar tarafından kullanılabilir ve <xref:System.Diagnostics.TraceSource> Bu, çıktısını çeşitli dinleyici nesnelerine gönderebilirler. Aşağıda yaygın olarak kullanılan önceden tanımlanmış dinleyiciler verilmiştir:  
+ Dinleyicileri, her biri **hata ayıklama**, **izleme** ve sınıflar tarafından kullanılabilir ve <xref:System.Diagnostics.TraceSource> Bu, çıktısını çeşitli dinleyici nesnelerine gönderebilirler. Aşağıda yaygın olarak kullanılan önceden tanımlanmış dinleyiciler verilmiştir:  
   
 - <xref:System.Diagnostics.TextWriterTraceListener>, Çıktıyı sınıfının bir örneğine <xref:System.IO.TextWriter> veya bir sınıf olan herhangi bir örneğe yönlendirir <xref:System.IO.Stream> . Ayrıca, bunlar sınıflar olduklarından konsola veya bir dosyaya da yazabilir <xref:System.IO.Stream> .  
   
@@ -72,7 +73,8 @@ System.Diagnostics.Trace.Listeners.Add(
    new System.Diagnostics.TextWriterTraceListener(Console.Out));  
 ```  
   
-## <a name="developer-defined-listeners"></a>Geliştirici tanımlı dinleyiciler  
+## <a name="developer-defined-listeners"></a>Developer-Defined dinleyicileri  
+
  **TraceListener** temel sınıfından devralarak kendi dinleyicilerini tanımlayabilir ve kendi yöntemlerini özelleştirilmiş yöntemleriniz ile geçersiz kılarak tanımlayabilirsiniz. Geliştirici tanımlı dinleyiciler oluşturma hakkında daha fazla bilgi için <xref:System.Diagnostics.TraceListener> .NET Framework başvuru içindeki bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
@@ -81,5 +83,5 @@ System.Diagnostics.Trace.Listeners.Add(
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TraceListener>
-- [İzleme ve İşaretleme Uygulamaları](tracing-and-instrumenting-applications.md)
+- [Uygulamaları izleme ve İşaretleme](tracing-and-instrumenting-applications.md)
 - [İzleme Anahtarları](trace-switches.md)

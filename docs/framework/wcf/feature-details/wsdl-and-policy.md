@@ -2,15 +2,16 @@
 title: WSDL ve İlke
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 123a878e90ee9099b009985a5e79155e8b1cd097
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600107"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238346"
 ---
 # <a name="wsdl-and-policy"></a>WSDL ve İlke
-Bu konuda Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy ve WS-PolicyAttachment uygulama ayrıntılarının yanı sıra WCF tarafından sunulan ek WS-Policy onayları ve WSDL 1,1 uzantıları ele alınmaktadır.  
+
+Bu konuda Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy ve WS-PolicyAttachment uygulama ayrıntılarının yanı sıra WCF tarafından tanıtılan ek WS-Policy Onaylamalar ve WSDL 1,1 uzantıları ele alınmaktadır.  
   
  WCF, bu belgede açıklanan kısıtlamalar ve açıklamalar ile W3C 'a gönderilen WS-Policy ve WS-PolicyAttachment belirtimlerini uygular.  
   
@@ -28,6 +29,7 @@ Bu konuda Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy ve WS-Polic
 |'si|`http://schemas.microsoft.com/net/2006/06/duplex`|  
   
 ## <a name="wcf-wsdl11-extensions"></a>WCF WSDL 1.1 uzantıları  
+
  WCF, sözleşme oturumu gereksinimlerini anlatmak için aşağıdaki WSDL 1.1 uzantılarını kullanır.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
@@ -40,6 +42,7 @@ Bu konuda Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy ve WS-Polic
  xs: Boolean, bu sözleşmenin oturumun kurulmasını gerektirip gerektirmediğini belirtir.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1. x HTTP bağlama taşıma URI 'Leri  
+
  WCF, WSDL 1,1, SOAP 1,1 ve SOAP 1,2 bağlama uzantı öğeleri için kullanılacak aktarımları göstermek üzere aşağıdaki URI 'Leri kullanır.  
   
 |Aktarım|URI|  
@@ -50,6 +53,7 @@ Bu konuda Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy ve WS-Polic
 |Adlandırılmış Kanallar|`http://schemas.microsoft.com/soap/named-pipe`|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>WCF tarafından uygulanan ilke onayları  
+
  Web Hizmetleri belirtimlerinde (WS-*) tanıtılan ve bu belgenin diğer bölümlerinde bahsedilen ilke onaylamalarına ek olarak, WCF aşağıdaki ilke onaylamalarını uygular.  
   
 |İlke onaylama|İlke konusu|Açıklama|  
@@ -67,13 +71,13 @@ Bu konuda Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy ve WS-Polic
 |MSMQ: kimliği doğrulanmış|Uç Nokta|Kimlik doğrulaması MSMQ taşıması ile kullanılır.|  
 |MSMQ: WindowsDomain|Uç Nokta|MSMQ Windows etki alanı kimlik doğrulamasını kullanır.|  
 |CDP: CompositeDuplex|Uç Nokta|Uç nokta, gelen ve giden iletilerde iki ayrı convera aktarım bağlantısı kullanır.|  
-|mssp: RsaToken|Ble|RSA anahtar belirteci onaylama. Bu gereksinim, genellikle bir onaylama imzasında anahtar bilgisinin bir parçası olarak doğrudan seri hale getirilen bir RSA anahtarı tarafından karşılanır.|  
-|mssp: SslContextToken|Ble|WS-Trust kullanılarak ikili TLS el sıkışması kullanılarak elde edilen bir SecurityContextToken gerektirir. İç içe onaylama işlemleri şunlardır: SP: RequireDerivedKeys, mssp: MustNotSendCancel, mssp: RequireClientCertificate.|  
-|mssp: MustNotSendCancel|Ble|Belirli bir SecurityContextToken veren için Iptal bağlamayı [WS-Trust, WS-SC] kullanan bir istek güvenlik belirteci (RST) istek iletisi (WS-Trust]) için bir gereksinim belirtir. Bu onay varsa, bu tür istek iletileri veren 'e gönderilmemelidir. Bu onaylama yoksa, bu tür istek iletileri verene gönderilebilir.|  
-|mssp: RequireClientCertificate|Ble|Bu isteğe bağlı öğe, TLSNEGO protokolünün bir parçası olarak bir istemci sertifikasının sağlanması gereksinimini belirtir. Bu onay varsa, bir istemci sertifikasının sağlanması gerekir. Bu onaylama yoksa, bir istemci sertifikasının sağlanması gerekir. Bu onaylama, mssp: SslContextToken dışında kullanılmamalıdır.|  
+|mssp: RsaToken|İç İçe|RSA anahtar belirteci onaylama. Bu gereksinim, genellikle bir onaylama imzasında anahtar bilgisinin bir parçası olarak doğrudan seri hale getirilen bir RSA anahtarı tarafından karşılanır.|  
+|mssp: SslContextToken|İç İçe|WS-Trust kullanılarak ikili TLS el sıkışması kullanılarak elde edilen bir SecurityContextToken gerektirir. İç içe onaylama işlemleri şunlardır: SP: RequireDerivedKeys, mssp: MustNotSendCancel, mssp: RequireClientCertificate.|  
+|mssp: MustNotSendCancel|İç İçe|Belirli bir SecurityContextToken veren için Iptal bağlamayı [WS-Trust, WS-SC] kullanan bir istek güvenlik belirteci (RST) istek iletisi (WS-Trust]) için bir gereksinim belirtir. Bu onay varsa, bu tür istek iletileri veren 'e gönderilmemelidir. Bu onaylama yoksa, bu tür istek iletileri verene gönderilebilir.|  
+|mssp: RequireClientCertificate|İç İçe|Bu isteğe bağlı öğe, TLSNEGO protokolünün bir parçası olarak bir istemci sertifikasının sağlanması gereksinimini belirtir. Bu onay varsa, bir istemci sertifikasının sağlanması gerekir. Bu onaylama yoksa, bir istemci sertifikasının sağlanması gerekir. Bu onaylama, mssp: SslContextToken dışında kullanılmamalıdır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özel WSDL Yayımı](../samples/custom-wsdl-publication.md)
-- [Nasıl yapılır: Özel WSDL Dışa Aktarma](../extending/how-to-export-custom-wsdl.md)
-- [Nasıl yapılır: Özel WSDL İçe Aktarma](../extending/how-to-import-custom-wsdl.md)
+- [Nasıl yapılır: Özel WSDL Dışarı Aktarma](../extending/how-to-export-custom-wsdl.md)
+- [Nasıl yapılır: Özel WSDL İçeri Aktarma](../extending/how-to-import-custom-wsdl.md)

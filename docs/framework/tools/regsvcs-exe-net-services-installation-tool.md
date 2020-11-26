@@ -10,14 +10,15 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: 474018b8bc39e4d5c36bd4bc6481072b218d6270
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 58a20084457cb217f3af73f4b4ff9ea251647782
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558400"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238566"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET Hizmetleri Yükleme Aracı)
+
 .NET Hizmetleri Yükleme aracı aşağıdaki eylemleri gerçekleştirir:  
   
 - Bir derlemeyi yükler ve kaydeder.  
@@ -40,7 +41,7 @@ ms.locfileid: "90558400"
   
 ## <a name="parameters"></a>Parametreler  
   
-|Bağımsız Değişken|Description|  
+|Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|Kaynak derleme dosyası. Derlemenin tanımlayıcı ad ile imzalanması gerekir. Daha fazla bilgi için bkz. [bir derlemeyi güçlü bir adla imzalama](../../standard/assembly/sign-strong-name.md).|  
   
@@ -64,7 +65,8 @@ ms.locfileid: "90558400"
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Regsvcs.exe, *assemblyFile.dll*tarafından belirtilen bir kaynak derleme dosyası gerektirir. Bu derlemenin tanımlayıcı ad ile imzalanması gerekir. Tanımlayıcı ad imzalama hakkında daha fazla bilgi için bkz. [bir derlemeyi tanımlayıcı bir adla imzalama](../../standard/assembly/sign-strong-name.md). Hedef uygulamanın ve tür kitaplığı dosyasının adları isteğe bağlıdır. *ApplicationName* bağımsız değişkeni kaynak derleme dosyasından oluşturulabilir ve henüz yoksa Regsvcs.exe tarafından oluşturulur. *TypeLibraryFile* bağımsız değişkeni bir tür kitaplığı adı belirtebilir. Bir tür kitaplığı adı belirtmezseniz, Regsvcs.exe derleme adını varsayılan olarak kullanır.  
+
+ Regsvcs.exe, *assemblyFile.dll* tarafından belirtilen bir kaynak derleme dosyası gerektirir. Bu derlemenin tanımlayıcı ad ile imzalanması gerekir. Tanımlayıcı ad imzalama hakkında daha fazla bilgi için bkz. [bir derlemeyi tanımlayıcı bir adla imzalama](../../standard/assembly/sign-strong-name.md). Hedef uygulamanın ve tür kitaplığı dosyasının adları isteğe bağlıdır. *ApplicationName* bağımsız değişkeni kaynak derleme dosyasından oluşturulabilir ve henüz yoksa Regsvcs.exe tarafından oluşturulur. *TypeLibraryFile* bağımsız değişkeni bir tür kitaplığı adı belirtebilir. Bir tür kitaplığı adı belirtmezseniz, Regsvcs.exe derleme adını varsayılan olarak kullanır.  
   
  Regsvcs.exe bir bileşenin yöntemlerini kaydettiğinde, bu yöntemler için [talepler](/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100)) ve [bağlantı taleplerine](../misc/link-demands.md) tabidir. Araç tam olarak güvenilen bir ortamda yürütüldüğünden, izin taleplerinin çoğu başarılı olur. Ancak Regsvcs.exe, veya için talep veya bağlantı talebi tarafından korunan yöntemlerle bileşenleri kaydedemez <xref:System.Security.Permissions.StrongNameIdentityPermission> <xref:System.Security.Permissions.PublisherIdentityPermission> .  
   
@@ -73,6 +75,7 @@ ms.locfileid: "90558400"
  Bu eylemlerden herhangi birini gerçekleştirirken Regsvcs.exe başarısız olursa, ilgili hata iletilerini görüntüler.  
   
 ## <a name="examples"></a>Örnekler  
+
  Aşağıdaki komut ' de bulunan tüm ortak sınıfları `myTest.dll` `myTargetApp` (var olan bir com+ uygulaması) öğesine ekler ve `myTest.tlb` tür kitaplığını üretir.  
   
 ```console  

@@ -2,14 +2,15 @@
 title: XmlSerializer Hataları
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
-ms.openlocfilehash: ce5aa6d2c579d4776f9505ae694768203e48eecf
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1eefa37d6d11e232bd4d0914eedab3ebb66b92ef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584070"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237657"
 ---
 # <a name="xmlserializer-faults"></a>XmlSerializer Hataları
+
 Hata <xref:System.Xml.Serialization.XmlSerializer> sözleşmesi örneği, kullanarak bir hizmetten hata bilgilerini bir istemciye nasıl ileteceğinizi gösterir <xref:System.Xml.Serialization.XmlSerializer> . Örnek, bir iç özel durumu hataya dönüştürmek için hizmete eklenen bazı ek kodlar ile [Başlarken](getting-started-sample.md)' i temel alır. İstemci, hizmette bir hata koşulunu zorlamak için bölme işlemini sıfıra gerçekleştirmeye çalışır.  
   
 > [!NOTE]
@@ -37,7 +38,7 @@ public interface ICalculator
 }  
 ```  
   
- İstemci proxy 'si için kod oluştururken, bir [ServiceModel meta veri yardımcı programı aracına (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) **/UseSerializerForFaults** bayrağını uygulamanız gerekir.  
+ İstemci proxy 'si için kod oluştururken, bir [ServiceModel meta veri yardımcı programı aracına (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) **/UseSerializerForFaults** bayrağını uygulamanız gerekir.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   

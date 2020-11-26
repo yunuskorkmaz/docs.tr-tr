@@ -2,14 +2,15 @@
 title: ASMX Web Hizmetleri ile Birlikte Çalışma
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: 3f99ba7571c6d84f245b69c5b8f626128ce18627
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5e1a84d6dc70a26dd91f9ddce644c69689019690
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596642"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237683"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX Web Hizmetleri ile Birlikte Çalışma
+
 Bu örnek, bir Windows Communication Foundation (WCF) istemci uygulamasının mevcut bir ASMX Web hizmetiyle nasıl tümleştirileceğini gösterir.  
   
 > [!NOTE]
@@ -48,13 +49,13 @@ public class CalculatorService : System.Web.Services.WebService
   
  Yapılandırıldığı gibi, hizmete `http://localhost/servicemodelsamples/service.asmx` aynı makinede bulunan bir istemci tarafından erişilebilir. Uzak makinelerdeki istemciler hizmete erişmek için, localhost yerine tam etki alanı adı belirtilmelidir.  
   
- İletişim, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan bir istemci aracılığıyla yapılır. İstemci generatedClient.cs dosyasında bulunur. Güncelleştirilmiş meta verileri almak için kullanıldığından, ASMX hizmeti proxy kodunu oluşturmak için kullanılabilir olmalıdır. Yazılan proxy 'yi oluşturmak için istemci dizinindeki bir komut isteminden aşağıdaki komutu çalıştırın.  
+ İletişim, [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan bir istemci aracılığıyla yapılır. İstemci generatedClient.cs dosyasında bulunur. Güncelleştirilmiş meta verileri almak için kullanıldığından, ASMX hizmeti proxy kodunu oluşturmak için kullanılabilir olmalıdır. Yazılan proxy 'yi oluşturmak için istemci dizinindeki bir komut isteminden aşağıdaki komutu çalıştırın.  
   
 ```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
- Oluşturulan istemciyi kullanarak, uygun adresi ve bağlamayı yapılandırarak bir hizmet uç noktasına erişebilirsiniz. Hizmet gibi istemci, iletişim kuracak uç noktayı belirtmek için bir yapılandırma dosyası (App. config) kullanır. İstemci uç noktası yapılandırması, aşağıdaki örnek yapılandırmada gösterildiği gibi hizmet uç noktası, bağlama ve sözleşme için mutlak bir adresten oluşur.  
+ Oluşturulan istemciyi kullanarak, uygun adresi ve bağlamayı yapılandırarak bir hizmet uç noktasına erişebilirsiniz. Hizmet gibi istemci, iletişim kuracak uç noktayı belirtmek için bir yapılandırma dosyası (App.config) kullanır. İstemci uç noktası yapılandırması, aşağıdaki örnek yapılandırmada gösterildiği gibi hizmet uç noktası, bağlama ve sözleşme için mutlak bir adresten oluşur.  
   
 ```xml  
 <client>  

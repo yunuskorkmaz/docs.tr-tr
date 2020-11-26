@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c9899705861cc1cf2cda2559c30a0a60d8cc635
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601341"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237839"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma
+
 Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldüğünden tam denetime sahip olmaları gerekir. Bu durum, bir hizmet işleminin verileri desteklenmeyen bir biçimde döndürmesi gereken bir biçimde (WCF), bu durumdur. Bu konuda, rastgele veri alan bir hizmet oluşturmak için WCF REST programlama modelinin kullanımı ele alınmaktadır.  
   
 ### <a name="to-implement-the-service-contract"></a>Hizmet sözleşmesini uygulamak için  
@@ -124,6 +125,7 @@ Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldü�
     ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda bu örnek için kodun tamamen bir listesi verilmiştir.  
   
 ```csharp  
@@ -191,7 +193,7 @@ namespace ReceiveRawData
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-- System. ServiceModel. dll ve System. ServiceModel. Web. dll kod başvurusunu derlerken  
+- Kod başvurusunu derlerken System.ServiceModel.dll ve System.ServiceModel.Web.dll  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

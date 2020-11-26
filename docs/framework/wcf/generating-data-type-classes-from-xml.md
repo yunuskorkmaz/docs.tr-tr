@@ -2,37 +2,38 @@
 title: XML'den Veri Türü Sınıfları Oluşturma
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: d66cbd1806b90d21a483d0c470f953ddfb9c4fca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a7920a8c8c4f279dd3fc52029c5da5e9b685efe2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184128"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238255"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>XML'den Veri Türü Sınıfları Oluşturma
-.NET Framework 4.5, XML'den veri türü sınıfları oluşturmak için yeni bir özellik içerir. Bu konu, .NET Blog RSS akışı için veri türlerinin otomatik olarak nasıl üretilebildiğini açıklar.  
+
+.NET Framework 4,5, XML 'den veri türü sınıfları oluşturmak için yeni bir özellik içerir. Bu konu başlığında, .NET blog RSS akışı için otomatik olarak veri türleri oluşturma açıklanır.  
   
-### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>.NET Blog RSS akışından XML alma  
+### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>.NET blog RSS akışından XML edinme  
   
-1. Internet Explorer'da [,.NET Blog RSS akışına](https://devblogs.microsoft.com/dotnet/feed/)gidin.  
+1. Internet Explorer 'da [.net blog RSS akışına](https://devblogs.microsoft.com/dotnet/feed/)gidin.  
   
-2. Sayfaya sağ tıklayın ve **Kaynağı Görüntüle'yi**seçin.  
+2. Sayfaya sağ tıklayın ve **kaynağı görüntüle**' yi seçin.  
   
-3. Tüm metni seçmek için **Ctrl+A** tuşuna basarak özet akışının metnini ve kopyalamak için **Ctrl+C'yi** kopyalayın.  
+3. Tüm metni seçmek için **CTRL + A** tuşlarına basarak akışın metnini kopyalayın ve kopyalamak için **CTRL + C** ' ye basın.  
   
-### <a name="creating-the-data-types"></a>Veri türlerini oluşturma  
+### <a name="creating-the-data-types"></a>Veri türleri oluşturma  
   
-1. Proxy'nin kullanılacağı bir kod dosyası açın. Bu dosya bir .NET Framework 4.5 projesinin bir parçası olmalıdır.  
+1. Proxy 'nin kullanılacağı bir kod dosyası açın. Bu dosya .NET Framework 4,5 projesinin bir parçası olmalıdır.  
   
-2. İmleci dosyadaki bir konuma varolan sınıfların dışına yerleştirin.  
+2. İmleci dosyadaki bir konuma var olan sınıfların dışında yerleştir.  
   
-3. Sınıf olarak **Yap,** **Yapıştır Özel**, **Yapıştır XML'i seçin.**  
+3. **Düzenle**, **Özel Yapıştır**, **XML 'i sınıflar olarak Yapıştır**' ı seçin.  
   
-4. , `link`, `rss` `rssChannel`, `rssChannelImage` `rssChannelItem` , `rssChannelItemGuid` adlı sınıflar ve RSS akışındaki öğelere erişmek için gerekli üyelerle oluşturulur.  
+4. ,,, Ve adlı sınıflar `link` , `rss` `rssChannel` `rssChannelImage` `rssChannelItem` `rssChannelItemGuid` RSS akışındaki öğelere erişmek için gerekli üyelerle birlikte oluşturulur.  
   
 ### <a name="using-the-generated-classes"></a>Oluşturulan sınıfları kullanma  
   
-1. Sınıflar oluşturulduktan sonra, diğer sınıflar gibi kod olarak kullanılabilir. Aşağıdaki kod örneği sınıfın yeni `rssChannelImage` bir örneğini döndürür.  
+1. Sınıflar oluşturulduktan sonra, diğer sınıflar gibi kodda kullanılabilirler. Aşağıdaki kod örneği, sınıfının yeni bir örneğini döndürür `rssChannelImage` .  
   
     ```csharp
     var channelImage = new rssChannelImage()

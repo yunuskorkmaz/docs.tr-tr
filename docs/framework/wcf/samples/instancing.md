@@ -5,14 +5,15 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 1cfaa0db5b81858b733343f17cae71e5815ef60b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55042af1e6eec1fe4b3e2cf07d03596e4793575f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596638"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237761"
 ---
 # <a name="instancing"></a>Örnek Oluşturma
+
 Örnek oluşturma örneği, bir hizmet sınıfı örneklerinin istemci isteklerine yanıt olarak nasıl oluşturulduğunu denetleyen örnek oluşturma davranış ayarını gösterir. Örnek, hizmet sözleşmesini uygulayan [kullanmaya](getting-started-sample.md)Başlarken ' i temel alır `ICalculator` . Bu örnek, öğesinden devralan yeni bir sözleşme tanımlar `ICalculatorInstance` `ICalculator` . Tarafından belirtilen sözleşme, `ICalculatorInstance` hizmet örneğinin durumunu incelemek için üç ek işlem sağlar. Örnek ayarını değiştirerek, istemcisini çalıştırarak değişiklik davranışını gözlemleyebilirsiniz.  
   
  Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  

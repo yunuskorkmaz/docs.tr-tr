@@ -2,20 +2,22 @@
 title: İzleme Kayıtları
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 498d62fb1d3cc1386ea3bf57de431c57b18b7dda
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0344c802ef779d1f13f58c35c2f0e4fa67a37578
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551307"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238112"
 ---
 # <a name="tracking-records"></a>İzleme Kayıtları
+
 İş akışı çalışma zamanı, izleme kayıtlarını izlemek için bir iş akışı örneğinin yürütülmesini izlemek üzere işaretlenir.  
   
 ## <a name="tracking-records"></a>İzleme Kayıtları  
+
  Aşağıdaki tabloda iş akışı çalışma zamanının yaydığı izleme kayıtlarının ayrıntıları verilmiştir.  
   
-|İzleme kaydı|Description|  
+|İzleme kaydı|Açıklama|  
 |---------------------|-----------------|  
 |İş akışı yaşam döngüsü kayıtları|İş akışı örneği yaşam döngüsünün çeşitli aşamaları sırasında yayınlanır. Örneğin, iş akışı başladığında veya tamamlandığında bir kayıt yayınlanır.|  
 |Etkinlik yaşam döngüsü kayıtları|Ayrıntıları etkinlik yürütmesi. Bu kayıtlar, bir etkinliğin ne zaman zamanlandığı, etkinlik tamamlandığında veya bir hata oluştuğunda olduğu gibi bir iş akışı etkinliğinin durumunu gösterir.|  

@@ -2,27 +2,30 @@
 title: 4028 - PipeTransportListenerListeningStart
 ms.date: 03/30/2017
 ms.assetid: 75f83342-09bc-4ab5-b363-01b3cebcc821
-ms.openlocfilehash: dd61d7cd6aa6d559c75c1fea6ad8bb720ed0a87c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b407c2a00fd57c0a4bec3f25e16242d71e1836d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238372"
 ---
 # <a name="4028---pipetransportlistenerlisteningstart"></a>4028 - PipeTransportListenerListeningStart
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4028|  
-|anahtar sözcükler|ActivationServices|  
+|ID|4028|  
+|Anahtar sözcükler|ActivationServices|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay başlangıç dinleme kanal taşıma Dinleyicide yayılır.  
+
+ Bu olay kanal taşıma dinleyicisi dinleme başlatması üzerine yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Kanal taşıma dinleyicisi dinleme Uri 1 Başlat.  
+
+ Uri: %1 üzerinde kanal aktarma dinleyicisi dinlemeye başladı.  
   
 ## <a name="details"></a>Ayrıntılar

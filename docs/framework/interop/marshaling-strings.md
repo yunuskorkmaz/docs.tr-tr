@@ -12,23 +12,24 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-ms.openlocfilehash: 11925e3e126620788bb09e90e4d2528dbaf56581
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2b7038a57ee0a8186288c7388fcd000daad70ed0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547772"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238047"
 ---
 # <a name="marshaling-strings"></a>Dizeleri Hazırlama
+
 Platform çağrısı, dize parametrelerini kopyalar, bu parametreleri .NET Framework biçiminden (Unicode) yönetilmeyen biçimde (ANSI), gerekirse. Yönetilen dizeler sabit olduğu için, platform çağırma işlevi, işlev döndürdüğü zaman yönetilen belleğe geri kopyalamaz.  
   
  Aşağıdaki tabloda dizeler için sıralama seçenekleri listelenmekte, kullanımları açıklanmakta ve karşılık gelen .NET Framework örneğine bir bağlantı sağlanmıştır.  
   
-|Dize|Description|Örnek|  
+|Dize|Açıklama|Örnek|  
 |------------|-----------------|------------|  
 |Değere göre.|Dizeleri parametrelerde olduğu gibi geçirir.|[MsgBox](msgbox-sample.md)|  
 |Sonuç olarak.|Yönetilmeyen koddan dizeleri döndürür.|[Dizeler](/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
-|Başvuruya göre.|Dizeleri kullanılarak gelen/giden parametreler olarak geçirir <xref:System.Text.StringBuilder> .|[Arabellek](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
+|Başvuruya göre.|Dizeleri kullanılarak gelen/giden parametreler olarak geçirir <xref:System.Text.StringBuilder> .|[Arabellekler](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))|  
 |Değere göre bir yapıda.|Dizeleri bir ın parametresi olan bir yapıda geçirir.|[Yapılar](/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))|  
 |Başvuruya göre bir yapıda **(Char \* )**.|Dizeleri bir ın/out parametresi olan bir yapıda geçirir. Yönetilmeyen işlev bir karakter arabelleği işaretçisi bekler ve arabellek boyutu yapının bir üyesidir.|[Dizeler](/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
 |Başvuruya göre bir yapıda **(Char [])**.|Dizeleri bir ın/out parametresi olan bir yapıda geçirir. Yönetilmeyen işlev, gömülü bir karakter arabelleği bekliyor.|[OSINFO](/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|  

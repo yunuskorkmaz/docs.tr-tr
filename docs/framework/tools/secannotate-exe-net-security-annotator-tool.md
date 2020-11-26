@@ -6,14 +6,15 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: 408a3064b67cae2d75c80881f918c774e05866e6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cfa7ec7cb0ff174a820afcdcbdb1eb461510fc05
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558387"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238541"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Güvenlik Not Ekleyici Aracı)
+
 .NET Security açıklaması Ekleyici Aracı (SecAnnotate.exe), `SecurityCritical` `SecuritySafeCritical` bir veya daha fazla derlemenin ve bölümlerini tanımlayan bir komut satırı uygulamasıdır.  
   
  Bir Visual Studio uzantısı olan [Security açıklaması Ekleyici](https://marketplace.visualstudio.com/items?itemName=sheldonb.SecurityAnnotator), SecAnnotate.exe için bir grafik kullanıcı arabirimi sağlar ve aracı Visual Studio 'dan çalıştırmanızı sağlar.  
@@ -49,6 +50,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/y:`*Dizin*<br /><br /> veya<br /><br /> `/symbolpath:`*Dizin*|Açıklama ekleme sırasında simge dosyalarını ararken, belirtilen dizini ekler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Komut satırında belirtilen ve önüne bir at işareti (@) eklenen bir yanıt dosyasında parametreler ve derlemeler de sağlanabilir. Yanıt dosyasındaki her bir satır tek bir parametre veya derleme adı içermelidir.  
   
  .NET Security açıklaması Ekleyici hakkında daha fazla bilgi için bkz. [SecAnnotate kullanarak, derlemelerinizi .NET güvenlik blogundan saydamlık ihlalleri Için analiz etme](/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example) .  

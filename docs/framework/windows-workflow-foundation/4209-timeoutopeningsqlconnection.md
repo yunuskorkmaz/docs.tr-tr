@@ -2,32 +2,35 @@
 title: 4209 - TimeoutOpeningSqlConnection
 ms.date: 03/30/2017
 ms.assetid: f0e56518-9758-41dc-a760-50d1a10fba6e
-ms.openlocfilehash: d61d710959f99dbc8a91441766a690eb7e9a365c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9aa8cdffebb0cdf8b1e8225a394edf78ecf032b9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774276"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238684"
 ---
 # <a name="4209---timeoutopeningsqlconnection"></a>4209 - TimeoutOpeningSqlConnection
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4209|  
-|anahtar sözcükler|WFInstanceStore|  
+|ID|4209|  
+|Anahtar sözcükler|Wfınstancestore|  
 |Düzey|Hata|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir SQL bağlantı açılmaya çalışılırken zaman aşımıyla karşılaşıldı gösterir.  
+
+ Bir SQL bağlantısı açılmaya çalışılırken zaman aşımıyla karşılaşıldı.  
   
 ## <a name="message"></a>İleti  
- Bir SQL bağlantı açılmaya çalışılırken zaman aşımı. İşlem, %1 ' ayrılan süre içinde tamamlanmadı. Bu işlem için ayrılan süre daha uzun bir zaman aşımı değerinin bir bölümü olabilir.  
+
+ SQL bağlantısı açılmaya çalışılırken zaman aşımı oluştu. İşlem ayrılan %1 zaman aşımı süresi içinde tamamlanmadı. Bu işlem için ayrılan süre daha uzun bir zaman aşımı değerinin bir bölümü olabilir.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|zaman aşımı|xs:string|SQL Bağlantısı açmak için zaman aşımı değeri.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Zaman aşımı|xs: String|SQL bağlantısını açmak için zaman aşımı değeri.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

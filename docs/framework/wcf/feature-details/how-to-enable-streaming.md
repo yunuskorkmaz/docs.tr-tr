@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 538fd8634094aa6fbf097ddb94469d7bca749a63
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7f77c406e1cfd4def116a1abe24aa92be74c6abe
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247032"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237748"
 ---
 # <a name="how-to-enable-streaming"></a>Nasıl yapılır: Akışı Etkinleştirme
+
 Windows Communication Foundation (WCF), arabelleğe alınmış veya akış aktarımları kullanarak ileti gönderebilir. Varsayılan arabelleğe alınmış Aktarım modunda, bir alıcının okuyabilmesi için bir iletinin tamamen teslim edilmesi gerekir. Akış Aktarım modunda, alıcı tamamen teslim edilmeden önce iletiyi işlemeye başlayabilir. Aktarım modu, iletilen bilgiler uzun olduğunda ve hizmet dışı olarak işlenebilmesi durumunda faydalıdır. İleti tamamen arabelleğe alınamayacak kadar büyük olduğunda akış modu da yararlıdır.  
   
  Akışı etkinleştirmek için, `OperationContract` Aktarım düzeyinde uygun bir şekilde tanımlayın ve akışı etkinleştirin.  
@@ -31,7 +32,7 @@ Windows Communication Foundation (WCF), arabelleğe alınmış veya akış aktar
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     İşlem, ara belleğe `GetStream` alınmış bir olarak bazı arabellekli giriş verileri alır `string` ve akış olan bir döndürür `Stream` . Bunun tersine `UploadStream` bir `Stream` (akışlı) alır ve `bool` (ara belleğe alınmış) döndürür. `EchoStream`, `Stream` giriş ve çıkış iletilerinin her ikisi de akışındaki bir işlemin örneğini alır ve döndürür. Son olarak, `GetReversedStream` giriş yapılmaz ve `Stream` (akış) döndürür.  
+     İşlem, ara belleğe `GetStream` alınmış bir olarak bazı arabellekli giriş verileri alır `string` ve akış olan bir döndürür `Stream` . Bunun tersine `UploadStream` bir `Stream` (akışlı) alır ve `bool` (ara belleğe alınmış) döndürür. `EchoStream` , `Stream` giriş ve çıkış iletilerinin her ikisi de akışındaki bir işlemin örneğini alır ve döndürür. Son olarak, `GetReversedStream` giriş yapılmaz ve `Stream` (akış) döndürür.  
   
 2. Bağlamada akış etkinleştirilmelidir. `TransferMode`Aşağıdaki değerlerden birini içerebilen bir özellik ayarlarsınız:  
   
@@ -70,7 +71,7 @@ Windows Communication Foundation (WCF), arabelleğe alınmış veya akış aktar
   
 1. Gönderilen veya alınan bir veri akışının her öbeğiyle özel işlem yapmak için, öğesinden özel bir akış sınıfı türetirsiniz <xref:System.IO.Stream> . Özel bir akışa örnek olarak aşağıdaki kod bir `GetReversedStream` yöntemi ve bir `ReverseStream` sınıfı içerir.  
   
-     `GetReversedStream`Yeni bir örneğini oluşturur ve döndürür `ReverseStream` . Gerçek işlem, nesneden sistem okuduğunda oluşur `ReverseStream` . `ReverseStream.Read`Yöntemi, temel alınan dosyadaki bir bayt öbeğini okur, bunları tersine çevirir ve ters bayt döndürür. Bu yöntem, tüm dosya içeriğini tersine almaz; tek seferde bir bayt öbeğini tersine çevirir. Bu örnek, içerik okuma veya akışa yazma sırasında akış işlemeyi nasıl gerçekleştirebileceğini gösterir.  
+     `GetReversedStream` Yeni bir örneğini oluşturur ve döndürür `ReverseStream` . Gerçek işlem, nesneden sistem okuduğunda oluşur `ReverseStream` . `ReverseStream.Read`Yöntemi, temel alınan dosyadaki bir bayt öbeğini okur, bunları tersine çevirir ve ters bayt döndürür. Bu yöntem, tüm dosya içeriğini tersine almaz; tek seferde bir bayt öbeğini tersine çevirir. Bu örnek, içerik okuma veya akışa yazma sırasında akış işlemeyi nasıl gerçekleştirebileceğini gösterir.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  

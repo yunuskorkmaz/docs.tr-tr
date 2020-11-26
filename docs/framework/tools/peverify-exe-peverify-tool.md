@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-ms.openlocfilehash: 478c04a45c7f9d3ad568a6bc4a12a89fe786583a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: c859aa4e2e3ae95c5c72aed930a9bc4a05add296
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325625"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238593"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify aracı)
 
@@ -32,11 +32,11 @@ peverify filename [options]
   
 ## <a name="parameters"></a>Parametreler  
   
-|Bağımsız Değişken|Description|  
+|Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
 |*filename*|MSIL ve meta verilerinin denetleneceği taşınabilir yürütülebilir (PE) dosyası.|  
   
-|Seçenek|Description|  
+|Seçenek|Açıklama|  
 |------------|-----------------|  
 |**/Break =** *maxErrorCount*|*MaxErrorCount* hatalarından sonra doğrulamayı iptal eder.<br /><br /> Bu parametre .NET Framework sürüm 2.0 ve sonrasında desteklenmez.|  
 |**/Saat**|Milisaniye olarak aşağıdaki doğrulama zamanlarını ölçer ve bildirir:<br /><br /> **MD Val. Cycle**<br /> Meta veri doğrulama döngüsü<br /><br /> **MD Val. Pure**<br /> Meta veri doğrulama safı<br /><br /> **Il ver. Cycle**<br /> Microsoft ara dili (MSIL) doğrulama döngüsü<br /><br /> **Il ver saf**<br /> MSIL doğrulaması saf<br /><br /> **Md Val. Cycle** ve **Il ver. Cycle** süreleri, gerekli başlatma ve kapatılma yordamlarını gerçekleştirmek için gereken süreyi içerir. **Md Val. saf** ve **Il ver saf** süreleri yalnızca doğrulamayı veya doğrulamayı gerçekleştirmek için gereken süreyi yansıtır.|  
@@ -44,8 +44,8 @@ peverify filename [options]
 |**/HRESULT**|Onaltılık biçimde hata kodlarını görüntüler.|  
 |**/Ignore =** *Hex. Code* [, *Hex. Code*]|Belirtilen hata kodlarını dikkate almaz.|  
 |**/Ignore = @** *ResponseFile*|Belirtilen yanıt dosyasında listelenen hata kodlarını dikkate almaz.|  
-|**/İl**|*Dosya adı*tarafından belirtilen derlemede uygulanan metotlar için MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir. Araç, **/quiet** seçeneğini belirtmediğiniz müddetçe bulunan her bir sorun için ayrıntılı açıklamalar döndürür.|  
-|**/MD**|*Dosya adı*tarafından belirtilen derlemede meta veri doğrulama denetimleri gerçekleştirir. Bu seçenek, dosyanın içindeki tam meta veri yapısını gösterir ve karşılaşılan tüm doğrulama sorunlarını raporlar.|  
+|**/İl**|*Dosya adı* tarafından belirtilen derlemede uygulanan metotlar için MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir. Araç, **/quiet** seçeneğini belirtmediğiniz müddetçe bulunan her bir sorun için ayrıntılı açıklamalar döndürür.|  
+|**/MD**|*Dosya adı* tarafından belirtilen derlemede meta veri doğrulama denetimleri gerçekleştirir. Bu seçenek, dosyanın içindeki tam meta veri yapısını gösterir ve karşılaşılan tüm doğrulama sorunlarını raporlar.|  
 |**/nologo**|Ürün sürümü ve telif hakkı bilgilerinin görüntülenmesini önler.|  
 |**/nosymbols**|.NET Framework sürüm 2.0'da, geriye doğru uyumluluk için satır numaralarını gizler.|  
 |**/**|Sessiz mod kullanılacağını belirtir; doğrulama sorunu raporlarının çıkışını önler. Peverify.exe dosyanın tür kullanımı uyumlu olup olmadığını bildirmeye devam eder, ancak tür güvenliği doğrulamasını önleyen sorunlar hakkında bilgi vermez.|  
@@ -55,15 +55,17 @@ peverify filename [options]
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Ortak dil çalışma zamanı, güvenlik ve yalıtım mekanizmalarını zorlamaya yardımcı olmak için uygulama kodunun tür kullanımı uyumlu yürütülmesini kullanır. Normalde, güvenlik ilkesini güvenilir ancak doğrulanamayan kodun yürütülmesine izin verecek şekilde ayarlayabilseniz de, [doğruıolarak olmayan tür güvenli](../../standard/security/key-security-concepts.md#type-safety-and-security) olmayan kod çalıştırılamaz.  
   
- **/Md** veya **/Il** seçeneklerinin hiçbiri belirtilmediyse Peverify.exe her iki denetim türünü de gerçekleştirir. Peverify.exe önce **/md** denetimleri gerçekleştirir. Hata yoksa, **/Il** denetimleri yapılır. Hem **/md** hem de **/Il**belirtirseniz, meta verilerde hata olsa bile **/Il** denetimleri yapılır. Bu nedenle, meta veri hatası yoksa, **PEVerify** *Dosya* adı **PEVerify** *dosya adı* **/md** **/Il**ile eşdeğerdir.  
+ **/Md** veya **/Il** seçeneklerinin hiçbiri belirtilmediyse Peverify.exe her iki denetim türünü de gerçekleştirir. Peverify.exe önce **/md** denetimleri gerçekleştirir. Hata yoksa, **/Il** denetimleri yapılır. Hem **/md** hem de **/Il** belirtirseniz, meta verilerde hata olsa bile **/Il** denetimleri yapılır. Bu nedenle, meta veri hatası yoksa, **PEVerify** *Dosya* adı **PEVerify** *dosya adı* **/md** **/Il** ile eşdeğerdir.  
   
  Peverify.exe, veri akışı analizine ve geçerli meta veriye ilişkin birkaç yüz kuralı içeren bir listeye göre kapsamlı MSIL doğrulama denetimleri yapar. Peverify.exe denetimleri hakkında ayrıntılı bilgi için Windows SDK araçlar Geliştirici Kılavuzu klasöründe "meta veri doğrulama belirtimi" ve "MSIL yönerge kümesi belirtimi" başlığına bakın.  
   
 .NET Framework sürüm 2,0 veya üzeri `byref` , aşağıdaki MSIL yönergeleri kullanılarak belirtilen doğrulanabilir dönüşler destekler: `dup` , `ldsflda` , `ldflda` , `ldelema` , `call` ve `unbox` .  
   
 ## <a name="examples"></a>Örnekler  
+
  Aşağıdaki komut, derlemede uygulanan yöntemler için meta veri doğrulama denetimleri ve MSIL tür güvenliği doğrulama denetimlerini gerçekleştirir `myAssembly.exe` .  
   
 ```console  
@@ -121,6 +123,6 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](index.md)
-- [Verifi, türü güvenli kod yazma](../misc/code-access-security-basics.md#typesafe_code)
+- [Verifili Type-Safe kodu yazma](../misc/code-access-security-basics.md#typesafe_code)
 - [Tür güvenliği ve güvenlik](../../standard/security/key-security-concepts.md#type-safety-and-security)
 - [Komut Istemleri](developer-command-prompt-for-vs.md)

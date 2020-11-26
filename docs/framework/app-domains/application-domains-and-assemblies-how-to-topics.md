@@ -6,14 +6,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], how-tos
 - application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
-ms.openlocfilehash: 9489f23e6730e36fb43e367b34954d220f633c96
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 4f0bf91c9f8f52959ed387be90f9bd59eff494cd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104977"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237488"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Uygulama Etki Alanları ve Derlemeler Nasıl Yapılır Konuları
+
 Aşağıdaki bölümler, uygulama etki alanları ve Derlemeleriyle programlama için kavramsal belgelerde bulunan tüm nasıl yapılır konularına bağlantılar içerir.  
   
  **Uygulama Etki Alanları**  
@@ -32,11 +33,11 @@ Aşağıdaki bölümler, uygulama etki alanları ve Derlemeleriyle programlama i
   
 - [Nasıl yapılır: Bir Derlemenin Tam Olarak Nitelenmiş Adını Belirleme](../../standard/assembly/find-fully-qualified-name.md)  
   
-- [Nasıl yapılır: tek dosya bütünleştirilmiş kodu derleme](build-single-file-assembly.md)  
+- [Nasıl yapılır: Single-File bütünleştirilmiş kodu derleme](build-single-file-assembly.md)  
   
 - [Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme](build-multifile-assembly.md)  
   
-- [Nasıl yapılır: genel-özel anahtar çifti oluşturma](../../standard/assembly/create-public-private-key-pair.md)  
+- [Nasıl yapılır: Public-Private anahtar çifti oluşturma](../../standard/assembly/create-public-private-key-pair.md)  
   
 - [Nasıl yapılır: Bütünleştirilmiş Kodu Tanımlayıcı Adla İmzalama](../../standard/assembly/sign-strong-name.md)  
   

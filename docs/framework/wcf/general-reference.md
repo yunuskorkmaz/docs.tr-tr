@@ -6,12 +6,13 @@ helpviewer_keywords:
 - Windows Communication Foundation, general reference
 - WCF, general reference
 ms.assetid: b1a21e93-4700-46e6-88ca-bd7a50e19a16
-ms.openlocfilehash: 2cf80d9ac9c09057e2a3339161f7629d63e259ba
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e7b6c2fb2f39c6ee322db2cf52b62a2cf7de87dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319831"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238319"
 ---
 # <a name="general-reference"></a>Genel Başvuru
-[@No__t-1System. serviceModel >](../configure-apps/file-schema/wcf/system-servicemodel.md) bölümü WINDOWS COMMUNICATION FOUNDATION (WCF) istemcileri ve hizmetlerini yapılandırmak için kullanılan öğeleri açıklar.
+
+Bölümü, [\<system.serviceModel>](../configure-apps/file-schema/wcf/system-servicemodel.md) Windows Communication Foundation (WCF) istemcileri ve hizmetlerini yapılandırmak için kullanılan öğeleri açıklar.

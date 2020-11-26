@@ -2,32 +2,35 @@
 title: 1102 - WorkflowActivityStop
 ms.date: 03/30/2017
 ms.assetid: 285e5cb8-e90d-4914-ac06-e9b176ffefa2
-ms.openlocfilehash: 44617e9f53be0e601424746f83b171d33956197e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b5c7874946ae494f41e73f3e7c90f3944a3521d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052800"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238697"
 ---
 # <a name="1102---workflowactivitystop"></a>1102 - WorkflowActivityStop
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1102|  
-|anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|1102|  
+|Anahtar sözcükler|WFRuntime|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir iş akışı etkinlik durdurdu gösterir.  
+
+ Bir iş akışı etkinliğinin durdurulduğunu gösterir.  
   
 ## <a name="message"></a>İleti  
- WorkflowInstance ID: '%1' Aktivita E2E  
+
+ WorkflowInstance kimliği: ' %1 ' E2E etkinliği  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|WorkflowInstanceID|xs:string|İş akışı örnek kimliği.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|WorkflowInstanceId|xs: String|İş akışı örnek kimliği.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

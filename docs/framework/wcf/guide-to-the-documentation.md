@@ -5,14 +5,15 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 705e571e11fa7c8276fcb48d15ed0160fbda2bc5
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 10a4fe88c9d49d49338776db83abc1201ada8a95
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628767"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238151"
 ---
 # <a name="guide-to-the-documentation"></a>Belgeler için Kılavuz
+
 Burada verilen Windows Communication Foundation (WCF) belgeleriyle ilgili rehberlik vardır. Bağlantılı belgeler, belirli ilgi alanları ve uzmanlık düzeylerine göre gruplanan başlangıç noktaları için önerilir.  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>Windows Communication Foundation programlamaya yeni  
@@ -25,7 +26,7 @@ Burada verilen Windows Communication Foundation (WCF) belgeleriyle ilgili rehber
   
 - İstemci/sunucu güvenlik yapılandırmalarının grafik örneklerini görmek için bkz. [ortak güvenlik senaryoları](./feature-details/common-security-scenarios.md).  
   
-## <a name="programming-in-depth"></a>Derinlemesine programlama  
+## <a name="programming-in-depth"></a>Programlama In-Depth  
   
 - Bir uygulama geliştirmeye başlamaya hazırsanız bkz. [Temel WCF programlama](basic-wcf-programming.md).  
   
@@ -38,6 +39,7 @@ Burada verilen Windows Communication Foundation (WCF) belgeleriyle ilgili rehber
 - XML dosyalarını kullanan yapılandırma, WCF Hizmetleri ve istemcilerini programlamanın birincil yoludur. Yapılandırma dosyalarında kullanılan XML öğelerine ilişkin başvuru belgeleri için bkz. [WCF yapılandırma şeması](../configure-apps/file-schema/wcf/index.md).  
   
 ## <a name="troubleshooting"></a>Sorun giderme  
+
  Yaygın WCF sorunlarını giderme hakkında daha fazla bilgi için bkz. [WCF sorun giderme hızlı başlangıç](wcf-troubleshooting-quickstart.md).  
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>Diğer teknolojilerle Windows Communication Foundation kullanma  
@@ -57,7 +59,8 @@ Burada verilen Windows Communication Foundation (WCF) belgeleriyle ilgili rehber
 - WCF 'yi bir Web Hizmetleri uzantıları (WI) 3,0 hizmetini kullanmak üzere kullanmak için bkz. [nasıl yapılır: wvas 3,0 hizmetine erişme](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
   
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation 'de desteklenen WS-* protokolleri  
- Sistem tarafından belirtilen bağlamalarda desteklenen protokollerin listesini görmek için, bkz. sistem tarafından [sunulan birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Sistem tarafından sunulan bağlamaların listesini görmek için bkz. [sistem tarafından sunulan bağlamalar](system-provided-bindings.md).  
+
+ Sistem tarafından belirtilen bağlamalarda desteklenen protokollerin listesini görmek için, bkz. [System-Provided birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Sistem tarafından sunulan bağlamaların listesini görmek için bkz. [sistem tarafından sunulan bağlamalar](system-provided-bindings.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

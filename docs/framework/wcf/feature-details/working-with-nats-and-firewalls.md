@@ -5,19 +5,21 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: bab29d738c7562753a826b47c03867eeebac4372
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 185be9f6e33fcf107226e98d96d6be5c562384d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558985"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238333"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT ve Güvenlik Duvarlarıyla Çalışma
+
 Bir ağ bağlantısının istemci ve sunucusunun genellikle iletişim için doğrudan ve açık bir yolu yoktur. Paketler, hem uç nokta makinelerinde hem de ağdaki ara makinelerde filtrelenir, yönlendirilir, çözümlenir ve dönüştürülür. Ağ adresi çevirileri (NAT) ve güvenlik duvarları, ağ iletişimine katılabileceğiniz ara uygulamaların yaygın örnekleridir.  
   
  Windows Communication Foundation (WCF) aktarımları ve ileti değişimi desenleri (MEPs), NAT ve güvenlik duvarlarının varlığına göre farklı şekilde tepki verir. Bu konuda, NAT ve güvenlik duvarlarının ortak ağ topolojilerinde nasıl çalıştığı açıklanmaktadır. WCF aktarımları ve MEPs 'lerin belirli birleşimlerine yönelik öneriler, uygulamalarınızın ağ üzerinde NAT ve güvenlik duvarları konusunda daha sağlam olmasına yardımcı olur.  
   
 ## <a name="how-nats-affect-communication"></a>NAT 'Lar Iletişimi nasıl etkiler  
+
  NAT, birkaç makinenin tek bir dış IP adresi paylaşmasını sağlamak üzere oluşturulmuştur. Bir bağlantı noktası yeniden eşleme NAT, bir dış IP adresini ve bağlantı noktasını yeni bir bağlantı noktası numarasıyla bir dış IP adresi bağlantısı için eşler. Yeni bağlantı noktası numarası NAT 'nin orijinal iletişimle dönüş trafiği ile ilişkilendirilmesi için izin verir. Birçok ev kullanıcısı artık özel olarak yönlendirilebilir bir IP adresine sahiptir ve paketlerin küresel olarak yönlendirilmesini sağlamak için bir NAT kullanır.  
   
  NAT bir güvenlik sınırı sağlamaz. Ancak, yaygın NAT yapılandırmalarında iç makinelerin doğrudan giderilmesi önlenir. Bu, her ikisi de iç makineleri bazı istenmeyen bağlantılardan korur ve verileri istemciye geri zaman uyumsuz olarak göndermek zorunda olan sunucu uygulamaları yazmayı zorlaştırır. NAT, paketlerin NAT makinesinde yer aldığı gibi görünüyor olması için paketlerdeki adresleri yeniden yazar. Bu, istemcinin istemciye geri bağlantı açmayı denediğinde başarısız olmasına neden olur. Sunucu istemcinin algılanan adresini kullanıyorsa, istemci adresi genel olarak yönlendirilemediğinden başarısız olur. Sunucu NAT adresini kullanıyorsa, hiçbir uygulama bu makinede dinleme yaptığından bağlantı başarısız olur.  
@@ -25,6 +27,7 @@ Bir ağ bağlantısının istemci ve sunucusunun genellikle iletişim için doğ
  Bazı NAT 'ler, dış makinelerin belirli bir iç makineye bağlanmasına izin vermek için iletme kurallarının yapılandırılmasını destekler. İletme kurallarını yapılandırmaya yönelik yönergeler farklı NAT 'Lar arasında farklılık gösterir ve son kullanıcılardan, çoğu uygulama için NAT yapılandırmalarını değiştirmesini ister. Birçok Son Kullanıcı, belirli bir uygulama için NAT yapılandırmalarını değiştirmek ya da istemiyor.  
   
 ## <a name="how-firewalls-affect-communication"></a>Güvenlik duvarları Iletişimi nasıl etkiler  
+
  *Güvenlik duvarı* , geçişine izin verip vermeyeceğine karar vermek için geçiş yapan trafiğe yönelik kurallar uygulayan bir yazılım veya donanım aygıtıdır. Gelen ve/veya giden trafik akışlarını incelemek için güvenlik duvarlarını yapılandırabilirsiniz. Güvenlik Duvarı, ağın kenarından veya uç nokta ana bilgisayarında ağ için bir güvenlik sınırı sağlar. İş kullanıcıları, kötü amaçlı saldırıları engellemek için sunucularını bir güvenlik duvarının arkasında geleneksel olarak tutmıştır. Windows XP SP2 'de kişisel güvenlik duvarının tanıtımı sırasında, güvenlik duvarının arkasındaki ev kullanıcılarının sayısı da büyük ölçüde artmıştır. Bu, bir bağlantının bir veya her iki ucunun de paketleri İnceleme güvenlik duvarı olmasını sağlar.  
   
  Güvenlik duvarları, paketlerin incelenmesinde karmaşıklık ve becerileri bakımından büyük ölçüde farklılık gösterir. Basit güvenlik duvarları, paketlerindeki kaynak ve hedef adreslere ve bağlantı noktalarına göre kuralları uygular. Akıllı güvenlik duvarları Ayrıca kararlar almak için paketlerin içeriğini inceleyebilir. Bu güvenlik duvarları birçok farklı yapılandırmada gelir ve genellikle özelleştirilmiş uygulamalar için kullanılır.  
@@ -36,6 +39,7 @@ Bir ağ bağlantısının istemci ve sunucusunun genellikle iletişim için doğ
  Teredo, bir NAT arkasındaki makinelerin doğrudan adreslenebilirliğini sağlayan bir IPv6 geçiş teknolojisidir. Teredo, olası bağlantıları tanıtmak için herkese açık ve genel olarak yönlendirilemeyen bir sunucu kullanımına dayanır. Teredo sunucusu, uygulama istemcisine ve sunucusuna, bağlantı bilgilerini değiş tokuş ettikleri ortak bir toplantı noktası sağlar. Daha sonra makineler geçici bir Teredo adresi ister ve paketler mevcut ağ üzerinden tünellenmiş. WCF 'de Teredo desteği, işletim sisteminde IPv6 ve Teredo desteğinin etkinleştirilmesini gerektirir. Windows XP ve üzeri işletim sistemleri Teredo 'Yu destekler. Windows Vista ve sonraki işletim sistemleri IPv6 'Yı varsayılan olarak destekler ve yalnızca kullanıcının Teredo 'Yu etkinleştirmesini gerektirir. Windows XP SP2 ve Windows Server 2003, kullanıcının hem IPv6 hem de Teredo 'Yu etkinleştirmesini gerektirir. Daha fazla bilgi için bkz. [Teredo 'Ya genel bakış](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Aktarım ve Ileti değişim modelini seçme  
+
  Bir taşımanın ve MEP 'nin seçilmesi üç adımlı bir işlemdir:  
   
 1. Uç nokta makinelerinin adreslenebilirliğini çözümleyin. Kuruluş sunucularının genellikle doğrudan adreslenebilirliği vardır, son kullanıcılar genellikle NAT 'Lar tarafından engellenen adreslenebilirliği vardır. Her iki uç nokta, son kullanıcılar arasındaki eşler arası senaryolar gibi bir NAT 'nin arkasındaysa, adreslenebilirliği sağlamak için Teredo gibi bir teknolojinin olması gerekebilir.  

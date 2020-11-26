@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: bbe99b133e7edda191d17e9fe8a1dea89d3f0eb7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 521b2a887792d41dd28342ca4bfe7be71ceba4b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556531"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237384"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Karşılıklı Sertifikalar ile İleti Güvenliği
+
 Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanmış bir Windows Communication Foundation (WCF) hizmeti ve istemcisi gösterilmektedir. İstemci ve hizmet, sertifikalarla doğrulanır.  
   
  Bu senaryo, X. 509.440 sertifika belirteci profiliyle WS-Security kullandığından birlikte çalışabilir.  
@@ -22,30 +23,33 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
   
  ![Karşılıklı sertifikalarla ileti güvenliği](media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
-|Özellik|Description|  
+|Özellik|Açıklama|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
-|Birlikte Çalışabilirlik|Evet, WS-Security ve X. 509.440 sertifika belirteci profiliyle uyumlu istemciler ve hizmetler ile.|  
+|Birlikte çalışabilirlik|Evet, WS-Security ve X. 509.440 sertifika belirteci profiliyle uyumlu istemciler ve hizmetler ile.|  
 |Kimlik Doğrulaması|Sunucu ve istemcinin karşılıklı kimlik doğrulaması.|  
-|Bütünlük|Yes|  
-|Gizlilik|Yes|  
+|Bütünlük|Evet|  
+|Gizlilik|Evet|  
 |Aktarım|HTTP|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:  
+
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
   
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.  
   
 - Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamaz.  
   
 ### <a name="code"></a>Kod  
+
  Aşağıdaki kod, ileti güvenliği kullanan bir hizmet uç noktası oluşturur. Hizmetin kimliğini doğrulamak için bir sertifika gerekir.  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
 ### <a name="configuration"></a>Yapılandırma  
+
  Aynı hizmeti oluşturmak için aşağıdaki yapılandırma kod yerine kullanılabilir.  
   
 ```xml  
@@ -91,22 +95,25 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
 ```  
   
 ## <a name="client"></a>İstemci  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:  
+
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
   
 - Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).  
   
-- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örnek:  
+- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örneğin:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
+
  Aşağıdaki kod istemcisini oluşturur. Güvenlik modu Ileti olarak ayarlanır ve istemci kimlik bilgileri türü sertifika olarak ayarlanır.  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Yapılandırma  
+
  Aşağıdaki, istemcisini yapılandırır. Kullanılarak bir istemci sertifikası belirtilmelidir [\<clientCertificate>](../../configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md) . Ayrıca, hizmet sertifikası kullanılarak belirtilir [\<defaultCertificate>](../../configure-apps/file-schema/wcf/defaultcertificate-element.md) .  
   
 ```xml  

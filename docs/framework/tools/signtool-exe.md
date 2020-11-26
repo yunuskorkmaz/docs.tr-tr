@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: ff330691483b56740ee72e280c1471af4282c638
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 46a7453ff7de0329d9cd7f671dcaa0a3e3e0e54c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282249"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238476"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (İmza Aracı)
+
 İmza aracı, dosyaları dijital imzalayan, dosyalardaki imzaları doğrulayan ve dosyalara zaman damgası veren bir komut satırı aracıdır.  
   
  Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
@@ -23,7 +24,7 @@ ms.locfileid: "93282249"
   
  Komut satırına şunu yazın:  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 signtool [command] [options] [file_name | ...]  
@@ -55,7 +56,9 @@ signtool [command] [options] [file_name | ...]
 |**komutun**|Hata ayıklama bilgisini görüntüler.|  
   
 <a name="catdb"></a>
+
 ## <a name="catdb-command-options"></a>catdb Komut Seçenekleri  
+
  Aşağıdaki tabloda, komutuyla kullanılabilecek seçenekler listelenmektedir `catdb` .  
   
 |Catdb seçeneği|Açıklama|  
@@ -66,7 +69,9 @@ signtool [command] [options] [file_name | ...]
 |`/u`|Benzersiz bir adın eklenen katalog dosyaları için otomatik olarak oluşturulduğunu belirtir. Gerekirse, katalog dosyaları var olan katalog dosyaları ile ad çakışmalarını önlemek için yeniden adlandırılır. Bu seçenek belirtilmezse, İmza Aracı eklenmekte olan katalogla aynı ada sahip tüm var olan katalogların üzerine yazar.|  
   
 <a name="sign"></a>
+
 ## <a name="sign-command-options"></a>imza Komut Seçenekleri  
+
  Aşağıdaki tabloda, komutuyla kullanılabilecek seçenekler listelenmektedir `sign` .  
   
 |imza komut seçenekleri|Açıklama|  
@@ -85,9 +90,9 @@ signtool [command] [options] [file_name | ...]
 |`/kc`  *Prıkeycontainername*|Özel anahtar kapsayıcısı adını belirtir.|  
 |`/n`  *SubjectName*|İmzalayan sertifika konusunun adını belirtir. Bu değer, tam konu adının bir alt dizesi olabilir.|  
 |`/nph`|Destekleniyorsa, yürütülebilir dosyalar için sayfa karmalarını gizler. Varsayılan, wintrust.dll sürümü ve SIGNTOOL_PAGE_HASHES ortam değişkeni tarafından belirlenir. PE olmayan dosyalar için bu seçenek göz ardı edilir.|  
-|`/p`  *Parolayı*|PFX dosyası açılırken kullanılacak parolayı belirtir. ( `/f` BIR pfx dosyası belirtmek için seçeneğini kullanın.)|  
+|`/p`  *Parola*|PFX dosyası açılırken kullanılacak parolayı belirtir. ( `/f` BIR pfx dosyası belirtmek için seçeneğini kullanın.)|  
 |`/p7` *Yol*|Bir Ortak Anahtar Şifreleme Standartları (PKCS) #7 dosyasının belirtilen her içerik dosyası için üretildiğini belirtir. PKCS #7 dosyaları *path* \\ *filename*. P7 olarak adlandırılır.|  
-|`/p7ce`*Değer*|İmzalanmış PKCS #7 içeriği için seçenekleri belirtir. İmzalı içeriği PKCS #7 dosyasına eklemek için *değeri* "Embedded" ya da ayrılmış bir PKCS #7 dosyasının imzalı veri bölümünü üretmek Için "DetachedSignedData" olarak ayarlayın. `/p7ce`Seçenek kullanılmazsa, imzalanmış içerik varsayılan olarak katıştırılır.|  
+|`/p7ce` *Değer*|İmzalanmış PKCS #7 içeriği için seçenekleri belirtir. İmzalı içeriği PKCS #7 dosyasına eklemek için *değeri* "Embedded" ya da ayrılmış bir PKCS #7 dosyasının imzalı veri bölümünü üretmek Için "DetachedSignedData" olarak ayarlayın. `/p7ce`Seçenek kullanılmazsa, imzalanmış içerik varsayılan olarak katıştırılır.|  
 |`/p7co` *\<OID>*|İmzalanmış PKCS #7 içeriğini tanımlayan nesne tanımlayıcısını (OID) belirtir.|  
 |`/ph`|Destekleniyorsa, yürütülebilir dosyalar için sayfa karmaları oluşturur.|  
 |`/r`  *RootSubjectName*|İmzalama sertifikasının bağlanması gerektiği kök sertifikası konusunun adını belirtir. Bu değer, kök sertifikasının tam konu adının bir alt dizesi olabilir.|  
@@ -103,7 +108,9 @@ signtool [command] [options] [file_name | ...]
  Kullanım örnekleri için bkz. [dosyayı imzalamak Için SignTool kullanma](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file).  
   
 <a name="TimeStamp"></a>
+
 ## <a name="timestamp-command-options"></a>TimeStamp Komut Seçenekleri  
+
  Aşağıdaki tabloda, komutuyla kullanılabilecek seçenekler listelenmektedir `TimeStamp` .  
   
 |Zaman Damgası seçeneği|Açıklama|  
@@ -117,6 +124,7 @@ signtool [command] [options] [file_name | ...]
  Kullanım örneği için, bkz. [önceden Imzalanmış dosyalara zaman damgaları ekleme](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files).  
   
 <a name="Verify"></a>
+
 ## <a name="verify-command-options"></a>Komut Seçeneklerini Doğrulama  
   
 |Seçeneği doğrulama|Açıklama|  
@@ -132,7 +140,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` ( `SHA1`&#124;`SHA256` )|Katalogdaki bir dosya ararken kullanmak için bir isteğe bağlı karma algoritmasını belirtir.|  
 |`/kp`|Çekirdek modu sürücü imzalama ilkesi ile doğrulama gerçekleştirilmesi gerektiğini belirtir.|  
 |`/ms`|Birden çok doğrulama mantığı kullanır. Bu, Windows 8 ve üzeri üzerinde bir [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) çağrısının varsayılan davranışıdır.|  
-|`/o` *Sürüm*|İşletim sistemi sürümüne göre dosyayı doğrular. *Sürüm* şu biçimdedir: *PlatformID* : *Verana*. *Küçük*. *BuildNumber*. *PlatformID* , bir numaralandırma üyesinin temel değerini temsil eder <xref:System.PlatformID> . **Önemli:**  `/o` Anahtarın kullanımı önerilir. `/o`Belirtilmezse, SignTool.exe beklenmeyen sonuçlar döndürebilir. Örneğin, `/o` anahtarı eklemezseniz, daha eski bir işletim sisteminde doğru şekilde doğrulayan sistem katalogları, daha yeni bir işletim sisteminde doğru şekilde doğrulanmayabilir.|  
+|`/o` *Sürüm*|İşletim sistemi sürümüne göre dosyayı doğrular. *Sürüm* şu biçimdedir: *PlatformID*:*Verana*. *Küçük*. *BuildNumber*. *PlatformID* , bir numaralandırma üyesinin temel değerini temsil eder <xref:System.PlatformID> . **Önemli:**  `/o` Anahtarın kullanımı önerilir. `/o`Belirtilmezse, SignTool.exe beklenmeyen sonuçlar döndürebilir. Örneğin, `/o` anahtarı eklemezseniz, daha eski bir işletim sisteminde doğru şekilde doğrulayan sistem katalogları, daha yeni bir işletim sisteminde doğru şekilde doğrulanmayabilir.|  
 |`/p7`|PKCS #7 dosyalarını doğrular. Varolan ilkeler PKCS #7 doğrulaması için kullanılmaz. İmza denetlenir ve imzalama sertifikası zincir oluşturulur.|  
 |`/pa`|Varsayılan Authenticode Doğrulama İlkesi kullanılması gerektiğini belirtir. `/pa`Seçenek belirtilmemişse, Imza aracı Windows sürücü doğrulama ilkesi 'ni kullanır. Bu seçenek seçeneklerle birlikte kullanılamaz `catdb` .|  
 |`/pg`*Policyguid*|GUID'ye göre doğrulama ilkesi belirtir. *PolicyGUID* , doğrulama Ilkesinin ActionId 'sine karşılık gelir. Bu seçenek seçeneklerle birlikte kullanılamaz `catdb` .|  
@@ -143,6 +151,7 @@ signtool [command] [options] [file_name | ...]
  Kullanım örnekleri için bkz. [Dosya Imzasını doğrulamak Için SignTool kullanma](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  İmza Aracı, sonlandırıldığında aşağıdaki çıkış kodlarından birini döndürür.  
   
 |Çıkış kodu|Açıklama|  
@@ -152,6 +161,7 @@ signtool [command] [options] [file_name | ...]
 |2|Yürütme uyarılarla tamamlandı.|  
 
 ## <a name="examples"></a>Örnekler  
+
  Aşağıdaki komut, MyCatalogFileName.cat katalog dosyasını sistem bileşeni ve sürücü veritabanına ekler. Bu `/u` seçenek, adlı mevcut bir katalog dosyasının değiştirilmesini engellemek için gerekliyse benzersiz bir ad oluşturur `MyCatalogFileName.cat` .  
   
 ```console  

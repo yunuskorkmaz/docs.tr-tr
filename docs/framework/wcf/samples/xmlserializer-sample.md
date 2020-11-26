@@ -2,14 +2,15 @@
 title: XMLSerializer Örneği
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: fd787b5caabf698e471a9ebe4604688bc422e99e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 47fdcfeda796d99740a49997ee85fc63fbb27b21
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583953"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237579"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
+
 Bu örnek, ile uyumlu türlerin serileştirilmesinin ve serisini kaldırma işlemlerinin nasıl yapılacağını gösterir <xref:System.Xml.Serialization.XmlSerializer> . Varsayılan Windows Communication Foundation (WCF) biçimlendiricisi <xref:System.Runtime.Serialization.DataContractSerializer> sınıfındır. Sınıf <xref:System.Xml.Serialization.XmlSerializer> kullanılamaz olduğunda, türleri seri hale getirmek ve seri durumdan çıkarmak için sınıfı kullanılabilir <xref:System.Runtime.Serialization.DataContractSerializer> . Bu, genellikle XML üzerinde kesin denetim gerektiğinde (örneğin, bir veri parçasının bir XML özniteliği olması ve bir XML öğesi olması gerekiyorsa) büyük bir durumdur. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> WCF olmayan hizmetler için istemciler oluşturulurken genellikle otomatik olarak seçilir.  
   
  Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
@@ -84,7 +85,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
 }  
 ```  
   
- İstemci uygulama da karmaşık sayılar kullanır. Hizmet sözleşmesinin ve veri türlerinin her ikisi de, hizmet meta verilerinden [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan generatedClient.cs kaynak dosyasında tanımlanmıştır. Svcutil. exe, bir sözleşmenin tarafından seri hale getirilmediği zaman algılayabilir <xref:System.Runtime.Serialization.DataContractSerializer> ve `XmlSerializable` Bu durumda yayma türlerine geri döner. ' In kullanımını zorlamak isterseniz <xref:System.Xml.Serialization.XmlSerializer> , Svcutil. exe aracına/Serializer: XmlSerializer (XmlSerializer kullanın) komut seçeneğini geçirebilirsiniz.  
+ İstemci uygulama da karmaşık sayılar kullanır. Hizmet sözleşmesinin ve veri türlerinin her ikisi de, hizmet meta verilerinden [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan generatedClient.cs kaynak dosyasında tanımlanmıştır. Svcutil.exe, bir sözleşmenin tarafından seri hale getirilmediği zaman algılayabilir <xref:System.Runtime.Serialization.DataContractSerializer> ve bu durumda, yayma türlerine geri döner `XmlSerializable` . Öğesinin kullanımını zorlamak istiyorsanız <xref:System.Xml.Serialization.XmlSerializer> , Svcutil.exe aracına/Serializer: XmlSerializer (XmlSerializer kullanın) komut seçeneğini geçirebilirsiniz.  
   
 ```csharp  
 // Create a client.  

@@ -2,15 +2,17 @@
 title: 'Hizmet: Güvenlik Çağrıları Yetkilendirilmedi'
 ms.date: 03/30/2017
 ms.assetid: 3024b20a-5250-4bd1-a38c-c6d79f89610b
-ms.openlocfilehash: a38b5e0eb467a5cad698fd6e3e01c0adef825d2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32b0a62ecf9364270f5580787b7e129af5ac80b2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773384"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236916"
 ---
 # <a name="service-security-calls-not-authorized"></a>Hizmet: Güvenlik Çağrıları Yetkilendirilmedi
-Sayaç adı: Güvenlik çağrıları yetkilendirilmedi.  
+
+Sayaç adı: güvenlik çağrıları yetkilendirilmemiş.  
   
 ## <a name="description"></a>Açıklama  
- Bu sayaç artırılır, <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> yöntemi döndürür `false`. Bu, gelen ileti, geçerli bir kullanıcıdan gelen ve düzgün şekilde korumalı, ancak belirli görevleri gerçekleştirmek için kullanıcının yetkilendirilmeyen gösterir.
+
+ Bu sayaç, <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> yöntemin döndürdüğü zaman artırılır `false` . Gelen iletinin geçerli bir kullanıcıdan olduğunu ve düzgün şekilde korunduğunu gösterir, ancak kullanıcı belirli görevleri yapmak için yetkilendirilmemiş.
