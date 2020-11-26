@@ -2,18 +2,20 @@
 title: Native Etkinliği Kullanan Özel Bileşik
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: bf2b8123619df8977b0687c72663c6b482e35654
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82cfd8605d66e2cb489326c40f6ae3e960123788
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84200868"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242246"
 ---
 # <a name="custom-composite-using-native-activity"></a>Native Etkinliği Kullanan Özel Bileşik
+
 Bu örnek <xref:System.Activities.NativeActivity> <xref:System.Activities.Activity> , bir iş akışının yürütülme akışını denetlemek için diğer nesneleri zamanlayan bir nasıl yazılacağını gösterir. Bu örnek, bunun nasıl yapılacağını göstermek için iki ortak denetim akışı ve sırası kullanır.
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
- Sürümünden itibaren `MySequence` , dikkat edilecek ilk şey, öğesinden türetilmedir <xref:System.Activities.NativeActivity> . <xref:System.Activities.NativeActivity>, <xref:System.Activities.Activity> yöntemine geçirilen iş akışı çalışma zamanının tam kapsamını kullanıma sunan nesnedir <xref:System.Activities.NativeActivityContext> `Execute` .
+
+ Sürümünden itibaren `MySequence` , dikkat edilecek ilk şey, öğesinden türetilmedir <xref:System.Activities.NativeActivity> . <xref:System.Activities.NativeActivity> , <xref:System.Activities.Activity> yöntemine geçirilen iş akışı çalışma zamanının tam kapsamını kullanıma sunan nesnedir <xref:System.Activities.NativeActivityContext> `Execute` .
 
  `MySequence`<xref:System.Activities.Activity>iş akışı yazarı tarafından doldurulan bir nesne genel koleksiyonunu ortaya koyar. İş akışı yürütülmeden önce, iş akışı çalışma zamanı <xref:System.Activities.Activity.CacheMetadata%2A> bir iş akışındaki her etkinlikte yöntemini çağırır. Bu işlem sırasında, çalışma zamanı, veri kapsamı ve ömür yönetimi için üst-alt ilişkileri belirler. Yönteminin varsayılan uygulanması, etkinliğin <xref:System.Activities.Activity.CacheMetadata%2A> <xref:System.ComponentModel.TypeDescriptor> `MySequence` <xref:System.Activities.Activity> <xref:System.Collections.IEnumerable> \<<xref:System.Activities.Activity> alt öğesi olarak tür veya> ortak bir özelliğini eklemek için etkinliğin örnek sınıfını kullanır `MySequence` .
 

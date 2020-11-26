@@ -8,20 +8,22 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b7c3e425312652fb37ed8e2203d0a0155fea25b9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 95ac13409156b553962aee5ea4f5ca717375c133
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163919"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241986"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Yönetilen Kod İçin UI Otomasyon İstemcileri
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
  Bu bölümde, UI Otomasyon istemcileri geliştirmenize yardımcı olacak genel bakış ve nasıl yapılır konuları yer almaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [UI Otomasyon ve Ekran Ölçeklendirme](ui-automation-and-screen-scaling.md)  
  [Standart Denetimler İçin UI Otomasyon Desteği](ui-automation-support-for-standard-controls.md)  
  [İstemciler İçin UI Otomasyon Olayları](ui-automation-events-for-clients.md)  
@@ -34,4 +36,5 @@ ms.locfileid: "87163919"
  [Nasıl Yapılır Konuları](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.Windows.Automation>

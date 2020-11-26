@@ -2,27 +2,30 @@
 title: 1417 - MaxSentMessageSizeExceeded
 ms.date: 03/30/2017
 ms.assetid: 3cb7c2f0-97bf-4ee9-a037-ed64a25a18fd
-ms.openlocfilehash: ea5535d2f8dc07c19c9cb5503edd445416dbd18e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0738db37982eed920c9736873f8de9c6b1c101fc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782258"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241349"
 ---
 # <a name="1417---maxsentmessagesizeexceeded"></a>1417 - MaxSentMessageSizeExceeded
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1417|  
-|anahtar sözcükler|Kota|  
+|ID|1417|  
+|Anahtar sözcükler|Kota|  
 |Düzey|Hata|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay en büyük ileti boyutunu aştı gönderildiğinde yayılır.  
+
+ Gönderilen en fazla ileti boyutu aşıldığında bu olay yayınlanır.  
   
 ## <a name="message"></a>İleti  
- 1%  
+
+ %1  
   
 ## <a name="details"></a>Ayrıntılar

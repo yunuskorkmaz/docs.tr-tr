@@ -6,14 +6,15 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-ms.openlocfilehash: 9dac9bc70cd070eb3e94969ce47ce24325a6f89d
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 8e92a1492d0295fb71473843752cb4c6184d3604
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904253"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242194"
 ---
 # <a name="interop-etw-events"></a>Birlikte Çalışma ETW Olayları
+
 Birlikte çalışma olayları, Microsoft ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.  
 
 ## <a name="ilstubgenerated-event"></a>ILStubGenerated olayı
@@ -22,7 +23,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha faz
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`InteropKeyword`(0x2000)|Bilgilendirici (4)|  
+|`InteropKeyword` (0x2000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -32,7 +33,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha faz
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Modül kimliği|Win: UInt16|Modül tanımlayıcısı.|  
 |StubMethodID|Win: UInt64|Saplama yöntemi tanımlayıcısı.|  
@@ -52,7 +53,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`InteropKeyword`(0x2000)|Bilgilendirici (4)|  
+|`InteropKeyword` (0x2000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -62,7 +63,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Modül kimliği|Win: UInt16|Modül tanımlayıcısı.|  
 |StubMethodID|Win: UInt64|Saplama yöntemi tanımlayıcısı.|  

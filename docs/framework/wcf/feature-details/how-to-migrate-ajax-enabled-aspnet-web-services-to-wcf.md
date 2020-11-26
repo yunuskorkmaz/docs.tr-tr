@@ -2,14 +2,15 @@
 title: "Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma"
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 6f356f47922945218e02271371d9ddea36ecc5a2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 89c9601ba6afcef9733d7653564a98664a1ed70f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597013"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241908"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma
+
 Bu konuda, temel bir ASP.NET AJAX hizmetini eşdeğer bir AJAX özellikli Windows Communication Foundation (WCF) hizmetine geçirme yordamları özetlenmektedir. Bir ASP.NET AJAX hizmetinin işlevsel WCF sürümünün nasıl oluşturulacağını gösterir. İki hizmet daha sonra yan yana kullanılabilir veya WCF hizmeti ASP.NET AJAX hizmetini değiştirmek için kullanılabilir.
 
  Mevcut bir ASP.NET AJAX hizmetini bir WCF AJAX hizmetine geçirmek aşağıdaki avantajları sağlar:
@@ -53,7 +54,7 @@ Bu konuda, temel bir ASP.NET AJAX hizmetini eşdeğer bir AJAX özellikli Window
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Eşdeğer bir WCF AJAX hizmet uygulaması oluşturmak için
 
-1. **ASPHello** projesine sağ tıklayın ve **Ekle**, **Yeni öğe**ve ardından **AJAX etkin WCF hizmeti**' ni seçin.
+1. **ASPHello** projesine sağ tıklayın ve **Ekle**, **Yeni öğe** ve ardından **AJAX etkin WCF hizmeti**' ni seçin.
 
 2. Hizmeti adlandırın `WCFHello` ve **Ekle**' ye tıklayın.
 
@@ -111,6 +112,7 @@ Bu konuda, temel bir ASP.NET AJAX hizmetini eşdeğer bir AJAX özellikli Window
 11. `WCFHello.svc/HelloWorld`Ve `Service1.aspx/HelloWorld` uç noktalar artık işlevsel olarak eşdeğerdir.
 
 ## <a name="example"></a>Örnek
+
  Bu konuda özetlenen yordamlardan kaynaklanan kod aşağıdaki örnekte verilmiştir.
 
 ```csharp
@@ -193,9 +195,9 @@ d.Add("two", 2);
 
  Bu sözlük, aşağıdaki listede gösterildiği gibi JSON nesnelerinde temsil edilir:
 
-- [{"Key": "One", "Value": 1}, {"Key": "iki", "Value": 2}],<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+- [{"Key": "One", "Value": 1}, {"Key": "iki", "Value": 2}], <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
-- {"One": 1, "iki": 2} ASP.NET AJAX tarafından<xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {"One": 1, "iki": 2} ASP.NET AJAX tarafından <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  , <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Anahtar türünün dize olmadığı, ancak işleyememesi durumunda sözlüklerin işleyebileceği anlamda daha güçlüdür <xref:System.Web.Script.Serialization.JavaScriptSerializer> . Ancak ikincisi JSON kullanımı daha fazla.
 
@@ -204,11 +206,11 @@ d.Add("two", 2);
 |Farklar kategorisi|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |Boş arabellek (yeni bayt [0]) içinde <xref:System.Object> (veya <xref:System.Uri> başka bir sınıfa) seri durumdan çıkarılamadı.|SerializationException|null|
-|Serileştirme<xref:System.DBNull.Value>|{}(veya {"__type": "#System"})|Null|
+|Serileştirme <xref:System.DBNull.Value>|{} (veya {"__type": "#System"})|Null|
 |[Serializable] türlerinin özel üyelerinin serileştirilmesi.|metodu|serileştirilmedi|
 |Türlerin ortak özelliklerinin serileştirilmesi <xref:System.Runtime.Serialization.ISerializable> .|serileştirilmedi|metodu|
 |JSON "Extensions"|Nesne üye adlarında tırnak işareti gerektiren JSON belirtimine uyar ({"a": "Hello"}).|Tırnak işaretleri olmadan nesne üyelerinin adlarını destekler ({a: "Hello"}).|
-|<xref:System.DateTime>Eşgüdümlü Evrensel Saat (UTC)|" \\ /Date (123456789U) \\ /" veya " \\ /date \\ (\d + (U&#124; ( \\ + \\ -[\d {4} ])) biçimini desteklemez mi? \\ ) \\ \\ /)".|" \\ /Date (123456789U) \\ /" ve " \\ /date \\ (\d + (U&#124; ( \\ + \\ -[\d {4} ])) biçimini destekler mi? \\ ) \\ \\ /) "değerini DateTime değerleri olarak.|
+|<xref:System.DateTime> Eşgüdümlü Evrensel Saat (UTC)|" \\ /Date (123456789U) \\ /" veya " \\ /date \\ (\d + (U&#124; ( \\ + \\ -[\d {4} ])) biçimini desteklemez mi? \\ ) \\ \\ /)".|" \\ /Date (123456789U) \\ /" ve " \\ /date \\ (\d + (U&#124; ( \\ + \\ -[\d {4} ])) biçimini destekler mi? \\ ) \\ \\ /) "değerini DateTime değerleri olarak.|
 |Sözlüklerin temsili|Bir KeyValuePair dizisi \<K,V> , dizeler olmayan anahtar türlerini işler.|Gerçek JSON nesneleri olarak-ancak yalnızca dizeler olan anahtar türlerini işler.|
 |Kaçan karakterler|Her zaman kaçış eğik çizgiyle (/); "\n" gibi, kaçırılmamış geçersiz JSON karakterlerinin hiçbir şekilde yapılmasına izin vermez.|Tarih/saat değerleri için çıkış ileri eğik çizgi (/) ile.|
 

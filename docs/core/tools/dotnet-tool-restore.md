@@ -2,20 +2,20 @@
 title: DotNet aracı geri yükleme komutu
 description: DotNet aracı geri yükleme komutu, makinenizde geçerli dizin için kapsamdaki .NET yerel araçları 'nı yükler.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1b7fd10102f2c957b3eb235f6897b60bc8ca9c07
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3425bc6b78fd53f578c209013f83b006305dbb81
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634278"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242935"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Adı
 
-`dotnet tool restore` -Makinenizde geçerli dizin için kapsamdaki .NET yerel araçları yüklenir.
+`dotnet tool restore` -Geçerli dizin için kapsamdaki .NET yerel araçlarını yükleme.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -37,7 +37,7 @@ dotnet tool restore -h|--help
 
 - **`--configfile <FILE>`**
 
-  Kullanılacak NuGet yapılandırma ( *nuget.config* ) dosyası.
+  Kullanılacak NuGet yapılandırma (*nuget.config*) dosyası.
 
 - **`--add-source <SOURCE>`**
 

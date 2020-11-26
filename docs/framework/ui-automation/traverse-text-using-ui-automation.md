@@ -10,20 +10,22 @@ helpviewer_keywords:
 - text, traversing
 - traversing text
 ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
-ms.openlocfilehash: 0b4269d043fd6cd0cc5da9825714aab4ead701f9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 1413cac56e3d6358eb58d55eb2fc0ca583147571
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168092"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242038"
 ---
 # <a name="traverse-text-using-ui-automation"></a>UI Otomasyonunu Kullanarak Çapraz Geçiş Yapma
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
  Bu konu başlığı altında [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , bir belgenin metin içeriğini artışlarla çapraz geçiş için nasıl kullanılacağı gösterilmektedir <xref:System.Windows.Automation.Text.TextUnit> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneğinde, bir UI Otomasyon metin sağlayıcısı içeriğinin nasıl gezeceği gösterilmektedir. <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A>Yöntemi <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ' <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> a ait ve uç noktalarını taşıdıkça <xref:System.Windows.Automation.Text.TextPatternRange> . Bu metin aralığı genellikle metin ekleme noktasını temsil eden bir bozuk aralığıdır.  
   
 > [!NOTE]

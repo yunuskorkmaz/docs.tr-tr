@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanının nasıl çalıştığını denetlem
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 380bfb3aa5e5715fe95e0d7772700bac9ab4a5be
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 79336396de3058e40cf7328e6d92e7e9e54296e9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160990"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242922"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>.NET çalışma zamanını yerel kodunuzda denetlemek için özel bir .NET Core ana bilgisayarı yazma
 
@@ -19,7 +19,7 @@ Tüm yönetilen kodlar gibi .NET Core uygulamaları da bir ana bilgisayar taraf�
 
 Bu makale, .NET Core çalışma zamanını yerel koddan başlatmak ve içindeki yönetilen kodu yürütmek için gerekli olan adımlara genel bir bakış sunar.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Konaklar yerel uygulamalar olduğundan, bu öğretici .NET Core barındırmak için bir C++ uygulaması oluşturmayı ele almaktadır. C++ geliştirme ortamı (örneğin, [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)tarafından sağlanacaktır) gerekir.
 
@@ -114,7 +114,7 @@ CoreCLR kitaplığı 'nı yükledikten sonra, sonraki adım bu işlevlere `GetPr
 
 Ortak özellikler şunlardır:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` Bu, çalışma zamanının varsayılan olarak çözebileceği derleme yollarının (Windows üzerinde '; ' ve Linux üzerinde ': ' ile ayrılmış) bir listesidir. Bazı konaklarda, yükleyebilecekleri derlemeleri listelemek için sabit kodlanmış bildirimler vardır. Diğerleri, bu listedeki bir kitaplığı belirli konumlara (örneğin *coreclr.dll*ileri) yerleştirir.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Bu, çalışma zamanının varsayılan olarak çözebileceği derleme yollarının (Windows üzerinde '; ' ve Linux üzerinde ': ' ile ayrılmış) bir listesidir. Bazı konaklarda, yükleyebilecekleri derlemeleri listelemek için sabit kodlanmış bildirimler vardır. Diğerleri, bu listedeki bir kitaplığı belirli konumlara (örneğin *coreclr.dll* ileri) yerleştirir.
 * `APP_PATHS` Bu, bir derleme için içinde araştırma yapılacak yolların bir listesidir ve Güvenilir Platform derlemeleri (TPA) listesinde bulunamamıştır. Konakta TPA listesi kullanılarak hangi derlemelerin yüklendiği üzerinde daha fazla denetime sahip olduğu için, ana bilgisayarların yüklenmesini bekledikleri derlemeleri belirlemesi ve bunları açıkça listelemeleri için en iyi uygulamadır. Ancak çalışma zamanında yoklama gerekiyorsa, bu özellik bu senaryoyu etkinleştirebilir.
 * `APP_NI_PATHS` Bu liste, yerel görüntüler için araştırılan yollar olması dışında APP_PATHS benzerdir.
 * `NATIVE_DLL_SEARCH_DIRECTORIES` Bu özellik, p/Invoke aracılığıyla çağrılan yerel kitaplıkları ararken yükleyicinin araştırması gereken yolların bir listesidir.
@@ -163,6 +163,7 @@ Son olarak, konak yönetilen kod çalıştırmayı tamamladıktan sonra .NET Cor
 CoreCLR yeniden başlatma veya kaldırmayı desteklemiyor. Yeniden çağırmayın `coreclr_initialize` veya CoreCLR kitaplığını kaldırın.
 
 ## <a name="conclusion"></a>Sonuç
+
 Ana bilgisayarınız derlendikten sonra, komut satırından çalıştırılarak ve konağın beklediği bağımsız değişkenleri geçirerek test edilebilir. Konağın çalıştırılacağı .NET Core uygulamasını belirtirken, tarafından oluşturulan. dll dosyasını kullandığınızdan emin olun `dotnet build` . Kendi içindeki uygulamalar için tarafından oluşturulan yürütülebilir dosyalar (. exe dosyaları) `dotnet publish` aslında varsayılan .NET Core ana bilgisayarı (uygulamanın ana hat senaryolarında doğrudan komut satırından başlatılabilmesi için), Kullanıcı kodu aynı ada sahip bir dll 'de derlenir.
 
 İlk başta çalışmadıysa, *coreclr.dll* konak tarafından beklenen konumda kullanılabilir, tüm gerekli çerçeve kitaplıklarının TPA listesinde ve CoreCLR 'nin bittiği (32-bit veya 64-bit) konağın nasıl derlendiğine göre olduğunu denetleyin.

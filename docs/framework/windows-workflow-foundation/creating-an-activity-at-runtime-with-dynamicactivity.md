@@ -3,18 +3,20 @@ title: DynamicActivity ile çalışma zamanında etkinlik oluşturma
 description: DynamicActivity, ortak Oluşturucusu olan somut, mühürlenmiş bir sınıftır. Etkinlik DOM kullanarak çalışma zamanında etkinlik işlevselliğini birleştirmek için sınıfını kullanın.
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 17ee14be7df4801018c7afd2e91f1fb07c34e8e1
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b65d7e385690b77d44c73e7a8a4ed38b04f30ea6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421546"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242103"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>DynamicActivity ile çalışma zamanında etkinlik oluşturma
-<xref:System.Activities.DynamicActivity>, ortak Oluşturucusu olan somut, mühürlenmiş bir sınıftır. <xref:System.Activities.DynamicActivity>Etkinlik DOM kullanılarak çalışma zamanında etkinlik işlevselliğini birleştirmek için kullanılabilir.  
+
+<xref:System.Activities.DynamicActivity> , ortak Oluşturucusu olan somut, mühürlenmiş bir sınıftır. <xref:System.Activities.DynamicActivity> Etkinlik DOM kullanılarak çalışma zamanında etkinlik işlevselliğini birleştirmek için kullanılabilir.  
   
 ## <a name="dynamicactivity-features"></a>DynamicActivity özellikleri  
- <xref:System.Activities.DynamicActivity>yürütme özelliklerine, bağımsız değişkenlere ve değişkenlere erişebilir, ancak alt etkinliklerin veya izlemenin zamanlanması gibi çalışma zamanı hizmetlerine erişemez.  
+
+ <xref:System.Activities.DynamicActivity> yürütme özelliklerine, bağımsız değişkenlere ve değişkenlere erişebilir, ancak alt etkinliklerin veya izlemenin zamanlanması gibi çalışma zamanı hizmetlerine erişemez.  
   
  En üst düzey özellikler, iş akışı nesneleri kullanılarak ayarlanabilir <xref:System.Activities.Argument> . Kesinlik temelli kodda, bu bağımsız değişkenler CLR özellikleri kullanılarak yeni bir tür üzerinde oluşturulur. XAML 'de, ve etiketleri kullanılarak bildirilmiştir `x:Class` `x:Member` .  
   
@@ -28,7 +30,7 @@ ms.locfileid: "83421546"
   
 3. Merhaba etkinlik projesinde Workflow1. xaml öğesine sağ tıklayın ve **Sil**' i seçin.  
   
-4. Program.cs 'i açın. Aşağıdaki yönergeyi dosyanın en üstüne ekleyin.  
+4. Program.cs dosyasını açın. Aşağıdaki yönergeyi dosyanın en üstüne ekleyin.  
   
     ```csharp  
     using System.Collections.Generic;  
@@ -79,7 +81,7 @@ ms.locfileid: "83421546"
   
 4. Araç kutusunun **temel öğeler** bölümünden bir **WriteLine** etkinliğini tasarımcı yüzeyine sürükleyin. `TextToWrite`Etkinliğin **Text** özelliğine değeri atayın.  
   
-5. Program.cs 'i açın. Aşağıdaki yönergeyi dosyanın en üstüne ekleyin.  
+5. Program.cs dosyasını açın. Aşağıdaki yönergeyi dosyanın en üstüne ekleyin.  
   
     ```csharp  
     using System.Activities.XamlIntegration;  
@@ -93,7 +95,7 @@ ms.locfileid: "83421546"
     Console.ReadLine();  
     ```  
   
-7. Uygulamayı yürütün. "Merhaba Dünya!" metnini içeren bir konsol penceresi görüneceği.  
+7. Uygulamayı yürütün. "Merhaba Dünya!" metnini içeren bir konsol penceresi (Hata: Kupon mevcut değil!) iletisi görünür.  
   
 8. **Çözüm Gezgini** Workflow1. xaml dosyasına sağ tıklayın ve **kodu görüntüle**' yi seçin. Etkinlik sınıfının ile oluşturulduğunu `x:Class` ve özelliğinin ile oluşturulduğunu unutmayın `x:Property` .  
   

@@ -2,14 +2,15 @@
 title: Özel Bağlama Kesinliği
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: f7ba5c21b35d556be2c8d0817c37d98ad7d7dfcb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6be5105831fa3845db9a55a14a7ed8821dc1cbc4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594744"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241921"
 ---
 # <a name="custom-binding-imperative"></a>Özel Bağlama Kesinliği
+
 Örnek, bir yapılandırma dosyası veya Windows Communication Foundation (WCF) tarafından oluşturulan bir istemci kullanılmadan özel bağlamaları tanımlamak ve kullanmak için, zorunlu kodun nasıl yazılacağını gösterir. Bu örnek, güvenilir bir HTTP tabanlı bağlama oluşturmak için HTTP taşıması ve güvenilir oturum kanalı tarafından belirtilen özellikleri birleştirir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır.  
   
 > [!NOTE]

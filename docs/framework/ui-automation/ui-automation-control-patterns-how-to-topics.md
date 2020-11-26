@@ -8,20 +8,22 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: ff8602382c8064cc5b7f6df44bda3413a7e67de1
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 929f44ca2d4daa75d733059b4072690a6b8f8d91
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163863"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241960"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI Otomasyonu Denetim Düzenleri Nasıl Yapılır Konuları
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
  Bu bölüm, denetim düzenlerini uygulamayla ilgili ayrıntılı bilgiler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma](expose-the-content-of-a-table-using-ui-automation.md)  
  [Desteklenen UI Otomasyon Denetim Düzenlerini Alma](get-supported-ui-automation-control-patterns.md)  
  [UI Otomasyonunu Kullanarak Onay Kutusunun Değiştir Durumunu Alma](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  

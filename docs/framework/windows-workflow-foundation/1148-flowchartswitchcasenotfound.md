@@ -2,32 +2,35 @@
 title: 1148 - FlowchartSwitchCaseNotFound
 ms.date: 03/30/2017
 ms.assetid: 9ee7fcee-e040-4306-968e-ed840a1cb00c
-ms.openlocfilehash: 7e96b5b7652d404e6fdbe2c04c6a4069ca78f20f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb9f4be3dba0f8632f1ae074ad9ddb726c5d84ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009922"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241713"
 ---
 # <a name="1148---flowchartswitchcasenotfound"></a>1148 - FlowchartSwitchCaseNotFound
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1148|  
-|anahtar sözcükler|WFActivities|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|1148|  
+|Anahtar sözcükler|WFActivities|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Eşleşen servis talebi ya da bir akış anahtar varsayılan durumda bulunamadı gösterir. Akış Çizelgesi yürütme sona erecek.  
+
+ Bir akış çizelgesi anahtarındaki eşleşen bir Case veya default Case bulunamadığını gösterir. Akış çizelgesi yürütme sona acaktır.  
   
 ## <a name="message"></a>İleti  
- Akış ' %1'/FlowSwitch - bir servis talebi etkinliği ne varsayılan ifade sonucu eşleşen servis talebi bulun. Akış Çizelgesi yürütme sona erecek.  
+
+ Akış Çizelgesi ' %1 '/FlowSwitch-bir Case etkinliği veya Ifade sonucuyla eşleşen bir varsayılan durum bulamıyor. Akış çizelgesi yürütme sona acaktır.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Akış Çizelgesi|xs:string|Akış görünen adı.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|FlowChart|xs: String|Akış çizelgesinin görünen adı.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

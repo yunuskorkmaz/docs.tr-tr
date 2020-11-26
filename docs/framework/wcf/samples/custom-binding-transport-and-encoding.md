@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: 3b3a0f1b52afce495ca41a426ebc9e57314d8254
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 00af245f49994314ca29e1f5a2debe3af2364999
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592534"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241882"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Özel Bağlama Taşıma ve Kodlama
+
 Özel bağlama, farklı bağlama öğelerinin sıralı bir listesi tarafından tanımlanır. Bu örnek, çeşitli taşıma ve ileti kodlama öğeleriyle özel bağlamanın nasıl yapılandırılacağını gösterir.  
   
 > [!NOTE]
@@ -67,7 +68,7 @@ client.Close()
 ```  
   
 > [!NOTE]
-> Bu örneğe yönelik yapılandırmayı yeniden oluşturmak için Svcutil. exe ' yi kullanırsanız, istemci yapılandırmasındaki uç nokta adını istemci koduyla eşleşecek şekilde değiştirdiğinizden emin olun.  
+> Bu örneğe yönelik yapılandırmayı yeniden oluşturmak için Svcutil.exe kullanıyorsanız, istemci yapılandırmasındaki uç nokta adını istemci koduyla eşleşecek şekilde değiştirdiğinizden emin olun.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   

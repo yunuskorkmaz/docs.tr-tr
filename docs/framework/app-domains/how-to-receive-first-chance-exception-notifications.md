@@ -9,14 +9,15 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-ms.openlocfilehash: e8b5ae5fb69c7befd329316aee11523f79d73fcd
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 0b3150a52a68e078d1052a9894bb652ad35027d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104736"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242571"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma
+
 <xref:System.AppDomain.FirstChanceException>Sınıfının olayı, <xref:System.AppDomain> ortak dil çalışma zamanı özel durum işleyicilerini aramaya başlamadan önce bir özel durumun oluşturulduğu uyarısını almanızı sağlar.
 
  Olay, uygulama etki alanı düzeyinde oluşturulur. Yürütmenin bir iş parçacığı birden çok uygulama etki alanından geçirebilir, bu nedenle bir uygulama etki alanında işlenmemiş bir özel durum başka bir uygulama etki alanında işlenebilir. Bildirim, bir uygulama etki alanı özel durumu işleyene kadar, olay için bir işleyici ekleyen her uygulama etki alanında oluşur.
@@ -25,7 +26,8 @@ ms.locfileid: "85104736"
 
  Birden çok uygulama etki alanına yayılan daha karmaşık bir örnek için, olay için örneğe bakın <xref:System.AppDomain.FirstChanceException> .
 
-## <a name="receiving-first-chance-exception-notifications-in-the-default-application-domain"></a>Varsayılan uygulama etki alanında Ilk şans özel durum bildirimleri alma
+## <a name="receiving-first-chance-exception-notifications-in-the-default-application-domain"></a>Varsayılan uygulama etki alanında First-Chance özel durum bildirimleri alma
+
  Aşağıdaki yordamda uygulama için giriş noktası, `Main()` yöntemi, varsayılan uygulama etki alanında çalışır.
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>Varsayılan uygulama etki alanındaki ilk şans özel durum bildirimlerini göstermek için
@@ -50,7 +52,8 @@ ms.locfileid: "85104736"
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#5)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#5)]
 
-## <a name="receiving-first-chance-exception-notifications-in-another-application-domain"></a>Başka bir uygulama etki alanında birinci şans özel durum bildirimleri alma
+## <a name="receiving-first-chance-exception-notifications-in-another-application-domain"></a>Başka bir uygulama etki alanında First-Chance özel durum bildirimleri alma
+
  Programınız birden fazla uygulama etki alanı içeriyorsa, hangi uygulama etki alanlarının bildirim alacağını seçebilirsiniz.
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>Oluşturduğunuz bir uygulama etki alanında ilk şans özel durum bildirimleri almak için
@@ -85,6 +88,7 @@ ms.locfileid: "85104736"
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek adlı bir uygulama etki alanı oluşturur `AD1` ve uygulama etki alanının olayına bir olay işleyicisi ekler <xref:System.AppDomain.FirstChanceException> . Örnek, `Worker` uygulama etki alanında sınıfının bir örneğini oluşturur ve ' ı oluşturan adlı bir yöntemi çağırır `Thrower` <xref:System.ArgumentException> . Bağımsız değişkeninin değerine bağlı olarak, yöntemi özel durumu yakalar veya işleme başarısız olur.
 
  `Thrower`Yöntemi ' de bir özel durum oluşturduğunda, `AD1` olay ' <xref:System.AppDomain.FirstChanceException> de oluşturulur `AD1` ve olay işleyicisi bir ileti görüntüler. Çalışma zamanı daha sonra bir özel durum işleyicisi arar. İlk durumda, özel durum işleyicisi içinde bulunur `AD1` . İkinci durumda, özel durum ' de işlenmemiş olur `AD1` ve bunun yerine varsayılan uygulama etki alanında yakalanır.

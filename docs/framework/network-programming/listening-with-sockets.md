@@ -16,14 +16,15 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 0b6de67772bae397373e307ec02ce69a71b0542e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4249948579384ec0159ba61072126944596c8f56
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502320"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242220"
 ---
 # <a name="listening-with-sockets"></a>Yuvalarla Dinleme
+
 Dinleyici veya sunucu Yuvaları ağ üzerinde bir bağlantı noktası açın ve bir istemcinin bu bağlantı noktasına bağlanmasını bekleyin. Diğer ağ adresi aileleri ve protokolleri var olsa da, bu örnek bir TCP/IP ağı için uzak hizmetin nasıl oluşturulacağını gösterir.  
   
  TCP/IP hizmetinin benzersiz adresi, hizmet için bir uç nokta oluşturmak üzere hizmetin bağlantı noktası numarasıyla ana bilgisayarın IP adresi birleştirilerek tanımlanır. <xref:System.Net.Dns>Sınıfı, yerel ağ aygıtı tarafından desteklenen ağ adresleri hakkında bilgi döndüren yöntemler sağlar. Yerel ağ cihazında birden fazla ağ adresi varsa veya yerel sistem birden fazla ağ cihazını destekliyorsa, **DNS** sınıfı tüm ağ adresleriyle ilgili bilgileri döndürür ve uygulamanın hizmet için uygun adresi seçmesi gerekir. Internet atanmış numaralar yetkilisi (IANA), ortak hizmetler için bağlantı noktası numaralarını tanımlar; daha fazla bilgi için bkz. [hizmet adı ve Aktarım Protokolü bağlantı noktası numarası kayıt defteri](https://www.iana.org/assignments/port-numbers). Diğer hizmetler 1.024 ile 65.535 arasında kayıt bağlantı noktası numaraları içerebilir.  
@@ -42,7 +43,7 @@ IPAddress ipAddress = ipHostInfo.AddressList[0];
 IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);  
 ```  
   
- Yerel uç nokta saptandıktan sonra, <xref:System.Net.Sockets.Socket> yöntemi kullanılarak bu uç noktayla ilişkilendirilmelidir <xref:System.Net.Sockets.Socket.Bind%2A> ve yöntemi kullanılarak uç noktada dinlemek üzere ayarlanır <xref:System.Net.Sockets.Socket.Listen%2A> . **Bağlama** , belirli bir adres ve bağlantı noktası birleşimi zaten kullanımda olduğunda bir özel durum oluşturur. Aşağıdaki örnek, bir **yuvayı** **ipendpoint**ile ilişkilendirdiğini gösterir.  
+ Yerel uç nokta saptandıktan sonra, <xref:System.Net.Sockets.Socket> yöntemi kullanılarak bu uç noktayla ilişkilendirilmelidir <xref:System.Net.Sockets.Socket.Bind%2A> ve yöntemi kullanılarak uç noktada dinlemek üzere ayarlanır <xref:System.Net.Sockets.Socket.Listen%2A> . **Bağlama** , belirli bir adres ve bağlantı noktası birleşimi zaten kullanımda olduğunda bir özel durum oluşturur. Aşağıdaki örnek, bir **yuvayı** **ipendpoint** ile ilişkilendirdiğini gösterir.  
   
 ```vb  
 Dim listener As New Socket(ipAddress.AddressFamily, _  
@@ -65,5 +66,5 @@ listener.Listen(100);
 - [Zaman Uyumlu Sunucu Yuvası Kullanma](using-a-synchronous-server-socket.md)
 - [Zaman Uyumsuz Sunucu Yuvası Kullanma](using-an-asynchronous-server-socket.md)
 - [İstemci Yuvaları Kullanma](using-client-sockets.md)
-- [Nasıl Yapılır: Yuva Oluşturma](how-to-create-a-socket.md)
+- [Nasıl yapılır: Yuva Oluşturma](how-to-create-a-socket.md)
 - [Yuvalar](sockets.md)

@@ -2,12 +2,12 @@
 title: Dökümler-.NET
 description: .NET ' te döküme giriş.
 ms.date: 10/12/2020
-ms.openlocfilehash: a5f12837e81edc82f420f7b325b0248f9f8989a3
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 56cf4085d10658c828bac39be93eed3f774e00d5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96034833"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242779"
 ---
 # <a name="dumps"></a>Dökümleri
 
@@ -38,7 +38,7 @@ Aşağıdaki tabloda, kilitlenme üzerinde dökümleri toplamak için yapıland�
 
 Aşağıdaki tabloda, için, `COMPlus_DbgMiniDumpType` bir değer olarak belirtime için kullanabileceğiniz tüm seçenekler gösterilmektedir. Örneğin, `COMPlus_DbgMiniDumpType` 1 olarak ayarlandığında, `MiniDumpNormal` kilitlenme üzerinde tür dökümü toplanacaktır.
 
-|Değer|Ad|Açıklama|
+|Değer|Adı|Açıklama|
 |-----|----|-----------|
 |1|`MiniDumpNormal`|Yalnızca bir işlemdeki mevcut tüm iş parçacıkları için yığın izlemelerini yakalamak için gereken bilgileri ekleyin. Sınırlı GC yığın belleği ve bilgileri.|
 |2|`MiniDumpWithPrivateReadWriteMemory`|Bir işlemdeki tüm mevcut iş parçacıkları için yığın izlemelerini yakalamak için gereken GC yığınlarını ve bilgileri içerir.|
@@ -50,17 +50,6 @@ Aşağıdaki tabloda, için, `COMPlus_DbgMiniDumpType` bir değer olarak belirti
 Uygulama henüz kilitlenmemişse bir döküm toplamak isteyebilirsiniz. Örneğin, bir kilitlenmeyle gibi görünen bir uygulamanın durumunu incelemek isterseniz, uygulama hala çalıştığından, kilitlenme üzerinde dökümleri toplamak üzere ortam değişkenlerini yapılandırmak yararlı olmayacaktır.
 
 Kendi isteğinizin dökümünü toplamak için, `dotnet-dump` dökümleri toplamak ve analiz etmek için BIR CLI aracı olan kullanabilirsiniz. İle dökümleri toplamak üzere kullanma hakkında daha fazla bilgi için `dotnet-dump` bkz. [döküm toplama ve analiz yardımcı programı](dotnet-dump.md).
-
-### <a name="types-of-dumps-in-net"></a>.NET 'teki döküm türleri
-
-Amaca göre farklı döküm türleri toplayabilirsiniz. Bu, `COMPlus_DbgMiniDumpType` ortam değişkeni kullanılırken veya `--type` kullandığınız zaman bayrağıyla yapılandırılabilir `dotnet-dump` . Aşağıdaki tabloda .NET 'te toplayacağınız dökümlerinin türleri gösterilmektedir.
-
-|Değer|Ad|Açıklama|
-|-----|----|-----------|
-|1|`MiniDumpNormal`|Yalnızca bir işlemdeki mevcut tüm iş parçacıkları için yığın izlemelerini yakalamak için gereken bilgileri ekleyin. Sınırlı GC yığın belleği ve bilgileri.|
-|2|`MiniDumpWithPrivateReadWriteMemory`|Bir işlemdeki tüm mevcut iş parçacıkları için yığın izlemelerini yakalamak için gereken GC yığınlarını ve bilgileri içerir.|
-|3|`MiniDumpFilterTriage`|Yalnızca bir işlemdeki mevcut tüm iş parçacıkları için yığın izlemelerini yakalamak için gereken bilgileri ekleyin. Sınırlı GC yığın belleği ve bilgileri.|
-|4|`MiniDumpWithFullMemory`|İşlemdeki tüm erişilebilir belleği dahil edin. Ham bellek verileri sonuna dahildir, böylece ilk yapılar ham bellek bilgileri olmadan doğrudan eşleştirilebilir. Bu seçenek çok büyük bir dosyanın oluşmasına neden olabilir.|
 
 ## <a name="analyze-dumps"></a>Dökümleri çözümle
 

@@ -2,27 +2,30 @@
 title: 4806 - DiscoveryMessageWithInvalidRelatesToOrOperationCompleted
 ms.date: 03/30/2017
 ms.assetid: 19e9a660-25f3-4332-b716-a12a59f2cbbb
-ms.openlocfilehash: 3d0d8d426b0b8b7e5a1e890847ae36957e62f028
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46d71979e7b6bfcccc27064fd6fee626ea71dc1c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943045"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242584"
 ---
 # <a name="4806---discoverymessagewithinvalidrelatestooroperationcompleted"></a>4806 - DiscoveryMessageWithInvalidRelatesToOrOperationCompleted
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4806|  
-|anahtar sözcükler|Bulma|  
+|ID|4806|  
+|Anahtar sözcükler|Bulma|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bulma ileti DiscoveryClient tarafından karşılık gelen işlem tamamlandı ya da relatesTo değeri geçersiz olmadığından bırakıldı, bu olay yayılır.  
+
+ Bu olay, bulma iletisi DiscoveryClient tarafından bırakıldığında, karşılık gelen işlem tamamlandığı veya relatesTo değeri geçersiz olduğu için yayınlanır.  
   
 ## <a name="message"></a>İleti  
- MessageID ile bir %1 ileti = '%2' ve relatesTo = karşılık gelen %4 işlem tamamlandı veya relatesTo değeri geçersiz olduğundan '%3' tarafından DiscoveryClient bırakıldı.  
+
+ MessageID = ' %2 ' ve relatesTo = ' %3 ' olan bir %1 iletisi, karşılık gelen %4 işlemi tamamlandığı ya da relatesTo değeri geçersiz olduğu için DiscoveryClient tarafından bırakıldı.  
   
 ## <a name="details"></a>Ayrıntılar

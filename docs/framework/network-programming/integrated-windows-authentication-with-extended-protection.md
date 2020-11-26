@@ -2,14 +2,15 @@
 title: Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: d69471f4be0f102381dee4fc5037e8f8b0c625c3
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 74f421131da0e5b11fd676ff23229f5ff6ec7eca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144857"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241635"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
+
 Tümleşik Windows kimlik doğrulamasının <xref:System.Net.HttpWebRequest> <xref:System.Net.HttpListener> <xref:System.Net.Mail.SmtpClient> <xref:System.Net.Security.SslStream> <xref:System.Net.Security.NegotiateStream> <xref:System.Net> ve ilgili ad alanlarında,,,, ve ilgili sınıfların işlenme biçimini etkileyen geliştirmeler yapılmıştır. Güvenliği artırmak için genişletilmiş koruma için destek eklendi.  
   
  Bu değişiklikler, Web istekleri yapmak ve tümleşik Windows kimlik doğrulamasının kullanıldığı durumlarda yanıtları almak için bu sınıfları kullanan uygulamaları etkileyebilir. Bu değişiklik, tümleşik Windows kimlik doğrulaması kullanmak üzere yapılandırılmış Web sunucularını ve istemci uygulamalarını da etkileyebilir.  
@@ -19,6 +20,7 @@ Tümleşik Windows kimlik doğrulamasının <xref:System.Net.HttpWebRequest> <xr
  Genişletilmiş korumayı destekleyen değişiklikler yalnızca Windows 7 ve Windows Server 2008 R2 'deki uygulamalar için kullanılabilir. Genişletilmiş koruma özellikleri Windows 'un önceki sürümlerinde bulunmaz.  
   
 ## <a name="overview"></a>Genel Bakış  
+
  Tümleşik Windows kimlik doğrulamasının tasarımı, bazı kimlik bilgileri sınama yanıtlarının evrensel olmasına olanak sağlar, yani yeniden kullanılabilir veya iletilebilirler. Sınama yanıtlarının, hedef özel bilgilerle en az bir şekilde oluşturulması gerekir ve tercihen kanala özgü bilgiler de vardır. Hizmetler, kimlik bilgisi sınama yanıtlarının hizmet asıl adı (SPN) gibi hizmet özel bilgilerini içermesini sağlamak için genişletilmiş koruma sağlayabilir. Kimlik bilgileri değişimlerinde bu bilgilerle hizmetler, yanlış şekilde kullanılmamış olabilecek kimlik bilgisi sınama yanıtlarının kötü amaçlı kullanımına karşı daha iyi koruma sağlayabiliyor.  
   
  Genişletilmiş koruma tasarımı, kimlik doğrulama geçiş saldırılarını azaltmak için tasarlanan kimlik doğrulama protokollerine yönelik bir geliştirmedir. Kanal ve hizmet bağlama bilgileri kavramının etrafında döner.  
@@ -64,6 +66,7 @@ Tümleşik Windows kimlik doğrulamasının <xref:System.Net.HttpWebRequest> <xr
  Genişletilmiş koruma Şu anda Windows 7 ' de desteklenmektedir. Bir mekanizma, uygulamanın işletim sisteminin genişletilmiş korumayı destekleyip desteklemediğini belirleyebilmesi için sağlanır.  
   
 ## <a name="changes-to-support-extended-protection"></a>Genişletilmiş korumayı destekleyen değişiklikler  
+
  Kullanılan kimlik doğrulama protokolüne bağlı olarak tümleşik Windows kimlik doğrulaması ile kullanılan kimlik doğrulama işlemi, genellikle hedef bilgisayar tarafından verilen bir sınama içerir ve istemci bilgisayara geri gönderilir. Genişletilmiş koruma bu kimlik doğrulama işlemine yeni özellikler ekler  
   
  <xref:System.Security.Authentication.ExtendedProtection>Ad alanı, uygulamalar için genişletilmiş koruma kullanarak kimlik doğrulaması için destek sağlar. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding>Bu ad alanındaki sınıfı bir kanal bağlamasını temsil eder. <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>Bu ad alanındaki sınıf, sunucu tarafından gelen istemci bağlantılarını doğrulamak için kullanılan genişletilmiş koruma ilkesini temsil eder. Diğer sınıf üyeleri genişletilmiş koruma ile kullanılır.  
@@ -84,7 +87,7 @@ Tümleşik Windows kimlik doğrulamasının <xref:System.Net.HttpWebRequest> <xr
   
  <xref:System.Security.Authentication.ExtendedProtection.Configuration>Ad alanı, uygulamalar için genişletilmiş koruma kullanarak kimlik doğrulamanın yapılandırılması için destek sağlar.  
   
- Mevcut ad alanında genişletilmiş korumayı desteklemek için bir dizi özellik değişikliği yapılmıştır <xref:System.Net> . Bu değişiklikler şunları içerir:  
+ Mevcut ad alanında genişletilmiş korumayı desteklemek için bir dizi özellik değişikliği yapılmıştır <xref:System.Net> . Bu değişiklikler, şunları kapsıyor:  
   
 - <xref:System.Net.TransportContext> <xref:System.Net> Bir aktarım bağlamını temsil eden ad alanına eklenen yeni bir sınıf.  
   
@@ -96,7 +99,7 @@ Tümleşik Windows kimlik doğrulamasının <xref:System.Net.HttpWebRequest> <xr
   
 - <xref:System.Net.Mail.SmtpClient.TargetName%2A>, <xref:System.Net.Mail.SmtpClient> SMTP istemci uygulamaları için genişletilmiş koruma kullanılırken kimlik doğrulaması için kullanılacak SPN 'yi temsil eden sınıfta bulunan bir özelliktir.  
   
- Mevcut ad alanında genişletilmiş korumayı desteklemek için bir dizi özellik değişikliği yapılmıştır <xref:System.Net.Security> . Bu değişiklikler şunları içerir:  
+ Mevcut ad alanında genişletilmiş korumayı desteklemek için bir dizi özellik değişikliği yapılmıştır <xref:System.Net.Security> . Bu değişiklikler, şunları kapsıyor:  
   
 - <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> <xref:System.Net.Security.NegotiateStream> Sınıfında bir CBT 'nin istemci uygulamaları için genişletilmiş korumayı desteklemesini sağlayan yeni ve aşırı yükleme yöntemleri.  
   
@@ -107,6 +110,7 @@ Tümleşik Windows kimlik doğrulamasının <xref:System.Net.HttpWebRequest> <xr
  <xref:System.Net.Configuration.SmtpNetworkElement>Ad ALANıNDAKI SMTP istemcileri için genişletilmiş koruma yapılandırmasını desteklemek için bir özellik eklenmiştir <xref:System.Net.Security> .  
   
 ## <a name="extended-protection-for-client-applications"></a>Istemci uygulamaları için genişletilmiş koruma  
+
  Çoğu istemci uygulaması için genişletilmiş koruma desteği otomatik olarak gerçekleşir. <xref:System.Net.HttpWebRequest>Ve <xref:System.Net.Mail.SmtpClient> sınıfları, temel alınan Windows sürümü genişletilmiş korumayı desteklediğinde genişletilmiş korumayı destekler. Bir <xref:System.Net.HttpWebRequest> örnek, öğesinden oluşturulan BIR spn gönderir <xref:System.Uri> . Varsayılan olarak, bir <xref:System.Net.Mail.SmtpClient> örnek SMTP posta sunucusunun ana bilgisayar adından oluşturulmuş BIR spn gönderir.  
   
  Özel kimlik doğrulaması için, istemci uygulamaları, <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> <xref:System.Net.HttpWebRequest> <xref:System.Net.TransportContext> yöntemini kullanarak ve CBT 'yi almaya izin veren sınıfında veya yöntemlerini kullanabilir <xref:System.Net.TransportContext.GetChannelBinding%2A> .  
@@ -116,9 +120,10 @@ Tümleşik Windows kimlik doğrulamasının <xref:System.Net.HttpWebRequest> <xr
  <xref:System.Net.Mail.SmtpClient.TargetName%2A>Özelliği, SMTP bağlantısı için tümleşik Windows kimlik doğrulaması için kullanmak üzere özel bır SPN ayarlamak için kullanılabilir.  
   
 ## <a name="extended-protection-for-server-applications"></a>Sunucu uygulamaları için genişletilmiş koruma  
- <xref:System.Net.HttpListener>, HTTP kimlik doğrulaması gerçekleştirirken hizmet bağlamalarını doğrulamaya yönelik mekanizmalar otomatik olarak sağlar.  
+
+ <xref:System.Net.HttpListener> , HTTP kimlik doğrulaması gerçekleştirirken hizmet bağlamalarını doğrulamaya yönelik mekanizmalar otomatik olarak sağlar.  
   
- En güvenli senaryo, ön ekler için genişletilmiş korumayı etkinleştirmektir `HTTPS://` . Bu durumda, veya olarak <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> ayarlanan olarak <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> ayarlayın <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> ve <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> <xref:System.Net.HttpListener> kısmen <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> sağlamlaştırılmış modda bir değer olarak ayarlayın.  
+ En güvenli senaryo, ön ekler için genişletilmiş korumayı etkinleştirmektir `HTTPS://` . Bu durumda, veya olarak <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> ayarlanan olarak <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> ayarlayın <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> ve <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>  <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> <xref:System.Net.HttpListener> kısmen <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> sağlamlaştırılmış modda bir değer olarak ayarlayın.  
   
  Bu yapılandırmada, bir dış güvenli kanal üzerinden sunucuya bir istek yapıldığında, dış kanal bir kanal bağlaması için sorgulanır. Bu kanal bağlaması kimlik doğrulama SSPI çağrılarına geçirilir ve bu da kimlik doğrulama blobu içindeki kanal bağlamasının eşleştiğini doğrular. Üç olası sonuç vardır:  
   
@@ -130,7 +135,7 @@ Tümleşik Windows kimlik doğrulamasının <xref:System.Net.HttpWebRequest> <xr
   
  Bir uygulama, bir HTTP isteği gövdesinde geri alınan bloblara dayalı olarak kimlik doğrulaması yapmak için kendi SSPI çağrılarını yapıyorsa ve kanal bağlamayı desteklemeye devam ediyorsanız, <xref:System.Net.HttpListener> yerel Win32 [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) işlevine geçirmek için kullanarak dış Güvenli kanaldan beklenen kanal bağlamasını alması gerekir. Bunu yapmak için, <xref:System.Net.HttpListenerRequest.TransportContext%2A> <xref:System.Net.TransportContext.GetChannelBinding%2A> CBT 'yi almak için özelliğini ve Call metodunu kullanın. Yalnızca uç nokta bağlamaları desteklenir. Başka bir şey <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> belirtilmişse, bir <xref:System.NotSupportedException> oluşturulur. Temeldeki işletim sistemi kanal bağlamayı destekliyorsa, <xref:System.Net.TransportContext.GetChannelBinding%2A> yöntemi, <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> <xref:System.Runtime.InteropServices.SafeHandle> parametre Içinde geçirilen bir SecBuffer öğesinin pvBuffer üyesi olarak [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) işlevine geçirmek için uygun bir kanal bağlamasının işaretçisini döndürür `pInput` . <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A>Özelliği, kanal bağlamasının uzunluğunu bayt cinsinden içerir. Temeldeki işletim sistemi kanal bağlamalarını desteklemiyorsa, işlev döndürür `null` .  
   
- Diğer bir olası senaryo, `HTTP://` proxy 'ler kullanılmazsa ön ekler için genişletilmiş korumayı etkinleştirmektir. Bu durumda, veya olarak <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> ayarlanan olarak <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> ayarlayın <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> ve <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> <xref:System.Net.HttpListener> kısmen <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> sağlamlaştırılmış modda bir değer olarak ayarlayın.  
+ Diğer bir olası senaryo, `HTTP://` proxy 'ler kullanılmazsa ön ekler için genişletilmiş korumayı etkinleştirmektir. Bu durumda, veya olarak <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> ayarlanan olarak <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> ayarlayın <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> ve <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>  <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> <xref:System.Net.HttpListener> kısmen <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> sağlamlaştırılmış modda bir değer olarak ayarlayın.  
   
  İzin verilen hizmet adlarının varsayılan listesi, ile kaydedilmiş ön ekler temel alınarak oluşturulur <xref:System.Net.HttpListener> . Bu varsayılan liste, özelliği aracılığıyla incelenebilir <xref:System.Net.HttpListener.DefaultServiceNames%2A> . Bu liste kapsamlı değilse, bir uygulama, <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> varsayılan hizmet adı listesi yerine kullanılacak sınıf için oluşturucuda özel bir hizmet adı koleksiyonu belirtebilir.  
   

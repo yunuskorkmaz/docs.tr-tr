@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 50f23e1a343f969ad2cbb3422038921c710b2b1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502411"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241687"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework'te Ağ Programlaması
+
 Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tümleştirilebilen katmanlı, genişletilebilir ve yönetilen Internet hizmetleri sağlar. Ağ uygulamalarınız, yeni Internet protokollerinden otomatik olarak yararlanabilmek için takılabilir protokolleri temel alabilir veya ağ ile yuva düzeyinde çalışmak için Windows yuva arabiriminin yönetilen uygulamasını kullanabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
@@ -32,7 +33,7 @@ Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tüm
  [Uygulama Protokolleri Kullanma](using-application-protocols.md)  
  TCP, UDP ve HTTP gibi ağ protokollerinden yararlanan programlama uygulamalarını açıklar.  
   
- [Internet Protokolü sürüm 6](internet-protocol-version-6.md)  
+ [İnternet Protokolü Sürüm 6](internet-protocol-version-6.md)  
  Internet Protokolü sürüm 6'nın (IPv6) Internet Protokolü paketinin geçerli sürümüne (IPv4) göre avantajlarını, IPv6 adresini, yönlendirmeyi, otomatik yapılandırmayı ve IPv6'nın nasıl etkinleştirileceğini ve devre dışı bırakılacağını açıklar.  
   
  [İnternet Uygulamalarını Yapılandırma](configuring-internet-applications.md)  
@@ -87,6 +88,7 @@ Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tüm
  ,,,,,, <xref:System.Net> <xref:System.Net.Cache> ,, <xref:System.Net.Configuration> <xref:System.Net.Mail> <xref:System.Net.Mime> <xref:System.Net.NetworkInformation> <xref:System.Net.PeerToPeer> <xref:System.Net.Security> <xref:System.Net.Sockets> Ad alanlarında sınıfları kullanan indirilebilir ağ programlama örneklerine bağlantılar.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.Net?displayProperty=nameWithType>  
  Günümüzde ağlarda kullanılan birçok protokol için basit bir programlama arabirimi sağlar. <xref:System.Net.WebRequest?displayProperty=nameWithType> <xref:System.Net.WebResponse?displayProperty=nameWithType> Bu ad alanındaki ve sınıfları takılabilir protokollerin temelini oluşturur.  
   

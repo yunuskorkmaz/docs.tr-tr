@@ -3,14 +3,15 @@ title: 'Nasıl yapılır: Bir bütünleştirilmiş kodu başka uygulamalarla pay
 description: Bkz. .NET 'teki diğer uygulamalarla bir derlemeyi paylaşma. Derlemeler özel (varsayılan) veya paylaşılan olabilir. Bir derlemeyi paylaşmak için GAC 'ye yerleştirin.
 ms.date: 08/19/2019
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: 9cef25059968875f17ce5dc77b04c44a2f3945f6
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 1056f8b555713d5d67488537e6c06cc457c4d312
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104659"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242545"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications"></a>Nasıl yapılır: Bir bütünleştirilmiş kodu başka uygulamalarla paylaşma
+
 Derlemeler özel veya paylaşılan olabilir: varsayılan olarak, çoğu basit program özel bir derlemeden oluşur çünkü bunlar diğer uygulamalar tarafından kullanılmak üzere tasarlanmamıştır.  
 
 Bir derlemeyi diğer uygulamalarla paylaşmak için, [genel derleme önbelleği 'ne (GAC)](gac.md)yerleştirilmesi gerekir.  

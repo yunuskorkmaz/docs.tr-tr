@@ -2,17 +2,19 @@
 title: Değişken ve Bağımsız Değişken İzleme
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: af5c21b75f3238546acac0755ec4e6149ee50d95
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 85cecbfaf1db224152d4582325326f1f80e08266
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552498"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242909"
 ---
 # <a name="variable-and-argument-tracking"></a>Değişken ve Bağımsız Değişken İzleme
+
 Bir iş akışının yürütülmesi izlenirken, verileri ayıklamak genellikle yararlı olur. Bu, bir izleme kaydına erişirken yürütme sonrası ek bağlam sağlar. ' De [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] , izleme kullanarak bir iş akışındaki herhangi bir etkinliğin kapsamındaki görünür herhangi bir değişkeni veya bağımsız değişkeni ayıklayabilirsiniz. İzleme profilleri, verileri ayıklamayı kolaylaştırır.  
   
 ## <a name="variables-and-arguments"></a>Değişkenler ve Bağımsız Değişkenler  
+
  Bir etkinlik bir ActivityStateRecord yayar olduğunda değişkenler ve bağımsız değişkenler ayıklanır.  Değişken, yalnızca etkinliğin kapsamı içindeyse, ayıklama için kullanılabilir. Bir etkinlik içinde Ayıklanacak bir değişken aşağıdaki şekilde belirtilir:  
   
 - Değişken adıyla bir değişken belirtilmişse, izleme geçerli etkinliğin içinde ve üst etkinliklerdeki değişkeni arar. Değişken geçerli etkinlik kapsamında ve üst kapsamda aranır.  
@@ -38,6 +40,7 @@ Bir iş akışının yürütülmesi izlenirken, verileri ayıklamak genellikle y
 ```  
   
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>Değişkenler ve bağımsız değişkenler Içinde depolanan bilgileri koruma  
+
  İzlenen bir değişken veya bağımsız değişken varsayılan olarak WF çalışma zamanı tarafından görünür hale getirilir. Bir iş akışı geliştiricisi, aşağıdaki adımları uygulayarak bu BT 'nin erişmesini koruyabilir:  
   
 1. Bir değişkenin değerini şifreleyin.  

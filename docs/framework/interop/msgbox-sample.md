@@ -10,14 +10,15 @@ helpviewer_keywords:
 - marshaling, MsgBox sample
 - data marshaling, MsgBox sample
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
-ms.openlocfilehash: ccf882e1f801dd18e5b65a4279fc580d927dd29d
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 024ed612115ce73646596651fe454238418446db
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904097"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242025"
 ---
 # <a name="msgbox-sample"></a>MsgBox Örneği
+
 Bu örnek, parametre türlerini parametrelere göre ve,, ve alanlarını ne zaman kullanacağınızı gösteren bir değere göre nasıl geçirileceğini gösterir <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint> <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> .  
   
  MsgBox örnek, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
@@ -31,14 +32,16 @@ Bu örnek, parametre türlerini parametrelere göre ve,, ve alanlarını ne zama
   
  Bu örnekte, sınıfı, `NativeMethods` sınıfı tarafından çağrılan her yönetilmeyen işlev için bir yönetilen prototip içerir `MsgBoxSample` . Yönetilen prototip yöntemleri, `MsgBox` `MsgBox2` ve `MsgBox3` aynı yönetilmeyen işlev için farklı bildirimlere sahiptir.  
   
- `MsgBox2`ANSI olarak belirtilen karakter türü, Unicode işlevinin adı olan giriş noktasıyla eşleşmediğinden, için bildirimi ileti kutusunda yanlış çıktı üretir `MessageBoxW` . Bildirimi, `MsgBox3` **entryPoint**, **charset**ve **ExactSpelling** alanları arasında bir uyumsuzluk oluşturur. Çağrıldığında `MsgBox3` bir özel durum oluşturur. Dize adlandırma ve ad sıralaması hakkında ayrıntılı bilgi için bkz. [bir karakter kümesi belirtme](specifying-a-character-set.md).  
+ `MsgBox2`ANSI olarak belirtilen karakter türü, Unicode işlevinin adı olan giriş noktasıyla eşleşmediğinden, için bildirimi ileti kutusunda yanlış çıktı üretir `MessageBoxW` . Bildirimi, `MsgBox3` **entryPoint**, **charset** ve **ExactSpelling** alanları arasında bir uyumsuzluk oluşturur. Çağrıldığında `MsgBox3` bir özel durum oluşturur. Dize adlandırma ve ad sıralaması hakkında ayrıntılı bilgi için bkz. [bir karakter kümesi belirtme](specifying-a-character-set.md).  
   
 ## <a name="declaring-prototypes"></a>Prototipleri Bildirme  
+
  [!code-cpp[Conceptual.Interop.Marshaling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/msgbox.cpp#5)]
  [!code-csharp[Conceptual.Interop.Marshaling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/msgbox.cs#5)]
  [!code-vb[Conceptual.Interop.Marshaling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#5)]  
   
 ## <a name="calling-functions"></a>İşlevleri Çağırma  
+
  [!code-cpp[Conceptual.Interop.Marshaling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/msgbox.cpp#6)]
  [!code-csharp[Conceptual.Interop.Marshaling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/msgbox.cs#6)]
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  

@@ -2,15 +2,16 @@
 title: HTTPS Üzerinden Özel Bağlama Güvenli Oturum
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: ab2dd4725879ba969afdae8a6423a920a9786125
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aec9bc11fab71a8e3adfe60e0c19b0ac4a9e3699
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585304"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241895"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS Üzerinden Özel Bağlama Güvenli Oturum
-Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını gösterir. Güvenilir Oturumlar, WS-güvenilir mesajlaşma protokolünü uygular. Güvenilir Oturumlar üzerinde WS-Security oluşturarak güvenli bir güvenilir oturumunuz olabilir. Ancak bazen, SSL ile HTTP Transport Security kullanmayı tercih edebilirsiniz.  
+
+Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını gösterir. Güvenilir oturumlar WS-Reliable mesajlaşma protokolünü uygular. Güvenilir Oturumlar üzerinde WS-Security oluşturarak güvenli bir güvenilir oturumunuz olabilir. Ancak bazen, SSL ile HTTP Transport Security kullanmayı tercih edebilirsiniz.  
   
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
@@ -22,7 +23,8 @@ Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını g
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
 ## <a name="sample-details"></a>Örnek Ayrıntılar  
- SSL, paketlerin kendilerine güvenmesini sağlar. Bu, WS-Secure konuşması kullanılarak güvenilir oturumu güvenli hale getirmenin farklı olduğunu unutmamak önemlidir.  
+
+ SSL, paketlerin kendilerine güvenmesini sağlar. Bu, WS-Secure konuşmayı kullanarak güvenilir oturumu güvenli hale getirmenin farklı olduğunu unutmamak önemlidir.  
   
  HTTPS üzerinden güvenilir oturum kullanmak için özel bir bağlama oluşturmanız gerekir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır. Güvenilir oturum bağlama öğesi ve kullanılarak özel bir bağlama oluşturulur [\<httpsTransport>](../../configure-apps/file-schema/wcf/httpstransport.md) . Aşağıdaki yapılandırma özel bağlamadır.  
   
@@ -102,7 +104,7 @@ Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını g
   
  Belirtilen adres `https://` düzeni kullanır.  
   
- Bu örnekte kullanılan sertifika, MakeCert. exe ile oluşturulmuş bir test sertifikasıdır çünkü, tarayıcınızla, gibi bir https: adresine erişmeye çalıştığınızda bir güvenlik uyarısı görünür `https://localhost/servicemodelsamples/service.svc` . Windows Communication Foundation (WCF) istemcisinin bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenmiştir. Üretim sertifikaları kullanılırken bu kod ve eşlik eden sınıf gerekli değildir.  
+ Bu örnekte kullanılan sertifika Makecert.exe ile oluşturulmuş bir test sertifikası olduğundan, tarayıcınızdan bir https: adresine erişmeye çalıştığınızda bir güvenlik uyarısı görünür `https://localhost/servicemodelsamples/service.svc` . Windows Communication Foundation (WCF) istemcisinin bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenmiştir. Üretim sertifikaları kullanılırken bu kod ve eşlik eden sınıf gerekli değildir.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  
