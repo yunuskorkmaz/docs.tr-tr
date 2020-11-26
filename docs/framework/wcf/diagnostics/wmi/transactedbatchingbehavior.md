@@ -2,17 +2,18 @@
 title: TransactedBatchingBehavior
 ms.date: 03/30/2017
 ms.assetid: 2d03e6ae-f06c-4ada-b279-e01838b2ecdc
-ms.openlocfilehash: 0b083e46b3f53a0080308deccc0e37768af40fe3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 152886180842d3da301f74286b0d41a98c39da54
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641729"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239164"
 ---
-# <a name="transactedbatchingbehavior"></a><span data-ttu-id="4fde9-102">TransactedBatchingBehavior</span><span class="sxs-lookup"><span data-stu-id="4fde9-102">TransactedBatchingBehavior</span></span>
-<span data-ttu-id="4fde9-103">TransactedBatchingBehavior</span><span class="sxs-lookup"><span data-stu-id="4fde9-103">TransactedBatchingBehavior</span></span>  
+# <a name="transactedbatchingbehavior"></a><span data-ttu-id="3ed9a-102">TransactedBatchingBehavior</span><span class="sxs-lookup"><span data-stu-id="3ed9a-102">TransactedBatchingBehavior</span></span>
+
+<span data-ttu-id="3ed9a-103">TransactedBatchingBehavior</span><span class="sxs-lookup"><span data-stu-id="3ed9a-103">TransactedBatchingBehavior</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4fde9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4fde9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ed9a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3ed9a-104">Syntax</span></span>  
   
 ```csharp
 class TransactedBatchingBehavior : Behavior  
@@ -21,25 +22,28 @@ class TransactedBatchingBehavior : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="4fde9-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="4fde9-105">Methods</span></span>  
- <span data-ttu-id="4fde9-106">TransactedBatchingBehavior sınıf herhangi bir yöntemi tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="4fde9-106">The TransactedBatchingBehavior class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="3ed9a-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="3ed9a-105">Methods</span></span>  
+
+ <span data-ttu-id="3ed9a-106">TransactedBatchingBehavior sınıfı herhangi bir yöntem tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="3ed9a-106">The TransactedBatchingBehavior class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="4fde9-107">Özellikler</span><span class="sxs-lookup"><span data-stu-id="4fde9-107">Properties</span></span>  
- <span data-ttu-id="4fde9-108">TransactedBatchingBehavior sınıfı şu özelliğe sahip:</span><span class="sxs-lookup"><span data-stu-id="4fde9-108">The TransactedBatchingBehavior class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="3ed9a-107">Özellikler</span><span class="sxs-lookup"><span data-stu-id="3ed9a-107">Properties</span></span>  
+
+ <span data-ttu-id="3ed9a-108">TransactedBatchingBehavior sınıfı aşağıdaki özelliğe sahiptir:</span><span class="sxs-lookup"><span data-stu-id="3ed9a-108">The TransactedBatchingBehavior class has the following property:</span></span>  
   
-### <a name="maxbatchsize"></a><span data-ttu-id="4fde9-109">MaxBatchSize</span><span class="sxs-lookup"><span data-stu-id="4fde9-109">MaxBatchSize</span></span>  
- <span data-ttu-id="4fde9-110">Veri türü: SINT32</span><span class="sxs-lookup"><span data-stu-id="4fde9-110">Data type: sint32</span></span>  
+### <a name="maxbatchsize"></a><span data-ttu-id="3ed9a-109">MaxBatchSize</span><span class="sxs-lookup"><span data-stu-id="3ed9a-109">MaxBatchSize</span></span>  
+
+ <span data-ttu-id="3ed9a-110">Veri türü: Sint32</span><span class="sxs-lookup"><span data-stu-id="3ed9a-110">Data type: sint32</span></span>  
   
- <span data-ttu-id="4fde9-111">Erişim türü: salt okunur</span><span class="sxs-lookup"><span data-stu-id="4fde9-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="3ed9a-111">Erişim türü: salt okunurdur</span><span class="sxs-lookup"><span data-stu-id="3ed9a-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="4fde9-112">İşlenen toplu iş için en yüksek toplu iş boyutu.</span><span class="sxs-lookup"><span data-stu-id="4fde9-112">The maximum batch size for the transacted batching.</span></span>  
+ <span data-ttu-id="3ed9a-112">İşlem temelli toplu işleme için en büyük toplu iş boyutu.</span><span class="sxs-lookup"><span data-stu-id="3ed9a-112">The maximum batch size for the transacted batching.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4fde9-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4fde9-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3ed9a-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3ed9a-113">Requirements</span></span>  
   
-|<span data-ttu-id="4fde9-114">MOF</span><span class="sxs-lookup"><span data-stu-id="4fde9-114">MOF</span></span>|<span data-ttu-id="4fde9-115">Bildirilmiş Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="4fde9-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="3ed9a-114">MOF</span><span class="sxs-lookup"><span data-stu-id="3ed9a-114">MOF</span></span>|<span data-ttu-id="3ed9a-115">ServiceModel. mof içinde bildirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="3ed9a-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="4fde9-116">Ad Alanı</span><span class="sxs-lookup"><span data-stu-id="4fde9-116">Namespace</span></span>|<span data-ttu-id="4fde9-117">İçinde tanımlı root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="4fde9-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="3ed9a-116">Ad Alanı</span><span class="sxs-lookup"><span data-stu-id="3ed9a-116">Namespace</span></span>|<span data-ttu-id="3ed9a-117">Root\ServiceModel içinde tanımlı</span><span class="sxs-lookup"><span data-stu-id="3ed9a-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="4fde9-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4fde9-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3ed9a-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3ed9a-118">See also</span></span>
 
 - <xref:System.ServiceModel.Description.TransactedBatchingBehavior>
