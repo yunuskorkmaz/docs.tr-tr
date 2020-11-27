@@ -2,17 +2,19 @@
 title: Bir WCF Hizmetini Yeniden Adlandırma
 ms.date: 03/30/2017
 ms.assetid: 14235a65-b1c5-409d-b6cc-a979acd54bbd
-ms.openlocfilehash: 1179e7b235130e1967c79843b7a11f55622a01fb
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 25f9201253f02f368ccf95ddf1f7a7d78d2e1b2f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052058"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249728"
 ---
 # <a name="renaming-a-wcf-service"></a>Bir WCF Hizmetini Yeniden Adlandırma
+
 Bu konu, bir Windows Communication Foundation (WCF) hizmetini nasıl yeniden adlandırabileceğinizi açıklamaktadır.  
   
 ## <a name="renaming-a-wcf-service"></a>Bir WCF Hizmetini Yeniden Adlandırma  
+
  Bir Windows Communication Foundation (WCF) şablonunda bir hizmeti yeniden adlandırmak için aşağıdaki adımları gerçekleştirin.  
   
 - Hizmeti uygulayan sınıfın adını değiştirin.  
@@ -28,7 +30,7 @@ Bu konu, bir Windows Communication Foundation (WCF) hizmetini nasıl yeniden adl
 </system.servicemodel>  
 ```  
   
-- Hizmetiniz Web 'de barındırılıyorsa, bir * \* . svc* dosyası kullanır. Svc dosyasını açın ve aşağıdaki örnekte gösterildiği gibi hizmetinizin adını değiştirin. Bu adım, bir svc dosyası olmadığından, kendi kendine barındırılan uygulamalar için gerekli değildir.  
+- Hizmetiniz Web 'de barındırılıyorsa, bir *\* . svc* dosyası kullanır. Svc dosyasını açın ve aşağıdaki örnekte gösterildiği gibi hizmetinizin adını değiştirin. Bu adım, bir svc dosyası olmadığından, kendi kendine barındırılan uygulamalar için gerekli değildir.  
   
 ```aspx-csharp
 <%@ ServiceHost Service="WcfService.NewName">  

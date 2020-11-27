@@ -1,18 +1,19 @@
 ---
-title: <TypeInstantiation>Öğesi (.NET Native)
+title: <TypeInstantiation> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-ms.openlocfilehash: 9069856b3d8739724d148b5eea5d4188c8b8b9e1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a1db497762b3dc8c135154086d72fb3ac92ff5a4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128675"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250755"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation>Öğesi (.NET Native)
+# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation> Öğesi (.NET Native)
+
 Oluşturulmuş genel bir türe çalışma zamanı yansıtma ilkesi uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <TypeInstantiation Name="type_name"  
@@ -30,6 +31,7 @@ Oluşturulmuş genel bir türe çalışma zamanı yansıtma ilkesi uygular.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -92,11 +94,13 @@ Oluşturulmuş genel bir türe çalışma zamanı yansıtma ilkesi uygular.
 |`<TypeInstantiation>`|Oluşturulan genel türe ve tüm üyelerine yansıma ilkesi uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Yansıma, serileştirme ve birlikte çalışma özniteliklerinin tümü isteğe bağlıdır. Ancak, en az bir tane bulunmalıdır.  
   
  Bir `<TypeInstantiation>` öğe,, veya öğesinin alt öğesi ise, [\<Assembly>](assembly-element-net-native.md) [\<Namespace>](namespace-element-net-native.md) [\<Type>](type-element-net-native.md) üst öğe tarafından tanımlanan ilke ayarlarını geçersiz kılar. Bir [\<Type>](type-element-net-native.md) öğe karşılık gelen genel tür tanımını tanımlıyorsa, `<TypeInstantiation>` öğe yalnızca belirtilen oluşturulmuş genel türün örneklendirmesiyle ilgili çalışma zamanı yansıma ilkesini geçersiz kılar.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, oluşturulmuş bir nesneden genel tür tanımını almak için yansıma kullanır <xref:System.Collections.Generic.Dictionary%602> . Ayrıca <xref:System.Type> , oluşturulan genel türleri ve genel tür tanımlarını temsil eden nesneler hakkındaki bilgileri göstermek için de yansıma kullanır. Örnekteki değişken `b` bir <xref:Windows.UI.Xaml.Controls.TextBlock> denetimdir.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  

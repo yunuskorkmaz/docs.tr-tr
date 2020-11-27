@@ -11,21 +11,22 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: d63d2b6bf8426968d2120647c8ecea2b7602825a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5492fd9f7b27f7546b951710e4b3e099a1d6664d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502671"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250599"
 ---
 # <a name="cache-policy"></a>Önbellek İlkesi
+
 Önbellek ilkesi, istenen kaynağın önbelleğe alınmış bir kopyasını kullanarak bir isteğin karşılanıp karşılanamayacağını belirlemede kullanılan kuralları tanımlar. Uygulamalar, yenilik için istemci önbelleği gereksinimlerini belirtir, ancak etkili önbellek ilkesi istemci önbellek gereksinimleriyle, sunucunun içerik süre sonu gereksinimlerine ve sunucunun yeniden doğrulama gereksinimlerine göre belirlenir. İstemci önbellek ilkesinin ve sunucu gereksinimlerinin etkileşimi her zaman en klasik önbellek ilkesiyle sonuçlanır, bu da en son içerik istemci uygulamasına geri döndürüldüğünden emin olur.  
   
  Önbellek ilkeleri konum tabanlı ya da zaman tabanlıdır. Konum tabanlı önbellek ilkesi, istenen kaynağın nereden alınabileceğini temel alarak önbelleğe alınmış girişlerin yeniliği tanımlar. Zaman tabanlı önbellek ilkesi, kaynağın alındığı zamanı, kaynakla döndürülen üstbilgileri ve geçerli saati kullanarak önbelleğe alınmış girişlerin yeniliği tanımlar. Çoğu uygulama, [Internet Mühendisliği görev gücü (IETF)](https://www.ietf.org/) Web sitesinde KULLANILABILIR olan RFC 2616 ' de belirtilen önbelleğe alma ilkesini uygulayan varsayılan zaman tabanlı önbellek ilkesini kullanabilir.  
   
  Aşağıdaki tabloda açıklanan sınıflar önbellek ilkelerini belirtmek için kullanılır.  
   
-|Sınıf adı|Description|  
+|Sınıf adı|Açıklama|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|Nesneler kullanılarak istenen kaynaklar için konum tabanlı ve zaman tabanlı önbellek ilkelerini temsil eder <xref:System.Net.HttpWebRequest> .|  
 |<xref:System.Net.Cache.RequestCachePolicy>|<xref:System.Net.Cache.RequestCacheLevel.Default>Nesneler kullanılarak istenen kaynaklar için konum tabanlı önbellek ilkelerini veya zaman tabanlı önbellek ilkesini temsil eder <xref:System.Net.WebRequest> .|  

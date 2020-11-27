@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-ms.openlocfilehash: faf14245cd9dd7aa4bf8e89d5a05901279956509
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bbbb484e5cb8060568b321a2a41474d60c9f87f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128274"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250924"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException Sınıfı (.NET Yerel)
+
 **Windows 10 için Windows uygulamaları için .NET, yalnızca .NET Native**  
   
  Bir el ile sıralama yöntemi çağrıldığında oluşturulan özel durum, ancak bir türün meta verileri statik analiz veya çalışma zamanı yönergeleri dosyasında bulunamamıştır.  
@@ -22,7 +23,8 @@ ms.locfileid: "73128274"
 > [!IMPORTANT]
 > `MissingInteropDataException`Sınıfı yalnızca .NET Native araç zinciri tarafından dahili kullanıma yöneliktir. Üçüncü taraf kodda kullanılmak üzere değildir veya uygulama kodunuzda özel durumu işlemelisiniz. Bunun yerine, [çalışma zamanı yönergeleri dosyanıza](runtime-directives-rd-xml-configuration-file-reference.md)girdiler ekleyerek özel durumu ortadan kaldırabilirsiniz. Daha fazla bilgi için, açıklamalar bölümüne bakın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
+
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
  [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]  
   
@@ -68,9 +70,10 @@ ms.locfileid: "73128274"
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Özel durum hakkında serileştirilmiş veri içeren bir özel durum nesnesi oluşturmak için bir özel durum serileştirildiğinde gerçekleşir. (Öğesinden devralındı <xref:System.Exception?displayProperty=nameWithType> .)|  
   
 ## <a name="usage-details"></a>Kullanım Ayrıntıları  
+
  `MissingInteropDataException`Tür bilgileri kullanılamadığından BIR com veya Windows çalışma zamanı bileşenine bir yöntem çağrısı yapılmazsa özel durum oluşturulur.  
   
- Çalışma zamanında bir uygulama için kullanılabilen meta veriler, çalışma zamanı yönergeleri (XML yapılandırma) dosyası, \* . RD. xml tarafından tanımlanır. Uygulamanızın bu özel durumu oluşturmasını engellemek için bu dosyayı, çalışma zamanında bulunması gereken meta verileri tanımlamak üzere değiştirmelisiniz. En yaygın olarak, `MarshalObject` `MarshalDelegate` `MarshalStructure` çalışma zamanı yönergeleri dosyasındaki uygun program öğesine bir, veya özniteliği ekleyerek bu hatayı ele alırsınız. Bu dosyanın biçimi hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).  
+ Çalışma zamanında bir uygulama için kullanılabilen meta veriler,.rd.xml çalışma zamanı yönergeleri (XML yapılandırma) dosyası tarafından tanımlanır \* . Uygulamanızın bu özel durumu oluşturmasını engellemek için bu dosyayı, çalışma zamanında bulunması gereken meta verileri tanımlamak üzere değiştirmelisiniz. En yaygın olarak, `MarshalObject` `MarshalDelegate` `MarshalStructure` çalışma zamanı yönergeleri dosyasındaki uygun program öğesine bir, veya özniteliği ekleyerek bu hatayı ele alırsınız. Bu dosyanın biçimi hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
 > Bu özel durum, uygulamanız için gereken meta verilerin çalışma zamanında kullanılabilir olmadığını gösterdiği için, bu özel durumu bir blokta tutamamalısınız `try` / `catch` . Bunun yerine, özel durumun nedenini tanılamanıza ve ilgili girişi bir çalışma zamanı yönergeleri dosyasına ekleyerek ortadan kaldırmanız gerekir.  

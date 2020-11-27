@@ -2,17 +2,19 @@
 title: AJAX
 ms.date: 03/30/2017
 ms.assetid: 9e0eb40a-69ef-4821-bdc3-45a9b71a58c3
-ms.openlocfilehash: 85b3451b2337d6fe2c9dcc16a1930663b5e6de19
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4e54daedf0906200c47a7ab0985b104739c6a7be
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575803"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249625"
 ---
 # <a name="ajax"></a>AJAX
+
 Bu bölüm, zaman uyumsuz JavaScript ve XML işlevselliğini gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [JSONP](jsonp.md)  
  WCF REST hizmetlerinde Padding (JSONP) ile JSON 'ın nasıl destekleyeceğinizi gösterir.  
   

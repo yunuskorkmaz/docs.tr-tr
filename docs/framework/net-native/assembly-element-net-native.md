@@ -1,18 +1,19 @@
 ---
-title: <Assembly>Öğesi (.NET Native)
+title: <Assembly> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-ms.openlocfilehash: f3cf65b185b1db3289a0dbb785c2b91431951cc2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9d1556d8d414386d3f350a96396381bd7b66ffc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181076"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251132"
 ---
-# <a name="assembly-element-net-native"></a>\<Assembly>Öğesi (.NET Native)
+# <a name="assembly-element-net-native"></a>\<Assembly> Öğesi (.NET Native)
+
 Belirtilen derlemedeki tüm türlere çalışma zamanı yansıma ilkesini uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Assembly Name="assembly_name"
@@ -29,6 +30,7 @@ Belirtilen derlemedeki tüm türlere çalışma zamanı yansıma ilkesini uygula
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -51,7 +53,7 @@ Belirtilen derlemedeki tüm türlere çalışma zamanı yansıma ilkesini uygula
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*assembly_name*|Derlemenin, dosya uzantısı olmadan basit adı. Bu öznitelik, özelliğine karşılık gelir <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> . Örneğin, Extensions. dll adlı bir derlemenin adı "Uzantılar" dır.<br /><br /> Ayrıca, `*Application*` uygulama paketinizdeki tüm derlemelere ilke uygulamak için aynı dizeyi belirtebilir, bu derlemeler yüklenip yüklenmemelidir. `*Application*`ilke .NET Framework derlemelerine hiçbir şekilde uygulanmaz.|  
+|*assembly_name*|Derlemenin, dosya uzantısı olmadan basit adı. Bu öznitelik, özelliğine karşılık gelir <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> . Örneğin, Extensions.dll adlı bir derlemenin adı "Uzantılar" dır.<br /><br /> Ayrıca, `*Application*` uygulama paketinizdeki tüm derlemelere ilke uygulamak için aynı dizeyi belirtebilir, bu derlemeler yüklenip yüklenmemelidir. `*Application*` ilke .NET Framework derlemelerine hiçbir şekilde uygulanmaz.|  
   
 ## <a name="all-other-attributes"></a>Diğer tüm öznitelikler  
   
@@ -75,6 +77,7 @@ Belirtilen derlemedeki tüm türlere çalışma zamanı yansıma ilkesini uygula
 |[\<Library>](library-element-net-native.md)|Meta verileri çalışma zamanında yansıma için kullanılabilir olan türleri ve tür üyelerini içeren derlemeyi tanımlar. [\<Library>](library-element-net-native.md)Öğe sıfır veya bir `<Assembly>` öğe içerebilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<Assembly>`Öğesi bir derlemedeki tüm türler için çalışma zamanı ilkesini tanımlar. Bu, [\<Library>](library-element-net-native.md) bir kitaplığı belirten, ancak çalışma zamanı yansıtma ilkesini tanımlamak için alt öğelerine bağımlı olan öğeden farklıdır. `<Assembly>`Öğesi bir alt öğe tarafından geçersiz kılınmadıkça derlemedeki tüm türlere uygulanır.  
   
  Aşağıdaki örnek, `Name` özniteliğini "* Application" değeri atayarak uygulama paketinizdeki derlemelerdeki tüm türlere çalışma zamanı ilkesini nasıl uygulayacağınızı gösterir \* . `<Assembly>`Öğesi öğesinin bir alt öğesi olmalıdır [\<Application>](application-element-net-native.md) .  

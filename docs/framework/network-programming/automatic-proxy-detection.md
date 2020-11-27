@@ -15,14 +15,15 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: dbd5d7fa671ae5ec3b7dc00205f0c9d8381bb3ce
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8d1b904a8acc6d3960a076c54c2d5f5de54820c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502709"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250638"
 ---
 # <a name="automatic-proxy-detection"></a>Otomatik Ara Sunucu Algılama
+
 Otomatik proxy algılama, sistem tarafından bir Web proxy sunucusunun tanımlandığı ve istemci adına istek göndermek için kullanılan bir işlemdir. Bu özellik Web proxy otomatik bulma (WPAD) olarak da bilinir. Otomatik ara sunucu algılaması etkinleştirildiğinde, sistem, istek için kullanılabilecek proxy kümesini döndürmekten sorumlu bir ara sunucu yapılandırma betiği bulmaya çalışır. Ara sunucu yapılandırma betiği bulunursa, bir örnek kullanan bir istek için proxy bilgileri, istek akışı veya yanıt elde edildiğinde, komut dosyası indirilir, derlenir ve yerel bilgisayarda çalıştırılır <xref:System.Net.WebProxy> .  
   
  Otomatik proxy algılama, sınıfı tarafından gerçekleştirilir <xref:System.Net.WebProxy> ve istek düzeyindeki ayarları, yapılandırma dosyalarındaki ayarları ve Internet Explorer **yerel ağ (LAN)** iletişim kutusu kullanılarak belirtilen ayarları kullanabilir.  
@@ -72,4 +73,4 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- [\<system.Net>Öğesi (ağ ayarları)](../configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<system.Net> Öğesi (ağ ayarları)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

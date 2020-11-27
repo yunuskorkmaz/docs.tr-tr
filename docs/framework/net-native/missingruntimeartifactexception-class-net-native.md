@@ -2,14 +2,15 @@
 title: MissingRuntimeArtifactException Sınıfı (.NET Yerel)
 ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-ms.openlocfilehash: 7a69add45202b3ad838de592fadc82a84fa0ba5d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2618af8e122964d64126f945c337101cb5bbe5ae
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180976"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250911"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException Sınıfı (.NET Yerel)
+
 **Windows 10 için Windows uygulamaları için .NET, yalnızca .NET Native**  
   
  Bir tür veya tür üyesi için meta veriler kullanılabilir olduğunda, ancak uygulanması kaldırıldığında oluşturulan özel durum.  
@@ -19,7 +20,8 @@ ms.locfileid: "79180976"
 > [!IMPORTANT]
 > `MissingRuntimeArtifactException`Sınıfı yalnızca .NET Native araç zinciri tarafından dahili kullanıma yöneliktir. Üçüncü taraf kodda kullanılmak üzere değildir veya uygulama kodunuzda özel durumu işlemelisiniz. Bunun yerine, [çalışma zamanı yönergeleri dosyanıza](runtime-directives-rd-xml-configuration-file-reference.md)girdiler ekleyerek özel durumu ortadan kaldırabilirsiniz. Daha fazla bilgi için, açıklamalar bölümüne bakın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
+
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
   
  `MissingRuntimeArtifactException`Sınıfının öğesinden türetildiğine unutmayın <xref:System.MemberAccessException> .  
@@ -66,12 +68,13 @@ ms.locfileid: "79180976"
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Özel durum hakkında serileştirilmiş veri içeren bir özel durum nesnesi oluşturmak için bir özel durum serileştirildiğinde gerçekleşir. (Öğesinden devralındı <xref:System.Exception?displayProperty=nameWithType> .)|  
   
 ## <a name="usage-details"></a>Kullanım Ayrıntıları  
+
  `MissingRuntimeArtifactException`Bir tür örneği oluşturmak veya bir tür üyesini çağırmak için bir deneme yapıldığında ve tür ya da üyenin meta verileri mevcut olsa da, uygulamanın kaldırılması, bu özel durum oluşturulur.  
   
- Bir yöntemi dinamik olarak yürütmek için meta verilerin ve uygulama kodunun çalışma zamanında bir uygulama için kullanılabilir olup olmadığı, çalışma zamanı yönergeleri (XML yapılandırma) dosyası, \* . RD. xml tarafından tanımlanır. Uygulamanızın bu özel durumu oluşturmasını engellemek için. RD. xml ' i değiştirmeniz gerekir. Bu, \* bir tür veya tür üyesinin gerek duyduğu meta verilerin çalışma zamanında mevcut olmasını sağlamaktır. . RD. xml dosyasının biçimi hakkında daha fazla bilgi için \* bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).  
+ Bir yöntemi dinamik olarak yürütmek için meta verilerin ve uygulama kodunun çalışma zamanında bir uygulama için kullanılabilir olup olmadığı, çalışma zamanı yönergeleri (XML yapılandırma) dosyası tarafından tanımlanır \*.rd.xml. Uygulamanızın bu özel durumu oluşturmasını engellemek için, \* bir tür veya tür üyesinin gerek duyduğu meta verilerin çalışma zamanında mevcut olduğundan emin olmak için.rd.xml değiştirmelisiniz. .rd.xml dosyasının biçimi hakkında daha fazla bilgi için \* bkz. [Runtime yönergeleri (rd.xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
-> Bu özel durum, uygulamanız için gereken uygulama kodunun çalışma zamanında kullanılabilir olmadığını gösterdiği için, bu özel durumu bir blokta tutamamalısınız `try` / `catch` . Bunun yerine, özel durumun nedenini tanılamanıza ve bir çalışma zamanı yönergeleri dosyası kullanarak ortadan kaldırmanız gerekir. Genellikle, `Activate` `Dynamic` çalışma zamanı yönergeleri dosyasındaki ( \* . RD. xml dosyası) bir program öğesi için uygun veya ilkeyi belirterek bu özel durumu ortadan kaldırabilirsiniz. Özel durumu ortadan kaldıran çalışma zamanı yönergeleri dosyanıza ekleyebileceğiniz girişi almak için iki sorun gidericinin birini kullanabilirsiniz:  
+> Bu özel durum, uygulamanız için gereken uygulama kodunun çalışma zamanında kullanılabilir olmadığını gösterdiği için, bu özel durumu bir blokta tutamamalısınız `try` / `catch` . Bunun yerine, özel durumun nedenini tanılamanıza ve bir çalışma zamanı yönergeleri dosyası kullanarak ortadan kaldırmanız gerekir. Genellikle, `Activate` `Dynamic` çalışma zamanı yönergeleri dosyasında (.rd.xml dosyası) bir program öğesi için uygun veya ilkeyi belirterek bu özel durumu ortadan kaldırabilirsiniz \* . Özel durumu ortadan kaldıran çalışma zamanı yönergeleri dosyanıza ekleyebileceğiniz girişi almak için iki sorun gidericinin birini kullanabilirsiniz:  
 >
 > - Türler için [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/type.html) .  
 > - Metotlar için [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/method.html) .  

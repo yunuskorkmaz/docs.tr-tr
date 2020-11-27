@@ -1,18 +1,19 @@
 ---
-title: <Field>Öğesi (.NET Native)
+title: <Field> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
-ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e63dc293c42aa620b7f7ac15fc0454bc603b9dde
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128413"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251054"
 ---
-# <a name="field-element-net-native"></a>\<Field>Öğesi (.NET Native)
+# <a name="field-element-net-native"></a>\<Field> Öğesi (.NET Native)
+
 Çalışma zamanı yansıtma ilkesini bir alana uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Field Name="field_name"  
@@ -22,6 +23,7 @@ ms.locfileid: "73128413"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -46,6 +48,7 @@ ms.locfileid: "73128413"
 |*policy_setting*|Alanı için bu ilke türüne uygulanacak ayar. Olası değerler şunlardır,, `Auto` `Excluded` `Included` ve `Required` . Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -56,6 +59,7 @@ ms.locfileid: "73128413"
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Oluşturulan genel türe ve tüm üyelerine yansıma ilkesi uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir alanın İlkesi açıkça tanımlanmamışsa, üst öğesinin çalışma zamanı ilkesini devralır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

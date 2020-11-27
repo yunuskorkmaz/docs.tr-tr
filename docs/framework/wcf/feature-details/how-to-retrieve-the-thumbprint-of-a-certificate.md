@@ -5,19 +5,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 0622ff9b990dd9d8fe14c4a4c1d48cc8530d5a61
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 1ecefdfe88426afa8e2d3d8eea758e7decf19ed8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609479"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249832"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma
+
 Kimlik doğrulaması için bir X. 509.440 sertifikası kullanan bir Windows Communication Foundation (WCF) uygulaması yazarken, genellikle sertifikada bulunan taleplerin belirtilmesi gerekir. Örneğin, yönteminde sabit listesini kullanırken bir parmak izi talebi sağlamalısınız <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . Talep değerini bulmak için iki adım gerekir. İlk olarak, sertifikalar için Microsoft Yönetim Konsolu (MMC) ek bileşenini açın. (Bkz. [nasıl yapılır: MMC ek bileşeni Ile sertifikaları görüntüleme](how-to-view-certificates-with-the-mmc-snap-in.md).) İkincisi, burada açıklandığı gibi uygun bir sertifika bulun ve parmak izini (veya diğer talep değerlerini) kopyalayın.  
   
  Hizmet kimlik doğrulaması için bir sertifika kullanıyorsanız, **çıkarılan** sütunun değerini (konsolundaki ilk sütun) dikkat etmeniz önemlidir. Taşıma güvenliği olarak Güvenli Yuva Katmanı (SSL) kullanırken, yapılan ilk denetim, bir hizmetin temel adres Tekdüzen Kaynak tanımlayıcısı 'nı (URI) **verilen** değere karşılaştırmaktır. Değerler eşleşmelidir veya kimlik doğrulama işlemi durdurulur.  
   
- Yalnızca geliştirme sırasında kullanılmak üzere geçici sertifikalar oluşturmak için PowerShell New-SelfSignedCertificate cmdlet 'ini de kullanabilirsiniz. Ancak, bu tür bir sertifika bir sertifika yetkilisi tarafından verilmez ve üretim amacıyla kullanılamaz. Daha fazla bilgi için bkz. [nasıl yapılır: geliştirme sırasında kullanılmak üzere geçici sertifikalar oluşturma](how-to-create-temporary-certificates-for-use-during-development.md).  
+ Ayrıca, yalnızca geliştirme sırasında kullanılmak üzere geçici sertifikalar oluşturmak için PowerShell New-SelfSignedCertificate cmdlet 'ini de kullanabilirsiniz. Ancak, bu tür bir sertifika bir sertifika yetkilisi tarafından verilmez ve üretim amacıyla kullanılamaz. Daha fazla bilgi için bkz. [nasıl yapılır: geliştirme sırasında kullanılmak üzere geçici sertifikalar oluşturma](how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>Bir sertifikanın parmak izini almak için  
   

@@ -2,17 +2,19 @@
 title: Yansıma kullanan API'ler
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-ms.openlocfilehash: 1d8daceb6b744b984f86b011ad7952d0da583a79
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2c361962f4570200d63037a68ef39b0c982bd5f7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181087"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251145"
 ---
 # <a name="apis-that-rely-on-reflection"></a>Yansıma kullanan API'ler
-Bazı durumlarda, kodda yansıma kullanımı belirgin değildir ve bu nedenle .NET Native araç zinciri çalışma zamanında gereken meta verileri korumaz. Bu konu, yansıma API 'sinin bir parçası olarak kabul edilmeyen ancak yansıma dosyasını başarıyla yürütmek için kullanan bazı ortak API 'Leri veya ortak programlama düzenlerini ele almaktadır. Bunları kaynak kodunuzda kullanıyorsanız, bu API 'lere yapılan çağrıların bir [MissingMetadataException](missingmetadataexception-class-net-native.md) özel durumu veya çalışma zamanında başka bir özel durum oluşturmaması için çalışma zamanı yönergeleri (. RD. xml) dosyasına bunlarla ilgili bilgi ekleyebilirsiniz.  
+
+Bazı durumlarda, kodda yansıma kullanımı belirgin değildir ve bu nedenle .NET Native araç zinciri çalışma zamanında gereken meta verileri korumaz. Bu konu, yansıma API 'sinin bir parçası olarak kabul edilmeyen ancak yansıma dosyasını başarıyla yürütmek için kullanan bazı ortak API 'Leri veya ortak programlama düzenlerini ele almaktadır. Bunları kaynak kodunuzda kullanıyorsanız, bu API 'Lerin çağrılarının bir [MissingMetadataException](missingmetadataexception-class-net-native.md) özel durumu veya çalışma zamanında başka bir özel durum oluşturması için çalışma zamanı yönergeleri (.rd.xml) dosyasına bunlarla ilgili bilgiler ekleyebilirsiniz.  
   
 ## <a name="typemakegenerictype-method"></a>Type. MakeGenericType yöntemi  
+
  `AppClass<T>` <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> Aşağıdaki gibi bir kod kullanarak yöntemini çağırarak bir genel türü dinamik olarak oluşturabilirsiniz:  
   
  [!code-csharp[ProjectN#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/type_makegenerictype1.cs#1)]  
@@ -41,15 +43,16 @@ Bu işlem, performans nedenleriyle aşağıdaki tür için meta veriler kaldır�
  Her farklı örnekleme `AppClass<T>` , yöntemiyle oluşturulduysa ve statik olarak kullanılmazsa ayrı bir yönerge gerektirir <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> .  
   
 ## <a name="methodinfomakegenericmethod-method"></a>MethodInfo. MakeGenericMethod yöntemi  
+
  `Class1`Genel bir yöntemi olan bir sınıf verildiğinde `GetMethod<T>(T t)` , aşağıdaki gibi bir `GetMethod` kod kullanılarak yansıma aracılığıyla çağrılabilir:  
   
  [!code-csharp[ProjectN#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/makegenericmethod1.cs#2)]  
   
  Başarılı bir şekilde çalıştırmak için, bu kod birçok meta veri öğesi gerektirir:  
   
-- `Browse`yöntemi çağırmak istediğiniz türün meta verileri.  
+- `Browse` yöntemi çağırmak istediğiniz türün meta verileri.  
   
-- `Browse`çağırmak istediğiniz metodun meta verileri.  Ortak bir yöntem ise, `Browse` kapsayan tür için ortak meta verileri eklemek de yöntemini içerir.  
+- `Browse` çağırmak istediğiniz metodun meta verileri.  Ortak bir yöntem ise, `Browse` kapsayan tür için ortak meta verileri eklemek de yöntemini içerir.  
   
 - Çağırmak istediğiniz metodun dinamik meta verileri, böylece yansıma çağırma temsilcisi .NET Native araç zinciri tarafından kaldırılmaz. Yöntemi için dinamik meta veriler eksikse, yöntemi çağrıldığında aşağıdaki özel durum oluşur <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> :  
   
@@ -68,6 +71,7 @@ Bu işlem, performans nedenleriyle aşağıdaki tür için meta veriler kaldır�
  `MethodInstantiation`Dinamik olarak çağrılan metodun her farklı örneklemesi için bir yönerge gereklidir ve `Arguments` öğe, her farklı örnekleme bağımsız değişkenini yansıtacak şekilde güncelleştirilir.  
   
 ## <a name="arraycreateinstance-and-typemaketypearray-methods"></a>Array. CreateInstance ve Type. MakeTypeArray yöntemleri  
+
  Aşağıdaki örnek, <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> ve <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> yöntemlerini bir tür üzerinde çağırır `Class1` .  
   
  [!code-csharp[ProjectN#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/array1.cs#3)]  
@@ -82,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse`dizi türü için meta veriler dinamik olarak örneğini oluşturmak için gereklidir.  Aşağıdaki çalışma zamanı yönergesi dinamik örneklemeyi sağlar `Class1[]` .  
+ `Browse` dizi türü için meta veriler dinamik olarak örneğini oluşturmak için gereklidir.  Aşağıdaki çalışma zamanı yönergesi dinamik örneklemeyi sağlar `Class1[]` .  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  

@@ -2,17 +2,18 @@
 title: NamedPipeTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c201309c-c528-4b92-a53c-4d48151c5749
-ms.openlocfilehash: 080c5e55fb2f92e9c9739b12fef371b14e8babae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e403ec02b09d0dbc165c40c2bd28d54d0219325
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963156"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250417"
 ---
 # <a name="namedpipetransportbindingelement"></a>NamedPipeTransportBindingElement
+
 NamedPipeTransportBindingElement  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingElement  
@@ -22,23 +23,26 @@ class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingEleme
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- NamedPipeTransportBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
+
+ NamedPipeTransportBindingElement sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- NamedPipeTransportBindingElement sınıfı şu özelliğe sahip:  
+
+ NamedPipeTransportBindingElement sınıfı aşağıdaki özelliğe sahiptir:  
   
-### <a name="connectionpoolsettings"></a>Tcptransport  
+### <a name="connectionpoolsettings"></a>NamedPipeTransport  
+
  Veri türü: NamedPipeConnectionPoolSettings  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
  Bağlantı havuzu ayarları.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

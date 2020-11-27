@@ -2,15 +2,16 @@
 title: Çalışma Zamanı Yönerge Öğeleri
 ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-ms.openlocfilehash: c900516382c8e526a6b0021bb2b681486283f3ab
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 96bce89c02ad17d1b30eda66237f69a15123dcd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128164"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250807"
 ---
 # <a name="runtime-directive-elements"></a>Çalışma Zamanı Yönerge Öğeleri
-Çalışma zamanı yönergeleri (RD. xml) dosya biçimi aşağıdaki çalışma zamanı yönerge öğelerini destekler. Hiyerarşik bir gösterim için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md) .  
+
+Çalışma zamanı yönergeleri (rd.xml) dosya biçimi aşağıdaki çalışma zamanı yönerge öğelerini destekler. Hiyerarşik bir gösterim için bkz. [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md) .  
   
  [\<Application>](application-element-net-native.md)  
  , Uygulama tarafından kullanılan tüm türlere çalışma zamanı yansıtma ilkesi uygular ve uygulama genelinde türler için bir kapsayıcı görevi görür ve meta verileri çalışma zamanında yansıma için kullanılabilir olan üyeleri yazın. Bu, öğesinin bir alt [\<Directives>](directives-element-net-native.md) öğesidir.  
@@ -68,4 +69,4 @@ ms.locfileid: "73128164"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [RD. xml yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ Yapılandırma dosyası başvurusunurd.xml](runtime-directives-rd-xml-configuration-file-reference.md)

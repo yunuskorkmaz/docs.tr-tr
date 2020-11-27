@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: 68ad6b2c55cd5cc467e53441caa778ea10b994fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea709bba17d4e2f00b760c8713f9e8100496f0bf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180861"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250521"
 ---
 # <a name="how-to-access-http-specific-properties"></a>Nasıl yapılır: HTTP’ye Özgü Özelliklere Erişim
-Bu örnek, HTTP Canlı **Tutma** davranışını nasıl kapatAcaklarını ve Web sunucusundan protokol sürüm numarasını nasıl alacağımı gösterir.  
+
+Bu örnekte, HTTP **canlı tutma** davranışının nasıl kapatılacağı ve Web sunucusundan protokol sürüm numarası alma gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -45,12 +46,13 @@ HttpWResp.Close();
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
  Bu örnek şunları gerektirir:  
   
-- **System.Net** ad alanına başvurular.  
+- **System.net** ad alanına başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ara Sunucu Üzerinden İnternet Erişimi](accessing-the-internet-through-a-proxy.md)
 - [Uygulama Protokolleri Kullanma](using-application-protocols.md)
-- [HTTP Kı.,](http.md)
+- [HTTP](http.md)

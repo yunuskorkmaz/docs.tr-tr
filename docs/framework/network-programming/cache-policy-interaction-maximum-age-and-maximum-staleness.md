@@ -9,31 +9,32 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdfa608b5169755b2b4daaaa26e562308ae2be01
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048834"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250612"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Fazla Eskime
-En yeni içeriğin istemci uygulamasına döndürülmesini sağlamak için, istemci önbellek ilkesi ve sunucu yeniden doğrulama gereksinimlerinin etkileşimi her zaman en tutucu önbellek ilkesiyle sonuçlanır. Bu konudaki tüm örnekler, 1 Ocak'ta önbelleğe alınmış ve 4 Ocak'ta süresi dolan bir kaynağın önbellek ilkesini gösterir.  
+
+En son içeriğin istemci uygulamasına döndürüldüğünden emin olmak için, istemci önbellek ilkesi ve sunucu yeniden doğrulama gereksinimlerinin etkileşimi her zaman en klasik önbellek ilkesine neden olur. Bu konudaki tüm örneklerde, 1 Ocak tarihinde önbelleğe alınan ve 4 Ocak tarihinde sona erecek bir kaynağın önbellek ilkesi gösterilmektedir.  
   
- Aşağıdaki örneklerde, maksimum bayatlık`maxStale`değeri ( ) maksimum yaş`maxAge`( ):  
+ Aşağıdaki örneklerde, en yüksek stalet değeri ( `maxStale` ) en fazla Age () ile birlikte kullanılır `maxAge` :  
   
-- Önbellek ilkesi = `maxAge` 5 gün belirler ve `maxStale` `maxAge` değere göre bir değer belirtmezse, içerik 6 Ocak'a kadar kullanılabilir. Ancak, sunucunun yeniden doğrulama gereksinimlerine göre, içeriğin süresi 4 Ocak'ta sona erer. İçerik son kullanma tarihi daha tutucu (daha erken) `maxAge` olduğundan, ilkeden önce gelir. Bu nedenle, içerik 4 Ocak'ta sona erer ve maksimum yaşına ulaşılamamasına rağmen yeniden geçersiz kılınması gerekir.  
+- Önbellek ilkesi `maxAge` = 5 gün ayarlar ve `maxStale` değere göre değer belirtmezse `maxAge` , içerik 6 Ocak 'a kadar kullanılabilir. Ancak, sunucunun yeniden doğrulama gereksinimlerine göre, içerik 4 Ocak tarihinde sona erer. İçerik sona erme tarihi daha pasif (daha önce) olduğundan, ilkeye göre önceliklidir `maxAge` . Bu nedenle, içerik 4 Ocak tarihinde sona erer ve en yüksek yaşına ulaşılmasa bile yeniden doğrulanması gerekir.  
   
-- Önbellek ilkesi değerine göre `maxStale` = 5 gün ve `maxAge` = 3 gün belirlerse, `maxAge` içerik 6 Ocak'a kadar kullanılabilir. Değerine `maxStale` göre, içerik 7 Ocak'a kadar kullanılabilir. Bu nedenle, içerik 6 Ocak'ta yeniden geçersiz kılınır.  
+- Önbellek ilkesi `maxAge` değere göre = 5 gün ve `maxStale` = 3 gün ayarladıysanız `maxAge` , içerik 6 Ocak 'a kadar kullanılabilir. `maxStale`Değere göre, içerik 7 Ocak tarihine kadar kullanılabilir. Bu nedenle, içerik 6 Ocak 'ta yeniden onaylanır.  
   
-- Önbellek ilkesi değerine göre `maxStale` = 5 gün ve `maxAge` = 1 gün belirlerse, `maxAge` içerik 6 Ocak'a kadar kullanılabilir. Değere `maxStale` göre, içerik 5 Ocak'a kadar kullanılabilir. Bu nedenle, içerik 5 Ocak'ta yeniden geçersiz kılınır.  
+- Önbellek ilkesi `maxAge` değere göre = 5 gün ve `maxStale` = 1 gün ayarladıysanız `maxAge` , içerik 6 Ocak 'a kadar kullanılabilir. `maxStale`Değere göre, içerik 5 Ocak 'a kadar kullanılabilir. Bu nedenle, içerik 5 Ocak 'ta yeniden onaylanır.  
   
- Maksimum yaş içeriğin son kullanma tarihinden daha az olduğunda, daha konservatif önbelleğe alma davranışı her zaman geçerli olur ve maksimum bayatlık değerinin hiçbir etkisi yoktur. Aşağıdaki örnekler, içeriğin süresi dolmadan önce`maxStale`maksimum yaş (`maxAge`) erişildiğinde maksimum bayatlık ( ) değerini ayarlamanın etkisini göstermektedir:  
+ Maksimum yaş, içerik sona erme tarihinden daha az olduğunda, daha fazla koruyucu önbelleğe alma davranışı her zaman korunur ve en yüksek stalet değeri bir etkiye sahip değildir. Aşağıdaki örneklerde, `maxStale` en yüksek yaş () değerinin, `maxAge` içeriğin süresi dolmadan önce ne kadar dolacağını gösteren en yüksek bir stalet () değeri ayarlamanın etkisi gösterilmektedir:  
   
-- Önbellek ilkesi = `maxAge` 1 gün belirler ve değer `maxStale` için bir değer belirtmezse, süresi dolmamış olsa bile içerik 2 Ocak'ta yeniden geçersiz kılınır.  
+- Önbellek ilkesi `maxAge` = 1 gün ayarlıyor ve değer için değer belirtmezse `maxStale` , süresi dolmasa bile 2 Ocak 'ta içerik yeniden onaylanır.  
   
-- Önbellek ilkesi = `maxAge` 1 gün `maxStale` ve = 3 gün belirlerse, içerik daha tutucu ilke ayarını zorlamak için 2 Ocak'ta yeniden geçersiz kılınır.  
+- Önbellek ilkesi `maxAge` = 1 gün ve `maxStale` = 3 gün ayarlaırsa, daha koruyucu ilke ayarını zorlamak için Içerik 2 Ocak 'ta yeniden onaylanır.  
   
-- Önbellek ilkesi = `maxAge` 1 gün `maxStale` ve = 1 gün belirlerse, içerik 2 Ocak'ta yeniden geçersiz kılınır.  
+- Önbellek ilkesi `maxAge` = 1 gün ve `maxStale` = 1 gün ise, Içerik 2 Ocak 'ta yeniden onaylanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: f091f0f675fcf22cb7c6be83a5766fcc8d279be7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 96511c44507706b616c1542a534a52b02070efc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502281"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250235"
 ---
 # <a name="network-programming-how-to-topics"></a>Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları
+
 Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan nasıl yapılır konularına bağlantılar içerir.  
   
  **Veri isteniyor:**  
@@ -38,7 +39,7 @@ Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan nasıl ya
   
 - [Nasıl yapılır: Bağlantıları Gruplandırmak için Kullanıcı Bilgileri Atama](how-to-assign-user-information-to-group-connections.md)  
   
-- [Nasıl Yapılır: Yuva Oluşturma](how-to-create-a-socket.md)  
+- [Nasıl yapılır: Yuva Oluşturma](how-to-create-a-socket.md)  
   
 - [Nasıl yapılır: FTP ile Dosya İndirme](how-to-download-files-with-ftp.md)  
   
@@ -60,7 +61,7 @@ Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan nasıl ya
   
 - [Nasıl yapılır: Uygulama için Varsayılan Saat Temelli Önbellek İlkesi Ayarlama](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
-- [Nasıl yapılır: zaman tabanlı önbellek Ilkesini özelleştirme](how-to-customize-a-time-based-cache-policy.md)  
+- [Nasıl yapılır: Time-Based önbellek Ilkesini özelleştirme](how-to-customize-a-time-based-cache-policy.md)  
   
 - [Nasıl yapılır: İstek için Önbellek İlkesi Ayarlama](how-to-set-cache-policy-for-a-request.md)  
   

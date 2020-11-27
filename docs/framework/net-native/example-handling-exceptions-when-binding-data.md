@@ -2,14 +2,15 @@
 title: 'Örnek: Veri Bağlama Sırasında Özel Durum İşleme'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-ms.openlocfilehash: b774d1bce4f4d1c03258ed44b27d3871e7c5275f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 399bd1af9ef25eca9cdfe1e13fdc4c01021babcd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181028"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251080"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Örnek: Veri Bağlama Sırasında Özel Durum İşleme
+
 > [!NOTE]
 > Bu konu, yayın öncesi yazılım olan .NET Native geliştirici önizlemesine başvurur. Önizlemeyi [Microsoft Connect Web sitesinden](https://go.microsoft.com/fwlink/?LinkId=394611) indirebilirsiniz (kayıt gerekir).  
   
@@ -37,6 +38,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Uygulama ne yapıyordu?  
+
  Yığının tabanında, <xref:Windows.UI.Xaml?displayProperty=nameWithType> ad alanındaki Çerçeveler XAML işleme altyapısının çalıştığını gösterir.   Yönteminin kullanımı, <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> meta verileri kaldırılmış olan türdeki bir özelliğin değerinin yansıma tabanlı bir aramasını gösterir.  
   
  Meta veri yönergesini sağlamanın ilk adımı, `serialize` özelliklerinin tümünün erişilebilir olması için türün meta verilerini eklemektir:  
@@ -46,6 +48,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="is-this-an-isolated-case"></a>Bu yalıtılmış bir durumdur mi?  
+
  Bu senaryoda, veri bağlamasında bir tane için eksik meta veriler varsa, `ViewModel` diğerleri de olabilir.  Kod, uygulamanın görünüm modellerinin ad alanında yer aldığı bir şekilde yapılandırılmış ise `App.ViewModels` , daha genel bir çalışma zamanı yönergesi kullanabilirsiniz:  
   
 ```xml  
@@ -53,9 +56,10 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Kod, yansıma kullanmadan yeniden yazılabilir mi?  
+
  Veri bağlama yansıma yoğun olduğundan, yansımayı önlemek için kodun değiştirilmesi uygun değildir.  
   
- Ancak, `ViewModel` araç zincirinin derleme zamanında doğru türle Özellik bağlamalarını ilişkilendirebilmesi ve bir çalışma zamanı yönergesi kullanmadan meta verileri tutması IÇIN xaml sayfasına belirtmek için bazı yollar vardır.  Örneğin, özelliğini <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> özelliklerine uygulayabilirsiniz. Bu, XAML derleyicisinin gerekli arama bilgilerini oluşturmasına ve default. RD. xml dosyasında bir çalışma zamanı yönergesi gerektirmesine neden olur.  
+ Ancak, `ViewModel` araç zincirinin derleme zamanında doğru türle Özellik bağlamalarını ilişkilendirebilmesi ve bir çalışma zamanı yönergesi kullanmadan meta verileri tutması IÇIN xaml sayfasına belirtmek için bazı yollar vardır.  Örneğin, özelliğini <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> özelliklerine uygulayabilirsiniz. Bu, XAML derleyicisinin gerekli arama bilgilerini oluşturmasına ve Default.rd.xml dosyasında bir çalışma zamanı yönergesi gerektirmesine neden olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

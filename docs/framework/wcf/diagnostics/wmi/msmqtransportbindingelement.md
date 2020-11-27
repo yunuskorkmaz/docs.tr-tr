@@ -2,17 +2,18 @@
 title: MsmqTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 1c89f073-9ed3-4025-a8c5-13535a0f526b
-ms.openlocfilehash: 706cec5c414197ebabda7939728b95be32582e0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6590c5188e4e1758987a75fbd007099703ea6bc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963312"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250430"
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
+
 MsmqTransportBindingElement  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class MsmqTransportBindingElement : MsmqBindingElementBase  
@@ -24,37 +25,42 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- Hem MsmqTransportBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
+
+ MsmqTransportBindingElement sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- Hem MsmqTransportBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
+
+ MsmqTransportBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="maxpoolsize"></a>MaxPoolSize  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İç MSMQ message nesneleri içeren bir havuz en büyük boyutu.  
+ İç MSMQ ileti nesneleri içeren havuzun en büyük boyutu.  
   
-### <a name="queuetransferprotocol"></a>queueTransferProtocol  
+### <a name="queuetransferprotocol"></a>QueueTransferProtocol  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bu bağlamanın kullandığı sıraya konmuş iletişim kanal taşımasını bildiren bir numaralandırma değeri.  
+ Bu bağlamanın kullandığı sıraya alınmış iletişim kanalı aktarımını gösteren bir numaralandırma değeri.  
   
 ### <a name="useactivedirectory"></a>UseActiveDirectory  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Kuyruk adreslerinin Active Directory kullanılarak dönüştürülüp dönüştürülmeyeceğini gösteren bir Boole değeri döndürür.  
+ Sıra adreslerinin Active Directory kullanılarak dönüştürülmesi gerekip gerekmediğini belirten bir Boole değeri döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

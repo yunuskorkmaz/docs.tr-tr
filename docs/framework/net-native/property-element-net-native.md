@@ -1,18 +1,19 @@
 ---
-title: <Property>Öğesi (.NET Native)
+title: <Property> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a0bdf95a1d1cadf7423f8c6595add13eda4d0d9a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128206"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250859"
 ---
-# <a name="property-element-net-native"></a>\<Property>Öğesi (.NET Native)
+# <a name="property-element-net-native"></a>\<Property> Öğesi (.NET Native)
+
 Çalışma zamanı yansıtma ilkesini bir özelliğe uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Property Name="property_name"  
@@ -22,6 +23,7 @@ ms.locfileid: "73128206"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -46,6 +48,7 @@ ms.locfileid: "73128206"
 |*policy_setting*|Özelliği için bu ilke türüne uygulanacak ayar. Olası değerler şunlardır,, `Auto` `Excluded` `Included` ve `Required` . Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -56,10 +59,12 @@ ms.locfileid: "73128206"
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Oluşturulan genel türe ve tüm üyelerine yansıma ilkesi uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir özelliğin İlkesi açıkça tanımlanmamışsa, üst öğesinin çalışma zamanı ilkesini devralır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir nesnenin örneğini oluşturmak `Book` ve özellik değerlerini göstermek için yansıma kullanır. Projenin özgün varsayılan. RD. xml dosyası şu şekilde görünür:  
+
+ Aşağıdaki örnek, bir nesnenin örneğini oluşturmak `Book` ve özellik değerlerini göstermek için yansıma kullanır. Projenin özgün default.rd.xml dosyası şu şekilde görünür:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -81,7 +86,7 @@ ms.locfileid: "73128206"
   
 - `Dynamic`öğesinde türü için ilkeyi tanımlayarak `Book` [\<Type>](type-element-net-native.md) .  
   
-- [\<Property>](property-element-net-native.md)Aşağıdaki default. RD. xml dosyası gibi, alıcı çağırmak istediğimiz her bir özellik için iç içe bir öğe ekleyerek.  
+- [\<Property>](property-element-net-native.md)Aşağıdaki default.rd.xml dosyası olduğundan, alıcı çağırmak istediğiniz her bir özellik için iç içe bir öğe ekleyerek.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
