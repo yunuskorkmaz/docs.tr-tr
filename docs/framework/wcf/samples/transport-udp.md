@@ -2,14 +2,15 @@
 title: 'Taşıma: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: dcf2d9896ab7c95101e224521174b54c88ca3fc2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 815a0a50e42e68040673e34e5ebccad17dfeecda
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559011"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258757"
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
+
 UDP taşıma örneği, UDP tek noktaya yayın ve çok noktaya yayının özel bir Windows Communication Foundation (WCF) taşıması olarak nasıl uygulanacağını gösterir. Örnek, kanal çerçevesini ve aşağıdaki WCF en iyi yöntemlerini kullanarak WCF 'de özel bir aktarım oluşturmak için önerilen yordamı açıklar. Özel bir aktarım oluşturma adımları aşağıdaki gibidir:  
   
 1. ChannelFactory ve ChannelListener 'ın destekleyeceği kanal [Iletisi değişimi desenlerinin](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel veya IReplyChannel destekleyen desteklenecektir) hangisi olacağına karar verin. Ardından, bu arabirimlerin oturumsuz çeşitlemelerini desteklememeye karar verin.  
@@ -29,14 +30,16 @@ UDP taşıma örneği, UDP tek noktaya yayın ve çok noktaya yayının özel bi
 8. Yapılandırma sistemine bağlamayı göstermek için bağlama bölümü ve bağlama yapılandırma öğesi ekleyin. Daha fazla bilgi için bkz. [yapılandırma desteği ekleme](#AddingConfigurationSupport).  
   
 <a name="MessageExchangePatterns"></a>
+
 ## <a name="message-exchange-patterns"></a>İleti değişimi desenleri  
+
  Özel bir aktarım yazarken ilk adım, taşıma için hangi Ileti değişim desenlerinin (MEPs) gerekli olduğuna karar vermeye yöneliktir. Aralarından seçim yapabileceğiniz üç/PS vardır:  
   
 - Veri birimi (IInputChannel/IOutputChannel)  
   
      Bir veri birimi MEP kullanırken, istemci "yangın ve unut" Exchange kullanarak bir ileti gönderir. Bir ateş ve unutur, başarılı teslimin bant dışı onayını gerektiren bir adım. İleti iletimde kaybolmuş olabilir ve hizmete hiçbir şekilde ulaşamamalıdır. Gönderme işlemi istemci sonunda başarıyla tamamlanırsa, uzak uç noktanın iletiyi aldığını garanti etmez. Bu veri birimi, güvenilir protokoller ve güvenli protokoller de dahil olmak üzere kendi protokollerinizi oluşturabileceğiniz gibi, mesajlaşma için temel bir yapı taşıdır. İstemci veri birimi kanalları arabirimini <xref:System.ServiceModel.Channels.IOutputChannel> uygulayan arabirimi ve hizmet veri birimi kanallarını uygular <xref:System.ServiceModel.Channels.IInputChannel> .  
   
-- İstek-yanıt (IRequestChannel/IReplyChannel destekleyen desteklenecektir)  
+- Request-Response (IRequestChannel/IReplyChannel destekleyen desteklenecektir)  
   
      Bu MEP 'de bir ileti gönderilir ve bir yanıt alındı. Bu model, istek-yanıt çiftlerinden oluşur. İstek-yanıt çağrısı örnekleri, uzak yordam çağrılardır (RPC) ve tarayıcı alır. Bu model, yarı çift yönlü olarak da bilinir. Bu MEP 'de, istemci kanalları <xref:System.ServiceModel.Channels.IRequestChannel> ve hizmet kanalları uygular <xref:System.ServiceModel.Channels.IReplyChannel> .  
   
@@ -44,12 +47,13 @@ UDP taşıma örneği, UDP tek noktaya yayın ve çok noktaya yayının özel bi
   
      Çift yönlü MEP, istemci tarafından rastgele sayıda iletinin gönderilmesini ve herhangi bir sırada alınmasını sağlar. Çift yönlü MEP, konuşulan her sözcüğün bir ileti olduğu bir telefon konuşması gibidir. Her iki taraf da bu MEP 'de gönderebildiğinden ve alabileceği için, istemci ve hizmet kanalları tarafından uygulanan arabirim <xref:System.ServiceModel.Channels.IDuplexChannel> .  
   
- Bu MEPs 'lerin her biri, oturumları da destekleyebilir. Oturum kullanan bir kanal tarafından sunulan ek işlevsellik, bir kanalda gönderilen ve alınan tüm iletileri ilişkilendirir. İstek ve yanıt bağıntılı olduğundan, Istek-yanıt deseninin tek başına iki ileti oturumu vardır. Buna karşılık, oturumları destekleyen Istek-yanıt deseninin, o kanaldaki tüm istek/yanıt çiftlerinin birbirleriyle bağıntılı olduğu anlamına gelir. Bu, arasından seçim yapmak için toplam altı adet, veri birimi, Istek-yanıt, çift yönlü, oturumlarla oturum, oturum Isteği ve oturumlarla çift yönlü veri birimi sağlar.  
+ Bu MEPs 'lerin her biri, oturumları da destekleyebilir. Oturum kullanan bir kanal tarafından sunulan ek işlevsellik, bir kanalda gönderilen ve alınan tüm iletileri ilişkilendirir. Request-Response model, istek ve yanıt bağıntılı olduğu için tek başına iki ileti oturumunundur. Buna karşılık, oturumları destekleyen Request-Response deseninin, o kanaldaki tüm istek/yanıt çiftlerinin birbirleriyle bağıntılı olması gerekir. Bu, içinden seçim yapmak için çok sayıda (veri birimi, Istek-yanıt, çift yönlü, oturumlarla oturum Request-Response, oturumlarla birlikte) ve oturumlarla çift yönlü bir toplam değeri sağlar.  
   
 > [!NOTE]
 > UDP bir "yangın ve unut" Protokolü olduğundan, UDP taşıması için desteklenen tek MEP yalnızca veri birimi olur.  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Idimmunicationobject ve WCF nesne yaşam döngüsü  
+
  WCF,, ve gibi nesnelerin yaşam döngüsünü yönetmek için kullanılan, <xref:System.ServiceModel.Channels.IChannel> <xref:System.ServiceModel.Channels.IChannelFactory> ve iletişim için kullanılan bir ortak durum makinesine sahiptir <xref:System.ServiceModel.Channels.IChannelListener> . Bu iletişim nesnelerinin bulunabileceği beş durum vardır. Bu durumlar, sabit listesi tarafından temsil edilir <xref:System.ServiceModel.CommunicationState> ve aşağıdaki gibidir:  
   
 - Oluşturuldu: Bu, ilk örneği oluşturulduğunda bir durumudur <xref:System.ServiceModel.ICommunicationObject> . Bu durumda giriş/çıkış (g/ç) oluşmaz.  
@@ -67,7 +71,9 @@ UDP taşıma örneği, UDP tek noktaya yayın ve çok noktaya yayının özel bi
  Her durum geçişi için başlatılan olaylar vardır. <xref:System.ServiceModel.ICommunicationObject.Abort%2A>Yöntemi herhangi bir zamanda çağrılabilir ve nesnenin geçerli durumundan Kapalı durumuna geçmesine neden olur. Çağırma, <xref:System.ServiceModel.ICommunicationObject.Abort%2A> tamamlanmamış işleri sonlandırır.  
   
 <a name="ChannelAndChannelListener"></a>
+
 ## <a name="channel-factory-and-channel-listener"></a>Kanal fabrikası ve kanal dinleyicisi  
+
  Özel bir aktarım yazarken bir sonraki adım, <xref:System.ServiceModel.Channels.IChannelFactory> İstemci kanalları ve hizmet kanalları için bir uygulama oluşturmaktır <xref:System.ServiceModel.Channels.IChannelListener> . Kanal katmanı, kanal oluşturmak için bir fabrika kalıbı kullanır. WCF bu işlem için temel sınıf yardımcıları sağlar.  
   
 - <xref:System.ServiceModel.Channels.CommunicationObject>Sınıfı, <xref:System.ServiceModel.ICommunicationObject> daha önce 2. adımda açıklanan durum makinesini uygular ve uygular.
@@ -81,9 +87,11 @@ UDP taşıma örneği, UDP tek noktaya yayın ve çok noktaya yayının özel bi
  Bu örnekte, fabrika uygulamasının UdpChannelFactory.cs içinde yer aldığı ve dinleyici uygulamasının UdpChannelListener.cs içinde yer aldığı. <xref:System.ServiceModel.Channels.IChannel>Uygulamalar UdpOutputChannel.cs ve UdpInputChannel.cs ' dir.  
   
 ### <a name="the-udp-channel-factory"></a>UDP kanal fabrikası  
+
  `UdpChannelFactory`Öğesinden türetilir <xref:System.ServiceModel.Channels.ChannelFactoryBase> . Örnek, <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> ileti kodlayıcının ileti sürümüne erişim sağlamak için geçersiz kılar. Örnek ayrıca <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> <xref:System.ServiceModel.Channels.BufferManager> durum makinesi geçişi sırasında örneğimizi daha fazla belirleyebilmemiz için geçersiz kılar.  
   
 #### <a name="the-udp-output-channel"></a>UDP çıkış kanalı  
+
  `UdpOutputChannel`Uygular <xref:System.ServiceModel.Channels.IOutputChannel> . Oluşturucu bağımsız değişkenleri doğrular ve geçirilen öğesine bağlı olarak bir hedef <xref:System.Net.EndPoint> nesnesi oluşturur <xref:System.ServiceModel.EndpointAddress> .  
   
 ```csharp
@@ -109,6 +117,7 @@ this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Coun
 ```  
   
 ### <a name="the-udpchannellistener"></a>UdpChannelListener  
+
  `UdpChannelListener`Örneğin uyguladığı örnek sınıfından türetiliyor <xref:System.ServiceModel.Channels.ChannelListenerBase> . Veri birimlerini almak için tek bir UDP yuvası kullanır. `OnOpen`Yöntemi, UDP yuvasını zaman uyumsuz bir döngüde kullanarak verileri alır. Veriler daha sonra Ileti kodlama çerçevesi kullanılarak iletilere dönüştürülür.  
   
 ```csharp
@@ -118,10 +127,13 @@ message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffe
  Aynı veri birimi kanalı, bir dizi kaynaktan gelen iletileri temsil ettiğinden, `UdpChannelListener` tek bir dinleyici olur. En çok, bu dinleyiciyle aynı anda bir tane olmak üzere bir etkin <xref:System.ServiceModel.Channels.IChannel> . Örnek, yalnızca yöntemi tarafından döndürülen bir kanal `AcceptChannel` daha sonra atıldığı takdirde bir tane oluşturur. Bir ileti alındığında, bu Singleton kanalında sıraya alınır.  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
+
  `UdpInputChannel`Sınıfı uygular `IInputChannel` . Bu, kendi yuvası tarafından doldurulan bir gelen ileti kuyruğundan oluşur `UdpChannelListener` . Bu iletiler yöntemi tarafından kaldırılır `IInputChannel.Receive` .  
   
 <a name="AddingABindingElement"></a>
+
 ## <a name="adding-a-binding-element"></a>Bağlama öğesi ekleme  
+
  Fabrikalar ve kanallar derlenmesine göre, bunları bir bağlama aracılığıyla ServiceModel çalışma zamanına göstermemiz gerekir. Bağlama, bir hizmet adresiyle ilişkili iletişim yığınını temsil eden bağlama öğelerinin koleksiyonudur. Yığındaki her öğe bir öğesi tarafından temsil edilir [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) .  
   
  Örnekte, bağlama öğesi `UdpTransportBindingElement` öğesinden türetilir <xref:System.ServiceModel.Channels.TransportBindingElement> . Bağlamamız ile ilişkili fabrikaları oluşturmak için aşağıdaki yöntemleri geçersiz kılar.  
@@ -141,12 +153,15 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  Ayrıca, `BindingElement` klonımızın (SOAP. UDP) kopyalanması ve döndürülmesi için Üyeler de bulunur.  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Bir taşıma bağlama öğesi için meta veri desteği ekleme  
+
  Aktarımımızı meta veri sistemine tümleştirmek için, hem ilkenin içeri ve dışarı aktarılmasını desteklememiz gerekir. Bu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)aracılığıyla bağlamamız için istemci oluşturmamızı sağlar.  
   
 ### <a name="adding-wsdl-support"></a>WSDL desteği ekleme  
+
  Bir bağlamadaki aktarım bağlama öğesi, meta verilerde adres bilgilerinin dışarı ve içeri aktarılmasından sorumludur. SOAP bağlama kullanılırken, aktarım bağlama öğesi meta verilerde doğru bir taşıma URI 'sini de dışarı aktarmalıdır.  
   
 #### <a name="wsdl-export"></a>WSDL dışarı aktarma  
+
  Adres bilgilerini dışarı aktarmak için `UdpTransportBindingElement` arabirimini uygular `IWsdlExportExtension` . `ExportEndpoint`Yöntemi, wsdl bağlantı noktasına doğru adres bilgilerini ekler.  
   
 ```csharp
@@ -167,6 +182,7 @@ if (soapBinding != null)
 ```  
   
 #### <a name="wsdl-import"></a>WSDL Içeri aktarma  
+
  WSDL içeri aktarma sistemini, adresleri içeri aktarmayı işleyecek şekilde genişletmek için, aşağıdaki yapılandırmayı Svcutil.exe.config dosyasında gösterildiği gibi Svcutil.exe yapılandırma dosyasına eklememiz gerekir.  
   
 ```xml
@@ -201,9 +217,11 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>Ilke desteği ekleme  
+
  Özel bağlama öğesi, söz konusu bağlama öğesinin yeteneklerini ifade etmek için bir hizmet uç noktası için WSDL bağlamasındaki ilke onaylamalarını dışarı aktarabilir.  
   
 #### <a name="policy-export"></a>İlke dışarı aktarma  
+
  `UdpTransportBindingElement`Türü, `IPolicyExportExtension` ilke dışarı aktarma desteği eklemek için uygular. Sonuç olarak, `System.ServiceModel.MetadataExporter` `UdpTransportBindingElement` onu içeren herhangi bir bağlama için ilke oluşturmaya dahildir.  
   
  İçinde `IPolicyExportExtension.ExportPolicy` , çok noktaya yayın MODUNDAYKEN UDP ve başka bir onaylama için bir onaylama ekleyeceğiz. Bunun nedeni, çok noktaya yayın modunun iletişim yığınının oluşturulmasını etkilemesi ve bu nedenle her iki taraf arasında koordine olması gerekir.  
@@ -222,13 +240,14 @@ if (Multicast)
 }  
 ```  
   
- Özel aktarım bağlama öğeleri, adresleme 'nin işlenmesinden sorumlu olduğundan, `IPolicyExportExtension` üzerindeki uygulamanın, `UdpTransportBindingElement` kullanılan ws-Addressing sürümünü göstermek IÇIN uygun ws-Addressing ilke onayları vermeyi de işlemesi gerekir.  
+ Özel aktarım bağlama öğeleri, adresleme 'nin işlenmesinden sorumlu olduğundan, `IPolicyExportExtension` üzerindeki uygulamanın, `UdpTransportBindingElement` kullanılan WS-Addressing sürümünü göstermek için uygun WS-Addressing ilke onayları vermeyi de işlemesi gerekir.  
   
 ```csharp
 AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
 ```  
   
 #### <a name="policy-import"></a>İlke Içeri aktarma  
+
  Ilke Içeri aktarma sistemini genişletmek için, Svcutil.exe.config dosyasında gösterildiği gibi Svcutil.exe yapılandırma dosyasına aşağıdaki yapılandırmayı eklememiz gerekir.  
   
 ```xml
@@ -252,7 +271,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 2. Yapılandırma bölümünü Svcutil.exe aynı dizindeki Svcutil.exe.config ekleyin.  
   
 <a name="AddingAStandardBinding"></a>
+
 ## <a name="adding-a-standard-binding"></a>Standart bağlama ekleme  
+
  Binding öðemiz aşağıdaki iki şekilde kullanılabilir:  
   
 - Özel bağlama aracılığıyla: özel bir bağlama, kullanıcının rastgele bağlama öğeleri kümesini temel alarak kendi bağlamasını oluşturmalarına olanak sağlar.  
@@ -277,6 +298,7 @@ public override BindingElementCollection CreateBindingElements()
 ```  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Özel standart bağlama Içeri aktarıcı ekleme  
+
  Svcutil.exe ve `WsdlImporter` türü, varsayılan olarak sistem tarafından tanımlanan bağlamaları tanır ve içeri aktarır. Aksi takdirde, bağlama bir örnek olarak içeri aktarılır `CustomBinding` . Svcutil.exe etkinleştirmek ve `WsdlImporter` içeri aktarmak için `SampleProfileUdpBinding` `UdpBindingElementImporter` özel bir standart bağlama İçeri Aktarıcı işlevi de çalışır.  
   
  Özel standart bağlama İçeri Aktarıcı, `ImportEndpoint` `IWsdlImportExtension` `CustomBinding` belirli bir standart bağlama tarafından oluşturulup oluşturulmayacağını görmek için meta verilerden içeri aktarılan örneği incelemek üzere arabirimindeki yöntemi uygular.  
@@ -302,10 +324,13 @@ if (context.Endpoint.Binding is CustomBinding)
  Genellikle, özel bir standart bağlama alma programı uygulamak, yalnızca standart bağlama tarafından ayarlanmış olabilecek özelliklerin değiştiğini ve diğer tüm özelliklerin varsayılan olduğunu doğrulamak için içeri aktarılan bağlama öğelerinin özelliklerinin denetlenmesini içerir. Standart bağlama İçeri Aktarıcı uygulamaya yönelik temel bir strateji, standart bağlamanın bir örneğini oluşturmaktır, özellikleri bağlama öğelerinden standart bağlamanın desteklediği standart bağlama örneğine yayar ve içeri aktarılan bağlama öğeleriyle standart bağlamalardan bağlama öğelerini karşılaştırın.  
   
 <a name="AddingConfigurationSupport"></a>
+
 ## <a name="adding-configuration-support"></a>Yapılandırma desteği ekleme  
+
  Aktarımımızı yapılandırma yoluyla göstermek için iki yapılandırma bölümü uygulamamız gerekir. Birincisi `BindingElementExtensionElement` için bir `UdpTransportBindingElement` . Bu, `CustomBinding` uygulamaların bağlama öğesine başvurabilmesi için kullanılır. İkincisi, bizim için bir ' dir `Configuration` `SampleProfileUdpBinding` .  
   
 ### <a name="binding-element-extension-element"></a>Bağlama öğesi uzantı öğesi  
+
  Bu bölüm, `UdpTransportElement` `BindingElementExtensionElement` `UdpTransportBindingElement` yapılandırma sistemine yönelik bir ' dır. Birkaç temel geçersiz kılma sayesinde yapılandırma bölüm adı ' nı, bağlama öðemizin türünü ve bağlama öğesini nasıl oluşturacağınız anlatılmaktadır. Ardından, aşağıdaki kodda gösterildiği gibi, uzantı bölümümüzü bir yapılandırma dosyasına kaydedebiliriz.  
   
 ```xml
@@ -337,6 +362,7 @@ if (context.Endpoint.Binding is CustomBinding)
 ```  
   
 ### <a name="binding-section"></a>Bağlama bölümü  
+
  Bu bölüm, `SampleProfileUdpBindingCollectionElement` `StandardBindingCollectionElement` `SampleProfileUdpBinding` yapılandırma sistemine yönelik bir ' dır. Uygulamanın toplu işlemi, `SampleProfileUdpBindingConfigurationElement` ' den türetilen öğesine Temsilcili `StandardBindingElement` . , `SampleProfileUdpBindingConfigurationElement` Üzerinde özelliklerine karşılık gelen özelliklerine `SampleProfileUdpBinding` ve bağlamadan eşlenecek işlevlere sahiptir `ConfigurationElement` . Son olarak, `OnApplyConfiguration` `SampleProfileUdpBinding` Aşağıdaki örnek kodda gösterildiği gibi, sitemizdeki yöntemi geçersiz kılın.  
   
 ```csharp
@@ -394,6 +420,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP test hizmeti ve Istemcisi  
+
  Bu örnek taşımanın kullanılması için test kodu, UdpTestService ve UdpTestClient dizinlerinde bulunabilir. Hizmet kodu iki testten oluşur; bir test koddan bağlamaları ve uç noktaları ayarlar ve diğeri de yapılandırma yoluyla yapılır. Her iki test iki uç nokta kullanır. Bir uç nokta `SampleUdpProfileBinding` ile [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) olarak ayarlanmış öğesini kullanır `true` . Diğer uç nokta ile özel bir bağlama kullanır `UdpTransportBindingElement` . Bu, `SampleUdpProfileBinding` olarak ayarlandığı ile eşdeğerdir [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) `false` . Her iki test de bir hizmet oluşturur, her bağlama için bir uç nokta ekler, hizmeti açar ve ardından hizmeti kapatmadan önce kullanıcının ENTER tuşuna basmasını bekler.  
   
  Hizmet testi uygulamasını başlattığınızda, aşağıdaki çıktıyı görmeniz gerekir.  

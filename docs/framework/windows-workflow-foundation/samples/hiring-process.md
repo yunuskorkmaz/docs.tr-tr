@@ -2,235 +2,240 @@
 title: İşe Alma İşlemi
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: ade72422d29d170e9c80f602f151ce765a1a00f7
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: baa6a48a5d16af9c325b47ba5e4c1fc3c820f786
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291696"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257229"
 ---
 # <a name="hiring-process"></a>İşe Alma İşlemi
-Bu örnek, ileti etkinliklerini ve iş akışı hizmetleri olarak barındırılan iki iş akışını kullanarak bir iş sürecinin nasıl uygulanacağını gösterir. Bu iş akışları Contoso, Inc. adlı kurgusal bir şirketin BT altyapısının bir parçasıdır.  
+
+Bu örnek, bir iş sürecinin ileti etkinlikleri ve iş akışı hizmetleri olarak barındırılan iki iş akışı kullanarak nasıl uygulanacağını gösterir. Bu iş akışları, contoso, Inc adlı kurgusal bir şirketin BT altyapısının bir parçasıdır.  
   
- İş `HiringRequest` akışı işlemi (a <xref:System.Activities.Statements.Flowchart>olarak uygulanır) kuruluştaki birkaç yöneticiden yetki ister. Bu amaca ulaşmak için, iş akışı kuruluştaki diğer varolan hizmetleri (bizim durumumuzda, bir gelen kutusu hizmeti ve düz Windows Communication Foundation (WCF) hizmetleri olarak uygulanan bir kuruluş veri hizmeti) kullanır.  
+ `HiringRequest`İş akışı işlemi (bir olarak uygulandı <xref:System.Activities.Statements.Flowchart> ), kuruluştaki çeşitli yöneticilerin yetkilendirilmesini ister. Bu hedefe ulaşmak için, iş akışı kuruluştaki diğer mevcut hizmetleri (bizim örneğimizde, bir gelen kutusu hizmeti ve düz Windows Communication Foundation (WCF) Hizmetleri olarak uygulanan bir kurumsal veri hizmeti) kullanır.  
   
- İş `ResumeRequest` akışı (bir <xref:System.Activities.Statements.Sequence>olarak uygulanır) Contoso'nun dış kariyer Web sitesinde bir iş ilanı yayınlar ve özgeçmiş edinimi yönetir. Bir iş ilanı, dış Web sitesinde belirli bir süre için (zaman aşımı süresi dolana kadar) veya Contoso'dan bir çalışan onu kaldırmaya karar verene kadar kullanılabilir.  
+ `ResumeRequest`İş akışı (olarak uygulandı <xref:System.Activities.Statements.Sequence> ), contoso 'nun dış gelişme Web sitesinde bir iş nakli yayımlar ve devam eden alımı yönetir. Bir iş nakli, dış Web sitesinde sabit bir süre (bir zaman aşımı süresi dolana kadar) veya bir contoso çalışanı tarafından kaldırmaya karar verdiğinde kullanılabilir.  
   
- Bu örnek aşağıdaki özellikleri [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]göstermektedir:  
+ Bu örnek, aşağıdaki özelliklerini gösterir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] :  
   
-- <xref:System.Activities.Statements.Flowchart>ve <xref:System.Activities.Statements.Sequence> iş süreçlerini modellemek için iş akışları.  
+- <xref:System.Activities.Statements.Flowchart><xref:System.Activities.Statements.Sequence>iş süreçlerini modellemeye yönelik iş akışları.  
   
-- İş Akışı Hizmetleri.  
+- İş akışı hizmetleri.  
   
-- Mesajlaşma Etkinlikleri.  
+- Mesajlaşma etkinlikleri.  
   
-- İçerik tabanlı korelasyon.  
+- İçerik tabanlı bağıntı.  
   
-- Özel etkinlikler (bildirimsel ve kod tabanlı).  
+- Özel Etkinlikler (bildirime dayalı ve kod tabanlı).  
   
-- Sistem sağlanan SQL sunucu kalıcılığı.  
+- Sistem tarafından sağlanmış SQL Server kalıcılığı.  
   
-- Özel <xref:System.Activities.Persistence.PersistenceParticipant>.  
+- Özel <xref:System.Activities.Persistence.PersistenceParticipant> .  
   
 - Özel izleme.  
   
-- Windows (ETW) İzleme için Olay İzleme.  
+- Windows için olay Izleme (ETW) Izleme.  
   
-- Faaliyetlerin bileşimi.  
+- Etkinliklerin oluşturulması.  
   
-- <xref:System.Activities.Statements.Parallel>Faaliyetleri.  
+- <xref:System.Activities.Statements.Parallel> işlemleri.  
   
-- <xref:System.Activities.Statements.CancellationScope>Etkinlik.  
+- <xref:System.Activities.Statements.CancellationScope> etkinlik.  
   
-- Dayanıklı zamanlayıcılar (aktivite).<xref:System.Activities.Statements.Delay>  
+- Dayanıklı zamanlayıcılar ( <xref:System.Activities.Statements.Delay> etkinlik).  
   
 - Hareket.  
   
 - Aynı çözümde birden fazla iş akışı.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
-## <a name="description-of-the-process"></a>Sürecin Açıklaması  
- Contoso, Inc. departmanlarının her birinde sayım üzerinde yakın kontrole sahip olmak istiyor. Bu nedenle, herhangi bir çalışan yeni bir işe alma süreci başlatmak istiyor, onlar işe alma aslında olabilir önce bir işe alma isteği süreci onayı geçmesi gerekir. Bu işleme işe alma süreci isteği (HiringRequestService projesinde tanımlanan) denir ve aşağıdaki adımlardan oluşur:  
+## <a name="description-of-the-process"></a>Işlemin açıklaması  
+
+ Contoso, Inc., departmanlarının her birinde bulunan soyad 'un denetimini kapatmasını istiyor. Bu nedenle, herhangi bir çalışan her zaman yeni bir işe alma işlemi başlatmak istediğinde, işe almanın gerçekten gerçekleşebilmesi için bir işe alma isteği işlem onayına gitmeleri gerekir. Bu işleme işlem isteği alma (Maingrequestservice projesinde tanımlanan) adı verilir ve aşağıdaki adımlardan oluşur:  
   
-1. Bir çalışan (talepçi) işe alma işlemi isteğini başlatır.  
+1. Bir çalışan (istek sahibi), işe alma işlemi isteğini başlatır.  
   
-2. İstekliyöneticinin isteği onaylaması gerekir:  
+2. İstek sahibinin yöneticisinin isteği onaylaması gerekir:  
   
-    1. Yönetici isteği reddedebilir.  
+    1. Yönetici, isteği reddedebilir.  
   
-    2. Yönetici, ek bilgi için isteği talep edene iade edebilir:  
+    2. Yönetici, ek bilgi için isteği istek sahibine döndürebilir:  
   
-        1. İstekçi, isteği gözden geçirir ve yöneticiye geri gönderir.  
+        1. İstek sahibi gözden geçirir ve isteği yöneticiye geri gönderir.  
   
     3. Yönetici onaylayabilir.  
   
-3. İsteksahibinin yöneticisi onayladıktan sonra, bölüm sahibinin isteği onaylaması gerekir:  
+3. İstek sahibinin Yöneticisi onayladıktan sonra, departmanın sahibi isteği onaylaması gerekir:  
   
-    1. Bölüm sahibi reddedebilir.  
+    1. Departman sahibi reddedebilirler.  
   
-    2. Bölüm sahibi onaylayabilir.  
+    2. Departman sahibi onaylayabilirler.  
   
-4. Bölüm sahibi onayladıktan sonra, işlem 2 İk yöneticisinin veya CEO'nun onayını gerektirir:  
+4. Departman sahibi onaylandıktan sonra, işlem 2 HR yöneticilerinin veya CEO 'nun onayını gerektirir:  
   
-    1. İşlem kabul edilen veya reddedilen duruma geçiş yapabilir.  
+    1. İşlem kabul edilen veya reddedilmiş duruma geçirebilir.  
   
-    2. İşlem Kabul edilirse, iş akışının `ResumeRequest` yeni bir örneği`ResumeRequest` başlatılır (bir hizmet başvurusu ile HiringRequest.csproj'a bağlanır.)  
+    2. İşlem kabul edilirse, iş akışının yeni bir örneği `ResumeRequest` başlatılır ( `ResumeRequest` bir hizmet başvurusu aracılığıyla Maingrequest. csproj öğesine bağlanır.)  
   
- Yöneticiler yeni bir çalışanın işe alınmasını onayladıktan sonra, İk uygun adayı bulmak zorundadır. Bu işlem, ResumeRequestService.csproj'da tanımlanan ikinci iş akışı tarafından`ResumeRequest`gerçekleştirilir. Bu iş akışı, Contoso'nun dış Kariyer Web sitesine kariyer fırsatı olan bir iş ilanı gönderme işlemini tanımlar, başvuru sahiplerinden özgeçmiş alır ve iş ilanının durumunu izler. Pozisyonlar belirli bir süre için (bir süre sona erene kadar) veya Contoso'dan bir çalışan onu kaldırmaya karar verene kadar kullanılabilir. İş `ResumeRequest` akışı aşağıdaki adımlardan oluşur:  
+ Yöneticiler yeni bir çalışanın işe alım düzeyini onayladıktan sonra, HR uygun adayı bulmalıdır. Bu işlem ikinci iş akışı ( `ResumeRequest` , ResumeRequestService. csproj içinde tanımlanan) tarafından gerçekleştirilir. Bu iş akışı, contoso 'nun dış önişlemcisi Web sitesi için bir kariyer fırsatına sahip bir iş gönderme sürecini tanımlar, başvuranlardan devam eden özgeçmişleri alır ve iş naklinin durumunu izler. Pozisyonlar, sabit bir zaman diliminde (bir süre sona erene kadar) veya contoso 'dan bir çalışan tarafından kaldırmaya karar verdiğinde kullanılabilir. `ResumeRequest`İş akışı aşağıdaki adımlardan oluşur:  
   
-1. Contoso'dan bir çalışan, pozisyon ve zaman çıkış süresi yle ilgili bilgileri tipler. Çalışan bu bilgileri yazdıktan sonra, pozisyon Kariyer Web sitesinde deftere nakledilir.  
+1. Konum ve zaman aşımı süresi hakkında bilgi için Contoso türlerinden bir çalışan. Çalışan bu bilgiyi yazdığında, konum, bu web sitesinde gönderilir.  
   
-2. Bilgiler yayınlandıktan sonra, ilgili taraflar özgeçmişlerini sunabilirler. Özgeçmiş gönderildiğinde, iş açmayla bağlantılı bir kayıtta depolanır.  
+2. Bilgiler yayımlandıktan sonra ilgilenen taraflar, devam etmesini gönderebilirler. Bir özgeçmişi gönderildiğinde, iş açmaya bağlı bir kayıtta depolanır.  
   
-3. Başvuru sahipleri, zaman aşımı süresi dolana veya Contoso İk departmanından biri süreci durdurarak ilanı kaldırmaya karar verene kadar özgeçmiş sunabilir.  
+3. Başvuranlar, zaman aşımı süresi dolana veya Contoso HR departmanından birisinin, işlemi durdurarak nakli kaldırmaya karar verdiği sürece devam edebilir.  
   
 ## <a name="projects-in-the-sample"></a>Örnekteki projeler  
- Aşağıdaki tablo, örnek çözümdeki projeleri gösterir.  
+
+ Aşağıdaki tabloda, örnek çözümdeki projeler gösterilmektedir.  
   
-|Project|Açıklama|  
+|Proje|Açıklama|  
 |-------------|-----------------|  
-|ContosoHR|Veri sözleşmeleri, iş nesneleri ve depo sınıfları içerir.|  
-|İşe AlmaRequestService|İşe Alma İstek Süreci iş akışının tanımını içerir.<br /><br /> Bu proje, iş akışını (xaml dosyası) bir hizmet olarak kendi kendine barındıran bir konsol uygulaması olarak uygulanır.|  
-|ResumeRequestService|Bir zaman aşımı süresi dolana veya birisi işlemin durdurulması gerektiğine karar verene kadar adaylardan özgeçmiş toplayan bir iş akışı hizmeti.<br /><br /> Bu proje bir bildirimsel iş akışı hizmeti (xamlx) olarak uygulanmaktadır.|  
-|OrgService|Kuruluş bilgilerini (Çalışanlar, Pozisyonlar, Pozisyon Türleri ve Bölümler) ortaya çıkaran bir hizmet. Bu hizmeti, Kurumsal Kaynak Planı'nın (ERP) Şirket Organizasyonu modülü olarak düşünebilirsiniz.<br /><br /> Bu proje, bir Windows Communication Foundation (WCF) hizmetini ortaya çıkaran bir konsol uygulaması olarak uygulanmaktadır.|  
-|Gelen KutusuServisi|Çalışanlar için eyleme geçirilebilir görevler içeren bir gelen kutusu.<br /><br /> Bu proje, bir WCF hizmetini ortaya çıkaran bir konsol uygulaması olarak uygulanır.|  
-|Dahili Müşteri|İşlemle etkileşim kurmak için bir Web uygulaması. Kullanıcılar HiringProcess iş akışlarını başlatabilir, katılabilir ve görüntüleyebilir. Bu uygulamayı kullanarak ResumeRequest işlemlerini başlatabilir ve izleyebilirler.<br /><br /> Bu site Contoso intranet iç olmak için uygulanmaktadır. Bu proje bir ASP.NET Web sitesi olarak uygulanmaktadır.|  
-|KariyerWebSitesi|Contoso'daki açık pozisyonları ortaya çıkaran harici bir Web sitesi. Herhangi bir potansiyel aday bu siteye gidebilir ve özgeçmiş gönderebilir.|  
+|ContosoHR|Veri sözleşmeleri, iş nesneleri ve depo sınıflarını içerir.|  
+|Maingrequestservice|Işe alma Isteği Işlemi iş akışının tanımını içerir.<br /><br /> Bu proje, iş akışını (XAML dosyası) bir hizmet olarak barındırtığı bir konsol uygulaması olarak uygulanır.|  
+|ResumeRequestService|Bir zaman aşımı süresi dolana kadar veya başka biri işlemin durdurulması gerektiğini belirten adaylardan özgeçmişler toplayan bir iş akışı hizmetidir.<br /><br /> Bu proje bildirim temelli bir iş akışı hizmeti (xamlx) olarak uygulanır.|  
+|OrgService|Kuruluş bilgilerini (çalışanlar, pozisyonlar, PositionTypes ve departmanlar) kullanıma sunan bir hizmet. Bu hizmeti bir kurumsal kaynak planının (ERP) Şirket kuruluş modülü olarak düşünebilirsiniz.<br /><br /> Bu proje, bir Windows Communication Foundation (WCF) hizmetini kullanıma sunan bir konsol uygulaması olarak uygulanır.|  
+|InboxService|Çalışanlar için eyleme dönüştürülebilir görevler içeren bir gelen kutusu.<br /><br /> Bu proje, bir WCF hizmetini kullanıma sunan bir konsol uygulaması olarak uygulanır.|  
+|InternalClient|İşlemle etkileşimde bulunmak için bir Web uygulaması. Kullanıcılar, Maingprocess iş akışlarını başlatabilir, katılabilir ve görüntüleyebilir. Bu uygulamayı kullanarak, ResumeRequest süreçlerini de başlatabilir ve izleyebilirler.<br /><br /> Bu site contoso intraneti için dahili olarak uygulanır. Bu proje bir ASP.NET Web sitesi olarak uygulanır.|  
+|Umuersweb sitesi|Contoso 'da açık konumları kullanıma sunan bir dış Web sitesi. Potansiyel aday, bu siteye gidebilir ve bir özgeçmişi gönderebilir.|  
   
 ## <a name="feature-summary"></a>Özellik özeti  
- Aşağıdaki tabloda, her özelliğin bu örnekte nasıl kullanıldığı açıklanmaktadır.  
+
+ Aşağıdaki tabloda her bir özelliğin bu örnekte nasıl kullanıldığı açıklanmaktadır.  
   
 |Özellik|Açıklama|Project|  
 |-------------|-----------------|-------------|  
-|Akış Çizelgesi|İş süreci bir akış şeması olarak temsil edilir. Bu akış şeması açıklaması, bir işletmenin onu beyaz tahtaya çizdiği şekilde süreci temsil eder.|İşe AlmaRequestService|  
-|İş akışı hizmetleri|İşlem tanımına sahip Akış Şeması bir hizmette barındırılır (bu örnekte, hizmet bir konsol uygulamasında barındırılır).|İşe AlmaRequestService|  
-|Mesajlaşma etkinlikleri|Akış şeması mesajlaşma etkinliklerini iki şekilde kullanır:<br /><br /> - Kullanıcıdan bilgi almak için (her onay adımında kararları ve ilgili bilgileri almak için).<br />- Mevcut diğer hizmetlerle etkileşimkurmak için (Hizmet referansları aracılığıyla kullanılan Gelen Kutusu Hizmeti ve OrgDataService).|İşe AlmaRequestService|  
-|İçerik tabanlı korelasyon|Onay iletileri işe alma isteğinin kimlik özelliği yle ilişkilidir:<br /><br /> - Bir işlem başlatıldığında, korelasyon tutamacı isteğin kimliği ile başlatılır.<br />- Gelen onay iletileri kimlikleri üzerinde ilişkilidir (her onay iletisinin ilk parametresi isteğin kimliğidir).|HiringRequestService / ResumeRequestService|  
-|Özel etkinlikler (bildirim ve kod tabanlı)|Bu örnekte birkaç özel etkinlik vardır:<br /><br /> -   `SaveActionTracking`: Bu etkinlik bir <xref:System.Activities.Tracking.TrackingRecord> özel <xref:System.Activities.NativeActivityContext.Track%2A>(kullanarak) yayır. Bu etkinlik, zorunlu kod genişletme <xref:System.Activities.NativeActivity>kullanılarak yazılmış.<br />-   `GetEmployeesByPositionTypes`: Bu etkinlik konum türü iT'lerin listesini alır ve Contoso'da bu konuma sahip kişilerin listesini döndürür. Bu etkinlik bildirimsel olarak (etkinlik tasarımcısı kullanılarak) yatılmıştır.<br />-   `SaveHiringRequestInfo`: Bu etkinlik bir `HiringRequest` (kullanarak) `HiringRequestRepository.Save`bilgilerini kaydeder. Bu etkinlik, zorunlu kod genişletme <xref:System.Activities.CodeActivity>kullanılarak yazılmış.|İşe AlmaRequestService|  
-|Sistem sağlanan SQL Server Kalıcılığı|Flowchart işlem tanımını barındıran <xref:System.ServiceModel.Activities.WorkflowServiceHost> örnek, sistem tarafından sağlanan SQL Server kalıcılığını kullanacak şekilde yapılandırılır.|HiringRequestService / ResumeRequestService|  
-|Özel İzleme|Örnek, bir eylemin geçmişini kaydeden özel bir `HiringRequestProcess` izleme katılımcısı içerir (bu, eylemin ne zaman yapıldığını, kim tarafından ve ne zaman yapıldığını kaydeder). Kaynak kodu HiringRequestService'in İzleme klasöründedir.|İşe AlmaRequestService|  
-|ETW Takip|Sistem tarafından sağlanan ETW İzleme, HiringRequestService hizmetindeki App.config dosyasında yapılandırılır.|İşe AlmaRequestService|  
-|Etkinliklerin Bileşimi|İşlem tanımı serbest bileşimi <xref:System.Activities.Activity>ni kullanır. Akış Şeması, aynı anda başka etkinlikler (vb.) içeren birkaç Sıra ve Paralel etkinlik içerir.|İşe AlmaRequestService|  
-|Paralel Faaliyetler|-   <xref:System.Activities.Statements.ParallelForEach%601>paralel olarak CEO ve İk Yöneticilerinin Gelen Kutusuna kaydolmak için kullanılır (Iki İk Yöneticisinin Onay Adımını Beklerken).<br />-   <xref:System.Activities.Statements.Parallel>Tamamlanan ve Reddedilen adımlardaki bazı temizleme görevlerini yapmak için kullanılır|İşe AlmaRequestService|  
-|Model İptali|Flowchart iptal <xref:System.Activities.Statements.CancellationScope> davranışı oluşturmak için kullanır (bu durumda bazı temizleme yapar.)|İşe AlmaRequestService|  
-|Müşteri Kalıcılığı Katılımcısı|`HiringRequestPersistenceParticipant`verileri iş akışı değişkeninden Contoso İK veritabanında depolanan bir tabloya kaydeder.|İşe AlmaRequestService|  
-|İş Akışı Hizmetleri|`ResumeRequestService`iş akışı hizmetleri kullanılarak uygulanır. İş akışı tanımı ve hizmet bilgileri ResumeRequestService.xamlx'ta bulunur. Hizmet kalıcılık ve izleme kullanmak üzere yapılandırılır.|ResumeRequestService|  
-|Dayanıklı Zamanlayıcılar|`ResumeRequestService`Bir İş Gönderme süresini tanımlamak için dayanıklı zamanlayıcılar kullanır (bir zaman aşımı sona erdiğinde, İş Gönderme kapatılır).|ResumeRequestService|  
-|İşlemler|<xref:System.Activities.Statements.TransactionScope>çeşitli etkinliklerin yürütülmesi içinde veri tutarlılığı sağlamak için kullanılır (yeni bir özgeçmiş aldığında).|ResumeRequestService|  
-|İşlemler|Özel kalıcılık katılımcısı (`HiringRequestPersistenceParticipant`)`HistoryFileTrackingParticipant`ve özel izleme katılımcısı ( ) aynı hareketi kullanır.|İşe AlmaRequestService|  
-|ASP.NET [!INCLUDE[wf1](../../../../includes/wf1-md.md)] uygulamalarda kullanma.|İş akışlarına iki ASP.NET uygulamadan erişilir.|InternalClient / CareersWebSite|  
+|Akış Çizelgesi|İş süreci bir akış çizelgesi olarak temsil edilir. Bu akış çizelgesi açıklaması, bir işletmenin bir beyaz tahtada çizileceği şekilde işlemi temsil eder.|Maingrequestservice|  
+|İş akışı hizmetleri|İşlem tanımına sahip akış çizelgesi bir hizmette barındırılır (Bu örnekte hizmet bir konsol uygulamasında barındırılır).|Maingrequestservice|  
+|Mesajlaşma etkinlikleri|Akış çizelgesi mesajlaşma etkinliklerini iki şekilde kullanır:<br /><br /> -Kullanıcıdan bilgi almak için (her onay adımında kararları ve ilgili bilgileri almak için).<br />-Hizmet başvuruları aracılığıyla kullanılan diğer mevcut hizmetlerle (InboxService ve OrgDataService) etkileşim kurmak için.|Maingrequestservice|  
+|İçerik tabanlı bağıntı|Onay iletileri, işe alma isteğinin ID özelliği ile bağıntılı:<br /><br /> -Bir işlem başlatıldığında bağıntı tanıtıcısı, isteğin KIMLIĞIYLE başlatılır.<br />-Gelen onay iletileri kendi KIMLIĞIYLE bağıntılı (her onay iletisinin ilk parametresi isteğin KIMLIĞIDIR).|HiringRequestService/ResumeRequestService|  
+|Özel Etkinlikler (bildirime dayalı ve kod tabanlı)|Bu örnekte birkaç özel etkinlik vardır:<br /><br /> -   `SaveActionTracking`: Bu etkinlik özel <xref:System.Activities.Tracking.TrackingRecord> (kullanarak) yayar <xref:System.Activities.NativeActivityContext.Track%2A> . Bu etkinlik, zorunlu kod genişletme kullanılarak yazıldı <xref:System.Activities.NativeActivity> .<br />-   `GetEmployeesByPositionTypes`: Bu etkinlik konum türü kimliklerinin bir listesini alır ve contoso 'da bu konuma sahip kişilerin listesini döndürür. Bu etkinlik bildirimli olarak yazıldı (etkinlik Tasarımcısı kullanılarak).<br />-   `SaveHiringRequestInfo`: Bu etkinlik bir `HiringRequest` (kullanarak) bilgilerini kaydeder `HiringRequestRepository.Save` . Bu etkinlik, zorunlu kod genişletme kullanılarak yazıldı <xref:System.Activities.CodeActivity> .|Maingrequestservice|  
+|Sistem tarafından sağlanmış SQL Server kalıcılığı|<xref:System.ServiceModel.Activities.WorkflowServiceHost>Akış çizelgesi işlem tanımını barındıran örnek, sistem tarafından belirtilen SQL Server kalıcılığı kullanacak şekilde yapılandırılmıştır.|HiringRequestService/ResumeRequestService|  
+|Özel İzleme|Örnek, a geçmişini kaydeden bir özel izleme katılımcısı içerir `HiringRequestProcess` (Bu, ne zaman yapıldığını, kim tarafından ve ne zaman yapıldığını kaydeder). Kaynak kodu, Maingrequestservice Izleme klasöründedir.|Maingrequestservice|  
+|ETW Izleme|Sistem tarafından belirtilen ETW Izleme, Maingrequestservice hizmetindeki App.config dosyasında yapılandırılır.|Maingrequestservice|  
+|Etkinliklerin kompozisyonu|İşlem tanımı, öğesinin serbest birleşimini kullanır <xref:System.Activities.Activity> . Akış çizelgesi, aynı anda diğer etkinlikleri (vb.) içeren birkaç sıra ve paralel etkinlikler içerir.|Maingrequestservice|  
+|Paralel etkinlikler|-   <xref:System.Activities.Statements.ParallelForEach%601> , GM ve HR yöneticilerinin gelen kutusuna paralel olarak (iki HR yöneticilerinin onay adımını bekliyor) kaydolmak için kullanılır.<br />-   <xref:System.Activities.Statements.Parallel> Tamamlanan ve reddedilen adımlarda bazı temizleme görevleri yapmak için kullanılır|Maingrequestservice|  
+|Model Iptali|Akış çizelgesi, <xref:System.Activities.Statements.CancellationScope> iptal davranışı oluşturmak için kullanır (Bu durumda bazı temizleme yapar.)|Maingrequestservice|  
+|Müşteri kalıcılığı Katılımcısı|`HiringRequestPersistenceParticipant` bir iş akışı değişkenindeki verileri Contoso HR veritabanında depolanan bir tabloya kaydeder.|Maingrequestservice|  
+|İş Akışı Hizmetleri|`ResumeRequestService` , iş akışı hizmetleri kullanılarak uygulanır. İş akışı tanımı ve hizmet bilgileri ResumeRequestService. xamlx içinde yer alır. Hizmet, kalıcılığı ve izlemeyi kullanacak şekilde yapılandırıldı.|ResumeRequestService|  
+|Dayanıklı zamanlayıcılar|`ResumeRequestService` , bir Iş naklinin süresini tanımlamak için dayanıklı zamanlayıcılar kullanır (bir zaman aşımı süresi dolarsa, Iş nakli kapatılır).|ResumeRequestService|  
+|İşlemler|<xref:System.Activities.Statements.TransactionScope> , birkaç etkinliğin yürütülmesi içindeki verilerin tutarlılığını sağlamak için kullanılır (yeni bir özgeçmişi alındığında).|ResumeRequestService|  
+|İşlemler|Özel Kalıcılık Katılımcısı ( `HiringRequestPersistenceParticipant` ) ve özel izleme katılımcısı ( `HistoryFileTrackingParticipant` ) aynı işlemi kullanır.|Maingrequestservice|  
+|[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ASP.NET uygulamalarında kullanma.|İş akışlarına iki ASP.NET uygulamasından erişilir.|InternalClient/Umuersweb sitesi|  
   
 ## <a name="data-storage"></a>Veri Depolama  
- Veriler, (bu veritabanını oluşturmak `ContosoHR` için komut dosyası `DbSetup` klasöründe bulunur) adlı bir SQL Server veritabanında depolanır. İş akışı örnekleri, SQL Server veritabanında `InstanceStore` depolanır (örnek deposu oluşturmak için [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] komut dosyaları dağıtımın bir parçasıdır).  
+
+ Veriler adlı bir SQL Server veritabanında depolanır `ContosoHR` (Bu veritabanını oluşturmak için komut dosyası `DbSetup` klasöründe bulunur). İş akışı örnekleri, adlı bir SQL Server veritabanında depolanır `InstanceStore` (örnek deposu oluşturmaya yönelik betikler dağıtımın bir parçasıdır [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ).  
   
- Her iki veritabanı da Visual Studio için Geliştirici Komut Komut Ustem'den Setup.cmd komut dosyası çalıştırılarak oluşturulur.  
+ Her iki veritabanı de Visual Studio için bir Geliştirici Komut İstemi Setup. cmd betiği çalıştırılarak oluşturulur.  
   
 ## <a name="running-the-sample"></a>Örneği çalıştırma  
   
 #### <a name="to-create-the-databases"></a>Veritabanlarını oluşturmak için  
   
-1. Visual Studio için geliştirici komut istemini açın.  
+1. Visual Studio için bir Geliştirici Komut İstemi açın.  
   
 2. Örnek klasörüne gidin.  
   
-3. Setup.cmd çalıştırın.  
+3. Setup. cmd ' i çalıştırın.  
   
-4. İki veritabanının `ContosoHR` ve `InstanceStore` SQL Express'te oluşturulduğunu doğrulayın.  
+4. İki veritabanının `ContosoHR` `InstanceStore` SQL Express 'te oluşturulduğunu doğrulayın.  
   
-#### <a name="to-set-up-the-solution-for-execution"></a>Yürütme için çözüm ayarlamak için  
+#### <a name="to-set-up-the-solution-for-execution"></a>Çözümü yürütmeye ayarlamak için  
   
-1. Visual Studio'yu yönetici olarak çalıştırın. Açık HiringRequest.sln.  
+1. Visual Studio'yu yönetici olarak çalıştırın. Maingrequest. sln öğesini açın.  
   
-2. **Çözüm Gezgini'nde** çözüme sağ tıklayın ve **Özellikler'i**seçin.  
+2. **Çözüm Gezgini** ' de çözüme sağ tıklayın ve **Özellikler**' i seçin.  
   
-3. **Birden Fazla Başlangıç Projeleri** seçeneğini seçin ve **CareersWebSite,** **InternalClient,** **HiringRequestService**ve **ResumeRequestService'i** **başlatın.** **ContosoHR,** **InboxService**ve **OrgService'i** Yok olarak bırakın.  
+3. **Birden çok başlangıç projesi** seçeneğini belirleyin ve ersan **Web sitesini**, **InternalClient**, **HiringRequestService** ve **ResumeRequestService** ' i **Başlangıç** olarak ayarlayın. **ContosoHR**, **InboxService** ve **OrgService** ' i None olarak bırakın.  
   
-4. CTRL+SHIFT+B tuşuna basarak çözümü oluşturun. Yapının başarılı olduğunu doğrulayın.  
+4. CTRL + SHIFT + B tuşlarına basarak çözümü oluşturun. Yapılandırmanın başarılı olduğunu doğrulayın.  
   
 #### <a name="to-run-the-solution"></a>Çözümü çalıştırmak için  
   
-1. Çözüm yapıldıktan sonra hata ayıklamadan çalıştırmak için CTRL+F5 tuşuna basın. Tüm hizmetlerin başladığını doğrulayın.  
+1. Çözüm oluşturulduktan sonra, hata ayıklamadan çalıştırmak için CTRL + F5 tuşlarına basın. Tüm hizmetlerin başlatıldığını doğrulayın.  
   
-2. Çözümde **InternalClient'a** sağ tıklayın ve **ardından Tarayıcıda Görüntüle'yi**seçin. Varsayılan sayfa `InternalClient` görüntülenir. Hizmetlerin çalıştığını emin olun ve bağlantıyı tıklatın.  
+2. Çözümdeki **InternalClient** öğesine sağ tıklayın ve ardından **Tarayıcıda görüntüle**' yi seçin. Varsayılan sayfası `InternalClient` görüntülenir. Hizmetlerin çalıştığından emin olun ve bağlantıya tıklayın.  
   
-3. **HiringRequest** modülü görüntülenir. Burada ayrıntılı senaryoyu takip edebilirsiniz.  
+3. **HiringRequest** modülü görüntülenir. Burada ayrıntılı senaryoyu izleyebilirsiniz.  
   
-4. `HiringRequest` Tamamlandıktan sonra, `ResumeRequest`başlatabilirsiniz. Burada ayrıntılı senaryoyu takip edebilirsiniz.  
+4. Tamamlandıktan sonra, `HiringRequest` ' yi başlatabilirsiniz `ResumeRequest` . Burada ayrıntılı senaryoyu izleyebilirsiniz.  
   
-5. `ResumeRequest` Yayınlandığında, genel Web sitesinde (Contoso Careers Web Sitesi) kullanılabilir. İş Gönderme'yi (ve pozisyona başvurmak) görmek için Kariyer Web Sitesine gidin.  
+5. Gönderildiğinde `ResumeRequest` , genel web sitesinde (contoso gelişme Web sitesi) kullanılabilir. Iş gönderme Işlemini görmek için (ve konum için geçerlidir), kariyer web sitesine gidin.  
   
-6. Çözümde **CareersWebSite'ye** sağ tıklayın ve **Tarayıcıda Görüntüle'yi**seçin.  
+6. Çözümdeki **gelişme Web sitesini** sağ tıklatın ve **Tarayıcıda görüntüle**' yi seçin.  
   
-7. Çözümde `InternalClient` **InternalClient'ı** sağ tıklayarak ve **Tarayıcıda Görünüm'i**seçerek geri gidin.  
+7. `InternalClient`Çözümdeki **InternalClient** öğesine sağ tıklayıp **Tarayıcıda görüntüle**' yi seçerek öğesine geri gidin.  
   
-8. Gelen kutusu üst menüsündeki İş **Defterleri** bağlantısını tıklayarak **İş Gönderileri** bölümüne gidin. Burada ayrıntılı senaryoyu takip edebilirsiniz.  
+8. Gelen kutusu üst menüsündeki **Iş nakilleri** bağlantısına tıklayarak **jobnakiller** bölümüne gidin. Burada ayrıntılı senaryoyu izleyebilirsiniz.  
   
 ## <a name="scenarios"></a>Senaryolar  
   
-### <a name="hiring-request"></a>İşe alma talebi  
+### <a name="hiring-request"></a>İşe Alım isteği  
   
-1. Michael Alexander (Yazılım Mühendisi), Mühendislik bölümünde C#'da en az 3 yıllık deneyime sahip bir Yazılım Mühendisi (SDET) almak için yeni bir pozisyon talep etmek istiyor.  
+1. Michael Alexander (yazılım mühendisi), C# ' de en az 3 yıllık deneyim içeren Mühendislik bölümünde test (SDET) içinde bir yazılım mühendisi sağlamak için yeni bir konum istemek istiyor.  
   
-2. Oluşturulduktan sonra, istek Michael'ın gelen kutusunda görünür (isteği görmüyorsanız **Yenile'yi** tıklatın) Michael'ın yöneticisi olan Peter Brehm'in onayını bekler.  
+2. Oluşturulduktan sonra, istek Michael 'nin gelen kutusunda görünür (isteği görmüyorsanız **Yenile** ' ye tıklayın) kemal 'in Yöneticisi olan Peter Brehm onayını bekliyor.  
   
-3. Peter, Michael'ın isteği üzerine harekete geçsin istiyor. Pozisyonun 3 yerine 5 yıllık C# deneyimi gerektirdiğini düşünüyor, bu yüzden yorumlarını gözden geçiriliyor.  
+3. Peter, Michael 'ın isteğine göre hareket etmek istiyor. Konum için 3 yılı yerine 5 yıllık bir değer ister. bu nedenle, yorumlarını gözden geçirmek için geri gönderir.  
   
-4. Michael gelen kutusunda menajerinden gelen bir mesaj görür ve harekete geçer. Michael pozisyon isteğinin geçmişini görür ve Peter ile aynı fikirdedir. Michael, açıklamayı 5 yıllık C# deneyimi gerektirecek şekilde değiştirir ve değişikliği kabul eder.  
+4. Michael, gelen kutusunda yöneticisinden bir ileti görüyor ve işlem yapmak istiyor. Michael, konum isteği geçmişini görüyor ve Peter ile kabul eder. Michael, 5 yıllık C# deneyimi gerektirmek için açıklamayı değiştirir ve değişikliği kabul eder.  
   
-5. Peter, Michael'ın değiştirilmiş isteğini yerine koyar ve kabul eder. Talep şimdi Mühendislik Direktörü Tsvi Reiter tarafından onaylanmalıdır.  
+5. Peter, Michael 'in değiştirilmiş isteği üzerinde davranır ve bunu kabul eder. İsteğin şimdi mühendislik, Tsvi Reiter müdürü tarafından onaylanması gerekir.  
   
-6. Tsvi Reiter isteği hızlandırmak istiyor, bu yüzden bir yorum isteği acil olduğunu söylemek koyar ve kabul eder.  
+6. Tsvı Reiter isteği hızlandırmak istiyor, bu nedenle isteğin acil olduğunu ve kabul ettiğini söylemek için bir açıklama koyar.  
   
-7. İstek şimdi iki İk yöneticileri veya CEO tarafından onaylanması gerekir. CEO, Brian Richard Goldstein, Tsvi tarafından acil istek görür. İsteğe göre hareket ederek kabul eder ve böylece iki İk yöneticisinin onayını atlar.  
+7. İsteğin şimdi iki HR Yöneticisi veya CEO tarafından onaylanması gerekebilir. CEO, Brian Richard Goldstein, Tsvi tarafından acil istek görür. Bunu kabul ederek istek üzerinde davranır ve bu sayede onay iki HR Yöneticisi tarafından atlanarak yapılır.  
   
-8. İstek Michael'ın gelen kutusundan kaldırılır ve bir SDET işe alma işlemi şimdi başladı.  
+8. İstek, Michael 'ın gelen kutusundan kaldırılır ve bir SDET işe alma işlemi artık başlamış olur.  
   
-### <a name="start-resume-request"></a>Özgeçmiş İsteğini Başlat  
+### <a name="start-resume-request"></a>Yeniden başlatma Isteği  
   
-1. Şimdi, iş pozisyonu insanların başvurabileceği harici bir Web sitesine gönderilmeyi bekliyor **(İş Ilanları** bağlantısını tıklatarak görebilirsiniz). Şu anda, iş pozisyonu iş konumunu sonuçlandırıp göndermekten sorumlu bir İk temsilcisiyle birlikte oturuyor.  
+1. Şimdi, iş konumu kişilerin uygulayabileceği bir dış Web sitesine gönderilmesini bekliyor ( **Iş nakilleri** bağlantısına tıklamasını istediğinizi görebilirsiniz). Şu anda iş konumu, iş konumunun sonuçlandırmasından ve deftere naklinden sorumlu bir ık temsilcisiyle birlikte çalışıyor.  
   
-2. İk bu iş konumunu **(Düzenleme** bağlantısını tıklayarak) 60 dakika (gerçek hayatta, bu gün veya hafta olabilir) bir zaman-out ayarlayarak düzenlemek istiyor. Zaman ayarı, iş konumunun belirtilen zamana göre dış Web sitesinden alınmasını sağlar.  
+2. HR, 60 dakikalık bir zaman aşımı ayarlayarak ( **düzenleme** bağlantısına tıklayarak) bu iş konumunu düzenlemek istiyor (gerçek hayatta bu, gün veya hafta olabilir). Zaman aşımı, iş konumunun, belirtilen saate göre dış Web sitesinden alınmasını sağlar.  
   
-3. Düzenlenen iş konumunu kurtardıktan sonra, **Gelen Devamlar** sekmesinde görünür (yeni iş konumunu görmek için Web sayfasını yenileyin).  
+3. Düzenlenmiş iş konumunu kaydettikten sonra, bu işlem **alma devam** ediyor sekmesinde görünür (yeni iş konumunu görmek için Web sayfasını yenileyin).  
   
-### <a name="collecting-resumes"></a>Özgeçmiş Toplama  
+### <a name="collecting-resumes"></a>Özgeçmişler toplanıyor  
   
-1. İş konumu dış Web sitesinde görünmelidir. İş başvurusunda bulunmak isteyen biri olarak, bu pozisyona başvurabilir ve özgeçmişinizi gönderebilirsiniz.  
+1. İş konumu dış Web sitesinde görünmelidir. İş için uygulama ile ilgilenen bir kişi olarak, bu konum için uygulayabilir ve özgeçmişinizi gönderebilirsiniz.  
   
-2. İş Ilanları Listesi hizmetine geri dönerseniz, şimdiye kadar toplanan "özgeçmişleri görüntüleyebilirsiniz".  
+2. Iş nakilleri listesi hizmetine geri giderseniz, şimdiye kadar toplanmış "özgeçmişleri görüntüleyebilirsiniz".  
   
-3. İk ayrıca özgeçmiş toplamayı da durdurabilir (örneğin, doğru aday belirlendikten sonra).  
+3. HR Ayrıca, devam eden (örneğin, doğru aday tanımlandıktan sonra) geri özgeçmişler toplamayı durdurabilir.  
   
 ## <a name="troubleshooting"></a>Sorun giderme  
   
-1. Visual Studio'yı yönetici ayrıcalıklarıyla çalıştırdığınızdan emin olun.  
+1. Visual Studio 'Yu yönetici ayrıcalıklarıyla çalıştırıyor olduğunuzdan emin olun.  
   
-2. Çözüm oluşturamazsa, aşağıdakileri doğrulayın:  
+2. Çözüm derlemezse, aşağıdakileri doğrulayın:  
   
-    - Başvuru `ContosoHR` `InternalClient` veya `CareersWebSite` projelerde eksik değildir.  
+    - Başvurusu `ContosoHR` `InternalClient` veya `CareersWebSite` projelerinde yok.  
   
-3. Çözüm yürütülmezse, aşağıdakileri doğrulayın:  
+3. Çözüm yürütülemezse, aşağıdakileri doğrulayın:  
   
     1. Tüm hizmetler çalışıyor.  
   
     2. Hizmet başvuruları güncelleştirildi.  
   
-        1. App_WebReferences klasörünü açma  
+        1. App_WebReferences klasörünü açın  
   
-        2. **Contoso'ya** sağ tıklayın ve **Web/Hizmet Başvurularını Güncelleştir'i**seçin.  
+        2. **Contoso** öğesine sağ tıklayın ve **Web/hizmet başvurularını Güncelleştir**' i seçin.  
   
-        3. Visual Studio'da CTRL+SHIFT+B tuşuna basarak çözümü yeniden oluşturun.  
+        3. Visual Studio 'da CTRL + SHIFT + B tuşlarına basarak çözümü yeniden oluşturun.  
   
-## <a name="uninstalling"></a>Kaldırma  
+## <a name="uninstalling"></a>Kaldırıyor  
   
-1. DbSetup klasöründe bulunan Cleanup.bat'ı çalıştırarak SQL Server örnek deposunu silin.  
+1. DbSetup klasöründe bulunan Cleanup.bat çalıştırarak SQL Server örnek deposunu silin.  
   
-2. Sabit diskinizin kaynak kodunu silin.
+2. Sabit sürücünüzün kaynak kodunu silin.

@@ -2,15 +2,16 @@
 title: 'Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 54594a8f464e77062c658606db6bc941e319f71d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cf30ace90f86e282d72c4da5f2c3707905360aeb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599106"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257359"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma
-Bu konu başlığında barındırılan bir iş akışı için izlemenin nasıl yapılandırılacağı açıklanmaktadır [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Bir hizmet davranışı belirtilerek bir Web. config dosyası aracılığıyla yapılandırılır.  
+
+Bu konu başlığında barındırılan bir iş akışı için izlemenin nasıl yapılandırılacağı açıklanmaktadır [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Bir hizmet davranışı belirtilerek bir Web.config dosyası aracılığıyla yapılandırılır.  
   
 ### <a name="configure-tracking-in-configuration"></a>Yapılandırmada Izlemeyi Yapılandır  
   

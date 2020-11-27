@@ -22,12 +22,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 46c67595126af2c62b28d29983775943586a0b90
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 371f56c3a57b8e320c9b329c539075a40cd7a19f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865287"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258419"
 ---
 # <a name="reflection-in-net"></a>.NET 'te yansıma
 
@@ -53,7 +53,7 @@ ms.locfileid: "86865287"
   
 - Parametrenin <xref:System.Reflection.ParameterInfo> adı, veri türü, bir parametrenin bir giriş veya çıkış parametresi olup olmadığı ve parametrenin bir yöntem imzasında konumu gibi bilgileri bulma için kullanın.  
   
-- <xref:System.Reflection.CustomAttributeData>Bir uygulama etki alanının yalnızca yansıma bağlamında çalışırken özel öznitelikler hakkında bilgi edinmek için kullanın. <xref:System.Reflection.CustomAttributeData>öznitelikleri, örnekleri oluşturmadan incelemenizi sağlar.  
+- <xref:System.Reflection.CustomAttributeData>Bir uygulama etki alanının yalnızca yansıma bağlamında çalışırken özel öznitelikler hakkında bilgi edinmek için kullanın. <xref:System.Reflection.CustomAttributeData> öznitelikleri, örnekleri oluşturmadan incelemenizi sağlar.  
   
 Ad alanının sınıfları, <xref:System.Reflection.Emit> çalışma zamanında türleri oluşturmanıza olanak sağlayan özelleştirilmiş bir yansıma biçimi sağlar.  
   
@@ -62,9 +62,10 @@ Yansıma Ayrıca, kullanıcıların tür seçmesini ve ardından bu türlerle il
 Yansıma için başka kullanımlar vardır. JScript gibi dillere yönelik derleyiciler sembol tabloları oluşturmak için yansıma kullanır. Ad alanındaki sınıflar, <xref:System.Runtime.Serialization> verilere erişmek ve hangi alanların kalıcı olduğunu anlamak için yansıma kullanır. Ad alanındaki sınıflar, <xref:System.Runtime.Remoting> serileştirme aracılığıyla yansımayı dolaylı olarak kullanır.  
   
 ## <a name="runtime-types-in-reflection"></a>Yansımadaki Çalışma Zamanı Türleri  
+
 Yansıma, <xref:System.Type> <xref:System.Reflection.MethodInfo> türleri, üyeleri, parametreleri ve diğer kod varlıklarını göstermek için ve gibi sınıflar sağlar. Ancak, yansıma kullandığınızda, en fazla soyut olan (Visual Basic) bu sınıflarla doğrudan çalışmanız gerekmez `MustInherit` . Bunun yerine, ortak dil çalışma zamanı (CLR) tarafından sunulan türlerle çalışırsınız.  
   
-Örneğin, `typeof` `GetType` nesne almak için C# işlecini (Visual Basic) kullandığınızda <xref:System.Type> , nesne gerçekten bir olur `RuntimeType` . `RuntimeType`' dan türetilir <xref:System.Type> ve tüm soyut yöntemlerin uygulamalarını sağlar.  
+Örneğin, `typeof` `GetType` nesne almak için C# işlecini (Visual Basic) kullandığınızda <xref:System.Type> , nesne gerçekten bir olur `RuntimeType` . `RuntimeType` ' dan türetilir <xref:System.Type> ve tüm soyut yöntemlerin uygulamalarını sağlar.  
   
 Bu çalışma zamanı sınıfları `internal` ( `Friend` Visual Basic). Davranışları temel sınıf belgeleri tarafından açıklandığından, bunlar temel sınıflarından ayrı olarak açıklanmazlar.  
   
@@ -80,7 +81,7 @@ Bu çalışma zamanı sınıfları `internal` ( `Friend` Visual Basic). Davranı
 |[Dinamik Olarak Yükleme ve Türleri Kullanma](dynamically-loading-and-using-types.md)|Geç bağlamayı destekleyen yansıma özel bağlama arabirimini açıklar.|  
 |[Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme](how-to-load-assemblies-into-the-reflection-only-context.md)|Yalnızca yansıma yük bağlamını açıklar. Bir derlemenin nasıl yükleneceğini, bağlamını nasıl test leneceğini ve yalnızca yansıma bağlamındaki bir derlemeye uygulanan özniteliklerin nasıl incelenuygulanacağını gösterir.|  
 |[Özel Özniteliklere Erişim](accessing-custom-attributes.md)|Öznitelik varlığını ve değerlerini sorgulamak için yansıma kullanımını gösterir.|  
-|[Tam Olarak Nitelenmiş Tür Adlarını Belirtme](specifying-fully-qualified-type-names.md)|Backus-Naur form (BNF) ve özel karakterler, derleme adları, işaretçiler, başvurular ve diziler için gereken söz dizimi açısından tam nitelikli tür adlarının biçimini açıklar.|  
+|[Tam Olarak Nitelenmiş Tür Adlarını Belirtme](specifying-fully-qualified-type-names.md)|Backus-Naur form (BNF) ve özel karakterleri, derleme adlarını, işaretçileri, başvuruları ve dizileri belirtmek için gereken söz dizimi açısından tam nitelikli tür adlarının biçimini açıklar.|  
 |[Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama](how-to-hook-up-a-delegate-using-reflection.md)|Bir yöntem için nasıl temsilci oluşturacağınızı ve temsilciyi bir olaya nasıl bağlanacağını açıklar. Kullanarak çalışma zamanında bir olay işleme yönteminin nasıl oluşturulacağını açıklar <xref:System.Reflection.Emit.DynamicMethod> .|  
 |[Dinamik Yöntemleri ve Derlemeleri Yayma](emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemeler ve dinamik yöntemler oluşturmayı açıklar.|  
   

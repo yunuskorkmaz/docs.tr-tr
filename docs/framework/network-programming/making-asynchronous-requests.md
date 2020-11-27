@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 0af143b723c90b146dc5de8447d4a7e1866e7105
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f6eba7a1f10e037f93b20c0e7016f083e3e24200
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502307"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258718"
 ---
 # <a name="making-asynchronous-requests"></a>Zaman Uyumsuz İstekler Yapma
+
 <xref:System.Net>Sınıflar, Internet kaynaklarına zaman uyumsuz erişim için .NET Framework standart zaman uyumsuz programlama modelini kullanır. <xref:System.Net.WebRequest.BeginGetResponse%2A>Sınıfının ve <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemleri <xref:System.Net.WebRequest> bir Internet kaynağı için zaman uyumsuz istekleri başlatır ve tamamlar.  
   
 > [!NOTE]
@@ -29,7 +30,7 @@ ms.locfileid: "84502307"
   
  Program kendi kullanımı için iki sınıf tanımlar, zaman uyumsuz çağrılarda verileri geçen **RequestState** sınıfı ve zaman uyumsuz Istekleri bir Internet kaynağına uygulayan **ClientGetAsync** sınıfı.  
   
- **RequestState** sınıfı, isteği sunan zaman uyumsuz yöntemlere yapılan çağrılar genelinde isteğin durumunu korur. **Web isteği** ve <xref:System.IO.Stream> kaynak için geçerli isteği ve yanıt olarak alınan akışı, Internet kaynağından alınan verileri içeren bir arabelleği ve <xref:System.Text.StringBuilder> tamamlanmış yanıtı içeren örnekleri içerir. *state* **RequestState** <xref:System.AsyncCallback> Yöntem **WebRequest. BeginGetResponse**ile kaydettirilirse, bir RequestState durum parametresi olarak geçirilir.  
+ **RequestState** sınıfı, isteği sunan zaman uyumsuz yöntemlere yapılan çağrılar genelinde isteğin durumunu korur. **Web isteği** ve <xref:System.IO.Stream> kaynak için geçerli isteği ve yanıt olarak alınan akışı, Internet kaynağından alınan verileri içeren bir arabelleği ve <xref:System.Text.StringBuilder> tamamlanmış yanıtı içeren örnekleri içerir. *state* **RequestState** <xref:System.AsyncCallback> Yöntem **WebRequest. BeginGetResponse** ile kaydettirilirse, bir RequestState durum parametresi olarak geçirilir.  
   
  **ClientGetAsync** sınıfı bir Internet kaynağına zaman uyumsuz bir istek uygular ve sonuçta elde edilen yanıtı konsola yazar. Aşağıdaki listede açıklanan yöntemleri ve özellikleri içerir.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "84502307"
   
 - `RespCallBack()`Yöntemi, Internet isteği için zaman uyumsuz geri çağırma yöntemi uygular. Internet kaynağından gelen yanıtı içeren **WebResponse** örneğini oluşturur, yanıt akışını alır ve akıştan zaman uyumsuz olarak veri okumaya başlar.  
   
-- `ReadCallBack()`Yöntemi, yanıt akışını okumak için zaman uyumsuz geri çağırma yöntemini uygular. Internet kaynağından alınan verileri **RequestState** örneğinin **ResponseData** özelliğine aktarır, daha sonra daha fazla veri döndürülünceye kadar yanıt akışının başka bir zaman uyumsuz okumasını başlatır. Tüm veriler okunduktan sonra, `ReadCallBack()` Yanıt akışını kapatır ve `allDone.Set()` yanıtın tamamının **ResponseData**içinde mevcut olduğunu göstermek için yöntemini çağırır.  
+- `ReadCallBack()`Yöntemi, yanıt akışını okumak için zaman uyumsuz geri çağırma yöntemini uygular. Internet kaynağından alınan verileri **RequestState** örneğinin **ResponseData** özelliğine aktarır, daha sonra daha fazla veri döndürülünceye kadar yanıt akışının başka bir zaman uyumsuz okumasını başlatır. Tüm veriler okunduktan sonra, `ReadCallBack()` Yanıt akışını kapatır ve `allDone.Set()` yanıtın tamamının **ResponseData** içinde mevcut olduğunu göstermek için yöntemini çağırır.  
   
     > [!NOTE]
     > Tüm ağ akışlarının kapalı olması önemlidir. Her bir istek ve yanıt akışını kapatmdıysanız, uygulamanız sunucuya bağlantılar dışında çalışır ve ek istekleri işleyemez.  

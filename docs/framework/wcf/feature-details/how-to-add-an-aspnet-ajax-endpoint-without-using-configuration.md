@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: Yapılandırma Kullanmadan ASP.NET AJAX Uç Noktası Ekleme'
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-ms.openlocfilehash: 9aab53d6457aa7848fd4acea6317a30da352cc98
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e33f1fed7dd7bf45966815949ac544250f4d1de8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579637"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257632"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Nasıl yapılır: Yapılandırma Kullanmadan ASP.NET AJAX Uç Noktası Ekleme
+
 Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript 'ten çağrılabilen ASP.NET AJAX özellikli bir uç nokta sunan bir hizmet oluşturmanıza olanak sağlar. Böyle bir uç nokta oluşturmak için, diğer tüm WCF uç noktalarında olduğu gibi bir yapılandırma dosyası ya da herhangi bir yapılandırma öğesi gerektirmeyen bir yöntemi kullanabilirsiniz. Bu konuda ikinci yaklaşım gösterilmektedir.  
   
  ASP.NET AJAX uç noktalarıyla yapılandırma olmadan hizmetler oluşturmak için, hizmetler Internet Information Services (IIS) tarafından barındırılmalıdır. Bu yaklaşımı kullanarak bir ASP.NET AJAX uç noktasını etkinleştirmek için <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> . svc dosyasındaki [ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md) yönergesinde Factory parametresi olarak belirtin. Bu özel fabrika, bir istemci Web sitesindeki JavaScript 'ten çağrılabilmesi için bir ASP.NET AJAX uç noktası otomatik olarak yapılandıran bileşendir.  
@@ -80,7 +81,7 @@ Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript 'ten ç
   
  Otomatik olarak yapılandırılan uç nokta, temel URL 'ye göre boş bir adreste oluşturulur. Bu yaklaşım ile de bir yapılandırma dosyası eklenebilir ve kullanılabilir. Yapılandırma dosyası uç nokta tanımları içeriyorsa, bu uç noktalar otomatik olarak yapılandırılmış uç noktaya eklenir.  
   
- Örneğin, Service. svc ' nı kullanır <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> ve hizmet dizini, <xref:System.ServiceModel.BasicHttpBinding> "SOAP" göreli adresinde öğesini kullanarak aynı hizmet için bir uç nokta tanımlayan bir Web. config dosyası içerir. Bu durumda hizmet iki uç nokta içerir: bir adet Service. svc (ASP.NET AJAX isteklerine yanıt verir) ve başka bir Service. svc/SOAP (SOAP isteklerine yanıt verir).  
+ Örneğin, Service. svc öğesini kullanır <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> ve hizmet dizini, <xref:System.ServiceModel.BasicHttpBinding> "SOAP" göreli adresinde öğesini kullanarak aynı hizmet için bir uç nokta tanımlayan bir Web.config dosyası içerir. Bu durumda hizmet iki uç nokta içerir: bir adet Service. svc (ASP.NET AJAX isteklerine yanıt verir) ve başka bir Service. svc/SOAP (SOAP isteklerine yanıt verir).  
   
  Yapılandırma dosyası boş bir göreli adreste bir uç nokta tanımlıyorsa ve <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> kullanılırsa, bir özel durum oluşturulur ve hizmet başlatılamaz.  
   

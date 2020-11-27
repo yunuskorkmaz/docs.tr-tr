@@ -2,17 +2,18 @@
 title: NamedPipeConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-ms.openlocfilehash: 8c2d4bfc08a503a8d6eb0e8abf6f1e798b90bc83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8422e1adf9a8914b631431eba5c9c0ed058cd0f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963221"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258029"
 ---
 # <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
+
 NamedPipeConnectionPoolSettings  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class NamedPipeConnectionPoolSettings  
@@ -24,37 +25,42 @@ class NamedPipeConnectionPoolSettings
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- NamedPipeConnectionPoolSettings sınıf herhangi bir yöntemi tanımlamaz.  
+
+ NamedPipeConnectionPoolSettings sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  NamedPipeConnectionPoolSettings sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="groupname"></a>GroupName  
+### <a name="groupname"></a>Adýdýr  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bağlama öğesi tarafından kullanılan bağlantı havuzunu grup adı.  
+ Bağlama öğesi tarafından kullanılan bağlantı havuzunun grup adı.  
   
-### <a name="idletimeout"></a>IdleTimeout  
- Veri türü: tarih/saat  
+### <a name="idletimeout"></a>Timeout  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bağlantı kesilmeden önce boşta kalabileceği en uzun süre.  
+ Bağlantı kesilmeden önce bağlantının boşta kalabileceği en uzun süre.  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Giden bağlantılar için istemci üzerindeki her bir uç nokta sayısı.  
+ İstemcideki her bir uç nokta için giden bağlantı sayısı üst sınırı.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

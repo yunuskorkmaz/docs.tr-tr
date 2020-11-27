@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-ms.openlocfilehash: 67fbbb035a3a6683cefbf24e299f32579b674bbd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6fa390c8ae05035e589392c909ef340fb9c7948a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597260"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257821"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?
+
 Windows Communication Foundation (WCF) bir dağıtım hizmeti geliştirirken, aşağıdaki sınıfları kullanarak akışlar ve öğeler oluşturursunuz:  
   
 - <xref:System.ServiceModel.Syndication.SyndicationFeed>  
@@ -37,17 +38,18 @@ Windows Communication Foundation (WCF) bir dağıtım hizmeti geliştirirken, a�
   
  Bu konudaki kod örnekleri, gerçek serileştirme yapmak için burada tanımlanan iki yöntemden birini kullanır.  
   
- `SerializeFeed`bir dağıtım akışını seri hale getirir.  
+ `SerializeFeed` bir dağıtım akışını seri hale getirir.  
   
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
   
- `SerializeItem`bir dağıtım öğesini seri hale getirir.  
+ `SerializeItem` bir dağıtım öğesini seri hale getirir.  
   
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
   
 ## <a name="syndicationfeed"></a>SyndicationFeed  
+
  Aşağıdaki kod örneği, <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfının Atom 1,0 ve RSS 2,0 olarak serileştirilme şeklini gösterir.  
   
  [!code-csharp[SyndicationMapping#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#0)]
@@ -145,6 +147,7 @@ Windows Communication Foundation (WCF) bir dağıtım hizmeti geliştirirken, a�
 ```  
   
 ## <a name="syndicationitem"></a>SyndicationItem  
+
  Aşağıdaki kod örneği, <xref:System.ServiceModel.Syndication.SyndicationItem> sınıfının Atom 1,0 ve RSS 2,0 olarak serileştirilme şeklini gösterir.  
   
  [!code-csharp[SyndicationMapping#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#1)]
@@ -231,6 +234,7 @@ Windows Communication Foundation (WCF) bir dağıtım hizmeti geliştirirken, a�
 ```  
   
 ## <a name="syndicationperson"></a>SyndicationPerson  
+
  Aşağıdaki kod örneği, <xref:System.ServiceModel.Syndication.SyndicationPerson> sınıfının Atom 1,0 ve RSS 2,0 olarak serileştirilme şeklini gösterir.  
   
  [!code-csharp[SyndicationMapping#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#2)]
@@ -288,6 +292,7 @@ Windows Communication Foundation (WCF) bir dağıtım hizmeti geliştirirken, a�
 ```  
   
 ## <a name="syndicationlink"></a>SyndicationLink  
+
  Aşağıdaki kod örneği, <xref:System.ServiceModel.Syndication.SyndicationLink> sınıfının Atom 1,0 ve RSS 2,0 olarak serileştirilme şeklini gösterir.  
   
  [!code-csharp[SyndicationMapping#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#3)]
@@ -302,6 +307,7 @@ Windows Communication Foundation (WCF) bir dağıtım hizmeti geliştirirken, a�
  `<a10:link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
 ## <a name="syndicationcategory"></a>SyndicationCategory  
+
  Aşağıdaki kod örneği, <xref:System.ServiceModel.Syndication.SyndicationCategory> sınıfının Atom 1,0 ve RSS 2,0 olarak serileştirilme şeklini gösterir.  
   
  [!code-csharp[SyndicationMapping#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#4)]
@@ -316,6 +322,7 @@ Windows Communication Foundation (WCF) bir dağıtım hizmeti geliştirirken, a�
  `<category domain="categoryScheme">categoryName</category>`  
   
 ## <a name="textsyndicationcontent"></a>TextSyndicationContent  
+
  Aşağıdaki kod örneği, <xref:System.ServiceModel.Syndication.TextSyndicationContent> HTML içeriğiyle oluşturulduğunda sınıfının Atom 1,0 ve RSS 2,0 olarak serileştirilme şeklini gösterir <xref:System.ServiceModel.Syndication.TextSyndicationContent> .  
   
  [!code-csharp[SyndicationMapping#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#5)]
@@ -360,6 +367,7 @@ Windows Communication Foundation (WCF) bir dağıtım hizmeti geliştirirken, a�
  `<description><html> some xhtml </html></description>`  
   
 ## <a name="urlsyndicationcontent"></a>UrlSyndicationContent  
+
  Aşağıdaki kod örneği, <xref:System.ServiceModel.Syndication.UrlSyndicationContent> sınıfının Atom 1,0 ve RSS 2,0 olarak serileştirilme şeklini gösterir.  
   
  [!code-csharp[SyndicationMapping#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#8)]
@@ -376,6 +384,7 @@ Windows Communication Foundation (WCF) bir dağıtım hizmeti geliştirirken, a�
  `<content type="audio" src="http://Contoso/someurl/" xmlns="http://www.w3.org/2005/Atom" />`  
   
 ## <a name="xmlsyndicationcontent"></a>XmlSyndicationContent  
+
  Aşağıdaki kod örneği, <xref:System.ServiceModel.Syndication.XmlSyndicationContent> sınıfının Atom 1,0 ve RSS 2,0 olarak serileştirilme şeklini gösterir.  
   
  [!code-csharp[SyndicationMapping#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#9)]
@@ -401,6 +410,6 @@ Windows Communication Foundation (WCF) bir dağıtım hizmeti geliştirirken, a�
 
 - [WCF Dağıtımı Genel Bakış](wcf-syndication-overview.md)
 - [Dağıtım Mimarisi](architecture-of-syndication.md)
-- [Nasıl Yapılır: Temel Bir RSS Akışı Oluşturma](how-to-create-a-basic-rss-feed.md)
-- [Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma](how-to-create-a-basic-atom-feed.md)
+- [Nasıl yapılır: Temel Bir RSS Akışı Oluşturma](how-to-create-a-basic-rss-feed.md)
+- [Nasıl yapılır: Temel Bir Atom Akışı Oluşturma](how-to-create-a-basic-atom-feed.md)
 - [Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma](how-to-expose-a-feed-as-both-atom-and-rss.md)

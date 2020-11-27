@@ -2,14 +2,15 @@
 title: Sorgu Desteği
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: e281b5ae7a41bd282f8e7c7eb9db6f99ef5487f3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 350644de4a5deb7b8dcb5133c9cc2edb477fd355
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948934"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258445"
 ---
 # <a name="support-for-queries"></a>Sorgu Desteği
+
 SQL Iş akışı örneği deposu depodaki bir dizi iyi bilinen özelliği kaydeder. Kullanıcılar, bu özelliklere göre örnekleri sorgulayabilir. Aşağıdaki listede, bu iyi bilinen özelliklerden bazıları yer almaktadır:  
   
 - **Site adı.** Hizmeti içeren Web sitesinin adı.  
@@ -34,12 +35,14 @@ SQL Iş akışı örneği deposu depodaki bir dizi iyi bilinen özelliği kayded
  SQL Iş akışı örneği deposu özelliği ayrıca, değerlerini Kalıcılık veritabanında depolamak istediğiniz ve sorgularda kullanmak istediğiniz özel özellikleri belirtmenize imkan tanır. Özel promosyonlar hakkında daha fazla bilgi için bkz. [depolama genişletilebilirliği](store-extensibility.md).  
   
 ## <a name="views"></a>Görünümler  
+
  Örnek deposu aşağıdaki görünümleri içerir. Daha fazla ayrıntı için bkz. [Kalıcılık veritabanı şeması](persistence-database-schema.md) .  
   
 ### <a name="the-instances-view"></a>Örnekler görünümü  
+
  Örnekler görünümü aşağıdaki alanları içerir:  
   
-1. **Kimlik**  
+1. **Numarasını**  
   
 2. **PendingTimer**  
   
@@ -78,6 +81,7 @@ SQL Iş akışı örneği deposu depodaki bir dizi iyi bilinen özelliği kayded
 19. **WriteOnlyComplexDataProperties**  
   
 ### <a name="the-servicedeployments-view"></a>Servicedağıtımlar görünümü  
+
  Servicedağıtımlar görünümü aşağıdaki alanları içerir:  
   
 1. **SiteName**  
@@ -86,11 +90,12 @@ SQL Iş akışı örneği deposu depodaki bir dizi iyi bilinen özelliği kayded
   
 3. **RelativeApplicationPath**  
   
-4. **HizmetAdı**  
+4. **ServiceName**  
   
 5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties görünümü  
+
  InstancePromotedProperties görünümü aşağıdaki alanları içerir. Yükseltilen özelliklerle ilgili ayrıntılar için bkz. [depolama genişletilebilirliği](store-extensibility.md) konusu.  
   
 1. **InstanceId**  
@@ -99,4 +104,4 @@ SQL Iş akışı örneği deposu depodaki bir dizi iyi bilinen özelliği kayded
   
 3. **PromotionName**  
   
-4. **Değer #** ( **değer1** ile **Value64**arasında bir alan aralığı).
+4. **Değer #** ( **değer1** ile **Value64** arasında bir alan aralığı).

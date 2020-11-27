@@ -9,14 +9,15 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: 8dff9db77e39dc66a16b6a7b395c76a3c768d48e
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: f99fb724130c359a77c72db66dd9f837ef1a2219
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924493"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258614"
 ---
 # <a name="use-caching-in-ui-automation"></a>UI Otomasyonda Önbelleğe Almayı Kullanma
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -53,12 +54,14 @@ ms.locfileid: "86924493"
 3. `Cached`Denetim deseninin özelliğinden özellik değerlerini alın.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, öğesini etkinleştirmek için kullanarak, önbelleğe alma işleminin çeşitli yönlerini gösterir <xref:System.Windows.Automation.CacheRequest.Activate%2A> <xref:System.Windows.Automation.CacheRequest> .  
   
  [!code-csharp[UIAClient_snip#107](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#107)]
  [!code-vb[UIAClient_snip#107](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#107)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, öğesini etkinleştirmek için kullanarak, önbelleğe alma işleminin çeşitli yönlerini gösterir <xref:System.Windows.Automation.CacheRequest.Push%2A> <xref:System.Windows.Automation.CacheRequest> . Önbellek isteklerini iç içe aktarmak istediğiniz durumlar dışında, kullanılması tercih edilir <xref:System.Windows.Automation.CacheRequest.Activate%2A> .  
   
  [!code-csharp[UIAClient_snip#108](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]

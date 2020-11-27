@@ -2,14 +2,15 @@
 title: Akış Gerçekleştirme Örneği
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 551a97f3cc54915a831fc28eca6ae0ff23101e0b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 735a72cba3c953ea4774d89751dad3216aa44400
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589792"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257190"
 ---
 # <a name="streaming-feeds-sample"></a>Akış Gerçekleştirme Örneği
+
 Bu örnek, çok sayıda öğe içeren dağıtım akışlarının nasıl yönetileceğini gösterir. Sunucusunda, örnek, <xref:System.ServiceModel.Syndication.SyndicationItem> öğe ağ akışına yazılmadan önce, akış içinde tek tek nesnelerin oluşturulmasına nasıl geciktirileceğini gösterir.  
   
  İstemcide, bu örnek, okunan akışın hiçbir şekilde bellekte tam olarak arabelleğe alınabilmesi için ağ akışından tek tek öğeleri okumak için özel bir dağıtım akış biçimlendiricinin nasıl kullanılabileceğini gösterir.  
@@ -19,6 +20,7 @@ Bu örnek, çok sayıda öğe içeren dağıtım akışlarının nasıl yönetil
  Demo, Visual C# yineleyicilerinin kullanımını ( `yield return` anahtar sözcük yapısını kullanarak) kullanır. Yineleyiciler hakkında daha fazla bilgi için MSDN 'deki "yineleyiciler kullanma" konusuna bakın.  
   
 ## <a name="service"></a>Hizmet  
+
  Hizmet, <xref:System.ServiceModel.Web.WebGetAttribute> aşağıdaki kodda gösterildiği gibi, bir işlemden oluşan temel bir sözleşme uygular.  
   
 ```csharp  
@@ -68,6 +70,7 @@ public Atom10FeedFormatter StreamedFeed()
  Sonuç olarak, öğe akışının hiçbir şekilde bellekte tam olarak arabelleğe alınmayacağı. Yöntemin içindeki bildiriminde bir kesme noktası ayarlayarak `yield return` `ItemGenerator.GenerateItems()` ve bu kesme noktasının, hizmetin yöntemin sonucunu döndürdüğünden ilk kez karşılaşdığını belirten bu davranışı gözlemleyebilirsiniz `StreamedFeed()` .  
   
 ## <a name="client"></a>İstemci  
+
  Bu örnekteki istemci, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> her bir öğenin, bunları belleğe almak yerine akıştaki bireysel öğelerin bir şekilde kullanılmasını gecikme özel bir uygulama kullanır. Özel `StreamedAtom10FeedFormatter` örnek aşağıdaki gibi kullanılır.  
   
 ```csharp  

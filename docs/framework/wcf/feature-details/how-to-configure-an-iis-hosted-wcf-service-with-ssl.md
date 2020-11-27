@@ -3,27 +3,28 @@ title: 'Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL 
 description: IIS ile barındırılan bir WCF hizmetini, IIS 'ye kayıtlı bir sertifika gerektiren HTTP aktarım güvenliği 'ni kullanmak üzere ayarlamayı öğrenin.
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 8dc4692863d93e407a122c0ba93ae38323b8b213
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 960005761d3bed917142141976e9f9094094b34c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245264"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257658"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma
+
 Bu konuda, IIS tarafından barındırılan bir WCF hizmetinin HTTP aktarım güvenliği kullanmak üzere nasıl ayarlanacağı açıklanır. HTTP aktarım güvenliği, IIS 'ye bir SSL sertifikası kaydedilmesini gerektirir. Bir SSL sertifikanız yoksa, bir test sertifikası oluşturmak için IIS kullanabilirsiniz. Daha sonra Web sitesine bir SSL bağlaması eklemeniz ve Web sitesinin kimlik doğrulama özelliklerini yapılandırmanız gerekir. Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.  
   
-### <a name="creating-a-self-signed-certificate"></a>Otomatik olarak Imzalanan sertifika oluşturma  
+### <a name="creating-a-self-signed-certificate"></a>Self-Signed sertifikası oluşturma  
   
 1. Internet Information Services Yöneticisi 'Ni açın (inetmgr.exe) ve sol taraftaki ağaç görünümünde bilgisayarınızın adını seçin. Ekranın sağ tarafında sunucu sertifikaları ' nı seçin.  
   
      ![IIS Yöneticisi giriş ekranı](media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2. Sunucu sertifikaları penceresinde **otomatik olarak Imzalanan sertifika oluştur...** öğesine tıklayın. Bağlantısının.  
+2. Sunucu sertifikaları penceresinde, **Self-Signed sertifikası oluştur...** öğesine tıklayın. Bağlantısının.  
   
      ![IIS ile kendinden&#45;imzalı bir sertifika oluşturma](media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
-3. Otomatik olarak imzalanan sertifika için kolay bir ad girin ve **Tamam 'a**tıklayın.  
+3. Otomatik olarak imzalanan sertifika için kolay bir ad girin ve **Tamam 'a** tıklayın.  
   
      ![Kendinden&#45;Imzalı sertifika Iletişim kutusu oluştur](media/mg-mycert.jpg "mg_MyCert")  
   
@@ -95,6 +96,7 @@ Bu konuda, IIS tarafından barındırılan bir WCF hizmetinin HTTP aktarım güv
     ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda, HTTP aktarım güvenliği kullanan bir WCF hizmeti için web.config dosyasına ait bir örnek verilmiştir  
   
 ```xml  

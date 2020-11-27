@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 2e71dc177a0358370c7eecde03d9388cced60b75
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: d10af40420c1ab9ab177514c0babeaf5cea96922
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957443"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259082"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET uygulamaları için kaynak dosyaları oluşturma
 
@@ -33,6 +33,7 @@ Uygulamanızda kolayca kullanılabilir hale getirmek için dizeler, görüntüle
 - [Visual Studio 'yu](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) kullanarak bir kaynak dosyası oluşturun ve bu dosyayı projenize ekleyin. Visual Studio, kaynakları eklemenizi, silmenizi ve değiştirmenizi sağlayan bir kaynak düzenleyicisi sağlar. Derleme sırasında, kaynak dosyası otomatik olarak ikili bir .resources dosyasına dönüştürülür ve bir uygulama derlemesine veya uydu derlemesine gömülür. Daha fazla bilgi için bkz. [Visual Studio 'Da kaynak dosyaları](creating-resource-files-for-desktop-apps.md#VSResFiles) bölümü.
 
 <a name="TextFiles"></a>
+
 ## <a name="resources-in-text-files"></a>Metin dosyalarındaki kaynaklar
 
 Yalnızca dize kaynaklarını depolamak için metin (. txt veya. restext) dosyalarını kullanabilirsiniz. Dize olmayan kaynaklar için. resx dosyalarını kullanın veya program aracılığıyla oluşturun. Dize kaynaklarını içeren metin dosyaları aşağıdaki biçime sahiptir:
@@ -77,7 +78,7 @@ HelpMenuName=Help
 EmptyString=
 ```
 
- .NET Framework 4,5 ve tüm .NET Core sürümlerinde, metin dosyaları `#ifdef` *symbol*... `#endif` ve `#if !` *symbol*... yapılar ile koşullu derlemeyi destekler `#endif` . Ardından, `/define` sembolleri tanımlamak Için [kaynak dosya oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) ile anahtarı kullanabilirsiniz. Her kaynak kendi `#ifdef` *simgesini*gerektiriyor... `#endif` veya `#if !` *symbol*... `#endif` yapı. Bir `#ifdef` ifade ve *sembol* kullanırsanız, ilişkili kaynak. resources dosyasına dahil edilir; Aksi takdirde, dahil değildir. Bir `#if !` ifade kullanırsanız ve *sembol* tanımlı değilse, ilişkili kaynak. resources dosyasına dahil edilir; Aksi takdirde, dahil değildir.
+ .NET Framework 4,5 ve tüm .NET Core sürümlerinde, metin dosyaları `#ifdef` *symbol*... `#endif` ve `#if !` *symbol*... yapılar ile koşullu derlemeyi destekler `#endif` . Ardından, `/define` sembolleri tanımlamak Için [kaynak dosya oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) ile anahtarı kullanabilirsiniz. Her kaynak kendi `#ifdef` *simgesini* gerektiriyor... `#endif` veya `#if !` *symbol*... `#endif` yapı. Bir `#ifdef` ifade ve *sembol* kullanırsanız, ilişkili kaynak. resources dosyasına dahil edilir; Aksi takdirde, dahil değildir. Bir `#if !` ifade kullanırsanız ve *sembol* tanımlı değilse, ilişkili kaynak. resources dosyasına dahil edilir; Aksi takdirde, dahil değildir.
 
  Yorumlar metin dosyalarında isteğe bağlıdır ve satır başında noktalı virgül (;) veya diyez işareti (#) ile başlanır. Yorumları içeren satırlar dosyanın herhangi bir yerine yerleştirilebilir. Açıklamalar, [kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)kullanılarak oluşturulan derlenmiş bir. resources dosyasına dahil edilmez.
 
@@ -91,7 +92,7 @@ OKButton=OK
 CancelButton=Cancel
 ```
 
- Metin dosyası, *adın*Yinelenen oluşumlarını içeriyorsa, [kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) bir uyarı görüntüler ve ikinci adı yoksayar.
+ Metin dosyası, *adın* Yinelenen oluşumlarını içeriyorsa, [kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) bir uyarı görüntüler ve ikinci adı yoksayar.
 
  *değer* yeni satır karakterleri içeremez, ancak `\n` Yeni bir satırı göstermek ve `\t` bir sekmeyi göstermek için gibi C dil stili kaçış karakterlerini de kullanabilirsiniz. Ayrıca, bir ters eğik çizgi karakteri (örneğin, " \\ \\ ") ekleyebilirsiniz. Ayrıca, boş bir dizeye izin verilir.
 
@@ -135,7 +136,9 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 <a name="ResxFiles"></a>
+
 ## <a name="resources-in-resx-files"></a>. Resx dosyalarındaki kaynaklar
+
  Yalnızca dize kaynaklarını depolayabilen metin dosyalarından farklı olarak XML kaynak (.resx) dosyaları; dizeleri, resimler, simgeler ve ses klipleri gibi ikili verileri ve programatik nesneleri depolayabilir. Bir .resx dosyası, kaynak girdilerinin biçimini açıklayan ve verileri ayrıştırmak için kullanılan XML'ye ait sürüm oluşturma bilgilerini belirten standart bir başlık içerir. Kaynak dosya verisi XML başlığını izler. Her bir veri öğesi, bir `data` etiketi içinde bulunan bir isim/değer ikilisinden oluşur. Kendi `name` özniteliği kaynak adını tanımlar ve iç içe `value` etiketi kaynak değerini içerir. Dize verisi için, `value` etiketi dizeyi içerir.
 
  Örneğin aşağıdaki `data` etiketi, değeri "Adınızı girin:" olan `prompt` adındaki bir dize kaynağını tanımlar.
@@ -174,6 +177,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > .resx dosyaları, önceden tanımlanmış formatta doğru biçimlendirilmiş XML'lerden oluşması gerektiğinden özellikle .resx dosyaları dizeler haricinde kaynaklar içerdiğinde .resx dosyalarıyla el ile çalışılmasını önermeyiz. Bunun yerine, [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) . resx dosyalarını oluşturmak ve işlemek için saydam bir arabirim sağlar. Daha fazla bilgi için bkz. [Visual Studio 'Da kaynak dosyaları](creating-resource-files-for-desktop-apps.md#VSResFiles) bölümü. .resx dosyalarını aynı zamanda program aracılığıyla oluşturabilir ve değiştirebilirsiniz. Daha fazla bilgi için bkz [.. resx dosyalarıyla programlama yoluyla çalışma](working-with-resx-files-programmatically.md).
 
 <a name="ResourcesFiles"></a>
+
 ## <a name="resources-in-resources-files"></a>. Resources dosyalarındaki kaynaklar
 
 İkili bir kaynak (.resources) dosyasını program aracılığıyla doğrudan koddan oluşturmak için <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> sınıfını kullanabilirsiniz. Ayrıca, bir metin dosyasından veya. resx dosyasından bir. resources dosyası oluşturmak için [kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) kullanabilirsiniz. .resources dosyası, dize verilerine ek olarak ikili verileri (bayt dizileri) ve nesne verilerini içerebilir. Bir .resources dosyasının program aracılığıyla oluşturulması aşağıdaki adımları gerektirir:
@@ -195,6 +199,7 @@ csc greeting.cs -resource:GreetingResources.resources
  . Resources dosyasını oluşturduktan sonra, dil derleyicisinin anahtarını ekleyerek bir çalışma zamanı yürütülebilir dosyasına veya kitaplığına eklenebilir `/resource` veya [derleme bağlayıcısı (Al.exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz.
 
 <a name="VSResFiles"></a>
+
 ## <a name="resource-files-in-visual-studio"></a>Visual Studio 'da kaynak dosyaları
 
 [Visual](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) Studio projenize bir kaynak dosyası eklediğinizde, Visual Studio proje dizininde bir. resx dosyası oluşturur. Visual Studio, dizeler, görüntüler ve ikili nesneleri eklemenizi sağlayan kaynak düzenleyicileri sağlar. Düzenleyiciler yalnızca statik verileri işlemek için tasarlandığından programatik nesneleri depolamak için kullanılamazlar; nesne verilerini bir .resx dosyasına veya bir .resources dosyasına program aracılığıyla yazmanız gerekir. Daha fazla bilgi için bkz [.. resx dosyalarıyla çalışma programlı](working-with-resx-files-programmatically.md) ve [kaynakları. resources dosyaları](creating-resource-files-for-desktop-apps.md#ResourcesFiles) bölümünde.

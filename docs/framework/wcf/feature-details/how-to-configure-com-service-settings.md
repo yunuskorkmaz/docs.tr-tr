@@ -4,20 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 3fb4b31038845d223248e72d32b3e7413f2aef63
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b75f5c2a64b7184959e929439893b33193aa7bae
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597182"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257476"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma
-Bir uygulama arabirimi COM+ hizmet yapılandırma aracı kullanılarak eklendiğinde veya kaldırıldığında, Web hizmeti yapılandırması uygulamanın yapılandırma dosyası içinde güncelleştirilir. COM+ barındırılan modunda, Application. config dosyası uygulama kök dizinine yerleştirilir (%PROGRAMFILES%\ComPlus uygulamaları \\ {AppID} varsayılandır). Web 'de barındırılan modlardan birinde, Web. config dosyası belirtilen vroot dizinine yerleştirilir.  
+
+Bir uygulama arabirimi COM+ hizmet yapılandırma aracı kullanılarak eklendiğinde veya kaldırıldığında, Web hizmeti yapılandırması uygulamanın yapılandırma dosyası içinde güncelleştirilir. COM+ barındırılan modunda, Application.config dosyası uygulama kök dizinine yerleştirilir (%PROGRAMFILES%\ComPlus uygulamaları \\ {AppID} varsayılandır). Web 'de barındırılan modlardan birinde, Web.config dosyası belirtilen vroot dizinine yerleştirilir.  
   
 > [!NOTE]
 > İleti imzalama, istemci ve sunucu arasında ileti izinsiz değişikliklere karşı korunmak için kullanılmalıdır. Ayrıca, bir istemci ile sunucu arasındaki iletilerden bilgilerin açığa çıkmasına karşı korumak için ileti veya Aktarım katmanı şifrelemesi kullanılmalıdır. Windows Communication Foundation (WCF) hizmetlerinde olduğu gibi, eşzamanlı çağrıların sayısını, bağlantıları, örnekleri ve bekleyen işlemleri kısıtlamak için azaltmayı kullanmanız gerekir. Bu, kaynakların aşırı kullanımını önlemeye yardımcı olur. Daraltma davranışı, hizmet yapılandırma dosyası ayarları aracılığıyla belirtilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki arabirimi uygulayan bir bileşeni göz önünde bulundurun:  
   
 ```csharp

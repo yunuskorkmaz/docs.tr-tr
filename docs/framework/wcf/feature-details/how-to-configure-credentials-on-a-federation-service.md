@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 05f35bbb7dbb34cd4067c407578038cbb4eff70f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 692ccc0c39ca7ed40601551ea6bbcdd840fa03af
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599151"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257593"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma
+
 Windows Communication Foundation (WCF) ' de, Federasyon hizmeti oluşturmak aşağıdaki ana yordamlardan oluşur:  
   
 1. <xref:System.ServiceModel.WSFederationHttpBinding>Veya benzer bir özel bağlamayı yapılandırma. Uygun bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluşturma WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md).  
@@ -56,6 +57,7 @@ Windows Communication Foundation (WCF) ' de, Federasyon hizmeti oluşturmak aşa
 5. Gerekirse, `samlSerializer` <`issuedTokenAuthentication`> öğesinin özniteliğini özel sınıfın tür adı olarak ayarlayın <xref:System.IdentityModel.Tokens.SamlSerializer> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir içinde kodunun özelliklerini ayarlar <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> .  
   
  [!code-csharp[C_FederatedService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedservice/cs/source.cs#2)]
@@ -76,7 +78,7 @@ Windows Communication Foundation (WCF) ' de, Federasyon hizmeti oluşturmak aşa
 - [Federasyon](federation.md)
 - [Federasyon ve Güven](federation-and-trust.md)
 - [Federasyon Örneği](../samples/federation-sample.md)
-- [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [Nasıl yapılır: WSFederationHttpBinding Oluşturma](how-to-create-a-wsfederationhttpbinding.md)
 - [Nasıl yapılır: Federe İstemci Oluşturma](how-to-create-a-federated-client.md)
 - [Sertifikalarla Çalışma](working-with-certificates.md)

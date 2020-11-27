@@ -12,14 +12,15 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: 62bce7435887855f799d320736e6bce8f39e5999
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 859c564e107fd3a9b219d71dc6ac5ccdf6e9d690
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558803"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259284"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Yansıma Yaymadaki Güvenlik Sorunları
+
 .NET Framework, her biri kendi güvenlik sorunlarıyla birlikte Microsoft ara dili 'ni (MSIL) yaymanın üç yolunu sunar:  
   
 - [Dinamik derlemeler](#Dynamic_Assemblies)  
@@ -34,7 +35,9 @@ ms.locfileid: "90558803"
 > Kod ve yayma kodu üzerinde yansıtma için gereken izinler, .NET Framework sonraki sürümleriyle değiştirilmiştir. Bu konunun devamındaki [sürüm bilgilerine](#Version_Information)bakın.  
   
 <a name="Dynamic_Assemblies"></a>
+
 ## <a name="dynamic-assemblies"></a>Dinamik derlemeler  
+
  Dinamik derlemeler, yönteminin aşırı yüklemeleri kullanılarak oluşturulur <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> . Bu yöntemin en fazla aşırı yüklemesi, makine genelinde güvenlik ilkesinin eliminasyon nedeniyle .NET Framework 4 ' te kullanım dışıdır. (Bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes).) Kalan aşırı yüklemeler, güven düzeyinden bağımsız olarak herhangi bir kod tarafından yürütülebilir. Bu aşırı yüklemeler iki gruba ayrılır: oluşturulduğu sırada dinamik derlemeye uygulanacak özniteliklerin bir listesini ve bunları belirtenler. Derleme için saydamlık modelini belirtmezseniz, <xref:System.Security.SecurityRulesAttribute> Bu özniteliği oluşturduğunuzda uyguladığınızda, saydam model, yayma derlemesinden devralınır.  
   
 > [!NOTE]
@@ -48,6 +51,7 @@ ms.locfileid: "90558803"
  Geçici dinamik derlemeler bellekte oluşturulur ve hiçbir şekilde diske kaydedilmez, bu nedenle dosya erişim izinleri gerektirmez. Dinamik bir derlemeyi diske kaydetmek için <xref:System.Security.Permissions.FileIOPermission> uygun bayraklar gerekir.  
   
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>Kısmen güvenilen koddan dinamik derlemeler oluşturma  
+
  Internet izinleri olan bir derlemenin geçici bir dinamik derleme oluşturabileceği ve kodunu yürütebileceği koşulları göz önünde bulundurun:  
   
 - Dinamik derleme yalnızca ortak türleri ve diğer derlemelerin üyelerini kullanır.  
@@ -59,7 +63,9 @@ ms.locfileid: "90558803"
 - Hata ayıklama sembolleri oluşturulmaz. ( `Internet` ve `LocalIntranet` izin kümeleri gerekli izinleri içermez.)  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>
+
 ## <a name="anonymously-hosted-dynamic-methods"></a>Anonim olarak barındırılan dinamik yöntemler  
+
  Anonim olarak barındırılan dinamik yöntemler <xref:System.Reflection.Emit.DynamicMethod> , ilişkili tür veya modül belirtmeyen iki Oluşturucu kullanılarak oluşturulur <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> ve <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> . Bu oluşturucular, dinamik metotları sistem tarafından sağlanmış, tam güvenilir, güvenlik açısından saydam bir derlemeye yerleştirir. Bu oluşturucuları kullanmak veya dinamik yöntemler için kod göstermek için izin gerekmez.  
   
  Bunun yerine, anonim olarak barındırılan bir dinamik yöntem oluşturulduğunda, çağrı yığını yakalanır. Yöntem oluşturulduğunda, yakalanan çağrı yığınına karşı güvenlik istekleri yapılır.  
@@ -82,6 +88,7 @@ ms.locfileid: "90558803"
  Daha fazla bilgi için, <xref:System.Reflection.Emit.DynamicMethod> sınıfına bakın.  
   
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>Kısmen güvenilen koddan anonim olarak barındırılan dinamik yöntemler oluşturma  
+
  Internet izinleri olan bir derlemenin anonim olarak barındırılan dinamik bir yöntem oluşturabileceği ve bunu yürütebileceği koşulları göz önünde bulundurun:  
   
 - Dinamik yöntem yalnızca ortak türleri ve üyeleri kullanır. Verme kümesi şunları içeriyorsa <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> , verme derlemesinin izin kümesi veya bir alt kümesi olan herhangi bir derlemenin ortak türlerini ve üyelerini, yayma derlemesinin verme kümesini kullanabilir.  
@@ -92,7 +99,9 @@ ms.locfileid: "90558803"
 > Dinamik yöntemler hata ayıklama sembollerini desteklemez.  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
+
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Mevcut Derlemelerle Ilişkili dinamik yöntemler  
+
  Dinamik bir yöntemi varolan bir derlemedeki bir tür veya modülle ilişkilendirmek için, <xref:System.Reflection.Emit.DynamicMethod> ilişkili tür veya modülü belirten oluşturuculardan birini kullanın. Bu oluşturucuları çağırmak için gereken izinler, dinamik bir yöntemi varolan bir tür veya modülle ilişkilendirirken, dinamik yöntemin ortak olmayan türlere ve üyelere erişmesini sağladığından değişiklik gösterir.  
   
 - Bir türle ilişkili dinamik bir yöntem, bu türdeki tüm üyelere, hatta özel üyelere ve ilişkili türü içeren derlemedeki tüm iç türlere ve üyelere erişim sağlar.  
@@ -137,7 +146,9 @@ ms.locfileid: "90558803"
 > Dinamik yöntemler hata ayıklama sembollerini desteklemez.  
   
 <a name="Version_Information"></a>
+
 ## <a name="version-information"></a>Sürüm Bilgileri  
+
  .NET Framework 4 ' te başlayarak, makine genelinde güvenlik ilkesi ortadan kalkar ve güvenlik saydamlığı varsayılan zorlama mekanizması haline gelir. Bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes).  
   
  .NET Framework 2,0 Service Pack 1 ' den başlayarak, <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> Dinamik derlemeler ve dinamik yöntemler yayırken bayrağı artık gerekli değildir. Bu bayrak, .NET Framework önceki tüm sürümlerinde gereklidir.  
@@ -150,6 +161,7 @@ ms.locfileid: "90558803"
  Son olarak, .NET Framework 2,0 SP1 anonim olarak barındırılan yöntemler sunar.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Türler ve Üyeler hakkında bilgi edinme  
+
  .NET Framework 2,0 ' den başlayarak, özel türler ve Üyeler hakkında bilgi edinmek için izin gerekmez. Yansıma, dinamik yöntemleri yayma için gereken bilgileri almak için kullanılır. Örneğin, <xref:System.Reflection.MethodInfo> nesneler Yöntem çağrılarını yayma için kullanılır. .NET Framework önceki sürümleri <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağıyla gerektirir. Daha fazla bilgi için bkz. [yansıma Için güvenlik konuları](security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

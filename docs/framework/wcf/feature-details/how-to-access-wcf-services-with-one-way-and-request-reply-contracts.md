@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 9c8bd0d21be1d87d536eb6f943e782fc4da352a8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d415b8f901e0a0e35690c015656620fe5ce13d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597195"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257710"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme
+
 Aşağıdaki yordamlarda, tek yönlü bir sözleşmeyi ve bir istek-yanıt sözleşmesini tanımlayan ve çift yönlü iletişim modelini kullanmayan bir Windows Communication Foundation (WCF) hizmetine nasıl erişebileceğiniz açıklanır.  
   
 ### <a name="to-define-the-service"></a>Hizmeti tanımlamak için  
@@ -109,7 +110,7 @@ Aşağıdaki yordamlarda, tek yönlü bir sözleşmeyi ve bir istek-yanıt sözl
   
 ### <a name="to-access-the-service"></a>Hizmete erişmek için  
   
-1. Aşağıdaki komut satırını kullanarak hizmetin istemci sınıfını oluşturmak için meta veri değişimi uç noktası adresini kullanarak [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) aşağıdaki örnek kodda gösterildiği gibi bir dizi arabirim ve sınıf oluşturur.  
+1. Aşağıdaki komut satırını kullanarak hizmetin istemci sınıfını oluşturmak için meta veri değişimi uç noktası adresini kullanarak [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın: `Svcutil http://localhost:8000/Service` [ServiceModel metadata Utility aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , aşağıdaki örnek kodda gösterildiği gibi bir dizi arabirim ve sınıf oluşturur.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -247,6 +248,7 @@ Aşağıdaki yordamlarda, tek yönlü bir sözleşmeyi ve bir istek-yanıt sözl
     ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda, bu konuda kullanılan kodun tamamen bir listesi verilmiştir.  
   
 ```csharp  

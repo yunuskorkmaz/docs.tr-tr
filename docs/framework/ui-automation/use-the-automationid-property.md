@@ -10,29 +10,31 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 9e6dd3935a1b4d15690e1dfecd73e9b07330ec6c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 91254903b3481861f21d5e2f4e51f1e50726c46b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924532"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258601"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID Özelliğini Kullanma
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
  Bu konu, <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> ağaç içindeki bir öğeyi bulmak için nasıl ve ne zaman kullanılabileceğini gösteren senaryolar ve örnek kod içerir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>bir UI Otomasyon öğesini eşlerinden bağımsız olarak tanımlar. Denetim kimliğiyle ilgili özellik tanımlayıcıları hakkında daha fazla bilgi için bkz. [UI Automation özelliklerine genel bakış](ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> bir UI Otomasyon öğesini eşlerinden bağımsız olarak tanımlar. Denetim kimliğiyle ilgili özellik tanımlayıcıları hakkında daha fazla bilgi için bkz. [UI Automation özelliklerine genel bakış](ui-automation-properties-overview.md).  
   
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>ağacın tamamında benzersiz bir kimlik garantisi vermez; genellikle kapsayıcı ve kapsam bilgilerinin yararlı olması gerekir. Örneğin, bir uygulama birden çok üst düzey menü öğesi olan bir menü denetimi içerebilir, buna karşılık birden çok alt menü öğesi vardır. Bu ikincil menü öğeleri, "Item1", "Item 2" gibi genel bir düzen tarafından tanımlanabilir ve üst düzey menü öğelerinde alt öğeler için yinelenen tanımlayıcılara izin verebilir.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> ağacın tamamında benzersiz bir kimlik garantisi vermez; genellikle kapsayıcı ve kapsam bilgilerinin yararlı olması gerekir. Örneğin, bir uygulama birden çok üst düzey menü öğesi olan bir menü denetimi içerebilir, buna karşılık birden çok alt menü öğesi vardır. Bu ikincil menü öğeleri, "Item1", "Item 2" gibi genel bir düzen tarafından tanımlanabilir ve üst düzey menü öğelerinde alt öğeler için yinelenen tanımlayıcılara izin verebilir.  
   
 ## <a name="scenarios"></a>Senaryolar  
+
  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>Öğeleri ararken doğru ve tutarlı sonuçlar elde etmek için kullanımını gerektiren üç BIRINCIL UI Otomasyonu istemci uygulama senaryosu tanımlandı.  
   
 > [!NOTE]
-> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>, üst düzey uygulama pencereleri hariç denetim görünümündeki tüm UI Otomasyon öğeleri, bir [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ID veya x:Uid olmayan denetimlerden TÜRETILMIŞ UI Otomasyon öğeleri ve bir DENETIM kimliği olmayan Win32 denetimlerinden TÜRETILMIŞ UI Otomasyonu öğeleri tarafından desteklenir.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> , üst düzey uygulama pencereleri hariç denetim görünümündeki tüm UI Otomasyon öğeleri, bir [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ID veya x:Uid olmayan denetimlerden TÜRETILMIŞ UI Otomasyon öğeleri ve bir DENETIM kimliği olmayan Win32 denetimlerinden TÜRETILMIŞ UI Otomasyonu öğeleri tarafından desteklenir.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>UI Otomasyon ağacındaki belirli bir öğeyi bulmak için benzersiz ve bulunabilir bir AutomationId kullanın  
   

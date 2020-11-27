@@ -2,27 +2,30 @@
 title: 3383 - ReliableSessionChannelFaulted
 ms.date: 03/30/2017
 ms.assetid: f5948284-8536-4ab8-9c81-e22da5b56d62
-ms.openlocfilehash: 8d107848a80e965dc9cee42dacaedde2b20d9036
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abf9b4602a679b3fe962dcf8c415234270f2d2a5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943230"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258315"
 ---
 # <a name="3383---reliablesessionchannelfaulted"></a>3383 - ReliableSessionChannelFaulted
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3383|  
-|anahtar sözcükler|Kanal|  
-|Düzey|Bilgi|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|3383|  
+|Anahtar sözcükler|Kanal|  
+|Düzey|Bilgilendirici|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay ReliableSessionChannel arıza yaptığında yayılır.  
+
+ ReliableSessionChannel hata verdi olduğunda bu olay yayınlanır.  
   
 ## <a name="message"></a>İleti  
- 1 SessionId:% hatalı.  
+
+ SessionID: %1 hata verdi.  
   
 ## <a name="details"></a>Ayrıntılar

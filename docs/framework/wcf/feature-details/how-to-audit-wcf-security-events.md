@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 186dd4a7fc2beae848e5cbd167a204352ee6ed4e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 67ab5d4a4592a8b772cfdd70befe32f339062b8c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601302"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257567"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Nasıl yapılır: Windows Communication Foundation Güvenlik Olaylarını Denetleme
+
 Windows Communication Foundation (WCF), Windows Olay Görüntüleyicisi kullanılarak görüntülenebilen Windows olay günlüğü 'nde güvenlik olaylarını günlüğe kaydetmenize izin verir. Bu konuda, güvenlik olaylarını günlüğe kaydetmeleri için bir uygulamanın nasıl ayarlanacağı açıklanmaktadır. WCF denetimi hakkında daha fazla bilgi için bkz. [Denetim](auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Koddaki güvenlik olaylarını denetlemek için  
@@ -45,7 +46,7 @@ Windows Communication Foundation (WCF), Windows Olay Görüntüleyicisi kullanı
   
 ### <a name="to-set-up-auditing-in-configuration"></a>Yapılandırmada denetim ayarlamak için  
   
-1. Yapılandırmada denetim ayarlamak için, [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) Web. config dosyasının bölümüne bir öğesi ekleyin. Ardından bir [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) öğesi ekleyin ve aşağıdaki örnekte gösterildiği gibi çeşitli öznitelikleri ayarlayın.  
+1. Yapılandırmada denetim ayarlamak için [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) web.config dosyanın bölümüne bir öğe ekleyin. Ardından bir [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) öğesi ekleyin ve aşağıdaki örnekte gösterildiği gibi çeşitli öznitelikleri ayarlayın.  
   
     ```xml  
     <behaviors>  
@@ -73,19 +74,21 @@ Windows Communication Foundation (WCF), Windows Olay Görüntüleyicisi kullanı
     ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, sınıfının bir örneğini oluşturur <xref:System.ServiceModel.ServiceHost> ve davranışları koleksiyonuna yeni bir ekler <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> .  
   
  [!code-csharp[AuditingSecurityEvents#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
+
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>Özelliği olarak ayarlamak `true` , güvenlik denetimleri oluşturma başarısızlığını göstermez (olarak ayarlanırsa `false` , bir özel durum oluşturulur). Ancak, aşağıdaki Windows **yerel güvenlik ayarı** özelliğini etkinleştirirseniz, denetim olayları oluşturma hatası Windows 'un hemen kapatılmasına neden olur:  
   
  **Denetim: Güvenlik denetimleri günlüğe alınamıyorsa sistemi hemen kapat**  
   
- Özelliği ayarlamak için **yerel güvenlik ayarları** iletişim kutusunu açın. **Güvenlik ayarları**altında **Yerel ilkeler**' e tıklayın. Ardından **güvenlik seçenekleri**' ne tıklayın.  
+ Özelliği ayarlamak için **yerel güvenlik ayarları** iletişim kutusunu açın. **Güvenlik ayarları** altında **Yerel ilkeler**' e tıklayın. Ardından **güvenlik seçenekleri**' ne tıklayın.  
   
- <xref:System.ServiceModel.AuditLogLocation>Özelliği olarak ayarlandıysa <xref:System.ServiceModel.AuditLogLocation.Security> ve **Denetim nesne erişimi** **yerel güvenlik Ilkesinde**ayarlanmamışsa, denetim olayları güvenlik günlüğüne yazılmaz. Hiçbir hata döndürülmediğini, ancak denetim girişlerinin güvenlik günlüğüne yazılmadığını unutmayın.  
+ <xref:System.ServiceModel.AuditLogLocation>Özelliği olarak ayarlandıysa <xref:System.ServiceModel.AuditLogLocation.Security> ve **Denetim nesne erişimi** **yerel güvenlik Ilkesinde** ayarlanmamışsa, denetim olayları güvenlik günlüğüne yazılmaz. Hiçbir hata döndürülmediğini, ancak denetim girişlerinin güvenlik günlüğüne yazılmadığını unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 7375dc4f9af2eb0209b83724cd2ac9b9619b56dd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 13fae7dec3026e96e3c196467da29fe768a3655f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556882"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257938"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme
+
 Bu konu, bir iş akışı konsol uygulamasından bir iş akışı hizmetinin nasıl çağrılacağını açıklar. Bu, [nasıl yapılır: mesajlaşma etkinlikleriyle Iş akışı hizmeti oluşturma](how-to-create-a-workflow-service-with-messaging-activities.md) konusunun tamamlanmasına bağlıdır. Bu konu, bir iş akışı hizmetinin iş akışı uygulamasından nasıl çağrılacağını açıklar, ancak aynı yöntemler bir iş akışı uygulamasından herhangi bir Windows Communication Foundation (WCF) hizmetini çağırmak için de kullanılabilir.
 
 ### <a name="create-a-workflow-console-application-project"></a>Iş akışı konsol uygulaması projesi oluşturma
@@ -22,15 +23,15 @@ Bu konu, bir iş akışı konsol uygulamasından bir iş akışı hizmetinin nas
 
      ![Yeni Proje Ekle Iletişim kutusu](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
-     **Yeni Proje Ekle Iletişim kutusunu**kapatmak için **Tamam** düğmesine tıklayın.
+     **Yeni Proje Ekle Iletişim kutusunu** kapatmak için **Tamam** düğmesine tıklayın.
 
 4. Proje oluşturulduktan sonra, Workflow1. xaml dosyası tasarımcıda açılır. **Araç kutusu sekmesine tıklayarak** araç kutusunu açın ve araç kutusu penceresini açık tutmak için raptiye ' ye tıklayın.
 
-5. **Ctrl** + Hizmeti derlemek ve başlatmak için CTRL**F5** tuşuna basın. Daha önce olduğu gibi, ASP.NET Development Server başlatılır ve Internet Explorer, WCF Yardım sayfasını görüntüler. Sonraki adımda kullanmanız gereken bu sayfanın URI 'sine dikkat edin.
+5. **Ctrl** + Hizmeti derlemek ve başlatmak için CTRL **F5** tuşuna basın. Daha önce olduğu gibi, ASP.NET Development Server başlatılır ve Internet Explorer, WCF Yardım sayfasını görüntüler. Sonraki adımda kullanmanız gereken bu sayfanın URI 'sine dikkat edin.
 
      ![WCF Yardım sayfasını ve URI 'yi görüntüleyen IE](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6. **Çözüm Gezgini** **MyWFClient** projesine sağ tıklayın ve **Add**  >  **hizmet başvurusu**Ekle ' yi seçin. Tüm hizmetlerde geçerli çözümü aramak için **bul** düğmesine tıklayın. Hizmetler listesinde Service1. xamlx yanındaki üçgeni tıklatın. Service1 hizmeti tarafından uygulanan sözleşmeleri listelemek için Service1 ' ın yanındaki üçgeni tıklatın. **Hizmetler** listesinde **Service1** düğümünü genişletin. Yankı işlemi, aşağıdaki çizimde gösterildiği gibi **işlemler** listesinde görüntülenir.
+6. **Çözüm Gezgini** **MyWFClient** projesine sağ tıklayın ve **Add**  >  **hizmet başvurusu** Ekle ' yi seçin. Tüm hizmetlerde geçerli çözümü aramak için **bul** düğmesine tıklayın. Hizmetler listesinde Service1. xamlx yanındaki üçgeni tıklatın. Service1 hizmeti tarafından uygulanan sözleşmeleri listelemek için Service1 ' ın yanındaki üçgeni tıklatın. **Hizmetler** listesinde **Service1** düğümünü genişletin. Yankı işlemi, aşağıdaki çizimde gösterildiği gibi **işlemler** listesinde görüntülenir.
 
      ![Hizmet Başvurusu Ekle Iletişim kutusu](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
@@ -38,7 +39,7 @@ Bu konu, bir iş akışı konsol uygulamasından bir iş akışı hizmetinin nas
 
      ![Hizmet Başvurusu Ekle bildirimi iletişim kutusu](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference-dialog.jpg)
 
-     İletişim kutusunu kapatmak için **Tamam** ' ı tıklatın. Ardından, çözümü derlemek için CTRL + SHIFT + B tuşlarına basın. Araç kutusunda, **MyWFClient. ServiceReference1. Activities**adlı yeni bir bölüm eklendiğini unutmayın. Bu bölümü genişletin ve aşağıdaki çizimde gösterildiği gibi eklenen yankı etkinliğine dikkat edin.
+     İletişim kutusunu kapatmak için **Tamam** ' ı tıklatın. Ardından, çözümü derlemek için CTRL + SHIFT + B tuşlarına basın. Araç kutusunda, **MyWFClient. ServiceReference1. Activities** adlı yeni bir bölüm eklendiğini unutmayın. Bu bölümü genişletin ve aşağıdaki çizimde gösterildiği gibi eklenen yankı etkinliğine dikkat edin.
 
      ![Araç kutusundaki yankı etkinliği](./media/how-to-access-a-service-from-a-workflow-application/echo-activity-toolbox.jpg)
 

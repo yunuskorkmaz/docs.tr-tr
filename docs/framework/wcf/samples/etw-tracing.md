@@ -3,14 +3,15 @@ title: ETW İzleme
 description: Bu örnek, Windows için olay Izleme (ETW) ve ETWTraceListener kullanarak uçtan uca (E2E) izlemenin nasıl uygulanacağını gösterir.
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 6e7526ef05d672b550599e3b12a4b083e9130b96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6777b2d14786f7a79b3605bec93b4da62ff24616
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547147"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258484"
 ---
 # <a name="etw-tracing"></a>ETW İzleme
+
 Bu örnek, Windows için olay Izleme (ETW) ve `ETWTraceListener` Bu örnekle birlikte sunulan uçtan uca (e2e) izlemenin nasıl uygulanacağını gösterir. Örnek, [Başlarken](getting-started-sample.md) ' i temel alır ve ETW izleme içerir.  
   
 > [!NOTE]
