@@ -3,14 +3,15 @@ title: İleti Kuyruğa Alma Yükleme (MSMQ)
 description: Bir kerelik Kurulum yordamının bir parçası olarak WFC örnekleri ile kullanmak üzere 4,0 Message Queuing ve Message Queuing 3,0 ' i nasıl yükleyeceğinizi öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 0d0cb87b40b1cb11eb7692c2fa1e890ec815b13d
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: bf33a5cd899bf2d7ef4947c51ac1723c8eb80c29
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244471"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281878"
 ---
 # <a name="installing-message-queuing-msmq"></a>İleti Kuyruğa Alma Yükleme (MSMQ)
+
 Aşağıdaki yordamlarda Message Queuing 4,0 ve Message Queuing 3,0 ' nin nasıl yükleneceği gösterilmektedir.  
   
 > [!NOTE]
@@ -32,7 +33,7 @@ Aşağıdaki yordamlarda Message Queuing 4,0 ve Message Queuing 3,0 ' nin nasıl
   
 #### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>Windows 7 veya Windows Vista 'da Message Queuing 4,0 yüklemek için  
   
-1. **Denetim Masası 'nı**açın.  
+1. **Denetim Masası 'nı** açın.  
   
 2. **Programlar** ' a ve ardından **Programlar ve Özellikler**' ın altında, **Windows özelliklerini aç ve Kapat**' a tıklayın.  
   
@@ -42,13 +43,13 @@ Aşağıdaki yordamlarda Message Queuing 4,0 ve Message Queuing 3,0 ' nin nasıl
   
     - MSMQ HTTP desteği.  
   
-4. **Tamam**'a tıklayın.  
+4. **Tamam** düğmesine tıklayın.  
   
 5. Bilgisayarı yeniden başlatmanız istenirse, yüklemeyi gerçekleştirmek için **Tamam** ' ı tıklatın.  
   
 #### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>Message Queuing 3,0 ' i Windows XP ve Windows Server 2003 ' ye yüklemek için  
   
-1. **Denetim Masası 'nı**açın.  
+1. **Denetim Masası 'nı** açın.  
   
 2. **Program Ekle Kaldır** ' a ve ardından **Windows Bileşenleri Ekle**' ye tıklayın.  
   

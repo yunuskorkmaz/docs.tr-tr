@@ -2,38 +2,41 @@
 title: 1030 - StartFaultWorkItem
 ms.date: 03/30/2017
 ms.assetid: e1601fb9-0bc6-4dbe-816f-f24914063d34
-ms.openlocfilehash: 3848d644e77041a62a52eb2eae5eeef286dfe334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52034f7cc7c6f6749fbbbf06db9267ecb6279ee1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924325"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281865"
 ---
 # <a name="1030---startfaultworkitem"></a>1030 - StartFaultWorkItem
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1030|  
-|anahtar sözcükler|WFRuntime|  
+|ID|1030|  
+|Anahtar sözcükler|WFRuntime|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir FaultWorkItem yürütme başlanacağını gösterir.  
+
+ Bir FaultWorkItem 'ın yürütmeyi başlatdığını gösterir.  
   
 ## <a name="message"></a>İleti  
- '%1', DisplayName etkinliği için bir FaultWorkItem yürütülmesi başlatılıyor: '%2', InstanceId: '%3'.  Özel durum '%4', DisplayName etkinliğinden yayıldığı: '%5', InstanceId: '%6'.  
+
+ DisplayName: ' %2 ', InstanceId: ' %3 ' olan ' %1 ' Activity 'si için bir FaultWorkItem 'ın yürütülmesi başlatılıyor.  Özel durum DisplayName: ' %5 ', InstanceId: ' %6 ' olan ' %4 ' etkinliğinden yayılmıştı.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|FaultActivity|xs:string|Hata etkinlik türü adı.|  
-|FaultActivityDisplayName|xs:string|Hata etkinliğin görünen adı.|  
-|FaultActivityInstanceId|xs:string|Hata etkinliği örneği kimliği.|  
-|ExceptionActivity|xs:string|Özel durum oluşturdu etkinlik türü adı.|  
-|ExceptionActivityDisplayName|xs:string|Özel durum oluşturan etkinliğin görünen adı.|  
-|ExceptionActivityInstanceId|xs:string|Örnek kimliği etkinliğin özel durum oluşturdu.|  
-|Özel Durum|xs:string|Özel durum için özel durum ayrıntıları|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|FaultActivity|xs: String|Hata etkinliğinin tür adı.|  
+|FaultActivityDisplayName|xs: String|Hata etkinliğinin görünen adı.|  
+|Faultactivityınstanceıd|xs: String|Hata etkinliğinin örnek kimliği.|  
+|ExceptionActivity|xs: String|Özel durumu oluşturan etkinliğin tür adı.|  
+|ExceptionActivityDisplayName|xs: String|Özel durumu oluşturan etkinliğin görünen adı.|  
+|Exceptionactivityınstanceıd|xs: String|Özel durumu oluşturan etkinliğin örnek kimliği.|  
+|Özel durum|xs: String|Özel durum için özel durum ayrıntıları|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

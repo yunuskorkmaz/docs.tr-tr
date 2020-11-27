@@ -2,25 +2,28 @@
 title: WCF Keşif Nesnesi Modeli
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-ms.openlocfilehash: debcb08802894a34e16d9aa65bbbb1b0282794f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06984766fa8199a18197255c57492863a888e3aa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184220"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281943"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Keşif Nesnesi Modeli
-WCF Discovery, çalışma zamanında bulunabilen hizmetleri ve bu hizmetleri bulup kullanan istemcileri yazmanıza olanak tanıyan birleştirilmiş programlama modeli sağlayan bir dizi türden oluşur.  
+
+WCF bulma, çalışma zamanında keşfedilen Hizmetleri ve bu hizmetleri bulup kullanan istemcileri yazmanızı sağlayan Birleşik bir programlama modeli sağlayan bir tür kümesinden oluşur.  
   
-## <a name="making-a-service-discoverable-and-finding-services"></a>Bir Hizmetin Keşfedilebilir Hale Getirilmesi ve Bulma Hizmetleri  
- Bir WCF hizmetini keşfedilebilir hale <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> getirmek <xref:System.ServiceModel.Description.ServiceDescription> için, hizmet ana bilgisayarının a'sını ekleyin ve bir keşif bitiş noktası ekleyin. Bir hizmet duyuru iletileri göndermek için yapılandırılırsa (bir <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>ekleyerek) duyuru, hizmet ana bilgisayarı açılıp kapandığında gönderilir.  
+## <a name="making-a-service-discoverable-and-finding-services"></a>Hizmeti keşfedilebilir hale getirme ve Hizmetleri bulma  
+
+ Bir WCF hizmetini bulunabilir hale getirmek için, <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> <xref:System.ServiceModel.Description.ServiceDescription> hizmet ana bilgisayarına bir ekleyin ve bir bulma uç noktası ekleyin. Bir hizmet duyuru iletileri gönderecek şekilde yapılandırıldıysa (bir ekleyerek <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> ), hizmet ana bilgisayarı açılıp kapatıldığında duyuru gönderilir.  
   
- Hizmet duyuru iletilerini dinlemek isteyen bir istemci bir duyuru hizmeti barındırıyor ve bir veya daha fazla duyuru bitiş noktası ekler. Duyuru hizmeti duyuru mesajları alır ve duyuru etkinlikleri yükseltir.  
+ Hizmet duyurusu iletilerini dinlemek isteyen bir istemci bir duyuru hizmeti barındırır ve bir veya daha fazla duyuru uç noktası ekler. Duyuru hizmeti, duyuru iletileri alır ve duyuru olayları oluşturur.  
   
- İstemci, <xref:System.ServiceModel.Discovery.DiscoveryClient> kullanılabilir hizmetleri aramak için sınıfı kullanır. İstemci uygulaması, keşif <xref:System.ServiceModel.Discovery.DiscoveryClient> iletilerinin nereye gönderilen yeri belirten bir keşif bitiş noktasından geçerek sınıfı anında alar. İstemci, <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> istek `Probe` gönderen yöntemi çağırır. Keşif iletilerini dinleyen `Probe` hizmetler bu isteği alır. Hizmet, istemciye bir `Probe` `ProbeMatch` ileti gönderir, belirtilen ölçütleri eşleşirse.  
+ İstemci, <xref:System.ServiceModel.Discovery.DiscoveryClient> kullanılabilir hizmetleri aramak için sınıfını kullanır. İstemci uygulaması, <xref:System.ServiceModel.Discovery.DiscoveryClient> bulma iletilerinin nereye gönderileceğini belirten bir bulma uç noktası geçirerek sınıfı başlatır. İstemci <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> bir istek gönderen yöntemini çağırır `Probe` . Bulma iletilerini dinleyen hizmetler bu isteği alır `Probe` . Hizmet, içinde belirtilen ölçütlerle eşleşiyorsa `Probe` , `ProbeMatch` istemciye geri bir ileti gönderir.  
   
-## <a name="object-model"></a>Nesne Modeli  
- WCF Discovery API aşağıdaki sınıfları tanımlar:  
+## <a name="object-model"></a>Nesne modeli  
+
+ WCF bulma API 'SI aşağıdaki sınıfları tanımlar:  
   
 - <xref:System.ServiceModel.Discovery.AnnouncementClient>  
   
@@ -66,65 +69,84 @@ WCF Discovery, çalışma zamanında bulunabilen hizmetleri ve bu hizmetleri bul
   
 - <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
-## <a name="announcementclient"></a>DuyuruMüşteri  
- Sınıf, <xref:System.ServiceModel.Discovery.AnnouncementClient> duyuru iletileri göndermek için senkron ve eşzamanlı yöntemler sağlar. Merhaba ve Bye olmak üzere iki tür duyuru iletisi vardır. Bir hizmetin kullanılabilir hale geldiğini belirtmek için bir Merhaba iletisi gönderilir ve varolan bir hizmetin kullanılamadığını belirtmek için Bye iletisi gönderilir. Geliştirici, bir <xref:System.ServiceModel.Discovery.AnnouncementClient> oluşturucu parametre <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> olarak bir örnek geçirerek bir örnek oluşturur.  
+## <a name="announcementclient"></a>AnnouncementClient  
+
+ <xref:System.ServiceModel.Discovery.AnnouncementClient>Sınıfı, duyuru iletileri göndermek için zaman uyumlu ve zaman uyumsuz yöntemler sağlar. Merhaba ve bye olmak üzere iki tür duyuru iletisi vardır. Bir hizmetin kullanılabilir olduğunu göstermek için bir Hello iletisi gönderilir ve var olan bir hizmetin kullanılamaz hale geldiğini göstermek için bir bye iletisi gönderilir. Geliştirici, bir örneğini <xref:System.ServiceModel.Discovery.AnnouncementClient> Oluşturucu parametresi olarak geçirerek bir örnek oluşturur <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> .  
   
-## <a name="announcementendpoint"></a>Announcementendpoint  
- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>sabit bir duyuru sözleşmesi ile standart bir bitiş noktasını temsil eder. Duyuru iletileri göndermek ve almak için bir hizmet veya istemci tarafından kullanılır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> sınıf WS_Discovery 11 iletişim kuralı sürümünü kullanmak üzere ayarlanır.  
+## <a name="announcementendpoint"></a>AnnouncementEndpoint  
+
+ <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> bir sabit duyuru sözleşmesiyle standart uç noktayı temsil eder. Duyuru iletileri göndermek ve almak için bir hizmet veya istemci tarafından kullanılır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> sınıfı WS_Discovery 11 protokol sürümünü kullanacak şekilde ayarlanır.  
   
-## <a name="announcementservice"></a>Announcementservice  
- <xref:System.ServiceModel.Discovery.AnnouncementService>duyuru iletilerini alan ve işleyen bir duyuru hizmetinin sistem tarafından sağlanan bir uygulamasıdır. Bir Merhaba veya Bye iletisi alındığı zaman, <xref:System.ServiceModel.Discovery.AnnouncementService> örnek uygun sanal yöntemi <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOnlineAnnouncement%2A> çağırır veya <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOfflineAnnouncement%2A>duyuru olaylarını yükseltir.  
+## <a name="announcementservice"></a>AnnouncementService  
+
+ <xref:System.ServiceModel.Discovery.AnnouncementService> , duyuru iletilerini alan ve işleyen bir duyuru hizmetinin sistem tarafından sağlanmış bir uygulamasıdır. Bir Hello veya bye iletisi alındığında, <xref:System.ServiceModel.Discovery.AnnouncementService> örnek uygun sanal yöntemi çağırır <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOnlineAnnouncement%2A> veya <xref:System.ServiceModel.Discovery.AnnouncementService.OnBeginOfflineAnnouncement%2A> bildiri olaylarını başlatır.  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
- Sınıf, <xref:System.ServiceModel.Discovery.DiscoveryClient> kullanılabilir hizmetleri bulmak ve çözmek için bir istemci uygulaması tarafından kullanılır. Belirtilen <xref:System.ServiceModel.Discovery.FindCriteria> ve sırasıyla hizmet bulma ve çözme için senkron ve <xref:System.ServiceModel.Discovery.ResolveCriteria> eşzamanlı yöntemler sağlar. Geliştirici bir <xref:System.ServiceModel.Discovery.DiscoveryClient> örnek oluşturur ve bir <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> oluşturucu parametre olarak bir örnek sağlar.  
+
+ <xref:System.ServiceModel.Discovery.DiscoveryClient>Sınıfı, kullanılabilir hizmetleri bulmak ve çözmek için bir istemci uygulaması tarafından kullanılır. Belirtilen ve sırasıyla hizmetleri bulmak ve çözmek için zaman uyumlu ve zaman uyumsuz yöntemler sağlar <xref:System.ServiceModel.Discovery.FindCriteria> <xref:System.ServiceModel.Discovery.ResolveCriteria> . Geliştirici bir örnek oluşturur <xref:System.ServiceModel.Discovery.DiscoveryClient> ve bir <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> Oluşturucu parametresi olarak bir örneği sağlar.  
   
- Bir hizmeti bulmak için geliştirici, kullanılacak arama ölçütlerini `Find` içeren bir <xref:System.ServiceModel.Discovery.FindCriteria> örnek sağlayan senkron veya eşzamanlı yöntemi çağırır. Uygun <xref:System.ServiceModel.Discovery.DiscoveryClient> üstbilgi `Probe` içeren bir ileti oluşturur ve bulma isteğini gönderir. İstemci, herhangi bir `Find` zamanda birden fazla bekleyen istek olabileceğinden, istemci alınan yanıtları ilişkilendirer ve yanıtı doğrular. Daha sonra kullanarak `Find` işlemin arayan sonuçları <xref:System.ServiceModel.Discovery.FindResponse>sunar.  
+ Bir hizmeti bulmak için, geliştirici zaman uyumlu veya zaman uyumsuz yöntemini çağırır, bu da `Find` <xref:System.ServiceModel.Discovery.FindCriteria> kullanılacak arama ölçütlerini içeren bir örnek sağlar. , <xref:System.ServiceModel.Discovery.DiscoveryClient> `Probe` Uygun üst bilgilerle bir ileti oluşturur ve bulma isteğini gönderir. Herhangi bir zamanda birden fazla bekleyen istek olabileceğinden `Find` , istemci alınan yanıtları ilişkilendirir ve yanıtı doğrular. Daha sonra, kullanarak işlemi çağıran için sonuçları gönderir `Find` <xref:System.ServiceModel.Discovery.FindResponse> .  
   
- Bilinen bir hizmeti çözümlemek için geliştirici, bilinen hizmetin `Resolve` bir örneğini <xref:System.ServiceModel.Discovery.ResolveCriteria> sağlayan <xref:System.ServiceModel.EndpointAddress> senkron veya eşzamanlı yöntemi çağırır. İletiyi <xref:System.ServiceModel.Discovery.DiscoveryClient> `Resolve` uygun üstbilgiyle oluşturur ve çözüm isteğini gönderir. Alınan yanıt, bekleyen çözüm isteklerine karşı ilişkilendirilir ve sonuç `Resolve` işlemi <xref:System.ServiceModel.Discovery.ResolveResponse>çağırana 'yı kullanarak teslim edilir.  
+ Bilinen bir hizmeti çözmek için, Geliştirici `Resolve` <xref:System.ServiceModel.Discovery.ResolveCriteria> bilinen hizmeti içeren bir örneğini sağlayan zaman uyumlu veya zaman uyumsuz yöntemi çağırır <xref:System.ServiceModel.EndpointAddress> . , <xref:System.ServiceModel.Discovery.DiscoveryClient> `Resolve` Uygun üst bilgilerle ileti oluşturur ve Resolve isteğini gönderir. Alınan yanıt, bekleyen çözümleme isteklerine göre bağıntılı olur ve sonuç, kullanarak işlem çağıranına dağıtılır `Resolve` <xref:System.ServiceModel.Discovery.ResolveResponse> .  
   
- Ağda bir bulma proxy'si <xref:System.ServiceModel.Discovery.DiscoveryClient> varsa ve keşif isteğini çok noktaya yayın bir şekilde gönderirse, keşif proxy'si çok noktaya yayın bastırma Merhaba iletisiyle yanıt verebilir. Bekleyen <xref:System.ServiceModel.Discovery.DiscoveryClient> `ProxyAvailable` `Find` veya `Resolve` isteklere yanıt olarak Merhaba iletileri aldığında olayı yükseltir. Olay, `ProxyAvailable` keşif <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> proxy'si hakkında bir şey içerir. Bu bilgileri Ad hoc'tan Yönetilen moduna geçmek için kullanmak geliştiriciye bağlıdır.  
+ Ağda bir bulma proxy 'si varsa ve <xref:System.ServiceModel.Discovery.DiscoveryClient> bulma isteğini çok noktaya yayın olarak gönderirse, bulma proxy 'si çok noktaya yayın gizleme Hello iletisi ile yanıt verebilir. , <xref:System.ServiceModel.Discovery.DiscoveryClient> `ProxyAvailable` Bekleyen veya isteklere yanıt olarak Hello iletileri aldığında olayı oluşturur `Find` `Resolve` . `ProxyAvailable`Olay, <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> bulma proxy hakkında ' yı içerir. Bu bilgileri kullanarak, geçici olarak bir ad hoc 'dan yönetilen moda geçiş yapın.  
   
-## <a name="discoveryendpoint"></a>Discoveryendpoint  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>sabit bir bulma sözleşmesi ile standart bir bitiş noktasını temsil eder. Bir hizmet veya istemci tarafından keşif iletileri göndermek veya almak için kullanılır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> mod <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Managed?displayProperty=nameWithType> ve WSDiscovery11 WS-Discovery sürümü kullanmak için ayarlanır.  
+## <a name="discoveryendpoint"></a>DiscoveryEndpoint  
+
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> sabit bir bulma sözleşmesiyle standart uç noktayı temsil eder. Bulma iletilerini göndermek veya almak için bir hizmet veya istemci tarafından kullanılır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> kullanım <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Managed?displayProperty=nameWithType> modu ve WSDiscovery11 WS-Discovery sürümü olarak ayarlanır.  
   
-## <a name="discoverymessagesequencegenerator"></a>Discoverymessagesequencegenerator  
- <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>hizmet Keşif veya <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> Duyuru iletileri gönderirken bir oluşturmak için kullanılır.  
+## <a name="discoverymessagesequencegenerator"></a>DiscoveryMessageSequenceGenerator  
+
+ <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator><xref:System.ServiceModel.Discovery.DiscoveryMessageSequence>hizmet, bulma veya duyuru iletileri gönderirken bir oluşturmak için kullanılır.  
   
-## <a name="discoveryservice"></a>Discoveryservice  
- Soyut <xref:System.ServiceModel.Discovery.DiscoveryService> sınıf alma ve işleme `Probe` ve `Resolve` iletiler için bir çerçeve sağlar. İleti `Probe` alındığı zaman, <xref:System.ServiceModel.Discovery.DiscoveryService> gelen iletiye <xref:System.ServiceModel.Discovery.FindRequestContext> dayalı bir örnek oluşturur ve <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> sanal yöntemi çağırır. Bir `Resolve` ileti alındığı <xref:System.ServiceModel.Discovery.DiscoveryService> zaman, <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginResolve%2A> sanal yöntemi çağırır. Özel bir Bulma Hizmeti uygulaması sağlamak için bu sınıftan devralabilirsiniz.  
+## <a name="discoveryservice"></a>DiscoveryService  
+
+ <xref:System.ServiceModel.Discovery.DiscoveryService>Soyut sınıf, ileti alma ve işleme için bir çerçeve `Probe` sağlar `Resolve` . Bir `Probe` ileti alındığında, <xref:System.ServiceModel.Discovery.DiscoveryService> gelen iletiye göre bir örneği oluşturur <xref:System.ServiceModel.Discovery.FindRequestContext> ve <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> sanal yöntemi çağırır. Bir `Resolve` ileti alındığında, <xref:System.ServiceModel.Discovery.DiscoveryService> <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginResolve%2A> sanal yöntemi çağırır. Özel bir keşif hizmeti uygulamasını sağlamak için bu sınıftan devralma yapabilirsiniz.  
   
 ## <a name="discoveryproxy"></a>DiscoveryProxy  
- Soyut <xref:System.ServiceModel.Discovery.DiscoveryProxy> sınıf, keşif ve duyuru iletilerini almak ve işlemek için bir çerçeve sağlar. Özel bir bulma proxy'si uygularken bu sınıftan miras kalırsınız. Çok `Probe` noktaya yayın üzerinden bir <xref:System.ServiceModel.Discovery.DiscoveryProxy> ileti alındığı `BeginShouldRedirectFind` zaman, sınıf çok noktaya yayın bastırma iletisinin gönderilmesi gerekip gerekmediğini belirlemek için sanal yöntemi çağırır. Geliştirici çok noktaya yayın alameti göndermemeye karar `Probe` verirse veya ileti tek noktaya yayın üzerinden <xref:System.ServiceModel.Discovery.FindRequestContext> alınmışsa, gelen iletiyi `OnBeginFind` temel alan sınıfın bir örneğini oluşturur ve sanal yöntemi çağırır. Çok `Resolve` noktaya yayın üzerinden bir <xref:System.ServiceModel.Discovery.DiscoveryProxy> ileti alındığı `ShouldRedirectResolve` zaman, sınıf, çok noktaya yayın bastırma iletisinin gönderilmesi gerekip gerekmediğini belirlemek için sanal yöntemi çağırır. Geliştirici çok noktaya yayın alameti göndermemeye karar `Resolve` verirse veya ileti tek noktaya yayın üzerinden <xref:System.ServiceModel.Discovery.ResolveCriteria> alınmışsa, gelen iletiyi `OnBeginResolve` temel alan sınıfın bir örneğini oluşturur ve sanal yöntemi çağırır. Bir Merhaba veya Bye iletisi alındığı <xref:System.ServiceModel.Discovery.DiscoveryProxy> zaman, `OnBeingOfflineAnnouncement`duyuru olaylarını gündeme getiren uygun sanal yöntemi (veya)`OnBeginOnlineAnnouncement` çağırır.  
+
+ <xref:System.ServiceModel.Discovery.DiscoveryProxy>Soyut sınıf bulma ve duyuru iletilerini almak ve işlemek için bir çerçeve sağlar. Özel bir keşif proxy 'si uygularken bu sınıftan kalıtılır. `Probe`Çok noktaya yayın üzerinden bir ileti alındığında, <xref:System.ServiceModel.Discovery.DiscoveryProxy> sınıf, `BeginShouldRedirectFind` çok noktaya yayın gizleme iletisi gönderilip gönderilmeyeceğini anlamak için sanal yöntemi çağırır. Geliştirici, çok noktaya yayın gizleme iletisi göndermemeye karar verirse veya `Probe` ileti tek noktaya yayın üzerinden alınmışsa, <xref:System.ServiceModel.Discovery.FindRequestContext> gelen iletiye göre sınıfın bir örneğini oluşturur ve `OnBeginFind` sanal yöntemi çağırır. `Resolve`Çok noktaya yayın üzerinden bir ileti alındığında, <xref:System.ServiceModel.Discovery.DiscoveryProxy> sınıf, `ShouldRedirectResolve` çok noktaya yayın gizleme iletisi gönderilip gönderilmeyeceğini anlamak için sanal yöntemi çağırır. Geliştirici, çok noktaya yayın gizleme iletisi göndermemeye karar verirse veya `Resolve` ileti tek noktaya yayın üzerinden alınmışsa, <xref:System.ServiceModel.Discovery.ResolveCriteria> gelen iletiye göre sınıfın bir örneğini oluşturur ve `OnBeginResolve` sanal yöntemi çağırır. Bir Hello veya bye iletisi alındığında, <xref:System.ServiceModel.Discovery.DiscoveryProxy> uygun sanal yöntemi ( `OnBeginOnlineAnnouncement` veya `OnBeingOfflineAnnouncement` ) çağırır, bu da duyuru olaylarını başlatır.  
   
-## <a name="discoveryversion"></a>Discoveryversion  
- Sınıf, <xref:System.ServiceModel.Discovery.DiscoveryVersion> kullanılacak bulma protokolü sürümünü temsil eder.  
+## <a name="discoveryversion"></a>DiscoveryVersion  
+
+ <xref:System.ServiceModel.Discovery.DiscoveryVersion>Sınıfı, kullanılacak bulma protokolü sürümünü temsil eder.  
   
-## <a name="endpointdiscoverybehavior"></a>Endpointdiscoverybehavior  
- Sınıf, <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> bir bitiş noktasının kullanılabilirliğini denetlemek, uzantıları, ek sözleşme türü adlarını belirtmek için kullanılır. ve bu bitiş noktası ile ilişkili kapsamları. Bu davranış, onun <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. Hizmet <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> ana bilgisayara eklendiğinde, varsayılan olarak hizmet ana bilgisayarı tarafından barındırılan tüm uygulama uç noktaları keşfedilebilir hale gelir. Geliştirici özelliği ' ye ayarlayarak <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> belirli bir bitiş `false`noktası için keşfi kapatabilir.  
+## <a name="endpointdiscoverybehavior"></a>EndpointDiscoveryBehavior  
+
+ <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>Sınıfı, bir uç noktanın bulunabilirliği denetlemek için kullanılır, uzantıları, ek sözleşme türü adlarını belirtin. ve bu uç noktayla ilişkili kapsamlar. Bu davranış, yapılandırmak için bir uygulama uç noktasına eklenir <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> . <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>Hizmet ana bilgisayarına eklendiğinde, varsayılan olarak hizmet ana bilgisayarı tarafından barındırılan tüm uygulama uç noktaları bulunabilir hale gelir. Geliştirici, özelliğini olarak ayarlayarak belirli bir uç nokta için bulmayı kapatabilir <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> `false` .  
   
-## <a name="endpointdiscoverymetadata"></a>Endpointdiscoverymetadata  
- Sınıf, <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> hizmet tarafından yayımlanan bir bitiş noktasının sürümden bağımsız bir temsilini sağlar. Uç nokta adresleri, dinleme URL'leri, sözleşme türü adları, kapsamlar, meta veri sürümü ve hizmet geliştiricisi tarafından belirtilen uzantıları içerir. Bir <xref:System.ServiceModel.Discovery.FindCriteria> `Probe` işlem sırasında istemci tarafından <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>gönderilen. Ölçütler eşleşirse, istemciye <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> döndürülür. Son nokta adresi, <xref:System.ServiceModel.Discovery.ResolveCriteria> .'nin bitiş noktası <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>adresiyle eşleşir. Ölçütler eşleşirse, istemciye <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> döndürülür.  
+## <a name="endpointdiscoverymetadata"></a>EndpointDiscoveryMetadata  
+
+ <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>Sınıfı, hizmet tarafından yayımlanan bir uç noktanın sürümden bağımsız bir gösterimini sağlar. Hizmet geliştiricisi tarafından belirtilen uç nokta adresleri, dinleme URI 'Leri, sözleşme türü adları, kapsamlar, meta veri sürümü ve uzantıları içerir. <xref:System.ServiceModel.Discovery.FindCriteria>Bir işlem sırasında istemci tarafından gönderilen, ile `Probe` eşleştirilir <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> . Kriterler eşleşiyorsa, <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> istemciye döndürülür. ' Deki bitiş noktası adresi, <xref:System.ServiceModel.Discovery.ResolveCriteria> öğesinin uç nokta adresiyle eşleştirilir <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> . Kriterler eşleşiyorsa, <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> istemciye döndürülür.  
   
-## <a name="findcriteria"></a>Findcriteria  
- Sınıf, <xref:System.ServiceModel.Discovery.FindCriteria> bir hizmeti bulurken kullanılan ölçütleri belirtmek için kullanılan sürümden bağımsız bir sınıftır. Hizmetleri eşleştirmek için WS-Discovery tanımlı ölçütleri tam olarak destekler. Ayrıca, geliştiricilerin eşleştirme işlemi sırasında kullanılabilecek özel değerleri belirtmek için kullanabileceği uzantıları da vardır. Geliştirici, geliştiricinin aradığı toplam `Find` hizmet sayısını <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>belirten veya <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>istemcinin yanıtları ne kadar beklediğini belirten değeri belirten , işlemi sonlandırma ölçütlerini sağlayabilir.  
+## <a name="findcriteria"></a>FindCriteria  
+
+ <xref:System.ServiceModel.Discovery.FindCriteria>Sınıfı, bir hizmeti ararken kullanılan ölçütü belirtmek için kullanılan sürümden bağımsız bir sınıftır. Bu, eşleşen hizmetler için WS-bulma tanımlı ölçütlerini tam olarak destekler. Ayrıca, geliştiricilerin eşleşen işlem sırasında kullanılabilecek özel değerleri belirtmek için kullanabilecekleri uzantıları vardır. Geliştirici, `Find` <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> geliştiricinin Aradığınız toplam hizmet sayısını belirten veya belirten, <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> istemcinin yanıtları ne kadar bekleyeceğini belirten değer olan öğesini belirterek, işlem için sonlandırma ölçütlerini sağlayabilir.  
   
-## <a name="findrequestcontext"></a>Findrequestcontext  
- Sınıf, <xref:System.ServiceModel.Discovery.FindRequestContext> istemci bir `Probe` `Find` işlem başlattığında aldığı iletiye göre bulma hizmeti tarafından anında doldurulır. İstemci <xref:System.ServiceModel.Discovery.FindCriteria> tarafından belirtilen bir örneğini içerir.  
+## <a name="findrequestcontext"></a>FindRequestContext  
+
+ <xref:System.ServiceModel.Discovery.FindRequestContext>Sınıfı, `Probe` bir istemci bir işlemi başlattığında aldığı iletiyi temel alan bulma hizmeti tarafından oluşturulur `Find` . <xref:System.ServiceModel.Discovery.FindCriteria>İstemci tarafından belirtilen bir örneğini içerir.  
   
 ## <a name="findresponse"></a>FindResponse  
- Sınıf, <xref:System.ServiceModel.Discovery.FindResponse> işlemin yanıtlarıyla <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> arayana döndürülür. `Find` Ayrıca . <xref:System.ServiceModel.Discovery.FindCompletedEventArgs> Bu keşfedilen uç <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>noktaları ve bir sözlük <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> ve bir koleksiyon <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence>, bir koleksiyon içerir .  
+
+ <xref:System.ServiceModel.Discovery.FindResponse>Sınıfı, <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> işlem yanıtları ile çağıranına döndürülür `Find` . Ayrıca, içinde de mevcuttur <xref:System.ServiceModel.Discovery.FindCompletedEventArgs> . <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>Bulunan, ve ' nin bir sözlüğü olan bir koleksiyonunu içerir <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> .  
   
-## <a name="resolvecriteria"></a>Resolvecriteria  
- Sınıf, <xref:System.ServiceModel.Discovery.ResolveCriteria> zaten bilinen bir hizmeti çözerken kullanılan ölçütleri belirtmek için kullanılan sürümden bağımsız bir sınıftır. Bilinen hizmetin bitiş noktası adresini içerir. <xref:System.ServiceModel.Discovery.ResolveCriteria.Duration%2A>Geliştirici, istemcinin yanıtları ne kadar beklediğini belirten sonlandırma ölçütlerini, çözüm işlemi için sağlayabilir.  
+## <a name="resolvecriteria"></a>ResolveCriteria  
+
+ <xref:System.ServiceModel.Discovery.ResolveCriteria>Sınıfı, zaten bilinen bir hizmet çözümlenirken kullanılan ölçütü belirtmek için kullanılan sürümden bağımsız bir sınıftır. Bilinen hizmetin uç nokta adresini içerir. Geliştirici, <xref:System.ServiceModel.Discovery.ResolveCriteria.Duration%2A> istemcinin yanıtları ne kadar bekleyeceğini belirten öğesini belirterek, Çözümle işlemi için sonlandırma ölçütlerini sağlayabilir.  
   
-## <a name="resolveresponse"></a>Resolveresponse  
- İşlemin <xref:System.ServiceModel.Discovery.ResolveResponse> yanıtı <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> `Resolve` ile yöntemin arayana döndürülür. Ayrıca . <xref:System.ServiceModel.Discovery.ResolveCompletedEventArgs> Keşfedilen uç noktaları <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>ve bir örneği olan bir örneğini <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence>içerir.  
+## <a name="resolveresponse"></a>Resolveres,  
+
+ , <xref:System.ServiceModel.Discovery.ResolveResponse> <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> Yöntemi, işlem yanıtı ile çağırana döndürülür `Resolve` . Ayrıca, içinde de mevcuttur <xref:System.ServiceModel.Discovery.ResolveCompletedEventArgs> . <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>Bulunan, bulunan uç noktalar ve bir örneği olan bir örneğini içerir <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> .  
   
-## <a name="servicediscoverybehavior"></a>Servicediscoverybehavior  
- Sınıf, <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> geliştiricinin bir hizmete bulma özelliğini eklemesine olanak tanır. Bu davranışı <xref:System.ServiceModel.ServiceHost>. Sınıf, <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hizmet ana bilgisayara eklenen uygulama bitiş noktaları üzerinde yineler ve keşfedilebilir uç <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> noktalardan bir koleksiyon oluşturur. Tüm uç noktalar varsayılan olarak keşfedilebilir. Belirli bir bitiş noktasının bulunabilirliği, belirli <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> bir uç noktaya eklenerek denetlenebilir. Duyuru bitiş noktaları eklenirse, <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> servis ana bilgisayarı açıldığında veya kapatıldığında, tüm keşfedilebilir uç noktaların duyurusu duyurunun duyurulması duyurunun her biri üzerinden gönderilir.  
+## <a name="servicediscoverybehavior"></a>ServiceDiscoveryBehavior  
+
+ <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>Sınıfı, geliştiricinin bulma özelliğini bir hizmete eklemesini sağlar. Bu davranışı öğesine eklersiniz <xref:System.ServiceModel.ServiceHost> . <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>Sınıfı, hizmet konağına eklenen uygulama uç noktaları üzerinde yinelenir ve bulunabilir uç noktalardan bir koleksiyon oluşturur <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> . Tüm uç noktalar varsayılan olarak bulunabilir. Belirli bir uç noktanın bulunabilirliği <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> söz konusu uç noktaya eklenerek denetlenebilir. Duyuru uç noktaları ' na eklenirse, <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hizmet ana bilgisayarı açıldığında veya kapandığında her duyuru uç noktası üzerinden tüm keşfedilebilir uç noktalar üzerinden gönderilir.  
   
-## <a name="udpannouncementendpoint"></a>Udpannouncementendpoint  
- Sınıf, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> UDP çok noktaya yayın bağlama üzerinden duyuru için önceden yapılandırılan standart bir duyuru bitiş noktasıdır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> WSApril2005 WS_Discovery sürümünü kullanmak üzere ayarlanır.  
+## <a name="udpannouncementendpoint"></a>UdpTransportSettings  
+
+ <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>Sınıfı, BIR UDP çok noktaya yayın bağlaması üzerinden duyuru için önceden yapılandırılmış standart bir duyuru uç noktasıdır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> WSApril2005 WS_Discovery sürümünü kullanacak şekilde ayarlanır.  
   
-## <a name="udpdiscoveryendpoint"></a>Udpdiscoveryendpoint  
- Sınıf, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> UDP çok noktaya yayın bağlama üzerinde keşif için önceden yapılandırılan standart bir bulma bitiş noktasıdır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> WSDiscovery11 WS-Discovery sürümü ve <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Adhoc?displayProperty=nameWithType> modunu kullanmak üzere ayarlanır.
+## <a name="udpdiscoveryendpoint"></a>UdpDiscoveryEndpoint  
+
+ <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>Sınıfı, BIR UDP çok noktaya yayın bağlaması üzerinde bulma için önceden yapılandırılmış standart bir bulma uç noktasıdır. Varsayılan olarak, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> WSDiscovery11 WS-Discovery sürümünü ve modunu kullanacak şekilde ayarlanır <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Adhoc?displayProperty=nameWithType> .

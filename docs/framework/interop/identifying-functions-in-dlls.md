@@ -12,14 +12,15 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-ms.openlocfilehash: 054d1351a9ee6adab17117c9f423aa26d0d9ed59
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b1d95329e9b8ac6cd1f8ffc3111a50b6ab010462
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622737"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281722"
 ---
 # <a name="identifying-functions-in-dlls"></a>DLL'lerde İşlevleri Tanımlama
+
 DLL işlevinin kimliği aşağıdaki öğelerden oluşur:  
   
 - İşlev adı veya sıra sayısı  

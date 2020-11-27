@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: b5272d8b4dbac60e14fe87accbb08a2073ed65ab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc4ff2d4b53b679266978ae5ffdea97e4606a351
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594640"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281904"
 ---
 # <a name="impersonating-the-client"></a>İstemci Kimliğine Bürünme
+
 Kimliğe bürünme örneği, hizmetin çağıran adına sistem kaynaklarına erişebilmesi için çağıran uygulamanın nasıl taklit edilebilir olduğunu gösterir.  
   
  Bu örnek, [self-Host](self-host.md) örneğine dayalıdır. Hizmet ve istemci yapılandırma dosyaları, [self-Host](self-host.md) örneğindeki ile aynıdır.  
@@ -102,10 +103,10 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsol penceresinde görüntülenir. Hizmeti ve istemciyi kapatmak için her bir konsol penceresinde ENTER tuşuna basın.  
   
 > [!NOTE]
-> Hizmetin bir yönetim hesabı altında çalışması veya altında çalıştığı hesaba, URI 'yi HTTP katmanıyla kaydetmek için haklar verilmelidir `http://localhost:8000/ServiceModelSamples` . Bu tür haklar, [Httpcfg. exe aracı](/windows/win32/http/httpcfg-exe)kullanılarak bir [ad alanı ayırması](/windows/win32/http/namespace-reservations-registrations-and-routing) ayarlanarak verilebilir.  
+> Hizmetin bir yönetim hesabı altında çalışması veya altında çalıştığı hesaba, URI 'yi HTTP katmanıyla kaydetmek için haklar verilmelidir `http://localhost:8000/ServiceModelSamples` . Bu tür haklar, [Httpcfg.exe aracı](/windows/win32/http/httpcfg-exe)kullanılarak bir [ad alanı ayırması](/windows/win32/http/namespace-reservations-registrations-and-routing) ayarlanarak verilebilir.  
   
 > [!NOTE]
-> Windows Server 2003 çalıştıran bilgisayarlarda, kimliğe bürünme yalnızca Host. exe uygulamasının kimliğe bürünme ayrıcalığına sahip olması durumunda desteklenir. (Varsayılan olarak, yalnızca Yöneticiler bu izne sahiptir.) Bu ayrıcalığı hizmetin çalıştığı bir hesaba eklemek için, **Yönetimsel Araçlar**' a gidin, **yerel güvenlik ilkesi**' ni açın, **Yerel Ilkeler**' i açın, **Kullanıcı hakları ataması**' nı seçin ve **kimlik doğrulamasından sonra istemcinin özelliklerini al** ' ı seçin ve **Özellikler** ' i çift tıklatarak bir kullanıcı veya grup ekleyin.  
+> Windows Server 2003 çalıştıran bilgisayarlarda, kimliğe bürünme yalnızca Host.exe uygulamanın kimliğe bürünme ayrıcalığına sahip olması durumunda desteklenir. (Varsayılan olarak, yalnızca Yöneticiler bu izne sahiptir.) Bu ayrıcalığı hizmetin çalıştığı bir hesaba eklemek için, **Yönetimsel Araçlar**' a gidin, **yerel güvenlik ilkesi**' ni açın, **Yerel Ilkeler**' i açın, **Kullanıcı hakları ataması**' nı seçin ve **kimlik doğrulamasından sonra istemcinin özelliklerini al** ' ı seçin ve **Özellikler** ' i çift tıklatarak bir kullanıcı veya grup ekleyin.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
