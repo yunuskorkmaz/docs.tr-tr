@@ -2,27 +2,30 @@
 title: 4812 - DiscoveryMessageWithNullReplyTo
 ms.date: 03/30/2017
 ms.assetid: a40e6b7e-c2a6-4186-b1d6-c9560f24a959
-ms.openlocfilehash: ff281dc7fe5dd277d9cd69cdea51bd155cc79546
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f933f8668ccb21c9b509db6dc2b56726ba6c78bf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942942"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285999"
 ---
 # <a name="4812---discoverymessagewithnullreplyto"></a>4812 - DiscoveryMessageWithNullReplyTo
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4812|  
-|anahtar sözcükler|Bulma|  
+|ID|4812|  
+|Anahtar sözcükler|Bulma|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay bir ReplyTo adres sahip olmadığından DiscoveryClient tarafından bulma ileti bırakıldı, yayılır.  
+
+ Bu olay, bulma iletisi bir ReplyTo Address içermediğinden DiscoveryClient tarafından bırakıldığında yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Bir bulma isteği iletisiyle MessageID = '%1' ReplyTo adres sahip olmadığından bırakıldı.  
+
+ MessageID = ' %1 ' olan bir bulma isteği iletisi, ReplyTo adresi olmadığından bırakıldı.  
   
 ## <a name="details"></a>Ayrıntılar

@@ -13,17 +13,19 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-ms.openlocfilehash: d092b93af55d2cdf14e9284d8cffcdc8440cbf81
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: ed2cf0b960c0a8f51dc327a5c58770fcf5e2fa17
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415998"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286064"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
+
 `dateTimeInvalidLocalFormat` <xref:System.DateTime> Evrensel Eşgüdümlü saat (UTC) olarak depolanan bir örnek, yalnızca yerel örnekler için kullanılmak üzere tasarlanan bir biçim kullanılarak biçimlendirilirken MDA etkinleştirilir <xref:System.DateTime> . Bu MDA belirtilmemiş veya varsayılan örnekler için etkinleştirilmemiş <xref:System.DateTime> .  
   
 ## <a name="symptom"></a>Belirti  
+
  Bir uygulama, bir UTC <xref:System.DateTime> örneğini yerel biçim kullanarak el ile serileştiriliyor:  
   
 ```csharp
@@ -32,9 +34,11 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ```  
   
 ### <a name="cause"></a>Nedeni  
+
  Yöntemin ' z ' biçimi <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> Yerel Saat dilimi sapmasını içerir, örneğin, Sidney saati için "+ 10:00". Bu nedenle, yalnızca değerinin yerel olması durumunda anlamlı bir sonuç üretir <xref:System.DateTime> . Değer UTC zamanı ise, <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> Yerel Saat dilimi sapmasını içerir, ancak saat dilimi tanımlayıcısını görüntülemez veya ayarlamalamaz.  
   
 ### <a name="resolution"></a>Çözüm  
+
  UTC <xref:System.DateTime> ÖRNEKLERININ UTC olduğunu belirten bir şekilde biçimlendirilmesi gerekir. UTC zamanının UTC zamanını belirtmek için ' Z ' kullanması için önerilen biçim:  
   
 ```csharp
@@ -50,9 +54,11 @@ Serialize(myDateTime.ToString("o"));
 ```  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+
  Bu MDA, çalışma zamanını etkilemez.  
   
-## <a name="output"></a>Çıktı  
+## <a name="output"></a>Çıkış  
+
  Bu MDA ' ın etkinleştirilmesiyle ilgili özel bir çıktı yoktur. ancak, çağrı yığını, MDA ' ı etkinleştiren çağrının konumunu belirlemede kullanılabilir <xref:System.DateTime.ToString%2A> .  
   
 ## <a name="configuration"></a>Yapılandırma  
@@ -66,6 +72,7 @@ Serialize(myDateTime.ToString("o"));
 ```  
   
 ## <a name="example"></a>Örnek  
+
  <xref:System.DateTime> <xref:System.Xml.XmlConvert> Aşağıdaki şekilde, veya SıNıFıNı kullanarak UTC değerini dolaylı olarak serileştirtiren bir uygulamayı düşünün <xref:System.Data.DataSet> .  
   
 ```csharp

@@ -2,27 +2,30 @@
 title: 3809 - RoutingServiceMessageRoutedToEndpoints
 ms.date: 03/30/2017
 ms.assetid: 22479cc6-72d1-48df-912c-fc37bddeb043
-ms.openlocfilehash: b31192e613b7e9f5e4ea1a382b529b693ae0e9a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c34c4a96f708845ec639b77dd1fe53e56deed757
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999836"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284842"
 ---
 # <a name="3809---routingservicemessageroutedtoendpoints"></a>3809 - RoutingServiceMessageRoutedToEndpoints
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3809|  
-|anahtar sözcükler|RoutingServices|  
+|ID|3809|  
+|Anahtar sözcükler|Yönlendirme hizmetleri|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Uç noktalar ile yönlendirme hizmeti yönlendirildiğinde bu olay yayılır.  
+
+ Bu olay, yönlendirme hizmeti bitiş noktalarına yönlendirildiğinde yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Yönlendirme hizmeti yönlendirilmiş iletinin kimliği: '%1' %2 uç nokta listeler.  
+
+ Yönlendirme hizmeti KIMLIĞI ' %1 ' olan iletiyi %2 bitiş noktası listesine yönlendirdi.  
   
 ## <a name="details"></a>Ayrıntılar

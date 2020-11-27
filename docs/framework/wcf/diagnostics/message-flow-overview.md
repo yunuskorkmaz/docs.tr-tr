@@ -2,19 +2,20 @@
 title: İleti Akışı Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 0bfbd1523f1d5db4a94cf3af03a03779af14655d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cb2924b62fce62620b664efa34208deb12dd34b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795968"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285544"
 ---
 # <a name="message-flow-overview"></a>İleti Akışı Genel Bakış
+
 Birbirine bağlı hizmetler içeren dağıtılmış bir sistemde, hizmetler arasında causal ilişkilerinin belirlenmesi gerekir. Durum izleme, sorun giderme ve kök neden analizi gibi kritik senaryoları desteklemek için bir istek akışının parçası olan çeşitli bileşenleri anlamak önemlidir. .NET Framework 4 ' te çeşitli hizmetler arasındaki izlemelerin bağıntısını etkinleştirmek için aşağıdaki özellikler aracılığıyla destek ekledik:
 
 - Analitik izleme: Windows için olay Izleme (ETW) kullanan yüksek performanslı ve düşük ayrıntı düzeyi izleme özelliği.
 
-- WCF/WF hizmetleri için uçtan uca etkinlik modeli: Bu özellik, <xref:System.ServiceModel> ve <xref:System.Workflow.ComponentModel> ad alanları tarafından oluşturulan izlemelerin bağıntısını destekler.
+- WCF/WF hizmetleri için uçtan uca etkinlik modeli: Bu özellik, <xref:System.ServiceModel> ve ad alanları tarafından oluşturulan izlemelerin bağıntısını destekler <xref:System.Workflow.ComponentModel> .
 
 - WF için ETW izleme: Bu özellik, iş akışının geçerli durumuna ve ilerlemesini görünürlük sağlamak için WF hizmetleri tarafından oluşturulan izleme kayıtlarını kullanır.
 
@@ -22,7 +23,7 @@ Birbirine bağlı hizmetler içeren dağıtılmış bir sistemde, hizmetler aras
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Başlangıç öğreticisinde ileti akışı izlemeyi etkinleştirmek için
 
-1. **Başlat**, **çalıştır**ve girerek `eventvwr.exe`Olay Görüntüleyicisi açın.
+1. **Başlat**, **çalıştır** ve girerek Olay Görüntüleyicisi açın `eventvwr.exe` .
 
 2. Analitik izlemeyi etkinleştirmediyseniz, **uygulamalar ve hizmetler günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' ı genişletin. **Görünüm**, **analitik ve hata ayıklama günlüklerini göster**' i seçin. **Analitik** öğesine sağ tıklayın ve **günlüğü etkinleştir**' i seçin. İzlemelerin görüntülenebilmesi için Olay Görüntüleyicisi açık bırakın.
 
@@ -30,7 +31,7 @@ Birbirine bağlı hizmetler içeren dağıtılmış bir sistemde, hizmetler aras
 
 4. **Hizmet** projesine sağ tıklayın ve **Ekle**, **Yeni öğe**' yi seçin. **Uygulama yapılandırma dosyası** ' nı seçin ve **Tamam**' ı tıklatın.
 
-5. Önceki adımda oluşturulan app. config dosyasına aşağıdaki kodu ekleyin.
+5. Aşağıdaki kodu, önceki adımda oluşturulan App.Config dosyasına ekleyin.
 
     ```xml
     <system.serviceModel>

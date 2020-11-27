@@ -2,13 +2,15 @@
 title: 'Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 80c62ddc6630d26c6c178d1eeff8c6df05bf1d00
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 64f856bcce1234c8e833cc9be723b4af91c4569c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051941"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286168"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma
+
 WCF Hizmetleri ve istemcileri, <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlamayı kullanabilir.  WebSockets, <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesinin bir geri çağırma anlaşması tanımladığını belirlediğinde kullanılır. Bu konuda, <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için kullanan BIR WCF hizmeti ve istemcisinin nasıl uygulanacağı açıklanmaktadır.  
   
 ### <a name="define-the-service"></a>Hizmeti tanımlama  
@@ -160,6 +162,7 @@ WCF Hizmetleri ve istemcileri, <xref:System.ServiceModel.NetHttpBinding> WebSock
          İstemci yapılandırmasında yapmanız gereken özel bir şey yoktur, kullanarak istemci tarafı uç noktasını belirtmeniz yeterlidir `NetHttpBinding` .  
   
 ## <a name="example"></a>Örnek  
+
  Bu konuda kullanılan kodun tamamı aşağıda verilmiştir.  
   
 ```csharp  

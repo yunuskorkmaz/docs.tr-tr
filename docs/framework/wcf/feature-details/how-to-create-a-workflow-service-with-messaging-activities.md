@@ -2,23 +2,24 @@
 title: 'Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: b4991fc9f8a6c45cae3943f1506247c42ed2b30b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 21d08d9c3c78cc8774d038018703ffb0c7ceb1fe
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597130"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286324"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma
+
 Bu konuda, mesajlaşma etkinlikleri kullanılarak basit bir iş akışı hizmetinin nasıl oluşturulacağı açıklanmaktadır. Bu konu, hizmetin yalnızca mesajlaşma etkinliklerinden oluşan bir iş akışı hizmeti oluşturma mekanizması üzerinde odaklanır. Gerçek dünyada bir hizmette, iş akışı birçok farklı etkinlik içerir. Hizmet, bir dizeyi alıp çağrıyı yapana döndüren Echo adlı bir işlem uygular. Bu konu, iki konu serisinin ilk ilkisidir. Sonraki konuda [nasıl yapılır: bir Iş akışı uygulamasından bir hizmete erişme](how-to-access-a-service-from-a-workflow-application.md) , bu konuda oluşturulan hizmeti çağırabileceği bir iş akışı uygulamasının nasıl oluşturulduğunu açıklar.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Bir iş akışı hizmeti projesi oluşturmak için  
   
 1. Visual Studio 2012 ' i başlatın.  
   
-2. **Yeni proje Iletişim kutusunu**göstermek için **Dosya** menüsüne tıklayın, **Yeni**' yi ve ardından **Proje** ' yi seçin. Proje türleri listesinden yüklü şablonlar ve **WCF Iş akışı hizmeti uygulaması** listesinden **iş akışı** ' nı seçin. Projeyi adlandırın `MyWFService` ve aşağıdaki çizimde gösterildiği gibi varsayılan konumu kullanın.  
+2. **Yeni proje Iletişim kutusunu** göstermek için **Dosya** menüsüne tıklayın, **Yeni**' yi ve ardından **Proje** ' yi seçin. Proje türleri listesinden yüklü şablonlar ve **WCF Iş akışı hizmeti uygulaması** listesinden **iş akışı** ' nı seçin. Projeyi adlandırın `MyWFService` ve aşağıdaki çizimde gösterildiği gibi varsayılan konumu kullanın.  
   
-     **Yeni proje Iletişim kutusunu**kapatmak için **Tamam** düğmesine tıklayın.  
+     **Yeni proje Iletişim kutusunu** kapatmak için **Tamam** düğmesine tıklayın.  
   
 3. Proje oluşturulduğunda, Service1. xamlx dosyası, aşağıdaki çizimde gösterildiği gibi tasarımcıda açılır.  
   
@@ -38,7 +39,7 @@ Bu konuda, mesajlaşma etkinlikleri kullanılarak basit bir iş akışı hizmeti
   
      <xref:System.ServiceModel.Activities.SendReply>Etkinliğin <xref:System.ServiceModel.Activities.SendReply.Request%2A> özelliğinin olarak ayarlanmış olduğuna `Receive` , etkinliğin <xref:System.ServiceModel.Activities.Receive> yanıtlanıyor olduğu etkinliğin adına <xref:System.ServiceModel.Activities.SendReply> dikkat edin.  
   
-3. <xref:System.ServiceModel.Activities.Receive>Etkinlik türü ' nde `Echo` , **OperationName**etiketli metin kutusuna yazın. Bu, hizmetin uyguladığı işlemin adını tanımlar.  
+3. <xref:System.ServiceModel.Activities.Receive>Etkinlik türü ' nde `Echo` , **OperationName** etiketli metin kutusuna yazın. Bu, hizmetin uyguladığı işlemin adını tanımlar.  
   
      ![İşlem adının nerede belirtildiğinin gösterildiği ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/define-operation-name.jpg)  
   
@@ -67,6 +68,7 @@ Bu konuda, mesajlaşma etkinlikleri kullanılarak basit bir iş akışı hizmeti
 8. **Build** menüsüne tıklayıp Build **Solution**' ı seçerek çözümü kaydedin ve oluşturun.  
   
 ## <a name="configure-the-workflow-service-project"></a>Iş akışı hizmeti projesini yapılandırma  
+
  İş akışı hizmeti tamamlanmıştır. Bu bölümde, barındırmak ve çalıştırmak kolay hale getirmek için iş akışı hizmeti çözümünün nasıl yapılandırılacağı açıklanmaktadır. Bu çözüm, hizmeti barındırmak için ASP.NET geliştirme sunucusunu kullanır.  
   
 #### <a name="to-set-project-start-up-options"></a>Proje başlangıç seçeneklerini ayarlamak için  
@@ -92,5 +94,5 @@ Bu konuda, mesajlaşma etkinlikleri kullanılarak basit bir iş akışı hizmeti
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İş Akışı Hizmetleri](workflow-services.md)
-- [İş Akışı Hizmetlerini Barındırmaya Genel Bakış](hosting-workflow-services-overview.md)
+- [İş Akışı Hizmetlerini Barındırma Genel Bakış](hosting-workflow-services-overview.md)
 - [Mesajlaşma Etkinlikleri](messaging-activities.md)

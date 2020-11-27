@@ -2,27 +2,30 @@
 title: 4817 - InnerChannelCreationFailed
 ms.date: 03/30/2017
 ms.assetid: c1a20619-beda-49b9-bb64-76b6a009c32b
-ms.openlocfilehash: e9c99281e6abe27a8e59583102a712c9fa5a3854
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bef14b43f1b09b20b544446b46eaa919881eb779
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645064"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285778"
 ---
 # <a name="4817---innerchannelcreationfailed"></a>4817 - InnerChannelCreationFailed
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4817|  
-|anahtar sözcükler|Bulma|  
+|ID|4817|  
+|Anahtar sözcükler|Bulma|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- DiscoveryClientChannel bulunan bir uç nokta ile kanal oluşturma başarısız olduğunda bu olay yayılır. DiscoveryClientChannel artık sonraki kullanılabilir bulunan uç noktası kullanmayı dener.  
+
+ Bu olay, DiscoveryClientChannel tarafından bulunan bir uç nokta ile kanal oluşturulamadı. DiscoveryClientChannel şimdi bulunan bir sonraki kullanılabilir uç noktayı kullanmaya çalışacak.  
   
 ## <a name="message"></a>İleti  
- DiscoveryClientChannel EndpointAddress ile keşfedilen bir uç noktası ile kanal oluşturma başarısız oldu. '%1' = ve aracılığıyla = '%2'. DiscoveryClientChannel artık sonraki kullanılabilir bulunan uç noktası kullanmayı dener.  
+
+ DiscoveryClientChannel, EndpointAddress = ' %1 ' ve = ' %2 ' aracılığıyla bulunan bir uç nokta ile kanalı oluşturamadı. DiscoveryClientChannel şimdi bulunan bir sonraki kullanılabilir uç noktayı kullanmaya çalışacak.  
   
 ## <a name="details"></a>Ayrıntılar

@@ -2,27 +2,30 @@
 title: 4818 - InnerChannelOpenFailed
 ms.date: 03/30/2017
 ms.assetid: c8ac6447-4fbb-4e08-ab26-91acae48dd11
-ms.openlocfilehash: e98d76b21513d409250cd621003c583e33f980c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0db97add82bed91e8e7e3ae763f6f52361b86b3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61957436"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285791"
 ---
 # <a name="4818---innerchannelopenfailed"></a>4818 - InnerChannelOpenFailed
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4818|  
-|anahtar sözcükler|Bulma|  
+|ID|4818|  
+|Anahtar sözcükler|Bulma|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bulunan bir uç nokta ile kanalını açmayı DiscoveryClientChannel başarısız olduğunda bu olay yayılır. DiscoveryClientChannel artık sonraki kullanılabilir bulunan uç noktası kullanmayı dener.  
+
+ Bu olay, DiscoveryClientChannel kanalı bulunan bir uç nokta ile açmak başarısız olduğunda yayınlanır. DiscoveryClientChannel şimdi bulunan bir sonraki kullanılabilir uç noktayı kullanmaya çalışacak.  
   
 ## <a name="message"></a>İleti  
- EndpointAddress ile keşfedilen bir uç noktasıyla kanalını açmayı DiscoveryClientChannel başarısız = '%1' ve '%2' aracılığıyla =. DiscoveryClientChannel artık sonraki kullanılabilir bulunan uç noktası kullanmayı dener.  
+
+ DiscoveryClientChannel, EndpointAddress = ' %1 ' ve ' %2 ' aracılığıyla bulunan bir uç nokta ile kanalı açamadı. DiscoveryClientChannel şimdi bulunan bir sonraki kullanılabilir uç noktayı kullanmaya çalışacak.  
   
 ## <a name="details"></a>Ayrıntılar

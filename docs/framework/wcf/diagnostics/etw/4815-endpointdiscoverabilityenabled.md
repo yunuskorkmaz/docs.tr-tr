@@ -2,27 +2,30 @@
 title: 4815 - EndpointDiscoverabilityEnabled
 ms.date: 03/30/2017
 ms.assetid: cd027b98-da63-4046-8243-c09e30870b5f
-ms.openlocfilehash: 750a0ecf6f6713feff8b163f58a357ad77f1e7e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab84ae9f19b326723df9d0d2ba1259d419379f1c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778397"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285869"
 ---
 # <a name="4815---endpointdiscoverabilityenabled"></a>4815 - EndpointDiscoverabilityEnabled
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4815|  
-|anahtar sözcükler|Bulma|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|4815|  
+|Anahtar sözcükler|Bulma|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bitiş noktası bulunabilirliğini etkinleştirildiğinde bu olay yayılır.  
+
+ Uç noktanın bulunabilirliği etkinleştirildiğinde bu olay yayınlanır.  
   
 ## <a name="message"></a>İleti  
- EndpointAddress bitiş noktası bulunabilirliğini = '%1' ve ListenUri = '%2' etkin.  
+
+ EndpointAddress = ' %1 ' ve ListenUri = ' %2 ' olan bitiş noktasının bulunabilirliği etkinleştirildi.  
   
 ## <a name="details"></a>Ayrıntılar
