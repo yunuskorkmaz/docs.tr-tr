@@ -10,24 +10,28 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-ms.openlocfilehash: 05af4e17a91f7c0d8f3576a86d3d784ef6666aed
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b8cb4805663a2b28a133f98503730199af695c4f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803696"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271466"
 ---
-# <a name="pinvokelog-mda"></a><span data-ttu-id="7f49b-103">pInvokeLog MDA</span><span class="sxs-lookup"><span data-stu-id="7f49b-103">pInvokeLog MDA</span></span>
-<span data-ttu-id="7f49b-104">`pInvokeLog`Yönetilen hata ayıklama Yardımcısı (MDA), yürütme sırasında kullanılan her benzersiz platform çağırma imzası için etkinleştirilir.</span><span class="sxs-lookup"><span data-stu-id="7f49b-104">The `pInvokeLog` managed debugging assistant (MDA) is activated for each unique platform invoke signature used during execution.</span></span>  
+# <a name="pinvokelog-mda"></a><span data-ttu-id="e33e8-103">pInvokeLog MDA</span><span class="sxs-lookup"><span data-stu-id="e33e8-103">pInvokeLog MDA</span></span>
+
+<span data-ttu-id="e33e8-104">`pInvokeLog`Yönetilen hata ayıklama Yardımcısı (MDA), yürütme sırasında kullanılan her benzersiz platform çağırma imzası için etkinleştirilir.</span><span class="sxs-lookup"><span data-stu-id="e33e8-104">The `pInvokeLog` managed debugging assistant (MDA) is activated for each unique platform invoke signature used during execution.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="7f49b-105">Çalışma zamanında etki</span><span class="sxs-lookup"><span data-stu-id="7f49b-105">Effect on the Runtime</span></span>  
- <span data-ttu-id="7f49b-106">Bu MDA, CLR üzerinde hiçbir etkisi yoktur.</span><span class="sxs-lookup"><span data-stu-id="7f49b-106">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="e33e8-105">Çalışma zamanında etki</span><span class="sxs-lookup"><span data-stu-id="e33e8-105">Effect on the Runtime</span></span>  
+
+ <span data-ttu-id="e33e8-106">Bu MDA, CLR üzerinde hiçbir etkisi yoktur.</span><span class="sxs-lookup"><span data-stu-id="e33e8-106">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="7f49b-107">Çıktı</span><span class="sxs-lookup"><span data-stu-id="7f49b-107">Output</span></span>  
- <span data-ttu-id="7f49b-108">Yürütme sırasında kullanılan platform çağırma imzasını belirten bir ileti.</span><span class="sxs-lookup"><span data-stu-id="7f49b-108">A message indicating the platform invoke signature used during execution.</span></span>  
+## <a name="output"></a><span data-ttu-id="e33e8-107">Çıkış</span><span class="sxs-lookup"><span data-stu-id="e33e8-107">Output</span></span>  
+
+ <span data-ttu-id="e33e8-108">Yürütme sırasında kullanılan platform çağırma imzasını belirten bir ileti.</span><span class="sxs-lookup"><span data-stu-id="e33e8-108">A message indicating the platform invoke signature used during execution.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="7f49b-109">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="7f49b-109">Configuration</span></span>  
- <span data-ttu-id="7f49b-110">Her Match öğesi, platform çağırma çağrılarına yapılan. dll dosyalarını filtreler.</span><span class="sxs-lookup"><span data-stu-id="7f49b-110">Each match element filters the .dll files to which platform invoke calls are made.</span></span>  
+## <a name="configuration"></a><span data-ttu-id="e33e8-109">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="e33e8-109">Configuration</span></span>  
+
+ <span data-ttu-id="e33e8-110">Her Match öğesi, platform çağırma çağrılarına yapılan. dll dosyalarını filtreler.</span><span class="sxs-lookup"><span data-stu-id="e33e8-110">Each match element filters the .dll files to which platform invoke calls are made.</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -42,7 +46,7 @@ ms.locfileid: "85803696"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7f49b-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7f49b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e33e8-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e33e8-111">See also</span></span>
 
-- [<span data-ttu-id="7f49b-112">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="7f49b-112">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="7f49b-113">Yönetilmeyen DLL İşlevlerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="7f49b-113">Consuming Unmanaged DLL Functions</span></span>](../interop/consuming-unmanaged-dll-functions.md)
+- [<span data-ttu-id="e33e8-112">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="e33e8-112">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="e33e8-113">Yönetilmeyen DLL İşlevlerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="e33e8-113">Consuming Unmanaged DLL Functions</span></span>](../interop/consuming-unmanaged-dll-functions.md)
