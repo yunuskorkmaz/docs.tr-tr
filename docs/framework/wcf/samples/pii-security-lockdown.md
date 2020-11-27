@@ -2,14 +2,15 @@
 title: PII Güvenlik Kilidi
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 62e1495927cad669771c560603919e8f6b94d863
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b4ec820cd57e3dfaff035dc8e5ce1ef4b463df5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559382"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260009"
 ---
 # <a name="pii-security-lockdown"></a>PII Güvenlik Kilidi
+
 Bu örnek, bir Windows Communication Foundation (WCF) hizmetinin güvenlikle ilgili birkaç özelliğinin nasıl kontrol altına alınacağını gösterir:  
   
 - Bir hizmetin yapılandırma dosyasındaki hassas bilgileri şifreleme.  
@@ -28,6 +29,7 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmetinin güvenlikle ilg
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Tartışma  
+
  Bu özelliklerin her biri, bir hizmetin güvenliğinin yönlerini denetlemek için ayrı olarak veya birlikte kullanılabilir. Bu bir WCF hizmetini güvenli hale getirmek için kesin bir kılavuz değildir.  
   
  .NET Framework yapılandırma dosyaları, veritabanlarına bağlanmak için bağlantı dizeleri gibi gizli bilgiler içerebilir. Paylaşılan, Web 'de barındırılan senaryolarda, yapılandırma dosyası içinde yer alan verilerin rastgele görüntülemeye dayanıklı olması için bu bilgileri bir hizmetin yapılandırma dosyasında şifrelemek istenebilir. .NET Framework 2,0 ve üzeri, Windows Data Protection uygulama programlama arabirimi (DPAPI) veya RSA şifreleme sağlayıcısını kullanarak yapılandırma dosyasının bölümlerini şifreleyebilme özelliğine sahiptir. DPAPI veya RSA kullanan aspnet_regiis.exe, bir yapılandırma dosyasının seçim bölümlerini şifreleyebilir.  
@@ -37,6 +39,7 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmetinin güvenlikle ilg
  Bu örnek, Kullanıcı adı ve parola gibi, izleme ve ileti günlüklerinde bilinen kişisel bilgilerin (PII) günlüğe kaydedilmesini nasıl denetleyeceğinizi gösterir. Varsayılan olarak, bilinen PII günlüğe kaydetme devre dışıdır, ancak bazı durumlarda PII günlüğü, bir uygulamada hata ayıklaması yapmak için önemli olabilir. Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır. Ayrıca, bu örnek izleme ve ileti günlüğe kaydetme kullanır. Daha fazla bilgi için [izleme ve mesaj günlüğü](tracing-and-message-logging.md) örneğine bakın.  
   
 ## <a name="encrypting-configuration-file-elements"></a>Yapılandırma dosyası öğelerini şifreleme  
+
  Paylaşılan bir Web barındırma ortamındaki güvenlik amaçları için, gizli bilgiler içerebilen veritabanı bağlantı dizeleri gibi belirli yapılandırma öğelerini şifrelemek istenebilir. Bir yapılandırma öğesi, .NET Framework klasöründe bulunan aspnet_regiis.exe Aracı kullanılarak şifrelenmiş olabilir, örneğin,%WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Örnek için Web.config appSettings bölümündeki değerleri şifrelemek için  
@@ -50,6 +53,7 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmetinin güvenlikle ilg
  Yapılandırma dosyalarını şifreleme hakkında daha fazla bilgi, ASP.NET yapılandırmasındaki ([güvenli ASP.NET uygulamalar oluşturma: kimlik doğrulaması, yetkilendirme ve güvenli iletişim](/previous-versions/msp-n-p/ff649248(v=pandp.10))) ve ASP.NET yapılandırmasında nasıl yapılır RSA ([nasıl yapılır: rsa kullanılarak ASP.NET 2,0 ' de yapılandırma bölümlerini şifreleme](/previous-versions/msp-n-p/ff650304(v=pandp.10))) hakkında daha fazla bilgi bulunabilir.  
   
 ## <a name="locking-configuration-file-elements"></a>Yapılandırma dosyası öğelerini kilitleme  
+
  Web 'de barındırılan senaryolarda, hizmetlerin alt dizinlerinde Hizmetleri olması mümkündür. Bu durumlarda, alt dizindeki hizmetin yapılandırma değerleri, Machine.config değerler incelenerek ve üst dizinlerdeki tüm Web.config dosyalarla, dizin ağacında aşağı doğru bir şekilde birleştirme ve son olarak Web.config dosyasını hizmeti içeren dizinde Birleştirme yoluyla hesaplanır. Çoğu yapılandırma öğesinin varsayılan davranışı, alt dizinlerindeki yapılandırma dosyalarının üst dizinlerde ayarlanan değerleri geçersiz kılmasına izin verdir. Belirli durumlarda, alt dizinlerdeki yapılandırma dosyalarının üst dizin yapılandırmasında ayarlanan değerleri geçersiz kılmasını engellemek istenebilir.  
   
  .NET Framework, kilitli yapılandırma öğelerini geçersiz kılan yapılandırmaların çalışma zamanı özel durumları oluşturması için yapılandırma dosyası öğelerini kilitlemek için bir yol sağlar.  
@@ -74,6 +78,7 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmetinin güvenlikle ilg
  Yapılandırma öğelerinin kilitlenmesi daha belirgin olabilir. Öğe listesi, `lockElements` alt öğeleri koleksiyonundaki öğelerin bir kümesini kilitlemek için öğesine değer olarak belirtilebilir. Bir `lockAttributes` öğe içindeki bir öznitelik kümesini kilitlemek için, bir öznitelik listesi, öğesine değer olarak belirtilebilir. `lockAllElementsExcept`Bir düğüm üzerindeki veya özniteliklerini belirterek, belirtilen bir liste hariç tüm öğe veya öznitelik koleksiyonu kilitlenebilir `lockAllAttributesExcept` .  
   
 ## <a name="pii-logging-configuration"></a>PII günlük kaydı yapılandırması  
+
  PII günlüğü iki anahtarla denetlenir: bilgisayar yöneticisinin PII kaydına izin verip vermemesini ve bir uygulama ayarının, bir Web.config veya App.config dosyasında her bir kaynak için PII günlüğe kaydedilmesini değiştirmesine izin veren bir uygulama ayarı olan Machine.config ' de bilgisayar genelindeki bir ayar bulunur.  
   
  Bilgisayar genelindeki ayar, `enableLoggingKnownPii` `true` `false` Machine.config öğesinde veya olarak ayarlanarak denetlenir `machineSettings` . Örneğin, aşağıdakiler uygulamaların PII günlük kaydını açmasına olanak sağlar.  

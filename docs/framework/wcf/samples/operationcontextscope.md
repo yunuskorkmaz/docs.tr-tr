@@ -2,14 +2,15 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 0b2b4d9b22f654fa433c7473160444b41a5adfa4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 261247daf01e975cfc3b5ae449fae6dfbf9d1a80
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575164"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260012"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
+
 OperationContextScope örneği, üst bilgiler kullanılarak Windows Communication Foundation (WCF) çağrısıyla nasıl ek bilgi gönderileceğini gösterir. Bu örnekte, hem sunucu hem de istemci konsol uygulamalardır.  
   
 > [!NOTE]
@@ -18,6 +19,7 @@ OperationContextScope örneği, üst bilgiler kullanılarak Windows Communicatio
  Örnek, bir istemcinin kullanarak nasıl ek bilgi gönderebileceğinizi gösterir <xref:System.ServiceModel.Channels.MessageHeader> <xref:System.ServiceModel.OperationContextScope> . Bir <xref:System.ServiceModel.OperationContextScope> nesne, bir kanalda tanımlayarak oluşturulur. Uzak hizmete çevrilmesi gereken üstbilgiler <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> koleksiyona eklenebilir. Bu koleksiyona eklenen üst bilgiler, hizmetine erişerek hizmetten alınabilir <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> . Çağrıları birden çok kanalda yapılır ve ardından istemciye eklenen üstbilgiler yalnızca oluşturmak için kullanılan kanala uygulanır <xref:System.ServiceModel.OperationContextScope> .  
   
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
+
  Bu, istemciden bir ileti alan ve koleksiyondaki üstbilgiyi aramaya çalışan örnek hizmettir <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> . İstemci, üst bilgiyle gönderilen GUID 'YI geçirir ve hizmet özel üstbilgiyi alır ve varsa, bunu istemci tarafından bağımsız değişken olarak geçirilen GUID ile karşılaştırır.  
   
 ```csharp
@@ -55,7 +57,8 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- Bu, uzak hizmetle iletişim kurmak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan proxy 'yi kullanan istemci uygulamasıdır. İlk olarak iki proxy nesnesi oluşturur `MessageHeaderReaderClient` .  
+
+ Bu, uzak hizmetle iletişim kurmak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan proxy 'yi kullanan istemci uygulamasıdır. İlk olarak iki proxy nesnesi oluşturur `MessageHeaderReaderClient` .  
   
 ```csharp
 //Create two clients to the remote service.  

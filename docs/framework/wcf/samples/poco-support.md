@@ -2,14 +2,15 @@
 title: POCO Desteği
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: a9f8d185c58b22e68f7a8c11954e0e534c4bd48f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d416f37e0add99fbe3d60982fd2298748ff78556
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600470"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259973"
 ---
 # <a name="poco-support"></a>POCO Desteği
+
 Bu örnek, işaretsiz türler için serileştirme desteğini gösterir; diğer bir deyişle, bazı durumlarda düz eski CLR nesne (POCO) türleri olarak da adlandırılan serileştirme özniteliklerinin uygulanmadığı türler. , <xref:System.Runtime.Serialization.DataContractSerializer> Parametresiz oluşturucusu olan tüm genel işaretsiz türler için bir veri sözleşmesi olduğunu anlar. Veri sözleşmeleri, yapılandırılmış verileri hizmetlere ve hizmetlerden geçirmenize olanak sağlar. İşaretsiz türler hakkında daha fazla bilgi için bkz. [serileştirilebilir türler](../feature-details/serializable-types.md).  
   
  Bu örnek [Başlarken](getting-started-sample.md)' i temel alır, ancak basit sayısal türler yerine karmaşık sayılar kullanır. Ayrıca, ve özniteliklerinin kullanılmadığı durumlar dışında [temel veri sözleşmesi](basic-data-contract.md) örneğine de benzer <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> .  
