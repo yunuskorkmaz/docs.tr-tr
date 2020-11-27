@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 86ce392bb76b22e2b6a65fa1d005ed8e9589af15
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 41a7a3e651d234de4079455a667df670d6c7435d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246395"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294657"
 ---
 # <a name="hosting-services"></a>Barındırma hizmetleri
 
@@ -23,6 +23,7 @@ Bu barındırma seçenekleri bir konsol uygulamasının içinde, Internet Inform
 ## <a name="hosting-options"></a>Barındırma seçenekleri
 
 ### <a name="self-host-in-a-managed-application"></a>Yönetilen bir uygulamada Self-Host
+
  WCF Hizmetleri, yönetilen herhangi bir uygulamada barındırılabilir. Dağıtım için en az altyapıyı gerektirdiğinden bu en esnek seçenektir. Hizmetin kodunu yönetilen uygulama kodunun içine ekleyin ve sonra <xref:System.ServiceModel.ServiceHost> hizmeti kullanılabilir hale getirmek için bir örneğini oluşturup açın. Daha fazla bilgi için bkz. [nasıl yapılır: yönetilen bir uygulamada BIR WCF hizmeti barındırma](how-to-host-a-wcf-service-in-a-managed-application.md).
 
  Bu seçenek, iki yaygın senaryoyu mümkün bir şekilde sunar: konsol uygulamalarında çalışan WCF Hizmetleri ve Windows Presentation Foundation (WPF) veya Windows Forms (WinForms) tabanlı olanlar gibi zengin istemci uygulamaları. Bir WCF hizmetini bir konsol uygulaması içinde barındırmak, genellikle uygulamanın geliştirme aşamasında yararlıdır. Bu, uygulamanın içinde neler olduğunu öğrenmek ve yeni konumlara kopyalayarak kolayca geçiş yapmak için, ' den izleme bilgilerinin oluşmasını kolay bir şekilde oluşturmanızı kolaylaştırır. Bu barındırma seçeneği Ayrıca, WPF ve WinForms uygulamaları gibi zengin istemci uygulamalarının dış dünya ile iletişim kurmasını kolaylaştırır. Örneğin, Kullanıcı arabirimi için WPF kullanan eşler arası işbirliği istemcisi ve ayrıca diğer istemcilerin bu sunucuya bağlanmasına ve bilgi paylaşmasına izin veren bir WCF hizmeti barındırır.
@@ -44,6 +45,7 @@ Windows Işlem etkinleştirme hizmeti (WAS), Windows Server 2008 için Windows V
  Bu barındırma seçeneği, doğru şekilde yapılandırılmasını gerektirir, ancak uygulamanın bir parçası olarak herhangi bir barındırma kodu yazmanızı gerektirmez. WAS barındırmanın nasıl yapılandırılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: BIR WCF hizmetini BARıNDıRMA was](./feature-details/how-to-host-a-wcf-service-in-was.md).
 
 ## <a name="choose-a-hosting-environment"></a>Barındırma ortamı seçin
+
  Aşağıdaki tabloda, barındırma seçeneklerinin her biriyle ilişkili bazı önemli avantajlar ve senaryolar özetlenmektedir.
 
 |Barındırma ortamı|Genel Senaryolar|Önemli avantajlar ve sınırlamalar|
@@ -58,11 +60,11 @@ Windows Işlem etkinleştirme hizmeti (WAS), Windows Server 2008 için Windows V
 
 |Barındırma ortamı|Platform kullanılabilirliği|Desteklenen aktarımlar|İşlem ve AppDomain geri dönüştürme|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|Yönetilen uygulamalar ("kendiliğinden konak")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net. MSMQ|No|
-|Windows Hizmetleri (eski adıyla NT Hizmetleri olarak biliniyordu)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net. MSMQ|No|
-|IıS 5,1|Windows XP|HTTP|Yes|
-|IIS 6.0|Windows Server 2003|HTTP|Yes|
-|Windows Işlem etkinleştirme hizmeti (WAS)|Windows Vista, Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net. MSMQ|Yes|
+|Yönetilen uygulamalar ("kendiliğinden konak")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net. MSMQ|Hayır|
+|Windows Hizmetleri (eski adıyla NT Hizmetleri olarak biliniyordu)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net. MSMQ|Hayır|
+|IıS 5,1|Windows XP|HTTP|Evet|
+|IIS 6.0|Windows Server 2003|HTTP|Evet|
+|Windows Işlem etkinleştirme hizmeti (WAS)|Windows Vista, Windows Server 2008|HTTP<br /><br /> net. TCP,<br /><br /> net. pipe,<br /><br /> net. MSMQ|Evet|
 
  Güvenilir olmayan ana bilgisayar güvenlik güvenliği 'nden bir hizmet veya herhangi bir uzantıyı çalıştırmanın gerektiğini unutmayın. Ayrıca, bir uygulama, ' <xref:System.ServiceModel.ServiceHost> ın bir kimliğe bürünme özelliğini açarken kullanıcının oturumu kapatmadığından (örneğin, kullanıcının önbelleğe alınmasını) emin olmalıdır <xref:System.Security.Principal.WindowsIdentity> .
 
@@ -71,6 +73,6 @@ Windows Işlem etkinleştirme hizmeti (WAS), Windows Server 2008 için Windows V
 - [Temel Programlama Yaşam Döngüsü](basic-programming-lifecycle.md)
 - [Hizmet Sözleşmelerini Uygulama](implementing-service-contracts.md)
 - [Nasıl yapılır: IIS'de WCF Hizmeti Barındırma](./feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma](./feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Nasıl yapılır: WAS'de WCF Hizmeti Barındırma](./feature-details/how-to-host-a-wcf-service-in-was.md)
 - [Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma](./feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma](how-to-host-a-wcf-service-in-a-managed-application.md)

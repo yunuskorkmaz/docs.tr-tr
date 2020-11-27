@@ -2,14 +2,15 @@
 title: UDP Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 13d20524693b234a14b2b31061c6259f75b1c0b8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 74ee3e1d53b9ba060820f69c201bfdccb6308d47
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591117"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295008"
 ---
 # <a name="udp-activation"></a>UDP Etkinleştirme
+
 Bu örnek, [taşıma: UDP](transport-udp.md) örneğine dayalıdır. Bu işlem, Windows Işlem etkinleştirme hizmeti 'ni (WAS) kullanarak işlem etkinleştirmeyi desteklemek için [iletim: UDP](transport-udp.md) örneğini genişletir.  
   
  Örnek üç ana parçadan oluşur:  
@@ -21,6 +22,7 @@ Bu örnek, [taşıma: UDP](transport-udp.md) örneğine dayalıdır. Bu işlem, 
 - UDP özel aktarımı üzerinden ileti alan bir hizmet (tarafından etkinleştirilen bir çalışan işleminde barındırılan).  
   
 ## <a name="udp-protocol-activator"></a>UDP protokol Etkinleştirici  
+
  UDP protokol Etkinleştirici, WCF istemcisi ile WCF hizmeti arasında bir köprüdir. Aktarım katmanında UDP protokolü aracılığıyla veri iletişimi sağlar. İki ana işleve sahiptir:  
   
 - İle işbirliği yapılan dinleyici bağdaştırıcısı (LA), gelen iletilere yanıt olarak işlemlerin ETKINLEŞTIRILME süreciydi.  
@@ -30,6 +32,7 @@ Bu örnek, [taşıma: UDP](transport-udp.md) örneğine dayalıdır. Bu işlem, 
  Etkinleştirici, sunucu makinesinde tek başına bir program olarak çalışıyor olmalıdır. Normal olarak, WAS (Nettcpetkinleştirici ve Netpipeetkinleştirici gibi), uzun süre çalışan Windows hizmetlerinde uygulanan dinleyici bağdaştırıcılarıdır. Ancak kolaylık sağlaması ve açıklık için bu örnek, bağımsız bir uygulama olarak protokol Etkinleştirici uygular.  
   
 ### <a name="was-listener-adapter"></a>WAS dinleyicisi bağdaştırıcısı  
+
  UDP için WAS dinleyicisi bağdaştırıcısı `UdpListenerAdapter` sınıfında uygulanır. Bu, ile etkileşim kuran modüldür. Bu, aşağıdaki Webhost API 'Leri çağırarak elde edilir:  
   
 - `WebhostRegisterProtocol`  
@@ -40,29 +43,33 @@ Bu örnek, [taşıma: UDP](transport-udp.md) örneğine dayalıdır. Bu işlem, 
   
 - `WebhostCloseAllListenerChannelInstances`  
   
- İlk çağrıldıktan sonra `WebhostRegisterProtocol` , dinleyici bağdaştırıcısı `ApplicationCreated` ApplicationHost. config dosyasında kayıtlı tüm uygulamalar için was geri çağırma işlemini alır (%Windir%\System32\inetsrv dizininde bulunur). Bu örnekte, yalnızca UDP protokolüne sahip uygulamaları (Protokol Kimliği "net. UDP") etkin olarak işleyeceğiz. Bu tür uygulamalar uygulamaya dinamik yapılandırma değişikliklerine yanıt vermezse (örneğin, devre dışı durumundan etkin 'e geçiş), diğer uygulamalar bunu farklı şekilde işleyebilir.  
+ İlk kez çağrıldıktan sonra `WebhostRegisterProtocol` , dinleyici bağdaştırıcısı `ApplicationCreated` applicationHost.config ' de kayıtlı tüm uygulamalar için was geri çağırma işlemini alır (%Windir%\System32\inetsrv dizininde bulunur). Bu örnekte, yalnızca UDP protokolüne sahip uygulamaları (Protokol Kimliği "net. UDP") etkin olarak işleyeceğiz. Bu tür uygulamalar uygulamaya dinamik yapılandırma değişikliklerine yanıt vermezse (örneğin, devre dışı durumundan etkin 'e geçiş), diğer uygulamalar bunu farklı şekilde işleyebilir.  
   
  Geri arama `ConfigManagerInitializationCompleted` alındığında, bu, protokolünün başlatılmasına yönelik tüm bildirimlerin tamamlandığını gösterir. Şu anda, dinleyici bağdaştırıcısı etkinleştirme isteklerini işlemeye hazırlanıyor.  
   
  Bir uygulama için yeni bir istek ilk kez geldiğinde, dinleyici bağdaştırıcısı `WebhostOpenListenerChannelInstance` henüz başlatılmadıysa çalışan işlemini başlatan was öğesine çağrılır. Ardından protokol işleyicileri yüklenir ve dinleyici bağdaştırıcısı ile sanal uygulama arasındaki iletişim başlatılabilir.  
   
- Dinleyici bağdaştırıcısı, aşağıdaki gibi < > bölümünde%SystemRoot%\system32\ınetapplicationhost,config dizinine kaydedilir `listenerAdapters` :  
+ Dinleyici bağdaştırıcısı, `listenerAdapters` aşağıda gösterildiği gibi <> bölümünde% SystemRoot% \System32\inetsrv\ApplicationHost.config kaydedilir:  
   
 ```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
 ```  
   
 ### <a name="protocol-listener"></a>Protokol dinleyicisi  
+
  UDP Protokol dinleyicisi, sanal uygulama adına bir UDP uç noktasında dinleme yapan protokol Etkinleştirici içindeki bir modüldür. Sınıfında uygulanır `UdpSocketListener` . Uç noktası, `IPEndpoint` bağlantı noktası numarasının site için protokolün bağlamalarından ayıklandığı şekilde temsil edilir.  
   
 ### <a name="control-service"></a>Denetim Hizmeti  
+
  Bu örnekte, Etkinleştirici ile WAS çalışan işlemi arasında iletişim kurmak için WCF kullanırız. Etkinleştirici içinde bulunan hizmete denetim hizmeti denir.  
   
 ## <a name="protocol-handlers"></a>Protokol Işleyicileri  
+
  Dinleyici bağdaştırıcısı gerçekleştirildikten sonra `WebhostOpenListenerChannelInstance` , was işlem yöneticisi başlatılmamışsa çalışan işlemi başlatır. Ardından çalışan işleminin içindeki uygulama Yöneticisi, UDP Işlem Protokolü Işleyicisini (PPH) bunun isteğiyle yükler `ListenerChannelId` . İçindeki PPH, çağrıları dönüştürür `IAdphManager` .`StartAppDomainProtocolListenerChannel` UDP AppDomain protokol Işleyicisini (ADPH) başlatmak için.  
   
 ## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
- Bilgiler, Web. config dosyasına aşağıdaki şekilde kaydedilir:  
+
+ Bilgiler Web.config şu şekilde kaydedilir:  
   
 ```xml  
 <serviceHostingEnvironment>  
@@ -71,6 +78,7 @@ Bu örnek, [taşıma: UDP](transport-udp.md) örneğine dayalıdır. Bu işlem, 
 ```  
   
 ## <a name="special-setup-for-this-sample"></a>Bu örnek için özel kurulum  
+
  Bu örnek yalnızca Windows Vista, Windows Server 2008 veya Windows 7 üzerinde oluşturulup çalıştırılabilir. Örneği çalıştırmak için, önce tüm bileşenlerin doğru şekilde ayarlanması gerekir. Örneği yüklemek için aşağıdaki adımları kullanın.  
   
 #### <a name="to-set-up-this-sample"></a>Bu örneği ayarlamak için  
@@ -89,25 +97,26 @@ Bu örnek, [taşıma: UDP](transport-udp.md) örneğine dayalıdır. Bu işlem, 
   
     - Ayrıca, bu sanal uygulama için "net. UDP" protokolünü de sunar.  
   
-3. "Tnewtactivator. exe" Kullanıcı arabirimi uygulamasını başlatın. **Kurulum** sekmesine tıklayın, aşağıdaki onay kutularını işaretleyin ve ardından yüklemek için **yükleme** ' ye tıklayın:  
+3. "WasNetActivator.exe" Kullanıcı arabirimi uygulamasını başlatın. **Kurulum** sekmesine tıklayın, aşağıdaki onay kutularını işaretleyin ve ardından yüklemek için **yükleme** ' ye tıklayın:  
   
     - UDP dinleyicisi bağdaştırıcısı  
   
     - UDP protokol Işleyicileri  
   
-4. "Lınetactivator. exe" Kullanıcı arabirimi uygulamasının **etkinleştirme** sekmesine tıklayın. Dinleyici bağdaştırıcısını başlatmak için **Başlat** düğmesine tıklayın. Şimdi programı çalıştırmaya hazırsınız.  
+4. "WasNetActivator.exe" Kullanıcı arabirimi uygulamasının **etkinleştirme** sekmesine tıklayın. Dinleyici bağdaştırıcısını başlatmak için **Başlat** düğmesine tıklayın. Şimdi programı çalıştırmaya hazırsınız.  
   
     > [!NOTE]
-    > Bu örnekle işiniz bittiğinde, "Default Web site" kaynağından net. UDP bağlamasını kaldırmak için Cleanup. bat dosyasını çalıştırmanız gerekir.  
+    > Bu örnekle işiniz bittiğinde, "Default Web site" kaynağından net. UDP bağlamasını kaldırmak için Cleanup.bat çalıştırmanız gerekir.  
   
 ## <a name="sample-usage"></a>Örnek Kullanım  
+
  Derlemeden sonra oluşturulan dört farklı ikili dosya vardır:  
   
-- Client. exe: istemci kodu. App. config Client. exe. config istemci yapılandırma dosyasına derlenir.  
+- Client.exe: istemci kodu. App.config, Client.exe.config istemci yapılandırma dosyasına derlenir.  
   
-- UDPActivation. dll: tüm ana UDP uygulamalarını içeren kitaplık.  
+- UDPActivation.dll: Ana UDP uygulamalarının tümünü içeren kitaplık.  
   
-- Service. dll: hizmet kodu. Bu, ServiceModelSamples sanal uygulamasının \bin dizinine kopyalanır. Hizmet dosyası, Service. svc ve yapılandırma dosyası Web. config ' dir. Derlemeden sonra, bunlar şu konuma kopyalanır:%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+- Service.dll: hizmet kodu. Bu, ServiceModelSamples sanal uygulamasının \bin dizinine kopyalanır. Hizmet dosyası, Service. svc ve yapılandırma dosyası Web.config. Derlemeden sonra, bunlar şu konuma kopyalanır:%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
 - Lınetactivator: UDP Etkinleştirici programı.  
   
@@ -119,9 +128,9 @@ Bu örnek, [taşıma: UDP](transport-udp.md) örneğine dayalıdır. Bu işlem, 
   
     - Internet Information Services (IIS): W3SVC.  
   
-2. Ardından, etkinleştirentactivator. exe ' yi başlatın. **Etkinleştirme** sekmesi altında, iletişim kutusunda yalnızca **UDP**olan protokol seçilidir. Etkinleştirici 'yi başlatmak için **Başlat** düğmesine tıklayın.  
+2. Ardından, WasNetActivator.exe Etkinleştirici başlatın. **Etkinleştirme** sekmesi altında, iletişim kutusunda yalnızca **UDP** olan protokol seçilidir. Etkinleştirici 'yi başlatmak için **Başlat** düğmesine tıklayın.  
   
-3. Etkinleştirici başlatıldıktan sonra, bir komut penceresinden Client. exe ' yi çalıştırarak istemci kodunu çalıştırabilirsiniz. Örnek çıktı aşağıda verilmiştir:  
+3. Etkinleştirici başlatıldıktan sonra, bir komut penceresinden Client.exe çalıştırarak istemci kodunu çalıştırabilirsiniz. Örnek çıktı aşağıda verilmiştir:  
   
     ```console  
     Testing Udp Activation.  

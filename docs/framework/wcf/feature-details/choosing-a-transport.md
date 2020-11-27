@@ -5,28 +5,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e1a92203de25aa399316eea91a758802768442a0
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e38b25f4b76977f4eb30e3dd39cf0c726228a822
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247500"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295151"
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
+
 Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma arasında seçim yapma ölçütlerini anlatmaktadır: HTTP, TCP ve adlandırılmış kanallar. WCF Ayrıca bir Message Queuing (MSMQ olarak da bilinir) taşıması içerir, ancak bu belge Message Queuing 'i kapsamaz.  
   
  WCF programlama modeli, uç nokta işlemlerini (bir hizmet sözleşmesinde gösterildiği gibi) iki uç noktayı bağlayan taşıma mekanizmasından ayırır. Bu, hizmetlerinizi ağa sunmaya nasıl karar vereceğinize ilişkin esneklik sağlar.  
   
- WCF 'de, *bağlama öğelerinden*oluşan bir diziyle oluşturulan *bağlama*kullanarak, bir ağ üzerinde nasıl veri aktaracağınızla belirlenir. Bir aktarım, bağlamanın bir parçası olan bir aktarım bağlama öğesi tarafından temsil edilir. Bağlama, güvenlik, gerekli bir ileti Kodlayıcısı bağlama öğesi ve gerekli bir aktarım bağlama öğesi gibi isteğe bağlı protokol bağlama öğelerini içerir. Bir aktarım, başka bir uygulamadan veya bir iletinin seri hale getirilmiş formunu gönderir veya alır.  
+ WCF 'de, *bağlama öğelerinden* oluşan bir diziyle oluşturulan *bağlama* kullanarak, bir ağ üzerinde nasıl veri aktaracağınızla belirlenir. Bir aktarım, bağlamanın bir parçası olan bir aktarım bağlama öğesi tarafından temsil edilir. Bağlama, güvenlik, gerekli bir ileti Kodlayıcısı bağlama öğesi ve gerekli bir aktarım bağlama öğesi gibi isteğe bağlı protokol bağlama öğelerini içerir. Bir aktarım, başka bir uygulamadan veya bir iletinin seri hale getirilmiş formunu gönderir veya alır.  
   
  Var olan bir istemciye veya sunucuya bağlanmanız gerekiyorsa, belirli bir aktarımı kullanma seçeneğiniz olmayabilir. Ancak, WCF Hizmetleri, her biri farklı bir taşıma ile birden fazla uç nokta aracılığıyla erişilebilir hale getirilebilir. Tek bir taşıma hizmetinize yönelik hedef kitleyi kapsamıyorsa, hizmeti birden fazla uç nokta üzerinden kullanıma sunma seçeneğini göz önünde bulundurun. İstemci uygulamaları daha sonra kendileri için en iyi uç noktayı kullanabilir.  
   
- Bir taşıma seçtikten sonra, onu kullanan bir bağlama seçmelisiniz. Sistem tarafından sağlanmış bir bağlama (bkz. [sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)) seçebilir veya kendi özel bağlamlarınızı oluşturabilirsiniz (bkz. [Özel Bağlamalar](../extending/custom-bindings.md)). Kendi bağlamalarınızı da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Kullanıcı Tanımlı Bağlamalar Oluşturma](../extending/creating-user-defined-bindings.md).  
+ Bir taşıma seçtikten sonra, onu kullanan bir bağlama seçmelisiniz. Sistem tarafından sağlanmış bir bağlama (bkz. [sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)) seçebilir veya kendi özel bağlamlarınızı oluşturabilirsiniz (bkz. [Özel Bağlamalar](../extending/custom-bindings.md)). Kendi bağlamalarınızı da oluşturabilirsiniz. Daha fazla bilgi için bkz. [User-Defined bağlamaları oluşturma](../extending/creating-user-defined-bindings.md).  
   
 ## <a name="advantages-of-each-transport"></a>Her bir taşımanın avantajları  
+
  Bu bölümde, aralarında seçim yapmak üzere ayrıntılı bir karar grafiği de dahil olmak üzere üç ana aktarımdan birini seçmek için başlıca nedenler açıklanmaktadır.  
   
 ### <a name="when-to-use-http-transport"></a>HTTP taşıması ne zaman kullanılır?  
+
  HTTP, istemciler ve sunucular arasında bir istek/yanıt protokolüdür. En yaygın uygulama, bir Web sunucusuyla iletişim kuran Web tarayıcısı istemcilerinden oluşur. İstemci, istemci isteği iletilerini dinleyen bir sunucuya istek gönderir. Sunucu bir istek aldığında, isteğin durumunu içeren bir yanıt döndürür. Başarılı olursa, bir Web sayfası, bir hata iletisi veya diğer bilgiler gibi isteğe bağlı veriler döndürülür. HTTP protokolü hakkında daha fazla bilgi için bkz. [http-HyperText aktarım protokolü](https://www.w3.org/Protocols/).  
   
  HTTP protokolü bağlantı tabanlı değil — yanıt gönderildikten sonra durum korunmaz. Birden çok sayfalı işlemleri işlemek için, uygulamanın gerekli tüm durumları kalıcı hale getirilmesi gerekir.  
@@ -34,13 +37,15 @@ Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma 
  WCF 'de HTTP taşıma bağlaması, eski WCF olmayan sistemlerle birlikte çalışabilirlik için iyileştirilmiştir. İletişim kuran tüm taraflar WCF kullanıyorsa, TCP tabanlı veya adlandırılmış kanallar tabanlı bağlamalar daha hızlıdır. Daha fazla bilgi için <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetNamedPipeBinding> bölümlerine bakın.  
   
 ### <a name="when-to-use-the-tcp-transport"></a>TCP aktarımı ne zaman kullanılır?  
+
  TCP, uçtan uca hata algılama ve düzeltme ile bağlantı tabanlı, akış odaklı bir dağıtım hizmetidir. *Bağlantı tabanlı* , konaklar arasındaki bir iletişim oturumunun veri değiş tokuşu yapılmadan önce kurulması anlamına gelir. Ana bilgisayar, bir mantıksal IP adresi tarafından tanımlanan TCP/IP ağındaki herhangi bir cihazdır.  
   
- TCP, güvenilir veri teslimi ve kullanım kolaylığı sağlar. Özellikle TCP, Paket teslimi gönderisini bilgilendirir, paketlerin gönderildikleri sırada teslim edilmesini garanti eder, kayıp paketleri yeniden iletir ve veri paketlerinin çoğaltılmamasını sağlar. Bu güvenilir teslimin iki TCP/IP düğümü arasında uygulandığını ve hangi ara düğümlerin dahil ettiğine bakılmaksızın uç noktalar arasında geçerli olan *WS-ReliableMessaging*ile aynı şey olmadığını unutmayın.  
+ TCP, güvenilir veri teslimi ve kullanım kolaylığı sağlar. Özellikle TCP, Paket teslimi gönderisini bilgilendirir, paketlerin gönderildikleri sırada teslim edilmesini garanti eder, kayıp paketleri yeniden iletir ve veri paketlerinin çoğaltılmamasını sağlar. Bu güvenilir teslimin iki TCP/IP düğümü arasında uygulandığını ve hangi ara düğümlerin dahil ettiğine bakılmaksızın uç noktalar arasında geçerli olan *WS-ReliableMessaging* ile aynı şey olmadığını unutmayın.  
   
  WCF TCP taşıması, iletişimin her iki ucunun de WCF kullandığı senaryo için en iyi duruma getirilmiştir. Bu bağlama, farklı makineler arasında iletişim kuran senaryolar için en hızlı WCF bağlamasıdır. İleti alışverişi, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> iyileştirilmiş ileti aktarımı için kullanır. TCP çift yönlü iletişim sağlar ve bu nedenle, istemci ağ adresi çevirisi (NAT) arkasında olsa bile çift yönlü sözleşmeleri uygulamak için kullanılabilir.  
   
 ### <a name="when-to-use-the-named-pipe-transport"></a>Adlandırılmış kanal taşıması ne zaman kullanılır?  
+
  Adlandırılmış kanal, Windows işletim sistemi çekirdekte, işlemlerin iletişim için kullanabileceği paylaşılan belleğin bir bölümü gibi bir nesnedir. Adlandırılmış kanal bir ada sahiptir ve tek bir makinedeki süreçler arasındaki tek yönlü veya çift yönlü iletişim için kullanılabilir.  
   
  Tek bilgisayardaki farklı WCF uygulamaları arasında iletişim gerektiğinde ve başka bir makineden gelen iletişimi engellemek istediğinizde, adlandırılmış kanallar aktarımını kullanın. Ek bir kısıtlama, yükseltilmiş ayrıcalıklara sahip olmadıkları müddetçe Windows Uzak Masaüstü ile çalışan işlemlerin aynı Windows Uzak Masaüstü oturumuyla sınırlı olabileceğini de sağlar.  
@@ -49,6 +54,7 @@ Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma 
 > IIS 'de barındırılan birden çok sitede zayıf bir joker karakterli URL ayırması ile adlandırılmış kanal aktarımını kullanırken şu hata oluşabilir: ' 2 ' sitesini dinlemeye çalışırken ' net. pipe ' protokolünün ' Netpipeactivation ' etkinleştirme hizmetinde bir hata oluştu, bu nedenle protokol site için geçici olarak devre dışı bırakıldı. Daha fazla ayrıntı için özel durum iletisine bakın. URL: WeakWildcard: net. pipe:/ \<machine name> /durum: ConflictingRegistration özel durumu: Işlem adı: SMSvcHost Işlem kimliği: 1076 \  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>Taşıma seçme için karar noktaları  
+
  Aşağıdaki tabloda, bir taşıma seçmek için kullanılan yaygın karar noktaları açıklanmaktadır. Uygulamanıza uygulanan ek öznitelikleri ve taşımaları göz önünde bulundurmanız gerekir. Uygulamanız için önemli olan öznitelikleri belirleyin, favorably ilişkilendirmekte olan taşımaları belirleyin ve ardından öznitelik kümesi ile en iyi şekilde çalışan taşımaları seçin.  
   
 |Öznitelik|Açıklama|Sık sık kırmızı aktarımlar|  
@@ -74,5 +80,5 @@ Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma 
 - <xref:System.ServiceModel.NetNamedPipeBinding>
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - [Bağlamalar](bindings.md)
-- [Sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../system-provided-bindings.md)
 - [Kullanıcı Tanımlı Bağlamalar Oluşturma](../extending/creating-user-defined-bindings.md)

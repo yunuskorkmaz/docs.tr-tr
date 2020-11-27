@@ -2,27 +2,30 @@
 title: 4010 - PendingSessionQueueFull
 ms.date: 03/30/2017
 ms.assetid: 14696793-16eb-4847-a530-fa2f90f682c9
-ms.openlocfilehash: 650e3f1a6dbbb7a564e9ccb274aee66d21c49e73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 342d4bbc64c652168e9b6526d18fc9a14280040b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672594"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294033"
 ---
 # <a name="4010---pendingsessionqueuefull"></a>4010 - PendingSessionQueueFull
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4010|  
-|anahtar sözcükler|ActivationServices|  
+|ID|4010|  
+|Anahtar sözcükler|ActivationServices|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay oturumu gönderme bekleyen oturum kuyruğu dolu olduğundan başarısız olduğunda yayılır.  
+
+ Bu olay, bekleyen oturum kuyruğu dolu olduğundan oturum gönderimi başarısız olduğunda dağıtılır.  
   
 ## <a name="message"></a>İleti  
- Oturumu Kuyruk öğeleri bekleyen '%2' ile tam olduğundan '%1' için oturum gönderme başarısız oldu.  
+
+ Bekleyen oturum kuyruğu ' %2 ' bekleyen öğelerle dolu olduğundan, ' %1 ' için oturum gönderme işlemi başarısız oldu.  
   
 ## <a name="details"></a>Ayrıntılar

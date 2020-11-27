@@ -2,14 +2,15 @@
 title: Teslim Edilemeyen İletiler Sırası
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 8ea2ea530db8745c3802f9f39793ffd77ddd0008
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cf281ff08d56669d0257d693af93d8a9b5b2e81a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575296"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292834"
 ---
 # <a name="dead-letter-queues"></a>Teslim Edilemeyen İletiler Sırası
+
 Bu örnek, teslimin başarısız olduğu iletileri nasıl işleyeceğinizi ve işleyeceğini gösterir. Bu [işlem, IŞLENEN MSMQ bağlama](transacted-msmq-binding.md) örneğini temel alır. Bu örnek, `netMsmqBinding` bağlamayı kullanır. Hizmet, sıraya alınan iletileri alma hizmetini gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır.
 
 > [!NOTE]
@@ -24,7 +25,7 @@ Bu örnek, teslimin başarısız olduğu iletileri nasıl işleyeceğinizi ve i�
 
  Bağlamadaki atılacak ileti sırası `NetMsmqBinding` aşağıdaki özelliklerde ifade edilir:
 
-- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>istemcisi için gerekli atılacak ileti sırası türünü ifade eden özellik. Bu numaralandırma aşağıdaki değerlere sahiptir:
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> istemcisi için gerekli atılacak ileti sırası türünü ifade eden özellik. Bu numaralandırma aşağıdaki değerlere sahiptir:
 
 - `None`: İstemci için atılacak mektup kuyruğu gerekmez.
 
@@ -32,7 +33,7 @@ Bu örnek, teslimin başarısız olduğu iletileri nasıl işleyeceğinizi ve i�
 
 - `Custom`: Özelliği kullanılarak belirtilen özel bir atılacak mektup kuyruğu, <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> ölü iletileri depolamak için kullanılır. Bu özellik yalnızca Windows Vista 'da kullanılabilir. Bu, uygulamanın aynı bilgisayar üzerinde çalışan diğer uygulamalarla paylaşılması yerine kendi atılacak bir sıra kullanması gerektiğinde kullanılır.
 
-- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>bir atılacak ileti sırası olarak kullanılacak sırayı ifade etmek için özelliği. Bu yalnızca Windows Vista 'da kullanılabilir.
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> bir atılacak ileti sırası olarak kullanılacak sırayı ifade etmek için özelliği. Bu yalnızca Windows Vista 'da kullanılabilir.
 
  Bu örnekte, istemci, bir işlemin kapsamı içinde hizmete toplu bir ileti gönderir ve bu iletiler için "yaşam süresi" (yaklaşık 2 saniye) için rastgele bir düşük değer belirtir. İstemci Ayrıca, kullanım dışı olan iletileri sıraya almak için kullanılacak özel bir atılacak mektup kuyruğu belirtir.
 
@@ -350,6 +351,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > Ayarı `security mode` `None` `MsmqAuthenticationMode` , ayarına `MsmqProtectionLevel` ve güvenliğine eşdeğerdir `Message` `None` .
 
 ## <a name="comments"></a>Yorumlar
+
  Varsayılan olarak `netMsmqBinding` , bağlama aktarımında güvenlik etkindir. İki özellik `MsmqAuthenticationMode` ve `MsmqProtectionLevel` , birlikte taşıma güvenliği türü belirlenir. Varsayılan olarak, kimlik doğrulama modu olarak ayarlanır `Windows` ve koruma düzeyi olarak ayarlanır `Sign` . Kimlik doğrulama ve imzalama özelliğini sağlamak için MSMQ 'nun bir etki alanının parçası olması gerekir. Bu örneği bir etki alanının parçası olmayan bir bilgisayarda çalıştırırsanız, şu hatayı alırsınız: "kullanıcının iç Message Queuing sertifikası yok".
 
 > [!IMPORTANT]

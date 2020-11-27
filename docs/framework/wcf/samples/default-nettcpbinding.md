@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: 56648b74e400085b76f4f837852791b33fbf97e0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7a1af17ef3c2176371a394ae8b63d9cc207d5b6f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600003"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292785"
 ---
 # <a name="default-nettcpbinding"></a>Varsayılan NetTcpBinding
+
 Bu örnek, bağlamanın kullanımını gösterir <xref:System.ServiceModel.NetTcpBinding> . Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır. Bu örnekte, hizmet kendiliğinden barındırılır. Hem istemci hem de hizmet konsol uygulamalardır.  
   
 > [!NOTE]
@@ -107,7 +108,7 @@ Press ENTER to terminate client.
 4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
     > [!NOTE]
-    > Sunucu şirket içinde barındırıldığından, örneği bir çapraz makine yapılandırmasında çalıştırmak için istemcinin App. config dosyasında bir kimlik belirtmeniz gerekir.  
+    > Sunucu şirket içinde barındırıldığından, örneği bir çapraz makine yapılandırmasında çalıştırmak için istemcinin App.config dosyasında bir kimlik belirtmeniz gerekir.  
   
     ```xml  
     <client>  

@@ -3,22 +3,24 @@ title: HTTP Kimlik Doğrulamasını Anlama
 description: HTTP kimlik doğrulama şemaları ve bir kimlik doğrulama düzeni seçmek dahil olmak üzere WCF 'de HTTP kimlik doğrulamasına giriş konusunu gözden geçirin.
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 761ab7a92aa26ce1437eefa360e5b46df179e32d
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 65ccde358f4eb8727e59ca32fb9782b87e29c5c1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246525"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293526"
 ---
 # <a name="understanding-http-authentication"></a>HTTP Kimlik Doğrulamasını Anlama
+
 Kimlik doğrulaması, bir istemcinin bir kaynağa erişmeye uygun olup olmadığını belirleme işlemidir. HTTP protokolü, güvenli bir kaynağa erişim anlaşması için bir yol olarak kimlik doğrulamasını destekler.  
   
- İstemciden gelen ilk istek, herhangi bir kimlik doğrulama bilgisi içermeyen, genellikle anonim bir istek olur. HTTP sunucusu uygulamaları, kimlik doğrulamasının gerekli olduğunu belirten anonim isteği reddedebilir. Sunucu uygulaması, desteklenen kimlik doğrulama düzenlerini belirtmek için WWW-Authentication üst bilgilerini gönderir. Bu belge, HTTP için çeşitli kimlik doğrulama düzenlerini açıklar ve Windows Communication Foundation (WCF) desteğini açıklar.  
+ İstemciden gelen ilk istek, herhangi bir kimlik doğrulama bilgisi içermeyen, genellikle anonim bir istek olur. HTTP sunucusu uygulamaları, kimlik doğrulamasının gerekli olduğunu belirten anonim isteği reddedebilir. Sunucu uygulaması, desteklenen kimlik doğrulama düzenlerini göstermek için WWW-Authentication üst bilgileri gönderir. Bu belge, HTTP için çeşitli kimlik doğrulama düzenlerini açıklar ve Windows Communication Foundation (WCF) desteğini açıklar.  
   
 ## <a name="http-authentication-schemes"></a>HTTP kimlik doğrulama şemaları  
+
  Sunucu, istemcinin arasından seçim yapmak için birden çok kimlik doğrulama düzeni belirtebilir. Aşağıdaki tabloda, Windows uygulamalarında yaygın olarak bulunan bazı kimlik doğrulama düzenleri açıklanmaktadır.  
   
-|Kimlik doğrulama düzeni|Description|  
+|Kimlik doğrulama düzeni|Açıklama|  
 |---------------------------|-----------------|  
 |Anonim|Anonim bir istek herhangi bir kimlik doğrulama bilgisi içermiyor. Bu, herkese kaynağa erişim izni vermeye eşdeğerdir.|  
 |Temel|Temel kimlik doğrulaması, istemci için Kullanıcı adı ve parola içeren Base64 kodlamalı bir dize gönderir. Base64 bir şifreleme formu değildir ve Kullanıcı adı ve parolayı şifresiz metin olarak göndermekle aynı olarak düşünülmelidir. Bir kaynağın korunması gerekiyorsa, temel kimlik doğrulaması dışında bir kimlik doğrulama düzeni kullanmayı kesin olarak düşünün.|  
@@ -28,16 +30,17 @@ Kimlik doğrulaması, bir istemcinin bir kaynağa erişmeye uygun olup olmadığ
 |Windows Live ID|Temel alınan Windows HTTP hizmeti, Federasyon protokollerini kullanarak kimlik doğrulaması içerir. Ancak, WCF 'deki standart HTTP aktarımları, Microsoft Windows Live ID gibi federal kimlik doğrulama şemaları kullanımını desteklemez. Bu özellik için destek, şu anda ileti güvenliği kullanılarak sunulmaktadır. Daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](federation-and-issued-tokens.md).|  
   
 ## <a name="choosing-an-authentication-scheme"></a>Kimlik doğrulama düzeni seçme  
+
  Bir HTTP sunucusu için olası kimlik doğrulama düzenlerini seçerken, dikkate alınması gereken birkaç öğe şunlardır:  
   
 - Kaynağın korunması gerekip gerekmediğini göz önünde bulundurun. HTTP kimlik doğrulamasının kullanılması, daha fazla veri iletilmesi gerektirir ve istemcilerle birlikte çalışabilirliği sınırlayabilir. Korunması gerekmeyen kaynaklara anonim erişime izin verin.  
   
 - Kaynağın korunması gerekiyorsa, hangi kimlik doğrulama düzenlerinin gerekli güvenlik düzeyini sağlamasını düşünün. Burada ele alınan en zayıf standart kimlik doğrulama şeması, temel kimlik doğrulamadır. Temel kimlik doğrulaması, kullanıcının kimlik bilgilerini korumaz. En güçlü standart kimlik doğrulama şeması, Negotiate kimlik doğrulamadır ve Kerberos protokolüne yol açar.  
   
-- Bir sunucu, kabul etmek için hazırlanmadığı veya korunan kaynağı yeterince güvenli hale desteklemediği herhangi bir düzen (WWW-Authentication üst bilgilerinde) sunmamalıdır. İstemciler, sunucunun sunduğu herhangi bir kimlik doğrulama şeması arasından seçim yapmak için ücretsizdir. Bazı istemciler, zayıf bir kimlik doğrulama şemasına veya sunucu listesindeki ilk kimlik doğrulama şemasına varsayılan olarak verilebilir.  
+- Bir sunucu, kabul etmek için hazırlanmadığı veya korunan kaynağı yeterince güvenli hale desteklemediği herhangi bir düzeni (WWW-Authentication üst bilgilerinde) sunmamalıdır. İstemciler, sunucunun sunduğu herhangi bir kimlik doğrulama şeması arasından seçim yapmak için ücretsizdir. Bazı istemciler, zayıf bir kimlik doğrulama şemasına veya sunucu listesindeki ilk kimlik doğrulama şemasına varsayılan olarak verilebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Aktarım Güvenliğine Genel Bakış](transport-security-overview.md)
+- [Taşıma Güvenliği Genel Bakış](transport-security-overview.md)
 - [Taşıma Güvenliği ile Kimliğe Bürünme Kullanma](using-impersonation-with-transport-security.md)
 - [Temsilcilik ve Kimliğe Bürünme](delegation-and-impersonation-with-wcf.md)

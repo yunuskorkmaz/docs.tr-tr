@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: f69314948a0e0a69e49ec148f94572f17d0b8e3c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41761313fae68a1a348a73f104e21dc19e07eb65
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595056"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293513"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Nasıl yapılır: Windows Communication Foundation Hizmeti Bilinen Adını Kaydolmadan Kullanma
+
 Bir Windows Communication Foundation (WCF) hizmetine bağlanmak ve iletişim kurmak için, bir WCF istemci uygulaması hizmet adresi, bağlama yapılandırması ve hizmet sözleşmesinin ayrıntılarına sahip olmalıdır.  
   
  WCF hizmeti bilinen adı genellikle gerekli öznitelik türlerinin önceki kayıtları aracılığıyla gerekli sözleşmeyi edinir, ancak bunun olanaklı olmadığı durumlar olabilir. Kayıt yerinde, ad, bir Web Hizmetleri tanım dili (WSDL) belgesi biçiminde veya parametresi kullanılarak `wsdl` veya meta veri değişimi aracılığıyla sözleşmenin tanımını alabilir `mexAddress` .  
@@ -22,6 +23,7 @@ Bir Windows Communication Foundation (WCF) hizmetine bağlanmak ve iletişim kur
 > Karşılıklı kimlik doğrulaması, istek ve yanıt üzerinde değişiklik yapılmasını veya yanıltmayı korumak için kullanılmalıdır. Özellikle, istemcilerin yanıt veren meta veri değişimi uç noktasının amaçlanan güvenilen taraf olduğundan emin olmak önemlidir.  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, hizmet adının bir MEX sözleşmesiyle kullanımını gösterir. Bir wsHttpBinding ile aşağıdaki sözleşmeye sahip bir hizmet sunulur.  
   
 ```csharp

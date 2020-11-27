@@ -2,18 +2,19 @@
 title: Taşınabilir Alt Küme Projesine Hizmet Başvurusu Ekle
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: f81a596c5573405bec9389347c45ff6cb6b30fc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687704"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294865"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Taşınabilir Alt Küme Projesine Hizmet Başvurusu Ekle
 
 Taşınabilir alt küme projeleri, .NET derleme programcılarının tek bir kaynak ağacı ve derleme sistemi ile aynı zamanda birden çok .NET uygulaması (Masaüstü, Silverlight, Windows Phone ve Xbox) desteklemeye devam etmektedir. Taşınabilir alt küme projeleri yalnızca .NET uygulamalarında kullanılabilen, .NET derlemeleri olan taşınabilir kitaplıklara başvurur.
   
 ## <a name="add-service-reference-details"></a>Hizmet Başvurusu Ekle ayrıntıları  
+
  Taşınabilir alt küme projesine hizmet başvurusu eklerken aşağıdaki kısıtlamalar uygulanır:  
   
 1. İçin <xref:System.Xml.Serialization.XmlSerializer> yalnızca sabit değer kodlamalarına izin verilir. SOAP kodlamaları içeri aktarma sırasında bir hata oluşturur.  

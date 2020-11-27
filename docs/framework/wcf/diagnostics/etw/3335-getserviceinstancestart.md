@@ -2,27 +2,30 @@
 title: 3335 - GetServiceInstanceStart
 ms.date: 03/30/2017
 ms.assetid: c35025d1-b2a1-454d-a6a1-784fc03e2670
-ms.openlocfilehash: 332018c24c86b822f3c21b4a3bf133c32206ae88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f6640c9b9fc363884f09bd95e93d7b74ee2e844
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040124"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295424"
 ---
 # <a name="3335---getserviceinstancestart"></a>3335 - GetServiceInstanceStart
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3335|  
-|anahtar sözcükler|ServiceModel|  
+|ID|3335|  
+|Anahtar sözcükler|ServiceModel|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Hizmet örneği alma başlatıldığında bu olay yayılır.  
+
+ Bu olay, hizmet örneği alımı başladığında yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Hizmet örneği alma başlatıldı.  
+
+ Hizmet örneği alımı başlatıldı.  
   
 ## <a name="details"></a>Ayrıntılar

@@ -2,27 +2,30 @@
 title: 4807 - DiscoveryMessageWithInvalidReplyTo
 ms.date: 03/30/2017
 ms.assetid: 7f104c23-cee3-4e22-89ad-4934b8a587bb
-ms.openlocfilehash: cecefb11c2c7f3b7a913c6872478c25c0a2c8614
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53d944c7e227b57484da2544d1254ceb2f33c49f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943032"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294020"
 ---
 # <a name="4807---discoverymessagewithinvalidreplyto"></a>4807 - DiscoveryMessageWithInvalidReplyTo
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4807|  
-|anahtar sözcükler|Bulma|  
+|ID|4807|  
+|Anahtar sözcükler|Bulma|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bulma iletisi için ReplyTo adresi geçersiz olduğundan bırakıldı, bu olay yayılır.  
+
+ Bu olay, bulma iletisi geçersiz bir ReplyTo adresine sahip olduğu için bırakıldığında yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Bir bulma isteği iletisiyle MessageID = ReplyTo adresi geçersiz olduğundan '%1' bırakıldı.  
+
+ MessageID = ' %1 ' olan bir bulma isteği iletisi, geçersiz bir ReplyTo adresine sahip olduğundan bırakıldı.  
   
 ## <a name="details"></a>Ayrıntılar

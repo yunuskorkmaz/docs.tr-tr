@@ -1,15 +1,16 @@
 ---
-title: Türsüz Istek-yanıt
+title: Türsüz Request-Reply
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 46047d1671fadb18052991451910b9056015edd2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bcd35bcac928397cad57384fdecb55d7e5ad13c3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591111"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294995"
 ---
 # <a name="untyped-requestreply"></a>Yazılmamış İstek/Yanıt
+
 Bu örnek, Ileti sınıfını kullanan işlem sözleşmelerinin nasıl tanımlanacağını gösterir.  
   
 > [!NOTE]
@@ -43,7 +44,7 @@ public Message ComputeSum(Message request)
 }  
 ```  
   
- İstemci, uzak hizmete bir ara sunucu oluşturmak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan kodu kullanır. İstek iletisi göndermek için, istemci, temeldeki kanala bağlı olan ileti sürümüne sahip olmalıdır. Bu nedenle, <xref:System.ServiceModel.OperationContextScope> <xref:System.ServiceModel.OperationContext> özelliği içinde doldurulmuş doğru ileti sürümü ile oluşturulan, oluşturduğu proxy kanalında yeni bir kapsam oluşturur `OutgoingMessageHeaders.MessageVersion` . İstemci, istek iletisine gövde olarak bir giriş dizisi geçirir ve sonra `ComputeSum` proxy üzerinde çağırır. İstemci daha sonra yanıt iletisindeki yöntemine erişerek, geçirildiği girişlerin toplamını alır `GetBody<T>` . Aşağıdaki örnek kod bunu gösterir.  
+ İstemci, uzak hizmete bir ara sunucu oluşturmak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan kodu kullanır. İstek iletisi göndermek için, istemci, temeldeki kanala bağlı olan ileti sürümüne sahip olmalıdır. Bu nedenle, <xref:System.ServiceModel.OperationContextScope> <xref:System.ServiceModel.OperationContext> özelliği içinde doldurulmuş doğru ileti sürümü ile oluşturulan, oluşturduğu proxy kanalında yeni bir kapsam oluşturur `OutgoingMessageHeaders.MessageVersion` . İstemci, istek iletisine gövde olarak bir giriş dizisi geçirir ve sonra `ComputeSum` proxy üzerinde çağırır. İstemci daha sonra yanıt iletisindeki yöntemine erişerek, geçirildiği girişlerin toplamını alır `GetBody<T>` . Aşağıdaki örnek kod bunu gösterir.  
   
 ```csharp
 using (new OperationContextScope(client.InnerChannel))  

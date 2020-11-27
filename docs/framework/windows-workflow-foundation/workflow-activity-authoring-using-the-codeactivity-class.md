@@ -1,50 +1,52 @@
 ---
-title: CodeActivity sınıfını kullanarak iş akışı etkinliği yazma
+title: CodeActivity sınıfını kullanarak iş akışı etkinlik yazma
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: e82122301ef412f9f145ef8b6e2c9e7b9033ced1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 714e0971a006db20d002b0f3a486533b1357fba7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656016"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293825"
 ---
-# <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>CodeActivity sınıfını kullanarak iş akışı etkinliği yazma
-Devralarak oluşturulan etkinlikleri <xref:System.Activities.CodeActivity> temel kesinlik temelli davranışını geçersiz kılarak uygulayabilirsiniz <xref:System.Activities.CodeActivity.Execute%2A> yöntemi.
+# <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>CodeActivity sınıfını kullanarak iş akışı etkinlik yazma
+
+Devralma tarafından oluşturulan etkinlikler <xref:System.Activities.CodeActivity> , yöntemi geçersiz kılarak temel kesinlik davranışını uygulayabilir <xref:System.Activities.CodeActivity.Execute%2A> .
 
 ## <a name="using-codeactivitycontext"></a>CodeActivityContext kullanma
- İş akışı çalışma zamanı özellikleri içinden erişilebilir <xref:System.Activities.CodeActivity.Execute%2A> üyeleri kullanarak yöntemi `context` türünde parametre <xref:System.Activities.CodeActivityContext>. Aracılığıyla kullanılabilen özellikleri <xref:System.Activities.CodeActivityContext> şunları içerir:
 
-- Alma ve değişkenleri ve bağımsız değişken değerlerini ayarlama.
+ İş akışı çalışma zamanının özelliklerine <xref:System.Activities.CodeActivity.Execute%2A> , türünün ' nin üyelerini kullanarak yönteminin içinden erişilebilir `context` <xref:System.Activities.CodeActivityContext> . Aracılığıyla kullanılabilen özellikler şunları <xref:System.Activities.CodeActivityContext> içerir:
 
-- Özel İzleme özelliklerini kullanarak <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Değişkenlerin ve bağımsız değişkenlerin değerlerini alma ve ayarlama.
 
-- Kullanarak Etkinlik yürütme özelliklerine erişimi <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
+- Kullanarak özel izleme özellikleri <xref:System.Activities.CodeActivityContext.Track%2A> .
 
-#### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>CodeActivity devralan bir özel etkinlik oluşturmak için
+- Kullanılarak etkinliğin yürütme özelliklerine erişin <xref:System.Activities.CodeActivityContext.GetProperty%2A> .
 
-1. Visual Studio 2010'u açın.
+#### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>CodeActivity 'den devralan özel etkinlik oluşturmak için
 
-2. Seçin **dosya**, **yeni**, ardından **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **etkinlik Kitaplığı** içinde **şablonları** penceresi. Yeni Proje HelloActivity adı.
+1. Visual Studio 2010 ' i açın.
 
-3. Gt;activity1.XAML HelloActivity projeye sağ tıklayıp **Sil**.
+2. **Dosya**, **Yeni** ve ardından **Proje**' yi seçin. **Proje türleri** penceresinde **Visual C#** altında **iş akışı 4,0** ' i seçin ve **v2010** düğümünü seçin. **Şablonlar** penceresinde **etkinlik kitaplığı** ' nı seçin. Yeni proje Merhaba etkinliğini adlandırın.
 
-4. HelloActivity projeye sağ tıklayıp **Ekle** , ardından **sınıfı**. Yeni bir sınıf HelloActivity.cs adı.
+3. Merhaba etkinlik projesinde Activity1. xaml öğesine sağ tıklayın ve **Sil**' i seçin.
 
-5. HelloActivity.cs dosyasına aşağıdakileri ekleyin `using` yönergeleri.
+4. Merhaba etkinlik projesine sağ tıklayın ve **Ekle** ' yi ve ardından **sınıf**' ı seçin. Yeni sınıfı HelloActivity.cs olarak adlandırın.
+
+5. HelloActivity.cs dosyasında aşağıdaki `using` yönergeleri ekleyin.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6. Devralınan yeni bir sınıf olun <xref:System.Activities.CodeActivity> için sınıf bildiriminin bir temel sınıf ekleyerek.
+6. <xref:System.Activities.CodeActivity>Sınıf bildirimine bir temel sınıf ekleyerek yeni sınıfın öğesinden devralmasını sağlayın.
 
     ```csharp
     class HelloActivity : CodeActivity
     ```
 
-7. Ekleyerek sınıfına işlevsellik ekleme bir <xref:System.Activities.CodeActivity.Execute%2A> yöntemi.
+7. Bir yöntem ekleyerek sınıfa işlevsellik ekleyin <xref:System.Activities.CodeActivity.Execute%2A> .
 
     ```csharp
     protected override void Execute(CodeActivityContext context)
@@ -53,7 +55,7 @@ Devralarak oluşturulan etkinlikleri <xref:System.Activities.CodeActivity> temel
     }
     ```
 
-8. Kullanım <xref:System.Activities.CodeActivityContext> bir izleme kaydını oluşturmak için.
+8. <xref:System.Activities.CodeActivityContext>İzleme kaydı oluşturmak için kullanın.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)

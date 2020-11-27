@@ -6,18 +6,20 @@ helpviewer_keywords:
 - WF [WF], getting started
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
-ms.openlocfilehash: 148ba77231067bf5f8ff1d8b444b83d951ce8761
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: e9856320faa82becf12dda04d02f6f1c08081feb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419856"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293605"
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
+
 Bu bölüm, Windows Workflow Foundation (WF) uygulamalarını programlamayı sağlayan bir dizi gözden geçirme konuları içerir. Bu konulardaki yordamları izleyerek, sayı tahmin eden bir oyun olan bir uygulama oluşturacaksınız. Öğreticideki ilk konu, iş akışı için gerekli özel etkinlikleri oluşturma adımlarında size yol gösterir. İkinci konu başlığında, bu etkinlikler yerleşik iş akışı etkinlikleriyle birlikte bir akış çizelgesi iş akışı olarak toplanır. Üçüncü konu başlığında, ana bilgisayar uygulaması iş akışını çalıştıracak şekilde yapılandırılmıştır ve son konu başlığında kalıcılığı ortaya çıkartılır. Bu işlemdeki her adım önceki adımlara bağlı olduğundan, bunları sırayla tamamlamanızı öneririz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl Yapılır: Etkinlik Oluşturma](how-to-create-an-activity.md)  
+
+ [Nasıl yapılır: Etkinlik Oluşturma](how-to-create-an-activity.md)  
  ' Dan türetilen özel bir etkinliğin nasıl oluşturulduğunu <xref:System.Activities.NativeActivity%601> ve bu etkinliğin bir yerleşik etkinlik ile birlikte etkinlik tasarımcısını kullanarak bileşik bir etkinliğe nasıl oluşturulacağını açıklar.  
   
  [Nasıl yapılır: İş Akışı Oluşturma](how-to-create-a-workflow.md)  

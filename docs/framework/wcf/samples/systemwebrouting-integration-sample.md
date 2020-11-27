@@ -2,14 +2,15 @@
 title: SystemWebRouting Tümleştirme Örneği
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 58d720f164c4c35f3de4c282e9aa983d11e4040b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04c3093097c5bf11e1d4dd5d3124c9fbae4b3665
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555230"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293916"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting Tümleştirme Örneği
+
 Bu örnek, barındırma katmanının ad alanındaki sınıflarla tümleşmesini gösterir <xref:System.Web.Routing> . Ad alanındaki sınıflar, <xref:System.Web.Routing> bir uygulamanın bir fiziksel kaynağa doğrudan karşılık gelen URL 'leri kullanmasına izin verir. Web yönlendirme kullanımı, geliştiricinin daha sonra gerçek WCF hizmetlerine geri eşlenmiş HTTP için sanal adresler oluşturmasına izin verir. Bu, bir WCF hizmeti fiziksel bir dosya veya kaynak gerektirmeden barındırılması gerektiğinde veya. html veya. aspx gibi dosyalar içermeyen URL 'Ler ile erişilmesi gerektiğinde faydalıdır. Bu örnek, <xref:System.Web.Routing.RouteTable> Global. asax içinde tanımlanan çalışan hizmetlerle eşlenen sanal URI 'ler oluşturmak için sınıfını nasıl kullanacağınızı gösterir.
 
 > [!NOTE]
@@ -60,9 +61,9 @@ Bu örnek bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağ�
   
     1. IIS Yöneticisi 'nde **varsayılan Web sitesine** sağ tıklayın ve **Uygulama Ekle**' yi seçin.  
   
-    2. **Diğer ad**için, yazın `WebRoutingIntegration` .  
+    2. **Diğer ad** için, yazın `WebRoutingIntegration` .  
   
-    3. **Fiziksel yol**için, projenin içindeki hizmet klasörünü seçin.  
+    3. **Fiziksel yol** için, projenin içindeki hizmet klasörünü seçin.  
   
     4. **Tamam**'a basın.  
   

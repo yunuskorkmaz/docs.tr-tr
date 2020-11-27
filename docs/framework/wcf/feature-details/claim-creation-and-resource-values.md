@@ -4,25 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
-ms.openlocfilehash: fabd0a2606560d99174e5ad28940c3b59ee689d9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c3f36d607d88b208753066dcbd4e9baa6a2590fa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587059"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295138"
 ---
 # <a name="claim-creation-and-resource-values"></a>Beyan Oluşturma ve Kaynak Değerleri
+
 <xref:System.IdentityModel.Claims.Claim>Sınıfı, yerleşik talep türlerinin örneklerini oluşturmak için çeşitli yöntemler sağlar. Bu yöntemlerin her biri, sağlanan kaynakta hiçbir anlam veya biçimlendirme denetimi gerçekleştirmez:  
   
 - <xref:System.IdentityModel.Claims.Claim.CreateDnsClaim%2A>  
   
-- <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A>(bayt dizisinin uzunluğunu veya içeriğini denetlemez)  
+- <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (bayt dizisinin uzunluğunu veya içeriğini denetlemez)  
   
 - <xref:System.IdentityModel.Claims.Claim.CreateNameClaim%2A>  
   
 - <xref:System.IdentityModel.Claims.Claim.CreateSpnClaim%2A>  
   
-- <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A>(bayt dizisinin uzunluğunu veya içeriğini denetlemez)  
+- <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (bayt dizisinin uzunluğunu veya içeriğini denetlemez)  
   
 - <xref:System.IdentityModel.Claims.Claim.CreateUpnClaim%2A>  
   
@@ -46,4 +47,4 @@ ms.locfileid: "84587059"
 
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.ClaimSet>
-- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](managing-claims-and-authorization-with-the-identity-model.md)
+- [Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme](managing-claims-and-authorization-with-the-identity-model.md)

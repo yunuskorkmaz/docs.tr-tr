@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 29ac26616313ec8bd7661cb92c42f726ec051cd7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 93770c8f4d92a12dcfe29290c84708949d9a1d4a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542893"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293396"
 ---
 # <a name="trusted-subsystem"></a>Güvenilir Alt Sistem
+
 İstemci bir ağ üzerinde dağıtılan bir veya daha fazla Web hizmetine erişir. Web Hizmetleri, ek kaynaklara erişimin (veritabanları veya diğer Web Hizmetleri gibi) Web hizmetinin iş mantığıyla kapsüllenmesi için tasarlanmıştır. Bu kaynakların yetkisiz erişime karşı korunması gerekir. Aşağıdaki çizimde, güvenilir bir alt sistem işlemi gösterilmektedir.  
   
  ![Güvenilen alt sistem](media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
@@ -29,26 +30,28 @@ ms.locfileid: "90542893"
   
 5. Güvenilen alt sistem yanıtı işler ve istemciye kendi yanıtını verir.  
   
-|Özellik|Description|  
+|Özellik|Açıklama|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
-|Birlikte Çalışabilirlik|Yalnızca Windows Communication Foundation (WCF).|  
+|Birlikte çalışabilirlik|Yalnızca Windows Communication Foundation (WCF).|  
 |Kimlik doğrulaması (hizmet)|Güvenlik belirteci hizmeti, istemcilerin kimliğini doğrular ve yetkilendirir.|  
 |Kimlik doğrulaması (istemci)|Güvenilen alt sistem istemcinin kimliğini doğrular ve kaynak, güvenilen alt sistem hizmetinin kimliğini doğrular.|  
-|Bütünlük|Yes|  
-|Gizlilik|Yes|  
+|Bütünlük|Evet|  
+|Gizlilik|Evet|  
 |Aktarım|İstemci ile güvenilen alt sistem hizmeti arasında HTTP.<br /><br /> NET. Güvenilen alt sistem hizmeti ve kaynak (arka uç hizmeti) arasında TCP.|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding> ' <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Kaynak (arka uç hizmeti)  
   
 ### <a name="code"></a>Kod  
+
  Aşağıdaki kod, TCP Aktarım Protokolü üzerinden aktarım güvenliği kullanan kaynak için bir hizmet uç noktası oluşturmayı gösterir.  
   
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
 ### <a name="configuration"></a>Yapılandırma  
+
  Aşağıdaki yapılandırma, yapılandırmayı kullanarak aynı uç noktayı ayarlar.  
   
 ```xml  
@@ -90,6 +93,7 @@ ms.locfileid: "90542893"
 ## <a name="trusted-subsystem"></a>Güvenilir Alt Sistem  
   
 ### <a name="code"></a>Kod  
+
  Aşağıdaki kod, HTTP protokolü üzerinde ileti güvenliği ve kimlik doğrulaması için bir Kullanıcı adı ve parola kullanan güvenilir alt sistem için bir hizmet uç noktası oluşturmayı gösterir.  
   
  [!code-csharp[TrustedSubSystems#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#1)]
@@ -101,6 +105,7 @@ ms.locfileid: "90542893"
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Yapılandırma  
+
  Aşağıdaki yapılandırma, yapılandırmayı kullanarak aynı uç noktayı ayarlar. İki bağlamayı aklınızda bulunan bir tane, güvenilen alt sistemde barındırılan hizmetin güvenliğini sağlar ve diğer güvenilen alt sistem ile arka uç hizmeti arasında iletişim kurar.  
   
 ```xml  
@@ -166,12 +171,14 @@ ms.locfileid: "90542893"
 ## <a name="client"></a>İstemci  
   
 ### <a name="code"></a>Kod  
+
  Aşağıdaki kod, HTTP protokolü üzerinden ileti güvenliği ve kimlik doğrulaması için bir Kullanıcı adı ve parola kullanarak güvenilir alt sistemle iletişim kuran istemcinin nasıl oluşturulacağını gösterir.  
   
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
 ### <a name="configuration"></a>Yapılandırma  
+
  Aşağıdaki kod, istemcisini HTTP protokolü ve kimlik doğrulaması için bir Kullanıcı adı ve parola üzerinden ileti güvenliği kullanacak şekilde yapılandırır. Kullanıcı adı ve parola yalnızca kod kullanılarak belirtilebilir (yapılandırılabilir değildir).  
   
 ```xml  

@@ -2,27 +2,30 @@
 title: 3334 - IncomingMessageVerified
 ms.date: 03/30/2017
 ms.assetid: 9fed3d02-72d7-4581-9abb-aede74331e22
-ms.openlocfilehash: a57ae4068d8636ac7627598c47f66e34cfdbfb7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8eacdc2e9b46a239c3c8f5d9ec6ef70a167b0fdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049238"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295385"
 ---
 # <a name="3334---incomingmessageverified"></a>3334 - IncomingMessageVerified
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3334|  
-|anahtar sözcükler|Güvenlik ServiceModel|  
+|ID|3334|  
+|Anahtar sözcükler|Güvenlik ServiceModel|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, gelen ileti belirlediğinizde yayınlanır.  
+
+ Gelen ileti doğrulandığında bu olay yayınlanır.  
   
 ## <a name="message"></a>İleti  
+
  Gelen ileti doğrulandı.  
   
 ## <a name="details"></a>Ayrıntılar

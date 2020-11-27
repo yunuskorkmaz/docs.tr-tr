@@ -2,32 +2,35 @@
 title: 2024 - InternalCacheMetadataStart
 ms.date: 03/30/2017
 ms.assetid: 18758528-6d3b-4d25-9427-12d2d3f4ec4e
-ms.openlocfilehash: c456e657e05a0870543234d9f637efc1f59ae06c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bfc5530aaace493dcbec7848d61e84d006d7a21e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923753"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294566"
 ---
 # <a name="2024---internalcachemetadatastart"></a>2024 - InternalCacheMetadataStart
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|2024|  
-|anahtar sözcükler|WFRuntime|  
+|ID|2024|  
+|Anahtar sözcükler|WFRuntime|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir etkinlik InternalCacheMetadata başlangıcını gösterir.  
+
+ Bir etkinlikte InternalCacheMetadata başlangıcını gösterir.  
   
 ## <a name="message"></a>İleti  
- '%1' faaliyete InternalCacheMetadata başlatıldı.  
+
+ InternalCacheMetadata, ' %1 ' etkinliğinde başladı.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|displayName|xs:string|Etkinliğin görünen adı.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|DisplayName|xs: String|Etkinliğin görünen adı.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

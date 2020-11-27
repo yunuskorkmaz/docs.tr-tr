@@ -2,17 +2,19 @@
 title: Uygulamalarda Sorun Giderme için İzleme Kullanma
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: fc9427d0c06ed67ea69669cab2aae64f39f7c10c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62f2240831dd33bdaf78655199aad75b7e29c59c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551294"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293578"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Uygulamalarda Sorun Giderme için İzleme Kullanma
+
 Windows Workflow Foundation (WF), bir Windows Workflow Foundation uygulamasının veya hizmetin yürütülmesine ilişkin ayrıntılar vermek için iş akışı ile ilgili bilgileri izlemenize olanak sağlar. Windows Workflow Foundation Konakları, bir iş akışı örneğinin yürütülmesi sırasında iş akışı olaylarını yakalayabilir. İş akışınız hata veya özel durumlar oluşturursa, işleme sorunlarını gidermek için Windows Workflow Foundation izleme ayrıntılarını kullanabilirsiniz.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>WF Izlemeyi kullanarak WF sorunlarını giderme  
+
  Windows Workflow Foundation etkinliğinin işlenmesi içindeki hataları algılamak için, hata durumunu hatalı bir şekilde sorgulayan bir izleme profiliyle izlemeyi etkinleştirebilirsiniz <xref:System.Activities.Tracking.ActivityStateRecord> . Karşılık gelen sorgu aşağıdaki kodda belirtilir.  
   
 ```xml  

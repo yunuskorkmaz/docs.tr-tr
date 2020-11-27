@@ -2,32 +2,35 @@
 title: 1125 - InvokeMethodIsNotStatic
 ms.date: 03/30/2017
 ms.assetid: ea2b3827-63da-497b-b2c3-d5cebefe57a1
-ms.openlocfilehash: 692c5e56dac0a69ab5705acd284f048391145641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0405b4e1207db5c056fbd478b98c408258daf0c3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924273"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294215"
 ---
 # <a name="1125---invokemethodisnotstatic"></a>1125 - InvokeMethodIsNotStatic
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1125|  
-|anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|1125|  
+|Anahtar sözcükler|WFRuntime|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- CacheMetadata adımı sırasında çağrılacak yöntem statik değildir InvokeMethod etkinliği gösterir.  
+
+ CacheMetadata adımı sırasında InvokeMethod etkinliği çağrılacak yöntemin statik olmadığını gösterir.  
   
 ## <a name="message"></a>İleti  
- '%1' - InvokeMethod yöntemi statik değil.  
+
+ InvokeMethod ' %1 '-metot static değil.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|InvokeMethod|xs:string|InvokeMethod etkinliği görünen adı.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|InvokeMethod|xs: String|InvokeMethod etkinliğinin görünen adı.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

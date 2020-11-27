@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 404fd9ddc911327bbc09c65d74da22bd88d08e2e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a70fb519f3b3e8d9ce109c3b7bef0313e22eb50
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602576"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292837"
 ---
 # <a name="default-message-contract"></a>Varsayılan İleti Sözleşmesi
+
 Varsayılan Ileti sözleşmesi örneği, hizmet işlemlerine ve bu işlemlerden özel kullanıcı tanımlı bir iletinin geçirildiği bir hizmeti gösterir. Bu örnek, türü belirlenmiş bir hizmet olarak Hesaplayıcı arabirimi uygulayan [Başlarken](getting-started-sample.md) ' i temel alır. [Başlarken](getting-started-sample.md), çıkarma, çarpma ve bölme işlemlerinde kullanılan tek hizmet işlemleri yerine, bu örnek hem işlenen hem de işlecini içeren bir özel ileti geçirir ve aritmetik hesaplamanın sonucunu döndürür.  
   
  İstemci bir konsol programıdır (. exe) ve hizmet kitaplığı (. dll) Internet Information Services (IIS) tarafından barındırılır. İstemci etkinliği konsol penceresinde görünür.  
@@ -131,7 +132,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- İstemci için üretilen istemci kodu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) aracıyla oluşturulmuştur. Araç, gerekirse oluşturulan istemci kodunda ileti sözleşme türlerini otomatik olarak oluşturur. `/messageContract`İleti sözleşmelerinin oluşturulmasını zorlamak için komut seçeneği belirtilebilir.  
+ İstemci için üretilen istemci kodu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) aracıyla oluşturulmuştur. Araç, gerekirse oluşturulan istemci kodunda ileti sözleşme türlerini otomatik olarak oluşturur. `/messageContract`İleti sözleşmelerinin oluşturulmasını zorlamak için komut seçeneği belirtilebilir.  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  

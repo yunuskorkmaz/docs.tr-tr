@@ -2,34 +2,37 @@
 title: 1131 - InvokeMethodUseAsyncPattern
 ms.date: 03/30/2017
 ms.assetid: eca50fa7-5276-4759-ad1c-e490b9bd1f82
-ms.openlocfilehash: 150973935d12455aa671043a619fbd6fd7e77425
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2192b63b8a08657b69f6e3984f898bd6baddbc5f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009961"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294189"
 ---
 # <a name="1131---invokemethoduseasyncpattern"></a>1131 - InvokeMethodUseAsyncPattern
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1131|  
-|anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|1131|  
+|Anahtar sözcükler|WFRuntime|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- CacheMetadata adımı sırasında InvokeMethod etkinliği, zaman uyumsuz desen yöntemi çağrılırken kullandığını gösterir.  
+
+ CacheMetadata adımı sırasında InvokeMethod etkinliği yöntemi çağrılırken zaman uyumsuz bir model kullandığını belirtir.  
   
 ## <a name="message"></a>İleti  
- InvokeMethod '%1' - '%2' ve '%3', zaman uyumsuz desen yöntemi kullanır.  
+
+ InvokeMethod ' %1 '-Yöntem ' %2 ' ve ' %3 ' zaman uyumsuz modelini kullanıyor.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|InvokeMethod|xs:string|InvokeMethod etkinliği görünen adı.|  
-|BeginMethod|xs:string|Begin yöntemi adı.|  
-|EndMethod|xs:string|End yöntemi adı.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|InvokeMethod|xs: String|InvokeMethod etkinliğinin görünen adı.|  
+|BeginMethod|xs: String|Begin yönteminin adı.|  
+|EndMethod|xs: String|End yönteminin adı.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

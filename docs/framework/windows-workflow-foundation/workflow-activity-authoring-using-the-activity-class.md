@@ -2,24 +2,25 @@
 title: Etkinlik sınıfını kullanarak iş akışı etkinliği yazma
 ms.date: 03/30/2017
 ms.assetid: 7b7b1c66-f093-43c3-b4d1-7173b46516da
-ms.openlocfilehash: 1bec10b6ae9fb43319cfb6acbf59133e1acca09c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21f1c8b1249d41029fa7a19360e96ad866c823a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755512"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293851"
 ---
 # <a name="workflow-activity-authoring-using-the-activity-class"></a>Etkinlik sınıfını kullanarak iş akışı etkinliği yazma
-Windows Workflow Foundation (WF) kullanarak bir etkinlik oluşturmak için en temel yolu [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] öğesinden devralınan bir sınıf oluşturmak <xref:System.Activities.Activity> işlevselliği birleştirerek özel oluşturan etkinlikler veya etkinlikten [yerleşik Etkinlik Kitaplığı](net-framework-4-5-built-in-activity-library.md). Bu konu, iki ileti konsola bir etkinlik oluşturma işlemini gösterir.
 
-### <a name="to-create-a-custom-activity-using-the-activity-designer"></a>Etkinlik Tasarımcısı'nı kullanarak özel bir etkinlik oluşturmak için
+' De Windows Workflow Foundation (WF) kullanarak bir etkinlik oluşturmanın en temel yolu, [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] <xref:System.Activities.Activity> [yerleşik etkinlik kitaplığından](net-framework-4-5-built-in-activity-library.md)özel etkinlikleri veya etkinlikleri derleyerek Bu işlevden devralan bir sınıf oluşturmaktır. Bu konuda, konsola iki ileti yazan bir etkinliğin nasıl oluşturulacağı gösterilmektedir.
 
-1. Visual Studio 2012'yi açın.
+### <a name="to-create-a-custom-activity-using-the-activity-designer"></a>Etkinlik tasarımcısını kullanarak özel bir etkinlik oluşturmak için
 
-2. Dosya, yeni, proje'i seçin. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **etkinlik Kitaplığı** içinde **şablonları** penceresi. Yeni Proje HelloActivity adı.
+1. Visual Studio 2012 ' i açın.
 
-3. Yeni Etkinlik açın.  Sürükleme bir <xref:System.Activities.Statements.Sequence> Tasarımcı yüzeyine araç kutusundan.
+2. Dosya, yeni, proje ' yi seçin. **Proje türleri** penceresinde **Visual C#** altında **iş akışı 4,0** ' i seçin ve **v2010** düğümünü seçin. **Şablonlar** penceresinde **etkinlik kitaplığı** ' nı seçin. Yeni proje Merhaba etkinliğini adlandırın.
 
-4. Sürükleme bir <xref:System.Activities.Statements.WriteLine> etkinliğini <xref:System.Activities.Statements.Sequence> etkinlik. Girin `"Hello World"` (teklifler ile) içine **metin** alan.
+3. Yeni etkinliği açın.  <xref:System.Activities.Statements.Sequence>Araç kutusundan bir etkinliği tasarımcı yüzeyine sürükleyin.
 
-5. İkinci sürükleyin <xref:System.Activities.Statements.WriteLine> etkinliğini <xref:System.Activities.Statements.Sequence> ilki aşağıda bir etkinlik. Girin `"Goodbye"` (teklifler ile) içine **metin** alan.
+4. Etkinliği etkinliğe sürükleyin <xref:System.Activities.Statements.WriteLine> <xref:System.Activities.Statements.Sequence> . `"Hello World"` **Metin** alanına (tırnak işareti ile) girin.
+
+5. İkinci bir <xref:System.Activities.Statements.WriteLine> etkinliği <xref:System.Activities.Statements.Sequence> , birincinin altında, etkinliğe sürükleyin. `"Goodbye"` **Metin** alanına (tırnak işareti ile) girin.

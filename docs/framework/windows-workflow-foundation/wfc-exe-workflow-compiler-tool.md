@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Workflow, compilation
 - Workflow, XOML files
 - Workflow, wcf
-ms.openlocfilehash: cf89962014584adf098118044b063b38b29160b7
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 01cbfeb72e19f727a3a470059047a2192228c394
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844605"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293864"
 ---
 # <a name="wfcexe-workflow-command-line-compiler-tool"></a>wfc.exe (Iş akışı komut satırı derleyici aracı)
+
 > [!NOTE]
 > Bu malzeme artık kullanılmayan türleri ve ad alanlarını açıklamaktadır.
 
@@ -95,6 +96,7 @@ Bu bölümde wfc.exe iş akışı komut satırı derleyicisi seçenekleri göste
 ```
 
 ## <a name="remarks"></a>Açıklamalar
+
 > [!NOTE]
 > Bu malzeme artık kullanılmayan türleri ve ad alanlarını açıklamaktadır.
 

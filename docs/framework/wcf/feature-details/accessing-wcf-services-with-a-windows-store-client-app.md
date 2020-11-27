@@ -2,18 +2,19 @@
 title: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: d575907feea3d831b7e6f69410c8d4647e6ac95d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab57adbe0effa2b74541053aa0fcc5b572a6b7fd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557963"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293942"
 ---
 # <a name="access-wcf-services-with-a-windows-store-client-app"></a>WCF hizmetlerine Windows Mağazası Istemci uygulaması ile erişin
 
 Windows 8, Windows Mağazası uygulamaları adlı yeni bir uygulama türü sunar. Bu uygulamalar dokunmatik ekran arabirimi etrafında tasarlanmıştır. .NET Framework 4,5, Windows Mağazası uygulamalarının WCF hizmetlerini çağırmasını sağlar.  
   
 ## <a name="wcf-support-in-windows-store-applications"></a>Windows Mağazası uygulamalarında WCF desteği  
+
  WCF işlevselliğinin bir alt kümesi bir Windows Mağazası uygulaması içinden edinilebilir, daha fazla ayrıntı için aşağıdaki bölümlere bakın.  
   
 > [!IMPORTANT]
@@ -23,6 +24,7 @@ Windows 8, Windows Mağazası uygulamaları adlı yeni bir uygulama türü sunar
 > Bir Windows Çalışma Zamanı bileşenine Web hizmeti başvurusu eklemek için Hizmet Başvurusu Ekle kullanmak desteklenmez.  
   
 ### <a name="supported-bindings"></a>Desteklenen bağlamalar  
+
  Windows Mağazası uygulamalarında aşağıdaki WCF bağlamaları desteklenir:  
   
 1. <xref:System.ServiceModel.BasicHttpBinding>  
@@ -56,6 +58,7 @@ Windows 8, Windows Mağazası uygulamaları adlı yeni bir uygulama türü sunar
  Hem metin hem de Ikili kodlamalar desteklenir. Tüm WCF aktarım modları desteklenir. Daha fazla bilgi için bkz. [akış Ileti aktarımı](streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Hizmet Başvurusu Ekle  
+
  Bir Windows Mağazası uygulamasından bir WCF hizmetini çağırmak için, Visual Studio 2012 Hizmet Başvurusu Ekle özelliğini kullanın. Windows Mağazası uygulamasında yapıldığında Hizmet Başvurusu Ekle işlevselliğinde birkaç değişiklik olduğunu fark edeceksiniz. İlk olarak hiçbir yapılandırma dosyası oluşturulmaz. Windows Mağazası uygulamaları yapılandırma dosyalarını kullanmaz, bu nedenle kodda yapılandırılması gerekir. Bu yapılandırma kodu, Hizmet Başvurusu Ekle tarafından oluşturulan References.cs dosyasında bulunabilir. Bu dosyayı görmek için Çözüm Gezgini 'nde "tüm dosyaları göster" seçeneğini belirlediğinizden emin olun. Dosya, hizmet başvurularının altında bulunur ve ardından proje içindeki. svcmap düğümlerine başvuracaktır. Bir Windows Mağazası uygulaması içindeki WCF Hizmetleri için oluşturulan tüm işlemler, görev tabanlı zaman uyumsuz model kullanılarak zaman uyumsuz olacaktır. Daha fazla bilgi için bkz. [zaman uyumsuz görevler-görevlerle zaman uyumsuz programlamayı kolaylaştırın](/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks).  
   
  Yapılandırma artık kodda oluşturulduğundan, hizmet başvurusunun her güncelleştirildiği her seferinde Reference.cs dosyasında yapılan tüm değişikliklerin üzerine yazılacak. Bu durumu gidermek için yapılandırma kodu, istemci proxy sınıfınız içinde uygulayabileceğiniz kısmi bir yöntemde oluşturulur. Kısmi Yöntem şu şekilde bildirilmiştir:  
@@ -96,6 +99,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ```  
   
 ### <a name="serialization"></a>Serileştirme  
+
  Windows Mağazası uygulamalarında aşağıdaki serileştiriciler desteklenir:  
   
 1. DataContractSerializer  
@@ -143,6 +147,7 @@ Aşağıdaki istemci kimlik bilgisi türleri Windows Mağazası uygulamalarında
 > Windows Mağazası uygulamalarının çapraz makine çağrıları yapması için, "Ev/Iş ağı" adlı başka bir özelliği etkinleştirmeniz gerekir. Bu ayar ayrıca Yetenekler sekmesi altındaki Package. AppManifest dosyasında bulunur. Ev/Iş ağı onay kutusunu seçin. Bu, uygulamanıza giriş ve çalışma gibi kullanıcının güvenilen yerlerinin ağlarına gelen ve giden erişim sağlar. Gelen kritik bağlantı noktaları her zaman engellenir. Internet 'teki hizmetlere erişim için Internet (Istemci) özelliğini de etkinleştirmeniz gerekir.  
   
 ### <a name="misc"></a>Çeşitli  
+
  Aşağıdaki sınıfların kullanımı Windows Mağazası uygulamaları için desteklenir:  
   
 1. <xref:System.ServiceModel.ChannelFactory>  
@@ -152,12 +157,14 @@ Aşağıdaki istemci kimlik bilgisi türleri Windows Mağazası uygulamalarında
 3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>Hizmet sözleşmelerini tanımlama  
+
  Yalnızca görev tabanlı zaman uyumsuz model kullanarak zaman uyumsuz hizmet işlemlerini tanımlamayı öneririz. Bu, bir hizmet işlemi çağrılırken Windows Mağazası uygulamalarının yanıt vermeye devam eder.  
   
 > [!WARNING]
 > Zaman uyumlu bir işlem tanımlarsanız hiçbir özel durum oluşturulmaz, ancak yalnızca zaman uyumsuz işlemler tanımlamanız önerilir.  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>Windows Mağazası uygulamalarından WCF Hizmetleri çağırma  
+
  Oluşturulan proxy sınıfında GetBindingForEndpoint yöntemindeki kodda tüm yapılandırma yapılmalıdır. Bir hizmet işleminin çağrılması, aşağıdaki kod parçacığında gösterildiği gibi herhangi bir görev tabanlı zaman uyumsuz yöntemi çağırma ile aynı şekilde yapılır.  
   
 ```csharp  

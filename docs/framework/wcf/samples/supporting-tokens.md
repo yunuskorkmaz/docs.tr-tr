@@ -2,17 +2,19 @@
 title: Destek Belirteçleri
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: ff46a2f5289bc72244ea586f01ea05504d628f69
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d7e2a824060f4be05e0b0e9d1765fcf271eacbd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555204"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293669"
 ---
 # <a name="supporting-tokens"></a>Destek Belirteçleri
-Destekleme belirteçleri örneği, WS-Security kullanan bir iletiye nasıl ek belirteç ekleneceğini gösterir. Örnek, bir Kullanıcı adı güvenlik belirtecinin yanı sıra bir X. 509.440 ikili güvenlik belirteci ekler. Belirteç, istemciden hizmete bir WS-Security ileti üst bilgisine geçirilir ve iletinin bir bölümü x. 509.440 sertifikasının alıcıya sahip olduğunu kanıtlamak için X. 509.440 güvenlik belirteciyle ilişkili özel anahtarla imzalanır. Bu, gönderenin kimliğini doğrulamak veya yetkilendirmek için bir iletiyle ilişkilendirilmiş birden çok talebe sahip olması durumunda yararlıdır. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular.
+
+Destekleme belirteçleri örneği, WS-Security kullanan bir iletiye nasıl ek belirteç ekleneceğini gösterir. Örnek, bir Kullanıcı adı güvenlik belirtecinin yanı sıra bir X. 509.440 ikili güvenlik belirteci ekler. Belirteç, istemciden hizmete bir WS-Security ileti üst bilgisine geçirilir ve iletinin bir kısmı x. 509.440 sertifikasının alıcıya sahip olduğunu kanıtlamak için X. 509.440 güvenlik belirteciyle ilişkili özel anahtarla imzalanır. Bu, gönderenin kimliğini doğrulamak veya yetkilendirmek için bir iletiyle ilişkilendirilmiş birden çok talebe sahip olması durumunda yararlıdır. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular.
 
 ## <a name="demonstrates"></a>Gösteriler
+
  Örnek şunları gösterir:
 
 - Bir istemcinin bir hizmete nasıl ek güvenlik belirteçleri geçirebilirler.
@@ -25,7 +27,8 @@ Destekleme belirteçleri örneği, WS-Security kullanan bir iletiye nasıl ek be
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>İstemci Kullanıcı adı belirteciyle kimliğini doğrular ve X. 509.440 güvenlik belirtecini destekler
- Hizmet, ve sınıfları kullanılarak programlı bir şekilde oluşturulan iletişim için tek bir uç nokta sunar `BindingHelper` `EchoServiceHost` . Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, ve kullanarak özel bir bağlama ile yapılandırılır `SymmetricSecurityBindingElement` `HttpTransportBindingElement` . Bu örnek, `SymmetricSecurityBindingElement` iletim sırasında simetrik anahtarı korumak ve BIR `UserNameToken` `X509SecurityToken` WS-Security ileti üstbilgisinde destekleyici ile geçiş yapmak Için bir Service X. 509.952 sertifikası kullanmak üzere ayarlar. Simetrik anahtar, ileti gövdesini ve Kullanıcı adı güvenlik belirtecini şifrelemek için kullanılır. Destekleme belirteci, WS-Security ileti üstbilgisinde ek bir ikili güvenlik belirteci olarak geçirilir. Destekleyici belirtecin özgünlük belgesi, iletinin bir parçası destekleyici X. 509.440 güvenlik belirteci ile ilişkili özel anahtarla imzalanarak sağlanır.
+
+ Hizmet, ve sınıfları kullanılarak programlı bir şekilde oluşturulan iletişim için tek bir uç nokta sunar `BindingHelper` `EchoServiceHost` . Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, ve kullanarak özel bir bağlama ile yapılandırılır `SymmetricSecurityBindingElement` `HttpTransportBindingElement` . Bu örnek, `SymmetricSecurityBindingElement` iletim sırasında simetrik anahtarı korumak ve bir `UserNameToken` WS-Security ileti üstbilgisinde destekleyici ile geçiş yapmak için bir Service X. 509.952 sertifikası kullanmak üzere öğesini ayarlar `X509SecurityToken` . Simetrik anahtar, ileti gövdesini ve Kullanıcı adı güvenlik belirtecini şifrelemek için kullanılır. Destekleme belirteci, WS-Security ileti üst bilgisinde ek bir ikili güvenlik belirteci olarak geçirilir. Destekleyici belirtecin özgünlük belgesi, iletinin bir parçası destekleyici X. 509.440 güvenlik belirteci ile ilişkili özel anahtarla imzalanarak sağlanır.
 
 ```csharp
 public static Binding CreateMultiFactorAuthenticationBinding()
@@ -282,6 +285,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>Arayanların bilgilerini görüntüleme
+
  Arayanın bilgilerini göstermek için `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` aşağıdaki kodda gösterildiği gibi kullanabilirsiniz. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`Geçerli çağıran ile ilişkili yetkilendirme taleplerini içerir. Bu talepler, iletide alınan her belirtecin Windows Communication Foundation (WCF) tarafından otomatik olarak sağlanır.
 
 ```csharp
@@ -345,14 +349,17 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```
 
 ## <a name="running-the-sample"></a>Örnek çalıştırma
+
  Örneği çalıştırdığınızda, istemci önce Kullanıcı adı belirteci için Kullanıcı adı ve parola vermenizi ister. Hizmet üzerindeki WCF, Kullanıcı adı belirtecinde sağlanan değerleri sistem tarafından sağlanan kimliğe eşletiğinden, sistem hesabınız için doğru değerleri sağladığınızdan emin olun. Bundan sonra istemci, hizmetten yanıtı görüntüler. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.
 
 ## <a name="setup-batch-file"></a>Toplu Iş dosyası kurulumu
+
  Bu örneğe eklenen Setup.bat Batch dosyası, sunucu sertifika tabanlı güvenlik gerektiren Internet Information Services (IIS) barındırılan uygulamasını çalıştırmak üzere sunucuyu ilgili sertifikalarla yapılandırmanıza olanak tanır. Bu toplu iş dosyası makineler arasında çalışacak şekilde değiştirilmelidir veya barındırılmayan bir durumda çalışır.
 
  Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilecek şekilde, toplu iş dosyalarının farklı bölümlerine kısa bir genel bakış sağlar.
 
 ### <a name="creating-the-client-certificate"></a>Istemci sertifikası oluşturma
+
  Setup.bat Batch dosyasından aşağıdaki satırlar kullanılacak istemci sertifikasını oluşturur. `%CLIENT_NAME%`Değişkeni, istemci sertifikasının konusunu belirtir. Bu örnek, konu adı olarak "client.com" kullanır.
 
  Sertifika, depolama konumu altında (kişisel) deposunda depolanır `CurrentUser` .
@@ -365,6 +372,7 @@ makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -p
 ```
 
 ### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>Istemci sertifikasını sunucunun güvenilen deposuna yükleme
+
  Setup.bat Batch dosyasında aşağıdaki satır, istemci sertifikasını sunucunun güvenilir kişiler deposuna kopyalar. Bu adım, Makecert.exe tarafından oluşturulan sertifikalara sunucunun sistemi tarafından örtük olarak güvenilmediği için gereklidir. İstemci tarafından güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), istemci sertifikası deposunu sunucu sertifikasıyla doldurmanın bu adımı gerektirmez.
 
 ```console
@@ -375,6 +383,7 @@ certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s Tru
 ```
 
 ### <a name="creating-the-server-certificate"></a>Sunucu sertifikası oluşturma
+
  Setup.bat Batch dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. `%SERVER_NAME%`Değişken, sunucu adını belirtir. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasındaki varsayılan değer localhost 'tur.
 
  Sertifika, LocalMachine depolama konumu altında (kişisel) deposunda depolanır. Sertifika, IIS tarafından barındırılan hizmetler için LocalMachine deposunda depolanır. Şirket içinde barındırılan hizmetler için, LocalMachine dizesini CurrentUser ile değiştirerek, sunucu sertifikasını geçerli kullanıcı deposu konumunda depolayacak şekilde toplu iş dosyasını değiştirmelisiniz.
@@ -390,6 +399,7 @@ makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -
 ```
 
 ### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>Sunucu sertifikasını Istemcinin güvenilen sertifika deposuna yükleme
+
  Setup.bat Batch dosyasındaki aşağıdaki satırlar, sunucu sertifikasını istemci güvenilir kişiler deposuna kopyalar. Makecert.exe tarafından oluşturulan sertifikalara istemci sistemi tarafından örtük olarak güvenilmediğinden Bu adım gereklidir. İstemci tarafından güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), istemci sertifikası deposunu sunucu sertifikasıyla doldurmanın bu adımı gerektirmez.
 
 ```console
@@ -399,6 +409,7 @@ echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r C
 ```
 
 ### <a name="enabling-access-to-the-certificates-private-key"></a>Sertifikanın özel anahtarına erişimi etkinleştirme
+
  IIS tarafından barındırılan hizmetten sertifika özel anahtarına erişimi etkinleştirmek için, IIS tarafından barındırılan işlemin çalıştığı kullanıcı hesabına özel anahtar için uygun izinler verilmelidir. Bu, Setup.bat betikteki son adımlar tarafından gerçekleştirilir.
 
 ```console

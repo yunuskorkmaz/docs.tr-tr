@@ -2,17 +2,18 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: 6fa68eed241edaea40b66c31240a4201e05779f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de00cac851e4c6d0fd6df16f3a01b65bb5f43415
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956583"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294683"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
+
 TcpConnectionPoolSettings  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class TcpConnectionPoolSettings  
@@ -25,44 +26,50 @@ class TcpConnectionPoolSettings
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- TcpConnectionPoolSettings sınıf herhangi bir yöntemi tanımlamaz.  
+
+ TcpConnectionPoolSettings sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  TcpConnectionPoolSettings sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="groupname"></a>GroupName  
+### <a name="groupname"></a>Adýdýr  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bağlama öğesi tarafından kullanılan bağlantı havuzunu grup adı.  
+ Bağlama öğesi tarafından kullanılan bağlantı havuzunun grup adı.  
   
-### <a name="idletimeout"></a>IdleTimeout  
- Veri türü: tarih/saat  
+### <a name="idletimeout"></a>Timeout  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bağlantı kesilmeden önce boşta kalabileceği en uzun süre.  
+ Bağlantı kesilmeden önce bağlantının boşta kalabileceği en uzun süre.  
   
 ### <a name="leasetimeout"></a>LeaseTimeout  
- Veri türü: tarih/saat  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Kira işlemi zaman aşımına uğramadan önce tamamlanması için en uzun süre.  
+ Zaman aşımından önce kira işleminin tamamlanacağı en uzun süre.  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Her bir uç noktası için en fazla giden bağlantı.  
+ Her bitiş noktası için giden bağlantı üst sınırı.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

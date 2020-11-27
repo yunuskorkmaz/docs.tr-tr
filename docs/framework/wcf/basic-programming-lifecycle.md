@@ -5,17 +5,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: c672827fff780fd263f5355520bb6ccf02bb902e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f958bd06f617a5648b31332ebe9e7662d45cd241
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245537"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294852"
 ---
 # <a name="basic-programming-lifecycle"></a>Temel Programlama Yaşam Döngüsü
+
 Windows Communication Foundation (WCF), uygulamaların aynı bilgisayarda, Internet üzerinden veya farklı uygulama platformlarında olup olmadıkları ile iletişim kurmasını sağlar. Bu konu, bir WCF uygulaması oluşturmak için gereken görevleri özetler. Çalışan bir örnek uygulama için bkz. [Başlangıç Öğreticisi](getting-started-tutorial.md).  
   
 ## <a name="the-basic-tasks"></a>Temel görevler  
+
  Gerçekleştirilecek temel görevler sırasıyla:  
   
 1. Hizmet sözleşmesini tanımlayın. Hizmet sözleşmesi bir hizmetin imzasını, yaptığı verileri ve diğer sözleşmeye dayalı gerekli verileri belirler. Daha fazla bilgi için bkz. [hizmet sözleşmelerini tasarlama](designing-service-contracts.md).  

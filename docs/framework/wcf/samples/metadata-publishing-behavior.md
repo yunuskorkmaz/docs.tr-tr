@@ -5,15 +5,16 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: 60a5884bb8d1189ab758260bf765c321392e1bfe
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7df0a8ce41b7a26f70a010b377213c8438fe659d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584369"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294358"
 ---
 # <a name="metadata-publishing-behavior"></a>Meta Veri Yayımlama Davranışı
-Meta veri yayımlama davranışı örneği, bir hizmetin meta veri yayımlama özelliklerinin nasıl kontrol leceğini gösterir. Potansiyel olarak duyarlı hizmet meta verilerinin istenmeden açıklanmasını engellemek için Windows Communication Foundation (WCF) Hizmetleri için varsayılan yapılandırma, meta veri yayımlamayı devre dışı bırakır. Bu davranış, varsayılan olarak güvenlidir, ancak hizmetin meta veri yayımlama davranışı yapılandırmada açıkça etkinleştirilmediği sürece hizmeti çağırmak için gereken istemci kodunu oluşturmak için bir meta veri alma aracı (Svcutil. exe gibi) kullanamazsınız.  
+
+Meta veri yayımlama davranışı örneği, bir hizmetin meta veri yayımlama özelliklerinin nasıl kontrol leceğini gösterir. Potansiyel olarak duyarlı hizmet meta verilerinin istenmeden açıklanmasını engellemek için Windows Communication Foundation (WCF) Hizmetleri için varsayılan yapılandırma, meta veri yayımlamayı devre dışı bırakır. Bu davranış, varsayılan olarak güvenlidir, ancak hizmetin meta veri yayımlama davranışı yapılandırmada açıkça etkinleştirilmediği sürece hizmeti çağırmak için gereken istemci kodunu oluşturmak için bir meta veri alma aracı (Svcutil.exe gibi) kullanamazsınız.  
   
 > [!IMPORTANT]
 > Bu örnek, netlik açısından güvenli olmayan bir meta veri yayımlama uç noktasının nasıl oluşturulacağını göstermektedir. Bu uç noktalar, anonim olarak kimliği doğrulanmamış tüketiciler tarafından kullanılabilir ve bir hizmetin meta verilerinin genel olarak kapatılarak emin olmak için bu uç noktaların dağıtılmasından önce gerçekleştirilmelidir. Meta veri uç noktası güvenliğini sağlayan bir örnek için [özel güvenli meta veri uç noktası](custom-secure-metadata-endpoint.md) örneğine bakın.  
@@ -23,7 +24,7 @@ Meta veri yayımlama davranışı örneği, bir hizmetin meta veri yayımlama ö
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Meta verileri kullanıma sunmasına yönelik bir hizmetin, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> hizmette yapılandırılması gerekir. Bu davranış mevcut olduğunda, bir uç noktayı bir <xref:System.ServiceModel.Description.IMetadataExchange> WS-MetadataExchange (MEX) protokolünün bir uygulama olarak göstermek için bir uç nokta yapılandırarak meta verileri yayımlayabilirsiniz. Kolaylık olması için, bu sözleşmeye "IMetadataExchange" kısaltılmış yapılandırma adı verildi. Bu örnek, `mexHttpBinding` `wsHttpBinding` güvenlik modu olarak ayarlanmış olan öğesine eşdeğer bir standart bağlama olan öğesini kullanır `None` . Uç noktada "mex" göreli adresi kullanılır. bu durum, hizmet tabanı adresine karşı çözümlenirse, bir uç nokta adresinde oluşur `http://localhost/servicemodelsamples/service.svc/mex` . Davranış yapılandırması aşağıda gösterilmiştir:  
+ Meta verileri kullanıma sunmasına yönelik bir hizmetin, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> hizmette yapılandırılması gerekir. Bu davranış mevcut olduğunda, bir uç noktayı, <xref:System.ServiceModel.Description.IMetadataExchange> sözleşmeyi bir WS-MetadataExchange (MEX) protokolünün bir uygulama olarak kullanıma sunmak üzere yapılandırarak meta verileri yayımlayabilirsiniz. Kolaylık olması için, bu sözleşmeye "IMetadataExchange" kısaltılmış yapılandırma adı verildi. Bu örnek, `mexHttpBinding` `wsHttpBinding` güvenlik modu olarak ayarlanmış olan öğesine eşdeğer bir standart bağlama olan öğesini kullanır `None` . Uç noktada "mex" göreli adresi kullanılır. bu durum, hizmet tabanı adresine karşı çözümlenirse, bir uç nokta adresinde oluşur `http://localhost/servicemodelsamples/service.svc/mex` . Davranış yapılandırması aşağıda gösterilmiştir:  
   
 ```xml  
 <behaviors>  
@@ -57,7 +58,7 @@ Meta veri yayımlama davranışı örneği, bir hizmetin meta veri yayımlama ö
   
  Bu örnek, <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğini olarak ayarlar `true` ve bu da hizmetin meta VERILERINI http get kullanarak gösterir. HTTP GET metaveri uç noktasını etkinleştirmek için hizmetin bir HTTP temel adresi olmalıdır. Sorgu dizesi, `?wsdl` meta verilere erişmek için hizmetin temel adresinde kullanılır. Örneğin, hizmet için WSDL 'yi bir Web tarayıcısında görmek için adresini kullanmanız gerekir `http://localhost/servicemodelsamples/service.svc?wsdl` . Alternatif olarak, ' ı ' e ayarlayarak HTTPS üzerinden meta verileri açığa çıkarmak için bu davranışı kullanabilirsiniz <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> `true` . Bu bir HTTPS temel adresi gerektirir.  
   
- Hizmetin MEX uç noktasına erişmek için, [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanın.  
+ Hizmetin MEX uç noktasına erişmek için, [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanın.  
   
  `svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs`  
   

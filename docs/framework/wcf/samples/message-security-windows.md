@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-ms.openlocfilehash: 7b5b9ba0cc9a6d867b0478720b6151c7a561da16
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0c5cbb0962407ea6ee9a32e35f65103d1def880f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584720"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294350"
 ---
 # <a name="message-security-windows"></a>İleti Güvenliği Windows
+
 Bu örnek <xref:System.ServiceModel.WSHttpBinding> , Windows kimlik doğrulamasıyla ileti düzeyi güvenliği kullanmak için bir bağlamanın nasıl yapılandırılacağını gösterir. Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır. Bu örnekte, hizmet Internet Information Services (IIS) içinde barındırılır ve istemci bir konsol uygulaması (. exe).  
   
 > [!NOTE]

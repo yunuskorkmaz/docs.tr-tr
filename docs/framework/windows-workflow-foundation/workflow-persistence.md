@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: c609ec5e67ce3bb0605f543806085f893acba37c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2184a159423a611a8936e900591a480ce7ef6ec8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557534"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293812"
 ---
 # <a name="workflow-persistence"></a>İş Akışı Kalıcılığı
+
 İş akışı kalıcılığı, işlem veya bilgisayar bilgilerini bağımsız bir iş akışı örneğinin durumunun dayanıklı yakalamasıdır. Bu işlem, sistem hatası durumunda iş akışı örneği için iyi bilinen bir kurtarma noktası sağlamak ya da etkin bir şekilde iş yapmakta olmayan iş akışı örneklerini kaldırarak belleği korumak veya iş akışı örneğinin durumunu bir düğümden bir sunucu grubundaki başka bir düğüme taşımak için yapılır.  
   
  Kalıcılık, işlem çevikliği, ölçeklenebilirlik, hata durumunda kurtarma ve belleği daha verimli bir şekilde yönetme olanağı sağlar. Kalıcılık süreci, kalıcılık noktası tanımlamayı, kaydedilecek verilerin toplanması ve son olarak verilerin gerçek depolamanın bir kalıcılık sağlayıcısına devredilmesi içerir.  
@@ -26,13 +27,14 @@ ms.locfileid: "90557534"
  Windows Server App Fabric, kalıcılığı yapılandırma sürecini basitleştirir. Daha fazla bilgi için bkz. [Windows Server App Fabric Ile Kalıcılık kavramları](/previous-versions/appfabric/ee677272(v=azure.10))  
   
 ## <a name="implicit-persistence-points"></a>Örtük Kalıcılık noktaları  
+
  Aşağıdaki liste, bir örnek depo bir iş akışıyla ilişkilendirildiğinde bir iş akışının kalıcı hale geçtiği koşulların örneklerini içerir.  
   
 - Bir **TransactionScope** etkinliği tamamlandığında veya bir **TransactedReceiveScope** etkinliği tamamlandığında.  
   
 - Bir iş akışı örneği boşta kaldığında ve **WorkflowIdleBehavior** iş akışı konağında ayarlandığında. Bu durum örneğin, mesajlaşma etkinlikleri veya bir **gecikme** etkinliği kullandığınızda oluşur.  
   
-- Bir WorkflowApplication boş kaldığında ve uygulamanın **PersistableIdle** özelliği **Persistableıdıdle Action. Persist**olarak ayarlandığında.  
+- Bir WorkflowApplication boş kaldığında ve uygulamanın **PersistableIdle** özelliği **Persistableıdıdle Action. Persist** olarak ayarlandığında.  
   
 - Bir konak uygulamasına bir iş akışı örneğini kalıcı hale getirmek veya kaldırmak için talimat verilir.  
   

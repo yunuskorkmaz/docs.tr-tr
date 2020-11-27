@@ -2,17 +2,19 @@
 title: İleti Güvenliği Bağlama
 ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
-ms.openlocfilehash: 7c4b21a8983884cbb4f8ab77568bd4977563b3b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a4d13eabc0d086a9cfe58c95165b0405f60fcf14
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584837"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294384"
 ---
 # <a name="message-security-binding"></a>İleti Güvenliği Bağlama
+
 Bu bölüm, WCF 'de Windows hizmetlerinde ileti güvenliği bağlamayı gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [İleti Güvenliği Anonim](message-security-anonymous.md)  
  Bu örnek, istemci kimlik doğrulaması olmadan ileti düzeyinde güvenlik kullanan, ancak sunucunun X. 509.440 sertifikasını kullanarak sunucu kimlik doğrulaması gerektiren bir Windows Communication Foundation (WCF) uygulamasının nasıl uygulanacağını gösterir.  
   

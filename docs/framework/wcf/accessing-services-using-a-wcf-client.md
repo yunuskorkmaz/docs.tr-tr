@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 25446a89a0b5657d32d77e2d0d57f58f36bed71b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b6f5cd7217b447256f19891c2624fba857735107
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245550"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294878"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF İstemcisi Kullanarak Hizmetlere Erişme
 
@@ -27,9 +27,10 @@ Bir hizmet oluşturduktan sonra, bir sonraki adım bir WCF istemci proxy 'si olu
 
 3. WCF istemci ara sunucusunu oluşturun.
 
-WCF istemci proxy 'si, hizmet modeli meta verileri yardımcı programı Aracı (SvcUtil.exe) kullanılarak el ile oluşturulabilir. daha fazla bilgi için bkz. [ServiceModel Metadata Utility aracı (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). WCF istemci ara sunucusu, **hizmet başvurusu Ekle** özelliği kullanılarak Visual Studio içinde de oluşturulabilir. WCF istemci proxy 'sini her iki yöntemi kullanarak oluşturmak için hizmetin çalışıyor olması gerekir. Hizmet şirket içinde barındırılıyorsa, Konağı çalıştırmanız gerekir. Hizmet IIS 'de barındırılıyorsa/ise başka bir şey yapmanız gerekmez.
+WCF istemci proxy 'si, hizmet modeli meta verileri yardımcı programı Aracı (SvcUtil.exe) kullanılarak el ile oluşturulabilir. daha fazla bilgi için bkz. [ServiceModel Metadata Utility aracı (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). WCF istemci ara sunucusu, **hizmet başvurusu Ekle**  özelliği kullanılarak Visual Studio içinde de oluşturulabilir. WCF istemci proxy 'sini her iki yöntemi kullanarak oluşturmak için hizmetin çalışıyor olması gerekir. Hizmet şirket içinde barındırılıyorsa, Konağı çalıştırmanız gerekir. Hizmet IIS 'de barındırılıyorsa/ise başka bir şey yapmanız gerekmez.
 
 ## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel meta veri yardımcı programı Aracı
+
  [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) , meta verilerden kod oluşturmaya yönelik bir komut satırı aracıdır. Aşağıdaki kullanım, temel bir Svcutil.exe komutuna bir örnektir.
 
 ```console
@@ -57,9 +58,10 @@ Svcutil.exe <file1 [,file2]>
 
 ## <a name="add-service-reference-in-visual-studio"></a>Visual Studio 'da Hizmet Başvurusu Ekle
 
- Hizmet çalışırken, WCF istemci ara sunucusunu içerecek projeye sağ tıklayın ve **Add**  >  **hizmet başvurusu**Ekle ' yi seçin. **Hizmet başvurusu Ekle Iletişim kutusunda**, çağırmak istediğiniz hizmetin URL 'sini yazın ve **Git** düğmesine tıklayın. İletişim kutusunda belirttiğiniz adreste bulunan hizmetlerin bir listesi görüntülenir. Kullanılabilir sözleşmeleri ve işlemleri görmek için hizmete çift tıklayın, oluşturulan kod için bir ad alanı belirtin ve **Tamam** düğmesine tıklayın.
+ Hizmet çalışırken, WCF istemci ara sunucusunu içerecek projeye sağ tıklayın ve **Add**  >  **hizmet başvurusu** Ekle ' yi seçin. **Hizmet başvurusu Ekle Iletişim kutusunda**, çağırmak istediğiniz hizmetin URL 'sini yazın ve **Git** düğmesine tıklayın. İletişim kutusunda belirttiğiniz adreste bulunan hizmetlerin bir listesi görüntülenir. Kullanılabilir sözleşmeleri ve işlemleri görmek için hizmete çift tıklayın, oluşturulan kod için bir ad alanı belirtin ve **Tamam** düğmesine tıklayın.
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod örneği, bir hizmet için oluşturulan bir hizmet sözleşmesini gösterir.
 
 ```csharp
@@ -151,6 +153,7 @@ End Class
 ```
 
 ## <a name="using-the-wcf-client"></a>WCF Istemcisini kullanma
+
  WCF istemcisini kullanmak için, WCF istemcisinin bir örneğini oluşturun ve ardından aşağıdaki kodda gösterildiği gibi yöntemlerini çağırın.
 
 ```csharp

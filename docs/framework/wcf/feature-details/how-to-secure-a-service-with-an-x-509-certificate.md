@@ -1,18 +1,19 @@
 ---
-title: 'Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme'
+title: 'Nasıl yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 10d6db63368ee55040f85f922b9483982e8ff264
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bf498ee373f2d637a7a93fbc36225a38ff7744c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596974"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293903"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Nasıl yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme
+
 Bir hizmetin bir X. 509.440 sertifikası ile güvenliğini sağlamak, Windows Communication Foundation (WCF) ' deki bağlamaların çoğu tarafından kullanılan temel bir tekniktir. Bu konu, bir X. 509.952 sertifikasıyla şirket içinde barındırılan bir hizmeti yapılandırma adımlarında size yol gösterir.  
   
  Önkoşul, sunucunun kimliğini doğrulamak için kullanılabilecek geçerli bir sertifikadır. Sertifika, güvenilen bir sertifika yetkilisi tarafından sunucuya verilmelidir. Sertifika geçerli değilse, hizmeti kullanmaya çalışan tüm istemciler hizmete güvenmez ve bu nedenle hiçbir bağlantı yapılmaz. Sertifikaları kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md).  
@@ -62,12 +63,14 @@ Bir hizmetin bir X. 509.440 sertifikası ile güvenliğini sağlamak, Windows Co
      [!code-vb[C_SecureWithCertificate#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#8)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> X. 509.440 sertifikasıyla bir hizmeti yapılandırmak için yöntemini kullanır.  
   
  [!code-csharp[C_SecureWithCertificate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#9)]
  [!code-vb[C_SecureWithCertificate#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
  Kodu derlemek için aşağıdaki ad alanları gereklidir:  
   
 - <xref:System>  

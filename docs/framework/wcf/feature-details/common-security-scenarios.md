@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: cfd29f8cae8ac362a5fa1709864dce4ae11b5af6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 21c8279890d1d1cf746e98f875efb6b1ff869c73
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558894"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295086"
 ---
 # <a name="common-security-scenarios"></a>Ortak Güvenlik Senaryoları
+
 Bu bölümdeki konularda, bir dizi olası istemci ve hizmet güvenlik yapılandırması kataloglayın. Konfigürasyonlar bir dizi etkene göre farklılık gösterir. Örneğin, bir hizmet veya istemcinin intranette olup olmadığı ya da güvenliğin Windows ya da taşıma (HTTPS gibi) tarafından sağlandığını belirtir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [İnternet Güvenli Olmayan Hizmet ve İstemci](internet-unsecured-client-and-service.md)  
  Ortak, güvenli olmayan bir istemci ve hizmet örneği.  
   
@@ -58,9 +60,11 @@ Bu bölümdeki konularda, bir dizi olası istemci ve hizmet güvenlik yapıland�
  İstemci bir ağ üzerinde dağıtılan bir veya daha fazla Web hizmetine erişir. Web Hizmetleri, güvenli olması gereken ek kaynaklara (veritabanları veya diğer Web Hizmetleri gibi) erişir.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Yetkilendirme](authorization-in-wcf.md)  
   
  [Güvenliğe genel bakış](security-overview.md)  

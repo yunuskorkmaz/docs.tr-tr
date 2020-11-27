@@ -2,14 +2,15 @@
 title: Güvenilir Görünüm Hizmeti
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: e9459b4cc26ef85adcc59c308d92491fd2d3acba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 80f139ace43d5f8d2136528681386711bea7a1e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544186"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295060"
 ---
 # <a name="trusted-facade-service"></a>Güvenilir Görünüm Hizmeti
+
 Bu senaryo örneği, arayanın kimlik bilgilerinin bir hizmetten diğerine Windows Communication Foundation (WCF) güvenlik altyapısını kullanarak nasıl akabileceğinizi gösterir.  
   
  Bir hizmet tarafından bir hizmet tarafından sunulan işlevselliği bir façlade hizmeti kullanılarak kullanıma sunmak için ortak bir tasarım modelidir. Façlade hizmeti genellikle çevre ağında (DMZ, sivil bölge ve denetimli alt ağ olarak da bilinir) bulunur ve iş mantığını uygulayan ve iç verilere erişim sağlayan bir arka uç hizmetiyle iletişim kurar. Façlade hizmeti ile arka uç hizmeti arasındaki iletişim kanalı bir güvenlik duvarından geçer ve genellikle yalnızca tek bir amaçla sınırlandırılır.  
@@ -28,9 +29,11 @@ Bu senaryo örneği, arayanın kimlik bilgilerinin bir hizmetten diğerine Windo
 > Arka uç hizmeti, arayanın kimliğini doğrulamak için façlade hizmetine güvenir. Bu nedenle, arka uç hizmeti çağıranın kimliğini doğrulamaz; Bu, iletilen istekte façlade hizmeti tarafından sunulan kimlik bilgilerini kullanır. Bu güven ilişkisi nedeniyle, arka uç hizmeti, iletilen iletinin güvenilen bir kaynaktan geldiğinden emin olmak için façlade hizmetinin kimliğini doğrulamalıdır; bu durumda façlade hizmeti.  
   
 ## <a name="implementation"></a>Uygulama  
+
  Bu örnekte iki iletişim yolu vardır. İlk olarak istemci ile façlade hizmeti arasında ikinci değer façlade hizmeti ve arka uç hizmeti arasındadır.  
   
 ### <a name="communication-path-between-client-and-faade-service"></a>Istemci ile Façlade hizmeti arasındaki iletişim yolu  
+
  Façlade hizmeti iletişim yolunun istemcisi `wsHttpBinding` `UserName` istemci kimlik bilgisi türü ile kullanır. Bu, istemcinin façlade hizmetinde kimlik doğrulamak için Kullanıcı adı ve parola kullandığı ve façlade hizmetinin istemcide kimlik doğrulamak için X. 509.440 sertifikası kullandığı anlamına gelir. Bağlama yapılandırması aşağıdaki örneğe benzer şekilde görünür.  
   
 ```xml  
@@ -93,6 +96,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 ```  
   
 ### <a name="communication-path-between-faade-service-and-backend-service"></a>Façlade hizmeti ile arka uç hizmeti arasındaki iletişim yolu  
+
  Arka uç hizmeti iletişim yolunda façlade hizmeti, `customBinding` çeşitli bağlama öğelerinden oluşan bir kullanır. Bu bağlama iki şeyi gerçekleştirir. İletişimin güvenli olduğundan ve güvenilen bir kaynaktan geldiğinden emin olmak için façlade hizmeti ve arka uç hizmeti 'nin kimliğini doğrular. Ayrıca, güvenlik belirtecinin içindeki ilk arayanın kimliğini de iletir `Username` . Bu durumda, yalnızca ilk arayanın Kullanıcı adı arka uç hizmetine iletilir, parola iletiye eklenmez. Bunun nedeni, arka uç hizmetinin isteği kendisine iletmeden önce arayanın kimliğini doğrulamak üzere façlade hizmetine güvenmesidir. Façlade hizmeti kendi arka uç hizmetinde kimliğini doğruladığından, arka uç hizmeti iletilen istekte bulunan bilgilere güvenebilirler.  
   
  Bu iletişim yolu için bağlama yapılandırması aşağıda verilmiştir.  
@@ -212,6 +216,7 @@ public string GetCallerIdentity()
  Façlade hizmeti hesap bilgileri, özelliği kullanılarak ayıklanır `ServiceSecurityContext.Current.WindowsIdentity` . İlk çağıran ile ilgili bilgilere erişmek için arka uç hizmeti `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` özelliğini kullanır. `Identity`Bir türü olan bir talep arar `Name` . Bu talep, güvenlik belirtecinde bulunan bilgilerden WCF güvenlik altyapısı tarafından otomatik olarak oluşturulur `Username` .  
   
 ## <a name="running-the-sample"></a>Örneği çalıştırma  
+
  Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın. Hizmeti kapatmak için façlade ve arka uç hizmeti konsol penceresinde ENTER tuşuna basabilirsiniz.  
   
 ```console  

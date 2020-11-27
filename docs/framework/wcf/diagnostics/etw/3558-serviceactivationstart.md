@@ -2,27 +2,30 @@
 title: 3558 - ServiceActivationStart
 ms.date: 03/30/2017
 ms.assetid: 9062c6f4-2252-460c-ad29-f8effa72fcd1
-ms.openlocfilehash: cc6a27eddff409eeddb21689525bc7a4cb3d0ebf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21f3b7b60cf7c86cb8ee859ee753f38d99feaa84
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696086"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294475"
 ---
 # <a name="3558---serviceactivationstart"></a>3558 - ServiceActivationStart
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3558|  
-|anahtar sözcükler|WebHost|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|ID|3558|  
+|Anahtar sözcükler|Leyemedi|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, hizmet etkinleştirme başlangıç yayınlanır.  
+
+ Bu olay Service Activation başlatması üzerine yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Hizmeti etkinleştirme Başlat  
+
+ Hizmet etkinleştirme başlangıcı  
   
 ## <a name="details"></a>Ayrıntılar

@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: b96a32f5e11ed4808f8f35d02802afd1f48c3072
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2a8c186c839be5008bbc5315c7c9fae638680714
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601328"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293929"
 ---
 # <a name="data-contract-equivalence"></a>Veri Sözleşmesi Eşitliği
+
 Bir istemcinin belirli bir türdeki verileri bir hizmete veya bir istemciye başarıyla veri göndermek için bir hizmete başarıyla göndermesini sağlamak için, gönderilen türün alma sonunda bulunması gerekmez. Tek gereksinim, her iki türdeki veri sözleşmelerinin de aynı olması olabilir. (Bazen, [veri anlaşması sürümü oluşturma](data-contract-versioning.md)bölümünde açıklandığı gibi katı denklik gerekli değildir.)  
   
  Veri sözleşmelerinin eşdeğer olması için aynı ad alanına ve ada sahip olmaları gerekir. Ayrıca, bir taraftaki her bir veri üyesinin diğer tarafta eşdeğer bir veri üyesi olması gerekir.  
@@ -34,6 +35,7 @@ Bir istemcinin belirli bir türdeki verileri bir hizmete veya bir istemciye baş
  [!code-vb[C_DataContractNames#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#5)]  
   
 ## <a name="data-member-order-and-data-contract-equivalence"></a>Veri üyesi siparişi ve veri sözleşmesi denklik  
+
  <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>Sınıfının özelliğinin kullanılması, <xref:System.Runtime.Serialization.DataMemberAttribute> veri sözleşmesinin denkdeğerliğine etkilenebilir. Veri sözleşmeleri, eşdeğer olması için aynı sırada görünen üyelere sahip olmalıdır. Varsayılan sıra alfabetik bir değer. Daha fazla bilgi için bkz. [veri üye sıralaması](data-member-order.md).  
   
  Örneğin, aşağıdaki kod eşdeğer veri sözleşmeleri ile sonuçlanır.  
@@ -47,6 +49,7 @@ Bir istemcinin belirli bir türdeki verileri bir hizmete veya bir istemciye baş
  [!code-vb[C_DataContractNames#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#7)]  
   
 ## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>Devralma, arabirimler ve veri sözleşmesi denklik  
+
  Denklik belirlenirken, başka bir veri sözleşmesinden devralan bir veri sözleşmesi, temel türden tüm veri üyelerini içeren yalnızca bir veri anlaşması gibi değerlendirilir. Veri üyeleri sırasının eşleşmesi gerektiğini ve temel tür üyelerinin, türetilmiş tür üyelerinden önce sipariş olarak gelmesini aklınızda bulundurun. Ayrıca, aşağıdaki kod örneğinde olduğu gibi, iki veri üyesinin aynı sıra değeri varsa, bu veri üyeleri için sıralama alfabetik bir örnektir. Daha fazla bilgi için bkz. [veri üye sıralaması](data-member-order.md).  
   
  Aşağıdaki örnekte, türü için veri sözleşmesi, `Employee` türü için veri sözleşmesine eşdeğerdir `Worker` .  
@@ -65,5 +68,5 @@ Bir istemcinin belirli bir türdeki verileri bir hizmete veya bir istemciye baş
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Veri Üye Sırası](data-member-order.md)
-- [Veri Anlaşması Bilinen Türler](data-contract-known-types.md)
+- [Veri Sözleşmesi Bilinen Türler](data-contract-known-types.md)
 - [Veri Sözleşmesi Adları](data-contract-names.md)
