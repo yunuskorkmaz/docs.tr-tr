@@ -2,27 +2,30 @@
 title: 3307 - ClientBaseChannelFactoryCacheHit
 ms.date: 03/30/2017
 ms.assetid: 93d332af-a666-4fa4-81a3-2db6b1eaf190
-ms.openlocfilehash: 861338080315905e0b511795297442b94c48e9f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d8be2694b88fd23eb2e026ec3171269719f3621
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595757"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279629"
 ---
 # <a name="3307---clientbasechannelfactorycachehit"></a>3307 - ClientBaseChannelFactoryCacheHit
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3307|  
-|anahtar sözcükler|ServiceModel|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|3307|  
+|Anahtar sözcükler|ServiceModel|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay önbelleğinde bulunan eşleşen kullanılan kanal fabrikası olduğunda yayılır.  
+
+ Bu olay, önbellekte kullanılan bir eşleşen kanal fabrikası bulunduğunda yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Önbelleğinde bulunan eşleşen kanal fabrikası kullanılır.  
+
+ Önbellekte bulunan eşleşen kanal fabrikası kullanıldı.  
   
 ## <a name="details"></a>Ayrıntılar
