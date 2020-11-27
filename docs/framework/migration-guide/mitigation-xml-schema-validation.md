@@ -6,20 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
-ms.openlocfilehash: 0672361ca5c0bc7cb6ec166f59278b93555e0947
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 0744a703c1e9dc35a8accc448d34f1a736e77e4d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475313"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253537"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Azaltma: XML Şema Doğrulaması
+
 .NET Framework 4,6 ' de, bir bileşik anahtar kullanılıyorsa ve bir anahtar boşsa, XSD şema doğrulaması benzersiz kısıtlamanın ihlal edildiğini algılar.  
   
 ## <a name="impact"></a>Etki  
+
  Bu değişikliğin etkisi en az olmalıdır: şema belirtimine göre, `xsd:unique` boş bir anahtarla bir bileşik anahtar kullanılarak ihlal edilirse bir şema doğrulama hatası beklenmektedir.  
   
 ## <a name="mitigation"></a>Risk azaltma  
+
  Bir bileşik anahtarda bir boş anahtar varsa bir şema doğrulama hatası algılanıp algılanmayacağı, yapılandırılabilir bir özelliktir:  
   
 - .NET Framework 4,6 ' i hedefleyen uygulamalarla başlayarak, şema doğrulama hatası algılama işlemi varsayılan olarak etkindir; Ancak, şema doğrulama hatası algılanmayacak şekilde devre dışı bırakmak mümkündür.  

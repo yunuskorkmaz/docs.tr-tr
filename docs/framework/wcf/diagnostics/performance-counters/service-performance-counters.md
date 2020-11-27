@@ -2,15 +2,16 @@
 title: Hizmet Performansı Sayaçları
 ms.date: 03/30/2017
 ms.assetid: 4210f549-31f2-4ea7-99bd-69eaffb98ddf
-ms.openlocfilehash: 929ddcb2f271b7488270ea39e7a3a0037158c855
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: f3e3a798bf04f24aaea03b5d70762d52b67a82f0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320023"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252835"
 ---
 # <a name="service-performance-counters"></a>Hizmet Performansı Sayaçları
-Hizmet performans sayaçları, hizmet davranışını bir bütün olarak ölçer ve tüm hizmetin performansını tanılamak için kullanılabilir. Performans Izleyicisi (Perfmon. exe) ile görüntülenirken `ServiceModelService 4.0.0.0` performans nesnesi altında bulunabilir. Örnekler aşağıdaki model kullanılarak adlandırılır:  
+
+Hizmet performans sayaçları, hizmet davranışını bir bütün olarak ölçer ve tüm hizmetin performansını tanılamak için kullanılabilir. Performans `ServiceModelService 4.0.0.0` İzleyicisi (Perfmon.exe) ile görüntülenirken Performans nesnesi altında bulunabilir. Örnekler aşağıdaki model kullanılarak adlandırılır:  
   
 `ServiceName@ServiceBaseAddress`
   
@@ -19,4 +20,4 @@ Hizmet performans sayaçları, hizmet davranışını bir bütün olarak ölçer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Performans Sayaçları](index.md)
+- [Performans sayaçları](index.md)

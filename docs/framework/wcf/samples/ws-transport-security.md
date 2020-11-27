@@ -2,14 +2,15 @@
 title: WS Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-ms.openlocfilehash: d0f357ddcfc355bac8eeb86d57641add0013a052
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 64059a5a09d49f83c9abda5b2f3d1601acf41a3e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596403"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252419"
 ---
 # <a name="ws-transport-security"></a>WS Taşıma Güvenliği
+
 Bu örnek, bağlamakla SSL Aktarım güvenliği kullanımını gösterir <xref:System.ServiceModel.WSHttpBinding> . Varsayılan olarak, `wsHttpBinding` bağlama http iletişimi sağlar. Aktarım güvenliği için yapılandırıldığında bağlama, HTTPS iletişimini destekler. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır. , `wsHttpBinding` İstemci ve hizmet için uygulama yapılandırma dosyalarında belirtilir ve yapılandırılır.  
   
 > [!NOTE]
@@ -49,9 +50,9 @@ Bu örnek, bağlamakla SSL Aktarım güvenliği kullanımını gösterir <xref:S
   </system.serviceModel>  
 ```  
   
- Belirtilen adres `https://` düzeni kullanır. Bağlama yapılandırması güvenlik modunu olarak ayarlar `Transport` . Hizmetin Web. config dosyasında aynı güvenlik modu belirtilmelidir.  
+ Belirtilen adres `https://` düzeni kullanır. Bağlama yapılandırması güvenlik modunu olarak ayarlar `Transport` . Hizmetin Web.config dosyasında aynı güvenlik modu belirtilmelidir.  
   
- Bu örnekte kullanılan sertifika, MakeCert. exe ile oluşturulmuş bir test sertifikasıdır çünkü, tarayıcınızla, gibi bir https: adresine erişmeye çalıştığınızda bir güvenlik uyarısı görünür `https://localhost/servicemodelsamples/service.svc` . Windows Communication Foundation (WCF) istemcisinin bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenmiştir. Üretim sertifikaları kullanılırken bu kod ve eşlik eden sınıf gerekli değildir.  
+ Bu örnekte kullanılan sertifika Makecert.exe ile oluşturulmuş bir test sertifikası olduğundan, tarayıcınızdan bir https: adresine erişmeye çalıştığınızda bir güvenlik uyarısı görünür `https://localhost/servicemodelsamples/service.svc` . Windows Communication Foundation (WCF) istemcisinin bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenmiştir. Üretim sertifikaları kullanılırken bu kod ve eşlik eden sınıf gerekli değildir.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

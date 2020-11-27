@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 248cbdd0921564898c5d3459cffa304793e85584
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cbb8f2eaf618cb9faaca1375d829478a645962a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502437"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253420"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Nasıl yapılır: İstek için Önbellek İlkesi Ayarlama
+
 Aşağıdaki örnek, bir istek için önbellek ilkesi ayarlamayı gösterir. Örnek giriş, gibi bir URI 'dir `http://www.contoso.com/` .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, bir günden daha uzun süredir önbellekte olmayan istenen kaynağın önbellekten kullanılmasına izin veren bir önbellek ilkesi oluşturur. Örnek, kaynağın önbellekten kullanılıp kullanılmadığını belirten bir ileti görüntüler — Örneğin, `"The response was retrieved from the cache : False."` — ve ardından kaynağı görüntüler. İstek, istemci ve sunucu arasındaki herhangi bir önbellekte yerine getirilir.  
   
 ```csharp  
@@ -109,7 +111,7 @@ End Namespace
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ağ Uygulamaları için Önbellek Yönetimi](cache-management-for-network-applications.md)
-- [Önbellek Ilkesi](cache-policy.md)
+- [Önbellek İlkesi](cache-policy.md)
 - [Konum Temelli Önbellek İlkeleri](location-based-cache-policies.md)
 - [Saat Temelli Önbellek İlkeleri](time-based-cache-policies.md)
-- [\<requestCaching>Öğesi (ağ ayarları)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [\<requestCaching> Öğesi (ağ ayarları)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

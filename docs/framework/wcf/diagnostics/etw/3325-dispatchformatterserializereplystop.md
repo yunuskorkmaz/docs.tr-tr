@@ -2,27 +2,30 @@
 title: 3325 - DispatchFormatterSerializeReplyStop
 ms.date: 03/30/2017
 ms.assetid: c96ffb5f-24e2-4c54-92ba-66277b1cea91
-ms.openlocfilehash: 2e4f2976842c1c44332ccfc32ee70d930d1fe41f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 998e292c1499fa89d2aedf9c8c74a1e2159df5dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595926"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253225"
 ---
 # <a name="3325---dispatchformatterserializereplystop"></a>3325 - DispatchFormatterSerializeReplyStop
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3325|  
-|anahtar sözcükler|ServiceModel|  
+|ID|3325|  
+|Anahtar sözcükler|ServiceModel|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay dağıtıcısı yanıt iletisi serileştirilmesi tamamlandığında yayılır.  
+
+ Dağıtıcı yanıt iletisini Serileştirmeyi tamamladığında bu olay yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Dağıtıcı yanıt iletisi serileştirilmesi tamamlandı.  
+
+ Dağıtıcı yanıt iletisini Serileştirmeyi tamamladı.  
   
 ## <a name="details"></a>Ayrıntılar

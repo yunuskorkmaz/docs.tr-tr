@@ -3,17 +3,19 @@ title: WCF Hizmetlerini Kodda Yapılandırma
 description: Self-barındırılan ve Web 'de barındırılan hizmetler için yapılandırma dosyaları yerine kodu kullanarak WCF hizmetlerini nasıl yapılandırabileceğinizi öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 975eafea5a153287f5ccc71b9aa342c12391004e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ba59856d94168c7f18319c09c9b00f26ecdff5c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689985"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253316"
 ---
 # <a name="configuring-wcf-services-in-code"></a>WCF Hizmetlerini Kodda Yapılandırma
+
 Windows Communication Foundation (WCF), geliştiricilerin yapılandırma dosyalarını veya kodu kullanarak hizmetleri yapılandırmalarına olanak tanır.  Yapılandırma dosyaları, bir hizmetin dağıtıldıktan sonra yapılandırılması gerektiğinde faydalıdır. Yapılandırma dosyalarını kullanırken, bir BT uzmanı 'nın yalnızca yapılandırma dosyasını güncelleştirmesi gerekir, yeniden derleme gerekmez. Bununla birlikte yapılandırma dosyaları, karmaşık ve bakım açısından zor olabilir. Yapılandırma dosyalarını hata ayıklama desteği yoktur ve yapılandırma öğeleri, yazma yapılandırma dosyalarını hata-açık ve zor hale getiren adlara göre başvurulur. WCF Ayrıca koddaki Hizmetleri yapılandırmanıza de olanak tanır. WCF 'nin önceki sürümlerinde (4,0 ve önceki sürümler), kodda hizmetleri yapılandırmak kendi kendine barındırılan senaryolarda kolaydır, <xref:System.ServiceModel.ServiceHost> sınıf ServiceHost. Open çağrılmadan önce uç noktaları ve davranışları yapılandırmanıza izin verilir. Ancak, Web 'de barındırılan senaryolarda sınıfına doğrudan erişiminiz yoktur <xref:System.ServiceModel.ServiceHost> . Web 'de barındırılan bir hizmeti yapılandırmak için `System.ServiceModel.ServiceHostFactory` , oluşturmuş <xref:System.ServiceModel.Activation.ServiceHostFactory> ve gerekli tüm yapılandırmaları gerçekleştirmiş bir oluşturma gerekiyordu. .NET Framework 4,5 ' den başlayarak, WCF hem şirket içinde barındırılan hem de Web 'de barındırılan hizmetleri yapılandırmak için daha kolay bir yol sağlar.
 
 ## <a name="the-configure-method"></a>Configure yöntemi
+
  Hizmet uygulama Sınıfınıza aşağıdaki imzayla çağrılan bir ortak statik yöntem tanımlamanız yeterlidir `Configure` :
 
 ```csharp

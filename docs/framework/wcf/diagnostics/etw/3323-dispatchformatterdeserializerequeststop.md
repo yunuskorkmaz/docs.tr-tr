@@ -2,27 +2,30 @@
 title: 3323 - DispatchFormatterDeserializeRequestStop
 ms.date: 03/30/2017
 ms.assetid: 867fc93e-ae8f-41b4-9264-210042c4bb75
-ms.openlocfilehash: 59bc3970c79b5a85f6ec808ba1fc5fb587c9422b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aaa22b8cd920a57bf68c8d6c0c4e82f98b9ac064
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595893"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253290"
 ---
 # <a name="3323---dispatchformatterdeserializerequeststop"></a>3323 - DispatchFormatterDeserializeRequestStop
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3323|  
-|anahtar sözcükler|ServiceModel|  
+|ID|3323|  
+|Anahtar sözcükler|ServiceModel|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay dağıtıcısı seri durumdan çıkarma işlemi istek iletisinin tamamlandığında yayılır.  
+
+ Dağıtıcı istek iletisini seri durumdan çıkarmayı tamamladığında bu olay yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Tamamlanan dağıtıcı seri durumundan çıkarma istek iletisi.  
+
+ Dağıtıcı istek iletisini seri durumdan çıkarmayı tamamladı.  
   
 ## <a name="details"></a>Ayrıntılar

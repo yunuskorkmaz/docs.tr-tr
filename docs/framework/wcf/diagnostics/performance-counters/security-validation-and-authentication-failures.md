@@ -2,29 +2,31 @@
 title: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
 ms.date: 03/30/2017
 ms.assetid: 0d4e3666-dfc6-421c-baf8-9479c22f7050
-ms.openlocfilehash: 0f061e1e12321dbe8034d7619830f71717ca9d1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3bcc6111f322a3bd8169567e8f436871eb19f879
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664973"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253056"
 ---
 # <a name="security-validation-and-authentication-failures"></a>Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
-Sayaç adı: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları  
+
+Sayaç adı: güvenlik doğrulama ve kimlik doğrulama sorunları  
   
 ## <a name="description"></a>Açıklama  
- Her bir ileti "Güvenlik çağrıları yetkilendirilmedi" sayacı tarafından kapsanmayan bir güvenlik sorunu nedeniyle reddedilmesi Bu sayaç artırılır. Bu tür sorunlar şunlardır:  
+
+ Bu sayaç, "güvenlik çağrıları yetkilendirilmemiş" sayacı kapsamında olmayan bir güvenlik sorunu nedeniyle her ileti reddedildiğinde artırılır. Bu tür sorunlar şunlardır:  
   
 - İstemci belirteci iletiden okunamıyor.  
   
-- İstemci belirteci (örneğin, hatalı parola) kimlik doğrulaması başarısız oldu.  
+- İstemci belirteci kimlik doğrulaması başarısız oldu (örneğin, hatalı parola).  
   
-- İmza doğrulaması başarısız oldu (örneğin, iletiyi oynanmadığını).  
+- İmza doğrulama başarısız oldu (örneğin, ileti değiştirilmiş).  
   
-- İleti yeniden yürütme bir saldırı sırasında gerçekleşebilir bir önceki bir yineleniyor.  
+- İleti, bir yeniden yürütme saldırısında meydana gelebilen bir öncekinden yineleniyor.  
   
-- Bir şifre çözme hatası oluştu.  
+- Şifre çözme hatası oluştu.  
   
-- Gereken bazı öğeleri (örneğin, eksik bir zaman damgası veya şifrelenmiş veriler engelle) gelen iletiyi yok.  
+- İletide bazı gerekli öğeler (örneğin, eksik zaman damgası veya şifrelenmiş veri bloğu) eksik.  
   
-- TLSNEGO/SPNEGO anlaşması sırasında hatalar oluştu.
+- TLSNEGO/SPNEGO Handshake sırasında hatalar oluştu.

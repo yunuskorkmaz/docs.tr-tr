@@ -4,15 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 1fbde53289c147d8ea273b9c86e65cbb8e262b30
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7fd4968bbe4e1a3dafbfc35cc0617cef7083d291
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596416"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252407"
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
-Bu örnek, WS-Atomik Işlem veya OleTransactions protokolünü kullanarak, istemci ile eşgüdümlü bir işlemin ve işlem akışı için istemci ve sunucu seçeneklerinin kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [Başlarken](getting-started-sample.md) hizmetini temel alır ancak işlemler, `TransactionFlowAttribute` işlem akışının hangi derece etkin olduğunu belirlemek için **TransactionFlowOption** numaralandırması ile kullanımını göstermeye yönelik olarak belirlenir. Akışlı işlemin kapsamı içinde, istenen işlemlerin bir günlüğü veritabanına yazılır ve istemci koordine işlemi tamamlanana kadar devam eder-istemci işlemi tamamlanmazsa, Web hizmeti işlemi, veritabanında uygun güncelleştirmelerin yürütülmemesini sağlar.  
+
+Bu örnek, WS-Atomic Transaction veya OleTransactions protokolünü kullanarak, istemci ile eşgüdümlü bir işlemin ve işlem akışı için istemci ve sunucu seçeneklerinin kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [Başlarken](getting-started-sample.md) hizmetini temel alır ancak işlemler, `TransactionFlowAttribute` işlem akışının hangi derece etkin olduğunu belirlemek için **TransactionFlowOption** numaralandırması ile kullanımını göstermeye yönelik olarak belirlenir. Akışlı işlemin kapsamı içinde, istenen işlemlerin bir günlüğü veritabanına yazılır ve istemci koordine işlemi tamamlanana kadar devam eder-istemci işlemi tamamlanmazsa, Web hizmeti işlemi, veritabanında uygun güncelleştirmelerin yürütülmemesini sağlar.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
@@ -225,14 +226,14 @@ Press <ENTER> to terminate the service.
   
 1. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md) konusundaki yönergeleri izleyin  
   
-2. SQL Server Express Edition veya SQL Server yüklediğinizden ve bağlantı dizesinin hizmetin uygulama yapılandırma dosyasında doğru şekilde ayarlandığından emin olun. Örneği bir veritabanı kullanmadan çalıştırmak için, `usingSql` hizmetin uygulama yapılandırma dosyasındaki değeri olarak ayarlayın.`false`  
+2. SQL Server Express Edition veya SQL Server yüklediğinizden ve bağlantı dizesinin hizmetin uygulama yapılandırma dosyasında doğru şekilde ayarlandığından emin olun. Örneği bir veritabanı kullanmadan çalıştırmak için, `usingSql` hizmetin uygulama yapılandırma dosyasındaki değeri olarak ayarlayın. `false`  
   
 3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
     > [!NOTE]
-    > Platformlar arası yapılandırma için aşağıdaki yönergeleri kullanarak Dağıtılmış İşlem Düzenleyicisi etkinleştirin ve Windows SDK WCF Işlemleri ağ desteğini etkinleştirmek için WsatConfig. exe aracını kullanın. WsatConfig. exe ' yi ayarlama hakkında daha fazla bilgi için bkz. [WS Atomik Işlem desteğini yapılandırma](../feature-details/configuring-ws-atomic-transaction-support.md).  
+    > Çapraz makine yapılandırması için aşağıdaki yönergeleri kullanarak Dağıtılmış İşlem Düzenleyicisi etkinleştirin ve WCF Işlemleri ağ desteğini etkinleştirmek için Windows SDK WsatConfig.exe aracını kullanın. WsatConfig.exe ayarlama hakkında daha fazla bilgi için bkz. [WS-Atomic Işlem desteğini yapılandırma](../feature-details/configuring-ws-atomic-transaction-support.md).  
   
- Örneği aynı bilgisayarda veya farklı bilgisayarlarda çalıştırdığınız gibi, ağ işlem akışını etkinleştirmek için Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırmanız ve WCF işlemleri ağ desteğini etkinleştirmek için WsatConfig. exe aracını kullanmanız gerekir.  
+ Örneği aynı bilgisayarda veya farklı bilgisayarlarda çalıştırdığınız gibi, ağ işlem akışını etkinleştirmek için Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırmanız ve WCF işlemleri ağ desteğini etkinleştirmek için WsatConfig.exe aracını kullanmanız gerekir.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) örneğini çalıştırmayı destekleyecek şekilde yapılandırmak için  
   
@@ -256,7 +257,7 @@ Press <ENTER> to terminate the service.
   
     1. **Başlat** menüsünde, **Denetim Masası**' na, ardından **Yönetimsel Araçlar**' a ve ardından **Bileşen Hizmetleri**' ne gidin.  
   
-    2. **Bileşen Hizmetleri**' ni genişletin. **Bilgisayarlar** klasörünü açın. **Dağıtılmış işlem Düzenleyicisi**seçin.  
+    2. **Bileşen Hizmetleri**' ni genişletin. **Bilgisayarlar** klasörünü açın. **Dağıtılmış işlem Düzenleyicisi** seçin.  
   
     3. **DTC Düzenleyicisi** ' ne sağ tıklayıp **Özellikler**' i seçin.  
   
