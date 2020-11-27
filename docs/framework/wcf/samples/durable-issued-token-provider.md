@@ -2,17 +2,19 @@
 title: Dayanıklı Verilen Belirteç Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: fed5f44e6cc40cfe2ca963077b6371c14b3b086a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7e0025eb4bc4918b977d9d8c4e2b1435b0425973
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600572"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291680"
 ---
 # <a name="durable-issued-token-provider"></a>Dayanıklı Verilen Belirteç Sağlayıcısı
+
 Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının nasıl uygulanacağını gösterir.  
   
 ## <a name="discussion"></a>Tartışma  
+
  Güvenlik altyapısına kimlik bilgilerini sağlamak için Windows Communication Foundation (WCF) içindeki bir belirteç sağlayıcısı kullanılır. Genel içindeki belirteç sağlayıcısı hedefi inceler ve güvenlik altyapısının iletiyi güvenli hale getirmek için uygun kimlik bilgilerini verir. WCF, bir CardSpace belirteç sağlayıcısıyla birlikte gelir. Özel belirteç sağlayıcıları aşağıdaki durumlarda faydalıdır:  
   
 - Yerleşik belirteç sağlayıcısının birlikte çalışamamasının bir kimlik bilgisi deposu varsa.  
@@ -31,7 +33,7 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
   
 - Sunucunun, sunucunun X. 509.440 sertifikasını kullanarak istemci tarafından nasıl doğrulandığını.  
   
- Bu örnek, bir istemci konsol programından (Client. exe), bir güvenlik belirteci hizmeti konsol programı (SecurityTokenService. exe) ve bir hizmet konsolu programından (Service. exe) oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, `ICalculator` matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır. İstemci, güvenlik belirteci hizmetinden (STS) bir güvenlik belirteci alır ve belirli bir matematik işlemi için hizmete zaman uyumlu istekler sağlar ve hizmet sonuçla yanıt verir. İstemci etkinliği konsol penceresinde görünür.  
+ Bu örnek, bir istemci konsol programından (Client.exe), bir güvenlik belirteci hizmeti konsol programı (Securitytokenservice.exe) ve bir hizmet konsolu programından (Service.exe) oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, `ICalculator` matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır. İstemci, güvenlik belirteci hizmetinden (STS) bir güvenlik belirteci alır ve belirli bir matematik işlemi için hizmete zaman uyumlu istekler sağlar ve hizmet sonuçla yanıt verir. İstemci etkinliği konsol penceresinde görünür.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
@@ -110,6 +112,7 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
  Güvenlik belirteci hizmeti, standart wsHttpBinding kullanarak tek bir uç nokta gösterir. Güvenlik belirteci hizmeti istemcilerden gelen istek için yanıt verir ve istemcinin bir Windows hesabı kullanarak kimlik doğrulaması yaptığı belirtilen belirteçte, istemcinin kullanıcı adını içeren bir belirteç yayınlar. Belirteç oluşturmanın bir parçası olarak, güvenlik belirteci hizmeti, CN = STS sertifikasıyla ilişkili özel anahtarı kullanarak belirteci imzalar. Ayrıca, bir simetrik anahtar oluşturur ve CN = localhost sertifikasıyla ilişkili ortak anahtarı kullanarak şifreler. Belirteci istemciye döndürürken, güvenlik belirteci hizmeti simetrik anahtarı da döndürür. İstemci, verilen belirteci Hesaplayıcı hizmetine sunar ve iletiyi bu anahtarla imzalayarak simetrik anahtarı bilir olduğunu kanıtlar.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Özel Istemci kimlik bilgileri ve belirteç sağlayıcısı  
+
  Aşağıdaki adımlarda, verilen belirteçleri önbelleğe alan ve WCF: Security ile tümleştiren özel bir belirteç sağlayıcısının nasıl geliştirilmesi gösterilmektedir.  
   
 ### <a name="to-develop-a-custom-token-provider"></a>Özel bir belirteç sağlayıcısı geliştirmek için  
@@ -226,9 +229,11 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
     ```  
   
 ## <a name="running-the-sample"></a>Örneği çalıştırma  
+
  Örneği çalıştırmak için aşağıdaki yönergelere bakın. Örneği çalıştırdığınızda, güvenlik belirteci isteği güvenlik belirteci hizmeti konsol penceresinde gösterilir. İşlem istekleri ve yanıtları istemci ve hizmet konsolu penceresinde görüntülenir. Uygulamayı kapatmak için konsol pencerelerinin herhangi birinde ENTER tuşuna basın.  
   
 ## <a name="the-setupcmd-batch-file"></a>Setup. cmd toplu Iş dosyası  
+
  Bu örneğe eklenen Setup. cmd toplu iş dosyası, şirket içinde barındırılan bir uygulamayı çalıştırmak için sunucu ve güvenlik belirteci hizmetini ilgili sertifikalarla yapılandırmanıza olanak tanır. Toplu iş dosyası, her ikisi de CurrentUser/Trustedkişileri sertifika deposunda iki sertifika oluşturur. İlk sertifika, CN = STS 'nin konu adına sahiptir ve güvenlik belirteci hizmeti tarafından, istemciye verdiği güvenlik belirteçlerini imzalamak için kullanılır. İkinci sertifika, CN = localhost konu adına sahiptir ve güvenlik belirteci hizmeti tarafından, hizmetin şifresini çözebilmesi için bir gizli dizi şifrelemek üzere kullanılır.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
@@ -237,9 +242,9 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
   
 2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin. Çözümdeki tüm projelerin oluşturulduğundan emin olun (paylaşılan, RSTRSTR, hizmet, SecurityTokenService ve Istemci).  
   
-3. Service. exe ve SecurityTokenService. exe ' nin her ikisinin de yönetici ayrıcalıklarıyla çalıştığından emin olun.  
+3. Service.exe ve SecurityTokenService.exe her ikisinin de yönetici ayrıcalıklarıyla çalıştığından emin olun.  
   
-4. Client. exe ' yi çalıştırın.  
+4. Client.exe çalıştırın.  
   
 ### <a name="to-clean-up-after-the-sample"></a>Örnekten sonra temizlemek için  
   

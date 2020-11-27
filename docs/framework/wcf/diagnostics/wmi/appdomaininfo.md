@@ -2,17 +2,18 @@
 title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
-ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5c44f4d8f6d93443802d5e1950c4d850976c5b6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964261"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291134"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
+
 Uygulama etki alanı bilgileri  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class AppDomainInfo  
@@ -33,97 +34,111 @@ class AppDomainInfo
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- AppDomainInfo sınıf herhangi bir yöntemi tanımlamaz.  
+
+ AppDomainInfo sınıfı herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  AppDomainInfo sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="appdomainid"></a>AppDomainId  
- Veri türü: SINT32  
+### <a name="appdomainid"></a>AppDomainID  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Uygulama etki alanı kimliği.  
+ AppDomain kimliği.  
   
-### <a name="isdefault"></a>Dil paketinde IsDefault  
+### <a name="isdefault"></a>IsDefault  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Appdomain varsayılan uygulama etki alanı olup olmadığını belirtir.  
+ AppDomain 'in varsayılan AppDomain olup olmadığını gösterir.  
   
-### <a name="logmalformedmessages"></a>LogMalformedMessages  
+### <a name="logmalformedmessages"></a>Günlüğe kaydetme Iletileri  
+
  Veri türü: Boole  
   
- Erişim türü: Okuma/yazma  
+ Erişim türü: okuma/yazma  
   
- Hatalı biçimlendirilmiş iletilerin kaydedilip kaydedilmeyeceğini belirten bir değeri.  
+ Hatalı biçimlendirilmiş iletilerin günlüğe kaydedilip kaydedilmeyeceğini belirten bir değer.  
   
 ### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
+
  Veri türü: Boole  
   
- Erişim türü: Okuma/yazma  
+ Erişim türü: okuma/yazma  
   
- İletilerin hizmet düzeyinde (önce şifreleme ve taşıma ilişkili dönüşümler) izlenilmeyeceğini belirleyen bir değer.  
+ İletilerin hizmet düzeyinde izlenip izlenmeyeceğini belirten bir değer (şifreleme ve aktarımlarla ilgili dönüşümlerden önce).  
   
-### <a name="logmessagesattransportlevel"></a>Transfer  
+### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
+
  Veri türü: Boole  
   
- Erişim türü: Okuma/yazma  
+ Erişim türü: okuma/yazma  
   
- İletileri taşıma düzeyinde izlenip izlenilmeyeceğini belirleyen bir değer.  
+ İletilerin Aktarım düzeyinde izlenip izlenmediğini belirten bir değer.  
   
 ### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
- Veri türü: TraceListener dizi  
+
+ Veri türü: TraceListener dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Dinleme System.Wmi.MessageLogging izleme kaynağına izleme dinleyicileri koleksiyonu.  
+ System. WMI. MessageLogging izleme kaynağını dinleyen koleksiyon izleme dinleyicileri.  
   
-### <a name="name"></a>Ad  
+### <a name="name"></a>Adı  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Uygulama etki alanı adı.  
+ AppDomain 'in adı.  
   
 ### <a name="performancecounters"></a>PerformanceCounters  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Appdomain içinde etkin performans sayaçlarının kapsamı.  
+ AppDomain içindeki etkin performans sayaçlarının kapsamı.  
   
-### <a name="processid"></a>İşlem kimliği  
- Veri türü: SINT32  
+### <a name="processid"></a>Işlem  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
  İşlem kimliği.  
   
 ### <a name="serviceconfigpath"></a>ServiceConfigPath  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmeti yapılandırma yolu.  
+ Hizmetin yapılandırmasının yolu.  
   
 ### <a name="tracelevel"></a>TraceLevel  
+
  Veri türü: dize  
   
- Erişim türü: Okuma/yazma  
+ Erişim türü: okuma/yazma  
   
- System.Wmi izleme kaynağına izleme düzeyi.  
+ System. WMI izleme kaynağının izleme düzeyi.  
   
 ### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
- Veri türü: TraceListener dizi  
+
+ Veri türü: TraceListener dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- System.ServiceModel kaynağına ait izleme dinleyicileri koleksiyonudur.  
+ System. ServiceModel izleme kaynağından gelen bir dinleyici koleksiyonu.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|
+|Ad Alanı|Root\ServiceModel içinde tanımlı|

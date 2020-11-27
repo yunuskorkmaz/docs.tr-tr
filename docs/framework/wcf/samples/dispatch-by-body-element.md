@@ -2,17 +2,18 @@
 title: Gövde Öğesine göre Dağıt
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 19913cdaa47d766f62a313e216a653ac69633a99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ddff361179c2ef071ca4df076e78b238de9041a1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594705"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292603"
 ---
 # <a name="dispatch-by-body-element"></a>Gövde Öğesine göre Dağıt
+
 Bu örnek, işlemler için gelen iletileri atamaya yönelik alternatif algoritmanın nasıl uygulanacağını gösterir.  
   
- Varsayılan olarak, hizmet modeli dağıtıcısı iletinin WS-Addressing "Action" başlığına veya HTTP SOAP isteğindeki eşdeğer bilgilere göre gelen bir ileti için uygun işleme yöntemini seçer.  
+ Varsayılan olarak, hizmet modeli dağıtıcısı iletinin WS-Addressing "eylem" başlığına veya HTTP SOAP isteğindeki eşdeğer bilgilere göre, gelen bir ileti için uygun işleme yöntemini seçer.  
   
  WS-ı temel 1,1 profilini izleyen bazı SOAP 1,1 Web Hizmetleri yığınları, Işlem URI 'sine bağlı olarak ileti göndermez, bunun yerine SOAP gövdesinin içindeki ilk öğenin XML nitelenmiş adına göre. Benzer şekilde, bu yığınların istemci tarafı, SOAP 1,1 belirtiminin izin verdiği boş veya rastgele bir HTTP SoapAction üst bilgisine sahip iletiler gönderebilir.  
   
@@ -34,7 +35,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>arabirim üzerinde yalnızca bir yöntem olduğundan, uygulamalar derleme için oldukça basittir: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> . Bu yöntemin işi, gelen bir iletiyi incelemek ve geçerli uç nokta için hizmet sözleşmesindeki bir yöntemin adına eşit olan bir dize döndürmek içindir.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> arabirim üzerinde yalnızca bir yöntem olduğundan, uygulamalar derleme için oldukça basittir: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> . Bu yöntemin işi, gelen bir iletiyi incelemek ve geçerli uç nokta için hizmet sözleşmesindeki bir yöntemin adına eşit olan bir dize döndürmek içindir.  
   
  Bu örnekte, işlem Seçici, <xref:System.Xml.XmlDictionaryReader> kullanarak gelen iletinin gövdesini alır <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> . Bu yöntem, geçerli öğenin adı ve ad alanı URI 'sini almak için yeterli olması ve `XmlQualifiedName` daha sonra işlem seçicisine sahip olan sözlükten karşılık gelen işlemi aramak için kullanılan bir ' a birleştirmek üzere ileti gövdesinin ilk alt öğesi üzerindeki okuyucuyu zaten konumlandırır.  
   
@@ -70,6 +71,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Bir hizmete Işlem seçici ekleme  
+
  Hizmet gönderme işlemi seçicileri Windows Communication Foundation (WCF) dağıtıcısına yönelik uzantılardır. Çift yönlü sözleşmelerin geri çağırma kanalında Yöntemler seçmek için, burada açıklanan gönderme işlemi seçicileri gibi çok daha fazla çalışan ancak bu örnekte açıkça kapsanmayan istemci işlem seçicileri de vardır.  
   
  Çoğu hizmet modeli uzantısı gibi, dağıtım işlemi seçicileri, davranışlar kullanılarak dağıtıcıya eklenir. *Davranış* , dağıtım çalışma zamanına (veya istemci çalışma zamanına) bir veya daha fazla uzantı ekleyen veya ayarlarını değiştiren bir yapılandırma nesnesidir.  
@@ -118,6 +120,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ```  
   
 ## <a name="implementing-the-service"></a>Hizmeti uygulama  
+
  Bu örnekte uygulanan davranış, hizmet sözleşmesinin bir işlevi olan, iletişimdeki iletilerin nasıl yorumlandığını ve yapıldığını doğrudan etkiler. Sonuç olarak, davranışı kullanmayı seçen hizmet uygulamalarında hizmet sözleşmesi düzeyinde bildirilmelidir.  
   
  Örnek proje hizmeti, `DispatchByBodyElementBehaviorAttribute` sözleşme davranışını `IDispatchedByBody` hizmet sözleşmesine uygular ve iki işlemin her birini `OperationForBodyA()` ve `OperationForBodyB()` bir `DispatchBodyElementAttribute` işlem davranışını Etiketler. Bu sözleşmeyi uygulayan bir hizmetin hizmet ana bilgisayarı açıldığında, bu meta veriler, daha önce açıklandığı gibi dağıtıcı Oluşturucusu tarafından alınır.  
@@ -143,6 +146,7 @@ public interface IDispatchedByBody
  Örnek hizmet uygulamasının kullanımı basittir. Her yöntem alınan iletiyi bir yanıt iletisine sarar ve istemciye geri bildirir.  
   
 ## <a name="running-and-building-the-sample"></a>Örnek çalıştırma ve oluşturma  
+
  Örneği çalıştırdığınızda, işlem yanıtlarının gövde içeriği, istemci konsolu penceresinde aşağıdaki (biçimlendirilen) çıktıya benzer şekilde görüntülenir.  
   
  İstemci, gövde içeriği öğesi `bodyA` sırasıyla,, ve olarak adlandırılan hizmete üç ileti gönderir `bodyB` `bodyX` . Önceki açıklamadan ve hizmet sözleşmesinden ertelenebilir, öğesine sahip gelen ileti `bodyA` `OperationForBodyA()` yöntemine gönderilir. Gövde öğesi olan ileti için açık bir dağıtım hedefi olmadığından `bodyX` ileti öğesine gönderilir `DefaultOperation()` . Hizmet işlemlerinin her biri, alınan ileti gövdesini yönteme özel bir öğeye sarar ve bu örnek için giriş ve çıkış iletilerini açıkça ilişkilendirmek için yapılır.  
