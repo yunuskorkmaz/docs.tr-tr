@@ -2,24 +2,26 @@
 title: WmiPropertyMissing
 ms.date: 03/30/2017
 ms.assetid: 109fa6b4-93dc-4785-bec4-5aa02c434a65
-ms.openlocfilehash: f150124ee0cbd3ba94761988b7428d2e4b88f42c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1299e1d1a1fb99cfaf593c3ca767035b3d018035
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797389"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277692"
 ---
 # <a name="wmipropertymissing"></a>WmiPropertyMissing
-Numarasını 129  
+
+Kimlik: 129  
   
- İnin Hata  
+ Önem derecesi: Hata  
   
- Alan ServiceModel  
+ Kategori: ServiceModel  
   
 ## <a name="description"></a>Açıklama  
+
  Bu olay bir tür uyuşmazlığının oluştuğunu gösterir. Belirtilen CıM sınıfı belirli türde belirtilen özelliğe sahip değil. Olayda işlem adı ve işlem KIMLIĞI listelenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlikleri Günlüğe Kaydetme](index.md)
 - [Etkinlik Genel Başvurusu](events-general-reference.md)

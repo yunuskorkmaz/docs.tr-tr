@@ -18,14 +18,15 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 9e7d32595f554b32ecc72bbb1f1a469ad5935467
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 305feaa71304bef749f999a078b0b5f4fa7be3cc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502060"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278160"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Zaman Uyumlu Sunucu Yuvası Kullanma
+
 Zaman uyumlu sunucu yuvaları, yuvada bir bağlantı isteği alınana kadar uygulamanın yürütülmesini askıya alır. Zaman uyumlu sunucu yuvaları, ağ uygulamalarında yoğun olarak kullanılan uygulamalar için uygun değildir, ancak basit ağ uygulamaları için uygun olabilir.  
   
  Bir <xref:System.Net.Sockets.Socket> uç noktayı ve yöntemlerini kullanarak bir uç noktada dinlemek üzere ayarlandıktan sonra <xref:System.Net.Sockets.Socket.Bind%2A> <xref:System.Net.Sockets.Socket.Listen%2A> , yöntemi kullanılarak gelen bağlantı isteklerini kabul etmeye hazırlıdır <xref:System.Net.Sockets.Socket.Accept%2A> . **Accept** yöntemi çağrıldığında bir bağlantı isteği alınana kadar uygulama askıya alınır.  

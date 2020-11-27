@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: dbee0d8a5c3075ad7429feb92b87a566fdd35454
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 3de0d8ea8266931c2bcda5c59c1fef97602673d5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309735"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278134"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme
+
 <xref:System.Lazy%601?displayProperty=nameWithType>Sınıfı, nesnelerin yavaş başlatılmasını ve örneklenmesini gerçekleştirme işini basitleştirir. Nesneleri yavaş bir şekilde başlatarak, hiçbir zaman gerekli olmadıklarında bunları her türlü oluşturmak zorunda kalmaktan kaçınabilirsiniz veya ilk erişilene kadar başlatma işleminin ertelenebilmesini sağlayabilirsiniz. Daha fazla bilgi için bkz. [yavaş başlatma](lazy-initialization.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnekte, ile bir değerin nasıl başlatıldığı gösterilmektedir <xref:System.Lazy%601> . Değişkeni true veya false olarak ayarlayan başka bir koda bağlı olarak, yavaş değişkenin gerekli olabileceğini varsayalım `someCondition` .  
   
 ```vb  
@@ -70,6 +72,7 @@ End Sub
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> yalnızca geçerli iş parçacığındaki geçerli nesne örneği için görünür olan bir türü başlatmak üzere sınıfının nasıl kullanılacağını gösterir.  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]

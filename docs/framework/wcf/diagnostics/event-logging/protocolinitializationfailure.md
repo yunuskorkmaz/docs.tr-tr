@@ -2,24 +2,26 @@
 title: ProtocolInitializationFailure
 ms.date: 03/30/2017
 ms.assetid: 8ee26f94-c85e-4e92-b56b-16f486c8b00e
-ms.openlocfilehash: 65acff15e95c4dcde65648e20f86ef217d46a624
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 79bd58175d984f43c27924b4ff687abd2fcff308
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797602"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278459"
 ---
 # <a name="protocolinitializationfailure"></a>ProtocolInitializationFailure
-Numarasını 142  
+
+Kimlik: 142  
   
- İnin Hata  
+ Önem derecesi: Hata  
   
- Alan Işlem Köprüsü  
+ Kategori: TransactionBridge  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, WS Atomik Işlem Protokolü hizmetinin başlatılamadığından başarısız olduğunu gösterir. Sonuç olarak, WS Atomik Işlem işlevselliği devre dışıdır. Olayda protokol KIMLIĞI, protokol adı, özel durum, işlem adı ve işlem KIMLIĞI listelenmektedir. biçimindeki telefon numarasıdır.  
+
+ Bu olay WS-Atomic Işlem Protokolü hizmetinin başlatılamadığından olduğunu gösterir. Sonuç olarak, WS-Atomic Işlem işlevi devre dışı bırakılır. Olayda protokol KIMLIĞI, protokol adı, özel durum, işlem adı ve işlem KIMLIĞI listelenmektedir. .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlikleri Günlüğe Kaydetme](index.md)
 - [Etkinlik Genel Başvurusu](events-general-reference.md)

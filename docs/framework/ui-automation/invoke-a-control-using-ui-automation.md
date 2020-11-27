@@ -10,14 +10,15 @@ helpviewer_keywords:
 - UI Automation, invoking controls
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
-ms.openlocfilehash: 2347a620aab848bf6bcc649a9780aa5a3a520822
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 7c6f5d26d16642f978fd79fd40701c240a53f16a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168175"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278004"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>UI Otomasyonu Kullanarak Denetim Çağırma
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -32,6 +33,7 @@ ms.locfileid: "87168175"
 - <xref:System.Windows.Automation.InvokePattern.Invoke%2A>Bir istemci olay işleyicisinden denetimi çağırmak için kullanın.  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.InvokePattern> yöntemini kullanarak bir nesnesi oluşturmak ve bir denetimi çağırmak için sınıfının yöntemini kullanır <xref:System.Windows.Automation.InvokePattern.Invoke%2A> .  
   
  [!code-csharp[InvokePatternApp#1100](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1100)]

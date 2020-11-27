@@ -11,12 +11,12 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 8cc4198d6c13d4705ffc5ce5229cce7a205aec8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309800"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278186"
 ---
 # <a name="specify-a-character-set"></a>Bir karakter kümesi belirtin
 
@@ -33,9 +33,10 @@ ms.locfileid: "86309800"
      Giriş noktası adına bir "W" ile ayırt edilen 2 baytlık karakter Unicode biçimlendirmesi sağlar. **MessageBoxW** çağrıları her zaman Unicode biçiminde dizeleri sıralama.  
   
 ## <a name="string-marshaling-and-name-matching"></a>Dize hazırlama ve ad eşleştirme  
+
  `CharSet`Alan, aşağıdaki değerleri kabul eder:  
   
- <xref:System.Runtime.InteropServices.CharSet.Ansi>(varsayılan değer)  
+ <xref:System.Runtime.InteropServices.CharSet.Ansi> (varsayılan değer)  
   
 - Dize sıralama  
   
@@ -43,7 +44,7 @@ ms.locfileid: "86309800"
   
 - Ad eşleştirme  
   
-     Alan, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> Visual Basic varsayılan olarak olduğunda, `true` Platform Invoke yalnızca belirttiğiniz ad için arama yapar. Örneğin, **MessageBox**belirtirseniz, platform çağrısı, **MessageBox** için arama yapar ve tam yazımı bulamıyorsa başarısız olur.  
+     Alan, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> Visual Basic varsayılan olarak olduğunda, `true` Platform Invoke yalnızca belirttiğiniz ad için arama yapar. Örneğin, **MessageBox** belirtirseniz, platform çağrısı, **MessageBox** için arama yapar ve tam yazımı bulamıyorsa başarısız olur.  
   
      Alan, `ExactSpelling` `false` C++ ve C# ' de varsayılan olarak olduğu gibi, platform Invoke First unkarışmış diğer ad (**MessageBox**), daha sonra da unkarıştırılmış diğer ad bulunamazsa karıştırılmış adı (**MessageBoxA**) arar. ANSI ad eşleştirme davranışının Unicode ad eşleştirme davranışından farklı olduğuna dikkat edin.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "86309800"
   
 - Ad eşleştirme  
   
-     Alan, `ExactSpelling` Visual Basic varsayılan olarak olduğunda, `true` Platform Invoke yalnızca belirttiğiniz ad için arama yapar. Örneğin, **MessageBox**belirtirseniz, Platform **çağırın ve tam** yazım bulamazsa başarısız olur.  
+     Alan, `ExactSpelling` Visual Basic varsayılan olarak olduğunda, `true` Platform Invoke yalnızca belirttiğiniz ad için arama yapar. Örneğin, **MessageBox** belirtirseniz, Platform **çağırın ve tam** yazım bulamazsa başarısız olur.  
   
      Alan, `ExactSpelling` `false` C++ ve C# ' de varsayılan olarak olduğu gibi, platform Invoke önce karışmış adı arar (**MessageBoxW**), ardından karışmış ad bulunamazsa, Unkarıştırılmış diğer ad (**MessageBox**). Unicode ad eşleştirme davranışının ANSI ad eşleştirme davranışından farklı olduğuna dikkat edin.  
   

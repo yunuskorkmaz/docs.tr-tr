@@ -6,24 +6,26 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: fd1fae8731ea927ab64d0c0df83b90d29289a0a0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474468"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277974"
 ---
 # <a name="jit-tracing-etw-events"></a>ETW Olaylarını JIT İzleme
+
 Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının başarısı veya başarısızlığı ile ilgili bilgiler toplar.
 
 ## <a name="jit-inlining-events"></a>JıT olayları
 
 ### <a name="methodjitinliningfailed-event"></a>Methodjınliningfailed olayı
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword`0x10|Verbose (5)|  
+|`JITTracingKeyword` 0x10|Verbose (5)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -33,7 +35,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  
@@ -49,11 +51,12 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
 |ClrInstanceID|Win: UnicodeString|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
 ### <a name="methodjitinliningsucceeded-event"></a>Methodjınliningsucceeded olayı  
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword`0x10|Verbose (5)|  
+|`JITTracingKeyword` 0x10|Verbose (5)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -63,7 +66,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenen yöntemin adı.|  
@@ -79,11 +82,12 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
 ## <a name="jit-tail-call-events"></a>JıT kuyruğu çağrı olayları  
   
 ### <a name="methodjittailcallfailed-event"></a>Methodjbir Callcallfailed olayı  
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword`0x10|Verbose (5)|  
+|`JITTracingKeyword` 0x10|Verbose (5)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -93,7 +97,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  
@@ -109,11 +113,12 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
 ### <a name="methodjittailcallsucceeded-event"></a>Methodj, Callsucceeded olayı  
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword`0x10|Verbose (5)|  
+|`JITTracingKeyword` 0x10|Verbose (5)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -123,7 +128,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  

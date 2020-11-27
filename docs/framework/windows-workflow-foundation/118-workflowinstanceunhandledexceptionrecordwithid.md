@@ -2,44 +2,47 @@
 title: 118 - WorkflowInstanceUnhandledExceptionRecordWithId
 ms.date: 03/30/2017
 ms.assetid: 2ce4b193-e141-4cc4-86a3-2e8c984c110d
-ms.openlocfilehash: eb69fc4760cd89294e24680b5aab83fcd058feb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54bbb267902fe547821d4a5580f86da944ae70cd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009883"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278693"
 ---
 # <a name="118---workflowinstanceunhandledexceptionrecordwithid"></a>118 - WorkflowInstanceUnhandledExceptionRecordWithId
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|118|  
-|anahtar sözcükler|Ögesi, WFTracking|  
+|ID|118|  
+|Anahtar sözcükler|HealthMonitoring, WFTracking|  
 |Düzey|Hata|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, bir iş akışı örneği WorkflowInstanceUnhandledExceptionRecord içerilip ETW İzleme katılımcı tarafından yayınlanır.  
+
+ Bu olay, bir iş akışı örneği Workflowunhandledexceptionrecord ' i yayıyorsa ETW izleme katılımcısı tarafından yayılır.  
   
 ## <a name="message"></a>İleti  
- TrackRecord WorkflowInstanceUnhandledExceptionRecord, InstanceId = %1, RecordNumber = = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName = %8, özel durum = %9, ek açıklamalar = % 10, ProfileName = % 11, WorkflowDefinitionIdentity = % 12  
+
+ TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceId = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName = %8, özel durum = %9, ek açıklama = %10, ProfileName = %11, WorkflowDefinitionIdentity = %12  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|InstanceId|xs:GUID|İş akışı örnek kimliği|  
-|Kayıt numarası|xs:long|Yayılan kaydın sıra numarası|  
-|eventTime|xs:dateTime|Olay gösteriliyordu, UTC zamanı|  
-|activityDefinitionId|xs:string|İş akışı içinde Kök etkinlik adı|  
-|SourceName|xs:string|İçinde unhandledException kaynaklanan hatalı kaynak etkinliği adı|  
-|SourceId|xs:string|Hata kaynağı etkinliğin etkinlik kimliği|  
-|SourceInstanceId|xs:string|Hata kaynak etkinliği etkinlik örneği kimliği|  
-|SourceTypeName|xs:string|İçinde unhandledException kaynaklanan hatalı kaynak etkinlik türü adı|  
-|Özel Durum|xs:string|İşlenmeyen özel durum için özel durum ayrıntıları|  
-|Durum|xs:string|İş akışının geçerli durumu.|  
-|Ek Açıklamalar|xs:string|Bu olay için eklenen ek açıklamalar. Değerlerini bir xml öğesi biçiminde depolanır \<öğeleri >\< öğe adı "annotationName" type="System.String =" > annotationValue\</item > \< /öğeler >. Dize içeriyorsa hiçbir ek açıklama belirtilirse \<öğeler / >. ETW olay boyutu ETW arabellek boyutu veya ETW olayı için en fazla yükü sınırlıdır. Olay boyutu ETW limitlerini sonra olayı bırakarak ek açıklamalar ve ek açıklama değeri ile değiştirerek kesilmiş \<öğeleri >...  \< /öğeler >.|  
-|profileName|xs:string|Adı veya yayılan bu olay ile sonuçlanan bir izleme profili|  
-|WorkflowDefinitionIdentity|xs:string|İş akışı tanımı kimliği|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|InstanceId|xs: GUID|İş akışının örnek kimliği|  
+|RecordNumber|xs: Long|Yayınlanan kaydın sıra numarası|  
+|EventTime|xs: dateTime|Olayın yayılışında UTC olarak zaman|  
+|ActivityDefinitionId|xs: String|İş akışındaki Kök etkinliğin adı|  
+|Kaynak|xs: String|Hatalı kaynak etkinliğin adı, unhandledException ile sonuçlanır|  
+|ID|xs: String|Hata kaynağı etkinliğinin etkinlik kimliği|  
+|SourceInstanceId|xs: String|Hata kaynağı etkinliğinin etkinlik örneği kimliği|  
+|SourceTypeName|xs: String|Hatalı olan kaynak etkinlik türü adı, unhandledException ile sonuçlanır|  
+|Özel durum|xs: String|İşlenmeyen özel durum için özel durum ayrıntıları|  
+|Durum|xs: String|Iş akışının geçerli durumu.|  
+|Ek Açıklamalar|xs: String|Bu olaya eklenen ek açıklamalar. Değerler, \<items> \< item name = "annotationName" type="System.String"> annotationValue biçiminde bir XML öğesinde depolanır \</item> \</items> . Ek açıklama belirtilmemişse dize içerir \<items/> . ETW olay boyutu ETW arabellek boyutu veya bir ETW olayı için en fazla yük ile sınırlıdır. Olayın boyutu ETW sınırlarını aşarsa, ek açıklamaları bırakarak ve ek açıklama değeri... ile değiştirilerek olay kesilir \<items> \</items> .|  
+|ProfileName|xs: String|Bu olayla sonuçlanan ad veya izleme profili|  
+|WorkflowDefinitionIdentity|xs: String|İş akışı Tanım kimliği|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

@@ -2,14 +2,15 @@
 title: ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: f38209ffe2161e58528a108b29e730665a65da37
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cca4e1b3da26d8026d41d0a7107432cdd2960545
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598872"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276639"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
+
 ASP.NET Web Hizmetleri ve Windows Communication Foundation (WCF) Web Hizmetleri arasında birlikte çalışabilirlik, her iki teknolojiyi kullanarak uygulanan hizmetlerin WS-ı temel profil 1,1 belirtimine uyduğundan emin olarak elde edilebilir. WS-ı temel profil 1,1 ile uyumlu olan ASP.NET Web Hizmetleri, WCF sistem tarafından sunulan bağlama kullanılarak WCF istemcileriyle birlikte çalışabilir <xref:System.ServiceModel.BasicHttpBinding> .  
   
  <xref:System.Web.Services.WebService> <xref:System.Web.Services.WebMethodAttribute> Aşağıdaki örnek kodda gösterildiği gibi, ve özniteliklerini bir sınıf yerine arabirime eklemek için ASP.NET 2,0 seçeneğini kullanın ve arabirimi uygulamak için bir sınıf yazmak.  
@@ -47,7 +48,8 @@ public class Service : IEcho
  Internet Information Services (IIS) tarafından sunulan kimlik doğrulama seçeneklerini kullanmaktan kaçının. WCF istemcileri bunları desteklemez. Bir hizmetin güvenliğinin sağlanması gerekiyorsa WCF tarafından sağlanan seçenekleri kullanın, çünkü bu seçenekler sağlam ve standart protokolleri temel alır.  
   
 ## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>ServiceModel HttpModule yüklemesi nedeniyle performans etkisi  
- .NET Framework 3,0 ' de, WCF, `HttpModule` kök Web. config dosyasında her ASP.net UYGULAMASıNıN WCF etkin olduğu gibi yüklenmiştir. Bu, `ServiceModel` Aşağıdaki örnekte gösterildiği gibi Web. config dosyasını kaldırabilmeniz için performansı etkileyebilir.  
+
+ .NET Framework 3,0 ' de, WCF `HttpModule` her ASP.net UYGULAMASıNıN WCF etkin olduğu gibi kök Web.config dosyasına yüklenmiştir. Bu, `ServiceModel` Aşağıdaki örnekte gösterildiği gibi Web.config dosyasına kaldırabilmeniz için performansı etkileyebilir.  
   
 ```xml  
 <httpModules>  

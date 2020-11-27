@@ -16,14 +16,15 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: 08ae360e8097f7281631da2a3f9846994dfbf5b6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b940e6deb98686051847728da6fa5e20debc0f11
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501904"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276613"
 ---
 # <a name="web-and-socket-permissions"></a>Web ve Yuva İzinleri
+
 Ad alanını kullanan uygulamalar için Internet güvenliği <xref:System.Net> , <xref:System.Net.WebPermission> ve sınıfları tarafından sağlanır <xref:System.Net.SocketPermission> . **WebPermission** sınıfı bir URI 'den veri istemek veya bir URI 'yi Internet 'e sağlamak için bir uygulamanın hakkını denetler. **SocketPermission** sınıfı, bir uygulamanın <xref:System.Net.Sockets.Socket> , bir yerel bağlantı noktasındaki verileri kabul etmek veya başka bir adreste bir aktarım protokolü kullanarak uzak cihazlara bağlantı kurmak için, yuvanın ana bilgisayar, bağlantı noktası numarası ve aktarım protokolüne bağlı olarak kullanılması hakkını denetler.  
   
  Kullandığınız izin sınıfı, uygulama türüne bağlıdır. <xref:System.Net.WebRequest>Ve alt öğeleri kullanan uygulamaların, izinleri yönetmek Için **WebPermission** sınıfını kullanması gerekir. Yuva düzeyi erişim kullanan uygulamaların, izinleri yönetmek için **SocketPermission** sınıfını kullanması gerekir.  
