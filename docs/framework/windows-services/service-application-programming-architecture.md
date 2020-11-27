@@ -15,14 +15,15 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-ms.openlocfilehash: 386311228abb08600acc249e80702c724c137900
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: c2344dd0a7d35781aea52b24694f2cfee70a6d41
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609271"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270464"
 ---
 # <a name="service-application-programming-architecture"></a>Hizmet Uygulaması Programlama Mimarisi
+
 Windows hizmeti uygulamaları sınıfından devralan bir sınıfa dayalıdır <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> . Bu sınıftan yöntemleri geçersiz kılar ve hizmetinizin nasıl davranacağını belirlemek için işlevleri tanımlayın.  
   
  Hizmet oluşturmaya dahil olan ana sınıflar şunlardır:  
@@ -34,6 +35,7 @@ Windows hizmeti uygulamaları sınıfından devralan bir sınıfa dayalıdır <x
  Ayrıca, adlı bir sınıf <xref:System.ServiceProcess.ServiceController> hizmetin kendisini denetlemek için kullanılabilir. Bu sınıf, bir hizmetin oluşturulmasına dahil değildir, ancak hizmeti başlatmak ve durdurmak, komutlara iletmek ve bir dizi numaralandırma döndürmek için kullanılabilir.  
   
 ## <a name="defining-your-services-behavior"></a>Hizmetinizin davranışını tanımlama  
+
  Hizmet sınıfınıza, hizmet Denetim Yöneticisi 'nde hizmetinizin durumu değiştirildiğinde ne olacağını belirlemek için temel sınıf işlevlerini geçersiz kılarsınız. <xref:System.ServiceProcess.ServiceBase>Sınıfı, özel davranış eklemek için geçersiz kılabileceğiniz aşağıdaki yöntemleri ortaya koyar.  
   
 |Yöntem|Geçersiz kıl|  
@@ -49,7 +51,7 @@ Windows hizmeti uygulamaları sınıfından devralan bir sınıfa dayalıdır <x
 > [!NOTE]
 > Bu yöntemler, hizmetin ömrü boyunca üzerinden taşınan durumları temsil eder; hizmet bir durumdan diğerine geçiş yapar. Örneğin, bir hizmetin çağrılmadan önce bir komuta yanıt vermesini hiçbir şekilde olmayacaktır <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> <xref:System.ServiceProcess.ServiceBase.OnStart%2A> .  
   
- İlgilendiğiniz birkaç başka özellik ve yöntem vardır. Bu güncelleştirmeler şunlardır:  
+ İlgilendiğiniz birkaç başka özellik ve yöntem vardır. Bunlar:  
   
 - <xref:System.ServiceProcess.ServiceBase.Run%2A> <xref:System.ServiceProcess.ServiceBase> Sınıfında yöntemi. Bu, hizmetin ana giriş noktasıdır. Windows hizmet şablonunu kullanarak bir hizmet oluşturduğunuzda, `Main` hizmet çalıştırmak için uygulamanızın yöntemine kod eklenir. Bu kod şöyle görünür:  
   

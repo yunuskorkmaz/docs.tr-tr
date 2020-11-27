@@ -2,27 +2,30 @@
 title: 4032 - WasConnectionTimedout
 ms.date: 03/30/2017
 ms.assetid: 91acad10-f3cc-4075-804f-22c49131b7bf
-ms.openlocfilehash: 02f4236235cf0e59bd63152197f98a3bd6e7130d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e719cde335913b2b7a80aa48404b5f83991a1d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757488"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270308"
 ---
 # <a name="4032---wasconnectiontimedout"></a>4032 - WasConnectionTimedout
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4032|  
-|anahtar sözcükler|ActivationServices|  
+|ID|4032|  
+|Anahtar sözcükler|ActivationServices|  
 |Düzey|Kritik|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- WAS bağlantısı zaman aşımına uğradı, bu olay yayılır.  
+
+ Bu olay, bağlantı zaman aşımına uğradığından yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Bağlantı zaman aşımına uğradı.  
+
+ WAS bağlantısı zaman aşımına uğradı.  
   
 ## <a name="details"></a>Ayrıntılar

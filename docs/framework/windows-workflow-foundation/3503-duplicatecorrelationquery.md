@@ -2,32 +2,35 @@
 title: 3503 - DuplicateCorrelationQuery
 ms.date: 03/30/2017
 ms.assetid: b857f8e6-ce4d-4da4-bc9d-6cd63fa558a4
-ms.openlocfilehash: 37a689b30b0bcab9124472deb98627afbe30dfee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1e64824ee9a95757ed7c00aa17fa80898219401
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755603"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270334"
 ---
 # <a name="3503---duplicatecorrelationquery"></a>3503 - DuplicateCorrelationQuery
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3503|  
-|anahtar sözcükler|WFServices|  
+|ID|3503|  
+|Anahtar sözcükler|WFServices|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Yinelenen CorrelationQuery bulundu belirtir. Yinelenen sorgu bağıntı hesaplarken kullanılmayacak.  
+
+ Yinelenen bir CorrelationQuery bulundu olduğunu gösterir. Bağıntı hesaplanırken yinelenen sorgu kullanılmayacak.  
   
 ## <a name="message"></a>İleti  
- Yinelenen CorrelationQuery bulunduğu yerle bulundu = '%1'. Bu yinelenen bir sorgu bağıntı hesaplarken kullanılmayacak.  
+
+ Burada = ' %1 ' olan yinelenen bir CorrelationQuery bulundu. Bu yinelenen sorgu, bağıntı hesaplanırken kullanılmayacak.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Where|xs:string|Where kısmı bağıntı sorgu.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Konum|xs: String|Bağıntı sorgusunun WHERE kısmı.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

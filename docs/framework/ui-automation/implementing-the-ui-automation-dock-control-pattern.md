@@ -7,14 +7,15 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: 8080d78c7bded3cb884f92948eb1259cda5544dc
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 769808b190ade33ae52c53e03e1b4f77d4439df1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165898"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269632"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>UI Otomasyon Yerleştirme Denetim Düzenini Uygulama
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -26,10 +27,12 @@ ms.locfileid: "87165898"
 Visual Studio 'dan "Sınıf Görünümü" penceresinin DockPosition olduğu yere yerleştirme örneği. Right ve "Hata Listesi" Window, DockPosition. Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+
  Dock denetim modelini uygularken, aşağıdaki kılavuz ve kurallara göz önünde yer verilmiştir:  
   
-- <xref:System.Windows.Automation.Provider.IDockProvider>, yerleştirme kapsayıcısının veya yerleştirme kapsayıcısı içindeki geçerli denetime bitişik yerleştirilmiş denetimlerin özelliklerinin herhangi bir özelliğini açığa çıkarmaz.  
+- <xref:System.Windows.Automation.Provider.IDockProvider> , yerleştirme kapsayıcısının veya yerleştirme kapsayıcısı içindeki geçerli denetime bitişik yerleştirilmiş denetimlerin özelliklerinin herhangi bir özelliğini açığa çıkarmaz.  
   
 - Denetimler, geçerli z sıralarına göre birbirlerine göre sabitlenebilir; z sırası yerleşimi arttıkça, yerleştirme kapsayıcısının belirtilen kenarından de yerleştirilirler.  
   
@@ -38,18 +41,22 @@ Visual Studio 'dan "Sınıf Görünümü" penceresinin DockPosition olduğu yere
 - Birden çok Monitor sisteminde, denetimler geçerli izleyicinin sol veya sağ tarafına yerleştirilmelidir. Bu mümkün değilse, en soldaki izleyicinin sol tarafına veya en sağdaki monitörün sağ tarafına yerleştirilmelidir.  
   
 <a name="Required_Members_for_IDockProvider"></a>
+
 ## <a name="required-members-for-idockprovider"></a>IDockProvider için gerekli Üyeler  
+
  IDockProvider arabirimini uygulamak için aşağıdaki özellikler ve Yöntemler gereklidir.  
   
 |Gerekli Üyeler|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Yöntem|Hiçbiri|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Özellik|Yok|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Yöntem|Yok|  
   
  Bu denetim deseninin ilişkili olayları yok.  
   
 <a name="Exceptions"></a>
-## <a name="exceptions"></a>Özel durumlar  
+
+## <a name="exceptions"></a>Özel Durumlar  
+
  Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.  
   
 |Özel durum türü|Koşul|  
