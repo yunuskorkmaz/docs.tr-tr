@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: fca5fbeffb560f848edda6421301785f02547d2c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bcc63e6645580c1021667b278b80c09baf5700c1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585707"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261468"
 ---
 # <a name="transport-quotas"></a>Taşıma Kotaları
+
 Taşıma kotaları, bir bağlantının aşırı kaynak tükettiği durumlarda karar vermeye yönelik bir ilke mekanizmasıdır. Kota değeri aşıldıktan sonra, kota, ek kaynakların kullanılmasını önleyen bir sabit sınırdır. Taşıma kotaları, kötü amaçlı veya istenmeden hizmet reddi saldırılarına engel olabilir.  
   
  Windows Communication Foundation (WCF) aktarımları, kaynakların koruyucu bir ayırmasını temel alan varsayılan kota değerlerine sahiptir. Bu varsayılan değerler, geliştirme ortamları ve küçük yükleme senaryoları için uygundur. Hizmet yöneticileri, bir yükleme kaynakları tükeniyorsa veya ek kaynakların kullanılabilirliğine karşın bağlantıların sınırlandırılmasıyla ilgili olarak, aktarım kotalarını gözden geçirmeli ve tek tek kota değerlerini ayarlamanıza gerekir.  
   
 ## <a name="types-of-transport-quotas"></a>Aktarım kotası türleri  
+
  WCF aktarımlarında üç tür kota vardır:  
   
 - *Zaman aşımları* , kaynakları uzun bir süre için bağlama kullanan hizmet reddi saldırılarını azaltır.  
@@ -26,11 +28,12 @@ Taşıma kotaları, bir bağlantının aşırı kaynak tükettiği durumlarda ka
 - *Koleksiyon boyutu sınırları* , dolaylı olarak bellek ayıran veya sınırlı TEDARİKTEKİ kaynakların tüketimine bağımlıdır.  
   
 ## <a name="transport-quota-descriptions"></a>Taşıma kotası açıklamaları  
+
  Bu bölümde standart WCF aktarımları için kullanılabilen aktarım kotaları açıklanmaktadır: HTTP (S), TCP/IP ve adlandırılmış kanallar. Özel aktarımlar, bu listede bulunmayan kendi yapılandırılabilir kotalarını açığa çıkarır. Kotaları hakkında bilgi edinmek için özel bir taşımanın belgelerine danışın.  
   
  Her kota ayarında bir tür, en düşük değer ve varsayılan değer vardır. Kotanın en büyük değeri, türü ile sınırlıdır. Makine sınırlamaları nedeniyle, en yüksek değere sahip bir kota ayarlamak her zaman mümkün değildir.  
   
-|Name|Tür|Min.<br /><br /> değer|Varsayılan<br /><br /> değer|Açıklama|  
+|Ad|Tür|Min.<br /><br /> değer|Varsayılan<br /><br /> değer|Açıklama|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 değer çizgisi|5 sn|İlk okuma sırasında girişin gönderilmesi için beklenecek en uzun süre. Bu veriler, kimlik doğrulaması gerçekleşmeden önce alınır. Bu ayar, kota değerinden genellikle daha küçüktür `ReceiveTimeout` .|  
 |`CloseTimeout`|TimeSpan|0|1 dk|Aktarım bir özel durum harekete geçmeden önce bağlantının kapanması için beklenecek en uzun süre.|  
@@ -52,14 +55,16 @@ Taşıma kotaları, bir bağlantının aşırı kaynak tükettiği durumlarda ka
  Taşıma kotaları `MaxPendingConnections` ve `MaxOutboundConnectionsPerEndpoint` `MaxConnections` bağlama veya yapılandırma aracılığıyla ayarlandığında adlı tek bir aktarım kotasına birleştirilir. Yalnızca Binding öğesi bu kota değerlerini ayrı ayrı ayarlamaya izin verir. `MaxConnections`Aktarım kotası aynı minimum ve varsayılan değerlere sahiptir.  
   
 ## <a name="setting-transport-quotas"></a>Aktarım kotalarını ayarlama  
- Taşıma kotaları, taşıma bağlama öğesi, aktarım bağlama, uygulama yapılandırması veya konak ilkesi aracılığıyla ayarlanır. Bu belge konak ilkesi üzerinden taşıma ayarlarını kapsamaz. Konak ilkesi kotaları ayarlarını saptamak için temel alınan taşımanın belgelerine başvurun. [Http ve https yapılandırma](configuring-http-and-https.md) konusunun http. sys sürücüsü için kota ayarları açıklanmaktadır. HTTP, TCP/IP ve adlandırılmış kanal bağlantılarında Windows sınırlarını yapılandırma hakkında daha fazla bilgi için Microsoft Bilgi Bankası 'Nda arama yapın.  
+
+ Taşıma kotaları, taşıma bağlama öğesi, aktarım bağlama, uygulama yapılandırması veya konak ilkesi aracılığıyla ayarlanır. Bu belge konak ilkesi üzerinden taşıma ayarlarını kapsamaz. Konak ilkesi kotaları ayarlarını saptamak için temel alınan taşımanın belgelerine başvurun. [Http ve https yapılandırma](configuring-http-and-https.md) konusu Http.sys sürücüsü için kota ayarlarını açıklar. HTTP, TCP/IP ve adlandırılmış kanal bağlantılarında Windows sınırlarını yapılandırma hakkında daha fazla bilgi için Microsoft Bilgi Bankası 'Nda arama yapın.  
   
  Diğer kota türleri, aktarımlara dolaylı olarak uygulanır. Taşımanın bir iletiyi bayta dönüştürmek için kullandığı ileti Kodlayıcısı kendi kota ayarlarına sahip olabilir. Ancak, bu kotalar kullanılmakta olan taşımanın türünden bağımsızdır.  
   
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>Bağlama öğesinden aktarım kotalarını denetleme  
+
  Bağlama öğesi aracılığıyla aktarım kotalarını ayarlamak, taşımanın davranışını denetleme konusunda en büyük esnekliği sunar. Kapatma, açma, alma ve gönderme işlemleri için varsayılan zaman aşımları, bir kanal oluşturulduğunda bağlamadan alınır.  
   
-|Name|HTTP|TCP/IP|Adlandırılmış kanal|  
+|Adı|HTTP|TCP/IP|Adlandırılmış kanal|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -79,9 +84,10 @@ Taşıma kotaları, bir bağlantının aşırı kaynak tükettiği durumlarda ka
 |`SendTimeout`||||  
   
 ### <a name="controlling-transport-quotas-from-the-binding"></a>Bağlamadan aktarım kotalarını denetleme  
+
  Bağlama aracılığıyla aktarım kotalarını ayarlamak, en yaygın kota değerlerine erişim sağlarken, ' ın arasından seçim yapmak için basitleştirilmiş bir kota kümesi sunar.  
   
-|Name|HTTP|TCP/IP|Adlandırılmış kanal|  
+|Adı|HTTP|TCP/IP|Adlandırılmış kanal|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  
@@ -105,6 +111,7 @@ Taşıma kotaları, bir bağlantının aşırı kaynak tükettiği durumlarda ka
 2. Taşıma kotaları `MaxPendingConnections` ve `MaxOutboundConnectionsPerEndpoint` adlı tek bir aktarım kotasına birleştirilir `MaxConnections` .  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Aktarım kotalarını yapılandırmadan denetleme  
+
  Uygulama yapılandırması, bir bağlamasındaki özelliklere doğrudan erişerek aynı aktarım kotalarını ayarlayabilir. Yapılandırma dosyalarında, bir aktarım kotasının adı her zaman küçük harfle başlar. Örneğin, `CloseTimeout` bir bağlamadaki özelliği `closeTimeout` yapılandırma ayarına karşılık gelir ve `MaxConnections` bir bağlamadaki özelliği `maxConnections` yapılandırma ayarına karşılık gelir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

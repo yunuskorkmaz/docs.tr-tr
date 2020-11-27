@@ -2,17 +2,19 @@
 title: Net Bağlama
 ms.date: 03/30/2017
 ms.assetid: 4d10072a-ae0a-486a-b713-49703e26d9bf
-ms.openlocfilehash: 7268fd4fac4ad9313bc40f5d388bd05dc6bae67c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5679c9d836d16d4a8bdb6f5be001bb5944964bea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602459"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260090"
 ---
 # <a name="net-binding"></a>Net Bağlama
+
 Bu bölüm, bir uç nokta öğesinin ağ bağlama özniteliklerini kullanmayı gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Ağ MSMQ Bağlama](net-msmq-binding.md)  
  Bir uç nokta öğesinin MSMQ bağlama özniteliklerini kullanmayı gösterir.  
   

@@ -2,27 +2,30 @@
 title: 3378 - SocketAsyncReadStop
 ms.date: 03/30/2017
 ms.assetid: c7b5b73e-c1cd-41a5-9a0b-ab86af437f60
-ms.openlocfilehash: f282e58783635f4b2b12b24fa8160b602a5b8554
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60d300c1944ed1c57d0775cde978cee9c5c4870a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040072"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260844"
 ---
 # <a name="3378---socketasyncreadstop"></a>3378 - SocketAsyncReadStop
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3378|  
-|anahtar sözcükler|TCP|  
+|ID|3378|  
+|Anahtar sözcükler|TCP|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay yayılan ile SocketAsyncRead durdur.  
+
+ Bu olay, SocketAsyncRead durla birlikte yayınlanır.  
   
 ## <a name="message"></a>İleti  
- '%3' okunan SocketId:% 1 okunur '%2' bayt.  
+
+ Socketıd: %1, ' %3 ' öğesinden okunan ' %2 ' bayt okudu.  
   
 ## <a name="details"></a>Ayrıntılar

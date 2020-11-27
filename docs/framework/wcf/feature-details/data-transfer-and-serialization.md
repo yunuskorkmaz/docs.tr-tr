@@ -5,21 +5,23 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: b07937b0a94c24a934b17d6cf21b726ee0d4362e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 490c89f5cfbecd4b2cc0c0e639aa97849132a809
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593496"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261988"
 ---
 # <a name="data-transfer-and-serialization"></a>Veri Aktarma ve Seri Hale Getirme
+
 Bağlı bir sistemde, hizmetler ve istemciler herhangi bir görevi gerçekleştirmek için veri değişimine bağımlıdır. Bir hizmet veya istemcinin geliştiricisi olarak, verimli ve kolay uygulamalar oluşturmak için Windows Communication Foundation (WCF) veri ve veri serileştirmesini nasıl işlediğini de anlamanız gerekir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](specifying-data-transfer-in-service-contracts.md)  
+
+ [Hizmet Sözleşmelerinde Veri Aktarımını Belirtme](specifying-data-transfer-in-service-contracts.md)  
  Hizmetler 'de veri aktarımının temel kavramlarını açıklar.  
   
- [Veri Anlaşmalarını Kullanma](using-data-contracts.md)  
+ [Veri Sözleşmelerini Kullanma](using-data-contracts.md)  
  Veri sözleşmelerinin ne olduğunu ve nasıl oluşturulacağını ve kullanılacağını açıklar.  
   
  [Veri Sözleşmesi Seri Hale Getirici](data-contract-serializer.md)  
@@ -47,6 +49,7 @@ Bağlı bir sistemde, hizmetler ve istemciler herhangi bir görevi gerçekleşti
  WCF 'de veri aktarımının genel tasarımının görünümünü açıklar.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>  
@@ -58,9 +61,10 @@ Bağlı bir sistemde, hizmetler ve istemciler herhangi bir görevi gerçekleşti
  <xref:System.Xml.Serialization>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Kodlayıcılar ve Seri Hale Getiricileri Genişletme](../extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma](../best-practices-data-contract-versioning.md)
+- [En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma](../best-practices-data-contract-versioning.md)
 - [Hizmet Sürümü Oluşturma](../service-versioning.md)

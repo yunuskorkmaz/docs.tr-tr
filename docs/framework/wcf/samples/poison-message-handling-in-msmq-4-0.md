@@ -2,14 +2,15 @@
 title: MSMQ 4.0'da Zehirli İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 54e69d60aabb3793ef4a8d800dd0e6238c28f231
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2ad7ad5b7e1865d5c9843720861b7a8e440f47f0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602446"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261364"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0'da Zehirli İleti İşleme
+
 Bu örnek, bir hizmette çok zararlı ileti işlemenin nasıl gerçekleştirileceğini gösterir. Bu örnek, [IŞLENEN MSMQ bağlama](transacted-msmq-binding.md) örneğine dayalıdır. Bu örnek öğesini kullanır `netMsmqBinding` . Hizmet, sıraya alınan iletileri alma hizmetini gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır.
 
  Sıraya alınmış iletişimde istemci, hizmet ile bir kuyruk kullanarak iletişim kurar. Daha kesin olarak, istemci iletileri bir kuyruğa gönderir. Hizmet kuyruktaki iletileri alır. Bu nedenle, hizmet ve istemci, bir kuyruk kullanarak iletişim kurmak için aynı anda çalışıyor olması gerekmez.
@@ -21,9 +22,10 @@ Bu örnek, bir hizmette çok zararlı ileti işlemenin nasıl gerçekleştirilec
  Bu örnek, Windows Server 2003 ve Windows XP platformunda ve Windows Vista 'da sunulan tam zararlı tesislerde sunulan sınırlı zarar özelliklerini gösterir. Her iki örnekte de amaç, zarar mesajını sıradan başka bir kuyruğa taşıyamadır. Bu kuyruğa daha sonra bir zarar iletisi hizmeti tarafından hizmet verilebilirler.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v 4.0 zarar Işleme örneği
+
  Windows Vista 'da, MSMQ, zarar iletilerini depolamak için kullanılabilecek bir zarar alt sıra özelliği sağlar. Bu örnek, Windows Vista kullanarak zarar iletileriyle ilgili en iyi yöntemi gösterir.
 
- Windows Vista 'da zehirli ileti algılama işlemi karmaşıktır. Algılamaya yardımcı olan 3 özellik vardır. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>Belirli bir iletinin kuyruktan yeniden okunduğu ve işlenmek üzere uygulamaya dağıtıldığı zamanların sayısıdır. İleti uygulamaya dağıtılamadı veya uygulama işlemi hizmet işleminde geri götürüliyorsa, bir ileti sıraya geri alındığında kuyruktan yeniden okunabilir. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>, iletinin yeniden deneme kuyruğuna kaç kez taşındığını sayısıdır. Ne zaman <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> ulaşıldığında, ileti yeniden deneme kuyruğuna taşınır. Özelliği, <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> ileti yeniden deneme sırasından ana sıraya geri taşındıktan sonraki zaman gecikmesi olur. 0 ' a <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> sıfırlanır. İleti yeniden denenir. İletiyi okuma denemeleri başarısız olduysa, ileti kired olarak işaretlenir.
+ Windows Vista 'da zehirli ileti algılama işlemi karmaşıktır. Algılamaya yardımcı olan 3 özellik vardır. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>Belirli bir iletinin kuyruktan yeniden okunduğu ve işlenmek üzere uygulamaya dağıtıldığı zamanların sayısıdır. İleti uygulamaya dağıtılamadı veya uygulama işlemi hizmet işleminde geri götürüliyorsa, bir ileti sıraya geri alındığında kuyruktan yeniden okunabilir. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> , iletinin yeniden deneme kuyruğuna kaç kez taşındığını sayısıdır. Ne zaman <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> ulaşıldığında, ileti yeniden deneme kuyruğuna taşınır. Özelliği, <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> ileti yeniden deneme sırasından ana sıraya geri taşındıktan sonraki zaman gecikmesi olur. 0 ' a <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> sıfırlanır. İleti yeniden denenir. İletiyi okuma denemeleri başarısız olduysa, ileti kired olarak işaretlenir.
 
  İleti kired olarak işaretlendiğinde ileti, Numaralandırmadaki ayarlara göre ele dağıtılır <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> . Olası değerleri yeniden yinelemek için:
 
@@ -35,7 +37,7 @@ Bu örnek, bir hizmette çok zararlı ileti işlemenin nasıl gerçekleştirilec
 
 - Reddet: iletiyi, gönderenin teslim edilemeyen ileti kuyruğuna geri göndererek iletiyi reddetmek Için. Bu değer yalnızca Windows Vista 'da kullanılabilir.
 
- Örnek, `Move` zehirli ileti için disposition kullanımını gösterir. `Move`iletinin zarar alt sırasına taşınmasına neden olur.
+ Örnek, `Move` zehirli ileti için disposition kullanımını gösterir. `Move` iletinin zarar alt sırasına taşınmasına neden olur.
 
  Hizmet sözleşmesi, `IOrderProcessor` kuyruklarla birlikte kullanılmak üzere uygun tek yönlü bir hizmeti tanımlar.
 
@@ -155,6 +157,7 @@ public class OrderProcessorService : IOrderProcessor
 ```
 
 ## <a name="processing-messages-from-the-poison-message-queue"></a>Zarar iletisi kuyruğundan iletileri işleme
+
  Zarar iletisi hizmeti, son zarar iletisi kuyruğundan iletileri okur ve bunları işler.
 
  Zarar iletisi sırasındaki iletiler, iletiyi işleyen hizmete yönelik mesajlar, bu da zarar iletisi hizmet uç noktasından farklı olabilir. Bu nedenle, zarar iletisi hizmeti sıradaki iletileri okuduğunda, WCF kanal katmanı uç noktalarında uyuşmazlığını bulur ve iletiyi göndermez. Bu durumda, ileti sipariş işleme hizmetine değinmekte, ancak zarar iletisi hizmeti tarafından alınmakta olur. İleti farklı bir uç noktaya adreslenmiş olsa bile iletiyi almaya devam etmek için, `ServiceBehavior` eşleşme ölçütünün iletinin adreslendiği tüm hizmet uç noktasıyla eşleştiği bir filtre adresleri eklemesi gerekir. Bu, zarar ileti sırasından okunan iletileri başarıyla işlemek için gereklidir.

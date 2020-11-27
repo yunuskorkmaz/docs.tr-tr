@@ -7,14 +7,15 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 898211ec4504225413769f2f0dbf2f2c70110c14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b63ce62cd39ef7961db1c0ac86c8cbd6ca871dbd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556069"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261897"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
+
 Windows Communication Foundation (WCF), hizmet yönelimli uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri bir hizmet uç noktasından diğerine zaman uyumsuz iletiler olarak gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan bir sürekli kullanılabilir hizmetin parçası olabilir veya bir uygulamada barındırılan bir hizmet olabilir. Uç nokta, hizmet uç noktasından veri isteyen bir hizmetin istemcisi olabilir. İletiler, tek bir karakter veya bir kelime olarak bir XML olarak gönderilebilir ya da ikili veri akışı gibi karmaşık olabilir. Birkaç örnek senaryo şunlardır:
 
 - İş işlemlerini işlemek için güvenli bir hizmet.
@@ -65,7 +66,7 @@ WCF aşağıdaki özellik kümesini içerir. Daha fazla bilgi için bkz. [WCF ö
 
 - **Güvenilir ve kuyruğa alınan Iletiler**
 
-     WCF, WS-güvenilir mesajlaşma ve MSMQ kullanılarak uygulanan güvenilir oturumları kullanarak güvenilir ileti değişimini destekler. WCF 'de güvenilir ve kuyruğa alınmış mesajlaşma desteği hakkında daha fazla bilgi için bkz. [Kuyruklar ve güvenilir oturumlar](./feature-details/queues-and-reliable-sessions.md).
+     WCF, WS-Reliable mesajlaşma ve MSMQ kullanılarak uygulanan güvenilir oturumları kullanarak güvenilir ileti alışverişi destekler. WCF 'de güvenilir ve kuyruğa alınmış mesajlaşma desteği hakkında daha fazla bilgi için bkz. [Kuyruklar ve güvenilir oturumlar](./feature-details/queues-and-reliable-sessions.md).
 
 - **Dayanıklı Iletiler**
 

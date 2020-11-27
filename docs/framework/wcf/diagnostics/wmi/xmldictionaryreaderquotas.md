@@ -2,17 +2,18 @@
 title: XmlDictionaryReaderQuotas
 ms.date: 03/30/2017
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
-ms.openlocfilehash: f1c12a0a60397a84d4e9ff0241c4182b4511af5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5bb7813a680c89eb90f4ccf4ed6f09a831c8095
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858435"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262209"
 ---
 # <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
+
 XmlDictionaryReaderQuotas  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class XmlDictionaryReaderQuotas  
@@ -26,51 +27,58 @@ class XmlDictionaryReaderQuotas
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- XmlDictionaryReaderQuotas sınıf herhangi bir yöntemi tanımlamaz.  
+
+ XmlDictionaryReaderQuotas sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  XmlDictionaryReaderQuotas sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="maxarraylength"></a>MaxArrayLength  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Dizi uzunluğu izin verilen en fazla.  
+ İzin verilen en büyük dizi uzunluğu.  
   
 ### <a name="maxbytesperread"></a>MaxBytesPerRead  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Her okuma için döndürülen bayt sayısı izin verilen en fazla.  
+ Her okuma için en fazla izin verilen bayt döndürüldü.  
   
 ### <a name="maxdepth"></a>MaxDepth  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Her biri için en fazla iç içe geçen düğüm derinliği okuyun.  
+ Her okuma için iç içe geçmiş düğüm derinliği üst sınırı.  
   
 ### <a name="maxnametablecharcount"></a>MaxNameTableCharCount  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Tablo adınında izin verilen en fazla karakter.  
+ Tablo adında izin verilen en fazla karakter.  
   
 ### <a name="maxstringcontentlength"></a>MaxStringContentLength  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
  XML öğesi içeriğinde izin verilen en fazla karakter.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,32 +2,35 @@
 title: 3552 - MaxPendingMessagesPerChannelExceeded
 ms.date: 03/30/2017
 ms.assetid: fc8309d9-eb3a-4636-a6f0-dd0018c1361d
-ms.openlocfilehash: a163ed216cbdfbf2b9d77d25979733d6bdb121d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd3e7539922e6c430c4ffe5bd96ef1ac7dbd098f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945944"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261169"
 ---
 # <a name="3552---maxpendingmessagesperchannelexceeded"></a>3552 - MaxPendingMessagesPerChannelExceeded
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3552|  
-|anahtar sözcükler|Kota, WFServices|  
+|ID|3552|  
+|Anahtar sözcükler|Kota, Wfservice|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Kısıtlama 'MaxPendingMessagesPerChannel limite ulaşılmadan önce' gösterir.  
+
+ ' Maxpendingiletiperchannel ' limitinin isabet aldığını gösterir.  
   
 ## <a name="message"></a>İleti  
- '%1' 'MaxPendingMessagesPerChannel' sınırını azaltma ulaşıldı. Bu sınırı artırmak için BufferedReceiveServiceBehavior MaxPendingMessagesPerChannel özelliği ayarlayın.  
+
+ ' Maxpendingiletiperchannel ' kısıtlama ' %1 ' sınırına ulaşıldı. Bu sınırı artırmak için, BufferedReceiveServiceBehavior üzerindeki Maxpendingiletiperchannel özelliğini ayarlayın.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Sınır|xs:string|MaxPendingMessagesPerChannel kısıtlama sınırı.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Sınır|xs: String|Maxpendingiletiperchannel kısıtlama sınırı.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

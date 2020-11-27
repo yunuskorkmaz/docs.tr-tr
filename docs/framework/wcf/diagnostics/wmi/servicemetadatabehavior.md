@@ -2,17 +2,18 @@
 title: ServiceMetadataBehavior
 ms.date: 03/30/2017
 ms.assetid: 0f194476-72f1-467e-bdce-674306316e64
-ms.openlocfilehash: 1d99af064205447c2f11f6f19258551c1e88d386
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 921a880dad0d77558a70dff8a09f75c25a3cbb8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956955"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262287"
 ---
 # <a name="servicemetadatabehavior"></a>ServiceMetadataBehavior
+
 ServiceMetadataBehavior  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ServiceMetadataBehavior : Behavior  
@@ -26,51 +27,58 @@ class ServiceMetadataBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ServiceMetadataBehavior sınıf herhangi bir yöntemi tanımlamaz.  
+
+ ServiceMetadataBehavior sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  ServiceMetadataBehavior sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="externalmetadatalocation"></a>externalMetadataLocation  
+### <a name="externalmetadatalocation"></a>ExternalMetadataLocation  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet meta veri isteği yeniden yönlendirdiği konumu ayarlar.  
+ Hizmetin meta veri isteklerini yeniden yönlendirdiği konumu ayarlar.  
   
-### <a name="httpgetenabled"></a>De  
+### <a name="httpgetenabled"></a>HttpGetEnabled  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet tarafından denetlenen adresten WSDL yayınlamayacağını denetleyen `HttpGetUrl` özniteliği.  
+ Hizmetin WSDL 'sini öznitelik tarafından denetlenen adreste yayımlayıp yayımlamadığını denetler `HttpGetUrl` .  
   
 ### <a name="httpgeturl"></a>HttpGetUrl  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- WSDL hizmet HTTP kullanılarak alınması için yayımlanan konumunu ayarlar.  
+ Hizmet WSDL 'sinin HTTP kullanılarak alınması için yayımlandığı konumu ayarlar.  
   
 ### <a name="httpsgetenabled"></a>HttpsGetEnabled  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet, WSDL HTTPS üzerinden denetlediği adresten yayınlamayacağını denetleyen `HttpsGetUrl` özniteliği.  
+ Hizmetin WSDL 'nin HTTPS üzerinden özniteliği tarafından denetlenen adreste yayımlayıp yayımlamadığını denetler `HttpsGetUrl` .  
   
 ### <a name="httpsgeturl"></a>HttpsGetUrl  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- WSDL hizmet alma işlemi için HTTPS kullanarak yayımlanan konumunu ayarlar.  
+ Hizmet WSDL 'sinin HTTPS kullanılarak alınması için yayımlandığı konumu ayarlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,14 +2,15 @@
 title: Birden Fazla Sözleşme
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: e8451c49395a1dad55c5afca419f47a8e856b61f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 516867a2fd7d6ba0ca1eb6cc3b51c68769b46aba
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602511"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260215"
 ---
 # <a name="multiple-contracts"></a>Birden Fazla Sözleşme
+
 Birden çok sözleşme örneği, bir hizmette birden fazla sözleşmenin nasıl uygulanacağını ve uygulanan sözleşmelerin her biriyle iletişim kurmak için uç noktaların nasıl yapılandırılacağını gösterir. Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır. Hizmet iki sözleşme, `ICalculator` sözleşme ve sözleşme tanımlamak üzere değiştirilmiştir `ICalculatorSession` .  
   
 > [!NOTE]

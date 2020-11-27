@@ -2,17 +2,18 @@
 title: XmlSerializerOperationBehavior
 ms.date: 03/30/2017
 ms.assetid: 8911aa1b-e34b-4161-a3ae-7468d89a6861
-ms.openlocfilehash: 38282577c2f759bff9927a8369349c689e26808a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf2e935172af959ead57502f02d3820d51d66196
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997041"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262196"
 ---
 # <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
+
 XmlSerializerOperationBehavior  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class XmlSerializerOperationBehavior : Behavior  
@@ -23,30 +24,34 @@ class XmlSerializerOperationBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- XmlSerializerOperationBehavior sınıf herhangi bir yöntemi tanımlamaz.  
+
+ XmlSerializerOperationBehavior sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  XmlSerializerOperationBehavior sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="style"></a>Stil  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- SOAP iletisi stilini tanımlar.  
+ SOAP iletisinin stilini tanımlar.  
   
-### <a name="use"></a>Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında  
+### <a name="use"></a>Kullanın  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
  SOAP kodlama stilini belirtir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,17 +2,18 @@
 title: WSAT_TraceRecord
 ms.date: 03/30/2017
 ms.assetid: 99bc7f66-1335-40d8-aa68-e754d569dc0d
-ms.openlocfilehash: 907e764cf032e595c7aba455fd4808a640f68016
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0409277821a7cca3f97fcec1bb383aba9583a1f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923415"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262222"
 ---
-# <a name="wsattracerecord"></a>WSAT_TraceRecord
+# <a name="wsat_tracerecord"></a>WSAT_TraceRecord
+
 WSAT_TraceRecord  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class WSAT_TraceRecord : WSAT_TraceEvent  
@@ -24,31 +25,36 @@ class WSAT_TraceRecord : WSAT_TraceEvent
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- WSAT_TraceRecord sınıf herhangi bir yöntemi tanımlamaz.  
+
+ WSAT_TraceRecord sınıfı herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  WSAT_TraceRecord sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="activityid"></a>Etkinlik Kimliği  
+### <a name="activityid"></a>ActivityID  
+
  Veri türü: nesne  
-Erişim türü: salt okunur  
+Erişim türü: salt okunurdur  
   
- İzleme kayıt etkinlik kimliği.  
+ İzleme kaydının etkinlik KIMLIĞI.  
   
 ### <a name="eventid"></a>EventID  
- Veri türü: SINT32  
-Erişim türü: salt okunur  
+
+ Veri türü: Sint32  
+Erişim türü: salt okunurdur  
   
- İzleme kayıt olay kimliği.  
+ İzleme kaydının olay KIMLIĞI.  
   
-### <a name="tracerecord"></a>TraceRecord  
+### <a name="tracerecord"></a>Izleme kaydı  
+
  Veri türü: dize  
-Erişim türü: salt okunur  
+Erişim türü: salt okunurdur  
   
- Kayıt izleme  
+ İzleme kaydı  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|
+|Ad Alanı|Root\ServiceModel içinde tanımlı|

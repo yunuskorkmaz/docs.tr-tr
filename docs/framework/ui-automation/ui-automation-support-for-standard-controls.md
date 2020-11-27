@@ -6,28 +6,33 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 17916a6978008439e91caae00d8b6f26045f9018
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0a5a0b61a6492d9efb62799fa610859b247cf26e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166127"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261078"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Standart Denetimler İçin UI Otomasyon Desteği
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
  Bu konu [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , Win32 ve Windows Forms çerçeveleri için geliştirilen uygulamalardaki standart denetimler için destek hakkında bilgiler içerir.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>
+
 ## <a name="windows-presentation-foundation-controls"></a>Windows Presentation Foundation denetimleri  
+
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]Kullanıcı etkileşimi için bilgi veya destek sağlayan tüm denetim öğeleri için tam yerel destek vardır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Paneller gibi diğer öğeler, için görünür değildir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
 <a name="Win32_Controls"></a>
+
 ## <a name="win32-controls"></a>Win32 denetimleri  
+
  Çoğu Win32 denetimi, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] UIAutomationClientsideProviders.dll istemci tarafı sağlayıcılar aracılığıyla sunulur. Bu derleme, UI Otomasyonu istemci uygulamalarıyla kullanılmak üzere otomatik olarak kaydedilir.  
   
- Tam destek yalnızca *ComCtrl32.dll*sürüm 6 ' dan denetimler için sağlanır.  
+ Tam destek yalnızca *ComCtrl32.dll* sürüm 6 ' dan denetimler için sağlanır.  
   
  Aşağıdaki denetimler desteklenir.  
   
@@ -60,8 +65,8 @@ ms.locfileid: "87166127"
 |RichEdit20A|Belge|  
 |RichEdit20W|Belge|  
 |RichEdit50W|Belge|  
-|ScrollBar|Slider|  
-|msctls_trackbar32|Slider|  
+|ScrollBar|Kaydırıcı|  
+|msctls_trackbar32|Kaydırıcı|  
 |msctls_updown32|Değer Değiştirici|  
 |msctls_statusbar32|StatusBar|  
 |SysTabControl32|Tab|  
@@ -90,11 +95,13 @@ ms.locfileid: "87166127"
 |SysMonthCal32|Takvim|  
 |MS_WINNOTE|Araç ipucu|  
 |Vbkabarcık|Araç ipucu|  
-|Kaydırma çubuğu (tek başına denetim olarak kullanıldığında)|Slider|  
+|Kaydırma çubuğu (tek başına denetim olarak kullanıldığında)|Kaydırıcı|  
 |SuperGrid|Özel|  
   
 <a name="Windows_Forms_Controls"></a>
+
 ## <a name="windows-forms-controls"></a>Windows Forms Denetimleri  
+
  Windows Forms denetimleri, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] UIAutomationClientsideProviders.dll istemci tarafı sağlayıcılar aracılığıyla sunulur. Bu derleme, UI Otomasyonu istemci uygulamalarıyla kullanılmak üzere otomatik olarak kaydedilir.  
   
  Genellikle, Win32 ortak denetimleri için yönetilen sarmalayıcılar olan Windows Forms denetimleri tarafından desteklenir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Aşağıdaki denetimler desteklenir.  
@@ -157,8 +164,8 @@ ms.locfileid: "87166127"
 |Panel|  
 |PictureBox|  
 |Öniz|  
-|PrintPreview-denetim|  
-|PrintPreview-Iletişim kutusu|  
+|PrintPreview-Control|  
+|PrintPreview-Dialog|  
 |'In|  
 |UserControl|  
 |ToolStrip|  

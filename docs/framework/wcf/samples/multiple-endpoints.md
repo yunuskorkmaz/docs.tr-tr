@@ -4,20 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 5f2915f4f0170f85c27c6c809575d1c56d40774b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 92c329ff922b5e4fc025245dac596c6abebc2716
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602485"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260155"
 ---
 # <a name="multiple-endpoints"></a>Birden Fazla Uç Noktası
+
 Birden çok uç nokta örneği, bir hizmette birden çok uç noktanın nasıl yapılandırılacağını ve bir istemciden gelen her bir uç nokta ile nasıl iletişim kuracağını gösterir. Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır. Hizmet yapılandırması, sözleşmeyi destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir `ICalculator` , ancak her biri farklı bir bağlama kullanılarak farklı bir adreste bulunur. İstemci yapılandırması ve kodu, hizmet uç noktaları ile iletişim kuracak şekilde değiştirilmiştir.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Hizmet Web. config dosyası, her biri aynı sözleşmeyi destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir `ICalculator` , ancak farklı bağlamalar kullanan farklı adreslerdir. İlk uç nokta, `basicHttpBinding` güvenliği etkinleştirilmemiş olan bağlama kullanılarak temel adreste tanımlanmıştır. İkinci uç nokta, `wsHttpBinding` Windows kimlik DOĞRULAMASıYLA WS-Security kullanılarak varsayılan olarak güvenli olan bir bağlama kullanılarak {BaseAddress}/Secure konumunda tanımlanmıştır.  
+ Service Web.config dosyası, her biri aynı sözleşmeyi destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir `ICalculator` , ancak farklı bağlamalar kullanan farklı adreslerdir. İlk uç nokta, `basicHttpBinding` güvenliği etkinleştirilmemiş olan bağlama kullanılarak temel adreste tanımlanmıştır. İkinci uç nokta, `wsHttpBinding` Windows kimlik doğrulamasıyla WS-Security kullanarak varsayılan olarak güvenli olan bir bağlama kullanılarak {BaseAddress}/Secure konumunda tanımlanmıştır.  
   
 ```xml  
 <service

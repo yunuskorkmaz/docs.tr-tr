@@ -2,14 +2,15 @@
 title: SQL İş Akışı Örnek Deposu
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 38cf83ebb8417009c6aa205aa29cd633d1232f0a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e0989e4ed5d9e256d3570b0c3ee2bb35a95b410a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540238"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261754"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL İş Akışı Örnek Deposu
+
 , İş [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] akışlarının bir SQL Server 2005 veya SQL Server 2008 veritabanındaki iş akışı örnekleri hakkında durum bilgilerini kalıcı hale GETIREBILECEĞI SQL Iş akışı örnek deposu ile birlikte gelir. Bu özellik, birincil olarak <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Kalıcılık çerçevesinin soyut sınıfından türetilen sınıf biçiminde uygulanır <xref:System.Runtime.DurableInstancing.InstanceStore> . SQL Iş akışı örneği deposu özelliği, bir konağın kalıcı komutları depoya göndermek için kullandığı Kalıcılık API 'si için somut bir uygulama olan bir SQL kalıcılık sağlayıcısı oluşturur.  
   
  SQL Iş akışı örneği deposu hem şirket içinde barındırılan hem de kullanan <xref:System.Activities.WorkflowApplication> <xref:System.ServiceModel.WorkflowServiceHost> hizmetlerin yanı sıra kendi kendine barındırılan iş akışlarını veya iş akışı hizmetlerini destekler <xref:System.ServiceModel.WorkflowServiceHost> . Şirket içinde barındırılan hizmetler için SQL Iş akışı örnek deposu özelliğini, özelliği tarafından sunulan nesne modelini kullanarak programlı bir şekilde yapılandırabilirsiniz. Bu özelliği <xref:System.ServiceModel.WorkflowServiceHost> , nesne modelini kullanarak ve ayrıca BIR XML yapılandırma dosyası kullanarak, aracılığıyla barındırılan hizmetler için yapılandırabilirsiniz.  
