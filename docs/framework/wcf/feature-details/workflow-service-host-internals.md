@@ -2,15 +2,16 @@
 title: İş Akışı Hizmeti Ana Bilgisayar Dahili Bileşenleri
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: 7b47293211ee8143b1ce713c64ff1d5b22161b45
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 23ee0533d5386164dc95cb7fe2c61a626ea3f96e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594887"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295749"
 ---
 # <a name="workflow-service-host-internals"></a>İş Akışı Hizmeti Ana Bilgisayar Dahili Bileşenleri
-<xref:System.ServiceModel.WorkflowServiceHost>iş akışı hizmetleri için bir konak sağlar. Gelen iletileri dinlemeden ve bunları uygun iş akışı hizmeti örneğine yönlendirmekten sorumludur, boşta iş akışlarının kaldırılmasını ve kalıcı olarak kaldırılmasını ve daha fazlasını denetler. Bu konuda, WorkflowServiceHost 'ın gelen iletileri nasıl işlediği açıklanmaktadır.  
+
+<xref:System.ServiceModel.WorkflowServiceHost> iş akışı hizmetleri için bir konak sağlar. Gelen iletileri dinlemeden ve bunları uygun iş akışı hizmeti örneğine yönlendirmekten sorumludur, boşta iş akışlarının kaldırılmasını ve kalıcı olarak kaldırılmasını ve daha fazlasını denetler. Bu konuda, WorkflowServiceHost 'ın gelen iletileri nasıl işlediği açıklanmaktadır.  
   
 ## <a name="workflowservicehost-overview"></a>WorkflowServiceHost genel bakış  
 
@@ -18,11 +19,12 @@ ms.locfileid: "84594887"
   
  ![Iş akışı hizmeti ana bilgisayarına genel bakış gösteren diyagram.](./media/workflow-service-host-internals/workflow-service-host-high-level-overview.gif)  
   
- Bu diyagramda, <xref:System.ServiceModel.WorkflowServiceHost> . xamlx dosyalarından iş akışı hizmeti tanımlarının yüklendiği ve yapılandırma bilgileri bir yapılandırma dosyasından yüklendiği gösterilmektedir. İzleme profilinden izleme yapılandırmasını da yükler. <xref:System.ServiceModel.WorkflowServiceHost>iş akışı örneklerine denetim işlemleri göndermenizi sağlayan bir iş akışı denetim uç noktası sunar.  Daha fazla bilgi için bkz. [Workflow Control Endpoint Sample](workflow-control-endpoint.md).  
+ Bu diyagramda, <xref:System.ServiceModel.WorkflowServiceHost> . xamlx dosyalarından iş akışı hizmeti tanımlarının yüklendiği ve yapılandırma bilgileri bir yapılandırma dosyasından yüklendiği gösterilmektedir. İzleme profilinden izleme yapılandırmasını da yükler. <xref:System.ServiceModel.WorkflowServiceHost> iş akışı örneklerine denetim işlemleri göndermenizi sağlayan bir iş akışı denetim uç noktası sunar.  Daha fazla bilgi için bkz. [Workflow Control Endpoint Sample](workflow-control-endpoint.md).  
   
- <xref:System.ServiceModel.WorkflowServiceHost>Ayrıca, gelen uygulama iletilerini dinleyen uygulama uç noktalarını da kullanıma sunar. Gelen bir ileti geldiğinde ilgili iş akışı hizmet örneğine (o anda yüklenmişse) gönderilir. Gerekirse, yeni bir iş akışı örneği oluşturulur. Ya da var olan bir örnek kalıcıda bulunursa kalıcılık deposundan yüklenir.  
+ <xref:System.ServiceModel.WorkflowServiceHost> Ayrıca, gelen uygulama iletilerini dinleyen uygulama uç noktalarını da kullanıma sunar. Gelen bir ileti geldiğinde ilgili iş akışı hizmet örneğine (o anda yüklenmişse) gönderilir. Gerekirse, yeni bir iş akışı örneği oluşturulur. Ya da var olan bir örnek kalıcıda bulunursa kalıcılık deposundan yüklenir.  
   
 ## <a name="workflowservicehost-details"></a>WorkflowServiceHost ayrıntıları  
+
  Aşağıdaki diyagramda, <xref:System.ServiceModel.WorkflowServiceHost> iletilerin bir bit daha detaylı şekilde nasıl işlediği gösterilmektedir:  
   
  ![Iş akışı hizmeti ana bilgisayar ileti akışını gösteren diyagram.](./media/workflow-service-host-internals/workflow-service-host-message-flow.gif)  
@@ -33,7 +35,7 @@ ms.locfileid: "84594887"
   
  ![WorkflowServiceHost. Open çağrıldığında akışı gösteren diyagram.](./media/workflow-service-host-internals/workflow-service-host-open.gif)  
   
- İş akışı XAML 'den yüklenir ve etkinlik ağacı oluşturulur. <xref:System.ServiceModel.WorkflowServiceHost>Etkinlik ağacını açıklar ve hizmet açıklamasını oluşturur. Yapılandırma konağa uygulandı. Son olarak, ana bilgisayar gelen iletileri dinlemeye başlar.  
+ İş akışı XAML 'den yüklenir ve etkinlik ağacı oluşturulur. <xref:System.ServiceModel.WorkflowServiceHost> Etkinlik ağacını açıklar ve hizmet açıklamasını oluşturur. Yapılandırma konağa uygulandı. Son olarak, ana bilgisayar gelen iletileri dinlemeye başlar.  
   
  Aşağıdaki çizimde, <xref:System.ServiceModel.WorkflowServiceHost> CanCreateInstance 'ya ayarlanmış bir alma etkinliği için bir ileti aldığında ne olduğu gösterilmektedir `true` :  
   

@@ -2,17 +2,19 @@
 title: System.ServiceModel.TxSourceTxScopeRequiredIsTransactedTransport
 ms.date: 03/30/2017
 ms.assetid: 6cf60298-dccf-4587-b92c-ae3edb75c331
-ms.openlocfilehash: b66f7810dfe13f8b74431755d6652ab05e0148fb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 374f77f85a50cb68ecf75a04ab0e6afa33b89d48
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595641"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295723"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactedtransport"></a>System.ServiceModel.TxSourceTxScopeRequiredIsTransactedTransport
+
 Belirtilen işlem, MSMQ gibi bir işlenen aktarımdan belirtilen işlem için alındı.  
   
 ## <a name="description"></a>Açıklama  
+
  Kullanıcı kodu için kullanılabilir hale getirilen işlem, taşımanın kendisi tarafından oluşturulduysa izleniyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

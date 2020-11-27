@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: c1b92568d90734a33a7b36af987fdb7cbbbe5149
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1226f02dd96b8ab1502869cb319c6efe1ad09d4f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557833"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295567"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme
+
 Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale getirme açıklanmaktadır. Bu, [kendi kendine konak](../samples/self-host.md) örneğine dayalıdır.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Mevcut Self-Host hizmet örneğini bulma için yapılandırmak için  
@@ -60,9 +61,9 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
   
 2. Ve için bir başvuru ekleyin `System.ServiceModel.dll``System.ServiceModel.Discovery.dll`  
   
-3. GeneratedClient.cs ve App.config dosyalarını var olan istemci projesinden yeni DiscoveryClientApp projesine kopyalayın. Bunu yapmak için **Çözüm Gezgini**dosyalara sağ tıklayın, **Kopyala**' yı seçin ve ardından **DiscoveryClientApp** projesini seçin, sağ tıklayıp **Yapıştır**' ı seçin.  
+3. GeneratedClient.cs ve App.config dosyalarını var olan istemci projesinden yeni DiscoveryClientApp projesine kopyalayın. Bunu yapmak için **Çözüm Gezgini** dosyalara sağ tıklayın, **Kopyala**' yı seçin ve ardından **DiscoveryClientApp** projesini seçin, sağ tıklayıp **Yapıştır**' ı seçin.  
   
-4. Program.cs 'i açın.  
+4. Program.cs dosyasını açın.  
   
 5. Aşağıdaki `using` deyimlerini ekleyin.  
   
@@ -220,6 +221,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     ```  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek için kodun bir listesi aşağıda verilmiştir. Bu kod, [kendi kendine konak](../samples/self-host.md) örneğine bağlı olduğundan, yalnızca değiştirilen dosyalar listelenir. Self-Host örneği hakkında daha fazla bilgi için bkz. [Kurulum yönergeleri](../samples/set-up-instructions.md).  
   
 ```csharp  

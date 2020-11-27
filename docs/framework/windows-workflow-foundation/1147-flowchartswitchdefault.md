@@ -2,32 +2,35 @@
 title: 1147 - FlowchartSwitchDefault
 ms.date: 03/30/2017
 ms.assetid: 03bb91f4-bfa4-4420-97fe-8443ee9b03e5
-ms.openlocfilehash: f16291fd57465796d8d8f7f74bbc553c834e9957
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 197618ec2feb04d346521705d935321104ebcf20
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923883"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295697"
 ---
 # <a name="1147---flowchartswitchdefault"></a>1147 - FlowchartSwitchDefault
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1147|  
-|anahtar sözcükler|WFActivities|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|1147|  
+|Anahtar sözcükler|WFActivities|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Varsayılan durumda seçili gösteren akış çizelgesi Switch.  
+
+ Varsayılan durumun bir akış çizelgesi anahtarında seçili olduğunu gösterir.  
   
 ## <a name="message"></a>İleti  
- Akış ' %1'/FlowSwitch - varsayılan durumda seçilmiştir.  
+
+ Akış Çizelgesi ' %1 '/FlowSwitch-varsayılan durum seçildi.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Akış Çizelgesi|xs:string|Akış görünen adı.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|FlowChart|xs: String|Akış çizelgesinin görünen adı.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

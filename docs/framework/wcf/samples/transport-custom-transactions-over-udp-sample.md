@@ -2,17 +2,19 @@
 title: 'Taşıma: UDP üzerinden Özel İşlemler Örneği'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ce1e6f0aedff46aaf58e22d8c23c37b03f8789dd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1a5b6afd7dc078b0e6e270888973b34a91bfdb9f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596545"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295671"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Taşıma: UDP üzerinden Özel İşlemler Örneği
+
 Bu örnek, Windows Communication Foundation (WCF)[taşıma genişletilebilirliğine](transport-extensibility.md) [taşıma: UDP](transport-udp.md) örneğini temel alır. Özel işlem akışını desteklemek için UDP aktarım örneğini genişletir ve özelliğinin kullanımını gösterir <xref:System.ServiceModel.Channels.TransactionMessageProperty> .  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>UDP aktarım örneğindeki kod değişiklikleri  
+
  İşlem akışını göstermek için örnek, hizmet sözleşmesini `ICalculatorContract` için bir işlem kapsamı gerektirecek şekilde değiştirir `CalculatorService.Add()` . Örnek ayrıca işlem sözleşmesine ek bir `System.Guid` parametre ekler `Add` . Bu parametre, istemci işleminin tanımlayıcısını hizmete geçirmek için kullanılır.  
   
 ```csharp  
@@ -46,7 +48,7 @@ byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPr
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer`, ileti varlığıyla geçerli işlemin yayma belirtecini birleştirmek ve bir arabelleğe yerleştirmek için yeni işlevsellik içeren bir yardımcı yöntemdir.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` , ileti varlığıyla geçerli işlemin yayma belirtecini birleştirmek ve bir arabelleğe yerleştirmek için yeni işlevsellik içeren bir yardımcı yöntemdir.  
   
  Özel işlem akışı taşıması için, istemci uygulamasının işlem akışı gerektirdiğini ve bu bilgileri WCF 'ye hangi hizmet işlemlerini iletmesini bilmelidir. Ayrıca, Kullanıcı işleminin Aktarım katmanına iletilmesi için bir mekanizma olmalıdır. Bu örnek, bu bilgileri almak için "WCF ileti denetçiler" kullanır. Burada uygulanan istemci ileti denetçisi `TransactionFlowInspector` aşağıdaki görevleri gerçekleştirir:  
   
@@ -159,7 +161,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()`, tarafından gerçekleştirilen serileştirme sürecini tersine çevirecek yardımcı yöntemdir `TransactionMessageBuffer.WriteTransactionMessageBuffer()` .  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()` , tarafından gerçekleştirilen serileştirme sürecini tersine çevirecek yardımcı yöntemdir `TransactionMessageBuffer.WriteTransactionMessageBuffer()` .  
   
  Bir işlem içinde akan ise, içindeki iletiye eklenir `TransactionMessageProperty` .  
   
@@ -178,7 +180,7 @@ if (transaction != null)
   
 1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-2. Geçerli örnek, [Transport: UDP](transport-udp.md) örneğine benzer şekilde çalıştırılmalıdır. Çalıştırmak için, hizmeti UdpTestService. exe ile başlatın. Windows Vista çalıştırıyorsanız, hizmeti yükseltilmiş ayrıcalıklarla başlatmanız gerekir. Bunu yapmak için dosya Gezgini 'nde UdpTestService. exe ' ye sağ tıklayın ve **yönetici olarak çalıştır**' a tıklayın.  
+2. Geçerli örnek, [Transport: UDP](transport-udp.md) örneğine benzer şekilde çalıştırılmalıdır. Çalıştırmak için, hizmeti UdpTestService.exe ile başlatın. Windows Vista çalıştırıyorsanız, hizmeti yükseltilmiş ayrıcalıklarla başlatmanız gerekir. Bunu yapmak için, dosya Gezgini 'nde UdpTestService.exe sağ tıklayın ve **yönetici olarak çalıştır**' a tıklayın.  
   
 3. Bu, aşağıdaki çıktıyı üretir.  
   
@@ -188,7 +190,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and start service from config...  
     ```  
   
-4. Şu anda, istemcisini UdpTestClient. exe ' yi çalıştırarak başlatabilirsiniz. İstemci tarafından üretilen çıkış aşağıdaki gibidir.  
+4. Şu anda UdpTestClient.exe çalıştırarak istemciyi başlatabilirsiniz. İstemci tarafından üretilen çıkış aşağıdaki gibidir.  
   
     ```console
     0  
@@ -231,13 +233,13 @@ if (transaction != null)
   
 8. İstemcisini hizmete karşı çalıştırmak daha önce olduğu gibi benzer bir çıktı üretir.  
   
-9. Svcutil. exe kullanarak istemci kodunu ve yapılandırmayı yeniden oluşturmak için, hizmet uygulamasını başlatın ve örnek kök dizininden aşağıdaki Svcutil. exe komutunu çalıştırın.  
+9. Svcutil.exe kullanarak istemci kodunu ve yapılandırmayı yeniden oluşturmak için, hizmet uygulamasını başlatın ve ardından örnek kök dizininden aşağıdaki Svcutil.exe komutunu çalıştırın.  
   
     ```console  
     svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
-10. Svcutil. exe ' nin için bağlama uzantısı yapılandırması oluşturmadığına `sampleProfileUdpBinding` ; bunu el ile eklemeniz gerekir.  
+10. Svcutil.exe için bağlama uzantısı yapılandırması oluşturmadığına `sampleProfileUdpBinding` ; bunu el ile eklemeniz gerekir.  
   
     ```xml  
     <configuration>  

@@ -2,35 +2,38 @@
 title: Özel Akış Yükseltmeleri
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: bfb20a38d5d603a7f538235ee88045c92fc8cc85
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3ef0f59a5d63c24188b29cb7a38db2d6323d80ee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587303"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295593"
 ---
 # <a name="custom-stream-upgrades"></a>Özel Akış Yükseltmeleri
-İstemci ve sunucu arasında bulunan bayt sürekli bir akış üzerinde Stream odaklı taşımalar TCP ve adlandırılmış kanallar gibi çalışır. Bu akış tarafından gerçekleştirilen bir <xref:System.IO.Stream> nesne. Bir akış yükseltme istemci kanal yığınına bir isteğe bağlı Protokolü katmanı eklemek ister ve bunu yapmak için iletişim kanalı diğer ucuna sorar. Özgün değiştirerek akış yükseltme oluşur <xref:System.IO.Stream> yükseltilmiş bir nesne.  
+
+TCP ve adlandırılmış kanallar gibi akış odaklı aktarımlar, istemci ve sunucu arasındaki sürekli bayt akışı üzerinde çalışır. Bu akış bir nesne tarafından gerçekleştirilir  <xref:System.IO.Stream> . Bir akış yükseltmesinde, istemci kanal yığınına isteğe bağlı bir protokol katmanı eklemek istemektedir ve iletişim kanalının diğer sonunu bunu yapması istenir. Akış yükseltmesi, özgün <xref:System.IO.Stream> nesneyi yükseltilmiş bir nesne ile değiştirme ile oluşur.  
   
- Örneğin, aktarım akışı üzerinde doğrudan bir sıkıştırma akış oluşturabilirsiniz. Bu durumda özgün taşıma <xref:System.IO.Stream> sıkıştırma sarmalayan bir değiştirilir <xref:System.IO.Stream> ilkinin geçici bir çözüm.  
+ Örneğin, doğrudan aktarım akışının üzerine bir sıkıştırma akışı oluşturabilirsiniz. Bu durumda, özgün aktarım, <xref:System.IO.Stream> özgün bir etrafında sıkıştırmayı sarmalayan bir ile değiştirilmiştir <xref:System.IO.Stream> .  
   
- Birden çok akış yükseltmeleri, her bir sarmalama uygulayabilirsiniz.  
+ Birden çok akış yükseltmesi uygulayabilirsiniz, bunların her biri öncesine göre sarmalanarak.  
   
-## <a name="how-stream-upgrades-work"></a>Stream yükseltme nasıl çalışır  
- Dört bileşenler stream yükseltme işlemi için vardır.  
+## <a name="how-stream-upgrades-work"></a>Akış yükseltmeleri nasıl çalışır?  
+
+ Akış yükseltme işleminde dört bileşen vardır.  
   
-1. Bir yükseltme akışı *Başlatıcı* işlemi başlar: çalışma zamanında kanal Aktarım katmanı yükseltme isteği diğer sonuna bağlantısını başlatabilirsiniz.  
+1. Bir yükseltme akışı *başlatıcısı* işlemi başlatır: çalışma zamanında, kanal Aktarım katmanını yükseltmek üzere bağlantısının diğer ucuna bir istek başlatabilir.  
   
-2. Bir yükseltme akışı *Acceptor* yükseltme taşır: çalışma zamanında başka bir makineden yükseltme isteği alır ve mümkün olduğunda, yükseltme kabul eder.  
+2. Yükseltme akışı *Acceptor* , yükseltmeyi yürütür: çalışma zamanında diğer makineden yükseltme isteğini alır ve mümkünse yükseltmeyi kabul eder.  
   
-3. Yükseltme *sağlayıcısı* oluşturur *Başlatıcı* istemcide ve *Acceptor* sunucusunda.  
+3. Bir yükseltme *sağlayıcısı* , Istemci üzerinde *başlatıcıyı* ve sunucudaki *Acceptor* 'ı oluşturur.  
   
-4. Bir akış yükseltme *bağlama öğesi* hizmet ve istemci bağlantılarına eklenir ve çalışma zamanında sağlayıcısı oluşturur.  
+4. Bir akış yükseltme *bağlama öğesi* , hizmet ve istemcideki bağlamalara eklenir ve çalışma zamanında sağlayıcıyı oluşturur.  
   
- Birden fazla yükseltme söz konusu olduğunda, hangi yükseltme geçişleri her başlatma için geçerli olan zorlamak için Durum makineleri Acceptor ve Başlatıcı kapsülleyen unutmayın.  
+ Birden çok yükseltmelerde, başlatıcı ve Acceptor, her başlatma için hangi yükseltme geçişlerinin geçerli olduğunu zorlamak üzere durum makinelerini kapsülletine unutmayın.  
   
-## <a name="how-to-implement-a-stream-upgrade"></a>Stream yükseltme gerçekleştirme  
- Windows Communication Foundation (WCF) dört sağlar `abstract` uygulayabileceğiniz sınıflar:  
+## <a name="how-to-implement-a-stream-upgrade"></a>Akış yükseltmesini uygulama  
+
+ Windows Communication Foundation (WCF), `abstract` uygulayabileceğiniz dört sınıf sağlar:  
   
 - <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
@@ -40,36 +43,37 @@ ms.locfileid: "64587303"
   
 - <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
- Özel akış yükseltmeyi uygulamak için aşağıdakileri yapın. Bu yordam istemci ve sunucu makinelerde en az bir akış yükseltme işlemi uygular.  
+ Özel bir akış yükseltmesi uygulamak için aşağıdakileri yapın. Bu yordam, hem istemci hem de sunucu makinelerinde en az bir akış yükseltme işlemi uygular.  
   
-1. Uygulayan bir sınıf oluşturma <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
+1. Uygulayan bir sınıf oluşturun <xref:System.ServiceModel.Channels.StreamUpgradeInitiator> .  
   
-    1. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> yükseltilmesi ve yükseltilmiş akış döndürmek için akışa almak için yöntemi. Bu yöntem zaman uyumlu olarak çalışır; zaman uyumsuz olarak yükseltmeyi başlatmak için benzer yöntemler vardır.  
+    1. <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>Yükseltilecek akışta gerçekleştirilecek yöntemi geçersiz kılın ve yükseltilen akışı döndürün. Bu yöntem zaman uyumlu olarak çalışır; yükseltmeyi zaman uyumsuz olarak başlatmak için benzer yöntemler vardır.  
   
-    2. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> ek güncellenerek denetlemek için yöntem.  
+    2. <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>Ek yükseltmeleri denetlemek için yöntemini geçersiz kılın.  
   
-2. Uygulayan bir sınıf oluşturma <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
+2. Uygulayan bir sınıf oluşturun <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor> .  
   
-    1. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> yükseltilmesi ve yükseltilmiş akış döndürmek için akışa almak için yöntemi. Bu yöntem zaman uyumlu olarak çalışır; Yükseltme zaman uyumsuz olarak kabul etmek için benzer yöntemler vardır.  
+    1. <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>Yükseltilecek akışta gerçekleştirilecek yöntemi geçersiz kılın ve yükseltilen akışı döndürün. Bu yöntem zaman uyumlu olarak çalışır; yükseltmenin zaman uyumsuz olarak kabul edileceği benzer yöntemler vardır.  
   
-    2. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> istenen yükseltme bu yükseltme acceptor bu noktada, yükseltme işlemi tarafından desteklenip desteklenmediğini belirlemek için yöntemi.  
+    2. Bu yükseltmenin, yükseltme <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> işleminin bu noktasında bu yükseltme acceptor tarafından desteklenip desteklenmediğini belirleme yöntemini geçersiz kılın.  
   
-3. Uygulayan bir sınıf oluşturmanız <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> ve <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> acceptor ve 2 ve 1. adımda tanımlanan Başlatıcı örnekleri döndürmek için yöntemleri.  
+3. Uygulayan bir sınıf oluşturun <xref:System.ServiceModel.Channels.StreamUpgradeProvider> . <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A>Ve <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> Adım 2 ve 1 ' de tanımlanan Acceptor ve başlatıcısının örneklerini döndürmek için yöntemini geçersiz kılın.  
   
-4. Uygulayan bir sınıf oluşturma <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
+4. Uygulayan bir sınıf oluşturun <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> .  
   
-    1. Geçersiz kılma <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> istemcide yöntemi ve <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> hizmette yöntemi.  
+    1. <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A>İstemcideki yöntemi ve <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> hizmet üzerindeki yöntemi geçersiz kılın.  
   
-    2. Geçersiz kılma <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> istemcide yöntemi ve <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> yükseltme bağlama öğesi eklemek için hizmet metodunda <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
+    2. ' A <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> yükseltme bağlama öğesini eklemek için istemcideki yöntemi ve hizmet üzerindeki yöntemi geçersiz kılın <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A> .  
   
-5. Yeni akış yükseltme bağlama öğesi, sunucu ve istemci makinelerinde bağlamaları ekleyin.  
+5. Yeni akış yükseltme bağlama öğesini sunucu ve istemci makinelerdeki bağlamalara ekleyin.  
   
 ## <a name="security-upgrades"></a>Güvenlik yükseltmeleri  
- Bir güvenlik yükseltmesi ekleme, genel akışı yükseltme işlemi özelleştirilmiş bir sürümüdür.  
+
+ Güvenlik yükseltmesi eklemek, genel akış yükseltme işleminin özelleşmiş bir sürümüdür.  
   
- WCF zaten Akış Güvenliği yükseltmek için iki bağlama öğeleri sağlar. Aktarım düzeyi güvenlik yapılandırmasını yalıtılan <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> ve <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> , yapılandırılabilir ve özel bağlama için eklendi. Bu bağlama öğelerini genişletmek <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> yükseltme sağlayıcıları istemci ve sunucu akışı oluşturan sınıf. Bu bağlama öğeleri özel güvenlik akışı olmayan yükseltme sağlayıcısı sınıfları oluşturma yöntemleri sahip `public`, bağlama bağlama öğesi eklemek için bu iki durumda yapmak için ihtiyacınız olan şekilde.  
+ WCF, akış güvenliğini yükseltmek için zaten iki bağlama öğesi sağlar. Aktarım düzeyi güvenliği yapılandırması, <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> ve için <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> yapılandırılmış ve özel bir bağlamaya eklenebilen öğesine göre kapsüllenir. Bu bağlama öğeleri <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> , istemci ve sunucu akışı yükseltme sağlayıcılarını oluşturan sınıfını genişletir. Bu bağlama öğelerinde, özel güvenlik akışı yükseltme sağlayıcısı sınıflarını oluşturan yöntemler vardır `public` . bu nedenle, bu iki durum için tek yapmanız gereken, bağlama öğesini bağlamaya eklemektir.  
   
- Yukarıdaki iki nedeni bağlama öğelerinin, üç güvenlikle ilgili karşılanmadı güvenlik senaryoları için `abstract` sınıfları yukarıdaki başlatıcısı, acceptor ve sağlayıcı temel sınıflarından türetilen:  
+ Yukarıdaki iki bağlama öğesi tarafından karşılanmayan güvenlik senaryoları için, güvenlikle ilgili üç sınıf, `abstract` Yukarıdaki başlatıcıdan, Acceptor 'dan ve sağlayıcı temel sınıflarından türetilir:  
   
 1. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
   
@@ -77,20 +81,21 @@ ms.locfileid: "64587303"
   
 3. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
   
- Uygulama güvenlik stream yükseltme sürecinde daha önce bu üç sınıflardan türetin fark ile aynıdır. Bu sınıfların çalışma zamanı güvenlik bilgileri sağlamak için ek özellikler geçersiz kılar.  
+ Bir güvenlik akışı yükseltmesini uygulama işlemi, bu üç sınıftan türettiğiniz farkla daha önceki ile aynıdır. Çalışma zamanına güvenlik bilgilerini sağlamak için bu sınıflardaki ek özellikleri geçersiz kılın.  
   
-## <a name="multiple-upgrades"></a>Birden fazla yükseltme  
- Yükseltme isteklerini ek oluşturmak için yukarıdaki işlemi tekrarlayın: ek uzantıları oluşturma <xref:System.ServiceModel.Channels.StreamUpgradeProvider> ve bağlama öğeleri. Bağlamaya ait bağlama öğelerini ekleyin. Ek bağlama öğeleri bağlamaya eklenen ilk bağlama öğesi ile başlayan ardışık olarak işlenir. İçinde <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> ve <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> her yükseltme sağlayıcısı kendisi önceden var olan yükseltme parametreleri bağlama üzerinde katman nasıl belirleyebilirsiniz. Ardından yeni bir bileşik yükseltme bağlama parametresi ile parametre bağlama mevcut yükseltme değiştirmeniz gerekir.  
+## <a name="multiple-upgrades"></a>Birden çok yükseltme  
+
+ Ek yükseltme istekleri oluşturmak için yukarıdaki işlemi yineleyin: ek uzantılar <xref:System.ServiceModel.Channels.StreamUpgradeProvider> ve bağlama öğeleri oluşturun. Bağlama öğelerini bağlamaya ekleyin. Ek bağlama öğeleri, bağlamaya eklenen ilk bağlama öğesiyle başlayarak sırayla işlenir. ' De <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> ve <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> her bir yükseltme sağlayıcısı, önceden var olan herhangi bir yükseltme bağlama parametrelerinde katmanın kendisini nasıl göstereceğini belirleyebilir. Daha sonra var olan yükseltme bağlama parametresini yeni bir bileşik yükseltme bağlama parametresiyle değiştirmelisiniz.  
   
- Alternatif olarak, bir yükseltme sağlayıcısı, birden fazla yükseltme destekleyebilir. Örneğin, hem güvenlik hem de sıkıştırma destekleyen özel akış yükseltme sağlayıcıyı uygulama isteyebilirsiniz. Aşağıdaki adımları uygulayın:  
+ Alternatif olarak, bir yükseltme sağlayıcısı birden çok yükseltmeyi destekleyebilir. Örneğin, hem güvenlik hem de sıkıştırmayı destekleyen özel bir akış yükseltme sağlayıcısı uygulamak isteyebilirsiniz. Aşağıdaki adımları uygulayın:  
   
-1. Alt <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> Acceptor ve Başlatıcı oluşturur sağlayıcı sınıfı yazılacak.  
+1. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>Başlatıcı ve Acceptor oluşturan sağlayıcı sınıfının yazılacağı alt sınıf.  
   
-2. Alt <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> geçersiz kılmak sağlamaktan <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> Sıkıştırma akışına ve güvenli bir akış için içerik türleri sırayla döndürmek için yöntemi.  
+2. Sınıf, <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> sıkıştırma akışı için içerik türlerini ve güvenli akışı sırayla döndürmek için yöntemini geçersiz kıldığınızdan emin olun.  
   
-3. Alt <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> özel içerik türleri anlayan kendi <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> yöntemi.  
+3. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>Yöntemi içindeki özel içerik türlerini anlayan alt sınıf <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> .  
   
-4. Akışı yapılan her çağrı sonra yükseltilecek <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> ve <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
+4. Akış, ve ' a yapılan her çağrıdan sonra <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> yükseltilir <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
