@@ -2,20 +2,22 @@
 title: .NET Native Uygulamalarında Çalışma Zamanı Özel Durumları
 ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
-ms.openlocfilehash: 12df2ef7bf6e86a60dfa4c130f35969e72ac5211
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5c521eed94590e583a761cc2003460875e690fa9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180944"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287858"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET Native Uygulamalarında Çalışma Zamanı Özel Durumları
+
 Hata ayıklama ve yayın yapılandırmaları tamamen farklı olduğundan, Evrensel Windows Platformu uygulamanızın sürüm yapılarını hedef platformlarda test etmek önemlidir. Varsayılan olarak, hata ayıklama yapılandırması uygulamanızı derlemek için .NET Core çalışma zamanını kullanır, ancak yayın yapılandırması uygulamanızı yerel koda derlemek için .NET Native kullanır.  
   
 > [!IMPORTANT]
-> Uygulamanızın yayın sürümlerini sınarken karşılaşabileceğiniz [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)ve [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) özel durumları ile ilgili bilgi için, bkz. "4. Adım: eksik meta verileri el ile çözme: [Başlarken](getting-started-with-net-native.md) konusunun yanı sıra [yansıma ve .NET Native](reflection-and-net-native.md) ve [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).  
+> Uygulamanızın yayın sürümlerini sınarken karşılaşabileceğiniz [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)ve [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) özel durumları ile ilgili bilgi için, bkz. "4. Adım: eksik meta verileri el ile çözme: [Başlarken](getting-started-with-net-native.md) konusunun yanı sıra [yansıma ve .NET Native](reflection-and-net-native.md) ve [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Hata ayıklama ve yayın yapıları  
+
  Hata ayıklama derlemesi .NET Core çalışma zamanına karşı yürütüldüğünde, yerel koda derlenmemiş. Bu, normalde çalışma zamanı tarafından sağlanan tüm hizmetlerin uygulamanızda kullanılabilmesini sağlar.  
   
  Öte yandan, yayın derlemesi hedef platformları için yerel koda derlenir, dış çalışma zamanları ve kitaplıklarda birçok bağımlılığı kaldırır ve en yüksek performans için kodu yoğun olarak iyileştirir.  
@@ -32,7 +34,9 @@ Hata ayıklama ve yayın yapılandırmaları tamamen farklı olduğundan, Evrens
 > Hata ayıklama ve sürüm derlemelerinin, **.NET Native araç zinciri Ile derle** kutusunu işaretleyerek veya işaretleyerek .NET Native araç zinciriyle derlenip derlenmediğini denetleyebilirsiniz.   Ancak, Windows Mağazası 'nın .NET Native araç zinciri ile uygulamanızın üretim sürümünü her zaman derlendiğine unutmayın.  
   
 <a name="Messages"></a>
+
 ## <a name="runtime-exception-messages"></a>Çalışma zamanı özel durum iletileri  
+
  Uygulama yürütülebilir boyutunu en aza indirmek için .NET Native özel durum iletilerinin tam metnini içermez. Sonuç olarak, sürüm Derlemeleriyle oluşturulan çalışma zamanı özel durumları, özel durum iletilerinin tam metnini görüntülemeyebilir. Bunun yerine, metin bir alt dizeden ve daha fazla bilgi için bir bağlantı ile birlikte yer alabilir. Örneğin, özel durum bilgileri şöyle görünebilir:  
   
 ```output
@@ -52,7 +56,9 @@ Additional information: Value does not fall within the expected range.
 ```  
   
 <a name="CallStack"></a>
+
 ## <a name="runtime-call-stack"></a>Çalışma zamanı çağrı yığını  
+
  Satır içi ve diğer iyileştirmeler nedeniyle, .NET Native araç zinciri tarafından derlenen bir uygulama tarafından görünen çağrı yığını, çalışma zamanı özel durumunun yolunu açıkça belirlemenize yardımcı olabilir.  
   
  Tam yığını almak için bunun yerine hata ayıklama derlemesini çalıştırın.  

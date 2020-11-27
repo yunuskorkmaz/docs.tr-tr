@@ -10,12 +10,12 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 55cf6b937d4bb12c44aae2022921c8adb8180df4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 97acccdc1dcab11e42d116f4743e1182029e2dd6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556427"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288196"
 ---
 # <a name="security-transparent-code-level-1"></a>Güvenliği Saydam Kod, 1. Düzey
 
@@ -35,7 +35,9 @@ ms.locfileid: "90556427"
 - [Güvenlik saydamlığı örnekleri](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>
+
 ## <a name="the-level-1-transparency-model"></a>Düzey 1 saydamlık modeli  
+
  Düzey 1 saydamlık kullandığınızda, kodu güvenlik açısından saydam, güvenlik açısından güvenli-kritik ve güvenlik açısından kritik yöntemlere ayıran bir güvenlik modeli kullanıyorsunuz.  
   
  Tüm bir derlemeyi, bir derlemedeki bazı sınıfları veya bir sınıftaki bazı yöntemleri güvenlik açısından saydam olarak işaretleyebilirsiniz. Güvenliği saydam kod ayrıcalıkları yükseltemez. Bu kısıtlama üç sonuçlara sahiptir:  
@@ -58,7 +60,9 @@ ms.locfileid: "90556427"
  .NET Framework önceki sürümleriyle geriye dönük uyumluluk için, saydamlık öznitelikleriyle açıklama eklenmiş olmayan tüm Üyeler güvenlik açısından kritik olarak kabul edilir. Açıklamalı olmayan tüm türler saydam olarak değerlendirilir. Saydamlığı doğrulamaya yönelik bir statik analiz kuralı yok. Bu nedenle, çalışma zamanında saydam hatalarda hata ayıklaması yapmanız gerekebilir.  
   
 <a name="transparency_attributes"></a>
+
 ## <a name="transparency-attributes"></a>Saydamlık öznitelikleri  
+
  Aşağıdaki tabloda, saydamlığa yönelik kodunuza açıklama eklemek için kullandığınız üç öznitelik açıklanmaktadır.  
   
 |Öznitelik|Açıklama|  
@@ -70,6 +74,7 @@ ms.locfileid: "90556427"
  <xref:System.Security.SecuritySafeCriticalAttribute>Özniteliği, güvenlik açısından saydam kodun aynı derlemede bulunan güvenlik açısından kritik üyelere erişmesini sağlar. Derlemelerinizdeki güvenlik açısından saydam ve kritik güvenlik kodunu iki derlemeye ayırarak göz önünde bulundurun. Güvenliği saydam kod, güvenlik açısından kritik kodun özel veya iç üyelerini göremez. Ayrıca, güvenlik açısından kritik kod genel arabirimine erişim için genellikle denetlenir. Özel veya iç durumun derleme dışında erişilebilir olması beklenmez; durumu yalıtılmış tutmak isteyebilirsiniz. <xref:System.Security.SecuritySafeCriticalAttribute>Öznitelik, gerektiğinde yalıtımın geçersiz kılınmasına izin verirken, güvenlik açısından saydam ve kritik güvenlik kodu arasında durum yalıtımı sağlar. Bu Üyeler ile işaretlenmedikçe güvenlik açısından saydam kod özel veya iç güvenlik açısından kritik koda erişemez <xref:System.Security.SecuritySafeCriticalAttribute> . Uygulamasını uygulamadan önce <xref:System.Security.SecuritySafeCriticalAttribute> , üyenin herkese açık gibi çalıştığını denetleyin.  
   
 ### <a name="assembly-wide-annotation"></a>Bütünleştirilmiş kod genelinde ek açıklama  
+
  Aşağıdaki tabloda, derleme düzeyinde güvenlik özniteliklerini kullanmanın etkileri açıklanmaktadır.  
   
 |Derleme özniteliği|Derleme durumu|  
@@ -81,7 +86,9 @@ ms.locfileid: "90556427"
 |`SecurityCritical`|Tüm kod varsayılan olarak saydam olur. Ancak, ayrı türler ve üyelerin diğer öznitelikleri olabilir.|  
   
 <a name="security_transparency_examples"></a>
+
 ## <a name="security-transparency-examples"></a>Güvenlik saydamlığı örnekleri  
+
  .NET Framework 2,0 saydamlık kurallarını (düzey 1 saydamlık) kullanmak için aşağıdaki derleme ek açıklamasını kullanın:  
   
 ```csharp

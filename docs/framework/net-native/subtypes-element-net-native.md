@@ -1,18 +1,19 @@
 ---
-title: <Subtypes>Öğesi (.NET Native)
+title: <Subtypes> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7484152c351f59ee84b601584bd84347186628a3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180931"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287819"
 ---
-# <a name="subtypes-element-net-native"></a>\<Subtypes>Öğesi (.NET Native)
+# <a name="subtypes-element-net-native"></a>\<Subtypes> Öğesi (.NET Native)
+
 Çalışma zamanı ilkesini, kapsayan türden devralınan tüm sınıflara uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Subtypes Activate="policy_type"  
@@ -28,6 +29,7 @@ ms.locfileid: "79180931"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -52,6 +54,7 @@ ms.locfileid: "79180931"
 |*policy_setting*|Bu ilke türüne uygulanacak ayar. Olası değerler şunlardır,,,,,, `All` `Auto` `Excluded` `Public` `PublicAndInternal` `Required Public` `Required PublicAndInternal` ve `Required All` . Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -61,11 +64,13 @@ ms.locfileid: "79180931"
 |[\<Type>](type-element-net-native.md)|Yansıma ilkesini bir türe ve tüm üyelerine uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<Subtypes>`Öğesi, ilkeyi kapsayan türünün tüm alt türlerine uygular. Türetilmiş türlere ve bunların temel sınıflarına farklı ilkeler uygulamak istediğinizde bunu kullanırsınız.  
   
  Yansıma, serileştirme ve birlikte çalışma özniteliklerinin tümü isteğe bağlıdır, ancak en az bir tane bulunmalıdır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek adlı bir sınıfı ve adlı bir `BaseClass` alt sınıfı tanımlar `Derived1` .  
   
  [!code-csharp[ProjectN_Reflection#4](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#4)]  
@@ -89,7 +94,7 @@ ms.locfileid: "79180931"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<Type>Dosyalarında](type-element-net-native.md)
+- [\<Type> Dosyalarında](type-element-net-native.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Çalışma Zamanı Yönerge Öğeleri](runtime-directive-elements.md)
 - [Çalışma Zamanı Yönerge İlkesi Ayarları](runtime-directive-policy-settings.md)

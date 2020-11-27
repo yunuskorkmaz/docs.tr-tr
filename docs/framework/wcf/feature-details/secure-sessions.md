@@ -2,14 +2,15 @@
 title: Güvenli Oturumlar
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-ms.openlocfilehash: cb02adc7514e27175088e7664b12e45bc8ca5cd9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fd8406af0c37981b2ddc7ab8ddb0c82c63cbc0b1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590091"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288568"
 ---
 # <a name="secure-sessions"></a>Güvenli Oturumlar
+
 Windows Communication Foundation (WCF) özelliği, iletilerin gönderildikleri sırada alınabileceğini garanti eden güvenilir oturumlardır. Bu bölümdeki konularda, güvenilir bir oturum oluştururken dikkate alınması gereken güvenlik etkileri ele alınmaktadır. Güvenilir oturumlar hakkında daha fazla bilgi için bkz. [oturumları kullanma](../using-sessions.md).  
   
 > [!NOTE]
@@ -25,11 +26,13 @@ Windows Communication Foundation (WCF) özelliği, iletilerin gönderildikleri s
 |[Güvenli Oturumlar için Güvenlikli İlgili Önemli Noktalar](security-considerations-for-secure-sessions.md)|Güvenli oturumlar için özel konuları açıklar.|  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Oturumlar, Örnek Oluşturma ve Eşzamanlılık](sessions-instancing-and-concurrency.md)  
   
  [Hizmetleri Tasarlama ve Uygulama](../designing-and-implementing-services.md)  

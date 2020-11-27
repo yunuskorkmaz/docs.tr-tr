@@ -1,19 +1,19 @@
 ---
-title: <Type>Öğesi (.NET Native)
+title: <Type> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e71df41c4a37206910d835ee85dc3d68b4cbad4a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73091850"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287715"
 ---
-# <a name="type-element-net-native"></a>\<Type>Öğesi (.NET Native)
+# <a name="type-element-net-native"></a>\<Type> Öğesi (.NET Native)
 
 Çalışma zamanı ilkesini sınıf veya yapı gibi belirli bir türe uygular.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Type Name="type_name"
@@ -118,6 +118,7 @@ Aşağıdaki örnek, sınıfının alanları, özellikleri ve yöntemleri hakkı
 ```
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, <xref:System.Reflection.PropertyInfo> özelliğini temsil eden bir nesneyi almak için yansıma kullanır <xref:System.String.Chars%2A?displayProperty=nameWithType> . Daha sonra yöntemi, <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> bir dizedeki yedinci karakterin değerini almak ve dizedeki tüm karakterleri göstermek için kullanır. Örnekteki değişken `b` bir <xref:Windows.UI.Xaml.Controls.TextBlock> denetimdir.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]

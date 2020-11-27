@@ -2,14 +2,15 @@
 title: İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: b5f7679d5e5ec82e63b588cebd90ce873c055088
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6aae16b766889f402f774451338ae2cd30162437
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558309"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288611"
 ---
 # <a name="securing-messages-using-message-security"></a>İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
+
 Bu bölümde kullanırken WCF ileti güvenliği ele alınmaktadır <xref:System.ServiceModel.NetMsmqBinding> .  
   
 > [!NOTE]
@@ -28,6 +29,7 @@ Bu bölümde kullanırken WCF ileti güvenliği ele alınmaktadır <xref:System.
  WCF ileti güvenliği, bir sertifika veya Kerberos protokolü gibi mevcut güvenlik altyapılarıyla tümleştirilen WCF iletisine güvenlik üstbilgileri ekler.  
   
 ## <a name="message-credential-type"></a>İleti kimlik bilgisi türü  
+
  Hizmet ve istemci, ileti güvenliğini kullanarak birbirlerinin kimliğini doğrulamak için kimlik bilgilerini sunabilir. Modu veya olarak ayarlayarak ileti güvenliği seçebilirsiniz <xref:System.ServiceModel.NetMsmqBinding.Security%2A> `Message` `Both` (yani, hem aktarım güvenliği hem de ileti güvenliği kullanın).  
   
  Hizmet, <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini incelemek için özelliğini kullanabilir. Bu, hizmetin uygulamayı seçtiği daha fazla yetkilendirme denetimi için de kullanılabilir.  
@@ -35,6 +37,7 @@ Bu bölümde kullanırken WCF ileti güvenliği ele alınmaktadır <xref:System.
  Bu bölümde farklı kimlik bilgisi türleri ve kuyrukların nasıl kullanılacağı açıklanmaktadır.  
   
 ### <a name="certificate"></a>Sertifika  
+
  Sertifika kimlik bilgileri türü bir X. 509.440 sertifikası kullanarak hizmeti ve istemciyi belirler.  
   
  Tipik bir senaryoda, istemci ve hizmet güvenilen bir sertifika yetkilisi tarafından geçerli bir sertifika verilir. Sonra bağlantı oluşturulur, istemci hizmete güvenip güvenmeyeceğine karar vermek için hizmetin sertifikasını kullanarak hizmetin geçerliliğini doğrular. Benzer şekilde, hizmet istemci güvenini doğrulamak için istemcinin sertifikasını kullanır.  
@@ -44,6 +47,7 @@ Bu bölümde kullanırken WCF ileti güvenliği ele alınmaktadır <xref:System.
  Windows çalıştıran bir bilgisayarda, sertifikalar çeşitli türlerde depolarda tutulur. Farklı mağazalar hakkında daha fazla bilgi için bkz. [sertifika depoları](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ### <a name="windows"></a>Windows  
+
  Windows ileti kimlik bilgisi türü Kerberos protokolünü kullanır.  
   
  Kerberos protokolü, bir etki alanındaki kullanıcıların kimliğini doğrulayan ve kimliği doğrulanmış kullanıcıların bir etki alanındaki diğer varlıklarla güvenli bağlamlar kurmasını sağlayan bir güvenlik mekanizmasıdır.  
@@ -55,12 +59,15 @@ Bu bölümde kullanırken WCF ileti güvenliği ele alınmaktadır <xref:System.
  İleti kimlik bilgisi seçerken Kerberos protokolü varsayılan olarak kullanılır.
   
 ### <a name="username-password"></a>Kullanıcı adı parolası  
+
  Bu özelliği kullanarak istemci, iletinin güvenlik üstbilgisinde bir Kullanıcı adı parolası kullanarak sunucuda kimlik doğrulaması yapabilir.  
   
 ### <a name="issuedtoken"></a>IssuedToken  
+
  İstemci, istemcinin kimliğini doğrulamak üzere hizmetin iletisine iliştirilebilecek bir belirteç vermek için güvenlik belirteci hizmetini kullanabilir.  
   
 ## <a name="using-transport-and-message-security"></a>Aktarım ve Ileti güvenliğini kullanma  
+
  Hem aktarım güvenliği hem de ileti güvenliği kullanılırken, iletiyi hem aktarımda hem de SOAP ileti düzeyinde güvenli hale getirmek için kullanılan sertifikanın aynı olması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

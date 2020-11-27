@@ -2,48 +2,51 @@
 title: Etkinlik Ağacı Denetimi
 ms.date: 03/30/2017
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
-ms.openlocfilehash: 692f36d993c3f9c27839122b388a24d0698a2b59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 044dcbbe7f22b1026dbc4dc14ab87da4f5a9d0ee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183035"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289158"
 ---
 # <a name="activity-tree-inspection"></a>Etkinlik Ağacı Denetimi
-Etkinlik ağacı denetimi, uygulama tarafından barındırılan iş akışlarını incelemek için iş akışı uygulaması yazarları tarafından kullanılır. Kullanarak, <xref:System.Activities.WorkflowInspectionServices>iş akışları belirli alt etkinlikler için aranabilir, bireysel etkinlikler ve özellikleri numaralandırılabilir ve etkinliklerin çalışma zamanı meta verileri belirli bir zamanda önbelleğe alınabilir. Bu konu, bir <xref:System.Activities.WorkflowInspectionServices> etkinlik ağacını incelemek için nasıl kullanılacağına genel bir bakış sağlar.  
+
+Etkinlik ağacı incelemesi, iş akışı uygulama yazarları tarafından, uygulama tarafından barındırılan iş akışlarını incelemek için kullanılır. Kullanarak <xref:System.Activities.WorkflowInspectionServices> , iş akışları belirli alt etkinlikler için aranabilir, bireysel etkinlikler ve bunların özellikleri listelenebilir ve etkinliklerin çalışma zamanı meta verileri belirli bir zamanda önbelleğe alınabilir. Bu konu, bir genel bakış <xref:System.Activities.WorkflowInspectionServices> ve bir etkinlik ağacını denetlemek için nasıl kullanılacağını sağlar.  
   
-## <a name="using-workflowinspectionservices"></a>İş AkışıDenetim Hizmetlerini Kullanma  
- Yöntem, <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> belirtilen etkinlik ağacındaki tüm etkinlikleri sayısallandırmak için kullanılır. <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>çocuklar, temsilci işleyicileri, değişken varsayılanlar ve bağımsız değişken ifadeleri de dahil olmak üzere ağaç içindeki tüm etkinliklere dokunan bir sayısal döndürür. Aşağıdaki örnekte, bir iş akışı tanımı <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.While> <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.WriteLine>, , ve ifadeler kullanılarak oluşturulur. İş akışı tanımı oluşturulduktan sonra çağrılır `InspectActivity` ve yöntem çağrılır.  
+## <a name="using-workflowinspectionservices"></a>Workflowwınspectionservices kullanma  
+
+ <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>Yöntemi, belirtilen etkinlik ağacındaki tüm etkinlikleri listelemek için kullanılır. <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> ağaç içinde alt öğeler, temsilci işleyicileri, değişken Varsayılanları ve bağımsız değişken ifadeleri dahil tüm etkinliklere dokunan bir numaralandırılabilir döndürür. Aşağıdaki örnekte, bir iş akışı tanımı,,,, <xref:System.Activities.Statements.Sequence> <xref:System.Activities.Statements.While> <xref:System.Activities.Statements.ForEach%601> <xref:System.Activities.Statements.WriteLine> ve ifadeleri kullanılarak oluşturulur. İş akışı tanımı oluşturulduktan sonra, çağrılır ve sonra `InspectActivity` yöntemi çağrılır.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#45](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#45)]  
   
- Etkinlikleri sayısallandırmak için, <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> kök etkinliği ve yine her döndürülen etkinlikte özyinelemeli olarak çağrılır. Aşağıdaki örnekte, <xref:System.Activities.Activity.DisplayName%2A> etkinlik ağacındaki her etkinlik ve ifadenin konsoluna yazılır.  
+ Etkinlikleri numaralandırmak için, <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> kök etkinlik üzerinde çağrılır ve döndürülen her etkinlik üzerinde yinelemeli olarak yeniden özyinelemeli olur. Aşağıdaki örnekte, <xref:System.Activities.Activity.DisplayName%2A> etkinlik ağacındaki her etkinlik ve ifade konsola yazılır.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#46](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#46)]  
   
  Bu örnek kod aşağıdaki çıktıyı sağlar.  
   
- **Liste Öğesi 1**  
-**Liste Öğesi 2**
-**Liste Madde 3**
-**Liste Madde 4**
-**Liste Madde 5**
-**Toplama eklenen öğeler.** 
- **Sıralı** **<\<Liste Dize>>**  
- **Süre**  
+ **Liste öğesi 1**  
+**Liste öğesi 2** 
+ **Liste öğesi 3** 
+ **Liste öğesi 4** 
+ **Liste öğesi 5** 
+ **Koleksiyona eklenen öğeler.** 
+ **Dizi** **sabit değer<\<String> > listesi**  
+ **Edilirken**  
  **AddToCollection\<String>**  
- **VariableValue<\<ICollection String>>**  
- **LambdaValue\<String>**  
- **LocationReferenceValue<\<Liste String>>**  
- **LambdaValue\<Boolean>**  
- **LocationReferenceValue<\<Liste String>>**  
+ **VariableValue<ICollection\<String>>**  
+ **Lambdadvalue\<String>**  
+ **LocationReferenceValue<listesi\<String>>**  
+ **Lambdadvalue\<Boolean>**  
+ **LocationReferenceValue<listesi\<String>>**  
  **ForEach\<String>**  
- **VariableValue<Numaralandırıcı\<Dize>>**  
+ **VariableValue<IEnumerable\<String>>**  
  **WriteLine**  
- **TemsilciBağımsız\<DeğişkenDeğer Dize>**  
+ **DelegateArgumentValue\<String>**  
  **Sequence**  
  **WriteLine**  
- **Literal\<String>** Tüm etkinlikleri <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> numaralandırmak yerine belirli bir etkinliği almak için kullanılır. Her <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> ikisi de ve `WorkflowInspectionServices.CacheMetadata` daha önce çağrılmadı ysa meta veri önbelleğe gerçekleştirin. Çağrıldıysa, <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> varolan meta verileri temel alınarak kullanılır. Bu nedenle, son çağrıdan bu yana <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> ağaç değişiklikleri yapıldıysa, beklenmeyen sonuçlar verebilir. Aramadan <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>sonra iş akışında değişiklikler yapıldıysa, meta veriler <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> yöntem çağırılarak yeniden önbelleğe alınabilir. Önbelleğe alma meta verileri sonraki bölümde ele alınmıştır.  
+ **Değişmez \<String> değer**  Tüm etkinlikleri listelemek yerine belirli bir etkinliği almak için <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> kullanılır. Hem hem de <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> `WorkflowInspectionServices.CacheMetadata` daha önce çağrılmayan meta veri önbelleğe alma işlemi gerçekleştirin. <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>Çağrılırsa, <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> mevcut meta verileri temel alır. Bu nedenle, son çağrısından sonra ağaç değişiklikleri yapılmışsa <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> , <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> beklenmedik sonuçlara neden olabilir. Çağrıldıktan sonra iş akışında değişiklik yapılmışsa <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> meta veriler, yöntemi çağırarak yeniden önbelleğe alınabilir <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> . Önbelleğe alma meta verileri, sonraki bölümde ele alınmıştır.  
   
-### <a name="caching-metadata"></a>Meta verileri önbelleğe alma  
- Bir etkinlik için meta verileri önbelleğe alma, etkinliğin bağımsız değişkenlerinin, değişkenlerinin, alt etkinliklerinin ve etkinlik temsilcilerinin açıklamasını oluşturur ve doğrular. Meta veriler, varsayılan olarak, bir etkinlik yürütme için hazırlandığında çalışma süresine göre önbelleğe alır. İş akışı ana bilgisayar yazarı bundan önce bir etkinlik veya etkinlik ağacı için meta verileri önbelleğe <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> almak isterse, örneğin tüm maliyeti peşin almak için, meta verileri istediğiniz zamanda önbelleğe almak için kullanılabilir.
+### <a name="caching-metadata"></a>Önbelleğe alma meta verileri  
+
+ Bir etkinliğin meta verilerinin önbelleğe alınması, etkinliğin bağımsız değişkenlerinin, değişkenlerinin, alt etkinliklerinin ve etkinlik temsilcilerinin bir açıklamasını oluşturur ve doğrular. Varsayılan olarak meta veriler, bir etkinlik yürütmeye hazırlandığı zaman çalışma zamanı tarafından önbelleğe alınır. Bir iş akışı ana bilgisayar yazarı, bundan önce bir etkinlik veya etkinlik ağacının meta verilerini önbelleğe almak istiyorsa (örneğin, tüm maliyeti kapladıysanız), <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> meta verileri istenen zamanda önbelleğe almak için kullanılabilir.

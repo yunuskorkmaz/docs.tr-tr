@@ -2,17 +2,19 @@
 title: Özel Bağlamalarla Güvenlik Özellikleri
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-ms.openlocfilehash: 48d17543f2b133c74bcfa82cfe1a2a0de28b1d01
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b12907481ccb3f3c5f4b8aaba6ede8ebfa6228a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595199"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288313"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Özel Bağlamalarla Güvenlik Özellikleri
+
 Sistem tarafından belirtilen bağlamalardan birini kullanarak en yaygın güvenlik görevlerini gerçekleştirebilirsiniz. Ancak, daha fazla denetime ihtiyacınız varsa, <xref:System.ServiceModel.Channels.SecurityBindingElement> Bu konularda açıklandığı gibi, ile özel bir bağlama oluşturabilirsiniz. Özel Bağlamalar hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](../extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [SecurityBindingElement Kimlik Doğrulama Modları](securitybindingelement-authentication-modes.md)  
  Özel bir bağlama ile mümkün olan kimlik doğrulama modlarını açıklar.  
   
@@ -22,7 +24,7 @@ Sistem tarafından belirtilen bağlamalardan birini kullanarak en yaygın güven
  [Nasıl yapılır: Belirtilen Bir Kimlik Doğrulama Modu için SecurityBindingElement Oluşturma](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
  Belirtilen bir kimlik doğrulama modu için bir güvenlik öğesinin nasıl oluşturulacağını açıklar.  
   
- [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Federasyon Hizmeti oluştururken güvenli oturumların nasıl devre dışı bırakılacağını açıklar.  
   
  [Nasıl yapılır: İleti Yeniden Yürütme Algılamayı Etkinleştirme](how-to-enable-message-replay-detection.md)  
@@ -41,11 +43,13 @@ Sistem tarafından belirtilen bağlamalardan birini kullanarak en yaygın güven
  Dijital imzaların şifrelenmesini devre dışı bırakmanın performans avantajına sahip olabilir.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
  [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Koruma Düzeylerini Anlama](../understanding-protection-level.md)  
   
  [Hizmet ve İstemcileri Güvenli Hale Getirme](securing-services-and-clients.md)  
@@ -54,4 +58,4 @@ Sistem tarafından belirtilen bağlamalardan birini kullanarak en yaygın güven
 
 - [Bağlamalar ve Güvenlik](bindings-and-security.md)
 - [Güvenliğe genel bakış](security-overview.md)
-- [Sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../system-provided-bindings.md)

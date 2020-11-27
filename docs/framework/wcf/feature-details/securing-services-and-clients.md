@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-ms.openlocfilehash: 713737b129771967958fddf44e9ef28583d49422
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 24e7cc3fd9b349aaba733a809a03be2454bd371d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554084"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288404"
 ---
 # <a name="securing-services-and-clients"></a>Hizmet ve İstemcileri Güvenli Hale Getirme
+
 Bu bölümdeki bilgiler Windows Communication Foundation (WCF) ' deki programlama güvenliği ' ne odaklanır. Genellikle, bu, uygun bir sistem tarafından sağlanmış bağlamayı seçmeyi, Güvenlik öğesinin özelliklerini ayarlamayı ve ardından hizmet davranışlarının, kimlik bilgilerinin hizmet veya istemci tarafından kullanılmak üzere nasıl alındığını belirleyen özellikler ayarlanmasını içerir. Bu teknikler, [yaygın güvenlik senaryolarında](common-security-scenarios.md)gösterildiği gibi çoğu senaryonun çoğu kullanıcının güvenlik gereksinimlerini kapsar. Senaryonuz daha fazla özellik gerektiriyorsa, önce [özel bağlamalarla güvenlik özelliklerine](security-capabilities-with-custom-bindings.md)bakın; bir çözüm görünmüyorsa bkz. [güvenliği genişletme](../extending/extending-security.md). Zengin talepler kullanan bir sistem oluşturuyorsanız (veya ile birlikte çalışıyorsanız), [Yetkilendirme](authorization-in-wcf.md)' de yer alan konulara bakın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [WCF Güvenliğini Programlama](programming-wcf-security.md)  
  İletileri güvenli hale getirmek için kullanılan programlama modeline genel bakış.  
   
@@ -31,6 +33,7 @@ Bu bölümdeki bilgiler Windows Communication Foundation (WCF) ' deki programlam
  X. 509.440 sertifikaları kullanılırken gereken bazı yaygın görevlerden oluşan bir açıklama.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -38,6 +41,7 @@ Bu bölümdeki bilgiler Windows Communication Foundation (WCF) ' deki programlam
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Güvenlik Kavramları](security-concepts.md)  
   
  [Güvenliği Genişletme](../extending/extending-security.md)  

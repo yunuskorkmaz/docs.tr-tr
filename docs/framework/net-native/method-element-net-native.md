@@ -1,18 +1,19 @@
 ---
-title: <Method>Öğesi (.NET Native)
+title: <Method> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-ms.openlocfilehash: 8db32c660846b4f4071fff2a40c760a3d1ef2489
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1d57457c90e44c70caa301eccc02c5831d283cea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180985"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287910"
 ---
-# <a name="method-element-net-native"></a>\<Method>Öğesi (.NET Native)
+# <a name="method-element-net-native"></a>\<Method> Öğesi (.NET Native)
+
 Çalışma zamanı yansıtma ilkesini bir oluşturucuya veya yöntemine uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Method Name="method_name"  
@@ -22,6 +23,7 @@ ms.locfileid: "79180985"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -68,13 +70,15 @@ ms.locfileid: "79180985"
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Oluşturulan genel türe ve tüm üyelerine yansıma ilkesi uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<Method>`Genel yöntemin bir öğesi, kendi ilkesi olmayan tüm örneklemelerde ilkesini uygular.  
   
  `Signature`Belirli bir yöntem aşırı yüklemesi için ilkeyi belirtmek üzere özniteliğini kullanabilirsiniz. Aksi halde, `Signature` özniteliği yoksa, çalışma zamanı yönergesi metodun tüm aşırı yüklemeleri için geçerlidir.  
   
- Öğesini kullanarak bir Oluşturucu için çalışma zamanı yansıtma ilkesini tanımlayamazsınız `<Method>` . Bunun yerine,,, `Activate` [\<Assembly>](assembly-element-net-native.md) [\<Namespace>](namespace-element-net-native.md) [\<Type>](type-element-net-native.md) veya öğesinin özniteliğini kullanın [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .  
+ Öğesini kullanarak bir Oluşturucu için çalışma zamanı yansıtma ilkesini tanımlayamazsınız `<Method>` . Bunun yerine,,, `Activate`  [\<Assembly>](assembly-element-net-native.md) [\<Namespace>](namespace-element-net-native.md) [\<Type>](type-element-net-native.md) veya öğesinin özniteliğini kullanın [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .  
   
 ## <a name="example"></a>Örnek  
+
  `Stringify`Aşağıdaki örnekteki yöntem, bir nesneyi dize gösterimine dönüştürmek için yansıma kullanan genel amaçlı bir biçimlendirme yöntemidir. Nesnenin varsayılan metodunu çağırmanın yanı sıra `ToString` , yöntemi bir nesnenin `ToString` yöntemini bir biçim dizesi, bir <xref:System.IFormatProvider> uygulama veya her ikisi geçirerek, biçimlendirilen bir sonuç dizesi üretebilir. Ayrıca <xref:System.Convert.ToString%2A?displayProperty=nameWithType> , bir sayıyı ikili, onaltılı veya sekizli gösterimine dönüştüren aşırı yüklemelerin birini çağırabilir.  
   
  [!code-csharp[ProjectN_Reflection#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/method1.cs#7)]  
@@ -85,7 +89,7 @@ ms.locfileid: "79180985"
   
  Ancak, .NET Native ile derlendiğinde, örnek çalışma zamanında, <xref:System.NullReferenceException> ve [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) özel durumları dahil olmak üzere bir dizi özel durum oluşturabilir, bu durum, `Stringify` yöntemin öncelikle .NET Framework sınıf kitaplığındaki temel türleri dinamik olarak biçimlendirmeyi desteklemesi amaçlanan için oluşur. Ancak, meta verileri varsayılan yönergeler dosyası tarafından kullanılamaz. Ancak meta verileri kullanılabilir duruma getirilse de, uygun uygulamalar yerel koda dahil olmadığından, örnek [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) özel durumları oluşturur `ToString` .  
   
- Bu özel durumlar [\<Type>](type-element-net-native.md) , meta verileri bulunması gereken türleri tanımlamak için öğesini kullanarak ve `<Method>` dinamik olarak çağrılabilen yöntem aşırı yüklemelerinin uygulanmasını sağlamak için öğe ekleyerek ortadan kaldırılabilir. Aşağıda, bu özel durumları ortadan kaldıran ve örneğin hatasız yürütülmesine izin veren default. RD. xml dosyası verilmiştir.  
+ Bu özel durumlar [\<Type>](type-element-net-native.md) , meta verileri bulunması gereken türleri tanımlamak için öğesini kullanarak ve `<Method>` dinamik olarak çağrılabilen yöntem aşırı yüklemelerinin uygulanmasını sağlamak için öğe ekleyerek ortadan kaldırılabilir. Aşağıda, bu özel durumları ortadan kaldıran ve örneğin hatasız yürütülmesine izin veren default.rd.xml dosyası verilmiştir.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -148,4 +152,4 @@ ms.locfileid: "79180985"
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Çalışma Zamanı Yönerge Öğeleri](runtime-directive-elements.md)
 - [Çalışma Zamanı Yönerge İlkesi Ayarları](runtime-directive-policy-settings.md)
-- [\<MethodInstantiation>Dosyalarında](methodinstantiation-element-net-native.md)
+- [\<MethodInstantiation> Dosyalarında](methodinstantiation-element-net-native.md)

@@ -1,18 +1,19 @@
 ---
-title: <TypeParameter>Öğesi (.NET Native)
+title: <TypeParameter> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dc04115914b7571b677c6d069d2d4b820b895d59
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128921"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287676"
 ---
-# <a name="typeparameter-element-net-native"></a>\<TypeParameter>Öğesi (.NET Native)
+# <a name="typeparameter-element-net-native"></a>\<TypeParameter> Öğesi (.NET Native)
+
 Bir yönteme geçirilen bir tür bağımsız değişkeni tarafından temsil edilen türe ilke uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Parameter Name="parameter_name"  
@@ -29,6 +30,7 @@ Bir yönteme geçirilen bir tür bağımsız değişkeni tarafından temsil edil
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -60,6 +62,7 @@ Bir yönteme geçirilen bir tür bağımsız değişkeni tarafından temsil edil
 |*policy_setting*|Bu ilke türüne uygulanacak ayar. Olası değerler şunlardır,,,, `All` `Public` `PublicAndInternal` `Required Public` `Required PublicAndInternal` ve `Required All` . Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -69,6 +72,7 @@ Bir yönteme geçirilen bir tür bağımsız değişkeni tarafından temsil edil
 |[\<Method>](method-element-net-native.md)|Çalışma zamanı yansıtma ilkesini bir oluşturucuya veya yöntemine uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<TypeParameter>`Öğesi öğesine benzerdir [\<Parameter>](parameter-element-net-native.md) , ancak yalnızca türündeki parametrelere uygulanabilirler <xref:System.Type> . Çalışma zamanında, özniteliği tarafından belirtilen tür bağımsız değişkeni tarafından temsil edilen herhangi bir tür için ilke uygular `Name` .  
   
  Örneğin, NewtonSoft JSON seri hale getirici statik bir `JsonConvert.DeserializeObject(String value, Type type)` yöntem içerir. Aşağıdaki yansıma yönergeleri:  
@@ -94,7 +98,7 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<Method>Dosyalarında](method-element-net-native.md)
+- [\<Method> Dosyalarında](method-element-net-native.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Çalışma Zamanı Yönerge İlkesi Ayarları](runtime-directive-policy-settings.md)
 - [Çalışma Zamanı Yönerge Öğeleri](runtime-directive-elements.md)

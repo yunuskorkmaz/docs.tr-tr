@@ -7,24 +7,27 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 34bde56b78ec0148cf6b924f8edd29343b97faa4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e8a6cf0cae7519c3ffdbad188c6f67d11a4a6fc1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597390"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289808"
 ---
 # <a name="forward-compatible-data-contracts"></a>İleri Uyumlu Veri Sözleşmeleri
+
 Windows Communication Foundation (WCF) veri sözleşmesi sisteminin bir özelliği, sözleşmelerin zaman içinde bölünemez yollarla gelişebilmesidir. Diğer bir deyişle, bir veri sözleşmesinin eski sürümüne sahip bir istemci aynı veri sözleşmesinin daha yeni bir sürümüyle iletişim kurabilir veya bir veri sözleşmesinin daha yeni bir sürümünü içeren bir istemci aynı veri sözleşmesinin daha eski bir sürümüyle iletişim kurabilir. Daha fazla bilgi için bkz. [En Iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../best-practices-data-contract-versioning.md).  
   
- Mevcut bir veri sözleşmesinin yeni sürümleri oluşturulduğunda, sürüm oluşturma özelliklerinin çoğunu gereken bir şekilde uygulayabilirsiniz. Ancak, bir sürüm oluşturma özelliğinin *, doğru*şekilde çalışması için ilk sürümden türün içine yerleşik olması gerekir.  
+ Mevcut bir veri sözleşmesinin yeni sürümleri oluşturulduğunda, sürüm oluşturma özelliklerinin çoğunu gereken bir şekilde uygulayabilirsiniz. Ancak, bir sürüm oluşturma özelliğinin *, doğru* şekilde çalışması için ilk sürümden türün içine yerleşik olması gerekir.  
   
-## <a name="round-tripping"></a>Gidiş dönüşü  
+## <a name="round-tripping"></a>Round-Tripping  
+
  Veriler yeni bir sürümden eski bir sürüme geçtiğinde ve bir veri sözleşmesinin yeni sürümüne geri geçtiğinde, gidiş dönüş oluşur. Gidiş dönüşü, hiçbir veri kaybolmamasını garanti eder. Gidiş dönüşü etkinleştirmek, daha sonra veri sözleşmesi sürüm oluşturma modeli tarafından desteklenen herhangi bir değişiklik ile tür ileri uyumlu hale getirir.  
   
  Belirli bir tür için gidiş-dönüşü etkinleştirmek üzere, türünün arabirimini uygulaması gerekir <xref:System.Runtime.Serialization.IExtensibleDataObject> . Arabirim bir özellik içerir <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> ( <xref:System.Runtime.Serialization.ExtensionDataObject> türü döndürülüyor). Özelliği, geçerli sürüme bilinmeyen veri sözleşmesinin gelecekteki sürümlerindeki tüm verileri depolar.  
   
 ### <a name="example"></a>Örnek  
+
  Aşağıdaki veri sözleşmesi gelecekteki değişikliklerle ileri uyumlu değildir.  
   
  [!code-csharp[C_DataContract#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#7)]
@@ -46,4 +49,4 @@ Windows Communication Foundation (WCF) veri sözleşmesi sisteminin bir özelli�
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - [Veri Sözleşmesi Sürümü Oluşturma](data-contract-versioning.md)
-- [En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma](../best-practices-data-contract-versioning.md)
+- [En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma](../best-practices-data-contract-versioning.md)

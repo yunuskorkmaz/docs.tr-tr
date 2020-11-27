@@ -1,18 +1,19 @@
 ---
-title: <Namespace>Öğesi (.NET Native)
+title: <Namespace> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-ms.openlocfilehash: 06d88a7b0f95c7c1dbe98818b847c92e08a57a19
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 05de04685f8ba746f55bf040c74fd3831c5b63ca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180964"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287897"
 ---
-# <a name="namespace-element-net-native"></a>\<Namespace>Öğesi (.NET Native)
+# <a name="namespace-element-net-native"></a>\<Namespace> Öğesi (.NET Native)
+
 Çalışma zamanı yansıma ilkesini belirtilen bir ad alanındaki tüm türlere uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Namespace Name="namespace_name"
@@ -29,6 +30,7 @@ ms.locfileid: "79180964"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -77,9 +79,10 @@ ms.locfileid: "79180964"
 |`<Namespace>`|Bir üst ad alanındaki tüm türlere yansıma ilkesi uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Activate`,, `Browse` `Dynamic` Ve `Serialize` özniteliklerinin tümü isteğe bağlıdır. Hiçbiri yoksa, `<Namespace>` öğe yalnızca alt öğeler için bir kapsayıcı olarak hizmet verir. Varsa, `<Namespace>` öğesi, çalışma zamanı yansıtma ilkesini belirtilen ad alanındaki tüm türlere uygular.  
   
- Öğesinin bir alt öğesi olduğunda, öğesi öğesi [\<Assembly>](assembly-element-net-native.md) `<Namespace>` tarafından tanımlanan çalışma zamanı yansıma ilkesini geçersiz kılar [\<Assembly>](assembly-element-net-native.md) .  
+ Öğesinin bir alt öğesi olduğunda, öğesi öğesi [\<Assembly>](assembly-element-net-native.md) `<Namespace>` tarafından tanımlanan çalışma zamanı yansıma ilkesini geçersiz kılar  [\<Assembly>](assembly-element-net-native.md) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

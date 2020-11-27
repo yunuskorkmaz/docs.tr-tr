@@ -6,19 +6,21 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], discovery
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
-ms.openlocfilehash: 63c6589cb2ecff9f0a5e7c8bb61b454f6516c98c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 176e9760d98f9640bd9d1c7b059287dc29c0d666
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600185"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289366"
 ---
 # <a name="wcf-discovery"></a>WCF Keşfetme
-Windows Communication Foundation (WCF), WS-Discovery protokolünü kullanarak birlikte çalışabilen bir şekilde hizmetlerin çalışma zamanında keşfedilmesini sağlamak için destek sağlar. WCF Hizmetleri, çok noktaya yayın iletisi veya bulma proxy sunucusu kullanarak ağ üzerinde kullanılabilirlik durumunu duyurur. İstemci uygulamaları, bir dizi ölçütü karşılayan hizmetleri bulmak için ağda veya bulma proxy sunucusunda arama yapabilir. Bu bölümdeki konularda bir genel bakış sağlanır ve bu özelliğin programlama modeli ayrıntılı olarak açıklanır.  
+
+Windows Communication Foundation (WCF), WS-Discovery protokolü kullanılarak birlikte çalışabilen bir şekilde hizmetlerin çalışma zamanında keşfedilmesini sağlamak için destek sağlar. WCF Hizmetleri, çok noktaya yayın iletisi veya bulma proxy sunucusu kullanarak ağ üzerinde kullanılabilirlik durumunu duyurur. İstemci uygulamaları, bir dizi ölçütü karşılayan hizmetleri bulmak için ağda veya bulma proxy sunucusunda arama yapabilir. Bu bölümdeki konularda bir genel bakış sağlanır ve bu özelliğin programlama modeli ayrıntılı olarak açıklanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [WCF Keşif Genel Bakış](wcf-discovery-overview.md)  
- WCF tarafından sağlanan WS-Discovery desteğine genel bir bakış sağlar.  
+ WCF tarafından sağlanan WS-Discovery desteğe genel bakış sağlar.  
   
  [WCF Keşif Nesnesi Modeli](wcf-discovery-object-model.md)  
  Nesne modelindeki sınıfları ve WS-Discovery desteğinin genişletilebilirliğini açıklar.  

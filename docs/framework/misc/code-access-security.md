@@ -16,12 +16,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1119965f971e00b1b795378d9af3977074a696f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224352"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288326"
 ---
 # <a name="code-access-security"></a>Kod Erişimi Güvenliği
 
@@ -44,7 +44,9 @@ ms.locfileid: "92224352"
  Ortak dil çalışma zamanını hedefleyen tüm yönetilen kodlar, bu kod tek bir kod erişim güvenliği çağrısı yapmasa bile, kod erişim güvenliği avantajlarından yararlanır. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](code-access-security-basics.md).  
   
 <a name="key_functions"></a>
+
 ## <a name="key-functions-of-code-access-security"></a>Kod erişim güvenliği 'nin önemli Işlevleri  
+
  Kod erişim güvenliği, kodda korunan kaynaklara ve işlemlere erişimi sınırlamaya yardımcı olur. .NET Framework, kod erişim güvenliği aşağıdaki işlevleri gerçekleştirir:  
   
 - Çeşitli sistem kaynaklarına erişme hakkını temsil eden izinleri ve izin kümelerini tanımlar.  
@@ -56,7 +58,9 @@ ms.locfileid: "92224352"
 - Çağrı yığınında her çağıranın verilen izinlerini çağıranların sahip olması gereken izinlerle karşılaştırarak çalışma zamanında kod kısıtlamalarını zorlar.  
   
 <a name="walking_the_call_stack"></a>
+
 ## <a name="walking-the-call-stack"></a>Çağrı yığını yürüme  
+
  Kodun bir kaynağa erişmek veya bir işlemi gerçekleştirmek için yetkilendirilip yetkilendirilmediğini anlamak için, çalışma zamanının güvenlik sistemi çağrı yığınına kılavuzluk eder ve her çağıranın verilen izinlerini talep edilen izinlerle karşılaştırır. Çağrı yığınındaki herhangi bir çağıran, istenen izne sahip değilse, bir güvenlik özel durumu oluşturulur ve erişim reddedilir. Yığın ilerlemesi, daha az güvenilen kodun yüksek güvenilir kodu çağırdığı ve yetkisiz eylemler gerçekleştirmek için kullandığı, düğüm saldırılarını önlemeye yardımcı olmak için tasarlanmıştır. Çalışma zamanında tüm çağıranların yoğun izinleri performansı etkiler, ancak kodun daha az güvenilir bir kod ile kodsuz saldırılardan korunmasını sağlamak önemlidir. Performansı iyileştirmek için, kodunuzun daha az yığın adım gerçekleştirmesini sağlayabilirsiniz. Bununla birlikte, bunu yaptığınızda güvenlik zayıflığından emin olun.  
   
  Aşağıdaki çizimde, bir derleme a4 içindeki bir yöntem çağıranların izin P 'ye sahip olduğu durumlarda oluşan yığın izlenecek sonuç gösterilmektedir.  
@@ -64,6 +68,7 @@ ms.locfileid: "92224352"
  ![Kod erişimi güvenlik yığını ilerleme](media/slide-10a.gif "slide_10a")
   
 <a name="related_topics"></a>
+
 ## <a name="related-articles"></a>İlgili makaleler:
   
 |Başlık|Açıklama|  

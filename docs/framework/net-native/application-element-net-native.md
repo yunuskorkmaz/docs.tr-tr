@@ -1,21 +1,22 @@
 ---
-title: <Application>Öğesi (.NET Native)
+title: <Application> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a7f2eca5a5bb5cfb7b9827f2463454a17fc128cb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288144"
 ---
-# <a name="application-element-net-native"></a>\<Application>Öğesi (.NET Native)
+# <a name="application-element-net-native"></a>\<Application> Öğesi (.NET Native)
+
 Uygulama genelinde türler için bir kapsayıcı görevi görür ve meta verileri çalışma zamanında yansıma için kullanılabilir olan ve çalışma zamanı yansıtma ilkesini bir uygulamadaki tüm program öğelerine uygular.  
   
  \<Directives> Öğesi  
-\<Application>Öğesi (RD. xml)  
+\<Application> Öğesi (rd.xml)  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Application Activate="policy_setting"  
@@ -31,6 +32,7 @@ Uygulama genelinde türler için bir kapsayıcı görevi görür ve meta veriler
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır. Alt öğeler tablosunda, ilke, çalışma zamanında belirli program öğeleri için kullanılabilir hale getirilen meta veri türünü ifade eder.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -75,6 +77,7 @@ Uygulama genelinde türler için bir kapsayıcı görevi görür ve meta veriler
 |[\<Directives>](directives-element-net-native.md)|Çalışma zamanı yönergeleri dosyasının kök öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  [\<Directives>](directives-element-net-native.md)Öğe sıfır veya bir `<Application>` öğe içerebilir. `<Application>`Tek bir yansıma yönergeleri dosyasında birden çok öğe desteklenmez.  
   
  `<Application>`Öğesi iki şekilde kullanılabilir:  
@@ -85,7 +88,7 @@ Uygulama genelinde türler için bir kapsayıcı görevi görür ve meta veriler
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<Library>Dosyalarında](library-element-net-native.md)
-- [\<Directives>Dosyalarında](directives-element-net-native.md)
+- [\<Library> Dosyalarında](library-element-net-native.md)
+- [\<Directives> Dosyalarında](directives-element-net-native.md)
 - [Çalışma Zamanı Yönerge Öğeleri](runtime-directive-elements.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)

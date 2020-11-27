@@ -9,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 415a42f7c4f4866bb72f19bdd6f02bfdb5158bf8
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: baa04a3c55728590b8aa502648a8ab42bf62f903
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855809"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288287"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Nasıl yapılır: Korumalı Alanda Kısmen Güvenilen Kodu Çalıştırma
 
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     <xref:System.Security.SecurityManager.GetStandardSandbox%2A>Yöntemi, `Internet` `LocalIntranet` kanıt içindeki bölgeye bağlı olarak bir izin kümesi veya bir izin kümesi döndürür. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>Ayrıca, başvuru olarak geçirilen bazı kanıt nesneleri için kimlik izinleri oluşturur.  
+     <xref:System.Security.SecurityManager.GetStandardSandbox%2A>Yöntemi, `Internet` `LocalIntranet` kanıt içindeki bölgeye bağlı olarak bir izin kümesi veya bir izin kümesi döndürür. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Ayrıca, başvuru olarak geçirilen bazı kanıt nesneleri için kimlik izinleri oluşturur.  
   
 2. Güvenilmeyen kodu çağıran barındırma sınıfını (Bu örnekte adlandırılır) içeren derlemeyi imzalayın `Sandboxer` . <xref:System.Security.Policy.StrongName>Derlemeyi <xref:System.Security.Policy.StrongName> çağrının parametresinin dizisine imzalamak için kullanılan öğesini ekleyin `fullTrustAssemblies` <xref:System.AppDomain.CreateDomain%2A> . Barındırma sınıfının, kısmi güven kodunun yürütülmesini sağlamak veya kısmi güven uygulamasına hizmet sunmak için tam olarak güvenilir olarak çalıştırılması gerekir. Bu, <xref:System.Security.Policy.StrongName> bir derlemenin türünü okuduğunuzdan oluşur:  
   
@@ -167,7 +167,7 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection>kısmen güvenilen derlemedeki bir yöntemin tanıtıcısını almak için kullanılır. Tanıtıcı, kodu minimum izinlerle güvenli bir şekilde yürütmek için kullanılabilir.  
+     <xref:System.Reflection> kısmen güvenilen derlemedeki bir yöntemin tanıtıcısını almak için kullanılır. Tanıtıcı, kodu minimum izinlerle güvenli bir şekilde yürütmek için kullanılabilir.  
   
      Önceki kodda, ' yi <xref:System.Security.PermissionSet.Assert%2A> yazdırmadan önce tam güven izni için ' a göz önüne alın <xref:System.Security.SecurityException> .  
   
@@ -178,6 +178,7 @@ AppDomain.CreateDomain( string friendlyName,
      Tam güven onayı, ' dan genişletilmiş bilgileri elde etmek için kullanılır <xref:System.Security.SecurityException> . Olmadan <xref:System.Security.PermissionSet.Assert%2A> <xref:System.Security.SecurityException.ToString%2A> yöntemi, <xref:System.Security.SecurityException> yığın üzerinde kısmen güvenilen kod olduğunu ve döndürülen bilgileri kısıtlayamayacağını keşfeder. Kısmi güven kodu bu bilgileri okuyabiliyorsanız ve risk verilmemesine göre azaltıldığında, bu güvenlik sorunlarına neden olabilir <xref:System.Security.Permissions.UIPermission> . Tam güven onayı, az önce ve yalnızca kısmi güven kodunun tam güvene yükseltilmesine izin vermediğinizden emin olduğunuzda kullanılmalıdır. Kural olarak, aynı işlevde güvenmediğiniz ve tam güven için bir onay çağırdıktan sonra kodu çağırmayın. Kullanmayı bitirdikten sonra her zaman onayı döndürmenizde iyi bir uygulamadır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, önceki bölümde yordamı uygular. Örnekte, `Sandboxer` Visual Studio çözümünde adlı bir proje, sınıfını uygulayan adlı bir projeyi de içerir `UntrustedCode` `UntrustedClass` . Bu senaryoda, döndürmesi beklenen bir yöntemi içeren bir kitaplık derlemesini indirdiğiniz `true` veya `false` girdiğiniz sayının bir Fibonaccı numarası olup olmadığını belirtmesi gerektiğini varsaymaktadır. Bunun yerine, yöntemi bilgisayarınızdan bir dosyayı okumaya çalışır. Aşağıdaki örnek güvenilmeyen kodu gösterir.  
   
 ```csharp

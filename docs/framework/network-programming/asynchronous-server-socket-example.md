@@ -10,14 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: e30b9694a07d1551163f5d80e7874fe5c7d29050
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 2afcd0cbfc26146c09326057037347cc9f3d7ce7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359058"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287637"
 ---
 # <a name="asynchronous-server-socket-example"></a>Zaman Uyumsuz Sunucu Yuvası Örneği
+
 Aşağıdaki örnek program istemcilerden gelen bağlantı isteklerini alan bir sunucu oluşturur. Sunucu zaman uyumsuz bir yuva ile oluşturulmuştur, bu nedenle sunucu uygulamasının yürütülmesi istemciden bir bağlantı beklerken askıya alınmaz. Uygulama istemciden bir dize alır, bu dizeyi konsolda görüntüler ve ardından dizeyi istemciye geri yankılar. İstemciden alınan dize, \<EOF> iletinin sonuna işaret etmek için "" dizesini içermelidir.  
   
 ```vb  

@@ -2,17 +2,18 @@
 title: GetOperationCounterInstanceName
 ms.date: 03/30/2017
 ms.assetid: ac42e20f-63c1-4bdb-8660-736980936811
-ms.openlocfilehash: f82065947879098295995b6e54a493e23764f374
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b073cd5aea930dec0491f8fe87e578bd190027ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963663"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288859"
 ---
 # <a name="getoperationcounterinstancename"></a>GetOperationCounterInstanceName
-İşlemi performans sayacı örneği adını alır.  
+
+İşlem performans sayacı örnek adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```csharp
 string GetOperationCounterInstanceName(  
@@ -22,11 +23,12 @@ string GetOperationCounterInstanceName(
   
 ## <a name="parameters"></a>Parametreler  
   
-### <a name="operation"></a>Çalışma  
- [in] dize  
+### <a name="operation"></a>İşlem  
+
+ [in] dizesi  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|
+|Ad Alanı|Root\ServiceModel içinde tanımlı|

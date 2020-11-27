@@ -1,18 +1,19 @@
 ---
-title: <Parameter>Öğesi (.NET Native)
+title: <Parameter> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-ms.openlocfilehash: c6dfc347d44a794ee8496c45ca879f9daab12b22
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7e812ab60eb0a89eb868346733a8ea74e2f76d3e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128192"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287871"
 ---
-# <a name="parameter-element-net-native"></a>\<Parameter>Öğesi (.NET Native)
+# <a name="parameter-element-net-native"></a>\<Parameter> Öğesi (.NET Native)
+
 Bir yönteme geçirilen bağımsız değişkenin türüne yansıma ilkesi uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Parameter Name="parameter_name"  
@@ -29,6 +30,7 @@ Bir yönteme geçirilen bağımsız değişkenin türüne yansıma ilkesi uygula
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -60,6 +62,7 @@ Bir yönteme geçirilen bağımsız değişkenin türüne yansıma ilkesi uygula
 |*policy_setting*|Bu ilke türüne uygulanacak ayar. Olası değerler şunlardır,,,, `All` `Public` `PublicAndInternal` `Required Public` `Required PublicAndInternal` ve `Required All` . Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -69,11 +72,12 @@ Bir yönteme geçirilen bağımsız değişkenin türüne yansıma ilkesi uygula
 |[\<Method>](method-element-net-native.md)|Çalışma zamanı yansıtma ilkesini bir oluşturucuya veya yöntemine uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<Parameter>`Öğesi öğesinin bir alt öğesidir [\<Method>](method-element-net-native.md) ve belirli bir yöntem parametresine ilke uygulamak için kullanılır. Belirli yöntem parametresi, türüne göre değil, adıyla belirtilir. Veya gibi bir ilke türünü temsil eden en az bir özniteliğin `Activate` mevcut olması `Dynamic` gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<Method>Dosyalarında](method-element-net-native.md)
+- [\<Method> Dosyalarında](method-element-net-native.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Çalışma Zamanı Yönerge İlkesi Ayarları](runtime-directive-policy-settings.md)
 - [Çalışma Zamanı Yönerge Öğeleri](runtime-directive-elements.md)

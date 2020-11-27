@@ -2,12 +2,12 @@
 title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d779b49a8201b3ad53507af7710f7aef5e9321c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557820"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289652"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen senaryolar
 
@@ -16,6 +16,7 @@ ms.locfileid: "90557820"
 ## <a name="impersonation-scenarios"></a>Kimliğe bürünme senaryoları
 
 ### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a>İstemciler zaman uyumsuz çağrılar yaparken kimliğe bürünme kimliği akamayabilir
+
  Bir WCF istemcisi, kimliğe bürünme altında Windows kimlik doğrulaması kullanarak bir WCF hizmetine zaman uyumsuz çağrılar yaptığında kimlik doğrulaması, kimliğe bürünülmüş kimlik yerine istemci işleminin kimliğiyle meydana gelebilir.
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP ve güvenli bağlam belirteci tanımlama bilgisi etkin

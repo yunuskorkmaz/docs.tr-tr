@@ -1,18 +1,19 @@
 ---
-title: Uç Noktası
+title: Uç Nokta
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ceb4e4b41502b00d7bb21f1ecbd8249fccf1ce3b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795902"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288820"
 ---
-# <a name="endpoint"></a>Uç Noktası
-Uç Noktası  
+# <a name="endpoint"></a>Uç Nokta
+
+Uç Nokta  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class Endpoint  
@@ -33,6 +34,7 @@ class Endpoint
 ```  
   
 ## <a name="methods"></a>Yöntemler  
+
  Endpoint sınıfı aşağıdaki yöntemi tanımlar.  
   
 |Yöntem|Açıklama|  
@@ -40,89 +42,102 @@ class Endpoint
 |[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|İşlem performans sayacı örnek adını alır|  
   
 ## <a name="properties"></a>Özellikler  
+
  Uç nokta sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="address"></a>Adres  
+
  Veri türü: dize  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Uç noktanın adresini içeren bir URI.  
   
 ### <a name="addressheaders"></a>AddressHeaders  
+
  Veri türü: dize dizisi  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Bu uç noktaya eklenen adres üst bilgileri koleksiyonu.  
   
 ### <a name="addressidentity"></a>Addressıdentity  
+
  Veri türü: dize  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Uç noktanın kimliği.  
   
 ### <a name="appdomainid"></a>AppDomainID  
+
  Veri türü: Sint32  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Uç noktasını barındıran AppDomain 'in AppDomain kimliği.  
   
 ### <a name="behaviors"></a>Davranışlar  
- Veri türü: Davranış dizisi  
+
+ Veri türü: davranış dizisi  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Bu uç nokta tarafından uygulanan davranışların koleksiyonu.  
   
 ### <a name="binding"></a>Bağlama  
- Veri türü: Bağlama  
+
+ Veri türü: bağlama  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Bu uç nokta tarafından kullanılan bağlama.  
   
 ### <a name="contractname"></a>ContractName  
+
  Veri türü: dize  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Bu uç noktanın hangi sözleşmeyi açığa çıkardığınızı belirten bir dize.  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
+
  Veri türü: dize  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Uç noktanın performans sayaçları örneğinin adı.  
   
 ### <a name="listenuri"></a>Öğesini  
+
  Veri türü: dize  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Uç noktanın dinlediği URI.  
   
-### <a name="name"></a>Ad  
+### <a name="name"></a>Adı  
+
  Veri türü: dize  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Bu uç noktanın benzersiz adı.  
   
-### <a name="processid"></a>İşlem kimliği  
+### <a name="processid"></a>Işlem  
+
  Veri türü: Sint32  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Uç noktasını barındıran işlemin işlem kimliği.  
   
 ### <a name="ref"></a>ref  
- Veri türü: Sözleşme  
+
+ Veri türü: sözleşme  
   
- Erişim türü: Salt okunurdur  
+ Erişim türü: salt okunurdur  
   
  Bu uç noktanın sunduğu sözleşme.  
   

@@ -2,67 +2,78 @@
 title: Etkinlik Tanımı Kapsamı ve Görünürlüğü
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7f656fee4960a8c43ac58abafba400ed9b35bc1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945957"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289171"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Etkinlik Tanımı Kapsamı ve Görünürlüğü
-Etkinlik tanımı kapsamı ve kapsamını belirleme gibi görünürlük ve bir nesnenin görünürlüğü olan etkinliğin üyelere erişim için diğer nesneleri ve etkinlikleri. Etkinlik tanımı aşağıdaki uygulamaları tarafından gerçekleştirilir:  
+
+Bir nesnenin kapsamı ve görünürlüğü gibi etkinlik tanımı kapsamı ve görünürlüğü, diğer nesne veya etkinliklerin etkinliğin üyelerine erişmesine olanak sağlar. Etkinlik tanımı aşağıdaki uygulamalar tarafından gerçekleştirilir:  
   
-1. Üyeleri belirleyen (<xref:System.Activities.Argument>, <xref:System.Activities.Variable>, ve <xref:System.Activities.ActivityDelegate> nesneleri ve alt etkinlikler), kullanıcılara bir etkinlik sunar.  
+1. Üyeler ( <xref:System.Activities.Argument> , <xref:System.Activities.Variable> , ve <xref:System.Activities.ActivityDelegate> nesneler ve alt etkinlikler), bir etkinliğin kullanıcılarına göre belirlenir.  
   
-2. Etkinlik yürütme mantığını uygulama  
+2. Etkinliğin yürütme mantığını uygulama  
   
- Uygulama, etkinliğin tüketicilere açık değildir ancak bunun yerine uygulamasının Ayrıntılar üyeler içerebilir.  Tür tanımına benzer, tanımlanan etkinlik tanımı ile ilgili bir etkinlik üye görünürlüğünü nitelemek Yazar etkinlik modeli sağlar.  Bu görünürlük üye kullanım, veri kapsamı gibi yönlerini yönetir.  
+ Uygulama, etkinliğin tüketicilerine gösterilmeyen ve uygulamanın ayrıntıları olan üyeleri içerebilir.  Tür tanımına benzer şekilde, etkinlik modeli, bir yazarın tanımlanmakta olan etkinliğin tanımıyla ilgili olarak bir etkinlik üyesinin görünürlüğünü niteliğini sağlamasına izin verir.  Bu görünürlük, veri kapsamı gibi üye kullanımının yönlerini yönetir.  
   
 ## <a name="scope"></a>Kapsam  
- Veri kapsamı ek olarak, etkinlik model görünürlük, etkinlik, doğrulama, hata ayıklama, izleme veya izleme gibi diğer yönleri için erişimi kısıtlayabilirsiniz. Görünürlük ve belirli bir kapsamda tanımının yürütme özellikleri kısıtlamak için kapsam yürütme özelliklerini kullanın. Tarafından yakalanan durum sınırlamak için ikincil kökleri kullanmak görünürlük ve kapsamını belirleme bir <xref:System.Activities.Statements.CompensableActivity> kapsamına tanım compensable etkinlikleri kullanılır.  
+
+ Veri kapsama ek olarak, etkinlik modeli görünürlüğü, etkinliğin doğrulama, hata ayıklama, izleme veya izleme gibi diğer yönlerine erişimi kısıtlayabilir. Yürütme özellikleri, yürütme özelliklerini belirli bir tanım kapsamına kısıtlayan görünürlük ve kapsamları kullanır. İkincil kökler, bir ile yakalanan durumu, <xref:System.Activities.Statements.CompensableActivity> compensable etkinliklerinin kullanıldığı tanım kapsamına kısıtlamak için görünürlük ve kapsam kullanır.  
   
-## <a name="definition-and-usage"></a>Tanımı ve kullanımı  
- Bir iş akışı temel etkinliği sınıflardan devralmaya ve etkinliklerini kullanarak yeni etkinlikleri yazma yazılır [yerleşik etkinlik Kitaplığı](net-framework-4-5-built-in-activity-library.md). Bir etkinliği kullanmak için etkinlik Yazar tanımı'nın her bileşeninin görünürlüğünü yapılandırmanız gerekir.  
+## <a name="definition-and-usage"></a>Tanım ve kullanım  
+
+ Bir iş akışı, temel etkinlik sınıflarından devralarak ve [yerleşik etkinlik kitaplığındaki](net-framework-4-5-built-in-activity-library.md)Etkinlikler kullanılarak yazılır. Etkinlik kullanmak için, etkinlik yazarının tanımının her bir bileşeninin görünürlüğünü yapılandırması gerekir.  
   
 ### <a name="activity-members"></a>Etkinlik üyeleri  
- Etkinlik modeli bağımsız değişkenler, değişkenleri, temsilciler ve etkinlik tüketicilere kullanılabilmesini çocuk etkinliklerinin tanımlar. Her biri bu üyeleri olarak bildirilebilir `public` veya `private`. Genel üyeler, etkinlik tüketici tarafından yapılandırılır, ancak `private` üyeleri etkinlik yazarı tarafından sabit bir uygulama kullanın. Veri kapsamı için görünürlük kuralları aşağıdaki gibidir:  
+
+ Etkinlik modeli, etkinliğin tüketiciler tarafından kullanılabilmesini sağlayan bağımsız değişkenleri, değişkenleri, temsilcileri ve alt etkinlikleri tanımlar. Bu üyelerin her biri, veya olarak bildirilemez `public` `private` . Ortak Üyeler etkinliğin tüketicisi tarafından yapılandırılır, ancak `private` Üyeler etkinliğin yazarı tarafından düzeltilen bir uygulama kullanır. Veri kapsamı için görünürlük kuralları aşağıdaki gibidir:  
   
-1. Genel değişkenleri ortak üyeleri ve ortak bir alt etkinlik ortak üyeleri başvurabilirsiniz.  
+1. Ortak üyeler ve ortak alt etkinliklerin genel üyeleri ortak değişkenlere başvurabilir.  
   
-2. Özel üyeler ve ortak bir alt etkinlik ortak üyeleri bağımsız değişkenler ve özel değişkenlere başvurabilir.  
+2. Özel Üyeler ve ortak alt etkinliklerin genel üyeleri bağımsız değişkenlere ve özel değişkenlere başvurabilir.  
   
- Bir etkinliğin tüketici tarafından ayarlanabilir üyesi hiçbir zaman özel yapılmalıdır.  
+ Bir etkinliğin tüketicisi tarafından ayarlanmayacak bir üye asla özel hale getirilmemelidir.  
   
-### <a name="authoring-models"></a>Model geliştirme  
- Özel etkinlikler kullanılarak tanımlanmış <xref:System.Activities.NativeActivity>, <xref:System.Activities.Activity>, <xref:System.Activities.CodeActivity>, veya <xref:System.Activities.AsyncCodeActivity>. Bu sınıflarından etkinlikler farklı görünürlüğe sahip farklı bir üye türleri açığa çıkarabilir.  
+### <a name="authoring-models"></a>Yazma modelleri  
+
+ Özel Etkinlikler,, veya kullanılarak <xref:System.Activities.NativeActivity> tanımlanır <xref:System.Activities.Activity> <xref:System.Activities.CodeActivity> <xref:System.Activities.AsyncCodeActivity> . Bu sınıflardan türeten etkinlikler farklı görünürlüklerle farklı üye türleri kullanıma sunabilir.  
   
 #### <a name="nativeactivity"></a>NativeActivity  
- Öğesinden türetilen etkinlikleri <xref:System.Activities.NativeActivity> kesinlik temelli kod olarak yazılmış ve isteğe bağlı olarak var olan etkinlikleri kullanılarak tanımlanabilir davranışa sahiptir. Etkinlikler türetme <xref:System.Activities.NativeActivity> çalışma zamanı tarafından kullanıma sunulan tüm özelliklere erişim verir. Böyle bir etkinlik herhangi bir üyesi olarak yalnızca bildirilebilir bağımsız değişkenler hariç, genel veya özel görünürlük kullanılarak tanımlanabilir `public`.  
+
+ Öğesinden türetilen etkinliklerin <xref:System.Activities.NativeActivity> , zorunlu kodda yazılmış davranışları vardır ve isteğe bağlı olarak, mevcut Etkinlikler kullanılarak tanımlanabilir. ' Den etkinliklerin türetme <xref:System.Activities.NativeActivity> , çalışma zamanının sunduğu tüm özelliklere erişim verir. Böyle bir etkinliğin herhangi bir üyesi, yalnızca olarak bildirilebilecek bağımsız değişkenler hariç ortak veya özel görünürlük kullanılarak tanımlanabilir `public` .  
   
- Sınıfından türetilen sınıfların üyeleri <xref:System.Activities.NativeActivity> kullanarak çalışma zamanı bildirilen <xref:System.Activities.NativeActivityMetadata> yapısı geçirilen <xref:System.Activities.NativeActivity.CacheMetadata%2A> yöntemi.  
+ Sınıfından türetilmiş sınıfların üyeleri, <xref:System.Activities.NativeActivity> metoduna geçirilen struct kullanılarak çalışma zamanına göre bildirilmiştir <xref:System.Activities.NativeActivityMetadata> <xref:System.Activities.NativeActivity.CacheMetadata%2A> .  
   
 #### <a name="activity"></a>Etkinlik  
- Kullanılarak oluşturulan etkinlikleri <xref:System.Activities.Activity> diğer etkinlikleri oluşturma aracılığıyla kesinlikle tasarlanmıştır davranışa sahiptir. <xref:System.Activities.Activity> Sınıfında çalışma zamanını kullanarak elde edilen, bir uygulama alt etkinlik <xref:System.Activities.Activity.Implementation%2A>. Türetilen bir etkinlik <xref:System.Activities.Activity> genel bağımsız değişkenler, genel değişkenler, içeri aktarılan ActivityDelegates ve içeri aktarılan etkinlikleri tanımlayabilirsiniz.  
+
+ Kullanılarak oluşturulan etkinliklerin <xref:System.Activities.Activity> , diğer etkinlikleri oluşturarak kesinlikle tasarlanan davranışı vardır. <xref:System.Activities.Activity>Sınıfında, kullanılarak çalışma zamanı tarafından edinilen bir uygulama alt etkinliği vardır <xref:System.Activities.Activity.Implementation%2A> . Öğesinden türetilen bir etkinlik <xref:System.Activities.Activity> genel bağımsız değişkenler, genel değişkenler, içeri aktarılan ActivityDelegates ve içeri aktarılan etkinlikleri tanımlayabilir.  
   
- İçeri aktarılan ActivityDelegates ve etkinlikler etkinliğin Genel alt öğesi olarak bildirilir ancak etkinlik tarafından doğrudan zamanlanamaz. Bu bilgileri, etkinlik hiçbir zaman burada yürütecek konumlarda üst taraftaki doğrulamaları çalıştırmaktan kaçınmak için doğrulama sırasında kullanılır. Aynı zamanda, olduğu gibi ortak öğeleri için içeri aktarılan öğeleri için başvurulan ve etkinliğin uygulama tarafından zamanlandı. Yani Activity1 adlı bir etkinliği alır bir etkinlik içerebilir bir <xref:System.Activities.Statements.Sequence> kendi uygulamasında Activity1 zamanlar.  
+ İçeri aktarılan ActivityDelegates ve Etkinlikler etkinliğin ortak alt öğeleri olarak bildirilmiştir, ancak etkinlik tarafından doğrudan zamanlanamaz. Bu bilgiler, etkinliğin hiçbir zaman yürütülebileceği konumlarda üst öğeye yönelik doğrulamaları çalıştırmayı önlemek için doğrulama sırasında kullanılır. Ayrıca, genel alt öğelere benzer şekilde içeri aktarılan alt öğeler, etkinliğin uygulamasına başvuruda bulunabilir ve zamanlanabilir. Bu, Activity1 adlı bir etkinliği içeri aktaran bir etkinliğin <xref:System.Activities.Statements.Sequence> , Activity1 zamanlaması olan uygulamasında bir içerdiği bir etkinlik olduğu anlamına gelir.  
   
-#### <a name="codeactivity-asynccodeactivity"></a>CodeActivity / AsyncCodeActivity  
- Bu temel sınıf davranışı kesinlik temelli kod yazmak için kullanılır. Bu sınıftan türetilen etkinlikleri ortaya bağımsız değişkenler yalnızca erişebilir. Bu, bu etkinlikleri açığa çıkarabilir üyeler yalnızca genel bağımsız değişkenleri olduğunu gösterir. Diğer üyeleri veya görünürlüğe bu etkinlikleri için geçerlidir.  
+#### <a name="codeactivity-asynccodeactivity"></a>CodeActivity/AsyncCodeActivity  
+
+ Bu temel sınıf, kesinlik temelli kodda yazma davranışı için kullanılır. Bu sınıftan türetilmiş etkinliklerin yalnızca sergiledikleri bağımsız değişkenlere erişimi vardır. Bu, yalnızca bu etkinliklerin sergileyebileceği üyelerin ortak bağımsız değişkenlerle olduğu anlamına gelir. Bu etkinlikler için başka üye veya görünürlükleri uygulanmaz.  
   
-#### <a name="summary-of-visibilities"></a>Görünürlüklerini özeti  
- Aşağıdaki tabloda, bu bölümdeki bilgiler özetlenmektedir.  
+#### <a name="summary-of-visibilities"></a>Görünürlüklıkların Özeti  
+
+ Aşağıdaki tabloda, bu bölümde daha önce yer aldığı bilgiler özetlenmektedir.  
   
-|Üye Türü|NativeActivity|Etkinlik|CodeActivity / AsyncCodeActivity|  
+|Üye Türü|NativeActivity|Etkinlik|CodeActivity/AsyncCodeActivity|  
 |-----------------|--------------------|--------------|--------------------------------------|  
-|Arguments|Genel / özel|Ortak|Uygulanamaz|  
-|Değişkenler|Genel / özel|Ortak|Uygulanamaz|  
-|Bağımlı etkinlikler|Genel / özel|Ortak bir uygulama içinde tanımlanan özel alt düzeltildi.|Uygulanamaz|  
-|ActivityDelegates|Genel / özel|Ortak|Uygulanamaz|  
+|Arguments|Ortak/özel|Genel|uygulanamaz|  
+|Değişkenler|Ortak/özel|Genel|uygulanamaz|  
+|Alt etkinlikler|Ortak/özel|Ortak, bir sabit özel alt öğesi uygulamada tanımlandı.|uygulanamaz|  
+|ActivityDelegates|Ortak/özel|Genel|uygulanamaz|  
   
- Genel olarak, bir etkinlik tüketici tarafından ayarlanamaz üyesi ortak yapılmaması gerekir.  
+ Genel olarak, bir etkinliğin tüketicisi tarafından ayarlanmayan bir üye genel hale getirilmemelidir.  
   
-### <a name="execution-properties"></a>Yürütme özellikleri  
- Bazı senaryolarda, aktivite ortak alt belirli yürütme özelliğine kapsamını belirlemek yararlıdır. <xref:System.Activities.ExecutionProperties> Koleksiyonu sağlar, bu özellik sayesinde <xref:System.Activities.ExecutionProperties.Add%2A> yöntemi. Tüm alt öğelerini, veya yalnızca ortak olan için kapsamı belirli bir özellik olup olmadığını belirten bir Boole parametresi bu yöntem vardır. Bu parametre ayarlanırsa `true`, özelliği yalnızca Genel üyeler ve Genel alt öğelerini ortak üyeleri için görünür olacak.  
+### <a name="execution-properties"></a>Yürütme Özellikleri  
+
+ Bazı senaryolarda, belirli bir yürütme özelliğinin bir etkinliğin genel alt öğelerine kapsamını atamak yararlı olur. <xref:System.Activities.ExecutionProperties>Koleksiyon bu özelliği <xref:System.Activities.ExecutionProperties.Add%2A> yöntemiyle sağlar. Bu yöntem, belirli bir özelliğin tüm alt öğeler için mi yoksa yalnızca herkese açık olup olmadığını gösteren bir Boole parametresine sahiptir. Bu parametre olarak ayarlandıysa `true` , özelliği yalnızca ortak üyelere ve genel alt öğelerinin genel üyelerine görünür olur.  
   
 ### <a name="secondary-roots"></a>İkincil kökler  
- İkincil bir kök maaş etkinlikler için durumu yönetmek için çalışma zamanının iç mekanizmadır. Olduğunda bir <xref:System.Activities.Statements.CompensableActivity> bitirdi çalışıyorsa, durumu hemen temizlenmez. Bunun yerine, maaş bölüm tamamlanıncaya kadar durumu ikincil kök çalışma zamanı tarafından korunur. İkincil kök ile yakalanan konumu ortamları Compensable etkinliğinde kullanılan tanımı kapsamına karşılık gelir.
+
+ İkincil kök, çalışma zamanının, maaş etkinliklerinin durumunu yönetmeye yönelik iç mekanizmasıdır. Bir <xref:System.Activities.Statements.CompensableActivity> çalışmayı tamamladığında, durumu hemen temizlenmez. Bunun yerine, durum, Dengeleme bölümü tamamlanana kadar ikincil kökündeki çalışma zamanı tarafından korunur. İkincil kökle yakalanan konum ortamları, compensable etkinliğinin kullanıldığı tanım kapsamına karşılık gelir.

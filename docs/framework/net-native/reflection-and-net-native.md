@@ -2,14 +2,15 @@
 title: Yansıma ve .NET Yerel
 ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-ms.openlocfilehash: 65921377be9b8bf1c2d147b384c85cbd037d15f2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c38070ec4afe0a7311133e0ef7b5b24eb2fe4fb5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128181"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287845"
 ---
 # <a name="reflection-and-net-native"></a>Yansıma ve .NET Yerel
+
 .NET Framework yönetilen geliştirme, yansıma API 'SI aracılığıyla meta programlamayı destekler. Yansıma, bir uygulamadaki nesneleri incelemenize, İnceleme aracılığıyla bulunan nesnelerde Yöntemler çağırmasına, çalışma zamanında yeni türler oluşturmanıza ve diğer birçok dinamik kod senaryosunu desteketmenize olanak tanır. Ayrıca, bir nesnenin alan değerlerinin kalıcı olmasını ve daha sonra geri yüklenmesini sağlayan serileştirme ve serisini kaldırma de desteklenir. Bu senaryoların hepsi, kullanılabilir meta verilere dayalı yerel kod oluşturmak için .NET Framework tam zamanında (JıT) derleyicisi gerektirir.  
   
  .NET Native çalışma zamanı bir JıT derleyicisi içermez. Sonuç olarak, gerekli tüm yerel kodun önceden oluşturulması gerekir. Hangi kodun oluşturulması gerektiğini belirlemek için bir buluşsal yöntem kümesi kullanılır, ancak bu buluşsal yöntemler olası tüm meta programlama senaryolarını kapsamaz.  Bu nedenle, [çalışma zamanı yönergeleri](runtime-directives-rd-xml-configuration-file-reference.md)kullanarak bu meta programlama senaryolarına yönelik ipuçları sağlamalısınız. Gerekli meta veriler veya uygulama kodu çalışma zamanında kullanılabilir değilse, uygulamanız bir [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)veya [MissingInteropDataException](missinginteropdataexception-class-net-native.md) özel durumu oluşturur. Çalışma zamanı yönergeleri dosyası için özel durumu ortadan kaldıran uygun girişi oluşturacak iki sorun giderici mevcuttur:  

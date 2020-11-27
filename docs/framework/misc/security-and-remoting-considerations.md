@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 3a272b2a8f164aad07413a069e68a2146d0df6a7
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 883c20483c4d315a45e1f4dab959d42cbb6e3c4b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855718"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288209"
 ---
 # <a name="security-and-remoting-considerations"></a>Güvenlik ve Uzaktan Yönetim Konuları
 
@@ -26,6 +26,7 @@ Uzaktan iletişim, uygulama etki alanları, süreçler veya bilgisayarlar arası
  Genellikle, bildirim temelli [bağlantı isteği](link-demands.md) ve güvenlik denetimleri ile korunan yöntemleri, özellikleri veya olayları asla kullanıma sunmamanız gerekir <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> . Remoting ile bu denetimler zorlanmaz. <xref:System.Security.Permissions.SecurityAction.Demand>, [Onaylama](using-the-assert-method.md), vb. gibi diğer güvenlik denetimleri, bir işlem içinde uygulama etki alanları arasında çalışır, ancak çapraz işlem veya çapraz makine senaryolarında çalışmaz.  
   
 ## <a name="protected-objects"></a>Korumalı nesneler  
+
  Bazı nesneler güvenlik durumunu kendi başlarına tutar. Bu nesneler güvenilmeyen koda geçirilmemelidir, bu da kendi izinlerinin ötesinde güvenlik yetkilendirmesi elde etmez.  
   
  Bir örnek, bir <xref:System.IO.FileStream> nesne oluşturuyor. , <xref:System.Security.Permissions.FileIOPermission> Oluşturma sırasında talep edilir ve başarılı olursa dosya nesnesi döndürülür. Ancak, bu nesne başvurusu dosya izinleri olmadan koda geçirilirse, nesne bu belirli dosyayı okuyup yazabilir.  
@@ -33,6 +34,7 @@ Uzaktan iletişim, uygulama etki alanları, süreçler veya bilgisayarlar arası
  Böyle bir nesne için en basit savunma, bir ortak API öğesi aracılığıyla nesne başvurusunu almak üzere arayan herhangi bir kod için aynı **Dosya** adını talep etmek içindir.  
   
 ## <a name="application-domain-crossing-issues"></a>Uygulama etki alanı kesişen sorunlar  
+
  Yönetilen barındırma ortamlarında kodu yalıtmak için, çeşitli derlemeler için izin düzeylerini azaltan açık ilkeyle birden çok alt uygulama etki alanı oluşturmak yaygındır. Ancak, bu derlemelerin ilkesi varsayılan uygulama etki alanında değişmeden kalır. Alt uygulama etki alanlarından biri varsayılan uygulama etki alanını bir derlemeyi yüklemeye zorlabiliyor ise, kod yalıtımının etkisi kaybolur ve zorla yüklenen derlemedeki türler daha yüksek bir güven düzeyinde kod çalıştırabilecektir.  
   
  Bir uygulama etki alanı, başka bir uygulama etki alanının bir derlemeyi yüklemesine ve bir proxy 'yi diğer uygulama etki alanında barındırılan bir nesneye çağırarak içinde yer alan kodu çalıştırmasına zorlayabilir. Çapraz uygulama etki alanı proxy 'si almak için, nesneyi barındıran uygulama etki alanının bir yöntem çağrısı parametresi veya dönüş değeri aracılığıyla bir tane dağıtması gerekir. Ya da uygulama etki alanı yeni oluşturulduysa, oluşturucunun varsayılan olarak nesnesine bir proxy 'si vardır <xref:System.AppDomain> . Bu nedenle, kod yalıtımının kesilmesini önlemek için, daha yüksek bir güven düzeyine sahip bir uygulama etki alanı, <xref:System.MarshalByRefObject> etki alanı içinde, daha düşük güven düzeylerine sahip uygulama etki alanları için sıralanmış başvuru nesnelerine (sınıfından türetilmiş sınıfların örnekleri) başvuruları dağıtmamalıdır.  

@@ -1,18 +1,19 @@
 ---
-title: <ImpliesType>Öğesi (.NET Native)
+title: <ImpliesType> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 04c3a9498a5c9c24d67dedd02fb4c9d68d9efbdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181010"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287962"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType>Öğesi (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType> Öğesi (.NET Native)
+
 İlke kapsayan tür veya yönteme uygulanmışsa ilkeyi bir türe uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml
 <ImpliesType Name="type_name"  
@@ -29,6 +30,7 @@ ms.locfileid: "79181010"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -60,6 +62,7 @@ ms.locfileid: "79181010"
 |*policy_setting*|Bu ilke türüne uygulanacak ayar. Olası değerler şunlardır,,,,,, `All` `Auto` `Excluded` `Public` `PublicAndInternal` `Required Public` `Required PublicAndInternal` ve `Required All` . Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -71,6 +74,7 @@ ms.locfileid: "79181010"
 |[\<Method>](method-element-net-native.md)|Bir yönteme yansıma ilkesi uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<ImpliesType>`Öğesi öncelikle kitaplıklar tarafından kullanılmak üzere tasarlanmıştır. Aşağıdaki senaryoyu ele alınmaktadır:  
   
 - Bir yordamın bir tür üzerinde yansıtılması gerekiyorsa, ikinci bir tür üzerinde yansıtılması gerekir.  
