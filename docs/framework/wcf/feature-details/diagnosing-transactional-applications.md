@@ -2,17 +2,19 @@
 title: İşlemsel Uygulamaları Tanılama
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: fb3a83083e876cf697621ba70dcf7dd67636f83a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 696ebe7249a8388eaaf38a678581e28d472e821a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599223"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290250"
 ---
 # <a name="diagnosing-transactional-applications"></a>İşlemsel Uygulamaları Tanılama
+
 Bu konuda, bir işlem uygulamasının sorunlarını gidermek için Windows Communication Foundation (WCF) yönetimi ve tanılama özelliğinin nasıl kullanılacağı açıklanmaktadır.  
   
 ## <a name="performance-counters"></a>Performans Sayaçları  
+
  WCF, işlemsel uygulamanızın performansını ölçmenize yönelik standart bir dizi performans sayacı sağlar. Daha fazla bilgi için bkz. [performans sayaçları](../diagnostics/performance-counters/index.md).  
   
  Performans sayaçları, aşağıdaki tablolarda açıklandığı gibi üç farklı düzeye sahiptir: hizmet, uç nokta ve işlem.  
@@ -45,13 +47,14 @@ Bu konuda, bir işlem uygulamasının sorunlarını gidermek için Windows Commu
 |Saniyede Akışı Yapılan İşlem|Her saniye içinde bu uç noktada işlemlere akan işlem sayısı. Bu sayaç, uç noktaya gönderilen iletide bir işlem olduğunda artırılır.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Yönetim Araçları  
+
  WCF, bir hizmetin denetim verilerini bir WCF Windows Yönetim Araçları (WMI) sağlayıcısı aracılığıyla çalışma zamanında kullanıma sunar. WMI verilerine erişme hakkında daha fazla bilgi için bkz. [Tanılama için Windows Yönetim araçları kullanma](../diagnostics/wmi/index.md).  
   
  Bazı salt okunurdur WMI özellikleri, bir hizmet için uygulanan işlem ayarlarını gösterir. Aşağıdaki tablolarda bu ayarların hepsi listelenmektedir.  
   
  Bir hizmette, `ServiceBehaviorAttribute` aşağıdaki özelliklere sahiptir.  
   
-|Name|Tür|Açıklama|  
+|Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
 |ReleaseServiceInstanceOnTransactionComplete|Boole|Geçerli işlem tamamlandığında hizmet nesnesinin geri dönüştürülüp dönüştürülmeyeceğini belirtir.|  
 |TransactionAutoCompleteOnSessionClose|Boole|Geçerli oturum kapandığında bekleyen işlemlerin tamamlanıp tamamlanmadığını belirtir.|  
@@ -60,31 +63,32 @@ Bu konuda, bir işlem uygulamasının sorunlarını gidermek için Windows Commu
   
  , `ServiceTimeoutsBehavior` Aşağıdaki özelliğe sahiptir.  
   
-|Name|Tür|Açıklama|  
+|Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
 |Işlem zaman aşımı|<xref:System.DateTime>|Bir işlemin tamamlaması gereken süreyi belirtir.|  
   
  Bir bağlamada `TransactionFlowBindingElement` aşağıdaki özellikler vardır.  
   
-|Name|Tür|Açıklama|  
+|Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
 |TransactionProtocol|Türün geçerli bir değerini içeren bir dize <xref:System.ServiceModel.TransactionProtocol> .|İşlem akışı sırasında kullanılacak işlem protokolünü belirtir.|  
 |TransactionFlow|Boole|Gelen işlem akışının etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
   
  Bir işlemde, `OperationBehaviorAttribute` aşağıdaki özelliklere sahiptir:  
   
-|Name|Tür|Açıklama|  
+|Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
 |TransactionAutoComplete|Boole|İşlenmeyen özel durumlar oluşursa, geçerli işlemin otomatik olarak kaydedilip edilmeyeceğini belirtir.|  
 |TransactionScopeRequired|Boole|İşlemin bir işlem gerektirip gerektirmediğini belirtir.|  
   
  Bir işlemde, `TransactionFlowAttribute` aşağıdaki özelliklere sahiptir.  
   
-|Name|Tür|Açıklama|  
+|Ad|Tür|Açıklama|  
 |----------|----------|-----------------|  
 |TransactionFlowOption|Sabit listesinin geçerli bir değerini içeren bir dize <xref:System.ServiceModel.TransactionFlowOption> .|İşlem akışının gerekli olduğu kapsamı belirtir.|  
   
 ## <a name="tracing"></a>İzleme  
+
  İzlemeler, işlem uygulamalarınızda hataları izlemenizi ve analiz etmenize olanak tanır. İzlemeyi aşağıdaki yöntemlerle etkinleştirebilirsiniz:  
   
 - Standart WCF izleme  
@@ -93,9 +97,9 @@ Bu konuda, bir işlem uygulamasının sorunlarını gidermek için Windows Commu
   
 - WS-AtomicTransaction izleme  
   
-     WS-AtomicTransaction izleme, [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)kullanılarak etkinleştirilebilir. Bu izleme, bir sistem içindeki işlemlerin ve katılımcıların durumu hakkında öngörü sağlar. Ayrıca, iç hizmet modeli izlemeyi etkinleştirmek için `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` kayıt defteri anahtarını sabit listesinin geçerli bir değeri olarak ayarlayabilirsiniz <xref:System.Diagnostics.SourceLevels> . İleti günlüğünü diğer WCF uygulamalarıyla aynı şekilde etkinleştirebilirsiniz.  
+     WS-AtomicTransaction izleme, [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)kullanılarak etkinleştirilebilir. Bu izleme, bir sistem içindeki işlemlerin ve katılımcıların durumu hakkında öngörü sağlar. Ayrıca, iç hizmet modeli izlemeyi etkinleştirmek için `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` kayıt defteri anahtarını sabit listesinin geçerli bir değeri olarak ayarlayabilirsiniz <xref:System.Diagnostics.SourceLevels> . İleti günlüğünü diğer WCF uygulamalarıyla aynı şekilde etkinleştirebilirsiniz.  
   
-- `System.Transactions`izleniyor  
+- `System.Transactions` izleniyor  
   
      OleTransactions protokolü kullanılırken protokol iletileri izlenemez. Altyapıyı sağlayan izleme desteği <xref:System.Transactions> (OleTransactions kullanan), kullanıcıların işlemlerde gerçekleşen olayları görüntülemesine olanak tanır. Bir uygulama için izlemeyi etkinleştirmek üzere <xref:System.Transactions> yapılandırma dosyasına aşağıdaki kodu ekleyin `App.config` .  
   

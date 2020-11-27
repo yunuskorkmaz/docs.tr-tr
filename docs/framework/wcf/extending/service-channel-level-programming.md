@@ -5,57 +5,64 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db50d385bd396ba4de74e08fc1c6d93a67f320b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857771"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290224"
 ---
 # <a name="service-channel-level-programming"></a>Hizmet Kanal Düzeyi Programlama
-Bu konu, bir Windows Communication Foundation (WCF) hizmet uygulaması kullanmadan yazma açıklar <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> ve onun ilişkili nesne modeli.  
+
+Bu konuda, <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> ve ilişkili nesne modeli kullanılmadan Windows Communication Foundation (WCF) hizmet uygulamasının nasıl yazılacağı açıklanmaktadır.  
   
-## <a name="receiving-messages"></a>İleti alma  
- İletileri almak ve işlemek hazır olması için aşağıdaki adımlar gereklidir:  
+## <a name="receiving-messages"></a>Iletileri alma  
+
+ İletileri almaya ve işlemeye hazırlamak için aşağıdaki adımlar gereklidir:  
   
-1. Bir bağlama oluşturun.  
+1. Bağlama oluşturun.  
   
-2. Bir kanal dinleyicisi oluşturun.  
+2. Kanal dinleyicisi oluşturun.  
   
-3. Kanal dinleyicisi açın.  
+3. Kanal dinleyicisini açın.  
   
-4. İsteği okumak ve bir yanıt gönderir.  
+4. İsteği okuyun ve yanıt gönderin.  
   
-5. Tüm kanal nesneleri kapatın.  
+5. Tüm kanal nesnelerini kapatın.  
   
-#### <a name="creating-a-binding"></a>Bir bağlama oluşturma  
- Bir bağlama ilk adımı dinleyen ve iletileri alma oluşturmaktır. WCF, doğrudan bir tanesi örneği tarafından kullanılan birkaç yerleşik veya sistem tarafından sağlanan bağlamaları ile birlikte gelir. Ayrıca, kendi özel bağlama 1 kod yaptığı bir CustomBinding sınıfı örneği tarafından da oluşturabilirsiniz.  
+#### <a name="creating-a-binding"></a>Bağlama oluşturma  
+
+ İletileri dinlemek ve almak için ilk adım bir bağlama oluşturmaktır. WCF, bunlardan birini örnekleyerek doğrudan kullanılabilecek çeşitli yerleşik veya sistem tarafından sağlanmış bağlamalarla birlikte gelir. Ayrıca, liste 1 ' deki kodun yaptığı CustomBinding sınıfını örnekleyerek kendi özel bağlamalarınızı oluşturabilirsiniz.  
   
- Aşağıdaki kod örneği bir örneğini oluşturur <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> ve ekler bir <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> bağlama kanal yığın oluşturmak için kullanılan öğelerinin bir koleksiyonu, öğeleri koleksiyonu. Bu örnekte, yalnızca öğe koleksiyonunu bulunduğundan <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, yalnızca HTTP taşıma kanalının elde edilen kanal yığın vardır.  
+ Aşağıdaki kod örneği, bir örneğini oluşturur <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> ve, <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> Kanal yığınını oluşturmak için kullanılan bağlama öğelerinin bir koleksiyonu olan öğeleri koleksiyonunu ekler. Bu örnekte, öğeler koleksiyonu yalnızca öğesine sahip olduğundan <xref:System.ServiceModel.Channels.HttpTransportBindingElement> , ortaya çıkan kanal yığınında yalnızca HTTP aktarım kanalı vardır.  
   
-#### <a name="building-a-channellistener"></a>Da ChannelListener oluşturmak  
- Diyoruz bağlama oluşturduktan sonra <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> tür parametresi oluşturmak için kanal şekli olduğu kanal dinleyicisi oluşturmak için. Bu örnekte kullanıyoruz <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> istek/yanıt ileti değişim deseni gelen iletileri dinlemek istediğimizden.  
+#### <a name="building-a-channellistener"></a>ChannelListener oluşturma  
+
+ Bağlama oluşturduktan sonra, <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> tür parametresinin oluşturulacak Kanal şekli olduğu kanal dinleyicisini oluşturmak için çağrı yaptık. Bu örnekte, <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> bir istek/yanıt iletisi değişimi düzeninde gelen iletileri dinlemek istiyoruz.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> istek iletileri ve geri gönderme iletilerini yanıt almak için kullanılır. Çağırma <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> döndürür bir <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, kullanılabilir istek iletisi alırsınız ve bir yanıt iletisi geri göndermek için.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> İstek iletilerinin alınması ve yanıt iletilerinin geri gönderilmesi için kullanılır. Çağırma <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> , istek iletisini almak ve bir yanıt iletisini geri göndermek için kullanılabilen bir döndürür.  
   
- Dinleyici oluştururken, biz bunu dinlediği, bu durumda ağ adresi geçirmek `http://localhost:8080/channelapp`. Genel olarak, her taşıma kanalının bir ya da büyük olasılıkla birden fazla adres düzenleri destekler, örneğin, HTTP aktarımı hem http hem de https şemasını destekler.  
+ Dinleyiciyi oluştururken, dinlediği ağ adresini bu durumda geçiyoruz `http://localhost:8080/channelapp` . Genellikle, her bir aktarım kanalı bir veya muhtemelen birkaç adres düzenini destekler, örneğin, HTTP taşıması hem http hem de https düzenlerini destekler.  
   
- Biz de boş geçmesi <xref:System.ServiceModel.Channels.BindingParameterCollection?displayProperty=nameWithType> dinleyici oluştururken. Bağlama parametresi, dinleyici nasıl oluşturulması gerektiğini denetleyen parametreleri geçirmek için kullanılan bir mekanizmadır. Biz boş bir koleksiyon geçirmek için Bizim örneğimizde, biz herhangi bir parametre kullanmıyor.  
+ Dinleyici oluştururken de boş geçiririz <xref:System.ServiceModel.Channels.BindingParameterCollection?displayProperty=nameWithType> . Bağlama parametresi, dinleyicinin nasıl oluşturulması gerektiğini denetleyen parametreleri geçirmek için kullanılan bir mekanizmadır. Bizim örneğimizde, boş bir koleksiyon geçirdiğimiz için bu tür parametreleri kullanmıyoruz.  
   
-#### <a name="listening-for-incoming-messages"></a>Gelen iletiler için dinleme  
- Ardından diyoruz <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> dinleyici ve kanalları kabul Başlat. Davranışını <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> aktarım bağlantı odaklı veya bağlantı daha az olmasına göre değişir. Bağlantıya dayalı aktarımı için <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> hangi noktası bu yeni bağlantı temsil eden yeni bir kanal döndürür yeni bir bağlantı isteği geldiğinde kadar engeller. HTTP gibi bağlantı olmayan aktarımlar için <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> bir ve yalnızca Aktarım dinleyicisi oluşturur kanalı olmadan hemen döndürür.  
+#### <a name="listening-for-incoming-messages"></a>Gelen Iletileri dinleme  
+
+ Sonra dinleyiciyi çağırıp <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> kanalları kabul etmeye başladık. Davranışı, <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> taşımanın bağlantıya dayalı veya bağlantı gibi olmasına bağlıdır. Bağlantı odaklı aktarımlar için, yeni <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> bir bağlantı isteğinin bu yeni bağlantıyı temsil eden yeni bir kanal döndürdüğü noktaya kadar engeller. HTTP gibi bağlantı açısından daha az ulaşım için, <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A> Aktarım dinleyicisinin oluşturduğu tek ve tek bir kanalla hemen geri döner.  
   
- Bu örnekte, dinleyici uygulayan bir kanal döndürür <xref:System.ServiceModel.Channels.IReplyChannel>. Almak için bu iletilerin kanal biz ilk çağrı <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> dayanarak bir durumda iletişimi için hazır hale getirin. Ardından diyoruz <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> bir ileti gelirse kadar hangi engeller.  
+ Bu örnekte, dinleyici uygulayan bir kanal döndürür <xref:System.ServiceModel.Channels.IReplyChannel> . Bu kanala ileti almak için ilk <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> olarak onu iletişim için hazırlamış bir duruma getirmek üzere çağırdık. Ardından, <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> bir ileti alınana kadar hangi blokları çağıracağız.  
   
-#### <a name="reading-the-request-and-sending-a-reply"></a>İstek okunurken ve yanıt gönderme  
- Zaman <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> döndürür bir <xref:System.ServiceModel.Channels.RequestContext>, alınan iletiyi kullanarak alın, <xref:System.ServiceModel.Channels.RequestContext.RequestMessage%2A> özelliği. Biz (bir dize olduğu varsayılır) ileti eylem ve gövde içeriği yazın.  
+#### <a name="reading-the-request-and-sending-a-reply"></a>Isteği okuma ve yanıt gönderme  
+
+ <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>Bir döndürdüğünde <xref:System.ServiceModel.Channels.RequestContext> , aldığı iletiyi özelliğini kullanarak aldık <xref:System.ServiceModel.Channels.RequestContext.RequestMessage%2A> . İletinin eylemini ve gövde içeriğini (bir dize olduğunu varsayıyoruz) yazdık.  
   
- Bir yanıt göndermesi için biz istekte aldık Bu örnekte dize verileri geri geçirme yeni bir yanıt iletisi oluşturun. Ardından diyoruz <xref:System.ServiceModel.Channels.RequestContext.Reply%2A> yanıt iletisi.  
+ Yanıt göndermek için, istekte aldığımız dize verilerini geri geçirerek bu durumda yeni bir yanıt iletisi oluşturacağız. Ardından <xref:System.ServiceModel.Channels.RequestContext.Reply%2A> yanıt iletisini göndermek için çağrı yaptık.  
   
-#### <a name="closing-objects"></a>Nesnelerini kapatma  
- Kaynakları sızdırılmasını önlemek için artık gerekli olmayan iletişimde kullanılan nesneleri kapatmak çok önemlidir. Bu örnekte, istek iletisi, istek bağlamını, kanal ve dinleyici kapatın.  
+#### <a name="closing-objects"></a>Nesneleri kapatma  
+
+ Kaynak sızıntısına engel olmak için, artık gerekli olmadıklarında iletişimlerde kullanılan nesneleri kapatmak çok önemlidir. Bu örnekte istek iletisini, istek bağlamını, kanalı ve dinleyiciyi kapattık.  
   
- Aşağıdaki kod örneği, temel bir hizmet bir kanal dinleyicisi yalnızca bir ileti aldığı gösterilmektedir. Gerçek bir hizmet kanalları kabul ve hizmet çıkana kadar iletilerini alma tutar.  
+ Aşağıdaki kod örneğinde, bir kanal dinleyicisinin yalnızca bir ileti aldığı temel bir hizmet gösterilmektedir. Gerçek bir hizmet, kanalları kabul eder ve hizmet çıkana kadar ileti alıyor.  
   
  [!code-csharp[ChannelProgrammingBasic#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/channelprogrammingbasic/cs/serviceprogram.cs#1)]
  [!code-vb[ChannelProgrammingBasic#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelprogrammingbasic/vb/serviceprogram.vb#1)]

@@ -2,17 +2,18 @@
 title: TcpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-ms.openlocfilehash: 6d2717bc2d1d14e369af2b9c5a8c0affb67501d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6af85d62fffada95537494692b8694f42d7a2932
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956552"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290094"
 ---
 # <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
+
 TcpTransportBindingElement  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement  
@@ -25,44 +26,50 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- TcpTransportBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
+
+ TcpTransportBindingElement Class herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- TcpTransportBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
+
+ TcpTransportBindingElement class aşağıdaki özelliklere sahiptir:  
   
-### <a name="connectionpoolsettings"></a>Tcptransport  
+### <a name="connectionpoolsettings"></a>NamedPipeTransport  
+
  Veri türü: TcpConnectionPoolSettings  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
  Bağlantı havuzu ayarları.  
   
-### <a name="listenbacklog"></a>listenBacklog  
- Veri türü: SINT32  
+### <a name="listenbacklog"></a>ListenBacklog  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bekleyen sıraya alınan bağlantı isteklerinin sayısı.  
+ Beklemede olabilecek en fazla sıraya alınmış bağlantı isteği sayısı.  
   
-### <a name="portsharingenabled"></a>portSharingEnabled  
+### <a name="portsharingenabled"></a>PortSharingEnabled  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bu bağlantı için TCP bağlantı noktası paylaşımının etkin olup olmadığını belirten bir Boole değeri.  
+ Bu bağlantı için TCP bağlantı noktası paylaşımının etkin olup olmadığını belirten bir Boolean değer.  
   
-### <a name="teredoenabled"></a>teredoEnabled  
+### <a name="teredoenabled"></a>TeredoEnabled  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Teredo (güvenlik duvarının arkasındaki istemcilere için bir teknoloji) etkin olup olmadığını belirten bir Boole değeri.  
+ Teredo 'Nun (güvenlik duvarlarının arkasındaki istemcileri adresleme teknolojisinin) etkin olup olmadığını belirten bir Boole değeri.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

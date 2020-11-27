@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: 283c8b9641dcce8b0207d3be0024b57369d125ff
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 23b42e48c715c9c723ce9ac8ba8c3c1af7ace969
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591468"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290055"
 ---
 # <a name="session"></a>Oturum
+
 Oturum örneği, oturum gerektiren bir sözleşmenin nasıl uygulanacağını gösterir. Bir oturum, birden çok işlemi gerçekleştirmek için bağlam sağlar. Bu, bir hizmetin, sonraki işlemlerin önceki bir işlemin durumunu kullanabilmesi gibi, durumu belirli bir oturumla ilişkilendirmenize olanak tanır. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md)Başlarken ' i temel alır. `ICalculator`Sözleşme, çalışan bir sonuç tutarken bir dizi aritmetik işlemin gerçekleştirilmesine izin verecek şekilde değiştirilmiştir. Bu işlev, sözleşme tarafından tanımlanır `ICalculatorSession` . Bir hesaplama gerçekleştirmek için birden çok hizmet işlemi çağrıldığında hizmet, bir istemcinin durumunu tutar. İstemci, çağırarak sonucunu sıfıra getirerek geçerli sonucu alabilir `Result()` `Clear()` .  
   
  Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  

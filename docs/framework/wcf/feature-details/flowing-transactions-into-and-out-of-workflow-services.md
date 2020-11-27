@@ -2,14 +2,15 @@
 title: İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 17c05139b5977c47e20e888e436a311ba145018a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8764f3c88fc978bc71ff993252b04fe58da4bbc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597468"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290354"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
+
 İş akışı hizmetleri ve istemcileri işlemlere katılabilir.  Bir hizmet işleminin bir çevresel işlemin bir parçası haline gelmesi için etkinlik içine bir <xref:System.ServiceModel.Activities.Receive> etkinlik koyun <xref:System.ServiceModel.Activities.TransactedReceiveScope> . Bir veya içindeki bir etkinlik tarafından yapılan tüm çağrılar <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.SendReply> <xref:System.ServiceModel.Activities.TransactedReceiveScope> çevresel işlem içinde de yapılır. Bir iş akışı istemci uygulaması <xref:System.Activities.Statements.TransactionScope> , etkinlikleri kullanarak ve ortam işlemini kullanarak hizmet işlemlerini çağıran bir ortam işlemi oluşturabilir. Bu konu, işlemlere katılan bir iş akışı hizmeti ve iş akışı istemcisi oluşturma konusunda size yol gösterir.  
   
 > [!WARNING]
@@ -27,11 +28,11 @@ ms.locfileid: "84597468"
   
 2. Adlı yeni bir sınıf kitaplığı projesi ekleyin `Common` . Aşağıdaki derlemelere başvurular ekleyin:  
   
-    - System. Activities. dll  
+    - System.Activities.dll  
   
     - System.ServiceModel.dll  
   
-    - System. ServiceModel. Activities. dll  
+    - System.ServiceModel.Activities.dll  
   
     - System.Transactions.dll  
   
@@ -84,9 +85,9 @@ ms.locfileid: "84597468"
   
 3. Etkinliği sürükleyip etkinliğe bırakın <xref:System.Activities.Statements.WriteLine> `Sequential Service` . Text özelliğini `"Workflow Service starting ..."` Aşağıdaki örnekte gösterildiği gibi olarak ayarlayın.  
   
-     ! [Sıralı hizmet etkinliğine bir WriteLine etkinliği ekleme (./Media/flowing-Transactions-into-and-out-of-Workflow-Services/Add-WriteLine-Sequential-Service.jpg)  
+     ! [Sıralı hizmet etkinliğine bir WriteLine etkinliği ekleme (./Media/flowing-Transactions-Into-and-out-of-Workflow-Services/add-writeline-sequential-service.jpg)  
   
-4. <xref:System.ServiceModel.Activities.TransactedReceiveScope>Etkinlikten sonra sürükleyip bırakın <xref:System.Activities.Statements.WriteLine> . <xref:System.ServiceModel.Activities.TransactedReceiveScope>Etkinlik, **araç kutusunun** **mesajlaşma** bölümünde bulunabilir. <xref:System.ServiceModel.Activities.TransactedReceiveScope>Etkinlik, iki bölümden oluşan **Istek** ve **gövdeden**oluşur. **İstek** bölümü <xref:System.ServiceModel.Activities.Receive> etkinliği içerir. **Gövde** bölümü bir ileti alındıktan sonra bir işlem içinde yürütülecek etkinlikleri içerir.  
+4. <xref:System.ServiceModel.Activities.TransactedReceiveScope>Etkinlikten sonra sürükleyip bırakın <xref:System.Activities.Statements.WriteLine> . <xref:System.ServiceModel.Activities.TransactedReceiveScope>Etkinlik, **araç kutusunun** **mesajlaşma** bölümünde bulunabilir. <xref:System.ServiceModel.Activities.TransactedReceiveScope>Etkinlik, iki bölümden oluşan **Istek** ve **gövdeden** oluşur. **İstek** bölümü <xref:System.ServiceModel.Activities.Receive> etkinliği içerir. **Gövde** bölümü bir ileti alındıktan sonra bir işlem içinde yürütülecek etkinlikleri içerir.  
   
      ![TransactedReceiveScope etkinliği ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
@@ -102,7 +103,7 @@ ms.locfileid: "84597468"
     |Özellik|Değer|  
     |--------------|-----------|  
     |CanCreateInstance|True (onay kutusunu işaretleyin)|  
-    |ThrottledRequests|StartSample|  
+    |OperationName|StartSample|  
     |ServiceContractName|Itransactionsample|  
   
      İş akışı şöyle görünmelidir:  
@@ -132,7 +133,7 @@ ms.locfileid: "84597468"
   
     |Özellik|Değer|  
     |--------------|-----------|  
-    |Alıcı|replyMessage|  
+    |Amaç|replyMessage|  
     |Değer|"Hizmet: Yanıt gönderiliyor."|  
   
 11. <xref:System.Activities.Statements.WriteLine>Etkinlikten sonra bir etkinliği sürükleyip bırakın <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğini "Service: BEGIN Reply" olarak ayarlayın.  
@@ -182,7 +183,7 @@ ms.locfileid: "84597468"
     |Özellik|Değer|  
     |--------------|-----------|  
     |EndpointConfigurationName|workflowServiceEndpoint|  
-    |ThrottledRequests|StartSample|  
+    |OperationName|StartSample|  
     |ServiceContractName|Itransactionsample|  
   
      İş akışı artık şöyle görünmelidir:  
@@ -215,11 +216,11 @@ ms.locfileid: "84597468"
   
 1. Çözüme adlı yeni bir konsol uygulaması projesi ekleyin `Service` . Aşağıdaki derlemelere başvurular ekleyin:  
   
-    1. System. Activities. dll  
+    1. System.Activities.dll  
   
     2. System.ServiceModel.dll  
   
-    3. System. ServiceModel. Activities. dll  
+    3. System.ServiceModel.Activities.dll  
   
 2. Oluşturulan Program.cs dosyasını ve aşağıdaki kodu açın:  
   
@@ -241,7 +242,7 @@ ms.locfileid: "84597468"
           }  
     ```  
   
-3. Projeye aşağıdaki App. config dosyasını ekleyin.  
+3. Aşağıdaki app.config dosyasını projeye ekleyin.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -259,7 +260,7 @@ ms.locfileid: "84597468"
   
 ### <a name="create-the-client-application"></a>İstemci uygulaması oluşturma  
   
-1. Çözüme adlı yeni bir konsol uygulaması projesi ekleyin `Client` . System. Activities. dll dosyasına bir başvuru ekleyin.  
+1. Çözüme adlı yeni bir konsol uygulaması projesi ekleyin `Client` . System.Activities.dll bir başvuru ekleyin.  
   
 2. Program.cs dosyasını açın ve aşağıdaki kodu ekleyin.  
   

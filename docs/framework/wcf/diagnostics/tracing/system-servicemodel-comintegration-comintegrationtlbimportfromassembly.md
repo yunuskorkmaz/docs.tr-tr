@@ -2,17 +2,19 @@
 title: System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly
 ms.date: 03/30/2017
 ms.assetid: bb2b6e33-00cb-403f-b616-1a70294d7aa8
-ms.openlocfilehash: 539c7d256de8f235979e26e43bf4286e68794af6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c0610d981b9e135807a7793b96be6ea6cf0caa98
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84581574"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290562"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationtlbimportfromassembly"></a>System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly
+
 System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromAssembly  
   
 ## <a name="description"></a>Açıklama  
+
  ComPlus: tür kitaplığı içeri aktarma: bütünleştirilmiş kod kullanılıyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
