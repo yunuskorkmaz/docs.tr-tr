@@ -1,28 +1,29 @@
 ---
-title: 'Nasıl yapılır: Dinamik Güncelleme'
+title: 'Nasıl yapılır: Dinamik Güncelleştirme'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a12d480163bb579f34d006ae1837ed4392bf47ee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265550"
 ---
-# <a name="how-to-dynamic-update"></a>Nasıl yapılır: Dinamik Güncelleme
-Bu konu, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak güncelleştirmek için gereken temel adımları özetler. Bu örnekte, ilk yönlendirme yapılandırması yapılandırma dosyasından elde edilir ve tüm iletileri normal Calc hesap makinesi hizmetine yönlendirir; ancak, daha sonra hedef bitiş noktası yuvarlamaCalc hizmeti değiştirmek için programlı olarak güncelleştirilir.  
+# <a name="how-to-dynamic-update"></a>Nasıl yapılır: Dinamik Güncelleştirme
+
+Bu konuda, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak güncelleştirmek için gereken temel adımlar özetlenmektedir. Bu örnekte, ilk yönlendirme yapılandırması yapılandırma dosyasından alınır ve tüm iletileri regularCalc Hesaplayıcı hizmetine yönlendirir; Ancak, bu daha sonra kaynak uç noktasını roundingCalc hizmeti değiştirmek için programlı olarak güncelleştirilir.  
   
 > [!NOTE]
-> Birçok uygulamada, yapılandırma tamamen dinamik olur ve varsayılan yapılandırmaya güvenmez; ancak, hizmet başlatıldığında varsayılan yapılandırma durumu olması nın arzu edildiği bu konudaki gibi bazı senaryolar vardır.  
+> Birçok uygulamada, yapılandırma tamamen dinamik olur ve varsayılan bir yapılandırmaya güvenmeyecektir; Ancak, bu konu başlığı altında, hizmet başlatıldığında varsayılan bir yapılandırma durumuna sahip olmak istenen bazı senaryolar vardır.  
   
 > [!NOTE]
-> Dinamik güncelleştirmeler yalnızca bellekte gerçekleşir ve yapılandırma dosyalarının değiştirilmesine neden olmaz.  
+> Dinamik güncelleştirmeler yalnızca bellekte oluşur ve yapılandırma dosyalarının değiştirilmesine neden olmaz.  
   
- Hem regularCalc hem de roundingCalc aynı ekleme, çıkarma, çarpma ve bölme işlemlerini destekler; ancak, yuvarlamaCalc dönmeden önce tüm hesaplamaları en yakın tümsakaradeğere yuvarlar. Tüm iletileri normal Calc hizmetine yönlendirecek şekilde hizmeti yapılandırmak için bir yapılandırma dosyası kullanılır. Yönlendirme Hizmeti başlatıldıktan sonra, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> iletileri yuvarlama Calc hizmetine yönlendirmek için hizmeti yeniden yapılandırmak için kullanılır.  
+ Hem regularCalc hem de roundingCalc, ekleme, çıkarma, çarpma ve bölme işlemlerini destekler; Ancak roundingCalc, döndürmeden önce tüm hesaplamaları en yakın tamsayı değerine yuvarlar. Bir yapılandırma dosyası, tüm iletileri regularCalc hizmetine yönlendirmek üzere hizmetini yapılandırmak için kullanılır. Yönlendirme hizmeti başlatıldıktan sonra, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> Iletileri roundingCalc hizmetine yönlendirmek üzere hizmeti yeniden yapılandırmak için kullanılır.  
   
-### <a name="implement-initial-configuration"></a>İlk Yapılandırmayı Uygula  
+### <a name="implement-initial-configuration"></a>Ilk yapılandırmayı Uygula  
   
-1. Hizmettarafından açığa çıkarılan hizmet bitiş noktalarını belirterek temel Yönlendirme Hizmeti Yapılandırmasını oluşturun. Aşağıdaki örnek, ileti leri almak için kullanılacak tek bir hizmet bitiş noktasını tanımlar. Ayrıca, düzenli Calc'ye ileti göndermek için kullanılacak bir istemci bitiş noktası tanımlar.  
+1. Hizmet tarafından sunulan hizmet uç noktalarını belirterek temel yönlendirme hizmeti yapılandırmasını oluşturun. Aşağıdaki örnek, ileti almak için kullanılacak tek bir hizmet uç noktasını tanımlar. Ayrıca, regularCalc 'e ileti göndermek için kullanılacak bir istemci uç noktası da tanımlar.  
   
     ```xml  
     <services>  
@@ -49,7 +50,7 @@ Bu konu, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak güncel
     </client>  
     ```  
   
-2. İletileri hedef uç noktalarına yönlendirmek için kullanılan filtreyi tanımlayın. Bu örnekte, MatchAll filtresi tüm iletileri daha önce tanımlanan calcEndpoint'e yönlendirmek için kullanılır. Aşağıdaki örnekte filtre ve filtre tablosu tanımlanır.  
+2. İletileri hedef uç noktalara yönlendirmek için kullanılan filtreyi tanımlayın. Bu örnekte, tüm iletileri daha önce tanımlanan regularCalcEndpoint öğesine yönlendirmek için MatchAll filtresi kullanılır. Aşağıdaki örnekte Filter ve Filter tablosu tanımlanmaktadır.  
   
     ```xml  
     <filters>  
@@ -64,7 +65,7 @@ Bu konu, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak güncel
     </filterTables>  
     ```  
   
-3. Gelen iletileri filtre tablosunda bulunan filtrelere göre değerlendirmek için yönlendirme davranışını kullanarak filtre tablosunu hizmet bitiş noktalarıyla ilişkilendirmeniz gerekir. Aşağıdaki örnekte, "filterTable1" ile hizmet bitiş noktası ilişkilendirme gösterilmektedir.  
+3. Gelen iletileri filtre tablosunda yer alan filtrelere karşı değerlendirmek için, yönlendirme davranışını kullanarak filtre tablosunu hizmet uç noktalarıyla ilişkilendirmeniz gerekir. Aşağıdaki örnek, "filterTable1" ın hizmet uç noktasıyla ilişkilendirilmesini gösterir.  
   
     ```xml  
     <behaviors>  
@@ -77,10 +78,11 @@ Bu konu, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak güncel
     </behaviors>  
     ```  
   
-## <a name="implement-dynamic-configuration"></a>Dinamik Yapılandırma uygulayın  
- Yönlendirme Hizmetinin dinamik yapılandırması yalnızca yeni <xref:System.ServiceModel.Routing.RoutingConfiguration> bir oluşturma ve <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> geçerli yapılandırmayı değiştirmek için kullanılarak kod olarak gerçekleştirilebilir.  Bu örnekte, Yönlendirme Hizmeti bir konsol uygulaması içinde kendi kendine barındırılan. Uygulama başladıktan sonra, iletilerin yönlendirildiği hedef bitiş noktasını yapılandırmak için konsol penceresine 'normal' veya 'yuvarlama' girerek yönlendirme yapılandırmasını değiştirebilirsiniz; regularCalc 'normal' girildiğinde, aksi takdirde 'yuvarlama' girildiğinde Calc yuvarlama.  
+## <a name="implement-dynamic-configuration"></a>Dinamik yapılandırmayı Uygula  
+
+ Yönlendirme hizmetinin dinamik yapılandırması yalnızca yeni bir oluşturma <xref:System.ServiceModel.Routing.RoutingConfiguration> ve <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> geçerli yapılandırmayı değiştirmek için kullanılarak kod içinde gerçekleştirilebilir.  Bu örnekte, yönlendirme hizmeti bir konsol uygulaması içinde kendiliğinden barındırılır. Uygulama başladıktan sonra, iletilerin yönlendirildiği hedef uç noktasını yapılandırmak için konsol penceresine ' Regular ' veya ' yuvarla ' girerek yönlendirme yapılandırmasını değiştirebilirsiniz; ' Regular ' girildiğinde regularCalc, aksi takdirde, ' yuvarlama ' girildiğinde roundingCalc.  
   
-1. Yönlendirme Hizmetini desteklemek için aşağıdaki ifadeler eklenmelidir.  
+1. Yönlendirme hizmetini desteklemek için aşağıdaki using deyimleri eklenmelidir.  
   
     ```csharp  
     using System;  
@@ -92,7 +94,7 @@ Bu konu, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak güncel
     using System.ServiceModel.Routing;  
     ```  
   
-2. Aşağıdaki kod, Yönlendirme Hizmetini konsol uygulaması olarak kendi kendine barındırmak için kullanılır. Bu, uygulama yapılandırma dosyasında bulunan önceki adımda açıklanan yapılandırmayı kullanarak Yönlendirme Hizmeti'ni başlatır. While döngüsü yönlendirme yapılandırmasını değiştirmek için kullanılan kodu içerir.  
+2. Aşağıdaki kod, yönlendirme hizmetini bir konsol uygulaması olarak kendine barındırmak için kullanılır. Bu, uygulama yapılandırma dosyası içinde yer alan önceki adımda açıklanan yapılandırmayı kullanarak yönlendirme hizmetini başlatır. While döngüsü, yönlendirme yapılandırmasını değiştirmek için kullanılan kodu içerir.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -117,9 +119,9 @@ Bu konu, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak güncel
     }  
     ```  
   
-3. Yönlendirme yapılandırmasını dinamik olarak güncelleştirmek için yeni bir yönlendirme yapılandırması oluşturulması gerekir. Bu, varolan yönlendirme yapılandırmasının tamamen yerini alacağı için, yeni yönlendirme yapılandırması için gereken tüm uç noktaları, filtreleri ve filtre tablolarını içermelidir. Yeni yönlendirme yapılandırmasını kullanmak için, yeni <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> yapılandırmayı çağırmanız ve geçmeniz gerekir.  
+3. Yönlendirme yapılandırmasını dinamik olarak güncelleştirmek için yeni bir yönlendirme yapılandırmasının oluşturulması gerekir. Bu, mevcut yönlendirme yapılandırmasının tamamen yerini alacak şekilde, yeni yönlendirme yapılandırması için gereken tüm uç noktaları, filtreleri ve filtre tablolarını içermelidir. Yeni yönlendirme yapılandırmasını kullanmak için <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> Yeni yapılandırmayı çağırmanız ve geçirmeniz gerekir.  
   
-     Hizmetin kullanıcı girişine göre yeniden yapılandırılabilmesi için daha önce tanımlanan while döngüsüne aşağıdaki kodu ekleyin.  
+     Hizmetin kullanıcı girişine göre yeniden yapılandırılması için aşağıdaki kodu daha önce tanımlanan while döngüsüne ekleyin.  
   
     ```csharp  
     Console.WriteLine("Enter 'regular' or 'rounding' to set the destination endpoint:");  
@@ -160,11 +162,11 @@ Bu konu, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak güncel
     ```  
   
     > [!NOTE]
-    > Yeni bir YönlendirmeYapılandırması sağlama yöntemi RoutingExtension hizmet uzantısında bulunduğundan, Yeni RoutingConfiguration nesneleri WCF genişletilebilirlik modelinde ServiceHost veya ServiceExtensions (başka bir ServiceExtension gibi).
+    > Yeni bir RoutingConfiguration sağlama yöntemi RoutingExtension hizmeti uzantısında yer aldığı için, yeni RoutingConfiguration nesneleri, ServiceHost veya ServiceExtensions 'a (örneğin, başka bir ServiceExtension gibi) başvuru elde eden veya içeren WCF genişletilebilirlik modelinde herhangi bir yerde sağlanabilir.
   
 ## <a name="example"></a>Örnek  
 
-Aşağıdaki, bu örnekte kullanılan konsol uygulamasının tam bir listesidir:
+Bu örnekte kullanılan konsol uygulamasının tüm listesi aşağıda verilmiştir:
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -243,7 +245,7 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="example"></a>Örnek  
 
-Aşağıda, bu örnekte kullanılan yapılandırma dosyasının tam listesi verilmiştir:
+Aşağıda, bu örnekte kullanılan yapılandırma dosyasının tamamen bir listesi verilmiştir:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

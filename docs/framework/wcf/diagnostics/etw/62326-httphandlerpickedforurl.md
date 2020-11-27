@@ -2,27 +2,30 @@
 title: 62326 - HttpHandlerPickedForUrl
 ms.date: 03/30/2017
 ms.assetid: edb9fb88-dfb0-486c-971d-26735d80dc0d
-ms.openlocfilehash: a40835d0a9b33301a89bb804dee5326a4e8cfd02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb25fae173d690fe43431a617fe60c17b079a04b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999485"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265173"
 ---
 # <a name="62326---httphandlerpickedforurl"></a>62326 - HttpHandlerPickedForUrl
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|62326|  
-|anahtar sözcükler|WebHost|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|62326|  
+|Anahtar sözcükler|Leyemedi|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- HTTP işleyicisi bu URL'sine yapılan tüm isteklere hizmet vermek için çekilir olduğunda bu olay yayılır.  
+
+ HTTP işleyicisi bu URL 'ye yapılan tüm isteklere yönelik olarak çekildiğinde bu olay yayınlanır.  
   
 ## <a name="message"></a>İleti  
- '%1' URL'si konakları XAML belgenin kök öğe '%2' yazın. HTTP işleyicisi türü '%3', bu URL'ye yapılan tüm isteklere hizmet vermek için çekilir.  
+
+ ' %1 ' URL 'si, ' %2 ' kök öğe türü ile XAML belgesi barındırır. HTTP işleyici türü ' %3 ', bu URL 'ye yapılan tüm istekleri sunacak şekilde çekildi.  
   
 ## <a name="details"></a>Ayrıntılar

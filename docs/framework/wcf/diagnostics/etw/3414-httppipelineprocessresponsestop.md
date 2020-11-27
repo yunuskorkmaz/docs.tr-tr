@@ -2,27 +2,30 @@
 title: 3414 - HttpPipelineProcessResponseStop
 ms.date: 03/30/2017
 ms.assetid: 71ebd2ee-aedd-47ef-9a2b-00f778f7e225
-ms.openlocfilehash: eac4aa81a796bd02e4faaae14b01358a4d651d64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0f9a7049be3f1d043fc456a07d65f866e1bb4e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683742"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263977"
 ---
 # <a name="3414---httppipelineprocessresponsestop"></a>3414 - HttpPipelineProcessResponseStop
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3414|  
-|anahtar sözcükler|HTTP|  
+|ID|3414|  
+|Anahtar sözcükler|HTTP|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Http ileti işleyicisi yanıt işlem tamamlandığında bu olay yayılır.  
+
+ Bu olay, http ileti işleyicisi yanıtı işlemeyi tamamladığında yayınlanır.  
   
 ## <a name="message"></a>İleti  
- HTTP ileti işleyicisi yanıt işleme tamamlandı.  
+
+ Http ileti işleyicisi yanıtı işlemeyi tamamladı.  
   
 ## <a name="details"></a>Ayrıntılar

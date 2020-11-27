@@ -2,14 +2,15 @@
 title: Bilinen Türler
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: dae271384905df890b2f42196d6e0aadad66be6f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e3f1365d69e218042e3a7c8f1c7f023d9ed7bafb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591845"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263821"
 ---
 # <a name="known-types"></a>Bilinen Türler
+
 Bu örnekte, bir veri sözleşmesindeki türetilmiş türler hakkında bilgilerin nasıl belirtileceği gösterilmektedir. Veri sözleşmeleri, yapılandırılmış verileri hizmetlere ve hizmetlerden geçirmenize olanak sağlar. Nesne odaklı programlamada, başka bir türden devralan bir tür özgün türün yerine kullanılabilir. Hizmet odaklı programlamada türler yerine şemalar iletilir ve bu nedenle, türler arasındaki ilişki korunmaz. <xref:System.Runtime.Serialization.KnownTypeAttribute>Özniteliği türetilmiş türler hakkındaki bilgilerin veri sözleşmesine dahil edilmesini sağlar. Bu mekanizma kullanılmazsa, bir temel türün beklenildiği bir türetilmiş tür gönderilemez veya alınamaz.  
   
 > [!NOTE]
@@ -114,7 +115,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- İstemcide, hizmet sözleşmesinin ve veri sözleşmesinin her ikisi de, hizmet meta verilerinden [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan generatedClient.cs kaynak dosyasında tanımlanmıştır. <xref:System.Runtime.Serialization.KnownTypeAttribute>Özniteliği hizmetin veri sözleşmesinde belirtildiğinden, istemci, `ComplexNumber` hizmeti kullanırken hem hem de `ComplexNumberWithMagnitude` sınıflarını alabilir. İstemci, bir olup olmadığını algılar `ComplexNumberWithMagnitude` ve uygun çıktıyı oluşturur:  
+ İstemcide, hizmet sözleşmesinin ve veri sözleşmesinin her ikisi de, hizmet meta verilerinden [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan generatedClient.cs kaynak dosyasında tanımlanmıştır. <xref:System.Runtime.Serialization.KnownTypeAttribute>Özniteliği hizmetin veri sözleşmesinde belirtildiğinden, istemci, `ComplexNumber` hizmeti kullanırken hem hem de `ComplexNumberWithMagnitude` sınıflarını alabilir. İstemci, bir olup olmadığını algılar `ComplexNumberWithMagnitude` ve uygun çıktıyı oluşturur:  
   
 ```csharp
 // Create a client  

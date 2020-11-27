@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: e4ce1fa7b494c2317a1bddc57ee6b150c84b9a96
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b03434e4f9552b714b40d54ba36c8468d0e2ccd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593152"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265368"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma
+
 Windows Communication Foundation (WCF), bir dağıtım akışı sunan bir hizmet oluşturmanıza olanak sağlar. Bu konu, hem Atom 1,0 hem de RSS 2,0 kullanarak bir dağıtım akışı sunan bir dağıtım hizmeti oluşturmayı açıklamaktadır. Bu hizmet, bir dağıtım biçimi döndüren bir uç noktayı kullanıma sunar. Basitlik için, bu örnekte kullanılan hizmetin kendine barındırıldığı yer vardır. Üretim ortamında, bu türde bir hizmet IIS veya WAS altında barındırılır. Farklı WCF barındırma seçenekleri hakkında daha fazla bilgi için bkz. [barındırma](hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Temel bir dağıtım hizmeti oluşturmak için  
   
-1. Özniteliği ile işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesi tanımlayın <xref:System.ServiceModel.Web.WebGetAttribute> . Bir dağıtım akışı olarak sunulan her işlem, bir nesnesi döndürür <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> . İçin parametreleri aklınızda edin <xref:System.ServiceModel.Web.WebGetAttribute> . `UriTemplate`Bu hizmet işlemini çağırmak için kullanılan URL 'YI belirtir. Bu parametre için dize, sabit değer ve küme ayracı ({*Format*}) içinde bir değişken içerir. Bu değişken, hizmet işleminin parametresine karşılık gelir `format` . Daha fazla bilgi için bkz. <xref:System.UriTemplate>. `BodyStyle`Bu hizmet işleminin gönderdiği ve aldığı iletilerin nasıl yazıldığını etkiler. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare>Bu hizmet işlemine gönderilen ve bu hizmetten gönderilen verilerin altyapı tanımlı XML öğeleri tarafından kaydırılmayacağı belirtir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1. Özniteliği ile işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesi tanımlayın <xref:System.ServiceModel.Web.WebGetAttribute> . Bir dağıtım akışı olarak sunulan her işlem, bir nesnesi döndürür <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> . İçin parametreleri aklınızda edin <xref:System.ServiceModel.Web.WebGetAttribute> . `UriTemplate` Bu hizmet işlemini çağırmak için kullanılan URL 'YI belirtir. Bu parametre için dize, sabit değer ve küme ayracı ({*Format*}) içinde bir değişken içerir. Bu değişken, hizmet işleminin parametresine karşılık gelir `format` . Daha fazla bilgi için bkz. <xref:System.UriTemplate>. `BodyStyle` Bu hizmet işleminin gönderdiği ve aldığı iletilerin nasıl yazıldığını etkiler. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> Bu hizmet işlemine gönderilen ve bu hizmetten gönderilen verilerin altyapı tanımlı XML öğeleri tarafından kaydırılmayacağı belirtir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -88,12 +89,14 @@ Windows Communication Foundation (WCF), bir dağıtım akışı sunan bir hizmet
      [!code-vb[htAtomRss#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek için tam kod listesi aşağıda verilmiştir.  
   
  [!code-csharp[htAtomRss#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#12)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki kod derlenirken, System. ServiceModel. dll ve System. ServiceModel. Web. dll ' ye başvurun.  
+
+ Önceki kodu derlerken, başvuru System.ServiceModel.dll ve System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

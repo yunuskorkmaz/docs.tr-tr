@@ -2,14 +2,15 @@
 title: Yapılandırma Örneği
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 6d84085d06da117ebf13fa4bb714513aacc3abd6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 927aab30ab122d281b4f3577ec05a2035c08f2fc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594731"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264341"
 ---
 # <a name="configuration-sample"></a>Yapılandırma Örneği
+
 Bu örnek, bir hizmetin bulunabilir olması için bir yapılandırma dosyası kullanımını gösterir.  
   
 > [!NOTE]
@@ -25,6 +26,7 @@ Bu örnek, bir hizmetin bulunabilir olması için bir yapılandırma dosyası ku
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>Hizmet yapılandırması  
+
  Bu örnekteki yapılandırma dosyası iki özelliği göstermektedir:  
   
 - Hizmetin bir standart üzerinde bulunabilir hale getirilmesi <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> .  
@@ -155,6 +157,7 @@ Bu örnek, bir hizmetin bulunabilir olması için bir yapılandırma dosyası ku
 ```  
   
 ## <a name="client-configuration"></a>İstemci Yapılandırması  
+
  İstemcinin uygulama yapılandırma dosyasında, bir `standardEndpoint` türü `dynamicEndpoint` aşağıdaki yapılandırma parçacığında gösterildiği gibi bulmayı kullanmak için kullanılır.  
   
 ```xml  
@@ -169,7 +172,7 @@ Bu örnek, bir hizmetin bulunabilir olması için bir yapılandırma dosyası ku
 </client>  
 ```  
   
- Bir istemci bir kullanırken `dynamicEndpoint` , çalışma zamanı bulmayı otomatik olarak gerçekleştirir. Bulma sırasında, `discoveryClientSettings` kullanılacak bulma uç noktasının türünü belirten, bölümünde tanımlananlar gibi çeşitli ayarlar kullanılır:  
+ Bir istemci bir kullanırken `dynamicEndpoint` , çalışma zamanı bulmayı otomatik olarak gerçekleştirir. Bulma sırasında,  `discoveryClientSettings` kullanılacak bulma uç noktasının türünü belirten, bölümünde tanımlananlar gibi çeşitli ayarlar kullanılır:  
   
 ```xml  
 <endpoint kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration" />  

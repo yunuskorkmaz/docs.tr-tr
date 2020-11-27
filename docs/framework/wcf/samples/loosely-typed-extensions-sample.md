@@ -2,14 +2,15 @@
 title: Geniş Yazılmış Uzantılar Örneği
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 0a08ca19e5e6bff7223d45726617d2c2163ca3df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 94e01970502223febd3ff03e30be7b17d9019d93
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591871"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264901"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Geniş Yazılmış Uzantılar Örneği
+
 Dağıtım nesnesi modeli, uzantı verileriyle çalışma için zengin destek sağlar — bir dağıtım akışının XML gösteriminde bulunan ancak ve gibi sınıflar tarafından açıkça gösterilmeyen bilgiler <xref:System.ServiceModel.Syndication.SyndicationFeed> <xref:System.ServiceModel.Syndication.SyndicationItem> . Bu örnek, uzantı verileriyle çalışmaya yönelik temel teknikleri gösterir.  
   
  Örnek, <xref:System.ServiceModel.Syndication.SyndicationFeed> örnek amacıyla sınıfını kullanır. Ancak, bu örnekte gösterilen desenler uzantı verilerini destekleyen tüm dağıtım sınıflarıyla birlikte kullanılabilir:  
@@ -25,6 +26,7 @@ Dağıtım nesnesi modeli, uzantı verileriyle çalışma için zengin destek sa
  <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
 ## <a name="sample-xml"></a>Örnek XML  
+
  Başvuru için, bu örnekte aşağıdaki XML belgesi kullanılır.  
   
 ```xml  
@@ -56,15 +58,16 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
 - `myAttribute` `<feed>` Öğesinin özniteliği.  
   
-- `<simpleString>`dosyalarında.  
+- `<simpleString>` dosyalarında.  
   
-- `<DataContractExtension>`dosyalarında.  
+- `<DataContractExtension>` dosyalarında.  
   
-- `<XmlSerializerExtension>`dosyalarında.  
+- `<XmlSerializerExtension>` dosyalarında.  
   
-- `<xElementExtension>`dosyalarında.  
+- `<xElementExtension>` dosyalarında.  
   
 ## <a name="writing-extension-data"></a>Uzantı verileri yazma  
+
  Öznitelik uzantıları, <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> Aşağıdaki örnek kodda gösterildiği gibi koleksiyona giriş eklenerek oluşturulur.  
   
 ```csharp  
@@ -102,6 +105,7 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
 ```  
   
 ## <a name="reading-extension-data"></a>Uzantı verilerini okuma  
+
  Öznitelik uzantılarının değerleri, <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> <xref:System.Xml.XmlQualifiedName> Aşağıdaki örnek kodda gösterildiği gibi, koleksiyonundaki özniteliğe bakılarak elde edilebilir.  
   
 ```csharp  

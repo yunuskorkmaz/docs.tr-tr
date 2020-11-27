@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: da11ce4cf9da10c0ebb990f9439b0bbe3621c561
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: fc47170a08ff08f6cd8f67996ef8fbf19c40f819
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168210"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265654"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>UI Otomasyonu Dönüştürme Denetim Düzenini Uygulama
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168210"
  <xref:System.Windows.Automation.TransformPattern>Denetim stili, iki boyutlu bir boşluk içinde taşınabilecek, yeniden boyutlandırılabileceğini veya döndürülebilen denetimleri desteklemek için kullanılır. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+
  Dönüşüm denetim modelini uygularken, aşağıdaki kılavuz ve kurallara göz önünde aklınızda olmanız gerekir:  
   
 - Bu denetim deseninin desteği masaüstündeki nesnelerle sınırlı değildir. Bu denetim deseninin ayrıca alt öğeler, kapsayıcının sınırları içinde taşınabileceği, yeniden boyutlandırılabileceği veya serbest bir şekilde döndürülebilen bir kapsayıcı nesnesinin alt öğeleri tarafından desteklenmelidir.  
@@ -35,22 +38,26 @@ ms.locfileid: "87168210"
 - Tüm parametreler ve özellik değerleri mutlak ve yerel ayardan bağımsızdır.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
+
 ## <a name="required-members-for-itransformprovider"></a>Iransformprovider için gerekli Üyeler  
+
  Uygulamak için aşağıdaki özellikler ve Yöntemler gereklidir <xref:System.Windows.Automation.Provider.ITransformProvider> .  
   
 |Gerekli Üyeler|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Yöntem|Hiçbiri|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Yöntem|Hiçbiri|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Yöntem|Hiçbiri|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Özellik|Yok|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Özellik|Yok|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Özellik|Yok|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Yöntem|Yok|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Yöntem|Yok|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Yöntem|Yok|  
   
  Bu denetim deseninin ilişkili olayları yok.  
   
 <a name="Exceptions"></a>
-## <a name="exceptions"></a>Özel durumlar  
+
+## <a name="exceptions"></a>Özel Durumlar  
+
  Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.  
   
 |Özel durum türü|Koşul|  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 0292559e3befde7f0b00b36aa10a2d9615daf049
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7200d82e4a45ce9e36b2a4cec3d0c08e1a5f00ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247006"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265472"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Nasıl yapılır: Net.TCP Bağlantı Noktası Payalaşım Hizmetini Etkinleştirme
+
 Windows Communication Foundation (WCF), TCP bağlantı noktalarının birden çok işlem arasında paylaşılmasını kolaylaştırmak için net. TCP bağlantı noktası paylaşma hizmeti adlı bir Windows hizmeti kullanır. Bu hizmet, WCF 'nin bir parçası olarak yüklenir, ancak hizmet varsayılan olarak bir güvenlik önlemi olarak etkinleştirilmemiştir ve bu nedenle, ilk kullanılmadan önce el ile etkinleştirilmesi gerekir. Bu konuda, Microsoft Yönetim Konsolu (MMC) ek bileşenini kullanarak net TCP bağlantı noktası paylaşım hizmeti 'nin nasıl yapılandırılacağı açıklanmaktadır.  
   
  Net. TCP bağlantı noktası paylaşım hizmetini etkinleştirip el ile başlattıktan sonra, bu hizmeti kullanmak için hizmetinizi yapılandırma hakkında bilgi için bkz. [nasıl yapılır: WCF hizmetini bağlantı noktası Paylaşımı kullanmak üzere yapılandırma](how-to-configure-a-wcf-service-to-use-port-sharing.md) .  

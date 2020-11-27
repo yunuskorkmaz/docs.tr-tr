@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 7da7ba1b680bae2b29eeff8fe669e097ea8eda32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f69286a2b4d4ec55f18931f9156c20a38da9c34
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595381"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265433"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma
+
 Kuyruklar, hizmet iletişim sırasında kullanılamasa bile, istemci ve Windows Communication Foundation (WCF) hizmeti arasında güvenilir mesajlaşma 'nın gerçekleşebileceğini güvence altına alır. Aşağıdaki yordamlarda, WCF hizmetini uygularken standart sıraya alınmış bağlamayı kullanarak bir istemci ve hizmet arasında sürekli iletişimin nasıl emin olduğu gösterilmektedir.  
   
  Bu bölümde <xref:System.ServiceModel.NetMsmqBinding> , BIR WCF istemcisi Ile WCF hizmeti arasındaki sıraya alınmış iletişim için nasıl kullanılacağı açıklanmaktadır.  
@@ -50,7 +51,7 @@ Kuyruklar, hizmet iletişim sırasında kullanılamasa bile, istemci ve Windows 
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>Kuyruğa alınmış hizmet için bir istemci oluşturmak için  
   
-1. Aşağıdaki örnek, WCF istemcisini oluşturmak için barındırma uygulamasının nasıl çalıştırılacağını ve Svcutil. exe aracını nasıl kullanacağınızı gösterir.  
+1. Aşağıdaki örnek, bir barındırma uygulamasının nasıl çalıştırılacağını ve WCF istemcisini oluşturmak için Svcutil.exe aracının nasıl kullanılacağını gösterir.  
   
     ```console
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -64,7 +65,8 @@ Kuyruklar, hizmet iletişim sırasında kullanılamasa bile, istemci ve Windows 
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örneklerde hizmet kodu, barındırma uygulaması, App. config dosyası ve bu örnek için eklenen istemci kodu gösterilmektedir.  
+
+ Aşağıdaki örneklerde hizmet kodu, barındırma uygulaması, App.config dosyası ve bu örneğe dahil edilen istemci kodu gösterilmektedir.  
   
  [!code-csharp[S_Msmq_Transacted#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#9)]
  [!code-vb[S_Msmq_Transacted#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#9)]  

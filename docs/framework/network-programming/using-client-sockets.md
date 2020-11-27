@@ -17,14 +17,15 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: 1dc02d0b3651d5766d1d30752566217d8417af0c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6982d09c20cd0d7e9d27fc63880b39e0982c86ef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502008"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265199"
 ---
 # <a name="using-client-sockets"></a>İstemci Yuvaları Kullanma
+
 Bir konuşmayı bir ile başlatmak için önce <xref:System.Net.Sockets.Socket> uygulamanız ile uzak cihaz arasında bir veri kanalı oluşturmanız gerekir. Diğer ağ adresi aileleri ve protokolleri var olsa da bu örnek, uzak bir hizmete TCP/IP bağlantısının nasıl oluşturulacağını gösterir.  
   
  TCP/IP bir hizmeti benzersiz bir şekilde tanımlamak için bir ağ adresi ve bir hizmet bağlantı noktası numarası kullanır. Ağ adresi ağ üzerinde belirli bir cihazı tanımlar; bağlantı noktası numarası, bu cihazdaki Bağlanılacak belirli hizmeti tanımlar. Ağ adresi ve hizmet bağlantı noktası birleşimine, sınıfı tarafından .NET Framework temsil edilen bir uç nokta denir <xref:System.Net.EndPoint> . Her desteklenen adres ailesi için **uç nokta** alt öğesi tanımlanmıştır; IP adresi ailesi için sınıfı <xref:System.Net.IPEndPoint> .  
@@ -82,5 +83,5 @@ try {
 
 - [Zaman Uyumlu İstemci Yuvası Kullanma](using-a-synchronous-client-socket.md)
 - [Zaman Uyumsuz İstemci Yuvası Kullanma](using-an-asynchronous-client-socket.md)
-- [Nasıl Yapılır: Yuva Oluşturma](how-to-create-a-socket.md)
+- [Nasıl yapılır: Yuva Oluşturma](how-to-create-a-socket.md)
 - [Yuvalar](sockets.md)

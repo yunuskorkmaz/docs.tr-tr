@@ -3,14 +3,15 @@ title: WCF Test İstemcisi (WcfTestClient.exe)
 description: WCF hizmeti ana bilgisayarı ile birleştirildiğinde sorunsuz hizmet testi sağlayan WCF test Istemcisi hakkında bilgi edinin. İstemci sınama değerlerini gönderme ve hizmet yanıtlarını görüntüleme.
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: 4f636698c538809f89ee356159839a37b73adb57
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f583d20edf7eeea87ae1dbf63a3cadef05912833
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245667"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264133"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
+
 Windows Communication Foundation (WCF) test Istemcisi (WcfTestClient.exe), kullanıcıların test parametreleri girmesini, bu girişi hizmete göndermesini ve hizmetin geri gönderdiği yanıtı görüntülemesini sağlayan bir GUI aracıdır. WCF hizmet ana bilgisayarı ile birleştirildiğinde sorunsuz bir hizmet testi deneyimi sağlar.
 
 Genellikle WCF test Istemcisini (WcfTestClient.exe) şu konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` -topluluk, hangi Visual Studio düzeyine bağlı olarak "Kurumsal", "profesyonel" veya "topluluk" olabilir.
@@ -33,7 +34,7 @@ Ayrıca, birden çok hizmet içeren bir hizmet projesinde hata ayıklamanıza ya
 
 Ayrıca, Internet 'te rastgele bir hizmeti test etmek için Visual Studio dışında WCF test Istemcisini (WcfTestClient.exe) çağırabilirsiniz. Aracı bulmak için şu konuma gidin:
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`(Bu, topluluk "Kurumsal", "profesyonel" veya "topluluk" olabilir ve makinede hangi Visual Studio düzeyinin yüklü olduğuna bağlı olarak)
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (Bu, topluluk "Kurumsal", "profesyonel" veya "topluluk" olabilir ve makinede hangi Visual Studio düzeyinin yüklü olduğuna bağlı olarak)
 
 Aracı kullanmak için dosya adına çift tıklayarak bu konumdan açın veya bir komut satırından başlatın.
 
@@ -76,7 +77,7 @@ Bir hizmet işleminin sekmesindeki **Yeni bir ara sunucu Başlat** onay kutusu, 
 
 Belirli bir işlem (ya da aynı hizmet uç noktasındaki başka bir işlem) için test parametreleri girdiğinizde ve onay kutusuyla birden çok kez **çağır** ' a tıkladığınızda, bu işlemler bir ara sunucu paylaşır ve hizmet durumu birden çok işlem arasında kalıcı hale getirilir.
 
-**Yeni bir ara sunucu Başlat** onay kutusu işaretliyse, her **Invoke**için yeni bir ara sunucu başlatılır, önceki oturum senaryosu sonlandırılır ve hizmet durumu sıfırlanır.
+**Yeni bir ara sunucu Başlat** onay kutusu işaretliyse, her **Invoke** için yeni bir ara sunucu başlatılır, önceki oturum senaryosu sonlandırılır ve hizmet durumu sıfırlanır.
 
 ### <a name="editing-client-configuration"></a>Istemci yapılandırması düzenleniyor
 
@@ -84,7 +85,7 @@ WCF test Istemcisi ana penceresinin sol bölmesi istemci yapılandırma dosyalar
 
 #### <a name="edit-with-service-configuration-editor"></a>Hizmet yapılandırma Düzenleyicisi ile Düzenle
 
-Sol bölmedeki **yapılandırma dosyası** ' na sağ tıklayın ve **SvcConfigEditor ile Düzenle**bağlam menüsünü seçin. Hizmet yapılandırma Düzenleyicisi, istemci yapılandırma içeriğiyle başlatılır. Yapılandırmayı düzenleyebilir ve araç içine kaydedebilirsiniz.
+Sol bölmedeki **yapılandırma dosyası** ' na sağ tıklayın ve **SvcConfigEditor ile Düzenle** bağlam menüsünü seçin. Hizmet yapılandırma Düzenleyicisi, istemci yapılandırma içeriğiyle başlatılır. Yapılandırmayı düzenleyebilir ve araç içine kaydedebilirsiniz.
 
 Dosyayı hizmet yapılandırma düzenleyicisine kaydettikten sonra, WCF test Istemcisi, dosyanın dışında değiştirildiğini bildiren bir uyarı iletisi görüntüler ve yeniden yüklemek isteyip istemediğinizi sorar.
 
@@ -121,11 +122,11 @@ Ancak, yeniden üretilen ara sunucu ile tutarlı olması için yapılandırma do
 
 #### <a name="add-service"></a>Hizmet Ekle
 
-**File** -> WCF test istemcisine bir hizmet eklemek için dosya**ekleme hizmeti** ' ne tıklayın. Daha sonra eklenecek hizmetin URI 'sini (uç nokta adresi) yazmanız gerekir. Hizmetin adresi bir MEX adresi veya WSDL adresi olabilir.
+**File** -> WCF test istemcisine bir hizmet eklemek için dosya **ekleme hizmeti** ' ne tıklayın. Daha sonra eklenecek hizmetin URI 'sini (uç nokta adresi) yazmanız gerekir. Hizmetin adresi bir MEX adresi veya WSDL adresi olabilir.
 
 **Son hizmetler** alt menüsünde son eklenen 10 hizmet uç noktalarının listesini de bulabilirsiniz. Bunlardan birini seçerseniz, belirtilen hizmet WCF test Istemcisine eklenir.
 
-Ayrıca, hizmet ağacı **sitem projelerimin**köküne sağ tıklayıp **Hizmet Ekle** ' yi seçerek aynı sonucu elde edebilirsiniz.
+Ayrıca, hizmet ağacı **sitem projelerimin** köküne sağ tıklayıp **Hizmet Ekle** ' yi seçerek aynı sonucu elde edebilirsiniz.
 
 Ara sunucu oluşturma, ikili derleme veya hizmet çağrısı sırasında, hizmet eklemeyi destekleyen menü öğeleri devre dışı bırakılır. Hizmet çağrısı da devre dışı bırakılır.
 
@@ -145,7 +146,7 @@ Ara sunucu oluşturma, ikili derleme veya hizmet çağırma sırasında, bir hiz
 
 Varsayılan olarak, WCF test Istemcisi oluşturulan istemci kodunu ve yapılandırma dosyalarını "%appdata%\Local\temp\Test Istemci projeleri" klasöründe depolar. Bu klasör, WCF test Istemcisi çıktıktan sonra silinir. Bir yapılandırma dosyası WCF test Istemcisinde değiştirilirse ve **Hizmetler başlatılırken her zaman** yapılandırmayı yeniden oluştur seçeneği devre dışı bırakılmışsa, değiştirilen dosya, dizin olarak eşleme (meta veri-adres-dosya adı) XML dosyası olan "gizli dizi testi istemci Projelerim" altındaki "CachedConfig" klasörüne kopyalanır.
 
-Ayrıca, WCF test Istemcisini bir komut satırında başlatabilir, `/ProjectPath` oluşturulan dosyaları depolamak için istenen yeni bir yol belirtmek için anahtarını kullanabilir veya `/RestoreProjectPath` varsayılan konumu geri yüklemek için anahtarını kullanabilirsiniz. Söz dizimi aşağıdaki gibidir:
+Ayrıca, WCF test Istemcisini bir komut satırında başlatabilir, `/ProjectPath` oluşturulan dosyaları depolamak için istenen yeni bir yol belirtmek için anahtarını kullanabilir veya `/RestoreProjectPath` varsayılan konumu geri yüklemek için anahtarını kullanabilirsiniz. Söz dizimi şu şekildedir:
 
 `wcfTestClient.exe /ProjectPath [desired location]`
 
@@ -187,4 +188,4 @@ WCF test Istemcisini aşağıdaki yollarla kapatabilirsiniz:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Hizmet Konağı (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

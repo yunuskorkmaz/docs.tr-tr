@@ -2,17 +2,19 @@
 title: Yönetim
 ms.date: 03/30/2017
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
-ms.openlocfilehash: 53c53252e5798ffb01d42b143971a66d1c067851
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0f3d5404787d46f5b00ec54fc155997e40ac7fac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591793"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264744"
 ---
 # <a name="management"></a>Yönetim
+
 Bu bölüm Windows Communication Foundation (WCF) yönetimini gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Windows için WCF Hizmetleri ve Etkinlik İzleme](wcf-services-and-event-tracing-for-windows.md)  
  Windows için olay Izleme (ETW) içindeki olayları göstermek için WCF 'de analitik izlemenin nasıl kullanılacağını gösterir.  
   
