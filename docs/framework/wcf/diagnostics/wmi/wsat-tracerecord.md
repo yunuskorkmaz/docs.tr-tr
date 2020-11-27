@@ -2,17 +2,18 @@
 title: WSAT_TraceRecord
 ms.date: 03/30/2017
 ms.assetid: 99bc7f66-1335-40d8-aa68-e754d569dc0d
-ms.openlocfilehash: 907e764cf032e595c7aba455fd4808a640f68016
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0409277821a7cca3f97fcec1bb383aba9583a1f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923415"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262222"
 ---
-# <a name="wsattracerecord"></a><span data-ttu-id="1f589-102">WSAT_TraceRecord</span><span class="sxs-lookup"><span data-stu-id="1f589-102">WSAT_TraceRecord</span></span>
-<span data-ttu-id="1f589-103">WSAT_TraceRecord</span><span class="sxs-lookup"><span data-stu-id="1f589-103">WSAT_TraceRecord</span></span>  
+# <a name="wsat_tracerecord"></a><span data-ttu-id="b04c6-102">WSAT_TraceRecord</span><span class="sxs-lookup"><span data-stu-id="b04c6-102">WSAT_TraceRecord</span></span>
+
+<span data-ttu-id="b04c6-103">WSAT_TraceRecord</span><span class="sxs-lookup"><span data-stu-id="b04c6-103">WSAT_TraceRecord</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1f589-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1f589-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b04c6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b04c6-104">Syntax</span></span>  
   
 ```csharp
 class WSAT_TraceRecord : WSAT_TraceEvent  
@@ -23,32 +24,37 @@ class WSAT_TraceRecord : WSAT_TraceEvent
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="1f589-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="1f589-105">Methods</span></span>  
- <span data-ttu-id="1f589-106">WSAT_TraceRecord sınıf herhangi bir yöntemi tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="1f589-106">The WSAT_TraceRecord class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="b04c6-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="b04c6-105">Methods</span></span>  
+
+ <span data-ttu-id="b04c6-106">WSAT_TraceRecord sınıfı herhangi bir yöntemi tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="b04c6-106">The WSAT_TraceRecord class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="1f589-107">Özellikler</span><span class="sxs-lookup"><span data-stu-id="1f589-107">Properties</span></span>  
- <span data-ttu-id="1f589-108">WSAT_TraceRecord sınıfı aşağıdaki özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="1f589-108">The WSAT_TraceRecord class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="b04c6-107">Özellikler</span><span class="sxs-lookup"><span data-stu-id="b04c6-107">Properties</span></span>  
+
+ <span data-ttu-id="b04c6-108">WSAT_TraceRecord sınıfı aşağıdaki özelliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="b04c6-108">The WSAT_TraceRecord class has the following properties:</span></span>  
   
-### <a name="activityid"></a><span data-ttu-id="1f589-109">Etkinlik Kimliği</span><span class="sxs-lookup"><span data-stu-id="1f589-109">ActivityID</span></span>  
- <span data-ttu-id="1f589-110">Veri türü: nesne</span><span class="sxs-lookup"><span data-stu-id="1f589-110">Data type: object</span></span>  
-<span data-ttu-id="1f589-111">Erişim türü: salt okunur</span><span class="sxs-lookup"><span data-stu-id="1f589-111">Access type: Read-only</span></span>  
+### <a name="activityid"></a><span data-ttu-id="b04c6-109">ActivityID</span><span class="sxs-lookup"><span data-stu-id="b04c6-109">ActivityID</span></span>  
+
+ <span data-ttu-id="b04c6-110">Veri türü: nesne</span><span class="sxs-lookup"><span data-stu-id="b04c6-110">Data type: object</span></span>  
+<span data-ttu-id="b04c6-111">Erişim türü: salt okunurdur</span><span class="sxs-lookup"><span data-stu-id="b04c6-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="1f589-112">İzleme kayıt etkinlik kimliği.</span><span class="sxs-lookup"><span data-stu-id="1f589-112">The activity ID of the trace record.</span></span>  
+ <span data-ttu-id="b04c6-112">İzleme kaydının etkinlik KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="b04c6-112">The activity ID of the trace record.</span></span>  
   
-### <a name="eventid"></a><span data-ttu-id="1f589-113">EventID</span><span class="sxs-lookup"><span data-stu-id="1f589-113">EventID</span></span>  
- <span data-ttu-id="1f589-114">Veri türü: SINT32</span><span class="sxs-lookup"><span data-stu-id="1f589-114">Data type: sint32</span></span>  
-<span data-ttu-id="1f589-115">Erişim türü: salt okunur</span><span class="sxs-lookup"><span data-stu-id="1f589-115">Access type: Read-only</span></span>  
+### <a name="eventid"></a><span data-ttu-id="b04c6-113">EventID</span><span class="sxs-lookup"><span data-stu-id="b04c6-113">EventID</span></span>  
+
+ <span data-ttu-id="b04c6-114">Veri türü: Sint32</span><span class="sxs-lookup"><span data-stu-id="b04c6-114">Data type: sint32</span></span>  
+<span data-ttu-id="b04c6-115">Erişim türü: salt okunurdur</span><span class="sxs-lookup"><span data-stu-id="b04c6-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="1f589-116">İzleme kayıt olay kimliği.</span><span class="sxs-lookup"><span data-stu-id="1f589-116">The event ID of the trace record.</span></span>  
+ <span data-ttu-id="b04c6-116">İzleme kaydının olay KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="b04c6-116">The event ID of the trace record.</span></span>  
   
-### <a name="tracerecord"></a><span data-ttu-id="1f589-117">TraceRecord</span><span class="sxs-lookup"><span data-stu-id="1f589-117">TraceRecord</span></span>  
- <span data-ttu-id="1f589-118">Veri türü: dize</span><span class="sxs-lookup"><span data-stu-id="1f589-118">Data type: string</span></span>  
-<span data-ttu-id="1f589-119">Erişim türü: salt okunur</span><span class="sxs-lookup"><span data-stu-id="1f589-119">Access type: Read-only</span></span>  
+### <a name="tracerecord"></a><span data-ttu-id="b04c6-117">Izleme kaydı</span><span class="sxs-lookup"><span data-stu-id="b04c6-117">TraceRecord</span></span>  
+
+ <span data-ttu-id="b04c6-118">Veri türü: dize</span><span class="sxs-lookup"><span data-stu-id="b04c6-118">Data type: string</span></span>  
+<span data-ttu-id="b04c6-119">Erişim türü: salt okunurdur</span><span class="sxs-lookup"><span data-stu-id="b04c6-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="1f589-120">Kayıt izleme</span><span class="sxs-lookup"><span data-stu-id="1f589-120">Trace Record</span></span>  
+ <span data-ttu-id="b04c6-120">İzleme kaydı</span><span class="sxs-lookup"><span data-stu-id="b04c6-120">Trace Record</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1f589-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1f589-121">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b04c6-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b04c6-121">Requirements</span></span>  
   
-|<span data-ttu-id="1f589-122">MOF</span><span class="sxs-lookup"><span data-stu-id="1f589-122">MOF</span></span>|<span data-ttu-id="1f589-123">Bildirilmiş Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="1f589-123">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="b04c6-122">MOF</span><span class="sxs-lookup"><span data-stu-id="b04c6-122">MOF</span></span>|<span data-ttu-id="b04c6-123">ServiceModel. mof içinde bildirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="b04c6-123">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="1f589-124">Ad Alanı</span><span class="sxs-lookup"><span data-stu-id="1f589-124">Namespace</span></span>|<span data-ttu-id="1f589-125">İçinde tanımlı root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="1f589-125">Defined in root\ServiceModel</span></span>|
+|<span data-ttu-id="b04c6-124">Ad Alanı</span><span class="sxs-lookup"><span data-stu-id="b04c6-124">Namespace</span></span>|<span data-ttu-id="b04c6-125">Root\ServiceModel içinde tanımlı</span><span class="sxs-lookup"><span data-stu-id="b04c6-125">Defined in root\ServiceModel</span></span>|

@@ -4,20 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 5f2915f4f0170f85c27c6c809575d1c56d40774b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 92c329ff922b5e4fc025245dac596c6abebc2716
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602485"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260155"
 ---
-# <a name="multiple-endpoints"></a><span data-ttu-id="e2c17-102">Birden Fazla Uç Noktası</span><span class="sxs-lookup"><span data-stu-id="e2c17-102">Multiple Endpoints</span></span>
-<span data-ttu-id="e2c17-103">Birden çok uç nokta örneği, bir hizmette birden çok uç noktanın nasıl yapılandırılacağını ve bir istemciden gelen her bir uç nokta ile nasıl iletişim kuracağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="e2c17-103">The Multiple Endpoints sample demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span> <span data-ttu-id="e2c17-104">Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır.</span><span class="sxs-lookup"><span data-stu-id="e2c17-104">This sample is based on the [Getting Started](getting-started-sample.md).</span></span> <span data-ttu-id="e2c17-105">Hizmet yapılandırması, sözleşmeyi destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir `ICalculator` , ancak her biri farklı bir bağlama kullanılarak farklı bir adreste bulunur.</span><span class="sxs-lookup"><span data-stu-id="e2c17-105">The service configuration has been modified to define two endpoints that support the `ICalculator` contract, but each at a different address using a different binding.</span></span> <span data-ttu-id="e2c17-106">İstemci yapılandırması ve kodu, hizmet uç noktaları ile iletişim kuracak şekilde değiştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="e2c17-106">The client configuration and code have been modified to communicate with both of the service endpoints.</span></span>  
+# <a name="multiple-endpoints"></a><span data-ttu-id="b5bbf-102">Birden Fazla Uç Noktası</span><span class="sxs-lookup"><span data-stu-id="b5bbf-102">Multiple Endpoints</span></span>
+
+<span data-ttu-id="b5bbf-103">Birden çok uç nokta örneği, bir hizmette birden çok uç noktanın nasıl yapılandırılacağını ve bir istemciden gelen her bir uç nokta ile nasıl iletişim kuracağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-103">The Multiple Endpoints sample demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span> <span data-ttu-id="b5bbf-104">Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-104">This sample is based on the [Getting Started](getting-started-sample.md).</span></span> <span data-ttu-id="b5bbf-105">Hizmet yapılandırması, sözleşmeyi destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir `ICalculator` , ancak her biri farklı bir bağlama kullanılarak farklı bir adreste bulunur.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-105">The service configuration has been modified to define two endpoints that support the `ICalculator` contract, but each at a different address using a different binding.</span></span> <span data-ttu-id="b5bbf-106">İstemci yapılandırması ve kodu, hizmet uç noktaları ile iletişim kuracak şekilde değiştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-106">The client configuration and code have been modified to communicate with both of the service endpoints.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="e2c17-107">Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.</span><span class="sxs-lookup"><span data-stu-id="e2c17-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="b5bbf-107">Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="e2c17-108">Hizmet Web. config dosyası, her biri aynı sözleşmeyi destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir `ICalculator` , ancak farklı bağlamalar kullanan farklı adreslerdir.</span><span class="sxs-lookup"><span data-stu-id="e2c17-108">The service Web.config file has been modified to define two endpoints, each supporting the same `ICalculator` contract, but at different addresses using different bindings.</span></span> <span data-ttu-id="e2c17-109">İlk uç nokta, `basicHttpBinding` güvenliği etkinleştirilmemiş olan bağlama kullanılarak temel adreste tanımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="e2c17-109">The first endpoint is defined at the base address using a `basicHttpBinding` binding, which does not have security enabled.</span></span> <span data-ttu-id="e2c17-110">İkinci uç nokta, `wsHttpBinding` Windows kimlik DOĞRULAMASıYLA WS-Security kullanılarak varsayılan olarak güvenli olan bir bağlama kullanılarak {BaseAddress}/Secure konumunda tanımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="e2c17-110">The second endpoint is defined at {baseaddress}/secure using a `wsHttpBinding` binding, which is secure by default, using WS-Security with Windows authentication.</span></span>  
+ <span data-ttu-id="b5bbf-108">Service Web.config dosyası, her biri aynı sözleşmeyi destekleyen iki uç nokta tanımlamak üzere değiştirilmiştir `ICalculator` , ancak farklı bağlamalar kullanan farklı adreslerdir.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-108">The service Web.config file has been modified to define two endpoints, each supporting the same `ICalculator` contract, but at different addresses using different bindings.</span></span> <span data-ttu-id="b5bbf-109">İlk uç nokta, `basicHttpBinding` güvenliği etkinleştirilmemiş olan bağlama kullanılarak temel adreste tanımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-109">The first endpoint is defined at the base address using a `basicHttpBinding` binding, which does not have security enabled.</span></span> <span data-ttu-id="b5bbf-110">İkinci uç nokta, `wsHttpBinding` Windows kimlik doğrulamasıyla WS-Security kullanarak varsayılan olarak güvenli olan bir bağlama kullanılarak {BaseAddress}/Secure konumunda tanımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-110">The second endpoint is defined at {baseaddress}/secure using a `wsHttpBinding` binding, which is secure by default, using WS-Security with Windows authentication.</span></span>  
   
 ```xml  
 <service
@@ -37,7 +38,7 @@ ms.locfileid: "84602485"
 </service>  
 ```  
   
- <span data-ttu-id="e2c17-111">Ayrıca, istemci üzerinde her iki uç nokta de yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="e2c17-111">Both endpoints are also configured on the client.</span></span> <span data-ttu-id="e2c17-112">Bu uç noktalara, çağıranın istenen uç nokta adını istemcinin oluşturucusuna geçirebilmesi için adlar verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="e2c17-112">These endpoints are given names so that the caller can pass the desired endpoint name into the constructor of the client.</span></span>  
+ <span data-ttu-id="b5bbf-111">Ayrıca, istemci üzerinde her iki uç nokta de yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-111">Both endpoints are also configured on the client.</span></span> <span data-ttu-id="b5bbf-112">Bu uç noktalara, çağıranın istenen uç nokta adını istemcinin oluşturucusuna geçirebilmesi için adlar verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-112">These endpoints are given names so that the caller can pass the desired endpoint name into the constructor of the client.</span></span>  
   
 ```xml  
 <client>  
@@ -56,7 +57,7 @@ ms.locfileid: "84602485"
 </client>  
 ```  
   
- <span data-ttu-id="e2c17-113">İstemci aşağıdaki kodda gösterildiği gibi her iki uç noktasını kullanır.</span><span class="sxs-lookup"><span data-stu-id="e2c17-113">The client uses both endpoints as shown in the following code.</span></span>  
+ <span data-ttu-id="b5bbf-113">İstemci aşağıdaki kodda gösterildiği gibi her iki uç noktasını kullanır.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-113">The client uses both endpoints as shown in the following code.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -85,7 +86,7 @@ static void Main()
 }  
 ```  
   
- <span data-ttu-id="e2c17-114">İstemcisini çalıştırdığınızda her iki uç nokta içeren etkileşimler görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="e2c17-114">When you run the client, interactions with both endpoints are displayed.</span></span>  
+ <span data-ttu-id="b5bbf-114">İstemcisini çalıştırdığınızda her iki uç nokta içeren etkileşimler görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-114">When you run the client, interactions with both endpoints are displayed.</span></span>  
   
 ```console
 Communicate with basic endpoint.  
@@ -102,19 +103,19 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e2c17-115">Örneği ayarlamak, derlemek ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="e2c17-115">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b5bbf-115">Örneği ayarlamak, derlemek ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="b5bbf-115">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="e2c17-116">[Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="e2c17-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="b5bbf-116">[Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="e2c17-117">Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="e2c17-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
+2. <span data-ttu-id="b5bbf-117">Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="e2c17-118">Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="e2c17-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>  
+3. <span data-ttu-id="b5bbf-118">Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="e2c17-119">Örnekler makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="e2c17-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e2c17-120">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="e2c17-120">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="b5bbf-119">Örnekler makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b5bbf-120">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-120">Check for the following (default) directory before continuing.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> <span data-ttu-id="e2c17-121">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="e2c17-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e2c17-122">Bu örnek, aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="e2c17-122">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="b5bbf-121">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b5bbf-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b5bbf-122">Bu örnek, aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="b5bbf-122">This sample is located in the following directory.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  

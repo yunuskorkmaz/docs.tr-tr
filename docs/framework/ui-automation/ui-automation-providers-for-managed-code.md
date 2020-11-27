@@ -9,21 +9,23 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 5f82f731-f1b5-4c8b-b47c-d11279a02574
-ms.openlocfilehash: 5b88127aa88544e77b1516d776bdce2d9f9a9fef
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 531dff4db6fe30ee4cdff2c0b9c482e7d3536583
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163158"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261091"
 ---
-# <a name="ui-automation-providers-for-managed-code"></a><span data-ttu-id="89a81-103">Yönetilen Kod İçin UI Otomasyon Sağlayıcılar</span><span class="sxs-lookup"><span data-stu-id="89a81-103">UI Automation Providers for Managed Code</span></span>
+# <a name="ui-automation-providers-for-managed-code"></a><span data-ttu-id="f6ee6-103">Yönetilen Kod İçin UI Otomasyon Sağlayıcılar</span><span class="sxs-lookup"><span data-stu-id="f6ee6-103">UI Automation Providers for Managed Code</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="89a81-104">Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> .</span><span class="sxs-lookup"><span data-stu-id="89a81-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="89a81-105">Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="89a81-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
+> <span data-ttu-id="f6ee6-104">Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> .</span><span class="sxs-lookup"><span data-stu-id="f6ee6-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="f6ee6-105">Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="f6ee6-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="89a81-106">Bu bölüm, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] özel öğeler için sağlayıcıların nasıl yazılacağını betimleyen genel bakış ve nasıl yapılır konuları içerir [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="89a81-106">This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
+ <span data-ttu-id="f6ee6-106">Bu bölüm, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] özel öğeler için sağlayıcıların nasıl yazılacağını betimleyen genel bakış ve nasıl yapılır konuları içerir [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f6ee6-106">This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="89a81-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="89a81-107">In This Section</span></span>  
- [<span data-ttu-id="89a81-108">Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama</span><span class="sxs-lookup"><span data-stu-id="89a81-108">Server-Side UI Automation Provider Implementation</span></span>](server-side-ui-automation-provider-implementation.md)  
- [<span data-ttu-id="89a81-109">UI Otomasyon Sağlayıcılara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="89a81-109">UI Automation Providers Overview</span></span>](ui-automation-providers-overview.md)  
- [<span data-ttu-id="89a81-110">İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama</span><span class="sxs-lookup"><span data-stu-id="89a81-110">Client-Side UI Automation Provider Implementation</span></span>](client-side-ui-automation-provider-implementation.md)  
- [<span data-ttu-id="89a81-111">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="89a81-111">How-to Topics</span></span>](ui-automation-providers-for-managed-code-how-to-topics.md)
+## <a name="in-this-section"></a><span data-ttu-id="f6ee6-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f6ee6-107">In This Section</span></span>  
+
+ [<span data-ttu-id="f6ee6-108">Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama</span><span class="sxs-lookup"><span data-stu-id="f6ee6-108">Server-Side UI Automation Provider Implementation</span></span>](server-side-ui-automation-provider-implementation.md)  
+ [<span data-ttu-id="f6ee6-109">UI Otomasyon Sağlayıcılara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f6ee6-109">UI Automation Providers Overview</span></span>](ui-automation-providers-overview.md)  
+ [<span data-ttu-id="f6ee6-110">İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama</span><span class="sxs-lookup"><span data-stu-id="f6ee6-110">Client-Side UI Automation Provider Implementation</span></span>](client-side-ui-automation-provider-implementation.md)  
+ [<span data-ttu-id="f6ee6-111">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="f6ee6-111">How-to Topics</span></span>](ui-automation-providers-for-managed-code-how-to-topics.md)
