@@ -6,19 +6,21 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b92f1ad8bb00e9df8daf55da4d7a808420d909cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546321"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254005"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation Güvenliği
+
 Bu bölümdeki konularda, iletilerin güvenli hale getirilmesine yardımcı olmak için Windows Communication Foundation (WCF) güvenlik özellikleri ve bunların nasıl kullanılacağı açıklanır.  
   
  Windows Server AppFabric ve Security hakkında daha fazla bilgi için bkz. [Windows Server Için güvenlik modeli AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Güvenliğe genel bakış](security-overview.md)  
  WCF 'deki güvenlik özelliklerini açıklar.  
   
@@ -56,11 +58,13 @@ Bu bölümdeki konularda, iletilerin güvenli hale getirilmesine yardımcı olma
  Güvenli WCF uygulamaları oluşturmaya yönelik yönergeler.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [WCF özellik ayrıntıları](index.md)  
   
  [Temel WCF Programlama](../basic-wcf-programming.md)  

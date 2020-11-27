@@ -3,17 +3,19 @@ title: 'Risk azaltma: yol normalleştirme'
 description: .NET Framework 'teki yol normalleştirmesini .NET Framework 4.6.2 hedefleyen uygulamalarla başlayarak nasıl değiştiğini öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 89dcc46d9f266ffd3635dc0cc02b634720356eda
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6f7e07690ab06fc7ef03344556c045405a63c374
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475222"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253602"
 ---
 # <a name="mitigation-path-normalization"></a>Risk azaltma: yol normalleştirme
+
 .NET Framework 4.6.2 hedeflenen uygulamalarla başlayarak .NET Framework yol normalleştirme değişmiştir.  
   
 ## <a name="what-is-path-normalization"></a>Yol normalleştirme nedir?  
+
  Bir yolun normalleştirilmesi, bir yolu veya dosyayı tanımlayan dizeyi, hedef işletim sisteminde geçerli bir yola uygun olacak şekilde değiştirmeyi içerir. Normalleştirme genellikle şunları içerir:  
   
 - Standart hale getirme bileşeni ve Dizin ayırıcıları.  
@@ -25,6 +27,7 @@ ms.locfileid: "86475222"
 - Belirtilen karakterler kırpılırken.  
   
 ## <a name="the-changes"></a>Değişiklikler  
+
  .NET Framework 4.6.2 hedefleyen uygulamalarla başlayarak, yol normalleştirme aşağıdaki yollarla değiştirilmiştir:  
   
 - Çalışma zamanı, yolları normalleştirmek için işletim sisteminin [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) işlevine erteler.  
@@ -44,6 +47,7 @@ ms.locfileid: "86475222"
 .NET Framework 4.6.1 ve önceki sürümlerini hedefleyen ancak .NET Framework 4.6.2 veya üzeri sürümlerde çalışan uygulamalar bu değişiklikten etkilenmez.  
   
 ## <a name="mitigation"></a>Risk azaltma  
+
  .NET Framework 4.6.2 veya üstünü hedefleyen uygulamalar bu değişikliği devre dışı bırakabilirsiniz ve [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) uygulama yapılandırma dosyasının bölümüne aşağıdakini ekleyerek eski normalleştirmeyi kullanabilir:  
   
 ```xml  

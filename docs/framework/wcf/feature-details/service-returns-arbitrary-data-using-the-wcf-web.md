@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 9753fbc9b333cb7e89ddc8dff030cb1f62ede23b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ed3e5269be5b636b348ff0efe44c49dae5335e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600367"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253901"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma
+
 Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldüğünden tam denetime sahip olmaları gerekir. Bu durum, bir hizmet işleminin WCF tarafından desteklenmeyen bir biçimde veri döndürmesi gereken durumdur. Bu konuda, bu tür bir hizmet oluşturmak için WCF WEB HTTP programlama modelinin kullanımı ele alınmaktadır. Bu hizmette bir akış döndüren bir işlem vardır.  
   
 ### <a name="to-implement-the-service-contract"></a>Hizmet sözleşmesini uygulamak için  
@@ -51,7 +52,7 @@ Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldü�
     }
     ```  
   
-     İkinci kodun son satırına dikkat edin:`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     İkinci kodun son satırına dikkat edin: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      Bu, içerik türü üst bilgisini olarak ayarlar `"image/jpeg"` . Bu örnek, bir. jpg dosyasının nasıl döndürülmesini gösterir, ancak herhangi bir biçimde gerekli olan herhangi bir veri türünü döndürecek şekilde değiştirilebilir. İşlemin verileri alması veya oluşturması ve sonra bir akışa yazması gerekir.  
   
@@ -108,6 +109,7 @@ Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldü�
 2. Internet Explorer 'ı açın ve yazın, `http://localhost:8000/Service/GetImage?width=50&height=40` ortadaki mavi bir diyagonal çizgi ile sarı bir dikdörtgen görmeniz gerekir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda, bu konunun kodun tamambir listesi verilmiştir.  
   
 ```csharp  
@@ -173,7 +175,7 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-- Örnek kod başvurusu System. ServiceModel. dll ve System. ServiceModel. Web. dll ' i derlerken.  
+- Örnek kod başvurusunu derlerken System.ServiceModel.dll ve System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

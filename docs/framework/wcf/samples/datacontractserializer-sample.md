@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: c2f62c8926f09e2d4cdea1941909e7d8f59c43a0
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: d38dddcaff7316f4933207c4aa0897ad47306352
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244419"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253628"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer Örneği
+
 DataContractSerializer örneği, <xref:System.Runtime.Serialization.DataContractSerializer> veri sözleşmesi sınıfları için genel serileştirme ve seri durumdan çıkarma hizmetlerini gerçekleştiren öğesini gösterir. Örnek, bir `Record` nesnesi oluşturur, bunu bir bellek akışına serileştirir ve ' `Record` nin kullanımını göstermek için bellek akışını başka bir nesneye geri çıkarır <xref:System.Runtime.Serialization.DataContractSerializer> . Örnek daha sonra, `Record` yazıcının Serileştirmeyi nasıl etkilediğini göstermek için bir ikili yazıcı kullanarak nesneyi serileştirir.  
   
 > [!NOTE]

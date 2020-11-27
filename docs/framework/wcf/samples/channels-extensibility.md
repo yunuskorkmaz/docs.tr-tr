@@ -2,17 +2,19 @@
 title: Kanal Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 4cc3b20b-778a-4ae8-b58c-a3822fb13065
-ms.openlocfilehash: 9dbae26a548bdc8a8cfb05a3dd90db91475b55ba
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1a734c305e2a6f2fc759647ab5bdf380f7c7eeee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600639"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253849"
 ---
 # <a name="channels-extensibility"></a>Kanal Genişletilebilirliği
+
 Bu bölüm, özel kanalları gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Yerel Kanal](local-channel.md)  
  Aynı uygulama etki alanı içinde iletişim için kullanılan bir WCF aktarım kanalı olan yerel kanalı gösterir.  
   

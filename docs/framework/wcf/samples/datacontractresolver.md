@@ -2,17 +2,19 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: c2a2afaa450e9abe17b62f6be07a2dc41459ca20
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6c04a055a5ce87ac285d05b086c22b900bc92145
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600029"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253654"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
+
 Bu örnek, serileştirme ve seri kaldırma işlemlerinin sınıfı kullanılarak nasıl özelleştirilebileceğini gösterir <xref:System.Runtime.Serialization.DataContractResolver> . Bu örnek, serileştirme ve seri durumundan çıkarma sırasında CLR türlerini bir xsi: tür gösterimine eşlemek için bir DataContractResolver 'ın nasıl kullanılacağını gösterir.
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
+
  Örnek, aşağıdaki CLR türlerini tanımlar.
 
 ```csharp

@@ -2,154 +2,171 @@
 title: ServiceDescription ve WSDL Başvurusu
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11a5d65026d13db56d1d349c130861094c3e123b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748169"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253888"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription ve WSDL Başvurusu
-Bu konuda ve ondan Windows Communication Foundation (WCF) Web Hizmetleri Açıklama Dili (WSDL) belgeleri nasıl eşlendiğini açıklayan <xref:System.ServiceModel.Description.ServiceDescription> örnekleri.  
+
+Bu konuda, Windows Communication Foundation (WCF) tarafından Web Hizmetleri Açıklama Dili (WSDL) belgelerinin örneklere ve örneklerinden nasıl eşlendiği açıklanmaktadır <xref:System.ServiceModel.Description.ServiceDescription> .  
   
-## <a name="how-servicedescription-maps-to-wsdl-11"></a>ServiceDescription için WSDL 1.1 nasıl eşlendiğini  
- WCF WSDL belgelerini dışarı aktarmak için kullanabileceğiniz bir <xref:System.ServiceModel.Description.ServiceDescription> hizmet örneği. Meta veri uç noktalarını yayımlama, WSDL belgeleri, hizmetiniz için otomatik olarak üretilir.  
+## <a name="how-servicedescription-maps-to-wsdl-11"></a>ServiceDescription, WSDL 1,1 ile nasıl eşlenir  
+
+ Service için bir örnekten WSDL belgelerini dışarı aktarmak için WCF kullanabilirsiniz <xref:System.ServiceModel.Description.ServiceDescription> . Meta veri uç noktalarını yayımladığınızda hizmetiniz için WSDL belgeleri otomatik olarak oluşturulur.  
   
- Ayrıca Al <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri <xref:System.ServiceModel.Description.ContractDescription> örnekleri ve <xref:System.ServiceModel.Channels.Binding> WSDL belgeleri kullanarak örneklerden `WsdlImporter` türü.  
+ Ayrıca, <xref:System.ServiceModel.Description.ServiceEndpoint> <xref:System.ServiceModel.Description.ContractDescription> <xref:System.ServiceModel.Channels.Binding> türü kullanarak WSDL belgelerinden örnekleri, örnekleri ve örnekleri içeri aktarabilirsiniz `WsdlImporter` .  
   
- WCF tarafından dışarı aktarılan WSDL belgeleri, dış XML şema belgelerden kullanılan herhangi bir XML şema tanımı içeri aktarın. Hizmete veri türlerini kullanma her bir hedef ad alanı için ayrı bir XML Şeması belge aktarılır. Benzer şekilde, ayrı bir WSDL belgesi dışarı aktarılan her hedef ad alanı için hizmet kullanım sözleşme.  
+ WCF tarafından dışarı aktarılan WSDL belgeleri, dış XML şeması belgelerinden kullanılan tüm XML şema tanımlarını içeri aktarır. Veri türlerinin hizmette kullanması için her bir hedef ad alanı için ayrı bir XML şeması belgesi verilir. Benzer şekilde, hizmet sözleşmelerinin kullanacağı her bir hedef ad alanı için ayrı bir WSDL belgesi verilir.  
   
 ### <a name="servicedescription"></a>ServiceDescription  
- A <xref:System.ServiceModel.Description.ServiceDescription> örneği eşlenen bir `wsdl:service` öğesi. A <xref:System.ServiceModel.Description.ServiceDescription> örneği oluşan bir koleksiyon içeren <xref:System.ServiceModel.Description.ServiceEndpoint> her eşleme, ayrı ayrı örnekleri `wsdl:port` öğeleri.  
+
+ Bir <xref:System.ServiceModel.Description.ServiceDescription> örnek bir öğesiyle eşlenir `wsdl:service` . Bir <xref:System.ServiceModel.Description.ServiceDescription> örnek, <xref:System.ServiceModel.Description.ServiceEndpoint> her biri ayrı ayrı öğelerle eşlenen örneklerin bir koleksiyonunu içerir `wsdl:port` .  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
-|`Name`|`wsdl:service` /@name Hizmeti için değer.|  
-|`Namespace`|TargetNamespace için `wsdl:service` hizmet tanımı.|  
-|`Endpoints`|`wsdl:port` Hizmet tanımları.|  
+|`Name`|`wsdl:service` /@name Hizmetin değeri.|  
+|`Namespace`|Hizmetin tanımı için targetNamespace `wsdl:service` .|  
+|`Endpoints`|`wsdl:port`Hizmetin tanımları.|  
   
-### <a name="serviceendpoint"></a>serviceEndpoint  
- A <xref:System.ServiceModel.Description.ServiceEndpoint> örneği eşlenen bir `wsdl:port` öğesi. A <xref:System.ServiceModel.Description.ServiceEndpoint> örneği bir adresi, bağlama ve bir sözleşme içeriyor.  
+### <a name="serviceendpoint"></a>ServiceEndpoint  
+
+ Bir <xref:System.ServiceModel.Description.ServiceEndpoint> örnek bir öğesiyle eşlenir `wsdl:port` . Bir <xref:System.ServiceModel.Description.ServiceEndpoint> örnek, bir adres, bağlama ve bir sözleşme içerir.  
   
- Uygulama uç nokta davranışları <xref:System.ServiceModel.Description.IWsdlExportExtension> arabirimi değiştirebilirsiniz `wsdl:port` bağlı oldukları için uç nokta için öğesi.  
+ Arabirimini uygulayan uç nokta davranışları <xref:System.ServiceModel.Description.IWsdlExportExtension> , `wsdl:port` ekli oldukları uç nokta için öğesini değiştirebilir.  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
-|`Name`|`wsdl:port` /@name Uç noktası için değer ve `wsdl:binding` /@name uç nokta bağlaması için değer.|  
-|`Address`|Adresi `wsdl:port` uç nokta tanımı.<br /><br /> Taşıma için uç nokta adresi biçimini belirler. Örneğin, WCF tarafından desteklenen aktarmalar için bir SOAP adresi veya bir uç nokta başvurusu olabilir.|  
-|`Binding`|`wsdl:binding` Uç nokta tanımı.<br /><br /> Farklı `wsdl:binding` tanımları, WCF bağlamaları için herhangi bir sözleşme bağlı değil.|  
-|`Contract`|`wsdl:portType` Uç nokta tanımı.|  
-|`Behaviors`|Uygulama uç nokta davranışları <xref:System.ServiceModel.Description.IWsdlExportExtension> arabirimi değiştirebilirsiniz `wsdl:port` uç noktası için.|  
+|`Name`|Uç nokta `wsdl:port` /@name `wsdl:binding` /@name bağlaması için değer ve değer.|  
+|`Address`|`wsdl:port`Uç nokta tanımının adresi.<br /><br /> Uç nokta için taşıma, adresin biçimini belirler. Örneğin, WCF destekli aktarımlar için bir SOAP adresi veya bir uç nokta başvurusu olabilir.|  
+|`Binding`|`wsdl:binding`Uç nokta tanımı.<br /><br /> `wsdl:binding`Tanımlardan farklı olarak, WCF 'deki bağlamalar herhangi bir sözleşmeye bağlı değildir.|  
+|`Contract`|`wsdl:portType`Uç nokta tanımı.|  
+|`Behaviors`|Arabirimini uygulayan uç nokta davranışları <xref:System.ServiceModel.Description.IWsdlExportExtension> , `wsdl:port` uç nokta için öğesini değiştirebilir.|  
   
 ### <a name="bindings"></a>Bağlamalar  
- Bağlama örneği için bir `ServiceEndpoint` örneği eşlenen bir `wsdl:binding` tanımı. Farklı `wsdl:binding` belirli bir ile ilişkili olması gereken tanımları `wsdl:portType` tanımı, WCF bağlamaları herhangi bir sözleşme bağımsız.  
+
+ Bir örnek için bağlama örneği `ServiceEndpoint` bir `wsdl:binding` tanıma eşlenir. `wsdl:binding`Belirli bir tanım ile ilişkilendirilmesi gereken tanımlardan farklı olarak `wsdl:portType` , WCF bağlamaları herhangi bir anlaşmada bağımsızdır.  
   
- Bir bağlama bağlama öğelerinin bir koleksiyonunu oluşur. Her öğe endpoint istemcilerin ile nasıl iletişim kurar, bazı yönleri açıklanmaktadır. Ek olarak, bir bağlama sahip bir <xref:System.ServiceModel.Channels.MessageVersion> belirten <xref:System.ServiceModel.EnvelopeVersion> ve <xref:System.ServiceModel.Channels.AddressingVersion> uç noktası için.  
+ Bağlama, bağlama öğeleri koleksiyonundan oluşur. Her öğe, uç noktanın istemcilerle nasıl iletişim kuracağını açıklar. Ayrıca, bir bağlama <xref:System.ServiceModel.Channels.MessageVersion> , <xref:System.ServiceModel.EnvelopeVersion> <xref:System.ServiceModel.Channels.AddressingVersion> uç nokta için ve belirtir.  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
-|`Name`|Bağlama adı eklenmiş anlaşması adına sahip olan bir uç nokta varsayılan adını kullanıldığında, bir alt çizgi ile ayrılmış.|  
-|`Namespace`|`targetNamespace` İçin `wsdl:binding` tanımı.<br /><br /> Bir ilke WSDL bağlantı noktasına bağlıysa içeri aktarma işlemi sırasında içeri aktarılan bağlama ad alanı eşlendiği `targetNamespace` için `wsdl:port` tanımı.|  
-|`BindingElementCollection`, tarafından döndürülen `CreateBindingElements`() yöntemi|Çeşitli etki alanına özgü Uzantılar `wsdl:binding` tanımı, genellikle ilkeyi onaylar.|  
-|`MessageVersion`|`EnvelopeVersion` Ve `AddressingVersion` uç noktası için.<br /><br /> Zaman `MessageVersion.None` belirtilirse, WSDL bağlama bir SOAP bağlama içermiyor ve WS-Addressing içerik WSDL bağlantı noktası içermiyor. Bu ayar genellikle düz eski XML (POX) uç noktaları için kullanılır.|  
+|`Name`|Bir uç noktanın varsayılan adında kullanılır, bu, anlaşma adı bir alt çizgiyle ayrılmış olan bağlama adıdır.|  
+|`Namespace`|`targetNamespace` `wsdl:binding` Tanımı için.<br /><br /> İçeri aktarma işleminde, WSDL bağlantı noktasına bir ilke eklenmişse, içeri aktarılan bağlama ad alanı tanım için ile eşlenir `targetNamespace` `wsdl:port` .|  
+|`BindingElementCollection`, `CreateBindingElements` () yöntemi tarafından döndürülen|Tanıma yönelik çeşitli etki alanına özgü uzantılar `wsdl:binding` , genellikle ilke onaylamaları.|  
+|`MessageVersion`|`EnvelopeVersion` `AddressingVersion` Uç nokta için ve.<br /><br /> Belirtildiğinde `MessageVersion.None` , WSDL bağlaması BIR SOAP bağlaması içermez ve wsdl bağlantı noktası WS-Addressing içerik içermez. Bu ayar genellikle düz eski XML (POX) uç noktaları için kullanılır.|  
   
 #### <a name="bindingelements"></a>BindingElements  
- Bir uç nokta bağlaması için bağlama öğeleri eşleme çeşitli WSDL uzantılarında `wsdl:binding`, ilke onaylamalarını gibi.  
+
+ Bir uç nokta bağlamasının bağlama öğeleri, ' de ilke onayları gibi çeşitli WSDL uzantılarına eşlenir `wsdl:binding` .  
   
- <xref:System.ServiceModel.Channels.TransportBindingElement> SOAP bağlama için Tekdüzen Kaynak Tanımlayıcısı (URI) aktarım bağlama belirler.  
+ <xref:System.ServiceModel.Channels.TransportBindingElement>Bağlama için, BIR SOAP bağlamasının aktarım Tekdüzen Kaynak tanımlayıcısı 'nı (URI) belirler.  
   
-#### <a name="addressingversion"></a>AddressingVersion değerini  
- `AddressingVersion` Bağlamada kullanılan adresleme sürümü eşlendiğini `wsd:port`. WCF SOAP 1.1 ve SOAP 1.2 adresleri ve WS-Addressing destekler 08/2004 ve WS-Addressing 1.0 uç nokta başvuruları.  
+#### <a name="addressingversion"></a>AddressingVersion  
+
+ `AddressingVersion`Bağlamadaki ' de kullanılan adresleme sürümüyle eşlenir `wsd:port` . WCF, SOAP 1,1 ve SOAP 1,2 adreslerini ve WS-Addressing 08/2004 ve WS-Addressing 1,0 uç nokta başvurularını destekler.  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- `EnvelopeVersion` SOAP sürümünü eşlenir bağlamada kullanılan `wsdl:binding`. WCF SOAP 1.1 ve SOAP 1.2 bağlamaları destekler.  
+
+ `EnvelopeVersion`Bir bağlamadaki ' de kullanılan soap sürümüyle eşlenir `wsdl:binding` . WCF, SOAP 1,1 ve SOAP 1,2 bağlamalarını destekler.  
   
 ### <a name="contracts"></a>Sözleşmeler  
- <xref:System.ServiceModel.Description.ContractDescription> Örnek bir `ServiceEndpoint` örneği eşlenen bir `wsdl:portType`. A `ContractDescription` örneği tüm işlemler için verilen bir sözleşme açıklar.  
+
+ <xref:System.ServiceModel.Description.ContractDescription>Bir örneğin örneği `ServiceEndpoint` bir ile eşlenir `wsdl:portType` . Bir `ContractDescription` örnek, belirli bir sözleşme için tüm işlemleri açıklar.  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
-|`Name`|`wsdl:portType` /@name Sözleşme için değer.|  
-|`Namespace`|TargetNamespace için `wsdl:portType` tanımı.|  
-|`SessionMode`|`wsdl:portType` /@msc:usingSession Sözleşme için değer. WCF uzantısı için WSDL 1.1 özniteliğidir.|  
-|`Operations`|`wsdl:operation` Sözleşme tanımları.|  
+|`Name`|`wsdl:portType` /@name Sözleşmenin değeri.|  
+|`Namespace`|Tanım için targetNamespace `wsdl:portType` .|  
+|`SessionMode`|`wsdl:portType` /@msc:usingSession Sözleşmenin değeri. Bu öznitelik, WSDL 1,1 için bir WCF uzantısıdır.|  
+|`Operations`|`wsdl:operation`Sözleşmenin tanımları.|  
   
 ### <a name="operations"></a>İşlemler  
- Bir <xref:System.ServiceModel.Description.OperationDescription> örneği eşlenen bir `wsdl:portType` / `wsdl:operation`. Bir `OperationDescription` koleksiyonunu içeren `MessageDescription` açıklayan işlemi için iletileri örnekleri.  
+
+ Bir <xref:System.ServiceModel.Description.OperationDescription> örnek bir ile eşlenir `wsdl:portType` / `wsdl:operation` . `OperationDescription` `MessageDescription` , İşlemin iletilerini tanımlayan örneklerin bir koleksiyonunu içerir.  
   
- İki işlem davranışları katılmak yoğun bir şekilde nasıl bir `OperationDescription` bir WSDL belgesi eşlendi: `DataContractSerializerOperationBehavior` ve `XmlSerializerOperationBehavior`.  
+ İki işlem davranışı `OperationDescription` , BIR WSDL belgesine nasıl eşlendiğine çok fazla katılır: `DataContractSerializerOperationBehavior` ve `XmlSerializerOperationBehavior` .  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
-|`Name`|`wsdl:portType` / `wsdl:operation` /@name İşlemi için değer.|  
-|`ProtectionLevel`|Güvenlik İlkesi'nde koruma onaylar iliştirilmiş `wsdl:binding/wsdl:operation` bu işlem için iletileri.|  
-|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating İşlemi için değer. WCF uzantısı için WSDL 1.1 özniteliğidir.|  
-|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating İşlemi için değer. WCF uzantısı için WSDL 1.1 özniteliğidir.|  
-|`Messages`|`wsdl:portType` / `wsdl:operation` / `wsdl:input` Ve `wsdl:portType` / `wsdl:operation` / `wsdl:output` işlem iletileri.|  
-|`Faults`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault` İşlemi için tanımlar.|  
-|`Behaviors`|`DataContractSerializerOperationBehavior` Ve `XmlSerializerOperationBehavior` işlemi bağlama ve işlem iletileri ile Dağıt.|  
+|`Name`|`wsdl:portType` / `wsdl:operation` /@name İşlemin değeri.|  
+|`ProtectionLevel`|Güvenlik ilkesinde `wsdl:binding/wsdl:operation` Bu işleme yönelik iletilere eklenen koruma onayları.|  
+|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating İşlemin değeri. Bu öznitelik, WSDL 1,1 için bir WCF uzantısıdır.|  
+|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating İşlemin değeri. Bu öznitelik, WSDL 1,1 için bir WCF uzantısıdır.|  
+|`Messages`|`wsdl:portType` / `wsdl:operation` / `wsdl:input` `wsdl:portType` / `wsdl:operation` / `wsdl:output` İşlem için ve iletileri.|  
+|`Faults`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault` İşlemin tanımları.|  
+|`Behaviors`|`DataContractSerializerOperationBehavior`Ve `XmlSerializerOperationBehavior` işlem bağlamayı ve işlem iletilerini ele.|  
   
 #### <a name="the-datacontractserializeroperationbehavior"></a>DataContractSerializerOperationBehavior  
- `DataContractSerializerOperationBehavior` Bir işlem için bir `IWsdlExportExtension` uygulamasında, bu işlem için bağlama ve WSDL iletileri dışarı aktarır. XML Şeması türleri kullanarak verilen `XsdDataContractExporter`. `DataContractSerializerOperationBehavior` Ayrıca kullanım ve stil şema verici ve içeri Aktarıcı bu işlem için kullanılacak belirler.  
+
+ `DataContractSerializerOperationBehavior`İşlem için, `IWsdlExportExtension` WSDL iletilerini ve bu işlem için bağlamayı dışarı aktaran bir uygulamasıdır. XML şeması türleri kullanılarak verilir `XsdDataContractExporter` . `DataContractSerializerOperationBehavior`Ayrıca, bu işlem için kullanılacak kullanımı, stili ve şema Dışarı Aktarıcı 'yı ve alma işlemini belirler.  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
-|`DataContractFormatAttribute`|`Style` Özelliği bu öznitelik için eşlenen `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style işlemi için değer.<br /><br /> `DataContractSerializerOperationBehavior` WSDL içinde şema türleri yalnızca literal kullanımını destekler.|  
+|`DataContractFormatAttribute`|`Style`Bu özniteliğin özelliği, `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style işlem için olan değere eşlenir.<br /><br /> , `DataContractSerializerOperationBehavior` WSDL 'de şema türlerinin yalnızca sabit kullanımını destekler.|  
   
-#### <a name="the-xmlserializeroperationbehavior"></a>The XmlSerializerOperationBehavior  
- `XmlSerializerOperationBehavior` Bir işlem için bir `IWsdlExportExtension` uygulamasında, bu işlem için bağlama ve WSDL iletileri dışarı aktarır. XML Şeması türleri kullanarak verilen `XmlSchemaExporter`. `XmlSerializerOperationBehavior` Ayrıca kullanım ve stil şema verici ve içeri Aktarıcı bu işlem için kullanılacak belirler.  
+#### <a name="the-xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior  
+
+ `XmlSerializerOperationBehavior`İşlem için, `IWsdlExportExtension` WSDL iletilerini ve bu işlem için bağlamayı dışarı aktaran bir uygulamasıdır. XML şeması türleri kullanılarak verilir `XmlSchemaExporter` . `XmlSerializerOperationBehavior`Ayrıca, bu işlem için kullanılacak kullanımı, stili ve şema Dışarı Aktarıcı 'yı ve alma işlemini belirler.  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
-|`XmlSerializerFormatAttribute`|`Style` Özelliği bu öznitelik için eşlenen `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style işlemi için değer.<br /><br /> `Use` Özelliği bu öznitelik için eşlenen `wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use işlemdeki tüm iletiler için değerler.|  
+|`XmlSerializerFormatAttribute`|`Style`Bu özniteliğin özelliği, `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style işlem için olan değere eşlenir.<br /><br /> `Use`Bu özniteliğin özelliği, `wsdl:binding` / `wsdl:operation` / `soap:operation` /@use işlemdeki tüm iletiler için/* değerleriyle eşlenir.|  
   
 ### <a name="messages"></a>İletiler  
- A `MessageDescription` örneği eşlenen bir `wsdl:message` tarafından başvurulan bir `wsdl:portType` / `wsdl:operation` / `wsdl:input` veya `wsdl:portType` / `wsdl:operation` / `wsdl:output`işleminde ileti. A `MessageDescription` gövde ve üstbilgiler vardır.  
+
+ Bir `MessageDescription` `wsdl:message` `wsdl:portType` / `wsdl:operation` / `wsdl:input` işlemde bir veya `wsdl:portType` / `wsdl:operation` / `wsdl:output` ileti tarafından başvurulan bir örnek ile eşlenir. A `MessageDescription` 'nın gövdesi ve başlıkları vardır.  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
-|`Action`|İletinin SOAP veya WS-Addressing eylem.<br /><br /> Not, eylem dizesi kullanan bu işlemlere "*" WSDL'de temsil edilmez.|  
-|`Direction`|`MessageDirection.Input` eşlendiği `wsdl:input`.<br /><br /> `MessageDirection.Output` eşlendiği `wsdl:output`.|  
-|`ProtectionLevel`|Güvenlik İlkesi'nde koruma onaylar iliştirilmiş `wsdl:message` bu ileti tanımı.|  
+|`Action`|İleti için SOAP veya WS-Addressing eylemi.<br /><br /> "*" Eylem dizesini kullanan işlemlerin WSDL içinde temsil edilmediğini unutmayın.|  
+|`Direction`|`MessageDirection.Input` ile eşlenir `wsdl:input` .<br /><br /> `MessageDirection.Output` ile eşlenir `wsdl:output` .|  
+|`ProtectionLevel`|Güvenlik ilkesinde bu iletinin tanımına bağlı koruma onayları `wsdl:message` .|  
 |`Body`|İleti için ileti gövdesi.|  
-|`Headers`|İleti için üstbilgiler.|  
-|`ContractDescription.Name`, `OperationContract.Name`|Türetmek için kullanılan, dışa `wsdl:message` /@name değeri.|  
+|`Headers`|İleti için üst bilgiler.|  
+|`ContractDescription.Name`, `OperationContract.Name`|Dışarı aktarma sırasında değeri türetmek için kullanılır `wsdl:message` /@name .|  
   
 #### <a name="message-body"></a>İleti gövdesi  
- A `MessageBodyDescription` örneği eşlendiğini `wsdl:message` / `wsdl:part` iletinin gövdesi için tanımlar. İleti gövdesi, sarmalanmış veya çıplak.  
+
+ Bir `MessageBodyDescription` örnek, `wsdl:message` / `wsdl:part` ileti gövdesinin tanımına eşlenir. İleti gövdesi kaydırılmış veya çıplak olabilir.  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
-|`WrapperName`|RPC stili değilse, ardından `WrapperName` öğe adı tarafından başvurulan eşlenir `wsdl:message` / `wsdl:part` ile @name "parametreleri" ayarlayın.|  
-|`WrapperNamespace`|RPC stili değilse, ardından `WrapperNamespace` öğe ad alanı için eşlenen `wsdl:message` / `wsdl:part` ile @name "parametreleri" ayarlayın.|  
-|`Parts`|Message bölümleri için bu ileti gövdesi.|  
-|`ReturnValue`|Alt öğesi olan bir sarmalayıcı öğe (belge kaydırmalı stili veya RPC stili), yoksa sarmalayıcı öğe ilk `wsdl:message` / `wsdl:part` iletisi.|  
+|`WrapperName`|Stil RPC değilse, `WrapperName` ile başvurulan öğe adıyla eşlenir ve `wsdl:message` / `wsdl:part` @name "Parameters" olarak ayarlanır.|  
+|`WrapperNamespace`|Stil RPC değilse, için `WrapperNamespace` öğesi için öğe ad alanıyla eşlenir ve `wsdl:message` / `wsdl:part` @name "Parameters" olarak ayarlanır.|  
+|`Parts`|Bu ileti gövdesinin ileti bölümleri.|  
+|`ReturnValue`|Sarmalayıcı öğesi varsa sarmalayıcı öğesinin alt öğesi (belge sarmalanmış stili veya RPC stili), aksi takdirde `wsdl:message` / `wsdl:part` ileti içinde ilk.|  
   
-#### <a name="message-parts"></a>İleti bölümleri  
- A `MessagePartDescription` örneği eşlenen bir `wsdl:message` / `wsdl:part` ve XML şema türü ya da ileti parçası işaret eden bir öğe.  
+#### <a name="message-parts"></a>İleti parçaları  
+
+ Bir `MessagePartDescription` örnek bir ve bir `wsdl:message` / `wsdl:part` XML şeması türü ya da ileti bölümünün gösterdiği öğesiyle eşlenir.  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
-|`Name`|`wsd:message` / `wsdl:part` /@name İleti parçası ve ileti parçası işaret eden bir öğe adı için değer.|  
-|`Namespace`|İleti bölümü işaret eden öğe ad alanı.|  
-|`Index`|Dizini `wsdl:message` / `wsdl:part` ileti.|  
-|`ProtectionLevel`|Güvenlik İlkesi'nde koruma onaylar iliştirilmiş `wsdl:message` tanımı için bu ileti bölümü. İlke, belirli bir ileti bölümü için işaret edecek şekilde parametreli.|  
-|`MessageType`|İleti bölümü işaret öğesi XML şema türü.|  
+|`Name`|İleti bölümünün `wsd:message` / `wsdl:part` /@name değeri ve ileti bölümünün gösterdiği öğenin adı.|  
+|`Namespace`|İleti bölümünün işaret ettiği öğenin ad alanı.|  
+|`Index`|`wsdl:message` / `wsdl:part` İletinin dizini.|  
+|`ProtectionLevel`|Güvenlik ilkesinde `wsdl:message` Bu ileti bölümünün tanımına eklenen koruma onayları. İlke, belirli bir ileti parçasını işaret etmek üzere parametreleştirilenir.|  
+|`MessageType`|İleti bölümünün gösterdiği öğenin XML şeması türü.|  
   
 #### <a name="message-headers"></a>İleti üstbilgileri  
- A `MessageHeaderDescription` örneği de eşlenen bir ileti parçası olan bir `soap:header` ileti bölümü için bağlama.  
+
+ `MessageHeaderDescription`Örnek, `soap:header` ileti bölümü için bağlamaya de eşlenen bir ileti bölümüdür.  
   
-### <a name="faults"></a>Hataları  
- A `FaultDescription` örneği eşlenen bir `wsdl:portType` / `wsdl:operation` / `wsdl:fault` tanımını ve onun ilişkili `wsdl:message` tanımı. `wsdl:message` İlişkili WSDL bağlantı noktası türü olarak aynı hedef ad alanına eklenir. `wsdl:message` Karşılık gelen XML şema öğesini işaret eden "ayrıntılı" adlı bir tek ileti parçası olan `DefaultType` için özellik değeri `FaultDescription` örneği.  
+### <a name="faults"></a>Hatalar  
+
+ Bir `FaultDescription` örnek, `wsdl:portType` / `wsdl:operation` / `wsdl:fault` tanımıyla ve ilişkili `wsdl:message` tanımıyla eşlenir. , `wsdl:message` ILIŞKILI wsdl bağlantı noktası türüyle aynı hedef ad alanına eklenir. , `wsdl:message` `DefaultType` Örneği için özellik değerine KARŞıLıK gelen XML şema öğesini işaret eden "Detail" adlı tek bir ileti bölümüne sahiptir `FaultDescription` .  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
 |`Name`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault` /@name Hata için değer.|  
-|`Namespace`|Hata ayrıntı iletisi bölümü işaret eden bir XML şema öğesini ad alanı.|  
-|`Action`|SOAP veya WS-Addressing eylem hata.|  
-|`ProtectionLevel`|Güvenlik İlkesi'nde koruma onaylar iliştirilmiş `wsdl:message` tanımı bu hata için.|  
-|`DetailType`|Ayrıntılı ileti bölümü işaret öğesi XML şema türü.|  
-|`Name, ContractDescription.Name, OperationDescription.Name,`|Türetmek için kullanılan `wsdl:message` /@name hata iletisi için değer.|  
+|`Namespace`|Hata ayrıntısı ileti bölümünün gösterdiği XML şeması öğesinin ad alanı.|  
+|`Action`|Hata için SOAP veya WS-Addressing eylemi.|  
+|`ProtectionLevel`|Güvenlik ilkesinde bu hatanın tanımına bağlı koruma onayları `wsdl:message` .|  
+|`DetailType`|Ayrıntı iletisi bölümünün gösterdiği öğenin XML şeması türü.|  
+|`Name, ContractDescription.Name, OperationDescription.Name,`|`wsdl:message` /@name Hata iletisi için değeri türetmek için kullanılır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

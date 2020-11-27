@@ -2,14 +2,15 @@
 title: "Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme"
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: bf878dff59a9a258567ff99098b0b3f8761194e2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1e6b57193d25da7e5c9a865525dd5e9ea21110b0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599236"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254265"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme
+
 Bu konu, bulma proxy 'nin nasıl uygulanacağını Tartışmayla ilgili dört konudan oluşan ikinci konudur. Önceki konuda, [nasıl yapılır: bulma proxy 'Si uygulama](how-to-implement-a-discovery-proxy.md), bulma proxy 'si uyguladık. Bu konu başlığında, keşif proxy 'sine (ve) duyuru iletileri gönderen bir WCF hizmeti oluşturun, bu, bulma `Hello` `Bye` proxy 'si ile kendi kaydolmasına ve kaydını silmesine neden olur.
 
 ### <a name="to-define-the-service-contract"></a>Hizmet sözleşmesini tanımlamak için
@@ -159,6 +160,7 @@ Bu konu, bulma proxy 'nin nasıl uygulanacağını Tartışmayla ilgili dört ko
 Bulunabilir bir hizmeti uygulamayı tamamladınız. [Nasıl yapılır: hizmet bulmak Için keşif proxy 'Si kullanan bir Istemci uygulaması uygulama](client-app-discovery-proxy-to-find-a-service.md).
 
 ## <a name="example"></a>Örnek
+
  Bu, bu konuda kullanılan kodun tam listesidir.
 
 ```csharp
@@ -291,6 +293,6 @@ namespace Microsoft.Samples.Discovery
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Bulma](wcf-discovery.md)
+- [WCF Keşfetme](wcf-discovery.md)
 - [Nasıl yapılır: Keşif Proxy'si Uygulama](how-to-implement-a-discovery-proxy.md)
 - [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](client-app-discovery-proxy-to-find-a-service.md)
