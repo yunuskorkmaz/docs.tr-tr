@@ -2,14 +2,15 @@
 title: WCF'de Kullanılan Güvenlik Kavramları
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: c62b8d39f1a1dc87289ac27022d44ffa3acfc58d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2c7bc01ba45c02be4a1d40c2600fde62e94afe32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554058"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251392"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF'de Kullanılan Güvenlik Kavramları
+
 Windows Communication Foundation (WCF) güvenliği, daha önce kullanılan ve çeşitli güvenlik altyapılarında dağıtılan kavramlar üzerine kurulmuştur.  
   
  WCF, HTTP (HTTPS) üzerinde Güvenli Yuva Katmanı (SSL) gibi bazı altyapıların bazılarını destekler. Ancak, WCF, SOAP kodlu iletiler üzerinden daha yeni birlikte çalışabilen güvenlik standartları (WS-Security gibi) uygulayarak mevcut güvenlik altyapılarını desteklemeye daha fazla yardımcı vardır. Mevcut mekanizmalar veya yeni birlikte çalışabilen standartlar kullanıyor olmanız durumunda, her ikisinin de her ikisi de aynı olan güvenlik kavramlarıdır. Mevcut altyapıların arkasındaki kavramları ve daha yeni standartları anlamak, bir uygulama için en iyi güvenlik modelini uygulamaya yönelik bir merkezidir.  
@@ -18,22 +19,26 @@ Windows Communication Foundation (WCF) güvenliği, daha önce kullanılan ve ç
 
 Microsoft düzenleri ve uygulamalar grubu, [WCF güvenlik kılavuzu](https://archive.codeplex.com/?p=wcfsecurityguide)adlı bir ayrıntılı teknik incelemeyi yazdı. Bu Teknik İnceleme, Web Hizmetleri, anahtar WCF güvenlik kavramları, intranet uygulama senaryoları ve Internet uygulaması senaryolarıyla bağlantılı olarak temel güvenlik kavramlarını açıklamaktadır.  
   
-## <a name="industry-wide-security-specifications"></a>Sektör genelinde güvenlik belirtimleri  
+## <a name="industry-wide-security-specifications"></a>Industry-Wide güvenlik belirtimleri  
   
 ### <a name="public-key-infrastructure"></a>Ortak anahtar altyapısı  
 
 Ortak anahtar altyapısı (PKI), genel anahtar şifrelemesi kullanılarak elektronik bir işlemde yer alan her bir tarafı doğrulayan ve kimlik doğrulayan dijital sertifikalar, sertifika yetkilileri ve diğer kayıt yetkilileri sistemidir.
   
 ### <a name="kerberos-protocol"></a>Kerberos protokolü  
+
  *Kerberos protokolü* , bir Windows etki alanında kullanıcıların kimliğini doğrulayan bir güvenlik mekanizması oluşturmaya yönelik bir belirtimdir. Bir kullanıcının etki alanı içindeki diğer varlıklarla güvenli bir bağlam kurmasını sağlar. Windows 2000 ve üzeri platformlar Kerberos protokolünü varsayılan olarak kullanır. Sistem mekanizmalarını anlamak, intranet istemcilerle etkileşime girebilen bir hizmet oluştururken faydalıdır. Bunlara ek olarak, *Web Hizmetleri güvenliği Kerberos bağlama* yaygın olarak yayınlandığından, Internet istemcileriyle iletişim kurmak için Kerberos protokolünü kullanabilirsiniz (yani, Kerberos protokolü birlikte kullanılabilir). Windows 'da Kerberos protokolünün nasıl uygulandığı hakkında daha fazla bilgi için bkz.  [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos).  
   
 ### <a name="x509-certificates"></a>X. 509.440 sertifikaları  
+
  X. 509.440 sertifikaları, güvenlik uygulamalarında kullanılan birincil kimlik bilgileri biçimidir. X. 509.440 sertifikaları hakkında daha fazla bilgi için bkz. [x. 509.440 ortak anahtar sertifikaları](/windows/win32/seccertenroll/about-x-509-public-key-certificates). X. 509.440 sertifikaları bir sertifika deposunda depolanır. Windows çalıştıran bir bilgisayarda, her biri farklı bir amaca sahip birkaç tür sertifika deposu vardır. Farklı mağazalar hakkında daha fazla bilgi için bkz. [sertifika depoları](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ## <a name="web-services-security-specifications"></a>Web Hizmetleri Güvenliği belirtimleri  
- Sistem tanımlı bağlamalar, yaygın olarak kullanılan birçok Web hizmeti güvenlik belirtimini destekler. Sistem tarafından sunulan bağlamaların tam listesi ve destekledikleri Web Hizmetleri belirtimleri için bkz: [sistem tarafından sunulan birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+
+ Sistem tanımlı bağlamalar, yaygın olarak kullanılan birçok Web hizmeti güvenlik belirtimini destekler. Sistem tarafından sağlanmış bağlamaların ve destekledikleri Web hizmeti belirtimlerinin tam listesi için bkz. [System-Provided birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Erişim Denetimi Mekanizmaları  
+
  WCF, bir hizmet veya işleme erişimi denetlemek için çeşitli yollar sağlar. Aralarında  
   
 1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  

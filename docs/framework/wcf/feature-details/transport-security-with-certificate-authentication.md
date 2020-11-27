@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 38f7d310be41455dd12460fdfa93d7e624d10c2a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3f2a10bb6b355e82f94b8cc793c93ce4634c7d2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545226"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251834"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
 
@@ -22,17 +22,18 @@ Bu makalede, aktarım güvenliği kullanılırken sunucu ve istemci kimlik doğr
   
  Hizmeti olan bir sertifika kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md) ve bir [SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md). Aşağıdaki tabloda senaryonun çeşitli özellikleri açıklanmaktadır.  
   
-|Özellik|Description|  
+|Özellik|Açıklama|  
 |--------------------|-----------------|  
 |Güvenlik modu|Aktarım|  
-|Birlikte Çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleriyle.|  
+|Birlikte çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleriyle.|  
 |Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (Istemci)|Evet (bir SSL sertifikası kullanarak)<br /><br /> Evet (bir X. 509.440 sertifikası kullanarak)|  
-|Veri bütünlüğü|Yes|  
-|Veri gizliliği|Yes|  
+|Veri bütünlüğü|Evet|  
+|Veri gizliliği|Evet|  
 |Aktarım|HTTPS|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Hizmeti yapılandırma  
+
  Bu senaryodaki hizmet IIS altında barındırıldığından, bir web.config dosyası ile yapılandırılır. Aşağıdaki web.config, <xref:System.ServiceModel.WSHttpBinding> ' nin Transport Security ve X. 509.440 istemci kimlik bilgilerini kullanacak şekilde nasıl yapılandırılacağını gösterir.  
   
 ```xml  
@@ -64,6 +65,7 @@ Bu makalede, aktarım güvenliği kullanılırken sunucu ve istemci kimlik doğr
 ```  
   
 ## <a name="configure-the-client"></a>Istemciyi yapılandırma  
+
  İstemci kodda veya bir app.config dosyasında yapılandırılabilir. Aşağıdaki örnek, kodda istemcisinin nasıl yapılandırılacağını gösterir.  
   
 ```csharp
