@@ -2,27 +2,30 @@
 title: 3377 - SocketReadStop
 ms.date: 03/30/2017
 ms.assetid: 980c24e8-47d5-4f1e-86cc-1cb1c0736d19
-ms.openlocfilehash: d8a4b1ace1bfc3cf6e82c08f590e788ab0cc83cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 813f2690754754ebf7be286f1eda27fa204880cd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943331"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274484"
 ---
 # <a name="3377---socketreadstop"></a>3377 - SocketReadStop
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3377|  
-|anahtar sözcükler|TCP|  
+|ID|3377|  
+|Anahtar sözcükler|TCP|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay yayılan ile SocketRead durdur.  
+
+ Bu olay, SocketRead durile birlikte yayınlanır.  
   
 ## <a name="message"></a>İleti  
- '%3' okunan SocketId:% 1 okunur '%2' bayt.  
+
+ Socketıd: %1, ' %3 ' öğesinden okunan ' %2 ' bayt okudu.  
   
 ## <a name="details"></a>Ayrıntılar

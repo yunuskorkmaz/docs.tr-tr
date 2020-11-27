@@ -2,17 +2,18 @@
 title: ServiceTimeoutsBehavior
 ms.date: 03/30/2017
 ms.assetid: 4412525d-a3cc-4eae-b3e8-a50ce766d09d
-ms.openlocfilehash: 58e872f2b15776d65bccdcc47c353ce566cd9d2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 867219130fc853f3ba2c1c2f807b1651f6480f13
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956734"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273977"
 ---
 # <a name="servicetimeoutsbehavior"></a>ServiceTimeoutsBehavior
+
 ServiceTimeoutsBehavior  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ServiceTimeoutsBehavior : Behavior  
@@ -22,23 +23,26 @@ class ServiceTimeoutsBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ServiceTimeoutsBehavior sınıf herhangi bir yöntemi tanımlamaz.  
+
+ ServiceTimeoutsBehavior sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- ServiceTimeoutsBehavior sınıfı şu özelliğe sahip:  
+
+ ServiceTimeoutsBehavior sınıfı aşağıdaki özelliğe sahiptir:  
   
-### <a name="transactiontimeout"></a>TransactionTimeout  
- Veri türü: tarih/saat  
+### <a name="transactiontimeout"></a>Işlem zaman aşımı  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İçinde bir işlemin tamamlanması gereken süre.  
+ Bir işlemin tamamlaması gereken dönem.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

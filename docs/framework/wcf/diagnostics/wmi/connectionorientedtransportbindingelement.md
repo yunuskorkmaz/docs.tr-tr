@@ -2,17 +2,18 @@
 title: ConnectionOrientedTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-ms.openlocfilehash: 04e6abc5941ec99769ff2c15d47881b60e81d2e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c69b73cc05a56a7556630de0f83675590442293
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048406"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274159"
 ---
 # <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
+
 ConnectionOrientedTransportBindingElement  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ConnectionOrientedTransportBindingElement : TransportBindingElement  
@@ -29,72 +30,82 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ConnectionOrientedTransportBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
+
+ ConnectionOrientedTransportBindingElement sınıfı herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  ConnectionOrientedTransportBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="channelinitializationtimeout"></a>ChannelInitializationTimeout  
- Veri türü: tarih/saat  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Zaman aşımından önce tamamlamak ne kadar kanal başlatma belirten bir TimeSpan değeri vardır.  
+ Zaman aşımından önce kanal başlatmasının ne kadar süreyle tamamlanmasını belirten TimeSpan.  
   
 ### <a name="connectionbuffersize"></a>ConnectionBufferSize  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bir parça istemci veya hizmet serileştirilmiş ileti iletmek için kullanılan arabellek boyutu.  
+ İstemci veya hizmetten alınan bir seri hale getirilmiş ileti öbeğini iletmek için kullanılan arabelleğin boyutu.  
   
 ### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Ana bilgisayar üzerinde URI'yi eşleştirirken hizmete erişmek için kullanılıp kullanılmayacağını belirten bir değer.  
+ URI üzerinde eşleştirilirken, ana bilgisayar adının hizmete erişmek için kullanılıp kullanılmadığını gösteren bir değer.  
   
-### <a name="maxbuffersize"></a>maxBufferSize  
- Veri türü: SINT32  
+### <a name="maxbuffersize"></a>MaxBufferSize  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
  Kullanılacak arabelleğin en büyük boyutu.  
   
 ### <a name="maxoutputdelay"></a>MaxOutputDelay  
- Veri türü: tarih/saat  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Gönderilen en fazla bir ileti veya tam bir ileti bir öbek kalabileceği edilmeden önce bellekte arabelleğe zaman aralığı.  
+ İleti öbeğinin veya bir tam iletinin, gönderilmeden önce bellekte ara belleğe kalabileceği en uzun zaman aralığı.  
   
-### <a name="maxpendingaccepts"></a>maxPendingAccepts  
- Veri türü: SINT32  
+### <a name="maxpendingaccepts"></a>MaxPendingAccepts  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- En fazla sayısını bekleyen zaman uyumsuz hizmet gelen bağlantıları işlemek için kullanılan iş parçacıklarının kabul edin.  
+ Hizmette gelen bağlantıları işlemek için kullanılabilen, bekleyen zaman uyumsuz kabul iş parçacığı sayısı üst sınırı.  
   
-### <a name="maxpendingconnections"></a>maxPendingConnections  
- Veri türü: SINT32  
+### <a name="maxpendingconnections"></a>MaxPendingConnections  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bekleyen bağlantılar maksimum sayısı.  
+ Beklemedeki bağlantı sayısı üst sınırı.  
   
-### <a name="transfermode"></a>transferMode  
+### <a name="transfermode"></a>TransferMode  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İletilerin ara belleğe veya bağlantıya dayalı taşınıp belirten bir değeri.  
+ İletilerin arabelleğe alınıp alınmayacağını veya bağlantı yönelimli aktarımla birlikte akışa alınıp alınmayacağını belirten bir değer.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

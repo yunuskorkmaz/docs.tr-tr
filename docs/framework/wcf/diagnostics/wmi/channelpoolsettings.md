@@ -2,17 +2,18 @@
 title: ChannelPoolSettings
 ms.date: 03/30/2017
 ms.assetid: d3f475bd-f780-4bbe-b291-339387322964
-ms.openlocfilehash: 8900af77d0d385bb68b4b85e1d15be57bb7a8d14
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dcc1f3b27d93d5641a4bb2d8082aa3fa88882dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963988"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274224"
 ---
 # <a name="channelpoolsettings"></a>ChannelPoolSettings
+
 ChannelPoolSettings  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ChannelPoolSettings  
@@ -24,37 +25,42 @@ class ChannelPoolSettings
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ChannelPoolSettings sınıf herhangi bir yöntemi tanımlamaz.  
+
+ ChannelPoolSettings sınıfı herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  ChannelPoolSettings sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="idletimeout"></a>IdleTimeout  
- Veri türü: tarih/saat  
+### <a name="idletimeout"></a>Timeout  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bağlantı kesilmeden önce boşta kalabileceği en uzun süre.  
+ Bağlantı kesilmeden önce bağlantının boşta kalabileceği en uzun süre.  
   
 ### <a name="leasetimeout"></a>LeaseTimeout  
- Veri türü: tarih/saat  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bir kira işlemi zaman aşımına uğramadan önce tamamlanması için en uzun süre.  
+ Zaman aşımından önce bir kira işleminin tamamlanacağı en uzun süre.  
   
 ### <a name="maxoutboundchannelsperendpoint"></a>MaxOutboundChannelsPerEndpoint  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Giden kanallar için her uç nokta sayısı.  
+ Her bitiş noktası için giden kanal sayısı üst sınırı.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,17 +2,18 @@
 title: Kanal sınıfı
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: f60a3946617b0994db1ba9e9ddf43be863be81f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a920636e7df9609b12834366b1488c80122f9fca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964094"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274237"
 ---
 # <a name="channel-class"></a>Kanal sınıfı
+
 Kanal  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class Channel  
@@ -26,51 +27,58 @@ class Channel
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- Kanal sınıfı herhangi bir yöntemi tanımlamaz.  
+
+ Kanal sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  Kanal sınıfı aşağıdaki özelliklere sahiptir.  
   
 ### <a name="localaddress"></a>LocalAddress  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Kanal için yerel uç nokta.  
+ Kanal için Yerel uç nokta.  
   
 ### <a name="ref"></a>ref  
- Veri türü: Uç Noktası  
+
+ Veri türü: uç nokta  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bir başvuru kanal uç noktasına bağlanır.  
+ Kanalın bağlandığı uç noktaya başvuru.  
   
 ### <a name="remoteaddress"></a>RemoteAddress  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Kanal ile ilişkilendirilen uzak adres.  
+ Kanalla ilişkilendirilen uzak adres.  
   
 ### <a name="sessionid"></a>SessionId  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Geçerli oturum kimliği, varsa.  
+ Varsa, geçerli oturum kimliği.  
   
 ### <a name="type"></a>Tür  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Kanal türü.  
+ Kanalın türü.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

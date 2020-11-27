@@ -2,17 +2,18 @@
 title: Binding2
 ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-ms.openlocfilehash: a040cc6e12833d2c737eb14c591300e5873ddce7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b72bd3903b7139c4adf2a8bd0ced6c34e7285640
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964087"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274302"
 ---
 # <a name="binding"></a>Bağlama
+
 WMI bağlama  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class Binding  
@@ -29,72 +30,82 @@ class Binding
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- Bağlama sınıfı herhangi bir yöntemi tanımlamaz.  
+
+ Bağlama sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  Bağlama sınıfı aşağıdaki özelliklere sahiptir.  
   
 ### <a name="bindingelements"></a>BindingElements  
- Veri türü: BindingElement dizi  
+
+ Veri türü: BindingElement dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bağlama tarafından uygulanan bağlama öğeleri koleksiyonu.  
+ Bağlama tarafından uygulanan bağlama öğelerinin koleksiyonu.  
   
-### <a name="closetimeout"></a>closeTimeout  
- Veri türü: tarih/saat  
+### <a name="closetimeout"></a>CloseTimeout  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bir kapatma işlemi tamamlamak sağlanan zaman aralığı.  
+ Bir kapatma işleminin tamamlanabilmesi için girilen zaman aralığı.  
   
-### <a name="name"></a>Ad  
+### <a name="name"></a>Adı  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bağlama adı.  
+ Bağlamanın adı.  
   
 ### <a name="namespace"></a>Ad Alanı  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- XML ad alanı bağlama.  
+ Bağlamanın XML ad alanı.  
   
-### <a name="opentimeout"></a>opentimeout =  
- Veri türü: tarih/saat  
+### <a name="opentimeout"></a>OpenTimeout  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Sağlanan bir açık bir işlemin tamamlanması zaman aralığı.  
+ Bir açık işlemin tamamlanabilmesi için girilen zaman aralığı.  
   
-### <a name="receivetimeout"></a>receiveTimeout  
- Veri türü: tarih/saat  
+### <a name="receivetimeout"></a>ReceiveTimeout  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Tamamlamak alma işlemi için belirtilen zaman aralığı.  
+ Alma işleminin tamamlanabilmesi için girilen zaman aralığı.  
   
 ### <a name="scheme"></a>Düzen  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bağlama tarafından oluşturulan kanal ve dinleyici fabrikası tarafından kullanılan URI aktarma düzenini.  
+ Bağlama tarafından oluşturulan kanal ve dinleyici fabrikaları tarafından kullanılan URI taşıma düzeni.  
   
-### <a name="sendtimeout"></a>SendTimeout  
- Veri türü: tarih/saat  
+### <a name="sendtimeout"></a>Binding üstündeki SendTimeout  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Tamamlamak için bir gönderme işlemi belirtilen zaman aralığı.  
+ Gönderme işleminin tamamlanabilmesi için girilen zaman aralığı.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

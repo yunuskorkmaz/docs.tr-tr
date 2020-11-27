@@ -3,14 +3,15 @@ title: 'Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme'
 description: Sunucular ve istemciler arasında dağıtılmış bileşen nesne modeli (DCOM) yönetilen kod çağrılarını Windows Communication Foundation (WCF) olarak geçirin.
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-ms.openlocfilehash: cc6ac1dd01e17bb184d1f1faca372134d6130d33
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: eb84b8071d8dec5d3e70a2f1903f84ee64c31b08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619097"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274848"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme
+
 Windows Communication Foundation (WCF) dağıtılmış bir ortamdaki sunucular ve istemciler arasındaki yönetilen kod çağrıları için dağıtılmış bileşen nesne modeli (DCOM) üzerinde önerilen ve güvenli seçenektir. Bu makalede, aşağıdaki senaryolar için DCOM 'dan WCF 'ye nasıl kod geçirebileceğiniz gösterilmektedir.  
   
 - Uzak hizmet, istemciye bir nesne değeri döndürür  
@@ -24,6 +25,7 @@ Windows Communication Foundation (WCF) dağıtılmış bir ortamdaki sunucular v
  Bu hizmetler için WCF Hizmetleri ve istemcileri oluşturma hakkında daha fazla bilgi için bkz. [Temel WCF programlama](../wcf/basic-wcf-programming.md), [Hizmetleri tasarlama ve uygulama](../wcf/designing-and-implementing-services.md)ve [istemci oluşturma](../wcf/building-clients.md).  
   
 ## <a name="dcom-example-code"></a>DCOM örnek kodu  
+
  Bu senaryolar için, WCF kullanılarak gösterilen DCOM arabirimleri aşağıdaki yapıya sahiptir:  
   
 ```csharp  
@@ -48,6 +50,7 @@ public class Customer
 ```  
   
 ## <a name="the-service-returns-an-object-by-value"></a>Hizmet bir nesne değere göre döndürüyor  
+
  Bu senaryo için, bir hizmet çağrısı yaparsınız ve IT yöntemi sunucudan istemciye değer ile geçirilen bir nesne döndürür. Bu senaryo aşağıdaki COM çağrısını temsil eder:  
   
 ```csharp  
@@ -60,6 +63,7 @@ public interface IRemoteService
  Bu senaryoda istemci, uzak hizmetten bir nesnenin serisi kaldırılmış bir kopyasını alır. İstemci, hizmete geri çağrı yapmadan bu yerel kopyayla etkileşime geçebilir.  Diğer bir deyişle, istemci garanti edilir çünkü yerel kopyada Yöntemler çağrıldığında hizmetin hiçbir şekilde ilgili olmaması gerekir. WCF her zaman değere göre hizmetten nesneleri döndürür, bu nedenle aşağıdaki adımlarda normal bir WCF hizmeti oluşturma açıklanır.  
   
 ### <a name="step-1-define-the-wcf-service-interface"></a>1. Adım: WCF hizmeti arabirimini tanımlama  
+
  WCF hizmeti için bir ortak arabirim tanımlayın ve [ <xref:System.ServiceModel.ServiceContractAttribute> ] özniteliğiyle işaretleyin.  İstemcilere göstermek istediğiniz yöntemleri [ <xref:System.ServiceModel.OperationContractAttribute> ] özniteliğiyle işaretleyin. Aşağıdaki örnek, bir istemcinin çağırabilmesi için sunucu tarafı arabirimi ve arabirim yöntemlerini tanımlamak üzere bu özniteliklerin kullanımını gösterir. Bu senaryo için kullanılan yöntem kalın olarak gösterilmiştir.  
   
 ```csharp  
@@ -79,6 +83,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="step-2-define-the-data-contract"></a>2. Adım: veri sözleşmesini tanımlama  
+
  Daha sonra hizmet için bir veri sözleşmesi oluşturmanız gerekir, bu, hizmetin ve istemcilerinin arasında verilerin nasıl değiş tokuş olacağını anlatmaktadır.  Veri sözleşmesinde açıklanan sınıflar [ <xref:System.Runtime.Serialization.DataContractAttribute> ] özniteliğiyle işaretlenmelidir. Hem istemci hem de sunucu için görünür olmasını istediğiniz bireysel özellikler veya alanlar [ <xref:System.Runtime.Serialization.DataMemberAttribute> ] özniteliğiyle işaretlenmelidir. Veri sözleşmesindeki bir sınıftan türetilmiş türlerin izin verilmesini istiyorsanız, bunları [ <xref:System.Runtime.Serialization.KnownTypeAttribute> ] özniteliğiyle belirlemeniz gerekir. WCF yalnızca hizmet arabirimindeki türleri ve bilinen türler olarak tanımlanan türleri seri hale getir veya seri durumdan çıkaracaktır. Bilinen bir tür olmayan bir türü kullanmaya çalışırsanız, bir özel durum oluşur.  
   
  Veri sözleşmeleri hakkında daha fazla bilgi için bkz. [veri sözleşmeleri](../wcf/samples/data-contracts.md).  
@@ -121,6 +126,7 @@ public class Address
 ```  
   
 ### <a name="step-3-implement-the-wcf-service"></a>3. Adım: WCF hizmetini uygulama  
+
  Ardından, önceki adımda tanımladığınız arabirimi uygulayan WCF hizmeti sınıfını uygulamalısınız.  
   
 ```csharp  
@@ -138,6 +144,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-4-configure-the-service-and-the-client"></a>4. Adım: hizmeti ve istemciyi yapılandırma  
+
  Bir WCF hizmetini çalıştırmak için belirli bir WCF bağlamasını kullanarak bu hizmet arabirimini belirli bir URL 'de kullanıma sunan bir uç nokta bildirmeniz gerekir. Bir bağlama, iletişim kuracak istemciler ve sunucu için Aktarım, kodlama ve protokol ayrıntılarını belirtir. Genellikle, hizmet projesinin yapılandırma dosyasına (web.config) bağlama eklersiniz. Aşağıda örnek hizmet için bir bağlama girişi gösterilmektedir:  
   
 ```xml  
@@ -170,6 +177,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>5. Adım: hizmeti çalıştırma  
+
  Son olarak, hizmet uygulamasına aşağıdaki satırları ekleyerek ve uygulamayı başlatarak bir konsol uygulamasında kendi kendine barındırabilirsiniz. Bir WCF hizmet uygulamasını [barındırma hizmetleri, barındırma hizmetleri](../wcf/hosting-services.md)hakkında daha fazla bilgi için.  
   
 ```csharp  
@@ -178,6 +186,7 @@ customerServiceHost.Open();
 ```  
   
 ### <a name="step-6-call-the-service-from-the-client"></a>6. Adım: istemciden hizmeti çağırma  
+
  Hizmeti istemciden çağırmak için, hizmet için bir kanal fabrikası oluşturmanız ve bir kanal istemeniz gerekir. Bu, doğrudan istemciden doğrudan bir yöntemi çağırmasını sağlar `GetCustomer` . Kanal, hizmetin arabirimini uygular ve temel alınan istek/yanıt mantığını sizin için işler.  Bu yöntem çağrısından gelen dönüş değeri, hizmet yanıtının Serisi kaldırılan kopyasıdır.  
   
 ```csharp  
@@ -188,6 +197,7 @@ Customer customer = service.GetCustomer("Mary", "Smith");
 ```  
   
 ## <a name="the-client-sends-a-by-value-object-to-the-server"></a>İstemci sunucuya bir değere göre nesnesi gönderiyor  
+
  Bu senaryoda, istemci sunucuya bir nesne gönderir ve değeri göre. Bu, sunucunun, serisi kaldırılan nesnenin bir kopyasını alacağı anlamına gelir.  Sunucu söz konusu kopyada yöntemleri çağırabilir ve istemci koduna geri çağırma olmadığı garantisini alabilir. Daha önce belirtildiği gibi, verilerin normal WCF değişimlerinin değeri şunlardır.  Bu, bu nesnelerden birine çağırma yöntemlerinin yalnızca yerel olarak yürütüldüğünden emin olur; istemcide kod çağırmaz.  
   
  Bu senaryo aşağıdaki COM yöntemi çağrısını temsil eder:  
@@ -213,6 +223,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a>İstemciye değer nesnesi gönderen istemciye kod ekleme  
+
  Aşağıdaki kod, istemcinin yeni bir değerli müşteri nesnesi nasıl oluşturduğunu gösterir, hizmetle iletişim kurmak için bir kanal oluşturur `ICustomerManager` ve müşteri nesnesini bu sunucuya gönderir.  
   
  Müşteri nesnesi serileştirilir ve hizmete gönderilir; burada hizmet tarafından bu nesnenin yeni bir kopyasına kaydedilir.  Bu nesne üzerindeki hizmet çağrılarının her türlü yöntemi yalnızca sunucuda yerel olarak yürütülür. Bu kodun türetilmiş bir türün () gönderilmesini gösterdiğine dikkat edin `PremiumCustomer` .  Hizmet sözleşmesi bir nesne bekler `Customer` , ancak hizmet veri sözleşmesi <xref:System.Runtime.Serialization.KnownTypeAttribute> de izin verildiğini belirtmek için [] özniteliğini kullanır `PremiumCustomer` .  WCF, bu hizmet arabirimi aracılığıyla başka herhangi bir türü seri hale getirmeye veya seri durumdan çıkarmasına çalışır.  
@@ -233,6 +244,7 @@ customerManager.StoreCustomer(customer);
 ```  
   
 ## <a name="the-service-returns-an-object-by-reference"></a>Hizmet, başvuruya göre bir nesne döndürüyor  
+
  Bu senaryo için, istemci uygulaması uzak hizmete bir çağrı yapar ve yöntemi hizmetten istemciye başvuru ile geçirilen bir nesne döndürür.  
   
  Daha önce belirtildiği gibi, WCF Hizmetleri nesneyi her zaman değere göre döndürür.  Ancak, sınıfını kullanarak benzer bir sonuç elde edebilirsiniz <xref:System.ServiceModel.EndpointAddress10> .  , <xref:System.ServiceModel.EndpointAddress10> İstemci tarafından sunucuda bir sessionby başvuruya göre nesne elde etmek için kullanılabilecek bir seri hale getirilebilir değer nesnesi.  
@@ -251,6 +263,7 @@ public interface IRemoteService
 ```  
   
 ### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a>1. Adım: oturumsuz WCF hizmeti arabirimini ve uygulamasını tanımlama  
+
  İlk olarak, sessionobject nesnesini içeren bir WCF hizmeti arabirimi tanımlayın.  
   
  Bu kodda, sessionobject nesnesi `ServiceContract` onu normal BIR WCF hizmeti arabirimi olarak tanımlayan özniteliğiyle işaretlenir.  Buna ek olarak, <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> özelliği, bir sessionservice olacağını belirtecek şekilde ayarlanır.  
@@ -291,6 +304,7 @@ public interface ISessionBoundObject
 ```  
   
 ### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>2. Adım: oturumsuz nesne için WCF fabrikası hizmetini tanımlama  
+
  Oturumsuz nesneyi oluşturan hizmetin tanımlanması ve uygulanması gerekir. Aşağıdaki kod bunun nasıl yapılacağını gösterir. Bu kod, bir nesne döndüren başka bir WCF hizmeti oluşturur <xref:System.ServiceModel.EndpointAddress10> .  Bu, oturum tam nesnesini oluşturmak için kullanabileceği bir uç noktanın seri hale getirilebilir bir biçimidir.  
   
 ```csharp  
@@ -302,7 +316,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Bu hizmetin uygulanması aşağıda verilmiştir. Bu uygulama, oturumsuz nesneler oluşturmak için tek bir kanal fabrikası sağlar.  `GetInstanceAddress`Çağrıldığında, bir kanal oluşturur ve <xref:System.ServiceModel.EndpointAddress10> bu kanalla ilişkili uzak adrese işaret eden bir nesne oluşturur.   <xref:System.ServiceModel.EndpointAddress10>istemciye değere göre döndürülebilecek bir veri türüdür.
+ Bu hizmetin uygulanması aşağıda verilmiştir. Bu uygulama, oturumsuz nesneler oluşturmak için tek bir kanal fabrikası sağlar.  `GetInstanceAddress`Çağrıldığında, bir kanal oluşturur ve <xref:System.ServiceModel.EndpointAddress10> bu kanalla ilişkili uzak adrese işaret eden bir nesne oluşturur.   <xref:System.ServiceModel.EndpointAddress10> istemciye değere göre döndürülebilecek bir veri türüdür.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -323,6 +337,7 @@ public class SessionBoundFactory : ISessionBoundFactory
 ```  
   
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>3. Adım: WCF hizmetlerini yapılandırma ve başlatma  
+
  Bu hizmetleri barındırmak için, sunucunun yapılandırma dosyasına (web.config) aşağıdaki eklemeleri yapmanız gerekir.  
   
 1. `<client>`Oturumsuz nesnenin bitiş noktasını açıklayan bir bölüm ekleyin.  Bu senaryoda, sunucu istemci olarak da çalışır ve bunu etkinleştirmek üzere yapılandırılması gerekir.  
@@ -369,6 +384,7 @@ sessionBoundServiceHost.Open();
 ```  
   
 ### <a name="step-4-configure-the-client-and-call-the-service"></a>4. Adım: istemciyi yapılandırma ve hizmeti çağırma  
+
  İstemcisini, projenin uygulama yapılandırma dosyasında (app.config) aşağıdaki girişleri yaparak WCF hizmetleriyle iletişim kuracak şekilde yapılandırın.  
   
 ```xml  

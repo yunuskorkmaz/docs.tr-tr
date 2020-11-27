@@ -2,27 +2,30 @@
 title: 3375 - TextMessageDecodingStart
 ms.date: 03/30/2017
 ms.assetid: a7152c0e-10e5-4446-b52d-60838fb99748
-ms.openlocfilehash: b0862eee0d45129c46846a3ad72ba68c65f1b3f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96874d4e324decfb04710d95e1debb90b44324a1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777383"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274497"
 ---
 # <a name="3375---textmessagedecodingstart"></a>3375 - TextMessageDecodingStart
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3375|  
-|anahtar sözcükler|Kanal|  
+|ID|3375|  
+|Anahtar sözcükler|Kanal|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, bir iletinin şifrelemesini kaldırmada TextMessageEncoder başlatıldıktan sonra yayınlanır.  
+
+ Bu olay, TextMessageEncoder iletinin kodunu çözmeye başladığında yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Bir iletinin şifrelemesini kaldırmada TextMessageEncoder başlatıldı.  
+
+ TextMessageEncoder iletinin kodunu çözmeye başladı.  
   
 ## <a name="details"></a>Ayrıntılar

@@ -2,17 +2,18 @@
 title: ServiceThrottlingBehavior
 ms.date: 03/30/2017
 ms.assetid: 37b9e517-1f1f-4ec4-9fcb-2b8016794f5b
-ms.openlocfilehash: 572e458f08c4717207667db9940296c4a957199a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3bcf205964a22cdb418d0158e5ee6439169538ee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956877"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273990"
 ---
 # <a name="servicethrottlingbehavior"></a>ServiceThrottlingBehavior
+
 ServiceThrottlingBehavior  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp  
 class ServiceThrottlingBehavior : Behavior  
@@ -24,37 +25,42 @@ class ServiceThrottlingBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- Denetlemek ServiceThrottlingBehavior sınıf herhangi bir yöntemi tanımlamaz.  
+
+ Servicekısıtlar Lingbehavior sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- Denetlemek ServiceThrottlingBehavior sınıfı aşağıdaki özelliklere sahiptir:  
+
+ Servicekısıtlar Lingbehavior sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="maxconcurrentcalls"></a>maxConcurrentCalls  
- Veri türü: SINT32  
+### <a name="maxconcurrentcalls"></a>Maxconcurrentçağrıları  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bir ServiceHost tüm dağıtıcı nesneler arasında etkin bir şekilde işlenen ileti sayısı.  
+ ServiceHost içindeki tüm Dispatcher nesnelerinde etkin olarak işlenen en fazla ileti sayısı.  
   
 ### <a name="maxconcurrentinstances"></a>MaxConcurrentInstances  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Aynı anda çalışabilecek hizmet nesneleri sayısı.  
+ Tek seferde yürütebilmesi için en fazla hizmet nesnesi sayısı.  
   
 ### <a name="maxconcurrentsessions"></a>MaxConcurrentSessions  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- En fazla bir konak aynı anda kabul edebileceği oturum sayısını.  
+ Bir konağın bir anda kabul edebileceği en fazla oturum sayısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,17 +2,19 @@
 title: İş Akışı İzleme
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: fc27be295cbf0a83b65ff03e36f2aeffeda12db9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5a8f650edfdade4a18999c5e7af38ca72112122
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557508"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273886"
 ---
 # <a name="workflow-tracing"></a>İş Akışı İzleme
+
 İş akışı izleme .NET Framework İzleme dinleyicilerini kullanarak tanılama bilgilerini yakalamak için bir yol sunar. Uygulama ile ilgili bir sorun algılanırsa izleme etkinleştirilebilir ve sorun çözümlendikten sonra yeniden devre dışı bırakılabilir. İş akışları için hata ayıklama izlemeyi etkinleştirmenin iki yolu vardır. Bunu olay Izleme görüntüleyicisini kullanarak yapılandırabilir veya <xref:System.Diagnostics> izleme olaylarını bir dosyaya göndermek için ' i kullanabilirsiniz.  
   
 ## <a name="enabling-debug-tracing-in-etw"></a>ETW 'de hata ayıklama Izlemeyi etkinleştirme  
+
  ETW kullanarak izlemeyi etkinleştirmek için Olay Görüntüleyicisi hata ayıklama kanalını etkinleştirin:  
   
 1. Olay Görüntüleyicisi 'de analitik ve hata ayıklama günlükleri düğümüne gidin.  
@@ -41,6 +43,7 @@ ms.locfileid: "90557508"
 > .NET Framework 4 Istemci profilini kullanıyorsanız, önce .NET Framework 4 dizininden aşağıdaki komutu çalıştırarak ETW bildirimini kaydetmeniz gerekir: `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>System. Diagnostics kullanarak hata ayıklama Izlemeyi etkinleştirme  
+
  Bu dinleyiciler, iş akışı uygulamasının App.config dosyasında veya bir iş akışı hizmeti için Web.config yapılandırılabilir. Bu örnekte, <xref:System.Diagnostics.TextWriterTraceListener> izleme bilgilerini geçerli dizindeki MyTraceLog.txt dosyasına kaydedecek şekilde yapılandırılır.  
   
 ```xml  
