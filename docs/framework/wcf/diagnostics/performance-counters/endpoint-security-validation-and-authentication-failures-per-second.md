@@ -2,17 +2,19 @@
 title: 'Uç Noktası: Saniyede Güvenlik Doğrulama ve Kimlik Doğrulama Hatası'
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
-ms.openlocfilehash: 8573c35f16d03e2f86310c054703c25a3175200c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b2c5022caa5abe6154a3cb4dd4281dd212599b74
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541506"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256488"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Uç Noktası: Saniyede Güvenlik Doğrulama ve Kimlik Doğrulama Hatası
+
 Sayaç adı: güvenlik doğrulaması ve saniye başına kimlik doğrulama başarısızlığı  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Açıklama  
+
  Bu sayaç, "güvenlik çağrıları yetkilendirilmemiş" sayacı kapsamında olmayan bir güvenlik sorunu nedeniyle her ileti reddedildiğinde artırılır. Bu tür sorunlar şunlardır:  
   
 - İstemci belirteci iletiden okunamıyor.  

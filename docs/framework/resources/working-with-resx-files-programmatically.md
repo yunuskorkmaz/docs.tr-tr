@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 519ca099b65710b6eb4251e1a9419e965ee69f93
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: c6b1ef6c7dd8be3dbc98b2298ab0e649ff74008e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166159"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254512"
 ---
 # <a name="work-with-resx-files-programmatically"></a>Program aracılığıyla .resx dosyalarıyla çalışma
 
@@ -51,6 +51,7 @@ Aşağıdaki örnek, altı dizeyi, bir simgeyi ve uygulama tanımlı iki nesneyi
 Bir. resx dosyasını bir çalışma zamanı yürütülebilir dosyasına katıştıramaz veya bir uydu derlemesinde derlenemez. [Kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)kullanarak. resx dosyanızı ikili bir kaynak (. resources) dosyasına dönüştürmeniz gerekir. Elde edilen. resources dosyası daha sonra bir uygulama derlemesine veya bir uydu derlemesine gömülebilir. Daha fazla bilgi için bkz. [kaynak dosyaları oluşturma](creating-resource-files-for-desktop-apps.md).
 
 ## <a name="enumerate-resources"></a>Kaynakları listeleme
+
  Bazı durumlarda, belirli bir kaynak yerine, bir. resx dosyasından tüm kaynakları almak isteyebilirsiniz. Bunu yapmak için, <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> . resx dosyasındaki tüm kaynaklar için bir Numaralandırıcı sağlayan sınıfını kullanabilirsiniz. <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType>Sınıfı <xref:System.Collections.IDictionaryEnumerator> , <xref:System.Collections.DictionaryEntry> döngüsünün her yinelemesi için belirli bir kaynağı temsil eden bir nesne döndüren uygular. <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType>Özelliği, kaynağın anahtarını döndürür ve <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> özelliği kaynağın değerini döndürür.
 
  Aşağıdaki örnek, <xref:System.Resources.ResXResourceReader> Önceki örnekte oluşturulan CarResources. resx dosyası için bir nesne oluşturur ve kaynak dosyasında yinelenir. `Automobile`Kaynak dosyasında tanımlanan iki nesneyi bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> nesnesine ekler ve bir nesnesine beş dizeden beş tane ekler <xref:System.Collections.SortedList> . <xref:System.Collections.SortedList>Nesnesindeki değerler, konsol için sütun başlıklarının gösterilmesi için kullanılan bir parametre dizisine dönüştürülür. `Automobile`Özellik değerleri de konsola görüntülenir.
@@ -59,6 +60,7 @@ Bir. resx dosyasını bir çalışma zamanı yürütülebilir dosyasına katış
  [!code-vb[Conceptual.Resources.ResX#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/enumerate1.vb#2)]
 
 ## <a name="retrieve-a-specific-resource"></a>Belirli bir kaynağı alma
+
  Bir. resx dosyasındaki öğeleri listelemenin yanı sıra, sınıfını kullanarak belirli bir kaynağı ada göre alabilirsiniz <xref:System.Resources.ResXResourceSet?displayProperty=nameWithType> . <xref:System.Resources.ResourceSet.GetString%28System.String%29?displayProperty=nameWithType>Yöntemi, adlandırılmış bir dize kaynağının değerini alır. <xref:System.Resources.ResourceSet.GetObject%28System.String%29?displayProperty=nameWithType>Yöntemi, adlandırılmış nesnenin veya ikili verilerin değerini alır. Yöntemi, daha sonra, uygun türdeki bir nesneye (C# ' de) veya dönüştürmeli (Visual Basic) bir nesne döndürür.
 
  Aşağıdaki örnek, bir formun başlık dizesini ve simgesini kaynak adlarına göre alır. Ayrıca `Automobile` , önceki örnekte kullanılan uygulama tanımlı nesneleri alır ve bunları bir <xref:System.Windows.Forms.DataGridView> denetimde görüntüler.
@@ -67,6 +69,7 @@ Bir. resx dosyasını bir çalışma zamanı yürütülebilir dosyasına katış
  [!code-vb[Conceptual.Resources.ResX#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/retrieve1.vb#3)]
 
 ## <a name="convert-resx-files-to-binary-resources-files"></a>. Resx dosyalarını ikili. resources dosyalarına Dönüştür
+
  . Resx dosyalarının gömülü ikili kaynak (. resources) dosyalarına dönüştürülmesi önemli avantajlara sahiptir. . Resx dosyalarının uygulama geliştirme sırasında okunması ve korunması kolay olsa da, tamamlanmış uygulamalara nadiren dahil edilmiştir. Bunlar bir uygulamayla dağıtılırsa, uygulama çalıştırılabiliri ve buna eşlik eden kütüphanelerin ayrı dosyaları olarak bulunur. Buna karşılık,. resources dosyaları uygulama yürütülebilir dosyasına veya buna eşlik eden derlemelere katıştırılır. Ayrıca, yerelleştirilmiş uygulamalar için, çalışma zamanında. resx dosyalarına bağlı olarak, geliştiriciye kaynak geri dönüşü işleme sorumluluğunu koyar. Buna karşılık, gömülü. resources dosyaları içeren bir uydu derlemeleri kümesi oluşturulduysa, ortak dil çalışma zamanı kaynak geri dönüş işlemini işler.
 
  Bir. resx dosyasını bir. resources dosyasına dönüştürmek için aşağıdaki temel sözdizimine sahip [kaynak dosyası oluşturucusunu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)kullanın:

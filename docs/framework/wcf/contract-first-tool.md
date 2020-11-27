@@ -2,19 +2,20 @@
 title: Önce Anlaşma Aracı
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 36e1a3e19f802ca5b74cf50f5bcd57c167e31e33
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 1896a76892c76fb7277c3e36978604a4d290018e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291700"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255136"
 ---
 # <a name="contract-first-tool"></a>Önce Anlaşma Aracı
-Hizmet sözleşmelerinin genellikle varolan hizmetlerden oluşturulması gerekir. .NET Framework 4.5 ve sonraki sürümlerinde, ilk sözleşme aracı kullanılarak varolan hizmetlerden otomatik olarak veri sözleşmesi sınıfları oluşturulabilir. Sözleşmenin ilk aracını kullanmak için XML şema tanım dosyasının (XSD) yerel olarak indirilmesi gerekir; araç, HTTP üzerinden uzaktan veri sözleşmeleri içe aktaramaz.
 
- Sözleşme ilk aracı Visual Studio entegre edilmiştir 2012 bir yapı görevi olarak. Yapı görevi tarafından oluşturulan kod dosyaları, projenin temel hizmet sözleşmesindeki değişiklikleri kolayca benimseyebilmeleri için proje her oluşturulduğunda oluşturulur.
+Hizmet sözleşmelerinin genellikle mevcut hizmetlerden oluşturulması gerekir. .NET Framework 4,5 ve üzeri sürümlerde, veri sözleşmesi sınıfları otomatik olarak, sözleşme ilk Aracı kullanılarak mevcut hizmetlerden otomatik olarak oluşturulabilir. İlk sözleşme aracını kullanmak için, XML şema tanımı dosyası (XSD) yerel olarak indirilmelidir; Araç, uzak veri sözleşmelerini HTTP aracılığıyla alamaz.
 
- Sözleşmeilk aracının içe aktarabileceği şema türleri şunlardır:
+ Sözleşme ilk aracı, Visual Studio 2012 derleme görevi olarak tümleşiktir. Derleme görevi tarafından oluşturulan kod dosyaları proje her oluşturulduğunda oluşturulur, böylece projenin temel hizmet sözleşmesindeki değişiklikleri kolayca benimseyebilmesini sağlayabilirsiniz.
+
+ Sözleşme-ilk aracının içeri aktarabileceğiniz şema türleri şunlardır:
 
 ```xml
 <xsd:complexType>
@@ -23,10 +24,11 @@ Hizmet sözleşmelerinin genellikle varolan hizmetlerden oluşturulması gerekir
 </xsd:complexType>
 ```
 
- Basit türler gibi `Int16` ilkel veya eğer `String`oluşturulmaz; türünde `Collection`ise karmaşık türleri oluşturulmayacaktır. Türler, başka bir `xsd:complexType`ürünün parçasıysa da oluşturulmayacaktır. Tüm bu durumlarda, türler projedeki varolan türlere başvurulacaktır.
+ Basit türler, veya gibi temel elemanlar oluşturulduklarında üretilmeyecektir `Int16` `String` ; karmaşık türler türlerse üretilmeyecektir `Collection` . Türler başka bir parçasıysa de oluşturulmazlar `xsd:complexType` . Tüm bu durumlarda, bunlara bunun yerine, proje içindeki var olan türlere başvurulur.
 
-## <a name="adding-a-data-contract-to-a-project"></a>Projeye veri sözleşmesi ekleme
- Sözleşmenin ilk aracının kullanılabilmesi için hizmet sözleşmesinin (XSD) projeye eklenmesi gerekir. Bu genel bakışın amaçları için, sözleşmenin ilk işlevlerini göstermek için aşağıdaki sözleşme kullanılacaktır. Bu hizmet tanımı, Bing'in arama API'si tarafından kullanılan hizmet sözleşmesinin küçük bir alt kümesidir.
+## <a name="adding-a-data-contract-to-a-project"></a>Bir projeye veri sözleşmesi ekleme
+
+ Sözleşmenin ilk aracı kullanılmadan önce, servis sözleşmesinin (XSD) projeye eklenmesi gerekir. Bu genel bakışın amaçları doğrultusunda, sözleşmenin ilk işlevlerini göstermek için aşağıdaki sözleşme kullanılacaktır. Bu hizmet tanımı, Bing arama API 'SI tarafından kullanılan hizmet sözleşmesinin küçük bir alt kümesidir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -58,50 +60,51 @@ Hizmet sözleşmelerinin genellikle varolan hizmetlerden oluşturulması gerekir
 </xs:schema>
 ```
 
- Yukarıdaki hizmet sözleşmesini projeye eklemek için projeye sağ tıklayın ve **Yeni Ekle...'yu**seçin. Şablonlar iletişim kutusunun WCF bölmesinden Şema Tanımı'nı seçin ve yeni dosya SampleContract.xsd'yi adlandırın. Yukarıdaki kodu yeni dosyanın kod görünümüne kopyalayıp yapıştırın.
+ Yukarıdaki hizmet sözleşmesini projeye eklemek için projeye sağ tıklayın ve **Yeni Ekle...** seçeneğini belirleyin. Şablonlar iletişim kutusunun WCF bölmesinden şema tanımı ' nı seçin ve yeni Sample Contract. xsd dosyasını adlandırın. Yukarıdaki kodu kopyalayıp yeni dosyanın kod görünümüne yapıştırın.
 
 ## <a name="configuring-contract-first-options"></a>Sözleşme ilk seçeneklerini yapılandırma
- Sözleşme ilk seçenekleri bir WCF projesinin Özellikler menüsünde yapılandırılabilir. Sözleşmenin ilk geliştirmesini etkinleştirmek için, proje özellikleri penceresinin WCF sayfasında **XSD'yi Tür Tanımı Dili olarak etkinleştir'i** seçin.
 
- ![Sözleşme ilk geliştirme etkin WCF Seçenekleri ekran görüntüsü.](./media/contract-first-tool/contract-first-options.png)
+ Sözleşme-ilk seçenekleri bir WCF projesinin Özellikler menüsünde yapılandırılabilir. Sözleşmenin ilk geliştirmeyi etkinleştirmek için, Proje Özellikleri penceresinin WCF sayfasında **xsd türü tanım dilini etkinleştir** onay kutusunu seçin.
 
- Gelişmiş özellikleri yapılandırmak için Gelişmiş düğmesini tıklatın.
+ ![Sözleşmenin ilk geliştirmesi etkin olan WCF seçeneklerinin ekran görüntüsü.](./media/contract-first-tool/contract-first-options.png)
 
- ![Gelişmiş Sözleşme Kodu Oluşturma Ayarları iletişim kutusu.](./media/contract-first-tool/advanced-contract-settings.png)
+ Gelişmiş özellikleri yapılandırmak için Gelişmiş düğmesine tıklayın.
 
- Aşağıdaki gelişmiş ayarlar sözleşmelerden kod oluşturma için yapılandırılabilir. Ayarlar yalnızca projedeki tüm dosyalar için yapılandırılabilir; ayarlar şu anda tek tek dosyalar için yapılandırılamaz.
+ ![Gelişmiş sözleşme kodu oluşturma ayarları iletişim kutusu.](./media/contract-first-tool/advanced-contract-settings.png)
 
-- **Serializer Modu**: Bu ayar, hizmet sözleşme dosyalarını okumak için hangi serializer'ın kullanılacağını belirler. **XML Serializer** seçildiğinde, Koleksiyon Türleri ve **Yeniden Kullanma** **Türleri** seçenekleri devre dışı bırakılır. Bu seçenekler yalnızca **Veri Sözleşmesi Serializer**için geçerlidir.
+ Aşağıdaki gelişmiş ayarlar sözleşmelerden kod üretimi için yapılandırılabilir. Ayarlar, yalnızca projedeki tüm dosyalar için yapılandırılabilir; ayarlar şu anda tek tek dosyalar için yapılandırılamaz.
 
-- **Yeniden Kullanım Türleri**: Bu ayar, tür yeniden kullanımı için hangi kitaplıkların kullanıldığını belirtir. Bu ayar yalnızca **Serializer Modu** **Veri Sözleşmesi Serializer'a**ayarlanırsa geçerlidir.
+- **Serileştirici modu**: Bu ayar, hizmet sözleşmesi dosyalarını okumak için hangi seri hale getiricinin kullanıldığını belirler. **XML serileştirici** seçildiğinde, **koleksiyon türleri** ve **yeniden kullanım türleri** seçenekleri devre dışıdır. Bu seçenekler yalnızca **veri sözleşmesi serileştiricisi** için geçerlidir.
 
-- **Toplama Türü**: Bu ayar, toplama veri türü için kullanılacak tam nitelikli veya montaj nitelikli türü belirtir. Bu ayar yalnızca **Serializer Modu** **Veri Sözleşmesi Serializer'a**ayarlanırsa geçerlidir.
+- **Türleri yeniden kullan**: Bu ayar, tür yeniden kullanımı için hangi kitaplıkların kullanıldığını belirtir. Bu ayar yalnızca **seri hale getirici modu** **veri sözleşmesi serileştiricisi** olarak ayarlandıysa geçerlidir.
 
-- **Sözlük Türü**: Bu ayar, sözlük veri türü için kullanılacak tam nitelikli veya derleme nitelikli türü belirtir.
+- **Koleksiyon türü**: Bu ayar, koleksiyon veri türü için kullanılacak tam veya bütünleştirilmiş kod nitelikli türü belirtir. Bu ayar yalnızca **seri hale getirici modu** **veri sözleşmesi serileştiricisi** olarak ayarlandıysa geçerlidir.
 
-- **EnableDataBinding**: Bu ayar, veri <xref:System.ComponentModel.INotifyPropertyChanged> bağlamayı uygulamak için tüm veri türlerinde arabirimin uygulanıp uygulanmayacağını belirtir.
+- **Sözlük türü**: Bu ayar, sözlük veri türü için kullanılacak tam veya bütünleştirilmiş kod nitelikli türü belirtir.
 
-- **Dışlanmış Tipler**:Bu ayar, başvurulan derlemelerin dışında tutulacak tam nitelikli veya derleme nitelikli türlerin listesini belirtir. Bu ayar yalnızca **Serializer Modu** **Veri Sözleşmesi Serializer'a**ayarlanırsa geçerlidir.
+- **EnableDataBinding**: Bu ayar, <xref:System.ComponentModel.INotifyPropertyChanged> veri bağlamayı uygulamak için tüm veri türlerinde arabirimin uygulanıp etkinleştirilmeyeceğini belirtir.
 
-- **GenerateInternalTypes**: Bu ayar, dahili olarak işaretlenmiş sınıfların oluşturup oluşturmayacağını belirtir. Bu ayar yalnızca **Serializer Modu** **Veri Sözleşmesi Serializer'a**ayarlanırsa geçerlidir.
+- **ExcludedTypes**: Bu ayar, başvurulan derlemelerden dışlanacak tam veya bütünleştirilmiş kod nitelikli türlerin listesini belirtir. Bu ayar yalnızca **seri hale getirici modu** **veri sözleşmesi serileştiricisi** olarak ayarlandıysa geçerlidir.
 
-- **GenerateSerializableTypes**: Bu ayar öznitelik ile <xref:System.SerializableAttribute> sınıflar oluşturmak için olup olmadığını belirtir. Bu ayar yalnızca **Serializer Modu** **Veri Sözleşmesi Serializer'a**ayarlanırsa geçerlidir.
+- **GenerateInternalTypes**: Bu ayar, iç olarak işaretlenmiş sınıfların oluşturulup oluşturulmayacağını belirtir. Bu ayar yalnızca **seri hale getirici modu** **veri sözleşmesi serileştiricisi** olarak ayarlandıysa geçerlidir.
 
-- **ImportXMLTypes**: Bu ayar, öznitelik olmadan <xref:System.SerializableAttribute> <xref:System.Runtime.Serialization.DataContractAttribute> sınıflara öznitelik uygulamak için veri sözleşmesi serializer yapılandırılıp yapılandırılması nı belirtir.  Bu ayar yalnızca **Serializer Modu** **Veri Sözleşmesi Serializer'a**ayarlanırsa geçerlidir.
+- **GenerateSerializableTypes**: Bu ayar özniteliği ile sınıfların oluşturulup oluşturulmayacağını belirtir <xref:System.SerializableAttribute> . Bu ayar yalnızca **seri hale getirici modu** **veri sözleşmesi serileştiricisi** olarak ayarlandıysa geçerlidir.
 
-- **SupportFx35TypedDataSets**: Bu ayar, .NET Framework 3.5 için oluşturulan yazılı veri kümeleri için ek işlevsellik sağlanıp sağlanmayacağını belirtir. **Serializer Modu** **XML Serializer**olarak <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> ayarlandığında, bu değer True olarak ayarlandığında uzantı XML şema içe aktarıcısına eklenir. **Serializer Modu** Veri **Sözleşmesi Serializer**olarak <xref:System.DateTimeOffset> ayarlandığında, bu değer False olarak ayarlandığında tür Başvurular <xref:System.DateTimeOffset> dışında tutulur, böylece eski çerçeve sürümleri için her zaman bir a oluşturulur.
+- **ImportXmlTypes**: Bu ayar, veri sözleşmesi serileştiricinin özniteliği olmayan sınıflara özniteliğe uygulamak üzere yapılandırılacağını belirtir <xref:System.SerializableAttribute> <xref:System.Runtime.Serialization.DataContractAttribute> .  Bu ayar yalnızca **seri hale getirici modu** **veri sözleşmesi serileştiricisi** olarak ayarlandıysa geçerlidir.
+
+- **SupportFx35TypedDataSets**: Bu ayar, .NET Framework 3,5 için oluşturulan tür veri kümeleri için ek işlevsellik sağlayıp sağlamadığınızı belirtir. **Seri hale getirici modu** **XML seri hale getirici** olarak ayarlandığında, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> Bu değer true olarak ayarlandığında uzantı XML şeması içeri aktarıcıya eklenecektir. **Seri hale getirici modu** , **veri sözleşmesi seri hale getirici** olarak ayarlandığında, <xref:System.DateTimeOffset> Bu değer false olarak ayarlandığında tür başvurulardan dışlanır, böylece <xref:System.DateTimeOffset> daha eski Framework sürümleri için her zaman oluşturulur.
 
 - **InputXsdFiles**: Bu ayar, giriş dosyalarının listesini belirtir. Her dosya geçerli bir XML şeması içermelidir.
 
-- **Dil**: Bu ayar, oluşturulan sözleşme kodunun dilini belirtir. Ayar tarafından <xref:System.CodeDom.Compiler.CodeDomProvider>tanınabilir olmalıdır.
+- **Dil**: Bu ayar, oluşturulan sözleşme kodunun dilini belirtir. Ayar tarafından tanınabilir olmalıdır <xref:System.CodeDom.Compiler.CodeDomProvider> .
 
-- **NamespaceMappings**: Bu ayar, XSD Hedef Ad Alanlarından CLR ad alanlarına eşlemeleri belirtir. Her eşleme aşağıdaki biçimi kullanmalıdır:
+- **NamespaceMappings**: Bu ayar, xsd hedefi ad alanlarından clr ad alanlarına eşleştirmeleri belirtir. Her eşleme şu biçimi kullanmalıdır:
 
     ```xml
     "Schema Namespace, CLR Namespace"
     ```
 
-     XML Serializer yalnızca aşağıdaki biçimde bir eşleme kabul eder:
+     XML seri hale getirici aşağıdaki biçimde yalnızca bir eşlemeyi kabul eder:
 
     ```xml
     "*, CLR Namespace"
@@ -109,22 +112,23 @@ Hizmet sözleşmelerinin genellikle varolan hizmetlerden oluşturulması gerekir
 
 - **OutputDirectory**: Bu ayar, kod dosyalarının oluşturulacağı dizini belirtir.
 
- Ayarlar, proje oluşturulurken hizmet sözleşmesi dosyalarından hizmet sözleşmesi türleri oluşturmak için kullanılır.
+ Bu ayarlar, proje oluşturulduğunda hizmet sözleşmesi dosyalarından hizmet sözleşmesi türleri oluşturmak için kullanılacaktır.
 
-## <a name="using-contract-first-development"></a>Sözleşme-ilk geliştirme kullanma
- Hizmet sözleşmesini projeye ekledikten ve yapı ayarlarını doğruladıktan sonra **F6**tuşuna basarak projeyi oluşturun. Hizmet sözleşmesinde tanımlanan türler daha sonra projede kullanılabilir olacaktır.
+## <a name="using-contract-first-development"></a>Sözleşmenin ilk geliştirmeyi kullanma
 
- Hizmet sözleşmesinde tanımlanan türleri kullanmak için `ContractTypes` geçerli ad alanı altında bir başvuru ekleyin:
+ Hizmet sözleşmesini projeye ekledikten ve derleme ayarlarını onayladıktan sonra, **F6** tuşuna basarak projeyi derleyin. Daha sonra hizmet sözleşmesinde tanımlanan türler projede kullanılabilir olacaktır.
+
+ Hizmet sözleşmesinde tanımlanan türleri kullanmak için `ContractTypes` geçerli ad alanının altına bir başvuru ekleyin:
 
 ```csharp
 using MyProjectNamespace.ContractTypes;
 ```
 
- Hizmet sözleşmesinde tanımlanan türler, aşağıda gösterildiği gibi projede çözülebilir olacaktır:
+ Bu durumda, hizmet sözleşmesinde tanımlanan türler aşağıda gösterildiği gibi projede çözülebilir:
 
- ![SearchRequest sınıfı ilk birkaç harfi yazdıktan sonra IntelliSense'de gösteriliyor.](./media/contract-first-tool/service-contract-types.png)
+ ![İlk birkaç harf yazdıktan sonra IntelliSense 'de gösteren SearchRequest sınıfı.](./media/contract-first-tool/service-contract-types.png)
 
- Araç tarafından oluşturulan türler GeneratedXSDTypes.cs dosyasında oluşturulur. Dosya, varsayılan olarak \<proje dizininde>/obj/\<yapı yapılandırması>/XSDGeneratedCode/ dizininde oluşturulur. Bu makalenin başındaki örnek şema aşağıdaki gibi dönüştürülür:
+ Araç tarafından oluşturulan türler GeneratedXSDTypes.cs dosyasında oluşturulur. Dosya \<project directory> Varsayılan olarak/obj/ \<build configuration> /XSDGeneratedCode/dizininde oluşturulur. Bu makalenin başındaki örnek şema aşağıdaki şekilde dönüştürülür:
 
 ```csharp
 //------------------------------------------------------------------------------
@@ -344,7 +348,9 @@ namespace TestXSD3.ContractTypes
 ```
 
 ## <a name="errors-and-warnings"></a>Hatalar ve uyarılar
- XSD şema ayrıştırma karşılaşılan hatalar ve uyarılar yapı hataları ve uyarılar olarak görünür.
 
-## <a name="interface-inheritance"></a>Arayüz Devralma
- Sözleşme-ilk geliştirme ile arayüz kalıtım kullanmak mümkün değildir; bu, arabirimlerin diğer işlemlerde nasıl davranış biçimiyle tutarlıdır. Temel arabirimi devralan bir arabirim kullanmak için iki ayrı uç nokta kullanın. İlk uç nokta devralınan sözleşmeyi kullanır ve ikinci uç nokta temel arabirimi uygular.
+ XSD şeması ayrıştırılırken karşılaşılan hatalar ve uyarılar, derleme hataları ve uyarılar olarak görünür.
+
+## <a name="interface-inheritance"></a>Arabirim devralma
+
+ Öncelikle, sözleşmenin ilk geliştirmeyle Arabirim devralma kullanılması mümkün değildir; Bu, arabirimlerin diğer işlemlerde davranış şekli ile tutarlıdır. Temel arabirim devralan bir arabirim kullanmak için iki ayrı uç nokta kullanın. İlk uç nokta devralınan sözleşmeyi kullanır ve ikinci uç nokta temel arabirimi uygular.

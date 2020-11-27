@@ -2,14 +2,15 @@
 title: Meta Verileri Alma
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
-ms.openlocfilehash: 4763686485dfe97844fad78cf0bb279113c0ce08
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a7a30fee36b14d0414f2f5bed513c21a694f3484
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594614"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255409"
 ---
 # <a name="retrieve-metadata"></a>Meta Verileri Alma
+
 Bu örnek, iletişim kuracak bir uç nokta seçmek üzere bir hizmetten meta verileri dinamik olarak alan bir istemcinin nasıl uygulanacağını gösterir. Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır. Hizmet iki uç nokta sergilemek üzere değiştirilmiştir — bağlamayı kullanarak temel adresteki bir uç nokta `basicHttpBinding` ve bağlamayı kullanarak {*BaseAddress*}/Secure konumundaki güvenli bir uç nokta `wsHttpBinding` . İstemci, uç nokta adresleriyle ve bağlamalarıyla yapılandırmak yerine, sınıfını kullanarak hizmetin meta verilerini dinamik olarak alır <xref:System.ServiceModel.Description.MetadataExchangeClient> ve ardından meta verileri sınıfını kullanarak bir olarak içeri aktarır <xref:System.ServiceModel.Description.ServiceEndpointCollection> <xref:System.ServiceModel.Description.WsdlImporter> .  
   
 > [!NOTE]

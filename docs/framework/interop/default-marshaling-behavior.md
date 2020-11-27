@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: f2a508b87d2f4a9ad92bc0f27fc44d74d8e916d3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3e18bb5c4caa43a8e951eed3fc6992ec1b2d2afb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555282"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256669"
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Sıralama Davranışı
+
 Birlikte çalışabilirlik sıralaması, yöntem parametreleriyle ilişkili verilerin yönetilen ve yönetilmeyen bellek arasında geçerken nasıl davranacağını dikte eden kurallar üzerinde çalışır. Bu yerleşik kurallar, verileri veri türü dönüşümleri olarak sıralama, bir çağrılan verilerin kendisine geçirilen verileri değiştirip çağıramayacağını ve bu değişiklikleri arayana döndürmesini ve bu değişiklikleri, Sıralayıcı 'nın performans iyileştirmeleri sağladığı koşullarda değiştirmesini sağlar.  
   
  Bu bölüm, birlikte çalışma sıralama hizmetinin varsayılan davranış özelliklerini tanımlar. Dizileri, Boole türlerini, karakter türlerini, temsilcileri, sınıfları, nesneleri, dizeleri ve yapıları hazırlama hakkında ayrıntılı bilgiler sunar.  
@@ -26,6 +27,7 @@ Birlikte çalışabilirlik sıralaması, yöntem parametreleriyle ilişkili veri
 > Genel türlerin sıralaması desteklenmez. Daha fazla bilgi için bkz. [Genel türler kullanılarak birlikte çalışma](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Birlikte çalışma sıralayıcısı ile bellek yönetimi  
+
  Birlikte çalışma sıralayıcısı, her zaman yönetilmeyen kod tarafından ayrılan belleği serbest bırakma girişiminde bulunur. Bu davranış, COM bellek yönetimi kurallarına uyar, ancak yerel C++ ' ı yöneten kurallardan farklıdır.  
   
  Platform çağırma kullanılırken yerel C++ davranışını (bellek boşaltma yok) tahmin ediyorsanız karışıklığa neden olabilir. Bu, işaretçiler için belleği otomatik olarak boşaltır. Örneğin, bir C++ DLL 'den aşağıdaki yönetilmeyen yöntemi çağırmak herhangi bir belleği otomatik olarak serbest vermez.  
@@ -43,12 +45,15 @@ BSTR MethodOne (BSTR b) {
  Çalışma zamanı, belleği boşaltmak için her zaman **CoTaskMemFree** yöntemini kullanır. Çalıştığınız bellek **CoTaskMemAlloc** yöntemiyle ayrıldıysa, bir **IntPtr** kullanmanız ve uygun yöntemi kullanarak belleği el ile boşaltmalısınız. Benzer şekilde, çekirdek belleğine bir işaretçi döndüren Kernel32.dll **GetCommandLine** işlevini kullanırken, belleğin asla boşaltılmaması gereken durumlarda otomatik bellek boşaltmasını önleyebilirsiniz. Belleği el ile boşaltma hakkında ayrıntılı bilgi için bkz. [arabellekler örneği](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Sınıflar için varsayılan sıralama  
+
  Sınıflar yalnızca COM birlikte çalışabilirliğine göre sıralanabilir ve her zaman arabirim olarak sıralanır. Bazı durumlarda, sınıfı sıralamak için kullanılan arabirim sınıf arabirimi olarak bilinir. Sınıf arabirimini tercih ettiğiniz bir arabirimle geçersiz kılma hakkında daha fazla bilgi için bkz. [sınıf arabirimine giriş](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Sınıfları COM 'a geçirme  
+
  Yönetilen bir sınıf COM 'a geçirildiğinde, birlikte çalışma sıralayıcısı otomatik olarak sınıfı bir COM proxy 'si ile sarmalanmış ve proxy tarafından üretilen sınıf arabirimini COM yöntem çağrısına geçirir. Ardından ara sunucu, sınıf arabirimindeki tüm çağrıları yönetilen nesneye yeniden devreder. Proxy Ayrıca, sınıfı tarafından açıkça uygulanmayan diğer arabirimleri de kullanıma sunar. Proxy, sınıf adına **IUnknown** ve **IDispatch** gibi arabirimleri otomatik olarak uygular.  
   
 ### <a name="passing-classes-to-net-code"></a>Sınıfları .NET koduna geçirme  
+
  Ortak sınıflar genellikle COM 'da Yöntem bağımsız değişkenleri olarak kullanılmaz. Bunun yerine, varsayılan bir arabirim genellikle coclass 'ın yerine geçirilir.  
   
  Bir arabirim yönetilen koda geçirildiğinde, birlikte çalışma sıralayıcısı, arabirimin doğru sarmalayıcı ile sarmalanması ve sarmalayıcı yönetilen yönteme geçirilmesinden sorumludur. Hangi sarmalayıcı kullanacağınızı belirlemek zor olabilir. Bir COM nesnesinin her örneği, nesnenin kaç arabirim uyguladığını fark etmeksizin tek ve benzersiz bir sarmalayıcı içerir. Örneğin, beş farklı arabirimi uygulayan tek bir COM nesnesi yalnızca bir sarmalayıcı içerir. Aynı sarmalayıcı beş arabirimi de kullanıma sunar. COM nesnesinin iki örneği oluşturulursa, sarmalayıcının iki örneği oluşturulur.  
@@ -67,9 +72,10 @@ BSTR MethodOne (BSTR b) {
   
 2. Sıralayıcı, **IProvideClassInfo** arabirimi için arabirimi sorgular. Belirtilmişse, Sıralayıcı, arabirimi kullanıma sunmadan sınıfın CLSID 'sini belirlemede **IProvideClassInfo. GetClassInfo** öğesinden döndürülen **ITypeInfo bilgisini** kullanır. Sıralayıcı, sarmalayıcının meta verilerini bulmak için CLSID 'yi kullanabilir.  
   
-3. Sıralayıcı hala sınıfı tanımlayamıyor, arabirimi **System. __ComObject**adlı bir genel sarmalayıcı sınıfı ile sarmalanmış hale gelir.  
+3. Sıralayıcı hala sınıfı tanımlayamıyor, arabirimini **System.__ComObject** adlı bir genel sarmalayıcı sınıfı ile sarmalanmış hale gelir.  
   
 ## <a name="default-marshaling-for-delegates"></a>Temsilciler için varsayılan sıralama  
+
  Yönetilen bir temsilci, çağırma mekanizmasına bağlı olarak bir COM arabirimi veya bir işlev işaretçisi olarak sıralanır:  
   
 - Platform çağırma için bir temsilci varsayılan olarak yönetilmeyen bir işlev işaretçisi olarak sıralanır.  
@@ -81,7 +87,7 @@ BSTR MethodOne (BSTR b) {
 |Sabit listesi türü|Yönetilmeyen biçimin açıklaması|  
 |----------------------|-------------------------------------|  
 |**UnmanagedType. FunctionPtr**|Yönetilmeyen bir işlev işaretçisi.|  
-|**UnmanagedType. Interface**|Mscorlib. tlb ' de tanımlandığı şekilde **_Delegate**türünde bir arabirim.|  
+|**UnmanagedType. Interface**|Mscorlib. tlb ' de tanımlandığı şekilde **_Delegate** türünde bir arabirim.|  
   
  Yöntemlerinin `DelegateTestInterface` BIR com tür kitaplığına aktarılması için aşağıdaki örnek kodu göz önünde bulundurun. Yalnızca **ref** (veya **ByRef**) anahtar sözcüğüyle Işaretlenen temsilcilerin ın/out parametrelerine geçtiğini unutmayın.  
   
@@ -161,6 +167,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>Değer türleri için varsayılan sıralama  
+
  Tamsayılar ve kayan nokta numaraları gibi çoğu değer türleri [blittable](blittable-and-non-blittable-types.md) ve sıralama gerektirmez. Diğer [blittable dışı](blittable-and-non-blittable-types.md) türler yönetilen ve yönetilmeyen bellekte benzer temsiller ve sıralama gerektirir. Hala diğer türler, birlikte çalışma sınırları genelinde açık biçimlendirme gerektirir.  
   
  Bu bölüm aşağıdaki biçimli değer türleri hakkında bilgi sağlar:  
@@ -186,7 +193,8 @@ internal class DelegateTest {
      Üyelerin her alanla sağlanan öğesine göre düzenlendiğini gösterir <xref:System.Runtime.InteropServices.FieldOffsetAttribute> .  
   
 ### <a name="value-types-used-in-platform-invoke"></a>Platform çağırmada kullanılan değer türleri  
- Aşağıdaki örnekte, `Point` ve `Rect` türleri **StructLayoutAttribute**kullanarak üye düzen bilgilerini sağlar.  
+
+ Aşağıdaki örnekte, `Point` ve `Rect` türleri **StructLayoutAttribute** kullanarak üye düzen bilgilerini sağlar.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -330,6 +338,7 @@ public class Point {
 ```  
   
 ### <a name="value-types-used-in-com-interop"></a>COM birlikte çalışabilirliğine kullanılan değer türleri  
+
  Biçimlendirilen türler, COM birlikte çalışma yöntemi çağrılarına de geçirilebilir. Aslında, bir tür kitaplığına aktarıldığında, değer türleri otomatik olarak yapılara dönüştürülür. Aşağıdaki örnekte gösterildiği gibi, `Point` değer türü adıyla bir tür tanımı (typedef) olur `Point` . `Point`Tür kitaplığının başka bir yerinde değer türüne yapılan tüm başvurular typedef ile değiştirilmiştir `Point` .  
   
  **Tür kitaplığı temsili**  
@@ -353,7 +362,8 @@ interface _Graphics {
 > <xref:System.Runtime.InteropServices.LayoutKind>Sabit listesi değeri **Açık** olarak ayarlanmış olan yapılar, içe aktarılmış tür kitaplığı açık bir düzen Ifade ettiğinden, com birlikte çalışma içinde kullanılamaz.  
   
 ### <a name="system-value-types"></a>Sistem değer türleri  
- <xref:System>Ad alanı, çalışma zamanı temel türlerinin paketlenmiş formunu temsil eden çeşitli değer türlerine sahiptir. Örneğin, değer türü yapısı, <xref:System.Int32?displayProperty=nameWithType> **ELEMENT_TYPE_I4**kutulanmış biçimini temsil eder. Bu türleri yapılar olarak sıralamak yerine, diğer biçimlendirilen türler olduğu gibi, bunları kendi temel türleriyle aynı şekilde sıralamanız gerekir. Bu nedenle **System. Int32** , **Long**türünde tek bir üye içeren bir yapı olarak değil **ELEMENT_TYPE_I4** olarak sıralanır. Aşağıdaki tablo, temel türlerin kutulanmış temsilleri olan **sistem** ad alanındaki değer türlerinin bir listesini içerir.  
+
+ <xref:System>Ad alanı, çalışma zamanı temel türlerinin paketlenmiş formunu temsil eden çeşitli değer türlerine sahiptir. Örneğin, değer türü yapısı, <xref:System.Int32?displayProperty=nameWithType> **ELEMENT_TYPE_I4** kutulanmış biçimini temsil eder. Bu türleri yapılar olarak sıralamak yerine, diğer biçimlendirilen türler olduğu gibi, bunları kendi temel türleriyle aynı şekilde sıralamanız gerekir. Bu nedenle **System. Int32** , **Long** türünde tek bir üye içeren bir yapı olarak değil **ELEMENT_TYPE_I4** olarak sıralanır. Aşağıdaki tablo, temel türlerin kutulanmış temsilleri olan **sistem** ad alanındaki değer türlerinin bir listesini içerir.  
   
 |Sistem değer türü|Öğe türü|  
 |-----------------------|------------------|  
@@ -377,12 +387,12 @@ interface _Graphics {
   
 |Sistem değer türü|IDL türü|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**GÜNCEL**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
 |<xref:System.Decimal?displayProperty=nameWithType>|**KATEGORI**|  
 |<xref:System.Guid?displayProperty=nameWithType>|**'INI**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
- Aşağıdaki kodda, Stdole2 tür kitaplığındaki yönetilmeyen türlerin **tarihi**, **GUID**, **DECIMAL**ve **OLE_COLOR** tanımı gösterilmektedir.  
+ Aşağıdaki kodda, Stdole2 tür kitaplığındaki yönetilmeyen türlerin **tarihi**, **GUID**, **DECIMAL** ve **OLE_COLOR** tanımı gösterilmektedir.  
   
 #### <a name="type-library-representation"></a>Tür kitaplığı temsili  
   

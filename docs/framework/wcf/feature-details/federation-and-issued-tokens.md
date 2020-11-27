@@ -6,17 +6,19 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: dffba51c1bf1aaffbed8725aafc96fd747cb31c6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0ab3d6bad717e71901b4d94c99f1c48f99d8675e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559258"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255526"
 ---
 # <a name="federation-and-issued-tokens"></a>Federasyon ve Verilen Belirteçler
-Windows Communication Foundation (WCF) ile, WS-Federation ve WS-Trust belirtimlerini uygulayan hizmetlerle güvenli bir şekilde iletişim kuran istemciler oluşturabilirsiniz. Belirtimler, farklı güven bölgelerinde kimlik doğrulaması ve yetkilendirmeyi etkinleştiren mekanizmalar sağlamak üzere XML, SOAP ve Web Hizmetleri Açıklama Dili (WSDL) kullanır.  
+
+Windows Communication Foundation (WCF) ile WS-Federation ve WS-Trust belirtimlerini uygulayan hizmetlerle güvenli bir şekilde iletişim kuran istemciler oluşturabilirsiniz. Belirtimler, farklı güven bölgelerinde kimlik doğrulaması ve yetkilendirmeyi etkinleştiren mekanizmalar sağlamak üzere XML, SOAP ve Web Hizmetleri Açıklama Dili (WSDL) kullanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Federasyon](federation.md)  
  Federasyona genel bakış sağlar.  
   
@@ -45,6 +47,7 @@ Windows Communication Foundation (WCF) ile, WS-Federation ve WS-Trust belirtimle
  Bir üzerinde güvenli oturumların nasıl devre dışı bırakılacağını açıklar `WSFederationHttpBinding` . Her istemci için bir oturum gerektiren bir Web grubu oluşturulurken güvenli oturumların devre dışı bırakılması gerekir.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.IdentityModel.Claims>  
   
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

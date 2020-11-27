@@ -2,27 +2,30 @@
 title: 5010 - DCGenReaderStart
 ms.date: 03/30/2017
 ms.assetid: 199ff3ce-b811-4151-a9c2-e726c109e87b
-ms.openlocfilehash: 2403f5d9bc130a7281a1e9f5b278044984f5daed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93dcb83d88cfb14754aaeb7a6aef8b638aaaeeb1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650641"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254733"
 ---
 # <a name="5010---dcgenreaderstart"></a>5010 - DCGenReaderStart
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|5010|  
-|anahtar sözcükler|Serileştirme|  
+|ID|5010|  
+|Anahtar sözcükler|Serileştirme|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay yayılan zaman DataContract oluşturmak okuyucu başlatır.  
+
+ Bu olay, DataContract oluşturma okuyucusu başladığında yayınlanır.  
   
 ## <a name="message"></a>İleti  
- DataContract başlangıç %2 için %1 okuyucu oluşturur.  
+
+ %2 için DataContract üretme %1 okuyucusu başladı.  
   
 ## <a name="details"></a>Ayrıntılar

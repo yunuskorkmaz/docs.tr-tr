@@ -2,19 +2,21 @@
 title: WS Bağlama
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-ms.openlocfilehash: b17391a882e4a85b717376f644fb3b6195073a70
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e4e37dc4b04cfa44cbca4367046c0ee24d182956
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589766"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256722"
 ---
 # <a name="ws-binding"></a>WS Bağlama
+
 Bu bölüm, Windows hizmeti bağlamayı Windows Communication Foundation (WCF) olarak gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [WS İşlem Akışı](ws-transaction-flow.md)  
- WS-Atomik Işlem veya OleTransactions protokolünü kullanarak, istemci ile eşgüdümlü bir işlemin ve işlem akışı için istemci ve sunucu seçeneklerinin kullanımını gösterir.  
+ WS-Atomic Transaction veya OleTransactions protokolünü kullanarak, istemci ile eşgüdümlü bir işlemin ve işlem akışı için istemci ve sunucu seçeneklerinin kullanımını gösterir.  
   
  [WS 2007 Federasyon HTTP Bağlama](ws-2007-federation-http-binding.md)  
  Öğesinin kullanımını gösterir <xref:System.ServiceModel.WS2007FederationHttpBinding> .  

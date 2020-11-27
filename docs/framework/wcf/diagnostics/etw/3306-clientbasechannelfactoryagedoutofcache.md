@@ -2,27 +2,30 @@
 title: 3306 - ClientBaseChannelFactoryAgedOutofCache
 ms.date: 03/30/2017
 ms.assetid: d8af1dbf-ea3b-4931-94eb-6d21e30a886e
-ms.openlocfilehash: 3b302af20e99e5fb59b1feb5fb14039a9c8d45e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 760acf94830127fd340ad08e42d70173c4cc6ad7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595900"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254473"
 ---
 # <a name="3306---clientbasechannelfactoryagedoutofcache"></a>3306 - ClientBaseChannelFactoryAgedOutofCache
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|3306|  
-|anahtar sözcükler|ServiceModel|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|3306|  
+|Anahtar sözcükler|ServiceModel|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Önbelleğin sınırına ulaştığı için kanal fabrikası önbellek dışına eski olduğunda bu olay yayılır.  
+
+ Bu olay, önbelleğin sınırına ulaştığından, bir kanal fabrikası önbellekten eskidikten sonra yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Önbellek '%1' sınırına ulaştığı için bir kanal üreteci önbellek dışına eski.  
+
+ Önbellek, ' %1 ' sınırına ulaştığından önbellekten eski bir kanal fabrikası kullanıldı.  
   
 ## <a name="details"></a>Ayrıntılar

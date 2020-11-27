@@ -2,17 +2,19 @@
 title: Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 7210f71287a2ec763b67dfa033cd9f4dadf6bd34
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f06dd0b7e66ae783b2f268551f15c5e6e8369b7f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543075"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255071"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kaynak Tüketimini Denetleme ve Performansı Geliştirme
+
 Bu konuda, kaynak tüketimini denetlemek ve performans ölçümlerini etkilemek için çalışan Windows Communication Foundation (WCF) mimarisinin farklı alanlarındaki çeşitli özellikler açıklanmaktadır.
 
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>WCF 'de kaynak tüketimini kısıtlayan Özellikler
+
  Windows Communication Foundation (WCF), güvenlik veya performans amaçları için belirli işlem türlerinde kısıtlamalar uygular. Bu kısıtlamalar iki ana formda gelir, Kotalar ve kısıtlar. *Kotalar* , sistem içindeki bir noktada anlık özel durum tetiklemeye ulaşıldığında veya aşılmışsa kısıtlar. *Kısıtlar* , bir özel durumun oluşturulmasına hemen neden olmayan sınırlardır. Bunun yerine, bir kısıtlama sınırına ulaşıldığında işleme devam eder, ancak bu kısıtlama değeri tarafından ayarlanan limitlerin içinde olur. Bu sınırlı işlem bir özel durumu başka bir yerde tetikleyebilir, ancak bu uygulamaya bağımlıdır.
 
  Kotalar ve kısıtlar arasındaki ayrım konusunda ek olarak, bazı kısıtlama özellikleri serileştirme düzeyinde, bazıları Aktarım düzeyinde ve bazı uygulama düzeyinde bulunur. Örneğin, <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> sistemin sağladığı tüm aktarım bağlama öğeleri tarafından uygulanan kota, kötü amaçlı istemcilerin, aşırı bellek tüketimine neden olan hizmet reddi saldırılarına karşı, varsayılan olarak 65.536 bayta ayarlanır. (Genellikle, bu değeri azaltarak performansı artırabilirsiniz.)
@@ -27,6 +29,7 @@ Bu konuda, kaynak tüketimini denetlemek ve performans ölçümlerini etkilemek 
  Serileştirme süreçlerini kısıtlayan özellikler, [veriler Için güvenlik konuları](./feature-details/security-considerations-for-data.md)' nda listelenmiştir. Aktarımlarla ilgili kaynakların tüketimini kısıtlayan Özellikler [Aktarım kotalarında](./feature-details/transport-quotas.md)listelenmiştir. Uygulama katmanındaki kaynakların tüketimini kısıtlayan özellikler, <xref:System.ServiceModel.Dispatcher.ServiceThrottle> sınıfının üyeleridir.
 
 ## <a name="detecting-application-and-performance-issues-related-to-quota-settings"></a>Kota ayarlarıyla Ilgili uygulama ve performans sorunları algılanıyor
+
  Yaygın güvenlik sorunlarına karşı temel koruma sağlarken, yukarıdaki değerlerin Varsayılanları çok çeşitli uygulama türleri genelinde temel uygulama işlevselliğini etkinleştirmek için seçilmiştir. Bununla birlikte, farklı uygulama tasarımları bir veya daha fazla azaltma ayarını aşabileceğinden, aksi halde uygulama güvenli hale gelse ve tasarlandıkları gibi çalışır. Bu durumlarda, hangi kısıtlama değerlerinin aşıldığını ve hangi düzeyde olduğunu tanımlamalısınız ve uygulama aktarım hızını artırmak için uygun eylem konusuna karar vermelisiniz.
 
  Genellikle, uygulamayı yazarken ve hata ayıklarken, <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliği `true` yapılandırma dosyasında veya program aracılığıyla olarak ayarlayın. Bu, WCF 'yi, görüntüleme için hizmet özel durum yığını izlemelerini istemci uygulamasına döndürecek şekilde yönlendirir. Bu özellik, uygulama düzeyindeki özel durumların çoğunu, bu sorun varsa hangi kota ayarlarının dahil olabileceğini göstermek için bir şekilde bildirir.
@@ -36,6 +39,7 @@ Bu konuda, kaynak tüketimini denetlemek ve performans ölçümlerini etkilemek 
  Geliştirme ortamınızın özelliklerine bakılmaksızın, tüm özel durumların hatalarını ayıklamak ve uygulamalarınızın performansını ayarlamak için WCF izleme ve ileti günlüğe kaydetme yeteneklerini kullanabilirsiniz. Daha fazla bilgi için bkz. [uygulamanızın sorunlarını gidermek Için Izlemeyi kullanma](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="performance-issues-and-xmlserializer"></a>Performans sorunları ve XmlSerializer
+
  <xref:System.Xml.Serialization.XmlSerializer>Çalışma zamanında bu veri türleri için Oluştur ve derle serileştirme kodu kullanılarak seri hale getirilebilir veri türlerini kullanan hizmet ve istemci uygulamaları, yavaş başlangıç performansına yol açabilir.
 
 > [!NOTE]

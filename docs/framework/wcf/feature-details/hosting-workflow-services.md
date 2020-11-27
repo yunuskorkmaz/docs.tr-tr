@@ -2,21 +2,23 @@
 title: İş Akışı Hizmetlerini Barındırma
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: 0b89eb05513d6b3973de50cd6360711c4f967f68
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 3bd45575e06ba742b0e6c43766c5e80dff47c03b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609466"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256007"
 ---
 # <a name="hosting-workflow-services"></a>İş Akışı Hizmetlerini Barındırma
 
 Gelen iletilere yanıt vermesi için bir iş akışı hizmetinin barındırılması gerekir. İş akışı hizmetleri WCF mesajlaşma altyapısını kullanır ve bu nedenle benzer yollarla barındırılır. WCF Hizmetleri gibi, iş akışı hizmetleri herhangi bir yönetilen uygulamada, Internet Information Services (IIS) veya Windows Işlem etkinleştirme Hizmetleri (WAS) altında barındırılabilir. Ayrıca, iş akışı hizmetleri Windows Server App Fabric altında barındırılabilir. Windows Server App Fabric hakkında daha fazla bilgi için bkz. [Windows Server App Fabric belgeleri](/previous-versions/appfabric/ff384253(v=azure.10)), [AppFabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10))ve [AppFabric barındırma kavramları](/previous-versions/appfabric/ee677371(v=azure.10)). WCF hizmetlerini barındırmak için çeşitli yollar hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](../hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Yönetilen bir uygulamada barındırma
+
  Bir iş akışı hizmetini yönetilen bir uygulamada barındırmak için <xref:System.ServiceModel.Activities.WorkflowServiceHost> sınıfını kullanın. <xref:System.ServiceModel.Activities.WorkflowServiceHost>Oluşturucu, tek bir iş akışı hizmet örneği, bir iş akışı hizmeti tanımı veya iş akışı mesajlaşma etkinliklerini kullanan bir etkinlik belirtmenize olanak tanır. Çağırma <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> , hizmetin gelen iletileri dinlemeye başlamasını sağlar.
 
 ## <a name="hosting-under-iis-or-was"></a>IIS veya WAS altında barındırma
+
  Bir iş akışı hizmetini IIS kapsamında barındırmak, sanal bir dizin oluşturmayı ve hizmeti ve davranışını tanımlayan sanal dizine dosya yerleştirmeyi içerir. Bir iş akışı hizmetini IIS altında barındırırken veya birkaç olasılıktan dolayı:
 
 - Hizmet davranışlarını, uç noktaları ve diğer yapılandırma öğelerini belirten bir Web.config dosyası ile birlikte bir IIS/WAS sanal dizininde iş akışı hizmetini tanımlayan bir. xamlx dosyası yerleştirin.
@@ -46,12 +48,15 @@ Gelen iletilere yanıt vermesi için bir iş akışı hizmetinin barındırılma
  Bir iş akışı hizmetini tanımlayan bir. xamlx dosyası bir <`Service`> kök öğesi ya da öğesinden türetilmiş herhangi bir türü içeren bir kök öğesi içermelidir <xref:System.Workflow.ComponentModel.Activity> . Visual Studio etkinlik şablonu kullanılırken bir. xamlx dosyası oluşturulur. WCF Iş akışı hizmeti şablonu kullanılırken bir. xamlx dosyası oluşturulur.
 
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Windows Server App Fabric altında Iş akışı hizmetlerini barındırma
+
  Windows Server App Fabric altında bir iş akışı hizmetini barındırmak, IIS/WAS altında barındırmakla aynı şekilde yapılır. Tek fark, Windows Server App Fabric 'in yüklü olduğu gerçedir. Windows Server App Fabric, Internet Information Services Manager 'a eklenen araçları ve PowerShell commandizin sağlar. Bu araçlar, iş akışı hizmetleri ve WCF hizmetlerini dağıtma, yönetme ve izlemeyi basitleştirir.
 
 ## <a name="referencing-custom-activities"></a>Özel etkinliklere başvurma
+
  Özel etkinliklere yapılan başvuruların `Assemblies` <> altındaki <> bölümüne eklenmesi gerekir `System.Web.Compilation` ve bu sayede uygulama etki alanına YÜKLENIR ve xaml seri hale getirici türlerini bulabilecektir. Bu ayarlar, uygulama düzeyinde veya ayarların makinedeki tüm uygulamalara uygulanması gerekiyorsa kök Web.config yapılabilir.
 
 ## <a name="deployment"></a>Dağıtım
+
  Dağıtım işini daha kolay hale getirmek için Web Dağıtım aracı oluşturulmuştur. Araç, uygulamaları IIS 6,0 ile IIS 7,0 arasında geçirmenize, sunucu gruplarını eşitlemeye ve Web uygulamalarını dağıtmanıza, arşivlemenize ve dağıtmanıza olanak tanır. Daha fazla bilgi için bkz. [MS dağıtım aracı](https://go.microsoft.com/fwlink/?LinkId=178690).
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -1,19 +1,20 @@
 ---
-title: 'Nasıl yapılır: Özel Beyan Oluşturma'
+title: 'Nasıl yapılır: Özel Talep Oluşturma'
 description: WCF 'de özel talep oluşturmayı öğrenin. WCF, çeşitli yerleşik talepleri destekler ve bazı uygulamalar özel talepler gerektirebilir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 89f2b1359b48b71720db6ff38f27883745cfe612
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ea3bc7384ca10538ca5ab1d3bb05da6a2757fb67
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247552"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256020"
 ---
-# <a name="how-to-create-a-custom-claim"></a>Nasıl yapılır: Özel Beyan Oluşturma
+# <a name="how-to-create-a-custom-claim"></a>Nasıl yapılır: Özel Talep Oluşturma
+
 Windows Communication Foundation (WCF) içindeki kimlik modeli altyapısı, <xref:System.IdentityModel.Claims.Claim> Bu tür ve haklara sahip örnekler oluşturmak için yardımcı işlevlerle birlikte yerleşik talep türleri ve haklar kümesi sağlar. Bu yerleşik talepler, WCF 'nin varsayılan olarak desteklediği istemci kimlik bilgileri türlerinde bulunan bilgileri modellemek üzere tasarlanmıştır. Birçok durumda, yerleşik talepler yeterlidir; Ancak bazı uygulamalar özel talepler gerektirebilir. Talep türü, talebin uygulandığı kaynak ve söz konusu kaynak üzerinde bir hak olan talep türünden oluşur. Bu konu başlığı altında, özel bir talebin nasıl oluşturulacağı açıklanmaktadır.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Temel bir veri türünü temel alan özel bir talep oluşturmak için  
@@ -70,6 +71,7 @@ Windows Communication Foundation (WCF) içindeki kimlik modeli altyapısı, <xre
          [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, temel olmayan bir kaynak türü ile bir basit kaynak türüne ve özel talebe sahip özel bir talebin nasıl oluşturulacağını göstermektedir.  
   
  [!code-csharp[c_CustomClaim#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#0)]
@@ -82,4 +84,4 @@ Windows Communication Foundation (WCF) içindeki kimlik modeli altyapısı, <xre
 - <xref:System.IdentityModel.Claims.ClaimTypes>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)

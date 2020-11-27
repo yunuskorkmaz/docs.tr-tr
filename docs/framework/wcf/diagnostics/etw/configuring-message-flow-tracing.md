@@ -2,20 +2,22 @@
 title: İleti Akışı İzlemeyi Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-ms.openlocfilehash: b01a06a50fbb5962fe87c3426957b3294b1bf3ab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6c271c26eb4e57014b3aaebf306b283bd06c7119
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917927"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254889"
 ---
 # <a name="configuring-message-flow-tracing"></a>İleti Akışı İzlemeyi Yapılandırma
-Windows Communication Foundation (WCF) etkinlik izleme etkinleştirildiğinde, WCF yığını genelinde mantıksal etkinliklere uçtan uca etkinlik kimlikleri atanır. ' [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]De artık bu özelliğin, ileti akışı izleme adlı Windows için olay izleme (ETW) ile birlikte çalışarak daha yüksek bir performans sürümü bulunmaktadır. Etkinleştirildiğinde, uçtan uca etkinlik kimlikleri, gelen iletiler üzerinden alınır (veya boş bırakılırsa atanır) ve ileti kanal tarafından kodu oluşturulduktan sonra yayınlanan tüm izleme olaylarına dağıtılır. Müşteriler, kod çözdükten sonra farklı hizmetlerden izleme günlükleriyle ileti akışlarını yeniden oluşturmak için bu özelliği kullanabilir.  
+
+Windows Communication Foundation (WCF) etkinlik izleme etkinleştirildiğinde, WCF yığını genelinde mantıksal etkinliklere uçtan uca etkinlik kimlikleri atanır. ' De [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] artık bu özelliğin, ileti akışı izleme adlı Windows Için olay izleme (ETW) ile birlikte çalışarak daha yüksek bir performans sürümü bulunmaktadır. Etkinleştirildiğinde, uçtan uca etkinlik kimlikleri, gelen iletiler üzerinden alınır (veya boş bırakılırsa atanır) ve ileti kanal tarafından kodu oluşturulduktan sonra yayınlanan tüm izleme olaylarına dağıtılır. Müşteriler, kod çözdükten sonra farklı hizmetlerden izleme günlükleriyle ileti akışlarını yeniden oluşturmak için bu özelliği kullanabilir.  
   
  İzleme, uygulama ile ilgili bir sorun algılandıktan sonra etkinleştirilebilir ve sorun çözümlendikten sonra devre dışı bırakılır.  
   
 ## <a name="enabling-tracing"></a>Izlemeyi etkinleştirme  
- Aşağıdaki örnekte gösterildiği gibi, .NET Framework 4 `messageFlowTracing` yapılandırma öğesini olarak `true`ayarlayarak ileti akışı izlemeyi etkinleştirebilirsiniz.  
+
+ `messageFlowTracing` `true` Aşağıdaki örnekte gösterildiği gibi, .NET Framework 4 yapılandırma öğesini olarak ayarlayarak ileti akışı izlemeyi etkinleştirebilirsiniz.  
   
 ```xml  
 <system.servicemodel>  
@@ -26,11 +28,12 @@ Windows Communication Foundation (WCF) etkinlik izleme etkinleştirildiğinde, W
 ```  
   
 > [!NOTE]
-> `endToEndTracing` Yapılandırma öğesi bir Web. config dosyasında bulunduğundan, bu, ETW ile aynı şekilde dinamik olarak yapılandırılamaz. `endToEndTracing` Yapılandırma öğesinin etkili olabilmesi için, uygulamanın geri dönüştürülmesi gerekir.  
+> `endToEndTracing`Yapılandırma öğesi bir Web.config dosyasında bulunduğundan, bu, ETW ile aynı şekilde dinamik olarak yapılandırılamaz. `endToEndTracing`Yapılandırma öğesinin etkili olabilmesi için, uygulamanın geri dönüştürülmesi gerekir.  
   
  Etkinlikler, etkinlik KIMLIĞI adlı bir tanımlayıcının değişimi ile bağıntılı. Bu tanımlayıcı bir GUID 'dir ve System. Diagnostics. CorrelationManager sınıfı tarafından oluşturulur. System. Diagnostics. Trace. CorrelationManager. ActivityId 'yi işlersiniz, yürütme denetimi WCF koduna geri aktarırken değerin özgün olarak ayarlandığından emin olun.  Ayrıca, zaman uyumsuz bir WCF programlama modeli kullanıyorsanız, System. Diagnostics. Trace. CorrelationManager. ActivityId 'nin iş parçacıkları arasında aktarılmasını sağlayabilirsiniz.  
   
 ## <a name="message-flow-tracing-and-rest-services"></a>İleti akışı Izleme ve REST Hizmetleri  
+
  İleti akışı izleme isteği uçtan uca izlemenize olanak sağlar.  SOAP tabanlı hizmetlerle bir etkinlik KIMLIĞI bir SOAP ileti üstbilgisinde gönderilir. Bunun yerine özel bir HTTP olay üst bilgisi kullanıldığı için REST istekleri bu üstbilgiyi içermez. Aşağıdaki kod parçacığı, etkinlik KIMLIĞI değerini programlı bir şekilde nasıl alabileceğiniz gösterilmektedir:  
   
 ```csharp

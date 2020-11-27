@@ -7,17 +7,19 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: f059cbdd3b2a66ac8a668b7b8a80d9ad1551fa64
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 228c286f6c5620dc838df5002edc60863a0fe4e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475235"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256605"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Risk azaltma: yeni 64-bit JıT derleyicisi
+
 .NET Framework 4,6 ' den başlayarak, çalışma zamanı tam zamanında derleme için yeni bir 64 bit JıT derleyicisi içerir. Bu değişiklik, 32 bit JıT derleyicisi ile derlemeyi etkilemez.  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>Beklenmeyen davranış veya özel durumlar  
+
  Bazı durumlarda, yeni 64-bit JıT derleyicisi ile derleme, çalışma zamanı özel durumu veya eski 64 bit JıT derleyicisi tarafından derlenen kodu yürütürken gözlemlenmemiş davranışlar ile sonuçlanır. Bilinen farklılıklar şunları içerir:  
   
 > [!IMPORTANT]
@@ -38,7 +40,9 @@ ms.locfileid: "86475235"
 - Belirli koşullarda, bir `if` ifadeyi bir blok girmeden ve bloğundan çıkışta bir koşulu test etmek için kullanılırsa `try` `try` ve veya bloğunda aynı koşul değerlendirilirse, `catch` `finally` Yeni 64 bit JIT derleyicisi `if` kodu en `catch` `finally` iyi duruma getirirken koşulu veya bloğundan kaldırır. Sonuç olarak, `if` veya bloğundaki deyimin içindeki kod koşulsuz olarak `catch` `finally` yürütülür.  
   
 <a name="General"></a>
+
 ## <a name="mitigation-of-known-issues"></a>Bilinen sorunların risk azaltma  
+
  Yukarıda listelenen sorunlarla karşılaşırsanız, aşağıdakilerden birini yaparak bunları ele alabilirsiniz:  
   
 - .NET Framework 4.6.2 ' ye yükseltin. .NET Framework 4.6.2 ile birlikte sunulan yeni 64 bitlik derleyici, bu bilinen sorunların her birini ele alır.  
@@ -48,7 +52,9 @@ ms.locfileid: "86475235"
 - Daha eski 64 bit JıT derleyicisi ile derleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için [diğer sorunların hafifletme](#Other) bölümüne bakın.  
   
 <a name="Other"></a>
+
 ## <a name="mitigation-of-other-issues"></a>Diğer sorunları azaltma  
+
  Daha eski 64-bit derleyicisi ile derlenen kod ve yeni 64-bit JIT derleyicisi ile derlenmiş kod arasında başka bir farklılık yaşarsanız veya hem yeni 64-bit JıT derleyicisi ile derlenen uygulamanızın hata ayıklama ve yayın sürümleri arasında, uygulamanızı daha eski bir 64-bit JIT derleyicisi ile derlemek için aşağıdakileri yapabilirsiniz :  
   
 - Uygulama başına temelinde, [\<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) öğesini uygulamanızın yapılandırma dosyasına ekleyebilirsiniz. Aşağıdakiler, yeni 64-bit JıT derleyicisi ile derlemeyi devre dışı bırakır ve bunun yerine eski 64 bit JıT derleyicisini kullanır.  
@@ -71,4 +77,4 @@ ms.locfileid: "86475235"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uygulama uyumluluğu](application-compatibility.md)
-- [\<useLegacyJit>Dosyalarında](../configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [\<useLegacyJit> Dosyalarında](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

@@ -2,17 +2,19 @@
 title: System.ServiceModel.Channels.HttpChannelRequestAborted
 ms.date: 03/30/2017
 ms.assetid: d47a2e78-f0ce-4125-893a-5f438016216c
-ms.openlocfilehash: 48a97139e8518096917887c04bb7e4eaed196d8d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9d49d13fbbe740b2db2752a58ab9e61bc67de2df
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594068"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256163"
 ---
 # <a name="systemservicemodelchannelshttpchannelrequestaborted"></a>System.ServiceModel.Channels.HttpChannelRequestAborted
+
 HTTP üzerinden istek iletisi gönderilemedi.  
   
 ## <a name="description"></a>Açıklama  
+
  Bu uyarı düzeyi izleme bir HTTP kanal isteğinin durdurulduğunu gösterir. Bu izlemede ek bilgiler, nedeni veya Abort yöntemine geçirilen iletiyi açığa çıkarır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -1,30 +1,32 @@
 ---
-title: 'Uç noktası: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları'
+title: 'Uç Noktası: Güvenlik Doğrulaması ve Kimlik Doğrulaması Hataları'
 ms.date: 03/30/2017
 ms.assetid: 5bad60aa-6084-4c7b-aefd-9b581f04382e
-ms.openlocfilehash: 9e0192ea600bb52abd555f2f83cfe8e96d3fe203
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a9a4758b26c744c55af200aee22a7e90c5a5cf57
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619336"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256475"
 ---
-# <a name="endpoint-security-validation-and-authentication-failures"></a>Uç noktası: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
-Sayaç adı: Güvenlik Doğrulama ve Kimlik Doğrulama Hataları  
+# <a name="endpoint-security-validation-and-authentication-failures"></a>Uç Noktası: Güvenlik Doğrulaması ve Kimlik Doğrulaması Hataları
+
+Sayaç adı: güvenlik doğrulama ve kimlik doğrulama sorunları  
   
 ## <a name="description"></a>Açıklama  
- Her bir ileti "Güvenlik çağrıları yetkilendirilmedi" sayacı tarafından kapsanmayan bir güvenlik sorunu nedeniyle reddedilmesi Bu sayaç artırılır. Bu tür sorunlar şunlardır:  
+
+ Bu sayaç, "güvenlik çağrıları yetkilendirilmemiş" sayacı kapsamında olmayan bir güvenlik sorunu nedeniyle her ileti reddedildiğinde artırılır. Bu tür sorunlar şunlardır:  
   
 - İstemci belirteci iletiden okunamıyor.  
   
-- İstemci belirteci (hatalı parola) kimlik doğrulaması başarısız oldu.  
+- İstemci belirteci kimlik doğrulaması başarısız oldu (hatalı parola).  
   
-- İmza doğrulaması başarısız oldu. (ileti oynanmış).  
+- İmza doğrulama başarısız oldu (ileti değiştirilmiş).  
   
-- İleti yeniden yürütme bir saldırı sırasında gerçekleşebilir bir önceki bir yineleniyor.  
+- İleti, bir yeniden yürütme saldırısında meydana gelebilen bir öncekinden yineleniyor.  
   
-- Bir şifre çözme hatası oluştu.  
+- Şifre çözme hatası oluştu.  
   
-- İleti (zaman damgası veya şifrelenmiş veri bloğu eksik) bazı gerekli öğeleri eksik.  
+- İletide bazı gerekli öğeler (eksik zaman damgası veya şifrelenmiş veri bloğu) eksik.  
   
-- TLSNEGO/SPNEGO anlaşması sırasında hatalar oluştu.
+- TLSNEGO/SPNEGO Handshake sırasında hatalar oluştu.
