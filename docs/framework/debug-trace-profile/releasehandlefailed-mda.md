@@ -11,29 +11,33 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 167a304b4571aa35f758a2054caf6ae1c60a3c60
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b337a7283e961d0fae2b51d92a21fa77f7249250
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803644"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267136"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
+
 `releaseHandleFailed`Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilir, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> veya sınıfından türetilen bir sınıf yöntemi olduğunda geliştiricilere bildirimde bulunur <xref:System.Runtime.InteropServices.SafeHandle> <xref:System.Runtime.InteropServices.CriticalHandle> `false` .  
   
 ## <a name="symptoms"></a>Belirtiler  
+
  Kaynak veya bellek sızıntıları.  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>Sınıfın yöntemi öğesinden türetiliyor <xref:System.Runtime.InteropServices.SafeHandle> veya <xref:System.Runtime.InteropServices.CriticalHandle> başarısız olursa, sınıf tarafından kapsüllenmiş kaynak serbest bırakılmış veya temizlenmiş olabilir.  
   
 ## <a name="cause"></a>Nedeni  
+
  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>Veya ' den türetilen sınıflar oluşturduklarında, kullanıcıların yöntemi uygulamasını sağlaması gerekir; bu <xref:System.Runtime.InteropServices.SafeHandle> <xref:System.Runtime.InteropServices.CriticalHandle> nedenle, koşullar ayrı kaynağa özgüdür. Ancak, gereksinimler aşağıdaki gibidir:  
   
-- <xref:System.Runtime.InteropServices.SafeHandle>ve <xref:System.Runtime.InteropServices.CriticalHandle> türler, önemli işlem kaynakları etrafındaki sarmalayıcıları temsil eder. Bellek sızıntısı işlemi zaman içinde kullanılamaz hale getirir.  
+- <xref:System.Runtime.InteropServices.SafeHandle> ve <xref:System.Runtime.InteropServices.CriticalHandle> türler, önemli işlem kaynakları etrafındaki sarmalayıcıları temsil eder. Bellek sızıntısı işlemi zaman içinde kullanılamaz hale getirir.  
   
 - <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>Yöntemi, işlevini gerçekleştirememelidir. İşlem böyle bir kaynağı aldıktan sonra, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> bunu serbest bırakmaya yönelik tek yoldur. Bu nedenle, hata kaynak sızıntılarını gösterir.  
   
 - ' Nin yürütülmesi sırasında oluşan herhangi bir hata, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> kaynağın serbest bırakılması sırasında oluşan bir hata, yöntemin kendi uygulamasındaki bir hatadır <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> . Bu kod, kendi işlevini gerçekleştirmek için başka biri tarafından yazılan kodu çağırıyor olsa bile, sözleşmenin karşılandığından emin olmak için programcının sorumluluğundadır.  
   
 ## <a name="resolution"></a>Çözüm  
+
  <xref:System.Runtime.InteropServices.SafeHandle>MDA bildirimini oluşturan belirli (veya) türü kullanan kod, <xref:System.Runtime.InteropServices.CriticalHandle> Ham tanıtıcı değerinin öğesinden <xref:System.Runtime.InteropServices.SafeHandle> ayıklanıp başka bir yerde kopyalandığı yerleri arayarak incelenmelidir. <xref:System.Runtime.InteropServices.SafeHandle> <xref:System.Runtime.InteropServices.CriticalHandle> Ham tanıtıcı değerinin kullanımı artık çalışma zamanı tarafından izlenmediğinden, bu, veya uygulamalarındaki hataların olağan nedendir. Ham tutamaç kopyası daha sonra kapatılırsa, bu durum <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> artık geçersiz olan tanıtıcı aynı tanıtıcıda denendiğinden sonraki çağrının başarısız olmasına neden olabilir.  
   
  Yanlış tanıtıcı çoğaltmanın gerçekleşebileceği çeşitli yollar vardır:  
@@ -49,9 +53,11 @@ ms.locfileid: "85803644"
 - İşlev aracılığıyla yayımlanabileceği tüm Win32 tutamaçları gibi bazı yerel tanıtıcı türleri `CloseHandle` aynı tanıtıcı ad alanını paylaşır. Bir tanıtıcı türünün hatalı bir sürümü başka bir sorun oluşmasına neden olabilir. Örneğin, yanlışlıkla bir Win32 olay işleyicisini iki kez kapatmak, ilişkisiz bir dosya tutamacının zamanından önce kapanmasına yol açabilir. Bu, tanıtıcı serbest bırakıldığında ve tanıtıcı değeri başka bir kaynağı izlemek için kullanılabilir hale geldiğinde (büyük olasılıkla başka bir tür) gerçekleşir. Bu durumda ve ardından hatalı ikinci bir yayın varsa, ilgisiz bir iş parçacığının tanıtıcısı geçersiz kılınabilir.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
-## <a name="output"></a>Çıktı  
+## <a name="output"></a>Çıkış  
+
  Bir veya ' nin <xref:System.Runtime.InteropServices.SafeHandle> <xref:System.Runtime.InteropServices.CriticalHandle> tanıtıcıyı doğru bir şekilde serbest bırakmadığını belirten bir ileti. Örneğin:  
   
 ```output
@@ -73,6 +79,7 @@ and closing it directly or building another SafeHandle around it."
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda, MDA ' i etkinleştirebilecek bir kod örneği verilmiştir `releaseHandleFailed` .  
   
 ```csharp

@@ -2,17 +2,18 @@
 title: MsmqIntegrationBindingElement
 ms.date: 03/30/2017
 ms.assetid: eaaa7651-e6e5-4fae-9dad-c1867d38b586
-ms.openlocfilehash: 12d910a0b3b4931c869b9e209912f2f0c96130f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 236589e2a691efe1fec7b43a758ca4455f72deb3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963338"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267851"
 ---
 # <a name="msmqintegrationbindingelement"></a>MsmqIntegrationBindingElement
+
 MsmqIntegrationBindingElement  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp  
 class MsmqIntegrationBindingElement : MsmqBindingElementBase  
@@ -22,23 +23,26 @@ class MsmqIntegrationBindingElement : MsmqBindingElementBase
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- MsmqIntegrationBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
+
+ MsmqIntegrationBindingElement sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- MsmqIntegrationBindingElement sınıfı şu özelliğe sahip:  
+
+ MsmqIntegrationBindingElement sınıfı aşağıdaki özelliğe sahiptir:  
   
-### <a name="serializationformat"></a>serializationFormat  
+### <a name="serializationformat"></a>SerializationFormat  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İletileri serileştirmek için bağlama kullanan biçimi.  
+ Bağlamanın iletileri seri hale getirmek için kullandığı biçim.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

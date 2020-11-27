@@ -2,15 +2,16 @@
 title: WCF Web HTTP Hizmeti Yardım Sayfası
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fe6b22c6ebd637d3aa2bcd3744cb6b73e71c9482
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600172"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266941"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP Hizmeti Yardım Sayfası
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]WCF WEB HTTP Hizmetleri için bir otomatik yardım sayfası sağlar. Bu Yardım sayfasında her bir işlemin, istek ve yanıt biçimlerinin ve şemaların açıklaması listelenir. Bu işlev varsayılan olarak kapalıdır. Kullanıcı bir WCF WEB HTTP hizmetine gözadığında ve URL 'nin sonuna "/Help" ekler; örneğin `http://localhost:8000/Customers/Help` , aşağıdaki gibi bir yardım sayfası görüntülenir.  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] WCF WEB HTTP Hizmetleri için bir otomatik yardım sayfası sağlar. Bu Yardım sayfasında her bir işlemin, istek ve yanıt biçimlerinin ve şemaların açıklaması listelenir. Bu işlev varsayılan olarak kapalıdır. Kullanıcı bir WCF WEB HTTP hizmetine gözadığında ve URL 'nin sonuna "/Help" ekler; örneğin `http://localhost:8000/Customers/Help` , aşağıdaki gibi bir yardım sayfası görüntülenir.  
   
  ![WCF REST yardım sayfası açık bir tarayıcı.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
@@ -19,6 +20,7 @@ ms.locfileid: "84600172"
  ![GetCustomers yönteminin açık olması için WCF REST yardım sayfası ayrıntılarına sahip bir tarayıcı.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>WCF Web HTTP Yardım sayfasını kullanma  
+
  WCF WEB HTTP Yardım sayfası, kullanarak bir tane belirttiğinizde her bir işlem için kısa bir açıklama görüntüler <xref:System.ComponentModel.DescriptionAttribute> . Bu öznitelik, uygulandığı işlemin kısa bir açıklamasını içeren bir dize alır. Örneğin, aşağıdaki kod, <xref:System.ComponentModel.DescriptionAttribute> kısa bir açıklama sağlamak için ' nin nasıl kullanılacağını göstermektedir.  
   
 ```csharp
@@ -59,6 +61,7 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
  Yardım sayfası, sayfanın farklı kısımlarını tanımlayan işaretle temel alınarak XHTML 'dir. Bu, istemcilerin sayfaya <xref:System.Xml.Linq.XElement> veya diğer Xlınq API 'lerini kullanarak programlı bir şekilde erişmesini sağlar.  
   
 ## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>WCF Web HTTP hizmeti Yardım sayfasında kullanılan şemalar  
+
  Aşağıdaki şemalar WCF Web HTTP hizmeti Yardım sayfasında kullanılır.  
   
 ```xml  

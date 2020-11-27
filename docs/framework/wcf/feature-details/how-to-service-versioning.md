@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: Hizmet Sürümü Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: beb7de63d300ad7986bfc59093006b074b9456ba
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ec0f776f296e5ab24f4f628a204b04aa8d903d39
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586942"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268475"
 ---
 # <a name="how-to-service-versioning"></a>Nasıl yapılır: Hizmet Sürümü Oluşturma
+
 Bu konuda, aynı hizmetin farklı sürümlerine iletileri yönlendiren bir yönlendirme yapılandırması oluşturmak için gereken temel adımlar özetlenmektedir. Bu örnekte, iletiler bir hesap makinesi hizmetinin `roundingCalc` (v1) ve `regularCalc` (v2) iki farklı sürümüne yönlendirilir. Her iki uygulama da aynı işlemleri destekler; Ancak eski hizmet, `roundingCalc` döndürmeden önce tüm hesaplamaları en yakın tamsayı değerine yuvarlar. İstemci uygulaması, yeni hizmetin kullanılıp kullanılmayacağını belirtebilmelidir `regularCalc` .  
   
 > [!WARNING]
@@ -131,6 +132,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
 ## <a name="example"></a>Örnek  
+
  Yapılandırma dosyasının tüm listesi aşağıda verilmiştir.  
   
 ```xml  
@@ -214,6 +216,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda, istemci uygulamasının tamamen bir listesi verilmiştir.  
   
 ```csharp  

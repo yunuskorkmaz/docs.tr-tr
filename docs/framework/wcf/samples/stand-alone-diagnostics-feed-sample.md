@@ -2,14 +2,15 @@
 title: Bağımsız Tanılama Akış Örneği
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 0402805b7eb5b0b224db32eb07780743e5f32fb3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b4c3613656e0aec42c0d3f5cd7cde0af6540a69a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600925"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268254"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Bağımsız Tanılama Akış Örneği
+
 Bu örnek, Windows Communication Foundation (WCF) ile dağıtım için bir RSS/Atom akışının nasıl oluşturulacağını gösterir. Nesne modelinin temellerini ve bir Windows Communication Foundation (WCF) hizmeti üzerinde ayarlamayı gösteren temel bir "Merhaba Dünya" programıdır.  
   
  WCF, özel bir veri türü döndüren hizmet işlemleri olarak genel yayımlama akışlarını modeller <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> . Örnekleri <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> , bir akışı hem RSS 2,0 hem de Atom 1,0 biçimlerine seri hale getirebilirsiniz. Aşağıdaki örnek kodda kullanılan sözleşme gösterilmektedir.  

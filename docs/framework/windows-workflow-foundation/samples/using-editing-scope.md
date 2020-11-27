@@ -2,43 +2,46 @@
 title: Düzenleme Kapsamını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 13f23289f0b764b80f971d3e514f3b12acfbfffc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 738ed7a21d28963e9e37c24f2e14887d00b9533b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142660"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267643"
 ---
 # <a name="using-editing-scope"></a>Düzenleme Kapsamını Kullanma
-Bu örnek, tek bir atomik birimde geri alınabilmeleri için bir dizi değişikliğin nasıl toplu olarak yapılacağını gösterir. Varsayılan olarak, bir etkinlik tasarımcısı yazarı tarafından gerçekleştirilen eylemler otomatik olarak Geri Al/Yeniden Yap sistemine entegre edilir.  
+
+Bu örnek, tek bir atomik birimde geri alınabilmeleri için bir değişiklik kümesinin toplu olarak nasıl yapılacağını gösterir. Varsayılan olarak, bir etkinlik Tasarımcısı yazarı tarafından gerçekleştirilen eylemler, geri al/yinele sistemiyle otomatik olarak tümleştirilir.  
   
 ## <a name="demonstrates"></a>Gösteriler  
- Düzenleme kapsamı ve Geri ve Redo.  
+
+ Kapsam düzenleniyor ve geri al ve Yinele.  
   
 ## <a name="discussion"></a>Tartışma  
- Bu örnek, tek bir çalışma birimi <xref:System.Activities.Presentation.Model.ModelItem> içinde ağaçta bir dizi değişikliğin nasıl toplu olarak yapılacağını gösterir. Değerlere <xref:System.Activities.Presentation.Model.ModelItem> doğrudan bir WPF tasarımcısından bağlanırken, değişikliklerin otomatik olarak uygulandığını unutmayın. Bu örnek, toplu olarak yapılacak birden çok değişiklik tek bir değişiklik yerine zorunlu kod aracılığıyla yapıldığında ne yapılması gerektiğini gösterir.  
+
+ Bu örnek, <xref:System.Activities.Presentation.Model.ModelItem> tek bir iş birimi içindeki ağaçta bir değişiklik kümesinin toplu olarak nasıl yapılacağını gösterir. <xref:System.Activities.Presentation.Model.ModelItem>Doğrudan BIR WPF tasarımcısından değerlere bağlandığınızda, değişikliklerin otomatik olarak uygulandığını unutmayın. Bu örnek, tek bir değişiklik yerine, toplu olarak birden çok değişiklik yapılması zorunlu kodla yapıldığında ne yapılması gerektiğini gösterir.  
   
- Bu örnekte üç etkinlik eklenir. Düzenleme başladığında, <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> bir örnek <xref:System.Activities.Presentation.Model.ModelItem>çağrılır. Bu düzenleme <xref:System.Activities.Presentation.Model.ModelItem> kapsamında ağaçta yapılan değişiklikler toplu olarak toplu olarak yapılır. Komut, <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> bu <xref:System.Activities.Presentation.Model.EditingScope>örneği denetlemek için kullanılabilecek bir , döndürür. Düzenleme <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A> <xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A> kapsamını işlemek veya geri almak için çağrılabilir veya çağrılabilir.  
+ Bu örnekte, üç etkinlik eklenmiştir. ' In başladığı zaman <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> bir örneğinde çağrılır <xref:System.Activities.Presentation.Model.ModelItem> . <xref:System.Activities.Presentation.Model.ModelItem>Bu düzen kapsamındaki ağaçta yapılan değişiklikler toplu hale getirilir. <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>Komutu <xref:System.Activities.Presentation.Model.EditingScope> , bu örneği denetlemek için kullanılabilecek bir döndürür. <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A>Ya da <xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A> , düzenlemenin kapsamını yürütmek ya da almak için çağrılabilir.  
   
- Ayrıca, birden <xref:System.Activities.Presentation.Model.EditingScope> çok değişiklik kümesinin daha büyük bir düzenleme kapsamının parçası olarak izlenmesine ve tek tek denetlenebilen nesneleri de yuvaya çekebilirsiniz. Bu özelliği kullanabilecek bir senaryo, birden çok iletişim kutusundan gelen değişikliklerin ayrı olarak kaydedilmesi veya geri alınması ve tüm değişikliklerin tek bir atomik işlem olarak ele alınması dır. Bu örnekte, düzenleme kapsamları bir <xref:System.Collections.ObjectModel.ObservableCollection%601> tür <xref:System.Activities.Presentation.Model.ModelEditingScope>kullanılarak istiflenir. İç <xref:System.Collections.ObjectModel.ObservableCollection%601> içe geçme derinliği tasarımcı yüzeyinde gözlemlenebilir şekilde kullanılır.  
+ Ayrıca <xref:System.Activities.Presentation.Model.EditingScope> , birden fazla değişiklik kümesinin daha büyük bir düzen kapsamının parçası olarak izlenmesini sağlayan ve tek tek denetlenebileceği nesneleri iç içe geçirebilirsiniz. Bu özelliği kullanan bir senaryo, birden fazla iletişim kutusunun değişikliklerinin tek bir atomik işlem olarak kabul edildiği şekilde ayrı ayrı yürütülmesi veya geri döndürülmesi gerektiği durumdur. Bu örnekte, düzen kapsamları türü kullanılarak yığınlanilir <xref:System.Collections.ObjectModel.ObservableCollection%601> <xref:System.Activities.Presentation.Model.ModelEditingScope> . , <xref:System.Collections.ObjectModel.ObservableCollection%601> İç içe geçme derinliğinin tasarımcı yüzeyinde gözlemlenebilir olması için kullanılır.  
   
-## <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+## <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Örneği oluşturun ve çalıştırın ve ardından iş akışını değiştirmek için soldaki düğmeleri kullanın.  
+1. Örneği derleyin ve çalıştırın ve ardından, sol taraftaki düğmeleri kullanarak iş akışını değiştirin.  
   
-2. **Düzenleme Kapsamını Aç'ı**tıklatın.  
+2. **Düzen kapsamını aç**' a tıklayın.  
   
-    1. Bu komut, düzenleme kapsamı oluşturan ve düzenleme yığınına iten çağrıları. <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>  
+    1. Bu komut <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> , bir düzen kapsamı oluşturduğunu ve bunu düzenleyen yığınına ilettiğinde çağırır.  
   
-    2. Daha sonra seçili <xref:System.Activities.Presentation.Model.ModelItem>olana üç etkinlik eklenir. Düzenleme kapsamı tasarımcı tuvalinde üç <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>yeni etkinlikle açılmamış olsaydı, üç yeni etkinlik görüneceğini unutmayın. Bu işlem hala içinde <xref:System.Activities.Presentation.Model.EditingScope>bekleyen olduğundan, tasarımcı henüz güncelleştirilmesin.  
+    2. Ardından seçili üç etkinlik eklenir <xref:System.Activities.Presentation.Model.ModelItem> . Düzen kapsamı ile açılmadıysa <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> , tasarımcı tuvalinde üç yeni etkinliğin görüneceğini unutmayın. Bu işlem içinde hala beklemede olduğundan <xref:System.Activities.Presentation.Model.EditingScope> , tasarımcı henüz güncelleştirilmedi.  
   
-3. Düzenleme kapsamını işlemek için **Düzenleme Kapsamını Kapat'a** basın. Tasarımcıda üç etkinlik görünür.  
+3. Düzen kapsamını yürütmek için, **Düzen kapsamını kapat** ' a basın. Tasarımcıda üç etkinlik görüntülenir.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

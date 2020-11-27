@@ -11,25 +11,28 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-ms.openlocfilehash: 1197fc5149e144d293deda1173e82ca2dadeda7d
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: d441bad7d4af3a88c4ede507d1bce7bdd1ab3215
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475144"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266824"
 ---
 # <a name="accessing-custom-attributes"></a>Özel Özniteliklere Erişim
+
 Öznitelikler program öğeleriyle ilişkilendirildikten sonra, var olan ve değerlerini sorgulamak için yansıma kullanılabilir. .NET Framework sürüm 1,0 ve 1,1 ' de, özel öznitelikler yürütme bağlamında incelenir. .NET Framework sürüm 2,0, yürütme için yüklenemeyen kodu incelemek için kullanılabilen yeni bir yükleme bağlamı (yalnızca yansıma bağlamı) sağlar.  
   
-## <a name="the-reflection-only-context"></a>Yalnızca yansıma bağlamı  
- Yalnızca yansıma bağlamına yüklenen kod yürütülemez. Bu, özel özniteliklerin örneklerinin oluşturulamadığını belirtir, çünkü bu, oluşturucuların yürütülmesi gerekir. Özel öznitelikleri yalnızca yansıma bağlamında yüklemek ve incelemek için <xref:System.Reflection.CustomAttributeData> sınıfını kullanın. Statik yöntemin uygun aşırı yüklemesini kullanarak bu sınıfın örneklerini elde edebilirsiniz <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> . Bkz. [nasıl yapılır: derlemeleri yalnızca yansıma bağlamına yükleme](how-to-load-assemblies-into-the-reflection-only-context.md).  
+## <a name="the-reflection-only-context"></a>Reflection-Only bağlamı  
+
+ Yalnızca yansıma bağlamına yüklenen kod yürütülemez. Bu, özel özniteliklerin örneklerinin oluşturulamadığını belirtir, çünkü bu, oluşturucuların yürütülmesi gerekir. Özel öznitelikleri yalnızca yansıma bağlamında yüklemek ve incelemek için <xref:System.Reflection.CustomAttributeData> sınıfını kullanın. Statik yöntemin uygun aşırı yüklemesini kullanarak bu sınıfın örneklerini elde edebilirsiniz <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> . Bkz. [nasıl yapılır: derlemeleri Reflection-Only bağlamına yükleme](how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 ## <a name="the-execution-context"></a>Yürütme bağlamı  
+
  Yürütme bağlamındaki öznitelikleri sorgulamak için ana yansıma yöntemleri <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> ve ' dir <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> .  
   
  Özel bir özniteliğin erişilebilirliği, eklendiği derlemeye göre denetlenir. Bu, özel özniteliğin eklendiği derlemede bulunan bir türün bir yönteminin özel özniteliğin oluşturucusunu çağırıp çağıramayacağını denetlemeye eşdeğerdir.  
   
- <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType>Tür bağımsız değişkeninin görünürlüğünü ve erişilebilirliğini denetlemek gibi yöntemler. Yalnızca Kullanıcı tanımlı türü içeren derlemede bulunan kod, **GetCustomAttributes**kullanarak bu türde özel bir öznitelik alabilir.  
+ <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType>Tür bağımsız değişkeninin görünürlüğünü ve erişilebilirliğini denetlemek gibi yöntemler. Yalnızca Kullanıcı tanımlı türü içeren derlemede bulunan kod, **GetCustomAttributes** kullanarak bu türde özel bir öznitelik alabilir.  
   
  Aşağıdaki C# örneği tipik bir özel öznitelik tasarım deseninin örneğidir. Çalışma zamanı özel öznitelik yansıma modelini gösterir.  
   

@@ -2,14 +2,15 @@
 title: Keşif Proxy'si Ekleme
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
-ms.openlocfilehash: 382df95fef2108d338e4ea327da9185c856eca5a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae003c89bb0f14623c5d31a1596533d821380336
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579247"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268306"
 ---
 # <a name="implementing-a-discovery-proxy"></a>Keşif Proxy'si Ekleme
+
 Bu bölümde, bulma proxy 'si uygulamak için gereken adımlar açıklanmaktadır. Bulma proxy 'si, bir hizmet deposu içeren tek başına hizmettir. İstemciler, proxy 'nin farkında olduğu keşfedilebilir hizmetleri bulmak için bir keşif proxy 'sini sorgulayabilir. Hizmetler ile bir ara sunucu nasıl doldurulur uygulayıcısı. Örneğin, bir bulma proxy 'si var olan bir hizmet deposuna bağlanabilir ve bu bilgileri bulunabilir hale getirebilir, bir yönetici bir ara sunucuya bulunabilir Hizmetleri eklemek için bir yönetim API 'SI kullanabilir veya bir keşif proxy, iç önbelleğini güncelleştirmek için duyuru işlevini kullanabilir.  
   
  WCF uygulama, kolayca bir proxy oluşturmanıza izin veren temel sınıflar sağlar. Bu API 'Leri, mevcut deponuzda bir bulma proxy 'Si oluşturmak için kullanabilirsiniz.  
@@ -17,6 +18,7 @@ Bu bölümde, bulma proxy 'si uygulamak için gereken adımlar açıklanmaktadı
  Burada uygulanan bulma proxy diğer tüm WCF Hizmetleri gibidir, bu da keşif proxy 'sini bulunabilir hale getirebilir ve istemcilerin uç noktalarını bulmasını sağlayabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Nasıl yapılır: Keşif Proxy'si Uygulama](how-to-implement-a-discovery-proxy.md)  
  Bulma proxy 'sinin nasıl uygulanacağını açıklar.  
   
@@ -31,5 +33,5 @@ Bu bölümde, bulma proxy 'si uygulamak için gereken adımlar açıklanmaktadı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Bulma](wcf-discovery.md)
+- [WCF Keşfetme](wcf-discovery.md)
 - [Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme](how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)

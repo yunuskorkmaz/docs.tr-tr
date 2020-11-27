@@ -2,18 +2,20 @@
 title: İş Akışını Duraklatma ve Sürdürme
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: dc6bdfe7cc10837fb8721ab12490d244d5ec1ca0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8d1806c6d2c8e72b4e3a8b18bff669fcd0e0538
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142972"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268546"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>İş Akışını Duraklatma ve Sürdürme
-İş akışları, yer imleri ve engelleme etkinliklerine <xref:System.Activities.Statements.Delay>yanıt olarak duraklar ve devam eder, ancak iş akışı da açıkça duraklatılmış, boşaltılabilir ve kalıcılık kullanılarak devam ettirilebilir.  
+
+İş akışları, gibi yer işaretlerine ve engelleme etkinliklerine yanıt olarak duraklatıp devam eder <xref:System.Activities.Statements.Delay> , ancak bir iş akışı Ayrıca kalıcı olarak duraklatılabilir, kaldırılabilirler ve kalıcılık kullanılarak devam edebilir.  
   
-## <a name="pausing-a-workflow"></a>İş Akışını Duraklatma  
- İş akışını duraklatmak <xref:System.Activities.WorkflowApplication.Unload%2A>için .  Bu yöntem, iş akışının devam edip boşaltmasını <xref:System.TimeoutException> ister ve iş akışı 30 saniye içinde boşaltMazsa bir akış sağlar.  
+## <a name="pausing-a-workflow"></a>Bir Iş akışını duraklatma  
+
+ Bir iş akışını duraklatmak için kullanın <xref:System.Activities.WorkflowApplication.Unload%2A> .  Bu yöntem iş akışının devam ediyor ve bellekten kaldırılmasına ve <xref:System.TimeoutException> iş akışı 30 saniye içinde bellekten kaldırıldığında bir oluşturacak.  
   
 ```csharp  
 try  
@@ -27,8 +29,9 @@ catch (TimeoutException e)
 }  
 ```  
   
-## <a name="resuming-a-workflow"></a>İş Akışını Sürdürme  
- Daha önce duraklatılmış ve boşaltılan <xref:System.Activities.WorkflowApplication.Load%2A>iş akışını devam ettirmek için . Bu yöntem, kalıcıbir depodan belleğe bir iş akışı yükler.  
+## <a name="resuming-a-workflow"></a>Iş akışı sürdürülüyor  
+
+ Daha önce duraklatılmış ve yüklenmemiş bir iş akışını sürdürmesini sağlamak için kullanın <xref:System.Activities.WorkflowApplication.Load%2A> . Bu yöntem bir kalıcılık deposundan bir iş akışını belleğe yükler.  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
@@ -37,7 +40,8 @@ application.Load(id);
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, kalıcılığı kullanarak bir iş akışını nasıl duraklatacağı ve devam ettirilebildiğini gösterir.  
+
+ Aşağıdaki kod örneği, kalıcılığı kullanarak bir iş akışının nasıl duraklatılacağını ve sürdürüleceğini gösterir.  
   
 ```csharp  
 static string bkName = "bkName";  

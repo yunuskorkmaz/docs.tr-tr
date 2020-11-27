@@ -3,17 +3,19 @@ title: Windows Workflow’a Genel Bakış
 description: Bu makalede, gerçek dünya süreçlerini tanımlayan modeller olan Workflow Foundation iş akışları açıklanmaktadır.
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: c54e405c5fff013f994f98cbf84fcce4d17d9d4e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f966aa2b62a743358d4c1ad18f237f988924014d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558106"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268683"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow’a Genel Bakış
+
 İş akışı, gerçek dünyada bir işlemi açıklayan bir model olarak depolanan *Etkinlikler* adlı bir dizi eleme birimi kümesidir. İş akışları, kısa veya uzun süreli iş parçaları arasında yürütme sırasını ve bağımlı ilişkileri açıklayan bir yol sağlar. Bu iş, başlangıçtan sona kadar modelden geçer ve Etkinlikler kişiler veya sistem işlevleri tarafından yürütülebilir.  
   
 ## <a name="workflow-run-time-engine"></a>İş akışı çalışma zamanı altyapısı  
+
  Çalışan her iş akışı örneği, ana bilgisayar işleminin aşağıdakilerden biri aracılığıyla etkileşimde bulunduğu işlem içi çalışma zamanı altyapısı tarafından oluşturulur ve sürdürülür:  
   
 - Bir <xref:System.Activities.WorkflowInvoker> yöntemi gibi iş akışını çağıran bir.  
@@ -30,6 +32,7 @@ ms.locfileid: "90558106"
 Konak işlemindeki iş akışı bileşenleri  
   
 ## <a name="interaction-between-workflow-components"></a>Iş akışı bileşenleri arasındaki etkileşim  
+
  Aşağıdaki diyagramda, iş akışı bileşenlerinin birbirleriyle nasıl etkileşim kurduğu gösterilmektedir.  
   
  ![İş akışı bileşenlerinin nasıl etkileşime gireceğini gösteren diyagram.](./media/overview/workflow-component-interatction.gif)  

@@ -2,17 +2,19 @@
 title: WCF Web HTTP biçimlendirmesi
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 011ff4f2e667268fac1aa2d82c0a2c4ffefc8dde
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e9346cd1bb3798ad0beac5e9e28a8536007d897b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585564"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266915"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP biçimlendirmesi
+
 WCF Web HTTP programlama modeli, bir hizmet işleminin yanıtını döndürmek için en iyi biçimi dinamik olarak belirlemenizi sağlar. Uygun biçimi belirlemek için iki yöntem desteklenir: otomatik ve açık.  
   
 ## <a name="automatic-formatting"></a>Otomatik biçimlendirme  
+
  Etkinleştirildiğinde otomatik biçimlendirme, yanıtın döndürüleceği en iyi biçimi seçer. Aşağıdaki sırayla aşağıdakileri denetleyerek en iyi biçimi belirler:  
   
 1. İstek iletisinin Accept üstbilgisindeki medya türleri.  
@@ -91,6 +93,7 @@ try
 ```  
   
 ## <a name="explicit-formatting"></a>Açık biçimlendirme  
+
  Adından da anlaşılacağı gibi, geliştirici, işlem kodu içinde kullanmak için en iyi biçimi belirler. En iyi biçim XML veya JSON ise, geliştirici ya <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> da olarak ayarlanır <xref:System.ServiceModel.Web.WebMessageFormat.Xml> <xref:System.ServiceModel.Web.WebMessageFormat.Json> . <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>Özelliği açıkça ayarlanmamışsa, işlemin varsayılan biçimi kullanılır.  
   
  Aşağıdaki örnek, biçim sorgu dizesi parametresini kullanılacak bir biçim için denetler. Belirtilmişse, kullanarak işlemin biçimini ayarlar <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> .  

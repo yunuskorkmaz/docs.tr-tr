@@ -2,25 +2,28 @@
 title: SOAP ve HTTP Uç Noktaları
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: fee1df86026716941f65dccca15d437ae917770b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9e7ce32a0f5a2f37294db57659e2b30b364bef24
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600951"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268267"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP ve HTTP Uç Noktaları
+
 Bu örnek, bir RPC tabanlı hizmetin nasıl uygulanacağını ve SOAP biçiminde ve WCF Web programlama modelini kullanarak "düz eski XML" (POX) biçiminde nasıl kullanıma sunılacağını gösterir. Hizmetin HTTP bağlaması hakkında daha fazla bilgi için bkz. [temel http hizmet](basic-http-service.md) örneği. Bu örnek, farklı bağlamalar kullanılarak SOAP ve HTTP üzerinden aynı hizmeti açığa çıkarmak için ilgili ayrıntılara odaklanılır.  
   
 ## <a name="demonstrates"></a>Gösteriler  
+
  WCF kullanarak bir RPC hizmetini SOAP ve HTTP üzerinden gösterme.  
   
 ## <a name="discussion"></a>Tartışma  
+
  Bu örnek iki bileşenden oluşur: bir WCF hizmeti içeren bir Web uygulaması projesi (hizmet) ve SOAP ve HTTP bağlamaları kullanarak hizmet işlemlerini çağıran bir konsol uygulaması (Istemci).  
   
  WCF hizmeti, `GetData` `PutData` giriş olarak geçirilmiş dizeyi yankı eden 2 işlem ve – gösterir. Hizmet işlemlerine ve ile açıklama eklenir <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> . Bu öznitelikler, bu işlemlerin HTTP projeksiyonunu denetler. Bunlara ek olarak, ile açıklanırlar <xref:System.ServiceModel.OperationContractAttribute> ve SOAP bağlamaları üzerinden gösterilmesini sağlar. Hizmetin `PutData` YÖNTEMI <xref:System.ServiceModel.Web.WebFaultException> http durum kodu kullanılarak http üzerinden geri gönderilen ve SOAP üzerinden SOAP hatası olarak geri gönderilen bir oluşturur.  
   
- Web. config dosyası, WCF hizmetini 3 uç nokta ile yapılandırır:  
+ Web.config dosyası, WCF hizmetini 3 uç nokta ile yapılandırır:  
   
 - SOAP tabanlı istemciler tarafından erişim için hizmet meta verilerini kullanıma sunan ~/Service.svc/mex uç noktası.  
   
@@ -30,7 +33,7 @@ Bu örnek, bir RPC tabanlı hizmetin nasıl uygulanacağını ve SOAP biçiminde
   
  HTTP uç noktası, `webHttp` olarak ayarlanmış <> standart uç nokta ile yapılandırılır `helpEnabled` `true` . Sonuç olarak, hizmet HTTP tabanlı istemcilerin hizmete erişmek için kullanabileceği, ~/Service.svc/http/Help konumunda bir XHTML tabanlı yardım sayfası sunar.  
   
- İstemci projesi, bir SOAP proxy ( **hizmet başvurusu Ekle**aracılığıyla oluşturulur) kullanarak hizmete erişmeyi ve hizmetini kullanarak hizmete erişmeyi gösterir <xref:System.Net.WebClient> .  
+ İstemci projesi, bir SOAP proxy ( **hizmet başvurusu Ekle** aracılığıyla oluşturulur) kullanarak hizmete erişmeyi ve hizmetini kullanarak hizmete erişmeyi gösterir <xref:System.Net.WebClient> .  
   
  Örnek, Web 'de barındırılan bir hizmetten ve konsol uygulamasından oluşur. Konsol uygulaması çalışırken, istemci hizmete istekler yapar ve ilgili bilgileri, yanıtlardan konsol penceresine yazar.  
   

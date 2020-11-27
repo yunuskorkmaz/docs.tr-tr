@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: Hizmet Verilerini Bölümlendirme'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bb5eb6bda8bb2be3dfaaa88eb4b5ad787f47aa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601198"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268930"
 ---
 # <a name="how-to-service-data-partitioning"></a>Nasıl yapılır: Hizmet Verilerini Bölümlendirme
+
 Bu konu başlığı altında, aynı hedef hizmetin birden çok örneğinde iletileri bölümlemek için gereken temel adımlar özetlenmektedir. Hizmet verileri bölümlendirme genellikle, daha iyi hizmet kalitesi sağlamak için veya belirli bir şekilde farklı müşterilerden gelen istekleri işleyebilmeniz gerektiğinde kullanılır. Örneğin, yüksek değerden veya "altın" müşterilerden gelen iletilerin, standart müşteriden gelen iletilerden daha yüksek bir önceliğe göre işlenmesi gerekebilir.  
   
  Bu örnekte, iletiler regularCalc hizmetinin iki örneklerinden birine yönlendirilir. Hizmetin her iki örneği de aynıdır; Ancak, Calculator1 uç noktası tarafından temsil edilen hizmet, yüksek değerli müşterilerden alınan iletileri işlediğinde, hesaplayıcı 2 uç noktası diğer müşterilerden gelen iletileri işler  
@@ -99,6 +100,7 @@ Bu konu başlığı altında, aynı hedef hizmetin birden çok örneğinde ileti
     ```  
   
 ## <a name="example"></a>Örnek  
+
  Yapılandırma dosyasının tüm listesi aşağıda verilmiştir.  
   
 ```xml  

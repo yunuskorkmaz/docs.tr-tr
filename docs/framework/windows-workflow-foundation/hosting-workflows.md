@@ -4,31 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
-ms.openlocfilehash: 3b3b7b94c94096d916efb9399c82ad6ddf8b8b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8cea05965a0960f8b5f5948e621edb1ea1c032
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773470"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268163"
 ---
 # <a name="hosting-workflows"></a>İş Akışları Barındırma
-Bu bölümdeki konular, barındırma iş akışları tartışın.  
+
+Bu bölümdeki konularda barındırma iş akışları ele alınmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [İş Akışı Barındırma Seçenekleri](workflow-hosting-options.md)  
- İş akışlarınıza uygun konağı seçmek açıklar.  
+ İş akışlarınız için uygun konağın nasıl seçleneceğini açıklar.  
   
  [WorkflowInvoker ve WorkflowApplication Kullanma](using-workflowinvoker-and-workflowapplication.md)  
- Nasıl kullanılacağını açıklar <xref:System.Activities.WorkflowInvoker> ve <xref:System.Activities.WorkflowApplication> iş akışlarını çağıracak.  
+ <xref:System.Activities.WorkflowInvoker>İş akışlarının çağrılmasını ve nasıl kullanılacağını açıklar <xref:System.Activities.WorkflowApplication> .  
   
  [Etkinlik Ağacı Denetimi](activity-tree-inspection.md)  
- İş akışı kullanarak bir iş akışı konak yazarları nasıl inceleyebilirsiniz açıklar <xref:System.Activities.WorkflowInspectionServices>.  
+ İş akışı ana bilgisayar yazarlarının kullanarak bir iş akışını nasıl inceleyebileceğinizi açıklar <xref:System.Activities.WorkflowInspectionServices> .  
   
  [XAML’de İş Akışı ve Etkinlikleri Serileştirme](serializing-workflows-and-activities-to-and-from-xaml.md)  
- XAML iş akışlarına serileştirmek ve seri hale getirilmiş iş akışı tanımları ile çalışmak açıklar.  
+ İş akışlarının XAML 'e serileştirilmesi ve serileştirilmiş iş akışı tanımlarıyla çalışması açıklanmaktadır.  
   
  [WorkflowIdentity Kullanma ve Sürüm Oluşturma](using-workflowidentity-and-versioning.md)  
- Nasıl kullanılacağını açıklar `WorkflowIdentity` bir iş akışı yan yana birden çok sürümünü barındırmak için.  
+ `WorkflowIdentity`Bir iş akışının birden çok sürümünü yan yana barındırmak için nasıl kullanılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

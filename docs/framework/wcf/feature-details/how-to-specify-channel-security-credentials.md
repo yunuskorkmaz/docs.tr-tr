@@ -2,32 +2,33 @@
 title: 'Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 45a13460ce94cbacae0465fede4b455a2833ce81
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9236985ef461044e480847003d9d249b7e232783
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596948"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266772"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme
+
 Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarının WCF hizmetlerini çağırmasını sağlar. Çoğu WCF hizmeti, istemcinin kimlik doğrulama ve yetkilendirme için kimlik bilgilerini belirtmesini gerektirir. WCF istemcisinden bir WCF hizmetini çağırırken bu kimlik bilgilerini yönetilen kodda veya bir uygulama yapılandırma dosyasında belirtebilirsiniz. Bir WCF hizmetini bir COM uygulamasından çağırırken, <xref:System.ServiceModel.ComIntegration.IChannelCredentials> kimlik bilgilerini belirtmek için arabirimini kullanabilirsiniz. Bu konu, arabirimi kullanarak kimlik bilgilerini belirtmek için çeşitli yollar gösterir <xref:System.ServiceModel.ComIntegration.IChannelCredentials> .  
   
 > [!NOTE]
-> <xref:System.ServiceModel.ComIntegration.IChannelCredentials>, IDispatch tabanlı bir arabirimdir ve Visual Studio ortamında IntelliSense işlevselliği almaz.  
+> <xref:System.ServiceModel.ComIntegration.IChannelCredentials> , IDispatch tabanlı bir arabirimdir ve Visual Studio ortamında IntelliSense işlevselliği almaz.  
   
  Bu makalede [Ileti güvenliği örneğinde](../samples/message-security-sample.md)tanımlanan WCF hizmeti kullanılacaktır.  
   
 ### <a name="to-specify-a-client-certificate"></a>İstemci sertifikası belirtmek için  
   
-1. Gerekli test sertifikalarını oluşturmak ve yüklemek için Ileti güvenlik dizininde Setup. bat dosyasını çalıştırın.  
+1. Gerekli test sertifikalarını oluşturmak ve yüklemek için Ileti güvenlik dizininde Setup.bat dosyasını çalıştırın.  
   
 2. Ileti güvenliği projesini açın.  
   
 3. `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` `ICalculator` Arabirim tanımına ekleyin.  
   
-4. `bindingNamespace="http://Microsoft.ServiceModel.Samples"`Hizmetin App. config dosyasındaki Endpoint etiketine ekleyin.  
+4. `bindingNamespace="http://Microsoft.ServiceModel.Samples"`Hizmetin App.config bitiş noktası etiketine ekleyin.  
   
-5. Ileti güvenlik örneğini oluşturun ve Service. exe ' yi çalıştırın. Hizmetin çalıştığından emin olmak için Internet Explorer 'ı kullanın ve hizmetin URI 'sine ( `http://localhost:8000/ServiceModelSamples/Service` ) gidin.  
+5. Ileti güvenlik örneğini oluşturun ve Service.exe çalıştırın. Hizmetin çalıştığından emin olmak için Internet Explorer 'ı kullanın ve hizmetin URI 'sine ( `http://localhost:8000/ServiceModelSamples/Service` ) gidin.  
   
 6. Visual Basic 6,0 ' i açın ve yeni bir standart. exe dosyası oluşturun. Forma bir düğme ekleyin ve tıklama işleyicisine aşağıdaki kodu eklemek için düğmeye çift tıklayın:  
   
@@ -64,7 +65,7 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
   
 ### <a name="to-specify-user-name-and-password"></a>Kullanıcı adı ve parola belirtmek için  
   
-1. Kullanmak için Service App. config dosyasını değiştirin `wsHttpBinding` . Bu, Kullanıcı adı ve parola doğrulaması için gereklidir:  
+1. Service App.config dosyasını kullanacak şekilde değiştirin `wsHttpBinding` . Bu, Kullanıcı adı ve parola doğrulaması için gereklidir:  
 
 2. Şunu `clientCredentialType` Kullanıcı adı olarak ayarla:  
 
@@ -91,7 +92,7 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
   
 ### <a name="to-specify-windows-credentials"></a>Windows kimlik bilgilerini belirtmek için  
   
-1. `clientCredentialType`Service App. config dosyasında Windows olarak ayarlayın:  
+1. `clientCredentialType`Service App.config dosyasında Windows olarak ayarlayın:  
 
 2. Visual Basic 6,0 ' i açın ve yeni bir standart. exe dosyası oluşturun. Forma bir düğme ekleyin ve tıklama işleyicisine aşağıdaki kodu eklemek için düğmeye çift tıklayın:  
   

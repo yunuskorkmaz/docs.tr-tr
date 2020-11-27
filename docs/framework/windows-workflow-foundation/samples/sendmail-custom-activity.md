@@ -2,19 +2,20 @@
 title: SendMail Özel Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4dca15bfd3798b9282960663bea827f9323a1266
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f518beebe336080853e4dec3bca6f8539bbec304
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547746"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267604"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail Özel Etkinliği
+
 Bu örnek, <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulaması içinde kullanılmak üzere SMTP kullanarak posta göndermek için öğesinden türetilen özel bir etkinliğin nasıl oluşturulacağını gösterir. Özel etkinlik, <xref:System.Net.Mail.SmtpClient> e-postayı zaman uyumsuz olarak göndermek ve kimlik doğrulamasıyla posta göndermek için yeteneklerini kullanır. Ayrıca, test modu, belirteç değiştirme, dosya şablonları ve test bırakma yolu gibi bazı son kullanıcı özellikleri de sağlar.  
   
  Aşağıdaki tabloda etkinliğin bağımsız değişkenlerinin ayrıntıları verilmiştir `SendMail` .  
   
-|Ad|Tür|Description|  
+|Ad|Tür|Açıklama|  
 |-|-|-|  
 |Ana bilgisayar|Dize|SMTP sunucusu konağının adresi.|  
 |Bağlantı noktası|Dize|Konaktaki SMTP hizmetinin bağlantı noktası.|  
@@ -34,6 +35,7 @@ Bu örnek, <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulamas
 |TestDropPath|Dize|Bu özellik ayarlandığında, tüm e-postalar da belirtilen dosyaya kaydedilir.<br /><br /> Bu özellik, giden e-postaların biçiminin ve içeriğinin uygun olduğundan emin olmak için iş akışlarını test ederken veya hata ayıklarken kullanılmak üzere tasarlanmıştır.|  
   
 ## <a name="solution-contents"></a>Çözüm Içeriği  
+
  Çözüm iki proje içerir.  
   
 |Proje|Açıklama|Önemli dosyalar|  
@@ -42,9 +44,11 @@ Bu örnek, <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulamas
 |SendMailTestClient|SendMail etkinliğini test etmek için istemci.  Bu proje, SendMail etkinliğini çağırmanın iki yolunu gösterir: bildirimli ve programlı olarak.|1. Sequence1. xaml: SendMail etkinliğini çağıran iş akışı.<br />2. Program.cs: Sequence1 çağırır ve ayrıca SendMail kullanan programlı bir iş akışı oluşturur.|  
   
 ## <a name="further-configuration-of-the-sendmail-activity"></a>SendMail etkinliğinin daha fazla yapılandırması  
+
  Örnekte gösterilmese de, kullanıcılar SendMail etkinliğinin ek yapılandırmasını gerçekleştirebilir. Sonraki üç bölümde bunun nasıl yapılacağı gösterilmektedir.  
   
 ### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Gövdede belirtilen belirteçleri kullanarak e-posta gönderme  
+
  Bu kod parçacığı, gövdedeki belirteçlerle nasıl e-posta gönderebileceğinizi gösterir. Gövde özelliğinde belirteçlerin nasıl sağlandığını fark edin. Bu belirteçlerin değerleri belirteçler özelliğine sağlanır.  
   
 ```csharp  
@@ -67,6 +71,7 @@ new SendMail
 ```  
   
 ### <a name="sending-an-email-using-a-template"></a>Şablon kullanarak e-posta gönderme  
+
  Bu kod parçacığında, gövdedeki bir şablon belirteçlerini kullanarak e-posta gönderme gösterilmektedir. `BodyTemplateFilePath`Gövde özelliği için değer sağlamak zorunda olduğumuz özelliği ayarlarken (şablon dosyasının içeriği gövdeye kopyalanacaktır) dikkat edin.  
   
 ```csharp  
@@ -84,6 +89,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Sınama modunda postaları gönderme  
+
  Bu kod parçacığı, iki test özelliklerinin nasıl ayarlanacağını gösterir: ayarına göre `TestMailTo` , tüm iletiler için gönderilir `john.doe@contoso.con` (Kime, CC, gizli değerleri olmadan). TestDropPath ' i ayarlayarak tüm giden e-postalar da, belirtilen yola kaydedilir. Bu özellikler bağımsız olarak ayarlanabilir (ilişkili değildir).  
   
 ```csharp  
@@ -103,6 +109,7 @@ new SendMail
 ```  
   
 ## <a name="set-up-instructions"></a>Kurulum Yönergeleri  
+
  Bu örnek için bir SMTP sunucusuna erişim gerekir.  
   
  SMTP sunucusu kurma hakkında daha fazla bilgi için aşağıdaki bağlantılara bakın.  

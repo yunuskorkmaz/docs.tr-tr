@@ -2,17 +2,18 @@
 title: İşlem sınıfı
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 9696a7f026e54afacb5ccbfa8703a2ba617a9f3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b47d933dc84813532398830c92c95210208a709
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963117"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269164"
 ---
 # <a name="operation-class"></a>İşlem sınıfı
-Çalışma  
+
+İşlem  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class Operation  
@@ -33,100 +34,114 @@ class Operation
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- İşlem sınıfı herhangi bir yöntemi tanımlamaz.  
+
+ Işlem sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- İşlem sınıfı aşağıdaki özelliklere sahiptir:  
+
+ Işlem sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="action"></a>Eylem  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İstek iletisinin WS-Addressing eylem.  
+ İstek iletisinin WS-Addressing eylemi.  
   
-### <a name="asyncpattern"></a>AsyncPattern  
+### <a name="asyncpattern"></a>Metodundaki AsyncPattern  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bir işlem kullanarak zaman uyumsuz olarak uygulandığını belirtir bir `Begin`[Aç/Kapat açılı ayraçlar] ve `End`hizmet sözleşmesi [Aç/Kapat açılı ayraçlar] yöntemi çifti.  
+ Bir işlemin zaman uyumsuz `Begin` olarak bir hizmet sözleşmesindeki [açık/kapalı açılı ayraçlar] ve `End` [açık/kapalı açılı ayraçlar] Yöntem çifti kullanılarak uygulandığını belirtir.  
   
 ### <a name="behaviors"></a>Davranışlar  
- Veri türü: Davranış dizi  
+
+ Veri türü: davranış dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bu işlemle ilişkili davranışlar.  
+ Bu işlemle ilişkilendirilen davranışlar.  
   
 ### <a name="iscallback"></a>IsCallback  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İşlemi bir geri çağırma işlemi olduğunda true olur.  
+ İşlem bir geri çağırma işlemi olduğunda true.  
   
 ### <a name="isinitiating"></a>IsInitiating  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Yöntemi sunucudaki bir oturum başlatabilirsiniz bir işlem uygulayıp uygulamadığını gösterir.  
+ Yöntemin sunucuda oturum başlatabilen bir işlem uygulayıp uygulamadığını gösterir.  
   
 ### <a name="isoneway"></a>IsOneWay  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bir işlem bir yanıt iletisi döndürüp döndürmediğini gösterir.  
+ Bir işlemin yanıt iletisi döndürüp döndürmediğini belirtir.  
   
 ### <a name="isterminating"></a>IsTerminating  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bir işlem bir yanıt iletisi döndürüp döndürmediğini gösterir.  
+ Bir işlemin yanıt iletisi döndürüp döndürmediğini belirtir.  
   
 ### <a name="methodsignature"></a>MethodSignature  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İşlem metodu imzası.  
+ İşlemin Yöntem imzası.  
   
-### <a name="name"></a>Ad  
+### <a name="name"></a>Adı  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
  İşlemin adı.  
   
 ### <a name="parametertypes"></a>ParameterTypes  
+
  Veri türü: dize dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İşlem parametrelerinin türleri.  
+ İşlemin parametrelerinin türleri.  
   
 ### <a name="replyaction"></a>ReplyAction  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İşlem yanıt iletisi için SOAP eylemi değeri.  
+ İşlemin yanıt iletisi için SOAP eyleminin değeri.  
   
-### <a name="returntype"></a>ReturnType  
+### <a name="returntype"></a>'Indaki  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
  İşlemin dönüş türü.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

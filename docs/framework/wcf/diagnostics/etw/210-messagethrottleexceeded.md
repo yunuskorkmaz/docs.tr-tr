@@ -2,34 +2,37 @@
 title: 210 - MessageThrottleExceeded
 ms.date: 03/30/2017
 ms.assetid: 24ca08ea-c11c-4753-946e-98aa820f8711
-ms.openlocfilehash: 7ba5948b36642085ef44661b3d580e7f1c4102cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0da1c198700407d8cdf699d1b734247024717a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781894"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267747"
 ---
 # <a name="210---messagethrottleexceeded"></a>210 - MessageThrottleExceeded
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|210|  
-|anahtar sözcükler|Sorun giderme, ServiceModel EndToEndMonitoring, ögesi,|  
+|ID|210|  
+|Anahtar sözcükler|EndToEndMonitoring, HealthMonitoring, sorun giderme, ServiceModel|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay bir yayıldığını üç ana hizmet kısıtlamalar aşıldı. Kısıtlama sınırı başlangıçta aşıldığında bu olay yalnızca yayıldığını unutmayın. Örneğin, eş zamanlı çağrılar için kısıtlama sınırı 10, 11 eşzamanlı arama sonuçları bir `MessageThrottleExceeded` olay. 12 çağrı başka bir olaya sonuçlanmaz. Ayrıca, gürültülü olay akışını önlemek için sınırı gezinen etkinlik başka bir olaya sonuçlanmaz. Bu örnekte, birkaç çağrıları tamamlarsanız ardından var. 9 eş zamanlı çağrılar Daha sonra iki daha fazla çağrıları geldiğinde, geçerli değeri yeniden 11 olur. Bu, başka bir olaya sonuçlanmaz. Kısıtlama sınırı % 70 yüzdesi geçerli değeri düştüğünde farklı bir olay etkinliği yavaş olmuştur gösteren yayınlanır. Sınırı aşan gelecekteki etkinliğine neden başka `MessageThrottleExceeded` yayılan olay. Bu örnekte, eş zamanlı çağrı miktarı 7'ye döner ve daha sonra tekrar 11 ve başka ulaştığında `MessageThrottleExceeded` olay yayılır.  
+
+ Bu olay, üç ana hizmet kısıtlarından biri aşıldığında yayınlanır. Bu olayın yalnızca kısıtlama sınırı ilk kez aşıldığında yayınlandığını unutmayın. Örneğin, eşzamanlı aramaların kısıtlama sınırı 10 ise, 11. eşzamanlı çağrı bir olay ile sonuçlanır `MessageThrottleExceeded` . 12. çağrı başka bir olayla sonuçlanmaz. Ayrıca, gürültülü bir olay akışından kaçınmak için, sınır etrafında gezinen etkinlik başka bir olayla sonuçlanmaz. Bu örnekte, birkaç çağrı tamamlandıktan sonra 9 eşzamanlı çağrı vardır. Daha sonra iki çağrı de geliyorsa, geçerli değer yeniden 11 ' dir. Bu, başka bir olay sonucu vermez. Geçerli değer kısıtlama sınırının yüzde 70 ' una düştüğünde, etkinliğin yavaşladığını belirten farklı bir olay yayınlanır. Daha sonraki etkinlik, başka bir `MessageThrottleExceeded` olayın yayılmasına neden olur. Bu örnekte, eşzamanlı çağrı miktarı 7 ' ye denk geliyorsa ve daha sonra 11 ' e ulaşırsa ve başka bir `MessageThrottleExceeded` olay yayılıyorsa.  
   
 ## <a name="message"></a>İleti  
- '%2', '%1' azaltma sınırına ulaşıldı.  
+
+ ' %2 ' için ' %1 ' kısıtlama sınırına ulaşıldı.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Kısıtlama adı|`xs:string`|Aşıldı kısıtlama adı. Her iki `MaxConcurrentCalls`, `MaxConcurrentInstances`, veya `MaxConcurrentSessions`,|  
-|Sınır|`xs:long`|Şu anda yapılandırılmış olan kısıtlama sınırı.|  
-|HostReference|`xs:string`|Bu alan, Web barındırılan hizmetleri, Web hiyerarşideki hizmet benzersiz olarak tanımlar. Biçimi olarak tanımlanan ' Web sitesi adı uygulamanın sanal yolu&#124;hizmet sanal yolu&#124;HizmetAdı '. Örnek: ' Varsayılan Web sitesi/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
-|AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Kısıtlama adı|`xs:string`|Aşılan kısıtlama adı. `MaxConcurrentCalls`,, `MaxConcurrentInstances` Veya `MaxConcurrentSessions` ,|  
+|Sınır|`xs:long`|Kısıtlama sınırının Şu anda yapılandırılmış sınırı.|  
+|HostReference|`xs:string`|Web 'de barındırılan hizmetler için, bu alan hizmeti Web hiyerarşisinde benzersiz olarak tanımlar. Biçimi ' Web sitesi adı uygulama sanal yolu&#124;hizmet sanal yolu&#124;ServiceName ' olarak tanımlanmıştır. Örnek: ' Default Web site/Hesaplatooypplication&#124;/Hesaplatorservice.exe&#124;Hesaplatorservice '.|  
+|AppDomain|`xs:string`|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

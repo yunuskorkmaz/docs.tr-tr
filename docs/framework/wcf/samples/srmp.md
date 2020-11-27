@@ -2,14 +2,15 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: f3b0e57f05ccb77eef25c97e7d5d028183e7b13e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1cb0cd4e7300920afb900af0291b9e3d3dc778b2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600938"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268293"
 ---
 # <a name="srmp"></a>SRMP
+
 Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanılarak işlenen sıraya alınmış iletişimin nasıl gerçekleştirileceğini gösterir.  
   
  Sıraya alınmış iletişimde istemci, hizmet ile bir kuyruk kullanarak iletişim kurar. Daha kesin olarak, istemci iletileri bir kuyruğa gönderir. Hizmet kuyruktaki iletileri alır. Bu nedenle, hizmet ve istemci, bir kuyruk kullanarak iletişim kurmak için aynı anda çalışıyor olması gerekmez.  
@@ -35,12 +36,15 @@ Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanılarak işlenen sıraya
 8. İstemcisini çalıştırın. Uç nokta adresini, localhost yerine makine adına veya IP adresine işaret etmek üzere değiştirdiğinizden emin olun. İstemci bir ileti gönderir ve çıkar.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  Bu örneği çalıştırmak için, MSMQ 'ya ek olarak hem hizmette hem de istemci makinelerde IIS yüklü olmalıdır.  
   
 ## <a name="demonstrates"></a>Gösteriler  
+
  Örnek, HTTP üzerinden MSMQ kullanarak WCF sıraya alınan iletileri göndermeyi gösterir. Bu, SRMP mesajlaşma olarak da adlandırılır. Sıraya alınan bir ileti gönderildiğinde, Gönderen makinedeki MSMQ iletileri TCP veya HTTP taşıması üzerinden alma kuyruğu Yöneticisi 'ne aktarır. SRMP ' i seçerek Kullanıcı, kuyruk aktarımı için bir taşıma olarak HTTP seçeneğini belirtir. SRMP Secure, HTTPS kullanımını sunar.  
   
 ## <a name="example"></a>Örnek  
+
  Örnek kod, işlem temelli örneğe dayalıdır. Sıradan bir ileti gönderdiğinizde ve SRMP kullanarak kuyruktan ileti aldığınızda, yerel bir protokol kullanarak ileti gönderme ve alma ile aynı olur.  
   
  İstemci yapılandırması, sıra Aktarım protokolünün seçimini belirtecek şekilde değiştirilir. Sıra Aktarım Protokolü yerel, SRMP veya SrmpSecure değerinden biri olabilir. Varsayılan olarak, Aktarım Protokolü yereldir. İstemci ve hizmet, bu örnekte SRMP 'yi kullanmak için yapılandırmayı belirtir.  

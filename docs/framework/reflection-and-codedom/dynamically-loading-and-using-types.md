@@ -13,14 +13,15 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-ms.openlocfilehash: 39a4a9a2ff77cb900db7f39a55dc17a5b8c62cf3
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: be9991a4df866f65aabe063be3cc2b374f4d124d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475092"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266798"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dinamik Olarak Yükleme ve Türleri Kullanma
+
 Yansıma, örtülü geç bağlamayı uygulamak için dil derleyicileri tarafından kullanılan altyapıyı sağlar. Bağlama, benzersiz olarak belirtilen bir türe karşılık gelen bildirimi (yani, uygulama) bulma işlemidir. Bu işlem, derleme süresi yerine çalışma zamanında gerçekleştiğinde, geç bağlama olarak adlandırılır. Visual Basic kodunuzda örtük geç bağlamayı kullanmanıza izin verir; Visual Basic derleyici, nesne türünü almak için yansıma kullanan bir yardımcı yöntemi çağırır. Yardımcı yöntemine geçirilen bağımsız değişkenler, uygun yöntemin çalışma zamanında çağrılmasına neden olur. Bu bağımsız değişkenler, yöntemi çağırmak için gereken örnek (bir nesne), çağrılan metodun adı (bir dize) ve çağrılan yönteme geçirilen bağımsız değişkenler (bir nesne dizisi).  
   
  Aşağıdaki örnekte Visual Basic Derleyicisi, türü derleme sırasında bilinmeyen bir nesne üzerinde bir yöntemi çağırmak için yansımayı örtük olarak kullanır. **HelloWorld** sınıfının, **PrintHello** yöntemine geçirilen bazı metinler ile birleştirilmiş "Merhaba Dünya" yazdıran bir **PrintHello** yöntemi vardır. Bu örnekte çağrılan **PrintHello** yöntemi aslında bir örnektir <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> ; Visual Basic kodu, nesne türü (Merhaba obj), çalışma zamanı (geç bağlama) yerine derleme zamanında (erken bağlama) bilinmiş gibi, **PrintHello** yönteminin çağrılmasını sağlar.  
@@ -40,6 +41,7 @@ End Module
 ```  
   
 ## <a name="custom-binding"></a>Özel Bağlama  
+
  En geç bağlama için derleyiciler tarafından örtük olarak kullanılmanın yanı sıra, yansıma, geç bağlamayı gerçekleştirmek için doğrudan kodda kullanılabilir.  
   
  [Ortak dil çalışma zamanı](../../standard/clr.md) birden çok programlama dilini destekler ve bu dillerin bağlama kuralları farklılık gösterir. Erken bağlantılı durumda, kod oluşturucuları bu bağlamayı tamamen denetleyebilir. Ancak, yansıma aracılığıyla geç bağlamada bağlama özelleştirilmiş bağlama tarafından denetlenmelidir. <xref:System.Reflection.Binder>Sınıfı, üye seçimi ve çağırma için özel denetim sağlar.  
@@ -53,6 +55,7 @@ End Module
  [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
   
 ### <a name="invokemember-and-createinstance"></a>InvokeMember ve CreateInstance  
+
  <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>Bir türün üyesini çağırmak için kullanın. Ve gibi çeşitli sınıfların **CreateInstance** yöntemleri, <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType> belirtilen türde yeni örnekler oluşturan **InvokeMember** 'ın özelleştirilmiş formlarıdır. **Ciltçi** sınıfı, bu yöntemlerde aşırı yükleme çözümü ve bağımsız değişken zorlaması için kullanılır.  
   
  Aşağıdaki örnek, bağımsız değişken zorlaması (tür dönüştürme) ve üye seçimi için olası üç kombinasyonu gösterir. 1. durumda, bağımsız değişken zorlaması veya üye seçimi gerekli değildir. 2. durumda, yalnızca üye seçimi gereklidir. 3. durumda, yalnızca bağımsız değişken zorlaması gerekir.  
@@ -63,7 +66,7 @@ End Module
   
  Aynı ada sahip birden fazla üye varsa aşırı yükleme çözümlemesi gerekir. <xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=nameWithType>Ve <xref:System.Reflection.Binder.BindToField%2A?displayProperty=nameWithType> yöntemleri, tek bir üyeye bağlamayı çözümlemek için kullanılır. **Ciltçi. BindToMethod** Ayrıca **Get** ve **set** özelliği erişimcileri aracılığıyla Özellik çözümlemesi sağlar.  
   
- **BindToMethod** , <xref:System.Reflection.MethodBase> böyle bir çağrı mümkün değilse Invoke veya null başvurusu (Visual Basic**hiçbir şey** ) döndürür. **MethodBase** dönüş değeri, *eşleşme* parametresinde yer alan öğelerden biri olmalıdır, ancak bu durum olağan durumdur.  
+ **BindToMethod** , <xref:System.Reflection.MethodBase> böyle bir çağrı mümkün değilse Invoke veya null başvurusu (Visual Basic **hiçbir şey** ) döndürür. **MethodBase** dönüş değeri, *eşleşme* parametresinde yer alan öğelerden biri olmalıdır, ancak bu durum olağan durumdur.  
   
  ByRef bağımsız değişkenleri mevcut olduğunda, çağıran bunları geri almak isteyebilir. Bu nedenle, **bağlayıcı** , **BindToMethod** bağımsız değişken dizisini işlese, bir istemcinin bağımsız değişken dizisini özgün biçimine geri eşlemesini sağlar. Bunu yapmak için, çağıran bağımsız değişkenlerin sırasının değiştirilmemiş olması garanti etmelidir. Bağımsız değişkenler ad ile geçirildiğinde, **Ciltçi** bağımsız değişken dizisini yeniden sıralar ve çağıranın gördüğü şeydir. Daha fazla bilgi için bkz. <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
@@ -71,11 +74,11 @@ End Module
   
  Verilen adın yalnızca bir üyesi varsa, hiçbir geri çağrı gerekmez ve bağlama Bu yöntemde yapılır. Kod örneğinin 1. durumu bu noktayı gösterir: yalnızca bir **PrintBob** yöntemi kullanılabilir ve bu nedenle hiçbir geri arama gerekmez.  
   
- Kullanılabilir küme içinde birden fazla üye varsa, bu yöntemlerin hepsi, uygun yöntemi seçen ve döndüren **BindToMethod**'a geçirilir. Kod örneğinin 2. durumda, **PrintValue**adlı iki yöntem vardır. **BindToMethod**çağrısıyla ilgili Yöntem seçilidir.  
+ Kullanılabilir küme içinde birden fazla üye varsa, bu yöntemlerin hepsi, uygun yöntemi seçen ve döndüren **BindToMethod**'a geçirilir. Kod örneğinin 2. durumda, **PrintValue** adlı iki yöntem vardır. **BindToMethod** çağrısıyla ilgili Yöntem seçilidir.  
   
- <xref:System.Reflection.Binder.ChangeType%2A>gerçek bağımsız değişkenleri seçili metodun biçimsel bağımsız değişkenlerinin türüne dönüştüren bağımsız değişken zorlaması (tür dönüştürme) gerçekleştirir. Türler tam olarak eşleşiyorsa bile her bağımsız değişken için **ChangeType** çağrılır.  
+ <xref:System.Reflection.Binder.ChangeType%2A> gerçek bağımsız değişkenleri seçili metodun biçimsel bağımsız değişkenlerinin türüne dönüştüren bağımsız değişken zorlaması (tür dönüştürme) gerçekleştirir. Türler tam olarak eşleşiyorsa bile her bağımsız değişken için **ChangeType** çağrılır.  
   
- Kod örneğinin 3. durumunda, "5,5" değerine sahip **dize** türünde gerçek bir bağımsız değişken, **Double**türünde bir biçimsel bağımsız değişkene sahip bir yönteme geçirilir. Çağrının başarılı olması için, "5,5" dize değerinin bir Double değere dönüştürülmesi gerekir. **ChangeType** bu dönüştürmeyi gerçekleştirir.  
+ Kod örneğinin 3. durumunda, "5,5" değerine sahip **dize** türünde gerçek bir bağımsız değişken, **Double** türünde bir biçimsel bağımsız değişkene sahip bir yönteme geçirilir. Çağrının başarılı olması için, "5,5" dize değerinin bir Double değere dönüştürülmesi gerekir. **ChangeType** bu dönüştürmeyi gerçekleştirir.  
   
  **ChangeType** , aşağıdaki tabloda gösterildiği gibi yalnızca kayıpsız veya [genişleyen zorlamalar](../../standard/base-types/type-conversion.md)gerçekleştirir.  
   
@@ -95,7 +98,7 @@ End Module
 |Tek|Çift|  
 |Başvuru olmayan tür|Başvuru türü|  
   
- <xref:System.Type>Sınıfı, belirli bir üyeye yönelik başvuruları çözümlemek Için **bağlayıcı** türünde parametreler kullanan **Get** yöntemlerine sahiptir. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> ve <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> Bu üyeye ait imza bilgilerini sağlayarak geçerli türün belirli bir üyesini arayın. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType>ve <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> uygun yöntemlerin verilen imza bilgilerini seçmek için geri çağırılır.  
+ <xref:System.Type>Sınıfı, belirli bir üyeye yönelik başvuruları çözümlemek Için **bağlayıcı** türünde parametreler kullanan **Get** yöntemlerine sahiptir. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> ve <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> Bu üyeye ait imza bilgilerini sağlayarak geçerli türün belirli bir üyesini arayın. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> ve <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> uygun yöntemlerin verilen imza bilgilerini seçmek için geri çağırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

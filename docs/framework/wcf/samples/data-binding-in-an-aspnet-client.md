@@ -2,14 +2,15 @@
 title: Bir ASP.NET İstemcisinde Veri Bağlama
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 134e1d7df3ed6bb245a870ad257fa64ad94e4e9c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3e30bcb9852b34eeb919339d57d701e4dda8a644
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602602"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266876"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Bir ASP.NET İstemcisinde Veri Bağlama
+
 Bu örnek, bir Web Forms uygulamasında tipik bir Windows Communication Foundation (WCF) hizmeti tarafından döndürülen verilerin nasıl bağlanacağını gösterir.  
   
 > [!NOTE]
@@ -27,7 +28,7 @@ Bu örnek, bir Web Forms uygulamasında tipik bir Windows Communication Foundati
   
 2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Bu örnek istemci, bir geliştirme Web sunucusu altında çalışan bir Web sitesidir. Geliştirme Web sunucusunu başlatmak için komut istemine şunu yazın: `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client` . Ardından öğesine gidin `http://localhost:8000/client` . Bu örneği bilgisayarlar arasında çalıştırmak için, `localhost` Istemcinin Web. config dosyasındaki tüm başvuruları sunucusunun bilgisayar adıyla değiştirin.  
+3. Bu örnek istemci, bir geliştirme Web sunucusu altında çalışan bir Web sitesidir. Geliştirme Web sunucusunu başlatmak için komut istemine şunu yazın: `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client` . Ardından öğesine gidin `http://localhost:8000/client` . Bu örneği bilgisayarlar arasında çalıştırmak için, `localhost` istemcinin Web.config dosyasındaki tüm başvuruları sunucusunun bilgisayar adıyla değiştirin.  
   
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  

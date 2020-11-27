@@ -12,14 +12,15 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: a1a43d7ce3fbc678cc9aa047c5110ac8615ea27e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ea5d920ccfa8a91c9fdc9d95c6165c8dfb52c6ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554149"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267045"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
+
 COM yöntemleri, HRESULTs döndüren hataları raporlar; .NET yöntemleri özel durumlar oluşturarak bunları raporlar. Çalışma zamanı, iki arasındaki geçişi işler. .NET Framework her bir özel durum sınıfı bir HRESULT ile eşlenir.  
   
  Kullanıcı tanımlı özel durum sınıfları, hangi HRESULT 'nin uygun olduğunu belirtebilir. Bu özel durum sınıfları özel durum nesnesi üzerinde **HRESULT** alanı ayarlanarak, özel durum OLUŞTURULDUĞUNDA döndürülecek HRESULT öğesini dinamik olarak değiştirebilir. Özel durumla ilgili ek bilgiler, yönetilmeyen işlemdeki .NET nesnesine uygulanan **IErrorInfo** arabirimi aracılığıyla istemciye sağlanır.  
@@ -45,7 +46,7 @@ COM yöntemleri, HRESULTs döndüren hataları raporlar; .NET yöntemleri özel 
     }  
     ```  
   
- Aynı anda hem yönetilen hem de yönetilmeyen kodu kullanan bir programla (herhangi bir programlama dilinde) karşılaşabilirsiniz. Örneğin, aşağıdaki kod örneğinde özel sıralayıcı, belirli bir HRESULT değeri ile özel durum oluşturmak için **Marshal. ThrowExceptionForHR (INT HRESULT)** yöntemini kullanır. Yöntemi HRESULT arar ve uygun özel durum türünü oluşturur. Örneğin, aşağıdaki kod parçasındaki HRESULT **ArgumentException**üretir.  
+ Aynı anda hem yönetilen hem de yönetilmeyen kodu kullanan bir programla (herhangi bir programlama dilinde) karşılaşabilirsiniz. Örneğin, aşağıdaki kod örneğinde özel sıralayıcı, belirli bir HRESULT değeri ile özel durum oluşturmak için **Marshal. ThrowExceptionForHR (INT HRESULT)** yöntemini kullanır. Yöntemi HRESULT arar ve uygun özel durum türünü oluşturur. Örneğin, aşağıdaki kod parçasındaki HRESULT **ArgumentException** üretir.  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -125,23 +126,23 @@ CMyClass::MethodThatThrows
   
  Genişletilmiş hata bilgilerini almak için, yönetilen istemci, oluşturulan özel durum nesnesinin alanlarını incelemeli. Bir hata hakkında yararlı bilgiler sağlamak için özel durum nesnesi için, COM nesnesi **IErrorInfo** arabirimini gerçekleştirmelidir. Çalışma zamanı, özel durum nesnesini başlatmak için **IErrorInfo** tarafından belirtilen bilgileri kullanır.  
   
- COM nesnesi **IErrorInfo**'yu desteklemiyorsa, çalışma zamanı varsayılan değerlerle bir özel durum nesnesi başlatır. Aşağıdaki tabloda bir özel durum nesnesiyle ilişkili her alan listelenmekte ve COM nesnesi **IErrorInfo 'yu**desteklediğinde varsayılan bilgilerin kaynağını tanımlıyor.  
+ COM nesnesi **IErrorInfo**'yu desteklemiyorsa, çalışma zamanı varsayılan değerlerle bir özel durum nesnesi başlatır. Aşağıdaki tabloda bir özel durum nesnesiyle ilişkili her alan listelenmekte ve COM nesnesi **IErrorInfo 'yu** desteklediğinde varsayılan bilgilerin kaynağını tanımlıyor.  
   
  Çalışma zamanının bazen `HRESULT` iş parçacığında mevcut olduğu durumlarda zaman içindeki durumları yoksaydığına unutmayın `IErrorInfo` .  Bu davranış, `HRESULT` ve ' nin `IErrorInfo` aynı hatayı temsil etmediği durumlarda gerçekleşebilir.  
   
 |Özel durum alanı|COM 'tan bilgi kaynağı|  
 |---------------------|------------------------------------|  
 |**Raporladı**|HRESULT çağrıdan döndürüldü.|  
-|**HelpLink**|**Ierrorinfo->HelpContext** sıfır değilse, dize **ıerrorınfo->GetHelpFile** ve "#" ve **IErrorInfo->GetHelpContext**şeklinde birleştirerek oluşturulur. Aksi takdirde, dize **IErrorInfo->GetHelpFile**öğesinden döndürülür.|  
-|**Bakın**|Her zaman bir null başvurusu (Visual Basic**hiçbir şey** ).|  
-|**İleti**|**IErrorInfo->GetDescription**öğesinden döndürülen dize.|  
-|**Kaynak**|**IErrorInfo->GetSource**öğesinden döndürülen dize.|  
+|**HelpLink**|**Ierrorinfo->HelpContext** sıfır değilse, dize **ıerrorınfo->GetHelpFile** ve "#" ve **IErrorInfo->GetHelpContext** şeklinde birleştirerek oluşturulur. Aksi takdirde, dize **IErrorInfo->GetHelpFile** öğesinden döndürülür.|  
+|**Bakın**|Her zaman bir null başvurusu (Visual Basic **hiçbir şey** ).|  
+|**İleti**|**IErrorInfo->GetDescription** öğesinden döndürülen dize.|  
+|**Kaynak**|**IErrorInfo->GetSource** öğesinden döndürülen dize.|  
 |**StackTrace**|Yığın izleme.|  
 |**TargetSite**|Hatalı HRESULT döndüren metodun adı.|  
   
- **İleti**, **kaynak**ve **StackTrace** gibi özel durum alanları **StackOverflowException**için kullanılamaz.  
+ **İleti**, **kaynak** ve **StackTrace** gibi özel durum alanları **StackOverflowException** için kullanılamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Gelişmiş COM birlikte çalışabilirlik](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
-- [Özel durumlar](../../standard/exceptions/index.md)
+- [Özel Durumlar](../../standard/exceptions/index.md)

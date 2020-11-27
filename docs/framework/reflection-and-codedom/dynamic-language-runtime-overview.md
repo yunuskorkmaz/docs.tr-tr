@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: 2272bc60af35e3cdec3e1a71bbc6516565b4ec6e
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: a36d6704b36b5006f19e21932797f21af849e55a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475157"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266837"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dinamik Dil Çalışma Zamanına Genel Bakış
 
@@ -55,24 +55,31 @@ DLCı 'ler kullanılarak geliştirilmiş dillerin örnekleri şunları içerir:
 - IronRuby. [IronRuby](http://ironruby.net/) Web sitesinden açık kaynaklı yazılım olarak kullanılabilir.
 
 ## <a name="primary-dlr-advantages"></a>Birincil DLR avantajları
+
  DLR aşağıdaki avantajları sağlar.
 
 ### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>.NET Framework dinamik dillerin taşıma işlemini basitleştirir
- DLCı 'ler, dil uygulayıcıları, çözümleyiciler, semantik çözümleyiciler, kod oluşturucuları ve geleneksel olarak kendilerini oluşturmak zorunda oldukları diğer araçları oluşturmanızı önler. DLR 'yi kullanmak için bir dilin ağaç şeklinde bir yapıda, çalışma zamanı Yardımcısı yordamlarında ve arabirimi uygulayan isteğe bağlı dinamik nesnelerde dil düzeyi kodu temsil eden *ifade ağaçları*üretmesi gerekir <xref:System.Dynamic.IDynamicMetaObjectProvider> . DLR ve .NET Framework, çok sayıda kod analizi ve kod oluşturma görevini otomatikleştirin. Bu, dil uygulayıcıları 'nın benzersiz dil özelliklerine odaklanmalarını sağlar.
+
+ DLCı 'ler, dil uygulayıcıları, çözümleyiciler, semantik çözümleyiciler, kod oluşturucuları ve geleneksel olarak kendilerini oluşturmak zorunda oldukları diğer araçları oluşturmanızı önler. DLR 'yi kullanmak için bir dilin ağaç şeklinde bir yapıda, çalışma zamanı Yardımcısı yordamlarında ve arabirimi uygulayan isteğe bağlı dinamik nesnelerde dil düzeyi kodu temsil eden *ifade ağaçları* üretmesi gerekir <xref:System.Dynamic.IDynamicMetaObjectProvider> . DLR ve .NET Framework, çok sayıda kod analizi ve kod oluşturma görevini otomatikleştirin. Bu, dil uygulayıcıları 'nın benzersiz dil özelliklerine odaklanmalarını sağlar.
 
 ### <a name="enables-dynamic-features-in-statically-typed-languages"></a>Statik olarak belirlenmiş dillerdeki dinamik özellikleri sunar
+
  C# ve Visual Basic gibi mevcut .NET Framework diller, dinamik nesneler oluşturabilir ve bunları statik olarak yazılmış nesnelerle birlikte kullanabilir. Örneğin, C# ve Visual Basic HTML, Belge Nesne Modeli (DOM) ve .NET yansıma için dinamik nesneler kullanabilir.
 
 ### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>DLCı r ve .NET Framework gelecek avantajları sağlar
+
  DLCı 'ler kullanılarak uygulanan diller, gelecekteki DLCı 'ler ve .NET Framework geliştirmelerinden faydalanabilir. Örneğin, .NET Framework geliştirilmiş bir çöp toplayıcısı veya daha hızlı derleme yükleme süresi içeren yeni bir sürüm yayımlarsa, DLR kullanılarak uygulanan diller hemen aynı avantajı alır. DLR, daha iyi derleme gibi iyileştirmeler eklerse, performans da DLCı r kullanılarak uygulanan tüm diller için de geliştirilir.
 
 ### <a name="enables-sharing-of-libraries-and-objects"></a>Kitaplıkların ve nesnelerin paylaşılmasını sunar
+
  Tek bir dilde uygulanan nesneler ve kitaplıklar diğer diller tarafından kullanılabilir. DLCı, statik olarak yazılmış ve dinamik diller arasında birlikte çalışabilirliği de sunar. Örneğin, C# dinamik bir dilde yazılmış bir kitaplığı kullanan dinamik bir nesne bildirebilir. Aynı zamanda, dinamik diller .NET Framework kitaplıklarını kullanabilir.
 
 ### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>Hızlı dinamik dağıtım ve çağırma sağlar
+
  DLR, gelişmiş polimorfik önbelleğe almayı destekleyerek dinamik işlemlerin hızlı bir şekilde yürütülmesini sağlar. DLR, nesneleri gerekli çalışma zamanı uygulamalarına kullanan bağlama işlemleri için kurallar oluşturur ve ardından aynı türdeki nesne türlerinde aynı kodun ardışık yürütmeleri sırasında kaynak tüketmeyi önlemek için bu kuralları önbelleğe alır.
 
 ## <a name="dlr-architecture"></a>DLR mimarisi
+
  Aşağıdaki çizimde, dinamik dil çalışma zamanının mimarisi gösterilmektedir.
 
  ![Dinamik dil çalışma zamanı mimarisine genel bakış](./media/dlr-archoverview.png "DLR_ArchOverview") DLR mimarisi
@@ -88,6 +95,7 @@ DLCı 'ler kullanılarak geliştirilmiş dillerin örnekleri şunları içerir:
 DLR, yalnızca .NET Framework değil, ancak Silverlight ve COM dahil olmak üzere diğer altyapılarla ve hizmetlerle iletişim kurmak için çağıran sitelerde ciltler kullanır. Ciltler bir dilin semantiğini kapsüller ve ifade ağaçları kullanarak bir çağrı sitesinde nasıl işlem yapılacağını belirtir. Bu, bir DLR kullanan dinamik ve statik olarak belirlenmiş dillerin kitaplıklarını paylaşmak ve DLR 'nin desteklediği tüm teknolojiler için erişim elde etmenizi sağlar.
 
 ## <a name="dlr-documentation"></a>DLR belgeleri
+
  Bir dile dinamik davranış eklemek için DLR 'nin açık kaynak sürümünü kullanma hakkında daha fazla bilgi için veya .NET Framework ile dinamik bir dilin kullanımını etkinleştirme hakkında daha fazla bilgi için GitHub 'daki [ıronlanguages/DLR](https://github.com/IronLanguages/dlr/tree/master/Docs) deposunun belgelerine bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.

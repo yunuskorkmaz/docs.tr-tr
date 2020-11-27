@@ -11,14 +11,15 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: a95d663c2669186fcb3eb1fb2f0c426ade945f1c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e0d80fe2433d894ef1f9e110e9090701dc305d8e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247539"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266759"
 ---
 # <a name="how-to-create-a-custom-token"></a>Nasıl yapılır: Özel Belirteç Oluşturma
+
 Bu konuda, sınıfını kullanarak özel bir güvenlik belirtecinin nasıl oluşturulacağı <xref:System.IdentityModel.Tokens.SecurityToken> ve özel bir güvenlik belirteci sağlayıcısı ve Authenticator ile nasıl tümleştirileceği gösterilmektedir. Tüm kod örneği için bkz. [özel belirteç](../samples/custom-token.md) örneği.  
   
  Bir *güvenlik belirteci* temelde, soap iletisindeki bir gönderici hakkındaki talepleri temsil etmek için WINDOWS COMMUNICATION FOUNDATION (WCF) güvenlik çerçevesi tarafından kullanılan bir XML öğesidir. WCF güvenliği, sistem tarafından sağlanan kimlik doğrulama modları için çeşitli belirteçler sağlar. Örnek olarak sınıf tarafından temsil edilen bir X. 509.440 sertifika güvenlik belirteci <xref:System.IdentityModel.Tokens.X509SecurityToken> veya sınıf tarafından temsil edilen bir Kullanıcı adı güvenlik belirteci bulunur <xref:System.IdentityModel.Tokens.UserNameSecurityToken> .  
@@ -32,6 +33,7 @@ Bu konuda, sınıfını kullanarak özel bir güvenlik belirtecinin nasıl oluş
  <xref:System.IdentityModel.Tokens>Güvenlik belirteçlerini temsil eden daha fazla sınıf için bkz. ad alanı.  
   
 ## <a name="procedures"></a>Yordamlar  
+
  Güvenlik altyapısına ilişkin kredi kartı bilgilerini belirtmek için bir yol ile birlikte bir istemci uygulaması sağlanmalıdır. Bu bilgiler, özel bir istemci kimlik bilgileri sınıfı tarafından uygulamaya sunulur. İlk adım, özel istemci kimlik bilgileri için kredi kartı bilgilerini temsil eden bir sınıf oluşturmaktır.  
   
 #### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a>İstemci kimlik bilgileri içindeki kredi kartı bilgilerini temsil eden bir sınıf oluşturmak için  
@@ -162,6 +164,6 @@ Bu konuda, sınıfını kullanarak özel bir güvenlik belirtecinin nasıl oluş
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](walkthrough-creating-custom-client-and-service-credentials.md)
+- [İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](walkthrough-creating-custom-client-and-service-credentials.md)
 - [Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma](how-to-create-a-custom-security-token-authenticator.md)
 - [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](how-to-create-a-custom-security-token-provider.md)

@@ -2,17 +2,18 @@
 title: OperationBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 8c9b0755-9e83-411f-bdcb-61a586022797
-ms.openlocfilehash: 79601308c66abe43dd5a7f72bd2a05b9d2346c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76cc619aed4ba2b944a8d11dc454a40368a4068c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963053"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269086"
 ---
 # <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
+
 OperationBehaviorAttribute  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class OperationBehaviorAttribute : Behavior  
@@ -26,51 +27,58 @@ class OperationBehaviorAttribute : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- OperationBehaviorAttribute sınıf herhangi bir yöntemi tanımlamaz.  
+
+ OperationBehaviorAttribute sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  OperationBehaviorAttribute sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="autodisposeparameters"></a>AutoDisposeParameters  
+### <a name="autodisposeparameters"></a>Oto Disposeparameters  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Parametreler için dispose otomatik özellik durumu.  
+ Parametrelerin otomatik atımı özelliğinin durumu.  
   
 ### <a name="impersonation"></a>Kimliğe bürünme  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Destekleyen işlemi çağıranın kimliğe bürünme düzeyini gösterir.  
+ İşlemin desteklediği çağıran kimliğe bürünme düzeyini gösterir.  
   
-### <a name="releaseinstancemode"></a>OperationBehaviorAttribute üstündeki ReleaseInstanceMode  
+### <a name="releaseinstancemode"></a>ReleaseInstanceMode  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Nesne geri dönüştürmek için bir işlemi başlatılması sırasında gösterir.  
+ Nesnenin geri dönüştürülmesinin ne zaman bir işlem çağrısı olduğu gösterilir.  
   
 ### <a name="transactionautocomplete"></a>TransactionAutoComplete  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İşlenmeyen özel durumlar oluşursa otomatik olarak geçerli hareketi tamamlamak görüntülenip görüntülenmeyeceğini gösterir.  
+ İşlenmeyen özel durumlar oluşursa geçerli işlemin otomatik olarak kaydedilip edilmeyeceğini belirtir.  
   
 ### <a name="transactionscoperequired"></a>TransactionScopeRequired  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İşlemi bir işlem gerekli olup olmadığını gösterir.  
+ İşlemin bir işlem gerektirip gerektirmediğini belirtir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

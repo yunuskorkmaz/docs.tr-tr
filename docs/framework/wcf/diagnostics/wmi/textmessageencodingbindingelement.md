@@ -2,17 +2,18 @@
 title: TextMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 885e2d7a-3436-4093-bc5f-0a404c62acdc
-ms.openlocfilehash: 67c1083daa9acfd204d4de50d4e9178b25aafcf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 551761af255681dd2c2dbb9e40b7103c95cd2e0a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858396"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267227"
 ---
 # <a name="textmessageencodingbindingelement"></a>TextMessageEncodingBindingElement
+
 TextMessageEncodingBindingElement  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class TextMessageEncodingBindingElement : MessageEncodingBindingElement  
@@ -25,44 +26,50 @@ class TextMessageEncodingBindingElement : MessageEncodingBindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- TextMessageEncodingBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
+
+ TextMessageEncodingBindingElement sınıfı herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  TextMessageEncodingBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="encoding"></a>Encoding  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İletileri bağlamadaki yayma için kullanılacak kodlama karakter kümesi.  
+ Bağlamadaki iletileri yayma için kullanılacak karakter kümesi kodlaması.  
   
-### <a name="maxreadpoolsize"></a>maxReadPoolSize  
- Veri türü: SINT32  
+### <a name="maxreadpoolsize"></a>MaxReadPoolSize  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İleti sayısını tanımlayan bir tamsayı yeni okuyucu ayırmadan aynı anda okuyabilirsiniz.  
+ Yeni okuyucular ayırmadan aynı anda okunabilecek ileti sayısını tanımlayan bir tamsayı.  
   
 ### <a name="maxwritepoolsize"></a>MaxWritePoolSize  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İleti sayısını tanımlayan bir tamsayı, yeni yazıcı ayırmadan aynı anda gönderilebilecek.  
+ Yeni yazıcı ayırmadan aynı anda gönderilebilecek ileti sayısını tanımlayan bir tamsayı.  
   
 ### <a name="readerquotas"></a>ReaderQuotas  
+
  Veri türü: XmlDictionaryReaderQuotas  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Okuyucular kotalar.  
+ Okuyucuların kotaları.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
