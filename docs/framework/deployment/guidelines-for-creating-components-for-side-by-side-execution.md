@@ -6,14 +6,15 @@ helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-ms.openlocfilehash: f0d25984f2444d29d9fc0edb3add23b6adc04c62
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3ac7c514a69ae05b00e7a486aadcbf41e5d1cbd6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622646"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262521"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Yan Yana Yürütme için Bileşen Oluşturma Yönergeleri
+
 Yan yana yürütme için tasarlanan yönetilen uygulamaları veya bileşenleri oluşturmak için aşağıdaki genel yönergeleri izleyin:  
   
 - Tür kimliğini bir dosyanın belirli bir sürümüne bağlayın.  
@@ -29,6 +30,7 @@ Yan yana yürütme için tasarlanan yönetilen uygulamaları veya bileşenleri o
      Yalıtım aşamasında çalışan bir uygulama veya bileşen, uygulamanın veya bileşenin iki örneği aynı anda çalıştığında çakışmaları önlemek için kaynakları yönetmelidir. Uygulama veya bileşen ayrıca sürüme özgü bir dosya yapısı kullanmalıdır.  
   
 ## <a name="application-and-component-isolation"></a>Uygulama ve bileşen yalıtımı  
+
  Yan yana yürütme için bir uygulamanın veya bileşenin başarıyla tasarlanmasına yönelik bir anahtar, yalıtımdır. Uygulamanın veya bileşenin tüm kaynakları, özellikle de dosya g/ç 'yi yalıtılmış bir şekilde yönetmesi gerekir. Uygulamanızın veya bileşenin yalıtımta çalıştığından emin olmak için bu yönergeleri izleyin:  
   
 - Kayıt defterine sürüme özgü bir şekilde yazın. Değerleri, sürümü gösteren yığınlar veya anahtarlar halinde depolayın ve bir bileşenin sürümleri arasında bilgi veya durum paylaşmayın. Bu, aynı anda çalışan iki uygulamanın veya bileşenin, bilgilerin üzerine yazılmasına engel olur.  
@@ -40,6 +42,7 @@ Yan yana yürütme için tasarlanan yönetilen uygulamaları veya bileşenleri o
 - Kullanıcı hesaplarını ve grupları sürüme özgü bir şekilde oluşturun. Bir uygulama tarafından oluşturulan kullanıcı hesapları ve gruplar, sürümle tanımlanmalıdır. Kullanıcı hesaplarını ve grupları bir uygulamanın sürümleri arasında paylaşmayın.  
   
 ## <a name="installing-and-uninstalling-versions"></a>Sürümleri yükleme ve kaldırma  
+
  Yan yana yürütme için bir uygulama tasarlarken, sürümleri yükleme ve kaldırma ile ilgili aşağıdaki yönergeleri izleyin:  
   
 - .NET Framework farklı bir sürümünde çalışan diğer uygulamalar tarafından gerekebilecek bilgileri kayıt defterinden silmeyin.  
@@ -55,6 +58,7 @@ Yan yana yürütme için tasarlanan yönetilen uygulamaları veya bileşenleri o
 - Sürüm bilgisi olmayan bir yol içeren kayıt defterine hiçbir şey eklemeyin.  
   
 ## <a name="file-version-number-and-assembly-version-number"></a>Dosya sürüm numarası ve derleme sürüm numarası  
+
  Dosya sürümü, çalışma zamanı tarafından kullanılmayan bir Win32 sürümü kaynağıdır. Genel olarak, dosya sürümünü yerinde güncelleştirme için de güncelleştirebilirsiniz. İki özdeş dosya farklı dosya sürümü bilgilerine sahip olabilir ve iki farklı dosya aynı dosya sürümü bilgisine sahip olabilir.  
   
  Derleme sürümü derleme bağlaması için çalışma zamanı tarafından kullanılır. Farklı sürüm numaralarına sahip iki özdeş derleme çalışma zamanı tarafından iki farklı derleme olarak değerlendirilir.  
@@ -63,5 +67,5 @@ Yan yana yürütme için tasarlanan yönetilen uygulamaları veya bileşenleri o
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yan yana yürütme](side-by-side-execution.md)
+- [Yan Yana Yürütme](side-by-side-execution.md)
 - [Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

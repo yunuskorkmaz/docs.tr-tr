@@ -2,14 +2,15 @@
 title: Windows Communication Foundation Örneklerini Çalıştırma
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 57f760fa8bf4a3abf83492ac455dfaed2b327e7e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3a12128541739ba5c380be2efc291b9b419cab12
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545109"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262677"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örneklerini Çalıştırma
+
 Windows Communication Foundation (WCF) örnekleri, tek makineli veya bir çapraz makine yapılandırmasında çalıştırılabilir. Sağlandığı gibi, örnekler tek bir makinede çalıştırılmaya hazırlardır. Bir çapraz makine yapılandırmasında, bir örneğin yapılandırma dosyası ayarlarını değiştirmek gereklidir. Aşağıdaki yordamlarda, aynı makine ve makineler arası yapılandırmalarda bir örneği çalıştırmanın açıklanmaktadır. Internet Information Services (IIS) ve şirket içinde barındırılan örneklerde barındırılan hizmetler için adımlarda Çeşitlemeler bulunduğunu unutmayın. Çoğu örnek IIS 'de barındırılır; nasıl barındırıldığını öğrenmek için örnek Benioku bilgilerine bakın.  
   
  Windows Vista 'da, IIS 'de barındırılmayan örnekler, Http.sys bir dinleyici kaydetmek için yükseltilmiş ayrıcalıklar gerektirir. Hizmetin dinleme adreslerini hizmetin altında çalıştığı hesapla kaydetmek veya hizmeti yönetici ayrıcalıklarıyla çalışan bir komut isteminden başlatmak için Httpcfg.exe kullanın.  

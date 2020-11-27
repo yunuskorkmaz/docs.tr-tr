@@ -2,15 +2,16 @@
 title: Nesne Başvuruları
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: ba4ee3fd0cc16130f66570891ecc295b2d2c50aa
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55cadc908a3479ee3d104354bcbfd3ea49b15d07
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599990"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262391"
 ---
 # <a name="object-references"></a>Nesne Başvuruları
-Bu örnek, nesneleri sunucu ve istemci arasında başvuruya göre nasıl geçileceğini gösterir. Örnek, sanal *sosyal ağları*kullanır. Sosyal ağ `Person` , her arkadaşın `Person` kendi arkadaş listesi ile sınıfın bir örneği olduğu arkadaş listesini içeren bir sınıftan oluşur. Bu, nesnelerin bir grafiğini oluşturur. Hizmet, bu sosyal ağlarda işlemleri kullanıma sunar.  
+
+Bu örnek, nesneleri sunucu ve istemci arasında başvuruya göre nasıl geçileceğini gösterir. Örnek, sanal *sosyal ağları* kullanır. Sosyal ağ `Person` , her arkadaşın `Person` kendi arkadaş listesi ile sınıfın bir örneği olduğu arkadaş listesini içeren bir sınıftan oluşur. Bu, nesnelerin bir grafiğini oluşturur. Hizmet, bu sosyal ağlarda işlemleri kullanıma sunar.  
   
  Bu örnekte, hizmet Internet Information Services (IIS) tarafından barındırılır ve istemci bir konsol uygulaması (. exe).  
   
@@ -18,6 +19,7 @@ Bu örnek, nesneleri sunucu ve istemci arasında başvuruya göre nasıl geçile
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 ## <a name="service"></a>Hizmet  
+
  `Person`Sınıfı, <xref:System.Runtime.Serialization.DataContractAttribute> öğesini <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> `true` bir başvuru türü olarak bildirmek üzere ayarlanmış olan özniteliği ile birlikte uygulandı. Tüm Özellikler <xref:System.Runtime.Serialization.DataMemberAttribute> uygulanmış özniteliği vardır.  
   
 ```csharp
@@ -92,6 +94,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>İstemci  
+
  İstemci proxy 'si, Visual Studio 'nun **hizmet başvurusu Ekle** özelliği kullanılarak oluşturulur.  
   
  Beş nesneden oluşan bir sosyal ağ `Person` oluşturulur. İstemci, hizmette üç yöntemin her birini çağırır.  

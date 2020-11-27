@@ -2,17 +2,18 @@
 title: ServiceDebugBehavior
 ms.date: 03/30/2017
 ms.assetid: a5ec9061-1e95-43fb-b0d9-dbd0a7bc3c44
-ms.openlocfilehash: 2e38eb2c2d42ffc5436562b254a42215ccabbab2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dba4abd74cdddeb2b641feec5902413fe0704b1f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956968"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262300"
 ---
 # <a name="servicedebugbehavior"></a>ServiceDebugBehavior
+
 ServiceDebugBehavior  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ServiceDebugBehavior : Behavior  
@@ -26,51 +27,58 @@ class ServiceDebugBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ServiceDebugBehavior sınıf herhangi bir yöntemi tanımlamaz.  
+
+ ServiceDebugBehavior sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  ServiceDebugBehavior sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="httphelppageenabled"></a>HttpHelpPageEnabled  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet tarafından denetlenen adresten WSDL yayınlamayacağını denetleyen `HttpGetUrl` özniteliği.  
+ Hizmetin WSDL 'sini öznitelik tarafından denetlenen adreste yayımlayıp yayımlamadığını denetler `HttpGetUrl` .  
   
-### <a name="httphelppageurl"></a>HttpHelpPageUrl  
+### <a name="httphelppageurl"></a>'Nin HttpHelpPageUrl  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- WSDL hizmet HTTP kullanılarak alınması için yayımlanan konumunu ayarlar.  
+ Hizmet WSDL 'sinin HTTP kullanılarak alınması için yayımlandığı konumu ayarlar.  
   
 ### <a name="httpshelppageenabled"></a>HttpsHelpPageEnabled  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet, WSDL HTTPS üzerinden denetlediği adresten yayınlamayacağını denetleyen `HttpsGetUrl` özniteliği.  
+ Hizmetin WSDL 'nin HTTPS üzerinden özniteliği tarafından denetlenen adreste yayımlayıp yayımlamadığını denetler `HttpsGetUrl` .  
   
-### <a name="httpshelppageurl"></a>HttpsHelpPageUrl  
+### <a name="httpshelppageurl"></a>'Nin HttpsHelpPageUrl  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- WSDL hizmet alma işlemi için HTTPS kullanarak yayımlanan konumunu ayarlar.  
+ Hizmet WSDL 'sinin HTTPS kullanılarak alınması için yayımlandığı konumu ayarlar.  
   
 ### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hata ayıklama amacıyla, istemcilere dönen SOAP hatalarının ayrıntılarındaki yönetilen özel durum bilgilerinin dahil edilip edilmeyeceğini belirtir.  
+ Yönetilen özel durum bilgilerinin, istemcilere hata ayıklama amacıyla döndürülen SOAP hatalarının ayrıntısına eklenip eklenmeyeceğini belirtir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

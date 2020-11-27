@@ -2,14 +2,15 @@
 title: Gövdeye göre Yönlendir
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: 146baf806f4922f5e3ddd92a762772786e61d443
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: af88d9938098c9aaa6b4b116c196e3b7f563a1e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594601"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262703"
 ---
 # <a name="route-by-body"></a>Gövdeye göre Yönlendir
+
 Bu örnek, herhangi bir SOAP eylemiyle ileti nesnelerini kabul eden bir hizmetin nasıl uygulanacağını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır. Hizmet, `Calculate` <xref:System.ServiceModel.Channels.Message> istek parametresini kabul eden ve bir yanıt döndüren tek bir işlem uygular <xref:System.ServiceModel.Channels.Message> .  
   
  Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet IIS 'de barındırılır.  
@@ -35,9 +36,9 @@ Bu örnek, herhangi bir SOAP eylemiyle ileti nesnelerini kabul eden bir hizmetin
     }  
 ```  
   
- Bir sözleşme verildiğinde, bir hizmet, `DispatchByBodyBehavior` işlemler arasında iletilerin dağıtılması için özel dağıtım davranışı gerektirir. Bu dağıtım davranışı, `DispatchByBodyElementOperationSelector` özel işlem seçiciyi, ilgili sarmalayıcı öğelerinin QName tarafından anahtarlanan işlem adlarından oluşan bir tabloyla başlatır. `DispatchByBodyElementOperationSelector`, gövdenin ilk alt öğesinin başlangıç etiketine bakar ve daha önce bahsedilen tabloyu kullanarak işlemi seçer.  
+ Bir sözleşme verildiğinde, bir hizmet, `DispatchByBodyBehavior` işlemler arasında iletilerin dağıtılması için özel dağıtım davranışı gerektirir. Bu dağıtım davranışı, `DispatchByBodyElementOperationSelector` özel işlem seçiciyi, ilgili sarmalayıcı öğelerinin QName tarafından anahtarlanan işlem adlarından oluşan bir tabloyla başlatır. `DispatchByBodyElementOperationSelector` , gövdenin ilk alt öğesinin başlangıç etiketine bakar ve daha önce bahsedilen tabloyu kullanarak işlemi seçer.  
   
- İstemci, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak hizmet tarafından DıŞARıYA aktarılmış WSDL 'den otomatik olarak oluşturulan bir proxy kullanır.  
+ İstemci, [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak hizmet tarafından DıŞARıYA aktarılmış WSDL 'den otomatik olarak oluşturulan bir proxy kullanır.  
   
 ```console  
 svcutil.exe  /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples /uxs http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedProxy.cs  

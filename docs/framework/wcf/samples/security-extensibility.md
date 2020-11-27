@@ -2,17 +2,19 @@
 title: Güvenlik Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-ms.openlocfilehash: f3fc9a482271b904ccf56f1a911d3a44172bb40e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 967fde21f599835a06af4c502f3b8a4c8555b77c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602394"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262638"
 ---
 # <a name="security-extensibility"></a>Güvenlik Genişletilebilirliği
+
 Bu bölüm Windows Communication Foundation (WCF) ' de özel güvenliği gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Dayanıklı Verilen Belirteç Sağlayıcısı](durable-issued-token-provider.md)  
  Özel bir istemci tarafından verilen belirteç sağlayıcısının nasıl uygulanacağını gösterir.  
   
