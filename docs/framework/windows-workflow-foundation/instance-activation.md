@@ -2,42 +2,47 @@
 title: Örnek Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 5e0d5a91a0f0ccc02d13ef96c3470da1942cc520
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 1fd30d9d440c06c03e726ed1f1ddbebb0d5f7e8c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348251"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279941"
 ---
 # <a name="instance-activation"></a>Örnek Etkinleştirme
-SQL iş akışı örneği Store düzenli olarak çalıştırılabilir veya etkinleştirilebilir iş akışı örnekleri Kalıcılık veritabanında algılar ve uyanır bir iç görev çalıştırır. Bir çalıştırılabilir iş akışı örneği bulursa örneğin etkinleştirme özelliğine sahip olan iş akışı ana bilgisayarı bildirir. Örnek deposuna etkinleştirilebilir iş akışı örneği bulursa, sırayla iş akışı örneği çalıştıran bir iş akışı ana etkinleştiren genel bir ana bilgisayar bildirir. Bu konunun aşağıdaki bölümlerinde ayrıntılı örnek etkinleştirme işlemi açıklanmaktadır.  
+
+SQL Iş akışı örneği deposu, düzenli aralıklarla uyandığı ve kalıcılık veritabanındaki runetkinleştirilebilir veya iş akışı örneklerini algılayan bir iç görev çalıştırır. Bir çalıştırılabilir iş akışı örneği bulursa, örneği etkinleştirebilen iş akışı konağına bildirir. Örnek deposunda bir etkinleştirilebilir iş akışı örneği bulunursa, iş akışı örneğini çalıştıran bir iş akışı konağını etkinleştiren genel bir konağa bildirir. Bu konudaki aşağıdaki bölümlerde örnek etkinleştirme işlemi ayrıntılı olarak açıklanmaktadır.  
   
-## <a name="RunnableSection"></a> Algılama ve çalıştırılabilir iş akışı örnekleri etkinleştirme  
- SQL iş akışı örneği Store iş akışı örneği göz önünde bulundurur *çalıştırılabilir* örneği askıya alınma durumunda veya tamamlandı durumuna değilse ve aşağıdaki koşulları karşılayan:  
+## <a name="detecting-and-activating-runnable-workflow-instances"></a><a name="RunnableSection"></a> Çalıştırılabilir Iş akışı örnekleri algılanıyor ve etkinleştiriliyor  
+
+ SQL Iş akışı örneği deposu, örnek askıya alınma durumunda veya tamamlanmış durumda değilse, *çalıştırılabilir* bir iş akışı örneğini kabul eder ve aşağıdaki koşulları karşılar:  
   
-- Örnek kilitli olup süresi doldu bekleyen bir zamanlayıcı içerir.  
+- Örneğin kilidi açık ve süresi geçmiş bir bekleme süreölçeri vardır.  
   
-- Örneğinin süresi dolmuş bir kilit üzerinde vardır.  
+- Örneğin, üzerinde süresi doldu kilidi vardır.  
   
-- Örnek kilidi açılmış ve durumunun **Executing**.  
+- Örneğin kilidi açıldı ve durumu **yürütülüyor**.  
   
- SQL iş akışı örneği Store başlatır <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> çalıştırılabilir bir örneği bulduğunda. Bundan sonra SqlWorkflowInstanceStore durdurur kadar izleme <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> mağaza kez çağrılır.  
+ SQL Iş akışı örneği deposu, <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> bir runbir örnek bulduğunda öğesini oluşturur. Bundan sonra SqlWorkflowInstanceStore, <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> depoda bir kez çağrılana kadar izlemeyi durduruyor.  
   
- Abone bir iş akışı ana bilgisayarı <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> ve yükleme özellikli örneği yürütür <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> belleğe örneği yüklemek için örnek deposu ile karşılaştırarak. Bir iş akışı ana bilgisayarı ana bilgisayar ve örnek meta veri özelliği varsa, bir iş akışı örneği yükleniyor uyumlu olarak kabul edilir **WorkflowServiceType** aynı değere ayarlar.  
+ İçin abone olan ve örneği yükleyebilen bir iş akışı ana bilgisayarı örneği <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> belleğe yüklemek için örnek deposuna karşı yürütülür. Konak ve örnekte, **WorkflowServiceType** meta veri özelliği aynı değere ayarlanmışsa bir iş akışı konağı, bir iş akışı örneği yükleme yeteneğine sahip olarak kabul edilir.  
   
-## <a name="detecting-and-activating-activatable-workflow-instances"></a>Algılama ve etkinleştirilebilir iş akışı örnekleri etkinleştirme  
- Bir iş akışı örneği kabul *etkinleştirilebilir* örneği çalıştırılabilir ve varsa örneği yüklerken birini özelliğine sahip olan hiçbir iş akışı ana bilgisayarda çalışan. Algılama ve etkinleştirme çalıştırılabilir iş akışı örnekleri üzerinde çalıştırılabilir bir iş akışı örneğinin tanımını için bkz.  
+## <a name="detecting-and-activating-activatable-workflow-instances"></a>Etkinleştirilebilir Iş akışı örnekleri algılanıyor ve etkinleştiriliyor  
+
+ Örnek çalıştırılabilir ise, bir iş akışı örneği *etkinleştirilebilir* olarak kabul edilir ve örneğin bilgisayarda çalışan bir iş akışı konağı yoktur. Bkz. runsee iş akışı örneği tanımı için yukarıdaki çalıştırılabilir Iş akışı örneklerini algılama ve etkinleştirme.  
   
- SQL iş akışı örneği Store başlatır <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> veritabanında etkinleştirilebilir iş akışı örneği bulduğunda bu. Bundan sonra SqlWorkflowInstanceStore durdurur kadar izleme <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand> mağaza kez çağrılır.  
+ SQL Iş akışı örneği deposu, <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> veritabanında bir etkinleştirilebilir iş akışı örneği bulduğunda öğesini başlatır. Bundan sonra SqlWorkflowInstanceStore, <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand> depoda bir kez çağrılana kadar izlemeyi durduruyor.  
   
- Bir genel ana bilgisayar için abone olduğunda <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> olay aldığında yürütülmeden <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand> etkinleştirme parametresi bir iş akışı ana bilgisayar oluşturmak için gereken almak için örnek deposu ile karşılaştırarak. Genel konak hangi sırayla yükler ve çalıştırılabilir hizmet örneği çalıştıran bir iş akışı ana bilgisayar oluşturmak için bu etkinleştirme parametrelerini kullanır.  
+ İçin abone olan bir genel ana bilgisayar <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> olayı aldığında, <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand> bir iş akışı konağı oluşturmak için gereken etkinleştirme parametrelerini elde etmek üzere örnek deposuna karşı yürütülür. Genel ana bilgisayar bu etkinleştirme parametrelerini, bir iş akışı konağı oluşturmak için kullanır, bu da çalıştırılabilir hizmet örneğini yükler ve çalıştırır.  
   
-## <a name="generic-hosts"></a>Genel konakları  
- Meta veri özelliğinin değeri olan bir konak genel yöneticisidir **WorkflowServiceType** genel konakları için ayarlanmış **WorkflowServiceType.Any** herhangi bir iş akışı türü işleyebileceğini belirtmek için. Genel bir ana bilgisayar adında bir XName parametresinin **ActivationType**.  
+## <a name="generic-hosts"></a>Genel konaklar  
+
+ Genel ana bilgisayar, genel konaklar için **WorkflowServiceType** meta veri özelliğinin değerini içeren bir ana bilgisayar, **WorkflowServiceType olarak ayarlanmıştır. herhangi** bir iş akışı türünü Işleyebileceğini belirtmek için Any. Genel ana bilgisayar **ActivationType** adlı bir XName parametresine sahiptir.  
   
- Şu anda SQL iş akışı örneği Store kümesine ActivationType parametresinin değeri genel konaklarla destekler **WAS**. SQL iş akışı örneği Store ActivationType WAS için ayarlanmazsa, oluşturur bir <xref:System.Runtime.DurableInstancing.InstancePersistenceException>. İş akışı yönetimi, Windows Server AppFabric barındırma özellikleri ile birlikte gelen kümesine etkinleştirme türü olan genel bir ana bilgisayar hizmetidir **WAS**.  
+ Şu anda SQL Iş akışı örneği deposu, ActivationType parametresinin değeri **was** olarak ayarlanan genel Konakları destekler. ActivationType, olarak ayarlanmamışsa, SQL Iş akışı örneği deposu bir oluşturur <xref:System.Runtime.DurableInstancing.InstancePersistenceException> . Windows Server AppFabric barındırma özellikleriyle birlikte gelen Iş akışı yönetim hizmeti, etkinleştirme türü **was** olarak ayarlanmış olan genel bir ana bilgisayar.  
   
- WAS etkinleştirme için genel bir konağa bir dizi yeni konakları etkinleştirilebilmesi için uç nokta adresini türetmek için etkinleştirme parametresi gerektirir. WAS etkinleştirme için etkinleştirme site, uygulamanın site göreli yolunu ve hizmetinin uygulama göreli yolunu adını parametrelerdir. SQL iş akışı örneği Store yürütülmesi sırasında bu etkinleştirme parametreleri depolayan <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.  
+ WAS etkinleştirmesi için, genel bir ana bilgisayar, yeni ana bilgisayarların etkinleştiribileceği uç nokta adresini türeten bir etkinleştirme parametreleri kümesi gerektirir. WAS etkinleştirme için etkinleştirme parametreleri sitenin adı, siteye göre uygulamanın yolu ve uygulamaya göre hizmetin yoludur. SQL Iş akışı örneği deposu, yürütme sırasında bu etkinleştirme parametrelerini depolar <xref:System.Activities.DurableInstancing.SaveWorkflowCommand> .  
   
 ## <a name="runnable-instances-detection-period"></a>Çalıştırılabilir Örnekleri Algılama Dönemi  
- **Çalıştırılabilir örnekleri algılama dönemi** SQL iş akışı örneği Store özelliği SQL iş akışı örneği Store sonra çalıştırılabilir veya etkinleştirilebilir akışlarınızın algılamak için algılama görev çalıştırır süreyi belirtir Önceki saptama döngüsünden sonra Kalıcılık veritabanı örnekleri. Bkz: [çalıştırılabilir örnekleri algılama dönemi](runnable-instances-detection-period.md) bu özellik hakkında daha fazla bilgi.
+
+ SQL Iş akışı örneği deposunun **çalıştırılabilir örnek algılama dönemi** ÖZELLIĞI, SQL Iş akışı örneği deposunun, önceki algılama döngüsünden sonra kalıcılık veritabanında herhangi bir çalıştırılabilir veya etkinleştirilebilir iş akışı örneğini algılamak için bir algılama görevi çalıştırması için geçen süreyi belirtir. Bu özellik hakkında daha fazla bilgi için bkz. [çalıştırılabilir örnekler algılama süresi](runnable-instances-detection-period.md) .

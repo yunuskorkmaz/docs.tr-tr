@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: Filtreleri Kullanma'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 434171138e75a0f4c336cd80cc2beb574b10001e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 149c0809820d6a4a9c8dabfb545258b9a3ffb40b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598898"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280851"
 ---
 # <a name="how-to-use-filters"></a>Nasıl yapılır: Filtreleri Kullanma
+
 Bu konuda, birden çok filtre kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımlar özetlenmektedir. Bu örnekte, iletiler, regularCalc ve roundingCalc hesap makinesi hizmetinin iki uygulamasına yönlendirilir. Her iki uygulama da aynı işlemleri destekler; Ancak, bir hizmet, döndürmeden önce tüm hesaplamaları en yakın tamsayı değerine yuvarlar. İstemci uygulaması, hizmetin yuvarlama sürümünün kullanılıp kullanılmayacağını belirtebilmelidir; hiçbir hizmet tercihi ifade Ediyse, ileti iki hizmet arasında yük dengelemesi yapılır. Her iki hizmet tarafından kullanıma sunulan işlemler şunlardır:  
   
 - Ekle  
@@ -132,7 +133,7 @@ Bu konuda, birden çok filtre kullanan bir yönlendirme yapılandırması oluşt
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     İle başlayan bir adreste bir ileti alındığında, `http://localhost/routingservice/router/rounding/` Bu filtre **true**olarak değerlendirilir. Bu yapılandırma tarafından kullanılan temel adres `http://localhost/routingservice/router` ve roundingEndpoint için belirtilen adres "yuvarlama/Hesaplayıcı" olduğundan, bu uç nokta ile iletişim kurmak için kullanılan tam adres `http://localhost/routingservice/router/rounding/calculator` Bu filtreyle eşleşir.  
+     İle başlayan bir adreste bir ileti alındığında, `http://localhost/routingservice/router/rounding/` Bu filtre **true** olarak değerlendirilir. Bu yapılandırma tarafından kullanılan temel adres `http://localhost/routingservice/router` ve roundingEndpoint için belirtilen adres "yuvarlama/Hesaplayıcı" olduğundan, bu uç nokta ile iletişim kurmak için kullanılan tam adres `http://localhost/routingservice/router/rounding/calculator` Bu filtreyle eşleşir.  
   
     > [!NOTE]
     > Tek bir konağa, bir eşleşme gerçekleştirirken konak adı değerlendirilmez, çünkü tek bir ana bilgisayar, ana bilgisayara istemci uygulamasından başvurmanın geçerli yolları olabilecek çeşitli konak adları kullanılarak başvuruda bulunulabilir. Örneğin, aşağıdakilerin tümü aynı konağa başvurabilir:  
@@ -226,6 +227,7 @@ Bu konuda, birden çok filtre kullanan bir yönlendirme yapılandırması oluşt
     ```  
   
 ## <a name="example"></a>Örnek  
+
  Yapılandırma dosyasının tüm listesi aşağıda verilmiştir.  
   
 ```xml  

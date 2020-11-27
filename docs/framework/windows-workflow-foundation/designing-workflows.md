@@ -5,17 +5,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], designing workflows
 ms.assetid: 41f727b5-b142-4c1b-b046-492b96135ae6
-ms.openlocfilehash: 07ccd1de6648438ad65f88bada3e055e1e2a4134
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 6c44f24518110266b4b2e41c7507093c3e1e3f79
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419934"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280305"
 ---
 # <a name="designing-workflows"></a>İş Akışları Tasarlama
+
 Bu bölümdeki konularda, iş akışı geliştirmede kullanılan Flow-Control paradigmalarına açıklanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Akış Çizelgesi İş Akışları](flowchart-workflows.md)  
  Tanıdık akış çizelgesi paradigması kullanılarak iş akışlarının nasıl oluşturulacağını gösterir.  
   

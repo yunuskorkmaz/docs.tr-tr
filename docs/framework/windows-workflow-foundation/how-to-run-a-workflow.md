@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 86062dd5147e6e354833928fd98bd1f6b5de9114
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 7f76ed5ad1a76a155489339a9febf12eefd64ae8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421507"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279993"
 ---
 # <a name="how-to-run-a-workflow"></a>Nasıl yapılır: İş Akışı Çalıştırma
+
 Bu konu, kullanmaya başlama öğreticisini Windows Workflow Foundation ve bir iş akışı konağının nasıl oluşturulduğunu ve önceki [nasıl yapılır: Iş akışı oluşturma](how-to-create-a-workflow.md) konusunda tanımlanan iş akışını nasıl çalıştıracağınızı açıklar.
 
 > [!NOTE]
@@ -38,7 +39,7 @@ Bu konu, kullanmaya başlama öğreticisini Windows Workflow Foundation ve bir i
 
      **.NET Framework 4,5** ' nin .NET Framework sürüm açılan listesinde seçildiğinden emin olun. **İş akışı listesinden iş** akışı **konsol uygulaması** ' nı seçin. `NumberGuessWorkflowHost` **Ad** kutusuna yazın ve **Tamam**' a tıklayın. Bu, temel iş akışı barındırma desteğiyle bir başlatıcı iş akışı uygulaması oluşturur. Bu temel barındırma kodu değiştirilir ve iş akışı uygulamasını çalıştırmak için kullanılır.
 
-4. **Çözüm Gezgini** ' de yeni eklenen **Numberguessworkflowwhost** projesine sağ tıklayın ve **Başvuru Ekle**' yi seçin. **Başvuru Ekle** listesinden **çözüm** ' i seçin, **NumberGuessWorkflowActivities**yanındaki onay kutusunu işaretleyin ve ardından **Tamam**' a tıklayın.
+4. **Çözüm Gezgini** ' de yeni eklenen **Numberguessworkflowwhost** projesine sağ tıklayın ve **Başvuru Ekle**' yi seçin. **Başvuru Ekle** listesinden **çözüm** ' i seçin, **NumberGuessWorkflowActivities** yanındaki onay kutusunu işaretleyin ve ardından **Tamam**' a tıklayın.
 
 5. **Çözüm Gezgini** 'de **Workflow1. xaml** öğesine sağ tıklayın ve **Sil**' i seçin. Onaylamak için **Tamam** ' ı tıklatın.
 
@@ -63,7 +64,7 @@ Bu konu, kullanmaya başlama öğreticisini Windows Workflow Foundation ve bir i
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     Oluşturulan bu barındırma kodu kullanılır <xref:System.Activities.WorkflowInvoker> . <xref:System.Activities.WorkflowInvoker>bir iş akışını Yöntem çağrısı gibi çağırmak için basit bir yol sağlar ve yalnızca kalıcılığı kullanmayan iş akışları için kullanılabilir. <xref:System.Activities.WorkflowApplication>yaşam döngüsü olaylarının, yürütme denetiminin, yer işaretinin sürdürme ve kalıcılığın bildirimini içeren iş akışlarını yürütmek için daha zengin bir model sağlar. Bu örnek, yer işaretlerini kullanır ve <xref:System.Activities.WorkflowApplication> iş akışını barındırmak için kullanılır. `using`Var olan **using** veya **Imports** deyimlerinin altındaki **program.cs** veya **Module1. vb** üst kısmına aşağıdaki veya **Imports** deyimini ekleyin.
+     Oluşturulan bu barındırma kodu kullanılır <xref:System.Activities.WorkflowInvoker> . <xref:System.Activities.WorkflowInvoker> bir iş akışını Yöntem çağrısı gibi çağırmak için basit bir yol sağlar ve yalnızca kalıcılığı kullanmayan iş akışları için kullanılabilir. <xref:System.Activities.WorkflowApplication> yaşam döngüsü olaylarının, yürütme denetiminin, yer işaretinin sürdürme ve kalıcılığın bildirimini içeren iş akışlarını yürütmek için daha zengin bir model sağlar. Bu örnek, yer işaretlerini kullanır ve <xref:System.Activities.WorkflowApplication> iş akışını barındırmak için kullanılır. `using`Var olan **using** veya **Imports** deyimlerinin altındaki **program.cs** veya **Module1. vb** üst kısmına aşağıdaki veya **Imports** deyimini ekleyin.
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -100,7 +101,7 @@ Bu konu, kullanmaya başlama öğreticisini Windows Workflow Foundation ve bir i
      [!code-csharp[CFX_WF_GettingStarted#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     Bu sözlük, anahtarı olan bir öğesi içerir `MaxNumber` . Giriş sözlüğündeki anahtarlar, iş akışının kök etkinliğinin giriş bağımsız değişkenlerine karşılık gelir. `MaxNumber`, rastgele oluşturulan sayı için üst sınırı belirlemede iş akışı tarafından kullanılır.
+     Bu sözlük, anahtarı olan bir öğesi içerir `MaxNumber` . Giriş sözlüğündeki anahtarlar, iş akışının kök etkinliğinin giriş bağımsız değişkenlerine karşılık gelir. `MaxNumber` , rastgele oluşturulan sayı için üst sınırı belirlemede iş akışı tarafından kullanılır.
 
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>Bir iş akışının çıkış bağımsız değişkenlerini almak için
 
@@ -138,7 +139,7 @@ Bu konu, kullanmaya başlama öğreticisini Windows Workflow Foundation ve bir i
      [!code-csharp[CFX_WF_GettingStarted#11](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]
 
-## <a name="to-build-and-run-the-application"></a><a name="BKMK_ToRunTheApplication"></a>Uygulamayı derlemek ve çalıştırmak için
+## <a name="to-build-and-run-the-application"></a><a name="BKMK_ToRunTheApplication"></a> Uygulamayı derlemek ve çalıştırmak için
 
 1. **Çözüm Gezgini** Için **Numberguessworkflowwhost** öğesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
@@ -152,6 +153,7 @@ Bu konu, kullanmaya başlama öğreticisini Windows Workflow Foundation ve bir i
      Bir iş akışı uygulamasına Kalıcılık ekleme hakkında yönergeler için, bir sonraki konuya bkz. [nasıl yapılır: uzun süre çalışan bir Iş akışı oluşturma ve çalıştırma](how-to-create-and-run-a-long-running-workflow.md).
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, yöntemi için kod listesinin Tamamdır `Main` .
 
 > [!NOTE]

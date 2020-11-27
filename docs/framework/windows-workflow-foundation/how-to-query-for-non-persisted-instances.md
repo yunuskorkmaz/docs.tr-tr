@@ -2,61 +2,62 @@
 title: 'Nasıl yapılır: Kalıcı Olmayan Örnekleri Sorgulama'
 ms.date: 03/30/2017
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-ms.openlocfilehash: 87b29ce6a5858872929cea4408d0d7bcc1b378d1
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 54a442dab6700dda33cf05df1fb5c60a96bcbd56
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425314"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280006"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Nasıl yapılır: Kalıcı Olmayan Örnekleri Sorgulama
 
-Bir hizmetin yeni bir örneği oluşturulur ve hizmette tanımlanan SQL iş akışı örneği Store davranışı olduğunu, hizmet ana bilgisayarı o hizmet örneği için bir ilk giriş örnek deposunda oluşturur. Hizmet örneği ilk kez daha sonra devam ederse, SQL iş akışı örneği Store davranış geçerli örneği durumu birlikte etkinleştirme, kurtarma ve denetim için gerekli olan ek verileri depolar.
+Bir hizmetin yeni bir örneği oluşturulduğunda ve hizmet SQL Iş akışı örnek deposu davranışını tanımlıysa, hizmet ana bilgisayarı örnek deposundaki bu hizmet örneği için bir başlangıç girişi oluşturur. Daha sonra hizmet örneği ilk kez devam ederse, SQL Iş akışı örnek deposu davranışı, geçerli örnek durumunu etkinleştirme, kurtarma ve denetim için gereken ek verilerle birlikte depolar.
 
-İlk giriş örneği oluşturulduktan sonra bir örneği kalıcı değil, hizmet örneği kalıcı olmayan durumda olduğu söylenir. Tüm kalıcı hizmet örnekleri sorgulanabilir ve denetlenir. Kalıcı olmayan hizmet örnekleri sorgulanan denetlenen ne. Kalıcı olmayan bir örneği işlenmeyen bir özel durum nedeniyle askıya alınırsa sorgulanabilir ancak denetlenmedi.
+Örnek için ilk giriş oluşturulduktan sonra bir örnek kalıcı değilse, hizmet örneği kalıcı olmayan durumda olarak kabul edilir. Tüm kalıcı hizmet örnekleri sorgulanabilir ve denetlenebilir. Kalıcı olmayan hizmet örnekleri, hiçbir şekilde sorgulanamaz ve denetlenemez. Kalıcı olmayan bir örnek işlenmeyen bir özel durum nedeniyle askıya alınırsa, sorgulanabilir ancak denetlenemez.
 
-Henüz kaybolacağından dayanıklı bir hizmet örnekleri aşağıdaki senaryolar kalıcı olmayan bir durumda kalır:
+Henüz kalıcı olmayan dayanıklı hizmet örnekleri, aşağıdaki senaryolarda kalıcı olmayan bir durumda kalır:
 
-- İlk kez örneği kalıcı önce hizmet ana bilgisayarı kilitleniyor. Örnek için ilk giriş örnek deposunda kalır. Örneği kurtarılabilir değil. İlişkili bir ileti geldiğinde, örneği tekrar etkin hale gelir.
+- Hizmet ana bilgisayarı, örnek ilk kez kalıcı hale gelmeden önce kilitleniyor. Örnek için başlangıç girdisi örnek deposunda kalır. Örnek kurtarılabilir değil. Bağıntılı bir ileti alınırsa, örnek tekrar etkin hale gelir.
 
-- İlk kez kalıcı önce örneği işlenmeyen bir özel durumla karşılaştığında. Aşağıdaki senaryolar ortaya
+- Örnek, ilk kez kalıcı yapmadan önce işlenmemiş bir özel durumla karşılaşır. Aşağıdaki senaryolar ortaya çıkar
 
-  - Varsa değerini **UnhandledExceptionAction** özelliği **Abandon**, hizmet dağıtım bilgileri için örnek deposuna yazılır ve bellekten bir örneğidir. Örnek Kalıcılık veritabanı kalıcı olmayan durumda kalır.
+  - **UnhandledExceptionAction** özelliğinin değeri **Abandon** olarak ayarlandıysa, hizmet dağıtım bilgileri örnek deposuna yazılır ve örnek bellekten kaldırılır. Örnek, kalıcılık veritabanında kalıcı olmayan durumda kalır.
 
-  - Varsa değerini **UnhandledExceptionAction** özelliği **AbandonAndSuspend**, hizmet dağıtım bilgilerini Kalıcılık veritabanına yazılır ve örneği durumu içinayarlandı **Askıya**. Örneğin, iptal, sonlandırıldı veya sürdürülemez. Hizmet ana bilgisayarı henüz örneği kalıcı olmayan ve bu nedenle veritabanı girişi örneği için tam değil çünkü örneği yüklenemiyor.
+  - **UnhandledExceptionAction** özelliğinin değeri, **Andsusbekleto bırakma** olarak ayarlandıysa, hizmet dağıtım bilgileri kalıcılık veritabanına yazılır ve örnek durumu **askıya alındı** olarak ayarlanır. Örnek devam ettirilemez, iptal edilemez veya sonlandırılamıyor. Örnek henüz kalıcı olmadığı için hizmet ana bilgisayarı örneği yükleyemiyor, bu nedenle örnek için veritabanı girişi tamamlanmadı.
 
-  - Varsa değerini **UnhandledExceptionAction** özelliği **iptal** veya **sonlandırma**, hizmet dağıtım bilgileri için örnek deposuna yazılır ve Örnek durum ayarlandığında **tamamlandı**.
+  - **UnhandledExceptionAction** özelliğinin değeri **Cancel** veya **Terminate** olarak ayarlandıysa, hizmet dağıtım bilgileri örnek deposuna yazılır ve örnek durumu **tamamlandı** olarak ayarlanır.
 
-Aşağıdaki bölümler, Kalıcılık SQL veritabanı'nda kalıcı olmayan örnekleri bulmak ve bu örnekler veritabanından silmek için örnek sorgular sağlar.
+Aşağıdaki bölümlerde, SQL kalıcılık veritabanında kalıcı olmayan örnekleri bulacak ve bu örnekleri veritabanından silecek örnek sorgular sağlanmaktadır.
 
-## <a name="to-find-all-instances-not-persisted-yet"></a>Henüz kalıcı değil tüm örnekleri bulmak için
+## <a name="to-find-all-instances-not-persisted-yet"></a>Henüz kalıcı olmayan tüm örnekleri bulmak için
 
-Aşağıdaki SQL sorgusunu kimliği ve oluşturma zamanı içinde kalıcı yapılmaz tüm örnekleri için henüz Kalıcılık veritabanına döndürür.
+Aşağıdaki SQL sorgusu, kalıcılık veritabanında kalıcı olmayan tüm örneklerin KIMLIĞINI ve oluşturulma zamanını döndürür.
 
 ```sql
 select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0;
 ```
 
-## <a name="to-find-all-instances-not-persisted-yet-and-also-not-loaded"></a>Tüm örnekleri henüz kalıcı değildir ve ayrıca yüklenmedi bulmak için
- Aşağıdaki SQL sorgusunu kimliği ve oluşturma zamanı kalıcı değildir ve ayrıca yüklü olmayan tüm örnekleri için döndürür.
+## <a name="to-find-all-instances-not-persisted-yet-and-also-not-loaded"></a>Henüz kalıcı olmayan ve yüklenmeyen tüm örnekleri bulmak için
+
+ Aşağıdaki SQL sorgusu, kalıcı olmayan ve ayrıca yüklenmeyen tüm örnekler için KIMLIK ve oluşturma saati döndürür.
 
 ```sql
 select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0 and CurrentMachine is NULL;
 ```
 
-## <a name="to-find-all-suspended-instances-not-persisted-yet"></a>Henüz kalıcı değil askıya alınmış tüm örnekleri bulmak için
+## <a name="to-find-all-suspended-instances-not-persisted-yet"></a>Henüz kalıcı olmayan tüm askıya alınmış örnekleri bulmak için
 
-Aşağıdaki SQL sorgusunu kimliği, oluşturma zamanı, askıya alma nedeni ve askıya alınma özel durum adı kaybolacağından tüm örnekleri için ve ayrıca askıya alınma durumuna döndürür.
+Aşağıdaki SQL sorgusu, kalıcı olmayan ve ayrıca askıya alınmış durumda olan tüm örnekler için KIMLIK, oluşturma saati, askıya alma nedeni ve askıya alma özel durum adını döndürür.
 
 ```sql
 select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0 and IsSuspended = 1;
 ```
 
-## <a name="to-delete-non-persisted-instances-from-the-persistence-database"></a>Kalıcı olmayan örnekleri Kalıcılık veritabanından silmek için
+## <a name="to-delete-non-persisted-instances-from-the-persistence-database"></a>Kalıcı olmayan örnekleri kalıcılık veritabanından silmek için
 
-Düzenli aralıklarla kalıcı olmayan örnekleri için örnek deposuna denetleyin ve örneği bağıntılı iletisi almaz eminseniz örnekleri örnek deposundan kaldırın gerekir. Örneğin, örnek veritabanında birkaç ay boyunca yapıldı ve iş akışı genellikle birkaç gün ömrü olduğunu bilmek, kilitlenen başlatılmamış örneği olduğunu varsaymak güvenli olurdu.
+Örnek depolama alanını kalıcı olmayan örnekler için düzenli olarak denetlemeniz ve örneğin bağıntılı bir ileti almadığınızdan emin olmanız durumunda örnek deposundan örnekleri kaldırmanız gerekir. Örneğin, örnek veritabanında birkaç ay boyunca bulunuyorsa ve iş akışının genellikle birkaç günün ömrü olduğunu biliyorsanız, bu, kilitlenen başlatılmamış bir örnek olduğunu varsaymak güvenli olacaktır.
 
-Genel olarak, yüklü değil veya askıya alınmadığından, kalıcı olmayan örnekleri silmek güvenlidir. Değil silmelisiniz **tüm** Bu örnek kümesi yalnızca oluşturulur ancak değil örnekleri içerdiğinden kalıcı olmayan örnekleri henüz kalıcı. Yalnızca yüklenen Örneğimiz vardı iş akışı hizmeti konağı bir özel durum oluştuğundan artıkları kalıcı olmayan örnekleri veya örnek kendi özel bir duruma neden silmeniz gerekir.
+Genel olarak, askıya alınmamış veya yüklenmeyen kalıcı olmayan örnekleri silmek güvenlidir. Bu örnek kümesi yeni oluşturulan ancak henüz kalıcı olmayan örnekleri içerdiğinden, kalıcı olmayan **Tüm** örnekleri silmemelisiniz. Yalnızca yüklü olan kalıcı olmayan örnekleri silmeniz gerekir, çünkü yüklenen örnek olan iş akışı hizmeti ana bilgisayarı bir özel duruma neden oldu veya örnek bir özel duruma neden oldu.
 
 > [!WARNING]
-> Kalıcı olmayan örnekleri örnek deposundan siliniyor deposunun boyutunu azaltır ve depolama işlemlerinin performansını iyileştirebilir.
+> Örnek deposundan kalıcı olmayan örneklerin silinmesi deponun boyutunu düşürür ve mağaza işlemlerinin performansını iyileştirebilir.

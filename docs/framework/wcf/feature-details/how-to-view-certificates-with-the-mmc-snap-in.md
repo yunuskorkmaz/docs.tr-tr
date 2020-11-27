@@ -5,14 +5,15 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: e63034e48ae836f67f89b454829f7196c94610cd
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1f20384f16b3b5b898f926258d76a6a2773eaaa1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246681"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280630"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme
+
 Güvenli bir istemci veya hizmet oluşturduğunuzda kimlik bilgisi olarak bir [sertifika](working-with-certificates.md) kullanabilirsiniz. Örneğin, ortak bir kimlik bilgisi türü, yöntemiyle oluşturduğunuz X. 509.952 sertifikasıdır <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> .
 
 Windows sistemlerinde Microsoft Yönetim Konsolu (MMC) ile inceleyebileceğiniz üç farklı türde sertifika deposu vardır:
@@ -64,7 +65,7 @@ Sertifikaları, Sertifika Yöneticisi aracını kullanarak da görüntüleyebili
 
 ### <a name="to-view-certificates-for-the-local-device"></a>Yerel cihaz için sertifikaları görüntülemek için
 
-1. **Başlat** menüsünden **Çalıştır** ' ı seçin ve ardından *Certlm. msc*yazın.
+1. **Başlat** menüsünden **Çalıştır** ' ı seçin ve ardından *Certlm. msc* yazın.
 
     Yerel cihaz için Sertifika Yöneticisi aracı görünür.
   
@@ -72,7 +73,7 @@ Sertifikaları, Sertifika Yöneticisi aracını kullanarak da görüntüleyebili
 
 ### <a name="to-view-certificates-for-the-current-user"></a>Geçerli kullanıcının sertifikalarını görüntülemek için
 
-1. **Başlat** menüsünden **Çalıştır** ' ı seçin ve ardından *certmgr. msc*yazın.
+1. **Başlat** menüsünden **Çalıştır** ' ı seçin ve ardından *certmgr. msc* yazın.
 
     Geçerli Kullanıcı için Sertifika Yöneticisi aracı görünür.
   

@@ -8,17 +8,19 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 01f5162727a213fa5dcdf8a70e4e8e4c3627f086
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f7c13cda2dcaeec16ad1ee49ff3dddf369906e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596909"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280536"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Sınıf Oluşturmak için Şemayı İçe Aktarma
+
 Windows Communication Foundation (WCF) ile kullanılabilen şemalardan sınıflar oluşturmak için, <xref:System.Runtime.Serialization.XsdDataContractImporter> sınıfını kullanın. Bu konuda işlem ve Çeşitlemeler açıklanmaktadır.  
   
 ## <a name="the-import-process"></a>Içeri aktarma Işlemi
+
  Şema içeri aktarma işlemi bir ile başlar <xref:System.Xml.Schema.XmlSchemaSet> ve bir oluşturur <xref:System.CodeDom.CodeCompileUnit> .  
   
  , `XmlSchemaSet` BIR XML şeması tanım dili (xsd) şema belgelerinin bir kümesini temsil eden .NET Framework şema nesne modeli 'nin (som) bir parçasıdır. `XmlSchemaSet`BIR xsd belgeleri kümesinden bir nesne oluşturmak için, her bir belgeyi bir nesne içine serisini kaldırma <xref:System.Xml.Schema.XmlSchema> (kullanarak <xref:System.Xml.Serialization.XmlSerializer> ) ve bu nesneleri yeni bir öğesine ekleyin `XmlSchemaSet` .  
@@ -45,19 +47,22 @@ Windows Communication Foundation (WCF) ile kullanılabilen şemalardan sınıfla
 5. `CodeCompileUnit`Özelliği aracılığıyla öğesine erişin <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> .  
   
 ### <a name="import-options-customizing-the-generated-types"></a>İçeri aktarma seçenekleri: oluşturulan türleri özelleştirme  
+
  <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A>Öğesinin özelliğini, <xref:System.Runtime.Serialization.XsdDataContractImporter> <xref:System.Runtime.Serialization.ImportOptions> içe aktarma işleminin çeşitli yönlerini denetlemek için sınıfının bir örneğine ayarlayabilirsiniz. Bir dizi seçenek, oluşturulan türleri doğrudan etkiler.  
   
 #### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>Erişim düzeyini denetleme (GenerateInternal veya/Internal anahtarı)  
- Bu, [ServiceModel meta veri yardımcı programı aracında (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) **/Internal** anahtarına karşılık gelir.  
+
+ Bu, [ServiceModel meta veri yardımcı programı aracında (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) **/Internal** anahtarına karşılık gelir.  
   
  Genel türler normalde şemadan, özel alanlarla ve ortak veri üyesi özellikleriyle eşleşen şemadan oluşturulur. Bunun yerine iç türler oluşturmak için <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> özelliğini olarak ayarlayın `true` .  
   
- Aşağıdaki örnek, <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> özelliği olarak ayarlandığında bir iç sınıfa dönüştürülmüş bir şemayı gösterir`true.`  
+ Aşağıdaki örnek, <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> özelliği olarak ayarlandığında bir iç sınıfa dönüştürülmüş bir şemayı gösterir `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
   
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>Ad alanlarını denetleme (ad alanları veya/Namespace anahtarı)  
+
  Bu, aracındaki **/Namespace** anahtarına karşılık gelir `Svcutil.exe` .  
   
  Normalde şemadan oluşturulan türler, [veri sözleşmesi şema başvurusunda](data-contract-schema-reference.md)açıklanan bir eşlemeye göre belirli bir .NET Framework ad alanına karşılık gelen her XSD ad alanı ile .NET Framework ad alanları içinde oluşturulur. Bu eşlemeyi özelliği ile özelleştirebilirsiniz <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> <xref:System.Collections.Generic.Dictionary%602> . Belirli bir XSD ad alanı sözlükte bulunursa, eşleşen .NET Framework ad alanı sözlüğünüze de alınır.  
@@ -72,6 +77,7 @@ Windows Communication Foundation (WCF) ile kullanılabilen şemalardan sınıfla
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
   
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>SerializableAttribute (GenerateSerializable veya/Serializable anahtar) ekleniyor  
+
  Bu, aracındaki **/Serializable** anahtarına karşılık gelir `Svcutil.exe` .  
   
  Bazen şemadan oluşturulan türlerin .NET Framework çalışma zamanı serileştirme altyapılarıyla (örneğin, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> ve sınıfları) kullanılabilir olması önemlidir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> . Bu, .NET Framework uzaktan iletişim için türler kullanılırken kullanışlıdır. Bunu etkinleştirmek için, <xref:System.SerializableAttribute> normal özniteliğe ek olarak oluşturulan türlere özniteliği uygulamanız gerekir <xref:System.Runtime.Serialization.DataContractAttribute> . İçeri aktarma seçeneği olarak ayarlandıysa öznitelik otomatik olarak oluşturulur `GenerateSerializable` `true` .  
@@ -82,7 +88,8 @@ Windows Communication Foundation (WCF) ile kullanılabilen şemalardan sınıfla
  [!code-vb[c_SchemaImportExport#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#4)]  
   
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Veri bağlama desteği ekleme (EnableDataBinding veya/enableDataBinding anahtarı)  
- Bu, Svcutil. exe aracındaki **/EnableDataBinding** anahtarına karşılık gelir.  
+
+ Bu, Svcutil.exe aracındaki **/EnableDataBinding** anahtarına karşılık gelir.  
   
  Bazen, bu türlerin örneklerine yönelik tüm güncelleştirmeler Kullanıcı arabirimini otomatik olarak güncelleştirecek şekilde şemadan oluşturulan türleri grafik kullanıcı arabirimi bileşenlerine bağlamak isteyebilirsiniz. , `XsdDataContractImporter` <xref:System.ComponentModel.INotifyPropertyChanged> Herhangi bir özellik değişikliğinin bir olayı tetiklediği şekilde arabirimi uygulayan türler oluşturabilir. Bu arabirimi (örneğin, Windows Presentation Foundation (WPF)) destekleyen bir istemci kullanıcı arabirimi programlama ortamıyla kullanılmak üzere tür oluşturuyorsanız, <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> Bu özelliği etkinleştirmek için özelliğini olarak ayarlayın `true` .  
   
@@ -92,6 +99,7 @@ Windows Communication Foundation (WCF) ile kullanılabilen şemalardan sınıfla
  [!code-vb[C_SchemaImportExport#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#5)]  
   
 ### <a name="import-options-choosing-collection-types"></a>İçeri aktarma seçenekleri: koleksiyon türlerini seçme  
+
  XML 'deki iki özel desen öğe koleksiyonlarını temsil eder: bir öğe ve diğeri arasındaki öğe ve ilişkilerin listeleri. Aşağıda dizeler listesinin bir örneği verilmiştir.  
   
  [!code-xml[C_SchemaImportExport#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  
@@ -127,9 +135,10 @@ Windows Communication Foundation (WCF) ile kullanılabilen şemalardan sınıfla
   
  Başvurulan koleksiyon türleri mekanizması, karmaşık türlerin koleksiyonları (diğer koleksiyonların koleksiyonları dahil) için eşit derecede iyi bir şekilde çalışarak, yalnızca temel elemanlar koleksiyonları için değildir.  
   
- `ReferencedCollectionTypes`Özelliği, SvcUtil. exe aracında **/CollectionType** anahtarına karşılık gelir. Birden çok koleksiyon türüne başvurmak için, **/CollectionType** anahtarının birden çok kez belirtilmesi gerektiğini unutmayın. Tür MsCorLib. dll içinde değilse, derleme için **/Reference** anahtarı kullanılarak da başvurulmalıdır.  
+ `ReferencedCollectionTypes`Özelliği, SvcUtil.exe aracında **/CollectionType** anahtarına karşılık gelir. Birden çok koleksiyon türüne başvurmak için, **/CollectionType** anahtarının birden çok kez belirtilmesi gerektiğini unutmayın. Tür MsCorLib.dll değilse, derleme için **/Reference** anahtarı kullanılarak da başvurulmalıdır.  
   
 #### <a name="import-options-referencing-existing-types"></a>İçeri aktarma seçenekleri: Varolan türlere başvurma  
+
  Bazen, şemadaki türler var olan .NET Framework türlerine karşılık gelir ve bu türleri sıfırdan oluşturmanız gerekmez. (Bu bölüm yalnızca koleksiyon olmayan türler için geçerlidir. Koleksiyon türleri için önceki bölüme bakın.)  
   
  Örneğin, bir kişiyi temsil eden her zaman kullanmak istediğiniz standart bir şirket genelinde "kişi" veri sözleşmesi türü olabilir. Bazı hizmetler bu türü her kullandığında ve şeması hizmet meta verilerinde göründüğünde, `Person` her hizmet için yeni bir tane oluşturmak yerine, bu şemayı içeri aktarırken var olan türü yeniden kullanmak isteyebilirsiniz.  
@@ -138,12 +147,13 @@ Windows Communication Foundation (WCF) ile kullanılabilen şemalardan sınıfla
   
  Bu ad ve ad alanı ile hiçbir şema türü içeri aktarılmadığı sürece, başvurulan türler koleksiyonuna aynı veri anlaşması adına ve ad alanına sahip birden çok tür eklemek geçerlidir. Bu, şemada aslında olmayan türler için yinelemeler hakkında endişelenmenize gerek kalmadan bir derlemedeki tüm türleri koleksiyona kolayca eklemenizi sağlar.  
   
- `ReferencedTypes`Özelliği, Svcutil. exe aracının belirli modundaki çalışma modlarında **/Reference** anahtarına karşılık gelir.  
+ `ReferencedTypes`Özelliği, Svcutil.exe aracının belirli modundaki çalışma modlarında **/Reference** anahtarına karşılık gelir.  
   
 > [!NOTE]
-> Svcutil. exe veya (Visual Studio 'da) **hizmet başvurusu Ekle** araçları kullanılırken, mscorlib. dll ' deki tüm türlere otomatik olarak başvurulur.  
+> Svcutil.exe veya (Visual Studio 'da) **hizmet başvurusu Ekle** araçları kullanılırken, MsCorLib.dll tüm türlere otomatik olarak başvurulur.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>İçeri aktarma seçenekleri: DataContract olmayan şemayı IXmlSerializable türleri olarak Içeri aktarma  
+
  , <xref:System.Runtime.Serialization.XsdDataContractImporter> Şemanın sınırlı bir alt kümesini destekler. Desteklenmeyen şema yapıları varsa (örneğin, XML öznitelikleri), içeri aktarma girişimi bir özel durumla başarısız olur. Ancak, <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> özelliği olarak ayarlamak, `true` Desteklenen şema aralığını genişletir. Olarak ayarlandığında `true` , <xref:System.Runtime.Serialization.XsdDataContractImporter> arabirimini uygulayan türler oluşturulur <xref:System.Xml.Serialization.IXmlSerializable> . Bu, bu türlerin XML gösterimine doğrudan erişim sağlar.  
   
 ##### <a name="design-considerations"></a>Tasarımda Dikkat Edilmesi Gerekenler  
@@ -158,9 +168,10 @@ Windows Communication Foundation (WCF) ile kullanılabilen şemalardan sınıfla
   
  <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>Seçeneği, <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> daha önce açıklanan seçenekle birleştirmek mümkündür. Uygulamalar olarak oluşturulması gereken türler için <xref:System.Xml.Serialization.IXmlSerializable> , özelliği kullanılırken yapısal denetim atlanır <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> .  
   
- <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>Seçeneği, Svcutil. exe aracında **/ImportXmlTypes** anahtarına karşılık gelir.  
+ <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>Seçeneği Svcutil.exe aracında **/ImportXmlTypes** anahtarına karşılık gelir.  
   
 ##### <a name="working-with-generated-ixmlserializable-types"></a>Oluşturulan IXmlSerializable türleriyle çalışma  
+
  Oluşturulan `IXmlSerializable` türler, bir nesne dizisi döndüren "nodesField" adlı bir özel alan içerir <xref:System.Xml.XmlNode> . Böyle bir türün bir örneğinin serisini kaldırırken, XML verilerine doğrudan bu alan aracılığıyla XML Belge Nesne Modeli erişebilirsiniz. Bu türün bir örneğini serileştirilirken, bu alanı istenen XML verilerine ayarlayabilirsiniz ve seri hale gelir.  
   
  Bu, uygulama aracılığıyla yapılır `IXmlSerializable` . Oluşturulan `IXmlSerializable` türde <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> uygulama, <xref:System.Runtime.Serialization.XmlSerializableServices.ReadNodes%2A> sınıfının yöntemini çağırır <xref:System.Runtime.Serialization.XmlSerializableServices> . Yöntemi, tarafından bir nesne dizisi aracılığıyla sağlanmış XML 'i dönüştüren bir yardımcı yöntemdir <xref:System.Xml.XmlReader> <xref:System.Xml.XmlNode> . <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>Uygulama tersini yapar ve `XmlNode` nesne dizisini bir çağrı dizisine dönüştürür <xref:System.Xml.XmlWriter> . Bu, yöntemi kullanılarak gerçekleştirilir <xref:System.Runtime.Serialization.XmlSerializableServices.WriteNodes%2A> .  
@@ -173,11 +184,12 @@ Windows Communication Foundation (WCF) ile kullanılabilen şemalardan sınıfla
 > <xref:System.Runtime.Serialization.XmlSerializableServices>Tür yalnızca söz konusu özelliği desteklemek için vardır. Herhangi bir amaçla kullanılması önerilmez.  
   
 #### <a name="import-options-advanced-options"></a>İçeri aktarma seçenekleri: Gelişmiş Seçenekler  
+
  Aşağıda gelişmiş içeri aktarma seçenekleri verilmiştir:  
   
-- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>özelliði. <xref:System.CodeDom.Compiler.CodeDomProvider>Oluşturulan sınıfların kodunu oluşturmak için kullanılacak öğesini belirtin. İçeri aktarma mekanizması, tarafından desteklenmeyen özelliklerden kaçınmaya çalışır <xref:System.CodeDom.Compiler.CodeDomProvider> . <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>Ayarlanmamışsa, .NET Framework özelliklerinin tam kümesi hiçbir kısıtlama olmadan kullanılır.  
+- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> özelliði. <xref:System.CodeDom.Compiler.CodeDomProvider>Oluşturulan sınıfların kodunu oluşturmak için kullanılacak öğesini belirtin. İçeri aktarma mekanizması, tarafından desteklenmeyen özelliklerden kaçınmaya çalışır <xref:System.CodeDom.Compiler.CodeDomProvider> . <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>Ayarlanmamışsa, .NET Framework özelliklerinin tam kümesi hiçbir kısıtlama olmadan kullanılır.  
   
-- <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>özelliði. <xref:System.Runtime.Serialization.IDataContractSurrogate>Bu özellikle bir uygulama belirtilebilir. <xref:System.Runtime.Serialization.IDataContractSurrogate>İçeri aktarma işlemini özelleştirir. Daha fazla bilgi için bkz. [veri sözleşmesi yedeklerin kapıları](../extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir yedek kullanılmaz.  
+- <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özelliði. <xref:System.Runtime.Serialization.IDataContractSurrogate>Bu özellikle bir uygulama belirtilebilir. <xref:System.Runtime.Serialization.IDataContractSurrogate>İçeri aktarma işlemini özelleştirir. Daha fazla bilgi için bkz. [veri sözleşmesi yedeklerin kapıları](../extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir yedek kullanılmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -186,7 +198,7 @@ Windows Communication Foundation (WCF) ile kullanılabilen şemalardan sınıfla
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
 - <xref:System.Runtime.Serialization.ImportOptions>
 - [Veri Sözleşmesi Şema Başvurusu](data-contract-schema-reference.md)
-- [Veri Anlaşması Yedekleri](../extending/data-contract-surrogates.md)
+- [Veri Sözleşmesi Yedekleri](../extending/data-contract-surrogates.md)
 - [Şema İçeri ve Dışarı Aktarma](schema-import-and-export.md)
-- [Sınıflardan Şemaları Dışarı Aktarma](exporting-schemas-from-classes.md)
+- [Sınıflardan Şemaları Dışa Aktarma](exporting-schemas-from-classes.md)
 - [Veri Sözleşmesi Şema Başvurusu](data-contract-schema-reference.md)

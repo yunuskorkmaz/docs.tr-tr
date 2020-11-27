@@ -7,21 +7,23 @@ helpviewer_keywords:
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 30b8acb3b89b8c28be0b8d0b4ce5a1d1d734b055
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246642"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280435"
 ---
 # <a name="wcf-feature-details"></a>WCF Özellik Ayrıntıları
+
 Windows Communication Foundation (WCF), bir uygulamanın mesajlaşma işlevleri üzerinde kapsamlı denetim sağlar. Bu bölümdeki konular, kullanılabilir özellikler hakkında ayrıntılı bilgiler sunar. Temel programlama hakkında daha fazla bilgi için bkz. [Temel WCF programlama](../basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [İş Akışı Hizmetleri](workflow-services.md)  
  İş akışı hizmetleri oluşturmayı ve yapılandırmayı açıklar.  
   
- [Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar](endpoints-addresses-bindings-and-contracts.md)  
+ [Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler](endpoints-addresses-bindings-and-contracts.md)  
  Hizmetinizin birden çok yönünü nasıl denetleyebileceğinizi açıklar.  
   
  [Veri Aktarma ve Seri Hale Getirme](data-transfer-and-serialization.md)  
@@ -45,7 +47,7 @@ Windows Communication Foundation (WCF), bir uygulamanın mesajlaşma işlevleri 
  [Eşler Arası Ağ](peer-to-peer-networking.md)  
  Eş hizmet ve istemci oluşturma hakkında ayrıntılı bilgi.  
   
- [Meta veri](metadata.md)  
+ [Veriyi](metadata.md)  
  Meta veri mimarisini ve biçimlerini açıklar.  
   
  [İstemciler](clients.md)  
@@ -66,13 +68,14 @@ Windows Communication Foundation (WCF), bir uygulamanın mesajlaşma işlevleri 
  [AJAX Tümleştirme ve JSON Desteği](ajax-integration-and-json-support.md)  
  WCF hizmetlerinin işlemleri AJAX istemcilerine kullanıma sunmasına izin vermek için ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) ve JavaScript Nesne Gösterimi (JSON) veri biçimi desteğini açıklar.  
   
- [WCF Bulma](wcf-discovery.md)  
- Hizmetin çalışma zamanında, WS-Discovery protokolünü kullanarak birlikte çalışabilen bir şekilde keşfedilmesini sağlama desteğini açıklar.  
+ [WCF Keşfetme](wcf-discovery.md)  
+ WS-Discovery protokolü kullanılarak birlikte çalışabilen bir şekilde hizmetlerin çalışma zamanında keşfedilmesini sağlama desteğini açıklar.  
   
  [Yönlendirme](routing.md)  
  Yönlendirme hizmetini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -82,4 +85,5 @@ Windows Communication Foundation (WCF), bir uygulamanın mesajlaşma işlevleri 
  <xref:System.ServiceModel.Routing>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Temel WCF Programlama](../basic-wcf-programming.md)

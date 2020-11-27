@@ -6,14 +6,15 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 8941350e46680c4ecaeb9b89fe9e6910c5830bcb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 70dde7ab30d542ecc9f85d027a86b466eb13e4f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553297"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281331"
 ---
 # <a name="wcf-security-terminology"></a>WCF Güvenlik Terimleri
+
 Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir. Bu konu, bazı güvenlik koşullarının kısa açıklamalarını sağlar, ancak her öğe için kapsamlı belgeler sağlamaya yönelik değildir.  
   
  Windows Communication Foundation (WCF) belgelerinde kullanılan terimler hakkında daha fazla bilgi için bkz. [temel Windows Communication Foundation kavramlar](../fundamental-concepts.md).  
@@ -28,10 +29,10 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  Bir kaynağa erişimi ve hakları denetleme eylemi. Örneğin, bir grubun üyelerinin bir dosyayı okumasına izin verme, ancak yalnızca başka bir grubun üyelerinin dosyayı değiştirmesine izin verme.  
   
  sertifika yetkilisi (CA) sertifikası  
- Bu sertifikaları isteyen sunuculara ve istemcilere sunucu ve istemci kimlik doğrulama sertifikaları veren CA 'yı tanımlar. Dijital imzalarda kullanılan bir ortak anahtar içerdiğinden *imza sertifikası*olarak da adlandırılır. CA bir kök yetkilisise, CA sertifikasına *kök sertifika*denir. Bazen *Site sertifikası*olarak da bilinir.  
+ Bu sertifikaları isteyen sunuculara ve istemcilere sunucu ve istemci kimlik doğrulama sertifikaları veren CA 'yı tanımlar. Dijital imzalarda kullanılan bir ortak anahtar içerdiğinden *imza sertifikası* olarak da adlandırılır. CA bir kök yetkilisise, CA sertifikasına *kök sertifika* denir. Bazen *Site sertifikası* olarak da bilinir.  
   
  CA hiyerarşisi  
- CA hiyerarşisi birden çok CA içerir. Her CA 'nın, hiyerarşinin en üstüne, *kök yetkili*olarak da bilinene kadar daha yüksek düzeyde başka bir CA tarafından sertifikalanabilmesi için düzenlenir.  
+ CA hiyerarşisi birden çok CA içerir. Her CA 'nın, hiyerarşinin en üstüne, *kök yetkili* olarak da bilinene kadar daha yüksek düzeyde başka bir CA tarafından sertifikalanabilmesi için düzenlenir.  
   
  sertifika  
  Bir varlık ve varlığın ortak anahtarı hakkında bilgi içeren, bu iki bilgi parçasını birbirine bağlayan dijital imzalı bir ifade. Sertifika, yetkili varlığın kim olduğunu doğruladıktan sonra, sertifika yetkilisi olarak adlandırılan güvenilir bir kuruluş (veya varlık) tarafından verilir.  
@@ -63,7 +64,7 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  Oturum anahtarlarını şifrelemek için kullanılan ortak/özel anahtar çifti, güvenli bir şekilde saklanabilmesi ve diğer kullanıcılarla değiş tokuş olmaları sağlanır.  
   
  hash  
- Rastgele bir veri miktarına matematiksel bir işlev (bkz. karma algoritma) uygulanarak elde edilen sabit boyutlu bir sayısal değer. Veriler genellikle, *nonce*olarak bilinen rastgele verileri içerir. Hem hizmet hem de istemci, sonuçta elde edilen karmaşıklığın artması için Exchange 'e katkıda bulunur. Sonuç *ileti özeti*olarak da bilinir. Bir karma değer gönderilmesi, parola şifrelense bile parola gibi hassas verileri gönderdikten daha güvenlidir. Karma gönderici ve alıcı karma algoritmasını ve nonce 'yi kabul etmelidir, bu nedenle, alındıktan sonra bir karma doğrulanabilir.  
+ Rastgele bir veri miktarına matematiksel bir işlev (bkz. karma algoritma) uygulanarak elde edilen sabit boyutlu bir sayısal değer. Veriler genellikle, *nonce* olarak bilinen rastgele verileri içerir. Hem hizmet hem de istemci, sonuçta elde edilen karmaşıklığın artması için Exchange 'e katkıda bulunur. Sonuç *ileti özeti* olarak da bilinir. Bir karma değer gönderilmesi, parola şifrelense bile parola gibi hassas verileri gönderdikten daha güvenlidir. Karma gönderici ve alıcı karma algoritmasını ve nonce 'yi kabul etmelidir, bu nedenle, alındıktan sonra bir karma doğrulanabilir.  
   
  karma algoritması  
  İleti veya oturum anahtarı gibi bazı veri parçalarından oluşan bir karma değer oluşturmak için kullanılan algoritma. Tipik karma algoritmalar arasında MD2, MD4, MD5 ve SHA-1 bulunur.  
@@ -173,7 +174,7 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  Belirli bir dosyanın güvenilir olup olmadığına karar veren yazılım. Bu karar, dosyayla ilişkili sertifikayı temel alır.  
   
  Kullanıcı asıl adı (UPN)  
- Kullanıcı hesabı adı (bazen *Kullanıcı oturum açma adı*olarak adlandırılır) ve Kullanıcı hesabının bulunduğu etki alanını tanımlayan bir etki alanı adı. Bu, bir Windows etki alanında oturum açmak için standart kullanımdır. Biçim: someone@example.com (bir e-posta adresi için).  
+ Kullanıcı hesabı adı (bazen *Kullanıcı oturum açma adı* olarak adlandırılır) ve Kullanıcı hesabının bulunduğu etki alanını tanımlayan bir etki alanı adı. Bu, bir Windows etki alanında oturum açmak için standart kullanımdır. Biçim: someone@example.com (bir e-posta adresi için).  
   
 > [!NOTE]
 > WCF, standart UPN biçimine ek olarak alt düzey biçimde UPN 'leri kabul eder, örneğin, cohowınara. com\someone.  

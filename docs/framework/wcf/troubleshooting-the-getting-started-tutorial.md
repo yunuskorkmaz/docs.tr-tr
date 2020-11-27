@@ -1,96 +1,96 @@
 ---
-title: Windows Communication Foundation öğreticileri ile başlayın sorun giderme
+title: Windows Communication Foundation öğreticileri ile çalışmaya başlama hakkında sorun giderme
 ms.date: 01/25/2019
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 73aa0f5784784cb788a7532f8e22cbe925429c41
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4d471372419996c5bc490c2d0fdd83927428a41e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249623"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281345"
 ---
-# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Windows Communication Foundation öğreticileri ile başlayın sorun giderme
+# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Windows Communication Foundation öğreticileri ile çalışmaya başlama hakkında sorun giderme
 
-Bu makalede, Öğretici'deki adımları izlediğinizde karşılaşabileceğiniz en yaygın sorunlar ve hatalar için çözümler [sunar: Windows Communication Foundation uygulamalarıyla başlayın.](getting-started-tutorial.md)
+Bu makalede, öğreticideki adımları uyguladığınızda kullanabileceğiniz en yaygın sorunlara ve hatalara yönelik çözümler sunulmaktadır [: Windows Communication Foundation uygulamalarını kullanmaya başlama](getting-started-tutorial.md).
   
 ## <a name="common-problems"></a>Sık karşılaşılan sorunlar
 
-**Sabit diskimdeki proje dosyalarını bulamıyorum.**
+**Sabit sürücimde proje dosyalarını bulamıyorum.**
 
- Visual Studio proje dosyalarını *\\&lt;C:\Users&gt;kullanıcı adı \source\repos'ta*kaydeder.  
+ Visual Studio, proje dosyalarını *C:\Users \\ &lt; Kullanıcı adı &gt; \source\repos* konumuna kaydeder.  
 
-***Ben Svcutil.exe*tarafından oluşturulan *App.config* dosyası bulamıyorum.**
+***Svcutil.exe* tarafından oluşturulan *App.config* dosyayı bulamıyorum.**
 
- Visual Studio'da, **Varolan Öğe Ekle** penceresinde yalnızca varsayılan olarak aşağıdaki uzantılara sahip dosyalar görüntülenir:
+ Visual Studio 'da, **Varolan öğe Ekle** penceresi yalnızca aşağıdaki uzantılara sahip dosyaları varsayılan olarak görüntüler:
 
-- *Cs*
+- *.cs*
 - *.resx*
-- *.ayarlar*
-- *Xsd*
-- *.wsdl*
+- *. ayarlar*
+- *. xsd*
+- *. wsdl*
 
-Tüm dosya türlerini görüntülemek için, **Varolan Öğe Ekle** penceresinin sağ alt köşesindeki açılır listede **Tüm Dosyalar (\*.\*)** öğesini seçin.  
+Tüm dosya türlerini göstermek için, **Varolan öğe Ekle** penceresinin sağ alt köşesindeki aşağı açılan listeden **tüm dosyalar ( \* . \* )** öğesini seçin.  
   
 ## <a name="common-errors"></a>Sık karşılaşılan hatalar
 
-### <a name="compile-the-service-application"></a>Servis uygulamasını derleme
+### <a name="compile-the-service-application"></a>Hizmet uygulamasını derle
 
-**Hata BC30420 'Alt Main' 'GettingStartedHost.Module1' bulunamadı.**
+**' GettingStartedHost. Module1 ' içinde hata BC30420 ' Sub Main ' bulunamadı.**
 
-Giriş noktası Visual Basic uygulaması için yanlıştır. Aşağıdaki değişikliği yapın:
+Visual Basic uygulaması için giriş noktası yanlış. Aşağıdaki değişikliği yapın:
 
-   1. Solution **Explorer** penceresinde, **GettingStartedHost** klasörünü seçin ve ardından kısayol menüsünden **Özellikler'i** seçin.
-    a. Başlangıç **nesnesi**için **GettingStartedHost** penceresinde, listeden **Service.Program'ı** (veya belirli uygulamanızın giriş noktasını) seçin.
-    b. Ana menüden **Dosya** > **Yı Kaydet'i**seçin.
+   1. **Çözüm Gezgini** penceresinde **GettingStartedHost** klasörünü seçin ve sonra kısayol menüsünden **Özellikler** ' i seçin.
+    a. **GettingStartedHost** penceresinde, **Başlangıç nesnesi** için, listeden **Service. program** (veya belirli bir uygulama için giriş noktası) seçin.
+    b. Ana menüden **Dosya**  >  **Tümünü Kaydet**' i seçin.
 
 ### <a name="run-the-service-application"></a>Hizmet uygulamasını çalıştırma
 
-**HTTP URL'yi kaydedemedi 'http:\//+:8000/GettingStarted/CalculatorService'. İşleminizin bu ad alanına erişim hakları yok.**
+**HTTP, ' http: \/ /+: 8000/GettingStarted/Hesaplatorservice ' URL 'sini kaydedemedi. İşleminizin bu ad alanına erişim hakları yok.**
 
- Doğru erişim için, Windows Communication Foundation (WCF) hizmetini barındıran işlemi yönetim ayrıcalıklarıyla başlatın:
+ Uygun erişim için, yönetici ayrıcalıklarıyla Windows Communication Foundation (WCF) hizmetini barındıran işlemi başlatın:
 
-- Visual Studio için: **Başlat** menüsünde Visual Studio programını seçin ve ardından kısayol menüsünden yönetici olarak **Daha Fazla** > **Çalıştır'ı** seçin.
-- Konsol penceresi için: **Başlat** menüsünde **Komut İstemi'ni** seçin ve ardından kısayol menüsünden **Daha Fazla** > **Çalıştır yöneticisini** seçin.
-- Windows Gezgini için: Yürütülebilir'i seçin ve ardından kısayol menüsünden **yönetici olarak çalıştır'ı** seçin.
+- Visual Studio için: **Başlat** menüsünde Visual Studio **programını seçin ve** ardından  >  kısayol menüsünde **yönetici olarak çalıştır** ' ı seçin.
+- Konsol penceresi için: **Başlat** menüsünde **komut istemi** ' ni seçin ve ardından kısayol menüsünde yönetici olarak **daha fazla**  >  **Çalıştır** ' ı seçin.
+- Windows Gezgini için: yürütülebilir dosyayı seçin ve ardından kısayol menüsünde **yönetici olarak çalıştır** ' ı seçin.
 
-### <a name="compile-the-client-application"></a>İstemci uygulamasını derleme
+### <a name="compile-the-client-application"></a>İstemci uygulamasını derle
 
-**'CalculatorClient', '\<yöntem adı>' için bir tanım\<içermiyor ve hiçbir uzantı yöntemi ' yöntem adı>' türünden ilk bağımsız değişkeni kabul edilebilir (bir kullanma yönergesi veya derleme başvurusu eksik mi?)**  
+**' Hesaplatorclient ', ' ' için bir tanım içermiyor \<method name> ve ' \<method name> Hesaplatorclient ' türünde bir ilk bağımsız değişken kabul eden hiçbir ' ' genişletme yöntemi bulunamadı (bir using yönergeniz veya derleme başvurunuz eksik olabilir mi?)**  
 
-Yalnızca öznitelik ile `ServiceOperationAttribute` işaretlediğiniz bu yöntemler genel olarak açıklanır. Özniteliği arabirimdeki `ServiceOperationAttribute` bir yöntemden atlarsanız, derleme sırasında bu hata iletisini alırsınız. `ICalculator`  
+Yalnızca özniteliği ile işaretlediğiniz Yöntemler `ServiceOperationAttribute` publicolarak sunulur. `ServiceOperationAttribute`Arabirimindeki bir yöntemden özniteliği atlarsanız `ICalculator` , derleme sırasında bu hata iletisini alırsınız.  
 
-**'CalculatorClient' türü veya ad alanı adı bulunamadı (bir yönergeyi veya derleme başvuruyu eksik mi?)**
+**' Hesaplatorclient ' tür veya ad alanı adı bulunamadı (bir using yönergeniz veya derleme başvurunuz mu eksik?)**
 
- *Svcutil.exe* aracıyla oluşturduğunuzda istemci projenize *generatedProxy.cs* (veya *generatedProxy.vb)* dosyasını eklemezseniz bu hatayı alırsınız.  
+ Bu hatayı, *Svcutil.exe* aracı ile oluşturduğunuz zaman istemci Projenize *GeneratedProxy.cs* (veya *generatedProxy. vb*) dosyasını eklememeniz durumunda alırsınız.  
 
 ### <a name="run-the-client-application"></a>İstemci uygulamasını çalıştırma
 
-**İşlenmemiş Özel Durum: System.ServiceModel.EndpointNotFoundException: 'http:\//localhost:8000/GettingStarted/CalculatorService'e bağlanamadı. TCP hata kodu 10061: Hedef makine etkin olarak reddettiğinden bağlantı yapılamaz.**
+**İşlenmeyen özel durum: System. ServiceModel. EndpointNotFoundException: ' http: \/ /localhost: 8000/GettingStarted/Hesaplatorservice ' ile bağlantı kurulamadı. TCP hata kodu 10061: hedef makine etkin bir şekilde reddettiğinden bağlantı kurulamadı.**
 
-Bu hata, istemci uygulamasını önce hizmeti başlatmadan çalıştırıyorsanız oluşur. Önce hizmeti başlatmak için ana bilgisayar uygulamasını çalıştırın ve ardından istemci uygulamasını çalıştırın.
+Bu hata, istemci uygulamasını önce hizmeti başlatmadan çalıştırırsanız oluşur. İlk olarak, hizmeti başlatmak için konak uygulamayı çalıştırın ve ardından istemci uygulamasını çalıştırın.
 
-### <a name="use-the-svcutilexe-tool"></a>Svcutil.exe aracını kullanın
+### <a name="use-the-svcutilexe-tool"></a>Svcutil.exe aracını kullanma
 
-**'Svcutil' dahili veya harici komut, çalışabilir program veya toplu dosya olarak tanınmaz.**
+**' Svcutil ' bir iç veya dış komut, çalıştırılabilir program veya toplu iş dosyası olarak tanınmıyor.**
 
- *Svcutil.exe* sistem yolunda olmalı. En kolay çözüm Visual Studio komut istemini kullanmaktır. **Başlat** menüsünden Visual ** \<Studio sürüm>** dizinini seçin ve ardından VS ** \<sürümü için Geliştirici Komut Komut Ustem>'ı **seçin. Bu komut istemi Visual Studio'nun bir parçası olarak gönderilen tüm araçlar için doğru konumlara sistem yolunu ayarlar.  
+ *Svcutil.exe* sistem yolunda olmalıdır. En kolay çözüm, Visual Studio komut istemi ' ni kullanmaktır. **Başlat** menüsünde **Visual Studio \<version>** dizinini seçin ve ardından **\<version> vs için geliştirici komut istemi** seçin. Bu komut istemi, sistem yolunu, Visual Studio 'nun bir parçası olarak gönderilen tüm araçların doğru konumlarına ayarlar.  
   
-### <a name="run-the-service-and-client-applications"></a>Hizmet ve istemci uygulamalarını çalıştırma
+### <a name="run-the-service-and-client-applications"></a>Hizmeti ve istemci uygulamalarını çalıştırma
 
-**System.ServiceModel.Security.SecurityNegotiationException: 'http: /localhost:8000/GettingStarted/CalculatorService'\/hedef için 'http:\//localhost:8000/GettingStarted/CalculatorService' ile SOAP güvenlik müzakeresi başarısız oldu**  
+**System. ServiceModel. Security. SecurityNegotiationException: "http: \/ /localhost: 8000/GettingStarted/Hesaplatorservice ' hedefi IÇIN SOAP güvenlik anlaşması ' http: \/ /localhost: 8000/GettingStarted/hesaplamaservice ' başarısız oldu**  
 
-Bu hata, ağ bağlantısı olmayan etki alanı birleştirilmiş bir bilgisayarda oluşur. Bilgisayarınızı ağa bağlayın veya hem hizmet hem de istemci için güvenliği kapatın.
+Bu hata, ağ bağlantısı olmayan, etki alanına katılmış bir bilgisayarda oluşur. Bilgisayarınızı ağa bağlayın veya hem hizmet hem de istemci için güvenliği devre dışı bırakın.
 
-Güvenliği kapatmak için:
+Güvenliği devre dışı bırakmak için:
 
-- Hizmet için, aşağıdaki kodu oluşturan `WSHttpBinding` kodu değiştirin:  
+- Hizmeti için, öğesini oluşturan kodu `WSHttpBinding` aşağıdaki kodla değiştirin:  
   
     ```csharp
     // Step 3: Add a service endpoint.
     selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
     ```
 
-- İstemci için yapılandırma dosyasında, ** \<bağlama>** öğesi altındaki ** \<güvenlik>** öğesini aşağıdaki gibi güncelleştirin:  
+- İstemci için yapılandırma dosyasında öğesi **\<security>** altındaki öğesini **\<binding>** aşağıdaki gibi güncelleştirin:  
   
     ```xml
     <binding name="WSHttpBinding_ICalculator">
@@ -99,6 +99,7 @@ Güvenliği kapatmak için:
     ```  
 
 ## <a name="see-also"></a>Ayrıca bkz.  
- [WCF uygulamaları ile başlayın](getting-started-tutorial.md)  
- [WCF sorun giderme hızlı başlat](wcf-troubleshooting-quickstart.md)  
- [Sorun giderme kurulum sorunları](troubleshooting-setup-issues.md)
+
+ [WCF uygulamalarını kullanmaya başlama](getting-started-tutorial.md)  
+ [WCF sorun giderme hızlı başlangıç](wcf-troubleshooting-quickstart.md)  
+ [Kurulum sorunlarını giderme](troubleshooting-setup-issues.md)

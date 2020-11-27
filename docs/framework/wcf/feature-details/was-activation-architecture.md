@@ -2,17 +2,19 @@
 title: WAS Etkinleştirme Mimarisi
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 46f9f9b0e951d363200cf41b5119b13ca921a3b5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545988"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281644"
 ---
 # <a name="was-activation-architecture"></a>WAS Etkinleştirme Mimarisi
+
 Bu konu başlığı altında, Windows Işlem etkinleştirme hizmeti 'nin (WAS olarak da bilinir) bileşenleri ele alınmaktadır ve açıklanmaktadır.  
   
 ## <a name="activation-components"></a>Etkinleştirme bileşenleri  
+
  , Birkaç mimari bileşenden oluşur:  
   
 - Dinleyici bağdaştırıcıları. Belirli ağ protokollerine ileti alan ve ile iletişim kuran Windows Hizmetleri, gelen iletileri doğru çalışan sürecine yönlendirmelidir.  
@@ -30,6 +32,7 @@ Bu konu başlığı altında, Windows Işlem etkinleştirme hizmeti 'nin (WAS ol
  ![WAS mimarisini gösteren ekran görüntüsü.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Dinleyici bağdaştırıcıları  
+
  Dinleyici bağdaştırıcıları, dinleyeceği ağ protokolünü kullanarak ileti almak için kullanılan ağ iletişim mantığını uygulayan tek bir Windows hizmetidir. Aşağıdaki tabloda Windows Communication Foundation (WCF) protokolleri için dinleyici bağdaştırıcıları listelenmektedir.  
   
 |Dinleyici bağdaştırıcısı hizmet adı|Protokol|Notlar|  
@@ -59,6 +62,7 @@ Bu konu başlığı altında, Windows Işlem etkinleştirme hizmeti 'nin (WAS ol
 ```  
   
 ### <a name="protocol-handlers"></a>Protokol Işleyicileri  
+
  Belirli protokoller için işlem ve AppDomain protokol işleyicileri makine düzeyinde Web.config dosyasına kaydedilir.  
   
 ```xml  

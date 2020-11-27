@@ -4,28 +4,30 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], error handling
 ms.assetid: 694db4f9-7387-4b13-8f9f-b923b18c7490
-ms.openlocfilehash: c4d66e252561ad7b896ff8092e80013c51bd463c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d8574c0f0f6bd3f66214367c1ed15292adc24a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774016"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280253"
 ---
 # <a name="exceptions-transactions-and-compensation"></a>Özel Durumlar, İşlemler ve Dengeleme
-[!INCLUDE[wf1](../../../includes/wf1-md.md)] iş akışlarında çalışma zamanı hata koşullarını işleme için birkaç farklı mekanizmaları sağlar. İş akışları işlemek ve düzgün bir şekilde hata koşulları kurtarmak için bir özel durum işleyicileri, işlemler, iptal ve maaş birleşimini kullanabilirsiniz.  
+
+[!INCLUDE[wf1](../../../includes/wf1-md.md)] iş akışlarında çalışma zamanı hata koşullarını işlemek için birkaç farklı mekanizma sağlar. İş akışları, hata koşullarından sorunsuz bir şekilde işleme ve kurtarmaya yönelik özel durum işleyicileri, işlemler, iptal ve dengeleme birleşimini kullanabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Özel Durumlar](exceptions.md)  
- Nasıl kullanılacağını gösteren <xref:System.Activities.Statements.TryCatch> bir iş akışında özel durumları işlemek için etkinlik.  
+ <xref:System.Activities.Statements.TryCatch>Bir iş akışındaki özel durumları işlemek için etkinliğin nasıl kullanılacağını gösterir.  
   
  [İşlemler](workflow-transactions.md)  
- Nasıl kullanılacağını gösteren <xref:System.Activities.Statements.TransactionScope> etkinliğini bir iş akışında hareketlerini kullanın.  
+ <xref:System.Activities.Statements.TransactionScope>Bir iş akışındaki işlemleri kullanmak için etkinliğin nasıl kullanılacağını gösterir.  
   
  [Dengeleme](compensation.md)  
- İş akışlarında maaş açıklar ve maaş etkinlikleri gibi nasıl yapılacağı açıklanır <xref:System.Activities.Statements.CompensableActivity>, <xref:System.Activities.Statements.Compensate>, ve <xref:System.Activities.Statements.Confirm>.  
+ İş akışlarında dengelemeyi açıklar ve, ve gibi maaş etkinliklerinin nasıl kullanılacağını gösterir <xref:System.Activities.Statements.CompensableActivity> <xref:System.Activities.Statements.Compensate> <xref:System.Activities.Statements.Confirm> .  
   
- [İptal](modeling-cancellation-behavior-in-workflows.md)  
- Yerleşik etkinlikler, hem de özel etkinlikler kullanma akışlarında işleme iptal yerine getirilmesi anlatılmaktadır.  
+ [İptal Etme](modeling-cancellation-behavior-in-workflows.md)  
+ Yerleşik etkinliklerin yanı sıra özel etkinlikler kullanılarak iş akışlarında iptal işlemenin nasıl gerçekleştirileceğini açıklar.  
   
  [İş Akışlarında Hata Ayıklama](debugging-workflows.md)  
- İş akışlarında hata ayıklamak açıklar.
+ İş akışlarının hatalarını ayıklama işlemini açıklar.

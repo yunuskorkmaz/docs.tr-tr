@@ -10,14 +10,15 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 5cc1118640bcf1262d88cb8cdb39939ae315cae3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 06a6167f0ad352955eb6b764ef8bfdb1394f4ed9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246876"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279746"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Nasıl yapılır: X.509 Sertifikalarını WCF için Erişilebilir Hale Getirme
+
 X. 509.440 sertifikasını Windows Communication Foundation (WCF) erişilebilir hale getirmek için, uygulama kodunun sertifika depolama adını ve konumunu belirtmesi gerekir. Bazı durumlarda, işlem kimliğinin X. 509.952 sertifikasıyla ilişkili özel anahtarı içeren dosyaya erişimi olmalıdır. Bir sertifika deposundaki bir X. 509.440 sertifikasıyla ilişkili özel anahtarı almak için, WCF 'nin bunu yapması için izni olmalıdır. Varsayılan olarak, yalnızca sahip ve sistem hesabı bir sertifikanın özel anahtarına erişebilir.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>X. 509.440 sertifikalarını WCF 'ye erişilebilir hale getirmek için  
@@ -30,10 +31,10 @@ X. 509.440 sertifikasını Windows Communication Foundation (WCF) erişilebilir 
   
         |X. 509.440 sertifika kullanımı|Özel anahtar|  
         |---------------------------|-----------------|  
-        |Giden bir SOAP iletisini dijital olarak imzalama.|Yes|  
-        |Gelen SOAP iletisinin imzası doğrulanıyor.|No|  
-        |Giden bir SOAP iletisi şifreleniyor.|No|  
-        |Gelen SOAP iletisinin şifresini çözme.|Yes|  
+        |Giden bir SOAP iletisini dijital olarak imzalama.|Evet|  
+        |Gelen SOAP iletisinin imzası doğrulanıyor.|Hayır|  
+        |Giden bir SOAP iletisi şifreleniyor.|Hayır|  
+        |Gelen SOAP iletisinin şifresini çözme.|Evet|  
   
     2. Sertifika depolama konumunu ve sertifikanın depolandığı adı saptayın.  
   

@@ -2,19 +2,21 @@
 title: Özel Etkinlikler
 ms.date: 03/30/2017
 ms.assetid: 5cde06b3-51b2-4e46-900d-11140bae77f4
-ms.openlocfilehash: 3802d06f503ecac456cb65ea46497c4056e475b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c1368a96c84accd81ec365d30df5c14be32cd08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913867"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279681"
 ---
 # <a name="custom-activities"></a>Özel Etkinlikler
-Bu bölüm, Windows Workflow Foundation (WF) özel etkinlikler oluşturmak nasıl gösteren örnekler içerir.  
+
+Bu bölüm, Windows Workflow Foundation (WF) içinde özel etkinliklerin nasıl oluşturulduğunu gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Kod Gövdeli](code-bodied.md)  
- Bildirimli olarak kod içinde oluşturulan özel etkinlik örnekleri içerir.
+ Kod içinde bildirimli olarak oluşturulan özel etkinlik örneklerini içerir.
   
  [Özel Etkinlik Tasarımcıları](custom-activity-designers.md)  
- İş akışı tasarımcısında görüntülemek için özel tasarımcılar kullanın etkinliği örneği içerir.
+ İş akışı tasarımcısında görüntülenmek üzere özel tasarımcılar kullanan etkinlik örneklerini içerir.

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - WF [WF]
 - Windows Workflow Foundation [WF]
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
-ms.openlocfilehash: 9fed65158f830fcdc5342800493029418a71d2f8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a7b123c14aa14b64a9ca3a78d127aa55210a08ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724071"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280058"
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
+
 Bu bölümde Windows Workflow Foundation (WF) programlama modeli, örnekleri ve araçları açıklanmaktadır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
+
  [Windows Iş akışı belgelerine kılavuz](guide-to-the-documentation.md) Bilgi sahibi (Aceminin iyi bir şekilde tanışma) ve gereksinimlere bağlı olarak okunacak bir dizi önerilen konu.
 
  [Windows Workflow Foundation](whats-new.md) yenilikleri Önceki sürümlerden birkaç geliştirme paradigmalarına üzerinde yapılan değişiklikleri açıklar.

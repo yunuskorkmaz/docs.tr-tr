@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d48f01b5-582b-4c8b-b547-8adddae7e371
-ms.openlocfilehash: 7c87026ca4cf7c739f4615da9bc7f0272a382392
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: dd767443fefb16ebc02300bffa4264357f12c3ae
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246668"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280591"
 ---
 # <a name="how-to-use-the-channelfactory"></a>Nasıl yapılır: ChannelFactory Kullanma
+
 Genel sınıf, birden <xref:System.ServiceModel.ChannelFactory%601> fazla kanal oluşturmak için kullanılabilecek bir kanal fabrikası oluşturulmasını gerektiren Gelişmiş senaryolarda kullanılır.  
   
 ### <a name="to-create-and-use-the-channelfactory-class"></a>ChannelFactory sınıfını oluşturmak ve kullanmak için  
@@ -25,5 +26,6 @@ Genel sınıf, birden <xref:System.ServiceModel.ChannelFactory%601> fazla kanal 
 3. İstemci kodunda, <xref:System.ServiceModel.ChannelFactory%601> birden fazla uç nokta dinleyicisi oluşturmak için sınıfını kullanın.  
   
 ## <a name="example"></a>Örnek  
+
  [!code-csharp[c_HowToUseChannelFactory#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtousechannelfactory/cs/source.cs#1)]
  [!code-vb[c_HowToUseChannelFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtousechannelfactory/vb/source.vb#1)]

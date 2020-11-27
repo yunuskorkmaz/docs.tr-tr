@@ -2,26 +2,28 @@
 title: Zaman uyumsuz etkinliklerde hata işleme
 ms.date: 03/30/2017
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-ms.openlocfilehash: c63ce231687b03bdba57edd38c32270eabeff834
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c214ce1d0f435cda79deb6976ca9196a5d7aee1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182943"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280266"
 ---
 # <a name="error-handling-in-asynchronous-activities"></a>Zaman uyumsuz etkinliklerde hata işleme
-Hata işlemeyi sağlamak, <xref:System.Activities.AsyncCodeActivity> hatanın etkinliğin geri arama sistemi aracılığıyla yönlendirmesini gerektirir. Bu konu, SendMail etkinlik örneğini kullanarak eşzamanlı bir işlemle ana bilgisayara geri atılan bir hatanın nasıl alınılacağını açıklar.  
+
+Bir içinde hata işleme sağlamak <xref:System.Activities.AsyncCodeActivity> , hatanın etkinliğin geri çağırma sistemi aracılığıyla yönlendirilmesini içerir. Bu konu, SendMail etkinlik örneği kullanılarak, zaman uyumsuz bir işlemde konağa geri döndürülen bir hatanın nasıl alınacağını açıklamaktadır.  
   
-## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a>Eşzamanlı bir etkinlikte atılan bir hatayı ana bilgisayara geri döndürme  
- SendMail etkinlik örneğindeki bir eşzamanlı işlemdeki bir hatayı ana bilgisayara yönlendirme, aşağıdaki adımları içerir:  
+## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a>Zaman uyumsuz bir etkinlikte oluşan bir hata, konağa geri döndürülüyor  
+
+ SendMail etkinlik örneğindeki ana bilgisayara geri zaman uyumsuz bir işlemde hata yönlendirme aşağıdaki adımları içerir:  
   
-- `SendMailAsyncResult` Sınıfa bir Özel Durum özelliği ekleyin.  
+- Sınıfına bir özel durum özelliği ekleyin `SendMailAsyncResult` .  
   
-- Atılan hatayı olay işleyicisi olarak bu özelliğe kopyalayın. `SendCompleted`  
+- Oluşturulan hatayı `SendCompleted` olay işleyicisindeki bu özelliğe kopyalayın.  
   
-- Olay işleyicisi `EndExecute` özel durum atın.  
+- Olay işleyicisinde özel durumu oluşturur `EndExecute` .  
   
- Ortaya çıkan kod aşağıdaki gibidir.  
+ Elde edilen kod aşağıdaki gibidir.  
   
 ```csharp  
 class SendMailAsyncResult : IAsyncResult  

@@ -2,15 +2,16 @@
 title: 'Nasıl yapılır: Örnek Veri Özelliklerini Seri Durumdan Çıkarma'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f941e2d2b10e825adcdc13e2a9aed231125fe09
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143089"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280097"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Nasıl yapılır: Örnek Veri Özelliklerini Seri Durumdan Çıkarma
-Bir kullanıcı veya iş akışı yöneticisinin, kalıcı bir iş akışı örneğinin durumunu el ile denetlemek isteyebileceği durumlar olabilir. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>Örnekler tablosunda aşağıdaki dört sütunu ortaya çıkaran bir görünüm sağlar:  
+
+Bir kullanıcı veya iş akışı yöneticisinin kalıcı bir iş akışı örneğinin durumunu el ile incelemesi isteyebileceğiniz durumlar olabilir. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Örnekler tablosunda aşağıdaki dört sütunu kullanıma sunan bir görünüm sağlar:  
   
 - ReadWritePrimitiveDataProperties  
   
@@ -20,13 +21,13 @@ Bir kullanıcı veya iş akışı yöneticisinin, kalıcı bir iş akışı örn
   
 - WriteOnlyComplexDataProperties  
   
- İlkel veri özellikleri, .NET Framework türleri "ortak" olarak kabul edilen özelliklere (örneğin, Int32 ve String) atıfta bulunurken, karmaşık veri özellikleri diğer tüm türlere başvurur. İlkel türlerin tam bir numaralandırma daha sonra bu kod örneğinde bulunur.  
+ İlkel veri özellikleri, .NET Framework türleri "ortak" (örneğin, Int32 ve dize) olarak kabul edilen özelliklere başvurur, ancak karmaşık veri özellikleri diğer tüm türlere başvurur. Temel türlerin tam numaralandırması, bu kod örneğinde daha sonra bulunur.  
   
- Okuma/yazma özellikleri, bir örnek yüklendiğinde İş Akışı Çalışma Zamanı'na geri döndürülen özelliklere başvurur. WriteOnly özellikleri veritabanına yazılır ve bir daha asla okunmaz.  
+ Okuma/yazma özellikleri, bir örnek yüklendiğinde Iş akışı çalışma zamanına geri döndürülen özelliklere başvurur. WriteOnly özellikleri veritabanına yazılır ve sonra hiçbir şekilde yeniden okunamaz.  
   
- Bu örnek, kullanıcının ilkel veri özelliklerini deserialize sağlayan kod sağlar. ReadWritePrimitiveDataProperties veya WriteOnlyPrimitiveDataProperties sütunundan okunan bir bayt dizisi göz önüne alındığında, bu <xref:System.Collections.Generic.Dictionary%602> kod \<ikili büyük nesneyi (BLOB) her anahtar değer çiftinin bir özellik adını ve karşılık gelen değerini temsil ettiği bir tür XName, nesne> dönüştürür.  
+ Bu örnek, bir kullanıcının temel veri özelliklerinin serisini kaldırma olanağı sağlayan kodu sağlar. ReadWritePrimitiveDataProperties veya WriteOnlyPrimitiveDataProperties sütunundan okunan bir bayt dizisi verildiğinde, bu kod ikili büyük nesne (BLOB) ' ı <xref:System.Collections.Generic.Dictionary%602> \<XName, object> her anahtar değer çiftinin bir özellik adını ve buna karşılık gelen değeri temsil ettiği bir türe dönüştürür.  
   
- Bu örnek, şu anda desteklenen bir işlem olmadığından karmaşık veri özelliklerini nasıl deserialize göstermeyeceğini gösterir.  
+ Bu örnek, şu anda desteklenen bir işlem olmadığından, karmaşık veri özelliklerinin serisini kaldırma işlemini göstermez.  
   
 ```csharp  
 using System;  
