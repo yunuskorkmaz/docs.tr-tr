@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: f8830b13cb64c737525f5399beb244aeb6d9817f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 328c085035927b3f271a39a0ea3992dde29f5119
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721900"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279109"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 
@@ -41,6 +41,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ```
 
 ## <a name="parameters"></a>Parametreler
+
  Mpgo.exe için tüm bağımsız değişkenler büyük/küçük harfe duyarsızdır. Komutlara önek olarak bir tire işareti eklenir.
 
 > [!NOTE]
@@ -65,6 +66,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-RemoveNativeImages`|Belirtilen bir çalıştırmanın ölçeğini temizler `–LeaveNativeImages` . `-RemoveNativeImages`' I belirtirseniz, Mpgo.exe hariç tüm bağımsız değişkenleri `-64bit` yoksayar `–AssemblyList` ve tüm belgelenmiş yerel görüntüleri kaldırdıktan sonra çıkar.|
 
 ## <a name="remarks"></a>Açıklamalar
+
  Komut satırında hem hem `–AssemblyList` de `- AssemblyListFile` birden çok kez kullanabilirsiniz.
 
  Derlemeleri belirtirken tam yol adları belirtmezseniz, Mpgo.exe geçerli dizinde arar. Yanlış bir yol belirtirseniz, Mpgo.exe bir hata iletisi görüntüler, ancak diğer derlemeler için veri oluşturmaya devam eder. Eğitim senaryosu sırasında yüklenmemiş bir derleme belirtirseniz, o derleme için eğitim verisi oluşturulmaz.
@@ -99,6 +101,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
  Bu işlem tüm derlemelerin en iyi duruma getirilmiş verilere sahip olmasını sağlar. Güncelleştirilmiş en iyi duruma getirilmiş derlemeleri daha sık iade ederseniz (1. ve 2. adım), tüm üretim geliştirme sürecinde performans numaraları daha tutarlı olur.
 
 ## <a name="using-mpgoexe-from-visual-studio"></a>Visual Studio'dan Mpgo.exe'yi kullanma
+
  Visual Studio 'dan Mpgo.exe çalıştırabilirsiniz (bkz. [nasıl yapılır: yapı olaylarını belirtme (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) aşağıdaki kısıtlamalara göre:
 
 - Visual Studio makroları aynı zamanda varsayılan olarak sonlarında eğik çizgiler içerdiğinden, sonda eğik çizgileri olan tırnak işaretli yollar kullanamazsınız. (Örneğin, `–OutDir "C:\Output Folder\"` geçersiz.) Bu kısıtlamayı geçici olarak çözmek için sondaki eğik çizgiden çıkma yapabilirsiniz. (Örneğin, `-OutDir "$(OutDir)\"` bunun yerine kullanın.)
@@ -106,7 +109,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 - Varsayılan olarak, Mpgo.exe Visual Studio yapı yolu üzerinde değildir. Yolu Visual Studio'ya eklemeli ya da Mpgo komut satırında tam yolu belirtmelisiniz. `–Scenario` `–Import` Visual Studio 'da derleme sonrası olayında ya da parametresini kullanabilirsiniz. Ancak, tipik işlem, `–Scenario` Visual Studio için geliştirici komut istemi bir kez kullanılır ve ardından `–Import` her derlemeden sonra iyileştirilmiş derlemeleri güncelleştirmek için kullanılır; Örneğin:  `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"` .
 
 <a name="samples"></a>
+
 ## <a name="examples"></a>Örnekler
+
  Visual Studio için bir Geliştirici Komut İstemi aşağıdaki Mpgo.exe komutu bir vergi uygulamasını iyileştirir:
 
 ```console

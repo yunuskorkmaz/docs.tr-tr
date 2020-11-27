@@ -10,14 +10,15 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 7455307441045360bc62cee50f13d106df4d005e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d2595f3a6cb5e1ced17697def33e35ce8912ea90
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502125"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279252"
 ---
 # <a name="synchronous-client-socket-example"></a>Zaman Uyumlu İstemci Yuvası Örneği
+
 Aşağıdaki örnek program bir sunucusuna bağlanan bir istemci oluşturur. İstemci, zaman uyumlu bir yuva ile oluşturulmuştur, bu nedenle sunucu bir yanıt döndürünceye kadar istemci uygulamanın yürütülmesi askıya alınır. Uygulama sunucuya bir dize gönderir ve ardından sunucu tarafından konsolda döndürülen dizeyi görüntüler.  
   
 ```vb  
