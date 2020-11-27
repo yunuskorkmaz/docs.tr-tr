@@ -2,17 +2,18 @@
 title: ReliableSessionBindingElement
 ms.date: 03/30/2017
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-ms.openlocfilehash: b0a621da43402777cc620f1876bd968a72bb8c12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f91e38ab88cd9f93e9bec0e3a6ca65254bc49570
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962922"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273327"
 ---
 # <a name="reliablesessionbindingelement"></a>ReliableSessionBindingElement
+
 ReliableSessionBindingElement  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ReliableSessionBindingElement : BindingElement  
@@ -29,72 +30,82 @@ class ReliableSessionBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ReliableSessionBindingElement sınıf herhangi bir yöntemi tanımlamaz.  
+
+ ReliableSessionBindingElement sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  ReliableSessionBindingElement sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="acknowledgementinterval"></a>AcknowledgementInterval  
- Veri türü: tarih/saat  
+### <a name="acknowledgementinterval"></a>Bildiren Gementınterval  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bir hedef fabrikası tarafından oluşturulan güvenilir kanalda ileti kaynağı için bir onay göndermeden önce bekleyeceği zaman aralığı.  
+ Bir hedefin, fabrika tarafından oluşturulan güvenilir kanallarda ileti kaynağına bir onay göndermeden önce beklediği zaman aralığı.  
   
 ### <a name="flowcontrolenabled"></a>FlowControlEnabled  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Akış denetimi etkin olup olmadığını belirten bir Boole değeri.  
+ Akış denetiminin etkinleştirilip etkinleştirilmediğini belirten bir Boolean değer.  
   
 ### <a name="inactivitytimeout"></a>InactivityTimeout  
- Veri türü: tarih/saat  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Herhangi bir ileti kanalı hatalı önce göndermemeyi diğer tarafın kanalı göndermemesini sağladığı sürenin üst sınırını belirtir.  
+ Kanalın, diğer iletişim tarafına ait diğer tarafın kanaldan önce herhangi bir ileti gönderemediğinden izin verilen en uzun süreyi belirtir.  
   
 ### <a name="maxpendingchannels"></a>MaxPendingChannels  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bekleyebilen kabul edilecek bekleyebileceği kanalları maksimum sayısı.  
+ Dinleyicide kabul edilmesini bekleyebilen kanal sayısı üst sınırı.  
   
 ### <a name="maxretrycount"></a>MaxRetryCount  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- En fazla kaç kez güvenilir bir kanalın çalışır değil aldığı için bir bildirim çağırarak bir ileti göndermesi `Send` , arka plandaki kanal.  
+ Güvenilir bir kanalın, kendisi için onay almadığı bir iletiyi kendi temel kanalına çağırarak, en fazla kaç kez yeniden aktarmak için deneme sayısı `Send` .  
   
 ### <a name="maxtransferwindowsize"></a>MaxTransferWindowSize  
- Veri türü: SINT32  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Güvenilir oturum için maksimum aktarım pencere boyutu.  
+ Güvenilir oturum için en büyük aktarım penceresi boyutu.  
   
-### <a name="ordered"></a>Sıralı  
+### <a name="ordered"></a>Sipariş edildi  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- İletilerin gönderildiği sırada ulşamasını garanti edilip edilmediğini belirten bir Boole değeri.  
+ İletilerin gönderildikleri sırada gelmesi garanti edilip edilmeyeceğini belirten bir Boole değeri.  
   
-### <a name="reliablemessagingversion"></a>ReliableMessagingVersion  
+### <a name="reliablemessagingversion"></a>Belirten ReliableMessagingVersion  
+
  Veri türü: tamsayı  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Güvenilir bir oturumda kullanılan WS-ReliableMessaging protokol sürümünü belirten bir tamsayı.  
+ Güvenilir oturumda kullanılan WS-ReliableMessaging protokol sürümünü belirten bir tamsayı.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,25 +2,28 @@
 title: Başlatmayı Örneklendirme
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 06a8dfe571b652ded236df3097b37861c03a858d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9681c091fe2a69024b000c5b93d003ec4d127a7b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596662"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273366"
 ---
 # <a name="instancing-initialization"></a>Başlatmayı Örneklendirme
+
 Bu örnek, bir arabirimini etkinleştirerek ve devre dışı bırakarak bir nesnenin başlatılmasını özelleştiren bir arabirim tanımlayarak [Havuz oluşturma](pooling.md) örneğini genişletir `IObjectControl` . İstemci, nesneyi havuza döndüren ve havuza nesne döndüren yöntemleri çağırır.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 ## <a name="extensibility-points"></a>Genişletilebilirlik noktaları  
+
  Windows Communication Foundation (WCF) uzantısı oluşturmanın ilk adımı, genişletilebilirlik noktasının kullanılmasına karar vermaktır. WCF 'de, *EndpointDispatcher* terimi, gelen iletileri kullanıcının hizmetinde Yöntem etkinleştirmeleri içine dönüştürmeden ve dönüş değerlerini Bu yöntemden giden bir iletiye dönüştürmekten sorumlu bir çalışma zamanı bileşenine başvurur. WCF hizmeti her uç nokta için bir EndpointDispatcher oluşturur.  
   
  EndpointDispatcher, sınıfını kullanarak uç nokta kapsamı (hizmet tarafından alınan veya gönderilen tüm iletiler için) sağlar <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> . Bu sınıf, EndpointDispatcher davranışını denetleyen çeşitli özellikleri özelleştirmenize olanak sağlar. Bu örnek, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> hizmet sınıfının örneklerini sağlayan nesnesine işaret eden özelliğine odaklanır.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
+
  WCF 'de, EndpointDispatcher arabirimini uygulayan bir örnek sağlayıcı kullanarak bir hizmet sınıfının örneklerini oluşturur <xref:System.ServiceModel.Dispatcher.IInstanceProvider> . Bu arabirimin yalnızca iki yöntemi vardır:  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: Bir ileti geldiğinde, dağıtıcı <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> iletiyi işlemek için hizmet sınıfının bir örneğini oluşturmak üzere yöntemini çağırır. Bu yönteme yapılan çağrıların sıklığı, özelliği tarafından belirlenir <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> . Örneğin, <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği olarak ayarlandıysa <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType> , gelen her iletiyi işlemek için yeni bir hizmet sınıfı örneği oluşturulur, bu nedenle <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> ileti her geldiğinde çağrılır.  
@@ -28,6 +31,7 @@ Bu örnek, bir arabirimini etkinleştirerek ve devre dışı bırakarak bir nesn
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: Hizmet örneği iletiyi işlemeyi tamamladığında, EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> yöntemini çağırır. Yönteminde olduğu gibi <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> , bu yönteme yapılan çağrıların sıklığı özelliği tarafından belirlenir <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> .  
   
 ## <a name="the-object-pool"></a>Nesne havuzu  
+
  `ObjectPoolInstanceProvider`Sınıfı, nesne havuzu için uygulamayı içerir. Bu sınıf, <xref:System.ServiceModel.Dispatcher.IInstanceProvider> hizmet modeli katmanıyla etkileşimde bulunmak için arabirimini uygular. EndpointDispatcher <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> yöntemi çağırdığında, yeni bir örnek oluşturmak yerine, özel uygulama bellek içi havuzda var olan bir nesneyi arar. Kullanılabilir bir tane varsa, döndürülür. Aksi takdirde, `ObjectPoolInstanceProvider` `ActiveObjectsCount` özelliğinin (havuzdan döndürülen nesne sayısı) en yüksek havuz boyutuna ulaştığından, bu özelliği denetler. Aksi takdirde, yeni bir örnek oluşturulup çağırana döndürülür ve `ActiveObjectsCount` daha sonra artırılır. Aksi takdirde, bir nesne oluşturma isteği yapılandırılmış bir süre için sıraya alınır. İçin uygulanması `GetObjectFromThePool` Aşağıdaki örnek kodda gösterilmiştir.  
   
 ```csharp
@@ -154,7 +158,7 @@ if (activeObjectsCount == 0)
   
  Bu örnek özel bir özniteliği kullanır. Oluşturulduğunda <xref:System.ServiceModel.ServiceHost> , hizmetin tür tanımında kullanılan öznitelikleri inceler ve kullanılabilir davranışları hizmet açıklamasının davranış koleksiyonuna ekler.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior>Arabirimin üç yöntemi vardır: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> . Bu yöntemler, başlatıldığında WCF tarafından çağırılır <xref:System.ServiceModel.ServiceHost> . <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>İlk olarak çağrılır; hizmetin tutarsızlıklar için inceleneme izin verir. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>sonraki çağırılır; Bu yöntem yalnızca Gelişmiş senaryolarda gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>son olarak adlandırılır ve çalışma zamanının yapılandırılmasından sorumludur. Aşağıdaki parametreler içine geçirilir <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> :  
+ <xref:System.ServiceModel.Description.IServiceBehavior>Arabirimin üç yöntemi vardır: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> . Bu yöntemler, başlatıldığında WCF tarafından çağırılır <xref:System.ServiceModel.ServiceHost> . <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> İlk olarak çağrılır; hizmetin tutarsızlıklar için inceleneme izin verir. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> sonraki çağırılır; Bu yöntem yalnızca Gelişmiş senaryolarda gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> son olarak adlandırılır ve çalışma zamanının yapılandırılmasından sorumludur. Aşağıdaki parametreler içine geçirilir <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> :  
   
 - `Description`: Bu parametre hizmetin tamamı için hizmet açıklamasını sağlar. Bu, hizmetin uç noktaları, sözleşmeleri, bağlamaları ve hizmetle ilişkili diğer verilerle ilgili açıklama verilerini denetlemek için kullanılabilir.  
   
@@ -201,9 +205,10 @@ public class PoolService : IPoolService
 ```  
   
 ## <a name="hooking-activation-and-deactivation"></a>Etkinleştirme ve devre dışı bırakma  
+
  Nesne havuzunun birincil amacı, kısa süreli nesneleri görece maliyetli oluşturma ve başlatma ile optimize etmek. Bu nedenle, düzgün şekilde kullanılırsa uygulamaya çarpıcı bir performans artışı verebilir. Nesne havuzdan döndürüldüğünden, Oluşturucu yalnızca bir kez çağrılır. Ancak bazı uygulamalar, tek bir bağlam sırasında kullanılan kaynakları başlatıp temizleyebilecekleri bir denetim düzeyi gerektirir. Örneğin, bir hesaplamalar kümesi için kullanılan bir nesne, bir sonraki hesaplamayı işlemeden önce özel alanlarını sıfırlayabilir. Kurumsal Hizmetler, nesne geliştiricisi geçersiz kılınmasına `Activate` ve `Deactivate` temel sınıftan yöntemlere izin vererek bu tür içeriğe özgü başlatma işlemini etkinleştirdi <xref:System.EnterpriseServices.ServicedComponent> .  
   
- Nesne havuzu, `Activate` nesneyi havuzdan döndürmeden hemen önce yöntemini çağırır. `Deactivate`, nesne havuza geri dönzaman çağrılır. <xref:System.EnterpriseServices.ServicedComponent>Temel sınıf Ayrıca `boolean` adlı bir özelliğe sahiptir `CanBePooled` ve bu, havuzun daha fazla havuza kaydedilip edilmeyeceğini bildirmek için kullanılabilir.  
+ Nesne havuzu, `Activate` nesneyi havuzdan döndürmeden hemen önce yöntemini çağırır. `Deactivate` , nesne havuza geri dönzaman çağrılır. <xref:System.EnterpriseServices.ServicedComponent>Temel sınıf Ayrıca `boolean` adlı bir özelliğe sahiptir `CanBePooled` ve bu, havuzun daha fazla havuza kaydedilip edilmeyeceğini bildirmek için kullanılabilir.  
   
  Bu işlevselliği taklit etmek için örnek, belirtilen üyelere sahip ortak bir arabirim ( `IObjectControl` ) bildirir. Bu arabirim daha sonra içeriğe özgü başlatma sağlamak üzere amaçlanan hizmet sınıfları tarafından uygulanır. <xref:System.ServiceModel.Dispatcher.IInstanceProvider>Uygulamanın bu gereksinimleri karşılayacak şekilde değiştirilmesi gerekir. Şimdi, yöntemini çağırarak bir nesne aldığınızda, `GetInstance` nesnenin ne zaman uygulayıp uygulamadığını denetlemeniz gerekir `IObjectControl.` , `Activate` yöntemi uygun şekilde çağırmanız gerekir.  
   

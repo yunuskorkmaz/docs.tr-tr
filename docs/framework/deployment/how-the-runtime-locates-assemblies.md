@@ -10,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: 4cf1e5787fe2e430d20208d8e79b610e9126c67c
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 1b2ee58ccbd4bdfceb6300c20d5255718982f2e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031715"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272533"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 
@@ -135,11 +135,13 @@ Yayımcı ilke yapılandırma dosyası, uygulamadan gelen sürüm bilgilerini (y
 Bir yayımcı ilke dosyası, paylaşılan bir bileşen güncelleştirilirken ve paylaşılan bileşenin yeni sürümü bu bileşeni kullanan tüm uygulamalar tarafından çekilmelidir. Uygulama yapılandırma dosyası güvenli modu zorunlu kılarsa, yayımcı ilkesi dosyasındaki ayarlar uygulama yapılandırma dosyasındaki ayarları geçersiz kılar.
 
 #### <a name="safe-mode"></a>Güvenli mod
+
 Yayımcı ilke dosyaları genellikle bir hizmet paketinin veya program güncelleştirmesinin bir parçası olarak açıkça yüklenir. Yükseltilen paylaşılan bileşenle ilgili herhangi bir sorun varsa, güvenli mod kullanarak yayımcı ilkesi dosyasındaki geçersiz kılmaları yoksayabilirsiniz. Güvenli mod, **\<publisherPolicy apply="yes**&#124;**no"/>** yalnızca uygulama yapılandırma dosyasında bulunan öğesi tarafından belirlenir. Yayımcı ilkesi yapılandırma bilgilerinin bağlama işleminden kaldırılması gerekip gerekmediğini belirtir.
 
 Güvenli mod tüm uygulama veya seçili derlemeler için ayarlanabilir. Diğer bir deyişle, uygulamayı oluşturan tüm derlemeler için ilkeyi kapatabilir veya bazı derlemeler için açabilirsiniz, ancak diğerlerini kullanamazsınız. Yayımcı ilkesini bir uygulamayı oluşturan derlemelere seçmeli olarak uygulamak için, **\<publisherPolicy apply\=no/>** öğesini ayarlayın ve öğesini kullanarak hangi derlemelerin etkileneceğini belirleyin \<**dependentAssembly**> . Uygulamayı oluşturan tüm derlemelere yayımcı ilkesi uygulamak için, **\<publisherPolicy apply\=no/>** bağımlı derleme öğesi olmadan ayarlayın. Yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../configure-apps/index.md).
 
 ### <a name="machine-configuration-file"></a>Makine yapılandırma dosyası
+
 Üçüncü olarak, çalışma zamanı makine yapılandırma dosyasını inceler. Machine.config adlı bu dosya, çalışma zamanının yüklendiği kök dizinin yapılandırma alt dizinindeki yerel bilgisayarda bulunur. Bu dosya, yöneticiler tarafından bu bilgisayarda yerel olan derleme bağlama kısıtlamalarını belirtmek için kullanılabilir. Makine yapılandırma dosyasındaki ayarlar diğer tüm yapılandırma ayarlarından önceliklidir; Ancak, bu, tüm yapılandırma ayarlarının bu dosyaya konulacağı anlamına gelmez. Yönetici ilke dosyası tarafından belirlenen sürüm son, geçersiz kılınamaz. Machine.config dosyasında belirtilen geçersiz kılmalar tüm uygulamaları etkiler. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../configure-apps/index.md).
 
 <a name="step2"></a>

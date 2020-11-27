@@ -2,17 +2,18 @@
 title: ServiceAppDomain
 ms.date: 03/30/2017
 ms.assetid: f28e5186-a66d-46c1-abe9-b50e07f8cb4f
-ms.openlocfilehash: 05be495dbfe87e7dd14b0cfbb38b30c6f8278e6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 243c9112dd9caf5c92ef77aa0f45b4b1e71a4e9f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61957079"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273262"
 ---
 # <a name="serviceappdomain"></a>ServiceAppDomain
-Uygulama etki alanı için bir hizmet eşler.  
+
+Bir hizmeti bir uygulama etki alanına eşler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ServiceAppDomain  
@@ -23,29 +24,33 @@ class ServiceAppDomain
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ServiceAppDomain sınıf herhangi bir yöntemi tanımlamaz.  
+
+ ServiceAppDomain sınıfı herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  ServiceAppDomain sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="ref"></a>ref  
- Veri türü: Hizmet  
-Qualifiers: Anahtar  
+
+ Veri türü: hizmet  
+Niteleyiciler: anahtar  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bu uygulama etki alanının hizmet.  
+ Bu uygulama etki alanının hizmeti.  
   
 ### <a name="ref"></a>ref  
+
  Veri türü: AppDomainInfo  
-Qualifiers: Anahtar  
+Niteleyiciler: anahtar  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Uygulama etki alanı özelliklerini içerir.  
+ Uygulama etki alanının özelliklerini içerir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|
+|Ad Alanı|Root\ServiceModel içinde tanımlı|

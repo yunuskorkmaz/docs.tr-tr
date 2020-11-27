@@ -2,32 +2,35 @@
 title: 39456 - TrackingRecordDropped
 ms.date: 03/30/2017
 ms.assetid: da13d5bc-1736-47a4-b3fd-064ca8040326
-ms.openlocfilehash: f117c7759bab1759a7d614db275de88f8b37c331
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d958b506e057bc0d59f954debdc9da6015bf5f1f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774432"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273106"
 ---
 # <a name="39456---trackingrecorddropped"></a>39456 - TrackingRecordDropped
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|39456|  
-|anahtar sözcükler|WFTracking|  
+|ID|39456|  
+|Anahtar sözcükler|WFTracking|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- ETW oturumu sağlayıcı tarafından izin verilen maksimum boyutunu aştığı için bir izleme kaydını bırakıldı gösterir.  
+
+ Boyut, ETW oturum sağlayıcısı tarafından izin verilen üst sınırı aştığından bir izleme kaydının bırakıldığını gösterir.  
   
 ## <a name="message"></a>İleti  
- ETW oturumu tarafından %2 sağlayıcısı için izin verilen en fazla kayıt %1 izleme boyutunu aşıyor  
+
+ %1 izleme kaydının boyutu %2 sağlayıcısının ETW oturumunun izin verdiği üst sınırı aşıyor  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Özel Durum|xs:string|Özel durum için özel durum ayrıntıları|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Özel durum|xs: String|Özel durum için özel durum ayrıntıları|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

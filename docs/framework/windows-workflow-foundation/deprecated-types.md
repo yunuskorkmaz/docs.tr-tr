@@ -2,17 +2,19 @@
 title: Windows Workflow Foundation’da kullanım dışı türler
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-ms.openlocfilehash: 011f13a56695efdd9e964ef1e6c1099b0acc2710
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 628963650d32237dedbb6ab2a0a2d9a79866af18
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713346"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272878"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Windows Workflow Foundation’da kullanım dışı türler
+
 .NET 4 ' te Iş akışı ekibi, ad alanında yeni bir Iş akışı altyapısı yayımlamıştır <xref:System.Activities> . .NET Framework 4,5 Beta sürümü sayesinde, "WF 3" <xref:System.Workflow.Activities> , ve ad alanlarındaki türlerin çoğunu <xref:System.Workflow.ComponentModel>  <xref:System.Workflow.Runtime> eski olarak işaretliyoruz.
 
 ## <a name="obsolete-namespaces-and-tools"></a>Kullanılmayan ad alanları ve araçları
+
  Aşağıdaki derlemeler, kullanım dışı bırakılacak bir veya daha fazla ortak türe sahiptir:
 
 - System.Workflow.Activities.dll

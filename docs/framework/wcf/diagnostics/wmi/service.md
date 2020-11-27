@@ -2,17 +2,18 @@
 title: Hizmet
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-ms.openlocfilehash: c59672b3b7617d9c28d99f7d534b6e7f2f2e9fbb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa4eecbcc8a2ef818cd99d777b0e3c2f1f222e46
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991451"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273288"
 ---
 # <a name="service"></a>Hizmet
+
 Hizmet  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class Service  
@@ -33,97 +34,111 @@ class Service
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- Hizmet sınıfı, herhangi bir yöntemi tanımlamaz.  
+
+ Hizmet sınıfı herhangi bir yöntem tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
- Hizmet sınıfı, aşağıdaki özelliklere sahiptir:  
+
+ Hizmet sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="baseaddresses"></a>BaseAddresses  
+
  Veri türü: dize dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet tarafından kullanılan tabanı.  
+ Hizmet tarafından kullanılan taban adresler.  
   
 ### <a name="behaviors"></a>Davranışlar  
- Veri türü: Davranış dizi  
+
+ Veri türü: davranış dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bu hizmetle ilişkili davranışlar.  
+ Bu hizmetle ilişkilendirilen davranışlar.  
   
 ### <a name="configurationname"></a>ConfigurationName  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
  ServiceElement_BehaviorConfiguration  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Performans sayaçlarını hizmetin örneğini örnek adı.  
+ Hizmetin performans sayaçları örneğinin örnek adı.  
   
-### <a name="distinguishedname"></a>DistinguishedName  
+### <a name="distinguishedname"></a>DistinguishedName 'dir  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Adresten hizmet adı.  
+ Adreste hizmet adı.  
   
 ### <a name="extensions"></a>Uzantıları  
+
  Veri türü: dize dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmeti örneğinin uzantıları için örnek bağlamı.  
+ Hizmet örneği uzantılarının örnek bağlamları.  
   
 ### <a name="metadata"></a>Meta Veriler  
+
  Veri türü: dize dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet meta verilerini ayarlar.  
+ Hizmet meta verileri ayarları.  
   
-### <a name="name"></a>Ad  
+### <a name="name"></a>Adı  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Bu hizmet benzersiz adı.  
+ Bu hizmetin benzersiz adı.  
   
 ### <a name="namespace"></a>Ad Alanı  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet ad alanı.  
+ Hizmetin ad alanı.  
   
-### <a name="opened"></a>Açılan  
- Veri türü: tarih/saat  
+### <a name="opened"></a>Makta  
+
+ Veri türü: DateTime  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet açıldığı zaman.  
+ Hizmetin açıldığı zaman.  
   
 ### <a name="outgoingchannels"></a>OutgoingChannels  
+
  Veri türü: Kanal dizisi  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmeti örneğinin giden kanallar.  
+ Hizmet örneğinden giden kanallar.  
   
-### <a name="processid"></a>İşlem kimliği  
- Veri türü: SINT32  
+### <a name="processid"></a>Işlem  
+
+ Veri türü: Sint32  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet barındıran işlemin işlem kimliği.  
+ Hizmeti barındıran işlemin işlem kimliği.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|
+|Ad Alanı|Root\ServiceModel içinde tanımlı|

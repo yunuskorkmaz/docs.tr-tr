@@ -3,17 +3,19 @@ title: WCF ve ASP.NET Web API
 description: Her teknolojinin önemli özelliklerini karşılaştırarak WCF veya ASP.NET Web API 'sinin gereksinimlerinize daha uygun olup olmadığını öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: de8d1905866c860da96983c2f3d52599e3342403
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b3a905f890b4dfa9f60c906c3a242be60921e5c8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245983"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273600"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF ve ASP.NET Web API
+
 WCF, Microsoft 'un hizmet odaklı uygulamalar oluşturmaya yönelik Birleşik programlama modelidir. Geliştiricilerin platformlar arasında tümleşen ve mevcut yatırımlarla birlikte çalışan güvenli, güvenilir, işlem temelli çözümler oluşturmalarına olanak sağlar. [ASP.NET Web API 'si](https://www.asp.net/web-api) , tarayıcılar ve mobil cihazlar dahil olmak üzere çok çeşitli ISTEMCILERE ulaşan HTTP Hizmetleri oluşturmayı kolaylaştıran bir çerçevedir. ASP.NET Web API 'SI, .NET Framework üzerinde yeniden uygulamalar oluşturmaya yönelik ideal bir platformdur. Bu konuda, ihtiyaçlarınıza en iyi şekilde hangi teknolojinin karşılaacağına karar vermenize yardımcı olacak bazı rehberlik sunulmaktadır.  
   
 ## <a name="choosing-which-technology-to-use"></a>Hangi teknolojinin kullanılacağını seçme  
+
  Aşağıdaki tabloda her teknolojinin önemli özellikleri açıklanmaktadır.  
   
 |WCF|ASP.NET Web API|  

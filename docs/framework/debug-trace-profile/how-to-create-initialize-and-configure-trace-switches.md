@@ -12,17 +12,21 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 6a43e143abba96c841f04b7be9d482c55e78aa8f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 4e8c076645f19e197ea820c052b20d5dde5e7565
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051330"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272260"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma
+
 İzleme anahtarları, izleme çıkışını etkinleştirmenizi, devre dışı bırakmanızı ve filtrelemenizi sağlar.  
   
 <a name="create"></a>
+
 ## <a name="creating-and-initializing-a-trace-switch"></a>İzleme anahtarı oluşturma ve başlatma  
+
  İzleme anahtarlarını kullanmak için, önce bunları oluşturmanız ve kodunuza yerleştirmeniz gerekir. Anahtar nesneleri oluşturabileceğiniz önceden tanımlanmış iki sınıf vardır: <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> sınıfı ve <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> sınıfı. <xref:System.Diagnostics.BooleanSwitch>Yalnızca bir izleme iletisinin görünüp gösterilmediğini düşünüyorsanız, öğesini kullanarak <xref:System.Diagnostics.TraceSwitch> izleme düzeyleri arasında ayrım yapmak isteyebilirsiniz. Kullanıyorsanız <xref:System.Diagnostics.TraceSwitch> , kendi hata ayıklama iletilerinizi tanımlayabilir ve bunları farklı izleme düzeyleriyle ilişkilendirebilirsiniz. İzleme veya hata ayıklama ile her iki anahtar türünü de kullanabilirsiniz. Varsayılan olarak,, <xref:System.Diagnostics.BooleanSwitch> devre dışıdır ve, <xref:System.Diagnostics.TraceSwitch> düzeyi olarak ayarlanır <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType> . İzleme anahtarları, kodunuzun bunları kullanan herhangi bir kısmına oluşturulabilir ve eklenebilir.  
   
  Koddaki izleme düzeylerini ve diğer yapılandırma seçeneklerini ayarlayabilmenize karşın, anahtarlarınızın durumunu yönetmek için yapılandırma dosyasını kullanmanızı öneririz. Bunun nedeni, yapılandırma sistemindeki anahtarlarınızın yapılandırılmasını yönetmenin daha fazla esneklik sağladığından, uygulamanızı yeniden derlemeden çeşitli anahtarları açıp kapamenize ve seviyelerini değiştirmenize olanak sağlar.  
@@ -49,7 +53,9 @@ ms.locfileid: "86051330"
     ```  
   
 <a name="configure"></a>
+
 ## <a name="configuring-trace-switches"></a>İzleme anahtarlarını yapılandırma  
+
  Uygulamanız dağıtıldıktan sonra, uygulamanızdaki izleme anahtarlarını yapılandırarak izleme çıkışını etkinleştirebilir veya devre dışı bırakabilirsiniz. Bir anahtarı yapılandırmak, başlatıldıktan sonra bir dış kaynaktan değerini değiştirmenin anlamına gelir. Yapılandırma dosyasını kullanarak Switch nesnelerinin değerlerini değiştirebilirsiniz. Bir izleme anahtarını açmak ve kapatmak için ya da düzeyini ayarlamak için, dinleyicilerinin yanı sıra aktardığı iletilerin miktarını ve türünü belirlemek için yapılandırın.  
   
  Anahtarlarınız. config dosyası kullanılarak yapılandırılır. Bir Web uygulaması için bu, projeyle ilişkili Web.config dosyasıdır. Bir Windows uygulamasında, bu dosyanın adı (uygulama adı) .exe.config. Dağıtılan bir uygulamada, bu dosya çalıştırılabilirle aynı klasörde bulunmalıdır.  
@@ -60,7 +66,7 @@ ms.locfileid: "86051330"
   
  Anahtarın bir örneğini oluşturduğunuzda, iki bağımsız değişken belirterek de başlatabilirsiniz: *DisplayName* bağımsız değişkeni ve bir *Açıklama* bağımsız değişkeni. Oluşturucunun *DisplayName* bağımsız değişkeni, <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Switch> sınıf örneğinin özelliğini ayarlar. *DisplayName* ,. config dosyasında anahtarı yapılandırmak için kullanılan addır ve *Açıklama* bağımsız değişkeni, anahtarın kısa bir açıklamasını ve hangi iletileri denetlediğini döndürmelidir.  
   
- Yapılandırılacak anahtarın adını belirtmenin yanı sıra, anahtar için de bir değer belirtmeniz gerekir. Bu değer bir tamsayıdır. İçin <xref:System.Diagnostics.BooleanSwitch> , 0 değeri **kapalı**ve sıfır dışında bir değer **Açık**öğesine karşılık gelir. İçin <xref:System.Diagnostics.TraceSwitch> , 0, 1, 2, 3 ve 4 sırasıyla **kapalı**, **hata**, **Uyarı**, **bilgi**ve **ayrıntılıdır**. 4 ' ten büyük herhangi bir sayı **verbose**olarak değerlendirilir ve sıfırdan küçük herhangi bir sayı **kapalı**olarak kabul edilir.  
+ Yapılandırılacak anahtarın adını belirtmenin yanı sıra, anahtar için de bir değer belirtmeniz gerekir. Bu değer bir tamsayıdır. İçin <xref:System.Diagnostics.BooleanSwitch> , 0 değeri **kapalı** ve sıfır dışında bir değer **Açık** öğesine karşılık gelir. İçin <xref:System.Diagnostics.TraceSwitch> , 0, 1, 2, 3 ve 4 sırasıyla **kapalı**, **hata**, **Uyarı**, **bilgi** ve **ayrıntılıdır**. 4 ' ten büyük herhangi bir sayı **verbose** olarak değerlendirilir ve sıfırdan küçük herhangi bir sayı **kapalı** olarak kabul edilir.  
   
 > [!NOTE]
 > .NET Framework sürüm 2,0 ' de, bir anahtarın değerini belirtmek için metin kullanabilirsiniz. Örneğin, `true` bir <xref:System.Diagnostics.BooleanSwitch> veya için gibi bir numaralandırma değerini temsil eden metin için `Error` <xref:System.Diagnostics.TraceSwitch> . Satır `<add name="myTraceSwitch" value="Error" />` ile eşdeğerdir `<add name="myTraceSwitch" value="1" />` .  
@@ -75,9 +81,9 @@ ms.locfileid: "86051330"
   
     - **Visual Basic:** **Yeni öğe Ekle** Iletişim kutusunda **uygulama yapılandırma dosyası**' nı seçin.  
   
-         Uygulama yapılandırma dosyası oluşturulup açılır. Bu, kök öğesi olan bir XML belgesidir`<configuration>.`  
+         Uygulama yapılandırma dosyası oluşturulup açılır. Bu, kök öğesi olan bir XML belgesidir `<configuration>.`  
   
-    - **Visual C#:** **Yeni öğe Ekle** Iletişim kutusunda **XML dosyası**' nı seçin. Bu dosyayı **app.config**olarak adlandırın. XML düzenleyicisinde, XML bildiriminden sonra aşağıdaki XML 'i ekleyin:  
+    - **Visual C#:** **Yeni öğe Ekle** Iletişim kutusunda **XML dosyası**' nı seçin. Bu dosyayı **app.config** olarak adlandırın. XML düzenleyicisinde, XML bildiriminden sonra aşağıdaki XML 'i ekleyin:  
   
         ```xml  
         <configuration>  
@@ -99,9 +105,9 @@ ms.locfileid: "86051330"
   
      Bu yapılandırmada her iki anahtar de kapalıdır.  
   
-4. Önceki örnekte gösterildiği gibi bir **BooleanSwitch**açmanız gerekiyorsa `DataMessagesSwitch` **değeri** 0 dışında bir tamsayı olarak değiştirin.  
+4. Önceki örnekte gösterildiği gibi bir **BooleanSwitch** açmanız gerekiyorsa `DataMessagesSwitch` **değeri** 0 dışında bir tamsayı olarak değiştirin.  
   
-5. Önceki örnekte gösterildiği gibi bir **TraceSwitch**açmanız gerekiyorsa `TraceLevelSwitch` **değeri** uygun düzey ayarı (1 ile 4 arasında) olarak değiştirin.  
+5. Önceki örnekte gösterildiği gibi bir **TraceSwitch** açmanız gerekiyorsa `TraceLevelSwitch` **değeri** uygun düzey ayarı (1 ile 4 arasında) olarak değiştirin.  
   
 6. Son kullanıcının anahtarları uygun şekilde yapılandırmak için hangi değerlerin değiştirileceği hakkında net bir şekilde anlayabilmesi için. config dosyasına Yorumlar ekleyin.  
   
@@ -125,7 +131,7 @@ ms.locfileid: "86051330"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme ve İşaretleme Uygulamaları](tracing-and-instrumenting-applications.md)
+- [Uygulamaları izleme ve İşaretleme](tracing-and-instrumenting-applications.md)
 - [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](how-to-add-trace-statements-to-application-code.md)
 - [İzleme Anahtarları](trace-switches.md)
-- [İzleme ve Hata Ayıklama Ayarları Şeması](../configure-apps/file-schema/trace-debug/index.md)
+- [İzleme ve hata ayıklama ayarları şeması](../configure-apps/file-schema/trace-debug/index.md)

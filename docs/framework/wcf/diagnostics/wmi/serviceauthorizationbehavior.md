@@ -2,17 +2,18 @@
 title: ServiceAuthorizationBehavior
 ms.date: 03/30/2017
 ms.assetid: 77dad8e8-fea4-4d1c-b366-2f01a2a87f78
-ms.openlocfilehash: 51555e3357b8c33a53261c4894d97798b0a05656
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3625865484568746888ef0638d9a8501e610bef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61957061"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273210"
 ---
 # <a name="serviceauthorizationbehavior"></a>ServiceAuthorizationBehavior
+
 ServiceAuthorizationBehavior  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ServiceAuthorizationBehavior : Behavior  
@@ -25,44 +26,50 @@ class ServiceAuthorizationBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Yöntemler  
- ServiceAuthorizationBehavior sınıf herhangi bir yöntemi tanımlamaz.  
+
+ ServiceAuthorizationBehavior sınıfı herhangi bir yöntemi tanımlamaz.  
   
 ## <a name="properties"></a>Özellikler  
+
  ServiceAuthorizationBehavior sınıfı aşağıdaki özelliklere sahiptir:  
   
 ### <a name="impersonatecallerforalloperations"></a>ImpersonateCallerForAllOperations  
+
  Veri türü: Boole  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Hizmet gelen ileti tarafından sağlanan kimlik bilgilerini kullanarak bürünülecek deneyip denemeyeceğini denetleyen değeri.  
+ Hizmetin, gelen ileti tarafından belirtilen kimlik bilgilerini kullanarak kimliğe bürünmeye çalışıp çalışmadığını denetleyen bir değer.  
   
 ### <a name="principalpermissionmode"></a>PrincipalPermissionMode  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- Sunucu üzerinde işlem gerçekleştirmek için kullanılan kural.  
+ Sunucuda işlemleri yürütmek için kullanılan sorumlu.  
   
 ### <a name="roleprovider"></a>RoleProvider  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
- ASP.NET rol sağlayıcıyı adı.  
+ ASP.NET rol sağlayıcısının adı.  
   
 ### <a name="serviceauthorizationmanager"></a>ServiceAuthorizationManager  
+
  Veri türü: dize  
   
- Erişim türü: salt okunur  
+ Erişim türü: salt okunurdur  
   
  Özel yetkilendirme için kullanılan Yetkilendirme Yöneticisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|MOF|Bildirilmiş Servicemodel.mof.|  
+|MOF|ServiceModel. mof içinde bildirilmiştir.|  
 |---------|-----------------------------------|  
-|Ad Alanı|İçinde tanımlı root\ServiceModel|  
+|Ad Alanı|Root\ServiceModel içinde tanımlı|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

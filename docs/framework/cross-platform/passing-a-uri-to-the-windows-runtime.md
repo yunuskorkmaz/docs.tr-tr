@@ -8,22 +8,25 @@ helpviewer_keywords:
 - Windows Runtime, .NET Framework support for
 - Windows Runtime, passing a URI to
 ms.assetid: 3eb5ce6f-f304-4f87-8e81-0f25092f5ad4
-ms.openlocfilehash: d48c257941b8e40ce2670e08fc0ff23cb21e3e1c
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: f1998c0664be323902489a3d0c1fa66a2c0aa578
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687873"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272852"
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>URI'yı Windows Çalışma Zamanı'na Geçirme
+
 Windows Çalışma Zamanı yöntemler yalnızca mutlak URI 'Leri kabul eder. Bir Windows Çalışma Zamanı yöntemine göreli bir URI geçirirseniz, bir <xref:System.ArgumentException> özel durum oluşturulur. Neden: Windows Çalışma Zamanı .NET Framework kodda kullandığınızda, <xref:Windows.Foundation.Uri?displayProperty=nameWithType> sınıf <xref:System.Uri?displayProperty=nameWithType> IntelliSense içinde olarak görünür. <xref:System.Uri?displayProperty=nameWithType>Sınıfı göreli URI 'lere izin verir, ancak <xref:Windows.Foundation.Uri?displayProperty=nameWithType> sınıfı desteklemez. Bu Ayrıca, Windows Çalışma Zamanı bileşenlerinde kullanıma sunabileceğiniz yöntemler için de geçerlidir. Bileşeniniz URI alan bir yöntemi kullanıma sunarsa, kodunuzdaki imza dahil değildir <xref:System.Uri?displayProperty=nameWithType> . Ancak, bileşeninizin kullanıcıları için imza şunları içerir <xref:Windows.Foundation.Uri?displayProperty=nameWithType> . Bileşeninizin geçirildiği bir URI mutlak bir URI olmalıdır.  
   
 Bu konu, bir mutlak URI 'nin nasıl algılanacağını ve uygulama paketindeki bir kaynağa başvururken nasıl oluşturulacağını gösterir.  
   
 ## <a name="detecting-and-using-an-absolute-uri"></a>Mutlak bir URI algılama ve kullanma  
+
 <xref:System.Uri.IsAbsoluteUri%2A?displayProperty=nameWithType>BIR URI 'nin Windows çalışma zamanı geçirmeden önce mutlak olduğundan emin olmak için özelliğini kullanın. Bu özelliği kullanmak, özel durumu yakalama ve işlemeye kıyasla daha etkilidir <xref:System.ArgumentException> .  
   
 ## <a name="using-an-absolute-uri-for-a-resource-in-the-app-package"></a>Uygulama paketindeki bir kaynak için mutlak URI kullanma  
+
 Uygulama paketinizin içerdiği bir kaynak için bir URI belirtmek istiyorsanız, `ms-appx` veya `ms-appx-web` düzenini kullanarak mutlak bir URI oluşturabilirsiniz.  
   
 Aşağıdaki örnek, <xref:Windows.UI.Xaml.Controls.WebView.Source%2A> <xref:Windows.UI.Xaml.Controls.WebView> <xref:Windows.UI.Xaml.Controls.Image.Source%2A> <xref:Windows.UI.Xaml.Controls.Image> hem XAML hem de kod kullanarak, bir denetimin özelliğinin ve sayfalar adlı bir klasörde bulunan kaynaklar için nasıl ayarlanacağını gösterir.  

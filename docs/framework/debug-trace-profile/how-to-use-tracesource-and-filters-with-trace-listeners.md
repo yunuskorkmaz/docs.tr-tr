@@ -15,14 +15,16 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-ms.openlocfilehash: 432c866f7c3ca1fd59f8f3d36acd61740b6584c0
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 94af872e0417941f17c043710688c7b723cd4004
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051265"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272806"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Nasıl yapılır: İz Dinleyicileri ile TraceSource ve Filtreler Kullanma
-.NET Framework sürüm 2,0 ' deki yeni özelliklerden biri, gelişmiş bir izleme sistemidir. Temel şirket içi değiştirilmez: izleme iletileri, verileri ilişkili bir çıkış ortamına rapor eden, dinleyicilerine anahtarlar aracılığıyla gönderilir. Sürüm 2,0 ' in birincil bir farkı, izlemelerin sınıf örnekleri aracılığıyla başlatılabiliyordu <xref:System.Diagnostics.TraceSource> . <xref:System.Diagnostics.TraceSource>, gelişmiş bir izleme sistemi olarak işlevine yöneliktir ve eski <xref:System.Diagnostics.Trace> ve izleme sınıflarının statik yöntemlerinin yerine kullanılabilir <xref:System.Diagnostics.Debug> . Tanıdık <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> sınıfları hala mevcuttur, ancak önerilen uygulama, <xref:System.Diagnostics.TraceSource> izleme için sınıfını kullanmaktır.  
+
+.NET Framework sürüm 2,0 ' deki yeni özelliklerden biri, gelişmiş bir izleme sistemidir. Temel şirket içi değiştirilmez: izleme iletileri, verileri ilişkili bir çıkış ortamına rapor eden, dinleyicilerine anahtarlar aracılığıyla gönderilir. Sürüm 2,0 ' in birincil bir farkı, izlemelerin sınıf örnekleri aracılığıyla başlatılabiliyordu <xref:System.Diagnostics.TraceSource> . <xref:System.Diagnostics.TraceSource> , gelişmiş bir izleme sistemi olarak işlevine yöneliktir ve eski <xref:System.Diagnostics.Trace> ve izleme sınıflarının statik yöntemlerinin yerine kullanılabilir <xref:System.Diagnostics.Debug> . Tanıdık <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> sınıfları hala mevcuttur, ancak önerilen uygulama, <xref:System.Diagnostics.TraceSource> izleme için sınıfını kullanmaktır.  
   
  Bu konuda, bir <xref:System.Diagnostics.TraceSource> uygulama yapılandırma dosyası ile bağlanmış bir kullanımı açıklanmaktadır.  Bir yapılandırma dosyası kullanılmadan ' ı kullanarak izlemek mümkün olmasa da, kullanılması önerilmez <xref:System.Diagnostics.TraceSource> . Yapılandırma dosyası olmadan izleme hakkında bilgi için bkz. [nasıl yapılır: Izleme kaynakları oluşturma ve başlatma](how-to-create-and-initialize-trace-sources.md).  
   
@@ -167,5 +169,5 @@ ms.locfileid: "86051265"
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Nasıl yapılır: İzleme Kaynakları Oluşturma ve Başlatma](how-to-create-and-initialize-trace-sources.md)
+- [Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma](how-to-create-and-initialize-trace-sources.md)
 - [İz Dinleyicileri](trace-listeners.md)

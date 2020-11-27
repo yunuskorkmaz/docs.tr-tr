@@ -12,13 +12,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: db55e3ac2d6862d008013abef0f09f67213d9faa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051833"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272754"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
+
 `invalidApartmentStateChange`Yönetilen hata ayıklama Yardımcısı (MDS) iki sorunlardan biri tarafından etkinleştirilir:  
   
 - COM tarafından zaten başlatılmış olan bir iş parçacığının COM grup durumunu farklı bir grup durumuna değiştirme girişiminde bulunuldu.  
@@ -38,14 +40,17 @@ ms.locfileid: "86051833"
 - `CoUninitialize` `CoInitializeEx` Farklı bir eşzamanlılık modeliyle yöntemi (veya yöntemi) iş parçacığında çağırılır.  
   
 ## <a name="resolution"></a>Çözüm  
+
  Yürütmeye başlamadan önce iş parçacığının Grup durumunu ayarlayın veya <xref:System.STAThreadAttribute> özniteliğini ya da <xref:System.MTAThreadAttribute> özniteliğini uygulamanın Main yöntemine uygulayın.  
   
  İkinci nedenle, en ideal olarak, yöntemi çağıran kod, `CoUninitialize` iş parçacığı sonlandırılmaya ve bir RCWs olmadığından ve temel ALıNAN com bileşenleri iş parçacığı tarafından hala kullanımda olana kadar çağrıyı geciktirmek için değiştirilmelidir. Ancak, yöntemi çağıran kodu değiştirmek mümkün değilse `CoUninitialize` , bu şekilde başlatılmamış iş parçacıklarında hiçbir RCWs kullanılmamalıdır.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
-## <a name="output"></a>Çıktı  
+## <a name="output"></a>Çıkış  
+
  Geçerli iş parçacığının COM grubu durumu ve kodun uygulanmaya çalışılması gereken durum.  
   
 ## <a name="configuration"></a>Yapılandırma  
@@ -59,6 +64,7 @@ ms.locfileid: "86051833"
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneğinde, bu MDA ' i etkinleştirebilecek bir durum gösterilmektedir.  
   
 ```csharp

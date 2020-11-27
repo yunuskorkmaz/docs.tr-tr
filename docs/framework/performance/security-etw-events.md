@@ -6,23 +6,24 @@ helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-ms.openlocfilehash: 2fd2d450223cd16a7791b8f6c67afe6bcb954eb3
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 4402bf5690a53ce518077268a3e20a95aeb14e8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474221"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272520"
 ---
 # <a name="security-etw-events"></a>Güvenlik ETW Olayları
 
 Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması sırasında oluşturulur.  
 
 ## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a>StrongNameVerificationStart_V1 ve StrongNameVerificationStop_V1 olayları  
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword`(0x400)|Bilgilendirici (4)|  
+|`SecurityKeyword` (0x400)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -33,7 +34,7 @@ Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması 
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Doğrulamaları ıationflags|Win: UInt32|Doğrulama bayrakları.|  
 |ErrorCode|Win: UInt32|HResult hata kodu.|  
@@ -41,11 +42,12 @@ Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması 
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
 
 ## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a>AuthenticodeVerificationStart_V1 ve AuthenticodeVerificationStop_V1 olayları  
+
  Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword`(0x400)|Bilgilendirici (4)|  
+|`SecurityKeyword` (0x400)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -56,7 +58,7 @@ Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması 
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Description|  
+|Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |Doğrulamaları ıationflags|Win: UInt32|Doğrulama bayrakları.|  
 |ErrorCode|Win: UInt32|HResult hata kodu.|  

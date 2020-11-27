@@ -10,14 +10,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 84cad85a7a9fc4b420b57543b7f258607be4ab52
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 4edf11315892ed8267bee17d69a70033348eca5c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517054"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272572"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Kod Üretme Aracı)
+
 SqlMetal komut satırı aracı .NET Framework bileşeni için kod ve eşleme oluşturur [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] . Bu konunun ilerisinde görünen seçenekleri uygulayarak, SqlMetal'den aşağıdakileri içeren çeşitli farklı eylemler gerçekleştirmesini isteyebilirsiniz:  
   
 - Bir veritabanından, kaynak kodu ve eşleme öznitelikleri veya bir eşleme dosyası oluşturmak.  
@@ -40,6 +41,7 @@ sqlmetal [options] [<input file>]
 ```  
   
 ## <a name="options"></a>Seçenekler  
+
  En güncel seçenek listesini görüntülemek için, `sqlmetal /?` yüklü konumdan bir komut istemine yazın.  
   
  **Bağlantı seçenekleri**  
@@ -50,7 +52,7 @@ sqlmetal [options] [<input file>]
 |**/Database:***\<name>*|Sunucuda veritabanı kataloğu belirtir.|  
 |**/User:***\<name>*|Oturum açma kullanıcı kimliğini belirtir. Varsayılan değer: Windows kimlik doğrulamasını kullanın.|  
 |**/Password:***\<password>*|Oturum açma parolasını belirtir. Varsayılan değer: Windows kimlik doğrulaması kullan.|  
-|**/Conn:***\<connection string>*|Veritabanı bağlantısı dizesi belirtir. **/Server**, **/Database**, **/User**veya **/Password** seçenekleriyle birlikte kullanılamaz.<br /><br /> Dosya adını bağlantı dizesine eklemeyin. Bunun yerine, dosya adını giriş dosyası olarak komut satırına ekleyin. Örneğin, aşağıdaki satır giriş dosyası olarak "c:\kuzeydoğu WND.mdf" belirtir: **SqlMetal/Code: "c:\Northwind.cs"/Language: CSharp "c:\kuzeydoğu WND.mdf"**.|  
+|**/Conn:***\<connection string>*|Veritabanı bağlantısı dizesi belirtir. **/Server**, **/Database**, **/User** veya **/Password** seçenekleriyle birlikte kullanılamaz.<br /><br /> Dosya adını bağlantı dizesine eklemeyin. Bunun yerine, dosya adını giriş dosyası olarak komut satırına ekleyin. Örneğin, aşağıdaki satır giriş dosyası olarak "c:\kuzeydoğu WND.mdf" belirtir: **SqlMetal/Code: "c:\Northwind.cs"/Language: CSharp "c:\kuzeydoğu WND.mdf"**.|  
 |**/Timeout:***\<seconds>*|SqlMetal veritabanına eriştiğinde, zaman aşımı değerini belirtir. Varsayılan değer: 0 (yani, zaman sınırı yok).|  
   
  **Ayıklama seçenekleri**  
@@ -87,6 +89,7 @@ sqlmetal [options] [<input file>]
 |**\<input file>**|Bir SQL Server Express. mdf dosyası, bir SQL Server Compact 3,5. sdf dosyası veya. dbml ara dosyası belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  SqlMetal işlevi aslında iki adımdan oluşur:  
   
 - Veritabanını meta verilerini bir .dbml dosyasına ayıklama.  
@@ -110,6 +113,7 @@ sqlmetal [options] [<input file>]
  Bir giriş dosyası adı belirtmek için, adı komut satırına giriş dosyası olarak ekleyin. Dosya adının bağlantı dizesine dahil edilmesi ( **/Conn** seçeneği kullanılarak) desteklenmez.  
   
 ## <a name="examples"></a>Örnekler  
+
  Ayıklanan SQL meta verileri içeren bir .dbml dosyası oluşturun:  
   
  **SqlMetal/Server: sunucum/veritabanı: Northwind/DBML: mymeta. dbml**  

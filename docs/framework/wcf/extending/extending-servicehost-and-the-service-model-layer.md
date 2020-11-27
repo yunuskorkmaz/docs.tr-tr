@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending service models [WCF]
 ms.assetid: 954c138a-1cd0-45a0-8abe-e4d2b8ff5400
-ms.openlocfilehash: e370316cd121f49953e00e83dfc9d2aec17de1e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 184719f5c3e2e3830d7e1c9c69b73649b66fff34
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795731"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273041"
 ---
 # <a name="extending-servicehost-and-the-service-model-layer"></a>ServiceHost Hizmet Modeli Katmanını Genişletme
+
 Hizmet modeli katmanı, temel alınan kanallara ait gelen iletileri çekmekten, bunları uygulama kodundaki Yöntem etkinleştirmeleri içine çevirerek ve sonuçları çağırana geri göndererek sorumludur. Hizmet modeli uzantıları, istemci veya dağıtıcı işlevselliği, özel davranışlar, ileti ve parametre yakaalımı ve diğer genişletilebilirlik işlevleriyle ilgili yürütme veya iletişim davranışlarını ve özellikleri değiştirir veya uygular.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [İstemcileri Genişletme](extending-clients.md)  
  İstemci çalışma zamanının yanı sıra özel uzantılarınızı istemci uygulamalarına ekleyebileceğiniz sınıfları ele geçirebilir ve değiştirebilen arabirimlerini açıklar. Örneğin, özel istemci ileti günlüğü gerçekleştirebilir, özel ileti serileştirme gerçekleştirebilir ve bu şekilde devam edebilirsiniz.  
   
@@ -28,7 +30,7 @@ Hizmet modeli katmanı, temel alınan kanallara ait gelen iletileri çekmekten, 
  WCF çalışma zamanında ayarları değiştirmek veya uzantıları eklemek için davranışları kullanırsınız. WCF, hizmet ve işlemlerin azalmasını, örneklemesini ve diğer birçok yönünü denetlemek için sistem tarafından uygulanan davranışları içerir. Bu bölümde, kendi özel davranışlarınızın nasıl oluşturulduğu ve bunların hem programlı olarak hem de yapılandırma dosyalarını kullanarak kullanılabilir hale nasıl kullanılacağı açıklanmaktadır.  
   
  [ServiceHostFactory Kullanarak Barındırmayı Genişletme](extending-hosting-using-servicehostfactory.md)  
- Konak ortamını özelleştirmek için <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> sınıfların <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>nasıl genişletileceğini, ve kullanılacağını açıklar.  
+ <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> Konak ortamını özelleştirmek için sınıfların nasıl genişletileceğini, ve kullanılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
   
