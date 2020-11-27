@@ -2,32 +2,35 @@
 title: 1125 - InvokeMethodIsNotStatic
 ms.date: 03/30/2017
 ms.assetid: ea2b3827-63da-497b-b2c3-d5cebefe57a1
-ms.openlocfilehash: 692c5e56dac0a69ab5705acd284f048391145641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0405b4e1207db5c056fbd478b98c408258daf0c3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924273"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294215"
 ---
-# <a name="1125---invokemethodisnotstatic"></a><span data-ttu-id="f78d5-102">1125 - InvokeMethodIsNotStatic</span><span class="sxs-lookup"><span data-stu-id="f78d5-102">1125 - InvokeMethodIsNotStatic</span></span>
-## <a name="properties"></a><span data-ttu-id="f78d5-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="f78d5-103">Properties</span></span>  
+# <a name="1125---invokemethodisnotstatic"></a><span data-ttu-id="910ff-102">1125 - InvokeMethodIsNotStatic</span><span class="sxs-lookup"><span data-stu-id="910ff-102">1125 - InvokeMethodIsNotStatic</span></span>
+
+## <a name="properties"></a><span data-ttu-id="910ff-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="910ff-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="f78d5-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="f78d5-104">ID</span></span>|<span data-ttu-id="f78d5-105">1125</span><span class="sxs-lookup"><span data-stu-id="f78d5-105">1125</span></span>|  
-|<span data-ttu-id="f78d5-106">anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="f78d5-106">Keywords</span></span>|<span data-ttu-id="f78d5-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="f78d5-107">WFRuntime</span></span>|  
-|<span data-ttu-id="f78d5-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="f78d5-108">Level</span></span>|<span data-ttu-id="f78d5-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="f78d5-109">Information</span></span>|  
-|<span data-ttu-id="f78d5-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="f78d5-110">Channel</span></span>|<span data-ttu-id="f78d5-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="f78d5-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="910ff-104">ID</span><span class="sxs-lookup"><span data-stu-id="910ff-104">ID</span></span>|<span data-ttu-id="910ff-105">1125</span><span class="sxs-lookup"><span data-stu-id="910ff-105">1125</span></span>|  
+|<span data-ttu-id="910ff-106">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="910ff-106">Keywords</span></span>|<span data-ttu-id="910ff-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="910ff-107">WFRuntime</span></span>|  
+|<span data-ttu-id="910ff-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="910ff-108">Level</span></span>|<span data-ttu-id="910ff-109">Bilgi</span><span class="sxs-lookup"><span data-stu-id="910ff-109">Information</span></span>|  
+|<span data-ttu-id="910ff-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="910ff-110">Channel</span></span>|<span data-ttu-id="910ff-111">Microsoft-Windows-Application Server-uygulamalar/hata ayıkla</span><span class="sxs-lookup"><span data-stu-id="910ff-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="f78d5-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f78d5-112">Description</span></span>  
- <span data-ttu-id="f78d5-113">CacheMetadata adımı sırasında çağrılacak yöntem statik değildir InvokeMethod etkinliği gösterir.</span><span class="sxs-lookup"><span data-stu-id="f78d5-113">During CacheMetadata step, InvokeMethod activity indicates the method to be invoked is not static.</span></span>  
+## <a name="description"></a><span data-ttu-id="910ff-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="910ff-112">Description</span></span>  
+
+ <span data-ttu-id="910ff-113">CacheMetadata adımı sırasında InvokeMethod etkinliği çağrılacak yöntemin statik olmadığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="910ff-113">During CacheMetadata step, InvokeMethod activity indicates the method to be invoked is not static.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="f78d5-114">İleti</span><span class="sxs-lookup"><span data-stu-id="f78d5-114">Message</span></span>  
- <span data-ttu-id="f78d5-115">'%1' - InvokeMethod yöntemi statik değil.</span><span class="sxs-lookup"><span data-stu-id="f78d5-115">InvokeMethod '%1' - method is not Static.</span></span>  
+## <a name="message"></a><span data-ttu-id="910ff-114">İleti</span><span class="sxs-lookup"><span data-stu-id="910ff-114">Message</span></span>  
+
+ <span data-ttu-id="910ff-115">InvokeMethod ' %1 '-metot static değil.</span><span class="sxs-lookup"><span data-stu-id="910ff-115">InvokeMethod '%1' - method is not Static.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="f78d5-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="f78d5-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="910ff-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="910ff-116">Details</span></span>  
   
-|<span data-ttu-id="f78d5-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="f78d5-117">Data Item Name</span></span>|<span data-ttu-id="f78d5-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="f78d5-118">Data Item Type</span></span>|<span data-ttu-id="f78d5-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f78d5-119">Description</span></span>|  
+|<span data-ttu-id="910ff-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="910ff-117">Data Item Name</span></span>|<span data-ttu-id="910ff-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="910ff-118">Data Item Type</span></span>|<span data-ttu-id="910ff-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="910ff-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="f78d5-120">InvokeMethod</span><span class="sxs-lookup"><span data-stu-id="f78d5-120">InvokeMethod</span></span>|<span data-ttu-id="f78d5-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="f78d5-121">xs:string</span></span>|<span data-ttu-id="f78d5-122">InvokeMethod etkinliği görünen adı.</span><span class="sxs-lookup"><span data-stu-id="f78d5-122">The display name of the InvokeMethod activity.</span></span>|  
-|<span data-ttu-id="f78d5-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="f78d5-123">AppDomain</span></span>|<span data-ttu-id="f78d5-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="f78d5-124">xs:string</span></span>|<span data-ttu-id="f78d5-125">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="f78d5-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="910ff-120">InvokeMethod</span><span class="sxs-lookup"><span data-stu-id="910ff-120">InvokeMethod</span></span>|<span data-ttu-id="910ff-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="910ff-121">xs:string</span></span>|<span data-ttu-id="910ff-122">InvokeMethod etkinliğinin görünen adı.</span><span class="sxs-lookup"><span data-stu-id="910ff-122">The display name of the InvokeMethod activity.</span></span>|  
+|<span data-ttu-id="910ff-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="910ff-123">AppDomain</span></span>|<span data-ttu-id="910ff-124">xs: String</span><span class="sxs-lookup"><span data-stu-id="910ff-124">xs:string</span></span>|<span data-ttu-id="910ff-125">AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="910ff-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
