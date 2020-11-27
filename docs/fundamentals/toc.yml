@@ -384,6 +384,8 @@ items:
             href: ../core/diagnostics/index.md
           - name: Yönetilen hata ayıklayıcıları
             href: ../core/diagnostics/managed-debuggers.md
+          - name: Dökümler
+            href: ../core/diagnostics/dumps.md
           - name: Linux dökümlerinin hatasını ayıklama
             href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
