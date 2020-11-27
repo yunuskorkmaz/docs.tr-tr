@@ -10,14 +10,15 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 52b0caaaac976893dcf5ef5c228ccc4f53bdbe9e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 124083d86c220451c55a9290c2edf996b50d8d28
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247487"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286688"
 ---
 # <a name="data-contract-known-types"></a>Veri Sözleşmesi Bilinen Türler
+
 <xref:System.Runtime.Serialization.KnownTypeAttribute>Sınıfı, serisini kaldırma sırasında dikkate alınması gereken türleri önceden belirtmenize olanak tanır. Çalışan bir örnek için, [bilinen türler](../samples/known-types.md) örneğine bakın.  
   
  Normalde, parametreleri geçirirken ve bir istemci ile bir hizmet arasında değer döndürmelerinde, her iki uç nokta de iletilmek üzere verilerin tüm veri sözleşmelerini paylaşır. Ancak, aşağıdaki durumlarda bu durum böyle değildir:  
@@ -31,20 +32,24 @@ ms.locfileid: "85247487"
 - .NET Framework türlerini içeren bazı türlerin önceki üç kategoriden birinde olan üyeleri vardır. Örneğin, <xref:System.Collections.Hashtable> <xref:System.Object> karma tablodaki gerçek nesneleri depolamak için kullanır. Bu türler serileştirilirken, alıcı taraf bu üyeler için veri sözleşmesinin ön kısmına göre saptanamaz.  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute sınıfı  
+
  Veriler alma uç noktasına ulaştığında, WCF çalışma zamanı verileri ortak dil çalışma zamanı (CLR) türünün bir örneğine serisini kaldırma girişiminde bulunur. Seri durumdan çıkarma için örneği oluşturulan tür, önce iletinin içeriğinin uyumlu olduğu veri sözleşmesinin belirlenmesi için gelen iletiyi inceleyerek seçilir. Seri kaldırma altyapısı daha sonra ileti içeriğiyle uyumlu bir veri sözleşmesi uygulayan bir CLR türü bulmaya çalışır. Seri durumdan çıkarma altyapısının bu işlem sırasında izin verdiği aday türleri kümesi, seri hale getirici 'nin "bilinen türler" kümesi olarak adlandırılır.  
   
  Seri durumdan çıkarma altyapısının bir tür hakkında bilgi almasına imkan sağlamanın bir yolu, ' nı kullanmaktır <xref:System.Runtime.Serialization.KnownTypeAttribute> . Öznitelik, tek tek veri üyelerine yalnızca tüm veri anlaşması türlerine uygulanamaz. Özniteliği, bir sınıf veya yapı olabilecek bir *dış türe* uygulanır. En temel kullanımındaki özniteliği uygulamak, bir türü "bilinen tür" olarak belirtir. Bu, dış türdeki bir nesne veya üyeleri aracılığıyla başvurulan herhangi bir nesne seri durumdan çıkarıldığı zaman bilinen türün bilinen türler kümesinin bir parçası olmasına neden olur. <xref:System.Runtime.Serialization.KnownTypeAttribute>Aynı türde birden fazla öznitelik uygulanabilir.  
   
 ## <a name="known-types-and-primitives"></a>Bilinen türler ve temel elemanlar  
+
  İlkel türler ve temel öğeler (örneğin, ve) olarak değerlendirilen belirli türler <xref:System.DateTime> <xref:System.Xml.XmlElement> her zaman "biliniyor" ve bu mekanizmaya hiç eklenmemek zorunda değildir. Ancak, temel türlerin dizileri açıkça eklenmelidir. Çoğu koleksiyon dizilere eşit kabul edilir. (Genel olmayan koleksiyonlar diziler için eşdeğer olarak kabul edilir <xref:System.Object> ). Temel elemanlar, ilkel diziler ve basit koleksiyonlar kullanmanın bir örneği için bkz. örnek 4.  
   
 > [!NOTE]
 > Diğer temel türlerin aksine, <xref:System.DateTimeOffset> Yapı varsayılan olarak bilinen bir tür değildir, bu nedenle bilinen türler listesine el ile eklenmelidir.  
   
 ## <a name="examples"></a>Örnekler  
+
  Aşağıdaki örneklerde <xref:System.Runtime.Serialization.KnownTypeAttribute> kullanılan sınıf gösterilmektedir.  
   
 #### <a name="example-1"></a>Örnek 1  
+
  Devralma ilişkisine sahip üç sınıf vardır.  
   
  [!code-csharp[C_KnownTypeAttribute#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#1)]
@@ -63,18 +68,21 @@ ms.locfileid: "85247487"
  Dış tür `CompanyLogo2` seri durumdan çıkarılabildiğinde, seri durumdan çıkarma motoru `CircleType` ve ile ilgili olarak, `TriangleType` "daire" ve "üçgen" veri sözleşmeleri için eşleşen türleri bulabilir.  
   
 #### <a name="example-2"></a>Örnek 2  
+
  Aşağıdaki örnekte, her ikisi de `CustomerTypeA` ve veri sözleşmesine sahip olsa bile, her `CustomerTypeB` `Customer` `CustomerTypeB` bir seri hale geldiğinde bir örneği oluşturulur `PurchaseOrder` , çünkü yalnızca seri durumdan `CustomerTypeB` çıkarma altyapısı tarafından bilinir.  
   
  [!code-csharp[C_KnownTypeAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#4)]
  [!code-vb[C_KnownTypeAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#4)]  
   
 #### <a name="example-3"></a>Örnek 3  
+
  Aşağıdaki örnekte, bir, <xref:System.Collections.Hashtable> içeriğini dahili olarak depolar <xref:System.Object> . Bir karma tablonun serisini başarıyla kaldırmak için, seri durumdan çıkarma altyapısının, burada oluşabilecek olası türler kümesini bilmeleri gerekir. Bu durumda, yalnızca `Book` ve `Magazine` nesnelerinin üzerinde depolandıkları için, bu, `Catalog` öznitelik kullanılarak eklenmeleri durumunda olduğunu biliyoruz <xref:System.Runtime.Serialization.KnownTypeAttribute> .  
   
  [!code-csharp[C_KnownTypeAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#5)]
  [!code-vb[C_KnownTypeAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#5)]  
   
 #### <a name="example-4"></a>Örnek 4  
+
  Aşağıdaki örnekte, bir veri sözleşmesi numarayı ve numara üzerinde gerçekleştirilecek bir işlemi depolar. `Numbers`Veri üyesi tamsayı, tamsayılar dizisi veya tamsayılar içeren bir dize olabilir <xref:System.Collections.Generic.List%601> .  
   
 > [!CAUTION]
@@ -89,6 +97,7 @@ ms.locfileid: "85247487"
  [!code-vb[C_KnownTypeAttribute#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#7)]  
   
 ## <a name="known-types-inheritance-and-interfaces"></a>Bilinen türler, devralma ve arabirimler  
+
  Bilinen bir tür özniteliği kullanılarak belirli bir türle ilişkilendirildiğinde `KnownTypeAttribute` , bilinen tür aynı zamanda bu türün türetilmiş tüm türleri ile ilişkilendirilir. Örneğin, aşağıdaki koda bakın.  
   
  [!code-csharp[C_KnownTypeAttribute#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#8)]
@@ -99,6 +108,7 @@ ms.locfileid: "85247487"
  Bilinen türler, arabirimler değil yalnızca sınıflar ve yapılar ile ilişkilendirilebilir.  
   
 ## <a name="known-types-using-open-generic-methods"></a>Açık genel yöntemler kullanan bilinen türler  
+
  Bilinen bir tür olarak genel bir tür eklemek gerekebilir. Ancak açık genel tür özniteliğe parametre olarak geçirilemez `KnownTypeAttribute` .  
   
  Bu sorun, alternatif bir mekanizma kullanılarak çözülebilir: bilinen türler koleksiyonuna eklemek üzere türlerin bir listesini döndüren bir yöntem yazın. Yöntemin adı, daha sonra `KnownTypeAttribute` bazı kısıtlamalar nedeniyle özniteliğe dize bağımsız değişkeni olarak belirtilir.  
@@ -132,6 +142,7 @@ ms.locfileid: "85247487"
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>Bilinen türleri eklemenin ek yolları  
+
  Ayrıca, bilinen türler bir yapılandırma dosyası aracılığıyla eklenebilir. Bu, Windows Communication Foundation (WCF) ile üçüncü taraf tür kitaplıkları kullanırken olduğu gibi, doğru seri durumundan çıkarma için bilinen türler gerektiren türü denetlemediğinde yararlıdır.  
   
  Aşağıdaki yapılandırma dosyasında, bir yapılandırma dosyasında bilinen bir türün nasıl belirtilmesi gösterilmektedir.  

@@ -3,17 +3,19 @@ title: 'Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma
 description: Hem göreli hem de mutlak adresler içeren bir yapılandırma dosyası kullanarak bir WCF hizmeti için uç noktaların nasıl ekleneceğini öğrenin.
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 184bcb5f7f3e83f12608757b55bbb4d57be58f7d
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: aa8dce18a39b44c2c56d072a81699d1bc1e7d7da
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247071"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286428"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma
+
 Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmet tekliflerini erişimi sağlar. Bir hizmet için bir veya daha fazla uç noktası, göreli ve mutlak uç nokta adreslerinin birleşimini kullanarak tanımlayabilir veya herhangi bir hizmet uç noktası tanımlamadıysanız, çalışma zamanı sizin için varsayılan olarak bir değer sağlar. Bu konu, hem göreli hem de mutlak adresler içeren bir yapılandırma dosyası kullanarak uç noktaların nasıl ekleneceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki hizmet yapılandırması, bir temel adresi ve beş uç noktasını belirtir.  
   
 ```xml  
@@ -69,6 +71,7 @@ Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmet teklifle
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Temel adres, `add` Aşağıdaki örnekte gösterildiği gibi hizmet/ana bilgisayar/baseAddresses altında öğesi kullanılarak belirtilir.  
   
 ```xml  
@@ -82,6 +85,7 @@ Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmet teklifle
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnekte gösterilen ilk uç nokta tanımı göreli bir adresi belirtir. Bu, uç nokta adresinin temel adresin bir birleşimi ve Tekdüzen Kaynak tanımlayıcısı (URI) kompozisyonunun kurallarından sonraki göreli adres olduğu anlamına gelir. Göreli adres boş ("") olduğundan, uç nokta adresi taban adresle aynı olur. Gerçek uç nokta adresi `http://localhost:8000/servicemodelsamples/service` .  
   
 ```xml  
@@ -91,6 +95,7 @@ Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmet teklifle
 ```  
   
 ## <a name="example"></a>Örnek  
+
  İkinci uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi göreli bir adresi de belirtir. Göreli adres "test", temel adrese eklenir. Gerçek uç nokta adresi `http://localhost:8000/servicemodelsamples/service/test` .  
   
 ```xml  
@@ -100,6 +105,7 @@ Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmet teklifle
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Üçüncü uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi mutlak bir adresi belirtir. Taban adresi adreste hiçbir rol oynamıyor. Gerçek uç nokta adresi `http://localhost:8001/hello/servicemodelsamples` .  
   
 ```xml  
@@ -109,6 +115,7 @@ Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmet teklifle
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Dördüncü uç nokta adresi, bir mutlak adresi ve farklı bir aktarımı (TCP) belirtir. Taban adresi adreste hiçbir rol oynamıyor. Gerçek uç nokta adresi net. TCP:/localhost: 9000/servicemodelsamples/service ' dir.  
   
 ```xml  
@@ -118,6 +125,7 @@ Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmet teklifle
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Çalışma zamanı tarafından belirtilen varsayılan uç noktaları kullanmak için, kodda veya yapılandırma dosyasında herhangi bir hizmet uç noktası belirtmeyin. Bu örnekte, çalışma zamanı, hizmet açıldığında varsayılan uç noktaları oluşturur. Varsayılan uç noktalar, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../simplified-configuration.md) ve Basitleştirilmiş yapılandırma.  
   
 ```xml  

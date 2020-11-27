@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-ms.openlocfilehash: 80973a31050cf1ede03d4a3919066c62625ae590
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f6fb73653add7362e8c8452e75be802395ffc3cd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593418"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286532"
 ---
 # <a name="how-to-create-a-secure-session"></a>Nasıl yapılır: Güvenli Oturum Oluşturma
+
 [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)Bağlama dışında, Windows Communication Foundation (WCF) içindeki sistem tarafından sağlanan bağlamalar, ileti güvenliği etkinleştirildiğinde otomatik olarak güvenli oturumları kullanır.  
   
  Varsayılan olarak, güvenli oturumlar geri dönüştürülecek bir Web sunucusunu sürdürmez. Güvenli bir oturum oluşturulduğunda, istemci ve hizmet güvenli oturumla ilişkili anahtarı önbelleğe alın. İletiler alışverişi sırasında yalnızca önbelleğe alınmış anahtara yönelik bir tanımlayıcı alışverişi yapılır. Web sunucusu geri dönüştürüldüğünde, önbellek de, Web sunucusu tanımlayıcı için önbelleğe alınmış anahtarı alamadığından geri dönüştürülür. Bu durumda, istemciye geri bir özel durum oluşturulur. Durum bilgisi olan güvenlik bağlamı belirteci (SCT) kullanan güvenli oturumlar, bir Web sunucusunun geri dönüştürülmekte olmasını sağlayabilir. Güvenli bir oturumda durum bilgisi olan bir SCT kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli bir oturum Için güvenlik bağlamı belirteci oluşturma](how-to-create-a-security-context-token-for-a-secure-session.md).  
@@ -28,9 +29,9 @@ ms.locfileid: "84593418"
     |Sistem tarafından sağlanmış bağlama|Yapılandırma öğesi|Varsayılan olarak ileti güvenliği|  
     |------------------------------|---------------------------|------------------------------------|  
     |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)|Hayır|  
-    |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)|Yes|  
-    |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Yes|  
-    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Yes|  
+    |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)|Evet|  
+    |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Evet|  
+    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Evet|  
     |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md)|Hayır|  
     |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md)|Hayır|  
   
@@ -60,7 +61,7 @@ ms.locfileid: "84593418"
   
 - SOAP iletilerinin güvenli bir oturum tarafından korunduğunu belirten özel bir bağlama oluşturun.  
   
-     Özel bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: sistem tarafından sağlanmış bağlamayı özelleştirme](../extending/how-to-customize-a-system-provided-binding.md).  
+     Özel bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: özelleştirme System-Provided bağlama](../extending/how-to-customize-a-system-provided-binding.md).  
   
      Aşağıdaki kod örneği, güvenli bir oturum kullanan iletilerin özel bir bağlamasını belirtmek için yapılandırmayı kullanır.  
   
@@ -85,4 +86,4 @@ ms.locfileid: "84593418"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Bağlamaları Genel Bakış](../bindings-overview.md)
+- [WCF Bağlamalarına Genel Bakış](../bindings-overview.md)

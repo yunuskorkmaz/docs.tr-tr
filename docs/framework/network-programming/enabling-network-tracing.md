@@ -12,14 +12,15 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 4ad0b23fc93ddcdc11cebcc556d12148df5e8ae2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 246a975ead3cb9c1acb4fe0512dfa91d1b8a00c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502606"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287429"
 ---
 # <a name="enabling-network-tracing"></a>Ağ İzlemeyi Etkinleştirme
+
 Ağ izleme, yönetilen bir uygulama tarafından oluşturulan Yöntem çağrıları ve ağ trafiği hakkındaki bilgilere erişim sağlar. Uygulamanızda ağ izlemeyi etkinleştirmek için aşağıdaki görevleri gerçekleştirmeniz gerekir:  
   
 - İzleme etkinken kodunuzu derleyin. İzlemeyi etkinleştirmek için gereken derleyici anahtarları hakkında daha fazla bilgi için bkz. [nasıl yapılır: izleme ve hata ayıklama Ile koşullu derleme](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) .  
@@ -30,7 +31,7 @@ Ağ izleme, yönetilen bir uygulama tarafından oluşturulan Yöntem çağrılar
   
  İzleme dinleyicileri olarak da adlandırılan en yaygın izleme hedefleri, varsayılan dinleyici ve günlük dosyasıdır.  
   
- İzleme dinleyicisi belirtmezseniz, izleme varsayılan dinleyiciyi kullanır. Kodunuzu .NET Framework SDK ile gönderilen CLR hata ayıklayıcısı veya Windows SDK ile birlikte gelen DBwin32. exe gibi yönetilen kod etkin bir hata ayıklayıcıyla yürüterek, varsayılan dinleyiciye gönderilen iletileri görüntüleyebilirsiniz. CLR hata ayıklayıcısını kullanarak, izleme iletileri **Çıkış** penceresinde görüntülenir.  
+ İzleme dinleyicisi belirtmezseniz, izleme varsayılan dinleyiciyi kullanır. Kodunuzu .NET Framework SDK ile gönderilen CLR hata ayıklayıcı veya Windows SDK birlikte gelen DBwin32.exe gibi yönetilen kod etkin bir hata ayıklayıcıda yürüterek varsayılan dinleyiciye gönderilen iletileri görüntüleyebilirsiniz. CLR hata ayıklayıcısını kullanarak, izleme iletileri **Çıkış** penceresinde görüntülenir.  
   
  İzlemeleri almak için bir dosya kullanmayı tercih ederseniz, aşağıdaki örnekte gösterildiği gibi yapılandırma ayarlarını kullanarak bir günlük dosyası belirtebilirsiniz. (Yapılandırma dosyalarının genel bir tartışması için bkz. [yapılandırma dosyaları](../configure-apps/index.md).)  
   
@@ -50,4 +51,4 @@ Ağ izleme, yönetilen bir uygulama tarafından oluşturulan Yöntem çağrılar
 
 - [Ağ İzlemeyi Yorumlama](interpreting-network-tracing.md)
 - [.NET Framework'te Ağ İzleme](network-tracing.md)
-- [İzleme ve İşaretleme Uygulamaları](../debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Uygulamaları izleme ve İşaretleme](../debug-trace-profile/tracing-and-instrumenting-applications.md)

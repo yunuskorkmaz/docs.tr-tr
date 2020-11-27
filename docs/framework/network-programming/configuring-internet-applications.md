@@ -22,14 +22,15 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: 760a4ac7cec9abeabfc372c3be5bd3860a6fb03a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 796752ebf6e3cc5c3dac2a20213934f35d31b392
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502645"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287468"
 ---
 # <a name="configuring-internet-applications"></a>İnternet Uygulamalarını Yapılandırma
+
 [ \<system.Net> Öğesi (ağ ayarları)](../configure-apps/file-schema/network/system-net-element-network-settings.md) yapılandırma öğesi, uygulamalar için ağ yapılandırma bilgilerini içerir. [ \<system.Net> Öğesi (ağ ayarları)](../configure-apps/file-schema/network/system-net-element-network-settings.md) öğesini kullanarak, proxy sunucuları ayarlayabilir, bağlantı yönetim parametrelerini ayarlayabilir ve özel kimlik doğrulaması ve istek modüllerini uygulamanıza ekleyebilirsiniz.  
   
  [ \<defaultProxy> Öğesi (ağ ayarları)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) öğesi, sınıfı tarafından döndürülen proxy sunucusunu tanımlar `GlobalProxySelection` . <xref:System.Net.HttpWebRequest>Kendi <xref:System.Net.HttpWebRequest.Proxy%2A> özelliği belirli bir değere ayarlanmış olmayan her türlü, varsayılan proxy 'yi kullanır. Proxy adresini ayarlamaya ek olarak, proxy 'yi kullanmayacak sunucu adreslerinin bir listesini oluşturabilir ve proxy 'nin yerel adresler için kullanılması gerekmediğini belirtebilirsiniz.  
@@ -101,5 +102,5 @@ ms.locfileid: "84502645"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Framework'te Ağ Programlaması](index.md)
-- [Ağ Ayarları Şeması](../configure-apps/file-schema/network/index.md)
-- [\<system.Net>Öğesi (ağ ayarları)](../configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [Ağ ayarları şeması](../configure-apps/file-schema/network/index.md)
+- [\<system.Net> Öğesi (ağ ayarları)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

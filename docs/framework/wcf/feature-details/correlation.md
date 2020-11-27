@@ -2,18 +2,20 @@
 title: Bağıntı
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-ms.openlocfilehash: e7ccb58b11003638e15bdbc7b7aa326abbac1b71
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1a357dd9469d7428af56772d3241e59766429990
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579715"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286779"
 ---
 # <a name="correlation"></a>Bağıntı
+
 İş akışı hizmeti uygulamaları diğer hizmetlerle iletişim kurduğunda, aralarındaki iletilerin uygun iş akışı örneğine dağıtılması önemlidir. Bağıntı Bu için mekanizma sağlar. Bu bölümdeki konularda bağıntı ve farklı iş akışı hizmeti senaryolarında nasıl kullanılacağı hakkında genel bilgiler sağlanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bağıntıya Genel Bakış](correlation-overview.md)  
+
+ [Bağıntı Genel Bakış](correlation-overview.md)  
  ' De bulunan bağıntı türlerine genel bakış sağlar [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
   
  [Dayanıklı Çift Yönlü](durable-duplex-correlation.md)  

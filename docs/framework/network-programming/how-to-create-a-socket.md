@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Yuva Oluşturma'
+title: 'Nasıl yapılır: Yuva Oluşturma'
 description: Uzak cihazlarla iletişim kurmak için bir yuva başlatmayı öğrenin. Adres ailesini, yuva türünü ve protokol türünü belirtmek için yuva sınıfını kullanın.
 ms.date: 03/30/2017
 dev_langs:
@@ -18,17 +18,19 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 1d56ddea721b54192a7dd47d144b6c41bbb9a5d7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9746b814188a4dc92463399542a6044501d0da12
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502554"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287403"
 ---
-# <a name="how-to-create-a-socket"></a>Nasıl Yapılır: Yuva Oluşturma
+# <a name="how-to-create-a-socket"></a>Nasıl yapılır: Yuva Oluşturma
+
 Uzak cihazlarla iletişim kurmak üzere bir yuva kullanabilmeniz için, yuva protokol ve ağ adresi bilgileriyle başlatılmalıdır. Sınıfına yönelik oluşturucunun, <xref:System.Net.Sockets.Socket> bağlantı kurmak için yuvanın kullandığı adres ailesini, yuva türünü ve protokol türünü belirten parametreleri vardır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, Internet gibi TCP/IP tabanlı bir ağda iletişim kurmak için kullanılabilecek bir yuva oluşturur.  
   
 ```csharp  

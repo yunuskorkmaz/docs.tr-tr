@@ -8,17 +8,18 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 47e59452edfff74daf17d94a058ce8b12af7867c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a03d388f2773e312a149b5caf1747627d1c17864
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593548"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286636"
 ---
 # <a name="how-to-create-a-federated-client"></a>Nasıl yapılır: Federe İstemci Oluşturma
+
 Windows Communication Foundation (WCF) ' de, *Federasyon Hizmeti* için bir istemci oluşturmak üç ana adımdan oluşur:  
   
-1. [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)Veya benzer bir özel bağlama yapılandırın. Uygun bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluşturma WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md). Alternatif olarak, Federasyon Hizmeti ve bir veya daha fazla güvenlik belirteci hizmeti ile iletişim kurmak için bir yapılandırma dosyası oluşturmak üzere, Federasyon Hizmeti 'nin meta veri uç noktasına karşı [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın.  
+1. [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)Veya benzer bir özel bağlama yapılandırın. Uygun bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluşturma WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md). Alternatif olarak, Federasyon Hizmeti ve bir veya daha fazla güvenlik belirteci hizmetleriyle iletişim kurmak üzere bir yapılandırma dosyası oluşturmak için, Federasyon Hizmeti 'nin meta veri uç noktasına karşı [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın.  
   
 2. Bir <xref:System.ServiceModel.Security.IssuedTokenClientCredential> güvenlik belirteci hizmeti ile istemci etkileşiminin çeşitli yönlerini denetleyen öğesinin özelliklerini ayarlayın.  
   
@@ -31,13 +32,13 @@ Windows Communication Foundation (WCF) ' de, *Federasyon Hizmeti* için bir iste
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Federasyon Hizmeti için yapılandırma oluşturmak ve incelemek için  
   
-1. Bir komut satırı parametresi olarak hizmetin meta veri URL 'SI adresiyle [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın.  
+1. Bir komut satırı parametresi olarak hizmetin meta veri URL 'SI adresiyle [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın.  
   
 2. Oluşturulan yapılandırma dosyasını uygun bir düzenleyicide açın.  
   
 3. Oluşturulan ve öğelerinin özniteliklerini ve içeriğini inceleyin [\<issuer>](../../configure-apps/file-schema/wcf/issuer.md) [\<issuerMetadata>](../../configure-apps/file-schema/wcf/issuermetadata.md) . Bunlar [\<security>](../../configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) veya özel bağlamalar öğeleri için öğeler içinde bulunur. Adreslerin beklenen etki alanı adlarını veya diğer adres bilgilerini içerdiğinden emin olun. İstemci bu adreslere kimlik doğrulaması yaptığından ve Kullanıcı adı/parola çiftleri gibi bilgileri açığa çıkarabileceğinden, bu bilgilerin denetlenmesi önemlidir. Adres beklenen adres değilse, bu, istenmeyen bir alıcıya bilgilerin açığa çıkmasına neden olabilir.  
   
-4. [\<issuedTokenParameters>](../../configure-apps/file-schema/wcf/issuedtokenparameters.md)Açıklamalı <> öğesi içindeki ek öğeleri inceleyin `alternativeIssuedTokenParameters` . Bir Federasyon Hizmeti için yapılandırma oluşturmak üzere Svcutil. exe aracını kullanırken, Federasyon Hizmeti veya herhangi bir ara güvenlik belirteci hizmeti bir veren adresi belirtmez, ancak birden fazla uç nokta sunan bir güvenlik belirteci hizmeti için meta veri adresi belirtirseniz, sonuçta elde edilen yapılandırma dosyası ilk uç noktayı ifade eder. Ek uç noktalar, yapılandırma dosyasında,> öğeleri olarak yorumlanma <`alternativeIssuedTokenParameters` .  
+4. [\<issuedTokenParameters>](../../configure-apps/file-schema/wcf/issuedtokenparameters.md)Açıklamalı <> öğesi içindeki ek öğeleri inceleyin `alternativeIssuedTokenParameters` . Federasyon Hizmeti için yapılandırma oluşturmak üzere Svcutil.exe aracı kullanıldığında, Federasyon Hizmeti veya herhangi bir ara güvenlik belirteci hizmeti bir veren adresi belirtmez, ancak birden fazla uç nokta sunan bir güvenlik belirteci hizmeti için meta veri adresi belirtirseniz, sonuçta elde edilen yapılandırma dosyası ilk uç noktayı ifade eder. Ek uç noktalar, yapılandırma dosyasında,> öğeleri olarak yorumlanma <`alternativeIssuedTokenParameters` .  
   
      Bu <`issuedTokenParameters`> yapılandırmanın yapılandırmada zaten mevcut olan bir tercih edilip edilmeyeceğini saptayın. Örneğin, istemci bir güvenlik belirteci hizmetinde kimlik doğrulaması yapmayı tercih edebilir veya bir Kullanıcı adı/parola çifti yerine bir Windows CardSpace belirteci kullanın.  
   
@@ -84,7 +85,7 @@ Windows Communication Foundation (WCF) ' de, *Federasyon Hizmeti* için bir iste
   
 2. Belirteç önbelleğe alma gerekmiyorsa, `cacheIssuedTokens` (<`issuedToken`> öğesinin) özniteliğini olarak ayarlayın `false` .  
   
-3. Önbelleğe alınmış belirteçlerde bir zaman sınırı gerekliyse, `maxIssuedTokenCachingTime` <`issuedToken`> öğesindeki özniteliği uygun bir değere ayarlayın. Örnek:  
+3. Önbelleğe alınmış belirteçlerde bir zaman sınırı gerekliyse, `maxIssuedTokenCachingTime` <`issuedToken`> öğesindeki özniteliği uygun bir değere ayarlayın. Örneğin:  
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
 4. Varsayılan değerin dışında bir değer tercih edilirse, `issuedTokenRenewalThresholdPercentage` <`issuedToken`> öğesindeki özniteliği uygun bir değere ayarlayın, örneğin:  
@@ -141,20 +142,24 @@ Windows Communication Foundation (WCF) ' de, *Federasyon Hizmeti* için bir iste
     ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, kodda sınıfının bir örneğini yapılandırır <xref:System.ServiceModel.Security.IssuedTokenClientCredential> .  
   
  [!code-csharp[c_FederatedClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedclient/cs/source.cs#2)]
  [!code-vb[c_FederatedClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federatedclient/vb/source.vb#2)]  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Olası bilgilerin açıklanmasını engellemek için, Svcutil. exe aracını çalıştıran istemciler, Federasyon uç noktalarından meta verileri işlemek için, sonuçta elde edilen güvenlik belirteci hizmeti adreslerinin bekledikleri gibi olduğundan emin olmalıdır. Bu durum, bir güvenlik belirteci hizmeti birden çok bitiş noktası kullanıma sunduğundan önemlidir, çünkü Svcutil. exe aracı, istemcinin kullanılması gereken ilk uç noktayı kullanmak için ortaya çıkan yapılandırma dosyasını oluşturur.  
+
+ Olası bilgilerin açığa çıkmasına engel olmak için, Federasyon uç noktalarından meta verileri işlemek üzere Svcutil.exe aracı çalıştıran istemciler, sonuçta elde edilen güvenlik belirteci hizmeti adreslerinin bekledikleri gibi olduğundan emin olmalıdır. Bu durum, bir güvenlik belirteci hizmeti birden çok uç nokta kullanıma sunduğundan özellikle önemlidir çünkü Svcutil.exe araç, istemcinin kullanılması gereken ilk uç noktayı kullanmak için ortaya çıkan yapılandırma dosyasını oluşturur.  
   
 ## <a name="localissuer-required"></a>LocalIssuer gerekli  
- İstemcilerin her zaman yerel bir veren kullanması bekleniyorsa aşağıdakileri aklınızda yapın: zincirde bulunan ikinci-son güvenlik belirteci hizmeti bir veren adresi veya verenin meta veri adresini belirtiyorsa, Svcutil. exe ' nin varsayılan çıktısı yerel veren 'in kullanılmasına neden olur.  
+
+ İstemcilerin her zaman yerel bir veren kullanması bekleniyorsa aşağıdakileri göz önünde bulunur: zincirdeki ikinci-son güvenlik belirteci hizmeti bir veren adresi veya verenin meta veri adresini belirtiyorsa, Svcutil.exe varsayılan çıkışı yerel sertifika verenin kullanılmasıyla sonuçlanır.  
   
  Sınıfının,, ve özelliklerini ayarlama hakkında daha fazla bilgi için <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential> bkz. [nasıl yapılır: yerel veren yapılandırma](how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Kapsamlı sertifikalar  
+
  Hizmet sertifikalarının herhangi bir güvenlik belirteci hizmeti ile iletişim kurmak için belirtilmesi gerekiyorsa, genellikle sertifika anlaşması kullanılmadığından, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> sınıfının özelliği kullanılarak belirtilebilir <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> . <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A>Yöntemi bir <xref:System.Uri> ve bir <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> as parametresi alır. Belirtilen URI 'de uç noktalarla iletişim kurulurken belirtilen sertifika kullanılıyor. Alternatif olarak, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> özelliği tarafından döndürülen koleksiyona bir sertifika eklemek için yöntemini kullanabilirsiniz <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> .  
   
 > [!NOTE]
@@ -163,7 +168,7 @@ Windows Communication Foundation (WCF) ' de, *Federasyon Hizmeti* için bir iste
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Federasyon Örneği](../samples/federation-sample.md)
-- [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [Nasıl yapılır: WSFederationHttpBinding Oluşturma](how-to-create-a-wsfederationhttpbinding.md)
 - [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](how-to-configure-credentials-on-a-federation-service.md)
 - [Nasıl yapılır: Yerel Yayımlayan Yapılandırma](how-to-configure-a-local-issuer.md)

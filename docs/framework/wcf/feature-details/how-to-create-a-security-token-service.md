@@ -8,20 +8,23 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 1cfcca524e5dd2b0c1560eb7600795766e2db1d6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cfe1da7c66f5c64ac3f5346bc23e9b618db38d20
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598963"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286467"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma
-Bir güvenlik belirteci hizmeti, WS-Trust belirtiminde tanımlanan protokolü uygular. Bu protokol, güvenlik belirteçlerini verme, yenileme, iptal etme ve doğrulama için İleti biçimlerini ve ileti değişim düzenlerini tanımlar. Verilen bir güvenlik belirteci hizmeti bu yeteneklerden bir veya daha fazlasını sağlar. Bu konu, en yaygın senaryoya bakar: belirteç verme uygulama.  
+
+Bir güvenlik belirteci hizmeti WS-Trust belirtiminde tanımlanan protokolü uygular. Bu protokol, güvenlik belirteçlerini verme, yenileme, iptal etme ve doğrulama için İleti biçimlerini ve ileti değişim düzenlerini tanımlar. Verilen bir güvenlik belirteci hizmeti bu yeteneklerden bir veya daha fazlasını sağlar. Bu konu, en yaygın senaryoya bakar: belirteç verme uygulama.  
   
 ## <a name="issuing-tokens"></a>Belirteçleri verme  
- WS-Trust, `RequestSecurityToken` XML şeması tanım dili (xsd) şema öğesine ve `RequestSecurityTokenResponse` belirteç verme işlemini gerçekleştirmek için xsd şema öğesine göre İleti biçimlerini tanımlar. Ayrıca, ilişkili eylem Tekdüzen Kaynak tanımlayıcılarını (URI) tanımlar. İletiyle ilişkili eylem URI 'si `RequestSecurityToken` `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` . İletiyle ilişkili eylem URI 'si `RequestSecurityTokenResponse` `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` .  
+
+ WS-Trust, `RequestSecurityToken` XML şeması tanım dili (xsd) şema öğesine ve `RequestSecurityTokenResponse` belirteç verme işlemini gerçekleştirmek için xsd şema öğesine göre İleti biçimlerini tanımlar. Ayrıca, ilişkili eylem Tekdüzen Kaynak tanımlayıcılarını (URI) tanımlar. İletiyle ilişkili eylem URI 'si `RequestSecurityToken` `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` . İletiyle ilişkili eylem URI 'si `RequestSecurityTokenResponse`   `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` .  
   
 ### <a name="request-message-structure"></a>Ileti yapısı iste  
+
  Sorun isteği ileti yapısı, genellikle aşağıdaki öğelerden oluşur:  
   
 - Değerine sahip bir istek türü URI 'SI `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue` .
@@ -41,6 +44,7 @@ Bir güvenlik belirteci hizmeti, WS-Trust belirtiminde tanımlanan protokolü uy
  Güvenlik belirteci hizmeti, sorun yanıt iletisini oluştururken sorun isteği iletisindeki bilgileri kullanır.  
   
 ## <a name="response-message-structure"></a>Yanıt Iletisi yapısı  
+
  Sorun yanıt iletisi yapısı, genellikle aşağıdaki öğelerden oluşur;  
   
 - Verilen güvenlik belirteci, örneğin bir SAML 1,1 onayı.  
@@ -58,6 +62,7 @@ Bir güvenlik belirteci hizmeti, WS-Trust belirtiminde tanımlanan protokolü uy
 - Verilen belirtecin ömür bilgileri.  
   
 ## <a name="processing-request-messages"></a>Istek Iletilerini işleme  
+
  Güvenlik belirteci hizmeti, istek iletisinin çeşitli parçalarını inceleyerek ve isteği karşılayan bir belirteç yayımlayabilmesini sağlayarak sorun isteğini işler. Güvenlik belirteci hizmeti, verilecek belirteci oluşturmadan önce aşağıdakileri belirlemeli olmalıdır:  
   
 - İstek aslında belirtecin verilme isteği olur.  
@@ -101,6 +106,7 @@ Bir güvenlik belirteci hizmeti, WS-Trust belirtiminde tanımlanan protokolü uy
  Daha fazla bilgi için bkz. [Federasyon örneği](../samples/federation-sample.md).  
   
 ## <a name="creating-response-messages"></a>Yanıt Iletileri oluşturma  
+
  Güvenlik belirteci hizmeti, sorun isteğini işlediğinde ve düzeltme anahtarıyla birlikte verilecek belirteci oluşturduktan sonra, en azından istenen belirteç, kanıt belirteci ve verilen belirteç başvuruları dahil olmak üzere yanıt iletisinin oluşturulması gerekir. Verilen belirteç genellikle <xref:System.IdentityModel.Tokens.SamlSecurityToken> , <xref:System.IdentityModel.Tokens.SamlAssertion> Aşağıdaki örnekte gösterildiği gibi öğesinden oluşturulur.  
   
  [!code-csharp[c_CreateSTS#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#5)]
@@ -121,6 +127,7 @@ Bir güvenlik belirteci hizmeti, WS-Trust belirtiminde tanımlanan protokolü uy
  Daha sonra bu çeşitli değerler istemciye döndürülen yanıt iletisine serileştirilir.  
   
 ## <a name="example"></a>Örnek  
+
  Bir güvenlik belirteci hizmeti için tam kod için bkz. [Federasyon örneği](../samples/federation-sample.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

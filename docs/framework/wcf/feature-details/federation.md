@@ -8,22 +8,25 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: c31c2612b595e627b0c4c2d7fbb3a359b19ee704
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5b5e944b96fc5e56fbb4d19a582ba9dd245904b4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595498"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286755"
 ---
 # <a name="federation"></a>Federasyon
+
 Bu konuda, Federe güvenlik kavramıyla ilgili kısa bir genel bakış sunulmaktadır. Federasyon güvenlik mimarilerini dağıtmaya yönelik Windows Communication Foundation (WCF) desteğini de açıklar. Federasyonu gösteren örnek bir uygulama için bkz. [Federasyon örneği](../samples/federation-sample.md).  
   
 ## <a name="definition-of-federated-security"></a>Federal Güvenlik tanımı  
+
  Federasyon güvenliği, bir istemcinin eriştiği hizmet ile ilişkili kimlik doğrulama ve yetkilendirme yordamlarına kadar temiz ayrım sağlar. Federasyon güvenliği, farklı güven bölgelerinde birden fazla sistem, ağ ve kuruluşta işbirliği yapılmasını de mümkün.  
   
  WCF, Federasyon güvenliği kullanan dağıtılmış sistemler oluşturmak ve dağıtmak için destek sağlar.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Federasyon güvenlik mimarisinin öğeleri  
+
  Federasyon güvenlik mimarisinin aşağıdaki tabloda açıklandığı gibi üç anahtar öğesi vardır.  
   
 |Öğe|Açıklama|  
@@ -33,6 +36,7 @@ Bu konuda, Federe güvenlik kavramıyla ilgili kısa bir genel bakış sunulmakt
 |Güvenlik Belirteci Hizmeti (STS)|Güvenlik belirteçleri veren bir Web hizmeti; diğer bir deyişle, bu, güvendiğini ve güvenmesini sağlayan kanıtları temel alarak onaylamaları yapar. Bu, etki alanları arasındaki güven aracılığı temelini oluşturur.|  
   
 ### <a name="example-scenario"></a>Örnek Senaryo  
+
  Aşağıdaki çizimde bir Federasyon güvenliği örneği gösterilmektedir:  
   
  ![Tipik bir Federasyon güvenlik senaryosunu gösteren diyagram.](./media/federation/typical-federated-security-scenario.gif)  
@@ -40,7 +44,7 @@ Bu konuda, Federe güvenlik kavramıyla ilgili kısa bir genel bakış sunulmakt
  Bu senaryo iki kuruluş içerir: A ve B. kuruluş B, kuruluşlardaki bazı kullanıcıların önemli bulabileceği bir web kaynağına (Web hizmeti) sahiptir.  
   
 > [!NOTE]
-> Bu bölümde, *kaynak*, *hizmet*ve *Web hizmeti* 'nin birbirlerinin yerine kullanıldığı terimler kullanılmaktadır.  
+> Bu bölümde, *kaynak*, *hizmet* ve *Web hizmeti* 'nin birbirlerinin yerine kullanıldığı terimler kullanılmaktadır.  
   
  Genellikle kuruluş B, bir kullanıcının, hizmet erişmeden önce geçerli bir kimlik doğrulama biçimi sağlamasını gerektirir. Ayrıca, kuruluş, kullanıcının söz konusu kaynağa erişmek için yetkilendirilmesini de gerektirebilir. Bu sorunu ele almanın ve kuruluşlardaki kullanıcıların B kuruluşunda kaynağa erişmesi için bir yol aşağıdaki gibidir:  
   
@@ -67,6 +71,7 @@ Bu konuda, Federe güvenlik kavramıyla ilgili kısa bir genel bakış sunulmakt
  Kullanıcılar STS A 'dan bir güvenlik belirteci aldıktan sonra, bu belirteci STS 'ye sunar. B. kuruluş, kullanıcıların isteklerini yetkilendirmeyi gerçekleştirmeye devam eder ve kendi güvenlik belirteçleri kümesinden kullanıcılara bir güvenlik belirteci yayınlar. Kullanıcılar daha sonra belirtecini B kuruluşunda kaynağa sunabilir ve hizmete erişebilir.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>WCF 'de Federal güvenlik desteği  
+
  WCF, aracılığıyla Federal Güvenlik mimarileri dağıtmaya yönelik anahtar desteği sağlar [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) .  
   
  [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)Öğesi, istek-yanıt iletişim stili için temel alınan aktarım mekanizması olarak http kullanımını gerektiren güvenli, güvenilir ve birlikte çalışabilen bir bağlama sağlar. Bu, kodlama için Tel biçimi olarak metin ve xml kullanır.  
@@ -74,7 +79,8 @@ Bu konuda, Federe güvenlik kavramıyla ilgili kısa bir genel bakış sunulmakt
  [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)Bir Federasyon güvenlik senaryosunda kullanımı, aşağıdaki bölümlerde açıklandığı gibi, mantıksal olarak bağımsız iki aşamaya ayrılabilir.  
   
 ### <a name="phase-1-design-phase"></a>1. Aşama: Tasarım aşaması  
- Tasarım aşamasında istemci, hizmet uç noktasının açığa çıkardığı ilkeyi okumak ve hizmetin kimlik doğrulama ve yetkilendirme gereksinimlerini toplamak için [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanır. İstemci üzerinde aşağıdaki Federasyon güvenliği iletişim modelini oluşturmak için uygun proxy 'ler oluşturulur:  
+
+ Tasarım aşamasında istemci, hizmet uç noktasının sunduğu ilkeyi okumak ve hizmetin kimlik doğrulama ve yetkilendirme gereksinimlerini toplamak için [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanır. İstemci üzerinde aşağıdaki Federasyon güvenliği iletişim modelini oluşturmak için uygun proxy 'ler oluşturulur:  
   
 - İstemci güven bölgesindeki STS 'den bir güvenlik belirteci alın.  
   
@@ -84,15 +90,18 @@ Bu konuda, Federe güvenlik kavramıyla ilgili kısa bir genel bakış sunulmakt
   
 - Hizmete erişmek için belirteci hizmete sunun.  
   
-### <a name="phase-2-run-time-phase"></a>2. Aşama: çalışma zamanı aşaması  
+### <a name="phase-2-run-time-phase"></a>2. Aşama: Run-Time aşaması  
+
  Çalışma zamanı aşamasında istemci, WCF istemci sınıfının bir nesnesini başlatır ve WCF istemcisini kullanarak bir çağrı yapar. WCF 'nin temel alınan çatısı, Federasyon güvenliği iletişim düzeninde daha önce bahsedilen adımları işler ve istemcinin hizmeti sorunsuz bir şekilde kullanmasına olanak sağlar.  
   
 ## <a name="sample-implementation-using-wcf"></a>WCF kullanarak örnek uygulama  
+
  Aşağıdaki çizimde, WCF 'den yerel destek kullanan bir Federasyon güvenlik mimarisine yönelik örnek bir uygulama gösterilmektedir.  
   
  ![Örnek bir Federasyon güvenlik uygulamasını gösteren diyagram.](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>Örnek hizmetim  
+
  Hizmet `MyService` aracılığıyla tek bir uç nokta sunar `MyServiceEndpoint` . Aşağıdaki çizimde bitiş noktasıyla ilişkili adres, bağlama ve anlaşma gösterilmektedir.  
   
  ![MyServiceEndpoint ayrıntılarının gösterildiği diyagram.](./media/federation/myserviceendpoint-details.gif)  
@@ -158,6 +167,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 [!code-vb[C_Federation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#1)]  
   
 #### <a name="sts-b"></a>STS B  
+
  Aşağıdaki çizimde STS B gösterilmektedir. Daha önce belirtildiği gibi, bir güvenlik belirteci hizmeti (STS) da bir Web hizmetidir ve ilişkili uç noktaları, ilkesi vb. olabilir.  
   
  ![Güvenlik belirteci hizmeti B 'yi gösteren diyagram.](./media/federation/myservice-security-token-service-b.gif)  
@@ -220,6 +230,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  [!code-vb[C_Federation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#3)]  
   
 #### <a name="sts-a"></a>STS A  
+
  Aşağıdaki çizimde STS A gösterilmektedir.  
   
  ![Federasyon](media/sts-b.gif "STS_B")  
@@ -282,11 +293,13 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  [!code-vb[C_Federation#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#5)]  
   
 ### <a name="client-at-organization-a"></a>Kuruluşunda istemci A  
+
  Aşağıdaki çizimde, bir hizmet çağrısı yapma ile ilgili adımlarla birlikte A kuruluşunda istemci gösterilmektedir `MyService` . Diğer işlevsel bileşenler de ayrıca tamamlana için de eklenmiştir.  
   
  ![Bir hizmetim hizmeti çağrısındaki adımları gösteren diyagram.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>Özet  
+
  Federal güvenlik, daha temiz bir sorumluluk bölmesi sağlar ve güvenli, ölçeklenebilir hizmet mimarileri oluşturmaya yardımcı olur. WCF, dağıtılmış uygulamalar oluşturmaya ve dağıtmaya yönelik bir platform olarak, Federasyon güvenliği uygulamak için yerel destek sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
