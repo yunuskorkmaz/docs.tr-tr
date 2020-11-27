@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: e6f5dbce6bd10ae68b2033a135660d1e31aceff9
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 9f4ae96a148d850efd92f950a177b32cc75c33ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558458"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283178"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme
 
@@ -37,7 +37,7 @@ Bu tabloda, 4.5. x .NET Framework 4,5 ve Point yayımları, 4.5.1 ve 4.5.2, 4.6.
 |.NET Framework 4.5. x/4.6. x/4.7. x/4.8 Redistributable bu işletim sistemi için geçerlidir. Lütfen .NET Framework indirme sayfasından işletim sisteminiz için 4.5. x/4.6. x/4.7. x/4.8 .NET Framework indirin.|Desteklenmeyen bir platforma .NET Framework 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 veya 4,8 yüklemeye çalışıyor veya desteklenen tüm işletim sistemlerine ait bileşenleri içermeyen yükleme paketini seçmiş olabilirsiniz. Çevrimdışı yükleyiciyi kullanarak yüklemeyi yeniden[çalıştırın (](https://go.microsoft.com/fwlink/p/?LinkId=309493) [4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)için [4,6](https://dotnet.microsoft.com/download/dotnet-framework/net46), [4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)için 4.6.2, 4,7 için [4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604), [4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)için için) [, 4.7.1,](https://go.microsoft.com/fwlink/p/?LinkId=852090) [4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)için veya [4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)için. Daha fazla bilgi için bkz. desteklenen işletim sistemleri için [Yükleme Kılavuzu](guide-for-developers.md) ve [sistem gereksinimleri](../get-started/system-requirements.md) .|  
 |Bu ürünü yükleyebilmeniz için KB 'ye karşılık gelen güncelleştirmenin \<*number*> yüklenmesi gerekir.|.NET Framework yüklemesi, .NET Framework yüklenmeden önce bir KB güncelleştirmesi yüklenmesini gerektirir. Güncelleştirmeyi yükleyip .NET Framework yüklemeyi yeniden başlatın.<br /><br /> Örneğin, Windows 8.1, Windows RT 8,1 ve Windows Server 2012 R2 'deki .NET Framework sürümlerinin yüklenmesi, [KB 2919355](https://support.microsoft.com/kb/2919355) ' ye karşılık gelen güncelleştirmenin yüklü olmasını gerektirir.|  
 |Bilgisayarınızda şu anda Windows Server 2008 işletim sisteminin Sunucu Çekirdeği yüklemesi çalışıyor. .NET Framework 4.5. x, işletim sisteminin daha yeni bir sürümünü gerektirir. Lütfen Windows Server 2008 R2 SP1 veya üstünü yükleyip .NET Framework 4.5. x kurulumunu yeniden çalıştırın.|.NET Framework 4.5.1 ve 4.5.2, Windows Server 2008 R2 SP1 veya sonraki sürümleriyle sunucu çekirdeği rolünde desteklenir. Bkz. [sistem gereksinimleri](../get-started/system-requirements.md).|  
-|Bu bilgisayar üzerinde tüm kullanıcılar için bu işlemi tamamlamak üzere yeterli yetkiniz yok. Yönetici olarak oturum açın ve **kurulumu**yeniden çalıştırın.|.NET Framework yüklemek için bilgisayarda yönetici olmanız gerekir.|  
+|Bu bilgisayar üzerinde tüm kullanıcılar için bu işlemi tamamlamak üzere yeterli yetkiniz yok. Yönetici olarak oturum açın ve **kurulumu** yeniden çalıştırın.|.NET Framework yüklemek için bilgisayarda yönetici olmanız gerekir.|  
 |Önceki yükleme bilgisayarınızın yeniden başlatılmasını gerektirdiği için Kurulum devam edemiyor. Lütfen bilgisayarınızı yeniden başlatın ve Kurulumu yeniden çalıştırın.|Yüklemeyi tam olarak tamamlaması için bazen yeniden başlatma gerekir. Bilgisayarınızı yeniden başlatmak ve kurulumu yeniden çalıştırmak için yönergeleri izleyin.<br /><br /> Nadir durumlarda, Windows bir dizi eksik güncelleştirme algıladıysa ve sıradaki bir sonraki güncelleştirmeyi yeniden başlattıktan sonra sistemi yeniden başlatmanız istenebilir.|  
 |.NET Framework Kurulumu Program Uyumluluk modunda çalıştırılamaz.|Bu makalenin ilerleyen bölümlerinde [Program uyumluluk sorunları](#compat) bölümüne bakın.|  
 |.NET Framework 4.5. x/4.6. x/4.7. x/4.8, bileşen deposu bozulduğundan yüklenmedi.|Daha fazla bilgi için bkz. [DISM veya Sistem Güncelleştirmesi Hazırlık Aracı 'nı kullanarak Windows Update hatalarını giderme](https://support.microsoft.com/kb/947821) .|  
@@ -53,6 +53,7 @@ Bu tabloda, 4.5. x .NET Framework 4,5 ve Point yayımları, 4.5.1 ve 4.5.2, 4.6.
 |Bu kurulum programı bir x64 veya x86 bilgisayar gerektiriyor. IA64 bilgisayarlara yüklenemez.|Bkz. [sistem gereksinimleri](../get-started/system-requirements.md).|  
 
 <a name="compat"></a>
+
 ### <a name="program-compatibility-issues"></a>Program uyumluluğu sorunları
 
 .NET Framework 4,5 veya noktası sürümlerinin yüklenmesi, Windows program uyumluluk modunda çalışırken 1603 hata kodu veya blokları ile başarısız olur. **Program uyumluluk yardımcısı** .NET Framework doğru şekilde yüklenmediğini ve önerilen ayarı (program uyumluluğu modu) kullanarak yeniden yüklemenizi ister. Program Uyumluluğu modu, başarısız olan veya iptal edilen önceki .NET Framework Kurulumu Programını çalıştırma girişimlerinde Program Uyumluluk Yardımcısı tarafından da ayarlanmış olabilir.

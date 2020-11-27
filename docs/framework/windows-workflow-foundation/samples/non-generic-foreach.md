@@ -2,27 +2,30 @@
 title: Genel Olmayan ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 08dbac3974915f823a4f6e39f35927453a7c4b3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9678d929375857a76d01f575e637a069b0911ae5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142712"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283581"
 ---
 # <a name="non-generic-foreach"></a>Genel Olmayan ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]alet çantasında, koleksiyonlar aracılığıyla <xref:System.Activities.Statements.ForEach%601> <xref:System.Collections.Generic.IEnumerable%601> yineleme sağlayan, dahil olmak üzere bir dizi Kontrol Akışı aktivitesi gemi.  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] , kendi araç kutusunda, <xref:System.Activities.Statements.ForEach%601> koleksiyonlar arasında yineleme sağlayan denetim akışı etkinlikleri kümesi olarak gelir <xref:System.Collections.Generic.IEnumerable%601> .  
   
- <xref:System.Activities.Statements.ForEach%601>özelliğinin <xref:System.Activities.Statements.ForEach%601.Values%2A> türünün <xref:System.Collections.Generic.IEnumerable%601>olmasını gerektirir. Bu, kullanıcıların arabirimi uygulayan <xref:System.Collections.Generic.IEnumerable%601> veri yapıları üzerinde yinelemelerini <xref:System.Collections.ArrayList>(örneğin,) engellemez. Genel olmayan sürümü, <xref:System.Activities.Statements.ForEach%601> koleksiyondaki değer türlerinin uyumluluğunu sağlamak için daha fazla çalışma süresi karmaşıklığı pahasına bu gereksinimin üstesinden gelir.  
+ <xref:System.Activities.Statements.ForEach%601><xref:System.Activities.Statements.ForEach%601.Values%2A>özelliğinin türünde olması gerekir <xref:System.Collections.Generic.IEnumerable%601> . Bu <xref:System.Collections.Generic.IEnumerable%601> , kullanıcıların arabirimi (örneğin,) uygulayan veri yapıları üzerinde yinelenmesine neden olacak <xref:System.Collections.ArrayList> . Genel olmayan sürüm, <xref:System.Activities.Statements.ForEach%601> koleksiyondaki değer türlerinin uyumluluğunu sağlamaya yönelik daha fazla çalışma zamanı karmaşıklığı masrafına bu gereksinimi verir.  
   
- Bu örnek, genel <xref:System.Activities.Statements.ForEach%601> olmayan bir etkinliğin ve tasarımcısının nasıl uygulanacağını gösterir. Bu etkinlik, <xref:System.Collections.ArrayList>'' ile yinelemek için kullanılabilir.  
+ Bu örnek, genel olmayan bir <xref:System.Activities.Statements.ForEach%601> etkinliğin ve tasarımcısının nasıl uygulanacağını gösterir. Bu etkinlik, üzerinden yinelemek için kullanılabilir <xref:System.Collections.ArrayList> .  
   
-## <a name="foreach-activity"></a>Foreach Etkinliği  
- C#/Visual Basic `foreach` deyimi, koleksiyonun her öğesi için katışılmış bir deyim çalıştırarak koleksiyonun öğelerini numaralandırır. Eşdeğer [!INCLUDE[wf1](../../../../includes/wf1-md.md)] faaliyetleri `foreach` ve <xref:System.Activities.Statements.ForEach%601> <xref:System.Activities.Statements.ParallelForEach%601>. Etkinlik, <xref:System.Activities.Statements.ForEach%601> değerlerin ve gövdenin bir listesini içerir. Çalışma zamanında, liste yinelenir ve gövde listedeki her değer için yürütülür.  
+## <a name="foreach-activity"></a>ForEach etkinliği  
+
+ C#/Visual Basic `foreach` ifade bir koleksiyonun öğelerini numaralandırır ve koleksiyonun her öğesi için gömülü bir ifade yürütüyordur. [!INCLUDE[wf1](../../../../includes/wf1-md.md)]Eşdeğer etkinlikleri `foreach` <xref:System.Activities.Statements.ForEach%601> ve ' dir <xref:System.Activities.Statements.ParallelForEach%601> . <xref:System.Activities.Statements.ForEach%601>Etkinlik bir değer ve gövde listesi içerir. Çalışma zamanında, liste tekrarlandırılır ve listedeki her bir değer için gövde yürütülür.  
   
- Çoğu durumda, kullanılacağı senaryoların çoğunu kapsadığından ve derleme zamanında tür denetimi sağladığından, etkinliğin genel sürümü tercih edilen çözüm olmalıdır. Genel olmayan sürüm, genel <xref:System.Collections.IEnumerable> olmayan arabirimi uygulayan türleri yineleştirmek için kullanılabilir.  
+ Çoğu durumda, etkinliğin genel sürümünün tercih edilen çözüm olması gerekir, çünkü bu, kullanılacağı senaryoların çoğunu kapsamakta ve derleme zamanında tür denetimi sağlar. Genel olmayan sürüm, genel olmayan arabirimi uygulayan türler arasında yineleme yapmak için kullanılabilir <xref:System.Collections.IEnumerable> .  
   
-## <a name="class-definition"></a>Sınıf Tanımı  
- Aşağıdaki kod örneği, genel `ForEach` olmayan bir etkinliğin tanımını gösterir.  
+## <a name="class-definition"></a>Sınıf tanımı  
+
+ Aşağıdaki kod örneği genel olmayan bir etkinliğin tanımını gösterir `ForEach` .  
   
 ```csharp  
 [ContentProperty("Body")]  
@@ -39,13 +42,14 @@ public class ForEach : NativeActivity
 ```  
   
  Gövde (isteğe bağlı)  
- <xref:System.Activities.ActivityAction> Koleksiyondaki <xref:System.Object>her öğe için yürütülen tür. Her bir element kendi `Argument` özelliği aracılığıyla Vücuda geçirilir.  
+ <xref:System.Activities.ActivityAction> <xref:System.Object> Koleksiyondaki her öğe için yürütülen türü. Her tek öğe, özelliği aracılığıyla gövdeye geçirilir `Argument` .  
   
  Değerler (isteğe bağlı)  
- Üzerinde yinelenir öğelerin koleksiyonu. Koleksiyonun tüm öğelerinin uyumlu türlerde olmasını sağlamak çalışma zamanında yapılır.  
+ Tekrarlandırılmış öğelerin koleksiyonu. Koleksiyondaki tüm öğelerin uyumlu türlerde olduğundan emin olmak, çalışma zamanında yapılır.  
   
-## <a name="example-of-using-foreach"></a>ForEach Kullanma Örneği  
- Aşağıdaki kod, bir uygulamada ForEach etkinliğinin nasıl kullanılacağını gösterir.  
+## <a name="example-of-using-foreach"></a>ForEach kullanma örneği  
+
+ Aşağıdaki kod, bir uygulamada ForEach etkinliğinin nasıl kullanılacağını göstermektedir.  
   
 ```csharp  
 string[] names = { "bill", "steve", "ray" };  
@@ -67,12 +71,13 @@ Activity sampleUsage =
    };  
 ```  
   
-|Koşul|İleti|Severity|Özel Durum Türü|  
+|Koşul|İleti|Önem derecesi|Özel durum türü|  
 |---------------|-------------|--------------|--------------------|  
-|Değerler,`null`|Gerekli bir etkinlik bağımsız değişkeni 'Değerler' için değer sağlanmadı.|Hata|<xref:System.InvalidOperationException>|  
+|Değerler `null`|Gerekli etkinlik bağımsız değişkeni ' Values ' değeri sağlanmadı.|Hata|<xref:System.InvalidOperationException>|  
   
-## <a name="foreach-designer"></a>Foreach Tasarımcısı  
- Örnek için etkinlik tasarımcısı, yerleşik <xref:System.Activities.Statements.ForEach%601> etkinlik için sağlanan tasarımcıya görünüm olarak benzerdir. Tasarımcı, **Örnekler**, **Genel Olmayan Etkinlikler** kategorisinde ki araç kutusunda görünür. Etkinlik, düzgün yapılandırılmış bir aktivite oluşturur araç kutusunda bir <xref:System.Activities.Presentation.IActivityTemplateFactory> ortaya çıkarır, çünkü tasarımcı, araç kutusunda **ForEachWithBodyFactory** <xref:System.Activities.ActivityAction>adlandırılır.  
+## <a name="foreach-designer"></a>ForEach Tasarımcısı  
+
+ Örnek için etkinlik Tasarımcısı, yerleşik etkinlik için sunulan tasarımcı görünümünde benzerdir <xref:System.Activities.Statements.ForEach%601> . Tasarımcı, **örnekler**, **genel olmayan etkinlikler** kategorisindeki araç kutusunda görünür. Tasarımcı araç kutusunda **ForEachWithBodyFactory** olarak adlandırılır çünkü etkinlik, düzgün bir şekilde <xref:System.Activities.Presentation.IActivityTemplateFactory> yapılandırılmış olan etkinliği oluşturur <xref:System.Activities.ActivityAction> .  
   
 ```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -95,19 +100,19 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 #### <a name="to-run-this-sample"></a>Bu örneği çalıştırmak için  
   
-1. Seçtiğiniz projeyi çözümün başlangıç projesi olarak ayarlayın:  
+1. Tercih ettiğiniz projeyi çözümün başlangıç projesi olarak ayarlayın:  
   
-    1. **CodeTestClient,** kodu kullanarak etkinliğin nasıl kullanılacağını gösterir.  
+    1. **Codetekstclient** , kodu kullanarak etkinliğin nasıl kullanılacağını gösterir.  
   
-    2. **DesignerTestClient,** tasarımcı içindeki etkinliğin nasıl kullanılacağını gösterir.  
+    2. **DesignerTestClient** , etkinliğin tasarımcı içinde nasıl kullanılacağını gösterir.  
   
-2. Projeyi oluşturun ve çalıştırın.  
+2. Projeyi derleyin ve çalıştırın.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

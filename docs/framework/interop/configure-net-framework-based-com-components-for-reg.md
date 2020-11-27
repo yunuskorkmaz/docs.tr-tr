@@ -9,14 +9,15 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: ad25a79add84e43ba0a8e71a0f48c5ddf65108bd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ffeb342f286663ee7fe733ee617741e0ab30d0d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554846"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282879"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma
+
 .NET Framework tabanlı bileşenlere yönelik kayıt için ücretsiz etkinleştirme, COM bileşenleri için olduğundan biraz daha karmaşıktır. Kurulum için iki bildirim gerekir:  
   
 - COM uygulamalarının, yönetilen bileşeni tanımlamak için bir Win32 stili uygulama bildirimi olması gerekir.  
@@ -110,13 +111,13 @@ Uygulama bildirimini COM uygulamasıyla aynı dizine yükleyebilirsiniz. Alterna
   
     |Öznitelik|Açıklama|Gerekli|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Etkinleştirilecek sınıfı belirten tanımlayıcı.|Yes|  
-    |`description`|Kullanıcıya bileşen hakkında bilgilendiren bir dize. Boş bir dize varsayılandır.|No|  
-    |`name`|Yönetilen sınıfı temsil eden bir dize.|Yes|  
-    |`progid`|Geç bağlantılı etkinleştirme için kullanılacak tanımlayıcı.|No|  
-    |`threadingModel`|COM iş parçacığı modeli. "Her ikisi de varsayılan değerdir.|No|  
-    |`runtimeVersion`|Kullanılacak ortak dil çalışma zamanı (CLR) sürümünü belirtir. Bu özniteliği belirtmezseniz ve CLR zaten yüklü değilse, bileşen CLR sürüm 4 ' ten önceki en son yüklenen CLR ile yüklenir. V 1.0.3705, v 1.1.4322 veya v 2.0.50727 belirtirseniz, sürüm CLR sürüm 4 ' ten (genellikle v 2.0.50727) önce yüklenen en son CLR sürümüne otomatik olarak kaydolur. CLR 'nin başka bir sürümü zaten yüklüyse ve belirtilen sürüm, işlem içi yan yana yüklenebiliyorsanız, belirtilen sürüm yüklenir; Aksi takdirde, yüklenen CLR kullanılır. Bu bir yükleme hatasına neden olabilir.|No|  
-    |`tlbid`|Sınıf hakkında tür bilgilerini içeren tür kitaplığının tanımlayıcısı.|No|  
+    |`clsid`|Etkinleştirilecek sınıfı belirten tanımlayıcı.|Evet|  
+    |`description`|Kullanıcıya bileşen hakkında bilgilendiren bir dize. Boş bir dize varsayılandır.|Hayır|  
+    |`name`|Yönetilen sınıfı temsil eden bir dize.|Evet|  
+    |`progid`|Geç bağlantılı etkinleştirme için kullanılacak tanımlayıcı.|Hayır|  
+    |`threadingModel`|COM iş parçacığı modeli. "Her ikisi de varsayılan değerdir.|Hayır|  
+    |`runtimeVersion`|Kullanılacak ortak dil çalışma zamanı (CLR) sürümünü belirtir. Bu özniteliği belirtmezseniz ve CLR zaten yüklü değilse, bileşen CLR sürüm 4 ' ten önceki en son yüklenen CLR ile yüklenir. V 1.0.3705, v 1.1.4322 veya v 2.0.50727 belirtirseniz, sürüm CLR sürüm 4 ' ten (genellikle v 2.0.50727) önce yüklenen en son CLR sürümüne otomatik olarak kaydolur. CLR 'nin başka bir sürümü zaten yüklüyse ve belirtilen sürüm, işlem içi yan yana yüklenebiliyorsanız, belirtilen sürüm yüklenir; Aksi takdirde, yüklenen CLR kullanılır. Bu bir yükleme hatasına neden olabilir.|Hayır|  
+    |`tlbid`|Sınıf hakkında tür bilgilerini içeren tür kitaplığının tanımlayıcısı.|Hayır|  
   
      Tüm öznitelik etiketleri büyük/küçük harfe duyarlıdır. OLE/COM ObjectViewer (Oleview.exe) ile derleme için aktarılmış tür kitaplığını görüntüleyerek CLSID, ProgID 'ler, iş parçacığı oluşturma modellerini ve çalışma zamanı sürümünü edinebilirsiniz.  
   
@@ -176,6 +177,6 @@ Uygulama bildirimini COM uygulamasıyla aynı dizine yükleyebilirsiniz. Alterna
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kayıtsız COM Birlikte Çalışma](registration-free-com-interop.md)
-- [Kayıtsız COM birlikte çalışma gereksinimleri](/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [Kayıt-ücretsiz etkinleştirme için COM bileşenlerini yapılandırma](/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [Registration-Free COM birlikte çalışabilirliği için gereksinimler](/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [Registration-Free etkinleştirme için COM bileşenlerini yapılandırma](/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
 - [Kayıt-ücretsiz etkinleştirmesi. NET tabanlı bileşenler: Izlenecek yol](/previous-versions/dotnet/articles/ms973915(v=msdn.10))

@@ -8,17 +8,19 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-ms.openlocfilehash: dfbe047640a3a640cf37adeea6fa3656cfd9ec6d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 31426ae0589954d4388ba6d40f156c3eea9a8989
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309683"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283893"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW Anahtar Sözcükleri ve Düzeyler
+
 Windows için olay izleme (ETW) olayları, kategoriye ve düzeye göre filtrelenebilir. Olay [CLR ETW anahtar sözcükleri](#clr-etw-keywords) kategoriye göre olayların filtrelenmesini sağlar; çalışma zamanı ve Özet sağlayıcıları için kombinasyonlarda kullanılırlar. [Olay düzeyleri](#etw-event-levels) bayraklar tarafından tanımlanır.  
   
 ## <a name="clr-etw-keywords"></a>CLR ETW anahtar sözcükleri  
+
  Anahtar sözcükler, değerler oluşturmak için birleştirilebilen bayraklardır. Uygulamada, komut satırı yardımcı programlarını çağırdığınızda anahtar sözcük adları yerine anahtar sözcüklerin onaltılık değerlerini kullanırsınız.  
   
  Anahtar sözcükler aşağıdaki tablolarda açıklanmıştır:  
@@ -32,7 +34,9 @@ Windows için olay izleme (ETW) olayları, kategoriye ve düzeye göre filtrelen
 - [Özet sağlayıcının sembol çözünürlüğü için anahtar sözcük birleşimleri](#rundown_combo)  
   
 <a name="runtime"></a>
+
 ### <a name="clr-etw-runtime-keywords"></a>CLR ETW çalışma zamanı anahtar sözcükleri  
+
  Aşağıdaki tabloda CLR ETW çalışma zamanı anahtar sözcükleri, değerleri ve bunların için kullanıldıkları özellikler listelenmiştir.  
   
 |Çalışma zamanı anahtar sözcük adı|Değer|Amaç|  
@@ -55,7 +59,9 @@ Windows için olay izleme (ETW) olayları, kategoriye ve düzeye göre filtrelen
 |`StackKeyword`|0x40000000|CLR [Stack izleme olaylarının](stack-etw-event.md)toplanmasını etkinleştirilir.|  
   
 <a name="rundown"></a>
+
 ### <a name="clr-etw-rundown-keywords"></a>CLR ETW Özeti anahtar sözcükleri  
+
  Aşağıdaki tabloda CLR ETW Özeti anahtar kelimeleri, değerleri ve için kullanıldıkları özellikler listelenmiştir.  
   
 |Runaşağı anahtar sözcük adı|Değer|Amaç|  
@@ -71,6 +77,7 @@ Windows için olay izleme (ETW) olayları, kategoriye ve düzeye göre filtrelen
 |`PerfTrackKeyWord`|0x2000000|`ModuleDCStart`,, `ModuleDCEnd` `ModuleRangeDCStart` Ve olaylarının toplanmasını mümkün `ModuleRangeDCEnd` .|
   
 <a name="runtime_combo"></a>
+
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>Çalışma zamanı sağlayıcısı için sembol çözümlemesi için anahtar sözcük birleşimleri  
   
 |Anahtar sözcükler ve bayraklar|Uygulama etki alanı, derleme, modül yükleme/kaldırma olayları|Yöntem yükleme/kaldırma olayları (dinamik olaylar hariç)|Dinamik yöntem yükleme/yok etme olayları|  
@@ -83,18 +90,20 @@ Windows için olay izleme (ETW) olayları, kategoriye ve düzeye göre filtrelen
 |`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Yok.|Olayları kaldırma.|Geçerli değildir.|  
   
 <a name="rundown_combo"></a>
+
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>Özet sağlayıcının sembol çözünürlüğü için anahtar sözcük birleşimleri  
   
 |Anahtar sözcükler ve bayraklar|Uygulama etki alanı, derleme, modül DCStart/DCEnd olayları|DCStart/DCEnd olayları yöntemi (dinamik yöntem olayları dahil)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart`olayları.|Yok.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd`olayları.|Yok.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Yok.|`DCStart`olayları.|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Yok.|`DCEnd`olayları.|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Yok.|`DCStart`olayları.|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Yok.|`DCEnd`olayları.|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` olayları.|Yok.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` olayları.|Yok.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Yok.|`DCStart` olayları.|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Yok.|`DCEnd` olayları.|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Yok.|`DCStart` olayları.|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Yok.|`DCEnd` olayları.|  
 
 ## <a name="etw-event-levels"></a>ETW olay düzeyleri  
+
  ETW olayları da düzeye göre filtrelenebilir. Düzey 0x5 ' de ayarlanırsa, 0x5 ve Below dahil olmak üzere tüm düzeylerin olayları (anahtar sözcükler aracılığıyla etkinleştirilen kategorilere ait olaylar) tetiklenir. Düzey 0x2 ' de ayarlandıysa, yalnızca 0x2 ve aşağıdaki düzeye ait olaylar oluşturulur.  
   
  Düzeyler aşağıdaki anlamlara sahiptir:  

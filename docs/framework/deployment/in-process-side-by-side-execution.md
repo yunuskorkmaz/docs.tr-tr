@@ -6,17 +6,19 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 078f2eaada8fac57138bef22d46218ef2ccda835
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 85d0ec90a8877384517e9de3b56258d294e0c612
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622607"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283490"
 ---
 # <a name="in-process-side-by-side-execution"></a>Devam Eden Yan Yana Yürütme
+
 .NET Framework 4 ' te başlayarak, tek bir işlemde ortak dil çalışma zamanının (CLR) birden çok sürümünü çalıştırmak için işlem içi yan yana barındırma kullanabilirsiniz. Varsayılan olarak, yönetilen COM bileşenleri, işlem için yüklenen .NET Framework sürümden bağımsız olarak, ile derlendikleri .NET Framework sürümüyle çalışır.  
   
-## <a name="background"></a>Arka Plan  
+## <a name="background"></a>Arka plan  
+
  .NET Framework, yönetilen kod uygulamaları için her zaman yan yana barındırma sağlamıştır, ancak .NET Framework 4 ' den önce, yönetilen COM bileşenleri için bu işlevselliği sağlamadı. Geçmişte, bir işleme yüklenmiş olan yönetilen COM bileşenleri, zaten yüklü olan çalışma zamanının sürümüyle veya .NET Framework en son yüklü sürümüyle çalışır. Bu sürüm COM bileşeniyle uyumlu değilse, bileşen başarısız olur.  
   
  .NET Framework 4, aşağıdakileri sağlayan yan yana barındırma için yeni bir yaklaşım sağlar:  
@@ -39,14 +41,15 @@ ms.locfileid: "85622607"
   
     |.NET Framework sürümü|1.1|2,0-3,5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|Uygulanamaz|No|Yes|  
+    |1.1|Uygulanamaz|Hayır|Evet|  
     |2,0-3,5|Hayır|Geçerli değil|Evet|  
-    |4|Yes|Yes|Uygulanamaz|  
+    |4|Evet|Evet|Geçerli değil|  
   
 > [!NOTE]
 > 3,0 ve 3,5 .NET Framework sürümleri artımlı olarak sürüm 2,0 ' de oluşturulmuştur ve yan yana çalıştırılmasına gerek kalmaz. Bunlar, doğal olarak aynı sürümdür.  
   
 <a name="scenarios"></a>
+
 ## <a name="common-side-by-side-hosting-scenarios"></a>Ortak yan yana barındırma senaryoları  
   
 - **Senaryo 1:** .NET Framework önceki sürümleriyle oluşturulmuş COM bileşenlerini kullanan yerel uygulama.  
@@ -85,6 +88,7 @@ ms.locfileid: "85622607"
     ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, yönetilen bir COM bileşeni çalıştıran yönetilmeyen bir COM konağını bileşenin kullanmak üzere derlenen .NET Framework sürümünü kullanarak gösterir.  
   
  Aşağıdaki örneği çalıştırmak için .NET Framework 3,5 kullanarak aşağıdaki yönetilen COM bileşenini derleyin ve kaydedin. Bileşeni kaydetmek için, **Proje** menüsünde **Özellikler**' e tıklayın, **derleme** sekmesine tıklayın ve ardından **com birlikte çalışması için kaydol** onay kutusunu seçin.  
@@ -174,5 +178,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<startup>Dosyalarında](../configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime>Dosyalarında](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<startup> Dosyalarında](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime> Dosyalarında](../configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -10,19 +10,21 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-ms.openlocfilehash: bc95197813f5e4b0f4c7db6a8f0c24e8b27e4c3e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ed8568116d189573a1903678726cb348fa062376
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620878"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282892"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM Birlikte Çalışma Örneği: .NET İstemcisi ve COM Sunucusu
+
 Bu örnek, bir [com sunucusuna](#cpconcominteropsamplenetclientcomserveranchor2)erişmek için oluşturulan bir [.net ISTEMCISININ](#cpconcominteropsamplenetclientcomserveranchor1), bir com coclass örneği oluşturduğunu ve ipotek hesaplamaları gerçekleştirmek için sınıf üyelerini çağırışını gösterir.  
   
  Bu örnekte, istemci, **kredi** coclass 'ın bir örneğini oluşturur ve çağırır, örnek olarak dört bağımsız değişken geçirir (Bu dördü sıfıra eşit bir tane) ve hesaplamaları görüntüler. Bu örnekteki kod parçaları bu bölümün tamamında görüntülenir.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
+
 ## <a name="net-client"></a>.NET İstemcisi  
   
 ```vb  
@@ -153,6 +155,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>
+
 ## <a name="com-server"></a>COM sunucusu  
   
 ```cpp  

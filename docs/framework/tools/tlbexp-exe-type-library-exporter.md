@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: e675b0addc9051a0b3c877e9b029e113c17ba5f0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a9e984e1b81adda572076cb118a25f5f3a045ea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543393"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283763"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)
+
 Tür Kitaplığı Verme Programı, bir ortak dil çalışma zamanı derlemesinde tanımlanan türleri açıklayan bir tür kitaplığı üretir.  
   
  Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
@@ -31,7 +32,7 @@ tlbexp assemblyName [options]
   
 ## <a name="parameters"></a>Parametreler  
   
-|Bağımsız Değişken|Description|  
+|Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
 |*assemblyName*|Bir tür kitaplığının kendisi için dışarı aktarılacağı derleme.|  
   
@@ -43,8 +44,8 @@ tlbexp assemblyName [options]
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**/oldnames**|Bir tür adı çakışması varsa, Tlbexp.exe'yi donatılmış tür adlarını dışarı aktarmaya zorlar. .NET Framework sürüm 2.0'dan önceki sürümlerde varsayılan davranışın bu olduğunu unutmayın.|  
 |**/Out:** *Dosya*|Üretilecek tür kitaplığı dosyasının adını belirtir. Bu seçeneği atlarsanız, Tlbexp.exe, derlemeyle (derlemeyi içeren dosyayla aynı olması gerekmeyen, gerçek derleme adı) aynı adda ve .tlb uzantılı bir tür kitaplığı üretir.|  
-|**/sessizlik:**`warningnumber`|Belirtilen uyarının görüntülenmesini bastırır. Bu seçenek **/Silent**ile kullanılamaz.|  
-|**/silent**|Başarı iletilerinin görüntülenmesini bastırır. Bu seçenek **/sessizlik**ile kullanılamaz.|  
+|**/sessizlik:**`warningnumber`|Belirtilen uyarının görüntülenmesini bastırır. Bu seçenek **/Silent** ile kullanılamaz.|  
+|**/silent**|Başarı iletilerinin görüntülenmesini bastırır. Bu seçenek **/sessizlik** ile kullanılamaz.|  
 |**/tlbreference:** *TypeLibraryName*|Tlbexp.exe'yi, kayıt defterine danışmadan tür kitaplığı başvurularını açıkça çözmeye zorlar. Örneğin, derleme B derleme A'ya başvurursa, kayıt defterinde belirtilen tür kitaplığına güvenmek yerine, bir açık tür kitaplığı başvurusu sağlamak için bu seçeneği kullanabilirsiniz. Tlbexp.exe, tür kitaplığı sürümünün derleme sürümüyle eşleşmesini sağlamak için bir sürüm denetimi yapar; tersi durumda, bir hata üretir.<br /><br /> **Tlbreference** seçeneğinin, <xref:System.Runtime.InteropServices.ComImportAttribute> özniteliğin daha sonra başka bir tür tarafından uygulanan bir arabirime uygulandığı durumlarda kayıt defterine hala başvurabileceğini unutmayın.|  
 |**/tlbrefpath:** *yol*|Başvurulan tür kitaplığının tam olarak belirtilen yolu.|  
 |**/Win32**|64 bit'lik bir bilgisayarda derleme yaparken, bu seçenek Tlbexp.exe'nin bir 32 bit tür kitaplığı ürettiğini belirtir.|  
@@ -53,9 +54,10 @@ tlbexp assemblyName [options]
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 > [!NOTE]
-> Tlbexp.exe için komut satırı seçenekleri büyük-küçük harfe duyarlıdır ve herhangi bir sırada sağlanabilir. Tek yapmanız gereken, onu benzersiz şekilde tanımlamak için seçeneği yeterince belirtmektir. Örneğin, **/n** **/nologo**ile eşdeğerdir ve **/o:** *çıkışdosyası. tlb* , **/Out:** *çıkışdosyası. tlb*ile eşdeğerdir.  
+> Tlbexp.exe için komut satırı seçenekleri büyük-küçük harfe duyarlıdır ve herhangi bir sırada sağlanabilir. Tek yapmanız gereken, onu benzersiz şekilde tanımlamak için seçeneği yeterince belirtmektir. Örneğin, **/n** **/nologo** ile eşdeğerdir ve **/o:** *çıkışdosyası. tlb* , **/Out:** *çıkışdosyası. tlb* ile eşdeğerdir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Tlbexp.exe, derlemede tanımlanan türlerin tanımlarını içeren bir tür kitaplığı üretir. Visual Basic 6.0 gibi uygulamalar, derlemede tanımlanan .NET türlerine bağlanacak üretilmiş tür kitaplığını kullanabilir.  
   
 > [!IMPORTANT]
@@ -96,6 +98,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
  Tür Kitaplığı Verme Programı Microsoft Windows 2000 ve sonraki sürümlerde desteklenir.  
   
 ## <a name="examples"></a>Örnekler  
+
  Aşağıdaki komut, içinde bulunan derlemeyle aynı ada sahip bir tür kitaplığı oluşturur `myTest.dll` .  
   
 ```console  

@@ -2,17 +2,19 @@
 title: WorkflowServiceHost Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
-ms.openlocfilehash: f8364e7e6bed357f65c66f5b6b13bbb19d55237f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f452bf0a6edce42b8a42dee75faaa6c1ef39ad6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597494"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284011"
 ---
 # <a name="configuring-workflowservicehost"></a>WorkflowServiceHost Yapılandırma
+
 Bu bölüm, yapılandırmada sınıfının farklı özelliklerinin nasıl yapılandırılacağını kısaca tanımlayan bir dizi kısa "nasıl yapılır" konu başlığı içerir <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Bu konular, iş akışı hizmetine özgü yapılandırmayı kapsar, diğer tüm yapılandırmalar normal bir WCF hizmeti ile aynı şekilde yapılır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Nasıl yapılır: WorkflowServiceHost ile Kalıcılığı Yapılandırma](how-to-configure-persistence-with-workflowservicehost.md)  
  Kullanarak bir iş akışı hizmeti için kalıcılığın nasıl yapılandırılacağını açıklar <xref:System.ServiceModel.Activities.WorkflowServiceHost> .  
   
@@ -28,4 +30,4 @@ Bu bölüm, yapılandırmada sınıfının farklı özelliklerinin nasıl yapıl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İş Akışı Hizmetleri](workflow-services.md)
-- [İş Akışı Hizmetlerini Barındırmaya Genel Bakış](hosting-workflow-services-overview.md)
+- [İş Akışı Hizmetlerini Barındırma Genel Bakış](hosting-workflow-services-overview.md)

@@ -2,17 +2,19 @@
 title: Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: 59eaecb7e34b9105bc694f444d98c13c036d552f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1ffd5cb2e884b6eeae292326cb0dc1586995ba38
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597559"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284192"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
+
 Bulma sırasında kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her birini kısaca betimleyen ve bunların nasıl yapılandırılacağını gösteren örnekler gösterecektir. Her bölüm için, her alanla ilgili daha ayrıntılı bir belge bağlantısı olacaktır.  
   
 ## <a name="behavior-configuration"></a>Davranış yapılandırması  
+
  Bulma hizmeti davranışlarını ve uç nokta davranışlarını kullanır. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>Davranış, bir hizmetin tüm uç noktaları için bulmayı sağlar ve duyuru uç noktalarını belirtmenize olanak tanır.  Aşağıdaki örnek, ' nin nasıl ekleneceğini <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> ve bir duyuru uç noktasının nasıl ekleneceğini gösterir.  
   
 ```xml  
@@ -144,6 +146,7 @@ Bulma sırasında kullanılan dört ana yapılandırma ayarı grubu vardır. Bu 
  Hakkında daha fazla bilgi <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> için <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> bkz. [WCF bulmaya genel bakış](wcf-discovery-overview.md).  
   
 ## <a name="binding-element-configuration"></a>Bağlama öğesi yapılandırması  
+
  Bağlama öğesi yapılandırması, istemci tarafında en ilginç bir öğedir. Bir WCF istemci uygulamasından hizmetleri bulmak için kullanılan bulma ölçütlerini belirtmek için yapılandırma kullanabilirsiniz.  Aşağıdaki örnek, kanalla birlikte özel bir bağlama oluşturur <xref:System.ServiceModel.Discovery.DiscoveryClient> ve bir tür ve kapsam içeren bulma ölçütünü belirtir. Ayrıca, ve özellikleri için değerleri belirtir <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> .  
   
 ```xml  
@@ -186,6 +189,7 @@ Bulma sırasında kullanılan dört ana yapılandırma ayarı grubu vardır. Bu 
  Bulma ölçütü hakkında daha fazla bilgi için bkz. [bulma bulma ve FindCriteria](discovery-find-and-findcriteria.md). Bulma ve bağlama öğeleri hakkında daha fazla bilgi için bkz. [WCF bulgu genel bakış](wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>Standart uç nokta yapılandırması  
+
  Standart uç noktalar bir veya daha fazla Özellik (adres, bağlama veya sözleşme) veya değiştirebir veya daha fazla özellik değeri için varsayılan değerlere sahip önceden tanımlanmış uç noktalardır. .NET 4, 3 bulma ile ilgili standart uç noktaları ile birlikte gelir: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> , <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> , ve <xref:System.ServiceModel.Discovery.DynamicEndpoint> .  , <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> BIR UDP çok noktaya yayın bağlaması üzerinde bulma işlemleri için önceden yapılandırılmış standart bir uç noktasıdır. , <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> BIR UDP bağlaması üzerinden duyuru iletileri gönderecek şekilde önceden yapılandırılmış standart bir uç noktasıdır. , <xref:System.ServiceModel.Discovery.DynamicEndpoint> Bulma kullanan standart bir uç noktadır ve bulunan bir hizmetin uç nokta adresini çalışma zamanında dinamik olarak bulur.  Standart bağlamalar, `endpoint` eklenecek standart uç nokta türünü belirtilen tür özniteliğini içeren bir <> öğesiyle belirtilir. Aşağıdaki örnek, ve ' nin nasıl ekleneceğini gösterir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> .  
   
 ```xml  

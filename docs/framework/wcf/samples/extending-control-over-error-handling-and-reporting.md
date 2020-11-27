@@ -2,14 +2,15 @@
 title: Hata İşleme ve Bildirme Denetimini Genişletme
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: c7ca8d85220d65905bc4d9d220de366c331504a4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2e9298c6a282b9df8499458ad166e320d41e63a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600548"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283347"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Hata İşleme ve Bildirme Denetimini Genişletme
+
 Bu örnek, arabirimi kullanarak bir Windows Communication Foundation (WCF) hizmetinde hata işleme ve hata raporlama üzerinde denetimin nasıl genişletileceğini gösterir <xref:System.ServiceModel.Dispatcher.IErrorHandler> . Örnek, hataları işlemek için hizmete eklenen bazı ek kod ile [çalışmaya](getting-started-sample.md) başlama konusunda temel alır. İstemci birkaç hata koşulu zorlar. Hizmet hataları karşılar ve bunları bir dosyada günlüğe kaydeder.  
   
 > [!NOTE]
@@ -19,7 +20,7 @@ Bu örnek, arabirimi kullanarak bir Windows Communication Foundation (WCF) hizme
   
  Bu örnekte, `CalculatorErrorHandler` türü <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimini uygular. İçinde  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>yöntemi, `CalculatorErrorHandler` c:\logs. içindeki Error. txt metin dosyasına hata günlüğü yazar. Örneğin hatayı günlüğe kaydettiğine ve bunu göstermez ve istemciye geri raporlanmasını sağlar.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> yöntemi, `CalculatorErrorHandler` hata günlüğünü c:\logs. içindeki bir Error.txt metin dosyasına yazar. Örneğin hatayı günlüğe kaydettiğine ve bunu göstermez ve istemciye geri raporlanmasını sağlar.  
   
 ```csharp
 public class CalculatorErrorHandler : IErrorHandler
@@ -132,7 +133,7 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- C:\logs\errors.txt dosyası, hizmet tarafından karşılaşılan hatalar hakkında günlüğe kaydedilen bilgileri içerir. Hizmetin dizine yazması için hizmetin çalıştığı işlemin (genellikle ASP.NET veya ağ hizmeti) dizine yazma iznine sahip olduğundan emin olun.  
+ Dosya c:\logs\errors.txt, hizmetle ilgili hatalar hakkında günlüğe kaydedilen bilgileri içerir. Hizmetin dizine yazması için hizmetin çalıştığı işlemin (genellikle ASP.NET veya ağ hizmeti) dizine yazma iznine sahip olduğundan emin olun.  
   
 ```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
@@ -145,7 +146,7 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-3. Error. txt dosyası için c:\logs. dizinini oluşturduğunuzdan emin olun. Veya ' de kullanılan dosya adını değiştirebilirsiniz `CalculatorErrorHandler.HandleError` .  
+3. error.txt dosyası için c:\logs. dizinini oluşturduğunuzdan emin olun. Veya ' de kullanılan dosya adını değiştirebilirsiniz `CalculatorErrorHandler.HandleError` .  
   
 4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   

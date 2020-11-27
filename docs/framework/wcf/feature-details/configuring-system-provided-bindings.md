@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: d6018c8339cb04471bf9ce0f2ee86e091e1d1e95
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ab608ba954eafd9035335f00c8755629c5703c22
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597533"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284166"
 ---
 # <a name="configuring-system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamaları Yapılandırma
+
 Bağlamalar bir uç noktaya konuşurken kullanılacak iletişim mekanizmasını belirtir ve bir uç noktaya nasıl bağlanılacağını gösterir. Bağlamalar, gerekli iletişim özelliklerini sağlamak üzere Windows Communication Foundation (WCF) kanallarının nasıl katmanlanmış olduğunu tanımlayan öğelerden oluşur. Bağlama üç tür öğe içerir:  
   
 - Uç noktaya gönderilen iletilerle kullanılacak güvenlik, güvenilirlik, bağlam akışı ayarları veya Kullanıcı tanımlı protokolleri belirleyen protokol kanalı bağlama öğeleri.  
@@ -31,15 +32,16 @@ Bağlamalar bir uç noktaya konuşurken kullanılacak iletişim mekanizmasını 
 > Ağ değişimi başka bir yöntemle güvenli hale getirilmediği takdirde, güvenliği desteklemeyen veya güvenlik devre dışı olan bağlamalarla çift yönlü sözleşmeleri kullanmayın.  
   
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
+
  Aşağıdaki bağlamalar WCF ile birlikte gönderilir.  
   
 |Bağlama|Yapılandırma öğesi|Açıklama|  
 |-------------|---------------------------|-----------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)|WS-Basic profiliyle uyumlu Web Hizmetleri, örneğin ASP.NET Web Services (ASMX) tabanlı hizmetler ile iletişim kurmak için uygun bir bağlama. Bu bağlama, varsayılan ileti kodlaması olarak aktarım ve metin/XML olarak HTTP kullanır.|  
+|<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)|ASP.NET Web Hizmetleri (ASMX) tabanlı hizmetler gibi WS-Basic profiliyle uyumlu Web hizmetleriyle iletişim kurmak için uygun bir bağlama. Bu bağlama, varsayılan ileti kodlaması olarak aktarım ve metin/XML olarak HTTP kullanır.|  
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)|Çift yönlü hizmet sözleşmeleri için uygun olan güvenli ve birlikte çalışabilen bir bağlama.|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../configure-apps/file-schema/wcf/ws2007httpbinding.md)|<xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> Ve bağlama öğelerinin doğru sürümleri için destek sağlayan güvenli ve birlikte çalışabilen bir bağlama <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> .|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Çift yönlü hizmet sözleşmeleri veya SOAP aracıları üzerinden iletişim için uygun olan güvenli ve birlikte çalışabilen bir bağlama.|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|WS-Federation protokolünü destekleyen güvenli ve birlikte çalışabilen bir bağlama, bir federasyonda olan kuruluşların, kullanıcıların kimliğini etkin bir şekilde doğrulamasına ve yetkilendirmesine olanak tanır.|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|WS-Federation protokolünü destekleyen güvenli ve birlikte çalışabilen bir bağlama, bir federasyonda olan kuruluşların, kullanıcıları etkin bir şekilde doğrulamak ve yetkilendirmek için etkinleştirir.|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding>](../../configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|' Dan türetilen ve federe güvenliği destekleyen güvenli ve birlikte çalışabilen bir bağlama <xref:System.ServiceModel.WS2007HttpBinding> .|  
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md)|WCF uygulamaları arasında makineler arası iletişim için uygun, güvenli ve iyileştirilmiş bir bağlama.|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../configure-apps/file-schema/wcf/netnamedpipebinding.md)|WCF uygulamaları arasındaki makineye yönelik iletişim için uygun olan güvenli, güvenilir ve iyileştirilmiş bir bağlama.|  
@@ -49,6 +51,7 @@ Bağlamalar bir uç noktaya konuşurken kullanılacak iletişim mekanizmasını 
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Bir WCF uygulaması ile mevcut Message Queuing (MSMQ olarak da bilinir) uygulamaları arasında çapraz makine iletişimi için uygun bir bağlama.|  
   
 ## <a name="binding-features"></a>Bağlama özellikleri  
+
  Sonraki tabloda, sistem tarafından belirtilen bağlamaların her biri sunulan bazı temel özellikler gösterilmektedir. Bağlamalar ilk sütunda listelenir ve özelliklerle ilgili bilgiler tabloda açıklanmıştır. Aşağıdaki tabloda kullanılan bağlama kısaltmalarının bir anahtarı verilmiştir. Bir bağlama seçmek için, hangi sütunun ihtiyacınız olan tüm satır özelliklerini karşılayıp karşılamadığını belirleyin.  
   
 |Bağlama|Birlikte çalışabilirlik|Güvenlik modu (varsayılan)|Oturum<br /><br /> (Varsayılan)|İşlemler|Çift Yönlü|  
@@ -56,19 +59,19 @@ Bağlamalar bir uç noktaya konuşurken kullanılacak iletişim mekanizmasını 
 |<xref:System.ServiceModel.BasicHttpBinding>|Temel profil 1,1|(Yok), aktarım, Ileti, karışık|Hiçbiri, (yok)|(Yok)|yok|  
 |<xref:System.ServiceModel.WSHttpBinding>|WS|None, Transport, (Ileti), karışık|(Yok), taşıma, güvenilir oturum|(Yok), Evet|yok|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|None, Transport, (Ileti), karışık|(Yok), taşıma, güvenilir oturum|(Yok), Evet|yok|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Hiçbiri, (Ileti)|(Güvenilir oturum)|(Yok), Evet|Yes|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Hiçbiri, (Ileti)|(Güvenilir oturum)|(Yok), Evet|Evet|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Hiçbiri, (Ileti), karışık|(Yok), güvenilir oturum|(Yok), Evet|Hayır|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Hiçbiri, (Ileti), karışık|(Yok), güvenilir oturum|(Yok), Evet|Hayır|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|Hiçbiri, (aktarım), Ileti,<br /><br /> Karışık|Güvenilir oturum, (aktarım)|(Yok), Evet|Yes|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Seçim<br /><br /> Aktarım|Hiçbiri, (taşıma)|(Yok), Evet|Yes|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|Hiçbiri, (aktarım), Ileti,<br /><br /> Karışık|Güvenilir oturum, (aktarım)|(Yok), Evet|Evet|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Seçim<br /><br /> Aktarım|Hiçbiri, (taşıma)|(Yok), Evet|Evet|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Hiçbiri, Ileti, (taşıma), her Ikisi|(Yok)|(Yok), Evet|Hayır|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|Eşdüzey hizmet sağlayıcı|Hiçbiri, Ileti, (aktarım), karışık|(Yok)|(Yok)|Yes|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|Eşdüzey hizmet sağlayıcı|Hiçbiri, Ileti, (aktarım), karışık|(Yok)|(Yok)|Evet|  
 |<xref:System.ServiceModel.WebHttpBinding>|.NET|None, Transport, TransportCredentialOnly|(Yok)|(Yok)|yok|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Hiçbiri, (taşıma)|(Yok)|(Yok), Evet|yok|  
   
  Aşağıdaki tabloda, önceki tabloda bulunan özellikler açıklanmaktadır.  
   
-|Öne çıkan özelliği|Açıklama|  
+|Özellik|Açıklama|  
 |-------------|-----------------|  
 |Birlikte çalışabilirlik türü|Bağlamanın birlikte çalışmasını sağlayan protokol veya teknolojiyi adlandırır.|  
 |Güvenlik|Kanalın nasıl güvenli olduğunu belirtir:<br /><br /> -None: SOAP iletisi güvenli değil ve istemcinin kimliği doğrulanmadı.<br />-Taşıma: güvenlik gereksinimleri aktarım katmanında karşılanır.<br />-Message: güvenlik gereksinimleri ileti katmanında karşılanır.<br />-Mixed: Bu güvenlik modu olarak bilinir `TransportWithMessageCredentials` . İleti düzeyinde kimlik bilgilerini işler ve bütünlük ve gizlilik gereksinimleri aktarım katmanı tarafından karşılanır.<br />-Her ikisi: ileti düzeyi ve aktarım düzeyi güvenliği kullanılır. Bu özellik, için benzersizdir <xref:System.ServiceModel.NetMsmqBinding> .|  

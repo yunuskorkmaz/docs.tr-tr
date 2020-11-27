@@ -3,14 +3,15 @@ title: Bağlamada Zaman Aşımı Değerlerini Yapılandırma
 description: Hizmetinizin performansını, kullanılabilirliğini ve güvenliğini geliştirmek üzere WCF bağlamaları için zaman aşımı ayarlarını yönetmeyi öğrenin.
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: c41824a242d9b42290183cd70b9acf5b8ee59e6b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6582568f3579f784d4c91c707dbb35c38533551d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245121"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284049"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Bağlamada Zaman Aşımı Değerlerini Yapılandırma
+
 WCF bağlamalarında kullanılabilir bir dizi zaman aşımı ayarı vardır. Bu zaman aşımı ayarlarının doğru ayarlanması yalnızca hizmetinizin performansını değil, hizmetinizin kullanılabilirliği ve güvenliğine ilişkin bir rol de yürütebilir. Aşağıdaki zaman aşımları WCF bağlamaları üzerinde kullanılabilir:  
   
 1. OpenTimeout  
@@ -22,6 +23,7 @@ WCF bağlamalarında kullanılabilir bir dizi zaman aşımı ayarı vardır. Bu 
 4. ReceiveTimeout  
   
 ## <a name="wcf-binding-timeouts"></a>WCF bağlama zaman aşımları  
+
  Bu konu başlığında ele alınan ayarların her biri, kodda veya yapılandırmada bağlama sırasında yapılır. Aşağıdaki kod, şirket içinde barındırılan bir hizmet bağlamında bir WCF bağlamasında zaman aşımlarını programlı bir şekilde ayarlamayı gösterir.  
   
 ```csharp  
@@ -76,6 +78,7 @@ public static void Main()
  Bu ayarlar hakkında daha fazla bilgi, sınıfının belgelerinde bulunabilir <xref:System.ServiceModel.Channels.Binding> .  
   
 ### <a name="client-side-timeouts"></a>İstemci tarafı zaman aşımları  
+
  İstemci tarafında:  
   
 1. SendTimeout – bir istek/yanıt hizmeti işlemi için yanıt iletisi alma da dahil olmak üzere bir ileti gönderme işlemini yöneten OperationTimeout 'u başlatmak için kullanılır. Bu zaman aşımı Ayrıca, bir geri çağırma sözleşmesi yönteminden yanıt iletileri gönderilirken de geçerlidir.  
@@ -87,6 +90,7 @@ public static void Main()
 4. ReceiveTimeout – kullanılmaz.  
   
 ### <a name="service-side-timeouts"></a>Hizmet tarafı zaman aşımları  
+
  Hizmet tarafında:  
   
 1. SendTimeout, OpenTimeout, CloseTimeout, istemci ile aynıdır.  
