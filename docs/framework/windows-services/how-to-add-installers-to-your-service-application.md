@@ -11,14 +11,15 @@ helpviewer_keywords:
 - ServiceInstaller class, adding installers to services
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
-ms.openlocfilehash: 9a6954c75595f5297a31dcaf37e744e655733df4
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 451f0db21e80dfc3dc40052179ac4ec60c2aabdc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608692"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270673"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Nasıl yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme
+
 Visual Studio, hizmet uygulamalarınızla ilişkili kaynakları yükleyebilen yükleme bileşenlerini sevk eder. Yükleme bileşenleri, yüklenmekte olan sisteme tek bir hizmeti kaydeder ve hizmetler Denetim Yöneticisi 'nin hizmetin var olduğunu bilmesini sağlar. Bir hizmet uygulamasıyla çalışırken, projenize uygun yükleyicileri otomatik olarak eklemek için Özellikler penceresi bir bağlantı seçebilirsiniz.  
   
 > [!NOTE]

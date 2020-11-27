@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Windows Service applications, debugging
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
-ms.openlocfilehash: 2657d83f39b60be84846fb784a06e71f6dd46179
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 4d8ac0316e47925d253e7220597ab9953252521e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609739"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270634"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Nasıl yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama
+
 Bir hizmet, Visual Studio 'nun içinden değil, hizmetler Denetim Yöneticisi bağlamı içinden çalıştırılmalıdır. Bu nedenle, bir hizmetin hata ayıklaması, diğer Visual Studio Uygulama türlerinde hata ayıklama kadar basit değildir. Bir hizmette hata ayıklamak için hizmeti başlatmanız ve sonra çalıştığı işleme bir hata ayıklayıcı bağlamanız gerekir. Daha sonra Visual Studio 'nun tüm standart hata ayıklama işlevselliğini kullanarak uygulamanızda hata ayıklaması yapabilirsiniz.  
   
 > [!CAUTION]
@@ -40,7 +41,7 @@ Bir hizmet, Visual Studio 'nun içinden değil, hizmetler Denetim Yöneticisi ba
   
 2. Hizmetinizi yükler. Daha fazla bilgi için bkz. [nasıl yapılır: Hizmetleri yükleme ve kaldırma](how-to-install-and-uninstall-services.md).  
   
-3. Hizmetinizi, hizmet **Denetim Yöneticisi**'nden, **Sunucu Gezgini**veya koddan başlatın. Daha fazla bilgi için bkz. [nasıl yapılır: Hizmetleri başlatma](how-to-start-services.md).  
+3. Hizmetinizi, hizmet **Denetim Yöneticisi**'nden, **Sunucu Gezgini** veya koddan başlatın. Daha fazla bilgi için bkz. [nasıl yapılır: Hizmetleri başlatma](how-to-start-services.md).  
   
 4. Sistem işlemlerine iliştirebilmeniz için Visual Studio 'Yu yönetici kimlik bilgileriyle başlatın.  
   
@@ -69,6 +70,7 @@ Bir hizmet, Visual Studio 'nun içinden değil, hizmetler Denetim Yöneticisi ba
 11. Hizmet Denetim Yöneticisi 'Ne erişin ve hizmetinizi değiştirin, durdur, Duraklat ve devam et komutlarını göndererek kesme noktalarınıza ulaşıldı. Hizmetler Denetim Yöneticisi 'ni çalıştırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Hizmetleri başlatma](how-to-start-services.md). Ayrıca bkz. [sorun giderme: Windows hizmetlerinde hata ayıklama](troubleshooting-debugging-windows-services.md).  
   
 ## <a name="debugging-tips-for-windows-services"></a>Windows Hizmetleri için hata ayıklama Ipuçları  
+
  Hizmetin işlemine iliştirme, bu hizmet için kodun tümünü değil, çoğu hata ayıklamanıza olanak tanır. Örneğin, hizmet zaten başlatılmış olduğundan, hizmetin <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemindeki kodda veya `Main` hizmeti bu şekilde yüklemek için kullanılan yöntemdeki kodda hata ayıklayamazsınız. Bu sınırlamaya geçici çözüm sağlamanın bir yolu, hizmet uygulamanızda yalnızca hata ayıklamaya yardımcı olmak için olan geçici bir ikinci hizmet oluşturmaktır. Her iki hizmeti de yükleyebilir ve ardından hizmet sürecini yüklemek için bu kukla hizmeti başlatabilirsiniz. Geçici hizmet işlemi başlatduktan sonra, hizmet işlemine iliştirmek için Visual Studio 'daki **hata ayıklama** menüsünü kullanabilirsiniz.  
   
  <xref:System.Threading.Thread.Sleep%2A>İşleme iliştirebilmeniz için, eyleme çağrı eklemeyi deneyin.  
@@ -105,7 +107,7 @@ Bir hizmet, Visual Studio 'nun içinden değil, hizmetler Denetim Yöneticisi ba
     }
     ```  
   
-3. Projenin özelliklerinin **uygulama** sekmesinde, **çıkış türünü** **konsol uygulaması**olarak ayarlayın.  
+3. Projenin özelliklerinin **uygulama** sekmesinde, **çıkış türünü** **konsol uygulaması** olarak ayarlayın.  
   
 4. **Hata ayıklamayı Başlat** (F5) seçeneğini belirleyin.  
   

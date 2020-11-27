@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: 482a973631e899b8d4bfc4640eef1ea26173605e
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: bdffa9417a7d52e9c825ca6455997b9bfa7408e4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104921"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271531"
 ---
 # <a name="how-to-build-a-net-framework-single-file-assembly"></a>Nasıl yapılır: tek dosya .NET Framework derleme oluşturma
 
@@ -67,6 +67,7 @@ vbc -out:myAssembly.exe myCode.vb
 ```
 
 ## <a name="create-library-assemblies"></a>Kitaplık derlemeleri oluşturma
+
  Kitaplık derlemesi, sınıf kitaplığına benzer. Diğer derlemeler tarafından başvurulacak türleri içerir, ancak yürütmeye başlamak için bir giriş noktası yoktur.
 
 Bir kitaplık derlemesi oluşturmak için, komut isteminde aşağıdaki komutu yazın:

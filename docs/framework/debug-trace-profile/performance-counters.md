@@ -7,18 +7,19 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: c9e073ef088595d3ee5cd9e1af70140f12022179
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712624"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271479"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework performans sayaçları
 
 Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))'nde bulabileceğiniz performans sayaçlarının bir listesini sağlar.  
 
 ## <a name="exception-performance-counters"></a>Özel durum performans sayaçları  
+
  Performans konsolu .NET CLR özel durumları kategorisi, bir uygulama tarafından oluşturulan özel durumlar hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
@@ -30,6 +31,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 |**Catch derinliğine/sn 'ye throw**|Özel durumu, saniye başına işlenen çerçeveye özel durum veren kareden geçen yığın çerçevelerinin sayısını görüntüler. Bir özel durum işleyicisi girildiğinde bu sayaç sıfıra sıfırlanır, bu yüzden iç içe geçmiş özel durumlar işleyicinin işleyici yığın derinliğini gösterir.<br /><br /> Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
 
 ## <a name="interop-performance-counters"></a>Birlikte çalışabilirlik performans sayaçları  
+
  Performans konsolu .NET CLR birlikte çalışma kategorisi, bir uygulamanın COM bileşenleri, COM+ Hizmetleri ve dış tür kitaplıklarıyla etkileşimi hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
@@ -41,6 +43,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 |**TLB içeri aktarma sayısı/sn**|Daha sonraki kullanımlar için ayrılmıştır.|  
 
 ## <a name="jit-performance-counters"></a>JIT performans sayaçları  
+
  Performans konsolu .NET CLR JıT kategorisi, JıT derlenmiş kod hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
@@ -53,6 +56,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 |**Anında derlenen toplam IL bayt sayısı**|Uygulamanın başlatılmasından bu yana JıT ile derlenen toplam MSIL bayt sayısını görüntüler. Bu sayaç, derlenen **IL bayt** sayısı ile eşdeğerdir.|  
 
 ## <a name="loading-performance-counters"></a>Performans sayaçları yükleniyor  
+
  Performans konsolu .NET CLR Yükleme kategorisi, yüklenen derlemeler, sınıflar ve uygulama etki alanları hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
@@ -75,6 +79,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 |**Toplam yüklenen sınıf**|Uygulamanın başlatılmasından bu yana tüm derlemelerde yüklenen sınıfların birikmiş sayısını görüntüler.|  
 
 ## <a name="lock-and-thread-performance-counters"></a>Kilit ve iş parçacığı performans sayaçları  
+
  Performans konsolu .NET CLR LocksAndThreads kategorisi, bir uygulamanın kullandığı yönetilen kilitler ve iş parçacıkları hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
@@ -91,15 +96,16 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 |**Toplam çekişmeler sayısı**|Çalışma zamanındaki iş parçacıklarının yönetilen kilit alma girişimi başarısız olan toplam sayısını görüntüler.|  
 
 ## <a name="memory-performance-counters"></a>Bellek performans sayaçları  
+
  Performans konsolu .NET CLR bellek kategorisi, çöp toplayıcısı hakkında bilgi sağlayan sayaçlar içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
-|**Tüm yığınlardaki bayt sayısı**|**Gen 1 yığın boyutu**, **Gen 2 yığın boyutu**ve **büyük nesne yığın boyutu** sayaçlarının toplamını görüntüler. Bu sayaç, çöp toplama yığınlarında bayt cinsinden ayrılan geçerli belleği gösterir.|  
+|**Tüm yığınlardaki bayt sayısı**|**Gen 1 yığın boyutu**, **Gen 2 yığın boyutu** ve **büyük nesne yığın boyutu** sayaçlarının toplamını görüntüler. Bu sayaç, çöp toplama yığınlarında bayt cinsinden ayrılan geçerli belleği gösterir.|  
 |**# GC tutamaçları**|Kullanımdaki çöp toplama tanıtıcılarının geçerli sayısını görüntüler. Çöp toplama tutamaçları, ortak dil çalışma zamanı ve yönetilen ortam dışındaki kaynaklara yönelik tanıtıcılardır.|  
-|**# Gen 0 toplamaları**|Oluşturma 0 nesnelerinin (yani, kardeşinizin, en son ayrılan nesnelerin), uygulamanın başlatılmasından bu yana atık olarak toplanarak sayısını görüntüler.<br /><br /> Nesil 0, kuşak 0 ' daki kullanılabilir bellek, bir ayırma isteğini karşılamak için yeterli olmadığında oluşur. Bu sayaç, 1. nesil atık toplamanın sonunda artırılır. Daha yüksek kuşak çöp koleksiyonları, tüm düşük nesil koleksiyonları içerir. Bu sayaç, daha yüksek bir oluşturma (1 veya 2. nesil) çöp toplama gerçekleştiğinde açıkça artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global \_ ** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
-|**# Gen 1 toplamaları**|Uygulamanın başlatılmasından bu yana 1. nesil nesnelerin atık olarak toplandığı kaç kez toplandığını gösterir.<br /><br /> Sayaç, 1. nesil atık toplamanın sonunda artırılır. Daha yüksek kuşak çöp koleksiyonları, tüm düşük nesil koleksiyonları içerir. Bu sayaç, daha yüksek bir oluşturma (2. nesil) atık toplama gerçekleştiğinde açıkça artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global \_ ** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
-|**Gen 2 toplamaları sayısı**|Uygulamanın başlatılmasından bu yana 2. nesil nesnelerinin çöp toplama sayısını görüntüler. Sayaç, 2. nesil atık toplamanın (tam çöp toplama da denir) sonunda artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global \_ ** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
+|**# Gen 0 toplamaları**|Oluşturma 0 nesnelerinin (yani, kardeşinizin, en son ayrılan nesnelerin), uygulamanın başlatılmasından bu yana atık olarak toplanarak sayısını görüntüler.<br /><br /> Nesil 0, kuşak 0 ' daki kullanılabilir bellek, bir ayırma isteğini karşılamak için yeterli olmadığında oluşur. Bu sayaç, 1. nesil atık toplamanın sonunda artırılır. Daha yüksek kuşak çöp koleksiyonları, tüm düşük nesil koleksiyonları içerir. Bu sayaç, daha yüksek bir oluşturma (1 veya 2. nesil) çöp toplama gerçekleştiğinde açıkça artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global \_** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
+|**# Gen 1 toplamaları**|Uygulamanın başlatılmasından bu yana 1. nesil nesnelerin atık olarak toplandığı kaç kez toplandığını gösterir.<br /><br /> Sayaç, 1. nesil atık toplamanın sonunda artırılır. Daha yüksek kuşak çöp koleksiyonları, tüm düşük nesil koleksiyonları içerir. Bu sayaç, daha yüksek bir oluşturma (2. nesil) atık toplama gerçekleştiğinde açıkça artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global \_** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
+|**Gen 2 toplamaları sayısı**|Uygulamanın başlatılmasından bu yana 2. nesil nesnelerinin çöp toplama sayısını görüntüler. Sayaç, 2. nesil atık toplamanın (tam çöp toplama da denir) sonunda artırılır.<br /><br /> Bu sayaç, son gözlemlenen değeri görüntüler. **_Global \_** sayaç değeri doğru değil ve göz ardı edilmelidir.|  
 |**Igelemiş GC**|' A açık bir çağrı nedeniyle çöp toplamanın en yoğun sayısını görüntüler <xref:System.GC.Collect%2A?displayProperty=nameWithType> . Atık toplayıcısının koleksiyonların sıklığını ayarlamaya olanak sağlamak iyi bir uygulamadır.|  
 |**Sabitlenmiş nesne sayısı**|Son çöp toplama işleminde karşılaşılan sabitlenmiş nesne sayısını görüntüler. Sabitlenmiş nesne, çöp toplayıcısının bellekte taşıyamayacağını belirten bir nesnedir. Bu sayaç, Sabitlenmiş nesneleri yalnızca atık toplanan yığınlardaki izler. Örneğin, nesil 0 çöp toplama, sabitlenmiş nesnelerin yalnızca nesil 0 yığınında numaralandırılmasına neden olur.|  
 |**Kullanımdaki havuz bloklarının sayısı**|Kullanımdaki eşitleme bloklarının geçerli sayısını görüntüler. Eşitleme blokları, eşitleme bilgilerini depolamak için ayrılan nesne başına veri yapılarıdır. Bunlar yönetilen nesnelere zayıf başvuruları tutar ve çöp toplayıcı tarafından taranmalıdır. Eşitleme blokları, eşitleme bilgilerini depolamak için sınırlı değildir; Ayrıca, COM birlikte çalışma meta verilerini de saklayabilir. Bu sayaç, eşitleme temel temellerinin yoğun kullanımıyla ilgili performans sorunlarını gösterir.|  
@@ -107,7 +113,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 |**Toplam ayrılan bayt sayısı**|Çöp toplayıcı tarafından şu anda ayrılmış olan sanal bellek miktarını bayt cinsinden görüntüler. Ayrılan bellek, disk veya ana bellek sayfası kullanılmadığınızda uygulama için ayrılan sanal bellek alanıdır.|  
 |**GC 'de% Time**|Son çöp toplama döngüsünden bu yana bir çöp toplama işlemi için harcanan geçen sürenin yüzdesini görüntüler. Bu sayaç genellikle çöp toplayıcı tarafından uygulama adına bellek toplamak ve sıkıştırmak için yapılan işi gösterir. Bu sayaç yalnızca her çöp toplamanın sonunda güncelleştirilir. Bu sayaç bir ortalama değil; değeri, son gözlemlenen değeri yansıtır.|  
 |**Ayrılan bayt/saniye**|Çöp toplama yığınında ayrılan saniye başına bayt sayısını görüntüler. Bu sayaç her bir ayırmada değil her çöp toplamanın sonunda güncelleştirilir. Bu sayaç, zaman içinde bir ortalama değil; Son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
-|**Kalan VNET 'leri sonlandırma**|Toplanmayı beklediği için bir koleksiyonun üzerinde kalan atık toplanmış nesne sayısını görüntüler. Bu nesneler diğer nesnelere başvurular içeriyorsa, bu nesneler de devam etmez ancak bu sayaç tarafından sayılmaz. **Yükseltilen sonlandırma süresi-Gen 0 sayacından alınan bellek** , sonlandırma nedeniyle kalan tüm belleği temsil eder.<br /><br /> Bu sayaç toplu değildir; her çöp toplamanın sonunda yalnızca söz konusu koleksiyon sırasında kalan sanal nesnelerin sayısıyla güncelleştirilir. Bu sayaç, sonlandırma nedeniyle uygulamanın tabi olabileceği ek yükü gösterir.|  
+|**Kalan VNET 'leri sonlandırma**|Toplanmayı beklediği için bir koleksiyonun üzerinde kalan atık toplanmış nesne sayısını görüntüler. Bu nesneler diğer nesnelere başvurular içeriyorsa, bu nesneler de devam etmez ancak bu sayaç tarafından sayılmaz. **Gen 0 sayacından yükseltilen Finalization-Memory** , sonlandırma nedeniyle kalan tüm belleği temsil eder.<br /><br /> Bu sayaç toplu değildir; her çöp toplamanın sonunda yalnızca söz konusu koleksiyon sırasında kalan sanal nesnelerin sayısıyla güncelleştirilir. Bu sayaç, sonlandırma nedeniyle uygulamanın tabi olabileceği ek yükü gösterir.|  
 |**Gen 0 yığın boyutu**|Oluşturma 0 ' da ayrılabilecek maksimum bayt sayısını görüntüler; 0 kuşağında ayrılan geçerli bayt sayısını göstermez.<br /><br /> Kuşak 0 çöp toplama, son koleksiyonda bu yana olan ayırmalar bu boyutu aşarsa oluşur. Nesil 0 boyutu çöp toplayıcı tarafından ayarlanır ve uygulamanın yürütülmesi sırasında değişebilir. Nesil 0 koleksiyonunun sonunda nesil 0 yığını boyutu 0 bayttır. Bu sayaç, bir sonraki nesil 0 çöp toplamayı çağıran ayırmaların bayt cinsinden boyutunu görüntüler.<br /><br /> Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
 |**G 0 yükseltilen bayt/sn**|Nesil 0 ' dan 1 ' e yükseltilen saniye başına bayt sayısını görüntüler. Bellek, atık toplama işlemi yaparken yükseltilir. Bu sayaç, saniye başına oluşturulan görece uzun süreli nesnelerin göstergesidir.<br /><br /> Bu sayaç, son iki örnekte gözlenen değerler arasındaki farkı örnek aralığın süresine göre gösterir.|  
 |**Gen 1 yığın boyutu**|1. nesil geçerli bayt sayısını görüntüler; Bu sayaç, 1. nesil en büyük boyutunu görüntülemez. Nesneler bu Neste doğrudan ayrılmamış; Bunlar, önceki nesil 0 çöp toplamalarından yükseltilir. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
@@ -115,7 +121,7 @@ Bu konu, [Windows Performans İzleyicisi](/previous-versions/windows/it-pro/wind
 |**Gen 2 yığın boyutu**|2. nesil geçerli bayt sayısını görüntüler. Nesneler bu Neste doğrudan ayrılmamış; önceki nesil 1 atık koleksiyonlar sırasında 1. kuşak 'den yükseltilir. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
 |**Büyük nesne yığın boyutu**|Büyük nesne yığınının geçerli boyutunu bayt cinsinden görüntüler. Yaklaşık 85.000 bayttan büyük nesneler çöp toplayıcı tarafından büyük nesneler olarak değerlendirilir ve özel bir yığında doğrudan ayrılır. Nesiller aracılığıyla yükseltilmez. Bu sayaç her ayırmada değil çöp toplamanın sonunda güncelleştirilir.|  
 |**İşlem Kimliği**|İzlenmekte olan CLR işlem örneğinin işlem KIMLIĞINI görüntüler.|  
-|**Yükseltilen sonlandırma-bellek, Gen 0 ' dan**|1. nesil 0 ' dan 1 ' e yükseltilen bellek baytlarını yalnızca Sonlandırılmayı beklediği için görüntüler. Bu sayaç toplu değildir; Son atık toplamanın sonunda gözlemlenen değeri görüntüler.|  
+|**Gen 0 ' dan Finalization-Memory yükseltildi**|1. nesil 0 ' dan 1 ' e yükseltilen bellek baytlarını yalnızca Sonlandırılmayı beklediği için görüntüler. Bu sayaç toplu değildir; Son atık toplamanın sonunda gözlemlenen değeri görüntüler.|  
 |**Gen 0 ' dan yükseltilen bellek**|Atık toplamayı sürdüren ve 1. nesil 0 ' dan 1 ' e yükseltilen bellek baytlarını görüntüler. Yalnızca Sonlandırılmayı beklediği için yükseltilen nesneler bu sayaca dahil edilmez. Bu sayaç toplu değildir; Son atık toplamanın sonunda gözlemlenen değeri görüntüler.|  
 |**Gen 1 ' den yükseltilen bellek**|Çöp toplama işlemini sürdüren ve 1. nesil 2 ' den 2 ' ye yükseltilen bellek baytlarını görüntüler. Yalnızca Sonlandırılmayı beklediği için yükseltilen nesneler bu sayaca dahil edilmez. Bu sayaç toplu değildir; Son atık toplamanın sonunda gözlemlenen değeri görüntüler. Bu sayaç, son çöp toplama işlemi yalnızca 0. kuşak bir koleksiyon ise 0 ' a sıfırlanır.|  
 
@@ -145,7 +151,7 @@ Performans konsolu .NET CLR ağ kategorisi, bir uygulamanın ağ üzerinden gön
   
 - Farklı işlemlerin ne kadar sürdüğünü ölçen Duration sayaçları. Süreler, farklı durumlardan çıktıktan sonra her Aralık (genellikle saniye cinsinden) nesneler üzerinde ölçülür.  
   
-- Aralık başına belirli bir geçiş yapan nesne sayısını ölçen Aralık başına sayaçlar (normalde saniyede).  
+- Aralık başına belirli bir geçiş yapan nesne sayısını ölçen sayaç Per-Interval (normalde saniyede).  
   
 Olaylar için ağ performans sayaçları şunları içerir:  
   
@@ -218,6 +224,7 @@ for (int i = 0; i < Array.Length; i++)
  Bir uygulamadaki performans sayaçlarına erişme ve bunları yönetme hakkında daha fazla bilgi için bkz. [performans sayaçları](performance-counters.md).  
 
 ## <a name="security-performance-counters"></a>Güvenlik performans sayaçları  
+
  Performans konsolu .NET CLR güvenlik kategorisi, ortak dil çalışma zamanının bir uygulama için gerçekleştirdiği güvenlik denetimleri hakkında bilgi sağlayan sayaçları içerir. Aşağıdaki tabloda bu performans sayaçları açıklanmaktadır.  
   
 |Performans sayacı|Açıklama|  

@@ -2,32 +2,35 @@
 title: 2577 - TryCatchExceptionDuringCancelation
 ms.date: 03/30/2017
 ms.assetid: 35ee9f55-227f-4566-bcb4-4c7c75dea85b
-ms.openlocfilehash: c272dd91249dfc90e6f4c38a7339919a5a6446e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33c68984e88eaa5e3028899a7c3066c94a65e8eb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755629"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271245"
 ---
 # <a name="2577---trycatchexceptionduringcancelation"></a>2577 - TryCatchExceptionDuringCancelation
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|2577|  
-|anahtar sözcükler|WFActivities|  
+|ID|2577|  
+|Anahtar sözcükler|WFActivities|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- TryCatch etkinlik bir alt etkinlik iptal etme sırasında bir özel durum gösterir.  
+
+ TryCatch etkinliğinin bir alt etkinliğinin iptal sırasında özel durum yaptığını gösterir.  
   
 ## <a name="message"></a>İleti  
- TryCatch etkinlik '%1' bir alt etkinlik iptal etme sırasında bir özel durum oluşturdu.  
+
+ ' %1 ' TryCatch etkinliğinin bir alt etkinliği iptal işlemi sırasında özel durum oluşturdu.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|displayName|xs:string|Etkinliğin görünen adı.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|DisplayName|xs: String|Etkinliğin görünen adı.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

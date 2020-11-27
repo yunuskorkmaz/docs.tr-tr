@@ -11,14 +11,15 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-ms.openlocfilehash: b8aa0361ee5213cb947a102f903d1a7a35331f17
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c255efe4579635389ac62956cac9d1405bfb184c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622178"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271440"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>DLL İşlevleri için bir Sınıf Oluşturma
+
 Yönetilen bir sınıfta sık kullanılan bir DLL işlevinin sarmalanması, platform işlevlerini kapsüllemek için etkili bir yaklaşımdır. Her durumda bunu yapmak zorunlu olmasa da, DLL işlevlerinin tanımlanması çok fazla ve hataya açık olabileceğinden sınıf sarmalayıcı sağlanması kullanışlıdır. Visual Basic veya C# ' de programlıyorsanız, DLL işlevlerini bir sınıf veya Visual Basic modülü içinde bildirmeniz gerekir.  
   
  Bir sınıf içinde, çağırmak istediğiniz her DLL işlevi için bir statik yöntem tanımlarsınız. Tanım, yöntem bağımsız değişkenlerinde kullanılan karakter kümesi veya çağırma kuralı gibi ek bilgileri içerebilir; Bu bilgileri atlayarak varsayılan ayarları seçersiniz. Bildirim seçeneklerinin ve varsayılan ayarlarının tüm listesi için bkz. [yönetilen kodda prototipler oluşturma](creating-prototypes-in-managed-code.md).  

@@ -2,33 +2,35 @@
 title: Eş Kafesleri
 ms.date: 03/30/2017
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-ms.openlocfilehash: 9113fab13da8503e6ce0335e5bb19a2634973dad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62feb237dd4a8a471175e32363887376f7d86212
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654488"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272104"
 ---
 # <a name="peer-meshes"></a>Eş Kafesleri
-A *mesh* benzersiz kafes kimliği ile tanımlanır ve iletişim kurabilen aralarında eş düğümleri adlandırılmış koleksiyonu (ister birbirine bağlı bir graf) Her düğüm, birden çok düğüme bağlıdır. İyi bağlanmış bir ağ kafes en kenarlarına düğümler arasındaki nispeten daha az sayıda atlamalarla birlikte herhangi iki düğüm arasında bir yolu yoktur ve bazı düğümleri veya bağlantıları doğrudan bile kafes bağlı kalır. Diğer eş bunları bulabilmesi için etkin düğüm ağı içinde karşılık gelen bir ağ kimliği, uç nokta bilgileriyle yayımlayın.  
+
+*Ağ* , eşler arasında iletişim kurabilen ve benzersiz BIR ağ kimliği tarafından tanımlanan, eş düğümlerin adlandırılmış bir koleksiyonudur (bağlanmış bir grafiktir). Her düğüm birden fazla diğer düğüme bağlanır. İyi bağlanmış bir kafesde, iki düğüm arasında, kafesin en çok kenarlarındaki düğümler arasında görece az atlama olacak bir yol vardır ve bazı düğümler veya bağlantılar kullanıma alsa bile ağ bağlantısı kalır. Kafesteki etkin düğümler, diğer eşlerin onları bulabilmesi için uç nokta bilgilerini ilgili bir ağ KIMLIĞIYLE yayımlar.  
   
-## <a name="characteristics-of-a-mesh-created-using-peer-channel"></a>Eş kanalı kullanılarak oluşturulan bir ağ özellikleri  
+## <a name="characteristics-of-a-mesh-created-using-peer-channel"></a>Eş kanal kullanılarak oluşturulan bir kafesin özellikleri  
   
-#### <a name="uniquely-identified"></a>Benzersiz şekilde tanımlanır  
+#### <a name="uniquely-identified"></a>Benzersiz olarak tanımlandı  
   
-- Her ağı benzersiz bir kimlik tanımlar. Kafes (veya ağ kimliği) bir etki alanı adı sistemi (DNS) ana bilgisayar adı ile aynı biçimde adıdır. Bu nedenle, bu ağ kimliği kullanılan Çözümleyicisi uygulamasının kapsamı içinde hedeflenen istemci için benzersiz olmalıdır. Ortak ad "MyFamilysPeers" veya "KevinsPokerTable," gibi diğer kullanıcı adlarıyla kolayca çakışabilir ve istenmeyen eş veya gizlilik sorunlarına yol bağlantı gecikme süresini uç nokta bilgileri döndürebilir. Bir sonek benzersiz bir kimliği kafes (örneğin, "KevinsPokerTable90210") için takma ad eklemek için bu sorunlardan kaçınmak için bir yol olabilir.  
+- Benzersiz bir KIMLIK her bir ağı tanımlar. Ağ adı (veya ağ KIMLIĞI), etki alanı adı sistemi (DNS) ana bilgisayar adıyla aynı biçimde. Bu nedenle, bu ağ KIMLIĞI, kullanılan çözümleyici kapsamındaki uygulamanın amaçlanan istemcisi için benzersiz olmalıdır. "MyFamilysPeers" veya "KevinsPokerTable" gibi ortak bir ad, diğer kullanıcı adlarıyla kolayca çakışabilir ve istenmeyen eşdüzey uç nokta bilgilerini döndürebilir, bu durum gizlilik sorunlarına yol açabilir veya bağlantı gecikmesini artırabilir. Bu sorunları önlemenin bir yolu, ağ için takma ad (örneğin, "KevinsPokerTable90210") için bir sonek olarak benzersiz bir KIMLIK eklemek olabilir.  
   
-#### <a name="message-flooding"></a>İleti taşmasını  
+#### <a name="message-flooding"></a>İleti taşması  
   
-- Kafes iletileri bir veya daha fazla kullanıcılardan aynı grup içindeki tüm diğer eş düğümlere dağıtılmasını sağlar. Eş düğümleri tarafından yayılan iletileri kullanan ad alanında belirtilen üst bilgiler `http://schemas.microsoft.com/net/2006/05/peer`.  
+- Ağ, iletilerin bir veya daha fazla göndericinden aynı kafesteki diğer tüm eş düğümlerine yayılmasını sağlar. Eş düğümleri tarafından taşan iletiler, öğesinde ad alanında belirtilen üst bilgileri kullanır `http://schemas.microsoft.com/net/2006/05/peer` .  
   
-#### <a name="optimized-connections"></a>En iyi duruma getirilmiş bağlantıları  
+#### <a name="optimized-connections"></a>İyileştirilmiş bağlantılar  
   
-- Düğümleri katılın ve bırakın, tüm düğümler küçük bölümleri (birbirinden yalıtılmış düğümleri gruplar) oluşturma olasılığını ile iyi bağlantı olmasını sağlamak, eş kanalı kafes otomatik olarak ayarlar. Ağ bağlantıları, alıcı gönderenden ileti gecikme süresini olabildiğince az olmasını geçerli trafik düzenlerini esas alarak de dinamik olarak getirilir.  
+- Düğümler, tüm düğümlerin bölüm oluşturma (birbirinden yalıtılmış düğüm grupları) konusunda çok iyi bağlantı sahibi olduğundan emin olmak için otomatik olarak bir eş kanal ağı ayarlanır ve bırakır. Kafesteki bağlantılar aynı zamanda geçerli trafik desenlerine göre dinamik olarak iyileştirilir, böylece gönderen 'den alıcıya ileti gecikmesi mümkün olduğunca kısa olur.  
   
-#### <a name="popular-network-features-that-peer-channel-does-not-provide"></a>Eş kanal sağlamaz popüler ağ özellikleri  
- Eş kanal sağlamaz popüler ağ özelliklerinin farkında olmak önemlidir. Tüm eş kanalı üzerine oluşturulabilir, bu özellikler şunları içerir:  
+#### <a name="popular-network-features-that-peer-channel-does-not-provide"></a>Eş kanalın sağlamadığı popüler ağ özellikleri  
+
+ Eş kanalın sağlamadığına yönelik popüler ağ özelliklerinin farkında olmak önemlidir. Bu özellikler, hepsi eş kanal üzerine inşa edilebilir, şunları içerir:  
   
-- **İleti sırası:** Tek bir kaynaktan gelen iletileri aynı sırada ya da kaynağa gönderilen sırayla tüm diğer taraflar gelebilir değil. İletileri gerektiren uygulamalar teslim edilemiyor belirli bir sırada, uygulamalarına (örneğin, tüm iletileri ile artan bir kimliği dahil ederek) oluşturmanız gerekir.  
+- **İleti sıralaması:** Tek bir kaynaktan kaynaklanan iletiler, aynı sırada veya kaynağın gönderildiği sırada diğer tüm taraflara ulaşmayabilir. Belirli bir sırada ileti teslim etmek için gerekli olan uygulamalar, kendi uygulamalarına (örneğin, tüm iletilerle tek bir artan KIMLIĞI ekleyerek) derlenmelidir.  
   
-- **Güvenilir Mesajlaşma:** Eş kanal ileti alma tüm eşleri tarafından emin olmak için bir mekanizma içermez. Mesaj teslimatı sağlamak için bir güvenilirlik katmanı eş kanalı üzerine yazmanız gerekir.
+- **Güvenilir Mesajlaşma:** Eş kanal, tüm eşler tarafından ileti alımı sağlamak için bir mekanizma içermez. İleti teslimini güvence altına almak için, eş kanalın en üstüne bir güvenilirlik katmanı yazmanız gerekir.

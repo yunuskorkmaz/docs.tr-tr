@@ -2,17 +2,19 @@
 title: Temel Bağlama
 ms.date: 03/30/2017
 ms.assetid: 2a0e8ac4-23e7-45ef-98dc-40691aac530a
-ms.openlocfilehash: 62fceaf5a450c4b6d0261ae2c6a819d1de6577f3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f181f5d3b561e9498c2469d41917d5761d287f82
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596688"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271571"
 ---
 # <a name="basic-binding"></a>Temel Bağlama
+
 Bu bölüm, bir uç nokta öğesinin Binding özniteliğini kullanmayı gösteren temel örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [İleti Güvenliği Örneği](message-security-sample.md)  
  Ve ileti güvenliğini kullanan bir uygulamanın nasıl uygulanacağını gösterir `basicHttpBinding` .  
   

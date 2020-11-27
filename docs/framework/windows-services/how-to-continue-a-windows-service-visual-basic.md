@@ -10,23 +10,26 @@ helpviewer_keywords:
 - Windows Service applications, pausing
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
-ms.openlocfilehash: 9e672a19cec814694eddb35672c5c669efd40eb2
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 89313ebec87d154621b23b57bfa1eeda5ac3dee4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608614"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270660"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>Nasıl yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)
+
 Bu örnek, <xref:System.ServiceProcess.ServiceController> Yerel bılgısayarda IIS Yönetim hizmetine devam etmek için bileşenini kullanır.  
   
 ## <a name="example"></a>Örnek  
+
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#13](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#13)]  
   
  Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, Windows **Işletim sistemi > Windows Hizmetleri**' nde bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
  Bu örnek şunları gerektirir:  
   
 - System.serviceprocess.dll bir proje başvurusu.  
@@ -34,6 +37,7 @@ Bu örnek, <xref:System.ServiceProcess.ServiceController> Yerel bılgısayarda I
 - <xref:System.ServiceProcess>Ad alanının üyelerine erişin. `Imports`Kodunuzda üye adlarını tam olarak nitedıysanız bir ifade ekleyin. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
+
  <xref:System.ServiceProcess.ServiceController.MachineName%2A>Sınıfının özelliği, <xref:System.ServiceProcess.ServiceController> Varsayılan olarak yerel bilgisayardır. Başka bir bilgisayardaki Windows hizmetlerine başvurmak için, <xref:System.ServiceProcess.ServiceController.MachineName%2A> özelliği bu bilgisayarın adıyla değiştirin.  
   
  <xref:System.ServiceProcess.ServiceController.Continue%2A>Hizmet denetleyicisi durumu olana kadar bir hizmette yöntemi çağrılamaz <xref:System.ServiceProcess.ServiceControllerStatus.Paused> .  
@@ -45,6 +49,7 @@ Bu örnek, <xref:System.ServiceProcess.ServiceController> Yerel bılgısayarda I
 - Sistem API 'sine erişirken bir hata oluştu. (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
+
  Bilgisayardaki hizmetlerin denetimi, <xref:System.ServiceProcess.ServiceControllerPermissionAccess> sınıftaki izinleri ayarlamak için sabit listesi kullanılarak kısıtlanabilir <xref:System.ServiceProcess.ServiceControllerPermission> .  
   
  <xref:System.Security.Permissions.PermissionState>Sınıfında izinleri ayarlamak için numaralandırma kullanılarak hizmet bilgilerine erişim kısıtlanabilir <xref:System.Security.Permissions.SecurityPermission> .  

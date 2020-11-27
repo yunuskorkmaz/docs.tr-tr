@@ -8,19 +8,23 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
-ms.openlocfilehash: 77811c526d1770b91b14aa1199dfc7b3177e6c59
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: afe54a2104e05f8fad57c7cbba4988b013aff761
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051161"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271180"
 ---
 # <a name="marshaling-mda"></a>MDA Sıralama
+
 `marshaling`Yönetilen hata ayıklama Yardımcısı (MDA), clr bir yöntem parametresi veya bir yapının alanı için sıralama bilgilerini ayarlarsa etkinleştirilir. Bu MDA, JıT derlenmiş derlemeler için çalışmaz.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
-## <a name="output"></a>Çıktı  
+## <a name="output"></a>Çıkış  
+
  MDA, yönetilen ve yönetilmeyen bağlamlardaki parametre ya da alanın türünü ve türünü içeren yapıyı ya da yöntemi görüntüler.  Bir alan için çıktının bir örneği aşağıda verilmiştir:  
   
 ```output
@@ -29,6 +33,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>Yapılandırma  
+
  MDA yapılandırması, bildirilen sıralama bilgilerini ilgili alana veya yöntem adlarına göre filtrelemenize izin verir.  Aşağıdaki örnek `methodFilter` , `fieldFilter` `match` filtre belirtmek için, ve öğelerinin kullanımını gösterir.  `name`Özniteliği bir yıldız işareti () olarak ayarlamak \* her şeyi eşleştirecektir.  
   
 ```xml  
