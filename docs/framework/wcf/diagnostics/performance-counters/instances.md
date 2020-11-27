@@ -2,24 +2,26 @@
 title: Örnekler
 ms.date: 03/30/2017
 ms.assetid: c8cf3460-0ca1-4411-8262-e9ecaf7f0a31
-ms.openlocfilehash: e0be9c93b5efe17235dbccd426cdd73fbb739361
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f4bf639e626945c7e753ac352dfecc7a79541bfd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651842"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266083"
 ---
 # <a name="instances"></a>Örnekler
-Sayaç adı: örnekleri.  
+
+Sayaç adı: örnekler.  
   
 ## <a name="description"></a>Açıklama  
- Hizmet şu anda içeren örnek bağlamları sayısı.  
+
+ Hizmetin Şu anda içerdiği örnek bağlamların sayısı.  
   
- Çoğu zaman örneği bağlamları sayısını örnek sayısı için aynıdır. Ancak, aşağıdaki senaryolarda bu kuralın istisnası olarak uygulanır.  
+ Çoğu zaman, örnek bağlamların sayısı örneklerin sayısıyla aynıdır. Ancak, aşağıdaki senaryolar bu kural için özel durumdur.  
   
-- Bir hizmet yöntemini çağırır <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> yöntemi açıkça.  
+- Bir hizmet yöntemi <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> yöntemi açıkça çağırır.  
   
-- A <xref:System.ServiceModel.ReleaseInstanceMode> uygulanan bir <xref:System.ServiceModel.OperationBehaviorAttribute> örneği.  
+- Bir <xref:System.ServiceModel.ReleaseInstanceMode> <xref:System.ServiceModel.OperationBehaviorAttribute> örneğe uygulanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

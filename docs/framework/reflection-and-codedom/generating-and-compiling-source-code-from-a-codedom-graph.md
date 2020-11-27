@@ -27,17 +27,19 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-ms.openlocfilehash: 3aad7b2ff047a2d9ad12c23d16773e482a395c10
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: aec7d6b44e63558ae70bc0eb41f94e55c8a6c325
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551203"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266343"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM Grafiğinden Kaynak Kodu Oluşturma ve Derleme
+
 <xref:System.CodeDom.Compiler>Ad alanı, CodeDOM nesne grafiklerinden kaynak kodu oluşturmak ve desteklenen derleyicilerle derlemeyi yönetmek için arabirimler sağlar. Bir kod sağlayıcısı, CodeDOM grafiğine göre belirli bir programlama dilinde kaynak kodu üretebilir. Öğesinden türetilen bir sınıf <xref:System.CodeDom.Compiler.CodeDomProvider> genellikle sağlayıcının desteklediği dil için kod oluşturmak ve derlemek için yöntemler sağlar.  
   
 ## <a name="using-a-codedom-code-provider-to-generate-source-code"></a>Kaynak kodu oluşturmak için CodeDOM kod sağlayıcısı kullanma  
+
  Belirli bir dilde kaynak kodu oluşturmak için, oluşturulacak kaynak kodun yapısını temsil eden bir CodeDOM grafiğine ihtiyacınız vardır.  
   
  Aşağıdaki örnek, bir örneğinin nasıl oluşturulacağını göstermektedir <xref:Microsoft.CSharp.CSharpCodeProvider> :  
@@ -53,6 +55,7 @@ ms.locfileid: "90551203"
  [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
   
 ## <a name="using-a-codedom-code-provider-to-compile-assemblies"></a>Derlemeleri derlemek için CodeDOM kod sağlayıcısı kullanma  
+
  **Derleme çağrılıyor**  
   
  Bir CodeDom sağlayıcısı kullanarak bir derlemeyi derlemek için, derleyicinizin bulunduğu bir dilde derlemek için kaynak kodunuz veya derlenecek kaynak kodun üretibileceği bir CodeDOM Graf olması gerekir.  
@@ -63,17 +66,17 @@ ms.locfileid: "90551203"
   
  Bir CodeDom sağlayıcısının standart derleme çağırma yöntemlerinin hepsi, <xref:System.CodeDom.Compiler.CompilerParameters> derleme için kullanılacak seçenekleri belirten türünde bir parametreye sahiptir.  
   
- <xref:System.CodeDom.Compiler.CompilerParameters.OutputAssembly%2A> **CompilerParameters**özelliğinde çıkış derlemesi için bir dosya adı belirtebilirsiniz. Aksi takdirde, varsayılan bir çıkış dosyası adı kullanılacaktır.  
+ <xref:System.CodeDom.Compiler.CompilerParameters.OutputAssembly%2A> **CompilerParameters** özelliğinde çıkış derlemesi için bir dosya adı belirtebilirsiniz. Aksi takdirde, varsayılan bir çıkış dosyası adı kullanılacaktır.  
   
- Varsayılan olarak, yeni bir **CompilerParameters** <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> özelliği **false**olarak ayarlanmış şekilde başlatılır. Yürütülebilir bir program derlerken **GenerateExecutable** özelliğini **true**olarak ayarlamanız gerekir. **Generateyürütülebilirdeğeri** **false**olarak ayarlandığında, derleyici bir sınıf kitaplığı oluşturur.  
+ Varsayılan olarak, yeni bir **CompilerParameters** <xref:System.CodeDom.Compiler.CompilerParameters.GenerateExecutable%2A> özelliği **false** olarak ayarlanmış şekilde başlatılır. Yürütülebilir bir program derlerken **GenerateExecutable** özelliğini **true** olarak ayarlamanız gerekir. **Generateyürütülebilirdeğeri** **false** olarak ayarlandığında, derleyici bir sınıf kitaplığı oluşturur.  
   
  Bir CodeDOM grafiğinden yürütülebilir bir dosya derlerken, <xref:System.CodeDom.CodeEntryPointMethod> grafikte tanımlanmış olması gerekir. Birden çok kod giriş noktası varsa, <xref:System.CodeDom.Compiler.CompilerParameters.MainClass%2A> **CompilerParameters** özelliğinin, kullanılacak giriş noktasını tanımlayan sınıfın adına ayarlanması gerekebilir.  
   
- Oluşturulan bir çalıştırılabilire hata ayıklama bilgilerini eklemek için, <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> özelliği **true**olarak ayarlayın.  
+ Oluşturulan bir çalıştırılabilire hata ayıklama bilgilerini eklemek için, <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> özelliği **true** olarak ayarlayın.  
   
  Projeniz herhangi bir derlemeye başvuruyorsa, derleme adlarını <xref:System.Collections.Specialized.StringCollection> <xref:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies%2A> derleme sırasında kullandığınız **CompilerParameters** özelliği olarak bir öğesi olarak belirtmeniz gerekir.  
   
- <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A>Özelliği **true**olarak ayarlayarak disk yerine belleğe yazılan bir derlemeyi derleyebilirsiniz. Bellekte bir derleme oluşturulduğunda kodunuz, ' nin özelliğinden oluşturulan derleme için bir başvuru elde edebilir <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> <xref:System.CodeDom.Compiler.CompilerResults> . Bir derlemeyi diske yazılmışsa, <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A> bir **CompilerResults**özelliğinden oluşturulan derlemenin yolunu alabilirsiniz.  
+ <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A>Özelliği **true** olarak ayarlayarak disk yerine belleğe yazılan bir derlemeyi derleyebilirsiniz. Bellekte bir derleme oluşturulduğunda kodunuz, ' nin özelliğinden oluşturulan derleme için bir başvuru elde edebilir <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> <xref:System.CodeDom.Compiler.CompilerResults> . Bir derlemeyi diske yazılmışsa, <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A> bir **CompilerResults** özelliğinden oluşturulan derlemenin yolunu alabilirsiniz.  
   
  Derleme işlemini çağırırken kullanılacak özel bir komut satırı bağımsız değişken dizesi belirtmek için, özelliğindeki dizeyi ayarlayın <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> .  
   
@@ -81,7 +84,7 @@ ms.locfileid: "90551203"
   
  Bir Win32 kaynak dosyasını derlenmiş derlemeye bağlamak için, özelliğindeki Win32 kaynak dosyasının adını belirtin <xref:System.CodeDom.Compiler.CompilerParameters.Win32Resource%2A> .  
   
- Derlemenin durdurkaydedileceği bir uyarı düzeyi belirtmek için, <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A> özelliği derlemenin durdurkaydedileceği uyarı düzeyini temsil eden bir tamsayı olarak ayarlayın. Ayrıca, <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A> özelliği **true**olarak ayarlayarak uyarılarla karşılaşıldığında derlemeyi durdurmak için derleyiciyi yapılandırabilirsiniz.  
+ Derlemenin durdurkaydedileceği bir uyarı düzeyi belirtmek için, <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A> özelliği derlemenin durdurkaydedileceği uyarı düzeyini temsil eden bir tamsayı olarak ayarlayın. Ayrıca, <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A> özelliği **true** olarak ayarlayarak uyarılarla karşılaşıldığında derlemeyi durdurmak için derleyiciyi yapılandırabilirsiniz.  
   
  Aşağıdaki kod örneği, sınıfından türetilen bir CodeDom sağlayıcısı kullanılarak kaynak dosyayı derlemeyi gösterir <xref:System.CodeDom.Compiler.CodeDomProvider> .  
   
@@ -90,6 +93,7 @@ ms.locfileid: "90551203"
  [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>Başlangıç desteğiyle diller  
+
  .NET Framework, aşağıdaki diller için kod derleyicileri ve kod oluşturucuları sağlar: C#, Visual Basic, C++ ve JScript. CodeDOM desteği, dile özgü kod oluşturucuları ve kod derleyicileri uygulayarak diğer dillere genişletilebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

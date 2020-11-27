@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 7c8a134039526abf046136ac383fbaff3a5abbfe
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a5b00980cb8c2b06b224630e766e49bafe343c76
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541219"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266109"
 ---
 # <a name="wcf-performance-counters"></a>WCF Performans Sayaçları
+
 Windows Communication Foundation (WCF), uygulamanızın performansını ölçgetirmenize yardımcı olacak büyük bir performans sayacı kümesi içerir.  
   
 ## <a name="enabling-performance-counters"></a>Performans sayaçlarını etkinleştirme  
+
  WCF hizmetinin app.config yapılandırma dosyası aracılığıyla bir WCF hizmeti için performans sayaçlarını aşağıdaki şekilde etkinleştirebilirsiniz:  
   
 ```xml  
@@ -51,12 +53,14 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>Performans verilerini görüntüleme  
+
  Performans sayaçları tarafından yakalanan verileri görüntülemek için, Windows ile birlikte gelen performans Izleyicisini (Perfmon.exe) kullanabilirsiniz. **Başlat**' a gidip **Çalıştır** ' a tıklayıp iletişim kutusuna yazarak bu aracı başlatabilirsiniz `perfmon.exe` .  
   
 > [!NOTE]
 > Son iletiler bitiş noktası dağıtıcısı tarafından işlenmeden önce performans sayacı örnekleri serbest bırakılmış olabilir. Bu, performans verilerinin birkaç ileti için yakalanmasına yol açabilir.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Performans sayaçları için bellek boyutunu artırma  
+
  WCF, performans sayacı kategorileri için ayrı paylaşılan bellek kullanır.  
   
  Varsayılan olarak, ayrı paylaşılan bellek, genel performans sayacı belleğinin boyutu için bir çeyreğe ayarlanır. Varsayılan genel performans sayacı belleği 524.288 bayttır. Bu nedenle, üç WCF performans sayacı kategorisinin her biri yaklaşık 128KB varsayılan boyutu vardır. Bir makinedeki WCF uygulamalarının çalışma zamanı özelliklerine bağlı olarak, performans sayacı belleği tükenebilir. Bu durumda, WCF uygulama olay günlüğüne bir hata yazar. Hatanın içeriği bir performans sayacının yüklenmediğini ve girişin "System. InvalidOperationException: özel sayaçlar dosya görünümü bellek dışında" özel durum içerdiğini belirtir. İzleme hata düzeyinde etkinleştirilirse, bu hata da izleniyor. Performans sayacı belleği tükenirse, WCF uygulamalarınızı performans sayaçlarıyla çalıştırmaya devam etmek performans düşüşüne neden olabilir. Makinenin yöneticisiyseniz, her zaman var olan en fazla performans sayacı sayısını destekleyecek şekilde yeterli bellek ayırabilecek şekilde yapılandırmanız gerekir.  
@@ -72,6 +76,7 @@ config.Save();
  Çok sayıda nesne (örneğin, ServiceHost) atıldığında ancak çöp toplanmayı beklerken, `PrivateBytes` performans sayacı alışılmadık bir yüksek sayıyı kaydeder. Bu sorunu çözmek için uygulamaya özel Sayaçlarınızı ekleyebilir ya da `performanceCounters` yalnızca hizmet düzeyi sayaçlarını etkinleştirmek için özniteliğini kullanabilirsiniz.  
   
 ## <a name="types-of-performance-counters"></a>Performans sayacı türleri  
+
  Performans sayaçları üç farklı düzeye sahiptir: hizmet, uç nokta ve Işlem.  
   
  Bir performans sayacı örneğinin adını almak için WMI ' y i kullanabilirsiniz. Örneğin,  
@@ -85,6 +90,7 @@ config.Save();
  WMI hakkında daha fazla bilgi için bkz. [Tanılama için Windows Yönetim araçları kullanma](../wmi/index.md).  
   
 ### <a name="service-performance-counters"></a>Hizmet performans sayaçları  
+
  Hizmet performans sayaçları, hizmet davranışını bir bütün olarak ölçer ve tüm hizmetin performansını tanılamak için kullanılabilir. Performans `ServiceModelService 4.0.0.0` İzleyicisi ile görüntülenirken Performans nesnesi altında bulunabilir. Örnekler aşağıdaki model kullanılarak adlandırılır:  
   
 `ServiceName@ServiceBaseAddress`
@@ -94,6 +100,7 @@ config.Save();
  Yeni bir InstanceContext oluşturulduğunda hizmet örneği oluşturma için performans sayaçları artırılır. Etkinleştirme dışı bir ileti (var olan bir hizmetle) aldığınızda ya da bir oturumdan bir örneğe bağlanıp oturumu sonlandırdığınızda ve sonra başka bir oturumdan yeniden bağlandığınızda bile yeni bir InstanceContext oluşturulduğunu unutmayın.  
   
 ### <a name="endpoint-performance-counters"></a>Uç nokta performans sayaçları  
+
  Uç nokta performans sayaçları, bir uç noktanın iletileri nasıl kabul ettiğini yansıtan verileri gözden etkinleştirmenizi sağlar. Performans `ServiceModelEndpoint 4.0.0.0` İzleyicisi kullanılarak görüntüleme sırasında performans nesnesi altında bulunabilir. Örnekler aşağıdaki model kullanılarak adlandırılır:  
   
 `(ServiceName).(ContractName)@(endpoint listener address)`
@@ -106,6 +113,7 @@ config.Save();
 > İki uç noktanın aynı sözleşme adları ve adresleri varsa, bunlar aynı sayaç örneğiyle eşleştirilir.  
   
 ### <a name="operation-performance-counters"></a>İşlem performansı sayaçları  
+
  Performans `ServiceModelOperation 4.0.0.0` İzleyicisi ile görüntülenirken Performans nesnesi altında işlem performansı sayaçları bulunur. Her işlemin tek bir örneği vardır. Diğer bir deyişle, belirli bir sözleşmede 10 işlem varsa, bu sözleşmeyle ilişkili 10 işlem sayacı örneği vardır. Nesne örnekleri aşağıdaki model kullanılarak adlandırılır:  
   
 `(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)`

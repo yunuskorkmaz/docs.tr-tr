@@ -1,22 +1,23 @@
 ---
-title: WF etkinliklerini akış çizelgesi
+title: WF 'de akış çizelgesi etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: e80d9734-b43a-4d21-a250-74400330a4c0
-ms.openlocfilehash: e311c97a35acd8bc973b2833f1de1bc017682d64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c739032d2e05dfe92b75b7c495b18374d15ee97f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945684"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266460"
 ---
-# <a name="flowchart-activities-in-wf"></a>WF etkinliklerini akış çizelgesi
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] yürütmeyi denetleme ve bir akış içinde dallanma birkaç sistem tarafından sağlanan etkinliği sağlar.  
+# <a name="flowchart-activities-in-wf"></a>WF 'de akış çizelgesi etkinlikleri
+
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] , bir akış çizelgesi içinde yürütmeyi ve dallanmayı denetlemek için sistem tarafından sağlanan çeşitli etkinlikler sağlar.  
   
 |||  
 |-|-|  
-|<xref:System.Activities.Statements.Flowchart>|Tanıdık akış paradigması kullanarak içerilen etkinlikleri yürütür.|  
-|<xref:System.Activities.Statements.FlowDecision>|Özelleştirilmiş <xref:System.Activities.Statements.FlowNode> iki sonuçlarını koşullu bir düğümle model olanağı sağlar.|  
-|<xref:System.Activities.Statements.FlowSwitch%601>|Özelleştirilmiş <xref:System.Activities.Statements.FlowNode> etkinliğin tür tanımlayıcısı ve tek bir sonuç, her bir eşleşme için tanımlanmış bir türü bir ifade olan bir anahtar yapısı modelleme sağlar.|  
+|<xref:System.Activities.Statements.Flowchart>|Bilinen akış çizelgesi paradigmasını kullanarak içerilen etkinlikleri yürütür.|  
+|<xref:System.Activities.Statements.FlowDecision>|<xref:System.Activities.Statements.FlowNode>İki sonuç ile koşullu bir düğüm modelleyebilme olanağı sunan özelleştirilmiş.|  
+|<xref:System.Activities.Statements.FlowSwitch%601>|<xref:System.Activities.Statements.FlowNode>Etkinliğin tür tanımlayıcıda tanımlı bir türün bir ifadesiyle ve her eşleşme için tek bir sonuca sahip bir anahtar yapısını modellemeye olanak tanıyan bir özelleşmiş.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

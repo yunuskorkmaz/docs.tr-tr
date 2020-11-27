@@ -2,27 +2,30 @@
 title: 4015 - MessageQueueRegisterCompleted
 ms.date: 03/30/2017
 ms.assetid: d8d65570-9dcc-436c-b446-a33404e31652
-ms.openlocfilehash: 0b865362b1fd9e5858535097f500e3ae2b6fb0f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae45ccf730077ddabbd09d94b63ebd060a9c7ddb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942265"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266135"
 ---
 # <a name="4015---messagequeueregistercompleted"></a>4015 - MessageQueueRegisterCompleted
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|4015|  
-|anahtar sözcükler|ActivationServices|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|ID|4015|  
+|Anahtar sözcükler|ActivationServices|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- İleti kuyruğu kayıt tamamlandığında bu olay yayılır.  
+
+ İleti sırası kaydı tamamlandığında bu olay yayınlanır.  
   
 ## <a name="message"></a>İleti  
- İleti kuyruğu kaydı için '%1' URI tamamlandı.  
+
+ ' %1 ' Uri 'si için ileti sırası kaydı tamamlandı.  
   
 ## <a name="details"></a>Ayrıntılar
