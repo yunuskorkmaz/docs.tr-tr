@@ -6,14 +6,15 @@ helpviewer_keywords:
 - ExceptionThrown_V1 event [.NET Framework]
 - ETW, ExceptionThrown_V1 event (CLR)
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
-ms.openlocfilehash: f4ae277b5dfb09d2676755fec2208b63906ead84
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c1ba994b291bd278a95e34beb0b02ed6581786e8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554677"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263483"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>Özel Durum Thrown_V1 ETW Olayı
+
 Bu olay, oluşturulan özel durumlarla ilgili bilgileri yakalar.  
   
  Aşağıdaki tabloda, olayın oluşturulduğu anahtar sözcük ve olay düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  

@@ -16,14 +16,15 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: b44409a0fafc770625be55881ccef3b57045acef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e00d04164f7ce5251b7f30b5abd16c14643f6862
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502138"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263132"
 ---
 # <a name="sockets"></a>Yuvalar
+
 <xref:System.Net.Sockets>Ad alanı, Windows Sockets arabiriminin yönetilen bir uygulamasını içerir. Ad alanındaki diğer tüm ağ erişim sınıfları, <xref:System.Net> Bu yuvalar uygulamasının üzerine kurulmuştur.  
   
  .NET Framework <xref:System.Net.Sockets.Socket> sınıfı, WinSock32 API 'si tarafından belirtilen yuva hizmetlerinin yönetilen kod sürümüdür. Çoğu durumda, **Socket** sınıfı yöntemleri yalnızca yerel Win32 karşılıklarına veri sıralamalarını ve gerekli güvenlik denetimlerini işlemelerini sağlamaktır.  
@@ -32,6 +33,6 @@ ms.locfileid: "84502138"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl Yapılır: Yuva Oluşturma](how-to-create-a-socket.md)
+- [Nasıl yapılır: Yuva Oluşturma](how-to-create-a-socket.md)
 
 - [Uygulama Protokolleri Kullanma](using-application-protocols.md)

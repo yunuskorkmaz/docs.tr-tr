@@ -2,14 +2,15 @@
 title: Özel WSDL Yayımı
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: b18ac2f72d58c768b3784e1c414a71cdaec50c01
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83377e1c72ef5774c909729abd1312cce5364ab0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596701"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262872"
 ---
 # <a name="custom-wsdl-publication"></a>Özel WSDL Yayımı
+
 Bu örnekte nasıl yapılacağı gösterilmektedir:  
   
 - <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> ÖZNITELIK özelliklerini WSDL ek açıklamaları olarak dışarı aktarmak için özel bir özniteliğe uygulayın.  
@@ -24,6 +25,7 @@ Bu örnekte nasıl yapılacağı gösterilmektedir:
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 ## <a name="service"></a>Hizmet  
+
  Bu örnekteki hizmet iki özel öznitelikle işaretlenir. İlki, `WsdlDocumentationAttribute` oluşturucuda bir dizeyi kabul eder ve bir sözleşme arabirimi ya da kullanımını açıklayan bir dize içeren bir işlem sağlamak için uygulanabilir. İkinci, `WsdlParamOrReturnDocumentationAttribute` ,, işlem içindeki değerleri betimleyen değerleri veya parametreleri döndürmek için uygulanabilir. Aşağıdaki örnek, `ICalculator` Bu öznitelikler kullanılarak açıklanan bir hizmet sözleşmesini gösterir.  
   
 ```csharp  
@@ -170,9 +172,11 @@ for (int i = 0; i < args.Length; i++)
 ```  
   
 ## <a name="svcutil-client"></a>Svcutil istemcisi  
- Bu örnek Svcutil. exe kullanmaz. Sözleşme, generatedClient.cs dosyasında sağlanır, böylece örnek özel WSDL içeri aktarma ve kod oluşturmayı gösterir, hizmet çağrılabilir. Bu örnek için aşağıdaki özel WSDL İçeri Aktarıcı 'yı kullanmak için, Svcutil. exe ' yi çalıştırabilir ve `/svcutilConfig` Bu örnekte kullanılan istemci yapılandırma dosyasının yolunu vererek kitaplığa başvuruda bulunan bu seçeneği belirtebilirsiniz `WsdlDocumentation.dll` . Bununla birlikte, yüklemek için, `WsdlDocumentationImporter` Svuctil. exe ' nin kitaplığı bulması ve yüklemesi gerekir, bu da `WsdlDocumentation.dll` genel derleme önbelleğinde, yoldaki veya Svcutil. exe ile aynı dizinde olduğu anlamına gelir. Bunun gibi basit bir örnek için en kolay şey, Svcutil. exe ' yi ve istemci yapılandırma dosyasını aynı dizine kopyalamak `WsdlDocumentation.dll` ve oradan çalıştırmak içindir.  
+
+ Bu örnek Svcutil.exe kullanmaz. Sözleşme, generatedClient.cs dosyasında sağlanır, böylece örnek özel WSDL içeri aktarma ve kod oluşturmayı gösterir, hizmet çağrılabilir. Bu örnek için aşağıdaki özel WSDL İçeri Aktarıcı 'yı kullanmak için, Svcutil.exe çalıştırabilir ve `/svcutilConfig` Bu örnekte kullanılan istemci yapılandırma dosyasının yolunu vererek kitaplığa başvuruda bulunan bir yolu belirtebilirsiniz `WsdlDocumentation.dll` . Ancak, Svuctil.exe yüklemek için, `WsdlDocumentationImporter` kitaplığı bulup yükleyebilmelidir, bu da `WsdlDocumentation.dll` genel derleme önbelleğinde, yoldaki veya Svcutil.exe ile aynı dizinde kayıtlı olduğu anlamına gelir. Bu gibi temel bir örnek için en kolay şey, Svcutil.exe ve istemci yapılandırma dosyasını aynı dizine kopyalamak `WsdlDocumentation.dll` ve oradan çalıştırmak olacaktır.  
   
 ## <a name="the-custom-wsdl-importer"></a>Özel WSDL Içeri aktarıcı  
+
  Özel <xref:System.ServiceModel.Description.IWsdlImportExtension> nesne `WsdlDocumentationImporter` Ayrıca <xref:System.ServiceModel.Description.IContractBehavior> <xref:System.ServiceModel.Description.IOperationBehavior> içeri aktarılan hizmet uç noktalarına eklenmek üzere ve <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> anlaşma ya da işlem kodu oluşturulurken kod oluşturmayı değiştirmek için çağrılabilir.  
   
  İlk olarak, <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> yönteminde, WSDL ek açıklamanın anlaşma ya da işlem düzeyinde olup olmadığını ve kendisini uygun kapsamda bir davranış olarak ekleyerek içeri aktarılan ek açıklama metnini oluşturucuya geçirerek, örnek.  
@@ -219,6 +223,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 ```  
   
 ## <a name="the-client-application"></a>Istemci uygulaması  
+
  İstemci uygulaması, uygulama yapılandırma dosyasında belirterek özel WSDL İçeri Aktarıcı yükler.  
   
 ```xml  

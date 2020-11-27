@@ -12,17 +12,19 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 4d62f5736e9aa469be49d101e85851bc01b7c159
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 5094a066fe6689a1c0cda227b284accaac49ad54
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141611"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263171"
 ---
 # <a name="proxy-configuration"></a>Ara Sunucu Yapılandırma
+
 Proxy sunucusu, kaynaklar için istemci isteklerini işler. Bir ara sunucu, önbelleğinden istenen bir kaynağı döndürebilir veya isteği kaynağın bulunduğu sunucuya iletebilir. Proxy 'ler, uzak sunuculara gönderilen isteklerin sayısını azaltarak ağ performansını iyileştirebilir. Proxy 'ler, kaynaklara erişimi kısıtlamak için de kullanılabilir.  
   
 ## <a name="adaptive-proxies"></a>Uyarlamalı proxy 'Ler  
+
  .NET Framework, proxy 'ler iki değişken halinde gelir: Uyarlamalı ve statik. Uyarlamalı proxy 'ler, ağ yapılandırması değiştiğinde ayarlarını ayarlar. Örneğin, bir dizüstü Kullanıcı Çevirmeli ağ bağlantısı başlattığında, bir uyarlamalı ara sunucu bu değişikliği algılar, yeni yapılandırma betiğini bulur ve çalıştırır ve ayarlarını uygun şekilde ayarlar.  
   
  Uyarlamalı proxy 'ler bir yapılandırma betiği tarafından yapılandırılır (bkz. [otomatik proxy algılama](automatic-proxy-detection.md)). Betik, her protokol için bir dizi uygulama protokolü ve ara sunucu oluşturur.  
@@ -42,6 +44,7 @@ Proxy sunucusu, kaynaklar için istemci isteklerini işler. Bir ara sunucu, önb
 ```  
   
 ## <a name="static-proxies"></a>Statik proxy 'Ler  
+
  Statik proxy 'ler genellikle bir uygulama tarafından açıkça veya bir yapılandırma dosyası bir uygulama veya sistem tarafından çağrıldığında yapılandırılır. Statik proxy 'ler, bir kurumsal ağa bağlı bir masaüstü bilgisayar gibi, topolojinin seyrek değiştiği ağlarda yararlıdır.  
   
  Statik bir proxy 'nin nasıl çalıştığını çeşitli seçenekler denetler. Aşağıdakileri belirtebilirsiniz:  
@@ -54,7 +57,7 @@ Proxy sunucusu, kaynaklar için istemci isteklerini işler. Bir ara sunucu, önb
   
  Aşağıdaki tabloda bir statik ara sunucu için yapılandırma seçenekleri gösterilmektedir.  
   
-|Öznitelik, özellik veya yapılandırma dosyası ayarı|Description|  
+|Öznitelik, özellik veya yapılandırma dosyası ayarı|Açıklama|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` veya <xref:System.Net.WebProxy.Address>|Kullanılacak proxy 'nin adresi.|  
 |`bypassonlocal` veya <xref:System.Net.WebProxy.BypassProxyOnLocal>|Yerel adresler için proxy 'nin atlanıp atlanmayacağını denetler.|  

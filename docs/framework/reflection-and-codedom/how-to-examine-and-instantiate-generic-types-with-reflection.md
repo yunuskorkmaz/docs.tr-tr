@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-ms.openlocfilehash: b57a0ed0c809da442dc9fcf202ad364060971f80
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 34efca4a26b0ab3739d19b793237532ec9f4f15e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865105"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263444"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Nasıl yapılır: Yansıma ile Genel Türleri İnceleme ve Örnek Oluşturma
+
 Genel türler hakkında bilgi, <xref:System.Type> genel türü temsil eden bir nesneyi inceleyerek, diğer türlerle ilgili bilgilerle aynı şekilde alınır: Prensibi, genel bir türün <xref:System.Type> genel tür parametrelerini temsil eden bir nesne listesi içerir. Bu bölümdeki ilk yordam genel türleri inceler.  
   
  <xref:System.Type>Tür bağımsız değişkenlerini genel tür tanımının tür parametrelerine bağlayarak, oluşturulmuş bir türü temsil eden bir nesne oluşturabilirsiniz. İkinci yordam bunu gösterir.  
@@ -73,6 +74,7 @@ Genel türler hakkında bilgi, <xref:System.Type> genel türü temsil eden bir n
      [!code-vb[HowToGeneric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#9)]  
   
 ## <a name="constructing-an-instance-of-a-generic-type"></a>Genel türde bir örnek oluşturma  
+
  Genel tür bir şablon gibidir. Genel tür parametreleri için gerçek türler belirtmediğiniz müddetçe, bunun örneklerini oluşturamazsınız. Bunu çalışma zamanında, yansıma kullanarak yapmak için <xref:System.Type.MakeGenericType%2A> yöntemi gerekir.  
   
 #### <a name="to-construct-an-instance-of-a-generic-type"></a>Genel türün bir örneğini oluşturmak için  
@@ -102,6 +104,7 @@ Genel türler hakkında bilgi, <xref:System.Type> genel türü temsil eden bir n
      [!code-vb[HowToGeneric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#13)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, `DisplayGenericType` genel tür tanımlarını ve kodda kullanılan oluşturulmuş türleri incelemek için bir yöntem tanımlar ve bilgilerini görüntüler. `DisplayGenericType`Yöntemi <xref:System.Type.IsGenericType%2A> ,, <xref:System.Type.IsGenericParameter%2A> ve <xref:System.Type.GenericParameterPosition%2A> özelliklerinin ve <xref:System.Type.GetGenericArguments%2A> yönteminin nasıl kullanılacağını gösterir.  
   
  Örnek ayrıca `DisplayGenericParameter` genel tür parametresini İnceleme ve kısıtlamalarını görüntüleme yöntemini tanımlar.  

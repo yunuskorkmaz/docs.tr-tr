@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: f8d35b43c9b46a77bfd0c78f7d0118093b6fe824
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c59e4aa2edad7b28203cfce5f568f8ccb8558dbb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501982"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263119"
 ---
 # <a name="using-streams-on-the-network"></a>Ağda Akışları Kullanma
+
 Ağ kaynakları .NET Framework akışlar olarak temsil edilir. Akışları genel olarak düşünerek, .NET Framework aşağıdaki özellikleri sunar:  
   
 - Web verilerini göndermenin ve almanın yaygın bir yolu. Dosyanın gerçek içerikleri ne olursa olsun — HTML, XML veya başka bir şey — uygulamanız, <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> veri göndermek ve almak için kullanır.  
   
-- .NET Framework içindeki akışlarla uyumluluk. Akışlar, işlemek için zengin bir altyapıyı içeren .NET Framework boyunca kullanılır. Örneğin, <xref:System.IO.FileStream> <xref:System.Net.Sockets.NetworkStream> yalnızca akışı başlatacak olan kodun yalnızca birkaç satırını değiştirerek, bir ' dan veri okumak için bir uygulamayı bir ' dan okuyabilirsiniz. **NetworkStream** sınıfı ve diğer akışlar arasındaki önemli farklılıklar, **NetworkStream** 'in aranabilir olmadığı, <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> özelliğin her zaman **false**döndüğü ve <xref:System.Net.Sockets.NetworkStream.Seek%2A> ve <xref:System.Net.Sockets.NetworkStream.Position%2A> yöntemlerinin bir oluşturması <xref:System.NotSupportedException> .  
+- .NET Framework içindeki akışlarla uyumluluk. Akışlar, işlemek için zengin bir altyapıyı içeren .NET Framework boyunca kullanılır. Örneğin, <xref:System.IO.FileStream> <xref:System.Net.Sockets.NetworkStream> yalnızca akışı başlatacak olan kodun yalnızca birkaç satırını değiştirerek, bir ' dan veri okumak için bir uygulamayı bir ' dan okuyabilirsiniz. **NetworkStream** sınıfı ve diğer akışlar arasındaki önemli farklılıklar, **NetworkStream** 'in aranabilir olmadığı, <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> özelliğin her zaman **false** döndüğü ve <xref:System.Net.Sockets.NetworkStream.Seek%2A> ve <xref:System.Net.Sockets.NetworkStream.Position%2A> yöntemlerinin bir oluşturması <xref:System.NotSupportedException> .  
   
 - Verilerin ulaştığı gibi işlenmesi. Akışlar, uygulamanızın bir veri kümesinin tamamını indirilmesini beklemek yerine, ağ üzerinden gelen verilere erişim sağlar.  
   
@@ -73,9 +74,9 @@ End Try
   
  Ağ kaynaklarından akışlar kullanırken, aşağıdaki noktaları göz önünde bulundurun:  
   
-- **NetworkStream** sınıfı akıştaki konumu Değiştirelemediğinden **CanSeek** özelliği her zaman **false** değerini döndürür. **Seek** ve **Position** yöntemleri **NotSupportedException**oluşturur.  
+- **NetworkStream** sınıfı akıştaki konumu Değiştirelemediğinden **CanSeek** özelliği her zaman **false** değerini döndürür. **Seek** ve **Position** yöntemleri **NotSupportedException** oluşturur.  
   
-- **WebRequest** ve **WebResponse**kullandığınızda, **GetResponseStream** çağrılırken oluşturulan akış örnekleri salt okunurdur ve **GetRequestStream** çağrılırken oluşturulan akış örnekleri salt yazılır.  
+- **WebRequest** ve **WebResponse** kullandığınızda, **GetResponseStream** çağrılırken oluşturulan akış örnekleri salt okunurdur ve **GetRequestStream** çağrılırken oluşturulan akış örnekleri salt yazılır.  
   
 - <xref:System.IO.StreamReader>Kodlamayı daha kolay hale getirmek için sınıfını kullanın. Aşağıdaki kod örneği bir **Web YANıTıNDAN** ASCII kodlamalı bir akış okumak Için bir **StreamReader** kullanır (örnek, istek oluşturmayı göstermez).  
   

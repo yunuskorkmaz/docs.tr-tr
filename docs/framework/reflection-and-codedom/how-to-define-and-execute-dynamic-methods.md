@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-ms.openlocfilehash: d1ccf3d3ac966e35e1708f0639785a2760eb8287
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1ea15149ea72c3c422251abefb5a1008cc496f2c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559193"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263457"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Nasıl yapılır: Dinamik Yöntemleri Tanımlama ve Yürütme
+
 Aşağıdaki yordamlarda basit bir dinamik yöntemin ve bir sınıfının örneğine bağlantılı dinamik yöntemin nasıl tanımlanacağı ve yürütüleceği gösterilmektedir. Dinamik yöntemler hakkında daha fazla bilgi için bkz <xref:System.Reflection.Emit.DynamicMethod> . sınıf ve [yansıma yayma dinamik yöntem senaryoları](/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Dinamik bir yöntemi tanımlamak ve yürütmek için  
@@ -101,6 +102,7 @@ Aşağıdaki yordamlarda basit bir dinamik yöntemin ve bir sınıfının örne�
      [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, bir sınıfının örneğine bağlantılı basit bir dinamik yöntemi ve dinamik bir yöntemi gösterir.  
   
  Basit dinamik yöntem bir bağımsız değişken alır, 32 bitlik bir tamsayıdır ve bu tamsayının 64 bit karesini döndürür. Yöntemi çağırmak için genel bir temsilci kullanılır.  

@@ -16,14 +16,15 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 510f616295abc13d93e0e0af5a37aca097d343e3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a3f8106b238c28de77362e73aa26667209f6b517
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502203"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263184"
 ---
 # <a name="programming-pluggable-protocols"></a>Takılabilir Protokoller Programlama
+
 Soyut <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıflar takılabilir protokoller için temel sağlar. Ve ' den protokolüne özgü sınıfları türeterek <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> , bir uygulama bir Internet kaynağından veri talep edebilir ve kullanılan protokolü belirtmeden yanıtı okuyabilir.  
   
  Protokolüne özgü bir oluşturabilmeniz için önce <xref:System.Net.WebRequest> Create yöntemini kaydetmeniz gerekir. <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> <xref:System.Net.WebRequest> <xref:System.Net.WebRequest> Belirli bir Internet şemasına, bir düzene ve sunucuya ya da bir düzen, sunucu ve yol için bir istek kümesini işlemek üzere bir alt öğesi kaydetmek için ' ın statik metodunu kullanın.  

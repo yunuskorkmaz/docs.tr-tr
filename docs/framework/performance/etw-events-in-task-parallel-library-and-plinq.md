@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: a1a068b7ba94d5e5be4fd90d6adb48b0d25a8b9e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 4cb4967ea704064ae08d09311ff33720e3871e19
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309644"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263652"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Görev Paralel Kitaplığı ve PLINQ'da ETW Olayları
 
@@ -40,6 +40,7 @@ EVENT_DESCRIPTOR. Kimlik = 1
 |ExclusiveTo|<xref:System.Int64?displayProperty=nameWithType>|Döngü sayacının bitiş değeri|
 
 ### <a name="parallel-loop-end"></a>Paralel döngü bitişi
+
  EVENT_DESCRIPTOR. Görev = 2
 
  EVENT_DESCRIPTOR. Kimlik = 2
@@ -54,6 +55,7 @@ EVENT_DESCRIPTOR. Kimlik = 1
 |Totalyinelemelerde|<xref:System.Int64?displayProperty=nameWithType>|Toplam yineleme sayısı|
 
 ### <a name="parallel-invoke-begin"></a>Parallel Invoke BEGIN
+
  EVENT_DESCRIPTOR. Görev = 3
 
  EVENT_DESCRIPTOR. Kimlik = 3
@@ -70,6 +72,7 @@ EVENT_DESCRIPTOR. Kimlik = 1
 |ActionCount|<xref:System.Int32?displayProperty=nameWithType>|Paralel Invoke içinde yürütülecek eylemlerin sayısı.|
 
 ### <a name="parallel-invoke-end"></a>Paralel çağırma bitişi
+
  EVENT_DESCRIPTOR. Görev = 4
 
  EVENT_DESCRIPTOR. Kimlik = 4
@@ -83,11 +86,13 @@ EVENT_DESCRIPTOR. Kimlik = 1
 |Forkjoincontextıd|<xref:System.Int32?displayProperty=nameWithType>|Çatal/JOIN semantiğinin bulunduğu olaylar için iç içe ve çiftleri göstermek üzere kullanılan benzersiz bir tanımlayıcı.|
 
 ## <a name="plinq-etw-events"></a>PLıNQ ETW olayları
+
  EVENT_HEADER. PLıNQ için SağlayıcıKimliği GUID 'SI:
 
 `0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87`
 
 ### <a name="parallel-query-begin"></a>Paralel sorgu başlangıcı
+
  EVENT_DESCRIPTOR. Görev = 1
 
  EVENT_DESCRIPTOR. Kimlik = 1
@@ -101,6 +106,7 @@ EVENT_DESCRIPTOR. Kimlik = 1
 |QueryId|<xref:System.Int32?displayProperty=nameWithType>|Benzersiz bir sorgu tanımlayıcısı.|
 
 ### <a name="parallel-query-end"></a>Paralel sorgu bitişi
+
  EVENT_DESCRIPTOR. Görev = 2
 
  EVENT_DESCRIPTOR. Kimlik = 2

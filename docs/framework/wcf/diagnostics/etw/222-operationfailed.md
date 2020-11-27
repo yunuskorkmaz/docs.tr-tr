@@ -2,34 +2,37 @@
 title: 222 - OperationFailed
 ms.date: 03/30/2017
 ms.assetid: 6b530ded-8f20-4d78-8bfe-1875276df6ba
-ms.openlocfilehash: c49aad0f93ce47b66306d75741267530dc6d3fe5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64b41ee78e943ca16eaa791133454ec62ccf6ed8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781647"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263093"
 ---
 # <a name="222---operationfailed"></a>222 - OperationFailed
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|222|  
-|anahtar sözcükler|Sorun giderme, ServiceModel EndToEndMonitoring, ögesi,|  
+|ID|222|  
+|Anahtar sözcükler|EndToEndMonitoring, HealthMonitoring, sorun giderme, ServiceModel|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay yayılan olduğunda hizmet modelinin varsayılan `OperationInvoker` kendi metodu çağrılırken bir özel durumla karşılaştı. Not öğesinden türetilen, özel durumlar `FaultException` değil derleyicisindeki bu olayın neden.  
+
+ Bu olay, hizmet modelinin varsayılan `OperationInvoker` yöntemi çağrılırken bir özel durumla karşılaştıysa yayınlanır. Öğesinden türetilen özel durumların `FaultException` Bu olayın yayınlanmamasına neden olduğunu unutmayın.  
   
 ## <a name="message"></a>İleti  
- '%1' yöntemi tarafından OperationInvoker çağrıldığında işlenmeyen bir özel durum oluşturdu. Yöntem çağrısı süresi '%2' ms idi.  
+
+ ' %1 ' yöntemi, OperationInvoker tarafından çağrıldığında işlenmeyen bir özel durum oluşturdu. Yöntem çağrısı süresi ' %2 ' MS idi.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Yöntem adı|`xs:string`|CLR adı tarafından çağrılan yöntemin `OperationInvoker`.|  
-|Süresi|`xs:long`|Geçen milisaniye cinsinden zaman `OperationInvoker` yöntemini çağırmak için.|  
-|HostReference|`xs:string`|Bu alan, Web barındırılan hizmetleri, Web hiyerarşideki hizmet benzersiz olarak tanımlar. Biçimi olarak tanımlanan ' Web sitesi adı uygulamanın sanal yolu&#124;hizmet sanal yolu&#124;HizmetAdı '. Örnek: ' Varsayılan Web sitesi/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
-|AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Yöntem adı|`xs:string`|Tarafından çağrılan metodun CLR adı `OperationInvoker` .|  
+|Süre|`xs:long`|Yöntemi çağırmak için geçen milisaniye cinsinden süre `OperationInvoker` .|  
+|HostReference|`xs:string`|Web 'de barındırılan hizmetler için, bu alan hizmeti Web hiyerarşisinde benzersiz olarak tanımlar. Biçimi ' Web sitesi adı uygulama sanal yolu&#124;hizmet sanal yolu&#124;ServiceName ' olarak tanımlanmıştır. Örnek: ' Default Web site/Hesaplatooypplication&#124;/Hesaplatorservice.exe&#124;Hesaplatorservice '.|  
+|AppDomain|`xs:string`|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

@@ -6,19 +6,21 @@ helpviewer_keywords:
 - .NET Framework ETW events
 - ETW events in the .NET Framework
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
-ms.openlocfilehash: 48d0723f0f010e5102d60940f515a478725f8263
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: c8eaec37689d4c62b1faf53364ff63012b99106f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263637"
 ---
 # <a name="etw-events-in-the-net-framework"></a>.NET Framework'te ETW Olayları
+
 Windows için olay izleme (ETW), Windows işletim sistemleri tarafından sunulan yüksek performanslı, düşük iş yüklikli, ölçeklenebilir bir izleme sistemidir. .NET Framework tarafından sunulan profil oluşturma ve hata ayıklama desteğini tamamlar ve çeşitli senaryolarda sorun gidermek için kullanılabilir.  
   
  .NET Framework, ETW olay izleme ortak dil çalışma zamanı (CLR), [görev paralel kitaplığı](../../standard/parallel-programming/task-parallel-library-tpl.md)ve [paralel LINQ (PLINQ)](../../standard/parallel-programming/introduction-to-plinq.md)için kullanılabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Görev Paralel Kitaplığı ve PLINQ'da ETW Olayları](etw-events-in-task-parallel-library-and-plinq.md)  
  Paralel uygulama kodunun profilini oluşturmayı açıklar.  
   
