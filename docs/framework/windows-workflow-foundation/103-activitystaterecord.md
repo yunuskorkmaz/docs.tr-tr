@@ -2,44 +2,47 @@
 title: 103 - ActivityStateRecord
 ms.date: 03/30/2017
 ms.assetid: 57636a9a-561e-44aa-aef9-1f1894aaa6dd
-ms.openlocfilehash: 38cec570cffebf6af6d35df481cbec8c7dca8cd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02c33f02b7650c9f9b7527c319de3b58980fdd6c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924390"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275082"
 ---
 # <a name="103---activitystaterecord"></a>103 - ActivityStateRecord
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimliği|103|  
-|anahtar sözcükler|Sorun giderme, ögesi, WFTracking EndToEndMonitoring,|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulama sunucusu-uygulamalar/analitik|  
+|Id|103|  
+|Anahtar sözcükler|EndToEndMonitoring, sorun giderme, HealthMonitoring, WFTracking|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, bir etkinlik iş akışı örneği içinde ActivityStateRecord içerilip ETW İzleme katılımcı tarafından yayıldığını  
+
+ Bu olay, bir iş akışı örneği içindeki bir etkinlik ActivityStateRecord yayar olduğunda ETW izleme katılımcısı tarafından yayılır  
   
 ## <a name="message"></a>İleti  
- TrackRecord ActivityStateRecord, InstanceId = = %1, RecordNumber = %2, EventTime = %3, durum = %4, ad = %5, etkinlik kimliği = %6, ActivityInstanceId = %7, ActivityTypeName = %8, bağımsız değişkenleri = %9, değişkenleri = % 10, ek açıklamalar = % 11, ProfileName = % 12  
+
+ TrackRecord = ActivityStateRecord, InstanceId = %1, RecordNumber = %2, EventTime = %3, durum = %4, ad = %5, ActivityID = %6, ActivityInstanceId = %7, ActivityTypeName = %8, arguments = %9, değişkenler = %10, ek açıklama = %11, ProfileName = %12  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|InstanceId|xs:GUID|İş akışı örnek kimliği|  
-|Kayıt numarası|xs:long|Yayılan kaydın sıra numarası|  
-|eventTime|xs:dateTime|Olay gösteriliyordu, UTC zamanı|  
-|Durum|xs:string|Etkinlik durumu|  
-|Ad|xs:string|Olay yayılan etkinliğin görünen adı|  
-|Etkinlik Kimliği|xs:string|Etkinlik Kimliği yayma etkinliği|  
-|ActivityInstanceId|xs:string|Yayan etkinliğin etkinlik örneği kimliği|  
-|ActivityTypeName|xs:string|Yayan etkinlik türü adı|  
-|Arguments|xs:string|Bu olay ile izlenmekte olan bağımsız değişkenler.  Değerlerini bir xml öğesi biçiminde depolanır \<öğeleri >\< öğe adı "argumentName" type="System.String =" > argumentValue\</item > \< /öğeler >.  Bağımsız değişken olmadan izlenen sonra dizesini içeren \<öğeler / >. ETW olay boyutu ETW arabellek boyutu veya ETW olayı için en fazla yükü sınırlıdır. Olay boyutu ETW limitlerini sonra olayı bırakarak ek açıklamalar ve ek açıklama değeri ile değiştirerek kesilmiş \<öğeleri >...  \< /öğeler >.  Aşağıdaki türleri ToString() tarafından döndürülen şekilde, değer olarak depolanır; String,char,bool,int,short,Long,uint,ushort,ulong,System.Single,float,Double,System.Guid,System.DateTimeOffset,System.DateTime.  Diğer tüm türlerin System.Runtime.Serialization.NetDataContractSerializer kullanarak serileştirilir.|  
-|Değişkenler|xs:string|Bu olay ile izlenen değişkenleri.  Değerlerini bir xml öğesi biçiminde depolanır \<öğeleri >\< öğe adı "variableName" type="System.String =" > variableValue\</item > \< /öğeler >.  Değişken izlenen sonra dizesini içeren \<öğeler / >. ETW olay boyutu ETW arabellek boyutu veya ETW olayı için en fazla yükü sınırlıdır. Olay boyutu ETW limitlerini sonra olay ek açıklamalar bırakarak ve değişkenleri değeri ile değiştirerek kesilmiş \<öğeleri >...  \< /öğeler >.  Aşağıdaki türleri ToString() tarafından döndürülen şekilde, değer olarak depolanır; String,char,bool,int,short,Long,uint,ushort,ulong,System.Single,float,Double,System.Guid,System.DateTimeOffset,System.DateTime.  Diğer tüm türlerin System.Runtime.Serialization.NetDataContractSerializer kullanarak serileştirilir.|  
-|Ek Açıklamalar|xs:string|Bu olay için eklenen ek açıklamalar.  Değerlerini bir xml öğesi biçiminde depolanır \<öğeleri >\< öğe adı "annotationName" type="System.String =" > annotationValue\</item > \< /öğeler >.  Dize içeriyorsa hiçbir ek açıklama belirtilirse \<öğeler / >. ETW olay boyutu ETW arabellek boyutu veya ETW olayı için en fazla yükü sınırlıdır. Olay boyutu ETW limitlerini sonra olayı bırakarak ek açıklamalar ve ek açıklama değeri ile değiştirerek kesilmiş \<öğeleri >...  \< /öğeler >.|  
-|profileName|xs:string|Adı veya yayılan bu olay ile sonuçlanan bir izleme profili|  
-|HostReference|xs:string|Bu alan, barındırılan web hizmetleri için hizmet web hiyerarşideki benzersiz olarak tanımlar.  Biçimi olarak tanımlanan ' Web sitesi adı uygulamanın sanal yolu&#124;hizmet sanal yolu&#124;HizmetAdı ' örnek: ' Varsayılan Web sitesi/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|InstanceId|xs: GUID|İş akışının örnek kimliği|  
+|RecordNumber|xs: Long|Yayınlanan kaydın sıra numarası|  
+|EventTime|xs: dateTime|Olayın yayılışında UTC olarak zaman|  
+|Durum|xs: String|Etkinliğin durumu|  
+|Adı|xs: String|Olayı oluşturan etkinliğin görünen adı|  
+|Etkinlik kimliği|xs: String|Yayma etkinliğinin etkinlik kimliği|  
+|ActivityInstanceId|xs: String|Yayma etkinliğinin etkinlik örneği kimliği|  
+|ActivityTypeName|xs: String|Yayma etkinliğinin tür adı|  
+|Arguments|xs: String|Bu olayla izlenen bağımsız değişkenler.  Değerler, bir XML öğesinde, \<items> \< item  name = "argumentName" type="System.String"> bağımsız değişkenler değerindeki bir XML öğesinde depolanır \</item> \</items> .  Hiçbir bağımsız değişken izlenmediyse, dize içerir \<items/> . ETW olay boyutu ETW arabellek boyutu veya bir ETW olayı için en fazla yük ile sınırlıdır. Olayın boyutu ETW sınırlarını aşarsa, ek açıklamaları bırakarak ve ek açıklama değeri... ile değiştirilerek olay kesilir \<items> \</items> .  Aşağıdaki türler, ToString () tarafından döndürülen değerleri olarak depolanır. dize, Char, bool, int, Short, Long, uint, ushort, ulong, System. Single, float, Double, System. Guid, System. DateTimeOffset, System. DateTime.  Tüm diğer türler System. Runtime. Serialization. NetDataContractSerializer kullanılarak serileştirilir.|  
+|Değişkenler|xs: String|Bu olayla izlenen değişkenler.  Değerler, VariableValue biçimindeki bir XML öğesinde depolanır \<items> \< item  name = "variableName" type="System.String"> \</item> \</items> .  Hiçbir değişken izlenmediyse, dize içerir \<items/> . ETW olay boyutu ETW arabellek boyutu veya bir ETW olayı için en fazla yük ile sınırlıdır. Olayın boyutu ETW sınırlarını aşarsa, ek açıklamaları bırakarak ve değişkenler değeri \<items> .. \</items> . ile değiştirilerek olay kesilir.  Aşağıdaki türler, ToString () tarafından döndürülen değerleri olarak depolanır. dize, Char, bool, int, Short, Long, uint, ushort, ulong, System. Single, float, Double, System. Guid, System. DateTimeOffset, System. DateTime.  Tüm diğer türler System. Runtime. Serialization. NetDataContractSerializer kullanılarak serileştirilir.|  
+|Ek Açıklamalar|xs: String|Bu olaya eklenen ek açıklamalar.  Değerler, \<items> \< item  name = "annotationName" type="System.String"> annotationValue biçiminde bir XML öğesinde depolanır \</item> \</items> .  Ek açıklama belirtilmemişse dize içerir \<items/> . ETW olay boyutu ETW arabellek boyutu veya bir ETW olayı için en fazla yük ile sınırlıdır. Olayın boyutu ETW sınırlarını aşarsa, ek açıklamaları bırakarak ve ek açıklama değeri... ile değiştirilerek olay kesilir \<items> \</items> .|  
+|ProfileName|xs: String|Bu olayla sonuçlanan ad veya izleme profili|  
+|HostReference|xs: String|Web 'de barındırılan hizmetler için, bu alan hizmeti Web hiyerarşisinde benzersiz olarak tanımlar.  Biçimi ' Web sitesi adı uygulama sanal yolu&#124;hizmet sanal yolu&#124;HizmetAdı ' örneği: ' Default Web site/Hesaplatokıpplication&#124;/Hesaplatorservice.exe&#124;Hesaplatorservice ' olarak tanımlanmıştır|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

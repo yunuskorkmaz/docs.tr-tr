@@ -2,43 +2,47 @@
 title: 'İstemci: Kanal Fabrikaları ve Kanallar'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 25e2c034d1fefc7728667231040a97c3aeecabbd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2476147d20b1aec27986a01773c3d16fb764c665
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185688"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275638"
 ---
 # <a name="client-channel-factories-and-channels"></a>İstemci: Kanal Fabrikaları ve Kanallar
-Bu konu kanal fabrikaları ve kanalların oluşturulması nı tartışır.  
+
+Bu konuda, kanal fabrikaları ve kanallarının oluşturulması ele alınmaktadır.  
   
 ## <a name="channel-factories-and-channels"></a>Kanal Fabrikaları ve Kanallar  
- Kanal fabrikaları kanal oluşturmaktan sorumludur. Kanal fabrikaları tarafından oluşturulan kanallar ileti göndermek için kullanılır. Bu kanallar, yukarıdaki katmandan iletiyi almak, gerekli olan işlemleri gerçekleştirmek ve ardından mesajı aşağıdaki katmana göndermekten sorumludur. Aşağıdaki grafik bu işlemi göstermektedir.  
+
+ Kanal fabrikaları kanalların oluşturulmasından sorumludur. Kanal fabrikaları tarafından oluşturulan kanallar, ileti göndermek için kullanılır. Bu kanallar, yukarıdaki katmandan ileti alma, gerekli her türlü işlemi gerçekleştirme ve sonra iletiyi aşağıdaki katmana gönderme sorumluluğundadır. Aşağıdaki grafik bu süreci göstermektedir.  
   
- ![Müşteri Fabrikaları ve Kanalları](./media/wcfc-wcfchannelsigure2highlevelfactgoriesc.gif "wcfc_WCFChannelsigure2HIghLevelFactgoriesc")  
+ ![İstemci fabrikaları ve kanallar](./media/wcfc-wcfchannelsigure2highlevelfactgoriesc.gif "wcfc_WCFChannelsigure2HIghLevelFactgoriesc")  
 Kanal fabrikası kanallar oluşturur.  
   
- Kapandığında, kanal fabrikaları oluşturmuşve henüz kapatılmayan kanalların kapatılmasından sorumludur. Bir kanal dinleyicisi kapatıldığında, yalnızca yeni kanalları kabul etmeyi durdurur, ancak ileti almaya devam edebilmeleri için varolan kanalları açık bırakır, çünkü modelin burada asimetrik olduğunu unutmayın.  
+ Kapalı olduğunda, kanal fabrikaları, henüz kapanmamış oluşturdukları kanalları kapatmaktan sorumludur. Bir kanal dinleyicisi kapatıldığında, yalnızca yeni kanalları kabul etmeyi ve mevcut kanalları açık bırakır, böylece ileti almaya devam edebilmek için modelin burada asimetrik olduğunu unutmayın.  
   
- WCF bu işlem için taban sınıf yardımcıları sağlar. (Bu konuda tartışılan kanal yardımcı sınıflarının diyagramı için [Kanal Modeline Genel Bakış](channel-model-overview.md)bölümüne bakın.)  
+ WCF bu işlem için temel sınıf yardımcıları sağlar. (Bu konuda tartışılan kanal Yardımcısı sınıflarının bir diyagramı için bkz. [Kanal modeline genel bakış](channel-model-overview.md).)  
   
-- Sınıf, <xref:System.ServiceModel.Channels.CommunicationObject> <xref:System.ServiceModel.ICommunicationObject> [Gelişen Kanallar'ın](developing-channels.md)2.  
+- <xref:System.ServiceModel.Channels.CommunicationObject>Sınıfı, <xref:System.ServiceModel.ICommunicationObject> [Kanal geliştirme](developing-channels.md)ve adım 2 ' de açıklanan durum makinesini uygular ve uygular.  
   
-- Sınıf <xref:System.ServiceModel.Channels.ChannelManagerBase> uygular <xref:System.ServiceModel.Channels.CommunicationObject> ve birleşik bir taban <xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType>sınıfı sağlar ve. Sınıf, <xref:System.ServiceModel.Channels.ChannelManagerBase> uygulayan bir <xref:System.ServiceModel.Channels.ChannelBase>taban sınıf olan ile <xref:System.ServiceModel.Channels.IChannel>birlikte çalışır.
+- <xref:System.ServiceModel.Channels.ChannelManagerBase>Sınıfı, <xref:System.ServiceModel.Channels.CommunicationObject> ve için Birleşik bir temel sınıf sağlar <xref:System.ServiceModel.Channels.ChannelFactoryBase?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.ChannelListenerBase?displayProperty=nameWithType> . <xref:System.ServiceModel.Channels.ChannelManagerBase>Sınıfı ile birlikte çalışarak <xref:System.ServiceModel.Channels.ChannelBase> , uygulayan bir temel sınıf olan <xref:System.ServiceModel.Channels.IChannel> .
   
-- Sınıf, <xref:System.ServiceModel.Channels.ChannelFactoryBase> <xref:System.ServiceModel.Channels.ChannelManagerBase> <xref:System.ServiceModel.Channels.IChannelFactory> `CreateChannel` aşırı yüklemeleri tek bir `OnCreateChannel` soyut yöntemde uygular ve birleştirir.
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase>Sınıfı, <xref:System.ServiceModel.Channels.ChannelManagerBase> ve <xref:System.ServiceModel.Channels.IChannelFactory> `CreateChannel` yüklerini tek bir soyut yöntemde uygular ve birleştirir `OnCreateChannel` .
   
-- Sınıf <xref:System.ServiceModel.Channels.ChannelListenerBase> uygular. <xref:System.ServiceModel.Channels.IChannelListener> Temel devlet yönetimini hallediyor.
+- <xref:System.ServiceModel.Channels.ChannelListenerBase>Sınıfı uygular <xref:System.ServiceModel.Channels.IChannelListener> . Temel durum yönetiminden çok dikkat edin.
   
- Aşağıdaki tartışma [Transport: UDP](../samples/transport-udp.md) örneğine dayanmaktadır.  
+ Aşağıdaki tartışma, [taşıma: UDP](../samples/transport-udp.md) örneğine dayalıdır.  
   
-### <a name="creating-a-channel-factory"></a>Kanal Fabrikası Oluşturma  
- <xref:System.ServiceModel.Channels.ChannelFactoryBase>Türetilmiştir. `UdpChannelFactory` Örnek, ileti <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> kodlayıcısının ileti sürümüne erişim sağlamak için geçersiz kılar. Örnek aynı zamanda <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> durum makine <xref:System.ServiceModel.Channels.BufferManager> geçişleri bizim örnek yıkmak için geçersiz kılar.  
+### <a name="creating-a-channel-factory"></a>Kanal fabrikası oluşturma  
+
+ `UdpChannelFactory`Öğesinden türetilir <xref:System.ServiceModel.Channels.ChannelFactoryBase> . Örnek, <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> ileti kodlayıcının ileti sürümüne erişim sağlamak için geçersiz kılar. Örnek ayrıca <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> <xref:System.ServiceModel.Channels.BufferManager> durum makinesi geçişi sırasında örneğimizi kaldırmak için geçersiz kılar.  
   
-#### <a name="the-udp-output-channel"></a>UDP Çıkış Kanalı  
- Uygular `UdpOutputChannel` <xref:System.ServiceModel.Channels.IOutputChannel>. Oluşturucu bağımsız değişkenleri doğrular ve <xref:System.Net.EndPoint> geçirilene <xref:System.ServiceModel.EndpointAddress> göre bir hedef nesnesi inşa eder.  
+#### <a name="the-udp-output-channel"></a>UDP çıkış kanalı  
+
+ `UdpOutputChannel`Uygular <xref:System.ServiceModel.Channels.IOutputChannel> . Oluşturucu bağımsız değişkenleri doğrular ve geçirilen öğesine bağlı olarak bir hedef <xref:System.Net.EndPoint> nesnesi oluşturur <xref:System.ServiceModel.EndpointAddress> .  
   
- Geçersiz kılma, <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A> bu <xref:System.Net.EndPoint>ileti göndermek için kullanılan bir soket oluşturur.  
+ Geçersiz kılma, <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A> Bu iletiye ileti göndermek için kullanılan bir yuva oluşturur <xref:System.Net.EndPoint> .  
   
  ```csharp
 this.socket = new Socket(  
@@ -48,20 +52,20 @@ this.remoteEndPoint.AddressFamily,
 );  
 ```  
 
- Kanal zarif veya zarif bir şekilde kapatılabilir. Kanal incelikle kapatılırsa soket kapatılır ve taban sınıf `OnClose` yöntemine çağrı yapılır. Bu bir özel durum oluşturursa, altyapı kanalının temizlenmesini sağlamak için çağırır. `Abort`  
+ Kanal düzgün şekilde kapatılabilir veya düzgün şekilde kapatılabilir. Kanal kapalıysa, yuva kapanır ve temel sınıf yöntemine bir çağrı yapılır `OnClose` . Bu, bir özel durum oluşturursa, `Abort` kanalın temizlendiğinden emin olmak için altyapı çağrılır.  
   
 ```csharp  
 this.socket.Close();  
 base.OnClose(timeout);  
 ```  
   
- Uygula `Send()` `BeginSend()` / `EndSend()`ve . Bu iki ana bölüme ayrılır. Önce iletiyi bayt dizilimi halinde serihale getirin:  
+ `Send()`Ve uygulayın `BeginSend()` / `EndSend()` . Bu, iki ana bölümde kesilir. İlk olarak iletiyi bir bayt dizisine seri hale getirme:  
   
 ```csharp  
 ArraySegment<byte> messageBuffer = EncodeMessage(message);  
 ```  
   
- Ardından, elde edilen verileri kabloya gönderin:  
+ Sonra elde edilen verileri tel gönderin:  
   
 ```csharp  
 this.socket.SendTo(  

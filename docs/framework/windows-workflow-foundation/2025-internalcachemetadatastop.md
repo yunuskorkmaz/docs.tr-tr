@@ -2,32 +2,35 @@
 title: 2025 - InternalCacheMetadataStop
 ms.date: 03/30/2017
 ms.assetid: 88e6dbcd-1c41-40a3-9800-4c60eca7d11d
-ms.openlocfilehash: c0ac1eda7869a86fd256a64efb4268d28f48f97c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28e364623ea67dac1ee422d9110d65e65d1cef4a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009870"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275069"
 ---
 # <a name="2025---internalcachemetadatastop"></a>2025 - InternalCacheMetadataStop
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|2025|  
-|anahtar sözcükler|WFRuntime|  
+|ID|2025|  
+|Anahtar sözcükler|WFRuntime|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir etkinlik InternalCacheMetadata öğesinin tamamlanmasına gösterir.  
+
+ Bir etkinlik üzerinde InternalCacheMetadata tamamlamayı gösterir.  
   
 ## <a name="message"></a>İleti  
- '%1' faaliyete InternalCacheMetadata durduruldu.  
+
+ InternalCacheMetadata, ' %1 ' etkinliğinde durdu.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|displayName|xs:string|Etkinliğin görünen adı.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|DisplayName|xs: String|Etkinliğin görünen adı.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

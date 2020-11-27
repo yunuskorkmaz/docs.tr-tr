@@ -2,33 +2,36 @@
 title: 39457 - TrackingRecordRaised
 ms.date: 03/30/2017
 ms.assetid: 5a2731d1-c731-4b79-bb69-016cb69ef481
-ms.openlocfilehash: 104d3fb4b544172001051be7bccc3721cf8d6d1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bf343f29528bdb3941e253b2fd5b39799d94c2a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774445"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275911"
 ---
 # <a name="39457---trackingrecordraised"></a>39457 - TrackingRecordRaised
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|39457|  
-|anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgiler|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|ID|39457|  
+|Anahtar sözcükler|WFRuntime|  
+|Düzey|Bilgi|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir TrackingRecord için bir TrackingParticipant yükseltildikten gösterir.  
+
+ Bir TrackingRecord 'un bir Trackingkatılımcı olarak yapıldığını gösterir.  
   
 ## <a name="message"></a>İleti  
- İzleme kayıt %1 %2'ye yükseltilmiş.  
+
+ %1 izleme kaydı %2 öğesine yükseltildi.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Kayıt numarası|xs:string|İzleme kayıt numarası.|  
-|ParticipantId|xs:string|İzleme katılımcı.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|RecordNumber|xs: String|İzleme kayıt numarası.|  
+|ParticipantId|xs: String|İzleme katılımcısı.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

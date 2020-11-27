@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: a7025636bb1ca2ef250d7d25634bda961f2db09d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 52dc74ea1f8e86d6a92a2894b888b8d150ebf47c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811619"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276067"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme
 
@@ -36,6 +36,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
 3. Ayırma başarıyla silinirse, aşağıdaki ileti görüntülenir. **URL ayırması başarıyla silindi**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>Yeni bir güvenlik grubu ve yeni kısıtlanmış URL ayırması oluşturma  
+
  WCF URL ayırmasını kısıtlı bir rezervasyon ile değiştirmek için, önce yeni bir güvenlik grubu oluşturmanız gerekir. Bunu iki şekilde yapabilirsiniz: bir komut isteminden veya bilgisayar yönetim konsolundan. Yalnızca bir tane yapmanız gerekir.  
   
 ### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>Komut isteminden yeni bir güvenlik grubu oluşturmak için  

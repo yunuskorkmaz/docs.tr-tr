@@ -2,27 +2,30 @@
 title: 5600 - FederationMessageProcessingStarted
 ms.date: 03/30/2017
 ms.assetid: 52f36a6f-cc3f-441f-a4c2-e8df2e747d52
-ms.openlocfilehash: dfa56a36f497ed9adaa71291dfb920cb29ab9858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3e1accfea1e27da41b9bf9887d6eb1b894d9e2c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953055"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276392"
 ---
 # <a name="5600---federationmessageprocessingstarted"></a>5600 - FederationMessageProcessingStarted
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|5600|  
-|anahtar sözcükler|Güvenlik|  
+|ID|5600|  
+|Anahtar sözcükler|Güvenlik|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, Federasyon ileti işleme başlatıldıktan sonra yayınlanır.  
+
+ Bu olay, Federasyon iletisi işleme başladığında yayınlanır.  
   
 ## <a name="message"></a>İleti  
- Federasyon ileti işleme başladı.  
+
+ Federasyon iletisi işleme başladı.  
   
 ## <a name="details"></a>Ayrıntılar

@@ -2,12 +2,12 @@
 title: Kesin tür belirtilmiş Uzantılar örneği
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: e8c3bf202a1fb76d383f0a3fe15084d19a1d51fb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e5b74188d4c9c333858c60ff95a2a90b0e2e9418
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600886"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275937"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Kesin tür belirtilmiş Uzantılar örneği
 
@@ -18,6 +18,7 @@ ms.locfileid: "84600886"
  Örnek olarak, bu örnek, önerilen atom Iş parçacığı uzantıları RFC 'de tanımlanan bir uzantı öğesinin nasıl uygulanacağını gösterir. Bu yalnızca tanıtım amaçlıdır ve bu örnek önerilen belirtim için tam bir uygulama olmak üzere tasarlanmamıştır.  
   
 ## <a name="sample-xml"></a>Örnek XML  
+
  Aşağıdaki XML örneği, ek bir genişletme öğesiyle bir Atom 1,0 girişi göstermektedir `<in-reply-to>` .  
   
 ```xml  
@@ -44,6 +45,7 @@ ms.locfileid: "84600886"
  `<in-reply-to>`Öğesi, `ref` `type` `href` ek uzantı özniteliklerinin ve uzantı öğelerinin varlığına izin verirken, üç gerekli özniteliği (, ve) belirler.  
   
 ## <a name="modeling-the-in-reply-to-element"></a>-Reply-To öğesini modelleme  
+
  Bu örnekte, `<in-reply-to>` öğesi <xref:System.Xml.Serialization.IXmlSerializable> , ile kullanımını sağlayan CLR olarak modellenir <xref:System.Runtime.Serialization.DataContractSerializer> . Ayrıca, aşağıdaki örnek kodda gösterildiği gibi, öğe verilerine erişmek için bazı yöntemler ve özellikler uygular.  
   
 ```csharp  
@@ -186,6 +188,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
 ```  
   
 ## <a name="threadedfeed-and-threadeditem"></a>ThreadedFeed ve ThreadedItem  
+
  Örnekte, `SyndicationItems` `InReplyTo` uzantıları sınıfına göre modellenir `ThreadedItem` . Benzer şekilde, `ThreadedFeed` sınıfı `SyndicationFeed` öğelerinin tüm örnekleri olan bir olur `ThreadedItem` .  
   
  `ThreadedFeed`Sınıfı öğesinden devralır `SyndicationFeed` ve `OnCreateItem` döndürür `ThreadedItem` . Ayrıca `Items` `ThreadedItems` , aşağıdaki kodda gösterildiği gibi, koleksiyona erişim için bir yöntem uygular.  

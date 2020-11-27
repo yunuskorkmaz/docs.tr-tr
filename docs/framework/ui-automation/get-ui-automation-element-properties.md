@@ -9,14 +9,15 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: 277822c9d89046bfbad50df16bce83da7dd45b3b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 34a42355acce0beafbb9658baf6032e4e7e19fcb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164101"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276431"
 ---
 # <a name="get-ui-automation-element-properties"></a>UI Otomasyon Öğesi Özelliklerini Alma
+
 > [!NOTE]
 > Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -35,6 +36,7 @@ ms.locfileid: "87164101"
 2. <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>Özellik yapısını çağırın ya da alın <xref:System.Windows.Automation.AutomationElement.Cached%2A> ve üyelerinden birindeki değeri alın.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, öğesinin geçerli özelliklerini almanın çeşitli yollarını gösterir <xref:System.Windows.Automation.AutomationElement> .  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]

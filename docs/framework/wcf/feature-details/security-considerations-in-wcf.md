@@ -6,27 +6,29 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: ed0f018e0151e68afeb9a4747bf8a260faa184b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 796098258601ec5fa208fd8a8060b28c3eeeb4d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601042"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276028"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF'de Güvenlik Değerlendirmeleri
+
 Bu bölümdeki konularda, Windows Communication Foundation (WCF) uygulaması tasarlarken göz önünde bulundurmanız gereken güvenlikle ilgili çeşitli öğeler listelenir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bilgileri Açıklama](information-disclosure.md)  
+
+ [Bilgilerin Açığa Çıkması](information-disclosure.md)  
  Bilgilerin açıklanmasında veya saldırıya neden olabilecek çeşitli yollar ve bunun nasıl azaltılacağını ele alınmaktadır.  
   
- [Ayrıcalıkların Yükseltilmesi](elevation-of-privilege.md)  
+ [Ayrıcalık Yükseltme](elevation-of-privilege.md)  
  Başlangıçta verilen ve bu sorunu hafifletmenin ötesinde bir saldırgan yetkilendirme izinleri verme etkilerini açıklar.  
   
  [Hizmet Reddi](denial-of-service.md)  
  Bir sistem iletileri uygun şekilde işleyemezse ne olduğunu ve bunun nasıl azaltılacağını açıklar.  
   
- [İzinsiz Değişiklik](tampering.md)  
+ [Kurcalama](tampering.md)  
  İletilerin değiştirilmesini veya iletilerin teslimini ve bunun nasıl azaltılacağını ele alır.  
   
  [Yeniden Yürütme Saldırıları](replay-attacks.md)  
@@ -39,6 +41,7 @@ Bu bölümdeki konularda, Windows Communication Foundation (WCF) uygulaması tas
  Belirli güvenlik yönlerini desteklemeyen çeşitli senaryolar listeler ve kaçınılması veya dikkate alınmamalıdır.  
   
 ## <a name="reference"></a>Başvuru  
+
  <xref:System.IdentityModel.Tokens>  
   
  <xref:System.IdentityModel.Claims>  
@@ -48,6 +51,7 @@ Bu bölümdeki konularda, Windows Communication Foundation (WCF) uygulaması tas
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Güvenlik Kılavuzu ve En İyi Uygulamalar](security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.

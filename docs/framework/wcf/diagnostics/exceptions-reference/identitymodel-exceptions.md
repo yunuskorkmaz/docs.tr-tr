@@ -2,297 +2,298 @@
 title: IdentityModel Özel Durumları
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 08d81f4eb35d0f4bda3997d6ab4dfd0ec10407e1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486663"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275043"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel Özel Durumları
-Bu konu IdentityModel tarafından oluşturulan tüm özel durumları listeler.  
+
+Bu konu, IdentityModel tarafından oluşturulan tüm özel durumları listeler.  
   
 ## <a name="exception-list"></a>Özel durum listesi  
   
-|Kaynak kodu|Geçerli bir dize|  
+|Kaynak kodu|Geçerli dize|  
 |-------------------|--------------------|  
-|ValueMustBeOf2Types|Bu bağımsız değişkenin değeri bu iki tür olmalıdır.|  
-|SAMLSubjectNameIdentifierRequiresNameValue|SamlNameIdentifier için belirtilen 'Name', null ya da 0 uzunluğunda olamaz.|  
-|TraceCodeIssuanceTokenProviderEndSecurityNegotiation|Güvenlik görüşmeleri IssuanceTokenProvider tamamlandı.|  
-|TraceCodeSecurityNewServerSessionKeyIssued|Yeni güvenlik oturumu anahtarı, sunucu tarafından yayınlandı.|  
-|SAMLAttributeMissingNameAttributeOnRead|'Name' için Okunan SamlAttribute eksik ya da 0 uzunluğunda.|  
-|UnknownICryptoType|ICrypto uygulaması desteklenmiyor.|  
-|TraceCodeSecurityTokenProviderClosed|Güvenlik belirteci sağlayıcı kapatıldı.|  
-|SAMLUnableToLoadAdvice|Yüklenemedi \<SAML: advice > öğesi.|  
-|SAMLAuthenticationStatementMissingAuthenticationMethodOnRead|Bir SamlAuthenticationStatement ya da 0 uzunluğunda okunan 'AuthenticationMethod' özniteliği.|  
-|UnsupportedTransformAlgorithm|Desteklenmeyen dönüştürme ya da kurallaştırma algoritması.|  
-|SAMLAudienceRestrictionShouldHaveOneAudience|Bir SamlAudienceRestrictionCondition en az bir hedef kitleye (URI) içermelidir.|  
-|SAMLEvidenceShouldHaveOneAssertion|En az bir SamlAssertion kimliği veya başvuru SamlEvidence başvurmalıdır.|  
-|SAMLAudienceRestrictionInvalidAudienceValueOnRead|Okunan SamlAudienceRestrictionCondition 'Audience' öğesine bir değer eksik.|  
-|X509ChainBuildFail|Özel X.509 Sertifika zinciri oluşturma başarısız oldu. Kullanılan sertifika doğrulanamayan bir güven zincirine sahip. Sertifikayı değiştirin veya Certificatevalidationmode'u değiştirin.|  
-|XDCannotFindValueInDictionaryString|Belirli bir değerin kimlik sözlük dizesinde bulunamadı.|  
+|ValueMustBeOf2Types|Bu bağımsız değişkenin değeri bu iki türden biri olmalıdır.|  
+|Samlsubjectnameıdentifierrequiresnamevalue|SamlNameIdentifier için belirtilen ' name ' null ya da 0 uzunluğunda olamaz.|  
+|Tracecodeıssuancetokenproviderendsecuritynegotiation|IssuanceTokenProvider güvenlik anlaşmasını tamamladı.|  
+|Tracecodesecuritynewserversessionkeyyayınlandı|Sunucu tarafından yeni bir güvenlik oturumu anahtarı verildi.|  
+|SAMLAttributeMissingNameAttributeOnRead|Okunan SamlAttribute için ' name ' eksik ya da 0 uzunluğunda.|  
+|Unknowniccryptotype|Icryptoto uygulaması desteklenmiyor.|  
+|TraceCodeSecurityTokenProviderClosed|Güvenlik belirteci sağlayıcısı kapatıldı.|  
+|SAMLUnableToLoadAdvice|\<saml:advice>Öğe yüklenemedi.|  
+|SAMLAuthenticationStatementMissingAuthenticationMethodOnRead|Bir Samlauthenticationdeyimin okunduğu ' AuthenticationMethod ' özniteliği eksik ya da 0 uzunluğunda.|  
+|UnsupportedTransformAlgorithm|Desteklenmeyen dönüşüm veya kurallı kullanım algoritması.|  
+|Samdefdiencerestrictionshouldhaveoneaudience|Bir Samdefdiencerestrictioncondition en az bir Audience (URI) içermelidir.|  
+|Samlet Videnceshouldaveoneassertion|SamlEvidence, kimliğe veya başvuruya göre en az bir SamlAssertion öğesine başvurmalıdır.|  
+|Samdefdiencerestrictionınvalidaudiencevalueonread|Okunan Samdefdiencerestrictioncondition, ' Audience ' öğesinde bir değer içermiyor.|  
+|X509ChainBuildFail|Belirli X. 509.440 sertifika zinciri oluşturulamadı. Kullanılan sertifikanın doğrulanamayan bir güven zinciri vardır. Sertifikayı değiştirin veya certificateValidationMode değerini değiştirin.|  
+|Xdcannotfindvalueındictionarystring|Belirtilen değer kimliği, sözlük dizesinde bulunamadı.|  
 |TraceCodeImportSecurityChannelBindingEntry|Güvenlik ImportChannelBinding başlatılıyor.|  
-|PrivateKeyExchangeNotSupported|Özel anahtarı KeySpec öğesinin exchange desteklemez.|  
-|TokenProviderUnableToGetToken|Belirli belirteç sağlayıcısı bir güvenlik belirteci sağlayamadı.|  
+|PrivateKeyExchangeNotSupported|Özel anahtar, Exchange KeySpec 'i desteklemiyor.|  
+|TokenProviderUnableToGetToken|Özel belirteç sağlayıcı bir güvenlik belirteci sağlayamıyor.|  
 |SAMLEntityCannotBeNullOrEmpty|Belirli SamlAssertion varlığı null veya boş olamaz.|  
-|SAMLAssertionRequireOneStatement|Bir SamlAssertion en az bir deyim gerektirir. Oluşturmakta olduğunuz SamlAssertion en az bir SamlStatement eklediğinizden emin olun.|  
-|AESInvalidInputBlockSize|Giriş boyutu belirli baytın katlarından biri olmalıdır.|  
+|SAMLAssertionRequireOneStatement|Bir SamlAssertion en az bir ifade gerektirir. Oluşturmakta olduğunuz SamlAssertion öğesine en az bir Samldeyimin eklendiğinden emin olun.|  
+|Aesinvalidınputblocksize|Giriş boyutu, belirli baytların katlarından biri olmalıdır.|  
 |AESCryptAcquireContextFailed|CSP bağlamı alınamadı.|  
-|SAMLAssertionRequireOneStatementOnRead|Okunan SamlAssertion herhangi bir SamlStatement içermiyordu. Bir SamlAssertion en az bir SamlStatement içermelidir.|  
-|TraceCodeSecuritySessionClosedFaultReceived|İstemci güvenlik oturumu sunucudan oturum kapalı hatası alındı.|  
-|TraceCodeIssuanceTokenProviderRedirectApplied|Bir yeniden yönlendirme üstbilgisi IssuanceTokenProvider uygulanır.|  
-|TraceCodeSecuritySessionClosedFaultSendFailure|İstemciye hata kapalı bir güvenlik oturumu göndermeye çalışırken bir hata oluştu.|  
+|SAMLAssertionRequireOneStatementOnRead|Okunan SamlAssertion hiçbir Samldeyimin içermiyordu. SamlAssertion, en az bir Samldeyimin içermelidir.|  
+|Tracecodesecuritysessionclosedfaultalındı|İstemci güvenlik oturumu, sunucudan oturum kapalı hatası aldı.|  
+|Tracecodeıssuancetokenproviderredirectapphesaplanır|IssuanceTokenProvider bir yeniden yönlendirme üstbilgisi uyguladı.|  
+|TraceCodeSecuritySessionClosedFaultSendFailure|İstemciye bir güvenlik oturumu kapalı hatası gönderilirken bir hata oluştu.|  
 |ValueMustBeZero|Bu bağımsız değişkenin değeri 0 olmalıdır.|  
-|SAMLUnableToResolveSignatureKey|SamlAssertion imzasında bulunan SecurityKeyIdentifier bulunan çözmek yüklenemiyor. Belirli bir sertifika veren için SamlAssertion imzası doğrulanamıyor.|  
-|X509IsNotInTrustedStore|Özel X.509 sertifikası güvenilir kişiler deposunda değil.|  
-|SAMLElementNotRecognized|Belirli bir öğe desteklenmiyor.|  
-|SAMLAuthorizationDecisionStatementMissingResourceAttributeOnRead|'Resource' özniteliği okunan özniteliği eksik ya da 0 uzunluğunda.|  
-|SamlTokenMissingSignature|SamlAssertion imzalanmamış. SamlAssertion öğeleri signingcredential değerleri ayarlanarak imzalanabilir.|  
-|ExpectedElementMissing|Belirli ad alanıyla beklenen öğesi eksik.|  
-|NoKeyIdentifierClauseFound|Belirli türünde yan tümce SecurityKeyIdentifier içinde bulunamadı.|  
-|MissingPrivateKey|X.509 Sertifika özel anahtarı yok.|  
-|UnexpectedEOFFromReader|XML okuyucusundan beklenmeyen dosya sonu.|  
-|UnsupportedKeyDerivationAlgorithm|Belirli bir anahtar türetme algoritması desteklenmiyor.|  
-|TokenDoesNotSupportKeyIdentifierClauseCreation|Özel belirteç özel anahtarı tanımlayıcısı yan tümcesi oluşturulmasını desteklemiyor.|  
-|LastMessageNumberExceeded|Sıra numarası protokolü ihlali algılandı.|  
-|SymmetricKeyLengthTooShort|Belirtilen simetrik anahtarın uzunluğu çok kısa.|  
-|SAMLAuthorityBindingMissingAuthorityKindOnRead|Bir 'AuthorityKind' saptandı salt okunur olan SamlAuthorityBinding, eksik ya da 0 uzunluğunda.  Buna izin verilmez.|  
-|XmlTokenBufferIsEmpty|XmlTokenBuffer boştur.|  
-|InvalidXmlQualifiedName|Bir Xml tam adı bekleniyordu, ancak geçersiz bir ad bulunamadı.|  
-|SAMLAuthorityKindMissingName|SamlAuthorityBinding 'AuthorityKind' temsil eden XmlQualifiedName null ya da 0 uzunluğunda olamaz.|  
-|AESCryptEncryptFailed|Belirli verileri şifrelemek başarısız oldu.|  
-|AuthorizationContextCreated|Yetkilendirme bağlamında belirli kimliği ile oluşturulur.|  
-|SamlSerializerUnableToReadSecurityKeyIdentifier|SamlSerializer, SecurityKeyIdentifier okuma özellikli bir SecurityTokenSerializer içermiyor. Özel bir SecurityKeyIdentifier kullanıyorsanız, özel bir SecurityTokenSerializer sağlamalısınız.|  
-|TraceCodeIssuanceTokenProviderServiceTokenCacheFull|Hizmet belirteç önbelleği IssuanceTokenProvider azaltıldı.|  
-|TraceCodeSecurityTokenProviderOpened|Güvenlik belirteci sağlayıcı açıldı.|  
-|PublicKeyNotRSA|Ortak anahtarı bir RSA anahtarı değil.|  
-|InvalidReaderState|Belirli bir durum için sağlanan giriş okuyucu geçersiz.|  
-|UnableToResolveReferenceUriForSignature|Özet işlem için özel URI imzasında çözmek yüklenemiyor.|  
-|EmptyBase64Attribute|Ad alanı ve gerekli base64 öznitelik adı için boş bir değer bulundu.|  
-|SAMLSubjectRequiresConfirmationMethodWhenConfirmationDataOrKeyInfoIsSpecified|Onay verileri veya KeyInfo belirtildiğinde SAML SubjectConfirmation onay yöntemini gerektirir.|  
-|SAMLAudienceRestrictionShouldHaveOneAudienceOnRead|Okunan SamlAudienceRestrictionCondition 'Audience' en az bir değer içermelidir. Hiçbiri bulunamadı.|  
-|TokenProviderUnableToRenewToken|Belirli belirteç sağlayıcısı güvenlik belirtecini yenileyemedi.|  
-|AESIVLengthNotSupported|Belirli BITS IV desteklenmiyor. Yalnızca 128 bit IV desteklenir.|  
-|SAMLAuthorityBindingMissingAuthorityKind|Bir SamlAuthorityBinding 'AuthorityKind' içermelidir. null değil.|  
+|SAMLUnableToResolveSignatureKey|SamlAssertion imzasında bulunan SecurityKeyIdentifier çözümlenemedi. SamlAssertion imzası, belirli bir veren için doğrulanamıyor.|  
+|X509IsNotInTrustedStore|Belirli X. 509.440 sertifikası güvenilir kişiler deposunda değil.|  
+|Samtalementnottanınmış|Belirli öğe desteklenmiyor.|  
+|SAMLAuthorizationDecisionStatementMissingResourceAttributeOnRead|Okunan SamlAuthorizationDecisionStatement 'ın ' Resource ' özniteliği eksik ya da 0 uzunluğunda.|  
+|SamlTokenMissingSignature|SamlAssertion imzalanmadı. SamlAssertions, SigningCredentials ayarlanarak imzalanabilir.|  
+|ExpectedElementMissing|Belirtilen ad alanı ile beklenen öğe eksik.|  
+|Nokeyıdentifierclausefound|SecurityKeyIdentifier içinde belirli türde bir yan tümce bulunamadı.|  
+|MissingPrivateKey|Özel anahtar X. 509.440 sertifikasında yok.|  
+|UnexpectedEOFFromReader|XML okuyucudan beklenmeyen EOF.|  
+|Unsupportedkeytürettionalgorithm|Belirli anahtar türetme algoritması desteklenmiyor.|  
+|Tokenyok Notsupportkeyıdentifierclauseoluşturma|Belirli belirteç, belirli anahtar tanımlayıcı yan tümce oluşturmayı desteklemiyor.|  
+|LastMessageNumberExceeded|Sıra numarası Protokolü ihlali algılandı.|  
+|SymmetricKeyLengthTooShort|Belirtilen simetrik anahtar uzunluğu çok kısa.|  
+|SAMLAuthorityBindingMissingAuthorityKindOnRead|Okunan SamlAuthorityBinding, eksik olan veya 0 uzunluğunda bir ' AuthorityKind ' içerdiğini buldu.  Buna izin verilmez.|  
+|XmlTokenBufferIsEmpty|XmlTokenBuffer boş.|  
+|Invalidxmlqualifiedname|XML nitelenmiş adı bekleniyordu, ancak geçersiz bir ad bulundu.|  
+|Samlauthority, missingName|SamlAuthorityBinding içindeki ' AuthorityKind ' öğesini temsil eden XmlQualifiedName null ya da 0 uzunluğunda olamaz.|  
+|AESCryptEncryptFailed|Belirli veriler şifrelenemedi.|  
+|AuthorizationContextCreated|Belirtilen kimliğe sahip yetkilendirme bağlamı oluşturuldu.|  
+|Samlserializerunabletoreadsecuritykeyıdentifier|SamlSerializer, SecurityKeyIdentifier 'ı okuyabilen bir SecurityTokenSerializer içermiyor. Özel bir SecurityKeyIdentifier kullanıyorsanız, özel bir SecurityTokenSerializer sağlamanız gerekir.|  
+|Tracecodeıssuancetokenproviderservicetokencachefull|IssuanceTokenProvider hizmet belirteci önbelleğini azalttı.|  
+|Tracecodesecuritytokenprovideraçıldı|Güvenlik belirteci sağlayıcısı açıldı.|  
+|PublicKeyNotRSA|Ortak anahtar bir RSA anahtarı değil.|  
+|Invalidreaderstate|Belirtilen giriş okuyucusu için belirtilen durum geçersiz.|  
+|UnableToResolveReferenceUriForSignature|Özet hesaplamak için İmzadaki belirli URI çözümlenemiyor.|  
+|EmptyBase64Attribute|Gerekli Base64 özniteliği adı ve ad alanı için boş bir değer bulundu.|  
+|SAMLSubjectRequiresConfirmationMethodWhenConfirmationDataOrKeyInfoIsSpecified|SAML SubjectConfirmation, onay verileri veya KeyInfo belirtildiğinde bir onay yöntemi gerektirir.|  
+|Samdefdiencerestrictionshouldhaveoneaudienceonread|Okunan Samdefdiencerestrictioncondition, en az bir ' Audience ' değeri içermelidir. Hiçbiri bulunamadı.|  
+|TokenProviderUnableToRenewToken|Özel belirteç sağlayıcı güvenlik belirtecini yenileyemedi.|  
+|AESIVLengthNotSupported|Belirli bitler IV desteklenmez. Yalnızca 128 bit IV desteklenir.|  
+|SAMLAuthorityBindingMissingAuthorityKind|Bir SamlAuthorityBinding null olmayan bir ' AuthorityKind ' içermelidir.|  
 |TraceCodeSecuritySessionDemuxFailure|Gelen ileti, var olan bir güvenlik oturumunun parçası değil.|  
-|TokenRenewalNotSupported|Belirli belirteç sağlayıcısı, belirteç yenilemeyi desteklemiyor.|  
+|TokenRenewalNotSupported|Belirli belirteç sağlayıcısı belirteç yenilemeyi desteklemiyor.|  
 |AtLeastOneReferenceRequired|Bir imzada en az bir başvuru gereklidir.|  
-|SAMLSignatureAlreadyRead|İmza zaten SAML onaylaması okunur.|  
-|AlgorithmAndPrivateKeyMisMatch|Belirtilen algoritma ve özel anahtarı eşleşmiyor.|  
+|Samltifturealreadyread|İmza, SAML onaylama işlemi içinde zaten okundu.|  
+|AlgorithmAndPrivateKeyMisMatch|Belirtilen algoritma ve özel anahtar eşleşmiyor.|  
 |EmptyTransformChainNotSupported|Boş dönüştürme zinciri desteklenmiyor.|  
-|SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper&#124;'offset' olan aralık dışında.|  
-|SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper&#124;' boyutudur ' aralık dışında. SecurityTokenManagerCannotCreateAuthenticatorForRequirement = güvenlik belirteci yöneticisi, belirli bir gereksinim için bir belirteç kimlik doğrulayıcısı oluşturamıyor.|  
-|UnableToCreateKeyedHashAlgorithm|Belirli bir imza algoritması belirli değerinden bir KeyedHashAlgorithm oluşturulamadı.|  
-|SAMLUnableToLoadAssertion|\<SAML: assertion > öğesi yüklenemedi.|  
-|X509FindValueMismatchMulti|Belirli X509FindType türü bağımsız değişkeni findValue 2 değerlerden biri olmasını gerektirir. Bağımsız değişken findValue başka bir türüdür.|  
-|TraceCodeSecurityIdentityDeterminationSuccess|Kimlik için bir EndpointAddress belirlendi.|  
-|UndefinedUseOfPrefixAtElement|Öğe kullanılan belirli ön tanımlı ad alanı yok.|  
-|TraceCodeSecuritySessionResponderOperationFailure|Güvenlik oturumu işlem sunucusunda başarısız oldu.|  
-|CannotFindCert|Arama ölçütleri kullanılarak X.509 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, FindValue'i tıklatın.|  
-|X509InvalidUsageTime|Belirli bir X.509 sertifikası kullanım süresi geçerli değil. Kullanım süresi NotBefore zamanı ile NotAfter zamanı arasında düşmüyor.|  
-|TraceCodeSecurityIdentityDeterminationFailure|Kimlik için bir EndpointAddress belirlenemiyor.|  
-|AsyncObjectAlreadyEnded|End yöntemi, bu zaman uyumsuz sonuç nesnesi üzerinde zaten çağrıldı.|  
-|ExternalDictionaryDoesNotContainAllRequiredStrings|Dış sözlüğü tanımlar için gerekli tüm dizeleri içermiyor. Spesifik dize, uzak sözlükte kullanılamaz.|  
-|TraceCodeSecuritySessionKeyRenewalFaultReceived|İstemci güvenlik oturumu sunucudan bir anahtar yenileme hatası alındı.|  
-|SAMLActionNameRequired|SamlAction temsil eden dize null ya da 0 uzunluğunda olamaz.|  
-|SignatureVerificationFailed|İmza doğrulaması başarısız oldu.|  
-|TraceCodeSecurityContextTokenCacheFull|SecurityContextSecurityToken önbellek dolu.|  
-|SAMLAssertionMissingMajorVersionAttributeOnRead|Okunan SamlAssertion için MajorVersion eksik ya da 0 uzunluğunda.|  
-|SamlAttributeClaimRightShouldBePossessProperty|Bu SamlAttribute Oluşturucu talep sağındaki değer isteğinin System.IdentityModel.Claims.Rights.PossessProperty sahip olmasını gerektirir.|  
-|AuthorizationPolicyEvaluated|Belirli kimliğine sahip ilke değerlendirilir.|  
-|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<SAML: Conditions > öğesi yüklenemedi.|  
-|AESKeyLengthNotSupported|Belirli bir bit anahtar desteklenmiyor. Yalnızca 128, 192 ve 256 bit anahtar desteklenir.|  
+|SspiWrapperEncryptDecryptAssert1|SSPIWrapper:: EncryptDecryptHelper&#124; ' fark ' Aralık dışında.|  
+|SspiWrapperEncryptDecryptAssert2|SSPIWrapper:: EncryptDecryptHelper&#124; ' size ' Aralık dışında. Securitytokenmanagercannotcreateauthenticator Torforrequirement = güvenlik belirteci Yöneticisi, belirli bir gereksinim için bir belirteç kimlik doğrulayıcısı oluşturamıyor.|  
+|UnableToCreateKeyedHashAlgorithm|Belirli bir imza algoritması için belirli bir değerden bir KeyedHashAlgorithm oluşturulamıyor.|  
+|SAMLUnableToLoadAssertion|\<saml:assertion>Öğe yüklenemedi.|  
+|X509FindValueMismatchMulti|Belirli X509FindType, findValue bağımsız değişkeninin türünü 2 değerden biri olmasını gerektirir. FindValue bağımsız değişkeni başka bir türde.|  
+|Tracecodesecurityıdentitydeterminationsuccess|Bir EndpointAddress için kimlik belirlendi.|  
+|Undefineğitiseofprefixatelement|Öğesinde kullanılan özel önek tanımlanmış bir ad alanı içermiyor.|  
+|TraceCodeSecuritySessionResponderOperationFailure|Güvenlik oturumu işlemi sunucuda başarısız oldu.|  
+|CannotFindCert|Özel arama ölçütleri kullanılarak X. 509.952 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, FindValue.|  
+|X509InvalidUsageTime|Belirli X. 509.440 sertifikası kullanım saati geçersiz. Kullanım süresi gerekli NotBefore saati ile NotAfter saati arasında değil.|  
+|Tracecodesecurityıdentitydeterminationfailure|Bir EndpointAddress için kimlik belirlenemiyor.|  
+|AsyncObjectAlreadyEnded|End yöntemi bu zaman uyumsuz sonuç nesnesi üzerinde zaten çağrılmış.|  
+|Externaldictionarysız Notcontainallrequiredstrings|Dış sözlük tüm gerekli dizeler için tanımlar içermiyor. Belirli dize uzak sözlükte kullanılamıyor.|  
+|TraceCodeSecuritySessionKeyRenewalFaultReceived|İstemci güvenlik oturumu, sunucudan bir anahtar yenileme hatası aldı.|  
+|SAMLActionNameRequired|SamlAction öğesini temsil eden dize null ya da 0 uzunluğunda olamaz.|  
+|Signaturedoğrulamaları Icationfailed|İmza doğrulaması başarısız oldu.|  
+|TraceCodeSecurityContextTokenCacheFull|SecurityContextSecurityToken önbelleği dolu.|  
+|SAMLAssertionMissingMajorVersionAttributeOnRead|Okunan SamlAssertion için MajorVersion, eksik ya da 0 uzunluğunda.|  
+|SamlAttributeClaimRightShouldBePossessProperty|Bu SamlAttribute Oluşturucusu, talebin sağ öğesinin System. IdentityModel. Claim. Rights. PossessProperty değerine sahip olmasını gerektirir.|  
+|AuthorizationPolicyEvaluated|Belirli kimliğe sahip ilke değerlendirilir.|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<saml:conditions>Öğe yüklenemedi.|  
+|AESKeyLengthNotSupported|Belirli bit anahtarı desteklenmiyor. Yalnızca 128, 192 ve 256 bit anahtarı desteklenir.|  
 |UserNameCannotBeEmpty|Kullanıcı adı boş olamaz.|  
-|AlgorithmAndPublicKeyMisMatch|Belirtilen algoritma ve ortak anahtarı eşleşmiyor.|  
-|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<SAML: Conditions > öğesi yüklenemedi.|  
-|SamlAssertionMissingSigningCredentials|Samlassertion'da SigningCredentials ayarlanmamış. SamlAssertions oturum açın, Lütfen geçerli bir SigningCredentials devam etmek için Samlassertion'da ayarlayın.|  
-|SspiPayloadNotEncrypted|İkili verileri SSPI güvenlik bağlamı ile şifrelenmemiş.|  
-|SAMLAuthorizationDecisionShouldHaveOneActionOnRead|Tüm SamlAction okunan özniteliği içermiyor.|  
-|TraceCodeSecurityBindingSecureOutgoingMessageFailure|Giden ileti güvenlik protokolü koruyamazsınız.|  
-|UndefinedUseOfPrefixAtAttribute|Belirli özellik kullanılan belirli ön tanımlı ad alanı yok.|  
-|NoInputIsSetForCanonicalization|Herhangi bir giriş Kurallaştırılan çıktı yazmak için ayarlanır.|  
-|TraceCodeSecurityPendingServerSessionAdded|Bekleyen bir güvenlik oturumu sunucuya eklendi.|  
-|AsyncCallbackException|Bir AsyncCallback bir özel durum oluşturdu.|  
-|PrivateKeyNotRSA|Özel anahtarı bir RSA anahtarı değil.|  
-|TraceCodeSecurityClientSessionKeyRenewed|İstemci güvenlik oturumu oturum anahtarı yenilendi.|  
-|SAMLAuthorizationDecisionStatementMissingDecisionAttributeOnRead|'Kararı' okunan özniteliği eksik ya da 0 uzunluğunda.|  
-|SAMLAttributeNameAttributeRequired|SamlAttribute için belirtilen 'Name', null ya da 0 uzunluğunda olamaz.|  
-|SamlSerializerRequiresExternalSerializers|SamlSerializer belirteç içinde bulunan SecurityKeyIdentifier öğesini serileştirmek bir SecurityTokenSerializer öğesine gereksinim duyar.|  
-|UnableToResolveKeyReference|Belirteç çözümleyici belirli güvenlik anahtarı başvurusunu çözümleyemiyor.|  
-|UnsupportedKeyWrapAlgorithm|Belirli bir anahtarı kaydırma algoritması desteklenmiyor.|  
-|SAMLAssertionMissingIssuerAttributeOnRead|Okunan SamlAssertion için 'Issuer' eksik ya da 0 uzunluğunda.|  
-|TraceCodeIssuanceTokenProviderUsingCachedToken|IssuanceTokenProvider önbelleğe alınan hizmet belirteci kullanılır.|  
-|AESCryptGetKeyParamFailed|Özel anahtar parametresi alınamadı.|  
-|InvalidNamespaceForEmptyPrefix|Boş önek için ad alanı geçersiz.|  
-|AESCipherModeNotSupported|Belirli bir şifreleme modu desteklenmiyor. Yalnızca CBC desteklenir.|  
-|ArgumentCannotBeEmptyString|Bağımsız değişkeni boş olmayan bir dize olmalıdır.|  
-|SAMLAssertionMissingMinorVersionAttributeOnRead|Okunan SamlAssertion için MinorVersion eksik ya da 0 uzunluğunda.|  
+|AlgorithmAndPublicKeyMisMatch|Belirtilen algoritma ve ortak anahtar eşleşmiyor.|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<saml:conditions>Öğe yüklenemedi.|  
+|SamlAssertionMissingSigningCredentials|SigningCredentials, SamlAssertion üzerinde ayarlanmamış. SamlAssertions, lütfen devam etmek için SamlAssertion üzerinde geçerli bir SigningCredentials ayarlayın.|  
+|Sspipayloadnotşifrelenmiştir|İkili veriler SSPI güvenlik içeriğiyle şifrelenmedi.|  
+|SAMLAuthorizationDecisionShouldHaveOneActionOnRead|Okunan SamlAuthorizationDecisionStatement, herhangi bir SamlAction içermiyor.|  
+|TraceCodeSecurityBindingSecureOutgoingMessageFailure|Güvenlik protokolü giden iletiyi güvenli hale alamaz.|  
+|UndefinedUseOfPrefixAtAttribute|Belirli öznitelikte kullanılan özel önek tanımlanmış bir ad alanına sahip değil.|  
+|Noinputissetforkurallaştırma|Kurallı çıkışı yazmak için ayarlanmış bir giriş yok.|  
+|TraceCodeSecurityPendingServerSessionAdded|Sunucuya bekleyen bir güvenlik oturumu eklenir.|  
+|AsyncCallbackException|Bir AsyncCallback özel durum oluşturdu.|  
+|PrivateKeyNotRSA|Özel anahtar bir RSA anahtarı değil.|  
+|Tracecodesecurityclientsessionkeyyeniledi|İstemci güvenlik oturumu, oturum anahtarını yeniledi.|  
+|SAMLAuthorizationDecisionStatementMissingDecisionAttributeOnRead|Okunan SamlAuthorizationDecisionStatement için ' karar ' eksik ya da 0 uzunluğunda.|  
+|SAMLAttributeNameAttributeRequired|SamlAttribute için belirtilen ' name ' null ya da 0 uzunluğunda olamaz.|  
+|Samlserializerrequiresexternalserileştiriciler|SamlSerializer, belirteçte bulunan SecurityKeyIdentifier seri hale getirmek için bir SecurityTokenSerializer gerektirir.|  
+|UnableToResolveKeyReference|Belirteç çözümleyici, belirli güvenlik anahtarı başvurusunu çözümleyemiyor.|  
+|UnsupportedKeyWrapAlgorithm|Belirli anahtar kaydırması algoritması desteklenmiyor.|  
+|SAMLAssertionMissingIssuerAttributeOnRead|Okunan SamlAssertion için ' Issuer ' eksik ya da 0 uzunluğunda.|  
+|Tracecodeıssuancetokenproviderusingcachedtoken|IssuanceTokenProvider önbelleğe alınmış hizmet belirtecini kullandı.|  
+|AESCryptGetKeyParamFailed|Belirli anahtar parametresi alınamadı.|  
+|Invalidnamespaceforemptypredüzeltmesini|Ad alanı boş önek için geçersiz.|  
+|Aesciphermonominal Tsupported|Belirli şifreleme modu desteklenmiyor. Yalnızca CBC desteklenir.|  
+|ArgumentCannotBeEmptyString|Bağımsız değişken boş olmayan bir dize olmalıdır.|  
+|SAMLAssertionMissingMinorVersionAttributeOnRead|Okunan SamlAssertion için MinorVersion değeri eksik ya da 0 uzunluğunda.|  
 |SpecifiedStringNotAvailableInDictionary|Belirtilen dize geçerli sözlükte bir giriş değil.|  
-|KerberosApReqInvalidOrOutOfMemory|AP-REQ geçersiz olduğundan veya sistem, yeterli belleğe sahip değil.|  
-|FailLogonUser|LogonUser belirtilen kullanıcı için başarısız oldu. Kullanıcının geçerli bir Windows hesabı olduğundan emin olun.|  
-|ValueMustBeNonNegative|Bu bağımsız değişkenin değeri negatif olmayan olmalıdır.|  
-|X509ValidationFail|Belirtilen X.509 Sertifika doğrulama başarısız oldu.|  
-|TraceCodeSecuritySessionRequestorOperationSuccess|Güvenlik oturumu işlem istemcide başarıyla tamamlandı.|  
-|SAMLActionNameRequiredOnRead|SamlAction için okunabilir dize eksik ya da 0 uzunluğunda.|  
-|KerberosMultilegsNotSupported|Kimlik, UPN belirtilir. Bir kullanıcı hesabı altında çalışan bir hizmete kimlik doğrulaması, Kerberos çok bacak desteklenmeyen olduğu gerektirir.|  
-|SAMLAssertionIdRequired|'In 'Assertionıd'si bir SamlAssertion null veya boş olamaz.|  
-|InvalidOperationForWriterState|Belirtilen işlem belirtilen XmlWriter durumu geçersiz.|  
-|CannotValidateSecurityTokenType|Belirtilen bir güvenlik belirteci kimlik doğrulayıcı, belirtilen türde bir belirteç doğrulanamıyor.|  
-|X509FindValueMismatch|Belirtilen X509FindType türü bağımsız değişkeni findValue belirtilen bir değer olmasını gerektirir. Bağımsız değişken findValue başka bir türüdür.|  
-|TraceCodeSecurityClientSessionCloseSent|Bir iletiyi kapat tarafından istemci güvenlik oturumu gönderildi.|  
-|SuiteDoesNotAcceptAlgorithm|Belirtilen algoritma belirtilen işlem için belirtilen algoritma paketi tarafından kabul edilmiyor|  
-|TraceCodeSecuritySessionRequestorOperationFailure|İstemci güvenlik oturumu işlemi başarısız oldu.|  
-|SAMLUnableToLoadStatement|Bir SamlStatement yüklenemedi.|  
-|InnerReaderMustBeAtElement|İç okuyucu öğe olmalıdır.|  
+|KerberosApReqInvalidOrOutOfMemory|AP-REQ geçersiz veya sistem yeterli belleğe sahip değil.|  
+|FailLogonUser|LogonUser, belirtilen kullanıcı için başarısız oldu. Kullanıcının geçerli bir Windows hesabı olduğundan emin olun.|  
+|ValueMustBeNonNegative|Bu bağımsız değişkenin değeri negatif olmayan bir değer olmalıdır.|  
+|X509ValidationFail|Belirtilen X. 509.440 sertifikası doğrulaması başarısız oldu.|  
+|Tracecodesecuritysessionrequestoroperationbaşarılı|Güvenlik oturumu işlemi istemcide başarıyla tamamlandı.|  
+|SAMLActionNameRequiredOnRead|SamlAction için okunan dize yok ya da 0 uzunluğunda.|  
+|KerberosMultilegsNotSupported|Kimlik, UPN olarak belirtilir. Bir kullanıcı hesabı altında çalışan bir hizmetin kimlik doğrulaması, desteklenmeyen Kerberos çoklu tarafı gerektirir.|  
+|SAMLAssertionIdRequired|Bir SamlAssertion için ' AssertionId 'si ' null veya boş olamaz.|  
+|InvalidOperationForWriterState|Belirtilen işlem belirtilen XmlWriter durumunda geçersiz.|  
+|CannotValidateSecurityTokenType|Belirtilen güvenlik belirteci kimlik doğrulayıcısı belirtilen türün bir belirtecini doğrulayamıyor.|  
+|X509FindValueMismatch|Belirtilen X509FindType, findValue bağımsız değişkeninin türünü belirtilen değer olarak gerektiriyor. FindValue bağımsız değişkeni başka bir türde.|  
+|TraceCodeSecurityClientSessionCloseSent|İstemci güvenlik oturumu tarafından bir kapatma iletisi gönderildi.|  
+|Suitelicnotacceptalgorithd|Belirtilen algoritma paketi tarafından belirtilen işlem için belirtilen algoritma kabul edilmedi|  
+|Tracecodesecuritysessionrequestoroperationhatası|İstemci güvenlik oturumu işlemi başarısız oldu.|  
+|Samlunabletoloaddeyimin|Bir Samldeyimin yüklemesi başarısız oldu.|  
+|Innerreadermusde TElement|İç okuyucu, öğesinde olmalıdır.|  
 |UnableToCreateTokenReference|Güvenlik belirteci başvurusu oluşturulamıyor.|  
-|TraceCodeSecurityBindingIncomingMessageVerified|Gelen ileti güvenlik protokolü doğrulandı.|  
-|ObjectIsReadOnly|Nesne salt okunur.|  
-|TraceCodeSecurityClientSessionPreviousKeyDiscarded|İstemci güvenlik oturumu önceki oturum anahtarının atıldı.|  
-|SAMLTokenTimeInvalid|SamlToken zaman geçerli. Belirteç dışında etkili ve sona erme saati geçerli zamandır.|  
-|TraceCodeSecurityIdentityVerificationSuccess|Kimlik doğrulama başarılı oldu.|  
+|Tracecodesecuritybindingıncomingmessagedoğrulandı|Güvenlik protokolü gelen iletiyi doğruladı.|  
+|Objectıreadonly|Nesne salt okunurdur.|  
+|Tracecodesecurityclientsessionpreviouskeyatılan|İstemci güvenlik oturumu önceki oturum anahtarını iptal etti.|  
+|Samltokentimegeçersiz|SamlToken zaman geçerli değil. Geçerli saat, belirtecin etkin ve sona erme saatinin dışındadır.|  
+|Tracecodesecurityıdentitydoğrulamaları Icationsuccess|Kimlik doğrulaması başarılı.|  
 |SigningTokenHasNoKeys|Belirtilen imzalama belirtecinin anahtarı yok.|  
-|TraceCodeSecurityIdentityVerificationFailure|Kimlik doğrulaması başarısız oldu.|  
-|AESCryptImportKeyFailed|Anahtar malzemesi içeri aktarılamadı.|  
-|FailInitializeSecurityContext|InitializeSecurityContent başarısız oldu. Hizmet asıl adının doğru olduğundan emin olun.|  
-|TraceCodeStreamSecurityUpgradeAccepted|Akış güvenlik yükseltmesi başarıyla kabul edildi.|  
-|SAMLAuthorityBindingRequiresLocation|SamlAuthorityBinding üzerinde belirtilen 'Konum' özniteliği null ya da 0 uzunluğunda olamaz.|  
-|PublicKeyNotDSA|Ortak anahtarı, DSA anahtarı değil.|  
-|ImpersonationLevelNotSupported|Kerberos kullanarak kimlik doğrulama modları, belirtilen kimliğe bürünme düzeyini desteklemez. Geçerli tanımlama veya kimliğe bürünme düzeyini belirtin.|  
-|RequiredTargetNotSigned|Belirtilen kimliğe sahip bir öğe imzalanması için gereklidir ancak değildi.|  
-|SAMLAuthenticationStatementMissingAuthenticationInstanceOnRead|Bir SamlAuthenticationStatement ya da 0 uzunluğunda okunan 'AuthenticationInstant' özniteliği.|  
-|SAMLEvidenceShouldHaveOneAssertionOnRead|Okunan SamlEvidence, başvuru veya katıştırılmış bir SamlAssertion içermiyordu.|  
-|LengthOfArrayToConvertMustGreaterThanZero|Bir tamsayıya dönüştürmek için dizinin uzunluğu 0'dan büyük olmalıdır.|  
-|InvalidAsyncResult|Neplatný výsledek AsyncResult|  
-|TraceCodeIssuanceTokenProviderRemovedCachedToken|Süresi dolan hizmet belirteci IssuanceTokenProvider kaldırıldı.|  
-|IncorrectUserNameFormat|Kullanıcı adı geçersiz bir biçimdedir. Kullanıcı adı biçimi biçiminde olmalıdır "kullanıcıadı ' veya ' etki alanı\\\username'.|  
-|TraceCodeExportSecurityChannelBindingEntry|Starting Security ExportChannelBinding.|  
-|UnsupportedInputTypeForTransform|Belirtilen giriş türü dönüştürme için desteklenmiyor.|  
-|CannotFindDocumentRoot|Belgenin kök bulunamıyor.|  
-|XmlBufferQuotaExceeded|XML içeriğini ara belleğe almak için gereken boyut, ara bellek kotasını aştı.|  
-|TraceCodeSecuritySessionClosedResponseSendFailure|İstemciye bir güvenlik oturumu kapat yanıtı gönderilirken bir hata oluştu.|  
-|UnableToResolveReferenceInSamlSignature|SAML imza onaylama kimliği ile belirtilen başvurusunda çözmek yüklenemiyor.|  
-|SAMLSubjectRequiresNameIdentifierOrConfirmationMethod|Bir SamlSubject 'NameIdentifier' veya 'ConfirmationMethod' belirtilmesini gerektirir. Her ikisi de eksik.|  
-|SAMLAttributeMissingNamespaceAttributeOnRead|'Namespace' Okunan SamlAttribute eksik ya da 0 uzunluğunda.|  
-|SAMLSubjectConfirmationClauseMissingConfirmationMethodOnRead|Okunan SamlSubjectConfirmation 'ConfirmationMethod' bulunamıyor.|  
-|SecurityTokenRequirementHasInvalidTypeForProperty|Belirteç gereksinimi, belirtilen özellik için beklenmeyen bir türde. Beklenen özellik türü başka bir değerdir.|  
+|Tracecodesecurityıdentitydoğrulamaları Icationfailure|Kimlik doğrulama başarısız oldu.|  
+|Aescryptımportkeyfailed|Anahtar malzemesi içe aktarılamadı.|  
+|Failınitializesecuritycontext|InitializeSecurityContent başarısız oldu. Hizmet sorumlusu adının doğru olduğundan emin olun.|  
+|Tracecodestreamsecurityupgradekabul edildi|Akış güvenlik yükseltmesi başarıyla kabul edildi.|  
+|SAMLAuthorityBindingRequiresLocation|SamlAuthorityBinding üzerinde belirtilen ' Location ' özniteliği null ya da 0 uzunluğunda olamaz.|  
+|PublicKeyNotDSA|Ortak anahtar bir DSA anahtarı değil.|  
+|Impersonationlevelnotsupported|Kerberos kullanan kimlik doğrulama modları belirtilen kimliğe bürünme düzeyini desteklemez. Geçerli bir kimlik veya kimliğe bürünme düzeyi belirtin.|  
+|RequiredTargetNotSigned|Belirtilen kimliğe sahip öğe imzalanabilmesi, ancak yoktu.|  
+|Samlauthenticationstatementmissingauthenticationınstanceonread|Bir Samlauthenticationdeyimin okunduğu ' AuthenticationInstant ' özniteliği eksik ya da 0 uzunluğunda.|  
+|Samlet Videnceshouldaveoneassertiononread|Okunan SamlEvidence, ya da gömülü bir SamlAssertion başvurusu içermiyordu.|  
+|LengthOfArrayToConvertMustGreaterThanZero|Tamsayıya dönüştürülecek dizinin uzunluğu 0 ' dan büyük olmalıdır.|  
+|Invalidasyncresult|Geçersiz AsyncResult.|  
+|Tracecodeıssuancetokenproviderremovedcachedtoken|IssuanceTokenProvider, süre dolma hizmet belirtecini kaldırdı.|  
+|IncorrectUserNameFormat|Kullanıcı adı geçersiz bir biçimde. Kullanıcı adı biçimi "Kullanıcı adı" veya ' etki alanı \\ \ KullanıcıAdı ' biçiminde olmalıdır.|  
+|TraceCodeExportSecurityChannelBindingEntry|Güvenlik ExportChannelBinding başlatılıyor.|  
+|Unsupportedınputtypefortransform|Belirtilen giriş türü dönüştürme için desteklenmiyor.|  
+|Cannotfindbelgekökü|Belgenin kökü bulunamıyor.|  
+|Xmlbufferquotaaşıldı|XML içeriğini arabelleğe almak için gereken boyut, arabellek kotasını aştı.|  
+|TraceCodeSecuritySessionClosedResponseSendFailure|İstemciye bir güvenlik oturumu kapatma yanıtı gönderilirken bir hata oluştu.|  
+|Unabletoresolvereferenceınsamlsignature|SAML imzasında, AssertionId 'si ile belirtilen başvuru çözümlenemiyor.|  
+|SAMLSubjectRequiresNameIdentifierOrConfirmationMethod|Bir SamlSubject, ' NameIdentifier ' veya ' ConfirmationMethod ' belirtilmesini gerektirir. İkisi de eksikti.|  
+|SAMLAttributeMissingNamespaceAttributeOnRead|Okunan SamlAttribute için ' namespace ' eksik ya da 0 uzunluğunda.|  
+|SAMLSubjectConfirmationClauseMissingConfirmationMethodOnRead|Okunan SamlSubjectConfirmation üzerinde bir ' ConfirmationMethod ' bulunamadı.|  
+|Securitytokenrequirementhasınvalidtypeforproperty|Belirteç gereksiniminin belirtilen özellik için beklenmeyen bir türü vardır. Beklenen özellik türü başka bir değer.|  
 |TraceCodeNegotiationTokenProviderAttached|NegotiationTokenProvider eklendi.|  
-|TraceCodeSpnegoClientNegotiationCompleted|SSPI anlaşması SpnegoTokenProvider tamamlandı.|  
-|SAMLUnableToLoadUnknownElement|Seçili SamlSerializer, bu öğeyi seri durumdan çıkaramıyor. Lütfen özel öğeleri seri durumdan çıkarmak için özel bir SamlSerializer kaydettirin.|  
-|CreateSequenceRefused|Oluşturma sırası isteği RM hedef tarafından reddedildi.|  
-|TraceCodeSecuritySessionRedirectApplied|İstemci güvenlik oturumu yönlendirildi.|  
-|SecurityTokenRequirementDoesNotContainProperty|Belirteç gereksinimi, belirtilen özellik içermiyor.|  
-|SAMLAttributeValueCannotBeNull|SamlAttribute içinde bulunan attributeValues öğelerinden biri null değeri bulundu. Listeleri SamlAttribute oluşturulurken null olmadığından emin olun.|  
-|ValueMustBeGreaterThanZero|Bu bağımsız değişkenin değeri 0'dan büyük olmalıdır.|  
+|TraceCodeSpnegoClientNegotiationCompleted|SpnegoTokenProvider SSPI anlaşması tamamlandı.|  
+|SAMLUnableToLoadUnknownElement|Seçili SamlSerializer, bu öğenin serisini kaldıramıyor. Özel öğelerin serisini kaldırmak için lütfen özel bir SamlSerializer kaydettirin.|  
+|CreateSequenceRefused|Sıra oluşturma isteği, RM hedefi tarafından reddedildi.|  
+|Tracecodesecuritysessionredirectapphesaplanır|İstemci güvenlik oturumu yeniden yönlendirildi.|  
+|Securitytokengereksinimyok Notcontainproperty|Belirteç gereksinimi, belirtilen özelliği içermiyor.|  
+|SAMLAttributeValueCannotBeNull|SamlAttribute içinde bulunan attributeValues değerlerinden biri null değer olacak şekilde bulundu. SamlAttribute oluşturulurken listelerin null olmadığından emin olun.|  
+|ValueMustBeGreaterThanZero|Bu bağımsız değişkenin değeri 0 ' dan büyük olmalıdır.|  
 |TraceCodeNegotiationAuthenticatorAttached|NegotiationTokenAuthenticator eklendi.|  
 |ValueMustBePositive||  
-|SAMLAuthorizationDecisionShouldHaveOneAction|Bir SamlAuthorizationDecisionStatement en az bir SamlAction olması gerekir.|  
-|TraceCodeSecurityTokenAuthenticatorClosed|Güvenlik belirteci kimlik doğrulayıcı kapatıldı.|  
-|TraceCodeSecurityAuditWrittenSuccess|Güvenlik Denetim günlüğü başarıyla yazıldı.|  
-|PrivateKeyNotDSA|Özel anahtar, DSA anahtarı değil.|  
-|MessageNumberRollover|Bu dizi için en büyük sıra sayısı aşıldı.|  
-|AESPaddingModeNotSupported|Belirtilen doldurma modu desteklenmiyor. Yalnızca PKCS7 ve ISO10126 desteklenir.|  
-|SAMLSubjectRequiresNameIdentifierOrConfirmationMethodOnRead|Gerekli 'NameIdentifier' ve 'ConfirmationMethod' öğeleri okunan SamlSubject için bulunamadı.|  
-|TraceCodeSecurityAuditWrittenFailure|Güvenlik Denetim günlüğüne yazılırken bir hata oluştu.|  
+|SAMLAuthorizationDecisionShouldHaveOneAction|Bir SamlAuthorizationDecisionStatement en az bir SamlAction içermelidir.|  
+|Tracecodesecuritytokendoğrulayıcısı Torclosed|Güvenlik belirteci kimlik doğrulayıcısı kapatıldı.|  
+|TraceCodeSecurityAuditWrittenSuccess|Güvenlik denetim günlüğü başarıyla yazıldı.|  
+|PrivateKeyNotDSA|Özel anahtar bir DSA anahtarı değil.|  
+|MessageNumberRollover|Bu sıranın en büyük sıra numarası aşıldı.|  
+|Aesdoldurma Ingmonominal Tsupported|Belirtilen doldurma modu desteklenmiyor. Yalnızca PKCS7 ve ISO10126 desteklenir.|  
+|SAMLSubjectRequiresNameIdentifierOrConfirmationMethodOnRead|Okunan SamlSubject için gereken ' NameIdentifier ' ve ' ConfirmationMethod ' öğeleri bulunamadı.|  
+|TraceCodeSecurityAuditWrittenFailure|Güvenlik denetim günlüğüne yazılırken bir hata oluştu.|  
 |UnsupportedCryptoAlgorithm|Belirtilen şifreleme algoritması bu bağlamda desteklenmiyor.|  
-|SigningTokenHasNoKeysSupportingTheAlgorithmSuite|İmzalama belirtecinin belirtilen algoritma paketini destekleyen anahtarı yok.|  
-|SAMLNameIdentifierMissingIdentifierValueOnRead|Okunan SamlNameIdentifier 'Identifier' dizesi eksik.|  
-|SAMLSubjectStatementRequiresSubject|SAML konu deyimi bir SAML konu belirtilmesini gerektirir.|  
-|TraceCodeSslClientCertMissing|Gerekli bir sertifika sağlamak uzak SSL istemcisi başarısız oldu.|  
-|SAMLTokenVersionNotSupported|Belirtilen ana sürüm ve alt sürümü desteklenmez.|  
-|TraceCodeConfigurationIsReadOnly|Yapılandırma, salt okunur.|  
-|TraceCodeSecuritySessionRenewFaultSendFailure|Yenileme hatası güvenlik oturum anahtarının istemciye gönderilirken bir hata oluştu.|  
-|TraceCodeSecurityInactiveSessionFaulted|Etkin olmayan güvenlik oturumu sunucu tarafından sonlandırıldı.|  
+|SigningTokenHasNoKeysSupportingTheAlgorithmSuite|İmza belirtecinin, belirtilen algoritma paketini destekleyen bir anahtarı yok.|  
+|Samlnameıdentifiermissingidentifiervalueonread|Okunan SamlNameIdentifier için ' Identifier ' dizesi eksik.|  
+|SAMLSubjectStatementRequiresSubject|SAML Subject bildiriminde bir SAML konusunun belirtilmesi gerekir.|  
+|TraceCodeSslClientCertMissing yok|Uzak SSL istemcisi gerekli bir sertifikayı sağlamadı.|  
+|SAMLTokenVersionNotSupported|Belirtilen ana sürüm ve ikincil sürüm desteklenmiyor.|  
+|TraceCodeConfigurationIsReadOnly|Yapılandırma salt okunurdur.|  
+|TraceCodeSecuritySessionRenewFaultSendFailure|İstemciye güvenlik oturumu anahtarı üzerinde bir yenileme hatası gönderilirken bir hata oluştu.|  
+|Tracecodesecurityınactivesessionhata|Etkin olmayan bir güvenlik oturumu sunucu tarafından hata verdi.|  
 |SAMLUnableToLoadAttribute|SamlAttribute yüklenemedi.|  
 |Psha1KeyLengthInvalid|Belirtilen PSHA1 anahtar uzunluğu geçersiz.|  
-|KeyIdentifierCannotCreateKey|Bu SecurityKeyIdentifier, anahtar oluşturabilecek bir yan tümceye sahip değil.|  
-|X509IsInUntrustedStore|Belirtilen X.509 sertifikası bir Güvenilmeyen sertifika deposunda olduğunu.|  
-|UnexpectedXmlChildNode|Belirtilen öğe için belirtilen türün belirtilen XML alt düğümü beklenmiyor.|  
-|TokenDoesNotMeetKeySizeRequirements|Belirtilen belirteç tarafından belirtilen algoritma paketini anahtar boyutu gereksinimleri karşılanmadı.|  
-|TraceCodeSecuritySessionRequestorStartOperation|İstemcide güvenlik oturumu işlemi başlatıldı.|  
-|InvalidHexString|Geçersiz onaltılık dize biçimi.|  
-|SamlAttributeClaimResourceShouldBeAString|Bu SamlAttribute Oluşturucu ait kaynak talebi, 'string' türünde olmasını gerektirir.|  
-|SamlSigningTokenNotFound|SamlAssertion imzalandı ancak SamlAssertion imzalandı belirteç bulunamıyor. SecurityTokenResolver SamlAssertion'ı imzalayan belirteci içerdiğinden emin olun.|  
-|TraceCodeSecuritySpnToSidMappingFailure|ServicePrincipalName için bir SecurityIdentifier eşlenemedi.|  
-|UnableToCreateSignatureFormatterFromAsymmetricCrypto|Belirtilen asimetrik şifreleme imzası biçimlendirici belirtilen algoritma için oluşturulamıyor.|  
-|TraceCodeSecurityServerSessionClosedFaultSent|Sunucu güvenlik oturumu oturum kapalı hatası istemciye gönderilebilir.|  
-|UnableToFindPrefix|Belirtilen öğede belirtilen görünüşte kullanılan öneki önek bulmak yüklenemiyor.|  
-|TraceCodeSecurityTokenAuthenticatorOpened|Güvenlik belirteci kimlik doğrulayıcı açıldı.|  
-|RequiredAttributeMissing|Belirtilen öğede belirtilen özniteliği gereklidir.|  
-|LocalIdCannotBeEmpty|LocalId boş olamaz. Geçerli bir 'localId' belirtin.|  
-|ValueMustBeInRange|Bu bağımsız değişkenin değeri belirtilen aralıkta olmalıdır.|  
-|TraceCodeIssuanceTokenProviderBeginSecurityNegotiation|Yeni bir güvenlik anlaşması IssuanceTokenProvider başlatıldı.|  
-|InvalidNtMapping|Belirtilen X.509 sertifikası için bir Windows hesabı eşlenemez. UPN konu alternatif adı gereklidir.|  
+|Keyıdentifiercannotcreatekey|Bu SecurityKeyIdentifier, anahtar oluşturabileceğiniz herhangi bir yan tümce içermiyor.|  
+|X509IsInUntrustedStore|Belirtilen X. 509.440 sertifikası güvenilmeyen bir sertifika deposunda.|  
+|UnexpectedXmlChildNode|Belirtilen öğenin belirtilen XML alt düğümü belirtilen öğe için beklenmiyordu.|  
+|Tokenlannotmeeting Keysizerequirements|Belirtilen algoritma paketi için anahtar boyutu gereksinimleri belirtilen belirteç tarafından karşılanmadı.|  
+|TraceCodeSecuritySessionRequestorStartOperation|İstemcide bir güvenlik oturumu işlemi başlatıldı.|  
+|Invalidhexstring|Geçersiz onaltılı dize biçimi.|  
+|Samlattributeclaimresourceshouldkirstring|Bu SamlAttribute Oluşturucu, talep kaynağının ' String ' türünde olmasını gerektirir.|  
+|SamlSigningTokenNotFound|SamlAssertion imzalı, ancak SamlAssertion 'ı imzalayan belirteç bulunamıyor. SecurityTokenResolver 'ın SamlAssertion 'yi imzalayan belirteci içerdiğinden emin olun.|  
+|TraceCodeSecuritySpnToSidMappingFailure|ServicePrincipalName, bir SecurityIdentifier ile eşlenemedi.|  
+|UnableToCreateSignatureFormatterFromAsymmetricCrypto|Belirtilen asimetrik şifre içinden belirtilen algoritma için imza biçimlendiricisi oluşturulamıyor.|  
+|TraceCodeSecurityServerSessionClosedFaultSent|Sunucu güvenlik oturumu, istemciye bir oturum kapatma hatası gönderdi.|  
+|UnableToFindPrefix|Belirtilen öğede belirtilen ı, kullanılan ön ek için önek bulunamıyor.|  
+|Tracecodesecuritytokendoğrukimliği|Güvenlik belirteci kimlik doğrulayıcısı açıldı.|  
+|RequiredAttributeMissing yok|Belirtilen öğe üzerinde belirtilen öznitelik gereklidir.|  
+|LocalIdCannotBeEmpty|LocalId boş olamaz. Geçerli bir ' LocalId ' belirtin.|  
+|ValueMustBeInRange|Bu bağımsız değişkenin değeri, belirtilen Aralık içinde olmalıdır.|  
+|Tracecodeıssuancetokenproviderbeginsecuritynegotiation|IssuanceTokenProvider yeni bir güvenlik anlaşması başlattı.|  
+|Invalidntmapping|Belirtilen X. 509.440 sertifikası bir Windows hesabıyla eşlenemez. UPN konu diğer adı gereklidir.|  
 |AESCryptSetKeyParamFailed|Belirtilen anahtar parametresi ayarlanamadı.|  
-|TraceCodeSecuritySessionClosedResponseReceived|İstemci güvenlik oturumu kapalı bir yanıt aldı.|  
-|UnableToCreateSignatureDeformatterFromAsymmetricCrypto|Belirtilen algoritma için bir imza biçim kaldırıcısı belirtilen asimetrik şifreleme oluşturulamıyor.|  
-|TraceCodeIdentityModelAsyncCallbackThrewException|Zaman uyumsuz bir geri çağırma bir özel durum oluşturdu.|  
-|LengthMustBeGreaterThanZero|Bu bağımsız değişkenin uzunluğu 0'dan büyük olmalıdır.|  
-|FoundMultipleCerts|Belirtilen arama ölçütleri kullanılarak birden çok X.509 sertifikası bulundu: StoreName, StoreLocation, FindType, FindValue'i tıklatın. Daha fazla belirli bir arama değeri sağlayın.|  
-|AtLeastOneTransformRequired|Dönüşümler öğesi en az bir dönüştürme içermelidir.|  
-|SAMLTokenNotSerialized|SamlAssertion, XML'ye serileştirilemedi. Lütfen ayrıntılar için iç özel duruma bakın.|  
-|TraceCodeSecurityBindingOutgoingMessageSecured|Giden ileti güvenlik protokolü güvenli.|  
-|KeyIdentifierClauseDoesNotSupportKeyCreation|Bu SecurityKeyIdentifierClause anahtar oluşturmayı desteklemiyor.|  
-|UnableToResolveTokenReference|Belirteç çözümleyici belirtilen belirteç başvurusunu çözümleyemiyor.|  
+|TraceCodeSecuritySessionClosedResponseReceived|İstemci güvenlik oturumu sunucudan kapalı bir yanıt aldı.|  
+|UnableToCreateSignatureDeformatterFromAsymmetricCrypto|Belirtilen asimetrik şifre içinden belirtilen algoritma için bir imza yok biçimlendiricisi oluşturulamıyor.|  
+|Tracecodeıdentitymodelasynccallbackthrewexception|Zaman uyumsuz bir geri çağırma özel durum oluşturdu.|  
+|Lengthmustbegreatermi sıfır|Bu bağımsız değişkenin uzunluğu 0 ' dan büyük olmalıdır.|  
+|Buluna bulunan Çoğulcert|Belirtilen arama ölçütleri kullanılarak birden çok X. 509.952 sertifikası bulundu: StoreName, StoreLocation, FindType, FindValue. Daha belirli bir bulma değeri sağlayın.|  
+|Attaastonetransformrequired|Transforms öğesi en az bir dönüşüm içermelidir.|  
+|Samltokennotserileştirilmiş|SamlAssertion, XML olarak seri hale getirilemedi. Ayrıntılar için lütfen iç özel duruma bakın.|  
+|Tracecodesecuritybindingoutgoingmessagegüvenceye al|Güvenlik protokolü giden iletiyi güvenli hale getirdi.|  
+|Keyıdentifierclausealnotsupportkeyoluşturma|Bu SecurityKeyIdentifierClause anahtar oluşturmayı desteklemiyor.|  
+|UnableToResolveTokenReference|Belirteç çözümleyici, belirtilen belirteç başvurusunu çözümleyemiyor.|  
 |UnsupportedEncryptionAlgorithm|Belirtilen şifreleme algoritması desteklenmiyor.|  
-|SamlSerializerUnableToWriteSecurityKeyIdentifier|SamlSerializer verilen SecurityKeyIdentifier seri hale getirme özelliğine sahip bir SecurityTokenSerializer içermiyor. Özel bir SecurityKeyIdentifier kullanıyorsanız, özel bir SecurityTokenSerializer sağlamalısınız.|  
-|SAMLAttributeShouldHaveOneValue|Öznitelik değeri bulunamadı. En az bir öznitelik değeri bir SamlAttribute özniteliği olmalıdır.|  
-|TraceCodeSecurityBindingVerifyIncomingMessageFailure|Güvenlik protokolü, gelen ileti doğrulanamıyor.|  
-|SamlSigningTokenMissing|SamlAssertion SamlSecurityTokenAuthenticator öğesine geçirilen imzalama belirtecinin içermiyor.|  
-|NoPrivateKeyAvailable|Özel anahtar kullanılabilir.|  
+|Samlserializerunabletowritesecuritykeyıdentifier|SamlSerializer, verilen SecurityKeyIdentifier 'ı seri hale getirmek özellikli bir SecurityTokenSerializer içermiyor. Özel bir SecurityKeyIdentifier kullanıyorsanız, özel bir SecurityTokenSerializer sağlamanız gerekir.|  
+|SAMLAttributeShouldHaveOneValue|Öznitelik değeri bulunamadı. SamlAttribute özniteliği en az bir öznitelik değerine sahip olmalıdır.|  
+|Tracecodesecuritybindingdoğrulamaları ıncomingmessagefailure|Güvenlik protokolü gelen iletiyi doğrulayamaz.|  
+|SamlSigningTokenMissing|SamlSecurityTokenAuthenticator 'e geçirilen SamlAssertion bir imzalama belirteci içermiyor.|  
+|NoPrivateKeyAvailable|Özel anahtar yok.|  
 |ValueMustBeOne|Bu bağımsız değişkenin değeri 1 olmalıdır.|  
-|TraceCodeSecurityPendingServerSessionRemoved|Bekleyen bir güvenlik oturumu sunucu tarafından etkin olarak yapıldı.|  
-|TraceCodeImportSecurityChannelBindingExit|Güvenlik ImportChannelBinding tamamlandı.|  
-|X509CertStoreLocationNotValid|StoreLocation LocalMachine ya da CurrentUser olmalıdır.|  
-|SettingdMayBeModifiedOnlyWhenTheWriterIsInStartState|Yazıcı ayarları, yalnızca yazıcı başlangıç durumda olduğunda değiştirilebilir.|  
+|TraceCodeSecurityPendingServerSessionRemoved|Bekleyen bir güvenlik oturumu sunucu tarafından etkin yapıldı.|  
+|Tracecodeımportsecuritychannelbindingexit|Güvenlik ImportChannelBinding tamamlandı.|  
+|X509CertStoreLocationNotValid|StoreLocation, LocalMachine ya da CurrentUser olmalıdır.|  
+|SettingdMayBeModifiedOnlyWhenTheWriterIsInStartState|Yazıcı ayarları yalnızca yazıcı başlangıç durumunda olduğunda değiştirilebilir.|  
 |ArgumentInvalidCertificate|Sertifika geçersiz.|  
-|DigestVerificationFailedForReference|Özet için belirtilen başvurusu doğrulanamadı.|  
-|SAMLAuthorityBindingRequiresBinding|SamlAuthorityBinding üzerinde belirtilen 'Binding' özniteliği null ya da 0 uzunluğunda olamaz.|  
-|AESInsufficientOutputBuffer|Çıkış arabelleği belirtilen bayttan büyük olmalıdır.|  
-|SAMLAuthorityBindingMissingBindingOnRead|'Binding' özniteliği Okunan SamlAuthorityBinding eksik ya da 0 uzunluğunda.|  
-|SAMLAuthorityBindingInvalidAuthorityKind|Okunan SamlAuthorityBinding geçersiz bir AuthorityKind değerine sahiptir. Biçim AuthorityKind bir QName olmalıdır.|  
-|ProvidedNetworkCredentialsForKerberosHasInvalidUserName|Kerberos belirteci için sağlanan NetworkCredentials geçerli bir kullanıcı adı yok.|  
+|DigestVerificationFailedForReference|Belirtilen başvuru için Özet doğrulaması başarısız oldu.|  
+|SAMLAuthorityBindingRequiresBinding|SamlAuthorityBinding üzerinde belirtilen ' Binding ' özniteliği null ya da 0 uzunluğunda olamaz.|  
+|AESInsufficientOutputBuffer|Çıkış arabelleğinin belirtilen bayttan büyük olması gerekir.|  
+|SAMLAuthorityBindingMissingBindingOnRead|Okunan SamlAuthorityBinding ' Binding ' özniteliği eksik ya da 0 uzunluğunda.|  
+|Samlauthoritybindingınvalidauthoritykind|Okunan SamlAuthorityBinding geçersiz bir AuthorityKind 'e sahip. AuthorityKind biçimi QName olmalıdır.|  
+|ProvidedNetworkCredentialsForKerberosHasInvalidUserName|Kerberos belirteci için belirtilen NetworkCredentials geçerli bir kullanıcı adına sahip değil.|  
 |SSPIPackageNotSupported|Belirtilen SSPI paketi desteklenmiyor.|  
-|TokenCancellationNotSupported|Belirtilen belirteç sağlayıcısı, belirteç iptal etmeyi desteklemiyor.|  
-|UnboundPrefixInQName|İlişkisiz bir ön eki içinde belirtilen tam adı kullanılır.|  
-|SAMLAuthorizationDecisionResourceRequired|'Özniteliği için belirtilen kaynak', null ya da 0 uzunluğunda olamaz.|  
+|TokenCancellationNotSupported|Belirtilen belirteç sağlayıcısı belirteç iptalini desteklemiyor.|  
+|UnboundPrefixInQName|Belirtilen nitelenmiş adda ilişkisiz bir ön ek kullanılıyor.|  
+|SAMLAuthorizationDecisionResourceRequired|SamlAuthorizationDecisionStatement için belirtilen ' Resource ' değeri null ya da 0 uzunluğunda olamaz.|  
 |TraceCodeSecurityNegotiationProcessingFailure|Hizmet güvenliği anlaşması işleme hatası.|  
-|SAMLAssertionIssuerRequired|SamlAssertion için belirtilen 'Issuer' null veya boş olamaz.|  
-|UnableToCreateHashAlgorithmFromAsymmetricCrypto|Belirtilen algoritma için bir HashAlgorithm belirtilen asimetrik şifreleme oluşturulamıyor.|  
-|SamlUnableToExtractSubjectKey|İçin bir SecurityToken SamlSubject içinde bulunan SecurityKeyIdentifier çözümlenemedi. SecurityTokenResolver SecurityKeyIdentifier çözümler bir SecurityToken içermelidir.|  
-|ChildNodeTypeMissing|Belirtilen XML öğesi bir alt öğesinin belirtilen türe sahip değil.|  
+|SAMLAssertionIssuerRequired|SamlAssertion için belirtilen ' Issuer ' değeri null veya boş olamaz.|  
+|UnableToCreateHashAlgorithmFromAsymmetricCrypto|Belirtilen asimetrik şifre içinden belirtilen algoritma için bir HashAlgorithm oluşturulamıyor.|  
+|SamlUnableToExtractSubjectKey|SamlSubject 'te bulunan SecurityKeyIdentifier bir SecurityToken olarak çözümlenemiyor. SecurityTokenResolver, SecurityKeyIdentifier 'ın çözümlediği bir SecurityToken içermelidir.|  
+|ChildNodeTypeMissing|Belirtilen XML öğesi belirtilen türde bir alt öğeye sahip değil.|  
 |TraceCodeSecurityPendingServerSessionClosed|Bekleyen güvenlik oturumu sunucu tarafından kapatıldı.|  
-|TraceCodeSecuritySessionCloseResponseSent|Sunucu güvenlik oturumu kapat istemciye yanıt gönderdi.|  
-|TraceCodeSecurityIdentityHostNameNormalizationFailure|Bir uç nokta adresi ana bilgisayar adı kısmı normalleştirilmiş olamaz.|  
+|TraceCodeSecuritySessionCloseResponseSent|Sunucu güvenlik oturumu istemciye bir kapatma yanıtı gönderdi.|  
+|Tracecodesecurityıdentityhostsüs Ormalizationfailure|Bir uç nokta adresinin konak adı bölümü normalleştirilemez.|  
 |FailAcceptSecurityContext|AcceptSecurityContext başarısız oldu.|  
-|EmptyXmlElementError|Belirtilen öğe boş olamaz.|  
-|PrefixNotDefinedForNamespace|Belirtilen ad alanı için bir önek, bu bağlamda tanımlı değil ve bildirilemez.|  
-|SAMLAuthorizationDecisionHasMoreThanOneEvidence|Okunan özniteliği birden fazla kanıt saptandı. Buna izin verilmez.|  
-|SamlTokenAuthenticatorCanOnlyProcessSamlTokens|SamlSecurityTokenAuthenticator SamlSecurityToken öğelerini yalnızca işleyebilir. Belirtilen SecurityTokenType alındı.|  
-|SAMLAttributeStatementMissingAttributeOnRead|Okunan SamlAttributeStatement herhangi bir 'SamlAttribute' öğesi içermiyor. Buna izin verilmez.|  
-|CouldNotFindNamespaceForPrefix|Belirtilen önek için ad alanı arama yapamazsınız.|  
-|TraceCodeExportSecurityChannelBindingExit|Finished Security ExportChannelBinding.|  
+|Emptyxmtalementerror|Belirtilen öğe boş olamaz.|  
+|PrefixNotDefinedForNamespace|Belirtilen ad alanı için bir ön ek, bu bağlamda tanımlı değil ve bildirilemez.|  
+|Samlauthorizationdecisionhaste, Onekanıt|Okunan SamlAuthorizationDecisionStatement 'ın birden fazla kanıt içerdiği bulundu. Buna izin verilmez.|  
+|SamlTokenAuthenticatorCanOnlyProcessSamlTokens|SamlSecurityTokenAuthenticator yalnızca SamlSecurityToken işlemlerini işleyebilir. Belirtilen SecurityTokenType alındı.|  
+|SAMLAttributeStatementMissingAttributeOnRead|Okunan Samlattributedeyim, herhangi bir ' SamlAttribute ' öğesi içermiyor. Buna izin verilmez.|  
+|Hayır Dnotfindnamespaceforprefix|Belirtilen önek için ad alanı arama yapılamıyor.|  
+|TraceCodeExportSecurityChannelBindingExit|Güvenlik ExportChannelBinding tamamlandı.|  
 |AESCryptDecryptFailed|Belirtilen verilerin şifresi çözülemedi.|  
-|SAMLAttributeNamespaceAttributeRequired|'SamlAttribute için belirtilen Namespace', null ya da 0 uzunluğunda olamaz.|  
-|TraceCodeSpnegoServiceNegotiationCompleted|SSPI anlaşması SpnegoTokenAuthenticator tamamlandı.|  
-|TraceCodeSecurityServerSessionRenewalFaultSent|Sunucu güvenlik oturumu anahtar yenileme hatası istemciye gönderilebilir.|  
-|AlgorithmMismatchForTransform|Dönüştürme algoritması üzerinde bir uyuşmazlığı oluştu.|  
-|UserNameAuthenticationFailed|Belirtilen mekanizmayı kullanarak bir kullanıcı adı/parola kimlik doğrulaması başarısız oldu. Kullanıcının kimliği.|  
-|SamlInvalidSigningToken|SamlAssertion göre Protokolü doğrulanmadı bir belirteç ile imzalanmış. X.509 sertifikaları kullanıyorsanız, doğrulama ifadelerinizi inceleyin.|  
-|TraceCodeSecurityServerSessionKeyUpdated|Güvenlik oturum anahtarı, sunucu tarafından güncelleştirildi.|  
-|TraceCodeSecurityServerSessionCloseReceived|Sunucu güvenlik oturumu istemciden Kapat bir ileti alındı.|  
-|SAMLAuthenticationStatementMissingSubject|SamlAuthenticationStatement gerekli SamlSubjectStatement öğesi eksik.|  
+|SAMLAttributeNamespaceAttributeRequired|SamlAttribute için belirtilen ' namespace ' null ya da 0 uzunluğunda olamaz.|  
+|TraceCodeSpnegoServiceNegotiationCompleted|SpnegoTokenAuthenticator SSPI anlaşması tamamlandı.|  
+|TraceCodeSecurityServerSessionRenewalFaultSent|Sunucu güvenlik oturumu istemciye bir anahtar yenileme hatası gönderdi.|  
+|AlgorithmMismatchForTransform|Dönüştürme algoritmasında uyuşmazlık oluştu.|  
+|UserNameAuthenticationFailed|Belirtilen mekanizmayı kullanarak bir Kullanıcı adı/parola doğrulaması başarısız oldu. Kullanıcının kimliği doğrulanmadı.|  
+|SamlInvalidSigningToken|SamlAssertion, protokole göre doğrulanmamış bir belirteç ile imzalandı. X. 509.440 sertifikaları kullanıyorsanız, doğrulama semantiğini inceleyin.|  
+|TraceCodeSecurityServerSessionKeyUpdated|Güvenlik oturumu anahtarı sunucu tarafından güncelleştirildi.|  
+|Tracecodesecurityserversessioncloserecıor|Sunucu güvenlik oturumu istemciden bir kapatma iletisi aldı.|  
+|SAMLAuthenticationStatementMissingSubject|Samlauthenticationdeyimin gerekli Samlsubjectdeyimin eksik olması.|  
 |UnexpectedEndOfFile|Beklenmeyen dosya sonu.|  
 |UnsupportedAlgorithmForCryptoOperation|Belirtilen algoritma belirtilen işlem için desteklenmiyor.|  
-|XmlLangAttributeMissing|Gerekli XML: lang özniteliği eksik.|  
-|TraceCodeSecurityImpersonationSuccess|Güvenlik kimliğe bürünme sunucuda başarılı oldu.|  
-|SAMLAuthorityBindingMissingLocationOnRead|'Konum' özniteliği Okunan SamlAuthorityBinding eksik ya da 0 uzunluğunda.|  
-|SAMLAttributeStatementMissingSubjectOnRead|SamlAttributeStatement 'SamlSubject' öğesi eksik.|  
-|SAMLAuthorizationDecisionStatementMissingSubjectOnRead|Okunan SamlAuthorizationDecisionStatement 'SamlSubject' öğesi eksik.|  
-|SAMLBadSchema|SamlAssertion okunurken şemasıyla uyumlu olmadığı için bu belirtilen öğe bulundu.|  
-|SAMLAssertionIDIsInvalid|Belirtilen'ın 'Assertionıd'si bir SamlAssertion, bir harf veya '_' ile başlamalıdır.|  
+|XmlLangAttributeMissing yok|Gerekli xml: lang özniteliği eksik.|  
+|Tracecodesecurityımpersonationsuccess|Güvenlik kimliğe bürünme sunucuda başarılı oldu.|  
+|SAMLAuthorityBindingMissingLocationOnRead|Okunan SamlAuthorityBinding ' Location ' özniteliği eksik ya da 0 uzunluğunda.|  
+|SAMLAttributeStatementMissingSubjectOnRead|Samlattributedeyimin ' SamlSubject ' öğesi eksik.|  
+|SAMLAuthorizationDecisionStatementMissingSubjectOnRead|Okunan SamlAuthorizationDecisionStatement ' SamlSubject ' öğesi eksik.|  
+|SAMLBadSchema|Bir SamlAssertion okunurken belirtilen öğe şemayla uyumlu değil bulundu.|  
+|SAMLAssertionIDIsInvalid|Bir SamlAssertion için belirtilen ' AssertionId 'si ' bir harfle veya ' _ ' ile başlamalıdır.|  
 |TraceCodeSecurityActiveServerSessionRemoved|Etkin bir güvenlik oturumu sunucu tarafından kaldırıldı.|  
-|UnableToCreateKeyedHashAlgorithmFromSymmetricCrypto|Belirtilen algoritma için bir keyedHashAlgorithm belirtilen simetrik şifreleme oluşturulamıyor.|  
-|SAMLAuthenticationStatementMissingAuthenticationMethod|'AuthenticationMethod SamlAuthenticationStatement için belirtilen', null ya da 0 uzunluğunda olamaz.|  
-|TraceCodeSecurityImpersonationFailure|Güvenlik kimliğe bürünme sunucuda başarısız oldu.|  
+|UnableToCreateKeyedHashAlgorithmFromSymmetricCrypto|Belirtilen simetrik şifre içinden belirtilen algoritma için bir keyedHashAlgorithm oluşturulamıyor.|  
+|SAMLAuthenticationStatementMissingAuthenticationMethod|Bir Samlauthenticationdeyimin belirtilen ' AuthenticationMethod ' değeri null ya da 0 uzunluğunda olamaz.|  
+|Tracecodesecurityımpersonationfailure|Güvenlik kimliğe bürünme sunucuda başarısız oldu.|  
 |Varsayılan|(Varsayılan)|  
-|UnsupportedNodeTypeInReader|Belirtilen ada sahip belirtilen düğümün türü desteklenmiyor.|
+|Unsupportednodetypeınreader|Belirtilen ada sahip belirtilen düğüm türü desteklenmiyor.|

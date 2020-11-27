@@ -2,33 +2,36 @@
 title: 39458 - TrackingRecordTruncated
 ms.date: 03/30/2017
 ms.assetid: 5352f0eb-d571-454a-bab5-e2162888b218
-ms.openlocfilehash: 416feb4073b31178b016ae72c9cd85e15c4a68c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f02a34673c51be6e0b127a64e4622131575d836f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774419"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275898"
 ---
 # <a name="39458---trackingrecordtruncated"></a>39458 - TrackingRecordTruncated
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|39458|  
-|anahtar sözcükler|WFTracking|  
+|ID|39458|  
+|Anahtar sözcükler|WFTracking|  
 |Düzey|Uyarı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir izleme kaydını kesildi gösterir. Ek açıklamalar/değişkenler/kullanıcı verileri kaldırılmıştır.  
+
+ Bir izleme kaydının kesildiğini gösterir. Değişkenler/ek açıklamalar/Kullanıcı verileri kaldırıldı.  
   
 ## <a name="message"></a>İleti  
- %1 ETW oturumu %2 sağlayıcısı ile yazılmış kaydı İzleme kesildi. Veri ek açıklamaları/değişkenler/kullanıcı kaldırıldı  
+
+ %2 sağlayıcısı ile ETW oturumuna yazılan %1 izleme kaydı kesilmiş. Değişkenler/ek açıklamalar/Kullanıcı verileri kaldırıldı  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Kayıt numarası|xs:string|İzleme kayıt numarası.|  
-|ProviderID değeri|xs:string|ETW sağlayıcısı kimliği.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|RecordNumber|xs: String|İzleme kayıt numarası.|  
+|Kimliği|xs: String|ETW sağlayıcı kimliği.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

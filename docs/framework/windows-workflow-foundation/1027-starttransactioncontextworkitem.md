@@ -2,34 +2,37 @@
 title: 1027 - StartTransactionContextWorkItem
 ms.date: 03/30/2017
 ms.assetid: 116ae5ec-b9d5-4231-824e-270d00eea7b8
-ms.openlocfilehash: 231a7607f2ce9a38e8dd6c1486a68bc9eb459e5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb5671ce7a30a7096104ba0ca6c4f36bed6b93f9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008830"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275238"
 ---
 # <a name="1027---starttransactioncontextworkitem"></a>1027 - StartTransactionContextWorkItem
+
 ## <a name="properties"></a>Özellikler  
   
 |||  
 |-|-|  
-|Kimlik|1027|  
-|anahtar sözcükler|WFRuntime|  
+|ID|1027|  
+|Anahtar sözcükler|WFRuntime|  
 |Düzey|Ayrıntılı|  
-|Kanal|Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama|  
+|Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
 ## <a name="description"></a>Açıklama  
- Bir TransactionContextWorkItem yürütme başlanacağını gösterir.  
+
+ Bir TransactionContextWorkItem 'ın yürütülmeye başlandığını gösterir.  
   
 ## <a name="message"></a>İleti  
- '%1', DisplayName etkinliği için bir TransactionContextWorkItem yürütülmesi başlatılıyor: '%2', InstanceId: '%3'.  
+
+ DisplayName: ' %2 ', InstanceId: ' %3 ' olan ' %1 ' Activity 'si için bir TransactionContextWorkItem 'ın yürütülmesi başlatılıyor.  
   
 ## <a name="details"></a>Ayrıntılar  
   
 |Veri öğesi adı|Veri öğesi türü|Açıklama|  
 |--------------------|--------------------|-----------------|  
-|Etkinlik|xs:string|Etkinlik türü adı.|  
-|displayName|xs:string|Etkinliğin görünen adı.|  
-|InstanceId|xs:string|Etkinlik örneği kimliği.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.|
+|Etkinlik|xs: String|Etkinliğin tür adı.|  
+|DisplayName|xs: String|Etkinliğin görünen adı.|  
+|InstanceId|xs: String|Etkinliğin örnek kimliği.|  
+|AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|
