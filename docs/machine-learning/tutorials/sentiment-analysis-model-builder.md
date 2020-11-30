@@ -1,142 +1,142 @@
 ---
-title: 'Öğretici: Duyarlılığı analiz et - ikili sınıflandırma'
-description: Bu öğretici, web sitesi yorumlarından duyguları sınıflandıran ve uygun eylemi yapan bir Razor Pages uygulamasını nasıl oluşturabileceğinizi gösterir. İkili duygu sınıflandırıcı Visual Studio Model Builder kullanır.
+title: 'Öğretici: yaklaşım-ikili sınıflandırmayı çözümle'
+description: Bu öğreticide, Web sitesi açıklamalarından yaklaşımı sınıflandırın bir Razor Pages uygulamasının nasıl oluşturulacağı ve uygun eylemin nasıl yapılacağı gösterilmektedir. İkili yaklaşım Sınıflandırıcısı, Visual Studio 'da model Oluşturucu kullanır.
 ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
 ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "81278957"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a><span data-ttu-id="3673e-104">Öğretici: ML.NET Model Builder kullanarak bir web uygulamasında web sitesi yorumlarının duyarlılığını analiz edin</span><span class="sxs-lookup"><span data-stu-id="3673e-104">Tutorial: Analyze sentiment of website comments in a web application using ML.NET Model Builder</span></span>
+# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a><span data-ttu-id="b69a7-104">Öğretici: ML.NET model Oluşturucu kullanarak Web uygulamasındaki Web sitesindeki açıklamaları çözümleme</span><span class="sxs-lookup"><span data-stu-id="b69a7-104">Tutorial: Analyze sentiment of website comments in a web application using ML.NET Model Builder</span></span>
 
-<span data-ttu-id="3673e-105">Bir web uygulaması içinde yorumlardan duyguları gerçek zamanlı olarak nasıl analiz edeceğiz öğrenin.</span><span class="sxs-lookup"><span data-stu-id="3673e-105">Learn how to analyze sentiment from comments in real time inside a web application.</span></span>
+<span data-ttu-id="b69a7-105">Bir Web uygulamasının içinde gerçek zamanlı açıklamalardan yaklaşımı çözümlemeyi öğrenin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-105">Learn how to analyze sentiment from comments in real time inside a web application.</span></span>
 
-<span data-ttu-id="3673e-106">Bu öğretici, web sitesi yorumlarından gelen duyguları gerçek zamanlı olarak sınıflandıran bir ASP.NET Core Razor Pages uygulamasını nasıl oluşturabileceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="3673e-106">This tutorial shows you how to create an ASP.NET Core Razor Pages application that classifies sentiment from website comments in real time.</span></span>
+<span data-ttu-id="b69a7-106">Bu öğreticide, Web sitesi açıklamalarından gerçek zamanlı olarak yaklaşım sınıflandıran bir ASP.NET Core Razor Pages uygulamasının nasıl oluşturulacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-106">This tutorial shows you how to create an ASP.NET Core Razor Pages application that classifies sentiment from website comments in real time.</span></span>
 
-<span data-ttu-id="3673e-107">Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:</span><span class="sxs-lookup"><span data-stu-id="3673e-107">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="b69a7-107">Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:</span><span class="sxs-lookup"><span data-stu-id="b69a7-107">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="3673e-108">ASP.NET Core Razor Pages uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="3673e-108">Create an ASP.NET Core Razor Pages application</span></span>
-> - <span data-ttu-id="3673e-109">Verileri hazırlama ve anlama</span><span class="sxs-lookup"><span data-stu-id="3673e-109">Prepare and understand the data</span></span>
-> - <span data-ttu-id="3673e-110">Bir senaryo seçin</span><span class="sxs-lookup"><span data-stu-id="3673e-110">Choose a scenario</span></span>
-> - <span data-ttu-id="3673e-111">Verileri yükleme</span><span class="sxs-lookup"><span data-stu-id="3673e-111">Load the data</span></span>
-> - <span data-ttu-id="3673e-112">Modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="3673e-112">Train the model</span></span>
-> - <span data-ttu-id="3673e-113">Modeli değerlendirme</span><span class="sxs-lookup"><span data-stu-id="3673e-113">Evaluate the model</span></span>
-> - <span data-ttu-id="3673e-114">Öngörüler için modeli kullanma</span><span class="sxs-lookup"><span data-stu-id="3673e-114">Use the model for predictions</span></span>
+> - <span data-ttu-id="b69a7-108">ASP.NET Core Razor Pages uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="b69a7-108">Create an ASP.NET Core Razor Pages application</span></span>
+> - <span data-ttu-id="b69a7-109">Verileri hazırlama ve anlama</span><span class="sxs-lookup"><span data-stu-id="b69a7-109">Prepare and understand the data</span></span>
+> - <span data-ttu-id="b69a7-110">Senaryo seçin</span><span class="sxs-lookup"><span data-stu-id="b69a7-110">Choose a scenario</span></span>
+> - <span data-ttu-id="b69a7-111">Verileri yükleme</span><span class="sxs-lookup"><span data-stu-id="b69a7-111">Load the data</span></span>
+> - <span data-ttu-id="b69a7-112">Modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="b69a7-112">Train the model</span></span>
+> - <span data-ttu-id="b69a7-113">Modeli değerlendirme</span><span class="sxs-lookup"><span data-stu-id="b69a7-113">Evaluate the model</span></span>
+> - <span data-ttu-id="b69a7-114">Tahmin için modeli kullanma</span><span class="sxs-lookup"><span data-stu-id="b69a7-114">Use the model for predictions</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="3673e-115">Model Oluşturucu şu anda Önizleme'de.</span><span class="sxs-lookup"><span data-stu-id="3673e-115">Model Builder is currently in Preview.</span></span>
+> <span data-ttu-id="b69a7-115">Model Oluşturucu Şu anda önizleme aşamasındadır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-115">Model Builder is currently in Preview.</span></span>
 
-<span data-ttu-id="3673e-116">Bu öğreticinin kaynak kodunu [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples) deposunda bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3673e-116">You can find the source code for this tutorial at the [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples) repository.</span></span>
+<span data-ttu-id="b69a7-116">Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples) deposunda bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b69a7-116">You can find the source code for this tutorial at the [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples) repository.</span></span>
 
-## <a name="pre-requisites"></a><span data-ttu-id="3673e-117">Ön koşullar</span><span class="sxs-lookup"><span data-stu-id="3673e-117">Pre-requisites</span></span>
+## <a name="pre-requisites"></a><span data-ttu-id="b69a7-117">Ön koşullar</span><span class="sxs-lookup"><span data-stu-id="b69a7-117">Pre-requisites</span></span>
 
-<span data-ttu-id="3673e-118">Ön koşul ve yükleme yönergelerinin listesi için [Model Oluşturucu yükleme kılavuzunu ziyaret edin.](../how-to-guides/install-model-builder.md)</span><span class="sxs-lookup"><span data-stu-id="3673e-118">For a list of pre-requisites and installation instructions, visit the [Model Builder installation guide](../how-to-guides/install-model-builder.md).</span></span>
+<span data-ttu-id="b69a7-118">Önkoşul ve Yükleme yönergelerinin bir listesi için [model Oluşturucu Yükleme Kılavuzu](../how-to-guides/install-model-builder.md)' nu ziyaret edin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-118">For a list of pre-requisites and installation instructions, visit the [Model Builder installation guide](../how-to-guides/install-model-builder.md).</span></span>
 
-## <a name="create-a-razor-pages-application"></a><span data-ttu-id="3673e-119">Jilet Sayfaları uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="3673e-119">Create a Razor Pages application</span></span>
+## <a name="create-a-razor-pages-application"></a><span data-ttu-id="b69a7-119">Razor Pages uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="b69a7-119">Create a Razor Pages application</span></span>
 
-1. <span data-ttu-id="3673e-120">Core **Razor Pages Uygulaması ASP.NET**oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3673e-120">Create a **ASP.NET Core Razor Pages Application**.</span></span>
+1. <span data-ttu-id="b69a7-120">ASP.NET Core bir **Razor Pages uygulaması** oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b69a7-120">Create a **ASP.NET Core Razor Pages Application**.</span></span>
 
-    1. <span data-ttu-id="3673e-121">Visual Studio'yu açın ve menü çubuğundan **Dosya > Yeni > Projesi'ni** seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-121">Open Visual Studio and select **File > New > Project** from the menu bar.</span></span>
-    1. <span data-ttu-id="3673e-122">Yeni Proje iletişim kutusunda, **Web** düğümü tarafından izlenen **Visual C#** düğümünü seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-122">In the New Project dialog, select the **Visual C#** node followed by the **Web** node.</span></span>
-    1. <span data-ttu-id="3673e-123">Ardından **ASP.NET Çekirdek Web Uygulaması** proje şablonuna gidin.</span><span class="sxs-lookup"><span data-stu-id="3673e-123">Then select the **ASP.NET Core Web Application** project template.</span></span>
-    1. <span data-ttu-id="3673e-124">**Ad** metin kutusuna "SentimentRazor" yazın.</span><span class="sxs-lookup"><span data-stu-id="3673e-124">In the **Name** text box, type "SentimentRazor".</span></span>
-    1. <span data-ttu-id="3673e-125">Çözüm **ve projeyi aynı dizindeki yerleştir** çözümve proje **işaretsiz** olduğundan emin olun (VS 2019) veya **çözüm için create directory** (VS 2017) **işaretlenir.**</span><span class="sxs-lookup"><span data-stu-id="3673e-125">Make sure **Place solution and project in the same directory** is **unchecked** (VS 2019), or **Create directory for solution** is **checked** (VS 2017).</span></span>
-    1. <span data-ttu-id="3673e-126">**Tamam** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-126">Select the **OK** button.</span></span>
-    1. <span data-ttu-id="3673e-127">Farklı ASP.NET çekirdek projeleri görüntüleyen pencerede **Web Uygulaması'nı** seçin ve ardından **Tamam** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-127">Choose **Web Application** in the window that displays the different types of ASP.NET Core Projects, and then select the **OK** button.</span></span>
+    1. <span data-ttu-id="b69a7-121">Visual Studio 'Yu açın ve menü çubuğundan **dosya > yeni > projesi** öğesini seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-121">Open Visual Studio and select **File > New > Project** from the menu bar.</span></span>
+    1. <span data-ttu-id="b69a7-122">Yeni proje iletişim kutusunda, **Visual C#** düğümünü ve ardından **Web** düğümünü seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-122">In the New Project dialog, select the **Visual C#** node followed by the **Web** node.</span></span>
+    1. <span data-ttu-id="b69a7-123">**ASP.NET Core Web uygulaması** proje şablonunu seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-123">Then select the **ASP.NET Core Web Application** project template.</span></span>
+    1. <span data-ttu-id="b69a7-124">**Ad** metin kutusuna "SentimentRazor" yazın.</span><span class="sxs-lookup"><span data-stu-id="b69a7-124">In the **Name** text box, type "SentimentRazor".</span></span>
+    1. <span data-ttu-id="b69a7-125">**Çözümün ve projenin aynı dizine yerleştirdiğinizden** emin **olun (vs** 2019) veya **çözüm için dizin oluşturma** **denetlenir** (vs 2017).</span><span class="sxs-lookup"><span data-stu-id="b69a7-125">Make sure **Place solution and project in the same directory** is **unchecked** (VS 2019), or **Create directory for solution** is **checked** (VS 2017).</span></span>
+    1. <span data-ttu-id="b69a7-126">**Tamam** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-126">Select the **OK** button.</span></span>
+    1. <span data-ttu-id="b69a7-127">Pencerede farklı ASP.NET Core proje türlerini görüntüleyen **Web uygulaması** ' nı seçin ve ardından **Tamam** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-127">Choose **Web Application** in the window that displays the different types of ASP.NET Core Projects, and then select the **OK** button.</span></span>
 
-## <a name="prepare-and-understand-the-data"></a><span data-ttu-id="3673e-128">Verileri hazırlama ve anlama</span><span class="sxs-lookup"><span data-stu-id="3673e-128">Prepare and understand the data</span></span>
+## <a name="prepare-and-understand-the-data"></a><span data-ttu-id="b69a7-128">Verileri hazırlama ve anlama</span><span class="sxs-lookup"><span data-stu-id="b69a7-128">Prepare and understand the data</span></span>
 
-<span data-ttu-id="3673e-129">[Vikipedi detoks dataset](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)indirin.</span><span class="sxs-lookup"><span data-stu-id="3673e-129">Download [Wikipedia detox dataset](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv).</span></span> <span data-ttu-id="3673e-130">Web sayfası açıldığında, sayfaya sağ tıklayın, **Farklı Kaydet'i** seçin ve dosyayı bilgisayarınızın herhangi bir yerine kaydedin.</span><span class="sxs-lookup"><span data-stu-id="3673e-130">When the webpage opens, right-click on the page, select **Save As** and save the file anywhere on your computer.</span></span>
+<span data-ttu-id="b69a7-129">[Vikipedi Detox veri kümesini](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)indirin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-129">Download [Wikipedia detox dataset](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv).</span></span> <span data-ttu-id="b69a7-130">Web sayfası açıldığında, sayfaya sağ tıklayın, **farklı kaydet** ' i seçin ve dosyayı bilgisayarınızda herhangi bir yere kaydedin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-130">When the webpage opens, right-click on the page, select **Save As** and save the file anywhere on your computer.</span></span>
 
-<span data-ttu-id="3673e-131">*wikipedia-detox-250-line-data.tsv* veri kümesindeki her satır, Wikipedia'daki bir kullanıcı tarafından bırakılan farklı bir incelemeyi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="3673e-131">Each row in the *wikipedia-detox-250-line-data.tsv* dataset represents a different review left by a user on Wikipedia.</span></span> <span data-ttu-id="3673e-132">İlk sütun metnin duyarlılığını temsil eder (0 toksik değildir, 1 zehirlidir) ve ikinci sütun kullanıcı tarafından bırakılan yorumu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="3673e-132">The first column represents the sentiment of the text (0 is non-toxic, 1 is toxic), and the second column represents the comment left by the user.</span></span> <span data-ttu-id="3673e-133">Sütunlar sekmelerle ayrılır.</span><span class="sxs-lookup"><span data-stu-id="3673e-133">The columns are separated by tabs.</span></span> <span data-ttu-id="3673e-134">Veriler aşağıdaki gibi görünür:</span><span class="sxs-lookup"><span data-stu-id="3673e-134">The data looks like the following:</span></span>
+<span data-ttu-id="b69a7-131">*Vivtox-250-Line-Data. tsv* veri kümesindeki her satır, visede bir kullanıcı tarafından bırakılan farklı bir gözden geçirmeyi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b69a7-131">Each row in the *wikipedia-detox-250-line-data.tsv* dataset represents a different review left by a user on Wikipedia.</span></span> <span data-ttu-id="b69a7-132">İlk sütun metnin (0-Toxic, 1 ' in Toxic) yaklaşımını temsil eder ve ikinci sütun Kullanıcı tarafından bırakılan yorumu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b69a7-132">The first column represents the sentiment of the text (0 is non-toxic, 1 is toxic), and the second column represents the comment left by the user.</span></span> <span data-ttu-id="b69a7-133">Sütunlar sekmelerle ayrılır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-133">The columns are separated by tabs.</span></span> <span data-ttu-id="b69a7-134">Veriler aşağıdaki gibi görünür:</span><span class="sxs-lookup"><span data-stu-id="b69a7-134">The data looks like the following:</span></span>
 
-| <span data-ttu-id="3673e-135">Yaklaşım</span><span class="sxs-lookup"><span data-stu-id="3673e-135">Sentiment</span></span> | <span data-ttu-id="3673e-136">SentimentText</span><span class="sxs-lookup"><span data-stu-id="3673e-136">SentimentText</span></span> |
+| <span data-ttu-id="b69a7-135">Yaklaşım</span><span class="sxs-lookup"><span data-stu-id="b69a7-135">Sentiment</span></span> | <span data-ttu-id="b69a7-136">Sentimentmetni</span><span class="sxs-lookup"><span data-stu-id="b69a7-136">SentimentText</span></span> |
 | :---: | :---: |
-<span data-ttu-id="3673e-137">1</span><span class="sxs-lookup"><span data-stu-id="3673e-137">1</span></span> | <span data-ttu-id="3673e-138">== RUDE == Dostum, o carl resmini geri yükle, yoksa kabasın.</span><span class="sxs-lookup"><span data-stu-id="3673e-138">==RUDE== Dude, you are rude upload that carl picture back, or else.</span></span>
-<span data-ttu-id="3673e-139">1</span><span class="sxs-lookup"><span data-stu-id="3673e-139">1</span></span> | <span data-ttu-id="3673e-140">== Tamam!</span><span class="sxs-lookup"><span data-stu-id="3673e-140">== OK!</span></span> <span data-ttu-id="3673e-141">== IM WILD ONES WIKI SONRA VANDALIZE OLACAK!!!</span><span class="sxs-lookup"><span data-stu-id="3673e-141">==  IM GOING TO VANDALIZE WILD ONES WIKI THEN!!!</span></span>
-<span data-ttu-id="3673e-142">0</span><span class="sxs-lookup"><span data-stu-id="3673e-142">0</span></span> | <span data-ttu-id="3673e-143">Umarım yardımı olur.</span><span class="sxs-lookup"><span data-stu-id="3673e-143">I hope this helps.</span></span>
+<span data-ttu-id="b69a7-137">1</span><span class="sxs-lookup"><span data-stu-id="b69a7-137">1</span></span> | <span data-ttu-id="b69a7-138">= = İşlenmemiş = = dude, o Carl resmini geri yüklemeniz veya başka bir şey yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-138">==RUDE== Dude, you are rude upload that carl picture back, or else.</span></span>
+<span data-ttu-id="b69a7-139">1</span><span class="sxs-lookup"><span data-stu-id="b69a7-139">1</span></span> | <span data-ttu-id="b69a7-140">= = TAMAM!</span><span class="sxs-lookup"><span data-stu-id="b69a7-140">== OK!</span></span> <span data-ttu-id="b69a7-141">= = ıM, DAHA SONRA BIR WIKI 'YI DAHA SONRA!!!</span><span class="sxs-lookup"><span data-stu-id="b69a7-141">==  IM GOING TO VANDALIZE WILD ONES WIKI THEN!!!</span></span>
+<span data-ttu-id="b69a7-142">0</span><span class="sxs-lookup"><span data-stu-id="b69a7-142">0</span></span> | <span data-ttu-id="b69a7-143">Bunu umuyoruz.</span><span class="sxs-lookup"><span data-stu-id="b69a7-143">I hope this helps.</span></span>
 
-## <a name="choose-a-scenario"></a><span data-ttu-id="3673e-144">Bir senaryo seçin</span><span class="sxs-lookup"><span data-stu-id="3673e-144">Choose a scenario</span></span>
+## <a name="choose-a-scenario"></a><span data-ttu-id="b69a7-144">Senaryo seçin</span><span class="sxs-lookup"><span data-stu-id="b69a7-144">Choose a scenario</span></span>
 
-![Model Oluşturucu sihirbazı Visual Studio'da](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Visual Studio 'da model Oluşturucu Sihirbazı](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
-<span data-ttu-id="3673e-146">Modelinizi eğitmek için Model Builder tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="3673e-146">To train your model, you need to select from the list of available machine learning scenarios provided by Model Builder.</span></span>
+<span data-ttu-id="b69a7-146">Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-146">To train your model, you need to select from the list of available machine learning scenarios provided by Model Builder.</span></span>
 
-1. <span data-ttu-id="3673e-147">**Solution Explorer'da** *SentimentRazor* projesine sağ tıklayın ve**Machine Learning** **Ekle'yi** > seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-147">In **Solution Explorer**, right-click the *SentimentRazor* project, and select **Add** > **Machine Learning**.</span></span>
-1. <span data-ttu-id="3673e-148">Bu örnek için, senaryo duygu analizidir.</span><span class="sxs-lookup"><span data-stu-id="3673e-148">For this sample, the scenario is sentiment analysis.</span></span> <span data-ttu-id="3673e-149">Model Oluşturucu aracının *senaryo* adımında, **Duyarlılık Analizi** senaryosunu seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-149">In the *scenario* step of the Model Builder tool, select the **Sentiment Analysis** scenario.</span></span>
+1. <span data-ttu-id="b69a7-147">**Çözüm Gezgini**, *SentimentRazor* projesine sağ tıklayın ve Machine Learning Ekle ' yi seçin **Add**  >  **Machine Learning**.</span><span class="sxs-lookup"><span data-stu-id="b69a7-147">In **Solution Explorer**, right-click the *SentimentRazor* project, and select **Add** > **Machine Learning**.</span></span>
+1. <span data-ttu-id="b69a7-148">Bu örnek için senaryo, yaklaşım analiziydi.</span><span class="sxs-lookup"><span data-stu-id="b69a7-148">For this sample, the scenario is sentiment analysis.</span></span> <span data-ttu-id="b69a7-149">Model Oluşturucu aracının *senaryo* adımında **yaklaşım Analizi** senaryosunu seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-149">In the *scenario* step of the Model Builder tool, select the **Sentiment Analysis** scenario.</span></span>
 
-## <a name="load-the-data"></a><span data-ttu-id="3673e-150">Verileri yükleme</span><span class="sxs-lookup"><span data-stu-id="3673e-150">Load the data</span></span>
+## <a name="load-the-data"></a><span data-ttu-id="b69a7-150">Verileri yükleme</span><span class="sxs-lookup"><span data-stu-id="b69a7-150">Load the data</span></span>
 
-<span data-ttu-id="3673e-151">Model Oluşturucu, iki kaynaktan, bir SQL Server `csv` veritabanından veya yerel bir dosyadan veya `tsv` biçimdeki verileri kabul eder.</span><span class="sxs-lookup"><span data-stu-id="3673e-151">Model Builder accepts data from two sources, a SQL Server database or a local file in `csv` or `tsv` format.</span></span>
+<span data-ttu-id="b69a7-151">Model Oluşturucu iki kaynaktan (bir SQL Server veritabanı ya da yerel bir dosya) veya biçimdeki verileri kabul eder `csv` `tsv` .</span><span class="sxs-lookup"><span data-stu-id="b69a7-151">Model Builder accepts data from two sources, a SQL Server database or a local file in `csv` or `tsv` format.</span></span>
 
-1. <span data-ttu-id="3673e-152">Model Oluşturucu aracının veri adımında, veri kaynağı açılır tarafından **Dosya'yı** seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-152">In the data step of the Model Builder tool, select **File** from the data source dropdown.</span></span>
-1. <span data-ttu-id="3673e-153">Dosya metin kutusunu **seç'in** yanındaki düğmeyi seçin ve *wikipedia-detoks-250-line-data.tsv* dosyasına göz atmak ve seçmek için Dosya Gezgini'ni kullanın.</span><span class="sxs-lookup"><span data-stu-id="3673e-153">Select the button next to the **Select a file** text box and use File Explorer to browse and select the *wikipedia-detox-250-line-data.tsv* file.</span></span>
-1. <span data-ttu-id="3673e-154">Sütundaki **Duygu'yu** seçin ve açılır düşüşü **tahmin edin (Etiket)** yazın.</span><span class="sxs-lookup"><span data-stu-id="3673e-154">Choose **Sentiment** in the **Column to Predict (Label)** dropdown.</span></span>
-1. <span data-ttu-id="3673e-155">**Giriş Sütunları (Özellikler)** açılır açılır açılır için varsayılan değerleri bırakın.</span><span class="sxs-lookup"><span data-stu-id="3673e-155">Leave the default values for the **Input Columns (Features)** dropdown.</span></span>
-1. <span data-ttu-id="3673e-156">Model Oluşturucu aracında bir sonraki adıma geçmek için **Tren** bağlantısını seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-156">Select the **Train** link to move to the next step in the Model Builder tool.</span></span>
+1. <span data-ttu-id="b69a7-152">Model Oluşturucu aracının veri adımında, veri kaynağı açılır listesinden **Dosya** ' yı seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-152">In the data step of the Model Builder tool, select **File** from the data source dropdown.</span></span>
+1. <span data-ttu-id="b69a7-153">**Dosya seçin** metin kutusunun yanındaki düğmeyi seçin ve dosya Gezgini 'ni kullanarak, *vibtox-250-Line-Data. tsv* dosyasına gidin ve seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-153">Select the button next to the **Select a file** text box and use File Explorer to browse and select the *wikipedia-detox-250-line-data.tsv* file.</span></span>
+1. <span data-ttu-id="b69a7-154">**Tahmin edilecek sütun (etiket)** açılan **listesini seçin.**</span><span class="sxs-lookup"><span data-stu-id="b69a7-154">Choose **Sentiment** in the **Column to Predict (Label)** dropdown.</span></span>
+1. <span data-ttu-id="b69a7-155">**Giriş sütunları (Özellikler)** açılır menüsü için varsayılan değerleri bırakın.</span><span class="sxs-lookup"><span data-stu-id="b69a7-155">Leave the default values for the **Input Columns (Features)** dropdown.</span></span>
+1. <span data-ttu-id="b69a7-156">Model Oluşturucu aracında bir sonraki adıma geçmek için **eğitme** bağlantısını seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-156">Select the **Train** link to move to the next step in the Model Builder tool.</span></span>
 
-## <a name="train-the-model"></a><span data-ttu-id="3673e-157">Modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="3673e-157">Train the model</span></span>
+## <a name="train-the-model"></a><span data-ttu-id="b69a7-157">Modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="b69a7-157">Train the model</span></span>
 
-<span data-ttu-id="3673e-158">Bu öğreticide duygu analizi modelini eğitmek için kullanılan makine öğrenme görevi ikili sınıflandırmadır.</span><span class="sxs-lookup"><span data-stu-id="3673e-158">The machine learning task used to train the sentiment analysis model in this tutorial is binary classification.</span></span> <span data-ttu-id="3673e-159">Model eğitim işlemi sırasında Model Builder, veri setiniz için en iyi performans gösteren modeli bulmak için farklı ikili sınıflandırma algoritmaları ve ayarları kullanarak ayrı modeller eğitir.</span><span class="sxs-lookup"><span data-stu-id="3673e-159">During the model training process, Model Builder trains separate models using different binary classification algorithms and settings to find the best performing model for your dataset.</span></span>
+<span data-ttu-id="b69a7-158">Bu öğreticide yaklaşım Analizi modelini eğitmek için kullanılan makine öğrenimi görevi ikili sınıflandırmasıdır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-158">The machine learning task used to train the sentiment analysis model in this tutorial is binary classification.</span></span> <span data-ttu-id="b69a7-159">Model oluşturma işlemi sırasında model Oluşturucu, veri kümeniz için en iyi işlem modelini bulmak üzere farklı ikili sınıflandırma algoritmalarını ve ayarlarını kullanarak modelleri ayrı ayrı işler.</span><span class="sxs-lookup"><span data-stu-id="b69a7-159">During the model training process, Model Builder trains separate models using different binary classification algorithms and settings to find the best performing model for your dataset.</span></span>
 
-<span data-ttu-id="3673e-160">Modelin eğitilmesi için gereken süre veri miktarıyla orantılıdır.</span><span class="sxs-lookup"><span data-stu-id="3673e-160">The time required for the model to train is proportionate to the amount of data.</span></span> <span data-ttu-id="3673e-161">Model Oluşturucu, veri kaynağınızın boyutuna bağlı **olarak, eğitme Süresi (saniye)** için varsayılan bir değer seçer.</span><span class="sxs-lookup"><span data-stu-id="3673e-161">Model Builder automatically selects a default value for **Time to train (seconds)** based on the size of your data source.</span></span>
+<span data-ttu-id="b69a7-160">Modelin eğitilmesi için gereken süre, veri miktarına müşterinizin istekleriyle orantılı.</span><span class="sxs-lookup"><span data-stu-id="b69a7-160">The time required for the model to train is proportionate to the amount of data.</span></span> <span data-ttu-id="b69a7-161">Model Oluşturucu, veri kaynağınızın boyutuna bağlı olarak, **tren süresi (saniye)** için varsayılan bir değer seçer.</span><span class="sxs-lookup"><span data-stu-id="b69a7-161">Model Builder automatically selects a default value for **Time to train (seconds)** based on the size of your data source.</span></span>
 
-1. <span data-ttu-id="3673e-162">Model Oluşturucu, **(saniye) eğitmek için Zamanın** değerini 10 saniyeye ayarlasa da, bunu 30 saniyeye yükseltin.</span><span class="sxs-lookup"><span data-stu-id="3673e-162">Although Model Builder sets the value of **Time to train (seconds)** to 10 seconds, increase it to 30 seconds.</span></span> <span data-ttu-id="3673e-163">Daha uzun bir süre için eğitim Model Builder algoritmaları ve en iyi modeli arama parametrelerinin kombinasyonu daha fazla sayıda keşfetmek için izin verir.</span><span class="sxs-lookup"><span data-stu-id="3673e-163">Training for a longer period of time allows Model Builder to explore a larger number of algorithms and combination of parameters in search of the best model.</span></span>
-1. <span data-ttu-id="3673e-164">**Start Training'i**seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-164">Select **Start Training**.</span></span>
+1. <span data-ttu-id="b69a7-162">Model Oluşturucu değeri, " **saniye)** ila 10 saniye arasında bir süre olarak ayarlasa da, 30 saniyeye yükseltin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-162">Although Model Builder sets the value of **Time to train (seconds)** to 10 seconds, increase it to 30 seconds.</span></span> <span data-ttu-id="b69a7-163">Daha uzun bir süre için eğitim, model oluşturucunun en iyi modeli aramada daha fazla sayıda algoritmaların ve parametrelerin birleşimini keşfetmesine olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-163">Training for a longer period of time allows Model Builder to explore a larger number of algorithms and combination of parameters in search of the best model.</span></span>
+1. <span data-ttu-id="b69a7-164">**Eğitimi Başlat**' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-164">Select **Start Training**.</span></span>
 
-    <span data-ttu-id="3673e-165">Eğitim süreci boyunca, ilerleme verileri tren `Progress` adımı bölümünde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="3673e-165">Throughout the training process, progress data is displayed in the `Progress` section of the train step.</span></span>
+    <span data-ttu-id="b69a7-165">Eğitim süreci boyunca, ilerleme verileri `Progress` eğitme adımının bölümünde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-165">Throughout the training process, progress data is displayed in the `Progress` section of the train step.</span></span>
 
-    - <span data-ttu-id="3673e-166">Durum, eğitim sürecinin tamamlanma durumunu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="3673e-166">Status displays the completion status of the training process.</span></span>
-    - <span data-ttu-id="3673e-167">En iyi doğruluk, Model Builder tarafından şimdiye kadar bulunan en iyi performans gösteren modelin doğruluğunu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="3673e-167">Best accuracy displays the accuracy of the best performing model found by Model Builder so far.</span></span> <span data-ttu-id="3673e-168">Daha yüksek doğruluk, modelin test verilerinde daha doğru tahmin ettiği anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="3673e-168">Higher accuracy means the model predicted more correctly on test data.</span></span>
-    - <span data-ttu-id="3673e-169">En iyi algoritma, Model Builder tarafından şimdiye kadar bulunan en iyi performans gösteren algoritmanın adını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="3673e-169">Best algorithm displays the name of the best performing algorithm performed found by Model Builder so far.</span></span>
-    - <span data-ttu-id="3673e-170">Son algoritma, modeli eğitmek için Model Oluşturucu tarafından en son kullanılan algoritmanın adını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="3673e-170">Last algorithm displays the name of the algorithm most recently used by Model Builder to train the model.</span></span>
+    - <span data-ttu-id="b69a7-166">Durum, eğitim sürecinin tamamlanma durumunu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="b69a7-166">Status displays the completion status of the training process.</span></span>
+    - <span data-ttu-id="b69a7-167">En iyi doğruluk, şu ana kadar model Oluşturucu tarafından bulunan en iyi şekilde oluşan modelin doğruluğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-167">Best accuracy displays the accuracy of the best performing model found by Model Builder so far.</span></span> <span data-ttu-id="b69a7-168">Daha yüksek doğruluk, modelin test verilerinde daha doğru tahmin edilen anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-168">Higher accuracy means the model predicted more correctly on test data.</span></span>
+    - <span data-ttu-id="b69a7-169">En iyi algoritma, şu ana kadar model Oluşturucu tarafından bulunan en iyi şekilde gerçekleştirilen algoritmanın adını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="b69a7-169">Best algorithm displays the name of the best performing algorithm performed found by Model Builder so far.</span></span>
+    - <span data-ttu-id="b69a7-170">Son algoritma modeli eğitmek için model Oluşturucu tarafından en son kullanılan algoritmanın adını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="b69a7-170">Last algorithm displays the name of the algorithm most recently used by Model Builder to train the model.</span></span>
 
-1. <span data-ttu-id="3673e-171">Eğitim tamamlandıktan sonra, bir sonraki adıma geçmek için **değerlendirme** bağlantısını seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-171">Once training is complete, select the **evaluate** link to move to the next step.</span></span>
+1. <span data-ttu-id="b69a7-171">Eğitim tamamlandıktan sonra bir sonraki adıma geçmek için bağlantıyı **değerlendir** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-171">Once training is complete, select the **evaluate** link to move to the next step.</span></span>
 
-## <a name="evaluate-the-model"></a><span data-ttu-id="3673e-172">Modeli değerlendirme</span><span class="sxs-lookup"><span data-stu-id="3673e-172">Evaluate the model</span></span>
+## <a name="evaluate-the-model"></a><span data-ttu-id="b69a7-172">Modeli değerlendirme</span><span class="sxs-lookup"><span data-stu-id="b69a7-172">Evaluate the model</span></span>
 
-<span data-ttu-id="3673e-173">Eğitim adımının sonucu en iyi performansa sahip bir model olacaktır.</span><span class="sxs-lookup"><span data-stu-id="3673e-173">The result of the training step will be one model that has the best performance.</span></span> <span data-ttu-id="3673e-174">Model Oluşturucu aracının değerlendirme adımında, çıkış bölümü **Best Model** Girişinde en iyi performans gösteren model tarafından kullanılan algoritmayı ve En İyi **Model Doğruluğu'ndaki**ölçümleri içerir.</span><span class="sxs-lookup"><span data-stu-id="3673e-174">In the evaluate step of the Model Builder tool, the output section will contain the algorithm used by the best-performing model in the **Best Model** entry along with metrics in **Best Model Accuracy**.</span></span> <span data-ttu-id="3673e-175">Ayrıca, ilk beş modelleri ve bunların ölçümlerini içeren bir özet tablo gösterilir.</span><span class="sxs-lookup"><span data-stu-id="3673e-175">Additionally, a summary table containing the top five models and their metrics is shown.</span></span>
+<span data-ttu-id="b69a7-173">Eğitim adımının sonucu, en iyi performansa sahip bir model olacaktır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-173">The result of the training step will be one model that has the best performance.</span></span> <span data-ttu-id="b69a7-174">Model Oluşturucu aracının değerlendir adımında, çıkış bölümü **en iyi model girişinde en** iyi işlem modeli için kullanılan algoritmayı ve **En Iyi model doğruluğunun** ölçümlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-174">In the evaluate step of the Model Builder tool, the output section will contain the algorithm used by the best-performing model in the **Best Model** entry along with metrics in **Best Model Accuracy**.</span></span> <span data-ttu-id="b69a7-175">Ayrıca, ilk beş modeli ve bunların ölçümlerini içeren bir Özet tablosu gösterilir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-175">Additionally, a summary table containing the top five models and their metrics is shown.</span></span>
 
-<span data-ttu-id="3673e-176">Doğruluk ölçümlerinizden memnun değilseniz, model doğruluğunu iyileştirmeyi denemenin bazı kolay yolları, modeli eğitmek veya daha fazla veri kullanmak için gereken süreyi artırmakiçindir.</span><span class="sxs-lookup"><span data-stu-id="3673e-176">If you're not satisfied with your accuracy metrics, some easy ways to try to improve model accuracy are to increase the amount of time to train the model or use more data.</span></span> <span data-ttu-id="3673e-177">Aksi takdirde, Model Oluşturucu aracında son adıma geçmek için **kod** bağlantısını seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-177">Otherwise, select the **code** link to move to the final step in the Model Builder tool.</span></span>
+<span data-ttu-id="b69a7-176">Doğruluk ölçümlerinizi tatmin ediyorsanız, model doğruluğunu artırmak için bazı kolay yollar, modelin eğilmesi veya daha fazla veri kullanmak için zaman miktarını artırmaktır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-176">If you're not satisfied with your accuracy metrics, some easy ways to try to improve model accuracy are to increase the amount of time to train the model or use more data.</span></span> <span data-ttu-id="b69a7-177">Aksi takdirde, model Oluşturucu aracında son adıma geçmek için **kod** bağlantısını seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-177">Otherwise, select the **code** link to move to the final step in the Model Builder tool.</span></span>
 
-## <a name="add-the-code-to-make-predictions"></a><span data-ttu-id="3673e-178">Tahminlerde bulunmak için kodu ekleme</span><span class="sxs-lookup"><span data-stu-id="3673e-178">Add the code to make predictions</span></span>
+## <a name="add-the-code-to-make-predictions"></a><span data-ttu-id="b69a7-178">Tahminleri yapmak için kodu ekleyin</span><span class="sxs-lookup"><span data-stu-id="b69a7-178">Add the code to make predictions</span></span>
 
-<span data-ttu-id="3673e-179">Eğitim süreci sonucunda iki proje oluşturulacaktır.</span><span class="sxs-lookup"><span data-stu-id="3673e-179">Two projects will be created as a result of the training process.</span></span>
+<span data-ttu-id="b69a7-179">Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-179">Two projects will be created as a result of the training process.</span></span>
 
-### <a name="reference-the-trained-model"></a><span data-ttu-id="3673e-180">Eğitimli modele başvurun</span><span class="sxs-lookup"><span data-stu-id="3673e-180">Reference the trained model</span></span>
+### <a name="reference-the-trained-model"></a><span data-ttu-id="b69a7-180">Eğitilen modele başvur</span><span class="sxs-lookup"><span data-stu-id="b69a7-180">Reference the trained model</span></span>
 
-1. <span data-ttu-id="3673e-181">Model Oluşturucu aracının *kod* adımında, çözüme otomatik oluşturulan projeleri eklemek için **Projeler Ekle'yi** seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-181">In the *code* step of the Model Builder tool, select **Add Projects** to add the autogenerated projects to the solution.</span></span>
+1. <span data-ttu-id="b69a7-181">Model Oluşturucu aracının *kod* adımında, otomatik olarak oluşturulan projeleri çözüme eklemek Için **Proje Ekle** ' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-181">In the *code* step of the Model Builder tool, select **Add Projects** to add the autogenerated projects to the solution.</span></span>
 
-    <span data-ttu-id="3673e-182">Çözüm Gezgini'nde **Solution Explorer**aşağıdaki projeler görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="3673e-182">The following projects should appear in the **Solution Explorer**:</span></span>
+    <span data-ttu-id="b69a7-182">Aşağıdaki projeler **Çözüm Gezgini** görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="b69a7-182">The following projects should appear in the **Solution Explorer**:</span></span>
 
-    - <span data-ttu-id="3673e-183">*SentimentRazorML.ConsoleApp*: Model eğitimi ve tahmin kodunu içeren bir .NET Core Console uygulaması.</span><span class="sxs-lookup"><span data-stu-id="3673e-183">*SentimentRazorML.ConsoleApp*: A .NET Core Console application that contains the model training and prediction code.</span></span>
-    - <span data-ttu-id="3673e-184">*SentimentRazorML.Model*: Giriş ve çıktı modeli verilerinin şemalarının yanı sıra eğitim sırasında en iyi performans gösteren modelin kaydedilmiş sürümünü tanımlayan veri modellerini içeren bir .NET Standart sınıf kitaplığı.</span><span class="sxs-lookup"><span data-stu-id="3673e-184">*SentimentRazorML.Model*: A .NET Standard class library containing the data models that define the schema of input and output model data as well as the saved version of the best performing model during training.</span></span>
+    - <span data-ttu-id="b69a7-183">*SentimentRazorML. ConsoleApp*: model eğitimi ve tahmin kodunu içeren bir .NET Core konsol uygulaması.</span><span class="sxs-lookup"><span data-stu-id="b69a7-183">*SentimentRazorML.ConsoleApp*: A .NET Core Console application that contains the model training and prediction code.</span></span>
+    - <span data-ttu-id="b69a7-184">*SentimentRazorML. model*: giriş ve çıkış modeli verilerinin şemasını tanımlayan veri modellerini ve eğitim sırasında en iyi uygulanan modelin kaydedilmiş sürümünü içeren .NET Standard bir sınıf kitaplığı.</span><span class="sxs-lookup"><span data-stu-id="b69a7-184">*SentimentRazorML.Model*: A .NET Standard class library containing the data models that define the schema of input and output model data as well as the saved version of the best performing model during training.</span></span>
 
-    <span data-ttu-id="3673e-185">Tahminler *sentimentrazor* web uygulaması yerine konsolda yapılacaktır, çünkü bu öğretici için, sadece *SentimentRazorML.Model* proje kullanılır.</span><span class="sxs-lookup"><span data-stu-id="3673e-185">For this tutorial, only the *SentimentRazorML.Model* project is used because predictions will be made in the *SentimentRazor* web application rather than in the console.</span></span> <span data-ttu-id="3673e-186">*SentimentRazorML.ConsoleApp* puanlama için kullanılmayacak olsa da, daha sonra yeni veriler kullanarak modeli yeniden eğitmek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="3673e-186">Although the *SentimentRazorML.ConsoleApp* won't be used for scoring, it can be used to retrain the model using new data at a later time.</span></span> <span data-ttu-id="3673e-187">Yeniden eğitim olsa bu öğretici kapsamı dışındadır.</span><span class="sxs-lookup"><span data-stu-id="3673e-187">Retraining is outside the scope of this tutorial though.</span></span>
+    <span data-ttu-id="b69a7-185">Bu öğretici için, *SentimentRazorML. model* projesi yalnızca, tahmine dayalı olarak konsolu yerine *SentimentRazor* Web uygulamasında yapılabilmesi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-185">For this tutorial, only the *SentimentRazorML.Model* project is used because predictions will be made in the *SentimentRazor* web application rather than in the console.</span></span> <span data-ttu-id="b69a7-186">*SentimentRazorML. ConsoleApp* , Puanlama için kullanılmayacak olsa da, daha sonra yeni verileri kullanarak modeli yeniden eğitebilmek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-186">Although the *SentimentRazorML.ConsoleApp* won't be used for scoring, it can be used to retrain the model using new data at a later time.</span></span> <span data-ttu-id="b69a7-187">Yeniden eğitim, Bu öğreticinin kapsamı dışındadır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-187">Retraining is outside the scope of this tutorial though.</span></span>
 
-### <a name="configure-the-predictionengine-pool"></a><span data-ttu-id="3673e-188">PredictionEngine havuzunu yapılandırın</span><span class="sxs-lookup"><span data-stu-id="3673e-188">Configure the PredictionEngine pool</span></span>
+### <a name="configure-the-predictionengine-pool"></a><span data-ttu-id="b69a7-188">PredictionEngine havuzunu yapılandırma</span><span class="sxs-lookup"><span data-stu-id="b69a7-188">Configure the PredictionEngine pool</span></span>
 
-<span data-ttu-id="3673e-189">Tek bir tahmin yapmak için, <xref:Microsoft.ML.PredictionEngine%602>bir .</span><span class="sxs-lookup"><span data-stu-id="3673e-189">To make a single prediction, you have to create a <xref:Microsoft.ML.PredictionEngine%602>.</span></span> <span data-ttu-id="3673e-190"><xref:Microsoft.ML.PredictionEngine%602>iş parçacığı güvenli değildir.</span><span class="sxs-lookup"><span data-stu-id="3673e-190"><xref:Microsoft.ML.PredictionEngine%602> is not thread-safe.</span></span> <span data-ttu-id="3673e-191">Ayrıca, uygulamanız içinde ihtiyaç duyulan her yerde bunun bir örneğini oluşturmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="3673e-191">Additionally, you have to create an instance of it everywhere it's needed within your application.</span></span> <span data-ttu-id="3673e-192">Uygulamanız büyüdükçe, bu işlem yönetilemez hale gelebilir.</span><span class="sxs-lookup"><span data-stu-id="3673e-192">As your application grows, this process can become unmanageable.</span></span> <span data-ttu-id="3673e-193">Daha iyi performans ve iş parçacığı güvenliği için, `PredictionEnginePool` uygulamanız boyunca <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> kullanılmak <xref:Microsoft.ML.PredictionEngine%602> üzere bir nesne oluşturan bağımlılık enjeksiyonu ve hizmetin bir birleşimini kullanın.</span><span class="sxs-lookup"><span data-stu-id="3673e-193">For improved performance and thread safety, use a combination of dependency injection and the `PredictionEnginePool` service, which creates an <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> of <xref:Microsoft.ML.PredictionEngine%602> objects for use throughout your application.</span></span>
+<span data-ttu-id="b69a7-189">Tek bir tahmin yapmak için, oluşturmanız gerekir <xref:Microsoft.ML.PredictionEngine%602> .</span><span class="sxs-lookup"><span data-stu-id="b69a7-189">To make a single prediction, you have to create a <xref:Microsoft.ML.PredictionEngine%602>.</span></span> <span data-ttu-id="b69a7-190"><xref:Microsoft.ML.PredictionEngine%602> , iş parçacığı açısından güvenli değildir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-190"><xref:Microsoft.ML.PredictionEngine%602> is not thread-safe.</span></span> <span data-ttu-id="b69a7-191">Ayrıca, uygulamanız içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-191">Additionally, you have to create an instance of it everywhere it's needed within your application.</span></span> <span data-ttu-id="b69a7-192">Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-192">As your application grows, this process can become unmanageable.</span></span> <span data-ttu-id="b69a7-193">Daha iyi performans ve iş parçacığı güvenliği için, `PredictionEnginePool` <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> <xref:Microsoft.ML.PredictionEngine%602> uygulamanız genelinde kullanılacak nesneleri oluşturan bağımlılık ekleme ve hizmetin bir birleşimini kullanın.</span><span class="sxs-lookup"><span data-stu-id="b69a7-193">For improved performance and thread safety, use a combination of dependency injection and the `PredictionEnginePool` service, which creates an <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> of <xref:Microsoft.ML.PredictionEngine%602> objects for use throughout your application.</span></span>
 
-1. <span data-ttu-id="3673e-194">*Microsoft.Extensions.ML* NuGet paketini yükleyin:</span><span class="sxs-lookup"><span data-stu-id="3673e-194">Install the *Microsoft.Extensions.ML* NuGet package:</span></span>
+1. <span data-ttu-id="b69a7-194">*Microsoft.Extensions.ml* NuGet paketini yükler:</span><span class="sxs-lookup"><span data-stu-id="b69a7-194">Install the *Microsoft.Extensions.ML* NuGet package:</span></span>
 
-    1. <span data-ttu-id="3673e-195">**Çözüm Gezgini'nde**projeyi sağ tıklatın ve **NuGet Paketlerini Yönet'i**seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-195">In **Solution Explorer**, right-click the project and select **Manage NuGet Packages**.</span></span>
-    1. <span data-ttu-id="3673e-196">Paket kaynağı olarak "nuget.org" seçeneğini belirleyin.</span><span class="sxs-lookup"><span data-stu-id="3673e-196">Choose "nuget.org" as the Package source.</span></span>
-    1. <span data-ttu-id="3673e-197">**Gözat** sekmesini seçin ve **Microsoft.Extensions.ML**arayın.</span><span class="sxs-lookup"><span data-stu-id="3673e-197">Select the **Browse** tab and search for **Microsoft.Extensions.ML**.</span></span>
-    1. <span data-ttu-id="3673e-198">Listedeki paketi seçin ve **Yükle** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-198">Select the package in the list, and select the **Install** button.</span></span>
-    1. <span data-ttu-id="3673e-199">**Değişiklikleri Önizleme** iletişim kutusundaki **Tamam** düğmesini seçin</span><span class="sxs-lookup"><span data-stu-id="3673e-199">Select the **OK** button on the **Preview Changes** dialog</span></span>
-    1. <span data-ttu-id="3673e-200">Listelenen paketlerin lisans koşullarını kabul **ederseniz, Lisans Kabul** iletişim kutusundaki **I Kabul** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="3673e-200">Select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
+    1. <span data-ttu-id="b69a7-195">**Çözüm Gezgini**, projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-195">In **Solution Explorer**, right-click the project and select **Manage NuGet Packages**.</span></span>
+    1. <span data-ttu-id="b69a7-196">Paket kaynağı olarak "nuget.org" öğesini seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-196">Choose "nuget.org" as the Package source.</span></span>
+    1. <span data-ttu-id="b69a7-197">**Araştır** sekmesini seçin ve **Microsoft.Extensions.ml** için arama yapın.</span><span class="sxs-lookup"><span data-stu-id="b69a7-197">Select the **Browse** tab and search for **Microsoft.Extensions.ML**.</span></span>
+    1. <span data-ttu-id="b69a7-198">Listeden paketi seçin ve ardından **Install** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-198">Select the package in the list, and select the **Install** button.</span></span>
+    1. <span data-ttu-id="b69a7-199">**Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin</span><span class="sxs-lookup"><span data-stu-id="b69a7-199">Select the **OK** button on the **Preview Changes** dialog</span></span>
+    1. <span data-ttu-id="b69a7-200">Listelenen paketlerin lisans koşullarını kabul ediyorsanız, **Lisans kabulü** Iletişim kutusunda **kabul ediyorum** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-200">Select the **I Accept** button on the **License Acceptance** dialog if you agree with the license terms for the packages listed.</span></span>
 
-1. <span data-ttu-id="3673e-201">*SentimentRazor* projesindeki *Startup.cs* dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="3673e-201">Open the *Startup.cs* file in the *SentimentRazor* project.</span></span>
-1. <span data-ttu-id="3673e-202">*Microsoft.Extensions.ML* NuGet paketi ve *SentimentRazorML.Model* projesine atıfta bulunmak için aşağıdaki ifadeleri ekleyin:</span><span class="sxs-lookup"><span data-stu-id="3673e-202">Add the following using statements to reference the *Microsoft.Extensions.ML* NuGet package and *SentimentRazorML.Model* project:</span></span>
+1. <span data-ttu-id="b69a7-201">*SentimentRazor* projesindeki *Startup.cs* dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="b69a7-201">Open the *Startup.cs* file in the *SentimentRazor* project.</span></span>
+1. <span data-ttu-id="b69a7-202">*Microsoft.Extensions.ml* NuGet paketini ve *SentimentRazorML. model* projesine başvurmak için aşağıdaki using deyimlerini ekleyin:</span><span class="sxs-lookup"><span data-stu-id="b69a7-202">Add the following using statements to reference the *Microsoft.Extensions.ML* NuGet package and *SentimentRazorML.Model* project:</span></span>
 
     ```csharp
     using System.IO;
@@ -144,13 +144,13 @@ ms.locfileid: "81278957"
     using SentimentRazorML.Model;
     ```
 
-1. <span data-ttu-id="3673e-203">Eğitilen model dosyasının konumunu depolamak için genel bir değişken oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3673e-203">Create a global variable to store the location of the trained model file.</span></span>
+1. <span data-ttu-id="b69a7-203">Eğitilen model dosyasının konumunu depolamak için genel bir değişken oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b69a7-203">Create a global variable to store the location of the trained model file.</span></span>
 
     ```csharp
     private readonly string _modelPath;
     ```
 
-1. <span data-ttu-id="3673e-204">Model dosyası, uygulamanızın derleme dosyalarının yanında yapı dizininde depolanır.</span><span class="sxs-lookup"><span data-stu-id="3673e-204">The model file is stored in the build directory alongside the assembly files of your application.</span></span> <span data-ttu-id="3673e-205">Erişimi kolaylaştırmak için, yöntemden `GetAbsolutePath` `Configure` sonra çağrılan bir yardımcı yöntemi oluşturun</span><span class="sxs-lookup"><span data-stu-id="3673e-205">To make it easier to access, create a helper method called `GetAbsolutePath` after the `Configure` method</span></span>
+1. <span data-ttu-id="b69a7-204">Model dosyası, uygulamanızın derleme dosyalarının yanı sıra derleme dizininde depolanır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-204">The model file is stored in the build directory alongside the assembly files of your application.</span></span> <span data-ttu-id="b69a7-205">Daha kolay erişim sağlamak için, `GetAbsolutePath` yönteminden sonra adlı bir yardımcı yöntem oluşturun `Configure`</span><span class="sxs-lookup"><span data-stu-id="b69a7-205">To make it easier to access, create a helper method called `GetAbsolutePath` after the `Configure` method</span></span>
 
     ```csharp
     public static string GetAbsolutePath(string relativePath)
@@ -163,39 +163,39 @@ ms.locfileid: "81278957"
     }
     ```
 
-1. <span data-ttu-id="3673e-206">'yi `GetAbsolutePath` `Startup` ayarlamak için sınıf oluşturucudaki yöntemi `_modelPath`kullanın.</span><span class="sxs-lookup"><span data-stu-id="3673e-206">Use the `GetAbsolutePath` method in the `Startup` class constructor to set the `_modelPath`.</span></span>
+1. <span data-ttu-id="b69a7-206">Öğesini `GetAbsolutePath` `Startup` ayarlamak için sınıf oluşturucusunda metodunu kullanın `_modelPath` .</span><span class="sxs-lookup"><span data-stu-id="b69a7-206">Use the `GetAbsolutePath` method in the `Startup` class constructor to set the `_modelPath`.</span></span>
 
     ```csharp
     _modelPath = GetAbsolutePath("MLModel.zip");
     ```
 
-1. <span data-ttu-id="3673e-207">`ConfigureServices` Uygulamanız `PredictionEnginePool` için yöntemi yapılandırın:</span><span class="sxs-lookup"><span data-stu-id="3673e-207">Configure the `PredictionEnginePool` for your application in the `ConfigureServices` method:</span></span>
+1. <span data-ttu-id="b69a7-207">`PredictionEnginePool`Yöntemi için uygulamanızı için yapılandırın `ConfigureServices` :</span><span class="sxs-lookup"><span data-stu-id="b69a7-207">Configure the `PredictionEnginePool` for your application in the `ConfigureServices` method:</span></span>
 
     ```csharp
     services.AddPredictionEnginePool<ModelInput, ModelOutput>()
             .FromFile(_modelPath);
     ```
 
-### <a name="create-sentiment-analysis-handler"></a><span data-ttu-id="3673e-208">Duyarlılık analizi işleyicisi oluşturma</span><span class="sxs-lookup"><span data-stu-id="3673e-208">Create sentiment analysis handler</span></span>
+### <a name="create-sentiment-analysis-handler"></a><span data-ttu-id="b69a7-208">Yaklaşım Analizi işleyicisi oluşturma</span><span class="sxs-lookup"><span data-stu-id="b69a7-208">Create sentiment analysis handler</span></span>
 
-<span data-ttu-id="3673e-209">Tahminler uygulamanın ana sayfası içinde yapılacaktır.</span><span class="sxs-lookup"><span data-stu-id="3673e-209">Predictions will be made inside the main page of the application.</span></span> <span data-ttu-id="3673e-210">Bu nedenle, kullanıcı girişi alır ve `PredictionEnginePool` bir tahmin dönmek için kullanan bir yöntem eklenmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="3673e-210">Therefore, a method that takes the user input and uses the `PredictionEnginePool` to return a prediction needs to be added.</span></span>
+<span data-ttu-id="b69a7-209">Tahmine dayalı, uygulamanın ana sayfasında yapılır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-209">Predictions will be made inside the main page of the application.</span></span> <span data-ttu-id="b69a7-210">Bu nedenle, Kullanıcı girişini alan ve `PredictionEnginePool` bir tahmin eklenmesi için kullanması gereken bir yöntem.</span><span class="sxs-lookup"><span data-stu-id="b69a7-210">Therefore, a method that takes the user input and uses the `PredictionEnginePool` to return a prediction needs to be added.</span></span>
 
-1. <span data-ttu-id="3673e-211">*Sayfalar* dizininde bulunan *Index.cshtml.cs* dosyasını açın ve aşağıdaki ifadeleri ekleyin:</span><span class="sxs-lookup"><span data-stu-id="3673e-211">Open the *Index.cshtml.cs* file located in the *Pages* directory and add the following using statements:</span></span>
+1. <span data-ttu-id="b69a7-211">*Pages* dizininde bulunan *Index.cshtml.cs* dosyasını açın ve aşağıdaki using deyimlerini ekleyin:</span><span class="sxs-lookup"><span data-stu-id="b69a7-211">Open the *Index.cshtml.cs* file located in the *Pages* directory and add the following using statements:</span></span>
 
     ```csharp
     using Microsoft.Extensions.ML;
     using SentimentRazorML.Model;
     ```
 
-    <span data-ttu-id="3673e-212">`Startup` Sınıfta `PredictionEnginePool` yapılandırılan kullanımı için, kullanmak istediğiniz modelin oluşturucuiçine enjekte etmek zorunda.</span><span class="sxs-lookup"><span data-stu-id="3673e-212">In order to use the `PredictionEnginePool` configured in the `Startup` class, you have to inject it into the constructor of the model where you want to use it.</span></span>
+    <span data-ttu-id="b69a7-212">`PredictionEnginePool` `Startup` Sınıfında yapılandırılan ' ı kullanmak için, onu kullanmak istediğiniz modelin oluşturucusuna eklemek gerekir.</span><span class="sxs-lookup"><span data-stu-id="b69a7-212">In order to use the `PredictionEnginePool` configured in the `Startup` class, you have to inject it into the constructor of the model where you want to use it.</span></span>
 
-1. <span data-ttu-id="3673e-213">`IndexModel` Sınıfın içine `PredictionEnginePool` başvurmak için bir değişken ekleyin.</span><span class="sxs-lookup"><span data-stu-id="3673e-213">Add a variable to reference the `PredictionEnginePool` inside the `IndexModel` class.</span></span>
+1. <span data-ttu-id="b69a7-213">Sınıfının içine başvurmak için bir değişken ekleyin `PredictionEnginePool` `IndexModel` .</span><span class="sxs-lookup"><span data-stu-id="b69a7-213">Add a variable to reference the `PredictionEnginePool` inside the `IndexModel` class.</span></span>
 
     ```csharp
     private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
     ```
 
-1. <span data-ttu-id="3673e-214">`IndexModel` Sınıfta bir oluşturucu oluşturun ve `PredictionEnginePool` hizmeti ona enjekte edin.</span><span class="sxs-lookup"><span data-stu-id="3673e-214">Create a constructor in the `IndexModel` class and inject the `PredictionEnginePool` service into it.</span></span>
+1. <span data-ttu-id="b69a7-214">Sınıfında bir Oluşturucu oluşturun `IndexModel` ve `PredictionEnginePool` hizmeti ona ekleyin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-214">Create a constructor in the `IndexModel` class and inject the `PredictionEnginePool` service into it.</span></span>
 
     ```csharp
     public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
@@ -204,9 +204,9 @@ ms.locfileid: "81278957"
     }
     ```
 
-1. <span data-ttu-id="3673e-215">Web sayfasından alınan kullanıcı `PredictionEnginePool` girişinden öngörüler yapmak için bir yöntem işleyicisi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3673e-215">Create a method handler that uses the `PredictionEnginePool` to make predictions from user input received from the web page.</span></span>
+1. <span data-ttu-id="b69a7-215">`PredictionEnginePool`Web sayfasından alınan Kullanıcı girişinden tahminleri yapmak için öğesini kullanan bir yöntem işleyicisi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b69a7-215">Create a method handler that uses the `PredictionEnginePool` to make predictions from user input received from the web page.</span></span>
 
-    1. <span data-ttu-id="3673e-216">Yöntemin `OnGet` altında, yeni bir yöntem oluşturmak`OnGetAnalyzeSentiment`</span><span class="sxs-lookup"><span data-stu-id="3673e-216">Below the `OnGet` method, create a new method called `OnGetAnalyzeSentiment`</span></span>
+    1. <span data-ttu-id="b69a7-216">Yönteminin altında `OnGet` , adlı yeni bir yöntem oluşturun `OnGetAnalyzeSentiment`</span><span class="sxs-lookup"><span data-stu-id="b69a7-216">Below the `OnGet` method, create a new method called `OnGetAnalyzeSentiment`</span></span>
 
         ```csharp
         public IActionResult OnGetAnalyzeSentiment([FromQuery] string text)
@@ -215,93 +215,93 @@ ms.locfileid: "81278957"
         }
         ```
 
-    1. <span data-ttu-id="3673e-217">Yöntemin `OnGetAnalyzeSentiment` içinde, kullanıcıdan giriş boş veya null ise *Nötr* duyarlılığı döndürün.</span><span class="sxs-lookup"><span data-stu-id="3673e-217">Inside the `OnGetAnalyzeSentiment` method, return *Neutral* sentiment if the input from the user is blank or null.</span></span>
+    1. <span data-ttu-id="b69a7-217">Yöntemi içinde `OnGetAnalyzeSentiment` , kullanıcının girişi boş veya null olduğunda *nötr* yaklaşım döndürün.</span><span class="sxs-lookup"><span data-stu-id="b69a7-217">Inside the `OnGetAnalyzeSentiment` method, return *Neutral* sentiment if the input from the user is blank or null.</span></span>
 
         ```csharp
         if (String.IsNullOrEmpty(text)) return Content("Neutral");
         ```
 
-    1. <span data-ttu-id="3673e-218">Geçerli bir giriş göz önüne alındığında, yeni bir örnek `ModelInput`oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3673e-218">Given a valid input, create a new instance of `ModelInput`.</span></span>
+    1. <span data-ttu-id="b69a7-218">Geçerli bir giriş verildiğinde yeni bir örneğini oluşturun `ModelInput` .</span><span class="sxs-lookup"><span data-stu-id="b69a7-218">Given a valid input, create a new instance of `ModelInput`.</span></span>
 
         ```csharp
         var input = new ModelInput { SentimentText = text };
         ```
 
-    1. <span data-ttu-id="3673e-219">Duyguları `PredictionEnginePool` tahmin etmek için kullan.</span><span class="sxs-lookup"><span data-stu-id="3673e-219">Use the `PredictionEnginePool` to predict sentiment.</span></span>
+    1. <span data-ttu-id="b69a7-219">Yaklaşımı `PredictionEnginePool` tahmin etmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="b69a7-219">Use the `PredictionEnginePool` to predict sentiment.</span></span>
 
         ```csharp
         var prediction = _predictionEnginePool.Predict(input);
         ```
 
-    1. <span data-ttu-id="3673e-220">Aşağıdaki kodla `bool` öngörülen değeri toksik veya toksik olmayan bir değere dönüştürün.</span><span class="sxs-lookup"><span data-stu-id="3673e-220">Convert the predicted `bool` value into toxic or not toxic with the following code.</span></span>
+    1. <span data-ttu-id="b69a7-220">Tahmin edilen `bool` değeri, aşağıdaki kodla birlikte Toxic öğesine dönüştürün.</span><span class="sxs-lookup"><span data-stu-id="b69a7-220">Convert the predicted `bool` value into toxic or not toxic with the following code.</span></span>
 
         ```csharp
         var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
         ```
 
-    1. <span data-ttu-id="3673e-221">Son olarak, duyguları web sayfasına geri döndürün.</span><span class="sxs-lookup"><span data-stu-id="3673e-221">Finally, return the sentiment back to the web page.</span></span>
+    1. <span data-ttu-id="b69a7-221">Son olarak, yaklaşımı Web sayfasına geri döndürün.</span><span class="sxs-lookup"><span data-stu-id="b69a7-221">Finally, return the sentiment back to the web page.</span></span>
 
         ```csharp
         return Content(sentiment);
         ```
 
-### <a name="configure-the-web-page"></a><span data-ttu-id="3673e-222">Web sayfasını yapılandırma</span><span class="sxs-lookup"><span data-stu-id="3673e-222">Configure the web page</span></span>
+### <a name="configure-the-web-page"></a><span data-ttu-id="b69a7-222">Web sayfasını yapılandırma</span><span class="sxs-lookup"><span data-stu-id="b69a7-222">Configure the web page</span></span>
 
-<span data-ttu-id="3673e-223">Döndürülen `OnGetAnalyzeSentiment` sonuçlar `Index` web sayfasında dinamik olarak görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="3673e-223">The results returned by the `OnGetAnalyzeSentiment` will be dynamically displayed on the `Index` web page.</span></span>
+<span data-ttu-id="b69a7-223">Tarafından döndürülen sonuçlar, `OnGetAnalyzeSentiment` Web sayfasında dinamik olarak görüntülenir `Index` .</span><span class="sxs-lookup"><span data-stu-id="b69a7-223">The results returned by the `OnGetAnalyzeSentiment` will be dynamically displayed on the `Index` web page.</span></span>
 
-1. <span data-ttu-id="3673e-224">*Pages* dizinindeki *Index.cshtml* dosyasını açın ve içeriğini aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="3673e-224">Open the *Index.cshtml* file in the *Pages* directory and replace its contents with the following code:</span></span>
+1. <span data-ttu-id="b69a7-224">*Pages* dizinindeki *Index. cshtml* dosyasını açın ve içeriğini şu kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="b69a7-224">Open the *Index.cshtml* file in the *Pages* directory and replace its contents with the following code:</span></span>
 
     [!code-cshtml [IndexPage](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml)]
 
-1. <span data-ttu-id="3673e-225">Ardından, *wwwroot\css* dizininde *site.css* sayfasının sonuna css stil kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="3673e-225">Next, add css styling code to the end of the *site.css* page in the *wwwroot\css* directory:</span></span>
+1. <span data-ttu-id="b69a7-225">Ardından, *wwwroot\css* dizinindeki *site. css* sayfasının sonuna CSS stil oluşturma kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="b69a7-225">Next, add css styling code to the end of the *site.css* page in the *wwwroot\css* directory:</span></span>
 
     [!code-css [CssStyling](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/css/site.css#L61-L105)]
 
-1. <span data-ttu-id="3673e-226">Bundan sonra, web sayfasından `OnGetAnalyzeSentiment` işleyiciye giriş göndermek için kod ekleyin.</span><span class="sxs-lookup"><span data-stu-id="3673e-226">After that, add code to send inputs from the web page to the `OnGetAnalyzeSentiment` handler.</span></span>
+1. <span data-ttu-id="b69a7-226">Bundan sonra, Web sayfasından işleyiciye giriş göndermek için kod ekleyin `OnGetAnalyzeSentiment` .</span><span class="sxs-lookup"><span data-stu-id="b69a7-226">After that, add code to send inputs from the web page to the `OnGetAnalyzeSentiment` handler.</span></span>
 
-    1. <span data-ttu-id="3673e-227">*wwwroot\js* dizininde bulunan *site.js* dosyasında, `OnGetAnalyzeSentiment` işleyiciye `getSentiment` kullanıcı girişi yle GET HTTP isteği nde bulunmak için çağrılan bir işlev oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3673e-227">In the *site.js* file located in the *wwwroot\js* directory, create a function called `getSentiment` to make a GET HTTP request with the user input to the `OnGetAnalyzeSentiment` handler.</span></span>
+    1. <span data-ttu-id="b69a7-227">*Wwwroot\js* dizininde bulunan *site.js* dosyasında, `getSentiment` işleyiciye Kullanıcı girişiyle bir http isteği almak için adlı bir işlev oluşturun `OnGetAnalyzeSentiment` .</span><span class="sxs-lookup"><span data-stu-id="b69a7-227">In the *site.js* file located in the *wwwroot\js* directory, create a function called `getSentiment` to make a GET HTTP request with the user input to the `OnGetAnalyzeSentiment` handler.</span></span>
 
         [!code-javascript [GetSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L5-L10)]
 
-    1. <span data-ttu-id="3673e-228">Bunun altında, duyarlılık `updateMarker` tahmin edildiği gibi web sayfasında işaretçinin konumunu dinamik olarak güncelleştirmek için çağrılan başka bir işlev ekleyin.</span><span class="sxs-lookup"><span data-stu-id="3673e-228">Below that, add another function called `updateMarker` to dynamically update the position of the marker on the web page as sentiment is predicted.</span></span>
+    1. <span data-ttu-id="b69a7-228">Bunun altında, yaklaşım `updateMarker` tahmin edildiğinde Web sayfasındaki işaretin konumunu dinamik olarak güncelleştirmek için adlı başka bir işlev ekleyin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-228">Below that, add another function called `updateMarker` to dynamically update the position of the marker on the web page as sentiment is predicted.</span></span>
 
         [!code-javascript [UpdateMarkerMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L12-L15)]
 
-    1. <span data-ttu-id="3673e-229">Kullanıcıdan giriş almak `updateSentiment` için çağrılan bir olay işleyicisi `OnGetAnalyzeSentiment` işlevi oluşturun, `getSentiment` işlevi kullanarak işleve gönderin ve işaretçiyi `updateMarker` işlek ile güncelleştirin.</span><span class="sxs-lookup"><span data-stu-id="3673e-229">Create an event handler function called `updateSentiment` to get the input from the user, send it to the `OnGetAnalyzeSentiment` function using the `getSentiment` function and update the marker with the `updateMarker` function.</span></span>
+    1. <span data-ttu-id="b69a7-229">Kullanıcıdan girişi almak için çağrılan bir olay işleyici işlevi oluşturun `updateSentiment` , `OnGetAnalyzeSentiment` işlevi kullanarak işleve gönderin `getSentiment` ve işaretleyiciyi `updateMarker` işlevle güncelleştirin.</span><span class="sxs-lookup"><span data-stu-id="b69a7-229">Create an event handler function called `updateSentiment` to get the input from the user, send it to the `OnGetAnalyzeSentiment` function using the `getSentiment` function and update the marker with the `updateMarker` function.</span></span>
 
         [!code-javascript [UpdateSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L17-L34)]
 
-    1. <span data-ttu-id="3673e-230">Son olarak, olay işleyicisini kaydedin `textarea` ve `id=Message` öznitelik ile öğeye bağla.</span><span class="sxs-lookup"><span data-stu-id="3673e-230">Finally, register the event handler and bind it to the `textarea` element with the `id=Message` attribute.</span></span>
+    1. <span data-ttu-id="b69a7-230">Son olarak, olay işleyicisini kaydedin ve `textarea` özniteliği ile öğesine bağlayın `id=Message` .</span><span class="sxs-lookup"><span data-stu-id="b69a7-230">Finally, register the event handler and bind it to the `textarea` element with the `id=Message` attribute.</span></span>
 
         [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
 
-## <a name="run-the-application"></a><span data-ttu-id="3673e-231">Uygulamayı çalıştırma</span><span class="sxs-lookup"><span data-stu-id="3673e-231">Run the application</span></span>
+## <a name="run-the-application"></a><span data-ttu-id="b69a7-231">Uygulamayı çalıştırma</span><span class="sxs-lookup"><span data-stu-id="b69a7-231">Run the application</span></span>
 
-<span data-ttu-id="3673e-232">Uygulamanız ayarlandığına göre, tarayıcınızda başlatılması gereken uygulamayı çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="3673e-232">Now that your application is set up, run the application, which should launch in your browser.</span></span>
+<span data-ttu-id="b69a7-232">Uygulamanız ayarlandığına göre, tarayıcınızda başlatması gereken uygulamayı çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="b69a7-232">Now that your application is set up, run the application, which should launch in your browser.</span></span>
 
-<span data-ttu-id="3673e-233">Uygulama başlatıldığında, *Model Oluşturucu girin serin!*</span><span class="sxs-lookup"><span data-stu-id="3673e-233">When the application launches, enter *Model Builder is cool!*</span></span> <span data-ttu-id="3673e-234">metin alanına.</span><span class="sxs-lookup"><span data-stu-id="3673e-234">into the text area.</span></span> <span data-ttu-id="3673e-235">Görüntülenen öngörülen duyarlılık *Toksik olmamalıdır.*</span><span class="sxs-lookup"><span data-stu-id="3673e-235">The predicted sentiment displayed should be *Not Toxic*.</span></span>
+<span data-ttu-id="b69a7-233">Uygulama başlatıldığında, *model Oluşturucu* seyrek erişimli yazın!</span><span class="sxs-lookup"><span data-stu-id="b69a7-233">When the application launches, enter *Model Builder is cool!*</span></span> <span data-ttu-id="b69a7-234">metin alanına.</span><span class="sxs-lookup"><span data-stu-id="b69a7-234">into the text area.</span></span> <span data-ttu-id="b69a7-235">Görünen tahmini yaklaşım, *Toxic* olmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="b69a7-235">The predicted sentiment displayed should be *Not Toxic*.</span></span>
 
-![Öngörülen duyarlılık penceresi ile çalışan pencere](./media/sentiment-analysis-model-builder/web-app.png)
+![Tahmin edilen yaklaşım penceresiyle pencere çalıştırma](./media/sentiment-analysis-model-builder/web-app.png)
 
-<span data-ttu-id="3673e-237">Model Oluşturucu'nun oluşturduğu projeleri başka bir çözüm içinde daha sonra göndermeniz `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` gerekiyorsa, bunları dizinin içinde bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3673e-237">If you need to reference the Model Builder generated projects at a later time inside of another solution, you can find them inside the `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` directory.</span></span>
+<span data-ttu-id="b69a7-237">Model Oluşturucu tarafından oluşturulan projelere daha sonra başka bir çözümün içinde başvurulmaları gerekiyorsa, bunları dizin içinde bulabilirsiniz `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` .</span><span class="sxs-lookup"><span data-stu-id="b69a7-237">If you need to reference the Model Builder generated projects at a later time inside of another solution, you can find them inside the `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` directory.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="3673e-238">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="3673e-238">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="b69a7-238">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="b69a7-238">Next steps</span></span>
 
-<span data-ttu-id="3673e-239">Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:</span><span class="sxs-lookup"><span data-stu-id="3673e-239">In this tutorial, you learned how to:</span></span>
+<span data-ttu-id="b69a7-239">Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:</span><span class="sxs-lookup"><span data-stu-id="b69a7-239">In this tutorial, you learned how to:</span></span>
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="3673e-240">ASP.NET Core Razor Pages uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="3673e-240">Create an ASP.NET Core Razor Pages application</span></span>
-> - <span data-ttu-id="3673e-241">Verileri hazırlama ve anlama</span><span class="sxs-lookup"><span data-stu-id="3673e-241">Prepare and understand the data</span></span>
-> - <span data-ttu-id="3673e-242">Bir senaryo seçin</span><span class="sxs-lookup"><span data-stu-id="3673e-242">Choose a scenario</span></span>
-> - <span data-ttu-id="3673e-243">Verileri yükleme</span><span class="sxs-lookup"><span data-stu-id="3673e-243">Load the data</span></span>
-> - <span data-ttu-id="3673e-244">Modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="3673e-244">Train the model</span></span>
-> - <span data-ttu-id="3673e-245">Modeli değerlendirme</span><span class="sxs-lookup"><span data-stu-id="3673e-245">Evaluate the model</span></span>
-> - <span data-ttu-id="3673e-246">Öngörüler için modeli kullanma</span><span class="sxs-lookup"><span data-stu-id="3673e-246">Use the model for predictions</span></span>
+> - <span data-ttu-id="b69a7-240">ASP.NET Core Razor Pages uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="b69a7-240">Create an ASP.NET Core Razor Pages application</span></span>
+> - <span data-ttu-id="b69a7-241">Verileri hazırlama ve anlama</span><span class="sxs-lookup"><span data-stu-id="b69a7-241">Prepare and understand the data</span></span>
+> - <span data-ttu-id="b69a7-242">Senaryo seçin</span><span class="sxs-lookup"><span data-stu-id="b69a7-242">Choose a scenario</span></span>
+> - <span data-ttu-id="b69a7-243">Verileri yükleme</span><span class="sxs-lookup"><span data-stu-id="b69a7-243">Load the data</span></span>
+> - <span data-ttu-id="b69a7-244">Modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="b69a7-244">Train the model</span></span>
+> - <span data-ttu-id="b69a7-245">Modeli değerlendirme</span><span class="sxs-lookup"><span data-stu-id="b69a7-245">Evaluate the model</span></span>
+> - <span data-ttu-id="b69a7-246">Tahmin için modeli kullanma</span><span class="sxs-lookup"><span data-stu-id="b69a7-246">Use the model for predictions</span></span>
 
-### <a name="additional-resources"></a><span data-ttu-id="3673e-247">Ek Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="3673e-247">Additional Resources</span></span>
+### <a name="additional-resources"></a><span data-ttu-id="b69a7-247">Ek Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="b69a7-247">Additional Resources</span></span>
 
-<span data-ttu-id="3673e-248">Bu eğitimde bahsedilen konular hakkında daha fazla bilgi edinmek için aşağıdaki kaynakları ziyaret edin:</span><span class="sxs-lookup"><span data-stu-id="3673e-248">To learn more about topics mentioned in this tutorial, visit the following resources:</span></span>
+<span data-ttu-id="b69a7-248">Bu öğreticide bahsedilen konular hakkında daha fazla bilgi edinmek için aşağıdaki kaynakları ziyaret edin:</span><span class="sxs-lookup"><span data-stu-id="b69a7-248">To learn more about topics mentioned in this tutorial, visit the following resources:</span></span>
 
-- [<span data-ttu-id="3673e-249">Model Oluşturucu Senaryolar</span><span class="sxs-lookup"><span data-stu-id="3673e-249">Model Builder Scenarios</span></span>](../automate-training-with-model-builder.md#scenario)
-- [<span data-ttu-id="3673e-250">İkili Sınıflandırma</span><span class="sxs-lookup"><span data-stu-id="3673e-250">Binary Classification</span></span>](../resources/glossary.md#binary-classification)
-- [<span data-ttu-id="3673e-251">İkili Sınıflandırma Modeli Ölçümleri</span><span class="sxs-lookup"><span data-stu-id="3673e-251">Binary Classification Model Metrics</span></span>](../resources/metrics.md#evaluation-metrics-for-binary-classification)
+- [<span data-ttu-id="b69a7-249">Model Oluşturucu senaryoları</span><span class="sxs-lookup"><span data-stu-id="b69a7-249">Model Builder Scenarios</span></span>](../automate-training-with-model-builder.md#scenario)
+- [<span data-ttu-id="b69a7-250">İkili sınıflandırma</span><span class="sxs-lookup"><span data-stu-id="b69a7-250">Binary Classification</span></span>](../resources/glossary.md#binary-classification)
+- [<span data-ttu-id="b69a7-251">İkili sınıflandırma modeli ölçümleri</span><span class="sxs-lookup"><span data-stu-id="b69a7-251">Binary Classification Model Metrics</span></span>](../resources/metrics.md#evaluation-metrics-for-binary-classification)
