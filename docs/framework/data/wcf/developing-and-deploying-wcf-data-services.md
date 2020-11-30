@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90556095"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Geliştirme ve dağıtma WCF Veri Hizmetleri
@@ -98,7 +98,7 @@ WCF Veri Hizmeti, veri hizmetini barındıran işlemi seçmede esneklik sağlar.
 
     - [Nasıl yapılır: Visual Studio 'da Web dağıtım paketi oluşturma](/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [Nasıl yapılır: Visual Studio 'da tek tıklamayla yayımlama kullanarak Web projesi dağıtma](/previous-versions/aspnet/dd465337(v=vs.110))
+    - [Nasıl yapılır: Visual Studio 'da One-Click yayımlama kullanarak Web projesi dağıtma](/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **ASP.NET Web siteleri için dağıtım teknolojileri**
 

@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "91169043"
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
@@ -16,7 +16,7 @@ ms.locfileid: "91169043"
 > _"Bulut sayesinde, bireyler ve küçük işletmeler parmaklarını yeniden düzenleyebilir ve kurumsal sınıf Hizmetleri anında ayarlayabilir."_  
 > _-Roy Stephan_
 
-## <a name="vision"></a>Vision
+## <a name="vision"></a>Görsel
 
 > *Visual Studio veya DotNet CLı ve Visual Studio Code ya da seçtiğiniz düzenleyiciyi kullanarak istediğiniz şekilde iyi tasarlanmış ASP .NET Core Uygulamaları geliştirin.*
 
@@ -34,7 +34,7 @@ Tam ve güçlü bir IDE ya da hafif ve çevik bir düzenleyici tercih etmeksizin
 
 [.NET Core SDK’sını indirin](https://dotnet.microsoft.com/download)
 
-[Visual Studio Code indir](https://code.visualstudio.com/download)
+[Visual Studio Code'u indirin](https://code.visualstudio.com/download)
 
 ## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Azure 'da barındırılan ASP.NET Core uygulamaları için geliştirme iş akışı
 
@@ -62,7 +62,7 @@ CI derleme işleminiz, projenin kaynak denetimi deposuna yeni kod her işlendiğ
 
 Takımınızın her biri yeni kod işlediğinde, sistemin bir derlemeyi sıraya alması için sürekli tümleştirmeyi etkinleştirdiğinizden emin olun. Derlemeyi test edin ve yapıtlarından biri olarak bir Web dağıtımı paketi üretdiğini doğrulayın.
 
-Bir derleme başarılı olduğunda, CD işleminiz, CI derlemenize ait sonuçları Azure Web uygulamanıza dağıtacaktır. Bunu yapılandırmak için, Azure App Service dağıtım yapılacak bir *Sürüm*oluşturup yapılandırırsınız.
+Bir derleme başarılı olduğunda, CD işleminiz, CI derlemenize ait sonuçları Azure Web uygulamanıza dağıtacaktır. Bunu yapılandırmak için, Azure App Service dağıtım yapılacak bir *Sürüm* oluşturup yapılandırırsınız.
 
 [Azure Web uygulaması dağıtma](/azure/devops/pipelines/targets/webapp)
 

@@ -4,10 +4,10 @@ description: IIS 'de barındırılan bir WCF hizmetini geliştirmek ve dağıtma
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90557573"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
@@ -82,7 +82,7 @@ IIS tarafından barındırılan WCF Hizmetleri, yapılandırmalarını uygulamal
 
 - WCF hizmetlerini IIS dışında barındıran uygulamalar, bir dizi temel adres URI 'sini <xref:System.ServiceModel.ServiceHost> oluşturucuya geçirerek veya hizmetin yapılandırmasında bir öğe sağlayarak barındırdıkları hizmetlerin temel adresini denetleyebilir [\<host>](../../configure-apps/file-schema/wcf/host.md) . IIS 'de barındırılan hizmetlerin kendi temel adreslerini denetleme yeteneği yoktur; IIS tarafından barındırılan bir hizmetin temel adresi. svc dosyasının adresidir.
 
-### <a name="endpoint-addresses-for-iis-hosted-services"></a>IIS tarafından barındırılan hizmetler için uç nokta adresleri
+### <a name="endpoint-addresses-for-iis-hosted-services"></a>IIS-Hosted Hizmetleri için uç nokta adresleri
 
 IIS 'de barındırıldığında, uç nokta adresleri her zaman hizmeti temsil eden. svc dosyasının adresine göreli olarak değerlendirilir. Örneğin, bir WCF hizmetinin temel adresi `http://localhost/Application1/MyService.svc` aşağıdaki uç nokta yapılandırmasıyla varsa:
 
