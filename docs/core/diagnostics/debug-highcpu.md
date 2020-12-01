@@ -3,12 +3,12 @@ title: Yüksek CPU kullanımı hata ayıkla-.NET Core
 description: .NET Core 'da yüksek CPU kullanımında hata ayıklama konusunda size yol gösteren bir öğretici.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538715"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437825"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET Core 'da yüksek CPU kullanımını hata ayıkla
 
@@ -90,7 +90,7 @@ Web uygulaması çalışırken, başlangıçtan hemen sonra CPU tüketilmez ve t
 Şimdi [DotNet-Counters](dotnet-counters.md) komutunu yeniden çalıştırın. Yalnızca öğesini izlemek için `cpu-usage` `System.Runtime[cpu-usage]` komutunun bir parçası olarak belirtin.
 
 ```dotnetcli
-dotnet-counters monitor System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
+dotnet-counters monitor --counters System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
 ```
 
 CPU kullanımında aşağıda gösterildiği gibi bir artış görmeniz gerekir:

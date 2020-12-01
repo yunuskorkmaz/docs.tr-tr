@@ -4,12 +4,12 @@ description: "ASP.NET Core 5,0 ' deki Son değişiklik hakkında bilgi edinin: R
 author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: cba8458f20bad77ad6c125448f192939387ba405
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ac7723cd9b961b34b3f87a55119d421668c87417
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761629"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437860"
 ---
 # <a name="localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed"></a>Yerelleştirme: ResourceManagerWithCultureStringLocalizer Class ve WithCulture arabirim üyesi kaldırıldı
 
@@ -23,7 +23,7 @@ Bağlam için bkz. [ASPNET/Duyurular # 346](https://github.com/aspnet/Announceme
 
 ## <a name="old-behavior"></a>Eski davranış
 
-`ResourceManagerWithCultureStringLocalizer`Sınıfı ve `ResourceManagerStringLocalizer.WithCulture` yöntemi [.NET Core 3,0 Preview 3 ve sonraki sürümlerde kullanılmıyor](../../../../core/compatibility/2.2-3.0.md#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete).
+`ResourceManagerWithCultureStringLocalizer`Sınıfı ve `ResourceManagerStringLocalizer.WithCulture` yöntemi [.NET Core 3,0 Preview 3 ve sonraki sürümlerde kullanılmıyor](../../3.0.md#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete).
 
 ## <a name="new-behavior"></a>Yeni davranış
 

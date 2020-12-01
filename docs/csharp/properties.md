@@ -3,12 +3,12 @@ title: Özellikler
 description: Doğrulama, hesaplanan değerler, yavaş değerlendirme ve özellik değiştirilen bildirimler için özellikler içeren C# özellikleri hakkında bilgi edinin.
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 5306650a10a3de0ff208f7c72c0ba520a527e746
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "89358914"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437947"
 ---
 # <a name="properties"></a>Özellikler
 

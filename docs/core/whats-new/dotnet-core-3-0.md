@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 42d60f919cb6ae0dab262ef9056a7c33c312a911
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1e48f2f83b65ef934c7c460d42f05e2f8de04cbd
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726671"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437900"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -573,5 +573,5 @@ Uygulama geliştirirken birçok kez şifrelenmemiş bağlantı kullanmak istersi
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [.NET Core 2,2 ve 3,0 arasındaki son değişiklikleri gözden geçirin.](../compatibility/2.2-3.0.md)
+- [.NET Core 2,2 ve 3,0 arasındaki son değişiklikleri gözden geçirin.](../compatibility/3.0.md)
 - [Windows Forms uygulamalar için .NET Core 3,0 'deki son değişiklikleri gözden geçirin.](../compatibility/winforms.md#net-core-30)

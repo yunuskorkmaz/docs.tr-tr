@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: f125a6a8d9287cb515478a10c2679c07817ae9a6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5c15b663cf69de334771e83c1a14db8d66d30458
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087368"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437912"
 ---
 # <a name="whats-new-in-net-core-21"></a>​.NET Core 2.1’deki yenilikler
 
@@ -138,7 +138,7 @@ Daha fazla bilgi için bkz. [kendi kendine içerilen dağıtım çalışma zaman
 
 ## <a name="jit-compiler-improvements"></a>JıT derleyicisi geliştirmeleri
 
-.NET Core, performansı önemli ölçüde iyileştirebilen *katmanlı derleme* ( *Uyarlamalı iyileştirme*olarak da bilinir) adlı yeni bir JIT Derleyici teknolojisini içerir. Katmanlı derleme, bir katılım ayarıdır.
+.NET Core, performansı önemli ölçüde iyileştirebilen *katmanlı derleme* ( *Uyarlamalı iyileştirme* olarak da bilinir) adlı yeni bir JIT Derleyici teknolojisini içerir. Katmanlı derleme, bir katılım ayarıdır.
 
 JıT derleyicisi tarafından gerçekleştirilen önemli görevlerden biri, kod yürütmeyi iyileştiriliyor. Ancak, daha az kullanılan kod yolları için, derleyici en iyi duruma getirilmiş kodu çalıştırmaya kıyasla kodu en iyi duruma getirmek için daha fazla zaman harcayabilir. Katmanlı derleme JıT derlemesinde iki aşama sunar:
 
@@ -214,7 +214,7 @@ Aşağıdaki örnek, bir <xref:System.Span%601> <xref:System.Memory%601> dizi 10
 
 - <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>Artık Linux ve macOS 'ta desteklenmektedir.
 
-- Eliptik Eğri Diffie-Hellman (ECDH) artık <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType> sınıf ailesinde kullanılabilir. Yüzey alanı .NET Framework ile aynıdır.
+- Elliptic-Curve Diffie-Hellman (ECDH) artık <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType> sınıf ailesinde kullanılabilir. Yüzey alanı .NET Framework ile aynıdır.
 
 - Tarafından döndürülen örnek <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> , BIR SHA-2 Özeti kullanarak OAEP ile şifreleyebilir veya şifresini çözebilir, ayrıca RSA-PSS kullanarak imzaları oluşturabilir veya doğrulayabilir.
 
@@ -248,7 +248,7 @@ Linux ve macOS 'ta yalnızca <xref:System.Net.Http.HttpClient> işlem başına t
 
 ### <a name="breaking-changes"></a>Yeni değişiklikler
 
-Değişiklikler hakkında daha fazla bilgi için bkz. [sürüm 2,0 ' den 2,1 ' e geçiş Için Son değişiklikler](../compatibility/2.0-2.1.md).
+Değişiklikler hakkında daha fazla bilgi için bkz. [sürüm 2,0 ' den 2,1 ' e geçiş Için Son değişiklikler](../compatibility/2.1.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

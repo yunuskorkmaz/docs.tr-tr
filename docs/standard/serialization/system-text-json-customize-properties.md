@@ -1,0 +1,178 @@
+---
+title: İle özellik adlarını ve değerleri özelleştirme System.Text.Json
+description: .NET ' te ile serileştirilirken özellik adlarını ve değerlerini özelleştirmeyi öğrenin System.Text.Json .
+ms.date: 11/30/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+ms.openlocfilehash: 28f7d03ae9f794f6e5ea34a95082a059451daec6
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440021"
+---
+# <a name="how-to-customize-property-names-and-values-with-no-locsystemtextjson"></a>İle özellik adlarını ve değerleri özelleştirme System.Text.Json
+
+Varsayılan olarak, özellik adları ve sözlük anahtarları, büyük/küçük harf gibi JSON çıktısında değiştirilmez. Sabit listesi değerleri sayı olarak temsil edilir. Bu makalede şunları yapmayı öğreneceksiniz:
+
+> [!NOTE]
+> [Web Varsayılanları](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) , ortası durumdur.
+
+* [Bireysel özellik adlarını özelleştirme](#customize-individual-property-names)
+* [Tüm özellik adlarını ortası durumuna Dönüştür](#use-camel-case-for-all-json-property-names)
+* [Özel özellik adlandırma ilkesi uygulama](#use-a-custom-json-property-naming-policy)
+* [Sözlük anahtarlarını ortası örneğine Dönüştür](#camel-case-dictionary-keys)
+* [Numaralandırmaları dizelere ve ortası örneğine Dönüştür](#enums-as-strings)
+
+JSON özellik adlarını ve değerlerini özel olarak işleme gerektiren diğer senaryolar için [özel dönüştürücüler uygulayabilirsiniz](system-text-json-converters-how-to.md).
+
+## <a name="customize-individual-property-names"></a>Bireysel özellik adlarını özelleştirme
+
+Ayrı özelliklerin adını ayarlamak için [[Jsonpropertyname]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute) özniteliğini kullanın.
+
+Serileştirme ve sonuç JSON için örnek bir tür aşağıda verilmiştir:
+
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithPropertyNameAttribute":::
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureCelsius": 25,
+  "Summary": "Hot",
+  "Wind": 35
+}
+```
+
+Bu öznitelik tarafından ayarlanan özellik adı:
+
+* Serileştirme ve seri durumundan çıkarma için her iki yönde de geçerlidir.
+* Özellik adlandırma ilkelerine göre önceliklidir.
+
+## <a name="use-camel-case-for-all-json-property-names"></a>Tüm JSON Özellik adları için ortası Case kullanın
+
+Tüm JSON Özellik adları için ortası durumunu kullanmak için, <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> `JsonNamingPolicy.CamelCase` Aşağıdaki örnekte gösterildiği gibi olarak ayarlanır:
+
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundTripCamelCasePropertyNames.cs" id="Serialize":::
+
+Seri hale getirmek ve JSON çıktısı için örnek bir sınıf aşağıda verilmiştir:
+
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithPropertyNameAttribute":::
+
+```json
+{
+  "date": "2019-08-01T00:00:00-07:00",
+  "temperatureCelsius": 25,
+  "summary": "Hot",
+  "Wind": 35
+}
+```
+
+Ortası durum özelliği adlandırma ilkesi:
+
+* Serileştirme ve seri durumdan çıkarma için geçerlidir.
+* Öznitelikleri tarafından geçersiz kılınır `[JsonPropertyName]` . Bu nedenle, örnekteki JSON Özellik adının `Wind` ortası durum olmaması neden olur.
+
+## <a name="use-a-custom-json-property-naming-policy"></a>Özel bir JSON Özellik adlandırma ilkesi kullanma
+
+Özel bir JSON Özellik adlandırma ilkesi kullanmak için, <xref:System.Text.Json.JsonNamingPolicy> <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> Aşağıdaki örnekte gösterildiği gibi yönteminden türeten bir sınıf oluşturun ve yöntemi geçersiz kılın:
+
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/UpperCaseNamingPolicy.cs":::
+
+Daha sonra <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> özelliği, adlandırma ilkesi sınıfınızın bir örneğine ayarlayın:
+
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripPropertyNamingPolicy.cs" id="Serialize":::
+
+Seri hale getirmek ve JSON çıktısı için örnek bir sınıf aşağıda verilmiştir:
+
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithPropertyNameAttribute":::
+
+```json
+{
+  "DATE": "2019-08-01T00:00:00-07:00",
+  "TEMPERATURECELSIUS": 25,
+  "SUMMARY": "Hot",
+  "Wind": 35
+}
+```
+
+JSON özelliği adlandırma ilkesi:
+
+* Serileştirme ve seri durumdan çıkarma için geçerlidir.
+* Öznitelikleri tarafından geçersiz kılınır `[JsonPropertyName]` . Bu, örnekteki JSON Özellik adının `Wind` büyük harfle değil.
+
+## <a name="camel-case-dictionary-keys"></a>Camel durum sözlüğü anahtarları
+
+Seri hale getirilecek bir nesnenin özelliği tür ise `Dictionary<string,TValue>` , `string` anahtarlar ortası duruma dönüştürülebilir. Bunu yapmak için, <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> `JsonNamingPolicy.CamelCase` Aşağıdaki örnekte gösterildiği gibi öğesini olarak ayarlayın:
+
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/SerializeCamelCaseDictionaryKeys.cs" id="Serialize":::
+
+Anahtar-değer çiftlerine sahip adlı bir sözlük ile bir nesneyi serileştirmek `TemperatureRanges` `"ColdMinTemp", 20` ve `"HotMinTemp", 40` Aşağıdaki örnekte olduğu gibi JSON çıktısına neden olur:
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureCelsius": 25,
+  "Summary": "Hot",
+  "TemperatureRanges": {
+    "coldMinTemp": 20,
+    "hotMinTemp": 40
+  }
+}
+```
+
+Sözlük anahtarları için ortası örnek adlandırma ilkesi yalnızca serileştirme için geçerlidir. Bir sözlüğün serisini kaldırırsanız, için belirtseniz bile anahtarlar JSON dosyasıyla eşleşir `JsonNamingPolicy.CamelCase` `DictionaryKeyPolicy` .
+
+## <a name="enums-as-strings"></a>Dizeler dize olarak numaralandırmalar
+
+Varsayılan olarak, numaralandırmalar sayı olarak serileştirilir. Sabit listesi adlarını dizeler olarak seri hale getirmek için öğesini kullanın <xref:System.Text.Json.Serialization.JsonStringEnumConverter> .
+
+Örneğin, bir sabit listesi olan aşağıdaki sınıfı seri hale getirmeniz gerektiğini varsayalım:
+
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithEnum":::
+
+Özet ise `Hot` , varsayılan olarak SERILEŞTIRILMIŞ JSON sayısal değer 3 ' ü içerir:
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureCelsius": 25,
+  "Summary": 3
+}
+```
+
+Aşağıdaki örnek kod, sayısal değerler yerine enum adlarını seri hale getirir ve adları ortası örneğine dönüştürür:
+
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripEnumAsString.cs" id="Serialize":::
+
+Elde edilen JSON aşağıdaki örneğe benzer şekilde görünür:
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureCelsius": 25,
+  "Summary": "hot"
+}
+```
+
+Aşağıdaki örnekte gösterildiği gibi, sabit listesi dize adları da seri durumdan çıkarılmış olabilir:
+
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripEnumAsString.cs" id="Deserialize":::
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+* [System.Text.Json bakýþ](system-text-json-overview.md)
+* [JsonSerializerOptions örneğini oluşturma](system-text-json-configure-options.md)
+* [Büyük/küçük harfe duyarsız eşleştirmeyi etkinleştir](system-text-json-character-casing.md)
+* [Özellikleri yoksay](system-text-json-ignore-properties.md)
+* [Geçersiz JSON 'a izin ver](system-text-json-invalid-json.md)
+* [Tutamaç taşması JSON](system-text-json-handle-overflow.md)
+* [Döngüsel başvuruları koru](system-text-json-preserve-references.md)
+* [Değişmez türler ve genel olmayan erişimciler](system-text-json-immutability.md)
+* [Polimorfik serileştirme](system-text-json-polymorphism.md)
+* [System.Text.Json API başvurusu](xref:System.Text.Json)

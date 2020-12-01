@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 42d4f7e8800bf2d13d584084f8a41bad2ada534f
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 9caecdcc3516db2bd71420184fbd21f7837552a7
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608130"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437925"
 ---
 # <a name="whats-new-in-net-core-31"></a>​.NET Core 3.1’deki yenilikler
 
@@ -39,7 +39,7 @@ Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.c
 
 ## <a name="macos-apphost-and-notarization"></a>macOS appHost ve notarlama
 
-*yalnızca macOS*
+*Yalnızca macOS*
 
 MacOS için .NET Core SDK 3,1 ' den başlayarak, appHost ayarı varsayılan olarak devre dışıdır. Daha fazla bilgi için bkz. [MacOS Catalina Notarleştirme ve .NET Core indirmeleri ve projeleri üzerindeki etki](../install/macos-notarization-issues.md).
 
@@ -99,5 +99,5 @@ Visual Studio 2019 sürüm 16,4 ' de C++/CLı desteği eklemek için, [c++ iş y
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [.NET Core 3,0 ve 3,1 arasındaki son değişiklikleri gözden geçirin.](../compatibility/3.0-3.1.md)
+- [.NET Core 3,0 ve 3,1 arasındaki son değişiklikleri gözden geçirin.](../compatibility/3.1.md)
 - [Windows Forms uygulamalar için .NET Core 3,1 'deki son değişiklikleri gözden geçirin.](../compatibility/winforms.md#net-core-31)

@@ -3,12 +3,12 @@ title: .NET Core 'da EventCounters kullanarak performansı ölçme
 description: Bu öğreticide, EventCounters kullanarak performansı ölçme hakkında bilgi edineceksiniz.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538572"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437448"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Öğretici: .NET Core 'da EventCounters kullanarak performansı ölçme
 
@@ -49,7 +49,7 @@ Uygulamasının nasıl uygulanacağını gösteren bir örnek aşağıda verilmi
 
 ## <a name="add-an-action-filter"></a>Eylem filtresi ekleme
 
-Örnek kaynak kodu bir ASP.NET Core projem. Toplam istek süresini günlüğe alacak şekilde genel bir [eylem filtresi](/aspnet/core/mvc/controllers/filters#action-filters) ekleyebilirsiniz. *LogRequestTimeFilterAttribute.cs*adlı yeni bir dosya oluşturun ve aşağıdaki kodu kullanın:
+Örnek kaynak kodu bir ASP.NET Core projem. Toplam istek süresini günlüğe alacak şekilde genel bir [eylem filtresi](/aspnet/core/mvc/controllers/filters#action-filters) ekleyebilirsiniz. *LogRequestTimeFilterAttribute.cs* adlı yeni bir dosya oluşturun ve aşağıdaki kodu kullanın:
 
 ```csharp
 using System.Diagnostics;
@@ -97,7 +97,7 @@ dotnet-counters ps
 Komutun çıktısından işlem tanımlayıcısını kullanarak `dotnet-counters ps` , aşağıdaki komutla olay sayacını izlemeye başlayabilirsiniz `dotnet-counters monitor` :
 
 ```console
-dotnet-counters monitor --process-id 2196 Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters monitor --process-id 2196 --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 Komut çalışırken `dotnet-counters monitor` , uç noktaya sürekli istek vermeyi başlatmak için tarayıcıda <kbd>F5</kbd> tuşunu basılı tutun `https://localhost:5001/api/values` . Birkaç saniye sonra <kbd>soru-cevap</kbd> ' a basılarak
@@ -118,7 +118,7 @@ Press p to pause, r to resume, q to quit.
 `dotnet-counters monitor`Komut, etkin izleme için harika. Ancak, bu tanılama ölçümlerini son işleme ve analiz için toplamak isteyebilirsiniz. Bunun için `dotnet-counters collect` komutunu kullanın. `collect`Switch komutu `monitor` komuta benzerdir, ancak birkaç ek parametre kabul eder. İstenen çıkış dosyası adını ve biçimini belirtebilirsiniz. *diagnostics.js* ADLı bir JSON dosyası için aşağıdaki komutu kullanın:
 
 ```console
-dotnet-counters collect --process-id 2196 --format json -o diagnostics.json Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters collect --process-id 2196 --format json -o diagnostics.json --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 Yine, komut çalışırken, uç noktaya sürekli istek vermeyi başlatmak için tarayıcıda <kbd>F5</kbd> tuşunu basılı tutun `https://localhost:5001/api/values` . Birkaç saniye sonra <kbd>q</kbd>tuşuna basarak durur. Dosyadaki *diagnostics.js* yazılır. Yazılan JSON dosyası girintili değildir; ancak okunabilirlik için burada girintilenir.

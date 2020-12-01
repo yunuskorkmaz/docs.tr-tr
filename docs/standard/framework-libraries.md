@@ -4,12 +4,12 @@ description: Kitaplıkların birçok genel ve uygulamaya özel türler, algoritm
 author: richlander
 ms.date: 06/20/2016
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: e59f53f2a16dc84709e0b815d3e2b710c903ff60
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e71f81b0dd72f4569d8b6b319b9e97491533d28
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827938"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438199"
 ---
 # <a name="framework-libraries"></a>Framework Kitaplıkları
 
@@ -39,7 +39,7 @@ BCL en temel tür ve yardımcı program işlevlerini sağlar ve diğer tüm .NET
 
 .NET, neredeyse tüm .NET uygulamalarının iş atları olan bir veri yapıları kümesi içerir. Bunlar genellikle koleksiyonlardır, ancak diğer türleri de içerir.
 
-* <xref:System.Array> -Dizin tarafından erişilebilen bir kesin tür nesneleri dizisini temsil eder. , Oluşturma başına sabit bir boyuta sahiptir.
+* <xref:System.Array> -Dizin tarafından erişilebilen, türü kesin belirlenmiş nesneler dizisini temsil eder. , Oluşturma başına sabit bir boyuta sahiptir.
 * <xref:System.Collections.Generic.List%601> -Dizin tarafından erişilebilen nesnenin türü kesin belirlenmiş bir listesini temsil eder. Gerektiğinde otomatik olarak yeniden boyutlandırılır.
 * <xref:System.Collections.Generic.Dictionary%602> -Bir anahtar tarafından dizine eklenen değerlerin koleksiyonunu temsil eder. Değerlere anahtar aracılığıyla erişilebilir. Gerektiğinde otomatik olarak yeniden boyutlandırılır.
 * <xref:System.Uri> -Tekdüzen kaynak tanımlayıcısının (URI) nesne gösterimini ve URI 'nin bölümlerine kolay erişim sağlar.

@@ -1,16 +1,16 @@
 ---
 title: .NET 5’teki yenilikler
 description: .NET Core 'un bir sonraki gelişiminde bir çoklu platform ve açık kaynaklı bir geliştirme platformu olan .NET 5 hakkında bilgi edinin.
-ms.date: 11/18/2020
+ms.date: 11/30/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 1101e218f225eed2a2013ed9e19b60f4ece57738
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: d0b8533dd63dd7d24f49e11093770b52d7daea89
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982302"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437868"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5’teki yenilikler
 
@@ -141,17 +141,17 @@ Bu, [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-
 
 Ve [ üzerindeSystem.Text.Js](../standard/serialization/system-text-json-overview.md)için yeni özellikler mevcuttur:
 
-- [Başvuruları koru ve döngüsel başvuruları işle](../standard/serialization/system-text-json-how-to.md#preserve-references-and-handle-circular-references)
+- [Başvuruları koru ve döngüsel başvuruları işle](../standard/serialization/system-text-json-preserve-references.md)
 - [HttpClient ve HttpContent genişletme yöntemleri](../standard/serialization/system-text-json-how-to.md#httpclient-and-httpcontent-extension-methods)
-- [Tırnak işaretleri halinde izin ver veya yaz](../standard/serialization/system-text-json-how-to.md#allow-or-write-numbers-in-quotes)
-- [Sabit türleri ve C# 9 kayıtlarını destekleme](../standard/serialization/system-text-json-how-to.md#immutable-types-and-records)
-- [Ortak olmayan özellik erişimcileri desteği](../standard/serialization/system-text-json-how-to.md#non-public-property-accessors)
+- [Tırnak işaretleri halinde izin ver veya yaz](../standard/serialization/system-text-json-invalid-json.md#allow-or-write-numbers-in-quotes)
+- [Sabit türleri ve C# 9 kayıtlarını destekleme](../standard/serialization/system-text-json-immutability.md)
+- [Ortak olmayan özellik erişimcileri desteği](../standard/serialization/system-text-json-immutability.md)
 - [Destek alanları](../standard/serialization/system-text-json-how-to.md#include-fields)
-- [Özelliği koşullu olarak Yoksay](../standard/serialization/system-text-json-how-to.md#ignore-properties)
+- [Özelliği koşullu olarak Yoksay](../standard/serialization/system-text-json-ignore-properties.md)
 - [Dize olmayan anahtar sözlüklerini destekleme](../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md#dictionary-with-non-string-key)
 - [Özel dönüştürücülerin null işlemesine izin ver](../standard/serialization/system-text-json-converters-how-to.md#handle-null-values)
-- [JsonSerializerOptions 'ı Kopyala](../standard/serialization/system-text-json-how-to.md#copy-jsonserializeroptions)
-- [Web varsayılanları ile JsonSerializerOptions oluşturma](../standard/serialization/system-text-json-how-to.md#web-defaults-for-jsonserializeroptions)
+- [JsonSerializerOptions 'ı Kopyala](../standard/serialization/system-text-json-configure-options.md#copy-jsonserializeroptions)
+- [Web varsayılanları ile JsonSerializerOptions oluşturma](../standard/serialization/system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
