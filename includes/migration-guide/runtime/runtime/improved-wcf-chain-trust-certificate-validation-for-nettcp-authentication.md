@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c8f017084fc1ec1eca636ef0178a40559e15b2c5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: f6553444e13416850a398ae5bcb6574f2a69bd2d
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89496508"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96477413"
 ---
 ### <a name="improved-wcf-chain-trust-certificate-validation-for-nettcp-certificate-authentication"></a>Net. TCP sertifikası kimlik doğrulaması için iyileştirilmiş WCF zinciri güven sertifikası doğrulaması
 
@@ -14,9 +14,9 @@ ms.locfileid: "89496508"
 
 #### <a name="suggestion"></a>Öneri
 
-<ul><li>Sunucunuzun ve istemci sertifikalarınızın gerekli EKU OID 'ye sahip olup olmadığını doğrulayın. Aksi takdirde, sertifikalarınızı güncelleştirin.</li><li>Kök sertifikanızın geçersiz olup olmadığını doğrulayın. Bu durumda, kök sertifikayı güncelleştirin.</li><li>Değişikliği devre dışı bırakma: sertifikayı güncelleştirememekle birlikte, aşağıdaki yapılandırma ayarıyla geçici değişikliği geçici olarak çözebilirsiniz, ancak değişikliği devre dışı bıraktığınızda sisteminiz güvenlik sorununa karşı savunmasız bırakılır.</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;wcf:useLegacyCertificateUsagePolicy&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>
+<ul><li>Sunucunuzun ve istemci sertifikalarınızın gerekli EKU OID 'ye sahip olup olmadığını doğrulayın. Aksi takdirde, sertifikalarınızı güncelleştirin.</li><li>Kök sertifikanızın geçersiz olup olmadığını doğrulayın. Bu durumda, kök sertifikayı güncelleştirin.</li><li>Değişikliği devre dışı bırakma: sertifikayı Güncelleştirememekle birlikte, aşağıdaki yapılandırma ayarıyla son derece değişikliği geçici olarak çözebilirsiniz, ancak değişikliği devre dışı bıraktığınızda sisteminiz güvenlik sorununa karşı savunmasız kalır.</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;wcf:useLegacyCertificateUsagePolicy&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>
 
-| Name    | Değer       |
+| Ad    | Değer       |
 |:--------|:------------|
 | Kapsam   |İkincil|
 |Sürüm|4.7.2|

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3709b9e694011666cebcb0ae09fbc838f65967af
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 28b882384760c8ac56c6d194bef6018c451fd03f
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614870"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96477625"
 ---
 ### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>Boşluk-sütun için WPF ızgara alanı ayırma
 
@@ -22,7 +22,7 @@ ms.locfileid: "85614870"
 - Toplam ayırma, kılavuzun genişliğinin kısa bir kısmını alabilir. Bu, #1 için çift sorundur ve bu, değeri en büyük boyuttan daha büyük olan bir sütuna ayrılırken \* bolluk değerini almak için sütun kalmadı.
 - İki sütunlu, \* ağırlıklarıyla orantılı olmayan ayırmaları alabilir \* . Bu, \* a-Columns a, B ve C sütunları ayrılırken (Bu sırada), b 'nin orantılı paylaşımının min (veya Max) kısıtlamasını ihlal ettiğini belirten #1/#2 'nin bir milder sürümüdür. Yukarıdaki gibi, bu, bir saniyeden daha az (veya daha fazla) orantılı ayırma alan C sütunu için kullanılabilir alanı değiştirir.
 - Son derece büyük ağırlıklarla ( &gt; 10 ^ 298) oluşan sütunlar 10 ' a kadar ağırlığa sahip gibi davranır. Bunlar arasındaki orantılı farklılıklar (ve daha az kalınlıklarla sütunlar arasında) dikkate alınmamalıdır.
-- Inifinte ağırlıklarını içeren sütunlar doğru işlenmez. [Aslında sonsuz olarak bir ağırlık ayarlayamazsınız, ancak bu yapay bir kısıtlamadır. Ayırma kodu, uygulamayı işlemeye çalışıyor, ancak hatalı iş yapıyor.]
+- Sonsuz ağırlıklarla sütunlar doğru işlenmez. [Aslında sonsuz olarak bir ağırlık ayarlayamazsınız, ancak bu yapay bir kısıtlamadır. Ayırma kodu, uygulamayı işlemeye çalışıyor, ancak hatalı iş yapıyor.]
 - Taşma, yetersiz, kesinlik kaybı ve benzer kayan nokta sorunlarından kaçınırken birkaç küçük sorun.
 - Düzen yuvarlama ayarlamaları, yeterince yüksek DPı 'de hatalı.
 Yeni algoritma aşağıdaki ölçütlere uyan sonuçlar üretir:<p/>A. *-Sütununa atanan gerçek genişlik, en düşük genişliğinden veya en büyük genişliğinden daha büyük değildir.<br/>B. <em>Minimum veya maksimum genişliğine atanmamış her sütuna, ağırlığıyla orantılı bir genişlik atanır <em>. Kesin olması için, iki sütun sırasıyla genişlik x ve y ile bildirilirse</em> </em> ve sütun en küçük veya en büyük genişliğini alırsa, sütunlara atanan gerçek genişlik v ve w aynı orandır: v/w = = x/y.<br/>C. Orantılı sütunlara ayrılan toplam Genişlik &quot; , &quot; \* Kısıtlanmış sütunlara ayrıldıktan sonra kullanılabilir alana eşittir (sabit, otomatik ve \* -sütunlar, en düşük veya en büyük genişliği olarak tahsis edilir). Bu sıfır olabilir, örneğin minimum genişliklerin toplamı kılavuzun kullanılabilir genişliğini aşarsa.<br/>D. Tüm bu deyimler ideal düzene göre yorumlanacaktır &quot; &quot; . Düzen yuvarlama etkin olduğunda, gerçek genişlikler bir piksel kadar ideal genişliklerden farklı olabilir.<br/>Eski algoritma (A) kabul edilir ancak yukarıda özetlenen durumlarda diğer ölçütlere uyulmadı.<p/>Bu makaledeki sütunlar ve genişlikler hakkında söylenen her şey, satırlar ve yükseklikleri için de geçerlidir.
@@ -35,8 +35,8 @@ Varsayılan olarak, .NET Framework 4,7 ' den başlayarak .NET Framework sürüml
 
 Değer `true` eski algoritmayı seçer, `false` Yeni algoritmayı seçer.
 
-| Name    | Değer       |
+| Ad    | Değer       |
 |:--------|:------------|
 | Kapsam   | İkincil       |
-| Sürüm | 4,7         |
+| Sürüm | 4.7         |
 | Tür    | Yeniden Hedefleme |
