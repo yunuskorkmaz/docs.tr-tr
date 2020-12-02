@@ -1,49 +1,49 @@
 ---
-title: Mac için Visual Studio ile F# çalışmaya başlama
-description: Mac için Visual Studio ile kullanmayı F# öğrenin.
+title: 'Mac için Visual Studio F # ile çalışmaya başlama'
+description: "F # ' Mac için Visual Studio nasıl kullanacağınızı öğrenin."
 ms.date: 07/03/2018
-ms.openlocfilehash: cd45ab9c59cef76e4bf85a93f39d8e2ee063d200
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d2ad24ad18bb31419b39508f2cf555c82fbe2e0b
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552364"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437990"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac için Visual Studio ile F# çalışmaya başlama
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac için Visual Studio F # ile çalışmaya başlama
 
-F#Görsel F# araç Mac için Visual Studio IDE 'de desteklenir. [Mac için Visual Studio yüklü](install-fsharp.md#install-f-with-visual-studio-for-mac)olduğundan emin olun.
+F # ve Visual F# araçları Mac için Visual Studio IDE 'de desteklenir. [Mac için Visual Studio yüklü](install-fsharp.md#install-f-with-visual-studio-for-mac)olduğundan emin olun.
 
 ## <a name="creating-a-console-application"></a>Konsol uygulaması oluşturma
 
-Mac için Visual Studio ' deki en temel projelerden biri konsol uygulamasıdır.  Bunun nasıl yapılacağını aşağıda bulabilirsiniz.  Mac için Visual Studio açıldıktan sonra:
+Mac için Visual Studio ' deki en temel projelerden biri konsol uygulamasıdır.  Bunun nasıl yapılacağı aşağıda açıklanmaktadır.  Mac için Visual Studio açıldıktan sonra:
 
 1. **Dosya** menüsünde, **yeni çözüm**' ı işaret edin.
 
 2. Yeni proje iletişim kutusunda, konsol uygulaması için 2 farklı şablon vardır.  .NET Framework hedefleyen diğer > .NET altında bir tane vardır.  Diğer şablon, .NET Core ' u hedefleyen .NET Core-> uygulamasıdır.  Her iki şablon da bu makalenin amacına göre çalışmalıdır.
 
-3. Konsol uygulaması altında, gerekirse C# olarak F# değiştirin.  İleri gitmek için **İleri** düğmesini seçin!  
+3. Konsol uygulaması altında, gerekirse C# ' ı F # olarak değiştirin.  İleri gitmek için **İleri** düğmesini seçin!  
 
 4. Projenize bir ad verin ve uygulama için istediğiniz seçenekleri belirleyin.  Ekranın yanındaki Önizleme bölmesi, seçilen seçeneklere göre oluşturulacak dizin yapısını gösterecek şekilde görüntülenir.  
 
-5. **Oluştur**'u tıklatın.  Artık Çözüm Gezgini bir F# proje görmeniz gerekir.
+5. **Oluştur**'a tıklayın.  Artık Çözüm Gezgini bir F # projesi görmeniz gerekir.
 
 ## <a name="writing-your-code"></a>Kodunuzu yazma
 
-Önce bazı kodları yazmaya başlayın.  `Program.fs` dosyasının açık olduğundan emin olun ve ardından içeriğini aşağıdakiler ile değiştirin:
+Önce bazı kodları yazmaya başlayın.  Dosyanın açık olduğundan emin olun `Program.fs` ve ardından içeriğini aşağıdakiler ile değiştirin:
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Önceki kod örneğinde, `x` adlı bir girişi alan ve kendisini kendisi ile çarparak `square` bir işlev tanımlanmıştır.  F# [Tür çıkarımı](../language-reference/type-inference.md)kullandığından `x` türünün belirtilmesi gerekmez.  F# Derleyici, çarpma 'nın geçerli olduğu türleri anlamıştır ve `square` nasıl çağrıldığını temel alarak `x` bir tür atayacaktır.  `square`üzerine geldiğinizde, aşağıdakileri görmeniz gerekir:
+Önceki kod örneğinde, `square` adlı bir girişi alan `x` ve kendisiyle çarpar bir işlev tanımlandı.  F # [tür çıkarımı](../language-reference/type-inference.md)kullandığından, türünün `x` belirtilmesi gerekmez.  F # derleyicisi, çarpma 'nın geçerli olduğu türleri anlamıştır ve `x` nasıl çağrıldığını temel alarak bir tür atar `square` .  Üzerine geldiğinizde `square` , aşağıdakileri görmeniz gerekir:
 
 ```console
 val square: x:int -> int
 ```
 
-İşlevin tür imzası olarak bilinen budur.  Şu şekilde okunabilir: "kare x adlı bir tamsayı alan ve tamsayı üreten bir işlevdir".  Derleyicinin şu an için `int` türü `square` olduğunu unutmayın. bunun nedeni, çarpma işlemi *Tüm* türler genelinde geneldir, ancak bunun yerine kapalı bir tür kümesinde geneldir.  F# Derleyici bu noktada `int` çekildi, ancak `square` `float`gibi farklı bir giriş türüyle çağırırsanız tür imzasını ayarlar.
+İşlevin tür imzası olarak bilinen budur.  Şu şekilde okunabilir: "kare x adlı bir tamsayı alan ve tamsayı üreten bir işlevdir".  Derleyicinin `square` `int` Şu an için türü vermiştir. bunun nedeni, çarpma 'nın *Tüm* türler genelinde genel olmaması, ancak kapalı bir tür kümesi genelinde genel olması.  F # derleyicisi `int` Bu noktada çekildi, ancak gibi farklı bir giriş türüyle çağırırsanız tür imzasını ayarlar `square` `float` .
 
-`main`başka bir işlev, `EntryPoint` özniteliğiyle birlikte düzenlenmiş ve bu, F# derleyicinin program yürütmesinin burada başlaması gerektiğini söylemelidir.  Komut satırı bağımsız değişkenlerinin bu işleve geçirilebileceği ve bir tamsayı kodunun döndürüldüğü (genellikle `0`) diğer [C stili programlama dilleri](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)ile aynı kuralı izler.
+Diğer bir işlev olan, `main` `EntryPoint` F # derleyicisine program yürütmenin bu şekilde başlaması gerektiğini bildirmek için özniteliğiyle donatılmış tanımlanmış.  Komut satırı bağımsız değişkenlerinin bu işleve geçirilebileceği ve bir tamsayı kodunun döndürüldüğü (genellikle) diğer [C stili programlama dilleri](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)ile aynı kuralı izler `0` .
 
-Bu işlev, `square` işlevini `12`bir bağımsız değişkeniyle çağıracağız.  F# Derleyici daha sonra `int -> int` (bir `int` alan ve bir `int`üreten bir işlev) `square` türünü atar.  `printfn` çağrısı, C stili programlama dillerine benzer bir biçim dizesi, biçim dizesinde belirtilen parametrelere karşılık gelen parametreler ve sonra sonucu ve yeni bir satırı yazdıran biçimli bir yazdırma işlevidir.
+`square`İşlevi bir bağımsız değişkeniyle çağırdığımız bu işlevde `12` .  F # derleyicisi daha sonra türü `square` `int -> int` (diğer bir deyişle, ' ı alan ve üreten bir işlev) olarak atar `int` `int` .  ' A çağrısı, `printfn` C stili programlama dilleri, biçim dizesinde belirtilen parametrelere karşılık gelen parametreler, ancak sonucu ve yeni bir satırı yazdıran biçim dizesi kullanan biçimli bir yazdırma işlevidir.
 
 ## <a name="running-your-code"></a>Kodunuzu çalıştırma
 
@@ -55,13 +55,13 @@ Kodu çalıştırabilir ve en üst düzey menüsünde **Çalıştır** ' a tıkl
 12 squared is 144!
 ```
 
-Mühendisi!  İlk F# projenizi Mac için Visual Studio oluşturdunuz, bu işlevi çağıran sonuçları yazdırılmış bir F# işlev yazdı ve bazı sonuçları görmek için projeyi çalıştırdık.
+Tebrikler!  İlk F # projenizi Mac için Visual Studio oluşturdunuz, bir F # işlevi bu işlevi çağırma sonuçlarını yazdırıldı ve bazı sonuçları görmek için projeyi çalıştırmadınız.
 
-## <a name="using-f-interactive"></a>Etkileşimli F# kullanma
+## <a name="using-f-interactive"></a>F# Etkileşimli kullanma
 
-Mac için Visual Studio içinde görsel F# araç oluşturma özelliğinin en iyi özelliklerinden biri F# etkileşimli penceresidir.  Bu kodu çağırabileceğiniz ve sonucu etkileşimli olarak görebileceğiniz bir işleme kod göndermenizi sağlar.
+Mac için Visual Studio araç Visual F# araçlarının en iyi özelliklerinden biri F# Etkileşimli penceresidir.  Bu kodu çağırabileceğiniz ve sonucu etkileşimli olarak görebileceğiniz bir işleme kod göndermenizi sağlar.
 
-Kullanmaya başlamak için kodunuzda tanımlanan `square` işlevini vurgulayın.  Sonra, üst düzey menüsünden **Düzenle** ' ye tıklayın.  Sonra **seçimi etkileşimli olarak F# gönder**' i seçin.  Bu, kodu F# etkileşimli pencerede yürütür.  Alternatif olarak, seçime sağ tıklayıp **seçimi etkileşimli öğesine F# gönder**' i seçebilirsiniz.  F# Etkileşimli pencerenin içinde aşağıdaki gibi göründüğünü görmeniz gerekir:
+Kullanmaya başlamak için `square` kodunuzda tanımlanan işlevi vurgulayın.  Sonra, üst düzey menüsünden **Düzenle** ' ye tıklayın.  Sonra **seçimi F# Etkileşimli gönder**' i seçin.  Bu, kodu F# Etkileşimli penceresinde yürütür.  Alternatif olarak, seçime sağ tıklayıp **F# Etkileşimli seçim gönder**' i seçebilirsiniz.  F# Etkileşimli penceresinin içinde aşağıdaki gibi göründüğünü görmeniz gerekir:
 
 ```console
 >
@@ -71,7 +71,7 @@ val square : x:int -> int
 >
 ```
 
-Bu, daha önce işlevin üzerine gelindiğinde gördüğünüz `square` işlevi için aynı işlev imzasını gösterir.  `square` artık F# etkileşimli işlemde tanımlandığından, farklı değerlerle çağırabilirsiniz:
+Bu, işlevin `square` üzerine gelindiğinde daha önce gördüğünüz işlev için aynı işlev imzasını gösterir.  `square`Artık F# Etkileşimli işleminde tanımlandığından, farklı değerlerle çağırabilirsiniz:
 
 ```console
 > square 12;;
@@ -80,7 +80,7 @@ val it : int = 144
 val it : int = 169
 ```
 
-Bu işlevi yürütür, sonucu yeni bir ada `it`bağlar ve `it`türünü ve değerini görüntüler.  `;;`ile her satırı sonlandırabilmeniz gerektiğini unutmayın.  Bu, işlev F# çağrın ne zaman tamamlandığını etkileşimli olarak bilir.  Etkileşimli ' F# de yeni işlevler de tanımlayabilirsiniz:
+Bu, işlevi yürütür, sonucu yeni bir ada bağlar `it` ve türünü ve değerini görüntüler `it` .  Her satırı ile birlikte sonlandırabilmeniz gerektiğini unutmayın `;;` .  Bu, işlev çağrın ne zaman tamamlandığını F# Etkileşimli bilir.  Ayrıca, F# Etkileşimli yeni işlevler de tanımlayabilirsiniz:
 
 ```console
 > let isOdd x = x % 2 <> 0;;
@@ -91,7 +91,7 @@ val isOdd : x:int -> bool
 val it : bool = false
 ```
 
-Yukarıdaki `isOdd`yeni bir işlevi tanımlar, bu bir `int` alır ve tek olup olmadığını denetler!  Bu işlevi, farklı girişlerle ne döndürdüğünü görmek için çağırabilirsiniz.  İşlev çağrılarının içindeki işlevleri çağırabilirsiniz:
+Yukarıdaki yeni bir işlevi tanımlar, `isOdd` `int` ve tek bir olup olmadığını denetler.  Bu işlevi, farklı girişlerle ne döndürdüğünü görmek için çağırabilirsiniz.  İşlev çağrılarının içindeki işlevleri çağırabilirsiniz:
 
 ```console
 > isOdd (square 15);;
@@ -107,16 +107,16 @@ val it : bool = true
 
 Kanal iletme operatörü ve daha fazlası sonraki öğreticilerde ele alınmıştır.
 
-Etkileşimli ile F# yapabileceklerinize yalnızca bir göz atmak yeterlidir.  Daha fazla bilgi edinmek için [ F#ile etkileşimli programlamaya ](../tutorials/fsharp-interactive/index.md)göz atın.
+Bu, F# Etkileşimli ile yapabileceklerinize yalnızca bir göz alabilir.  Daha fazla bilgi edinmek için, [F # Ile etkileşimli programlamaya](../tools/fsharp-interactive/index.md)göz atın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Henüz yapmadıysanız, F# dilin bazı temel özelliklerini kapsayan [turuna F# ](../tour.md)göz atın.  Bu, bazı özelliklerine F#ilişkin bir genel bakış sağlar ve Mac için Visual Studio kopyalayabilir ve çalıştırmak için örnek kod örnekleri sunar.  Ayrıca, [ F# kılavuzda](../index.yml)gösterilen bazı harika dış kaynaklar da mevcuttur.
+Henüz yapmadıysanız, f # dilinin bazı temel özelliklerini kapsayan [f # turuna](../tour.md)göz atın.  Bu, F # ' ın bazı özelliklerine ilişkin bir genel bakış sağlar ve Mac için Visual Studio kopyalayabilir ve çalıştırmak için örnek kod örnekleri sunar.  Ayrıca, [F # kılavuzunda](../index.yml)kullanabileceğiniz bazı harika dış kaynaklar da mevcuttur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F#Rehberi](../index.yml)
+- [F# kılavuzu](../index.yml)
 - [F# Turu](../tour.md)
-- [F#dil başvurusu](../language-reference/index.md)
+- [F# dil başvurusu](../language-reference/index.md)
 - [Tür çıkarımı](../language-reference/type-inference.md)
 - [Sembol ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)

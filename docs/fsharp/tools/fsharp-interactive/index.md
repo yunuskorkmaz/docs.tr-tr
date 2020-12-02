@@ -1,15 +1,15 @@
 ---
 title: F# Etkileşimli (DotNet) başvurusu
 description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # betiklerini yürütmek için F# Etkileşimli (DotNet fsi) nasıl kullanılacağını öğrenin.'
-ms.date: 10/31/2020
+ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: b535cb03d76909043ca192ed5a9d2078f9343795
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099479"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438049"
 ---
 # <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
 
@@ -118,6 +118,17 @@ let f (x: Tensor) = sin (sqrt x)
 printfn "%A" (f (dsharp.tensor 1.2))
 ```
 
+### <a name="specifying-a-package-source"></a>Paket kaynağı belirtme
+
+Ayrıca, komutuyla bir paket kaynağı belirtebilirsiniz `#i` . Aşağıdaki örnek, uzak ve yerel bir kaynağı belirtir:
+
+```fsharp
+#i "nuget:https://my-remote-package-source/index.json
+#i @"path-to-my-local-source"
+```
+
+Bu, Ayrıca, bir betiğe eklenen uzak ve/veya yerel kaynakları hesaba katan, bu çözüm motoruna ele alınacaktır.
+
 Bir komut dosyasında istediğiniz sayıda paket başvurusu belirtebilirsiniz.
 
 > [!NOTE]
@@ -210,7 +221,7 @@ fsi
 
 `#r` `#load` Daha önce görülen ve yönergeleri yalnızca F# etkileşimli kullanılabilir. Yalnızca F# Etkileşimli kullanılabilen çeşitli yönergeler vardır:
 
-|Deki|Description|
+|Deki|Açıklama|
 |---------|-----------|
 |`#r "nuget:..."`|NuGet 'ten bir pakete başvurur|
 |`#r "assembly-name.dll"`|Diskteki bir derlemeye başvurur|

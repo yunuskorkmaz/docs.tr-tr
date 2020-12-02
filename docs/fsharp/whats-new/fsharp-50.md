@@ -2,12 +2,12 @@
 title: 'F # 5,0-F # kılavuzundaki yenilikler'
 description: "F # 5,0 ' de bulunan yeni özelliklere genel bakış alın."
 ms.date: 11/06/2020
-ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: dd954fac31b008beab37cd6c1f06b1d41c5d5004
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098703"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438000"
 ---
 # <a name="whats-new-in-f-50"></a>F # 5,0 ' deki yenilikler
 
@@ -15,7 +15,7 @@ F # 5,0, F # diline ve F# Etkileşimli çeşitli iyileştirmeler ekler. **.NET 5
 
 [.Net İndirmeleri sayfasından](https://dotnet.microsoft.com/download)en son .NET SDK 'sını indirebilirsiniz.
 
-## <a name="get-started"></a>başlarken
+## <a name="get-started"></a>Kullanmaya başlayın
 
 F # 5,0 tüm .NET Core dağıtımları ve Visual Studio Araçları 'nda mevcuttur. Daha fazla bilgi için bkz. [F # ile çalışmaya başlama](../get-started/index.md) daha fazla bilgi.
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-Bu özellik [F # Tooling RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)' i uygular. Paket başvuruları hakkında daha fazla bilgi için [F# Etkileşimli](../tutorials/fsharp-interactive/index.md) öğreticisine bakın.
+Bu özellik [F # Tooling RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)' i uygular. Paket başvuruları hakkında daha fazla bilgi için [F# Etkileşimli](../tools/fsharp-interactive/index.md) öğreticisine bakın.
 
 ## <a name="string-interpolation"></a>Dize ilişkilendirme
 

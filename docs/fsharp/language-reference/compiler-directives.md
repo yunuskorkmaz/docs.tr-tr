@@ -4,12 +4,12 @@ description: 'F # dil Önişlemci yönergeleri, koşullu derleme yönergeleri, h
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ff106339478c3413dc6458b12f12e1d3f9cd1fe5
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557326"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438174"
 ---
 # <a name="compiler-directives"></a>Derleyici Yönergeleri
 
@@ -21,9 +21,9 @@ Bu konu, işlemci yönergelerini ve derleyici yönergelerini açıklamaktadır.
 
 Aşağıdaki tabloda, F # ' da kullanılabilen Önişlemci yönergeleri listelenmiştir.
 
-|Deki|Description|
+|Deki|Açıklama|
 |---------|-----------|
-|`#if` * simgesi*|Koşullu derlemeyi destekler. `#if` *Sembol* tanımlanmışsa, öğesinden sonra gelen kod. Sembol Ayrıca ile de olabilir `!` .|
+|`#if`*sembol*|Koşullu derlemeyi destekler. `#if` *Sembol* tanımlanmışsa, öğesinden sonra gelen kod. Sembol Ayrıca ile de olabilir `!` .|
 |`#else`|Koşullu derlemeyi destekler. Öncekiyle birlikte kullanılan sembol tanımlanmazsa, kodun bir bölümünü içerecek şekilde işaretler `#if` .|
 |`#endif`|Koşullu derlemeyi destekler. Kodun koşullu bölümünün sonunu işaretler.|
 |`#`satırı *int*,<br/>`#`satırı *int* *dize*,<br/>`#`satırı *tamsayı* *harfine dize*|Hata ayıklama için özgün kaynak kodu satırını ve dosya adını gösterir. Bu özellik, F # kaynak kodu üreten araçlar için sağlanır.|
@@ -74,11 +74,11 @@ Derleyici yönergeleri, bir # işaretiyle ön eki olduklarından, ancak Önişle
 
 Aşağıdaki tabloda, F # ' da kullanılabilen derleyici yönergesi listelenmektedir.
 
-|Deki|Description|
+|Deki|Açıklama|
 |---------|-----------|
 |`#light` ["on" &#124; "kapalı"]|Diğer ML sürümleriyle uyumluluk için hafif söz dizimini etkinleştirilir veya devre dışı bırakır. Varsayılan olarak, hafif sözdizimi etkindir. Verbose sözdizimi her zaman etkindir. Bu nedenle, hem basit söz dizimi hem de ayrıntılı sözdizimini kullanabilirsiniz. `#light`Tek başına yönerge öğesine eşdeğerdir `#light "on"` . Belirtirseniz `#light "off"` , tüm dil yapıları için ayrıntılı sözdizimi kullanmanız gerekir. F # belgelerinde sözdizimi, hafif sözdizimi kullandığınızı varsayımıyla sunulur. Daha fazla bilgi için bkz. [ayrıntılı sözdizimi](verbose-syntax.md).|
 
-Yorumlayıcı (fsi.exe) yönergeleri için bkz. [F # Ile etkileşimli programlama](../tutorials/fsharp-interactive/index.md).
+Yorumlayıcı (fsi.exe) yönergeleri için bkz. [F # Ile etkileşimli programlama](../tools/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
