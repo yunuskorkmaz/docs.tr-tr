@@ -5,17 +5,17 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 04/01/2020
-ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 360d9077bc981a2e9875bb1f86b49c0029424d6e
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267509"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509799"
 ---
 # <a name="app-configuration"></a>Uygulama yapılandırması
 
-Web Forms ' de uygulama yapılandırmasını yüklemeye yönelik birincil yol, *web.config* &mdash; sunucuda veya *web.config*tarafından başvurulan ilgili bir yapılandırma dosyasında bulunanweb.configdosyasında yer alan girişlerdir. Statik nesneyi, uygulama `ConfigurationManager` ayarları, veri deposu bağlantı dizeleri ve uygulamaya eklenen diğer genişletilmiş yapılandırma sağlayıcıları ile etkileşim kurmak için kullanabilirsiniz. Aşağıdaki kodda görüldüğü gibi, uygulama yapılandırması ile etkileşimleri görmek normaldir:
+Web Forms ' de uygulama yapılandırmasını yüklemeye yönelik birincil yol, *web.config* &mdash; sunucuda veya *web.config* tarafından başvurulan ilgili bir yapılandırma dosyasında bulunanweb.configdosyasında yer alan girişlerdir. Statik nesneyi, uygulama `ConfigurationManager` ayarları, veri deposu bağlantı dizeleri ve uygulamaya eklenen diğer genişletilmiş yapılandırma sağlayıcıları ile etkileşim kurmak için kullanabilirsiniz. Aşağıdaki kodda görüldüğü gibi, uygulama yapılandırması ile etkileşimleri görmek normaldir:
 
 ```csharp
 var configurationValue = ConfigurationManager.AppSettings["ConfigurationSettingName"];
@@ -28,7 +28,7 @@ ASP.NET Core ve sunucu tarafında Blazor , uygulamanız bir WINDOWS IIS sunucusu
 
 ASP.NET Core, uygulamanız için kullanmak isteyebileceğiniz birçok yapılandırma kaynağını tanır. Framework, varsayılan olarak bu özelliklerden en iyi şekilde bu özellikleri sunmaya çalışır. Yapılandırma ASP.NET Core tarafından bu çeşitli kaynaklardan okunurdur ve toplanır. Aynı yapılandırma anahtarı için daha sonra yüklenen değerler önceki değerlerden önceliklidir.
 
-ASP.NET Core, bulut açısından uyumlu olacak şekilde tasarlanmıştır ve uygulamaların yapılandırılmasını hem operatörler hem de geliştiriciler için daha kolay hale getirir. ASP.NET Core, ortama duyarlı ve veya ortamınızda çalışıp çalışmadığını biliyor `Production` `Development` . Ortam göstergesi, `ASPNETCORE_ENVIRONMENT` Sistem ortamı değişkeninde ayarlanır. Hiçbir değer yapılandırılmamışsa, uygulamanın ortamda çalışması varsayılan olur `Production` .
+ASP.NET Core bulut açısından uyumlu olacak şekilde tasarlanmıştır ve uygulamaların yapılandırılmasını hem operatörler hem de geliştiriciler için daha kolay hale getirir. ASP.NET Core, ortama duyarlı ve veya ortamınızda çalışıp çalışmadığını biliyor `Production` `Development` . Ortam göstergesi, `ASPNETCORE_ENVIRONMENT` Sistem ortamı değişkeninde ayarlanır. Hiçbir değer yapılandırılmamışsa, uygulamanın ortamda çalışması varsayılan olur `Production` .
 
 Uygulamanız, ortam adına göre çeşitli kaynaklardan yapılandırma tetikleyip ekleyebilir. Varsayılan olarak, yapılandırma aşağıdaki kaynaklardan listelenen sırayla yüklenir:
 
@@ -64,7 +64,7 @@ Kullanıcı gizli dizileri şunlardır:
 * Geliştirici iş istasyonundaki bir JSON dosyasında depolanan yapılandırma değerleri, uygulama geliştirme klasörü dışında.
 * Yalnızca ortamda çalışırken yüklenir `Development` .
 * Belirli bir uygulamayla ilişkili.
-* .NET Core CLI `user-secrets` komutuyla yönetiliyor.
+* .NET CLı komutu ile yönetilir `user-secrets` .
 
 Komutu yürüterek uygulamanızı gizli dizi depolaması için yapılandırın `user-secrets` :
 
@@ -72,7 +72,7 @@ Komutu yürüterek uygulamanızı gizli dizi depolaması için yapılandırın `
 dotnet user-secrets init
 ```
 
-Yukarıdaki komut, `UserSecretsId` proje dosyasına bir öğesi ekler. Öğesi, gizli dizileri uygulamayla ilişkilendirmek için kullanılan bir GUID içerir. Daha sonra komutuyla bir gizli dizi tanımlayabilirsiniz `set` . Örneğin:
+Yukarıdaki komut, `UserSecretsId` proje dosyasına bir öğesi ekler. Öğesi, gizli dizileri uygulamayla ilişkilendirmek için kullanılan bir GUID içerir. Daha sonra komutuyla bir gizli dizi tanımlayabilirsiniz `set` . Örnek:
 
 ```dotnetcli
 dotnet user-secrets set "Parent:ApiKey" "12345"

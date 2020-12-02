@@ -3,13 +3,13 @@ title: Uygulama başlatma
 description: Uygulamanız için başlangıç mantığını tanımlama hakkında bilgi edinin.
 author: csharpfritz
 ms.author: jefritz
-ms.date: 02/25/2020
-ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: d812079f84f67409334d07c4c10c5577446503be
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158194"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509708"
 ---
 # <a name="app-startup"></a>Uygulama başlatma
 
@@ -22,13 +22,13 @@ Varsayılan Web formları `Application_Start` yöntemi, birçok yapılandırma g
 - `RouteConfig` -Uygulama URL 'SI yönlendirme
 - `BundleConfig` -CSS ve JavaScript paketleme ve küçültmeye yönelik
 
-Bu dosyaların her biri `App_Start` klasöründe bulunur ve uygulamamız başlangıcında yalnızca bir kez çalıştırılır.  `RouteConfig` Varsayılan proje şablonunda, `FriendlyUrlSettings` Uygulama URL 'lerinin dosya uzantısını yok saymasını sağlamak için Web formları için ' i ekler `.ASPX` .  Varsayılan şablon Ayrıca, `.ASPX` uzantıları açan dosya adı ile kolay URL 'ye sayfalar için kalıcı http yeniden yönlendirme durum kodları (HTTP 301) sağlayan bir yönerge içerir.
+Bu dosyaların her biri `App_Start` klasöründe bulunur ve uygulamamızın başlangıcında yalnızca bir kez çalıştırılır.  `RouteConfig` Varsayılan proje şablonunda, `FriendlyUrlSettings` Uygulama URL 'lerinin dosya uzantısını yok saymasını sağlamak için Web formları için ' i ekler `.ASPX` .  Varsayılan şablon Ayrıca, `.ASPX` uzantıları açan dosya adı ile kolay URL 'ye sayfalar için kalıcı http yeniden yönlendirme durum kodları (HTTP 301) sağlayan bir yönerge içerir.
 
 ASP.NET Core ve Blazor ile bu yöntemler `Startup` basitleşilir ve sınıfla birleştirilir ya da ortak web teknolojilerinin yararına ortadan kaldırılır.
 
 ## <a name="blazor-server-startup-structure"></a>Blazor sunucusu başlangıç yapısı
 
-Blazor Server uygulamaları ASP.NET Core 3,0 veya üzeri bir uygulamanın üstünde bulunur.  ASP.NET Core Web uygulamaları, `Startup.cs` uygulamanın kök klasöründeki sınıfında bir çift yöntem aracılığıyla yapılandırılır.  Başlangıç sınıfının varsayılan içeriği aşağıda listelenmiştir
+Blazor Server uygulamaları ASP.NET Core 3,0 veya üzeri bir sürümün üstünde bulunur.  ASP.NET Core Web uygulamaları, `Startup.cs` uygulamanın kök klasöründeki sınıfında bir çift yöntem aracılığıyla yapılandırılır.  Başlangıç sınıfının varsayılan içeriği aşağıda listelenmiştir
 
 ```csharp
 public class Startup
@@ -89,7 +89,7 @@ Ardından, beklenmeyen bir yapılandırma yöntemi olarak listelenir `UseStaticF
 
 Sonraki satır, web formlarından yapılandırma seçeneklerinden birini çoğaltan birincsahiptir: `UseRouting` .  Bu yöntem ASP.NET Core yönlendiricisini işlem hattına ekler ve burada ya da yönlendirmeyi düşünebileceğiniz tek dosyalarda yapılandırılabilir.  Yönlendirme yapılandırması hakkında daha fazla bilgi [Yönlendirme bölümünde](pages-routing-layouts.md)bulunabilir.
 
-Bu yöntemdeki final ifadesinde ASP.NET Core dinlediği uç noktalar tanımlanmaktadır.  Bunlar, Web sunucusuna erişebileceğiniz ve .NET tarafından işlenmiş ve size döndürülen Web 'de erişilebilir konumlardır.  İlk giriş, `MapBlazorHub` Blazor bileşenlerinin durumunun ve işlemenin işlendiği sunucuya gerçek zamanlı ve kalıcı bağlantı sağlamak için bir SignalR hub 'ı yapılandırır.  `MapFallbackToPage`Yöntem çağrısı, Blazor uygulamasını Başlatan sayfanın Web tarafından erişilebilen konumunu gösterir ve ayrıca uygulamayı istemci tarafı derin bağlama isteklerini işleyecek şekilde yapılandırır.  Bir tarayıcı açarsanız ve varsayılan proje şablonunda olduğu gibi, uygulamanızda doğrudan Blazor işlenmiş yola gittiğinizde bu özelliği çalışır durumda görürsünüz `/counter` . İstek, daha sonra Blazor yönlendiricisini çalıştıran ve sayaç sayfasını işleyen *_Host. cshtml* geri dönüş sayfası tarafından işlenir.
+Bu yöntemdeki final ifadesinde ASP.NET Core dinlediği uç noktalar tanımlanmaktadır.  Bu yollar, Web sunucusuna erişebileceğiniz ve .NET tarafından işlenmiş ve size döndürülen Web 'de erişilebilir konumlardır.  İlk giriş, `MapBlazorHub` Blazor bileşenlerinin durumunun ve işlemenin işlendiği sunucuya gerçek zamanlı ve kalıcı bağlantı sağlamak için bir SignalR hub 'ı yapılandırır.  `MapFallbackToPage`Yöntem çağrısı, Blazor uygulamasını Başlatan sayfanın Web tarafından erişilebilen konumunu gösterir ve ayrıca uygulamayı istemci tarafı derin bağlama isteklerini işleyecek şekilde yapılandırır.  Bir tarayıcı açarsanız ve varsayılan proje şablonunda olduğu gibi, uygulamanızda doğrudan Blazor işlenmiş yola gittiğinizde bu özelliği çalışır durumda görürsünüz `/counter` . İstek, daha sonra Blazor yönlendiricisini çalıştıran ve sayaç sayfasını işleyen *_Host. cshtml* geri dönüş sayfası tarafından işlenir.
 
 ## <a name="upgrading-the-bundleconfig-process"></a>Paketleme Liconfig Işlemini yükseltme
 

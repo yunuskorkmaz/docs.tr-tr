@@ -1,19 +1,19 @@
 ---
 title: Bulutta yerel uygulamalar için Azure güvenliği
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native uygulamalar için Azure güvenliği
-ms.date: 05/13/2020
-ms.openlocfilehash: e6f91cc4c240dd3349faed2f87db1ba99b2780a9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/01/2020
+ms.openlocfilehash: 5e541606c762ea192ab8767e78e9b7346b3ec9c1
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161002"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509825"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Bulutta yerel uygulamalar için Azure güvenliği
 
 Bulutta yerel uygulamalar, geleneksel uygulamalardan güvenli şekilde daha kolay ve daha zor olabilir. Alt tarafta, daha küçük uygulamalar için güvenli hale getirmeniz ve güvenlik altyapısını oluşturmak için daha fazla enerji ayırmanız gerekir. Çoğu hizmet dağıtımında programlama dillerinin ve stillerinin heterojen doğası da birçok farklı sağlayıcıdan güvenlik bültenlerine daha fazla dikkat etmeniz gereken anlamına gelir.
 
-Ters çevir tarafında, her biri kendi veri deposuna sahip olan daha küçük hizmetler, bir saldırının kapsamını sınırlar. Bir saldırgan tek bir sistemi zorlayıyorsa, saldırganın tek parçalı bir uygulamada olduğundan başka bir sisteme atlamasını daha zor olabilir. İşlem sınırları güçlü sınırlardır. Ayrıca, bir veritabanı yedeklemesi sızıntıbulunursa, veritabanının yalnızca bir veri alt kümesini içermesi ve kişisel verilerin içermesi olası olması nedeniyle hasar daha sınırlı olur.
+Ters çevir tarafında, her biri kendi veri deposuna sahip olan daha küçük hizmetler, bir saldırının kapsamını sınırlar. Bir saldırgan tek bir sistemi zorlayıyorsa, saldırganın tek parçalı bir uygulamada olduğundan başka bir sisteme atlamasını daha zor olabilir. İşlem sınırları güçlü sınırlardır. Ayrıca, bir veritabanı yedeklemesi açığa çıkdığında, veritabanı yalnızca bir veri alt kümesini içerdiğinden ve kişisel verileri içermesi olası olduğundan, hasar daha sınırlıdır.
 
 ## <a name="threat-modeling"></a>Tehdit modelleme
 
@@ -26,7 +26,7 @@ Avantaj, bulutta yerel uygulamaların dezavantajlarının olumsuz yönlerini anl
 
 Tüm bu sorular [tehdit modelleme](/azure/security/azure-security-threat-modeling-tool)adlı bir işlemin parçasıdır. Bu işlem, sisteme ne kadar tehdit olduğunu, tehditlerin ne olasılığından ve potansiyel olarak ne kadar hasar olduğunu yanıtlamaya çalışır.
 
-Tehditler listesi kurulduktan sonra, bunların azaltıcı olup olmadığına karar vermeniz gerekir. Bazen tehdit, bunun üzerinde enerji harcamamasının planlanmaması açısından çok düşüktür ve pahalıdır. Örneğin, bazı durum düzeyi aktör, milyonlarca cihaz tarafından kullanılan bir işlemin tasarımına değişiklikler ekleyebilir. Artık, [halka 3](https://en.wikipedia.org/wiki/Protection_ring)' te belirli bir kod parçasını çalıştırmak yerine, bu kod halka 0 ' da çalıştırılır. Bu, hiper yöneticiyi atlayabilmesine ve saldırı kodunu çıplak makinelerde çalıştırabilmesine olanak tanıyarak, bu donanımda çalışan tüm sanal makinelerde saldırılara izin verir.
+Tehditler listesi kurulduktan sonra, bunların azaltıcı olup olmadığına karar vermeniz gerekir. Bazen tehdit, bunun üzerinde enerji harcamamasının planlanmaması açısından çok düşüktür ve pahalıdır. Örneğin, bazı durum düzeyi aktör, milyonlarca cihaz tarafından kullanılan bir işlemin tasarımına değişiklikler ekleyebilir. Artık, [halka 3](https://en.wikipedia.org/wiki/Protection_ring)' te belirli bir kod parçasını çalıştırmak yerine, bu kod halka 0 ' da çalıştırılır. Bu işlem, hiper yöneticiyi atlayabilmesine ve saldırı kodunu çıplak makinelerde çalıştırabilmesine olanak tanıyarak, bu donanımda çalışan tüm sanal makinelerde saldırılara izin verir.
 
 Değiştirilen işlemcilerin, mikro bir kapsam olmadan algılanmaları ve bu işlemcinin açık bir tasarımı hakkında bilgi sahibi olmanız zordur. Bu senaryonun gerçekleşmesi ve hafifletmemesi, büyük olasılıkla hiçbir tehdit modelinin bunun için yararlanma koruması oluşturulmasını önermez.
 
@@ -58,9 +58,9 @@ Bir saldırgan bir uygulamaya sızma denemesi yapmanız gerekir, bunun bir uyar�
 
 Güvenliğin genellikle yapı sürecinin etrafında olduğu bir yerdir. Yalnızca, derleme, güvenli olmayan kod veya iade kimlik bilgileri için tarama gibi güvenlik denetimleri çalıştırmamalıdır, ancak yapılandırmanın kendisi güvende olmalıdır. Yapı sunucusu tehlikeye girerse, ürüne rastgele kod tanıtımı için harika bir vektör sağlar.
 
-Bir saldırganın bir Web uygulamasında oturum açan kişilerin parolalarını çalmak için bakmasını düşünün. Başka bir sunucuya herhangi bir oturum açma isteğini yansıtmak için, kullanıma alınan kodu değiştiren bir yapı adımı ortaya çıkarabilir. Bir sonraki kod derlemeden geçtiğinde sessizce güncelleştirilir. Kaynak kodu güvenlik açığı taraması, derlemeden önce çalıştığı için bunu yakalamaz. Aynı şekilde, derleme adımları yapı sunucusunda canlı olduğundan, hiçbir kimse onu bir kod incelemesinin içinde yakalayamaz. Yararlanılabilen kod, parolaların nereden bir şekilde bir yere gidebileceği üretime gider. Büyük olasılıkla, derleme işlemi değişikliklerinden bir denetim günlüğü yok veya en az bir zaman denetimini izlemiyor.
+Bir saldırganın bir Web uygulamasında oturum açan kişilerin parolalarını çalmak için bakmasını düşünün. Başka bir sunucuya herhangi bir oturum açma isteğini yansıtmak için, kullanıma alınan kodu değiştiren bir yapı adımı ortaya çıkarabilir. Bir sonraki kod derlemeden geçtiğinde sessizce güncelleştirilir. Kaynak kodu güvenlik açığı taraması, derlemeden önce çalıştığı için bu güvenlik açığını yakalamaz. Aynı şekilde, derleme adımları yapı sunucusunda canlı olduğundan, hiçbir kimse onu bir kod incelemesinin içinde yakalayamaz. Yararlanılabilen kod, parolaların nereden bir şekilde bir yere gidebileceği üretime gider. Büyük olasılıkla, derleme işlemi değişikliklerinden bir denetim günlüğü yok veya en az bir zaman denetimini izlemiyor.
 
-Bu, sisteme bölmek için kullanılabilecek, en düşük bir değer hedefine yönelik kusursuz bir örnektir. Bir saldırgan sistemin çevre ağına ulaştığında, izinlerini, istedikleri yere gerçek zarar verebilecek bir noktaya yükseltmek için yollar bulmaya başlayabilir.
+Bu senaryo, sisteme bölmek için kullanılabilecek, en düşük değerli bir hedefe yönelik kusursuz bir örnektir. Bir saldırgan sistemin çevre ağına ulaştığında, izinlerini, istedikleri yere gerçek zarar verebilecek bir noktaya yükseltmek için yollar bulmaya başlayabilir.
 
 ## <a name="building-secure-code"></a>Güvenli kod oluşturma
 
@@ -82,7 +82,7 @@ Azure, kullanıcıların çoğunluğu için kullanılabilirliği ve güvenliği 
 
 Çoğu PaaS Azure kaynaklarının çoğu, en temel ve izin veren ağ kurulumuna sahiptir. Örneğin, Internet üzerindeki herkes bir App Service 'e erişebilir. Yeni SQL Server örnekleri genellikle sınırlı gelir, böylece dış taraflar bunlara erişemez, ancak Azure tarafından kullanılan IP adresi aralıklarına aracılığıyla izin verilir. Bu nedenle, SQL Server dış tehditlerden korunurken, bir saldırganın yalnızca Azure 'daki tüm SQL örneklerine karşı saldırıları başlatabilecekleri Azure köprü kurucu ayarlaması gerekir.
 
-Neyse ki, çoğu Azure kaynağı daha ayrıntılı erişim denetimi sağlayan bir Azure sanal ağına yerleştirilebilir. Şirket içi ağların, daha geniş dünyadan korunan özel ağları oluşturma yöntemine benzer şekilde, sanal ağlar Azure ağı içinde bulunan özel IP adresi Adaları 'lardır.
+Neyse ki, çoğu Azure kaynağı, ayrıntılı erişim denetimine izin veren bir Azure sanal ağına yerleştirilebilecek. Şirket içi ağların, daha geniş dünyadan korunan özel ağları oluşturma yöntemine benzer şekilde, sanal ağlar Azure ağı içinde bulunan özel IP adresi Adaları 'lardır.
 
 ![Şekil 9-1 Azure 'da bir sanal ağ](./media/virtual-network.png)
 
@@ -90,7 +90,7 @@ Neyse ki, çoğu Azure kaynağı daha ayrıntılı erişim denetimi sağlayan bi
 
 Şirket içi ağların ağa erişimi yöneten bir güvenlik duvarı olduğu şekilde, sanal ağın sınırında benzer bir güvenlik duvarı kurabilirsiniz. Varsayılan olarak, bir sanal ağdaki tüm kaynaklar yine de Internet ile konuşabilir. Yalnızca bazı açık güvenlik duvarı özel durumu gerektiren gelen bağlantılarıdır.
 
-Ağ oluşturulduğunda, depolama hesapları gibi iç kaynaklar yalnızca sanal ağ üzerindeki kaynaklara göre erişime izin verecek şekilde ayarlanabilir. Bu güvenlik duvarı, daha fazla güvenlik düzeyi sağlar ve bu depolama hesabı için anahtarlar sızmış olması gerekir. saldırganlar, sızan anahtarlarla yararlanmaya yönelik bağlantı kurabiliyor. Bu, en az ayrıcalık prensibi bir örnektir.
+Ağ oluşturulduğunda, depolama hesapları gibi iç kaynaklar yalnızca sanal ağ üzerindeki kaynaklara göre erişime izin verecek şekilde ayarlanabilir. Bu güvenlik duvarı, daha fazla güvenlik düzeyi sağlar ve bu depolama hesabı için anahtarlar sızmış olması gerekir. saldırganlar, sızan anahtarlarla yararlanmaya yönelik bağlantı kurabiliyor. Bu senaryo, en az ayrıcalık prensibi bir örnektir.
 
 Azure Kubernetes kümesindeki düğümler, Azure 'da daha doğal olan diğer kaynaklar gibi sanal bir ağa katılabilir. Bu işlevselliğe [Azure Container Networking arabirimi](https://github.com/Azure/azure-container-networking/blob/master/docs/cni.md)adı verilir. Aslında, sanal makinelerin ve kapsayıcı görüntülerinin ayrıldığı sanal ağ içinde bir alt ağ ayırır.
 
@@ -98,7 +98,7 @@ Bir sanal ağ içindeki her kaynağın diğer her kaynakla iletişim kurmasını
 
 Kaynaklar arasındaki iletişimi reddetme ilkesi, özellikle de trafik kısıtlamaları olmadan Azure kullanmanın bir arka planıyla gelen uygulama için sinir bozucu olabilir. Diğer bulutlarda, ağ güvenlik grupları kavramı çok daha yaygındır. Örneğin, AWS üzerindeki varsayılan ilke, bir NSG 'de kurallar tarafından etkinleştirilinceye kadar kaynaklar kendileri arasında iletişim kuramaz. Bunu geliştirmekten daha yavaş olsa da, daha kısıtlayıcı bir ortam daha güvenli bir varsayılan değer sağlar. Uygun DevOps uygulamalarından yararlanarak, özellikle izinleri yönetmek için [Azure Resource Manager ya da Terlarform](infrastructure-as-code.md) kullanmak kuralların denetlenmesine daha kolay hale getirir.
 
-Sanal ağlar, şirket içi ve bulut kaynakları arasında iletişim kurarken da yararlı olabilir. Bir sanal özel ağ, iki ağı sorunsuzca birlikte eklemek için kullanılabilir. Bu, tüm kullanıcıların yerinde olduğu senaryolar için herhangi bir ağ geçidi sıralaması olmadan bir sanal ağın çalıştırılmasını sağlar. Bu ağı kurmak için kullanılabilecek çeşitli teknolojiler vardır. En basit, birçok yönlendirici ve Azure arasında kurulabilirler, [siteden sıteye VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) kullanmaktır. Trafik, Internet üzerinden, diğer tüm trafik olarak bayt başına aynı maliyetten şifrelenir ve tünel oluşturulur. Daha fazla bant genişliği veya daha fazla güvenlik istenmekte olan senaryolarda Azure, şirket içi ağ ile Azure arasında özel bir bağlantı hattı kullanan [Express Route](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) adlı bir hizmet sunar. Daha pahalı ve daha da güvenli hale gelir.
+Sanal ağlar, şirket içi ve bulut kaynakları arasında iletişim kurarken da yararlı olabilir. Bir sanal özel ağ, iki ağı sorunsuzca birlikte eklemek için kullanılabilir. Bu yaklaşım, tüm kullanıcıların yerinde olduğu senaryolar için herhangi bir ağ geçidi sıralaması olmadan bir sanal ağın çalıştırılmasını sağlar. Bu ağı kurmak için kullanılabilecek çeşitli teknolojiler vardır. En basit, birçok yönlendirici ve Azure arasında kurulabilirler, [siteden sıteye VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) kullanmaktır. Trafik, Internet üzerinden, diğer tüm trafik olarak bayt başına aynı maliyetten şifrelenir ve tünel oluşturulur. Daha fazla bant genişliği veya daha fazla güvenlik istenmekte olan senaryolarda Azure, şirket içi ağ ile Azure arasında özel bir bağlantı hattı kullanan [Express Route](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) adlı bir hizmet sunar. Daha pahalı ve daha da güvenli hale gelir.
 
 ## <a name="role-based-access-control-for-restricting-access-to-azure-resources"></a>Azure kaynaklarına erişimi kısıtlamak için rol tabanlı erişim denetimi
 
@@ -121,7 +121,7 @@ Güvenlik sorumlusu her bir kaynağa uygulanabilir. Bu, Azure Kubernetes içinde
 
 ## <a name="roles"></a>Roller
 
-Bir güvenlik sorumlusu birçok rolü veya daha fazla bir benzerleme vurguladı, aşı birçok HATS 'yi kullanarak alabilir. Her rol, "Azure Service Bus uç noktasından iletileri oku" gibi bir dizi izin tanımlar. Güvenlik sorumlusu etkin izin kümesi, güvenlik sorumlusu 'nın sahip olduğu tüm rollere atanan tüm izinlerin birleşimidir. Azure 'da çok sayıda yerleşik rol bulunur ve kullanıcılar kendi rollerini tanımlayabilirler.
+Bir güvenlik sorumlusu birçok rolü veya daha fazla bir benzerleme vurguladı, aşı birçok HATS 'yi kullanarak alabilir. Her rol, "Azure Service Bus uç noktasından iletileri oku" gibi bir dizi izin tanımlar. Güvenlik sorumlusu etkin izin kümesi, bir güvenlik sorumlusunun sahip olduğu tüm rollere atanan tüm izinlerin birleşimidir. Azure 'da çok sayıda yerleşik rol bulunur ve kullanıcılar kendi rollerini tanımlayabilirler.
 
 ![Şekil 9-3 RBAC rol tanımları](./media/rbac-role-definition.png)
 
@@ -147,7 +147,7 @@ Reddetme kuralları izin verme kurallarına göre önceliklidir. Artık aynı "t
 
 ## <a name="checking-access"></a>Erişim denetleniyor
 
-Imagine de, çok sayıda rol ve kapsamın olması, hizmet sorumlusunun etkin iznini belirlemek oldukça zordur. Üzerinde engelleyen reddetme kuralları, yalnızca karmaşıklığın arttırmasını sağlar. Neyse ki, herhangi bir hizmet sorumlusu için etkili izinleri gösterebilmiş bir [izin Hesaplayıcısı](/azure/role-based-access-control/check-access) vardır. Normalde, Şekil 10-3 ' de gösterildiği gibi, portaldaki ıAM sekmesinde bulunur.
+Imagine de, çok sayıda rol ve kapsamın olması, hizmet sorumlusunun etkin iznini belirlemek oldukça zordur. Üzerinde engelleyen reddetme kuralları, yalnızca karmaşıklığın arttırmasını sağlar. Neyse ki, herhangi bir hizmet sorumlusu için etkili izinleri gösterebilmiş bir [izin Hesaplayıcısı](/azure/role-based-access-control/check-access) vardır. Normalde, Şekil 9-3 ' de gösterildiği gibi, portaldaki ıAM sekmesinde bulunur.
 
 ![Şekil 9-4 bir App Service için Izin Hesaplayıcı](./media/check-rbac.png)
 
@@ -225,11 +225,11 @@ Bu şifreleme düzeyi her zaman yeterli olmayacaksa da, Azure TLS bağlantılar�
 
 ### <a name="at-rest"></a>Bekleyen
 
-Herhangi bir uygulamada, verilerin diskte oturduğu birçok yer vardır. Uygulama kodunun kendisi bir depolama mekanizmasından yüklenir. Çoğu uygulama SQL Server, Cosmos DB, hatta başaramayabiliriz Price-verimli tablo depolaması gibi bazı veritabanı türlerini de kullanır. Bu veritabanlarının hepsi, uygun izinlere sahip uygulamalardan hiç kimsenin verilerinizi okuyabileceğinden emin olmak için yoğun olarak şifrelenmiş depolama kullanır. Sistem işleçleri de şifrelenmiş verileri okuyamıyorum. Böylece müşteriler gizli kalacağından emin olmaya devam edebilir.
+Herhangi bir uygulamada, verilerin diskte oturduğu birçok yer vardır. Uygulama kodunun kendisi bir depolama mekanizmasından yüklenir. Çoğu uygulama SQL Server, Cosmos DB veya hatta başaramayabiliriz Price-verimli tablo depolaması gibi bir veritabanı türünü de kullanır. Bu veritabanlarının hepsi, uygun izinlere sahip uygulamalardan hiç kimsenin verilerinizi okuyabileceğinden emin olmak için yoğun olarak şifrelenmiş depolama kullanır. Sistem işleçleri de şifrelenmiş verileri okuyamıyorum. Böylece müşteriler gizli kalacağından emin olmaya devam edebilir.
 
 ### <a name="storage"></a>Depolama
 
-Azure 'un büyük bir bölümü Azure depolama altyapısıdır. Sanal makine diskleri, Azure depolama 'nın üzerine bağlanır. Azure Kubernetes Hizmetleri, kendilerini Azure Storage üzerinde barındırılan sanal makinelerde çalışır. Azure Işlevleri uygulamaları ve Azure Container Instances gibi sunucusuz teknolojilerin yanı sıra Azure Storage 'ın parçası olan disk kalmadı.
+Azure 'un büyük bir bölümü Azure depolama altyapısıdır. Sanal makine diskleri, Azure depolama 'nın üzerine bağlanır. Azure Kubernetes hizmeti, kendilerini Azure depolamada barındırılan sanal makinelerde çalışır. Azure Işlevleri uygulamaları ve Azure Container Instances gibi sunucusuz teknolojilerin yanı sıra Azure Storage 'ın parçası olan disk kalmadı.
 
 Azure Storage iyi şifrelenirse, başka her şeyin de şifrelenmesi için bir temel sağlar. Azure depolama [,](/azure/storage/common/storage-service-encryption) [fıps 140-2](https://en.wikipedia.org/wiki/FIPS_140) uyumlu [256 bit AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)ile şifrelenir. Bu, son 20 veya bu yıla göre çok sayıda akademik bir şifreleme teknolojisi olan iyi kabul edilir. Mevcut olduğunda, anahtarla ilgili bilgi sahibi olmayan birisinin AES tarafından şifrelenen verileri okumasına izin veren bilinen pratik bir saldırı yoktur.
 

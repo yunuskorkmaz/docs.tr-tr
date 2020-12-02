@@ -5,13 +5,13 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 09/08/2020
-ms.openlocfilehash: 84e12f9890351fa46cd7ed0ee31db449f3c55e59
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.date: 11/20/2020
+ms.openlocfilehash: 66e6001cbcac612cb556e90fb86fd694ca7d1459
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515858"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509760"
 ---
 # <a name="work-with-data"></a>Verilerle çalışma
 
@@ -29,7 +29,7 @@ ADO.NET, bir veritabanıyla etkileşime geçmek için düşük düzeyli yaklaş�
 
 ## <a name="entity-framework"></a>Varlık Çerçevesi
 
-Entity Framework (EF), .NET Foundation tarafından tutulan açık kaynaklı nesne ilişkisel eşleme çerçevesidir. Başlangıçta .NET Framework ile yayınlanan EF, veritabanı bağlantıları, depolama şemaları ve etkileşimler için kod üretmesine olanak tanır. Bu Soyutlamalarla, uygulamanızın iş kurallarına odaklanarak veritabanının güvenilir bir veritabanı yöneticisi tarafından yönetilmesine izin verebilirsiniz. .NET Core 'da, EF Core adlı ve güncelleştirilmiş bir EF sürümü kullanabilirsiniz. EF Core, komut satırı aracını kullanarak, kodunuz ve veritabanı arasındaki etkileşimleri, sizin için kullanabileceğiniz bir dizi komutla oluşturup sürdürmenize yardımcı olur `dotnet ef` . Bir veritabanı ile çalışmaya başlamanızı sağlamak için birkaç örnek göz atalım.
+Entity Framework (EF), .NET Foundation tarafından tutulan açık kaynaklı nesne ilişkisel eşleme çerçevesidir. Başlangıçta .NET Framework ile yayınlanan EF, veritabanı bağlantıları, depolama şemaları ve etkileşimler için kod üretmesine olanak tanır. Bu Soyutlamalarla, uygulamanızın iş kurallarına odaklanarak veritabanının güvenilir bir veritabanı yöneticisi tarafından yönetilmesine izin verebilirsiniz. .NET ' te, EF Core olarak adlandırılan güncel bir sürümünü kullanabilirsiniz. EF Core, komut satırı aracını kullanarak, kodunuz ve veritabanı arasındaki etkileşimleri, sizin için kullanabileceğiniz bir dizi komutla oluşturup sürdürmenize yardımcı olur `dotnet ef` . Bir veritabanı ile çalışmaya başlamanızı sağlamak için birkaç örnek göz atalım.
 
 ### <a name="ef-code-first"></a>EF Code First
 
@@ -86,7 +86,7 @@ dotnet ef database update
 
 İlk komut, veritabanı şemasında yaptığınız değişiklikleri, adlı yeni bir EF geçişi olarak tanımlar `Create Product table` .  Bir geçiş, yeni veritabanı değişikliklerinizin nasıl uygulanacağını ve kaldırılacağını tanımlar.
 
-Uygulandıktan sonra veritabanınızda basit bir `Product` tablo ve veritabanı şemasının yönetilmesine yardımcı olan projeye eklenen bazı yeni sınıflar vardır.  Bu oluşturulan sınıfları varsayılan olarak *geçişler*adlı yeni bir klasörde bulabilirsiniz.  Sınıf üzerinde değişiklik yaptığınızda `Product` veya veritabanınıza etkileşimde bulunmak istediğiniz daha fazla ilgili sınıf eklediğinizde, geçiş için yeni bir adla komut satırı komutlarını yeniden çalıştırmanız gerekir.  Bu komut, veritabanı şemanızı güncelleştirmek için başka bir geçiş sınıfları kümesi oluşturur.
+Uygulandıktan sonra veritabanınızda basit bir `Product` tablo ve veritabanı şemasının yönetilmesine yardımcı olan projeye eklenen bazı yeni sınıflar vardır.  Bu oluşturulan sınıfları varsayılan olarak *geçişler* adlı yeni bir klasörde bulabilirsiniz.  Sınıf üzerinde değişiklik yaptığınızda `Product` veya veritabanınıza etkileşimde bulunmak istediğiniz daha fazla ilgili sınıf eklediğinizde, geçiş için yeni bir adla komut satırı komutlarını yeniden çalıştırmanız gerekir.  Bu komut, veritabanı şemanızı güncelleştirmek için başka bir geçiş sınıfları kümesi oluşturur.
 
 ### <a name="ef-database-first"></a>EF Database First
 

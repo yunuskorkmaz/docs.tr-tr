@@ -5,13 +5,13 @@ author: ardalis
 ms.author: daroth
 no-loc:
 - Blazor
-ms.date: 09/11/2019
-ms.openlocfilehash: 690e559617e4961c3cf3262a6d2d48a6bfac67cd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: 0344960237a5d9da61eb0d85987c44e136f1be48
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161301"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509851"
 ---
 # <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>Güvenlik: ASP.NET Web Forms ve üzerinde kimlik doğrulaması ve yetkilendirme Blazor
 
@@ -19,19 +19,19 @@ Bir ASP.NET Web Forms uygulamasından ' ye geçiş yapmak Blazor , uygulamanın 
 
 ## <a name="aspnet-universal-providers"></a>ASP.NET evrensel sağlayıcılar
 
-ASP.NET 2,0 ' den itibaren, ASP.NET Web Forms platformu üyelik dahil olmak üzere çeşitli özellikler için bir sağlayıcı modeli destekliyordu. Evrensel üyelik sağlayıcısı, isteğe bağlı rol sağlayıcısıyla birlikte ASP.NET Web Forms uygulamalarıyla çok yaygın olarak dağıtılır. Bugün çalışmaya devam eden kimlik doğrulama ve yetkilendirmeyi yönetmenin sağlam ve güvenli bir yolunu sunar. Bu evrensel sağlayıcıların en son sunumu, [Microsoft. Aspnet. Providers](https://www.nuget.org/packages/Microsoft.AspNet.Providers)bir NuGet paketi olarak sunulmaktadır.
+ASP.NET 2,0 ' den itibaren, ASP.NET Web Forms platformu üyelik dahil olmak üzere çeşitli özellikler için bir sağlayıcı modeli destekliyordu. Evrensel üyelik sağlayıcısı, isteğe bağlı rol sağlayıcısıyla birlikte, genellikle ASP.NET Web Forms uygulamalarıyla dağıtılır. Bugün çalışmaya devam eden kimlik doğrulama ve yetkilendirmeyi yönetmenin sağlam ve güvenli bir yolunu sunar. Bu evrensel sağlayıcıların en son sunumu, [Microsoft. Aspnet. Providers](https://www.nuget.org/packages/Microsoft.AspNet.Providers)bir NuGet paketi olarak sunulmaktadır.
 
-Evrensel sağlayıcılar,, ve gibi tabloları içeren bir SQL veritabanı şeması ile `aspnet_Applications` çalışır `aspnet_Membership` `aspnet_Roles` `aspnet_Users` . [aspnet_regsql.exe komutu](/previous-versions/ms229862(v=vs.140))çalıştırılarak yapılandırıldığında, sağlayıcılar, temel alınan verilerle çalışmak için gerekli tüm sorguları ve komutları sağlayan tabloları ve saklı yordamları yükler. Veritabanı şeması ve bu saklı yordamlar, daha yeni ASP.NET Identity ve ASP.NET Core kimlik sistemleriyle uyumlu değildir, bu nedenle mevcut verilerin yeni sisteme geçirilmesi gerekir. Şekil 1 ' de, evrensel sağlayıcılar için yapılandırılmış örnek bir tablo şeması gösterilmektedir.
+Evrensel sağlayıcılar,, ve gibi tabloları içeren bir SQL veritabanı şeması ile `aspnet_Applications` çalışır `aspnet_Membership` `aspnet_Roles` `aspnet_Users` . [aspnet_regsql.exe komutu](/previous-versions/ms229862(v=vs.140))çalıştırılarak yapılandırıldığında, sağlayıcılar, temel alınan verilerle çalışacak tüm gerekli sorguları ve komutları sağlayan tabloları ve saklı yordamları yükler. Veritabanı şeması ve bu saklı yordamlar, daha yeni ASP.NET Identity ve ASP.NET Core kimlik sistemleriyle uyumlu değildir, bu nedenle mevcut verilerin yeni sisteme geçirilmesi gerekir. Şekil 1 ' de, evrensel sağlayıcılar için yapılandırılmış örnek bir tablo şeması gösterilmektedir.
 
 ![Evrensel sağlayıcılar şeması](./media/security/membership-tables.png)
 
-Evrensel sağlayıcı kullanıcıları, üyeliği, rolleri ve profilleri işler. Kullanıcılara genel benzersiz tanımlayıcılar atanır ve çok temel bilgiler (Kullanıcı kimliği, Kullanıcı adı) `aspnet_Users` tabloda depolanır. Parola, parola biçimi, parola güvenlik, kilitleme sayaçları ve ayrıntılar gibi kimlik doğrulama bilgileri `aspnet_Membership` tabloda depolanır. Roller, yalnızca ilişkilendirme tablosu aracılığıyla kullanıcılara atanan adları ve benzersiz tanımlayıcılardan oluşur ve `aspnet_UsersInRoles` çoktan çoğa bir ilişki sağlar.
+Evrensel sağlayıcı kullanıcıları, üyeliği, rolleri ve profilleri işler. Kullanıcılara genel benzersiz tanımlayıcılar atanır ve Kullanıcı kimliği, Kullanıcı adı vb. gibi temel bilgiler `aspnet_Users` tabloda depolanır. Parola, parola biçimi, parola güvenlik, kilitleme sayaçları ve ayrıntılar gibi kimlik doğrulama bilgileri `aspnet_Membership` tabloda depolanır. Roller, yalnızca ilişkilendirme tablosu aracılığıyla kullanıcılara atanan adları ve benzersiz tanımlayıcılardan oluşur ve `aspnet_UsersInRoles` çoktan çoğa bir ilişki sağlar.
 
 Mevcut sisteminiz üyeliğe ek olarak roller kullanıyorsa, Kullanıcı hesaplarını, ilişkili parolaları, rolleri ve rol üyeliğini ASP.NET Core kimliğe geçirmeniz gerekir. Ayrıca, şu anda, ' nin bildirim temelli filtrelerin, özniteliklerin ve/veya etiket yardımcılarını kullanmasını sağlamak için If deyimlerini kullanarak şu anda rol denetimleri gerçekleştirmekte olduğunuz kodunuzu güncelleştirmeniz gerekir. Bu bölümün sonunda, geçiş konularını daha ayrıntılı olarak gözden geçitireceğiz.
 
 ### <a name="authorization-configuration-in-web-forms"></a>Web Forms 'de yetkilendirme yapılandırması
 
-Bir ASP.NET Web Forms uygulamasındaki belirli sayfalara yetkili erişimi yapılandırmak için, genellikle belirli sayfaların veya klasörlerin anonim kullanıcılara erişilmez olduğunu belirtirsiniz. Bu, web.config dosyasında yapılır:
+Bir ASP.NET Web Forms uygulamasındaki belirli sayfalara yetkili erişimi yapılandırmak için, genellikle belirli sayfaların veya klasörlerin anonim kullanıcılara erişilmez olduğunu belirtirsiniz. Bu yapılandırma web.config dosyasında yapılır:
 
 ```xml
 <?xml version="1.0"?>
@@ -49,7 +49,7 @@ Bir ASP.NET Web Forms uygulamasındaki belirli sayfalara yetkili erişimi yapıl
 </configuration>
 ```
 
-`authentication`Yapılandırma bölümü, uygulama için form kimlik doğrulamasını ayarlar. Bu `authorization` bölüm, tüm uygulama için anonim kullanıcılara izin vermek için kullanılır. Ancak, bir konum temelinde daha ayrıntılı yetkilendirme kuralları sağlayabilir ve rol tabanlı yetkilendirme denetimleri uygulayabilirsiniz.
+`authentication`Yapılandırma bölümü, uygulama için form kimlik doğrulamasını ayarlar. Bu `authorization` bölüm, tüm uygulama için anonim kullanıcılara izin vermek için kullanılır. Ancak, her konum için daha ayrıntılı yetkilendirme kuralları sağlayabilir ve rol tabanlı yetkilendirme denetimleri uygulayabilirsiniz.
 
 ```xml
 <location path="login.aspx">
@@ -74,13 +74,13 @@ Yukarıdaki yapılandırma, ilki ile birleştirildiğinde, anonim kullanıcılar
 </location>
 ```
 
-Yukarıdaki yapılandırma, diğerleri ile birleştirildiğinde, `/admin` klasöre ve içindeki tüm kaynaklara erişimi "Administrators" rolünün üyeleriyle kısıtlar. Bu `web.config` , klasör köküne ayrı bir dosya yerleştirerek da uygulanabilir `/admin` .
+Yukarıdaki yapılandırma, diğerleri ile birleştirildiğinde, `/admin` klasöre ve içindeki tüm kaynaklara erişimi "Administrators" rolünün üyeleriyle kısıtlar. Bu kısıtlama ayrıca klasör köküne ayrı bir dosya yerleştirilerek de uygulanabilir `web.config` `/admin` .
 
 ### <a name="authorization-code-in-web-forms"></a>Web Forms 'de yetkilendirme kodu
 
 ' Yi kullanarak erişimi yapılandırmanın yanı sıra `web.config` , Web Forms uygulamanızda erişimi ve davranışı programlı bir şekilde de yapılandırabilirsiniz. Örneğin, belirli işlemleri gerçekleştirme veya kullanıcının rolüne bağlı olarak belirli verileri görüntüleme özelliğini kısıtlayabilirsiniz.
 
-Bu kod hem codebehind mantığındaki hem de sayfanın kendisi için kullanılabilir:
+Bu kod, hem arka plan kod mantığındaki hem de sayfanın kendisi üzerinde kullanılabilir:
 
 ```html
 <% if (HttpContext.Current.User.IsInRole("Administrators")) { %>
@@ -107,11 +107,11 @@ protected void Page_Load(object sender, EventArgs e)
 
 Yukarıdaki kodda rol tabanlı erişim denetimi (RBAC), sayfanın belirli öğelerinin (örneğin `SecretPanel` ,) geçerli kullanıcının rolüne göre görünür olup olmadığını belirlemekte kullanılır.
 
-Genellikle, ASP.NET Web Forms uygulamalar dosya içinde güvenliği yapılandırır `web.config` ve ardından `.aspx` sayfalarda ve ilgili codebehind dosyalarında gereken yere ek denetimler ekler `.aspx.cs` . Çoğu uygulama, genellikle ek rol sağlayıcısıyla birlikte evrensel üyelik sağlayıcısından faydalanır.
+Genellikle, ASP.NET Web Forms uygulamalar dosya içinde güvenliği yapılandırır `web.config` ve ardından sayfada gereken yere `.aspx` ve ilgili `.aspx.cs` arka plan kod dosyalarına daha fazla denetim ekler. Çoğu uygulama, genellikle ek rol sağlayıcısıyla birlikte evrensel üyelik sağlayıcısından faydalanır.
 
 ## <a name="aspnet-core-identity"></a>ASP.NET Core kimliği
 
-Kimlik doğrulama ve yetkilendirme ile hala çalışmaya devam etse de ASP.NET Core kimliği, evrensel sağlayıcılardan karşılaştırıldığında farklı bir soyutlama ve varsayımlar kümesi kullanır. Örneğin, yeni kimlik modeli üçüncü taraf kimlik doğrulamasını destekler, böylece kullanıcılar sosyal medya hesabı veya diğer güvenilir kimlik doğrulama sağlayıcısı kullanarak kimlik doğrulaması yapabilir. ASP.NET Core kimlik, oturum açma, oturum kapatma ve kayıt gibi yaygın olarak gereken sayfaların Kullanıcı arabirimini destekler. Veri erişimi için EF Core yararlanır ve veri modelini desteklemek için gereken gerekli şemayı oluşturmak üzere EF Core geçişleri kullanır. Bu [ASP.NET Core kimliğe giriş](/aspnet/core/security/authentication/identity) , ASP.NET Core kimliği ile nelerin dahil olduğu ve onunla çalışmaya başlama hakkında iyi bir genel bakış sunar. Uygulamanızda ve veritabanında ASP.NET Core kimlik ayarlamadıysanız, başlamanıza yardımcı olur.
+Kimlik doğrulama ve yetkilendirme ile hala çalışmaya devam etse de ASP.NET Core kimliği, evrensel sağlayıcılardan karşılaştırıldığında farklı bir soyutlama ve varsayımlar kümesi kullanır. Örneğin, yeni kimlik modeli üçüncü taraf kimlik doğrulamasını destekler, böylece kullanıcılar sosyal medya hesabı veya diğer güvenilir kimlik doğrulama sağlayıcısı kullanarak kimlik doğrulaması yapabilir. ASP.NET Core kimlik, oturum açma, oturum kapatma ve kayıt gibi yaygın olarak gereken sayfaların Kullanıcı arabirimini destekler. Veri erişimi için EF Core yararlanır ve veri modelini desteklemek için gerekli şemayı oluşturmak üzere EF Core geçişleri kullanır. Bu [ASP.NET Core kimliğe giriş](/aspnet/core/security/authentication/identity) , ASP.NET Core kimliği ile nelerin dahil olduğu ve onunla çalışmaya başlama hakkında iyi bir genel bakış sunar. Uygulamanızda ve veritabanında ASP.NET Core kimlik ayarlamadıysanız, başlamanıza yardımcı olur.
 
 ### <a name="roles-claims-and-policies"></a>Roller, talepler ve ilkeler
 
@@ -119,9 +119,9 @@ Hem Evrensel sağlayıcılar hem de ASP.NET Core kimlik, rol kavramını destekl
 
 Rollere ek olarak, ASP.NET Core kimlik, talepler ve ilkelerin kavramlarını destekler. Bir rol özellikle bu roldeki bir kullanıcının erişim sağlayabilmesi gereken bir kaynak kümesine karşılık gelmelidir, bir talep yalnızca kullanıcının kimliğinin bir parçasıdır. Talep, konunun ne yapabileceğini temsil eden bir ad değer çiftidir.
 
-Bir kullanıcının taleplerini doğrudan incelemek ve bir kullanıcıya bir kaynağa erişim verilmesi gerekip gerekmediğini temel alarak bunları belirleme olanağınız vardır. Ancak, bu tür denetimler genellikle sistem genelinde tekrarlanır ve dağılmış olur. Bir *ilke*tanımlamak daha iyi bir yaklaşımdır.
+Bir kullanıcının taleplerini doğrudan incelemek ve bir kullanıcıya bir kaynağa erişim verilmesi gerekip gerekmediğini bu değerlere göre tespit etmek mümkündür. Ancak, bu tür denetimler genellikle sistem genelinde tekrarlanır ve dağılmış olur. Bir *ilke* tanımlamak daha iyi bir yaklaşımdır.
 
-Yetkilendirme ilkesi bir veya daha fazla gereksinimden oluşur. İlkeler, yetkilendirme hizmeti yapılandırmasının bir parçası olarak ' `ConfigureServices` ın yönteminde kaydedilir `Startup.cs` . Örneğin, aşağıdaki kod parçacığı, "CanadiansOnly" adlı bir ilke yapılandırır ve bu, kullanıcının "Kanada" değeriyle ülke talebine sahip olması gereksinimini içerir.
+Yetkilendirme ilkesi bir veya daha fazla gereksinimden oluşur. İlkeler, yetkilendirme hizmeti yapılandırmasının bir parçası olarak ' `ConfigureServices` ın yönteminde kaydedilir `Startup.cs` . Örneğin, aşağıdaki kod parçacığı, "CanadiansOnly" adlı bir ilke yapılandırır, bu, kullanıcının "Kanada" değeriyle ülke talebine sahip olması gereksinimini içerir.
 
 ```csharp
 services.AddAuthorization(options =>
@@ -132,7 +132,7 @@ services.AddAuthorization(options =>
 
 [Belgelerde özel ilkeler oluşturma hakkında daha fazla bilgi](/aspnet/core/security/authorization/policies)edinebilirsiniz.
 
-İlkeleri veya rolleri kullanıp kullansanız, uygulamanızdaki belirli bir sayfanın Blazor Bu rolü veya ilkeyi, `[Authorize]` yönergeyle birlikte uygulanmış özniteliğiyle kullanmasını sağlayabilirsiniz `@attribute` .
+İlkeleri veya rolleri kullanıp kullansanız, uygulamanızdaki belirli bir sayfanın, Blazor `[Authorize]` yönergeyle uygulanan özniteliği olan rolün veya ilkenin gerekli olduğunu belirtebilirsiniz `@attribute` .
 
 Rol gerektirme:
 
@@ -146,7 +146,7 @@ Bir ilkenin karşılanmasını gerektirme:
 @attribute [Authorize(Policy ="CanadiansOnly")]
 ```
 
-Kodunuzun kodunuzda bir kullanıcının kimlik doğrulama durumuna, rolüne veya taleplerine erişmeniz gerekiyorsa, bunu gerçekleştirmenin iki temel yolu vardır. Birincisi, kimlik doğrulama durumunu basamaklı bir parametre olarak almadır. İkincisi, eklenen ' i kullanarak duruma erişdir `AuthenticationStateProvider` . Bu yaklaşımların her birinin ayrıntıları [ Blazor güvenlik belgelerinde](/aspnet/core/blazor/security/)açıklanmıştır.
+Kodunuzda bir kullanıcının kimlik doğrulama durumuna, rollerine veya taleplerine erişmeniz gerekiyorsa, bu işlevselliğe ulaşmak için iki temel yol vardır. Birincisi, kimlik doğrulama durumunu basamaklı bir parametre olarak almadır. İkincisi, eklenen ' i kullanarak duruma erişdir `AuthenticationStateProvider` . Bu yaklaşımların her birinin ayrıntıları [ Blazor güvenlik belgelerinde](/aspnet/core/blazor/security/)açıklanmıştır.
 
 Aşağıdaki kod, nasıl `AuthenticationState` bir geçişli parametre olarak alınacağını gösterir:
 
@@ -219,9 +219,9 @@ Rollerle çalışmanız gerekiyorsa, aynı yaklaşımı izleyin. `RoleManager<T>
 
 ASP.NET Web Forms ve evrensel sağlayıcılardan ASP.NET Core kimliğe geçiş için birkaç adım gerekir:
 
-1. Hedef veritabanında ASP.NET Core Identity Database şeması oluştur
+1. Hedef veritabanında ASP.NET Core Identity Database şeması oluşturma
 2. Verileri evrensel sağlayıcı şemasından ASP.NET Core Identity şemasına geçirme
-3. web.config yapılandırmasını ara yazılım ve hizmetlere geçirme (genellikle `Startup.cs`
+3. Yapılandırma `web.config` ' dan ara yazılım ve hizmetlere, genellikle içinde `Startup.cs`
 4. Etiket Yardımcıları ve yeni kimlik API 'Lerini kullanmak için denetimleri ve koşulları kullanarak sayfaları tek tek güncelleştirin.
 
 Bu adımların her biri, aşağıdaki bölümlerde ayrıntılı olarak açıklanmıştır.
@@ -252,11 +252,11 @@ Yeni şemayı mevcut bir veritabanına uygulamak için bir komut dosyası çalı
 dotnet ef migrations script -o auth.sql
 ```
 
-Bu işlem, çıkış dosyasında `auth.sql` istediğiniz herhangi bir veritabanına göre çalıştırılabilecek BIR SQL betiği oluşturur. Komutları çalıştırırken sorun yaşarsanız `dotnet ef` [sisteminizde EF Core araçlarının yüklü olduğundan emin olun](/ef/core/miscellaneous/cli/dotnet).
+Yukarıdaki komut, çıkış dosyasında `auth.sql` istediğiniz veritabanına göre çalıştırılabilecek BIR SQL betiği oluşturacak. Komutları çalıştırırken sorun yaşarsanız `dotnet ef` [sisteminizde EF Core araçlarının yüklü olduğundan emin olun](/ef/core/miscellaneous/cli/dotnet).
 
 Kaynak tablolarınızda ek sütunlarınız varsa, bu sütunlar için yeni şemada en iyi konumu belirlemeniz gerekir. Genellikle tabloda bulunan sütunların `aspnet_Membership` tabloya eşlenmesi gerekir `AspNetUsers` . Üzerindeki sütunlar `aspnet_Roles` ile eşlenmelidir `AspNetRoles` . Tablodaki ek sütunlar `aspnet_UsersInRoles` `AspNetUserRoles` tabloya eklenir.
 
-Ayrıca, bazı ek sütunları ayrı tablolara yerleştirmeyi de göz önünde bulundurarak, gelecekteki geçişlerin varsayılan kimlik şemasının özelleştirmeleri göz önüne almanız gerekmez.
+Ayrıca, ek sütunları ayrı tablolara yerleştirmeyi de göz önünde bulundurmaktır. Bu nedenle, gelecekteki geçişlerin varsayılan kimlik şemasının özelleştirmeleri gibi bir hesaba sahip olması gerekmez.
 
 ### <a name="migrating-data-from-universal-providers-to-aspnet-core-identity"></a>Verileri evrensel sağlayıcılardan ASP.NET Core kimliğe geçirme
 
@@ -268,7 +268,7 @@ Kullanıcı parolalarının geçirilmesi mümkündür ancak işlem çok daha kar
 
 ### <a name="migrating-security-settings-from-webconfig-to-startupcs"></a>web.config güvenlik ayarlarını Startup.cs 'e geçirme
 
-Yukarıda belirtildiği gibi, ASP.NET üyeliği ve rol sağlayıcıları uygulamanın web.config dosyasında yapılandırılır. ASP.NET Core uygulamalar IIS 'ye bağlı olmadığından ve yapılandırma için ayrı bir sistem kullandıklarından, bu ayarların başka bir yerde yapılandırılması gerekir. Çoğu bölüm için, ASP.NET Core kimlik `Startup.cs` dosyada yapılandırılır. Daha önce oluşturulmuş olan Web projesini açın (kimlik tablosu şeması oluşturmak için) ve dosyasını gözden geçirin `Startup.cs` .
+Yukarıda belirtildiği gibi, ASP.NET üyeliği ve rol sağlayıcıları uygulamanın `web.config` dosyasında yapılandırılır. ASP.NET Core uygulamalar IIS 'ye bağlı olmadığından ve yapılandırma için ayrı bir sistem kullandıklarından, bu ayarların başka bir yerde yapılandırılması gerekir. Çoğu bölüm için, ASP.NET Core kimlik `Startup.cs` dosyada yapılandırılır. Daha önce oluşturulmuş olan Web projesini açın (kimlik tablosu şeması oluşturmak için) ve dosyasını gözden geçirin `Startup.cs` .
 
 Varsayılan ConfigureServices yöntemi EF Core ve kimlik için destek ekler:
 
@@ -327,19 +327,19 @@ ASP.NET Identity, içindeki konumlara anonim veya rol tabanlı erişimi yapılan
 
 ### <a name="updating-individual-pages-to-use-aspnet-core-identity-abstractions"></a>Bağımsız sayfaları ASP.NET Core kimlik soyutlamalarını kullanacak şekilde güncelleştirme
 
-ASP.NET Web Forms uygulamanızda, anonim kullanıcılara belirli sayfalara veya klasörlere erişimi reddetmek için web.config ayarlarınıza sahipseniz, bu `[Authorize]` tür sayfalara özniteliği ekleyerek geçişi yaparsınız:
+ASP.NET Web Forms uygulamanızda, `web.config` anonim kullanıcılara belirli sayfalara veya klasörlere erişimi reddetme ayarlarına sahipseniz, bu değişiklikleri bu `[Authorize]` tür sayfalara ekleyerek geçirebilirsiniz:
 
 ```razor
 @attribute [Authorize]
 ```
 
-Belirli bir role ait olan kullanıcılar hariç erişimi daha fazla reddetseyiyorsa, bunu bir rol belirten bir öznitelik ekleyerek de geçirebilirsiniz:
+Belirli bir role ait olan kullanıcılar hariç erişimi daha fazla reddetseyiyorsa, bu davranışı bir rol belirten bir öznitelik ekleyerek de geçirebilirsiniz:
 
 ```razor
 @attribute [Authorize(Roles ="administrators")]
 ```
 
-`[Authorize]`Özniteliğin yalnızca `@page` yönlendirici üzerinden ulaşılan bileşenlerde çalışıp çalışmadığını unutmayın Blazor . Özniteliği, bunun yerine kullanılması gereken alt bileşenleriyle birlikte çalışmaz `AuthorizeView` .
+`[Authorize]`Özniteliği yalnızca `@page` yönlendirici üzerinden ulaşılan bileşenlerde kullanılabilir Blazor . Özniteliği, bunun yerine kullanılması gereken alt bileşenleriyle birlikte çalışmaz `AuthorizeView` .
 
 Belirli bir kullanıcıya bazı kodların görüntülenip görüntülenmeyeceğini belirlemek için sayfa biçimlendirmesinde mantığa sahipseniz, bunu `AuthorizeView` bileşeniyle değiştirebilirsiniz. [Authorizeview bileşeni](/aspnet/core/blazor/security#authorizeview-component) , kullanıcının onu görme yetkisine sahip olup olmadığına bağlı olarak Kullanıcı arabirimini seçmeli olarak görüntüler. Ayrıca `context` , Kullanıcı bilgilerine erişmek için kullanılabilecek bir değişken gösterir.
 
@@ -356,7 +356,7 @@ Belirli bir kullanıcıya bazı kodların görüntülenip görüntülenmeyeceği
 </AuthorizeView>
 ```
 
-Kullanıcıya özniteliğiyle yapılandırılmış bir öğesinden erişerek, yordamsal mantığdaki kimlik doğrulama durumuna erişebilirsiniz `Task<AuthenticationState` `[CascadingParameter]` . Bu, kullanıcıya erişim sağlar. Bu, kimlik doğrulamasının yapılıp kalmadığını ve belirli bir role ait olup olmadığını belirlemenizi sağlar. Bir ilke procedurally değerlendirmeniz gerekiyorsa, bir örneğini ekleyebilir `IAuthorizationService` ve `AuthorizeAsync` üzerinde yöntemi çağırır. Aşağıdaki örnek kod, Kullanıcı bilgilerinin nasıl alınacağını ve yetkili bir kullanıcının ilke tarafından kısıtlanan bir görevi gerçekleştirmesine nasıl izin verildiğini gösterir `content-editor` .
+Kullanıcıya özniteliğiyle yapılandırılmış bir öğesinden erişerek, yordamsal mantığdaki kimlik doğrulama durumuna erişebilirsiniz `Task<AuthenticationState` `[CascadingParameter]` . Bu yapılandırma kullanıcıya erişim sağlar. Bu, kimlik doğrulamasının yapılıp kalmadığını ve belirli bir role ait olup olmadığını belirlemenizi sağlar. Bir ilke procedurally değerlendirmeniz gerekiyorsa, bir örneğini ekleyebilir `IAuthorizationService` ve `AuthorizeAsync` üzerinde yöntemi çağırır. Aşağıdaki örnek kod, Kullanıcı bilgilerinin nasıl alınacağını ve yetkili bir kullanıcının ilke tarafından kısıtlanan bir görevi gerçekleştirmesine nasıl izin verildiğini gösterir `content-editor` .
 
 ```razor
 @using Microsoft.AspNetCore.Authorization
@@ -392,7 +392,7 @@ Kullanıcıya özniteliğiyle yapılandırılmış bir öğesinden erişerek, yo
 }
 ```
 
-`AuthenticationState`İlk olarak, bunun gibi bir geçişli parametreye bağlanmadan önce basamaklı bir değer olarak kurulum yapması gerekir. Bu genellikle bileşeni kullanılarak yapılır `CascadingAuthenticationState` . Bu genellikle içinde yapılır `App.razor` :
+`AuthenticationState`Birincisi bunun gibi bir geçişli parametreye bağlanmadan önce, bir geçişli değer olarak ayarlanmalıdır. Bu genellikle bileşeni kullanılarak yapılır `CascadingAuthenticationState` . Bu yapılandırma genellikle ' de yapılır `App.razor` :
 
 ```razor
 <CascadingAuthenticationState>
@@ -412,7 +412,7 @@ Kullanıcıya özniteliğiyle yapılandırılmış bir öğesinden erişerek, yo
 
 ## <a name="summary"></a>Özet
 
-Blazor , ASP.NET Core kimlik olan ASP.NET Core ile aynı güvenlik modelini kullanır. Evrensel sağlayıcılardan ASP.NET Core kimlik 'e geçiş oldukça basittir, ancak özgün veri şemasına çok fazla özelleştirme uygulandığını varsayarsak. Veriler geçirildikten sonra, uygulamalarda kimlik doğrulama ve yetkilendirme ile çalışma, Blazor çoğu güvenlik gereksinimi için programlı destek ile iyi şekilde belgelenmiştir.
+Blazor , ASP.NET Core kimlik olan ASP.NET Core ile aynı güvenlik modelini kullanır. Evrensel sağlayıcılardan ASP.NET Core kimlik 'e geçiş oldukça basittir, ancak özgün veri şemasına çok fazla özelleştirme uygulandığını varsayarsak. Veriler geçirildikten sonra, uygulamalarda kimlik doğrulama ve yetkilendirme ile çalışmak iyi bir şekilde Blazor belgelenmiştir ve güvenlik gereksinimlerinin çoğu için programlı destek içerir.
 
 ## <a name="references"></a>Başvurular
 

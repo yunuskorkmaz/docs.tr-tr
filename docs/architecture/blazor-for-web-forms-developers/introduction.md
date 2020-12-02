@@ -6,13 +6,13 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: a5aae6cf02ccec84ac8642b6ce8d9c919755e868
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: f1967dac0f46ba7cfefab62c5528dd1db8029514
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267574"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509721"
 ---
 # <a name="an-introduction-to-no-locblazor-for-aspnet-web-forms-developers"></a>BlazorASP.NET Web Forms geliştiricilere giriş
 
@@ -33,7 +33,7 @@ Bu nedenle, yazılım geliştirmenin yeniliklerini yavaşlatmıyor. Tüm yazıl�
 
 Birçok modern Web çerçevesi artık açık kaynaklı ve bu da birçok avantaj içerir. Kullanıcılar, hataları onarmak ve özellik eklemek için tek bir proje sahibine tutulmuyor. Açık kaynaklı projeler, geliştirme ilerlemesi ve yaklaşan değişiklikler üzerinde geliştirilmiş saydamlık sağlar. Açık kaynaklı projeler, bir topluluğun tamamında katkılardan yararlanır ve bir destekçi açık kaynaklı ekosistemi de kullanabilirler. Açık kaynaklı, çok sayıda tüketici ve katkıda bulunan risklere karşın, açık kaynaklı bir ekosistemin avantajlarından güvenli ve makul bir şekilde yararlanmalarını sağlayan uygun azaltmaları buldu. Bu tür azaltmalara örnek olarak, katkıda bulunan lisans sözleşmeleri, kolay lisanslar, Pedigree taramaları ve temel geçişleri destekleme sayılabilir.
 
-.NET Community, platformlar arası destek ve açık kaynak desteği de sunmaktadır. .NET Core, Windows, macOS ve çeşitli Linux dağıtımları dahil olmak üzere platformlar Plethora üzerinde çalışan açık kaynaklı ve platformlar arası bir uygulamasıdır. Xamarin, .NET 'in açık kaynaklı bir sürümünü mono sağlar. Android, iOS ve Watch ve akıllı TV 'ler dahil olmak üzere çeşitli form faktörlerinde mono çalıştırmaları. Microsoft, [.NET 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/) ' ın .NET Core 'U ve mono 'nın her yerde kullanılabilecek ve Tekdüzen çalışma zamanı davranışları ve geliştirici deneyimleri içeren tek bir .NET çalışma zamanı ve çerçevesi olarak mutabık kılınduğunu duyurdu. "
+.NET Community, platformlar arası destek ve açık kaynak desteği de sunmaktadır. .NET Core, Windows, macOS ve çeşitli Linux dağıtımları dahil olmak üzere platformlar Plethora üzerinde çalışan açık kaynaklı ve platformlar arası bir uygulamasıdır. Xamarin, .NET 'in açık kaynaklı bir sürümünü mono sağlar. Android, iOS ve Watch ve akıllı TV 'ler dahil olmak üzere çeşitli form faktörlerinde mono çalıştırmaları. Microsoft, .NET Core ve Mono ' nın, her yerde kullanılabilecek ve Tekdüzen çalışma zamanı davranışları ve geliştirici deneyimleri içeren tek bir .NET çalışma zamanı ve çerçevesi olarak mutabakatı sunan [.NET 5](https://devblogs.microsoft.com/dotnet/announcing-net-5-0/) ' i yayımladı. "
 
 Açık kaynaklı ve platformlar arası destek ASP.NET Web Forms avantajına sahip olacak. Yanıt, ne yazık ki, Hayır veya en azından platformun geri kalanıyla aynı ölçüde değil. .NET ekibi [kısa bir süre önce](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) ASP.NET Web Forms .NET Core veya .NET 5 ' e alınmayacak. Bunun nedeni nedir?
 
@@ -55,11 +55,11 @@ Ancak iki farklı platform ve ekosisteminin köprülemesi (.NET ve JavaScript) b
 
 2015 ' de, ana tarayıcı satıcıları, bir W3C topluluk grubundaki güçleri birleştirilmiş yeni bir açık web standardı oluşturacak şekilde birleştirilir WebAssembly . WebAssembly Web için bir bayt kodudur. Kodunuzu ' a derleyebiliyorsanız WebAssembly , daha sonra herhangi bir platformda her türlü yerel hızda herhangi bir tarayıcıda çalıştırılabilir. C/C++ ' ya odaklanan ilk çabalar. Sonuç, yerel 3B grafik altyapılarını eklentiler olmadan doğrudan tarayıcıda çalıştırmanın çarpıcı bir gösterimiydi. WebAssembly , bu yana tüm büyük tarayıcılarda standartlaştırılmış ve uygulanmıştır.
 
-Üzerinde .NET çalıştıran çalışma WebAssembly , geç 2017 ' de duyuruldu ve .NET 5 ' ten destek dahil olmak üzere 2020 ' de teslim edilmesi beklenmektedir. .NET kodu doğrudan tarayıcıda çalıştırma özelliği, .NET ile tam yığın Web geliştirmesini sağlar.
+Üzerinde .NET çalıştıran çalışma WebAssembly , .NET 5 ' ten destek de dahil olmak üzere, geç 2017 ve 2020 ' de yayımlanmıştır. .NET kodu doğrudan tarayıcıda çalıştırma özelliği, .NET ile tam yığın Web geliştirmesini sağlar.
 
 ## <a name="no-locblazor-full-stack-web-development-with-net"></a>Blazor: .NET ile tam yığın Web geliştirme
 
-Kendi başına bir tarayıcıda .NET kodu çalıştırma özelliği, istemci tarafı Web uygulamaları oluşturmak için uçtan uca bir deneyim sağlamaz. Bu noktada Blazor ' de gelir. Blazor JavaScript yerine C# tabanlı bir istemci tarafı Web Kullanıcı arabirimi çerçevesidir. Blazor aracılığıyla doğrudan tarayıcıda çalıştırılabilir WebAssembly . Tarayıcı eklentileri gerekli değildir. Alternatif olarak, Blazor uygulamalar .NET Core üzerinde sunucu tarafı çalıştırabilir ve tarayıcıyla gerçek zamanlı bir bağlantı üzerinden tüm kullanıcı etkileşimlerini işleyebilir.
+Kendi başına bir tarayıcıda .NET kodu çalıştırma özelliği, istemci tarafı Web uygulamaları oluşturmak için uçtan uca bir deneyim sağlamaz. Bu noktada Blazor ' de gelir. Blazor JavaScript yerine C# tabanlı bir istemci tarafı Web Kullanıcı arabirimi çerçevesidir. Blazor aracılığıyla doğrudan tarayıcıda çalıştırılabilir WebAssembly . Tarayıcı eklentileri gerekli değildir. Alternatif olarak, Blazor uygulamalar .net üzerinde sunucu tarafı çalıştırabilir ve tarayıcıyla gerçek zamanlı bir bağlantı üzerinden tüm kullanıcı etkileşimlerini işleyebilir.
 
 Blazor , Visual Studio ve Visual Studio Code harika araç desteğine sahiptir. Framework Ayrıca tam bir UI bileşen modeli içerir ve aşağıdakiler için yerleşik tesislere sahiptir:
 
@@ -76,12 +76,12 @@ Bu kitap Blazor , özellikle de ASP.NET Web Forms geliştiricilere yönelik bir 
 
 - BlazorUygulama oluşturma.
 - Nasıl Blazor çalıştığını öğrenin.
-- Blazor.NET Core ile ilgilidir.
+- Blazor.NET ile ilgilidir.
 - Mevcut ASP.NET Web Forms uygulamalarını uygun yerlerde geçirmeye yönelik makul stratejiler Blazor .
 
 ## <a name="get-started-with-no-locblazor"></a>Kullanmaya başlayın Blazor
 
-Kullanmaya başlamak Blazor kolaydır. Öğesine gidin <https://blazor.net> ve uygun .NET Core SDK ve proje şablonlarını yüklemek için bağlantıları izleyin Blazor . Ayrıca, Blazor Visual Studio veya Visual Studio Code araçları ayarlama yönergelerini bulacaksınız.
+Kullanmaya başlamak Blazor kolaydır. Adresine gidin <https://blazor.net> ve uygun .NET SDK ve proje şablonlarını yüklemek için bağlantıları izleyin Blazor . Ayrıca, Blazor Visual Studio veya Visual Studio Code araçları ayarlama yönergelerini bulacaksınız.
 
 >[!div class="step-by-step"]
 >[Önceki](index.md) 

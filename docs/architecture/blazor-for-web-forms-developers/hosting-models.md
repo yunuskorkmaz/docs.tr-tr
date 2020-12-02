@@ -6,13 +6,13 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 2ebb021d2fce46a91a006227ccf9ba0cbcc5eea5
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 5d80b28642ee1e975d334f89504a1748d13dea8f
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267613"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509786"
 ---
 # <a name="no-locblazor-app-hosting-models"></a>Blazor uygulama barındırma modelleri
 
@@ -66,8 +66,8 @@ Blazor WebAssembly Barındırma modelinin aşağı yönleri şunlardır:
 Buna karşılık, Blazor sunucu barındırma modeli aşağıdaki avantajları sunar:
 
 - İndirme boyutu bir istemci tarafı uygulamadan çok daha küçüktür ve uygulama çok daha hızlı yüklenir.
-- Uygulama, .NET Core ile uyumlu API 'lerin kullanımı dahil olmak üzere sunucu olanaklarından tam olarak yararlanır.
-- Sunucuda .NET Core, uygulamayı çalıştırmak için kullanılır, bu nedenle hata ayıklama gibi mevcut .NET araçları beklendiği gibi çalışır.
+- Uygulama, .NET ile uyumlu API 'lerin kullanımı dahil olmak üzere sunucu olanaklarından tam olarak yararlanır.
+- Sunucu üzerinde .NET, uygulamayı çalıştırmak için kullanılır, bu nedenle hata ayıklama gibi mevcut .NET araçları beklendiği gibi çalışır.
 - Ölçülü istemciler desteklenir. Örneğin, sunucu tarafı uygulamalar, WebAssembly kaynak sınırlamalı cihazlarda ve desteklemeyen tarayıcılarla çalışır.
 - Uygulamanın bileşen kodu da dahil olmak üzere, uygulamanın .NET/C# kod tabanı istemcilere sunulmuyor.
 
@@ -78,7 +78,7 @@ BlazorSunucu barındırma modelinin aşağı yönleri şunlardır:
 - Ölçeklenebilirlik, çok sayıda kullanıcısı olan uygulamalar için zorlayıcı bir uygulamalardır. Sunucunun birden çok istemci bağlantısını yönetmesi ve istemci durumunu işlemesi gerekir.
 - Uygulamayı çalıştırmak için bir ASP.NET Core sunucusu gerekir. Sunucusuz dağıtım senaryoları mümkün değildir. Örneğin, uygulamayı bir CDN 'den çalıştıramazsınız.
 
-Yukarıdaki, önde gelen denge listesi başlatılamayabilir, ancak barındırma modeliniz daha sonra değiştirilebilir. BlazorSeçili barındırma modelinden bağımsız olarak, bileşen modeli *aynı*olur. Prensibi, aynı bileşenler barındırma modeliyle birlikte kullanılabilir. Uygulama kodunuz değişmez; Ancak, bileşenlerinizin model belirsiz bir şekilde barındırılması için soyutlamalar tanıtmak iyi bir uygulamadır. Soyutlamalar, uygulamanızın farklı bir barındırma modelini daha kolay benimsemesini sağlar.
+Yukarıdaki, önde gelen denge listesi başlatılamayabilir, ancak barındırma modeliniz daha sonra değiştirilebilir. BlazorSeçili barındırma modelinden bağımsız olarak, bileşen modeli *aynı* olur. Prensibi, aynı bileşenler barındırma modeliyle birlikte kullanılabilir. Uygulama kodunuz değişmez; Ancak, bileşenlerinizin model belirsiz bir şekilde barındırılması için soyutlamalar tanıtmak iyi bir uygulamadır. Soyutlamalar, uygulamanızın farklı bir barındırma modelini daha kolay benimsemesini sağlar.
 
 ## <a name="deploy-your-app"></a>Uygulamanızı dağıtın
 

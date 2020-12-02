@@ -6,13 +6,13 @@ ms.author: tasou
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/19/2019
-ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: 893b6f851681ec540629fe160749b2622b6d5440
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161210"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509838"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web Forms 'den geçiş Blazor
 
@@ -33,7 +33,7 @@ Bu veya diğer yeni özellikler yeterince etkileyici ise, uygulamayı geçirmede
 
 [Barındırma modelleri](hosting-models.md) bölümünde açıklandığı gibi, bir Blazor uygulama iki farklı şekilde barındırılabilir: sunucu tarafı ve istemci tarafı. Sunucu tarafı modeli, sunucuda herhangi bir gerçek kod çalıştırırken DOM güncelleştirmelerini yönetmek için ASP.NET Core SignalR bağlantılarını kullanır. İstemci tarafı modeli WebAssembly bir tarayıcı içinde olarak çalışır ve sunucu bağlantısı gerektirmez. Belirli bir uygulama için en iyi sonucu etkileyebilecek birçok fark vardır:
 
-- Farklı çalıştırma WebAssembly hala geliştirme aşamasındadır ve geçerli zamanda tüm özellikleri (iş parçacığı oluşturma gibi) desteklemeyebilir
+- Farklı çalıştırma WebAssembly , geçerli zamanda tüm özellikleri (örneğin, iş parçacığı) desteklemez
 - İstemci ile sunucu arasındaki geveze iletişimi, sunucu tarafı modunda gecikme sorunlarına neden olabilir
 - Veritabanlarına ve iç veya korumalı hizmetlere erişim, istemci tarafı barındırma ile ayrı bir hizmet gerektirir
 
@@ -41,11 +41,11 @@ Yazma sırasında, sunucu tarafı modeli Web Forms daha yakından benzerdir. Bu 
 
 ## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
 
-Bu ilk geçiş adımı yeni bir proje oluşturmaktır. Bu proje türü, .NET Core SDK stili projelerine dayalıdır ve önceki proje biçimlerinde kullanılan ortak alanının çoğunu basitleştirir. Daha fazla ayrıntı için lütfen [Proje yapısındaki](project-structure.md)bölüme bakın.
+Bu ilk geçiş adımı yeni bir proje oluşturmaktır. Bu proje türü, .NET SDK stili projelerini temel alır ve önceki proje biçimlerinde kullanılan ortak alanının çoğunu basitleştirir. Daha fazla ayrıntı için lütfen [Proje yapısındaki](project-structure.md)bölüme bakın.
 
 Proje oluşturulduktan sonra, önceki projede kullanılan kitaplıkları yükler. Daha eski Web Forms projelerinde, gerekli NuGet paketlerini listelemek için *packages.config* dosyasını kullanmış olabilirsiniz. Yeni SDK stili projesinde *packages.config* `<PackageReference>` Proje dosyasındaki öğelerle değiştirilmiştir. Bu yaklaşımın bir avantajı, tüm bağımlılıkların geçişli olarak yüklenmesini sağlar. Yalnızca ilgilendiğiniz en üst düzey bağımlılıkları listeleyin.
 
-Kullandığınız bağımlılıkların birçoğu .NET Core için Entity Framework 6 ve Log4net dahil olmak üzere kullanılabilir. .NET Core veya .NET Standard sürümü yoksa, .NET Framework sürüm genellikle kullanılabilir. Mesafe, farklılık gösterebilir. .NET Core 'da kullanılamayan API 'leri, çalışma zamanı hatasına neden olur. Visual Studio bu tür paketleri size bildirir. Projenin **Başvurular** düğümünde **Çözüm Gezgini**sarı bir simge görünür.
+Kullandığınız bağımlılıkların birçoğu, .NET için Entity Framework 6 ve Log4net dahil olmak üzere kullanılabilir. Kullanılabilir .NET veya .NET Standard sürümü yoksa, .NET Framework sürümü genellikle kullanılabilir. Mesafe, farklılık gösterebilir. .NET ' te kullanılamayan API 'leri, çalışma zamanı hatasına neden olur. Visual Studio bu tür paketleri size bildirir. Projenin **Başvurular** düğümünde **Çözüm Gezgini** sarı bir simge görünür.
 
 BlazorTabanlı eShop projesinde, yüklü olan paketleri görebilirsiniz. Daha önce, projede kullanılan her pakette listelenen *packages.config* dosyası, neredeyse 50 satır uzunluğuna neden olur. *packages.config* bir kod parçacığı:
 
@@ -80,12 +80,13 @@ BlazorProje, proje dosyasındaki bir öğe içinde gerekli olan bağımlılıkla
 ```xml
 <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.3" />
-    <PackageReference Include="EntityFramework" Version="6.3.0-preview9-19423-04" />
-    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.2.12" />
 </ItemGroup>
 ```
 
-Web Forms geliştiricilerin ömrünü basitleştiren bir NuGet paketi [Windows Uyumluluk paketidir](../../core/porting/windows-compat-pack.md). .NET Core platformlar arası olsa da bazı özellikler yalnızca Windows 'da kullanılabilir. Windows 'a özgü özellikler, uyumluluk paketi yüklenerek kullanılabilir hale getirilir. Bu özelliklere örnek olarak kayıt defteri, WMI ve dizin hizmetleri dahildir. Paket, 20.000 API etrafında ekleme yapar ve çok daha bildiğiniz hizmetleri etkinleştirir. EShop projesi, uyumluluk paketi gerektirmez; Ancak projeleriniz Windows 'a özgü özellikler kullanıyorsa, paket geçiş çalışmalarını kolaylaştırır.
+Web Forms geliştiricilerin ömrünü basitleştiren bir NuGet paketi [Windows Uyumluluk paketidir](../../core/porting/windows-compat-pack.md). .NET platformlar arası olsa da bazı özellikler yalnızca Windows 'da kullanılabilir. Windows 'a özgü özellikler, uyumluluk paketi yüklenerek kullanılabilir hale getirilir. Bu özelliklere örnek olarak kayıt defteri, WMI ve dizin hizmetleri dahildir. Paket, 20.000 API etrafında ekleme yapar ve çok daha bildiğiniz hizmetleri etkinleştirir. EShop projesi, uyumluluk paketi gerektirmez; Ancak projeleriniz Windows 'a özgü özellikler kullanıyorsa, paket geçiş çalışmalarını kolaylaştırır.
 
 ## <a name="enable-startup-process"></a>Başlatma işlemini etkinleştir
 
@@ -245,7 +246,7 @@ public class Startup
 }
 ```
 
-Web Forms fark ettiğiniz önemli bir değişiklik, dı 'nin göze çarkadır. DI, ASP.NET Core tasarımında bir temel prensibi ilkesidir. ASP.NET Core çerçevesinin neredeyse tüm yönlerini özelleştirmeyi destekler. Birçok senaryo için kullanılabilen yerleşik bir hizmet sağlayıcısı da vardır. Daha fazla özelleştirme gerekliyse, bu, çok sayıda topluluk projesi tarafından desteklenebilir. Örneğin, üçüncü taraf dı kitaplığı yatırımınızdan ileri taşıyabilirsiniz.
+Web Forms fark ettiğiniz önemli bir değişiklik, dı 'nin göze çarkadır. DI, ASP.NET Core tasarımında bir temel prensibi ilkesidir. ASP.NET Core çerçevesinin neredeyse tüm yönlerini özelleştirmeyi destekler. Birçok senaryo için kullanılabilen yerleşik bir hizmet sağlayıcısı da vardır. Daha fazla özelleştirme gerekliyse, bu, birçok topluluk projesi tarafından desteklenebilir. Örneğin, üçüncü taraf dı kitaplığı yatırımınızdan ileri taşıyabilirsiniz.
 
 Özgün eShop uygulamasında, oturum yönetimi için bir yapılandırma vardır. Sunucu tarafı Blazor iletişim için ASP.NET Core SignalR kullandığından, bağlantılar BIR http bağlamından bağımsız olarak gerçekleşemediğinden oturum durumu desteklenmez. Oturum durumunu kullanan bir uygulama, uygulama olarak çalışmadan önce yeniden mimari gerektirir Blazor .
 
@@ -253,7 +254,7 @@ Uygulama başlatma hakkında daha fazla bilgi için bkz. [uygulama başlatma](ap
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>HTTP modüllerini ve işleyicileri ara yazılıma geçirme
 
-Http modülleri ve işleyicileri, HTTP isteği ardışık düzenini denetlemek için Web Forms içindeki yaygın desenlerdir. `IHttpModule`Veya `IHttpHandler` ' i uygulayan veya gelen istekleri işleyecek sınıflar. Web Forms, *web.config* dosyasındaki modülleri ve işleyicileri yapılandırır. Web Forms Ayrıca uygulama yaşam döngüsü olay işlemeye bağlıdır. ASP.NET Core bunun yerine ara yazılım kullanır. Ara yazılım, `Configure` sınıfının yöntemine kaydedilir `Startup` . Ara yazılım yürütme sırası, kayıt sırasına göre belirlenir.
+Http modülleri ve işleyicileri, HTTP isteği ardışık düzenini denetlemek için Web Forms içindeki yaygın desenlerdir. `IHttpModule`Veya `IHttpHandler` ' i uygulayan veya gelen istekleri işleyecek sınıflar. *web.config* dosyasında modül ve işleyicileri yapılandırma Web Forms. Web Forms Ayrıca uygulama yaşam döngüsü olay işlemeye bağlıdır. ASP.NET Core bunun yerine ara yazılım kullanır. Ara yazılım, `Configure` sınıfının yöntemine kaydedilir `Startup` . Ara yazılım yürütme sırası, kayıt sırasına göre belirlenir.
 
 [Başlatma Işlemini etkinleştir](#enable-startup-process) bölümünde, yöntemi olarak Web Forms bir yaşam döngüsü olayı tetiklenir `Application_BeginRequest` . Bu olay ASP.NET Core ' de kullanılamaz. Bu davranışı gerçekleştirmenin bir yolu, ara yazılımı *Startup.cs* File örneğinde görüldüğü gibi uygulamaktır. Bu ara yazılım aynı mantığı yapar ve denetimi, ara yazılım ardışık düzeninde bir sonraki işleyiciye aktarır.
 
@@ -286,7 +287,7 @@ Paketleme ve küçültmeye yönelik daha fazla bilgi için, bkz. [ASP.NET Core s
 
 Web Forms uygulamasındaki bir sayfa *. aspx* uzantılı bir dosyadır. Bir Web Forms sayfası, genellikle içindeki bir bileşenle eşleştirilebilir Blazor . Bir Blazor bileşen *. Razor* uzantılı bir dosyada yazılır. EShop projesi için beş sayfa Razor sayfasına dönüştürülür.
 
-Örneğin, Ayrıntılar görünümü Web Forms projesindeki üç dosya içerir: *details. aspx*, *details.aspx.cs*ve *details.aspx.Designer.cs*. Blazor' A dönüştürme yaparken, arka plan kodu ve biçimlendirme *details. Razor*içinde birleştirilir. Razor derlemesi ( *. Designer.cs* dosyaları için eşdeğer) *obj* dizininde depolanır ve varsayılan olarak **Çözüm Gezgini**görüntülenebilir. Web Forms sayfası aşağıdaki biçimlendirmeden oluşur:
+Örneğin, Ayrıntılar görünümü Web Forms projesindeki üç dosya içerir: *details. aspx*, *details.aspx.cs* ve *details.aspx.Designer.cs*. Blazor' A dönüştürme yaparken, arka plan kodu ve biçimlendirme *details. Razor* içinde birleştirilir. Razor derlemesi ( *. Designer.cs* dosyaları için eşdeğer) *obj* dizininde depolanır ve varsayılan olarak **Çözüm Gezgini** görüntülenebilir. Web Forms sayfası aşağıdaki biçimlendirmeden oluşur:
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
@@ -558,11 +559,11 @@ Blazor' De, eşdeğer biçimlendirme bir *Create. Razor* dosyasında verilmişti
 </EditForm>
 ```
 
-`EditForm`Bağlam doğrulama desteğini içerir ve girişin etrafında sarmalanabilir. Veri ek açıklamaları, doğrulama eklemenin yaygın bir yoludur. Bu tür doğrulama desteği bileşen aracılığıyla eklenebilir `DataAnnotationsValidator` . Bu mekanizma hakkında daha fazla bilgi için bkz. [ASP.NET Core Blazor Forms ve Validation](/aspnet/core/blazor/forms-validation).
+`EditForm`Bağlam doğrulama desteğini içerir ve bir giriş etrafına sarılanabilir. Veri ek açıklamaları, doğrulama eklemenin yaygın bir yoludur. Bu tür doğrulama desteği bileşen aracılığıyla eklenebilir `DataAnnotationsValidator` . Bu mekanizma hakkında daha fazla bilgi için bkz. [ASP.NET Core Blazor Forms ve Validation](/aspnet/core/blazor/forms-validation).
 
 ## <a name="migrate-configuration"></a>Yapılandırmayı geçir
 
-Web Forms projesinde, yapılandırma verileri genellikle *web.config* dosyasında depolanır. Yapılandırma verilerine ile erişilir `ConfigurationManager` . Hizmetler genellikle nesneleri ayrıştırmak için gereklidir. .NET Framework 4.7.2 ile, ile yapılandırma için bileşim eklenmiştir `ConfigurationBuilders` . Bu oluşturucular, geliştiricilerin gerekli değerleri almak için çalışma zamanında oluşturulan yapılandırma için çeşitli kaynaklar eklemesine izin verilir.
+Web Forms projesinde, yapılandırma verileri genellikle *web.config* dosyasında depolanır. Yapılandırma verilerine ile erişilir `ConfigurationManager` . Hizmetler genellikle nesneleri ayrıştırmak için gereklidir. .NET Framework 4.7.2 ile, ile yapılandırmaya bir bileşim eklenmiştir `ConfigurationBuilders` . Bu oluşturucular, geliştiricilerin gerekli değerleri almak için çalışma zamanında oluşturulan yapılandırma için çeşitli kaynaklar eklemesine izin verilir.
 
 ASP.NET Core, uygulamanız ve dağıtımınız tarafından kullanılan yapılandırma kaynağını veya kaynaklarını tanımlamanızı sağlayan esnek bir yapılandırma sistemi sunmuştur. `ConfigurationBuilder`Web Forms uygulamanızda kullandığınız altyapı, ASP.NET Core yapılandırma sisteminde kullanılan kavramlardan sonra modellenmiştir.
 
@@ -583,7 +584,7 @@ Aşağıdaki kod parçacığında Web Forms eShop projesinin yapılandırma değ
 </configuration>
 ```
 
-Veritabanı bağlantı dizeleri gibi, *web.config*içinde depolanacak gizli dizileri yaygındır. Gizli dizileri, kaynak denetimi gibi güvenli olmayan konumlarda kalıcı olarak kalıcı hale getirilir. BlazorASP.NET Core ile, ÖNCEKI XML tabanlı yapılandırma AŞAĞıDAKI JSON ile değiştirilmiştir:
+Veritabanı bağlantı dizeleri gibi, *web.config* içinde depolanacak gizli dizileri yaygındır. Gizli dizileri, kaynak denetimi gibi güvenli olmayan konumlarda kalıcı olarak kalıcı hale getirilir. BlazorASP.NET Core ile, ÖNCEKI XML tabanlı yapılandırma AŞAĞıDAKI JSON ile değiştirilmiştir:
 
 ```json
 {
@@ -616,7 +617,7 @@ Varsayılan olarak, ortam değişkenleri, JSON dosyaları (*appsettings.js* ve *
 
 ## <a name="migrate-data-access"></a>Veri erişimini geçirme
 
-Veri erişimi, tüm uygulamaların önemli bir yönüdür. EShop projesi, katalog bilgilerini bir veritabanında depolar ve Entity Framework (EF) 6 ile verileri alır. .NET Core 3,0 ' de EF 6 desteklendiğinden, proje onu kullanmaya devam edebilir.
+Veri erişimi, tüm uygulamaların önemli bir yönüdür. EShop projesi, katalog bilgilerini bir veritabanında depolar ve Entity Framework (EF) 6 ile verileri alır. .NET 5,0 ' de EF 6 desteklendiğinden, proje onu kullanmaya devam edebilir.
 
 Aşağıdaki EF ile ilgili değişiklikler eShop için gereklidir:
 
