@@ -2,12 +2,12 @@
 title: DotNet-Trace Tanılama aracı-.NET CLı
 description: .NET EventPipe kullanarak, yerel profil oluşturucu olmadan çalışan bir işlemin .NET izlemelerini toplamak için DotNet-Trace CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829316"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549338"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>DotNet-izleme performansı Analizi yardımcı programı
 
@@ -32,7 +32,7 @@ ms.locfileid: "94829316"
   | İşletim Sistemi  | Platform |
   | --- | -------- |
   | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [ARM](https://aka.ms/dotnet-trace/win-arm) \| [ARM-x64](https://aka.ms/dotnet-trace/win-arm64) |
-  | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
+  | Mac OS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \| [ARM](https://aka.ms/dotnet-trace/linux-arm) \| [arm64](https://aka.ms/dotnet-trace/linux-arm64) \| [MUSL-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \| [MUSL-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Özeti
@@ -115,7 +115,13 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--profile <profile-name>`**
 
-  Yaygın izleme senaryolarına izin veren önceden tanımlanmış adlandırılmış bir dizi sağlayıcı yapılandırması succinctly.
+  Yaygın izleme senaryolarına izin veren önceden tanımlanmış adlandırılmış bir dizi sağlayıcı yapılandırması succinctly. Aşağıdaki profiller mevcuttur:
+
+ | Profil | Açıklama |
+ |---------|-------------|
+ |`cpu-sampling`|CPU kullanımını ve genel .NET çalışma zamanı bilgilerini izlemek için faydalıdır. Profil veya sağlayıcı belirtilmemişse bu varsayılan seçenektir.|
+ |`gc-verbose`|GC koleksiyonlarını izler ve nesne ayırmalarını örnekler.|
+ |`gc-collect`|GC koleksiyonlarını yalnızca çok düşük ek yüklerle izler.|
 
 - **`--providers <list-of-comma-separated-providers>`**
 

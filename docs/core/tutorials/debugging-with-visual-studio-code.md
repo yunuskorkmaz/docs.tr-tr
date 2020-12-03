@@ -2,18 +2,18 @@
 title: Visual Studio Code kullanarak bir .NET konsol uygulamasında hata ayıklama
 description: Visual Studio Code kullanarak bir .NET konsol uygulamasında hata ayıklamayı öğrenin.
 ms.date: 05/26/2020
-ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 7215ed4a93b31ebac313c04708734667148c4e02
+ms.sourcegitcommit: 30fef5b0ed76e334377d28fa8e80159b29353e10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916235"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96556115"
 ---
 # <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET konsol uygulamasında hata ayıklama
 
 Bu öğreticide, .NET uygulamalarıyla çalışmak üzere Visual Studio Code sağlanan hata ayıklama araçları tanıtılmaktadır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Bu öğretici, [Visual Studio Code kullanarak bir .NET konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
@@ -47,15 +47,7 @@ Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **H
 
 1. *.vscode/launch.json* dosyasını açın.
 
-1. `console`Ayarını olarak değiştirin `integratedTerminal` .
-
-   Kimden:
-
-   ```json
-   "console": "internalConsole",
-   ```
-
-   Hedef:
+1. `console`Ayarını `internalConsole` olarak değiştirin `integratedTerminal` :
 
    ```json
    "console": "integratedTerminal",
@@ -173,7 +165,7 @@ Visual Studio Code Ayrıca, bir program aracılığıyla satır içine girerek v
 
 1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 
-   Visual Studio Code, `Console.WriteLine` ad istemi için öğesini yürütür ve sonraki yürütme satırını vurgular. Sonraki satır, `Console.ReadLine` içindir `name` . **Değişkenler** penceresi değiştirilmez ve **Terminal** sekmesi "adınız nedir?" olarak gösterilir. isteme.
+   Visual Studio Code, `Console.WriteLine` ad istemi için öğesini yürütür ve sonraki yürütme satırını vurgular. Sonraki satır, `Console.ReadLine` içindir `name` . **Değişkenler** penceresi değiştirilmez ve **Terminal** sekmesi "adınız nedir?" olarak gösterilir. ekran görüntüsü.
 
 1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 

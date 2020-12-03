@@ -4,12 +4,12 @@ description: Hangi Windows sürümlerini .NET yükleyebileceğinizi öğrenin.
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 786814549724948fa69b18a05cee966e0940aaf4
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715127"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549351"
 ---
 # <a name="install-net-on-windows"></a>Windows 'a .NET yükler
 
@@ -32,22 +32,26 @@ Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve desteklenen Wi
 
 Windows 10 sürümleri hizmet son tarihleri sürüme göre bölündü. Aşağıdaki tabloda yalnızca **Home**, **Pro**, **Pro eğitim** ve **iş istasyonları için Pro** sürümleri göz önünde bulundurululur. Belirli Ayrıntılar için [Windows yaşam döngüsü olgu sayfasını](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) kontrol edin.
 
-- ✔️, Windows veya .NET Core sürümünün hala desteklendiğini gösterir.
-- Bir ❌ Windows veya .NET Core sürümünün bu Windows sürümünde desteklenmediğini belirtir.
-- Hem bir Windows sürümü hem de bir .NET Core sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
+> [!TIP]
+> Bir `+` sembol en düşük sürümü temsil eder.
 
-| İşletim Sistemi                      | .NET Core 2.1 | .NET Core 3,1 | .NET 5 |
-|-----------------------------|---------------|---------------|----------------|
-| ✔️ Windows 10, sürüm 2004 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ✔️ Windows 10, sürüm 1909 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ✔️ Windows 10, sürüm 1903 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ✔️ Windows 10, sürüm 1809 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ❌ Windows 10, sürüm 1803 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ❌ Windows 10, sürüm 1709 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ❌ Windows 10, sürüm 1703 | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 |
-| ❌ Windows 10, sürüm 1607 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ❌ Windows 10, sürüm 1511 | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 |
-| ❌ Windows 10, sürüm 1507 | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 |
+| Operating System            | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
+|-----------------------------|---------------|---------------|--------|
+| Windows 10, sürüm 2004    | ✔️           | ✔️            | ✔️    |
+| Windows 10, sürüm 1909    | ✔️           | ✔️            | ✔️    |
+| Windows 10, sürüm 1903    | ✔️           | ✔️            | ✔️    |
+| Windows 10, sürüm 1809    | ✔️           | ✔️            | ✔️    |
+| Windows 10, sürüm 1803    | ✔️           | ✔️            | ✔️    |
+| Windows 10, sürüm 1709    | ✔️           | ✔️            | ✔️    |
+| Windows 10, sürüm 1607    | ✔️           | ✔️            | ✔️    |
+| Windows 8.1                 | ✔️           | ✔️            | ✔️    |
+| Windows 7 SP1 [ESU][esu]    | ✔️           | ✔️            | ✔️    |
+| Windows 10, sürüm 1607    | ✔️           | ✔️            | ✔️    |
+| Windows 10, sürüm 1607    | ✔️           | ✔️            | ✔️    |
+| Windows Server 2012 R2      | ✔️           | ✔️            | ✔️    |
+| Windows Server Core 2012 R2 | ✔️           | ✔️            | ✔️    |
+| Nano sunucu, sürüm 1809 +  | ✔️           | ✔️            | ✔️    |
+| Nano sunucu, sürüm 1803   | ✔️           | ✔️            | ❌    |
 
 ## <a name="unsupported-releases"></a>Desteklenmeyen yayınlar
 
@@ -84,7 +88,7 @@ SDK, .NET uygulamaları ve kitaplıkları derlemek ve yayımlamak için kullanı
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
 
-# <a name="net-50"></a>[.NET 5,0](#tab/net50)
+# <a name="net-50"></a>[.NET 5.0](#tab/net50)
 
 Aşağıdaki Windows sürümleri .NET 5,0 ile desteklenir:
 
@@ -101,7 +105,7 @@ Aşağıdaki Windows sürümleri .NET 5,0 ile desteklenir:
 
 .NET 5,0 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net 5,0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md).
 
-# <a name="net-core-31"></a>[.NET Core 3,1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 Aşağıdaki Windows sürümleri .NET Core 3,1 ile desteklenir:
 
@@ -111,7 +115,7 @@ Aşağıdaki Windows sürümleri .NET Core 3,1 ile desteklenir:
 | İşletim Sistemi                            | Sürüm                        | Mimariler   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows İstemcisi                | 7 SP1 +, 8,1                    | x64, x86        |
-| Windows 10 Istemcisi             | Sürüm 1609 +                  | x64, x86        |
+| Windows 10 Istemcisi             | Sürüm 1607 +                  | x64, x86        |
 | Windows Server                | 2012 R2 +                       | x64, x86        |
 | Nano Sunucu                   | Sürüm 1803 +                  | x64, ARM32      |
 
@@ -119,7 +123,7 @@ Aşağıdaki Windows sürümleri .NET Core 3,1 ile desteklenir:
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
-*.NET Core 3,0 şu anda destek dışı. Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
+*.NET Core 3,0 şu anda ❌ destek dışı. Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
 Aşağıdaki Windows sürümleri .NET Core 3,0 ile desteklenir:
 
@@ -137,7 +141,7 @@ Aşağıdaki Windows sürümleri .NET Core 3,0 ile desteklenir:
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
-*.NET Core 2,2 Şu anda destek dışı. Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
+*.NET Core 2,2 Şu anda ❌ destek dışı. Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
 Aşağıdaki Windows sürümleri .NET Core 2,2 ile desteklenir:
 
@@ -177,11 +181,11 @@ Aşağıdaki Windows sürümleri .NET Core 2,1 ile desteklenir:
 
 Aşağıdaki Windows sürümlerine .NET SDK veya çalışma zamanı yüklüyorsanız ek bağımlılıklar gereklidir:
 
-- ❌ Windows 7 SP1
-- ❌ Windows Vista SP 2
-- ✔️ Windows 8.1
-- ✔️ Windows Server 2008 R2
-- ✔️ Windows Server 2012 R2
+- Windows 7 SP1 [ESU][esu]
+- Windows Vista SP 2
+- Windows 8.1
+- Windows Server 2008 R2
+- Windows Server 2012 R2
 
 Aşağıdakileri yükleyerek:
 
@@ -260,15 +264,25 @@ Visual Studio Code, Visual Studio gibi otomatikleştirilmiş bir .NET Core yükl
 01. [.NET Core SDK indirin ve yükleyin](https://dotnet.microsoft.com/download/dotnet-core).
 01. [Visual Studio Code marketi 'Nden C# uzantısını yükler](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
+## <a name="windows-installer"></a>Windows Installer
+
+.NET için [karşıdan yükleme sayfası](https://dotnet.microsoft.com/download/dotnet-core) Windows ınstaller yürütülebilir dosyaları sağlar.
+
+.NET< yüklemek için MSI dosyalarını kullandığınızda, ve parametrelerini ayarlayarak yükleme yolunu özelleştirebilirsiniz `DOTNETHOME_X64` `DOTNETHOME_X86` :
+
+```console
+dotnet-sdk-3.1.301-win-x64.exe DOTNETHOME_X64="F:\dotnet\x64" DOTNETHOME_X86="F:\dotnet\x86"
+```
+
 ## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
 
 .NET için Windows yükleyicilerine alternatif olarak SDK veya çalışma zamanını indirip el ile yükleyebilirsiniz. El ile yüklemeyi, genellikle sürekli tümleştirme testinin bir parçası olarak gerçekleştirilir. Bir geliştirici veya Kullanıcı için genellikle bir [Yükleyici](https://dotnet.microsoft.com/download/dotnet-core)kullanmak daha iyidir.
 
 Hem .NET SDK hem de .NET çalışma zamanı indirildikten sonra el ile yüklenebilir. .NET SDK 'yı yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez. İlk olarak, aşağıdaki sitelerden birinden SDK veya çalışma zamanı için ikili bir sürüm indirin:
 
-- ✔️ [.net 5,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [.NET 5,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 - [Tüm .NET Core İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core)
 
 Örneğin, .NET ' i ayıklamak için bir dizin oluşturun `%USERPROFILE%\dotnet` . Ardından, indirilen ZIP dosyasını bu dizine ayıklayın.
@@ -301,3 +315,5 @@ Bir Docker kapsayıcısında .NET kullanımı hakkında daha fazla bilgi için b
 - [Öğretici: Merhaba Dünya öğreticisi](../tutorials/with-visual-studio.md).
 - [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
 - [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.
+
+[esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
