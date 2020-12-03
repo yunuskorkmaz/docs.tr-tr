@@ -138,7 +138,7 @@ items:
           - name: Yenilikler
             href: ../core/dotnet-five.md
           - name: Yeni değişiklikler
-            href: ../core/compatibility/5.0.md
+            href: ../core/compatibility/5.0.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
       - name: .NET Core 3.1
         items:
           - name: Yenilikler
@@ -367,6 +367,8 @@ items:
             href: ../core/additional-tools/index.md
           - name: .NET kaldırma aracı
             href: ../core/additional-tools/uninstall-tool.md
+          - name: Otomatik olarak imzalanan sertifikalar oluşturma
+            href: ../core/additional-tools/self-signed-certificates-guide.md
           - name: WCF web hizmeti başvurusu sağlayıcısı
             href: ../core/additional-tools/wcf-web-service-reference-guide.md
           - name: WCF hizmeti yardımcı programı
@@ -385,9 +387,12 @@ items:
           - name: Yönetilen hata ayıklayıcıları
             href: ../core/diagnostics/managed-debuggers.md
           - name: Dökümler
-            href: ../core/diagnostics/dumps.md
-          - name: Linux dökümlerinin hatasını ayıklama
-            href: ../core/diagnostics/debug-linux-dumps.md
+            items:
+              - name: Genel Bakış
+                displayName: dumps
+                href: ../core/diagnostics/dumps.md
+              - name: Linux dökümleri
+                href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
             href: ../core/diagnostics/event-counters.md
           - name: EventPipe
@@ -1603,10 +1608,36 @@ items:
                 displayName: json serialization
               - name: JSON’u seri hale getirme ve seri halden çıkarma
                 href: ../standard/serialization/system-text-json-how-to.md
-              - name: Özel dönüştürücü yazma
-                href: ../standard/serialization/system-text-json-converters-how-to.md
+              - name: Denetim serileştirme davranışı
+                items:
+                  - name: JsonSerializerOptions nesne örneği oluşturma
+                    href: ../standard/serialization/system-text-json-configure-options.md
+                  - name: Büyük/küçük harf duyarlı eşlemeyi etkinleştirme
+                    href: ../standard/serialization/system-text-json-character-casing.md
+                  - name: Özellik adlarını ve değerlerini özelleştirme
+                    href: ../standard/serialization/system-text-json-customize-properties.md
+                  - name: Özellikleri yoksayma
+                    href: ../standard/serialization/system-text-json-ignore-properties.md
+                  - name: Geçersiz JSON’a izin verme
+                    href: ../standard/serialization/system-text-json-invalid-json.md
+                  - name: Sap taşması JSON’ı
+                    href: ../standard/serialization/system-text-json-handle-overflow.md
+                  - name: Başvuruları koruma
+                    href: ../standard/serialization/system-text-json-preserve-references.md
+                  - name: Sabit türler ve genel olmayan erişimciler
+                    href: ../standard/serialization/system-text-json-immutability.md
+                  - name: Polimorfik serileştirme
+                    href: ../standard/serialization/system-text-json-polymorphism.md
               - name: Newtonsoft.Json’dan geçiş yapma
                 href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+              - name: Gelişmiş
+                items:
+                  - name: Karakter kodlamasını özelleştirme
+                    href: ../standard/serialization/system-text-json-character-encoding.md
+                  - name: Özel serileştiriciler ve seri durumdan çıkarıcılar
+                    href: ../standard/serialization/write-custom-serializer-deserializer.md
+                  - name: Özel dönüştürücüler
+                    href: ../standard/serialization/system-text-json-converters-how-to.md
           - name: İkili serileştirme
             items:
               - name: Genel Bakış
@@ -2249,7 +2280,7 @@ items:
           - name: Windows Uyumluluk Paketi’ni kullanma
             href: ../core/porting/windows-compat-pack.md
           - name: Windows Forms projelerini bağlama
-            href: ../core/porting/winforms.md
+            href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
           - name: WPF projelerini bağlama
             href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
           - name: C++/CLI projelerini taşıma
