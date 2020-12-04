@@ -1,21 +1,21 @@
 ---
-title: Mac için Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
-description: .NET Core sınıf kitaplığı için bir birim test projesi oluşturun. .NET Core sınıf kitaplığının birim testleriyle düzgün çalıştığını doğrulayın.
-ms.date: 06/08/2020
-ms.openlocfilehash: 3adcddc96abf77012f89a28c1cf60ea57ae506a2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+title: Mac için Visual Studio kullanarak .NET sınıf kitaplığı test etme
+description: .NET sınıf kitaplığı için bir birim test projesi oluşturun. .NET sınıf kitaplığı 'nın birim testleriyle düzgün çalıştığını doğrulayın.
+ms.date: 11/18/2020
+ms.openlocfilehash: 02d5aa74258ec15c5447b23246a3c7e9c61a6760
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180536"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599532"
 ---
-# <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
+# <a name="test-a-net-class-library-using-visual-studio"></a>Visual Studio kullanarak .NET sınıf kitaplığı test etme
 
 Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otomatikleştirilmesi gösterilmektedir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Mac için Visual Studio kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio-mac.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
+- Bu öğretici, [Mac için Visual Studio kullanarak bir .NET sınıf kitaplığı oluşturma](library-with-visual-studio-mac.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
 
 ## <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
@@ -23,15 +23,17 @@ Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sa
 
 1. Mac için Visual Studio başlatın.
 
-1. `ClassLibraryProjects` [Mac için Visual Studio kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio-mac.md)bölümünde oluşturduğunuz çözümü açın.
+1. `ClassLibraryProjects` [Mac için Visual Studio kullanarak .NET sınıf kitaplığı oluşturma](library-with-visual-studio-mac.md)bölümünde oluşturduğunuz çözümü açın.
 
-1. **Çözüm** panelinde, çözüme <kbd>CTRL</kbd>-tıklayın `ClassLibraryProjects` ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
+1. **Çözüm** panelinde, çözüme <kbd>CTRL</kbd>-tıklayın `ClassLibraryProjects` ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
 
-1. **Yeni proje** iletişim kutusunda, **Web ve konsol** düğümünden **testler** ' i seçin. **MSTest projesini** ve ardından Ileri ' **yi**seçin.
+1. **Yeni proje** iletişim kutusunda, **Web ve konsol** düğümünden **testler** ' i seçin. **MSTest projesini** ve ardından Ileri ' **yi** seçin.
 
    :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-project.png" alt-text="Visual Studio Mac yeni proje iletişim kutusu test projesi oluşturma":::
 
-1. **.NET Core 3,1**' u seçin. "StringLibraryTest" adlı yeni projeyi adlandırın ve **Oluştur**' u seçin.
+1. **Hedef çerçeve** olarak **.NET 5,0** ' i seçin ve **İleri ' yi** seçin.
+
+1. "StringLibraryTest" adlı yeni projeyi adlandırın ve **Oluştur**' u seçin.
 
    :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="Proje adı sağlayan Visual Studio Mac yeni proje iletişim kutusu":::
 
@@ -65,7 +67,7 @@ Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sa
 
 Test projesinin sınıfla çalışması için `StringLibrary` projeye bir başvuru ekleyin `StringLibrary` .
 
-1. **Çözüm** panelinde, **stringlibrarytest**altındaki **Bağımlılıklar** ' a <kbd>CTRL tuşuna</kbd>tıklayın. Bağlam menüsünden **Başvuru Ekle** ' yi seçin.
+1. **Çözüm** panelinde, **stringlibrarytest** altındaki **Bağımlılıklar** ' a <kbd>CTRL tuşuna</kbd>tıklayın. Bağlam menüsünden **Başvuru Ekle** ' yi seçin.
 
 1. **Başvurular** Iletişim kutusunda **StringLibrary** projesini seçin. **Tamam**’ı seçin.
 
@@ -151,7 +153,7 @@ Artık, kitaplığın hata ayıklama derlemesini çalıştırırken testlerin ba
 
 Yayın derlemesini test etmek için:
 
-1. Visual Studio araç çubuğunda, derleme yapılandırmasını **Debug** iken **Release**olarak değiştirin.
+1. Visual Studio araç çubuğunda, derleme yapılandırmasını **Debug** iken **Release** olarak değiştirin.
 
    :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="Yayın derlemesi vurgulanmış Visual Studio araç çubuğu":::
 
@@ -165,13 +167,13 @@ Yayın derlemesini test etmek için:
 
 ## <a name="debug-tests"></a>Hata ayıklama testleri
 
-IDE 'niz olarak Mac için Visual Studio kullanıyorsanız, öğreticide gösterilen aynı süreci kullanabilirsiniz: birim test projenizi kullanarak kodun hatalarını ayıklamak için [Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklayın](debugging-with-visual-studio-mac.md) . *Gösterimi* uygulama projesini başlatmak yerine **stringlibrarytests** projesine <kbd>CTRL tuşunu basılı</kbd>ve bağlam menüsünde **proje hata ayıklamayı Başlat** ' ı seçin.
+IDE 'niz olarak Mac için Visual Studio kullanıyorsanız, öğreticide gösterilen aynı süreci kullanabilirsiniz: birim test projenizi kullanarak kodda hata ayıklamak için [Mac için Visual Studio kullanarak bir .NET konsol uygulamasında hata ayıklama](debugging-with-visual-studio-mac.md) . *Gösterimi* uygulama projesini başlatmak yerine **stringlibrarytests** projesine <kbd>CTRL tuşunu basılı</kbd>ve bağlam menüsünde **proje hata ayıklamayı Başlat** ' ı seçin.
 
 Visual Studio, hata ayıklayıcı ekli olarak test projesi başlatır. Yürütme, test projesine veya temeldeki kitaplık koduna eklediğiniz herhangi bir kesme noktasında durur.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-* [.NET Core ve .NET Standard birim testi](../testing/index.md)
+* [.NET 'te birim testi](../testing/index.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -188,4 +190,4 @@ Bir kitaplığı bir NuGet paketi olarak yayımlarsanız, diğerleri onu yükley
 Bir kitaplığın paket olarak dağıtılması gerekmez. Onu kullanan bir konsol uygulamasıyla paketlenmiş olabilir. Bir konsol uygulamasını yayımlamayı öğrenmek için bu serideki önceki öğreticiye bakın:
 
 > [!div class="nextstepaction"]
-> [Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio-mac.md)
+> [Mac için Visual Studio kullanarak bir .NET konsol uygulaması yayımlama](publishing-with-visual-studio-mac.md)

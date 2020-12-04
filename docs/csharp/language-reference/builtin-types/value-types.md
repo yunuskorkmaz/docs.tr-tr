@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 64c9e9eba2495531cfef8a603d53fb21c95c87a4
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92471657"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599401"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# Başvurusu)
 
@@ -31,7 +31,7 @@ Değer türü bir başvuru türünün veri üyesini içeriyorsa, bir değer tür
 > [!NOTE]
 > Kodunuzu daha az hataya açık ve daha sağlam hale getirmek için, değişmez değer türlerini tanımlayın ve kullanın. Bu makale yalnızca gösterim amacıyla kesilebilir değer türlerini kullanır.
 
-## <a name="kinds-of-value-types"></a>Değer türü türleri
+## <a name="kinds-of-value-types-and-type-constraints"></a>Değer türleri ve tür kısıtlamaları türleri
 
 Değer türü aşağıdaki iki türden biri olabilir:
 
@@ -39,6 +39,8 @@ Değer türü aşağıdaki iki türden biri olabilir:
 - bir adlandırılmış sabitler kümesi tarafından tanımlanan ve bir seçimi veya seçenek bileşimini temsil eden bir [numaralandırma türü](enum.md)
 
 [Null yapılabilir bir değer türü](nullable-value-types.md) , `T?` temel alınan değer türünün tüm değerlerini `T` ve ek bir [null](../keywords/null.md) değeri temsil eder. `null`Null atanabilir bir değer türü olmadığı takdirde, değer türünde bir değişkene atayamazsınız.
+
+Bir tür parametresinin null yapılamayan bir değer türü olduğunu belirtmek için [ `struct` kısıtlamasını](../../programming-guide/generics/constraints-on-type-parameters.md) kullanabilirsiniz. Hem yapı hem de numaralandırma türleri `struct` kısıtlamayı karşılar. C# 7,3 ' den başlayarak, bir `System.Enum` tür parametresinin bir numaralandırma türü olduğunu belirtmek için bir temel sınıf kısıtlamasında ( [enum kısıtlaması](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)olarak bilinir) kullanabilirsiniz.
 
 ## <a name="built-in-value-types"></a>Yerleşik değer türleri
 

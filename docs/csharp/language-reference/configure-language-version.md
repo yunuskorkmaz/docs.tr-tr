@@ -3,12 +3,12 @@ title: C# dil sürümü oluşturma-C# Kılavuzu
 description: C# dil sürümünün projenize göre nasıl belirlendiği ve bu seçimin arkasındaki nedenler hakkında bilgi edinin. Varsayılanı el ile nasıl geçersiz kılacağınızı öğrenin.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b022b726861bd6ea45b188df44549dc279d34a74
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634508"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96598922"
 ---
 # <a name="c-language-versioning"></a>C# dil sürümü oluşturma
 
@@ -41,8 +41,8 @@ Derleyici, bu kurallara göre bir varsayılan değer belirler:
 
 Projeniz karşılık gelen önizleme dili sürümüne sahip bir önizleme çerçevesini hedefliyorsa, kullanılan dil sürümü önizleme dili sürümüdür. Yayınlanan bir .NET Core sürümünü hedefleyen projeleri etkilemeden, bu Önizlemedeki en son özellikleri herhangi bir ortamda kullanırsınız.
 
-> [!TIP]
-> Kullanmakta olduğunuz dil sürümünü görmek için `#error version` kodunuzda (büyük/küçük harfe duyarlı) koyun. Bu, derleyicinin, kullanılmakta olan derleyici sürümünü ve geçerli seçili dil sürümünü içeren bir ileti içeren bir tanılama, CS8304 oluşturmasını sağlar.
+> [!IMPORTANT]
+> Visual Studio 2017, `<LangVersion>latest</LangVersion>` oluşturduğu herhangi bir proje dosyasına bir giriş ekledi. Bu, eklendiğinde *C# 7,0* anlamına gelir. Ancak, Visual Studio 2019 ' e yükselttikten sonra, hedef çatıya bakılmaksızın en son yayınlanan sürüm anlamına gelir. Bu projeler artık [varsayılan davranışı geçersiz kılar](#override-a-default). Proje dosyasını düzenlemeniz ve bu düğümü kaldırmanız gerekir. Ardından, projeniz hedef çerçeve'niz için önerilen derleyici sürümünü kullanacaktır.
 
 ## <a name="override-a-default"></a>Varsayılanı geçersiz kıl
 
@@ -51,6 +51,9 @@ C# sürümünüzü açık bir şekilde belirtmeniz gerekiyorsa, bunu birkaç şe
 - [Proje dosyanızı](#edit-the-project-file)el ile düzenleyin.
 - [Bir alt dizinde birden çok proje için](#configure-multiple-projects)dil sürümünü ayarlayın.
 - [ `-langversion` Derleyici seçeneğini](compiler-options/langversion-compiler-option.md)yapılandırın.
+
+> [!TIP]
+> Kullanmakta olduğunuz dil sürümünü görmek için `#error version` kodunuzda (büyük/küçük harfe duyarlı) koyun. Bu, derleyicinin, kullanılmakta olan derleyici sürümünü ve geçerli seçili dil sürümünü içeren bir ileti içeren bir tanılama, CS8304 oluşturmasını sağlar.
 
 ### <a name="edit-the-project-file"></a>Proje dosyasını düzenleme
 

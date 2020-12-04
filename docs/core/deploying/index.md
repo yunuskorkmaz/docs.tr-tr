@@ -2,12 +2,12 @@
 title: Uygulama yayımlama
 description: .NET Core uygulaması yayımlama yolları hakkında bilgi edinin. .NET Core, platforma özgü veya platformlar arası uygulamalar yayımlayabilir. Bir uygulamayı, kendi içinde veya Framework 'e bağımlı olarak yayımlayabilirsiniz. Her mod, bir kullanıcının uygulamanızı nasıl yürüttüğünde etkiler.
 ms.date: 04/01/2020
-ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 03d53c8b5184d7276a69a1058d6b1b2f1e62dc81
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654678"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599583"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core uygulama yayımlamaya genel bakış
 
@@ -46,7 +46,7 @@ Aşağıdaki komutlar yürütülebilir bir dosya üretir:
 
 ## <a name="produce-a-cross-platform-binary"></a>Platformlar arası ikili oluşturun
 
-Uygulamanızı, bir *DLL* dosyası biçiminde [çerçeveye bağımlı](#publish-framework-dependent)olarak yayımladığınızda platformlar arası ikili dosyalar oluşturulur. *DLL* dosyası projenizden sonra adlandırılır. Örneğin, **word_reader**adlı bir uygulamanız varsa, *word_reader.dll* adlı bir dosya oluşturulur. Bu şekilde yayımlanan uygulamalar `dotnet <filename.dll>` komutla çalışır ve herhangi bir platformda çalıştırılabilir.
+Uygulamanızı, bir *DLL* dosyası biçiminde [çerçeveye bağımlı](#publish-framework-dependent)olarak yayımladığınızda platformlar arası ikili dosyalar oluşturulur. *DLL* dosyası projenizden sonra adlandırılır. Örneğin, **word_reader** adlı bir uygulamanız varsa, *word_reader.dll* adlı bir dosya oluşturulur. Bu şekilde yayımlanan uygulamalar `dotnet <filename.dll>` komutla çalışır ve herhangi bir platformda çalıştırılabilir.
 
 Platformlar arası ikili dosyalar, hedeflenen .NET Core çalışma zamanı zaten yüklü olduğu sürece herhangi bir işletim sisteminde çalıştırılabilir. Hedeflenen .NET Core çalışma zamanı yüklü değilse, uygulama geri almak üzere yapılandırılmışsa uygulama daha yeni bir çalışma zamanı kullanılarak çalıştırılabilir. Daha fazla bilgi için bkz. [çerçeveye bağımlı uygulamalar ileri alma](../versions/selection.md#framework-dependent-apps-roll-forward).
 
@@ -60,14 +60,14 @@ Aşağıdaki komut platformlar arası ikili dosya üretir:
 
 Framework 'e bağımlı olarak yayımlanan uygulamalar platformlar arası ve .NET Core çalışma zamanı dahil değildir. Uygulamanızın kullanıcısı .NET Core çalışma zamanı 'nı yüklemek için gereklidir.
 
-Bir uygulamayı Framework 'e bağımlı olarak yayımlamak, *DLL* dosyası olarak [platformlar arası bir ikili](#produce-a-cross-platform-binary) dosya ve geçerli platformunuzu hedefleyen [platforma özgü bir yürütülebilir](#produce-an-executable) dosya oluşturur. Yürütülebilir dosya olmadığından, *DLL* platformlar arası bir platformdur. Örneğin, **word_reader** ve hedef pencereleri adlı bir uygulama yayımlarsanız, *word_reader.dll*birlikte *word_reader.exe* yürütülebilir dosyası oluşturulur. Linux veya macOS hedeflenirken, *word_reader.dll*birlikte *word_reader* çalıştırılabilir dosyası oluşturulur. RID 'Ler hakkında daha fazla bilgi için bkz. [.NET Core RID kataloğu](../rid-catalog.md).
+Bir uygulamayı Framework 'e bağımlı olarak yayımlamak, *DLL* dosyası olarak [platformlar arası bir ikili](#produce-a-cross-platform-binary) dosya ve geçerli platformunuzu hedefleyen [platforma özgü bir yürütülebilir](#produce-an-executable) dosya oluşturur. Yürütülebilir dosya olmadığından, *DLL* platformlar arası bir platformdur. Örneğin, **word_reader** ve hedef pencereleri adlı bir uygulama yayımlarsanız, *word_reader.dll* birlikte *word_reader.exe* yürütülebilir dosyası oluşturulur. Linux veya macOS hedeflenirken, *word_reader.dll* birlikte *word_reader* çalıştırılabilir dosyası oluşturulur. RID 'Ler hakkında daha fazla bilgi için bkz. [.NET Core RID kataloğu](../rid-catalog.md).
 
 > [!IMPORTANT]
 > .NET Core SDK 2,1, bir uygulama altyapısına bağımlı yayımladığınızda platforma özgü yürütülebilir dosyalar oluşturmaz.
 
 Uygulamanızın platformlar arası ikili dosyası, `dotnet <filename.dll>` komutla çalıştırılabilir ve herhangi bir platformda çalıştırılabilir. Uygulama platforma özgü uygulamalar içeren bir NuGet paketi kullanıyorsa, tüm platformların bağımlılıkları uygulamayla birlikte yayımlama klasörüne kopyalanır.
 
-Parametreleri komuta geçirerek belirli bir platform için yürütülebilir bir dosya oluşturabilirsiniz `-r <RID> --self-contained false` [`dotnet publish`](../tools/dotnet-publish.md) . `-r`Parametresi atlandığında, geçerli platformunuz için yürütülebilir bir dosya oluşturulur. Hedeflenen platform için platforma özgü bağımlılıklara sahip tüm NuGet paketleri Yayımla klasörüne kopyalanır.
+Parametreleri komuta geçirerek belirli bir platform için yürütülebilir bir dosya oluşturabilirsiniz `-r <RID> --self-contained false` [`dotnet publish`](../tools/dotnet-publish.md) . `-r`Parametresi atlandığında, geçerli platformunuz için yürütülebilir bir dosya oluşturulur. Hedeflenen platform için platforma özgü bağımlılıklara sahip tüm NuGet paketleri Yayımla klasörüne kopyalanır. Bir Platto 'a özgü yürütülebilir dosya gerekmiyorsa `<UseAppHost>False</UseAppHost>` Proje dosyasında belirtebilirsiniz. Daha fazla bilgi için bkz. [.NET SDK projeleri Için MSBuild başvurusu](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="advantages"></a>Avantajlar
 
@@ -111,7 +111,7 @@ dotnet publish -r linux-x64 --self-contained false
 
 Uygulamanızı kendi içinde yayımlamak platforma özgü bir yürütülebilir dosya oluşturur. Çıkış yayımlama klasörü, .NET Core kitaplıkları ve hedef çalışma zamanı dahil olmak üzere uygulamanın tüm bileşenlerini içerir. Uygulama diğer .NET Core uygulamalarından yalıtılmıştır ve yerel olarak yüklenmiş bir paylaşılan çalışma zamanı kullanmaz. Uygulamanızın kullanıcısı .NET Core indirmek ve yüklemek için gerekli değildir.
 
-Yürütülebilir ikili dosya belirtilen hedef platform için üretildi. Örneğin, **word_reader**adlı bir uygulamanız varsa ve Windows için kendi kendine içerilen bir yürütülebilir dosyayı yayımlarsanız, bir *word_reader.exe* dosyası oluşturulur. Linux veya macOS için yayımlama, bir *word_reader* dosyası oluşturulur. Hedef platform ve mimari, `-r <RID>` komut parametresiyle belirtilir [`dotnet publish`](../tools/dotnet-publish.md) . RID 'Ler hakkında daha fazla bilgi için bkz. [.NET Core RID kataloğu](../rid-catalog.md).
+Yürütülebilir ikili dosya belirtilen hedef platform için üretildi. Örneğin, **word_reader** adlı bir uygulamanız varsa ve Windows için kendi kendine içerilen bir yürütülebilir dosyayı yayımlarsanız, bir *word_reader.exe* dosyası oluşturulur. Linux veya macOS için yayımlama, bir *word_reader* dosyası oluşturulur. Hedef platform ve mimari, `-r <RID>` komut parametresiyle belirtilir [`dotnet publish`](../tools/dotnet-publish.md) . RID 'Ler hakkında daha fazla bilgi için bkz. [.NET Core RID kataloğu](../rid-catalog.md).
 
 Uygulamanın platforma özgü bağımlılıklar içeren bir NuGet paketi gibi platforma özgü bağımlılıkları varsa, bunlar uygulamayla birlikte Yayımla klasörüne kopyalanır.
 

@@ -4,12 +4,12 @@ description: .NET Core işlevselliğini desteklemek ve genişletmek için yükle
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6aa8b62f02c4325664ffeccc0c0d4a0635a96f2d
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699007"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599225"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core ek araçlara genel bakış
 
@@ -28,6 +28,10 @@ Bu bölüm, .NET Core CLI ek olarak .NET Core işlevselliğini destekleyen ve ge
 [DotNet-gcdump](../diagnostics/dotnet-gcdump.md) , canlı .net işlemlerinin GC (çöp toplayıcısı) dökümlerini toplamanın bir yolunu sunar.
 
 [DotNet-Trace](../diagnostics/dotnet-trace.md) , bir uygulamanın yavaş çalışmasına neden olduğunu bulmanız gereken senaryolarda yardımcı olabilecek, uygulamanızdan profil oluşturma verileri toplar.
+
+## <a name="net-install-tool-for-extension-authors"></a>Uzantı yazarları için .NET yüklemesi aracı
+
+[Uzantı yazarları için .net Install aracı](https://github.com/dotnet/vscode-dotnet-runtime) , .NET Core çalışma zamanının özellikle vs Code uzantısı yazarları için alım almasına izin veren bir Visual Studio Code uzantısıdır. Bu aracın .NET dilinde yazılmış ve uzantının (örneğin, bir dil sunucusu) önyüklemesinde .NET gerektiren uzantılar için yararlanılabilir olması amaçlanmıştır. Uzantı, kullanıcıların geliştirme için .NET yüklemesi tarafından doğrudan kullanılmaya yönelik değildir.
 
 ## <a name="wcf-web-service-reference-tool"></a>WCF Web hizmeti başvuru aracı
 

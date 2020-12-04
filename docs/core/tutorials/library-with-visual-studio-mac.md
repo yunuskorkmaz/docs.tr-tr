@@ -1,19 +1,19 @@
 ---
-title: Mac için Visual Studio kullanarak .NET Standard sınıf kitaplığı oluşturma
-description: Mac için Visual Studio kullanarak .NET Standard sınıf kitaplığı oluşturmayı öğrenin.
-ms.date: 06/08/2020
-ms.openlocfilehash: a78cc68d29095e4fefcaf1d3b2158d673b8892ec
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+title: Mac için Visual Studio kullanarak bir .NET sınıf kitaplığı oluşturma
+description: Mac için Visual Studio kullanarak .NET sınıf kitaplığı oluşturmayı öğrenin.
+ms.date: 11/30/2020
+ms.openlocfilehash: 1b6b26de06d18d505fa6dde3ff9779a3dab3f1e6
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400571"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599321"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak .NET Standard kitaplığı oluşturma
+# <a name="tutorial-create-a-net-class-library-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak .NET sınıf kitaplığı oluşturma
 
-Bu öğreticide, tek bir dize işleme yöntemi içeren bir sınıf kitaplığı oluşturacaksınız. Bunu, sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../csharp/programming-guide/classes-and-structs/extension-methods.md) olarak uygulamalısınız <xref:System.String> .
+Bu öğreticide, tek bir dize işleme yöntemi içeren bir sınıf kitaplığı oluşturacaksınız.
 
-Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve yöntemleri tanımlar. .NET Standard 2,1 ' i hedefleyen bir sınıf kitaplığı, .NET Standard sürüm 2,1 ' ü destekleyen herhangi bir .NET uygulamasını hedefleyen bir uygulama tarafından kullanılabilir. Sınıf kitaplığınızı bitirdiğinizde, bir üçüncü taraf bileşen olarak veya bir veya daha fazla uygulamayla paketlenmiş bileşen olarak dağıtabilirsiniz.
+Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve yöntemleri tanımlar. Kitaplık .NET Standard 2,0 hedefliyorsa, .NET Standard 2,0 ' yi destekleyen herhangi bir .NET uygulamasıyla (.NET Framework dahil) çağrılabilir. Kitaplık .NET 5 ' i hedefliyorsa, .NET 5 ' i hedefleyen herhangi bir uygulama tarafından çağrılabilir. Bu öğreticide, .NET 5 ' in nasıl hedeflenecek gösterilmektedir.
 
 > [!NOTE]
 > Geri bildiriminiz çok değerli. Mac için Visual Studio üzerinde geliştirme ekibine geri bildirimde bulunmak için kullanabileceğiniz iki yol vardır:
@@ -21,13 +21,13 @@ Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve y�
 > - Mac için Visual Studio, **Help**  >  menüden **sorun bildir** veya hoş geldiniz ekranından **sorun** bildir ' i seçerek bir hata raporu dosyalamayı sağlayan bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://aka.ms/feedback/report?space=41) portalında izleyebilirsiniz.
 > - Öneride bulunmak için, **Help**  >  menüden **öneriler sağlama** veya hoş geldiniz ekranından [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://aka.ms/feedback/suggest?space=41)götüren **bir öneri** sağlama ' yı seçin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-* [Mac için Visual Studio sürüm 8,6 veya üstünü yükler](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). .NET Core ' u yüklemek için seçeneği belirleyin. .NET Core geliştirmesi için Xamarin 'in yüklenmesi isteğe bağlıdır. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
+* [Mac için Visual Studio sürüm 8,8 veya üstünü yükler](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). .NET Core ' u yüklemek için seçeneği belirleyin. Xamarin 'in yüklenmesi .NET geliştirme için isteğe bağlıdır. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   * [Öğretici: Mac için Visual Studio yüklemesi](/visualstudio/mac/installation).
   * [Desteklenen macOS sürümleri](../install/macos.md).
-  * [Mac için Visual Studio tarafından desteklenen .NET Core sürümleri](/visualstudio/mac/net-core-support).
+  * [Mac için Visual Studio tarafından desteklenen .NET sürümleri](/visualstudio/mac/net-core-support).
 
 ## <a name="create-a-solution-with-a-class-library-project"></a>Sınıf kitaplığı projesiyle çözüm oluşturma
 
@@ -35,21 +35,19 @@ Visual Studio çözümü bir veya daha fazla proje için kapsayıcı görevi gö
 
 1. Mac için Visual Studio başlatın.
 
-1. Başlangıç penceresinde **Yeni proje** ' yi seçin.
+1. Başlangıç penceresinde **Yeni proje**' yi seçin.
 
-1. **Çoklu platform** düğümünün altındaki **Yeni proje** iletişim kutusunda **kitaplık** ' ı seçin, sonra **.NET Standard kitaplığı** şablonunu seçin ve **İleri** ' yi seçin.
+1. **Yeni projeniz için bir şablon seçin** iletişim kutusunda **Web ve konsol**  >  **kitaplığı**  >  **sınıf kitaplığı**' nı seçin ve ardından **İleri**' yi seçin.
 
    :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Yeni proje iletişim kutusu":::
 
-1. **Yeni .NET Standard kitaplığınızı yapılandırın** iletişim kutusunda ".NET Standard 2,1" öğesini seçin ve **İleri** ' yi seçin.
+1. **Yeni sınıf kitaplığınızı yapılandırın** iletişim kutusunda, **.NET 5,0**' i seçin ve **İleri**' yi seçin.
 
-   :::image type="content" source="media/library-with-visual-studio-mac/choose-net-std-21.png" alt-text=".NET Standard 2,1 seçin":::
-
-1. "StringLibrary" projesini ve "ClassLibraryProjects" çözümünü adlandırın. **Çözüm dizini içinde bir proje dizini oluştur** ' un seçili kalsın. **Oluştur** ’u seçin.
+1. "StringLibrary" projesini ve "ClassLibraryProjects" çözümünü adlandırın. **Çözüm dizini içinde bir proje dizini oluştur** ' un seçili kalsın. **Oluştur**’u seçin.
 
    :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project-options.png" alt-text="Yeni proje iletişim kutusu seçeneklerini Mac için Visual Studio":::
 
-1. Ana menüden **Görünüm**  >  **bölmeleri**  >  **çözüm** ' ü seçin ve paneli açık tutmak için Yerleştir simgesini seçin.
+1. Ana menüden **View**  >  **çözümü** görüntüle ' yi seçin ve paneli açık tutmak için Yerleştir simgesini seçin.
 
    :::image type="content" source="media/library-with-visual-studio-mac/solution-dock-icon.png" alt-text="Çözüm paneli için yerleştirme simgesi":::
 
@@ -73,9 +71,9 @@ Visual Studio çözümü bir veya daha fazla proje için kapsayıcı görevi gö
 
 Sınıf kitaplığını kullanan bir konsol uygulaması ekleyin. Uygulama kullanıcıdan bir dize girmesini ister ve dizenin büyük harfli bir karakterle başlayıp başlamamadığını rapor eder.
 
-1. **Çözüm** panelinde, çözüme <kbd>CTRL</kbd>-tıklayın `ClassLibraryProjects` . **Web ve konsol** uygulaması şablonlarından şablonu seçerek yeni bir **konsol uygulaması** projesi ekleyin  >  **App** ve **İleri** ' yi seçin.
+1. **Çözüm** panelinde, çözüme <kbd>CTRL</kbd>-tıklayın `ClassLibraryProjects` . **Web ve konsol** uygulaması şablonlarından şablonu seçerek yeni bir **konsol uygulaması** projesi ekleyin  >  **App** ve **İleri**' yi seçin.
 
-1. **Hedef çerçeve** olarak **.NET Core 3,1** ' ı seçin ve **İleri ' yi** seçin.
+1. **Hedef çerçeve** olarak **.NET 5,0** ' i seçin ve **İleri ' yi** seçin.
 
 1. Proje **tanıtımı** adlandırın. Projeyi çözümde oluşturmak için **Oluştur** ' u seçin.
 
@@ -93,13 +91,13 @@ Sınıf kitaplığını kullanan bir konsol uygulaması ekleyin. Uygulama kullan
 
 Başlangıçta, yeni konsol uygulaması projesi sınıf kitaplığına erişemez. Sınıf kitaplığındaki yöntemleri çağırmasına izin vermek için, sınıf kitaplığı projesine bir proje başvurusu oluşturun.
 
-1. **Çözümler** panelinde **, yeni Gösterim** projesinin **Bağımlılıklar** düğümüne <kbd>CTRL tuşuna</kbd>tıklayın. Bağlam menüsünde **Başvuru Ekle** ' yi seçin.
+1. **Çözümler** panelinde **, yeni Gösterim** projesinin **Bağımlılıklar** düğümüne <kbd>CTRL tuşuna</kbd>tıklayın. Bağlam menüsünde **Başvuru Ekle**' yi seçin.
 
-1. **Başvurular** Iletişim kutusunda **StringLibrary** ' yi seçin ve **Tamam** ' ı seçin.
+1. **Başvurular** Iletişim kutusunda **StringLibrary** ' yi seçin ve **Tamam**' ı seçin.
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-1. <kbd>ctrl</kbd>' i seçerek Proje ' yi tıklatın ve bağlam menüsünden **projeyi Çalıştır** ' ı seçin.
+1. <kbd>CTRL tuşunu basılı</kbd>olarak **projeye tıklayın** ve bağlam menüsünden **projeyi Çalıştır** ' ı seçin.
 
 1. Dizeleri girerek ve <kbd>ENTER</kbd>'a basarak programı deneyin ve çıkmak için <kbd>ENTER</kbd> tuşuna basın.
 
@@ -107,13 +105,13 @@ Başlangıçta, yeni konsol uygulaması projesi sınıf kitaplığına erişemez
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-* [.NET Core CLI ile Kitaplıklar geliştirin](libraries.md)
-* [.NET Standard sürümleri ve destekledikleri platformlar](../../standard/net-standard.md).
+* [.NET CLı ile Kitaplıklar geliştirme](libraries.md)
 * [Mac için Visual Studio 2019 Sürüm Notları](/visualstudio/releasenotes/vs2019-mac-relnotes)
+* [.NET Standard sürümleri ve destekledikleri platformlar](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Bu öğreticide, bir çözüm ve kitaplık projesi oluşturdunuz ve kitaplığı kullanan bir konsol uygulaması projesi eklediniz. Sonraki öğreticide, çözüme bir birim testi projesi eklersiniz.
 
 > [!div class="nextstepaction"]
-> [Mac için Visual Studio kullanarak .NET Core ile .NET Standard kitaplığı test etme](testing-library-with-visual-studio-mac.md)
+> [Mac için Visual Studio kullanarak .NET sınıf kitaplığı test etme](testing-library-with-visual-studio-mac.md)

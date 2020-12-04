@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526605"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599108"
 ---
 # <a name="structure-types-c-reference"></a>Yapı türleri (C# Başvurusu)
 
@@ -22,9 +22,9 @@ ms.locfileid: "92526605"
 
 [!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
-Yapı türlerinde *değer semantiği*vardır. Diğer bir deyişle, yapı türünün bir değişkeni türünün bir örneğini içerir. Varsayılan olarak, değişken değerleri atamaya kopyalanır, bir yönteme bağımsız değişken geçirme ve bir yöntem sonucu döndürüyor. Yapı türü değişkeni söz konusu olduğunda, türün bir örneği kopyalanır. Daha fazla bilgi için bkz. [değer türleri](value-types.md).
+Yapı türlerinde *değer semantiği* vardır. Diğer bir deyişle, yapı türünün bir değişkeni türünün bir örneğini içerir. Varsayılan olarak, değişken değerleri atamaya kopyalanır, bir yönteme bağımsız değişken geçirme ve bir yöntem sonucu döndürüyor. Yapı türü değişkeni söz konusu olduğunda, türün bir örneği kopyalanır. Daha fazla bilgi için bkz. [değer türleri](value-types.md).
 
-Genellikle, çok az davranış sağlayan küçük veri merkezli türler tasarlamak için yapı türlerini kullanırsınız. Örneğin, .NET bir sayıyı (hem [tamsayı](integral-numeric-types.md) hem de [gerçek](floating-point-numeric-types.md)), bir [Boole değerini](bool.md), bir [Unicode karakteri](char.md), bir [zaman örneğini](xref:System.DateTime)temsil etmek için yapı türlerini kullanır. Bir türün davranışına odaklandıysanız bir [sınıf](../keywords/class.md)tanımlamayı düşünün. Sınıf türlerinde *başvuru semantiği*vardır. Diğer bir deyişle, bir sınıf türünün değişkeni, örneğin kendisi değil, türün bir örneğine bir başvuru içerir.
+Genellikle, çok az davranış sağlayan küçük veri merkezli türler tasarlamak için yapı türlerini kullanırsınız. Örneğin, .NET bir sayıyı (hem [tamsayı](integral-numeric-types.md) hem de [gerçek](floating-point-numeric-types.md)), bir [Boole değerini](bool.md), bir [Unicode karakteri](char.md), bir [zaman örneğini](xref:System.DateTime)temsil etmek için yapı türlerini kullanır. Bir türün davranışına odaklandıysanız bir [sınıf](../keywords/class.md)tanımlamayı düşünün. Sınıf türlerinde *başvuru semantiği* vardır. Diğer bir deyişle, bir sınıf türünün değişkeni, örneğin kendisi değil, türün bir örneğine bir başvuru içerir.
 
 Yapı türlerinde değer semantiklerine sahip olduğundan, *değişmez* yapı türlerini tanımlamanızı öneririz.
 
@@ -129,6 +129,10 @@ Bir yapıyı olarak bildirmek için, `ref` [`readonly`](#readonly-struct) `reado
 [!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 .NET ' te, bir `ref` struct örnekleri ve ' dir <xref:System.Span%601?displayProperty=nameWithType> <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> .
+
+## <a name="struct-constraint"></a>struct kısıtlaması
+
+Ayrıca, `struct` bir tür parametresinin null yapılamayan bir değer türü olduğunu belirtmek için [ `struct` kısıtlamadaki](../../programming-guide/generics/constraints-on-type-parameters.md) anahtar sözcüğünü kullanırsınız. Hem yapı hem de [numaralandırma](enum.md) türleri `struct` kısıtlamayı karşılar.
 
 ## <a name="conversions"></a>Dönüşümler
 

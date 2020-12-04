@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 930efdbdc6a20ea301331c1ce6fc664da43bfc5f
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: a21bdf63247dc5fec95922de017e1d3502e08565
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471856"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599440"
 ---
 # <a name="enumeration-types-c-reference"></a>Numaralandırma türleri (C# Başvurusu)
 
-*Sabit listesi türü* (veya *enum türü*), temel alınan [integral sayısal](integral-numeric-types.md) türünün adlandırılmış sabitler kümesi tarafından tanımlanan bir [değer türüdür](value-types.md) . Bir sabit listesi türü tanımlamak için `enum` anahtar sözcüğünü kullanın ve *enum üyelerinin*adlarını belirtin:
+*Sabit listesi türü* (veya *enum türü*), temel alınan [integral sayısal](integral-numeric-types.md) türünün adlandırılmış sabitler kümesi tarafından tanımlanan bir [değer türüdür](value-types.md) . Bir sabit listesi türü tanımlamak için `enum` anahtar sözcüğünü kullanın ve *enum üyelerinin* adlarını belirtin:
 
 ```csharp
 enum Season
@@ -62,7 +62,7 @@ Daha fazla bilgi ve örnek için API başvurusu sayfasının <xref:System.FlagsA
 
 <xref:System.Enum?displayProperty=nameWithType>Tür, tüm numaralandırma türlerinin soyut temel sınıfıdır. Bir numaralandırma türü ve değerleri hakkında bilgi almak için çeşitli yöntemler sağlar. Daha fazla bilgi ve örnek için bkz <xref:System.Enum?displayProperty=nameWithType> . API başvuru sayfası.
 
-C# 7,3 ' den başlayarak, bir `System.Enum` tür parametresinin bir numaralandırma türü olduğunu belirtmek için bir temel sınıf kısıtlamasında ( [enum kısıtlaması](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)olarak bilinir) kullanabilirsiniz.
+C# 7,3 ' den başlayarak, bir `System.Enum` tür parametresinin bir numaralandırma türü olduğunu belirtmek için bir temel sınıf kısıtlamasında ( [enum kısıtlaması](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)olarak bilinir) kullanabilirsiniz. Herhangi bir numaralandırma türü ayrıca `struct` , bir tür parametresinin null yapılamayan bir değer türü olduğunu belirtmek için kullanılan kısıtlamayı da karşılar.
 
 ## <a name="conversions"></a>Dönüşümler
 

@@ -1,21 +1,21 @@
 ---
-title: Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama
-description: Visual Studio Mac kullanarak bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
-ms.date: 06/08/2020
-ms.openlocfilehash: 011647a6e3e676909880befa3b770205eb9616d6
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+title: Mac için Visual Studio kullanarak bir .NET konsol uygulamasında hata ayıklama
+description: Visual Studio Mac kullanarak bir .NET konsol uygulamasında hata ayıklamayı öğrenin.
+ms.date: 11/30/2020
+ms.openlocfilehash: e35bbef5582b6eec00ee48669a0f5d028eb051fb
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957531"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599622"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak bir .NET konsol uygulamasında hata ayıklama
 
 Bu öğreticide Mac için Visual Studio bulunan hata ayıklama araçları tanıtılmaktadır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma](with-visual-studio-mac.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
+- Bu öğretici, [Mac için Visual Studio kullanarak bir .NET konsol uygulaması oluşturma](with-visual-studio-mac.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="use-debug-build-configuration"></a>Hata ayıklama derleme yapılandırmasını kullan
 
@@ -27,7 +27,7 @@ Varsayılan olarak, Mac için Visual Studio hata ayıklama derleme yapılandırm
 
 1. Mac için Visual Studio başlatın.
 
-1. [Mac için Visual Studio kullanarak .NET Core konsol uygulaması oluşturma](with-visual-studio-mac.md)bölümünde oluşturduğunuz projeyi açın.
+1. [Mac için Visual Studio kullanarak .NET konsol uygulaması oluşturma](with-visual-studio-mac.md)bölümünde oluşturduğunuz projeyi açın.
 
    Geçerli derleme yapılandırması araç çubuğunda gösterilir. Aşağıdaki araç çubuğu görüntüsünde, Visual Studio 'nun uygulamanın hata ayıklama sürümünü derlemek üzere yapılandırıldığı gösterilmektedir:
 
@@ -37,13 +37,13 @@ Varsayılan olarak, Mac için Visual Studio hata ayıklama derleme yapılandırm
 
 Kesme *noktası,* kesme noktası olan satır yürütülmeden önce uygulamanın yürütülmesini geçici olarak keser.
 
-1. Ad, tarih ve saati gösteren satırda bir kesme noktası ayarlayın. Bunu yapmak için imleci kod satırına yerleştirin ve <kbd>⌘</kbd> <kbd>\\</kbd> (<kbd>komut</kbd>) tuşuna basın + <kbd>\\</kbd> . Bir kesme noktası ayarlamak için başka bir yol **Run**  >  da menüden**geçiş kesme noktası** Çalıştır ' i seçmektir.
+1. Ad, tarih ve saati gösteren satırda bir kesme noktası ayarlayın. Bunu yapmak için imleci kod satırına yerleştirin ve <kbd>⌘</kbd> <kbd>\\</kbd> (<kbd>komut</kbd>) tuşuna basın + <kbd>\\</kbd> . Bir kesme noktası ayarlamak için başka bir yol **Run**  >  da menüden **geçiş kesme noktası** Çalıştır ' i seçmektir.
 
    Visual Studio, kesme noktasının ayarlandığı çizgiyi gösterir ve sol kenar boşluğunda kırmızı bir nokta görüntüler.
 
    :::image type="content" source="media/debugging-with-visual-studio-mac/set-breakpoint-in-editor.png" alt-text="Kesme noktası ayarlanmış Visual Studio program penceresi":::
 
-1. <kbd>⌘</kbd><kbd>↵</kbd> <kbd>command</kbd> + Programı hata ayıklama modunda başlatmak için ⌘ ↵ (komut<kbd>ENTER</kbd>) tuşuna basın. Hata ayıklamayı başlatmak için başka bir yol **Run**  >  da, menüden**hata ayıklamayı Başlat** Çalıştır ' i seçmektir.
+1. <kbd>⌘</kbd><kbd>↵</kbd> <kbd>command</kbd> + Programı hata ayıklama modunda başlatmak için ⌘ ↵ (komut<kbd>ENTER</kbd>) tuşuna basın. Hata ayıklamayı başlatmak için başka bir yol **Run**  >  da, menüden **hata ayıklamayı Başlat** Çalıştır ' i seçmektir.
 
 1. Program bir ad isteminde bulunduğunda Terminal penceresine bir dize girin ve ardından <kbd>ENTER</kbd>tuşuna basın.
 
@@ -55,7 +55,7 @@ Kesme *noktası,* kesme noktası olan satır yürütülmeden önce uygulamanın 
 
 **Komut** penceresi, hata ayıklamanıza çalıştığınız uygulamayla etkileşime girebilmenizi sağlar. Programınızı nasıl etkilediğini görmek için değişkenlerin değerini etkileşimli olarak değiştirebilirsiniz.
 
-1. **Hemen** penceresi görünür değilse, **View**  >  **hata ayıklama Pad**'i  >  **hemen**görüntüle ' yi seçerek bunu görüntüleyin.
+1. **Hemen** penceresi görünür değilse, **View**  >  **hata ayıklama Pad**'i  >  **hemen** görüntüle ' yi seçerek bunu görüntüleyin.
 
 1. `name = "Gracie"` **Hemen** penceresine girip <kbd>ENTER</kbd>tuşuna basın.
 
@@ -83,11 +83,11 @@ Kesme *noktası,* kesme noktası olan satır yürütülmeden önce uygulamanın 
 
 ## <a name="set-a-conditional-breakpoint"></a>Koşullu kesme noktası ayarlama
 
-Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey girmezse ne olur? Bunu, *koşullu kesme noktası*adında yararlı bir hata ayıklama özelliği ile test edebilirsiniz.
+Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey girmezse ne olur? Bunu, *koşullu kesme noktası* adında yararlı bir hata ayıklama özelliği ile test edebilirsiniz.
 
 1. <kbd>CTRL tuşuna</kbd>basıp kesme noktasını temsil eden kırmızı noktaya tıklayın. Bağlam menüsünde, **kesme noktasını Düzenle**' yi seçin.
 
-1. **Kesme noktasını Düzenle** iletişim kutusunda aşağıdaki alana aşağıdaki kodu girin **ve aşağıdaki koşul doğrudur**ve **Uygula**' yı seçin.
+1. **Kesme noktasını Düzenle** iletişim kutusunda aşağıdaki alana aşağıdaki kodu girin **ve aşağıdaki koşul doğrudur** ve **Uygula**' yı seçin.
 
    ```csharp
    String.IsNullOrEmpty(name)
@@ -97,7 +97,7 @@ Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey
 
    Kesme noktası her isabet edildiğinde, hata ayıklayıcı `String.IsNullOrEmpty(name)` yöntemini çağırır ve yalnızca Yöntem çağrısı döndürürse bu satırı keser `true` .
 
-   Koşullu bir ifade yerine, bir deyim belirtilen sayıda yürütülmeden önce program yürütmeyi kesen bir *isabet sayısı*belirtebilirsiniz.
+   Koşullu bir ifade yerine, bir deyim belirtilen sayıda yürütülmeden önce program yürütmeyi kesen bir *isabet sayısı* belirtebilirsiniz.
 
 1. Hata ayıklamayı başlatmak için <kbd>⌘</kbd><kbd>↵</kbd> (<kbd>komut</kbd> + <kbd>ENTER</kbd>) tuşuna basın.
 
@@ -129,7 +129,7 @@ Visual Studio Ayrıca, bir program aracılığıyla satıra göre çizgi ve yür
 
    Visual Studio kesme noktası ile satır üzerinde durmaktadır.
 
-1. Bir satıra ilerlemek için <kbd>⇧</kbd><kbd>⌘</kbd><kbd>ı</kbd> (<kbd>SHIFT</kbd> + <kbd>Command</kbd> + <kbd>ı</kbd>) veya Select Step **Run**with '  >  **a** basın.
+1. Bir satıra ilerlemek için <kbd>⇧</kbd><kbd>⌘</kbd><kbd>ı</kbd> (<kbd>SHIFT</kbd> + <kbd>Command</kbd> + <kbd>ı</kbd>) veya Select Step **Run** with '  >  **a** basın.
 
    Visual Studio, sonraki yürütme satırının yanında bir ok görüntüler.
 
@@ -167,7 +167,7 @@ Uygulamanızın hata ayıklama sürümünü sınadıktan sonra yayın sürümün
 
 Konsol uygulamasının yayın sürümünü derlemek ve test etmek için aşağıdaki adımları uygulayın:
 
-1. Araç çubuğundaki derleme yapılandırmasını **Hata Ayıkla** 'dan **Release**olarak değiştirin.
+1. Araç çubuğundaki derleme yapılandırmasını **Hata Ayıkla** 'dan **Release** olarak değiştirin.
 
    :::image type="content" source="media/debugging-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="hata ayıklama vurgulanmış olarak varsayılan Visual Studio araç çubuğu":::
 
@@ -178,4 +178,4 @@ Konsol uygulamasının yayın sürümünü derlemek ve test etmek için aşağı
 Bu öğreticide, Visual Studio hata ayıklama araçları 'nı kullandınız. Sonraki öğreticide, uygulamanın dağıtılabilir bir sürümünü yayımlarsınız.
 
 > [!div class="nextstepaction"]
-> [Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio-mac.md)
+> [Mac için Visual Studio kullanarak bir .NET konsol uygulaması yayımlama](publishing-with-visual-studio-mac.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4bd57d32120f51ffd1ff09c9817edbafa28a3f19
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2d663ac8c1c15d61959a62c40d9a3b0993484032
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96440008"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599082"
 ---
 # <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>İle eşleşme büyük/küçük harf duyarsız Özellik adı etkinleştirme System.Text.Json
 
@@ -26,7 +26,7 @@ Bu makalede, ad alanıyla büyük/küçük harfe duyarsız Özellik adı eşleş
 Varsayılan olarak, seri durumdan çıkarma JSON ile hedef nesne özellikleri arasındaki büyük/küçük harfe duyarlı Özellik adı eşleşmelerini arar. Bu davranışı değiştirmek için şu <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> şekilde ayarlayın `true` :
 
 > [!NOTE]
-> [Web Varsayılanları](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) , büyük/küçük harfe duyarlıdır.
+> [Web varsayılanı](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) , büyük/küçük harfe duyarlıdır.
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/DeserializeCaseInsensitive.cs" id="Deserialize":::
 
@@ -45,12 +45,12 @@ Aşağıda, ortası Case özellik adlarına sahip JSON örneği verilmiştir. Bu
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [System.Text.Json bakýþ](system-text-json-overview.md)
-* [JsonSerializerOptions örneğini oluşturma](system-text-json-configure-options.md)
+* [JsonSerializerOptions nesne örneği oluşturma](system-text-json-configure-options.md)
 * [Özellik adlarını ve değerlerini özelleştirme](system-text-json-customize-properties.md)
-* [Özellikleri yoksay](system-text-json-ignore-properties.md)
-* [Geçersiz JSON 'a izin ver](system-text-json-invalid-json.md)
-* [Tutamaç taşması JSON](system-text-json-handle-overflow.md)
+* [Özellikleri yoksayma](system-text-json-ignore-properties.md)
+* [Geçersiz JSON’a izin verme](system-text-json-invalid-json.md)
+* [Sap taşması JSON’ı](system-text-json-handle-overflow.md)
 * [Döngüsel başvuruları koru](system-text-json-preserve-references.md)
-* [Değişmez türler ve genel olmayan erişimciler](system-text-json-immutability.md)
+* [Sabit türler ve genel olmayan erişimciler](system-text-json-immutability.md)
 * [Polimorfik serileştirme](system-text-json-polymorphism.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)

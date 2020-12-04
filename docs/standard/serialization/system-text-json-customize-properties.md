@@ -10,19 +10,19 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 28f7d03ae9f794f6e5ea34a95082a059451daec6
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: c754d41071e886bc1efcc3a30e249bf9e554ab5b
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96440021"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599596"
 ---
 # <a name="how-to-customize-property-names-and-values-with-no-locsystemtextjson"></a>İle özellik adlarını ve değerleri özelleştirme System.Text.Json
 
 Varsayılan olarak, özellik adları ve sözlük anahtarları, büyük/küçük harf gibi JSON çıktısında değiştirilmez. Sabit listesi değerleri sayı olarak temsil edilir. Bu makalede şunları yapmayı öğreneceksiniz:
 
 > [!NOTE]
-> [Web Varsayılanları](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) , ortası durumdur.
+> [Web varsayılanı](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) , ortası durumdur.
 
 * [Bireysel özellik adlarını özelleştirme](#customize-individual-property-names)
 * [Tüm özellik adlarını ortası durumuna Dönüştür](#use-camel-case-for-all-json-property-names)
@@ -167,12 +167,12 @@ Aşağıdaki örnekte gösterildiği gibi, sabit listesi dize adları da seri du
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [System.Text.Json bakýþ](system-text-json-overview.md)
-* [JsonSerializerOptions örneğini oluşturma](system-text-json-configure-options.md)
-* [Büyük/küçük harfe duyarsız eşleştirmeyi etkinleştir](system-text-json-character-casing.md)
-* [Özellikleri yoksay](system-text-json-ignore-properties.md)
-* [Geçersiz JSON 'a izin ver](system-text-json-invalid-json.md)
-* [Tutamaç taşması JSON](system-text-json-handle-overflow.md)
+* [JsonSerializerOptions nesne örneği oluşturma](system-text-json-configure-options.md)
+* [Büyük/küçük harf duyarlı eşlemeyi etkinleştirme](system-text-json-character-casing.md)
+* [Özellikleri yoksayma](system-text-json-ignore-properties.md)
+* [Geçersiz JSON’a izin verme](system-text-json-invalid-json.md)
+* [Sap taşması JSON’ı](system-text-json-handle-overflow.md)
 * [Döngüsel başvuruları koru](system-text-json-preserve-references.md)
-* [Değişmez türler ve genel olmayan erişimciler](system-text-json-immutability.md)
+* [Sabit türler ve genel olmayan erişimciler](system-text-json-immutability.md)
 * [Polimorfik serileştirme](system-text-json-polymorphism.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)

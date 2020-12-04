@@ -4,12 +4,12 @@ description: Azure HDInsight 'ın Jupyıter not defterlerine Apache Spark için 
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: ff6b3a64c01fb9148d3abe3d04579233d11a4f73
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688286"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599661"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark kümelerinde Jupyıter not defterlerine Apache Spark .NET 'i yükler
 
@@ -70,7 +70,7 @@ Azure portal, önceki adımda oluşturduğunuz **HDInsight Spark kümesini** se�
    |Özellik  |Açıklama  |
    |---------|---------|
    | Betik türü | Özel |
-   | Name | *Apache Spark etkileşimli not defteri deneyimi için .NET 'i yükler* |
+   | Ad | *Apache Spark etkileşimli not defteri deneyimi için .NET 'i yükler* |
    | Bash betiği URI 'SI | Karşıya yüklediğiniz URI `install-interactive-notebook.sh` . |
    | Düğüm türleri| Baş ve çalışan |
    | Parametreler | Apache Spark sürümü için .NET. [Apache Spark sürümleri için .net](https://github.com/dotnet/spark/releases)'i kontrol edebilirsiniz. Örneğin, Mini-mini DotNet sürüm 1.0.0 yüklemek istiyorsanız, bu durumda olur `1.0.0` .
@@ -121,11 +121,11 @@ Konaklar **hn0** ve **Hn1** Için Spark2 Server Için [Livy](#stop-the-livy-serv
 
    İstendiğinde, devam etmek için **Tümünü YENIDEN Başlat** ' ı seçin ve ardından **Tamam** ' a tıklayın.
 
-## <a name="submit-jobs-through-a-jupyter-notebook"></a>İşleri Jupyter Not defteri aracılığıyla gönderme
+## <a name="submit-jobs-through-a-jupyter-notebook"></a>Jupyter Notebook aracılığıyla iş gönderme
 
 Önceki adımları tamamladıktan sonra, şimdi de jupi Not defterleri aracılığıyla Apache Spark işlerinizi .NET için gönderebilirsiniz.
 
-1. Apache Spark Not defteri için yeni bir .NET oluşturun. Azure portal HDI kümenizdeki bir Jupyter Not defteri başlatın.
+1. Apache Spark Not defteri için yeni bir .NET oluşturun. Azure portal HDI kümenizdeki bir Jupyter Notebook başlatın.
 
    ![Jupyter Notebook Başlat](./media/hdinsight-notebook-installation/launch-notebook.png)
 
