@@ -4,12 +4,12 @@ description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # b
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438049"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549403"
 ---
 # <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
 
@@ -90,6 +90,9 @@ F # Scripting, [Visual Studio](../../get-started/get-started-visual-studio.md), 
 
 ## <a name="referencing-packages-in-f-interactive"></a>F# Etkileşimli gelen paketlere başvurma
 
+> [!NOTE]
+> Paket yönetimi sistemi genişletilebilir, [diğer uzantılar hakkında](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)daha fazla bilgi edinin.
+
 F# Etkileşimli, `#r "nuget:"` söz dizimi ve isteğe bağlı bir sürümle NuGet paketlerine başvurmayı destekler:
 
 ```fsharp
@@ -133,6 +136,8 @@ Bir komut dosyasında istediğiniz sayıda paket başvurusu belirtebilirsiniz.
 
 > [!NOTE]
 > Şu anda çerçeve başvuruları kullanan betikler için bir sınırlama vardır (ör. `Microsoft.NET.Sdk.Web` veya  `Microsoft.NET.Sdk.WindowsDesktop` ). Sasırasıyla, Giraffe, WinForms gibi paketler kullanılamaz. Bu sorun [#9417](https://github.com/dotnet/fsharp/issues/9417)izleniyor.
+
+[Paket Yönetimi genişletilebilirliği ve diğer uzantılar](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)hakkında daha fazla bilgi edinin.
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>F # Interactive ile disk üzerindeki derlemelere başvurma
 
