@@ -6,16 +6,16 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: quickstart
 ms.prod: dotnet
-ms.openlocfilehash: 09e0c46a08e08a2021a9dffe214d3d62d6fb8ec5
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 2919db55304590f5557aa0cbda50cc4bd6640443
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96589981"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739536"
 ---
 # <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a>Hızlı başlangıç-.NET kullanarak Raspberry PI Sense HAT oluşturma
 
-Raspberry PI [Sense hat](https://www.raspberrypi.org/products/sense-hat/) , <span class="docon docon-navigate-external x-hidden-focus"></span> Raspberry Pi için bir eklenti panosuyla bulunur. Algılama HAT, 5 × 8 RGB LED matrisini, beş düğmeli bir oyun çubuğunu ve aşağıdaki algılayıcıları içerir:
+Raspberry PI [Sense hat](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> (T **H** **bir a** vware a ile **VIT**), Raspberry PI için bir eklenti panosuyla bulunur. Algılama HAT, 5 × 8 RGB LED matrisini, beş düğmeli bir oyun çubuğunu ve aşağıdaki algılayıcıları içerir:
 
 - Jiroskop
 - İvme Ölçer
@@ -52,7 +52,7 @@ Algılayıcı verileri görüntülenirken konsol çıkışını gözlemleyin. LE
 
 ## <a name="get-the-source-code"></a>Kaynak kodunu alma
 
-Bu hızlı başlangıç kaynağı [GitHub ' da kullanılabilir](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart). <span class="docon docon-navigate-external x-hidden-focus"></span>
+Bu hızlı başlangıç kaynağı [GitHub ' da kullanılabilir](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart) <span class="docon docon-navigate-external x-hidden-focus"></span> .
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

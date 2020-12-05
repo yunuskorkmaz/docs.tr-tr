@@ -2,12 +2,12 @@
 title: docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 description: Docker-Compose. yıml ile çok kapsayıcılı bir uygulama için mikro hizmet birleşimini belirtme.
 ms.date: 01/30/2020
-ms.openlocfilehash: c375d328ab9064315682fab91cb5e49e9a384b56
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 81303be621da54b7336228585e86d1120a6b7598
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682672"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739795"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 
@@ -39,7 +39,7 @@ services:
   catalog-api:
     image: eshop/catalog-api
     environment:
-      - ConnectionString=Server=sqldata;Initial Catalog=CatalogData;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Initial Catalog=CatalogData;User Id=sa;Password=[PLACEHOLDER]
     expose:
       - "80"
     ports:
@@ -53,7 +53,7 @@ services:
   ordering-api:
     image: eshop/ordering-api
     environment:
-      - ConnectionString=Server=sqldata;Database=Services.OrderingDb;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Database=Services.OrderingDb;User Id=sa;Password=[PLACEHOLDER]
     ports:
       - "5102:80"
     #extra hosts can be used for standalone SQL Server or services at the dev PC
@@ -73,7 +73,7 @@ services:
 
   sqldata:
     environment:
-      - SA_PASSWORD=your@password
+      - SA_PASSWORD=[PLACEHOLDER]
       - ACCEPT_EULA=Y
     ports:
       - "5434:1433"
@@ -101,7 +101,7 @@ Tek bir kapsayıcıya odaklanarak katalog-API kapsayıcısı-mikro hizmetin basi
   catalog-api:
     image: eshop/catalog-api
     environment:
-      - ConnectionString=Server=sqldata;Initial Catalog=CatalogData;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Initial Catalog=CatalogData;User Id=sa;Password=[PLACEHOLDER]
     expose:
       - "80"
     ports:
@@ -308,7 +308,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
+      - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=[PLACEHOLDER]}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
@@ -327,7 +327,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_MARKETING_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.MarketingDb;User Id=sa;Password=Pass@word}
+      - ConnectionString=${ESHOP_AZURE_MARKETING_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.MarketingDb;User Id=sa;Password=[PLACEHOLDER]}
       - MongoConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosqldata}
       - MongoDatabase=MarketingDb
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
@@ -369,7 +369,7 @@ services:
       - "5100:80"
   sqldata:
     environment:
-      - SA_PASSWORD=Pass@word
+      - SA_PASSWORD=[PLACEHOLDER]
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
@@ -469,10 +469,10 @@ Daha hızlı başlangıç için, çalışma zamanı görüntüleri Ayrıca aspne
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **ASP.NET Core ile Iyileştirilmiş Docker görüntüleri oluşturma**  
+- **ASP.NET Core ile Iyileştirilmiş Docker görüntüleri oluşturma**
   <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
-- **.NET Core Uygulamaları için Docker Görüntülerinizi Derleme**  
+- **.NET Core uygulamaları için Docker görüntüleri oluşturma**
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]

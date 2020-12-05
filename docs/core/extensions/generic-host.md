@@ -3,13 +3,13 @@ title: .NET genel ana bilgisayar
 author: IEvangelist
 description: Uygulama başlatma ve ömür yönetiminden sorumlu .NET genel ana bilgisayarı hakkında bilgi edinin.
 ms.author: dapine
-ms.date: 09/18/2020
-ms.openlocfilehash: d00a8aeae8b4de2cbcb091992fa739c47da6dafc
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.date: 12/04/2020
+ms.openlocfilehash: ddb71b70d15121b7f59899fba38b2bf861219878
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916176"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740099"
 ---
 # <a name="net-generic-host"></a>.NET genel ana bilgisayar
 
@@ -18,7 +18,7 @@ ms.locfileid: "94916176"
 *Ana bilgisayar* , bir uygulamanın kaynaklarını kapsülleyen bir nesnedir, örneğin:
 
 - Bağımlılık ekleme (dı)
-- Günlüğe Kaydetme
+- Günlüğe kaydetme
 - Yapılandırma
 - `IHostedService` uygulamalarını
 
@@ -74,7 +74,7 @@ public class Program
   - Olay günlüğü (yalnızca Windows üzerinde çalışırken)
 - Ortam olduğunda kapsam doğrulaması ve [bağımlılık doğrulaması](xref:Microsoft.Extensions.DependencyInjection.ServiceProviderOptions.ValidateOnBuild) etkinleştirilir `Development` .
 
-`ConfigureServices`Yöntemi, örneğe hizmet ekleme özelliğini kullanıma sunar <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> . Daha sonra, bu hizmetler bağımlılık ekleme işleminden bir şekilde kullanılabilirlik yapılabilir.
+`ConfigureServices`Yöntemi, örneğe hizmet ekleme özelliğini kullanıma sunar <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection?displayProperty=nameWithType> . Daha sonra, bu hizmetler bağımlılık ekleme yoluyla kullanılabilir hale getirilebilir.
 
 ## <a name="framework-provided-services"></a>Framework tarafından sunulan hizmetler
 
@@ -128,7 +128,7 @@ Konak yapılandırması eklemek için üzerinde öğesini <xref:Microsoft.Extens
 
 Aşağıdaki örnek ana bilgisayar yapılandırması oluşturur:
 
-:::code language="csharp" source="snippets/configuration/console-host/Program.cs" highlight="13-19":::
+:::code language="csharp" source="snippets/configuration/console-host/Program.cs" highlight="19-25":::
 
 ## <a name="app-configuration"></a>Uygulama yapılandırması
 

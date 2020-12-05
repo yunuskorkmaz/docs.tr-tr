@@ -3,13 +3,13 @@ title: .NET 'teki yapılandırma sağlayıcıları
 description: .NET uygulamalarını yapılandırmak için yapılandırma sağlayıcısı API 'sinin nasıl kullanıldığını öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/16/2020
-ms.openlocfilehash: d5333e8e52feb7d28e2149a988dc7ce53a926a50
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.date: 12/04/2020
+ms.openlocfilehash: 301e23170428f2291ccaa1bd882007cadfbce3b1
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874748"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740013"
 ---
 # <a name="configuration-providers-in-net"></a>.NET 'teki yapılandırma sağlayıcıları
 
@@ -40,7 +40,7 @@ Aşırı yüklemeler şunları belirtebilir:
 
 Aşağıdaki kodu inceleyin:
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="1-33,37-38" highlight="17-23":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="1-39,43-44" highlight="23-29":::
 
 Yukarıdaki kod:
 
@@ -65,11 +65,11 @@ Kayıt türleri hakkında bilgi için bkz. [C# 9 ' da kayıt türleri](../../csh
 
 Aşağıdaki kod yapılandırma kökünü oluşturur, bir bölümü `TransientFaultHandlingOptions` kayıt türüne bağlar ve bağlı değerleri konsol penceresine yazdırır:
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="25-32":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="31-38":::
 
 Uygulama aşağıdaki örnek çıktıyı Yazar:
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="34-36":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="40-42":::
 
 ### <a name="xml-configuration-provider"></a>XML yapılandırma sağlayıcısı
 
@@ -77,7 +77,7 @@ Uygulama aşağıdaki örnek çıktıyı Yazar:
 
 Aşağıdaki kod XML yapılandırma sağlayıcısını kullanarak XML dosyalarının yapılandırmasını gösterir.
 
-:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="1-28,46,52-53" highlight="17-28":::
+:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="1-34,52,58-59" highlight="23-34":::
 
 Yukarıdaki kod:
 
@@ -100,11 +100,11 @@ Aynı öğe adını kullanan yinelenen öğeler, `name` özniteliği öğeleri a
 
 Aşağıdaki kod, önceki yapılandırma dosyasını okur ve anahtarları ve değerleri görüntüler:
 
-:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="30-45":::
+:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="36-51":::
 
 Uygulama aşağıdaki örnek çıktıyı Yazar:
 
-:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="47-51":::
+:::code language="csharp" source="snippets/configuration/console-xml/Program.cs" range="53-57":::
 
 Öznitelikler, değerler sağlamak için kullanılabilir:
 
@@ -129,7 +129,7 @@ Uygulama aşağıdaki örnek çıktıyı Yazar:
 
 Aşağıdaki kod, tüm yapılandırma sağlayıcılarını temizler ve `IniConfigurationProvider` kaynak olarak ıkı INI dosyası ile ekler:
 
-:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="1-31,38-39" highlight="18-24":::
+:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="1-37,44-45" highlight="24-30":::
 
 Çeşitli yapılandırma ayarlarına sahip bir örnek *appsettings.ini* dosyası aşağıda verilmiştir:
 
@@ -137,15 +137,15 @@ Aşağıdaki kod, tüm yapılandırma sağlayıcılarını temizler ve `IniConfi
 
 Aşağıdaki kod, önceki yapılandırma ayarlarını konsol penceresine yazarak görüntüler:
 
-:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="26-30":::
+:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="32-36":::
 
 Uygulama aşağıdaki örnek çıktıyı Yazar:
 
-:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="32-37":::
+:::code language="csharp" source="snippets/configuration/console-ini/Program.cs" range="38-43":::
 
 ## <a name="environment-variable-configuration-provider"></a>Ortam değişkeni yapılandırma sağlayıcısı
 
-Varsayılan yapılandırmayı kullanarak, <xref:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider> yapılandırma *appsettings.json*, appSettings sonrasında anahtar-değer çiftlerinde bulunan yapılandırmayı yükler *.* `Environment` *. JSON*ve gizli yönetici. Bu nedenle, ortamdan okunan anahtar değerleri, *appsettings.json*, appSettings öğesinden okunan değerleri geçersiz kılar *.* `Environment` *. JSON*ve gizli yönetici.
+Varsayılan yapılandırmayı kullanarak, <xref:Microsoft.Extensions.Configuration.EnvironmentVariables.EnvironmentVariablesConfigurationProvider> yapılandırma *appsettings.json*, appSettings sonrasında anahtar-değer çiftlerinde bulunan yapılandırmayı yükler *.* `Environment` *. JSON* ve gizli yönetici. Bu nedenle, ortamdan okunan anahtar değerleri, *appsettings.json*, appSettings öğesinden okunan değerleri geçersiz kılar *.* `Environment` *. JSON* ve gizli yönetici.
 
 `:`Ayırıcı, tüm platformlarda ortam değişkeni hiyerarşik anahtarlarla birlikte çalışmaz. Çift alt çizgi ( `__` ) otomatik olarak bir ile değiştirilmiştir `:` ve tüm platformlar tarafından desteklenir. Örneğin, `:` ayırıcı [Bash](https://linuxhint.com/bash-environment-variables)tarafından desteklenmez, ancak `__` .
 
@@ -184,7 +184,7 @@ Yukarıdaki komutların ve appSettings *appsettings.js* geçersiz kılmasını t
 
 <xref:Microsoft.Extensions.Configuration.EnvironmentVariablesExtensions.AddEnvironmentVariables%2A>Ortam değişkenlerinin önekini belirtmek için bir dizeyle çağırın:
 
-:::code language="csharp" source="snippets/configuration/console-env/Program.cs" highlight="15-16":::
+:::code language="csharp" source="snippets/configuration/console-env/Program.cs" highlight="21-22":::
 
 Yukarıdaki kodda:
 
@@ -307,7 +307,7 @@ Aşırı yüklemeler belirtmeye izin ver:
 
 Aşağıdaki kod, yapılandırma sistemine bir bellek koleksiyonu ekler:
 
-:::code language="csharp" source="snippets/configuration/console-memory/Program.cs" highlight="16-23":::
+:::code language="csharp" source="snippets/configuration/console-memory/Program.cs" highlight="22-29":::
 
 Yukarıdaki kodda, <xref:Microsoft.Extensions.Configuration.MemoryConfigurationBuilderExtensions.AddInMemoryCollection(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})?displayProperty=nameWithType> varsayılan yapılandırma sağlayıcılarından sonra bellek sağlayıcıyı ekler. Yapılandırma sağlayıcılarını sipariş eden bir örnek için bkz. [XML yapılandırma sağlayıcısı](#xml-configuration-provider).
 

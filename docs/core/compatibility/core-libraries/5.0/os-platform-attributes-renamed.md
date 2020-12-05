@@ -2,12 +2,12 @@
 title: 'Son değişiklik: OSPlatform öznitelikleri yeniden adlandırıldı veya kaldırıldı'
 description: Bir önizleme sürümünde sunulan işletim sistemi platformu özniteliklerinin kaldırılmış veya yeniden adlandırılmakta olduğu çekirdek .NET kitaplıklarında .NET 5,0 kırılımı değişikliği hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 80eba790a607a01e0588c067cdc6105d5f3b20a7
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: be2ddd4909bef70f531ca48246f091923d6435ec
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437872"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739496"
 ---
 # <a name="osplatform-attributes-renamed-or-removed"></a>OSPlatform öznitelikleri yeniden adlandırıldı veya kaldırıldı
 
@@ -34,7 +34,7 @@ ms.locfileid: "96437872"
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
-.NET 5,0 Preview 8 ' de, <xref:System.Runtime.Versioning> API 'ler için desteklenen platformları belirtmek üzere ' deki öznitelikler. Öznitelikler, platforma özgü API 'Ler bu API 'Leri desteklemeyen platformlarda tüketilmişse, derleme uyarıları oluşturmak için [Platform uyumluluk Çözümleyicisi](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) tarafından kullanılır.
+.NET 5,0 Preview 8 ' de, <xref:System.Runtime.Versioning> API 'ler için desteklenen platformları belirtmek üzere ' deki öznitelikler. Öznitelikler, platforma özgü API 'Ler bu API 'Leri desteklemeyen platformlarda kullanılırken derleme uyarıları oluşturmak için [Platform uyumluluk Çözümleyicisi](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) tarafından kullanılır.
 
 .NET 5,0 RC1 için platform uyumluluk Çözümleyicisi ' ne platform dışlaması için ek bir özellik eklenmiştir. Özelliği, API 'Lerin işletim sistemi platformlarında tamamen desteklenmeyen şekilde işaretlenmesini sağlar. Bu özellik, daha uygun adlar kullanılması da dahil olmak üzere özniteliklerde değişiklikler istendi. `ObsoletedInOSPlatformAttribute`Artık gerekli olmadığından kaldırıldı.
 

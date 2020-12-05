@@ -3,13 +3,13 @@ title: .NET 'te günlüğe kaydetme sağlayıcıları
 description: Günlüğe kaydetme sağlayıcısı API 'sinin .NET uygulamalarında nasıl kullanıldığını öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/25/2020
-ms.openlocfilehash: 4d4658b7ca892d101af32f5cf8ac48a4beabfb92
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 12/04/2020
+ms.openlocfilehash: fdec9018e58c6038b5589c01e775bbb5f10b6b10
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804756"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740092"
 ---
 # <a name="logging-providers-in-net"></a>.NET 'te günlüğe kaydetme sağlayıcıları
 
@@ -20,11 +20,11 @@ Varsayılan .NET Worker uygulama şablonları:
 - [Genel Konağı](generic-host.md)kullanın.
 - <xref:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder%2A>Aşağıdaki günlük sağlayıcılarını ekleyen çağırın:
   - [Konsol](#console)
-  - [Hata ayıklama](#debug)
+  - [H](#debug)
   - [EventSource](#event-source)
   - [EventLog](#windows-eventlog): yalnızca Windows
 
-:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="12":::
+:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="18":::
 
 Yukarıdaki kod, `Program` .NET çalışan uygulama şablonlarıyla oluşturulan sınıfı gösterir. Sonraki birkaç bölüm, genel ana bilgisayarı kullanan .NET Worker uygulama şablonlarına göre örnekler sağlar.
 
@@ -68,7 +68,7 @@ Yukarıdaki kod, dı kapsayıcısının bir örneğini oluşturmak için ilk kez
 Microsoft uzantıları, çalışma zamanı kitaplıklarının bir parçası olarak aşağıdaki günlük sağlayıcılarını içerir:
 
 - [Konsol](#console)
-- [Hata ayıklama](#debug)
+- [H](#debug)
 - [EventSource](#event-source)
 - [EventLog](#windows-eventlog)
 
@@ -102,7 +102,7 @@ Bkz. yükleme yönergeleri için [DotNet-Trace](../diagnostics/dotnet-trace.md) 
 
 ### <a name="windows-eventlog"></a>Windows olay günlüğü
 
-`EventLog`Sağlayıcı, Windows olay günlüğüne günlük çıktısı gönderir. Diğer sağlayıcılardan farklı olarak, `EventLog` sağlayıcı varsayılan sağlayıcı ***not*** olmayan ayarları uygulamaz. `EventLog`Günlük ayarları belirtilmemişse, varsayılan olarak `LogLevel.Warning` .
+`EventLog`Sağlayıcı, Windows olay günlüğüne günlük çıktısı gönderir. Diğer sağlayıcılardan farklı olarak, `EventLog` sağlayıcı, varsayılan sağlayıcı **not** olmayan ayarları içermez. `EventLog`Günlük ayarları belirtilmemişse, varsayılan olarak `LogLevel.Warning` .
 
 Olayları daha düşük günlüğe kaydetmek için <xref:Microsoft.Extensions.Logging.LogLevel.Warning?displayProperty=nameWithType> , günlük düzeyini açık olarak ayarlayın. Aşağıdaki örnek, olay günlüğü varsayılan günlük düzeyini şu şekilde ayarlar <xref:Microsoft.Extensions.Logging.LogLevel.Information?displayProperty=nameWithType> :
 
@@ -127,8 +127,14 @@ Aşağıdaki kod, ' `SourceName` nin varsayılan değerinden öğesini olarak de
 ```csharp
 public class Program
 {
-    public static Task Main(string[] args) =>
-        CreateHostBuilder(args).Build().RunAsync();
+    static async Task Main(string[] args)
+    {
+        using IHost host = CreateHostBuilder(args).Build();
+
+        // Application code should start here.
+
+        await host.RunAsync();
+    }
 
     static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
@@ -149,8 +155,14 @@ Sağlayıcı ayarlarını yapılandırmak için <xref:Microsoft.Extensions.Loggi
 ```csharp
 class Program
 {
-    static Task Main(string[] args) =>
-        CreateHostBuilder(args).Build().RunAsync();
+    static async Task Main(string[] args)
+    {
+        using IHost host = CreateHostBuilder(args).Build();
+
+        // Application code should start here.
+
+        await host.RunAsync();
+    }
 
     static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
@@ -160,7 +172,7 @@ class Program
                 services.Configure<AzureFileLoggerOptions>(options =>
                 {
                     options.FileName = "azure-diagnostics-";
-                    options.FileSizeLimit = 50 * 1024;
+                    options.FileSizeLimit = 50 _ 1024;
                     options.RetainedFileCountLimit = 5;
                 })
                 .Configure<AzureBlobLoggerOptions>(options =>
@@ -190,8 +202,8 @@ Azure günlük akışı, günlük etkinliklerini gerçek zamanlı olarak görün
 Azure günlük akışını yapılandırmak için:
 
 - Uygulamanın Portal sayfasından **App Service günlükleri** sayfasına gidin.
-- **Uygulama günlüğünü (FileSystem)** **Açık**olarak ayarlayın.
-- Günlük **düzeyini**seçin. Bu ayar yalnızca Azure günlük akışı için geçerlidir.
+- **Uygulama günlüğünü (FileSystem)** **Açık** olarak ayarlayın.
+- Günlük **düzeyini** seçin. Bu ayar yalnızca Azure günlük akışı için geçerlidir.
 
 Günlükleri görüntülemek için **günlük akışı** sayfasına gidin. Günlüğe kaydedilen iletiler arabirimiyle günlüğe kaydedilir `ILogger` .
 

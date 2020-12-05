@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/16/2020
 ms.topic: overview
-ms.openlocfilehash: f5dc7c99b209b16dfb8595f9d50dcb1428bbde84
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 5955e46c2f5acb6776ada4e3fd6a65507d3faa1f
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607998"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740126"
 ---
 # <a name="configuration-in-net"></a>.NET 'teki yapılandırma
 
@@ -29,13 +29,13 @@ ms.locfileid: "91607998"
 
 Varsayılan olarak [DotNet New](../tools/dotnet-new.md) veya Visual Studio kullanılarak oluşturulan yeni .NET konsol uygulamaları yapılandırma *yeteneklerini sunmaz.* Yeni bir .NET konsol uygulamasına yapılandırma eklemek için, öğesine [bir paket başvurusu ekleyin](../tools/dotnet-add-package.md) `Microsoft.Extensions.Hosting` . *Program.cs* dosyasını aşağıdaki kodla eşleşecek şekilde değiştirin:
 
-:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="12":::
+:::code language="csharp" source="snippets/configuration/console/Program.cs" highlight="18":::
 
 <xref:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder(System.String[])?displayProperty=nameWithType>Yöntemi, uygulama için aşağıdaki sırayla varsayılan yapılandırma sağlar:
 
 1. [Chainedconfigurationprovider](xref:Microsoft.Extensions.Configuration.ChainedConfigurationSource) : var olan bir `IConfiguration` kaynak olarak ekler.
 1. [JSON yapılandırma sağlayıcısını](configuration-providers.md#file-configuration-provider)kullanarak *appsettings.js* .
-1. *appSettings.* `Environment` [JSON yapılandırma sağlayıcısı](configuration-providers.md#file-configuration-provider)kullanılarak *. JSON* . Örneğin, *appSettings*. ***Üretim***. *JSON* ve *appSettings*. ***Geliştirme***. *JSON*.
+1. *appSettings.* `Environment` [JSON yapılandırma sağlayıcısı](configuration-providers.md#file-configuration-provider)kullanılarak *. JSON* . Örneğin, *appSettings*. ***Üretim * * _._json* ve *appSettings*. * * * geliştirme** _._json *.
 1. Uygulama ortamda çalıştırıldığında uygulama gizli dizileri `Development` .
 1. Ortam [değişkenleri yapılandırma sağlayıcısını](configuration-providers.md#environment-variable-configuration-provider)kullanarak ortam değişkenleri.
 1. Komut satırı [yapılandırma sağlayıcısını](configuration-providers.md#command-line-configuration-provider)kullanan komut satırı bağımsız değişkenleri.

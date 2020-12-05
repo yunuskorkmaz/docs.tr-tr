@@ -3,13 +3,13 @@ title: .NET 'teki seçenek kalıbı
 author: IEvangelist
 description: .NET uygulamalarında ilgili ayarların gruplarını temsil etmek için seçenekler deseninin nasıl kullanılacağını öğrenin.
 ms.author: dapine
-ms.date: 09/30/2020
-ms.openlocfilehash: 5c59a14223ec7c35456e1ea84d3f976e236f45dd
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.date: 12/04/2020
+ms.openlocfilehash: 76d99337c51920115a38c400daca1649d0e74a99
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614752"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740020"
 ---
 # <a name="options-pattern-in-net"></a>.NET 'teki seçenek kalıbı
 
@@ -33,14 +33,14 @@ Aşağıdaki sınıfı oluşturun `TransientFaultHandlingOptions` :
 Seçenekler sınıfı:
 
 * Ortak parametresiz bir oluşturucuya sahip olmayan Özet olmamalıdır
-* Bağlanacak genel okuma-yazma özelliklerini içerir (alanlar bağlı ***değildir*** )
+* Bağlanacak genel okuma-yazma özelliklerini içerir (alanlar * değil _ bağlı **değildir**)
 
 Aşağıdaki kod:
 
-* Sınıfı bölümüne bağlamak için [Configurationciltçi. Bind](xref:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind%2A) ' i çağırır `TransientFaultHandlingOptions` `"TransientFaultHandlingOptions"` .
+_ Sınıfı bölümüne bağlamak için [Configurationciltçi. Bind](xref:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind%2A) öğesini çağırır `TransientFaultHandlingOptions` `"TransientFaultHandlingOptions"` .
 * Yapılandırma verilerini görüntüler.
 
-:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="25-32":::
+:::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="31-38":::
 
 Yukarıdaki kodda, uygulama başladıktan sonra JSON yapılandırma dosyasında yapılan değişiklikler okundu.
 
@@ -74,13 +74,13 @@ services.Configure<TransientFaultHandlingOptions>(
 
 :::code language="csharp" source="snippets/configuration/console-json/ExampleService.cs":::
 
-Yukarıdaki kodda, uygulama başladıktan sonra JSON yapılandırma dosyasında yapılan ***değişiklikler okunamaz.*** Uygulama başladıktan sonra değişiklikleri okumak için [ıoptionssnapshot](#use-ioptionssnapshot-to-read-updated-data)kullanın.
+Yukarıdaki kodda, uygulama başladıktan sonra JSON yapılandırma dosyasında yapılan değişiklikler ***değil** _ okuma ' dir. Uygulama başladıktan sonra değişiklikleri okumak için [ıoptionssnapshot](#use-ioptionssnapshot-to-read-updated-data)kullanın.
 
 ## <a name="options-interfaces"></a>Seçenekler arabirimleri
 
 <xref:Microsoft.Extensions.Options.IOptions%601>:
 
-- Şunları ***desteklemez:***
+- Şunları _*_desteklemez:_*_
   - Uygulama başladıktan sonra yapılandırma verilerinin okunması.
   - [Adlandırılmış seçenekler](#named-options-support-using-iconfigurenamedoptions)
 - [Tek](dependency-injection.md#singleton) bir olarak kaydedilir ve herhangi bir [hizmet ömrüne](dependency-injection.md#service-lifetimes)eklenebilir.
@@ -151,7 +151,7 @@ Adlandırılmış seçenekler:
 - Aynı özelliklere birden çok yapılandırma bölümü bağlandığı zaman faydalıdır.
 - Büyük/küçük harfe duyarlıdır.
 
-Dosyasında aşağıdaki *appsettings.js* göz önünde bulundurun:
+* Dosyasında aşağıdaki _appsettings.jsgöz önünde bulundurun:
 
 ```json
 {

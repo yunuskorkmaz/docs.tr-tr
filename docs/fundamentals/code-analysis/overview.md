@@ -8,16 +8,19 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: ca3a9cb914befbc8e0982070b818b27ee3143793
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "96589857"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739980"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET kaynak kodu çözümlemesine genel bakış
 
-.NET derleyici platformu (Roslyn) çözümleyicileri, C# veya Visual Basic kodunuzda kod kalitesi ve kod stili sorunları olup olmadığını inceler. .NET 5.0’dan itibaren bu çözümleyiciler, .NET SDK’ya dahildir. (Daha önce, kod kalitesi Çözümleyicileri bir [NuGet paketi](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)olarak yüklediniz ve kod stili Çözümleyicileri Visual Studio ile yüklendi.)
+.NET derleyici platformu (Roslyn) çözümleyicileri, C# veya Visual Basic kodunuzda kod kalitesi ve kod stili sorunları olup olmadığını inceler. .NET 5.0’dan itibaren bu çözümleyiciler, .NET SDK’ya dahildir. .NET 5 + SDK ' ya geçmek istemiyorsanız veya bir NuGet paket tabanlı modeli tercih ediyorsanız, çözümleyiciler `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet paketinde](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)de mevcuttur. İsteğe bağlı sürüm güncelleştirmeleri için paket tabanlı bir model tercih edebilirsiniz.
+
+> [!NOTE]
+> .NET Çözümleyicileri hedef platform belirsiz. Diğer bir deyişle, projenizin belirli bir .NET platformunu hedeflemesi gerekmez. Çözümleyiciler, `net5.0` ve gibi önceki .NET sürümlerinin yanı sıra hedeflenen projeler için de çalışır `netcoreapp` `netstandard` `net472` .
 
 - [Kod kalitesi analizi ("CAxxxx" kuralları)](#code-quality-analysis)
 - [Kod stili Analizi ("ıdexxxx" kuralları)](#code-style-analysis)
