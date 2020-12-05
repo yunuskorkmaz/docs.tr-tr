@@ -6,55 +6,55 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: quickstart
 ms.prod: dotnet
-ms.openlocfilehash: 09e0c46a08e08a2021a9dffe214d3d62d6fb8ec5
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 2919db55304590f5557aa0cbda50cc4bd6640443
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96589981"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739536"
 ---
-# <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a><span data-ttu-id="bbe88-103">Hızlı başlangıç-.NET kullanarak Raspberry PI Sense HAT oluşturma</span><span class="sxs-lookup"><span data-stu-id="bbe88-103">Quickstart - Use .NET to drive a Raspberry Pi Sense HAT</span></span>
+# <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a><span data-ttu-id="5b5f8-103">Hızlı başlangıç-.NET kullanarak Raspberry PI Sense HAT oluşturma</span><span class="sxs-lookup"><span data-stu-id="5b5f8-103">Quickstart - Use .NET to drive a Raspberry Pi Sense HAT</span></span>
 
-<span data-ttu-id="bbe88-104">Raspberry PI [Sense hat](https://www.raspberrypi.org/products/sense-hat/) , <span class="docon docon-navigate-external x-hidden-focus"></span> Raspberry Pi için bir eklenti panosuyla bulunur.</span><span class="sxs-lookup"><span data-stu-id="bbe88-104">The Raspberry Pi [Sense HAT](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> is an add-on board for Raspberry Pi.</span></span> <span data-ttu-id="bbe88-105">Algılama HAT, 5 × 8 RGB LED matrisini, beş düğmeli bir oyun çubuğunu ve aşağıdaki algılayıcıları içerir:</span><span class="sxs-lookup"><span data-stu-id="bbe88-105">The Sense HAT is equipped with an 8×8 RGB LED matrix, a five-button joystick, and includes the following sensors:</span></span>
+<span data-ttu-id="5b5f8-104">Raspberry PI [Sense hat](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> (T **H** **bir a** vware a ile **VIT**), Raspberry PI için bir eklenti panosuyla bulunur.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-104">The Raspberry Pi [Sense HAT](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> (**H** ardware **A** ttached on **T** op) is an add-on board for Raspberry Pi.</span></span> <span data-ttu-id="5b5f8-105">Algılama HAT, 5 × 8 RGB LED matrisini, beş düğmeli bir oyun çubuğunu ve aşağıdaki algılayıcıları içerir:</span><span class="sxs-lookup"><span data-stu-id="5b5f8-105">The Sense HAT is equipped with an 8×8 RGB LED matrix, a five-button joystick, and includes the following sensors:</span></span>
 
-- <span data-ttu-id="bbe88-106">Jiroskop</span><span class="sxs-lookup"><span data-stu-id="bbe88-106">Gyroscope</span></span>
-- <span data-ttu-id="bbe88-107">İvme Ölçer</span><span class="sxs-lookup"><span data-stu-id="bbe88-107">Accelerometer</span></span>
-- <span data-ttu-id="bbe88-108">Manyetometre</span><span class="sxs-lookup"><span data-stu-id="bbe88-108">Magnetometer</span></span>
-- <span data-ttu-id="bbe88-109">Sıcaklık</span><span class="sxs-lookup"><span data-stu-id="bbe88-109">Temperature</span></span>
-- <span data-ttu-id="bbe88-110">Barometrik basıncı</span><span class="sxs-lookup"><span data-stu-id="bbe88-110">Barometric pressure</span></span>
-- <span data-ttu-id="bbe88-111">Nem oranı</span><span class="sxs-lookup"><span data-stu-id="bbe88-111">Humidity</span></span>
+- <span data-ttu-id="5b5f8-106">Jiroskop</span><span class="sxs-lookup"><span data-stu-id="5b5f8-106">Gyroscope</span></span>
+- <span data-ttu-id="5b5f8-107">İvme Ölçer</span><span class="sxs-lookup"><span data-stu-id="5b5f8-107">Accelerometer</span></span>
+- <span data-ttu-id="5b5f8-108">Manyetometre</span><span class="sxs-lookup"><span data-stu-id="5b5f8-108">Magnetometer</span></span>
+- <span data-ttu-id="5b5f8-109">Sıcaklık</span><span class="sxs-lookup"><span data-stu-id="5b5f8-109">Temperature</span></span>
+- <span data-ttu-id="5b5f8-110">Barometrik basıncı</span><span class="sxs-lookup"><span data-stu-id="5b5f8-110">Barometric pressure</span></span>
+- <span data-ttu-id="5b5f8-111">Nem oranı</span><span class="sxs-lookup"><span data-stu-id="5b5f8-111">Humidity</span></span>
 
-<span data-ttu-id="bbe88-112">Bu hızlı başlangıç, algılama HAT ' ten algılayıcı değerlerini almak, oyun çubuğu girişine yanıt vermek ve LED matrisini yeniden yönlendirmek için .NET kullanır.</span><span class="sxs-lookup"><span data-stu-id="bbe88-112">This quickstart uses .NET to retrieve sensor values from the Sense HAT, respond to joystick input, and drive the LED matrix.</span></span>
+<span data-ttu-id="5b5f8-112">Bu hızlı başlangıç, algılama HAT ' ten algılayıcı değerlerini almak, oyun çubuğu girişine yanıt vermek ve LED matrisini yeniden yönlendirmek için .NET kullanır.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-112">This quickstart uses .NET to retrieve sensor values from the Sense HAT, respond to joystick input, and drive the LED matrix.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="bbe88-113">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="bbe88-113">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="5b5f8-113">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="5b5f8-113">Prerequisites</span></span>
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- <span data-ttu-id="bbe88-114">Algılama HAT</span><span class="sxs-lookup"><span data-stu-id="bbe88-114">Sense HAT</span></span>
+- <span data-ttu-id="5b5f8-114">Algılama HAT</span><span class="sxs-lookup"><span data-stu-id="5b5f8-114">Sense HAT</span></span>
 
 [!INCLUDE [prepare-pi-i2c](../includes/prepare-pi-i2c.md)]
 
-## <a name="run-the-quickstart"></a><span data-ttu-id="bbe88-115">Hızlı başlangıcı Çalıştır</span><span class="sxs-lookup"><span data-stu-id="bbe88-115">Run the quickstart</span></span>
+## <a name="run-the-quickstart"></a><span data-ttu-id="5b5f8-115">Hızlı başlangıcı Çalıştır</span><span class="sxs-lookup"><span data-stu-id="5b5f8-115">Run the quickstart</span></span>
 
-<span data-ttu-id="bbe88-116">Raspberry PI 'nize Sense HAT ekleyin.</span><span class="sxs-lookup"><span data-stu-id="bbe88-116">Attach the Sense HAT to your Raspberry Pi.</span></span> <span data-ttu-id="bbe88-117">Raspberry Pi (yerel veya uzak) üzerindeki bir bash isteminde aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="bbe88-117">From a Bash prompt on the Raspberry Pi (local or remote), run the following command:</span></span>
+<span data-ttu-id="5b5f8-116">Raspberry PI 'nize Sense HAT ekleyin.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-116">Attach the Sense HAT to your Raspberry Pi.</span></span> <span data-ttu-id="5b5f8-117">Raspberry Pi (yerel veya uzak) üzerindeki bir bash isteminde aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="5b5f8-117">From a Bash prompt on the Raspberry Pi (local or remote), run the following command:</span></span>
 
 ```bash
 . <(wget -q -O - https://aka.ms/dotnet-iot-sensehat-quickstart)
 ```
 
-<span data-ttu-id="bbe88-118">Komut bir betiği indirir ve çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="bbe88-118">The command downloads and runs a script.</span></span> <span data-ttu-id="bbe88-119">Betik şunları yapar:</span><span class="sxs-lookup"><span data-stu-id="bbe88-119">The script:</span></span>
+<span data-ttu-id="5b5f8-118">Komut bir betiği indirir ve çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-118">The command downloads and runs a script.</span></span> <span data-ttu-id="5b5f8-119">Betik şunları yapar:</span><span class="sxs-lookup"><span data-stu-id="5b5f8-119">The script:</span></span>
 
-- <span data-ttu-id="bbe88-120">.NET SDK 'Yı kurar.</span><span class="sxs-lookup"><span data-stu-id="bbe88-120">Installs the .NET SDK.</span></span>
-- <span data-ttu-id="bbe88-121">Algılama HAT hızlı başlangıç projesini içeren bir GitHub deposunu klonlar.</span><span class="sxs-lookup"><span data-stu-id="bbe88-121">Clones a GitHub repository that includes the Sense HAT quickstart project.</span></span>
-- <span data-ttu-id="bbe88-122">Projeyi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="bbe88-122">Builds the project.</span></span>
-- <span data-ttu-id="bbe88-123">Projeyi çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="bbe88-123">Runs the project.</span></span>
+- <span data-ttu-id="5b5f8-120">.NET SDK 'Yı kurar.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-120">Installs the .NET SDK.</span></span>
+- <span data-ttu-id="5b5f8-121">Algılama HAT hızlı başlangıç projesini içeren bir GitHub deposunu klonlar.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-121">Clones a GitHub repository that includes the Sense HAT quickstart project.</span></span>
+- <span data-ttu-id="5b5f8-122">Projeyi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-122">Builds the project.</span></span>
+- <span data-ttu-id="5b5f8-123">Projeyi çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-123">Runs the project.</span></span>
 
-<span data-ttu-id="bbe88-124">Algılayıcı verileri görüntülenirken konsol çıkışını gözlemleyin.</span><span class="sxs-lookup"><span data-stu-id="bbe88-124">Observe the console output as sensor data is displayed.</span></span> <span data-ttu-id="bbe88-125">LED matrisi, mavi bir alanda sarı bir piksel görüntüler.</span><span class="sxs-lookup"><span data-stu-id="bbe88-125">The LED matrix displays a yellow pixel on a field of blue.</span></span> <span data-ttu-id="bbe88-126">Oyun çubuğunu herhangi bir yönde tutmak, sarı pikseli o yönde taşır.</span><span class="sxs-lookup"><span data-stu-id="bbe88-126">Holding the joystick in any direction moves the yellow pixel in that direction.</span></span> <span data-ttu-id="bbe88-127">Orta oyun çubuğu düğmesine tıklamak arka planın mavi ve Red arasında değişmesine neden olur.</span><span class="sxs-lookup"><span data-stu-id="bbe88-127">Clicking the center joystick button causes the background to switch from blue to red.</span></span>
+<span data-ttu-id="5b5f8-124">Algılayıcı verileri görüntülenirken konsol çıkışını gözlemleyin.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-124">Observe the console output as sensor data is displayed.</span></span> <span data-ttu-id="5b5f8-125">LED matrisi, mavi bir alanda sarı bir piksel görüntüler.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-125">The LED matrix displays a yellow pixel on a field of blue.</span></span> <span data-ttu-id="5b5f8-126">Oyun çubuğunu herhangi bir yönde tutmak, sarı pikseli o yönde taşır.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-126">Holding the joystick in any direction moves the yellow pixel in that direction.</span></span> <span data-ttu-id="5b5f8-127">Orta oyun çubuğu düğmesine tıklamak arka planın mavi ve Red arasında değişmesine neden olur.</span><span class="sxs-lookup"><span data-stu-id="5b5f8-127">Clicking the center joystick button causes the background to switch from blue to red.</span></span>
 
-## <a name="get-the-source-code"></a><span data-ttu-id="bbe88-128">Kaynak kodunu alma</span><span class="sxs-lookup"><span data-stu-id="bbe88-128">Get the source code</span></span>
+## <a name="get-the-source-code"></a><span data-ttu-id="5b5f8-128">Kaynak kodunu alma</span><span class="sxs-lookup"><span data-stu-id="5b5f8-128">Get the source code</span></span>
 
-<span data-ttu-id="bbe88-129">Bu hızlı başlangıç kaynağı [GitHub ' da kullanılabilir](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart).</span><span class="sxs-lookup"><span data-stu-id="bbe88-129">The source for this quickstart is [available on GitHub](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart).</span></span> <span class="docon docon-navigate-external x-hidden-focus"></span>
+<span data-ttu-id="5b5f8-129">Bu hızlı başlangıç kaynağı [GitHub ' da kullanılabilir](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart) <span class="docon docon-navigate-external x-hidden-focus"></span> .</span><span class="sxs-lookup"><span data-stu-id="5b5f8-129">The source for this quickstart is [available on GitHub](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart) <span class="docon docon-navigate-external x-hidden-focus"></span>.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="bbe88-130">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="bbe88-130">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="5b5f8-130">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="5b5f8-130">Next steps</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="bbe88-131">Bir ışığı yakıp söndürmek için Genel Amaçlı giriş/çıkış kullanmayı öğrenin</span><span class="sxs-lookup"><span data-stu-id="bbe88-131">Learn to use General Purpose Input/Output to blink an LED</span></span>](../tutorials/blink-led.md)
+> [<span data-ttu-id="5b5f8-131">Bir ışığı yakıp söndürmek için Genel Amaçlı giriş/çıkış kullanmayı öğrenin</span><span class="sxs-lookup"><span data-stu-id="5b5f8-131">Learn to use General Purpose Input/Output to blink an LED</span></span>](../tutorials/blink-led.md)
