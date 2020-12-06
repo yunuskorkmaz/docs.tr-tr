@@ -142,6 +142,8 @@
       href: language-reference/classes.md
     - name: Yapılar
       href: language-reference/structures.md
+    - name: Boş değer atanabilen değer türleri
+      href: language-reference/nullable-value-types.md
     - name: Devralma
       href: language-reference/inheritance.md
     - name: Arabirimler

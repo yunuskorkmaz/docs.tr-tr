@@ -1237,7 +1237,7 @@
           displayName: 'conditional, ternary, ref'
         - name: '! (null-forgiving) işleci'
           href: language-reference/operators/null-forgiving.md
-          displayName: 'nullable reference, null-forgiveness'
+          displayName: 'nullable reference, null-forgiveness, null suppression'
         - name: '?? and ??= işleçleri'
           href: language-reference/operators/null-coalescing-operator.md
           displayName: 'null-coalescing, assignment'
