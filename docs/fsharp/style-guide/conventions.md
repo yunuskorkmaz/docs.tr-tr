@@ -2,12 +2,12 @@
 title: F# kodlama kuralları
 description: 'F # kodu yazarken genel kılavuzları ve deyimleri öğrenin.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554032"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739908"
 ---
 # <a name="f-coding-conventions"></a>F# kodlama kuralları
 
@@ -190,13 +190,13 @@ Bu durumda, bir banka hesabından paranın bir şekilde çizmesinin başarısız
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f" am
-    | InsufficientFunds balance -> printfn "Failed: balance is %f" balance
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O" expiredDate
+    | Success am -> printfn "Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
-Genel olarak, etki alanındaki bir şeyin **başarısız olmasına** yönelik farklı yollar modelleyebilir, daha sonra hata işleme kodu artık normal program akışına ek olarak uğraşmanız gereken bir şey olarak değerlendirilmez. Yalnızca normal program akışının bir parçasıdır ve **olağanüstü**olarak kabul edilmez. Bunun başlıca iki avantajı vardır:
+Genel olarak, etki alanındaki bir şeyin **başarısız olmasına** yönelik farklı yollar modelleyebilir, daha sonra hata işleme kodu artık normal program akışına ek olarak uğraşmanız gereken bir şey olarak değerlendirilmez. Yalnızca normal program akışının bir parçasıdır ve **olağanüstü** olarak kabul edilmez. Bunun başlıca iki avantajı vardır:
 
 1. Etki alanınız zaman içinde değiştikçe bakım daha kolay olur.
 2. Hata durumlarının birim testi daha kolay.
@@ -301,7 +301,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 Catch-all olarak çalışmak yerine, bu işlev artık bir dosya bulunamadığı ve bu anlamı bir return öğesine atayan durumu doğru şekilde işleymeyecektir. Bu dönüş değeri bu hata durumuyla eşleşirken, herhangi bir bağlamsal bilgileri atmakla veya çağıranların koddaki bu noktada ilgisi olmayan bir servis talebiyle uğraşmak üzere zorlanmamalıdır.
 
-Gibi türler `Result<'Success, 'Error>` , iç içe olmadıkları durumlarda temel işlemler için uygundur ve F # isteğe bağlı türleri *bir şeyi* veya *hiç*birini döndürene zaman dönebileceği temsil etmek için mükemmeldir. Özel durumların yerini almaz, ancak özel durumları değiştirme girişiminde kullanılmamalıdır. Bunun yerine, özel durum ve hata yönetimi ilkesinin hedeflenen yollarla belirli yönlerini karşılamak için bozacağından uygulanmalıdır.
+Gibi türler `Result<'Success, 'Error>` , iç içe olmadıkları durumlarda temel işlemler için uygundur ve F # isteğe bağlı türleri *bir şeyi* veya *hiç* birini döndürene zaman dönebileceği temsil etmek için mükemmeldir. Özel durumların yerini almaz, ancak özel durumları değiştirme girişiminde kullanılmamalıdır. Bunun yerine, özel durum ve hata yönetimi ilkesinin hedeflenen yollarla belirli yönlerini karşılamak için bozacağından uygulanmalıdır.
 
 ## <a name="partial-application-and-point-free-programming"></a>Kısmi uygulama ve noktadan ücretsiz programlama
 
@@ -309,7 +309,7 @@ F # kısmi uygulamayı destekler ve bu nedenle, noktadan farklı stilde programl
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Kısmi uygulama kullanmayın ve ortak API 'lerde currying kullanın
 
-Küçük bir özel durumla, genel API 'lerde kısmi uygulama kullanımı, tüketiciler için kafa karıştırıcı olabilir. Genellikle, `let` F # kodundaki bağlantılı değerler, **işlev değerleri**değil **değerlerdir**. Değerleri ve işlev değerlerini birlikte karıştırmak, özellikle de işlevleri oluşturmak için gibi işleçlerle birleştirildiğinde, çok sayıda bilişsel ek yük için Exchange 'de küçük miktarda kod satırı kaydedilmesine neden olabilir `>>` .
+Küçük bir özel durumla, genel API 'lerde kısmi uygulama kullanımı, tüketiciler için kafa karıştırıcı olabilir. Genellikle, `let` F # kodundaki bağlantılı değerler, **işlev değerleri** değil **değerlerdir**. Değerleri ve işlev değerlerini birlikte karıştırmak, özellikle de işlevleri oluşturmak için gibi işleçlerle birleştirildiğinde, çok sayıda bilişsel ek yük için Exchange 'de küçük miktarda kod satırı kaydedilmesine neden olabilir `>>` .
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>Noktadan noktaya ücretsiz programlama için araç etkilerini göz önünde bulundurun
 
@@ -317,7 +317,7 @@ Curried işlevleri bağımsız değişkenlerini etiketetmez. Bu, etkilerini olum
 
 ```fsharp
 let func name age =
-    printfn "My name is %s and I am %d years old!" name age
+    printfn "My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -657,7 +657,7 @@ F #, nesneler ve nesne yönelimli (OO) kavramları için tam desteğe sahiptir. 
 * Otomatik Özellikler
 * Uygulama `IDisposable` ve `IEnumerable`
 * Tür uzantıları
-* Ekinlikler
+* Olaylar
 * Yapılar
 * Temsilciler
 * Numaralandırmalar

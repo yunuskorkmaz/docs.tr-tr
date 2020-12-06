@@ -2,12 +2,12 @@
 title: Visual Studio Code’da F# Kullanmaya Başlama
 description: 'Visual Studio Code ve ıonıde eklenti Suite ile F # kullanmayı öğrenin.'
 ms.date: 12/23/2018
-ms.openlocfilehash: 3317d0037d3c14a6b55079385d7b27e499c0c392
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 11fb0d443fb7c2b3f270d45bfeaa91102ba28efd
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050552"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739808"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code’da F# Kullanmaya Başlama
 
@@ -37,14 +37,14 @@ Proje Visual Studio Code yüklendikten sonra, pencerenin sol tarafındaki F # Ç
 İlk olarak, .NET Core Scripting 'in varsayılan betik ortamınız olduğundan emin olun:
 
 1. Visual Studio Code ayarlarını açın (**kod**  >  **tercihleri**  >  **ayarları**).
-1. **F # komut dosyası**terimini arayın.
-1. **FSharp: SDK betikleri kullan**onay kutusuna tıklayın.
+1. **F # komut dosyası** terimini arayın.
+1. **FSharp: SDK betikleri kullan** onay kutusuna tıklayın.
 
 Bu şu anda, .NET Core komut dosyası ile çalışmayan .NET Framework tabanlı betikteki bazı eski davranışlar nedeniyle gereklidir ve ıonıde Şu anda bu geriye dönük uyumluluk için çaba harcar. Gelecekte, .NET Core Scripting varsayılan değer olacaktır.
 
 ### <a name="write-your-first-script"></a>İlk komut dosyanızı yazma
 
-.NET Core komut dosyası kullanmak üzere Visual Studio Code yapılandırdıktan sonra, Visual Studio Code gezgin görünümüne gidin ve yeni bir dosya oluşturun. *Myfirstscript. FSX*olarak adlandırın.
+.NET Core komut dosyası kullanmak üzere Visual Studio Code yapılandırdıktan sonra, Visual Studio Code gezgin görünümüne gidin ve yeni bir dosya oluşturun. *Myfirstscript. FSX* olarak adlandırın.
 
 Şimdi aşağıdaki kodu buna ekleyin:
 
@@ -52,7 +52,7 @@ Bu şu anda, .NET Core komut dosyası ile çalışmayan .NET Framework tabanlı 
 
 Bu işlev, bir kelimeyi bir [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin)biçimine dönüştürür. Sonraki adım F# Etkileşimli (FSI) kullanarak değerlendirmek için kullanılır.
 
-İşlevin tamamını vurgulayın (11 satır uzunluğunda olmalıdır). Vurgulandıktan sonra, **alt** tuşunu basılı tutun ve **ENTER**tuşuna basın. Ekranın alt kısmında bir Terminal penceresi açılır ve şuna benzer görünmelidir:
+İşlevin tamamını vurgulayın (11 satır uzunluğunda olmalıdır). Vurgulandıktan sonra, **alt** tuşunu basılı tutun ve **ENTER** tuşuna basın. Ekranın alt kısmında bir Terminal penceresi açılır ve şuna benzer görünmelidir:
 
 ![Ionıde ile F# Etkileşimli çıkışı örneği](./media/getting-started-vscode/vscode-fsi.png)
 
@@ -144,7 +144,7 @@ Bu modülün, `main` işlevin üzerinde ve bildirimin altında olması gerekir `
 let main argv =
     for name in argv do
         let newName = PigLatin.toPigLatin name
-        printfn "%s in Pig Latin is: %s" name newName
+        printfn %"{name} in Pig Latin is: {newName}"
 
     0
 ```

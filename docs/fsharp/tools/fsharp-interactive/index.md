@@ -4,12 +4,12 @@ description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # b
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: fe8ee2ebb97f4a47e80f39d5be8d95ba5b72ddc7
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549403"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739320"
 ---
 # <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
 
@@ -118,7 +118,7 @@ let t2 = dsharp.tensor [ [ 0; 1 ]; [ 2; 2 ] ]
 // Define a scalar-to-scalar function
 let f (x: Tensor) = sin (sqrt x)
 
-printfn "%A" (f (dsharp.tensor 1.2))
+printfn $"{f (dsharp.tensor 1.2)}"
 ```
 
 ### <a name="specifying-a-package-source"></a>Paket kaynağı belirtme
@@ -137,7 +137,7 @@ Bir komut dosyasında istediğiniz sayıda paket başvurusu belirtebilirsiniz.
 > [!NOTE]
 > Şu anda çerçeve başvuruları kullanan betikler için bir sınırlama vardır (ör. `Microsoft.NET.Sdk.Web` veya  `Microsoft.NET.Sdk.WindowsDesktop` ). Sasırasıyla, Giraffe, WinForms gibi paketler kullanılamaz. Bu sorun [#9417](https://github.com/dotnet/fsharp/issues/9417)izleniyor.
 
-[Paket Yönetimi genişletilebilirliği ve diğer uzantılar](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)hakkında daha fazla bilgi edinin.
+Daha fazla bilgi için bkz. [Paket Yönetimi genişletilebilirliği ve diğer uzantılar](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager).
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>F # Interactive ile disk üzerindeki derlemelere başvurma
 
@@ -154,7 +154,7 @@ Derlenmiş bir şekilde, buna benzer şekilde adlandırılan bir dosyada başvur
 ```fsharp
 #r "path/to/MyAssembly.dll"
 
-printfn "%A" (MyAssembly.myFunction 10 40)
+printfn $"{MyAssembly.myFunction 10 40}"
 ```
 
 Çıktı aşağıdaki şekilde olacaktır:
@@ -182,7 +182,7 @@ Ve kullanan dosya `Script2.fsx` :
 #load "Script1.fsx"
 open Script1
 
-printfn "%d" (square 12)
+printfn $"%d{square 12}"
 ```
 
 `open Script1`Bildirimin gerekli olduğunu unutmayın. Bunun nedeni, bir F # betiğindeki yapıların içinde bulunduğu komut dosyasının adı olan en üst düzey bir modüle derlenmesinden kaynaklanır.
@@ -206,7 +206,7 @@ Aşağıdaki örnek, komut satırı bağımsız değişkenlerinin nasıl alınac
 let args = fsi.CommandLineArgs
 
 for arg in args do
-    printfn "%s" arg
+    printfn $"{arg}"
 ```
 
 Değerlendirildiğinde, tüm bağımsız değişkenleri yazdırır. İlk bağımsız değişken her zaman değerlendirilen betiğin adıdır:

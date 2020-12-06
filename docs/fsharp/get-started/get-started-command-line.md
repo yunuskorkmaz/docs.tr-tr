@@ -2,12 +2,12 @@
 title: 'Komut satırı araçlarıyla F # ile çalışmaya başlama'
 description: 'Herhangi bir işletim sisteminde (Windows, macOS veya Linux) .NET Core CLI kullanarak F # üzerinde basit bir çoklu proje çözümü oluşturmayı öğrenin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: e652b66337a3122de8e6bd4d62d86fb6082b759d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f890e31fe8c665874dc3034aebfae32e38b9031a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811996"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739921"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI ile F # ile çalışmaya başlama
 
@@ -36,7 +36,7 @@ FSNetCore
 
 ### <a name="write-a-class-library"></a>Sınıf kitaplığı yazma
 
-Dizinleri *Fsnetcore*olarak değiştirin.
+Dizinleri *Fsnetcore* olarak değiştirin.
 
 `dotnet new`Kitaplık adlı **src** klasöründe bir sınıf kitaplığı projesi oluşturun komutunu kullanın.
 
@@ -64,7 +64,7 @@ open Newtonsoft.Json
 
 let getJsonNetJson value =
     let json = JsonConvert.SerializeObject(value)
-    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value json
+    $"I used to be {value} but now I'm {json} thanks to JSON.NET!"
 ```
 
 NuGet paketindeki Newtonsoft.Jskitaplık projesine ekleyin.
@@ -115,7 +115,7 @@ let main argv =
 
     for arg in argv do
         let value = getJsonNetJson arg
-        printfn "%s" value
+        printfn $"{value}"
 
     0 // return an integer exit code
 ```

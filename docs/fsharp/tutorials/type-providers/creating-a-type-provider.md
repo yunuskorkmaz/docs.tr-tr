@@ -2,12 +2,12 @@
 title: 'Öğretici: tür sağlayıcısı oluşturma'
 description: "Temel kavramları göstermek üzere çeşitli basit tür sağlayıcılarını inceleyerek F # 3,0 ' de kendi F # tür sağlayıcılarını oluşturmayı öğrenin."
 ms.date: 11/04/2019
-ms.openlocfilehash: 71225614ed983a76d35c214faa87bbad0fbb7d24
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810878"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739704"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Öğretici: tür sağlayıcısı oluşturma
 
@@ -243,7 +243,7 @@ Aşağıdaki noktaları dikkate almanız gerekir:
 Sonra, türe XML belgesi ekleyin. Bu belge geciktiğinde, diğer bir deyişle, konak derleyicisine ihtiyaç duyduğunda isteğe bağlı olarak hesaplanır.
 
 ```fsharp
-t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n))
+t.AddXmlDocDelayed (fun () -> $"""This provided type {"Type" + string n}""")
 ```
 
 Daha sonra, bir sağlanmış statik özelliği türüne eklersiniz:
@@ -352,9 +352,9 @@ t.AddMembersDelayed(fun () ->
                   getterCode= (fun args -> <@@ valueOfTheProperty @@>))
 
               p.AddXmlDocDelayed(fun () ->
-                  sprintf "This is StaticProperty%d on NestedType" i)
+                  $"This is StaticProperty{i} on NestedType")
 
-              p
+              p
       ]
 
     staticPropsInNestedType)
@@ -364,7 +364,7 @@ t.AddMembersDelayed(fun () ->
 
 ### <a name="details-about-erased-provided-types"></a>Silinen sağlanmış türler hakkındaki ayrıntılar
 
-Bu bölümdeki örnek yalnızca *silinmiş sağlanan türleri*sağlar ve aşağıdaki durumlarda özellikle yararlı olur:
+Bu bölümdeki örnek yalnızca *silinmiş sağlanan türleri* sağlar ve aşağıdaki durumlarda özellikle yararlı olur:
 
 - Yalnızca veri ve yöntemleri içeren bir bilgi alanı için sağlayıcı yazarken.
 
@@ -581,7 +581,7 @@ for group in r.GetGroupNames() do
         propertyName = group,
         propertyType = typeof<Group>,
         getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+        prop.AddXmlDoc($"""Gets the ""{group}"" group from this match""")
     matchTy.AddMember prop
 ```
 
@@ -764,7 +764,7 @@ Daha kapsamlı bir sağlayıcı bu kısıtlamaları gevyordu.
 let info = new MiniCsv<"info.csv">()
 for row in info.Data do
 let time = row.Time
-printfn "%f" (float time)
+printfn $"{float time}"
 ```
 
 Bu durumda, derleyici bu çağrıları aşağıdaki örnekteki gibi bir şeye dönüştürmelidir:
@@ -773,7 +773,7 @@ Bu durumda, derleyici bu çağrıları aşağıdaki örnekteki gibi bir şeye d�
 let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
-printfn "%f" (float time)
+printfn $"%f{float time}"
 ```
 
 En uygun çeviri tür sağlayıcısının tür sağlayıcısının derlemesinde gerçek bir tür tanımlamasını gerektirir `CsvFile` . Tür sağlayıcıları, önemli mantığı kaydırmak için genellikle birkaç yardımcı türü ve yöntemi kullanır. Ölçüler çalışma zamanında silindiğinden, bir `float[]` satır için silinmiş tür olarak bir kullanabilirsiniz. Derleyici farklı sütunları farklı ölçü türlerine sahip olacak şekilde değerlendirir. Örneğin, örneğimizde ilk sütunda tür `float<meter>` ve ikincisi vardır `float<second>` . Ancak, silinen temsili oldukça basit kalabilir.
@@ -1048,7 +1048,7 @@ ProvidedTypes API 'SI, ölçü ek açıklamaları sağlamak için yardımcılar 
   let nullableDecimal_kgpm2 = typedefof<System.Nullable<_>>.MakeGenericType [|dkgpm2 |]
 ```
 
-### <a name="accessing-project-local-or-script-local-resources"></a>Proje-yerel veya betiğe yerel kaynaklara erişme
+### <a name="accessing-project-local-or-script-local-resources"></a>Project-Local veya Script-Local kaynaklara erişme
 
 Bir tür sağlayıcının her örneğine, `TypeProviderConfig` oluşturma sırasında bir değer verilebilir. Bu değer, sağlayıcının "çözüm klasörünü" içerir (yani, derleme için proje klasörü veya bir betiği içeren dizin), başvurulan derlemelerin listesi ve diğer bilgiler.
 

@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlama
 description: "F # ' ın, temel fonksiyonel programlama kavramlarından türetilmiş dil düzeyi bir programlama modeline bağlı olarak, zaman uyumsuzluğu için temizleme desteği sağladığını öğrenin."
 ms.date: 08/15/2020
-ms.openlocfilehash: 2e5d4fb744b4443eb9caf90cc1bf01473b809127
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811775"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739333"
 ---
 # <a name="async-programming-in-f"></a>F 'de zaman uyumsuz programlama\#
 
@@ -57,7 +57,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -73,7 +73,7 @@ let main argv =
 
 Başka bir önemli satır, öğesine yapılan çağrıdır `Async.RunSynchronously` . Bu, gerçekten bir F # zaman uyumsuz hesaplamayı yürütmek istiyorsanız çağırmanız gereken bir zaman uyumsuz modül başlatma işlevleridir.
 
-Bu, C#/Visual Basic 'in programlama stilinde temel bir farktır `async` . F # ' da, zaman uyumsuz hesaplamalar **soğuk görevler**olarak düşünülebilir. Gerçekten yürütmek için açıkça başlatılmış olmaları gerekir. Bu, zaman uyumsuz çalışmayı C# veya Visual Basic göre çok daha kolay bir şekilde birleştirip dizmenize olanak sağladığı için bazı avantajlar içerir.
+Bu, C#/Visual Basic 'in programlama stilinde temel bir farktır `async` . F # ' da, zaman uyumsuz hesaplamalar **soğuk görevler** olarak düşünülebilir. Gerçekten yürütmek için açıkça başlatılmış olmaları gerekir. Bu, zaman uyumsuz çalışmayı C# veya Visual Basic göre çok daha kolay bir şekilde birleştirip dizmenize olanak sağladığı için bazı avantajlar içerir.
 
 ## <a name="combine-asynchronous-computations"></a>Zaman uyumsuz hesaplamaları birleştirme
 
@@ -87,7 +87,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -119,7 +119,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]

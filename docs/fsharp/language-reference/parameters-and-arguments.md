@@ -2,12 +2,12 @@
 title: Parametreler ve Bağımsız Değişkenler
 description: 'Parametreleri tanımlama ve işlevlere, yöntemlere ve özelliklere bağımsız değişkenleri geçirme için F # dil desteği hakkında bilgi edinin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 6564fd31105427683af8fc6280672e638737e9b5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3c391ca37a1cf3bd150316943e5b06efa532b317
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811528"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740295"
 ---
 # <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
 
@@ -137,7 +137,7 @@ open System
 open System.Runtime.InteropServices
 type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
-        printfn "%s" message
+        printfn $"{message}"
 ```
 
 Ayrıca, varsayılan parametre değeri olarak yeni bir nesne belirtebilirsiniz. Örneğin, `Foo` üyenin `CancellationToken` bunun yerine giriş olarak isteğe bağlı olması olabilir:
@@ -147,7 +147,7 @@ open System.Threading
 open System.Runtime.InteropServices
 type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
-        printfn "%A" ct
+        printfn $"{ct}"
 ```
 
 Bağımsız değişkeni olarak verilen değerin `DefaultParameterValue` parametrenin türüyle eşleşmesi gerekir. Örneğin, aşağıdakilere izin verilmez:
@@ -168,12 +168,12 @@ Bir F # değerinin başvuruya geçirilmesi, yönetilen işaretçi türleri olan 
 - `byref<'T>`Hem okuma hem de işaretçiye yazma gerekiyorsa kullanın.
 
 ```fsharp
-let example1 (x: inref<int>) = printfn "It's %d" x
+let example1 (x: inref<int>) = printfn $"It's %d{x}"
 
 let example2 (x: outref<int>) = x <- x + 1
 
 let example3 (x: byref<int>) =
-    printfn "It'd %d" x
+    printfn $"It's %d{x}"
     x <- x + 1
 
 let test () =

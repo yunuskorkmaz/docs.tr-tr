@@ -2,12 +2,12 @@
 title: Diziler
 description: 'F # programlama dilinde dizileri oluşturmayı ve kullanmayı öğrenin.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 37f781ccd2c7bc2ca2c7b93bda53bbb3ea93b504
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 96b0d7eaf10d5afcd9a647681d5c2ef2d2fba335
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608501"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739757"
 ---
 # <a name="arrays"></a>Diziler
 
@@ -109,7 +109,7 @@ Dize `Test1` yalnızca ilk dizide görünür çünkü yeni bir öğe oluşturma 
 
 [`Array.append`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#append) Varolan iki diziyi birleştirerek yeni bir dizi oluşturur.
 
-Aşağıdaki kodda **Array. Append**gösterilmektedir.
+Aşağıdaki kodda **Array. Append** gösterilmektedir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet13.fs)]
 
@@ -287,12 +287,12 @@ module test =
 
     let test1 = generateTestMatrix 2.3 1.1
     let submatrix = test1.[0..1, 0..1]
-    printfn "%A" submatrix
+    printfn $"{submatrix}"
 
     let firstRow = test1.[0,*]
     let secondRow = test1.[1,*]
     let firstCol = test1.[*,0]
-    printfn "%A" firstCol
+    printfn $"{firstCol}"
 ```
 
 ### <a name="boolean-functions-on-arrays"></a>Diziler üzerinde Boole işlevleri
@@ -405,7 +405,7 @@ Bir [`Array.blit`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-co
 
 ### <a name="sort-arrays"></a>Dizileri Sırala
 
-[`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort)Genel karşılaştırma işlevini kullanarak bir diziyi sıralamak için kullanın. Anahtar [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) olarak adlandırılan ve anahtardaki genel karşılaştırma işlevini kullanarak sıralamak için bir değer oluşturan *key*bir işlev belirtmek için kullanın. [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith)Özel bir karşılaştırma işlevi sağlamak istiyorsanız kullanın. `Array.sort`, `Array.sortBy` ve `Array.sortWith` All sıralanmış diziyi yeni bir dizi olarak döndürür. Çeşitlemeler, [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace) [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) ve yeni bir [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) tane döndürmek yerine mevcut diziyi değiştirir.
+[`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort)Genel karşılaştırma işlevini kullanarak bir diziyi sıralamak için kullanın. Anahtar [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) olarak adlandırılan ve anahtardaki genel karşılaştırma işlevini kullanarak sıralamak için bir değer oluşturan *key* bir işlev belirtmek için kullanın. [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith)Özel bir karşılaştırma işlevi sağlamak istiyorsanız kullanın. `Array.sort`, `Array.sortBy` ve `Array.sortWith` All sıralanmış diziyi yeni bir dizi olarak döndürür. Çeşitlemeler, [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace) [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) ve yeni bir [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) tane döndürmek yerine mevcut diziyi değiştirir.
 
 ### <a name="arrays-and-tuples"></a>Diziler ve tanımlama grupları
 

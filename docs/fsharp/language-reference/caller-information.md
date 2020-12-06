@@ -1,15 +1,15 @@
 ---
-title: Arayan bilgileri
+title: Çağıran bilgileri
 description: Bir yöntemden çağıran bilgileri elde etmek için çağıran bilgileri bağımsız değişken özniteliklerinin nasıl kullanılacağını açıklar.
 ms.date: 11/04/2019
-ms.openlocfilehash: d995b37149277b7c7d1b6217ee484d3c90a7f8b3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 700cde26fbe4e6c48155f88bfc63af59af86cfe2
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976806"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739782"
 ---
-# <a name="caller-information"></a>Arayan bilgileri
+# <a name="caller-information"></a>Çağıran bilgileri
 
 Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodunun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını alabilirsiniz. Bu bilgiler, tanılama araçlarının izlenmesine, oluşturulmasına ve bu araçlarda hata ayıklanmasına yardımcı olur.
 
@@ -35,10 +35,10 @@ type Tracer() =
                       [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
                       [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
                       [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
-        Trace.WriteLine(sprintf "Message: %s" message)
-        Trace.WriteLine(sprintf "Member name: %s" memberName)
-        Trace.WriteLine(sprintf "Source file path: %s" path)
-        Trace.WriteLine(sprintf "Source line number: %d" line)
+        Trace.WriteLine(sprintf $"Message: {message}")
+        Trace.WriteLine(sprintf $"Member name: {memberName}")
+        Trace.WriteLine(sprintf $"Source file path: {path}")
+        Trace.WriteLine(sprintf $"Source line number: {line}")
 ```
 
 ## <a name="remarks"></a>Açıklamalar
@@ -51,10 +51,10 @@ Arayan bilgisini denetlemek veya gizlemek için isteğe bağlı bağımsız değ
 
 ## <a name="member-names"></a>Üye adları
 
-Üyenin adını çağrılan metoda bir `String` bağımsız değişkeni olarak belirtmekten kaçınmak için [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) özniteliğini kullanabilirsiniz. Bu tekniği kullanarak, yeniden düzenlemeyi yeniden adlandırma sorununun `String` değerleri değiştirmediğini önleyin. Bu, özellikle aşağıdaki görevler için yararlı olur:
+[`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)Özniteliği, çağrılan yönteme bir bağımsız değişken olarak üye adını belirtmekten kaçınmak için kullanabilirsiniz `String` . Bu tekniği kullanarak yeniden düzenlemeyi yeniden adlandırma sorunu, `String` değerleri değiştirmez. Bu, özellikle aşağıdaki görevler için yararlı olur:
 
 - İzleme ve tanılama yordamlarını kullanma.
-- Verileri bağlarken [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) arabirimini uygulama. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) özniteliği olmadan, özellik adını bir sabit değer olarak belirtmeniz gerekir.
+- Verileri bağlarken [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) arabirimini uygulama. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. Özniteliği olmadan [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) , özellik adını bir sabit değer olarak belirtmeniz gerekir.
 
 Aşağıdaki grafikte, CallerMemberName özniteliğini kullandığınızda döndürülen üye adları gösterilmektedir.
 

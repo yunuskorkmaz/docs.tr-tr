@@ -2,12 +2,12 @@
 title: Desen Eşleştirme
 description: 'Verileri mantıksal yapılara göre karşılaştırmak, verileri yapısal parçalar halinde çıkarmak veya verilerden bilgi ayıklamak için F # içinde desenlerin nasıl kullanıldığını öğrenin.'
 ms.date: 11/12/2020
-ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 932f50b7947f6df728149437dd3ceb19c42e5c6a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687811"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740282"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 
@@ -88,8 +88,8 @@ Bir model eşleştirme ifadesinde adlandırılmış alanları aşağıdaki gibi 
 ```fsharp
 let matchShape shape =
     match shape with
-    | Rectangle(height = h) -> printfn "Rectangle with length %f" h
-    | Circle(r) -> printfn "Circle with radius %f" r
+    | Rectangle(height = h) -> printfn $"Rectangle with length %f{h}"
+    | Circle(r) -> printfn $"Circle with radius %f{r}"
 ```
 
 Adlandırılmış alanın kullanımı isteğe bağlıdır, bu nedenle önceki örnekte, her ikisi de `Circle(r)` `Circle(radius = r)` aynı etkiye sahiptir.
@@ -98,7 +98,7 @@ Birden çok alan belirttiğinizde, noktalı virgül kullanın (;) ayırıcı ola
 
 ```fsharp
 match shape with
-| Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
+| Rectangle(height = h; width = w) -> printfn $"Rectangle with height %f{h} and width %f{w}"
 | _ -> ()
 ```
 

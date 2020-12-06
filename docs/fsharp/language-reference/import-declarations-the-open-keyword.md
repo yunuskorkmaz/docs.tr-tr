@@ -2,12 +2,12 @@
 title: 'İçeri Aktarma Bildirimleri: open Anahtar Sözcüğü'
 description: 'F # içeri aktarma bildirimleri hakkında bilgi edinin ve öğelerin tam nitelikli bir ad kullanmadan başvurdukları bir modül veya ad alanı belirtmeleri hakkında bilgi edinin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: ab208c53809e120bc216c8f8b4d04a322d67cf2f
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 4d3fd159aa4b334e9db0d7f756047470ad9c0829
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557187"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739691"
 ---
 # <a name="import-declarations-the-open-keyword"></a>İçeri aktarma bildirimleri: `open` anahtar sözcüğü
 
@@ -39,7 +39,7 @@ Aynı ad birden fazla açık modülde veya ad alanında gerçekleştiğinde, F #
 ```fsharp
 open List
 open Seq
-printfn "%A" empty
+printfn %"{empty}"
 ```
 
 Bu nedenle, ya da gibi özdeş adlara sahip üyeler içeren veya gibi modülleri veya ad alanlarını açtığınızda dikkatli olun `List` `Seq` ; bunun yerine nitelikli adları kullanmayı göz önünde bulundurun. Kodun içeri aktarma bildirimlerinin sırasına bağlı olduğu herhangi bir durumu kullanmaktan kaçının.
@@ -73,7 +73,7 @@ printfn "%A" A
 
 Bazı ad alanları, F # kodunda açık bir içeri aktarma bildirimine gerek kalmadan örtük olarak açıldıkları sıklıkla kullanılır. Aşağıdaki tabloda varsayılan olarak açık olan ad alanları gösterilmektedir.
 
-|Ad Alanı|Description|
+|Ad Alanı|Açıklama|
 |---------|-----------|
 |`FSharp.Core`|Ve gibi yerleşik türler için temel F # tür tanımlarını içerir `int` `float` .|
 |`FSharp.Core.Operators`|Ve gibi temel aritmetik işlemleri içerir `+` `*` .|

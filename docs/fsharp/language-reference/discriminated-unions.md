@@ -2,12 +2,12 @@
 title: Ayrılmış Birleşimler
 description: 'F # ayırt edici birleşimler kullanmayı öğrenin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 3f8ac656bd00b1022b2b13ee1be7ca5c98f68db5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f90ac2c2ea21182cf5fd3657d2ada00a763139fe
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812139"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740243"
 ---
 # <a name="discriminated-unions"></a>Ayrılmış Birleşimler
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Ayırt edici birleşimler diğer dillerdeki birleşim türlerine benzerdir, ancak farklılık vardır. C++ ' ta veya Visual Basic değişken türünde bir birleşim türünde olduğu gibi, değerde depolanan veriler düzeltilmez; Bu çeşitli seçeneklerden biri olabilir. Ancak, bu diğer dillerdeki birleşimlerin aksine, olası seçeneklerin her birine bir *Case tanımlayıcısı*verilir. Büyük/küçük harf tanımlayıcıları, bu türdeki nesnelerin olabilecek çeşitli olası değer türlerinin adlarıdır; değerler isteğe bağlıdır. Değerler yoksa, büyük/küçük harf bir numaralandırma durumuna eşdeğerdir. Değerler mevcutsa, her değer belirtilen türde tek bir değer veya aynı ya da farklı türlerin birden fazla alanını toplayan bir tanımlama grubu olabilir. Tek bir alana bir ad verebilirsiniz, ancak aynı durumda diğer alanlar adlandırılmış olsa bile ad isteğe bağlıdır.
+Ayırt edici birleşimler diğer dillerdeki birleşim türlerine benzerdir, ancak farklılık vardır. C++ ' ta veya Visual Basic değişken türünde bir birleşim türünde olduğu gibi, değerde depolanan veriler düzeltilmez; Bu çeşitli seçeneklerden biri olabilir. Ancak, bu diğer dillerdeki birleşimlerin aksine, olası seçeneklerin her birine bir *Case tanımlayıcısı* verilir. Büyük/küçük harf tanımlayıcıları, bu türdeki nesnelerin olabilecek çeşitli olası değer türlerinin adlarıdır; değerler isteğe bağlıdır. Değerler yoksa, büyük/küçük harf bir numaralandırma durumuna eşdeğerdir. Değerler mevcutsa, her değer belirtilen türde tek bir değer veya aynı ya da farklı türlerin birden fazla alanını toplayan bir tanımlama grubu olabilir. Tek bir alana bir ad verebilirsiniz, ancak aynı durumda diğer alanlar adlandırılmış olsa bile ad isteğe bağlıdır.
 
 Ayırt edici birleşimler için erişilebilirlik varsayılan olarak ' dir `public` .
 
@@ -190,10 +190,10 @@ type Shape =
     interface IPrintable with
         member this.Print () =
             match this with
-            | Circle r -> printfn "Circle with radius %f" r
-            | EquilateralTriangle s -> printfn "Equilateral Triangle of side %f" s
-            | Square s -> printfn "Square with side %f" s
-            | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
+            | Circle r -> printfn $"Circle with radius %f{r}"
+            | EquilateralTriangle s -> printfn $"Equilateral Triangle of side %f{s}"
+            | Square s -> printfn $"Square with side %f{s}"
+            | Rectangle(l, w) -> printfn $"Rectangle with length %f{l} and width %f{w}"
 ```
 
 ## <a name="common-attributes"></a>Ortak öznitelikler

@@ -4,12 +4,12 @@ description: "F # ' da, denetim akışı yapıları ve bağlamaları kullanılar
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a0a71533ea1bc87b75f028ad0d416326f627672a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705312"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739319"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
@@ -111,7 +111,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 Çoğu durumda, çağıranlar tarafından atlanabilir. Atlamak için en yaygın yöntem `yield` `->` işleçtir:
@@ -123,7 +123,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 Birçok farklı değer sağlayan daha karmaşık ifadeler ve belki de koşulsuz olarak anahtar sözcüğü atlayarak şunları yapabilirsiniz:
@@ -167,7 +167,7 @@ let squaresAndCubes =
         yield! cubes
     }
 
-printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
+printfn $"{squaresAndCubes}"  // Prints - 1; 4; 9; 1; 8; 27
 ```
 
 Değerlendirildiğinde, tarafından çağrılan hesaplama ifadesinde `yield!` kendi öğeleri bir tane geri alınır ve bu, sonucu düzleştirme.
@@ -262,7 +262,7 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 Yukarıdaki kodda, `Run` ve çağrıları `Delay` Hesaplama ifadesi Oluşturucu sınıfında tanımlanmamışsa atlanır. Burada olarak belirtilen hesaplama ifadesinin gövdesi, `{| cexpr |}` Aşağıdaki tabloda açıklanan Çeviriler tarafından Oluşturucu sınıfının yöntemlerini içeren çağrılara çevrilir. Hesaplama ifadesi `{| cexpr |}` `expr` bir F # ifadesi olduğu ve `cexpr` bir hesaplama ifadesi olduğu bu çevirilerine göre yinelemeli olarak tanımlanır.
 
-|Expression|Çeviri|
+|İfade|Çeviri|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
@@ -390,7 +390,7 @@ let eventually = new EventuallyBuilder()
 
 let comp = eventually {
     for x in 1..2 do
-        printfn " x = %d" x
+        printfn $" x = %d{x}"
     return 3 + 4 }
 
 // Try the remaining lines in F# interactive to see how this
