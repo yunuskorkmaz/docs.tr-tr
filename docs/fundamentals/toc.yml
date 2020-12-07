@@ -367,6 +367,8 @@ items:
             href: ../core/additional-tools/index.md
           - name: .NET kaldırma aracı
             href: ../core/additional-tools/uninstall-tool.md
+          - name: Uzantı yazarları için .NET yükleme aracı
+            href: ../core/additional-tools/vscode-dotnet-runtime.md
           - name: Otomatik olarak imzalanan sertifikalar oluşturma
             href: ../core/additional-tools/self-signed-certificates-guide.md
           - name: WCF web hizmeti başvurusu sağlayıcısı
@@ -1645,6 +1647,8 @@ items:
                 displayName: binary serialization
               - name: BinaryFormatter güvenlik kılavuzu
                 href: ../standard/serialization/binaryformatter-security-guide.md
+              - name: BinaryFormatter olay kaynağı
+                href: ../standard/serialization/binaryformatter-event-source.md
               - name: Serileştirme kavramları
                 href: ../standard/serialization/serialization-concepts.md
               - name: Temel serileştirme
