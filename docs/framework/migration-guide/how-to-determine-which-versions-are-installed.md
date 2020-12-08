@@ -1,24 +1,27 @@
 ---
 title: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
 description: Windows kayıt defterini sorgulayarak bir makineye hangi .NET Framework sürümlerinin yükleneceğini algılamak için kod, regedit.exe veya PowerShell kullanın.
-ms.date: 02/03/2020
+ms.date: 12/04/2020
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - versions, determining for .NET Framework
-- .NET Framework, determining version
+- .NET Framework, determining installed versions
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: b4c5b6911a4be4f9ac156b600646c649549f88f8
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: a219514fafdcb17db259e089afa8318dbab24811
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438135"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851835"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme
 
 Kullanıcılar, .NET Framework birden çok sürümünü bilgisayarlarına [yükleyebilir](../install/index.md) ve çalıştırabilir. Uygulamanızı geliştirirken veya dağıtırken, kullanıcının bilgisayarında hangi .NET Framework sürümlerinin yüklü olduğunu bilmeniz gerekebilir. Kayıt defteri, bilgisayarda yüklü .NET Framework sürümlerinin bir listesini içerir.
+
+> [!NOTE]
+> Bu makale .NET Framework özeldir. Hangi .NET Core ve .NET 5 + SDK ve çalışma zamanlarının yüklendiğini öğrenmek için bkz. [.net 'in zaten yüklü olduğunu denetleme](../../core/install/how-to-detect-installed-versions.md).
 
 .NET Framework, sürümü ayrı olan iki ana bileşenden oluşur:
 
@@ -37,6 +40,21 @@ Hangi .NET Framework sürümlerinin yüklü olduğunu algılamaya yardımcı olm
   Bir PowerShell 2,0 modülü.
 
 Her bir .NET Framework sürümü için yüklü güncelleştirmeleri algılama hakkında bilgi için bkz. [nasıl yapılır: hangi .NET Framework güncelleştirmelerinin yükleneceğini belirleme](how-to-determine-which-net-framework-updates-are-installed.md).
+
+## <a name="determine-which-net-implementation-and-version-an-app-is-running-on"></a>Uygulamanın hangi .NET uygulaması ve sürümü üzerinde çalıştığını belirleme
+
+<xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType>Özelliğini kullanarak uygulamanızın üzerinde çalıştığı .NET uygulaması ve sürümü için sorgulama yapabilirsiniz. Uygulama .NET Framework çalışıyorsa, çıkış şuna benzer olacaktır:
+
+```output
+.NET Framework 4.8.4250.0
+```
+
+Karşılaştırma yaparak, uygulama .NET Core veya .NET 5 + üzerinde çalışıyorsa, çıkış şuna benzer olacaktır:
+
+```output
+.NET Core 3.1.9
+.NET 5.0.0
+```
 
 ## <a name="detect-net-framework-45-and-later-versions"></a>.NET Framework 4,5 ve sonraki sürümleri Algıla
 
@@ -81,13 +99,13 @@ Kayıt defterindeki **Release** REG_DWORD değeri, yüklü .NET Framework sürü
 
 ### <a name="use-registry-editor"></a>Kayıt Defteri Düzenleyicisi 'Ni kullan
 
-01. **Başlat** menüsünde, **Çalıştır**' ı seçin, *Regedit*' i girin ve **Tamam**' ı seçin.
+1. **Başlat** menüsünde, **Çalıştır**' ı seçin, *Regedit*' i girin ve **Tamam**' ı seçin.
 
    (Regedit çalıştırmak için yönetici kimlik bilgilerine sahip olmanız gerekir.)
 
-01. Kayıt Defteri Düzenleyicisi 'nde, aşağıdaki alt anahtarı açın: **\\ yazılım \\ Microsoft \\ net Framework Setup \\ NDP \\ v4 \\ Full HKEY_LOCAL_MACHINE**. **Tam** alt anahtar yoksa, .NET Framework 4,5 veya sonraki bir sürümü yüklü değildir.
+1. Kayıt Defteri Düzenleyicisi 'nde, aşağıdaki alt anahtarı açın: **\\ yazılım \\ Microsoft \\ net Framework Setup \\ NDP \\ v4 \\ Full HKEY_LOCAL_MACHINE**. **Tam** alt anahtar yoksa, .NET Framework 4,5 veya sonraki bir sürümü yüklü değildir.
 
-01. **Yayın** adlı REG_DWORD girişi olup olmadığını denetleyin. Varsa, .NET Framework 4,5 veya sonraki bir sürümü yüklemiş olursunuz. Değeri, .NET Framework belirli bir sürümüne karşılık gelir. Aşağıdaki şekilde, örneğin, **Sürüm** girişinin değeri 528040 ' dir. bu, .NET Framework 4,8 ' in sürüm anahtarıdır.
+1. **Yayın** adlı REG_DWORD girişi olup olmadığını denetleyin. Varsa, .NET Framework 4,5 veya sonraki bir sürümü yüklemiş olursunuz. Değeri, .NET Framework belirli bir sürümüne karşılık gelir. Aşağıdaki şekilde, örneğin, **Sürüm** girişinin değeri 528040 ' dir. bu, .NET Framework 4,8 ' in sürüm anahtarıdır.
 
    ![.NET Framework 4,5 için kayıt defteri girişi](./media/clr-installdir.png )
 

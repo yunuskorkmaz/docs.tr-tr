@@ -3,20 +3,20 @@ title: Azure için geliştirme işlemi
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Azure için geliştirme işlemi
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.date: 12/01/2020
+ms.openlocfilehash: 2706a4091565e6f3cb795acf031a238ae55a1068
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "91169043"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851633"
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
 
 > _"Bulut sayesinde, bireyler ve küçük işletmeler parmaklarını yeniden düzenleyebilir ve kurumsal sınıf Hizmetleri anında ayarlayabilir."_  
 > _-Roy Stephan_
 
-## <a name="vision"></a>Görsel
+## <a name="vision"></a>Vision
 
 > *Visual Studio veya DotNet CLı ve Visual Studio Code ya da seçtiğiniz düzenleyiciyi kullanarak istediğiniz şekilde iyi tasarlanmış ASP .NET Core Uygulamaları geliştirin.*
 
@@ -26,13 +26,13 @@ ms.locfileid: "91169043"
 
 Tam ve güçlü bir IDE ya da hafif ve çevik bir düzenleyici tercih etmeksizin, Microsoft ASP.NET Core uygulamalar geliştirirken kapsanmış olursunuz.
 
-**Visual Studio 2019.** Visual Studio 2019, ASP.NET Core yönelik uygulamalar geliştirmek için sınıfının en iyisi IDE 'dir. Geliştirici üretkenliğini artıran özelliklerin bir konağını sunar. Uygulamayı geliştirmek için kullanabilir ve sonra performansını ve diğer özelliklerini çözümleyebilirsiniz. Tümleşik hata ayıklayıcı, kod yürütmeyi duraklatmanıza ve çalışırken kod aracılığıyla anında ve geriye ilerlemenizi sağlar. Yerleşik Test Çalıştırıcısı, testlerinizi ve sonuçlarını düzenlemenizi sağlar ve kodlarken bile canlı birim testi gerçekleştirebilir. Live Share kullanarak, diğer geliştiricilerle gerçek zamanlı işbirliği yapabilir ve kod oturumunuzu ağ üzerinden sorunsuzca paylaştırın. Ve hazırsanız, Visual Studio, uygulamanızı Azure 'da yayımlamak için gereken her şeyi veya barındırmanızı sağlar.
+**Visual Studio 2019.** Visual Studio 2019, ASP.NET Core yönelik uygulamalar geliştirmek için sınıfının en iyisi IDE 'dir. Geliştirici üretkenliğini artıran özelliklerin bir konağını sunar. Uygulamayı geliştirmek için kullanabilir ve sonra performansını ve diğer özelliklerini çözümleyebilirsiniz. Tümleşik hata ayıklayıcı, kod yürütmeyi duraklatmanıza ve çalışırken kod aracılığıyla anında ve geriye ilerlemenizi sağlar. Yerleşik Test Çalıştırıcısı, testlerinizi ve sonuçlarını düzenlemenizi sağlar ve kodlarken bile canlı birim testi gerçekleştirebilir. Live Share kullanarak, diğer geliştiricilerle gerçek zamanlı işbirliği yapabilir ve kod oturumunuzu ağ üzerinden sorunsuz bir şekilde paylaştırın. Ve hazırsanız, Visual Studio, uygulamanızı Azure 'da yayımlamak için gereken her şeyi veya barındırmanızı sağlar.
 
 [Visual Studio 2019’u İndirin](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code ve DotNet CLI** (Mac, Linux ve Windows için platformlar arası araçlar). Herhangi bir geliştirme dilini destekleyen hafif ve platformlar arası bir düzenleyiciyi tercih ediyorsanız, Microsoft Visual Studio kodu ve DotNet CLı kullanabilirsiniz. Bu ürünler, geliştirici iş akışını kolaylaştıran basit ancak sağlam bir deneyim sağlar. Ayrıca, Visual Studio Code C ve Web geliştirme için uzantıları destekler, bu da \# Düzenleyici içinde IntelliSense ve kısayol görevleri sağlar.
 
-[.NET Core SDK’sını indirin](https://dotnet.microsoft.com/download)
+[.NET SDK'yı indirin](https://dotnet.microsoft.com/download)
 
 [Visual Studio Code'u indirin](https://code.visualstudio.com/download)
 
@@ -56,17 +56,17 @@ Uygulamanızı dağıtacağınız bir Azure App Service oluşturun. Azure portal
 
 **Şekil 10-1.** Azure portalında yeni bir Azure App Service Web uygulaması oluşturma.
 
-CI derleme işleminiz, projenin kaynak denetimi deposuna yeni kod her işlendiği zaman otomatik bir derleme gerçekleştirir. Bu, kodun derlemelerine anında geri bildirim verir (ve ideal olarak otomatikleştirilmiş testler geçirir) ve potansiyel olarak dağıtılabilir. Bu CI derlemesi bir Web dağıtımı paketi yapıtı oluşturacak ve bunu CD işleminiz tarafından tüketimine yayımlayacak.
+CI derleme işleminiz, projenin kaynak denetimi deposuna yeni kod her işlendiği zaman otomatik bir derleme gerçekleştirir. Bu işlem, kodun derlemelerine anında geri bildirim verir (ve ideal olarak otomatikleştirilmiş testleri geçirir) ve potansiyel olarak dağıtılabilir. Bu CI derlemesi bir Web dağıtımı paketi yapıtı oluşturacak ve bunu CD işleminiz tarafından tüketimine yayımlayacak.
 
 [CI derleme işleminizi tanımlama](/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Takımınızın her biri yeni kod işlediğinde, sistemin bir derlemeyi sıraya alması için sürekli tümleştirmeyi etkinleştirdiğinizden emin olun. Derlemeyi test edin ve yapıtlarından biri olarak bir Web dağıtımı paketi üretdiğini doğrulayın.
 
-Bir derleme başarılı olduğunda, CD işleminiz, CI derlemenize ait sonuçları Azure Web uygulamanıza dağıtacaktır. Bunu yapılandırmak için, Azure App Service dağıtım yapılacak bir *Sürüm* oluşturup yapılandırırsınız.
+Bir derleme başarılı olduğunda, CD işleminiz, CI derlemenize ait sonuçları Azure Web uygulamanıza dağıtacaktır. Bu adımı yapılandırmak için, Azure App Service dağıtım yapılacak bir *Sürüm* oluşturup yapılandırırsınız.
 
 [Azure Web uygulaması dağıtma](/azure/devops/pipelines/targets/webapp)
 
-CI/CD işlem hattınız yapılandırıldıktan sonra, Web uygulamanızda güncelleştirmeler yapmanız ve bunları dağıtmak için kaynak denetimine uygulamanız yeterlidir.
+CI/CD işlem hattınız yapılandırıldıktan sonra, Web uygulamanızda kolayca güncelleştirme yapabilir ve bunları dağıtmak için kaynak denetimine kaydedebilirsiniz.
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Azure 'da barındırılan ASP.NET Core uygulamaları geliştirmeye yönelik iş akışı
 
@@ -78,7 +78,7 @@ Azure hesabınızı ve CI/CD işleminizi yapılandırdıktan sonra, Azure 'da ba
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>Adım 1. Yerel geliştirme ortamı iç döngüsü
 
-ASP.NET Core uygulamanızı Azure 'a dağıtmak için geliştirme, aksi takdirde uygulamanızı geliştirmekten farklı değildir. Visual Studio 2017 veya DotNet CLı ile Visual Studio Code ya da tercih ettiğiniz düzenleyiciden bağımsız olarak, rahat bir şekilde sahip olduğunuz yerel geliştirme ortamını kullanın. Değişiklikleri paylaşılan kaynak denetimi deponuza göndermeye hazırlanana kadar, kod yazabilir, değişikliklerinizi çalıştırabilir ve hata ayıklamanıza, otomatikleştirilmiş testleri çalıştırmanıza ve kaynak denetimine yerel yürütmeler yapabilirsiniz.
+ASP.NET Core uygulamanızı Azure 'a dağıtmak için geliştirme, aksi takdirde uygulamanızı geliştirmekten farklı değildir. Visual Studio 2019 veya DotNet CLı ile Visual Studio Code ya da tercih ettiğiniz düzenleyiciden bağımsız olarak, rahat bir şekilde sahip olduğunuz yerel geliştirme ortamını kullanın. Değişiklikleri paylaşılan kaynak denetimi deponuza göndermeye hazırlanana kadar, kod yazabilir, değişikliklerinizi çalıştırabilir ve hata ayıklamanıza, otomatikleştirilmiş testleri çalıştırmanıza ve kaynak denetimine yerel yürütmeler yapabilirsiniz.
 
 #### <a name="step-2-application-code-repository"></a>Adım 2. Uygulama kodu deposu
 
@@ -90,7 +90,7 @@ Paylaşılan uygulama kodu deposuna her yeni bir kayıt yapıldığında yapı s
 
 #### <a name="step-4-build-server-continuous-delivery"></a>4. Adım: Yapı sunucusu: sürekli teslim
 
-Derleme başarılı olduktan sonra, CD işlemi oluşturulan derleme yapıtlarını seçer. Bu, bir Web dağıtımı paketi içerir. Yapı sunucusu bu paketi yeni oluşturulan bir hizmet ile değiştirerek Azure App Service ' a dağıtır. Genellikle bu adım bir hazırlama ortamını hedefler, ancak bazı uygulamalar bir CD işlemi aracılığıyla doğrudan üretime dağıtılır.
+Derleme başarılı olduktan sonra, CD işlemi oluşturulan derleme yapıtlarını seçer. Bu işlem, bir Web dağıtımı paketi içerir. Yapı sunucusu bu paketi yeni oluşturulan bir hizmet ile değiştirerek Azure App Service ' a dağıtır. Genellikle bu adım bir hazırlama ortamını hedefler, ancak bazı uygulamalar bir CD işlemi aracılığıyla doğrudan üretime dağıtılır.
 
 #### <a name="step-5-azure-app-service-web-app"></a>5. Adım. Azure App Service Web App
 

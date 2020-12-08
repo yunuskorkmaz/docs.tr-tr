@@ -6,20 +6,20 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 07/27/2020
-ms.openlocfilehash: f04de5c350dfead4dad8c37eece7f16c9a9e00bc
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.date: 12/01/2020
+ms.openlocfilehash: c29e58fb4c748d6025b7c2fbe62a54a85cc71fba
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515825"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851659"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web Apps ve tek sayfalı uygulamalar (maça 'Lar) arasında seçim yapın
 
 > "Atwood 'ın yasaları: JavaScript 'te yazılabilen tüm uygulamalar, sonunda JavaScript 'e yazılır."  
 > _\- Jeff Atwood_
 
-Günümüzde web uygulamaları oluşturmaya yönelik iki genel yaklaşım vardır: sunucuda uygulama mantığının çoğunu gerçekleştiren geleneksel web uygulamaları ve bir Web tarayıcısında Kullanıcı arabirimi mantığının çoğunu gerçekleştiren tek sayfalı uygulamalar (maça 'Lar), Web API 'Lerini kullanarak Web sunucusuyla iletişim kurmaya yöneliktir. Karma yaklaşım da mümkündür, en basit, daha büyük bir geleneksel Web uygulaması içinde bir veya daha fazla zengin SPA benzeri alt pplicAtions barındırmakta.
+Günümüzde web uygulamaları oluşturmaya yönelik iki genel yaklaşım vardır: sunucuda uygulama mantığının çoğunu gerçekleştiren geleneksel web uygulamaları ve Web 'de Web API 'Lerini kullanarak Web sunucusuyla iletişim kuran tek sayfalı uygulamalar (maça 'Lar). Karma yaklaşım da mümkündür, en basit, daha büyük bir geleneksel Web uygulaması içinde bir veya daha fazla zengin SPA benzeri alt pplicAtions barındırmakta.
 
 Şu durumlarda geleneksel web uygulamaları kullanın:
 
@@ -53,17 +53,17 @@ Blazor yalnızca sunucu tarafından işlenmiş bir Web uygulaması veya SPA 'nı
 
 - Takımınız JavaScript veya TypeScript geliştirmeden .NET geliştirme konusunda daha rahat
 
-.NET Core 'a geçiş yapmayı düşündüğünüz mevcut bir Web Forms uygulamanız varsa, [ Blazor Web Forms geliştiricilerin](../blazor-for-web-forms-developers/index.md) , ' a geçiş yapmayı düşünmenin mantıklı olup olmadığını görmek için ücretsiz e-kitabı gözden geçirmek isteyebilirsiniz Blazor .
+.NET Core veya en son .NET sürümüne geçiş yapmayı düşündüğünüz mevcut bir Web Forms uygulamanız varsa, [ Blazor Web Forms geliştiricilerin](../blazor-for-web-forms-developers/index.md) ' a geçirmeyi düşünmenin mantıklı olup olmadığını görmek için ücretsiz e-kitabı gözden geçirmek isteyebilirsiniz Blazor .
 
 Hakkında daha fazla bilgi için Blazor bkz. [ Blazor ile çalışmaya başlama ](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Geleneksel Web uygulamalarını seçme
 
-Aşağıda, geleneksel web uygulamaları çekmeye yönelik daha önce belirtilen nedenlerden daha ayrıntılı bir açıklama verilmiştir.
+Aşağıdaki bölümde, geleneksel web uygulamaları çekmeye yönelik daha önce belirtilen nedenlerden daha ayrıntılı bir açıklama verilmiştir.
 
 **Uygulamanızda basit, muhtemelen salt okunurdur, istemci tarafı gereksinimleri vardır**
 
-Birçok Web uygulaması öncelikle kullanıcılarının büyük bir tarafında salt okunurdur. Salt okuma (veya salt okuma) uygulamaları, büyük bir durum yaşlanmakla ve bunlarla çok daha basit olmaya eğilimlidir. Örneğin, bir arama altyapısı, arama sonuçlarını görüntülemek için bir TextBox ve ikinci bir sayfa içeren tek bir giriş noktası içerebilir. Anonim kullanıcılar kolayca istek yapabilir ve istemci tarafı mantığı için çok az gereksinim vardır. Benzer şekilde, bir blog veya içerik yönetim sisteminin herkese açık uygulaması genellikle çok sayıda istemci tarafı davranışına sahip içerikten oluşur. Bu tür uygulamalar, Web sunucusunda Logic ve tarayıcıda görüntülenmek üzere işleme HTML 'i gerçekleştiren geleneksel sunucu tabanlı Web uygulamaları olarak kolayca oluşturulmuştur. Sitenin her benzersiz sayfasının, arama motorları tarafından yer işareti eklenen ve dizini oluşturulmuş bir URL 'SI vardır (varsayılan olarak, bunu uygulamanın ayrı bir özelliği olarak eklemek zorunda kalmadan), bu senaryolarda de net bir avantajdır.
+Birçok Web uygulaması öncelikle kullanıcılarının büyük bir tarafında salt okunurdur. Salt okuma (veya salt okuma) uygulamaları, büyük bir durumu barındıran ve işleyen uygulamalardan çok daha basit olmaya eğilimlidir. Örneğin, bir arama altyapısı, arama sonuçlarını görüntülemek için bir TextBox ve ikinci bir sayfa içeren tek bir giriş noktası içerebilir. Anonim kullanıcılar kolayca istek yapabilir ve istemci tarafı mantığı için çok az gereksinim vardır. Benzer şekilde, bir blog veya içerik yönetim sisteminin herkese açık uygulaması genellikle çok sayıda istemci tarafı davranışına sahip içerikten oluşur. Bu tür uygulamalar, Web sunucusunda Logic ve tarayıcıda görüntülenmek üzere işleme HTML 'i gerçekleştiren geleneksel sunucu tabanlı Web uygulamaları olarak kolayca oluşturulmuştur. Sitenin her benzersiz sayfasının, arama motorları tarafından yer işareti eklenen ve dizini oluşturulmuş bir URL 'SI vardır (varsayılan olarak, bu işlevselliği uygulamanın ayrı bir özelliği olarak eklemek zorunda kalmadan), bu senaryolarda de net bir avantajdır.
 
 **Uygulamanızın JavaScript desteği olmayan tarayıcılarda çalışması gerekiyor**
 
@@ -75,13 +75,13 @@ Takımınız JavaScript veya TypeScript 'i tanımıyor, ancak sunucu tarafı Web
 
 ## <a name="when-to-choose-spas"></a>Maça ne zaman seçlik
 
-Aşağıda, Web uygulamanız için tek sayfalı uygulamalar için geliştirme stili seçme konusunda daha ayrıntılı bir açıklama verilmiştir.
+Aşağıdaki bölüm, Web uygulamanız için tek sayfalı uygulamalar için geliştirme tarzın ne zaman seçdiğinin daha ayrıntılı bir açıklaması.
 
 **Uygulamanız çok sayıda özelliği olan zengin bir kullanıcı arabirimi kullanıma sunmalıdır**
 
 Maça, kullanıcılar eylem gerçekleştirirken veya uygulamanın bölgeleri arasında gezinirken sayfayı yeniden yüklemeyi gerektirmeyen zengin istemci tarafı işlevleri destekleyebilir. Maça daha hızlı yükleyebilir, arka planda veri alabilir ve tam sayfa yeniden yükleme nadir olduğundan tek tek kullanıcı eylemleri daha fazla yanıt verir. Maça, kullanıcının form göndermek için bir düğmeye tıklamasına gerek kalmadan, kısmen tamamlanmış formları veya belgeleri kaydederek Artımlı güncelleştirmeleri destekleyebilir. Maça, sürükle ve bırak gibi zengin istemci tarafı davranışlarını, geleneksel uygulamalardan çok daha kolay bir şekilde destekleyebilir. Maça bağlantısı kesik modda çalışacak şekilde tasarlanabilir ve bir bağlantı yeniden kurulduktan sonra sonunda sunucuya geri eşitlenen bir istemci tarafı modelinde güncelleştirmeler yapılır. Uygulamanızın gereksinimleri, tipik HTML formlarının sunduğu özellikleri kapsayan zengin işlevselliği içeriyorsa, SPA stili bir uygulama seçin.
 
-Genellikle, maça 'ın geçerli işlemi yansıtan adres çubuğunda anlamlı bir URL görüntüleme (ve bu URL 'ye dönmek için kullanıcıların yer işaretine veya derin bağlantı kurmasına izin verme gibi) geleneksel Web uygulamalarına yerleşik özellikler uygulaması gerekir. Ayrıca, kullanıcıların tarayıcı geri ve İleri düğmelerini Istenmeyen sonuçlarla kullanmasına izin vermeleri gerekir.
+Genellikle, maça, adres çubuğunda geçerli işlemi yansıtan anlamlı bir URL görüntüleme (ve bu URL 'ye dönmek için kullanıcıların yer işaretine veya derin bağlantı kurmasına izin veren) gibi geleneksel Web uygulamalarında yerleşik olan özellikleri uygulaması gerekir. Ayrıca, kullanıcıların tarayıcı geri ve İleri düğmelerini Istenmeyen sonuçlarla kullanmasına izin vermeleri gerekir.
 
 **Takımınız JavaScript ve/veya TypeScript geliştirmeyi biliyor**
 
@@ -102,7 +102,7 @@ Web API 'sini zaten başka istemciler tarafından kullanılmak üzere destekliyo
 
 ## <a name="when-to-choose-no-locblazor"></a>Ne zaman seçim Blazor
 
-Aşağıda, Web uygulamanız için ne zaman seçeceğiniz hakkında daha ayrıntılı bir açıklama verilmiştir Blazor .
+Aşağıdaki bölümde, Web uygulamanız için ne zaman seçeceğiniz hakkında daha ayrıntılı bir açıklama verilmiştir Blazor .
 
 **Uygulamanız, zengin bir kullanıcı arabirimini kullanıma sunmalıdır**
 
@@ -116,11 +116,11 @@ Birçok geliştirici, JavaScript veya TypeScript gibi istemci tarafı dillerle .
 
 Aşağıdaki karar tablosu, geleneksel bir Web uygulaması, SPA veya bir uygulama arasında seçim yaparken göz önünde bulundurmanız gereken bazı temel faktörleri özetler Blazor .
 
-| **Faktör**                                           | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** | **Blazor Uygulamanızda**  |
+| **Çarpan**                                           | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** | **Blazor Uygulamanızda**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
 | JavaScript/TypeScript ile gerekli takım hakkında benzerlik | **En az**             | **Gerekli**                | **En az**     |
 | Betik olmadan destek tarayıcıları                   | **Desteklenir**           | **Desteklenmiyor**           | **Desteklenir**   |
-| En az Istemci tarafı uygulama davranışı             | **İyi uygun**         | **Gereğinden fazla**                | **Uygun**      |
+| En küçük Client-Side uygulama davranışı             | **İyi uygun**         | **Gereğinden fazla**                | **Uygun**      |
 | Zengin, karmaşık kullanıcı arabirimi gereksinimleri            | **Sınırlı**             | **İyi uygun**             | **İyi uygun** |
 
 >[!div class="step-by-step"]

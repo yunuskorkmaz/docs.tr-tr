@@ -3,20 +3,20 @@ title: Ortak web uygulaması mimarileri
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Ortak Web uygulaması mimarilerini keşfet
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: 86d2e931e6462fb9f6ff5e3cd31b8d3fd188dd5a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/01/2020
+ms.openlocfilehash: c9c593788d4cdbb5a1d4c57ac91880ef965f06fa
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682048"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851744"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
-> "İyi mimari maliyetli düşünüyorsanız, kötü bir mimari deneyin."  
+> "İyi mimari maliyetli düşünüyorsanız, kötü bir mimari deneyin."
 > _-Brian PTE ve Joseph Yoder_
 
-En geleneksel .NET uygulamaları, tek bir IIS AppDomain içinde çalışan bir yürütülebilir dosyaya veya tek bir Web uygulamasına karşılık gelen tek bir birim olarak dağıtılır. Bu en basit dağıtım modelidir ve çok sayıda iç ve daha küçük genel uygulama sunar. Ancak, bu tek dağıtım birimi de verildiğinde, önemsiz olmayan iş uygulamalarının çoğu, bazı mantıksal ayırmalardan birkaç katmana faydalanır.
+En geleneksel .NET uygulamaları, tek bir IIS AppDomain içinde çalışan bir yürütülebilir dosyaya veya tek bir Web uygulamasına karşılık gelen tek bir birim olarak dağıtılır. Bu yaklaşım, en basit dağıtım modelidir ve çok sayıda iç ve daha küçük genel uygulama sunar. Ancak, bu tek dağıtım birimi de verildiğinde, önemsiz olmayan iş uygulamalarının çoğu, bazı mantıksal ayırmalardan birkaç katmana faydalanır.
 
 ## <a name="what-is-a-monolithic-application"></a>Tek parçalı uygulama nedir?
 
@@ -40,15 +40,15 @@ Uygulamalar, bu sorunları çözmek için genellikle her projenin uygulamanın b
 
 ## <a name="what-are-layers"></a>Mantıksal katman nedir?
 
-Uygulamalar karmaşıklıkla büyüdükçe, bu karmaşıklığı yönetmenin bir yolu, uygulamayı sorumluluklara veya kaygılarına göre kesmeniz gerekir. Bu, kaygıları ilkesinin ayrımını izler ve geliştiricilerin belirli işlevlerin uygulandığı yeri kolayca bulabilmeleri için büyüyen bir kod temelinin düzenlenmesine devam etmenize yardımcı olabilir. Katmanlı mimari, yalnızca kod kuruluşunun ötesinde çok sayıda avantaj sunar, ancak.
+Uygulamalar karmaşıklıkla büyüdükçe, bu karmaşıklığı yönetmenin bir yolu, uygulamayı sorumluluklara veya kaygılarına göre kesmeniz gerekir. Bu yaklaşım, endişeleri ayırmayı izler ve geliştiricilerin belirli işlevlerin uygulandığını kolayca bulabileceği şekilde artan bir kod tabanının düzenlenmesine devam etmenize yardımcı olabilir. Katmanlı mimari, yalnızca kod kuruluşunun ötesinde çok sayıda avantaj sunar, ancak.
 
 Kodu katmanlara düzenleyerek, yaygın alt düzey işlevler uygulama genelinde yeniden kullanılabilir. Bu yeniden kullanım yararlı olur çünkü bu, daha az kodun yazılması ve uygulamanın tek bir uygulamada standartlaştırılmasına izin verebileceğinden, [kendinizi yinelemeyin (kuru)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) prensibi bir uygulamadır.
 
-Katmanlı mimari sayesinde uygulamalar, diğer katmanlarla iletişim kurabildiği katmanların kısıtlamalarını uygulayabilir. Bu, kapsülleme elde etmenize yardımcı olur. Bir katman değiştirildiğinde veya değiştirildiğinde, yalnızca onunla birlikte çalışan katmanların etkilenmesi gerekir. Hangi katmanların diğer katmanlara bağlı olduğunu sınırlayarak, tek bir değişikliğin uygulamanın tamamını etkilememesi için değişikliklerin etkileri azaltılabilir.
+Katmanlı mimari sayesinde uygulamalar, diğer katmanlarla iletişim kurabildiği katmanların kısıtlamalarını uygulayabilir. Bu mimari kapsülleme elde etmenize yardımcı olur. Bir katman değiştirildiğinde veya değiştirildiğinde, yalnızca onunla birlikte çalışan katmanların etkilenmesi gerekir. Hangi katmanların diğer katmanlara bağlı olduğunu sınırlayarak, tek bir değişikliğin uygulamanın tamamını etkilememesi için değişikliklerin etkileri azaltılabilir.
 
-Katmanlar (ve Kapsülleme), uygulama içinde işlevselliğin değiştirilmesini çok daha kolay hale getirir. Örneğin, bir uygulama başlangıçta kendi SQL Server veritabanını kalıcılık için kullanabilir, ancak daha sonra bulut tabanlı bir kalıcılık stratejisi veya bir Web API 'sinin arkasında bir tane kullanmayı tercih edebilir. Uygulama, kalıcılık uygulamasını mantıksal bir katmanda doğru şekilde kapsülleniyorsa, bu SQL Server belirli katman aynı ortak arabirimi uygulayan yeni bir katman ile değiştirilebilir.
+Katmanlar (ve Kapsülleme), uygulama içinde işlevselliğin değiştirilmesini çok daha kolay hale getirir. Örneğin, bir uygulama başlangıçta kendi SQL Server veritabanını kalıcılık için kullanabilir, ancak daha sonra bulut tabanlı bir kalıcılık stratejisi veya bir Web API 'sinin arkasında bir tane kullanmayı tercih edebilir. Uygulama, kalıcılık uygulamasını mantıksal bir katmanda doğru şekilde kapsülleniyorsa, bu SQL Server özgü katman aynı ortak arabirimi uygulayan yeni bir katman ile değiştirilebilir.
 
-Uygulama katmanları, gereksinimlerdeki gelecekteki değişikliklere yanıt olarak, uygulamaların takas edilmesine ek olarak, uygulamaları test amacıyla değiştirmeyi de kolaylaştırabilir. Uygulamanın gerçek veri katmanına veya Kullanıcı arabirimi katmanına karşı çalışan testler yazmak yerine, bu katmanlar, isteklere bilinen yanıtlar sağlayan sahte uygulamalarla birlikte test sırasında değiştirilebilir. Bu genellikle testlerin, uygulamanın gerçek altyapısına karşı testleri çalıştırmaya kıyasla daha kolay yazma ve çalışmayı çok daha kolay hale getirir.
+Uygulama katmanları, gereksinimlerdeki gelecekteki değişikliklere yanıt olarak, uygulamaların takas edilmesine ek olarak, uygulamaları test amacıyla değiştirmeyi de kolaylaştırabilir. Uygulamanın gerçek veri katmanına veya Kullanıcı arabirimi katmanına karşı çalışan testler yazmak yerine, bu katmanlar, isteklere bilinen yanıtlar sağlayan sahte uygulamalarla birlikte test sırasında değiştirilebilir. Bu yaklaşım genellikle testlerin, uygulamanın gerçek altyapısına karşı testleri çalıştırmaya kıyasla daha kolay yazma ve çalışmayı çok daha kolay hale getirir.
 
 Mantıksal katmanlama, kurumsal yazılım uygulamalarında kod organizasyonunu iyileştirmeye yönelik yaygın bir tekniktir ve kodun katmanlara düzenlenebilmesinin birkaç yolu vardır.
 
@@ -101,7 +101,7 @@ Bağımlılık Inversion Ilkesinin yanı sıra Domain-Driven tasarımı (DDD) il
 
 EShopOnWeb Reference uygulaması, kodunu projeler halinde organize eden temizleme mimarisi yaklaşımını kullanır. [Ardalış/Temizleme mimarisi](https://github.com/ardalis/cleanarchitecture) GitHub deposunda kendi ASP.NET Core için başlangıç noktası olarak kullanabileceğiniz bir çözüm şablonu bulabilirsiniz.
 
-Temizleme mimarisi, iş mantığını ve uygulama modelini uygulamanın ortasına koyar. İş mantığını veri erişimine veya diğer altyapı kaygılarına bağlı olmak yerine, bu bağımlılık tersine çevrilir: altyapı ve uygulama ayrıntıları uygulama çekirdeğinize bağlıdır. Bu, uygulama çekirdeği içinde, daha sonra altyapı katmanında tanımlanan türler tarafından uygulanan soyutlamalar veya arabirimler tanımlayarak elde edilir. Bu mimariyi görselleştirmenin yaygın bir yolu, bir çoklu kare ile benzer bir dizi Eşmerkezli daire kullanmaktır. Şekil 5-7, mimari gösteriminin bu stilinin bir örneğini gösterir.
+Temizleme mimarisi, iş mantığını ve uygulama modelini uygulamanın ortasına koyar. İş mantığını veri erişimine veya diğer altyapı kaygılarına bağlı olmak yerine, bu bağımlılık tersine çevrilir: altyapı ve uygulama ayrıntıları uygulama çekirdeğinize bağlıdır. Bu işlevsellik, uygulama çekirdeği içinde, daha sonra altyapı katmanında tanımlanan türler tarafından uygulanan soyutlamalar veya arabirimler tanımlayarak elde edilir. Bu mimariyi görselleştirmenin yaygın bir yolu, bir çoklu kare ile benzer bir dizi Eşmerkezli daire kullanmaktır. Şekil 5-7, mimari gösteriminin bu stilinin bir örneğini gösterir.
 
 ![Mimariyi Temizleme; soğan görünümü](./media/image5-7.png)
 
@@ -135,7 +135,7 @@ Uygulama çekirdeği altyapıya bağlı olmadığından, bu katman için otomati
 
 UI katmanının altyapı projesinde tanımlı türler üzerinde doğrudan bağımlılığı olmadığından, uygulamayı kolaylaştırmak ya da uygulama gereksinimlerini değiştirmeye yanıt vermek için uygulamaları değiştirmek çok kolay olur. ASP.NET Core yerleşik kullanımı ve bağımlılık ekleme için destek, bu mimarinin, önemsiz olmayan tek parçalı uygulamalar sağlamak için en uygun yolu sağlar.
 
-Tek parçalı uygulamalar için uygulama çekirdeği, altyapı ve Kullanıcı arabirimi projelerinin hepsi tek bir uygulama olarak çalıştırılır. Çalışma zamanı uygulama mimarisi Şekil 5-12 gibi görünebilir.
+Tek parçalı uygulamalar için, uygulama çekirdeği, altyapı ve Kullanıcı arabirimi projelerinin hepsi tek bir uygulama olarak çalıştırılır. Çalışma zamanı uygulama mimarisi Şekil 5-12 gibi görünebilir.
 
 ![ASP.NET Core mimarisi 2](./media/image5-12.png)
 
@@ -215,15 +215,15 @@ Tek parçalı uygulama dağıtımlarını yönetmek için kapsayıcıları kulla
 
 Docker görüntüsü olarak güncelleştirmelerin dağıtımı, çok daha hızlı ve daha verimlidir. Docker görüntüleri genellikle Saniyeler içinde başlar, piyasaya çıkarma hızlandırın. Docker örneğini aşağı doğru artırma `docker stop` , genellikle bir saniyeden daha az bir şekilde tamamlanan bir komut vermek kadar kolaydır.
 
-Kapsayıcılar, Tasarım gereği doğal olarak değişmez, ancak güncelleştirme betikleri, diskte kalan belirli bir yapılandırma veya dosya için hesabı unutabilirken, bu durumda bozuk VM 'Lerde endişelenmenize gerek kalmaz.
+Kapsayıcılar, Tasarım gereği doğal olarak değişmez, ancak güncelleştirme betikleri disk üzerinde belirli bir yapılandırma veya dosya için hesabı unutabilirken, bu durumda bozuk VM 'Ler hakkında endişelenmeniz gerekmez.
 
-Docker kapsayıcılarını, daha basit Web uygulamalarının tek parçalı dağıtımı için kullanabilirsiniz. Bu, sürekli tümleştirme ve sürekli dağıtım işlem hatlarını geliştirir ve dağıtım-üretim başarısını elde etmenize yardımcı olur. Daha fazla "makinem üzerinde çalışmıyor, neden üretimde çalışmıyor?"
+Docker kapsayıcılarını, daha basit Web uygulamalarının tek parçalı dağıtımı için kullanabilirsiniz. Bu yaklaşım sürekli tümleştirme ve sürekli dağıtım işlem hatlarını geliştirir ve dağıtım-üretim başarısını elde etmenize yardımcı olur. Daha fazla "makinem üzerinde çalışmıyor, neden üretimde çalışmıyor?"
 
 Mikro hizmet tabanlı mimarinin birçok avantajı vardır, ancak bu avantajlar artan karmaşıklık maliyetlerine göre gelir. Bazı durumlarda, maliyetler avantajlardan yararlanır. böylece tek bir kapsayıcıda veya yalnızca birkaç kapsayıcıda çalışan tek parçalı bir dağıtım uygulaması daha iyi bir seçenektir.
 
 Tek parçalı bir uygulama iyi ayrılmış mikro hizmetlere kolayca parçalanmayabilir. Mikro hizmetler, daha esnek bir uygulama sağlamak için birbirinden bağımsız olarak çalışmalıdır. Uygulamanın bağımsız Özellik dilimlerini teslim ediyorsanız, yalnızca karmaşıklık ekler.
 
-Uygulamanın özellikleri bağımsız olarak ölçeklendirmeniz gerekebilir. Birçok uygulama, tek bir örneği aşmaları gerektiğinde bunu, tüm örneği klonlamak için görece basit bir süreç aracılığıyla yapabilir. Uygulamayı ayrık hizmetlere ayırmak için ek iş, uygulamanın tam örneklerinin ölçeklendirilmesi basit ve ekonomik hale geldiğinde en az avantaj sağlar.
+Uygulamanın özellikleri bağımsız olarak ölçeklendirmeniz gerekebilir. Birçok uygulama, tek bir örneği aşmaları gerektiğinde bunu, tüm örneği klonlamak için görece basit bir süreç aracılığıyla yapabilir. Uygulamayı ayrık hizmetlere ayırmak için ek çalışma, uygulamanın tam örneklerinin ölçeklendirilmesi için basit ve uygun maliyetli hale geldiğinde en az avantaj sağlar.
 
 Uygulamanın geliştirilmesi sırasında, doğal işlev sınırlarının bulunduğu açık bir fikriniz olmayabilir. En az uygulanabilir bir ürün geliştirirken doğal ayrım henüz ortaya çıkabilir. Bu koşullardan bazıları geçici olabilir. Tek parçalı bir uygulama oluşturarak başlayabilir ve daha sonra bazı özellikleri, mikro hizmetler olarak geliştirilip dağıtılacak şekilde ayırabilirsiniz. Diğer koşullar uygulamanın sorun alanı için önemli olabilir, yani uygulama hiçbir şekilde birden fazla mikro hizmete parçalanmayabilir.
 
@@ -231,17 +231,17 @@ Bir uygulamayı birçok ayrı işleme ayırmak de ek yük getirir. Özellikleri 
 
 Çok daha basit [Eshoponweb Reference uygulaması](https://github.com/dotnet-architecture/eShopOnWeb) , tek Kapsayıcılı tek parçalı kapsayıcı kullanımını destekler. Uygulama, geleneksel MVC görünümlerini, Web API 'Lerini ve Razor Pages içeren bir Web uygulaması içerir. Bu uygulama, ve komutları kullanılarak çözüm kökünden başlatılabilir `docker-compose build` `docker-compose up` . Bu komut, Web projesinin kökünde bulunan ' i kullanarak Web örneği için bir kapsayıcı yapılandırır `Dockerfile` ve kapsayıcıyı belirtilen bir bağlantı noktasında çalıştırır. Bu uygulamanın kaynağını GitHub 'dan indirebilir ve yerel olarak çalıştırabilirsiniz. Bu tek parçalı uygulama avantajlarının bir kapsayıcı ortamında dağıtılması bile.
 
-Bir tane için Kapsayıcılı dağıtım, uygulamanın her örneğinin aynı ortamda çalıştığı anlamına gelir. Bu, erken test ve geliştirmenin gerçekleştiği geliştirici ortamını içerir. Geliştirme ekibi, uygulamayı üretim ortamıyla eşleşen kapsayıcılı bir ortamda çalıştırabilir.
+Bir tane için Kapsayıcılı dağıtım, uygulamanın her örneğinin aynı ortamda çalıştığı anlamına gelir. Bu yaklaşım, erken test ve geliştirmenin gerçekleştiği geliştirici ortamını içerir. Geliştirme ekibi, uygulamayı üretim ortamıyla eşleşen kapsayıcılı bir ortamda çalıştırabilir.
 
-Ayrıca, Kapsayıcılı uygulamalar daha düşük maliyette ölçeği azaltır. Kapsayıcı ortamının kullanılması, geleneksel VM ortamlarından daha fazla kaynak paylaşımını mümkün bir şekilde sunar.
+Ayrıca, Kapsayıcılı uygulamalar daha düşük bir maliyetle ölçeği azaltır. Kapsayıcı ortamının kullanılması, geleneksel VM ortamlarından daha fazla kaynak paylaşımını mümkün bir şekilde sunar.
 
 Son olarak, uygulamayı kapsayıcı iş mantığı ve depolama sunucusu arasında ayrımı zorlar. Uygulama ölçeklendirilirken, birden çok kapsayıcı tek bir fiziksel depolama ortamına bağlıdır. Bu depolama ortamı genellikle SQL Server veritabanı çalıştıran yüksek kullanılabilirliğe sahip bir sunucu olur.
 
 ## <a name="docker-support"></a>Docker desteği
 
-`eShopOnWeb`Proje .NET Core üzerinde çalışır. Bu nedenle, Linux tabanlı veya Windows tabanlı kapsayıcılardan çalıştırılabilir. Docker dağıtımı için SQL Server aynı konak türünü kullanmak istediğinizi unutmayın. Linux tabanlı kapsayıcılar daha küçük bir ayak izine izin verir ve tercih edilir.
+`eShopOnWeb`Proje .net üzerinde çalışır. Bu nedenle, Linux tabanlı veya Windows tabanlı kapsayıcılardan çalıştırılabilir. Docker dağıtımı için SQL Server aynı konak türünü kullanmak istediğinizi unutmayın. Linux tabanlı kapsayıcılar daha küçük bir ayak izine izin verir ve tercih edilir.
 
-**Çözüm Gezgini** bir projeye sağ tıklayıp **Add**  >  **Docker desteği** Ekle ' yi seçerek var olan bir uygulamaya Docker desteği eklemek için Visual Studio 2017 veya sonraki bir sürümünü kullanabilirsiniz. Bu, gerekli dosyaları ekler ve projeyi kullanmak için değiştirir. Geçerli `eShopOnWeb` örnekte bu dosyalar zaten var.
+**Çözüm Gezgini** bir projeye sağ tıklayıp **Add**  >  **Docker desteği** Ekle ' yi seçerek var olan bir uygulamaya Docker desteği eklemek için Visual Studio 2017 veya sonraki bir sürümünü kullanabilirsiniz. Bu adım gerekli dosyaları ekler ve projeyi kullanmak için değiştirir. Geçerli `eShopOnWeb` örnekte bu dosyalar zaten var.
 
 Çözüm düzeyi dosya, `docker-compose.yml` hangi görüntülerin derlemesinin ve hangi kapsayıcıların başlatılabileceğinize ilişkin bilgiler içerir. Bu dosya `docker-compose` , aynı anda birden çok uygulamayı başlatmak için komutunu kullanmanıza olanak sağlar. Bu durumda, yalnızca Web projesi başlatılıyor. Ayrıca, ayrı bir veritabanı kapsayıcısı gibi bağımlılıkları yapılandırmak için de kullanabilirsiniz.
 
@@ -268,7 +268,7 @@ networks:
 `docker-compose.yml`Dosya, projedeki öğesine başvurur `Dockerfile` `Web` . `Dockerfile`Kullanılacak temel kapsayıcıyı ve uygulamanın nasıl yapılandırılacağını belirtmek için kullanılır. `Web`' `Dockerfile` :
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -278,7 +278,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 
@@ -291,7 +291,7 @@ Kapsayıcılı uygulamayı çalıştırdıktan sonra, siz durduruncaya kadar ça
 
 Docker Kapsayıcıları çalıştırmanın, daha önce geliştirme ortamınızda kullanmayı deneyebileceğinizi belirten bağlantı noktalarına bağlanmadığını unutmayın. Çalışan bir Docker kapsayıcısı ile aynı bağlantı noktasını kullanarak bir uygulamayı çalıştırmaya veya hata ayıklamanıza çalışırsanız, sunucunun o bağlantı noktasına bağlanmadığını belirten bir hata alırsınız. Bir kez daha, kapsayıcıyı durdurmak sorunu çözmelidir.
 
-Visual Studio kullanarak uygulamanıza Docker desteği eklemek istiyorsanız, bunu yaptığınızda Docker Desktop 'ın çalıştığından emin olun. Sihirbazı başlattığınızda Docker Desktop çalışmıyorsa sihirbaz düzgün çalışmaz. Ayrıca, sihirbaz geçerli kapsayıcı seçiminizi inceleyerek doğru Docker desteğini de ekler. Windows kapsayıcıları için destek eklemek istiyorsanız, Windows kapsayıcılarıyla çalışan Docker Desktop 'ı kullanırken Sihirbazı çalıştırmanız gerekir. Linux kapsayıcıları için destek eklemek istiyorsanız, Linux kapsayıcılarıyla çalışırken Docker çalışırken Sihirbazı çalıştırın.
+Visual Studio kullanarak uygulamanıza Docker desteği eklemek istiyorsanız, bunu yaptığınızda Docker Desktop 'ın çalıştığından emin olun. Sihirbazı başlattığınızda Docker Desktop çalışmıyorsa sihirbaz düzgün çalışmaz. Ayrıca, sihirbaz geçerli kapsayıcı seçiminizi inceleyerek doğru Docker desteğini de ekler. Windows kapsayıcıları için destek eklemek istiyorsanız, Windows kapsayıcılarıyla çalışırken Docker Desktop ' ı kullanırken Sihirbazı çalıştırmanız gerekir. Linux kapsayıcıları için destek eklemek istiyorsanız, Linux kapsayıcılarıyla çalışırken Docker çalışırken Sihirbazı çalıştırın.
 
 ### <a name="references--common-web-architectures"></a>Başvurular – ortak Web mimarileri
 

@@ -2,46 +2,43 @@
 title: .NET 'teki kod analizi
 titleSuffix: ''
 description: .NET SDK 'da kaynak kodu analizi hakkında bilgi edinin.
-ms.date: 08/22/2020
+ms.date: 12/04/2020
 ms.topic: overview
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739980"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851822"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET kaynak kodu çözümlemesine genel bakış
 
-.NET derleyici platformu (Roslyn) çözümleyicileri, C# veya Visual Basic kodunuzda kod kalitesi ve kod stili sorunları olup olmadığını inceler. .NET 5.0’dan itibaren bu çözümleyiciler, .NET SDK’ya dahildir. .NET 5 + SDK ' ya geçmek istemiyorsanız veya bir NuGet paket tabanlı modeli tercih ediyorsanız, çözümleyiciler `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet paketinde](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)de mevcuttur. İsteğe bağlı sürüm güncelleştirmeleri için paket tabanlı bir model tercih edebilirsiniz.
+.NET derleyici platformu (Roslyn) çözümleyicileri, C# veya Visual Basic kodunuzda kod kalitesi ve kod stili sorunları olup olmadığını inceler. .NET 5,0 ' den itibaren bu çözümleyiciler .NET SDK 'ya dahildir ve bunları ayrı olarak yüklemeniz gerekmez. Projeniz .NET 5 veya sonraki bir sürümünü hedefliyorsa, kod analizi varsayılan olarak etkindir. Projeniz, örneğin .NET Core, .NET Standard veya .NET Framework gibi farklı bir .NET uygulamasını hedefliyorsanız, [Enablenetçözümleyiciler](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) özelliğini olarak ayarlayarak Kod analizini el ile etkinleştirmeniz gerekir `true` .
+
+.NET 5 + SDK ' ya geçmek istemiyorsanız veya bir NuGet paket tabanlı modeli tercih ediyorsanız, çözümleyiciler [Microsoft. CodeAnalysis. Netçözümleyiciler NuGet paketinde](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)de mevcuttur. İsteğe bağlı sürüm güncelleştirmeleri için paket tabanlı bir model tercih edebilirsiniz.
 
 > [!NOTE]
-> .NET Çözümleyicileri hedef platform belirsiz. Diğer bir deyişle, projenizin belirli bir .NET platformunu hedeflemesi gerekmez. Çözümleyiciler, `net5.0` ve gibi önceki .NET sürümlerinin yanı sıra hedeflenen projeler için de çalışır `netcoreapp` `netstandard` `net472` .
-
-- [Kod kalitesi analizi ("CAxxxx" kuralları)](#code-quality-analysis)
-- [Kod stili Analizi ("ıdexxxx" kuralları)](#code-style-analysis)
+> .NET Çözümleyicileri hedef çerçeve belirsiz. Diğer bir deyişle, projenizin belirli bir .NET uygulamasını hedeflemesi gerekmez. Çözümleyiciler, `net5.0` ve gibi önceki .NET sürümlerinin yanı sıra hedeflenen projeler için de çalışır `netcoreapp3.1` `net472` .
 
 Kural ihlalleri bir çözümleyici tarafından bulunursa, her kuralın nasıl [yapılandırıldığına](configuration-options.md)bağlı olarak öneri, uyarı veya hata olarak bildirilir. Kod Analizi ihlalleri, derleyici hatalarından ayırt edilebilmesi için "CA" veya "IDE" önekiyle birlikte görüntülenir.
 
-> [!TIP]
->
-> - [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [xUnit Çözümleyicileri](https://www.nuget.org/packages/xunit.analyzers/)ve [sonar Çözümleyicisi](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)gibi üçüncü taraf Çözümleyicileri de yükleyebilirsiniz.
-> - Visual Studio kullanıyorsanız, birçok çözümleyici kuralı, sorunu gidermek için uygulayabileceğiniz ilişkili *kod düzeltmeleri* vardır. Kod düzeltmeleri ampul simgesi menüsünde gösterilir.
-
 ## <a name="code-quality-analysis"></a>Kod kalitesi analizi
 
-_Code Quality Analysis ("CA") kuralları_ , güvenlik, performans, tasarım ve diğer sorunlar Için C# veya Visual Basic kodunuzu inceler. Varsayılan olarak, .NET 5,0 veya üstünü hedefleyen projeler için analiz etkindir. [Enablenetçözümleyiciler](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) özelliğini olarak ayarlayarak, önceki .NET sürümlerini hedefleyen projelerde Kod analizini etkinleştirebilirsiniz `true` . Ayrıca, olarak ayarlayarak projeniz için kod analizini devre dışı bırakabilirsiniz `EnableNETAnalyzers` `false` .
+*Code Quality Analysis* ("caxxxx") kuralları, güvenlik, performans, tasarım ve diğer sorunlar Için C# veya Visual Basic kodunuzu inceler. Varsayılan olarak, .NET 5,0 veya üstünü hedefleyen projeler için analiz etkindir. [Enablenetçözümleyiciler](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) özelliğini olarak ayarlayarak, önceki .NET sürümlerini hedefleyen projelerde Kod analizini etkinleştirebilirsiniz `true` . Ayrıca, olarak ayarlayarak projeniz için kod analizini devre dışı bırakabilirsiniz `EnableNETAnalyzers` `false` .
 
 > [!TIP]
-> Visual Studio 'da, proje Özellikler penceresi kullanarak kod analizini etkinleştirebilir veya devre dışı bırakabilirsiniz. Projeye Özellikler penceresi erişmek için, Çözüm Gezgini içindeki bir projeye sağ tıklayın ve **Özellikler**' i seçin. Ardından, **Kod Analizi** sekmesini seçin ve ardından **.net Çözümleyicileri 'ni etkinleştirmek** için onay kutusunu işaretleyin veya temizleyin.
+> Visual Studio kullanıyorsanız:
+>
+> - Birçok çözümleyici kuralı, sorunu gidermek için uygulayabileceğiniz ilişkili *kod düzeltmeleri* vardır. Kod düzeltmeleri ampul simgesi menüsünde gösterilir.
+> - Kod analizini etkinleştirebilir veya devre dışı bırakabilir Çözüm Gezgini ' de bir projeye sağ tıklayıp **Özellikler**  >  **Kod Analizi** > sekmesi ' ni seçerek **.net Çözümleyicileri**' ni etkinleştirebilirsiniz.
 
 ### <a name="enabled-rules"></a>Etkin kurallar
 
-Aşağıdaki kurallar, varsayılan olarak .NET 5,0 Preview 8 ' de etkinleştirilmiştir.
+Aşağıdaki kurallar, varsayılan olarak, .NET 5,0 ' de etkinleştirilmiştir.
 
 | Tanılama KIMLIĞI | Kategori | Önem Derecesi | Açıklama |
 | - | - | - | - |
@@ -54,24 +51,22 @@ Aşağıdaki kurallar, varsayılan olarak .NET 5,0 Preview 8 ' de etkinleştiril
 | [CA2200](/visualstudio/code-quality/ca2200) | Kullanım | Uyarı | Yığın ayrıntılarını korumak için yeniden fırlatın
 | [CA2247](/visualstudio/code-quality/ca2247) | Kullanım | Uyarı | TaskCompletionSource oluşturucusuna geçirilen bağımsız değişken <xref:System.Threading.Tasks.TaskCreationOptions> yerine enum olmalıdır <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
-Bu kuralların önem derecesini devre dışı bırakmak veya hatalara yükseltmek için değiştirebilirsiniz.
+Bu kuralların önem derecesini devre dışı bırakmak veya hatalara yükseltmek için değiştirebilirsiniz. Ayrıca, [daha fazla kural da etkinleştirebilirsiniz](#enable-additional-rules).
 
-Kullanılabilir kod kalitesi kurallarının tam listesi için bkz. [kod kalitesi kuralları](quality-rules/index.md).
+- Her .NET SDK sürümünde bulunan kuralların listesi için bkz. [çözümleyici yayınları](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md).
+- Tüm kod kalitesi kurallarının bir listesi için bkz. [kod kalitesi kuralları](quality-rules/index.md).
 
 ### <a name="enable-additional-rules"></a>Ek kuralları etkinleştir
 
-.NET SDK, .NET 5,0 RC2 'den başlayarak ["CA" kod kalitesi kurallarıyla](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)birlikte gönderilir. Her .NET SDK sürümünde bulunan kuralların tam listesi için bkz. [çözümleyici yayınları](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md).
+*Analiz modu* , hiçbir yerde, bazı veya tüm kuralların etkin olduğu önceden tanımlanmış bir kod analizi yapılandırmasına başvurur. Varsayılan analiz modunda, [derleme uyarıları olarak](#enabled-rules)yalnızca az sayıda kural etkindir. Proje dosyasındaki [analysismode](../../core/project-sdk/msbuild-props.md#analysismode) özelliğini ayarlayarak projenizin analiz modunu değiştirebilirsiniz. İzin verilen değerler şunlardır:
 
-#### <a name="default-analysis-mode"></a>Varsayılan analiz modu
+| Değer | Açıklama |
+| - | - |
+| `AllDisabledByDefault` | Bu en koruyucu moddur. Tüm kurallar varsayılan olarak devre dışıdır. Bunları etkinleştirmek için tek tek kuralların seçmeli olarak [tercih](configuration-options.md) edebilirsiniz.<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
+| `AllEnabledByDefault` | Bu en agresif moddur. Tüm kurallar derleme uyarıları olarak etkinleştirilir. Bağımsız kuralların devre dışı bırakılacağını seçerek [devre dışı bırakabilirsiniz](configuration-options.md) .<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
+| `Default` | Tek bir kuralların uyarı olarak etkinleştirildiği varsayılan mod olan, diğerleri yalnızca ilgili kod düzeltmeleriyle Visual Studio IDE önerileri olarak etkinleştirilir ve REST tamamen devre dışı bırakılır. Onları devre dışı bırakmak için bağımsız kuralların seçmeli olarak [tercih edilebilir veya dışında](configuration-options.md) bırakabilirsiniz.<br /><br />`<AnalysisMode>Default</AnalysisMode>` |
 
-Varsayılan analiz modunda, bazı kurallar [Varsayılan olarak](#enabled-rules) derleme uyarıları olarak etkindir. Diğer bazı kurallar varsayılan olarak yalnızca ilgili kod düzeltmeleriyle Visual Studio IDE önerileri olarak etkinleştirilmiştir. Kalan kurallar varsayılan olarak devre dışıdır. [Kuralların tam listesi](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md) , her kuralın varsayılan önem derecesini ve kuralın varsayılan analiz modunda varsayılan olarak etkinleştirilip etkinleştirilmediğini belirtir.
-
-#### <a name="custom-analysis-mode"></a>Özel analiz modu
-
-Tek bir kuralı veya kural kategorisini etkinleştirmek veya devre dışı bırakmak için [kod çözümleme kurallarını yapılandırabilirsiniz](configuration-options.md) . Ek olarak, aşağıdaki özel analiz modlarından birine geçiş yapmak için [Analysismode](../../core/project-sdk/msbuild-props.md#analysismode) özelliğini de kullanabilirsiniz:
-
-- _Agresif_ veya geri _çevirme_ modu: tüm kurallar, derleme uyarıları olarak varsayılan olarak etkindir. Bağımsız kuralların devre dışı [bırakılacağını seçerek devre dışı bırakabilirsiniz](configuration-options.md) .
-- _Koruyucu_ veya _kabul etme_ modu: tüm kurallar varsayılan olarak devre dışıdır. Bunları etkinleştirmek için tek tek kuralların seçmeli olarak [tercih](configuration-options.md) edebilirsiniz.
+Kullanılabilir her bir kuralın varsayılan önem derecesini bulmak ve kuralın varsayılan analiz modunda etkinleştirilip etkinleştirilmediğini anlamak için [kuralların tam listesine](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)bakın.
 
 ### <a name="treat-warnings-as-errors"></a>Uyarıları hata olarak değerlendir
 
@@ -106,12 +101,14 @@ Varsayılan olarak, .NET SDK 'sının daha yeni sürümlerine yükselttiğinizde
 
 ## <a name="code-style-analysis"></a>Kod stili Analizi
 
-[Kod stili Analizi](/visualstudio/ide/editorconfig-code-style-settings-reference) ("ıdexxxx" kuralları), kod tabanınızda tutarlı kod stili tanımlamanızı ve bakımını yapmanızı sağlar. Varsayılan ayarlar aşağıda verilmiştir:
+*Kod stili Analizi* ("ıdexxxx") kuralları, kod tabanınızda tutarlı kod stili tanımlamanızı ve bakımını sağlar. Varsayılan etkinleştirme ayarları şunlardır:
 
 - Komut satırı derlemesi: komut satırı Derlemeleriyle ilgili tüm .NET projeleri için kod stili Analizi varsayılan olarak devre dışıdır.
 - Visual Studio: kod stili analizi, varsayılan olarak Visual Studio içindeki tüm .NET projeleri için [kod yeniden düzenleme hızlı eylemleri](/visualstudio/ide/code-generation-in-visual-studio)olarak etkinleştirilmiştir.
 
-.NET 5,0 RC2 'den başlayarak, derleme üzerinde kod stili analizini hem komut satırında hem de Visual Studio içinde etkinleştirebilirsiniz. Kod stili ihlalleri, uyarı veya "IDE" ön eki ile hatalar olarak görüntülenir. Bu, derleme zamanında tutarlı kod stilleri zorlamanıza olanak sağlar.
+.NET 5,0 ' den başlayarak, derleme üzerinde kod stili analizini hem komut satırında hem de Visual Studio içinde etkinleştirebilirsiniz. Kod stili ihlalleri, uyarı veya "IDE" ön eki ile hatalar olarak görüntülenir. Bu, derleme zamanında tutarlı kod stilleri zorlamanıza olanak sağlar.
+
+Kod stili analiz kurallarının tam listesi için bkz. [kod stili kuralları](style-rules/index.md).
 
 > [!NOTE]
 > Kod stili analiz özelliği deneysel bir özelliktir ve .NET 5 ve .NET 6 sürümleri arasında değişebilir.
@@ -151,6 +148,10 @@ dotnet_diagnostic.CA1822.severity = none
 Visual Studio, kod analizi kurallarından gelen uyarıları bastırmak için ek yollar sağlar. Daha fazla bilgi için bkz. [Ihlalleri gösterme](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations).
 
 Kural özellikleri hakkında daha fazla bilgi için bkz. [kural önem derecesini yapılandırma](configuration-options.md#severity-level).
+
+## <a name="third-party-analyzers"></a>Üçüncü taraf çözümleyiciler
+
+Resmi .NET çözümleyicilerine ek olarak, [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [xUnit Çözümleyicileri](https://www.nuget.org/packages/xunit.analyzers/)ve [sonar Çözümleyicisi](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)gibi üçüncü taraf Çözümleyicileri de yükleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,16 +6,16 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 2fc12c8c398b1a74d623e53884df666f4d4b85f1
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687449"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851620"
 ---
 # <a name="how-to-check-that-net-is-already-installed"></a>.NET 'in zaten yüklü olduğunu denetleme
 
-Bu makalede, hangi .NET çalışma zamanının ve SDK sürümlerinin bilgisayarınızda yüklü olduğunu nasıl denetleriz öğretilir. Visual Studio veya Mac için Visual Studio gibi tümleşik bir geliştirme ortamınız varsa .NET zaten yüklü olabilir.
+Bu makalede, hangi .NET çalışma zamanının ve SDK sürümlerinin bilgisayarınızda yüklü olduğunu nasıl denetleriz öğretilir. Visual Studio veya Mac için Visual Studio gibi tümleşik bir geliştirme ortamınız varsa, .NET zaten yüklü olabilir.
 
 SDK yükleme, ilgili çalışma zamanını yüklenir.
 
@@ -139,7 +139,7 @@ Microsoft.NETCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="check-for-install-folders"></a>Klasör yüklemeyi denetle
 
-.NET yüklü olsa da, `PATH` işletim sisteminiz veya Kullanıcı profiliniz için değişkene eklenmemiş olabilir. Önceki bölümlerden komutlarının çalıştırılması çalışmayabilir. Alternatif olarak, .NET yüklemesi klasörlerinin mevcut olup olmadığını kontrol edebilirsiniz.
+.NET yüklü olsa da, `PATH` işletim sisteminiz veya Kullanıcı profiliniz için değişkene eklenmemiş olabilir. Bu durumda, önceki bölümlerdeki komutlar çalışmayabilir. Alternatif olarak, .NET yüklemesi klasörlerinin mevcut olup olmadığını kontrol edebilirsiniz.
 
 Bir yükleyiciden veya betikten .NET yüklediğinizde, bu bir standart klasöre yüklenir. .NET yüklemek için kullandığınız yükleyicinin veya betiğin çoğu zaman, farklı bir klasöre yükleme seçeneği sunar. Farklı bir klasöre yüklemeyi tercih ederseniz klasör yolunun başlangıcını ayarlayın.
 
@@ -191,3 +191,7 @@ Komutuyla hem SDK sürümlerini hem de çalışma zamanı sürümlerini görebil
 - [Windows için .NET çalışma zamanını ve SDK 'Yı yükler](windows.md).
 - [MacOS için .NET çalışma zamanını ve SDK 'Yı yükler](macos.md).
 - [Linux için .NET çalışma zamanını ve SDK 'Sını yükler](linux.md).
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Hangi .NET Framework sürümlerinin yüklendiğini belirleme](../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)

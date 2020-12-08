@@ -1,13 +1,13 @@
 ---
 title: .NET 5 + ' da dizeleri karşılaştırırken davranış değişiklikleri
 description: .NET 5 ve sonraki Windows sürümlerindeki dize karşılaştırma davranışı değişiklikleri hakkında bilgi edinin.
-ms.date: 11/04/2020
-ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/07/2020
+ms.openlocfilehash: a53c36b31785fb43c0aa5f5040042abb6d40031a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734237"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851757"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>.NET 5 + ' da dizeleri karşılaştırırken davranış değişiklikleri
 
@@ -43,16 +43,29 @@ Bu bölümde, .NET 5,0 ' deki beklenmedik davranış değişiklikleriyle ilgili 
 
 ### <a name="enable-code-analyzers"></a>Kod Çözümleyicileri etkinleştir
 
-[Kod Çözümleyicileri](../../fundamentals/code-analysis/overview.md) , muhtemelen önemlidir çağrı sitelerini algılayabilir. Tüm ortaya çıkanlar davranışlarına karşı koruma sağlamaya yardımcı olmak için, [ __Microsoft. CodeAnalysis. fxcopçözümleyiciler__ NuGet paketini](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) projenize yüklemenizi öneririz. Bu paket, [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) ve [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md)kod analizi kurallarını içerir. Bu, bir sıralı karşılaştırıcı büyük olasılıkla amaçlanan bir dil karşılaştırıcısı kullanmanın farkında olabilecek kodu işaret eder.
+[Kod Çözümleyicileri](../../fundamentals/code-analysis/overview.md) , muhtemelen önemlidir çağrı sitelerini algılayabilir. Herhangi bir ortaya çıkacak davranışa karşı koruma sağlamaya yardımcı olmak için, projenizde .NET derleyici platformu (Roslyn) Çözümleyicileri etkinleştirmenizi öneririz. Çözümleyiciler, bir sıralı karşılaştırıcı büyük olasılıkla tasarlandıysa, istemeden bir dil karşılaştırıcısı kullanmanın farkında olabilecek kodu işaret eder. Aşağıdaki kurallar, bu sorunları bayrağa getirmenize yardımcı olmalıdır:
 
-Örnek:
+- [CA1307: Daha anlaşılır olması için StringComparison belirtin](../../fundamentals/code-analysis/quality-rules/ca1307.md)
+- [CA1309: Sıralı StringComparison kullanın](../../fundamentals/code-analysis/quality-rules/ca1309.md)
+- [CA1310: Doğruluk için StringComparison belirtin](../../fundamentals/code-analysis/quality-rules/ca1310.md)
+
+Bu özel kurallar varsayılan olarak etkinleştirilmemiştir. Bunları etkinleştirmek ve derleme hatası olarak herhangi bir ihlali göstermek için, proje dosyanızda aşağıdaki özellikleri ayarlayın:
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+  <WarningsAsErrors>$(WarningsAsErrors);CA1307;CA1309;CA1310</WarningsAsErrors>
+</PropertyGroup>
+```
+
+Aşağıdaki kod parçacığında ilgili kod Çözümleyicisi uyarılarını veya hatalarını üreten kod örnekleri gösterilmektedir.
 
 ```cs
 //
 // Potentially incorrect code - answer might vary based on locale.
 //
 string s = GetString();
-// Produces analyzer warning CA1307.
+// Produces analyzer warning CA1310 for string; CA1307 matches on char ','
 int idx = s.IndexOf(",");
 Console.WriteLine(idx);
 
@@ -89,17 +102,12 @@ List<string> list = GetListOfStrings();
 list.Sort(StringComparer.Ordinal);
 ```
 
-Bu kod çözümleyici kuralları hakkında daha fazla bilgi için, kendi kod tabanınıza bu kuralları bastırmak için uygun olabilecek zaman dahil olmak üzere aşağıdaki makalelere bakın:
-
-* [CA1307: Daha anlaşılır olması için StringComparison belirtin](../../fundamentals/code-analysis/quality-rules/ca1307.md)
-* [CA1309: Sıralı StringComparison kullanın](../../fundamentals/code-analysis/quality-rules/ca1309.md)
-
 ### <a name="revert-back-to-nls-behaviors"></a>NLS davranışlarına geri dön
 
 .NET 5 uygulamalarını Windows üzerinde çalışırken eski NLS davranışlarına geri dönmek için [.NET Genelleştirme ve ıCU](../globalization-localization/globalization-icu.md)içindeki adımları izleyin. Bu uygulama genelinde uyumluluk anahtarı, uygulama düzeyinde ayarlanmalıdır. Tek tek kitaplıklar bu davranışı kabul edebilir veya devre dışı bırakılamaz.
 
 > [!TIP]
-> Code durumu 'ın artırılmasına yardımcı olmak ve var olan tüm hata hatalarını bulmamak için [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) ve [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) kod analizi kurallarını etkinleştirmenizi kesinlikle öneririz. Daha fazla bilgi için bkz. [kod Çözümleyicileri etkinleştirme](#enable-code-analyzers).
+> Kod durumu 'yı artırmaya ve var olan tüm hata hatalarını bulmaya yardımcı olması için [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md), [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md)ve [CA1310](../../fundamentals/code-analysis/quality-rules/ca1310.md) kod analizi kurallarını etkinleştirmenizi önemle öneririz. Daha fazla bilgi için bkz. [kod Çözümleyicileri etkinleştirme](#enable-code-analyzers).
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 
@@ -196,7 +204,7 @@ Dizeyi `"résumé"` ve dört farklı temsilini tekrar düşünün. Aşağıdaki 
 
 Harmanlama öğesi, okuyucuların tek bir karakter veya karakter kümesi olarak düşündüklerini gevşektir. Bu, kavramsal olarak bir [grafem kümesine](character-encoding-introduction.md#grapheme-clusters) benzer ancak biraz daha büyük bir şemsiye kapsar.
 
-Bir dil karşılaştırıcısı altında, tam eşleşmeler gerekli değildir. Harmanlama öğeleri anlam anlamlarına göre karşılaştırılır. Örneğin, bir dil karşılaştırıcısı, `"\u00E9"` `"e\u0301"` her ikisi de "dar aksan değiştiricisi ile küçük harf e" olduğundan, alt dizelerdeki ve eşittir. Bu yöntem, `IndexOf` `"e\u0301"` `"\u00E9"` Aşağıdaki kod örneğinde gösterildiği gibi, anlam ile eşdeğer alt dizeyi içeren daha büyük bir dizedeki alt dizeden eşleşmesi için yönteminin kullanılmasına izin verir.
+Bir dil karşılaştırıcısı altında, tam eşleşmeler gerekli değildir. Harmanlama öğeleri anlam anlamlarına göre karşılaştırılır. Örneğin, bir dil karşılaştırıcısı, `"\u00E9"` `"e\u0301"` her ikisi de "dar vurgu değiştiricisi ile küçük harf e" olarak kullanıldığından, alt dizeleri ve eşit olarak davranır. Bu yöntem, `IndexOf` `"e\u0301"` `"\u00E9"` Aşağıdaki kod örneğinde gösterildiği gibi, anlam ile eşdeğer alt dizeyi içeren daha büyük bir dizedeki alt dizeden eşleşmesi için yönteminin kullanılmasına izin verir.
 
 ```cs
 Console.WriteLine("r\u00E9sum\u00E9".IndexOf("e")); // prints '-1' (not found)

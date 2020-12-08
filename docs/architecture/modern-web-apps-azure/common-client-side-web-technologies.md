@@ -5,17 +5,17 @@ author: ardalis
 ms.author: wiwagn
 no-loc:
 - Blazor
-ms.date: 12/04/2019
-ms.openlocfilehash: e8ea035c491fad39d2932572255a19c7c1493418
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 12/01/2020
+ms.openlocfilehash: a4549e48152b21af05c67f601c1db65029e346fa
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174360"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851672"
 ---
 # <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı web teknolojileri
 
-> "Web siteleri, iç ve çıkış arasında iyi görünmelidir."  
+> "Web siteleri, iç ve çıkış arasında iyi görünmelidir."
 > _-Paul pişirme son_
 
 ASP.NET Core uygulamalar Web uygulamalardır ve genellikle HTML, CSS ve JavaScript gibi istemci tarafı Web teknolojilerine bağımlıdır. Sayfa (HTML) içeriğini düzen ve stil (CSS) ve davranışını (JavaScript aracılığıyla) ayırarak, karmaşık Web uygulamaları, endişeleri ayrımı özelliğinden yararlanabilir. Uygulamanın yapısı, tasarımı veya davranışında yapılacak değişiklikler, bu konular intertwined olmadığında daha kolay hale getirilebilir.
@@ -23,7 +23,7 @@ ASP.NET Core uygulamalar Web uygulamalardır ve genellikle HTML, CSS ve JavaScri
 HTML ve CSS görece kararlı olsa da, JavaScript, uygulama çerçeveleri ve yardımcı programlar tarafından Web tabanlı uygulamalar oluşturmak için birlikte çalışarak,, Breakneck hızında gelişiyor. Bu bölümde, JavaScript 'in Web geliştiricileri tarafından kullanılması ve angular hakkında üst düzey bir genel bakış ve istemci tarafı kitaplıklarına yanıt verme gibi bazı yollar sunulmaktadır.
 
 > [!NOTE]
-> Blazorzengin ve etkileşimli istemci kullanıcı arabirimleri oluşturmak için JavaScript çerçevelerine bir alternatif sağlar. İstemci tarafı Blazor desteği hala önizlemededir, bu nedenle artık bu bölüm için kapsam dışındadır.
+> Blazor zengin ve etkileşimli istemci kullanıcı arabirimleri oluşturmak için JavaScript çerçevelerine bir alternatif sağlar.
 
 ## <a name="html"></a>HTML
 
@@ -59,13 +59,13 @@ Web uygulamanızda JavaScript ile çalışırken, genellikle gerçekleştirmeniz
 
 - Doğrulama gerçekleştiriliyor.
 
-Bu görevlerin tümünü tek başına JavaScript ile gerçekleştirebilirsiniz, ancak bu görevleri daha kolay hale getirmek için birçok kitaplık vardır. Bu kitaplıkların ilk ve en başarılı olanı, Web sayfalarında bu görevleri basitleştirmek için popüler bir seçenek olmaya devam eden jQuery 'dir. Tek sayfalı uygulamalar (maça 'Lar) için jQuery, istenen özelliklerin çoğunu angular ve tepki veren bir şekilde sunmaz.
+Bu görevlerin tümünü tek başına JavaScript ile gerçekleştirebilirsiniz, ancak bu görevleri daha kolay hale getirmek için birçok kitaplık vardır. Bu kitaplıkların ilk ve en başarılı olanı, Web sayfalarında bu görevleri basitleştirmek için popüler bir seçenek olmaya devam eden jQuery ' dir. Tek sayfalı uygulamalar (maça 'Lar) için jQuery, istenen özelliklerin çoğunu angular ve tepki veren bir şekilde sunmaz.
 
 ### <a name="legacy-web-apps-with-jquery"></a>JQuery ile eski Web uygulamaları
 
 JavaScript Framework standartlarına bağlı olarak, jQuery, HTML/CSS ile çalışmak ve Web API 'Lerine AJAX çağrıları yapan uygulamalar oluşturmak için yaygın olarak kullanılan bir kitaplık olmaya devam eder. Bununla birlikte, jQuery, tarayıcı belgesi nesne modeli (DOM) düzeyinde çalışır ve varsayılan olarak, bildirim temelli model yerine yalnızca bir kesinlik sağlar.
 
-Örneğin, bir TextBox değeri 10 ' u aşarsa sayfadaki bir öğenin görünür hale getirilmesinin gerektiği hakkında düşünün. JQuery 'ta bu, genellikle TextBox 'ın değerini inceleyerek ve hedef öğenin görünürlüğünü bu değere göre ayarlayabilecek kodla bir olay işleyicisi yazılarak uygulanır. Bu, zorunlu, kod tabanlı bir yaklaşımdır. Bunun yerine başka bir çerçeve, öğesinin görünürlüğünü bildirimli olarak metin değerine bağlamak için veri bağlamayı kullanabilir. Bu, herhangi bir kod yazmayı gerektirmez, ancak bunun yerine yalnızca veri bağlama öznitelikleriyle ilgili öğeleri dekoratmayı gerektirir. İstemci tarafı davranışları daha karmaşık büyürken, veri bağlama yaklaşımları genellikle daha az kod ve koşullu karmaşıklıkla daha basit çözümlere neden olacak.
+Örneğin, bir TextBox değeri 10 ' u aşarsa sayfadaki bir öğenin görünür hale getirilmesinin gerektiği hakkında düşünün. JQuery içinde, bu işlev genellikle TextBox 'ın değerini inceleyerek ve hedef öğenin görünürlüğünü bu değere göre ayarlayabilecek kodla bir olay işleyicisi yazılarak uygulanır. Bu işlem, zorunlu, kod tabanlı bir yaklaşımdır. Bunun yerine başka bir çerçeve, öğesinin görünürlüğünü bildirimli olarak metin değerine bağlamak için veri bağlamayı kullanabilir. Bu yaklaşım herhangi bir kod yazmayı gerektirmez, ancak bunun yerine yalnızca veri bağlama öznitelikleriyle ilgili öğeleri dekoratmayı gerektirir. İstemci tarafı davranışları daha karmaşık büyürken, veri bağlama yaklaşımları genellikle daha az kod ve koşullu karmaşıklıkla daha basit çözümlere neden olacak.
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery ile SPA çerçevesi karşılaştırması
 
@@ -76,15 +76,15 @@ JavaScript Framework standartlarına bağlı olarak, jQuery, HTML/CSS ile çalı
 | Bildirime dayalı veri bağlama | **Hayır** | **Evet** |
 | MVC stili yönlendirme | **Hayır** | **Evet** |
 | Örneğine | **Hayır** | **Evet** |
-| Derin bağlantı yönlendirme | **Hayır** | **Evet** |
+| Deep-Link yönlendirme | **Hayır** | **Evet** |
 
 JQuery eksik doğası gereği özelliklerinin çoğu diğer kitaplıkların eklenmesiyle eklenebilir. Ancak, angular gibi bir SPA çerçevesi, başlangıçtan itibaren göz önünde bulundurularak tasarlandığından, bu özellikleri daha tümleşik bir biçimde sunar. Ayrıca, jQuery, jQuery ile herhangi bir şey yapmak için jQuery işlevlerini çağırmanız gereken anlamına gelen, zorunlu bir kitaplıktır. SPA çerçevelerinin sağladığı iş ve işlevselliğin çoğu bildirimli olarak yapılabilir ve hiçbir gerçek kod yazılmasına gerek yoktur.
 
-Veri bağlama buna harika bir örnektir. JQuery 'de, genellikle bir DOM öğesinin değerini almak veya bir öğenin değerini ayarlamak için yalnızca bir kod satırı alır. Ancak, bu kodu, her zaman, öğenin değerini değiştirmeniz gerekir ve bazen bu, bir sayfada birden çok işlev ile gerçekleşir. Diğer bir yaygın örnek, öğe görünürlüğüne sahiptir. JQuery 'de, belirli öğelerin görünür olup olmadığını denetlemek için kod yazacağınız birçok farklı yer olabilir. Bu durumların her birinde, veri bağlamayı kullanırken, hiçbir kodun yazılması gerekmez. Söz konusu öğelerin değerini veya görünürlüğünü sayfadaki bir *ViewModel* ' e bağlamanız yeterlidir ve bu ViewModel üzerindeki değişiklikler otomatik olarak bağlı öğelerde yansıtılır.
+Veri bağlama, bu işlevselliğe harika bir örnektir. JQuery 'de, genellikle bir DOM öğesinin değerini almak veya bir öğenin değerini ayarlamak için yalnızca bir kod satırı alır. Ancak, bu kodu, her zaman, öğenin değerini değiştirmeniz gerekir ve bazen bu, bir sayfada birden çok işlev ile gerçekleşir. Diğer bir yaygın örnek, öğe görünürlüğüne sahiptir. JQuery 'de, belirli öğelerin görünür olup olmadığını denetlemek için kod yazacağınız birçok farklı yer olabilir. Bu durumların her birinde, veri bağlamayı kullanırken, hiçbir kodun yazılması gerekmez. Söz konusu öğelerin değerini veya görünürlüğünü sayfadaki bir *ViewModel* ' e bağlamanız yeterlidir ve bu ViewModel üzerindeki değişiklikler otomatik olarak bağlı öğelerde yansıtılır.
 
 ### <a name="angular-spas"></a>Angular maça 'Ları
 
-Angular dünyanın en popüler JavaScript çerçevelerinden biri olarak kalır. Angular 2 ' den itibaren, ekip çerçeveyi baştan sona yeniden oluşturur ( [TypeScript](https://www.typescriptlang.org/)kullanarak) ve özgün AngularJS adından yalnızca angular olarak yeniden markalı olur. Artık birkaç yıldır, yeniden tasarlanan angular tek sayfalı uygulamalar oluşturmaya yönelik sağlam bir çerçeve olmaya devam etmektedir.
+Angular dünyanın en popüler JavaScript çerçevelerinden biri olarak kalır. Angular 2 ' den itibaren, ekip çerçeveyi baştan sona yeniden oluşturur ( [TypeScript](https://www.typescriptlang.org/)kullanarak) ve özgün AngularJS adından angular olarak yeniden markalı. Artık birkaç yıldır, yeniden tasarlanan angular tek sayfalı uygulamalar oluşturmaya yönelik sağlam bir çerçeve olmaya devam etmektedir.
 
 Angular uygulamaları bileşenlerden oluşturulmuştur. Bileşenler, HTML şablonlarını özel nesnelerle birleştirir ve sayfanın bir bölümünü kontrol edin. Angular belgelerinden basit bir bileşen aşağıda gösterilmiştir:
 
@@ -105,7 +105,7 @@ DOM öğeleri yerine bileşenler ve şablonlar ile çalışarak, angular uygulam
 
 CLı kullanarak angular uygulamaları geliştirebilirsiniz. Angular geliştirmeyi yerel olarak kullanmaya başlama (git ve NPM 'nin yüklü olduğu varsayılarak), GitHub 'dan ve çalıştıran bir depoyu klonlamalarından oluşur `npm install` `npm start` . Bunun ötesinde, angular, proje oluşturabileceğiniz, dosya ekleyebilen ve test, paketleme ve dağıtım görevlerine yardımcı olan kendi CLı 'yı dağıtırın. Bu CLı daha yakından, büyük CLı desteğini de kapsayan ASP.NET Core özellikle uyumlu hale getirir.
 
-Microsoft, angular SPA uygulaması içeren bir başvuru uygulaması ( [Eshoponcontainers](https://aka.ms/MicroservicesArchitecture)) geliştirmiştir. Bu uygulama, çevrimiçi mağaza alışveriş sepetini yönetmek, kataloğundan öğeleri yüklemek ve göstermek ve sipariş oluşturmayı işlemek için angular modüllerini içerir. Örnek uygulamayı [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)' dan görüntüleyebilir ve indirebilirsiniz.
+Microsoft, angular SPA uygulaması içeren bir başvuru uygulaması (eShopOnContainers) geliştirmiştir. Bu uygulama, çevrimiçi mağaza alışveriş sepetini yönetmek, kataloğundan öğeleri yüklemek ve göstermek ve sipariş oluşturmayı işlemek için angular modüllerini içerir. Örnek uygulamayı [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)' dan görüntüleyebilir ve indirebilirsiniz.
 
 ### <a name="react"></a>React
 
@@ -129,7 +129,7 @@ Yanıt verme tam bir çerçeve olmadığından, genellikle diğer kitaplıkları
 
 ### <a name="vue"></a>Vue
 
-Başlangıç kılavuzuyla, "Vue, Kullanıcı arabirimleri oluşturmaya yönelik aşamalı bir çerçevedir. Diğer tek parçalı çerçevelerden farklı olarak, Vue, baştan sona artımlı olarak kullanılacak şekilde tasarlanmıştır. Çekirdek kitaplık yalnızca görünüm katmanına odaklanılmıştır ve diğer kitaplıklarla veya mevcut projelerle tümleştirilebilen ve tümleştirilebilen kolay bir işlemdir. Öte yandan, Vue modern araç ve destekleyici kitaplıklarla birlikte kullanıldığında Gelişmiş tek sayfalı uygulamaları güçlendirme özelliğine sahiptir. "
+Başlangıç kılavuzuyla, "Vue, Kullanıcı arabirimleri oluşturmaya yönelik aşamalı bir çerçevedir. Diğer tek parçalı çerçevelerden farklı olarak, Vue, baştan sona artımlı olarak kullanılacak şekilde tasarlanmıştır. Çekirdek kitaplık yalnızca görünüm katmanına odaklanılmıştır ve diğer kitaplıklarla veya mevcut projelerle tümleştirilebilen ve tümleştirilebilen kolay bir işlemdir. Öte yandan, Vue modern araç ve destekleyici kitaplıklarla birlikte kullanıldığında Gelişmiş Single-Page uygulamalarını güçlendirme özelliğine sahiptir. "
 
 Vue ile çalışmaya başlamak, komut dosyasının bir HTML dosyası içine dahil edilmesi için gereklidir:
 
@@ -161,9 +161,19 @@ Bu, "Hello Vue!" öğesini işlemek için yeterlidir sayfasında. Ancak, Vue 'in
 
 Tabii ki bu, yalnızca Vue 'nin sahip olduğu yüzey yüzeyini çiziyor. Bu, son birkaç yıl içinde çok sayıda popülerlik kazanmıştır ve büyük bir topluluğa sahiptir. Vue ile birlikte çalışan [destekleyici bileşenlerin ve kitaplıkların büyük ve artan bir listesi](https://github.com/vuejs/awesome-vue#redux) vardır. Web uygulamanıza istemci tarafı davranışı eklemek veya tam bir SPA oluşturmayı düşünüyorsanız, Vue 'nin araştırılması gerekir.
 
+### <a name="no-locblazor-webassembly"></a>Blazor WebAssembly
+
+Diğer JavaScript çerçevelerinden farklı olarak, `Blazor WebAssembly` .NET ile etkileşimli istemci tarafı Web uygulamaları oluşturmaya yönelik tek sayfalı uygulama (Spa) çerçevesidir. Blazor WebAssembly, eklenti olmadan açık Web standartları kullanır veya kodu diğer dillere yeniden derler. Blazor WebAssembly Mobile tarayıcıları dahil tüm modern web tarayıcılarında çalışmaktadır.
+
+Web tarayıcıları içinde .NET kodu çalıştırmak, WebAssembly (kısaltılmış) tarafından mümkün hale getirilir `wasm` . WebAssembly hızlı indirme ve en yüksek yürütme hızı için iyileştirilmiş bir sıkıştırma kodu biçimidir. WebAssembly açık bir web standardıdır ve eklentileri olmayan Web tarayıcılarında desteklenir.
+
+WebAssembly Code, JavaScript birlikte çalışabilirliği olarak adlandırılan JavaScript aracılığıyla tarayıcının tüm işlevlerine erişebilir, genellikle JavaScript birlikte çalışma veya JS birlikte çalışma olarak kısaltılır. Tarayıcıda WebAssembly aracılığıyla yürütülen .NET kodu, sanal makinenin istemci makinesindeki kötü amaçlı eylemlere karşı sağladığı korumalar ile tarayıcının JavaScript korumalı alanında çalışır.
+
+Daha ayrıntılı bilgi için bkz. [ASP.NET Core Blazor giriş](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-5.0)
+
 ### <a name="choosing-a-spa-framework"></a>SPA çerçevesi seçme
 
-Hangi JavaScript çerçevesinin, SPA 'nizi destekleyecek en iyi şekilde çalıştığını düşünürken aşağıdaki noktalara dikkat edin:
+SPA 'nizi desteklemek için hangi seçeneğin en iyi şekilde çalıştığını düşünürken aşağıdaki noktalara dikkat edin:
 
 - Takımınız Framework 'ü ve bağımlılıklarını (bazı durumlarda TypeScript dahil) biliyor musunuz?
 
@@ -177,7 +187,7 @@ Hangi JavaScript çerçevesinin, SPA 'nizi destekleyecek en iyi şekilde çalı�
 
 - Etkin olan temel ekibi nedir? Sorun çözümlenmekte ve yeni sürümler düzenli olarak sevk ediliyor mu?
 
-JavaScript çerçeveleri Breakneck hızında gelişmeye devam eder. Daha sonra bağımlı olmaya başlayacaksınız bir çerçeve seçme riskini azaltmaya yardımcı olması için yukarıda listelenen konuları kullanın. Özellikle risk-karşıtı, ticari destek sunan ve/veya büyük bir kuruluş tarafından geliştirilen bir çerçeveyi düşünün.
+Çerçeveler, Breakneck hızında gelişmeye devam eder. Daha sonra bağımlı olmaya başlayacaksınız bir çerçeve seçme riskini azaltmaya yardımcı olması için yukarıda listelenen konuları kullanın. Özellikle risk-karşıtı, ticari destek sunan ve/veya büyük bir kuruluş tarafından geliştirilen bir çerçeveyi düşünün.
 
 > ### <a name="references--client-web-technologies"></a>Başvurular – Istemci Web teknolojileri
 >
@@ -201,7 +211,7 @@ JavaScript çerçeveleri Breakneck hızında gelişmeye devam eder. Daha sonra b
 > <https://vuejs.org/>
 > - **Angular ile yanıt veren vs Vue: 2020 içinde hangi çerçeve tercih edilecek**
 > <https://www.codeinwp.com/blog/angular-vs-vue-vs-react/>
-> - **2020 sürümünde ön uç geliştirme için En Iyi JavaScript çerçeveleri**  
+> - **2020 ' de Front-End geliştirme için En Iyi JavaScript çerçeveleri**  
 > <https://www.freecodecamp.org/news/complete-guide-for-front-end-developers-javascript-frameworks-2019/>
 
 >[!div class="step-by-step"]

@@ -3,13 +3,13 @@ title: ASP.NET Core Web uygulamaları için Azure barındırma önerileri
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.NET Web Apps için Azure barındırma önerileri
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/06/2019
-ms.openlocfilehash: 19626aea07fb26222af575a709b54577ca12589b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/01/2020
+ms.openlocfilehash: c209a7fa9ce89e12466424f750d5583a59f8b980
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169225"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851724"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core Web uygulamaları için Azure barındırma önerileri
 
@@ -44,7 +44,7 @@ App Service Web Apps, Web uygulamalarını barındırmak için iyileştirilmiş,
 
 - Visual Studio tümleştirmesi.
 
-Azure App Service, çoğu Web uygulaması için en iyi seçenektir. Dağıtım ve yönetim süreçleri platform ile tümleştirilmiştir, siteler hızla yüksek trafik yüklerinin altından kalkacak şekilde ölçeklendirilebilir ve yerleşik yük dengeleme ve trafik yöneticisi yüksek kullanılabilirlik sağlar. Mevcut siteleri çevrimiçi geçiş aracı ile kolayca Azure App Service’a taşıyabilir, Web Uygulaması Galerisi'nden açık kaynaklı bir uygulamayı kullanabilir veya istediğiniz çerçeve ve araçları kullanarak yeni bir site oluşturabilirsiniz. WebJobs özelliği, App Service Web uygulamanıza arka plan iş işlemleri eklemeyi kolaylaştırır. Şirket içinde yerel bir veritabanı kullanılarak barındırılan mevcut bir ASP.NET uygulamanız varsa, uygulamayı Azure SQL veritabanı ile bir App Service Web uygulamasına geçirmeye yönelik açık bir yol vardır (veya tercih edilirse şirket içi veritabanı sunucunuza güvenli erişim sağlayabilirsiniz).
+Azure App Service, çoğu Web uygulaması için en iyi seçenektir. Dağıtım ve yönetim süreçleri platform ile tümleştirilmiştir, siteler hızla yüksek trafik yüklerinin altından kalkacak şekilde ölçeklendirilebilir ve yerleşik yük dengeleme ve trafik yöneticisi yüksek kullanılabilirlik sağlar. Bir çevrimiçi geçiş aracı ile, mevcut siteleri kolayca Azure App Service taşıyabilirsiniz. Web uygulaması galerisinden bir açık kaynaklı uygulama kullanabilir veya seçtiğiniz Framework ve araçları kullanarak yeni bir site oluşturabilirsiniz. WebJobs özelliği, App Service Web uygulamanıza arka plan iş işlemleri eklemeyi kolaylaştırır. Şirket içinde yerel bir veritabanı kullanılarak barındırılan mevcut bir ASP.NET uygulamanız varsa, geçirilecek bir açık yol vardır. App Service Web uygulamasını bir Azure SQL veritabanı ile kullanabilirsiniz (veya tercih ediyorsanız şirket içi veritabanı sunucunuza güvenli erişim sağlayabilirsiniz).
 
 ![Şirket içi .NET uygulamaları Azure App Service için önerilen geçiş stratejisi](./media/image1-6.png)
 
@@ -58,9 +58,9 @@ Tek bir kaynak grubundaki az sayıda kaynak, genellikle bu tür bir uygulamayı 
 
 ### <a name="app-service-web-apps-for-containers"></a>Kapsayıcılar için App Service Web Apps
 
-Web uygulamalarının doğrudan barındırılmasına yönelik desteğe ek olarak, [kapsayıcılar için App Service Web Apps](https://azure.microsoft.com/services/app-service/containers/) Windows ve Linux 'ta Kapsayıcılı uygulamalar çalıştırmak için kullanılabilir. Bu hizmeti kullanarak, işinizle ölçeklenebilen Kapsayıcılı uygulamaları kolayca dağıtabilir ve çalıştırabilirsiniz. Uygulamalar yukarıda listelenen App Service Web Apps tüm özelliklere sahiptir. Ayrıca, kapsayıcılar için Web Apps Docker Hub, Azure Container Registry ve GitHub ile kolaylaştırılmış CI/CD 'yi destekler. Değişiklikleri bir kayıt defterine yayınlayan derleme ve dağıtım işlem hatlarını tanımlamak için Azure DevOps ' i kullanabilirsiniz. Bu değişiklikler daha sonra bir hazırlama ortamında test edilebilir ve dağıtım yuvaları kullanılarak otomatik olarak üretime dağıtılır ve bu da sıfır kesinti yaşlara izin verir. Önceki sürümlere geri dönme işlemi, kolayca yapılabilir.
+Web uygulamalarının doğrudan barındırılmasına yönelik desteğe ek olarak, [kapsayıcılar için App Service Web Apps](https://azure.microsoft.com/services/app-service/containers/) Windows ve Linux 'ta Kapsayıcılı uygulamalar çalıştırmak için kullanılabilir. Bu hizmeti kullanarak, işinizle ölçeklenebilen Kapsayıcılı uygulamaları kolayca dağıtabilir ve çalıştırabilirsiniz. Uygulamalar yukarıda listelenen App Service Web Apps tüm özelliklere sahiptir. Ayrıca, kapsayıcılar için Web Apps Docker Hub, Azure Container Registry ve GitHub ile akıcı CI/CD 'yi destekler. Değişiklikleri bir kayıt defterine yayınlayan derleme ve dağıtım işlem hatlarını tanımlamak için Azure DevOps ' i kullanabilirsiniz. Bu değişiklikler daha sonra bir hazırlama ortamında test edilebilir ve dağıtım yuvaları kullanılarak otomatik olarak üretime dağıtılır ve bu da sıfır kesinti yaşlara izin verir. Önceki sürümlere geri dönme işlemi, kolayca yapılabilir.
 
-Kapsayıcıların Web Apps en mantıklı hale getirilbileceği birkaç senaryo vardır. Windows veya Linux kapsayıcılarında Kapsayıcılı kullanabileceğiniz mevcut uygulamalarınız varsa, bu araç takımını kullanarak bunları kolayca barındırabilirsiniz. Yalnızca kapsayıcınızı yayımlayın ve sonra kapsayıcıların Web Apps, bu görüntünün en son sürümünü tercih ettiğiniz kayıt defterinden çekmek üzere yapılandırın. Bu, klasik uygulama barındırma modellerinden buluta iyileştirilmiş bir modele geçiş yapmak için bir "kaldırma ve kaydırma" yaklaşımıdır.
+Kapsayıcılar için Web Apps en mantıklı hale getiren bazı senaryolar vardır. Windows veya Linux kapsayıcılarında Kapsayıcılı kullanabileceğiniz mevcut uygulamalarınız varsa, bu araç takımını kullanarak bunları kolayca barındırabilirsiniz. Yalnızca kapsayıcınızı yayımlayın ve sonra kapsayıcıların Web Apps, bu görüntünün en son sürümünü tercih ettiğiniz kayıt defterinden çekmek üzere yapılandırın. Bu, klasik uygulama barındırma modellerinden buluta iyileştirilmiş bir modele geçiş yapmak için bir "kaldırma ve kaydırma" yaklaşımıdır.
 
 ![Kapsayıcılı şirket içi .NET uygulamasını kapsayıcılar için Azure Web Apps geçirme](./media/image1-8.png)
 
@@ -68,9 +68,9 @@ Bu yaklaşım, geliştirme ekibiniz kapsayıcı tabanlı bir geliştirme süreci
 
 ![Uçtan uca Docker DevOps yaşam döngüsü Iş akışı](./media/image1-7.png)
 
-Kapsayıcılarla geliştirme, özellikle kapsayıcılar üretimde kullanıldığında birçok avantaj sunar. Aynı kapsayıcı yapılandırması, uygulamasının çalıştığı her ortamda barındırmak için, yerel geliştirme makinesinden sistemleri üretime derlemek ve test etmek için kullanılır. Bu durum, makine yapılandırması veya yazılım sürümlerindeki farklardan kaynaklanan arızaların oluşma olasılığını önemli ölçüde azaltır. Geliştiriciler, kapsayıcılar herhangi bir IŞLETIM sistemi üzerinde çalıştırılabildiği için, işletim sistemi dahil olmak üzere en çok hangi araçları da kullanabilir. Bazı durumlarda, çok sayıda kapsayıcı içeren dağıtılmış uygulamalar, tek bir geliştirme makinesinde çalışmak için çok kaynak yoğunluklu olabilir. Bu senaryoda, sonraki bölümde bahsedilen Kubernetes ve Azure Dev Spaces kullanarak yükseltme yapmak mantıklı olabilir.
+Kapsayıcılarla geliştirme, özellikle kapsayıcılar üretimde kullanıldığında birçok avantaj sunar. Aynı kapsayıcı yapılandırması, çalıştıran her bir ortamda uygulamayı barındırmak için, yerel geliştirme makinesinden, sistemleri üretime derlemek ve test etmek için kullanılır. Bu yaklaşım, makine yapılandırması veya yazılım sürümlerindeki farklardan kaynaklanan hataların olasılığını önemli ölçüde azaltır. Geliştiriciler, kapsayıcılar herhangi bir IŞLETIM sistemi üzerinde çalıştırılabildiği için işletim sistemi dahil olmak üzere en çok hangi araçları da kullanabilir. Bazı durumlarda, çok sayıda kapsayıcı içeren dağıtılmış uygulamalar, tek bir geliştirme makinesinde çalışmak için çok kaynak yoğunluklu olabilir. Bu senaryoda, sonraki bölümde bahsedilen Kubernetes ve Azure Dev Spaces kullanarak yükseltme yapmak mantıklı olabilir.
 
-Daha büyük uygulamaların bir bölümü kendi daha küçük, bağımsız *mikro hizmetlere*bölündüğü için ek tasarım desenleri, uygulama davranışını geliştirmek için kullanılabilir. Bir *API ağ geçidi* , bireysel hizmetlerle doğrudan çalışmak yerine erişimi basitleştirecek ve istemciyi arka uçtan ayırarak alabilir. Farklı ön uçlar için ayrı hizmet arka uçları olması ayrıca hizmetlerin tüketicilerle birlikte gelişmelerini sağlar. Ortak hizmetlere, *amelçi* deseninin kullanıldığı ortak istemci bağlantı kitaplıklarını içerebilen ayrı bir *sepet* kapsayıcısı aracılığıyla erişilebilir.
+Daha büyük uygulamaların bir bölümü kendi daha küçük, bağımsız *mikro hizmetlere* bölündüğü için ek tasarım desenleri, uygulama davranışını geliştirmek için kullanılabilir. Bir *API ağ geçidi* , bireysel hizmetlerle doğrudan çalışmak yerine erişimi basitleştirecek ve istemciyi arka uçtan ayırarak alabilir. Farklı ön uçlar için ayrı hizmet arka uçları olması ayrıca hizmetlerin tüketicilerle birlikte gelişmelerini sağlar. Ortak hizmetlere, *amelçi* deseninin kullanıldığı ortak istemci bağlantı kitaplıklarını içerebilen ayrı bir *sepet* kapsayıcısı aracılığıyla erişilebilir.
 
 ![Birkaç ortak tasarım deseni belirtilmiş mikro hizmetler örnek mimarisi.](./media/image1-10.png)
 
@@ -78,7 +78,7 @@ Daha büyük uygulamaların bir bölümü kendi daha küçük, bağımsız *mikr
 
 ### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
-Azure Kubernetes Hizmeti (AKS), barındırılan Kubernetes ortamınızı yöneterek kapsayıcılı uygulamaları, kapsayıcı yönetimi uzmanlığı gerekmeden hızla ve kolayca dağıtma olanağı sunar. Ayrıca, kaynakları isteğe bağlı olarak sağlama, yükseltme ve ölçeklendirme işlemlerini uygulamalarınızı çevrimdışı duruma geçirmeden yaparak sürekliliği olan işlemlerin ve bakımların yükünü ortadan kaldırır.
+Azure Kubernetes Hizmeti (AKS), barındırılan Kubernetes ortamınızı yöneterek kapsayıcılı uygulamaları, kapsayıcı yönetimi uzmanlığı gerekmeden hızla ve kolayca dağıtma olanağı sunar. Ayrıca, uygulamalarınızı çevrimdışı duruma getirmeden, kaynakları isteyerek, yükselterek ve ölçeklendirerek devam eden işlemlerin ve bakımın yükünü ortadan kaldırır.
 
 AKS, sorumluluğun çoğunu Azure’a devrederek bir Kubernetes kümesi yönetmenin karmaşıklığı ve işlemsel yükünü azaltır. Barındırılan bir Kubernetes hizmeti olarak, Azure sistem durumu izleme ve bakım gibi kritik görevleri sizin için gerçekleştirir. Ayrıca, ana bilgisayarlar için değil, yalnızca kümelerinizdeki aracı düğümleri için ödeme yaparsınız. Yönetilen bir Kubernetes hizmeti olarak AKS aşağıdakileri sağlar:
 
@@ -97,8 +97,8 @@ Azure Dev Spaces:
 
 - Yerel makine kurulum süresini ve kaynak gereksinimlerini en aza indir
 - Ekiplerin daha hızlı yineleme yapmasına izin ver
-- Ekibin gerektirdiği tümleştirme ortamlarının sayısını azaltın
-- Geliştirme/test ederken Dağıtılmış sistemde belirli hizmetleri sahte bir şekilde çıkarma gereksinimini ortadan kaldırma
+- Bir ekibin gerektirdiği tümleştirme ortamlarının sayısını azaltın
+- Geliştirme/test ederken dağıtılmış bir sistemde belirli hizmetleri sahte yapma gereksinimini ortadan kaldırma
 
 [Azure Dev Spaces hakkında daha fazla bilgi edinin](/azure/dev-spaces/about)
 
