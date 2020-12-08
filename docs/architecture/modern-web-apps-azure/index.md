@@ -3,19 +3,21 @@ title: ASP.NET Core ve Azure ile modern web uygulamaları tasarlama
 description: ASP.NET Core ve Azure kullanarak tek parçalı Web uygulamaları oluşturmaya yönelik uçtan uca rehberlik sağlayan bir kılavuz.
 author: ardalis
 ms.author: wiwagn
-ms.date: 5/25/2020
-ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 12/07/2020
+ms.openlocfilehash: 90d092b2269315e5b6734430e82cc7211324479b
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284461"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851301"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Microsoft Azure ile Modern Web Uygulamaları Tasarlama
 
 ![Mimarel Modern Web uygulamaları kılavuzu 'nun kitap kapağı resmi.](./media/index/web-application-guide-cover-image.png)
 
-**Sürüm v 3.1** -ASP.NET Core 3,1 ' ye güncelleştirildi
+**Sürüm v 5.0** -ASP.NET Core 5,0 ' ye güncelleştirildi
+
+Kitap güncelleştirmeleri ve topluluk katkılarına yönelik [changelog](https://aka.ms/aspnet-ebook-changelog) 'u inceleyin.
 
 YAYIMLAYAN
 
@@ -29,7 +31,7 @@ Redmond, Washington 98052-6399
 
 Telif hakkı © 2020 Microsoft Corporation
 
-Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
+All rights reserved. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
 Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. URL ve diğer Internet Web sitesi başvuruları dahil olmak üzere bu kitapta ifade edilen görünümler, eklentiler ve bilgiler bildirimde bulunmadan değiştirilebilir.
 
@@ -59,7 +61,7 @@ Edit
 
 ## <a name="introduction"></a>Giriş
 
-.NET Core ve ASP.NET Core geleneksel .NET geliştirme konusunda çeşitli avantajlar sunar. Aşağıdakilerden bazıları veya tümü uygulamanızın başarısı için önemliyse, sunucu uygulamalarınız için .NET Core ' u kullanmanız gerekir:
+.NET 5 ve ASP.NET Core geleneksel .NET geliştirme konusunda çeşitli avantajlar sunar. Aşağıdakilerden bazıları veya tümü uygulamanızın başarısı için önemliyse, sunucu uygulamalarınız için .NET 5 ' i kullanmanız gerekir:
 
 - Platformlar arası destek.
 
@@ -71,7 +73,7 @@ Edit
 
 - Aynı sunucuda .NET sürümlerinin uygulamaya göre yan yana sürümü oluşturma.
 
-Geleneksel .NET uygulamaları, bu gereksinimlerin birçoğunu destekler ve ASP.NET Core ve .NET Core, yukarıdaki senaryolar için geliştirilmiş destek sunacak şekilde iyileştirildi.
+Geleneksel .NET uygulamaları bu gereksinimlerin birçoğunu destekler ve ASP.NET Core ve .NET 5, yukarıdaki senaryolar için geliştirilmiş destek sunacak şekilde iyileştirilmiştir.
 
 Daha fazla kuruluş, Microsoft Azure gibi hizmetleri kullanarak Web uygulamalarını bulutta barındırmak üzere tercih ediyor. Uygulamanız veya kuruluşunuz için önemli bir öneme sahipseniz, uygulamanızı bulutta barındırmayı göz önünde bulundurmanız gerekir:
 
@@ -89,13 +91,13 @@ Azure 'da barındırılan ASP.NET Core ile Web uygulamaları oluşturmak, gelene
 
 ## <a name="version"></a>Sürüm
 
-Bu kılavuz, .NET Core 3,1 sürümüyle aynı "Wave" teknolojileri (Azure ve ek üçüncü taraf teknolojileri) ile ilgili birçok ek güncelleştirme ile birlikte **.net core 3,1** sürümünü kapsayacak şekilde değiştirilmiştir. Kitap sürümü de **3,1**sürümüne güncelleştirilmiştir.
+Bu kılavuz, .NET 5,0 sürümüyle aynı "Wave" teknolojileri (Azure ve ek üçüncü taraf teknolojileri) coinciding ile ilgili birçok ek güncelleştirme ile birlikte **.net 5,0** sürümünü kapsayacak şekilde değiştirilmiştir. Kitap sürümü de **5,0** sürümüne güncelleştirilmiştir.
 
 ## <a name="purpose"></a>Amaç
 
 Bu kılavuz, ASP.NET Core ve Azure kullanarak *tek parçalı* Web uygulamaları oluşturmaya yönelik uçtan uca yönergeler sağlar. Bu bağlamda, "monoparçalı", bu uygulamaların bir etkileşim Hizmetleri ve uygulamaları koleksiyonu olarak değil, tek bir birim olarak dağıtılmasının gerçeğini ifade eder.
 
-Bu kılavuz, ["_.net mikro hizmetleri" için tamamlayıcı bir kılavuzdur. _](../microservices/index.md)Docker, mikro hizmetler ve kapsayıcı dağıtımında kurumsal uygulamaları barındırmak için daha fazla odaklanan, Kapsayıcılı .NET uygulamaları için mimari.
+Bu kılavuz, ["_.net mikro hizmetleri" için tamamlayıcı bir kılavuzdur._](../microservices/index.md)Docker, mikro hizmetler ve kapsayıcı dağıtımında kurumsal uygulamaları barındırmak için daha fazla odaklanan, Kapsayıcılı .NET uygulamaları için mimari.
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
 
@@ -118,7 +120,7 @@ Bu noktaların ve fırsatların yaygın olarak anlaşılmasına yardımcı olmak
 
 ## <a name="references"></a>Başvurular
 
-- **Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma**  
+- **Sunucu uygulamaları için .NET 5 ve .NET Framework arasında seçim yapma**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]

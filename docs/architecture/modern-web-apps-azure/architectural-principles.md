@@ -3,18 +3,18 @@ title: Mimari ilkeleri
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Mimari ilkeler
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: a3444071abae89780304a9687e486f3842283a33
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 12/01/2020
+ms.openlocfilehash: f4079e0409c1675e8f8a3e494303683daeef29c1
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396240"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851418"
 ---
 # <a name="architectural-principles"></a>Mimari ilkeleri
 
 > "Oluşturucular, programcıların programlar yazdığı şekilde bina gerçekleştirmişse, birlikte gelen ilk Woodpecker, Civil 'ı yok eder."  
-> _\-Gerald Weinberg_
+> _\- Gerald Weinberg_
 
 Bakım yaparken yazılım çözümlerini mimariyle mimarın ve tasarlayabilmelisiniz. Bu bölümde özetlenen ilkeler, temiz ve sürdürülebilir uygulamalara yol açacak mimari kararlara kılavuzluk etmenize yardımcı olabilir. Genellikle, bu ilkeler, uygulamanızın diğer bölümlerine sıkı bir şekilde bağlı olmayan, ancak açık arabirimler veya mesajlaşma sistemleri aracılığıyla iletişim kuran ayrık bileşenlerden uygulamalar oluşturmaya nasıl kılavuzluk eder.
 
@@ -22,7 +22,7 @@ Bakım yaparken yazılım çözümlerini mimariyle mimarın ve tasarlayabilmelis
 
 ### <a name="separation-of-concerns"></a>Kaygıları ayırma
 
-Geliştirme, **kaygılara ayrımı**olduğunda bir temel ilke. Bu ilke, yazılımın gerçekleştirdiği iş türlerine göre ayrılması gerektiğini onaylar. Örneğin, kullanıcıya görüntülenecek önemli öğeleri tanımlamaya yönelik mantığı ve bu tür öğeleri daha dikkat çekici hale getirmek için belirli bir şekilde biçimlendiren bu uygulamayı düşünün. Bu davranışlar yalnızca birbirleriyle ilişkili olan ayrı sorunlar olduğundan, hangi öğelerin biçimlendirileceğini seçmekten sorumlu davranış, öğelerin biçimlendirmesinden sorumlu olan davranışlardan ayrı tutulmalıdır.
+Geliştirme, **kaygılara ayrımı** olduğunda bir temel ilke. Bu ilke, yazılımın gerçekleştirdiği iş türlerine göre ayrılması gerektiğini onaylar. Örneğin, kullanıcıya görüntülenecek önemli öğeleri tanımlamaya yönelik mantığı ve bu tür öğeleri daha dikkat çekici hale getirmek için belirli bir şekilde biçimlendiren bu uygulamayı düşünün. Bu davranışlar yalnızca birbirleriyle ilişkili olan ayrı sorunlar olduğundan, hangi öğelerin biçimlendirileceğini seçmekten sorumlu davranış, öğelerin biçimlendirmesinden sorumlu olan davranışlardan ayrı tutulmalıdır.
 
 Mimari türsel uygulamalar, temel iş davranışını altyapı ve Kullanıcı arabirimi mantığından ayırarak bu ilkeyi izlemek üzere mantıksal olarak derlenebilir. İdeal olarak, iş kuralları ve Logic, uygulamadaki diğer projelere bağlı olmaması gereken ayrı bir projede yer almalıdır. Bu ayrım, iş modelinin test etmek kolay olduğundan ve alt düzey uygulama ayrıntılarına sıkı bir şekilde ayrılmadan gelişebilmenizi sağlamaya yardımcı olur. Kaygıları ayrımı, uygulama mimarilerinde katmanların kullanımı arkasında önemli bir noktadır.
 
@@ -30,7 +30,7 @@ Mimari türsel uygulamalar, temel iş davranışını altyapı ve Kullanıcı ar
 
 Uygulamanın farklı bölümlerinin uygulamanın diğer bölümlerinden yalıtılmış olması için **kapsülleme** kullanması gerekir. Dış sözleşmelerin ihlal olmaması koşuluyla, uygulama bileşenleri ve katmanları, kendi ortak bileşenlerini bozmadan iç uygulamasını ayarlayabilmelidir. Doğru kapsülleme kullanımı, nesne ve paketlerin farklı uygulamalarla değiştirilmesini sağlamak için uygulama tasarımlarında gevşek Pave modülerlik sağlamaya yardımcı olur.
 
-Sınıflarda, sınıfın iç durumuna erişimi dışarıdan kısıtlamak için kapsülleme elde edilir. Bir dış aktör nesnenin durumunu işlemek istiyorsa, nesnenin özel durumuna doğrudan erişim sağlamak yerine iyi tanımlanmış bir işlev (veya özellik ayarlayıcısı) aracılığıyla bunu yapması gerekir. Benzer şekilde, uygulama bileşenlerinin ve uygulamaların kendisi, durumunun doğrudan değiştirilmesine izin vermek yerine, kendi ortak çalışanları için iyi tanımlanmış arabirimler kullanıma sunmalıdır. Bu, uygulamanın dahili tasarımını zaman içinde geliştikçe, genel sözleşmelerin bakımını yaptığı sürece iş çalışanları kesintiye uğratır.
+Sınıflarda, sınıfın iç durumuna erişimi dışarıdan kısıtlamak için kapsülleme elde edilir. Bir dış aktör nesnenin durumunu işlemek istiyorsa, nesnenin özel durumuna doğrudan erişim sağlamak yerine iyi tanımlanmış bir işlev (veya özellik ayarlayıcısı) aracılığıyla bunu yapması gerekir. Benzer şekilde, uygulama bileşenlerinin ve uygulamaların kendisi, durumunun doğrudan değiştirilmesine izin vermek yerine, kendi ortak çalışanları için iyi tanımlanmış arabirimler kullanıma sunmalıdır. Bu yaklaşım, uygulamanın dahili tasarımını zaman içinde geliştikçe, genel sözleşmelerin bakımını yaptığı sürece iş çalışanları kesintiye uğratır.
 
 ### <a name="dependency-inversion"></a>Bağımlılık Inversion
 
@@ -95,7 +95,7 @@ Sınıfların yukarıdaki özelliklerden veya davranışların herhangi birine s
 
 ### <a name="bounded-contexts"></a>Sınırlanmış bağlamlar
 
-**Sınırlanmış bağlamlar** , etki alanı odaklı tasarımda merkezi bir modeldir. Bu kişiler, büyük uygulamalarda veya kuruluşlarda, farklı kavramsal modüllere kadar bölmek için bir yol sağlar. Her kavramsal modül daha sonra diğer bağlamlardan ayrılan (Bu nedenle, sınırlı) bir bağlamı temsil eder ve bağımsız olarak gelişebilirler. Her sınırlanmış bağlam, içindeki kavramlar için kendi adlarını seçmek üzere ideal olmalıdır ve kendi kalıcılık deposuna özel erişime sahip olmalıdır.
+**Sınırlanmış bağlamlar** Domain-Driven tasarımında merkezi bir modeldir. Bu kişiler, büyük uygulamalarda veya kuruluşlarda, farklı kavramsal modüllere kadar bölmek için bir yol sağlar. Her kavramsal modül daha sonra diğer bağlamlardan ayrılan (Bu nedenle, sınırlı) bir bağlamı temsil eder ve bağımsız olarak gelişebilirler. Her sınırlanmış bağlam, içindeki kavramlar için kendi adlarını seçmek üzere ideal olmalıdır ve kendi kalıcılık deposuna özel erişime sahip olmalıdır.
 
 En azından, bireysel Web uygulamaları, bir veritabanını diğer uygulamalarla paylaşmak yerine kendi iş modeliyle ilgili kendi Kalıcılık depolarıyla birlikte kendi sınırlı bağlamlarına sahip olmaya devam etmelidir. Sınırlanmış bağlamlar arasındaki iletişim, paylaşılan bir veritabanı yerine, iş mantığı ve olayların gerçekleşen değişikliklere yanıt olarak gerçekleşmesini sağlayan, paylaşılan bir veritabanı yerine programlı arabirimler aracılığıyla oluşur. Sınırlanmış bağlamlar, mikro hizmetlere yakın bir şekilde eşlenir ve ayrıca kendi kendine sınırlanmış bağlamlar olarak ideal şekilde uygulanır.
 

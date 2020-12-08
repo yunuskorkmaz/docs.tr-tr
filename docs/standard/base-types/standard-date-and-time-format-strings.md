@@ -1,7 +1,7 @@
 ---
 title: Standart tarih ve saat biçim dizeleri
 description: .NET 'teki bir tarih ve saat değerinin metin temsilini tanımlamak için standart tarih ve saat biçimi dizesi kullanmayı öğrenin.
-ms.date: 11/05/2020
+ms.date: 12/07/2020
 dev_langs:
 - csharp
 - vb
@@ -13,13 +13,14 @@ helpviewer_keywords:
 - custom date and time format strings
 - formatting [.NET], time
 - date and time strings
+ms.topic: reference
 ms.custom: contperfq2
-ms.openlocfilehash: b6917fa8a012a6fe52db1ea2b79397a0484d9d8f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 688aaf7a1814e132f3bffa48394873653bf314e8
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831331"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851138"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart tarih ve saat biçim dizeleri
 
@@ -85,7 +86,7 @@ Bazı durumlarda, standart biçim dizesi sabit olan daha uzun bir özel biçim d
 
 |Standart biçim dizeleri|DateTimeFormatInfo.InvariantInfo özelliği tarafından tanımı|Özel biçim dizesi|
 |----------------------------|----------------------------------------------------------|--------------------------|
-|"O" veya "o"|Yok|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
+|"O" veya "o"|Hiçbiri|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
 |"R" ya da "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd, dd MMM yyyy HH':'mm':'ss 'GMT'|
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|

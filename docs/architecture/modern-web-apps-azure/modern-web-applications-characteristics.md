@@ -6,13 +6,13 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 6241a9a3a51bd4d5228841caeaf3a7b652fc6eaa
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.date: 12/01/2020
+ms.openlocfilehash: 2a9e55250018352c8019d30a4d615ec39e619e31
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608367"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851236"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Modern Web uygulamalarının özellikleri
 
@@ -25,7 +25,7 @@ ASP.NET Core, modern web uygulamaları ve bulut tabanlı barındırma senaryolar
 
 ## <a name="reference-application-eshoponweb"></a>Başvuru uygulaması: eShopOnWeb
 
-Bu kılavuz, bazı ilkeleri ve önerileri gösteren bir başvuru uygulaması olan _Eshoponweb_içerir. Uygulama, Shirts, kahve Mug 'ler ve diğer pazarlama öğelerinin bir kataloğuna göz atmayı destekleyen basit bir çevrimiçi depodur. Daha kolay anlaşılır olması için başvuru uygulaması kasıtlı olarak basittir.
+Bu kılavuz, bazı ilkeleri ve önerileri gösteren bir başvuru uygulaması olan _Eshoponweb_ içerir. Uygulama, bir Shirts, kahve Mug ve diğer pazarlama öğelerinin bir kataloğuna göz atmayı destekleyen basit bir çevrimiçi depodur. Daha kolay anlaşılır olması için başvuru uygulaması kasıtlı olarak basittir.
 
 ![eShopOnWeb](./media/image2-1.png)
 
@@ -42,7 +42,7 @@ ASP.NET Core, düşük bellek ve yüksek aktarım hızı olduğundan bulut (gene
 
 ## <a name="cross-platform"></a>Platformlar arası
 
-ASP.NET Core platformlar arası ve Linux, macOS ve Windows üzerinde çalışabilir. Bu, ASP.NET Core ile oluşturulmuş uygulamaların geliştirilmesi ve dağıtılması için birçok yeni seçenek açar. Docker Kapsayıcıları-hem Linux hem de Windows-ASP.NET Core uygulamalarını barındırabilir ve bu da [kapsayıcıların ve mikro hizmetlerin](../microservices/index.md)avantajlarından yararlanmasını sağlar.
+ASP.NET Core platformlar arası ve Linux, macOS ve Windows üzerinde çalışabilir. Bu özellik, ASP.NET Core ile oluşturulmuş uygulamaların geliştirilmesi ve dağıtılması için birçok yeni seçenek açar. Docker Kapsayıcıları-hem Linux hem de Windows-ASP.NET Core uygulamalarını barındırabilir ve bu da [kapsayıcıların ve mikro hizmetlerin](../microservices/index.md)avantajlarından yararlanmasını sağlar.
 
 ## <a name="modular-and-loosely-coupled"></a>Modüler ve gevşek olarak bağlanmış
 

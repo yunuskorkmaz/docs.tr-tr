@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: c38649a9e3b3f75ec35fb8711324302a682b504e
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94982400"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851340"
 ---
 # <a name="is-c-reference"></a>is (C# Başvurusu)
 
@@ -32,7 +32,7 @@ C# 7,0 ile başlayarak, `is` ve [Switch](switch.md) deyimleri, model eşleştirm
 Model eşleştirmeyi gerçekleştirmek için tür modelini kullanırken, `is` bir ifadenin belirtilen bir türe dönüştürülüp dönüştürülebileceğini ve bu türden bir değişkene bir değişken verip etmediğini test eder. Bu, `is` kısa tür değerlendirmesi ve dönüştürmeyi sağlayan deyimin basit bir uzantısıdır. `is`Tür deseninin genel formu:
 
 ```csharp
-   expr is type varname
+expr is type varname
 ```
 
 Burada *Expr* , bir türün bir örneğini değerlendiren bir ifadedir, *tür* , *ifadenin* sonucunun dönüştürülecek türün adı ve *varname* , test ise *ifadenin* sonucunun dönüştürülebileceği nesnedir `is` `true` .
@@ -124,7 +124,7 @@ Eğer *expr* ifadesi olarak değerlendirilirse `null` , `is` ifade, `true` `null
   
 Daha fazla bilgi için [c# dil belirtiminin](~/_csharplang/spec/introduction.md) ve aşağıdaki c# dil tekliflerinin [, bkz.:](~/_csharplang/spec/expressions.md#the-is-operator)
 
-- [Model eşleştirme](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
+- [Desen eşleştirme](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [Genel türler ile desen eşleştirme](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
 ## <a name="see-also"></a>Ayrıca bkz.

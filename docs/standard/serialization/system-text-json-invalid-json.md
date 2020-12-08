@@ -1,7 +1,7 @@
 ---
 title: İle bazı geçersiz JSON türlerine izin verme System.Text.Json
 description: .NET 'teki JSON 'dan serileştirirken ve seri durumdan çıkarılırken yorumlara, sondaki virgüller ve tırnak içine alınmış numaralara nasıl izin vereceğinizi öğrenin.
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 60cbb98bb65ee5c1ffdd3043e42a04004530a115
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 1b6402952c4765290d22b530834ed831a68bd2fe
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96440010"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851249"
 ---
 # <a name="how-to-allow-some-kinds-of-invalid-json-with-no-locsystemtextjson"></a>İle bazı geçersiz JSON türlerine izin verme System.Text.Json
 
@@ -36,6 +36,8 @@ Yorumlar ve sondaki virgülden oluşan örnek JSON aşağıda verilmiştir:
   "Date": "2019-08-01T00:00:00-07:00",
   "TemperatureCelsius": 25, // Fahrenheit 77
   "Summary": "Hot", /* Zharko */
+  // Comments on
+  /* separate lines */
 }
 ```
 
@@ -77,12 +79,12 @@ Belirli özellikler, alanlar veya türler için tırnak işaretli sayılara izin
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [System.Text.Json bakýþ](system-text-json-overview.md)
-* [JsonSerializerOptions örneğini oluşturma](system-text-json-configure-options.md)
-* [Büyük/küçük harfe duyarsız eşleştirmeyi etkinleştir](system-text-json-character-casing.md)
+* [JsonSerializerOptions nesne örneği oluşturma](system-text-json-configure-options.md)
+* [Büyük/küçük harf duyarlı eşlemeyi etkinleştirme](system-text-json-character-casing.md)
 * [Özellik adlarını ve değerlerini özelleştirme](system-text-json-customize-properties.md)
-* [Özellikleri yoksay](system-text-json-ignore-properties.md)
-* [Tutamaç taşması JSON](system-text-json-handle-overflow.md)
+* [Özellikleri yoksayma](system-text-json-ignore-properties.md)
+* [Sap taşması JSON’ı](system-text-json-handle-overflow.md)
 * [Döngüsel başvuruları koru](system-text-json-preserve-references.md)
-* [Değişmez türler ve genel olmayan erişimciler](system-text-json-immutability.md)
+* [Sabit türler ve genel olmayan erişimciler](system-text-json-immutability.md)
 * [Polimorfik serileştirme](system-text-json-polymorphism.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)

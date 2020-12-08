@@ -3,22 +3,22 @@ title: ASP.NET Core uygulamalarda verilerle çalışma
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.NET Core uygulamalarında verilerle çalışma
 author: ardalis
 ms.author: wiwagn
-ms.date: 08/12/2020
+ms.date: 12/01/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: cfc91bb811697176ef5d9ecd6b412bd36af3af04
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 9d85d700ecb8d6cbe7afd8d3c724f499ee5fed71
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438059"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851262"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalarında verilerle çalışma
 
 > "Veriler, en çok değerli bir şeydir ve sistemlerden daha uzun süre sonra kalır."
 >
-> Tim Beranlar-eser
+> Tim Berners-Lee
 
 Veri erişimi, neredeyse tüm yazılım uygulamalarının önemli bir parçasıdır. ASP.NET Core, Entity Framework Core (ve Entity Framework 6 de) dahil olmak üzere çeşitli veri erişim seçeneklerini destekler ve tüm .NET veri erişim çerçevesiyle çalışabilir. Hangi veri erişimi çerçevesinin kullanılacağı seçimi uygulamanın ihtiyaçlarına bağlıdır. Bu seçeneklerin ApplicationCore ve UI projelerinden soyutlanmasıdır ve altyapıdaki uygulama ayrıntılarının kapsüllenmesi, gevşek olarak bağlanmış, test edilebilir yazılımlar üretmenize yardımcı olur.
 
@@ -121,7 +121,7 @@ EF Core getirme ve kaydetme için hem zaman uyumlu hem de zaman uyumsuz yönteml
 
 ### <a name="fetching-related-data"></a>İlgili verileri getirme
 
-EF Core varlıkları aldığında, veritabanında bu varlıkla doğrudan depolanan tüm özellikleri doldurur. İlgili varlıkların listeleri gibi gezinti özellikleri doldurulmaz ve değerleri null olarak ayarlanmış olabilir. Bu, EF Core gerekenden daha fazla veri getirmemesini sağlar ve bu, istekleri hızlı bir şekilde işlemek ve yanıtları verimli bir şekilde döndürmesi gereken Web uygulamaları için özellikle önemlidir. _Ekip yükleme_kullanarak bir varlıkla ilişkiler dahil etmek için, özelliği gösterildiği gibi, sorgu üzerinde Include Extension metodunu kullanarak belirtirsiniz:
+EF Core varlıkları aldığında, veritabanında bu varlıkla doğrudan depolanan tüm özellikleri doldurur. İlgili varlıkların listeleri gibi gezinti özellikleri doldurulmaz ve değerleri null olarak ayarlanmış olabilir. Bu işlem, isteklerin hızlı bir şekilde işlenmesi ve yanıtları verimli bir şekilde döndürmesi gereken Web uygulamaları için özellikle önemli olan EF Core gerekenden daha fazla veri getirmemesini sağlar. _Ekip yükleme_ kullanarak bir varlıkla ilişkiler dahil etmek için, özelliği gösterildiği gibi, sorgu üzerinde Include Extension metodunu kullanarak belirtirsiniz:
 
 ```csharp
 // .Include requires using Microsoft.EntityFrameworkCore
@@ -148,15 +148,15 @@ query = specification.IncludeStrings.Aggregate(query,
             (current, include) => current.Include(include));
 ```
 
-İlgili verileri yüklemeye yönelik başka bir seçenek de _açık yükleme_kullanmaktır. Açık yükleme, daha önce alınmış bir varlığa ek veri yüklemenize olanak sağlar. Bu, veritabanına ayrı bir istek içerdiğinden Web uygulamaları için önerilmez, bu da istek başına yapılan veritabanı gidiş dönüş sayısını en aza indirmelidir.
+İlgili verileri yüklemeye yönelik başka bir seçenek de _açık yükleme_ kullanmaktır. Açık yükleme, daha önce alınmış bir varlığa ek veri yüklemenize olanak sağlar. Bu yaklaşım veritabanına ayrı bir istek içerdiğinden Web uygulamaları için önerilmez, bu da istek başına yapılan veritabanı gidiş dönüş sayısını en aza indirmelidir.
 
-_Yavaş yükleme_ , uygulama tarafından başvurulduğundan ilgili verileri otomatik olarak yükleyen bir özelliktir. EF Core sürüm 2,1 ' de geç yükleme desteği eklendi. Geç yükleme varsayılan olarak etkin değildir ve yüklemesi gerekir `Microsoft.EntityFrameworkCore.Proxies` . Açık yüklemede olduğu gibi, kullanımı genellikle Web uygulamaları için devre dışı bırakılmalıdır, çünkü kullanımı her Web isteği içinde ek veritabanı sorgularının oluşmasına neden olur. Ne yazık ki, yavaş yükleme tarafından tahakkuk eden ek yük, gecikme küçük olduğunda ve genellikle test için kullanılan veri kümelerinin küçük olması durumunda geliştirme sırasında fark etmez. Ancak üretimde, daha fazla Kullanıcı, daha fazla veri ve daha fazla gecikmeyle, ek veritabanı istekleri genellikle yavaş yüklemeyi yoğun bir şekilde kullanan Web uygulamaları için düşük performansa neden olabilir.
+_Yavaş yükleme_ , uygulama tarafından başvurulduğundan ilgili verileri otomatik olarak yükleyen bir özelliktir. EF Core sürüm 2,1 ' de geç yükleme desteği eklendi. Geç yükleme varsayılan olarak etkin değildir ve yüklemesi gerekir `Microsoft.EntityFrameworkCore.Proxies` . Açık yüklemede olduğu gibi, kullanımı genellikle Web uygulamaları için devre dışı bırakılmalıdır, çünkü kullanımı her Web isteği içinde ek veritabanı sorgularının oluşmasına neden olur. Ne yazık ki, yavaş yükleme tarafından tahakkuk eden ek yük, gecikme süresi küçük olduğunda ve genellikle test için kullanılan veri kümelerinin küçük olması durumunda geliştirme sırasında açıklanmamasından kaynaklanır. Ancak üretimde, daha fazla Kullanıcı, daha fazla veri ve daha fazla gecikmeyle, ek veritabanı istekleri genellikle yavaş yüklemeyi yoğun bir şekilde kullanan Web uygulamaları için düşük performansa neden olabilir.
 
 [Web uygulamalarında yavaş yükleme varlıklarının olmaması](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
 
 ### <a name="encapsulating-data"></a>Verileri kapsülleme
 
-EF Core, modelinizin durumunu doğru bir şekilde kapsüllemek için birkaç özelliği destekler. Etki alanı modellerinde yaygın bir sorun, koleksiyon gezinti özelliklerini herkese açık olarak erişilebilen liste türleri olarak kullanıma sunmasıdır. Bu, tüm ortak çalışmalardan bu koleksiyon türlerinin içeriğini işlemesini sağlar. Bu, koleksiyon ile ilgili önemli iş kurallarını atlayarak, büyük olasılıkla nesneyi geçersiz bir durumda bırakabilir. Bunun çözümü, ilgili koleksiyonlara salt okuma erişimi sunmak ve bu örnekte olduğu gibi istemcilerin bunları işleyebilecekleri yolları tanımlamaya yönelik yöntemleri açıkça sağlamaktır:
+EF Core, modelinizin durumunu doğru bir şekilde kapsüllemek için birkaç özelliği destekler. Etki alanı modellerinde yaygın bir sorun, koleksiyon gezinti özelliklerini herkese açık olarak erişilebilen liste türleri olarak kullanıma sunmasıdır. Bu sorun, tüm ortak çalışmalardan bu koleksiyon türlerinin içeriğini işlemesini sağlar. Bu, koleksiyon ile ilgili önemli iş kurallarını atlayarak büyük olasılıkla nesneyi geçersiz bir durumda bırakabilir. Bu soruna yönelik çözüm, ilgili koleksiyonlara salt okuma erişimi sunmak ve bu örnekte olduğu gibi istemcilerin bunları işleyebilecekleri yolları tanımlamaya yönelik yöntemleri açıkça sağlamaktır:
 
 ```csharp
 public class Basket : BaseEntity
@@ -209,7 +209,7 @@ Bu örnekte, `ShipToAddress` özelliği türündedir `Address` . `Address` , ve 
 
 ### <a name="resilient-connections"></a>Dayanıklı bağlantılar
 
-SQL veritabanları gibi dış kaynaklar zaman zaman kullanılabilir olmayabilir. Geçici kullanım durumunda uygulamalar, bir özel durum oluşmasını önlemek için yeniden deneme mantığını kullanabilir. Bu teknik genellikle _bağlantı dayanıklılığı_olarak adlandırılır. En fazla yeniden deneme sayısına ulaşılana kadar, bir üstel bekleme süresi ile yeniden denemeye çalışırken, üstel geri alma tekniğinden [kendi yeniden denelerinizi](/azure/architecture/patterns/retry) uygulayabilirsiniz. Bu teknik, bulut kaynaklarının kısa süreler boyunca zaman zaman kullanılamamasına yol açabilir ve bazı isteklerin başarısız olmasıyla sonuçlanır.
+SQL veritabanları gibi dış kaynaklar zaman zaman kullanılabilir olmayabilir. Geçici kullanım durumunda uygulamalar, bir özel durum oluşmasını önlemek için yeniden deneme mantığını kullanabilir. Bu teknik genellikle _bağlantı dayanıklılığı_ olarak adlandırılır. En fazla yeniden deneme sayısına ulaşılana kadar, bir üstel bekleme süresi ile yeniden denemeye çalışırken, üstel geri alma tekniğinden [kendi yeniden denelerinizi](/azure/architecture/patterns/retry) uygulayabilirsiniz. Bu teknik, bulut kaynaklarının kısa süreler boyunca zaman zaman kullanılamamasına neden olabilir ve bu da bazı isteklerin başarısızlığından kaynaklanabilir.
 
 Azure SQL DB için Entity Framework Core, iç veritabanı bağlantı dayanıklılığı ve yeniden deneme mantığını zaten sağlıyor. Ancak dayanıklı EF Core bağlantılarına sahip olmak istiyorsanız her DbContext bağlantısı için Entity Framework yürütme stratejisini etkinleştirmeniz gerekir.
 
@@ -305,7 +305,7 @@ public async Task<IEnumerable<CatalogType>> GetCatalogTypesWithDapper()
 }
 ```
 
-Kaber ile daha karmaşık nesne grafikleri oluşturmanız gerekiyorsa, ilişkili sorguları kendiniz yazmanız gerekir (EF Core gibi bir Içerme eklemek yerine). Bu, tek tek satırları birden çok eşlenmiş nesne ile eşlemenizi sağlayan çoklu eşleme adlı bir özellik dahil olmak üzere çeşitli sözdizimleri aracılığıyla desteklenir. Örneğin, Kullanıcı türünde bir özellik sahibi olan bir sınıf gönderisi verildiğinde, aşağıdaki SQL gerekli verilerin tümünü döndürür:
+Kaber ile daha karmaşık nesne grafikleri oluşturmanız gerekiyorsa, ilişkili sorguları kendiniz yazmanız gerekir (EF Core gibi bir Içerme eklemek yerine). Bu işlevsellik, tek tek satırları birden çok eşlenmiş nesne ile eşlemenizi sağlayan çoklu eşleme adlı bir özellik dahil olmak üzere çeşitli sözdizimleri aracılığıyla desteklenir. Örneğin, Kullanıcı türünde bir özellik sahibi olan bir sınıf gönderisi verildiğinde, aşağıdaki SQL gerekli verilerin tümünü döndürür:
 
 ```sql
 select * from #Posts p
@@ -337,17 +337,17 @@ Paber, daha az kapsülleme sağladığından, geliştiricilerin verilerinin nas�
 
 Geleneksel olarak, SQL Server gibi ilişkisel veritabanları kalıcı veri depolama alanı için Market 'e sahiptir, ancak bunlar kullanılabilir tek çözüm değildir. [MongoDB](https://www.mongodb.com/what-is-mongodb) gibi NoSQL veritabanları, nesneleri depolamanın farklı bir yaklaşımını sunmaktadır. Nesneleri tablo ve satırlara eşlemek yerine, diğer bir seçenek de nesne grafiğinin tamamını seri hale getirmek ve sonucu depolar. En azından başlangıçta bu yaklaşımın avantajları basitlik ve performanslardır. Tek bir seri hale getirilmiş bir nesneyi, bir anahtarla, nesne veritabanından en son alınmasından sonra değişmiş olabilecek ilişkiler ve güncelleştirme ve satırlar içeren çok sayıda tabloya parçalanmaya kıyasla bir anahtarla depolamak daha basittir. Benzer şekilde, anahtar tabanlı bir mağazadan tek bir nesneyi getirme ve serisini kaldırma genellikle karmaşık birleşimlerden çok daha hızlı ve daha kolay ve aynı nesneyi ilişkisel bir veritabanından tamamen oluşturmak için gereken birden çok veritabanı sorgusuna sahiptir. Kilitleri veya işlemleri ya da sabit bir şemanın bulunmaması, NoSQL veritabanlarının çok büyük veri kümelerini destekleyen birçok makine genelinde ölçeklendirilmesine de olanak sağlar.
 
-Diğer taraftan, NoSQL veritabanlarının (genellikle çağrıldığı gibi) dezavantajları vardır. İlişkisel veritabanları, tutarlılığı zorlamak ve verilerin çoğaltılmasını önlemek için normalleştirme kullanır. Bu, veritabanının toplam boyutunu azaltır ve paylaşılan veriler için güncelleştirmelerin hemen veritabanının tamamında kullanılabilmesini sağlar. İlişkisel bir veritabanında, bir ülke/bölge adı değiştirilirse adres kayıtları güncelleştirmeden önce güncelleştirilmesi gerekmeden, bir ülke tablosuna KIMLIĞE göre başvurabilir. bu şekilde, Ancak, bir NoSQL veritabanında, adreste ve ilişkili ülkede birçok saklı nesnenin parçası olarak serileştirilmiş olabilir. Ülke/bölge adına yapılan bir güncelleştirme, bu gibi tüm nesnelerin tek bir satır yerine güncelleştirilmesini gerektirir. İlişkisel veritabanları, yabancı anahtarlar gibi kuralları zorunlu tutarak ilişkisel bütünlüğünden de emin olabilir. NoSQL veritabanları genellikle verileri üzerinde böyle kısıtlamalar sunmaz.
+Diğer taraftan, NoSQL veritabanlarının (genellikle çağrıldığı gibi) dezavantajları vardır. İlişkisel veritabanları, tutarlılığı zorlamak ve verilerin çoğaltılmasını önlemek için normalleştirme kullanır. Bu yaklaşım, veritabanının toplam boyutunu azaltır ve paylaşılan veriler için güncelleştirmelerin hemen veritabanının tamamında kullanılabilmesini sağlar. İlişkisel bir veritabanında, bir ülke/bölge adı değiştirilirse adres kayıtları güncelleştirmeden önce güncelleştirilmesi gerekmeden, bir ülke tablosuna KIMLIĞE göre başvurabilir. bu şekilde, Ancak, bir NoSQL veritabanında, adreste ve ilişkili ülkede birçok saklı nesnenin parçası olarak serileştirilmiş olabilir. Ülke/bölge adına yapılan bir güncelleştirme, bu gibi tüm nesnelerin tek bir satır yerine güncelleştirilmesini gerektirir. İlişkisel veritabanları, yabancı anahtarlar gibi kuralları zorunlu tutarak ilişkisel bütünlüğünden de emin olabilir. NoSQL veritabanları genellikle verileri üzerinde böyle kısıtlamalar sunmaz.
 
-Başka bir karmaşıklık NoSQL veritabanlarının sürümü oluşturma ile uğraşmalıdır. Bir nesnenin özellikleri değiştiğinde, bu, depolanan eski sürümlerden seri durumdan çıkarılamayabilir. Bu nedenle, nesnenin serileştirilmiş (önceki) sürümüne sahip tüm var olan nesnelerin yeni şemasına uymak için güncelleştirilmeleri gerekir. Bu, ilişkisel bir veritabanından kavramsal olarak farklılık içermez, burada şema değişiklikleri bazen güncelleştirme betikleri veya eşleme güncelleştirmeleri gerektirir. Ancak, daha fazla veri yinelemesi olduğundan, değiştirilmesi gereken giriş sayısı NoSQL yaklaşımında genellikle çok daha büyüktür.
+Başka bir karmaşıklık NoSQL veritabanlarının sürümü oluşturma ile uğraşmalıdır. Bir nesnenin özellikleri değiştiğinde, bu, depolanan eski sürümlerden seri durumdan çıkarılamayabilir. Bu nedenle, nesnenin serileştirilmiş (önceki) sürümüne sahip tüm var olan nesnelerin yeni şemasına uymak için güncelleştirilmeleri gerekir. Bu yaklaşım, ilişkisel bir veritabanından kavramsal olarak farklılık içermez, burada şema değişiklikleri bazen güncelleştirme betikleri veya eşleme güncelleştirmeleri gerektirir. Ancak, daha fazla veri yinelemesi olduğundan, değiştirilmesi gereken giriş sayısı NoSQL yaklaşımında genellikle çok daha büyüktür.
 
-Nesnelerin birden çok sürümünü depolamak için NoSQL veritabanlarında, sabit bir şema ilişkisel veritabanları genellikle desteklemez. Bununla birlikte, bu durumda, uygulama kodunuzun önceki nesne sürümlerinin varlığını hesaba getirmeniz gerekir, ek karmaşıklık ekliyor.
+Nesnelerin birden çok sürümünü depolamak için NoSQL veritabanlarında, sabit bir şema ilişkisel veritabanları genellikle desteklemez. Ancak, bu durumda, uygulama kodunuzun önceki nesne sürümlerinin varlığı için hesap yapması gerekir, ek karmaşıklık ekler.
 
 NoSQL veritabanları genellikle, ilişkisel veritabanları üzerinde performans ve ölçeklenebilirlik avantajları olan [ACID](https://en.wikipedia.org/wiki/ACID)'yi zorlamaz. Bunlara çok büyük veri kümeleri ve Normalleştirilmemiş tablo yapılarında depolamaya uygun olmayan nesneler için de idealdir. Tek bir uygulamanın hem ilişkisel hem de NoSQL veritabanlarından yararlanması, her yerde en iyi şekilde yararlanamaması gerekmez.
 
 ## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure Cosmos DB, bulut tabanlı şemaya ücretsiz veri depolama sağlayan, tam olarak yönetilen bir NoSQL veritabanı hizmetidir. Azure Cosmos DB, hızlı ve öngörülebilir performans, yüksek kullanılabilirlik, esnek ölçeklendirme ve küresel dağıtım için oluşturulmuştur. Geliştiriciler NoSQL veritabanı olmasına rağmen JSON verilerinde zengin ve tanıdık SQL sorgu yeteneklerini kullanabilir. Azure Cosmos DB içindeki tüm kaynaklar JSON belgeleri olarak depolanır. Kaynaklar, meta verileri içeren belgeler ve öğe koleksiyonları olan _akışlar_olan _öğeler_olarak yönetilir. Şekil 8-2 farklı Azure Cosmos DB kaynakları arasındaki ilişkiyi gösterir.
+Azure Cosmos DB, bulut tabanlı şemaya ücretsiz veri depolama sağlayan, tam olarak yönetilen bir NoSQL veritabanı hizmetidir. Azure Cosmos DB, hızlı ve öngörülebilir performans, yüksek kullanılabilirlik, esnek ölçeklendirme ve küresel dağıtım için oluşturulmuştur. Geliştiriciler NoSQL veritabanı olmasına rağmen JSON verilerinde zengin ve tanıdık SQL sorgu yeteneklerini kullanabilir. Azure Cosmos DB içindeki tüm kaynaklar JSON belgeleri olarak depolanır. Kaynaklar, meta verileri içeren belgeler ve öğe koleksiyonları olan _akışlar_ olan _öğeler_ olarak yönetilir. Şekil 8-2 farklı Azure Cosmos DB kaynakları arasındaki ilişkiyi gösterir.
 
 ![Bir NoSQL JSON veritabanı olan Azure Cosmos DB kaynaklar arasındaki hiyerarşik ilişki](./media/image8-2.png)
 
@@ -377,13 +377,13 @@ Azure Cosmos DB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçl
 
 ## <a name="caching"></a>Önbelleğe Alma
 
-Web uygulamalarında, her Web isteği mümkün olan en kısa sürede tamamlanmalıdır. Bunu gerçekleştirmenin bir yolu, sunucunun isteği tamamlaması için yapması gereken dış çağrı sayısını sınırlayacaktır. Önbelleğe alma işlemi, sunucuda verilerin bir kopyasının depolanmasını (veya verilerin kaynağından daha kolay sorgulanan başka bir veri deposu) içerir. Web uygulamaları ve özellikle de non-SPA geleneksel olmayan Web uygulamaları, her istekle birlikte Kullanıcı arabiriminin tamamını oluşturmanız gerekir. Bu sıklıkla, bir Kullanıcı isteğinden bir sonrakine aynı veritabanı sorgularının birçok kez oluşturulmasını içerir. Çoğu durumda, bu veriler nadiren değişir, bu yüzden sürekli olarak veritabanından isteme nedenidir. ASP.NET Core, tüm sayfaların önbelleğe alınması ve daha ayrıntılı önbelleğe alma davranışını destekleyen veri önbelleğe alma işlemleri için yanıt önbelleğe almayı destekler.
+Web uygulamalarında, her Web isteği mümkün olan en kısa sürede tamamlanmalıdır. Bu işlevi gerçekleştirmenin bir yolu, sunucunun isteği tamamlaması için yapması gereken dış çağrı sayısını sınırlayacaktır. Önbelleğe alma işlemi, sunucuda verilerin bir kopyasının depolanmasını (veya verilerin kaynağından daha kolay sorgulanan başka bir veri deposu) içerir. Web uygulamaları ve özellikle de non-SPA geleneksel olmayan Web uygulamaları, her istekle birlikte Kullanıcı arabiriminin tamamını oluşturmanız gerekir. Bu yaklaşım sıklıkla, bir Kullanıcı isteğinden bir sonrakine kadar aynı veritabanı sorgularının birçok kez daha fazlasını yapmayı içerir. Çoğu durumda, bu veriler nadiren değişir, bu yüzden sürekli olarak veritabanından isteme nedenidir. ASP.NET Core, tüm sayfaların önbelleğe alınması ve daha ayrıntılı önbelleğe alma davranışını destekleyen veri önbelleğe alma işlemleri için yanıt önbelleğe almayı destekler.
 
-Önbelleğe alma uygularken, kaygıları göz önünde bulundurmanız önemlidir. Veri erişim mantığınızdaki veya Kullanıcı arabiriminizdeki önbelleğe alma mantığını uygulamaktan kaçının. Bunun yerine, önbelleğe almayı kendi sınıflarında kapsülle ve davranışını yönetmek için yapılandırma kullanın. Bu, açık/kapalı ve tek sorumluluk ilkelerini izler ve uygulamanızda önbelleğe alma işlemini nasıl kullanacağınızı yönetmenizi kolaylaştırır.
+Önbelleğe alma uygularken, kaygıları göz önünde bulundurmanız önemlidir. Veri erişim mantığınızdaki veya Kullanıcı arabiriminizdeki önbelleğe alma mantığını uygulamaktan kaçının. Bunun yerine, önbelleğe almayı kendi sınıflarında kapsülle ve davranışını yönetmek için yapılandırma kullanın. Bu yaklaşım açık/kapalı ve tek sorumluluk ilkelerini izler ve uygulamanızda önbelleğe alma işlemini nasıl kullanacağınızı yönetmenizi kolaylaştırır.
 
 ### <a name="aspnet-core-response-caching"></a>ASP.NET Core yanıtı önbelleğe alma
 
-ASP.NET Core iki yanıt önbelleği düzeyini destekler. İlk düzey sunucu üzerinde herhangi bir şeyi önbelleğe almaz, ancak istemcilerin ve proxy sunucularının yanıtları önbelleğe almasını sağlayan HTTP üstbilgileri ekler. Bu, bireysel denetleyicilere veya eylemlere ResponseCache özniteliği eklenerek uygulanır:
+ASP.NET Core iki yanıt önbelleği düzeyini destekler. İlk düzey sunucu üzerinde herhangi bir şeyi önbelleğe almaz, ancak istemcilerin ve proxy sunucularının yanıtları önbelleğe almasını sağlayan HTTP üstbilgileri ekler. Bu işlevsellik, bireysel denetleyicilere veya eylemlere ResponseCache özniteliği eklenerek uygulanır:
 
 ```csharp
 [ResponseCache(Duration = 60)]
@@ -416,7 +416,7 @@ Yanıt önbelleğe alma ara yazılımı, özelleştirmeleri, özelleştirebilece
 
 ### <a name="data-caching"></a>Verileri önbelleğe alma
 
-(Veya buna ek olarak) tam Web yanıtlarını önbelleğe alma yerine, bireysel veri sorgularının sonuçlarını önbelleğe alabilirsiniz. Bunun için, Web sunucusunda bellek önbelleklemesi veya [Dağıtılmış önbellek](/aspnet/core/performance/caching/distributed)kullanabilirsiniz. Bu bölüm, bellek önbelleğe alma işleminde nasıl uygulanacağını gösterir.
+(Veya buna ek olarak) tam Web yanıtlarını önbelleğe alma yerine, bireysel veri sorgularının sonuçlarını önbelleğe alabilirsiniz. Bu işlevsellik için, Web sunucusunda bellek önbelleğe alma veya [Dağıtılmış bir önbellek](/aspnet/core/performance/caching/distributed)kullanma ' yı kullanabilirsiniz. Bu bölüm, bellek önbelleğe alma işleminde nasıl uygulanacağını gösterir.
 
 ConfigureServices 'e bellek (veya dağıtılmış) önbelleği desteği eklersiniz:
 
@@ -477,7 +477,7 @@ public class CachedCatalogService : ICatalogService
 }
 ```
 
-Uygulamayı, hizmetin önbelleğe alınmış sürümünü kullanacak şekilde yapılandırmak için, ancak hala hizmetin oluşturucuda ihtiyacı olan CatalogService örneğini almaya izin vermek için, ConfigureServices 'e şunu ekleyin:
+Uygulamayı, hizmetin önbelleğe alınmış sürümünü kullanacak şekilde yapılandırmak için, ancak hala hizmetin oluşturucuda ihtiyacı olan CatalogService örneğini almaya izin vermek için, ConfigureServices 'a aşağıdaki satırları ekleyin:
 
 ```csharp
 services.AddMemoryCache();
@@ -485,9 +485,9 @@ services.AddScoped<ICatalogService, CachedCatalogService>();
 services.AddScoped<CatalogService>();
 ```
 
-Bu şekilde, katalog verilerini getirmek için veritabanı çağrıları her istek yerine yalnızca dakikada bir kez yapılır. Site trafiğine bağlı olarak, bu, veritabanına yapılan sorgu sayısı üzerinde önemli bir etkiye ve ana sayfa için o anda bu hizmet tarafından kullanıma sunulan her bir sorguya bağlı olan ortalama sayfa yükleme süresine sahip olabilir.
+Bu kodla birlikte, katalog verilerini getirmek için veritabanı çağrıları her istek yerine yalnızca dakikada bir kez yapılır. Site trafiğine bağlı olarak, bu, veritabanına yapılan sorgu sayısı üzerinde önemli bir etkiye ve ana sayfa için o anda bu hizmet tarafından kullanıma sunulan her bir sorguya bağlı olan ortalama sayfa yükleme süresine sahip olabilir.
 
-Önbelleğe alma işlemi uygulandığında ortaya çıkan bir sorun _eski veriler_ , yani kaynakta değiştirilen veriler, ancak güncel olmayan bir sürüm önbellekte kalır. Bu sorunu hafifletmenin basit bir yolu, yoğun bir uygulama için, verilerin uzatılması için sınırlı sayıda daha fazla avantaj olduğundan, küçük önbellek süreleri kullanmaktır. Örneğin, tek bir veritabanı sorgusu oluşturan ve saniyede 10 kez istenen bir sayfa düşünün. Bu sayfa bir dakika boyunca önbelleğe alınmışsa, 600 ' dan 1 ' e düşürülmesi için dakika başına yapılan Veritabanı sorgularının sayısına,% 99,8 oranında bir azalmaya neden olur. Bunun yerine önbellek süresi bir saat yapılırsa, genel azaltma% 99,997 olur, ancak artık eski verilerin olasılığı ve potansiyel yaşı önemli ölçüde artar.
+Önbelleğe alma işlemi uygulandığında ortaya çıkan bir sorun _eski veriler_ , yani kaynakta değiştirilen veriler, ancak güncel olmayan bir sürüm önbellekte kalır. Bu sorunu azaltmanıza yönelik basit bir yol, yoğun bir uygulama için, verilerin uzatılması için sınırlı bir ek avantaj olduğu için küçük önbellek süreleri kullanmaktır. Örneğin, tek bir veritabanı sorgusu oluşturan ve saniyede 10 kez istenen bir sayfa düşünün. Bu sayfa bir dakika boyunca önbelleğe alınmışsa, 600 ' dan 1 ' e düşürülmesi için dakika başına yapılan Veritabanı sorgularının sayısına,% 99,8 oranında bir azalmaya neden olur. Bunun yerine önbellek süresi bir saat yapılırsa, genel azaltma% 99,997 olur, ancak artık eski verilerin olasılığı ve potansiyel yaşı önemli ölçüde artar.
 
 Diğer bir yaklaşım, içerdikleri veriler güncelleştirilirken önbellek girişlerini önceden kaldırmak olur. Anahtarı biliniyorsa her bir giriş kaldırılabilir:
 
@@ -523,7 +523,7 @@ Blazor WebAssembly [Eshoponweb Reference uygulamasında](https://github.com/dotn
 
 **Şekil 8-3.** eShopOnWeb Katalog Yöneticisi ekran görüntüsü.
 
-Bir uygulama içindeki Web API 'Lerinden veri getirilirken Blazor WebAssembly , herhangi bir .NET uygulamasında olduğu gibi bir örneğini kullanmanız yeterlidir `HttpClient` . Söz konusu temel adımlar, gönderilecek isteği oluşturmak (genellikle POST veya PUT istekleri için), isteğin kendisini beklemesi, durum kodunu doğrulamak ve yanıtın serisini kaldırmak içindir. Belirli bir API kümesine birçok istek oluşturacaksanız, API 'lerinizi kapsüllemek ve temel adresi merkezi olarak yapılandırmanız iyi bir fikirdir `HttpClient` . Bu şekilde, ortamlar arasında bu ayarlardan herhangi birini ayarlamanız gerekirse, değişiklikleri yalnızca bir yerde yapabilirsiniz. Bu hizmet için destek eklemeniz gerekir `Program.Main` :
+Bir uygulama içindeki Web API 'Lerinden veri getirilirken Blazor WebAssembly , herhangi bir .NET uygulamasında olduğu gibi bir örneğini kullanmanız yeterlidir `HttpClient` . Söz konusu temel adımlar, gönderilecek isteği oluşturmaktır (gerekirse, genellikle POST veya PUT istekleri için), isteğin kendisini bekler, durum kodunu doğrular ve yanıtın serisini kaldıramıyor. Belirli bir API kümesine birçok istek oluşturacaksanız, API 'lerinizi kapsüllemek ve temel adresi merkezi olarak yapılandırmanız iyi bir fikirdir `HttpClient` . Bu şekilde, ortamlar arasında bu ayarlardan herhangi birini ayarlamanız gerekirse, değişiklikleri yalnızca bir yerde yapabilirsiniz. Bu hizmet için destek eklemeniz gerekir `Program.Main` :
 
 ```csharp
 builder.Services.AddScoped(sp =>
@@ -540,9 +540,9 @@ _httpClient.DefaultRequestHeaders.Authorization =
     new AuthenticationHeaderValue("Bearer", token);
 ```
 
-Bu, uygulamaya eklenmiş olan herhangi bir bileşenden yapılabilir ve bu işlem `HttpClient` , `HttpClient` uygulamanın hizmetlerine ömür ile eklenmemiş olabilir `Transient` . Uygulamadaki her başvuru `HttpClient` aynı örneğe başvurur, bu nedenle bir bileşen içindeki üzerinde yapılan her başvuru, uygulamanın tamamı boyunca akar. Bu kimlik doğrulama denetimini gerçekleştirmek için iyi bir yer (arkasından belirteci belirterek), sitenin ana gezintisi gibi paylaşılan bir bileşende bulunur. `BlazorAdmin` [Eshoponweb Reference uygulamasındaki](https://github.com/dotnet-architecture/eShopOnWeb)projede bu yaklaşım hakkında daha fazla bilgi edinin.
+Bu etkinlik, uygulamaya eklenmiş olan herhangi bir bileşenden yapılabilir `HttpClient` ve bu, `HttpClient` bir yaşam süresi ile uygulamanın hizmetlerine eklenmemiş olabilir `Transient` . Uygulamadaki her başvuru `HttpClient` aynı örneğe başvurur, bu nedenle bir bileşen içindeki üzerinde yapılan her başvuru, uygulamanın tamamı boyunca akar. Bu kimlik doğrulama denetimini gerçekleştirmek için iyi bir yer (arkasından belirteci belirterek), sitenin ana gezintisi gibi paylaşılan bir bileşende bulunur. `BlazorAdmin` [Eshoponweb Reference uygulamasındaki](https://github.com/dotnet-architecture/eShopOnWeb)projede bu yaklaşım hakkında daha fazla bilgi edinin.
 
-Geleneksel JavaScript 'in avantajlarından birinin avantajlarından biri Blazor WebAssembly de, veri aktarım nesnelerinizin (DTOS) kopyaları eşitlenmiş halde tutmanız gerekmez. Blazor WebAssembly Projeniz ve Web API projeniz, ortak bir paylaşılan projede aynı DTOS 'ı paylaşabilir. Bu, maça 'Ları geliştirmeye yönelik bir bölümünü ortadan kaldırır.
+Geleneksel JavaScript 'in avantajlarından birinin avantajlarından biri Blazor WebAssembly de, veri aktarım nesnelerinizin (DTOS) kopyaları eşitlenmiş halde tutmanız gerekmez. Blazor WebAssembly Projeniz ve Web API projeniz, ortak bir paylaşılan projede aynı DTOS 'ı paylaşabilir. Bu yaklaşım, maça 'Ları geliştirmeye yönelik bir kısmını ortadan kaldırır.
 
 Bir API uç noktasından hızlıca veri almak için yerleşik yardımcı yöntemini kullanabilirsiniz `GetFromJsonAsync` . GÖNDERI, PUT, vb. için benzer yöntemler vardır. Aşağıda, bir uygulamada yapılandırılmış bir API kullanarak bir API uç noktasından bir CatalogItem alma gösterilmektedir `HttpClient` Blazor WebAssembly :
 

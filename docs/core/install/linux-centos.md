@@ -4,12 +4,12 @@ description: .NET SDK ve .NET çalışma zamanının CentOS 'a yüklenmesi için
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b30aa206057107aa17fcd62e0f042f9fe3ad56dc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 2c3453c79a1dc31f01577bc0c1b9e320eb307c0a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031936"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851685"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>CentOS 'a .NET SDK veya .NET çalışma zamanı yüklemesi
 
@@ -27,7 +27,7 @@ Aşağıdaki tabloda, hem CentOS 7 hem de CentOS 8 ' de şu anda desteklenen .NE
 - Bir ❌ , CentOS veya .NET sürümünün bu CentOS sürümünde desteklenmediğini belirtir.
 - Hem CentOS hem de .NET sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| CentOS                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [8](#centos-8-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [7](#centos-7-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
@@ -50,14 +50,7 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-> [!TIP]
-> .NET 5,0 henüz varsayılan paket depolarında kullanılamaz, ancak .NET Core 3,1 ' dir. .NET Core 3,1 yüklemek için, veya gibi `dnf install` uygun Paketle komutunu kullanın `aspnetcore-runtime-3.1` `dotnet-sdk-3.1` . Aşağıdaki yönergeler .NET 5,0 içindir.
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
-```
+.NET 5,0, CentOS 8 için varsayılan paket depolarında kullanılabilir.
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 

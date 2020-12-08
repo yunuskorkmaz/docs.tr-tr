@@ -11,12 +11,12 @@ helpviewer_keywords:
 - rules, design
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: c8c7d46b9271e33ab7ce3f989fae95bd57394ccd
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7b49403b1aa3d48008e6f7448ab0ed5a84468373
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "96589437"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851535"
 ---
 # <a name="design-rules"></a>Tasarım kuralları
 
@@ -75,3 +75,4 @@ Tasarım kuralları [.NET Framework Tasarım yönergelerine](../../../standard/d
 | [CA1068: CancellationToken parametreleri en sonda olmalıdır](ca1068.md) | Bir yöntem, son parametre olmayan CancellationToken parametresine sahiptir. |
 | [CA1069: Sabit listeleri yinelenen değerlere sahip olmamalıdır](ca1069.md) | Bir numaralandırma, aynı sabit değere açıkça atanmış birden çok üyeye sahiptir. |
 | [CA1070: Olay alanlarını sanal olarak bildirme](ca1070.md) | [Alan benzeri bir olay](../../../csharp/event-pattern.md#defining-and-raising-field-like-events) sanal olarak bildirildi. |
+| [CA1071: geçersiz kılma tabanı. IEquatable uygularken eşittir](ca1071.md) | Türetilmiş bir tür uygular <xref:System.IEquatable%601> , ancak temel sınıf yöntemini geçersiz kılmaz <xref:System.IEquatable%601.Equals%2A> . |
