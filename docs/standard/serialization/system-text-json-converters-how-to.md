@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 17671b86dc6d1d7b45a01cb0bf7c5c42f624d99f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 008455a77f98cd9975b04001121217866cc2ba6e
+ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438120"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96918612"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
@@ -44,6 +44,8 @@ Ayrıca, `System.Text.Json` geçerli sürüme dahil olmayan işlevlerle özelle�
 * [Polimorfik serisini destekler](#support-polymorphic-deserialization).
 * [Yığın \<T> için gidiş dönüş desteği](#support-round-trip-for-stackt).
 ::: zone-end
+
+Özel bir dönüştürücü için yazdığınız kodda, yeni örnekleri kullanmaya yönelik önemli performans cezası hakkında dikkat edin <xref:System.Text.Json.JsonSerializerOptions> . Daha fazla bilgi için bkz. [JsonSerializerOptions örneklerini yeniden kullanma](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances).
 
 ## <a name="custom-converter-patterns"></a>Özel dönüştürücü desenleri
 

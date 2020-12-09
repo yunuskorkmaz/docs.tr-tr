@@ -1,7 +1,7 @@
 ---
 title: C#-.NET kullanarak JSON serileştirmek ve serisini kaldırma
 description: System.Text.Json.Net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı öğrenin. Örnek kod içerir.
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.custom: contperfq2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9ea9e2fef5ef66f2a5ff816168abfbd7b2e75276
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: dc1f8dab0d8d1ab5001797140a3bbfe4a02cb52b
+ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437673"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96918573"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -248,6 +248,8 @@ Aşağıda, seri hale getirilebilir ve düzgün şekilde yazdırılan JSON çık
   "Summary": "Hot"
 }
 ```
+
+`JsonSerializerOptions`Aynı seçeneklerle tekrar tekrar kullanırsanız, `JsonSerializerOptions` her kullandığınızda yeni bir örnek oluşturmayın. Her çağrı için aynı örneği yeniden kullanın. Daha fazla bilgi için bkz. [JsonSerializerOptions örneklerini yeniden kullanma](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances).
 
 ## <a name="include-fields"></a>Dahil etme alanları
 

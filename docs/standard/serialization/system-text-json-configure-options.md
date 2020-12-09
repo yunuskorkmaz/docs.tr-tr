@@ -1,7 +1,7 @@
 ---
 title: İle JsonSerializerOptions örneği System.Text.Json
-description: Mevcut örnekleri veya Web varsayılanlarını kopyalayarak JsonSerializerOptions örneklerinin örneğini oluşturmayı öğrenin.
-ms.date: 11/30/2020
+description: Performans sorunlarından kaçının ve JsonSerializerOptions örnekleri için kullanılabilir oluşturucuların nasıl kullanılacağını öğrenin.
+ms.date: 12/02/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,16 +11,30 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 0febfe15f36856f10699fd327fb17c146277eb9b
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 257c99e117dea9a9b3ab2352c9a442d71a2cdabd
+ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96440032"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96918560"
 ---
 # <a name="how-to-instantiate-jsonserializeroptions-instances-with-no-locsystemtextjson"></a>İle JsonSerializerOptions örneklerinin örneğini oluşturma System.Text.Json
 
-Bu makalede, <xref:System.Text.Json.JsonSerializerOptions> mevcut örnekleri veya Web varsayılanlarını kopyalayarak örneklerin örneğini oluşturmayı öğreneceksiniz.
+Bu makalede, kullanırken performans sorunlarının nasıl önleneceği açıklanmaktadır <xref:System.Text.Json.JsonSerializerOptions> . Ayrıca, kullanılabilir parametreli oluşturucuların nasıl kullanılacağını gösterir.
+
+## <a name="reuse-jsonserializeroptions-instances"></a>JsonSerializerOptions örneklerini yeniden kullanma
+
+`JsonSerializerOptions`Aynı seçeneklerle tekrar tekrar kullanırsanız, `JsonSerializerOptions` her kullandığınızda yeni bir örnek oluşturmayın. Her çağrı için aynı örneği yeniden kullanın. Bu kılavuz, özel dönüştürücüler için yazdığınız koda ve veya ' i çağırdığınızda geçerlidir <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> .
+
+Aşağıdaki kod, yeni seçenek örneklerinin kullanımı için performans cezaını gösterir.
+
+:::code language="csharp" source="snippets/system-text-json-configure-options/csharp/ReuseOptionsInstances.cs":::
+
+Yukarıdaki kod, aynı seçenek örneğini kullanarak küçük bir nesne 100.000 kez seri hale getirir. Daha sonra aynı nesneyi aynı sayıda seri hale getirir ve her seferinde yeni bir seçenek örneği oluşturur. Tipik bir çalıştırma süresi farkı, 40.140 milisaniyeye kıyasla 190 ' dir. Yineleme sayısını arttırmanız halinde fark daha büyük olur.
+
+Seri hale getirici, yeni bir seçenek örneği geçirildiğinde nesne grafiğindeki her bir türün ilk serileştirilmesi sırasında bir ısınma aşamasına geçer. Bu ısınma, serileştirme için gereken meta verilerin bir önbelleğinin oluşturulmasını içerir. Meta veriler, özellik Getters, ayarlayıcıları, Oluşturucu bağımsız değişkenleri, belirtilen öznitelikler ve benzeri temsilciler içerir. Bu meta veri önbelleği seçenekler örneğinde depolanır. Aynı ısınma işlemi ve önbellek seri durumundan çıkarma için geçerlidir.
+
+Bir örnekteki meta veri önbelleğinin boyutu, `JsonSerializerOptions` seri hale getirilecek türlerin sayısına bağlıdır. Seri hale getirici için çok sayıda tür geçirirseniz — Örneğin, dinamik olarak üretilen türler —, önbellek boyutu büyümeye devam eder ve bir soruna neden olabilir `OutOfMemoryException` .
 
 ## <a name="copy-jsonserializeroptions"></a>JsonSerializerOptions 'ı Kopyala
 
@@ -60,12 +74,12 @@ Web uygulamaları için farklı varsayılan değerlere sahip olan seçenekler ş
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [System.Text.Json bakýþ](system-text-json-overview.md)
-* [Büyük/küçük harfe duyarsız eşleştirmeyi etkinleştir](system-text-json-character-casing.md)
+* [Büyük/küçük harf duyarlı eşlemeyi etkinleştirme](system-text-json-character-casing.md)
 * [Özellik adlarını ve değerlerini özelleştirme](system-text-json-customize-properties.md)
-* [Özellikleri yoksay](system-text-json-ignore-properties.md)
-* [Geçersiz JSON 'a izin ver](system-text-json-invalid-json.md)
-* [Tutamaç taşması JSON](system-text-json-handle-overflow.md)
+* [Özellikleri yoksayma](system-text-json-ignore-properties.md)
+* [Geçersiz JSON’a izin verme](system-text-json-invalid-json.md)
+* [Sap taşması JSON’ı](system-text-json-handle-overflow.md)
 * [Döngüsel başvuruları koru](system-text-json-preserve-references.md)
-* [Değişmez türler ve genel olmayan erişimciler](system-text-json-immutability.md)
+* [Sabit türler ve genel olmayan erişimciler](system-text-json-immutability.md)
 * [Polimorfik serileştirme](system-text-json-polymorphism.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)
