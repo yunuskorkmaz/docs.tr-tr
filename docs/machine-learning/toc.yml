@@ -111,6 +111,8 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Modeli bir web API'sine dağıtma
               href: how-to-guides/serve-model-web-api-ml-net.md
+            - name: Azure Machine Learning ONNX modelini kullanma
+              href: /azure/machine-learning/how-to-use-automl-onnx-model-dotnet?toc=/dotnet/machine-learning/how-to-guides/toc.json&bc=/dotnet/machine-learning/how-to-guides/toc.json
 - name: Başvuru
   items:
     - name: ML.NET API Başvurusu
