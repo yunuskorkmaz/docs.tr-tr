@@ -17,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: d0a928fffb84e925ae167885e6d2456dc45b6892
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825084"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009826"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>.NET 'teki dizeleri karşılaştırmak için en iyi yöntemler
 
@@ -54,7 +54,7 @@ Dizeleri karşılaştırdığınızda aşağıdaki uygulamalardan kaçının:
 
 .NET 'teki dize düzenleme yöntemlerinin çoğu aşırı yüklenmiştir. Genellikle bir veya daha fazla aşırı yükleme varsayılan ayarları kabul ederken diğerleri varsayılanları kabul etmez ve bunun yerine dizelerin tam olarak nasıl karşılaştırılacağını veya değiştirileceğini tanımlar. Varsayılan değerleri kullanmayan yöntemlerin çoğu, dize karşılaştırma kurallarını kültür ve büyük/küçük harfe göre açıkça belirten bir numaralandırma olan <xref:System.StringComparison> türü bir parametre içerir. Aşağıdaki tablo, <xref:System.StringComparison> numaralandırma üyelerini açıklar.
 
-|StringComparison üyesi|Açıklama|
+|StringComparison üyesi|Description|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Geçerli kültürü kullanarak büyük/küçük harfe duyarlı bir karşılaştırma gerçekleştirir.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Geçerli kültürü kullanarak büyük/küçük harfe duyarsız bir karşılaştırma gerçekleştirir.|
@@ -166,9 +166,6 @@ bu karşılaştırmaya eşdeğerdir (ancak daha hızlıdır):
 [!code-vb[Conceptual.Strings.BestPractices#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison2.vb#5)]
 
 Bu karşılaştırmalar yine de çok hızlıdır.
-
-> [!NOTE]
-> Dosya sisteminin, kayıt defteri anahtarlarının ve değerlerinin ve ortam değişkenlerinin dize davranışı, en iyi <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> tarafından temsil edilir.
 
 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ve <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>'in her ikisi de doğrudan ikili değerleri kullanır ve eşleştirme için idealdir. Karşılaştırma ayarlarınızdan emin olmadığınızda, bu iki değerden birini kullanın. Ancak, bayt bayt karşılaştırma yaptıkları için bunlar, bir dilsel sıralama düzeninde (bir İngilizce sözlüğü gibi) değil, ikili sıralama düzeninde sıralarlar. Sonuçlar kullanıcılara görüntülenirse çoğu bağlamda tuhaf görünebilir.
 

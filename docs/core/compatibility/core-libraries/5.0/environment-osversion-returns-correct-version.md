@@ -2,12 +2,12 @@
 title: 'Son değişiklik: Environment. OSVersion doğru işletim sistemi sürümünü döndürüyor'
 description: Core .NET kitaplıklarında .NET 5,0 son değişikliği hakkında bilgi edinin. OSVersion, örneğin, uygulama uyumluluğu için seçilen işletim sistemi yerine işletim sisteminin gerçek sürümünü döndürür.
 ms.date: 11/01/2020
-ms.openlocfilehash: b78ca1c7be50f76b99b5558a976d8f00e2f560c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c810d9a7a028a0c60c30d69e78a9b9c695d933ef
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761723"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009527"
 ---
 # <a name="environmentosversion-returns-the-correct-operating-system-version"></a>Environment. OSVersion doğru işletim sistemi sürümünü döndürür
 
@@ -15,13 +15,22 @@ ms.locfileid: "95761723"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, <xref:System.Environment.OSVersion?displayProperty=nameWithType> bir uygulama Windows Uyumluluk modu altında çalıştığında hatalı olabilecek bir işletim sistemi sürümü döndürür. Daha fazla bilgi için bkz. [Getversionexa işlev açıklamaları](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa#remarks).
+Önceki .NET sürümlerinde, <xref:System.Environment.OSVersion?displayProperty=nameWithType> bir uygulama Windows Uyumluluk modu altında çalıştığında hatalı olabilecek bir işletim sistemi sürümü döndürür. Daha fazla bilgi için bkz. [Getversionexa işlev açıklamaları](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa#remarks). MacOS 'ta <xref:System.Environment.OSVersion?displayProperty=nameWithType> temeldeki Darwin çekirdek sürümünü döndürür.
 
-.NET 5,0 ' den başlayarak, <xref:System.Environment.OSVersion?displayProperty=nameWithType> işletim sisteminin gerçek sürümünü döndürür.
+.NET 5,0 ' den itibaren, <xref:System.Environment.OSVersion?displayProperty=nameWithType> Windows ve macOS için işletim sisteminin gerçek sürümünü döndürür.
+
+Aşağıdaki tabloda davranış farkı gösterilmektedir.
+
+|  | Önceki .NET sürümleri | .NET 5 + |
+|--|------------------------|---------|
+| Windows | 6.2.9200.0 | 10.0.19042.0 |
+| macOS | 19.6.0.0 | 10.15.7 |
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
 Bu özelliğin kullanıcıları, işletim sisteminin gerçek sürümünü döndürmesini bekler. .NET uygulamalarının çoğu uygulama bildiriminde desteklenen sürümlerini belirtmemektedir ve bu nedenle DotNet ana bilgisayardan desteklenen varsayılan sürümü alır. Sonuç olarak, uyumluluk dolgusu çalışan uygulama için nadiren anlamlı olur. Windows yeni bir sürüm yayımlarsa ve daha eski bir DotNet Konağı hala kullanımda olduğunda, bu uygulamalar yanlış bir işletim sistemi sürümü alabilir. Gerçek sürümü döndürmek, geliştiricilerin bu API 'nin beklentileri ile daha fazla satır içidir.
+
+<xref:System.OperatingSystem.IsWindowsVersionAtLeast%2A?displayProperty=nameWithType> <xref:System.OperatingSystem.IsMacOSVersionAtLeast%2A?displayProperty=nameWithType> .NET 5,0 ' e giriş ile <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute?displayProperty=nameWithType> <xref:System.Environment.OSVersion?displayProperty=nameWithType> Windows ve MacOS için tutarlı olacak şekilde değiştirilmiştir.
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 

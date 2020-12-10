@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851822"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009852"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET kaynak kodu çözümlemesine genel bakış
 
@@ -99,25 +99,24 @@ Varsayılan olarak, .NET SDK 'sının daha yeni sürümlerine yükselttiğinizde
 
 - .NET SDK güncelleştirmelerinden kural güncelleştirmelerini ayırmak için [Microsoft. CodeAnalysis. Netçözümleyiciler NuGet paketini](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisnetanalyzers) yükler. Paketin yüklenmesi yerleşik SDK Çözümleyicileri kapatır ve SDK, NuGet paketinden daha yeni bir çözümleyici derleme sürümü içeriyorsa derleme uyarısı oluşturur.
 
-## <a name="code-style-analysis"></a>Kod stili Analizi
+## <a name="code-style-analysis"></a>Kod stili analiz
 
-*Kod stili Analizi* ("ıdexxxx") kuralları, kod tabanınızda tutarlı kod stili tanımlamanızı ve bakımını sağlar. Varsayılan etkinleştirme ayarları şunlardır:
+*Kod stili analiz* ("ıdexxxx") kuralları, kod tabanınızda tutarlı kod stili tanımlamanızı ve bakımını sağlar. Varsayılan etkinleştirme ayarları şunlardır:
 
-- Komut satırı derlemesi: komut satırı Derlemeleriyle ilgili tüm .NET projeleri için kod stili Analizi varsayılan olarak devre dışıdır.
+- Komut satırı derlemesi: komut satırı Derlemeleriyle ilgili tüm .NET projeleri için, varsayılan olarak kod stili çözümleme devre dışıdır.
 - Visual Studio: kod stili analizi, varsayılan olarak Visual Studio içindeki tüm .NET projeleri için [kod yeniden düzenleme hızlı eylemleri](/visualstudio/ide/code-generation-in-visual-studio)olarak etkinleştirilmiştir.
 
 .NET 5,0 ' den başlayarak, derleme üzerinde kod stili analizini hem komut satırında hem de Visual Studio içinde etkinleştirebilirsiniz. Kod stili ihlalleri, uyarı veya "IDE" ön eki ile hatalar olarak görüntülenir. Bu, derleme zamanında tutarlı kod stilleri zorlamanıza olanak sağlar.
 
 Kod stili analiz kurallarının tam listesi için bkz. [kod stili kuralları](style-rules/index.md).
 
-> [!NOTE]
-> Kod stili analiz özelliği deneysel bir özelliktir ve .NET 5 ve .NET 6 sürümleri arasında değişebilir.
+### <a name="enable-on-build"></a>Derlemede etkinleştir
 
-Derlemede kod stili analizini etkinleştirme adımları:
+Derlemede kod stili analizini etkinleştirmek için şu adımları izleyin:
 
 1. [Enforcecodestyleınbuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) MSBuild özelliğini olarak ayarlayın `true` .
 
-1. Bir *. editorconfig* dosyasında, derleme üzerinde çalıştırmak istediğiniz her "IDE" kod stili kuralını bir uyarı veya hata olarak [yapılandırın](configuration-options.md) . Örnek:
+1. Bir *. editorconfig* dosyasında, derleme üzerinde çalıştırmak istediğiniz her "IDE" kod stili kuralını bir uyarı veya hata olarak [yapılandırın](configuration-options.md) . Örneğin:
 
    ```ini
    [*.{cs,vb}]
@@ -125,7 +124,7 @@ Derlemede kod stili analizini etkinleştirme adımları:
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   Alternatif olarak, varsayılan olarak "stil" kategorisinin tamamını bir uyarı veya hata olarak yapılandırabilir ve ardından derlemede çalıştırmak istemediğiniz kuralları seçmeli olarak kapatabilirsiniz. Örnek:
+   Alternatif olarak, varsayılan olarak "stil" kategorisinin tamamını bir uyarı veya hata olarak yapılandırabilir ve ardından derlemede çalıştırmak istemediğiniz kuralları seçmeli olarak kapatabilirsiniz. Örneğin:
 
    ```ini
    [*.{cs,vb}]
@@ -137,9 +136,12 @@ Derlemede kod stili analizini etkinleştirme adımları:
    dotnet_diagnostic.IDE0040.severity = silent
    ```
 
+> [!NOTE]
+> Kod stili analiz özelliği deneysel olur ve .NET 5 ile .NET 6 sürümleri arasında değişebilir.
+
 ## <a name="suppress-a-warning"></a>Bir uyarıyı gösterme
 
-Bir kural ihlalini gizlemek için, bu kural KIMLIĞI için önem derecesi seçeneğini `none` bir EditorConfig dosyasında olarak ayarlayın. Örnek:
+Bir kural ihlalini gizlemek için, bu kural KIMLIĞI için önem derecesi seçeneğini `none` bir EditorConfig dosyasında olarak ayarlayın. Örneğin:
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none

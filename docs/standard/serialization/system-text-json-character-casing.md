@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2d663ac8c1c15d61959a62c40d9a3b0993484032
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 3e2fb8cbdd35e772b5e97c731199f69aa834bd0a
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599082"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009748"
 ---
 # <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>İle eşleşme büyük/küçük harf duyarsız Özellik adı etkinleştirme System.Text.Json
 
@@ -45,12 +45,19 @@ Aşağıda, ortası Case özellik adlarına sahip JSON örneği verilmiştir. Bu
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [System.Text.Json bakýþ](system-text-json-overview.md)
-* [JsonSerializerOptions nesne örneği oluşturma](system-text-json-configure-options.md)
+* [JSON’u seri hale getirme ve seri halden çıkarma](system-text-json-how-to.md)
+* [JsonSerializerOptions örneklerinin örneğini oluşturma](system-text-json-configure-options.md)
 * [Özellik adlarını ve değerlerini özelleştirme](system-text-json-customize-properties.md)
 * [Özellikleri yoksayma](system-text-json-ignore-properties.md)
 * [Geçersiz JSON’a izin verme](system-text-json-invalid-json.md)
 * [Sap taşması JSON’ı](system-text-json-handle-overflow.md)
-* [Döngüsel başvuruları koru](system-text-json-preserve-references.md)
+* [Başvuruları koruma](system-text-json-preserve-references.md)
 * [Sabit türler ve genel olmayan erişimciler](system-text-json-immutability.md)
 * [Polimorfik serileştirme](system-text-json-polymorphism.md)
+* [' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Karakter kodlamasını özelleştirme](system-text-json-character-encoding.md)
+* [Özel serileştiriciler ve seri hale getiriciler yazma](write-custom-serializer-deserializer.md)
+* [JSON serileştirme için özel dönüştürücüler yazma](system-text-json-converters-how-to.md)
+* [DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)
+* [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)

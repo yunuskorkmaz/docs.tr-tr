@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 1b6402952c4765290d22b530834ed831a68bd2fe
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 2559b081010fb0a2fa208b121cb095efdeb8da2e
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851249"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009825"
 ---
 # <a name="how-to-allow-some-kinds-of-invalid-json-with-no-locsystemtextjson"></a>İle bazı geçersiz JSON türlerine izin verme System.Text.Json
 
@@ -47,7 +47,7 @@ Yorumlar ve sondaki virgülden oluşan örnek JSON aşağıda verilmiştir:
 
 Bazı serileştiriciler sayıları JSON dizeleri (tırnak işaretleriyle çevrelenmiş) olarak kodlayabilir.
 
-Örnek:
+Örneğin:
 
 ```json
 {
@@ -79,12 +79,19 @@ Belirli özellikler, alanlar veya türler için tırnak işaretli sayılara izin
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [System.Text.Json bakýþ](system-text-json-overview.md)
-* [JsonSerializerOptions nesne örneği oluşturma](system-text-json-configure-options.md)
+* [JSON’u seri hale getirme ve seri halden çıkarma](system-text-json-how-to.md)
+* [JsonSerializerOptions örneklerinin örneğini oluşturma](system-text-json-configure-options.md)
 * [Büyük/küçük harf duyarlı eşlemeyi etkinleştirme](system-text-json-character-casing.md)
 * [Özellik adlarını ve değerlerini özelleştirme](system-text-json-customize-properties.md)
 * [Özellikleri yoksayma](system-text-json-ignore-properties.md)
 * [Sap taşması JSON’ı](system-text-json-handle-overflow.md)
-* [Döngüsel başvuruları koru](system-text-json-preserve-references.md)
+* [Başvuruları koruma](system-text-json-preserve-references.md)
 * [Sabit türler ve genel olmayan erişimciler](system-text-json-immutability.md)
 * [Polimorfik serileştirme](system-text-json-polymorphism.md)
+* [' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Karakter kodlamasını özelleştirme](system-text-json-character-encoding.md)
+* [Özel serileştiriciler ve seri hale getiriciler yazma](write-custom-serializer-deserializer.md)
+* [JSON serileştirme için özel dönüştürücüler yazma](system-text-json-converters-how-to.md)
+* [DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)
+* [System.Text.Json. Serialization API başvurusu](xref:System.Text.Json.Serialization)

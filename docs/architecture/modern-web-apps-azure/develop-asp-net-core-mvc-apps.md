@@ -7,12 +7,12 @@ ms.date: 12/01/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 94dda02045f4c3bb1b5bdd64ab6b40eb22f6817c
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: c0fc92b2dbc25a1a48e0264b64c79fc8631fa8f0
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851444"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009670"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -52,9 +52,9 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-Bu örnekte, yönlendirme tablosuna "default" adlı bir yol eklenmiştir. _Denetleyici_, _eylem_ ve _kimlik_ yer tutucuları olan bir rota şablonu tanımlar. Denetleyici ve eylem yer tutucuları, varsayılan olarak belirtilen ("Home" ve "Dizin") ve kimlik yer tutucusu isteğe bağlıdır (bir "?" öğesinin virtuale tarafından bir "?" öğesine uygulanmış). Burada tanımlanan kural, bir isteğin ilk bölümünün denetleyicinin adına, eylemin ikinci bölümüne karşılık gelmesi ve gerekirse üçüncü bir parçanın bir kimlik parametresini temsil etmesi gerektiğini belirtir. Geleneksel yollar genellikle uygulama için, başlangıç sınıfındaki configure yönteminde olduğu gibi bir yerde tanımlanır.
+Bu örnekte, yönlendirme tablosuna "default" adlı bir yol eklenmiştir. , Ve için yer tutucular içeren bir yol şablonu tanımlar `controller` `action` `id` . `controller`Ve yer `action` tutucuları, varsayılan olarak belirtilmiştir ( `Home` ve `Index` sırasıyla) ve `id` yer tutucusu isteğe bağlıdır (bir "?" öğesinin virtuale tarafından). Burada tanımlanan kural, bir isteğin ilk bölümünün denetleyicinin adına, eylemin ikinci bölümüne karşılık gelmesi ve gerekirse üçüncü bir parçanın bir KIMLIK parametresini temsil etmesi gerektiğini belirtir. Geleneksel yollar, genellikle, sınıfındaki yönteminde olduğu gibi, uygulama için bir yerde tanımlanır `Configure` `Startup` .
 
-Öznitelik yolları, genel olarak belirtitense, denetleyicilere ve eylemlere doğrudan uygulanır. Bu yaklaşım, belirli bir yönteme bakarken bu çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığından emin olur. Öznitelik rotalarıyla, belirli bir eylem için kolayca birden çok yol belirtebilir ve ayrıca, denetleyiciler ve Eylemler arasındaki yolları birleştirebilirsiniz. Örnek:
+Öznitelik yolları, genel olarak belirtitense, denetleyicilere ve eylemlere doğrudan uygulanır. Bu yaklaşım, belirli bir yönteme bakarken bu çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığından emin olur. Öznitelik rotalarıyla, belirli bir eylem için kolayca birden çok yol belirtebilir ve ayrıca, denetleyiciler ve Eylemler arasındaki yolları birleştirebilirsiniz. Örneğin:
 
 ```csharp
 [Route("Home")]
@@ -91,7 +91,7 @@ Razor Pages öznitelik yönlendirme kullanmaz. Bir Razor sayfasına yönelik ek 
 "/Products/123"
 ```
 
-Verilen bir istek bir rota ile eşleştirildiği halde, eylem yöntemi çağrılmadan önce ASP.NET Core MVC, istek üzerinde [model bağlama](/aspnet/core/mvc/models/model-binding) ve [model doğrulaması](/aspnet/core/mvc/models/validation) gerçekleştirir. Model bağlama, gelen HTTP verilerini çağrılacak eylem metodunun parametreleri olarak belirtilen .NET türlerine dönüştürmekten sorumludur. Örneğin, eylem yöntemi bir parametre beklediğinde `int id` , model bağlama isteğin bir parçası olarak sağlanmış bir değerden bu parametreyi sağlamaya çalışacaktır. Bunu yapmak için model bağlama, postalanan bir formdaki değerleri, yolun kendisindeki değerleri ve sorgu dizesi değerlerini arar. Bir kimlik değerinin bulunduğu varsayıldığında, eylem yöntemine geçirilmeden önce tamsayıya dönüştürülecektir.
+Verilen bir istek bir rota ile eşleştirildiği halde, eylem yöntemi çağrılmadan önce ASP.NET Core MVC, istek üzerinde [model bağlama](/aspnet/core/mvc/models/model-binding) ve [model doğrulaması](/aspnet/core/mvc/models/validation) gerçekleştirir. Model bağlama, gelen HTTP verilerini çağrılacak eylem metodunun parametreleri olarak belirtilen .NET türlerine dönüştürmekten sorumludur. Örneğin, eylem yöntemi bir parametre beklediğinde `int id` , model bağlama isteğin bir parçası olarak sağlanmış bir değerden bu parametreyi sağlamaya çalışacaktır. Bunu yapmak için model bağlama, postalanan bir formdaki değerleri, yolun kendisindeki değerleri ve sorgu dizesi değerlerini arar. Bir `id` değerin bulunduğu varsayıldığında, eylem yöntemine geçirilmeden önce tamsayıya dönüştürülür.
 
 Modeli bağladıktan sonra ancak eylem yöntemini çağırmadan önce, model doğrulaması oluşur. Model doğrulama, model türü üzerinde isteğe bağlı öznitelikleri kullanır ve sağlanan model nesnesinin belirli veri gereksinimlerine uygun olduğundan emin olmanıza yardımcı olabilir. Belirli değerler gerekli olarak belirtilebilir veya belirli bir uzunluk veya sayısal aralığa, vb. sınırlı olabilir. Doğrulama öznitelikleri belirtilmişse ancak model gereksinimlerine uygun değilse, ModelState. IsValid özelliği false olur ve başarısız doğrulama kuralları kümesi, isteği yapan istemciye gönderilmek üzere kullanılabilir olacaktır.
 
@@ -105,7 +105,7 @@ Web API projeleri, `[ApiController]` tek tek denetleyicilere, bir temel denetley
 
 Sayfa tabanlı uygulamalar için Razor Pages denetleyicileri çok büyük bir şekilde tutmaya yönelik harika bir iş elde edin. Her bir sayfaya, kendi dosya ve sınıfları yalnızca işleyicisine ayrılmış şekilde verilir. Razor Pages 'nin kullanıma sunulmasından önce, birçok görünüm merkezli uygulamanın birçok farklı eylem ve görünümden sorumlu büyük denetleyici sınıfları vardır. Bu sınıflar doğal olarak çok sayıda sorumluluklara ve bağımlılıklara sahip olacak şekilde büyürken daha zor hale getirir. Görünüm tabanlı denetleyicilerinizi çok büyük büyüdüğünü fark ederseniz, Razor Pages kullanmak için yeniden düzenlemeyi veya bir ortam gibi bir kalıp tanıtmasını düşünün.
 
-Ortalama tasarım stili, aralarında iletişime izin verirken sınıflar arasındaki bağlantı sayısını azaltmak için kullanılır. ASP.NET Core MVC uygulamalarında, bu model genellikle işlem yöntemlerinin çalışması için *işleyiciler* kullanılarak denetleyicileri daha küçük parçalara bölmek için kullanılır. Popüler [mediaTR NuGet paketi](https://www.nuget.org/packages/MediatR/) genellikle bunu gerçekleştirmek için kullanılır. Genellikle, denetleyicilerin her biri belirli bağımlılıklar gerektirebilecek birçok farklı eylem yöntemi vardır. Herhangi bir eylem için gereken tüm bağımlılıkların kümesi denetleyicinin oluşturucusuna geçirilmelidir. MediaTR kullanırken, bir denetleyicinin bir örneği olan tek bağımlılığı bir ortam örneğidir. Sonra her eylem, bir işleyici tarafından işlenen bir ileti göndermek için Mediator örneğini kullanır. İşleyici tek bir eyleme özeldir ve bu nedenle yalnızca bu eylem için gereken bağımlılıklara ihtiyaç duyuyor. MediatR kullanan bir denetleyiciye örnek burada gösterilmektedir:
+Ortalama tasarım stili, aralarında iletişime izin verirken sınıflar arasındaki bağlantı sayısını azaltmak için kullanılır. ASP.NET Core MVC uygulamalarında, bu model genellikle işlem yöntemlerinin çalışması için *işleyiciler* kullanılarak denetleyicileri daha küçük parçalara bölmek için kullanılır. Popüler [mediaTR NuGet paketi](https://www.nuget.org/packages/MediatR/) genellikle bunu gerçekleştirmek için kullanılır. Genellikle, denetleyicilerin her biri belirli bağımlılıklar gerektirebilecek birçok farklı eylem yöntemi vardır. Herhangi bir eylem için gereken tüm bağımlılıkların kümesi denetleyicinin oluşturucusuna geçirilmelidir. MediatR kullanırken, bir denetleyicinin bir örneği olan tek bağımlılığı bir ortam örneğidir. Sonra her eylem, bir işleyici tarafından işlenen bir ileti göndermek için Mediator örneğini kullanır. İşleyici tek bir eyleme özeldir ve bu nedenle yalnızca bu eylem için gereken bağımlılıklara ihtiyaç duyuyor. MediatR kullanan bir denetleyiciye örnek burada gösterilmektedir:
 
 ```csharp
 public class OrderController : Controller
@@ -169,15 +169,15 @@ Bu yaklaşımın nihai sonucu, denetleyicilerin çok daha küçük olmasını ve
 
 > ### <a name="references--mapping-requests-to-responses"></a>Başvurular – Istekleri yanıtlara eşleme
 >
-> - **Denetleyici eylemlerine yönlendirme**
+> - **Denetleyici eylemlerine yönlendirme**\
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Model bağlama**
+> - **Model bağlama**\
  > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
-> - **Model doğrulama**
+> - **Model doğrulama**\
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Yorsa**
+> - **Yorsa**\
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **ApiController özniteliği**
+> - **ApiController özniteliği**\
  > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>Bağımlılıklarla çalışma
@@ -391,13 +391,13 @@ Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN Magazine makalesinden
 
 > ### <a name="references--structuring-applications"></a>Başvurular – uygulamaları yapılandırma
 >
-> - **Alanlar**  
+> - **Alanları**\
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN Magazine – ASP.NET Core MVC için özellik dilimleri**  
+> - **MSDN Magazine – ASP.NET Core MVC için özellik dilimleri**\
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
-> - **Filtreler**  
+> - **Yorsa**\
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN Magazine – gerçek dünya ASP.NET Core MVC filtreleri**  
+> - **MSDN Magazine – gerçek dünya ASP.NET Core MVC filtreleri**\
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>Güvenlik
@@ -447,7 +447,7 @@ Useıdentity 'in configure yönteminde UseMvc 'den önce görünmesi önemlidir.
 
 Kimlik doğrulama, sisteme kimlerin eriştiğini belirleme işlemidir. Önceki bölümde gösterilen ASP.NET Core kimliği ve yapılandırma yöntemleri kullanıyorsanız, uygulama içindeki bazı kimlik doğrulama varsayılanlarını otomatik olarak yapılandırır. Bununla birlikte, bu Varsayılanları el ile de yapılandırabilir veya AddEntity tarafından ayarlanmış olanları geçersiz kılabilirsiniz. Kimlik kullanıyorsanız, tanımlama bilgisi tabanlı kimlik doğrulamasını varsayılan *Düzen* olarak yapılandırır.
 
-Web tabanlı kimlik doğrulamasında, genellikle bir sistem istemcisinin kimlik doğrulaması sırasında gerçekleştirilebilecek en fazla 5 eylem vardır. Bunlar:
+Web tabanlı kimlik doğrulamasında, genellikle bir sistem istemcisinin kimlik doğrulaması sırasında gerçekleştirilebilecek en fazla beş eylem vardır. Bunlar:
 
 - Denetimini. Uygulama içinde kullanmak üzere bir kimlik oluşturmak için istemci tarafından sunulan bilgileri kullanın.
 - Sına. Bu eylem, istemcinin kendilerini belirlemesini gerektirmek için kullanılır.
@@ -501,13 +501,13 @@ Blazor Sunucu uygulamaları, diğer ASP.NET Core uygulamalarla aynı kimlik doğ
 
 > ### <a name="references--authentication"></a>Başvurular – kimlik doğrulaması
 >
-> - **Kimlik doğrulama eylemleri ve varsayılanlar**  
+> - **Kimlik doğrulama eylemleri ve varsayılanlar**\
 >   <https://stackoverflow.com/a/52493428>
-> - **Maça kimlik doğrulaması ve yetkilendirme**
+> - **Maça kimlik doğrulaması ve yetkilendirme**\
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity-api-authorization>
-> - **ASP.NET Core Blazor kimlik doğrulaması ve yetkilendirme**
+> - **ASP.NET Core Blazor kimlik doğrulaması ve yetkilendirme**\
 >   <https://docs.microsoft.com/aspnet/core/blazor/security/>
-> - **Güvenlik: ASP.NET Web Forms ve üzerinde kimlik doğrulaması ve yetkilendirme Blazor**
+> - **Güvenlik: ASP.NET Web Forms ve üzerinde kimlik doğrulaması ve yetkilendirme Blazor**\
 >   <https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/security-authentication-authorization>
 
 ### <a name="authorization"></a>Yetkilendirme
@@ -584,17 +584,17 @@ Yukarıdaki yöntemi çağırdıktan sonra, ile yapılan isteklere `_httpClient`
 
 > ### <a name="references--security"></a>Başvurular – güvenlik
 >
-> - **Güvenlik belgelerine genel bakış**  
+> - **Güvenlik belgelerine genel bakış**\
 >   <https://docs.microsoft.com/aspnet/core/security/>
-> - **ASP.NET Core uygulamasında SSL zorlama**  
+> - **ASP.NET Core uygulamasında SSL zorlama**\
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
-> - **Kimliğe giriş**  
+> - **Kimliğe giriş**\
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
-> - **Yetkilendirmeye giriş**  
+> - **Yetkilendirmeye giriş**\
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
-> - **Azure App Service’te API Apps için Kimlik Doğrulama ve Yetkilendirme**  
+> - **Azure App Service API Apps için kimlik doğrulaması ve yetkilendirme**\
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
-> - **Kimlik Sunucusu**  
+> - **Kimlik sunucusu**\
 >   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>İstemci iletişimi
@@ -653,9 +653,9 @@ Uygulamalarınızın istemci uygulamalarıyla doğrudan iletişim kurmasına dik
 
 > ### <a name="references--client-communication"></a>Başvurular – Istemci Iletişimi
 >
-> - **ASP.NET Core SignalR**  
+> - **ASP.NET Core SignalR**\
 >   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
-> - **WebSocket Yöneticisi**  
+> - **WebSocket Yöneticisi**\
 >   <https://github.com/radu-matei/websocket-manager>
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Etki alanı odaklı tasarım – uygulamanız gerekir mi?
@@ -702,7 +702,7 @@ Karma yaklaşım yalnızca, uygulamanın işlem veya daha fazla karmaşık alan�
 
 > ### <a name="references--domain-driven-design"></a>Başvurular – Domain-Driven tasarımı
 >
-> - **Düz Ingilizce (StackOverflow yanıtı)**  
+> - **Düz Ingilizce (StackOverflow yanıtı)**\
 >   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Dağıtım
@@ -745,13 +745,13 @@ _[Bölüm 10](development-process-for-azure.md)' da Azure dağıtım seçenekler
 
 > ### <a name="references--deployment"></a>Başvurular – dağıtım
 >
-> - **Barındırma ve dağıtıma genel bakış**  
+> - **Barındırma ve dağıtıma genel bakış**\
 >   <https://docs.microsoft.com/aspnet/core/publishing/>
-> - **Ters ara sunucu ile Kestrel ne zaman kullanılır?**  
+> - **Ters ara sunucu ile Kestrel ne zaman kullanılır?**\
 >   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
-> - **Docker 'da uygulamaları ASP.NET Core barındırma**  
+> - **Docker 'da uygulamaları ASP.NET Core barındırma**\
 >   <https://docs.microsoft.com/aspnet/core/publishing/docker>
-> - **Azure Application Gateway 'ye giriş**  
+> - **Azure Application Gateway 'ye giriş**\
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]

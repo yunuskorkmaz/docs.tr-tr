@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: dc1f8dab0d8d1ab5001797140a3bbfe4a02cb52b
-ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
+ms.openlocfilehash: 1ea4ff71b9e21bd7c5b12598581b33e1e96ebb19
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96918573"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008844"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -275,7 +275,7 @@ Aşağıdaki örnek, ve kullanımını göstermektedir <xref:System.Net.Http.Jso
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/HttpClientExtensionMethods.cs" highlight="26,33":::
 
-Ayrıca, HttpContent için uzantı yöntemleri de vardır System.Text.Json . [HttpContent](xref:System.Net.Http.Json.HttpContentJsonExtensions)
+Ayrıca, HttpContent için uzantı yöntemleri de vardır System.Text.Json . [](xref:System.Net.Http.Json.HttpContentJsonExtensions)
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -285,8 +285,19 @@ Ve ' de uzantı yöntemleri `HttpClient` `HttpContent` System.Text.Json .NET Cor
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [System.Text.Json bakýþ](system-text-json-overview.md)
-* [Özel dönüştürücü yazma](system-text-json-converters-how-to.md)
-* [Öğesinden geçiş Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [İçinde DateTime ve DateTimeOffset desteği System.Text.Json](../datetime/system-text-json-support.md)
+* [JsonSerializerOptions örneklerinin örneğini oluşturma](system-text-json-configure-options.md)
+* [Büyük/küçük harf duyarlı eşlemeyi etkinleştirme](system-text-json-character-casing.md)
+* [Özellik adlarını ve değerlerini özelleştirme](system-text-json-customize-properties.md)
+* [Özellikleri yoksayma](system-text-json-ignore-properties.md)
+* [Geçersiz JSON’a izin verme](system-text-json-invalid-json.md)
+* [Sap taşması JSON’ı](system-text-json-handle-overflow.md)
+* [Başvuruları koruma](system-text-json-preserve-references.md)
+* [Sabit türler ve genel olmayan erişimciler](system-text-json-immutability.md)
+* [Polimorfik serileştirme](system-text-json-polymorphism.md)
+* [' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Karakter kodlamasını özelleştirme](system-text-json-character-encoding.md)
+* [Özel serileştiriciler ve seri hale getiriciler yazma](write-custom-serializer-deserializer.md)
+* [JSON serileştirme için özel dönüştürücüler yazma](system-text-json-converters-how-to.md)
+* [DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
+* [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)

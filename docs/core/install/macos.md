@@ -4,12 +4,12 @@ description: .NET yükleyebileceğiniz macOS sürümleri hakkında bilgi edinin.
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: f926479227f11def5c8bb8c6bf29ad30a04e6ed2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b1434938a8e8e81da81e495a6b99e6c99467aae1
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715140"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009364"
 ---
 # <a name="install-net-on-macos"></a>MacOS 'ta .NET 'i yükler
 
@@ -33,8 +33,9 @@ Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve desteklenen ma
 - ✔️, .NET Core sürümünün hala desteklendiğini gösterir.
 - Bir ❌ , .NET Core sürümünün desteklenmediğini belirtir.
 
-| İşletim Sistemi          | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| Operating System          | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |---------------------------|---------------|---------------|----------------|
+| macOS 11,0 "Big Sur"        | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 ([sürüm notları][release-notes-50]) |
 | macOS 10,15 "Catalina"    | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 ([sürüm notları][release-notes-50]) |
 | macOS 10,14 "Mojave"      | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 ([sürüm notları][release-notes-50]) |
 | macOS 10,13 "High Sierra" | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 ([sürüm notları][release-notes-50]) |
@@ -74,7 +75,7 @@ SDK, .NET uygulamaları ve kitaplıkları derlemek ve yayımlamak için kullanı
 > [!NOTE]
 > Bir `+` sembol en düşük sürümü temsil eder.
 
-| .NET Core sürümü | Mac OS                 | Mimariler | Daha fazla bilgi    |
+| .NET Core sürümü | macOS                 | Mimariler | Daha fazla bilgi    |
 | ----------------- | --------------------- | --------------| --- |
 | 5.0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) |
 | 3,1               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
@@ -143,7 +144,7 @@ export PATH=$PATH:$HOME/dotnet
 > [!TIP]
 > Yukarıdaki `export` Komutlar yalnızca .net CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
 >
-> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
+> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örneğin:
 >
 > - **Bash kabuğu**: *~/.bash_profile*, *~/,bashrc*
 > - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*

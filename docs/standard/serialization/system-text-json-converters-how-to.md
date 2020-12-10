@@ -1,7 +1,7 @@
 ---
 title: JSON serileştirme-.NET için özel dönüştürücüler yazma
 description: Ad alanında belirtilen JSON serileştirme sınıfları için özel dönüştürücüler oluşturmayı öğrenin System.Text.Json .
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 008455a77f98cd9975b04001121217866cc2ba6e
-ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
+ms.openlocfilehash: 33334ccd8bad4ac5a9f5dccde79ff3ae09ca8f89
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96918612"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008870"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
@@ -25,7 +25,7 @@ Bu makalede, ad alanında belirtilen JSON serileştirme sınıfları için özel
 
 *Dönüştürücü* bir nesneyi veya BIR değeri JSON öğesine veya bir değere dönüştüren bir sınıftır. `System.Text.Json`Ad alanı, JavaScript temel elemanlarına eşleyen en basit türlerin yerleşik Dönüştürücülerine sahiptir. Özel dönüştürücüler yazabilirsiniz:
 
-* Yerleşik dönüştürücünün varsayılan davranışını geçersiz kılmak için. Örneğin, `DateTime` varsayılan ıso 8601-1:2019 biçimi yerine, değerlerin aa/gg/yyyy biçiminde temsil olmasını isteyebilirsiniz.
+* Yerleşik dönüştürücünün varsayılan davranışını geçersiz kılmak için. Örneğin, `DateTime` değerlerin aa/gg/yyyy biçimiyle temsil olmasını isteyebilirsiniz. Varsayılan olarak, RFC 3339 profili de dahil olmak üzere ISO 8601-1:2019 desteklenir. Daha fazla bilgi için, bkz. [' de System.Text.Json DateTime ve DateTimeOffset desteği ](../datetime/system-text-json-support.md).
 * Özel bir değer türünü desteklemek için. Örneğin, bir `PhoneNumber` struct.
 
 Ayrıca, `System.Text.Json` geçerli sürüme dahil olmayan işlevlerle özelleştirmek veya genişletmek için özel dönüştürücüler yazabilirsiniz. Bu makalenin ilerleyen bölümlerinde aşağıdaki senaryolar ele alınmıştır:
@@ -105,7 +105,11 @@ Açık genel türler için fabrika deseninin olması gerekir çünkü bir nesney
 
 ## <a name="error-handling"></a>Hata işleme
 
-Hata işleme kodunda bir özel durum oluşturmanız gerekiyorsa, <xref:System.Text.Json.JsonException> ileti olmadan bir ileti yerleştirmeyi düşünün. Bu özel durum türü otomatik olarak, hataya neden olan JSON bölümünün yolunu içeren bir ileti oluşturur. Örneğin, ifade `throw new JsonException();` Aşağıdaki örnekte olduğu gibi bir hata iletisi üretir:
+Seri hale getirici özel durum türleri ve için özel işleme sağlar <xref:System.Text.Json.JsonException> <xref:System.NotSupportedException> .
+
+### <a name="jsonexception"></a>JsonException
+
+İleti olmadan bir oluşturursanız `JsonException` , serileştirici, hataya neden olan JSON bölümünün yolunu içeren bir ileti oluşturur. Örneğin, ifade `throw new JsonException()` Aşağıdaki örnekte olduğu gibi bir hata iletisi üretir:
 
 ```output
 Unhandled exception. System.Text.Json.JsonException:
@@ -113,11 +117,29 @@ The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-Bir ileti sağlarsanız (örneğin, `throw new JsonException("Error occurred")` özel durum hala özelliğindeki yolu sağlar <xref:System.Text.Json.JsonException.Path> .
+Bir ileti sağlarsanız (örneğin, `throw new JsonException("Error occurred")` seri hale getirici hala <xref:System.Text.Json.JsonException.Path> , <xref:System.Text.Json.JsonException.LineNumber> ve özelliklerini ayarlarsa) <xref:System.Text.Json.JsonException.BytePositionInLine> .
+
+### <a name="notsupportedexception"></a>NotSupportedException
+
+Bir oluşturursanız `NotSupportedException` , her zaman iletideki yol bilgilerini alırsınız. Bir ileti sağlarsanız, yol bilgileri buna eklenir. Örneğin, ifade `throw new NotSupportedException("Error occurred.")` Aşağıdaki örnekte olduğu gibi bir hata iletisi üretir:
+
+```output
+Error occurred. The unsupported member type is located on type
+'System.Collections.Generic.Dictionary`2[Samples.SummaryWords,System.Int32]'.
+Path: $.TemperatureRanges | LineNumber: 4 | BytePositionInLine: 24
+```
+
+### <a name="when-to-throw-which-exception-type"></a>Hangi özel durum türünü throw
+
+JSON yükü, seri durumdan çıkarılacak tür için geçerli olmayan belirteçler içerdiğinde bir oluşturun `JsonException` .
+
+Belirli türlere izin vermemek istediğinizde, oluşturun `NotSupportedException` . Bu özel durum, seri hale getiricinin desteklenmeyen türler için otomatik olarak ne yaptığını oluşturur. Örneğin, `System.Type` Güvenlik nedenleriyle desteklenmez. bu nedenle, bunun sonucunda sonuçları serisini kaldırma girişimi `NotSupportedException` .
+
+Gerektiğinde başka özel durumlar da oluşturabilirsiniz, ancak bunlar otomatik olarak JSON yol bilgilerini içermez.
 
 ## <a name="register-a-custom-converter"></a>Özel dönüştürücüyü kaydetme
 
-*Register* `Serialize` Ve yöntemlerinin onu kullanmasını sağlamak için özel bir dönüştürücü kaydedin `Deserialize` . Aşağıdaki yaklaşımlardan birini seçin:
+ `Serialize` Ve yöntemlerinin onu kullanmasını sağlamak için özel bir dönüştürücü kaydedin `Deserialize` . Aşağıdaki yaklaşımlardan birini seçin:
 
 * Koleksiyona Converter sınıfının bir örneğini ekleyin <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> .
 * Özel dönüştürücü gerektiren özelliklere [[Jsonconverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) özniteliğini uygulayın.
@@ -375,8 +397,20 @@ Varolan bir yerleşik dönüştürücünün davranışını değiştiren bir dö
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [Yerleşik dönüştürücüler için kaynak kodu](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [İçinde DateTime ve DateTimeOffset desteği System.Text.Json](../datetime/system-text-json-support.md)
+* [System.Text.Json bakýþ](system-text-json-overview.md)
+* [JSON’u seri hale getirme ve seri halden çıkarma](system-text-json-how-to.md)
+* [JsonSerializerOptions örneklerinin örneğini oluşturma](system-text-json-configure-options.md)
+* [Büyük/küçük harf duyarlı eşlemeyi etkinleştirme](system-text-json-character-casing.md)
+* [Özellik adlarını ve değerlerini özelleştirme](system-text-json-customize-properties.md)
+* [Özellikleri yoksayma](system-text-json-ignore-properties.md)
+* [Geçersiz JSON’a izin verme](system-text-json-invalid-json.md)
+* [Sap taşması JSON’ı](system-text-json-handle-overflow.md)
+* [Başvuruları koruma](system-text-json-preserve-references.md)
+* [Sabit türler ve genel olmayan erişimciler](system-text-json-immutability.md)
+* [Polimorfik serileştirme](system-text-json-polymorphism.md)
+* [' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [Karakter kodlamasını özelleştirme](system-text-json-character-encoding.md)
 * [Özel serileştiriciler ve seri hale getiriciler yazma](write-custom-serializer-deserializer.md)
+* [DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)
-* [System.Text.Json. Serialization API başvurusu](xref:System.Text.Json.Serialization)
+* [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)

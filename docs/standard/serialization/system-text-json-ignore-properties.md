@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: ed7ef8509d6660bbbbaf194a87aa9d4815143507
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 6d703156d50a3e00a33cea5e15be2df911ed7c1b
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96440011"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008818"
 ---
 # <a name="how-to-ignore-properties-with-no-locsystemtextjson"></a>İle özellikleri yoksayma System.Text.Json
 
@@ -137,12 +137,19 @@ Bu <xref:System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault> 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [System.Text.Json bakýþ](system-text-json-overview.md)
-* [JsonSerializerOptions örneğini oluşturma](system-text-json-configure-options.md)
-* [Büyük/küçük harfe duyarsız eşleştirmeyi etkinleştir](system-text-json-character-casing.md)
+* [JSON’u seri hale getirme ve seri halden çıkarma](system-text-json-how-to.md)
+* [JsonSerializerOptions örneklerinin örneğini oluşturma](system-text-json-configure-options.md)
+* [Büyük/küçük harf duyarlı eşlemeyi etkinleştirme](system-text-json-character-casing.md)
 * [Özellik adlarını ve değerlerini özelleştirme](system-text-json-customize-properties.md)
-* [Geçersiz JSON 'a izin ver](system-text-json-invalid-json.md)
-* [Tutamaç taşması JSON](system-text-json-handle-overflow.md)
-* [Döngüsel başvuruları koru](system-text-json-preserve-references.md)
-* [Değişmez türler ve genel olmayan erişimciler](system-text-json-immutability.md)
+* [Geçersiz JSON’a izin verme](system-text-json-invalid-json.md)
+* [Sap taşması JSON’ı](system-text-json-handle-overflow.md)
+* [Başvuruları koruma](system-text-json-preserve-references.md)
+* [Sabit türler ve genel olmayan erişimciler](system-text-json-immutability.md)
 * [Polimorfik serileştirme](system-text-json-polymorphism.md)
+* [' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Karakter kodlamasını özelleştirme](system-text-json-character-encoding.md)
+* [Özel serileştiriciler ve seri hale getiriciler yazma](write-custom-serializer-deserializer.md)
+* [JSON serileştirme için özel dönüştürücüler yazma](system-text-json-converters-how-to.md)
+* [DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)
+* [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)

@@ -1,19 +1,19 @@
 ---
-title: .NET Core öğreticileri
-description: Mac, Linux ve Windows 'da uygulamalar ve kitaplıklar oluşturmak için .NET Core 'u öğrenmeye yönelik öğreticileri izleyin.
-author: richlander
-ms.date: 09/09/2020
+title: .NET öğreticileri
+description: Mac, Linux ve Windows 'da uygulama ve kitaplıklar oluşturmak için .NET Learning öğreticilerini izleyin.
+author: tdykstra
+ms.date: 12/07/2020
 titleSuffix: ''
-ms.openlocfilehash: 84c8daa735df0255b0e383244f1abd8db4fe21fe
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: cf466f7ea004199052c1f02f5860668f2bb2ff28
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656164"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009325"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Bu öğreticileri inceleyerek .NET Core ve .NET Core SDK araçları hakkında bilgi edinin
+# <a name="learn-net-and-the-net-sdk-tools-by-exploring-these-tutorials"></a>Bu öğreticileri inceleyerek .NET ve .NET SDK araçları hakkında bilgi edinin
 
-.NET Core hakkında bilgi edinmek için aşağıdaki öğreticiler mevcuttur.
+Aşağıdaki öğreticilerde .NET Core, .NET 5 ve sonraki sürümler için konsol uygulamaları ve kitaplıklarının geliştirilmesi gösterilmektedir. Diğer uygulama türleri için bkz. [.NET ile çalışmaya başlama Öğreticileri](../../standard/get-started.md).
 
 ## <a name="use-visual-studio"></a>Visual Studio kullanma
 
@@ -58,7 +58,3 @@ Visual Studio Code veya başka bir kod Düzenleyicisi kullanmak istiyorsanız bu
 - [CLI için şablonlar oluşturma](cli-templates-create-item-template.md)
 - [CLı için Araçlar oluşturma ve kullanma](../tools/global-tools-how-to-create.md)
 - [Eklentiler ile uygulama oluşturma](creating-app-with-plugin-support.md)
-
-## <a name="create-web-apps"></a>Web uygulamaları oluşturma
-
-ASP.NET Core Web uygulamaları geliştirme hakkında öğreticiler için [ASP.NET Core belgelerine](/aspnet/core/)bakın.

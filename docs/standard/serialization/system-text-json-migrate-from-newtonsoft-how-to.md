@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: bc256c5129cd4a7306e632685474b159a43ce76c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 418637639790199755803bf374ef99af949ae9b3
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438060"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009904"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
@@ -441,7 +441,7 @@ Farklı bir geçici çözüm, türler için null değerleri işleyen aşağıdak
 
 Bu özel dönüştürücüyü [, özellik üzerindeki bir özniteliği kullanarak](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) veya [dönüştürücüyü koleksiyona ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) kaydettirin <xref:System.Text.Json.JsonSerializerOptions.Converters> .
 
-**Note:** Yukarıdaki dönüştürücü, **handles null values differently** `Newtonsoft.Json` varsayılan değerleri belirten Pocos için, null değerleri farklı işler. Örneğin, aşağıdaki kodun hedef nesneniz temsil ettiğini varsayalım:
+**Note:** Yukarıdaki dönüştürücü,  `Newtonsoft.Json` varsayılan değerleri belirten Pocos için, null değerleri farklı işler. Örneğin, aşağıdaki kodun hedef nesneniz temsil ettiğini varsayalım:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithDefault":::
 
@@ -535,7 +535,7 @@ Gerekli özellikler Dönüştürücüsü, [[Jsonıgnore]](xref:System.Text.Json.
 * `DateTimeZoneHandling`Ayar, tüm `DateTime` değerleri UTC tarihleri olarak seri hale getirmek için kullanılabilir.
 * `DateFormatString`Ayar ve `DateTime` dönüştürücüler, tarih dizelerinin biçimini özelleştirmek için kullanılabilir.
 
-' De <xref:System.Text.Json> , yerleşik desteği olan tek BIÇIM ıso 8601-1:2019 ' dir ve bu yana büyük ölçüde benimsediğinden ve tam olarak gidiş dönüş yaptığından emin olur. Başka bir biçim kullanmak için özel bir dönüştürücü oluşturun. Daha fazla bilgi için, bkz. [' de System.Text.Json DateTime ve DateTimeOffset desteği ](../datetime/system-text-json-support.md).
+<xref:System.Text.Json> , RFC 3339 profili de dahil olmak üzere ISO 8601-1:2019 ' u destekler. Bu biçim yaygın olarak benimsenmiştir, net bir şekilde gerçekleştirilir ve gidiş dönüşlerin kesin bir şekilde Başka bir biçim kullanmak için özel bir dönüştürücü oluşturun. Daha fazla bilgi için, bkz. [' de System.Text.Json DateTime ve DateTimeOffset desteği ](../datetime/system-text-json-support.md).
 
 ### <a name="callbacks"></a>Geri Çağırmalar
 
@@ -625,7 +625,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Yukarıdaki kod, bir özellik içeren bir için bekliyor `JsonElement` `fileName` . JSON dosyasını açar ve bir oluşturur `JsonDocument` . Yöntemi, çağıranın tüm belge ile çalışmak istediğini varsayar, bu yüzden öğesinin öğesini döndürür `Clone` `RootElement` .
 
-Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örnek:
+Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örneğin:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -806,10 +806,20 @@ Dize özelliği için, dize null ise ve <xref:System.Text.Json.Utf8JsonWriter.Wr
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)[Restore this when the roadmap is updated.]-->
 * [System.Text.Json bakýþ](system-text-json-overview.md)
-* [Nasıl kullanılır System.Text.Json](system-text-json-how-to.md)
-* [Özel dönüştürücü yazma](system-text-json-converters-how-to.md)
-* [İçinde DateTime ve DateTimeOffset desteği System.Text.Json](../datetime/system-text-json-support.md)
+* [JSON’u seri hale getirme ve seri halden çıkarma](system-text-json-how-to.md)
+* [JsonSerializerOptions örneklerinin örneğini oluşturma](system-text-json-configure-options.md)
+* [Büyük/küçük harf duyarlı eşlemeyi etkinleştirme](system-text-json-character-casing.md)
+* [Özellik adlarını ve değerlerini özelleştirme](system-text-json-customize-properties.md)
+* [Özellikleri yoksayma](system-text-json-ignore-properties.md)
+* [Geçersiz JSON’a izin verme](system-text-json-invalid-json.md)
+* [Sap taşması JSON’ı](system-text-json-handle-overflow.md)
+* [Başvuruları koruma](system-text-json-preserve-references.md)
+* [Sabit türler ve genel olmayan erişimciler](system-text-json-immutability.md)
+* [Polimorfik serileştirme](system-text-json-polymorphism.md)
+* [Karakter kodlamasını özelleştirme](system-text-json-character-encoding.md)
+* [Özel serileştiriciler ve seri hale getiriciler yazma](write-custom-serializer-deserializer.md)
+* [JSON serileştirme için özel dönüştürücüler yazma](system-text-json-converters-how-to.md)
+* [DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)
-* [System.Text.Json. Serialization API başvurusu](xref:System.Text.Json.Serialization)
+* [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)

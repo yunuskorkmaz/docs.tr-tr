@@ -3,18 +3,18 @@ title: DisposeAsync metodu uygulama
 description: Zaman uyumsuz kaynak Temizleme işlemini gerçekleştirmek için DisposeAsync ve Dispomevsimsynccore yöntemlerini nasıl uygulayacağınızı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 10/26/2020
+ms.date: 12/09/2020
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 551dbc30f6f5c99c7bfa468d7d708789c06acb7b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f04ac6695864b96cdcb7efeb6eb8e1d9551e1d14
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827808"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009696"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync metodu uygulama
 
@@ -84,7 +84,7 @@ Tüm korumalı olmayan sınıflar, devralınabileceğinden olası bir temel sın
 
 ## <a name="using-async-disposable"></a>Async atılabilir kullanma
 
-Arabirimi uygulayan bir nesneyi düzgün bir şekilde kullanmak için <xref:System.IAsyncDisposable> [await](../../csharp/language-reference/operators/await.md) kullanır ve anahtar sözcükleri birlikte [using](../../csharp/language-reference/keywords/using-statement.md) kullanabilirsiniz. Aşağıdaki örneği, `ExampleAsyncDisposable` sınıfın örneklendiği ve sonra bir deyime sarmalanmış olduğunu göz önünde bulundurun `await using` .
+Arabirimi uygulayan bir nesneyi düzgün bir şekilde kullanmak için <xref:System.IAsyncDisposable> [await](../../csharp/language-reference/operators/await.md) kullanır ve anahtar sözcükleri birlikte [](../../csharp/language-reference/keywords/using-statement.md) kullanabilirsiniz. Aşağıdaki örneği, `ExampleAsyncDisposable` sınıfın örneklendiği ve sonra bir deyime sarmalanmış olduğunu göz önünde bulundurun `await using` .
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/proper-await-using.cs":::
 
@@ -131,6 +131,8 @@ Oluşturucudan bir özel durum oluşturulursa `AnotherAsyncDisposable` , `objOne
 > Beklenmeyen davranışa yol açacağından bu kalıbı kullanmaktan kaçının.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
+Ve ' ın çift uygulama örneği `IDisposable` Için `IAsyncDisposable` <xref:System.Text.Json.Utf8JsonWriter> [GitHub 'da](https://github.com/dotnet/runtime/blob/035b729d829368c2790d825bd02db14f0c0fd2ea/src/libraries/System.Text.Json/src/System/Text/Json/Writer/Utf8JsonWriter.cs#L297-L345)kaynak koda bakın.
 
 - <xref:System.IAsyncDisposable>
 - <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>
