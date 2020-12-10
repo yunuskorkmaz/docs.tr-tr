@@ -59,7 +59,7 @@
           href: how-to-guides/dotnet-interactive-udf-issue.md
         - name: Çalışan ve UDF ikililerini dağıtma
           href: how-to-guides/deploy-worker-udf-binaries.md
-    - name: Jupyter not defterlerini kullanma
+    - name: Jupyter Notebook'u kullanma
       href: how-to-guides/dotnet-spark-jupyter-notebooks.md
     - name: Yayın kılavuzu
       href: how-to-guides/broadcast-guide.md
