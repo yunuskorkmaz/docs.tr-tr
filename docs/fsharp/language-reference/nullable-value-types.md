@@ -1,13 +1,13 @@
 ---
 title: Boş değer atanabilen değer türleri
-description: 'Null olabilen değer türlerini nasıl kullanacağınızı, F # içinde de null olabilecek bir değer türünü temsil etmenin nasıl yapılacağını öğrenin.'
+description: 'Null olabilen değer türlerini nasıl kullanacağınızı, F # içinde de null olabilen değer türlerini temsil etmenin nasıl yapılacağını öğrenin.'
 ms.date: 11/19/2020
-ms.openlocfilehash: da0cd85bd651db81ba98c02a9db31d92dc52a8c6
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: e28cbfc57c5631573f46ac36462517cf011e96d2
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740408"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009644"
 ---
 # <a name="nullable-value-types"></a>Boş değer atanabilen değer türleri
 
@@ -62,7 +62,7 @@ Bunun nedeni, `Nullable<'T>` `null` uygun bir değer değil.
 
 ## <a name="pass-and-assign-to-members"></a>Üyelere geçir ve ata
 
-Üyeler ve F # değerleriyle çalışma arasındaki önemli bir fark, üye ile çalışırken, null olabilen değer türlerinin örtük olarak çıkarsanamıyor. Null olabilen bir değer türünü girdi olarak alan katıcı yöntemini göz önünde bulundurun:
+Üyeler ve F # değerleriyle çalışma arasındaki önemli bir fark, üye ile çalışırken, null olabilen değer türlerinin örtük olarak çıkarsanamıyor. Giriş olarak null olabilen bir değer türü alan aşağıdaki yöntemi göz önünde bulundurun:
 
 ```fsharp
 type C() =
@@ -74,7 +74,7 @@ c.M(12)
 c.NVT <- 12
 ```
 
-Önceki örnekte yöntemine geçiş yapabilirsiniz `12` `M` . Auto özelliğine de atayabilirsiniz `12` `NVT` . Giriş bir nullabel değer türü olarak oluşturulabiliyorsanız, F # derleyicisi, hedef türü girişle eşleştiğinde bu gibi bir çağrıyı veya atamayı örtülü olarak dönüştürür.
+Önceki örnekte yöntemine geçiş yapabilirsiniz `12` `M` . Auto özelliğine de atayabilirsiniz `12` `NVT` . Giriş, null yapılabilir bir değer türü olarak oluşturulabiliyorsanız ve hedef türle eşleşiyorsa, F # derleyicisi dolaylı olarak bu çağrıları veya atamaları dönüştürür.
 
 ## <a name="examine-a-nullable-value-type-instance"></a>Null yapılabilir bir değer türü örneği inceleyin
 
