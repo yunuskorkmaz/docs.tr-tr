@@ -1,7 +1,7 @@
 ---
 title: XML serileştirme ayrıntıları
 description: Serileştirme bir nesneyi, taşınan bir forma dönüştürür. Bu makalede, XML serileştirme ve XmlSerializer sınıfına bir genel bakış sunulmaktadır.
-ms.date: 03/30/2017
+ms.date: 12/09/2020
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 2971f5bbd587dabb62d095da3fef0b428ea9f039
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: b1b5a90acce55ac7f58c1bde02fee713991dde80
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282292"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110162"
 ---
 # <a name="xml-serialization"></a>XML serileştirme
 
@@ -43,12 +43,12 @@ Serileştirme, bir nesneyi, kolayca taşınacak bir forma dönüştürme işlemi
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer uygulamalar için güvenlik hususları
 
-**XmlSerializer** 'ı kullanan bir uygulama oluştururken, aşağıdaki öğeleri ve bunların etkilerini unutmayın:
+**XmlSerializer**'ı kullanan bir uygulama oluştururken, aşağıdaki öğeleri ve bunların etkilerini unutmayın:
 
 - **XmlSerializer** , C# (. cs) dosyaları oluşturur ve bunları temp ortam değişkeni tarafından adlandırılan dizinde. dll dosyalarına derler; serileştirme bu DLL 'Ler ile oluşur.
 
   > [!NOTE]
-  > Bu seri hale getirme derlemeler önceden oluşturulur ve SGen.exe aracını kullanarak oturum açmış. Bu, bir Web Hizmetleri sunucusu çalışmıyor. Diğer bir deyişle, yalnızca istemci kullanımı için ve el ile serileştirme içindir.
+  > Bu seri hale getirme derlemeler önceden oluşturulur ve SGen.exe aracını kullanarak oturum açmış. Bu, Web Hizmetleri sunucusu üzerinde çalışmaz. Diğer bir deyişle, yalnızca istemci kullanımı için ve el ile serileştirme içindir.
 
   Kod ve DLL'leri oluşturma ve derleme sırasındaki kötü amaçlı bir işleme etkilenir. Microsoft Windows NT 4.0 veya sonraki sürümü çalıştıran bir bilgisayara kullanırken, TEMP dizinini paylaşmak iki veya daha fazla kullanıcı için olası olabilir. İki hesabın farklı güvenlik ayrıcalıklarına sahip olması ve yüksek ayrıcalıklı hesabın **XmlSerializer** kullanarak bir uygulama ÇALıŞTıRMASı durumunda geçici dizin paylaşımı tehlikelidir. Bu durumda, bir kullanıcı derlenmiş olup .cs veya .dll dosya değiştirerek bilgisayarın güvenlik ihlal. Bu sorunu gidermek için her zaman her bilgisayar hesabında kendi profili sahip olduğundan emin olun. Varsayılan olarak, her hesap için farklı bir dizin TEMP ortam değişkeni gösteriyor.
 
@@ -58,7 +58,7 @@ Serileştirme, bir nesneyi, kolayca taşınacak bir forma dönüştürme işlemi
 
 - **XmlSerializer** verileri seri hale getirir ve kendisine verilen herhangi bir türü kullanarak herhangi bir kodu çalıştırır.
 
-  Kötü amaçlı bir nesne bir iş parçacığı sayısını gösterir iki yolu vardır. Kötü amaçlı kod çalıştırabilir veya **XmlSerializer** tarafından oluşturulan C# dosyasına kötü amaçlı kod ekleyebilir. İlk durumda, kötü amaçlı bir nesne bozucu bir yordam çalıştırmaya çalışırsa, kod erişim güvenliği, herhangi bir hasar yapılmasını önlemeye yardımcı olur. İkinci durumda, kötü niyetli bir nesnenin **XmlSerializer** tarafından oluşturulan C# dosyasına bir kod eklemesine olanak tanıyan bir teorik olabilir. Bu sorun kapsamlı bir şekilde incelendi ve bu tür bir saldırı nadiren düşünülse de, verileri bilinmeyen ve güvenilmeyen bir türle asla serileştirmez.
+  Kötü amaçlı bir nesne bir iş parçacığı sayısını gösterir iki yolu vardır. Kötü amaçlı kod çalıştırabilir veya **XmlSerializer** tarafından oluşturulan C# dosyasına kötü amaçlı kod ekleyebilir. İkinci durumda, kötü niyetli bir nesnenin **XmlSerializer** tarafından oluşturulan C# dosyasına bir kod eklemesine olanak tanıyan bir teorik olabilir. Bu sorun kapsamlı bir şekilde incelendi ve bu tür bir saldırı nadiren düşünülse de, verileri bilinmeyen ve güvenilmeyen bir türle asla serileştirmez.
 
 - Serileştirilmiş hassas verileri açık olabilir.
 
@@ -148,7 +148,7 @@ XML serileştirmenin bir diğer avantajı, oluşturulan uygulamalar üzerinde he
 
 ## <a name="xsd-data-type-mapping"></a>XSD veri türü eşlemesi
 
-[XML şeması Bölüm 2: veri türleri](https://www.w3.org/TR/xmlschema-2/) başlıklı W3C belgesi, bir XML şeması tanım DILI (xsd) şemasında izin verilen basit veri türlerini belirtir. Bunlardan birçoğu için (örneğin, **int** ve **Decimal** ), .net 'te karşılık gelen bir veri türü vardır. Ancak, bazı XML veri türlerinde karşılık gelen bir .NET veri türü yoktur, örneğin, **NMTOKEN** veri türü. Bu gibi durumlarda, bir şemadan sınıflar oluşturmak için XML şema tanımı aracını ( [XML şema tanımı Aracı (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) kullanırsanız, String türünde bir üyeye uygun bir öznitelik uygulanır ve **DataType** özelliği XML veri türü adına ayarlanır. Örneğin, bir şema XML veri türü **NMTOKEN** olan "mytoken" adlı bir öğe içeriyorsa, oluşturulan sınıf aşağıdaki örnekte gösterildiği gibi bir üye içerebilir.
+[XML şeması Bölüm 2: veri türleri](https://www.w3.org/TR/xmlschema-2/) başlıklı W3C belgesi, bir XML şeması tanım DILI (xsd) şemasında izin verilen basit veri türlerini belirtir. Bunlardan birçoğu için (örneğin, **int** ve **Decimal**), .net 'te karşılık gelen bir veri türü vardır. Ancak, bazı XML veri türlerinde karşılık gelen bir .NET veri türü yoktur, örneğin, **NMTOKEN** veri türü. Bu gibi durumlarda, bir şemadan sınıflar oluşturmak için XML şema tanımı aracını ([XML şema tanımı Aracı (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) kullanırsanız, String türünde bir üyeye uygun bir öznitelik uygulanır ve **DataType** özelliği XML veri türü adına ayarlanır. Örneğin, bir şema XML veri türü **NMTOKEN** olan "mytoken" adlı bir öğe içeriyorsa, oluşturulan sınıf aşağıdaki örnekte gösterildiği gibi bir üye içerebilir.
 
 ```vb
 <XmlElement(DataType:="NMTOKEN")> _

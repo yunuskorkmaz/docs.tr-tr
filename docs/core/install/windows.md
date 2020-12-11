@@ -4,12 +4,12 @@ description: Hangi Windows sürümlerini .NET yükleyebileceğinizi öğrenin.
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 786814549724948fa69b18a05cee966e0940aaf4
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: b5c0949bbd591906536094a33d8583a265d8a4c8
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110240"
 ---
 # <a name="install-net-on-windows"></a>Windows 'a .NET yükler
 
@@ -37,6 +37,7 @@ Windows 10 sürümleri hizmet son tarihleri sürüme göre bölündü. Aşağıd
 
 | Operating System            | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
 |-----------------------------|---------------|---------------|--------|
+| Windows 10, sürüm 20H2    | ✔️           | ✔️            | ✔️    |
 | Windows 10, sürüm 2004    | ✔️           | ✔️            | ✔️    |
 | Windows 10, sürüm 1909    | ✔️           | ✔️            | ✔️    |
 | Windows 10, sürüm 1903    | ✔️           | ✔️            | ✔️    |
@@ -235,7 +236,7 @@ dotnet-install.ps1 -Channel Current
 Visual Studio zaten yüklüyse, aşağıdaki adımlarla sürümünüzü kontrol edebilirsiniz.
 
 01. Visual Studio'yu açın.
-01. **Help**  >  **Microsoft Visual Studio hakkında** yardım seçeneğini belirleyin.
+01.   >  **Microsoft Visual Studio hakkında** yardım seçeneğini belirleyin.
 01. **Hakkında** iletişim kutusunda sürüm numarasını okuyun.
 
 Visual Studio, en son .NET SDK ve çalışma zamanını yükleyebilir.

@@ -3,12 +3,12 @@ title: C# ' nin geçmişi-c# Kılavuzu
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 349f2cfbe0fc93060eb6927ee8c3528c16b99aca
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110734"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
@@ -39,7 +39,7 @@ C# 1,0 'nin başlıca özellikleri dahildir:
 - [Sınıflar](../programming-guide/classes-and-structs/classes.md)
 - [Yapılar](../language-reference/builtin-types/struct.md)
 - [Arabirimler](../programming-guide/interfaces/index.md)
-- [Olayları](../events-overview.md)
+- [Ekinlikler](../events-overview.md)
 - [Özellikler](../properties.md)
 - [Temsilciler](../delegates-overview.md)
 - [İşleçler ve ifadeler](../language-reference/operators/index.md)
@@ -68,7 +68,7 @@ Diğer C# 2,0 özellikleri varolan özelliklere özellikler eklemiştir:
 - Statik sınıflar
 - Temsilci çıkarımı
 
-C# genel nesne yönelimli (OO) dil olarak başlatılmış olsa da, bir acede C# sürüm 2,0 değiştirilmiştir. Bunların altındaysa, önemli geliştirici sorun noktalarından sonra gitirler. Ve bunları önemli bir şekilde yaptıktan sonra.
+C# genel Object-Oriented (OO) dili olarak başlatılmış olsa da, C# sürüm 2,0, bir acelendeki değiştirilmiş olabilir. Bunların altındaysa, önemli geliştirici sorun noktalarından sonra gitirler. Ve bunları önemli bir şekilde yaptıktan sonra.
 
 Genel türler ile türler ve Yöntemler, tür güvenliğini korurken rastgele bir tür üzerinde çalışabilir. Örneğin, bir uygulamasına sahip olma, <xref:System.Collections.Generic.List%601> `List<string>` `List<int>` Bu dizeler veya tamsayılar üzerinde yineleme yaparken tür kullanımı güvenli işlemleri gerçekleştirmenize izin verir. Genel türleri kullanmak, `ListInt` `ArrayList`  her işlem için kaynağından veya kümeden türeten daha iyidir `Object` .
 
@@ -85,14 +85,14 @@ C# sürüm 3,0, Visual Studio 2008 ile birlikte 2007 geldi, ancak dil özellikle
 - [Sorgu ifadeleri](../linq/query-expression-basics.md)
 - [Lambda ifadeleri](../language-reference/operators/lambda-expressions.md)
 - [İfade ağaçları](../expression-trees.md)
-- [Genişletme yöntemleri](../programming-guide/classes-and-structs/extension-methods.md)
+- [Uzantı yöntemleri](../programming-guide/classes-and-structs/extension-methods.md)
 - [Örtük olarak yazılan yerel değişkenler](../language-reference/keywords/var.md)
 - [Kısmi Yöntemler](../language-reference/keywords/partial-method.md)
 - [Nesne ve koleksiyon başlatıcıları](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
-Geriye dönük olarak, bu özelliklerin çoğu hem kaçınılmazdır hem de ınseparablegörünmektedir. Hepsi stratejik olarak bir araya gelerek. Genellikle C# sürümünün Killer özelliğinin, dil ile tümleşik sorgu (LINQ) olarak da bilinen sorgu ifadesi olması düşünüldük.
+Geriye dönük olarak, bu özelliklerin çoğu hem kaçınılmazdır hem de ınseparablegörünmektedir. Hepsi stratejik olarak bir araya gelerek. Genellikle C# sürümünün Killer özelliğinin, Language-Integrated Query (LINQ) olarak da bilinen sorgu ifadesi olması düşünüldük.
 
-Daha fazla kızılmış bir görünüm, LINQ 'ın oluşturulduğu temel olarak ifade ağaçları, lambda ifadeleri ve anonim türler inceler. Ancak her iki durumda da C# 3,0, Devrim niteliğinde bir kavram olarak sunulur. C# 3,0, C# ' ın karma nesne odaklı/Işlevsel bir dile dönmesini sağlamak için groundişini düzenleme ile başlamıştır.
+Daha fazla kızılmış bir görünüm, LINQ 'ın oluşturulduğu temel olarak ifade ağaçları, lambda ifadeleri ve anonim türler inceler. Ancak her iki durumda da C# 3,0, Devrim niteliğinde bir kavram olarak sunulur. C# 3,0, c# ' ın bir karma Object-Oriented/işlevsel dile dönmesini sağlamak için ön hazırlıkları başlattık ile çalışmaya başlamıştır.
 
 Özellikle, koleksiyonlar üzerinde işlemler gerçekleştirmek için diğer şeyler arasında SQL stili, bildirime dayalı sorgular yazabilirsiniz. `for`Bir tamsayılar listesinin ortalamasını hesaplamak için bir döngü yazmak yerine, artık bunu gibi yapabilirsiniz `list.Average()` . Sorgu ifadelerinin ve genişletme yöntemlerinin birleşimi, tam olarak çok daha akıllı bir şekilde kullanıma sunulacaktır.
 
@@ -134,17 +134,17 @@ Ancak `async` , `await` Bu sürümün gerçek yıldızları da vardır. Bu özel
 
 C#, 3,0 ve 5,0 sürümleriyle, nesne yönelimli bir dilde önemli yeni özellikler eklemiştir. Visual Studio 2015 ile yayınlanan sürüm 6,0 ' de, baskın bir Killer özelliği yapmaktan sonra C# programlama daha üretken hale getirilen daha küçük birçok özellik yayımlayacaktır. Bunlardan bazıları şunlardır:
 
-- [Statik içeri aktarmalar](./csharp-6.md#using-static)
-- [Özel durum filtreleri](./csharp-6.md#exception-filters)
-- [Otomatik Özellik başlatıcıları](./csharp-6.md#auto-property-initializers)
-- [İfade gövdeli Üyeler](./csharp-6.md#expression-bodied-function-members)
-- [Null yayıcı](./csharp-6.md#null-conditional-operators)
-- [Dize ilişkilendirme](./csharp-6.md#string-interpolation)
-- [NameOf işleci](./csharp-6.md#the-nameof-expression)
-- [Dizin başlatıcıları](csharp-6.md#extension-add-methods-in-collection-initializers)
+- [Statik içeri aktarmalar](../language-reference/keywords/using-static.md)
+- [Özel durum filtreleri](../language-reference/keywords/when.md)
+- [Otomatik Özellik başlatıcıları](../properties.md)
+- [İfade gövdeli Üyeler](../language-reference/operators/lambda-operator.md#expression-body-definition)
+- [Null yayıcı](../language-reference/operators/member-access-operators.md#null-conditional-operators--and-)
+- [Dize ilişkilendirme](../language-reference/tokens/interpolated.md)
+- [NameOf işleci](../language-reference/operators/nameof.md)
 
 Diğer yeni özellikler şunlardır:
 
+- Dizin başlatıcıları
 - Catch/finally bloklarında await
 - Yalnızca alıcı özellikleri için varsayılan değerler
 
@@ -158,7 +158,7 @@ C# sürüm 7,0, Visual Studio 2017 ile yayınlanmıştır. Bu sürüm, C# 6,0 ' 
 
 - [Out değişkenleri](./csharp-7.md#out-variables)
 - [Tanımlama grupları ve ayrıştırma](./csharp-7.md#tuples-and-discards)
-- [Model eşleştirme](./csharp-7.md#pattern-matching)
+- [Desen eşleştirme](./csharp-7.md#pattern-matching)
 - [Yerel işlevler](./csharp-7.md#local-functions)
 - [Genişletilmiş ifade gövdeli Üyeler](./csharp-7.md#more-expression-bodied-members)
 - [Ref Yereller ve geri dönüşler](./csharp-7.md#ref-locals-and-returns)
@@ -254,4 +254,4 @@ C# 8,0, .NET Core 'un özel olarak hedeflediği ilk önemli C# sürümüdür. Ba
 
 Varsayılan arabirim üyeleri CLR 'de geliştirmeler gerektirir. Bu özellikler .NET Core 3,0 için CLR 'ye eklenmiştir. Aralıklar ve dizinler ve zaman uyumsuz akışlar, .NET Core 3,0 kitaplıklarında yeni türler gerektirir. Bağımsız değişken ve dönüş değerlerinin NULL durumu ile ilgili anlam bilgilerini sağlamak üzere, derleyicide uygulanan null yapılabilir başvuru türleri, kitaplıklar açıklandığında çok daha yararlıdır. Bu ek açıklamalar .NET Core kitaplıklarına ekleniyor.
 
-İlk olarak_Nıdidıetrich ve Patrick Smacchia,_ [_nbağlı blog 'da yayımlanan_](https://blog.ndepend.com/c-versions-look-language-history/) _Makale_ .
+İlk olarak _Nıdidıetrich ve Patrick Smacchia,_ [_nbağlı blog 'da yayımlanan_](https://blog.ndepend.com/c-versions-look-language-history/) _Makale_ .

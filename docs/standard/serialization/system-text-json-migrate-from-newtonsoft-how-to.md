@@ -6,19 +6,19 @@ ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 418637639790199755803bf374ef99af949ae9b3
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 4a33d9de96af805c3696ceed5cd30a3fa8547222
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110838"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
@@ -369,6 +369,10 @@ Daha fazla bilgi için bkz. [başvuruları koruma ve döngüsel başvuruları i�
 
 ::: zone pivot="dotnet-5-0"
 Hem hem de `Newtonsoft.Json` `System.Text.Json` türündeki koleksiyonları destekler `Dictionary<TKey, TValue>` .
+
+> [!CAUTION]
+> Bir WHERE 'nin seri durumundan çıkarma, `Dictionary<TKey, TValue>` `TKey` `string` tüketen uygulamada bir güvenlik açığı ortaya çıkarabilir. Daha fazla bilgi için bkz. [DotNet/Runtime # 4761](https://github.com/dotnet/runtime/issues/4761).
+
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"

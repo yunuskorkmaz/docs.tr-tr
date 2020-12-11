@@ -1,13 +1,13 @@
 ---
 title: Bağlantı dizeleri
-ms.date: 12/13/2019
+ms.date: 12/08/2020
 description: Desteklenen anahtar sözcükler ve bağlantı dizelerinin değerleri.
-ms.openlocfilehash: 3c50b31689abf6d47aa8f83a6f6f755bcfec0ea3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 35283664c4ac3985d4f517fde77644ab2a891120
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555399"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110747"
 ---
 # <a name="connection-strings"></a>Bağlantı dizeleri
 
@@ -50,7 +50,7 @@ Bağlantı tarafından kullanılan önbelleğe alma modu.
 | ------- | ---------------------------------------------------------------------------------------------- |
 | Varsayılan | Temel alınan SQLite kitaplığının varsayılan modunu kullanır. Bu varsayılan seçenektir.                   |
 | Özel | Her bağlantı özel bir önbellek kullanır.                                                          |
-| Shared  | Bağlantılar bir önbelleği paylaşır. Bu mod işlem ve tablo kilitleme davranışını değiştirebilir. |
+| Paylaşılan  | Bağlantılar bir önbelleği paylaşır. Bu mod işlem ve tablo kilitleme davranışını değiştirebilir. |
 
 ### <a name="password"></a>Parola
 
@@ -59,9 +59,15 @@ Bağlantı tarafından kullanılan önbelleğe alma modu.
 > [!WARNING]
 > Şifreleme yerel SQLite kitaplığı tarafından desteklenmiyorsa parolanın hiçbir etkisi yoktur.
 
+> [!NOTE]
+> Password anahtar sözcüğü 3,0 sürümüne eklenmiştir.
+
 ### <a name="foreign-keys"></a>Yabancı anahtarlar
 
 Yabancı anahtar kısıtlamalarının etkinleştirilip etkinleştirilmeyeceğini gösteren bir değer.
+
+> [!NOTE]
+> Yabancı anahtarlar anahtar sözcüğü 3,0 sürümüne eklenmiştir.
 
 | Değer   | Açıklama
 | ------- | --- |
@@ -74,6 +80,9 @@ E_sqlite3 gibi, yerel SQLite kitaplığı derlemek için SQLITE_DEFAULT_FOREIGN_
 ### <a name="recursive-triggers"></a>Özyinelemeli Tetikleyiciler
 
 Özyinelemeli tetikleyicilerin etkinleştirilip etkinleştirilmeyeceğini gösteren bir değer.
+
+> [!NOTE]
+> Özyinelemeli Tetikleyiciler anahtar sözcüğü 3,0 sürümüne eklenmiştir.
 
 | Değer | Açıklama                                                                 |
 | ----- | --------------------------------------------------------------------------- |
@@ -122,7 +131,7 @@ Data Source=:memory:
 
 ### <a name="sharable-in-memory"></a>Paylaşılabilir bellek içi
 
-*Paylaşılabilir*adıyla tanımlanan paylaşılabilir, bellek içi veritabanı.
+*Paylaşılabilir* adıyla tanımlanan paylaşılabilir, bellek içi veritabanı.
 
 ```connectionstring
 Data Source=Sharable;Mode=Memory;Cache=Shared

@@ -2,12 +2,12 @@
 title: C# öğreticiler
 description: C# programları oluşturmayı ve C# dil özelliklerini kullanmayı öğrenmek için bu C# öğreticilerini keşfedebilirsiniz.
 ms.date: 10/25/2018
-ms.openlocfilehash: 9542f4919c9b1f0363fb8bc27136eb9a7e074913
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: d6eeed2ed5fbf68120c789b7d8203e811fb8608d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414830"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110175"
 ---
 # <a name="c-tutorials"></a>C# öğreticiler
 
@@ -19,7 +19,7 @@ Araştırmayı video biçiminde başlatmak istiyorsanız [C# 101 video serisi](h
 
 İlk dersler, kodun küçük kod parçacıklarını kullanarak C# kavramlarını açıklamaktadır. C# sözdiziminin temel bilgilerini ve dizeler, sayılar ve Boole değerleri gibi veri türleriyle nasıl çalışacağınızı öğreneceksiniz. Bu, tüm etkileşimlidir ve dakikalar içinde kod yazmak ve çalıştırmak isteyeceksiniz. Bu ilk dersler, programlama veya C# dilinin önceki bir bilgisine sahip olmadığını varsayar.
 
-## <a name="hello-world"></a>[Merhaba dünya](intro-to-csharp/hello-world.yml)
+## <a name="hello-world"></a>[Merhaba Dünya](intro-to-csharp/hello-world.yml)
 
 [Merhaba Dünya](intro-to-csharp/hello-world.yml) öğreticisinde en temel C# programını oluşturacaksınız. `string`Türü ve metinle çalışmayı inceleyebilirsiniz.
 
@@ -47,7 +47,6 @@ Merhaba Dünya dersi izleyen tüm giriş öğreticileri kendi yerel geliştirme 
 
 ## <a name="explore-new-features-in-c"></a>C 'deki yeni özellikleri keşfet\#
 
-* [C# 6 ' daki yeni özellikleri etkileşimli olarak deneyin](exploration/csharp-6.yml): tarayıcınızda [c# 6](../whats-new/csharp-6.md) ' da etkileşimli olarak eklenen özellikleri araştırma.
 * [Dize ilişkilendirme](string-interpolation.md): C# dilinde biçimlendirilen dizeler oluşturmak için dize ilişkilendirmeyi nasıl kullanacağınızı gösterir.
 * Null [yapılabilir başvuru türleri](nullable-reference-types.md): null Başvurular için amacınızı ifade etmek üzere null yapılabilir başvuru türlerini nasıl kullanacağınızı gösterir.
 * [Null yapılabilir başvuru türlerini kullanmak için bir projeyi güncelleştirme](upgrade-to-nullable-references.md): mevcut bir projeyi, null yapılabilir başvuru türlerini kullanmak için yükseltme tekniklerini gösterir.
