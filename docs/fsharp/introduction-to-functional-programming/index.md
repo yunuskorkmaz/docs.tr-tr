@@ -2,12 +2,12 @@
 title: 'F # İşlevsel Programlamaya Giriş'
 description: "F # ' da işlevsel programlama temellerini öğrenin."
 ms.date: 10/29/2018
-ms.openlocfilehash: fc2aebe80de16b92942c3557c0e03c198883dde1
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 44242a4319a331312a003a555d1483f2a3f1a90d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740334"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110591"
 ---
 # <a name="introduction-to-functional-programming-in-f"></a>F 'de Işlevsel programlamaya giriş\#
 
@@ -26,7 +26,7 @@ Diğer programlama paradigmalarına gibi işlevsel programlama, sonunda öğrene
 
 * **Function** -bir işlev, bir giriş verildiğinde çıkış oluşturacak bir yapıdır. Daha resmi bir öğeyi bir kümeden başka bir küme ile _eşleştirir_ . Bu formalroni, özellikle veri koleksiyonlarında çalışan işlevler kullanılırken birçok şekilde somut yükseltilmemiş. Fonksiyonel programlamada en temel (ve önemli) kavramdır.
 * **İfade** -bir ifade, bir değer üreten bir kod yapısıdır. F # ' da, bu değerin bağlanması veya açıkça yoksayılması gerekir. Bir ifade, bir işlev çağrısıyla daha fazla değiştirilebilir.
-* **Purity** Bu, bir işlevin özelliği olan dönüş değeri aynı bağımsız değişkenler için her zaman aynı ve değerlendirmesinin bir yan etkisi yoktur. Saf işlev tamamen bağımsız değişkenlerine bağlıdır.
+*  Bu, bir işlevin özelliği olan dönüş değeri aynı bağımsız değişkenler için her zaman aynı ve değerlendirmesinin bir yan etkisi yoktur. Saf işlev tamamen bağımsız değişkenlerine bağlıdır.
 * **Bilgi saydamlığı** -başvurusal saydamlık, bir programın davranışını etkilemeden kendi çıktılarıyla değiştirilmeleri için ifadelerin bir özelliğidir.
 * **Imlebilirlik kullanılabilirliği** -değişiklik, bir değerin yerinde değiştirilememe anlamına gelir. Bu, yerinde değişiklik olabilen değişkenlerle aynıdır.
 
@@ -54,7 +54,7 @@ Bu nedenle imza neden önemlidir? Yazılan işlevsel programlamada, bir işlevin
 
 ### <a name="expressions"></a>İfadeler
 
-İfadeler bir değeri değerlendiren yapılardır. Bir eylem gerçekleştiren deyimlerin aksine, ifadeler bir değeri geri veren bir eylem gerçekleştirmeye düşünülebilir. İfadeler, işlevsel programlamada deyimler için neredeyse her zaman kullanılır.
+İfadeler bir değeri değerlendiren yapılardır. Bir eylem gerçekleştiren deyimlerin aksine, ifadeler bir değeri geri veren bir eylem gerçekleştirmeye düşünülebilir. İfadeler, deyimler yerine neredeyse her zaman işlevsel programlamada kullanılır.
 
 Önceki işlevi göz önünde bulundurun `addOne` . Gövdesi `addOne` bir ifadedir:
 

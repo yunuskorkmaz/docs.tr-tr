@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlama
 description: "F # ' ın, temel fonksiyonel programlama kavramlarından türetilmiş dil düzeyi bir programlama modeline bağlı olarak, zaman uyumsuzluğu için temizleme desteği sağladığını öğrenin."
 ms.date: 08/15/2020
-ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 8bf8d6987187377cc1f44e77141b5d70d873f849
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739333"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366821"
 ---
 # <a name="async-programming-in-f"></a>F 'de zaman uyumsuz programlama\#
 
@@ -93,7 +93,7 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Parallel
     |> Async.Ignore
     |> Async.RunSynchronously
@@ -101,14 +101,14 @@ let main argv =
     0
 ```
 
-Gördüğünüz gibi, `main` işlev çok daha fazla sayıda çağrı yaptı. Kavramsal olarak, şunları yapar:
+Gördüğünüz gibi, `main` işlev çok daha fazla sayıda öğe içeriyor. Kavramsal olarak, şunları yapar:
 
-1. Komut satırı bağımsız değişkenlerini `Async<unit>` ile hesaplamalar içine dönüştürün `Array.map` .
+1. Komut satırı bağımsız değişkenlerini `Async<unit>` ile hesaplamalar dizisine dönüştürün `Seq.map` .
 2. Çalışırken `Async<'T[]>` hesaplamaları zamanlayan ve çalıştıran bir oluştur `printTotalFileBytes` .
-3. `Async<unit>`Paralel hesaplamayı çalıştıracak ve sonucunu yoksayacak bir oluştur.
-4. Son hesaplamayı ile `Async.RunSynchronously` ve blok tamamlanana kadar açıkça çalıştırın.
+3. `Async<unit>`Paralel hesaplamayı çalıştıracak ve sonucunu (bir) yoksayacak bir oluşturma işlemi `unit[]` .
+4. Genel olarak oluşturulan hesaplamayı ile açık olarak çalıştırın `Async.RunSynchronously` , tamamlanana kadar engelleyici.
 
-Bu program çalıştığında, `printTotalFileBytes` her komut satırı bağımsız değişkeni için paralel olarak çalışır. Zaman uyumsuz hesaplamalar program akışından bağımsız olarak yürütüldüğünden, bilgilerini yazdırdıkları ve yürütmeyi tamamlayabileceği bir sıra yoktur. Hesaplamalar paralel olarak zamanlanır, ancak yürütme sırası garanti edilmez.
+Bu program çalıştığında, `printTotalFileBytes` her komut satırı bağımsız değişkeni için paralel olarak çalışır. Zaman uyumsuz hesaplamalar program akışından bağımsız olarak yürütüldüğünden, bilgilerini yazdırdıkları ve yürütmeyi tamamlayabileceği tanımlı bir sıra yoktur. Hesaplamalar paralel olarak zamanlanır, ancak yürütme sırası garanti edilmez.
 
 ## <a name="sequence-asynchronous-computations"></a>Sıra zaman uyumsuz hesaplamalar
 
@@ -125,18 +125,18 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Sequential
     |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
 
-Bu işlem, `printTotalFileBytes` öğeleri `argv` paralel olarak zamanlamak yerine öğesinin sırasıyla yürütmeye zamanlanır. Bir sonraki öğe, son hesaplamanın yürütülmesi bitinceye kadar zamanlanmayacak, bu hesaplamalar yürütmeyle ilgili bir çakışma olmaması gibi sıralanacaktır.
+Bu işlem, `printTotalFileBytes` öğeleri `argv` paralel olarak zamanlamak yerine öğesinin sırasıyla yürütmeye zamanlanır. Ardışık işlemler, önceki hesaplamanın yürütülmesi bitene kadar zamanlanmayacak, bu hesaplamalar yürütmeyle ilgili bir çakışma olmaması gibi sıralanacaktır.
 
 ## <a name="important-async-module-functions"></a>Önemli zaman uyumsuz modül işlevleri
 
-F # ' da zaman uyumsuz kod yazdığınızda, genellikle sizin için hesaplamaların zamanlamasını işleyen bir çerçeve ile etkileşime geçebilirsiniz. Ancak, bu her zaman durum değildir, bu nedenle zaman uyumsuz çalışmayı zamanlamak için çeşitli başlangıç işlevlerini öğrenmenizde yarar vardır.
+F # ' da zaman uyumsuz kod yazdığınızda, genellikle sizin için hesaplamaların zamanlamasını işleyen bir çerçeve ile etkileşime geçebilirsiniz. Ancak, bu her zaman durum değildir, bu nedenle zaman uyumsuz çalışmayı zamanlamak için kullanılabilecek çeşitli işlevleri anlamak iyidir.
 
 F # zaman uyumsuz hesaplamalar, zaten yürütülmekte olan çalışmanın temsili yerine bir iş _belirtimi_ olduğundan, bir başlangıç işleviyle açıkça başlatılmaları gerekir. Farklı bağlamlarda yararlı olan çok sayıda [zaman uyumsuz başlangıç yöntemi](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#section0) vardır. Aşağıdaki bölümde daha yaygın başlangıç işlevlerinin bazıları açıklanmaktadır.
 
@@ -198,12 +198,12 @@ Ne zaman kullanılır:
 
 ### <a name="asyncparallel"></a>Async. Parallel
 
-Paralel olarak yürütülecek zaman uyumsuz hesaplamalar dizisini zamanlar. Paralellik derecesi, parametre belirtilerek isteğe bağlı olarak ayarlanabilir/kısıtlanabilir `maxDegreesOfParallelism` .
+Zaman uyumsuz hesaplamalar dizisini paralel olarak yürütülecek şekilde zamanlar, bir dizi sonucu sağlandıkları sırada sağlar. Paralellik derecesi, parametre belirtilerek isteğe bağlı olarak ayarlanabilir/kısıtlanabilir `maxDegreeOfParallelism` .
 
 İmza:
 
 ```fsharp
-computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreeOfParallelism: int -> Async<'T[]>
 ```
 
 Ne zaman kullanılır:
@@ -251,7 +251,7 @@ Ne zaman kullanılır:
 
 İçin izlenecek:
 
-- Özel durumlar, <xref:System.AggregateException> görev paralel kitaplığı kuralına göre sarmalanır ve bu davranış, F # zaman uyumsuz genellikle özel durumların dışında farklılık gösterir.
+- Özel durumlar, <xref:System.AggregateException> görev paralel kitaplığı kuralına göre sarmalanır; bu davranış, F # zaman uyumsuz genellikle özel durumların dışında farklılık gösterir.
 
 ### <a name="asynccatch"></a>Async. catch
 
@@ -273,7 +273,7 @@ Ne zaman kullanılır:
 
 ### <a name="asyncignore"></a>Async. Ignore
 
-Verilen hesaplamayı çalıştıran ve sonucunu yoksayan zaman uyumsuz bir hesaplama oluşturur.
+Verilen hesaplamayı çalıştıran ancak sonucunu döndüren zaman uyumsuz bir hesaplama oluşturur.
 
 İmza:
 
@@ -283,7 +283,7 @@ computation: Async<'T> -> Async<unit>
 
 Ne zaman kullanılır:
 
-- Zaman uyumsuz bir hesaplamanız olduğunda, sonucu gerekli değildir. Bu, `ignore` zaman uyumsuz kod için koda benzerdir.
+- Zaman uyumsuz bir hesaplamanız olduğunda, sonucu gerekli değildir. Bu, `ignore` zaman uyumsuz kod için işleve benzerdir.
 
 İçin izlenecek:
 
@@ -291,7 +291,7 @@ Ne zaman kullanılır:
 
 ### <a name="asyncrunsynchronously"></a>Async. RunSynchronously
 
-Zaman uyumsuz bir hesaplama çalıştırır ve bunun sonucunu çağıran iş parçacığında bekler. Bu çağrı engelleniyor.
+Zaman uyumsuz bir hesaplama çalıştırır ve bunun sonucunu çağıran iş parçacığında bekler. Hesaplamanın bir istisna getirmeli bir özel durumu yayar. Bu çağrı engelleniyor.
 
 İmza:
 
@@ -310,7 +310,7 @@ Ne zaman kullanılır:
 
 ### <a name="asyncstart"></a>Async. Start
 
-Öğesini döndüren iş parçacığı havuzunda zaman uyumsuz bir hesaplama başlatır `unit` . Sonucunu beklemez. İle başlatılan iç içe hesaplamalar `Async.Start` , onları çağıran üst hesaplamadan bağımsız olarak başlatılır. Yaşam süresi herhangi bir üst hesaplamasına bağlı değildir. Üst hesaplama iptal edilirse, hiçbir alt hesaplama iptal edilemez.
+İş parçacığı havuzunda döndüren zaman uyumsuz hesaplamayı başlatır `unit` . Tamamlanmasını beklemez ve/veya bir özel durum sonucu gözlemleyin. İle başlatılan iç içe hesaplamalar `Async.Start` kendilerini çağıran üst hesaplamadan bağımsız olarak başlatılır; yaşam süresi herhangi bir üst hesaplamadan bağlı değildir. Üst hesaplama iptal edilirse, hiçbir alt hesaplama iptal edilemez.
 
 İmza:
 
@@ -323,7 +323,7 @@ Yalnızca şu durumlarda kullanın:
 - Bir sonuç elde etmez ve/veya işlemesini gerektirmeyen zaman uyumsuz bir hesaplasahipsiniz.
 - Zaman uyumsuz bir hesaplamanın tamamlanışında, bilmeniz gerekmez.
 - Zaman uyumsuz bir hesaplamanın çalışacağı iş parçacığını ilgilenmezsiniz.
-- Görevden kaynaklanan özel durumları bilmeniz veya bunları raporlamak zorunda kalmazsınız.
+- Yürütmeden kaynaklanan özel durumları bilmeniz veya bunları raporlamak zorunda kalmazsınız.
 
 İçin izlenecek:
 
