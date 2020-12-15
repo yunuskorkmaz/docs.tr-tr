@@ -3,12 +3,12 @@ title: 'Öğretici: .NET aracı oluşturma'
 description: .NET aracı oluşturmayı öğrenin. Araç, .NET CLı kullanılarak yüklenen bir konsol uygulamasıdır.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 8f2dd15982aff9fe2d9db9ce2cff8ac1b22e440e
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633784"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512638"
 ---
 # <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>Öğretici: .NET CLı kullanarak .NET aracı oluşturma
 
@@ -18,13 +18,13 @@ Bu öğreticide bir .NET aracı oluşturma ve paketleme hakkında öğretilir. .
 
 Oluşturacağınız araç, girdi olarak bir ileti alıp iletiyi bir robot görüntüsünü oluşturan metin satırlarıyla birlikte görüntüleyen bir konsol uygulamasıdır.
 
-Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve paketleyin. Sonraki iki öğreticilerde [, aracı genel araç olarak kullanır](global-tools-how-to-use.md) ve [Aracı yerel bir araç olarak kullanabilirsiniz](local-tools-how-to-use.md).
+Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve paketleyin. Sonraki iki öğreticilerde [, aracı genel araç olarak kullanır](global-tools-how-to-use.md) ve [Aracı yerel bir araç olarak kullanabilirsiniz](local-tools-how-to-use.md). Bir araç oluşturma yordamları, bunu küresel bir araç olarak veya yerel bir araç olarak kullanıp kullanmayacağınızı de aynıdır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET Core SDK 3,1](https://dotnet.microsoft.com/download) veya sonraki bir sürümü.
+- [.NET SDK 5,0](https://dotnet.microsoft.com/download) veya sonraki bir sürümü.
 
-  Bu öğreticide, genel [araçlar .NET Core SDK](global-tools-how-to-use.md) 2,1 ve üzeri sürümler için bu öğretici ve bu sürümden itibaren küresel araçlar geçerlidir. Ancak bu öğreticide, [Yerel araçlar öğreticisine](local-tools-how-to-use.md)devam etme seçeneğine sahip olmanız için 3,1 veya sonraki bir sürümü yüklemiş olduğunuz varsayılmaktadır. Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir. Bir araç oluşturma yordamları, bunu küresel bir araç olarak veya yerel bir araç olarak kullanıp kullanmayacağınızı de aynıdır.
+  Bu öğretici .NET SDK 5,0 kullanır, ancak küresel araçlar .NET Core SDK 2,1 ' den itibaren kullanılabilir. Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir.
   
 - Tercih ettiğiniz bir metin veya kod düzenleyicisi.
 
@@ -132,7 +132,7 @@ Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve 
 
 1. Yaptığınız değişiklikleri kaydedin.
 
-## <a name="test-the-application"></a>Uygulamayı test edin
+## <a name="test-the-application"></a>Uygulamayı test etme
 
 Projeyi çalıştırın ve çıktıyı görüntüleyin. Farklı sonuçları görmek için komut satırında bu çeşitlemeleri deneyin:
 
@@ -158,7 +158,7 @@ Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proj
 
    `<ToolCommandName>` , yüklendikten sonra aracı çağıracağı komutu belirten isteğe bağlı bir öğedir. Bu öğe sağlanmazsa, araç için komut adı *. csproj* uzantısı olmayan proje dosyası adıdır.
 
-   `<PackageOutputPath>` , NuGet paketinin nerede üretileceği belirleyen isteğe bağlı bir öğedir. NuGet paketi, .NET Core CLI aracınızı yüklemek için kullandığı şeydir.
+   `<PackageOutputPath>` , NuGet paketinin nerede üretileceği belirleyen isteğe bağlı bir öğedir. NuGet paketi, .NET CLı 'nin aracınızı yüklemek için kullandığı şeydir.
 
    Proje dosyası artık aşağıdaki örneğe benzer şekilde görünür:
 
@@ -168,7 +168,7 @@ Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proj
      <PropertyGroup>
 
        <OutputType>Exe</OutputType>
-       <TargetFramework>netcoreapp3.1</TargetFramework>
+       <TargetFramework>net5.0</TargetFramework>
   
        <PackAsTool>true</PackAsTool>
        <ToolCommandName>botsay</ToolCommandName>

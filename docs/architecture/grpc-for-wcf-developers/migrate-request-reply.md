@@ -2,20 +2,20 @@
 title: WCF geliştiricileri için bir WCF isteği-yanıt hizmetini gRPC-gRPC 'ye geçirme
 description: WCF 'den gRPC 'ye basit bir istek-yanıt hizmeti geçirmeyi öğrenin.
 ms.date: 09/02/2019
-ms.openlocfilehash: 018aa94a15cdcb1e0f559afb7b3a88cd4f915398
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 29a7bc77bc3a4becd767fc7a50adff5b746f54bc
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628559"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512703"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>WCF isteği yanıt verme hizmetini gRPC birli RPC 'ye geçirme
 
-Bu bölümde, WCF 'de temel bir istek-yanıt hizmetinin ASP.NET Core gRPC 'deki birli RPC hizmetine geçirilmesi ele alınmaktadır. Bu hizmetler hem Windows Communication Foundation (WCF) hem de gRPC içindeki en basit hizmet türleridir. bu nedenle başlamak için mükemmel bir yerdir. Hizmeti geçirdikten sonra, bir .NET istemci uygulamasından hizmeti kullanmak için aynı `.proto` dosyasından bir istemci kitaplığı oluşturmayı öğreneceksiniz.
+Bu bölümde, WCF 'de temel bir istek-yanıt hizmetinin ASP.NET Core gRPC 'deki birli RPC hizmetine geçirilmesi ele alınmaktadır. Bu hizmetler hem Windows Communication Foundation (WCF) hem de gRPC içindeki en basit hizmet türleridir. bu nedenle başlamak için mükemmel bir yerdir. Hizmeti geçirdikten sonra, `.proto` bir .NET istemci uygulamasından hizmeti kullanmak için aynı dosyadan bir istemci kitaplığı oluşturmayı öğreneceksiniz.
 
 ## <a name="the-wcf-solution"></a>WCF çözümü
 
-[PortfoliosSample çözümü](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/PortfoliosSample/wcf/TraderSys) , belirli bir eğitime için tek bir portföy ya da tüm portföyleri indirmek üzere basit bir istek-yanıt portföyü hizmeti içerir. Hizmet, arabirim `IPortfolioService` `ServiceContract` özniteliğiyle tanımlanmıştır:
+[PortfoliosSample çözümü](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/PortfoliosSample/wcf/TraderSys) , belirli bir eğitime için tek bir portföy ya da tüm portföyleri indirmek üzere basit bir istek-yanıt portföyü hizmeti içerir. Hizmet, arabiriminde `IPortfolioService` bir özniteliği ile tanımlanmıştır `ServiceContract` :
 
 ```csharp
 [ServiceContract]
@@ -29,7 +29,7 @@ public interface IPortfolioService
 }
 ```
 
-`Portfolio` modeli, [DataContract](xref:System.Runtime.Serialization.DataContractAttribute) ile işaretlenmiş C# ve `PortfolioItem` nesnelerinin bir listesini içeren basit bir sınıftır. Bu modeller `TraderSys.PortfolioData` projesinde, bir veri erişimi soyutlamasını temsil eden bir depo sınıfıyla birlikte tanımlanmıştır.
+`Portfolio`Model, [DataContract](xref:System.Runtime.Serialization.DataContractAttribute) ile işaretlenmiş ve nesne listesi dahil olmak üzere basit bir C# sınıfıdır `PortfolioItem` . Bu modeller `TraderSys.PortfolioData` projede, bir veri erişimi soyutlamasını temsil eden bir depo sınıfıyla birlikte tanımlanmıştır.
 
 ```csharp
 [DataContract]
@@ -62,7 +62,7 @@ public class PortfolioItem
 }
 ```
 
-`ServiceContract` uygulama, `DataContract` türlerinin örneklerini döndüren bağımlılık ekleme yoluyla sağlanmış bir depo sınıfı kullanır:
+`ServiceContract`Uygulama, türlerin örneklerini döndüren bağımlılık ekleme yoluyla sağlanmış bir depo sınıfı kullanır `DataContract` :
 
 ```csharp
 public class PortfolioService : IPortfolioService
@@ -88,7 +88,7 @@ public class PortfolioService : IPortfolioService
 
 ## <a name="the-portfoliosproto-file"></a>Portföyler. proto dosyası
 
-Önceki bölümde yer alan yönergeleri izlediyseniz, şuna benzer bir `portfolios.proto` dosyası içeren bir gRPC projeniz olmalıdır:
+Önceki bölümde yer alan yönergeleri izlediyseniz şuna benzer bir dosya içeren bir gRPC projeniz olmalıdır `portfolios.proto` :
 
 ```protobuf
 syntax = "proto3";
@@ -102,14 +102,14 @@ service Portfolios {
 }
 ```
 
-İlk adım `DataContract` sınıflarını prototip eşdeğerlerine geçirmeyecektir.
+İlk adım, `DataContract` sınıfları prototip eşdeğerlerine geçirmeyecektir.
 
 ## <a name="convert-the-datacontract-classes-to-grpc-messages"></a>DataContract sınıflarını gRPC iletilerine Dönüştür
 
-`PortfolioItem` sınıfı ilk olarak bir Prototipme iletisine dönüştürülür, çünkü `Portfolio` sınıfı buna bağlıdır. Sınıfı basittir ve özelliklerden üçü doğrudan gRPC veri türlerine eşlenir. Satın alımlardaki paylaşımlar için ödenen fiyatı temsil eden `Cost` özelliği bir `decimal` alanıdır. gRPC yalnızca `float` veya `double`, para birimi için uygun olmayan gerçek numaralar için destekler. Paylaşma fiyatları en az bir sent 'a göre farklılık gösterdiğinden, maliyet, ilal `int32` olarak ifade edilebilir.
+Sınıfı, `PortfolioItem` `Portfolio` sınıf kendisine bağlı olduğundan, önce bir prototipme iletisine dönüştürülür. Sınıfı basittir ve özelliklerden üçü doğrudan gRPC veri türlerine eşlenir. Satın alımlardaki `Cost` paylaşımlar için ödenen fiyatı temsil eden özelliği bir `decimal` alandır. gRPC yalnızca `float` `double` , para birimi için uygun olmayan gerçek sayıları destekler. Paylaşma fiyatları, en az bir sent 'a göre farklılık gösterdiğinden, maliyet, bir ilal olarak ifade edilebilir `int32` .
 
 > [!NOTE]
-> `.proto` dosyanızdaki alan adları için camelCase kullanmayı unutmayın. C# Kod Oluşturucu, sizin Için PascalCase 'e dönüştürecek ve diğer dillerin kullanıcıları farklı kodlama standartlarını daha iyi bir şekilde tahmin ettiğiniz için teşekkür eder.
+> `snake_case`Dosyanızdaki alan adları için kullanmayı unutmayın `.proto` . C# kod Oluşturucu bunları `PascalCase` sizin için dönüştürür ve diğer dillerin kullanıcıları farklı kodlama standartlarını daha da tahmin etmek için teşekkür ederiz.
 
 ```protobuf
 message PortfolioItem {
@@ -120,7 +120,7 @@ message PortfolioItem {
 }
 ```
 
-`Portfolio` sınıfı biraz daha karmaşıktır. WCF kodunda, geliştirici `TraderId` özelliği için bir `Guid` kullanıyordu ve bir `List<PortfolioItem>`içerir. Birinci sınıf `UUID` türüne sahip olmayan prototipte, `traderId` alanı için bir `string` kullanmalı ve kendi kodunuzda ayrıştırmalısınız. Öğelerin listesi için alanındaki `repeated` anahtar sözcüğünü kullanın.
+`Portfolio`Sınıf biraz daha karmaşıktır. WCF kodunda, Geliştirici `Guid` özelliği için bir kullanır `TraderId` ve bir içerir `List<PortfolioItem>` . Birinci sınıf türüne sahip olmayan prototipte, `UUID` `string` alanı için bir kullanmalı `traderId` ve kendi kodunuzda ayrıştırmalısınız. Öğelerin listesi için `repeated` alandaki anahtar sözcüğünü kullanın.
 
 ```protobuf
 message Portfolio {
@@ -134,11 +134,11 @@ Artık veri iletilerine sahip olduğunuza göre, hizmet RPC uç noktalarını bi
 
 ## <a name="convert-servicecontract-to-a-grpc-service"></a>ServiceContract 'i gRPC hizmetine dönüştürme
 
-WCF `Get` yöntemi iki parametre alır: `Guid traderId` ve `int portfolioId`. gRPC hizmeti yöntemleri yalnızca tek bir parametre alabilir, bu nedenle iki değeri tutacak bir ileti oluşturmanız gerekir. Bu istek nesnelerini, ardından sonek `Request`ile aynı ada sahip olacak şekilde adlandırmak yaygın bir uygulamadır. `string`, `traderId` alanı için `Guid`yerine kullanılıyor.
+WCF `Get` yöntemi iki parametre alır: `Guid traderId` ve `int portfolioId` . gRPC hizmeti yöntemleri yalnızca tek bir parametre alabilir, bu nedenle iki değeri tutacak bir ileti oluşturmanız gerekir. Bu istek nesnelerini, ve ardından sonek tarafından aynı ada sahip olacak şekilde adlandırmak yaygın bir uygulamadır `Request` . `string` `traderId` Bunun yerine, alanı için kullanılıyor `Guid` .
 
-Hizmet yalnızca `Portfolio` bir ileti döndürebilir, ancak bu, gelecekte geriye dönük uyumluluğu etkileyebilir. Bir hizmette bulunan her yöntem için ayrı `Request` ve `Response` iletileri tanımlamak iyi bir uygulamadır. Bu, çoğu durumda aynı anda aynı olsa bile. Bu nedenle, tek bir `Portfolio` alanla `GetResponse` bir ileti bildirin.
+Hizmet yalnızca bir `Portfolio` iletiyi doğrudan döndürebilir, ancak bu, gelecekte geriye dönük uyumluluğu etkileyebilir. `Request` `Response` Çoğu bir hizmette aynı anda aynı olsa bile, her bir yöntemde ayrı ve iletileri tanımlamak iyi bir uygulamadır. Bu nedenle `GetResponse` , tek bir alan içeren bir ileti bildirin `Portfolio` .
 
-Bu örnek, `GetRequest` iletisiyle gRPC hizmeti yönteminin bildirimini gösterir:
+Bu örnekte, gRPC hizmeti yönteminin bildirimi şu `GetRequest` iletiyle gösterilmektedir:
 
 ```protobuf
 message GetRequest {
@@ -155,12 +155,12 @@ service Portfolios {
 }
 ```
 
-WCF `GetAll` yöntemi, `traderId`yalnızca tek bir parametre alır, bu yüzden parametre türü olarak `string` belirtebileceğiniz görünebilir. Ancak gRPC tanımlı bir ileti türü gerektirir. Bu gereksinim, ileri doğru uyumluluk için tüm girişler ve çıkışlar için özel iletiler kullanma uygulamasını zorlamaya yardımcı olur.
+WCF `GetAll` yöntemi yalnızca tek bir parametre alır, bu `traderId` yüzden `string` parametre türü olarak belirtebileceğiniz görünebilir. Ancak gRPC tanımlı bir ileti türü gerektirir. Bu gereksinim, ileri doğru uyumluluk için tüm girişler ve çıkışlar için özel iletiler kullanma uygulamasını zorlamaya yardımcı olur.
 
-WCF Yöntemi ayrıca bir `List<Portfolio>`döndürür, ancak basit parametre türlerine izin vermediği için gRPC, dönüş türü olarak `repeated Portfolio` izin vermez. Bunun yerine, listeyi kaydırmak için bir `GetAllResponse` türü oluşturun.
+WCF Yöntemi de döndürür `List<Portfolio>` , ancak basit parametre türlerine izin vermediğinden aynı nedenden dolayı gRPC, `repeated Portfolio` dönüş türü olarak izin vermez. Bunun yerine, `GetAllResponse` Listeyi kaydırmak için bir tür oluşturun.
 
 > [!WARNING]
-> `PortfolioList` bir ileti veya benzer bir durum oluşturabilir ve bunu birden çok hizmet yöntemi genelinde kullanabilirsiniz, ancak bu geçici yeniden ölçeklendirmelisiniz. Bir hizmette çeşitli yöntemlerin nasıl gelişeceğimizi bilmek olanaksızdır, bu sayede iletilerini özel ve düzgün bir şekilde ayrılmış olarak tutun.
+> Bir `PortfolioList` ileti veya benzer bir ileti oluşturabilir ve bunu birden çok hizmet yöntemi genelinde kullanabilirsiniz, ancak bu geçici yeniden ölçeklendirmelisiniz. Bir hizmette çeşitli yöntemlerin nasıl gelişeceğimizi bilmek olanaksızdır, bu sayede iletilerini özel ve düzgün bir şekilde ayrılmış olarak tutun.
 
 ```protobuf
 message GetAllRequest {
@@ -179,7 +179,7 @@ service Portfolios {
 
 Projenizi bu değişikliklerle kaydederseniz, gRPC derleme hedefi arka planda çalışır ve tüm prototip ileti türlerini ve hizmeti uygulamak için kalıtımla oluşturabileceğiniz bir temel sınıfı oluşturur.
 
-`Services/GreeterService.cs` sınıfını açın ve örnek kodu silin. Artık portföy hizmeti uygulamasını ekleyebilirsiniz. Oluşturulan temel sınıf `Protos` ad alanında olur ve iç içe geçmiş bir sınıf olarak oluşturulur. gRPC, `.proto` dosyasında hizmetle aynı ada sahip bir statik sınıf ve bu statik sınıfın içinde `Base` sonekine sahip bir temel sınıf oluşturur. bu nedenle, temel tür için tam tanımlayıcı `TraderSys.Portfolios.Protos.Portfolios.PortfoliosBase`olur.
+Sınıfını açın `Services/GreeterService.cs` ve örnek kodu silin. Artık portföy hizmeti uygulamasını ekleyebilirsiniz. Oluşturulan temel sınıf `Protos` ad alanında olur ve iç içe yerleştirilmiş bir sınıf olarak oluşturulur. gRPC, dosyadaki hizmetle aynı ada sahip bir statik sınıf `.proto` ve bu statik sınıfın içindeki sonekine sahip bir temel sınıf oluşturur `Base` . bu nedenle, temel tür için tam tanımlayıcı olur `TraderSys.Portfolios.Protos.Portfolios.PortfoliosBase` .
 
 ```csharp
 namespace TraderSys.Portfolios.Services
@@ -190,22 +190,22 @@ namespace TraderSys.Portfolios.Services
 }
 ```
 
-Temel sınıf, hizmeti uygulamak için geçersiz kılınabilen `Get` ve `GetAll` için `virtual` Yöntemler bildirir. Yöntemler, `abstract` yerine `virtual`. bu sayede, hizmet, normal C# kodda bir `NotImplementedException` oluşturabilmeniz gibi açık bir grpc `Unimplemented` durum kodu döndürebilir.
+Temel sınıf, `virtual` `Get` `GetAll` hizmetini uygulamak için geçersiz kılınabilen ve için yöntemleri bildirir. Yöntemler yerine, `virtual` `abstract` bunları uygulamadıysanız `Unimplemented` bir, normal C# kodunda bir oluşturma gibi açık bir GRPC durum kodu döndürebilir `NotImplementedException` .
 
-ASP.NET Core içindeki tüm gRPC birli hizmet yöntemleri için imza tutarlıdır. İki parametre vardır: ilki `.proto` dosyasında bildirildiği ileti türüdür ve ikincisi ASP.NET Core `HttpContext` benzer şekilde çalışır `ServerCallContext`. Aslında, temel `HttpContext`almak için kullanabileceğiniz `ServerCallContext` sınıfında `GetHttpContext` adlı bir genişletme yöntemi vardır, ancak bunu sık kullanmanıza gerek kalmaz. Bu bölümde daha sonra `ServerCallContext` ve ayrıca, kimlik doğrulamasını ele alan bölümde de bir göz atalım.
+ASP.NET Core içindeki tüm gRPC birli hizmet yöntemleri için imza tutarlıdır. İki parametre vardır: ilki dosyada bildirildiği ileti türüdür `.proto` ve ikincisi, `ServerCallContext` from ASP.NET Core benzer şekilde çalışır `HttpContext` . Aslında, temel aldığı için kullanabileceğiniz bir genişletme yöntemi vardır `GetHttpContext` `ServerCallContext` `HttpContext` , ancak bunu sık kullanmanıza gerek kalmaz. `ServerCallContext`Bu bölümde daha sonra ve ayrıca kimlik doğrulamasını ele alan bölümde bir göz atalım.
 
-Yöntemin dönüş türü bir `Task<T>`, burada `T` yanıt iletisi türüdür. Tüm gRPC hizmet yöntemleri zaman uyumsuzdur.
+Yöntemin dönüş türü bir `Task<T>` , burada `T` yanıt iletisi türüdür. Tüm gRPC hizmet yöntemleri zaman uyumsuzdur.
 
 ## <a name="migrate-the-portfoliodata-library-to-net-core"></a>PortfolioData kitaplığını .NET Core 'a geçirme
 
-Bu noktada, projenin, WCF çözümünde `TraderSys.PortfolioData` sınıf kitaplığında bulunan portföy deposuna ve modellerine ihtiyacı vardır. Bunu yapmanın en kolay yolu, sınıf kitaplığı (.NET Standard) şablonuyla Visual Studio **Yeni proje** iletişim kutusunu kullanarak ya da .NET Core CLI kullanarak komut satırından, `TraderSys.sln` dosyasını içeren dizinden bu komutları çalıştırarak yeni bir sınıf kitaplığı oluşturmaktır:
+Bu noktada projenin, `TraderSys.PortfolioData` WCF çözümünde sınıf kitaplığında bulunan portföy deposuna ve modellerine ihtiyacı vardır. Bunu yapmanın en kolay yolu, sınıf kitaplığı (.NET Standard) şablonuyla Visual Studio **Yeni proje** iletişim kutusunu kullanarak ya da .NET Core CLI kullanarak komut satırından, dosyayı içeren dizinden bu komutları çalıştırarak yeni bir sınıf kitaplığı oluşturmaktır `TraderSys.sln` :
 
 ```dotnetcli
 dotnet new classlib -o src/TraderSys.PortfolioData
 dotnet sln add src/TraderSys.PortfolioData
 ```
 
-Kitaplığı oluşturup çözüme ekledikten sonra, oluşturulan `Class1.cs` dosyasını silin ve dosyaları WCF çözümünün kitaplığından yeni sınıf kitaplığının klasörüne kopyalayın ve klasör yapısını saklayın:
+Kitaplığı oluşturup çözüme ekledikten sonra, oluşturulan `Class1.cs` dosyayı silin ve dosyaları WCF çözümünün kitaplığından yeni sınıf kitaplığının klasörüne kopyalayın ve klasör yapısını saklayın:
 
 ```
 Models
@@ -215,7 +215,7 @@ IPortfolioRepository.cs
 PortfolioRepository.cs
 ```
 
-SDK stili .NET projeleri otomatik olarak kendi dizinine veya altına `.cs` dosyaları dahil eder, bu nedenle bunları projeye açıkça eklemeniz gerekmez. Kalan tek adım, `DataContract` ve `DataMember` özniteliklerinin `Portfolio` ve `PortfolioItem` sınıflarının salt eski C# sınıflar olması için kaldırmasıdır:
+SDK stili .NET projeleri otomatik olarak `.cs` kendi dizinine veya altına tüm dosyaları dahil eder, bu nedenle bunları projeye açıkça eklemeniz gerekmez. Kalan tek adım, ve `DataContract` sınıflarının ve özniteliklerinin, `DataMember` `Portfolio` `PortfolioItem` düz eski C# sınıfları olacak şekilde kaldırılması:
 
 ```csharp
 public class Portfolio
@@ -236,7 +236,7 @@ public class PortfolioItem
 
 ## <a name="use-aspnet-core-dependency-injection"></a>ASP.NET Core bağımlılığı ekleme kullanma
 
-Artık gRPC uygulama projesine bu kitaplığa bir başvuru ekleyebilir ve gRPC hizmeti uygulamasına bağımlılık ekleme işlemini kullanarak `PortfolioRepository` sınıfını kullanabilirsiniz. WCF uygulamasında, bağımlılık ekleme Autofac IoC kapsayıcısı tarafından sağlandı. ASP.NET Core içinde bağımlılık ekleme ' ye sahiptir. Depoyu `Startup` sınıfındaki `ConfigureServices` yöntemine kaydedebilirsiniz:
+Artık gRPC uygulama projesine bu kitaplığa bir başvuru ekleyebilir ve `PortfolioRepository` GRPC hizmeti uygulamasında bağımlılık ekleme 'yi kullanarak sınıfı kullanabilirsiniz. WCF uygulamasında, bağımlılık ekleme Autofac IoC kapsayıcısı tarafından sağlandı. ASP.NET Core içinde bağımlılık ekleme ' ye sahiptir. Depoyu `ConfigureServices` sınıfındaki metoduna kaydedebilirsiniz `Startup` :
 
 ```csharp
 public class Startup
@@ -253,7 +253,7 @@ public class Startup
 }
 ```
 
-`IPortfolioRepository` uygulama artık aşağıdaki gibi `PortfolioService` sınıfında bir oluşturucu parametresi olarak belirtilebilir:
+`IPortfolioRepository`Uygulama artık sınıfında bir oluşturucu parametresi olarak belirtilebilir `PortfolioService` , şöyle olabilir:
 
 ```csharp
 public class PortfolioService : Protos.Portfolios.PortfoliosBase
@@ -269,9 +269,9 @@ public class PortfolioService : Protos.Portfolios.PortfoliosBase
 
 ## <a name="implement-the-grpc-service"></a>GRPC hizmetini uygulama
 
-İletilerinizi ve hizmetinizi `portfolios.proto` dosyasında bildirdiğine göre, hizmet yöntemlerini gRPC tarafından oluşturulan `Portfolios.PortfoliosBase` sınıfından devralan `PortfolioService` sınıfında uygulamanız gerekir. Yöntemler, temel sınıfta `virtual` olarak bildirilmiştir. Bunları geçersiz kılamazsanız, varsayılan olarak bir gRPC "uygulanmamış" durum kodu döndürür.
+Artık iletilerinizi ve hizmetinizi dosyada bildirdiğine göre `portfolios.proto` , hizmet yöntemlerini `PortfolioService` GRPC tarafından oluşturulan sınıftan devralan sınıfta uygulamanız gerekir `Portfolios.PortfoliosBase` . Yöntemler, temel sınıfta olduğu gibi bildirilmiştir `virtual` . Bunları geçersiz kılamazsanız, varsayılan olarak bir gRPC "uygulanmamış" durum kodu döndürür.
 
-`Get` yöntemi uygulayarak başlayın. Varsayılan geçersiz kılma Şu örneğe benzer şekilde görünür:
+Yöntemini uygulayarak başlatın `Get` . Varsayılan geçersiz kılma Şu örneğe benzer şekilde görünür:
 
 ```csharp
 public override Task<GetResponse> Get(GetRequest request, ServerCallContext context)
@@ -280,7 +280,7 @@ public override Task<GetResponse> Get(GetRequest request, ServerCallContext cont
 }
 ```
 
-İlk sorun `request.TraderId` bir dizedir ve hizmet bir `Guid`gerektirir. Dize için beklenen biçim `UUID`olsa da, kod çağıranın geçersiz bir değer gönderdiği ve uygun şekilde yanıt verdiği olasılığa karşı uğraşmak zorunda olur. Hizmet, `RpcException` oluşturarak ve sorunu ifade etmek için standart `InvalidArgument` durum kodunu kullanarak hatalarla yanıt verebilir:
+İlk sorun `request.TraderId` bir dizedir ve hizmet için gerekir `Guid` . Dize için beklenen biçim olsa da `UUID` , kod çağıranın geçersiz bir değer gönderdiği ve uygun şekilde yanıt verdiği olasılığa karşı uğraşmak zorunda olur. Hizmet, `RpcException` sorunu ifade etmek için bir oluşturarak ve standart durum kodunu kullanarak hatalarla yanıt verebilir `InvalidArgument` :
 
 ```csharp
 public override Task<GetResponse> Get(GetRequest request, ServerCallContext context)
@@ -294,7 +294,7 @@ public override Task<GetResponse> Get(GetRequest request, ServerCallContext cont
 }
 ```
 
-`traderId`için uygun bir `Guid` değeri olduktan sonra, portföyü almak ve istemciye döndürmek için depoyu kullanabilirsiniz:
+İçin uygun bir değer olduktan sonra `Guid` `traderId` , portföyü almak ve istemciye döndürmek için depoyu kullanabilirsiniz:
 
 ```csharp
     var response = new GetResponse
@@ -305,7 +305,7 @@ public override Task<GetResponse> Get(GetRequest request, ServerCallContext cont
 
 ### <a name="map-internal-models-to-grpc-messages"></a>İç modelleri gRPC iletilerine eşleme
 
-Depo kendi POCO model `Portfolio`döndürürken, ancak gRPC 'nin kendi prototipli ileti `Portfolio`ihtiyacı olduğundan, önceki kod aslında çalışmaz. Entity Framework türlerini veri aktarım türleriyle eşleştirdiğinizde, en iyi çözüm iki arasında dönüştürme sağlamaktır. Bu dönüştürme için kodu yerleştirmek için iyi bir yer, `partial` sınıf olarak belirtilen Prototipsiz oluşturulan sınıfta yer alabilir ve bu nedenle Genişletilebilir:
+Önceki kod aslında çalışmıyor çünkü depo kendi POCO modelini döndürüyor `Portfolio` , ancak gRPC 'nin kendi prototipli mesajına ihtiyacı vardır `Portfolio` . Entity Framework türlerini veri aktarım türleriyle eşleştirdiğinizde, en iyi çözüm iki arasında dönüştürme sağlamaktır. Bu dönüştürmeye yönelik kodu yerleştirmek için iyi bir yer vardır. Bu, genişletilebilecek bir sınıf olarak bildirildiği Protoarabelleğe oluşturulmuş sınıfta `partial` :
 
 ```csharp
 namespace TraderSys.Portfolios.Protos
@@ -347,9 +347,9 @@ namespace TraderSys.Portfolios.Protos
 ```
 
 > [!NOTE]
-> `string`/`Guid` veya `decimal`/`double` ve liste eşlemesi gibi alt düzey tür dönüştürmelerini yapılandırdığınız sürece, iç model sınıflarından bu dönüştürmeyi prototip türlerine işlemek için [Automaber](https://automapper.org/) gibi bir kitaplık kullanabilirsiniz.
+> [](https://automapper.org/) `string` / `Guid` Ya da `decimal` / `double` ve liste eşlemesi gibi alt düzey tür dönüştürmeleri yapılandırdığınız sürece, iç model sınıflarından bu dönüştürmeyi prototip türlerine işlemek için automaber gibi bir kitaplık kullanabilirsiniz.
 
-Artık dönüştürme koduna sahip olduğunuza göre `Get` yöntemi uygulamasını tamamlayabilirsiniz:
+Artık dönüştürme koduna sahip olduğunuza göre, `Get` Yöntem uygulamasını tamamlayabilirsiniz:
 
 ```csharp
 public override async Task<GetResponse> Get(GetRequest request, ServerCallContext context)
@@ -369,7 +369,7 @@ public override async Task<GetResponse> Get(GetRequest request, ServerCallContex
 
 ```
 
-`GetAll` yönteminin uygulanması benzerdir. Prototipteki iletilerde `repeated` alanlarının `RepeatedField<T>`türünde `readonly` özellikler olarak oluşturulduğunu unutmayın, bu nedenle, bu örnekte olduğu gibi `AddRange` yöntemini kullanarak bunlara öğe eklemeniz gerekir:
+`GetAll`Yöntemin uygulanması benzerdir. `repeated`Prototipsiz iletilerde bulunan alanların `readonly` türünün özellikleri olarak oluşturulduğunu `RepeatedField<T>` , `AddRange` Bu nedenle bu örnekte olduğu gibi yöntemini kullanarak öğeleri eklemeniz gerekir:
 
 ```csharp
 public override async Task<GetAllResponse> GetAll(GetAllRequest request, ServerCallContext context)
@@ -388,27 +388,27 @@ public override async Task<GetAllResponse> GetAll(GetAllRequest request, ServerC
 }
 ```
 
-WCF istek-yanıt hizmetini başarıyla gRPC 'ye geçirdiyseniz, `.proto` dosyasından bir istemci oluşturmaya bakalım.
+WCF istek-yanıt verme hizmetini başarıyla gRPC 'ye geçirdiyseniz, bu dosya için bir istemci oluşturmaya göz atalım `.proto` .
 
 ## <a name="generate-client-code"></a>İstemci kodu oluştur
 
-İstemcisini içermesi için aynı çözümde bir .NET Standard sınıf kitaplığı oluşturun. Bu öncelikle istemci kodu oluşturma örneğidir, ancak bu tür bir kitaplığı NuGet kullanarak paketleyebilir ve diğer .NET ekibinin kullanması için bir iç depoya dağıtabilirsiniz. Devam edin ve çözüme `TraderSys.Portfolios.Client` adlı yeni bir .NET Standard sınıf kitaplığı ekleyin ve `Class1.cs` dosyasını silin.
+İstemcisini içermesi için aynı çözümde bir .NET Standard sınıf kitaplığı oluşturun. Bu öncelikle istemci kodu oluşturma örneğidir, ancak bu tür bir kitaplığı NuGet kullanarak paketleyebilir ve diğer .NET ekibinin kullanması için bir iç depoya dağıtabilirsiniz. Devam edin ve çözüme adlı yeni bir .NET Standard sınıfı kitaplığı ekleyin `TraderSys.Portfolios.Client` ve `Class1.cs` dosyayı silin.
 
 > [!CAUTION]
 > [GRPC .net. Client](https://www.nuget.org/packages/Grpc.Net.Client) NuGet paketi .net Core 3,0 (veya başka bir .NET Standard 2,1 uyumlu çalışma zamanı) gerektirir. .NET Framework ve .NET Core 'un önceki sürümleri [GRPC. Core](https://www.nuget.org/packages/Grpc.Core) NuGet paketi tarafından desteklenir.
 
-Visual Studio 2019 ' de, Visual Studio 'nun önceki sürümlerindeki WCF projelerine hizmet başvuruları ekleme yöntemine benzer bir şekilde gRPC hizmetlerine başvurular ekleyebilirsiniz. Hizmet başvuruları ve bağlı hizmetler artık aynı kullanıcı arabirimi altında yönetilir. Çözüm Gezgini ' de `TraderSys.Portfolios.Client` projesindeki **Bağımlılıklar** düğümüne sağ tıklayıp **bağlı hizmet ekle**' yi seçerek kullanıcı arabirimine erişebilirsiniz. Görüntülenen araç penceresinde, **hizmet başvuruları** bölümünü seçin ve ardından **Yeni GRPC hizmet başvurusu Ekle**' yi seçin:
+Visual Studio 2019 ' de, Visual Studio 'nun önceki sürümlerindeki WCF projelerine hizmet başvuruları ekleme yöntemine benzer bir şekilde gRPC hizmetlerine başvurular ekleyebilirsiniz. Hizmet başvuruları ve bağlı hizmetler artık aynı kullanıcı arabirimi altında yönetilir. Çözüm Gezgini ' de projedeki **Bağımlılıklar** düğümüne sağ tıklayıp `TraderSys.Portfolios.Client` **bağlı hizmet ekle**' yi seçerek kullanıcı arabirimine erişebilirsiniz. Görüntülenen araç penceresinde, **hizmet başvuruları** bölümünü seçin ve ardından **Yeni GRPC hizmet başvurusu Ekle**' yi seçin:
 
 ![Visual Studio 2019 'de bağlı hizmetler kullanıcı arabirimi](media/migrate-request-reply/add-connected-service.png)
 
-`TraderSys.Portfolios` projesindeki `portfolios.proto` dosyasına gidin, **istemciye** , **oluşturulacak sınıf türünü seçin**altında bırakın ve **Tamam**' ı seçin:
+`portfolios.proto`Projedeki dosyaya gidin `TraderSys.Portfolios` , çalıştırılacak **sınıf türünü seçin** altında **istemciden** bırakın ve **Tamam**' ı seçin:
 
 ![Visual Studio 2019 ' de yeni gRPC hizmet başvurusu Ekle iletişim kutusu](media/migrate-request-reply/add-new-grpc-service-reference.png)
 
 > [!TIP]
-> Bu iletişim kutusunun Ayrıca bir URL alanı sağladığını unutmayın. Kuruluşunuz, `.proto` dosyaları için Web erişimli bir dizin koruyorsa, bu URL adresini ayarlayarak istemcileri oluşturabilirsiniz.
+> Bu iletişim kutusunun Ayrıca bir URL alanı sağladığını unutmayın. Kuruluşunuz, Web 'de erişilebilir bir dosya dizini tutuyorsa `.proto` , bu URL adresini ayarlayarak istemcileri oluşturabilirsiniz.
 
-Visual Studio **bağlı hizmet ekle** özelliğini kullandığınızda `portfolios.proto` dosyası, kopyalamak yerine *bağlantılı bir dosya* olarak sınıf kitaplığı projesine eklenir, bu nedenle hizmet projesindeki dosyada yapılan değişiklikler istemci projesinde otomatik olarak uygulanır. `csproj` dosyasındaki `<Protobuf>` öğesi şöyle görünür:
+Visual Studio **bağlı hizmet ekle** özelliğini kullandığınızda, `portfolios.proto` Dosya, sınıf kitaplığı projesine kopyalamak yerine *bağlantılı bir dosya* olarak eklenir, bu nedenle hizmet projesindeki dosyada yapılan değişiklikler istemci projesinde otomatik olarak uygulanır. `<Protobuf>`Dosyadaki öğesi şöyle `csproj` görünür:
 
 ```xml
 <Protobuf Include="..\TraderSys.Portfolios\Protos\portfolios.proto" GrpcServices="Client">
@@ -417,7 +417,7 @@ Visual Studio **bağlı hizmet ekle** özelliğini kullandığınızda `portfoli
 ```
 
 > [!TIP]
-> Visual Studio 'Yu kullanmıyorsanız veya komut satırından çalışmayı tercih ediyorsanız, bir .NET gRPC projesindeki prototipsel başvuruları yönetmek için `dotnet-grpc` genel aracını kullanabilirsiniz. Daha fazla bilgi için [`dotnet-grpc` belgelerine](/aspnet/core/grpc/dotnet-grpc)bakın.
+> Visual Studio kullanmıyorsanız veya komut satırından çalışmayı tercih ediyorsanız, `dotnet-grpc` bir .net gRPC projesindeki prototipsel başvuruları yönetmek için genel aracı kullanabilirsiniz. Daha fazla bilgi için [ `dotnet-grpc` belgelerine](/aspnet/core/grpc/dotnet-grpc)bakın.
 
 ### <a name="use-the-portfolios-service-from-a-client-application"></a>Bir istemci uygulamasından portföyde hizmetini kullanma
 
@@ -452,5 +452,5 @@ public class Program
 Artık temel bir WCF uygulamasını ASP.NET Core gRPC hizmetine geçirdiniz ve hizmeti bir .NET uygulamasından tüketmek için bir istemci oluşturdunuz. Sonraki bölümde, ilgili çift yönlü hizmetler ele alınacaktır.
 
 >[!div class="step-by-step"]
->[Önceki](create-project.md)
->[İleri](migrate-duplex-services.md)
+>[Önceki](create-project.md) 
+> [Sonraki](migrate-duplex-services.md)

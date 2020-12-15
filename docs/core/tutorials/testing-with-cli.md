@@ -1,18 +1,18 @@
 ---
-title: .NET Core CLI projeleri düzenleme ve test etme
-description: Bu öğreticide, .NET Core projelerini komut satırından düzenleme ve test etme işlemleri açıklanmaktadır.
+title: .NET CLı ile projeleri düzenleme ve test etme
+description: Bu öğreticide, komut satırından .NET projelerinin nasıl düzenlenmesi ve test yapılacağı açıklanmaktadır.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 58c78c0f11ab1b275e4e4d05bf1da32562333c91
-ms.sourcegitcommit: 0a798a7e9680e2d0a5a81a3eaa203870ea782883
+ms.openlocfilehash: 93e8a6b8afd9f9405bf21488998a61c2e761bf1e
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84325951"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512261"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>.NET Core CLI projeleri düzenleme ve test etme
+# <a name="organizing-and-testing-projects-with-the-net-cli"></a>.NET CLı ile projeleri düzenleme ve test etme
 
-Bu öğretici [öğretici: Visual Studio Code kullanarak .NET Core ile bir konsol uygulaması oluşturma](with-visual-studio-code.md), gelişmiş ve iyi düzenlenmiş uygulamalar geliştirmeye yönelik basit bir konsol uygulaması oluşturulmasını aşarak. Kodunuzu düzenlemek için klasörleri nasıl kullanacağınızı gösterdikten sonra, bu öğreticide [xUnit](https://xunit.github.io/) test çerçevesiyle bir konsol uygulamasını nasıl genişletebileceğinizi gösterir.
+Bu öğretici [öğretici: Visual Studio Code kullanarak .NET ile bir konsol uygulaması oluşturma](with-visual-studio-code.md), gelişmiş ve iyi düzenlenmiş uygulamalar geliştirmeye yönelik basit bir konsol uygulaması oluşturmayı aşarak. Kodunuzu düzenlemek için klasörleri nasıl kullanacağınızı gösterdikten sonra, bu öğreticide [xUnit](https://xunit.github.io/) test çerçevesiyle bir konsol uygulamasını nasıl genişletebileceğinizi gösterir.
 
 ## <a name="using-folders-to-organize-code"></a>Kodu düzenlemek için klasörleri kullanma
 
@@ -42,6 +42,10 @@ Projeyi düzenlemek için yeni bir klasör oluşturun ve bunu tür dosyalarını
 Dosyaları klasörlere mantıksal olarak gruplandıran projeler arasında gezinmek ve bakım yapmak kolaydır. Sonraki bölümde, klasörler ve birim testi ile daha karmaşık bir örnek oluşturursunuz.
 
 ## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a>NewTypes pets örneğini kullanarak düzenleme ve test etme
+
+### <a name="prerequisites"></a>Önkoşullar
+
+* [.Net 5,0 SDK](https://dotnet.microsoft.com/download) veya sonraki bir sürümü.
 
 ### <a name="building-the-sample"></a>Örnek oluşturma
 
@@ -96,7 +100,7 @@ Woof!
 Meow!
 ```
 
-İsteğe bağlı alıştırma: `Bird` Bu projeyi genişleterek, gibi yeni bir evcil hayvan türü ekleyebilirsiniz. Kuşın `TalkToOwner` yönteminin sahibine vermesini sağlayın `Tweet!` . Uygulamayı tekrar çalıştırın. Çıktıda şunlar yer alır`Tweet!`
+İsteğe bağlı alıştırma: `Bird` Bu projeyi genişleterek, gibi yeni bir evcil hayvan türü ekleyebilirsiniz. Kuşın `TalkToOwner` yönteminin sahibine vermesini sağlayın `Tweet!` . Uygulamayı tekrar çalıştırın. Çıktıda şunlar yer alır `Tweet!`
 
 ### <a name="testing-the-sample"></a>Örneği test etme
 
@@ -158,10 +162,10 @@ public class PetTests
 }
 ```
 
-İsteğe bağlı alıştırma: `Bird` daha önce sahibine veren bir tür eklediyseniz, `Tweet!` *PetTests.cs* `BirdTalkToOwnerReturnsTweet` `TalkToOwner` yöntemin tür için doğru çalışıp çalışmadığını denetlemek için PetTests.cs dosyasına bir test yöntemi ekleyin `Bird` .
+İsteğe bağlı alıştırma: `Bird` daha önce sahibine veren bir tür eklediyseniz, `Tweet!`  `BirdTalkToOwnerReturnsTweet` `TalkToOwner` yöntemin tür için doğru çalışıp çalışmadığını denetlemek için PetTests.cs dosyasına bir test yöntemi ekleyin `Bird` .
 
 > [!NOTE]
-> Ve değerlerinin eşit olmasını bekleseniz de, `expected` `actual` Check ile bir ilk onaylama, `Assert.NotEqual` Bu değerlerin *eşit*olmadığını belirtir. Testin mantığını denetlemek için her zaman ilk olarak bir test oluşturun. Testin başarısız olduğunu doğruladıktan sonra, testi geçirmeye izin verecek şekilde ayarlayın.
+> Ve değerlerinin eşit olmasını bekleseniz de, `expected` `actual` Check ile bir ilk onaylama, `Assert.NotEqual` Bu değerlerin *eşit* olmadığını belirtir. Testin mantığını denetlemek için her zaman ilk olarak bir test oluşturun. Testin başarısız olduğunu doğruladıktan sonra, testi geçirmeye izin verecek şekilde ayarlayın.
 
 Aşağıda, tüm proje yapısı gösterilmektedir:
 
@@ -181,38 +185,27 @@ Aşağıda, tüm proje yapısı gösterilmektedir:
       |__NewTypesTests.csproj
 ```
 
-*Test/NewTypesTests* dizininde başlatın. Test projesini komutuyla geri yükleyin [`dotnet restore`](../tools/dotnet-restore.md) . Komutu ile testleri çalıştırın [`dotnet test`](../tools/dotnet-test.md) . Bu komut, proje dosyasında belirtilen Test Çalıştırıcısı 'nı başlatır.
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+*Test/NewTypesTests* dizininde başlatın. Komutu ile testleri çalıştırın [`dotnet test`](../tools/dotnet-test.md) . Bu komut, proje dosyasında belirtilen Test Çalıştırıcısı 'nı başlatır.
 
 Beklenen şekilde test başarısız olur ve konsolu aşağıdaki çıktıyı görüntüler:
 
 ```output
-Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
-Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Test run for C:\Source\dotnet\docs\samples\snippets\core\tutorials\testing-with-cli\csharp\test\NewTypesTests\bin\Debug\net5.0\NewTypesTests.dll (.NETCoreApp,Version=v5.0)
+Microsoft (R) Test Execution Command Line Tool Version 16.8.1
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
-[xUnit.net 00:00:00.77]     PetTests.DogTalkToOwnerReturnsWoof [FAIL]
-[xUnit.net 00:00:00.78]     PetTests.CatTalkToOwnerReturnsMeow [FAIL]
-Failed   PetTests.DogTalkToOwnerReturnsWoof
-Error Message:
- Assert.NotEqual() Failure
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.50]     PetTests.DogTalkToOwnerReturnsWoof [FAIL]
+  Failed PetTests.DogTalkToOwnerReturnsWoof [6 ms]
+  Error Message:
+   Assert.NotEqual() Failure
 Expected: Not "Woof!"
 Actual:   "Woof!"
-Stack Trace:
-   at PetTests.DogTalkToOwnerReturnsWoof() in c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 13
-Failed   PetTests.CatTalkToOwnerReturnsMeow
-Error Message:
- Assert.NotEqual() Failure
-Expected: Not "Meow!"
-Actual:   "Meow!"
-Stack Trace:
-   at PetTests.CatTalkToOwnerReturnsMeow() in c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 22
+  Stack Trace:
+     at PetTests.DogTalkToOwnerReturnsWoof() in C:\Source\dotnet\docs\samples\snippets\core\tutorials\testing-with-cli\csharp\test\NewTypesTests\PetTests.cs:line 13
 
-Total tests: 2. Passed: 0. Failed: 2. Skipped: 0.
-Test Run Failed.
-Test execution time: 1.7000 Seconds
+Failed!  - Failed:     1, Passed:     1, Skipped:     0, Total:     2, Duration: 8 ms - NewTypesTests.dll (net5.0)
 ```
 
 Testlerinizin onaylamalarını şu `Assert.NotEqual` şekilde değiştirin `Assert.Equal` :
@@ -222,15 +215,14 @@ Testlerinizin onaylamalarını şu `Assert.NotEqual` şekilde değiştirin `Asse
 Komutu ile testleri yeniden çalıştırın `dotnet test` ve aşağıdaki çıktıyı alın:
 
 ```output
-Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
-Microsoft (R) Test Execution Command Line Tool Version 15.8.0
+Test run for C:\Source\dotnet\docs\samples\snippets\core\tutorials\testing-with-cli\csharp\test\NewTypesTests\bin\Debug\net5.0\NewTypesTests.dll (.NETCoreApp,Version=v5.0)
+Microsoft (R) Test Execution Command Line Tool Version 16.8.1
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
 
-Total tests: 2. Passed: 2. Failed: 0. Skipped: 0.
-Test Run Successful.
-Test execution time: 1.6029 Seconds
+Passed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration: 2 ms - NewTypesTests.dll (net5.0)
 ```
 
 Test geçişleri. Evcil hayvan türleri ' yöntemleri, sahibiyle konuşurken doğru değerleri döndürür.

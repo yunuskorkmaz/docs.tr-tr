@@ -2,13 +2,13 @@
 title: 'Öğretici: .NET yerel araçlarını yükleyip kullanın'
 description: .NET aracını yerel bir araç olarak yüklemeyi ve kullanmayı öğrenin.
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/11/2020
+ms.openlocfilehash: f32a5c4091ff63c7c50cf339dddd89b78e543c4c
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633893"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512469"
 ---
 # <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>Öğretici: .NET CLı kullanarak .NET yerel aracını yükleyip kullanma
 
@@ -172,7 +172,7 @@ Genellikle deponun kök dizinine yerel bir araç yüklersiniz. Bildirim dosyası
 
 ## <a name="update-a-local-tool"></a>Yerel bir aracı güncelleştirme
 
-Yerel aracın yüklü sürümü `dotnetsay` 2.1.3.  En son sürüm 2.1.4 ' dir. Aracı en son sürüme güncelleştirmek için [DotNet araç Güncelleştir](dotnet-tool-update.md) komutunu kullanın.
+Yerel aracın yüklü sürümü `dotnetsay` 2.1.3.  Aracı en son sürüme güncelleştirmek için [DotNet araç Güncelleştir](dotnet-tool-update.md) komutunu kullanın.
 
 ```dotnetcli
 dotnet tool update dotnetsay
@@ -181,7 +181,7 @@ dotnet tool update dotnetsay
 Çıkış, yeni sürüm numarasını gösterir:
 
 ```console
-Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4'
+Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.7'
 (manifest file /home/name/repository/.config/dotnet-tools.json).
 ```
 
@@ -205,4 +205,4 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Daha fazla bilgi için bkz. [.NET Core araçları](global-tools.md)
+Daha fazla bilgi için bkz. [.NET araçları](global-tools.md)

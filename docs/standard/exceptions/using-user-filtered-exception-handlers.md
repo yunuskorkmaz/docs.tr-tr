@@ -1,24 +1,38 @@
 ---
-title: Kullanıcı Tarafından Filtrelenmiş Özel Durum İşleyicilerini Kullanma
-ms.date: 03/30/2017
+title: Kullanıcı tarafından filtrelenmiş özel durum işleyicilerini kullanma
+description: C# ve Visual Basic Kullanıcı filtrelenmiş özel durum işleyicilerini nasıl kullanacağınızı öğrenin.
+ms.date: 12/14/2020
 helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
-ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-ms.openlocfilehash: 4b85c2be0ed61af38eac1b65fb70f0ef1ea4405e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 2dba43ad2fc685a6555ab43fc973814fd7f359a3
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95669048"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512677"
 ---
-# <a name="using-user-filtered-exception-handlers"></a>Kullanıcı Tarafından Filtrelenmiş Özel Durum İşleyicilerini Kullanma
+# <a name="use-user-filtered-exception-handlers"></a>Kullanıcı tarafından filtrelenmiş özel durum işleyicilerini kullanma
 
-Şu anda Visual Basic Kullanıcı tarafından filtrelenen özel durumları destekler. Kullanıcı filtrelenmiş özel durum işleyicileri özel durum için tanımladığınız gereksinimlere göre özel durumları yakalar ve işler. Bu işleyiciler **catch** **ifadesini as anahtar** sözcüğüyle birlikte kullanır.  
+Kullanıcı filtrelenmiş özel durum işleyicileri özel durum için tanımladığınız gereksinimlere göre özel durumları yakalar ve işler. Bu işleyiciler, `catch` ifadesini `when` anahtar sözcüğüyle ( `Catch` ve `When` Visual Basic) kullanır.  
   
- Bu teknik, belirli bir özel durum nesnesi birden çok hataya karşılık geldiğinde yararlıdır. Bu durumda, nesnesi genellikle hatayla ilişkili özel hata kodunu içeren bir özelliğe sahiptir. Bu **catch** yan tümcesinde işlemek istediğiniz belirli bir hatayı seçmek için ifadesindeki hata kodu özelliğini kullanabilirsiniz.  
+ Bu teknik, belirli bir özel durum nesnesi birden çok hataya karşılık geldiğinde yararlıdır. Bu durumda, nesnesi genellikle hatayla ilişkili özel hata kodunu içeren bir özelliğe sahiptir. Deyimdeki hata kodu özelliğini yalnızca bu yan tümce içinde işlemek istediğiniz belirli hatayı seçmek için kullanabilirsiniz `catch` .  
   
- Aşağıdaki Visual Basic örnek, **catch/** while ifadesini gösterir.  
+ Aşağıdaki örnek, ifadesini gösterir `catch` / `when` .
+
+```csharp
+try
+{
+    //Try statements.  
+}
+catch (Exception ex) when (ex.Message.Contains("404"))
+{
+    //Catch statements.
+}
+```  
   
 ```vb
 Try  
@@ -30,11 +44,22 @@ End Try
   
  Kullanıcı filtrelenmiş yan tümcesinin ifadesi herhangi bir şekilde kısıtlanmaz. Kullanıcı tarafından filtrelenen ifadenin yürütülmesi sırasında bir özel durum oluşursa, bu özel durum atılır ve filtre ifadesi yanlış olarak değerlendirilir. Bu durumda, ortak dil çalışma zamanı, geçerli özel durum için bir işleyici aramaya devam eder.  
   
-## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Belirli özel durumu ve User-Filtered yan tümcelerini birleştirme  
+## <a name="combine-the-specific-exception-and-the-user-filtered-clauses"></a>Belirli özel durumu ve kullanıcı filtrelenmiş yan tümceleri birleştirme  
 
- Catch ifadesinde hem belirli özel durum hem de Kullanıcı tarafından filtrelenmiş yan tümceler bulunabilir. Çalışma zamanı, önce belirli özel durumu sınar. Belirli özel durum başarılı olursa, çalışma zamanı Kullanıcı filtresini yürütür. Genel filtre, sınıf filtresinde belirtilen değişkene bir başvuru içerebilir. İki filtre yan tümcelerinin sırasının geri çevrilmeyeceğini unutmayın.  
+ Bir `catch` ifade, hem belirli özel durumu hem de Kullanıcı tarafından filtrelenmiş yan tümceleri içerebilir. Çalışma zamanı, önce belirli özel durumu sınar. Belirli özel durum başarılı olursa, çalışma zamanı Kullanıcı filtresini yürütür. Genel filtre, sınıf filtresinde belirtilen değişkene bir başvuru içerebilir. İki filtre yan tümcelerinin sırasının geri çevrilmeyeceğini unutmayın.  
   
- Aşağıdaki Visual Basic örnek, catch deyimindeki özel durumun `ClassLoadException` yanı sıra **Catch** as anahtar sözcüğünü kullanan kullanıcı tarafından filtrelenmiş yan tümce gösterir. **When**  
+ Aşağıdaki örnek, **catch** deyimindeki belirli bir özel **durumu ve while anahtar sözcüğünü** kullanan kullanıcı filtrelenmiş yan tümceyi gösterir.  
+  
+```csharp
+try
+{
+    //Try statements.  
+}
+catch (System.Net.Http.HttpRequestException ex) when (ex.Message.Contains("404"))
+{
+    //Catch statements.
+}
+```  
   
 ```vb
 Try  
@@ -46,4 +71,4 @@ End Try
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel Durumlar](index.md)
+- [Özel durumlar](index.md)

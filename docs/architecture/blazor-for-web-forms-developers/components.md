@@ -6,18 +6,18 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: 4fdf062fb719e62b53e47f79db1e93d0bf079350
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: fd560c84c095dffc3718a7709af904d9ba722a18
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267691"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512775"
 ---
 # <a name="build-reusable-ui-components-with-no-locblazor"></a>İle yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturun Blazor
 
 ASP.NET Web Forms hakkındaki harika şeyler, yeniden kullanılabilir kullanıcı arabirimi (UI) kodunun yeniden kullanılabilir kullanıcı arabirimi denetimlerine kapsüllemesini mümkün kılar. Özel Kullanıcı denetimleri, *. ascx* dosyalarını kullanarak biçimlendirme içinde tanımlanabilir. Ayrıca, tam tasarımcı desteğiyle kodda ayrıntılı sunucu denetimleri de oluşturabilirsiniz.
 
-Blazor Ayrıca, *Bileşenler*aracılığıyla UI kapsüllemeyi destekler. Bileşen:
+Blazor Ayrıca, *Bileşenler* aracılığıyla UI kapsüllemeyi destekler. Bileşen:
 
 - , Kendinden bağımsız bir kullanıcı arabirimi öbektir.
 - Kendi durumunu ve işleme mantığını korur.
@@ -79,13 +79,13 @@ Aşağıdaki tabloda, varsa, içinde kullanılan çeşitli Razor yönergeleri Bl
 
 |Deki    |Açıklama|Örnek|Web Forms eşdeğeri|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Bileşene bir sınıf düzeyi özniteliği ekler|`@attribute [Authorize]`|Yok|
+|`@attribute` |Bileşene bir sınıf düzeyi özniteliği ekler|`@attribute [Authorize]`|Hiçbiri|
 |`@code`      |Bileşene sınıf üyeleri ekler|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|Belirtilen arabirimi uygular|`@implements IDisposable`|Arka plan kodu kullan|
 |`@inherits`  |Belirtilen taban sınıftan devralır|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Bileşene bir hizmet çıkarır|`@inject IJSRuntime JS`|Yok|
+|`@inject`    |Bileşene bir hizmet çıkarır|`@inject IJSRuntime JS`|Hiçbiri|
 |`@layout`    |Bileşen için bir düzen bileşeni belirtir|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Bileşen için ad alanını ayarlar|`@namespace MyNamespace`|Yok|
+|`@namespace` |Bileşen için ad alanını ayarlar|`@namespace MyNamespace`|Hiçbiri|
 |`@page`      |Bileşen için yolu belirtir|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Bileşen için genel bir tür parametresi belirtir|`@typeparam TItem`|Arka plan kodu kullan|
 |`@using`     |Kapsama getirmek için bir ad alanı belirtir|`@using MyComponentNamespace`|*web.config* ad alanı Ekle|
@@ -110,7 +110,7 @@ Aşağıdaki tabloda, ' de kullanılan Razor yönergelerinin çeşitli özniteli
 
 *. Aspx* ve *. ascx* dosyalarında kullanılan sözdizimlerinin birçoğu Razor 'de paralel sözdizimleri vardır. ASP.NET Web Forms ve Razor için sözdizimlerinin basit bir karşılaştırması aşağıda verilmiştir.
 
-|Özellik                      |Web Forms           |Sözdizimi               |Razor         |Sözdizimi |
+|Özellik                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Yönergeler                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Kod blokları                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -146,7 +146,7 @@ Normal HTML 'den başlayarak, bileşenler kendi işleme mantığının bir parç
 ASP.NET Web Forms aksine, içindeki bileşenler Blazor :
 
 - Öğe öneki kullanmayın (örneğin, `asp:` ).
-- Sayfada veya *web.config*kayıt gerekmez.
+- Sayfada veya *web.config* kayıt gerekmez.
 
 .NET türlerine benzer Razor bileşenleri düşünün çünkü bu, tam olarak bir şeydir. Bileşeni içeren derlemeye başvuruluyorsa, bileşen kullanılabilir. Bileşenin ad alanını kapsama getirmek için `@using` yönergesini uygulayın:
 
@@ -446,7 +446,7 @@ protected override async Task OnInitializedAsync() { await ... }
 
 ### <a name="onparametersset"></a>OnParametersSet
 
-`OnParametersSet`Ve `OnParametersSetAsync` yöntemleri bir bileşen üst öğeden parametreleri aldığında ve değer özelliklerine atandığında çağrılır. Bu yöntemler bileşen başlatıldıktan sonra ve *bileşen her işlendiğinde*yürütülür.
+`OnParametersSet`Ve `OnParametersSetAsync` yöntemleri bir bileşen üst öğeden parametreleri aldığında ve değer özelliklerine atandığında çağrılır. Bu yöntemler bileşen başlatıldıktan sonra ve *bileşen her işlendiğinde* yürütülür.
 
 ```csharp
 protected override void OnParametersSet() { ... }
@@ -525,7 +525,7 @@ Blazor bileşenler, bir öğeye başvuruları yakalayabilir. ASP.NET Web Forms i
 
 ## <a name="templated-components"></a>Şablonlu bileşenler
 
-ASP.NET Web Forms içinde *şablonlu denetimler*oluşturabilirsiniz. Şablonlu denetimler, geliştiricinin bir kapsayıcı denetimini işlemek için kullanılan HTML 'nin bir bölümünü belirtmesini sağlar. Şablonlu sunucu denetimleri oluşturma mekanizması karmaşıktır, ancak kullanıcı tarafından özelleştirilebilir bir şekilde veri işlemeye yönelik güçlü senaryolar sağlar. Şablonlu denetimlerin örnekleri `Repeater` ve içerir `DataList` .
+ASP.NET Web Forms içinde *şablonlu denetimler* oluşturabilirsiniz. Şablonlu denetimler, geliştiricinin bir kapsayıcı denetimini işlemek için kullanılan HTML 'nin bir bölümünü belirtmesini sağlar. Şablonlu sunucu denetimleri oluşturma mekanizması karmaşıktır, ancak kullanıcı tarafından özelleştirilebilir bir şekilde veri işlemeye yönelik güçlü senaryolar sağlar. Şablonlu denetimlerin örnekleri `Repeater` ve içerir `DataList` .
 
 Blazor bileşenler Ayrıca, veya türündeki bileşen parametreleri tanımlayarak şablonlanır `RenderFragment` `RenderFragment<T>` . Bir `RenderFragment` , daha sonra bileşen tarafından işlenebilen bir Razor biçimlendirme öbeğini temsil eder. , `RenderFragment<T>` İşleme parçası işlendiğinde belirtilebilen bir parametre alan Razor biçimlendirme öbektir.
 
@@ -550,7 +550,9 @@ Bir üst bileşen daha sonra normal Razor söz dizimi kullanarak alt içerik sa�
 
 ```razor
 <ChildContentComponent>
-    <p>The time is @DateTime.Now</p>
+    <ChildContent>
+        <p>The time is @DateTime.Now</p>
+    </ChildContent>
 </ChildContentComponent>
 ```
 

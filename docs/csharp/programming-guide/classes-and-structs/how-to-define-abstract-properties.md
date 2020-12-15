@@ -6,14 +6,14 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 46941c811b42891b38ab6f0c4a9b428d368cf4a4
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: e114e9349db9d6bcb18e15eb62532f48aa063339
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099432"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513035"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Özet özellikleri tanımlama (C# Programlama Kılavuzu)
 

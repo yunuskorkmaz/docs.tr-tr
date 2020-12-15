@@ -3,13 +3,13 @@ title: 'Öğretici: desenler eşleştirme ile derleme algoritmaları'
 description: Bu gelişmiş öğreticide, ayrı olarak oluşturulan verileri ve algoritmaları kullanarak işlevsellik oluşturmak için model eşleştirme tekniklerini nasıl kullanabileceğiniz gösterilmektedir.
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
-ms.custom: contperfq1
-ms.openlocfilehash: ee8b3a90a06fabd4e9d73d7682efecda6cbfd23e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.custom: contperf-fy21q1
+ms.openlocfilehash: 730098bf599dfc855676c86ab7a6e7f3ef7658f1
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955635"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513230"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Öğretici: tür odaklı ve veri odaklı algoritmalar oluşturmak için model eşleştirmeyi kullanın.
 
@@ -23,7 +23,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > - Türleri ve özellik değerlerini temel alan davranışı uygulamak için kalıp eşleştirme ifadelerini kullanın.
 > - Tüm algoritmalar oluşturmak için model eşleştirmeyi diğer tekniklerle birleştirin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Makinenizde C# 9 derleyicisini içeren .NET 5 ' i çalıştıracak şekilde ayarlamanız gerekir. C# 9 derleyicisi, [Visual Studio 2019 sürüm 16,9 Preview 1](https://visualstudio.microsoft.com/vs/preview/) veya [.NET 5,0 SDK](https://dot.net/get-dotnet5)ile başlayarak kullanılabilir.
 
@@ -89,7 +89,7 @@ namespace toll_calculator
 }
 ```
 
-Yukarıdaki kod, tür modelini test eden bir **switch ifadesi** ( [`switch`](../language-reference/keywords/switch.md) deyimiyle aynı değil) kullanır. **type pattern** Bir **switch ifadesi** , `vehicle` Önceki kodda, sonra anahtar sözcüğü gelen değişkenle başlar `switch` . Ardından, küme ayraçları içindeki tüm **anahtar kolları** gelir. `switch`İfade, diğer işlevselliklerindeki deyimini çevreleyen söz dizimini yapar `switch` . `case`Anahtar sözcüğü atlanır ve her bir ARM 'nin sonucu bir ifadedir. Son iki kolonun yeni bir dil özelliği gösterir. `{ }`Durum, önceki bir ARM ile eşleşmeyen null olmayan herhangi bir nesneyle eşleşir. Bu ARM, bu yönteme geçirilen hatalı türleri yakalar.  `{ }`Durum, her bir araç türü için durumları izlemelidir. Sıra tersine çevrilirse, `{ }` büyük/küçük harf durumuna geçer. Son olarak, `null` model `null` Bu yönteme ne zaman geçtiğini algılar. `null`Diğer tür desenleri doğru türdeki yalnızca null olmayan bir nesneyle eşleştiğinden, düzen en son olabilir.
+Yukarıdaki kod, tür modelini test eden bir **switch ifadesi** ( [`switch`](../language-reference/keywords/switch.md) deyimiyle aynı değil) kullanır.  Bir **switch ifadesi** , `vehicle` Önceki kodda, sonra anahtar sözcüğü gelen değişkenle başlar `switch` . Ardından, küme ayraçları içindeki tüm **anahtar kolları** gelir. `switch`İfade, diğer işlevselliklerindeki deyimini çevreleyen söz dizimini yapar `switch` . `case`Anahtar sözcüğü atlanır ve her bir ARM 'nin sonucu bir ifadedir. Son iki kolonun yeni bir dil özelliği gösterir. `{ }`Durum, önceki bir ARM ile eşleşmeyen null olmayan herhangi bir nesneyle eşleşir. Bu ARM, bu yönteme geçirilen hatalı türleri yakalar.  `{ }`Durum, her bir araç türü için durumları izlemelidir. Sıra tersine çevrilirse, `{ }` büyük/küçük harf durumuna geçer. Son olarak, `null` model `null` Bu yönteme ne zaman geçtiğini algılar. `null`Diğer tür desenleri doğru türdeki yalnızca null olmayan bir nesneyle eşleştiğinden, düzen en son olabilir.
 
 Bu kodu aşağıdaki kodu kullanarak test edebilirsiniz `Program.cs` :
 
@@ -247,7 +247,7 @@ vehicle switch
 };
 ```
 
-Bu anahtar kolları çoğu **özyinelemeli desenlere**örnektir. Örneğin, `Car { Passengers: 1}` bir özellik deseninin içinde sabit bir model gösterir.
+Bu anahtar kolları çoğu **özyinelemeli desenlere** örnektir. Örneğin, `Car { Passengers: 1}` bir özellik deseninin içinde sabit bir model gösterir.
 
 İç içe geçmiş anahtarlar kullanarak bu kodu daha az tekrarlı hale getirebilirsiniz. `Car`Ve `Taxi` her ikisi de önceki örneklerde dört farklı kollu bir sahiptir. Her iki durumda da, bir özellik düzeninde akışlara bir tür stili oluşturabilirsiniz. Bu teknik aşağıdaki kodda gösterilmiştir:
 
@@ -345,7 +345,7 @@ Sonra, zaman bloklara zaman kategorize etmek için benzer bir işlev ekleyin:
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-`enum`Her zaman aralığını ayrı bir değere dönüştürmek için bir özel ekleyin. Ardından, `GetTimeBand` yöntemi, C# 9,0 ' de eklenen *ilişkisel desenleri*ve *birleşme veya desenler*kullanır. İlişkisel model,,, veya kullanarak sayısal bir değeri test etmenizi sağlar `<` `>` `<=` `>=` . Bir `or` ifadenin bir veya daha fazla desenle eşleşmesi durumunda desen test eder. Ayrıca `and` , bir ifadenin iki ayrı desenle eşleştiğinden emin olmak için bir desen ve bir `not` ifadenin bir desenle eşleşmediğini test etmek için bir desen de kullanabilirsiniz.
+`enum`Her zaman aralığını ayrı bir değere dönüştürmek için bir özel ekleyin. Ardından, `GetTimeBand` yöntemi, C# 9,0 ' de eklenen *ilişkisel desenleri* ve *birleşme veya desenler* kullanır. İlişkisel model,,, veya kullanarak sayısal bir değeri test etmenizi sağlar `<` `>` `<=` `>=` . Bir `or` ifadenin bir veya daha fazla desenle eşleşmesi durumunda desen test eder. Ayrıca `and` , bir ifadenin iki ayrı desenle eşleştiğinden emin olmak için bir desen ve bir `not` ifadenin bir desenle eşleşmediğini test etmek için bir desen de kullanabilirsiniz.
 
 Bu yöntemleri oluşturduktan sonra, `switch` fiyatlandırma Premium 'u hesaplamak için **demet düzenine** sahip başka bir ifadeyi kullanabilirsiniz. `switch`Tüm 16 kollu bir ifade oluşturabilirsiniz:
 

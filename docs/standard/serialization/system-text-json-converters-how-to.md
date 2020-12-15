@@ -1,7 +1,7 @@
 ---
 title: JSON serileştirme-.NET için özel dönüştürücüler yazma
 description: Ad alanında belirtilen JSON serileştirme sınıfları için özel dönüştürücüler oluşturmayı öğrenin System.Text.Json .
-ms.date: 12/09/2020
+ms.date: 12/14/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 33334ccd8bad4ac5a9f5dccde79ff3ae09ca8f89
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 390438e3dca7a5d40dd9957090f498b495996e05
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008870"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513204"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
@@ -84,7 +84,7 @@ Yukarıdaki kod, bu makalede daha sonra [dize olmayan anahtarla destek sözlüğ
 Aşağıdaki adımlarda, temel kalıbı izleyerek bir dönüştürücünün nasıl oluşturulacağı açıklanmaktadır:
 
 * Öğesinden türetilen, <xref:System.Text.Json.Serialization.JsonConverter%601> `T` seri hale getirilecek ve seri durumdan çıkarılacak bir sınıf oluşturun.
-* `Read`Gelen JSON serisini kaldırmak ve türe dönüştürmek için yöntemini geçersiz kılın `T` . <xref:System.Text.Json.Utf8JsonReader>JSON 'ı okumak için yöntemine geçirilen öğesini kullanın.
+* `Read`Gelen JSON serisini kaldırmak ve türe dönüştürmek için yöntemini geçersiz kılın `T` . <xref:System.Text.Json.Utf8JsonReader>JSON 'ı okumak için yöntemine geçirilen öğesini kullanın. Seri hale getirici geçerli JSON kapsamının tüm verilerini geçirdiğinde kısmi verilerin işlenmesine endişelenmeniz gerekmez. <xref:System.Text.Json.Utf8JsonReader.Skip%2A> <xref:System.Text.Json.Utf8JsonReader.TrySkip%2A> Bu nedenle, bu döndürmeleri çağırmak veya doğrulamak gerekli değildir <xref:System.Text.Json.Utf8JsonReader.Read%2A> `true` .
 * `Write`Türündeki gelen nesneyi seri hale getirmek için yöntemini geçersiz kılın `T` . <xref:System.Text.Json.Utf8JsonWriter>JSON yazmak için yöntemine geçirilen öğesini kullanın.
 * `CanConvert`Yöntemi yalnızca gerektiğinde geçersiz kılın. Varsayılan uygulama, `true` dönüştürülecek tür tür olduğunda döndürür `T` . Bu nedenle, yalnızca türü destekleyen dönüştürücüler `T` Bu yöntemi geçersiz kılmalıdır. Bu yöntemi geçersiz kılmanın gerekli olduğu dönüştürücünün bir örneği için, bu makalenin ilerleyen kısımlarında yer alan [polimorfik serisini kaldırma](#support-polymorphic-deserialization) bölümüne bakın.
 
@@ -377,7 +377,7 @@ Bu null işleme davranışı öncelikle, dönüştürücünün ek bir çağrıs�
 ::: zone pivot="dotnet-5-0"
 Bir özel dönüştürücünün `null` bir başvuru veya değer türü için işlemesini sağlamak için, <xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType> `true` Aşağıdaki örnekte gösterildiği gibi, döndürecek şekilde geçersiz kılın:
 
-:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="19":::
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="18":::
 ::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>Diğer özel dönüştürücü örnekleri

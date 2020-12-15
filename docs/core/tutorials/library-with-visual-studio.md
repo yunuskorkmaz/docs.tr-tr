@@ -5,13 +5,13 @@ ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 6a3f61525ca86afc9ee71d56cbc9450862760ba4
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.custom: vs-dotnet,contperf-fy21q1
+ms.openlocfilehash: 2d9b02a155c950b77565a66417948568f5fa039f
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599518"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513126"
 ---
 # <a name="tutorial-create-a-net-class-library-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET sınıf kitaplığı oluşturma
 
@@ -45,7 +45,7 @@ Boş çözümü oluşturmak için:
 
 1. Çözüme "StringLibrary" adlı yeni bir .NET sınıf kitaplığı projesi ekleyin.
 
-   1. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+   1. **Çözüm Gezgini** çözüme sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
    1. **Yeni Proje Ekle** sayfasında, arama kutusuna **kitaplık** yazın. Dil listesinden **C#** veya **Visual Basic** seçin ve ardından platform listesinden **tüm platformlar** ' ı seçin. **Sınıf kitaplığı** şablonunu seçin ve ardından **İleri**' yi seçin.
 
@@ -70,7 +70,7 @@ Boş çözümü oluşturmak için:
 
    `StartsWithUpper` , sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../csharp/programming-guide/classes-and-structs/extension-methods.md) olarak uygulanır <xref:System.String> .
 
-1. Projenin hatasız derlendiğinden emin olmak için, menü çubuğunda yapı çözümü **Oluştur**' u seçin  >  **Build Solution** veya <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>B</kbd> ' ye basın.
+1. Projenin hatasız derlendiğinden emin olmak için, menü çubuğunda yapı çözümü **Oluştur**' u seçin  >   veya <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>B</kbd> ' ye basın.
 
 ## <a name="add-a-console-app-to-the-solution"></a>Çözüme bir konsol uygulaması ekleme
 
@@ -78,7 +78,7 @@ Sınıf kitaplığını kullanan bir konsol uygulaması ekleyin. Uygulama kullan
 
 1. Çözüme "gösterimi" adlı yeni bir .NET konsol uygulaması ekleyin.
 
-   1. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje** Ekle ' yi seçin.
+   1. **Çözüm Gezgini** çözüme sağ tıklayın ve   >  **Yeni proje** Ekle ' yi seçin.
 
    1. **Yeni Proje Ekle** sayfasında, arama kutusuna **konsol** girin. Dil listesinden **C#** veya **Visual Basic** seçin ve ardından platform listesinden **tüm platformlar** ' ı seçin.
 
@@ -115,7 +115,7 @@ Başlangıçta, yeni konsol uygulaması projesi sınıf kitaplığına erişemez
 
    :::image type="content" source="media/library-with-visual-studio/set-startup-project-context-menu.png" alt-text="Başlangıç projesini ayarlamak için Visual Studio proje bağlam menüsü":::
 
-1. <kbd>Ctrl</kbd> + Hata ayıklama olmadan programı derlemek ve çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
+1. <kbd></kbd> + Hata ayıklama olmadan programı derlemek ve çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
 
    :::image type="content" source="media/library-with-visual-studio/visual-studio-project-toolbar.png" alt-text="Hata ayıklama düğmesini gösteren Visual Studio proje araç çubuğu":::
 

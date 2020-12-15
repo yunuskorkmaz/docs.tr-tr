@@ -13,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: aceccc019542bb1afe3082881626cfc32740a338
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 659ba966ab18f2c5db13af3ac687af57dea7b126
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733652"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513217"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Normal İfade Örneği: HREF Tarama
 
@@ -46,7 +46,7 @@ Aşağıdaki örnek bir giriş dizesini arar ve tüm href = "..." değerler ve d
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
 |`=`|Eşittir işaretine eşleştirin.|  
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
-|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|Sonucu yakalanan bir gruba atamadan aşağıdakilerden birini eşleştirin:<br /> <ul><li><p>Tırnak işareti veya kesme işareti, ardından tırnak işareti veya kesme işareti dışında herhangi bir karakterin ardından sıfır veya daha fazla tekrardan oluşan tırnak işareti veya kesme işareti. Adlı grup `1` Bu modele dahildir.</p></li><li><p>Bir veya daha fazla boşluk olmayan karakter. Adlı grup `1` Bu modele dahildir.</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']\|(?<1>\S+))`|Sonucu yakalanan bir gruba atamadan aşağıdakilerden birini eşleştirin:<br /> <ul><li><p>Tırnak işareti veya kesme işareti, ardından tırnak işareti veya kesme işareti dışında herhangi bir karakterin ardından sıfır veya daha fazla tekrardan oluşan tırnak işareti veya kesme işareti. Adlı grup `1` Bu modele dahildir.</p></li><li><p>Bir veya daha fazla boşluk olmayan karakter. Adlı grup `1` Bu modele dahildir.</p></li></ul>|  
 |`(?<1>[^"']*)`|Adlı yakalama grubuna tırnak işareti veya kesme işareti dışında herhangi bir karakterin sıfır veya daha fazla örneğini atayın `1` .|  
 |`(?<1>\S+)`|Adlı yakalama grubuna bir veya daha fazla boşluk olmayan karakter atayın `1` .|  
   

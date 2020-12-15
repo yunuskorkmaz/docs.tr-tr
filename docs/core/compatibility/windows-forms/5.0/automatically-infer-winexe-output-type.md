@@ -2,12 +2,12 @@
 title: 'Son değişiklik: WPF ve WinForms uygulamaları için OutputType, WinExe olarak ayarlanmıştır'
 description: OutputType Windows Forms uygulamalar için otomatik olarak WinExe olarak ayarlandığı .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
 ms.date: 09/18/2020
-ms.openlocfilehash: 072c5b11c8304eb540e176ce9747930789f28505
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b2c7a76983c9e7958808e3cc4716be7792841c6
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761685"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513191"
 ---
 # <a name="outputtype-set-to-winexe-for-wpf-and-winforms-apps"></a>OutputType WPF ve WinForms uygulamaları için WinExe olarak ayarlandı
 
@@ -15,7 +15,7 @@ ms.locfileid: "95761685"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, proje dosyasında için belirtilen değer `OutputType` kullanılır. Örnek:
+.NET SDK 'sının önceki sürümlerinde, proje dosyasında için belirtilen değer `OutputType` kullanılır. Örnek:
 
 ```xml
 <PropertyGroup>
@@ -23,7 +23,7 @@ ms.locfileid: "95761685"
 </PropertyGroup>
 ```
 
-.NET 5,0 ' den itibaren, `OutputType` `WinExe` WPF ve Windows Forms uygulamaları için otomatik olarak olarak ayarlanır. Örnek:
+.NET SDK 'sının 5.0.1 sürümünden itibaren, `OutputType` `WinExe` .NET Framework dahil olmak üzere tüm Framework SÜRÜMLERINI hedefleyen WPF ve Windows Forms uygulamalar için otomatik olarak ayarlanır. Örnek:
 
 ```xml
 <PropertyGroup>
@@ -37,7 +37,7 @@ ms.locfileid: "95761685"
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0.1
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

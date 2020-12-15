@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 9960ba2c39d58734a04cb7ca892ed321fd09822b
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: de0545131385c13a79fd35df74e3a04da98ad8fb
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099054"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512482"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma (C# Programlama Kılavuzu)
 
@@ -76,7 +76,7 @@ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word 
 
      [!code-csharp[csProgGuideNamedAndOptional#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#8)]
 
-2. <kbd>CTRL</kbd> + Projeyi çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın. Belirtilen metni içeren bir Word belgesi görüntülenir.
+2. <kbd></kbd> + Projeyi çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın. Belirtilen metni içeren bir Word belgesi görüntülenir.
 
 ## <a name="to-change-the-text-to-a-table"></a>Metni bir tabloya dönüştürmek için
   
@@ -92,7 +92,7 @@ Bu yordamları gerçekleştirmek için bilgisayarınızda Microsoft Office Word 
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]
 
-2. <kbd>CTRL</kbd> + Projeyi çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
+2. <kbd></kbd> + Projeyi çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
 
 ## <a name="to-experiment-with-other-parameters"></a>Diğer parametrelerle denemek için
 

@@ -6,19 +6,19 @@ ms.author: tdykstra
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 12/09/2020
+ms.date: 12/14/2020
 zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4a33d9de96af805c3696ceed5cd30a3fa8547222
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.openlocfilehash: 8c2d4baa9b9a3b19b8f1bde09bea0ab718092e24
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110838"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512651"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
@@ -81,6 +81,7 @@ Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmekt
 | Tırnak işaretleri olmadan özellik adlarına izin ver                   | ❌ [Desteklenmez](#json-strings-property-names-and-string-values) |
 | Dize değerlerinin çevresinde tek tırnak işaretlerine izin ver              | ❌ [Desteklenmez](#json-strings-property-names-and-string-values) |
 | Dize özellikleri için dize olmayan JSON değerlerine izin ver    | ❌ [Desteklenmez](#non-string-values-for-string-properties) |
+| `TypeNameHandling.All` Genel ayar                 | ❌ [Desteklenmez](#typenamehandlingall-not-supported) |
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -122,6 +123,7 @@ Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmekt
 | Tırnak işaretleri olmadan özellik adlarına izin ver                   | ❌ [Desteklenmez](#json-strings-property-names-and-string-values) |
 | Dize değerlerinin çevresinde tek tırnak işaretlerine izin ver              | ❌ [Desteklenmez](#json-strings-property-names-and-string-values) |
 | Dize özellikleri için dize olmayan JSON değerlerine izin ver    | ❌ [Desteklenmez](#non-string-values-for-string-properties) |
+| `TypeNameHandling.All` Genel ayar                 | ❌ [Desteklenmez](#typenamehandlingall-not-supported) |
 ::: zone-end
 
 Bu, özelliklerin kapsamlı bir listesi değildir `Newtonsoft.Json` . Listede, [GitHub sorunları](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) veya [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) gönderileri için istenen birçok senaryo bulunur. Burada listelenen senaryolardan biri için şu anda örnek kodu olmayan bir geçici çözüm uygularsanız ve çözümünüzü paylaşmak istiyorsanız, bu sayfanın altındaki **geri bildirim** bölümünde **Bu sayfayı** seçin. Bu, bu belgenin GitHub deposunda bir sorun oluşturur ve bu sayfadaki **geri bildirim** bölümünde de listeler.
@@ -629,7 +631,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Yukarıdaki kod, bir özellik içeren bir için bekliyor `JsonElement` `fileName` . JSON dosyasını açar ve bir oluşturur `JsonDocument` . Yöntemi, çağıranın tüm belge ile çalışmak istediğini varsayar, bu yüzden öğesinin öğesini döndürür `Clone` `RootElement` .
 
-Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örneğin:
+Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örnek:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -807,6 +809,10 @@ Dize özelliği için, dize null ise ve <xref:System.Text.Json.Utf8JsonWriter.Wr
 
 * [UnifiedJsonWriter.JsonTextWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.JsonTextWriter.cs)
 * [UnifiedJsonWriter.Utf8JsonWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.Utf8JsonWriter.cs)
+
+## <a name="typenamehandlingall-not-supported"></a>TypeNameHandling. All desteklenmiyor
+
+' Den hariç tutulacak ve eşdeğer işlevselliğe yönelik karar, `TypeNameHandling.All` `System.Text.Json` kasıtlı olarak gerçekleştirildi. JSON yükünün kendi tür bilgilerini belirtmesini sağlamak, Web uygulamalarında sık karşılaşılan bir güvenlik açığı kaynağıdır. Özellikle, ile yapılandırmak `Newtonsoft.Json` , `TypeNameHandling.All` uzak istemcinin tüm yürütülebilir BIR uygulamayı JSON yükünün içinde eklemesine izin vererek, Web uygulamasının serisini kaldırma işlemi sırasında gömülü kodu ayıklar ve çalıştırır. Daha fazla bilgi için, bkz. [12. JSON saldırılarına](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-Json-Attacks.pdf) yönelik olarak Cuma ve [13. JSON saldırıları ayrıntılarının](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-JSON-Attacks-wp.pdf)Cuma.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: de56ea10ea15f497f9375c2449acbae1d0c8978a
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 9573e6b97383d6f422c6a2802040fb9d6db709dd
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099269"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512760"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>ToString yöntemini geçersiz kılma (C# Programlama Kılavuzu)
 
@@ -54,5 +54,5 @@ C# içindeki her sınıf veya yapı, sınıfı dolaylı olarak devralır <xref:S
 - [Dizeler](../strings/index.md)
 - [dizisinde](../../language-reference/builtin-types/reference-types.md)
 - [override](../../language-reference/keywords/override.md)
-- [virtual](../../language-reference/keywords/virtual.md)
+- [sanal](../../language-reference/keywords/virtual.md)
 - [Biçimlendirme Türleri](../../../standard/base-types/formatting-types.md)

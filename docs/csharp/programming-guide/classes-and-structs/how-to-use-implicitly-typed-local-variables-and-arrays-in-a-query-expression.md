@@ -5,14 +5,14 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 0379cf7a172b989a9c686fd2da20ca8bf8da4997
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: bd68c913c6f0d410d97973fb28789218f88903b5
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098872"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512391"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Bir sorgu ifadesinde örtük olarak yazılan yerel değişkenleri ve dizileri kullanma (C# Programlama Kılavuzu)
 
@@ -37,5 +37,5 @@ Derleyicinin yerel bir değişken türünü belirlemesini istediğinizde örtül
 - [C# Programlama Kılavuzu](../index.md)
 - [Uzantı Metotları](./extension-methods.md)
 - [LINQ (dil ile tümleşik sorgu)](../../linq/index.md)
-- [var](../../language-reference/keywords/var.md)
+- [l](../../language-reference/keywords/var.md)
 - [C# üzerinde LINQ](../../linq/index.md)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 0a9585d05a817d09308e06558352f78a5347a8f1
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 430887ebb16570439a89f3625ac12a1fbb368227
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099178"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513165"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Bir dizeyi sayıya dönüştürme (C# Programlama Kılavuzu)
 
-[string](../../language-reference/builtin-types/reference-types.md) `Parse` `TryParse` Çeşitli sayısal türlerde (,, vb.) bulunan veya yöntemini çağırarak `int` `long` `double` veya sınıfındaki yöntemleri kullanarak <xref:System.Convert?displayProperty=nameWithType> bir dizeyi sayıya dönüştürebilirsiniz.  
+[](../../language-reference/builtin-types/reference-types.md) `Parse` `TryParse` Çeşitli sayısal türlerde (,, vb.) bulunan veya yöntemini çağırarak `int` `long` `double` veya sınıfındaki yöntemleri kullanarak <xref:System.Convert?displayProperty=nameWithType> bir dizeyi sayıya dönüştürebilirsiniz.  
   
  Bir yöntemi (örneğin,) veya yöntemi (örneğin `TryParse` [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A) `Parse` ,) çağırmak biraz daha etkilidir ve kolaydır [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A) .  Yöntemi kullanmak <xref:System.Convert> , uygulayan genel nesneler için daha yararlıdır <xref:System.IConvertible> .  
   
