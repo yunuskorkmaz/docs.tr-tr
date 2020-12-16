@@ -34,6 +34,8 @@
                   href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
                 - name: Microsoft ön ekli Azure tümleştirme paketleri kaldırıldı
                   href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: 'Blazor: Blazor uygulamalarında rota önceliği mantığı değişti'
+                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
                 - name: 'Blazor: Tarayıcı desteği güncelleştirildi'
                   href: aspnet-core/5.0/blazor-browser-support-updated.md
                 - name: 'Blazor: Önemsiz boşluk, derleyici tarafından kırpıldı'
@@ -292,6 +294,8 @@
                   href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
                 - name: Microsoft ön ekli Azure tümleştirme paketleri kaldırıldı
                   href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: 'Blazor: Blazor uygulamalarında rota önceliği mantığı değişti'
+                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
                 - name: 'Blazor: Tarayıcı desteği güncelleştirildi'
                   href: aspnet-core/5.0/blazor-browser-support-updated.md
                 - name: 'Blazor: Önemsiz boşluk, derleyici tarafından kırpıldı'

@@ -6,12 +6,12 @@ metadata:
   description: C# ile programlamayı öğrenin - Başlangıç düzeyindeki geliştiriciler, C# dilini kullanmaya yeni başlayan geliştiriciler ve C#/.NET geliştiricileri için
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: bc75503b565020fb9966fd756d87890263f63533
-  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+  ms.openlocfilehash: 584db55455af54bcf7e91771e3598a7349091bee
+  ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/04/2020
-  ms.locfileid: "96599453"
+  ms.lasthandoff: 12/15/2020
+  ms.locfileid: "97512157"
 landingContent:
 - title: C# ile programlamayı öğrenin
   linkLists:
@@ -71,38 +71,20 @@ landingContent:
     links:
     - text: C# 9.0 sürümündeki yenilikler
       url: whats-new/csharp-9.md
-- title: C# 8.0 sürümündeki yeni özellikler
+- title: C# 9.0 sürümündeki yeni özellikler
   linkLists:
   - linkListType: whats-new
     links:
-    - text: C# 8.0 sürümündeki yenilikler
-      url: whats-new/csharp-8.md
-  - linkListType: overview
-    links:
-    - text: Desen eşleştirme
-      url: pattern-matching.md
-    - text: Boş değer atanabilir başvuru türleri
-      url: nullable-references.md
-  - linkListType: concept
-    links:
-    - text: Boş değer atanabilir geçiş stratejisi seçme
-      url: nullable-migration-strategies.md
+    - text: C# 9.0 sürümündeki yenilikler
+      url: whats-new/csharp-9.md
   - linkListType: tutorial
     links:
-    - text: Zaman uyumsuz akışları tüketme ve oluşturma
-      url: tutorials/generate-consume-asynchronous-stream.md
-    - text: Boş değer atanabilir başvuru türleri ile geliştirme
-      url: tutorials/nullable-reference-types.md
-    - text: Var olan kodu boş değer atanabilir başvuru türlerini kullanacak şekilde yükseltme
-      url: tutorials/upgrade-to-nullable-references.md
-    - text: Daha açıklayıcı algoritmalar için model eşleştirmeyi kullanma
-      url: tutorials/pattern-matching.md
-    - text: Arabirimlerde varsayılan arabirim üyeleri ile güvenli bir şekilde sürüm oluşturma
-      url: tutorials/default-interface-methods-versions.md
-    - text: Varsayılan arabirim üyeleriyle karma işlevler oluşturma
-      url: tutorials/mixins-with-default-interface-methods.md
-    - text: Aralıkları ve dizinleri kullanarak alt kümelerle çalışma
-      url: tutorials/ranges-indexes.md
+    - text: Kayıt türlerini keşfetme
+      url: tutorials/exploration/records.md
+    - text: Üst düzey deyimleri keşfetme
+      url: tutorials/exploration/top-level-statements.md
+    - text: Yeni desenler keşfetme
+      url: tutorials/exploration/patterns-objects.md
   - linkListType: reference
     links:
     - text: C# derleyicisindeki yeni değişiklikler
