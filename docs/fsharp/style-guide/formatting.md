@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: 'F # kodunu biçimlendirmeye yönelik yönergeleri öğrenin.'
 ms.date: 08/31/2020
-ms.openlocfilehash: f9b62a18a5c525924f3ae6da3fbc650394340047
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 7e20c76f4cfafa50a15b6501a498b228b526057e
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739895"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513074"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -100,16 +100,91 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
+### <a name="avoid-name-sensitive-alignments"></a>Ad duyarlı hizalamaları önleyin
+
+Genel olarak, şu şekilde adlandırmaya duyarlı olan girintileme ve hizalamadan kaçınmak için arama yapın:
+
+```fsharp
+// OK
+let myLongValueName =
+    someExpression
+    |> anotherExpression
+
+
+// Bad
+let myLongValueName = someExpression
+                      |> anotherExpression
+```
+
+Bu bazen "Vanity hizalaması" veya "Vanity girintileme" olarak adlandırılır. Bunu önlemenin başlıca nedenleri şunlardır:
+
+* Önemli kod en sağa taşınır
+* Gerçek kod için daha az genişlik kalmadı
+* Yeniden adlandırma, hizalamayı bozabilir
+
+`do` / `do!` Girintiden tutarlı kalmasını sağlamak için aynısını yapın `let` / `let!` . Aşağıda bir sınıfta kullanılan örnek verilmiştir `do` :
+
+```fsharp
+// OK
+type Foo () =
+    let foo =
+        fooBarBaz
+        |> loremIpsumDolorSitAmet
+        |> theQuickBrownFoxJumpedOverTheLazyDog
+    do
+        fooBarBaz
+        |> loremIpsumDolorSitAmet
+        |> theQuickBrownFoxJumpedOverTheLazyDog
+
+// Bad - notice the "do" expression is indented one space less than the `let` expression
+type Foo () =
+    let foo =
+        fooBarBaz
+        |> loremIpsumDolorSitAmet
+        |> theQuickBrownFoxJumpedOverTheLazyDog
+    do fooBarBaz
+       |> loremIpsumDolorSitAmet
+       |> theQuickBrownFoxJumpedOverTheLazyDog
+```
+
+Aşağıda, girintileme 2 ' nin kullanılmasıyla ilgili bir örnek verilmiştir `do!` ( `do!` 4 ' ün girintileme ile yaklaşımlar arasında fark yoktur):
+
+```fsharp
+// OK
+async {
+  let! foo =
+    fooBarBaz
+    |> loremIpsumDolorSitAmet
+    |> theQuickBrownFoxJumpedOverTheLazyDog
+  do!
+    fooBarBaz
+    |> loremIpsumDolorSitAmet
+    |> theQuickBrownFoxJumpedOverTheLazyDog
+}
+
+// Bad - notice the "do!" expression is indented two spaces more than the `let!` expression
+async {
+  let! foo =
+    fooBarBaz
+    |> loremIpsumDolorSitAmet
+    |> theQuickBrownFoxJumpedOverTheLazyDog
+  do! fooBarBaz
+      |> loremIpsumDolorSitAmet
+      |> theQuickBrownFoxJumpedOverTheLazyDog
+}
+```
+
 ### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>Uzun tanımlarda parametreleri yeni bir satıra yerleştir
 
 Uzun bir işlev tanımınız varsa, parametreleri yeni satırlara yerleştirip sonraki parametrenin girintileme düzeyiyle eşleşecek şekilde Girintile.
 
 ```fsharp
 module M =
-    let LongFunctionWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                        =
+    let LongFunctionWithLotsOfParameters
+        (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        =
         // ... the body of the method follows
 ```
 
@@ -117,14 +192,20 @@ Bu Ayrıca, tanımlama gruplarını kullanan üyeler, oluşturucular ve parametr
 
 ```fsharp
 type TM() =
-    member _.LongMethodWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
-                                            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
-                                            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse) =
+    member _.LongMethodWithLotsOfParameters
+        (
+            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
+        ) =
         // ... the body of the method
 
-type TC(aVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
+type TC
+    (
+        aVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
         aSecondVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
-        aThirdVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse) =
+        aThirdVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse
+    ) =
     // ... the body of the class follows
 ```
 
@@ -132,15 +213,18 @@ Parametreler yeniden belirlenir veya açık bir dönüş türü ek açıklaması
 
 ```fsharp
 type C() =
-    member _.LongMethodWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
-                                            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
-                                            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                            : AReturnType =
+    member _.LongMethodWithLotsOfParameters
+        (
+            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
+        ) : AReturnType =
         // ... the body of the method
-    member _.LongMethodWithLotsOfCurrifiedParams(aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                                (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                                (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                                =
+    member _.LongMethodWithLotsOfCurrifiedParams
+        (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        =
         // ... the body of the method
 ```
 
@@ -535,13 +619,14 @@ Kayıt kılavuzunda olduğu gibi, küme ayraçları için ayrı satırlar atamak
 
 ```fsharp
 type S = { F1: int; F2: string }
-type State = { F:  S option }
+type State = { Foo: S option }
 
-let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let state = { Foo = Some { F1 = 1; F2 = "Hello" } }
 let newState =
     {
         state with
-            F = Some {
+            Foo =
+                Some {
                     F1 = 0
                     F2 = ""
                 }
@@ -809,7 +894,7 @@ let function1 arg1 arg2 arg3 arg4 =
     arg3 + arg4
 ```
 
-### <a name="formatting-pipeline-operators"></a>Biçimlendirme işlem hattı işleçleri
+### <a name="formatting-pipeline-operators-or-mutable-assignments"></a>Ardışık düzen işleçlerini veya kesilebilir atamaları biçimlendirme
 
 `|>`İşlem hattı işleçleri üzerinde çalıştıkları ifadelerin altına gitmelidir.
 
@@ -832,6 +917,32 @@ let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
             |> List.ofArray
             |> List.map (fun t -> t.GetMethods())
             |> Array.concat
+
+// Not OK either
+let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
+               |> List.ofArray
+               |> List.map (fun assm -> assm.GetTypes())
+               |> Array.concat
+               |> List.ofArray
+               |> List.map (fun t -> t.GetMethods())
+               |> Array.concat
+```
+
+Bu, kesilebilir ayarlayıcılar için de geçerlidir:
+
+```fsharp
+// Preferred approach
+ctx.Response.Headers.[HeaderNames.ContentType] <-
+    Constants.jsonApiMediaType |> StringValues
+ctx.Response.Headers.[HeaderNames.ContentLength] <-
+    bytes.Length |> string |> StringValues
+
+// Not OK
+ctx.Response.Headers.[HeaderNames.ContentType] <- Constants.jsonApiMediaType
+                                                  |> StringValues
+ctx.Response.Headers.[HeaderNames.ContentLength] <- bytes.Length
+                                                    |> string
+                                                    |> StringValues
 ```
 
 ### <a name="formatting-modules"></a>Biçimlendirme modülleri
