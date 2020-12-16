@@ -2,12 +2,12 @@
 title: .NET 5 + ' da kullanımdan kalkmış Özellikler
 description: .NET 5,0 ve sonraki sürümlerde eski olarak işaretlenen ve SYSLIB Derleyici uyarıları üreten API 'Ler hakkında bilgi edinin.
 ms.date: 10/20/2020
-ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 336958c93e3db8f66cfbec89476a666e5e103b70
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440770"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593311"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5 ' teki kullanımdan kalkmış Özellikler
 
@@ -23,20 +23,20 @@ Kullanılmayan bir API kullanımı nedeniyle derleme uyarıları veya hatalarıy
 
 Aşağıdaki tabloda, `SYSLIBxxxx` .NET 5 + ' de kullanımdan çıkarılan bir dizin verilmiştir.
 
-| Tanılama KIMLIĞI | Açıklama |
+| Tanılama KIMLIĞI | Description |
 | - | - |
-| [SYSLIB0001](syslib0001.md) | UTF-7 kodlaması güvenli değil ve kullanılmamalıdır. Bunun yerine UTF-8 kullanmayı düşünün. |
-| [SYSLIB0002](syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> çalışma zamanı tarafından kabul edilmez ve kullanılmamalıdır. |
-| [SYSLIB0003](syslib0003.md) | Kod erişim güvenliği (CAS) çalışma zamanı tarafından desteklenmez veya kabul edilmez. |
-| [SYSLIB0004](syslib0004.md) | Kısıtlanmış yürütme bölgesi (CER) özelliği desteklenmiyor. |
-| [SYSLIB0005](syslib0005.md) | Genel bütünleştirilmiş kod önbelleği (GAC) desteklenmiyor. |
-| [SYSLIB0006](syslib0006.md) | <xref:System.Threading.Thread.Abort?displayProperty=nameWithType> desteklenmez ve atar <xref:System.PlatformNotSupportedException> . |
-| [SYSLIB0007](syslib0007.md) | Bu şifreleme algoritmasının varsayılan uygulanması desteklenmiyor. |
-| [SYSLIB0008](syslib0008.md) | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator>API desteklenmez ve atar <xref:System.PlatformNotSupportedException> . |
-| [SYSLIB0009](syslib0009.md) | <xref:System.Net.AuthenticationManager.Authenticate%2A?displayProperty=nameWithType>Ve <xref:System.Net.AuthenticationManager.PreAuthenticate%2A?displayProperty=nameWithType> yöntemleri desteklenmez ve throw <xref:System.PlatformNotSupportedException> . |
-| [SYSLIB0010](syslib0010.md) | Bazı uzaktan iletişim API 'Leri desteklenmez ve throw <xref:System.PlatformNotSupportedException> . |
-| [SYSLIB0011](syslib0011.md) | <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> serileştirme artık kullanılmıyor ve kullanılmamalıdır. |
-| [SYSLIB0012](syslib0012.md) | <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType> ve <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType> yalnızca .NET Framework uyumluluk için dahil edilmiştir. Bunun yerine <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> kullanın. |
+| [SYSLIB0001](syslib-warnings/syslib0001.md) | UTF-7 kodlaması güvenli değil ve kullanılmamalıdır. Bunun yerine UTF-8 kullanmayı düşünün. |
+| [SYSLIB0002](syslib-warnings/syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> çalışma zamanı tarafından kabul edilmez ve kullanılmamalıdır. |
+| [SYSLIB0003](syslib-warnings/syslib0003.md) | Kod erişim güvenliği (CAS) çalışma zamanı tarafından desteklenmez veya kabul edilmez. |
+| [SYSLIB0004](syslib-warnings/syslib0004.md) | Kısıtlanmış yürütme bölgesi (CER) özelliği desteklenmiyor. |
+| [SYSLIB0005](syslib-warnings/syslib0005.md) | Genel bütünleştirilmiş kod önbelleği (GAC) desteklenmiyor. |
+| [SYSLIB0006](syslib-warnings/syslib0006.md) | <xref:System.Threading.Thread.Abort?displayProperty=nameWithType> desteklenmez ve atar <xref:System.PlatformNotSupportedException> . |
+| [SYSLIB0007](syslib-warnings/syslib0007.md) | Bu şifreleme algoritmasının varsayılan uygulanması desteklenmiyor. |
+| [SYSLIB0008](syslib-warnings/syslib0008.md) | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator>API desteklenmez ve atar <xref:System.PlatformNotSupportedException> . |
+| [SYSLIB0009](syslib-warnings/syslib0009.md) | <xref:System.Net.AuthenticationManager.Authenticate%2A?displayProperty=nameWithType>Ve <xref:System.Net.AuthenticationManager.PreAuthenticate%2A?displayProperty=nameWithType> yöntemleri desteklenmez ve throw <xref:System.PlatformNotSupportedException> . |
+| [SYSLIB0010](syslib-warnings/syslib0010.md) | Bazı uzaktan iletişim API 'Leri desteklenmez ve throw <xref:System.PlatformNotSupportedException> . |
+| [SYSLIB0011](syslib-warnings/syslib0011.md) | <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> serileştirme artık kullanılmıyor ve kullanılmamalıdır. |
+| [SYSLIB0012](syslib-warnings/syslib0012.md) | <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType> ve <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType> yalnızca .NET Framework uyumluluk için dahil edilmiştir. Bunun yerine <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> kullanın. |
 
 ## <a name="suppress-warnings"></a>Uyarıları gizleme
 

@@ -2,12 +2,12 @@
 title: DotNet-gcdump Tanılama aracı-.NET CLı
 description: .NET EventPipe kullanarak canlı .NET işlemlerinin GC (çöp toplayıcısı) dökümlerini toplamak için DotNet-gcdump CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826046"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593376"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Yığın Analizi Aracı (DotNet-gcdump)
 
@@ -19,7 +19,7 @@ ms.locfileid: "94826046"
 
 - **DotNet genel aracı:**
 
-  NuGet paketinin en son sürümünü yüklemek için `dotnet-gcdump` [NuGet package](https://www.nuget.org/packages/dotnet-gcdump) [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
+  NuGet paketinin en son sürümünü yüklemek için `dotnet-gcdump` [](https://www.nuget.org/packages/dotnet-gcdump) [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
 
   ```dotnetcli
   dotnet tool install --global dotnet-gcdump
@@ -41,7 +41,7 @@ ms.locfileid: "94826046"
 dotnet-gcdump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet-gcdump`Genel araç, [eventpipe](./eventpipe.md)kullanarak canlı .net Işlemlerinin GC (çöp toplayıcısı) dökümlerini toplar. GC dökümleri, hedef işlemde bir GC tetikleyerek, özel olayları açıp, nesne kökleri grafiğini Olay akışından yeniden oluşturarak oluşturulur. Bu işlem, işlem çalışırken ve en az ek yük ile GC dökümlerinin toplanmasını sağlar. Bu dökümler birkaç senaryo için yararlıdır:
 
@@ -68,6 +68,9 @@ Windows 'da, `.gcdump` dosyalar, analiz veya Visual Studio 'Da [PerfView](https:
 ## `dotnet-gcdump collect`
 
 Şu anda çalışan bir işlemden bir GC dökümü toplar.
+
+> [!WARNING]
+> GC yığınına yol göstermek için, bu komut, özellikle GC yığını büyük olduğunda, çalışma zamanını uzun bir süre askıya alabilen 2. nesil (tam) çöp toplamayı tetikler. GC yığını büyükse, performansa duyarlı ortamlarda bu komutu kullanmayın.
 
 ### <a name="synopsis"></a>Özeti
 

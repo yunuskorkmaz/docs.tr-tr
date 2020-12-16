@@ -3,12 +3,12 @@ title: PerfCollect ile .NET uygulamalarını izleme.
 description: .NET ' te PerfCollect ile izleme toplama konusunda size kılavuzluk eden bir öğretici.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 376c957833924a9991e574557671ea3c8503d7c2
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507247"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593226"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>PerfCollect ile .NET uygulamalarını izleme
 
@@ -149,15 +149,15 @@ Hem CPU örneğinin hem de olaylarının toplam görünümünü görmek için, `
 
 PerfView, izleme dosyasında bulunan verilere göre desteklenen görünümlerin listesini görüntüler.
 
-- CPU araştırmaları için **CPU yığınları** ' nı seçin.
+- CPU araştırmaları için **CPU yığınları**' nı seçin.
 
 - Ayrıntılı GC bilgileri için **GCStats** öğesini seçin.
 
-- İşlem başına/modül/Yöntem JıT bilgileri için, **Jınstats** ' ı seçin.
+- İşlem başına/modül/Yöntem JıT bilgileri için, **Jınstats**' ı seçin.
 
 - İhtiyacınız olan bilgiler için bir görünüm yoksa ham olaylar görünümündeki olayları aramaya çalışırsınız.  **Olayları** seçin.
 
-PerfView içindeki görünümleri yorumlama hakkında daha fazla bilgi için bkz. görünümdeki yardım bağlantıları veya PerfView 'daki ana pencereden **Yardım->kullanıcıları Kılavuzu** ' nu seçin.
+PerfView içindeki görünümleri yorumlama hakkında daha fazla bilgi için bkz. görünümdeki yardım bağlantıları veya PerfView 'daki ana pencereden **Yardım->kullanıcıları Kılavuzu**' nu seçin.
 
 ### <a name="use-tracecompass-to-open-the-trace-file"></a>İzleme dosyasını açmak için Tracepusula kullanma
 
@@ -250,3 +250,31 @@ Bundan sonra, çalıştırdığınızda yerel dll 'ler için simgesel adlar alma
 ## <a name="collect-in-a-docker-container"></a>Bir Docker kapsayıcısında toplayın
 
 Kapsayıcı ortamlarında kullanma hakkında daha fazla bilgi için `perfcollect` bkz. [kapsayıcılarda tanılamayı toplama](./diagnostics-in-containers.md).
+
+## <a name="learn-more-about-collection-options"></a>Koleksiyon seçenekleri hakkında daha fazla bilgi edinin
+
+`perfcollect`Tanılama gereksinimlerinize daha iyi uyacak şekilde, aşağıdaki isteğe bağlı bayrakları belirtebilirsiniz.
+
+### <a name="collect-for-a-specific-duration"></a>Belirli bir süre için topla
+
+Belirli bir süre için bir izleme toplamak istediğinizde, `-collectsec` ve için bir izlemenin toplanacağı toplam saniyeyi belirten bir sayı olan seçeneğini kullanabilirsiniz.
+
+### <a name="collect-threadtime-traces"></a>İşParçacığıSüresi izlemelerini topla
+
+`-threadtime`İle belirtmek `perfcollect` iş parçacığı başına CPU kullanım verilerini toplamanıza olanak tanır. Bu, her iş parçacığının CPU süresini hangi noktada harcamalarından analiz etmenizi sağlar.
+
+### <a name="collect-traces-for-managed-memory-and-garbage-collector-performance"></a>Yönetilen bellek ve çöp toplayıcı performansı için izlemeleri toplayın
+
+Aşağıdaki seçenekler, GC olaylarını özel olarak çalışma zamanından toplamanızı sağlar.
+
+* `perfcollect collect -gccollectonly`
+
+Yalnızca minimal bir GC toplama olayları kümesi toplayın. Bu, hedef uygulamanın performansına en düşük etkisi olan en az ayrıntılı GC olay toplama profilidir. Bu komut `PerfView.exe /GCCollectOnly collect` PerfView komutuna benzer.
+
+* `perfcollect collect -gconly`
+
+JıT, yükleyici ve özel durum olaylarıyla daha ayrıntılı GC toplama olayları toplayın. Bu, daha ayrıntılı Olaylar (örneğin, ayırma bilgileri ve GC JOIN bilgileri) ister ve hedef uygulamanın performansına göre daha fazla etkiye sahip olacaktır `-gccollectonly` . Bu komut `PerfView.exe /GCOnly collect` PerfView komutuna benzer.
+
+* `perfcollect collect -gcwithheap`
+
+En ayrıntılı GC toplama olaylarını toplayın. Bu, yığın daha fazla sonuç ve hareketlerini de izler. Bu, GC davranışının derinlemesine analizini sağlar ancak her GC ikiden fazla kez daha uzun sürebileceğinden yüksek performans maliyeti olur. Üretim ortamlarında izlerken bu izleme seçeneğini kullanmanın performansını anlamanız önerilir.

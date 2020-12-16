@@ -3,38 +3,38 @@ title: ML.NET algoritması seçme
 description: Machine Learning modeliniz için bir ML.NET algoritması seçme hakkında bilgi edinin
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 8af89800485f8f8ac35ee17df10a5e3c039da42d
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 04cf191401c7c25f1fa341acaf9312dc19752260
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679644"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593096"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET algoritması seçme
 
 Her [ml.net görevi](resources/tasks.md)için, aralarından seçim yapabileceğiniz birden çok eğitim algoritması vardır. Hangi birini seçeceğiniz, çözmeye çalıştığınız soruna, verilerinizin özelliklerine ve kullanılabilir işlem ve depolama kaynaklarına bağlıdır. Bir makine öğrenimi modeline yönelik eğitim, yinelemeli bir işlem olduğunu unutmamak önemlidir. En iyi şekilde çalışacak olanı bulmak için birden çok algoritma denemeniz gerekebilir.
 
-Algoritmalar **Özellikler**üzerinde çalışır. Özellikler, giriş verilerinizde hesaplanan sayısal değerlerdir. Makine öğrenimi algoritmaları için en iyi girişlerdir. Ham giriş verilerinizi bir veya daha fazla [veri dönüştürme](resources/transforms.md)kullanarak özelliklere dönüştürürler. Örneğin, metin verileri bir sözcük sayısı ve sözcük birleşimi sayısı kümesine dönüştürülür. Özellikler veri dönüştürmeleri kullanılarak ham bir veri türünden ayıklandıktan sonra, bunlar **korkaldırılmış**olarak adlandırılır. Örneğin, korleştirilmiş metin veya daha fazla görüntü verisi.
+Algoritmalar **Özellikler** üzerinde çalışır. Özellikler, giriş verilerinizde hesaplanan sayısal değerlerdir. Makine öğrenimi algoritmaları için en iyi girişlerdir. Ham giriş verilerinizi bir veya daha fazla [veri dönüştürme](resources/transforms.md)kullanarak özelliklere dönüştürürler. Örneğin, metin verileri bir sözcük sayısı ve sözcük birleşimi sayısı kümesine dönüştürülür. Özellikler veri dönüştürmeleri kullanılarak ham bir veri türünden ayıklandıktan sonra, bunlar **korkaldırılmış** olarak adlandırılır. Örneğin, korleştirilmiş metin veya daha fazla görüntü verisi.
 
 ## <a name="trainer--algorithm--task"></a>Trainer = algoritması + görev
 
-Algoritma, bir **model**oluşturmak için yürütülen matematik. Farklı algoritmalar farklı özelliklerle modeller üretir.
+Algoritma, bir **model** oluşturmak için yürütülen matematik. Farklı algoritmalar farklı özelliklerle modeller üretir.
 
-ML.NET ile aynı algoritma farklı görevlere de uygulanabilir. Örneğin, Stochastic Dual ınent, Ikili sınıflandırma, birden çok Lass sınıflandırması ve gerileme için kullanılabilir. Fark, algoritmanın çıktısının görevle eşleşecek şekilde nasıl yorumlanacağına ilişkin farktır.
+ML.NET ile aynı algoritma farklı görevlere de uygulanabilir. Örneğin, Stochastic çift koordinatı, Ikili sınıflandırma, birden çok Lass sınıflandırması ve gerileme için kullanılabilir. Fark, algoritmanın çıktısının görevle eşleşecek şekilde nasıl yorumlanacağına ilişkin farktır.
 
 Her algoritma/görev birleşimi için, ML.NET eğitim algoritmasını yürüten ve yorumu yapan bir bileşen sağlar. Bu bileşenlere, traers adı verilir. Örneğin, <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> **regresyon** görevine uygulanan **Stochasticdualkoordinatör tedadscent** algoritmasını kullanır.
 
 ## <a name="linear-algorithms"></a>Doğrusal algoritmalar
 
-Doğrusal algoritmalar, giriş verilerinin doğrusal bir bileşiminden ve bir **Ağırlık**kümesinden **puanları** hesaplayan bir model üretir. Ağırlıklar eğitim sırasında tahmini model parametreleridir.
+Doğrusal algoritmalar, giriş verilerinin doğrusal bir bileşiminden ve bir **Ağırlık** kümesinden **puanları** hesaplayan bir model üretir. Ağırlıklar eğitim sırasında tahmini model parametreleridir.
 
 Doğrusal algoritmalar, daha [önce ayrılabilir](https://en.wikipedia.org/wiki/Linear_separability)özellikler için iyi çalışır.
 
-Doğrusal algoritmayla eğitiminden önce Özellikler normalleştirilmelidir. Bu, bir özelliğin sonuç üzerinde daha fazla etkisi olmasına engel olur.
+Doğrusal algoritmayla eğitiminden önce Özellikler normalleştirilmelidir. Bu, bir özelliğin sonuç üzerinde diğerlerinden daha fazla etki almasını engeller.
 
-Genel doğrusal algoritmalarda ölçeklenebilir ve hızlı, ucuz, eğitime, tek EAP ise tahmin edilecek. Bunlar, özellik sayısına ve yaklaşık olarak eğitim verileri kümesinin boyutuna göre ölçeklendirebilir.
+Genel olarak, doğrusal algoritmalar ölçeklenebilir, hızlı, ucuz ve yüksek EAP 'yi tahmin etmek için tasarlanmıştır. Bunlar, özellik sayısına ve yaklaşık olarak eğitim verileri kümesinin boyutuna göre ölçeklendirebilir.
 
-Doğrusal algoritmalar eğitim verileri üzerinde birden çok geçiş yapar. Veri kümeniz belleğe sığıyorsa ve sonra da ML.NET işlem hattınızı eklemeden önce bir [önbellek kontrol noktası](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint%2A) ekleyerek eğitimin daha hızlı çalışmasını sağlayabilirsiniz.
+Doğrusal algoritmalar eğitim verileri üzerinde birden çok geçiş yapar. Veri kümeniz belleğe sığıyorsa, öngörüyi eklemeden önce ML.NET işlem hattınızla bir [önbellek kontrol noktası](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint%2A) eklemek, eğitimin daha hızlı çalışmasını sağlar.
 
 **Doğrusal Traıners**
 
@@ -76,7 +76,7 @@ Artırılmış karar ağaçları, her bir ağacın giriş verilerini puanların�
 
 ## <a name="meta-algorithms"></a>Meta algoritmalar
 
-Bu traçler, ikili bir eğitimci tarafından çok sınıf bir adım oluşturur. ,,,,,, İle kullanın <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer> <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> .
+Bu traçler, ikili bir eğitimci tarafından çok sınıflı bir değer oluşturur. ,,,,,, İle kullanın <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer> <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> .
 
 |Algoritma|Özellikler|Eğitmenler|
 |---------|----------|--------|

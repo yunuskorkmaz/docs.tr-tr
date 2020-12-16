@@ -3,12 +3,12 @@ title: Platform uyumluluk çözümleyicisi
 description: Platformlar arası uygulamalarda ve kitaplıklarda platform uyumluluk sorunlarını algılamaya yardımcı olabilecek bir Roslyn Çözümleyicisi.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 427a2d8ae61a82699e5cf0987fcd1c5a45152cac
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819493"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97594923"
 ---
 # <a name="platform-compatibility-analyzer"></a>Platform uyumluluk çözümleyicisi
 
@@ -26,7 +26,7 @@ Yeni API 'Ler şunları içerir:
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin biridir. .NET 5.0’dan itibaren bu çözümleyiciler, [.NET SDK](../../fundamentals/code-analysis/overview.md)’ya dahildir. Platform uyumluluğu Çözümleyicisi, yalnızca `net5.0` veya sonraki bir sürümü hedefleyen projeler için varsayılan olarak etkindir. Ancak, diğer çerçeveleri hedefleyen projeler için [etkinleştirebilirsiniz](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability) .
+Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin biridir. .NET 5.0’dan itibaren bu çözümleyiciler, [.NET SDK](../../fundamentals/code-analysis/overview.md)’ya dahildir. Platform uyumluluğu Çözümleyicisi, yalnızca `net5.0` veya sonraki bir sürümü hedefleyen projeler için varsayılan olarak etkindir. Ancak, diğer çerçeveleri hedefleyen projeler için [etkinleştirebilirsiniz](../../fundamentals/code-analysis/quality-rules/ca1416.md#configure-code-to-analyze) .
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>Çözümleyici platform bağımlılığını nasıl belirler
 
@@ -41,9 +41,9 @@ Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin
     - Platforma özgü API 'ye, platforma özgü bir içerikten (aynı zamanda öğesine sahip olan **çağrı sitesi** ) başvuruluyorsa, **uyarı vermez** `[SupportedOSPlatform("platform")` .
 - İle işaretlenen bir API `[UnsupportedOSPlatform("platform")]` , yalnızca belirtilen işletim sisteminde desteklenmeyen `platform` ancak diğer tüm platformlar için desteklenen olarak kabul edilir.
   - Özniteliği farklı platformlarla birden çok kez uygulanabilir, örneğin, `[UnsupportedOSPlatform("iOS"), UnsupportedOSPlatform("Android6.0")]` .
-  - Çözümleyici, yalnızca **warning** `platform` çağrı sitesi için geçerli olduğunda bir uyarı oluşturur:
-    - **Warns** Proje desteklenmeyen platformu hedefliyorsa (ÖRNEĞIN, API ile ilişkilendirilemişse `[UnsupportedOSPlatform("windows")]` ve çağıran site hedefliyorsa `<TargetFramework>net5.0-windows</TargetFramework>` ) uyarır.
-    - **Warns** Projenin çoklu hedefli olduğunu ve `platform` varsayılan [ `<SupportedPlatform>` MSBuild](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) öğeleri grubuna dahil edildiğini veya `platform` `MSBuild` \<SupportedPlatform> öğe grubuna el ile dahil edildiğini uyarır:
+  - Çözümleyici, yalnızca  `platform` çağrı sitesi için geçerli olduğunda bir uyarı oluşturur:
+    -  Proje desteklenmeyen platformu hedefliyorsa (ÖRNEĞIN, API ile ilişkilendirilemişse `[UnsupportedOSPlatform("windows")]` ve çağıran site hedefliyorsa `<TargetFramework>net5.0-windows</TargetFramework>` ) uyarır.
+    -  Projenin çoklu hedefli olduğunu ve `platform` varsayılan [ `<SupportedPlatform>` MSBuild](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) öğeleri grubuna dahil edildiğini veya `platform` `MSBuild` \<SupportedPlatform> öğe grubuna el ile dahil edildiğini uyarır:
 
       ```XML
       <ItemGroup>

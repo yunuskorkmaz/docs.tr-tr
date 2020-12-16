@@ -4,18 +4,18 @@ description: Ürün satış verileri için anomali algılama uygulaması oluştu
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: cf61f197e4befebdbb1fbf2ca4cbcdc61c48780a
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 48a8b26409b20e2a01aa97425153336b34c9b5b7
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281673"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97594182"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Öğretici: ML.NET ile ürün satışlardaki anormallikleri algılama
 
 Ürün satış verileri için anomali algılama uygulaması oluşturmayı öğrenin. Bu öğretici, Visual Studio 'da C# kullanarak bir .NET Core konsol uygulaması oluşturur.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Verileri yükleme
@@ -42,11 +42,11 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 2. Veri kümesi dosyalarınızı kaydetmek için projenizde *veri* adlı bir dizin oluşturun.
 
-3. **Microsoft.ml NuGet paketini**yükler:
+3. **Microsoft.ml NuGet paketini** yükler:
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, gözden geçirme sekmesini seçin, **Microsoft.ml** araması yapın ve **yüklemeyi** seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin. **Microsoft. ml. TimeSeries**için bu adımları tekrarlayın.
+    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, gözden geçirme sekmesini seçin, **Microsoft.ml** araması yapın ve **yüklemeyi** seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin. **Microsoft. ml. TimeSeries** için bu adımları tekrarlayın.
 
 4. `using` *Program.cs* dosyanızın en üstüne aşağıdaki deyimleri ekleyin:
 
@@ -60,7 +60,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
      \*. Csv dosyasını *veri* klasörüne kaydettiğinizden ya da başka bir yere kaydettikten sonra, \* . csv dosyasını *veri* klasörüne taşıdığınızdan emin olun.
 
-2. Çözüm Gezgini, \* . csv dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
+2. Çözüm Gezgini, \* . csv dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala** olarak değiştirin.
 
 Aşağıdaki tabloda,. csv dosyanızdaki bir veri önizlemesi verilmiştir \* :
 
@@ -80,11 +80,11 @@ Projenize yeni bir sınıf ekleyin:
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **> yeni öğe Ekle**' yi seçin.
 
-2. **Yeni öğe Ekle iletişim kutusunda** **sınıf** ' ı seçin ve **ad** alanını *ProductSalesData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+2. **Yeni öğe Ekle iletişim kutusunda** **sınıf** ' ı seçin ve **ad** alanını *ProductSalesData.cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
    *ProductSalesData.cs* dosyası kod düzenleyicisinde açılır.
 
-3. Aşağıdaki `using` ifadeyi *ProductSalesData.cs*öğesinin en üstüne ekleyin:
+3. Aşağıdaki `using` ifadeyi *ProductSalesData.cs* öğesinin en üstüne ekleyin:
 
    ```csharp
    using Microsoft.ML.Data;
@@ -94,14 +94,14 @@ Projenize yeni bir sınıf ekleyin:
 
     [!code-csharp[DeclareTypes](./snippets/sales-anomaly-detection/csharp/ProductSalesData.cs#DeclareTypes "Declare data record types")]
 
-    `ProductSalesData`bir giriş veri sınıfını belirtir. [Loadcolumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) özniteliği, veri kümesindeki hangi sütunların (sütun dizinine göre) yükleneceğini belirtir.
+    `ProductSalesData` bir giriş veri sınıfını belirtir. [Loadcolumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) özniteliği, veri kümesindeki hangi sütunların (sütun dizinine göre) yükleneceğini belirtir.
 
-    `ProductSalesPrediction`tahmin verileri sınıfını belirtir. Anomali algılama için tahmin, bir anomali, ham puan ve p değeri olup olmadığını belirten bir uyarıdan oluşur. P değeri 0 ' a yaklaşarak daha büyük bir anomali meydana geldi.
+    `ProductSalesPrediction` tahmin verileri sınıfını belirtir. Anomali algılama için tahmin, bir anomali, ham puan ve p değeri olup olmadığını belirten bir uyarıdan oluşur. P değeri 0 ' a yaklaşarak daha büyük bir anomali meydana geldi.
 
 5. Son indirilen veri kümesi dosya yolunu ve kaydedilen model dosyası yolunu tutmak için iki genel alan oluşturun:
 
-    * `_dataPath`, modeli eğitmek için kullanılan veri kümesinin yolunu içerir.
-    * `_docsize`veri kümesi dosyasındaki kayıt sayısına sahiptir. Öğesini `_docSize` hesaplamak için kullanacaksınız `pvalueHistoryLength` .
+    * `_dataPath` , modeli eğitmek için kullanılan veri kümesinin yolunu içerir.
+    * `_docsize` veri kümesi dosyasındaki kayıt sayısına sahiptir. Öğesini `_docSize` hesaplamak için kullanacaksınız `pvalueHistoryLength` .
 
 6. Aşağıdaki kodu, `Main` Bu yolları belirtmek için yönteminin hemen üstüne ekleyin:
 
@@ -117,7 +117,7 @@ Projenize yeni bir sınıf ekleyin:
 
 ### <a name="load-the-data"></a>Verileri yükleme
 
-ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olarak temsil edilir. `IDataView`, tablo verilerini (sayısal ve metin) tanımlamaya yönelik esnek ve verimli bir yoldur. Veriler bir metin dosyasından veya diğer kaynaklardan (örneğin, SQL veritabanı veya günlük dosyaları) bir `IDataView` nesneye yüklenebilir.
+ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olarak temsil edilir. `IDataView` , tablo verilerini (sayısal ve metin) tanımlamaya yönelik esnek ve verimli bir yoldur. Veriler bir metin dosyasından veya diğer kaynaklardan (örneğin, SQL veritabanı veya günlük dosyaları) bir `IDataView` nesneye yüklenebilir.
 
 1. Aşağıdaki kodu yönteminin sonraki satırı olarak ekleyin `Main()` :
 
@@ -205,9 +205,9 @@ Aşağıdaki yöntemi öğesine ekleyin `Program.cs` :
 
     Aşağıdaki bilgileri, depo algılama sonuçlarında görüntüleriz:
 
-    * `Alert`belirli bir veri noktası için ani bir uyarı gösterir.
-    * `Score`, `ProductSales` veri kümesindeki belirli bir veri noktasının değeridir.
-    * `P-Value`"P" olasılık anlamına gelir. P değerinin 0 olması, büyük olasılıkla veri noktasının bir anomali olması olabilir.
+    * `Alert` belirli bir veri noktası için ani bir uyarı gösterir.
+    * `Score` , `ProductSales` veri kümesindeki belirli bir veri noktasının değeridir.
+    * `P-Value` "P" olasılık anlamına gelir. P değerinin 0 olması, büyük olasılıkla veri noktasının bir anomali olması olabilir.
 
 1. Üzerinde yinelemek `predictions` `IEnumerable` ve sonuçları göstermek için aşağıdaki kodu kullanın:
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 ## <a name="change-point-detection"></a>Değişiklik noktası algılama
 
-`Change points`, değerlerin bir zaman serisi olay akışı dağıtımında, düzey değişiklikleri ve eğilimleri gibi kalıcı değişiklikler. Bu kalıcı değişiklikler en son çok daha uzundur `spikes` ve çok zararlı olay (ler) i gösterebilir. `Change points`genellikle çıplak göz için görünür değildir, ancak verilerinizde aşağıdaki yöntemde olduğu gibi yaklaşımlar kullanılarak algılanabilir.  Aşağıdaki görüntü, değişiklik noktası algılamayı bir örneğidir:
+`Change points` , değerlerin bir zaman serisi olay akışı dağıtımında, düzey değişiklikleri ve eğilimleri gibi kalıcı değişiklikler. Bu kalıcı değişiklikler en son çok daha uzundur `spikes` ve çok zararlı olay (ler) i gösterebilir. `Change points` genellikle çıplak göz için görünür değildir, ancak verilerinizde aşağıdaki yöntemde olduğu gibi yaklaşımlar kullanılarak algılanabilir.  Aşağıdaki görüntü, değişiklik noktası algılamayı bir örneğidir:
 
 ![Değişiklik noktası algılamayı gösteren ekran görüntüsü.](./media/sales-anomaly-detection/change-point-detection.png)
 
@@ -309,10 +309,10 @@ Alert   Score   P-Value
 
     Değişiklik noktası algılama sonuçlarında aşağıdaki bilgileri görüntüleyebilirsiniz:
 
-    * `Alert`belirli bir veri noktası için bir değişiklik noktası uyarısı olduğunu gösterir.
-    * `Score`, `ProductSales` veri kümesindeki belirli bir veri noktasının değeridir.
-    * `P-Value`"P" olasılık anlamına gelir. P değerinin 0 olması, büyük olasılıkla veri noktasının bir anomali olması olabilir.
-    * `Martingale value`, P-değerleri dizisine göre "tuhaf" bir veri noktasının nasıl olduğunu belirlemek için kullanılır.
+    * `Alert` belirli bir veri noktası için bir değişiklik noktası uyarısı olduğunu gösterir.
+    * `Score` , `ProductSales` veri kümesindeki belirli bir veri noktasının değeridir.
+    * `P-Value` "P" olasılık anlamına gelir. P değerinin 0 olması, büyük olasılıkla veri noktasının bir anomali olması olabilir.
+    * `Martingale value` , P-değerleri dizisine göre "tuhaf" bir veri noktasının nasıl olduğunu belirlemek için kullanılır.
 
 1. Üzerinde yineleme `predictions` `IEnumerable` yapın ve sonuçları aşağıdaki kodla görüntüleyin:
 
@@ -384,6 +384,6 @@ Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Güç tüketimi anomali algılama örneğini araştırmak için Machine Learning örnekleri GitHub deposuna göz atın.
+Bir mevsimsellik veri anomali algılama örneğini araştırmak için Machine Learning örnekleri GitHub deposuna göz atın.
 > [!div class="nextstepaction"]
-> [DotNet/machinöğrenim-Samples GitHub deposu](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)
+> [DotNet/machinöğrenim-Samples GitHub deposu](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls)
