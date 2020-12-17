@@ -2,13 +2,13 @@
 title: 'Öğretici: .NET aracı oluşturma'
 description: .NET aracı oluşturmayı öğrenin. Araç, .NET CLı kullanılarak yüklenen bir konsol uygulamasıdır.
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 8f2dd15982aff9fe2d9db9ce2cff8ac1b22e440e
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.date: 12/14/2020
+ms.openlocfilehash: dc5cf014336848ff1a3035647a386419653a083b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512638"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633903"
 ---
 # <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>Öğretici: .NET CLı kullanarak .NET aracı oluşturma
 
@@ -22,10 +22,10 @@ Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET SDK 5,0](https://dotnet.microsoft.com/download) veya sonraki bir sürümü.
+- [.NET SDK 5.0.100](https://dotnet.microsoft.com/download) veya sonraki bir sürümü.
 
   Bu öğretici .NET SDK 5,0 kullanır, ancak küresel araçlar .NET Core SDK 2,1 ' den itibaren kullanılabilir. Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir.
-  
+
 - Tercih ettiğiniz bir metin veya kod düzenleyicisi.
 
 ## <a name="create-a-project"></a>Proje oluşturma
@@ -35,10 +35,22 @@ Bu, bir dizi üç öğreticiden ilkdir. Bu öğreticide bir araç oluşturur ve 
 1. *Depo* klasörüne gidin ve şu komutu girin:
 
    ```dotnetcli
-   dotnet new console -n microsoft.botsay
+   dotnet new console -n microsoft.botsay -f net5.0
    ```
 
    Komut, *Depo* klasörü altında *Microsoft. botdeyin* adlı yeni bir klasör oluşturur.
+
+   > [!NOTE]
+   > Bu öğreticide, .NET 5,0 ' i hedefleyen bir araç oluşturursunuz. Farklı bir çerçeveyi hedeflemek için `-f|--framework` seçeneğini değiştirin. Birden çok çerçeveyi hedeflemek için, `TargetFramework` `TargetFrameworks` Aşağıdaki örnekte gösterildiği gibi, öğesini proje dosyasındaki bir öğeyle değiştirin:
+   >
+   > ```xml
+   > <Project Sdk="Microsoft.NET.Sdk">
+   >   <PropertyGroup>
+   >     <OutputType>Exe</OutputType>
+   >     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+   >   </PropertyGroup>
+   > </Project>
+   > ```
 
 1. *Microsoft. botsay* klasörüne gidin.
 
@@ -164,16 +176,16 @@ Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proj
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
-  
+
      <PropertyGroup>
 
        <OutputType>Exe</OutputType>
        <TargetFramework>net5.0</TargetFramework>
-  
+
        <PackAsTool>true</PackAsTool>
        <ToolCommandName>botsay</ToolCommandName>
        <PackageOutputPath>./nupkg</PackageOutputPath>
-  
+
      </PropertyGroup>
 
    </Project>
@@ -186,7 +198,7 @@ Uygulamayı bir araç olarak paketleyebilir ve dağıtabilmeniz için önce proj
    ```
 
    *Microsoft. botı. 1.0.0. nupkg* dosyası, `<PackageOutputPath>` *Microsoft. botsöyleyin. csproj* dosyasındaki değeri tarafından tanımlanan klasörde oluşturulur. Bu örnekte *./nupkg* klasörüdür.
-  
+
    Bir aracı herkese açık bir şekilde yayınlamak istediğinizde, ' a yükleyebilirsiniz `https://www.nuget.org` . Araç NuGet 'de kullanılabilir olduğunda, geliştiriciler [DotNet aracı install](dotnet-tool-install.md) komutunu kullanarak aracı yükleyebilir. Bu öğreticide, paketini doğrudan yerel *nupkg* klasöründen yüklersiniz, bu nedenle paketi NuGet 'e yüklemeye gerek yoktur.
 
 ## <a name="troubleshoot"></a>Sorun giderme

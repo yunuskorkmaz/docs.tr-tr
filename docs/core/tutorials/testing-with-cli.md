@@ -3,16 +3,16 @@ title: .NET CLı ile projeleri düzenleme ve test etme
 description: Bu öğreticide, komut satırından .NET projelerinin nasıl düzenlenmesi ve test yapılacağı açıklanmaktadır.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 93e8a6b8afd9f9405bf21488998a61c2e761bf1e
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 263eaf15beac008de8bb353a385b8f3588a7fefc
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512261"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633643"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-cli"></a>.NET CLı ile projeleri düzenleme ve test etme
 
-Bu öğretici [öğretici: Visual Studio Code kullanarak .NET ile bir konsol uygulaması oluşturma](with-visual-studio-code.md), gelişmiş ve iyi düzenlenmiş uygulamalar geliştirmeye yönelik basit bir konsol uygulaması oluşturmayı aşarak. Kodunuzu düzenlemek için klasörleri nasıl kullanacağınızı gösterdikten sonra, bu öğreticide [xUnit](https://xunit.github.io/) test çerçevesiyle bir konsol uygulamasını nasıl genişletebileceğinizi gösterir.
+Bu öğretici [öğretici: Visual Studio Code kullanarak .NET ile bir konsol uygulaması oluşturma](with-visual-studio-code.md), gelişmiş ve iyi düzenlenmiş uygulamalar geliştirmeye yönelik basit bir konsol uygulaması oluşturmayı aşarak. Kodunuzu düzenlemek için klasörleri nasıl kullanacağınızı gösterdikten sonra, bu öğreticide [xUnit](https://xunit.net/) test çerçevesiyle bir konsol uygulamasını nasıl genişletebileceğinizi gösterir.
 
 ## <a name="using-folders-to-organize-code"></a>Kodu düzenlemek için klasörleri kullanma
 
@@ -104,7 +104,7 @@ Meow!
 
 ### <a name="testing-the-sample"></a>Örneği test etme
 
-`NewTypes`Proje yerinde ve pets ile ilgili türleri bir klasörde tutarak düzenlemiş olursunuz. Ardından, test projenizi oluşturun ve [xUnit](https://xunit.github.io/) test çerçevesi ile testleri yazmaya başlayın. Birim testi, sorunsuz şekilde çalıştığının nasıl yapılacağını onaylamak için evcil hayvan türlerinizi davranışını otomatik olarak denetlemenizi sağlar.
+`NewTypes`Proje yerinde ve pets ile ilgili türleri bir klasörde tutarak düzenlemiş olursunuz. Ardından, test projenizi oluşturun ve [xUnit](https://xunit.net/) test çerçevesi ile testleri yazmaya başlayın. Birim testi, sorunsuz şekilde çalıştığının nasıl yapılacağını onaylamak için evcil hayvan türlerinizi davranışını otomatik olarak denetlemenizi sağlar.
 
 *Src* klasörüne geri gidin ve Içinde *newtypestests* klasörünü içeren bir *Test* klasörü oluşturun. *Newtypestests* klasöründen bir komut isteminde yürütün `dotnet new xunit` . Bu iki dosya üretir: *Newtypestests. csproj* ve *UnitTest1.cs*.
 

@@ -4,12 +4,12 @@ description: .NET CLı kullanarak .NET kitaplıkları oluşturmayı öğrenin. �
 author: cartermp
 ms.topic: how-to
 ms.date: 12/14/2020
-ms.openlocfilehash: 5a70cec4a991f673f4d5d3e7b00cd704c6799f47
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 6f4c1feac7630a6a0250e4b0b39ef01152f5a400
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512417"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633682"
 ---
 # <a name="develop-libraries-with-the-net-cli"></a>.NET CLı ile Kitaplıklar geliştirme
 
@@ -206,7 +206,7 @@ Bunların her biri, `.dll` her bir hedef için dosyaları içerir.
 
 ## <a name="how-to-test-libraries-on-net"></a>.NET üzerinde kitaplıkları test etme
 
-Platformlar arasında test etmek önemlidir. Kutusundan [xUnit](https://xunit.github.io/) veya mstest kullanabilirsiniz. Her ikisi de kitaplığınızı .NET 'teki birim testi için uygun şekilde uygundur. Çözümünüzü Test projeleri ile nasıl [ayarlayacağınıza çözümünüzün yapısına](#structuring-a-solution)göre değişiklik gösterir. Aşağıdaki örnek, test ve kaynak dizinlerinin aynı en üst düzey dizinde canlı olduğunu varsayar.
+Platformlar arasında test etmek önemlidir. Kutusundan [xUnit](https://xunit.net/) veya mstest kullanabilirsiniz. Her ikisi de kitaplığınızı .NET 'teki birim testi için uygun şekilde uygundur. Çözümünüzü Test projeleri ile nasıl [ayarlayacağınıza çözümünüzün yapısına](#structuring-a-solution)göre değişiklik gösterir. Aşağıdaki örnek, test ve kaynak dizinlerinin aynı en üst düzey dizinde canlı olduğunu varsayar.
 
 > [!NOTE]
 > Bu bazı [.net CLI](../tools/index.md) komutlarını kullanır. Daha fazla bilgi için bkz. [DotNet New](../tools/dotnet-new.md) ve [DotNet sln](../tools/dotnet-sln.md) .

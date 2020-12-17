@@ -2,12 +2,12 @@
 title: .NET çalışma zamanı ve SDK 'nın sürümü oluşturma
 description: Bu makalede, .NET SDK ve çalışma zamanının nasıl sürümleneceği (anlamsal sürüm oluşturma ile benzerdir) açıklanmaktadır.
 ms.date: 12/07/2020
-ms.openlocfilehash: 2fe0b162b52f1e4500ec87f7d5d92054cd569552
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 2fbc2775f31b4eab1c9883282c58accd9bb2b9f5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009312"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633630"
 ---
 # <a name="overview-of-how-net-is-versioned"></a>.NET sürümünün sürümü oluşturma konusuna genel bakış
 
@@ -19,9 +19,9 @@ ms.locfileid: "97009312"
 
 .NET SDK, anlamsal sürüm oluşturmayı takip etmez. .NET SDK 'nın daha hızlı ve sürüm numaralarının her ikisi de hizalı çalışma zamanına ve SDK 'nın kendi alt ve düzeltme eki yayınlarına iletişim kurması gerekir.
 
-.NET SDK sürüm numarasının ilk iki konumu, ile birlikte yayımlanan .NET çalışma zamanına kilitlidir. SDK 'nın her sürümü bu çalışma zamanına veya daha düşük bir sürüme yönelik uygulamalar oluşturabilir.
+.NET SDK sürüm numarasının ilk iki konumu ile yayınlanan .NET çalışma zamanı sürümüne kilitlidir. SDK 'nın her sürümü bu çalışma zamanına veya daha düşük bir sürüme yönelik uygulamalar oluşturabilir.
 
-SDK sürüm numarasının üçüncü konumu hem küçük hem de yayama numarasını iletişim kurar. İkincil sürüm 100 ile çarpılır. İkincil sürüm 1, düzeltme eki sürüm 2 102 olarak temsil edilir. Son iki basamak, düzeltme eki numarasını temsil eder. Örneğin, bir çalışma zamanı ve SDK sürüm numarası sırası aşağıda verilmiştir:
+SDK sürüm numarasının üçüncü konumu hem küçük hem de yayama numarasını iletişim kurar. İkincil sürüm 100 ile çarpılır. Son iki basamak, düzeltme eki numarasını temsil eder. İkincil sürüm 1, düzeltme eki sürüm 2 102 olarak temsil edilir. Örneğin, bir çalışma zamanı ve SDK sürüm numarası sırası aşağıda verilmiştir:
 
 | Değiştir                | .NET Çalışma Zamanı      | .NET SDK ( \* )     |
 |-----------------------|-------------------|-------------------|

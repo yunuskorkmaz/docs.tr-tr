@@ -1,16 +1,17 @@
 ---
 title: DotNet New-.NET CLı için bir öğe şablonu oluşturma
+titleSuffix: ''
 description: DotNet New komutu için bir öğe şablonu oluşturmayı öğrenin. Öğe şablonları, herhangi bir sayıda dosya içerebilir.
 author: adegeo
 ms.date: 12/11/2020
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: b148870480584cff37f3fd395e0594344001f247
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: d213646a933c77bd0d9a3f1aa9b6b4948b66439b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512430"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633669"
 ---
 # <a name="tutorial-create-an-item-template"></a>Öğretici: öğe şablonu oluşturma
 

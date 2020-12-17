@@ -2,12 +2,12 @@
 title: ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Kapsayıcılarda ASP.NET Core Hizmetleri ve Web uygulamalarını test etmek için bir mimari bulun.
 ms.date: 08/07/2020
-ms.openlocfilehash: af1187fb1e2afbb9fa953db5a280c9cc317ab6a8
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804776"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633955"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 
@@ -31,7 +31,7 @@ Denetleyici eylemlerinizi birim testi yaparken, yalnızca davranışlarını oda
 
 Birim testleri xUnit.net, MSTest, moq veya NUnit gibi test çerçeveleri temelinde uygulanır. EShopOnContainers örnek uygulaması için xUnit kullandık.
 
-Bir Web API denetleyicisi için bir birim testi yazdığınızda, \# test, mümkün olduğunca hızlı çalışacak şekilde, C içindeki New anahtar sözcüğünü kullanarak doğrudan denetleyici sınıfını örnekleyebilirsiniz. Aşağıdaki örnek, [xUnit](https://xunit.github.io/) 'i test çerçevesi olarak kullanırken nasıl yapılacağını gösterir.
+Bir Web API denetleyicisi için bir birim testi yazdığınızda, \# test, mümkün olduğunca hızlı çalışacak şekilde, C içindeki New anahtar sözcüğünü kullanarak doğrudan denetleyici sınıfını örnekleyebilirsiniz. Aşağıdaki örnek, [xUnit](https://xunit.net/) 'i test çerçevesi olarak kullanırken nasıl yapılacağını gösterir.
 
 ```csharp
 [Fact]
@@ -111,7 +111,7 @@ public class PrimeWebDefaultRequestShould
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Resmi site. \
-    <https://xunit.github.io/>
+    <https://xunit.net/>
 
 - **Birim testi temelleri.** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
@@ -138,7 +138,7 @@ Başvuru uygulaması (eShopOnContainers) testleri yakın zamanda yeniden yapıla
 
 2. **Mikro hizmet işlevsel/tümleştirme testleri**, her bir mikro hizmetin altyapısını içeren, ancak diğerlerinden yalıtılmış ve **{mikro ServiceName} içinde yer alan test çalışmaları. FunctionalTests** projeleri.
 
-3. Birkaç mikro hizmet sunan test çalışmaları ile mikro hizmet tümleştirmesine odaklanarak **uygulama işlevsel/tümleştirme sınamaları**. Bu testler Project **Application. FunctionalTests**içinde bulunur.
+3. Birkaç mikro hizmet sunan test çalışmaları ile mikro hizmet tümleştirmesine odaklanarak **uygulama işlevsel/tümleştirme sınamaları**. Bu testler Project **Application. FunctionalTests** içinde bulunur.
 
 Birim ve tümleştirme testleri, mikro hizmet projesindeki bir test klasöründe düzenlendiğinden, Şekil 6-25 ' de gösterildiği gibi uygulama ve yük testleri kök klasör altında ayrı olarak yönetilir.
 

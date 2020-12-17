@@ -4,12 +4,12 @@ description: .NET araçları 'nı yüklemek, kullanmak, güncelleştirmek ve kal
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 8839fd4fba72c9f973d906eabb72919306a847dd
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556907"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633890"
 ---
 # <a name="how-to-manage-net-tools"></a>.NET araçlarını yönetme
 
@@ -40,8 +40,6 @@ Araç bulmak için bazı yollar şunlardır:
 
 * NuGet.org 'e yayınlanan bir araç bulmak için [DotNet aracı arama](dotnet-tool-search.md) komutunu kullanın.
 * ".NET aracı" paket türü filtresini kullanarak [NuGet](https://www.nuget.org) Web sitesinde arama yapın. Daha fazla bilgi için bkz. [paketleri bulma ve seçme](/nuget/consume-packages/finding-and-choosing-packages).
-* [Natemcmaster/DotNet-Tools](https://github.com/natemcmaster/dotnet-tools) GitHub deposundaki araçların listesine bakın.
-* .NET araçları aramak için [araç al](https://www.toolget.net/) 'ı kullanın.
 * [DotNet/aspnetcore GitHub deposunun Araçlar dizininde](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)ASP.NET Core ekibi tarafından oluşturulan araçların kaynak koduna bakın.
 * [.Net tanılama araçları](../diagnostics/index.md#net-core-diagnostic-global-tools)'nda tanılama araçları hakkında bilgi edinin.
 
@@ -109,7 +107,7 @@ Yalnızca yerel erişim için bir araç yüklemek üzere (geçerli dizin ve alt 
 dotnet new tool-manifest
 ```
 
-Bu komut, *. config* dizininde *dotnet-tools.js* adlı bir bildirim dosyası oluşturur. Bildirim dosyasına yerel bir araç eklemek için, [DotNet aracı install](dotnet-tool-install.md) komutunu kullanın ve **omit** `--global` `--tool-path` Aşağıdaki örnekte gösterildiği gibi, ve seçeneklerini atlayın:
+Bu komut, *. config* dizininde *dotnet-tools.js* adlı bir bildirim dosyası oluşturur. Bildirim dosyasına yerel bir araç eklemek için, [DotNet aracı install](dotnet-tool-install.md) komutunu kullanın ve  `--global` `--tool-path` Aşağıdaki örnekte gösterildiği gibi, ve seçeneklerini atlayın:
 
 ```dotnetcli
 dotnet tool install dotnetsay

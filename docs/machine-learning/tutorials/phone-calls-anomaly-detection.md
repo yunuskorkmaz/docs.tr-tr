@@ -4,12 +4,12 @@ description: Zaman serisi verileri için anomali algılama uygulaması oluşturm
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 69b617e760c1dd6a579c925168c92630756f92fc
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 3451a44f8fa7ae85625687b7d52f120c411df1b6
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596617"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97634059"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>Öğretici: ML.NET ile zaman serisinde anomali algılama
 
@@ -22,9 +22,9 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Zaman serisi için dönemi algılama
 > * Süreli bir zaman serisi için anomali algılama
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) deposunda bulabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Visual Studio 2019 sürüm 16.7.8 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
@@ -66,7 +66,7 @@ Aşağıdaki tabloda,. csv dosyanızdaki bir veri önizlemesi verilmiştir \* :
 | 2018/10/3  | 34,49893429  |
 | ...    | ....   |
 
-Bu dosya bir zaman serisini temsil eder. Dosyadaki her bir satır bir veri noktasıdır. Her bir `timestamp` `value` günde telefon araması sayısını reprensent için her bir veri pizı iki özniteliğe sahiptir. Telefon çağrılarının sayısı, büyük/küçük harfe dönüştürülür.
+Bu dosya bir zaman serisini temsil eder. Dosyadaki her bir satır bir veri noktasıdır. Her bir `timestamp` `value` günlük telefon araması sayısını göstermek için her bir veri noktasının, ve, iki özniteliği vardır. Telefon çağrılarının sayısı, büyük/küçük harfe dönüştürülür.
 
 ### <a name="create-classes-and-define-paths"></a>Sınıf oluşturma ve yollar tanımlama
 
@@ -92,7 +92,7 @@ Projenize yeni bir sınıf ekleyin:
 
     `PhoneCallsData` bir giriş veri sınıfını belirtir. [Loadcolumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) özniteliği, veri kümesindeki hangi sütunların (sütun dizinine göre) yükleneceğini belirtir. İki özniteliğe sahiptir `timestamp` ve `value` veri dosyasındaki aynı özniteliklere karşılık gelir.
 
-    `PhoneCallsPrediction` tahmin verileri sınıfını belirtir. SR-CNN algılayıcısı için tahmin, belirtilen [algılama moduna](xref:Microsoft.ML.TimeSeries.SrCnnDetectMode) bağlıdır. Bu örnekte modu seçtik `AnomalyAndMargin` . Çıktı yedi sütun içerir. Çoğu durumda,, `IsAnomaly` , `ExpectedValue` `UpperBoundary` ve çok `LowerBoundary` bilgilendirme yeterlidir. Bir noktanın bir anomali, noktanın beklenen değeri ve noktanın alt/üst sınır bölgesi olduğunu bildirir.
+    `PhoneCallsPrediction` tahmin verileri sınıfını belirtir. SR-CNN algılayıcısı için tahmin, belirtilen [algılama moduna](xref:Microsoft.ML.TimeSeries.SrCnnDetectMode) bağlıdır. Bu örnekte, modu seçtik `AnomalyAndMargin` . Çıktı yedi sütun içerir. Çoğu durumda,, `IsAnomaly` , `ExpectedValue` `UpperBoundary` ve çok `LowerBoundary` bilgilendirme yeterlidir. Bir noktanın bir anomali, noktanın beklenen değeri ve noktanın alt/üst sınır bölgesi olduğunu bildirir.
 
 5. Aşağıdaki kodu, `Main` veri dosyanızın yolunu belirtmek için yönteminin hemen üzerindeki satıra ekleyin:
 
@@ -120,7 +120,7 @@ ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olar
 
 Zaman serisi anomali algılama, zaman serisi veri aykırı durumları algılama işlemidir; belirli bir giriş zaman serisini, davranışın beklenmediği veya "tuhaf" olduğunu gösterir. Bu anormaller genellikle sorun etki alanı ile ilgili bazı olayları ifade eder: Kullanıcı hesaplarında bir Cyber-saldırı, güç kesintisi, bir sunucu üzerinde RPS, bellek sızıntısı vb.
 
-Zaman serisinde anomali bulmak için, önce serinin dönemini belirlemelisiniz. Daha sonra, zaman serisi çeşitli bileşenlere ayrılabilir `Y = T + S + R` , burada `Y` özgün seriler, `T` eğilim bileşenidir ve bu da `S` serinin farklı `R` bileşenidir. Bu adım [ayrıştırma](https://en.wikipedia.org/wiki/Decomposition_of_time_series)olarak adlandırılır. Son olarak, algılama işlemi, diğer bileşende, anormallikleri bulmak için gerçekleştirilir. ML.NET ' de, SR-CNN algoritması, zaman serisi üzerinde anomali algılama (Bu algoritmayla ilgili daha fazla bilgi için Microsoft kağıdına yönelik [zaman serisi anomali algılama hizmetine](https://arxiv.org/pdf/1906.03821.pdf) bakın) Ile Spectral ARTıMı (SR) ve evsel sinir ağı (CNN) temel alan gelişmiş ve önemli bir algoritmadır.
+Zaman serisinde anomali bulmak için, önce serinin dönemini belirlemelisiniz. Daha sonra, zaman serisi çeşitli bileşenlere parçalanır `Y = T + S + R` , burada `Y` özgün seriler, `T` eğilim bileşeni, `S` mevsimdir ve `R` serinin kalan bileşenidir. Bu adım [ayrıştırma](https://en.wikipedia.org/wiki/Decomposition_of_time_series)olarak adlandırılır. Son olarak, algılama işlemi, diğer bileşende, anormallikleri bulmak için gerçekleştirilir. ML.NET ' de, SR-CNN algoritması, zaman serisinde anomali algılama için Spectral artımı (SR) ve evsel sinir ağı (CNN) temel alan gelişmiş ve önemli algoritmadır. Bu algoritma hakkında daha fazla bilgi için bkz. [Microsoft 'Ta zaman serisi anomali algılama hizmeti](https://arxiv.org/pdf/1906.03821.pdf).
 
 Bu öğreticide, bu yordamların iki işlev kullanılarak tamamlanbir şekilde görülecektir.
 
@@ -139,7 +139,7 @@ Bu öğreticide, bu yordamların iki işlev kullanılarak tamamlanbir şekilde g
     }
     ```
 
-2. Dönemi saptamak için [Detectmevsimsellik](xref:Microsoft.ML.TimeSeriesCatalog.DetectSeasonality) işlevini kullanın. `DetectPeriod`Aşağıdaki kodla yöntemine ekleyin:
+2. <xref:Microsoft.ML.TimeSeriesCatalog.DetectSeasonality%2A>Dönemi algılamak için işlevini kullanın. `DetectPeriod`Aşağıdaki kodla yöntemine ekleyin:
 
     [!code-csharp[DetectSeasonality](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#DetectSeasonality)]
 
@@ -161,7 +161,7 @@ Period of the series is: 7.
 
 ## <a name="detect-anomaly"></a>Anomali algılama
 
-Bu adımda, [`SrCnnEntireDetector`](xref:Microsoft.ML.Transforms.TimeSeries.SrCnnEntireAnomalyDetector) anomali bulmak için öğesini kullanırsınız.
+Bu adımda, <xref:Microsoft.ML.TimeSeriesCatalog.DetectEntireAnomalyBySrCnn%2A> anormallikleri bulmak için yöntemini kullanırsınız.
 
 ### <a name="create-the-detectanomaly-method"></a>DetectAnomaly yöntemini oluşturma
 
@@ -174,7 +174,7 @@ Bu adımda, [`SrCnnEntireDetector`](xref:Microsoft.ML.Transforms.TimeSeries.SrCn
     }
     ```
 
-2. Yönteminde aşağıdaki kodla [Srcnnentireanoydetectoroçenayarları](xref:Microsoft.ML.Transforms.TimeSeries.SrCnnEntireAnomalyDetectorOptions) `DetectAnomaly` yapın:
+2. <xref:Microsoft.ML.TimeSeries.SrCnnEntireAnomalyDetectorOptions> `DetectAnomaly` Yönteminde aşağıdaki kodla ayarlayın:
 
     [!code-csharp[SetupSrCnnParameters](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#SetupSrCnnParameters)]
 
@@ -193,7 +193,7 @@ Bu adımda, [`SrCnnEntireDetector`](xref:Microsoft.ML.Transforms.TimeSeries.SrCn
     Değişiklik noktası algılama sonuçlarında aşağıdaki bilgileri görüntüleyebilirsiniz:
 
     * `Index` her noktanın dizinidir.
-    * `Anomaly` her noktanın anomali olarak algılandığına ilişkin bir göstergedir.
+    * `Anomaly` her noktanın anomali olarak algılanıp algılanmadığını gösteren göstergedir.
     * `ExpectedValue` her noktanın tahmini değeridir.
     * `LowerBoundary` her noktanın en düşük değeri anomali olamaz.
     * `UpperBoundary` en yüksek değer, her noktanın anomali olmaması olabilir.
@@ -208,7 +208,7 @@ Bu adımda, [`SrCnnEntireDetector`](xref:Microsoft.ML.Transforms.TimeSeries.SrCn
 
 ## <a name="anomaly-detection-results"></a>Anomali algılama sonuçları
 
-Uygulamayı çalıştırın. Sonuçlarınız aşağıdakine benzer olmalıdır. İşlem sırasında iletiler görüntülenir. Uyarıları görebilir veya iletileri işleme alabilirsiniz. Bazı iletiler, açıklık açısından aşağıdaki sonuçlardan kaldırılmıştır.
+Uygulamayı çalıştırın. Sonuçlarınız aşağıdakine benzer olmalıdır. İşlem sırasında iletiler görüntülenir. Uyarıları veya işlem iletilerini görebilirsiniz. Bazı iletiler, açıklık açısından aşağıdaki sonuçlardan kaldırılmıştır.
 
 ```console
 Detect period of the series
@@ -243,7 +243,7 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 25,0,29.381125690882463,33.681408258162854,25.080843123602072
 26,0,5.261543539820418,9.561826107100808,0.9612609725400283
 27,0,5.4873712582971805,9.787653825577571,1.1870886910167897
-28,1,36.504694001629254,40.804976568909645,32.20441143434886  <-- alert is on, detecte anomaly
+28,1,36.504694001629254,40.804976568909645,32.20441143434886  <-- alert is on, detected anomaly
 ...
 ```
 

@@ -1,31 +1,33 @@
 ---
-title: 'Son değişiklik: seri durumdan çıkarma tek karakterli dize gerektiriyor'
-description: JsonSerializer. serisini kaldırma, tek karakterli bir dize gerektirdiğinde, .NET 5,0 'deki Son değişiklik hakkında bilgi edinin.
-ms.date: 10/18/2020
-ms.openlocfilehash: 780f2928d776ecb6db9a7fc05a720e889eb363e7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+title: 'Son değişiklik: karakter serisini kaldırma, tek karakterlik dize gerektirir'
+description: System.Text.Json 'un, bir Char hedefi serisi kaldırılırken JSON 'da tek char dizesi gerektirdiğini .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+ms.date: 12/15/2020
+ms.openlocfilehash: 39a2d25b00bf8855cfbf46a4d78b8545052703e5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761650"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633877"
 ---
-# <a name="jsonserializerdeserialize-requires-single-character-string"></a>JsonSerializer. serisini kaldırma tek karakterlik dize gerektirir
+# <a name="systemtextjson-requires-single-char-string-to-deserialize-a-char"></a>System.Text.Json, bir karakter serisini kaldırmak için tek char dizesi gerektirir
 
-Tür parametresi olduğunda <xref:System.Char> , için dize bağımsız değişkeni, <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> seri durumdan çıkarma işleminin başarılı olması için tek bir karakter içermelidir.
+Bir using öğesini başarıyla serisini kaldırmak için <xref:System.Char> <xref:System.Text.Json> JSON dizesinin tek bir karakter içermesi gerekir.
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, ' a çok karakterli bir dize geçirirseniz <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> ve tür parametresi ise, <xref:System.Char> seri kaldırma başarılı olur ve yalnızca ilk karakter seri durumdan çıkarıldır.
-
-.NET 5,0 ve üzeri sürümlerde, tür parametresi olduğunda <xref:System.Char> , tek karakterli bir dize dışında bir şey geçirilmesi bir oluşturulmasına neden olur <xref:System.Text.Json.JsonException> .
+Önceki .NET sürümlerinde, JSON 'daki çok dizeli bir `char` `char` özellik veya alana başarıyla seri hale getirilmesi gerekir. `char`Aşağıdaki örnekte olduğu gibi, yalnızca ilk dize kullanılır:
 
 ```csharp
-// .NET Core 3.0 and 3.1: Returns the first character 'a'.
-// .NET 5.0 and later: Throws JsonException because payload has more than one character.
-JsonSerializer.Deserialize<char>("\"abc\"");
+// .NET Core 3.0 and 3.1: Returns the first char 'a'.
+// .NET 5.0 and later: Throws JsonException because payload has more than one char.
+char deserializedChar = JsonSerializer.Deserialize<char>("\"abc\"");
+```
 
+.NET 5,0 ve üzeri sürümlerde, tek dize dışında bir şey, `char` <xref:System.Text.Json.JsonException> seri durumdan çıkarma hedefi bir olduğunda oluşturulmasına neden olur `char` . Aşağıdaki örnek dize tüm .NET sürümlerinde başarıyla seri durumdan çıkarılacak:
+
+```csharp
 // Correct usage.
-JsonSerializer.Deserialize<char>("\"a\"");
+char deserializedChar = JsonSerializer.Deserialize<char>("\"a\"");
 ```
 
 ## <a name="version-introduced"></a>Sunulan sürüm
@@ -34,21 +36,21 @@ JsonSerializer.Deserialize<char>("\"a\"");
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
-<xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> tek bir JSON değerini temsil eden metni, genel tür parametresiyle belirtilen tür örneğine ayrıştırır. Ayrıştırma yalnızca belirtilen yük belirtilen genel tür parametresi için geçerliyse başarılı olur. <xref:System.Char>Değer türü için, geçerli bir yük tek bir karakter dizesidir.
+Seri durumdan çıkarma için ayrıştırma yalnızca, hedef türü için belirtilen yük geçerliyse başarılı olur. Bir `char` tür için, yalnızca geçerli yük tek bir `char` dizedir.
 
 ## <a name="recommended-action"></a>Önerilen eylem
 
-Kullanarak bir dize bir tür içine ayrıştırılırken <xref:System.Char> <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> , dizenin tek bir karakter içerdiğinden emin olun.
+JSON serisini bir `char` hedefte kaldırdığınızda, dizenin tek dışında bulunduğundan emin olun `char` .
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 
-- <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=fullName>
+- <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=fullName>
 
 <!--
 
 ### Affected APIs
 
-- `M:System.Text.Json.JsonSerializer.Deserialize``1(System.String,System.Text.Json.JsonSerializerOptions)`
+- `Overload:System.Text.Json.JsonSerializer.Deserialize`
 
 ### Category
 

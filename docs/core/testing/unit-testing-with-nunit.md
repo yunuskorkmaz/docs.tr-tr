@@ -3,12 +3,12 @@ title: NUnit ve .NET Core Ile birim testi C#
 description: C# ve .NET Core 'da birim testi kavramlarını, DotNet test ve NUnit kullanarak örnek bir çözüm oluşturma adlı etkileşimli bir deneyim aracılığıyla öğrenin.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 90fd917fd980db6689195026a7524e0cacfc92bc
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 9c9982b047f7b3c5a03ecdd2fabfa2a0edce4558
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656377"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633942"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit ve .NET Core Ile birim testi C#
 
@@ -43,7 +43,7 @@ Kaynak projeyi oluşturmak için *Primeservice* 'i geçerli dizin yapın ve şu 
 dotnet new classlib
 ```
 
-*Class1.cs* *olarak yeniden*adlandırın. Sınıfın başarısız bir uygulamasını oluşturursunuz `PrimeService` :
+*Class1.cs* *olarak yeniden* adlandırın. Sınıfın başarısız bir uygulamasını oluşturursunuz `PrimeService` :
 
 ```csharp
 using System;
@@ -120,7 +120,33 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 Başarısız bir test yazdığınızda, geçişi yapıp işlemi tekrarlayabilirsiniz. *Primeservice. Tests* dizininde, *UnitTest1.cs* dosyasını *PrimeService_IsPrimeShould. cs* olarak yeniden adlandırın ve tüm içeriğini aşağıdaki kodla değiştirin:
 
-[!code-csharp[Sample_FirstTest](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_FirstTest)]
+```csharp
+using NUnit.Framework;
+using Prime.Services;
+
+namespace Prime.UnitTests.Services
+{
+    [TestFixture]
+    public class PrimeService_IsPrimeShould
+    {
+        private PrimeService _primeService;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _primeService = new PrimeService();
+        }
+
+        [Test]
+        public void IsPrime_InputIs1_ReturnFalse()
+        {
+            var result = _primeService.IsPrime(1);
+
+            Assert.IsFalse(result, "1 should not be prime");
+        }
+    }
+}
+```
 
 `[TestFixture]`Öznitelik, birim testlerini içeren bir sınıfı gösterir. `[Test]`Özniteliği bir yöntemin test yöntemi olduğunu gösterir.
 

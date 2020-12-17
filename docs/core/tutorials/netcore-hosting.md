@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanının nasıl çalıştığını denetlem
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 79336396de3058e40cf7328e6d92e7e9e54296e9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 358cbff1ded3bd4ee9a3f78965eac1e1b1883ede
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242922"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633863"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>.NET çalışma zamanını yerel kodunuzda denetlemek için özel bir .NET Core ana bilgisayarı yazma
 
@@ -19,7 +19,7 @@ Tüm yönetilen kodlar gibi .NET Core uygulamaları da bir ana bilgisayar taraf�
 
 Bu makale, .NET Core çalışma zamanını yerel koddan başlatmak ve içindeki yönetilen kodu yürütmek için gerekli olan adımlara genel bir bakış sunar.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Konaklar yerel uygulamalar olduğundan, bu öğretici .NET Core barındırmak için bir C++ uygulaması oluşturmayı ele almaktadır. C++ geliştirme ortamı (örneğin, [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)tarafından sağlanacaktır) gerekir.
 
@@ -30,7 +30,7 @@ Ayrıca, bir basit .NET Core uygulamasının konak ile test edebilmesi için, [.
 .NET Core barındırmak için kullanılabilecek iki farklı API vardır. Bu makale (ve ilişkili [örnekleri](https://github.com/dotnet/samples/tree/master/core/hosting)), bu 2 seçenekleri içerir.
 
 * .NET Core 3,0 ve üzeri sürümlerde .NET Core çalışma zamanının barındırılması için tercih edilen yöntem, `nethost` ve `hostfxr` kitaplıklarının API 'larıdır. Bu giriş noktaları, başlatma için çalışma zamanını bulma ve ayarlama karmaşıklığını ve hem yönetilen bir uygulamanın başlatılmasına hem de statik yönetilen bir yönteme çağrılmasını sağlar.
-* .NET Core 3,0 ' den önceki .NET Core çalışma zamanını barındırmak için tercih edilen yöntem API 'dir [`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/hosts/inc/coreclrhost.h) . Bu API, çalışma zamanının kolayca başlatılmasına ve durdurulmasına ve yönetilen kodun çağrılmasını (yönetilen bir exe başlatarak veya statik yönetilen yöntemleri çağırarak) işlevleri kullanıma sunar.
+* .NET Core 3,0 ' den önceki .NET Core çalışma zamanını barındırmak için tercih edilen yöntem API 'dir [`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/hosts/inc/coreclrhost.h) . Bu API, çalışma zamanının kolayca başlatılmasına ve durdurulmasına ve yönetilen kodun çağrılmasını (yönetilen bir exe başlatarak veya statik yönetilen yöntemleri çağırarak) işlevleri kullanıma sunar.
 
 ## <a name="sample-hosts"></a>Örnek konaklar
 
@@ -84,7 +84,7 @@ Yerel ana bilgisayar artık yönetilen yöntemi çağırabilir ve istenen parame
 
 Aşağıdaki adımlar, `coreclrhost.h` yerel bir uygulamada .NET Core çalışma zamanını başlatmak ve yönetilen bir statik yönteme çağırmak için API 'nin nasıl kullanılacağını açıklamaktadır. Bu belgedeki kod parçacıkları Windows 'a özgü bazı API 'Ler kullanır, ancak [tam örnek ana bilgisayar](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost) hem Windows hem de Linux kod yollarını gösterir.
 
-[UNIX CoreRun Host](https://github.com/dotnet/runtime/tree/master/src/coreclr/src/hosts/unixcorerun) , kullanarak daha karmaşık ve gerçek bir barındırma örneği göstermektedir `coreclrhost.h` .
+[UNIX CoreRun Host](https://github.com/dotnet/runtime/tree/master/src/coreclr/hosts/unixcorerun) , kullanarak daha karmaşık ve gerçek bir barındırma örneği göstermektedir `coreclrhost.h` .
 
 ### <a name="step-1---find-and-load-coreclr"></a>1. adım-CoreCLR bulma ve yükleme
 

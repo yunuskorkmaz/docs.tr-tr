@@ -2,12 +2,12 @@
 title: DevOps
 description: Bulutta yerel uygulamalar için DevOps konuları
 ms.date: 05/13/2020
-ms.openlocfilehash: e6e093a1847d3aec37ac5d4ca56f64e0091a9b6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1a04f5178877f3fdde707753e94718ce0f0bb49d
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164005"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633721"
 ---
 # <a name="devops"></a>DevOps
 
@@ -118,11 +118,11 @@ Güvenli olmayan programlama uygulamalarını veya bu API 'lerin sorunlu kullan�
 
 Tek depo yaklaşımının pek çok olumsuz yanı vardır. En çok endişelenmeden biri, tek bir deponun güvenlik konusundaki kaygıları oluşturur. Bir deponun içeriği hizmet modeli başına bir depoda sızsa, kayıp kod miktarı en az olur. Tek bir depoyla şirkete ait olan her şey kaybolabilir. Bu durumda çok sayıda örnek vardı ve oyun geliştirme çabalarının tamamını derler. Birden çok depo olması, çoğu güvenlik uygulamasında istenen bir nitelik daha az yüzey alanı sunar.
 
-Tek Deponun boyutu büyük olasılıkla yönetilebilir hale gelir. Bu, bazı ilginç performans etkilerini gösterir. İlk olarak, Windows ekibindeki geliştiriciler için deneyimi geliştirmek üzere tasarlanan [Git Için sanal dosya sistemi](https://vfsforgit.org/)gibi özelleştirilmiş araçların kullanılması gerekebilir.
+Tek Deponun boyutu büyük olasılıkla yönetilebilir hale gelir. Bu, bazı ilginç performans etkilerini gösterir. İlk olarak, Windows ekibindeki geliştiriciler için deneyimi geliştirmek üzere tasarlanan [Git Için sanal dosya sistemi](https://github.com/Microsoft/VFSForGit)gibi özelleştirilmiş araçların kullanılması gerekebilir.
 
 Genellikle tek bir depoyu kullanmanın bağımsız değişkeni, Facebook veya Google tarafından bu yöntemi kaynak kodu düzenlemesi için kullanan bir bağımsız değişkene aşağı doğru bir şekilde kullanır. Yaklaşım bu şirketler için yeterince iyi ise, sugüvenin tüm şirketler için doğru yaklaşımdır. Bu konuyla ilgili olarak, birkaç şirketin Facebook veya Google ölçeği gibi her şey üzerinde çalışması çok önemlidir. Bu ölçeklerde oluşan sorunlar, çoğu geliştiriciden farklı olur. Kaz için uygun olan şey, ganıra için iyi olmayabilir.
 
-Sonunda, mikro hizmetler için kaynak kodu barındırmak üzere çözüm kullanılabilir. Ancak çoğu durumda, tek bir depoda çalışan yönetim ve mühendislik ek yükü, Meager avantajlarına değer vermez. Kodu birden çok depoda bölmek, kaygıların daha iyi ayrılmasını ve geliştirme ekipleri arasında bağımsız çalışma sınırı teşvik eder.  
+Sonunda, mikro hizmetler için kaynak kodu barındırmak üzere çözüm kullanılabilir. Ancak çoğu durumda, tek bir depoda çalışan yönetim ve mühendislik ek yükü, Meager avantajlarına değer vermez. Kodu birden çok depoda bölmek, kaygıların daha iyi ayrılmasını ve geliştirme ekipleri arasında bağımsız çalışma sınırı teşvik eder.
 
 ### <a name="standard-directory-structure"></a>Standart dizin yapısı
 
@@ -199,7 +199,7 @@ variables:
   artifactName: drop
   buildPlatform: any cpu
   buildConfiguration: release
-  
+
 pool:
   name: Hosted VS2017
   demands:

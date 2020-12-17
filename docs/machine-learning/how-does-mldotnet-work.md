@@ -4,12 +4,12 @@ description: ML.NET, çevrimiçi veya çevrimdışı senaryolarda .NET uygulamal
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: d9a218e57756ad8b95248193325e902c1798cc37
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 2c44a83b4d45c95cbe45f125523207811f6368c2
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679670"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97634072"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET nedir ve nasıl çalışır?
 
@@ -111,7 +111,7 @@ En temel model, yukarıdaki ev fiyat örneğinde olduğu gibi, bir sürekli mikt
 
 ![Sapma ve ağırlık parametrelerine sahip doğrusal regresyon modeli](./media/linear-regression-model.svg)
 
-Model yalnızca: $Price = b + size * w $. $B $ ve $w $ parametreleri, bir dizi (boyut, Fiyat) çiftleriyle bir satıra göre tahmin edilir. Modelin parametrelerini bulmak için kullanılan verilere **eğitim verileri**denir. Machine Learning modelinin girişleri **Özellikler**olarak adlandırılır. Bu örnekte, $Size $ tek özelliktir. Bir makine öğrenimi modelini eğitebilmeniz için kullanılan taban-Truth değerlerine **Etiketler**denir. Burada eğitim verileri kümesindeki $Price $ değerleri etiketlerdir.
+Model yalnızca: $Price = b + size * w $. $B $ ve $w $ parametreleri, bir dizi (boyut, Fiyat) çiftleriyle bir satıra göre tahmin edilir. Modelin parametrelerini bulmak için kullanılan verilere **eğitim verileri** denir. Machine Learning modelinin girişleri **Özellikler** olarak adlandırılır. Bu örnekte, $Size $ tek özelliktir. Bir makine öğrenimi modelini eğitebilmeniz için kullanılan taban-Truth değerlerine **Etiketler** denir. Burada eğitim verileri kümesindeki $Price $ değerleri etiketlerdir.
 
 ### <a name="more-complex"></a>Daha karmaşık
 
@@ -168,7 +168,7 @@ Değerlendirme ölçümleri, hatanın düşük bir şekilde olduğunu ve tahmin 
 
 Bu bölümde, ML.NET mimari desenlerine gideceğiz. Deneyimli bir .NET geliştiricisiyseniz, bu desenlerden bazıları size tanıdık gelecektir ve bazıları daha az tanıdık olacaktır. Sıkı bir şekilde tutun.
 
-Bir ML.NET uygulaması bir nesneyle başlar <xref:Microsoft.ML.MLContext> . Bu tekil nesne **kataloglar**içerir. Katalog, veri yükleme ve kaydetme, dönüşümler, tracılar ve model işlemi bileşenlerine yönelik bir fabrikadır. Her Katalog nesnesi farklı bileşen türlerini oluşturma yöntemlerine sahiptir:
+Bir ML.NET uygulaması bir nesneyle başlar <xref:Microsoft.ML.MLContext> . Bu tekil nesne **kataloglar** içerir. Katalog, veri yükleme ve kaydetme, dönüşümler, tracılar ve model işlemi bileşenlerine yönelik bir fabrikadır. Her Katalog nesnesi farklı bileşen türlerini oluşturma yöntemlerine sahiptir:
 
 |||||
 |-|-|-|-|
@@ -236,7 +236,7 @@ Giriş verilerini toplu olarak veya bir girişte tek seferde tahmin edilecek şe
 
 Bir ML.NET Machine Learning işlem hattının Core 'da [DataView](xref:Microsoft.ML.IDataView) nesneleri bulunur.
 
-İşlem hattındaki her dönüşümde bir giriş şeması (veri adları, türler ve boyutlar, dönüştürmenin girişte görmeyi beklediği boyutlar) vardır; ve bir çıkış şeması (veri adları, türler ve dönüşümün dönüşümden sonra ürettiği boyutlar). Aşağıdaki belge, [ıdataview arabiriminin ve tür sisteminin](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html)ayrıntılı bir açıklamasını sunmaktadır.
+İşlem hattındaki her dönüşümde bir giriş şeması (veri adları, türler ve boyutlar, dönüştürmenin girişte görmeyi beklediği boyutlar) vardır; ve bir çıkış şeması (veri adları, türler ve dönüşümün dönüşümden sonra ürettiği boyutlar).
 
 İşlem hattındaki bir dönüşümden çıkış şeması, sonraki dönüşümün giriş şemasıyla eşleşmiyorsa, ML.NET bir özel durum oluşturur.
 
@@ -244,13 +244,13 @@ Veri görünümü nesnesinin sütunları ve satırları vardır. Her sütunun bi
 
    ![ML.NET veri görünümü örneği, ev fiyatı tahmin verileri](./media/ml-net-dataview.png)
 
-Tüm ML.NET algoritmaları vektör olan bir giriş sütununu arar. Varsayılan olarak bu vektör sütununa **Özellikler**denir. Bu nedenle, **Boyut** sütununu, evin fiyat örneğimizde **Özellikler** adlı yeni bir sütuna bitiştirtik.
+Tüm ML.NET algoritmaları vektör olan bir giriş sütununu arar. Varsayılan olarak bu vektör sütununa **Özellikler** denir. Bu nedenle, **Boyut** sütununu, evin fiyat örneğimizde **Özellikler** adlı yeni bir sütuna bitiştirtik.
 
  ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-Tüm algoritmalar Ayrıca bir tahmin gerçekleştirildikten sonra yeni sütunlar oluşturur. Bu yeni sütunların sabit adları makine öğrenimi algoritmasının türüne bağlıdır. Regresyon görevi için, yeni sütunlardan birine **puan**denir. Bu nedenle fiyat verilerimizi bu adla ekledik.
+Tüm algoritmalar Ayrıca bir tahmin gerçekleştirildikten sonra yeni sütunlar oluşturur. Bu yeni sütunların sabit adları makine öğrenimi algoritmasının türüne bağlıdır. Regresyon görevi için, yeni sütunlardan birine **puan** denir. Bu nedenle fiyat verilerimizi bu adla ekledik.
 
 ```csharp
     public class Prediction
@@ -262,7 +262,7 @@ Tüm algoritmalar Ayrıca bir tahmin gerçekleştirildikten sonra yeni sütunlar
 
 [Machine Learning görevler](resources/tasks.md) kılavuzunda, farklı makine öğrenimi görevlerinin çıkış sütunları hakkında daha fazla bilgi edinebilirsiniz.
 
-DataView nesnelerinin önemli bir özelliği, **geç**değerlendirilmesinden kaynaklanmaktadır. Veri görünümleri yalnızca model eğitimi ve değerlendirmesi sırasında yüklenir ve üzerinde çalıştırılır ve veri tahmini yapılır. ML.NET uygulamanızı yazarken ve test ederken, [Önizleme](xref:Microsoft.ML.DebuggerExtensions.Preview%2A) yöntemini çağırarak herhangi bir veri görünümü nesnesine bir göz atma işlemleri yapmak Için Visual Studio hata ayıklayıcısını kullanabilirsiniz.
+DataView nesnelerinin önemli bir özelliği, **geç** değerlendirilmesinden kaynaklanmaktadır. Veri görünümleri yalnızca model eğitimi ve değerlendirmesi sırasında yüklenir ve üzerinde çalıştırılır ve veri tahmini yapılır. ML.NET uygulamanızı yazarken ve test ederken, [Önizleme](xref:Microsoft.ML.DebuggerExtensions.Preview%2A) yöntemini çağırarak herhangi bir veri görünümü nesnesine bir göz atma işlemleri yapmak Için Visual Studio hata ayıklayıcısını kullanabilirsiniz.
 
 ```csharp
     var debug = testPriceDataView.Preview();

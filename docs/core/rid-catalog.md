@@ -1,13 +1,13 @@
 ---
 title: .NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu
 description: .NET Core 'da çalışma zamanı tanımlayıcısı (RID) ve RID 'Lerin nasıl kullanıldığı hakkında bilgi edinin.
-ms.date: 02/22/2019
-ms.openlocfilehash: 096ce8e33a82df3b9de682ed16e10fbe9f07fd03
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 12/15/2020
+ms.openlocfilehash: f818ab2d503be7960d9eb8450a7dd749766637a6
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90538230"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633617"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID kataloğu
 
@@ -114,15 +114,15 @@ Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](./install
 
 Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) dosyasına bakın `dotnet/runtime` . Aşağıda listelenmeyen bir dağıtımı çalıştıran cihazlar taşınabilir RID 'Ler ile çalışabilir. Örneğin, listelenmemiş bir Linux dağıtımını çalıştıran Raspberry PI cihazları ile hedeflenebilir `linux-arm` .
 
-- Taşınabilir (.NET Core 2,0 veya sonraki sürümler)
+- In
   - `linux-x64` (CentOS, deler, Fedora, Ubuntu ve türetmeler gibi masaüstü dağıtımlarını en iyi şekilde)
   - `linux-musl-x64` (Alp Linux gibi [MUSL](https://wiki.musl-libc.org/projects-using-musl.html) kullanan hafif dağıtımlar)
   - `linux-arm` (Raspbian gibi ARM üzerinde çalışan Linux dağıtımları Raspberry PI model 2 +)
   - `linux-arm64` (Raspberry PI model 3 + üzerinde Ubuntu Server 64-bit gibi 64 bit ARM üzerinde çalışan Linux dağıtımları
 - Red Hat Enterprise Linux
   - `rhel-x64` (X sürüm 6 ' dan önce `linux-x64` RHEL için yerine geçti)
-  - `rhel.6-x64` (.NET Core 2,0 veya sonraki sürümler)
-- Tizen (.NET Core 2,0 veya sonraki sürümler)
+  - `rhel.6-x64`
+- Tizen
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
@@ -133,18 +133,23 @@ Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](./install
 
 macOS 'Ler eski "OSX" markasını kullanır. Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) dosyasına bakın `dotnet/runtime` .
 
-- Taşınabilir (.NET Core 2,0 veya sonraki sürümler)
+- In
   - `osx-x64` (En düşük işletim sistemi sürümü macOS 10,12 Sierra)
 - macOS 10,10 Yosemite
   - `osx.10.10-x64`
 - macOS 10,11 El Capitan
   - `osx.10.11-x64`
-- macOS 10,12 Sierra (.NET Core 1,1 veya sonraki sürümler)
+- macOS 10,12 Sierra
   - `osx.10.12-x64`
-- macOS 10,13 High Sierra (.NET Core 1,1 veya sonraki sürümler)
+- macOS 10,13 High Sierra
   - `osx.10.13-x64`
-- macOS 10,14 Mojave (.NET Core 1,1 veya sonraki sürümler)
+- macOS 10,14 Mojave
   - `osx.10.14-x64`
+- macOS 10,15 Catalina
+  - `osx.10.15-x64`
+- macOS 11,01 Big Sur
+  - `osx.11.0-x64`
+  - `osx.11.0-arm64`
 
 Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](./install/macos.md#dependencies).
 

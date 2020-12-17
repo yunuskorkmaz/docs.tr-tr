@@ -3,12 +3,12 @@ title: Üretim zamanında gizli dizileri korumak için Azure Key Vault kullanma
 description: .NET mikro hizmetleri ve Web uygulamalarında güvenlik-Azure Key Vault, yöneticiler tarafından tamamen denetlenen uygulama gizli dizilerini işlemenin mükemmel bir yoludur. Yöneticiler, geliştiricilerin bunları işlemesi gerekmeden geliştirme değerlerini de atayabilir ve iptal edebilir.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: d2d3690c0c8787ace6bcdfacbdb612f9ef957b98
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 5d024894fe1540df04514031bf0b6e0754ddc75c
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916248"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633929"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Üretim zamanında gizli dizileri korumak için Azure Key Vault kullanma
 
@@ -37,7 +37,7 @@ Ortam değişkenleri olarak depolanan veya gizli dizi Yöneticisi aracı tarafı
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Uygulama gizliliklarını korumak için Azure Key Vault kullanma** \
-  [https://docs.microsoft.com/azure/architecture/multitenant-identity](/azure/architecture/multitenant-identity-keyvault)
+  [https://docs.microsoft.com/azure/architecture/multitenant-identity](/azure/architecture/multitenant-identity)
 
 - **Geliştirme sırasında uygulama gizli dizileri için güvenli depolama** \
   [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)

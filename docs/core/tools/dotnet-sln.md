@@ -2,12 +2,12 @@
 title: DotNet sln komutu
 description: DotNet-sln komutu bir çözüm dosyasındaki projeleri eklemek, kaldırmak ve listelemek için kullanışlı bir seçenek sağlar.
 ms.date: 12/07/2020
-ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: af502efe842e9c9610137738d86c05e00a3b37df
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851710"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633656"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -25,7 +25,7 @@ dotnet sln [<SOLUTION_FILE>] [command]
 dotnet sln [command] -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet sln`Komut, bir çözüm dosyasındaki projeleri listelemek ve değiştirmek için kullanışlı bir yol sağlar.
 
@@ -104,7 +104,7 @@ dotnet sln add [-h|--help]
 
 - **`-s|--solution-folder <PATH>`**
 
-  Projelerin ekleneceği hedef çözüm klasörünün yolu. .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  Projelerin ekleneceği hedef [çözüm klasörünün](/visualstudio/ide/solutions-and-projects-in-visual-studio#solution-folder) yolu. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 ### `remove`
 

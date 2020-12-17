@@ -3,18 +3,18 @@ title: .NET Core 'a bağlantı noktası kitaplıkları
 description: .NET Framework kitaplığı projelerinin nasıl .NET Core 'a bağlantı sağladığını öğrenin.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: dcacf4d59964e0ef2009b4e9694d7f562e3a1547
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 25c53cdc71f4269b058953ef1903dc72d222f65f
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223570"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633916"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core 'a bağlantı noktası .NET Framework kitaplıkları
 
 .NET Framework kitaplığı kodunun, platformlar arası çalıştığı ve onu kullanan uygulamaların erişimini genişleten .NET Core 'a bağlantı noktası oluşturma hakkında bilgi edinin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu makalede şunları kabul edersiniz:
 
@@ -107,8 +107,8 @@ Yukarıdaki yaklaşımlardan proje başına temelinde karıştıracaksınız. Si
 
 Kodunuzu yazarken her şeyin çalıştığından emin olmanın en iyi yolu, .NET Core 'a bağlantı noktası oluştururken kodunuzun test sağlamaktır. Bunu yapmak için .NET Core için test oluşturup çalıştıran bir test çerçevesi kullanmanız gerekir. Şu anda üç seçeneğiniz vardır:
 
-- [xUnit](https://xunit.github.io/)
-  - [Başlarken](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+- [xUnit](https://xunit.net/)
+  - [Başlarken](https://xunit.net/docs/getting-started/netcore/cmdline)
   - [MSTest projesini xUnit 'e dönüştüren araç](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
   - [Başlarken](https://github.com/nunit/docs/wiki/Installation)

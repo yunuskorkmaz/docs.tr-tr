@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: cf9b8f4033e6774684b2b7e3b788ef3c157d95df
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0d64df42ffb1763afed3e883c4f043755e158489
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96590041"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633994"
 ---
 # <a name="configuration-files-for-code-analysis-rules"></a>Kod analizi kuralları için yapılandırma dosyaları
 
@@ -68,7 +68,7 @@ dotnet_diagnostic.CA1000.severity = warning
 
 ## <a name="global-analyzerconfig"></a>Küresel analiz Zerconfig
 
-.NET 5,0 SDK ile başlayarak (Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerinde desteklenir), çözümleyici seçeneklerini genel _analiz Zeri yapılandırma_ dosyalarıyla de yapılandırabilirsiniz. Bu dosyalar, dosya adlarından veya dosya yollarından bağımsız olarak **bir projedeki tüm kaynak dosyalara uygulanan seçenekleri** sağlamak için kullanılır.
+.NET 5 SDK ile başlayarak (Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerinde desteklenir), çözümleyici seçeneklerini genel _analiz Zeri yapılandırma_ dosyalarıyla de yapılandırabilirsiniz. Bu dosyalar, dosya adlarından veya dosya yollarından bağımsız olarak **bir projedeki tüm kaynak dosyalara uygulanan seçenekleri** sağlamak için kullanılır.
 
 [EditorConfig](#editorconfig)Dosyaların aksine, genel yapılandırma dosyaları, girinti boyutu ya da sondaki boşluğu kırpıp kırpılıp Kırpılanmayacağı gibi, IDEs için düzenleyici stil ayarlarını yapılandırmak için kullanılamaz. Bunun yerine, yalnızca proje düzeyi çözümleyici yapılandırma seçeneklerini belirtmek için tasarlanırlar.
 
