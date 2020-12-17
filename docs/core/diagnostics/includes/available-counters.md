@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ffef401c07dbb27db7c0225acdc6817d95bfe11
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 2046762be2ae5d6d4c9f7fb061849b63e7ab06a2
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451457"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97612661"
 ---
 ## <a name="available-counters"></a>Kullanılabilen sayaçlar
 
@@ -14,10 +14,10 @@ ms.locfileid: "91451457"
 
 Aşağıdaki sayaçlar .NET çalışma zamanının bir parçası olarak yayımlanır ve içinde tutulur [`RuntimeEventSource.cs`](https://github.com/dotnet/coreclr/blob/master/src/System.Private.CoreLib/src/System/Diagnostics/Eventing/RuntimeEventSource.cs) .
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="% Time in GC since last GC"::: (`time-in-gc`) | Son GC 'den bu yana GC 'deki sürenin yüzdesi |
-| :::no-loc text="Allocation Rate"::: (`alloc-rate`) | Bayt cinsinden ayırma oranı |
+| :::no-loc text="Allocation Rate"::: (`alloc-rate`) | Her güncelleştirme aralığı için ayrılan bayt sayısı |
 | :::no-loc text="CPU Usage"::: (`cpu-usage`) | İşlemin CPU kullanımının yüzdesi |
 | :::no-loc text="Exception Count"::: (`exception-count`) | Oluşan özel durumların sayısı |
 | :::no-loc text="GC Heap Size"::: (`gc-heap-size`) | Temel alınarak ayrılan bayt sayısı <xref:System.GC.GetTotalMemory(System.Boolean)?displayProperty=nameWithType> |
@@ -44,18 +44,18 @@ Aşağıdaki sayaçlar .NET çalışma zamanının bir parçası olarak yayımla
 
 Aşağıdaki sayaçlar [ASP.NET Core](/aspnet/core) bir parçası olarak yayımlanır ve içinde tutulur [`HostingEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/Hosting/Hosting/src/Internal/HostingEventSource.cs) .
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="Current Requests"::: (`current-requests`) | Başlatıldığı, ancak henüz durdurulmayan isteklerin toplam sayısı |
 | :::no-loc text="Failed Requests"::: (`failed-requests`) | Uygulamanın ömrü boyunca oluşan başarısız isteklerin toplam sayısı |
-| :::no-loc text="Request Rate"::: (`requests-per-second`) | Saniye başına gerçekleşen istek sayısı |
+| :::no-loc text="Request Rate"::: (`requests-per-second`) | Güncelleştirme aralığı başına oluşan isteklerin sayısı |
 | :::no-loc text="Total Requests"::: (`total-requests`) | Uygulamanın ömrü boyunca oluşan isteklerin toplam sayısı |
 
 ### <a name="microsoftaspnetcorehttpconnections-counters"></a>"Microsoft. AspNetCore. http. Connections" sayaçları
 
 Aşağıdaki sayaçlar [ASP.NET Core SignalR](/aspnet/core/signalr/introduction) 'nin bir parçası olarak yayımlanır ve içinde tutulur [`HttpConnectionsEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/SignalR/common/Http.Connections/src/Internal/HttpConnectionsEventSource.cs) .
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="Average Connection Duration"::: (`connections-duration`) | Bir bağlantının ortalama süresi (milisaniye cinsinden) |
 | :::no-loc text="Current Connections"::: (`current-connections`) | Başlatılmış ancak henüz durdurulmamış etkin bağlantı sayısı |
@@ -67,15 +67,15 @@ Aşağıdaki sayaçlar [ASP.NET Core SignalR](/aspnet/core/signalr/introduction)
 
 Aşağıdaki sayaçlar [ASP.NET Core Kestrel Web sunucusunun](/aspnet/core/fundamentals/servers/kestrel) bir parçası olarak yayımlanır ve içinde tutulur [`KestrelEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/Servers/Kestrel/Core/src/Internal/Infrastructure/KestrelEventSource.cs) .
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="Connection Queue Length"::: (`connection-queue-length`) | Bağlantı sırasının geçerli uzunluğu |
-| :::no-loc text="Connection Rate"::: (`connections-per-second`) | Web sunucusuna saniye başına bağlantı sayısı |
+| :::no-loc text="Connection Rate"::: (`connections-per-second`) | Web sunucusuna güncelleştirme aralığı başına bağlantı sayısı |
 | :::no-loc text="Current Connections"::: (`current-connections`) | Web sunucusuna etkin bağlantıların geçerli sayısı |
 | :::no-loc text="Current TLS Handshakes"::: (`current-tls-handshakes`) | Geçerli TLS el sıkışma sayısı |
 | :::no-loc text="Current Upgraded Requests (WebSockets)"::: (`current-upgraded-requests`) | Yükseltilen isteklerin geçerli sayısı (WebSockets) |
 | :::no-loc text="Failed TLS Handshakes"::: (`failed-tls-handshakes`) | Toplam başarısız TLS el sıkışmaları sayısı |
 | :::no-loc text="Request Queue Length"::: (`request-queue-length`) | İstek sırasının geçerli uzunluğu |
-| :::no-loc text="TLS Handshake Rate"::: (`tls-handshakes-per-second`) | Saniye başına TLS el sıkışma sayısı |
+| :::no-loc text="TLS Handshake Rate"::: (`tls-handshakes-per-second`) | Güncelleştirme aralığı başına TLS el sıkışma sayısı |
 | :::no-loc text="Total Connections"::: (`total-connections`) | Web sunucusuna yönelik toplam bağlantı sayısı |
 | :::no-loc text="Total TLS Handshakes"::: (`total-tls-handshakes`) | Web sunucusu ile toplam TLS el sıkışma sayısı |
