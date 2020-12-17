@@ -1,27 +1,27 @@
 ---
 title: Ayrıntılı Sözdizimi
-description: F# programlama dilinde ayrıntılı ve hafif sözdizimi arasındaki farkı öğrenin.
+description: 'F # programlama dilinde verbose ve hafif sözdizimi arasındaki farkı öğrenin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 4e1725b58c8cb67c074ba12fd4ca25ce0c000a1e
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463914"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97595183"
 ---
 # <a name="verbose-syntax"></a>Ayrıntılı Sözdizimi
 
-F# dilinde birçok yapı için iki tür sözdizimi vardır: *ayrıntılı sözdizimi* ve *hafif sözdizimi.* Ayrıntılı sözdizimi yaygın olarak kullanılmaz, ancak girintiye karşı daha az duyarlı olma avantajına sahiptir. Hafif sözdizimi daha kısadır ve girintiyi, " `begin`, `end`, `in`ve benzeri ek anahtar kelimeler yerine, yapıların başlangıcını ve sonunu işaret etmek için kullanır. Varsayılan sözdizimi hafif sözdizimidir. Bu konu, hafif sözdizimi etkinleştirilmemişse F# yapıları için sözdizimini açıklar. Verbose sözdizimi her zaman etkindir, bu nedenle hafif sözdizimini etkinleştirseniz bile, bazı yapılar için verbose sözdizimini kullanmaya devam edebilirsiniz. Yönergeyi `#light "off"` kullanarak hafif sözdizimini devre dışı kullanabilirsiniz.
+F # dilinde birçok yapı için kullanılabilen iki sözdizimi biçimi vardır: *ayrıntılı sözdizimi* ve *hafif sözdizimi*. Ayrıntılı sözdizimi yaygın olarak kullanılmaz, ancak girintide daha az hassas olmasının avantajına sahiptir. Hafif sözdizimi daha kısadır ve,,, ve gibi ek anahtar sözcükler yerine yapıların başını ve sonunu bildirmek için girinti kullanır `begin` `end` `in` . Varsayılan sözdizimi, hafif sözdizimidir. Bu konu, hafif sözdizimi etkin olmadığında F # yapıları için sözdizimi açıklar. Ayrıntılı sözdizimi her zaman etkindir, bu nedenle basit söz dizimini etkinleştirseniz bile bazı yapılar için ayrıntılı söz dizimi kullanmaya devam edebilirsiniz. Yönergesini kullanarak hafif sözdizimini devre dışı bırakabilirsiniz `#light "off"` .
 
-## <a name="table-of-constructs"></a>Yapılar Tablosu
+## <a name="table-of-constructs"></a>Yapılar tablosu
 
-Aşağıdaki tablo, f# dili için hafif ve ayrıntılı sözdizimini iki form arasında fark olan bağlamlarda gösterir. Bu tabloda, açı&lt;&gt;braketleri ( ) kullanıcı tarafından sağlanan sözdizimi öğelerini içine alıkonacaktır. Bu yapılar içinde kullanılan sözdizimi hakkında daha ayrıntılı bilgi için her dil yapısı için belgelere bakın.
+Aşağıdaki tabloda, iki form arasında fark olduğu bağlamlarda F # dil yapıları için hafif ve ayrıntılı sözdizimi gösterilmektedir. Bu tabloda, açılı ayraç ( &lt; &gt; ) Kullanıcı tarafından sağlanan sözdizimi öğelerini kapsar. Bu yapılar içinde kullanılan sözdizimi hakkında daha ayrıntılı bilgi için her dil yapısına yönelik belgelere bakın.
 
 <table>
 <tr>
 <th>Dil yapısı</th>
 <th>Hafif sözdizimi</th>
-<th>Verbose sözdizimi</th>
+<th>Ayrıntılı sözdizimi</th>
 </tr>
 <tr>
 <td>
@@ -29,9 +29,9 @@ bileşik ifadeler
 </td>
 <td>
 
-```xml
-<expression1 />
-<expression2 />
+```fsharp
+<expression1>
+<expression2>
 ```
 
 </td><td>
@@ -44,7 +44,7 @@ bileşik ifadeler
 </tr>
 <tr><td>
 
-iç `let` içe bağlamalar
+iç içe `let` bağlamalar
 
 </td><td>
 
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>ayrımcı birlik</td><td>
+<tr><td>ayırt edici bileşim</td><td>
 
 ```fsharp
 type <union-name> =
@@ -352,6 +352,6 @@ module <module-name> =
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F# Dil Referansı](index.md)
+- [F # dil başvurusu](index.md)
 - [Derleyici Yönergeleri](compiler-directives.md)
 - [Kod Biçimlendirme Yönergeleri](../style-guide/formatting.md)
