@@ -6,16 +6,16 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: 639755dd78892df1b70ea5245a9584e575fbf691
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: dbb0a94b0401d58139c024fd8ca3e00353a19efa
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267886"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678028"
 ---
 # <a name="modules-handlers-and-middleware"></a>Modüller, işleyiciler ve ara yazılım
 
-ASP.NET Core bir uygulama, bir dizi *Ara yazılım*üzerine kurulmuştur. Ara yazılım, istekleri ve yanıtları işlemek için bir işlem hattına düzenlenmiş işleyicileridir. Web Forms uygulamasında HTTP işleyicileri ve modülleri benzer sorunları çözecektir. ASP.NET Core, modüller, işleyiciler, *Global.asax.cs*ve uygulama yaşam döngüsü, ara yazılım ile değiştirilmiştir. Bu bölümde, bir uygulama bağlamında hangi ara yazılımı öğreneceksiniz Blazor .
+ASP.NET Core bir uygulama, bir dizi *Ara yazılım* üzerine kurulmuştur. Ara yazılım, istekleri ve yanıtları işlemek için bir işlem hattına düzenlenmiş işleyicileridir. Web Forms uygulamasında HTTP işleyicileri ve modülleri benzer sorunları çözecektir. ASP.NET Core, modüller, işleyiciler, *Global.asax.cs* ve uygulama yaşam döngüsü, ara yazılım ile değiştirilmiştir. Bu bölümde, bir uygulama bağlamında ara yazılım hakkında bilgi edineceksiniz Blazor .
 
 ## <a name="overview"></a>Genel Bakış
 
@@ -23,7 +23,7 @@ ASP.NET Core isteği ardışık düzeni, bir dizi istekten oluşur ve bunlardan 
 
 ![konfigüre](media/middleware/request-delegate-pipeline.png)
 
-Önceki diyagramda yaşam döngüsü olaylarının bir kavramı yoktur. Bu kavram, ASP.NET Web Forms isteklerinin nasıl işlendiği konusunda temel bir deneyimdir. Bu sistem, hangi işlemin gerçekleşmekte olduğunu ve ara yazılımın herhangi bir noktaya eklenmesine olanak sağlar. Ara yazılım, istek ardışık düzenine eklendiği sırayla yürütülür. Bunlar, genellikle *Startup.cs*içinde yapılandırma dosyaları yerine kodda de eklenirler.
+Önceki diyagramda yaşam döngüsü olaylarının bir kavramı yoktur. Bu kavram, ASP.NET Web Forms isteklerinin nasıl işlendiği konusunda temel bir deneyimdir. Bu sistem, hangi işlemin gerçekleşmekte olduğunu ve ara yazılımın herhangi bir noktaya eklenmesine olanak sağlar. Ara yazılım, istek ardışık düzenine eklendiği sırayla yürütülür. Bunlar, genellikle *Startup.cs* içinde yapılandırma dosyaları yerine kodda de eklenirler.
 
 ## <a name="katana"></a>Katana
 

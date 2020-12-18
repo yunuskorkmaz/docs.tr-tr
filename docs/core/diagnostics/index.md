@@ -3,12 +3,12 @@ title: Tanılama araçlarına genel bakış-.NET Core
 description: .NET Core uygulamalarını tanılamak için kullanılabilen araçlara ve tekniklere genel bakış.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 0aa404497cb7d6a488fb51e1df8f7f45d4f213fd
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031923"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678093"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 'da hangi tanılama araçları kullanılabilir?
 
@@ -24,21 +24,21 @@ Bu makale, ihtiyacınız olan çeşitli araçları bulmanıza yardımcı olur.
 
 [Günlüğe kaydetme ve izleme](logging-tracing.md) ilgili teknikler. Günlük dosyaları oluşturmak için kodu işaretleme bölümüne başvururlar. Dosyalar, bir programın yaptığı ayrıntıları kaydeder. Bu ayrıntılar, en karmaşık sorunları tanılamak için kullanılabilir. Zaman damgalarıyla birleştirildiğinde, bu teknikler performans araştırmaları açısından de değerlidir.
 
+## <a name="metrics"></a>Ölçümler
+
+[Eventcounters](event-counters.md) , performans sorunlarını belirlemek ve izlemek için ölçümler yazmanıza izin verir. Ölçümler, izlemeye kıyasla daha düşük performans yükü sağlar ve her zaman açık performans izleme için daha uygun hale gelir. .NET çalışma zamanı ve kitaplıkları, izleyebildiğiniz birkaç [iyi bilinen EventCounters](available-counters.md) yayımlar.
+
 ## <a name="unit-testing"></a>Birim testi
 
 [Birim testi](../testing/index.md) , yüksek kaliteli yazılımların sürekli tümleştirilmesine ve dağıtımına yönelik temel bir bileşendir. Birim testleri, bir şeyi kesen bir erken uyarı sağlayacak şekilde tasarlanmıştır.
 
-## <a name="dumps"></a>Dökümleri
+## <a name="dumps"></a>Dökümler
 
 [Döküm](./dumps.md) , oluşturma sırasında işlemin anlık görüntüsünü içeren bir dosyadır. Bunlar, hata ayıklama amacıyla uygulamanızın durumunu incelemek için yararlı olabilir.
 
 ## <a name="collect-diagnostics-in-containers"></a>Kapsayıcılarda tanılama toplama
 
 Kapsayıcısız Linux ortamlarında kullanılan aynı tanılama araçları, [kapsayıcılarda tanılamayı toplamak](diagnostics-in-containers.md)için de kullanılabilir. Araçların bir Docker kapsayıcısında çalıştığından emin olmak için birkaç kullanım değişikliği yapmanız gerekir.
-
-## <a name="debug-linux-dumps"></a>Linux dökümlerinin hatasını ayıklama
-
-[Linux dökümlerinde hata ayıklama](debug-linux-dumps.md) , Linux üzerinde dökümleri nasıl toplayacağınızı ve analiz edeceğinizi açıklar.
 
 ## <a name="net-core-diagnostic-global-tools"></a>.NET Core tanılama küresel Araçlar
 
@@ -83,6 +83,10 @@ Kapsayıcısız Linux ortamlarında kullanılan aynı tanılama araçları, [kap
 ### <a name="debug-deadlock"></a>Çıkmaz hatasını ayıklama
 
 [Öğretici: hata ayıklama kilitlenmesi](debug-deadlock.md) , iş parçacıklarını ve kilitleri araştırmak için [DotNet-dump](dotnet-dump.md) aracının nasıl kullanılacağını gösterir.
+
+### <a name="debug-linux-dumps"></a>Linux dökümlerinin hatasını ayıklama
+
+[Linux dökümlerinde hata ayıklama](debug-linux-dumps.md) , Linux üzerinde dökümleri nasıl toplayacağınızı ve analiz edeceğinizi açıklar.
 
 ### <a name="measure-performance-using-eventcounters"></a>EventCounters kullanarak performansı ölçme
 

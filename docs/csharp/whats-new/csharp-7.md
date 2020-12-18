@@ -3,12 +3,12 @@ title: C# 7,0 ' deki yenilikler-C# Kılavuzu
 description: C# dilinin sürüm 7,0 ' deki yeni özelliklere genel bakış alın.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 84f5961d573b99438320a75d7f89bc7fd94f6266
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c238439b0f435e579d932b3b1eb13e9b0061fa5f
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955219"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678224"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C# 7,3 ile c# 7,0 yenilikleri
 
@@ -21,7 +21,7 @@ C# 7.0-7.3 Bu özellikleri ve temaları C# diline ekler:
 - [Tanımlama grupları ve atma](#tuples-and-discards)
   - Birden çok ortak alan içeren hafif, adlandırılmamış türler oluşturabilirsiniz. Derleyiciler ve IDE araçları bu türlerin semantiğini anlayın.
   - Atama, atanan değer hakkında endişelenmezseniz atamalar içinde kullanılan geçici, salt yazılır değişkenlerdir. Bunlar, tanımlama grupları ve Kullanıcı tanımlı türler oluştururken ve parametreleri ile Yöntemler çağrılırken faydalıdır `out` .
-- [Desen Eşleştirme](#pattern-matching)
+- [Model eşleştirme](#pattern-matching)
   - Bu türlerin üyelerinin rastgele türlerini ve değerlerini temel alarak dallanma mantığı oluşturabilirsiniz.
 - [`async``Main`yöntemi](#async-main)
   - Bir uygulama için giriş noktası değiştiriciye sahip olabilir `async` .
@@ -57,7 +57,7 @@ Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. He
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
-1. `dotnet try` komutunu çalıştırın.
+1. Şu komutu çalıştırın: `dotnet try`.
 
 ## <a name="tuples-and-discards"></a>Tanımlama grupları ve atma
 
@@ -104,7 +104,7 @@ Atma, aşağıdaki senaryolarda desteklenir:
 
 - Tanımlama grupları veya Kullanıcı tanımlı türler kaldırılıyor.
 - [Out](../language-reference/keywords/out-parameter-modifier.md) parametreleri ile Yöntemler çağrılırken.
-- WITH ve [Switch](../language-reference/keywords/switch.md) deyimleriyle bir kalıp [is](../language-reference/keywords/is.md) eşleştirme işleminde.
+- WITH ve [Switch](../language-reference/keywords/switch.md) deyimleriyle bir kalıp [](../language-reference/keywords/is.md) eşleştirme işleminde.
 - Bir atamanın değerini bir atma olarak açıkça tanımlamak istediğinizde tek başına tanımlayıcı olarak.
 
 Aşağıdaki örnek, `QueryCityDataForYears` iki farklı yıl için şehir için veri içeren 6 demet döndüren bir yöntemi tanımlar. Örnekteki yöntem çağrısı yalnızca yöntemi tarafından döndürülen iki popülasyon değeriyle ilgilidir ve bu nedenle, kayıt düzeni oluşturulduğunda, kayıt düzeninde kalan değerleri atma olarak değerlendirir.
@@ -231,11 +231,11 @@ public int SomeProperty { get; set; }
 Özniteliği, `SomeThingAboutFieldAttribute` için derleyicinin oluşturduğu yedekleme alanına uygulanır `SomeProperty` . Daha fazla bilgi için bkz. C# programlama kılavuzundaki [öznitelikler](../programming-guide/concepts/attributes/index.md) .
 
 > [!NOTE]
-> Yerel işlevler tarafından desteklenen tasarımlardan bazıları *lambda ifadeleri*kullanılarak da gerçekleştirilebilir. Daha fazla bilgi için bkz [. yerel işlevler ve lambda ifadeleri](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions).
+> Yerel işlevler tarafından desteklenen tasarımlardan bazıları *lambda ifadeleri* kullanılarak da gerçekleştirilebilir. Daha fazla bilgi için bkz [. yerel işlevler ve lambda ifadeleri](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions).
 
 ## <a name="more-expression-bodied-members"></a>Daha fazla ifade-Bodied Üyeler
 
-C# 6 ifadesi-üye işlevleri için [Bodied Üyeler](csharp-6.md#expression-bodied-function-members) ve salt okunurdur özellikleri eklendi. C# 7,0, ifade olarak uygulanabilecek izin verilen üyeleri genişletir. C# 7,0 ' de, *constructors* *finalizers* `get` `set` *Özellikler* ve *Dizin oluşturucular*üzerinde oluşturucular, sonlandırıcılar ve erişimciler uygulayabilirsiniz. Aşağıdaki kod, her birinin örneklerini gösterir:
+C# 6 ifadesi-üye işlevleri ve salt okunurdur özellikler için Bodied eklenen üyeler. C# 7,0, ifade olarak uygulanabilecek izin verilen üyeleri genişletir. C# 7,0 ' de,   `get` `set` *Özellikler* ve *Dizin oluşturucular* üzerinde oluşturucular, sonlandırıcılar ve erişimciler uygulayabilirsiniz. Aşağıdaki kod, her birinin örneklerini gösterir:
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -270,7 +270,7 @@ Daha fazla bilgi için [varsayılan işleç](../language-reference/operators/def
 
 ## <a name="numeric-literal-syntax-improvements"></a>Sayısal sabit değer sözdizimi geliştirmeleri
 
-Hatalı okuma sayısal sabitleri, ilk kez okurken kodu daha zor hale getirir. Bit maskeleri veya diğer sembolik değerler yanlış anlama eğilimindedir. C# 7,0, tasarlanan kullanım için en okunabilir şekilde sayı yazmak üzere iki yeni özellik içerir: *ikili sabit değerler*ve *basamak ayırıcıları*.
+Hatalı okuma sayısal sabitleri, ilk kez okurken kodu daha zor hale getirir. Bit maskeleri veya diğer sembolik değerler yanlış anlama eğilimindedir. C# 7,0, tasarlanan kullanım için en okunabilir şekilde sayı yazmak üzere iki yeni özellik içerir: *ikili sabit değerler* ve *basamak ayırıcıları*.
 
 Bit maskeleri oluştururken veya bir sayının ikili gösteriminin en çok okunabilen kodu yaptığı durumlarda bu süreler için bu sayıyı binary olarak yazın:
 
@@ -522,7 +522,7 @@ Yeni derleyici seçenekleri C# programları için yeni derleme ve DevOps senaryo
 
 ### <a name="reference-assembly-generation"></a>Başvuru derlemesi oluşturma
 
-*Yalnızca başvuru derlemeler*üreten iki yeni derleyici seçeneği vardır: [-refout](../language-reference/compiler-options/refout-compiler-option.md) ve [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+*Yalnızca başvuru derlemeler* üreten iki yeni derleyici seçeneği vardır: [-refout](../language-reference/compiler-options/refout-compiler-option.md) ve [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
 Bağlantılı makaleler, bu seçenekleri ve başvuru derlemelerini daha ayrıntılı bir şekilde açıklamaktadır.
 
 ### <a name="public-or-open-source-signing"></a>Ortak veya açık kaynak imzalama

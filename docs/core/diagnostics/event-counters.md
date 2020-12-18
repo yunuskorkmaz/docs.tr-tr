@@ -2,12 +2,12 @@
 title: .NET Core 'da EventCounters
 description: Bu makalede, olaylarınızın ne olduğunu, nasıl uygulanacağını ve bunları nasıl kullanacağınızı öğreneceksiniz.
 ms.date: 08/07/2020
-ms.openlocfilehash: 68c831713eed8c49d24ebf93da301ef68d213bf9
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 08180b5580d2e7fe782fbd531a26872715825cdf
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437820"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678208"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 'da EventCounters
 
@@ -15,13 +15,11 @@ ms.locfileid: "96437820"
 
 EventCounters, hafif, platformlar arası ve neredeyse gerçek zamanlı performans ölçümü koleksiyonu için kullanılan .NET Core API 'larıdır. EventCounters, Windows üzerindeki .NET Framework "performans sayaçları" için platformlar arası bir alternatif olarak eklenmiştir. Bu makalede, olaylarınızın ne olduğunu, nasıl uygulanacağını ve bunları nasıl kullanacağınızı öğreneceksiniz.
 
-.NET Core çalışma zamanı ve birkaç .NET kitaplığı, .NET Core 3,0 ' den başlayarak EventCounters kullanarak temel tanılama bilgilerini yayımlar. .NET çalışma zamanı tarafından sunulan EventCounters dışında, kendi Eventsayaçlarınızı uygulamayı seçebilirsiniz. EventCounters, çeşitli ölçümleri izlemek için kullanılabilir.
+.NET Core çalışma zamanı ve birkaç .NET kitaplığı, .NET Core 3,0 ' den başlayarak EventCounters kullanarak temel tanılama bilgilerini yayımlar. .NET çalışma zamanı tarafından sunulan EventCounters dışında, kendi Eventsayaçlarınızı uygulamayı seçebilirsiniz. EventCounters, çeşitli ölçümleri izlemek için kullanılabilir. [.Net 'teki iyi bilinen EventCounters](available-counters.md) hakkında daha fazla bilgi edinin
 
 EventCounters, bir parçası olarak bulunur <xref:System.Diagnostics.Tracing.EventSource> ve otomatik olarak dinleyici araçlarına düzenli olarak gönderilir. İçindeki tüm diğer olaylar gibi <xref:System.Diagnostics.Tracing.EventSource> , bunlar hem işlem içi hem de işlem dışı <xref:System.Diagnostics.Tracing.EventListener> ve [eventpipe](./eventpipe.md)ile tüketilebilir. Bu makale, EventCounters 'in platformlar arası özelliklerine odaklanmaktadır ve özellikle PerfView ve ETW (Windows için olay Izleme) özelliğini dışlar, ancak her ikisi de EventCounters ile kullanılabilir.
 
 ![-Proc ve proc dışı diyagram görüntüsü EventCounters](media/event-counters.svg)
-
-[!INCLUDE [available-counters](includes/available-counters.md)]
 
 ## <a name="eventcounter-api-overview"></a>EventCounter API 'sine genel bakış
 
@@ -127,7 +125,7 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 , <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType> Toplam kilit çekişmesi sayısı artışını raporlamak için API 'yi kullanır. <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>Özelliği isteğe bağlıdır, ancak kullanıldığında sayacın en iyi gösterileceği zaman aralığı için bir ipucu sağlayabilir. Örneğin, kilit çakışması sayısı en iyi _sayı_ olarak, <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> bir saniye olarak ayarlanır. Görüntüleme ücreti, farklı türlerde hız sayaçlarına göre ayarlanabilir.
 
 > [!NOTE]
-> , <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> [DotNet sayaçları](dotnet-counters.md)tarafından kullanılmaz ve olay dinleyicileri bunu kullanmak için gerekli değildir. _not_
+> , <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> [DotNet sayaçları](dotnet-counters.md)tarafından kullanılmaz ve olay dinleyicileri bunu kullanmak için gerekli değildir. 
 
 [.NET çalışma zamanı](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs) deposunda başvuru olarak kullanılacak daha fazla sayaç uygulaması vardır.
 

@@ -3,13 +3,13 @@ title: Tek dosya uygulaması
 description: Tek bir dosya uygulamasının ne olduğunu ve neden bu uygulama dağıtım modelini kullanmayı düşünmeniz gerektiğini öğrenin.
 author: lakshanf
 ms.author: lakshanf
-ms.date: 08/28/2020
-ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.date: 12/17/2020
+ms.openlocfilehash: e2d2c9ed4c28d11a77e4f840602982a36cf1c80c
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050422"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678149"
 ---
 # <a name="single-file-deployment-and-executable"></a>Tek dosya dağıtımı ve yürütülebilir dosya
 
@@ -51,7 +51,7 @@ Windows ve Mac 'te, kilitlenme dökümlerinde hata ayıklamak için Visual Studi
 
 Bu dosya olmadan, Visual Studio "işleme iliştirilemiyor" hatasını verebilir. Bir hata ayıklama bileşeni yüklü değil. " VS Code, "işleme iliştirilemedi: bilinmeyen hata: 0x80131c3c" hatasını verebilir.
 
-Bu hataları onarmak için, _mscordbi_ 'nin yürütülebilir dosyanın yanına kopyalanması gerekir. _mscordbi_ , `publish` Varsayılan olarak UYGULAMANıN çalışma zamanı kimliğine sahip alt dizinde oluşturulur. Bu nedenle, örneğin, parametreleri kullanarak Windows için CLI kullanarak kendi kendini içeren tek dosya yürütülebilir dosyası `dotnet` `-r win-x64` yayımlamasaydı, yürütülebilir dosya _bin/Debug/net 5.0/Win-x64/Publish_öğesine yerleştirilir. _Bin/Debug/net 5.0/Win-x64_içinde _mscordbi.dll_ bir kopyası var olabilir.
+Bu hataları onarmak için, _mscordbi_ 'nin yürütülebilir dosyanın yanına kopyalanması gerekir. _mscordbi_ , `publish` Varsayılan olarak UYGULAMANıN çalışma zamanı kimliğine sahip alt dizinde oluşturulur. Bu nedenle, örneğin, parametreleri kullanarak Windows için CLI kullanarak kendi kendini içeren tek dosya yürütülebilir dosyası `dotnet` `-r win-x64` yayımlamasaydı, yürütülebilir dosya _bin/Debug/net 5.0/Win-x64/Publish_ öğesine yerleştirilir. _Bin/Debug/net 5.0/Win-x64_ içinde _mscordbi.dll_ bir kopyası var olabilir.
 
 ## <a name="other-considerations"></a>Diğer önemli noktalar
 
@@ -96,6 +96,39 @@ Bir bütünleştirilmiş kod için PDB dosyası, aşağıdaki ayarı kullanılar
 </PropertyGroup>
 ```
 
+## <a name="publish-a-single-file-app---sample-project-file"></a>Tek bir dosya uygulaması yayımlama-örnek proje dosyası
+
+Tek dosya yayımlamayı belirten örnek bir proje dosyası aşağıda verilmiştir:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishReadyToRun>true</PublishReadyToRun>
+  </PropertyGroup>
+
+</Project>
+```
+
+Bu özellikler aşağıdaki işlevlere sahiptir:
+
+* `PublishSingleFile` -Tek dosya yayımlamayı mümkün.
+* `SelfContained` -Uygulamanın kendine bağımsız olarak mı yoksa çerçeveye mı bağımlı olacağını belirler.
+* `RuntimeIdentifier` -Hedeflediğiniz [Işletim sistemini ve CPU türünü](../rid-catalog.md) belirtir.
+* `PublishTrimmed` -Yalnızca kendi içindeki uygulamalar için desteklenen [derleme kırpmasını](trim-self-contained.md)kullanır.
+* `PublishReadyToRun` - [Zaman içinde (AOT) derlemeyi](ready-to-run.md)etkinleştirilir.
+
+**Notlar:**
+
+* Uygulamalar, işletim sistemi ve mimariye özgüdür. Linux x64, Linux ARM64, Windows x64 gibi her bir yapılandırma için yayımlamanız gerekir.
+* *\*.runtimeconfig.js* gibi yapılandırma dosyaları tek dosyaya dahil edilir. Ek bir yapılandırma dosyası gerekliyse, tek dosyanın yanına yerleştirebilirsiniz.
+
 ## <a name="publish-a-single-file-app---cli"></a>Tek bir dosya uygulaması yayımlama-CLı
 
 [DotNet Publish](../tools/dotnet-publish.md) komutunu kullanarak tek bir dosya uygulaması yayımlayın. Uygulamanızı yayımladığınızda, aşağıdaki özellikleri ayarlayın:
@@ -129,17 +162,17 @@ Visual Studio, uygulamanızın nasıl yayımlandığını denetleyen yeniden kul
 
 01. **Düzenle**' yi seçin.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Yayımla seçeneğini vurgulayan sağ tıklama menüsüyle Çözüm Gezgini.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Visual Studio Profili Düzenle düğmesi ile Yayımla.":::
 
 01. **Profil ayarları** iletişim kutusunda, aşağıdaki seçenekleri ayarlayın:
 
-    - **Dağıtım modunu** **kendi kendine dahil**olarak ayarlayın.
+    - **Dağıtım modunu** **kendi kendine dahil** olarak ayarlayın.
     - **Hedef çalışma zamanını** , yayımlamak istediğiniz platforma ayarlayın.
     - **Tek bir dosya üret**' i seçin.
 
     Ayarları kaydetmek ve **Yayımla** iletişim kutusuna dönmek için **Kaydet** ' i seçin.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="Yayımla seçeneğini vurgulayan sağ tıklama menüsüyle Çözüm Gezgini.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="Dağıtım modu, hedef çalışma zamanı ve tek dosya seçenekleri vurgulanmış şekilde profil ayarları iletişim kutusu.":::
 
 01. Uygulamanızı tek bir dosya olarak yayımlamak için **Yayımla** ' yı seçin.
 

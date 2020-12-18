@@ -2,12 +2,12 @@
 title: Ocelot ile API Ağ Geçitlerini uygulama
 description: Ocelot ile API ağ geçitleri uygulamayı ve kapsayıcı tabanlı bir ortamda Ocelot 'yi kullanmayı öğrenin.
 ms.date: 03/02/2020
-ms.openlocfilehash: 6d9229228e228b664a602ce9a682d435505a8107
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5da8533eff394b587d123970742727484a7236ad
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718104"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678123"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot ile API ağ geçitleri uygulama
 
@@ -39,7 +39,7 @@ Tasarımda çok daha fazla şey varsa, bazen ayrıntılı bir API ağ geçidi, s
 
 Önceki bölümde, [mikro hizmetlere dayalı bileşik Kullanıcı arabirimi oluşturma hakkında](../architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md)daha fazla ayrıntı inceleyeceğiz.
 
-Anahtar kullanımı, çok sayıda Orta ve büyük ölçekli uygulamalar için, özel olarak oluşturulmuş bir API ağ geçidi ürünü kullanmak genellikle iyi bir yaklaşımdır, ancak tek bir monoparçalı toplayıcı veya benzersiz bir merkezi özel API ağ geçidi değil, bu API Gateway, özerk mikro hizmetler oluşturan çeşitli geliştirme ekipleri için birden çok bağımsız yapılandırma alanına izin vermez.
+Anahtar dağıtımı olarak, çok sayıda Orta ve büyük ölçekli uygulamalar için, özel olarak oluşturulmuş bir API ağ geçidi ürünü kullanmak genellikle iyi bir yaklaşımdır, ancak tek bir monoparçalı toplayıcı veya benzersiz bir merkezi özel API ağ geçidi olarak değil, bu API Gateway, otonom mikro hizmetler oluşturan çeşitli geliştirme ekipleri için birden çok bağımsız yapılandırma alanına izin vermez.
 
 ### <a name="sample-microservicescontainers-to-reroute-through-the-api-gateways"></a>API ağ geçitleri aracılığıyla yeniden yönlendirme için örnek mikro hizmetler/kapsayıcılar
 
@@ -97,7 +97,7 @@ Kodda gösterilen bağlantı noktası 80, Docker ana bilgisayarı dahilinde oldu
 
 İstemci uygulamaları, ile dağıtım sırasında yayımlanan dış bağlantı noktalarına (varsa) erişebilir `docker-compose` .
 
-Bu dış bağlantı noktaları, bir üretim ortamına dağıtıldığında yayımlanmamalıdır. Bu, istemci uygulamaları ve mikro hizmetler arasındaki doğrudan iletişimin önüne geçmek için API ağ geçidini kullanmak istediğinizden kesinlikle önemlidir.
+Bu dış bağlantı noktaları, bir üretim ortamına dağıtıldığında yayımlanmamalıdır. Bu özel nedenle, istemci uygulamaları ve mikro hizmetler arasındaki doğrudan iletişimin önüne geçmek için API ağ geçidini neden kullanmak istersiniz.
 
 Ancak geliştirme sırasında, mikro hizmet/kapsayıcıya doğrudan erişmek ve Swagger aracılığıyla çalıştırmak istersiniz. EShopOnContainers 'da bu nedenle, dış bağlantı noktaları API Gateway veya istemci uygulamaları tarafından kullanılmayabilse bile hala belirtilir.
 
@@ -155,7 +155,7 @@ EShopOnContainers 'da, API Gateway uygulamasının basit bir ASP.NET Core WebHos
 
 **Şekil 6-32**. EShopOnContainers 'da OcelotApiGw temel projesi
 
-Bu ASP.NET Core WebHost projesi temel olarak iki basit dosya ile oluşturulmuştur:  `Program.cs` ve `Startup.cs` .
+Bu ASP.NET Core WebHost projesi iki basit dosya ile oluşturulmuştur:  `Program.cs` ve `Startup.cs` .
 
 Program.cs yalnızca, BuildWebHost ASP.NET Core oluşturmak ve yapılandırmak için gereklidir.
 
@@ -267,7 +267,7 @@ Bağlantı noktası, hizmet tarafından kullanılan iç bağlantı noktasıdır.
 
 , `Host` Kullanmakta olduğunuz hizmet adı çözümlemesine bağlı olan bir hizmet adıdır. Docker-Compose kullanırken, hizmet adları Docker ana bilgisayarı tarafından sağlanır ve bu, Docker-Compose dosyalarında belirtilen hizmet adlarını kullanmaktır. Kubernetes veya Service Fabric gibi bir Orchestrator kullanılıyorsa, bu ad her Orchestrator tarafından sağlanmış olan DNS veya ad çözümlemesi tarafından çözümlenmelidir.
 
-Downstreamhostandport, istekleri iletmek istediğiniz herhangi bir aşağı akış hizmetinin ana bilgisayar ve bağlantı noktasını içeren bir dizidir. Genellikle bu yalnızca bir giriş içerir, ancak bazen aşağı akış hizmetlerinize yük dengelemesi yapmak isteyebilirsiniz ve Ocelot, birden fazla giriş eklemenizi ve sonra bir yük dengeleyici seçmenizi sağlar. Ancak Azure ve herhangi bir Orchestrator kullanılıyorsa, bulut ve Orchestrator altyapısıyla yük dengelemesi daha iyi bir fikir olabilir.
+Downstreamhostandport, istekleri iletmek istediğiniz herhangi bir aşağı akış hizmetinin ana bilgisayar ve bağlantı noktasını içeren bir dizidir. Genellikle bu yapılandırma yalnızca bir giriş içerir, ancak bazen aşağı akış hizmetlerinize yük dengelemesi yapmak isteyebilirsiniz ve Ocelot, birden fazla giriş eklemenizi ve sonra bir yük dengeleyici seçmenizi sağlar. Ancak Azure ve herhangi bir Orchestrator kullanılıyorsa, bulut ve Orchestrator altyapısıyla yük dengelemesi daha iyi bir fikir olabilir.
 
 UpstreamPathTemplate, istemci tarafından verilen bir istek için kullanılacak olan DownstreamPathTemplate 'i tanımlamak için kullanılan URL 'dir. Son olarak, UpstreamHttpMethod kullanılır. bu nedenle, Ocelot, farklı istekleri (GET, POST, PUT) aynı URL 'ye ayırabilirler.
 
@@ -393,7 +393,7 @@ Daha fazla yakınlaştırma, aşağıdaki görüntüde "alışveriş" iş alanı
 
 **Şekil 6-38**. Toplayıcı hizmetlerini yakından yakınlaştırın
 
-Diyagramda, karmaşık alabileceğiniz API ağ geçitlerinden gelen olası istekleri nasıl gösterdiğinin fark edebilirsiniz. Mavi renkli okların nasıl basitleştiğini, bir istemci uygulamalar perspektifinden, iletişim azaltmaya ve gecikme süresini azaltarak, uzak uygulamalar (mobil ve SPA uygulamaları) için Kullanıcı deneyimini önemli ölçüde geliştirerek, özellikle.
+Diyagramda, karmaşık alabileceğiniz API ağ geçitlerinden gelen olası istekleri nasıl gösterdiğinin fark edebilirsiniz. Diğer taraftan, toplayıcı modelini kullanırken, mavi renkli okların bir istemci uygulama perspektifinden iletişimi nasıl basitleştireceğinizi görebilirsiniz. Bu model yalnızca iletişimde azaltmaya ve gecikme süresini azaltmaya yardımcı olur. Ayrıca, uzak uygulamalar (mobil ve SPA uygulamaları) için de Kullanıcı deneyimini önemli ölçüde geliştirir.
 
 "Pazarlama" iş alanı ve mikro hizmetler söz konusu olduğunda, bu basit bir kullanım durumdur, bu nedenle aggregators 'ı kullanmaya gerek yoktur, ancak gerekirse bu da mümkün olabilir.
 
@@ -527,7 +527,7 @@ Kubernetes 'te herhangi bir giriş yaklaşımı kullanmıyorsanız, hizmetlerini
 
 Ancak, bir giriş yaklaşımı kullanıyorsanız Internet ve hizmetleriniz (API ağ geçitleriniz dahil) arasında bir orta katman ve ters proxy görevi gören bir orta katmanınız olacaktır.
 
-Bir tanım olarak, giriş, gelen bağlantılara küme hizmetlerine ulaşmasına izin veren kuralların koleksiyonudur. Giriş genellikle hizmetlere dışarıdan erişilebilen URL 'Ler, Yük Dengeleme trafiği, SSL sonlandırma ve daha fazlası sağlamak üzere yapılandırılır. Kullanıcılar giriş kaynağını API sunucusuna naklederek giriş isteği ister.
+Bir tanım olarak, giriş, gelen bağlantılara küme hizmetlerine ulaşmasına izin veren kuralların koleksiyonudur. Bir giriş, hizmetlere dışarıdan erişilebilen URL 'Ler, Yük Dengeleme trafiği, SSL sonlandırma ve daha fazlasını sağlamak üzere yapılandırılmıştır. Kullanıcılar giriş kaynağını API sunucusuna naklederek giriş isteği ister.
 
 EShopOnContainers 'da, yerel olarak geliştirilirken ve yalnızca bir geliştirme makinenizi Docker Konağı olarak kullanırken, yalnızca birden fazla API ağ geçidi kullanmayın.
 
@@ -543,7 +543,7 @@ Web uygulamalarının önündeki Kubernetes 'de bir giriş Nginx katmanına sahi
 
 **Şekil 6-41**. Kubernetes 'e dağıtıldığında eShopOnContainers içindeki giriş katmanı
 
-Kubernetes girişi, genellikle API ağ geçidi kapsamından çıkan Web uygulamaları dahil olmak üzere, uygulamaya yönelik tüm trafik için ters proxy görevi görür. EShopOnContainers 'ı Kubernetes 'e dağıttığınızda, temel olarak yalnızca birkaç hizmet veya uç _nokta Ile URL_'lerde aşağıdaki postdüzeltmelerin listesini sunar:
+Bir Kubernetes girişi, API ağ geçidi kapsamındaki Web uygulamaları da dahil olmak üzere, uygulamaya yönelik tüm trafik için ters proxy görevi görür. EShopOnContainers 'ı Kubernetes 'e dağıttığınızda, temel olarak yalnızca birkaç hizmet veya uç _nokta Ile URL_'lerde aşağıdaki postdüzeltmelerin listesini sunar:
 
 - `/` istemci SPA Web uygulaması için
 - `/webmvc` istemci MVC web uygulaması için

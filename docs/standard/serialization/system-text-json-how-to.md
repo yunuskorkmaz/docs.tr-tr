@@ -1,7 +1,7 @@
 ---
 title: C#-.NET kullanarak JSON serileştirmek ve serisini kaldırma
 description: System.Text.Json.Net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı öğrenin. Örnek kod içerir.
-ms.date: 12/02/2020
+ms.date: 12/16/2020
 ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 46203aa1b4daa4281c7c26191f7df947967fa1c0
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: b69dfd6238f529c3b315d63a93a82da0f316f459
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513269"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678250"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -188,6 +188,15 @@ Zaman uyumlu kod kullanarak bir dosyadan seri durumdan çıkarmak için, aşağ�
 Zaman uyumsuz kod kullanarak bir dosyadan seri durumdan çıkarmak için yöntemini çağırın <xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A> :
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFileAsync.cs" id="Deserialize":::
+
+> [!TIP]
+> Seri durumdan çıkarmak istediğiniz JSON varsa ve bunun serisini kaldırmak için sınıfınız yoksa, Visual Studio 2019, ihtiyacınız olan sınıfı otomatik olarak oluşturabilir:
+>
+> 1. Seri durumdan çıkarmak için gereken JSON 'ı kopyalayın.
+> 1. Bir sınıf dosyası oluşturun ve şablon kodunu silin.
+> 1. **Düzenleme**  >  **Yapıştır Özel**  >  **JSON 'ı sınıflar olarak Yapıştır**' ı seçin.
+>
+> Sonuç, seri durumdan çıkarma hedefi için kullanabileceğiniz bir sınıftır.
 
 ## <a name="deserialize-from-utf-8"></a>UTF-8 ' den serisini kaldırma
 

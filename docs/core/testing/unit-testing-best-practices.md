@@ -4,12 +4,12 @@ description: .NET Core ve .NET Standard projeleri için Code Quality ve esnekli�
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 6c1e9a665ad541bf6109634a6df857880ee47042
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 56f51cde0e52a9e6a38e5291c81470beee61adef
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281655"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678109"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core ve .NET Standard ile birim testi en iyi uygulamaları
 
@@ -48,7 +48,7 @@ Kodunuz için yazma testleri doğal olarak kodunuzu ayırır, çünkü aksi takd
 ## <a name="characteristics-of-a-good-unit-test"></a>İyi birim testinin özellikleri
 
 - **Hızlı**. Yetişkinlere yönelik projelerin binlerce birim testi olması için bu, yaygın olmayan bir durumdur. Birim testlerinin çalışması çok az zaman almalıdır. Mayacak.
-- **Yalıtılmıştır**. Birim testleri tek başına, yalıtımıyla çalıştırılabilir ve dosya sistemi veya veritabanı gibi herhangi bir dış faktörde bağımlılığı yoktur.
+- **Yalıtılmış**. Birim testleri tek başına, yalıtımıyla çalıştırılabilir ve dosya sistemi veya veritabanı gibi herhangi bir dış faktörde bağımlılığı yoktur.
 - **Yinelenebilir**. Bir birim testinin çalıştırılması sonuçlarıyla tutarlı olmalıdır, diğer bir deyişle, çalışma arasındaki herhangi bir şeyi değiştirmemelisiniz, her zaman aynı sonucu döndürür.
 - **Kendi kendine denetim**. Testin, herhangi bir insan etkileşimi olmadan başarılı veya başarısız olup olmadığını otomatik olarak algılayabilmesi gerekir.
 - **Zamanında**. Bir birim testinin, test edilmekte olan koda kıyasla yazılması, ne zaman orantılı bir şekilde sürmemelidir. Kodu yazmaya kıyasla kodun büyük bir süre sürmesi sınamasını fark ederseniz, daha fazla test edilen bir tasarıma göz önünde bulundurun.
@@ -67,7 +67,7 @@ Test hakkında konuşurken, *sahte* terimi genellikle kötüye kullanılır. Aş
 
 *Sahte nesne* , sistem içindeki bir birim testinin geçtiğini veya başarısız olduğunu belirten sahte bir nesnedir. Bir sahte, buna karşılık gelene kadar sahte olarak başlatılır.
 
-*Saplama* -bir saplama, sistemdeki mevcut bir bağımlılık (veya ortak çalışan) için denetlenebilir bir değiştirme işlemi olur. Bir saplama kullanarak, doğrudan bağımlılık ile ilgilenmeden kodunuzu test edebilirsiniz. Varsayılan olarak, sahte bir saplama olarak başlatılır.
+*Saplama* -bir saplama, sistemdeki mevcut bir bağımlılık (veya ortak çalışan) için denetlenebilir bir değiştirme işlemi olur. Bir saplama kullanarak, doğrudan bağımlılık ile ilgilenmeden kodunuzu test edebilirsiniz. Varsayılan olarak, bir saplama sahte olarak başlatılır.
 
 Aşağıdaki kod parçacığını göz önünde bulundurun:
 
