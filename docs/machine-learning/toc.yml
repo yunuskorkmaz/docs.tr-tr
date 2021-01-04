@@ -45,6 +45,8 @@
           href: tutorials/image-classification.md
         - name: Motosiklet kiralama talebini tahmin etme (zaman serisi)
           href: tutorials/time-series-demand-forecasting.md
+        - name: Çağrı hacmindeki ani artışlar (anomali algılama)
+          href: tutorials/phone-calls-anomaly-detection.md
         - name: Ürün Satış Analizi (anomali algılama)
           href: tutorials/sales-anomaly-detection.md
         - name: Görüntülerdeki nesneleri algılama (nesne algılama)
