@@ -2,19 +2,19 @@
 title: .NET için Azure kitaplıklarında kimlik doğrulamasını anlama
 description: .NET için Azure SDK ile kimlik doğrulamanın farklı yollarını açıklar.
 ms.date: 06/19/2020
-ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: dbae72eb9e80801d7338b210f9664f1c4e318ae0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-dotnet
+ms.openlocfilehash: 0a508606b40905d5b09b8515910873359efbbf2e
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539183"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700847"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>.NET için Azure SDK ile kimlik doğrulama
 
 ## <a name="recommended-azureidentity"></a>Önerilen: Azure. Identity
 
-.NET için Azure SDK 'sindeki en son paketler, kimlik doğrulaması için ortak bir kimlik doğrulama paketi kullanır `Azure.Identity` . `Azure.Identity`Bu belgenin ilerleyen kısımlarında açıklanan diğer kimlik doğrulama mekanizmaları üzerinde kullanılması önerilir. Tarafından sunulan kimlik bilgilerini destekleyen paketler, üzerine `Azure.Identity` kurulmuştur `Azure.Core` ve *Azure*ile başlayan paket tanımlayıcılarına sahiptir. Kullanan paketlerin envanterini [görmek için paket listesine bakın](packages.md) `Azure.Core` .
+.NET için Azure SDK 'sindeki en son paketler, kimlik doğrulaması için ortak bir kimlik doğrulama paketi kullanır `Azure.Identity` . `Azure.Identity`Bu belgenin ilerleyen kısımlarında açıklanan diğer kimlik doğrulama mekanizmaları üzerinde kullanılması önerilir. Tarafından sunulan kimlik bilgilerini destekleyen paketler, üzerine `Azure.Identity` kurulmuştur `Azure.Core` ve *Azure* ile başlayan paket tanımlayıcılarına sahiptir. Kullanan paketlerin envanterini [görmek için paket listesine bakın](packages.md) `Azure.Core` .
 
 Projenizde kullanmayla ilgili tüm yönergeler için `Azure.Identity` bkz. [.net Için Azure Identity Client](/dotnet/api/overview/azure/identity-readme)belgeleri.
 
@@ -54,7 +54,7 @@ var credentials = SdkContext.AzureCredentialsFactory
         AzureEnvironment.AzureGlobalCloud);
 ```
 
-Hizmet sorumlusunu oluştururken JSON çıktısından *ClientID*, *ClientSecret*ve *tenantıd* değerlerini kullanın.
+Hizmet sorumlusunu oluştururken JSON çıktısından *ClientID*, *ClientSecret* ve *tenantıd* değerlerini kullanın.
 
 Ardından, `Azure` API ile çalışmaya başlamak için giriş noktası nesnesini oluşturun:
 

@@ -1,17 +1,17 @@
 ---
-title: Konsol günlüğü biçimlendirmesi
+title: Konsol günlük biçimlendirme
 description: Kullanılabilir konsol günlük biçimlendirmesini kullanmayı veya .NET uygulamalarınız için özel günlük biçimlendirmesini uygulamayı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 10/22/2020
-ms.openlocfilehash: 28a3de833b759e043ec3e2cb5016852f9a861cee
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.date: 12/17/2020
+ms.openlocfilehash: 0ec8fc2018febe4273aa646d1682be197933f925
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897678"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700821"
 ---
-# <a name="console-log-formatting"></a>Konsol günlüğü biçimlendirmesi
+# <a name="console-log-formatting"></a>Konsol günlük biçimlendirme
 
 .NET 5 ' te, ad alanındaki konsol günlüklerine özel biçimlendirme desteği eklenmiştir `Microsoft.Extensions.Logging.Console` . Önceden tanımlanmış üç biçimlendirme seçeneği mevcuttur: [`Simple`](#simple) , [`Systemd`](#systemd) , ve [`Json`](#json) .
 
@@ -85,7 +85,7 @@ Uygulamayı bir daha çalıştırın, yukarıdaki değişiklik ile günlük ilet
 
 ## <a name="set-formatter-with-configuration"></a>Biçimlendirici yapılandırma ile ayarla
 
-Önceki örneklerde, bir biçimlendirici programlı bir şekilde nasıl kaydedileceği gösterilmektedir. Alternatif olarak, bu [yapılandırma](configuration.md)ile yapılabilir. Önceki Web uygulaması örnek kaynak kodunu göz önünde bulundurun, Program.cs dosyasında çağırmak yerine dosyayı *appsettings.js* güncelleştirirseniz `ConfigureLogging` aynı sonucu elde edebilirsiniz *Program.cs* . Güncelleştirilmiş `appsettings.json` Dosya, biçimlendirici şu şekilde yapılandırılır:
+Önceki örneklerde, bir biçimlendirici programlı bir şekilde nasıl kaydedileceği gösterilmektedir. Alternatif olarak, bu [yapılandırma](configuration.md)ile yapılabilir. Önceki Web uygulaması örnek kaynak kodunu göz önünde bulundurun, Program.cs dosyasında çağırmak yerine dosyayı *appsettings.js* güncelleştirirseniz `ConfigureLogging` aynı sonucu elde edebilirsiniz  . Güncelleştirilmiş `appsettings.json` Dosya, biçimlendirici şu şekilde yapılandırılır:
 
 :::code language="json" source="snippets/logging/console-formatter-json/appsettings.json" highlight="14-23":::
 
@@ -151,6 +151,19 @@ Daha sonra, `TextWriterExtensions` biçimlendirilen günlük ILETILERINDE ANSI k
 :::code language="csharp" source="snippets/logging/console-formatter-custom/CustomColorFormatter.cs" highlight="15-18,52-65":::
 
 Uygulamayı çalıştırdığınızda Günlükler olduğunda `CustomPrefix` iletiyi yeşil renkte gösterir `FormatterOptions.ColorBehavior` `Enabled` .
+
+> [!NOTE]
+> Ne zaman, <xref:Microsoft.Extensions.Logging.Console.LoggerColorBehavior> `Disabled` günlük iletileri, günlük iletileri IÇINDEKI gömülü ANSI renk kodlarını _yorumlamaz_ . Bunun yerine, ham iletiyi alırlar. Örneğin, aşağıdakileri göz önünde bulundurun:
+>
+> ```csharp
+> logger.LogInformation("Random log \x1B[42mwith green background\x1B[49m message");
+> ```
+>
+> Bu, tam dizeyi çıktılar ve _renklendirilmez_ .
+>
+> ```output
+> Random log \x1B[42mwith green background\x1B[49m message
+> ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

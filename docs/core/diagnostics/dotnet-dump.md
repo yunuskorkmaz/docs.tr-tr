@@ -2,12 +2,12 @@
 title: DotNet-döküm Tanılama aracı-.NET CLı
 description: Yerel hata ayıklayıcı olmadan Windows ve Linux dökümlerinin toplanması ve çözümlenmesi için DotNet-dump CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822210"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765052"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Döküm toplama ve çözümleme yardımcı programı (DotNet-dump)
 
@@ -22,7 +22,7 @@ ms.locfileid: "94822210"
 
 - **DotNet genel aracı:**
 
-  NuGet paketinin en son sürümünü yüklemek için `dotnet-dump` [NuGet package](https://www.nuget.org/packages/dotnet-dump) [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
+  NuGet paketinin en son sürümünü yüklemek için `dotnet-dump` [](https://www.nuget.org/packages/dotnet-dump) [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
 
   ```dotnetcli
   dotnet tool install --global dotnet-dump
@@ -146,34 +146,37 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `clrstack <arguments>`              | Yalnızca bir yönetilen kodların bir yığın izlemesini sağlar.                                                  |
 | `clrthreads <arguments>`            | Çalıştıran yönetilen iş parçacıklarını listeler.                                                            |
 | `dumpasync <arguments>`             | Atık toplanan yığında zaman uyumsuz durum makineleri hakkındaki bilgileri görüntüler.                |
-| `dumpassembly <arguments>`          | Bir derleme hakkındaki ayrıntıları görüntüler.                                                           |
-| `dumpclass <arguments>`             | Belirtilen adresteki bir EE sınıfı yapısı hakkındaki bilgileri görüntüler.                     |
-| `dumpdelegate <arguments>`          | Bir temsilciyle ilgili bilgileri görüntüler.                                                        |
-| `dumpdomain <arguments>`            | Tüm AppDomain ve etki alanları içindeki tüm derlemelerin bilgilerini görüntüler.                |
+| `dumpassembly <arguments>`          | Belirtilen adresteki derleme hakkındaki ayrıntıları görüntüler.                                 |
+| `dumpclass <arguments>`             | `EEClass`Belirtilen adresteki yapıyla ilgili bilgileri görüntüler.                  |
+| `dumpdelegate <arguments>`          | Belirtilen adresteki temsilciyle ilgili bilgileri görüntüler.                             |
+| `dumpdomain <arguments>`            | Tüm AppDomain 'ler ve belirtilen etki alanı içindeki tüm derlemeler için bilgi görüntüler.       |
 | `dumpheap <arguments>`              | Çöp toplanmış yığın ve nesneler hakkında koleksiyon istatistikleri hakkında bilgi görüntüler.       |
 | `dumpil <arguments>`                | Yönetilen bir yöntemle ilişkili Microsoft ara dilini (MSIL) görüntüler. |
 | `dumplog <arguments>`               | Bir bellek içi yük günlüğünün içeriğini belirtilen dosyaya yazar.                         |
-| `dumpmd <arguments>`                | Belirtilen adresteki bir MethodDesc yapısıyla ilgili bilgileri görüntüler.                   |
-| `dumpmodule <arguments>`            | Belirtilen adresteki bir EE modül yapısıyla ilgili bilgileri görüntüler.                    |
-| `dumpmt <arguments>`                | Belirtilen bir adresteki bir yöntem tablosuyla ilgili bilgileri görüntüler.                           |
-| `dumpobj <arguments>`               | Belirtilen adresteki bir nesne hakkındaki bilgileri görüntüler.                                       |
+| `dumpmd <arguments>`                | `MethodDesc`Belirtilen adresteki yapıyla ilgili bilgileri görüntüler.               |
+| `dumpmodule <arguments>`            | Belirtilen adresteki modülle ilgili bilgileri görüntüler.                               |
+| `dumpmt <arguments>`                | Belirtilen adresteki hakkında bilgileri görüntüler `MethodTable` .                        |
+| `dumpobj <arguments>`               | Belirtilen adresteki nesne hakkındaki bilgileri görüntüler.                                      |
 | `dso|dumpstackobjects <arguments>`  | Geçerli yığının sınırları içinde bulunan tüm yönetilen nesneleri görüntüler.                    |
 | `eeheap <arguments>`                | İç çalışma zamanı veri yapıları tarafından tüketilen işlem belleği hakkındaki bilgileri görüntüler.              |
 | `finalizequeue <arguments>`         | Sonlandırma için kaydolan tüm nesneleri görüntüler.                                             |
-| `gcroot <arguments>`                | Belirtilen adresteki bir nesneye başvurular (veya köklerle) hakkındaki bilgileri görüntüler.              |
+| `gcroot <arguments>`                | Belirtilen adresteki nesnenin başvuruları (veya kökleri) hakkındaki bilgileri görüntüler.             |
 | `gcwhere <arguments>`               | Geçirilen bağımsız değişkenin GC yığınındaki konumu görüntüler.                               |
-| `ip2md <arguments>`                 | JıT kodundaki belirtilen adreste MethodDesc yapısını görüntüler.                       |
+| `ip2md <arguments>`                 | `MethodDesc`Belirtilen adresteki YAPıYı JIT kodunda görüntüler.                     |
 | `histclear <arguments>`             | Komut ailesi tarafından kullanılan tüm kaynakları serbest bırakır `hist*` .                                |
 | `histinit <arguments>`              | Hatası ayıklanana kaydedilen yük günlüğünden SOS yapılarını başlatır.                     |
 | `histobj <arguments>`               | İle ilgili çöp toplama stres günlüğü yeniden konumlarını görüntüler `<arguments>` .              |
-| `histobjfind <arguments>`           | Belirtilen adresteki bir nesneye başvuran tüm günlük girişlerini görüntüler.               |
+| `histobjfind <arguments>`           | Belirtilen adresteki nesneye başvuran tüm günlük girişlerini görüntüler.              |
 | `histroot <arguments>`              | Belirtilen kökün tanıtımlarıyla ve yeniden konumlandırılmalarıyla ilişkili bilgileri görüntüler.        |
 | `lm|modules`                        | İşlemdeki yerel modülleri görüntüler.                                                   |
-| `name2ee <arguments>`               | İçin MethodTable yapısını ve EEClass yapısını görüntüler `<argument>` .                |
-| `pe|printexception <arguments>`     | Adreste özel durum sınıfından türetilmiş tüm nesneleri görüntüler `<argument>` .             |
+| `name2ee <arguments>`               | `MethodTable` `EEClass` İçin ve yapılarını görüntüler `<argument>` .                     |
+| `pe|printexception <arguments>`     | Sınıfından türetilmiş tüm nesneleri görüntüler <xref:System.Exception> `<argument>` .      |
 | `setsymbolserver <arguments>`       | Sembol sunucusu desteğini sunar                                                             |
 | `syncblk <arguments>`               | SyncBlock tutucusu bilgilerini görüntüler.                                                           |
 | `threads|setthread <threadid>`      | SOS komutlarının geçerli iş parçacığı KIMLIĞINI ayarlar veya görüntüler.                                  |
+
+> [!NOTE]
+> Ek ayrıntılar, [.net Için sos hata ayıklama uzantısında](sos-debugging-extension.md)bulunabilir.
 
 ## <a name="using-dotnet-dump"></a>`dotnet-dump` kullanma
 

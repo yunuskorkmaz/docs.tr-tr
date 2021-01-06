@@ -3,12 +3,12 @@ title: .NET 'teki iyi bilinen EventCounters
 description: .NET çalışma zamanı ve kitaplıkları tarafından yayınlanan EventCounters 'i gözden geçirin.
 ms.topic: reference
 ms.date: 12/17/2020
-ms.openlocfilehash: 724e49ba616a7f656d629a0443ec5e322a51d6f5
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 8bd14c7caf004cefe73d5b0676b9fa3280840442
+ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97681965"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97737300"
 ---
 # <a name="well-known-eventcounters-in-net"></a>.NET 'teki iyi bilinen EventCounters
 
@@ -22,7 +22,7 @@ Aşağıdaki sayaçlar .NET çalışma zamanının (CoreCLR) bir parçası olara
 |--|--|
 | :::no-loc text="% Time in GC since last GC"::: (`time-in-gc`) | Son GC 'den bu yana GC 'deki sürenin yüzdesi |
 | :::no-loc text="Allocation Rate"::: (`alloc-rate`) | Her güncelleştirme aralığı için ayrılan bayt sayısı |
-| :::no-loc text="CPU Usage"::: (`cpu-usage`) | İşlemin CPU kullanımının yüzdesi |
+| :::no-loc text="CPU Usage"::: (`cpu-usage`) | İşlemin CPU kullanımının tüm sistem CPU kaynaklarıyla ilişkili yüzdesi |
 | :::no-loc text="Exception Count"::: (`exception-count`) | Oluşan özel durumların sayısı |
 | :::no-loc text="GC Heap Size"::: (`gc-heap-size`) | Temel alınarak ayrılan bayt sayısı <xref:System.GC.GetTotalMemory(System.Boolean)?displayProperty=nameWithType> |
 | :::no-loc text="Gen 0 GC Count"::: (`gen-0-gc-count`) | Güncelleştirme aralığı başına Gen 0 için GC 'nin kaç kez gerçekleştiği |
@@ -83,3 +83,62 @@ Aşağıdaki sayaçlar [ASP.NET Core Kestrel Web sunucusunun](/aspnet/core/funda
 | :::no-loc text="TLS Handshake Rate"::: (`tls-handshakes-per-second`) | Güncelleştirme aralığı başına TLS el sıkışma sayısı |
 | :::no-loc text="Total Connections"::: (`total-connections`) | Web sunucusuna yönelik toplam bağlantı sayısı |
 | :::no-loc text="Total TLS Handshakes"::: (`total-tls-handshakes`) | Web sunucusu ile toplam TLS el sıkışma sayısı |
+
+## <a name="systemnethttp-counters"></a>"System .net. http" sayaçları
+
+Aşağıdaki sayaçlar HTTP yığını tarafından yayımlanır.  Bu sayaçlar yalnızca .NET 5 ve sonraki sürümlerde kullanılabilir.
+
+| Sayaç | Açıklama |
+|--|--|
+| :::no-loc text="Requests Started"::: (`requests-started`) | İşlemin başlatılmasından bu yana başlatılan istek sayısı |
+| :::no-loc text="Requests Started Rate"::: (`requests-started-rate`) | Güncelleştirme aralığı başına başlatılan istek sayısı |
+| :::no-loc text="Requests Failed"::: (`requests-failed`) | İşlemin başlatılmasından bu yana başarısız olan istek sayısı |
+| :::no-loc text="Requests Failed Rate"::: (`requests-failed-rate`) | Güncelleştirme aralığı başına başarısız istek sayısı |
+| :::no-loc text="Current Requests"::: (`current-requests`) | Başlatılmış ancak henüz tamamlanmamış veya başarısız olan etkin HTTP isteklerinin geçerli sayısı |
+| :::no-loc text="Current HTTP 1.1 Connections"::: (`http11-connections-current-total`) | Başlatılmış ancak henüz tamamlanmamış veya başarısız olan HTTP 1,1 bağlantılarının geçerli sayısı |
+| :::no-loc text="Current HTTP 2.0 Connections"::: (`http20-connections-current-total`) | Başlatılmış ancak henüz tamamlanmamış veya başarısız olan HTTP 2,0 bağlantılarının geçerli sayısı |
+| :::no-loc text="HTTP 1.1 Requests Queue Duration"::: (`http11-requests-queue-duration`) | İstek kuyruğunda harcanan HTTP 1,1 isteklerinin ortalama süresi |
+| :::no-loc text="HTTP 2.0 Requests Queue Duration"::: (`http20-requests-queue-duration`) | İstek kuyruğunda harcanan HTTP 2,0 isteklerinin ortalama süresi |
+
+## <a name="systemnetnameresolution-counters"></a>"System .net. NameResolution" sayaçları
+
+Aşağıdaki sayaçlar DNS aramalarıyla ilgili ölçümleri izler. Bu sayaçlar yalnızca .NET 5 ve sonraki sürümlerde kullanılabilir.
+
+| Sayaç | Açıklama |
+|--|--|
+| :::no-loc text="DNS Lookups Requested"::: (`dns-lookups-requested`) | İşlemin başlatılmasından bu yana istenen DNS arama sayısı |
+| :::no-loc text="Average DNS Lookup Duration"::: (`dns-lookups-duration`) | Bir DNS araması için geçen ortalama süre |
+
+## <a name="systemnetsecurity-counters"></a>"System .net. Security" sayaçları
+
+Aşağıdaki sayaçlar, aktarım katmanı güvenlik protokolü ile ilgili ölçümleri izler.  Bu sayaçlar yalnızca .NET 5 ve sonraki sürümlerde kullanılabilir.
+
+| Sayaç | Açıklama |
+|--|--|
+| :::no-loc text="TLS handshakes completed"::: (`tls-handshake-rate`) | Güncelleştirme aralığı başına tamamlanan TLS el sıkışmaları sayısı |
+| :::no-loc text="Total TLS handshakes completed"::: (`total-tls-handshakes`) | İşlem başladıktan sonra tamamlanan TLS el sıkışmaları toplam sayısı |
+| :::no-loc text="Current TLS handshakes"::: (`current-tls-handshakes`) | Başlatılmış ancak henüz tamamlanmamış olan TLS el sıkışmalarının geçerli sayısı |
+| :::no-loc text="Total TLS handshakes failed"::: (`failed-tls-handshakes`) | İşlemin başlatılmasından bu yana başarısız olan TLS el sıkışmaları toplam sayısı |
+| :::no-loc text="All TLS Sessions Active"::: (`all-tls-sessions-open`) | Herhangi bir sürümdeki etkin TLS oturumlarının sayısı |
+| :::no-loc text="TLS 1.0 Sessions Active"::: (`tls10-sessions-open`) | Etkin TLS 1,0 oturumlarının sayısı |
+| :::no-loc text="TLS 1.1 Sessions Active"::: (`tls11-sessions-open`) | Etkin TLS 1,1 oturumlarının sayısı |
+| :::no-loc text="TLS 1.2 Sessions Active"::: (`tls12-sessions-open`) | Etkin TLS 1,2 oturumlarının sayısı |
+| :::no-loc text="TLS 1.3 Sessions Active"::: (`tls13-sessions-open`) | Etkin TLS 1,3 oturumlarının sayısı |
+| :::no-loc text="TLS Handshake Duration"::: (`all-tls-handshake-duration`) | Tüm TLS el sıkışmaları ortalama süresi |
+| :::no-loc text="TLS 1.0 Handshake Duration"::: (`tls10-handshake-duration`) | TLS 1,0 el sıkışmaları ortalama süresi |
+| :::no-loc text="TLS 1.1 Handshake Duration"::: (`tls11-handshake-duration`) | TLS 1,1 el sıkışmaları ortalama süresi |
+| :::no-loc text="TLS 1.2 Handshake Duration"::: (`tls12-handshake-duration`) | TLS 1,2 el sıkışmaları ortalama süresi |
+| :::no-loc text="TLS 1.3 Handshake Duration"::: (`tls13-handshake-duration`) | TLS 1,3 el sıkışmaları ortalama süresi |
+
+## <a name="systemnetsockets-counters-available-on-net-5-and-later-versions"></a>"System .net. Sockets" sayaçları (.NET 5 ve sonraki sürümlerinde kullanılabilir)
+
+Aşağıdaki sayaçlar ile ilgili ölçümleri izler <xref:System.Net.Sockets.Socket> .
+
+| Sayaç | Açıklama |
+|--|--|
+| :::no-loc text="Outgoing Connections Established"::: (`outgoing-connections-established`) | İşlemin başlatılmasından bu yana kurulan giden bağlantıların toplam sayısı |
+| :::no-loc text="Incoming Connections Established"::: (`incoming-connections-established`) | İşlemin başlatılmasından bu yana kurulan gelen bağlantıların toplam sayısı |
+| :::no-loc text="Bytes Received"::: (`bytes-received`) | İşlemin başlatılmasından bu yana alınan toplam bayt sayısı |
+| :::no-loc text="Bytes Sent"::: (`bytes-sent`) | İşlemin başlatılmasından bu yana gönderilen toplam bayt sayısı |
+| :::no-loc text="Datagrams Received"::: (`datagrams-received`) | İşlemin başlatılmasından bu yana alınan toplam veri birimi sayısı |
+| :::no-loc text="Datagrams Sent"::: (`datagrams-sent`) | İşlemin başlatılmasından bu yana gönderilen toplam veri birimi sayısı |

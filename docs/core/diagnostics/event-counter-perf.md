@@ -3,18 +3,18 @@ title: .NET Core 'da EventCounters kullanarak performansı ölçme
 description: Bu öğreticide, EventCounters kullanarak performansı ölçme hakkında bilgi edineceksiniz.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2ed7f234b685dab91ab275105d26b474e3bd1a87
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437448"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700749"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Öğretici: .NET Core 'da EventCounters kullanarak performansı ölçme
 
 **Bu makale şu şekilde geçerlidir: ✔️** .net Core 3,0 SDK ve sonraki sürümleri
 
-Bu öğreticide, <xref:System.Diagnostics.Tracing.EventCounter> yüksek bir olay sıklığıyla performansı ölçmek için nasıl kullanılabileceğinizi öğreneceksiniz. Çeşitli resmi .NET Core paketleri, üçüncü taraf sağlayıcılar tarafından yayınlanan [kullanılabilir sayaçları](event-counters.md#available-counters) kullanabilir veya izleme için kendi ölçümlerinizi oluşturabilirsiniz.
+Bu öğreticide, <xref:System.Diagnostics.Tracing.EventCounter> yüksek bir olay sıklığıyla performansı ölçmek için nasıl kullanılabileceğinizi öğreneceksiniz. Çeşitli resmi .NET Core paketleri, üçüncü taraf sağlayıcılar tarafından yayınlanan [kullanılabilir sayaçları](available-counters.md) kullanabilir veya izleme için kendi ölçümlerinizi oluşturabilirsiniz.
 
 Bu öğreticide şunları yapacaksınız:
 
@@ -23,7 +23,7 @@ Bu öğreticide şunları yapacaksınız:
 > - Uygulayın <xref:System.Diagnostics.Tracing.EventSource> .
 > - [DotNet sayaçları](dotnet-counters.md)olan sayaçları izleyin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Öğretici şunları kullanır:
 

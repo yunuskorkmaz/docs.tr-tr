@@ -2,12 +2,12 @@
 title: Günlüğe kaydetme ve izleme-.NET Core
 description: .NET Core günlüğe kaydetme ve izlemeye giriş.
 ms.date: 10/12/2020
-ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fac8eeed63e8737ad42699d81b421747b207c69a
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820585"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753633"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core günlüğe kaydetme ve izleme
 
@@ -36,11 +36,11 @@ Kullanılacak yazdırma stili API’si tercihi size bağlıdır. En önemli fark
   - Müşterilerinizin yayında görmeleri gerekebilecek bilgiler için yararlıdır.
   - En basit yaklaşım bu olduğundan, genellikle geçici hata ayıklama için kullanılır. Bu hata ayıklama kodu kaynak denetiminde neredeyse asla kullanılmaz.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - Yalnızca `TRACE` tanımlandığında etkindir.
+  - Yalnızca `TRACE` , `#define TRACE` kaynağınıza eklenerek veya derlenirken seçeneği belirtilerek tanımlandığında etkindir `/d:TRACE` .
   - <xref:System.Diagnostics.Trace.Listeners>Varsayılan olarak, ekli öğesine yazar <xref:System.Diagnostics.DefaultTraceListener> .
   - Çoğu derlemede etkinleştirilecek olan günlükler oluştururken bu API’yi kullanın.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - Yalnızca `DEBUG` tanımlandığında etkindir.
+  - Yalnızca `DEBUG` , `#define DEBUG` kaynağınıza eklenerek veya derlenirken seçeneği belirtilerek tanımlandığında etkindir `/d:DEBUG` .
   - Kullanıma açılan bir hata ayıklayıcıya yazar.
   - `*nix`Ayarlandıysa, stderr 'e yazma işlemleri `COMPlus_DebugWriteToStdErr` yapılır.
   - Yalnızca hata ayıklama derlemelerinde etkinleştirilecek günlükler oluştururken bu API’yi kullanın.
@@ -95,6 +95,8 @@ Düşük düzey API 'Ler, günlük gereksinimleriniz için doğru seçim olmayab
 - [C# dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) , günlük kodu yazmayı kolaylaştırabilir.
 
 - [Çalışma zamanı sağlayıcısı olay listesi](../../fundamentals/diagnostics/runtime-events.md)
+
+- [.NET 'teki iyi bilinen olay sağlayıcıları](well-known-event-providers.md)
 
 - <xref:System.Exception.Message?displayProperty=nameWithType>Özelliği, özel durumları günlüğe kaydetmek için yararlıdır.
 

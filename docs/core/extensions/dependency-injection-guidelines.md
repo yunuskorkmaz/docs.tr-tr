@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/29/2020
 ms.topic: guide
-ms.openlocfilehash: 092fdc70bd5d6bae82c4c1da96db4d5ac08df452
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 6b12d0d607dc0aed8f281943cecf3afa69b0575a
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063169"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899442"
 ---
 # <a name="dependency-injection-guidelines"></a>Bağımlılık ekleme yönergeleri
 
@@ -83,7 +83,7 @@ public void ConfigureServices(IServiceCollection services)
 
 Yukarıdaki kodda:
 
-- `ExampleService`Örnek, hizmet **not** kapsayıcısı tarafından oluşturulmamış.
+- `ExampleService`Örnek, hizmet  kapsayıcısı tarafından oluşturulmamış.
 - Framework Hizmetleri otomatik **olarak elden atmaz.**
 - Geliştirici, hizmetleri elden atan sorumludur.
 
@@ -149,7 +149,7 @@ Aşağıdaki üçüncü taraf kapsayıcıları ASP.NET Core uygulamalarla kullan
 
 İş parçacığı güvenli Singleton Hizmetleri oluşturun. Tek bir hizmetin geçici bir hizmete bağımlılığı varsa, geçici hizmet aynı zamanda tek tarafından nasıl kullanıldığına bağlı olarak iş parçacığı güvenliği de gerektirebilir.
 
-Tek bir hizmetin fabrika yöntemi (örneğin, AddSingleton için ikinci bağımsız değişken [ \<TService> \<IServiceProvider,TService> )](xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton%2A), iş parçacığı açısından güvenli olması gerekmez. Bir Type ( `static` ) Oluşturucusu gibi, tek bir iş parçacığı tarafından yalnızca bir kez çağrılması garanti edilir.
+Tek bir hizmetin Factory yöntemi (örneğin, AddSingleton için ikinci bağımsız değişken [ \<TService> \<IServiceProvider,TService> )](xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton%2A), iş parçacığı açısından güvenli olması gerekmez. Bir Type ( `static` ) Oluşturucusu gibi, tek bir iş parçacığı tarafından yalnızca bir kez çağrılması garanti edilir.
 
 ## <a name="recommendations"></a>Öneriler
 
@@ -190,7 +190,7 @@ Bellek sızıntılarını hata ayıklama hakkında daha fazla bilgi için bkz. [
 
 :::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="32-45" highlight="4-8":::
 
-Önceki kodda, `implementationFactory` gövde döndürülen bir yöntemde çağırdığı bir lambda ifadesi verilir <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> `Task<Bar>` . Bu, ***kilitlenmeye neden olur*** . `GetBarAsync`Yöntemi, ile zaman uyumsuz bir iş işlemini taklit eder <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> ve ardından çağırır <xref:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService%60%601(System.IServiceProvider)> .
+Önceki kodda, `implementationFactory` gövde döndürülen bir yöntemde çağırdığı bir lambda ifadesi verilir <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> `Task<Bar>` . Bu, ***kilitlenmeye neden olur***. `GetBarAsync`Yöntemi, ile zaman uyumsuz bir iş işlemini taklit eder <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> ve ardından çağırır <xref:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService%60%601(System.IServiceProvider)> .
 
 :::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="47-53":::
 

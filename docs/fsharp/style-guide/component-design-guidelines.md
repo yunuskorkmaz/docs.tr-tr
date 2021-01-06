@@ -2,12 +2,12 @@
 title: F# bileşen tasarımı yönergeleri
 description: 'Diğer çağıranlar tarafından tüketim için tasarlanan F # bileşenlerini yazma yönergelerini öğrenin.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 590bda0660d54ea73c590d31e694f3d499e0fd9f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 24be2a422c97b9334f749e3d9dfcccd0feec219b
+ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209142"
+ms.lasthandoff: 01/03/2021
+ms.locfileid: "97856113"
 ---
 # <a name="f-component-design-guidelines"></a>F# bileşen tasarımı yönergeleri
 
@@ -73,8 +73,8 @@ Aşağıdaki tabloda .NET adlandırma ve büyük/küçük harf kuralları yer ve
 | Oluştur | Case (Olay) | Bölüm | Örnekler | Notlar |
 |-----------|------|------|----------|-------|
 | Somut türler | PascalCase | Ad/sıfatıcı | List, Double, Complex | Somut türler yapılar, sınıflar, numaralandırmalar, temsilciler, kayıtlar ve birleşimler. Tür adları OCaml 'de geleneksel olarak küçük olsa da, F # türler için .NET adlandırma şemasını benimsemiştir.
-| DLL'ler           | PascalCase |                 | Fabrikam. Core. dll |  |
-| Birleşim etiketleri     | PascalCase | İsim | Bazıları, ekleme, başarı | Genel API 'lerde bir ön ek kullanmayın. İsteğe bağlı olarak, iç zaman bir önek kullanın, örneğin`type Teams = TAlpha | TBeta | TDelta.` |
+| DLL'ler           | PascalCase |                 | Fabrikam.Core.dll |  |
+| Birleşim etiketleri     | PascalCase | İsim | Bazıları, ekleme, başarı | Genel API 'lerde bir ön ek kullanmayın. İsteğe bağlı olarak, iç zaman bir önek kullanın, örneğin `type Teams = TAlpha | TBeta | TDelta.` |
 | Olay          | PascalCase | Fiil | ValueChanged/ValueChanging |  |
 | Özel durumlar     | PascalCase |      | Gönderdi | Ad "Exception" ile bitmelidir. |
 | Alan          | PascalCase | İsim | CurrentName  | |
@@ -191,8 +191,8 @@ Bir dizi işlemi temsil etmek için arabirim türlerini kullanın. Bu, işlevler
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 Tercihe göre:
@@ -222,7 +222,7 @@ Böyle bir modül eklerseniz, FSharp. Core 'da bulunan işlevler için standart 
 
 #### <a name="use-a-module-to-group-functions-for-common-canonical-functions-especially-in-math-and-dsl-libraries"></a>Özellikle matematik ve DSL kitaplıklarında ortak, kurallı işlevler için işlevleri gruplamak üzere bir modül kullanın
 
-Örneğin, `Microsoft.FSharp.Core.Operators` `abs` `sin` FSharp. Core. dll tarafından belirtilen en üst düzey işlevlerin (ve gibi) otomatik olarak açılmış bir koleksiyonudur.
+Örneğin, `Microsoft.FSharp.Core.Operators` `abs` FSharp.Core.dll tarafından belirtilen üst düzey işlevlerin (ve gibi) otomatik olarak açılmış bir koleksiyonudur `sin` .
 
 Benzer şekilde, bir istatistik kitaplığı işlevleri olan bir modül içerebilir `erf` ve `erfc` Bu modül açıkça veya otomatik olarak açılacak şekilde tasarlanmıştır.
 
@@ -653,7 +653,7 @@ member this.ParamOverload(x: int) = x
 member this.ParamOverload(x: int, y: int) = x + y
 ```
 
-#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>.NET koleksiyon arabirim türleri IEnumerable \< T \> ve IDictionary \< anahtarı, \> Parametreler ve dönüş değerleri için değer kullanın
+#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>\<T\> \<Key,Value\> Parametre ve dönüş değerleri için IEnumerable ve IDictionary .net koleksiyon arabirim türlerini kullanın
 
 .NET dizileri, F # türleri ve gibi somut koleksiyon türlerinin kullanılmasını önleyin `T[]` ve gibi `list<T>` `Map<Key,Value>` `Set<T>` .net somut koleksiyon türleri `Dictionary<Key,Value>` . .NET kitaplığı tasarım yönergeleri, gibi çeşitli koleksiyon türlerinin ne zaman kullanılacağı konusunda iyi öneriler sağlar `IEnumerable<T>` . Bazı durumlarda dizilerin () bazı kullanımı, performans miktarı ' nda `T[]` bazı koşullarda kabul edilebilir. Özellikle `seq<T>` için yalnızca F # diğer adı olduğunu unutmayın `IEnumerable<T>` ve bu nedenle, bir Vanilla .NET API 'si için sıra, genellikle uygun bir türdür.
 

@@ -3,12 +3,12 @@ title: Tanılama araçlarına genel bakış-.NET Core
 description: .NET Core uygulamalarını tanılamak için kullanılabilen araçlara ve tekniklere genel bakış.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 0aa404497cb7d6a488fb51e1df8f7f45d4f213fd
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678093"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753620"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 'da hangi tanılama araçları kullanılabilir?
 
@@ -35,6 +35,10 @@ Bu makale, ihtiyacınız olan çeşitli araçları bulmanıza yardımcı olur.
 ## <a name="dumps"></a>Dökümler
 
 [Döküm](./dumps.md) , oluşturma sırasında işlemin anlık görüntüsünü içeren bir dosyadır. Bunlar, hata ayıklama amacıyla uygulamanızın durumunu incelemek için yararlı olabilir.
+
+## <a name="symbols"></a>Simgeleri
+
+Semboller, hata ayıklama ve diğer tanılama araçları için temel bir gereksinimdir. Sembol dosyalarının içerikleri diller, derleyiciler ve platformlar arasında farklılık gösterir. Çok yüksek düzey semboller, kaynak kodu ile derleyici tarafından üretilen ikili arasında bir eşlemedir. Bu eşlemeler, [Visual Studio](/visualstudio/debugger/what-is-debugging) ve [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)gibi Tanılama Araçlarındaki satır numarası bilgileri ve yerel değişkenlerinizin adları gibi şeyler sağlamak için kullanılır.  Aşağıdaki bağlantı, birçok [kavramın da](/windows/win32/dxtecharts/debugging-with-symbols) diğer platformlar için de geçerlidir. [.NET taşınabilir sembolleri](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) Windows pdb ile benzer BIR "pdb" dosya uzantısına sahiptir, ancak Windows pdb biçimiyle uyumlu değildir.
 
 ## <a name="collect-diagnostics-in-containers"></a>Kapsayıcılarda tanılama toplama
 
@@ -64,7 +68,7 @@ Kapsayıcısız Linux ortamlarında kullanılan aynı tanılama araçları, [kap
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[DotNet-sos](dotnet-sos.md) , Linux veya MacOS 'a (veya daha eski hata ayıklama araçları kullanılıyorsa Windows 'A) [sos hata ayıklama uzantısını](../../framework/tools/sos-dll-sos-debugging-extension.md) yüklemek için kullanılır.
+[DotNet-sos](dotnet-sos.md) , Linux ve MacOS 'A ( [WinDbg/CDB](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)kullanıyorsanız Windows 'a) [sos hata ayıklama uzantısını](sos-debugging-extension.md) yükleme.
 
 ### <a name="perfcollect"></a>PerfCollect
 
@@ -83,6 +87,10 @@ Kapsayıcısız Linux ortamlarında kullanılan aynı tanılama araçları, [kap
 ### <a name="debug-deadlock"></a>Çıkmaz hatasını ayıklama
 
 [Öğretici: hata ayıklama kilitlenmesi](debug-deadlock.md) , iş parçacıklarını ve kilitleri araştırmak için [DotNet-dump](dotnet-dump.md) aracının nasıl kullanılacağını gösterir.
+
+### <a name="debug-a-stackoverflow"></a>StackOverflow hata ayıklama
+
+[Öğretici: StackOverflow hata ayıklama bir](debug-stackoverflow.md) Linux 'ta bir hata ayıklamanın nasıl yapılacağını gösterir <xref:System.StackOverflowException> .
 
 ### <a name="debug-linux-dumps"></a>Linux dökümlerinin hatasını ayıklama
 

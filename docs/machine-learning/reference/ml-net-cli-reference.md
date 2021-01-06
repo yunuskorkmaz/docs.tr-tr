@@ -3,12 +3,12 @@ title: ML.NET CLı komut başvurusu
 description: ML.NET CLı aracında otomatik eğitme komutuna genel bakış, örnekler ve başvuru.
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 4c6cb1346c16f6162077d3414140d693de9e0d8c
-ms.sourcegitcommit: 182c7b6c079ebcc0e1898dfd9e921b9ef472ea2c
+ms.openlocfilehash: 6f07cd8b4237f8931bbc0ec97bc0bbe18c488f16
+ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946947"
+ms.lasthandoff: 01/03/2021
+ms.locfileid: "97856074"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLı komut başvurusu
 
@@ -99,7 +99,7 @@ mlnet classification
 Çalıştırmak `mlnet regression` , regresyon modeli eğitecektir. Bir ML modelinin sayısal bir değer (örn. fiyat tahmini) tahmin etmek istiyorsanız bu komutu seçin.
 
 ```console
-mlnet classification
+mlnet regression
 
 --dataset <path> (REQUIRED)
 
@@ -134,7 +134,7 @@ mlnet classification
 Çalışan `mlnet recommendation` bir öneri modeli eğitecektir.  Bir ML modelinin derecelendirmelere göre kullanıcılara (örn. ürün önerisi) öğe önermesini istiyorsanız bu komutu seçin.
 
 ```console
-mlnet classification
+mlnet recommendation
 
 --dataset <path> (REQUIRED)
 
@@ -170,7 +170,7 @@ Geçersiz giriş seçenekleri, CLı aracının geçerli girişlerin bir listesin
 
 ## <a name="dataset"></a>Veri kümesi
 
-`--dataset | -d`dizisinde
+`--dataset | -d` dizisinde
 
 Bu bağımsız değişken, FilePath öğesini aşağıdaki seçeneklerden birine sağlar:
 
@@ -180,7 +180,7 @@ Bu bağımsız değişken, FilePath öğesini aşağıdaki seçeneklerden birine
 
 ## <a name="test-dataset"></a>Test veri kümesi
 
-`--test-dataset | -t`dizisinde
+`--test-dataset | -t` dizisinde
 
 Test veri kümesi dosyasına işaret eden dosya yolu; Örneğin, doğruluk ölçümlerini elde etmek için düzenli doğrulamalar yaparken %80-%20 yaklaşım kullanma.
 
@@ -190,7 +190,7 @@ Kullanılıyorsa `--test-dataset` , `--dataset` de gereklidir.
 
 ## <a name="validation-dataset"></a>Doğrulama veri kümesi
 
-`--validation-dataset | -v`dizisinde
+`--validation-dataset | -v` dizisinde
 
 Doğrulama veri kümesi dosyasına işaret eden dosya yolu. Doğrulama veri kümesi, her durumda isteğe bağlıdır.
 
@@ -209,15 +209,15 @@ Temel olarak, bir `validation dataset` artı kullandığınızda `test dataset` 
 
 Bu nedenle, verilerin ayrımı 80/10/10 veya 75/15/10 olabilir. Örneğin:
 
-- `training-dataset`Dosya, verilerin %75 ' i olmalıdır.
-- `validation-dataset`Dosya, verilerin %15 ' i olmalıdır.
-- `test-dataset`Dosya, verilerin %10 ' a sahip olmalıdır.
+- `training-dataset` Dosya, verilerin %75 ' i olmalıdır.
+- `validation-dataset` Dosya, verilerin %15 ' i olmalıdır.
+- `test-dataset` Dosya, verilerin %10 ' a sahip olmalıdır.
 
 Herhangi bir durumda, bu yüzdeleri Kullanıcı tarafından zaten bölünmüş dosyaları sağlayacak CLı kullanarak kararlanacaktır.
 
 ## <a name="label-column"></a>Etiket sütunu
 
-`--label-col`(int veya String)
+`--label-col` (int veya String)
 
 Bu bağımsız değişkenle, belirli bir amaç/hedef sütunu (tahmin etmek istediğiniz değişken) veri kümesinin üstbilgisinde veya sütunun veri kümesinin dosyasındaki sayısal dizininde bulunan sütunun adı kullanılarak belirtilebilir (sütun dizini değerleri 0 ' dan başlar).
 
@@ -225,7 +225,7 @@ Bu bağımsız değişken, *Sınıflandırma* ve *gerileme* sorunları için kul
 
 ## <a name="item-column"></a>Öğe sütunu
 
-`--item-col`(int veya String)
+`--item-col` (int veya String)
 
 Öğe sütunu, kullanıcıların hızaldığı öğelerin listesini içerir (öğeler kullanıcılara önerilir). Bu sütun, veri kümesinin üstbilgisinde sütun adı kümesi veya veri kümesinin dosyasında sütunun sayısal dizini kullanılarak belirtilebilir (sütun dizini değerleri 0 ' dan başlar).
 
@@ -233,7 +233,7 @@ Bu bağımsız değişken yalnızca *öneri* görevi için kullanılır.
 
 ## <a name="rating-column"></a>Derecelendirme sütunu
 
-`--rating-col`(int veya String)
+`--rating-col` (int veya String)
 
 Derecelendirme sütunu kullanıcılara göre öğelere verilen derecelendirmelerin listesini içerir. Bu sütun, veri kümesinin üstbilgisinde sütun adı kümesi veya veri kümesinin dosyasında sütunun sayısal dizini kullanılarak belirtilebilir (sütun dizini değerleri 0 ' dan başlar).
 
@@ -241,7 +241,7 @@ Bu bağımsız değişken yalnızca *öneri* görevi için kullanılır.
 
 ## <a name="user-column"></a>Kullanıcı sütunu
 
-`--user-col`(int veya String)
+`--user-col` (int veya String)
 
 Kullanıcı sütunu, öğelere derecelendirme veren kullanıcıların listesini içerir. Bu sütun, veri kümesinin üstbilgisinde sütun adı kümesi veya veri kümesinin dosyasında sütunun sayısal dizini kullanılarak belirtilebilir (sütun dizini değerleri 0 ' dan başlar).
 
@@ -249,7 +249,7 @@ Bu bağımsız değişken yalnızca *öneri* görevi için kullanılır.
 
 ## <a name="ignore-columns"></a>Sütunları yoksay
 
-`--ignore-columns`dizisinde
+`--ignore-columns` dizisinde
 
 Bu bağımsız değişkenle, veri kümesi dosyasında var olan sütunları yoksayabilirsiniz ve bu sayede eğitim işlemleriyle birlikte kullanılmaz.
 
@@ -261,7 +261,7 @@ Yoksaymak istediğiniz sütun adlarını belirtin. Birden çok sütun adını ay
 
 ## <a name="has-header"></a>Üst bilgisi vardır
 
-`--has-header`bool
+`--has-header` bool
 
 Veri kümesi dosyalarının bir üst bilgi satırına sahip olup olmadığını belirtin.
 Olası değerler şunlardır:
@@ -273,7 +273,7 @@ Bu bağımsız değişken Kullanıcı tarafından belirtilmemişse, ML.NET CLı 
 
 ## <a name="train-time"></a>Eğitim süresi
 
-`--train-time`dizisinde
+`--train-time` dizisinde
 
 Varsayılan olarak, en fazla araştırma/tren süresi 30 dakikadır.
 
@@ -283,7 +283,7 @@ Yinelemeler için gereken süre, veri kümesinin boyutuna bağlı olarak farklı
 
 ## <a name="cache"></a>Önbellek
 
-`--cache`dizisinde
+`--cache` dizisinde
 
 Önbelleğe alma kullanırsanız, tüm eğitim veri kümesi bellek içinde yüklenir.
 
@@ -299,9 +299,9 @@ Aşağıdaki değerleri belirtebilirsiniz:
 
 `--cache`Parametresini belirtmezseniz, `auto` Varsayılan olarak önbellek yapılandırması kullanılacaktır.
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Ad
 
-`--name`dizisinde
+`--name` dizisinde
 
 Oluşturulan çıkış projesinin veya çözümünün adı. Ad belirtilmemişse, ad `sample-{mltask}` kullanılır.
 
@@ -309,21 +309,21 @@ ML.NET model dosyası (. ZIP dosyası) de aynı adı alır.
 
 ## <a name="output-path"></a>Çıkış yolu
 
-`--output | -o`dizisinde
+`--output | -o` dizisinde
 
 Oluşturulan çıkışın yerleştirileceği kök konumu/klasörü. Geçerli dizin varsayılandır.
 
 ## <a name="verbosity"></a>Ayrıntı Düzeyi
 
-`--verbosity | -v`dizisinde
+`--verbosity | -v` dizisinde
 
 Standart çıkışın ayrıntı düzeyini ayarlar.
 
 İzin verilen değerler şunlardır:
 
 - `q[uiet]`
-- `m[inimal]`(varsayılan olarak)
-- `diag[nostic]`(günlük bilgisi düzeyi)
+- `m[inimal]`  (varsayılan olarak)
+- `diag[nostic]` (günlük bilgisi düzeyi)
 
 Varsayılan olarak, CLı aracı çalışırken en az geri bildirim ( `minimal` ), çalışıp çalışmadığını ve ne kadar süre kaldığını veya sürenin% ne kadar tamamlandığını gösterir.
 

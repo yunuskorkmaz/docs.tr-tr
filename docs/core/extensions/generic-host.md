@@ -3,13 +3,13 @@ title: .NET genel ana bilgisayar
 author: IEvangelist
 description: Uygulama başlatma ve ömür yönetiminden sorumlu .NET genel ana bilgisayarı hakkında bilgi edinin.
 ms.author: dapine
-ms.date: 12/04/2020
-ms.openlocfilehash: ddb71b70d15121b7f59899fba38b2bf861219878
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 12/18/2020
+ms.openlocfilehash: bf6d5ad624bbed46994633abace0af64712757f3
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740099"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700736"
 ---
 # <a name="net-generic-host"></a>.NET genel ana bilgisayar
 
@@ -120,9 +120,12 @@ Uygulama aşağıdaki örnek çıktıyı Yazar:
 
 ## <a name="host-configuration"></a>Konak yapılandırması
 
-Ana bilgisayar yapılandırması, uygulamanın özellikleri için kullanılır <xref:Microsoft.Extensions.Hosting.IHostEnvironment> .
+Konak yapılandırması [ıhostenvironment](#ihostenvironment) uygulamasının özelliklerini yapılandırmak için kullanılır.
 
-Ana Bilgisayar Yapılandırması içinde [HostBuilderContext.Configurlama](xref:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration) tarafından kullanılabilir <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration%2A> . Sonra `ConfigureAppConfiguration` , `HostBuilderContext.Configuration` uygulama yapılandırması ile değiştirilmiştir.
+Konak yapılandırması, yöntemi içinde [HostBuilderContext.Configurlama](xref:Microsoft.Extensions.Hosting.HostBuilderContext.Configuration) içinde kullanılabilir <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureAppConfiguration%2A> . Yöntemi çağrılırken, `ConfigureAppConfiguration` `HostBuilderContext` ve `IConfigurationBuilder` öğesine geçirilir `configureDelegate` . , `configureDelegate` Olarak tanımlanır `Action<HostBuilderContext, IConfigurationBuilder>` . Konak Oluşturucu bağlamı, `.Configuration` bir örneği olan özelliğini kullanıma sunar `IConfiguration` . Ana bilgisayardan oluşturulan yapılandırmayı temsil ederken, `IConfigurationBuilder` uygulamayı yapılandırmak için kullanılan Oluşturucu nesnesidir.
+
+> [!TIP]
+> Çağrıldıktan sonra `ConfigureAppConfiguration` , `HostBuilderContext.Configuration` [uygulama yapılandırması](#app-configuration)ile değiştirilmiştir.
 
 Konak yapılandırması eklemek için üzerinde öğesini <xref:Microsoft.Extensions.Hosting.HostBuilder.ConfigureHostConfiguration%2A> çağırın `IHostBuilder` . `ConfigureHostConfiguration` , eklenebilir sonuçlarla birden çok kez çağrılabilir. Ana bilgisayar, belirli bir anahtardaki bir değeri en son belirleyen seçeneği kullanır.
 

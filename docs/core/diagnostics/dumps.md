@@ -2,14 +2,14 @@
 title: Dökümler-.NET
 description: .NET ' te döküme giriş.
 ms.date: 10/12/2020
-ms.openlocfilehash: 56cf4085d10658c828bac39be93eed3f774e00d5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7a4c7bf54b3e9ea43e685eafbd00b4a373326520
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242779"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764948"
 ---
-# <a name="dumps"></a>Dökümleri
+# <a name="dumps"></a>Dökümler
 
 Döküm, oluşturulduğu sırada işlemin anlık görüntüsünü içeren ve uygulamanızın durumunu incelemek için yararlı olabilecek bir dosyadır. Dökümler, üretim veya CI ortamları gibi bir hata ayıklayıcı eklemek zor olduğunda .NET uygulamanızda hata ayıklamak için kullanılabilir. Dökümleri kullanmak, sorunlu işlemin durumunu yakalamanızı ve uygulamayı durdurmak zorunda kalmadan incelemenizi sağlar.
 
@@ -38,7 +38,7 @@ Aşağıdaki tabloda, kilitlenme üzerinde dökümleri toplamak için yapıland�
 
 Aşağıdaki tabloda, için, `COMPlus_DbgMiniDumpType` bir değer olarak belirtime için kullanabileceğiniz tüm seçenekler gösterilmektedir. Örneğin, `COMPlus_DbgMiniDumpType` 1 olarak ayarlandığında, `MiniDumpNormal` kilitlenme üzerinde tür dökümü toplanacaktır.
 
-|Değer|Adı|Açıklama|
+|Değer|Ad|Açıklama|
 |-----|----|-----------|
 |1|`MiniDumpNormal`|Yalnızca bir işlemdeki mevcut tüm iş parçacıkları için yığın izlemelerini yakalamak için gereken bilgileri ekleyin. Sınırlı GC yığın belleği ve bilgileri.|
 |2|`MiniDumpWithPrivateReadWriteMemory`|Bir işlemdeki tüm mevcut iş parçacıkları için yığın izlemelerini yakalamak için gereken GC yığınlarını ve bilgileri içerir.|
@@ -53,7 +53,13 @@ Kendi isteğinizin dökümünü toplamak için, `dotnet-dump` dökümleri toplam
 
 ## <a name="analyze-dumps"></a>Dökümleri çözümle
 
-Dökümler kullanılarak analiz edilebilir [`dotnet-dump`](dotnet-dump.md) .
+[`dotnet-dump`](dotnet-dump.md)CLI aracını veya [Visual Studio 'yu](https://docs.microsoft.com/visualstudio/debugger/using-dump-files)kullanarak dökümleri anlayze yapabilirsiniz.
+
+> [!NOTE]
+> Visual Studio sürüm 16,8 ve üzeri sürümleri, .NET Core 3.1.7 veya üzeri sürümlerde oluşturulan [Linux dökümlerini açmanıza](https://devblogs.microsoft.com/visualstudio/linux-managed-memory-dump-debugging/) olanak tanır.  
+
+> [!NOTE]
+> Yerel hata ayıklama gerekliyse, [sos hata ayıklayıcı uzantısı](sos-debugging-extension.md) , [Linux ve MacOS üzerinde lldb](debug-linux-dumps.md#analyze-dumps-on-linux)ile birlikte kullanılabilir. So, Visual Studio önerilse de Windows üzerinde [WinDbg/CDB](/windows-hardware/drivers/debugger/debugger-download-tools) ile desteklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

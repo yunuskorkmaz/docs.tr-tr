@@ -2,12 +2,12 @@
 title: Kayıtlar
 description: 'F # kayıtlarının, isteğe bağlı olarak, adlandırılmış değerlerin basit toplamlarını nasıl temsil ettiğini öğrenin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2da31da0ec830d458a370e64ca105048181f5d74
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682035"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899645"
 ---
 # <a name="records"></a>Kayıtlar
 
@@ -163,7 +163,7 @@ let weirdString = p.WeirdToString()
 
 ## <a name="differences-between-records-and-classes"></a>Kayıtlar ve sınıflar arasındaki farklılıklar
 
-Kayıt alanları, otomatik olarak özellikler olarak sunuldukları sınıflardan farklıdır ve kayıtların oluşturulması ve kopyalanması halinde kullanılır. Kayıt oluşturma, sınıf yapılamadan da farklıdır. Bir kayıt türünde, bir Oluşturucu tanımlayamazsınız. Bunun yerine, bu konuda açıklanan yapım sözdizimi geçerlidir. Sınıfların Oluşturucu parametreleri, alanları ve özellikleri arasında doğrudan bir ilişkisi yoktur.
+Kayıt alanları, otomatik olarak özellik olarak sunuldukları ve kayıt oluşturma ve kopyalama sırasında kullanılan sınıf alanlarından farklıdır. Kayıt oluşturma, sınıf yapılamadan da farklıdır. Bir kayıt türünde, bir Oluşturucu tanımlayamazsınız. Bunun yerine, bu konuda açıklanan yapım sözdizimi geçerlidir. Sınıfların Oluşturucu parametreleri, alanları ve özellikleri arasında doğrudan bir ilişkisi yoktur.
 
 Birleşim ve yapı türleri gibi, kayıtların yapısal eşitlik semantiği vardır. Sınıflarda başvuru eşitlik semantiği vardır. Aşağıdaki kod örneği bunu gösterir.
 
@@ -185,4 +185,4 @@ Kayıtlar için başvuru eşitlik gerekiyorsa, `[<ReferenceEquality>]` kaydın �
 - [Sınıflar](classes.md)
 - [F # dil başvurusu](index.md)
 - [Başvuru-eşitlik](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
-- [Desen Eşleştirme](pattern-matching.md)
+- [Model eşleştirme](pattern-matching.md)

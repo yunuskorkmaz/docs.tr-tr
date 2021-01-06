@@ -6,12 +6,12 @@ ms.prod: dotnet
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e0adb69d02fe427dd187c788cba34c0673e97ee6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 93fb10538441d939e95bb48dcdd0e61d9267dde0
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822318"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765039"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -57,7 +57,7 @@ Ancak, daha düşük .NET Standard sürümleri hedeflemek çok sayıda destek ba
 
 ## <a name="specification"></a>Belirtim
 
-.NET Standard belirtimi, standartlaştırılmış bir API kümesidir. Belirtim .NET uygulayıcılar tarafından, özellikle Microsoft (.NET Framework, .NET Core ve mono dahil) ve Unity tarafından korunur.
+.NET Standard belirtimi, standartlaştırılmış bir API kümesidir. Belirtim .NET uygulayıcıları tarafından, özellikle Microsoft (.NET Framework, .NET Core ve mono dahil) ve Unity tarafından korunur.
 
 ### <a name="official-artifacts"></a>Resmi yapılar
 
@@ -83,7 +83,7 @@ NuGet paketleri bir [veya daha fazla](frameworks.md)çerçeveyi hedeflemelidir. 
 
 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/)Metapackage, .NET Standard tanımlayan tüm NuGet paketleri kümesine başvurur.  Hedefetmenin en yaygın yolu, `netstandard` Bu metapackage 'e başvurarak yapılır. Bu, .NET Standard tanımlayan ~ 40 .NET kitaplıklarına ve ilişkili API 'lere erişim sağlar. Ek API 'lere erişim sağlamak için, hedef olan ek paketlere başvurabilirsiniz `netstandard` .
 
-### <a name="versioning"></a>Sürüm Oluşturma
+### <a name="versioning"></a>Sürüm oluşturma
 
 Belirtim tekil değildir, ancak önceden sürümlü bir API kümesidir. Standart 'ın ilk sürümü bir temel API kümesi oluşturur. Sonraki sürümler, API 'Ler ekler ve önceki sürümler tarafından tanımlanan API 'Leri alırlar. Standart olmayan API 'Leri kaldırmak için bir sağlama yoktur.
 

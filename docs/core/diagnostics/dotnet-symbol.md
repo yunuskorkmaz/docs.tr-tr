@@ -2,12 +2,12 @@
 title: DotNet-symbol Tanılama aracı-.NET CLı
 description: .NET dökümlerinde ve mini dökümlerinde hata ayıklamak için gereken dosyaları indirmek için DotNet-symbol CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: 8ea694e5331f1e4e75b3b3ad644428568e515331
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 69c05544e886d9d41113c8a2383f760b85d01124
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825344"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765000"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>Sembol yükleyici (DotNet-Symbol)
 
@@ -15,7 +15,7 @@ ms.locfileid: "94825344"
 
 ## <a name="install"></a>Yükleme
 
-NuGet paketinin en son sürümünü yüklemek için `dotnet-trace` [NuGet package](https://www.nuget.org/packages/dotnet-trace) [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
+NuGet paketinin en son sürümünü yüklemek için `dotnet-symbol` [](https://www.nuget.org/packages/dotnet-symbol) [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
 
 ```dotnetcli
 dotnet tool install --global dotnet-symbol
@@ -55,7 +55,7 @@ dotnet-symbol [-h|--help] [options] <FILES>
 
 - **`--host-only`**
 
-  Yalnızca çekirdek dökümlerini yüklemek için gereken bir ana bilgisayar programını (örneğin, DotNet) indirin.
+  Yalnızca, çekirdek dökümlerini yüklemek için gereken ana bilgisayar programını (DotNet) indirin.
 
 - **`--symbols`**
 
@@ -98,3 +98,8 @@ dotnet-symbol --host-only --debugging <dump file path>
 - sembol indirilirken 404 bulunamadı.
 
    Sembol indirme yalnızca resmi [Web sitesi](https://dotnet.microsoft.com/download/dotnet-core) gibi resmi kanallar aracılığıyla elde edilen resmi .NET Core çalışma zamanı sürümleri ve [DotNet yükleme betiklerindeki varsayılan kaynaklar](../tools/dotnet-install-script.md)için desteklenir. Hata ayıklama dosyalarını karşıdan yüklerken 404 hatası, döküm dosyasının yerel olarak veya belirli bir Linux dışından oluşturulmuş bir .NET Core çalışma zamanı ile oluşturulduğunu veya arşiv Linux gibi topluluk sitelerini gösteriyor olabilir. Bu gibi durumlarda, hata ayıklama için gereken dosya (DotNet, libcoreclr.so ve libmscordaccore.so) bu kaynaklardan veya döküm dosyasının oluşturulduğu ortamdan kopyalanmalıdır.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+* [Semboller ile hata ayıklama](/windows/win32/dxtecharts/debugging-with-symbols)
+* [Taşınabilir pdb 'leri](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)

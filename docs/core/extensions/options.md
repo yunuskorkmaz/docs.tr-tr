@@ -4,12 +4,12 @@ author: IEvangelist
 description: .NET uygulamalarında ilgili ayarların gruplarını temsil etmek için seçenekler deseninin nasıl kullanılacağını öğrenin.
 ms.author: dapine
 ms.date: 12/04/2020
-ms.openlocfilehash: 76d99337c51920115a38c400daca1649d0e74a99
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 14a81608c41f63abfc562e1a845ca893ff7cdf25
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740020"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764922"
 ---
 # <a name="options-pattern-in-net"></a>.NET 'teki seçenek kalıbı
 
@@ -107,7 +107,7 @@ Yukarıdaki kodda, uygulama başladıktan sonra JSON yapılandırma dosyasında 
 
 ## <a name="use-ioptionssnapshot-to-read-updated-data"></a>Güncelleştirilmiş verileri okumak için ıoptionssnapshot kullanın
 
-kullandığınızda <xref:Microsoft.Extensions.Options.IOptionsSnapshot%601> Seçenekler erişildiğinde istek başına bir kez hesaplanır ve isteğin ömrü boyunca önbelleğe alınır. Güncelleştirilmiş yapılandırma değerlerini okumayı destekleyen yapılandırma sağlayıcıları kullanılırken, yapılandırma değişiklikleri uygulama başladıktan sonra okundu.
+Kullandığınızda <xref:Microsoft.Extensions.Options.IOptionsSnapshot%601> Seçenekler erişildiğinde istek başına bir kez hesaplanır ve isteğin ömrü boyunca önbelleğe alınır. Güncelleştirilmiş yapılandırma değerlerini okumayı destekleyen yapılandırma sağlayıcıları kullanılırken, yapılandırma değişiklikleri uygulama başladıktan sonra okundu.
 
 Ve arasındaki fark `IOptionsMonitor` `IOptionsSnapshot` şudur:
 

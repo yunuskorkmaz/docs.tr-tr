@@ -2,12 +2,12 @@
 title: Linux dökümlerinin hatasını ayıklama
 description: Bu makalede, Linux ortamlarından dökümleri nasıl toplayacağınızı ve analiz edeceğinizi öğreneceksiniz.
 ms.date: 08/27/2020
-ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: e6f2eea3af718853ad7365a5209b397a66035dde
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099152"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753607"
 ---
 # <a name="debug-linux-dumps"></a>Linux dökümlerinin hatasını ayıklama
 
@@ -15,7 +15,10 @@ ms.locfileid: "95099152"
 
 ## <a name="collect-dumps-on-linux"></a>Linux üzerinde dökümleri topla
 
-Linux üzerinde dökümler toplamanın iki önerilen yolu [`dotnet-dump`](dotnet-dump.md) veya [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) araçlardır.
+Linux üzerinde dökümler toplamanın iki önerilen yolu şunlardır:
+
+* [`dotnet-dump`](dotnet-dump.md) CLı aracı
+* Kilitlenmeler üzerinde dökümleri toplayacak [ortam değişkenleri](dumps.md#collecting-dumps-on-crash)
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>İle yönetilen dökümler `dotnet-dump`
 
@@ -25,7 +28,7 @@ Linux üzerinde dökümler toplamanın iki önerilen yolu [`dotnet-dump`](dotnet
 
 `dotnet-dump`Yalnızca yönetilen dökümler oluşturan öğesine alternatif olarak, [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) hem yerel hem de yönetilen bilgileri içeren Linux üzerinde çekirdek dökümler oluşturmaya yönelik önerilen araçtır. GDB veya gcore gibi diğer araçlar da temel dökümler oluşturmak için kullanılabilir ancak yönetilen hata ayıklama için gereken durumu kaçırabilir ve analiz sırasında "BILINMEYEN" tür veya işlev adlarına neden olabilir.
 
-`createdump`Araç .NET Core çalışma zamanı ile yüklenir ve libcoreclr.so ' nin yanında (genellikle "/usr/share/DotNet/Shared/Microsoft.NETCore.app/[Version]" içinde) bulunabilir. Araç, birincil bağımsız değişkeni olarak döküm toplamak için bir işlem KIMLIĞI alır ve toplanacak döküm türünü belirten isteğe bağlı parametreleri de alabilir (yığın içeren bir mini döküm varsayılandır). Seçeneklere şunlar dahildir:
+`createdump`Araç .NET Core çalışma zamanı ile yüklenir ve libcoreclr.so ' nin yanında (genellikle "/usr/share/DotNet/Shared/Microsoft.NETCore.app/[Version]" içinde) bulunabilir. Araç, birincil bağımsız değişkeni olarak döküm toplamak için bir işlem KIMLIĞI alır ve toplanacak döküm türünü belirten isteğe bağlı parametreleri de alabilir (yığın içeren bir mini döküm varsayılandır). Seçenekler arasında şunlar bulunur:
 
 - **`<input-filename>`**
 

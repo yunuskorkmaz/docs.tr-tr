@@ -2,12 +2,12 @@
 title: Mikro hizmet mimarisinde iletişim
 description: Mikro hizmetler arasındaki iletişimin farklı yollarını inceleyerek, zaman uyumlu ve zaman uyumsuz yolların etkilerini anlayın.
 ms.date: 01/30/2020
-ms.openlocfilehash: f1a240609b898fe8f365c39ba0c95f486377c445
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a918ea7573d7402a82d2df2c63301e4838fa66dc
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169264"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899606"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Mikro hizmet mimarisinde iletişim
 
@@ -103,7 +103,7 @@ Başka bir olasılık (genellikle REST 'den farklı amaçlar için) [ASP.NET Sig
 
 ![SignalR tabanlı gönderim ve gerçek zamanlı yazışmalar 'yi gösteren diyagram.](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
-**Şekil 4-17**. Bire bir gerçek zamanlı zaman uyumsuz ileti iletişimi
+**Şekil 4-17**. Bire çok gerçek zamanlı zaman uyumsuz ileti iletişimi
 
 SignalR, bir arka uç sunucusundan istemcilere içerik dağıtmaya yönelik gerçek zamanlı iletişim elde etmenin iyi bir yoludur. İletişim gerçek zamanlı olduğundan, istemci uygulamaları değişiklikleri neredeyse anında gösterir. Bu genellikle, birçok WebSockets bağlantısı (istemci başına) kullanarak WebSockets gibi bir protokol tarafından işlenir. Tipik bir örnek, bir hizmetin bir spor oyunundaki bir değişikliği aynı anda birçok istemci Web uygulaması ile iletişim kurduğuna yönelik bir örnektir.
 

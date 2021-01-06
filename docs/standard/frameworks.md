@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1a0d6ef9d31b85fd6c083604dd11b9ca9ff09c79
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7a3dcd61c330607bacf0d05dbd775c62cfa15b37
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827925"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765065"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK stilindeki projelerde hedef çerçeveler
 
@@ -22,7 +22,7 @@ Uygulama veya kitaplık, uygulamaya özel API 'lere erişim kazanmak için belir
 
 .NET Framework gibi bazı hedef çerçeveler için API 'Ler, Framework 'ün bir sisteme yüklediği derlemeler tarafından tanımlanır ve uygulama çerçevesi API 'Lerini (örneğin, ASP.NET) içerebilir.
 
-Paket tabanlı hedef çerçeveler için (örneğin, .NET 5, .NET Core ve .NET Standard), API 'Ler uygulamaya veya kitaplığa dahil edilen paketler tarafından tanımlanır. *Metapackage* , kendi içeriğine sahip olmayan ancak bağımlılıklar (diğer paketler) listesi olan bir NuGet paketidir. NuGet paket tabanlı bir hedef çerçeve, bir arada çerçeveyi oluşturan tüm paketlere başvuran bir metapackage öğesini örtülü olarak belirler.
+Paket tabanlı hedef çerçeveler için (örneğin, .NET 5, .NET Core ve .NET Standard), API 'Ler uygulama veya kitaplığa dahil olan NuGet paketleri tarafından tanımlanır.
 
 ## <a name="latest-versions"></a>En son sürümler
 
@@ -30,10 +30,10 @@ Aşağıdaki tabloda en yaygın hedef çerçeveler ve bunların nasıl başvurdu
 
 | Hedef çerçeve      | En son <br/> kararlı sürüm | Hedef çerçeve bilinen adı (tfd) | Uygulanan <br/> .NET Standard sürümü |
 | :-: | :-: | :-: | :-: |
-| .NET 5                | 5.0                         | NET 5.0                         | YOK                                     |
-| .NET Standard         | 2.1                         | Netstandard 2.1                 | YOK                                     |
+| .NET 5                | 5.0                         | NET 5.0                         | Yok                                     |
+| .NET Standard         | 2.1                         | Netstandard 2.1                 | Yok                                     |
 | .NET Core             | 3,1                         | netcoreapp 3.1                  | 2.1                                     |
-| .NET Framework        | 4.8                         | net48                          | 2,0                                     |
+| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-frameworks"></a>Desteklenen hedef çerçeveler
 

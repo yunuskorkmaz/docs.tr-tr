@@ -4,12 +4,12 @@ description: .NET uygulamalarını yapılandırmak için yapılandırma sağlay�
 author: IEvangelist
 ms.author: dapine
 ms.date: 12/04/2020
-ms.openlocfilehash: 301e23170428f2291ccaa1bd882007cadfbce3b1
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 036eb403318200bc0ae1d93e2c7cf9d074cb0bfb
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740013"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899449"
 ---
 # <a name="configuration-providers-in-net"></a>.NET 'teki yapılandırma sağlayıcıları
 
@@ -197,8 +197,8 @@ Aşağıdaki komutlar özel öneki test et:
 
 ```dotnetcli
 set CustomPrefix__SecretKey="Secret key with CustomPrefix_ environment"
-set CustomPrefix_TransientFaultHandlingOptions__Enabled=true
-set CustomPrefix_TransientFaultHandlingOptions__AutoRetryDelay=00:00:21
+set CustomPrefix__TransientFaultHandlingOptions__Enabled=true
+set CustomPrefix__TransientFaultHandlingOptions__AutoRetryDelay=00:00:21
 
 dotnet run
 ```
