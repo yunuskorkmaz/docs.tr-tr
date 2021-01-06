@@ -4,12 +4,12 @@ description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kayna
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0adc348c1fc340fe481d9987cdbe28c6cf8b065d
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687523"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938682"
 ---
 # <a name="introduction-to-net"></a>.NET’e giriş
 
@@ -145,6 +145,13 @@ SDK indirmesi aşağıdaki bileşenleri içerir:
 * ASP.NET Core çalışma zamanı. Web uygulamaları, IoT uygulamaları ve mobil arka uçlar gibi Internet 'e bağlı uygulamalar için temel hizmetler sağlar.
 * Masaüstü çalışma zamanı. Windows Forms ve WPF dahil olmak üzere Windows Masaüstü uygulamaları için temel hizmetler sağlar.
 
+Çalışma zamanı indirmesi aşağıdaki bileşenleri içerir:
+
+* İsteğe bağlı olarak, masaüstü veya ASP.NET Core çalışma zamanı.
+* [.NET çalışma zamanı](#clr). Bir tür sistemi, derleme yükleme, çöp toplayıcı, yerel birlikte çalışma ve diğer temel hizmetleri sağlar.
+* [Çalışma zamanı kitaplıkları](#runtime-libraries). Temel veri türleri ve temel yardımcı programlar sağlar.
+* `dotnet` [Sürücü](tools/index.md#driver). Çerçeveye bağımlı uygulamalar çalıştıran bir CLı komutu.
+
 Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 * [.NET SDK genel bakış](sdk.md)
@@ -191,7 +198,7 @@ Daha fazla bilgi için bkz. [.NET SDK ve araçlarını sürekli tümleştirme (C
 
 ### <a name="nuget"></a>NuGet
 
-[NuGet](/nuget/what-is-nuget) , .NET için tasarlanan açık kaynaklı bir paket yöneticisidir. Bir NuGet paketi, *.zip* `.nupkg` derlenen kod (dll 'ler), bu kodla ilgili diğer dosyalar ve paketin sürüm numarası gibi bilgileri içeren açıklayıcı bir bildirim içeren bir. zip dosyasıdır. Kod içeren geliştiriciler, paket oluşturma ve bunları [NuGet.org](https://nuget.org) veya özel bir ana bilgisayar halinde yayımlamaktır. Paylaşılan kod kullanmak isteyen geliştiriciler, projesine bir paket ekleyin ve ardından Proje kodlarında paketin açığa çıkarılan API 'YI çağırabilir.
+[NuGet](/nuget/what-is-nuget) , .NET için tasarlanan açık kaynaklı bir paket yöneticisidir. Bir NuGet paketi,  `.nupkg` derlenen kod (dll 'ler), bu kodla ilgili diğer dosyalar ve paketin sürüm numarası gibi bilgileri içeren açıklayıcı bir bildirim içeren bir. zip dosyasıdır. Kod içeren geliştiriciler, paket oluşturma ve bunları [NuGet.org](https://nuget.org) veya özel bir ana bilgisayar halinde yayımlamaktır. Paylaşılan kod kullanmak isteyen geliştiriciler, projesine bir paket ekleyin ve ardından Proje kodlarında paketin açığa çıkarılan API 'YI çağırabilir.
 
 Daha fazla bilgi için bkz. [NuGet belgeleri](/nuget/).
 
@@ -274,7 +281,7 @@ Daha fazla bilgi için bkz. [.NET uygulama yayımlamaya genel bakış](deploying
 * Gibi ağ yardımcı programı türleri <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> .
 * Ve gibi [dosya ve akış g/ç](../standard/io/index.md) yardımcı programı türleri <xref:System.IO.FileStream?displayProperty=nameWithType> <xref:System.IO.TextWriter?displayProperty=nameWithType> .
 * Ve gibi [serileştirme](../standard/serialization/index.md) yardımcı programı türleri <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> .
-* , Ve işlem hatları gibi yüksek performanslı <xref:System.Span%601?displayProperty=nameWithType> türler <xref:System.Numerics.Vector?displayProperty=nameWithType> . [Pipelines](../standard/io/pipelines.md)
+* , Ve işlem hatları gibi yüksek performanslı <xref:System.Span%601?displayProperty=nameWithType> türler <xref:System.Numerics.Vector?displayProperty=nameWithType> . [](../standard/io/pipelines.md)
 
 Daha fazla bilgi için bkz. [çalışma zamanı kitaplıklarına genel bakış](../standard/runtime-libraries-overview.md). Kitaplıkların kaynak kodu [GitHub DotNet/Runtime deposundadır](https://github.com/dotnet/runtime/tree/master/src/libraries).
 
@@ -346,7 +353,7 @@ Aynı sözcük farklı bağlamlarda farklı şekillerde kullanıldığından, .N
   | çerçeveye bağımlı uygulama | Yalnızca [.net indirme sayfasından](https://dotnet.microsoft.com/download/dotnet-core)çalışma zamanını yüklediğiniz bir makinede çalışabilen bir uygulama. Bu kullanımdaki "Framework", .NET indirme sayfasından indirdiğinizde "çalışma zamanı" ile aynıdır. |
   | çerçeve kitaplıkları | Bazen [çalışma zamanı kitaplıkları](#runtime-libraries)için bir eş anlamlı olarak kullanılır. |
 
-* **SDK**
+* **'SıNıN**
 
   |Bağlam  | "SDK" anlamı |
   |---------|---------------|

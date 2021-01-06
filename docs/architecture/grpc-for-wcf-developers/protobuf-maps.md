@@ -1,17 +1,17 @@
 ---
 title: WCF geliştiricileri için gRPC, sözlüklere yönelik prototip haritaları
 description: .NET 'teki sözlük türlerini temsil etmek için prototiplerin nasıl kullanılacağını anlayın.
-ms.date: 09/09/2019
-ms.openlocfilehash: 2c2ae76d47b2309227d22235b5acbe2afa794158
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.date: 12/15/2020
+ms.openlocfilehash: d38270d4bc320cf1f758080c18843ed1d716b350
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867476"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938552"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Protobuf sözlük eşlemeleri
 
-İletilerde adlandırılmış değerlerin rastgele koleksiyonlarını temsil etmek önemlidir. .NET sürümünde bu genellikle Sözlük türleri aracılığıyla işlenir. <xref:System.Collections.Generic.IDictionary%602>Protokol arabelleğindeki .NET türünün eşdeğeri (Protobuffer) `map<key_type, value_type>` türüdür. Bu bölümde `map` , prototipte bir türün nasıl bildirilecektir ve oluşturulan kodun nasıl kullanılacağı gösterilmektedir.
+İletilerde adlandırılmış değerlerin rastgele koleksiyonlarını temsil etmek önemlidir. .NET sürümünde bu etkinlik genellikle Sözlük türleri aracılığıyla işlenir. <xref:System.Collections.Generic.IDictionary%602>Protokol arabelleğindeki .NET türünün eşdeğeri (Protobuffer) `map<key_type, value_type>` türüdür. Bu bölümde `map` , prototipte bir türün nasıl bildirilecektir ve oluşturulan kodun nasıl kullanılacağı gösterilmektedir.
 
 ```protobuf
 message StockPrices {

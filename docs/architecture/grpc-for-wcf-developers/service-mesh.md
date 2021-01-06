@@ -1,15 +1,15 @@
 ---
 title: Hizmet kafesleri-WCF geliştiricileri için gRPC
 description: Bir Kubernetes kümesinde gRPC hizmetlerine istekleri yönlendirmek ve dengelemek için bir hizmet ağı kullanma.
-ms.date: 09/02/2019
-ms.openlocfilehash: a29d6893e585c7eb60c847cef0149afeeaebcdab
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 12/15/2020
+ms.openlocfilehash: a1c72a4facf1c133af912bbee242328653a051b6
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503392"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938136"
 ---
-# <a name="service-meshes"></a>Hizmet kafesleri
+# <a name="service-meshes"></a>Hizmet ağları
 
 Hizmet ağı, bir ağ içindeki yönlendirme hizmeti isteklerinin denetimini alan bir altyapı bileşenidir. Hizmet kafesleri, bir Kubernetes kümesi içindeki her türlü ağ düzeyi kaygılarını işleyebilir, örneğin:
 
@@ -19,9 +19,9 @@ Hizmet ağı, bir ağ içindeki yönlendirme hizmeti isteklerinin denetimini ala
 - Şifreleme
 - İzleme
 
-Kubernetes hizmet kafesleri, kafeste bulunan her Pod 'a *sepet proxy 'si*olarak adlandırılan ek bir kapsayıcı ekleyerek çalışır. Ara sunucu tüm gelen ve giden ağ isteklerini işlemeyi devralır. Daha sonra, ağ yapılandırma ve yönetimini uygulama kapsayıcılarından ayrı olarak tutabilirsiniz. Çoğu durumda, bu ayrım uygulama kodunda herhangi bir değişiklik yapılmasını gerektirmez.
+Kubernetes hizmet kafesleri, kafeste bulunan her Pod 'a *sepet proxy 'si* olarak adlandırılan ek bir kapsayıcı ekleyerek çalışır. Ara sunucu tüm gelen ve giden ağ isteklerini işlemeyi devralır. Daha sonra, ağ yapılandırma ve yönetimini uygulama kapsayıcılarından ayrı bir şekilde tutabilirsiniz. Çoğu durumda, bu ayrım uygulama kodunda herhangi bir değişiklik yapılmasını gerektirmez.
 
-[Önceki bölümün örneğinde](kubernetes.md#test-the-application), Web uygulamasından alınan GRPC Isteklerinin hepsi GRPC hizmetinin tek bir örneğine yönlendirilir. Bu durum hizmetin ana bilgisayar adının bir IP adresine çözümlenmesi ve IP adresinin `HttpClientHandler` örneğinin kullanım ömrü boyunca önbelleğe alınması nedeniyle oluşur. DNS aramalarını el ile işleyerek veya birden çok istemci oluşturarak bu sorunu geçici olarak çözmek mümkün olabilir. Ancak bu geçici çözüm, uygulama kodunu herhangi bir iş veya müşteri değeri eklemeden karmaşıklaştırır.
+[Önceki bölümün örneğinde](kubernetes.md#test-the-application), Web uygulamasından alınan GRPC Isteklerinin hepsi GRPC hizmetinin tek bir örneğine yönlendirilir. Bunun nedeni, hizmetin ana bilgisayar adının bir IP adresine çözümlenmesi ve bu IP adresinin Örneğin kullanım ömrü boyunca önbelleğe alınması nedeniyle oluşur `HttpClientHandler` . DNS aramalarını el ile işleyerek veya birden çok istemci oluşturarak bu davranışı geçici olarak çözmek mümkün olabilir. Ancak bu geçici çözüm, uygulama kodunu herhangi bir iş veya müşteri değeri eklemeden karmaşıklaştırır.
 
 Bir hizmet ağı kullandığınızda, uygulama kapsayıcısından gelen istekler sepet proxy 'sine gönderilir. Dışarıdan yükleme proxy 'si, daha sonra diğer hizmetin tüm örnekleri arasında onları akıllıca dağıtabilir. Kafes de şunları yapabilir:
 
@@ -29,11 +29,11 @@ Bir hizmet ağı kullandığınızda, uygulama kapsayıcısından gelen istekler
 - Başarısız çağrılar veya zaman aşımları için yeniden deneme semantiğini işleyin.
 - Başarısız istekleri istemci uygulamasına döndürülmeksizin alternatif bir örneğe yeniden yönlendir.
 
-Aşağıdaki ekran görüntüsünde, Linkerd hizmet ağıyla çalışan StockWeb uygulaması gösterilmektedir. Uygulama kodunda değişiklik yapılmaz ve Docker görüntüsü kullanılmıyor. Gerekli tek değişiklik, `stockdata` ve `stockweb` Hizmetleri için YAML dosyalarındaki dağıtıma ek açıklamanın ekleniydi.
+Aşağıdaki ekran görüntüsünde, Linkerd hizmet ağıyla çalışan StockWeb uygulaması gösterilmektedir. Uygulama kodunda değişiklik yapılmaz ve Docker görüntüsü kullanılmıyor. Gerekli tek değişiklik, ve hizmetleri için YAML dosyalarındaki dağıtıma ek açıklamanın ekleniydi `stockdata` `stockweb` .
 
 ![Hizmet ağı ile StockWeb](media/service-mesh/stockweb-servicemesh-screenshot.png)
 
-StockWeb uygulamasından gelen isteklerin, uygulama kodundaki tek bir `HttpClient` örneğinden kaynaklanan StockData hizmetinin her iki çoğaltmasına de yönlendirildiğini **sunucu** sütunundan görebilirsiniz. Aslında, kodu gözden geçirdikten sonra, StockData Service 'e yönelik tüm 100 isteklerinin aynı `HttpClient` örneğini kullanarak aynı anda yapıldığını görürsünüz. Hizmet ağı ile bu istekler arasında dengelenebilir, ancak birçok hizmet örneği kullanılabilir.
+StockWeb uygulamasından gelen isteklerin, uygulama kodundaki tek bir örnekten kaynaklanan StockData hizmetinin her iki çoğaltmasına de yönlendirildiğini **sunucu** sütunundan görebilirsiniz `HttpClient` . Aslında, kodu gözden geçirdikten sonra, StockData hizmeti için tüm 100 isteklerinin aynı örneği kullanarak aynı anda yapıldığını görürsünüz `HttpClient` . Hizmet ağı ile bu istekler arasında dengelenebilir, ancak birçok hizmet örneği kullanılabilir.
 
 Hizmet kafesleri yalnızca bir küme içindeki trafiğe uygulanır. Dış istemciler için, bkz. bir sonraki bölüm, [Yük Dengeleme](load-balancing.md).
 
@@ -56,7 +56,7 @@ Linkerd CLı yüklü olduğunda, Kubernetes kümenize Linkerd bileşenlerini yü
 
 ### <a name="add-linkerd-to-kubernetes-deployments"></a>Kubernetes dağıtımlarını Linkerd 'e ekleme
 
-Linkerd CLı, Kubernetes dosyalarına gerekli bölümleri ve özellikleri eklemek için bir `inject` komutu sağlar. Komutu çalıştırabilir ve çıktıyı yeni bir dosyaya yazabilirsiniz.
+Linkerd CLı, `inject` Kubernetes dosyalarına gerekli bölümleri ve özellikleri eklemek için bir komut sağlar. Komutu çalıştırabilir ve çıktıyı yeni bir dosyaya yazabilirsiniz.
 
 ```console
 linkerd inject stockdata.yml > stockdata-with-mesh.yml
@@ -65,7 +65,7 @@ linkerd inject stockweb.yml > stockweb-with-mesh.yml
 
 Yapılan değişiklikleri görmek için yeni dosyaları inceleyebilirsiniz. Dağıtım nesneleri için, Linkerd 'nin oluşturulduğu sırada Pod 'a bir sepet ara sunucu kapsayıcısı eklemesine söylemek için bir meta veri ek açıklaması eklenir.
 
-Ayrıca, `linkerd inject` komutunun çıkışını doğrudan `kubectl` için boru yapmak mümkündür. Aşağıdaki komutlar PowerShell veya herhangi bir Linux kabuğunda çalışır.
+Komutun çıkışını doğrudan kanala yöneltmeyi de mümkün hale gelir `linkerd inject` `kubectl` . Aşağıdaki komutlar PowerShell veya herhangi bir Linux kabuğunda çalışır.
 
 ```console
 linkerd inject stockdata.yml | kubectl apply -f -
@@ -74,7 +74,7 @@ linkerd inject stockweb.yml | kubectl apply -f -
 
 ### <a name="inspect-services-in-the-linkerd-dashboard"></a>Linkerd panosundaki Hizmetleri inceleyin
 
-`linkerd` CLı kullanarak Linkerd panosunu açın.
+CLI kullanarak Linkerd panosunu açın `linkerd` .
 
 ```console
 linkerd dashboard
@@ -118,5 +118,5 @@ spec:
 ```
 
 >[!div class="step-by-step"]
->[Önceki](kubernetes.md)
->[İleri](load-balancing.md)
+>[Önceki](kubernetes.md) 
+> [Sonraki](load-balancing.md)

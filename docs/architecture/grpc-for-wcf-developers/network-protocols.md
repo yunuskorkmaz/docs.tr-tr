@@ -2,16 +2,16 @@
 title: Ağ protokolleri-WCF geliştiricileri için gRPC
 description: GRPC ağ protokollerine genel bakış.
 ms.date: 09/02/2019
-ms.openlocfilehash: 1ceb140f7b7ac7e796a87612ebb9d21e28d33968
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 801d57c95aec748e5dcf667ca480775ff945b55c
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628494"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938565"
 ---
 # <a name="network-protocols"></a>Ağ protokolleri
 
-Windows Communication Foundation (WCF) aksine gRPC, ağı için bir taban olarak HTTP/2 kullanır. Bu, WCF ve SOAP üzerinde yalnızca HTTP/1.1 üzerinde çalışan önemli avantajlar sağlar. GRPC 'yi kullanmak isteyen geliştiriciler için, HTTP/2 için başka bir seçenek olmadığından, HTTP/2 ' yi daha ayrıntılı bir şekilde incelemek ve gRPC kullanmanın ek avantajlarını belirlemek için ideal bir süre görünür.
+Windows Communication Foundation (WCF) aksine gRPC, ağı için bir taban olarak HTTP/2 kullanır. Bu protokol, WCF ve SOAP üzerinde yalnızca HTTP/1.1 üzerinde çalışan önemli avantajlar sunar. GRPC 'yi kullanmak isteyen geliştiriciler için, HTTP/2 için başka bir seçenek olmadığından, HTTP/2 ' yi daha ayrıntılı bir şekilde incelemek ve gRPC kullanmanın ek avantajlarını belirlemek için ideal bir süre görünür.
 
 2015 ' de Internet Mühendisliği görev gücü tarafından yayınlanan HTTP/2, zaten Google tarafından kullanılmakta olan deneysel SPDY protokolünden türetilmiştir. Özellikle HTTP/1.1 'den daha verimli, daha hızlı ve daha güvenli olacak şekilde tasarlanmıştır.
 
@@ -21,7 +21,7 @@ Bu listede HTTP/2 ' nin bazı temel özellikleri ve avantajları gösterilmekted
 
 ### <a name="binary-protocol"></a>İkili protokol
 
-İstek/yanıt döngülerinde artık metin komutlarına gerek yok. Bu, komutların uygulanmasını basitleştirir ve hızlandırır. Özellikle, verileri ayrıştırmak daha hızlıdır ve daha az bellek kullanır, ağ gecikmesi, hızsız ilgili açık geliştirmeler ve ağ kaynaklarının genel olarak daha iyi kullanıldığı bir şekilde azaltılır.
+İstek/yanıt döngülerinde artık metin komutlarına gerek yok. Bu etkinlik, komutlarının uygulanmasını basitleştirir ve hızlandırır. Özellikle, verileri ayrıştırmak daha hızlıdır ve daha az bellek kullanır, ağ gecikmesi, hızsız ilgili açık geliştirmeler ve ağ kaynaklarının genel olarak daha iyi kullanıldığı bir şekilde azaltılır.
 
 ### <a name="streams"></a>Akışlar
 
@@ -36,5 +36,5 @@ Bu özellik HTTP/2 ' nin en önemli yeniliklerinden biridir. Veriler için birde
 Temel olarak, gRPC ve HTTP/2 ' nin birleşimi, geliştiricilere en azından WCF için net. TCP bağlamalarının ve bazı durumlarda daha fazla hız ve verimlilik sağlayan, büyük hız ve verimlilik sunmaktadır. Ancak, net. TCP 'den farklı olarak, HTTP/2 üzerinden gRPC, .NET uygulamalarıyla sınırlı değildir.
 
 >[!div class="step-by-step"]
->[Önceki](interface-definition-language.md)
->[İleri](why-grpc.md)
+>[Önceki](interface-definition-language.md) 
+> [Sonraki](why-grpc.md)

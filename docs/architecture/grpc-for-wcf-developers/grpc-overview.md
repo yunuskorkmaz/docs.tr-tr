@@ -1,13 +1,13 @@
 ---
 title: WCF geliştiricileri için gRPC-gRPC 'ye Genel Bakış
 description: GRPC 'nin geliştirilmesine kılavuzluk eden ilkeler kümesi hakkında bilgi edinin.
-ms.date: 09/02/2019
-ms.openlocfilehash: a0811adadc617097d86edc5f845c42a7e90f560f
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 99e1bdb1f49469f444044027c3ac5d927f9cab13
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542929"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938409"
 ---
 # <a name="grpc-overview"></a>gRPC genel bakış
 
@@ -19,7 +19,7 @@ ASP.NET Core 3,0, GRPC 'nin resmi .NET uygulamasına katkıda bulunan Microsoft 
 
 Bölüm 1 ' de anlatıldığı gibi, Google Stubby, kendi iç, genel amaçlı RPC altyapısını değiştirmek için HTTP/2 girişini kullanmak istedi. gRPC, Stubby temel alınarak standartlarından yararlanabilir ve uygulanabilirliğini mobil bilgi işlem, bulut ve Nesnelerin İnterneti genişletebilirler.
 
-Bunu başarmak için, [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) , GRPC 'yi yönetecek bir ilkeler kümesi kurdu. Aşağıdaki listede, en iyi şekilde erişilebilirlik ve kullanışlılığın en üst düzeye çıkarmasından ilgisi olan en ilgili olanlar gösterilmektedir:
+Bu standartlığa ulaşmak için [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) , GRPC 'yi yönetecek bir ilke kümesi kurdu. Aşağıdaki listede, en iyi şekilde erişilebilirliği ve kullanılabilirliği en üst düzeye çıkarmak için önemli olan en ilgili olanlar gösterilmektedir:
 
 - **Ücretsiz ve açık** – tüm yapıtlar, geliştiricilerin GRPC 'yi benimseme ile sınırlandırmasız lisanslama ile açık kaynak olmalıdır.
 - **Kapsam ve basitlik** – GRPC her bir popüler platformda kullanılabilir ve her platformda derlemek için yeterince kolay olmalıdır.
@@ -27,8 +27,8 @@ Bunu başarmak için, [Cloud Native Computing Foundation (CNCF)](https://www.cnc
 - **Genel amaçlı ve** performans: Framework, performansa ödün vermeden mümkün olduğunca geniş bir kullanım talebi yelpazaya kadar kullanılabilir olmalıdır.
 - **Akış** : protokol, büyük veri kümeleri veya zaman uyumsuz mesajlaşma için akış semantiğini sağlamalıdır.
 - **Meta veri değişimi** – protokol, kimlik doğrulama belirteçleri gibi iş dışı verilerin gerçek iş verilerinden ayrı olarak işlenmesine izin verir.
-- **Standartlaştırılmış durum kodları** – hata işleme kararlarını daha net hale getirmek için hata kodlarının değişkenliği azaltılmalıdır. Ek, daha zengin hata işleme gerektiğinde, bunu meta veri değişimi içinde yönetmek için bir mekanizma sağlanmalıdır.
+- **Standartlaştırılmış durum kodları** – hata işleme kararlarını daha net hale getirmek için hata kodlarının değişkenliği azaltılmalıdır. Ek, daha zengin hata işleme gerektiğinde, meta veri değişimi içindeki davranışı yönetmek için bir mekanizma sağlanmalıdır.
 
 >[!div class="step-by-step"]
->[Önceki](introduction.md)
->[İleri](approach.md)
+>[Önceki](introduction.md) 
+> [Sonraki](approach.md)

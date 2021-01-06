@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 26edaf7538d11d082a4b8863228213c3ebc46937
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 90c1d2a1d9efcdf57f914f4318bf7a743d3f37ec
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122348"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938474"
 ---
 # <a name="public-c-reference"></a>public (C# Başvurusu)
 
@@ -30,7 +30,7 @@ Daha fazla bilgi için bkz. [erişim değiştiriciler](../../programming-guide/c
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, iki sınıf bildirilmiştir `PointTest` ve `MainClass` . Ortak üyelerine `x` ve ' `y` a `PointTest` doğrudan üzerinden erişilir `MainClass` .
+Aşağıdaki örnekte, iki sınıf bildirilmiştir `PointTest` ve `Program` . Ortak üyelerine `x` ve ' `y` a `PointTest` doğrudan üzerinden erişilir `Program` .
 
 [!code-csharp[csrefKeywordsModifiers#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#13)]
 
@@ -51,6 +51,6 @@ Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-refere
 - [Erişim Değiştiricileri](access-modifiers.md)
 - [Erişilebilirlik Düzeyleri](accessibility-levels.md)
 - [Değiştiriciler](index.md)
-- [private](private.md)
+- [özelleştirme](private.md)
 - [protected](protected.md)
 - [internal](internal.md)

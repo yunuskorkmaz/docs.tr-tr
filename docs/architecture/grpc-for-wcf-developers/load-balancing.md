@@ -1,13 +1,13 @@
 ---
 title: WCF geliştiricileri için Yük Dengeleme gRPC-gRPC
 description: GRPC hizmetleriyle çalışmak için bir yük dengeleyici seçme.
-ms.date: 09/02/2019
-ms.openlocfilehash: 215c0983146bbf9168f01956d64733f80cea6faf
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 55f61608dce1f159b11d7265a47938ba49e9e188
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711171"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938591"
 ---
 # <a name="load-balancing-grpc"></a>GRPC yük dengelemesi
 
@@ -17,7 +17,7 @@ Yük dengeleyiciler üzerinde çalıştıkları *katmana* göre sınıflandırı
 
 ## <a name="l4-load-balancers"></a>L4 yük dengeleyiciler
 
-Bir L4 yük dengeleyici bir istemciden gelen TCP bağlantı isteğini kabul eder, arka uç örneklerinden birine başka bir bağlantı açar ve gerçek bir işleme olmadan iki bağlantı arasında verileri kopyalar. L4 mükemmel performans ve düşük gecikme süresi, ancak çok az denetim veya zeka sağlar. İstemci bağlantıyı açık sakladığı sürece tüm istekler aynı arka uç örneğine yönlendirilir.
+Bir L4 yük dengeleyici bir istemciden gelen TCP bağlantı isteğini kabul eder, arka uç örneklerinden birine başka bir bağlantı açar ve gerçek bir işleme olmadan iki bağlantı arasında verileri kopyalar. L4, mükemmel performans ve düşük gecikme süresi sunar, ancak çok az denetim veya zeka sağlar. İstemci bağlantıyı açık sakladığı sürece tüm istekler aynı arka uç örneğine yönlendirilir.
 
  [Azure Load Balancer](https://azure.microsoft.com/services/load-balancer/) , bir L4 yük dengeleyiciye bir örnektir.
 
@@ -31,7 +31,7 @@ L7 yük dengeleyiciler örnekleri:
 - [HAProxy](https://www.haproxy.com/)
 - [Traefik](https://traefik.io/)
 
-Bir Thumb kuralı olarak, L7 yük dengeleyiciler gRPC ve diğer HTTP/2 uygulamaları için en iyi seçenektir (ve genellikle HTTP uygulamaları için). L4 yük dengeleyiciler gRPC uygulamalarıyla *çalışır* , ancak düşük gecikme süresi ve düşük ek yük önemli olduğunda bu uygulamalar genellikle faydalıdır.
+Bir Thumb kuralı olarak, L7 yük dengeleyiciler gRPC ve diğer HTTP/2 uygulamaları için en iyi seçenektir (ve genellikle HTTP uygulamaları için). L4 yük dengeleyiciler gRPC uygulamalarıyla *çalışır* , ancak düşük gecikme süresi ve düşük ek yük önemli olduğunda özellikle faydalıdır.
 
 > [!IMPORTANT]
 > Bu yazma sırasında, bazı L7 yük dengeleyiciler, üst bilgiler gibi gRPC Hizmetleri için gerekli olan HTTP/2 belirtiminin tüm parçalarını desteklemez.
@@ -45,5 +45,5 @@ Arka uç hizmetleriniz ile HTTP/2 isteklerini işlemek üzere nasıl yapılandı
 Kubernetes 'deki iç hizmetlerde yük dengelemenin tartışılması için [hizmet kafesleri bölümüne](service-mesh.md) bakın.
 
 >[!div class="step-by-step"]
->[Önceki](service-mesh.md)
->[İleri](application-performance-management.md)
+>[Önceki](service-mesh.md) 
+> [Sonraki](application-performance-management.md)

@@ -1,21 +1,21 @@
 ---
 title: WCF geliştiricileri için şifreleme ve ağ güvenliği-gRPC
 description: GRPC 'de ağ güvenliğine ve şifrelemeye ilişkin bazı notlar
-ms.date: 09/02/2019
-ms.openlocfilehash: f8a7aeaf2a65e4ff56ac33d728e40f09a436f7a6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 0735158ed69ce425c4f00eed6c42689b888a1885
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542786"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938630"
 ---
 # <a name="encryption-and-network-security"></a>Şifreleme ve ağ güvenliği
 
-Windows Communication Foundation (WCF) için ağ güvenlik modeli kapsamlı ve karmaşıktır. Tek tek iletileri şifrelemek için WS-Security belirtimini kullanarak HTTPS veya TLS üzerinden TCP ve ileti düzeyinde güvenlik kullanarak aktarım düzeyi güvenliği içerir.
+Windows Communication Foundation (WCF) için ağ güvenlik modeli kapsamlı ve karmaşıktır. Tek tek iletileri şifrelemek için WS-Security belirtimini kullanarak HTTPS veya TLS üzerinden TCP ve ileti düzeyi güvenlik kullanarak aktarım düzeyi güvenliği içerir.
 
 gRPC, TLS sertifikalarını kullanarak güvenli hale getirerek, temel alınan HTTP/2 protokolüne güvenli ağ bırakır.
 
-Web tarayıcıları, HTTP/2 için TLS bağlantılarını, ancak dahil olmak üzere çoğu programlı istemciyi insist. NET `HttpClient`, şifrelenmemiş bağlantılar üzerinden HTTP/2 kullanabilir. `HttpClient` varsayılan olarak şifreleme gerektirir, ancak bunu bir <xref:System.AppContext> anahtarı kullanarak geçersiz kılabilirsiniz.
+Web tarayıcıları, HTTP/2 için TLS bağlantılarını, ancak dahil olmak üzere çoğu programlı istemciyi insist. NET `HttpClient` , şifrelenmemiş bağlantılar ÜZERINDEN http/2 kullanabilir. `HttpClient` Varsayılan olarak şifreleme gerektirir, ancak bir anahtar kullanarak bu davranışı geçersiz kılabilirsiniz <xref:System.AppContext> .
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
@@ -28,5 +28,5 @@ Kurumsal ağ genelindeki iç hizmetler için, gRPC hizmetlerinize gelen ve giden
 Kubernetes 'te çalışan hizmetler arasında açık TLS kullanmanız gerekiyorsa, küme içi bir sertifika yetkilisi ve [CERT Manager](https://docs.cert-manager.io/en/latest/)gibi bir sertifika yöneticisi denetleyicisi kullanmayı düşünün. Daha sonra, dağıtım zamanında hizmetlere otomatik olarak sertifika atayabilirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](channel-credentials.md)
->[İleri](grpc-in-production.md)
+>[Önceki](channel-credentials.md) 
+> [Sonraki](grpc-in-production.md)

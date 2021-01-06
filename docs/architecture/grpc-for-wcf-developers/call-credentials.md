@@ -1,13 +1,13 @@
 ---
 title: Arama kimlik bilgileri-WCF geliştiricileri için gRPC
 description: ASP.NET Core 3,0 ' de gRPC çağrı kimlik bilgilerini uygulama ve kullanma.
-ms.date: 09/02/2019
-ms.openlocfilehash: 01f21f58ed4235f45509c948c84653cd99d35618
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 66394c75929bf068f83d631e022b467386e59ec5
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711531"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938448"
 ---
 # <a name="call-credentials"></a>Çağrı kimlik bilgileri
 
@@ -15,19 +15,19 @@ ms.locfileid: "74711531"
 
 ## <a name="ws-federation"></a>WS-Federation
 
-ASP.NET Core, [WSFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) NuGet PAKETINI kullanarak WS-Federation ' i destekler. WS-Federation, Windows kimlik doğrulaması için HTTP/2 üzerinde desteklenmeyen en yakın seçenektir. Kullanıcılar, ASP.NET Core kimlik doğrulaması için kullanılabilecek bir belirteç sağlayan Active Directory Federasyon Hizmetleri (AD FS) (AD FS) kullanılarak doğrulanır.
+ASP.NET Core, [WSFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) NuGet paketini kullanarak WS-Federation destekler. WS-Federation, Windows kimlik doğrulaması için HTTP/2 üzerinde desteklenmeyen en yakın seçenektir. Kullanıcılar, ASP.NET Core kimlik doğrulaması için kullanılabilecek bir belirteç sağlayan Active Directory Federasyon Hizmetleri (AD FS) (AD FS) kullanılarak doğrulanır.
 
-Bu kimlik doğrulama yöntemiyle çalışmaya başlama hakkında daha fazla bilgi için bkz. [ASP.NET Core 'de WS-Federation ile kullanıcıların kimliğini doğrulama](/aspnet/core/security/authentication/ws-federation).
+Bu kimlik doğrulama yöntemiyle çalışmaya başlama hakkında daha fazla bilgi için bkz. [ASP.NET Core WS-Federation kullanıcılara kimlik doğrulama](/aspnet/core/security/authentication/ws-federation).
 
 ## <a name="jwt-bearer-tokens"></a>JWT taşıyıcı belirteçleri
 
 [JSON Web Token](https://jwt.io) (JWT) standardı, kodlanmış bir dizedeki bir Kullanıcı ve talepleri hakkında bilgi kodlamak için bir yol sağlar. Ayrıca, tüketicinin ortak anahtar şifrelemesi kullanarak belirtecin bütünlüğünü doğrulayabilmesi için bu belirteci imzalamak için bir yol sağlar. Kullanıcıların kimliğini doğrulamak ve gRPC ve HTTP API 'Leri ile kullanılacak OpenID Connect (OıDC) belirteçlerini oluşturmak için ıdentityserver4 gibi çeşitli hizmetleri kullanabilirsiniz.
 
-3,0 ASP.NET Core, JWT taşıyıcı paketini kullanarak JWTs 'yi işleyebilir. Yapılandırma, ASP.NET Core MVC uygulaması için olduğu gibi bir gRPC uygulaması için tam olarak aynıdır. Burada, WS-Federation ' den daha kolay geliştirileceği için JWT taşıyıcı belirteçlerine odaklanacağız.
+5,0 ASP.NET Core, JWT taşıyıcı paketini kullanarak JWTs 'yi işleyebilir. Yapılandırma, ASP.NET Core MVC uygulaması için olduğu gibi bir gRPC uygulaması için tam olarak aynıdır. Burada, WS-Federation ' den daha kolay geliştirileceği için JWT taşıyıcı belirteçlerine odaklanacağız.
 
 ## <a name="add-authentication-and-authorization-to-the-server"></a>Sunucuya kimlik doğrulaması ve yetkilendirme ekleme
 
-JWT taşıyıcı paketi, varsayılan olarak ASP.NET Core 3,0 ' ye dahil değildir. Uygulamanıza [Microsoft. AspNetCore. Authentication. Jwttaşıyıcı](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) NuGet paketini yükler.
+JWT taşıyıcı paketi, varsayılan olarak ASP.NET Core 5,0 ' ye dahil değildir. Uygulamanıza [Microsoft. AspNetCore. Authentication. Jwttaşıyıcı](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) NuGet paketini yükler.
 
 Başlangıç sınıfına kimlik doğrulama hizmetini ekleyin ve JWT taşıyıcı işleyicisini yapılandırın:
 
@@ -55,7 +55,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-`IssuerSigningKey` özelliği, imzalanmış belirteçleri doğrulamak için gereken şifreleme verileriyle `Microsoft.IdentityModels.Tokens.SecurityKey` uygulanmasını gerektirir. Bu belirteci, Azure Key Vault gibi bir *gizli dizi sunucusunda*güvenli bir şekilde depolayın.
+`IssuerSigningKey`Özelliği, `Microsoft.IdentityModels.Tokens.SecurityKey` imzalı belirteçleri doğrulamak için gerekli olan şifreleme verileriyle bir uygulamasının uygulanmasını gerektirir. Bu belirteci, Azure Key Vault gibi bir *gizli dizi sunucusunda* güvenli bir şekilde depolayın.
 
 Ardından, sisteme erişimi denetleyen yetkilendirme hizmetini ekleyin:
 
@@ -74,7 +74,7 @@ Ardından, sisteme erişimi denetleyen yetkilendirme hizmetini ekleyin:
 > [!TIP]
 > Kimlik doğrulama ve yetkilendirme iki ayrı adımdan farklıdır. Kullanıcının kimliğini öğrenmek için kimlik doğrulaması kullanın. Kullanıcının sistemin çeşitli bölümlerine erişmesine izin verilip verilmeyeceğini belirlemek için Yetkilendirmeyi kullanırsınız.
 
-Şimdi kimlik doğrulama ve yetkilendirme ara yazılımını `Configure` yönteminde ASP.NET Core işlem hattına ekleyin:
+Şimdi kimlik doğrulama ve yetkilendirme ara yazılımını yöntemdeki ASP.NET Core işlem hattına ekleyin `Configure` :
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -97,7 +97,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-Son olarak, `[Authorize]` özniteliğini güvenli hale getirilmesi için herhangi bir hizmete veya yönteme uygulayın ve izinleri doğrulamak için temel alınan `HttpContext` `User` özelliğini kullanın.
+Son olarak, `[Authorize]` özniteliğini güvenli hale getirilmesi için herhangi bir hizmete veya yönteme uygulayın ve `User` izinleri doğrulamak için temel alınan özelliğini kullanın `HttpContext` .
 
 ```csharp
 [Authorize]
@@ -142,5 +142,5 @@ public async Task ShowPortfolioAsync(int portfolioId)
 Artık gRPC hizmetinizi, JWT taşıyıcı belirteçlerini çağrı kimlik bilgileri olarak kullanarak güvenli hale getirdi. , [Kimlik doğrulaması ve yetkilendirme eklenmiş bir portföyleri örnek gRPC uygulamasının](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/PortfoliosSample/grpc/TraderSysAuth) sürümü GitHub ' dır.
 
 >[!div class="step-by-step"]
->[Önceki](security.md)
->[İleri](channel-credentials.md)
+>[Önceki](security.md) 
+> [Sonraki](channel-credentials.md)

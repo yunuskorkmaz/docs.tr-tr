@@ -1,13 +1,13 @@
 ---
 title: WCF geliştiricileri için bir WCF isteği-yanıt hizmetini gRPC-gRPC 'ye geçirme
 description: WCF 'den gRPC 'ye basit bir istek-yanıt hizmeti geçirmeyi öğrenin.
-ms.date: 09/02/2019
-ms.openlocfilehash: 29a7bc77bc3a4becd767fc7a50adff5b746f54bc
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.date: 12/15/2020
+ms.openlocfilehash: 38c6e33e7588dd7c1b263d813d06c088ab484948
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512703"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938578"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>WCF isteği yanıt verme hizmetini gRPC birli RPC 'ye geçirme
 
@@ -196,7 +196,7 @@ ASP.NET Core içindeki tüm gRPC birli hizmet yöntemleri için imza tutarlıdı
 
 Yöntemin dönüş türü bir `Task<T>` , burada `T` yanıt iletisi türüdür. Tüm gRPC hizmet yöntemleri zaman uyumsuzdur.
 
-## <a name="migrate-the-portfoliodata-library-to-net-core"></a>PortfolioData kitaplığını .NET Core 'a geçirme
+## <a name="migrate-the-portfoliodata-library-to-net"></a>PortfolioData kitaplığını .NET 'e geçirme
 
 Bu noktada projenin, `TraderSys.PortfolioData` WCF çözümünde sınıf kitaplığında bulunan portföy deposuna ve modellerine ihtiyacı vardır. Bunu yapmanın en kolay yolu, sınıf kitaplığı (.NET Standard) şablonuyla Visual Studio **Yeni proje** iletişim kutusunu kullanarak ya da .NET Core CLI kullanarak komut satırından, dosyayı içeren dizinden bu komutları çalıştırarak yeni bir sınıf kitaplığı oluşturmaktır `TraderSys.sln` :
 
@@ -395,7 +395,7 @@ WCF istek-yanıt verme hizmetini başarıyla gRPC 'ye geçirdiyseniz, bu dosya i
 İstemcisini içermesi için aynı çözümde bir .NET Standard sınıf kitaplığı oluşturun. Bu öncelikle istemci kodu oluşturma örneğidir, ancak bu tür bir kitaplığı NuGet kullanarak paketleyebilir ve diğer .NET ekibinin kullanması için bir iç depoya dağıtabilirsiniz. Devam edin ve çözüme adlı yeni bir .NET Standard sınıfı kitaplığı ekleyin `TraderSys.Portfolios.Client` ve `Class1.cs` dosyayı silin.
 
 > [!CAUTION]
-> [GRPC .net. Client](https://www.nuget.org/packages/Grpc.Net.Client) NuGet paketi .net Core 3,0 (veya başka bir .NET Standard 2,1 uyumlu çalışma zamanı) gerektirir. .NET Framework ve .NET Core 'un önceki sürümleri [GRPC. Core](https://www.nuget.org/packages/Grpc.Core) NuGet paketi tarafından desteklenir.
+> [GRPC .net. Client](https://www.nuget.org/packages/Grpc.Net.Client) NuGet paketi .net Core 3,0 veya sonraki bir sürümünü (veya başka bir .NET Standard 2,1 uyumlu çalışma zamanı) gerektirir. .NET Framework ve .NET Core 'un önceki sürümleri [GRPC. Core](https://www.nuget.org/packages/Grpc.Core) NuGet paketi tarafından desteklenir.
 
 Visual Studio 2019 ' de, Visual Studio 'nun önceki sürümlerindeki WCF projelerine hizmet başvuruları ekleme yöntemine benzer bir şekilde gRPC hizmetlerine başvurular ekleyebilirsiniz. Hizmet başvuruları ve bağlı hizmetler artık aynı kullanıcı arabirimi altında yönetilir. Çözüm Gezgini ' de projedeki **Bağımlılıklar** düğümüne sağ tıklayıp `TraderSys.Portfolios.Client` **bağlı hizmet ekle**' yi seçerek kullanıcı arabirimine erişebilirsiniz. Görüntülenen araç penceresinde, **hizmet başvuruları** bölümünü seçin ve ardından **Yeni GRPC hizmet başvurusu Ekle**' yi seçin:
 

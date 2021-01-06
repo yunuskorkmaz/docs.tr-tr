@@ -1,7 +1,7 @@
 ---
 title: C#-.NET kullanarak JSON serileştirmek ve serisini kaldırma
 description: System.Text.Json.Net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı öğrenin. Örnek kod içerir.
-ms.date: 12/16/2020
+ms.date: 01/04/2021
 ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: b69dfd6238f529c3b315d63a93a82da0f316f459
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: bd257cf8d79ea2afa209fe71ad7eff969a62d6b2
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678250"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938721"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -30,6 +30,9 @@ Serileştirme örnek kodunun çoğu, <xref:System.Text.Json.JsonSerializerOption
 Kod örnekleri, aşağıdaki sınıfa ve türevlerini ifade eder:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+
+> [!NOTE]
+> System.Text.Json Visual Basic tarafından desteklenmeyen [başvuru yapıları](../../csharp/language-reference/builtin-types/struct.md#ref-struct)kullanır. System.Text.JsonAPI 'leri Visual Basic kullanmaya çalışırsanız, BC40000 derleme hataları alırsınız. Hata iletisi, sorunun eski bir API olduğunu gösterir, ancak gerçek sorun `ref struct` derleyicide desteklenmeyen destek olmamasıdır.
 
 ## <a name="namespaces"></a>Ad alanları
 

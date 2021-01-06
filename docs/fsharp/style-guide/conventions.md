@@ -1,13 +1,13 @@
 ---
 title: F# kodlama kuralları
 description: 'F # kodu yazarken genel kılavuzları ve deyimleri öğrenin.'
-ms.date: 01/15/2020
-ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/5/2021
+ms.openlocfilehash: e69ceb2f3c37404ca8d8ed972f985340e62ecb59
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739908"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938695"
 ---
 # <a name="f-coding-conventions"></a>F# kodlama kuralları
 
@@ -135,7 +135,7 @@ Bir değerin başlatılması, bir veritabanı veya başka bir uzak kaynak için 
 ```fsharp
 // This is bad!
 module MyApi =
-    let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
+    let dep1 = File.ReadAllText "/Users/<name>/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
 
     let private r = Random()
@@ -174,7 +174,7 @@ Büyük sistemlerde hata yönetimi karmaşık ve anormal bir Endeavor ve sisteml
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Etki alanınız için iç türlerde hata durumlarını ve geçersiz durumu temsil eder
 
-[Ayrılmış birleşimler](../language-reference/discriminated-unions.md)ile, F #, tür sisteminizde hatalı program durumunu temsil etme olanağı sunar. Örnek:
+[Ayrılmış birleşimler](../language-reference/discriminated-unions.md)ile, F #, tür sisteminizde hatalı program durumunu temsil etme olanağı sunar. Örneğin:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -190,9 +190,9 @@ Bu durumda, bir banka hesabından paranın bir şekilde çizmesinin başarısız
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f{am}"
-    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
+    | Success am -> printfn $"Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn $"Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn $"Failed: card expired on {expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
@@ -238,7 +238,7 @@ Bir özel durumun açık olması için işlevselliği karşılaştırma, kod tem
 
 ### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>Özel durumları değiştirmek için monadıc hata işleme kullanmayın
 
-Özel durumlar fonksiyonel programlamada biraz Taboo olarak görülür. Aslında özel durumlar ihlal ediyor, bu nedenle bunları çok işlevli olarak düşünmek güvenlidir. Ancak, bu durum kodun çalışması gereken gerçekliği yoksayar ve çalışma zamanı hataları oluşabilir. Genel olarak, önemli sürprleri en aza indirmek için çoğu şeyin saf veya toplam olmadığı varsayımına göre kod yazın.
+Özel durumlar genellikle fonksiyonel programlamada Taboo olarak görülür. Aslında özel durumlar ihlal ediyor, bu nedenle bunları çok işlevli olarak düşünmek güvenlidir. Ancak, bu durum kodun çalışması gereken gerçekliği yoksayar ve çalışma zamanı hataları oluşabilir. Genel olarak, önemli sürprleri en aza indirmek için çoğu şeyin saf veya toplam olmadığı varsayımına göre kod yazın.
 
 .NET çalışma zamanı ve çapraz dil ekosisteminde bir bütün olarak ilgi ve uygunluk açısından, özel durumların önem derecesine/yönlerini göz önünde bulundurmanız önemlidir.
 
@@ -317,7 +317,7 @@ Curried işlevleri bağımsız değişkenlerini etiketetmez. Bu, etkilerini olum
 
 ```fsharp
 let func name age =
-    printfn "My name is {name} and I am %d{age} years old!"
+    printfn $"My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -331,7 +331,7 @@ val func : name:string -> age:int -> unit
 val funcWithApplication : (string -> int -> unit)
 ```
 
-Çağrı sitesinde, Visual Studio gibi araç ipuçları, `string` ve `int` Giriş türlerinin gerçekten temsil ettiği şekilde size anlamlı bilgiler vermeyecektir.
+Çağrı sitesinde, Visual Studio gibi araç ipuçları size tür imzasını verecektir, ancak tanımlı bir ad olmadığından, adları görüntülenmeyecek. Adlar, arayanların API 'nin arkasındaki anlamı daha iyi anlamasına yardımcı olduğundan, iyi API tasarımı için önemlidir. Ortak API 'de Point-Free kodu kullanmak çağıranların anlaması için daha zor hale gelir.
 
 Herkese açık şekilde tüketilebilir gibi nokta içermeyen `funcWithApplication` bir kodla karşılaşırsanız, araç, bağımsız değişkenler için anlamlı adlara sahip olması için tam η genişletmesi yapmanız önerilir.
 
@@ -657,7 +657,7 @@ F #, nesneler ve nesne yönelimli (OO) kavramları için tam desteğe sahiptir. 
 * Otomatik Özellikler
 * Uygulama `IDisposable` ve `IEnumerable`
 * Tür uzantıları
-* Olaylar
+* Ekinlikler
 * Yapılar
 * Temsilciler
 * Numaralandırmalar

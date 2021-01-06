@@ -1,34 +1,34 @@
 ---
 title: GRPC istemci kitaplıkları oluşturma-WCF geliştiricileri için gRPC
 description: GRPC Hizmetleri için paylaşılan istemci kitaplıkları/paketleri tartışması.
-ms.date: 09/02/2019
-ms.openlocfilehash: e47ccd958007f84d633bb9ad5808c5e97c231977
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.date: 12/15/2020
+ms.openlocfilehash: b1233bb40a5fa2119a325be2657b500a4c626c18
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358849"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938435"
 ---
 # <a name="create-grpc-client-libraries"></a>GRPC istemci kitaplıkları oluşturma
 
-Bir gRPC uygulaması için istemci kitaplıklarını dağıtmak gerekli değildir. Kuruluşunuz dahilinde paylaşılan bir dosya kitaplığı oluşturabilirsiniz `.proto` ve diğer takımlar bu dosyaları kendi projelerinde istemci kodu oluşturmak için kullanabilir. Ancak özel bir NuGet deponuz varsa ve diğer birçok ekip .NET Core kullanıyorsa, hizmet projenizin bir parçası olarak istemci NuGet paketleri oluşturabilir ve yayımlayabilirsiniz. Bu, hizmetinizi paylaşmak ve yükseltmek için iyi bir yoldur.
+Bir gRPC uygulaması için istemci kitaplıklarını dağıtmak gerekli değildir. Kuruluşunuz dahilinde paylaşılan bir dosya kitaplığı oluşturabilirsiniz `.proto` ve diğer takımlar bu dosyaları kendi projelerinde istemci kodu oluşturmak için kullanabilir. Ancak özel bir NuGet deponuz varsa ve diğer birçok ekip .NET kullanıyorsa, hizmet projenizin bir parçası olarak istemci NuGet paketleri oluşturabilir ve yayımlayabilirsiniz. Bu yaklaşım, hizmetinizi paylaşmak ve yükseltmek için iyi bir yoldur.
 
-İstemci kitaplığı dağıtmanın avantajlarından biri, oluşturulan gRPC ve prototip sınıflarını faydalı "kullanışlı" yöntemlerle ve özellikleriyle geliştirebilmektir. İstemci kodunda, sunucusunda olduğu gibi, tüm sınıfların olarak bildirildiği için, `partial` bunları oluşturulan kodu düzenlemeden genişletebilirsiniz. Bu, temel türlere oluşturucular, Yöntemler ve hesaplanmış özellikler eklemenin kolay olduğunu gösterir.
+İstemci kitaplığı dağıtmanın avantajlarından biri, oluşturulan gRPC ve prototip sınıflarını faydalı "kullanışlı" yöntemlerle ve özellikleriyle geliştirebilmektir. İstemci kodunda, sunucusunda olduğu gibi, tüm sınıfların olarak bildirildiği için, `partial` bunları oluşturulan kodu düzenlemeden genişletebilirsiniz. Bu davranış, temel türlere oluşturucular, Yöntemler ve hesaplanmış özellikler eklemenin kolay olduğunu gösterir.
 
 > [!CAUTION]
 > Önemli işlevselliği sağlamak için özel kod kullanmamalısınız. Paylaşılan kitaplığı kullanan .NET ekipleriyle ilgili önemli işlevselliği kısıtlamak ve Python ya da Java gibi diğer dilleri veya platformları kullanan takımlara sağlamamak istemezsiniz.
 
-Mümkün olduğunca fazla ekibin gRPC hizmetinize erişebildiğinden emin olun. Bunu yapmanın en iyi yolu, `.proto` geliştiricilerin kendi istemcilerini oluşturabileceği şekilde dosyaları paylaşmalıdır. Bu özellikle, farklı takımların farklı programlama dilleri ve çerçeveleri kullanması veya API 'nizin dışarıdan erişilebilir olduğu durumlarda çok platformlu bir ortamda geçerlidir.
+Mümkün olduğunca fazla ekibin gRPC hizmetinize erişebildiğinden emin olun. Bu işlevi yapmanın en iyi yolu, `.proto` geliştiricilerin kendi istemcilerini oluşturabileceği şekilde dosyaları paylaşmalıdır. Bu yaklaşım özellikle farklı takımların farklı programlama dilleri ve çerçeveleri kullanması veya API 'nizin dışarıdan erişilebilir olduğu çok platformlu bir ortamda geçerlidir.
 
 ## <a name="useful-extensions"></a>Kullanışlı uzantılar
 
 .NET ' te nesne akışları ile ilgili olarak yaygın olarak kullanılan iki arabirim vardır: <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.IObservable%601> . .NET Core 3,0 ve C# 8,0 ' den başlayarak, <xref:System.Collections.Generic.IAsyncEnumerable%601> akışları zaman uyumsuz olarak işlemek için bir arabirim ve `await foreach` arabirimi kullanmak için bir sözdizimi vardır. Bu bölümde, bu arabirimlerin gRPC akışlarına uygulanması için yeniden kullanılabilir kod sunulmaktadır.
 
-.NET Core gRPC istemci kitaplıkları ile, `ReadAllAsync` bir arabirim oluşturan için bir genişletme yöntemi vardır `IAsyncStreamReader<T>` `IAsyncEnumerable<T>` . Reaktif programlama kullanan geliştiriciler için, bir arabirim oluşturmak için eşdeğer bir genişletme yöntemi `IObservable<T>` aşağıdaki bölümde örnek gibi görünebilir.
+.NET gRPC istemci kitaplıkları ile, `ReadAllAsync` bir arabirim oluşturan için bir genişletme yöntemi vardır `IAsyncStreamReader<T>` `IAsyncEnumerable<T>` . Reaktif programlama kullanan geliştiriciler için, bir arabirim oluşturmak için eşdeğer bir genişletme yöntemi `IObservable<T>` aşağıdaki bölümde örnek gibi görünebilir.
 
 ### <a name="iobservable"></a>IObservable
 
-`IObservable<T>`Arabirim, "reaktif" tersidir `IEnumerable<T>` . Bir akıştan öğe çekmek yerine, reaktif yaklaşım akışa akış gönderme öğeleri sağlar. Bu, gRPC akışlarına çok benzer ve arabirimi `IObservable<T>` bir arabirim etrafında sarmayı kolaylaştırır `IAsyncStreamReader<T>` .
+`IObservable<T>`Arabirim, "reaktif" tersidir `IEnumerable<T>` . Bir akıştan öğe çekmek yerine, reaktif yaklaşım akışa akış gönderme öğeleri sağlar. Bu davranış, gRPC akışlarına çok benzer ve bir arabirimi bir arabirim etrafında sarmayı kolaylaştırır `IObservable<T>` `IAsyncStreamReader<T>` .
 
 `IAsyncEnumerable<T>`C#, gözlemlenenler ile çalışmaya yönelik yerleşik destek içermediğinden, bu kod koddan daha uzundur. Uygulama sınıfını el ile oluşturmanız gerekir. Bu, genel bir sınıftır, ancak tek bir uygulama tüm türler arasında çalışacaktır.
 
@@ -147,7 +147,7 @@ namespace Grpc.Core
 
 ## <a name="summary"></a>Özet
 
-`IAsyncEnumerable`Ve `IObservable` modelleri, .NET içinde zaman uyumsuz veri akışları ile ilgilenmenin iyi desteklendiğinden ve iyi belgelenmiş yollardır. gRPC, Map 'i hem paradigmalarına hem de .NET Core ile yakın tümleştirme sunan ve reaktif ve zaman uyumsuz programlama stilleriyle birlikte akışlar.
+<xref:System.IAsyncDisposable>Ve <xref:System.IObservable%601> modelleri, .NET içinde zaman uyumsuz veri akışları ile ilgilenmenin iyi desteklendiğinden ve iyi belgelenmiş yollardır. gRPC, Map 'i hem paradigmalarına hem de .NET ile yakın tümleştirme sunan ve reaktif ve zaman uyumsuz programlama stilleriyle birlikte akışları.
 
 >[!div class="step-by-step"]
 >[Önceki](streaming-versus-repeated.md) 

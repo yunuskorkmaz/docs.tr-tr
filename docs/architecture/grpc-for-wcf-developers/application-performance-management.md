@@ -1,13 +1,13 @@
 ---
 title: Uygulama performansı yönetimi-WCF geliştiricileri için gRPC
 description: ASP.NET Core gRPC uygulamaları için günlüğe kaydetme, ölçümler ve izleme.
-ms.date: 09/02/2019
-ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.date: 12/15/2020
+ms.openlocfilehash: 8a2a89e268e3b2dffdcc945ac71b2de85b4d4964
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982348"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938461"
 ---
 # <a name="application-performance-management"></a>Uygulama Performansı Yönetimi
 
@@ -110,19 +110,19 @@ public class StockData : Stocks.StocksBase
 
 ## <a name="distributed-tracing"></a>Dağıtılmış izleme
 
-Dağıtılmış izleme, mikro hizmetler ve dağıtılmış mimarilerin artan kullanımını gösteren, izleme sırasında görece son bir geliştirmede oluşur. İstemci tarayıcısından, uygulamadan veya cihazdan gelen tek bir istek birçok adım ve alt isteklere ayrılabilir ve bir ağ genelinde birçok hizmetin kullanımını içerir. Bu, günlük iletilerinin ve ölçümlerinin tetiklediği belirli bir istekle ilişkilendirilmesi güç sağlar. Dağıtılmış izleme, isteklere tanımlayıcılar uygular ve bu, günlüklerin ve ölçümlerin belirli bir işlemle bağıntılı olmasını sağlar. Bu, [WCF 'nin uçtan uca izlemeye](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md)benzerdir, ancak birden çok platformda uygulanır.
+Dağıtılmış izleme, mikro hizmetler ve dağıtılmış mimarilerin artan kullanımını gösteren, izleme sırasında görece son bir geliştirmede oluşur. İstemci tarayıcısından, uygulamadan veya cihazdan gelen tek bir istek birçok adım ve alt isteklere ayrılabilir ve bir ağ genelinde birçok hizmetin kullanımını içerir. Bu etkinlik, günlük iletilerinin ve ölçümlerinin tetiklediği belirli bir istekle ilişkilendirilmesi güç sağlar. Dağıtılmış izleme, isteklere tanımlayıcılar uygular ve günlüklerin ve ölçümlerin belirli bir işlemle bağıntılı olmasını sağlar. Bu izleme, [WCF 'nin uçtan uca izlemeye](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md)benzer, ancak birden çok platformda uygulanır.
 
 Dağıtılmış izleme popülerliği arttı ve standartlaştırmaya başlıyor. Bulut Yerel Bilgi Işlem altyapısı, [Açık izleme standardı](https://opentracing.io)oluşturdu ve [deleger](https://www.jaegertracing.io/) ve [elastik APM](https://www.elastic.co/products/apm)gibi arka uçlar ile çalışmaya yönelik satıcıya ait kitaplıkları sağlamaya çalışıyor. Aynı zamanda, Google aynı sorun kümesini karşılamak için [Opencensus projesini](https://opencensus.io/) oluşturmuştur. Bu iki proje, gelecekteki sektörün sektör standardı olacak şekilde yeni bir proje olan [Opentelemetriyi](https://opentelemetry.io)birleştiriyor.
 
 ### <a name="how-distributed-tracing-works"></a>Dağıtılmış izlemenin nasıl çalıştığı
 
-Dağıtılmış izleme, tek bir *izlemenin* parçası olan *spans* adlandırılmış, zaman aşımına uğramış işlemler, bir sistemin birden çok düğümünde işlemeyi içerebilir. Yeni bir işlem başlatıldığında, benzersiz tanımlayıcı ile bir izleme oluşturulur. Her alt işlem için, kendi tanımlayıcısı ve izleme tanımlayıcısı ile bir span oluşturulur. İstek sistem etrafında geçerken, çeşitli bileşenler *üst* ilişkilerini içeren *alt* yayılma oluşturabilir. Bir yayılma, izleme ve yayma tanımlayıcılarını ve ayrıca anahtar ve değer çiftleri ( *Bagaj* adı verilir) biçimindeki yararlı verileri içeren bir *içeriğe* sahiptir.
+Dağıtılmış izleme, tek bir *izlemenin* parçası olan adlandırılmış, zaman aşımına uğramış işlemler, bir sistemin birden çok düğümünde işlemeyi içerebilir. Yeni bir işlem başlatıldığında, benzersiz tanımlayıcı ile bir izleme oluşturulur. Her alt işlem için, kendi tanımlayıcısı ve izleme tanımlayıcısı ile bir span oluşturulur. İstek sistem etrafında geçerken, çeşitli bileşenler *üst* ilişkilerini içeren *alt* yayılma oluşturabilir. Bir yayılma, izleme ve yayma tanımlayıcılarını ve ayrıca anahtar ve değer çiftleri ( *Bagaj* adı verilir) biçimindeki yararlı verileri içeren bir *içeriğe* sahiptir.
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>İle dağıtılmış izleme `DiagnosticSource`
 
-.NET Core, dağıtılmış izlemeler ve yayılmalar için iyi eşleşen bir iç modüle sahiptir: [Diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Ayrıca, bir işlem içinde tanılamayı oluşturmak ve kullanmak için basit bir yol sağlamak için, `DiagnosticSource` modül bir *etkinlik* kavramıdır. Etkinlik etkin bir şekilde dağıtılmış izlemenin veya bir izleme içindeki yayılımın bir uygulamasıdır. Modülün iç işlevleri, tanımlayıcıları ayırmak da dahil olmak üzere üst/alt etkinliklerden yararlanın. Türünü kullanma hakkında daha fazla bilgi için `Activity` bkz. [GitHub 'Da etkinlik Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
+.NET, dağıtılmış izlemeler ve yayılmalar için iyi eşleşen bir iç modüle sahiptir: [Diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Ayrıca, bir işlem içinde tanılamayı oluşturmak ve kullanmak için basit bir yol sağlamak için, `DiagnosticSource` modül bir *etkinlik* kavramıdır. Etkinlik etkin bir şekilde dağıtılmış izlemenin veya bir izleme içindeki yayılımın bir uygulamasıdır. Modülün iç işlevleri, tanımlayıcıları ayırmak da dahil olmak üzere üst/alt etkinliklerden yararlanın. Türünü kullanma hakkında daha fazla bilgi için `Activity` bkz. [GitHub 'Da etkinlik Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
 
-, `DiagnosticSource` Çekirdek Framework 'ün bir parçası olduğundan, çeşitli çekirdek bileşenleri tarafından desteklenir. Bunlar, <xref:System.Net.Http.HttpClient> gRPC çerçevesinde açık destek de dahil olmak üzere, Entity Framework Core ve ASP.NET Core içerir. ASP.NET Core bir istek aldığında, [W3C Trace bağlam](https://www.w3.org/TR/trace-context) standardı ile eşleşen BIR çift http üst bilgisi olup olmadığını denetler. Üstbilgiler bulunursa bir etkinlik, üst bilgilerden kimlik değerleri ve bağlamı kullanılarak başlatılır. Üst bilgi bulunmazsa, standart biçimle eşleşen üretilen kimlik değerleriyle bir etkinlik başlatılır. Bu etkinliğin ömrü boyunca Framework veya uygulama kodu tarafından oluşturulan tüm Tanılamalar, izleme ve span tanımlayıcılarıyla etiketlenebilir. `HttpClient`Destek, her istekte geçerli bir etkinlik olup olmadığını denetleyerek ve izleme üst bilgilerini giden isteğe otomatik olarak ekleyerek bunu daha fazla genişletir.
+, `DiagnosticSource` Çekirdek çerçevesinin bir parçası olduğundan ve daha sonra, birden çok çekirdek bileşeni tarafından desteklenir. Bunlar, <xref:System.Net.Http.HttpClient> gRPC çerçevesinde açık destek de dahil olmak üzere, Entity Framework Core ve ASP.NET Core içerir. ASP.NET Core bir istek aldığında, [W3C Trace bağlam](https://www.w3.org/TR/trace-context) standardı ile eşleşen BIR çift http üst bilgisi olup olmadığını denetler. Üstbilgiler bulunursa bir etkinlik, üst bilgilerden kimlik değerleri ve bağlamı kullanılarak başlatılır. Üst bilgi bulunmazsa, standart biçimle eşleşen üretilen kimlik değerleriyle bir etkinlik başlatılır. Bu etkinliğin ömrü boyunca Framework veya uygulama kodu tarafından oluşturulan tüm Tanılamalar, izleme ve span tanımlayıcılarıyla etiketlenebilir. `HttpClient`Destek, her istekte geçerli bir etkinlik olup olmadığını denetleyerek ve izleme üstbilgilerini giden isteğe otomatik olarak ekleyerek bu işlevselliği daha fazla genişletir.
 
 ASP.NET Core gRPC istemcisi ve sunucu kitaplıkları, ve için açık destek içerir ve `DiagnosticSource` `Activity` Etkinlikler oluşturup üstbilgi bilgilerini otomatik olarak kullanabilir ve kullanır.
 

@@ -1,13 +1,13 @@
 ---
 title: Prototipsiz iletiler-WCF geliştiricileri için gRPC
 description: Prototipme iletilerinin IDL 'de nasıl tanımlandığını ve C# dilinde oluşturulduğunu öğrenin.
-ms.date: 09/09/2019
-ms.openlocfilehash: 6fc7b9c34810abaa8d674af56d1517a5cf87521b
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.date: 12/15/2020
+ms.openlocfilehash: c1f2a3071d45dcbe4b98d747f19fed508bad102f
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325043"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938110"
 ---
 # <a name="protobuf-messages"></a>Protobuf iletileri
 
@@ -62,7 +62,7 @@ message Stock {
 
 ## <a name="field-numbers"></a>Alan numaraları
 
-Alan numaraları, prototipin önemli bir parçasıdır. Bunlar, ikili kodlu verilerdeki alanları tanımlamak için kullanılır. Bu, sürümden hizmetinizin sürümüne değiştiremeyeceği anlamına gelir. Bunun avantajı, geriye dönük uyumluluk ve ileriye doğru uyumluluk olanaklarından yararlanabilmektir. Eksik değer olasılığı işlendiği sürece, istemciler ve hizmetler, hakkında bilgi sahibi olmadıkları alan numaralarını yok sayacaktır.
+Alan numaraları, prototipin önemli bir parçasıdır. Bunlar, ikili kodlu verilerdeki alanları tanımlamak için kullanılır. Bu, sürümden hizmetinizin sürümüne değiştiremeyeceği anlamına gelir. Bunun avantajı, geriye dönük uyumluluk ve ileriye doğru uyumluluk olanaklarından yararlanabilmektir. Eksik değer olasılığı işlendiği sürece, istemciler ve hizmetler, hakkında bilgi sahibi olmadıkları alan numaralarını yoksayar.
 
 İkili biçimde, alan numarası bir tür tanımlayıcısıyla birleştirilir. 1 ile 15 arasında alan numaraları, tek bir bayt olarak türlerine göre kodlanabilir. 16 ile 2.047 arasında sayılar 2 bayt sürer. Herhangi bir nedenden dolayı bir ileti üzerinde 2.047 ' den fazla alana ihtiyacınız varsa daha yüksek bir değere geçebilirsiniz. 1 ile 15 arasındaki alan numaralarının tek baytlık tanımlayıcıları daha iyi performans sağlar, bu nedenle bunları en temel, sık kullanılan alanlar için kullanmanız gerekir.
 

@@ -1,13 +1,13 @@
 ---
 title: WCF geliştiricileri için Docker-gRPC
 description: ASP.NET Core gRPC uygulamaları için Docker görüntüleri oluşturma
-ms.date: 09/02/2019
-ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/15/2020
+ms.openlocfilehash: f662dbd67f00b828f3e1dfa47359a450dd1c5900
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688451"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938422"
 ---
 # <a name="create-docker-images"></a>Docker görüntüleri oluşturma
 
@@ -29,10 +29,10 @@ Her görüntü için, etiketlere göre ayırt edilen farklı Linux dağıtımlar
 
 | Resim etiketi (ler) | Linux | Notlar |
 | --------- | ----- | ----- |
-| 3,0-Buster, 3,0 | Debian 10 | Bir işletim sistemi değişkeni belirtilmemişse varsayılan görüntü. |
-| 3,0-alçam | Alçam 3,9 | Alp taban görüntüleri, Deleyden veya Ubuntu 'dan çok daha küçüktür. |
-| 3,0-disco | Ubuntu 19.04 | |
-| 3,0-Bionic | Ubuntu 18.04 | |
+| 5,0-Buster, 5,0 | Debian 10 | Bir işletim sistemi değişkeni belirtilmemişse varsayılan görüntü. |
+| 5,0-alçam | Alçam 3,9 | Alp taban görüntüleri, Deleyden veya Ubuntu 'dan çok daha küçüktür. |
+| 5,0-disco | Ubuntu 19.04 | |
+| 5,0-Bionic | Ubuntu 18.04 | |
 
 Alp temel görüntüsü 100 MB boyutunda, de, ve Ubuntu görüntüleri için 200 MB ile karşılaştırılır. Bazı yazılım paketleri veya kitaplıkları alp 'nin paket yönetiminde bulunmayabilir. Hangi görüntünün kullanılacağı konusunda emin değilseniz, muhtemelen varsayılan deni seçmeniz gerekir.
 
@@ -41,29 +41,31 @@ Alp temel görüntüsü 100 MB boyutunda, de, ve Ubuntu görüntüleri için 200
 
 ## <a name="create-a-docker-image"></a>Docker görüntüsü oluşturma
 
-Docker görüntüsü bir *Dockerfile* tarafından tanımlanır. Bu, uygulamayı oluşturmak için gereken tüm komutları içeren bir metin dosyasıdır ve uygulamayı oluşturmak ya da çalıştırmak için gerekli tüm bağımlılıkları yükler. Aşağıdaki örnekte, bir ASP.NET Core 3,0 uygulaması için en basit Dockerfile gösterilmektedir:
+Docker görüntüsü bir *Dockerfile* tarafından tanımlanır. Bu *Dockerfile* , uygulamayı oluşturmak için gereken tüm komutları içeren bir metin dosyasıdır ve uygulamayı oluşturmak ya da çalıştırmak için gerekli olan tüm bağımlılıkları yükler. Aşağıdaki örnekte, bir ASP.NET Core 5,0 uygulaması için en basit Dockerfile gösterilmektedir:
 
 ```dockerfile
-# Application build steps
-FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:5.0 as build
 
 WORKDIR /src
 
-COPY . .
+COPY ./StockKube.sln .
+COPY ./src/StockData/StockData.csproj ./src/StockData/
+COPY ./src/StockWeb/StockWeb.csproj ./src/StockWeb/
 
 RUN dotnet restore
 
-RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
+COPY . .
 
-# Runtime image creation
-FROM mcr.microsoft.com/dotnet/aspnet:3.0
+RUN dotnet publish --no-restore -c Release -o /published src/StockData/StockData.csproj
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 as runtime
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
 
 WORKDIR /app
 
-COPY --from=builder /published .
+COPY --from=build /published .
 
 ENTRYPOINT [ "dotnet", "StockData.dll" ]
 ```
@@ -91,18 +93,18 @@ Dockerfile iki bölümden oluşur: ilki `sdk` uygulamayı derlemek ve yayımlama
 
 ### <a name="https-in-docker"></a>Docker 'da HTTPS
 
-Docker için Microsoft temel görüntüleri, `ASPNETCORE_URLS` ortam değişkenini, `http://+:80` Kestrel Bu bağlantı noktasında HTTPS olmadan çalıştığı anlamına gelen olarak ayarlar. HTTPS 'yi özel bir sertifikayla kullanıyorsanız ( [Şirket içinde barındırılan gRPC uygulamalarında](self-hosted.md)açıklandığı gibi), bunu geçersiz kılmanız gerekir. Dockerfile 'ın çalışma zamanı görüntüsü oluşturma bölümünde ortam değişkenini ayarlayın.
+Docker için Microsoft temel görüntüleri, `ASPNETCORE_URLS` ortam değişkenini, `http://+:80` Kestrel Bu bağlantı noktasında HTTPS olmadan çalıştığı anlamına gelen olarak ayarlar. HTTPS 'yi özel bir sertifikayla kullanıyorsanız ( [Şirket içinde barındırılan gRPC uygulamalarında](self-hosted.md)açıklandığı gibi), bu yapılandırmayı geçersiz kılmanız gerekir. Dockerfile 'ın çalışma zamanı görüntüsü oluşturma bölümünde ortam değişkenini ayarlayın.
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```
 
 ### <a name="the-dockerignore-file"></a>. Dockerıgnore dosyası
 
-`.gitignore`Kaynak denetiminden belirli dosyaları ve dizinleri hariç tutmakta olan dosyalar, `.dockerignore` dosya ve dizinlerin derleme sırasında görüntüye kopyalanmasını hariç tutmak için kullanılabilir. Bu, yalnızca kopyalama zamandan tasarruf etmez, ancak `obj` bilgisayarınızdaki bir dizinin görüntüye kopyalanmasını gerektiren bazı hatalardan da kaçınabilir. En azından, dosyanıza ve için girdi eklemeniz gerekir `bin` `obj` `.dockerignore` .
+`.gitignore`Kaynak denetiminden belirli dosyaları ve dizinleri hariç tutmakta olan dosyalar, `.dockerignore` dosya ve dizinlerin derleme sırasında görüntüye kopyalanmasını hariç tutmak için kullanılabilir. Bu dosya, yalnızca kopyalama zamandan tasarruf etmez, ancak `obj` bilgisayarınızdaki bir dizinin görüntüye kopyalanmasını gerektiren bazı hatalardan da kaçınabilirsiniz. En azından, dosyanıza ve için girdi eklemeniz gerekir `bin` `obj` `.dockerignore` .
 
 ```console
 bin/
@@ -111,10 +113,10 @@ obj/
 
 ## <a name="build-the-image"></a>Görüntü oluşturma
 
-Tek bir uygulama ve bu nedenle tek bir Dockerfile içeren bir çözüm için, Dockerfile 'ı temel dizine koymak en iyisidir. Diğer bir deyişle, dosyayı dosyayla aynı dizine yerleştirin `.sln` . Bu durumda, görüntüyü oluşturmak için `docker build` Dockerfile dosyasını içeren dizinden aşağıdaki komutu kullanın.
+`StockKube.sln`İki farklı uygulama içeren bir çözüm için `StockData` `StockWeb` , dockerfile 'ın her biri için temel dizine yerleştirilmeleri en iyisidir. Bu durumda, görüntüyü derlemek için `docker build` dosyanın bulunduğu dizinden aşağıdaki komutu kullanın `.sln` .
 
 ```console
-docker build --tag stockdata .
+docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 ```
 
 `--tag`Tam adlandırılmış bayrak (kısaltıldı `-t` ), belirtilmişse gerçek etiket dahil olmak üzere görüntünün tam adını belirtir. `.`Sonda, yapı çalıştırılacağı bağlamı ve `COPY` Dockerfile içindeki komutlar için geçerli çalışma dizinini belirtir.
@@ -122,7 +124,7 @@ docker build --tag stockdata .
 Tek bir çözümde birden çok uygulamanız varsa, dosyanın yanında her bir uygulama için Dockerfile dosyasını kendi klasöründe tutabilirsiniz `.csproj` . `docker build`Çözümün ve tüm projelerin görüntüye kopyalandığından emin olmak için komutu yine de temel dizinden çalıştırmalısınız. `--file`(Veya) bayrağını kullanarak geçerli dizinin altına bir Dockerfile belirtebilirsiniz `-f` .
 
 ```console
-docker build --tag stockdata --file src/StockData/Dockerfile .
+docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 ```
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>Görüntüyü makinenizdeki bir kapsayıcıda çalıştırın
@@ -130,27 +132,27 @@ docker build --tag stockdata --file src/StockData/Dockerfile .
 Görüntüyü yerel Docker örneğiniz içinde çalıştırmak için `docker run` komutunu kullanın.
 
 ```console
-docker run -ti -p 5000:80 stockdata
+docker run -ti -p 5000:80 stockdata:1.0.0
 ```
 
 `-ti`Bayrak geçerli terminalinizi kapsayıcının terminaline bağlar ve etkileşimli modda çalışır. `-p 5000:80`Kapsayıcıda, localhost ağ arabirimindeki bağlantı noktası 5000 ' e bağlantı noktası 80 ' ü yayınlar.
 
 ## <a name="push-the-image-to-a-registry"></a>Görüntüyü bir kayıt defterine gönderme
 
-Görüntünün çalıştığını doğruladıktan sonra, diğer sistemlerde kullanılabilir hale getirmek için bir Docker kayıt defterine gönderin. İç ağların bir Docker kayıt defteri sağlaması gerekir. Bu, [Docker 'ın kendi `registry` görüntüsünü](https://docs.docker.com/registry/deploying/) (Docker kayıt defteri bir Docker kapsayıcısında çalıştırılır) çalıştırmak kadar basit olabilir, ancak daha kapsamlı çok sayıda çözüm mevcuttur. Dış paylaşım ve bulut kullanımı için [Azure Container Registry](/azure/container-registry/) veya [Docker Hub](https://docs.docker.com/docker-hub/repos/)gibi çeşitli yönetilen kayıt defterleri mevcuttur.
+Görüntünün çalıştığını doğruladıktan sonra, diğer sistemlerde kullanılabilir hale getirmek için bir Docker kayıt defterine gönderin. İç ağların bir Docker kayıt defteri sağlaması gerekir. Bu etkinlik, [Docker 'ın kendi `registry` görüntüsünü](https://docs.docker.com/registry/deploying/) (Docker kayıt defteri bir Docker kapsayıcısında çalıştırılır) çalıştırmak kadar basit olabilir, ancak daha kapsamlı çeşitli çözümler mevcuttur. Dış paylaşım ve bulut kullanımı için [Azure Container Registry](/azure/container-registry/) veya [Docker Hub](https://docs.docker.com/docker-hub/repos/)gibi çeşitli yönetilen kayıt defterleri mevcuttur.
 
 Docker Hub 'ına göndermek için, görüntü adını Kullanıcı veya kuruluş adınızla ön eke koyun.
 
 ```console
-docker tag stockdata myorg/stockdata
-docker push myorg/stockdata
+docker tag stockdata:1.0.0 <myorg>/stockdata:1.0.0
+docker push <myorg>/stockdata:1.0.0
 ```
 
 Özel bir kayıt defterine göndermek için, görüntü adını kayıt defteri ana bilgisayar adı ve kuruluş adı ile önek olarak ekleyin.
 
 ```console
-docker tag stockdata internal-registry:5000/myorg/stockdata
-docker push internal-registry:5000/myorg/stockdata
+docker tag stockdata <internal-registry:5000>/<myorg>/stockdata:1.0.0
+docker push <internal-registry:5000>/<myorg>/stockdata:1.0.0
 ```
 
 Görüntü bir kayıt defterinden olduktan sonra, tek tek Docker konaklarına veya Kubernetes gibi bir kapsayıcı düzenleme altyapısına dağıtabilirsiniz.
