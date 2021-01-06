@@ -1,28 +1,28 @@
 ---
 title: WCF geliştiricileri için WCF 'yi gRPC-gRPC ile karşılaştırma
 description: Dağıtılmış uygulamalar oluşturmak için WCF ve gRPC çerçeveleri karşılaştırması.
-ms.date: 09/02/2019
-ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 12/15/2020
+ms.openlocfilehash: 7dd41c3d6f248bb1ef5eacb323b1443c7bc575a7
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503331"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938500"
 ---
-# <a name="comparing-wcf-to-grpc"></a><span data-ttu-id="84771-103">WCF 'yi gRPC ile karşılaştırma</span><span class="sxs-lookup"><span data-stu-id="84771-103">Comparing WCF to gRPC</span></span>
+# <a name="comparing-wcf-to-grpc"></a><span data-ttu-id="71d87-103">WCF 'yi gRPC ile karşılaştırma</span><span class="sxs-lookup"><span data-stu-id="71d87-103">Comparing WCF to gRPC</span></span>
 
-<span data-ttu-id="84771-104">Önceki bölümde, prototipte ve gRPC 'nin iletileri nasıl işleyeceği hakkında iyi bir görünüm vermuştur.</span><span class="sxs-lookup"><span data-stu-id="84771-104">The previous chapter gave you a good look at Protobuf and how gRPC handles messages.</span></span> <span data-ttu-id="84771-105">Windows Communication Foundation (WCF) ' den gRPC 'ye ayrıntılı bir dönüştürme aracılığıyla çalışmadan önce, WCF 'de kullanılabilen özelliklerin gRPC 'de nasıl işlendiğini ve gRPC eşdeğeri olmadığında hangi geçici çözümlerin kullanılabileceğini bilmeniz önemlidir.</span><span class="sxs-lookup"><span data-stu-id="84771-105">Before you work through a detailed conversion from Windows Communication Foundation (WCF) to gRPC, it's important know how the features available in WCF are handled in gRPC and what workarounds you can use when there's no gRPC equivalent.</span></span> <span data-ttu-id="84771-106">Özellikle, bu bölümde aşağıdaki konular ele alınacaktır:</span><span class="sxs-lookup"><span data-stu-id="84771-106">In particular, this chapter will cover the following subjects:</span></span>
+<span data-ttu-id="71d87-104">Önceki bölümde, prototipte ve gRPC 'nin iletileri nasıl işleyeceği hakkında iyi bir görünüm vermuştur.</span><span class="sxs-lookup"><span data-stu-id="71d87-104">The previous chapter gave you a good look at Protobuf and how gRPC handles messages.</span></span> <span data-ttu-id="71d87-105">Windows Communication Foundation (WCF) ' den gRPC 'ye ayrıntılı bir dönüştürme aracılığıyla çalışmadan önce, WCF 'de kullanılabilen özelliklerin gRPC 'de nasıl işlendiğini ve gRPC eşdeğeri olmadığında hangi geçici çözümlerin kullanılabileceğini bilmeniz önemlidir.</span><span class="sxs-lookup"><span data-stu-id="71d87-105">Before you work through a detailed conversion from Windows Communication Foundation (WCF) to gRPC, it's important know how the features available in WCF are handled in gRPC and what workarounds you can use when there's no gRPC equivalent.</span></span> <span data-ttu-id="71d87-106">Özellikle, bu bölümde aşağıdaki konular ele alınacaktır:</span><span class="sxs-lookup"><span data-stu-id="71d87-106">In particular, this chapter will cover the following subjects:</span></span>
 
-- <span data-ttu-id="84771-107">İşlemler ve Yöntemler</span><span class="sxs-lookup"><span data-stu-id="84771-107">Operations and methods</span></span>
-- <span data-ttu-id="84771-108">Bağlamalar ve aktarımlar</span><span class="sxs-lookup"><span data-stu-id="84771-108">Bindings and transports</span></span>
-- <span data-ttu-id="84771-109">RPC türleri</span><span class="sxs-lookup"><span data-stu-id="84771-109">RPC types</span></span>
-- <span data-ttu-id="84771-110">Meta Veriler</span><span class="sxs-lookup"><span data-stu-id="84771-110">Metadata</span></span>
-- <span data-ttu-id="84771-111">Hata işleme</span><span class="sxs-lookup"><span data-stu-id="84771-111">Error handling</span></span>
-- <span data-ttu-id="84771-112">WS-\* protokolleri</span><span class="sxs-lookup"><span data-stu-id="84771-112">WS-\* protocols</span></span>
+- <span data-ttu-id="71d87-107">İşlemler ve Yöntemler</span><span class="sxs-lookup"><span data-stu-id="71d87-107">Operations and methods</span></span>
+- <span data-ttu-id="71d87-108">Bağlamalar ve aktarımlar</span><span class="sxs-lookup"><span data-stu-id="71d87-108">Bindings and transports</span></span>
+- <span data-ttu-id="71d87-109">RPC türleri</span><span class="sxs-lookup"><span data-stu-id="71d87-109">RPC types</span></span>
+- <span data-ttu-id="71d87-110">Meta Veriler</span><span class="sxs-lookup"><span data-stu-id="71d87-110">Metadata</span></span>
+- <span data-ttu-id="71d87-111">Hata işleme</span><span class="sxs-lookup"><span data-stu-id="71d87-111">Error handling</span></span>
+- <span data-ttu-id="71d87-112">WS- \* protokoller</span><span class="sxs-lookup"><span data-stu-id="71d87-112">WS-\* protocols</span></span>
 
-## <a name="grpc-example"></a><span data-ttu-id="84771-113">gRPC örneği</span><span class="sxs-lookup"><span data-stu-id="84771-113">gRPC example</span></span>
+## <a name="grpc-example"></a><span data-ttu-id="71d87-113">gRPC örneği</span><span class="sxs-lookup"><span data-stu-id="71d87-113">gRPC example</span></span>
 
-<span data-ttu-id="84771-114">Visual Studio 2019 ' den veya komut satırından yeni bir ASP.NET Core 3,0 gRPC projesi oluşturduğunuzda, "Merhaba Dünya" gRPC eşdeğeri sizin için oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="84771-114">When you create a new ASP.NET Core 3.0 gRPC project from Visual Studio 2019 or the command line, the gRPC equivalent of "Hello World" is generated for you.</span></span> <span data-ttu-id="84771-115">Hizmeti ve iletilerini tanımlayan bir `greeter.proto` dosyasından ve hizmetin uygulanmasıyla bir `GreeterService.cs` dosyası oluşur.</span><span class="sxs-lookup"><span data-stu-id="84771-115">It consists of a `greeter.proto` file that defines the service and its messages, and a `GreeterService.cs` file with an implementation of the service.</span></span>
+<span data-ttu-id="71d87-114">Visual Studio 2019 ' den veya komut satırından yeni bir ASP.NET Core 5,0 gRPC projesi oluşturduğunuzda, "Merhaba Dünya" gRPC eşdeğeri sizin için oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="71d87-114">When you create a new ASP.NET Core 5.0 gRPC project from Visual Studio 2019 or the command line, the gRPC equivalent of "Hello World" is generated for you.</span></span> <span data-ttu-id="71d87-115">`greeter.proto`Hizmeti ve iletilerini tanımlayan bir dosya ve `GreeterService.cs` hizmet uygulamasını içeren bir dosya içerir.</span><span class="sxs-lookup"><span data-stu-id="71d87-115">It consists of a `greeter.proto` file that defines the service and its messages, and a `GreeterService.cs` file with an implementation of the service.</span></span>
 
 ```protobuf
 syntax = "proto3";
@@ -74,9 +74,9 @@ namespace HelloGrpc
 }
 ```
 
-<span data-ttu-id="84771-116">Bu bölüm, gRPC 'nin farklı kavramlarını ve özelliklerini açıklayarak bu örnek koda başvurur.</span><span class="sxs-lookup"><span data-stu-id="84771-116">This chapter will refer to this example code when explaining different concepts and features of gRPC.</span></span>
+<span data-ttu-id="71d87-116">Bu bölüm, gRPC 'nin farklı kavramlarını ve özelliklerini açıklayarak bu örnek koda başvurur.</span><span class="sxs-lookup"><span data-stu-id="71d87-116">This chapter will refer to this example code when explaining different concepts and features of gRPC.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="84771-117">[Önceki](protobuf-maps.md)
->[İleri](wcf-endpoints-grpc-methods.md)</span><span class="sxs-lookup"><span data-stu-id="84771-117">[Previous](protobuf-maps.md)
+><span data-ttu-id="71d87-117">[Önceki](protobuf-maps.md) 
+> [Sonraki](wcf-endpoints-grpc-methods.md)</span><span class="sxs-lookup"><span data-stu-id="71d87-117">[Previous](protobuf-maps.md)
 [Next](wcf-endpoints-grpc-methods.md)</span></span>
