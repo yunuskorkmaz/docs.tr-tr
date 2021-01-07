@@ -3,13 +3,13 @@ title: SLES-.NET ' e .NET yükler
 description: SLES 'e .NET SDK ve .NET çalışma zamanı yüklemenin çeşitli yollarını gösterir.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: f351a9b11ab16910963a1db88d88b6949b56ae11
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 80da69616dd1507b809ef56d439645d569a6a805
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031806"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970791"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-sles"></a>.NET SDK veya .NET çalışma zamanını SLES 'e yükler
 
@@ -25,7 +25,7 @@ Aşağıdaki tabloda, hem SLES 12 SP2 hem de SLES 15 üzerinde desteklenen .NET 
 - Bir ❌ , SLES veya .NET sürümünün bu SLES sürümünde desteklenmediğini belirtir.
 - Her iki SLES sürümü ve bir .NET sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| SLES                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| SLES                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |------------------------|---------------|---------------|----------------|
 | ✔️ [15](#sles-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [12 SP2](#sles-12-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
@@ -34,15 +34,11 @@ Aşağıdaki .NET Core sürümleri artık desteklenmemektedir. Bunlara yönelik 
 
 - 3,0
 - 2.2
-- 2,0
+- 2.0
 
 ## <a name="remove-preview-versions"></a>Önizleme sürümlerini Kaldır
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
-
-## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="sles-15-"></a>SLES 15 ✔️
 
@@ -72,6 +68,10 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
 
 [!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
+## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
 ## <a name="troubleshoot-the-package-manager"></a>Paket yöneticisinin sorunlarını giderme
 
 Bu bölüm, .NET yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.
@@ -99,14 +99,7 @@ Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux u
   > [!WARNING]
   > En son bir *libgdiplus* sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
 
-## <a name="scripted-install"></a>Komut dosyalı yüklemesi
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>El ile yüklemesi
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Sonraki adımlar
 
+- [.NET CLı için sekme tamamlamayı etkinleştirme](../tools/enable-tab-autocomplete.md)
 - [Öğretici: Visual Studio Code kullanarak .NET SDK ile bir konsol uygulaması oluşturma](../tutorials/with-visual-studio-code.md)

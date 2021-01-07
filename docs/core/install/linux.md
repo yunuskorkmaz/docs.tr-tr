@@ -3,13 +3,13 @@ title: Linux dağıtımlarına .NET yükler
 description: Linux 'ta .NET yükleme desteği olan Linux dağıtımları hakkında bilgi edinin.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 6354ef6f0f9af2126312683893d6705b3b4c70f4
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.date: 01/06/2021
+ms.openlocfilehash: 3834bd7d977bb13e9543d511bee7170161a755ac
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594527"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970739"
 ---
 # <a name="install-net-on-linux"></a>Linux 'ta .NET 'i yükler
 
@@ -31,13 +31,11 @@ Aşağıdaki .NET sürümleri ❌ artık desteklenmemektedir. Bunlara yönelik �
 
 - 3,0
 - 2.2
-- 2,0
+- 2.0
 
 Bu desteklenmeyen sürümler aşağıdaki bölümlerde ayrıntılandırılmıştır ve bu sürümü yüklemeye çalışırsanız mesafmeniz farklılık gösterebilir.
 
 ## <a name="alpine"></a>Alpine
-
-Alp için yükleyiciler yok. [Install betiğini](linux-alpine.md#scripted-install) kullanmanız veya [el ile Install](linux-alpine.md#manual-install) yönergelerini izlemeniz gerekir.
 
 Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve ' de desteklendiği alp sürümlerinin bir listesi verilmiştir. Bu sürümler, [.NET sürümü destek sonu](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya [alçam sürümü yaşam sonuna ulaştığında](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases)desteklenene kadar desteklenmeye devam eder.
 
@@ -45,13 +43,13 @@ Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve ' de desteklen
 - A ❌ , alp veya .NET sürümünün bu alp sürümünde desteklenmediğini belirtir.
 - Hem alp hem de bir .NET sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| Alpine                      | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| Alpine                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |-----------------------------|---------------|---------------|----------------|
 | ✔️ [3,12](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [3,11](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [3,10](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
 | ❌[3,9](linux-alpine.md)   | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
-| ❌[3,8](linux-alpine.md)   | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
+| ❌ [3.8](linux-alpine.md)   | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
 
 Daha fazla bilgi için bkz. [alp 'de .net 'ı Install](linux-alpine.md).
 
@@ -61,7 +59,7 @@ CentOS 7, Paket Yöneticisi olarak Yılayı kullanır ve CentOS 8 DNF 'yi kullan
 
 Aşağıdaki tabloda, hem CentOS 7 hem de CentOS 8 ' de şu anda desteklenen .NET sürümlerinin bir listesi verilmiştir. Bu sürümler, [.NET sürümü destek sonu](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya CentOS sürümü artık desteklenene kadar desteklenmeye devam eder.
 
-| CentOS                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [8](linux-centos.md#centos-8-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [7](linux-centos.md#centos-7-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
@@ -78,7 +76,7 @@ Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve üzerinde dest
 - A ❌ , debir veya .NET sürümünün bu Dey sürümünde desteklenmediğini belirtir.
 - Her iki sürümü de ve bir .NET sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| Debian                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [10](linux-debian.md#debian-10-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
@@ -96,15 +94,15 @@ Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve desteklenen Fe
 - Bir ❌ , Fedora veya .NET sürümünün bu Fedora sürümünde desteklenmediğini belirtir.
 - Hem Fedora hem de .NET sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| Fedora                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| Fedora                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [33](linux-fedora.md#fedora-33-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ✔️ [32](linux-fedora.md#fedora-32-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
-| ❌[31](linux-fedora.md#fedora-31-) | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
-| ❌[30](linux-fedora.md#fedora-30-) | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
-| ❌[29](linux-fedora.md#fedora-29-) | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
-| ❌[28](linux-fedora.md#fedora-28-) | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 |
-| ❌[27](linux-fedora.md#fedora-27-) | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 |
+| ✔️ [33](linux-fedora.md#install-net-50) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ✔️ [32](linux-fedora.md#install-net-50) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
+| ❌[31](linux-fedora.md#install-on-older-distributions) | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
+| ❌[30](linux-fedora.md#install-on-older-distributions) | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
+| ❌[29](linux-fedora.md#install-on-older-distributions) | ✔️ 2,1        | ✔️ 3,1        | ❌ 5,0 |
+| ❌[28](linux-fedora.md#install-on-older-distributions) | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 |
+| ❌[27](linux-fedora.md#install-on-older-distributions) | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 |
 
 Daha fazla bilgi için bkz. [Fedora 'da .net 'ı kurma](linux-fedora.md).
 
@@ -114,7 +112,7 @@ openSUSE paket yöneticisi olarak zypper kullanır.
 
 Aşağıdaki tabloda, openSUSE 15 üzerinde şu anda desteklenen .NET sürümlerinin bir listesi verilmiştir. Bu sürümler, [.NET sürümü destek sonu](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya openSUSE sürümü artık desteklenene kadar desteklenmeye devam eder.
 
-| openSUSE                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |----------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-opensuse.md#opensuse-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 
@@ -130,7 +128,7 @@ Aşağıdaki tabloda, hem RHEL 7 hem de RHEL 8 üzerinde şu anda desteklenen .N
 - A ❌ , RHEL veya .NET sürümünün bu RHEL sürümünde desteklenmediğini belirtir.
 - Hem RHEL hem de .NET sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| RHEL                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| RHEL                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [8](linux-rhel.md#rhel-8-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [7](linux-rhel.md#rhel-7--net-50) | ✔️ 2,1        | ✔️ [3,1](linux-rhel.md#rhel-7--net-core-31)        | ✔️ [5,0](linux-rhel.md#rhel-7--net-50) |
@@ -147,7 +145,7 @@ Aşağıdaki tabloda, hem SLES 12 SP2 hem de SLES 15 üzerinde desteklenen .NET 
 - Bir ❌ , SLES veya .NET sürümünün bu SLES sürümünde desteklenmediğini belirtir.
 - Her iki SLES sürümü ve bir .NET sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| SLES                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| SLES                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-sles.md#sles-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [12 SP2](linux-sles.md#sles-12-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
@@ -164,7 +162,7 @@ Aşağıdaki tablo Ubuntu ve .NET Destek durumunu temsil eder.
 - Bir ❌ , Ubuntu veya .NET sürümünün bu Ubuntu sürümünde desteklenmediğini belirtir.
 - Ubuntu ve .NET sürümünün her ikisi de ✔️ sahip olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| Ubuntu                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| Ubuntu                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [20,10](linux-ubuntu.md#2010-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [20,04 (LTS)](linux-ubuntu.md#2004-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |

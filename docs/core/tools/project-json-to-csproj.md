@@ -3,12 +3,12 @@ title: project.jsve csproj karşılaştırması
 description: project.json ve csproj öğeleri arasında bir eşlemeye bakın.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427027"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970882"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json ve csproj özellikleri arasında bir eşleme
 
@@ -356,7 +356,7 @@ Daha fazla bilgi için bkz. [kendi içindeki dağıtımlar (SCD)](../deploying/i
 ```
 
 > [!NOTE]
-> `imports`Açık araçlar, csproj 'da desteklenmez. İçeri aktarmaları gereken araçlar yeni ile çalışmaz `Microsoft.NET.Sdk` .
+> `imports` Açık araçlar, csproj 'da desteklenmez. İçeri aktarmaları gereken araçlar yeni ile çalışmaz `Microsoft.NET.Sdk` .
 
 ## <a name="buildoptions"></a>Buildoseçenekleri
 
@@ -620,16 +620,16 @@ MSBuild 'te bu, [öğeler](/visualstudio/msbuild/common-msbuild-project-items)ku
 ```
 
 > [!NOTE]
-> Varsayılan [Glob desenlerinin](https://en.wikipedia.org/wiki/Glob_(programming)) birçoğu .NET Core SDK tarafından otomatik olarak eklenir. Daha fazla bilgi için bkz. [varsayılan derleme eklemeleri](../project-sdk/overview.md#default-compilation-includes).
+> Varsayılan [Glob desenlerinin](https://en.wikipedia.org/wiki/Glob_(programming)) birçoğu .NET Core SDK tarafından otomatik olarak eklenir. Daha fazla bilgi için bkz. [varsayılan derleme eklemeleri](../project-sdk/overview.md#default-includes-and-excludes).
 
 Tüm MSBuild `ItemGroup` öğeleri `Include` , `Exclude` , ve destekler `Remove` .
 
 . Nupkg içindeki paket düzeni ile değiştirilebilir `PackagePath="path"` .
 
-Dışında `Content` , çoğu öğe grubu `Pack="true"` pakete dahil etmek için açıkça ekleme gerektirir. `Content`MSBuild *content* `<IncludeContentInPack>` özelliği varsayılan olarak olarak ayarlandığından, bir paketin içerik klasörüne yerleştirilir `true` .
+Dışında `Content` , çoğu öğe grubu `Pack="true"` pakete dahil etmek için açıkça ekleme gerektirir. `Content`MSBuild  `<IncludeContentInPack>` özelliği varsayılan olarak olarak ayarlandığından, bir paketin içerik klasörüne yerleştirilir `true` .
 Daha fazla bilgi için bkz. [bir paketteki Içerik ekleme](/nuget/schema/msbuild-targets#including-content-in-a-package).
 
-`PackagePath="%(Identity)"`, proje göreli dosya yoluna paket yolu ayarlamanın kısa bir yoludur.
+`PackagePath="%(Identity)"` , proje göreli dosya yoluna paket yolu ayarlamanın kısa bir yoludur.
 
 ## <a name="testrunner"></a>TestRunner belirtilmelidir
 

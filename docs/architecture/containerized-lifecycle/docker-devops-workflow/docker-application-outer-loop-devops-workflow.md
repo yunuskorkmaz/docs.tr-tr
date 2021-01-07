@@ -1,13 +1,13 @@
 ---
 title: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 description: DevOps iş akışının "dıştaki döngüsü" adımlarını öğrenin
-ms.date: 08/06/2020
-ms.openlocfilehash: 82a45c8669812580623811e18cc55f55f45cb6d3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.date: 01/06/2021
+ms.openlocfilehash: bfac2d2c7866bfd11cd18201a93cb17a72cae588
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271913"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970303"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 
@@ -23,7 +23,7 @@ ms.locfileid: "89271913"
 
 Bu adım, Bölüm 4 ' te ayrıntılı olarak açıklanmıştır, ancak bir üst sınır, bir geliştiricinin CI ardışık düzen eylemlerini Başlatan kaynak denetimi yönetim sistemine (git gibi) kod iletmesinin ne kadar olduğunu burada bulabilirsiniz.
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>2. Adım: Azure DevOps Services ve git ile kaynak kodu denetimi tümleştirmesi ve yönetimi
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>2. Adım: Azure DevOps Services ve git ile denetim tümleştirmesini ve yönetimini Source-Code
 
 Bu adımda, ekipteki farklı geliştiricilerden gelen tüm kodun birleştirilmiş bir sürümünü toplamak için bir sürüm denetimi sistemine sahip olmanız gerekir.
 
@@ -77,7 +77,7 @@ Azure Service Fabric, Azure Kubernetes hizmeti ve benzer tekliflerde derleme/tes
 
 Bu Visual Studio Team Services görevlerle, Azure 'da ve tercih ettiğiniz Docker kayıt defterinizde (Azure Container Registry, Docker Hub, özel Docker DTR veya başka bir Docker kayıt defteri) sağlanan bir derleme Linux-Docker Konağı/VM ile Docker CI işlem hattınızı çok tutarlı bir şekilde birleştirebilirsiniz.
 
-***Gereklilik***
+**_Gereksinimler:_* _
 
 - Azure DevOps Services veya şirket içi yüklemeler için, Team Foundation Server 2015 güncelleştirme 3 veya sonraki bir sürümü.
 
@@ -90,7 +90,7 @@ Bu Visual Studio Team Services görevlerle, Azure 'da ve tercih ettiğiniz Docke
 > - Bir Visual Studio Team Services (Şimdi Azure DevOps Services) aracı bir Docker kapsayıcısı olarak çalıştırılıyor: \
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
-> - Azure DevOps Services .NET Core Linux Docker görüntüleri derleniyor: \
+> - Azure DevOps Services ile .NET Linux Docker görüntüleri oluşturuluyor: \
 >   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Docker desteğiyle Linux tabanlı bir Visual Studio Team Service derleme makinesi oluşturma: \
@@ -126,7 +126,7 @@ Genellikle, özel görüntüleriniz için Azure Container Registry veya Docker g
 
 ![Bir kapsayıcı kayıt defterine özel görüntülerin itilini gösteren diyagram.](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
-**Şekil 5-4**. Docker kayıt defterine özel görüntüler Yayımlama
+_ * Şekil 5-4 * *. Docker kayıt defterine özel görüntüler Yayımlama
 
 Adım 3 ' te, tümleştirme ve test (CI) oluşturmak için, elde edilen Docker görüntülerini özel veya ortak bir kayıt defterine yayımlayabilirsiniz. Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay kayıt defteri vb. gibi bulut satıcılarından çok sayıda Docker kayıt defteri teklifi vardır.
 

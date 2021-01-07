@@ -3,17 +3,17 @@ title: Ubuntu-.NET üzerine .NET 'i yükler
 description: Ubuntu 'da .NET SDK ve .NET çalışma zamanı yüklemenin çeşitli yollarını gösterir.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 22ce3379e028f065528e1f507a2d8c1ae598f0e8
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 14e5e9548d4aa09a586e2038f3e35a489ee65cd2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031858"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970777"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Ubuntu 'da .NET SDK veya .NET çalışma zamanı 'nı yükler
 
-.NET, Ubuntu 'da desteklenir. Bu makalede, Ubuntu 'da .NET yüklemesi açıklanmaktadır. Ubuntu sürümü destek dışı kaldığında, .NET artık bu sürümde desteklenmemektedir. Ancak, bu yönergeler desteklenmese de bu sürümler üzerinde çalışan .NET almanıza yardımcı olabilir.
+.NET, Ubuntu 'da desteklenir. Bu makalede, Ubuntu 'da .NET yüklemesi açıklanmaktadır. Ubuntu sürümü destek dışı kaldığında, .NET artık bu sürümde desteklenmemektedir.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -27,7 +27,7 @@ Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve üzerinde dest
 - Bir ❌ , Ubuntu veya .NET sürümünün bu Ubuntu sürümünde desteklenmediğini belirtir.
 - Ubuntu ve .NET sürümünün her ikisi de ✔️ sahip olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| Ubuntu                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| Ubuntu                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [20,10](#2010-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ [20,04 (LTS)](#2004-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
@@ -44,20 +44,13 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 
 - 3,0
 - 2.2
-- 2,0
+- 2.0
 
 ## <a name="remove-preview-versions"></a>Önizleme sürümlerini Kaldır
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
-## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
-
 ## <a name="2010-"></a>20,10 ✔️
-
-> [!IMPORTANT]
-> .NET Core 2,1, paket akışında henüz kullanılamıyor.
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 
@@ -179,7 +172,11 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 [!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
-## <a name="apt-update-sdk-or-runtime"></a>APT güncelleştirme SDK 'Sı veya çalışma zamanı
+## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="use-apt-to-update-net"></a>.NET 'i güncelleştirmek için APT kullanma
 
 .NET için yeni bir yama yayını varsa, aşağıdaki komutlarla APT aracılığıyla yükseltmeniz yeterlidir:
 
@@ -218,10 +215,6 @@ sudo apt-get update; \
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
 
-## <a name="snap"></a>Bileşenlerinden
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>Bağımlılıklar
 
 Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yüklenir. Ancak, .NET 'i el ile veya bağımsız bir uygulama yayımladığınızda, bu kitaplıkların yüklü olduğundan emin olmanız gerekir:
@@ -245,14 +238,7 @@ Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yükleni
   > [!WARNING]
   > En son bir *libgdiplus* sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
 
-## <a name="scripted-install"></a>Komut dosyalı yüklemesi
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>El ile yüklemesi
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Sonraki adımlar
 
+- [.NET CLı için sekme tamamlamayı etkinleştirme](../tools/enable-tab-autocomplete.md)
 - [Öğretici: Visual Studio Code kullanarak .NET SDK ile bir konsol uygulaması oluşturma](../tutorials/with-visual-studio-code.md)

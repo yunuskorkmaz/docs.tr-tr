@@ -3,13 +3,13 @@ title: .NET 'i alp-.NET üzerine yükler
 description: .NET SDK ve .NET çalışma zamanının alp 'ye yüklenmesi için çeşitli yollar gösterir.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 29901cc24ddd4bbe8200a36765ddd29f501394c0
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/06/2021
+ms.openlocfilehash: 6adaa905c400b45526ebbc3d8e2606522863eec3
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506833"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970856"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-alpine"></a>.NET SDK 'sını veya .NET çalışma zamanını alp 'ye yükler
 
@@ -17,7 +17,13 @@ Bu makalede, alp 'de .NET yüklemesinin nasıl yapılacağı açıklanır. Bir a
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
-Alp için yükleyiciler yok. [Install betiğini](#scripted-install) kullanmanız veya [el ile Install](#manual-install) yönergelerini izlemeniz gerekir.
+## <a name="install"></a>Yükleme
+
+Yükleyiciler alp Linux için kullanılamaz. .NET 'i aşağıdaki yöntemlerle birini yüklemelisiniz:
+
+- [Yaslama paketi](linux-snap.md)
+- [_İnstall-DotNet.sh_ ile betikleştirilmiş install](linux-scripted-manual.md#scripted-install)
+- [El ile ikili ayıklama](linux-scripted-manual.md#manual-install)
 
 ## <a name="supported-distributions"></a>Desteklenen dağıtımlar
 
@@ -27,7 +33,7 @@ Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve ' de desteklen
 - A ❌ , alp veya .NET sürümünün bu alp sürümünde desteklenmediğini belirtir.
 - Hem alp hem de bir .NET sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| Alpine  | .NET Core 2.1 | .NET Core 3,1 | .NET 5,0 |
+| Alpine  | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |-------- |---------------|---------------|----------------|
 | ✔️ 3,12 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
 | ✔️ 3,11 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 |
@@ -39,7 +45,7 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 
 - 3,0
 - 2.2
-- 2,0
+- 2.0
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
@@ -54,14 +60,7 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 - libstdc + +
 - zlib
 
-## <a name="scripted-install"></a>Komut dosyalı yüklemesi
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>El ile yüklemesi
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Sonraki adımlar
 
+- [.NET CLı için sekme tamamlamayı etkinleştirme](../tools/enable-tab-autocomplete.md)
 - [Öğretici: Visual Studio Code kullanarak .NET SDK ile bir konsol uygulaması oluşturma](../tutorials/with-visual-studio-code.md)

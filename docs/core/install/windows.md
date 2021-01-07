@@ -3,13 +3,13 @@ title: Windows 'a .NET yükler
 description: Hangi Windows sürümlerini .NET yükleyebileceğinizi öğrenin.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: b5c0949bbd591906536094a33d8583a265d8a4c8
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.date: 01/06/2021
+ms.openlocfilehash: 9d39ec28ea2cea875ddd6da34b92eeb740ee6638
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110240"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970752"
 ---
 # <a name="install-net-on-windows"></a>Windows 'a .NET yükler
 
@@ -60,7 +60,7 @@ Aşağıdaki .NET sürümleri ❌ artık desteklenmemektedir. Bunlara yönelik �
 
 - 3,0
 - 2.2
-- 2,0
+- 2.0
 
 ## <a name="runtime-information"></a>Çalışma zamanı bilgileri
 

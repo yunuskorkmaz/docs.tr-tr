@@ -3,12 +3,12 @@ title: DotNet NuGet Push komutu
 description: DotNet NuGet Push komutu, bir paketi sunucuya gönderir ve yayınlar.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 50a4a542c2d192bfbd927845489d04fd1b6c6cf3
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 99e735f7bb18b7af1c12c3ef77fc150a19083542
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555129"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970661"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -16,7 +16,7 @@ ms.locfileid: "87555129"
 
 ## <a name="name"></a>Ad
 
-`dotnet nuget push`-Sunucuya bir paket gönderir ve onu yayımlar.
+`dotnet nuget push` -Sunucuya bir paket gönderir ve onu yayımlar.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -74,7 +74,9 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
 
 - **`-s|--source <SOURCE>`**
 
-  Sunucu URL 'sini belirtir. Bu seçenek, `DefaultPushSource` NuGet yapılandırma dosyasında yapılandırma değeri ayarlanmadığı takdirde gereklidir.
+  Sunucu URL 'sini belirtir. NuGet bir UNC veya yerel klasör kaynağını tanımlar ve dosyayı HTTP kullanarak göndermek yerine buraya kopyalar.
+  > [!IMPORTANT]
+  > NuGet yapılandırma dosyası bir değer belirtmediği müddetçe NuGet 3.4.2 ile başlayarak bu zorunlu bir parametredir `DefaultPushSource` . Daha fazla bilgi için bkz. [NuGet davranışını yapılandırma](/nuget/consume-packages/configuring-nuget-behavior).
 
 - **`--skip-duplicate`**
 
@@ -94,7 +96,7 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
 
 ## <a name="examples"></a>Örnekler
 
-- Bir API anahtarı belirterek, varsayılan gönderim kaynağına *foo. nupkg* gönderin:
+- Bir API anahtarı kullanarak, NuGet yapılandırma dosyasında belirtilen varsayılan gönderim kaynağına *foo. nupkg* gönderin:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
@@ -112,7 +114,7 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- *Foo. nupkg* 'yi varsayılan gönderim kaynağına gönder:
+- , NuGet yapılandırma dosyasında belirtilen varsayılan gönderim kaynağına *foo. nupkg* gönder:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
@@ -124,13 +126,13 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- Varsayılan itme kaynağına *foo. nupkg* göndererek 360 saniyelik bir zaman aşımı belirtin:
+- Bir 360 saniyelik zaman aşımıyla, NuGet yapılandırma dosyasında belirtilen varsayılan gönderim kaynağına *foo. nupkg* gönderin:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- Geçerli dizindeki tüm *. nupkg* dosyalarını varsayılan gönderim kaynağına gönder:
+- Geçerli dizindeki tüm *. nupkg* dosyalarını NuGet yapılandırma dosyasında belirtilen varsayılan gönderim kaynağına gönderin:
 
   ```dotnetcli
   dotnet nuget push "*.nupkg"
@@ -138,12 +140,12 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
 
   > [!NOTE]
   > Bu komut işe yaramazsa, bunun nedeni SDK 'nın eski sürümlerinde var olan bir hata olabilir (.NET Core 2,1 SDK ve önceki sürümleri).
-  > Bunu onarmak için SDK sürümünüzü yükseltin veya bunun yerine aşağıdaki komutu çalıştırın:`dotnet nuget push "**/*.nupkg"`
+  > Bunu onarmak için SDK sürümünüzü yükseltin veya bunun yerine aşağıdaki komutu çalıştırın: `dotnet nuget push "**/*.nupkg"`
   
   > [!NOTE]
   > Kapsayan alıntılar, glob dosyasını gerçekleştiren Bash gibi kabuklar için gereklidir. Daha fazla bilgi için bkz. [NuGet/Home # 4393](https://github.com/NuGet/Home/issues/4393#issuecomment-667618120).
 
-- Bir HTTP (S) sunucusu tarafından 409 çakışma yanıtı döndürülse bile tüm *. nupkg* dosyalarını gönderin:
+- Bir HTTP (S) sunucusu tarafından 409 çakışma yanıtı döndürülse bile, tüm *. nupkg* dosyalarını NuGet yapılandırma dosyasında belirtilen varsayılan gönderim kaynağına gönderin:
 
   ```dotnetcli
   dotnet nuget push "*.nupkg" --skip-duplicate

@@ -1,19 +1,19 @@
 ---
 title: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
 description: Docker ve Microsoft platformu ve araçları ile Kapsayıcılı uygulamalar geliştirmeye ve dağıtmaya yönelik geliştirme ve dağıtım sürecine ileri düzey bir genel bakış alın.
-ms.date: 11/10/2020
-ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/06/2021
+ms.openlocfilehash: 94c277e349bacee9b9fc7b160043005dd4135958
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506668"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970121"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
 
 ![Kitap kapağı](./media/devops-book-cover-large-we.png)
 
-**Sürüm v 3.1** -ASP.NET Core 3,1 ' ye güncelleştirildi
+**Sürüm v 5.0** -ASP.NET Core 5,0 ' ye güncelleştirildi
 
 Kitap güncelleştirmeleri ve topluluk katkılarına yönelik [changelog](https://aka.ms/DockerLifecycleEbookChangelog) 'u inceleyin.
 
@@ -29,7 +29,7 @@ Düşük düzey, geliştirmeyle ilgili ayrıntılar için [.net mikro hizmetleri
 
 Yazar:
 
-> **Cesar de La Torre** , SR. PM, .net ürün ekibi, Microsoft Corp.
+> **Cesar de La Torre**, SR. PM, .net ürün ekibi, Microsoft Corp.
 
 Alım Düzenleyicisi:
 
@@ -37,7 +37,7 @@ Alım Düzenleyicisi:
 
 Geliştirme Düzenleyicisi:
 
-> **Bob Russatı** , Microsoft 'Ta çözüm uzmanı
+> **Bob Russatı**, Microsoft 'Ta çözüm uzmanı
 >
 > [**Sekizlik yayımlama, Inc.**](http://www.octalpub.com/)
 
@@ -49,15 +49,15 @@ Düzenleme üretimi:
 
 Copyeditor:
 
-> **Bob Russatı** , Microsoft 'Ta çözüm uzmanı
+> **Bob Russatı**, Microsoft 'Ta çözüm uzmanı
 
 Katılımcılar ve gözden geçirenler:
 
-> **Hayvan anıl** , SR. Program Yöneticisi, .NET ekibi, Microsoft
+> **Hayvan anıl**, SR. Program Yöneticisi, .NET ekibi, Microsoft
 >
-> **MIGUEL Veloso** , düz kavramlarda yazılım geliştirme mühendisi
+> **MIGUEL Veloso**, düz kavramlarda yazılım geliştirme mühendisi
 >
-> **Sumit Ghosh** , sorumlu danışman Neudesic
+> **Sumit Ghosh**, sorumlu danışman Neudesic
 
 ## <a name="copyright"></a>Telif Hakkı
 
@@ -71,7 +71,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı &copy; 2020 Microsoft Corporation
+Telif hakkı &copy; 2021 Microsoft Corporation
 
 All rights reserved. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 

@@ -1,13 +1,13 @@
 ---
 title: Microsoft araçları ile Docker uygulaması DevOps iş akışı
 description: Microsoft araçları ile Microsoft platformu ve araçları DevOps iş akışı ile Kapsayıcılı Docker uygulaması yaşam döngüsü
-ms.date: 08/06/2020
-ms.openlocfilehash: 30c5066fa90d8792d8eef8f760dc63c00ce32130
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: 7f2d380dec046804772ea7d13e764ab6f3224c12
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915202"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970160"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft araçları ile Docker uygulaması DevOps iş akışı
 
@@ -15,7 +15,7 @@ ms.locfileid: "87915202"
 
 Visual Studio ve Bulutta Azure DevOps Services, şirket içi Team Foundation Server birlikte, geliştirme ekipleri Windows veya Linux 'u hedefleyen Kapsayıcılı uygulamaları verimli bir şekilde oluşturabilir, test edebilir ve serbest bırakabilir.
 
-Microsoft araçları, Azure Izleyici aracılığıyla genel derlemeler ve sürekli tümleştirme (CI) ve Azure DevOps Services ya da Team Foundation Server, sürekli dağıtım (CD) ve hizmet hakkındaki analiz bilgilerini ücretsiz olarak kullanarak, Kapsayıcılı uygulamaların belirli uygulamaları (Docker, .NET Core veya diğer platformlarla herhangi bir bileşim) için ardışık düzeni otomatikleştirebilir. Her kod yürütmesi bir yapı (CI) başlatabilir ve hizmetleri otomatik olarak belirli Kapsayıcılı ortamlara (CD) dağıtır.
+Microsoft araçları, Azure Izleyici aracılığıyla genel derlemeler ve sürekli tümleştirme (CI) ve Azure DevOps Services ya da Team Foundation Server, sürekli dağıtım (CD) ve hizmet hakkındaki analiz bilgilerini Azure Izleyici aracılığıyla bir araya getirmek için (geliştirme, hazırlama, üretim), Kapsayıcılı uygulamaların belirli uygulamaları (Docker, .NET veya diğer platformlarla herhangi bir bileşim) için ardışık düzeni otomatikleştirebilir. Her kod yürütmesi bir yapı (CI) başlatabilir ve hizmetleri otomatik olarak belirli Kapsayıcılı ortamlara (CD) dağıtır.
 
 Geliştiriciler ve test ediciler, Microsoft Azure şablonlar kullanarak, Docker tabanlı üretim geliştirme ve test ortamlarını kolayca ve hızlı bir şekilde sağlayabilir.
 

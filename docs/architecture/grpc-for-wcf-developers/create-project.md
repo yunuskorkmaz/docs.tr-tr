@@ -1,13 +1,13 @@
 ---
 title: WCF geliştiricileri için yeni bir ASP.NET Core gRPC projesi oluşturma-gRPC
 description: Visual Studio veya komut satırını kullanarak bir gRPC projesi oluşturmayı öğrenin.
-ms.date: 12/15/2020
-ms.openlocfilehash: 960725a9507797f43b2c15283e384b0ad827c2b1
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c9d66a773f0633c2ae93c42ce3ce53084032cd17
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938667"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970264"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Yeni bir ASP.NET Core gRPC projesi oluşturma
 
@@ -16,7 +16,7 @@ ms.locfileid: "97938667"
 ## <a name="create-the-project-by-using-visual-studio"></a>Visual Studio 'Yu kullanarak proje oluşturma
 
 > [!IMPORTANT]
-> ASP.NET Core 5,0 uygulaması geliştirmek için, **ASP.net ve Web geliştirme** iş yükü yüklüyken Visual Studio 2019 sürüm 16,3 veya sonraki bir sürüme sahip olmanız gerekir.
+> ASP.NET Core 5,0 uygulaması geliştirmek için, **ASP.net ve Web geliştirme** iş yükü yüklüyken Visual Studio 2019 sürüm 16,8 veya sonraki bir sürüme sahip olmanız gerekir.
 
 *Boş çözüm* şablonundan **tradersys** adlı boş bir çözüm oluşturun. Adlı bir çözüm klasörü ekleyin `src` . Ardından, klasöre sağ tıklayıp   >  **Yeni proje** Ekle ' yi seçin. `grpc`Şablon arama kutusuna girin ve adlı bir proje şablonu görmeniz gerekir `gRPC Service` .
 

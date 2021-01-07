@@ -4,16 +4,16 @@ titleSuffix: ''
 description: .NET proje SDK 'Ları hakkında bilgi edinin.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 6b6651f674f09d5d0d18ddb873096037ad3b2ba5
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247584"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970700"
 ---
 # <a name="net-project-sdks"></a>.NET projesi SDK 'Ları
 
-.NET Core ve .NET 5,0 ve üzeri projeler yazılım geliştirme seti (SDK) ile ilişkilendirilir. Her *Proje SDK 'sı* , bir dizi MSBuild [hedefi](/visualstudio/msbuild/msbuild-targets) ve kodu derleme, paketleme ve yayımlama ile ilgili [görevlerden](/visualstudio/msbuild/msbuild-tasks) oluşur. Proje SDK 'Sına başvuran bir proje bazen bir *SDK stili proje*olarak adlandırılır.
+.NET Core ve .NET 5,0 ve üzeri projeler yazılım geliştirme seti (SDK) ile ilişkilendirilir. Her *Proje SDK 'sı* , bir dizi MSBuild [hedefi](/visualstudio/msbuild/msbuild-targets) ve kodu derleme, paketleme ve yayımlama ile ilgili [görevlerden](/visualstudio/msbuild/msbuild-tasks) oluşur. Proje SDK 'Sına başvuran bir proje bazen bir *SDK stili proje* olarak adlandırılır.
 
 ## <a name="available-sdks"></a>Kullanılabilir SDK 'lar
 
@@ -83,9 +83,9 @@ Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özell
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-compilation-includes"></a>Varsayılan derleme şunları içerir
+### <a name="default-includes-and-excludes"></a>Varsayılan içerme ve dışladığı
 
-Derleme öğeleri, katıştırılmış kaynaklar ve öğeler için varsayılan içerir ve `None` DıŞLARDıR SDK 'da tanımlanmıştır. SDK olmayan .NET Framework projelerinin aksine, varsayılanlar en yaygın kullanım durumlarını kapsadığından proje dosyanızda bu öğeleri belirtmeniz gerekmez. Bu, proje dosyasını daha küçük ve gerekirse, el ile anlamanız ve düzenlemeyi kolaylaştırır.
+[ `Compile` Öğelerin](/visualstudio/msbuild/common-msbuild-project-items#compile), [katıştırılmış kaynakların](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource)ve [ `None` öğelerin](/visualstudio/msbuild/common-msbuild-project-items#none) varsayılan dahil ve hariç olması SDK 'da tanımlanmıştır. SDK olmayan .NET Framework projelerinin aksine, varsayılanlar en yaygın kullanım durumlarını kapsadığından proje dosyanızda bu öğeleri belirtmeniz gerekmez. Bu davranış, proje dosyasını daha küçük ve gerektiğinde daha kolay anlaşılır ve düzenlenebilir hale getirir.
 
 Aşağıdaki tabloda, .NET SDK 'sında hangi öğelerin ve hangi [genelleştirmeler](https://en.wikipedia.org/wiki/Glob_(programming)) dahil olduğu ve dışlandıkları gösterilmektedir:
 
@@ -96,7 +96,7 @@ Aşağıdaki tabloda, .NET SDK 'sında hangi öğelerin ve hangi [genelleştirme
 | Yok              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx |
 
 > [!NOTE]
-> Ve `./bin` `./obj` MSBuild özellikleriyle temsil edilen ve klasörleri, `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` Varsayılan olarak genelleştirmeler 'tan çıkarılır. Dışlayarak özelliği tarafından temsil edilir `$(DefaultItemExcludes)` .
+> Ve `./bin` `./obj` MSBuild özellikleriyle temsil edilen ve klasörleri, `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` Varsayılan olarak genelleştirmeler 'tan çıkarılır. Dışlayarak [DefaultItemExcludes özelliği](msbuild-props.md#defaultitemexcludes)tarafından temsil edilir.
 
 #### <a name="build-errors"></a>Derleme hataları
 
@@ -110,7 +110,7 @@ Hataları gidermek için aşağıdakilerden birini yapın:
 
 - `Compile` `EmbeddedResource` `None` Önceki tabloda listelenenlerin bulunduğu açık, veya öğeleri kaldırın.
 
-- `EnableDefaultItems` `false` Tüm örtük dosya eklemeyi devre dışı bırakmak için özelliğini olarak ayarlayın:
+- Tüm örtük dosya eklemeyi devre dışı bırakmak için [Enabledefaultıtems özelliğini](msbuild-props.md#enabledefaultitems) olarak ayarlayın `false` :
 
   ```xml
   <PropertyGroup>
@@ -120,7 +120,7 @@ Hataları gidermek için aşağıdakilerden birini yapın:
 
   Uygulamanızla yayımlanacak dosyaları belirtmek istiyorsanız, bu gibi bilinen MSBuild mekanizmalarını yine de kullanabilirsiniz (örneğin, `Content` öğesi).
 
-- ,, Veya özelliğini olarak ayarlayarak yalnızca,, `Compile` veya genelleştirmeler öğesini seçime bağlı olarak devre dışı bırakın `EmbeddedResource` `None` `EnableDefaultCompileItems` `EnableDefaultEmbeddedResourceItems` `EnableDefaultNoneItems` `false` :
+- `Compile` `EmbeddedResource` `None` [Enabledefaultcompileıtems](msbuild-props.md#enabledefaultcompileitems), [enabledefaultembeddedresourceıtems](msbuild-props.md#enabledefaultembeddedresourceitems)veya [enabledefaultnoneıtems](msbuild-props.md#enabledefaultnoneitems) özelliğini şu şekilde ayarlayarak yalnızca, veya genelleştirmeler öğesini seçerek devre dışı bırakın `false` :
 
   ```xml
   <PropertyGroup>

@@ -1,13 +1,13 @@
 ---
 title: AKS/Kubernetes kümelerine Linux kapsayıcıları olarak dağıtılan ASP.NET Core uygulamalar oluşturun
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
-ms.date: 08/06/2020
-ms.openlocfilehash: 831d2372131e20788d0f48190eb8c600aa02485c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.date: 01/06/2021
+ms.openlocfilehash: 7a8f8272ab2faabd0398aeeb2039b6f034b4dedb
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440835"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970647"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Bir AKS/Kubernetes Orchestrator 'a Linux kapsayıcıları olarak dağıtılan ASP.NET Core uygulamalar oluşturun
 
@@ -21,19 +21,19 @@ AKS ana özellikleri şunlardır:
 - Kullanıcı tarafından yapılandırılabilir ölçekleme
 - Hem geliştiriciler hem de küme işleçleri için daha basit kullanıcı deneyimi.
 
-Aşağıdaki örneklerde, Linux üzerinde çalışan ve Azure 'daki bir AKS kümesine dağıtan ASP.NET Core 3,1 uygulamasının oluşturulması araştırırken Visual Studio 2019 kullanılarak geliştirme yapılır.
+Aşağıdaki örneklerde, Linux üzerinde çalışan ve Azure 'daki bir AKS kümesine dağıtan bir ASP.NET Core 5,0 uygulamasının oluşturulması araştırırken Visual Studio 2019 sürüm 16,8 kullanılarak geliştirme yapılır.
 
 ## <a name="creating-the-aspnet-core-project-using-visual-studio-2019"></a>Visual Studio 2019 kullanarak ASP.NET Core projesi oluşturma
 
 ASP.NET Core, GitHub 'da Microsoft ve .NET Community tarafından tutulan genel amaçlı bir geliştirme platformudur. Windows, macOS ve Linux 'un desteklenme ve cihaz, bulut ve katıştırılmış/IoT senaryolarında kullanılabilen platformlar arası bir platformdur.
 
-Bu örnek, Visual Studio şablonlarına dayalı birkaç basit proje kullanır, bu nedenle örneği oluşturmak için çok fazla ek bilgiye gerek kalmaz. Projeyi, ASP.NET Core 3,1 teknolojisini kullanarak REST API ve Razor sayfaları olan bir Web uygulamasıyla küçük bir proje çalıştırmak için tüm öğeleri içeren standart bir şablon kullanarak oluşturmanız yeterlidir.
+Bu örnek, Visual Studio şablonlarına dayalı birkaç basit proje kullanır, bu nedenle örneği oluşturmak için çok fazla ek bilgiye gerek kalmaz. Projeyi, ASP.NET Core 5,0 teknolojisini kullanarak REST API ve Razor sayfaları olan bir Web uygulamasıyla küçük bir proje çalıştırmak için tüm öğeleri içeren standart bir şablon kullanarak oluşturmanız yeterlidir.
 
 ![Visual Studio 'da ASP.NET Core Web uygulaması ' nı seçerek yeni proje penceresi ekleyin.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-aspnet-core-application.png)
 
 **Şekil 4-35**. Visual Studio 2019 ' de ASP.NET Core Web uygulaması oluşturma.
 
-Visual Studio 'da örnek proje oluşturmak için **Dosya**  >  **Yeni**  >  **Proje** ' yi seçin, **Web** projesi türünü ve ardından **ASP.NET Core Web uygulaması** şablonunu seçin. Ayrıca, gerekirse şablon için arama yapabilirsiniz.
+Visual Studio 'da örnek proje oluşturmak için **Dosya**  >  **Yeni**  >  **Proje**' yi seçin, **Web** projesi türünü ve ardından **ASP.NET Core Web uygulaması** şablonunu seçin. Ayrıca, gerekirse şablon için arama yapabilirsiniz.
 
 Ardından, sonraki görüntüde gösterildiği gibi uygulama adını ve konumunu girin.
 
@@ -41,29 +41,29 @@ Ardından, sonraki görüntüde gösterildiği gibi uygulama adını ve konumunu
 
 **Şekil 4-36**. Visual Studio 2019 ' de proje adını ve konumunu girin.
 
-Framework olarak ASP.NET Core 3,1 ' i seçtiğinizi doğrulayın. .NET Core 3,1, Visual Studio 2019 ' nin en son sürümüne dahildir ve Visual Studio 'Yu yüklediğinizde sizin için otomatik olarak yüklenir ve yapılandırılır.
+Framework olarak ASP.NET Core 5,0 ' i seçtiğinizi doğrulayın. .NET 5,0, Visual Studio 2019 ' nin en son sürümüne dahildir ve Visual Studio 'Yu yüklediğinizde sizin için otomatik olarak yüklenir ve yapılandırılır.
 
 ![API seçeneği seçili ASP.NET Core Web uygulaması türünü seçmek için Visual Studio iletişim kutusu.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-web-api-application.png)
 
-**Şekil 4-37**. ASP.NET CORE 3,1 ve Web API proje türünü seçme
+**Şekil 4-37**. ASP.NET CORE 5,0 ve Web API proje türünü seçme
 
 Artık Docker desteğinin, Proje oluşturulduktan sonra yapılabileceğini göstermek için etkin olmadığına dikkat edin.
 
 .NET Core 'un önceki bir sürümüne sahipseniz, 3,1 sürümünü indirip yükleyebilirsiniz <https://dotnet.microsoft.com/download> .
 
-Projenizi dilediğiniz zaman "Dockerize" gösterebilmeniz için artık Docker desteği ekleyeceğiz. Bu nedenle Çözüm Gezgini içindeki proje düğümüne sağ tıklayın ve **Add**  >  bağlam menüsünde **Docker desteği** Ekle ' yi seçin.
+Projenizi dilediğiniz zaman "Dockerize" gösterebilmeniz için artık Docker desteği ekleyeceğiz. Bu nedenle Çözüm Gezgini içindeki proje düğümüne sağ tıklayın ve   >  bağlam menüsünde **Docker desteği** Ekle ' yi seçin.
 
 ![Mevcut bir projeye Docker desteği eklemek için bağlam menü seçeneği: > Docker desteği eklemek > (projede) öğesine sağ tıklayın.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/add-docker-support-to-project.png)
 
 **Şekil 4-38**. Mevcut bir projeye Docker desteği ekleme
 
-Docker desteği ekleme işleminin tamamlanabilmesi için Windows veya Linux ' u seçebilirsiniz. Bu durumda, **Linux** ' u seçin.
+Docker desteği ekleme işleminin tamamlanabilmesi için Windows veya Linux ' u seçebilirsiniz. Bu durumda, **Linux**' u seçin.
 
 ![Dockerfile için hedef işletim sistemini seçmek üzere seçenek iletişim kutusu.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-linux-docker-support.png)
 
 **Şekil 4-39**. Linux kapsayıcıları seçiliyor.
 
-Bu basit adımlarla bir Linux kapsayıcısında çalışan ASP.NET Core 3,1 uygulamanız vardır.
+Bu basit adımlarla bir Linux kapsayıcısında çalışan ASP.NET Core 5,0 uygulamanız vardır.
 
 Benzer bir şekilde, Web API uç noktasını kullanmak için çok basit bir **WebApp** projesi (Şekil 4-40) ekleyebilirsiniz, ancak Ayrıntılar burada açıklanmaz.
 
@@ -210,7 +210,7 @@ az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku 
 
 **Şekil 4-46**. Yayın modunu seçme
 
-`docker images`Komutu çalıştırırsanız, bir tane `debug` ( **geliştirme** ) ve diğeri `release` ( **en son** ) modu için oluşturulan görüntüleri görürsünüz.
+`docker images`Komutu çalıştırırsanız, bir tane `debug` (**geliştirme**) ve diğeri `release` (**en son**) modu için oluşturulan görüntüleri görürsünüz.
 
 ### <a name="create-a-new-tag-for-the-image"></a>Görüntü için yeni bir etiket oluşturun
 

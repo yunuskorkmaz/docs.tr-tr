@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: bd257cf8d79ea2afa209fe71ad7eff969a62d6b2
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.openlocfilehash: 541ac80ce40b0410167b14f96e36b354d19411db
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938721"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970908"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -34,7 +34,7 @@ Kod örnekleri, aşağıdaki sınıfa ve türevlerini ifade eder:
 > [!NOTE]
 > System.Text.Json Visual Basic tarafından desteklenmeyen [başvuru yapıları](../../csharp/language-reference/builtin-types/struct.md#ref-struct)kullanır. System.Text.JsonAPI 'leri Visual Basic kullanmaya çalışırsanız, BC40000 derleme hataları alırsınız. Hata iletisi, sorunun eski bir API olduğunu gösterir, ancak gerçek sorun `ref struct` derleyicide desteklenmeyen destek olmamasıdır.
 
-## <a name="namespaces"></a>Ad alanları
+## <a name="namespaces"></a>Ad Alanları
 
 <xref:System.Text.Json>Ad alanı tüm giriş noktalarını ve ana türleri içerir. <xref:System.Text.Json.Serialization>Ad alanı, serileştirme ve seri durumdan çıkarma ile ilgili gelişmiş senaryolar ve özelleştirme için öznitelikler ve API 'leri içerir. Bu makalede gösterilen kod örnekleri, `using` Bu ad alanlarından biri veya her ikisi için yönergeler gerektirir:
 
@@ -311,5 +311,6 @@ Ve ' de uzantı yöntemleri `HttpClient` `HttpContent` System.Text.Json .NET Cor
 * [Özel serileştiriciler ve seri hale getiriciler yazma](write-custom-serializer-deserializer.md)
 * [JSON serileştirme için özel dönüştürücüler yazma](system-text-json-converters-how-to.md)
 * [DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
+* [İçinde desteklenen koleksiyon türleri System.Text.Json](system-text-json-supported-collection-types.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)
 * [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)

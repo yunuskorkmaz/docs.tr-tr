@@ -1,13 +1,13 @@
 ---
 title: Docker uygulamaları için iç döngü geliştirme iş akışı
 description: Docker uygulamaları için "Inner-loop" geliştirme iş akışı hakkında bilgi edinin.
-ms.date: 08/06/2020
-ms.openlocfilehash: d66274a64591f79f242c1e8a63951b51d94a9ecd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/06/2021
+ms.openlocfilehash: 78c593890d56a6888d4c4ea6752497918222ebee
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676536"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970591"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -85,11 +85,11 @@ Docker uzantısını yüklemek için CTRL + SHIFT + P tuşlarına basın, yazın
 
 **Şekil 4-23**. Visual Studio Code Docker uzantısını yükleme
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>2. Adım: var olan bir görüntüyle ilgili bir DockerFile oluşturma (.NET Core, Node.js ve Ruby gibi basit işletim sistemleri veya geliştirme ortamları)
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-nodejs-and-ruby"></a>2. Adım: var olan bir görüntüyle ilgili bir DockerFile oluşturma (.NET, Node.js ve Ruby gibi basit işletim sistemleri veya geliştirme ortamları)
 
 Dağıtılması için bir `DockerFile` özel görüntü ve dağıtılacak kapsayıcı başına ihtiyacınız vardır. Uygulamanız tek bir özel hizmetten yapılırsa, tek yapmanız gerekir `DockerFile` . Ancak uygulamanız birden çok hizmetten oluşuyorsa (bir mikro hizmet mimarisinde olduğu gibi), hizmet başına bir tane gerekir `Dockerfile` .
 
-`DockerFile`Genellikle uygulamanızın veya hizmetinizin kök klasörüne yerleştirilir ve Docker 'ın o uygulamayı veya hizmeti nasıl ayarlayacağını ve çalıştıracağını bilmesi için gerekli komutları içerir. Kodunuzu oluşturup `DockerFile` projenize (node.js, .NET Core vb.) birlikte ekleyebilirsiniz, ya da ortama yeni başladıysanız aşağıdaki ipucuna göz atın.
+`DockerFile`Genellikle uygulamanızın veya hizmetinizin kök klasörüne yerleştirilir ve Docker 'ın o uygulamayı veya hizmeti nasıl ayarlayacağını ve çalıştıracağını bilmesi için gerekli komutları içerir. Kodunuzu oluşturup `DockerFile` projenize ekleyebilirsiniz (node.js, .net, vb.) veya ortama yeni başladıysanız, aşağıdaki ipucuna göz atın.
 
 > [!TIP]
 > Docker `Dockerfile` kapsayıcılarınız ile ilgili ve dosyalarını kullanırken size rehberlik etmek Için Docker uzantısını kullanabilirsiniz `docker-compose.yml` . Sonuç olarak, bu tür dosyaları bu araç olmadan yazarsınız, ancak Docker uzantısının kullanılması, öğrenme eğinizi hızlandırmaya yönelik iyi bir başlangıç noktasıdır.
@@ -107,7 +107,7 @@ Dağıtılması için bir `DockerFile` özel görüntü ve dağıtılacak kapsay
 
 **Şekil 4-24**. **Çalışma alanına Docker dosyaları Ekle** komutu kullanılarak Docker dosyaları eklendi
 
-Bir DockerFile eklediğinizde, kullanacağınız temel Docker görüntüsünü (kullanma gibi `FROM mcr.microsoft.com/dotnet/aspnet` ) belirtirsiniz. Genellikle, [Docker Hub kayıt defterinde](https://hub.docker.com/) ( [.NET Core için bir görüntü](https://hub.docker.com/_/microsoft-dotnet/) veya [Node.jsiçin ](https://hub.docker.com/_/node/)bir görüntü gibi) herhangi bir resmi depodan aldığınız bir temel görüntünün en üstünde özel görüntünüzü oluşturacaksınız.
+Bir DockerFile eklediğinizde, kullanacağınız temel Docker görüntüsünü (kullanma gibi `FROM mcr.microsoft.com/dotnet/aspnet` ) belirtirsiniz. Genellikle, [Docker Hub kayıt defterindeki](https://hub.docker.com/) (.net veya [Node.jsiçin ](https://hub.docker.com/_/node/)bir [görüntü](https://hub.docker.com/_/microsoft-dotnet/) gibi) herhangi bir resmi depodan aldığınız bir temel görüntünün en üstünde özel görüntünüzü oluşturacaksınız.
 
 > [!TIP]
 > Uygulamanızdaki her proje için bu yordamı tekrarlamanız gerekir. Ancak, uzantı ilk kez oluşturulan Docker-Compose dosyasını geçersiz kılacak. Üzerine yazılmaması gerekir, bu nedenle uzantı, Docker-Compose çalıştırmadan önce el ile birleştirebilmeniz için ayrı Docker-Compose dosyaları oluşturur.
@@ -116,15 +116,15 @@ Bir DockerFile eklediğinizde, kullanacağınız temel Docker görüntüsünü (
 
 Sürüm numarasına sahip bir dil yığınının resmi deposunu kullanmak, tüm makinelerde (geliştirme, test ve üretim dahil) aynı dil özelliklerinin kullanılabilir olmasını sağlar.
 
-Aşağıda .NET Core kapsayıcısı için örnek bir DockerFile verilmiştir:
+Aşağıda .NET kapsayıcısı için örnek bir DockerFile verilmiştir:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["src/WebApi/WebApi.csproj", "src/WebApi/"]
 RUN dotnet restore "src/WebApi/WebApi.csproj"
@@ -141,22 +141,22 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApi.dll"]
 ```
 
-Bu durumda, görüntü, satıra göre resmi ASP.NET Core Docker görüntüsünün 3,1 sürümünü (Linux ve Windows için çoklu mimari) temel alır `FROM mcr.microsoft.com/dotnet/aspnet:3.1` . (Bu konu hakkında daha fazla bilgi için, [ASP.NET Core Docker görüntü](https://hub.docker.com/_/microsoft-dotnet-aspnet/) sayfasına ve [.NET Core Docker görüntü](https://hub.docker.com/_/microsoft-dotnet/) sayfasına bakın).
+Bu durumda, görüntü, satıra göre resmi ASP.NET Core Docker görüntüsünün 5,0 sürümünü (Linux ve Windows için çoklu mimari) temel alır `FROM mcr.microsoft.com/dotnet/aspnet:5.0` . (Bu konu hakkında daha fazla bilgi için, [ASP.NET Core Docker görüntü](https://hub.docker.com/_/microsoft-dotnet-aspnet/) sayfasına ve [.net Docker görüntü](https://hub.docker.com/_/microsoft-dotnet/) sayfasına) bakın.
 
 DockerFile 'da, Docker 'ın çalışma zamanında kullanacağınız TCP bağlantı noktasını (bağlantı noktası 80 veya 443) dinleyebildiğini da söyleyebilirsiniz.
 
-Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek yapılandırma ayarları belirtebilirsiniz. Örneğin, çizgi, `ENTRYPOINT` `["dotnet", "WebMvcApplication.dll"]` Docker 'A .NET Core uygulaması çalıştırmasını söyler. `dotnet CLI`.NET uygulamasını derlemek ve çalıştırmak IÇIN SDK ve .NET Core CLI () kullanıyorsanız, bu ayar farklı olur. Buradaki anahtar noktası, GIRIŞ noktası satırı ve diğer ayarların, uygulamanız için seçtiğiniz dile ve platforma bağlı olmasına bağlıdır.
+Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek yapılandırma ayarları belirtebilirsiniz. Örneğin, çizgi, `ENTRYPOINT` `["dotnet", "WebMvcApplication.dll"]` Docker 'a bir .NET uygulaması çalıştırmasını söyler. `dotnet CLI`.NET uygulamasını derlemek ve çalıştırmak IÇIN SDK ve .net CLI () kullanıyorsanız, bu ayar farklı olur. Buradaki anahtar noktası, GIRIŞ noktası satırı ve diğer ayarların, uygulamanız için seçtiğiniz dile ve platforma bağlı olmasına bağlıdır.
 
 > [!TIP]
-> .NET Core uygulamaları için Docker görüntüleri oluşturma hakkında daha fazla bilgi için adresine gidin <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images> .
+> .NET uygulamaları için Docker görüntüleri oluşturma hakkında daha fazla bilgi için adresine gidin <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images> .
 >
 > Kendi görüntülerinizi oluşturma hakkında daha fazla bilgi edinmek için adresine gidin <https://docs.docker.com/engine/tutorials/dockerimages/> .
 
 **Çoklu mimari görüntü depoları kullanma**
 
-Depodaki tek bir görüntü adı, Linux görüntüsü ve Windows görüntüsü gibi platform türevlerini içerebilir. Bu özellik, Microsoft (temel görüntü oluşturucuları) gibi satıcıların birden çok platformu (yani, Linux ve Windows) kapsayacak şekilde tek bir depo oluşturmasını sağlar. Örneğin, Docker Hub kayıt defterinde bulunan [DotNet/Core/ASPNET](https://hub.docker.com/_/microsoft-dotnet-aspnet/) deposu, aynı görüntü adı kullanılarak Linux ve Windows nano Server için destek sağlar.
+Depodaki tek bir görüntü adı, Linux görüntüsü ve Windows görüntüsü gibi platform türevlerini içerebilir. Bu özellik, Microsoft (temel görüntü oluşturucuları) gibi satıcıların birden çok platformu (yani, Linux ve Windows) kapsayacak şekilde tek bir depo oluşturmasını sağlar. Örneğin, Docker Hub kayıt defterinde bulunan [DotNet/ASPNET](https://hub.docker.com/_/microsoft-dotnet-aspnet/) deposu, aynı görüntü adı kullanılarak Linux ve Windows nano Server için destek sağlar.
 
-Bir Windows ana bilgisayarının [DotNet/Core/ASPNET](https://hub.docker.com/_/microsoft-dotnet-aspnet/) görüntüsünü çekmek, Windows türevini çeker, ancak aynı görüntü adının bir Linux ana bilgisayardan çekmesinde Linux varyantı çekilir.
+[DotNet/ASPNET](https://hub.docker.com/_/microsoft-dotnet-aspnet/) görüntüsünü bir Windows ana bilgisayardan çekmek Windows türevini çeker, ancak aynı görüntü adını bir Linux ana bilgisayardan çekmek Linux türevini çeker.
 
 **_Sıfırdan taban görüntünüzü oluşturma_**
 
@@ -181,7 +181,7 @@ Yerel ortamınızda bir görüntü oluşturmak ve DockerFile 'ı kullanmak için
 
 İsteğe bağlı olarak, proje klasöründen doğrudan çalıştırmak yerine `docker build` , Çalıştır komutunu kullanarak gerekli .NET kitaplıkları ile dağıtılabilir bir klasör oluşturabilir `dotnet publish` ve sonra öğesini çalıştırabilirsiniz `docker build` .
 
-Bu örnek, adıyla bir Docker görüntüsü oluşturur `explore-docker-vscode/webapi:latest` ( `:latest` belirli bir sürüm gibi bir etikettir). Bu adımı, çeşitli kapsayıcılarla oluşturulmuş Docker uygulamanız için oluşturmanız gereken her özel görüntü için gerçekleştirebilirsiniz. Bununla birlikte, bunu kullanarak bunu daha kolay bir şekilde yapacağız `docker-compose` .
+Bu örnek, adıyla bir Docker görüntüsü oluşturur `webapi:latest` ( `:latest` belirli bir sürüm gibi bir etikettir). Bu adımı, çeşitli kapsayıcılarla oluşturulmuş Docker uygulamanız için oluşturmanız gereken her özel görüntü için gerçekleştirebilirsiniz. Bununla birlikte, bunu kullanarak bunu daha kolay bir şekilde yapacağız `docker-compose` .
 
 Mevcut görüntüleri, `docker images` şekil 4-26 ' de gösterildiği gibi, komutunu kullanarak yerel deponuzda (geliştirme makineniz) bulabilirsiniz.
 
@@ -249,7 +249,7 @@ Uygulamanızda yalnızca tek bir kapsayıcı varsa, bunu yalnızca Docker konağ
 Docker görüntüsünü, burada gösterildiği gibi Docker Run komutunu kullanarak çalıştırabilirsiniz:
 
 ```console
-docker run -t -d -p 50080:80 explore-docker-vscode/webapp:latest
+docker run -t -d -p 50080:80 webapp:latest
 ```
 
 Bu dağıtım için, ana bilgisayarda 50080 numaralı bağlantı noktasına gönderilen istekleri iç bağlantı noktası 80 ' e yeniden yönlentireceğiz.
@@ -272,7 +272,7 @@ Bu dağıtım için, ana bilgisayarda 50080 numaralı bağlantı noktasına gön
 
 Bu adım, uygulamanızın yaptığına bağlı olarak farklılık gösterir.
 
-Tek bir kapsayıcı veya hizmet olarak dağıtılan basit bir .NET Core Web API 'SI "Merhaba Dünya", yalnızca DockerFile içinde belirtilen TCP bağlantı noktasını sağlayarak hizmete erişmeniz gerekir.
+Tek bir kapsayıcı veya hizmet olarak dağıtılan basit bir .NET Web API 'sinde "Merhaba Dünya", yalnızca DockerFile içinde belirtilen TCP bağlantı noktasını sağlayarak hizmete erişmeniz gerekir.
 
 Docker konağında bir tarayıcı açın ve bu siteye gidin; Şekil 4-29 ' de gösterildiği gibi, uygulamanızı/hizmetinizi çalışır durumda görmeniz gerekir.
 
@@ -290,9 +290,9 @@ Bunu, Şekil 4-30 ' de gösterildiği gibi terminalden KıVARAK tarayıcıyı ku
 
 **Docker üzerinde çalışan bir kapsayıcıda hata ayıklama**
 
-Visual Studio Code, Node.js ve .NET Core kapsayıcıları gibi diğer platformları kullanıyorsanız Docker hatalarını ayıklamayı destekler.
+Visual Studio Code, Node.js ve .NET kapsayıcıları gibi diğer platformları kullanıyorsanız Docker hatalarını ayıklamayı destekler.
 
-Ayrıca, sonraki bölümde açıklandığı gibi Windows veya Mac için Visual Studio 'Yu kullanırken Docker 'daki .NET Core veya .NET Framework kapsayıcılarında hata ayıklaması yapabilirsiniz.
+Ayrıca, sonraki bölümde açıklandığı gibi Windows veya Mac için Visual Studio 'Yu kullanırken Docker 'daki .NET veya .NET Framework kapsayıcılarında hata ayıklaması yapabilirsiniz.
 
 > [!TIP]
 > Docker Kapsayıcıları Node.js hata ayıklama hakkında daha fazla bilgi için <https://blog.docker.com/2016/07/live-debugging-docker/> bkz <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more> . ve.

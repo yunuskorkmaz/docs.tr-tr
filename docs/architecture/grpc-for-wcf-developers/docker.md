@@ -1,13 +1,13 @@
 ---
 title: WCF geliştiricileri için Docker-gRPC
 description: ASP.NET Core gRPC uygulamaları için Docker görüntüleri oluşturma
-ms.date: 12/15/2020
-ms.openlocfilehash: f662dbd67f00b828f3e1dfa47359a450dd1c5900
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: f59518a28b0a1dee75c792ba03bd4af826638502
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938422"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970095"
 ---
 # <a name="create-docker-images"></a>Docker görüntüleri oluşturma
 
@@ -15,7 +15,7 @@ Bu bölümde, ASP.NET Core gRPC uygulamalarına yönelik Docker görüntülerini
 
 ## <a name="microsoft-base-images-for-aspnet-core-applications"></a>ASP.NET Core uygulamalar için Microsoft temel görüntüleri
 
-Microsoft, .NET Core uygulamaları oluşturmaya ve çalıştırmaya yönelik bir dizi temel görüntü sağlar. ASP.NET Core 3,0 görüntüsü oluşturmak için iki temel görüntü kullanırsınız:
+Microsoft, .NET uygulamaları oluşturmaya ve çalıştırmaya yönelik bir dizi temel görüntü sağlar. ASP.NET Core 5,0 görüntüsü oluşturmak için iki temel görüntü kullanırsınız:
 
 - Uygulamayı derlemek ve yayımlamak için bir SDK görüntüsü.
 - Dağıtım için bir çalışma zamanı görüntüsü.
@@ -29,10 +29,9 @@ Her görüntü için, etiketlere göre ayırt edilen farklı Linux dağıtımlar
 
 | Resim etiketi (ler) | Linux | Notlar |
 | --------- | ----- | ----- |
-| 5,0-Buster, 5,0 | Debian 10 | Bir işletim sistemi değişkeni belirtilmemişse varsayılan görüntü. |
-| 5,0-alçam | Alçam 3,9 | Alp taban görüntüleri, Deleyden veya Ubuntu 'dan çok daha küçüktür. |
-| 5,0-disco | Ubuntu 19.04 | |
-| 5,0-Bionic | Ubuntu 18.04 | |
+| 5,0-Buster-Slim, 5,0 | Debian 10 | Bir işletim sistemi değişkeni belirtilmemişse varsayılan görüntü. |
+| 5,0-alçam | Alçam 3,12 | Alp taban görüntüleri, Deleyden veya Ubuntu 'dan çok daha küçüktür. |
+| 5,0-odak| Ubuntu 20.04 | |
 
 Alp temel görüntüsü 100 MB boyutunda, de, ve Ubuntu görüntüleri için 200 MB ile karşılaştırılır. Bazı yazılım paketleri veya kitaplıkları alp 'nin paket yönetiminde bulunmayabilir. Hangi görüntünün kullanılacağı konusunda emin değilseniz, muhtemelen varsayılan deni seçmeniz gerekir.
 
@@ -116,7 +115,7 @@ obj/
 `StockKube.sln`İki farklı uygulama içeren bir çözüm için `StockData` `StockWeb` , dockerfile 'ın her biri için temel dizine yerleştirilmeleri en iyisidir. Bu durumda, görüntüyü derlemek için `docker build` dosyanın bulunduğu dizinden aşağıdaki komutu kullanın `.sln` .
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 `--tag`Tam adlandırılmış bayrak (kısaltıldı `-t` ), belirtilmişse gerçek etiket dahil olmak üzere görüntünün tam adını belirtir. `.`Sonda, yapı çalıştırılacağı bağlamı ve `COPY` Dockerfile içindeki komutlar için geçerli çalışma dizinini belirtir.
@@ -124,7 +123,7 @@ docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 Tek bir çözümde birden çok uygulamanız varsa, dosyanın yanında her bir uygulama için Dockerfile dosyasını kendi klasöründe tutabilirsiniz `.csproj` . `docker build`Çözümün ve tüm projelerin görüntüye kopyalandığından emin olmak için komutu yine de temel dizinden çalıştırmalısınız. `--file`(Veya) bayrağını kullanarak geçerli dizinin altına bir Dockerfile belirtebilirsiniz `-f` .
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>Görüntüyü makinenizdeki bir kapsayıcıda çalıştırın

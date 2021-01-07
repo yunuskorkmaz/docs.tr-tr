@@ -1,13 +1,13 @@
 ---
 title: GRPC istemci kitaplıkları oluşturma-WCF geliştiricileri için gRPC
 description: GRPC Hizmetleri için paylaşılan istemci kitaplıkları/paketleri tartışması.
-ms.date: 12/15/2020
-ms.openlocfilehash: b1233bb40a5fa2119a325be2657b500a4c626c18
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c55b6d1da2377af0b687e32e7776f12b96b0a2ba
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938435"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970134"
 ---
 # <a name="create-grpc-client-libraries"></a>GRPC istemci kitaplıkları oluşturma
 
@@ -147,7 +147,7 @@ namespace Grpc.Core
 
 ## <a name="summary"></a>Özet
 
-<xref:System.IAsyncDisposable>Ve <xref:System.IObservable%601> modelleri, .NET içinde zaman uyumsuz veri akışları ile ilgilenmenin iyi desteklendiğinden ve iyi belgelenmiş yollardır. gRPC, Map 'i hem paradigmalarına hem de .NET ile yakın tümleştirme sunan ve reaktif ve zaman uyumsuz programlama stilleriyle birlikte akışları.
+<xref:System.Collections.Generic.IAsyncEnumerable%601>Ve <xref:System.IObservable%601> modelleri, .NET içinde zaman uyumsuz veri akışları ile ilgilenmenin iyi desteklendiğinden ve iyi belgelenmiş yollardır. gRPC, Map 'i hem paradigmalarına hem de .NET ile yakın tümleştirme sunan ve reaktif ve zaman uyumsuz programlama stilleriyle birlikte akışları.
 
 >[!div class="step-by-step"]
 >[Önceki](streaming-versus-repeated.md) 

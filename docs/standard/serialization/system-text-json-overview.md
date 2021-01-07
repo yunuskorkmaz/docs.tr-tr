@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: cb5c15c2a5c336e2d5b4a3754fa7a02a370602f3
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: b4432e7a137720216e7c0941b3384ce7ad7049e9
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009891"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970921"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET 'te JSON serileştirme ve seri durumundan çıkarma (sıralama ve kaldırma)-genel bakış
 
@@ -51,5 +51,6 @@ Kitaplık Ayrıca, bellek içi belge nesne modeli (DOM) ile çalışmak için s�
 * [Özel serileştiriciler ve seri hale getiriciler yazma](write-custom-serializer-deserializer.md)
 * [JSON serileştirme için özel dönüştürücüler yazma](system-text-json-converters-how-to.md)
 * [DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
+* [İçinde desteklenen koleksiyon türleri System.Text.Json](system-text-json-supported-collection-types.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)
 * [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)

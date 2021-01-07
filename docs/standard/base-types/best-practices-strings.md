@@ -17,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 840e5b0e6a523ac8e3f24586d4980958cd58f613
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009826"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970895"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>.NET 'teki dizeleri karşılaştırmak için en iyi yöntemler
 
@@ -54,7 +54,7 @@ Dizeleri karşılaştırdığınızda aşağıdaki uygulamalardan kaçının:
 
 .NET 'teki dize düzenleme yöntemlerinin çoğu aşırı yüklenmiştir. Genellikle bir veya daha fazla aşırı yükleme varsayılan ayarları kabul ederken diğerleri varsayılanları kabul etmez ve bunun yerine dizelerin tam olarak nasıl karşılaştırılacağını veya değiştirileceğini tanımlar. Varsayılan değerleri kullanmayan yöntemlerin çoğu, dize karşılaştırma kurallarını kültür ve büyük/küçük harfe göre açıkça belirten bir numaralandırma olan <xref:System.StringComparison> türü bir parametre içerir. Aşağıdaki tablo, <xref:System.StringComparison> numaralandırma üyelerini açıklar.
 
-|StringComparison üyesi|Description|
+|StringComparison üyesi|Açıklama|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Geçerli kültürü kullanarak büyük/küçük harfe duyarlı bir karşılaştırma gerçekleştirir.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Geçerli kültürü kullanarak büyük/küçük harfe duyarsız bir karşılaştırma gerçekleştirir.|
@@ -234,7 +234,7 @@ Varsayılan yorum: <xref:System.StringComparison.Ordinal?displayProperty=nameWit
 
 Varsayılan yorum: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.
 
-Bir dizeyi büyük harf veya küçük harfe zorlamak, genellikle dizeleri büyük/küçük harfe bakmadan karşılaştırmak için küçük bir normalleştirme işlemi olarak kullanıldığından bu yöntemleri kullanırken dikkatli olmanız gerekir. Bu durumda, büyük/küçük harfe duyarsız bir karşılaştırma kullanmayı düşünün.
+Ve yöntemlerini kullanırken dikkatli olun <xref:System.String.ToUpper?displayProperty=nameWithType> <xref:System.String.ToLower?displayProperty=nameWithType> , çünkü bir dizeyi büyük veya küçük harfe zorlamak, genellikle dizeleri büyük/küçük harf olarak karşılaştırmak için küçük bir normalleştirme olarak kullanılır. Bu durumda, büyük/küçük harfe duyarsız bir karşılaştırma kullanmayı düşünün.
 
 Aynı zamanda <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> ve <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> yöntemleri de mevcuttur. <xref:System.String.ToUpperInvariant%2A>, büyük/küçük harfi normalleştirmek için standart yöntemdir. <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> kullanılarak yapılan karşılaştırmalar, davranışsal olarak iki çağrının birleşimidir: her iki dize bağımsız değişkeninde <xref:System.String.ToUpperInvariant%2A>'i çağırmak ve <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> kullanarak bir karşılaştırma yapmak.
 
@@ -244,7 +244,7 @@ Aşırı yüklemeler aynı zamanda, yöntemde kültürü temsil eden bir <xref:S
 
 Varsayılan yorum: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.
 
-Bu yöntemler, önceki bölümde açıklanan <xref:System.String.ToUpper%2A?displayProperty=nameWithType> ve <xref:System.String.ToLower%2A?displayProperty=nameWithType> yöntemlerine benzer olarak çalışır.
+<xref:System.Char.ToUpper(System.Char)?displayProperty=nameWithType>Ve <xref:System.Char.ToLower(System.Char)?displayProperty=nameWithType> yöntemleri, <xref:System.String.ToUpper?displayProperty=nameWithType> <xref:System.String.ToLower?displayProperty=nameWithType> önceki bölümde açıklanan ve yöntemlerine benzer şekilde çalışır.
 
 ### <a name="stringstartswith-and-stringendswith"></a>String.StartsWith ve String.EndsWith
 

@@ -1,13 +1,13 @@
 ---
 title: Tek yapılı uygulamalar
 description: Tek parçalı uygulamalar kapsayıca yönelik temel kavramları anlayın.
-ms.date: 08/06/2020
-ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/06/2021
+ms.openlocfilehash: a66c76c473c116b303975040d893348182b96713
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163550"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970544"
 ---
 # <a name="monolithic-applications"></a>Tek yapılı uygulamalar
 
@@ -35,7 +35,7 @@ Altyapı açısından, her sunucu aynı ana bilgisayar içinde birçok uygulama 
 
 **Şekil 4-2.** Birden çok uygulama/kapsayıcı çalıştıran bir konak
 
-Son olarak, bir kullanılabilirlik perspektifinden, tek parçalı uygulamalar bir bütün olarak dağıtılmalıdır; diğer bir deyişle, *durdurmanız ve başlatmanız*gereken durumlarda, tüm işlevler ve tüm kullanıcılar dağıtım penceresi sırasında etkilenecektir. Bazı durumlarda, Azure ve kapsayıcıları kullanımı bu durumları en aza indirebilir ve Şekil 4-3 ' de görebileceğiniz gibi uygulamanızın kapalı kalma süresini azaltabilir.
+Son olarak, bir kullanılabilirlik perspektifinden, tek parçalı uygulamalar bir bütün olarak dağıtılmalıdır; diğer bir deyişle, *durdurmanız ve başlatmanız* gereken durumlarda, tüm işlevler ve tüm kullanıcılar dağıtım penceresi sırasında etkilenecektir. Bazı durumlarda, Azure ve kapsayıcıları kullanımı bu durumları en aza indirebilir ve Şekil 4-3 ' de görebileceğiniz gibi uygulamanızın kapalı kalma süresini azaltabilir.
 
 Her örnek için adanmış VM 'Ler kullanarak Azure 'da tek parçalı uygulamalar dağıtabilirsiniz. [Azure VM Ölçek kümelerini](/azure/virtual-machine-scale-sets/)kullanarak VM 'leri kolayca ölçeklendirebilirsiniz.
 
@@ -69,7 +69,7 @@ Azure 'a dağıtılan bir kapsayıcının hızlı bir şekilde doğrulanmasını
 
 Azure App Service kullanımı sezgisel olur ve kodunuzu almak için harika git tümleştirmesi sağladığından, Microsoft Visual Studio oluşturmak ve doğrudan Azure 'a dağıtmak için hızlı bir şekilde çalışmaya başlamanızı sağlayabilirsiniz. Ancak, geleneksel olarak (Docker olmadan), uygulama hizmetlerinde desteklenmeyen diğer yetenekler, çerçeveler veya bağımlılıklara ihtiyaç duymanız durumunda, Azure ekibi App Service içinde bu bağımlılıkları güncelleştirene veya daha fazla denetime sahip olduğunuz ve uygulamanız için gerekli bir bileşeni veya çerçeveyi yükleyebilen Service Fabric, Cloud Services, hatta düz VM 'Ler gibi diğer hizmetlere geçene kadar beklemeniz gerekir.
 
-Şekil 4-4 ' de gösterildiği gibi, Visual Studio 2017 kullanırken Azure App Service içindeki kapsayıcı desteği, uygulama ortamınıza istediğiniz şeyi dahil etmenizi sağlar. Uygulamanıza bir bağımlılık eklediyseniz, onu bir kapsayıcıda çalıştırdığınız için, bu bağımlılıkları Dockerfile veya Docker yansımanıza dahil etme özelliğini alırsınız.
+Şekil 4-4 ' de gösterildiği gibi, Visual Studio 2019 kullanırken Azure App Service içindeki kapsayıcı desteği, uygulama ortamınıza istediğiniz şeyi dahil etmenizi sağlar. Uygulamanıza bir bağımlılık eklediyseniz, onu bir kapsayıcıda çalıştırdığınız için, bu bağımlılıkları Dockerfile veya Docker yansımanıza dahil etme özelliğini alırsınız.
 
 ![Container Registry gösteren App Service oluştur iletişim kutusunun ekran görüntüsü.](./media/monolithic-applications/publish-azure-app-service-container.png)
 

@@ -1,13 +1,13 @@
 ---
 title: Docker uygulamaları için geliştirme ortamı
 description: Docker geliştirme yaşam döngüsünü destekleyen en önemli geliştirme aracı seçeneklerini öğrenin.
-ms.date: 08/06/2020
-ms.openlocfilehash: 07b42b2bd05ab16ba0fbf61863b050ee2c9e242b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: c6c4a1fda41131c00ba87808ed408f1d3250cabf
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916033"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970531"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker uygulamaları için geliştirme ortamı
 
@@ -36,7 +36,7 @@ Docker tabanlı uygulamalar geliştirirken [Mac için Visual Studio](https://vis
 
 En modern dillerle Microsoft araçları 'nı kullanarak Docker uygulamaları geliştirebilirsiniz. Aşağıda bir başlangıç listesi verilmiştir ancak bunlarla sınırlı değilsiniz:
 
-- .NET Core ve ASP.NET Core
+- .NET ve ASP.NET Core
 - Node.js
 - Başlayın
 - Java
