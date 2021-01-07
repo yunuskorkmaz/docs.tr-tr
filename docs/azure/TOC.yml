@@ -5,16 +5,18 @@
   items:
     - name: Azure ve .NET’e giriş
       href: intro.md
-    - name: Geliştirici araçları
-      href: tools.md
-    - name: Kimlik doğrulaması
-      href: authentication.md
-    - name: Günlüğe Kaydetme
-      href: logging.md
-    - name: Paketler
-      href: packages.md
-    - name: SDK örneği
-      href: /samples/dotnet/samples/azure-identity-resource-management-storage/
+    - name: .NET geliştiricileri için önemli Azure hizmetleri
+      href: key-azure-services.md
+    - name: Geliştirme ortamınızı yapılandırma
+      items:
+        - name: Azure hesabı oluşturma
+          href: create-azure-account.md
+        - name: Azure’da uygulama geliştirmek için Visual Studio’yu yapılandırma (Windows)
+          href: configure-visual-studio.md
+        - name: Azure’da uygulama geliştirmek için VS Code’u yapılandırma (platformlar arası)
+          href: configure-vs-code.md
+        - name: Azure CLI'yi yükleme
+          href: install-azure-cli.md
 - name: Azure’a geçiş
   items:
     - name: Doğru Azure barındırma seçeneğini belirleme
@@ -25,6 +27,20 @@
       href: ./migration/vm.md
     - name: Azure’a SQL Server veritabanını geçirme
       href: ./migration/sql.md
+- name: .NET için Azure SDK
+  items:
+    - name: .NET için Azure SDK’sı nedir?
+      href: ./sdk/azure-sdk-for-dotnet.md
+    - name: Kimlik doğrulaması
+      href: authentication.md
+    - name: Günlüğe Kaydetme
+      href: logging.md
+    - name: Ara sunucu yapılandırma
+      href: ./sdk/azure-sdk-configure-proxy.md
+    - name: Paket Listesi
+      href: packages.md
+    - name: SDK örneği
+      href: /samples/dotnet/samples/azure-identity-resource-management-storage/
 - name: Örnek kod
   items:
     - name: Web sunucuları ve sunucusuz

@@ -393,33 +393,47 @@ items:
               - name: Genel Bakış
                 displayName: dumps
                 href: ../core/diagnostics/dumps.md
+              - name: StackOverflow hata ayıklama
+                href: ../core/diagnostics/debug-stackoverflow.md
               - name: Linux dökümleri
                 href: ../core/diagnostics/debug-linux-dumps.md
+              - name: SOS gata ayıklayıcı genişletilebilirliği
+                href: ../core/diagnostics/sos-debugging-extension.md
           - name: EventCounters
-            href: ../core/diagnostics/event-counters.md
+            items:
+              - name: Genel Bakış
+                displayName: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: .NET’teki iyi bilinen sayaçlar
+                href: ../core/diagnostics/available-counters.md
           - name: EventPipe
             href: ../core/diagnostics/eventpipe.md
           - name: Günlüğe kaydetme ve izleme
-            href: ../core/diagnostics/logging-tracing.md
-          - name: Çalıştırma Zamanı Olayları
+            items:
+              - name: Genel Bakış
+                displayName: logging and tracing
+                href: ../core/diagnostics/logging-tracing.md
+              - name: İyi bilinen olay sağlayıcılar
+                href: ../core/diagnostics/well-known-event-providers.md
+          - name: Çalıştırma zamanı olayları
             items:
               - name: Genel Bakış
                 href: ../fundamentals/diagnostics/runtime-events.md
-              - name: Çekişme Olayları
+              - name: Çekişme olayları
                 href: ../fundamentals/diagnostics/runtime-contention-events.md
-              - name: Özel Durum Olayları
+              - name: Özel durum olayları
                 href: ../fundamentals/diagnostics/runtime-exception-events.md
-              - name: Atık Toplama Olayları
+              - name: Atık toplama olayları
                 href: ../fundamentals/diagnostics/runtime-garbage-collection-events.md
-              - name: Birlikte Çalışma Olayları
+              - name: Birlikte çalışma olayları
                 href: ../fundamentals/diagnostics/runtime-interop-events.md
-              - name: Yükleyici ve Bağlayıcı Olayları
+              - name: Yükleyici ve bağlayıcı olayları
                 href: ../fundamentals/diagnostics/runtime-loader-binder-events.md
-              - name: Yöntem Olayları
+              - name: Yöntem olayları
                 href: ../fundamentals/diagnostics/runtime-method-events.md
-              - name: ThreadPool Olayları
+              - name: ThreadPool olayları
                 href: ../fundamentals/diagnostics/runtime-thread-events.md
-              - name: Tür Sistemi Olayları
+              - name: Tür sistemi olayları
                 href: ../fundamentals/diagnostics/runtime-type-events.md
           - name: Kapsayıcılarda tanılama toplama
             href: ../core/diagnostics/diagnostics-in-containers.md
@@ -579,8 +593,6 @@ items:
                         href: code-analysis/quality-rules/ca1069.md
                       - name: CA1070
                         href: code-analysis/quality-rules/ca1070.md
-                      - name: CA1071
-                        href: code-analysis/quality-rules/ca1071.md
                   - name: Belge kuralları
                     items:
                       - name: Genel Bakış
