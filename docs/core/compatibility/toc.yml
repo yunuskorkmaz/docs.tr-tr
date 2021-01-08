@@ -12,7 +12,7 @@
         - name: Yeni değişiklikler
           href: fx-core.md
         - name: Kullanılamayan teknolojiler
-          href: ../porting/net-framework-tech-unavailable.md?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+          href: ../porting/net-framework-tech-unavailable.md
         - name: Her zaman özel durum oluşturan API’ler
           href: unsupported-apis.md
     - name: Sürüme göre hataya neden olan değişiklikler
