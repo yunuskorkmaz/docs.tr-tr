@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 18021156af879f324993beca04531c8a822725db
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 35cf1af661071c70b8d68de2e47ce555be7b9fef
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513243"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025413"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Onaltılık dizeler ve sayısal türler arasında dönüştürme (C# Programlama Kılavuzu)
 
@@ -60,6 +60,12 @@ Bu örneklerde aşağıdaki görevlerin nasıl gerçekleştirileceği gösterilm
  Aşağıdaki örnek, sınıfını kullanarak bir [bayt](../../language-reference/builtin-types/integral-numeric-types.md) dizisinin onaltılık dizeye nasıl dönüştürüleceğini gösterir <xref:System.BitConverter?displayProperty=nameWithType> .  
   
  [!code-csharp[csProgGuideTypes#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#38)]  
+  
+## <a name="example"></a>Örnek  
+
+ Aşağıdaki örnekte, [](../../language-reference/builtin-types/integral-numeric-types.md) <xref:System.Convert.ToHexString%2A?displayProperty=nameWithType> .NET 5,0 ' de tanıtılan yöntemi çağırarak bir bayt dizisinin onaltılık dizeye nasıl dönüştürüleceği gösterilmektedir.
+  
+ [!code-csharp[csProgGuideTypes#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#47)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,21 +1,25 @@
 ---
-title: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
+title: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin
 description: Bu e-defterle, mevcut uygulamaları Azure bulutuna ve kapsayıcılara kaldırıp modernleştirin ve bunlarla aynı şekilde geçiş yapmayı öğrenin.
-ms.date: 04/28/2018
-ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/07/2021
+ms.openlocfilehash: bf6e6dff75c939508947aabeda14955b880f5a89
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705338"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025483"
 ---
-# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
+# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers"></a>Azure bulutu ve Windows Kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme
 
 ![Modernleştirin .NET uygulamaları kılavuzu 'nun kapak resmi.](./media/index/web-application-guide-cover-image.png)
 
+**SÜRÜM v 5.0**
+
+Kitap güncelleştirmeleri ve topluluk katkılarına yönelik [changelog](https://aka.ms/modernize-ebook-changelog) 'u inceleyin.
+
 Microsoft Corporation One Microsoft tetetete98052-6399 i
 
-Telif hakkı © 2020 Microsoft Corporation
+Telif hakkı © 2021 Microsoft Corporation
 
 All rights reserved. Bu kitabın içeriğinin bir kısmı herhangi bir biçimde veya herhangi bir şekilde, yayımcının yazılı izni olmadan çoğaltılamaz.
 
@@ -37,7 +41,7 @@ Katılımcılar ve gözden geçirenler:
 
 ## <a name="introduction"></a>Giriş
 
-Web uygulamalarınızı veya hizmetlerinizi modernleştirin ve buluta taşımaya karar verirken uygulamalarınızı tamamen yeniden mimarmaya gerek kalmaz. Mikro hizmetler gibi gelişmiş bir yaklaşım kullanarak bir uygulamayı yeniden tasarlama, maliyet ve zaman depolarından dolayı her zaman bir seçenek değildir. Uygulamanın türüne bağlı olarak, bir uygulamayı yeniden tasarlama de gerekli olmayabilir. Kuruluşunuzun bulut geçiş stratejisinin maliyet verimliliğini iyileştirmek için, uygulamalarınızın iş ve gereksinimlerinin ihtiyaçlarını göz önünde bulundurmanız önemlidir. Şunları belirlemeniz gerekir:
+Web uygulamalarınızı veya hizmetlerinizi modernleştirin ve buluta taşımaya karar verirken uygulamalarınızı tamamen yeniden mimarmaya gerek kalmaz. Mikro hizmetler gibi gelişmiş bir yaklaşım kullanarak bir uygulamayı yeniden tasarlama, maliyet ve zaman depolarından dolayı her zaman bir seçenek değildir. Uygulamanın türüne bağlı olarak, bir uygulamayı yeniden tasarlama de gerekli olmayabilir. Kuruluşunuzun bulut geçiş stratejisinin maliyet verimliliğini iyileştirmek için, işletmenizin ihtiyaçlarını ve uygulamalarınızın gereksinimlerini göz önünde bulundurmanız önemlidir. Şunları belirlemeniz gerekir:
 
 - Hangi uygulamaların bir dönüştürme veya yeniden mimari olması gerekir.
 
@@ -69,10 +73,10 @@ Her geçiş yaklaşımının kullanılmasına yönelik farklı avantajları ve n
 
 Her bir uygulama için tanım ve kısa açıklama aşağıdaki gibi verilmiştir:
 
-**Düzey 1: buluta yönelik bulut altyapısına** yönelik uygulamalar: Bu geçiş yaklaşımında, mevcut şirket içi uygulamalarınızı bir hizmet olarak altyapı ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) platformuna geçirin veya yeniden barındırabilirsiniz. Uygulamalarınız daha önce olduğu gibi neredeyse aynı birleşimde sahiptir, ancak artık bunları buluttaki VM 'lere dağıtırsınız.
+**Düzey 1: bulut altyapısına** yönelik uygulamalar: Bu geçiş yaklaşımında, mevcut şirket içi uygulamalarınızı bir hizmet olarak altyapı ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) platformuna geçirin veya yeniden barındırabilirsiniz. Uygulamalarınız daha önce olduğu gibi neredeyse aynı birleşimde sahiptir, ancak artık bunları buluttaki VM 'lere dağıtırsınız.
 Bu basit geçiş türü genellikle sektörde "Yükselt & SHIFT" olarak bilinir.
 
-**Düzey 2: buluta iyileştirilmiş** uygulamalar: Bu düzeyde, ancak önemli bir kodu yeniden tasarlamadan veya değiştirmeden, uygulamanızı bulutta çalıştırmanın yanı sıra kapsayıcılar gibi modern teknolojiler ve bulut tarafından yönetilen ek hizmetler de elde edebilirsiniz. Kuruluşunuzun geliştirme işlemleri (DevOps) işlemlerinizi iyileştirerek uygulamalarınızın daha hızlı gönderim çevikliğini artırırsınız. Bu, Docker altyapısını temel alan Windows kapsayıcıları gibi teknolojileri kullanarak elde edersiniz. Kapsayıcılar, birden çok aşamada dağıtırken uygulama bağımlılıklarından kaynaklanan uçuşmayı kaldırır. Bu vade modelinde, veritabanları, hizmet olarak önbellek, izleme ve sürekli tümleştirme/sürekli dağıtım (CI/CD) işlem hatları ile ilgili ek Bulut Yönetimli hizmetler kullanırken IaaS veya PaaS üzerinde kapsayıcılar dağıtabilirsiniz.
+**Düzey 2: buluta iyileştirilmiş** uygulamalar: Bu düzeyde, ancak önemli bir kodu yeniden tasarlamadan veya değiştirmeden, uygulamanızı bulutta çalıştırmanın yanı sıra kapsayıcılar gibi modern teknolojiler ve bulut tarafından yönetilen ek hizmetler de elde edebilirsiniz. Kuruluşunuzun geliştirme işlemleri (DevOps) işlemlerinizi iyileştirerek uygulamalarınızın daha hızlı gönderim çevikliğini artırırsınız. Docker altyapısını temel alan Windows kapsayıcıları gibi teknolojileri kullanarak bu işlevselliği elde edersiniz. Kapsayıcılar, birden çok aşamada dağıtırken uygulama bağımlılıklarından kaynaklanan uçuşmayı kaldırır. Bu vade modelinde, veritabanları, hizmet olarak önbellek, izleme ve sürekli tümleştirme/sürekli dağıtım (CI/CD) işlem hatları ile ilgili ek Bulut Yönetimli hizmetler kullanırken IaaS veya PaaS üzerinde kapsayıcılar dağıtabilirsiniz.
 
 Üçüncü vade düzeyi buluttaki son hedeftir, ancak bu kılavuzun ana odağa değil birçok uygulama için isteğe bağlıdır:
 
@@ -80,7 +84,7 @@ Bu basit geçiş türü genellikle sektörde "Yükselt & SHIFT" olarak bilinir.
 
 Tablo 1-1 ' nin başlıca avantajları ve her bir geçişi ya da modernleştirme yaklaşımını belirleme nedenleri açıklanmaktadır.
 
-| **Bulut altyapısına hazırlanma** <br /> *Lift and shift* | **Buluta Iyileştirilmiş** <br /> *Modernleştirin* | **Bulutta yerel** <br /> *Modernleştirin, yeniden mimari ve yeniden yazma* |
+| **Bulut altyapısına hazırlanma** <br /> *Lift and shift* | **Buluta Iyileştirilmiş** <br /> *Modernleştirin* | **Bulutta yerel** <br /> *Modernleştirin, remimar ve yeniden yazma* |
 |---|---|---|
 | **Uygulamanın işlem hedefi** |
 | Azure 'da VM 'lere dağıtılan uygulamalar | Azure App Service, Azure Container Instance (ACI), Kapsayıcılı VM 'Ler veya AKS (Azure Kubernetes hizmeti) için dağıtılan tek parçalı veya N katmanlı uygulamalar | Azure Işlevleri 'ni temel alan Azure Kubernetes Service (AKS) ve/veya sunucusuz mikro hizmetler üzerinde Kapsayıcılı mikro hizmetler. |
@@ -89,7 +93,7 @@ Tablo 1-1 ' nin başlıca avantajları ve her bir geçişi ya da modernleştirme
 | **Avantajlar**|
 | <li>Yeniden mimari yok, yeni kod yok <li> Hızlı geçiş için en az çaba <li> En az-Azure 'da desteklenen ortak payda <li> Temel kullanılabilirlik garantisi <li> Buluta taşıdıktan sonra daha modernleştirin daha da kolay | <li> Yeniden mimari yok <li> Minimum kod/yapılandırma değişiklikleri <li> Kapsayıcılar nedeniyle yayın için geliştirilmiş dağıtım ve DevOps çevikliği <li> Daha fazla yoğunluk ve daha düşük dağıtım maliyetleri <li> Uygulama ve bağımlılıkların taşınabilirliği <li> Konak hedeflerinin esnekliği: PaaS yaklaşımları veya IaaS | <li> Bulut mimarı, buluttan en iyi avantajları elde edersiniz, ancak yeni kod gerekiyor <li> Mikro hizmetler bulutu-yerel yaklaşımları <li> Modern görev açısından kritik uygulamalar, bulut açısından dayanıklı hiper ölçeklenebilir <li> Tam olarak yönetilen hizmetler <li> Ölçek için iyileştirildi <li> Alt sistem tarafından otonom çeviklik için iyileştirildi <li> Dağıtım ve DevOps üzerine inşa |
 | **Zorluklar** |
-| <li> İşletim giderleri veya kapanış veri merkezleri dışında daha küçük bir bulut değeri <li> Çok az yönetiliyor: işletim sistemi veya ara yazılım düzeltme eki uygulama; Terrayform, Spinnaker veya Pupevcil hayvan gibi altyapı çözümlerini kullanabilir | <li> Kapsayıcı, geliştiriciler ve BT Işlemleri için öğrenme eğrisinin ek bir adımdır <li> DevOps ve CI/CD işlem hatları bu yaklaşım için genellikle ' a gerekir '. Şu anda kuruluşun kültürüyle yoksa, ek bir zorluk olabilir| <li> Bulut Yerel uygulamaları ve mikro hizmet mimarileri için yeniden mimari gerektirir ve genellikle modernize (artan zaman ve bütçe) göre önemli kod yeniden düzenleme veya yeniden yazma gerektirir|
+| <li> İşletim giderleri veya kapanış veri merkezleri dışında daha küçük bir bulut değeri <li> Çok az yönetiliyor: işletim sistemi veya ara yazılım düzeltme eki uygulama; Terrayform, Spinnaker veya Pupevcil hayvan gibi altyapı çözümlerini kullanabilir | <li> Kapsayıcı, geliştiriciler ve BT Işlemleri için öğrenme eğrisinin ek bir adımdır <li> DevOps ve CI/CD işlem hatları bu yaklaşım için genellikle ' a gerekir '. Şu anda kuruluşun kültürüyle yoksa, ek bir zorluk olabilir| <li> Bulutta yerel uygulamalar ve mikro hizmet mimarileri için yeniden mimari gerektirir ve genellikle modernize (artan zaman ve bütçe) göre önemli kod yeniden düzenleme veya yeniden yazma gerektirir|
 > **Tablo 1-1.** Mevcut .NET uygulamaları ve hizmetleri için modernleştirme yollarının avantajları ve güçlükleri
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Vade düzeyine göre anahtar teknolojileri ve mimarileri
@@ -145,11 +149,11 @@ Daha sonra, çok sayıda mevcut .NET Framework uygulamasının geçirilmesi içi
 
 **Şekil 1-6.** Windows kapsayıcıları ve yönetilen hizmetlerle örnek Cloud-Optimized uygulamalar senaryosu
 
-Daha da fazla, belirli senaryolar için birkaç mikro hizmet ekleyerek mevcut Cloud-Optimized uygulamanızı genişletebilirsiniz. Bu, sizi, mevcut kılavuzun ana odağı olmayan Cloud-Native modeli düzeyine taşır.
+Daha da fazla, belirli senaryolar için birkaç mikro hizmet ekleyerek mevcut Cloud-Optimized uygulamanızı genişletebilirsiniz. Bu yaklaşım, sizi, mevcut yönergelerin ana odağı olmayan Cloud-Native modeli düzeyine taşır.
 
 ## <a name="what-this-guide-does-not-cover"></a>Bu kılavuzun kapsamayan
 
-Bu kılavuz, Şekil 1-7 ' de gösterildiği gibi örnek senaryoların belirli bir alt kümesini içerir. Bu kılavuz yalnızca kaldırma ve kaydırma senaryolarında ve son olarak Cloud-Optimized modelinde odaklanır. Cloud-Optimized modelinde, bir .NET Framework uygulama Windows kapsayıcıları ve izleme ve CI/CD işlem hatları gibi ek bileşenler kullanılarak modernlanmış olur. Her bileşen, buluta, daha hızlı ve çeviklik ile uygulama dağıtmaya yönelik temel uygulamalardır.
+Bu kılavuz, Şekil 1-7 ' de gösterildiği gibi örnek senaryoların belirli bir alt kümesini içerir. Bu kılavuz yalnızca, kaldırma ve kaydırma senaryolarına ve son olarak Cloud-Optimized modeline odaklanır. Cloud-Optimized modelinde, bir .NET Framework uygulama Windows kapsayıcıları ve izleme ve CI/CD işlem hatları gibi ek bileşenler kullanılarak modernlanmış olur. Her bileşen, buluta, daha hızlı ve çeviklik ile uygulama dağıtmaya yönelik temel uygulamalardır.
 
 ![Cloud-Native bu kılavuzda Kapsanmadı](./media/image1-7.png)
 
@@ -184,7 +188,7 @@ Bu kılavuzun son bölümü, belirli dağıtım senaryolarına odaklanabilecek b
 
 ## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>Eski uygulamaları modernize yönelik örnek uygulamalar: Eshopmodernize
 
-GitHub 'daki [Eshopmodernize](https://github.com/dotnet-architecture/eShopModernizing) deposu, eski monoparçalı Web uygulamalarına benzetilen iki örnek uygulama sunmaktadır. Bir Web uygulaması ASP.NET MVC kullanılarak geliştirilmiştir; ikinci Web uygulaması, ASP.NET Web Forms kullanılarak geliştirilmiştir ve üçüncü uygulama, bir WCF hizmeti arka ucu kullanan bir WinForms istemci masaüstü uygulaması olan N katmanlı bir uygulamadır. Tüm bu uygulamalar geleneksel .NET Framework dayanır. Bu örnek uygulamalar, mevcut/eski .NET Framework uygulamaların modernleştirilmemiş olması beklenen .NET Core veya ASP.NET Core kullanmaz.
+GitHub 'daki [Eshopmodernize](https://github.com/dotnet-architecture/eShopModernizing) deposu, eski monoparçalı Web uygulamalarına benzetilen iki örnek uygulama sunmaktadır. Bir Web uygulaması ASP.NET MVC kullanılarak geliştirilmiştir; ikinci Web uygulaması, ASP.NET Web Forms kullanılarak geliştirilmiştir ve üçüncü uygulama, bir WCF hizmeti arka ucu kullanan bir WinForms istemci masaüstü uygulaması olan N katmanlı bir uygulamadır. Tüm bu uygulamalar geleneksel .NET Framework dayanır. Bu örnek uygulamalar, .NET Core veya .NET 5,0 veya ASP.NET Core, mevcut/eski .NET Framework uygulamaların modernlanmış olmaları gerektiği için kullanmaz.
 
 Bu örnek uygulamalar, modernlanmış kod ile ikinci bir sürüme sahiptir ve bunlar oldukça basittir. Uygulama sürümleri arasındaki en önemli fark, ikinci sürümlerin dağıtım seçimi olarak Windows kapsayıcıları kullanmanızdır. Ayrıca, örneğin, görüntüleri yönetmek için Azure depolama Blobları, güvenlik yönetimi için Azure Active Directory ve uygulamaları izlemek ve denetlemek için Azure Application Insights gibi ikinci sürümlere yönelik birkaç ekleme vardır.
 

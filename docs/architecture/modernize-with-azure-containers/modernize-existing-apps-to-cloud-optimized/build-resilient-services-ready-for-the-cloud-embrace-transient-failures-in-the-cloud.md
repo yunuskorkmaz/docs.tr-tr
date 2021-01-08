@@ -1,13 +1,13 @@
 ---
 title: Bulut için hazırlık dayanıklı Hizmetleri oluşturun. Buluttaki geçici hataları benimseme
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Bulut için hazırlık dayanıklı Hizmetleri oluşturun. Buluttaki geçici hataları benimseme
-ms.date: 04/30/2018
-ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 4d592a5761cdf696f3e57516d747cbd770512053
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172163"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025335"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Bulut için hazır olan dayanıklı hizmetler derleme: Buluttaki geçici hataları benimseme
 
@@ -35,7 +35,7 @@ Bu teknikleri, hem HTTP kaynaklarında hem de veritabanı kaynaklarında kullana
 
 Kullandığınız .NET sürümüne bağlı olarak veritabanına erişen dayanıklı iletişimler uygularken, bu, basit olabilir (örneğin, [Entity Framework 6 veya üzeri ile](/ef/ef6/fundamentals/connection-resiliency/retry-logic)). Veritabanı bağlantısını yapılandırmanın yalnızca bir önemi vardır. Ya da, [geçici hata Işleme uygulama bloğu](/previous-versions/msp-n-p/hh680934(v=pandp.50)) (.net 'in önceki sürümleri için) gibi ek kitaplıklar kullanmanız veya kendi kitaplığınızı uygulamanız gerekebilir.
 
-HTTP yeniden denemeleri ve devre kesicileri uygularken .NET önerisi, .NET Core desteği içeren .NET Framework 4,0, .NET Framework 4,5 ve .NET Standard 1,1 ' i hedefleyen [Polly](https://github.com/App-vNext/Polly) kitaplığı kullanmaktır.
+HTTP yeniden denemeleri ve devre kesicileri uygularken .NET önerisi, .NET Standard 1,1 (kapsam: .NET Core 1,0, mono, Xamarin, UWP, WP 8.1 +) ve .NET Standard 2.0 + (kapsam: .NET Core 2.0 +, .NET Core 3,0 ve daha sonraki mono, Xamarin ve UWP hedefleri) hedefleyen [Polly](https://github.com/App-vNext/Polly) kitaplığı kullanmaktır. NuGet paketi ayrıca .NET Framework 4.6.1 ve 4.7.2 için doğrudan hedefler içerir.
 
 Buluttaki kısmi hataların işlenmesine yönelik stratejileri nasıl uygulayacağınızı öğrenmek için aşağıdaki başvurulara bakın.
 

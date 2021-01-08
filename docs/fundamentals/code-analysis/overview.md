@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 80815b5913ad72756de503209b52e8848dd708bf
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009852"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025087"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET kaynak kodu çözümlemesine genel bakış
 
@@ -104,13 +104,16 @@ Varsayılan olarak, .NET SDK 'sının daha yeni sürümlerine yükselttiğinizde
 *Kod stili analiz* ("ıdexxxx") kuralları, kod tabanınızda tutarlı kod stili tanımlamanızı ve bakımını sağlar. Varsayılan etkinleştirme ayarları şunlardır:
 
 - Komut satırı derlemesi: komut satırı Derlemeleriyle ilgili tüm .NET projeleri için, varsayılan olarak kod stili çözümleme devre dışıdır.
-- Visual Studio: kod stili analizi, varsayılan olarak Visual Studio içindeki tüm .NET projeleri için [kod yeniden düzenleme hızlı eylemleri](/visualstudio/ide/code-generation-in-visual-studio)olarak etkinleştirilmiştir.
 
-.NET 5,0 ' den başlayarak, derleme üzerinde kod stili analizini hem komut satırında hem de Visual Studio içinde etkinleştirebilirsiniz. Kod stili ihlalleri, uyarı veya "IDE" ön eki ile hatalar olarak görüntülenir. Bu, derleme zamanında tutarlı kod stilleri zorlamanıza olanak sağlar.
+  .NET 5,0 ' den başlayarak, [derleme üzerinde kod stili analizini](#enable-on-build)hem komut satırında hem de Visual Studio içinde etkinleştirebilirsiniz. Kod stili ihlalleri, uyarı veya "IDE" ön eki ile hatalar olarak görüntülenir. Bu, derleme zamanında tutarlı kod stilleri zorlamanıza olanak sağlar.
+
+- Visual Studio: kod stili analizi, varsayılan olarak Visual Studio içindeki tüm .NET projeleri için [kod yeniden düzenleme hızlı eylemleri](/visualstudio/ide/code-generation-in-visual-studio)olarak etkinleştirilmiştir.
 
 Kod stili analiz kurallarının tam listesi için bkz. [kod stili kuralları](style-rules/index.md).
 
 ### <a name="enable-on-build"></a>Derlemede etkinleştir
+
+.NET 5,0 SDK ve sonraki sürümlerinde, komut satırından ve Visual Studio 'da oluştururken kod stili analizini etkinleştirebilirsiniz. (Ancak, performans nedenleriyle, tek [bir kod stili kuralları](https://github.com/dotnet/roslyn/blob/9f87b444da9c48a4d492b19f8337339056bf2b95/src/Analyzers/Core/Analyzers/EnforceOnBuildValues.cs#L95) yalnızca VISUAL Studio IDE 'de de geçerlidir.)
 
 Derlemede kod stili analizini etkinleştirmek için şu adımları izleyin:
 

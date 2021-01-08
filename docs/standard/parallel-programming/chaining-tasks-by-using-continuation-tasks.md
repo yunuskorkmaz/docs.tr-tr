@@ -1,19 +1,19 @@
 ---
 title: Devamlılık görevlerini kullanarak görevleri zincirleme
 description: .NET 'teki devamlılık görevlerini kullanarak görev zincirini öğrenin. Devamlılık görevi, başka bir görev tarafından çağrılan zaman uyumsuz bir görevdir.
-ms.date: 07/20/2020
+ms.date: 01/06/2021
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: c7afbc1bb22a1743aed8e4ebd0a06c4f3fb57e86
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c42b6ef7b72cec1846517c700ab6ed34046ed7de
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830616"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025426"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>Devamlılık görevlerini kullanarak görevleri zincirleme
 

@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: 5d14bd0d9930d41a8c60b58b9f5b0522f0c0e398
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: b5766012b77da88ae9a696939b6e498ebc421522
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700787"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025048"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure ve .NET’e giriş
 
 ## <a name="what-is-azure"></a>Azure nedir?
 
-Azure, modern uygulamalar oluşturma işlemini basitleştirmek için tasarlanan bir bulut platformudur.  Uygulamalarınızı tamamen Azure 'da barındırmaya veya şirket içi uygulamalarınızı Azure hizmetleriyle genişletmenize bakılmaksızın Azure, ölçeklenebilir, güvenilir ve sürdürülebilir uygulamalar oluşturmanıza yardımcı olur.  Visual Studio ve Visual Studio Code ve kapsamlı bir SDK Kitaplığı gibi zaten kullandığınız araçlar için kapsamlı destek sayesinde Azure, .NET geliştiricisi 'nin başından itibaren doğrudan üretken olmasını sağlayacak şekilde tasarlanmıştır.
+Azure, modern uygulamalar oluşturma işlemini basitleştirmek için tasarlanan bir bulut platformudur.  Uygulamalarınızı tamamen Azure 'da barındırmaya veya şirket içi uygulamalarınızı Azure hizmetleriyle genişletmenize bakılmaksızın Azure, ölçeklenebilir, güvenilir ve sürdürülebilir uygulamalar oluşturmanıza yardımcı olur.  Visual Studio ve Visual Studio Code ve kapsamlı bir SDK Kitaplığı gibi zaten kullandığınız araçlarda kapsamlı destek sayesinde Azure, .NET Developer 'ı başlangıçtan hemen itibaren üretken hale getirmek için tasarlanmıştır.
 
 ## <a name="application-development-scenarios-on-azure"></a>Azure 'da uygulama geliştirme senaryoları
 

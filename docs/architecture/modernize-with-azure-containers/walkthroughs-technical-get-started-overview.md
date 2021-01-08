@@ -1,13 +1,13 @@
 ---
 title: İzlenecek yollar ve teknik başlangıca genel bakış
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin | İzlenecek yollar ve teknik Başlarken Genel Bakış
-ms.date: 04/28/2018
-ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 6bfa25e3eeeecf5a936f378df3ae548d6fa37a30
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172150"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025283"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlangıca genel bakış
 
@@ -70,7 +70,7 @@ Aşağıdaki şekilde, özgün 3 katmanlı eski uygulamanın basit senaryosu gö
 
 ![Bir WCF hizmeti ve bir WinForms istemci uygulaması ile, eski, 3 katmanlı ilk uygulamanın basit mimari senaryosu](./media/image5-1.5.png)
 
-### <a name="benefits"></a>Yararları
+### <a name="benefits"></a>Avantajlar
 
 Bu izlenecek yolun avantajları basittir: yalnızca kod ve ilk uygulamalar hakkında bilgi edinin.
 
@@ -89,7 +89,7 @@ MVC, Web Forms veya WCF tabanlı uygulamalar, üretim, geliştirme ve test ortam
 
 ### <a name="goals"></a>Hedefler
 
-Bu izlenecek yolun amacı, mevcut bir .NET Framework uygulamasını kapsayıdırma için size çeşitli seçenekler göstermektir. Seçenekleriniz şunlardır:
+Bu izlenecek yolun amacı, mevcut bir .NET Framework uygulamasını kapsayıdırma için size çeşitli seçenekler göstermektir. Şunları yapabilirsiniz:
 
 - [Visual studio 2017 Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (visual Studio 2017 veya üzeri sürümler) kullanarak uygulamanızı kapsayıkatın.
 
@@ -111,13 +111,13 @@ Aşağıdaki şekilde kapsayıcılı bir WCF hizmeti olan 3 katmanlı bir uygula
 
 ![Bir geliştirme ortamında Kapsayıcılı WCF hizmetinin Basitleştirilmiş mimari diyagramı](./media/image5-3.5.png)
 
-### <a name="benefits"></a>Yararları
+### <a name="benefits"></a>Avantajlar
 
 Tek parçalı uygulamanızı bir kapsayıcıda çalıştırmanın avantajları vardır. İlk olarak, uygulama için bir görüntü oluşturursunuz. Bu noktadan itibaren, her dağıtım aynı ortamda çalışır. Her kapsayıcı aynı işletim sistemi sürümünü kullanır, aynı bağımlılıklar sürümü yüklü, aynı .NET Framework sürümünü kullanır ve aynı işlem kullanılarak oluşturulmuştur. Temel olarak, bir Docker görüntüsü kullanarak uygulamanızın bağımlılıklarını kontrol edersiniz. Kapsayıcılar, kapsayıcıları dağıtırken uygulamayla birlikte seyahat ediyor.
 
 Ek bir avantaj, geliştiricilerin uygulamayı Windows kapsayıcıları tarafından sunulan tutarlı bir ortamda çalıştırabildiği bir avantajdır. Yalnızca belirli sürümlerle görüntülenen sorunlar, hazırlama veya üretim ortamında kullanıma sunulacak şekilde hemen bağlanabilir. Geliştirme ortamlarının üyeleri tarafından kullanılan geliştirme ortamlarındaki farklar, uygulamalar kapsayıcılar içinde çalıştırıldığında daha az önemlidir.
 
-Kapsayıcılı uygulamalar için de eğri ölçeği genişletme eğrisi vardır. Kapsayıcılı uygulamalar, makine başına normal uygulama dağıtımlarıyla karşılaştırıldığında bir VM 'de veya fiziksel makinede daha fazla uygulama ve hizmet örneği (kapsayıcılara göre) sağlar. Bu, özellikle Kubernetes gibi düzenleyiciler kullandığınızda daha yüksek yoğunluklu ve daha az gereken kaynağa çevrilir.
+Kapsayıcılı uygulamalar için de eğri ölçeği genişletme eğrisi vardır. Kapsayıcılı uygulamalar, makine başına normal uygulama dağıtımlarıyla karşılaştırıldığında bir VM 'de veya fiziksel makinede daha fazla uygulama ve hizmet örneği (kapsayıcılara göre) sağlar. Bu yaklaşım, özellikle Kubernetes gibi düzenleyiciler kullandığınızda daha yüksek yoğunluklu ve daha az gereken kaynağa çevrilir.
 
 Kapsayıcılama, ideal durumlarda uygulama kodunda herhangi bir değişiklik yapılmasını gerektirmez (C \# ). Çoğu senaryoda yalnızca Docker dağıtım meta verileri dosyalarına (Dockerfiles ve Docker Compose dosyaları) ihtiyacınız vardır.
 
@@ -168,9 +168,9 @@ Bu izlenecek yolda çeşitli senaryolar ele alınmıştır.
 
 Windows kapsayıcıları için Azure VM 'Leri, hem Docker Engine 'in ayarlandığı Windows Server 2016, Windows 10 veya sonraki sürümleri temel alır. Çoğu durumda, Azure VM 'lerinde Windows Server 2016 kullanılır.
 
-Azure Şu anda **kapsayıcılarla Windows Server 2016**ADLı bir VM sağlıyor. Windows Server Core veya Windows nano Server ile yeni Windows Server kapsayıcısı özelliğini denemek için bu VM 'yi kullanabilirsiniz. Kapsayıcı işletim sistemi görüntüleri yüklenir ve ardından sanal makine Docker ile kullanıma hazırdır.
+Azure Şu anda **kapsayıcılarla Windows Server 2016** ADLı bir VM sağlıyor. Windows Server Core veya Windows nano Server ile yeni Windows Server kapsayıcısı özelliğini denemek için bu VM 'yi kullanabilirsiniz. Kapsayıcı işletim sistemi görüntüleri yüklenir ve ardından sanal makine Docker ile kullanıma hazırdır.
 
-### <a name="benefits"></a>Yararları
+### <a name="benefits"></a>Avantajlar
 
 Windows kapsayıcıları, şirket içi Windows Server 2016 VM 'lerine dağıtılabilse de, Azure 'a dağıtırken, kullanıma hazırlama öncesi Windows Server kapsayıcısı VM 'Leri ile kullanmaya başlamak için daha kolay bir yol alırsınız. Ayrıca, Test edicilerin erişebileceği ve Azure sanal makine ölçek kümeleri aracılığıyla otomatik ölçeklenebilirlik sağlayan ortak bir çevrimiçi konum alırsınız.
 
@@ -202,7 +202,7 @@ Uygulamaların yalnızca birini veya tümünü (MVC uygulaması, WebForms uygula
 
 ![Geliştirme ortamından acı 'ye dağıtma](./media/image5-3.5.6.png)
 
-### <a name="benefits"></a>Yararları
+### <a name="benefits"></a>Avantajlar
 
 Azure Container Instances, sanal makine sağlamak veya daha yüksek düzey bir hizmet benimsemek zorunda kalmadan Azure’da Docker kapsayıcıları oluşturmayı ve yönetmeyi kolaylaştırır. ACI ile, bir Windows kapsayıcısını doğrudan Azure 'da dağıtabilir ve saniyeler içinde tam etki alanı adı (FQDN) ile internet 'te kullanıma sunabilirsiniz (Windows kapsayıcı görüntünüzü Docker Hub veya Azure Container Registry gibi bir Docker kayıt defterine hazırlayın).
 
@@ -228,11 +228,11 @@ Tam teknik izlenecek yol, GitHub deposu wiki ' de kullanılabilir:
 
 ### <a name="overview"></a>Genel Bakış
 
-Windows kapsayıcılarına dayalı bir uygulamanın, IaaS VM 'lerinden daha da fazla hareket eden platformları kullanması hızla gerekecektir. Bu, kolayca yüksek ölçeklenebilirlik ve daha iyi otomatik ölçeklenebilirlik elde etmek ve otomatikleştirilmiş dağıtımlar ve sürüm oluşturma konusunda önemli bir geliştirme sağlamak için gereklidir. [Azure Container Services](https://azure.microsoft.com/services/container-service/)'de bulunan Orchestrator [Kubernetes](https://kubernetes.io/)'i kullanarak bu hedeflere ulaşabilirsiniz.
+Windows kapsayıcılarına dayalı bir uygulamanın, IaaS VM 'lerinden daha da fazla hareket eden platformları kullanması hızla gerekecektir. Bu yaklaşım, kolayca yüksek ölçeklenebilirlik ve daha iyi otomatik ölçeklenebilirlik elde etmek ve otomatikleştirilmiş dağıtımlar ve sürüm oluşturma konusunda önemli bir geliştirme sağlamak için gereklidir. [Azure Container Services](https://azure.microsoft.com/services/container-service/)'de bulunan Orchestrator [Kubernetes](https://kubernetes.io/)'i kullanarak bu hedeflere ulaşabilirsiniz.
 
 ### <a name="goals"></a>Hedefler
 
-Bu izlenecek yol, Azure Container Service ' de bir Windows kapsayıcı tabanlı uygulamayı Kubernetes 'e dağıtmayı öğrenmektir ( *K8s*olarak da bilinir). Sıfırdan Kubernetes 'e dağıtım iki adımlı bir işlemdir:
+Bu izlenecek yol, Azure Container Service ' de bir Windows kapsayıcı tabanlı uygulamayı Kubernetes 'e dağıtmayı öğrenmektir ( *K8s* olarak da bilinir). Sıfırdan Kubernetes 'e dağıtım iki adımlı bir işlemdir:
 
 1. Azure Container Service için bir Kubernetes kümesi dağıtın.
 
@@ -252,7 +252,7 @@ Bu izlenecek yol, Azure Container Service ' de bir Windows kapsayıcı tabanlı 
 
 **Şekil 5-8.** Azure DevOps Services ' deki CI/CD işlem hatlarından bir Kubernetes kümesine dağıtın
 
-### <a name="benefits"></a>Yararları
+### <a name="benefits"></a>Avantajlar
 
 Kubernetes içindeki bir kümeye dağıtmanın birçok avantajı vardır. En büyük avantaj, kullanmak istediğiniz kapsayıcı örneği sayısına (mevcut düğümlerde iç ölçeklenebilirlik) göre ve kümedeki düğüm veya VM sayısına (kümenin genel ölçeklenebilirliği) göre, uygulamayı ölçeklendirebilmeniz için üretime hazır bir ortam elde edersiniz.
 
@@ -288,7 +288,7 @@ Tam teknik izlenecek yol, GitHub deposu wiki ' de kullanılabilir:
 
 ### <a name="overview"></a>Genel Bakış
 
-Windows kapsayıcıları kullanılarak basit kapsayıcılı bir uygulama, kapsayıcılar için Azure App Service kolayca dağıtılabilir. Bu, Windows kapsayıcı tabanlı çoğu uygulama için önerilen yaklaşımdır.
+Windows kapsayıcıları kullanılarak basit kapsayıcılı bir uygulama, kapsayıcılar için Azure App Service kolayca dağıtılabilir. Bu yaklaşım, çoğu Windows kapsayıcı tabanlı uygulama için önerilen yaklaşımdır.
 
 ### <a name="goals"></a>Hedefler
 
@@ -298,9 +298,9 @@ Bu izlenecek yol, bir kayıt defterinden (Docker Hub veya Azure Container Regist
 
 ![Kapsayıcılar için Windows kapsayıcı tabanlı uygulamayı Azure App Service dağıtma](./media/image5-11.png)
 
-### <a name="benefits"></a>Yararları
+### <a name="benefits"></a>Avantajlar
 
-Kapsayıcılar için Azure App Service dağıtım, Azure App Service PaaS avantajları ile eşleştirilmiş kapsayıcıların avantajlarını sunmaktadır. App Service kolayca dikey ve yatay olarak ölçeklendirilebilir ve değişen talepleri karşılamak üzere otomatik olarak ölçeklendirilebilen şekilde yapılandırılabilir. Güncelleştirmeler sıfır kapalı kalma süresiyle gerçekleştirilebilir ve bir kayıt defterinden sürekli dağıtımın yapılandırılması de kolay bir şekilde yapılandırılabilir.
+Kapsayıcılar için Azure App Service dağıtım, Azure App Service PaaS avantajları ile eşleştirilmiş kapsayıcıların avantajlarını sunmaktadır. App Service kolayca dikey ve yatay olarak ölçeklendirilebilir ve değişen talepleri karşılamak üzere otomatik olarak ölçeklendirilebilen şekilde yapılandırılabilir. Güncelleştirmeler sıfır kapalı kalma süresiyle gerçekleştirilebilir ve bir kayıt defterinden sürekli dağıtım yapılandırması da kolayca yapılandırılabilir.
 
 ### <a name="next-steps"></a>Sonraki adımlar
 

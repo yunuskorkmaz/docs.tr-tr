@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 2ceac94c04dd8deb169e836f09928dfd9a38ac35
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599108"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025439"
 ---
 # <a name="structure-types-c-reference"></a>Yapı türleri (C# Başvurusu)
 
@@ -30,11 +30,7 @@ Yapı türlerinde değer semantiklerine sahip olduğundan, *değişmez* yapı t�
 
 ## <a name="readonly-struct"></a>`readonly` sýný
 
-C# 7,2 ' den başlayarak, `readonly` bir yapı türünün sabit olduğunu bildirmek için değiştiricisini kullanın:
-
-[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
-
-Bir yapının tüm veri üyeleri `readonly` aşağıdaki şekilde salt okunabilir olmalıdır:
+C# 7,2 ' den başlayarak, `readonly` bir yapı türünün sabit olduğunu bildirmek için değiştiricisini kullanın. Bir yapının tüm veri üyeleri `readonly` aşağıdaki şekilde salt okunabilir olmalıdır:
 
 - Herhangi bir alan bildirimi [ `readonly` değiştiriciye](../keywords/readonly.md) sahip olmalıdır
 - Otomatik olarak uygulanan özellikler dahil olmak üzere herhangi bir özellik salt okunabilir olmalıdır. C# 9,0 ve üzeri sürümlerde bir özelliğin [ `init` erişimcisi](../../whats-new/csharp-9.md#init-only-setters)olabilir.
@@ -43,6 +39,10 @@ Bu, yapının hiçbir üyesinin `readonly` yapının durumunu değiştirdiğine 
 
 > [!NOTE]
 > Bir `readonly` yapıda, kesilebilir başvuru türünün veri üyesi yine de kendi durumunu mukuz edebilir. Örneğin, bir <xref:System.Collections.Generic.List%601> örneği değiştiremezsiniz, ancak buna yeni öğeler ekleyebilirsiniz.
+
+Aşağıdaki kod `readonly` C# 9,0 ve üzeri sürümlerde bulunan init-Only özellik ayarlayıcıları ile bir struct tanımlar:
+
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 ## <a name="readonly-instance-members"></a>`readonly` örnek üyeleri
 
@@ -67,7 +67,7 @@ Genellikle, `readonly` değiştiricisini aşağıdaki örnek üye türlerine uyg
   `readonly`Değiştirici ' i bir özelliğin veya dizin oluşturucunun her ikisine de uygulamanız gerekiyorsa, bunu özelliğin veya dizin oluşturucunun bildiriminde uygulayın.
 
   > [!NOTE]
-  > Derleyici, `get` [auto-implemented property](../../programming-guide/classes-and-structs/auto-implemented-properties.md) `readonly` `readonly` bir özellik bildiriminde değiştiricinin varlığından bağımsız olarak otomatik uygulanan bir özelliğin erişimcisini bildirir.
+  > Derleyici, `get` [](../../programming-guide/classes-and-structs/auto-implemented-properties.md) `readonly` `readonly` bir özellik bildiriminde değiştiricinin varlığından bağımsız olarak otomatik uygulanan bir özelliğin erişimcisini bildirir.
 
   C# 9,0 ve üzeri sürümlerde, `readonly` değiştiriciyi bir özelliğe veya dizin oluşturucusuna uygulayabilirsiniz `init` :
 

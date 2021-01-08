@@ -3,13 +3,13 @@ title: .NET 'te yüksek performanslı günlüğe kaydetme
 author: IEvangelist
 description: Yüksek performanslı günlük senaryolarında daha az sayıda nesne ayırması gerektiren önbelleğe alınabilir temsilciler oluşturmak için LoggerMessage kullanmayı öğrenin.
 ms.author: dapine
-ms.date: 09/25/2020
-ms.openlocfilehash: 9111b9553c913cff2937b574250b65e633250f4f
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 01/04/2021
+ms.openlocfilehash: 0031ff7a9f70cb0cf724fdf6dfa4fbe0a44af7c1
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804763"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025446"
 ---
 # <a name="high-performance-logging-in-net"></a>.NET 'te yüksek performanslı günlüğe kaydetme
 
@@ -30,7 +30,7 @@ Yöntemine girilen dize, <xref:Microsoft.Extensions.Logging.LoggerMessage.Define
 
 Her günlük iletisi, <xref:System.Action> [Loggermessage. define](xref:Microsoft.Extensions.Logging.LoggerMessage.Define%2A)tarafından oluşturulan statik bir alanda tutulur. Örneğin, örnek uygulama iş öğelerinin işlenmesine yönelik bir günlük iletisini tanımlayacak bir alan oluşturur:
 
-:::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingWorkField":::
+:::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="FailedProcessingField":::
 
 İçin <xref:System.Action> şunu belirtin:
 
@@ -40,19 +40,15 @@ Her günlük iletisi, <xref:System.Action> [Loggermessage. define](xref:Microsof
 
 İş öğeleri çalışan Hizmeti uygulamasının işlenmesine karşı sıraya alındığından, şunları ayarlar:
 
-- Günlük düzeyi `Critical` .
+- Günlük düzeyi <xref:Microsoft.Extensions.Logging.LogLevel.Critical?displayProperty=nameWithType> .
 - `13`Yöntemin adı ile olay kimliği `FailedToProcessWorkItem` .
 - Bir dizeye ileti şablonu (biçim dizesi olarak adlandırılır).
 
-:::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingWorkAssignment":::
+:::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="FailedProcessingAssignment":::
 
 Yapılandırılmış günlük depoları, olay kimliği ile birlikte verileri zenginleştirmek için sağlandığında olay adını kullanabilir. Örneğin, [Serilog](https://github.com/serilog/serilog-extensions-logging) olay adını kullanır.
 
-, <xref:System.Action> Türü kesin belirlenmiş bir uzantı yöntemiyle çağrılır. `FailedToProcessWorkItem`Yöntemi bir iş öğesi işlendiği her seferinde bir ileti kaydeder:
-
-:::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingWorkMethod":::
-
-`FailedToProcessWorkItem` , `ExecuteAsync` bir hata oluştuğunda *Worker.cs* içindeki yönteminde günlükçü üzerinde çağrılır:
+, <xref:System.Action> Türü kesin belirlenmiş bir uzantı yöntemiyle çağrılır. `PriorityItemProcessed`Yöntemi bir iş öğesi işlendiği her seferinde bir ileti kaydeder. Ancak, `FailedToProcessWorkItem` (ve ise) bir özel durum oluştuğunda çağrılır:
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Worker.cs" range="18-39" highlight="15-18":::
 
@@ -70,7 +66,7 @@ Parametreleri bir günlük iletisine geçirmek için, statik alanı oluştururke
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingItemField":::
 
-Temsilcinin günlük iletisi şablonu, belirtilen türlerden yer tutucu değerlerini alır. Örnek uygulama, quote parametresinin bir tırnak işareti eklemek için bir temsilci tanımlar `WorkItem` :
+Temsilcinin günlük iletisi şablonu, belirtilen türlerden yer tutucu değerlerini alır. Örnek uygulama, öğe parametresinin bir iş öğesi eklemek için bir temsilci tanımlar `WorkItem` :
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingItemAssignment":::
 
@@ -95,19 +91,15 @@ info: WorkerServiceOptions.Example.Worker[1]
 
 Yönteminde olduğu gibi <xref:Microsoft.Extensions.Logging.LoggerMessage.Define%2A> , yöntemi için girilen dize, ilişkili <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> dize değil, bir şablondur. Yer tutucular, türlerin belirtilme sırasına göre doldurulur. Şablondaki yer tutucu adları, şablonlar genelinde açıklayıcı ve tutarlı olmalıdır. Bunlar, yapılandırılmış günlük verileri içinde özellik adı olarak görev yapar. Yer tutucu adları için [Pascal büyük harfleri](../../standard/design-guidelines/capitalization-conventions.md) öneririz. Örneğin,, `{Item}` `{DateTime}` .
 
-Yöntemini kullanarak bir dizi günlük mesajı için uygulanacak [günlük kapsamını](logging.md#log-scopes) tanımlayın <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> .
-
-Örnek uygulamanın, veritabanındaki tüm teklifleri silmek için **Tümünü Temizle** düğmesi vardır. Tırnak işaretleri tek seferde kaldırılarak silinir. Bir teklifin her silindiği her seferinde `QuoteDeleted` yöntemi günlükçü üzerinde çağrılır. Bu günlük iletilerine bir günlük kapsamı eklenir.
-
-`IncludeScopes` *Üzerindeappsettings.js*konsol günlükçüsü bölümünde etkinleştirin:
+Yöntemini kullanarak bir dizi günlük mesajı için uygulanacak [günlük kapsamını](logging.md#log-scopes) tanımlayın <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> . `IncludeScopes` *Üzerindeappsettings.js* konsol günlükçüsü bölümünde etkinleştirin:
 
 :::code language="json" source="snippets/configuration/worker-service-options/appsettings.json" highlight="3-5":::
 
-Bir günlük kapsamı oluşturmak için, kapsam için bir temsilci tutacak bir alan ekleyin <xref:System.Func%601> . Örnek uygulama `_allQuotesDeletedScope` (*Iç/LoggerExtensions. cs*) adlı bir alan oluşturur:
+Bir günlük kapsamı oluşturmak için, kapsam için bir temsilci tutacak bir alan ekleyin <xref:System.Func%601> . Örnek uygulama `_processingWorkScope` (*Iç/LoggerExtensions. cs*) adlı bir alan oluşturur:
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingWorkField":::
 
-<xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A>Temsilciyi oluşturmak için kullanın. Temsilci çağrıldığında Şablon bağımsız değişkenleri olarak kullanmak için en fazla üç tür belirlenebilir. Örnek uygulama, silinen tekliflerin sayısını (bir tür) içeren bir ileti şablonu kullanır `int` :
+<xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A>Temsilciyi oluşturmak için kullanın. Temsilci çağrıldığında Şablon bağımsız değişkenleri olarak kullanmak için en fazla üç tür belirlenebilir. Örnek uygulama, işlemin başladığı tarih ve saati içeren bir ileti şablonu kullanır:
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Extensions/LoggerExtensions.cs" id="ProcessingWorkAssignment":::
 
@@ -119,7 +111,7 @@ Kapsam, oturum açma uzantısı çağrılarını bir [using](../../csharp/langua
 
 :::code language="csharp" source="snippets/configuration/worker-service-options/Worker.cs" range="18-39" highlight="4":::
 
-Uygulamanın konsol çıkışında günlük iletilerini inceleyin. Aşağıdaki sonuç, günlük kapsamı iletisi dahil olmak üzere silinen üç tırnak gösterir:
+Uygulamanın konsol çıkışında günlük iletilerini inceleyin. Aşağıdaki sonuç, günlük kapsamı iletisi dahil olmak üzere günlük iletilerinin öncelik sıralamasını gösterir:
 
 ```console
 info: WorkerServiceOptions.Example.Worker[1]
