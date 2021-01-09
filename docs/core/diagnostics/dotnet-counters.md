@@ -2,12 +2,12 @@
 title: DotNet-sayaçlar Tanılama aracı-.NET CLı
 description: Ad hoc sistem durumu izleme ve ilk düzey performans araştırması için DotNet-Counter CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: 89695c77e7913d41f030890be7cc00947e42fa3a
-ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
+ms.openlocfilehash: 44d74cfaca7483b1506fe7ad762818e9b9ed7d63
+ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2021
-ms.locfileid: "97856061"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98058107"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>Performans sayaçlarını araştırın (DotNet-sayaçlar)
 
@@ -32,7 +32,7 @@ ms.locfileid: "97856061"
   | İşletim Sistemi  | Platform |
   | --- | -------- |
   | Windows | [x86](https://aka.ms/dotnet-counters/win-x86) \| [x64](https://aka.ms/dotnet-counters/win-x64) \| [ARM](https://aka.ms/dotnet-counters/win-arm) \| [ARM-x64](https://aka.ms/dotnet-counters/win-arm64) |
-  | macOS   | [x64](https://aka.ms/dotnet-counters/osx-x64) |
+  | Mac OS   | [x64](https://aka.ms/dotnet-counters/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-counters/linux-x64) \| [ARM](https://aka.ms/dotnet-counters/linux-arm) \| [arm64](https://aka.ms/dotnet-counters/linux-arm64) \| [MUSL-x64](https://aka.ms/dotnet-counters/linux-musl-x64) \| [MUSL-arm64](https://aka.ms/dotnet-counters/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Özeti
@@ -220,7 +220,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
   > Bu seçeneğin kullanılması, araca geri iletişim kuran ilk .NET 5,0 işlemini izler, bu da komutunuz birden çok .NET uygulaması başlattığında yalnızca ilk uygulamayı toplayacaktır. Bu nedenle, bu seçeneği kendi içinde bulunan uygulamalarda veya seçeneğini kullanarak kullanmanız önerilir `dotnet exec <app.dll>` .
 
   > [!NOTE]
-  > DotNet sayaçları aracılığıyla bir .NET yürütülebiliri başlatmak, giriş/çıkışının yeniden yönlendirilmesini sağlar ve stdin/stdout ile etkileşime giremeyeceksiniz. CTRL + C veya SIGTERM aracılığıyla araçtan çıkmak, hem aracı hem de alt işlemi güvenle sonlandıracaktır. Alt işlem, araçtan önce çıktığında, araç da sonlandırılır ve izlemenin güvenle görüntülenebilir olması gerekir. STDIN/STDOUT kullanmanız gerekiyorsa `--diagnostic-port` seçeneğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Tanılama bağlantı noktası kullanma](#using-diagnostic-port) .
+  > DotNet sayaçları aracılığıyla bir .NET yürütülebiliri başlatmak, giriş/çıkışının yeniden yönlendirilmesini sağlar ve stdin/stdout ile etkileşime giremeyeceksiniz. CTRL + C veya SIGTERM aracılığıyla araçtan çıkmak, hem aracı hem de alt işlemi güvenle sonlandıracaktır. Alt işlem, araçtan önce çıktıklarında, araç da sonlandırılır. STDIN/STDOUT kullanmanız gerekiyorsa `--diagnostic-port` seçeneğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Tanılama bağlantı noktası kullanma](#using-diagnostic-port) .
 
 ### <a name="examples"></a>Örnekler
 
