@@ -2,12 +2,12 @@
 title: XML Belgeleri
 description: "Açıklamalardan belge oluşturmak için F # ' da destek hakkında bilgi edinin."
 ms.date: 09/15/2020
-ms.openlocfilehash: 24d9dbfb5e28d39e224ef9428f025298464fc7f4
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 2f8788e79ea964143eecfaddbeb039474dd61f8e
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099015"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025022"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
 
@@ -21,7 +21,7 @@ Tüm diğer yorumlar gibi XML belgesi açıklamaları derleyici tarafından yok 
 
 XML dosyasını, derleme zamanında aşağıdakilerden birini yaparak oluşturabilirsiniz:
 
-- Proje `GenerateDocumentationFile` `<PropertyGroup>` `.fsproj` dosyanızın bölümüne, derleme ile aynı kök dosya ADıNA sahip bir XML dosyası üreten bir öğe ekleyebilirsiniz. Örnek:
+- Proje `GenerateDocumentationFile` `<PropertyGroup>` `.fsproj` dosyanızın bölümüne, derleme ile aynı kök dosya ADıNA sahip bir XML dosyası üreten bir öğe ekleyebilirsiniz. Örneğin:
 
    ```xml
    <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -53,7 +53,7 @@ Aşağıda, bir imza dosyasındaki tipik bir XML belgesi yorumu verilmiştir:
 
 XML etiketleri kullanıyorsanız, aşağıdaki tabloda F # XML kod açıklamalarında tanınan dış Etiketler açıklanmaktadır.
 
-| Etiket sözdizimi                                  | Description |
+| Etiket sözdizimi                                  | Açıklama |
 |---------------------------------------------|-----------|
 | `<summary>`**_metinleri_**`</summary>`           | *Metnin* program öğesinin kısa bir açıklaması olduğunu belirtir. Açıklama genellikle bir veya iki cümle olur.|
 | `<remarks>`**_metinleri_**`</remarks>`           | *Metnin* program öğesiyle ilgili ek bilgileri içerdiğini belirtir.|
@@ -65,7 +65,7 @@ XML etiketleri kullanıyorsanız, aşağıdaki tabloda F # XML kod açıklamalar
 
 Aşağıdaki tabloda, açıklama bölümlerinin içinde kullanım için Etiketler açıklanmaktadır:
 
-| Etiket sözdizimi                                | Description |
+| Etiket sözdizimi                                | Açıklama |
 |-------------------------------------------|-------------|
 | `<para>`**_metinleri_**`</para>`               | Metnin paragrafını belirtir. Bu, **açıklamalar** etiketinin içindeki metni ayırmak için kullanılır.|
 | `<code>`**_metinleri_**`</code>`               | *Metnin* birden çok kod satırı olduğunu belirtir. Bu etiket, kod için uygun bir yazı tipinde metin göstermek üzere belge üreticileri tarafından kullanılabilir.|
@@ -87,7 +87,7 @@ Fsdocs gibi araçlar, gibi ek Etiketler için destek getirir [\<namespacedoc>](h
 ## <a name="documenting-f-constructs"></a>F # yapılarını belgeleme
 
 Modüller, Üyeler, birleşim durumları ve kayıt alanları gibi F # yapıları, `///` bildirimlerinden hemen önce bir yorum tarafından belgelenmiştir.
-Gerekirse, `///` bağımsız değişken listesinden önce bir yorum vererek sınıfların örtük oluşturucuları belgelenmiştir. Örnek:
+Gerekirse, `///` bağımsız değişken listesinden önce bir yorum vererek sınıfların örtük oluşturucuları belgelenmiştir. Örneğin:
 
 ```fsharp
 /// This is the type
@@ -101,7 +101,7 @@ type SomeType
 
 ## <a name="limitations"></a>Sınırlamalar
 
-C# ve diğer .NET dillerinde XML belgelerinin bazı özellikleri C# ' de desteklenmez.
+C# ve diğer .NET dillerinde XML belgelerinin bazı özellikleri F # dilinde desteklenmez.
 
 - F # ' da, çapraz başvuruların karşılık gelen sembolün tam XML imzasını kullanması gerekir, örneğin `cref="T:System.Console"` .
   Gibi basit C# stili çapraz başvurular `cref="Console"` ayrıntılı, tam XML imzalarına değildir ve bu öğeler F # derleyicisi tarafından denetlenmez. Bazı belge araçları, sonraki işleme tarafından bu çapraz başvuruların kullanılmasına izin verebilir, ancak tam imzaların kullanılması gerekir.
