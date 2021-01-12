@@ -17,6 +17,10 @@
           href: configure-vs-code.md
         - name: Azure CLI'yi yükleme
           href: install-azure-cli.md
+        - name: Ek araçlar yükleme
+          href: azure-tools.md
+        - name: Geliştirme kurulumu denetim listesi
+          href: dotnet-dev-env-checklist.md
 - name: Azure’a geçiş
   items:
     - name: Doğru Azure barındırma seçeneğini belirleme
