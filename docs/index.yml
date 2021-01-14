@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 10/9/2020
-  ms.openlocfilehash: ceaf08c55fd8119fea0edf427543403df0804413
-  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+  ms.openlocfilehash: e13d608c8840ef6081c6d3d4ecfd975c30b6a3a6
+  ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/04/2020
-  ms.locfileid: "96599674"
+  ms.lasthandoff: 01/14/2021
+  ms.locfileid: "98190799"
 highlightedContent:
   items:
   - title: .NET İndir
@@ -231,11 +231,11 @@ additionalContent:
         text: Apache Spark için .NET
     - title: Nesnelerin interneti (IoT)
       links:
-      - url: /dotnet/iot/
+      - url: ./iot/index.yml
         text: .NET IoT Kitaplıkları
-      - url: /dotnet/iot/quickstarts/sensehat
+      - url: ./iot/quickstarts/sensehat.md
         text: 5 adımda kullanmaya başlayın
-      - url: /dotnet/iot/tutorials/blink-led
+      - url: ./iot/tutorials/blink-led.md
         text: LED yanıp sönmesi
       - url: https://aka.ms/IoTNet101
         text: .NET IoT giriş video serisi
