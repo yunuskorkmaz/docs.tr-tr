@@ -2,12 +2,12 @@
 title: 'F # 5,0-F # kılavuzundaki yenilikler'
 description: "F # 5,0 ' de bulunan yeni özelliklere genel bakış alın."
 ms.date: 11/06/2020
-ms.openlocfilehash: 2384f1a75f5e708dc6f170d82fa15c5e0f54c85d
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 9b138e4801a3e599db650990acd53c0f956b78b8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740191"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190734"
 ---
 # <a name="whats-new-in-f-50"></a>F # 5,0 ' deki yenilikler
 
@@ -41,7 +41,7 @@ Ayrıca, paketin adından sonra aşağıdaki gibi bir açık sürüm sağlayabil
 
 Paket, ML.NET gibi yerel bağımlılıklarla destek paketlerine başvurur.
 
-Paket başvuruları, bağımlı s 'ye başvurma konusunda özel gereksinimlere sahip paketleri de destekler `.dll` . Örneğin, kullanıcıların [FParsec](https://www.nuget.org/packages/FParsec/) `FParsecCS.dll` `FParsec.dll` F# Etkileşimli ' de başvurulmadan önce kendisine bağımlı olarak başvurulduğunu El Ile garantilemek Için kullanılan fparsec paketi. Artık gerekli değildir ve pakete aşağıdaki gibi başvurabilirsiniz:
+Paket başvuruları, bağımlı s 'ye başvurma konusunda özel gereksinimlere sahip paketleri de destekler `.dll` . Örneğin, kullanıcıların [](https://www.nuget.org/packages/FParsec/) `FParsecCS.dll` `FParsec.dll` F# Etkileşimli ' de başvurulmadan önce kendisine bağımlı olarak başvurulduğunu El Ile garantilemek Için kullanılan fparsec paketi. Artık gerekli değildir ve pakete aşağıdaki gibi başvurabilirsiniz:
 
 ```fsharp
 #r "nuget: FParsec"
@@ -407,7 +407,7 @@ Bu özellik [F # RFC FS-1074](https://github.com/fsharp/fslang-design/blob/maste
 
 ## <a name="simplified-interop-with-nullable-value-types"></a>Null yapılabilir değer türleriyle Basitleştirilmiş birlikte çalışma
 
-[Null yapılabilir (değer) türleri](https://docs.microsoft.com/dotnet/api/system.nullable-1) (tarihsel olarak null yapılabilir türler olarak adlandırılır) F # tarafından desteklenmelidir, ancak bunlarla etkileşim kurmak istediğiniz `Nullable` her seferinde bir veya sarmalayıcı oluşturmanız gerektiğinden bu, geleneksel olarak bir sorun teşkil etti `Nullable<SomeType>` . Artık derleyici, hedef türü eşleşiyorsa bir değer türünü bir olarak öğesine dönüştürür `Nullable<ThatValueType>` . Aşağıdaki kod artık mümkündür:
+[Null yapılabilir (değer) türleri](/dotnet/api/system.nullable-1) (tarihsel olarak null yapılabilir türler olarak adlandırılır) F # tarafından desteklenmelidir, ancak bunlarla etkileşim kurmak istediğiniz `Nullable` her seferinde bir veya sarmalayıcı oluşturmanız gerektiğinden bu, geleneksel olarak bir sorun teşkil etti `Nullable<SomeType>` . Artık derleyici, hedef türü eşleşiyorsa bir değer türünü bir olarak öğesine dönüştürür `Nullable<ThatValueType>` . Aşağıdaki kod artık mümkündür:
 
 ```fsharp
 #r "nuget: Microsoft.Data.Analysis"
