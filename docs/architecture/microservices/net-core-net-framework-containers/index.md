@@ -1,19 +1,19 @@
 ---
-title: Docker Konteynerler için .NET Core ve .NET Framework arasında seçim
-description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Docker Konteynerler için .NET Core ve .NET Framework arasında seçim
-ms.date: 09/11/2018
-ms.openlocfilehash: b01aaf25f4071e8e4a07905a12ec9dd0d89a738d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: .NET 5 ve Docker kapsayıcıları için .NET Framework arasında seçim yapma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | .NET 5 ve Docker kapsayıcıları için .NET Framework arasında seçim yapma
+ms.date: 01/13/2021
+ms.openlocfilehash: 5c7ea1be02722fce7c5784afa89c18defbe4eeaf
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70849280"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188653"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a><span data-ttu-id="f53b5-103">Docker Konteynerler için .NET Core ve .NET Framework arasında seçim</span><span class="sxs-lookup"><span data-stu-id="f53b5-103">Choosing Between .NET Core and .NET Framework for Docker Containers</span></span>
+# <a name="choosing-between-net-and-net-framework-for-docker-containers"></a><span data-ttu-id="72dbf-103">Docker kapsayıcıları için .NET ve .NET Framework arasında seçim yapma</span><span class="sxs-lookup"><span data-stu-id="72dbf-103">Choosing Between .NET and .NET Framework for Docker Containers</span></span>
 
-<span data-ttu-id="f53b5-104">.NET ile sunucu tarafı kapsayıcı Docker uygulamaları oluşturmak için desteklenen iki çerçeve vardır: [.NET Framework ve .NET Core](https://dotnet.microsoft.com/download).</span><span class="sxs-lookup"><span data-stu-id="f53b5-104">There are two supported frameworks for building server-side containerized Docker applications with .NET: [.NET Framework and .NET Core](https://dotnet.microsoft.com/download).</span></span> <span data-ttu-id="f53b5-105">Birçok .NET platform bileşenini paylaşırlar ve kodu ikisi arasında paylaşabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f53b5-105">They share many .NET platform components, and you can share code across the two.</span></span> <span data-ttu-id="f53b5-106">Ancak, aralarında temel farklılıklar vardır ve hangi çerçeveyi kullandığınız neyi başarmak istediğinize bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="f53b5-106">However, there are fundamental differences between them, and which framework you use will depend on what you want to accomplish.</span></span> <span data-ttu-id="f53b5-107">Bu bölümde, her bir çerçevenin ne zaman seçileceklerine ilişkin kılavuzluk sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f53b5-107">This section provides guidance on when to choose each framework.</span></span>
+<span data-ttu-id="72dbf-104">.NET: [.NET Framework ve .NET 5](https://dotnet.microsoft.com/download)ile sunucu tarafı Kapsayıcılı Docker uygulamaları oluşturmaya yönelik iki desteklenen çerçeve vardır.</span><span class="sxs-lookup"><span data-stu-id="72dbf-104">There are two supported frameworks for building server-side containerized Docker applications with .NET: [.NET Framework and .NET 5](https://dotnet.microsoft.com/download).</span></span> <span data-ttu-id="72dbf-105">Bunlar birçok .NET Platform bileşenini paylaşır ve kodu iki arasında paylaşabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="72dbf-105">They share many .NET platform components, and you can share code across the two.</span></span> <span data-ttu-id="72dbf-106">Ancak bunlar arasında temel farklılıklar vardır ve kullandığınız çerçeve, gerçekleştirmek istediğiniz işe göre farklılık gösterir.</span><span class="sxs-lookup"><span data-stu-id="72dbf-106">However, there are fundamental differences between them, and which framework you use will depend on what you want to accomplish.</span></span> <span data-ttu-id="72dbf-107">Bu bölüm her bir çerçevenin ne zaman seçlenebileceğine ilişkin yönergeler sağlar.</span><span class="sxs-lookup"><span data-stu-id="72dbf-107">This section provides guidance on when to choose each framework.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="f53b5-108">[Önceki](../container-docker-introduction/docker-containers-images-registries.md)
->[Sonraki](general-guidance.md)</span><span class="sxs-lookup"><span data-stu-id="f53b5-108">[Previous](../container-docker-introduction/docker-containers-images-registries.md)
+><span data-ttu-id="72dbf-108">[Önceki](../container-docker-introduction/docker-containers-images-registries.md) 
+> [Sonraki](general-guidance.md)</span><span class="sxs-lookup"><span data-stu-id="72dbf-108">[Previous](../container-docker-introduction/docker-containers-images-registries.md)
 [Next](general-guidance.md)</span></span>
