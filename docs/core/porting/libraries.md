@@ -3,18 +3,18 @@ title: .NET Core 'a bağlantı noktası kitaplıkları
 description: .NET Framework kitaplığı projelerinin nasıl .NET Core 'a bağlantı sağladığını öğrenin.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 25c53cdc71f4269b058953ef1903dc72d222f65f
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 09874899018abc09051af17771c9df829b8dbe96
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633916"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189687"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core 'a bağlantı noktası .NET Framework kitaplıkları
 
 .NET Framework kitaplığı kodunun, platformlar arası çalıştığı ve onu kullanan uygulamaların erişimini genişleten .NET Core 'a bağlantı noktası oluşturma hakkında bilgi edinin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu makalede şunları kabul edersiniz:
 
@@ -30,8 +30,8 @@ Bu makalede, tüm .NET uygulamalarında kullanılabilmesi amaçlanan .NET API 'l
 [Platformlar arası araçlarla kitaplıklar geliştirme](../tutorials/libraries.md)\
 Bu makalede, .NET Core CLI kullanarak kitaplıkların nasıl yazılacağı açıklanır.
 
-[.NET Core için *csproj* biçimine eklemeler](../tools/csproj.md)\
-Bu makalede, *csproj* ve MSBuild 'e taşıma kapsamında proje dosyasına eklenen değişiklikler özetlenmektedir.
+[.NET projesi SDK 'Ları](../project-sdk/overview.md)\
+Bu makalede SDK stili proje dosya biçimi açıklanmaktadır.
 
 [.NET Core 'a taşıma-üçüncü taraf taraflarınızın bağımlılıklarını çözümleme](third-party-deps.md)\
 Bu makalede, üçüncü taraf bağımlılıkların taşınabilirliği ve bir NuGet paket bağımlılığı .NET Core üzerinde çalıştırılmazsa ne yapmalı anlatılmaktadır.

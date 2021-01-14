@@ -1,18 +1,18 @@
 ---
-title: 'Yöntem tabanlı sorgu söz dizimi örnekleri: JOIN (LINQ to DataSet)'
+title: 'Method-Based sorgu söz dizimi örnekleri: JOIN (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
-ms.openlocfilehash: 8bfcd8ae5d81c0d04ca7a43e6d5b25a492266605
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9573b1bf9dad77567fee8801a5e612c7efd53b1e
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189350"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187814"
 ---
-# <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>Yöntem tabanlı sorgu söz dizimi örnekleri: JOIN (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>Method-Based sorgu söz dizimi örnekleri: JOIN (LINQ to DataSet)
 
 Birleştirme, ilişkisel veritabanı tabloları gibi birbirleriyle gezinebilir ilişki bulunmayan veri kaynaklarını hedefleyen sorgularda önemli bir işlemdir. İki veri kaynağının birleşimi, bir veri kaynağındaki nesnelerin diğer veri kaynağında ortak bir özniteliği paylaşan nesneler ile ilişkilendirilmesi olur. Daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
@@ -51,5 +51,3 @@ Birleştirme, ilişkisel veritabanı tabloları gibi birbirleriyle gezinebilir i
 - [LINQ to DataSet Örnekleri](linq-to-dataset-examples.md)
 - [Standart sorgu Işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Örneklere katılarak](https://go.microsoft.com/fwlink/?LinkId=187357)
-- [Veri kümesi örnekleri](https://go.microsoft.com/fwlink/?LinkId=187358)

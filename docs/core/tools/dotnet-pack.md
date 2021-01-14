@@ -2,18 +2,18 @@
 title: DotNet paketi komutu
 description: DotNet Pack komutu .NET projeniz için NuGet paketleri oluşturur.
 ms.date: 04/28/2020
-ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a9a634c358f5de4f28c3de06edc9a2b4d2eb8d57
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674807"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190084"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet pack` -Kodu bir NuGet paketine paketler.
 
@@ -30,7 +30,7 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet pack -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet pack`Komut projeyi oluşturur ve NuGet paketleri oluşturur. Bu komutun sonucu bir NuGet paketidir (yani, bir *. nupkg* dosyası).
 
@@ -46,7 +46,7 @@ Varsayılan olarak, `dotnet pack` önce projeyi oluşturur. Bu davranışı önl
 > [!NOTE]
 > Bazı durumlarda, örtük derleme gerçekleştirilemez. Bu, `GeneratePackageOnBuild` ayarlandığında, derleme ve paket hedefleri arasındaki döngüsel bağımlılığı önlemek için oluşabilir. Ayrıca, kilitli bir dosya veya başka bir sorun varsa derleme başarısız olabilir.
 
-`dotnet pack`Paketleme işlemi için komutuna MSBuild özellikleri sağlayabilirsiniz. Daha fazla bilgi için bkz. [NuGet meta veri özellikleri](csproj.md#nuget-metadata-properties) ve [MSBuild Command-Line başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölümü, MSBuild-p anahtarının birkaç farklı senaryo için nasıl kullanılacağını gösterir.
+`dotnet pack`Paketleme işlemi için komutuna MSBuild özellikleri sağlayabilirsiniz. Daha fazla bilgi için bkz. [NuGet paketi hedef özellikleri](/nuget/reference/msbuild-targets#pack-target) ve [MSBuild Command-Line başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölümü, MSBuild `-p` anahtarının birkaç farklı senaryo için nasıl kullanılacağını gösterir.
 
 Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı geçersiz kılmak için, *. csproj* dosyanıza aşağıdaki özelliği ekleyin:
 
@@ -60,11 +60,11 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
 `PROJECT | SOLUTION`
 
-  Paket için proje veya çözüm. Bu bir [csproj dosyası](csproj.md), VBPROJ dosyası, fsproj dosyası, çözüm dosyası ya da bir dizin yoludur. Belirtilmemişse, komut geçerli dizinde bir proje veya çözüm dosyası arar.
+  Paket için proje veya çözüm. Bu, bir csproj, vbproj veya fsproj dosyasının veya çözüm dosyası ya da dizinin yoludur. Belirtilmemişse, komut geçerli dizinde bir proje veya çözüm dosyası arar.
 
 ## <a name="options"></a>Seçenekler
 

@@ -1,19 +1,19 @@
 ---
 title: Entity Framework Core ile altyapı kalıcılık katmanını uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Entity Framework Core kullanarak altyapı kalıcılığı katmanının uygulama ayrıntılarını bulun.
-ms.date: 01/30/2020
-ms.openlocfilehash: 878d4d64e92ca92fd2393d60d496f1c5671e7029
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 2c7b6dbe2f59a26d33a4842e74aed2b7588bd14d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172358"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188900"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Altyapı kalıcılığı katmanını Entity Framework Core ile uygulama
 
 SQL Server, Oracle veya PostgreSQL gibi ilişkisel veritabanları kullandığınızda önerilen bir yaklaşım, Entity Framework (EF) temelinde Kalıcılık katmanını uygulamaktır. EF, LINQ 'i destekler ve modelinize yönelik kesin olarak belirlenmiş nesneler sağlar ve veritabanınıza basit kalıcı hale getirir.
 
-Entity Framework .NET Framework bir parçası olarak uzun bir geçmişi vardır. .NET Core kullandığınızda, .NET Core ile aynı şekilde Windows veya Linux üzerinde çalışan Entity Framework Core de kullanmalısınız. EF Core, performansa göre çok daha küçük bir kaplama ve önemli iyileştirmeler ile uygulanan Entity Framework tamamen yeniden yazma işlemi olur.
+Entity Framework .NET Framework bir parçası olarak uzun bir geçmişi vardır. .NET kullandığınızda, .NET ile aynı şekilde Windows veya Linux üzerinde çalışan Entity Framework Core de kullanmanız gerekir. EF Core, performansa göre çok daha küçük bir kaplama ve önemli iyileştirmeler ile uygulanan Entity Framework tamamen yeniden yazma işlemi olur.
 
 ## <a name="introduction-to-entity-framework-core"></a>Entity Framework Core giriş
 
@@ -37,7 +37,7 @@ EF Core giriş Microsoft belgelerinde zaten mevcut olduğundan, bu bilgilere yö
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Bir DDD perspektifinden Entity Framework Core altyapısı
 
-DDD türünde, önemli bir özellik olan POCO etki alanı varlıklarını, POCO *kodu-ilk varlıkları*olarak EF terimlerinde de bilinen bir şekilde kullanma olanağıdır. POCO etki alanı varlıklarını kullanıyorsanız, etki alanı model sınıflarınız Kalıcılık [Ignorance](https://deviq.com/persistence-ignorance/) ve [altyapı Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) ilkelerine göre Kalıcılık-Ignorant ' dir.
+DDD türünde, önemli bir özellik olan POCO etki alanı varlıklarını, POCO *kodu-ilk varlıkları* olarak EF terimlerinde de bilinen bir şekilde kullanma olanağıdır. POCO etki alanı varlıklarını kullanıyorsanız, etki alanı model sınıflarınız Kalıcılık [Ignorance](https://deviq.com/persistence-ignorance/) ve [altyapı Ignorance](https://ayende.com/blog/3137/infrastructure-ignorance) ilkelerine göre Kalıcılık-Ignorant ' dir.
 
 DDD desenleri başına, varlık sınıfı içinde etki alanı davranışını ve kurallarını kapsüllemek gerekir, bu sayede herhangi bir koleksiyona erişirken ınvaryantlar, doğrulamaları ve kuralları kontrol edebilir. Bu nedenle, alt varlıkların veya değer nesnelerinin koleksiyonlarına genel erişime izin vermek için DDD 'da iyi bir uygulama değildir. Bunun yerine, alanlar ve özellik koleksiyonlarınızın nasıl ve ne zaman güncelleştirileceğini ve ne zaman meydana gelir ve eylemlerin ne zaman gerçekleşeceğini denetleyen yöntemleri göstermek istersiniz.
 
@@ -243,7 +243,7 @@ Depo için tek yaşam süresinin kullanılması, DbContext kapsam (InstancePerLi
 
 ## <a name="table-mapping"></a>Tablo eşleme
 
-Tablo eşleme, sorgulanacak tablo verilerini tanımlar ve veritabanına kaydedilir. Daha önce etki alanı varlıklarının (örneğin, bir ürün veya sipariş etki alanı) ilgili veritabanı şeması oluşturmak için nasıl kullanılabileceğini gördünüz. EF, *kural*kavramı etrafında kesin olarak tasarlanmıştır. Kurallar, "bir tablonun adı ne olacak?" gibi soruları ele alacak. or "birincil anahtar nedir?" Kurallar genellikle geleneksel adlara dayalıdır. Örneğin, birincil anahtarın ile biten bir özellik olması normaldir `Id` .
+Tablo eşleme, sorgulanacak tablo verilerini tanımlar ve veritabanına kaydedilir. Daha önce etki alanı varlıklarının (örneğin, bir ürün veya sipariş etki alanı) ilgili veritabanı şeması oluşturmak için nasıl kullanılabileceğini gördünüz. EF, *kural* kavramı etrafında kesin olarak tasarlanmıştır. Kurallar, "bir tablonun adı ne olacak?" gibi soruları ele alacak. or "birincil anahtar nedir?" Kurallar genellikle geleneksel adlara dayalıdır. Örneğin, birincil anahtarın ile biten bir özellik olması normaldir `Id` .
 
 Kural gereği, her varlık `DbSet<TEntity>` türetilmiş bağlamda varlığı sunan özelliği ile aynı ada sahip bir tabloya eşlenecek şekilde ayarlanır. `DbSet<TEntity>`Verilen varlık için hiçbir değer sağlanmazsa, sınıf adı kullanılır.
 
@@ -357,7 +357,7 @@ Merhaba/Lo algoritması, ilgili bir veritabanı sırasından benzersiz kimlik to
 
 - GUID kullanan tekniklerin aksine, okunabilir bir tanımlayıcı oluşturur.
 
-EF Core [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) `UseHiLo` , yukarıdaki örnekte gösterildiği gibi, yöntemiyle Tepo 'u destekler.
+EF Core [](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) `UseHiLo` , yukarıdaki örnekte gösterildiği gibi, yöntemiyle Tepo 'u destekler.
 
 ### <a name="map-fields-instead-of-properties"></a>Özellikler yerine harita alanları
 
@@ -371,7 +371,7 @@ EF Core 'daki gölge özellikler, varlık sınıfı modelinizde bulunmayan özel
 
 ## <a name="implement-the-query-specification-pattern"></a>Sorgu belirtim modelini uygulama
 
-Daha önce tasarım bölümünde sunulan sorgu belirtim şekli, isteğe bağlı sıralama ve sayfalama mantığı ile bir sorgunun tanımını koyabileceğiniz yer olarak tasarlanan bir etki alanı odaklı tasarım modelidir.
+Daha önce tasarım bölümünde sunulan sorgu belirtim deseninin, isteğe bağlı sıralama ve sayfalama mantığı ile bir sorgunun tanımını koyabileceğiniz yer olarak tasarlanan Domain-Driven tasarım deseninin olması gerekir.
 
 Sorgu belirtim stili bir nesne içindeki bir sorguyu tanımlar. Örneğin, bazı ürünleri arayan bir disk belleğine alınmış sorguyu kapsüllemek için gerekli giriş parametrelerini (pageNumber, pageSize, filtre, vb.) alan bir PagedProduct belirtimi oluşturabilirsiniz. Ardından, herhangi bir depo yönteminde (genellikle bir liste () aşırı yüklemesi) bir ıqueryspecification kabul eder ve beklenen sorguyu bu belirtiye göre çalıştırır.
 

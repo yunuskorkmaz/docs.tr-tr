@@ -1,29 +1,29 @@
 ---
 title: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
-description: Polly ve IHttpClientFactory ile HTTP hatalarını nasıl işleyeceğinizi öğrenin.
-ms.date: 03/03/2020
-ms.openlocfilehash: 49396dd545a05699278254474c77acf1483e0e0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: Polly ve ıhttpclientfactory ile HTTP hatalarının nasıl işleneceğini öğrenin.
+ms.date: 01/13/2021
+ms.openlocfilehash: 8cffc644d73eaec5019e00c6a83de8635b569cde
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846802"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189056"
 ---
-# <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>IHttpClientFactory ve Polly politikaları yla üstel geri dönüşiçeren HTTP çağrı yeniden denemelerini uygulayın
+# <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>Ihttpclientfactory ve Polly ilkeleriyle üstel geri alma ile HTTP çağrı yeniden denemeleri uygulayın
 
-Üstel geri tepme ile yeniden denemeler için önerilen yaklaşım, açık kaynak [Polly kitaplığı](https://github.com/App-vNext/Polly)gibi daha gelişmiş .NET kitaplıklarından yararlanmaktır.
+Üstel geri alma ile yeniden denemeler için önerilen yaklaşım, açık kaynaklı [Polly kitaplığı](https://github.com/App-vNext/Polly)gibi daha gelişmiş .net kitaplıklarından faydalanmalıdır.
 
-Polly, esneklik ve geçici hata işleme yetenekleri sağlayan bir .NET kitaplığıdır. Bu yetenekleri, Yeniden Deneme, Devre Kesici, Toplu Bölme İzolasyon, Zaman Ekme ve Geri Dönüş gibi Polly ilkelerini uygulayarak uygulayabilirsiniz. Polly hedefleri .NET Framework 4.x ve .NET Standart 1.0, 1.1 ve 2.0 (.NET Core destekler).
+Polly, esnekliği ve geçici hata işleme özellikleri sağlayan bir .NET kitaplığıdır. Yeniden deneme, devre kesici, Bulkhead yalıtımı, zaman aşımı ve geri dönüş gibi Polly ilkeler uygulayarak bu özellikleri uygulayabilirsiniz. .NET Framework 4. x ve .NET Standard 1,0, 1,1 ve 2,0 (.NET Core ve üstünü destekler).
 
-Aşağıdaki adımlar, polly entegre ile Http retries `IHttpClientFactory`nasıl kullanabileceğinizi gösterir , hangi önceki bölümde açıklanmıştır.
+Aşağıdaki adımlarda `IHttpClientFactory` , önceki bölümde açıklanan şekilde, ' deki ' i kullanarak http yeniden denemeleri nasıl kullanabileceğiniz gösterilmektedir.
 
-**ASP.NET Core 3.1 paketlerine başvurun**
+**ASP.NET Core 3,1 paketlerine başvurun**
 
-`IHttpClientFactory`.NET Core 2.1'den beri kullanılabilir, ancak projenizde NuGet'in en son ASP.NET Core 3.1 paketlerini kullanmanızı öneririz. Genellikle de uzantı paketine `Microsoft.Extensions.Http.Polly`başvurmanız gerekir.
+`IHttpClientFactory` , .NET Core 2,1 sürümünden itibaren kullanılabilir ancak projenizde NuGet 'den en son ASP.NET Core 3,1 paketlerini kullanmanızı öneririz. Uzantı paketine da başvurmanız gerekir `Microsoft.Extensions.Http.Polly` .
 
-**Başlangıç'ta bir istemciyi Polly'nin Yeniden Deneme ilkesiyle yapılandırma**
+**Başlangıçta, bir istemciyi Polly 'nin yeniden deneme ilkesiyle yapılandırma**
 
-Önceki bölümlerde gösterildiği gibi, standart Startup.ConfigureServices(...) yönteminizde adlandırılmış veya yazılan istemci HttpClient yapılandırmasını tanımlamanız gerekir, ancak şimdi, üslü geri tepmeli Http yeniden denemeleri için ilkeyi belirten artımlı kod ekleyebilirsiniz, Aşağıda:
+Önceki bölümlerde gösterildiği gibi, standart Startup.ConfigureServices (...) yönteminde adlandırılmış veya yazılmış bir istemci HttpClient yapılandırması tanımlamanız gerekir, ancak şu anda üstel geri alma ile http yeniden denemeleri için ilkeyi belirten artımlı kod ekleyin:
 
 ```csharp
 //ConfigureServices()  - Startup.cs
@@ -32,9 +32,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-**AddPolicyHandler()** yöntemi, kullanacağınız `HttpClient` nesnelere ilkeler ekleyen yöntemdir. Bu durumda, üstel geri tepme ile Http Retries için bir Polly politikası ekliyor.
+**Addpolicyhandler ()** yöntemi, `HttpClient` kullanacağınız nesnelere ilke ekler. Bu durumda, üstel geri alma ile http yeniden denemeleri için bir Polly ilkesi ekliyor.
 
-Daha modüler bir yaklaşıma sahip olmak için, Http Yeniden Deneme `Startup.cs` İlkesi, aşağıdaki kodda gösterildiği gibi dosya içinde ayrı bir yöntemle tanımlanabilir:
+Daha modüler bir yaklaşıma sahip olmak için, `Startup.cs` aşağıdaki kodda gösterildiği gibi, http yeniden deneme ilkesi dosya içinde ayrı bir yöntemde tanımlanabilir:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -47,11 +47,11 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-Polly ile yeniden deneme sayısı, üstel geri dönüş yapılandırması ve hatayı günlüğe kaydetme gibi bir HTTP özel durumu olduğunda yapılacak eylemleri içeren bir Yeniden Deneme ilkesi tanımlayabilirsiniz. Bu durumda, ilke iki saniyeden başlayarak üstel yeniden deneme ile altı kez denemek için yapılandırılır.
+Polly, yeniden deneme sayısı, üstel geri alma yapılandırması ve hatayı günlüğe kaydetme gibi bir HTTP özel durumu olduğunda gerçekleştirilecek eylemleri içeren bir yeniden deneme ilkesi tanımlayabilirsiniz. Bu durumda, ilke iki saniyeden itibaren bir üstel yeniden denemeye altı kez denemek üzere yapılandırılır.
 
-## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Yeniden deneme ilkesine bir jitter stratejisi ekleme
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Yeniden deneme ilkesine bir değişim stratejisi ekleyin
 
-Düzenli bir Yeniden Deneme ilkesi, yüksek eşzamanlılık ve ölçeklenebilirlik durumlarında ve yüksek çekişme altında sisteminizi etkileyebilir. Kısmi kesintiler durumunda birçok istemciden gelen benzer yeniden denemelerin doruklarına aşmak için, iyi bir geçici çözüm yeniden deneme algoritması /ilkesine bir gergin strateji eklemektir. Bu, üstel geri tepmeye rasgelelik ekleyerek uçtan uca sistemin genel performansını artırabilir. Sorunlar ortaya çıktığında bu ani artışlar yayılır. İlke aşağıdaki örnekle gösterilmiştir:
+Düzenli bir yeniden deneme ilkesi, sisteminizi yüksek eşzamanlılık ve ölçeklenebilirlik durumlarında ve yüksek çekişme kapsamında etkileyebilir. Kısmi kesintiler söz konusu olduğunda birçok istemciden gelen benzer yeniden denemelerin büyük bir bölümünü aşmak için, yeniden deneme algoritmasına/ilkeye bir değişim stratejisi eklemek iyi bir çözümdür. Bu, üstel geri alma 'ya rastgele açıklık ekleyerek uçtan uca sistemin genel performansını iyileştirebilir. Bu, sorunlar ortaya çıktığında ani artışları yayar. İlke aşağıdaki örneğe göre gösterilmiştir:
 
 ```csharp
 Random jitterer = new Random();
@@ -64,25 +64,25 @@ var retryWithJitterPolicy = HttpPolicyExtensions
     );
 ```
 
-Polly, proje web sitesi üzerinden üretime hazır jitter algoritmaları sağlar.
+Polly, proje Web sitesi aracılığıyla üretime hazırlı değişim algoritmaları sağlar.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Yeniden deneme deseni**  
+- **Yeniden deneme biçimi**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly ve IHttpClientFactory**  
+- **Polly ve ıhttpclientfactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly (.NET esneklik ve geçici hata işleme kitaplığı)**  
+- **Polly (.NET esnekliği ve geçici hata işleme kitaplığı)**  
   <https://github.com/App-vNext/Polly>
 
-- **Polly: Jitter ile Yeniden Deneyin**  
+- **Polly: değişim ile yeniden dene**  
   <https://github.com/App-vNext/Polly/wiki/Retry-with-jitter>
 
-- **Marc Brooker' ı. Jitter: Randomness ile Daha İyi Şeyler yapma**  
+- **Marc Brooker. Değişim: rastgele bir işlem yaparak daha Iyi hale getirme**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]
->[Önceki](use-httpclientfactory-to-implement-resilient-http-requests.md)
->[Sonraki](implement-circuit-breaker-pattern.md)
+>[Önceki](use-httpclientfactory-to-implement-resilient-http-requests.md) 
+> [Sonraki](implement-circuit-breaker-pattern.md)

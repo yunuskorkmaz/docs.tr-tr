@@ -2,12 +2,12 @@
 title: 'Son değişiklik: BinaryFormatter serileştirme yöntemleri artık kullanılmıyor ve ASP.NET uygulamalarında yasaklanmış'
 description: BinaryFormatter, Formatter ve IFormatter 'daki serileştirme ve seri durumdan çıkarma yöntemlerinin artık kullanılmayan çekirdek .NET kitaplıklarında .NET 5,0 'in son değişikliği hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 5807a7d4e6beab26b9848b803922396dd893075b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1dca30d33f2aa0a6fe8f05fe728557092f836b2d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761526"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189850"
 ---
 # <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>BinaryFormatter serileştirme yöntemleri artık kullanılmıyor ve ASP.NET uygulamalarında yasaklanmış
 
@@ -75,7 +75,7 @@ Bu yöntemler <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatt
   </PropertyGroup>
   ```
 
-Önerilen eylemler hakkında daha fazla bilgi için bkz. [BinaryFormatter kullanımdan çıkarma ve disablement hatalarını çözümleme](https://aka.ms/binaryformatter).
+Önerilen eylemler hakkında daha fazla bilgi için bkz. [BinaryFormatter kullanımdan çıkarma ve disablement hatalarını çözümleme](../../../../standard/serialization/binaryformatter-security-guide.md).
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 

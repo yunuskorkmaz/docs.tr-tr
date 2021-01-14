@@ -2,13 +2,13 @@
 title: .NET mikro hizmetleri ve Web uygulamalarının güvenliğini sağlama
 description: .NET mikro hizmetleri ve Web uygulamalarında güvenlik-ASP.NET Core Web uygulamalarında kimlik doğrulama seçeneklerini öğrenin.
 author: mjrousos
-ms.date: 08/07/2020
-ms.openlocfilehash: 01797189ce946c39bc7b8cafdff1e69ff9760e4e
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.date: 01/13/2021
+ms.openlocfilehash: 1bb03e8abdf6daa0b6c4570eb35643898f797cc0
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160678"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188060"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Güvenli .NET mikro hizmetleri ve Web uygulamaları oluşturun
 

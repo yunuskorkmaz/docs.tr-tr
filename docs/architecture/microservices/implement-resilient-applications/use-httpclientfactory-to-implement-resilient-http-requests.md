@@ -1,19 +1,19 @@
 ---
 title: Dayanıklı HTTP isteklerini uygulamak için IHttpClientFactory kullanma
 description: .NET Core 2,1 ' den bu yana sunulan ıhttpclientfactory kullanarak, örnek oluşturmak için, `HttpClient` bunu uygulamalarınızda kullanmanızı kolaylaştırmayı öğrenin.
-ms.date: 08/31/2020
-ms.openlocfilehash: 4ebb82395dd685d30846b3549b654abf7c41d43f
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 01/13/2021
+ms.openlocfilehash: 056a8982fe4331e7e680b33cf1f43785b48da7d6
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804815"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189004"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Dayanıklı HTTP isteklerini uygulamak için IHttpClientFactory kullanma
 
 <xref:System.Net.Http.IHttpClientFactory> , `DefaultHttpClientFactory` uygulamalarınızda kullanılacak örnekleri oluşturmak için .NET Core 2,1 ' den beri sunulan, OPTA uygulanmış bir fabrika olan tarafından uygulanan bir sözleşmedir <xref:System.Net.Http.HttpClient> .
 
-## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>.NET Core 'da sunulan özgün HttpClient sınıfı ile ilgili sorunlar
+## <a name="issues-with-the-original-httpclient-class-available-in-net"></a>.NET 'te sunulan özgün HttpClient sınıfı ile ilgili sorunlar
 
 Özgün ve iyi bilinen <xref:System.Net.Http.HttpClient> sınıf kolayca kullanılabilir, ancak bazı durumlarda birçok geliştirici tarafından düzgün şekilde kullanılmamalıdır.
 
@@ -23,7 +23,7 @@ Bu nedenle, `HttpClient` bir kez örneğinin oluşturulması ve bir uygulamanın
 
 Geliştiricilerin üzerinde çalıştığı diğer bir sorun `HttpClient` da uzun süreli işlemlerde paylaşılan bir örnek kullanıyor. HttpClient 'ın tek veya statik bir nesne olarak örneklendiği bir durumda, DotNet/Runtime GitHub deposunun bu [sorunu](https://github.com/dotnet/runtime/issues/18348) konusunda AÇıKLANDıĞı gibi DNS değişikliklerini işleyemez.
 
-Ancak, sorun `HttpClient` büyük bir dönem için değildir, ancak yukarıda bahsedilen yuva tükenmesi ve DNS değişiklik sorunları olan yeni bir somut örnek oluşturduğundan, [HttpClient için varsayılan oluşturucuya](/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)sahip değildir <xref:System.Net.Http.HttpMessageHandler> . *sockets exhaustion*
+Ancak, sorun `HttpClient` büyük bir dönem için değildir, ancak yukarıda bahsedilen yuva tükenmesi ve DNS değişiklik sorunları olan yeni bir somut örnek oluşturduğundan, [HttpClient için varsayılan oluşturucuya](/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)sahip değildir <xref:System.Net.Http.HttpMessageHandler> . 
 
 Yukarıda bahsedilen sorunları gidermek ve örnekleri yönetilebilir hale getirmek için `HttpClient` .NET Core 2,1, <xref:System.Net.Http.IHttpClientFactory> `HttpClient` bağımlılık ekleme (dı) aracılığıyla bir uygulamadaki örnekleri yapılandırmak ve oluşturmak için kullanılabilecek arabirimi kullanıma sunmuştur. Ayrıca, HttpClient 'daki işleyiciler için temsilci atama özelliğinden yararlanmak üzere, Polly tabanlı ara yazılım için uzantılar sağlar.
 
@@ -190,7 +190,7 @@ Bu noktaya kadar, yukarıdaki kod parçacığı yalnızca normal HTTP istekleri 
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **.NET Core 'da HttpClientFactory kullanma**  
+- **.NET 'te HttpClientFactory kullanma**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
 - **GitHub deposundaki HttpClientFactory kaynak kodu `dotnet/extensions`**  

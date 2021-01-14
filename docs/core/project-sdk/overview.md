@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET proje SDK 'Ları hakkında bilgi edinin.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 2adb0713fabda142d071425a2affe66cc9d4c172
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970700"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189674"
 ---
 # <a name="net-project-sdks"></a>.NET projesi SDK 'Ları
 
@@ -19,7 +19,7 @@ ms.locfileid: "97970700"
 
 Aşağıdaki SDK 'lar kullanılabilir:
 
-| ID | Açıklama | Depo|
+| ID | Description | Depo|
 | - | - | - |
 | `Microsoft.NET.Sdk` | .NET SDK | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Web` | .NET [Web SDK 'sı](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
@@ -79,11 +79,11 @@ Bu yollarla bir SDK 'ya başvurmak, .NET için proje dosyalarını büyük ölç
 
 SDK ve hedefleri komutu kullanılarak eklendikten sonra, tam genişletilmiş projeyi MSBuild olarak görebilirsiniz `dotnet msbuild -preprocess` . Komutun [ön işlem](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) anahtarı [`dotnet msbuild`](../tools/dotnet-msbuild.md) hangi dosyaların içeri aktarılacağını, kaynaklarını ve derleme için gerçekten projeyi oluşturmadan yapıya katkılarını gösterir.
 
-Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odaklayın. Örneğin:
+Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odaklayın. Örnek:
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-includes-and-excludes"></a>Varsayılan içerme ve dışladığı
+## <a name="default-includes-and-excludes"></a>Varsayılan içerme ve dışladığı
 
 [ `Compile` Öğelerin](/visualstudio/msbuild/common-msbuild-project-items#compile), [katıştırılmış kaynakların](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource)ve [ `None` öğelerin](/visualstudio/msbuild/common-msbuild-project-items#none) varsayılan dahil ve hariç olması SDK 'da tanımlanmıştır. SDK olmayan .NET Framework projelerinin aksine, varsayılanlar en yaygın kullanım durumlarını kapsadığından proje dosyanızda bu öğeleri belirtmeniz gerekmez. Bu davranış, proje dosyasını daha küçük ve gerektiğinde daha kolay anlaşılır ve düzenlenebilir hale getirir.
 
@@ -98,7 +98,7 @@ Aşağıdaki tabloda, .NET SDK 'sında hangi öğelerin ve hangi [genelleştirme
 > [!NOTE]
 > Ve `./bin` `./obj` MSBuild özellikleriyle temsil edilen ve klasörleri, `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` Varsayılan olarak genelleştirmeler 'tan çıkarılır. Dışlayarak [DefaultItemExcludes özelliği](msbuild-props.md#defaultitemexcludes)tarafından temsil edilir.
 
-#### <a name="build-errors"></a>Derleme hataları
+### <a name="build-errors"></a>Derleme hataları
 
 Proje dosyanızda bu öğelerden herhangi birini açıkça tanımlarsanız, büyük olasılıkla aşağıdakine benzer bir "NETSDK1022" derleme hatası alırsınız:
 
@@ -131,6 +131,31 @@ Hataları gidermek için aşağıdakilerden birini yapın:
   ```
 
   Yalnızca genelleştirmeler 'yi devre dışı bırakırsanız `Compile` , Visual Studio 'daki Çözüm Gezgini, \* öğe olarak da dahil olmak üzere projenin bir parçası olarak. cs öğelerini gösterir `None` . Örtük glob 'yi devre dışı bırakmak için `None` , `EnableDefaultNoneItems` çok olarak ayarlayın `false` .
+
+## <a name="build-events"></a>Derleme olayları
+
+SDK stili projelerde, veya adında bir MSBuild hedefi kullanın `PreBuild` `PostBuild` ve `BeforeTargets` özelliğini `PreBuild` veya `AfterTargets` özelliğini ayarlayın `PostBuild` .
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
+</Target>
+```
+
+> [!NOTE]
+>
+> - MSBuild hedefleri için herhangi bir ad kullanabilirsiniz. Ancak, Visual Studio IDE tanır `PreBuild` ve `PostBuild` hedefler, bu nedenle bu adları kullanarak IDE 'deki komutları düzenleyebilirsiniz.
+> - Özellikler ve, gibi `PreBuildEvent` `PostBuildEvent` makrolar çözümlenmediği için SDK stili projelerde önerilmez `$(ProjectDir)` . Örneğin, aşağıdaki kod desteklenmez:
+>
+> ```xml
+> <PropertyGroup>
+>   <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"</PreBuildEvent>
+> </PropertyGroup>
+> ```
 
 ## <a name="customize-the-build"></a>Derlemeyi özelleştirme
 
@@ -168,7 +193,7 @@ Aşağıdaki XML, bir *. csproj* dosyasındaki, [`dotnet pack`](../tools/dotnet-
     </ItemGroup>
   </Target>
   ...
-  
+
 </Project>
 ```
 

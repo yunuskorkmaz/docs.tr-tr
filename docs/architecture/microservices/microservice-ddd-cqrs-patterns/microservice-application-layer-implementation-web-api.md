@@ -1,13 +1,13 @@
 ---
 title: Web API’si kullanarak mikro hizmet uygulama katmanını uygulama
 description: Bağımlılık ekleme ve ortalama düzenlerini ve bunların uygulama ayrıntılarını Web API 'SI uygulama katmanında anlayın.
-ms.date: 08/17/2020
-ms.openlocfilehash: 45121026e06c55258a16f41aa801c06808a6919f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.date: 01/13/2021
+ms.openlocfilehash: bf37b0bfc7d9438752673d1c617657822b2a48ad
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437797"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188978"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API 'sini kullanarak mikro hizmet uygulama katmanını uygulama
 
@@ -27,7 +27,7 @@ ASP.NET Core, varsayılan olarak Oluşturucu ekleme işlemini destekleyen basit 
 
 Genellikle, altyapı nesneleri uygulayan bağımlılıklar eklemek istersiniz. Ekleme için tipik bir bağımlılık, bir depodur. Ancak sahip olduğunuz herhangi bir altyapı bağımlılığı ekleyebilirsiniz. Daha basit uygulamalar için, DBContext aynı zamanda altyapı Kalıcılık nesnelerinizin uygulanması olduğundan, çalışma birimi nesnesi (EF DbContext nesnesi) birimini doğrudan ekleyebiliriniz.
 
-Aşağıdaki örnekte, .NET Core 'un Oluşturucu aracılığıyla gerekli depo nesnelerini nasıl ekleme görürsünüz. Sınıfı, sonraki bölümde ele alınacak bir komut işleyicisidir.
+Aşağıdaki örnekte, .NET 'in, Oluşturucu aracılığıyla gerekli depo nesnelerini nasıl ekleme görürsünüz. Sınıfı, sonraki bölümde ele alınacak bir komut işleyicisidir.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -111,7 +111,7 @@ Bir IOC kapsayıcısına türlerin kaydedilmesinde en sık kullanılan desenler,
 
 #### <a name="use-the-scrutor-library-for-automatic-types-registration"></a>Otomatik türler kaydı için Itilen kitaplığı kullanın
 
-.NET Core 'da dı kullanırken, bir derlemeyi tarayabilmesi ve türlerini kurala göre otomatik olarak kaydetmenizi isteyebilirsiniz. Bu özellik şu anda ASP.NET Core ' de kullanılamaz. Ancak, bunun için [itilen](https://github.com/khellang/Scrutor) kitaplığı kullanabilirsiniz. Bu yaklaşım, IOC kapsayıcısına kaydedilmesi gereken düzinelerce türlerinizin olması durumunda kullanışlıdır.
+.NET 'te dı kullanırken, bir derlemeyi tarayabilmesi ve türlerini kurala göre otomatik olarak kaydetmenizi isteyebilirsiniz. Bu özellik şu anda ASP.NET Core ' de kullanılamaz. Ancak, bunun için [itilen](https://github.com/khellang/Scrutor) kitaplığı kullanabilirsiniz. Bu yaklaşım, IOC kapsayıcısına kaydedilmesi gereken düzinelerce türlerinizin olması durumunda kullanışlıdır.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
@@ -503,7 +503,7 @@ Herhangi bir durumda bu, uygulamanızın veya mikro hizmetin iş gereksinimlerin
 
 Örnek bir uygulama olarak, bu kılavuz, komut alımı ve yönlendirme komutlarının, doğru komut işleyicileriyle bir şekilde kullanılması için Mediator düzenine göre işlem içi ardışık düzeni kullanmayı önerir. Kılavuz, ayrıca çapraz kesme sorunlarını ayırmak için [davranışları](https://github.com/jbogard/MediatR/wiki/Behaviors) uygulamayı önerir.
 
-.NET Core 'da uygulama için, ortalama modelini uygulayan birden çok açık kaynak kitaplığı mevcuttur. Bu kılavuzda kullanılan kitaplık, [Ortaatr](https://github.com/jbogard/MediatR) açık kaynak kitaplığıdır (cemy Bogard tarafından oluşturulmuştur), ancak başka bir yaklaşım kullanabilirsiniz. MediatR, dekoratörler veya davranışlar uygulanırken, bir komut gibi bellek içi iletileri işlemenize olanak tanıyan küçük ve basit bir kitaplıktır.
+.NET ' te uygulama için, ortalama modelini uygulayan birden çok açık kaynak kitaplığı mevcuttur. Bu kılavuzda kullanılan kitaplık, [Ortaatr](https://github.com/jbogard/MediatR) açık kaynak kitaplığıdır (cemy Bogard tarafından oluşturulmuştur), ancak başka bir yaklaşım kullanabilirsiniz. MediatR, dekoratörler veya davranışlar uygulanırken, bir komut gibi bellek içi iletileri işlemenize olanak tanıyan küçük ve basit bir kitaplıktır.
 
 Mediator deseninin kullanılması, bağlantıyı azaltmanıza ve istenen çalışmanın kaygılarını yalıtmanıza yardımcı olur ve bu durumda, bu çalışmayı gerçekleştiren işleyiciye otomatik olarak (Bu örnekte, komut işleyicilerine) bağlantı kurar.
 

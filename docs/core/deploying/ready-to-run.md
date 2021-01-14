@@ -4,12 +4,12 @@ description: .NET 5 ve .NET Core 3,0 ve üzeri ile uygulamanızı yayımlamalar�
 author: davidwr
 ms.author: davidwr
 ms.date: 09/21/2020
-ms.openlocfilehash: cd8eaebd05d79b11e90e255e702a52220fffda76
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: 3302e5e18a20965a1eff1f09737910e924ed6d08
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342637"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188614"
 ---
 # <a name="readytorun-compilation"></a>ReadyToRun derlemesi
 
@@ -17,7 +17,7 @@ ms.locfileid: "93342637"
 
 R2R ikilileri, tam zamanında (JıT) derleyicisinin uygulamanız yüklenirken yapması gereken iş miktarını azaltarak başlangıç performansını geliştirir. İkililer, JıT 'in üretmesine kıyasla benzer yerel kod içerir. Ancak, R2R ikilileri, bazı senaryolar için hala gerekli olan hem ara dil (IL) kodunu hem de aynı kodun yerel sürümünü içerdiğinden, daha büyüktür. R2R yalnızca Linux x64 veya Windows x64 gibi belirli çalışma zamanı ortamlarını (RID) hedefleyen bir uygulama yayımladığınızda kullanılabilir.
 
-Projenizi ReadyToRun olarak derlemek için, uygulamanın PublishReadyToRun özelliği true olarak ayarlanmış şekilde yayımlanması gerekir.
+Projenizi ReadyToRun olarak derlemek için, uygulamanın PublishReadyToRun özelliği olarak ayarlanmış şekilde yayımlanması gerekir `true` .
 
 Uygulamanızı ReadyToRun olarak yayımlamanın iki yolu vardır:
 
@@ -27,7 +27,7 @@ Uygulamanızı ReadyToRun olarak yayımlamanın iki yolu vardır:
     dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true
     ```
 
-02. Projede özelliği belirtin
+02. Projede özelliğini belirtin.
 
     - `<PublishReadyToRun>`Ayarı projenize ekleyin.
 
@@ -45,13 +45,13 @@ Uygulamanızı ReadyToRun olarak yayımlamanın iki yolu vardır:
 
 ## <a name="impact-of-using-the-readytorun-feature"></a>ReadyToRun özelliğini kullanmanın etkileri
 
-Güncel derleme, uygulama performansı üzerinde karmaşık performans etkilerine sahiptir ve tahmin edilmesi zor olabilir. Genel olarak, bir derlemenin boyutu iki ila üç kat daha büyük olacak şekilde artar. Dosyanın fiziksel boyutundaki bu artış, derlemeyi diskten yükleme performansını azaltabilir ve işlemin çalışma kümesini artırabilir. Ancak, dönüş sırasında çalışma zamanında derlenen yöntemlerin sayısı genellikle önemli ölçüde azaltılır. Sonuç olarak, büyük miktarlarda koda sahip uygulamaların, ReadyToRun 'ı etkinleştirmesinin büyük performans avantajları vardır. .NET çalışma zamanı kitaplıkları zaten ReadyToRun ile önceden derlenmiş olduğundan, az miktarda koda sahip uygulamalar, ReadyToRun 'ı etkinleştirmenin önemli bir geliştirmesini yaşmaz.
+Güncel derleme, uygulama performansı üzerinde karmaşık performans etkilerine sahiptir ve bu da tahmin etmek zor olabilir. Genel olarak, bir derlemenin boyutu iki ila üç kat daha büyük olacak şekilde artar. Dosyanın fiziksel boyutundaki bu artış, derlemeyi diskten yükleme performansını azaltabilir ve işlemin çalışma kümesini artırabilir. Ancak, dönüş sırasında çalışma zamanında derlenen yöntemlerin sayısı genellikle önemli ölçüde azaltılır. Sonuç olarak, büyük miktarlarda koda sahip uygulamaların, ReadyToRun 'ı etkinleştirmesinin büyük performans avantajları vardır. .NET çalışma zamanı kitaplıkları zaten ReadyToRun ile önceden derlenmiş olduğundan, az miktarda koda sahip uygulamalar, ReadyToRun 'ı etkinleştirmenin önemli bir geliştirmesini yaşmaz.
 
 Burada açıklanan başlangıç geliştirmesi yalnızca uygulama başlatma için değil, aynı zamanda uygulamadaki herhangi bir kodun ilk kullanımı için de geçerlidir. Örneğin, ReadyToRun, bir ASP.NET uygulamasında Web API 'sinin ilk kullanımı için yanıt gecikmesini azaltmak üzere kullanılabilir.
 
 ### <a name="interaction-with-tiered-compilation"></a>Katmanlı derleme ile etkileşim
 
-Oluşturulma Zamanı, JıT tarafından üretilen kod olarak en iyi duruma getirilmiştir. Bu sorunu gidermek için katmanlı derleme yaygın olarak kullanılan ReadyToRun yöntemlerini JıT tarafından oluşturulan yöntemlerle değiştirecektir.
+Önceden oluşturulan kod, JıT tarafından oluşturulan kod olarak yüksek oranda iyileştirilmemiştir. Bu sorunu gidermek için katmanlı derleme yaygın olarak kullanılan ReadyToRun yöntemlerini JıT tarafından oluşturulan yöntemlerle değiştirecektir.
 
 ## <a name="how-is-the-set-of-precompiled-assemblies-chosen"></a>Önceden derlenmiş derlemeler kümesi nasıl seçilir?
 
@@ -59,15 +59,13 @@ SDK, uygulamayla dağıtılan derlemeleri önceden derler. Kendi içinde bulunan
 
 ## <a name="how-is-the-set-of-methods-to-precompile-chosen"></a>Nasıl önceden derlenecek yöntemler kümesi seçildi?
 
-Derleyici, mümkün olduğunca çok metodu önceden derlemeye çalışır. Ancak, ReadyToRun özelliğinin kullanılması beklenmediğinden, JıT 'in yürütülmesini engellemesine neden olur.
+Derleyici, mümkün olduğunca çok metodu önceden derlemeye çalışır. Bununla birlikte, çeşitli nedenlerle ReadyToRun özelliğinin kullanılması JıT 'in yürütülmesini engelleyecek şekilde beklenmez. Bu nedenlerden bazıları şunlar olabilir ancak bunlarla sınırlı değildir:
 
-Bu nedenlerden bazıları şunlar olabilir ancak bunlarla sınırlı değildir:
-
-- Ayrı derlemelerde tanımlanmış genel türlerin kullanımı
-- Yerel kodla birlikte çalışma
-- Derleyicinin bir hedef makinede kullanımı kanıtlayamadığını donanım iç bilgileri kullanımı
-- Belirli olağandışı Il desenleri
-- Yansıma veya LINQ aracılığıyla dinamik yöntem oluşturma
+- Ayrı derlemelerde tanımlanmış genel türlerin kullanımı.
+- Yerel kodla birlikte çalışma.
+- Derleyicinin bir hedef makinede kullanımı kanıtlayamadığını donanım iç bilgileri kullanımı.
+- Belirli olağandışı Il desenleri.
+- Yansıma veya LINQ aracılığıyla dinamik yöntem oluşturma.
 
 ## <a name="cross-platformarchitecture-restrictions"></a>Platformlar arası/mimari kısıtlamaları
 

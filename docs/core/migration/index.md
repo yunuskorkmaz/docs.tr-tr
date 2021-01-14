@@ -2,12 +2,12 @@
 title: project.js'den .NET Core geçişi
 description: project.jskullanarak eski bir .NET Core projesini nasıl geçirebileceğinizi öğrenin
 ms.date: 07/19/2017
-ms.openlocfilehash: 73fbfed6943e3eb535e6eead3b3496edd3426c26
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 28da1723ed91d169305c2865c5346b8ce6e0b3d1
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970726"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189717"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>.NET Core projelerini project.js'tan geçirme
 
@@ -78,7 +78,7 @@ Geçerli veya üst dizinde bir *global.js* dosyanız varsa ve `sdk` belirttiği 
 - XML ad alanını ( `xmlns` ) `<Project>` öğeden kaldırın.
 - Yoksa, `Sdk` özniteliğini `<Project>` öğesine ekleyin ve veya olarak ayarlayın `Microsoft.NET.Sdk` `Microsoft.NET.Sdk.Web` . Bu öznitelik, projenin kullanılacak SDK 'Yı kullandığını belirtir. `Microsoft.NET.Sdk.Web` Web uygulamaları için kullanılır.
 - `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />`Ve `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` deyimlerini projenin üst ve alt kısmından kaldırın. Bu içeri aktarma deyimleri SDK tarafından kapsanıyor, bu nedenle projenin projede olması gerekmez.
-- `Microsoft.NETCore.App`Projenizde veya öğeleriniz varsa `NETStandard.Library` `<PackageReference>` , bunları kaldırmanız gerekir. Bu paket başvuruları [SDK tarafından kapsanıyor](../tools/csproj.md).
+- `Microsoft.NETCore.App`Projenizde veya öğeleriniz varsa `NETStandard.Library` `<PackageReference>` , bunları kaldırmanız gerekir. Bu paket başvuruları [SDK tarafından kapsanıyor](../project-sdk/overview.md).
 - Varsa `Microsoft.NET.Sdk` `<PackageReference>` , öğeyi kaldırın. SDK başvurusu, `Sdk` öğesindeki özniteliği aracılığıyla gelir `<Project>` .
 - [SDK tarafından kapsanan](../project-sdk/overview.md#default-includes-and-excludes) [genelleştirmeler](https://en.wikipedia.org/wiki/Glob_(programming)) kaldırın. Derleme öğeleri yineleneceği için bu genelleştirmeler, projenizde bir hata oluşmasına neden olur.
 

@@ -4,12 +4,12 @@ description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kayna
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0adc348c1fc340fe481d9987cdbe28c6cf8b065d
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.openlocfilehash: e0c86b377d4ea73bb275bc48c0f0cccb2db249dd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938682"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190006"
 ---
 # <a name="introduction-to-net"></a>.NET’e giriş
 
@@ -24,7 +24,7 @@ ms.locfileid: "97938682"
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [Evrensel Windows Platformu (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [Oynayabilir](https://dotnet.microsoft.com/apps/games)
-* [Nesnelerin İnterneti (IoT)](/dotnet/iot)
+* [Nesnelerin İnterneti (IoT)](../iot/index.yml)
 * [Makine öğrenmesi](../machine-learning/index.yml)
 * [Konsol uygulamaları](tutorials/with-visual-studio-code.md)
 * [Windows Hizmetleri](/aspnet/core/host-and-deploy/windows-service)

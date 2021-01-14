@@ -3,13 +3,13 @@ title: .NET 'teki seçenek kalıbı
 author: IEvangelist
 description: .NET uygulamalarında ilgili ayarların gruplarını temsil etmek için seçenekler deseninin nasıl kullanılacağını öğrenin.
 ms.author: dapine
-ms.date: 12/04/2020
-ms.openlocfilehash: 14a81608c41f63abfc562e1a845ca893ff7cdf25
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.date: 01/06/2021
+ms.openlocfilehash: 392b3abca01864349f8b1b25ffb3109132d2435a
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764922"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189733"
 ---
 # <a name="options-pattern-in-net"></a>.NET 'teki seçenek kalıbı
 
@@ -22,18 +22,20 @@ Seçenekler Ayrıca yapılandırma verilerini doğrulamaya yönelik bir mekanizm
 
 ## <a name="bind-hierarchical-configuration"></a>Hiyerarşik yapılandırmayı bağlama
 
-İlgili yapılandırma değerlerini okumak için tercih edilen yol, Seçenekler modelini kullanmaktır. Örneğin, aşağıdaki yapılandırma değerlerini okumak için:
+İlgili yapılandırma değerlerini okumak için tercih edilen yol, Seçenekler modelini kullanmaktır. Seçenekler deseninin, <xref:Microsoft.Extensions.Options.IOptions%601> genel tür parametresinin kısıtlı olduğu arabirim aracılığıyla mümkündür `TOptions` `class` . `IOptions<TOptions>`Daha sonra bağımlılık ekleme yoluyla sağlanabilebilirler. Daha fazla bilgi için bkz. [.net 'e bağımlılık ekleme](dependency-injection.md).
+
+Örneğin, aşağıdaki yapılandırma değerlerini okumak için:
 
 :::code language="json" source="snippets/configuration/console-json/appsettings.json" range="3-6":::
 
 Aşağıdaki sınıfı oluşturun `TransientFaultHandlingOptions` :
 
-:::code language="csharp" source="snippets/configuration/console-json/TransientFaultHandlingOptions.cs" range="5-6":::
+:::code language="csharp" source="snippets/configuration/console-json/TransientFaultHandlingOptions.cs" range="5-9":::
 
-Seçenekler sınıfı:
+<span id="options-class"></span> Seçenekler deseninin kullanıldığı bir seçenek sınıfı:
 
-* Ortak parametresiz bir oluşturucuya sahip olmayan Özet olmamalıdır
-* Bağlanacak genel okuma-yazma özelliklerini içerir (alanlar * değil _ bağlı **değildir**)
+- Ortak parametresiz bir oluşturucuya sahip olmayan Özet olmamalıdır
+- Bağlanacak genel okuma-yazma özelliklerini içerir (alanlar * değil _ bağlı **değildir**)
 
 Aşağıdaki kod:
 
@@ -51,13 +53,16 @@ IConfigurationRoot configurationRoot = configuration.Build();
 
 var options =
     configurationRoot.GetSection(nameof(TransientFaultHandlingOptions))
-        .Get<TransientFaultHandlingOptions>();
+                     .Get<TransientFaultHandlingOptions>();
 
 Console.WriteLine($"TransientFaultHandlingOptions.Enabled={options.Enabled}");
 Console.WriteLine($"TransientFaultHandlingOptions.AutoRetryDelay={options.AutoRetryDelay}");
 ```
 
 Yukarıdaki kodda, uygulama başladıktan sonra JSON yapılandırma dosyasında yapılan değişiklikler okundu.
+
+> [!IMPORTANT]
+> <xref:Microsoft.Extensions.Configuration.ConfigurationBinder>Sınıfı, ve gibi çeşitli API 'ler sunar `.Bind(object instance)` `.Get<T>()`  `class` . [Seçenek arabirimlerinden](#options-interfaces)herhangi birini kullanırken, yukarıda bahsedilen [seçenek sınıfı kısıtlamalarına](#options-class)uymalısınız.
 
 Seçenekler deseninin kullanılmasına yönelik alternatif bir yaklaşım, `"TransientFaultHandlingOptions"` bölümü bağlamak ve [bağımlılık ekleme hizmeti kapsayıcısına](dependency-injection.md)eklemektir. Aşağıdaki kodda, `TransientFaultHandlingOptions` ile hizmet kapsayıcısına eklenir <xref:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure%2A> ve yapılandırmaya bağlanır:
 
@@ -68,7 +73,7 @@ services.Configure<TransientFaultHandlingOptions>(
 ```
 
 > [!TIP]
-> `key`Parametresi, arama yapılacak yapılandırma bölümünün adıdır. Bunu temsil eden türün adıyla *eşleşmesi gerekmez.* Örneğin, adlı bir bölüm olabilir `"FaultHandling"` ve sınıfı tarafından temsil edilebilir `TransientFaultHandlingOptions` . Bu örnekte, `"FaultHandling"` <xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A> bunun yerine işlevine geçiş yapabilirsiniz. `nameof`İşleci, adlandırılmış bölüm öğesine karşılık gelen türle eşleşen bir kolaylık olarak kullanılır.
+> `key`Parametresi, arama yapılacak yapılandırma bölümünün adıdır. Bu, bunu temsil eden türün adı ile eşleşmelidir _not *. Örneğin, adlı bir bölüm olabilir `"FaultHandling"` ve sınıfı tarafından temsil edilebilir `TransientFaultHandlingOptions` . Bu örnekte, `"FaultHandling"` <xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A> bunun yerine işlevine geçiş yapabilirsiniz. `nameof`İşleci, adlandırılmış bölüm öğesine karşılık gelen türle eşleşen bir kolaylık olarak kullanılır.
 
 Önceki kodu kullanarak, aşağıdaki kod konum seçeneklerini okur:
 

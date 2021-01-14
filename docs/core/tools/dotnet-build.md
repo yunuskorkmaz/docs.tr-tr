@@ -2,18 +2,18 @@
 title: DotNet derleme komutu
 description: DotNet derleme komutu bir projeyi ve tüm bağımlılıklarını oluşturur.
 ms.date: 02/14/2020
-ms.openlocfilehash: ea0291129aeaed3bebef5c454ff003131bd3562b
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: cc8c6ed30dbf8ff0602fb19e5001f618a8380f16
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634487"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189967"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet build` -Bir projeyi ve tüm bağımlılıklarını oluşturur.
 
@@ -29,7 +29,7 @@ dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet build -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet build`Komutu projeyi ve onun bağımlılıklarını bir ikili dosya kümesine oluşturur. İkili dosyalar, projenin kodunu *. dll* uzantılı ara DIL (IL) dosyalarına dahil eder.  Proje türü ve ayarlarına bağlı olarak, şu gibi diğer dosyalar dahil edilebilir:
 
@@ -69,7 +69,7 @@ Seçeneklerine ek olarak `dotnet build` komut, `-p` özellikleri ayarlama veya b
 
 Çalışıyor, `dotnet build` çalıştırmaya eşdeğerdir `dotnet msbuild -restore` ; ancak, çıktının varsayılan ayrıntı düzeyi farklıdır.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
 `PROJECT | SOLUTION`
 
@@ -83,7 +83,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Belirli bir [çerçeve](../../standard/frameworks.md)için derlenir. Çerçeve [Proje dosyasında](csproj.md)tanımlanmalıdır.
+  Belirli bir [çerçeve](../../standard/frameworks.md)için derlenir. Çerçeve [Proje dosyasında](../project-sdk/overview.md)tanımlanmalıdır.
 
 - **`--force`**
 

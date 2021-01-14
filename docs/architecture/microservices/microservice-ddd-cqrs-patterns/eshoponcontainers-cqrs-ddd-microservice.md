@@ -1,13 +1,13 @@
 ---
 title: eShopOnContainers üzerinde bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS 'nin eShopOnContainers 'daki sıralama mikro hizmetinde uygulanma biçimini anlayın.
-ms.date: 03/03/2020
-ms.openlocfilehash: 2916df596a6d0f887411f3ef0074aed395ef58ba
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.date: 01/13/2021
+ms.openlocfilehash: 0c07ecad0fb2dfdaea85d47b519b858e0519f6bd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306948"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188263"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>EShopOnContainers içindeki DDD mikro hizmetinde CQRS ve CQS yaklaşımları uygulama
 
@@ -27,7 +27,7 @@ Bu tür bir model, daha sonraki bölümlerde daha fazla bilgi yaptığımız top
 
 "Sorgular tarafını" uygulamak için EF Core, Automaber projeksiyonu, saklı yordamlar, görünümler, gerçekleştirilmiş görünümler veya mikro ORM gibi tam blown ORM arasından birçok yaklaşım arasından seçim yapabilirsiniz.
 
-Bu kılavuzda ve eShopOnContainers 'da (özellikle sıralama mikro hizmeti), mikro [bir gibi mikro](https://github.com/StackExchange/dapper-dot-net)bir sorgu kullanarak düz sorgular uygulamayı seçtik. Bu, en iyi performansı elde etmek için SQL deyimlerine dayalı herhangi bir sorgu uygulamanızı sağlar.
+Bu kılavuzda ve eShopOnContainers 'da (özellikle sıralama mikro hizmeti), mikro [bir gibi mikro](https://github.com/StackExchange/dapper-dot-net)bir sorgu kullanarak düz sorgular uygulamayı seçtik. Bu kılavuz, çok daha fazla ek olan hafif bir çatı sayesinde en iyi performansı elde etmek için SQL deyimlerine dayalı herhangi bir sorgu uygulamanıza olanak sağlar.
 
 Bu yaklaşımı kullandığınızda, modelinizdeki varlıkların bir SQL veritabanına nasıl kalıcı olduğunu etkileyen tüm güncelleştirmeler aynı zamanda, sorgulama için bir veya daha fazla farklı (EF olmayan) yaklaşım tarafından kullanılan SQL sorgularına ayrı güncelleştirmeler de gerekir.
 
@@ -37,7 +37,7 @@ CQRS ve en çok DDD desenlerinin (örneğin, DDD katmanları veya toplamalar iç
 
 Farklı sınırlanmış bağlamlar (IBH) farklı desenler kullanacaktır. Farklı sorumluluklara sahiptir ve bu farklı çözümlere yol açar. Her yerde aynı modele zorlamak, hataya yol açar. CQRS ve DDD düzenlerini her yerde kullanmayın. Birçok alt sistemi, IBH veya mikro hizmet daha basittir ve basit CRUD Hizmetleri kullanılarak veya başka bir yaklaşım kullanarak daha kolay bir şekilde uygulanabilir.
 
-Yalnızca bir uygulama mimarisi vardır: tasarlamakta olduğunuz sistemin veya uçtan uca uygulamanın mimarisi (örneğin, mikro hizmetler mimarisi). Ancak, bu uygulamadaki her sınırlı bağlam veya mikro hizmetin tasarımı, mimari desenler düzeyinde kendi dengelerini ve iç tasarım kararlarını yansıtır. CQRS veya DDD gibi her yerde aynı mimari desenleri uygulamayı denemeyin.
+Yalnızca bir uygulama mimarisi vardır: tasarlamakta olduğunuz sistemin veya uçtan uca uygulamanın mimarisi (örneğin, mikro hizmetler mimarisi). Ancak, bu uygulamadaki her sınırlı bağlam veya mikro hizmetin tasarımı, mimari desenler düzeyinde kendi dengelerini ve iç tasarım kararlarını yansıtır. Her yerde CQRS veya DDD olarak aynı mimari desenleri uygulamayı denemeyin.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 

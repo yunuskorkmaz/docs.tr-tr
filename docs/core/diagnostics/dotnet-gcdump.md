@@ -2,12 +2,12 @@
 title: DotNet-gcdump Tanılama aracı-.NET CLı
 description: .NET EventPipe kullanarak canlı .NET işlemlerinin GC (çöp toplayıcısı) dökümlerini toplamak için DotNet-gcdump CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: fe7772eed642daadbd1754627751f58d0ab57b8e
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593376"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188575"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Yığın Analizi Aracı (DotNet-gcdump)
 
@@ -32,8 +32,11 @@ ms.locfileid: "97593376"
   | İşletim Sistemi  | Platform |
   | --- | -------- |
   | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \| [x64](https://aka.ms/dotnet-gcdump/win-x64) \| [ARM](https://aka.ms/dotnet-gcdump/win-arm) \| [ARM-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
-  | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
+  | Mac OS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \| [ARM](https://aka.ms/dotnet-gcdump/linux-arm) \| [arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \| [MUSL-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \| [MUSL-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
+
+> [!NOTE]
+> `dotnet-gcdump`X86 uygulamasında kullanmak için, aracın karşılık gelen x86 sürümüne ihtiyacınız vardır.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -103,6 +106,12 @@ dotnet-gcdump collect [-h|--help] [-p|--process-id <pid>] [-o|--output <gcdump-f
 - **`-n|--name <name>`**
 
   GC dökümünü toplanacak işlemin adı.
+
+> [!NOTE]
+> Linux ve macOS 'ta, bu komut hedef uygulamayı bekler ve `dotnet-gcdump` aynı `TMPDIR` ortam değişkenini paylaşır. Aksi takdirde, komut zaman aşımına uğrar.
+
+> [!NOTE]
+> Kullanarak bir GC dökümünü toplamak için `dotnet-gcdump` , kullanıcının hedef işlem çalıştıran kullanıcı veya kök olarak aynı kullanıcı olarak çalıştırılması gerekir. Aksi halde araç, hedef işlemle bağlantı kurmayacak.
 
 ## `dotnet-gcdump ps`
 

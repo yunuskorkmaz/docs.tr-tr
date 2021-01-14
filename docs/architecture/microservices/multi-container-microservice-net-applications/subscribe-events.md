@@ -1,17 +1,17 @@
 ---
 title: Olaylara abone olma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Tümleştirme olaylarına yayımlama ve aboneliğin ayrıntılarını anlayın.
-ms.date: 01/30/2020
-ms.openlocfilehash: 838aaebbd390a66142c2bcdfa2f3b0ee4c32b7f0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: c9146ddbdfbf00e743108c07af1f74d7690a17a8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172215"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188731"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
-Olay veri yolunu kullanmanın ilk adımı, mikro hizmetlerin almak istedikleri olaylara abone olmadır. Bu, alıcının mikro hizmetlerinde yapılmalıdır.
+Olay veri yolunu kullanmanın ilk adımı, mikro hizmetlerin almak istedikleri olaylara abone olmadır. Bu işlev, alıcı mikro hizmetlerinde yapılmalıdır.
 
 Aşağıdaki basit kod, hizmet başlatıldığında (yani, `Startup` sınıfında), ihtiyaç duyacağı olaylara abone olmak için her bir alıcı mikro hizmetinin ne yapması gerektiğini gösterir. Bu durumda, `basket-api` mikro hizmet 'e abone olmalıdır `ProductPriceChangedIntegrationEvent` ve `OrderStartedIntegrationEvent` iletileri.
 
@@ -32,7 +32,7 @@ Bu kod çalıştıktan sonra, abone mikro hizmeti, Kbbitmq kanalları aracılı�
 
 ## <a name="publishing-events-through-the-event-bus"></a>Olay veri yolu aracılığıyla olayları yayımlama
 
-Son olarak, ileti gönderici (Origin mikro hizmeti), tümleştirme olaylarını aşağıdaki örneğe benzer kodla yayımlar. (Bu, hesapta kararlılık olmayan basitleştirilmiş bir örnektir.) Her bir olayın birden fazla mikro hizmette yayılması gerektiğinde, genellikle kaynak mikro hizmetinden veri veya işlem gerçekleştirildikten sonra, benzer bir kod uygulamalısınız.
+Son olarak, ileti gönderici (Origin mikro hizmeti), tümleştirme olaylarını aşağıdaki örneğe benzer kodla yayımlar. (Bu yaklaşım, hesap için bir kararlılık olmayan basitleştirilmiş bir örnektir.) Her bir olayın birden fazla mikro hizmette yayılması gerektiğinde, genellikle kaynak mikro hizmetinden veri veya işlem gerçekleştirildikten sonra, benzer bir kod uygulamalısınız.
 
 İlk olarak, aşağıdaki kodda olduğu gibi, olay veri yolu uygulama nesnesi (Kbbitmq veya bir Service Bus tabanlı olarak) denetleyici oluşturucusuna eklenir:
 
@@ -91,25 +91,25 @@ Daha gelişmiş mikro hizmetlerde, CQRS yaklaşımları kullanırken olduğu gib
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Olay veri yoluna yayımlarken kararlılık ve dayanıklılık tasarlama
 
-Olay veri yolu gibi dağıtılmış bir mesajlaşma sistemi aracılığıyla tümleştirme olaylarını yayımladığınızda, özgün veritabanını otomatik olarak güncelleştirme ve bir olay yayımlama (yani, her iki işlem de tamamlanmamış ya da hiçbiri) ile ilgili sorun oluşur. Örneğin, daha önce gösterilen Basitleştirilmiş örnekte kod, ürün fiyatı değiştirildiğinde verileri veritabanına kaydeder ve sonra bir Productpricechangedıntegrationevent iletisi yayımlar. Başlangıçta, bu iki işlemin otomatik olarak gerçekleştirilmesi için önemli görünebilir. Bununla birlikte, [Microsoft Message Queuing (MSMQ)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))gibi eski sistemlerde yaptığınız gibi, veritabanı ve ileti Aracısı ile ilgili dağıtılmış bir işlem kullanıyorsanız, bu, bu [sınır](https://www.quora.com/What-Is-CAP-Theorem-1)sonunda açıklanan nedenlerden dolayı önerilmez.
+Olay veri yolu gibi dağıtılmış bir mesajlaşma sistemi aracılığıyla tümleştirme olaylarını yayımladığınızda, özgün veritabanını otomatik olarak güncelleştirme ve bir olay yayımlama (yani, her iki işlem de tamamlanmamış ya da hiçbiri) ile ilgili sorun oluşur. Örneğin, daha önce gösterilen Basitleştirilmiş örnekte kod, ürün fiyatı değiştirildiğinde verileri veritabanına kaydeder ve sonra bir Productpricechangedıntegrationevent iletisi yayımlar. Başlangıçta, bu iki işlemin otomatik olarak gerçekleştirilmesi için önemli görünebilir. Ancak, [Microsoft Message Queuing (MSMQ)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))gibi eski sistemlerde yaptığınız gibi, veritabanı ve ileti Aracısı ile ilgili dağıtılmış bir işlem kullanıyorsanız, bu yaklaşım, [Cap](https://www.quora.com/What-Is-CAP-Theorem-1)'ler tarafından belirtilen nedenlerden dolayı önerilmez.
 
 Temel olarak, mikro hizmetleri, ölçeklenebilir ve yüksek oranda kullanılabilir sistemler oluşturmak için kullanırsınız. Biraz basitleşerek, CAP 'ler sürekli kullanılabilir, güçlü bir şekilde tutarlı *ve* herhangi bir bölüme dayanıklı bir (dağıtılmış) veritabanı (veya modeline sahip bir mikro hizmet) derlemediğini söyler. Bu üç özelliklerden ikisini de seçmeniz gerekir.
 
 Mikro hizmet tabanlı mimarilerde kullanılabilirlik ve tolerans ' i seçmeniz ve güçlü tutarlılığı geçersiz vurgulamalısınız. Bu nedenle, çoğu modern mikro hizmet tabanlı uygulamalarda, [MSMQ](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))ile Windows dağıtılmış işlem DÜZENLEYICISI (DTC) tabanlı [Dağıtılmış işlemler](/previous-versions/windows/desktop/ms681205(v=vs.85)) uyguladığınızda yaptığınız gibi genellikle mesajlaşma 'da dağıtılmış işlemleri kullanmak istemezsiniz.
 
-İlk soruna ve bu örneğe geri dönelim. Veritabanı güncelleştirildikten sonra hizmet çöktüğünde (Bu durumda, ile kod satırından hemen sonra `_context.SaveChangesAsync()` ), ancak tümleştirme olayı yayımlanmadan önce, genel sistem tutarsız hale gelebilir. Bu, ilgilendiğiniz belirli iş işlemine bağlı olarak iş açısından kritik olabilir.
+İlk soruna ve bu örneğe geri dönelim. Veritabanı güncelleştirildikten sonra hizmet çöktüğünde (Bu durumda, ile kod satırından hemen sonra `_context.SaveChangesAsync()` ), ancak tümleştirme olayı yayımlanmadan önce, genel sistem tutarsız hale gelebilir. Bu yaklaşım, ilgilendiğiniz belirli iş işlemine bağlı olarak iş açısından kritik olabilir.
 
 Mimari bölümünde daha önce bahsedildiği gibi, bu sorunla ilgilenirken çeşitli yaklaşımlara sahip olabilirsiniz:
 
 - Tam olay kaynağını belirleme [düzenini](/azure/architecture/patterns/event-sourcing)kullanma.
 
-- [İşlem günlüğü madenciliği](https://www.scoop.it/t/sql-server-transaction-log-mining)kullanılıyor.
+- İşlem günlüğü madenciliği kullanılıyor.
 
 - [Giden kutusu deseninin](https://www.kamilgrzybek.com/design/the-outbox-pattern/)kullanımı. Bu, tümleştirme olaylarını depolamak için (yerel işlemi genişletme) bir işlem tablosudur.
 
 Bu senaryoda, en iyi *durumda değilse,* tam olay kaynağını BELIRLEME (es) deseninin kullanılması en iyi yaklaşımlardan biridir. Bununla birlikte, birçok uygulama senaryosunda, bir tam ES sistemi uygulamaımayabilir. ES, geçerli durum verilerini depolamak yerine yalnızca işlem veritabanınızda bulunan etki alanı olaylarını depolayan anlamına gelir. Yalnızca etki alanı olaylarının depolanması, sisteminizin geçmişini ve geçmişteki bir zamanda sisteminizin durumunu tespit etmek gibi harika avantajlar elde edebilir. Ancak, bir tam ES sisteminin uygulanması sisteminizin çoğunu yeniden mimararak birçok karmaşıklığın ve gereksinimin tanıtılmasının yapılmasını gerektirir. Örneğin, Event [Store](https://eventstore.org/)veya Azure Cosmos DB, MongoDB, Cassandra, couşdb veya ırvendb gibi belge yönelimli bir veritabanı için özel olarak oluşturulan bir veritabanını kullanmak isteyebilirsiniz. Daha önce olay kaynağını öğrenmediğiniz müddetçe, bu soruna yönelik harika bir yaklaşım, ancak en kolay çözüm değildir.
 
-İşlem günlüğü madenciliği ilk başta kullanma seçeneği saydam görünüyor. Ancak, bu yaklaşımı kullanmak için mikro hizmetin SQL Server işlem günlüğü gibi RDBMS işlem günlüğü ile bağlanmış olması gerekir. Bu muhtemelen istenmez. Diğer bir sakıncası, işlem günlüğünde kayıtlı olan alt düzey güncelleştirmelerin, üst düzey tümleştirme olaylarınız ile aynı düzeyde olmaması olabilir. Bu durumda, bu işlem günlüğü işlemlerinin tersine mühendislik işlemi zor olabilir.
+İşlem günlüğü madenciliği ilk başta kullanma seçeneği saydam görünüyor. Ancak, bu yaklaşımı kullanmak için mikro hizmetin SQL Server işlem günlüğü gibi RDBMS işlem günlüğü ile bağlanmış olması gerekir. Bu yaklaşım muhtemelen istenmez. Diğer bir sakıncası, işlem günlüğünde kayıtlı olan alt düzey güncelleştirmelerin, üst düzey tümleştirme olaylarınız ile aynı düzeyde olmaması olabilir. Bu durumda, bu işlem günlüğü işlemlerinin tersine mühendislik işlemi zor olabilir.
 
 Dengeli yaklaşım, bir işlem veritabanı tablosu ve Basitleştirilmiş ES deseninin bir karışımıdır. Tümleştirme olayları tablosuna kaydettiğinizde, özgün olayında ayarladığınız "olayı yayımlamaya hazırlanma" gibi bir durum kullanabilirsiniz. Daha sonra olayı olay veri yoluna yayımlamayı deneyin. Yayımla-olay eylemi başarılı olursa, kaynak hizmetinde başka bir işlem başlatır ve durumu "olayı yayımlanmaya hazırlanıyor" olarak "olay zaten yayımlandı" olarak taşırsınız.
 
@@ -355,7 +355,7 @@ Aralıklı ağ arızalarının meydana gelmesi durumunda iletiler yinelenebilir 
 - **Olay deposu veritabanı**. Resmi site. \
     <https://geteventstore.com/>
 
-- **Patrick Nmmensen. Mikro hizmetler için olay odaklı Veri Yönetimi** \
+- **Patrick Nmmensen. Mikro hizmetler için Event-Driven Veri Yönetimi** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **Üst sınır** \

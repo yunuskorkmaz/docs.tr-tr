@@ -1,17 +1,17 @@
 ---
 title: CQRS mikro hizmetinde okuma/sorgulama işlemleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS 'nin sorgular tarafının, Davber kullanarak eShopOnContainers 'daki sıralama mikro hizmeti üzerinde uygulanmasını anlayın.
-ms.date: 10/08/2018
-ms.openlocfilehash: e6ea7b4b7b37df9ee972319f597ab045bf3bd215
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.date: 01/13/2021
+ms.openlocfilehash: 047fc3893dcaf72a17d29f5560c928879757d024
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678809"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188926"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS mikro hizmetinde okuma/sorgu uygulama
 
-Okuma/sorgular için, eShopOnContainers başvuru uygulamasından gelen sıralama mikro hizmeti, sorguları DDD modeli ve işlem alanından bağımsız olarak uygular. Bu, öncelikle sorgular ve işlemler için talepler büyük ölçüde farklı olduğundan yapıldı. Yazar, etki alanı mantığı ile uyumlu olması gereken işlemleri yürütür. Diğer yandan sorgular, ıdempotent ve etki alanı kurallarından ayrılmış olabilir.
+Okuma/sorgular için, eShopOnContainers başvuru uygulamasından gelen sıralama mikro hizmeti, sorguları DDD modeli ve işlem alanından bağımsız olarak uygular. Bu uygulama öncelikle sorgu ve işlemler için talepler büyük ölçüde farklı olduğundan yapıldı. Yazar, etki alanı mantığı ile uyumlu olması gereken işlemleri yürütür. Diğer yandan sorgular, ıdempotent ve etki alanı kurallarından ayrılmış olabilir.
 
 Şekil 7-3 ' de gösterildiği gibi yaklaşım basittir. API arabirimi, Web API denetleyicileri tarafından, kaber gibi mikro nesne Ilişkisel Eşleyici (ORM) ve Kullanıcı arabirimi uygulamalarının ihtiyaçlarına bağlı olarak dinamik Viewmodeller gibi bir altyapı kullanılarak uygulanır.
 
@@ -21,7 +21,7 @@ Okuma/sorgular için, eShopOnContainers başvuru uygulamasından gelen sıralama
 
 Basitleştirilmiş bir CQRS yaklaşımında sorgu tarafı için en basit yaklaşım, bir Micro-ORM gibi, dinamik ViewModel döndüren veritabanı sorgulanarak uygulanabilir. Sorgu tanımları veritabanını sorgular ve her sorgu için anında oluşturulmuş dinamik bir ViewModel döndürür. Sorgular ıdempotent olduğundan, bir sorgu kaç kez çalıştırıldıklarından bağımsız olarak verileri değiştirmez. Bu nedenle, işlem tarafında, Toplamalar ve diğer desenler gibi kullanılan DDD deseniyle kısıtlanması gerekmez ve sorguların işlem alanından ayrılması neden olur. Kullanıcı arabiriminin gerek duyduğu verilerin veritabanını sorgular ve SQL deyimlerinin kendisi hariç her yerde statik olarak tanımlanması gerekmeyen dinamik bir ViewModel (ViewModel için sınıf olmadan) döndürür.
 
-Bu yaklaşım basit olduğundan, sorgular tarafı için gereken kod (örneğin, mikro ORM 'yi kullanan kod [gibi)](https://github.com/StackExchange/Dapper) [aynı Web API projesi içinde](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)uygulanabilir. Şekil 7-4 bunu gösterir. Sorgular, eShopOnContainers çözümünde **sıralama. API** mikro hizmet projesinde tanımlanmıştır.
+Bu yaklaşım basit olduğundan, sorgular tarafı için gereken kod (örneğin, mikro ORM 'yi kullanan kod [gibi)](https://github.com/StackExchange/Dapper) [aynı Web API projesi içinde](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)uygulanabilir. Şekil 7-4 bu yaklaşımı gösterir. Sorgular, eShopOnContainers çözümünde **sıralama. API** mikro hizmet projesinde tanımlanmıştır.
 
 ![Sıralama. API projesinin sorgular klasörünün ekran görüntüsü.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
@@ -33,7 +33,7 @@ Sorgular, istemci uygulamaları için gereken verileri elde etmek üzere gerçek
 
 Döndürülen veriler (ViewModel), veritabanındaki birden çok varlık veya tablodan ya da işlem alanı için etki alanı modelinde tanımlanan birden çok toplama arasında veri birleştirme sonucu olabilir. Bu durumda, etki alanı modelinden bağımsız sorgular oluştururken, toplamalar sınırları ve kısıtlamaları yok sayılır ve ihtiyacınız olan herhangi bir tabloyu ve sütunu sorgulayabilirsiniz. Bu yaklaşım, sorguları oluşturan veya güncelleştiren geliştiriciler için harika esneklik ve verimlilik sağlar.
 
-Viewmodeller sınıflarda tanımlanmış statik türler olabilir (sıralama mikro hizmetinde uygulandığı gibi). Ya da geliştiriciler için çok çevik olan gerçekleştirilen sorgulara göre dinamik olarak oluşturulabilir.
+Viewmodeller sınıflarda tanımlanmış statik türler olabilir (sıralama mikro hizmetinde uygulandığı gibi). Ya da geliştiriciler için çevik olan, gerçekleştirilen sorgulara göre dinamik olarak oluşturulabilir.
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Sorguları gerçekleştirmek için mikro ORM olarak kaber kullanma
 
@@ -173,7 +173,7 @@ public class OrderSummary
 }
 ```
 
-Bu, açık olarak döndürülen türlerin uzun dönemde dinamik türlerden daha iyi olmasının diğer bir nedenidir. `ProducesResponseType`Özniteliğini kullanırken, olası sonuçları 200, 400 gibi OLASı http hatalarına/kodlarına göre hangi beklenen sonucun olduğunu da belirtebilirsiniz.
+Bu, açık olarak döndürülen türlerin uzun dönemde dinamik türlerden daha iyi olmasının diğer bir nedenidir. `ProducesResponseType`Özniteliğini kullanırken, OLASı http hataları/kodları (200, 400 vb. gibi) için beklenen sonucun ne olduğunu de belirtebilirsiniz.
 
 Aşağıdaki görüntüde, Swagger Kullanıcı arabiriminin ResponseType bilgilerini nasıl gösterdiğini görebilirsiniz.
 

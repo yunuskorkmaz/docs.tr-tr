@@ -1,13 +1,13 @@
 ---
 title: Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Geliştirme veya test ortamları için tümleştirme olayları için bir olay veri yolu mesajlaşma uygulamak üzere Kbbitmq kullanın.
-ms.date: 10/02/2018
-ms.openlocfilehash: 1af72d18825eb610d6900178205450e2c2e34c25
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.date: 01/13/2021
+ms.openlocfilehash: a1e7d11e376080a03269f202fa6ae24ffeb0f4d2
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306896"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188087"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 
@@ -21,7 +21,7 @@ Kbbitmq ile olay veri yolu uygulamasının, Şekil 6-21 ' de gösterildiği gibi
 
 **Şekil 6-21.** Bir olay veri yolunun Kbıbitmq uygulama
 
-Kbbitmq, dağıtımı işlemek için ileti yayımcısı ve aboneler arasında bir aracı olarak çalışır. Kodda, Eventbuskbbitmq sınıfı, genel ıeventbus arabirimini uygular. Bu, bu geliştirme/test sürümünden üretim sürümüne geçiş yapabilmeniz için bağımlılık ekleme tabanlıdır.
+Kbbitmq, dağıtımı işlemek için ileti yayımcısı ve aboneler arasında bir aracı olarak çalışır. Kodda, Eventbuskbbitmq sınıfı, genel ıeventbus arabirimini uygular. Bu uygulama, bu geliştirme/test sürümünden üretim sürümüne geçiş yapabilmeniz için bağımlılık ekleme işlemini temel alır.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -35,7 +35,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Kbbitmq ile basit bir yayımlama yöntemi uygulama
 
-Aşağıdaki kod, tüm senaryoyu göstermek için, Kbbitmq için bir Event Bus uygulamasının ***Basitleştirilmiş*** bir sürümüdür. Bu şekilde bağlantıyı gerçekten işlemezsiniz. Tam uygulamayı görmek için, [DotNet-Architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) deposundaki gerçek koda bakın.
+Aşağıdaki kod, tüm senaryoyu göstermek amacıyla, Kbbitmq için bir Event Bus uygulamasının **_Basitleştirilmiş_* _ sürümüdür. Bu şekilde bağlantıyı gerçekten işlemezsiniz. Tam uygulamayı görmek için, [DotNet-Architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) deposundaki gerçek koda bakın.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -63,7 +63,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-EShopOnContainers uygulamasındaki Publish yönteminin [gerçek kodu](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) bir [Polly](https://github.com/App-vNext/Polly) yeniden deneme ilkesi kullanılarak geliştirilmiştir ve bu da, kbbitmq kapsayıcısının hazırlanmadığından, görevi belirli sayıda kez yeniden dener. Docker-Compose kapsayıcıları başlattığında bu durum oluşabilir; Örneğin, Korbbitmq kapsayıcısı diğer kapsayıcılardan daha yavaş başlayabilir.
+EShopOnContainers uygulamasındaki Publish yönteminin [gerçek kodu](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) bir [Polly](https://github.com/App-vNext/Polly) yeniden deneme ilkesi kullanılarak geliştirilmiştir ve bu da, kbbitmq kapsayıcısının hazırlanmasında bir süre sonra görevi yeniden dener. Bu senaryo, Docker-Compose kapsayıcıları başlattığında meydana gelebilir; Örneğin, Korbbitmq kapsayıcısı diğer kapsayıcılardan daha yavaş başlayabilir.
 
 Daha önce belirtildiği gibi, kbbitmq ' de birçok olası yapılandırma vardır, bu nedenle bu kod yalnızca geliştirme ve test ortamları için kullanılmalıdır.
 
@@ -116,7 +116,7 @@ Yukarıda belirtildiği gibi, eShopOnContainers 'da uygulanan olay veri yolu yal
 
 Kbbitmq desteğiyle üretime Ready bir çözüm.
 
-- **Easynetq** -Kbıbitmq \ Için açık kaynak .NET API istemcisi
+- _ *Easynetq**-Oybbitmq \ Için açık kaynak .NET API istemcisi
   <https://easynetq.com/>
 
 - **Masstransıya** \

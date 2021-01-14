@@ -3,12 +3,12 @@ title: Self-Signed sertifikalarına genel bakış oluşturma
 description: .NET Core ve ASP.NET Core projelerine yönelik işlevselliği ve otomatik olarak imzalanan sertifikaları kullanmak için diğer seçenekleri ekleyen Microsoft DotNet dev-CERT aracına genel bakış.
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: b5bf4b719495c2d6ec248e8592367ac452be91c1
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: d1675abb7d584b72d981f9db739e02269abe662c
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032183"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189147"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>.NET CLı ile otomatik olarak imzalanan sertifikalar oluşturma
 
@@ -16,7 +16,7 @@ Otomatik olarak imzalanan sertifikalar kullanılırken geliştirme ve test senar
 
 Daha sonra, bir kapsayıcıda barındırılan [ASP.NET Core uygulaması](https://github.com/dotnet/dotnet-docker/blob/master/samples/run-aspnetcore-https-development.md) gibi bir örnek kullanarak sertifikanın yükleneceğini doğrulayabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Örnekte, .NET Core 3,1 veya .NET 5 ' i kullanabilirsiniz.
 
@@ -210,7 +210,7 @@ dotnet dev-certs https --clean
 
 ### <a name="with-powershell"></a>PowerShell ile
 
-Otomatik olarak imzalanan sertifikalar oluşturmak için PowerShell 'i kullanabilirsiniz. [PKI istemcisi](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps&preserver-view=true) , kendinden imzalı bir sertifika oluşturmak için kullanılabilir.
+Otomatik olarak imzalanan sertifikalar oluşturmak için PowerShell 'i kullanabilirsiniz. [PKI istemcisi](/powershell/module/pkiclient/new-selfsignedcertificate?preserve-view=true&view=win10-ps) , kendinden imzalı bir sertifika oluşturmak için kullanılabilir.
 
 ```powershell
 $cert = New-SelfSignedCertificate -DnsName @("contoso.com", "www.contoso.com") -CertStoreLocation "cert:\LocalMachine\My"

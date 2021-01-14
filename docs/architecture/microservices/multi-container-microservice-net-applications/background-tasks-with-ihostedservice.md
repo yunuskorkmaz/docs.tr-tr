@@ -1,19 +1,19 @@
 ---
 title: Ihostedservice ve BackgroundService sınıfıyla mikro hizmetlerde arka plan görevleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler .NET Core 'da arka plan görevleri uygulamak için ıhostedservice ve BackgroundService kullanmak üzere yeni seçenekleri anlayın.
-ms.date: 08/14/2020
-ms.openlocfilehash: 279f9e0093deafab51e63d72dce233c8e9466a55
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 26bc06c4a63cddcd32bf7da705f6258fab8eaafa
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173360"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188809"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Ihostedservice ve BackgroundService sınıfıyla mikro hizmetlerde arka plan görevleri uygulama
 
 Arka plan görevleri ve zamanlanan işler, mikro hizmetler mimari modelini takip etmeksizin, herhangi bir uygulamada kullanmanız gerekebilecek bir şeydir. Mikro hizmet mimarisi kullanmanın farkı, arka plan görevini, barındırmak üzere ayrı bir süreç/kapsayıcıda uygulayabileceğiniz için, ihtiyacınız olan temelinde ölçeklendirebilmeniz gerekir.
 
-.NET Core 'da, genel bir bakış noktasından, ana bilgisayar/uygulama/mikro hizmetiniz içinde barındırmanıza yönelik hizmetler/mantık olduklarından, bu tür görevler *barındırılan hizmetler*olarak adlandırdık. Bu durumda, barındırılan hizmetin arka plan görevi mantığına sahip bir sınıf anlamına geldiğini unutmayın.
+.NET ' te, bir genel bakış noktasından, ana bilgisayar/uygulama/mikro hizmetiniz içinde barındırmanıza yönelik hizmetler/mantık olduklarından, bu tür görevler *barındırılan hizmetler* olarak adlandırıldık. Bu durumda, barındırılan hizmetin arka plan görevi mantığına sahip bir sınıf anlamına geldiğini unutmayın.
 
 .NET Core 2,0 sürümünden itibaren Framework, <xref:Microsoft.Extensions.Hosting.IHostedService> barındırılan Hizmetleri kolayca uygulamanıza yardımcı adlı yeni bir arabirim sağlar. Temel düşünce, 6-26 görüntüsünde gösterildiği gibi Web ana bilgisayarınız veya ana bilgisayarınız çalışırken arka planda çalışan birden fazla arka plan görevini (barındırılan hizmetler) kaydedebilmeniz için kullanılır.
 
@@ -45,7 +45,7 @@ SignalR, barındırılan Hizmetleri kullanan bir yapıtın örneğidir, ancak ş
 
 Bu eylemlerin herhangi birini, uygulayan bir arka plan görevine temelde devretmek `IHostedService` .
 
-Veya ' a bir veya daha fazla ekleme yönteminiz, `IHostedServices` `WebHost` bunları bir `Host` <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>   ASP.NET Core genişletme yöntemiyle `WebHost` (veya `Host` .NET Core 2,1 ve üzeri sürümlerde) kaydederek. Temel olarak, barındırılan Hizmetleri, `ConfigureServices()` `Startup` tipik bir ASP.net Webhost öğesinden aşağıdaki kodda olduğu gibi, sınıfının tanıdık bir yöntemi içine kaydetmeniz gerekir.
+Veya ' a bir veya daha fazla ekleme yönteminiz, `IHostedServices` `WebHost` bunları bir `Host` <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> ASP.NET Core genişletme yöntemiyle `WebHost` (veya `Host` .NET Core 2,1 ve üzeri sürümlerde) kaydederek. Temel olarak, barındırılan Hizmetleri, `ConfigureServices()` `Startup` tipik bir ASP.net Webhost öğesinden aşağıdaki kodda olduğu gibi, sınıfının tanıdık bir yöntemi içine kaydetmeniz gerekir.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -54,8 +54,8 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
     // Register Hosted Services
     services.AddHostedService<GracePeriodManagerService>();
-    services.AddHostedService<MyHostedServiceB>();
-    services.AddHostedService<MyHostedServiceC>();
+    services.AddHostedService<MyHostedServiceB>();
+    services.AddHostedService<MyHostedServiceC>();
     //...
 }
 ```
@@ -68,7 +68,7 @@ Kullanmadan `IHostedService` , herhangi bir görevi çalıştırmak için her za
 
 ## <a name="the-ihostedservice-interface"></a>Ihostedservice arabirimi
 
-Bir kaydettiğinizde `IHostedService` , .NET Core `StartAsync()` `StopAsync()` `IHostedService` uygulama başlatma ve durdurma sırasında, sizin yazmanız için ve yöntemlerini çağıracaktır. Daha fazla ayrıntı için [ıhostedservice arabirimine](/aspnet/core/fundamentals/host/hosted-services?tabs=visual-studio&view=aspnetcore-3.1#ihostedservice-interface) başvurun
+Bir kaydettiğinizde `IHostedService` , .net, `StartAsync()` `StopAsync()` `IHostedService` uygulama başlatma ve durdurma sırasında, sizin yazmanız için ve yöntemlerini çağırır. Daha fazla ayrıntı için [ıhostedservice arabirimine](/aspnet/core/fundamentals/host/hosted-services?tabs=visual-studio&view=aspnetcore-3.1#ihostedservice-interface) başvurun
 
 Imagine kullanabileceğiniz gibi, birden çok ıhostedservice uygulaması oluşturabilir ve bu Hizmetleri `ConfigureService()` daha önce gösterildiği gibi, yöntemde de dı kapsayıcısına kaydedebilirsiniz. Bu barındırılan tüm hizmetler uygulama/mikro hizmetle birlikte başlatılır ve durdurulur.
 
@@ -76,13 +76,13 @@ Bir geliştirici olarak, bir `StopAsync()` Yöntem ana bilgisayar tarafından te
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>Arka plan hizmeti temel sınıfından türeten özel bir barındırılan hizmet sınıfıyla ıhostedservice 'i uygulama
 
-Devam edip özel barındırılan hizmet sınıfınızı sıfırdan oluşturabilir ve `IHostedService` .NET Core 2,0 kullanırken yapmanız gereken şekilde uygulamasını uygulayabilirsiniz.
+`IHostedService`Daha sonra, .NET Core 2,0 ve sonraki bir sürümü kullanılırken yapmanız gereken şekilde, özel barındırılan hizmet sınıfınızı sıfırdan oluşturabilir ve öğesini uygulayabilirsiniz.
 
 Ancak, çoğu arka plan görevinin, iptal belirteçleri yönetimi ve diğer tipik işlemlerle ilgili benzer ihtiyaçlarına sahip olacağı için, `BackgroundService` (.NET Core 2,1 sürümünden itibaren kullanılabilir) adlı öğesinden türetilebilir uygun bir soyut temel sınıf vardır.
 
 Bu sınıf, arka plan görevini kurmak için gereken ana işi sağlar.
 
-Sonraki kod, .NET Core 'da uygulanan şekilde soyut BackgroundService taban sınıfıdır.
+Sonraki kod, .NET ' te uygulanan soyut BackgroundService taban sınıfıdır.
 
 ```csharp
 // Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0.
@@ -210,7 +210,7 @@ Sınıf diyagramı: ıwebhost ve IHOST, ıhostedservice 'i uygulayan BackgroundS
 
 ### <a name="deployment-considerations-and-takeaways"></a>Dağıtım değerlendirmeleri ve özellikleri
 
-ASP.NET Core veya .NET Core ' u dağıtırken, `WebHost` son çözümü etkileyebilecek şekilde dikkat etmeniz önemlidir `Host` . Örneğin, uygulamanızı `WebHost` IIS 'de veya düzenli bir Azure App Service dağıtırsanız, uygulama havuzu geri dönüştürme nedeniyle ana bilgisayarınız kapatılabilir. Ancak, ana bilgisayarınızı bir kapsayıcı olarak Kubernetes gibi bir Orchestrator 'a dağıtıyorsanız, ana bilgisayarınızda bulunan canlı örnek sayısını kontrol edebilirsiniz. Ayrıca, Azure Işlevleri gibi bu senaryolar için bulutta yapılan diğer yaklaşımları de göz önünde bulundurmanız gerekir. Son olarak, hizmetin tüm zamanı çalıştırması ve bir Windows Server üzerinde dağıtımı gerekiyorsa, bir Windows hizmeti kullanabilirsiniz.
+ASP.NET Core veya .NET uygulamanızı dağıttığınız şekilde, `WebHost` son çözümü etkileyebilecek şekilde dikkat etmeniz önemlidir `Host` . Örneğin, uygulamanızı `WebHost` IIS 'de veya düzenli bir Azure App Service dağıtırsanız, uygulama havuzu geri dönüştürme nedeniyle ana bilgisayarınız kapatılabilir. Ancak, ana bilgisayarınızı bir kapsayıcı olarak Kubernetes gibi bir Orchestrator 'a dağıtıyorsanız, ana bilgisayarınızda bulunan canlı örnek sayısını kontrol edebilirsiniz. Ayrıca, Azure Işlevleri gibi bu senaryolar için bulutta yapılan diğer yaklaşımları de göz önünde bulundurmanız gerekir. Son olarak, hizmetin tüm zamanı çalıştırması ve bir Windows Server üzerinde dağıtımı gerekiyorsa, bir Windows hizmeti kullanabilirsiniz.
 
 Ancak `WebHost` , bir uygulama havuzuna dağıtılan bir uygulama için bile, hala geçerli olacak şekilde uygulamanın bellek içi önbelleğini yeniden doldurma veya temizleme gibi senaryolar vardır.
 

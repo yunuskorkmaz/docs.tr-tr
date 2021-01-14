@@ -5,12 +5,12 @@ ms.date: 11/30/2020
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: 3ec1ee9e8da3a6e03581ce2a29a655ec0d68fe54
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: b547e105b13d380ffae049ab55e76aa25abe8cc3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97701183"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189206"
 ---
 # <a name="azure-sdk-for-net-overview"></a>.NET için Azure SDK genel bakış
 
@@ -32,4 +32,4 @@ ms.locfileid: "97701183"
 
 3. **Uygulamanızdaki SDK 'yı kullanarak kod yazın-** Azure hizmetleriyle çalışırken kodunuz, önce hizmetle birlikte çalışmak üzere bir istemci nesnesi oluşturur ve sonra hizmetle etkileşimde bulunmak için bu istemci nesnesi üzerinde Yöntemler çağırır.  Hem zaman uyumlu hem de zaman uyumsuz yöntemler sağlanır.  Her bir SDK paketinin kullanılmasıyla ilgili örnekler, Azure belgelerinin tamamında sağlanır.
 
-4. **SDK için günlüğü yapılandırma (isteğe bağlı)-** Uygulamanız ile Azure arasındaki sorunları tanılamanıza gerek duyuyorsanız, [.net Için Azure SDK 'da günlüğü etkinleştirebilirsiniz](./logging.md).
+4. **SDK için günlüğü yapılandırma (isteğe bağlı)-** Uygulamanız ile Azure arasındaki sorunları tanılamanıza gerek duyuyorsanız, [.net Için Azure SDK 'da günlüğü etkinleştirebilirsiniz](../logging.md).

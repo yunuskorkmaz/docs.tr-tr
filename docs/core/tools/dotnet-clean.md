@@ -1,23 +1,23 @@
 ---
-title: dotnet temiz komutu
-description: Dotnet temiz komutu geçerli dizini temizler.
+title: DotNet temizleme komutu
+description: DotNet Clean komutu geçerli dizini temizler.
 ms.date: 02/14/2020
-ms.openlocfilehash: a59922feba75e940a5cee2dfeb500f4f86372870
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1023f13c7662abb7dad613128631c7644ca15bb9
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463697"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189609"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Ad
 
-`dotnet clean`- Projenin çıktısını temizler.
+`dotnet clean` -Bir projenin çıkışını temizler.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
 dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
@@ -28,25 +28,25 @@ dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet clean -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
-Komut, `dotnet clean` önceki yapının çıktısını temizler. MSBuild [hedefi](/visualstudio/msbuild/msbuild-targets)olarak uygulandığından, komut çalıştırıldığında proje değerlendirilir. Yalnızca yapı sırasında oluşturulan çıktılar temizlenir. Hem ara *(obj)* hem de son çıktı *(bin)* klasörleri temizlenir.
+`dotnet clean`Komut, önceki derleme çıkışını temizler. Bir [MSBuild hedefi](/visualstudio/msbuild/msbuild-targets)olarak uygulanır, bu nedenle, komut çalıştırıldığında proje değerlendirilir. Yalnızca derleme sırasında oluşturulan çıktılar temizlenir. Ara (*obj*) ve nihai çıkış (*bin*) klasörleri temizlenir.
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 `PROJECT | SOLUTION`
 
-MSBuild projesi veya çözüm temizlemek için. Bir proje veya çözüm dosyası belirtilmemişse, MSBuild *proj* veya *sln*ile biten ve bu dosyayı kullanan bir dosya uzantısı olan bir dosya için geçerli çalışma dizinini arar.
+Temizleyen MSBuild projesi veya çözümü. Bir proje veya çözüm dosyası belirtilmemişse, MSBuild, *proj* veya *sln* ile biten bir dosya uzantısına sahip bir dosya için geçerli çalışma dizinini arar ve bu dosyayı kullanır.
 
 ## <a name="options"></a>Seçenekler
 
 * **`-c|--configuration <CONFIGURATION>`**
 
-  Yapı yapılandırmasını tanımlar. Çoğu proje için `Debug`varsayılan değer, ancak projenizdeki yapı yapılandırma ayarlarını geçersiz kılabilirsiniz. Bu seçenek yalnızca yapı süresi içinde belirttiğiniz zaman temizlik yaparken gereklidir.
+  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılandır `Debug` , ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz. Bu seçenek yalnızca derleme zamanı sırasında belirtilmişse temizlik sırasında gereklidir.
 
 * **`-f|--framework <FRAMEWORK>`**
 
-  Oluşturma zamanında belirtilen [çerçeve.](../../standard/frameworks.md) Çerçeve [proje dosyasında](csproj.md)tanımlanmalıdır. Çerçeveyi oluşturma zamanında belirttiyseniz, temizleme sırasında çerçeveyi belirtmeniz gerekir.
+  Derleme zamanında belirtilen [çerçeve](../../standard/frameworks.md) . Çerçeve [Proje dosyasında](../project-sdk/overview.md)tanımlanmalıdır. Yapı zamanında Framework belirttiyseniz, temizleme sırasında çerçeveyi belirtmeniz gerekir.
 
 * **`-h|--help`**
 
@@ -54,33 +54,33 @@ MSBuild projesi veya çözüm temizlemek için. Bir proje veya çözüm dosyası
 
 * **`--interactive`**
 
-  Komutun durmasını ve kullanıcı girişi veya eylemini beklemesini sağlar. Örneğin, kimlik doğrulamasını tamamlamak için. .NET Core 3.0 SDK'dan beri mevcuttur.
+  Komutun Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir. Örneğin, kimlik doğrulamasını tamamlamaya yönelik. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 * **`--nologo`**
 
-  Başlangıç bayrağını veya telif hakkı iletisini görüntülemez. .NET Core 3.0 SDK'dan beri mevcuttur.
+  Başlangıç başlığını veya telif hakkı iletisini görüntülemez. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Temizlemek için yapı yapıları içeren dizin. Proje `-f|--framework <FRAMEWORK>` oluşturulurken çerçeveyi belirttiyseniz, çıkış dizin anahtarıyla anahtarı belirtin.
+  Temizleyen derleme yapıtlarını içeren dizin. Proje oluşturulduğunda `-f|--framework <FRAMEWORK>` çerçeveyi belirttiyseniz, çıkış dizini anahtarıyla anahtarı belirtin.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Belirtilen çalışma zamanının çıktı klasörünü temizler. Bu, bağımsız bir [dağıtım](../deploying/index.md#publish-self-contained) oluşturulduğunda kullanılır.
+  Belirtilen çalışma zamanının çıkış klasörünü temizler. Bu, [kendinden bağımsız bir dağıtım](../deploying/index.md#publish-self-contained) oluşturulduğu zaman kullanılır.
 
 * **`-v|--verbosity <LEVEL>`**
 
-  MSBuild ayrıntılı düzeyini ayarlar. İzin verilen `q[uiet]` `m[inimal]`değerler `n[ormal]` `d[etailed]`, `diag[nostic]`, , , ve . Varsayılan değer: `normal`.
+  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer: `normal`.
 
 ## <a name="examples"></a>Örnekler
 
-* Projenin varsayılan yapısını temizleyin:
+* Projenin varsayılan derlemesini temizle:
 
   ```dotnetcli
   dotnet clean
   ```
 
-* Sürüm yapılandırması kullanılarak oluşturulmuş bir projeyi temizleme:
+* Yayın yapılandırması kullanılarak oluşturulan bir projeyi Temizleme:
 
   ```dotnetcli
   dotnet clean --configuration Release

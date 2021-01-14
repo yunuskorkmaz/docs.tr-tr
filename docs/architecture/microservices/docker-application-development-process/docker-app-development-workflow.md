@@ -1,13 +1,13 @@
 ---
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
-ms.date: 01/30/2020
-ms.openlocfilehash: 4019eed6b814f4c7e8bc4f32758e8cfd7f4c7ec9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/13/2021
+ms.openlocfilehash: fff0a59bb6001eeb50c31c68bfeceeb71c439223
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711188"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189556"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -59,7 +59,7 @@ Ayrıca, Şekil 5-2 ' de gösterildiği gibi, **.NET Core platformlar arası gel
 
 **Şekil 5-2**. Visual Studio 2019 kurulumu sırasında **.NET Core platformlar arası geliştirme** iş yükünü seçme
 
-Uygulamanızda Docker 'ı etkinleştirmeden ve Docker 'da dağıtıp test etmeden önce bile, uygulamanızı basit .NET (genellikle .NET Core 'da) kodlamaya başlayabilirsiniz. Ancak, gerçek ortam olacağı ve herhangi bir sorun mümkün olan en kısa sürede keşfedilebilir olduğundan, Docker üzerinde en kısa sürede çalışmaya başlamanız önerilir. Visual Studio, Visual Studio 'daki çok Kapsayıcılı uygulamalarda hata ayıklarken en iyi örnek olan Docker ile neredeyse oldukça kolay bir şekilde çalışmasını sağlayan bu, önerilir.
+Uygulamanızda Docker 'ı etkinleştirip Docker 'da dağıtıp test etmeden önce bile, uygulamanızı düz .NET (genellikle .NET Core veya daha sonraki sürümlerde) kodlamaya başlayabilirsiniz. Ancak, gerçek ortam olacağı ve herhangi bir sorun mümkün olan en kısa sürede keşfedilebilir olduğundan, Docker üzerinde en kısa sürede çalışmaya başlamanız önerilir. Visual Studio, Visual Studio 'daki çok Kapsayıcılı uygulamalarda hata ayıklarken en iyi örnek olan Docker ile neredeyse oldukça kolay bir şekilde çalışmasını sağlayan bu, önerilir.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
@@ -83,7 +83,7 @@ Visual Studio ve Docker Araçları ile bu görev yalnızca birkaç fare tıklama
 
 **Şekil 5-3**. Visual Studio 2019 'de yeni bir ASP.NET Core projesi oluştururken Docker desteğini etkinleştirme
 
-Ayrıca, Şekil 5-4 ' de gösterildiği gibi, mevcut bir ASP.NET Core Web uygulaması projesinde, **Çözüm Gezgini** projeye sağ tıklayıp **Add**  >  **Docker desteği ekle...** seçeneğini belirleyerek Docker desteğini de etkinleştirebilirsiniz.
+Ayrıca, Şekil 5-4 ' de gösterildiği gibi, mevcut bir ASP.NET Core Web uygulaması projesinde, **Çözüm Gezgini** projeye sağ tıklayıp   >  **Docker desteği ekle...** seçeneğini belirleyerek Docker desteğini de etkinleştirebilirsiniz.
 
 ![Ekle menüsündeki Docker desteği seçeneğini gösteren ekran görüntüsü.](./media/docker-app-development-workflow/add-docker-support-option.png)
 
@@ -97,14 +97,14 @@ Benzer bir şekilde, Visual Studio `docker-compose.yml` tüm çözüm için **> 
 
 Genellikle, [Docker Hub](https://hub.docker.com/) kayıt defteri gibi resmi bir depodan aldığınız temel görüntünün en üstünde Kapsayıcınız için özel bir görüntü oluşturursunuz. Visual Studio 'da Docker desteğini etkinleştirdiğinizde bu durum kesin olarak ne olur? Dockerfile, var olan bir `dotnet/core/aspnet` görüntüyü kullanacaktır.
 
-Daha önce seçtiğiniz çerçeveye ve işletim sistemine bağlı olarak, hangi Docker görüntülerini ve depolarınızı kullanacağınızı anlatılmıştır. Örneğin, ASP.NET Core (Linux veya Windows) kullanmak istiyorsanız kullanılacak görüntü `mcr.microsoft.com/dotnet/aspnet:3.1` . Bu nedenle, yalnızca Kapsayıcınız için kullanacağınız temel Docker görüntüsünü belirtmeniz yeterlidir. Bunu, `FROM mcr.microsoft.com/dotnet/aspnet:3.1` Dockerfile dosyanıza ekleyerek yapabilirsiniz. Bu, Visual Studio tarafından otomatik olarak gerçekleştirilir, ancak sürümü güncelleştirirseniz, bu değeri güncelleştirmeniz gerekir.
+Daha önce seçtiğiniz çerçeveye ve işletim sistemine bağlı olarak, hangi Docker görüntülerini ve depolarınızı kullanacağınızı anlatılmıştır. Örneğin, ASP.NET Core (Linux veya Windows) kullanmak istiyorsanız kullanılacak görüntü `mcr.microsoft.com/dotnet/aspnet:5.0` . Bu nedenle, yalnızca Kapsayıcınız için kullanacağınız temel Docker görüntüsünü belirtmeniz yeterlidir. Bunu, `FROM mcr.microsoft.com/dotnet/aspnet:5.0` Dockerfile dosyanıza ekleyerek yapabilirsiniz. Bu, Visual Studio tarafından otomatik olarak gerçekleştirilir, ancak sürümü güncelleştirirseniz, bu değeri güncelleştirmeniz gerekir.
 
 Docker Hub 'dan sürüm numarası olan resmi bir .NET görüntü deposu kullanmak, tüm makinelerde (geliştirme, test ve üretim dahil) aynı dil özelliklerinin kullanılabilmesini sağlar.
 
 Aşağıdaki örnekte, bir ASP.NET Core kapsayıcısı için örnek bir Dockerfile gösterilmektedir.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,13 +112,13 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-Bu durumda, görüntü, resmi ASP.NET Core Docker görüntüsünün 3,1 sürümünü temel alır (Linux ve Windows için çoklu mimari). Bu ayar budur `FROM mcr.microsoft.com/dotnet/aspnet:3.1` . (Bu temel görüntü hakkında daha fazla bilgi için bkz. [Docker görüntü sayfası ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-aspnet/) .) Dockerfile 'da, çalışma zamanında kullanacağınız TCP bağlantı noktasını dinlemek için Docker 'a (Bu durumda, "kullanıma hazır ayarıyla yapılandırıldığı şekilde, bağlantı noktası 80) da sahip olmanız gerekir.
+Bu durumda, görüntü, resmi ASP.NET Core Docker görüntüsünün 5,0 sürümünü temel alır (Linux ve Windows için çoklu mimari). Bu ayar budur `FROM mcr.microsoft.com/dotnet/aspnet:5.0` . (Bu temel görüntü hakkında daha fazla bilgi için bkz. [Docker görüntü sayfası ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-aspnet/) .) Dockerfile 'da, çalışma zamanında kullanacağınız TCP bağlantı noktasını dinlemek için Docker 'a (Bu durumda, "kullanıma hazır ayarıyla yapılandırıldığı şekilde, bağlantı noktası 80) da sahip olmanız gerekir.
 
-Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek yapılandırma ayarları belirtebilirsiniz. Örneğin, GIRIŞ noktası satırı, `["dotnet", "MySingleContainerWebApp.dll"]` Docker 'ın bir .NET Core uygulaması çalıştırmasını söyler. .NET uygulamasını derlemek ve çalıştırmak için SDK ve .NET Core CLI (DotNet CLı) kullanıyorsanız, bu ayar farklı olur. Alt çizgi, GIRIŞ noktası çizgisi ve diğer ayarların, uygulamanız için seçtiğiniz dile ve platforma bağlı olarak farklı olacaktır.
+Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek yapılandırma ayarları belirtebilirsiniz. Örneğin, GIRIŞ noktası satırı, `["dotnet", "MySingleContainerWebApp.dll"]` Docker 'ın bir .NET uygulaması çalıştırmasını söyler. .NET uygulamasını derlemek ve çalıştırmak için SDK ve .NET CLı (DotNet CLı) kullanıyorsanız, bu ayar farklı olur. Alt çizgi, GIRIŞ noktası çizgisi ve diğer ayarların, uygulamanız için seçtiğiniz dile ve platforma bağlı olarak farklı olacaktır.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **.NET Core uygulamaları için Docker görüntüleri oluşturma** \
+- **.NET 5 uygulamaları için Docker görüntüleri oluşturma** \
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **Kendi görüntünüzü oluşturun**. Resmi Docker belgelerinde. \
@@ -136,16 +136,16 @@ Tek bir depo, Linux görüntüsü ve Windows görüntüsü gibi platform türevl
 
 Bir etiketi belirtirseniz, aşağıdaki durumlarda açık olan bir platformu hedefliyorsanız:
 
-- `mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim` \
-  Hedefler: .NET Core 3,1 çalışma zamanı-yalnızca Linux üzerinde
+- `mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim` \
+  Hedefler: .NET 5 çalışma zamanı-yalnızca Linux üzerinde
 
-- `mcr.microsoft.com/dotnet/aspnet:3.1-nanoserver-1909` \
-  Hedefler: .NET Core 3,1 çalışma zamanı-yalnızca Windows nano Server üzerinde
+- `mcr.microsoft.com/dotnet/aspnet:5.0-nanoserver-1909` \
+  Hedefler: .NET 5 çalışma zamanı-yalnızca Windows nano Server üzerinde
 
 Ancak, aynı etiketle birlikte aynı görüntü adını belirtirseniz, çok katmanlı görüntüler ( `aspnet` görüntü gibi), aşağıdaki örnekte gösterildiği gibi, dağıttığınız Docker ana bilgisayar işletim sistemine bağlı olarak Linux veya Windows sürümünü kullanır:
 
-- `mcr.microsoft.com/dotnet/aspnet:3.1` \
-  Multi-Arch: .NET Core 3,1 Runtime-yalnızca Docker Konağı işletim sistemine bağlı olarak Linux veya Windows nano Server
+- `mcr.microsoft.com/dotnet/aspnet:5.0` \
+  Çoklu mimari: .NET 5 çalışma zamanı-yalnızca Docker Konağı işletim sistemine bağlı olarak Linux veya Windows nano Server üzerinde
 
 Bu şekilde, bir Windows ana bilgisayardan bir görüntü çektiğinizde Windows türevini çeker ve aynı görüntü adının bir Linux ana bilgisayardan çekilerek Linux varyantı alınır.
 
@@ -174,11 +174,11 @@ Kısaca, çok aşamalı derlemeler, oluşturma işleminin farklı "aşamalarda" 
 İlk Dockerfile şuna benzer görünebilir:
 
 ```dockerfile
- 1  FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+ 1  FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+ 5  FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
@@ -277,11 +277,11 @@ Son iyileştirme için, satır 23 ' ün aynı zamanda uygulama oluşturup 20 ' d
 Elde edilen dosya bundan sonra:
 
 ```dockerfile
- 1  FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+ 1  FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/sdk:3.1 AS publish
+ 5  FROM mcr.microsoft.com/dotnet/sdk:5.0 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj

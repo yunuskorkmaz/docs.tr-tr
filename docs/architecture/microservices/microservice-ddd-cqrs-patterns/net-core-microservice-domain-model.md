@@ -1,17 +1,17 @@
 ---
-title: .NET Core ile bir mikro hizmet etki alanı modeli uygulama
+title: .NET ile bir mikro hizmet etki alanı modeli uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-odaklı bir etki alanı modelinin uygulama ayrıntılarına ulaşın.
-ms.date: 10/08/2018
-ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 9689058b77701eee35ef018ed2e3f18bd648b0f4
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152552"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188276"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core ile bir mikro hizmet etki alanı modeli uygulama
 
-Önceki bölümde, bir etki alanı modeli tasarlamaya yönelik temel tasarım ilkeleri ve desenleri açıklanmıştı. Artık, .NET Core (düz C \# kodu) ve EF Core kullanarak etki alanı modelini uygulamak için olası yolları keşfetmeye yönelik bir zaman vardır. Etki alanı modeliniz yalnızca kodunuzla oluşturulur. Yalnızca EF Core model gereksinimlerine sahip olur ancak EF üzerinde gerçek bağımlılıklara sahip olmaz. Etki alanı modelinizdeki EF Core veya başka bir ORM için sabit bağımlılıklara veya başvuru içermemelidir.
+Önceki bölümde, bir etki alanı modeli tasarlamaya yönelik temel tasarım ilkeleri ve desenleri açıklanmıştı. Artık, .NET (düz C \# kodu) ve EF Core kullanarak etki alanı modelini uygulamak için olası yolları keşfetmeye yönelik bir zaman vardır. Etki alanı modeliniz yalnızca kodunuzla oluşturulur. Yalnızca EF Core model gereksinimlerine sahip olur ancak EF üzerinde gerçek bağımlılıklara sahip olmaz. Etki alanı modelinizdeki EF Core veya başka bir ORM için sabit bağımlılıklara veya başvuru içermemelidir.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Özel bir .NET Standard kitaplığındaki etki alanı model yapısı
 
@@ -46,7 +46,7 @@ Bir toplama klasöründeki dosyalardan herhangi birini açarsanız, [Seedwork](h
 Etki alanı varlıklarınızı uygulayan POCO sınıfları oluşturarak .NET içinde bir etki alanı modeli uygulayabilirsiniz. Aşağıdaki örnekte, Order sınıfı bir varlık olarak ve ayrıca bir toplam kök olarak tanımlanır. Order sınıfı varlık temel sınıfından türetildiğinden, varlıklarla ilgili ortak kodu yeniden kullanabilir. Bu temel sınıfların ve arabirimlerin, etki alanı modeli projesinde sizin tarafınızdan tanımlandığını göz önünde bulundurun. bu nedenle, f gibi bir ORM 'den altyapı kodu değil kodunuz olur.
 
 ```csharp
-// COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE 5.0
 // Entity is a custom base class with the ID
 public class Order : Entity, IAggregateRoot
 {
@@ -109,7 +109,7 @@ Varlık modellerindeki yaygın bir sorun, koleksiyon gezinti özelliklerini herk
 
 Önceki kodda, pek çok özniteliğin salt okunurdur veya Private olduğunu ve yalnızca sınıf yöntemleri tarafından güncelleştirilebilir olduğunu, bu nedenle tüm güncelleştirmeler, iş etki alanı iç türevlerini ve sınıf yöntemleri içinde belirtilen mantığı kabul eder.
 
-Örneğin, DDD desenlerinin ardından, herhangi bir komut işleyici yönteminden veya uygulama katmanı sınıfından **şunları yapmanız *not* ** gerekmez (Aslında bunun sizin için imkansız olması gerekir):
+Örneğin, DDD desenlerinin ardından, herhangi bir komut işleyici yönteminden veya uygulama katmanı sınıfından **şunları yapmanız** gerekmez (Aslında bunun sizin için imkansız olması gerekir):
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -173,7 +173,7 @@ Sütunları alanlarla eşlemek için EF Core 1,1 veya sonraki bir sürüme sahip
 - **Vaughn versuz. DDD ve Entity Framework ile toplamalar Modellendirme.** Bunun *Entity Framework Core olmadığına* unutmayın. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Veri noktaları-etki alanı odaklı tasarım için kodlama: veri odaklı Devs Ipuçları** \
+- **Julie Lerman. Veri noktaları-Domain-Driven tasarımı için kodlama: Data-Focused Devs Ipuçları** \
   <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **UDI Dahan. Tamamen kapsüllenmiş etki alanı modelleri oluşturma** \

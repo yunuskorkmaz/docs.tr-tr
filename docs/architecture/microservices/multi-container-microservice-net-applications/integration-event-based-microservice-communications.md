@@ -1,13 +1,13 @@
 ---
 title: Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler arasında olay tabanlı iletişim uygulamak için tümleştirme olaylarını anlayın.
-ms.date: 10/02/2018
-ms.openlocfilehash: a778acba3e17b084840b77d903533f9180ca01d9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 65c0414184fdd1bccfbc61ef4df8fdcb88284ebe
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152539"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188211"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 
@@ -35,7 +35,7 @@ Yeniden yinelemek için: eShopOnContainers örneğinde gösterilen örnek olay v
 
 ## <a name="integration-events"></a>Tümleştirme olayları
 
-Tümleştirme olayları, etki alanı durumunun birden fazla mikro hizmet veya dış sistemler arasında eşitlenmiş şekilde getirilmesi için kullanılır. Bu, mikro hizmet dışındaki tümleştirme olayları yayınlanarak yapılır. Bir olay birden çok alıcı mikro hizmetine yayımlandığında (Tümleştirme olayına abone olan çok sayıda mikro hizmet için), her bir alıcı mikro hizmetindeki uygun olay işleyicisi olayı işler.
+Tümleştirme olayları, etki alanı durumunun birden fazla mikro hizmet veya dış sistemler arasında eşitlenmiş şekilde getirilmesi için kullanılır. Bu işlevsellik, mikro hizmet dışında tümleştirme olayları yayınlanarak yapılır. Bir olay birden çok alıcı mikro hizmetine yayımlandığında (Tümleştirme olayına abone olan çok sayıda mikro hizmet için), her bir alıcı mikro hizmetindeki uygun olay işleyicisi olayı işler.
 
 Bir tümleştirme olayı, aşağıdaki örnekte olduğu gibi temel olarak veri tutan bir sınıftır:
 
@@ -76,7 +76,7 @@ Yukarıdaki diyagramda, mikro hizmet B ve C 'yi abone olarak yayımlayan ve yay�
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Yayımla/abone ol (yayımlama/alt) kalıbı
 
-[Yayımla/abone ol deseninin](/previous-versions/msp-n-p/ff649664(v=pandp.10)) amacı gözlemci düzeniyle aynıdır: belirli olaylar gerçekleşirken diğer hizmetlere bildirimde bulunmasını istiyorsunuz. Ancak gözlemci ve Pub/Sub desenleri arasında önemli bir farklılık vardır. Gözlemci modelinde, yayın doğrudan observable 'dan observers 'a yapılır, bu nedenle birbirini "bilir". Ancak, bir yayın/alt model kullanılırken, aracı veya ileti Aracısı ya da yayımcı ve abone tarafından bilinen olay veri yolu adlı üçüncü bir bileşen vardır. Bu nedenle, yayın/alt model kullanılırken yayımcı ve aboneler, belirtilen olay veri yolu veya ileti aracısına tam olarak bir şekilde ayrılır.
+[Yayımla/abone ol deseninin](/previous-versions/msp-n-p/ff649664(v=pandp.10)) amacı gözlemci düzeniyle aynıdır: belirli olaylar gerçekleşirken diğer hizmetlere bildirimde bulunmasını istiyorsunuz. Ancak gözlemci ve Pub/Sub desenleri arasında önemli bir farklılık vardır. Gözlemci modelinde, yayın doğrudan observable 'dan observers 'a yapılır, bu nedenle birbirini "bilir". Ancak, bir yayın/alt model kullanılırken, aracı veya ileti Aracısı ya da yayımcı ve abone tarafından bilinen bir olay veri yolu olarak adlandırılan üçüncü bir bileşen vardır. Bu nedenle, yayın/alt model kullanılırken yayımcı ve aboneler, belirtilen olay veri yolu veya ileti aracısına tam olarak bir şekilde ayrılır.
 
 ### <a name="the-middleman-or-event-bus"></a>Middleman veya olay veri yolu
 
@@ -90,7 +90,7 @@ Olay veri yolu genellikle iki bölümden oluşur:
 
 Şekil 6-19 ' de, bir uygulama görünümünden, olay veri yolunun bir yayın/alt kanaldan ne kadar fazla şey olduğu hakkında bilgi alabilirsiniz. Bu zaman uyumsuz iletişimi uygulama yönteminiz farklılık gösterebilir. Ortam gereksinimlerine (örneğin, üretim ve geliştirme ortamlarına göre) bağlı olarak, aralarında geçiş yapabilmeniz için birden çok uygulama olabilir.
 
-Şekil 6-20 ' de, kbbitmq, Azure Service Bus veya başka bir olay/ileti Aracısı gibi altyapı mesajlaşma teknolojilerine göre birden çok uygulama içeren bir olay veri yolu soyutlama görebilirsiniz.
+Şekil 6-20 ' de, kbbitmq, Azure Service Bus veya başka bir olay/ileti Aracısı gibi altyapı mesajlaşma teknolojilerini temel alan birden çok uygulama içeren bir olay veri yolu soyutlamasını görebilirsiniz.
 
 ![Bir olay veri yolu soyutlama katmanının eklenmesini gösteren diyagram.](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 

@@ -2,12 +2,12 @@
 title: DotNet-Trace Tanılama aracı-.NET CLı
 description: .NET EventPipe kullanarak, yerel profil oluşturucu olmadan çalışan bir işlemin .NET izlemelerini toplamak için DotNet-Trace CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: a3b5748cb2a6c2060971fbad0d81ade00dc83087
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: 93698882e94f58eda84abebc277e1eacfe22a3da
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753682"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189716"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>DotNet-izleme performansı Analizi yardımcı programı
 
@@ -32,8 +32,11 @@ ms.locfileid: "97753682"
   | İşletim Sistemi  | Platform |
   | --- | -------- |
   | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [ARM](https://aka.ms/dotnet-trace/win-arm) \| [ARM-x64](https://aka.ms/dotnet-trace/win-arm64) |
-  | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
+  | Mac OS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \| [ARM](https://aka.ms/dotnet-trace/linux-arm) \| [arm64](https://aka.ms/dotnet-trace/linux-arm64) \| [MUSL-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \| [MUSL-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
+
+> [!NOTE]
+> `dotnet-trace`X86 uygulamasında kullanmak için, aracın karşılık gelen x86 sürümüne ihtiyacınız vardır.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -41,7 +44,7 @@ ms.locfileid: "97753682"
 dotnet-trace [-h, --help] [--version] <command>
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet-trace`Araç:
 
@@ -95,7 +98,47 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--clrevents <clrevents>`**
 
-  Görüntülenecek CLR çalışma zamanı olaylarının listesi.
+  Boşluklarla ayrılmış olarak etkinleştirilecek CLR çalışma zamanı sağlayıcısı anahtar kelimeleriyle bir liste `+` . Bu, onaltılık değerleri yerine dize diğer adları aracılığıyla olay anahtar sözcükleri belirtmenize imkan tanıyan basit bir eşlemedir. Örneğin, `dotnet-trace collect --providers Microsoft-Windows-DotNETRuntime:3:4` aynı olay kümesini ile ister `dotnet-trace collect --clrevents gc+gchandle --clreventlevel informational` . Aşağıdaki tabloda kullanılabilir anahtar sözcüklerin listesi gösterilmektedir:
+
+  | Anahtar sözcük dize diğer adı | Anahtar sözcük onaltılı değeri |
+  | ------------ | ------------------- |
+  | `gc` | `0x1` |
+  | `gchandle` | `0x2` |
+  | `fusion` | `0x4` |
+  | `loader` | `0x8` |
+  | `jit` | `0x10` |
+  | `ngen` | `0x20` |
+  | `startenumeration` | `0x40` |
+  | `endenumeration` | `0x80` |
+  | `security` | `0x400` |
+  | `appdomainresourcemanagement` | `0x800` |
+  | `jittracing` | `0x1000` |
+  | `interop` | `0x2000` |
+  | `contention` | `0x4000` |
+  | `exception` | `0x8000` |
+  | `threading` | `0x10000` |
+  | `jittedmethodiltonativemap` | `0x20000` |
+  | `overrideandsuppressngenevents` | `0x40000` |
+  | `type` | `0x80000` |
+  | `gcheapdump` | `0x100000` |
+  | `gcsampledobjectallocationhigh` | `0x200000` |
+  | `gcheapsurvivalandmovement` | `0x400000` |
+  | `gcheapcollect` | `0x800000` |
+  | `gcheapandtypenames` | `0x1000000` |
+  | `gcsampledobjectallocationlow` | `0x2000000` |
+  | `perftrack` | `0x20000000` |
+  | `stack` | `0x40000000` |
+  | `threadtransfer` | `0x80000000` |
+  | `debugger` | `0x100000000` |
+  | `monitoring` | `0x200000000` |
+  | `codesymbols` | `0x400000000` |
+  | `eventsource` | `0x800000000` |
+  | `compilation` | `0x1000000000` |
+  | `compilationdiagnostic` | `0x2000000000` |
+  | `methoddiagnostic` | `0x4000000000` |
+  | `typediagnostic` | `0x8000000000` |
+
+  CLR sağlayıcısı hakkında daha ayrıntılı bilgi için bkz. [.NET çalışma zamanı sağlayıcısı başvuru belgeleri](../../fundamentals/diagnostics/runtime-events.md).
 
 - **`--format {Chromium|NetTrace|Speedscope}`**
 
@@ -121,7 +164,7 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
   Yaygın izleme senaryolarına izin veren önceden tanımlanmış adlandırılmış bir dizi sağlayıcı yapılandırması succinctly. Aşağıdaki profiller mevcuttur:
 
- | Profil | Açıklama |
+ | Profil | Description |
  |---------|-------------|
  |`cpu-sampling`|CPU kullanımını ve genel .NET çalışma zamanı bilgilerini izlemek için faydalıdır. Profil veya sağlayıcı belirtilmemişse bu varsayılan seçenektir.|
  |`gc-verbose`|GC koleksiyonlarını izler ve nesne ayırmalarını örnekler.|
@@ -147,6 +190,12 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 > [!NOTE]
 > İzlemenin durdurulması, büyük uygulamalar için uzun zaman alabilir (en fazla dakika). Çalışma zamanının, izlemede yakalanan tüm yönetilen kodlar için tür önbelleğinin üzerine gönderilmesi gerekir.
 
+> [!NOTE]
+> Linux ve macOS 'ta, bu komut hedef uygulamayı bekler ve `dotnet-trace` aynı `TMPDIR` ortam değişkenini paylaşır. Aksi takdirde, komut zaman aşımına uğrar.
+
+> [!NOTE]
+> Kullanarak bir izleme toplamak için `dotnet-trace` , hedef işlem ya da kök olarak çalışan kullanıcı ile aynı kullanıcı olarak çalıştırılması gerekir. Aksi halde araç, hedef işlemle bağlantı kurmayacak.
+
 ## <a name="dotnet-trace-convert"></a>DotNet-Trace Dönüştür
 
 `nettrace`Diğer izleme çözümleme araçlarıyla birlikte kullanmak üzere izlemeleri alternatif biçimlere dönüştürür.
@@ -157,7 +206,7 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>] [-h|--help] [-o|--output <output-filename>]
 ```
 
-### <a name="arguments"></a>Arguments
+### <a name="arguments"></a>Bağımsız değişkenler
 
 - **`<input-filename>`**
 

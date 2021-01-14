@@ -1,13 +1,13 @@
 ---
 title: Kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanma
 description: Yalnızca geliştirme için bir kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanmanın önemini anlayın. Üretim için hiçbir şekilde.
-ms.date: 01/30/2020
-ms.openlocfilehash: 38f77e195b184d57dcad5904674a0025ef6c2bd8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 01/13/2021
+ms.openlocfilehash: 1292bf37e3baaeb6284f6fba15b4bc7c9c17b4a7
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539405"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188744"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanma
 
@@ -270,7 +270,7 @@ EShopOnContainers 'da, `basket-api` mikro hizmet kapsayıcı olarak çalışan b
       - "6379"
 ```
 
-Docker-Compose. yıml içindeki bu kod, `basketdata` redsıs görüntüsüne dayanarak adlı bir kapsayıcı tanımlar ve 6379 numaralı bağlantı noktasını dahili olarak yayımlıyoruz. Bu, yalnızca Docker ana bilgisayarı içinde çalışan diğer kapsayıcılardan erişilebileceği anlamına gelir.
+Docker-Compose. yıml içindeki bu kod, `basketdata` redsıs görüntüsüne dayanarak adlı bir kapsayıcı tanımlar ve 6379 numaralı bağlantı noktasını dahili olarak yayımlıyoruz. Bu yapılandırma, yalnızca Docker ana bilgisayarı içinde çalışan diğer kapsayıcılardan erişilebileceği anlamına gelir.
 
 Son olarak, *Docker-Compose. override. yml* dosyasında `basket-api` eShopOnContainers örneği için mikro hizmet, o redsıs kapsayıcısı için kullanılacak bağlantı dizesini tanımlar:
 

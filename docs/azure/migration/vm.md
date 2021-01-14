@@ -3,12 +3,12 @@ title: Bir ASP.NET Web uygulamasını bir Azure VM 'ye geçirme
 description: Şirket içinden bir ASP.NET Web uygulamasını bir Azure sanal makinesine geçirmeyi öğrenin.
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0bf591ce0bd02537414527c8f3ba22bd41cf51d6
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171565"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189219"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Bir ASP.NET Web uygulamasını bir Azure sanal makinesine geçirme
 
@@ -26,14 +26,14 @@ Bu öğreticiler, bir sanal makine oluşturma (veya geçirme), Web uygulamanız�
   - [ASP.NET uygulamaları için yeni bir sanal makine oluşturma](https://go.microsoft.com/fwlink/?linkid=863237)
   - [Mevcut bir şirket içi VMWare sanal makinesini geçirme](/azure/migrate/tutorial-migrate-vmware)
   - [Mevcut bir şirket içi Hyper-V sanal makinesini geçirme](/azure/migrate/tutorial-migrate-hyper-v)
-- [Visual Studio 'Yu kullanarak uygulamanızı yayımlayın](https://go.microsoft.com/fwlink/?linkid=863240)
+- [Visual Studio 'Yu kullanarak uygulamanızı yayımlayın](/azure/virtual-machines/windows/publish-web-app-from-visual-studio)
 - [VM 'niz için güvenli bir sanal ağ oluşturma](/azure/virtual-network/virtual-network-get-started-vnet-subnet)
 - [Uygulamanız için bir CI/CD işlem hattı oluşturun](/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
 - [Yüksek kullanılabilirlik ve ölçeklenebilirlik için bir VM Ölçek kümesine taşıma](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)
 
 ## <a name="considerations"></a>Dikkat edilmesi gerekenler
 
-### <a name="benefits"></a>Yararları
+### <a name="benefits"></a>Avantajlar
 
 Sanal makineler, bir uygulamayı Şirket içinden buluta geçirmek için en kolay yolu sunar. Kendi veri merkezlerinizi koruma gereksinimini ortadan kaldırarak, uygulamanızın şirket içinde kullandığı ortamı çoğaltmanıza olanak sağlar. Sanal Makine Ölçek Kümeleri, sanal makinelerde çalışan uygulamalar için yüksek kullanılabilirlik ve ölçeklenebilirlik sağlar.
 
@@ -45,7 +45,7 @@ Sanal makineler, bir uygulamayı Şirket içinden buluta geçirmek için en kola
 
 Tıpkı şirket içi bir makine gibi, sanal makine<sup>&#42;</sup>bakım ve güncelleştirme sorumluluğunuz de sorumludur. Uygulamanız, [Azure App Service](/azure/app-service/) veya bir [kapsayıcıda](/azure/app-service/containers/)bir hizmet olarak platform (PaaS) ortamında (Bu gereksinimi ortadan kaldıracak) çalıştırılabilir.
 
-*<sup> </sup> [Sanal makine ölçek kümeleri için otomatik işletim sistemi yükseltmeleri](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)&#42;Şu anda bir önizleme hizmeti olarak sunulmaktadır.*
+*<sup></sup> [Sanal makine ölçek kümeleri için otomatik işletim sistemi yükseltmeleri](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)&#42;Şu anda bir önizleme hizmeti olarak sunulmaktadır.*
 
 ### <a name="virtual-networks"></a>Sanal Ağlar
 

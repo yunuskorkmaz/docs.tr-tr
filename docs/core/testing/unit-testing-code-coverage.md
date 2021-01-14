@@ -4,16 +4,16 @@ description: .NET birim testleri için kod kapsamı özelliklerini nasıl kullan
 author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
-ms.openlocfilehash: 4d2c8f3db26eaabcb973378a349ef57912e92bfa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 98652de8e8b5c3765dfee8e1b511399bc5a0be25
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538153"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189661"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Birim testi için kod kapsamını kullanma
 
-Birim testleri işlevselliğin sağlanmasına yardımcı olur ve yeniden düzenleme çabalarına yönelik bir doğrulama yöntemi sağlar. Kod kapsamı, birim testleri tarafından çalıştırılan kod miktarının bir ölçümüdür; çizgiler, dallar ya da Yöntemler. Örnek olarak, yalnızca iki koşullu kod dalı (_dal a_ve _dal b_) olan basit bir uygulamanız varsa, koşullu _dalı doğrulayan bir_ birim testi %50 şube kodu kapsamını rapor eder.
+Birim testleri işlevselliğin sağlanmasına yardımcı olur ve yeniden düzenleme çabalarına yönelik bir doğrulama yöntemi sağlar. Kod kapsamı, birim testleri tarafından çalıştırılan kod miktarının bir ölçümüdür; çizgiler, dallar ya da Yöntemler. Örnek olarak, yalnızca iki koşullu kod dalı (_dal a_ ve _dal b_) olan basit bir uygulamanız varsa, koşullu _dalı doğrulayan bir_ birim testi %50 şube kodu kapsamını rapor eder.
 
 Bu makalede, ReportGenerator kullanarak kapak ve rapor oluşturma ile birim testi için kod kapsamının kullanımı ele alınmaktadır. Bu makale, test çerçevesi olarak C# ve xUnit 'e odaklanırken hem MSTest hem de NUnit de çalışır. Kapak, C# için platformlar arası kod kapsamı çerçevesi sağlayan [GitHub üzerinde açık kaynaklı bir projem](https://github.com/coverlet-coverage/coverlet) . [Kapak Let](https://dotnetfoundation.org/projects/coverlet) , .net Foundation 'ın bir parçasıdır. Kapak Let, rapor oluşturma için kullanılan Cobertura kapsam testi çalıştırma verilerini toplar.
 
@@ -33,7 +33,7 @@ Adlı yeni bir dizindeki komut isteminden `UnitTestingCodeCoverage` , komutunu k
 dotnet new classlib -n Numbers
 ```
 
-Aşağıdaki kod parçacığı `PrimeService` bir sayının asal olup olmadığını denetlemek için işlevsellik sağlayan basit bir sınıfı tanımlar. Aşağıdaki kod parçacığını kopyalayın ve *sayılar* dizininde otomatik olarak oluşturulan *Class1.cs* dosyasının içeriğini değiştirin. *Class1.cs* dosyasını *PrimeService.cs*olarak yeniden adlandırın.
+Aşağıdaki kod parçacığı `PrimeService` bir sayının asal olup olmadığını denetlemek için işlevsellik sağlayan basit bir sınıfı tanımlar. Aşağıdaki kod parçacığını kopyalayın ve *sayılar* dizininde otomatik olarak oluşturulan *Class1.cs* dosyasının içeriğini değiştirin. *Class1.cs* dosyasını *PrimeService.cs* olarak yeniden adlandırın.
 
 ```csharp
 namespace System.Numbers
@@ -93,7 +93,7 @@ cd XUnit.Coverlet.MSBuild && dotnet add package coverlet.msbuild && cd ..
 
 Önceki komut, dizinleri *MSBuild* test projesine etkin bir biçimde değiştirdi ve ardından NuGet paketini ekledi. Bu işlem tamamlandığında, dizinler değiştirilmiştir ve bir düzey daha sonra çalışır.
 
-Her iki *UnitTest1.cs* dosyasını açın ve içeriğini aşağıdaki kod parçacığıyla değiştirin. *UnitTest1.cs* dosyalarını *PrimeServiceTests.cs*olarak yeniden adlandırın.
+Her iki *UnitTest1.cs* dosyasını açın ve içeriğini aşağıdaki kod parçacığıyla değiştirin. *UnitTest1.cs* dosyalarını *PrimeServiceTests.cs* olarak yeniden adlandırın.
 
 ```csharp
 using System.Numbers;
@@ -297,7 +297,7 @@ Bu komutu çalıştırdıktan sonra, bir HTML dosyası oluşturulan raporu temsi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio birim testi kapağı kapsamı](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
+- [Visual Studio birim testi kod kapsamı](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
 - [GitHub-kapak Let deposu](https://github.com/coverlet-coverage/coverlet)
 - [GitHub-ReportGenerator deposu](https://github.com/danielpalme/ReportGenerator)
 - [ReportGenerator proje sitesi](https://danielpalme.github.io/ReportGenerator)

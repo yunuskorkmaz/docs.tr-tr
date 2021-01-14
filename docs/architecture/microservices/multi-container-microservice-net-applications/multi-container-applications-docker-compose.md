@@ -1,13 +1,13 @@
 ---
 title: docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 description: Docker-Compose. yıml ile çok kapsayıcılı bir uygulama için mikro hizmet birleşimini belirtme.
-ms.date: 01/30/2020
-ms.openlocfilehash: 81303be621da54b7336228585e86d1120a6b7598
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/13/2021
+ms.openlocfilehash: 224b06c6a10834b42218746964f05b055d947235
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739795"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188796"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 
@@ -17,7 +17,7 @@ Bu kılavuzda, 4. adım bölümünde [Docker-Compose. yıml](https://docs.docker
 
 Temel olarak, dağıtmak istediğiniz kapsayıcıların her birini ve her bir kapsayıcı dağıtımı için belirli özellikleri tanımlarsınız. Çok kapsayıcılı bir dağıtım açıklama dosyanız olduktan sonra, tüm çözümü [Docker-Compose](https://docs.docker.com/compose/overview/) CLI komutuyla düzenlenmiş tek bir eylemde dağıtabilir veya Visual Studio 'dan saydam olarak dağıtabilirsiniz. Aksi takdirde, komut satırından komutunu kullanarak kapsayıcıyı birden çok adımda dağıtmak için Docker CLı 'yi kullanmanız gerekir `docker run` . Bu nedenle, Docker-Compose. yıml içinde tanımlanan her bir hizmetin tam olarak bir görüntü veya yapı belirtmesi gerekir. Diğer anahtarlar isteğe bağlıdır ve `docker run` komut satırı karşılıklarına benzer.
 
-Aşağıdaki YAML kodu, eShopOnContainers örneği için olası genel ancak tek bir Docker-Compose. yıml dosyasının tanımıdır. Bu, eShopOnContainers 'dan gerçek Docker-Compose dosyası değildir. Bunun yerine, daha sonra açıklanacak şekilde Docker-Compose dosyaları ile çalışmanın en iyi yolu olmayan tek bir dosyadaki Basitleştirilmiş ve birleştirilmiş bir sürümdür.
+Aşağıdaki YAML kodu, eShopOnContainers örneği için olası genel ancak tek bir Docker-Compose. yıml dosyasının tanımıdır. Bu kod eShopOnContainers 'dan gerçek Docker-Compose dosyası değil. Bunun yerine, daha sonra açıklanacak şekilde Docker-Compose dosyaları ile çalışmanın en iyi yolu olmayan tek bir dosyadaki Basitleştirilmiş ve birleştirilmiş bir sürümdür.
 
 ```yml
 version: '3.4'
@@ -127,7 +127,7 @@ Bağlantı dizesi bir ortam değişkeni tarafından tanımlandığından, bu de�
 
 - Kapsayıcı üzerinde 80 numaralı bağlantı noktasını Docker ana makinesi (Linux VM) üzerinde bağlantı noktası 5101 ' e iletir.
 
-- Web hizmetini **SQLdata** Service 'e bağlar (bir kapsayıcıda çalışan Linux veritabanı için SQL Server örneği). Bu bağımlılığı belirttiğinizde, SQLveri kapsayıcısı zaten başlatılana kadar Catalog-API kapsayıcısı başlatılmaz; Bu önemlidir çünkü Catalog-API SQL Server veritabanının önce çalışır ve çalışıyor olması gerekir. Ancak, bu tür bir kapsayıcı bağımlılığı birçok durumda yeterli değildir çünkü Docker yalnızca kapsayıcı düzeyinde kontrol eder. Bazen hizmet (Bu durumda SQL Server) hala hazırlanmayabilir, bu nedenle, istemci mikro hizmetinizdeki üstel geri alma ile yeniden deneme mantığını uygulamanız önerilir. Bu şekilde, bir bağımlılık kapsayıcısı kısa bir süre için hazırsanız, uygulama yine de dayanıklı olacaktır.
+- Web hizmetini **SQLdata** Service 'e bağlar (bir kapsayıcıda çalışan Linux veritabanı için SQL Server örneği). Bu bağımlılığı belirttiğinizde, SQLveri kapsayıcısı zaten başlatılana kadar Catalog-API kapsayıcısı başlatılmaz; Bu en önemli, katalog-API ' nin önce SQL Server veritabanının çalışır duruma sahip olması gerektiğinden önemlidir. Ancak, bu tür bir kapsayıcı bağımlılığı birçok durumda yeterli değildir çünkü Docker yalnızca kapsayıcı düzeyinde kontrol eder. Bazen hizmet (Bu durumda SQL Server) hala hazırlanmayabilir, bu nedenle, istemci mikro hizmetinizdeki üstel geri alma ile yeniden deneme mantığını uygulamanız önerilir. Bu şekilde, bir bağımlılık kapsayıcısı kısa bir süre için hazırsanız, uygulama yine de dayanıklı olacaktır.
 
 - Bu, dış sunuculara erişime izin verecek şekilde yapılandırıldı: ek \_ konaklar ayarı, dış sunuculara veya makinelere, GELIŞTIRME PC 'nizdeki yerel bir SQL Server örneği gibi Docker Konağı dışındaki (bir geliştirme Docker ana bilgisayarı olan varsayılan LINUX VM 'nin dışında) erişmenize olanak tanır.
 
@@ -169,7 +169,7 @@ Her durumda, Docker-Compose geliştirme, test ve üretim iş akışları için u
 
 ### <a name="using-multiple-docker-compose-files-to-handle-several-environments"></a>Çeşitli ortamları işlemek için birden çok Docker-Compose dosyası kullanma
 
-Farklı ortamları hedeflerken, birden çok oluşturma dosyası kullanmanız gerekir. Bu, ortama bağlı olarak birden çok yapılandırma çeşitlemesi oluşturmanızı sağlar.
+Farklı ortamları hedeflerken, birden çok oluşturma dosyası kullanmanız gerekir. Bu yaklaşım, ortama bağlı olarak birden çok yapılandırma çeşitleri oluşturmanızı sağlar.
 
 #### <a name="overriding-the-base-docker-compose-file"></a>Temel Docker-Compose dosyasını geçersiz kılma
 
@@ -434,10 +434,10 @@ Docker-Compose,. env dosyasındaki her satırın biçimde olmasını bekler \<va
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>İyileştirilmiş ASP.NET Core Docker görüntüleri oluşturma
 
-Internet 'teki kaynaklarda Docker ve .NET Core 'u araştırıyorsanız, kaynağınızı bir kapsayıcıya kopyalayarak bir Docker görüntüsü oluşturmanın basitliğini gösteren Dockerfiles 'ı bulabilirsiniz. Bu örnekler, basit bir yapılandırma kullanarak, uygulamanızla birlikte paketlenmiş bir Docker görüntüsüne sahip olabilirsiniz. Aşağıdaki örnekte, bu Vein içindeki basit bir Dockerfile gösterilmektedir.
+Internet 'teki kaynaklar üzerinde Docker ve .NET 'i araştırıyorsanız, kaynağınızı bir kapsayıcıya kopyalayarak bir Docker görüntüsü oluşturmanın basitliğini gösteren Dockerfiles 'ı bulabilirsiniz. Bu örnekler, basit bir yapılandırma kullanarak, uygulamanızla birlikte paketlenmiş bir Docker görüntüsüne sahip olabilirsiniz. Aşağıdaki örnekte, bu Vein içindeki basit bir Dockerfile gösterilmektedir.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:5.0
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -448,9 +448,9 @@ ENTRYPOINT ["dotnet", "run"]
 
 Bunun gibi bir Dockerfile çalışacaktır. Ancak, görüntülerinizi önemli ölçüde iyileştirebilirsiniz, özellikle de üretim görüntüleriniz.
 
-Kapsayıcı ve mikro hizmetler modelinde, kapsayıcılardan sürekli olarak başlangıç yapabilirsiniz. Kapsayıcıları kullanmanın tipik yolu, kapsayıcı atılabilir olduğundan, uyuma bir kapsayıcıyı yeniden başlatmaz. Düzenleyiciler (Kubernetes ve Azure Service Fabric gibi) yalnızca yeni görüntü örnekleri oluşturur. Bunun anlamı, örnek oluşturma işleminin daha hızlı olması için uygulamayı derleme sırasında önceden derleyerek iyileştirmeniz gerektiği anlamına gelir. Kapsayıcı başlatıldığında, çalıştırılmaya hazırlanmalıdır. `dotnet restore` `dotnet build` .NET Core ve Docker hakkındaki blog gönderilerinde görebileceğiniz gibi, ve CLI komutlarını kullanarak çalışma zamanında geri yükleme ve derleme yapmayın.
+Kapsayıcı ve mikro hizmetler modelinde, kapsayıcılardan sürekli olarak başlangıç yapabilirsiniz. Kapsayıcıları kullanmanın tipik yolu, kapsayıcı atılabilir olduğundan, uyuma bir kapsayıcıyı yeniden başlatmaz. Düzenleyiciler (Kubernetes ve Azure Service Fabric gibi) yeni görüntü örnekleri oluşturur. Bunun anlamı, örnek oluşturma işleminin daha hızlı olması için uygulamayı derleme sırasında önceden derleyerek iyileştirmeniz gerektiği anlamına gelir. Kapsayıcı başlatıldığında, çalıştırılmaya hazırlanmalıdır. `dotnet restore` `dotnet build` .Net ve Docker hakkında blog gönderilerinde görebileceğiniz gibi, ve CLI komutlarını kullanarak çalışma zamanında geri yükleme ve derleme yapmayın.
 
-.NET ekibi, .NET Core ve kapsayıcı için iyileştirilmiş bir çerçeve ASP.NET Core için önemli bir iş yapıyor. .NET Core, küçük bellek ayak izine sahip hafif bir çerçeve; ekip, üç ana senaryo için iyileştirilmiş Docker görüntülerine odaklanmıştır ve 2,1 sürümünden itibaren *DotNet/Core*'Da Docker Hub kayıt defterinde yayımlanır:
+.NET ekibi, .NET ve kapsayıcı için iyileştirilmiş bir çerçeve ASP.NET Core .NET yapmak için önemli bir iş yapıyor. .NET, küçük bir bellek parmak izine sahip basit bir çerçeve; ekip, üç ana senaryo için iyileştirilmiş Docker görüntülerine odaklanmıştır ve 2,1 sürümünden itibaren *DotNet/* konumundaki Docker Hub kayıt defteri 'nde yayımlanır:
 
 1. **Geliştirme**: öncelik, değişiklikleri hızlı bir şekilde yinelemek ve hata ayıklamanın yanı sıra boyutun ikincil olduğu yerdir.
 
@@ -458,7 +458,7 @@ Kapsayıcı ve mikro hizmetler modelinde, kapsayıcılardan sürekli olarak baş
 
 3. **Üretim**: odak, kapsayıcıların hızlı bir şekilde dağıtılmasını ve başlamasını sağlar. bu sayede, bu görüntüler uygulamayı çalıştırmak için gereken ikili ve içerikle sınırlıdır.
 
-.NET ekibi, [DotNet/Core](https://hub.docker.com/_/microsoft-dotnet/) 'da dört temel çeşit sağlar (Docker Hub 'da):
+.NET ekibi, [DotNet/](https://hub.docker.com/_/microsoft-dotnet/) (Docker Hub 'da) dört temel çeşit sağlar:
 
 1. **SDK**: geliştirme ve derleme senaryoları için
 1. **ASPNET**: ASP.NET üretim senaryoları için
@@ -472,7 +472,7 @@ Daha hızlı başlangıç için, çalışma zamanı görüntüleri Ayrıca aspne
 - **ASP.NET Core ile Iyileştirilmiş Docker görüntüleri oluşturma**
   <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
-- **.NET Core uygulamaları için Docker görüntüleri oluşturma**
+- **.NET uygulamaları için Docker görüntüleri oluşturma**
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]

@@ -1,13 +1,13 @@
 ---
 title: Basit bir veri temelli CRUD mikro hizmeti oluşturma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Bir mikro Hizmetler uygulaması bağlamında basit bir CRUD (veri odaklı) mikro hizmeti oluşturmayı anlayın.
-ms.date: 08/14/2020
-ms.openlocfilehash: 27c9b331573ff08ea16c756552818df285156282
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/13/2021
+ms.openlocfilehash: cf6540347771105ea2ee9cdcab0fa347bf0121cf
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739875"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188367"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Basit bir veri temelli CRUD mikro hizmeti oluşturma
 
@@ -29,19 +29,19 @@ Bu tür basit veri sürücüsü hizmetine bir örnek, eShopOnContainers örnek u
 
 Önceki diyagramda, Katalog veritabanı da dahil olmak üzere, aynı Docker konağında bulunmayan veya bulunmayan mantıksal Katalog mikro hizmeti gösterilmektedir. Veritabanının aynı Docker ana bilgisayarında olması, geliştirme için uygun olabilir, ancak üretime yönelik değildir. Bu tür bir hizmet geliştirirken yalnızca [ASP.NET Core](/aspnet/core/) ve [Entity Framework Core](/ef/core/index)gibi bir veri ERIŞIM API 'si veya ORM yeterlidir. Ayrıca, sonraki bölümde açıklandığı gibi, hizmetinizin neleri sunduğunu bir açıklama sağlamak için [swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) aracılığıyla [Swagger](https://swagger.io/) meta verileri otomatik olarak oluşturabilirsiniz.
 
-Bulutta veya şirket içinde bir veritabanı sağlamaya gerek kalmadan tüm bağımlılıklarınızın çalışır durumda olmasını sağlayabileceğinizden, bir Docker kapsayıcısı içinde SQL Server gibi bir veritabanı sunucusunu çalıştırmanın geliştirme ortamları için harika olduğunu unutmayın. Bu, tümleştirme testlerini çalıştırırken oldukça kullanışlıdır. Ancak, üretim ortamlarında, genellikle bu yaklaşımla yüksek kullanılabilirlik olmadığı için bir kapsayıcıda veritabanı sunucusu çalıştırmak önerilmez. Azure 'da bir üretim ortamında, Azure SQL DB 'yi veya yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik sağlayabilen başka bir veritabanı teknolojisini kullanmanız önerilir. Örneğin, bir NoSQL yaklaşımı için CosmosDB ' yi seçebilirsiniz.
+Bulutta veya şirket içinde bir veritabanı sağlamaya gerek kalmadan tüm bağımlılıklarınızın çalışır durumda olmasını sağlayabileceğinizden, bir Docker kapsayıcısı içinde SQL Server gibi bir veritabanı sunucusunu çalıştırmanın geliştirme ortamları için harika olduğunu unutmayın. Bu yaklaşım, tümleştirme testleri çalıştırılırken kullanışlı bir yöntemdir. Ancak, üretim ortamlarında, genellikle bu yaklaşımla yüksek kullanılabilirlik olmadığı için bir kapsayıcıda veritabanı sunucusu çalıştırmak önerilmez. Azure 'da bir üretim ortamında, Azure SQL DB 'yi veya yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik sağlayabilen başka bir veritabanı teknolojisini kullanmanız önerilir. Örneğin, bir NoSQL yaklaşımı için CosmosDB ' yi seçebilirsiniz.
 
 Son olarak, Dockerfile ve Docker-Compose. yıml meta veri dosyalarını düzenleyerek, bu kapsayıcının görüntüsünün nasıl oluşturulacağını — hangi temel görüntünün kullanılacağını ve iç ve dış adlar ve TCP bağlantı noktaları gibi tasarım ayarlarını yapılandırabilirsiniz.
 
 ## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>ASP.NET Core ile basit bir CRUD mikro hizmeti uygulama
 
-.NET Core ve Visual Studio kullanarak basit bir CRUD mikro hizmeti uygulamak için, Şekil 6-6 ' de gösterildiği gibi basit bir ASP.NET Core Web API projesi (bir Linux Docker konağında çalışacak şekilde .NET Core üzerinde çalışan) oluşturarak başlayın.
+.NET ve Visual Studio kullanarak basit bir CRUD mikro hizmeti uygulamak için, Şekil 6-6 ' de gösterildiği gibi basit bir ASP.NET Core Web API projesi (bir Linux Docker konağında çalışacak şekilde .NET üzerinde çalışan) oluşturarak başlayın.
 
 ![Projenin kurulumunu gösteren görsel Studios ekran görüntüsü.](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
 **Şekil 6-6**. Visual Studio 2019 ' de ASP.NET Core Web API projesi oluşturma
 
-ASP.NET Core Web API projesi oluşturmak için önce bir ASP.NET Core Web uygulaması seçin ve ardından API türünü seçin. Projeyi oluşturduktan sonra, Entity Framework API 'sini veya diğer API 'yi kullanarak, MVC denetleyicilerinizi diğer Web API projesinde yaptığınız gibi uygulayabilirsiniz. Yeni bir Web API projesinde, bu mikro hizmette sahip olduğunuz tek bağımlılığın ASP.NET Core kendisinde olduğunu görebilirsiniz. Dahili olarak, *Microsoft. AspNetCore. All* bağımlılığında, Şekil 6-7 ' de gösterildiği gibi Entity Framework ve diğer birçok .NET Core NuGet paketine başvuruyorlar.
+ASP.NET Core Web API projesi oluşturmak için önce bir ASP.NET Core Web uygulaması seçin ve ardından API türünü seçin. Projeyi oluşturduktan sonra, Entity Framework API 'sini veya diğer API 'yi kullanarak, MVC denetleyicilerinizi diğer Web API projesinde yaptığınız gibi uygulayabilirsiniz. Yeni bir Web API projesinde, bu mikro hizmette sahip olduğunuz tek bağımlılığın ASP.NET Core kendisinde olduğunu görebilirsiniz. Dahili olarak, *Microsoft. AspNetCore. All* bağımlılığında, Şekil 6-7 ' de gösterildiği gibi Entity Framework ve diğer birçok .net NuGet paketine başvuruyorlar.
 
 ![Catalog. API ' nin NuGet bağımlılıklarının gösterildiği VS 'nin ekran görüntüsü.](./media/data-driven-crud-microservice/simple-crud-web-api-microservice-dependencies.png)
 
@@ -104,7 +104,7 @@ Ek uygulamalarına sahip olabilirsiniz `DbContext` . Örneğin, örnek katalog. 
 
 ##### <a name="querying-data-from-web-api-controllers"></a>Web API denetleyicilerinden verileri sorgulama
 
-Varlık sınıflarınızın örnekleri, aşağıdaki örnekte gösterildiği gibi, genellikle dil ile tümleşik sorgu (LINQ) kullanılarak veritabanından alınır:
+Varlık sınıflarınızın örnekleri, aşağıdaki örnekte gösterildiği gibi, genellikle Language-Integrated Query (LINQ) kullanılarak veritabanından alınır:
 
 ```csharp
 [Route("api/v1/[controller]")]
@@ -183,7 +183,7 @@ _context.SaveChanges();
 
 ##### <a name="dependency-injection-in-aspnet-core-and-web-api-controllers"></a>ASP.NET Core ve Web API denetleyicilerine bağımlılık ekleme
 
-ASP.NET Core, bağımlılık ekleme (dı) kutusunu kutudan çıkar. Tercih ettiğiniz IOC kapsayıcısını ASP.NET Core altyapısına takabilirsiniz, ancak isterseniz, üçüncü taraf bir denetim (IOC) kapsayıcısı ayarlamanız gerekmez. Bu durumda, gerekli EF DBContext veya ek depoları denetleyici Oluşturucusu aracılığıyla doğrudan ekleyebileceðiniz anlamına gelir.
+ASP.NET Core ' de, bağımlılık ekleme (dı) kutusunu kutudan çıkar. Tercih ettiğiniz IOC kapsayıcısını ASP.NET Core altyapısına takabilirsiniz, ancak isterseniz, üçüncü taraf bir denetim (IOC) kapsayıcısı ayarlamanız gerekmez. Bu durumda, gerekli EF DBContext veya ek depoları denetleyici Oluşturucusu aracılığıyla doğrudan ekleyebileceðiniz anlamına gelir.
 
 `CatalogController`Daha önce bahsedilen sınıfında `CatalogContext` (öğesinden devralınıyor `DbContext` ) tür, oluşturucunun diğer gerekli nesneleriyle birlikte eklenir `CatalogController()` .
 
@@ -270,7 +270,7 @@ Ancak, üretim ortamları için bağlantı dizeleri gibi gizli dizileri nasıl d
 
 Azure Key Vault, bulut Uygulamalarınız ve hizmetleriniz tarafından kullanılan şifreleme anahtarlarını ve gizli dizileri depolamanıza ve korumanıza yardımcı olur. Gizli dizi, API anahtarları, bağlantı dizeleri, parolalar vb. gibi tam denetim sağlamak istediğiniz her şey, kullanım günlüğü, zaman aşımı ayarlama, *diğer kullanıcıların arasında* erişim yönetimi içerir.
 
-Azure Key Vault, uygulama gizli dizileri kullanımının herkes tarafından haberdar olmasına gerek kalmadan çok ayrıntılı denetim düzeyine izin verir. Gizli dizileri geliştirme veya işlemleri kesintiye uğratmadan gelişmiş güvenlik için de döndürülebilir.
+Azure Key Vault, uygulama gizli dizileri kullanımının detaylı bir denetim düzeyinin kişiye izin vermez. Gizli dizileri geliştirme veya işlemleri kesintiye uğratmadan gelişmiş güvenlik için de döndürülebilir.
 
 Uygulamaların, Key Vault kullanabilmesi için kuruluşun Active Directory kayıtlı olmaları gerekir.
 
@@ -344,7 +344,7 @@ Swagger 'nin meta verileri, API 'Leri kullanmayı ve bunlara bağlanmayı anlama
 
 *Swagger-UI* temel ALıNARAK işlevsel API Yardım sayfaları biçiminde ASP.NET Core REST API uygulamaları için Swagger meta veri üretimini otomatik hale getirmek için çeşitli seçenekler vardır.
 
-En iyi şekilde [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) 'da kullanılmakta olan [swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , bu kılavuzda bazı ayrıntılarla birlikte ele alacağız, ancak aynı zamanda, bir Swagger veya openapı belirtiminden c denetleyicileri ve ayrıca, [NSwag](https://github.com/RSuter/NSwag) \# \# [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)kullanarak denetleyicileri içeren. dll dosyasını tarayarak, nswag kullanma seçeneği de vardır.
+Büyük olasılıkla [swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)en iyi şu anda [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) içinde kullanılan ve bu kılavuzda bazı ayrıntıları ele alacağız, ancak aynı zamanda TypeScript ve c API Istemcilerinin yanı sıra bir Swagger veya openapı belirtimindeki c denetleyicilerini ve hatta [](https://github.com/RSuter/NSwag) \# \# [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)kullanarak denetleyicileri içeren. dll dosyasını tarayarak nswag kullanma seçeneği de mevcuttur.
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swashbuckle NuGet paketi ile API Swagger meta veri üretimini otomatikleştirme
 
@@ -354,7 +354,7 @@ Swashbuckle, ASP.NET Web API projeleriniz için Swagger meta verilerini otomatik
 
 Swashbuckle, API Gezginini ve Swagger ya da [Swagger arabirimini](https://github.com/swagger-api/swagger-ui) birleştirerek API Tüketicileriniz için zengin bir keşif ve belge deneyimi sağlar. Sashbuckle, Swagger meta veri Oluşturucu altyapısına ek olarak, swashbuckle yüklendikten sonra otomatik olarak sunulacak olan Swagger-UI ' nin ekli bir sürümünü de içerir.
 
-Bu, geliştiricilerin API 'nizi kullanmasına yardımcı olmak için iyi bir keşif Kullanıcı arabirimi ile API 'nizi tamamlayoluşturabileceğiniz anlamına gelir. Otomatik olarak oluşturulduğundan, API 'nizi oluşturmaya odaklanmanızı sağlayan çok az miktarda kod ve bakım gerektirir. API Explorer için sonuç Şekil 6-8 gibi görünür.
+Bu, geliştiricilerin API 'nizi kullanmasına yardımcı olmak için iyi bir keşif Kullanıcı arabirimi ile API 'nizi tamamlayoluşturabileceğiniz anlamına gelir. Bu, otomatik olarak oluşturulduğundan, API 'nizi oluşturmaya odaklanmanızı sağlayan az miktarda kod ve bakım gerektirir. API Explorer için sonuç Şekil 6-8 gibi görünür.
 
 ![EShopOContainers API 'sini görüntüleyen Swagger API Explorer 'ın ekran görüntüsü.](./media/data-driven-crud-microservice/swagger-metadata-eshoponcontainers-catalog-microservice.png)
 

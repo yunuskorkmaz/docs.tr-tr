@@ -1,13 +1,13 @@
 ---
 title: Zaman uyumsuz ileti tabanlı iletişim
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Zaman uyumsuz ileti tabanlı iletişimler mikro hizmetler mimarisinde önemli bir kavramdır, çünkü mikro hizmetleri bir diğerinden bağımsız tutmanın en iyi yolu, Ayrıca, sonunda da eşzamanlı olarak eşitlenmektir.
-ms.date: 09/20/2018
-ms.openlocfilehash: 17b3fb3fe3f94d5387359061e3297ebfa6e5be7a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: f9d92e2640721b12d47223902712c420b06a5618
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169251"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189596"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -45,9 +45,9 @@ Yayımla/abone ol iletişimi kullandığınızda, olayları herhangi bir aboneye
 
 ## <a name="asynchronous-event-driven-communication"></a>Zaman uyumsuz olay temelli iletişim
 
-Zaman uyumsuz olay temelli iletişim kullanılırken, mikro hizmet, etki alanı içinde bir şeyler olduğunda bir tümleştirme olayı yayınlar ve bir ürün kataloğu mikro hizmetindeki fiyat değişikliği gibi başka bir mikro hizmetin bunu farkında olması gerekir. Ek mikro hizmetler, olayları zaman uyumsuz olarak alabilmesi için olaylara abone olur. Bu durumda alıcılar kendi etki alanı varlıklarını güncelleştirebilir ve bu da daha fazla tümleştirme olayının yayımlanmasına neden olabilir. Bu yayımlama/abone olma sistemi genellikle bir olay veri yolunun uygulanması kullanılarak gerçekleştirilir. Olay veri yolu, bir soyutlama veya arabirim olarak tasarlanabilir ve olaylara abone olmak ya da aboneliği kaldırmak ve olayları yayımlamak için gereken API 'yi kullanabilir. Olay veri yolu, zaman uyumsuz iletişimi ve bir yayımlama/abonelik modelini destekleyen bir mesajlaşma kuyruğu ya da hizmet veri yolu gibi işlem tabanlı ve mesajlaşma aracısına dayalı bir veya daha fazla uygulama içerebilir.
+Zaman uyumsuz olay temelli iletişim kullanılırken, mikro hizmet, etki alanı içinde bir şeyler olduğunda bir tümleştirme olayı yayınlar ve bir ürün kataloğu mikro hizmetindeki fiyat değişikliği gibi başka bir mikro hizmetin bunu farkında olması gerekir. Ek mikro hizmetler, olayları zaman uyumsuz olarak alabilmesi için olaylara abone olur. Bu durumda alıcılar kendi etki alanı varlıklarını güncelleştirebilir ve bu da daha fazla tümleştirme olayının yayımlanmasına neden olabilir. Bu yayımlama/abone olma sistemi, bir olay veri yolunun uygulanması kullanılarak gerçekleştirilir. Olay veri yolu, bir soyutlama veya arabirim olarak tasarlanabilir ve olaylara abone olmak ya da aboneliği kaldırmak ve olayları yayımlamak için gereken API 'yi kullanabilir. Olay veri yolu, zaman uyumsuz iletişimi ve bir yayımlama/abonelik modelini destekleyen bir mesajlaşma kuyruğu ya da hizmet veri yolu gibi işlem tabanlı ve mesajlaşma aracısına dayalı bir veya daha fazla uygulama içerebilir.
 
-Bir sistem, tümleştirme olayları tarafından yönetilen nihai tutarlılığı kullanıyorsa, bu yaklaşımın son kullanıcıya tamamen açık olması önerilir. Sistem, istemci tarafından SignalR veya yoklama sistemleri gibi tümleştirme olaylarını taklit eden bir yaklaşım kullanmamalıdır. Son Kullanıcı ve işletme sahibi sistemde nihai tutarlılığı açıkça benimsemek ve birçok durumda, açık olduğu sürece bu yaklaşım ile ilgili herhangi bir sorun olmadığını fark ediyor. Kullanıcılar bazı sonuçları hemen görmeyi beklediği için bu önemlidir ve bu durum nihai tutarlılık ile gerçekleşmeyebilir.
+Bir sistem, tümleştirme olayları tarafından yönetilen nihai tutarlılığı kullanıyorsa, bu yaklaşımın son kullanıcıya açık olması önerilir. Sistem, istemci tarafından SignalR veya yoklama sistemleri gibi tümleştirme olaylarını taklit eden bir yaklaşım kullanmamalıdır. Son Kullanıcı ve işletme sahibi sistemde nihai tutarlılığı açıkça benimsemek ve birçok durumda, açık olduğu sürece bu yaklaşım ile ilgili herhangi bir sorun olmadığını fark ediyor. Bu yaklaşım önemlidir çünkü kullanıcıların bazı sonuçları hemen görmesini bekleyebilir ve bu boyut nihai tutarlılık ile gerçekleşmeyebilir.
 
 Daha önce [Dağıtılmış veri yönetimi sorunları ve çözümleri](distributed-data-management.md) bölümünde belirtildiği gibi, birden fazla mikro hizmete yayılan iş görevlerini uygulamak için tümleştirme olaylarını kullanabilirsiniz. Bu nedenle, bu hizmetler arasında nihai tutarlılık olacaktır. Sonuçta tutarlı bir işlem, dağıtılmış eylemler koleksiyonundan oluşur. Her eylemde, ilgili mikro hizmet bir etki alanı varlığını güncelleştirir ve aynı uçtan uca iş göreviyle sonraki eylemi başlatan başka bir tümleştirme olayı yayımlar.
 
@@ -69,11 +69,11 @@ Ancak, Hyper-ölçeklenebilirlik gerektiren görev açısından kritik ve üreti
 
 ## <a name="resiliently-publishing-to-the-event-bus"></a>Dayanıklı bağlantısı olay veri yoluna yayımlama
 
-Birden çok mikro hizmette olay odaklı bir mimari uygulamaya yönelik bir zorluk, dayanıklı bağlantısı ile ilgili tümleştirme olayını olay veri yoluna yayımlarken, işlemlere bağlı olarak, özgün mikro hizmette durumu otomatik olarak güncelleştirme. Aşağıda, ek yaklaşımlar da dahil olmak üzere, bunu yapmanın birkaç yolu verilmiştir.
+Birden çok mikro hizmette olay odaklı bir mimari uygulamaya yönelik bir zorluk, dayanıklı bağlantısı ile ilgili tümleştirme olayını olay veri yoluna yayımlarken, işlemlere bağlı olarak, özgün mikro hizmette durumu otomatik olarak güncelleştirme. Aşağıdakiler de ek yaklaşımlar olsa da bu işlevselliği gerçekleştirmenin birkaç yolu vardır.
 
 - MSMQ gibi bir işlem (DTC tabanlı) kuyruğu kullanma. (Ancak, bu eski bir yaklaşımdır.)
 
-- [İşlem günlüğü madenciliği](https://www.scoop.it/t/sql-server-transaction-log-mining)kullanılıyor.
+- İşlem günlüğü madenciliği kullanılıyor.
 
 - Tam [olay](/azure/architecture/patterns/event-sourcing) kaynağını belirleme düzenini kullanma.
 

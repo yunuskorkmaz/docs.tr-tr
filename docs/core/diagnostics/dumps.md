@@ -2,12 +2,12 @@
 title: Dökümler-.NET
 description: .NET ' te döküme giriş.
 ms.date: 10/12/2020
-ms.openlocfilehash: 7a4c7bf54b3e9ea43e685eafbd00b4a373326520
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: f68d9bd804350366625df014df4d9ca0641d5d4d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764948"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188562"
 ---
 # <a name="dumps"></a>Dökümler
 
@@ -19,7 +19,6 @@ Dökümler, uygulamanızı çalıştırdığınız platforma bağlı olarak çe�
 
 > [!NOTE]
 > Bir kapsayıcının içinde döküm toplama, veya aracılığıyla eklenebilen PTRACE özelliği gerektirir `--cap-add=SYS_PTRACE` `--privileged` .
-
 > [!NOTE]
 > Dökümler, çalışan işlemin tam belleğini içerebildiğinden gizli bilgiler içerebilir. Bunları herhangi bir güvenlik kısıtlaması ve gudances ile işleyin.
 
@@ -29,7 +28,7 @@ Uygulamanızı kilitlenme sonrasında döküm toplayacak şekilde yapılandırma
 
 Aşağıdaki tabloda, kilitlenme üzerinde dökümleri toplamak için yapılandırabileceğiniz ortam değişkenleri gösterilmektedir.
 
-|Ortam değişkeni|Açıklama|Varsayılan değer|
+|Ortam değişkeni|Description|Varsayılan değer|
 |-------|---------|---|
 |`COMPlus_DbgEnableMiniDump`|1 olarak ayarlanırsa, temel döküm oluşturmayı etkinleştirin.|0|
 |`COMPlus_DbgMiniDumpType`|Toplanacak döküm türü. Daha fazla bilgi için aşağıdaki tabloya bakın|2 ( `MiniDumpWithPrivateReadWriteMemory` )|
@@ -53,11 +52,10 @@ Kendi isteğinizin dökümünü toplamak için, `dotnet-dump` dökümleri toplam
 
 ## <a name="analyze-dumps"></a>Dökümleri çözümle
 
-[`dotnet-dump`](dotnet-dump.md)CLI aracını veya [Visual Studio 'yu](https://docs.microsoft.com/visualstudio/debugger/using-dump-files)kullanarak dökümleri anlayze yapabilirsiniz.
+[`dotnet-dump`](dotnet-dump.md)CLI aracını veya [Visual Studio 'yu](/visualstudio/debugger/using-dump-files)kullanarak dökümleri anlayze yapabilirsiniz.
 
 > [!NOTE]
 > Visual Studio sürüm 16,8 ve üzeri sürümleri, .NET Core 3.1.7 veya üzeri sürümlerde oluşturulan [Linux dökümlerini açmanıza](https://devblogs.microsoft.com/visualstudio/linux-managed-memory-dump-debugging/) olanak tanır.  
-
 > [!NOTE]
 > Yerel hata ayıklama gerekliyse, [sos hata ayıklayıcı uzantısı](sos-debugging-extension.md) , [Linux ve MacOS üzerinde lldb](debug-linux-dumps.md#analyze-dumps-on-linux)ile birlikte kullanılabilir. So, Visual Studio önerilse de Windows üzerinde [WinDbg/CDB](/windows-hardware/drivers/debugger/debugger-download-tools) ile desteklenir.
 

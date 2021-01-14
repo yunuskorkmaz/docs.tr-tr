@@ -1,13 +1,13 @@
 ---
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok Kapsayıcılı uygulamaları düzenleme seçeneklerini ve Kubernetes uygulama yaşam döngüsünü geliştirirken Azure Dev Spaces olasılıklarını öğrenin.
-ms.date: 01/30/2020
-ms.openlocfilehash: a61e883ab0d27300e00b177c2621c6521e85ac84
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 7ba0367bca98edbab1be2059ee37e863359edad3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172508"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189427"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -21,9 +21,9 @@ Uygulamanız mikro hizmetleri temel alıyorsa veya yalnızca birden çok kapsay�
 
 Her hizmet örneği için bir kapsayıcı kullanırsınız. Docker Kapsayıcıları "dağıtım birimleri" ve bir kapsayıcı bir Docker örneğidir. Bir konak birçok kapsayıcıyı işler. Mantıksal bir yaklaşım gibi görünüyor. Ancak yük dengelemeyi nasıl ele alırken, yönlendirirsiniz ve bu oluşturulan uygulamalar nasıl düzenlenir?
 
-Tek Docker konaklarındaki düz Docker altyapısı, tek bir konaktaki tek görüntü örneklerinin yönetilmesi ihtiyaçlarını karşılar, ancak daha karmaşık dağıtılmış uygulamalar için birden fazla konakta dağıtılan birden çok kapsayıcıyı yönetmek için olduğunda kısa sürer. Çoğu durumda, kapsayıcıları otomatik olarak başlatacak bir yönetim platformuna ihtiyacınız vardır, görüntü başına birden çok örnek içeren kapsayıcılar, genişleme kapsayıcıları, gerektiğinde askıya alır veya onları kapatabilir ve ayrıca, ağ ve veri depolama gibi kaynaklara nasıl erişebilecekleri de kontrol edersiniz.
+Tek Docker konaklarındaki düz Docker altyapısı, tek bir konaktaki tek görüntü örneklerinin yönetilmesi ihtiyaçlarını karşılar, ancak daha karmaşık dağıtılmış uygulamalar için birden fazla konakta dağıtılan birden çok kapsayıcıyı yönetmek için olduğunda kısa sürer. Çoğu durumda, kapsayıcıları otomatik olarak başlatan bir yönetim platformuna ihtiyacınız vardır, her görüntü için birden fazla örneğe sahip kapsayıcıları ölçeklendirebilir, gerektiğinde askıya alır veya onları kapatabilir ve ideal olarak ağ ve veri depolama gibi kaynaklara nasıl eriştikleri de kontrol edersiniz.
 
-Tek tek kapsayıcıların veya basit oluşturulmuş uygulamaların yönetimini ötesinde ve mikro hizmetlerle daha büyük kurumsal uygulamalarda gezinmek için, düzenleme ve kümeleme platformları ' nı açmanız gerekir.
+Tek tek kapsayıcıların veya basit oluşturulan uygulamaların yönetimini ötesinde ve mikro hizmetlerle daha büyük kurumsal uygulamalarda gezinmek için, düzenleme ve kümeleme platformları ' nı açmanız gerekir.
 
 Bir mimaride ve geliştirme noktasından, mikro hizmet tabanlı uygulamalardan oluşan büyük bir kuruluş oluşturuyorsanız, gelişmiş senaryoları destekleyen aşağıdaki platformların ve ürünlerin anlaşılması önemlidir:
 
@@ -56,11 +56,11 @@ Azure Kubernetes hizmeti, popüler Docker Kümelemesi açık kaynaklı araçlar�
 
 **Şekil 4-24**. Kubernetes kümesinin Basitleştirilmiş yapısı ve topolojisi
 
-Şekil 4-24 ' de, ana düğümün (VM) küme koordinasyonundan çoğunu denetlediği bir Kubernetes kümesinin yapısını görebilir ve bir uygulama görünümünden tek bir havuz olarak yönetilen düğümlerin geri kalanına kapsayıcı dağıtabilir ve binlerce kapsayıcının binlerce veya onlarca ölçeğini ölçeklendirmenize izin verebilirsiniz.
+Şekil 4-24 ' de, ana düğümün (VM) küme koordinasyonunu denetlediği bir Kubernetes kümesinin yapısını görebilir ve bir uygulama noktasından tek bir havuz olarak yönetilen ve en fazla binlerce kapsayıcıyı ölçeklendirmenize olanak sağlayan düğümlerin geri kalanına kapsayıcılar dağıtabilirsiniz.
 
 ## <a name="development-environment-for-kubernetes"></a>Kubernetes için geliştirme ortamı
 
-Geliştirme ortamında, Docker yalnızca [Docker Desktop](https://docs.docker.com/install/)'ı yükleyerek tek bir geliştirme makinesinde (Windows 10 veya MacOS) çalışan Kubernetes [2018 Temmuz 'da duyuruldu](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) . Şekil 4-25 ' de gösterildiği gibi daha sonra daha fazla tümleştirme testi için buluta dağıtabilirsiniz (AKS).
+Geliştirme ortamında, Docker, [Docker Desktop](https://docs.docker.com/install/)' ı yükleyerek Kubernetes 'in tek bir geliştirme makinesinde da (Windows 10 veya MacOS) çalıştırılabilirler [Temmuz 2018 ' de duyuruldu](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) . Şekil 4-25 ' de gösterildiği gibi daha sonra daha fazla tümleştirme testi için buluta dağıtabilirsiniz (AKS).
 
 ![Bir geliştirme makinesinde Kubernetes 'i gösteren ve daha sonra AKS 'e dağıtılan diyagram](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png)
 
@@ -70,7 +70,7 @@ Geliştirme ortamında, Docker yalnızca [Docker Desktop](https://docs.docker.co
 
 AKS 'yi kullanmaya başlamak için Azure portal veya CLı kullanarak bir AKS kümesi dağıtırsınız. Azure 'da bir Kubernetes kümesi dağıtma hakkında daha fazla bilgi için bkz. [Azure Kubernetes Service (AKS) kümesi dağıtma](/azure/aks/kubernetes-walkthrough-portal).
 
-Varsayılan olarak AKS 'nin bir parçası olarak yüklenen yazılımların herhangi bir ücreti yoktur. Tüm varsayılan seçenekler açık kaynaklı yazılımlarla uygulanır. AKS, Azure 'da birden çok sanal makine için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri için ücretlendirilirsiniz, Ayrıca, depolama ve ağ gibi diğer temel altyapı kaynakları kullanılır. AKS 'in kendisi için artımlı ücret alınmaz.
+Varsayılan olarak AKS 'nin bir parçası olarak yüklenen yazılımların herhangi bir ücreti yoktur. Tüm varsayılan seçenekler açık kaynaklı yazılımlarla uygulanır. AKS, Azure 'da birden çok sanal makine için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri ve depolama ve ağ gibi diğer temel altyapı kaynakları için ücretlendirilirsiniz. AKS 'in kendisi için artımlı ücret alınmaz.
 
 Kubernetes için varsayılan üretim dağıtım seçeneği, sonraki bölümde kullanıma sunulan helk grafiklerini kullanmaktır.
 
@@ -78,11 +78,11 @@ Kubernetes için varsayılan üretim dağıtım seçeneği, sonraki bölümde ku
 
 Bir Kubernetes kümesine bir uygulama dağıttığınızda, önceki bölümde zaten bahsedildiği gibi, yerel biçimi (. YAML dosyaları) temel alınarak dağıtım dosyalarını kullanarak özgün kubectl.exe CLı aracını kullanabilirsiniz. Ancak, karmaşık mikro hizmet tabanlı uygulamalar dağıtımında olduğu gibi daha karmaşık Kubernetes uygulamaları için [Held](https://helm.sh/)kullanılması önerilir.
 
-HELI grafikleri, en karmaşık Kubernetes uygulamasını bile tanımlamanızı, sürüm, yükleme, paylaşma, yükseltme veya geri alma yapmanıza yardımcı olur.
+HELI grafikleri, en karmaşık Kubernetes uygulamasını bile tanımlamanıza, sürümüne, yüklemenize, paylaşmanıza, yükseltmenize veya geri almanıza yardımcı olur.
 
-Ayrıca, [Azure dev SPACES](/azure/dev-spaces/azure-dev-spaces) gibi Azure 'Daki ek Kubernetes ortamları da HELI grafiklerini temel alan da, helk kullanımı da önerilir.
+Ayrıca, Azure 'daki [Azure dev Spaces](/azure/dev-spaces/azure-dev-spaces) gibi diğer Kubernetes ortamları da Held grafiklerini temel aldığı Için, HELI kullanımı da önerilir.
 
-HELI, [bulut Yerel Bilgi Işlem altyapısı (CNCF)](https://www.cncf.io/) tarafından korunur. Microsoft, Google, BitNami ve helmkatkıda bulunan topluluğuyla işbirliği yapın.
+Held, [bulut Yerel Bilgi Işlem altyapısı (CNCF)](https://www.cncf.io/) tarafından korunur. Microsoft, Google, BitNami ve helmkatkıda bulunan topluluğu ile birlikte çalışma.
 
 Helk grafikleri ve Kubernetes hakkında daha fazla uygulama bilgisi için, [AKS gönderisini eShopOnContainers dağıtmak üzere helk grafiklerini kullanma](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)) konusuna bakın.
 

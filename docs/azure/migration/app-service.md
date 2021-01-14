@@ -3,12 +3,12 @@ title: .NET Web uygulamanızı veya hizmetinizi Azure App Service geçirin
 description: Bir .NET Web uygulamasını veya hizmetini Şirket içinden Azure App Service geçirme hakkında bilgi edinin.
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e2aaa23aedabef007878901ec7297711f140533
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539092"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189258"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET Web uygulamanızı veya hizmetinizi Azure App Service geçirin
 
@@ -24,7 +24,7 @@ Bunların geçirilmesi veya değiştirilmesi gerekebilmesi için şirket içi ka
 
 * [Azure sanal ağları](/azure/app-service/web-sites-integrate-with-vnet)'nı kullanarak şirket içi kaynaklara App SERVICE bir VPN bağlantısı oluşturun.
 * [Azure Relay](/azure/service-bus-relay/relay-what-is-it)kullanarak güvenlik duvarı değişiklikleri olmadan şirket içi hizmetleri güvenle buluta sunun.
-* [SQL veritabanı](https://go.microsoft.com/fwlink/?linkid=863217) gibi bağımlılıkları Azure 'a geçirin.
+* [SQL veritabanı](./sql.md) gibi bağımlılıkları Azure 'a geçirin.
 * Bağımlılıkları azaltmak için bulutta hizmet olarak platform teklifleri kullanın. Örneğin, şirket içi posta sunucusuna bağlanmak yerine [SendGrid](/azure/sendgrid-dotnet-how-to-send-email)kullanmayı düşünün.
 
 ### <a name="port-bindings"></a>Bağlantı noktası bağlamaları

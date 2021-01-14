@@ -4,12 +4,12 @@ description: Eklentileri destekleyen bir .NET Core uygulaması oluşturmayı ö�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: ce7ac826feaf4542307abefde6d40a319d78e423
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: d3b532ae72a80eef9603fc6f3ada8c11cae966dd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247598"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187905"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Eklentilerle .NET Core uygulaması oluşturma
 
@@ -20,9 +20,12 @@ Bu öğreticide, yükleme eklentilerini bir özel olarak nasıl oluşturacağın
 - <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName>Eklentilerin bağımlılıklara sahip olmasını sağlamak için türü kullanın.
 - Yalnızca derleme yapıtları kopyalanarak kolayca dağıtılabilecek olan eklentileri yazar.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-- [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download) veya daha yeni bir sürümünü yükler.
+- [.NET 5 SDK](https://dotnet.microsoft.com/download) veya daha yeni bir sürümünü yükler.
+
+> [!NOTE]
+> Örnek kod .NET 5 ' i hedefler, ancak kullandığı tüm özellikler .NET Core 3,0 ' de tanıtılmıştır ve bu tarihten sonra tüm .NET sürümlerinde mevcuttur.
 
 ## <a name="create-the-application"></a>Uygulama oluşturma
 
@@ -239,7 +242,7 @@ Kök klasöre geri döndüğünüzde şunları yapın:
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -257,7 +260,7 @@ Kök klasöre geri döndüğünüzde şunları yapın:
 </ItemGroup>
 ```
 
-`<Private>false</Private>`Öğesi önemlidir. Bu, MSBuild eklentisinin çıkış dizinine *PluginBase.dll* kopyalamamasını söyler. *PluginBase.dll* derlemesi çıkış dizininde varsa, `PluginLoadContext` derlemeyi bulur ve *HelloPlugin.dll* derlemesini yüklediğinde yükler. Bu noktada, `HelloPlugin.HelloCommand` tür `ICommand` arabirimi *PluginBase.dll* `HelloPlugin` `ICommand` varsayılan yükleme bağlamına yüklenen arabirimi değil, projenin çıkış dizinindekiPluginBase.dlluygular. Çalışma zamanı bu iki türü farklı derlemelerden farklı türler olarak gördüğünden, `AppWithPlugin.Program.CreateCommands` Yöntem komutları bulamaz. Sonuç olarak, `<Private>false</Private>` eklenti arabirimlerini içeren derlemeye başvuru için meta veriler gerekir.
+`<Private>false</Private>`Öğesi önemlidir. Bu, MSBuild eklentisinin çıkış dizinine *PluginBase.dll* kopyalamamasını söyler. *PluginBase.dll* derlemesi çıkış dizininde varsa, `PluginLoadContext` derlemeyi bulur ve *HelloPlugin.dll* derlemesini yüklediğinde yükler. Bu noktada, `HelloPlugin.HelloCommand` tür `ICommand` arabirimi  `HelloPlugin` `ICommand` varsayılan yükleme bağlamına yüklenen arabirimi değil, projenin çıkış dizinindekiPluginBase.dlluygular. Çalışma zamanı bu iki türü farklı derlemelerden farklı türler olarak gördüğünden, `AppWithPlugin.Program.CreateCommands` Yöntem komutları bulamaz. Sonuç olarak, `<Private>false</Private>` eklenti arabirimlerini içeren derlemeye başvuru için meta veriler gerekir.
 
 Benzer şekilde, `<ExcludeAssets>runtime</ExcludeAssets>` diğer paketlere başvuruyorsa öğesi de önemlidir `PluginBase` . Bu ayar, ile aynı etkiye sahiptir, `<Private>false</Private>` ancak `PluginBase` Proje veya bağımlılıklarından birinin dahil olabileceği paket başvuruları üzerinde de geçerlidir.
 
@@ -287,7 +290,7 @@ Bu, `A.PluginBase` derlemelerin eklentinin çıkış dizinine kopyalanmasını e
 
 ## <a name="plugin-target-framework-recommendations"></a>Eklenti hedef Framework önerileri
 
-Eklenti bağımlılık yüklemesi dosyadaki *.deps.js* kullandığından, eklentinin hedef çerçevesiyle ilgili bir Gotcha vardır. Özellikle, eklentilerinizin bir .NET Standard sürümü yerine .NET Core 3,0 gibi bir çalışma zamanını hedeflemesi gerekir. Dosya *.deps.js* , projenin hedeflediği çerçeveye göre oluşturulur ve birçok .NET Standard uyumlu paket, belirli çalışma zamanları için .NET Standard ve uygulama derlemelerinin oluşturulmasına yönelik başvuru derlemeleri gönderdiğinden, * üzerinde.deps.js* uygulama derlemelerini doğru şekilde göremeyebilir ya da istediğiniz .NET Core sürümü yerine bir derlemenin .NET Standard sürümünü alabilir.
+Eklenti bağımlılık yüklemesi dosyadaki *.deps.js* kullandığından, eklentinin hedef çerçevesiyle ilgili bir Gotcha vardır. Özellikle, eklentilerinizin bir .NET Standard sürümü yerine .NET 5 gibi bir çalışma zamanını hedeflemesi gerekir. Dosya *.deps.js* , projenin hedeflediği çerçeveye göre oluşturulur ve birçok .NET Standard uyumlu paket, belirli çalışma zamanları için .NET Standard ve uygulama derlemelerinin oluşturulmasına yönelik başvuru derlemeleri gönderdiğinden, *üzerinde.deps.js* uygulama derlemelerini doğru şekilde göremeyebilir ya da istediğiniz .NET Core sürümü yerine bir derlemenin .NET Standard sürümünü alabilir.
 
 ## <a name="plugin-framework-references"></a>Eklenti çerçevesi başvuruları
 

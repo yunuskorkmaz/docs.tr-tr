@@ -2,18 +2,18 @@
 title: DotNet List paket komutu
 description: "' DotNet List Package ' komutu bir proje veya çözümün paket başvurularını listelemek için uygun bir seçenek sağlar."
 ms.date: 11/11/2020
-ms.openlocfilehash: ecb83e5485c9fb49a454a35091e1a7b753b1f291
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 684b73dec553a424252e1368c265847622fb7850
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556894"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189902"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,2 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet list package` -Bir proje veya çözüm için paket başvurularını listeler.
 
@@ -43,7 +43,7 @@ Project 'SentimentAnalysis' has the following package references
 (A) : Auto-referenced package.
 ```
 
-**İstenen** sütun, proje dosyasında belirtilen paket sürümünü ifade eder ve bir Aralık olabilir. **Çözümlenen** sütun, projenin şu anda kullandığı sürümü listeler ve her zaman tek bir değerdir. Adlarının yanında bir doğru görüntülenen paketler, `(A)` Proje ayarlarından ( [implicit package references](csproj.md#implicit-package-references) `Sdk` tür `<TargetFramework>` veya `<TargetFrameworks>` özellik, vb.) çıkarılan örtük paket başvurularını temsil eder.
+**İstenen** sütun, proje dosyasında belirtilen paket sürümünü ifade eder ve bir Aralık olabilir. **Çözümlenen** sütun, projenin şu anda kullandığı sürümü listeler ve her zaman tek bir değerdir. Adlarının yanında bir doğru görüntülenen paketler, `(A)` Proje ayarlarından ( `Sdk` tür veya `<TargetFramework>` veya özellik) çıkarılan örtük paket başvurularını temsil eder `<TargetFrameworks>` .
 
 `--outdated`Projelerinizde kullanmakta olduğunuz paketlerin yeni sürümlerinin olup olmadığını öğrenmek için seçeneğini kullanın. Varsayılan olarak, `--outdated` Çözümlenmiş sürüm aynı zamanda bir ön sürüm sürümü olmadığı takdirde en son kararlı paketleri listeler. Yeni sürümler listelenirken ön sürüm sürümlerini dahil etmek için seçeneği de belirtin `--include-prerelease` . Aşağıdaki örneklerde, `dotnet list package --outdated --include-prerelease` önceki örnekle aynı proje için komutun çıktısı gösterilmektedir:
 
@@ -67,7 +67,7 @@ Project 'HelloPlugin' has the following package references
    > PluginBase            1.0.0
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
 `PROJECT | SOLUTION`
 

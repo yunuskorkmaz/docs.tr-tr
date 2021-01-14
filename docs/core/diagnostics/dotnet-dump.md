@@ -2,12 +2,12 @@
 title: DotNet-döküm Tanılama aracı-.NET CLı
 description: Yerel hata ayıklayıcı olmadan Windows ve Linux dökümlerinin toplanması ve çözümlenmesi için DotNet-dump CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: 84b3796f4ee92880e6d432df606a6addfd2471b0
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765052"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189810"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Döküm toplama ve çözümleme yardımcı programı (DotNet-dump)
 
@@ -35,8 +35,11 @@ ms.locfileid: "97765052"
   | İşletim Sistemi  | Platform |
   | --- | -------- |
   | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [ARM](https://aka.ms/dotnet-dump/win-arm) \| [ARM-x64](https://aka.ms/dotnet-dump/win-arm64) |
-  | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
+  | Mac OS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [ARM](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [MUSL-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [MUSL-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
+
+> [!NOTE]
+> `dotnet-dump`X86 uygulamasında kullanmak için, aracın karşılık gelen x86 sürümüne ihtiyacınız vardır.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -44,7 +47,7 @@ ms.locfileid: "97765052"
 dotnet-dump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet-dump`Genel araç, Linux üzerinde yer alan herhangi bir yerel hata ayıklayıcı olmadan Windows ve Linux dökümlerinin toplanması ve çözümlenmesi için bir yoldur `lldb` . Bu araç alp Linux gibi tam olarak çalışan `lldb` kullanılabilir olmayan platformlarda önemlidir. `dotnet-dump`Araç, çökmeleri ve çöp toplayıcıyı (GC) çözümlemek IÇIN sos komutları çalıştırmanızı sağlar, ancak yerel yığın çerçevelerini görüntüleme gibi şeyler desteklenmez.
 
@@ -114,6 +117,12 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--out
 
   Döküm toplama tanılama günlüğünü etkinleştir.
 
+> [!NOTE]
+> Linux ve macOS 'ta, bu komut hedef uygulamayı bekler ve `dotnet-dump` aynı `TMPDIR` ortam değişkenini paylaşır. Aksi takdirde, komut zaman aşımına uğrar.
+
+> [!NOTE]
+> Kullanarak bir döküm toplamak için `dotnet-dump` , hedef işlem ya da kök olarak çalışan kullanıcı ile aynı kullanıcı olarak çalıştırılması gerekir. Aksi halde araç, hedef işlemle bağlantı kurmayacak.
+
 ## <a name="dotnet-dump-analyze"></a>DotNet-döküm Analizi
 
 Bir dökümü araştırmak için etkileşimli bir kabuk başlatır. Kabuk çeşitli [sos komutlarını](#analyze-sos-commands)kabul eder.
@@ -124,7 +133,7 @@ Bir dökümü araştırmak için etkileşimli bir kabuk başlatır. Kabuk çeşi
 dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 ```
 
-### <a name="arguments"></a>Arguments
+### <a name="arguments"></a>Bağımsız değişkenler
 
 - **`<dump_path>`**
 

@@ -2,18 +2,18 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu bir dizine .NET projesi veya çözümü yayımlar.
 ms.date: 11/11/2020
-ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3918c0708e207157ac33dd1a8fdefb993a1d6741
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634435"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190071"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet publish` -Uygulamayı ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
 
@@ -32,7 +32,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet publish` uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
 
@@ -67,15 +67,15 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 - [ASP.NET Core uygulama dağıtımı için Visual Studio yayımlama profilleri (. pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - **`PROJECT|SOLUTION`**
 
   Yayımlanacak proje veya çözüm.
-  
-  * `PROJECT` bir [C#](csproj.md), f # veya Visual Basic proje dosyasının yolu ve dosya adı ya da C#, f # veya Visual Basic proje dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır.
 
-  * `SOLUTION` , bir çözüm dosyasının ( *. sln* uzantısının) yolu ve dosya adı veya çözüm dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır. .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  * `PROJECT` bir C#, F # veya Visual Basic proje dosyasının yolu ve dosya adı ya da C#, F # veya Visual Basic proje dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır.
+
+  * `SOLUTION` , bir çözüm dosyasının (*. sln* uzantısının) yolu ve dosya adı veya çözüm dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 ## <a name="options"></a>Seçenekler
 
@@ -132,16 +132,16 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
   ```
 
   - .NET Core 3. x SDK ve üzeri
-  
-    Bir proje yayımlanırken göreli bir yol belirtilmişse, oluşturulan çıkış dizini proje dosyası konumuna değil geçerli çalışma dizinine göre belirlenir.
 
-    Bir çözüm yayımlarken göreli bir yol belirtilmişse, tüm projeler için tüm çıktılar geçerli çalışma dizinine göre belirtilen klasöre gider. Yayımla çıkışını her proje için ayrı klasörlere gitmesini sağlamak için, seçeneği yerine MSBuild özelliğini kullanarak göreli bir yol belirtin `PublishDir` `--output` . Örneğin, `dotnet publish -p:PublishDir=.\publish` her proje için yayımlama çıkışını `publish` Proje dosyasını içeren klasörün altındaki bir klasöre gönderir.
+    Bir projeyi yayımlarken göreli bir yol belirtirseniz, oluşturulan çıkış dizini proje dosyası konumuna değil geçerli çalışma dizinine göre belirlenir.
+
+    Bir çözüm yayımlarken göreli bir yol belirtirseniz, tüm projelere ait tüm çıktılar geçerli çalışma dizinine göre belirtilen klasöre gider. Yayımla çıkışını her proje için ayrı klasörlere gitmesini sağlamak için, seçeneği yerine MSBuild özelliğini kullanarak göreli bir yol belirtin `PublishDir` `--output` . Örneğin, `dotnet publish -p:PublishDir=.\publish` her proje için yayımlama çıkışını `publish` Proje dosyasını içeren klasörün altındaki bir klasöre gönderir.
 
   - .NET Core 2. x SDK
-  
-    Bir proje yayımlanırken göreli bir yol belirtilmişse, oluşturulan çıkış dizini geçerli çalışma dizinine değil, proje dosyası konumuna göre belirlenir.
 
-    Bir çözüm yayımlarken göreli bir yol belirtilmişse, her projenin çıktısı proje dosyası konumuna göre ayrı bir klasöre gider. Bir çözüm yayımlarken mutlak bir yol belirtilmişse, tüm projeler için tüm yayımlama çıkışları belirtilen klasöre gider.
+    Bir projeyi yayımlarken göreli bir yol belirtirseniz, oluşturulan çıkış dizini geçerli çalışma dizinine değil, proje dosyası konumuna göre belirlenir.
+
+    Bir çözüm yayımlarken göreli bir yol belirtirseniz, her projenin çıktısı proje dosyası konumuna göre ayrı bir klasöre gider. Bir çözüm yayımlarken mutlak bir yol belirtirseniz, tüm projeler için tüm yayımlama çıkışları belirtilen klasöre gider.
 
 - **`-p:PublishReadyToRun=true`**
 

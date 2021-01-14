@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 7f76ed5ad1a76a155489339a9febf12eefd64ae8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b92385fa169e03254abdf940f2964c1966cbc2ce
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279993"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190097"
 ---
 # <a name="how-to-run-a-workflow"></a>Nasıl yapılır: İş Akışı Çalıştırma
 
@@ -19,9 +19,6 @@ Bu konu, kullanmaya başlama öğreticisini Windows Workflow Foundation ve bir i
 
 > [!NOTE]
 > Başlangıç öğreticisindeki her konu, önceki konulara bağlıdır. Bu konuyu tamamlayabilmeniz için öncelikle [nasıl yapılır: etkinlik oluşturma](how-to-create-an-activity.md) ve [nasıl yapılır: iş akışı oluşturma](how-to-create-a-workflow.md)' yı tamamlamalısınız.
-
-> [!NOTE]
-> Öğreticinin tamamlanmış bir sürümünü indirmek için, bkz. [Windows Workflow Foundation (WF45)-Başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-workflow-host-project"></a>İş akışı konak projesi oluşturmak için  
   

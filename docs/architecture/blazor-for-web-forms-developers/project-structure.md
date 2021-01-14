@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 11/20/2020
-ms.openlocfilehash: d91430eb654ee16934408bf064803b34ca700640
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.openlocfilehash: ba7113c88db728f30812821deaf7c06a80663d1f
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509812"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189095"
 ---
 # <a name="project-structure-for-no-locblazor-apps"></a>Uygulamalar için proje yapısı Blazor
 
@@ -146,7 +146,7 @@ Bileşen yolları şu anda bileşenin dosya konumu tarafından, *. aspx* sayfala
 
 Blazor [Sayfalar, Yönlendirme ve düzenler](./pages-routing-layouts.md) bölümünde ' de yönlendirme sırasında daha ayrıntılı bir ayrıntıya bakacağız.
 
-## <a name="layout"></a>Düzen
+## <a name="layout"></a>Layout
 
 ASP.NET Web Forms uygulamalarda, ana sayfalar (*site. Master*) kullanılarak ortak bir sayfa düzeni işlenir. BlazorUygulamalarda, sayfa düzeni Düzen bileşenleri (*paylaşılan/mainlayout. Razor*) kullanılarak işlenir. Düzen bileşenleri [sayfa, Yönlendirme ve düzenler](./pages-routing-layouts.md) bölümünde daha ayrıntılı bir şekilde ele alınacaktır.
 
@@ -223,7 +223,7 @@ Blazor WebAssembly Uygulamada, ana bilgisayar sayfası *Wwwroot/index.html* alt�
 
 ```
 
-İşlenecek kök bileşen uygulamanın `Program.Main` yönteminde, bağımlılık ekleme yoluyla farklı Hizmetleri kaydetme esnekliği ile yapılandırılır. [ Blazor İçindeki WebAssembly ](https://docs.microsoft.com/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-5.0#blazor-webassembly) bir uygulamaya hizmet ekleme konusuna bakabilirsiniz
+İşlenecek kök bileşen, uygulama `Program.Main` yönteminde, hizmet bağımlılığı ekleme yoluyla Hizmetleri kaydetme esnekliği ile belirtilir. Daha fazla bilgi için bkz. [ASP.NET Core Blazor bağımlılığı ekleme](/aspnet/core/blazor/fundamentals/dependency-injection?pivots=webassembly).
 
 ```csharp
 public class Program

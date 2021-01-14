@@ -1,13 +1,13 @@
 ---
 title: Mikro hizmetlerde esneklik ve yüksek kullanılabilirlik
 description: Mikro hizmetlerin, geçici ağ ve bağımlılıklar hatalarıyla birlikte kullanılması için tasarlanmaları gerekir, bu da yüksek kullanılabilirlik elde etmek için dayanıklı olmalıdır.
-ms.date: 09/20/2018
-ms.openlocfilehash: 601255c1e6941b2de9fdb34098dea7edf6d8b987
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 8afe92babb38cc3a87f26315b42311de3269de9d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172456"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188458"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Mikro hizmetlerde esneklik ve yüksek kullanılabilirlik
 
@@ -15,9 +15,9 @@ Beklenmedik hatalarla ilgilenirken, özellikle dağıtılmış bir sistemde çö
 
 Mikro bir hizmetin hatalara karşı dayanıklı olması ve başka bir makinede kullanılabilirlik için sık olarak yeniden başlatılması gerekir. Bu esneklik, mikro hizmetin bu durumu ' den kurtarabileceği ve mikro hizmetin başarıyla yeniden başlatılıp başlatılmayacağını belirten mikro hizmet adına kaydedilmiş duruma da gelir. Diğer bir deyişle, işlem yeteneğinin dayanıklılık olması gerekir (işlem herhangi bir zamanda yeniden başlatılabilir) ve durum veya verilerde esnekliği (veri kaybı yoktur ve veriler tutarlı kalır).
 
-Dayanıklılık sorunları, bir uygulama yükseltmesi sırasında hataların oluşma gibi başka senaryolar sırasında da bir bakış sürecinde olacaktır. Dağıtım sistemiyle çalışan mikro hizmetin, daha yeni bir sürüme ilerleyemeyeceğini veya daha önce tutarlı bir durumu korumak için önceki bir sürüme geri dönerek devam edip etmediğini belirlemesi gerekir. Daha önce taşınabileceği ve mikro hizmetin önceki sürümlerinin nasıl kurtarılacağı hakkında daha fazla sayıda makinenin kabul edilip edilmeyeceği gibi sorular. Bu, tüm uygulama ve Orchestrator bu kararları verebilmeleri için mikro hizmetin sistem durumu bilgilerini yaymasını gerektirir.
+Dayanıklılık sorunları, bir uygulama yükseltmesi sırasında hataların oluşma gibi başka senaryolar sırasında da bir bakış sürecinde olacaktır. Dağıtım sistemiyle çalışan mikro hizmetin, daha yeni bir sürüme ilerleyemeyeceğini veya daha önce tutarlı bir durumu korumak için önceki bir sürüme geri dönerek devam edip etmediğini belirlemesi gerekir. Daha önce taşınabileceği ve mikro hizmetin önceki sürümlerinin nasıl kurtarılacağı hakkında daha fazla sayıda makinenin kabul edilip edilmeyeceği gibi sorular. Bu yaklaşım, tüm uygulama ve Orchestrator 'ın bu kararları verebilmeleri için mikro hizmetin sistem durumu bilgilerini yaymasını gerektirir.
 
-Ayrıca, dayanıklılık bulut tabanlı sistemlerin nasıl davranması ile ilgilidir. Belirtildiği gibi, bulut tabanlı bir sistem hatalara ve bunları otomatik olarak kurtarmayı denemelidir. Örneğin, ağ veya kapsayıcı hatalarıyla ilgili durumlarda, istemci uygulamalarının veya istemci hizmetlerinin iletileri göndermeyi veya istekleri yeniden denemeyi yeniden denemek için bir stratejisine sahip olması gerekir, çünkü buluttaki hataların çoğu kısmen kısmi bir durumdur. Bu kılavuzdaki dayanıklı [uygulamalar uygulama](../implement-resilient-applications/index.md) bölümünde kısmi hatanın nasıl işleneceği ele alınmaktadır. Bu konuyu işlemek için çok çeşitli ilkeler sunan, üstel geri alma veya .NET Core 'daki devre kesici düzeniyle yeniden denemeler [gibi teknikleri](https://github.com/App-vNext/Polly)açıklar.
+Ayrıca, dayanıklılık bulut tabanlı sistemlerin nasıl davranması ile ilgilidir. Belirtildiği gibi, bulut tabanlı bir sistem hatalara ve bunları otomatik olarak kurtarmayı denemelidir. Örneğin, ağ veya kapsayıcı hatalarıyla ilgili durumlarda, istemci uygulamalarının veya istemci hizmetlerinin iletileri göndermeyi veya istekleri yeniden denemeyi yeniden denemek için bir stratejisine sahip olması gerekir, çünkü buluttaki hataların çoğu kısmen kısmi bir durumdur. Bu kılavuzdaki dayanıklı [uygulamalar uygulama](../implement-resilient-applications/index.md) bölümünde kısmi hatanın nasıl işleneceği ele alınmaktadır. Bu konuyu işlemek için çok çeşitli ilkeler sunan üstel geri alma veya .NET 'teki devre kesici düzeniyle yeniden [denemeler gibi teknikleri](https://github.com/App-vNext/Polly)açıklar.
 
 ## <a name="health-management-and-diagnostics-in-microservices"></a>Mikro hizmetlerde sistem durumu yönetimi ve tanılama
 
@@ -38,7 +38,7 @@ Ayrıca [GitHub](https://github.com/Xabaril/BeatPulse) 'da ve bir [NuGet paketi]
 
 Günlükler, özel durumlar, uyarılar ve basit bilgilendirici iletiler de dahil olmak üzere bir uygulama veya hizmetin nasıl çalıştığı hakkında bilgi sağlar. Genellikle, her günlük olay başına tek satırlık bir metin biçiminde bulunur, ancak özel durumlar genellikle birden çok satırda yığın izlemesini gösterir.
 
-Tek parçalı sunucu tabanlı uygulamalarda, günlükleri disk üzerindeki bir dosyaya (günlük dosyası) yazabilir ve ardından herhangi bir araçla çözümleyebilirsiniz. Uygulama yürütmesi bir sabit sunucu veya VM ile sınırlı olduğundan, genellikle olay akışını çözümlemek için çok karmaşık değildir. Ancak, bir Orchestrator kümesindeki çok sayıda düğümde birden fazla hizmetin yürütüldüğü dağıtılmış bir uygulamada, dağıtılmış olayları ilişkilendirebilmek zor olur.
+Tek parçalı sunucu tabanlı uygulamalarda, günlükleri diskte (bir günlük dosyası) bir dosyaya yazabilir ve ardından herhangi bir araçla çözümleyebilirsiniz. Uygulama yürütmesi bir sabit sunucu veya VM ile sınırlı olduğundan, genellikle olay akışını çözümlemek için çok karmaşık değildir. Ancak, bir Orchestrator kümesindeki çok sayıda düğümde birden fazla hizmetin yürütüldüğü dağıtılmış bir uygulamada, dağıtılmış olayları ilişkilendirebilmek zor olur.
 
 Mikro hizmet tabanlı bir uygulama, olayların veya günlük dosyalarının çıkış akışını tek başına depolamayı denememelidir, hatta olayların yönlendirilmesini merkezi bir yere yönetmeyi denememelidir. Saydam olmalıdır, yani her bir işlemin olay akışını, altında çalıştığı yürütme ortamı altyapısı tarafından toplanacak standart bir çıkışa yazması gerekir. Bu olay akışı yönlendiricilerine bir örnek, birden fazla kaynaktan gelen olay akışlarını toplayan ve çıkış sistemlerine yayımlayan [Microsoft. Diagnostic. EventFlow](https://github.com/Azure/diagnostics-eventflow)' dır. Bunlar, bir geliştirme ortamı için basit standart çıkış veya [Azure izleyici](https://azure.microsoft.com/services/monitor//) ve [Azure tanılama](/azure/azure-monitor/platform/diagnostics-extension-overview)gibi bulut sistemleri içerebilir. Ayrıca, ara, uyarı, rapor ve [izleme gibi çok](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)farklı üçüncü taraf Günlük Analizi platformları ve araçları, gerçek zamanlı olarak da kullanabilirsiniz.
 
@@ -50,13 +50,13 @@ Mikro hizmet tabanlı bir uygulama oluşturduğunuzda karmaşıklıkla uğraşma
 
 **Şekil 4-22**. Mikro hizmet platformu, bir uygulamanın sistem durumu yönetimi için temel
 
-Şekil 4-22 ' de gösterilen karmaşık sorunlar kendi başınıza çözülememektedir. Geliştirme ekipleri, mikro hizmet tabanlı yaklaşımlar sayesinde iş sorunlarının çözümüne ve özel uygulamalar oluşturmaya odaklanmalıdır. Karmaşık altyapı sorunlarını çözmeye odaklanmamalıdır; Bu durumda, mikro hizmet tabanlı uygulamaların maliyeti çok büyük olur. Bu nedenle, bir hizmet oluşturma ve çalıştırma ve altyapı kaynaklarını verimli bir şekilde kullanma hakkında Sabit sorunları çözmeye çalışan, düzenleyiciler veya mikro hizmet kümeleri olarak adlandırılan mikro hizmet odaklı platformlar vardır. Bu, mikro hizmetler yaklaşımını kullanan uygulamalar oluşturmanın karmaşıklıklarını azaltır.
+Şekil 4-22 ' de gösterilen karmaşık sorunlar kendi başınıza çözülememektedir. Geliştirme ekipleri, mikro hizmet tabanlı yaklaşımlar sayesinde iş sorunlarının çözümüne ve özel uygulamalar oluşturmaya odaklanmalıdır. Karmaşık altyapı sorunlarını çözmeye odaklanmamalıdır; Bu durumda, mikro hizmet tabanlı uygulamaların maliyeti çok büyük olur. Bu nedenle, bir hizmet oluşturma ve çalıştırma ve altyapı kaynaklarını verimli bir şekilde kullanma hakkında Sabit sorunları çözmeye çalışan, düzenleyiciler veya mikro hizmet kümeleri olarak adlandırılan mikro hizmet odaklı platformlar vardır. Bu yaklaşım, mikro hizmetler yaklaşımını kullanan uygulamalar oluşturmanın karmaşıklıklarını azaltır.
 
 Farklı düzenleyiciler benzer şekilde değişebilir, ancak her biri tarafından sunulan tanılama ve sistem durumu denetimleri, sonraki bölümde açıklandığı gibi, işletim sistemi platformuna bağlı olarak, bazen işletim sisteminde ve durum durumunda farklılık gösterir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **On Iki öğeli App. XI. Günlükler: günlükleri olay akışları olarak Işle** \
+- **Twelve-Factor App. XI. Günlükler: günlükleri olay akışları olarak Işle** \
   <https://12factor.net/logs>
 
 - **Microsoft tanılama EventFlow kitaplığı** GitHub deposu. \

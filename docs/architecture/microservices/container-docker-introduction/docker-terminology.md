@@ -1,13 +1,13 @@
 ---
 title: Docker terimleri
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker terminolojisi
-ms.date: 01/30/2020
-ms.openlocfilehash: b30ea26ee174caf3484931945c832c72a1acf93d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/13/2021
+ms.openlocfilehash: 567635060502ec3b2293f5eee6dd8dfe4d934ff7
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707780"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189349"
 ---
 # <a name="docker-terminology"></a>Docker terimleri
 
@@ -35,7 +35,7 @@ docker build
 
 **Kayıt defteri**: depolara erişim sağlayan bir hizmet. Çoğu ortak görüntü için varsayılan kayıt defteri, [Docker Hub](https://hub.docker.com/) ' dır (kuruluş olarak Docker tarafından sahiplenilir). Kayıt defteri genellikle birden çok ekipten depoları içerir. Şirketler genellikle oluşturdukları görüntüleri depolamak ve yönetmek için özel kayıt defterlerine sahiptir. Azure Container Registry başka bir örnektir.
 
-**Çok katmanlı görüntü**: çok mimaride, Docker 'ın çalıştırıldığı platforma göre uygun görüntünün seçimini kolaylaştıran bir özelliktir. Örneğin, bir Dockerfile, kayıt defterinden **MCR.Microsoft.com/DotNet/SDK:3.1 öğesinden** bir temel görüntü Istediğinde, Docker 'ın çalıştırıldığı işletim sistemine ve sürüme bağlı olarak **3,1-SDK-nanoserver-1909**, **3,1-SDK-nanoserver-1809** veya **3,1-SDK-Buster-Slim** alır.
+**Çok katmanlı görüntü**: çok mimaride, Docker 'ın çalıştırıldığı platforma göre uygun görüntünün seçimini kolaylaştıran bir özelliktir. Örneğin, bir Dockerfile, kayıt defterinden bir temel görüntü **MCR.Microsoft.com/DotNet/SDK:5.0** Istediğinde, Docker 'ın çalıştırıldığı işletim sistemine ve sürümüne bağlı olarak **5,0-nanoserver-1909**, **5,0-nanoserver-1809** veya **5,0-Buster-Slim** alır.
 
 **Docker Hub**: görüntüleri karşıya yüklemek ve bunlarla çalışmak için ortak bir kayıt defteri. Docker Hub, Docker görüntüsü barındırma, genel veya özel kayıt defterleri, derleme Tetikleyicileri ve Web kancaları, GitHub ve BitBucket ile tümleştirme sağlar.
 
@@ -43,7 +43,7 @@ docker build
 
 **Docker güvenilir kayıt defteri (DTR)**: kuruluşun veri merkezinde ve ağında yer alması için şirket içinde yüklenebilen bir Docker kayıt defteri hizmeti (Docker 'dan). Kuruluş dahilinde yönetilmesi gereken özel görüntüler için kolaylık vardır. Docker güvenilen kayıt defteri, Docker Datacenter ürününün bir parçası olarak dahil edilmiştir. Daha fazla bilgi için bkz. [Docker güvenilir kayıt defteri (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
-**Docker Community Edition (CE)**: yerel olarak kapsayıcı oluşturma, çalıştırma ve test etme için Windows ve MacOS için geliştirme araçları. Docker CE for Windows hem Linux hem de Windows kapsayıcıları için geliştirme ortamları sağlar. Windows üzerindeki Linux Docker ana bilgisayarı bir [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) sanal makinesini temel alır. Windows kapsayıcıları için ana bilgisayar, doğrudan Windows 'a dayalıdır. Mac için Docker CE, Apple hiper yönetici çerçevesini ve Mac OS X bir Linux Docker konak sanal makinesi sağlayan [xhyve hiper yönetici](https://github.com/mist64/xhyve)'yi temel alır. Docker CE for Windows ve Mac Için, Oracle VirtualBox tabanlı olan Docker araç kutusu bulunur.
+**Docker Community Edition (CE)**: yerel olarak kapsayıcı oluşturma, çalıştırma ve test etme için Windows ve MacOS için geliştirme araçları. Docker CE for Windows hem Linux hem de Windows kapsayıcıları için geliştirme ortamları sağlar. Windows üzerindeki Linux Docker ana bilgisayarı bir [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) sanal makinesini temel alır. Windows kapsayıcıları için ana bilgisayar, doğrudan Windows 'a dayalıdır. Mac için Docker CE, Apple hiper yönetici çerçevesini ve macOS X üzerinde Linux Docker Host sanal makinesi sağlayan [xhyve Hiper Yöneticisi](https://github.com/mist64/xhyve)' ni temel alır. Docker CE for Windows ve Mac Için, Oracle VirtualBox tabanlı olan Docker araç kutusu bulunur.
 
 **Docker Enterprise Edition (ee)**: Linux ve Windows geliştirme Için Docker araçlarının kurumsal ölçekli bir sürümüdür.
 

@@ -1,13 +1,13 @@
 ---
 title: ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Kapsayıcılarda ASP.NET Core Hizmetleri ve Web uygulamalarını test etmek için bir mimari bulun.
-ms.date: 08/07/2020
-ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.date: 01/13/2021
+ms.openlocfilehash: dfd0a320491f92154bc9e2804d56c00120224e62
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633955"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188009"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 
@@ -15,13 +15,13 @@ Denetleyiciler, tüm ASP.NET Core API Service ve ASP.NET MVC web uygulamaların�
 
 Denetleyicinin geçerli veya geçersiz girişlere göre nasıl davranacağını ve gerçekleştirdiği iş işleminin sonucuna bağlı olarak test denetleyicisi yanıtlarını test etmeniz gerekir. Ancak, mikro hizmetlerinizde bu tür testlerin olması gerekir:
 
-- Birim testleri. Bu, uygulamanın ayrı bileşenlerinin beklenen şekilde çalışmasını güvence altına aldığından emin olun. Onaylar bileşen API 'sini test etme.
+- Birim testleri. Bu sınamalar, uygulamanın ayrı bileşenlerinin beklenen şekilde çalışmasını güvence altına aldığından emin olun. Onaylar bileşen API 'sini test etme.
 
-- Tümleştirme testleri. Bu, bileşen etkileşimlerin veritabanları gibi dış yapılara karşı beklendiği gibi çalışmasını güvence altına aldığından emin olun. Onaylar, bileşen API 'sini, Kullanıcı arabirimini veya veritabanı g/ç, günlüğe kaydetme vb. gibi eylemlerin yan etkilerini test edebilir.
+- Tümleştirme testleri. Bu sınamalar, bileşen etkileşimlerin veritabanları gibi dış yapılara karşı beklendiği gibi çalışmasını güvence altına aldığından emin olun. Onaylar, bileşen API 'sini, Kullanıcı arabirimini veya veritabanı g/ç, günlüğe kaydetme vb. gibi eylemlerin yan etkilerini test edebilir.
 
-- Her mikro hizmet için işlevsel testler. Bu, uygulamanın kullanıcının perspektifinden beklendiği gibi çalıştığından emin olun.
+- Her mikro hizmet için işlevsel testler. Bu sınamalar, uygulamanın kullanıcının perspektifinden beklendiği gibi çalıştığından emin olmanızı sağlamaktır.
 
-- Hizmet testleri. Bu, birden çok hizmetin aynı anda test edilmesi de dahil olmak üzere uçtan uca hizmet kullanım örneklerinin test edilmesine olanak sağlar. Bu test türü için öncelikle ortamı hazırlamanız gerekir. Bu durumda, hizmetler (örneğin, Docker-Compose kullanarak) başlatılıyor demektir.
+- Hizmet testleri. Bu sınamalar, birden fazla hizmetin aynı anda test edilmesi de dahil olmak üzere uçtan uca hizmet kullanım örneklerinin test edilmesini sağlar. Bu test türü için öncelikle ortamı hazırlamanız gerekir. Bu durumda, hizmetler (örneğin, Docker-Compose kullanarak) başlatılıyor demektir.
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>ASP.NET Core Web API 'Leri için birim testlerini uygulama
 
@@ -70,7 +70,7 @@ Tümleştirme sınamaları, kod segmentlerinin birim testlerine göre daha büy�
 
 ASP.NET Core, ağ yükü olmadan HTTP isteklerini işlemek için kullanılabilen yerleşik bir test Web ana bilgisayarı içerir, yani bu testleri gerçek bir Web ana bilgisayarı kullanmaktan daha hızlı çalıştırabilmeniz anlamına gelir. Test Web ana bilgisayarı (TestServer), bir NuGet bileşeninde Microsoft. AspNetCore. TestHost olarak kullanılabilir. Tümleştirme test projelerine eklenebilir ve ASP.NET Core uygulamalarını barındırmak için kullanılır.
 
-Aşağıdaki kodda görebileceğiniz gibi, ASP.NET Core denetleyicileri için tümleştirme testleri oluşturduğunuzda, denetleyicileri test ana bilgisayarı aracılığıyla örnekleyebilirsiniz. Bu bir HTTP isteğine benzer, ancak daha hızlı çalışır.
+Aşağıdaki kodda görebileceğiniz gibi, ASP.NET Core denetleyicileri için tümleştirme testleri oluşturduğunuzda, denetleyicileri test ana bilgisayarı aracılığıyla örnekleyebilirsiniz. Bu işlevsellik bir HTTP isteğine benzer, ancak daha hızlı çalışır.
 
 ```csharp
 public class PrimeWebDefaultRequestShould
@@ -107,7 +107,7 @@ public class PrimeWebDefaultRequestShould
 - **Steve Smith. Tümleştirme testi** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **DotNet testini kullanarak .NET Core 'da birim testi** \
+- **DotNet test kullanarak .NET 'te birim testi** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Resmi site. \
@@ -146,7 +146,7 @@ Birim ve tümleştirme testleri, mikro hizmet projesindeki bir test klasöründe
 
 **Şekil 6-25**. EShopOnContainers 'daki test klasörü yapısı
 
-Mikro hizmet ve uygulama işlev/tümleştirme testleri, normal testler Çalıştırıcısı kullanılarak Visual Studio 'dan çalıştırılır, ancak önce çözüm sınama klasöründe yer alan bir Docker-Compose dosyaları kümesi aracılığıyla gerekli altyapı hizmetlerini başlatmanız gerekir:
+Mikro hizmet ve uygulama işlev/tümleştirme testleri, normal Test Çalıştırıcısı kullanılarak Visual Studio 'dan çalıştırılır, ancak önce çözüm sınama klasöründe yer alan bir Docker-Compose dosyası kümesiyle gerekli altyapı hizmetlerini başlatmanız gerekir:
 
 **Docker-Compose-test. yıml**
 

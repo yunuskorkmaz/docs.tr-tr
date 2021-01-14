@@ -3,12 +3,12 @@ title: .NET Framework’ten .NET Core’a taşıma
 description: Bir .NET Framework projesi .NET Core 'a taşıma konusunda yararlı bulabileceğiniz yardım alabileceğiniz işlem ve bulma araçlarını anlayın.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 764c615d250474573f873b1745b9f1469e637d29
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 247e709ac6898a6a89318626e3aa9a2a8e239a9a
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687418"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189941"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework .NET Core 'a taşıma ile genel bakış
 
@@ -53,7 +53,7 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
 1. Proje dosyanızı yeni SDK stili dosya yapısına dönüştürün. .NET Core için yeni projeler oluşturabilir ve kaynak dosyaları üzerine kopyalayabilir ya da mevcut proje dosyanızı bir araçla dönüştürmeyi deneyebilirsiniz.
 
-   .NET Core .NET Framework göre Basitleştirilmiş (ve farklı) bir [Proje dosyası biçimi](../tools/csproj.md) kullanır. Devam etmek için proje dosyalarınızı bu biçime dönüştürmeniz gerekir. Bu proje stili, bu noktada yine de hedeflemek istediğiniz .NET Framework de hedeflemesini sağlar.
+   .NET Core .NET Framework göre Basitleştirilmiş (ve farklı) bir [Proje dosyası biçimi](../project-sdk/overview.md) kullanır. Devam etmek için proje dosyalarınızı bu biçime dönüştürmeniz gerekir. Bu proje stili, bu noktada yine de hedeflemek istediğiniz .NET Framework de hedeflemesini sağlar.
 
    En küçük çözüm veya tek bir işlemde, [DotNet TRY-Convert](https://github.com/dotnet/try-convert) aracı Ile .NET Core proje dosyası biçimine bir işlem üzerinden bağlantı kurmayı deneyebilirsiniz. `dotnet try-convert` Tüm projeleriniz için çalışma garantisi verilmez ve bağımlı olduğunuz davranışta hafif değişikliklere neden olabilir. Otomatikleştirilmiş olabilecek temel şeyleri otomatikleştiren bir _Başlangıç noktası_ olarak kullanın. SDK stil projeleri tarafından kullanılan hedeflerde eski stil projesi dosyalarıyla karşılaştırılan birçok fark olduğundan, projenin geçirilmesi için garantili bir çözüm değildir.
 

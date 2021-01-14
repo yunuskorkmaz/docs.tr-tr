@@ -1,13 +1,13 @@
 ---
 title: Sistem durumunu izleme
 description: Sistem durumu izlemeyi uygulamayla bir yolu bulun.
-ms.date: 03/02/2020
-ms.openlocfilehash: 3e3e8ec41de1469f0c397d8d80d224dd2f7a2bd2
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 01/13/2021
+ms.openlocfilehash: 4b85193c260b950b0c7a1c97ca5c83dfc87e5fb3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267899"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189069"
 ---
 # <a name="health-monitoring"></a>Sistem durumunu izleme
 
@@ -31,10 +31,10 @@ Bu bölümde, [Microsoft. Extensions. Diagnostics. healthdenetimleri](https://ww
 
 Başlamak için, her mikro hizmet için sağlıklı durumu neyin oluşturduğunu tanımlamanız gerekir. Örnek uygulamada, API 'SI HTTP üzerinden erişilebiliyorsa ve ilgili SQL Server veritabanı da kullanılabilir olduğunda mikro hizmetin sağlıklı olduğunu tanımlayacağız.
 
-.NET Core 3,1 ' de, yerleşik API 'Ler ile hizmetleri yapılandırabilir, mikro hizmet için bir sistem durumu denetimi ve bu şekilde bağımlı SQL Server veritabanı ekleyebilirsiniz:
+.NET 5 ' te, yerleşik API 'Ler ile hizmetleri yapılandırabilir, mikro hizmet için bir sistem durumu denetimi ve bu şekilde bağımlı SQL Server veritabanı ekleyebilirsiniz:
 
 ```csharp
-// Startup.cs from .NET Core 3.1 Web API sample
+// Startup.cs from .NET 5 Web API sample
 //
 public void ConfigureServices(IServiceCollection services)
 {
@@ -109,7 +109,7 @@ public class SqlConnectionHealthCheck : IHealthCheck
 Son olarak, URL yoluna yanıt veren bir ara yazılım ekleyin `/hc` :
 
 ```csharp
-// Startup.cs from .NET Core 3.1 Web Api sample
+// Startup.cs from .NET 5 Web Api sample
 //
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
@@ -130,7 +130,7 @@ Uç nokta `<yourmicroservice>/hc` çağrıldığında, başlangıç sınıfında
 
 EShopOnContainers 'daki mikro hizmetler, görevini gerçekleştirmek için birden çok hizmete bağımlıdır. Örneğin, `Catalog.API` eShopOnContainers 'daki mikro hizmet Azure Blob depolama, SQL Server ve Kbbitmq gibi birçok hizmete bağımlıdır. Bu nedenle, yöntemi kullanılarak birçok sistem durumu denetimi eklenmiştir `AddCheck()` . Her bağımlı hizmet için, `IHealthCheck` ilgili sistem durumunu tanımlayan özel bir uygulamanın eklenmesi gerekir.
 
-Açık kaynaklı proje [Aspnetcore. Diagnostics. Healthdenetimleri](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) , .net Core 3,1 üzerinde oluşturulan bu kurumsal hizmetlerden her biri için özel durum denetimi uygulamaları sağlayarak bu sorunu çözer. Her bir sistem durumu denetimi, projeye kolaylıkla eklenebilen tek bir NuGet paketi olarak kullanılabilir. eShopOnContainers, bunları tüm mikro hizmetlerinde kapsamlı olarak kullanır.
+Açık kaynaklı proje [Aspnetcore. Diagnostics. Healthdenetimleri](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) , .NET 5 ' in üzerine inşa edilen bu kurumsal hizmetlerden her biri için özel sistem durumu denetimi uygulamaları sağlayarak bu sorunu çözer. Her bir sistem durumu denetimi, projeye kolaylıkla eklenebilen tek bir NuGet paketi olarak kullanılabilir. eShopOnContainers, bunları tüm mikro hizmetlerinde kapsamlı olarak kullanır.
 
 Örneğin, `Catalog.API` mikro hizmette aşağıdaki NuGet paketleri eklendi:
 
@@ -267,7 +267,7 @@ Mikro hizmetlerinizin kullanılabilirliğini izlemek için, Kubernetes gibi düz
 
 Örneğin, çoğu düzenleyen, sıfır kesinti dağıtımlarını yönetmek için sistem durumu denetimlerini kullanabilir. Yalnızca bir hizmet/kapsayıcının durumu sağlıklı olarak değiştiğinde, Orchestrator başlatması trafiği hizmet/kapsayıcı örneklerine yönlendirmektedir.
 
-Bir Orchestrator uygulama yükseltmesi gerçekleştirdiğinde sistem durumu izleme özellikle önemlidir. Bazı düzenleyiciler (Azure Service Fabric) aşamalarda güncelleştirme hizmetleri — Örneğin, her uygulama yükseltmesi için küme yüzeyinin bir beşinci birini güncelleştirebilir. Aynı anda yükseltilen düğüm kümesi, *yükseltme etki alanı*olarak adlandırılır. Her yükseltme etki alanı yükseltildikten ve kullanıcılar tarafından kullanılabilir olduktan sonra, dağıtım bir sonraki yükseltme etki alanına geçmeden önce bu yükseltme etki alanı, sistem durumu denetimleri iletmelidir.
+Bir Orchestrator uygulama yükseltmesi gerçekleştirdiğinde sistem durumu izleme özellikle önemlidir. Bazı düzenleyiciler (Azure Service Fabric) aşamalarda güncelleştirme hizmetleri — Örneğin, her uygulama yükseltmesi için küme yüzeyinin bir beşinci birini güncelleştirebilir. Aynı anda yükseltilen düğüm kümesi, *yükseltme etki alanı* olarak adlandırılır. Her yükseltme etki alanı yükseltildikten ve kullanıcılar tarafından kullanılabilir olduktan sonra, dağıtım bir sonraki yükseltme etki alanına geçmeden önce bu yükseltme etki alanı, sistem durumu denetimleri iletmelidir.
 
 Hizmet sistem durumunun başka bir yönü, hizmetten rapor ölçümleridir. Bu, Service Fabric gibi bazı düzenleyicilerinin durum modelinin gelişmiş bir özelliğidir. Kaynak kullanımını dengelemek için kullanıldıklarından, bir Orchestrator kullanılırken ölçümler önemlidir. Ölçümler Ayrıca sistem durumunun bir göstergesi olabilir. Örneğin, çok sayıda mikro hizmeti olan bir uygulamanız olabilir ve her örnek, saniye başına istek (RPS) ölçümünü rapor edebilir. Bir hizmet başka bir hizmetten daha fazla kaynak (bellek, işlemci vb.) kullanıyorsa, Orchestrator kaynak kullanımını bile sürdürmek için hizmet örneklerini kümedeki etrafında taşıyabilir.
 

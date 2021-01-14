@@ -1,13 +1,13 @@
 ---
 title: NoSQL veritabanlarını bir kalıcılık altyapısı olarak kullanma
 description: NoSql veritabanlarının genel olarak kullanımını ve özel olarak Azure Cosmos DB, kalıcılığı uygulama seçeneği olarak anlayın.
-ms.date: 01/30/2020
-ms.openlocfilehash: 2877c7eaf08dccfdf6126939b195a6a9a7195dfa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 32f32a3fd247f49ac54deaf33605bcc2ac7b55dc
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173386"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188835"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Kalıcı altyapı olarak NoSQL veritabanlarını kullanma
 
@@ -62,7 +62,7 @@ Etki alanı modelinizi toplamalara göre tasarladığınızda, NoSQL ve belge od
 
 ```csharp
 // C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
-// *** Domain Model Code ***
+// **_ Domain Model Code _*_
 // Aggregate: Create an Order object with its child entities and/or value objects.
 // Then, use AggregateRoot's methods to add the nested objects so invariants and
 // logic is consistent across the nested properties (value objects and entities).
@@ -98,9 +98,9 @@ OrderItem orderItem1 = new OrderItem
 
 //Using methods with domain logic within the entity. No anemic-domain model
 orderAggregate.AddOrderItem(orderItem1);
-// *** End of Domain Model Code ***
+// _*_ End of Domain Model Code _*_
 
-// *** Infrastructure Code using Cosmos DB Client API ***
+// _*_ Infrastructure Code using Cosmos DB Client API _*_
 Uri collectionUri = UriFactory.CreateDocumentCollectionUri(databaseName,
     collectionName);
 
@@ -134,7 +134,7 @@ Cosmos DB veritabanları, .NET için MongoDB API 'nin yanı sıra yerel MongoDB 
 
 ![Cosmos DB .NET ve MongoDB kablo protokolünü desteklediğini gösteren diyagram.](./media/nosql-database-persistence-infrastructure/mongodb-api-wire-protocol.png)
 
-**Şekil 7-20**. Azure Cosmos DB erişmek için MongoDB API 'sini ve protokolünü kullanma
+_ * Şekil 7-20 * *. Azure Cosmos DB erişmek için MongoDB API 'sini ve protokolünü kullanma
 
 [MongoDB Docker görüntüsü](https://hub.docker.com/r/_/mongo/) , Docker Linux kapsayıcılarını ve Docker Windows kapsayıcılarını destekleyen çok katmanlı bir görüntü olduğundan, Linux kapsayıcılarıyla Docker ortamlarında kavram kanıtı açısından çok kullanışlı bir yaklaşımdır.
 
@@ -146,7 +146,7 @@ Aşağıdaki görüntüde gösterildiği gibi, MongoDB API 'sini kullanarak, eSh
 
 Üretim Azure Cosmos DB, Azure 'un bulutta PaaS ve ölçeklenebilir bir hizmet olarak çalışıyor olabilir.
 
-Özel .NET Core kapsayıcılarınız yerel bir geliştirme Docker ana bilgisayarında (bir Windows 10 makinesinde Docker for Windows kullanan) veya Azure AKS veya Azure Service Fabric 'de Kubernetes gibi bir üretim ortamına dağıtılabilir. Bu ikinci ortamda, üretimde verileri işlemek için bulutta Azure Cosmos DB kullandığınızdan bu yana MongoDB kapsayıcısını değil yalnızca .NET Core özel kapsayıcılarını dağıtırsınız.
+Özel .NET kapsayıcılarınız yerel bir geliştirme Docker ana bilgisayarında (bir Windows 10 makinesinde Docker for Windows kullanan) veya Azure AKS veya Azure Service Fabric 'de Kubernetes gibi bir üretim ortamına dağıtılabilir. Bu ikinci ortamda, üretimde verileri işlemek için bulutta Azure Cosmos DB kullandığınızdan bu yana MongoDB kapsayıcısını değil yalnızca .NET özel kapsayıcıları dağıtırsınız.
 
 MongoDB API 'sini kullanmanın net bir avantajı, çözümünüzün her iki veritabanı altyapıda, MongoDB veya Azure Cosmos DB çalışmasına, böylece farklı ortamlara geçişlerin kolay olması gerekir. Ancak bazı durumlarda, belirli bir veritabanı altyapısının yetilerinden tam olarak yararlanabilmek için yerel bir API (yerel Cosmos DB API) kullanılması çok önemlidir.
 
@@ -162,13 +162,13 @@ Ayrıca MongoDB kümelerini, [MongoDB Azure hizmeti](https://www.mongodb.com/sca
 
 Temel olarak bu yalnızca, Azure Cosmos DB karşı MongoDB API 'sini her zaman bir Linux kapsayıcıları için kullanışlı bir seçenek olduğu için, her zaman bir karşı kullanacağınızı belirten bir vazgeçme belgesi. Karar, üretim uygulamanız için yapmanız gereken belirli ihtiyaçları ve Testleri temel almalıdır.
 
-### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>Kod: .NET Core uygulamalarında MongoDB API 'sini kullanma
+### <a name="the-code-use-mongodb-api-in-net-applications"></a>Kod: .NET uygulamalarında MongoDB API 'sini kullanma
 
 .NET için MongoDB API 'SI, aşağıdaki şekilde gösterilen konumlar. API projesinde olduğu gibi, projelerinize eklemeniz gereken NuGet paketlerini temel alır.
 
 ![MongoDB NuGet paketlerindeki bağımlılıkların ekran görüntüsü.](./media/nosql-database-persistence-infrastructure/mongodb-api-nuget-packages.png)
 
-**Şekil 7-22**. .NET Core projesinde MongoDB API NuGet paketleri başvuruları
+**Şekil 7-22**. .NET Projesindeki MongoDB API NuGet paketleri başvuruları
 
 Aşağıdaki bölümlerde kodu araştıralım.
 
@@ -317,7 +317,7 @@ services:
 - **NoSQL veritabanları için belge verilerini modelleme** \
   <https://docs.microsoft.com/azure/cosmos-db/modeling-data>
 
-- **Vaughn versuz. Ideal etki alanı odaklı tasarım toplama deposu?** \
+- **Vaughn versuz. Ideal Domain-Driven tasarım toplu deposu?** \
   <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
 - **Azure Cosmos DB giriş: MongoDB için API**  \
