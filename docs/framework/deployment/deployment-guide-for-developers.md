@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 950ff048a918a52e6c64d8cc15e1ef0f80233b88
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dddd10846c5c57c88d23fef6d6851e288bd2d4b1
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238658"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191098"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET Framework dağıtım kılavuzu
 
@@ -66,7 +66,7 @@ Uygulamanızı bir Web sunucusuna veya başka bir merkezi konuma yayımlamaya, b
 
 ||Web Yükleyicisi|Çevrimdışı yükleyici|
 |-|-------------------|-----------------------|
-|Internet bağlantısı gerekiyor mu?|Evet|Hayır|
+|Internet bağlantısı gerekiyor mu?|Yes|Hayır|
 |İndirme boyutu|Daha küçük (yalnızca hedef platform için yükleyiciyi içerir) *|Boyutta|
 |Dil paketleri|Dahil * *|Tüm işletim sistemlerini hedefleyen paketi kullanmadığınız takdirde [ayrı olarak yüklenmelidir](#chain_langpack)|
 |Dağıtım yöntemi|Tüm yöntemleri destekler:<br /><br />- ['](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [Programının](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (zincirleme)](#chaining)|Tüm yöntemleri destekler:<br /><br /> - ['](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [Programının](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (zincirleme)](#chaining)|
@@ -177,7 +177,7 @@ Her iki yöntem de web yükleyicisini veya çevrimdışı yükleyiciyi kullanman
 
 `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
-Yüklemeyi özelleştirmek için ek komut satırı seçeneklerini kullanabilirsiniz. Örneğin:
+Yüklemeyi özelleştirmek için ek komut satırı seçeneklerini kullanabilirsiniz. Örnek:
 
 - Kullanıcıların, sistem yeniden başlatmaları en aza indirmek için .NET Framework uygulamaları kapatmalarının bir yolunu sağlamak için Pasif modu ayarlayın ve `/showrmui` seçeneği aşağıdaki gibi kullanın:
 
@@ -262,7 +262,7 @@ Yükleme başarılı olduğunda .NET Framework yükleyicisi kayıt defteri anaht
 | | |
 |-|-|
 | Anahtar | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Adı | Yayınla |
+| Ad | Sürüm |
 | Tür | DWORD |
 
 4,5 ile 4.7.2 arasında .NET Framework belirli bir sürümü için dil paketinin son sürümünün yüklenip yüklenmediğini saptamak için, önceki bölümde açıklanan yayın anahtarı DWORD değerinin değerini denetleyin ve [.NET Framework](#detect_net)tespit edin.
@@ -316,19 +316,19 @@ Aşağıdaki tabloda .NET Framework yeniden dağıtılabilir yükleyici için en
 
 Aşağıdaki içeriğe bakın:
 
-- [Arka Plan Akıllı Aktarım Hizmeti (BITS) hata kodları](https://go.microsoft.com/fwlink/?LinkId=180946)
+- [Arka Plan Akıllı Aktarım Hizmeti (BITS) hata kodları](/windows/win32/bits/bits-return-values)
 
-- [URL bilinen adı hata kodları](https://go.microsoft.com/fwlink/?LinkId=180947)
+- [URL bilinen adı hata kodları](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145(v=vs.85))
 
-- [WinHttp hata kodları](https://go.microsoft.com/fwlink/?LinkId=180948)
+- [WinHttp hata kodları](/windows/win32/winhttp/error-messages)
 
 #### <a name="other-error-codes"></a>Diğer hata kodları
 
 Aşağıdaki içeriğe bakın:
 
-- [Windows Installer hata kodları](https://go.microsoft.com/fwlink/?LinkId=180949)
+- [Windows Installer hata kodları](/previous-versions/aa368542(v=vs.85))
 
-- [Windows Update Aracısı sonuç kodları](https://go.microsoft.com/fwlink/?LinkId=180951)
+- [Windows Update Aracısı sonuç kodları](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
 ## <a name="uninstalling-the-net-framework"></a>.NET Framework kaldırılıyor
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: f80ac471fdcc425504b11b5fb17effa888aa9590
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 0c47290d11770a094fb09bcb4dc34aee1e4371a9
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419700"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190526"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Nasıl yapılır: Akış Çizelgesi İş Akışı Oluşturma
 
@@ -19,9 +19,6 @@ ms.locfileid: "83419700"
 
 > [!NOTE]
 > Başlangıç öğreticisindeki her konu, önceki konulara bağlıdır. Bu konuyu tamamlayabilmeniz için öncelikle [nasıl yapılır: etkinlik oluşturma](how-to-create-an-activity.md)' yı tamamlamalısınız.
-
-> [!NOTE]
-> Öğreticinin tamamlanmış bir sürümünü indirmek için, bkz. [Windows Workflow Foundation (WF45)-Başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).
 
 ## <a name="to-create-the-workflow"></a>İş akışını oluşturmak için
 
@@ -45,7 +42,7 @@ ms.locfileid: "83419700"
 
 5. **Bağımsız değişken Oluştur**' a tıklayın.
 
-6. `Turns`Yeni eklenen bağımsız değişkenin altında bulunan **ad** kutusuna yazın `MaxNumber` , **Yön** açılan listesinden Seç **Out** ' i seçin, **bağımsız değişken türü** açılan listesinden **Int32** ' i seçin ve ardından ENTER tuşuna basın.
+6. `Turns`Yeni eklenen bağımsız değişkenin altında bulunan **ad** kutusuna yazın `MaxNumber` , **Yön** açılan listesinden Seç  ' i seçin, **bağımsız değişken türü** açılan listesinden **Int32** ' i seçin ve ardından ENTER tuşuna basın.
 
 7. **Bağımsız değişkenler** bölmesini kapatmak için etkinlik tasarımcısının sol alt tarafındaki **bağımsız değişkenler** ' e tıklayın.
 
@@ -166,5 +163,5 @@ ms.locfileid: "83419700"
 - [Windows Workflow Foundation Programlama](programming.md)
 - [İş Akışları Tasarlama](designing-workflows.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl Yapılır: Etkinlik Oluşturma](how-to-create-an-activity.md)
+- [Nasıl yapılır: Etkinlik Oluşturma](how-to-create-an-activity.md)
 - [Nasıl yapılır: İş Akışı Çalıştırma](how-to-run-a-workflow.md)

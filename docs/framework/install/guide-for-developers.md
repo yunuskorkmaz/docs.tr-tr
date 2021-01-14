@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45ae10a92b66bc1b487e3ed4e1e29b6905b895f5
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543717"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190786"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework yüklemesi
 
@@ -35,13 +35,13 @@ Hızlı bağlantılar için aşağıdaki tabloyu kullanın veya Ayrıntılar iç
 
 | .NET Framework sürümü | Yükleyici (Geliştirici paketi ve çalışma zamanı) | Platform desteği |
 | ---------------------- | -------------------------------------- | ---------------- |
-|**4,8**   | [ .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **Dahil edilen:**<br/><br/>Windows 10 Mayıs 2019 güncelleştirmesi<br/>[Visual Studio 2019 (16,3 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br/><br/>Windows 10 Ekim 2018 güncelleştirmesi<br/>Windows 10 Nisan 2018 güncelleştirmesi<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2019<br/>Windows Server, sürüm 1809<br/>Windows Server, sürüm 1803<br /><br/> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
+|**4.8**   | [ .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **Dahil edilen:**<br/><br/>Windows 10 Mayıs 2019 güncelleştirmesi<br/>[Visual Studio 2019 (16,3 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br/><br/>Windows 10 Ekim 2018 güncelleştirmesi<br/>Windows 10 Nisan 2018 güncelleştirmesi<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2019<br/>Windows Server, sürüm 1809<br/>Windows Server, sürüm 1803<br /><br/> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
 |**4.7.2** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) | **Dahil edilen:** <br/><br/>Windows 10 Ekim 2018 güncelleştirmesi<br/>Windows 10 Nisan 2018 güncelleştirmesi<br/>Windows Server 2019<br/>Windows Server, sürüm 1809<br/>Windows Server, sürüm 1803<br/>[Visual Studio 2017 (15,8 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server, sürüm 1709 ve öncesi<br /><br/> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
 |**4.7.1** | [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471) | **Dahil edilen:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, sürüm 1709<br/>[Visual Studio 2017 (15,5 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br/><br/> Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2016 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
-|**4,7**   | [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **Dahil edilen:** <br/><br/>Windows 10 Creators Update<br/>[Visual Studio 2017 (15,3 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2016 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
+|**4.7**   | [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **Dahil edilen:** <br/><br/>Windows 10 Creators Update<br/>[Visual Studio 2017 (15,3 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2016 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
 |**4.6.2** | [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) | **Dahil edilen:** <br/><br/>Windows 10 Yıldönümü Güncelleştirmesi<br /><br /> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 10 Kasım güncelleştirmesi <br/> Windows 10 <br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 |**4.6.1** | [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461) | **Dahil edilen:** <br/><br/>[Visual Studio 2015 güncelleştirme 2](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br/><br/>**Şunları yükleyebilirsiniz:**<br /><br/> Windows 10 <br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
-|**4.6**   | [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)    | **Dahil edilen:** <br/><br/> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
+|**4,6**   | [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)    | **Dahil edilen:** <br/><br/> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 |**4.5.2** | [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452) | **Şunları yükleyebilirsiniz:**<br/><br/> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 |**4.5.1** | [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451) | **Dahil edilen:**<br/><br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 8 ve önceki sürümler<br /> Windows Server 2012 ve öncesi<br />(tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 |**4,5**   | [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)    | **Dahil edilen:** <br/><br/>Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Şunları yükleyebilirsiniz:**<br/><br /> Windows 7 ve öncesi<br /> Windows Server 2008 SP2 ve öncesi<br />(tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
@@ -134,7 +134,7 @@ Hem Web hem de çevrimdışı yükleyiciler x86 tabanlı ve x64 tabanlı bilgisa
 
 - .NET Framework 4,5 ve sonraki sürümler .NET Framework 4,0 yerini alır. Bu sürümleri .NET Framework 4 ' ün yüklü olduğu bir sisteme yüklediğinizde, derlemeler değiştirilmez.
 
-- .NET Framework 4,5 veya sonraki sürümlerin kaldırılması, önceden var olan .NET Framework 4 dosyalarını da kaldırır. .NET Framework 4 ' e geri dönmek istiyorsanız, bu dosyayı ve tüm güncelleştirmeleri yeniden yüklemeniz gerekir. Bkz. [.NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665)' ü yükleme.
+- .NET Framework 4,5 veya sonraki sürümlerin kaldırılması, önceden var olan .NET Framework 4 dosyalarını da kaldırır. .NET Framework 4 ' e geri dönmek istiyorsanız, bu dosyayı ve tüm güncelleştirmeleri yeniden yüklemeniz gerekir. Bkz. [.NET Framework 4](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))' ü yükleme.
 
 - .NET Framework 4,5 veya sonraki sürümleri yüklemek için yönetici kimlik bilgilerine sahip olmanız gerekir.
 
@@ -173,7 +173,7 @@ Aşağıdaki tabloda desteklenen diller listelenmiştir.
 | Danca                | kapattığımda      |
 | Felemenkçe                 | nl      |
 | Fince               | Fi      |
-| İngilizce (ABD)         | tr-TR   |
+| İngilizce (ABD)         | en-US   |
 | Fransızca                | kesir      |
 | Almanca                | seçimini      |
 | Yunanca                 | seri      |

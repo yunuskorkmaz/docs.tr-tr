@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: 8ce209e64ee7f9f9028c221daedef8fc6a993ef7
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 0eea5e89ac5055a45d9ead14363cc2f2fc574401
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96590070"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191085"
 ---
 # <a name="naming-rules"></a>Adlandırma kuralları
 
@@ -79,7 +79,7 @@ Kuralın etkili olması için tüm adlandırma kuralı özellikleri gereklidir.
 | -- | -- |
 | `symbols` | Bu kuralın uygulanacağı sembolleri tanımlayarak sembol grubunun başlığı |
 | `style` | Bu kuralla ilişkilendirilmesi gereken adlandırma stilinin başlığı |
-| `severity` |  Adlandırma kuralını zorlayacağı önem derecesini ayarlar. İlişkili değeri kullanılabilir [önem düzeylerinden](https://docs.microsoft.com/dotnet/fundamentals/code-analysis/configuration-options#severity-level)birine ayarlayın. <sup>1</sup> |
+| `severity` |  Adlandırma kuralını zorlayacağı önem derecesini ayarlar. İlişkili değeri kullanılabilir [önem düzeylerinden](../configuration-options.md#severity-level)birine ayarlayın. <sup>1</sup> |
 
 **Notlar:**
 
@@ -99,9 +99,9 @@ Hangi simgelerin gruba ekleneceğini sınırlamak için sembol grupları için a
 
 | Özellik | Açıklama | İzin verilen değerler | Gerekli |
 | -- | -- | -- | -- |
-| `applicable_kinds` | Grup <sup>1</sup> ' deki sembol türleri | `*` (tüm sembolleri belirtmek için bu değeri kullanın)<br/>`namespace`<br/>`class`<br/>`struct`<br/>`interface`<br/>`enum`<br/>`property`<br/>`method`<br/>`field`<br/>`event`<br/>`delegate`<br/>`parameter`<br/>`type_parameter`<br/>`local`<br/>`local_function` | Evet |
-| `applicable_accessibilities` | Gruptaki sembollerin erişilebilirlik düzeyleri | `*` (tüm erişilebilirlik düzeylerini belirtmek için bu değeri kullanın)<br/>`public`<br/>`internal` veya `friend`<br/>`private`<br/>`protected`<br/>`protected_internal` veya `protected_friend`<br/>`private_protected`<br/>`local` (bir yöntem içinde tanımlanan semboller için) | Evet |
-| `required_modifiers` | Yalnızca _Tüm_ belirtilen değiştiricilere sahip sembolleri Eşleştir <sup>2</sup> | `abstract` veya `must_inherit`<br/>`async`<br/>`const`<br/>`readonly`<br/>`static` veya `shared` <sup>3</sup> | Hayır |
+| `applicable_kinds` | Grup <sup>1</sup> ' deki sembol türleri | `*` (tüm sembolleri belirtmek için bu değeri kullanın)<br/>`namespace`<br/>`class`<br/>`struct`<br/>`interface`<br/>`enum`<br/>`property`<br/>`method`<br/>`field`<br/>`event`<br/>`delegate`<br/>`parameter`<br/>`type_parameter`<br/>`local`<br/>`local_function` | Yes |
+| `applicable_accessibilities` | Gruptaki sembollerin erişilebilirlik düzeyleri | `*` (tüm erişilebilirlik düzeylerini belirtmek için bu değeri kullanın)<br/>`public`<br/>`internal` veya `friend`<br/>`private`<br/>`protected`<br/>`protected_internal` veya `protected_friend`<br/>`private_protected`<br/>`local` (bir yöntem içinde tanımlanan semboller için) | Yes |
+| `required_modifiers` | Yalnızca _Tüm_ belirtilen değiştiricilere sahip sembolleri Eşleştir <sup>2</sup> | `abstract` veya `must_inherit`<br/>`async`<br/>`const`<br/>`readonly`<br/>`static` veya `shared` <sup>3</sup> | No |
 
 **Notlar:**
 
@@ -123,9 +123,9 @@ Adlandırma stili için aşağıdaki özellikleri ayarlayabilirsiniz:
 | Özellik | Açıklama | İzin verilen değerler | Gerekli |
 | -- | -- | -- | -- |
 | `capitalization` | Sembol içindeki sözcüklerin büyük küçük harf stili | `pascal_case`<br/>`camel_case`<br/>`first_word_upper`<br/>`all_upper`<br/>`all_lower` | Evet<sup>1</sup> |
-| `required_prefix` | Bu karakterlerle başlaması gerekir | | Hayır |
-| `required_suffix` | Bu karakterlerle bitmelidir | | Hayır |
-| `word_separator` | Simgenin içindeki sözcüklerin bu karakterle ayrılması gerekir | | Hayır |
+| `required_prefix` | Bu karakterlerle başlaması gerekir | | No |
+| `required_suffix` | Bu karakterlerle bitmelidir | | No |
+| `word_separator` | Simgenin içindeki sözcüklerin bu karakterle ayrılması gerekir | | No |
 
 **Notlar:**
 

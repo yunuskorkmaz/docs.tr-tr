@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c347dbc6af46d4c334445d606d7cedfdf17e43f6
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 6a1a5b230e427a4991162a702245f1a87352784d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098716"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190253"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -70,12 +70,10 @@ Kendi özel türlerinizi oluşturmak için [struct](../../language-reference/bui
 
 .NET 'teki tür sistemi hakkında iki temel noktayı anlamak önemlidir:
 
-- Devralma ilkesini destekler. Türler, *temel türler* olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. (C# anahtar sözcüğü: int) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, <xref:System.Int32?displayProperty=nameWithType> sonuçta [int](../../language-reference/builtin-types/integral-numeric-types.md) <xref:System.Object?displayProperty=nameWithType> (c# anahtar sözcüğü: [nesnesi](../../language-reference/builtin-types/reference-types.md)) tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (Cts) denir. C# ' de devralma hakkında daha fazla bilgi için bkz. [Devralma](../classes-and-structs/inheritance.md).
+- Devralma ilkesini destekler. Türler, *temel türler* olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. (C# anahtar sözcüğü: int) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, <xref:System.Int32?displayProperty=nameWithType> sonuçta [](../../language-reference/builtin-types/integral-numeric-types.md) <xref:System.Object?displayProperty=nameWithType> (c# anahtar sözcüğü: [nesnesi](../../language-reference/builtin-types/reference-types.md)) tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (Cts) denir. C# ' de devralma hakkında daha fazla bilgi için bkz. [Devralma](../classes-and-structs/inheritance.md).
 - CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü* olarak tanımlanır. Bu türler, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](../../language-reference/builtin-types/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler `structs` . [Sınıf](../../language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
 
 Aşağıdaki çizimde, CTS 'deki değer türleri ve başvuru türleri arasındaki ilişki gösterilmektedir.
-
-Aşağıdaki görüntüde, CTS 'deki değer türleri ve başvuru türleri gösterilmektedir:
 
 ![CTS değer türlerini ve başvuru türlerini gösteren ekran görüntüsü.](./media/index/value-reference-types-common-type-system.png)
 
@@ -114,7 +112,7 @@ Tüm numaralandırmalar öğesinden <xref:System.Enum?displayProperty=nameWithTy
 
 ### <a name="reference-types"></a>Başvuru türleri
 
-[Class](../../language-reference/keywords/class.md), [Delegate](../../language-reference/builtin-types/reference-types.md), array veya [Interface](../../language-reference/keywords/interface.md) olarak tanımlanan bir tür, bir *başvuru türüdür*. Çalışma zamanında, bir başvuru türü değişkeni bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak açıkça bir nesne oluşturana veya onu [null](../../language-reference/keywords/null.md) `new` Aşağıdaki örnekte gösterildiği gibi kullanılarak başka bir yerde oluşturulmuş bir nesne atayarak, değişken null değerini içerir:
+[Class](../../language-reference/keywords/class.md), [Delegate](../../language-reference/builtin-types/reference-types.md), array veya [Interface](../../language-reference/keywords/interface.md) olarak tanımlanan bir tür, bir *başvuru türüdür*. Çalışma zamanında, bir başvuru türü değişkeni bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak açıkça bir nesne oluşturana veya onu [](../../language-reference/keywords/null.md) `new` Aşağıdaki örnekte gösterildiği gibi kullanılarak başka bir yerde oluşturulmuş bir nesne atayarak, değişken null değerini içerir:
 
 :::code language="csharp" source="snippets/index/Program.cs" id="DeclarationAndAssignment":::
 
@@ -140,7 +138,7 @@ Değişmez değerler yazıldığı ve tüm türler sonunda öğesinden türetilm
 
 ## <a name="generic-types"></a>Genel türler
 
-Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler* olarak adlandırılır. Örneğin, .NET türü, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> kuralına göre bir tür parametresine sahiptir. *T* Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:
+Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler* olarak adlandırılır. Örneğin, .NET türü, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> kuralına göre bir tür parametresine sahiptir.  Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:
 
 :::code language="csharp" source="snippets/index/Program.cs" id="GenericType":::
 

@@ -2,44 +2,44 @@
 title: Dinamik Güncelleştirme
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 2553e6a29f498a9b53752d6c191df21a391dee34
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: cb4b63a67aa6e9033b227198e2ecc2b1b80db927
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378287"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190162"
 ---
 # <a name="dynamic-update"></a>Dinamik Güncelleştirme
 
-Dinamik güncelleştirme, uygulama geliştiricilerinin'bir kalıcı iş akışı örneği iş akışı tanımını güncelleştirmek için iş akışı için bir mekanizma sağlar. Bu, bir hata düzeltmesi, yeni gereksinimleri uygulamak için veya beklenmeyen değişiklikleri uyum sağlamak için olabilir. Bu konu, .NET Framework 4. 5 ' sunulan dinamik güncelleştirme işlevlerine genel bakış sağlar.
+Dinamik güncelleştirme, iş akışı uygulama geliştiricilerinin kalıcı bir iş akışı örneğinin iş akışı tanımını güncelleştirmesine yönelik bir mekanizma sağlar. Bu, bir hata düzeltmesini veya yeni gereksinimleri uygulayabilir ya da beklenmeyen değişikliklere uyum sağlayabilir. Bu konuda .NET Framework 4,5 ' de tanıtılan dinamik güncelleştirme işlevselliğine genel bakış sunulmaktadır.
 
 ## <a name="dynamic-update"></a>Dinamik Güncelleştirme
 
-Bir kalıcı iş akışı örneği için dinamik güncelleştirmeleri uygulamak için bir <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> oluşturulur, istediğiniz değişiklikleri yansıtacak şekilde kalıcı iş akışı örneği değişiklik yapma açıklayan yönergeler çalışma zamanı için içerir. Güncelleştirme eşlemesi oluşturulduktan sonra bu istenen kalıcı iş akışı örneklerine uygulanır. Dinamik güncelleştirme uygulandıktan sonra yeni güncelleştirilmiş iş akışı tanımı kullanarak iş akışı örneği sürdürülebilir. Oluşturma ve bir güncelleştirme eşlemesi uygulamak için gereken dört adım vardır.
+Kalıcı bir iş akışı örneğine dinamik güncelleştirmeleri uygulamak için, <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> kalıcı iş akışı örneğinin istenen değişiklikleri yansıtacak şekilde nasıl değiştirileceğini açıklayan çalışma zamanına yönelik yönergeler içeren bir oluşturulur. Güncelleştirme haritası oluşturulduktan sonra, istenen kalıcı iş akışı örneklerine uygulanır. Dinamik güncelleştirme uygulandıktan sonra, iş akışı örneği yeni güncelleştirilmiş iş akışı tanımı kullanılarak devam edebilir. Bir güncelleştirme eşlemesi oluşturmak ve uygulamak için dört adım gereklidir.
 
-1. [Dinamik güncelleştirme iş akışı tanımı hazırlama](dynamic-update.md#Prepare)
+1. [Dinamik güncelleştirme için iş akışı tanımını hazırlama](dynamic-update.md#Prepare)
 
-2. [İş akışı tanımı, istediğiniz değişiklikleri yansıtacak şekilde güncelleştirin](dynamic-update.md#Update)
+2. [İş akışı tanımını istenen değişiklikleri yansıtacak şekilde Güncelleştir](dynamic-update.md#Update)
 
-3. [Güncelleştirme eşlemesi oluşturma](dynamic-update.md#Create)
+3. [Güncelleştirme haritasını oluşturma](dynamic-update.md#Create)
 
-4. [Güncelleştirme eşlemesi istenen kalıcı iş akışı örnekleri için geçerlidir](dynamic-update.md#Apply)
-
-> [!NOTE]
-> Adımlar güncelleştirme eşlemesi oluşturulmasını kapsar, 3, 1 güncelleştirmeyi uygulamadan bağımsız olarak gerçekleştirilebilir unutmayın. İş akışı Geliştirici çevrimdışı güncelleştirme eşlemesi oluşturur ve ardından yönetici daha sonra güncelleştirme uygulanır sık karşılaşılan bir senaryodur.
-
-Bu konu, yeni bir etkinlik için derlenmiş Xaml iş akışı kalıcı bir örneğini ekleme dinamik güncelleştirme işlemine genel bakış sağlar.
-
-### <a name="Prepare"></a> Dinamik güncelleştirme iş akışı tanımı hazırlama
-
-Dinamik güncelleştirme işleminin ilk adımı, istenen iş akışı tanım güncelleştirmesi için hazırlama sağlamaktır. Bu çağrılarak gerçekleştirilir <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> yöntemi ve değiştirmek için iş akışı tanımında geçirme. Bu yöntem, doğrulama ve iş akışı ağacında, tüm genel etkinlikleri ve bunlar daha sonra değiştirilen iş akışı tanımıyla karşılaştırılabilir şekilde etiketlenmesi gereken değişkenleri gibi nesneleri tanımlamak için size yol gösterir. Bu tamamlandığında iş akışı ağaç kopyalanabilir ve orijinal iş akışının tanımına bağlı. Güncelleştirme eşlemesi oluşturulduğunda, iş akışı tanımının güncelleştirilmiş sürümü özgün iş akışı tanımı ile karşılaştırılır ve güncelleştirme eşlemesi temel farklar üzerinde oluşturulur.
-
-Dinamik güncelleştirme, yüklenemeyen içine bir Xaml iş akışı hazırlamak için bir <xref:System.Activities.ActivityBuilder>, ardından <xref:System.Activities.ActivityBuilder> yöntemlere geçirilen <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.
+4. [Güncelleştirme haritasını istenen kalıcı iş akışı örneklerine Uygula](dynamic-update.md#Apply)
 
 > [!NOTE]
-> İle çalışma hakkında daha fazla bilgi için iş akışları seri hale getirilmiş ve <xref:System.Activities.ActivityBuilder>, bkz: [seri hale getirme iş akışları ve etkinlikler XAML gelen ve giden](serializing-workflows-and-activities-to-and-from-xaml.md).
+> Güncelleştirme haritasının oluşturulmasını kapsayan 1 ile 3 arasındaki adımların, güncelleştirmeyi uygulamadan bağımsız olarak gerçekleştirilebileceğini unutmayın. İş akışı geliştiricisinin güncelleştirme haritasını çevrimdışı olarak oluşturacak ortak bir senaryo ve daha sonra bir yönetici güncelleştirmeyi uygulayacaktır.
 
-Aşağıdaki örnekte, bir `MortgageWorkflow` tanımı (oluşur, bir <xref:System.Activities.Statements.Sequence> birkaç alt etkinliklerle) içine yüklenen bir <xref:System.Activities.ActivityBuilder>ve ardından dinamik güncelleştirme için hazır. Yöntemin dönüşünün ardından, <xref:System.Activities.ActivityBuilder> özgün iş akışı tanımı ve bunun yanı sıra bir kopyasını içerir.
+Bu konu, derlenmiş xaml iş akışının kalıcı bir örneğine yeni bir etkinlik eklemenin dinamik güncelleştirme sürecine genel bir bakış sağlar.
+
+### <a name="prepare-the-workflow-definition-for-dynamic-update"></a><a name="Prepare"></a> Dinamik güncelleştirme için iş akışı tanımını hazırlama
+
+Dinamik güncelleştirme işlemindeki ilk adım, istenen iş akışı tanımını güncelleştirme için hazırlamaktır. Bu, <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> yöntemi çağırarak ve değiştirmek için iş akışı tanımına geçerek yapılır. Bu yöntem, daha sonra değiştirilmiş iş akışı tanımıyla karşılaştırılabilmesi için, genel etkinlikler ve etiketlenmesi gereken değişkenler gibi tüm nesneleri tanımlamak üzere iş akışı ağacını doğrular ve yönlendirir. Bu tamamlandığında, iş akışı ağacı kopyalanır ve özgün iş akışı tanımına eklenir. Güncelleştirme haritası oluşturulduğunda, iş akışı tanımının güncelleştirilmiş sürümü orijinal iş akışı tanımıyla karşılaştırılır ve güncelleştirme haritası farklılıklara göre oluşturulur.
+
+Dinamik güncelleştirme için bir XAML iş akışını hazırlamak üzere, bir öğesine yüklenebilir <xref:System.Activities.ActivityBuilder> ve sonra <xref:System.Activities.ActivityBuilder> öğesine geçirilir <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> .
+
+> [!NOTE]
+> Serileştirilmiş iş akışlarıyla çalışma hakkında daha fazla bilgi için <xref:System.Activities.ActivityBuilder> , bkz. [xaml 'de ve xaml 'de iş akışlarını ve etkinlikleri serileştirme](serializing-workflows-and-activities-to-and-from-xaml.md).
+
+Aşağıdaki örnekte, bir `MortgageWorkflow` tanım ( <xref:System.Activities.Statements.Sequence> birkaç alt etkinlikten oluşan bir) bir <xref:System.Activities.ActivityBuilder> olarak yüklenir ve dinamik güncelleştirme için hazırlanır. Yöntem çağrıldıktan sonra, <xref:System.Activities.ActivityBuilder> özgün iş akışı tanımını ve bir kopyayı içerir.
 
 ```csharp
 // Load the MortgageWorkflow definition from Xaml into
@@ -59,12 +59,9 @@ ActivityBuilder ab = XamlServices.Load(
 DynamicUpdateServices.PrepareForUpdate(ab);
 ```
 
-> [!NOTE]
-> Bu konuda eşlik eden örnek kodu indirmek için bkz [dinamik güncelleştirme örnek kodu](https://go.microsoft.com/fwlink/?LinkId=227905).
+### <a name="update-the-workflow-definition-to-reflect-the-desired-changes"></a><a name="Update"></a> İş akışı tanımını istenen değişiklikleri yansıtacak şekilde Güncelleştir
 
-### <a name="Update"></a> İş akışı tanımı, istediğiniz değişiklikleri yansıtacak şekilde güncelleştirin
-
-İş akışı tanımını güncelleştirmek için hazırlandıktan sonra istenen bir değişiklik yapılamaz. Ekleme veya etkinlikleri kaldırabileceğiniz, Ekle, taşıyın veya genel değişkenleri Sil, ekleyin veya bağımsız değişkenlerini kaldırın ve etkinlik temsilcileri imzası için değişiklik. Çalışan etkinlik kaldıramaz veya çalışan bir temsilcinin imzasını değiştirin. Kodu kullanarak bu değişiklikler yapılması veya yeniden barındırılan iş akışı Tasarımcısı'nda. Aşağıdaki örnekte, özel bir `VerifyAppraisal` etkinlik gövdesini oluşturan yapar dizisi eklenen `MortgageWorkflow` önceki örnekte.
+İş akışı tanımı güncelleştirme için hazırlandıktan sonra, istenen değişiklikler yapılabilir. Etkinlik ekleyebilir veya kaldırabilir, ortak değişkenler ekleyebilir, taşıyabilir veya silebilir, bağımsız değişken ekleyebilir veya kaldırabilir ve etkinlik temsilcilerinin imzasında değişiklik yapabilirsiniz. Çalışan bir etkinliği kaldıramaz veya çalışan bir temsilcinin imzasını değiştiremezsiniz. Bu değişiklikler kod kullanılarak veya yeniden barındırılan bir iş akışı tasarımcısında yapılabilir. Aşağıdaki örnekte, bir `VerifyAppraisal` önceki örnekteki öğesinin gövdesini oluşturan diziye özel bir etkinlik eklenir `MortgageWorkflow` .
 
 ```csharp
 // Make desired changes to the definition. In this example, we are
@@ -81,16 +78,16 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);
 ```
 
-### <a name="Create"></a> Güncelleştirme eşlemesi oluşturma
+### <a name="create-the-update-map"></a><a name="Create"></a> Güncelleştirme haritasını oluşturma
 
-Güncelleştirme için hazırlanan iş akışı tanımı değiştirildi sonra güncelleştirme eşleme oluşturulabilir. Bir dinamik güncelleştirme eşlemesi oluşturmak için <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> yöntemi çağrılır. Bu döndürür bir <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> çalışma zamanı gerekir böylece onu yüklenebilir ve yeni iş akışı tanımıyla sürdürüldü kalıcı iş akışı örneği değiştirmek için bilgileri içerir. Aşağıdaki örnekte, dinamik bir harita oluşturulur için değiştirilmiş `MortgageWorkflow` önceki örnekte tanımı.
+Güncelleştirme için hazırlanan iş akışı tanımı değiştirildikten sonra, güncelleştirme haritası oluşturulabilir. Dinamik bir güncelleştirme eşlemesi oluşturmak için <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> yöntemi çağrılır. Bu <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> , çalışma zamanının, yeni iş akışı tanımıyla yüklenip devam edebilmesi için kalıcı bir iş akışı örneğini değiştirmesi gereken bilgileri içeren bir döndürür. Aşağıdaki örnekte, önceki örnekteki değiştirilmiş tanım için dinamik bir eşleme oluşturulur `MortgageWorkflow` .
 
 ```csharp
 // Create the update map.
 DynamicUpdateMap map = DynamicUpdateServices.CreateUpdateMap(ab);
 ```
 
-Bu güncelleştirme eşlemesi kalıcı iş akışı örnekleri değiştirmek için hemen kullanılabilir veya genellikle kaydedilebilir ve daha sonra güncelleştirmelerin uygulanması. Güncelleştirme eşlemesi kaydetmek için tek bir dosyaya seri hale getirmek için aşağıdaki örnekte gösterildiği gibi yoludur.
+Bu güncelleştirme eşlemesi kalıcı iş akışı örneklerini değiştirmek için hemen kullanılabilir veya genellikle kaydedilebilir ve güncelleştirmeler daha sonra uygulanabilir. Güncelleştirme haritasını kaydetmek için bir yol, aşağıdaki örnekte gösterildiği gibi bir dosyaya serileştirilmelidir.
 
 ```csharp
 // Serialize the update map to a file.
@@ -101,7 +98,7 @@ using (FileStream fs = System.IO.File.Open(@"C:\WorkflowDefinitions\MortgageWork
 }
 ```
 
-Zaman <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> döndürür, kopyalanan iş akışı tanımı ve çağrıda eklenen diğer dinamik güncelleştirme bilgilerini <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> kaldırılır ve değiştirilen iş akışı tanımı sürdürme güncelleştirildiğinde daha sonra kullanılabilir kaydedilmesi hazır İş akışı örnekleri. Aşağıdaki örnekte, değiştirilen iş akışı tanımı için kaydedilen `MortgageWorkflow_v1.1.xaml`.
+<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>Döndüğünde, kopyalanmış iş akışı tanımı ve çağrısına eklenen diğer dinamik güncelleştirme bilgileri <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> kaldırılır ve değiştirilen iş akışı örnekleri, daha sonra güncelleştirilmiş iş akışı örneklerine devam edilirken kullanılabilmesi için kaydedilir. Aşağıdaki örnekte, değiştirilen iş akışı tanımı öğesine kaydedilir `MortgageWorkflow_v1.1.xaml` .
 
 ```csharp
 // Save the modified workflow definition.
@@ -111,9 +108,9 @@ XamlServices.Save(xw, ab);
 sw.Close();
 ```
 
-### <a name="Apply"></a> Güncelleştirme eşlemesi istenen kalıcı iş akışı örnekleri için geçerlidir
+### <a name="apply-the-update-map-to-the-desired-persisted-workflow-instances"></a><a name="Apply"></a> Güncelleştirme haritasını istenen kalıcı iş akışı örneklerine Uygula
 
-Güncelleştirme eşlemesi uygulama oluşturduktan sonra herhangi bir zamanda gerçekleştirilebilir. Hemen kullanmaya yapılabilir <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> tarafından döndürülen örnek <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>, ya da daha sonra güncelleştirme haritanın kaydedilen bir kopya kullanılarak yapılabilir. Bir iş akışı örneği güncelleştirmek için içine yüklemek bir <xref:System.Activities.WorkflowApplicationInstance> kullanarak <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>. Ardından, oluşturun bir <xref:System.Activities.WorkflowApplication> güncelleştirilmiş iş akışı tanımı ve istenen kullanarak <xref:System.Activities.WorkflowIdentity>. Bu <xref:System.Activities.WorkflowIdentity> özgün iş akışı kalıcı hale getirmek için kullanılan ve genellikle kalıcı örneği değiştirilmiş yansıtmak için hesaptan farklı olabilir. Bir kez <xref:System.Activities.WorkflowApplication> olan oluşturulan aşırı yüklemesini kullanarak yüklendiği <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType> almayan bir <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>ve ardından bir çağrı ile kaldırıldığında <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType>. Bu dinamik güncelleştirme uygulanır ve güncelleştirilmiş iş akışı örneğinin devam ettirir.
+Güncelleştirme haritasının uygulanması, oluşturulduktan sonra herhangi bir zamanda yapılabilir. <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>Tarafından döndürülen örneği kullanarak hemen yapılabilir <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> veya daha sonra güncelleştirme haritasının kaydedilmiş bir kopyası kullanılarak yapılabilir. Bir iş akışı örneğini güncelleştirmek için bir <xref:System.Activities.WorkflowApplicationInstance> kullanarak yükleyin <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType> . Ardından, <xref:System.Activities.WorkflowApplication> güncelleştirilmiş iş akışı tanımını ve istediğiniz öğesini kullanarak bir oluşturun <xref:System.Activities.WorkflowIdentity> . Bu, <xref:System.Activities.WorkflowIdentity> özgün iş akışını sürdürmek için kullanılandan farklı olabilir ve genellikle kalıcı örneğin değiştirildiğini yansıtacak şekilde yapılır. Oluşturulduktan sonra, <xref:System.Activities.WorkflowApplication> <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType> ' a sahip olan aşırı yüklemesi kullanılarak yüklenir <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> ve sonra öğesine çağrısıyla birlikte kaldırılır <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType> . Bu, dinamik güncelleştirmeyi uygular ve güncelleştirilmiş iş akışı örneği devam ettirir.
 
 ```csharp
 // Load the serialized update map.
@@ -166,14 +163,14 @@ foreach (Guid id in ids)
 }
 ```
 
-### <a name="resuming-an-updated-workflow-instance"></a>Güncelleştirilmiş iş akışı örneği sürdürme
+### <a name="resuming-an-updated-workflow-instance"></a>Güncelleştirilmiş Iş akışı örneği sürdürülüyor
 
-Dinamik güncelleştirme uygulandıktan sonra iş akışı örneği sürdürülebilir. Yeni tanım güncelleştirme olduğunu unutmayın ve <xref:System.Activities.WorkflowIdentity> kullanılmalıdır.
+Dinamik güncelleştirme uygulandıktan sonra iş akışı örneği devam edebilir. Yeni güncelleştirilmiş tanımın ve <xref:System.Activities.WorkflowIdentity> kullanılması gerektiğini unutmayın.
 
 > [!NOTE]
-> İle çalışma hakkında daha fazla bilgi için <xref:System.Activities.WorkflowApplication> ve <xref:System.Activities.WorkflowIdentity>, bkz: [Workflowıdentity kullanma ve sürüm oluşturma](using-workflowidentity-and-versioning.md).
+> Ve ile çalışma hakkında daha fazla bilgi için <xref:System.Activities.WorkflowApplication> <xref:System.Activities.WorkflowIdentity> bkz. [Workflowwıdentity ve sürümü kullanma](using-workflowidentity-and-versioning.md).
 
-Aşağıdaki örnekte, `MortgageWorkflow_v1.1.xaml` önceki örnekte iş akışı derlendiğinden, yüklenir ve güncelleştirilmiş iş akışı tanımı kullanarak devam ettirildi.
+Aşağıdaki örnekte, `MortgageWorkflow_v1.1.xaml` önceki örnekteki iş akışı derlenmiştir ve güncelleştirilmiş iş akışı tanımı kullanılarak yüklenir ve sürdürülür.
 
 ```csharp
 // Load the persisted workflow instance using the updated workflow definition
@@ -196,6 +193,3 @@ wfApp.Load(InstanceId);
 // Resume the workflow.
 // wfApp.ResumeBookmark(...);
 ```
-
-> [!NOTE]
-> Bu konuda eşlik eden örnek kodu indirmek için bkz [dinamik güncelleştirme örnek kodu](https://go.microsoft.com/fwlink/?LinkId=227905).

@@ -3,12 +3,12 @@ title: 'Nasıl yapılır: İş Akışı Oluşturma'
 description: Bu Iş akışı altyapısı öğreticisinin bir parçası olarak iş akışı oluşturmak için bu bölümdeki üç seçenekten birini doldurun.
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-ms.openlocfilehash: 1b2b03d672f86a351bcf36343d6a17e351d40ed0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ea9fd023ba15ae23a10f5b8cf6f82c49ca9af6c8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248792"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190448"
 ---
 # <a name="how-to-create-a-workflow"></a>Nasıl yapılır: İş Akışı Oluşturma
 
@@ -16,9 +16,6 @@ ms.locfileid: "96248792"
   
 > [!NOTE]
 > Başlangıç öğreticisindeki her konu, önceki konulara bağlıdır. Bu konuyu tamamlayabilmeniz için öncelikle [nasıl yapılır: etkinlik oluşturma](how-to-create-an-activity.md)' yı tamamlamalısınız.  
-  
-> [!NOTE]
-> Öğreticinin tamamlanmış bir sürümünü indirmek için, bkz. [Windows Workflow Foundation (WF45)-Başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 

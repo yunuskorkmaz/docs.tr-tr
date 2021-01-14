@@ -3,12 +3,12 @@ title: project.jsve csproj karşılaştırması
 description: project.json ve csproj öğeleri arasında bir eşlemeye bakın.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 3c9b2f266c2fcc3acdfbe40e19509edde20eec93
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970882"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190188"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json ve csproj özellikleri arasında bir eşleme
 
@@ -253,6 +253,9 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
+> [!NOTE]
+> `PackageTargetFallback`Özelliği kullanım dışıdır. Bunun yerine [Assettargetfallback](../project-sdk/msbuild-props.md#assettargetfallback) kullanın.
+
 ### <a name="dependency-type"></a>bağımlılık türü
 
 #### <a name="type-project"></a>Tür: proje
@@ -356,7 +359,9 @@ Daha fazla bilgi için bkz. [kendi içindeki dağıtımlar (SCD)](../deploying/i
 ```
 
 > [!NOTE]
-> `imports` Açık araçlar, csproj 'da desteklenmez. İçeri aktarmaları gereken araçlar yeni ile çalışmaz `Microsoft.NET.Sdk` .
+>
+> - `imports` Açık araçlar, csproj 'da desteklenmez. İçeri aktarmaları gereken araçlar ile çalışmaz `Microsoft.NET.Sdk` .
+> - `DotNetCliToolReference`[Yerel araçların](global-tools.md#install-a-local-tool)yararına kullanım dışı bırakılmıştır.
 
 ## <a name="buildoptions"></a>Buildoseçenekleri
 
@@ -609,7 +614,7 @@ MSBuild 'te bu, [öğeler](/visualstudio/msbuild/common-msbuild-project-items)ku
   <EmbeddedResource Include="..\Shared\*.resx" />
   <Content Include="Views\**\*" PackagePath="%(Identity)" />
   <None Include="some/path/in/project.txt" Pack="true" PackagePath="in/package.txt" />
-  
+
   <None Include="notes.txt" CopyToOutputDirectory="Always" />
   <!-- CopyToOutputDirectory = { Always, PreserveNewest, Never } -->
 
@@ -674,3 +679,4 @@ Daha fazla bilgi için bkz. [bir paketteki Içerik ekleme](/nuget/schema/msbuild
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [CLı 'deki değişikliklere üst düzey genel bakış](cli-msbuild-architecture.md)
+- [.NET SDK projeleri için MSBuild başvurusu](../project-sdk/msbuild-props.md)
