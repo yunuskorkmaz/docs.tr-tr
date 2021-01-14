@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 492576bd83053d9d4e44c56eda73fed3a4d56d0f
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: 6ec731725ad6f0a6093a9b0eeb7d55a5636868d5
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97911587"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98195303"
 ---
 | Ad | Paket | Docs | Kaynak |
 | ---- | ------- | ---- | ------ |
@@ -13,12 +13,14 @@ ms.locfileid: "97911587"
 | ASP.NET uzantısı-yapılandırma gizli dizileri | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.Configuration.Secrets/1.0.2) | [belgeler](/dotnet/api/overview/azure/Extensions.AspNetCore.Configuration.Secrets-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.Configuration.Secrets_1.0.2/sdk/extensions/Azure.Extensions.AspNetCore.Configuration.Secrets/) |
 | ASP.NET uzantısı-DataProtection blob 'Ları | NuGet [1.2.0](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs/1.2.0) | [belgeler](/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Blobs-readme/) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Blobs_1.2.0/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Blobs/) |
 | ASP.NET uzantısı-DataProtection anahtarları | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys/1.0.2) | [belgeler](/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Keys-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Keys_1.0.2/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Keys/) |
+| Kanıtlama | NuGet [0.10.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Attestation/0.10.0-preview) |  | GitHub [0.10.0-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Attestation_0.10.0-preview/sdk/attestation/Microsoft.Azure.Attestation/) |
+| Azure Güvenlik kanıtlama | NuGet [1.0.0-Alpha. 1](https://www.nuget.org/packages/Azure.Security.Attestation/1.0.0-alpha.1) |  | GitHub [1.0.0-Alpha. 1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Security.Attestation_1.0.0-alpha.1/sdk/attestation/Azure.Security.Attestation/) |
 | Bilişsel Arama | NuGet [11.1.1](https://www.nuget.org/packages/Azure.Search.Documents/11.1.1)<br>NuGet [11.2.0-Beta. 2](https://www.nuget.org/packages/Azure.Search.Documents/11.2.0-beta.2) | [belgeler](/dotnet/api/overview/azure/Search.Documents-readme/) | GitHub [11.1.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Search.Documents_11.1.1/sdk/search/Azure.Search.Documents/)<br>GitHub [11.2.0-Beta. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Search.Documents_11.2.0-beta.2/sdk/search/Azure.Search.Documents/) |
 | İletişim yönetimi | NuGet [1.0.0-Beta. 3](https://www.nuget.org/packages/Azure.Communication.Administration/1.0.0-beta.3) | [belgeler](/dotnet/api/overview/azure/Communication.Administration-readme-pre/) | GitHub [1.0.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Administration_1.0.0-beta.3/sdk/communication/Azure.Communication.Administration/) |
 | İletişim Sohbeti | NuGet [1.0.0-Beta. 3](https://www.nuget.org/packages/Azure.Communication.Chat/1.0.0-beta.3) | [belgeler](/dotnet/api/overview/azure/Communication.Chat-readme-pre/) | GitHub [1.0.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Chat_1.0.0-beta.3/sdk/communication/Azure.Communication.Chat/) |
 | Ortak iletişim | NuGet [1.0.0-Beta. 3](https://www.nuget.org/packages/Azure.Communication.Common/1.0.0-beta.3) | [belgeler](/dotnet/api/overview/azure/Communication.Common-readme-pre/) | GitHub [1.0.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Common_1.0.0-beta.3/sdk/communication/Azure.Communication.Common/) |
 | İletişim SMS | NuGet [1.0.0-Beta. 3](https://www.nuget.org/packages/Azure.Communication.Sms/1.0.0-beta.3) | [belgeler](/dotnet/api/overview/azure/Communication.Sms-readme-pre/) | GitHub [1.0.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Sms_1.0.0-beta.3/sdk/communication/Azure.Communication.Sms/) |
-| Çekirdek | NuGet [1.7.0](https://www.nuget.org/packages/Azure.Core/1.7.0) | [belgeler](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.7.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.7.0/sdk/core/Azure.Core/) |
+| Çekirdek | NuGet [1.8.1](https://www.nuget.org/packages/Azure.Core/1.8.1) | [belgeler](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.8.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.8.1/sdk/core/Azure.Core/) |
 | Çekirdek-AMQP | NuGet [1.0.0](https://www.nuget.org/packages/Azure.Core.Amqp/1.0.0) | [belgeler](/dotnet/api/overview/azure/Core.Amqp-readme/) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core.Amqp_1.0.0/sdk/core/Azure.Core.Amqp/) |
 | Cosmos DB | NuGet [4.0.0-preview3](https://www.nuget.org/packages/Azure.Cosmos/4.0.0-preview3) | [belgeler](/dotnet/api/azure.cosmos) | GitHub [4.0.0-preview3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/4.0.0-preview3) |
 | Dijital TWINS-çekirdek | NuGet [1.2.0](https://www.nuget.org/packages/Azure.DigitalTwins.Core/1.2.0) | [belgeler](/dotnet/api/overview/azure/DigitalTwins.Core-readme/) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.DigitalTwins.Core_1.2.0/sdk/digitaltwins/Azure.DigitalTwins.Core/) |
@@ -58,30 +60,8 @@ ms.locfileid: "97911587"
 | Kaynak yönetimi-ağ | NuGet [1.0.0-Önizleme. 2](https://www.nuget.org/packages/Azure.ResourceManager.Network/1.0.0-preview.2) | [belgeler](/dotnet/api/overview/azure/ResourceManager.Network-readme-pre/) | GitHub [1.0.0-Önizleme. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Network_1.0.0-preview.2/sdk/network/Azure.ResourceManager.Network/) |
 | Kaynak yönetimi-kaynaklar | NuGet [1.0.0-Önizleme. 2](https://www.nuget.org/packages/Azure.ResourceManager.Resources/1.0.0-preview.2) | [belgeler](/dotnet/api/overview/azure/ResourceManager.Resources-readme-pre/) | GitHub [1.0.0-Önizleme. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Resources_1.0.0-preview.2/sdk/resources/Azure.ResourceManager.Resources/) |
 | Kaynak yönetimi-depolama | NuGet [1.0.0-Önizleme. 2](https://www.nuget.org/packages/Azure.ResourceManager.Storage/1.0.0-preview.2) | [belgeler](/dotnet/api/overview/azure/ResourceManager.Storage-readme-pre/) | GitHub [1.0.0-Önizleme. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Storage_1.0.0-preview.2/sdk/storage/Azure.ResourceManager.Storage/) |
-| Azure. Security. kanıtlama | NuGet [1.0.0-Alpha. 1](https://www.nuget.org/packages/Azure.Security.Attestation/1.0.0-alpha.1) |  |  |
-| Microsoft. Azure. AMQP | NuGet [2.4.9](https://www.nuget.org/packages/Microsoft.Azure.Amqp/2.4.9) |  |  |
-| Microsoft.Azure.Devices | NuGet [1.28.1](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.1) |  |  |
-| Microsoft.Azure.Devices.Client | NuGet [1.33.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client/1.33.1) |  |  |
-| Microsoft. Azure. Devices. Client. PCL | NuGet [1.0.16](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client.PCL/1.0.16) |  |  |
-| Microsoft. Azure. Devices. DigitalTwin. Client | NuGet [1.0.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Client/1.0.0-preview-001) |  |  |
-| Microsoft. Azure. Devices. DigitalTwin. Service | NuGet [1.0.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Service/1.0.0-preview-001) |  |  |
-| Microsoft. Azure. Devices. ProtocolGateway. Core | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Core/2.0.1) |  |  |
-| Microsoft. Azure. Devices. ProtocolGateway. IotHubClient | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.IotHubClient/2.0.1) |  |  |
-| Microsoft. Azure. Devices. ProtocolGateway. Providers. CloudStorage | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage/2.0.1) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Client | NuGet [1.17.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Client/1.17.0-preview-001) |  |  |
-| Microsoft. Azure. Devices. sağlama. Security. TPM | NuGet [1.13.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Security.Tpm/1.13.0-preview-001) |  |  |
-| Microsoft. Azure. Devices. sağlama. hizmeti | NuGet [1.17.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Service/1.17.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Transport.Amqp | NuGet [1.14.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Amqp/1.14.0-preview-001) |  |  |
-| Microsoft. Azure. Devices. sağlama. Transport. http | NuGet [1.13.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Http/1.13.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Transport.Mqtt | NuGet [1.14.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Mqtt/1.14.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Shared | NuGet [1.26.0](https://www.nuget.org/packages/Microsoft.Azure.Devices.Shared/1.26.0) |  |  |
-| Microsoft. Azure. Functions. Worker | NuGet [1.0.0-preview1 'i](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker/1.0.0-preview1) |  |  |
-| Microsoft. Azure. Functions. Worker. SDK | NuGet [1.0.0-preview1 'i](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker.Sdk/1.0.0-preview1) |  |  |
-| Microsoft. Azure. Management. RedisEnterprise | NuGet [1.0.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.RedisEnterprise/1.0.0-preview) |  |  |
-| Microsoft. Azure. uamqp | NuGet [1.2.11](https://www.nuget.org/packages/Microsoft.Azure.uamqp/1.2.11) |  |  |
-| Microsoft. Azure. umqtt | NuGet [1.1.11](https://www.nuget.org/packages/Microsoft.Azure.umqtt/1.1.11) |  |  |
 | Anomali Algılayıcısı | NuGet [3.0.0-Önizleme. 2](https://www.nuget.org/packages/Azure.AI.AnomalyDetector/3.0.0-preview.2) | [belgeler](/dotnet/api/overview/azure/AI.AnomalyDetector-readme-pre/) | GitHub [3.0.0-Önizleme. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.AnomalyDetector_3.0.0-preview.2/sdk/anomalydetector/Azure.AI.AnomalyDetector/) |
-| Anomali Algılayıcısı  | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0)<br>NuGet [1.0.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0-preview.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.AnomalyDetector_1.0.0-preview.1/sdk/cognitiveservices/AnomalyDetector) |
+| Anomali Algılayıcısı | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0)<br>NuGet [1.0.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0-preview.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.AnomalyDetector_1.0.0-preview.1/sdk/cognitiveservices/AnomalyDetector) |
 | Uygulama Yapılandırması | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Data.AppConfiguration/1.0.2) | [belgeler](/dotnet/api/overview/azure/Data.AppConfiguration-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Data.AppConfiguration_1.0.2/sdk/appconfiguration/Azure.Data.AppConfiguration/) |
 | App Service | NuGet [0.2.2-Alpha](https://www.nuget.org/packages/Microsoft.Azure.AppService/0.2.2-alpha) |  |  |
 | App Service-API Apps ortak | NuGet [0.9.36](https://www.nuget.org/packages/Microsoft.Azure.AppService.ApiApps.Common/0.9.36) |  |  |
@@ -96,6 +76,7 @@ ms.locfileid: "97911587"
 | Otomatik öneri | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.AutoSuggest/2.0.0) |  |  |
 | Azure Active Directory-uygulama kimlik doğrulaması | NuGet [1.6.0](https://www.nuget.org/packages/Microsoft.Azure.Services.AppAuthentication/1.6.0) |  |  |
 | Opentelemetri için Azure Izleyici Dışarı Aktarıcı | NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/Microsoft.OpenTelemetry.Exporter.AzureMonitor/1.0.0-beta.1) | [belgeler](/dotnet/api/overview/azure/Microsoft.OpenTelemetry.Exporter.AzureMonitor-readme-pre/) |  |
+| Azure Güvenlik kanıtlama | NuGet [1.0.0-Alpha. 1](https://www.nuget.org/packages/Azure.Security.Attestation/1.0.0-alpha.1) |  | GitHub [1.0.0-Alpha. 1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Security.Attestation_1.0.0-alpha.1/sdk/attestation/Azure.Security.Attestation/) |
 | Azure Stack-Azure tutarlı depolama | NuGet [0.10.8-Önizleme](https://www.nuget.org/packages/Microsoft.AzureStack.AzureConsistentStorage/0.10.8-preview) |  |  |
 | Batch | NuGet [14.0.0](https://www.nuget.org/packages/Microsoft.Azure.Batch/14.0.0) | [belgeler](/dotnet/api/overview/azure/Microsoft.Batch-readme/) | GitHub [14.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch_14.0.0/sdk/batch/Microsoft.Azure.Batch/) |
 | Batch-Apps şifrelemesi | NuGet [1.1.1.4](https://www.nuget.org/packages/Microsoft.Azure.Batch.Apps.Cryptography/1.1.1.4) |  |  |
@@ -128,312 +109,19 @@ ms.locfileid: "97911587"
 | İletişim SMS | NuGet [1.0.0-Beta. 3](https://www.nuget.org/packages/Azure.Communication.Sms/1.0.0-beta.3) | [belgeler](/dotnet/api/overview/azure/Communication.Sms-readme-pre/) | GitHub [1.0.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Sms_1.0.0-beta.3/sdk/communication/Azure.Communication.Sms/) |
 | Görüntü İşleme | NuGet [6.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ComputerVision/6.0.0)<br>NuGet [6.0.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ComputerVision/6.0.0-preview.1) |  | GitHub [6.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.ComputerVision_6.0.0-preview.1/sdk/cognitiveservices/Vision.ComputerVision) |
 | Configuration Manager | NuGet [4.0.0](https://www.nuget.org/packages/Microsoft.Azure.ConfigurationManager/4.0.0) |  |  |
-| Bağlayıcılar-Işlem | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Act/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Acumatika | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Acumatica/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Adobe Creative Cloud | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AdobeCreativeCloud/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Agılite | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Agilite/0.0.1-alpha) |  |  |
-| Bağlayıcılar-önceden | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Ahead/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Airkurşun | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AirSlate/0.0.1-alpha) |  |  |
-| Bağlayıcılar-tümü | NuGet [0.0.2-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.All/0.0.2-alpha) |  |  |
-| Bağlayıcılar-önemli | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Ally/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Amazon RedShift | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AmazonRedShift/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Amazon SQS | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AmazonSQS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Apache Impala | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ApacheImpala/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Apprakamları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Appfigures/0.0.1-alpha) |  |  |
-| Bağlayıcılar-randevu zamanlaması 10To8 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AppointmentScheduling10To8/0.0.1-alpha) |  |  |
-| Bağlayıcılar-AppsForOps zaman çizelgesi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AppsForOpsTimeline/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Apptigent PowerTools LITE | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ApptigentPowerToolsLITE/0.0.1-alpha) |  |  |
-| Bağlayıcılar-AS2 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AS2/0.0.1-alpha) |  |  |
-| Bağlayıcılar-AtBot Yöneticisi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AtBotAdmin/0.0.1-alpha) |  |  |
-| Bağlayıcılar-AtBot mantığı | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AtBotLogic/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Authentiselineıtem | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AuthentiseLineItem/0.0.1-alpha) |  |  |
-| Bağlayıcılar-AuthentiseOrder | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AuthentiseOrder/0.0.1-alpha) |  |  |
-| Bağlayıcılar-AWeber | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AWeber/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Axgerme Içerik kapısı | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AxtensionContentGate/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure AD Kimlik Koruması | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureADIdentityProtection/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure App Service | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureAppService/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Application Insights | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureApplicationInsights/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Otomasyonu | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureAutomation/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Blob depolama | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureBlobStorage/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Container örneği | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureContainerInstance/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Cosmos DB | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureCosmosDB/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Data Factory | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureDataFactory/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Data Lake | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureDataLake/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure DevOps | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureDevOps/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Event Grid Publish | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureEventGridPublish/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure dosya depolama | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureFileStorage/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure IoT Central | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureIoTCentral/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Key Vault | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureKeyVault/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Log Analytics | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureLogAnalytics/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Log Analytics veri toplayıcısı | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureLogAnalyticsDataCollector/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Izleyici günlükleri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureMonitorLogs/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure Tablo depolama | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureTableStorage/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure VM | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureVM/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Basecamp | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Basecamp/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Basecamp 2 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Basecamp2/0.0.1-alpha) |  |  |
-| Bağlayıcılar-BillsPLS | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BillsPLS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Bing Haritalar | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BingMaps/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Bing Arama | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BingSearch/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Bitbucket | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Bitbucket/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Bitly | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Bitly/0.0.1-alpha) |  |  |
-| Bağlayıcılar-BizTalkServer | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BizTalkServer/0.0.1-alpha) |  |  |
-| Bağlayıcılar-kara baud Raers Edge NXT | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BlackbaudRaisersEdgeNXT/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Blogger | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Blogger/0.0.1-alpha) |  |  |
-| Bağlayıcılar-kutu | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Box/0.0.1-alpha) |  |  |
-| Bağlayıcılar-bttn | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Bttn/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Iş Merkezi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BusinessCentral/0.0.1-alpha) |  |  |
-| Bağlayıcılar-kamp ateşi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Campfire/0.0.1-alpha) |  |  |
-| Bağlayıcılar-kapsül CRM | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CapsuleCRM/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Casper365 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Casper365/0.0.1-alpha) |  |  |
-| Bağlayıcılar-chatter | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Chatter/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Cisco WebEx Toplantıları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CiscoWebexMeetings/0.0.1-alpha) |  |  |
-| Bağlayıcılar-bulut PKI yönetimi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CloudPKIManagement/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Cloudmerlayıcı veri doğrulaması | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CloudmersiveDataValidation/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Cloudmerlayıcı NLP | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CloudmersiveNLP/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Bilito Forms | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CognitoForms/0.0.1-alpha) |  |  |
-| Bağlayıcılar-ticari Vatik | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Commercient/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Common Data Service | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CommonDataService/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Görüntü İşleme API'si | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ComputerVisionAPI/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Içerik dönüştürme | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ContentConversion/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Content Moderator | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ContentModerator/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Corda blok zinciri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CordaBlockchain/0.0.1-alpha) |  |  |
-| Bağlayıcılar-CPQSync | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CPQSync/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Özel Görüntü İşleme | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CustomVision/0.0.1-alpha) |  |  |
-| Bağlayıcılar-D7SMS | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.D7SMS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Data8 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Data8/0.0.1-alpha) |  |  |
-| Bağlayıcılar-DB2 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DB2/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Derdadck SıGNL4 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DerdackSIGNL4/0.0.1-alpha) |  |  |
-| Bağlayıcılar-DnB Idealleştirici | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DnBOptimizer/0.0.1-alpha) |  |  |
-| Bağlayıcılar-DocFusion365 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DocFusion365/0.0.1-alpha) |  |  |
-| Bağlayıcılar-DocuSign | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DocuSign/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Dropbox | NuGet [0.0.2-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dropbox/0.0.2-alpha) |  |  |
-| Bağlayıcılar-dinamik sinyal | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DynamicSignal/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Dynamics 365 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Dynamics 365 Customer Insights | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365CustomerInsights/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Dynamics 365 müşteri sesi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365CustomerVoice/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Fin için Dynamics 365 & Ops | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365forFinOps/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Dynamics 365 Sales Insights | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365SalesInsights/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Dynamics NAV | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DynamicsNAV/0.0.1-alpha) |  |  |
-| Bağlayıcılar-kolay Redmine | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EasyRedmine/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Easyvista kendi kendine yardım | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EasyvistaSelfHelp/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Ediolgu | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Edifact/0.0.1-alpha) |  |  |
-| Bağlayıcılar-mete çerçeve | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Eduframe/0.0.1-alpha) |  |  |
-| Bağlayıcılar-elastik formlar | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ElasticForms/0.0.1-alpha) |  |  |
-| Bağlayıcılar-ElasticOCR | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ElasticOCR/0.0.1-alpha) |  |  |
-| Bağlayıcılar-emfloence pazarlama platformu | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EmfluenceMarketingPlatform/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Encoca | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Encodian/0.0.1-alpha) |  |  |
-| Bağlayıcılar-EntegrationsInvoicing | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EntegrationsInvoicing/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Envoy | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Envoy/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Ethereum blok zinciri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EthereumBlockchain/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Event Hubs | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EventHubs/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Eventbrite | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Eventbrite/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Excel Online | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ExcelOnline/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Excel Online bir sürücü | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ExcelOnlineOneDrive/0.0.1-alpha) |  |  |
-| Bağlayıcılar-ExghtsGenDocumentnMore | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ExghtsGenDocumentnMore/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Yüz Tanıma API'si | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FaceAPI/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Facebook | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Facebook/0.0.1-alpha) |  |  |
-| Bağlayıcılar-dosya sistemi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FileSystem/0.0.1-alpha) |  |  |
-| Bağlayıcılar-FireText | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FireText/0.0.1-alpha) |  |  |
-| Bağlayıcılar-FlowForma | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FlowForma/0.0.1-alpha) |  |  |
-| Bağlayıcılar-FORCAM ZORLAMALı köprü | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ForcamForceBridge/0.0.1-alpha) |  |  |
-| Bağlayıcılar-form tanıyıcı | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FormRecognizer/0.0.1-alpha) |  |  |
-| Bağlayıcılar-yalnızca diğer kitaplar | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FreshBooks/0.0.1-alpha) |  |  |
-| Bağlayıcılar-en güncel çalışma | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Freshdesk/0.0.1-alpha) |  |  |
-| Bağlayıcılar-diğer hizmet | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Freshservice/0.0.1-alpha) |  |  |
-| Bağlayıcılar-FTP | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FTP/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Fulcrud | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Fulcrum/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Getmyfaturalardaki | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GetMyInvoices/0.0.1-alpha) |  |  |
-| Bağlayıcılar-GitHub | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GitHub/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Gmail | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Gmail/0.0.1-alpha) |  |  |
-| Bağlayıcılar-GoFileRoom | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoFileRoom/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Google Takvim | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleCalendar/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Google kişileri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleContacts/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Google Drive | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleDrive/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Google sayfaları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleSheets/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Sayfaytoplantısı | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoToMeeting/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Sayfaytraining | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoToTraining/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Sayfayweb Semineri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoToWebinar/0.0.1-alpha) |  |  |
-| Bağlayıcılar-toplama | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Harvest/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Merhaba Imza | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HelloSign/0.0.1-alpha) |  |  |
-| Bağlayıcılar-HipChat | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HipChat/0.0.1-alpha) |  |  |
-| Bağlayıcılar-HotProfile | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HotProfile/0.0.1-alpha) |  |  |
-| Bağlayıcılar-HouseRater QA | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HouseRaterQA/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Azure AD ile HTTP | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HTTPwithAzureAD/0.0.1-alpha) |  |  |
-| Bağlayıcılar-IBM 3270 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.IBM3270/0.0.1-alpha) |  |  |
-| Bağlayıcılar-ımprezian 360 CRM | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Imprezian360CRM/0.0.1-alpha) |  |  |
-| Bağlayıcılar-D KYC Hindistan | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.INDKYCIndia/0.0.1-alpha) |  |  |
-| Bağlayıcılar-D borçları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.INDPayables/0.0.1-alpha) |  |  |
-| Bağlayıcılar-endüstriyel uygulama Mağazası | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.IndustrialAppStore/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Infobıp | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Infobip/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Informix | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Informix/0.0.1-alpha) |  |  |
-| Bağlayıcılar-InfusionSoft | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Infusionsoft/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Inoreader | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Inoreader/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Sistem durumu | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Instagram/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Ila kağıdı | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Instapaper/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Tümleştirçevrilebilir PDF | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.IntegrablePDF/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Intercom | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Intercom/0.0.1-alpha) |  |  |
-| Bağlayıcılar-JIRA | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.JIRA/0.0.1-alpha) |  |  |
-| Bağlayıcılar-JungleMail 365 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.JungleMail365/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Kintone | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Kintone/0.0.1-alpha) |  |  |
-| Bağlayıcılar-KnowledgeLake | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.KnowledgeLake/0.0.1-alpha) |  |  |
-| Bağlayıcılar-kusto | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Kusto/0.0.1-alpha) |  |  |
-| Bağlayıcılar-LatinShare belgeleri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LatinShareDocuments/0.0.1-alpha) |  |  |
-| Bağlayıcılar-LatinShare SHP yönetimi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LatinShareSHPManagement/0.0.1-alpha) |  |  |
-| Bağlayıcılar-LatinShare SHP Izinleri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LatinShareSHPPermissions/0.0.1-alpha) |  |  |
-| Bağlayıcılar-öncü masa | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LeadDesk/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Elankit | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LeanKit/0.0.1-alpha) |  |  |
-| Bağlayıcılar-taşınabilirlik BAĞLANTıSı | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LINKMobility/0.0.1-alpha) |  |  |
-| Bağlayıcılar-LinkedIn | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LinkedInV2/0.0.1-alpha) |  |  |
-| Bağlayıcılar-LiveChat | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LiveChat/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Livekutucukları botları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LiveTilesBots/0.0.1-alpha) |  |  |
-| Bağlayıcılar-LUSıS | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LUIS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-MailChimp | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MailChimp/0.0.1-alpha) |  |  |
-| Bağlayıcılar-MailParser | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MailParser/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Mandetaya git | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Mandrill/0.0.1-alpha) |  |  |
-| Bağlayıcılar-pazarlama Içerik Merkezi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MarketingContentHub/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Marketo | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Marketo/0.0.1-alpha) |  |  |
-| Bağlayıcılar-orta | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Medium/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Meeting ınroommap | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MeetingRoomMap/0.0.1-alpha) |  |  |
-| Bağlayıcılar-mikro yanıp sönme | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Microblink/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Microsoft Defender ATP | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftDefenderATP/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Microsoft Forms | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftForms/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Microsoft okul veri eşitleme | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftSchoolDataSync/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Microsoft 'un eleman hub 'ı | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftStaffHub/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Microsoft ekipleri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftTeams/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Microsoft to do | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftToDo/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Microsoft Translator | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftTranslatorV2/0.0.1-alpha) |  |  |
-| Bağlayıcılar-MİTTO | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Mitto/0.0.1-alpha) |  |  |
-| Bağlayıcılar-harekete ılws | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MobilyWS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-MotaWord çevirileri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MotaWordTranslations/0.0.1-alpha) |  |  |
-| Bağlayıcılar-MQ | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MQ/0.0.1-alpha) |  |  |
-| Bağlayıcılar-MSG91ForSMSTextnVoice | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MSG91ForSMSTextnVoice/0.0.1-alpha) |  |  |
-| Bağlayıcılar-MSN Hava durumu | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MSNWeather/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Mtarget SMS | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MtargetSMS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Muhimbi PDF | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MuhimbiPDF/0.0.1-alpha) |  |  |
-| Bağlayıcılar-MySQL | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MySQL/0.0.1-alpha) |  |  |
-| Bağlayıcılar-NEXMO | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Nexmo/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Nitro | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Nitro/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Notiivy tarayıcı bildirimleri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.NotiivyBrowserNotifications/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Office 365 grupları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Groups/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Office 365 Gruplar posta | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365GroupsMail/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Office 365 Outlook | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Outlook/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Office 365 kullanıcıları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Users/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Office 365 videosu | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Video/0.0.1-alpha) |  |  |
-| Bağlayıcılar-OneDrive | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OneDrive/0.0.1-alpha) |  |  |
-| Bağlayıcılar-OneDrive Iş | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OneDriveForBusiness/0.0.1-alpha) |  |  |
-| Bağlayıcılar-OneNote | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OneNote/0.0.1-alpha) |  |  |
-| Bağlayıcılar-OpenText CS | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OpenTextCS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-OpenText eDOCS | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OpenTextEDOCS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Oracle Database | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OracleDatabase/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Outlook | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Outlook/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Outlook Müşteri Yöneticisi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OutlookCustomerManager/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Pagerharcı | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PagerDuty/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Parserr | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Parserr/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Parsuer | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Parsuer/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Iş Ortağı Merkezi olayları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PartnerCenterEvents/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Iş Ortağı Merkezi başvuruları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PartnerCenterReferrals/0.0.1-alpha) |  |  |
-| Bağlayıcılar-PDF4me | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PDF4me/0.0.1-alpha) |  |  |
-| Bağlayıcılar-PINTEREST | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Pinterest/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Pipedrive | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Pipedrive/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Cerney Bowes veri doğrulama | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PitneyBowesDataValidation/0.0.1-alpha) |  |  |
-| Bağlayıcılar-özetleme Izleyicisi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PivotalTracker/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Planner | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Planner/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Plivo | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Plivo/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Pbir SAIL belgeleri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PlumsailDocuments/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Pbir SAIL yardım masası | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PlumsailHelpDesk/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Pbir SAIL SP | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PlumsailSP/0.0.1-alpha) |  |  |
-| Bağlayıcılar-PoliteMail | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PoliteMail/0.0.1-alpha) |  |  |
-| Bağlayıcılar-PostgreSQL | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PostgreSQL/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Power BI | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PowerBI/0.0.1-alpha) |  |  |
-| Bağlayıcılar-öncelik matrisi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PriorityMatrix/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Projectum sunma | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ProjectumPresentIt/0.0.1-alpha) |  |  |
-| Bağlayıcılar-saf müşteri adayları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PureLeads/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Pushkes | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Pushcut/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Soru-Cevap Oluşturma | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.QnAMaker/0.0.1-alpha) |  |  |
-| Bağlayıcılar-daha sonra kaydedildi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RecordedFuture/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Redmine | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Redmine/0.0.1-alpha) |  |  |
-| Bağlayıcılar-net PPM için RegoLink | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RegoLinkForClarityPPM/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Rencore kodu | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RencoreCode/0.0.1-alpha) |  |  |
-| Bağlayıcılar-RiskIQ | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RiskIQ/0.0.1-alpha) |  |  |
-| Bağlayıcılar-RSS | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RSS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-zu 100cloudCompta | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Sage100cloudCompta/0.0.1-alpha) |  |  |
-| Bağlayıcılar-zu 100cloudVente | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Sage100cloudVente/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Salesforce | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Salesforce/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SAP | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SAP/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Eimzala | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ScriveESign/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SeekTable | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SeekTable/0.0.1-alpha) |  |  |
-| Bağlayıcılar-sendMode | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Sendmode/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Serverless360 Baa & Izleme | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Serverless360BAMTracking/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Service Bus | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ServiceBus/0.0.1-alpha) |  |  |
-| Bağlayıcılar-ServiceNow | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ServiceNow/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SerwerSMS | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SerwerSMS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SFTP | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SFTP/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SFTP SSH | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SFTPSSH/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Shareefektin | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ShareEffect/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SharePoint | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SharePoint/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Microsoft ekipleri için vardiyalar | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ShiftsForMicrosoftTeams/0.0.1-alpha) |  |  |
-| Bağlayıcılar-kısa URL | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ShortURL/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SigningHub | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SigningHub/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SignRequest | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SignRequest/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Skype Kurumsal Çevrimiçi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SkypeForBusinessOnline/0.0.1-alpha) |  |  |
-| Bağlayıcılar-bolluk | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Slack/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Slaskoni | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Slascone/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Smarp | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Smarp/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Smartsheet | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Smartsheet/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SMSLink | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SMSLink/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SMTP | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SMTP/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Soft1 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Soft1/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SOLYP | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SOLYP/0.0.1-alpha) |  |  |
-| Bağlayıcılar-parlak gönderi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SparkPost/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SproketPowerActions | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SproketPowerActions/0.0.1-alpha) |  |  |
-| Bağlayıcılar-SQL Server | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SQLServer/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Stormboard | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Stormboard/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Stripe | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Stripe/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Survey123 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Survey123/0.0.1-alpha) |  |  |
-| Bağlayıcılar-gözetimi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SurveyMonkey/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Tallymy | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Tallyfy/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Teamwork projeleri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TeamworkProjects/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Teleimzala SMS | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TeleSignSMS/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Teradata | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Teradata/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Metin Analizi | NuGet [0.0.2-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TextAnalytics/0.0.2-alpha) |  |  |
-| Bağlayıcılar-bilet oluşturma etkinlikleri | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TicketingEvents/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Tilkee | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Tilkee/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Todoist | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Todoist/0.0.1-alpha) |  |  |
-| Bağlayıcılar-fection konuğu | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TractionGuest/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Trello | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Trello/0.0.1-alpha) |  |  |
-| Bağlayıcılar-TRIGGERcmd | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TRIGGERcmd/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Trusıla | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Trustual/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Twilio | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Twilio/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Twitter | NuGet [0.0.2-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Twitter/0.0.2-alpha) |  |  |
-| Bağlayıcılar-TxtSync | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TxtSync/0.0.1-alpha) |  |  |
-| Bağlayıcılar-UserVoice | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.UserVoice/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Vansat 365 görüntüleme | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Vantage365Imaging/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Ventipix varlık ve stok | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.VentipixAssetAndInventory/0.0.1-alpha) |  |  |
-| Bağlayıcılar-WebEx takımları | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WebexTeams/0.0.1-alpha) |  |  |
-| Bağlayıcılar-WebMerge | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WebMerge/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Witivio | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Witivio/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Word Online Business | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WordOnlineBusiness/0.0.1-alpha) |  |  |
-| Bağlayıcılar-WordPress | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WordPress/0.0.1-alpha) |  |  |
-| Bağlayıcılar-WorkPoint | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WorkPoint/0.0.1-alpha) |  |  |
-| Bağlayıcılar-x12 | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.X12/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Xooa blok zinciri veritabanı | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.XooaBlockchainDatabase/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Xooa blok zinciri akıllı sözleşmesi | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.XooaBlockchainSmartContract/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Xpertdoc | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Xpertdoc/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Zendesk | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Zendesk/0.0.1-alpha) |  |  |
-| Bağlayıcılar-Zenkraft | NuGet [0.0.1-Alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Zenkraft/0.0.1-alpha) |  |  |
 | Container Registry | NuGet [1.0.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.ContainerRegistry/1.0.0-preview.1) |  | GitHub [1.0.0-Önizleme. 1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.ContainerRegistry_1.0.0-preview.1/sdk/containerregistry/Microsoft.Azure.ContainerRegistry/) |
 | Content Moderator | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.ContentModerator/2.0.0) |  |  |
-| Çekirdek | NuGet [1.7.0](https://www.nuget.org/packages/Azure.Core/1.7.0) | [belgeler](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.7.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.7.0/sdk/core/Azure.Core/) |
+| Çekirdek | NuGet [1.8.1](https://www.nuget.org/packages/Azure.Core/1.8.1) | [belgeler](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.8.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.8.1/sdk/core/Azure.Core/) |
 | Çekirdek-AMQP | NuGet [1.0.0](https://www.nuget.org/packages/Azure.Core.Amqp/1.0.0) | [belgeler](/dotnet/api/overview/azure/Core.Amqp-readme/) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core.Amqp_1.0.0/sdk/core/Azure.Core.Amqp/) |
 | Çekirdek deneysel | NuGet [0.1.0-Önizleme. 7](https://www.nuget.org/packages/Azure.Core.Experimental/0.1.0-preview.7) | [belgeler](/dotnet/api/overview/azure/Core.Experimental-readme-pre/) | GitHub [0.1.0-Preview. 7](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core.Experimental_0.1.0-preview.7/sdk/core/Azure.Core.Experimental/) |
-| Core Newtonsoft JSON | NuGet [1.0.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.Core.NewtonsoftJson/1.0.0-preview.1) | [belgeler](/dotnet/api/overview/azure/Microsoft.Core.NewtonsoftJson-readme-pre/) |  |
-| Çekirdek uzamsal | NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial/1.0.0-beta.1) | [belgeler](/dotnet/api/overview/azure/Microsoft.Core.Spatial-readme-pre/) |  |
-| Core uzamsal Newtonsoft JSON | NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial.NewtonsoftJson/1.0.0-beta.1) | [belgeler](/dotnet/api/overview/azure/Microsoft.Core.Spatial.NewtonsoftJson-readme-pre/) |  |
+| Core Newtonsoft JSON | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Core.NewtonsoftJson/1.0.0)<br>NuGet [1.0.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.Core.NewtonsoftJson/1.0.0-preview.1) |  |  |
+| Çekirdek uzamsal | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial/1.0.0)<br>NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial/1.0.0-beta.1) |  |  |
+| Core uzamsal Newtonsoft JSON | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial.NewtonsoftJson/1.0.0)<br>NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial.NewtonsoftJson/1.0.0-beta.1) |  |  |
 | Cosmos DB | NuGet [4.0.0-preview3](https://www.nuget.org/packages/Azure.Cosmos/4.0.0-preview3) | [belgeler](/dotnet/api/azure.cosmos) | GitHub [4.0.0-preview3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/4.0.0-preview3) |
 | Cosmos DB | NuGet [3.14.0](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.14.0)<br>NuGet [3.15.2-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.15.2-preview) | [belgeler](/dotnet/api/overview/azure/cosmosdb) | GitHub [3.14.0](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/3.12.0/Microsoft.Azure.Cosmos) |
 | Cosmos DB-Bulkyürütücü | NuGet [2.5.1-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.CosmosDB.BulkExecutor/2.5.1-preview) |  | GitHub [2.5.1-Önizleme](https://github.com/Azure/azure-cosmosdb-bulkexecutor-dotnet-getting-started) |
 | Cosmos DB-doğrudan | NuGet [3.15.4](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Direct/3.15.4) |  | GitHub [3.15.4](https://github.com/Azure/azure-cosmos-dotnet-v3) |
-| Cosmos DB şifreleme | NuGet [1.0.0-preview7](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Encryption/1.0.0-preview7) |  | GitHub [1.0.0-preview7](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/encryption/1.0.0-preview4/Microsoft.Azure.Cosmos.Encryption) |
+| Cosmos DB şifreleme | NuGet [1.0.0-preview9](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Encryption/1.0.0-preview9) |  | GitHub [1.0.0-preview9](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/encryption/1.0.0-preview4/Microsoft.Azure.Cosmos.Encryption) |
 | Özel Resim Arama | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomImageSearch/2.0.0) |  |  |
 | Özel Arama | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomSearch/2.0.0) |  |  |
 | Tahmin Özel Görüntü İşleme | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction/2.0.0) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction_2.0.0/sdk/cognitiveservices/Vision.CustomVision.Prediction) |
@@ -456,6 +144,7 @@ ms.locfileid: "97911587"
 | Event Hubs şema kayıt defteri Apache avro | NuGet [1.0.0-Beta. 1](https://www.nuget.org/packages/Microsoft.Azure.Data.SchemaRegistry.ApacheAvro/1.0.0-beta.1) | [belgeler](/dotnet/api/overview/azure/Microsoft.Data.SchemaRegistry.ApacheAvro-readme-pre/) |  |
 | Event Hubs Service Fabric Işlemcisi | NuGet [0.5.4](https://www.nuget.org/packages/Microsoft.Azure.EventHubs.ServiceFabricProcessor/0.5.4) |  | GitHub [0.5.4](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.EventHubs.ServiceFabricProcessor_0.5.4/sdk/eventhub/Microsoft.Azure.EventHubs.ServiceFabricProcessor/) |
 | Uzantılar-önbelleğe alma Cosmos | NuGet [1.0.0-preview5](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Cosmos/1.0.0-preview5) |  | GitHub [1.0.0-preview5](https://github.com/Azure/Microsoft.Extensions.Caching.Cosmos/tree/v1.0.0-preview4) |
+| Yüz Tanıma | NuGet [2.6.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.Face/2.6.0-preview.1) |  | GitHub [2.6.0-Önizleme. 1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.Face_2.6.0-preview.1/sdk/cognitiveservices/Vision.Face) |
 | Form Tanıma | NuGet [3.0.0](https://www.nuget.org/packages/Azure.AI.FormRecognizer/3.0.0)<br>NuGet [3.1.0-Beta. 1](https://www.nuget.org/packages/Azure.AI.FormRecognizer/3.1.0-beta.1) | [belgeler](/dotnet/api/overview/azure/AI.FormRecognizer-readme/) | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.FormRecognizer_3.0.0/sdk/formrecognizer/Azure.AI.FormRecognizer/)<br>GitHub [3.1.0-Beta. 1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.FormRecognizer_3.1.0-beta.1/sdk/formrecognizer/Azure.AI.FormRecognizer/) |
 | Form Tanıma | NuGet [0.8.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.FormRecognizer/0.8.0-preview) |  | GitHub [0.8.0-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/FormRecognizer) |
 | İşlevler-uzantılar | NuGet [1.1.0](https://www.nuget.org/packages/Microsoft.Azure.Functions.Extensions/1.1.0)<br>NuGet [1.1.0-preview1 'i](https://www.nuget.org/packages/Microsoft.Azure.Functions.Extensions/1.1.0-preview1) |  | GitHub [1.1.0](https://github.com/Azure/azure-functions-dotnet-extensions) |
@@ -486,6 +175,26 @@ ms.locfileid: "97911587"
 | LUSıS-çalışma zamanı | NuGet [3.1.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime/3.1.0-preview.1) |  | GitHub [3.1.0-Önizleme. 1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime_3.1.0-preview.1/sdk/cognitiveservices/Language.LUIS.Runtime) |
 | Medya canlı video analizi uç | NuGet [1.0.4-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.Media.LiveVideoAnalytics.Edge/1.0.4-preview.1) |  | GitHub [1.0.4-Önizleme. 1](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/mediaservices/Microsoft.Azure.Media.LiveVideoAnalytics.Edge) |
 | Ölçüm Danışmanı | NuGet [1.0.0-Beta. 2](https://www.nuget.org/packages/Azure.AI.MetricsAdvisor/1.0.0-beta.2) | [belgeler](/dotnet/api/overview/azure/AI.MetricsAdvisor-readme-pre/) | GitHub [1.0.0-Beta. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.MetricsAdvisor_1.0.0-beta.2/sdk/metricsadvisor/Azure.AI.MetricsAdvisor/) |
+| Microsoft. Azure. AMQP | NuGet [2.4.9](https://www.nuget.org/packages/Microsoft.Azure.Amqp/2.4.9) |  |  |
+| Microsoft.Azure.Devices | NuGet [1.28.1](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.1) |  |  |
+| Microsoft.Azure.Devices.Client | NuGet [1.33.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client/1.33.1) |  |  |
+| Microsoft. Azure. Devices. Client. PCL | NuGet [1.0.16](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client.PCL/1.0.16) |  |  |
+| Microsoft. Azure. Devices. DigitalTwin. Client | NuGet [1.0.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Client/1.0.0-preview-001) |  |  |
+| Microsoft. Azure. Devices. DigitalTwin. Service | NuGet [1.0.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Service/1.0.0-preview-001) |  |  |
+| Microsoft. Azure. Devices. ProtocolGateway. Core | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Core/2.0.1) |  |  |
+| Microsoft. Azure. Devices. ProtocolGateway. IotHubClient | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.IotHubClient/2.0.1) |  |  |
+| Microsoft. Azure. Devices. ProtocolGateway. Providers. CloudStorage | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage/2.0.1) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Client | NuGet [1.17.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Client/1.17.0-preview-001) |  |  |
+| Microsoft. Azure. Devices. sağlama. Security. TPM | NuGet [1.13.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Security.Tpm/1.13.0-preview-001) |  |  |
+| Microsoft. Azure. Devices. sağlama. hizmeti | NuGet [1.17.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Service/1.17.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Transport.Amqp | NuGet [1.14.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Amqp/1.14.0-preview-001) |  |  |
+| Microsoft. Azure. Devices. sağlama. Transport. http | NuGet [1.13.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Http/1.13.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Transport.Mqtt | NuGet [1.14.0-Önizleme-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Mqtt/1.14.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Shared | NuGet [1.26.0](https://www.nuget.org/packages/Microsoft.Azure.Devices.Shared/1.26.0) |  |  |
+| Microsoft. Azure. Functions. Worker | NuGet [1.0.0-preview2](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker/1.0.0-preview2) |  |  |
+| Microsoft. Azure. Functions. Worker. SDK | NuGet [1.0.0-preview2](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker.Sdk/1.0.0-preview2) |  |  |
+| Microsoft. Azure. uamqp | NuGet [1.2.11](https://www.nuget.org/packages/Microsoft.Azure.uamqp/1.2.11) |  |  |
+| Microsoft. Azure. umqtt | NuGet [1.1.11](https://www.nuget.org/packages/Microsoft.Azure.umqtt/1.1.11) |  |  |
 | Mobil sunucu-çapraz etki alanı | NuGet [2.0.3](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Server.CrossDomain/2.0.3) |  |  |
 | Mobil hizmet-kaynak Aracısı | NuGet [1.0.2.1](https://www.nuget.org/packages/Microsoft.WindowsAzure.Mobile.Service.ResourceBroker/1.0.2.1) |  |  |
 | Haber Arama | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.NewsSearch/2.0.0) |  |  |
@@ -493,7 +202,7 @@ ms.locfileid: "97911587"
 | Kişiselleştirme | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Personalizer/1.0.0) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Personalizer_1.0.0/sdk/cognitiveservices/Personalizer) |
 | Soru-Cevap Oluşturucu | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Knowledge.QnAMaker/2.0.1)<br>NuGet [3.0.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Knowledge.QnAMaker/3.0.0-preview.1) |  | GitHub [2.0.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Knowledge.QnAMaker_2.0.1/sdk/cognitiveservices/Knowledge.QnAMaker) |
 | Geçiş | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Relay/2.0.1) | [belgeler](/dotnet/api/overview/azure/service-bus-relay) | GitHub [2.0.1](https://github.com/Azure/azure-relay-dotnet/tree/2.0.1) |
-| Arayın | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search_10.1.0/sdk/search/Microsoft.Azure.Search/) |
+| Arama | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search_10.1.0/sdk/search/Microsoft.Azure.Search/) |
 | Arama-ortak | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search.Common/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search.Common_10.1.0/sdk/search/Microsoft.Azure.Search.Common/) |
 | Arama verileri | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search.Data/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search.Data_10.1.0/sdk/search/Microsoft.Azure.Search.Data/) |
 | Arama hizmeti | NuGet [10.1.0](https://www.nuget.org/packages/Microsoft.Azure.Search.Service/10.1.0) |  | GitHub [10.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Search.Service_10.1.0/sdk/search/Microsoft.Azure.Search.Service/) |
@@ -540,7 +249,6 @@ ms.locfileid: "97911587"
 | Metin Analizi | NuGet [4.1.0-Önizleme. 2](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Language.TextAnalytics/4.1.0-preview.2) |  | GitHub [4.1.0-Önizleme. 2](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Language.TextAnalytics_4.1.0-preview.2/sdk/cognitiveservices/Language.TextAnalytics) |
 | Video Arama | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VideoSearch/2.0.0) |  |  |
 | Vizyon Content Moderator | NuGet [2.1.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ContentModerator/2.1.0-preview.1) |  | GitHub [2.1.0-Önizleme. 1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.ContentModerator_2.1.0-preview.1/sdk/cognitiveservices/Vision.ContentModerator) |
-| Vizyon yüzü | NuGet [2.6.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.Face/2.6.0-preview.1) |  | GitHub [2.6.0-Önizleme. 1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.Face_2.6.0-preview.1/sdk/cognitiveservices/Vision.Face) |
 | Görsel Arama | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VisualSearch/2.0.0) |  |  |
 | Yer | NuGet [4.0.0](https://www.nuget.org/packages/wastorage/4.0.0) |  |  |
 | Eldeki Storage-Redist | NuGet [2.0.0](https://www.nuget.org/packages/wastorage.redist/2.0.0) |  |  |
@@ -669,7 +377,7 @@ ms.locfileid: "97911587"
 | Yönetim-kapsayıcı hizmeti akıcı | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.ContainerService.Fluent/1.36.1) |  |  |
 | Yönetim-Content Delivery Network | NuGet [5.0.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.Cdn/5.0.0-preview) |  | GitHub [5.0.0-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Cdn_5.0.0-preview/sdk/cdn/Microsoft.Azure.Management.Cdn/) |
 | Yönetim-Content Delivery Network Floent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Cdn.Fluent/1.36.1) | [belgeler](/dotnet/api/overview/azure/cdn) |  |
-| Yönetim-Cosmos DB | NuGet [1.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.2.0)<br>NuGet [1.3.2-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.3.2-preview) |  | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.2.0/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/)<br>GitHub [1.3.2-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.3.2-preview/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/) |
+| Yönetim-Cosmos DB | NuGet [1.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.2.0)<br>NuGet [1.4.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.4.0-preview) |  | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.2.0/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/)<br>GitHub [1.4.0-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.4.0-preview/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/) |
 | Yönetim-Cosmos DB Floent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB.Fluent/1.36.1) |  |  |
 | Yönetim-Customer Insights | NuGet [0.9.1-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.CustomerInsights/0.9.1-preview) |  | GitHub [0.9.1-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/customer-insights/Microsoft.Azure.Management.CustomerInsights) |
 | Yönetim-Customer Insights Floent | NuGet [1.9.1-Beta](https://www.nuget.org/packages/Microsoft.Azure.Management.CustomerInsights.Fluent/1.9.1-beta) |  |  |
@@ -728,14 +436,14 @@ ms.locfileid: "97911587"
 | Yönetim haritaları | NuGet [1.0.2](https://www.nuget.org/packages/Microsoft.Azure.Management.Maps/1.0.2) |  | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/maps/Microsoft.Azure.Management.Maps) |
 | Yönetim-Market | NuGet [1.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Marketplace/1.1.0)<br>NuGet [2.0.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.Marketplace/2.0.0-preview) |  | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Marketplace_1.1.0/sdk/marketplace/Microsoft.Azure.Management.Marketplace/)<br>GitHub [2.0.0-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Marketplace_2.0.0-preview/sdk/marketplace/Microsoft.Azure.Management.Marketplace/) |
 | Yönetim-Market sıralaması | NuGet [1.0.1](https://www.nuget.org/packages/Microsoft.Azure.Management.MarketplaceOrdering/1.0.1) |  | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/marketplaceordering/Microsoft.Azure.Management.MarketplaceOrdering) |
-| Yönetim-medya | NuGet [3.0.2](https://www.nuget.org/packages/Microsoft.Azure.Management.Media/3.0.2) |  | GitHub [3.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Media_3.0.2/sdk/mediaservices/Microsoft.Azure.Management.Media/) |
+| Yönetim-medya | NuGet [3.0.3](https://www.nuget.org/packages/Microsoft.Azure.Management.Media/3.0.3) |  | GitHub [3.0.3](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Media_3.0.3/sdk/mediaservices/Microsoft.Azure.Management.Media/) |
 | Yönetim-kaynak taşıyıcısını geçirme | NuGet [1.0.1-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.Migrate.ResourceMover/1.0.1-preview) |  |  |
 | Yönetim-Karma Gerçeklik | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.MixedReality/1.0.0) | [belgeler](/dotnet/api/overview/azure/mixed-reality) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.MixedReality_1.0.0/sdk/mixedreality/Microsoft.Azure.Management.MixedReality/) |
 | Yönetim-Izleyici | NuGet [0.25.3-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.Monitor/0.25.3-preview) |  | GitHub [0.25.3-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Monitor_0.25.3-preview/sdk/monitor/Microsoft.Azure.Management.Monitor/) |
 | Yönetim-akıcı bir şekilde Izleyin | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Monitor.Fluent/1.36.1) | [belgeler](/dotnet/api/overview/azure/monitor) |  |
 | Yönetim-MySQL | NuGet [0.1.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.MySQL/0.1.0-preview) |  |  |
 | Yönetim-NetApp | NuGet [1.8.0](https://www.nuget.org/packages/Microsoft.Azure.Management.NetApp/1.8.0) |  | GitHub [1.8.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.NetApp_1.8.0/sdk/netapp/Microsoft.Azure.Management.NetApp/) |
-| Yönetim-ağ | NuGet [20.2.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Network/20.2.1) |  | GitHub [20.2.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Network_20.2.1/sdk/network/Microsoft.Azure.Management.Network/) |
+| Yönetim-ağ | NuGet [20.3.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Network/20.3.0) |  | GitHub [20.3.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Network_20.3.0/sdk/network/Microsoft.Azure.Management.Network/) |
 | Yönetim-ağ akıcı | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Network.Fluent/1.36.1) | [belgeler](/dotnet/api/overview/azure/virtual-network) |  |
 | Yönetim-Notification Hubs | NuGet [2.3.3-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.NotificationHubs/2.3.3-preview) | [belgeler](/dotnet/api/overview/azure/notification-hubs) | GitHub [2.3.3-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.NotificationHubs_2.3.3-preview/sdk/notificationhubs/Microsoft.Azure.Management.NotificationHubs/) |
 | Yönetim-Notification Hubs Floent | NuGet [1.9.1-Beta](https://www.nuget.org/packages/Microsoft.Azure.Management.NotificationHubs.Fluent/1.9.1-beta) |  |  |
@@ -767,7 +475,6 @@ ms.locfileid: "97911587"
 | Yönetim-ara | NuGet [4.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Search/4.0.0) |  | GitHub [4.0.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/search/Microsoft.Azure.Management.Search) |
 | Yönetim-akışta ara | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Search.Fluent/1.36.1) |  |  |
 | Yönetim-Güvenlik Merkezi | NuGet [2.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.SecurityCenter/2.2.0) |  | GitHub [2.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.SecurityCenter_2.2.0/sdk/securitycenter/Microsoft.Azure.Management.SecurityCenter/) |
-| Yönetim-güvenlik öngörüleri | NuGet [1.0.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.Management.SecurityInsights/1.0.0-preview.1) |  |  |
 | Yönetim-sunucu yönetimi | NuGet [1.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.ServerManagement/1.1.0) |  | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/servermanagement/Microsoft.Azure.Management.ServerManagement) |
 | Yönetim-Service Bus | NuGet [2.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.ServiceBus/2.1.0) |  | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/servicebus/Microsoft.Azure.Management.ServiceBus) |
 | Yönetim-Service Bus Floent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.ServiceBus.Fluent/1.36.1) | [belgeler](/dotnet/api/overview/azure/service-bus) |  |
@@ -787,11 +494,12 @@ ms.locfileid: "97911587"
 | Yönetim-Stream Analytics | NuGet [2.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.StreamAnalytics/2.1.0)<br>NuGet [3.0.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.StreamAnalytics/3.0.0-preview) | [belgeler](/dotnet/api/overview/azure/stream-analytics) | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/streamanalytics/Microsoft.Azure.Management.StreamAnalytics) |
 | Yönetim-abonelik | NuGet [1.1.5](https://www.nuget.org/packages/Microsoft.Azure.Management.Subscription/1.1.5) |  | GitHub [1.1.5](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Subscription_1.1.5/sdk/subscription/Microsoft.Azure.Management.Subscription/) |
 | Yönetim-destek | NuGet [1.0.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Support/1.0.1) |  | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Support_1.0.1/sdk/support/Microsoft.Azure.Management.Support/) |
-| Yönetim-SYNAPSE | NuGet [1.0.0-Önizleme. 4](https://www.nuget.org/packages/Microsoft.Azure.Management.Synapse/1.0.0-preview.4) |  | GitHub [1.0.0-Önizleme. 4](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Synapse_1.0.0-preview.4/sdk/synapse/Microsoft.Azure.Management.Synapse/) |
+| Yönetim-SYNAPSE | NuGet [1.0.0-Önizleme. 5](https://www.nuget.org/packages/Microsoft.Azure.Management.Synapse/1.0.0-preview.5) |  | GitHub [1.0.0-Preview. 5](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Synapse_1.0.0-preview.5/sdk/synapse/Microsoft.Azure.Management.Synapse/) |
 | Yönetim-Traffic Manager | NuGet [2.5.3](https://www.nuget.org/packages/Microsoft.Azure.Management.TrafficManager/2.5.3) |  | GitHub [2.5.3](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/trafficmanager/Microsoft.Azure.Management.TrafficManager) |
 | Yönetim-Traffic Manager Floent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.TrafficManager.Fluent/1.36.1) | [belgeler](/dotnet/api/overview/azure/traffic-manager) |  |
 | Yönetim-Web siteleri | NuGet [3.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.WebSites/3.1.0) |  | GitHub [3.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/websites/Microsoft.Azure.Management.WebSites) |
 | Yönetim-Iş yükü Izleyicisi | NuGet [1.0.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.WorkloadMonitor/1.0.0-preview) |  |  |
+| Microsoft. Azure. Management. RedisEnterprise | NuGet [1.0.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.RedisEnterprise/1.0.0-preview) |  |  |
 | Profiller hybrid_2018_03_01 Yönetimi-Yetkilendirme | NuGet [0.9.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2018_03_01.Authorization/0.9.0-preview) |  |  |
 | Profiller hybrid_2018_03_01 yönetimi-Işlem | NuGet [0.9.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2018_03_01.Compute/0.9.0-preview) |  |  |
 | Profiller hybrid_2018_03_01 yönetimi-DNS | NuGet [0.9.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2018_03_01.Dns/0.9.0-preview) |  |  |
@@ -822,6 +530,7 @@ ms.locfileid: "97911587"
 | Kaynak yönetimi-ağ | NuGet [1.0.0-Önizleme. 2](https://www.nuget.org/packages/Azure.ResourceManager.Network/1.0.0-preview.2) | [belgeler](/dotnet/api/overview/azure/ResourceManager.Network-readme-pre/) | GitHub [1.0.0-Önizleme. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Network_1.0.0-preview.2/sdk/network/Azure.ResourceManager.Network/) |
 | Kaynak yönetimi-kaynaklar | NuGet [1.0.0-Önizleme. 2](https://www.nuget.org/packages/Azure.ResourceManager.Resources/1.0.0-preview.2) | [belgeler](/dotnet/api/overview/azure/ResourceManager.Resources-readme-pre/) | GitHub [1.0.0-Önizleme. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Resources_1.0.0-preview.2/sdk/resources/Azure.ResourceManager.Resources/) |
 | Kaynak yönetimi-depolama | NuGet [1.0.0-Önizleme. 2](https://www.nuget.org/packages/Azure.ResourceManager.Storage/1.0.0-preview.2) | [belgeler](/dotnet/api/overview/azure/ResourceManager.Storage-readme-pre/) | GitHub [1.0.0-Önizleme. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Storage_1.0.0-preview.2/sdk/storage/Azure.ResourceManager.Storage/) |
+| Güvenlik öngörüleri | NuGet [1.0.0-Önizleme. 1](https://www.nuget.org/packages/Microsoft.Azure.Management.SecurityInsights/1.0.0-preview.1) |  | GitHub [1.0.0-Önizleme. 1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.SecurityInsights_1.0.0-preview.1/sdk/securityinsights/Microsoft.Azure.Management.SecurityInsights/) |
 | SignalR yönetimi | NuGet [1.6.1](https://www.nuget.org/packages/Microsoft.Azure.SignalR.Management/1.6.1) |  | GitHub [1.6.1](https://github.com/Azure/azure-signalr/tree/v1.5.0/src/Microsoft.Azure.SignalR.Management) |
 | SQL Server Yönetimi Key Vault sağlayıcı | NuGet [2.4.0](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider/2.4.0) |  |  |
 | WindowsAzure yönetimi | NuGet [4.1.3](https://www.nuget.org/packages/Microsoft.WindowsAzure.Management/4.1.3) |  |  |

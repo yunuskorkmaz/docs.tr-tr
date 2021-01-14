@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 30ec8fffb276f8816a4a7b1ef39c826bb183f1ef
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: f84f560b4c8678ea48d89f46979cf49f5ce8de06
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97911566"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98195366"
 ---
 | Ad | Paket | Docs | Kaynak |
 | ---- | ------- | ---- | ------ |
@@ -13,12 +13,14 @@ ms.locfileid: "97911566"
 | ASP.NET uzantısı-yapılandırma gizli dizileri | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.Configuration.Secrets/1.0.2) | [belgeler](/dotnet/api/overview/azure/Extensions.AspNetCore.Configuration.Secrets-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.Configuration.Secrets_1.0.2/sdk/extensions/Azure.Extensions.AspNetCore.Configuration.Secrets/) |
 | ASP.NET uzantısı-DataProtection blob 'Ları | NuGet [1.2.0](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs/1.2.0) | [belgeler](/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Blobs-readme/) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Blobs_1.2.0/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Blobs/) |
 | ASP.NET uzantısı-DataProtection anahtarları | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys/1.0.2) | [belgeler](/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Keys-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Keys_1.0.2/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Keys/) |
+| Kanıtlama | NuGet [0.10.0-Önizleme](https://www.nuget.org/packages/Microsoft.Azure.Attestation/0.10.0-preview) |  | GitHub [0.10.0-Önizleme](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Attestation_0.10.0-preview/sdk/attestation/Microsoft.Azure.Attestation/) |
+| Azure Güvenlik kanıtlama | NuGet [1.0.0-Alpha. 1](https://www.nuget.org/packages/Azure.Security.Attestation/1.0.0-alpha.1) |  | GitHub [1.0.0-Alpha. 1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Security.Attestation_1.0.0-alpha.1/sdk/attestation/Azure.Security.Attestation/) |
 | Bilişsel Arama | NuGet [11.1.1](https://www.nuget.org/packages/Azure.Search.Documents/11.1.1)<br>NuGet [11.2.0-Beta. 2](https://www.nuget.org/packages/Azure.Search.Documents/11.2.0-beta.2) | [belgeler](/dotnet/api/overview/azure/Search.Documents-readme/) | GitHub [11.1.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Search.Documents_11.1.1/sdk/search/Azure.Search.Documents/)<br>GitHub [11.2.0-Beta. 2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Search.Documents_11.2.0-beta.2/sdk/search/Azure.Search.Documents/) |
 | İletişim yönetimi | NuGet [1.0.0-Beta. 3](https://www.nuget.org/packages/Azure.Communication.Administration/1.0.0-beta.3) | [belgeler](/dotnet/api/overview/azure/Communication.Administration-readme-pre/) | GitHub [1.0.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Administration_1.0.0-beta.3/sdk/communication/Azure.Communication.Administration/) |
 | İletişim Sohbeti | NuGet [1.0.0-Beta. 3](https://www.nuget.org/packages/Azure.Communication.Chat/1.0.0-beta.3) | [belgeler](/dotnet/api/overview/azure/Communication.Chat-readme-pre/) | GitHub [1.0.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Chat_1.0.0-beta.3/sdk/communication/Azure.Communication.Chat/) |
 | Ortak iletişim | NuGet [1.0.0-Beta. 3](https://www.nuget.org/packages/Azure.Communication.Common/1.0.0-beta.3) | [belgeler](/dotnet/api/overview/azure/Communication.Common-readme-pre/) | GitHub [1.0.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Common_1.0.0-beta.3/sdk/communication/Azure.Communication.Common/) |
 | İletişim SMS | NuGet [1.0.0-Beta. 3](https://www.nuget.org/packages/Azure.Communication.Sms/1.0.0-beta.3) | [belgeler](/dotnet/api/overview/azure/Communication.Sms-readme-pre/) | GitHub [1.0.0-Beta. 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Sms_1.0.0-beta.3/sdk/communication/Azure.Communication.Sms/) |
-| Çekirdek | NuGet [1.7.0](https://www.nuget.org/packages/Azure.Core/1.7.0) | [belgeler](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.7.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.7.0/sdk/core/Azure.Core/) |
+| Çekirdek | NuGet [1.8.1](https://www.nuget.org/packages/Azure.Core/1.8.1) | [belgeler](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.8.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.8.1/sdk/core/Azure.Core/) |
 | Çekirdek-AMQP | NuGet [1.0.0](https://www.nuget.org/packages/Azure.Core.Amqp/1.0.0) | [belgeler](/dotnet/api/overview/azure/Core.Amqp-readme/) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core.Amqp_1.0.0/sdk/core/Azure.Core.Amqp/) |
 | Cosmos DB | NuGet [4.0.0-preview3](https://www.nuget.org/packages/Azure.Cosmos/4.0.0-preview3) | [belgeler](/dotnet/api/azure.cosmos) | GitHub [4.0.0-preview3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/4.0.0-preview3) |
 | Dijital TWINS-çekirdek | NuGet [1.2.0](https://www.nuget.org/packages/Azure.DigitalTwins.Core/1.2.0) | [belgeler](/dotnet/api/overview/azure/DigitalTwins.Core-readme/) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.DigitalTwins.Core_1.2.0/sdk/digitaltwins/Azure.DigitalTwins.Core/) |
